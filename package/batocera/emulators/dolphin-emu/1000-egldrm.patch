@@ -1394,7 +1394,7 @@ index 566a643c89..c495dca869 100644
  
  set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME dolphin-emu-nogui)
 diff --git a/Source/Core/DolphinNoGUI/MainNoGUI.cpp b/Source/Core/DolphinNoGUI/MainNoGUI.cpp
-index 539bbe769f..1389c57d0e 100644
+index 2d677aa7ba..3afdf6b63c 100644
 --- a/Source/Core/DolphinNoGUI/MainNoGUI.cpp
 +++ b/Source/Core/DolphinNoGUI/MainNoGUI.cpp
 @@ -180,6 +180,8 @@ static std::unique_ptr<Platform> GetPlatform(const optparse::Values& options)
@@ -1406,15 +1406,15 @@ index 539bbe769f..1389c57d0e 100644
  #endif
  
  #ifdef _WIN32
-@@ -213,7 +215,7 @@ int main(int argc, char* argv[])
-         "headless"
+@@ -212,7 +214,7 @@ int main(int argc, char* argv[])
+       .choices({"headless"
  #ifdef __linux__
-             ,
--            "fbdev"
-+            "fbdev", "drm"
+                 ,
+-                "fbdev"
++                "fbdev", "drm"
  #endif
  #if HAVE_X11
-             ,
+                 ,
 diff --git a/Source/Core/DolphinNoGUI/Platform.h b/Source/Core/DolphinNoGUI/Platform.h
 index f4dc8a9474..ec76e6d905 100644
 --- a/Source/Core/DolphinNoGUI/Platform.h

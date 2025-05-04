@@ -1,6 +1,5 @@
 config BR2_PACKAGE_LIBRETRO_PUAE
 	bool "libretro-puae"
-	depends on BR2_PACKAGE_RETROARCH
 	depends on BR2_INSTALL_LIBSTDCPP
 
 	help

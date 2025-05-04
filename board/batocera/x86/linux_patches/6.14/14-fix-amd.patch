@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index ae8356fb88c8..2285e46f9c7d 100644
+index 39a479564f59..97ae779cda72 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -8350,7 +8350,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,

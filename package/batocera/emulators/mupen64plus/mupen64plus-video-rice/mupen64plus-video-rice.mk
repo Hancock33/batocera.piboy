@@ -3,8 +3,8 @@
 # mupen64plus-video-rice
 #
 ################################################################################
-# Version: Commits on Jul 15, 2024
-MUPEN64PLUS_VIDEO_RICE_VERSION = fcf00779f08a9503ef30d26422f6b0350684820d
+# Version: Commits on May 01, 2025
+MUPEN64PLUS_VIDEO_RICE_VERSION = 53c34795aa6257154dd8c5a657989cc91dcf912d
 MUPEN64PLUS_VIDEO_RICE_SITE = $(call github,mupen64plus,mupen64plus-video-rice,$(MUPEN64PLUS_VIDEO_RICE_VERSION))
 MUPEN64PLUS_VIDEO_RICE_LICENSE = GPLv2
 MUPEN64PLUS_VIDEO_RICE_DEPENDENCIES = sdl2 alsa-lib mupen64plus-core boost

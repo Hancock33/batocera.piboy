@@ -3,3 +3,5 @@ config BR2_PACKAGE_FIRMWARE_ORANGEPI
 
 	help
 	  OrangePi specific firmware
+
+	  https://github.com/orangepi-xunlong/firmware

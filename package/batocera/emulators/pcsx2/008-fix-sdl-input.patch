@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Input/SDLInputSource.cpp b/pcsx2/Input/SDLInputSource.cpp
-index a2e6fa1f0..8132bb3b3 100644
+index b4b6b0641..cfc9d7f40 100644
 --- a/pcsx2/Input/SDLInputSource.cpp
 +++ b/pcsx2/Input/SDLInputSource.cpp
-@@ -1335,9 +1335,12 @@ bool SDLInputSource::CloseDevice(SDL_JoystickID joystick_index)
+@@ -1438,9 +1438,12 @@ bool SDLInputSource::CloseDevice(SDL_JoystickID joystick_index)
  
  	{
  		std::lock_guard lock(m_controllers_key_mutex);

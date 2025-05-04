@@ -3,8 +3,9 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Apr 24, 2025
-WINE_PROTON_VERSION = fc8c7102564cfcf0369b7230e8edc2e7b66f710b
+# Version: Commits on May 02, 2025
+WINE_PROTON_VERSION = c9f44a75cab03b4256a49ed46f6309b6cd4d0341
+WINE_PROTON_BRANCH = bleeding-edge
 WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -13,13 +14,17 @@ WINE_PROTON_SELINUX_MODULES = wine
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
 HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
+ifeq ($(BR_CMAKE_USE_CLANG),y)
+    HOST_WINE_PROTON_DEPENDENCIES += host-clang host-lld
+endif
+
 define WINE_PROTON_AUTOGEN
 	# Create folder for install
 	mkdir -p $(TARGET_DIR)/usr/wine/wine-proton
 	# Autotools generation
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./tools/make_specfiles
-	cd $(@D); ./dlls/winevulkan/make_vulkan && rm dlls/winevulkan/vk-*.xml
+	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
 	cd $(@D); autoreconf -fiv
 endef
 
@@ -36,6 +41,7 @@ WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
+	--without-ldap \
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
@@ -44,6 +50,7 @@ WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 
 ifeq ($(BR2_x86_64),y)
     WINE_PROTON_CONF_OPTS += --enable-win64
+    WINE_PROTON_CONF_OPTS += --enable-tools \
 else
     WINE_PROTON_CONF_OPTS += --disable-win64
 endif
@@ -107,18 +114,9 @@ else
 WINE_PROTON_CONF_OPTS += --without-gnutls
 endif
 
-#ifeq ($(BR2_PACKAGE_GST1_PLUGINS_BASE),y)
-#WINE_PROTON_CONF_OPTS += --with-gstreamer
-#WINE_PROTON_DEPENDENCIES += gst1-plugins-base
-#else
-#WINE_PROTON_CONF_OPTS += --without-gstreamer
-#endif
-
-ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
-WINE_PROTON_CONF_OPTS += --with-gcrypt
-WINE_PROTON_DEPENDENCIES += libgcrypt
-else
-WINE_PROTON_CONF_OPTS += --without-gcrypt
+ifeq ($(BR2_PACKAGE_FFMPEG),y)
+WINE_PROTON_CONF_OPTS += --without-gstreamer --with-ffmpeg
+WINE_PROTON_DEPENDENCIES += ffmpeg
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
@@ -300,17 +298,19 @@ endef
 HOST_WINE_PROTON_CONF_OPTS += \
 	--disable-tests \
 	--disable-win16 \
+	--disable-winemenubuilder \
 	--without-alsa \
 	--without-capi \
 	--without-coreaudio \
 	--without-cups \
 	--without-dbus \
 	--without-fontconfig \
-	--without-gphoto \
 	--without-gnutls \
+	--without-gphoto \
 	--without-gssapi \
 	--without-gstreamer \
 	--without-krb5 \
+	--without-ldap \
 	--without-mingw \
 	--without-netapi \
 	--without-opencl \

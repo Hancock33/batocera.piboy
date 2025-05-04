@@ -9,6 +9,8 @@
 - Zedmd upgraded. You need firmware zedmd 5.1.5. See https://wiki.batocera.org/hardware:diy_zedmd?s[]=dmd#zedmd_configuration.
 - The folder for SegaCD/MegaCD roms is now called `megacd` to keep consistency (like `megadrive` is used, not `genesis`)
 - Removed Future Pinball in favor of Visual Pinball which has been available for some time and runs native on Linux.
+- ScummVM libretro and standalone savegames share the same folders now.
+  If you have saved games from the standalone core, it is recommended to move them from `/userdata/saves/scummvm/saves` to `/userdata/saves/scummvm`
 ### Hardware
 - Add OrangePi 4a board support
 - Add OrangePi 3b board support
@@ -70,6 +72,7 @@
 - BigPEmu now supports .bigpimg CD images
 - ROG Ally gamepad support
 - Batocera-wine: add saves directory and save files options
+- Batocera-wine: improved autodetection for Windows executables, refer to our [Wikipedia](https://wiki.batocera.org/systems:windows#creating_autoruncmd_from_ssh)
 - Libretro-virtualjaguar core can now load .zip ROMs
 - Updated BlamCon code to new firmware (now compatible with 4 light guns)
 - Xenia now uses Wine-Proton for more compatibility (i.e. Halo 4)
@@ -80,19 +83,19 @@
 - Cemu to 2.6
 - DevilutionX to 1.5.4
 - Dolphin-Emu to 2503a-328
-- Dosbox Staging to v0.82.0
+- Dosbox Staging to v0.82.2
 - Dosbox-X to v2025.02.01
 - DXX-Rebirth to 12th of Jan build
 - EDuke to 26th of Dec build
 - ETLegacy to v2.83.2
-- GroovyMAME to 0.276
+- GroovyMAME to 0.277
 - Gzdoom to g4.14.1
 - Hurrican to 24th of Nov build
 - Hypseus Singe to 2.11.4
 - IOQuake3 to 25th December build
 - Jazz2 to 3.2.0
 - Libretro-Kronos to 2.7.0
-- Libretro-MAME to 0.276
+- Libretro-MAME to 0.277
 - Libretro-Play! 4th Feb build
 - Libretro-PPSSPP to 28th February build
 - Libretro-Wasm4 to v2.7.1
@@ -102,7 +105,7 @@
 - Play! to 4th Feb build
 - PPSSPP to 28th February build
 - Raze to 1.11.0
-- RetroArch to v1.20.0
+- RetroArch to v1.21.0
 - Ruffle to nightly-2025-02-12
 - RPCS3 to v0.0.35
 - ScummVM to v2.9.0
@@ -119,7 +122,7 @@
 - Xemu to v0.8.49
 - Xenia to build 5979274 (Jan 24, 2025)
 ### System
-- Bluez to 5.79
+- Bluez to 5.82
 - BTop to 1.4.0
 - Buildroot to 2024.11.x with supporting package updates
 - DXVK to 2.6.1
@@ -132,9 +135,9 @@
 - Kodi to 21.2
 - LibDRM to 2.4.124
 - Linux Firmware to 20250410
-- Linux Kernel to 6.14.3
+- Linux Kernel to 6.14.5
 - LLVM to 19.1.7
-- Mesa3D to 25.0.4
+- Mesa3D to 25.0.5
 - MPV to 0.40.0
 - Nvidia production driver to 570.133.07
 - Pipewire to 1.2.7
@@ -149,7 +152,7 @@
 - VKD3D-Proton to 2.14.1
 - Vulkan stack to v1.4.304
 - Wine Mono to 9.4.0
-- Wine-TKG to 10.5
+- Wine-TKG to 10.7
 - Wireplumber to 0.5.8
 - Xone to Mar 13, 2025
 

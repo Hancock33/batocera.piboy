@@ -10,6 +10,7 @@ fpinball.mk
 glslang.mk
 kddocwidgets.mk
 kwindowsystem.mk
+labwc.mk
 layershellqt.mk
 libdbusmenu.mk
 libfmqt6.mk
@@ -17,6 +18,7 @@ liblc3.mk
 liblxqt.mk
 libpinmame.mk
 libqtxdg.mk
+libsfdo.mk
 libsysstat.mk
 libzedmd.mk
 lximage_qt.mk

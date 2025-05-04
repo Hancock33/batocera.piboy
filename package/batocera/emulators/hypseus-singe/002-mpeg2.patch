@@ -1,8 +1,8 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 6787633..546e69a 100644
+index 5456dbb..9841c5d 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -59,7 +59,7 @@ use_cxx11( )
+@@ -60,7 +60,7 @@ use_cxx11( )
  PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
  PKG_SEARCH_MODULE(SDL2_TTF REQUIRED SDL2_ttf)
  PKG_SEARCH_MODULE(SDL2_MIXER REQUIRED SDL2_mixer)
@@ -11,7 +11,7 @@ index 6787633..546e69a 100644
  
  message(STATUS "Target: ${CMAKE_SYSTEM_NAME} ${CMAKE_TARGET_ARCHITECTURES}")
  
-@@ -98,7 +98,6 @@ add_subdirectory(timer)
+@@ -99,7 +99,6 @@ add_subdirectory(timer)
  add_subdirectory(video)
  add_subdirectory(vldp)
  

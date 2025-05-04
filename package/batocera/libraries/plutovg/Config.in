@@ -1,0 +1,11 @@
+config BR2_PACKAGE_PLUTOVG
+	bool "plutovg"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  PlutoVG is a standalone 2D vector graphics library.
+
+	  https://github.com/sammycage/plutovg
+
+comment "BR2_PACKAGE_PLUTOVG needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

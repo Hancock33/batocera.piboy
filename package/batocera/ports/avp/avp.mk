@@ -3,13 +3,14 @@
 # avp
 #
 ################################################################################
-# Version: Commits on Apr 24, 2025
-AVP_VERSION = f8a80bb247b53b301a8624101db079786e41fe90
+# Version: Commits on Apr 29, 2025
+AVP_VERSION = 018b7290b44fef1925188aa4097c09c6989e8afc
 AVP_SITE =  $(call github,atsb,NakedAVP,$(AVP_VERSION))
 AVP_DEPENDENCIES = sdl3 sdl3_mixer
 AVP_LICENSE = GPL-2.0
 AVP_SUPPORTS_IN_SOURCE_BUILD = NO
 
+AVP_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-implicit-function-declaration"
 AVP_CONF_OPTS += -DOPENGL_TYPE=AUTO
 
 define AVP_INSTALL_TARGET_CMDS

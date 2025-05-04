@@ -52,7 +52,7 @@ index f441cd888b..869b3fcf93 100644
    std::string m_gametdb_id;
    std::string m_triforce_id;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index 5f90f93bae..0c5c73ac83 100644
+index ead9670fcf..4c0371bd01 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
 @@ -764,10 +764,14 @@ void SaveScreenShot()
@@ -73,7 +73,7 @@ index 5f90f93bae..0c5c73ac83 100644
  
  static bool PauseAndLock(Core::System& system, bool do_lock, bool unpause_on_unlock)
 diff --git a/Source/Core/Core/Core.h b/Source/Core/Core/Core.h
-index eca18cf3be..d5685186d9 100644
+index 3e946a8140..e806a6283a 100644
 --- a/Source/Core/Core/Core.h
 +++ b/Source/Core/Core/Core.h
 @@ -149,6 +149,7 @@ void SetState(Core::System& system, State state, bool report_state_change = true

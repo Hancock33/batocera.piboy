@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-24 13:01+0800\n"
+"PO-Revision-Date: 2025-05-01 09:01+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -4775,7 +4775,7 @@ msgstr "光标超时"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "CURVE DETAIL"
-msgstr ""
+msgstr "曲线详图"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -5246,7 +5246,7 @@ msgstr "​调整Gamma值以改变中间调的明暗程度​."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the amount of shadow detail."
-msgstr ""
+msgstr "选择阴影细节的数量."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -5267,7 +5267,7 @@ msgstr "选择音频输出类型。"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the character view type."
-msgstr ""
+msgstr "选择角色视图类型."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -5310,12 +5310,12 @@ msgstr "选择游戏难度。"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of curve detail."
-msgstr ""
+msgstr "选择曲线细节的级别."
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of effects detail."
-msgstr ""
+msgstr "选择效果细节的级别."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -5325,12 +5325,12 @@ msgstr "选择几何细节的级别."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of model detail."
-msgstr ""
+msgstr "选择模型详细程度."
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of terrain detail."
-msgstr ""
+msgstr "选择地形细节级别."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -5355,7 +5355,7 @@ msgstr "选择平视显示器的大小."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the texture colour depth."
-msgstr ""
+msgstr "选择纹理颜色深度."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -5694,7 +5694,7 @@ msgstr "使用后台线程编译着色器以避免着色器编译造成的卡顿
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Complex"
-msgstr ""
+msgstr "复杂"
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
 msgctxt "game_options"
@@ -5824,6 +5824,11 @@ msgstr "将艺术品裁剪到未使用的空间。使游戏尽可能大。"
 msgctxt "game_options"
 msgid "Cross"
 msgstr "十字"
+
+#. TRANSLATION: hypseus-singe/zmachine
+msgctxt "game_options"
+msgid "Crosshairs in supported games e.g. ActionMax, Maddog II."
+msgstr ""
 
 #. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
@@ -6708,7 +6713,7 @@ msgstr "东欧时间"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "EFFECTS DETAIL"
-msgstr ""
+msgstr "效果细节"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -8132,7 +8137,7 @@ msgstr ""
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "FULL ENTITY LIGHTING"
-msgstr ""
+msgstr "全实体照明"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -9405,7 +9410,7 @@ msgstr "危地马拉"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Gun Only"
-msgstr ""
+msgstr "仅限枪支"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -9654,7 +9659,7 @@ msgctxt "game_options"
 msgid "Hidden"
 msgstr "隐藏"
 
-#. TRANSLATION: hypseus-singe/zmachine, libretro/hatarib
+#. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Hide"
 msgstr "隐藏"
@@ -9702,7 +9707,7 @@ msgstr "高 720p"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "High Detail"
-msgstr ""
+msgstr "高细节"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -9717,7 +9722,7 @@ msgstr "高端电脑"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Higher"
-msgstr ""
+msgstr "高级"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -9727,7 +9732,7 @@ msgstr "数字越高，图像质量越高，但需要更多的带宽。"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Highest"
-msgstr ""
+msgstr "最高"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
@@ -10060,7 +10065,7 @@ msgstr "将内存增加到128 MiB，用于调试或自制应用程序。"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Increases texture quality."
-msgstr ""
+msgstr "提高纹理质量."
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10635,6 +10640,11 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "光枪十字准线"
 
+#. TRANSLATION: hypseus-singe/zmachine
+msgctxt "game_options"
+msgid "LIGHT GUN CROSSHAIRS"
+msgstr ""
+
 #. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
 msgid "LIGHT GUNS"
@@ -10758,12 +10768,12 @@ msgstr "拉脱维亚"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Lean left"
-msgstr ""
+msgstr "向左倾斜"
 
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Lean right"
-msgstr ""
+msgstr "向右倾斜"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -10961,7 +10971,7 @@ msgstr "长可见屏幕边缘(厘米)"
 #. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Look"
-msgstr ""
+msgstr "查看"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -10991,7 +11001,7 @@ msgstr "低端电脑"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Lower"
-msgstr ""
+msgstr "降低"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -11003,7 +11013,7 @@ msgstr "较低的值可以减少音频延迟并提高性能，但可能会导致
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Lowest"
-msgstr ""
+msgstr "最低"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -11143,7 +11153,7 @@ msgstr "型号（MODEL）"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "MODEL DETAIL"
-msgstr ""
+msgstr "模型细节"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -11436,7 +11446,7 @@ msgstr "全开（要求高的游戏）"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Max Detail"
-msgstr ""
+msgstr "Max Detail"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -11854,7 +11864,7 @@ msgstr "移动样式表指针"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Move back"
-msgstr ""
+msgstr "后退"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -12516,7 +12526,7 @@ msgstr "超频类型"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Objective"
-msgstr ""
+msgstr "目标"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -13678,7 +13688,7 @@ msgstr "上个武器"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Primary attack"
-msgstr ""
+msgstr "主要攻击"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -13785,7 +13795,7 @@ msgstr "读回解析"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "REAL DYNAMIC LIGHTING"
-msgstr ""
+msgstr "真实动态照明"
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -14108,7 +14118,7 @@ msgstr "低精度 XFloat"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Reload weapon"
-msgstr ""
+msgstr "换弹"
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -15105,7 +15115,7 @@ msgstr ""
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Secondary attack"
-msgstr ""
+msgstr "次要攻击"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15530,7 +15540,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "短可见屏幕边缘(厘米)"
 
-#. TRANSLATION: duckstation, hypseus-singe/zmachine, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, ...
+#. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "显示"
@@ -16164,7 +16174,7 @@ msgstr "语音模块已安装"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Speed"
-msgstr ""
+msgstr "速度"
 
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
@@ -16598,7 +16608,7 @@ msgstr "暴风骤雨2000"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "TERRAIN DETAIL"
-msgstr ""
+msgstr "地形细节"
 
 #. TRANSLATION: easyrpg
 msgctxt "game_options"
@@ -16613,12 +16623,12 @@ msgstr "文本"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "TEXTURE COLOUR DEPTH"
-msgstr ""
+msgstr "纹理颜色深度"
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "TEXTURE COMPRESSION"
-msgstr ""
+msgstr "纹理压缩"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -17052,12 +17062,12 @@ msgstr "使用游戏金手指或16/9纵横比修正码。"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Toggle item"
-msgstr ""
+msgstr "切换物品"
 
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Toggle menu"
-msgstr ""
+msgstr "切换菜单"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -18105,7 +18115,7 @@ msgstr "视频流分辨率"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "VIEW MODEL"
-msgstr ""
+msgstr "视图模型"
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -18140,7 +18150,7 @@ msgstr "语音"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "VOLUMETRIC SMOKE"
-msgstr ""
+msgstr "体积烟雾"
 
 #. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
 msgctxt "game_options"
@@ -18290,7 +18300,7 @@ msgstr "W-SU"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "WALL DECALS"
-msgstr ""
+msgstr "墙纸"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -18325,12 +18335,12 @@ msgstr "武器摇摆"
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "WEAPONS BAR"
-msgstr ""
+msgstr "武器酒吧"
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "WEATHER EFFECTS"
-msgstr ""
+msgstr "天气效果"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -18450,7 +18460,7 @@ msgstr "偏弱"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Weapon drop"
-msgstr ""
+msgstr "武器掉落"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

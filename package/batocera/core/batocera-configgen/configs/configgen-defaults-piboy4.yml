@@ -51,7 +51,7 @@ psx:
   emulator: duckstation
   core:     duckstation
 saturn:
-  emulator: yabausesa
+  emulator: libretro
   core:     yabausesa
 sgb:
   emulator: libretro

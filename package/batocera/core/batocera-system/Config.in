@@ -440,7 +440,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_AYANEO_PLATFORM                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # bluetooth
-    select BR2_PACKAGE_BRCM_PATCHRAM_PLUS                   if  BR2_PACKAGE_BATOCERA_TARGET_T527
+    select BR2_PACKAGE_BRCM_PATCHRAM_PLUS                   if  BR2_PACKAGE_BATOCERA_TARGET_T527        || BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     help
         Install the batocera.linux system files
@@ -1792,7 +1792,10 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     select BR2_PACKAGE_FIRMWARE_ORANGEPI                    if  BR2_PACKAGE_BATOCERA_TARGET_H3          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H5          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6          || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_H616
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H616        || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_T527        || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     # broadcom bluetooth firware
     select BR2_PACKAGE_BROADCOM_BT_FIRMWARE                 if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -1851,6 +1854,17 @@ config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
     # Compositor for wayland
     select BR2_PACKAGE_SWAY                                 if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_SWAYBG                               if !BR2_PACKAGE_BATOCERA_LIB32
+
+config BR2_PACKAGE_BATOCERA_WAYLAND_LABWC
+    bool "batocera.linux wayland labwc packages selection"
+
+    # Wayland Protocol
+    select BR2_PACKAGE_BATOCERA_WAYLAND
+
+    # Compositor for wayland
+    select BR2_PACKAGE_LABWC
+    select BR2_PACKAGE_SWAYBG
+    select BR2_PACKAGE_WLR_RANDR
 
 config BR2_PACKAGE_BATOCERA_XWAYLAND
     bool "batocera.linux xwayland packages selection"

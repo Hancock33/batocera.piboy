@@ -3,8 +3,8 @@
 # jazz2-native
 #
 ################################################################################
-# Version: Commits on Apr 27, 2025
-JAZZ2_NATIVE_VERSION = 6d138a227bbefc528912ad7e5dfcaf10e9270443
+# Version: Commits on May 04, 2025
+JAZZ2_NATIVE_VERSION = d13b6b32a7bb5cef441cc8027d46f7902d706d53
 JAZZ2_NATIVE_SITE =  $(call github,deathkiller,jazz2-native,$(JAZZ2_NATIVE_VERSION))
 JAZZ2_NATIVE_LICENSE = GPL-3.0
 JAZZ2_NATIVE_LICENSE_FILE = LICENSE

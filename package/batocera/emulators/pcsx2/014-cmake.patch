@@ -1,8 +1,8 @@
 diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
-index 20560112e..2bac82948 100644
+index e26188302..ae5ac6911 100644
 --- a/pcsx2/CMakeLists.txt
 +++ b/pcsx2/CMakeLists.txt
-@@ -766,7 +766,7 @@ if(DISABLE_ADVANCE_SIMD)
+@@ -768,7 +768,7 @@ if(DISABLE_ADVANCE_SIMD)
  		target_compile_definitions(GS-${isa} PRIVATE MULTI_ISA_UNSHARED_COMPILATION=isa_${isa} MULTI_ISA_IS_FIRST=${is_first_isa} ${pcsx2_defs_${isa}})
  		target_compile_options(GS-${isa} PRIVATE ${compile_options_${isa}})
  		if (${CMAKE_VERSION} VERSION_GREATER_EQUAL 3.24)

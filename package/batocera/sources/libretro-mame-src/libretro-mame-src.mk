@@ -3,8 +3,8 @@
 # libretro-mame-src
 #
 ################################################################################
-# Version: Commits on Apr 27, 2025
-LIBRETRO_MAME_SRC_VERSION = b861916b5ba338960448fbefc49f372476629fd4
+# Version: Commits on May 03, 2025
+LIBRETRO_MAME_SRC_VERSION = 49588e24936ff31996dd0533d8550b3aae15e390
 LIBRETRO_MAME_SRC_SITE = $(call github,Hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
 LIBRETRO_MAME_SRC_LICENSE = MAME
@@ -39,7 +39,6 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 	AR="$(TARGET_AR)" \
 	ARCH="" \
 	ARCHOPTS="$(LIBRETRO_MAME_SRC_ARCHOPTS) -fuse-ld=mold" \
-	CFLAGS="$(LIBRETRO_MAME_SRC_CFLAGS)" \
 	CONFIG=libretro \
 	CROSS_BUILD=1 \
 	DEBUG=0 \
@@ -72,7 +71,7 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 	USE_SYSTEM_LIB_SQLITE3=1 \
 	USE_SYSTEM_LIB_ZLIB=1 \
 	VERBOSE=1 \
-	OPTIMIZE=s OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
+	OPTIMIZE=s LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
 endef
 
 define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS

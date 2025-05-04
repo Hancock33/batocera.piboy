@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5b5cff6..a825c74 100644
+index 560728f..5ac772c 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -70,8 +70,8 @@ add_definitions(-DEMULATOR_VERSION_PATCH=${EMULATOR_VERSION_PATCH})
+@@ -71,8 +71,8 @@ add_definitions(-DEMULATOR_VERSION_PATCH=${EMULATOR_VERSION_PATCH})
  set_property(GLOBAL PROPERTY USE_FOLDERS ON)
  
  # enable link time optimization for release builds

@@ -65,7 +65,7 @@ index 7a9a4a8b2f..0681debe6f 100644
  #endif
  
 diff --git a/pkg/sailfishos/retroarch-sailfishos.spec b/pkg/sailfishos/retroarch-sailfishos.spec
-index e23e47b869..6effba67b2 100644
+index c553d34d67..b6ba8630fc 100644
 --- a/pkg/sailfishos/retroarch-sailfishos.spec
 +++ b/pkg/sailfishos/retroarch-sailfishos.spec
 @@ -41,8 +41,8 @@ make %{?_smp_mflags}
@@ -80,10 +80,10 @@ index e23e47b869..6effba67b2 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index 80d3d4908d..f4f6f9a07c 100644
+index e89b36711c..4d2bbb2c5e 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -6341,7 +6341,7 @@ static void retroarch_print_help(const char *arg0)
+@@ -6425,7 +6425,7 @@ static void retroarch_print_help(const char *arg0)
           "                                 "
           "  $XDG_CONFIG_HOME/retroarch/retroarch.cfg,\n"
           "                                 "
