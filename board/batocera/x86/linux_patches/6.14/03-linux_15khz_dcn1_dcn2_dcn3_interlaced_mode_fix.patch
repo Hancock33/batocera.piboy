@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 80a3cbd2cbe5..ae8356fb88c8 100644
+index 76c8e6457175..39a479564f59 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -6301,6 +6301,8 @@ static void fill_stream_properties_from_drm_display_mode(

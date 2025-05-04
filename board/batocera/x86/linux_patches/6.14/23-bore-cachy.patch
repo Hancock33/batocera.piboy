@@ -81,7 +81,7 @@ index 000000000000..a8faabc2885e
 +#endif // CONFIG_SCHED_BORE
 +#endif // _LINUX_SCHED_BORE_H
 diff --git a/init/Kconfig b/init/Kconfig
-index a800d7529f59..cb83791e46e4 100644
+index 32fc6107126a..60460672e5e1 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -1380,6 +1380,23 @@ config CHECKPOINT_RESTORE
@@ -750,7 +750,7 @@ index 228d981dea5d..9c25637f46e5 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 7e0ac34b351d..d6b6fcf1dad0 100644
+index 59e80ffc5ae2..47c20e27722d 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,8 @@
@@ -911,7 +911,7 @@ index 7e0ac34b351d..d6b6fcf1dad0 100644
  	/*
  	 * When joining the competition; the existing tasks will be,
  	 * on average, halfway through their slice, as such start tasks
-@@ -7202,6 +7229,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
+@@ -7200,6 +7227,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
  		util_est_dequeue(&rq->cfs, p);
  
  	util_est_update(&rq->cfs, p, flags & DEQUEUE_SLEEP);
@@ -927,7 +927,7 @@ index 7e0ac34b351d..d6b6fcf1dad0 100644
  	if (dequeue_entities(rq, &p->se, flags) < 0)
  		return false;
  
-@@ -9022,16 +9058,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9020,16 +9056,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -953,7 +953,7 @@ index 7e0ac34b351d..d6b6fcf1dad0 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13145,6 +13190,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13143,6 +13188,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -963,7 +963,7 @@ index 7e0ac34b351d..d6b6fcf1dad0 100644
  }
  
  /*
-@@ -13255,6 +13303,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13253,6 +13301,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
