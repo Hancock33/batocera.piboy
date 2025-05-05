@@ -2,6 +2,7 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[applewin](https://github.com/audetto/AppleWin)|ec0bd64f0444805ea4609c8f16981f5fe7b9ea95|May 05, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|0f0d0bf195122df7a59e33d312c431be6299d6c5|May 05, 2025
+Emulators|[citron](https://git.citron-emu.org/citron/emu)|7e58599d694e82751f7a2da966ca71c9e462bb0e|May 05, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|10bcedf27ff6105f4585340905bfa6a491134e16|May 05, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.323|May 05, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|6cd9252ca911ef440fb7604b4578b97da3369c8c|May 05, 2025
@@ -59,7 +60,6 @@ Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|87f78d3408c248b7bbf
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|7538424efb8c184df89f0211ab3d2f42e7898a96|May 04, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|8c678695c8795de8b98f5f7e1a42f43e86a80286|May 04, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|116af5c6a857dbf599fe06fa17fd6aa4951deb1a|May 04, 2025
-Emulators|[citron](https://git.citron-emu.org/citron/emu)|6969005c54729c2febd9ddf9ba6bfac1cb7fc5be|May 03, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.05.03|May 03, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|97bc6b08b1da511fa449ecb412ca74fa54f4a3fb|May 03, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|ce12434705959856ad1b0be51d4328f731df2c30|May 03, 2025
