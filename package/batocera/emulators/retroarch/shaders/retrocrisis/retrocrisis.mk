@@ -3,8 +3,8 @@
 # retrocrisis
 #
 ################################################################################
-# Version: Commits on Mar 08, 2025
-RETROCRISIS_VERSION = 20250308
+# Version: Commits on May 05, 2025
+RETROCRISIS_VERSION = 20250505
 RETROCRISIS_DATE = $(shell date -d '$(RETROCRISIS_VERSION)' +'%Y.%m.%d')
 RETROCRISIS_SITE = https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases/download/$(subst .,,$(RETROCRISIS_VERSION))
 RETROCRISIS_SOURCE = Retro.Crisis.GDV-NTSC.$(RETROCRISIS_DATE).zip
