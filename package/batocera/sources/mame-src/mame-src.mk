@@ -7,7 +7,7 @@
 MAME_SRC_VERSION = mame0277
 MAME_SRC_SOURCE = mame-src-$(MAME_SRC_VERSION).tar.gz
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
-MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng pulseaudio rapidjson sdl2 sdl2_ttf sqlite zlib
+MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl2 sdl2_ttf sqlite zlib
 MAME_SRC_LICENSE = MAME
 
 MAME_SRC_CROSS_ARCH = unknown
@@ -17,23 +17,31 @@ MAME_SRC_CFLAGS += -I$(STAGING_DIR)/usr/include/pipewire-0.3 -I$(STAGING_DIR)/us
 # Limit number of jobs not to eat too much RAM....
 MAME_SRC_JOBS = $(shell expr $(shell nproc))
 
-# x86_64 is desktop linux based on X11 and OpenGL
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+ifeq ($(BR2_x86_64),y)
+    MAME_SRC_EXTRA_ARGS += PLATFORM=x86
     MAME_SRC_CROSS_ARCH = x86_64
-    MAME_SRC_CROSS_OPTS += PTR64=1
-endif
-
-# allow cross-architecture compilation with MAME build system
-ifeq ($(BR2_aarch64),y)
+else ifeq ($(BR2_aarch64),y)
+    MAME_SRC_EXTRA_ARGS += PLATFORM=arm64 ARCHITECTURE=
     MAME_SRC_CROSS_ARCH = aarch64
-    MAME_SRC_CROSS_OPTS += PTR64=1
 endif
 
 # Wayland
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
-MAME_SRC_CROSS_OPTS += USE_WAYLAND=1
+    MAME_SRC_CROSS_OPTS += USE_WAYLAND=1
 else
-MAME_SRC_CROSS_OPTS += USE_WAYLAND=0
+    MAME_SRC_CROSS_OPTS += USE_WAYLAND=0
+endif
+
+# Disable OpenGL if we don't have it
+ifneq ($(BR2_PACKAGE_HAS_LIBGL),y)
+    MAME_SRC_CROSS_OPTS += NO_OPENGL=1 NO_USE_BGFX_KHRONOS=1
+endif
+
+# Handle alsa vs pulse/pipewire audio stack
+ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
+    MAME_DEPENDENCIES += pulseaudio
+else
+    MAME_SRC_CROSS_OPTS += NO_USE_PULSEAUDIO=1
 endif
 
 define MAME_SRC_BUILD_CMDS
@@ -62,7 +70,6 @@ define MAME_SRC_BUILD_CMDS
 	CROSS_BUILD=1 \
 	FORCE_DRC_C_BACKEND=0 \
 	LDOPTS="-lasound -lfontconfig" \
-	NO_USE_PORTAUDIO=1 \
 	NOWERROR=1 \
 	OPENMP=1 \
 	OVERRIDE_AR="$(TARGET_AR)" \
@@ -86,7 +93,7 @@ define MAME_SRC_BUILD_CMDS
 	USE_SYSTEM_LIB_SQLITE3=1 \
 	USE_SYSTEM_LIB_ZLIB=1 \
 	USE_LIBSDL=1 \
-	OPTIMIZE=s LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
+	OPTIMIZE=s LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION) PTR64=1
 endef
 
 define MAME_SRC_INSTALL_TARGET_CMDS
@@ -143,8 +150,7 @@ define MAME_SRC_INSTALL_TARGET_CMDS
 
 	# Delete bgfx shaders for DX9/DX11/Metal
 	rm -Rf /tmp/mame/usr/bin/mame/bgfx/shaders/metal/
-	rm -Rf /tmp/mame/usr/bin/mame/bgfx/shaders/dx11/
-	rm -Rf /tmp/mame/usr/bin/mame/bgfx/shaders/dx9/
+	rm -Rf /tmp/mame/usr/bin/mame/bgfx/shaders/dx*/
 
 	cd /tmp/mame && tar -cf /tmp/mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar .
 	xz -T0 -7 -v /tmp/mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar
