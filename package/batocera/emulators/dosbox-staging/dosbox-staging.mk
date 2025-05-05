@@ -53,4 +53,11 @@ ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
 endif
 
+define DOSBOX_STAGING_ORIGINAL
+	mv $(TARGET_DIR)/usr/bin/dosbox $(TARGET_DIR)/usr/bin/dosbox-staging
+	cp -av  $(@D)/build/subprojects/munt-libmt32emu*/libmt32emu.so $(TARGET_DIR)/usr/lib
+endef
+
+DOSBOX_STAGING_POST_INSTALL_TARGET_HOOKS = DOSBOX_STAGING_ORIGINAL
+
 $(eval $(meson-package))
