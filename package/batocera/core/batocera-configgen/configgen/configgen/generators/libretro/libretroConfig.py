@@ -196,7 +196,7 @@ def createLibretroConfig(
         else:
             _logger.debug("Discrete GPU is not available on the system. Using default.")
 
-    retroarchConfig['audio_driver'] = system.config.get("audio_driver", '"pipewire"')
+    retroarchConfig['audio_driver'] = system.config.get("audio_driver", '"pulse"')
     retroarchConfig['audio_latency'] = system.config.get("audio_latency", '64')  # 64 = best balance with audio perf
     retroarchConfig['audio_volume'] = system.config.get("audio_volume", '0')
 

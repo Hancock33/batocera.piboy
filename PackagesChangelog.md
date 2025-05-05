@@ -12,13 +12,14 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14226|May 05, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250505|May 05, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|cc5ad34876cd9183e6f29b76572114b39cef1f00|May 05, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0670d6d87e2b101a73eafc2735b21950f59463fd|May 05, 2025
+Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|8e20b2b7dd660cb2f49a475f6a72cd423710607d|May 05, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250505|May 05, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a03d9b86c629f7403891e46972c1f6406fc6d578|May 05, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|8447e1716c86868e7c8bde87eeb0e83e23019b93|May 05, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|a4124405821d943e476b81fbbd796560e7b90811|May 05, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|a4124405821d943e476b81fbbd796560e7b90811|May 05, 2025
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7fda58561f6a0c249f7ffb5ab3ff739dbf67b1be|May 05, 2025
-Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|799b2eb8b2db90c44422694107837c5f177e178c|May 05, 2025
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|321e28c810a370a435063140df3ac30db87a8f4e|May 05, 2025
+Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|9129393fde936fb2fd7cfe3d27128f3d43ac2964|May 05, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|b65652aa82a9e8588b6ca51dd9af197fea8ea6cc|May 05, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|6cd9252ca911ef440fb7604b4578b97da3369c8c|May 05, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|2668d46e9e79e5c364fd4dfbece7fc92eda358dd|May 05, 2025
@@ -63,7 +64,6 @@ Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|97bc6b08b1da511fa449
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|ce12434705959856ad1b0be51d4328f731df2c30|May 03, 2025
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.8|May 03, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|955d91572c9db589b8f6ddf1a0ebc1ffa43dddd0|May 03, 2025
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|49588e24936ff31996dd0533d8550b3aae15e390|May 03, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.7|May 03, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|010c68e3a14702a6dbbf53bf6f57c24ffc873a85|May 03, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|1f4a15aa51eb6068cc6823d03417e1b2f11e1210|May 03, 2025
@@ -82,6 +82,7 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|a85f
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.05|May 01, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|64839aa9975f362f35686c8cec4041c477a8199c|May 01, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu)|d59386942947eb7ae3087548bd7e273974af20c4|May 01, 2025
+Sources|[libretro-mame-src](http://github.com/libretro/mame)|ee7155be0735e38f47c555a69217a2b77d6eca13|May 01, 2025
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.2|May 01, 2025
 Utils|[rclone](http://github.com/rclone/rclone)|v1.69.2|May 01, 2025
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|c4c73745be1a59da7ac48c4adee517da8934be7c|May 01, 2025
@@ -89,7 +90,6 @@ Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-inpu
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|b6881507aeb419751bbc923366d06f08b6b398ae|May 01, 2025
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|6d567d389f5887411bdcc063990d75810049e1c0|May 01, 2025
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|53c34795aa6257154dd8c5a657989cc91dcf912d|May 01, 2025
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|02d3010a3517620e7eedd919217e169c4a188de3|May 01, 2025
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|3544ff567ecc417c170641587083b976739ef9db|May 01, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|fb4763666821e6ff93602bf5062bb3cdfadce124|Apr 30, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.13|Apr 30, 2025

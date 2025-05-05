@@ -121,7 +121,7 @@ Emulators|[libretro-bsnes-hd](http://github.com/DerKoun/bsnes-hd)|0bb7b8645e22ea
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|bb071f9be729ee97e7ed60fc2b6549cbbfef0811|Apr 06, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|b102d6d5817b25aa059b573cd3b7675f2e375fa4|Apr 11, 2025
 Emulators|[libretro-cannonball](http://github.com/libretro/cannonball)|5137a791d229a5b9c7c089cf1edcce4db3c57d64|Oct 21, 2024
-Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|799b2eb8b2db90c44422694107837c5f177e178c|May 05, 2025
+Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|9129393fde936fb2fd7cfe3d27128f3d43ac2964|May 05, 2025
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|467cd453e3b1761c5c3611746b35e709328a2ced|Feb 13, 2025
 Emulators|[libretro-citra](https://github.com/zorn-v/citra-libretro.git)|947ea2c7e426632392cf4bf44eab70de034267be|Jan 30, 2024
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|98016cb2ee6447f98deaf9a7f8743516c78b4bbe|Apr 29, 2025
@@ -331,7 +331,7 @@ Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|ca16a702c76eb784e870772c94
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.2|Apr 23, 2025
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.309.0|Feb 18, 2025
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4daf9d466ad00897f755163dd26f528d14e1db44|Apr 06, 2025
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|02d3010a3517620e7eedd919217e169c4a188de3|May 01, 2025
+Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|8e20b2b7dd660cb2f49a475f6a72cd423710607d|May 05, 2025
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.309.0|Mar 06, 2025
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.309.0|Mar 10, 2025
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.309.0|Feb 21, 2025
@@ -503,9 +503,9 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.8|Apr 25, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|0a245da28c73a2c2eabc1a6da8f0993f5d7233c4|May 02, 2025
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7fda58561f6a0c249f7ffb5ab3ff739dbf67b1be|May 05, 2025
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|321e28c810a370a435063140df3ac30db87a8f4e|May 05, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.2|Apr 13, 2025
-Sources|[libretro-mame-src](http://github.com/Hancock33/lr-mame)|49588e24936ff31996dd0533d8550b3aae15e390|May 03, 2025
+Sources|[libretro-mame-src](http://github.com/libretro/mame)|ee7155be0735e38f47c555a69217a2b77d6eca13|May 01, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0277|Apr 29, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
