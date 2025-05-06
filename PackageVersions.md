@@ -310,7 +310,7 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|816bf7c594a4c11
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|c57d8c29c46993d93f191218bbc1dc3a73fc7918|Apr 28, 2025
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.01.1|Mar 31, 2025
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|a744af14d4afbda77bf472bc53f43b9ceba39cc0|Dec 28, 2024
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.4.309.0|Mar 01, 2025
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.4.313.0|Apr 24, 2025
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|bc96eed2b3cabee24a6a14692da4c80914da3f18|Dec 26, 2024
 Gpu|[img-mesa3d](https://archive.mesa3d.org)|22.1.3|Jun 29, 2022
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
@@ -329,12 +329,12 @@ Gpu|[nvidia470-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|470.
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.5|Apr 23, 2024
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|ca16a702c76eb784e870772c948012c4c27076da|Jan 22, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.2|Apr 23, 2025
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.309.0|Feb 18, 2025
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.313.0|Apr 22, 2025
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4daf9d466ad00897f755163dd26f528d14e1db44|Apr 06, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|8e20b2b7dd660cb2f49a475f6a72cd423710607d|May 05, 2025
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.309.0|Mar 06, 2025
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.309.0|Mar 10, 2025
-Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.309.0|Feb 21, 2025
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.313.0|Apr 18, 2025
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.313.0|May 01, 2025
+Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.313.0|Apr 18, 2025
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.4|Dec 06, 2024
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|v0.5.2|Jul 29, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|923de3203a000f8d8ffefb5ca15d296eb5d3c425|Oct 25, 2024
