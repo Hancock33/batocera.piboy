@@ -102,7 +102,7 @@ index 0000000000..d2091cbfb4
 +
 +mark_as_advanced(LIBGBM_INCLUDE_DIRS LIBGBM_LIBRARIES)
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index f1ebba3240..9170c22a57 100644
+index b67e31838d..b1b5686695 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -528,6 +528,12 @@ if(ENABLE_EGL)
@@ -119,10 +119,10 @@ index f1ebba3240..9170c22a57 100644
      message(WARNING "EGL support enabled but not found. This build will not support EGL.")
    endif()
 diff --git a/Source/Core/Common/CMakeLists.txt b/Source/Core/Common/CMakeLists.txt
-index 608e2f270a..bcf3644260 100644
+index aca142b9cd..9afd64ae56 100644
 --- a/Source/Core/Common/CMakeLists.txt
 +++ b/Source/Core/Common/CMakeLists.txt
-@@ -281,10 +281,19 @@ target_sources(common PRIVATE
+@@ -282,10 +282,19 @@ target_sources(common PRIVATE
  )
  
  if(ENABLE_EGL AND EGL_FOUND)
@@ -146,7 +146,7 @@ index 608e2f270a..bcf3644260 100644
    if(ANDROID)
      target_sources(common PRIVATE
        GL/GLInterface/EGLAndroid.cpp
-@@ -296,8 +305,13 @@ if(ENABLE_EGL AND EGL_FOUND)
+@@ -297,8 +306,13 @@ if(ENABLE_EGL AND EGL_FOUND)
        GL/GLInterface/EGLX11.h
      )
    endif()

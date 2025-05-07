@@ -3,8 +3,8 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on May 04, 2025
-DOLPHIN_EMU_VERSION = d2db9d95906de73d704bd0f32bd1ee79f4a442f6
+# Version: Commits on May 07, 2025
+DOLPHIN_EMU_VERSION = 684db094c600cb82d31d920937308cee7ef9178d
 DOLPHIN_EMU_VERSION_MINOR = 328
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
@@ -33,8 +33,8 @@ DOLPHIN_EMU_CONF_OPTS += -DUSE_UPNP=OFF
 
 ifeq ($(BR2_PACKAGE_QT6),y)
     DOLPHIN_EMU_DEPENDENCIES += qt6base qt6svg
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=OFF
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON
+    DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=ON
+    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=OFF
 else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=OFF
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON

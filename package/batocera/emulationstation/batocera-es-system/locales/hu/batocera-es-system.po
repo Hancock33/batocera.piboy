@@ -13012,7 +13012,7 @@ msgctxt "keys_files"
 msgid "Open furnish corridor menu"
 msgstr "Open furnish corridor menu"
 
-#. TRANSLATION: awgl, cemu, citron, dolphin, duckstation, ...
+#. TRANSLATION: awgl, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -13027,7 +13027,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Számítási shader)"
 
-#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (alapértelmezett)"

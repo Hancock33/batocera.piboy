@@ -8811,7 +8811,7 @@ msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr ""
 
-#. TRANSLATION: awgl, cemu, citron, dolphin, duckstation, ...
+#. TRANSLATION: awgl, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr ""
@@ -9980,11 +9980,6 @@ msgstr ""
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
-msgstr ""
-
-#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
-msgctxt "game_options"
-msgid "OpenGL (Default)"
 msgstr ""
 
 #. TRANSLATION: dolphin_triforce
@@ -12707,6 +12702,11 @@ msgstr ""
 #. TRANSLATION: rtcw, scummvm
 msgctxt "game_options"
 msgid "RENDERER"
+msgstr ""
+
+#. TRANSLATION: azahar, play, scummvm
+msgctxt "game_options"
+msgid "OpenGL (Default)"
 msgstr ""
 
 #. TRANSLATION: scummvm

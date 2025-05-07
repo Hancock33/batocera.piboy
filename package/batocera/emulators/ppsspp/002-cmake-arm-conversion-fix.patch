@@ -1,9 +1,9 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index de86641d03..14ca8c1ed6 100644
+index cebf58b68b..faa3b87986 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -519,6 +519,8 @@ if(WIN32)
- 	add_definitions(-DUSING_WIN_UI)
+@@ -501,6 +501,8 @@ if(WIN32)
+ 	add_compile_definitions(USING_WIN_UI)
  endif()
  
 +set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -flax-vector-conversions")

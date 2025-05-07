@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 14ca8c1ed6..bfebe47af0 100644
+index faa3b87986..7753d4a553 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -1467,7 +1467,7 @@ else()
+@@ -1452,7 +1452,7 @@ else()
  		message(WARNING "Found SDL2_ttf <2.0.18 - this is too old, falling back to atlas")
  	endif()
  	if(SDL2_ttf_FOUND)

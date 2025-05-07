@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-27 21:55+0200\n"
+"PO-Revision-Date: 2025-05-06 21:12+0200\n"
 "Last-Translator: borysus\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -5905,7 +5905,7 @@ msgstr "Krzyż"
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
+msgstr "Celowniki w obsługiwanych grach, np. ActionMax, Maddog II."
 
 #. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
@@ -10853,7 +10853,7 @@ msgstr "CELOWNIK PISTOLETU ŚWIETLNEGO"
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIRS"
-msgstr ""
+msgstr "CELOWNIKI PISTOLETÓW ŚWIETLNYCH"
 
 #. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
@@ -13005,7 +13005,7 @@ msgctxt "keys_files"
 msgid "Open furnish corridor menu"
 msgstr "Otwórz menu korytarza wyposażenia"
 
-#. TRANSLATION: awgl, cemu, citron, dolphin, duckstation, ...
+#. TRANSLATION: awgl, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -13020,7 +13020,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Compute shader)"
 
-#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (domyślnie)"

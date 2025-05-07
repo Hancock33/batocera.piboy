@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 01551e6a2..ef4e6ee38 100644
+index f1cdda80a..8c5bfd662 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -78,6 +78,7 @@ option(ENABLE_DC_PROFILER "Build with support for target machine (SH4) profiler"

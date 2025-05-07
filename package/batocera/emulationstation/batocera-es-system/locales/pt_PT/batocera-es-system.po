@@ -5363,7 +5363,7 @@ msgstr "Escolha a dificuldade do jogo."
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Choose the level of curve detail."
-msgstr ""
+msgstr "Escolha o nível de detalhe da curva."
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
@@ -5901,7 +5901,7 @@ msgstr "Cruz"
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
+msgstr "Mira em jogos suportados, por exemplo ActionMax, Maddog II."
 
 #. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
@@ -9623,7 +9623,7 @@ msgstr ""
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "ESCONDER MIRA DA PISTOLA"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -9838,7 +9838,7 @@ msgstr "Ocultar molduras"
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr "Ocultar a mira em jogos suportados, por ex. ActionMax, Maddog II."
+msgstr ""
 
 #. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
@@ -10831,7 +10831,7 @@ msgstr "MIRA DA PISTOLA"
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIRS"
-msgstr ""
+msgstr "MIRA DA PISTOLA DE LUZ"
 
 #. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
@@ -12983,7 +12983,7 @@ msgctxt "keys_files"
 msgid "Open furnish corridor menu"
 msgstr "Abrir menu do corredor de móveis"
 
-#. TRANSLATION: awgl, cemu, citron, dolphin, duckstation, ...
+#. TRANSLATION: awgl, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -12998,7 +12998,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Computação de Shader)"
 
-#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Predefinição)"
