@@ -8532,7 +8532,7 @@ dolphin_triforce:
             description: Choose which graphics API library to use.
             choices:
                 "OpenGL" : OGL
-                "Vulkan":           Vulkan
+                "Vulkan":  Vulkan
         triforce_resolution:
             prompt: RENDERING RESOLUTION
             description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
