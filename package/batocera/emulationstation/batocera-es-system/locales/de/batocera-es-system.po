@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-28 05:27+0000\n"
+"PO-Revision-Date: 2025-05-07 13:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -5905,7 +5905,7 @@ msgstr "Kreuz"
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "Crosshairs in supported games e.g. ActionMax, Maddog II."
-msgstr ""
+msgstr "Fadenkreuze in unterstützten Spielen, z.B. ActionMax, Maddog II."
 
 #. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
@@ -9661,7 +9661,7 @@ msgstr ""
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "FADENKREUZE DER LIGHTGUNS AUSBLENDEN"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -9877,7 +9877,6 @@ msgstr "Bezels ausblenden"
 msgctxt "game_options"
 msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 msgstr ""
-"Fadenkreuze in unterstützten Spielen ausblenden, z.B. ActionMax, Maddog II."
 
 #. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
@@ -10875,7 +10874,7 @@ msgstr "LIGHTGUN FADENKREUZ"
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIRS"
-msgstr ""
+msgstr "FADENKREUZE FÜR LIGHT GUN"
 
 #. TRANSLATION: dolphin, hypseus-singe/zmachine, rpcs3, shared
 msgctxt "game_options"
