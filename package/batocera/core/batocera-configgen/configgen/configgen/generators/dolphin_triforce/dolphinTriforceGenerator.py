@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import shutil
+import logging
 from os import environ
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -8,6 +9,7 @@ from typing import TYPE_CHECKING
 from ... import Command
 from ...batoceraPaths import mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
+from ...utils import vulkan
 from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
 from . import dolphinTriforceControllers
@@ -111,8 +113,15 @@ class DolphinTriforceGenerator(Generator):
         # Enable MMU
         dolphinTriforceSettings.set("Core", "MMU", str(system.config.get_bool("triforce_enable_mmu")))
 
-        # Backend - Default OpenGL
-        dolphinTriforceSettings.set("Core", "GFXBackend", system.config.get("triforce_api", "Vulkan"))
+        # Backend - Default Vulkan
+        if system.config.get("gfxbackend") == "OpenGL":
+            dolphinTriforceSettings.set("Core", "GFXBackend", "OGL")
+            # Check Vulkan
+            if not vulkan.is_available():
+                _logger.debug("Vulkan driver is not available on the system. Using OpenGL instead.")
+                dolphinTriforceSettings.set("Core", "GFXBackend", "OGL")
+        else:
+            dolphinTriforceSettings.set("Core", "GFXBackend", "Vulkan")
 
         # Serial Port 1 to AM-Baseband
         dolphinTriforceSettings.set("Core", "SerialPort1", "6")

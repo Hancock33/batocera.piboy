@@ -1,6 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|17fd68a47e9d25f1f1880911a4931c4b916ae125|May 06, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c9bdda63dc624995406c37f4e29e3b8c4696e6d0|May 06, 2025
+Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|38f67ef950c8f0c1b48ffeb32b1c8c6fca4bebd7|May 06, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|b2dcf39f8b557127f1f49eaf7fb575c72131fe2f|May 06, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|5f4eefab5852d1c832ad8ffdf514fef8c217f1ac|May 06, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|e0921fea5b4e02aca7b74f03bb71afa331c15ff4|May 06, 2025
@@ -298,7 +300,6 @@ Utils|[warehouse](http://github.com/flattool/warehouse)|2.0.2|Jan 06, 2025
 Emulators|[libretro-xrick](http://github.com/libretro/xrick-libretro)|476a9a637a6d2afa3f9f6b202bb98b522a4e95d1|Jan 05, 2025
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Emulators|[libretro-holani](http://github.com/LLeny/holani-retro)|61114880081cc518b54c898708ad1d162d9077ec|Dec 31, 2024
-Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|cc15858c4aacaca7ca7b346afd0752b909b63064|Dec 30, 2024
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|a744af14d4afbda77bf472bc53f43b9ceba39cc0|Dec 28, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|86e02d3c2dd76858db7370f5df1ccfc33b3abee1|Dec 27, 2024
@@ -453,7 +454,6 @@ Utils|[xwiimote](http://github.com/xwiimote/xwiimote)|4df713d9037d814cc0c64197f6
 Emulators|[libretro-freej2me](http://github.com/hex007/freej2me)|8b9bc8a19baf26e3d92f88934a64a32f1cbc2795|Feb 16, 2024
 Emulators|[libretro-citra](https://github.com/zorn-v/citra-libretro.git)|947ea2c7e426632392cf4bf44eab70de034267be|Jan 30, 2024
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
-Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|a77301e60ae6fef28d4ffd149b9618cbc697a4a2|Jan 20, 2024
 Controllers|[dolphinCrosshairsPack](http://github.com/ProfgLX/Dolphin-Lightguns-Accuracy-Inis)|b78ab6cb5a6d5e34f6e2ec16f551e00540a29ed5|Jan 20, 2024
 Boot|[uboot-multiboard](https://ftp.denx.de/pub/u-boot)|2024.01|Jan 08, 2024
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024

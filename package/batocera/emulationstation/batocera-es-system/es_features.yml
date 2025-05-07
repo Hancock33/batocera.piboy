@@ -8531,7 +8531,7 @@ dolphin_triforce:
             prompt: GRAPHICS API
             description: Choose which graphics API library to use.
             choices:
-                "OpenGL (Default)": OGL
+                "OpenGL" : OGL
                 "Vulkan":           Vulkan
         triforce_resolution:
             prompt: RENDERING RESOLUTION

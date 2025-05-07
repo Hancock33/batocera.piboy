@@ -57,7 +57,7 @@ Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727
 Controllers|[xpad-noone](http://github.com/medusalix/xpad-noone)|6970c40930bedd8b58d0764894e0d5f04813b7c5|Apr 24, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|cd256807c5f916735ae18749c43d5b0bd73240fa|Apr 10, 2025
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
-Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|a77301e60ae6fef28d4ffd149b9618cbc697a4a2|Jan 20, 2024
+Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|17fd68a47e9d25f1f1880911a4931c4b916ae125|May 06, 2025
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
@@ -75,7 +75,7 @@ Emulators|[citron](https://git.citron-emu.org/citron/emu)|7e58599d694e82751f7a2d
 Emulators|[clk](https://github.com/TomHarte/CLK)|5350e41da1e081256e9415b658559820f65ba0d4|May 02, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c9bdda63dc624995406c37f4e29e3b8c4696e6d0|May 06, 2025
-Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|cc15858c4aacaca7ca7b346afd0752b909b63064|Dec 30, 2024
+Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|38f67ef950c8f0c1b48ffeb32b1c8c6fca4bebd7|May 06, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|050f68817a09379150b7bdf665a443b4869d7c08|Apr 27, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.05.03|May 03, 2025
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
