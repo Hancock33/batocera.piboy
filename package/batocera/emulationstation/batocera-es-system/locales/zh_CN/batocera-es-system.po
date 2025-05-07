@@ -12752,7 +12752,7 @@ msgctxt "keys_files"
 msgid "Open furnish corridor menu"
 msgstr "打开家具走廊菜单"
 
-#. TRANSLATION: awgl, cemu, citron, dolphin, duckstation, ...
+#. TRANSLATION: awgl, cemu, citron, dolphin, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -12767,7 +12767,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (计算着色器)"
 
-#. TRANSLATION: azahar, dolphin_triforce, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL（默认）"
