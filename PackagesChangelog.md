@@ -9,7 +9,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|cf5946e12735f0400259848e5
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.330|May 07, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e1d3cf57c801197b612bef73f79cda67af9d42f8|May 07, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-07|May 07, 2025
-Emulators|[scummvm](http://github.com/scummvm/scummvm)|a3a03764656fbefb6ab31f883a55403b6c0dbd11|May 07, 2025
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|81417a2b4434fe323c544f9cf7b4617f1bbc0221|May 07, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|c7fb3ebd93a40a406e4dc6fdbfc03c00c58bec4a|May 07, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|abace064daf57c0327106c9a64c5b26492f5670c|May 07, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|de3b49e356ffdafa365afad49f3ed4a6959a5990|May 07, 2025
@@ -29,7 +29,7 @@ Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|a5d96c5ebb
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|5a3fb7cba1749a30cb03346e61425f614e2a9371|May 07, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|bfb4277142b5502099af5dfaeaeee2f31212fc8c|May 07, 2025
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|469ddf0e236a2db15bd63b5d8c8daf5cdaa5a588|May 07, 2025
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|a3a03764656fbefb6ab31f883a55403b6c0dbd11|May 07, 2025
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|81417a2b4434fe323c544f9cf7b4617f1bbc0221|May 07, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|d1dc8b3ace1e3c746b12806b92036fdfd851e368|May 07, 2025
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|17fd68a47e9d25f1f1880911a4931c4b916ae125|May 06, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|9afaaf933708035769d226300927f4d0b0b136ce|May 06, 2025
@@ -42,6 +42,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a6ac3a183bb5
 Ports|[stk](http://github.com/supertuxkart/stk-code)|7c72a531057f40a0c53c0c6555bd68064d8aea7f|May 06, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e5bd1b30488bd71a391250322e458facbbd2c607|May 06, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.14|May 06, 2025
+Wine|[wine-proton](http://github.com/ValveSoftware/wine)|proton-wine-10.0-1d|May 06, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|f966f2f5f008959d007caa2834052704c68fe01b|May 06, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|f40eed70934645fe5760388611b81beae9aa9566|May 06, 2025
 Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|fd7a1fdcce4f8c582ab65c82d397eb9c8f9f6e51|May 06, 2025
@@ -87,7 +88,6 @@ Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libr
 Emulators|[clk](https://github.com/TomHarte/CLK)|5350e41da1e081256e9415b658559820f65ba0d4|May 02, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|c1a860b625c1b873fcfcafc8d8c3f5548332e4e1|May 02, 2025
 Utils|[labwc](http://github.com/labwc/labwc)|0.8.4|May 02, 2025
-Wine|[wine-proton](http://github.com/ValveSoftware/wine)|c9f44a75cab03b4256a49ed46f6309b6cd4d0341|May 02, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|197b160f7806d7d27117b12198cacb7656a07f1f|May 02, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|b61c22b1cd01f4b1f5f48192f0700aa398de31a3|May 02, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|0a245da28c73a2c2eabc1a6da8f0993f5d7233c4|May 02, 2025
