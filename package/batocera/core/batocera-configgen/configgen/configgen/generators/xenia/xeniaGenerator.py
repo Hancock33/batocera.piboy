@@ -103,7 +103,7 @@ class XeniaGenerator(Generator):
             with (canarypath / 'portable.txt').open('w'):
                 pass
 
-        wine_runner.install_wine_trick(wineprefix, 'xeniadisclaimer')
+        wine_runner.install_wine_trick('xeniadisclaimer')
         wine_runner.install_wine_trick('vcrun2022')
 
         dll_files = ["d3d12.dll", "d3d12core.dll", "d3d11.dll", "d3d10core.dll", "d3d9.dll", "d3d8.dll", "dxgi.dll"]
