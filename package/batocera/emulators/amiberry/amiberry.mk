@@ -3,8 +3,8 @@
 # amiberry
 #
 ################################################################################
-# Version: Commits on May 07, 2025
-AMIBERRY_VERSION = 1e31ad1b679b1047c51117224cd6a9bba16b9e44
+# Version: Commits on May 08, 2025
+AMIBERRY_VERSION = 073b49a4ee9485940e68513e3c743427b9c3d0fe
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES += sdl2 sdl2_image sdl2_ttf mpg123 libxml2 libmpeg2 flac
