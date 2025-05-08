@@ -8,7 +8,7 @@ DOSBOX_STAGING_VERSION = 050f68817a09379150b7bdf665a443b4869d7c08
 DOSBOX_STAGING_BRANCH = release/0.82.x
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = iir libpng libogg libvorbis opus opusfile
-DOSBOX_STAGING_DEPENDENCIES += sdl2 sdl2_image speexdsp zlib 
+DOSBOX_STAGING_DEPENDENCIES += sdl2 sdl2_image speexdsp zlib
 DOSBOX_STAGING_LICENSE = GPLv2
 DOSBOX_STAGING_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
 
