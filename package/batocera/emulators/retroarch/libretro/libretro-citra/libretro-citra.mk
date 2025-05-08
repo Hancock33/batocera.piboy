@@ -3,10 +3,9 @@
 # libretro-citra
 #
 ################################################################################
-# Version: Commits on Jan 30, 2024
-LIBRETRO_CITRA_VERSION = 947ea2c7e426632392cf4bf44eab70de034267be
-LIBRETRO_CITRA_BRANCH = vulkan
-LIBRETRO_CITRA_SITE = https://github.com/zorn-v/citra-libretro.git
+# Version: Commits on May 07, 2025
+LIBRETRO_CITRA_VERSION = b1f9fe0c3d4d6c4e133a710bc172d9adcb40c706
+LIBRETRO_CITRA_SITE = https://github.com/libretro/citra.git
 LIBRETRO_CITRA_SITE_METHOD=git
 LIBRETRO_CITRA_GIT_SUBMODULES=YES
 LIBRETRO_CITRA_SUPPORTS_IN_SOURCE_BUILD = NO
