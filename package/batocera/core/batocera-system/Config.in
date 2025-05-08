@@ -1295,6 +1295,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_BEETLE_PCE                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST             # ALL
     select BR2_PACKAGE_LIBRETRO_BEETLE_SUPERGRAFX           # ALL
+    select BR2_PACKAGE_LIBRETRO_GEARGRAFX                   # ALL
 
     # Vectrex
     select BR2_PACKAGE_LIBRETRO_VECX                        # ALL
