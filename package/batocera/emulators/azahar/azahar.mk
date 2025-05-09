@@ -3,8 +3,8 @@
 # azahar
 #
 ################################################################################
-# Version: Commits on May 08, 2025
-AZAHAR_VERSION = 5099a0b5286a22e89a8dffdbbf4d93fdfdc764b3
+# Version: Commits on Apr 22, 2025
+AZAHAR_VERSION = 4e5d78ada3d284d19b731c99f46f940a69974b5f
 AZAHAR_SITE = https://github.com/AzaharPlus/AzaharPlus.git
 AZAHAR_SITE_METHOD=git
 AZAHAR_GIT_SUBMODULES = YES
