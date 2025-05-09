@@ -12,20 +12,15 @@ index b8a4ff365582..cdd607e8203a 100644
  
  #
 diff --git a/kernel/cpu.c b/kernel/cpu.c
-index ad755db29efd..fa16baed93d2 100644
+index ad755db29efd..c4d4df14435d 100644
 --- a/kernel/cpu.c
 +++ b/kernel/cpu.c
-@@ -3217,11 +3217,11 @@ bool cpu_mitigations_auto_nosmt(void)
- 	return cpu_mitigations == CPU_MITIGATIONS_AUTO_NOSMT;
- }
- EXPORT_SYMBOL_GPL(cpu_mitigations_auto_nosmt);
--#else
-+/*#else
+@@ -3220,7 +3220,7 @@ EXPORT_SYMBOL_GPL(cpu_mitigations_auto_nosmt);
+ #else
  static int __init mitigations_parse_cmdline(char *arg)
  {
- 	pr_crit("Kernel compiled without mitigations, ignoring 'mitigations'; system may still be vulnerable\n");
+-	pr_crit("Kernel compiled without mitigations, ignoring 'mitigations'; system may still be vulnerable\n");
++	//pr_crit("Kernel compiled without mitigations, ignoring 'mitigations'; system may still be vulnerable\n");
  	return 0;
--}
-+}*/
+ }
  #endif
- early_param("mitigations", mitigations_parse_cmdline);
