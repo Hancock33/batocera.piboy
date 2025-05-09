@@ -5,7 +5,7 @@ index 87835d7abbce..318aeb1f95e0 100644
 @@ -2,7 +2,7 @@
  VERSION = 6
  PATCHLEVEL = 14
- SUBLEVEL = 5
+ SUBLEVEL = 6
 -EXTRAVERSION =
 +EXTRAVERSION = -batocera
  NAME = Baby Opossum Posse
