@@ -5770,6 +5770,11 @@ model2:
   emulators:
     model2emu:
       model2emu:        { requireAnyOf: [BR2_PACKAGE_MODEL2EMU] }
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+ 
   comment_en:           |
                         ---------------------------------
                         ## SEGA MODEL 2 IMPORTANT INFO ##
