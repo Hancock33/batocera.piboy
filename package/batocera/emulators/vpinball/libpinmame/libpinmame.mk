@@ -18,12 +18,10 @@ endef
 
 define LIBPINMAME_INSTALL_TARGET_CMDS
 	# staging files
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/libpinmame.so.3.6 \
-		$(STAGING_DIR)/usr/lib
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/libpinmame.so.3.6 $(STAGING_DIR)/usr/lib
 	cp $(@D)/src/libpinmame/libpinmame.h $(STAGING_DIR)/usr/include
 	# copy to target
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/libpinmame.so.3.6 \
-		$(TARGET_DIR)/usr/lib
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/libpinmame.so.3.6 $(TARGET_DIR)/usr/lib
 endef
 
 LIBPINMAME_PRE_CONFIGURE_HOOKS += LIBPINMAME_RENAME_CMAKE
