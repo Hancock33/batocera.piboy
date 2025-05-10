@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|b2e5d6df259e0a16817fdf70088636fedcb49176|May 10, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3894c903bc6ee7b1fe267a45f8727b725f2eabb7|May 10, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-10|May 10, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|8fa74fde5fed0eb8f7f88589193788513684cb31|May 10, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14229|May 10, 2025
@@ -11,9 +13,7 @@ Audio|[zmusic](http://github.com/ZDoom/ZMusic)|d6d202979f0588d77242a91ca0a98078d
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|18830cd6d94dc8c25666f5243c32febac7883deb|May 09, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|18830cd6d94dc8c25666f5243c32febac7883deb|May 09, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|081ebead5f32fca99eb9a9116abf8c2e77f70e7d|May 09, 2025
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|0351fd56b1bac5663502282a610aba79f04130d6|May 09, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|aee66edd6e6c02e6f8887b97d2e98459f55d09d7|May 09, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d21358e91f476fcf286e01bd6a42de7035f624a8|May 09, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|f52ce6cf331d95f4f837f5fce5e8a46b4def335a|May 09, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|6477dc4f1e699981919022ac69fef59813a9ad94|May 09, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|a8adde923408d01a977beb0645e6d3d0360c5c9f|May 09, 2025

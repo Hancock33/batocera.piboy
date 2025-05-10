@@ -74,7 +74,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|081ebead5f32fca99eb9a9116
 Emulators|[citron](https://git.citron-emu.org/citron/emu)|7e58599d694e82751f7a2da966ca71c9e462bb0e|May 05, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|5350e41da1e081256e9415b658559820f65ba0d4|May 02, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|0351fd56b1bac5663502282a610aba79f04130d6|May 09, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|b2e5d6df259e0a16817fdf70088636fedcb49176|May 10, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|38f67ef950c8f0c1b48ffeb32b1c8c6fca4bebd7|May 06, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|050f68817a09379150b7bdf665a443b4869d7c08|Apr 27, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.05.03|May 03, 2025
@@ -274,7 +274,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|818aca56efd784624a241a12936b5c0864e3ddd8|Mar 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b590d843bcf8621ed99bb7209225a37c57bedf78|May 10, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250505|May 05, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d21358e91f476fcf286e01bd6a42de7035f624a8|May 09, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3894c903bc6ee7b1fe267a45f8727b725f2eabb7|May 10, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-10|May 10, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.38|May 04, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|f52ce6cf331d95f4f837f5fce5e8a46b4def335a|May 09, 2025
