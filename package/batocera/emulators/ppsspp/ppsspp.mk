@@ -99,6 +99,7 @@ endef
 define PPSSPP_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
 	$(INSTALL) -D -m 0755 $(@D)/$(PPSSPP_TARGET_BINARY) $(TARGET_DIR)/usr/bin/PPSSPP
+	rm -rf $(TARGET_DIR)/usr/share/ppsspp
 	mkdir -p $(TARGET_DIR)/usr/share/ppsspp
 	cp -R $(@D)/assets $(TARGET_DIR)/usr/share/ppsspp/PPSSPP
 	# Fix PSP font for languages like Japanese
