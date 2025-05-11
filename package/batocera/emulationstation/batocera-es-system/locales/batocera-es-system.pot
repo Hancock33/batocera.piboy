@@ -18086,6 +18086,16 @@ msgctxt "keys_files"
 msgid "Button Start"
 msgstr ""
 
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
+msgctxt "keys_files"
+msgid "Emulator configuration"
+msgstr ""
+
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
+msgctxt "keys_files"
+msgid "Exit the emulator"
+msgstr ""
+
 #. TRANSLATION: nds.drastic.keys
 msgctxt "keys_files"
 msgid "Joy2Pad Up"
@@ -18224,16 +18234,6 @@ msgstr ""
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right magnasave"
-msgstr ""
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
-msgctxt "keys_files"
-msgid "Emulator configuration"
-msgstr ""
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Exit the emulator"
 msgstr ""
 
 #. TRANSLATION: 3ds.azahar.keys
