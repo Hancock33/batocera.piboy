@@ -442,6 +442,20 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # bluetooth
     select BR2_PACKAGE_BRCM_PATCHRAM_PLUS                   if  BR2_PACKAGE_BATOCERA_TARGET_T527        || BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
+    # GPIO kernel driver
+    select BR2_PACKAGE_LIBGPIOD                             if  BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2835     || BR2_PACKAGE_BATOCERA_TARGET_BCM2836 || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2837     && BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8
+
+    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
+
+    # OrangePi GPIO python library
+    select BR2_PACKAGE_WIRINGOP_PYTHON                      if  BR2_PACKAGE_BATOCERA_TARGET_RK3588      || BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3399      || BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_T527        || BR2_PACKAGE_BATOCERA_TARGET_H616        || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H6          || BR2_PACKAGE_BATOCERA_TARGET_H5          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_H3
+
     help
         Install the batocera.linux system files
 
@@ -638,7 +652,6 @@ config BR2_PACKAGE_BATOCERA_TOOLS
     select BR2_PACKAGE_FFMPEG_XCBGRAB                       if  BR2_PACKAGE_XORG7
     select BR2_PACKAGE_HTOP                                 # multi-cpus usage
     select BR2_PACKAGE_JSTEST2                              # joysticks tester
-    select BR2_PACKAGE_LIBGPIOD_TOOLS                       if  BR2_PACKAGE_LIBGPIOD
     select BR2_PACKAGE_LINUXCONSOLETOOLS                    # tools for linux events calibration
     select BR2_PACKAGE_LINUXCONSOLETOOLS_FORCEFEEDBACK      # tools for linux events calibration
     select BR2_PACKAGE_LINUXCONSOLETOOLS_JOYSTICK           # tools for linux events calibration
@@ -1295,6 +1308,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_BEETLE_PCE                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_LIBRETRO_BEETLE_PCE_FAST             # ALL
     select BR2_PACKAGE_LIBRETRO_BEETLE_SUPERGRAFX           # ALL
+    select BR2_PACKAGE_LIBRETRO_GEARGRAFX                   # ALL
 
     # Vectrex
     select BR2_PACKAGE_LIBRETRO_VECX                        # ALL

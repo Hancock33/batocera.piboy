@@ -3,8 +3,8 @@
 # btop
 #
 ################################################################################
-# Version: Commits on May 01, 2025
-BTOP_VERSION = v1.4.2
+# Version: Commits on May 10, 2025
+BTOP_VERSION = v1.4.3
 BTOP_SITE = $(call github,aristocratos,btop,$(BTOP_VERSION))
 BTOP_LICENSE = Apache-2.0
 

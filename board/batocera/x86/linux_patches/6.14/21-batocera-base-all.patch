@@ -262,7 +262,7 @@ index 00e94bec401e..11b706953286 100644
  B:	https://github.com/facebook/zstd/issues
  T:	git https://github.com/terrelln/linux.git
 diff --git a/Makefile b/Makefile
-index 318aeb1f95e0..667a8bcbc173 100644
+index 6c3233a21380..ae46032db61d 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -860,11 +860,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -5764,7 +5764,7 @@ index a7e511849875..1c4359366cd7 100644
  };
  
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index bfd769f2026b..d2694c6813dc 100644
+index ccd0a21da395..0c9609978fe5 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
 @@ -702,6 +702,8 @@ static const struct usb_device_id quirks_table[] = {
@@ -7580,10 +7580,10 @@ index 19d405c6d805..fbe1c08d3f06 100644
  	u8	epp_default;
  };
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index 9c4cc01fd51a..06a3c53e116e 100644
+index 43e847e9f741..8bc16e45a28e 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -3827,6 +3827,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3830,6 +3830,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -7824,7 +7824,7 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 97ae779cda72..d24d9983b01f 100644
+index 652221ab556a..327afe266075 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -179,6 +179,8 @@ static int amdgpu_dm_init(struct amdgpu_device *adev);
@@ -7836,7 +7836,7 @@ index 97ae779cda72..d24d9983b01f 100644
  
  static enum drm_mode_subconnector get_subconnector_type(struct dc_link *link)
  {
-@@ -2973,6 +2975,33 @@ static int amdgpu_dm_smu_write_watermarks_table(struct amdgpu_device *adev)
+@@ -2953,6 +2955,33 @@ static int amdgpu_dm_smu_write_watermarks_table(struct amdgpu_device *adev)
  	return 0;
  }
  
@@ -7870,7 +7870,7 @@ index 97ae779cda72..d24d9983b01f 100644
  /**
   * dm_hw_init() - Initialize DC device
   * @ip_block: Pointer to the amdgpu_ip_block for this hw instance.
-@@ -3004,6 +3033,10 @@ static int dm_hw_init(struct amdgpu_ip_block *ip_block)
+@@ -2984,6 +3013,10 @@ static int dm_hw_init(struct amdgpu_ip_block *ip_block)
  		return r;
  	amdgpu_dm_hpd_init(adev);
  
@@ -7881,7 +7881,7 @@ index 97ae779cda72..d24d9983b01f 100644
  	return 0;
  }
  
-@@ -3019,6 +3052,8 @@ static int dm_hw_fini(struct amdgpu_ip_block *ip_block)
+@@ -2999,6 +3032,8 @@ static int dm_hw_fini(struct amdgpu_ip_block *ip_block)
  {
  	struct amdgpu_device *adev = ip_block->adev;
  
@@ -7890,7 +7890,7 @@ index 97ae779cda72..d24d9983b01f 100644
  	amdgpu_dm_hpd_fini(adev);
  
  	amdgpu_dm_irq_fini(adev);
-@@ -4673,7 +4708,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4653,7 +4688,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -7899,7 +7899,7 @@ index 97ae779cda72..d24d9983b01f 100644
  	if (amdgpu_dm_create_color_properties(adev)) {
  		dc_state_release(state->context);
  		kfree(state);
-@@ -8389,7 +8424,7 @@ static int amdgpu_dm_i2c_xfer(struct i2c_adapter *i2c_adap,
+@@ -8369,7 +8404,7 @@ static int amdgpu_dm_i2c_xfer(struct i2c_adapter *i2c_adap,
  	int i;
  	int result = -EIO;
  
@@ -7908,7 +7908,7 @@ index 97ae779cda72..d24d9983b01f 100644
  		return result;
  
  	cmd.payloads = kcalloc(num, sizeof(struct i2c_payload), GFP_KERNEL);
-@@ -8408,11 +8443,18 @@ static int amdgpu_dm_i2c_xfer(struct i2c_adapter *i2c_adap,
+@@ -8388,11 +8423,18 @@ static int amdgpu_dm_i2c_xfer(struct i2c_adapter *i2c_adap,
  		cmd.payloads[i].data = msgs[i].buf;
  	}
  
@@ -7932,7 +7932,7 @@ index 97ae779cda72..d24d9983b01f 100644
  
  	kfree(cmd.payloads);
  	return result;
-@@ -8429,9 +8471,7 @@ static const struct i2c_algorithm amdgpu_dm_i2c_algo = {
+@@ -8409,9 +8451,7 @@ static const struct i2c_algorithm amdgpu_dm_i2c_algo = {
  };
  
  static struct amdgpu_i2c_adapter *
@@ -7943,7 +7943,7 @@ index 97ae779cda72..d24d9983b01f 100644
  {
  	struct amdgpu_device *adev = ddc_service->ctx->driver_context;
  	struct amdgpu_i2c_adapter *i2c;
-@@ -8442,9 +8482,14 @@ create_i2c(struct ddc_service *ddc_service,
+@@ -8422,9 +8462,14 @@ create_i2c(struct ddc_service *ddc_service,
  	i2c->base.owner = THIS_MODULE;
  	i2c->base.dev.parent = &adev->pdev->dev;
  	i2c->base.algo = &amdgpu_dm_i2c_algo;
@@ -7959,7 +7959,7 @@ index 97ae779cda72..d24d9983b01f 100644
  
  	return i2c;
  }
-@@ -8490,7 +8535,7 @@ static int amdgpu_dm_connector_init(struct amdgpu_display_manager *dm,
+@@ -8470,7 +8515,7 @@ static int amdgpu_dm_connector_init(struct amdgpu_display_manager *dm,
  	link->priv = aconnector;
  
  
@@ -24706,7 +24706,7 @@ index 4c1aecd1163c..419f5530f885 100644
  static const void *carl9170_fw_find_desc(struct ar9170 *ar, const u8 descid[4],
  	const unsigned int len, const u8 compatible_revision)
 diff --git a/drivers/nvme/host/Kconfig b/drivers/nvme/host/Kconfig
-index 486afe598184..0e1a554c596d 100644
+index 09ed1f61c9a8..aa859464519e 100644
 --- a/drivers/nvme/host/Kconfig
 +++ b/drivers/nvme/host/Kconfig
 @@ -80,8 +80,7 @@ config NVME_TCP
@@ -24733,7 +24733,7 @@ index 8971aca41e63..6cf0e3cc9682 100644
  	struct apple_nvme *anv = cookie;
  
 diff --git a/drivers/nvme/host/tcp.c b/drivers/nvme/host/tcp.c
-index 327f3f2f5399..21b56a378664 100644
+index d991baa82a1c..2a17b535bba6 100644
 --- a/drivers/nvme/host/tcp.c
 +++ b/drivers/nvme/host/tcp.c
 @@ -8,6 +8,7 @@
@@ -36952,10 +36952,10 @@ index 6a0a8f1c7c90..9532f7039780 100644
  extern __printf(4, 5)
  struct device *cpu_device_create(struct device *parent, void *drvdata,
 diff --git a/include/linux/cpufreq.h b/include/linux/cpufreq.h
-index 7fe0981a7e46..dde5212d256c 100644
+index 73024830bd73..efad63f78785 100644
 --- a/include/linux/cpufreq.h
 +++ b/include/linux/cpufreq.h
-@@ -210,6 +210,9 @@ static inline struct cpufreq_policy *cpufreq_cpu_get(unsigned int cpu)
+@@ -213,6 +213,9 @@ static inline struct cpufreq_policy *cpufreq_cpu_get(unsigned int cpu)
  static inline void cpufreq_cpu_put(struct cpufreq_policy *policy) { }
  #endif
  
@@ -61649,7 +61649,7 @@ index e9f3ae8158a6..faf9a30380d7 100644
  #ifdef CONFIG_MEMCG
  
 diff --git a/net/bluetooth/l2cap_core.c b/net/bluetooth/l2cap_core.c
-index a55388fbf07c..3665b7346efe 100644
+index c219a8c596d3..e9bfaf692a5a 100644
 --- a/net/bluetooth/l2cap_core.c
 +++ b/net/bluetooth/l2cap_core.c
 @@ -3956,8 +3956,7 @@ static void l2cap_connect(struct l2cap_conn *conn, struct l2cap_cmd_hdr *cmd,

@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 23, 2024
-VPINBALL_VERSION = 7b2e29b6aab58f1f0fd9973724bdaabc44674228
+VPINBALL_VERSION = c0d3b2ff942247c8616f228a3d34f7074abaeffa
 VPINBALL_BRANCH = standalone
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+

@@ -3,8 +3,8 @@
 # libretro-tgbdual
 #
 ################################################################################
-# Version: Commits on Oct 21, 2024
-LIBRETRO_TGBDUAL_VERSION = 8d305769eebd67266c284558f9d3a30498894d3d
+# Version: Commits on May 10, 2025
+LIBRETRO_TGBDUAL_VERSION = 933707c0ba8f12360f6d79712f735a917713709a
 LIBRETRO_TGBDUAL_SITE = $(call github,libretro,tgbdual-libretro,$(LIBRETRO_TGBDUAL_VERSION))
 LIBRETRO_TGBDUAL_LICENSE = GPLv2
 LIBRETRO_TGBDUAL_DEPENDENCIES = retroarch

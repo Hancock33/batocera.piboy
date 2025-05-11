@@ -3,16 +3,14 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on May 06, 2025
-PPSSPP_VERSION = 73325c974317e648b8f789ec03b2e3e7f74f0d51
+# Version: Commits on May 08, 2025
+PPSSPP_VERSION = 732d05c2c136856a3f173574233a2431a015a6f5
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
 PPSSPP_LICENSE = GPLv2
 PPSSPP_DEPENDENCIES = sdl2 sdl2_ttf libzip
 
-PPSSPP_CONF_OPTS += -DCMAKE_CC_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-PPSSPP_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
 PPSSPP_CONF_OPTS += -DUSE_FFMPEG=ON
@@ -24,7 +22,7 @@ PPSSPP_CONF_OPTS += -DAPPLE=OFF
 PPSSPP_CONF_OPTS += -DUNITTEST=OFF
 PPSSPP_CONF_OPTS += -DSIMULATOR=OFF
 PPSSPP_CONF_OPTS += -DUSING_QT_UI=OFF
-PPSSPP_CONF_OPTS += -DHEADLESS=ON
+PPSSPP_CONF_OPTS += -DHEADLESS=OFF
 PPSSPP_CONF_OPTS += -DMOBILE_DEVICE=OFF
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=OFF
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_LIBZIP=ON
@@ -33,6 +31,7 @@ PPSSPP_CONF_OPTS += -DUSE_SYSTEM_LIBPNG=ON
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_ZSTD=ON
 PPSSPP_CONF_OPTS += -DENABLE_CTEST=OFF
 
+PPSSPP_TARGET_CFLAGS = $(TARGET_CFLAGS)
 PPSSPP_TARGET_BINARY = PPSSPPSDL
 
 # make sure to select glvnd and depends on glew / glu because of X11 desktop GL
@@ -83,22 +82,10 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     PPSSPP_CONF_OPTS += -DX86_64=ON
 endif
 
-# rpi4/5 vulkan support
-ifeq ($(BR2_PACKAGE_BATOCERA_BCM27XX),y)
-    PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=OFF
-else ifeq ($(BR2_arm)$(BR2_aarch64),y)
-    PPSSPP_CONF_OPTS += -DARM_NO_VULKAN=ON
-endif
-
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
     PPSSPP_CONF_OPTS += -DUSE_WAYLAND_WSI=ON
 else
     PPSSPP_CONF_OPTS += -DUSE_WAYLAND_WSI=OFF
-endif
-
-ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
-    PPSSPP_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-lmali
-    PPSSPP_CONF_OPTS += -DCMAKE_SHARED_LINKER_FLAGS=-lmali
 endif
 
 PPSSPP_CONF_OPTS += -DCMAKE_C_FLAGS="$(PPSSPP_TARGET_CFLAGS)"
@@ -112,11 +99,12 @@ endef
 define PPSSPP_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
 	$(INSTALL) -D -m 0755 $(@D)/$(PPSSPP_TARGET_BINARY) $(TARGET_DIR)/usr/bin/PPSSPP
+	rm -rf $(TARGET_DIR)/usr/share/ppsspp
 	mkdir -p $(TARGET_DIR)/usr/share/ppsspp
 	cp -R $(@D)/assets $(TARGET_DIR)/usr/share/ppsspp/PPSSPP
 	# Fix PSP font for languages like Japanese
 	# (font from https://github.com/minoryorg/Noto-Sans-CJK-JP/blob/master/fonts/)
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/NotoSansCJKjp-DemiLight.ttf $(TARGET_DIR)/usr/share/ppsspp/PPSSPP/Roboto-Condensed.ttf
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/wqy-microhei.ttc $(TARGET_DIR)/usr/share/ppsspp/PPSSPP/Roboto-Condensed.ttf
 endef
 
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES

@@ -3,31 +3,15 @@
 # libretro-puae
 #
 ################################################################################
-# Version: Commits on May 06, 2025
-LIBRETRO_PUAE_VERSION = d975409c3eb7a4b9d0f3f473a0495621b5ef7cc2
+# Version: Commits on May 09, 2025
+LIBRETRO_PUAE_VERSION = d3c925ef4fadee6c25bcef20d1f165141ba18ac3
 LIBRETRO_PUAE_SITE = $(call github,sonninnos,libretro-uae,$(LIBRETRO_PUAE_VERSION))
 LIBRETRO_PUAE__LICENSE = GPLv2
 LIBRETRO_PUAE_DEPENDENCIES = retroarch
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2835),y)
-    LIBRETRO_PUAE_PLATFORM = rpi1
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
-    LIBRETRO_PUAE_PLATFORM = rpi2
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
-    LIBRETRO_PUAE_PLATFORM = rpi3_64
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
-    LIBRETRO_PUAE_PLATFORM = rpi4
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
-    LIBRETRO_PUAE_PLATFORM = rpi5
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-    LIBRETRO_PUAE_PLATFORM = unix
-else
-    LIBRETRO_PUAE_PLATFORM=$(LIBRETRO_PLATFORM)
-endif
-
 define LIBRETRO_PUAE_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-implicit-function-declaration|g" $(@D)/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_PUAE_PLATFORM)" \
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_PLATFORM)" \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_PUAE_VERSION) | cut -c 1-7)"
 endef
 
