@@ -1,6 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.3|May 11, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|453030182034c9db2d68189c308460dbdf6f1290|May 11, 2025
+Emulators|[hatari](http://github.com/hatari/hatari)|77fe0dab08ea5df356945dc1680cb75ea685e284|May 11, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-11|May 11, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|6ece91c7632798474a2110ca0379985f183907eb|May 11, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|7a2d9967f5aba185ea641cee996310187002fa24|May 11, 2025
@@ -134,7 +136,6 @@ Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092ada
 Ports|[box86](http://github.com/ptitseb/box86)|d60937b1ace3984906765c65f29c35d7bbbad792|Apr 28, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|3d5d27c5cf915e04ea52ea92a6fb5cc86a939972|Apr 27, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|050f68817a09379150b7bdf665a443b4869d7c08|Apr 27, 2025
-Emulators|[hatari](http://github.com/hatari/hatari)|6ded662097c551406986f81cab69f37437342728|Apr 27, 2025
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|3b64a13c7b81098306157868b1411a5ecc159682|Apr 27, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|2996daa5e2048a6502a335299cdec5d6393d70eb|Apr 27, 2025
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|3085de173fd7bddf7484383ade11dcb5dff47997|Apr 26, 2025
@@ -252,7 +253,6 @@ Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f8605
 Network|[qrtr](http://github.com/linux-msm/qrtr)|5923eea97377f4a3ed9121b358fd919e3659db7b|Mar 01, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|9213874e049c9b8903e1569b7d1b4d546e134ead|Feb 26, 2025
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|f7ecb30c65ee5f7870e921bc0a2354df8e1e8100|Feb 25, 2025
-Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.2|Feb 24, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|a203bbf2ab6c7164051ff90ad30cc8f6352a56ac|Feb 23, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.6|Feb 22, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|80c4233c712c1fcd8f631f17aaa40e89df9337ba|Feb 20, 2025

@@ -10,7 +10,7 @@ Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
 Audio|[libfreeaptx](http://github.com/regularhunter/libfreeaptx)|6dee419f934ec781e531f885f7e8e740752e67d1|Mar 05, 2025
 Audio|[liblc3](https://github.com/google/liblc3/archive/refs/tags)|v1.1.3|Feb 12, 2025
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|af2dd23979453bcd1cad7c4086af5fb421a955c5|Mar 05, 2021
-Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.2|Feb 24, 2025
+Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.3|May 11, 2025
 Audio|[ossp](http://github.com/OpenMandrivaSoftware/ossp)|v1.3.3|Aug 31, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|806aa16c7d3c85f6084e6b10299ce4a0da66edac|Feb 16, 2025
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.0.0|Aug 03, 2023
@@ -88,7 +88,7 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ffc32d2d8676e1ca3
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|bfa0c7522c6c5f73cceb340d677491d056febd01|Jul 29, 2022
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|f3dc75a3bb57ac83801b3873617feecfb34d6c78|Apr 03, 2025
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Emulators|[hatari](http://github.com/hatari/hatari)|6ded662097c551406986f81cab69f37437342728|Apr 27, 2025
+Emulators|[hatari](http://github.com/hatari/hatari)|77fe0dab08ea5df356945dc1680cb75ea685e284|May 11, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|64839aa9975f362f35686c8cec4041c477a8199c|May 01, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|a309ed053549df36650cbf9fdf616c62187f808c|May 08, 2025
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
