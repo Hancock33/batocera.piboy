@@ -53,7 +53,12 @@ class AmiberryGenerator(Generator):
         romType = self.getRomType(rom)
         _logger.debug("romType: %s", romType)
         if romType != 'UNKNOWN' :
-            commandArray: list[str | Path] = [ "/usr/bin/amiberry", "-G" ]
+            # Check what version we've got
+            if Path("/usr/bin/amiberry-lite").is_file():
+                commandArray: list[str | Path] = [ "/usr/bin/amiberry-lite", "-G" ]
+            else:
+                commandArray: list[str | Path] = [ "/usr/bin/amiberry", "-G" ]
+
             if romType != 'WHDL' :
                 commandArray.append("--model")
                 commandArray.append(system.config.core)

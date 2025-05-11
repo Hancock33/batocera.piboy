@@ -1,0 +1,61 @@
+diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
+index 3fc475fa..bdbe92d2 100644
+--- a/src/osdep/amiberry.cpp
++++ b/src/osdep/amiberry.cpp
+@@ -4321,7 +4321,7 @@ void create_missing_amiberry_folders()
+ #ifdef __MACH__
+ 		const std::string default_roms_path = app_directory + "/Resources/roms/";
+ #else
+-		const std::string default_roms_path = AMIBERRY_DATADIR "/roms/";
++		const std::string default_roms_path = "/userdata/bios/amiga";
+ #endif
+ 		// copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
+ 		if (my_existsdir(default_roms_path.c_str()))
+@@ -4412,9 +4412,9 @@ static void init_amiberry_dirs(const bool portable_mode)
+ #else
+ 	const std::string amiberry_dir = "amiberry-lite";
+ #endif
+-	current_dir = home_dir = get_home_directory(portable_mode);
+-	data_dir = get_data_directory(portable_mode);
+-	plugins_dir = get_plugins_directory(portable_mode);
++    data_dir = "/usr/share/amiberry/data/";
++    config_path = "/userdata/system/configs/amiberry/conf";
++    plugins_dir = "/usr/share/amiberry/plugins/";
+ 
+ #ifdef __MACH__
+ 	if constexpr (true)
+@@ -4490,26 +4490,26 @@ static void init_amiberry_dirs(const bool portable_mode)
+ 	video_dir.append("/Videos/");
+ 	themes_path.append("/Themes/");
+ #else
+-	controllers_path.append("/controllers/");
+-	whdboot_path.append("/whdboot/");
++	controllers_path = "/userdata/system/configs/amiberry/conf/retroarch/inputs";
++	whdboot_path = "/usr/share/amiberry/whdboot/";
+ 	whdload_arch_path.append("/lha/");
+ 	floppy_path.append("/floppies/");
+ 	harddrive_path.append("/harddrives/");
+ 	cdrom_path.append("/cdroms/");
+-	logfile_path.append("/amiberry-lite.log");
+-	rom_path.append("/roms/");
++	logfile_path = "/usrdata/system/logs/amiberry.log";
++	rom_path = "/userdata/bios/amiga";
+ 	rp9_path.append("/rp9/");
+-	saveimage_dir.append("/");
+-	savestate_dir.append("/savestates/");
++	saveimage_dir = "/userdata/saves/amiga/";
++	savestate_dir = "/userdata/saves/amiga/";
+ 	ripper_path.append("/ripper/");
+ 	input_dir.append("/inputrecordings/");
+-	screenshot_dir.append("/screenshots/");
++	screenshot_dir = "/userdata/screenshots/";
+ 	nvram_dir.append("/nvram/");
+ 	video_dir.append("/videos/");
+ 	themes_path.append("/themes/");
+ #endif
+ 
+-	retroarch_file = config_path;
++	retroarch_file = controllers_path;
+ 	retroarch_file.append("/retroarch.cfg");
+ 
+ 	floppy_sounds_dir = data_dir;
