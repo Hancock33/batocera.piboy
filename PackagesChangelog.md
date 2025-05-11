@@ -7,7 +7,9 @@ Ports|[box64](http://github.com/ptitseb/box64)|7a2d9967f5aba185ea641cee996310187
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|e78138c049428ed4d6ef1ecb934e591a1ae1a9e9|May 11, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|bb78f48043029540dd99fbac823c040ca19daad1|May 11, 2025
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.16.1|May 11, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250511|May 11, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|1be64020f579697621df17bd90140a891ebf330e|May 11, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250511|May 11, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|162eb1deb679035d81b4f203d73156bcf3e48f06|May 11, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|0532a298d20034dbed38137af8aa46a11693ecf6|May 11, 2025
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|b6ad77b42836222e33e2ce05dc6683b845364ff4|May 11, 2025
@@ -53,8 +55,6 @@ Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|a309ed053549df3665
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|732d05c2c136856a3f173574233a2431a015a6f5|May 08, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|cd4048df1d55be89bf84879754a4acf9c92e1f7a|May 08, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|e4e243c05c3bd91dadb76450d26772172622f9b1|May 08, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250508|May 08, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250508|May 08, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|54ae600cfc25b17ab4e95d2e4652cd33ef6c1f1f|May 08, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|7c30b5266a37cee67612b7cab1a714be16f3be4e|May 08, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|d3e54870080f9389b4b3e6c6f717bfa29a2fd7fe|May 08, 2025
