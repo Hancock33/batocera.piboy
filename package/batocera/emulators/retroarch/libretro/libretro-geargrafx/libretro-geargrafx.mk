@@ -3,8 +3,8 @@
 # libretro-geargrafx
 #
 ################################################################################
-# Version: Commits on May 11, 2025
-LIBRETRO_GEARGRAFX_VERSION = 1d7885a75c45cbeb76be02ee0cbec0eae0f7ed26
+# Version: Commits on May 12, 2025
+LIBRETRO_GEARGRAFX_VERSION = b356e101b08f06181b90f98e6f4a40e2623c6bb6
 LIBRETRO_GEARGRAFX_SITE = $(call github,drhelius,Geargrafx,$(LIBRETRO_GEARGRAFX_VERSION))
 LIBRETRO_GEARGRAFX_LICENSE = GPLv3
 
