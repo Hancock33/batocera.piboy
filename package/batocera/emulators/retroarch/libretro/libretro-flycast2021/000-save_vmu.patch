@@ -1,5 +1,5 @@
 diff --git a/core/libretro/libretro.cpp b/core/libretro/libretro.cpp
-index 35e8516..05308c1 100644
+index 4af0ac3c..c1c9886f 100644
 --- a/core/libretro/libretro.cpp
 +++ b/core/libretro/libretro.cpp
 @@ -103,7 +103,7 @@ char save_dir[PATH_MAX];
@@ -11,7 +11,7 @@ index 35e8516..05308c1 100644
  
  static bool devices_need_refresh = false;
  static int device_type[4] = {-1,-1,-1,-1};
-@@ -1848,8 +1848,8 @@ bool retro_load_game(const struct retro_game_info *game)
+@@ -1892,8 +1892,8 @@ bool retro_load_game(const struct retro_game_info *game)
     if (!(environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &dir) && dir))
        dir = game_dir;
  
@@ -22,7 +22,7 @@ index 35e8516..05308c1 100644
  
     // Per-content VMU additions START
     // > Get save directory
-@@ -1954,7 +1954,7 @@ bool retro_load_game(const struct retro_game_info *game)
+@@ -1998,7 +1998,7 @@ bool retro_load_game(const struct retro_game_info *game)
     {
        char data_dir[1024];
  
@@ -32,7 +32,7 @@ index 35e8516..05308c1 100644
        INFO_LOG(COMMON, "Creating dir: %s", data_dir);
        struct stat buf;
 diff --git a/core/nullDC.cpp b/core/nullDC.cpp
-index 8560b24..afd3a44 100644
+index 56035349..86858aa5 100644
 --- a/core/nullDC.cpp
 +++ b/core/nullDC.cpp
 @@ -483,7 +483,7 @@ void dc_run()
@@ -45,7 +45,7 @@ index 8560b24..afd3a44 100644
  	naomi_cart_Close();
  	plugins_Term();
 diff --git a/core/stdclass.cpp b/core/stdclass.cpp
-index 4174908..c340f17 100644
+index 41749080..c340f171 100644
 --- a/core/stdclass.cpp
 +++ b/core/stdclass.cpp
 @@ -42,6 +42,17 @@ std::string get_writable_data_path(const std::string& filename)
@@ -75,7 +75,7 @@ index 4174908..c340f17 100644
     }
  }
 diff --git a/core/stdclass.h b/core/stdclass.h
-index 72b30af..0e079db 100644
+index 72b30afb..0e079db6 100644
 --- a/core/stdclass.h
 +++ b/core/stdclass.h
 @@ -244,6 +244,7 @@ void add_system_data_dir(const std::string& dir);

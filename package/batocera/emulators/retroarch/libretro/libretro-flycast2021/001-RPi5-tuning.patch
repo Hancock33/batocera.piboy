@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 8855929a7c..5bba6383f8 100644
+index e9d358e7..6762bd25 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -171,8 +171,19 @@ else ifneq (,$(findstring rpi,$(platform)))
@@ -22,5 +22,5 @@ index 8855929a7c..5bba6383f8 100644
 +		endif	
 +	else ifneq (,$(findstring rpi4,$(platform)))
  		FORCE_GLES = 1
- 		ifneq (,$(findstring rpi4_64,$(platform)))
- 			# 64-bit userspace
+ 		# The Pi4 has mature Vulkan support when using up-to-date MESA.
+ 		HAVE_VULKAN = 1
