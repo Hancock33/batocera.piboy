@@ -302,6 +302,7 @@ Libraries|[python-adafruit-circuitpython-pixelbuf](https://files.pythonhosted.or
 Libraries|[python-adafruit-circuitpython-ws2801](https://files.pythonhosted.org/packages/6b/d3/8e7404de0ac9ead8f36c903338c7b7e3ae5be6945b1229fc34743b10ca50)|1.0.1|Jan 16, 2025
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/6b/4e/2b2ca031227de47e2aab6cf092b78934c9c0033a685075ddab3e0c0b55fe)|3.77.0|Jan 16, 2025
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
+Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.28.0|Jan 15, 2025
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v2.14.1|Jan 10, 2025
 Utils|[warehouse](http://github.com/flattool/warehouse)|2.0.2|Jan 06, 2025

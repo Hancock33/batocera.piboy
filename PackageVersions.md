@@ -512,6 +512,7 @@ Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2
 Sources|[libretro-mame-src](http://github.com/libretro/mame)|ee7155be0735e38f47c555a69217a2b77d6eca13|May 01, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0277|Apr 29, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
+Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.28.0|Jan 15, 2025
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v0.9.2|May 04, 2025
 Utils-host|[xa](https://www.floodgap.com/retrotech/xa/dists)|2.4.1|Mar 05, 2024
