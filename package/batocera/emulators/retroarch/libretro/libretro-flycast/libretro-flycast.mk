@@ -34,7 +34,7 @@ endif
 
 # Vulkan backend
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
-    LIBRETRO_FLYCAST_CONF_OPTS += -DUSE_VULKAN=ON
+    LIBRETRO_FLYCAST_CONF_OPTS += -DUSE_VULKAN=ON -DUSE_HOST_GLSLANG=ON
 else
     LIBRETRO_FLYCAST_CONF_OPTS += -DUSE_VULKAN=OFF
 endif
@@ -43,5 +43,10 @@ define LIBRETRO_FLYCAST_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/buildroot-build/flycast_libretro.so $(TARGET_DIR)/usr/lib/libretro/flycast_libretro.so
 endef
+
+define LIBRETRO_FLYCAST_GET_SUBMODULE
+	rm -rf $(@D)/core/deps/glslang
+endef
+LIBRETRO_FLYCAST_POST_EXTRACT_HOOKS = LIBRETRO_FLYCAST_GET_SUBMODULE
 
 $(eval $(cmake-package))
