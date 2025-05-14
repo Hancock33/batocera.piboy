@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 13, 2025
-TR2X_VERSION = a991d64976f5268c844f0da477c706edb02c2b2f
+TR2X_VERSION = 0e074ffd082798ffe37a2d659415357cd6b9d64d
 TR2X_SITE = $(call github,LostArtefacts,TRX,$(TR2X_VERSION))
 TR2X_LICENSE = GPL-3.0 license
 TR2X_LICENSE_FILES = COPYING.md
