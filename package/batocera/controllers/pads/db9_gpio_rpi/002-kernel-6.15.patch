@@ -1,0 +1,13 @@
+diff --git a/db9_gpio_rpi.c b/db9_gpio_rpi/db9_gpio_rpi.c
+index b0276e9..2345e59 100644
+--- a/db9_gpio_rpi.c
++++ b/db9_gpio_rpi.c
+@@ -668,7 +668,7 @@ static void db9_close(struct input_dev *dev)
+ 
+ 	mutex_lock(&db9->mutex);
+ 	if (!--db9->used)
+-		del_timer_sync(&db9->timer);
++		timer_delete(&db9->timer);
+ 
+ 	mutex_unlock(&db9->mutex);
+ }

@@ -1,0 +1,13 @@
+diff --git a/drivers/gpu/drm/vc4/vc4_firmware_kms.c b/drivers/gpu/drm/vc4/vc4_firmware_kms.c
+index 724f8bc72c80..285494f5939f 100644
+--- a/drivers/gpu/drm/vc4/vc4_firmware_kms.c
++++ b/drivers/gpu/drm/vc4/vc4_firmware_kms.c
+@@ -1293,7 +1293,7 @@ static int vc4_fkms_page_flip(struct drm_crtc *crtc,
+ 			      struct drm_modeset_acquire_ctx *ctx)
+ {
+ 	if (flags & DRM_MODE_PAGE_FLIP_ASYNC) {
+-		DRM_ERROR("Async flips aren't allowed\n");
++		//DRM_ERROR("Async flips aren't allowed\n");
+ 		return -EINVAL;
+ 	}
+ 
