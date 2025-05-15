@@ -11931,6 +11931,16 @@ msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
+msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
+msgstr ""
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "INTEGER SCALE"
+msgstr ""
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
 msgid "Enables Action Replay cheats."
 msgstr ""
 

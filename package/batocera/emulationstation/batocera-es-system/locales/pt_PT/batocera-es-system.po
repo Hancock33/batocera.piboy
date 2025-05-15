@@ -7686,6 +7686,11 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr "Ligar irá suavizar a imagem."
 
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
+msgstr ""
+
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "English"
@@ -10053,6 +10058,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INTERFACE DE ENTRADA"
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "INTEGER SCALE"
+msgstr ""
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
