@@ -2939,6 +2939,11 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr "Todos os Timers"
 
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "All VMUs"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -12790,7 +12795,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "Desligado"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Desligado (Padrao)"
@@ -12928,6 +12933,11 @@ msgstr "Ligado em conjunto com a mensagem de deteccao de jogo"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "Ligado em conjunto com suporte para rebobinar"
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Only A1"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13245,6 +13255,11 @@ msgstr "POR DIRETORIO DA MESA"
 msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "SALVAR POR JOGO"
+
+#. TRANSLATION: flycast/dolphin, libretro/flycast
+msgctxt "game_options"
+msgid "PER-GAME VMU"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18849,6 +18864,16 @@ msgstr "Tecer (Campo Inferior Primeiro)"
 msgctxt "game_options"
 msgid "Weave (Top Field First)"
 msgstr "Tecer (Campo de Cima Primeiro)"
+
+#. TRANSLATION: flycast/dolphin
+msgctxt "game_options"
+msgid "When enabled, each game has its own VMU on port 1 of controller 1."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "When enabled, each game has its own set of VMU save files."
+msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"

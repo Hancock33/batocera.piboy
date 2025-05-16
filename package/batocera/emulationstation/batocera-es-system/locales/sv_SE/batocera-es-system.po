@@ -2935,6 +2935,11 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr "Alla tidtagare"
 
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "All VMUs"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -12739,7 +12744,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "Av"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Av (standard)"
@@ -12874,6 +12879,11 @@ msgstr "På med spelupptäcktsmeddelande"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "På med stöd för återspolning"
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Only A1"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13184,6 +13194,11 @@ msgstr "PER-BORDSMAPP"
 msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "PER-SPEL-SPARNINGAR"
+
+#. TRANSLATION: flycast/dolphin, libretro/flycast
+msgctxt "game_options"
+msgid "PER-GAME VMU"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18767,6 +18782,16 @@ msgstr "Weave (bottenfält först)"
 msgctxt "game_options"
 msgid "Weave (Top Field First)"
 msgstr "Weave (översta fältet först)"
+
+#. TRANSLATION: flycast/dolphin
+msgctxt "game_options"
+msgid "When enabled, each game has its own VMU on port 1 of controller 1."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "When enabled, each game has its own set of VMU save files."
+msgstr ""
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
