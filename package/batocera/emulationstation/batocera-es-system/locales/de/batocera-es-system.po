@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-07 13:13+0000\n"
+"PO-Revision-Date: 2025-05-17 13:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -2942,7 +2942,7 @@ msgstr "All-Timers"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "All VMUs"
-msgstr ""
+msgstr "Alle VMUs"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -7718,6 +7718,8 @@ msgstr "Zur Glättung des Bildes aktivieren."
 msgctxt "game_options"
 msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
 msgstr ""
+"Perfekte Pixel-Skalierung erzwingen. Verhindert ungleichmäßige Skalierung "
+"und Unschärfe."
 
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
@@ -10108,17 +10110,17 @@ msgstr "EINGABESCHNITTSTELLE"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "INTEGER SCALE"
-msgstr ""
+msgstr "GANZZAHLIGE SKALIERUNG"
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
 msgid "INTEGER SCALING"
-msgstr "INTEGER-SKALIERUNG"
+msgstr "GANZZAHLIGE SKALIERUNG"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "INTEGER SCALING (PIXEL PERFECT)"
-msgstr "INTEGER-SKALIERUNG (PIXEL PERFECT)"
+msgstr "GANZZAHLIGE SKALIERUNG (PIXEL PERFECT)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -12963,7 +12965,7 @@ msgstr "Ein, mit Support für Rückspulfunktion"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Only A1"
-msgstr ""
+msgstr "Nur A1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13287,7 +13289,7 @@ msgstr "PRO-SPIEL SPEICHERSTÄNDE"
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "PER-GAME VMU"
-msgstr ""
+msgstr "VMU PRO SPIEL"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18930,11 +18932,12 @@ msgstr "Weave (Top-Field zuerst)"
 msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
 msgstr ""
+"Wenn aktiviert, hat jedes Spiel seine eigene VMU an Port 1 von Controller 1."
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "When enabled, each game has its own set of VMU save files."
-msgstr ""
+msgstr "Wenn aktiviert, hat jedes Spiel eigene VMU-Speicherstände."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
