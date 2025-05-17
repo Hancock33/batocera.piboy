@@ -424,4 +424,3 @@ class BigPEmuGenerator(Generator):
         if config.get('bigpemu_ratio') == "8":
             return 16/9
         return 4/3
-

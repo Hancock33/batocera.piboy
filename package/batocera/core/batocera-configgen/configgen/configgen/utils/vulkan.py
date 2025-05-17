@@ -54,6 +54,7 @@ def get_discrete_gpu_uuid() -> str | None:
 
     return None
 
+
 def get_version() -> str:
     try:
         return subprocess.check_output([_BATOCERA_VULKAN, 'vulkanVersion'], text=True).strip()
