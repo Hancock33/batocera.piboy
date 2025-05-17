@@ -15,7 +15,7 @@ VKQUAKE_LICENSE_FILE = LICENSE.txt
 VKQUAKE_CONF_OPTS += -Ddo_userdirs=disabled
 
 define VKQUAKE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/build/vkquake $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/vkquake $(TARGET_DIR)/usr/bin/
 endef
 
 $(eval $(meson-package))
