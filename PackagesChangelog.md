@@ -6,7 +6,9 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|10f742e123b6993813a00
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-17|May 17, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|0a55bc9b5e2a1f613e9203bc47ae5e72156263de|May 17, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14232|May 17, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250517|May 17, 2025
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|212f7c530296213fb68867e71e87909bfc49b330|May 17, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250517|May 17, 2025
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|388fb7da052b09d015f47defa1f303625d778a2c|May 17, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|c9579929a53f60455156fbd63232a5d106f97518|May 17, 2025
 Emulators|[libretro-citra](https://github.com/libretro/citra.git)|27c20cc0d461d281f08a7696be4bfa628bfcbcc3|May 17, 2025
@@ -23,9 +25,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|d1808736dd0c175c9c107
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|d790fa398f62a6dccfd2e96ff0a146456ee2ba99|May 16, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.15|May 16, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.8|May 16, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250516|May 16, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|cc955343022f3a1e54cacfd0663a38aa0a66433a|May 16, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250516|May 16, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|bf1152b1b5b688b89a2d42a5cf04ec7ad03a6f71|May 16, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|b44f8f0cc985320c6760af503fa575fb9678dd5b|May 16, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|cdeeed4aa91c76d51c8c1731666c159549166859|May 16, 2025
