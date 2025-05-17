@@ -1,0 +1,59 @@
+diff --git a/makefile b/makefile
+index 13b7b535989..3fc388fc3cc 100644
+--- a/makefile
++++ b/makefile
+@@ -1232,7 +1232,7 @@ endif
+ #-------------------------------------------------
+ 
+ $(PROJECTDIR)/$(MAKETYPE)-linux/Makefile: makefile $(SCRIPTS) $(GENIE)
+-	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=linux-gcc --gcc_version=$(GCC_VERSION) $(MAKETYPE)
++	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=linux-gcc --gcc_version=15.1.0 $(MAKETYPE)
+ 
+ .PHONY: linux_x64
+ linux_x64: generate $(PROJECTDIR)/$(MAKETYPE)-linux/Makefile
+diff --git a/scripts/genie.lua b/scripts/genie.lua
+index a276c345bc8..f9ce5d9d01e 100644
+--- a/scripts/genie.lua
++++ b/scripts/genie.lua
+@@ -787,7 +787,7 @@ if _OPTIONS["OPTIMIZE"] then
+ 	if _OPTIONS["LTO"]=="1" then
+ 		buildoptions {
+ -- windows native mingw GCC 5.2 fails with -flto=x with x > 1. bug unfixed as of this commit
+-			"-flto=1",
++--			"-flto=1",
+ -- if ld fails, just buy more RAM or uncomment this!
+ --          "-Wl,-no-keep-memory",
+ 			"-Wl,-v",
+@@ -798,9 +798,10 @@ if _OPTIONS["OPTIMIZE"] then
+ -- some GCC 4.9.x on Windows do not have -Wodr and -flto-odr-type-merging enabled. adjust accordingly...
+ -- no-fat-lto-objects is faster to compile and uses less memory, but you can't mix with a non-lto .o/.a without rebuilding
+ 			"-fno-fat-lto-objects",
+-			"-flto-odr-type-merging",
++--			"-flto-odr-type-merging",
+ 			"-Wodr",
+-			"-flto-compression-level=0", -- lto doesn't work with anything <9 on linux with < 12G RAM, much slower if <> 0
++			"-flto=thin",
++--			"-flto-compression-level=0", -- lto doesn't work with anything <9 on linux with < 12G RAM, much slower if <> 0
+ --          "-flto-report", -- if you get an error in lto after [WPA] stage, but before [LTRANS] stage, you need more memory!
+ --          "-fmem-report-wpa","-fmem-report","-fpre-ipa-mem-report","-fpost-ipa-mem-report","-flto-report-wpa","-fmem-report",
+ -- this six flag combo lets MAME compile with LTO=1 on linux with no errors and ~2% speed boost, but compile time is much longer
+@@ -810,15 +811,16 @@ if _OPTIONS["OPTIMIZE"] then
+ 		}
+ -- same flags are needed by linker
+ 		linkoptions {
+-			"-flto=1",
++--			"-flto=1",
+ --          "-Wl,-no-keep-memory",
+ 			"-Wl,-v",
+ 			"-Wl,-allow-multiple-definition",
+ 			"-fuse-linker-plugin",
+ 			"-fno-fat-lto-objects",
+-			"-flto-odr-type-merging",
++--			"-flto-odr-type-merging",
+ 			"-Wodr",
+-			"-flto-compression-level=0", -- lto doesn't work with anything <9 on linux with < 12G RAM, much slower if <> 0
++			"-flto=thin",
++--			"-flto-compression-level=0", -- lto doesn't work with anything <9 on linux with < 12G RAM, much slower if <> 0
+ --          "-flto-report", -- if you get an error in lto after [WPA] stage, but before [LTRANS] stage, you need more memory!
+ --          "-fmem-report-wpa","-fmem-report","-fpre-ipa-mem-report","-fpost-ipa-mem-report","-flto-report-wpa","-fmem-report",
+ -- this six flag combo lets MAME compile with LTO=1 on linux with no errors and ~2% speed boost, but compile time is much longer
