@@ -275,7 +275,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|818aca56efd784624a241a12936b5c0864e3ddd8|Mar 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|97bc2da36c2e4a2c0b5d82843e08f35c67ee145c|May 17, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250505|May 05, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|62055bed3f69cbc2fa10f3fddd35d4c9278838bc|May 15, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|5deb0fcbc6d6a5263dd6f1799b6afc6fb07f6495|May 17, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-17|May 17, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.44|May 15, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|c771d3618c0077099bcad54dbd19362150359aa9|May 17, 2025
@@ -334,7 +334,6 @@ Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|ca16a702c76eb784e870772c94
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.2|Apr 23, 2025
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.313.0|Apr 22, 2025
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4daf9d466ad00897f755163dd26f528d14e1db44|Apr 06, 2025
-Gpu|[vulkan-samples](https://github.com/KhronosGroup/Vulkan-Samples)|fd7a1fdcce4f8c582ab65c82d397eb9c8f9f6e51|May 06, 2025
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.313.0|Apr 18, 2025
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.313.0|May 01, 2025
 Gpu|[vulkan-volk](http://github.com/zeux/volk)|vulkan-sdk-1.4.313.0|Apr 18, 2025
@@ -500,8 +499,8 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63f
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|f85675a3da7b5dc4c50cc3ec48d532399ac2ed87|May 10, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|b5f9899b64511170683cc9b517323f714baab3cc|Feb 12, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|5a0465b85b03d69c94351ef21f9d2591bdcbde77|Apr 19, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|08b9c58901d5b0721b509fd9ed199fdd94c726e6|May 17, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|08b9c58901d5b0721b509fd9ed199fdd94c726e6|May 17, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|590cfb5f8c2a50a91b710788a1ffc60c74125d3b|May 17, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|590cfb5f8c2a50a91b710788a1ffc60c74125d3b|May 17, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.8|Apr 25, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|11c4b7109983a0a8a92b78e96da5b1cd2b1d0b69|May 12, 2025
