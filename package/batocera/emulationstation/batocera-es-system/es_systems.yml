@@ -5365,86 +5365,10 @@ cave3rd:
   extensions:           [7z, zip]
   platform:             cave3rd, arcade
   emulators:
-    demul:
-      demul:            { requireAnyOf: [BR2_PACKAGE_DEMUL] }
-  comment_en:           |
-                        ---------------------------------
-                        ## CAVE CV1000 IMPORTANT INFO ##
-                        ---------------------------------
-
-                        You can now play Sega Cave CV1000 games using Demul with Wine.
-                        Roms should be stored in the appropriate cave3rd directory.
-
-                        Performance depends on your x86_64 system hardware.
-                        If you get audio stuttering & slow music, your system isn't performant enough to run this emulator.
-
-                        Note: Your graphics card requires Vulkan drivers for Demul to work.
-
-                        -----------
-                        First Start
-                        -----------
-
-                        You need to run a ROM at least once AND be connected to the internet.
-                        This creates the directory structure & installs the associated Windows libraries for Wine.
-
-                        Note: It may take some time before the game starts with the first use, this is NORMAL!
-                        *** Please be patient as it can take up to 2 minutes depending on your internet connection speed ***
-
-                        -----------
-                        Controllers
-                        -----------
-
-                        Currently controllers cannot be configured using the desktop app.
-                        This is a limitation of the Demul app under Wine but also a known buggy pad plugin, even under Windows.
-                        Currently we only map Player 1 using the emulators default keyboard configuration using evmapy.
-
-                        ------------
-                        Service Menu
-                        ------------
-
-                        Note: Keyboard required.
-                        You can access the Service Menu using F4 and then use F2 to navigate with F4 to select.
-
-                        Enjoy Sega Cave CV1000 games under Linux!
-  comment_br:           |
-                        ----------------------------------
-                        ## GAELCO INFORMAÇÕES IMPORTANTES ##
-                        ----------------------------------
-
-                        Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul & Wine.
-                        Roms devem ser armazenados apropriadamente no diretório cave3rd .
-
-                        O desempenho depende do hardware do sistema x86_64.
-                        Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
-
-                        Nota: Sua placa gráfica requer drivers Vulkan para que o Demul funcione.
-
-                        -----------
-                        Primeiro acesso
-                        -----------
-
-                        Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
-                        Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
-
-                        Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
-                        *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
-
-                        -----------
-                        Controles
-                        -----------
-
-                        Atualmente, os controles não podem ser configurados usando o aplicativo de desktop.
-                        Esta é uma limitação do aplicativo Demul no Wine, mas também uma falha conhecida de conexão com o controle, mesmo no Windows.
-                        Atualmente, mapeamos apenas o Jogador 1 usando a configuração de teclado padrão dos emuladores usando o evmapy.
-
-                        ------------
-                        Menu de serviço
-                        ------------
-
-                        Nota: Necessário teclado.
-                        Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
-
-                        Desfrute dos jogos Sega Cave CV1000 no Linux!
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 dreamcast:
   name:                 Dreamcast
@@ -5475,86 +5399,10 @@ gaelco:
   extensions:           [7z, zip]
   platform:             gaelco, arcade
   emulators:
-    demul:
-      demul:            { requireAnyOf: [BR2_PACKAGE_DEMUL] }
-  comment_en:           |
-                        ---------------------------------
-                        ## GAELCO IMPORTANT INFO ##
-                        ---------------------------------
-
-                        You can now play Sega Gaelco games using Demul with Wine.
-                        Roms should be stored in the appropriate gaelco directory.
-
-                        Performance depends on your x86_64 system hardware.
-                        If you get audio stuttering & slow music, your system isn't performant enough to run this emulator.
-
-                        Note: Your graphics card requires Vulkan drivers for Demul to work.
-
-                        -----------
-                        First Start
-                        -----------
-
-                        You need to run a ROM at least once AND be connected to the internet.
-                        This creates the directory structure & installs the associated Windows libraries for Wine.
-
-                        Note: It may take some time before the game starts with the first use, this is NORMAL!
-                        *** Please be patient as it can take up to 2 minutes depending on your internet connection speed ***
-
-                        -----------
-                        Controllers
-                        -----------
-
-                        Currently controllers cannot be configured using the desktop app.
-                        This is a limitation of the Demul app under Wine but also a known buggy pad plugin, even under Windows.
-                        Currently we only map Player 1 using the emulators default keyboard configuration using evmapy.
-
-                        ------------
-                        Service Menu
-                        ------------
-
-                        Note: Keyboard required.
-                        You can access the Service Menu using F4 and then use F2 to navigate with F4 to select.
-
-                        Enjoy Sega Gaelco games under Linux!
-  comment_br:           |
-                        ----------------------------------
-                        ## GAELCO INFORMAÇÕES IMPORTANTES ##
-                        ----------------------------------
-
-                        Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul com o Wine.
-                        Roms devem ser armazenados apropriadamente no diretório cave3rd .
-
-                        O desempenho depende do hardware do sistema x86_64.
-                        Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
-
-                        Nota: Sua placa gráfica requer drivers Vulkan para que o Demul funcione.
-
-                        -----------
-                        Primeiro acesso
-                        -----------
-
-                        Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
-                        Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
-
-                        Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
-                        *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
-
-                        -----------
-                        Controles
-                        -----------
-
-                        Atualmente, os controles não podem ser configurados usando o aplicativo de desktop.
-                        Esta é uma limitação do aplicativo Demul no Wine, mas também uma falha conhecida de conexão com o controle, mesmo no Windows.
-                        Atualmente, mapeamos apenas o Jogador 1 usando a configuração de teclado padrão dos emuladores usando o evmapy.
-
-                        ------------
-                        Menu de serviço
-                        ------------
-
-                        Nota: Necessário teclado.
-                        Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
-
-                        Desfrute dos jogos Sega Gaelco no Linux!
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 gamegear:
   name:                 Game Gear
@@ -5577,88 +5425,10 @@ hikaru:
   extensions:           [7z, zip]
   platform:             hikaru, arcade
   emulators:
-    demul:
-      demul:            { requireAnyOf: [BR2_PACKAGE_DEMUL] }
-  comment_en:           |
-                        ---------------------------------
-                        ## HIKARU IMPORTANT INFO ##
-                        ---------------------------------
-
-                        You can now play Sega Hikaru games using Demul with Wine.
-                        Roms should be stored in the appropriate hikaru directory.
-                        You will need a Hikaru bios, please add the hikaru.zip file to your bios directory.
-
-                        Performance depends on your x86_64 system hardware.
-                        If you get audio stuttering & slow music, your system isn't performant enough to run this emulator.
-
-                        Note: Your graphics card requires Vulkan drivers for Demul to work.
-
-                        -----------
-                        First Start
-                        -----------
-
-                        You need to run a ROM at least once AND be connected to the internet.
-                        This creates the directory structure & installs the associated Windows libraries for Wine.
-
-                        Note: It may take some time before the game starts with the first use, this is NORMAL!
-                        *** Please be patient as it can take up to 2 minutes depending on your internet connection speed ***
-
-                        -----------
-                        Controllers
-                        -----------
-
-                        Currently controllers cannot be configured using the desktop app.
-                        This is a limitation of the Demul app under Wine but also a known buggy pad plugin, even under Windows.
-                        Currently we only map Player 1 using the emulators default keyboard configuration using evmapy.
-
-                        ------------
-                        Service Menu
-                        ------------
-
-                        Note: Keyboard required.
-                        You can access the Service Menu using F4 and then use F2 to navigate with F4 to select.
-
-                        Enjoy Sega Hikaru games under Linux!
-  comment_br:           |
-                        ----------------------------------
-                        ## HIKARU INFORMAÇÕES IMPORTANTES ##
-                        ----------------------------------
-
-                        Agora você pode jogar jogos da Sega Cave CV1000 usando o Demul com o Wine.
-                        Roms devem ser armazenados apropriadamente no diretório cave3rd .
-
-                        O desempenho depende do hardware do sistema x86_64.
-                        Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
-
-                        Nota: Sua placa gráfica requer drivers Vulkan para que o Demul funcione.
-
-                        -----------
-                        Primeiro acesso
-                        -----------
-
-                        Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
-                        Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
-
-                        Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
-                        *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
-
-                        -----------
-                        Controles
-                        -----------
-
-                        Atualmente, os controles não podem ser configurados usando o aplicativo de desktop.
-                        Esta é uma limitação do aplicativo Demul no Wine, mas também uma falha conhecida de conexão com o controle, mesmo no Windows.
-                        Atualmente, mapeamos apenas o Jogador 1 usando a configuração de teclado padrão dos emuladores usando o evmapy.
-
-                        ------------
-                        Menu de serviço
-                        ------------
-
-                        Nota: Necessário teclado.
-                        Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
-
-                        Desfrute dos jogos Sega Hiraku no Linux!
-
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 lindbergh:
   name:                 Sega Lindbergh
