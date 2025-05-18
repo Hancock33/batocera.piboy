@@ -1,16 +1,16 @@
 diff --git a/src/glbapi.cpp b/src/glbapi.cpp
-index 45b00f3..68fc39d 100644
+index 4b01b64..5e20db7 100644
 --- a/src/glbapi.cpp
 +++ b/src/glbapi.cpp
-@@ -8,6 +8,7 @@
- #include "common.h"
+@@ -9,6 +9,7 @@
  #include "glbapi.h"
  #include "vmemapi.h"
+ #include "entypes.h"
 +#include "rap.h"
  
  #ifdef _WIN32
  #include <io.h>
-@@ -33,7 +34,7 @@ char* strupr(char* s)
+@@ -34,7 +35,7 @@ char* strupr(char* s)
  #define _SCOTTGAME
  
  static const char* serial = "32768GLB";
@@ -19,7 +19,7 @@ index 45b00f3..68fc39d 100644
  static int num_glbs;
  static KEYFILE g_key;
  static char prefix[5] = "FILE";
-@@ -899,4 +900,4 @@ GLB_SaveFile(
+@@ -908,4 +909,4 @@ GLB_SaveFile(
  	}
  	
  	fclose(handle);
@@ -97,18 +97,18 @@ index faab246..df2c2e6 100644
  #ifdef _WIN32
  #include <io.h>
 diff --git a/src/rap.cpp b/src/rap.cpp
-index c601a7d..9991b70 100644
+index f0a073c..486462d 100644
 --- a/src/rap.cpp
 +++ b/src/rap.cpp
-@@ -32,6 +32,7 @@
- #include "joyapi.h"
+@@ -33,6 +33,7 @@
  #include "i_lastscr.h"
  #include "fileids.h"
+ #include "entypes.h"
 +#include "rap.h"
  
  #ifdef _WIN32
  #include <io.h>
-@@ -210,8 +211,8 @@ ShutDown(
+@@ -211,8 +212,8 @@ ShutDown(
  {
      char* mem;
  
@@ -119,7 +119,7 @@ index c601a7d..9991b70 100644
  
      //IPT_DeInit();
      //DMX_DeInit();
-@@ -1236,6 +1237,18 @@ RAP_InitMem(
+@@ -1237,6 +1238,18 @@ RAP_InitMem(
      GLB_UseVM();
  }
  
@@ -138,7 +138,7 @@ index c601a7d..9991b70 100644
  /***************************************************************************
  main() -
   ***************************************************************************/
-@@ -1301,13 +1314,13 @@ main(
+@@ -1302,13 +1315,13 @@ main(
      
      cur_diff = 0;
  
@@ -155,7 +155,7 @@ index c601a7d..9991b70 100644
      {
          gameflag[2] = 1;
          gameflag[3] = 1;
-@@ -1324,15 +1337,15 @@ main(
+@@ -1325,15 +1338,15 @@ main(
              numfiles++;
      }
  
@@ -176,7 +176,7 @@ index c601a7d..9991b70 100644
      EXIT_Install(ShutDown);
      
      // ================================================
-@@ -1379,10 +1392,10 @@ main(
+@@ -1380,10 +1393,10 @@ main(
      // ================================================
  
      if (access(RAP_SetupFilename(), 0))
