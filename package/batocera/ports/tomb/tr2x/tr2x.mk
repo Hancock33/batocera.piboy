@@ -3,8 +3,8 @@
 # tr2x
 #
 ################################################################################
-# Version: Commits on May 10, 2025
-TR2X_VERSION = cbce0c7ae176f83fb0d1cdab00b5e5717929aecd
+# Version: Commits on May 18, 2025
+TR2X_VERSION = a70797182457c18f22c99e24b359331c368c977e
 TR2X_SITE = $(call github,LostArtefacts,TRX,$(TR2X_VERSION))
 TR2X_LICENSE = GPL-3.0 license
 TR2X_LICENSE_FILES = COPYING.md
@@ -19,7 +19,7 @@ TR2X_CONF_OPTS = -Dstaticdeps=false
 # Use install target commands to get all files & dirs
 define TR2X_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/tr2x
-	cp -f $(@D)/src/tr2/build/TR2X $(TARGET_DIR)/usr/bin/tr2x/
+	cp -f $(@D)/src/tr2/buildroot-build/TR2X $(TARGET_DIR)/usr/bin/tr2x/
 	cp -rf $(@D)/data/tr2/ship/* $(TARGET_DIR)/usr/bin/tr2x/
 endef
 

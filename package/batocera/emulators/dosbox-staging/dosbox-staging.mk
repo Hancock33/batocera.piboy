@@ -55,7 +55,7 @@ endif
 
 define DOSBOX_STAGING_ORIGINAL
 	mv $(TARGET_DIR)/usr/bin/dosbox $(TARGET_DIR)/usr/bin/dosbox-staging
-	cp -av  $(@D)/build/subprojects/munt-libmt32emu*/libmt32emu.so $(TARGET_DIR)/usr/lib
+	cp -av  $(@D)/buildroot-build/subprojects/munt-libmt32emu*/libmt32emu.so $(TARGET_DIR)/usr/lib
 endef
 
 DOSBOX_STAGING_POST_INSTALL_TARGET_HOOKS = DOSBOX_STAGING_ORIGINAL

@@ -1,5 +1,4 @@
 ﻿batocera-luajit.mk
-citron.mk
 duckstation-legacy.mk
 ecwolf.mk
 firmware-armbian.mk
@@ -13,7 +12,6 @@ noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
 wine-cachyos.mk
-wine-custom.mk
 wine-native.mk
 wine-ntsync.mk
 wine-proton.mk

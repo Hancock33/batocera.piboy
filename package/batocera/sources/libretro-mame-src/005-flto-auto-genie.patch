@@ -1,27 +1,40 @@
 diff --git a/scripts/genie.lua b/scripts/genie.lua
-index a0507c9de13..d1ef5c347c6 100644
+index a276c345bc8..4b4e03e1735 100644
 --- a/scripts/genie.lua
 +++ b/scripts/genie.lua
-@@ -863,9 +863,9 @@ if _OPTIONS["OPTIMIZE"] then
+@@ -787,7 +787,7 @@ if _OPTIONS["OPTIMIZE"] then
  	if _OPTIONS["LTO"]=="1" then
  		buildoptions {
  -- windows native mingw GCC 5.2 fails with -flto=x with x > 1. bug unfixed as of this commit
 -			"-flto=1",
-+			"-flto=auto",
++			"-flto=32",
  -- if ld fails, just buy more RAM or uncomment this!
----          "-Wl,-no-keep-memory",
-+                        "-Wl,-no-keep-memory",
+ --          "-Wl,-no-keep-memory",
  			"-Wl,-v",
- -- silence redefine warnings from discrete.c.
- 			"-Wl,-allow-multiple-definition",
-@@ -886,8 +886,8 @@ if _OPTIONS["OPTIMIZE"] then
+@@ -805,12 +805,12 @@ if _OPTIONS["OPTIMIZE"] then
+ --          "-fmem-report-wpa","-fmem-report","-fpre-ipa-mem-report","-fpost-ipa-mem-report","-flto-report-wpa","-fmem-report",
+ -- this six flag combo lets MAME compile with LTO=1 on linux with no errors and ~2% speed boost, but compile time is much longer
+ -- if you are going to wait on lto, you might as well enable these for GCC
+---          "-fdevirtualize-at-ltrans","-fgcse-sm","-fgcse-las",
+---          "-fipa-pta","-fipa-icf","-fvariable-expansion-in-unroller",
++			"-fdevirtualize-at-ltrans","-fgcse-sm","-fgcse-las",
++			"-fipa-pta","-fipa-icf","-fvariable-expansion-in-unroller",
  		}
  -- same flags are needed by linker
  		linkoptions {
 -			"-flto=1",
----          "-Wl,-no-keep-memory",
-+			"-flto=auto",
-+                        "-Wl,-no-keep-memory",
++			"-flto=32",
+ --          "-Wl,-no-keep-memory",
  			"-Wl,-v",
  			"-Wl,-allow-multiple-definition",
- 			"-fuse-linker-plugin",
+@@ -823,8 +823,8 @@ if _OPTIONS["OPTIMIZE"] then
+ --          "-fmem-report-wpa","-fmem-report","-fpre-ipa-mem-report","-fpost-ipa-mem-report","-flto-report-wpa","-fmem-report",
+ -- this six flag combo lets MAME compile with LTO=1 on linux with no errors and ~2% speed boost, but compile time is much longer
+ -- if you are going to wait on lto, you might as well enable these for GCC
+---          "-fdevirtualize-at-ltrans","-fgcse-sm","-fgcse-las",
+---          "-fipa-pta","-fipa-icf","-fvariable-expansion-in-unroller",
++			"-fdevirtualize-at-ltrans","-fgcse-sm","-fgcse-las",
++			"-fipa-pta","-fipa-icf","-fvariable-expansion-in-unroller",
+ 
+ 		}
+ 

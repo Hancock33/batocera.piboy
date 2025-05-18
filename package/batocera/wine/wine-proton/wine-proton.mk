@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on May 06, 2025
-WINE_PROTON_VERSION = proton-wine-10.0-1d
+# Version: Commits on May 08, 2025
+WINE_PROTON_VERSION = proton-wine-10.0-1f
 WINE_PROTON_BRANCH = bleeding-edge
 WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,ValveSoftware,wine,$(WINE_PROTON_VERSION))
@@ -152,13 +152,6 @@ WINE_PROTON_CONF_OPTS += --with-v4l2
 WINE_PROTON_DEPENDENCIES += libv4l
 else
 WINE_PROTON_CONF_OPTS += --without-v4l2
-endif
-
-ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_GALLIUM),y)
-WINE_PROTON_CONF_OPTS += --with-osmesa
-WINE_PROTON_DEPENDENCIES += mesa3d
-else
-WINE_PROTON_CONF_OPTS += --without-osmesa
 endif
 
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)

@@ -18,6 +18,7 @@ camplynx;lynx128k;cass;'mload""'
 camplynx;lynx48k;cass;'mload""'
 casloopy;casloopy;cart;
 cave;;;
+cave3rd;;;
 cdi;cdimono1;cdrm;
 cgenie;cgenie;cass;
 coco;coco3;cart;
@@ -40,6 +41,7 @@ gamepock;gamepock;cart;
 gmaster;gmaster;cart;
 gp32;gp32;memc;
 hec2hr;hec2hr;cass;
+hikaru;;;
 hyprscan;hyprscan;cdrm;
 ibmpcjr;ibmpcjr;flop;
 jupace;jupace;dump;
@@ -51,6 +53,7 @@ m5;m5;cart1;
 macintosh;maclc3;flop1;
 mbee;mbee;quik;
 microvsn;microvsn;cart;
+model2;;;
 mononcol;mononcol;cart;
 mpu1000;mpu1000;cart;
 mtx512;mtx512;dump;

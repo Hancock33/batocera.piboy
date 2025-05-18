@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-06 21:12+0200\n"
+"PO-Revision-Date: 2025-05-18 13:05+0200\n"
 "Last-Translator: borysus\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -2938,6 +2938,11 @@ msgstr "Wszystkie ramki"
 msgctxt "game_options"
 msgid "All Timers"
 msgstr "Wszystkie timer'y"
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "All VMUs"
+msgstr "Wszystkie VMU"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -7697,6 +7702,13 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr "Włączenie tej opcji spowoduje wygładzenie obrazu."
 
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
+msgstr ""
+"Wymusza idealne skalowanie pikseli. Zapobiega nierównomiernemu skalowaniu i "
+"rozmyciu obrazu."
+
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "English"
@@ -10073,6 +10085,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INTERFEJS WEJŚĆ"
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "INTEGER SCALE"
+msgstr "SKALOWANIE CAŁKOWITE"
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
@@ -12775,7 +12792,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "Wyłączone"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Wyłączone (domyślnie)"
@@ -12914,6 +12931,11 @@ msgstr "Włączone z komunikatem wykrywania gry"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "Włączone z obsługą przewijania"
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Only A1"
+msgstr "Tylko A1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13229,6 +13251,11 @@ msgstr "FOLDER NA STÓŁ"
 msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "ZAPISY NA KAŻDĄ GRĘ"
+
+#. TRANSLATION: flycast/dolphin, libretro/flycast
+msgctxt "game_options"
+msgid "PER-GAME VMU"
+msgstr "VMU NA GRĘ"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18825,6 +18852,18 @@ msgstr "Splot (najpierw dolne pole)"
 msgctxt "game_options"
 msgid "Weave (Top Field First)"
 msgstr "Splot (najpierw górne pole)"
+
+#. TRANSLATION: flycast/dolphin
+msgctxt "game_options"
+msgid "When enabled, each game has its own VMU on port 1 of controller 1."
+msgstr ""
+"Po włączeniu tej opcji każda gra ma własną jednostkę VMU na porcie 1 "
+"kontrolera 1."
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "When enabled, each game has its own set of VMU save files."
+msgstr "Po włączeniu tej opcji każda gra ma własny zestaw plików zapisu VMU."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"

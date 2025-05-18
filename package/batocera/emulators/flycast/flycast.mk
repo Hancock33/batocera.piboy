@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on May 10, 2025
-FLYCAST_VERSION = ffc32d2d8676e1ca35b074196afbfb2697ee7d59
+# Version: Commits on May 18, 2025
+FLYCAST_VERSION = a842edb09ec23f0d7fe110529851b79a518e481b
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -13,32 +13,31 @@ FLYCAST_DEPENDENCIES = libao libcurl libminiupnpc libpng libzip sdl2
 FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 FLYCAST_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
 FLYCAST_CONF_OPTS += -DUSE_BREAKPAD=OFF
 FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON
 
-# Get version details
-FLYCAST_GIT_TAG = $(shell git -C $(FLYCAST_DL_DIR)/git describe --tags --always | tr -d '\n')
-FLYCAST_GIT_HASH = $(shell git -C $(FLYCAST_DL_DIR)/git rev-parse --short HEAD | tr -d '\n')
-FLYCAST_CONF_OPTS += -DGIT_VERSION=$(FLYCAST_GIT_TAG)
-FLYCAST_CONF_OPTS += -DGIT_HASH=$(FLYCAST_GIT_HASH)
-
-ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+    FLYCAST_CONF_OPTS += -DUSE_OPENGL=ON
+else ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
     FLYCAST_CONF_OPTS += -DUSE_GLES=ON -DUSE_GLES2=OFF -DUSE_OPENGL=ON
 else ifeq ($(BR2_PACKAGE_BATOCERA_GLES2),y)
     FLYCAST_CONF_OPTS += -DUSE_GLES2=ON -DUSE_GLES=OFF -DUSE_OPENGL=ON
 endif
 
-ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),)
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+    FLYCAST_CONF_OPTS += -DUSE_VULKAN=ON -DUSE_HOST_GLSLANG=ON
+else
     FLYCAST_CONF_OPTS += -DUSE_VULKAN=OFF
-endif
-
-ifeq ($(BR2_PACKAGE_HAS_LIBMALI),y)
-    FLYCAST_DEPENDENCIES += libmali
-    FLYCAST_CONF_OPTS += -DUSE_MALI=ON
 endif
 
 define FLYCAST_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/flycast $(TARGET_DIR)/usr/bin/flycast
 endef
+
+define FLYCAST_GET_SUBMODULE
+	rm -rf $(@D)/core/deps/glslang
+endef
+FLYCAST_POST_EXTRACT_HOOKS = FLYCAST_GET_SUBMODULE
 
 $(eval $(cmake-package))

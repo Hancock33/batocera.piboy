@@ -29,6 +29,7 @@ class DrasticGenerator(Generator):
 
         drastic_root = CONFIGS / "drastic"
         drastic_bin = drastic_root / "drastic"
+        drastic_conf_dir = drastic_root / "config"
         drastic_conf = drastic_root / "config" / "drastic.cfg"
 
         if not drastic_root.exists():
@@ -38,24 +39,27 @@ class DrasticGenerator(Generator):
             shutil.copyfile("/usr/bin/drastic", drastic_bin)
             drastic_bin.chmod(0o0775)
 
+        if not drastic_conf_dir.exists():
+            os.mkdir(drastic_conf_dir)
+
         # Settings, Language and ConfirmPowerOff
         f = drastic_conf.open("w", encoding="ascii")
 
         #Getting Values from ES
-        if system.config.get("drastic_scaling") == 'nearest':
-            subprocess.run(f"xxd {drastic_bin} > drastic.txt", shell=True)
-            if subprocess.run("grep -q '6c69 6e65 6172' drastic.txt", shell=True).returncode == 0:
+        # if system.config.get("drastic_scaling") == 'nearest':
+            # subprocess.run(f"xxd {drastic_bin} > drastic.txt", shell=True)
+            # if subprocess.run("grep -q '6c69 6e65 6172' drastic.txt", shell=True).returncode == 0:
                 # Swap to nearest neighbor
-                subprocess.run("sed -i 's/6c69 6e65 6172/3000 0000 0000/g' drastic.txt", shell=True)
-                subprocess.run(f"xxd -r drastic.txt > {drastic_bin}", shell=True)
-                Path("drastic.txt").unlink()
-        else:
-            subprocess.run(f"xxd {drastic_bin} > drastic.txt", shell=True)
-            if subprocess.run("grep -q '3000 0000 0000' drastic.txt", shell=True).returncode == 0:
+                # subprocess.run("sed -i 's/6c69 6e65 6172/3000 0000 0000/g' drastic.txt", shell=True)
+                # subprocess.run(f"xxd -r drastic.txt > {drastic_bin}", shell=True)
+                # Path("drastic.txt").unlink()
+        # else:
+            # subprocess.run(f"xxd {drastic_bin} > drastic.txt", shell=True)
+            # if subprocess.run("grep -q '3000 0000 0000' drastic.txt", shell=True).returncode == 0:
                 # Swap to bilinear
-                subprocess.run("sed -i 's/3000 0000 0000/6c69 6e65 6172/g' drastic.txt", shell=True)
-                subprocess.run(f"xxd -r drastic.txt > {drastic_bin}", shell=True)
-                Path("drastic.txt").unlink()
+                # subprocess.run("sed -i 's/3000 0000 0000/6c69 6e65 6172/g' drastic.txt", shell=True)
+                # subprocess.run(f"xxd -r drastic.txt > {drastic_bin}", shell=True)
+                # Path("drastic.txt").unlink()
 
         esvaluedrastichires = system.config.get_int("drastic_hires", 0)
         esvaluedrasticthreaded = system.config.get_int("drastic_threaded", 0)
@@ -106,8 +110,6 @@ class DrasticGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'DISPLAY': '0.0',
-                'LIB_FB': '3',
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 

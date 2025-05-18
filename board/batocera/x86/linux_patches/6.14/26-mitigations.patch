@@ -1,5 +1,5 @@
 diff --git a/arch/Kconfig b/arch/Kconfig
-index b8a4ff365582..cdd607e8203a 100644
+index 9b087f9bb413..e623942af750 100644
 --- a/arch/Kconfig
 +++ b/arch/Kconfig
 @@ -14,7 +14,7 @@ config ARCH_CONFIGURES_CPU_MITIGATIONS

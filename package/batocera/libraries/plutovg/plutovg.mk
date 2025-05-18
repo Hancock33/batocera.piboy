@@ -3,8 +3,8 @@
 # plutovg
 #
 ################################################################################
-# Version: Commits on May 10, 2025
-PLUTOVG_VERSION = f7e211dda09dfbc8a1f627436afddc67010cf663
+# Version: Commits on May 15, 2025
+PLUTOVG_VERSION = 1a8412d0574c4345dd7ef8a91ce7b58c7dcfe253
 PLUTOVG_SITE = $(call github,sammycage,plutovg,$(PLUTOVG_VERSION))
 
 PLUTOVG_LICENSE = BSD-2-Clause

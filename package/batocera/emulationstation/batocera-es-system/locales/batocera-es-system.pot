@@ -3199,7 +3199,7 @@ msgctxt "game_options"
 msgid "ENABLE GRAVIS ULTRASOUND"
 msgstr ""
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr ""
@@ -3752,6 +3752,26 @@ msgstr ""
 #. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "When enabled, each game has its own set of VMU save files."
+msgstr ""
+
+#. TRANSLATION: flycast/dolphin, libretro/flycast
+msgctxt "game_options"
+msgid "PER-GAME VMU"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Only A1"
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "All VMUs"
 msgstr ""
 
 #. TRANSLATION: libretro/flycast, libretro/flycast2021
@@ -10574,6 +10594,11 @@ msgstr ""
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
+msgid "When enabled, each game has its own VMU on port 1 of controller 1."
+msgstr ""
+
+#. TRANSLATION: flycast/dolphin
+msgctxt "game_options"
 msgid "Choose second feature pack for the controller."
 msgstr ""
 
@@ -11927,6 +11952,16 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Auto Max Quality"
+msgstr ""
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
+msgstr ""
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "INTEGER SCALE"
 msgstr ""
 
 #. TRANSLATION: ppsspp
@@ -18086,6 +18121,16 @@ msgctxt "keys_files"
 msgid "Button Start"
 msgstr ""
 
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
+msgctxt "keys_files"
+msgid "Emulator configuration"
+msgstr ""
+
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
+msgctxt "keys_files"
+msgid "Exit the emulator"
+msgstr ""
+
 #. TRANSLATION: nds.drastic.keys
 msgctxt "keys_files"
 msgid "Joy2Pad Up"
@@ -18224,16 +18269,6 @@ msgstr ""
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right magnasave"
-msgstr ""
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
-msgctxt "keys_files"
-msgid "Emulator configuration"
-msgstr ""
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Exit the emulator"
 msgstr ""
 
 #. TRANSLATION: 3ds.azahar.keys

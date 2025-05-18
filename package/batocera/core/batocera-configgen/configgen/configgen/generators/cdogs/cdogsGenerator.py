@@ -7,13 +7,14 @@ from typing import TYPE_CHECKING
 from ... import Command
 from ...batoceraPaths import ROMS
 from ...controller import generate_sdl_game_controller_config
+from ...exceptions import BatoceraException
 from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
 
-eslog = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 class CdogsGenerator(Generator):
 

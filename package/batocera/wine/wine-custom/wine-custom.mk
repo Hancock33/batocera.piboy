@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on May 03, 2025
-WINE_CUSTOM_VERSION = ntsync7-10.7
+# Version: Commits on May 16, 2025
+WINE_CUSTOM_VERSION = ntsync7-10.8
 WINE_CUSTOM_BRANCH = ntsync
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
@@ -152,13 +152,6 @@ WINE_CUSTOM_CONF_OPTS += --with-v4l2
 WINE_CUSTOM_DEPENDENCIES += libv4l
 else
 WINE_CUSTOM_CONF_OPTS += --without-v4l2
-endif
-
-ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_GALLIUM),y)
-WINE_CUSTOM_CONF_OPTS += --with-osmesa
-WINE_CUSTOM_DEPENDENCIES += mesa3d
-else
-WINE_CUSTOM_CONF_OPTS += --without-osmesa
 endif
 
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)

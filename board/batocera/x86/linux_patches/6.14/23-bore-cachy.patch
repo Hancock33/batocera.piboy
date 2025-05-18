@@ -81,10 +81,10 @@ index 000000000000..a8faabc2885e
 +#endif // CONFIG_SCHED_BORE
 +#endif // _LINUX_SCHED_BORE_H
 diff --git a/init/Kconfig b/init/Kconfig
-index 32fc6107126a..60460672e5e1 100644
+index bbba0c4859b2..551c1b4db478 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -1380,6 +1380,23 @@ config CHECKPOINT_RESTORE
+@@ -1383,6 +1383,23 @@ config CHECKPOINT_RESTORE
  
  	  If unsure, say N here.
  

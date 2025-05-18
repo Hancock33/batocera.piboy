@@ -1,0 +1,13 @@
+diff --git a/gamecon_gpio_rpi.c b/gamecon_gpio_rpi/gamecon_gpio_rpi.c
+index 95f63b9..6b74557 100644
+--- a/gamecon_gpio_rpi.c
++++ b/gamecon_gpio_rpi.c
+@@ -1011,7 +1011,7 @@ static void gc_close(struct input_dev *dev)
+ 
+ 	mutex_lock(&gc->mutex);
+ 	if (!--gc->used) {
+-		del_timer_sync(&gc->timer);
++		timer_delete(&gc->timer);
+ 	}
+ 	mutex_unlock(&gc->mutex);
+ }

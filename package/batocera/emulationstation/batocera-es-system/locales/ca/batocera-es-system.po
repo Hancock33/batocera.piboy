@@ -2929,6 +2929,11 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr ""
 
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "All VMUs"
+msgstr ""
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -7605,6 +7610,11 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr ""
 
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
+msgstr ""
+
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
 msgid "English"
@@ -9929,6 +9939,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INTERFÍCIE D’ENTRADA"
+
+#. TRANSLATION: ppsspp
+msgctxt "game_options"
+msgid "INTEGER SCALE"
+msgstr ""
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
@@ -12599,7 +12614,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "Apagat"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Apagat (Per defecte)"
@@ -12731,6 +12746,11 @@ msgstr "Engegat amb missatge de detecció de joc"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "Engegat amb suport de rebobinat"
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Only A1"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13043,6 +13063,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "DESATS PER JOC"
+
+#. TRANSLATION: flycast/dolphin, libretro/flycast
+msgctxt "game_options"
+msgid "PER-GAME VMU"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18548,6 +18573,16 @@ msgstr ""
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Weave (Top Field First)"
+msgstr ""
+
+#. TRANSLATION: flycast/dolphin
+msgctxt "game_options"
+msgid "When enabled, each game has its own VMU on port 1 of controller 1."
+msgstr ""
+
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "When enabled, each game has its own set of VMU save files."
 msgstr ""
 
 #. TRANSLATION: drastic

@@ -3,8 +3,8 @@
 # tr1x
 #
 ################################################################################
-# Version: Commits on May 10, 2025
-TR1X_VERSION = cbce0c7ae176f83fb0d1cdab00b5e5717929aecd
+# Version: Commits on May 18, 2025
+TR1X_VERSION = a70797182457c18f22c99e24b359331c368c977e
 TR1X_SITE = $(call github,LostArtefacts,TRX,$(TR1X_VERSION))
 TR1X_LICENSE = GPL-3.0 license
 TR1X_LICENSE_FILES = COPYING.md
@@ -19,7 +19,7 @@ TR1X_CONF_OPTS = -Dstaticdeps=false
 # Use install target commands to get all files & dirs
 define TR1X_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/tr1x
-	cp -f $(@D)/src/tr1/build/TR1X $(TARGET_DIR)/usr/bin/tr1x/
+	cp -f $(@D)/src/tr1/buildroot-build/TR1X $(TARGET_DIR)/usr/bin/tr1x/
 	cp -rf $(@D)/data/tr1/ship/* $(TARGET_DIR)/usr/bin/tr1x/
 endef
 

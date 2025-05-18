@@ -159,13 +159,6 @@ else
 WINE_STAGING_CONF_OPTS += --without-v4l2
 endif
 
-ifeq ($(BR2_PACKAGE_MESA3D_OSMESA_GALLIUM),y)
-WINE_STAGING_CONF_OPTS += --with-osmesa
-WINE_STAGING_DEPENDENCIES += mesa3d
-else
-WINE_STAGING_CONF_OPTS += --without-osmesa
-endif
-
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
 WINE_STAGING_CONF_OPTS += --with-pulse
 WINE_STAGING_DEPENDENCIES += pulseaudio

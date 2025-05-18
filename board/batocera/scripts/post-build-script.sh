@@ -156,6 +156,30 @@ if ! [[ -z "${SYSTEM_GETTY_PORT}" ]]; then
         ${TARGET_DIR}/etc/inittab
 fi
 
+# miscellaneous stuff
+rm -rf "${TARGET_DIR}/usr/bin/mame/docs" || exit 1
+rm -rf "${TARGET_DIR}/usr/wine/wine-custom/share/man" || exit 1
+rm -rf "${TARGET_DIR}/usr/wine/wine-proton/share/man" || exit 1
+rm -rf "${TARGET_DIR}/usr/lib/python3.13/site-packages/numpy/doc" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/ledspicer/doc" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/lirc/python-pkg/lirc/doc" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/qt6/doc" || exit 1
+rm -rf "${TARGET_DIR}/usr/bin/mame/docs" || exit 1
+rm -rf "${TARGET_DIR}/usr/bin/pcsx2/resources/docs" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/batocera/shaders/bezel/Mega_Bezel/resource/docs" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/batocera/shaders/docs" || exit 1
+rm -rf "${TARGET_DIR}/usr/bin/mame/ini/examples" || exit 1
+rm -rf "${TARGET_DIR}/usr/libexec/lzo/examples" || exit 1
+rm -rf "${TARGET_DIR}/usr/lib/python3.13/site-packages/numpy/_core/tests/examples" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/mc/examples" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/examples" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/vpl" || exit 1
+find ${TARGET_DIR} -type f -name "CHANGELOG*" -exec rm {} \; || exit 1
+find ${TARGET_DIR} -type f -name "changelog.txt" -exec rm {} \; || exit 1
+find ${TARGET_DIR} -type f -name "README*" -exec rm {} \; || exit 1
+sudo find ${TARGET_DIR} -type f -name "LICENSE*" -exec rm {} \; || exit 1
+sudo find ${TARGET_DIR} -type f -name "license*" -exec rm {} \; || exit 1
+
 # With PARALLEL_BUILD it is difficult to control which of two
 # conflicting files from different packages will be the one ending up
 # in the final image.  We take any files written to a special

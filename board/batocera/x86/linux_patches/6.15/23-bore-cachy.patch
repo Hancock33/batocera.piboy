@@ -81,10 +81,10 @@ index 000000000000..a8faabc2885e
 +#endif // CONFIG_SCHED_BORE
 +#endif // _LINUX_SCHED_BORE_H
 diff --git a/init/Kconfig b/init/Kconfig
-index e3f35e6b08e4..3711af6dc36f 100644
+index 97c1911e5c92..ffa4376d961b 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -1384,6 +1384,23 @@ config CHECKPOINT_RESTORE
+@@ -1387,6 +1387,23 @@ config CHECKPOINT_RESTORE
  
  	  If unsure, say N here.
  
@@ -750,7 +750,7 @@ index 557246880a7e..c1f6219f20eb 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index c0b27af756f9..e6a0aa7a9ae8 100644
+index ef4244817485..385b04613e39 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,8 @@
@@ -911,7 +911,7 @@ index c0b27af756f9..e6a0aa7a9ae8 100644
  	/*
  	 * When joining the competition; the existing tasks will be,
  	 * on average, halfway through their slice, as such start tasks
-@@ -7200,6 +7227,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
+@@ -7198,6 +7225,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
  		util_est_dequeue(&rq->cfs, p);
  
  	util_est_update(&rq->cfs, p, flags & DEQUEUE_SLEEP);
@@ -927,7 +927,7 @@ index c0b27af756f9..e6a0aa7a9ae8 100644
  	if (dequeue_entities(rq, &p->se, flags) < 0)
  		return false;
  
-@@ -9020,16 +9056,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9011,16 +9047,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -953,7 +953,7 @@ index c0b27af756f9..e6a0aa7a9ae8 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13143,6 +13188,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13134,6 +13179,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -963,7 +963,7 @@ index c0b27af756f9..e6a0aa7a9ae8 100644
  }
  
  /*
-@@ -13253,6 +13301,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13244,6 +13292,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {
