@@ -1,8 +1,8 @@
 diff --git a/Documentation/ABI/testing/sysfs-devices-system-cpu b/Documentation/ABI/testing/sysfs-devices-system-cpu
-index 206079d3bd5b..766a9747b154 100644
+index 6a1acabb29d8..7772d4f034d2 100644
 --- a/Documentation/ABI/testing/sysfs-devices-system-cpu
 +++ b/Documentation/ABI/testing/sysfs-devices-system-cpu
-@@ -516,6 +516,7 @@ What:		/sys/devices/system/cpu/vulnerabilities
+@@ -517,6 +517,7 @@ What:		/sys/devices/system/cpu/vulnerabilities
  		/sys/devices/system/cpu/vulnerabilities/mds
  		/sys/devices/system/cpu/vulnerabilities/meltdown
  		/sys/devices/system/cpu/vulnerabilities/mmio_stale_data
@@ -197,10 +197,10 @@ index 000000000000..6ded8f86b8d0
 +determined at boot. Runtime microcode updates do not change the status
 +of this vulnerability.
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 56be1fc99bdd..08063b29b18f 100644
+index f9e11cebc598..1f8c2b2e466a 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
-@@ -2277,6 +2277,9 @@
+@@ -2294,6 +2294,9 @@
  			disable
  			  Do not enable intel_pstate as the default
  			  scaling driver for the supported processors
@@ -210,7 +210,7 @@ index 56be1fc99bdd..08063b29b18f 100644
                          active
                            Use intel_pstate driver to bypass the scaling
                            governors layer of cpufreq and provides it own
-@@ -4644,6 +4647,15 @@
+@@ -4662,6 +4665,15 @@
  		nomsi		[MSI] If the PCI_MSI kernel config parameter is
  				enabled, this kernel boot option can be used to
  				disable the use of MSI interrupts system-wide.
@@ -262,7 +262,7 @@ index 00e94bec401e..11b706953286 100644
  B:	https://github.com/facebook/zstd/issues
  T:	git https://github.com/terrelln/linux.git
 diff --git a/Makefile b/Makefile
-index 6c3233a21380..ae46032db61d 100644
+index 07f628e60fc9..2ebbbd4493c5 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -860,11 +860,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -363,7 +363,7 @@ index 8d186bfced45..f7480c9c6f8d 100644
  ifdef CONFIG_KEXEC_CORE
  AFLAGS_kexec_relocate.o := -mcmodel=medany $(call cc-option,-mno-relax)
 diff --git a/arch/x86/Kconfig b/arch/x86/Kconfig
-index aeb95b6e5536..8dc1133e3384 100644
+index f86e7072a5ba..500584609508 100644
 --- a/arch/x86/Kconfig
 +++ b/arch/x86/Kconfig
 @@ -77,7 +77,7 @@ config X86
@@ -948,7 +948,7 @@ index 5b773b34768d..5f57fd8750c6 100644
  
          KBUILD_CFLAGS += -mno-red-zone
 diff --git a/arch/x86/crypto/aesni-intel_glue.c b/arch/x86/crypto/aesni-intel_glue.c
-index 11e95fc62636..3e9ab5cdade4 100644
+index 11e95fc62636..53a1e57a5c82 100644
 --- a/arch/x86/crypto/aesni-intel_glue.c
 +++ b/arch/x86/crypto/aesni-intel_glue.c
 @@ -1536,26 +1536,6 @@ DEFINE_GCM_ALGS(vaes_avx10_512, FLAG_AVX10_512,
@@ -983,7 +983,7 @@ index 11e95fc62636..3e9ab5cdade4 100644
  		return err;
  
 -	if (x86_match_cpu(zmm_exclusion_list)) {
-+	if (boot_cpu_has(X86_FEATURE_PREFER_YMM)) {
++	if (boot_cpu_has(X86_FEATURE_INDIRECT_THUNK_ITS)) {
  		int i;
  
  		aes_xts_alg_vaes_avx10_512.base.cra_priority = 1;
@@ -998,7 +998,7 @@ index cc8c3bd0e7c2..1f7c3082a36d 100644
 -	pv_ops.mmu.tlb_remove_table = tlb_remove_table;
  }
 diff --git a/arch/x86/include/asm/cpufeatures.h b/arch/x86/include/asm/cpufeatures.h
-index 508c0dad116b..969322503927 100644
+index b8fbd847c34a..4c38c9b9c69d 100644
 --- a/arch/x86/include/asm/cpufeatures.h
 +++ b/arch/x86/include/asm/cpufeatures.h
 @@ -338,6 +338,7 @@
@@ -1009,21 +1009,6 @@ index 508c0dad116b..969322503927 100644
  #define X86_FEATURE_RDPRU		(13*32+ 4) /* "rdpru" Read processor register at user level */
  #define X86_FEATURE_WBNOINVD		(13*32+ 9) /* "wbnoinvd" WBNOINVD instruction */
  #define X86_FEATURE_AMD_IBPB		(13*32+12) /* Indirect Branch Prediction Barrier */
-@@ -483,6 +484,7 @@
- #define X86_FEATURE_AMD_FAST_CPPC	(21*32 + 5) /* Fast CPPC */
- #define X86_FEATURE_AMD_HETEROGENEOUS_CORES (21*32 + 6) /* Heterogeneous Core Topology */
- #define X86_FEATURE_AMD_WORKLOAD_CLASS	(21*32 + 7) /* Workload Classification */
-+#define X86_FEATURE_PREFER_YMM		(21*32 + 8) /* Avoid ZMM registers due to downclocking */
- 
- /*
-  * BUG word(s)
-@@ -534,4 +536,6 @@
- #define X86_BUG_RFDS			X86_BUG(1*32 + 2) /* "rfds" CPU is vulnerable to Register File Data Sampling */
- #define X86_BUG_BHI			X86_BUG(1*32 + 3) /* "bhi" CPU is affected by Branch History Injection */
- #define X86_BUG_IBPB_NO_RET	   	X86_BUG(1*32 + 4) /* "ibpb_no_ret" IBPB omits return target predictions */
-+#define X86_BUG_SPECTRE_V2_USER		X86_BUG(1*32 + 5) /* "spectre_v2_user" CPU is affected by Spectre variant 2 attack between user processes */
-+#define X86_BUG_OLD_MICROCODE		X86_BUG(1*32 + 6) /* "old_microcode" CPU has old microcode, it is surely vulnerable to something */
- #endif /* _ASM_X86_CPUFEATURES_H */
 diff --git a/arch/x86/include/asm/disabled-features.h b/arch/x86/include/asm/disabled-features.h
 index c492bdc97b05..be8c38855068 100644
 --- a/arch/x86/include/asm/disabled-features.h
@@ -1123,7 +1108,7 @@ index 795fdd53bd0a..2398058b6e83 100644
  
  extern void switch_mm(struct mm_struct *prev, struct mm_struct *next,
 diff --git a/arch/x86/include/asm/msr-index.h b/arch/x86/include/asm/msr-index.h
-index 72765b2fe0d8..22892a37c849 100644
+index d4308e78a009..0b64bdf90c0a 100644
 --- a/arch/x86/include/asm/msr-index.h
 +++ b/arch/x86/include/asm/msr-index.h
 @@ -25,6 +25,7 @@
@@ -1142,7 +1127,7 @@ index 72765b2fe0d8..22892a37c849 100644
  #define EFER_AUTOIBRS		(1<<_EFER_AUTOIBRS)
  
  /*
-@@ -701,15 +703,17 @@
+@@ -709,15 +711,17 @@
  #define MSR_AMD_CPPC_REQ		0xc00102b3
  #define MSR_AMD_CPPC_STATUS		0xc00102b4
  
@@ -1641,53 +1626,12 @@ index 70df203d814e..fea74def787d 100644
  }
  
  static const struct cpu_dev amd_cpu_dev = {
-diff --git a/arch/x86/kernel/cpu/bugs.c b/arch/x86/kernel/cpu/bugs.c
-index 9152285aaaf9..3aaa5eb5aff2 100644
---- a/arch/x86/kernel/cpu/bugs.c
-+++ b/arch/x86/kernel/cpu/bugs.c
-@@ -2806,6 +2806,14 @@ static ssize_t rfds_show_state(char *buf)
- 	return sysfs_emit(buf, "%s\n", rfds_strings[rfds_mitigation]);
- }
- 
-+static ssize_t old_microcode_show_state(char *buf)
-+{
-+	if (boot_cpu_has(X86_FEATURE_HYPERVISOR))
-+		return sysfs_emit(buf, "Unknown: running under hypervisor");
-+
-+	return sysfs_emit(buf, "Vulnerable\n");
-+}
-+
- static char *stibp_state(void)
- {
- 	if (spectre_v2_in_eibrs_mode(spectre_v2_enabled) &&
-@@ -2988,6 +2996,9 @@ static ssize_t cpu_show_common(struct device *dev, struct device_attribute *attr
- 	case X86_BUG_RFDS:
- 		return rfds_show_state(buf);
- 
-+	case X86_BUG_OLD_MICROCODE:
-+		return old_microcode_show_state(buf);
-+
- 	default:
- 		break;
- 	}
-@@ -3067,6 +3078,11 @@ ssize_t cpu_show_reg_file_data_sampling(struct device *dev, struct device_attrib
- {
- 	return cpu_show_common(dev, attr, buf, X86_BUG_RFDS);
- }
-+
-+ssize_t cpu_show_old_microcode(struct device *dev, struct device_attribute *attr, char *buf)
-+{
-+	return cpu_show_common(dev, attr, buf, X86_BUG_OLD_MICROCODE);
-+}
- #endif
- 
- void __warn_thunk(void)
 diff --git a/arch/x86/kernel/cpu/common.c b/arch/x86/kernel/cpu/common.c
-index 7cce91b19fb2..8d21887d6666 100644
+index 5e70a9984ccc..9329bde12078 100644
 --- a/arch/x86/kernel/cpu/common.c
 +++ b/arch/x86/kernel/cpu/common.c
-@@ -1317,10 +1317,52 @@ static bool __init vulnerable_to_rfds(u64 x86_arch_cap_msr)
- 	return cpu_matches(cpu_vuln_blacklist, RFDS);
+@@ -1350,10 +1350,52 @@ static bool __init vulnerable_to_its(u64 x86_arch_cap_msr)
+ 	return false;
  }
  
 +static struct x86_cpu_id cpu_latest_microcode[] = {
@@ -1732,7 +1676,7 @@ index 7cce91b19fb2..8d21887d6666 100644
  
 +	if (cpu_has_old_microcode()) {
 +		pr_warn("x86/CPU: Running old microcode\n");
-+		setup_force_cpu_bug(X86_BUG_OLD_MICROCODE);
++		setup_force_cpu_bug(X86_BUG_ITS_NATIVE_ONLY);
 +		add_taint(TAINT_CPU_OUT_OF_SPEC, LOCKDEP_STILL_OK);
 +	}
 +
@@ -1740,7 +1684,7 @@ index 7cce91b19fb2..8d21887d6666 100644
  	if (!cpu_matches(cpu_vuln_whitelist, NO_ITLB_MULTIHIT) &&
  	    !(x86_arch_cap_msr & ARCH_CAP_PSCHANGE_MC_NO))
 diff --git a/arch/x86/kernel/cpu/intel.c b/arch/x86/kernel/cpu/intel.c
-index 134368a3f4b1..5fe563eeb17d 100644
+index 134368a3f4b1..25ef0c279c85 100644
 --- a/arch/x86/kernel/cpu/intel.c
 +++ b/arch/x86/kernel/cpu/intel.c
 @@ -521,6 +521,25 @@ static void init_intel_misc_features(struct cpuinfo_x86 *c)
@@ -1774,7 +1718,7 @@ index 134368a3f4b1..5fe563eeb17d 100644
  #endif
  
 +	if (x86_match_cpu(zmm_exclusion_list))
-+		set_cpu_cap(c, X86_FEATURE_PREFER_YMM);
++		set_cpu_cap(c, X86_FEATURE_INDIRECT_THUNK_ITS);
 +
  	/* Work around errata */
  	srat_detect_node(c);
@@ -2733,7 +2677,7 @@ index 000000000000..7b89f0edbc17
 +		if (boot_cpu_has(X86_FEATURE_AVX512BW) &&		\
 +		    boot_cpu_has(X86_FEATURE_AVX512VL) &&		\
 +		    cpu_has_xfeatures(XFEATURE_MASK_AVX512, NULL)) {	\
-+			if (boot_cpu_has(X86_FEATURE_PREFER_YMM))	\
++			if (boot_cpu_has(X86_FEATURE_INDIRECT_THUNK_ITS))	\
 +				static_call_update(prefix##_pclmul,	\
 +						   prefix##_vpclmul_avx10_256); \
 +			else						\
@@ -3561,7 +3505,7 @@ index 9b0ee41b545c..1ddbd799acdf 100644
  #endif	/* CONFIG_PGTABLE_LEVELS > 4 */
  #endif	/* CONFIG_PGTABLE_LEVELS > 3 */
 diff --git a/arch/x86/mm/tlb.c b/arch/x86/mm/tlb.c
-index e491c75b2a68..d4ea9d4f7879 100644
+index 3c81edd54c5c..5150bc966730 100644
 --- a/arch/x86/mm/tlb.c
 +++ b/arch/x86/mm/tlb.c
 @@ -74,13 +74,15 @@
@@ -3918,24 +3862,31 @@ index e491c75b2a68..d4ea9d4f7879 100644
  		/*
  		 * Leave this CPU in prev's mm_cpumask. Atomic writes to
  		 * mm_cpumask can be expensive under contention. The CPU
-@@ -620,14 +920,12 @@ void switch_mm_irqs_off(struct mm_struct *unused, struct mm_struct *next,
- 		next_tlb_gen = atomic64_read(&next->context.tlb_gen);
+@@ -621,17 +921,12 @@ void switch_mm_irqs_off(struct mm_struct *unused, struct mm_struct *next,
  
  		choose_new_asid(next, next_tlb_gen, &new_asid, &need_flush);
--
--		/* Let nmi_uaccess_okay() know that we're changing CR3. */
+ 
+-		/*
+-		 * Indicate that CR3 is about to change. nmi_uaccess_okay()
+-		 * and others are sensitive to the window where mm_cpumask(),
+-		 * CR3 and cpu_tlbstate.loaded_mm are not all in sync.
+- 		 */
 -		this_cpu_write(cpu_tlbstate.loaded_mm, LOADED_MM_SWITCHING);
 -		barrier();
- 	}
- 
+-	}
+-
+-	new_lam = mm_lam_cr3_mask(next);
+-	if (need_flush) {
++ 	}
++ 
 +reload_tlb:
- 	new_lam = mm_lam_cr3_mask(next);
- 	if (need_flush) {
++ 	new_lam = mm_lam_cr3_mask(next);
++ 	if (need_flush) {
 +		VM_WARN_ON_ONCE(is_global_asid(new_asid));
  		this_cpu_write(cpu_tlbstate.ctxs[new_asid].ctx_id, next->context.ctx_id);
  		this_cpu_write(cpu_tlbstate.ctxs[new_asid].tlb_gen, next_tlb_gen);
  		load_new_mm_cr3(next->pgd, new_asid, new_lam, true);
-@@ -746,7 +1044,7 @@ static void flush_tlb_func(void *info)
+@@ -750,7 +1045,7 @@ static void flush_tlb_func(void *info)
  	const struct flush_tlb_info *f = info;
  	struct mm_struct *loaded_mm = this_cpu_read(cpu_tlbstate.loaded_mm);
  	u32 loaded_mm_asid = this_cpu_read(cpu_tlbstate.loaded_mm_asid);
@@ -3944,7 +3895,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  	bool local = smp_processor_id() == f->initiating_cpu;
  	unsigned long nr_invalidate = 0;
  	u64 mm_tlb_gen;
-@@ -769,6 +1067,16 @@ static void flush_tlb_func(void *info)
+@@ -773,6 +1068,16 @@ static void flush_tlb_func(void *info)
  	if (unlikely(loaded_mm == &init_mm))
  		return;
  
@@ -3961,7 +3912,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  	VM_WARN_ON(this_cpu_read(cpu_tlbstate.ctxs[loaded_mm_asid].ctx_id) !=
  		   loaded_mm->context.ctx_id);
  
-@@ -786,6 +1094,8 @@ static void flush_tlb_func(void *info)
+@@ -790,6 +1095,8 @@ static void flush_tlb_func(void *info)
  		return;
  	}
  
@@ -3970,7 +3921,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  	if (unlikely(f->new_tlb_gen != TLB_GENERATION_INVALID &&
  		     f->new_tlb_gen <= local_tlb_gen)) {
  		/*
-@@ -953,7 +1263,7 @@ STATIC_NOPV void native_flush_tlb_multi(const struct cpumask *cpumask,
+@@ -972,7 +1279,7 @@ STATIC_NOPV void native_flush_tlb_multi(const struct cpumask *cpumask,
  	 * up on the new contents of what used to be page tables, while
  	 * doing a speculative memory access.
  	 */
@@ -3979,7 +3930,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  		on_each_cpu_mask(cpumask, flush_tlb_func, (void *)info, true);
  	else
  		on_each_cpu_cond_mask(should_flush_tlb, flush_tlb_func,
-@@ -1000,6 +1310,15 @@ static struct flush_tlb_info *get_flush_tlb_info(struct mm_struct *mm,
+@@ -1019,6 +1326,15 @@ static struct flush_tlb_info *get_flush_tlb_info(struct mm_struct *mm,
  	BUG_ON(this_cpu_inc_return(flush_tlb_info_idx) != 1);
  #endif
  
@@ -3995,7 +3946,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  	info->start		= start;
  	info->end		= end;
  	info->mm		= mm;
-@@ -1026,17 +1345,8 @@ void flush_tlb_mm_range(struct mm_struct *mm, unsigned long start,
+@@ -1045,17 +1361,8 @@ void flush_tlb_mm_range(struct mm_struct *mm, unsigned long start,
  				bool freed_tables)
  {
  	struct flush_tlb_info *info;
@@ -4014,7 +3965,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  
  	/* This is also a barrier that synchronizes with switch_mm(). */
  	new_tlb_gen = inc_mm_tlb_gen(mm);
-@@ -1049,9 +1359,12 @@ void flush_tlb_mm_range(struct mm_struct *mm, unsigned long start,
+@@ -1068,9 +1375,12 @@ void flush_tlb_mm_range(struct mm_struct *mm, unsigned long start,
  	 * a local TLB flush is needed. Optimize this use-case by calling
  	 * flush_tlb_func_local() directly in this case.
  	 */
@@ -4028,7 +3979,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  	} else if (mm == this_cpu_read(cpu_tlbstate.loaded_mm)) {
  		lockdep_assert_irqs_enabled();
  		local_irq_disable();
-@@ -1064,7 +1377,6 @@ void flush_tlb_mm_range(struct mm_struct *mm, unsigned long start,
+@@ -1083,7 +1393,6 @@ void flush_tlb_mm_range(struct mm_struct *mm, unsigned long start,
  	mmu_notifier_arch_invalidate_secondary_tlbs(mm, start, end);
  }
  
@@ -4036,7 +3987,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  static void do_flush_tlb_all(void *info)
  {
  	count_vm_tlb_event(NR_TLB_REMOTE_FLUSH_RECEIVED);
-@@ -1074,7 +1386,32 @@ static void do_flush_tlb_all(void *info)
+@@ -1093,7 +1402,32 @@ static void do_flush_tlb_all(void *info)
  void flush_tlb_all(void)
  {
  	count_vm_tlb_event(NR_TLB_REMOTE_FLUSH);
@@ -4070,7 +4021,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  }
  
  static void do_kernel_range_flush(void *info)
-@@ -1087,24 +1424,37 @@ static void do_kernel_range_flush(void *info)
+@@ -1106,24 +1440,37 @@ static void do_kernel_range_flush(void *info)
  		flush_tlb_one_kernel(addr);
  }
  
@@ -4121,7 +4072,7 @@ index e491c75b2a68..d4ea9d4f7879 100644
  }
  
  /*
-@@ -1283,7 +1633,10 @@ void arch_tlbbatch_flush(struct arch_tlbflush_unmap_batch *batch)
+@@ -1302,7 +1649,10 @@ void arch_tlbbatch_flush(struct arch_tlbflush_unmap_batch *batch)
  	 * a local TLB flush is needed. Optimize this use-case by calling
  	 * flush_tlb_func_local() directly in this case.
  	 */
@@ -5735,34 +5686,6 @@ index f3a6bfe098cd..e926c78380a2 100644
  
  	sysfs_add_file_to_group(&pdev->dev.kobj,
  				&dev_attr_remapped_nvme.attr,
-diff --git a/drivers/base/cpu.c b/drivers/base/cpu.c
-index a7e511849875..1c4359366cd7 100644
---- a/drivers/base/cpu.c
-+++ b/drivers/base/cpu.c
-@@ -600,6 +600,7 @@ CPU_SHOW_VULN_FALLBACK(spec_rstack_overflow);
- CPU_SHOW_VULN_FALLBACK(gds);
- CPU_SHOW_VULN_FALLBACK(reg_file_data_sampling);
- CPU_SHOW_VULN_FALLBACK(ghostwrite);
-+CPU_SHOW_VULN_FALLBACK(old_microcode);
- 
- static DEVICE_ATTR(meltdown, 0444, cpu_show_meltdown, NULL);
- static DEVICE_ATTR(spectre_v1, 0444, cpu_show_spectre_v1, NULL);
-@@ -616,6 +617,7 @@ static DEVICE_ATTR(spec_rstack_overflow, 0444, cpu_show_spec_rstack_overflow, NU
- static DEVICE_ATTR(gather_data_sampling, 0444, cpu_show_gds, NULL);
- static DEVICE_ATTR(reg_file_data_sampling, 0444, cpu_show_reg_file_data_sampling, NULL);
- static DEVICE_ATTR(ghostwrite, 0444, cpu_show_ghostwrite, NULL);
-+static DEVICE_ATTR(old_microcode, 0444, cpu_show_old_microcode, NULL);
- 
- static struct attribute *cpu_root_vulnerabilities_attrs[] = {
- 	&dev_attr_meltdown.attr,
-@@ -633,6 +635,7 @@ static struct attribute *cpu_root_vulnerabilities_attrs[] = {
- 	&dev_attr_gather_data_sampling.attr,
- 	&dev_attr_reg_file_data_sampling.attr,
- 	&dev_attr_ghostwrite.attr,
-+	&dev_attr_old_microcode.attr,
- 	NULL
- };
- 
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
 index ccd0a21da395..0c9609978fe5 100644
 --- a/drivers/bluetooth/btusb.c
@@ -7593,7 +7516,7 @@ index 43e847e9f741..8bc16e45a28e 100644
  		default_driver = &intel_pstate;
  	else if (!strcmp(str, "passive"))
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu.h b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
-index 98f0c12df12b..33a9e7c0ced2 100644
+index 416d2611fbf1..7e0442447f6b 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu.h
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
 @@ -160,6 +160,7 @@ struct amdgpu_watchdog_timer {
@@ -7693,7 +7616,7 @@ index 0e16432d9a72..867bc5c5ce67 100644
  bool amdgpu_atombios_has_dce_engine_info(struct amdgpu_device *adev);
  
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index 71e8a76180ad..de6c961b45b0 100644
+index 34f0451b274c..36b299d6ce06 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 @@ -4473,8 +4473,7 @@ int amdgpu_device_init(struct amdgpu_device *adev,
@@ -7717,7 +7640,7 @@ index 71e8a76180ad..de6c961b45b0 100644
  	if (amdgpu_emu_mode != 1)
  		amdgpu_atombios_fini(adev);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-index f2d77bc04e4a..c26204fe2eeb 100644
+index bb8ab25ea76a..8a6905318408 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 @@ -139,6 +139,7 @@ enum AMDGPU_DEBUG_MASK {
@@ -7824,7 +7747,7 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 652221ab556a..327afe266075 100644
+index cb7dbd385421..33c2057c1689 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -179,6 +179,8 @@ static int amdgpu_dm_init(struct amdgpu_device *adev);
@@ -7836,7 +7759,7 @@ index 652221ab556a..327afe266075 100644
  
  static enum drm_mode_subconnector get_subconnector_type(struct dc_link *link)
  {
-@@ -2953,6 +2955,33 @@ static int amdgpu_dm_smu_write_watermarks_table(struct amdgpu_device *adev)
+@@ -2959,6 +2961,33 @@ static int amdgpu_dm_smu_write_watermarks_table(struct amdgpu_device *adev)
  	return 0;
  }
  
@@ -7870,7 +7793,7 @@ index 652221ab556a..327afe266075 100644
  /**
   * dm_hw_init() - Initialize DC device
   * @ip_block: Pointer to the amdgpu_ip_block for this hw instance.
-@@ -2984,6 +3013,10 @@ static int dm_hw_init(struct amdgpu_ip_block *ip_block)
+@@ -2990,6 +3019,10 @@ static int dm_hw_init(struct amdgpu_ip_block *ip_block)
  		return r;
  	amdgpu_dm_hpd_init(adev);
  
@@ -7881,7 +7804,7 @@ index 652221ab556a..327afe266075 100644
  	return 0;
  }
  
-@@ -2999,6 +3032,8 @@ static int dm_hw_fini(struct amdgpu_ip_block *ip_block)
+@@ -3005,6 +3038,8 @@ static int dm_hw_fini(struct amdgpu_ip_block *ip_block)
  {
  	struct amdgpu_device *adev = ip_block->adev;
  
@@ -7890,7 +7813,7 @@ index 652221ab556a..327afe266075 100644
  	amdgpu_dm_hpd_fini(adev);
  
  	amdgpu_dm_irq_fini(adev);
-@@ -4653,7 +4688,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4659,7 +4694,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -7899,7 +7822,7 @@ index 652221ab556a..327afe266075 100644
  	if (amdgpu_dm_create_color_properties(adev)) {
  		dc_state_release(state->context);
  		kfree(state);
-@@ -8369,7 +8404,7 @@ static int amdgpu_dm_i2c_xfer(struct i2c_adapter *i2c_adap,
+@@ -8375,7 +8410,7 @@ static int amdgpu_dm_i2c_xfer(struct i2c_adapter *i2c_adap,
  	int i;
  	int result = -EIO;
  
@@ -7908,7 +7831,7 @@ index 652221ab556a..327afe266075 100644
  		return result;
  
  	cmd.payloads = kcalloc(num, sizeof(struct i2c_payload), GFP_KERNEL);
-@@ -8388,11 +8423,18 @@ static int amdgpu_dm_i2c_xfer(struct i2c_adapter *i2c_adap,
+@@ -8394,11 +8429,18 @@ static int amdgpu_dm_i2c_xfer(struct i2c_adapter *i2c_adap,
  		cmd.payloads[i].data = msgs[i].buf;
  	}
  
@@ -7932,7 +7855,7 @@ index 652221ab556a..327afe266075 100644
  
  	kfree(cmd.payloads);
  	return result;
-@@ -8409,9 +8451,7 @@ static const struct i2c_algorithm amdgpu_dm_i2c_algo = {
+@@ -8415,9 +8457,7 @@ static const struct i2c_algorithm amdgpu_dm_i2c_algo = {
  };
  
  static struct amdgpu_i2c_adapter *
@@ -7943,7 +7866,7 @@ index 652221ab556a..327afe266075 100644
  {
  	struct amdgpu_device *adev = ddc_service->ctx->driver_context;
  	struct amdgpu_i2c_adapter *i2c;
-@@ -8422,9 +8462,14 @@ create_i2c(struct ddc_service *ddc_service,
+@@ -8428,9 +8468,14 @@ create_i2c(struct ddc_service *ddc_service,
  	i2c->base.owner = THIS_MODULE;
  	i2c->base.dev.parent = &adev->pdev->dev;
  	i2c->base.algo = &amdgpu_dm_i2c_algo;
@@ -7959,7 +7882,7 @@ index 652221ab556a..327afe266075 100644
  
  	return i2c;
  }
-@@ -8470,7 +8515,7 @@ static int amdgpu_dm_connector_init(struct amdgpu_display_manager *dm,
+@@ -8476,7 +8521,7 @@ static int amdgpu_dm_connector_init(struct amdgpu_display_manager *dm,
  	link->priv = aconnector;
  
  
@@ -8131,7 +8054,7 @@ index ab77dcbc1058..1f9c8bb6c79d 100644
  	struct dc *dc,
  	size_t slave_address
 diff --git a/drivers/gpu/drm/amd/display/dc/dml2/dml2_translation_helper.c b/drivers/gpu/drm/amd/display/dc/dml2/dml2_translation_helper.c
-index b8a34abaf519..ac4692d1b54f 100644
+index aeb9fae83cac..ad16cfc5eaed 100644
 --- a/drivers/gpu/drm/amd/display/dc/dml2/dml2_translation_helper.c
 +++ b/drivers/gpu/drm/amd/display/dc/dml2/dml2_translation_helper.c
 @@ -892,7 +892,7 @@ static void populate_dummy_dml_surface_cfg(struct dml_surface_cfg_st *out, unsig
@@ -20770,18 +20693,6 @@ index 2eaa25c9c68c..d73389af4dd5 100644
  
  	do {
  		if (data[count] == nibbles[data[count] & 0xf])
-diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
-index 95182ce17aa0..f9ff9630e7de 100644
---- a/drivers/input/joystick/xpad.c
-+++ b/drivers/input/joystick/xpad.c
-@@ -389,6 +389,7 @@ static const struct xpad_device {
- 	{ 0x2dc8, 0x3106, "8BitDo Ultimate Wireless / Pro 2 Wired Controller", 0, XTYPE_XBOX360 },
- 	{ 0x2dc8, 0x3109, "8BitDo Ultimate Wireless Bluetooth", 0, XTYPE_XBOX360 },
- 	{ 0x2dc8, 0x310a, "8BitDo Ultimate 2C Wireless Controller", 0, XTYPE_XBOX360 },
-+	{ 0x2dc8, 0x310b, "8BitDo Ultimate 2 Wireless Controller", 0, XTYPE_XBOX360 },
- 	{ 0x2dc8, 0x6001, "8BitDo SN30 Pro", 0, XTYPE_XBOX360 },
- 	{ 0x2e24, 0x0652, "Hyperkin Duke X-Box One pad", 0, XTYPE_XBOXONE },
- 	{ 0x2e24, 0x1688, "Hyperkin X91 X-Box One pad", 0, XTYPE_XBOXONE },
 diff --git a/drivers/md/bcache/super.c b/drivers/md/bcache/super.c
 index e42f1400cea9..813b38aec3e4 100644
 --- a/drivers/md/bcache/super.c
@@ -36938,19 +36849,6 @@ index 428d81afe215..aa1604d92c1a 100644
  void drm_fb_xrgb8888_to_argb8888(struct iosys_map *dst, const unsigned int *dst_pitch,
  				 const struct iosys_map *src, const struct drm_framebuffer *fb,
  				 const struct drm_rect *clip, struct drm_format_conv_state *state);
-diff --git a/include/linux/cpu.h b/include/linux/cpu.h
-index 6a0a8f1c7c90..9532f7039780 100644
---- a/include/linux/cpu.h
-+++ b/include/linux/cpu.h
-@@ -78,6 +78,8 @@ extern ssize_t cpu_show_gds(struct device *dev,
- extern ssize_t cpu_show_reg_file_data_sampling(struct device *dev,
- 					       struct device_attribute *attr, char *buf);
- extern ssize_t cpu_show_ghostwrite(struct device *dev, struct device_attribute *attr, char *buf);
-+extern ssize_t cpu_show_old_microcode(struct device *dev,
-+				      struct device_attribute *attr, char *buf);
- 
- extern __printf(4, 5)
- struct device *cpu_device_create(struct device *parent, void *drvdata,
 diff --git a/include/linux/cpufreq.h b/include/linux/cpufreq.h
 index 73024830bd73..efad63f78785 100644
 --- a/include/linux/cpufreq.h
@@ -39597,10 +39495,10 @@ index dbf896f3146c..92b6d6472951 100644
  /*
   * Sender's congestion state indicating normal or abnormal situations
 diff --git a/init/Kconfig b/init/Kconfig
-index dc7b10a1fad2..32fc6107126a 100644
+index 522fac29949a..bbba0c4859b2 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -162,6 +162,10 @@ config THREAD_INFO_IN_TASK
+@@ -165,6 +165,10 @@ config THREAD_INFO_IN_TASK
  
  menu "General setup"
  
@@ -39611,7 +39509,7 @@ index dc7b10a1fad2..32fc6107126a 100644
  config BROKEN
  	bool
  
-@@ -1328,6 +1332,22 @@ config USER_NS
+@@ -1331,6 +1335,22 @@ config USER_NS
  
  	  If unsure, say N.
  
@@ -39634,7 +39532,7 @@ index dc7b10a1fad2..32fc6107126a 100644
  config PID_NS
  	bool "PID Namespaces"
  	default y
-@@ -1470,6 +1490,12 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
+@@ -1473,6 +1493,12 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
  	  with the "-O2" compiler flag for best performance and most
  	  helpful compile-time warnings.
  
@@ -61536,7 +61434,7 @@ index ae734de0038c..e4478d50a8b3 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 373781b21e5c..e68aafc49f1f 100644
+index 224925201ca2..49c772b0b045 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -64,7 +64,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -61580,7 +61478,7 @@ index 3147119a9a04..a0750befcb54 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 542d25f77be8..32892366580a 100644
+index 74a996a3508e..93e83465b136 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -271,7 +271,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
