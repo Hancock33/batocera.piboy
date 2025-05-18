@@ -174,6 +174,8 @@ class DuckstationGenerator(Generator):
             else:
                 settings.set("GPU", "Multisamples", antialiasing)
                 settings.set("GPU", "PerSampleShading", "false")
+        settings.set("GPU", "EnableTextureCache", "true")
+        settings.set("GPU", "UseSoftwareRendererForReadbacks", "true")
 
         ## [Display]
         if not settings.has_section("Display"):
@@ -255,7 +257,7 @@ class DuckstationGenerator(Generator):
             settings.add_section("TextureReplacements")
         # Texture Replacement saves\textures\psx game id - by default in Normal
         enable_vram_write_replacements = "true"
-        preload_textures = "false"
+        preload_textures = "true"
 
         match system.config.get("duckstation_custom_textures"):
             case "false" | "0":
