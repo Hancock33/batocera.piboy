@@ -553,7 +553,7 @@ dice:
   manufacturer:         Arcade
   release:              1972
   hardware:             arcade
-  extensions:           [zip, dmy]
+  extensions:           [dmy, zip]
   platform:             dice, arcade
   emulators:
     libretro:
