@@ -3,8 +3,8 @@
 # openjk
 #
 ################################################################################
-# Version: Commits on Mar 10, 2025
-OPENJK_VERSION = 5878f620f6dabb6573595470627ab2e31cb46b67
+# Version: Commits on May 19, 2025
+OPENJK_VERSION = a8c28aea89e176fd1c9bbdd0f6c42f79ac7a52bf
 OPENJK_SITE = $(call github,JACoders,OpenJK,$(OPENJK_VERSION))
 OPENJK_DEPENDENCIES += host-libjpeg libpng openal sdl2 zlib
 OPENJK_LICENSE = GPL-2.0
