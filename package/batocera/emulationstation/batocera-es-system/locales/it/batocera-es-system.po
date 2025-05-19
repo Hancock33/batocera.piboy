@@ -2934,11 +2934,6 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr "Tutti i Timers"
 
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "All VMUs"
-msgstr ""
-
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -12749,7 +12744,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "Disattivo"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Off (Default)"
@@ -12886,11 +12881,6 @@ msgstr "Attivo con rilevamento messaggi gioco"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "Attivo con supporto rewind"
-
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "Only A1"
-msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13207,7 +13197,7 @@ msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "SALVATAGGI PER GIOCO"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
 msgstr ""
@@ -18806,11 +18796,6 @@ msgstr "Weave (Prima il Campo Superiore)"
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
-msgstr ""
-
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "When enabled, each game has its own set of VMU save files."
 msgstr ""
 
 #. TRANSLATION: drastic
