@@ -81,10 +81,10 @@ index 000000000000..a8faabc2885e
 +#endif // CONFIG_SCHED_BORE
 +#endif // _LINUX_SCHED_BORE_H
 diff --git a/init/Kconfig b/init/Kconfig
-index 97c1911e5c92..ffa4376d961b 100644
+index c524858118d2..880b48ef3888 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -1387,6 +1387,23 @@ config CHECKPOINT_RESTORE
+@@ -1382,6 +1382,23 @@ config CHECKPOINT_RESTORE
  
  	  If unsure, say N here.
  
@@ -136,7 +136,7 @@ index e1359db5561e..57c09523ac7b 100644
  config SCHED_HRTICK
  	def_bool HIGH_RES_TIMERS
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 3a5ee62fc15c..99de9aa7a026 100644
+index 39e47bfaea58..28ebe13d2c28 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -116,6 +116,8 @@
@@ -148,7 +148,7 @@ index 3a5ee62fc15c..99de9aa7a026 100644
  #include <trace/events/sched.h>
  
  #define CREATE_TRACE_POINTS
-@@ -2561,6 +2563,10 @@ __latent_entropy struct task_struct *copy_process(
+@@ -2562,6 +2564,10 @@ __latent_entropy struct task_struct *copy_process(
  	p->start_time = ktime_get_ns();
  	p->start_boottime = ktime_get_boottime_ns();
  
@@ -750,7 +750,7 @@ index 557246880a7e..c1f6219f20eb 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index ef4244817485..385b04613e39 100644
+index 6122df2b471a..d95eb42862b8 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,8 @@
@@ -927,7 +927,7 @@ index ef4244817485..385b04613e39 100644
  	if (dequeue_entities(rq, &p->se, flags) < 0)
  		return false;
  
-@@ -9011,16 +9047,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9018,16 +9054,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -953,7 +953,7 @@ index ef4244817485..385b04613e39 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13134,6 +13179,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13141,6 +13186,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -963,7 +963,7 @@ index ef4244817485..385b04613e39 100644
  }
  
  /*
-@@ -13244,6 +13292,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13251,6 +13299,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {

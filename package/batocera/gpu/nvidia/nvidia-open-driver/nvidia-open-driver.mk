@@ -3,8 +3,8 @@
 # nvidia-open-driver
 #
 ################################################################################
-# Version: Commits on  Apr 16, 2025
-NVIDIA_OPEN_DRIVER_VERSION = 575.51.02
+# Version: Commits on  May 15, 2025
+NVIDIA_OPEN_DRIVER_VERSION = 570.153.02
 NVIDIA_OPEN_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA_OPEN_DRIVER_SITE = http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA_OPEN_DRIVER_SUFFIX)/$(NVIDIA_OPEN_DRIVER_VERSION)
 NVIDIA_OPEN_DRIVER_SOURCE = NVIDIA-Linux-x86$(NVIDIA_OPEN_DRIVER_SUFFIX)-$(NVIDIA_OPEN_DRIVER_VERSION).run
@@ -22,8 +22,8 @@ ifeq ($(BR2_PACKAGE_NVIDIA_OPEN_DRIVER_XORG),y)
 # they should be built prior to those packages, and the only simple
 # way to do so is to make nvidia-driver depend on them.
 #batocera enable nvidia-driver and mesa3d to coexist in the same fs
-NVIDIA_OPEN_DRIVER_DEPENDENCIES += mesa3d xlib_libX11 xlib_libXext libglvnd \
-	nvidia-proprietary-driver # add proprietary driver
+NVIDIA_OPEN_DRIVER_DEPENDENCIES += mesa3d xlib_libX11 xlib_libXext libglvnd
+#nvidia-proprietary-driver # add proprietary driver
 #nvidia340-legacy-driver nvidia390-legacy-driver nvidia470-legacy-driver
 
 # NVIDIA_OPEN_DRIVER_PROVIDES = libgl libegl libgles
