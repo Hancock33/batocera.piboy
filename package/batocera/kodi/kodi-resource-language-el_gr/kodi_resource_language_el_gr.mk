@@ -3,8 +3,8 @@
 # kodi_resource_language_el_gr
 #
 ################################################################################
-# Version: Commits on Apr 13, 2025
-KODI_RESOURCE_LANGUAGE_EL_GR_VERSION = 11.0.67
+# Version: Commits on May 10, 2025
+KODI_RESOURCE_LANGUAGE_EL_GR_VERSION = 11.0.69
 KODI_RESOURCE_LANGUAGE_EL_GR_SOURCE = resource.language.el_gr-$(KODI_RESOURCE_LANGUAGE_EL_GR_VERSION).zip
 KODI_RESOURCE_LANGUAGE_EL_GR_SITE = http://mirrors.kodi.tv/addons/omega/resource.language.el_gr
 KODI_RESOURCE_LANGUAGE_EL_GR_PLUGINNAME=resource.language.el_gr
