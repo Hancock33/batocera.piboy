@@ -15,6 +15,7 @@ Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.2.5|May 23, 20
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|daf0503cea6d9a521f585d37e785d88c2f066cd0|May 23, 2025
 Ports|[avp](http://github.com/atsb/NakedAVP)|6e49e7c5d23236ca4040b395928c902bfa005ba2|May 23, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|1e2bae923734c61c16f7e2ca6e8dbc193a7a6ce2|May 23, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|4157c7457bcbcb90e922043bc1dfec33d90ef305|May 23, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|5a3bdce186780e3a707ddc0935f1112c32d4ed9a|May 23, 2025
 Ports|[openjk](http://github.com/JACoders/OpenJK)|2f6abb4f6b930f19048dbc53ef00d837b4b05943|May 23, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250523|May 23, 2025
@@ -29,6 +30,7 @@ Ports|[tr2x](http://github.com/LostArtefacts/TRX)|3cdbd07e59060ad17f848c12e53c28
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|773f775cb8bd4a79e505413cbe7172ec5de948c1|May 23, 2025
 Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|0bd77c19fbbdb83e98988fc5b7944dbeee9eee3e|May 23, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|97894c78992861d342dcd07ee98490c7687e3e19|May 23, 2025
+Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|f27798806c60f024ce25dc9b8478f12b4d1aa0b6|May 23, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|da8610e76fc1ae09562df3152a28be7f50d6e317|May 22, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|1953eb0eea10f6ddc780bea743ad74c57983b554|May 22, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|a9d56d0dfeae88930187129af11160f927f2c529|May 22, 2025
@@ -82,7 +84,6 @@ Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|a6ef16041bea1e16c3
 Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/omega/resource.language.es_es)|11.0.88|May 17, 2025
 Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/omega/resource.language.sv_se)|11.0.84|May 17, 2025
 Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/omega/resource.language.zh_cn)|11.0.83|May 17, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|4091521e2a59b25f2d483a2eaf698a2cfc302037|May 17, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14232|May 17, 2025
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|80efbed3d737a32114956e149905c304944ebd61|May 17, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|c9579929a53f60455156fbd63232a5d106f97518|May 17, 2025
@@ -98,7 +99,6 @@ Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|aadae1cd3d
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|83aad838d484b9e4f931698f20c1068c982a6d07|May 16, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|0b95f252ba9cdb366b4d87e6236b0a63f4305cba|May 16, 2025
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|032b1958ac36e5082686fe20ab453e27be18ce88|May 16, 2025
-Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|86bcfa8c4839236f70e31c656d220c074ff1dfb0|May 16, 2025
 Libraries|[plutovg](http://github.com/sammycage/plutovg)|1a8412d0574c4345dd7ef8a91ce7b58c7dcfe253|May 15, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|de7b63f7da7593b39f019d7c571d0cc3fa2a29e5|May 15, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|6a5c15c3f16d76e77bc2bc8b3abcb1c1f8856d23|May 15, 2025
@@ -142,10 +142,10 @@ Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|469ddf0e23
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|17fd68a47e9d25f1f1880911a4931c4b916ae125|May 06, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|38f67ef950c8f0c1b48ffeb32b1c8c6fca4bebd7|May 06, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|ec0bd64f0444805ea4609c8f16981f5fe7b9ea95|May 05, 2025
-Emulators|[vita3k](https://github.com/vita3k/vita3k)|55bdb26375fd37aaac2c0e5a3886e00adc9b8a4a|May 05, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|cc5ad34876cd9183e6f29b76572114b39cef1f00|May 05, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250505|May 05, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|b345acefcfbe1d007dc6b7daee5392a6091d3cf7|May 04, 2025
+Emulators|[vita3k](https://github.com/vita3k/vita3k)|7197ed25d16595ba22987a73d6a3bc73b1187814|May 04, 2025
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v0.9.2|May 04, 2025
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|91f89401c05bc227f156762c0da4b92cc4a49de3|May 04, 2025
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.0.3|May 04, 2025

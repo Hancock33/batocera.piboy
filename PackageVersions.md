@@ -232,7 +232,7 @@ Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|4af2eeece27312c
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|97894c78992861d342dcd07ee98490c7687e3e19|May 23, 2025
 Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|841229a6a81a0461d08af6488f252dcec5266c6a|Apr 12, 2025
 Emulators|[libretro-vemulator](http://github.com/libretro/vemulator-libretro)|45d7556667549bb1c1b84d27fbffb7d2a633f5d3|Oct 21, 2024
-Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|86bcfa8c4839236f70e31c656d220c074ff1dfb0|May 16, 2025
+Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|f27798806c60f024ce25dc9b8478f12b4d1aa0b6|May 23, 2025
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|d8a92430e887286b4e5351916ef0bd35d8cb40e8|Jan 18, 2025
 Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libretro)|48096c1f6f8b98cfff048a5cb4e6a86686631072|Oct 21, 2024
 Emulators|[libretro-vitaquake2](http://github.com/libretro/vitaquake2)|49bb33e6e82ee3b5ee2e1043c56917587fda5934|Oct 21, 2024
@@ -293,7 +293,7 @@ Emulators|[thextech](https://github.com/TheXTech/TheXTech)|63185e19b237bbfedca59
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|c1a860b625c1b873fcfcafc8d8c3f5548332e4e1|May 02, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45689|May 20, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
-Emulators|[vita3k](https://github.com/vita3k/vita3k)|55bdb26375fd37aaac2c0e5a3886e00adc9b8a4a|May 05, 2025
+Emulators|[vita3k](https://github.com/vita3k/vita3k)|7197ed25d16595ba22987a73d6a3bc73b1187814|May 04, 2025
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|efd055420d615ae343299b7b653eca349f8a4a50|Jul 23, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu)|8667193001e4d9f20f9d5237d941f6f0ff3a2672|May 20, 2025
@@ -431,7 +431,7 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|80c4233c712c1fcd8f63
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|68f80e5a8c32512874030881e7d95fe71126c546|May 18, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|14c9da0038875154991109ceec836faabb8994d5|Jan 26, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|4091521e2a59b25f2d483a2eaf698a2cfc302037|May 17, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|4157c7457bcbcb90e922043bc1dfec33d90ef305|May 23, 2025
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246|Feb 05, 2025
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
