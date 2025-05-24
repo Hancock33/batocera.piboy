@@ -1,5 +1,5 @@
 diff --git a/src/character_editor.cc b/src/character_editor.cc
-index 70563ec..7870c45 100644
+index 0d989a7..546ff50 100644
 --- a/src/character_editor.cc
 +++ b/src/character_editor.cc
 @@ -4,7 +4,7 @@
@@ -12,7 +12,7 @@ index 70563ec..7870c45 100644
  #include <vector>
  
 diff --git a/src/input.cc b/src/input.cc
-index 1bf56ac..fa47ab3 100644
+index 4675208..283bd62 100644
 --- a/src/input.cc
 +++ b/src/input.cc
 @@ -1,6 +1,7 @@
@@ -24,7 +24,7 @@ index 1bf56ac..fa47ab3 100644
  #include "audio_engine.h"
  #include "color.h"
 diff --git a/src/inventory.cc b/src/inventory.cc
-index 4b53126..76e48ba 100644
+index c5b2b57..7fa2d09 100644
 --- a/src/inventory.cc
 +++ b/src/inventory.cc
 @@ -3,7 +3,7 @@
@@ -36,8 +36,20 @@ index 4b53126..76e48ba 100644
  #include <algorithm>
  
  #include "actions.h"
+diff --git a/src/platform/git_version.h.in b/src/platform/git_version.h.in
+index 99f8728..583d3c4 100644
+--- a/src/platform/git_version.h.in
++++ b/src/platform/git_version.h.in
+@@ -4,6 +4,6 @@
+ #define _BUILD_BRANCH "@BRANCH@"
+ #define _BUILD_HASH   "@HASH@"
+ #define _BUILD_VER    "@LATEST_TAG@"
+-#define _BUILD_DATE   @DATE@
++#define _BUILD_DATE   "@DATE@"
+ 
+ #define CI_BUILD @CI_BUILD@
 diff --git a/src/stat.cc b/src/stat.cc
-index 751a40a..be45b20 100644
+index 52ff4fa..f14cac6 100644
 --- a/src/stat.cc
 +++ b/src/stat.cc
 @@ -1,9 +1,9 @@
@@ -53,7 +65,7 @@ index 751a40a..be45b20 100644
  #include "combat.h"
  #include "critter.h"
 diff --git a/src/word_wrap.cc b/src/word_wrap.cc
-index 9953418..a8b162f 100644
+index 7b6c19c..77b175a 100644
 --- a/src/word_wrap.cc
 +++ b/src/word_wrap.cc
 @@ -3,6 +3,7 @@
