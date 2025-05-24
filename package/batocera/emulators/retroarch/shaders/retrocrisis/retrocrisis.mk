@@ -12,7 +12,7 @@ RETROCRISIS_LICENSE = GPL-3.0
 
 define RETROCRISIS_EXTRACT_CMDS
 	unzip $(RETROCRISIS_DL_DIR)/$(RETROCRISIS_SOURCE) -d $(@D)
-	find $(@D) -type f  -name "*.slangp" -exec $(SED) "s|../../../shaders_slang|/usr/share/batocera/shaders|g" {} \;
+	find $(@D) -type f -name "*.slangp" -exec $(SED) "s|../../../shaders_slang|/usr/share/batocera/shaders|g" {} \;
 endef
 
 define RETROCRISIS_INSTALL_TARGET_CMDS
