@@ -1,8 +1,8 @@
 diff --git a/Src/OSD/DefaultConfigFile.h b/Src/OSD/DefaultConfigFile.h
-index 14474f0..2a00579 100644
+index 6202eb9..af3196a 100644
 --- a/Src/OSD/DefaultConfigFile.h
 +++ b/Src/OSD/DefaultConfigFile.h
-@@ -206,8 +206,8 @@
+@@ -204,8 +204,8 @@
      "InputAnalogJoyRight = \"KEY_RIGHT\"           ; digital, move right\n"
      "InputAnalogJoyUp = \"KEY_UP\"                 ; digital, move up\n"
      "InputAnalogJoyDown = \"KEY_DOWN\"             ; digital, move down\n"
@@ -13,7 +13,7 @@ index 14474f0..2a00579 100644
      "InputAnalogJoyTrigger = \"KEY_A,JOY_BUTTON1,MOUSE_LEFT_BUTTON\"\n"
      "InputAnalogJoyEvent = \"KEY_S,JOY_BUTTON2,MOUSE_RIGHT_BUTTON\"\n"
      "InputAnalogJoyTrigger2 = \"KEY_D,JOY_BUTTON2\"\n"
-@@ -246,10 +246,10 @@
+@@ -244,10 +244,10 @@
      "InputAnalogGunRight2 = \"NONE\"\n"
      "InputAnalogGunUp2 = \"NONE\"\n"
      "InputAnalogGunDown2 = \"NONE\"\n"
@@ -28,3 +28,10 @@ index 14474f0..2a00579 100644
      "\n"
      "; Ski Champ controls\n"
      "InputSkiLeft = \"KEY_LEFT\"\n"
+@@ -291,4 +291,4 @@
+     "InputFishingTension = \"KEY_T,JOY1_ZAXIS_NEG\"\n"
+  };
+ 
+- #endif  // INCLUDED_DEFAULTCONFIGFILE_H
+\ No newline at end of file
++ #endif  // INCLUDED_DEFAULTCONFIGFILE_H

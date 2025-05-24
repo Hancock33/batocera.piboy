@@ -1,8 +1,8 @@
 diff --git a/Makefiles/Makefile.UNIX b/Makefiles/Makefile.UNIX
-index 2c4c341..e4ef4fd 100644
+index af22be1..f71ade6 100644
 --- a/Makefiles/Makefile.UNIX
 +++ b/Makefiles/Makefile.UNIX
-@@ -72,7 +72,7 @@ endif
+@@ -73,7 +73,7 @@ endif
  #
  
  PLATFORM_CXXFLAGS = $(SDL2_CFLAGS) -O3
@@ -12,10 +12,10 @@ index 2c4c341..e4ef4fd 100644
  
  ###############################################################################
 diff --git a/Makefiles/Rules.inc b/Makefiles/Rules.inc
-index 0f233b9..fbb3deb 100644
+index 5deb963..52f5611 100644
 --- a/Makefiles/Rules.inc
 +++ b/Makefiles/Rules.inc
-@@ -152,6 +152,7 @@ SRC_FILES = \
+@@ -157,6 +157,7 @@ SRC_FILES = \
  	Src/Inputs/InputTypes.cpp \
  	Src/Inputs/MultiInputSource.cpp \
  	Src/OSD/SDL/SDLInputSystem.cpp \
@@ -24,23 +24,33 @@ index 0f233b9..fbb3deb 100644
  	Src/OSD/Outputs.cpp \
  	Src/Sound/MPEG/MpegAudio.cpp \
 diff --git a/Src/OSD/SDL/Main.cpp b/Src/OSD/SDL/Main.cpp
-index 661d9f2..3611bd5 100644
+old mode 100644
+new mode 100755
+index 1593cd1..1659027
 --- a/Src/OSD/SDL/Main.cpp
 +++ b/Src/OSD/SDL/Main.cpp
-@@ -2138,6 +2138,10 @@ int main(int argc, char **argv)
+@@ -86,6 +86,7 @@
+ #include "OSD/FileSystemPath.h"
+ #include "GameLoader.h"
+ #include "SDLInputSystem.h"
++#include "EvdevInputSystem.h"
+ #include "SDLIncludes.h"
+ #include "Debugger/SupermodelDebugger.h"
+ #include "Graphics/Legacy3D/Legacy3D.h"
+@@ -2134,6 +2135,10 @@ int main(int argc, char **argv)
      InputSystem = new CSDLInputSystem(s_runtime_config, false);
    else if (selectedInputSystem == "sdlgamepad")
      InputSystem = new CSDLInputSystem(s_runtime_config, true);
 +// ifdef udev
 +  else if (selectedInputSystem == "evdev")
-+    InputSystem = new CEvdevInputSystem(s_runtime_config, false);
++    InputSystem = new CEvdevInputSystem(s_runtime_config);
 +//
  #ifdef SUPERMODEL_WIN32
    else if (selectedInputSystem == "dinput")
      InputSystem = new CDirectInputSystem(s_runtime_config, s_window, false, false);
 diff --git a/Src/OSD/evdev/EvdevInputSystem.cpp b/Src/OSD/evdev/EvdevInputSystem.cpp
 new file mode 100644
-index 0000000..ee695ba
+index 0000000..e69a669
 --- /dev/null
 +++ b/Src/OSD/evdev/EvdevInputSystem.cpp
 @@ -0,0 +1,287 @@
@@ -111,7 +121,7 @@ index 0000000..ee695ba
 +  return event_strcmp_events(aa->devnode, bb->devnode);
 +}
 +
-+CEvdevInputSystem::CEvdevInputSystem(const Util::Config::Node& config, bool useGameController) : CSDLInputSystem(config, false) {
++CEvdevInputSystem::CEvdevInputSystem(const Util::Config::Node& config) : CSDLInputSystem(config, true) {
 +  m_ndevices = 0;
 +  m_udev = NULL;
 +
