@@ -749,7 +749,7 @@ index 4bdc394e86af..f531873bb3c9 100644
  ----
  
 diff --git a/MAINTAINERS b/MAINTAINERS
-index d48dd6726fe6..f54090f364c9 100644
+index 3c6f9e70ace0..7d7659bdc9f2 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -5790,6 +5790,11 @@ F:	scripts/Makefile.clang
@@ -3198,7 +3198,7 @@ index cbc0099d8ef2..6f1b550f3aa6 100644
  
  /*
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index a42dedb78e0a..9d546c62174b 100644
+index 256b451bbe06..bbbebe3a2f56 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
 @@ -702,6 +702,8 @@ static const struct usb_device_id quirks_table[] = {
@@ -3562,10 +3562,10 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index b2813e17dc0b..a1ce181ad7b1 100644
+index 33d7cad167e2..1aec5c6ce230 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4731,7 +4731,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4726,7 +4726,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  

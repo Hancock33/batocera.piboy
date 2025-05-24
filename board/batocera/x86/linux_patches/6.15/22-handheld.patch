@@ -359,7 +359,7 @@ index 73197b31926a..704bfdac5203 100644
  --------------------
  
 diff --git a/MAINTAINERS b/MAINTAINERS
-index f54090f364c9..206cab79cbac 100644
+index 7d7659bdc9f2..12301cd87a06 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -13471,6 +13471,18 @@ S:	Maintained
@@ -742,7 +742,7 @@ index 2b39a03ff0c1..cbe734ffa4f5 100644
  
  		DRM_INFO("use_doorbell being set to: [%s]\n",
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index a1ce181ad7b1..0ce2d31e0f15 100644
+index 1aec5c6ce230..7c3c97439b43 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -167,6 +167,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -755,7 +755,7 @@ index a1ce181ad7b1..0ce2d31e0f15 100644
  /**
   * DOC: overview
   *
-@@ -4849,7 +4852,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
+@@ -4844,7 +4847,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
  	}
  
  	// Rescale 0..255 to min..max
@@ -764,7 +764,7 @@ index a1ce181ad7b1..0ce2d31e0f15 100644
  				       AMDGPU_MAX_BL_LEVEL);
  }
  
-@@ -4864,7 +4867,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
+@@ -4859,7 +4862,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
  	if (brightness < min)
  		return 0;
  	// Rescale min..max to 0..255
@@ -773,7 +773,7 @@ index a1ce181ad7b1..0ce2d31e0f15 100644
  				 max - min);
  }
  
-@@ -9300,7 +9303,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9295,7 +9298,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
