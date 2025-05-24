@@ -9,21 +9,13 @@ LIBRETRO_MAME_SRC_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_SRC_VERSION
 LIBRETRO_MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
 LIBRETRO_MAME_SRC_LICENSE = MAME
 
-# Limit number of jobs not to eat too much RAM....
-LIBRETRO_MAME_SRC_JOBS = $(shell expr $(shell nproc))
-
 ifeq ($(BR2_x86_64),y)
     LIBRETRO_MAME_SRC_EXTRA_ARGS += LIBRETRO_CPU=x86_64 PLATFORM=x86_64
 else ifeq ($(BR2_aarch64),y)
     LIBRETRO_MAME_SRC_EXTRA_ARGS += LIBRETRO_CPU=aarch64 PLATFORM=aarch64 ARCHITECTURE=
-    # workaround for asmjit broken build system (arm backend is not public)
-    LIBRETRO_MAME_SRC_ARCHOPTS += -D__aarch64__ -DASMJIT_BUILD_X86
 endif
 
 define LIBRETRO_MAME_SRC_BUILD_CMDS
-	# create some dirs while with parallelism, sometimes it fails because this directory is missing
-	mkdir -p $(@D)/build/libretro/obj/x64/libretro/src/osd/libretro/libretro-internal
-
 	# First, we need to build genie for host
 	cd $(@D); \
 		PATH="$(HOST_DIR)/bin:$$PATH" \
@@ -34,32 +26,10 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 
 	# Compile emulation target (MAME)
 	CCACHE_SLOPPINESS="pch_defines,time_macros,include_file_ctime,include_file_mtime" \
-	$(MAKE) -j$(LIBRETRO_MAME_SRC_JOBS) -C $(@D)/ \
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(HOST_DIR)/bin/ccache $(TARGET_CXX)" CC="$(HOST_DIR)/bin/ccache $(TARGET_CC)" -C $(@D)/ -f Makefile.libretro \
 		$(LIBRETRO_MAME_SRC_EXTRA_ARGS) \
-		AR="$(TARGET_AR)" \
-		ARCH="" \
-		ARCHOPTS="$(LIBRETRO_MAME_SRC_ARCHOPTS) -fuse-ld=mold" \
-		CONFIG=libretro \
-		CROSS_BUILD=1 \
-		DEBUG=0 \
-		DISTRO="debian-stable" \
 		FORCE_DRC_C_BACKEND=0 \
-		LDOPTS="-lasound" \
-		LIBRETRO_OS="unix" \
-		NOWERROR=1 \
-		OPENMP=1 \
-		OSD="retro" \
-		OVERRIDE_CC="$(TARGET_CC)" \
-		OVERRIDE_CXX="$(TARGET_CXX)" \
-		OVERRIDE_LD="$(TARGET_LD)" \
-		PROJECT="" \
-		PYTHON_EXECUTABLE=python3 \
-		RANLIB="$(TARGET_RANLIB)" \
-		REGENIE=1 \
-		RETRO=1 \
-		SUBTARGET="mame" \
-		TARGET="mame" \
-		OPTIMIZE=s LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION) PTR64=1
+		OPTIMIZE=s LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
 endef
 
 define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
