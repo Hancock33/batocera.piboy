@@ -20,7 +20,7 @@ endif
 define SUPERMODEL_BUILD_CMDS
 	cp $(@D)/Makefiles/Makefile.UNIX $(@D)/Makefile
 	$(SED) "s|-O3||g" $(@D)/Makefiles/Rules.inc
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -flto=32|g" $(@D)/Makefile
 	$(SED) "s|CC = gcc|CC = $(TARGET_CC)|g" $(@D)/Makefile
 	$(SED) "s|CXX = g++|CXX = $(TARGET_CXX)|g" $(@D)/Makefile
 	$(SED) "s|LD = gcc|LD = $(TARGET_CC)|g" $(@D)/Makefile
