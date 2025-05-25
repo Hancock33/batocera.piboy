@@ -47,6 +47,7 @@ endef
 
 define SUPERMODEL_POST_PROCESS
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/NVRAM $(TARGET_DIR)/usr/share/supermodel
+	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/ini/Supermodel*.ini.* $(TARGET_DIR)/usr/share/supermodel
 endef
 
 SUPERMODEL_PRE_PATCH_HOOKS += SUPERMODEL_LINE_ENDINGS_FIXUP
