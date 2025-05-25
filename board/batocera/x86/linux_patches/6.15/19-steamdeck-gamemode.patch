@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-steam.c b/drivers/hid/hid-steam.c
-index 3172b3bf6010..e7c1dacf9695 100644
+index aa88cedff905..55164d0b31aa 100644
 --- a/drivers/hid/hid-steam.c
 +++ b/drivers/hid/hid-steam.c
 @@ -971,7 +971,9 @@ static int steam_register(struct steam_device *steam)
@@ -13,7 +13,7 @@ index 3172b3bf6010..e7c1dacf9695 100644
  		/* ignore battery errors, we can live without it */
  		if (steam->quirks & STEAM_QUIRK_WIRELESS)
  			steam_battery_register(steam);
-@@ -1612,10 +1614,10 @@ static void steam_do_deck_input_event(struct steam_device *steam,
+@@ -1610,10 +1612,10 @@ static void steam_do_deck_input_event(struct steam_device *steam,
  	b13 = data[13];
  	b14 = data[14];
  

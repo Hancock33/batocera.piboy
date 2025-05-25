@@ -2938,11 +2938,6 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr "Tüm Zamanlayıcılar"
 
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "All VMUs"
-msgstr "Tüm VMU"
-
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -12776,7 +12771,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "Kapalı"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Kapalı(Varsayılan)"
@@ -12913,11 +12908,6 @@ msgstr "Oyun algılama mesajı ile açık"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "Geri sarma desteği ile açık"
-
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "Only A1"
-msgstr "Sadece A1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13236,7 +13226,7 @@ msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "OYUN BAŞINA KAYITLAR"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
 msgstr "OYUN BAŞINA VMU"
@@ -18842,13 +18832,6 @@ msgstr ""
 "Etkinleştirildiğinde her oyunun kontrolcü 1, port 1 üstünde kendi VMU "
 "noktası olur."
 
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "When enabled, each game has its own set of VMU save files."
-msgstr ""
-"Etkinleştirildiğinde, her oyunun kendine ait bir VMU kayıt dosyaları seti "
-"olur."
-
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid ""
@@ -19622,6 +19605,10 @@ msgstr "sarı/mavi"
 #~ msgstr "Game Boy oyunlarına renk kat."
 
 #~ msgctxt "game_options"
+#~ msgid "All VMUs"
+#~ msgstr "Tüm VMU"
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Varsa, switchres profillerinin kullanımına izin verir."
 
@@ -19905,6 +19892,10 @@ msgstr "sarı/mavi"
 #~ msgstr "Özel unicode karakterler kullanan bazı oyunlar için gereklidir."
 
 #~ msgctxt "game_options"
+#~ msgid "Only A1"
+#~ msgstr "Sadece A1"
+
+#~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
 #~ msgstr "OpenGL (sadece x86)"
 
@@ -20085,6 +20076,12 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "RENK ARABELLEKLERİNİ YAZ"
+
+#~ msgctxt "game_options"
+#~ msgid "When enabled, each game has its own set of VMU save files."
+#~ msgstr ""
+#~ "Etkinleştirildiğinde, her oyunun kendine ait bir VMU kayıt dosyaları seti "
+#~ "olur."
 
 #~ msgctxt "game_options"
 #~ msgid ""

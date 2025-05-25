@@ -20,7 +20,7 @@ endif
 define SUPERMODEL_BUILD_CMDS
 	cp $(@D)/Makefiles/Makefile.UNIX $(@D)/Makefile
 	$(SED) "s|-O3||g" $(@D)/Makefiles/Rules.inc
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -flto=32|g" $(@D)/Makefile
 	$(SED) "s|CC = gcc|CC = $(TARGET_CC)|g" $(@D)/Makefile
 	$(SED) "s|CXX = g++|CXX = $(TARGET_CXX)|g" $(@D)/Makefile
 	$(SED) "s|LD = gcc|LD = $(TARGET_CC)|g" $(@D)/Makefile
@@ -47,6 +47,7 @@ endef
 
 define SUPERMODEL_POST_PROCESS
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/NVRAM $(TARGET_DIR)/usr/share/supermodel
+	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/supermodel/ini/Supermodel*.ini.* $(TARGET_DIR)/usr/share/supermodel
 endef
 
 SUPERMODEL_PRE_PATCH_HOOKS += SUPERMODEL_LINE_ENDINGS_FIXUP

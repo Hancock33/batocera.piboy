@@ -2939,11 +2939,6 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr "All-Timers"
 
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "All VMUs"
-msgstr "Alle VMUs"
-
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -12823,7 +12818,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "Aus"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Aus (Standard)"
@@ -12961,11 +12956,6 @@ msgstr "Ein, mit Spielerkennungs-Meldung"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "Ein, mit Support für Rückspulfunktion"
-
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "Only A1"
-msgstr "Nur A1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13286,7 +13276,7 @@ msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "PRO-SPIEL SPEICHERSTÄNDE"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
 msgstr "VMU PRO SPIEL"
@@ -18934,11 +18924,6 @@ msgid "When enabled, each game has its own VMU on port 1 of controller 1."
 msgstr ""
 "Wenn aktiviert, hat jedes Spiel seine eigene VMU an Port 1 von Controller 1."
 
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "When enabled, each game has its own set of VMU save files."
-msgstr "Wenn aktiviert, hat jedes Spiel eigene VMU-Speicherstände."
-
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid ""
@@ -19713,6 +19698,10 @@ msgstr "gelb/blau"
 #~ msgstr "Bei Gameboy-Spielen Farbe hinzufügen."
 
 #~ msgctxt "game_options"
+#~ msgid "All VMUs"
+#~ msgstr "Alle VMUs"
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr ""
 #~ "Erlaubt die Verwendung von Switchres-Profilen, wenn diese vorhanden sind."
@@ -20002,6 +19991,10 @@ msgstr "gelb/blau"
 #~ "Voraussetzung für manche Spiele, die spezielle Unicode-Zeichen enthalten."
 
 #~ msgctxt "game_options"
+#~ msgid "Only A1"
+#~ msgstr "Nur A1"
+
+#~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
 #~ msgstr "OpenGL (nur x86)"
 
@@ -20184,6 +20177,10 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "FARB-ZWISCHENSPEICHER SCHREIBEN"
+
+#~ msgctxt "game_options"
+#~ msgid "When enabled, each game has its own set of VMU save files."
+#~ msgstr "Wenn aktiviert, hat jedes Spiel eigene VMU-Speicherstände."
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -3,8 +3,8 @@
 # touchegg
 #
 ################################################################################
-# Version: Commits on Aug 13, 2023
-TOUCHEGG_VERSION = 2.0.17
+# Version: Commits on May 24, 2025
+TOUCHEGG_VERSION = 2.0.18
 TOUCHEGG_SITE = $(call github,JoseExposito,touchegg,$(TOUCHEGG_VERSION))
 TOUCHEGG_DEPENDENCIES = xapp_xinput pugixml cairo libinput xlib_libXtst
 

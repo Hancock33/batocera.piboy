@@ -3,8 +3,8 @@
 # kddocwidgets
 #
 ################################################################################
-# Version: Commits on Apr 29, 2025
-KDDOCWIDGETS_VERSION = v2.2.4
+# Version: Commits on May 23, 2025
+KDDOCWIDGETS_VERSION = v2.2.5
 KDDOCWIDGETS_SITE = $(call github,KDAB,KDDockWidgets,$(KDDOCWIDGETS_VERSION))
 KDDOCWIDGETS_LICENSE = GPL-2
 KDDOCWIDGETS_SUPPORTS_IN_SOURCE_BUILD = NO

@@ -182,8 +182,8 @@ cave:
   emulator: libretro
   core:     mame078plus
 cave3rd:
-  emulator: demul
-  core:     demul
+  emulator: mame
+  core:     mame
 cavestory:
   emulator: libretro
   core:     nxengine
@@ -350,8 +350,8 @@ freedroid:
   emulator: freedroid
   core:     freedroid
 gaelco:
-  emulator: demul
-  core:     demul
+  emulator: mame
+  core:     mame
 gamate:
   emulator: libretro
   core:     mame
@@ -417,8 +417,8 @@ hcl:
   emulator: hcl
   core:     hcl
 hikaru:
-  emulator: demul
-  core:     demul
+  emulator: mame
+  core:     mame
 hode:
   emulator: hode
   core:     hode

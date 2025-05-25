@@ -2928,11 +2928,6 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr "所有计时器"
 
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "All VMUs"
-msgstr "全部VMU记忆卡"
-
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -12553,7 +12548,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "关闭"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "关（默认）"
@@ -12684,11 +12679,6 @@ msgstr "与游戏探测消息一并开启"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "与倒带支持一并开启"
-
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "Only A1"
-msgstr "只有A1"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -12997,7 +12987,7 @@ msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "游戏存档"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
 msgstr "游戏独立VMU记忆卡"
@@ -18502,11 +18492,6 @@ msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
 msgstr "启用后, 每个游戏将独立占用控制器1端口1的VMU记忆卡."
 
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "When enabled, each game has its own set of VMU save files."
-msgstr "启用后, 每个游戏将使用专属的VMU存档文件."
-
 #. TRANSLATION: drastic
 msgctxt "game_options"
 msgid ""
@@ -19370,6 +19355,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "游玩中调整CPU功率配置文件。"
 
 #~ msgctxt "game_options"
+#~ msgid "All VMUs"
+#~ msgstr "全部VMU记忆卡"
+
+#~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinabll with Pad to Keyboard."
 #~ msgstr "允许使用键盘将Future Pinball映射到键盘。"
 
@@ -19946,6 +19935,10 @@ msgstr "黄色/蓝色"
 #~ msgid "Off (default)"
 #~ msgstr "关闭（默认）"
 
+#~ msgctxt "game_options"
+#~ msgid "Only A1"
+#~ msgstr "只有A1"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "打开Dolphin triforce的菜单"
@@ -20398,6 +20391,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "写入颜色缓冲区"
+
+#~ msgctxt "game_options"
+#~ msgid "When enabled, each game has its own set of VMU save files."
+#~ msgstr "启用后, 每个游戏将使用专属的VMU存档文件."
 
 #~ msgctxt "game_options"
 #~ msgid ""

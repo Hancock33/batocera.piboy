@@ -2936,11 +2936,6 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr "Todos os temporizadores"
 
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "All VMUs"
-msgstr ""
-
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
@@ -7695,6 +7690,8 @@ msgstr "Ligar irá suavizar a imagem."
 msgctxt "game_options"
 msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
 msgstr ""
+"Aplicar escala de pixels perfeita. Evita o dimensionamento irregular e o "
+"desfoque."
 
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
@@ -10067,7 +10064,7 @@ msgstr "INTERFACE DE ENTRADA"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "INTEGER SCALE"
-msgstr ""
+msgstr "ESCALA INTEIRA"
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
@@ -12769,7 +12766,7 @@ msgctxt "game_options"
 msgid "Off"
 msgstr "Desligado"
 
-#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/flycast, ...
+#. TRANSLATION: cemu, flycast, flycast/dolphin, libretro/dosbox_pure, libretro/mame, ...
 msgctxt "game_options"
 msgid "Off (Default)"
 msgstr "Desligado (Predefinição)"
@@ -12907,11 +12904,6 @@ msgstr "Ligado em conjunto com a mensagem de detecção do jogo"
 msgctxt "game_options"
 msgid "On with rewind support"
 msgstr "Ligado em conjunto com suporte para rebobinar"
-
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "Only A1"
-msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -13230,10 +13222,10 @@ msgctxt "game_options"
 msgid "PER-GAME SAVES"
 msgstr "GRAVAÇÕES POR JOGO"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast
+#. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
-msgstr ""
+msgstr "VMU POR JOGO"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18846,11 +18838,7 @@ msgstr "Weave (campo superior primeiro)"
 msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
 msgstr ""
-
-#. TRANSLATION: libretro/flycast
-msgctxt "game_options"
-msgid "When enabled, each game has its own set of VMU save files."
-msgstr ""
+"Quando ativado, cada jogo tem o seu próprio VMU na porta 1 do comando 1."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -19624,6 +19612,10 @@ msgstr "amarelo/azul"
 #~ msgstr "Adicionar cor aos jogos do Game Boy."
 
 #~ msgctxt "game_options"
+#~ msgid "All VMUs"
+#~ msgstr "Todos os VMUs"
+
+#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Permite o uso de perfis de interruptores se presentes."
 
@@ -19912,6 +19904,10 @@ msgstr "amarelo/azul"
 #~ msgstr "Necessário para alguns jogos que usam caracteres unicode especiais."
 
 #~ msgctxt "game_options"
+#~ msgid "Only A1"
+#~ msgstr "Somente A1"
+
+#~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
 #~ msgstr "OpenGL (somente x86)"
 
@@ -20089,6 +20085,12 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "ESCREVER BUFFERS DE COR"
+
+#~ msgctxt "game_options"
+#~ msgid "When enabled, each game has its own set of VMU save files."
+#~ msgstr ""
+#~ "Quando ativado, cada jogo tem o seu próprio conjunto de ficheiros "
+#~ "guardados na VMU."
 
 #~ msgctxt "game_options"
 #~ msgid ""
