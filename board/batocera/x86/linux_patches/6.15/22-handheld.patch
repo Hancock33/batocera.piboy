@@ -359,10 +359,10 @@ index 73197b31926a..704bfdac5203 100644
  --------------------
  
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 7d7659bdc9f2..12301cd87a06 100644
+index 4feb3b9f8f73..96f678318b9c 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -13471,6 +13471,18 @@ S:	Maintained
+@@ -13479,6 +13479,18 @@ S:	Maintained
  W:	http://legousb.sourceforge.net/
  F:	drivers/usb/misc/legousbtower.c
  
