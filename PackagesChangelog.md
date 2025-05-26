@@ -21,7 +21,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1ff6bdd77799b817b9002b00d2
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-25|May 25, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|99ccf569389240b0261c716ae389dedc43f6bf95|May 25, 2025
 Libraries|[plutovg](http://github.com/sammycage/plutovg)|c6a1c3b7989cde72f21e09a74cfa6078528ff978|May 25, 2025
-Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.0-rc1|May 25, 2025
+Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.8.1|May 25, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|c01dde15c777e17ad7ec61e3dad06da0150c0538|May 25, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|145cf6bbcc7358e4466ea48bd891ba20857a2d69|May 25, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a513a0aebaaa1d87ba25b90f89f51761a67bd206|May 25, 2025

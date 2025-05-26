@@ -18,4 +18,5 @@ wine-ntsync.mk
 wine-proton.mk
 wine-staging.mk
 wine-x86.mk
+wxwidgets.mk
 xosd.mk
