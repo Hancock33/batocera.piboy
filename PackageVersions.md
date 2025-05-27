@@ -67,7 +67,7 @@ Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|6049702b73aa480d866ba4cc2f660cebfca3579a|May 23, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|a10f7a83c03fdfeba4fcfe190492179ee6d45d9e|May 23, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|f078d69099bc9dd6977592e352c91e8b6ed84e37|May 26, 2025
-Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|3d45eb29d0f3a32571a1ac4ae4944db3906ce53d|May 25, 2025
+Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|50ff9a176c3eff98dcedfc3046c286896743f490|May 26, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
@@ -82,7 +82,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|fff7654bc66f6416fbef1509f0405cd25329fb14|May 27, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|af803eefc1e96c2a4296d656ffc8561272d5f0fd|May 27, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|36248937a68c773e7a268e2d8a8be605acda949e|May 24, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ffaada9e9d23a4a8eedc5f312e315fe63cd22275|May 23, 2025
@@ -225,7 +225,7 @@ Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|933707c0ba8f12360f6d79712f735a917713709a|May 10, 2025
 Emulators|[libretro-theodore](http://github.com/Zlika/theodore)|70cd7965abe607a28ab3cee5689ed433d8f41da3|Oct 21, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|663d43924abf6fd7620de6bf25c009ce5b30ab83|May 26, 2025
-Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|c5ddeb603c2647191dce99fae7cf9b77b88bb07e|May 27, 2025
+Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|dfdae65c0ab5cf5d459155e8fefe796105229959|May 27, 2025
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 05, 2022
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|cd6004ea143435cfdb6b12e7c6779dab499f7829|Oct 21, 2024
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|f048f7bd52748bc14e9d065b4a5eb6a54c714b90|May 25, 2025
@@ -273,9 +273,9 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.3.18|Apr 03, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|2d24ef2972a709f870cc3f73853158fa2376f37d|May 23, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|7d3740d4c0d7f13b3c475a58ef15c39df3acf871|May 27, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|0f664c739b2a752b2815e869e00b5da7589ae560|May 27, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250524|May 24, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1ff6bdd77799b817b9002b00d2bdfc05a2638f77|May 25, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|2d9a24d1d6ef0682cfed9ee04d411a8caac9f15a|May 26, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-27|May 27, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.51|May 26, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|317fbd4f52a61c705a7a73c7aa2dc29ee7fde04b|May 19, 2025

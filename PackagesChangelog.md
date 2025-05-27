@@ -2,22 +2,24 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[clk](https://github.com/TomHarte/CLK)|841fc3cfafc2b5c31b9f9f1579b9ab481121b8be|May 27, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|53b54406bd546b507822a3bd30311aa0cd96ee71|May 27, 2025
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|fff7654bc66f6416fbef1509f0405cd25329fb14|May 27, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|af803eefc1e96c2a4296d656ffc8561272d5f0fd|May 27, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4d81153479e4068832aa1eb3479bf82b583b32c9|May 27, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-27|May 27, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|bb20633c52d27e738c6b0376babe7544831300eb|May 27, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|a9f4e72c4b4f15289c8eef0b9be0359e2acf50dc|May 27, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250527|May 27, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|7d3740d4c0d7f13b3c475a58ef15c39df3acf871|May 27, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|0f664c739b2a752b2815e869e00b5da7589ae560|May 27, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250527|May 27, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|5119dce230bf4d6c44ca1ef45bfd79a4a62e1d2a|May 27, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|4d81153479e4068832aa1eb3479bf82b583b32c9|May 27, 2025
-Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|c5ddeb603c2647191dce99fae7cf9b77b88bb07e|May 27, 2025
+Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|dfdae65c0ab5cf5d459155e8fefe796105229959|May 27, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|5f7143ba5a0fefb71fd5d8f769a3596a6999f5b9|May 26, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|f078d69099bc9dd6977592e352c91e8b6ed84e37|May 26, 2025
+Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|50ff9a176c3eff98dcedfc3046c286896743f490|May 26, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|fd40f75a211bbabff5608eccc9a33442f2352595|May 26, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|7117178c2dd56df32b6534ba6a54ad1f8547e693|May 26, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.372|May 26, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|2d9a24d1d6ef0682cfed9ee04d411a8caac9f15a|May 26, 2025
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.51|May 26, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|b7a940ab7810d85e654c94f58c54e8a2d93be337|May 26, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|4949cddc462efa0e5e1fcd0725c4ca085f19b3b4|May 26, 2025
@@ -34,9 +36,7 @@ Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f9a9aedea57cb60ac48
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|b2bd95e79a947a729ac0f6a15c5c46eaf2e42b35|May 26, 2025
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|05cee5f56c37eaa3a243e0906d2082b025598056|May 26, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|663d43924abf6fd7620de6bf25c009ce5b30ab83|May 26, 2025
-Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|3d45eb29d0f3a32571a1ac4ae4944db3906ce53d|May 25, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|4b913dbc2abbb27b61ad28d1c87274f7be3db694|May 25, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1ff6bdd77799b817b9002b00d2bdfc05a2638f77|May 25, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|99ccf569389240b0261c716ae389dedc43f6bf95|May 25, 2025
 Libraries|[plutovg](http://github.com/sammycage/plutovg)|c6a1c3b7989cde72f21e09a74cfa6078528ff978|May 25, 2025
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.8.1|May 25, 2025
