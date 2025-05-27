@@ -1,14 +1,17 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[clk](https://github.com/TomHarte/CLK)|841fc3cfafc2b5c31b9f9f1579b9ab481121b8be|May 27, 2025
+Emulators|[cemu](https://github.com/cemu-project/Cemu)|7168d20cdebdce08173cdd1568c605400d7967ef|May 27, 2025
+Emulators|[clk](https://github.com/TomHarte/CLK)|efff433aa03c6992edd6f4452f870a1a9a6aa64f|May 27, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|53b54406bd546b507822a3bd30311aa0cd96ee71|May 27, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|af803eefc1e96c2a4296d656ffc8561272d5f0fd|May 27, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4d81153479e4068832aa1eb3479bf82b583b32c9|May 27, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-27|May 27, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|bb20633c52d27e738c6b0376babe7544831300eb|May 27, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|a9f4e72c4b4f15289c8eef0b9be0359e2acf50dc|May 27, 2025
+Ports|[rott](http://github.com/fabiangreffrath/taradino)|44049622bb622694cb7c532774ca271ca72ce6b3|May 27, 2025
+Ports|[stk](http://github.com/supertuxkart/stk-code)|cc60e223c0d6674761f505ec5014b1f70b319862|May 27, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250527|May 27, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|0f664c739b2a752b2815e869e00b5da7589ae560|May 27, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|742625126340a160be4b45fe117c908e8a095c0a|May 27, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250527|May 27, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|5119dce230bf4d6c44ca1ef45bfd79a4a62e1d2a|May 27, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|4d81153479e4068832aa1eb3479bf82b583b32c9|May 27, 2025
@@ -25,13 +28,12 @@ Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|b7a940ab7810
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|4949cddc462efa0e5e1fcd0725c4ca085f19b3b4|May 26, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|6a3ca20cb8d7968fb2818106deef348512d77d4c|May 26, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14234|May 26, 2025
-Ports|[stk](http://github.com/supertuxkart/stk-code)|d1efab875321f6445454127a60284252d00b67bc|May 26, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|8a435414c15bfa0cfb740e0e61f245a5c54365ed|May 26, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.17|May 26, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|1141733f88c4693a35e1f94cf0e091142e845666|May 26, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e5b24cf5d8ec185e0e491ec70b243ea74b6d39e8|May 26, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|83fc53c044e5c90a484b951ea22106115d891d02|May 26, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|83fc53c044e5c90a484b951ea22106115d891d02|May 26, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|cdae4838dc426e22ca6ab56ef4cc062eafcff61f|May 26, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|cdae4838dc426e22ca6ab56ef4cc062eafcff61f|May 26, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f9a9aedea57cb60ac480769f67c144b3b0a843bf|May 26, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|b2bd95e79a947a729ac0f6a15c5c46eaf2e42b35|May 26, 2025
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|05cee5f56c37eaa3a243e0906d2082b025598056|May 26, 2025
@@ -108,7 +110,6 @@ Ports|[raptorcots](http://github.com/skynettx/raptor)|09c1d32a7c6fccc31ae90acc80
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|669b5d7650842d44c72403eb7f063c73353403bf|May 18, 2025
 Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|7bdabcf905b74ae5749755f004b1c83f183fdd37|May 18, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|76a379dae51e1eb26e31fa714a4f056e45238489|May 18, 2025
-Emulators|[cemu](https://github.com/cemu-project/Cemu)|783d88a892204d0570d0720d3749d01b685bdc31|May 17, 2025
 Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/omega/resource.language.es_es)|11.0.88|May 17, 2025
 Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/omega/resource.language.sv_se)|11.0.84|May 17, 2025
 Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/omega/resource.language.zh_cn)|11.0.83|May 17, 2025
@@ -123,7 +124,6 @@ Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|aadae1cd3d
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|83aad838d484b9e4f931698f20c1068c982a6d07|May 16, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|0b95f252ba9cdb366b4d87e6236b0a63f4305cba|May 16, 2025
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|032b1958ac36e5082686fe20ab453e27be18ce88|May 16, 2025
-Ports|[rott](http://github.com/fabiangreffrath/taradino)|de7b63f7da7593b39f019d7c571d0cc3fa2a29e5|May 15, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|6a5c15c3f16d76e77bc2bc8b3abcb1c1f8856d23|May 15, 2025
 Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|570.153.02|May 15, 2025
 Gpu|[nvidia-proprietary-driver](http://download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|May 15, 2025
