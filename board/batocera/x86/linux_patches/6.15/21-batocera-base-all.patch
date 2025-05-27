@@ -31840,19 +31840,6 @@ index 448117da071f..b9334775c51d 100644
  };
  
  static int __init init_vm_util_sysctls(void)
-diff --git a/mm/vmalloc.c b/mm/vmalloc.c
-index 00cf1b575c89..52a8e62f994a 100644
---- a/mm/vmalloc.c
-+++ b/mm/vmalloc.c
-@@ -4112,7 +4112,7 @@ void *vrealloc_noprof(const void *p, size_t size, gfp_t flags)
- 		 * already been zeroed at initial allocation time or during
- 		 * realloc shrink time.
- 		 */
--		vm->requested_size = size;
-+ 		vm->requested_size = size;
- 		return (void *)p;
- 	}
- 
 diff --git a/mm/vmpressure.c b/mm/vmpressure.c
 index bd5183dfd879..3a410f53a07c 100644
 --- a/mm/vmpressure.c
