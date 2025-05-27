@@ -225,7 +225,7 @@ Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|933707c0ba8f12360f6d79712f735a917713709a|May 10, 2025
 Emulators|[libretro-theodore](http://github.com/Zlika/theodore)|70cd7965abe607a28ab3cee5689ed433d8f41da3|Oct 21, 2024
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|663d43924abf6fd7620de6bf25c009ce5b30ab83|May 26, 2025
-Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|9dcc3ff4ccf96d2f7aa029b738f2c90685b9257f|Dec 27, 2024
+Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|c5ddeb603c2647191dce99fae7cf9b77b88bb07e|May 27, 2025
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 05, 2022
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|cd6004ea143435cfdb6b12e7c6779dab499f7829|Oct 21, 2024
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|f048f7bd52748bc14e9d065b4a5eb6a54c714b90|May 25, 2025
