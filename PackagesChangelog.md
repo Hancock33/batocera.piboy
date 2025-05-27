@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|c5ddeb603c2647191dce99fae7cf9b77b88bb07e|May 27, 2025
 Audio|[cubeb](http://github.com/mozilla/cubeb)|1d3fd0f0e261eecce94924ee463509a0e234a8b3|May 26, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|5f7143ba5a0fefb71fd5d8f769a3596a6999f5b9|May 26, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|fd40f75a211bbabff5608eccc9a33442f2352595|May 26, 2025
@@ -317,7 +318,6 @@ Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|a744af14d4afbda77bf472bc53f43b9ceba
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|86e02d3c2dd76858db7370f5df1ccfc33b3abee1|Dec 27, 2024
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|b3e5f8b2e8855f9c6fc7ff7a0036e4e61379177d|Dec 27, 2024
-Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|9dcc3ff4ccf96d2f7aa029b738f2c90685b9257f|Dec 27, 2024
 Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|bc96eed2b3cabee24a6a14692da4c80914da3f18|Dec 26, 2024
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|da219658c24c610ba82d5a07ea9897e8e0eef670|Dec 21, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
