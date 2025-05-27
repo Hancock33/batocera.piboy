@@ -3,13 +3,17 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on May 25, 2025
-DUCKSTATION_VERSION = 09a1bfdde3cb494a09555fffe8eb3996950fda82
+# Version: Commits on May 27, 2025
+DUCKSTATION_VERSION = af803eefc1e96c2a4296d656ffc8561272d5f0fd
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch plutosvg sdl3 stenzek-shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += host-clang host-spirv-cross spirv-cross
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
+
+DUCKSTATION_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -flto"
+DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -flto"
+DUCKSTATION_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -flto"
 
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
