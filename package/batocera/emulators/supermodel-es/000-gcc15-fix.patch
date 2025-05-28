@@ -1,1 +1,12 @@
-../supermodel/000-gcc15-fix.patch
+diff --git a/Src/Game.h b/Src/Game.h
+index eea1c45..a193f6a 100644
+--- a/Src/Game.h
++++ b/Src/Game.h
+@@ -3,6 +3,7 @@
+ 
+ #include <string>
+ #include <memory>
++#include <cstdint>
+ 
+ struct Game
+ {
