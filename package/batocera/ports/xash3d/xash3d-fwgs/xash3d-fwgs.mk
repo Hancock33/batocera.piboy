@@ -15,7 +15,6 @@ XASH3D_FWGS_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer sdl2_ttf
 XASH3D_FWGS_CONF_OPTS += --build-type=release
 XASH3D_FWGS_CONF_OPTS += --enable-packaging
 XASH3D_FWGS_CONF_OPTS += --sdl2=$(STAGING_DIR)/usr
-XASH3D_FWGS_CONF_OPTS += --disable-vgui
 XASH3D_FWGS_CONF_OPTS += --disable-menu-changegame
 XASH3D_FWGS_CONF_ENV += CFLAGS="$(TARGET_CFLAGS) -fPIC -std=gnu17" CXXFLAGS="$(TARGET_CXXFLAGS) -fPIC"
 
