@@ -6,7 +6,9 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-05-29|May 29
 Emulators|[ryujinx](https://github.com/Ryubing/Canary-Releases/releases)|1.3.58|May 29, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|99a6e5c15ad7d7cb17edcf6f4b6e63a187f22355|May 29, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|413c843ff59ef3df51be3afe320ea65c7d980c03|May 29, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250529|May 29, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|6c54b2183bcbba50c36f55db6d471254fb7fa85a|May 29, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250529|May 29, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d2659d019c667b672ef3f5c56dc6145fac83df9c|May 29, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|54051ea2f7daa3e084fc068c5c4a9955ee75da1d|May 29, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|99a6e5c15ad7d7cb17edcf6f4b6e63a187f22355|May 29, 2025
@@ -28,9 +30,7 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|c5db205341366a0
 Ports|[stk](http://github.com/supertuxkart/stk-code)|4dbe097195054c5e785e77e19f6d9ff8b735699f|May 28, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|f2546ec3ead5678322bd104fdd721c6e6c88bd0a|May 28, 2025
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.17.0|May 28, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250528|May 28, 2025
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|2092db19f7b40854e0427a1b2e39eda9f8d0c3cd|May 28, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250528|May 28, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|6c42ea75189c52ac821cc663f3e763004d96657b|May 28, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|1ae3e74d5299b707f6579b892e3a0a807cf92492|May 28, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|1ae3e74d5299b707f6579b892e3a0a807cf92492|May 28, 2025
