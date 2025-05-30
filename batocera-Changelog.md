@@ -28,6 +28,7 @@
 - Ayn Odin2 and Odin2 Portal support
 - Add RTL8852AU wifi device support (x86_64)
 - Add OrangePi 5 Ultra board support
+- Add OrangePi 5 Max board support
 ### Added
 - WireGuard VPN for RK3326 boards
 - WireGuard system service which runs [wg-quick](https://git.zx2c4.com/wireguard-tools/about/src/man/wg-quick.8) on `/userdata/system/wireguard/*.conf`
@@ -142,11 +143,11 @@
 - Kodi to 21.2
 - LibDRM to 2.4.124
 - Linux Firmware to 20250509
-- Linux Kernel to 6.14.6
+- Linux Kernel to 6.14.9
 - LLVM to 19.1.7
-- Mesa3D to 25.1.0
+- Mesa3D to 25.1.1
 - MPV to 0.40.0
-- Nvidia production driver to 575.51.02
+- Nvidia production driver to 575.57.08
 - Pipewire to 1.2.7
 - QT6 to 6.8.1
 - RClone to v1.69.1
