@@ -1,5 +1,5 @@
 diff --git a/Makefile.common b/Makefile.common
-index c9ed198..5beda08 100644
+index 4596b84651..7a54748e98 100644
 --- a/Makefile.common
 +++ b/Makefile.common
 @@ -1904,10 +1904,6 @@ else ifeq ($(HAVE_GLSLANG),1)
@@ -14,7 +14,7 @@ index c9ed198..5beda08 100644
             $(GLSLANG_SPIRV_TOOLS_OPT_LIBS) \
             $(GLSLANG_SPIRV_TOOLS_LIBS)
 diff --git a/qb/config.libs.sh b/qb/config.libs.sh
-index c19fe32..fdd532e 100644
+index 3553b997d5..98f0068d2a 100644
 --- a/qb/config.libs.sh
 +++ b/qb/config.libs.sh
 @@ -669,11 +669,6 @@ if [ "$HAVE_GLSLANG" != no ]; then
