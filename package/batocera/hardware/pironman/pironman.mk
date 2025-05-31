@@ -3,9 +3,10 @@
 # pironman
 #
 ################################################################################
-# Version: Commits on Sept 15, 2023
+# Version: Commits on Jul 24, 2024
 PIRONMAN_VERSION = 997c361ed71fff859d832e171f63180fbbb4e314
 PIRONMAN_SITE = $(call github,sunfounder,pironman,$(PIRONMAN_VERSION))
+PIRONMAN_BRANCH = v2.0
 PIRONMAN_LICENSE = GPL-2.0
 PIRONMAN_LICENSE_FILE = LICENSE
 
