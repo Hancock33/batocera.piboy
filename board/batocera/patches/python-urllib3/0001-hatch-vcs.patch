@@ -1,0 +1,43 @@
+From bd00ac8fb03dca40e4c90328a378cc4b2e2a6009 Mon Sep 17 00:00:00 2001
+From: "Benjamin A. Beasley" <code@musicinmybrain.net>
+Date: Thu, 29 May 2025 06:12:51 -0400
+Subject: [PATCH 1/2] Allow hatch-vcs 0.5 (fix #3612)
+
+Keep SemVer-bounding `hatch-vcs` as agreed in
+https://github.com/urllib3/urllib3/pull/3412#discussion_r1644414498,
+but stop pinning it all the way to the patch release.
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 77c97312bd..27b4015730 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -1,7 +1,7 @@
+ # This file is protected via CODEOWNERS
+ 
+ [build-system]
+-requires = ["hatchling>=1.6.0,<2", "hatch-vcs==0.4.0"]
++requires = ["hatchling>=1.6.0,<2", "hatch-vcs>=0.4.0,<0.6.0"]
+ build-backend = "hatchling.build"
+ 
+ [project]
+
+From a9598f4d32a8ff2472ba481cbbddd8b543f3e7ba Mon Sep 17 00:00:00 2001
+From: "Benjamin A. Beasley" <code@musicinmybrain.net>
+Date: Thu, 29 May 2025 06:26:56 -0400
+Subject: [PATCH 2/2] Add a news fragment for PR#3613
+
+---
+ changelog/3612.feature.rst | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 changelog/3612.feature.rst
+
+diff --git a/changelog/3612.feature.rst b/changelog/3612.feature.rst
+new file mode 100644
+index 0000000000..5e30a05cc3
+--- /dev/null
++++ b/changelog/3612.feature.rst
+@@ -0,0 +1 @@
++Support version 0.5 of ``hatch-vcs``

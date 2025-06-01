@@ -3,8 +3,8 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version: Commits on May 26, 2025
-XASH3D_FWGS_VERSION = f9a9aedea57cb60ac480769f67c144b3b0a843bf
+# Version: Commits on May 27, 2025
+XASH3D_FWGS_VERSION = 05edde050d9df71c215884cd3a6a7f4c2c0c481a
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
@@ -15,7 +15,6 @@ XASH3D_FWGS_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer sdl2_ttf
 XASH3D_FWGS_CONF_OPTS += --build-type=release
 XASH3D_FWGS_CONF_OPTS += --enable-packaging
 XASH3D_FWGS_CONF_OPTS += --sdl2=$(STAGING_DIR)/usr
-XASH3D_FWGS_CONF_OPTS += --disable-vgui
 XASH3D_FWGS_CONF_OPTS += --disable-menu-changegame
 XASH3D_FWGS_CONF_ENV += CFLAGS="$(TARGET_CFLAGS) -fPIC -std=gnu17" CXXFLAGS="$(TARGET_CXXFLAGS) -fPIC"
 
