@@ -4,7 +4,6 @@ Audio|[alsa-topology-conf](http://github.com/alsa-project/alsa-topology-conf)|v1
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.14|Apr 14, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|e02d690a8b46891795c3f8e3dbd192d41a8cee96|May 07, 2025
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.7|Nov 25, 2024
-Audio|[cubeb](http://github.com/mozilla/cubeb)|78ee5f0efaaa395e3e1806e8ef85dcb15c7c063d|May 24, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.06|Jun 01, 2025
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
 Audio|[libfreeaptx](http://github.com/regularhunter/libfreeaptx)|6dee419f934ec781e531f885f7e8e740752e67d1|Mar 05, 2025
