@@ -9917,11 +9917,8 @@ msgstr "Horisontell"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
-"House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
-"your processor."
+"House of the Dead 4 speed fix. Select CPU base frequency of your processor."
 msgstr ""
-"House of the Dead 4 hastighetsfix. Ställer in spelet på CPU-minimifrekvensen "
-"för din processor."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -19836,6 +19833,14 @@ msgstr "gul/blå"
 #~ msgstr ""
 #~ "Definiera manuellt vilken upplösning som ska användas.&#x0a;Automatisk "
 #~ "standard är hög och växlar till superhög vid behov."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency "
+#~ "of your processor."
+#~ msgstr ""
+#~ "House of the Dead 4 hastighetsfix. Ställer in spelet på CPU-"
+#~ "minimifrekvensen för din processor."
 
 #~ msgctxt "keys_files"
 #~ msgid "Menu N"
