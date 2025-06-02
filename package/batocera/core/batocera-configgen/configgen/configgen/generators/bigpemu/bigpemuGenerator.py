@@ -405,15 +405,9 @@ class BigPEmuGenerator(Generator):
         bigPemuConfig.write_text(json.dumps(config, indent=4))
 
         # Run the emulator
-        f=open('/usr/share/batocera/batocera.arch')
-        arch=f.readline().strip('\n')
-        if 'x86_64' in arch:
-            commandArray = ["/usr/bin/bigpemu/bigpemu", rom, "-cfgpathabs", str(bigPemuConfig)]
-        else:
-            commandArray = ["/usr/bin/box64", "/usr/bin/bigpemu/bigpemu", rom, "-cfgpathabs", str(bigPemuConfig)]
+        commandArray = ["/usr/bin/bigpemu/bigpemu", rom, "-cfgpathabs", str(bigPemuConfig)]
 
         environment = {
-            "BOX64_LD_LIBRARY_PATH": "/usr/share/box64/lib",
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
             "SDL_JOYSTICK_HIDAPI": "0"
         }

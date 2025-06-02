@@ -68,7 +68,7 @@ Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|a10f7a83c03fdfeba
 Emulators|[applewin](https://github.com/audetto/AppleWin)|4c9412a8ac1dc7102a467aaff10ab7bfc29e5c00|Jun 01, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|3fb1e305efb9b5449ed90af108a29830d1327847|May 27, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
-Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v118|Jan 27, 2024
+Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v119|Jun 02, 2025
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|162fdabb9d9e1957ffa0d193e11383ff90650afb|Jun 01, 2025
 Emulators|[citron](https://git.citron-emu.org/citron/emu)|046538bb473c99fe3d02f9b0e76f7a056e6cecc8|May 14, 2025
