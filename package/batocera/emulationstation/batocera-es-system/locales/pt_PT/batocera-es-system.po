@@ -7690,8 +7690,6 @@ msgstr "Ligar irá suavizar a imagem."
 msgctxt "game_options"
 msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
 msgstr ""
-"Aplicar escala de pixels perfeita. Evita o dimensionamento irregular e o "
-"desfoque."
 
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
@@ -9937,11 +9935,8 @@ msgstr "Horizontal"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
-"House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
-"your processor."
+"House of the Dead 4 speed fix. Select CPU base frequency of your processor."
 msgstr ""
-"Correção de velocidade 4 de House of the Dead. Define o jogo para a "
-"frequência mínima da CPU de o seu processador."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10064,7 +10059,7 @@ msgstr "INTERFACE DE ENTRADA"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "INTEGER SCALE"
-msgstr "ESCALA INTEIRA"
+msgstr ""
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
@@ -13225,7 +13220,7 @@ msgstr "GRAVAÇÕES POR JOGO"
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
-msgstr "VMU POR JOGO"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18838,7 +18833,6 @@ msgstr "Weave (campo superior primeiro)"
 msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
 msgstr ""
-"Quando ativado, cada jogo tem o seu próprio VMU na porta 1 do comando 1."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -19612,10 +19606,6 @@ msgstr "amarelo/azul"
 #~ msgstr "Adicionar cor aos jogos do Game Boy."
 
 #~ msgctxt "game_options"
-#~ msgid "All VMUs"
-#~ msgstr "Todos os VMUs"
-
-#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Permite o uso de perfis de interruptores se presentes."
 
@@ -19846,6 +19836,14 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid ""
+#~ "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency "
+#~ "of your processor."
+#~ msgstr ""
+#~ "Correção de velocidade 4 de House of the Dead. Define o jogo para a "
+#~ "frequência mínima da CPU de o seu processador."
+
+#~ msgctxt "game_options"
+#~ msgid ""
 #~ "Install the image reader card to read disk image files (Mac IIx only). "
 #~ "Minimum 4MB ram size recommended."
 #~ msgstr ""
@@ -19902,10 +19900,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr "Necessário para alguns jogos que usam caracteres unicode especiais."
-
-#~ msgctxt "game_options"
-#~ msgid "Only A1"
-#~ msgstr "Somente A1"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
@@ -20085,12 +20079,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "ESCREVER BUFFERS DE COR"
-
-#~ msgctxt "game_options"
-#~ msgid "When enabled, each game has its own set of VMU save files."
-#~ msgstr ""
-#~ "Quando ativado, cada jogo tem o seu próprio conjunto de ficheiros "
-#~ "guardados na VMU."
 
 #~ msgctxt "game_options"
 #~ msgid ""

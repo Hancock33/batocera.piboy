@@ -9961,11 +9961,8 @@ msgstr "Horizontaal"
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
-"House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency of "
-"your processor."
+"House of the Dead 4 speed fix. Select CPU base frequency of your processor."
 msgstr ""
-"House of the Dead 4 snelheidsfix. Stelt het spel in op de minimale CPU-"
-"frequentie van je processor."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -19861,6 +19858,14 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "Controller + 4 Sideway Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency "
+#~ "of your processor."
+#~ msgstr ""
+#~ "House of the Dead 4 snelheidsfix. Stelt het spel in op de minimale CPU-"
+#~ "frequentie van je processor."
 
 #~ msgctxt "game_options"
 #~ msgid ""
