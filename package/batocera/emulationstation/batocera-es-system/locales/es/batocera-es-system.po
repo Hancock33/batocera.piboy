@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 00:00+0100\n"
-"PO-Revision-Date: 2025-05-07 00:00+0100\n"
+"PO-Revision-Date: 2025-05-20 00:00+0100\n"
 "Last-Translator: roliverosc\n"
 "Language-Team: spanish\n"
 "Language: es\n"
@@ -7727,6 +7727,8 @@ msgstr "Habilitarlo suavizará la imagen."
 msgctxt "game_options"
 msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
 msgstr ""
+"Aplica un escalado de píxeles perfecto. Evita el escalado desigual y el "
+"desenfoque."
 
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
@@ -10099,7 +10101,7 @@ msgstr "INTERFAZ DE ENTRADA"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "INTEGER SCALE"
-msgstr ""
+msgstr "ESCALADO DE ENTEROS"
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
@@ -13265,7 +13267,7 @@ msgstr "GUARDADOS POR JUEGO"
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
-msgstr ""
+msgstr "VMU POR JUEGO"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18894,6 +18896,8 @@ msgstr "Weave (campo superior primero)"
 msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
 msgstr ""
+"Cuando está habilitado, cada juego tiene su propia VMU en el puerto 1 del "
+"mando 1."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -19734,6 +19738,10 @@ msgstr "amarillo/azul"
 #~ msgstr "Añade color a los juegos de Game Boy."
 
 #~ msgctxt "game_options"
+#~ msgid "All VMUs"
+#~ msgstr "Todos los VMUs"
+
+#~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
 #~ msgstr "Permite configurar Future Pinball con Pad-To-Keyboard."
 
@@ -20234,6 +20242,10 @@ msgstr "amarillo/azul"
 #~ msgid "Not all games support all languages."
 #~ msgstr "No todos los juegos soportan todos los idiomas."
 
+#~ msgctxt "game_options"
+#~ msgid "Only A1"
+#~ msgstr "Solo A1"
+
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
 #~ msgstr "Abrir menú de Dolphin-triforce"
@@ -20609,6 +20621,12 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "ESCRIBIR BÚFERS DE COLOR"
+
+#~ msgctxt "game_options"
+#~ msgid "When enabled, each game has its own set of VMU save files."
+#~ msgstr ""
+#~ "Cuando está habilitado, cada juego tiene su propio conjunto de archivos "
+#~ "de guardado en VMU."
 
 #~ msgctxt "game_options"
 #~ msgid ""

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Batocera.linux Options\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-09 12:50+0200\n"
+"PO-Revision-Date: 2025-05-29 08:15+0200\n"
 "Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -7676,6 +7676,8 @@ msgstr "Om du aktiverar detta kommer bilden att jämnas ut."
 msgctxt "game_options"
 msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
 msgstr ""
+"Säkerställer perfekt bildpunktsskalning. Förhindrar ojämn skalning och "
+"oskärpa."
 
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
@@ -10039,7 +10041,7 @@ msgstr "INMATNINGSGRÄNSSNITT"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "INTEGER SCALE"
-msgstr ""
+msgstr "HELTALSSKALA"
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
@@ -13185,7 +13187,7 @@ msgstr "PER-SPEL-SPARNINGAR"
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
-msgstr ""
+msgstr "VMU PER-SPEL"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18774,6 +18776,7 @@ msgstr "Weave (översta fältet först)"
 msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
 msgstr ""
+"När den är aktiverad har varje spel sin egen VMU på port 1 på kontroller 1."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
