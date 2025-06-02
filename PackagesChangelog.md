@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.9|Jun 02, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250602|Jun 02, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250602|Jun 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.06|Jun 01, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|4c9412a8ac1dc7102a467aaff10ab7bfc29e5c00|Jun 01, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|c8045f7f04d8558930dd2c144b75b6a46185ceee|Jun 01, 2025
@@ -23,11 +26,9 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|4a30067509a6242
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14242|Jun 01, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|b0c111170ea164c5fd1e8b9d90ad8b36a98d43e8|Jun 01, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|70cec9f68d60772e295ecc5f153299c6808c658c|Jun 01, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250601|Jun 01, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|acd220b57125c0b7aa23ccd91b6035d55b120cff|Jun 01, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|29a85159e148ae2478c392a1bddb389193270ed0|Jun 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9be49b9390241f35b08f8557b027d72c0d1e63f2|Jun 01, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250601|Jun 01, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8904986db44f815742b04b57ac1f7a1699836f4b|Jun 01, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|d495c710d2e8d4e02b94cfc65d3aa25c15105149|Jun 01, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|d495c710d2e8d4e02b94cfc65d3aa25c15105149|Jun 01, 2025
@@ -56,7 +57,6 @@ Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b8641
 Ports|[raptorcots](http://github.com/skynettx/raptor)|63b3beb6d70c2ef943f1359cfc2d07616f3471d0|May 29, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.18|May 29, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|1b719212702951874b11343e8e36ea8519bdde9d|May 29, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.8.r247.ge0bb1dba3d6|May 29, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|89e18c2a8c09b97b79e1025fbf5e5b03f1182337|May 29, 2025
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.2.0|May 29, 2025
 Gpu|[nvidia-open-driver](http://download.nvidia.com/XFree86/Linux-x86)|575.57.08|May 29, 2025
