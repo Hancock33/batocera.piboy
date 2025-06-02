@@ -3,8 +3,8 @@
 # wsdd
 #
 ################################################################################
-# Version: Commits on Mar 30, 2024
-WSDD_VERSION = v0.8
+# Version: Commits on Jun 01, 2025
+WSDD_VERSION = v0.9
 WSDD_SITE = $(call github,christgau,wsdd,$(WSDD_VERSION))
 WSDD_LICENSE = MIT
 
