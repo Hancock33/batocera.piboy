@@ -1,9 +1,13 @@
-import os
-from os import path
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class VirtualjaguarGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -44,3 +48,9 @@ class VirtualjaguarGenerator(Generator):
             env={
               'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
         })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "virtualjaguar",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
