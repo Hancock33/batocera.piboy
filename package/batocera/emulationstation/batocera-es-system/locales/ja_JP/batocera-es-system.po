@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v42b(2025/05/07)\n"
+"Project-Id-Version: batocera-es v42b(2025/06/04)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-07 21:37+0900\n"
+"PO-Revision-Date: 2025-06-04 16:47+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -7645,6 +7645,8 @@ msgstr "有効にすると画像が滑らかになります"
 msgctxt "game_options"
 msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
 msgstr ""
+"完璧なピクセルスケーリングを実行します。不均一なスケーリングやぼやけを防ぎま"
+"す"
 
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
@@ -9880,6 +9882,8 @@ msgctxt "game_options"
 msgid ""
 "House of the Dead 4 speed fix. Select CPU base frequency of your processor."
 msgstr ""
+"House of the Dead 4の速度修正をします\n"
+"(プロセッサのCPUベース周波数を設定)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10000,7 +10004,7 @@ msgstr "入力(使用する)インターフェース"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "INTEGER SCALE"
-msgstr ""
+msgstr "整数スケーリング"
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
@@ -13128,7 +13132,7 @@ msgstr "ゲームごとの保存データ"
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
-msgstr ""
+msgstr "ゲームごとのVMU"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18687,7 +18691,7 @@ msgstr "Weave (トップフィールド優先)"
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
-msgstr ""
+msgstr "各ゲームのコントローラ1のポート1に独自のVMUを使用します"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -19671,14 +19675,6 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "ゲームパッド + 4 横向きWiiリモコン"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "House of the Dead 4 speed fix. Sets the game to the CPU minimum frequency "
-#~ "of your processor."
-#~ msgstr ""
-#~ "House of the Dead 4の速度修正をします\n"
-#~ "(ゲームをプロセッサのCPU最小周波数に設定)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

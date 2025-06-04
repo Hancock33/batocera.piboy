@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-04-08 11:46+0200\n"
+"PO-Revision-Date: 2025-06-04 12:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
 "Language: gl_ES\n"
@@ -7708,6 +7708,7 @@ msgstr "A activación suavizará a imaxe."
 msgctxt "game_options"
 msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
 msgstr ""
+"Aplicar escalado de píxel perfecto. Prevé o escalado desigual e o desenfoque."
 
 #. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
 msgctxt "game_options"
@@ -9958,6 +9959,8 @@ msgctxt "game_options"
 msgid ""
 "House of the Dead 4 speed fix. Select CPU base frequency of your processor."
 msgstr ""
+"Corrección de velocidade para House of the Dead 4. Selecciona a frecuencia "
+"base da CPU do teu procesador."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10078,7 +10081,7 @@ msgstr "INTERFACE DE ENTRADA"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "INTEGER SCALE"
-msgstr ""
+msgstr "ESCALA ENTEIRA"
 
 #. TRANSLATION: melonds, pcsx2
 msgctxt "game_options"
@@ -13233,7 +13236,7 @@ msgstr "GARDADOS POR XOGO"
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
 msgid "PER-GAME VMU"
-msgstr ""
+msgstr "VMU POR PARTIDA"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -18853,6 +18856,8 @@ msgstr "Tecido (campo superior primeiro)"
 msgctxt "game_options"
 msgid "When enabled, each game has its own VMU on port 1 of controller 1."
 msgstr ""
+"Cando está activado, cada xogo ten a súa propia VMU no porto 1 do "
+"controlador 1."
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
