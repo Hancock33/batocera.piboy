@@ -1,8 +1,8 @@
 diff --git a/src/video/video.cpp b/src/video/video.cpp
-index 3c974e9..f1dd5a9 100644
+index 63b346a..0d75d9a 100644
 --- a/src/video/video.cpp
 +++ b/src/video/video.cpp
-@@ -2006,12 +2006,12 @@ void vid_blit () {
+@@ -2018,12 +2018,12 @@ void vid_blit () {
  
      if (g_bezel_toggle) vid_render_bezels();
  
