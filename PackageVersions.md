@@ -74,7 +74,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|162fdabb9d9e1957ffa0d193e
 Emulators|[citron](https://git.citron-emu.org/citron/emu)|046538bb473c99fe3d02f9b0e76f7a056e6cecc8|May 14, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|c7dd4526c154ddd96e79176a28143e3bd650e468|Jun 02, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|b7fb2fa737c9ba8137e31857b6c46d96a9167b27|Jun 04, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|fadc2ac223ed6c9a4349cf9cff001cc77d7cd9f0|Jun 05, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|38f67ef950c8f0c1b48ffeb32b1c8c6fca4bebd7|May 06, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|050f68817a09379150b7bdf665a443b4869d7c08|Apr 27, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.05.03|May 03, 2025
@@ -131,7 +131,7 @@ Emulators|[libretro-desmume](http://github.com/libretro/desmume)|7f05a8d447b00ac
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|34f543c8b4401ea838fe5cc1683204b65933d6d5|May 30, 2025
 Emulators|[libretro-dinothawr](http://github.com/libretro/Dinothawr)|e57e780a963372b89736620d7e3b8608190f7581|Oct 21, 2024
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|a09f78f735f0d2184f64ba5b134abe98ee99c65f|May 17, 2025
-Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|ee1ff009d8edf87c668bc5d1aa6d6f1320b8b654|Jun 03, 2025
+Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|f30a3917abad9361ef145960ab8e03703596acf0|Jun 05, 2025
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|f6ffb9ae6230e6614066b887c7b269d44a00cab7|May 04, 2025
 Emulators|[libretro-duckstation](http://github.com/batocera-linux/lr-duckstation)|5c0d746e4ccb725fc03e53dc530b90bc570253d7|Dec 03, 2021
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|29a85159e148ae2478c392a1bddb389193270ed0|Jun 01, 2025
@@ -278,7 +278,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d15b7a995588561d64ce0cd250
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-06-04|Jun 04, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.73|Jun 05, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|99a6e5c15ad7d7cb17edcf6f4b6e63a187f22355|May 29, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|3b3026ff1c98137e4f3051ec44c0eb4e1fa2f8ff|Jun 05, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|43bf4ed1bca1cd6442e97b04d9afb8383219bb86|Jun 05, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|b345acefcfbe1d007dc6b7daee5392a6091d3cf7|May 04, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|3f15f4930a1dd80117d00bab1ed95d7a7ba62b4b|May 31, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|97bc6b08b1da511fa449ecb412ca74fa54f4a3fb|May 03, 2025
@@ -468,7 +468,7 @@ Ports|[openjazz](http://github.com/AlisterT/openjazz)|28e6f0ca06f38d1ff5dcf26c8c
 Ports|[openjk](http://github.com/JACoders/OpenJK)|2f6abb4f6b930f19048dbc53ef00d837b4b05943|May 23, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|cd88c33724641c5adb246babec0d4870e8df61b4|Feb 07, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|cdeeed4aa91c76d51c8c1731666c159549166859|May 16, 2025
-Ports|[openmohaa](http://github.com/openmoh/openmohaa)|4b486e4a908d4334d40df337433f8022a83c546c|Jun 04, 2025
+Ports|[openmohaa](http://github.com/openmoh/openmohaa)|33cfc2cbf848209751d74973eb11139562dff2c5|Jun 05, 2025
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|573ccd6e5a174d12ffadae151cfc26376a3e6aaa|Nov 02, 2024
 Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|20a7240238f9dcd4864e841343550b18605ac34a|Jul 28, 2024
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025

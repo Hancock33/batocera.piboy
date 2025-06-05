@@ -2,21 +2,23 @@
 -----|:-----:|:-----:|:-----:
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2bca409e25dba374020131fe963847095815c19c|Jun 05, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2bca409e25dba374020131fe963847095815c19c|Jun 05, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|fadc2ac223ed6c9a4349cf9cff001cc77d7cd9f0|Jun 05, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|6bea16b6eb34278d68ff7be2617a157a7992520b|Jun 05, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.3.403|Jun 05, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|aec61100f673dcaa077d93039689b426d9e75637|Jun 05, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.73|Jun 05, 2025
-Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|3b3026ff1c98137e4f3051ec44c0eb4e1fa2f8ff|Jun 05, 2025
+Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|43bf4ed1bca1cd6442e97b04d9afb8383219bb86|Jun 05, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|33abc0331e28a350512e6d466f1a80ce47957f4a|Jun 05, 2025
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|7c2d41a87408442b0fb1de7b97890bde7cc62d4d|Jun 05, 2025
 Libraries|[python-cog](http://github.com/nedbat/cog)|v3.5.0|Jun 05, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|7b0fada974f18ea1b5bd956ff848c3c1b149cc01|Jun 05, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|35872446412beb23e6c4e11da598ed76778e03e9|Jun 05, 2025
+Ports|[openmohaa](http://github.com/openmoh/openmohaa)|33cfc2cbf848209751d74973eb11139562dff2c5|Jun 05, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b2f86fa45fcda12775ad011ef32c0db0178962db|Jun 05, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4289393beb2178a97218d7876272d79a70577e9c|Jun 05, 2025
+Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|f30a3917abad9361ef145960ab8e03703596acf0|Jun 05, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|23dcc422d1399922a9b513574a115889c474b8e2|Jun 05, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|aec61100f673dcaa077d93039689b426d9e75637|Jun 05, 2025
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|b7fb2fa737c9ba8137e31857b6c46d96a9167b27|Jun 04, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|08ae94c0ade157f3b4e7a6116ec30a3bd829e0b7|Jun 04, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|37998493a0ae5850b4e8ece6415a44b0cc1eb179|Jun 04, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d2d44099fcd630901dd287601ace796107cb038e|Jun 04, 2025
@@ -29,7 +31,6 @@ Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|045e3de50827432c69e12
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|f37c17d024cd35b6ad1a1837433dd2e66fa3414b|Jun 04, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|d19fa1c84b8ea7e567c16742499427c5eefecf9f|Jun 04, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|56d810770073b990a464ada7e47604bb29c35d20|Jun 04, 2025
-Ports|[openmohaa](http://github.com/openmoh/openmohaa)|4b486e4a908d4334d40df337433f8022a83c546c|Jun 04, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250604|Jun 04, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250604|Jun 04, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|5e35ebc8fe698f86c8b0c4c98774bc397f30e7d4|Jun 04, 2025
@@ -45,7 +46,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c210829c3d3647471b46
 Ports|[vkquake](http://github.com/Novum/vkQuake)|2febd2d2490ccca5535be18545b2416bd7e536aa|Jun 03, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|2444d20c1ef73703c4d533611b7b9cdb136f8513|Jun 03, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|2444d20c1ef73703c4d533611b7b9cdb136f8513|Jun 03, 2025
-Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|ee1ff009d8edf87c668bc5d1aa6d6f1320b8b654|Jun 03, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|4efeef99366fb73910f44e9f4964fc8db40b02d5|Jun 02, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v119|Jun 02, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|c7dd4526c154ddd96e79176a28143e3bd650e468|Jun 02, 2025
