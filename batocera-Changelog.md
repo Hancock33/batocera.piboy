@@ -112,7 +112,7 @@
 - OpenMSX to release 20.0
 - PCSX2 to v2.3.185
 - Play! to 4th Feb build
-- PPSSPP to 28th February build
+- PPSSPP to 1.19
 - Raze to 1.11.0
 - RetroArch to v1.21.0
 - Ruffle to nightly-2025-02-12
@@ -146,7 +146,7 @@
 - Linux Firmware to 20250509
 - Linux Kernel to 6.14.9
 - LLVM to 19.1.7
-- Mesa3D to 25.1.1
+- Mesa3D to 25.1.2
 - MPV to 0.40.0
 - Nvidia production driver to 575.57.08
 - Pipewire to 1.2.7
