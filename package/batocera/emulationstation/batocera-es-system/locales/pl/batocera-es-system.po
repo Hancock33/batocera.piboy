@@ -389,6 +389,11 @@ msgctxt "game_options"
 msgid "10x Native (6400x5280)"
 msgstr "10x natywnej (6400x5280)"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "10x Native (~3600p/6K)"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "11 MHz"
@@ -408,6 +413,11 @@ msgstr "11"
 msgctxt "game_options"
 msgid "11x Native (7040x5808)"
 msgstr "11x natywnej (7040x5808)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "11x Native (~3960p)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -499,6 +509,11 @@ msgctxt "game_options"
 msgid "12x Native (7680x6336) for 8K"
 msgstr "12x natywnej (7680x6336) for 8K"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "12x Native (~4320p/8K)"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "13 MHz"
@@ -518,6 +533,11 @@ msgstr "13MB (zalecane)"
 msgctxt "game_options"
 msgid "13th"
 msgstr "13"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "13x Native (~5824p)"
+msgstr ""
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -558,6 +578,11 @@ msgstr "144 kl/s"
 msgctxt "game_options"
 msgid "14th"
 msgstr "14"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "14x Native (~6272p)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -603,6 +628,11 @@ msgstr "15s"
 msgctxt "game_options"
 msgid "15th"
 msgstr "15"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "15x Native (~6720p)"
+msgstr ""
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -704,6 +734,11 @@ msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "16x Native (~7168p)"
+msgstr ""
+
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "16x SSAA"
@@ -793,6 +828,11 @@ msgstr "1x (domyślnie)"
 msgctxt "game_options"
 msgid "1x (~480)"
 msgstr "1x (~480)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "1x Native (PS2)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1154,7 +1194,7 @@ msgctxt "game_options"
 msgid "2x Native (1280x1056) for 720p"
 msgstr "2x natywnej (1280x1056) dla 720p"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr "2x natywnej (~720p)"
@@ -1404,7 +1444,7 @@ msgctxt "game_options"
 msgid "3x Native (1920x1584) for 1080p"
 msgstr "3x natywnej (1920x1584) dla 1080p"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
 msgstr "3x natywnej  (~1080p)"
@@ -1604,7 +1644,7 @@ msgctxt "game_options"
 msgid "4x Native (2560x2112) for 1440p"
 msgstr "4x natywnej (2560x2112) dla 1440p"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr "4x natywnej (~1440p/2K)"
@@ -1784,6 +1824,11 @@ msgctxt "game_options"
 msgid "5x Native (~1620p)"
 msgstr "5x natywnej (~1620p)"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "5x Native (~1800p/3K)"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "5x native (1280 x 960)"
@@ -1899,7 +1944,7 @@ msgctxt "game_options"
 msgid "6x Native (3840x3168) for 4K"
 msgstr "6x natywnej (3840x3168) dla 4K"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
 msgstr "6x natywnej (~2160p/4K)"
@@ -1978,6 +2023,11 @@ msgstr "7x natywnej (4480x3696)"
 msgctxt "game_options"
 msgid "7x Native (~2520p)"
 msgstr "7x natywnej (~2520p)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "7x Native (~2530p)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2099,7 +2149,7 @@ msgctxt "game_options"
 msgid "8x Native (5120x4224) for 5K"
 msgstr "8x natywnej (5120x4224) dla 5K"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr "8x natywnej (~2880p/5K)"
@@ -2158,6 +2208,17 @@ msgstr "9x 4K (2880x2160)"
 msgctxt "game_options"
 msgid "9x Native (5760x4752)"
 msgstr "9x natywnej (5760x4752)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "9x Native (~3240p)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid ""
+"A small  number of games will ahve compatibility problems with this enabled."
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -3715,7 +3776,7 @@ msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "MIESZANIE SPRITE'ÓW (POJEDYNCZO)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "DOKŁADNOŚĆ MIESZANIA"
@@ -3825,6 +3886,11 @@ msgctxt "game_options"
 msgid "Baltic"
 msgstr "Bałtycki"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Basic"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Basic (Recommended)"
@@ -3909,12 +3975,12 @@ msgctxt "game_options"
 msgid "Bilinear (Default)"
 msgstr "Bilinear (domyślnie)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced excluding sprite)"
 msgstr "Dwuliniowe (wymuszone z wyłączeniem sprite'ów)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced)"
 msgstr "Dwuliniowe (wymuszone)"
@@ -3924,7 +3990,7 @@ msgctxt "game_options"
 msgid "Bilinear (No Edge Blending)"
 msgstr "Dwuliniowo (bez mieszania krawędzi)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Bilinear (PS2)"
 msgstr "Dwuliniowe (PS2)"
@@ -4354,7 +4420,7 @@ msgctxt "game_options"
 msgid "CGA"
 msgstr "CGA"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "CHEATS"
 msgstr "CHEATY"
@@ -5826,7 +5892,7 @@ msgctxt "game_options"
 msgid "Control the texture filtering of the emulation."
 msgstr "Kontroluje filtrowanie tekstur emulacji."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "Kontroluje trójliniowe filtrowanie tekstur emulacji."
@@ -6182,7 +6248,7 @@ msgctxt "game_options"
 msgid "DISPLAY ROTATION"
 msgstr "OBRÓT EKRANU"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "DITHERING"
 msgstr "DITHERING"
@@ -7680,6 +7746,11 @@ msgid ""
 "stretch artifacts."
 msgstr ""
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Enables cheats files to be read from the `cheats` directory."
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
@@ -7899,7 +7970,7 @@ msgid "Enhancement. Smooth out jagged edges on 3D objects polygons."
 msgstr ""
 "Usprawnienie. Wygładzanie postrzępionych krawędzi na wielokątach obiektów 3D."
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, libretro/pcsx2
 msgctxt "game_options"
 msgid "Enhancement. Smooth/upscale textures on 3D objects."
 msgstr "Usprawnienie. Wygładzanie/upiększanie tekstur na obiektach 3D."
@@ -8071,6 +8142,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "FAST BLITTER (LESS COMPATIBLE)"
 msgstr "SZYBKI BLITTER (MNIEJ KOMPATYBILNY)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "FAST CD/DVD ACCESS"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -8710,7 +8786,7 @@ msgctxt "game_options"
 msgid "Force 32:9"
 msgstr "Wymuś 32:9"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Force 32bit"
 msgstr "Wymuś 32bit"
@@ -8910,7 +8986,7 @@ msgctxt "game_options"
 msgid "Fujitsu FM-77AV disk images"
 msgstr "Obrazy dysków Fujitsu FM-77AV"
 
-#. TRANSLATION: libretro/hatarib, openmohaa, shared
+#. TRANSLATION: libretro/hatarib, libretro/pcsx2, openmohaa, shared
 msgctxt "game_options"
 msgid "Full"
 msgstr "Pełny"
@@ -9290,7 +9366,7 @@ msgctxt "game_options"
 msgid "GRAPHICAL USER INTERFACE"
 msgstr "GRAFICZNY INTERFEJS UŻYTKOWNIKA"
 
-#. TRANSLATION: azahar, rtcw, theforceengine
+#. TRANSLATION: azahar, libretro/pcsx2, rtcw, theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "GRAFIKA"
@@ -9857,6 +9933,13 @@ msgstr "Komputer pomocy"
 msgctxt "game_options"
 msgid "Help games which are too quick or that have bugs."
 msgstr "Pomóż w grach, które są zbyt szybkie lub zawierają błędy."
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid ""
+"Helps forcing an international Japenese version to English. Unlocking more "
+"European languages etc."
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10854,6 +10937,11 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "JĘZYK"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "LANGUAGE UNLOCK"
+msgstr ""
+
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
@@ -11739,7 +11827,7 @@ msgctxt "game_options"
 msgid "Max Saving"
 msgstr ""
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, rpcs3
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
 msgstr "Maksymalne"
@@ -11831,7 +11919,7 @@ msgctxt "game_options"
 msgid "Med Saving"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, openjk, openjkdf2, ...
+#. TRANSLATION: libretro/mesen, libretro/mesens, libretro/pcsx2, mupen64plus, openjk, ...
 msgctxt "game_options"
 msgid "Medium"
 msgstr "Średnie"
@@ -11980,7 +12068,7 @@ msgctxt "game_options"
 msgid "Minimal"
 msgstr "Minimalny"
 
-#. TRANSLATION: openmohaa, pcsx2, rpcs3
+#. TRANSLATION: libretro/pcsx2, openmohaa, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "Minimalne"
@@ -12469,7 +12557,7 @@ msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (wibracje)"
 
-#. TRANSLATION: f2bgl, libretro/duckstation, libretro/melondsds, libretro/parallel_n64, libretro/swanstation, ...
+#. TRANSLATION: f2bgl, libretro/duckstation, libretro/melondsds, libretro/parallel_n64, libretro/pcsx2, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr "Najbliższe"
@@ -12754,7 +12842,7 @@ msgctxt "game_options"
 msgid "Null"
 msgstr ""
 
-#. TRANSLATION: amiberry, flycast, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: amiberry, flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx2
 msgctxt "game_options"
 msgid "OFF"
 msgstr "WYŁ."
@@ -14430,6 +14518,12 @@ msgid ""
 "Reduces banding between colours and improves the perceived colour depth."
 msgstr ""
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid ""
+"Reduces banding between colours and improves the preceived colour depth."
+msgstr "Zmniejsza pasma między kolorami i poprawia postrzeganą głębię kolorów."
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -15395,6 +15489,11 @@ msgctxt "game_options"
 msgid "SYNCHRONOUS RENDERING"
 msgstr "RENDEROWANIE SYNCHRONICZNE"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "SYSTEM"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "SYSTEM CONTROLLERS"
@@ -15465,7 +15564,7 @@ msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Scaled"
 msgstr "Skalowane"
@@ -17215,7 +17314,7 @@ msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "TRYB TRENINGOWY"
 
-#. TRANSLATION: model2emu, pcsx2
+#. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "FILTROWANIE TRÓJLINIOWE"
@@ -17388,7 +17487,7 @@ msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr ""
 "Ostateczny obraz wyjścia, niezwiązany z emulowanym ustawieniem NAND Wii."
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid ""
 "The higher the setting, the more blending is emulated in the shader "
@@ -17644,12 +17743,12 @@ msgctxt "game_options"
 msgid "Trilinear"
 msgstr "Trójliniowe"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
 msgstr "Trójliniowe (wymuszone)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Trilinear (PS2)"
 msgstr "Trójliniowe (PS2)"
@@ -18125,6 +18224,11 @@ msgstr "Bez ograniczeń"
 msgctxt "game_options"
 msgid "Unsaturated v6 (FirebrandX)"
 msgstr "Nienasycone v6 (FirebrandX)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Unscaled"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -21660,12 +21764,6 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "Recompiler (LLVM)"
 #~ msgstr "Rekompilator (LLVM)"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Reduces banding between colours and improves the preceived colour depth."
-#~ msgstr ""
-#~ "Zmniejsza pasma między kolorami i poprawia postrzeganą głębię kolorów."
 
 #~ msgctxt "game_options"
 #~ msgid "Reduces wobbly polygongs & warping textures."

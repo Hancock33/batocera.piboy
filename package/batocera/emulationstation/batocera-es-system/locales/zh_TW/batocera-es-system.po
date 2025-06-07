@@ -387,6 +387,11 @@ msgctxt "game_options"
 msgid "10x Native (6400x5280)"
 msgstr "10x 原生解析度 (6400x5280)"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "10x Native (~3600p/6K)"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "11 MHz"
@@ -406,6 +411,11 @@ msgstr "11th"
 msgctxt "game_options"
 msgid "11x Native (7040x5808)"
 msgstr "11x 原生解析度 (7040x5808)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "11x Native (~3960p)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -497,6 +507,11 @@ msgctxt "game_options"
 msgid "12x Native (7680x6336) for 8K"
 msgstr "12x 原生解析度 (7680x6336) for 8K"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "12x Native (~4320p/8K)"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "13 MHz"
@@ -516,6 +531,11 @@ msgstr "13MB (推薦)"
 msgctxt "game_options"
 msgid "13th"
 msgstr "13th"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "13x Native (~5824p)"
+msgstr ""
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -556,6 +576,11 @@ msgstr "144fps"
 msgctxt "game_options"
 msgid "14th"
 msgstr "14th"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "14x Native (~6272p)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -601,6 +626,11 @@ msgstr "15s"
 msgctxt "game_options"
 msgid "15th"
 msgstr "15th"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "15x Native (~6720p)"
+msgstr ""
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -702,6 +732,11 @@ msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA抗鋸齒"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "16x Native (~7168p)"
+msgstr ""
+
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "16x SSAA"
@@ -791,6 +826,11 @@ msgstr "1x (預設)"
 msgctxt "game_options"
 msgid "1x (~480)"
 msgstr "1x (~480)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "1x Native (PS2)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1152,7 +1192,7 @@ msgctxt "game_options"
 msgid "2x Native (1280x1056) for 720p"
 msgstr "2x 原生解析度 (1280x1056) 適用 720p"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr "2x 原生解析度 (~720p)"
@@ -1402,7 +1442,7 @@ msgctxt "game_options"
 msgid "3x Native (1920x1584) for 1080p"
 msgstr "3x 原生解析度 (1920x1584) 適用 1080p"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
 msgstr "3x 原生解析度 (~1080p)"
@@ -1602,7 +1642,7 @@ msgctxt "game_options"
 msgid "4x Native (2560x2112) for 1440p"
 msgstr "4x 原生解析度 (2560x2112) 適用 1440p"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr "4x 原生解析度 (~1440p/2K)"
@@ -1782,6 +1822,11 @@ msgctxt "game_options"
 msgid "5x Native (~1620p)"
 msgstr "5x 原生解析度 (~1620p)"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "5x Native (~1800p/3K)"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "5x native (1280 x 960)"
@@ -1897,7 +1942,7 @@ msgctxt "game_options"
 msgid "6x Native (3840x3168) for 4K"
 msgstr "6x 原生解析度 (3840x3168) 適用 4K"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
 msgstr "6x 原生解析度 (~2160p/4K)"
@@ -1976,6 +2021,11 @@ msgstr "7x 原生解析度 (4480x3696)"
 msgctxt "game_options"
 msgid "7x Native (~2520p)"
 msgstr "7x 原生解析度 (~2520p)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "7x Native (~2530p)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2097,7 +2147,7 @@ msgctxt "game_options"
 msgid "8x Native (5120x4224) for 5K"
 msgstr "8x 原生解析度 (5120x4224) 適用 5K"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr "8x 原生解析度 (~2880p/5K)"
@@ -2156,6 +2206,17 @@ msgstr "9x 4K (2880x2160)"
 msgctxt "game_options"
 msgid "9x Native (5760x4752)"
 msgstr "9x 原生解析度 (5760x4752)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "9x Native (~3240p)"
+msgstr ""
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid ""
+"A small  number of games will ahve compatibility problems with this enabled."
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -3689,7 +3750,7 @@ msgctxt "game_options"
 msgid "BLEND SPRITES (SINGE)"
 msgstr "BLEND SPRITES (SINGE)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "BLENDING ACCURACY"
 msgstr "混合精度"
@@ -3799,6 +3860,11 @@ msgctxt "game_options"
 msgid "Baltic"
 msgstr "Baltic"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Basic"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Basic (Recommended)"
@@ -3881,12 +3947,12 @@ msgctxt "game_options"
 msgid "Bilinear (Default)"
 msgstr "雙線性 (預設)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced excluding sprite)"
 msgstr "雙線性（強制排除 sprite）"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced)"
 msgstr "雙線性（強制)"
@@ -3896,7 +3962,7 @@ msgctxt "game_options"
 msgid "Bilinear (No Edge Blending)"
 msgstr "雙線性（無邊緣融合)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Bilinear (PS2)"
 msgstr "雙線性（PS2)"
@@ -4322,7 +4388,7 @@ msgctxt "game_options"
 msgid "CGA"
 msgstr "CGA"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "CHEATS"
 msgstr "作弊碼"
@@ -5753,7 +5819,7 @@ msgctxt "game_options"
 msgid "Control the texture filtering of the emulation."
 msgstr "控制模擬的紋理過濾"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "控制紋理的模擬三線性過濾"
@@ -6101,7 +6167,7 @@ msgctxt "game_options"
 msgid "DISPLAY ROTATION"
 msgstr "顯示旋轉"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "DITHERING"
 msgstr "抖色"
@@ -7554,6 +7620,11 @@ msgid ""
 "stretch artifacts."
 msgstr ""
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Enables cheats files to be read from the `cheats` directory."
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
@@ -7750,7 +7821,7 @@ msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D objects polygons."
 msgstr "增強。平滑3D物件多邊形上的鋸齒狀邊緣。"
 
-#. TRANSLATION: duckstation
+#. TRANSLATION: duckstation, libretro/pcsx2
 msgctxt "game_options"
 msgid "Enhancement. Smooth/upscale textures on 3D objects."
 msgstr "增強。平滑/升級3D物件上的紋理。"
@@ -7916,6 +7987,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "FAST BLITTER (LESS COMPATIBLE)"
 msgstr "快速阻斷器(較低相容)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "FAST CD/DVD ACCESS"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -8541,7 +8617,7 @@ msgctxt "game_options"
 msgid "Force 32:9"
 msgstr "強制 32:9"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Force 32bit"
 msgstr "強制 32位元"
@@ -8732,7 +8808,7 @@ msgctxt "game_options"
 msgid "Fujitsu FM-77AV disk images"
 msgstr "Fujitsu FM-77AV 磁碟鏡像"
 
-#. TRANSLATION: libretro/hatarib, openmohaa, shared
+#. TRANSLATION: libretro/hatarib, libretro/pcsx2, openmohaa, shared
 msgctxt "game_options"
 msgid "Full"
 msgstr "全部"
@@ -9110,7 +9186,7 @@ msgctxt "game_options"
 msgid "GRAPHICAL USER INTERFACE"
 msgstr "圖形用戶界面"
 
-#. TRANSLATION: azahar, rtcw, theforceengine
+#. TRANSLATION: azahar, libretro/pcsx2, rtcw, theforceengine
 msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "圖形"
@@ -9675,6 +9751,13 @@ msgstr "Help computer"
 msgctxt "game_options"
 msgid "Help games which are too quick or that have bugs."
 msgstr "幫助那些速度太快或有錯誤的遊戲。"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid ""
+"Helps forcing an international Japenese version to English. Unlocking more "
+"European languages etc."
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10645,6 +10728,11 @@ msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "語言"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "LANGUAGE UNLOCK"
+msgstr ""
+
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
@@ -11518,7 +11606,7 @@ msgctxt "game_options"
 msgid "Max Saving"
 msgstr ""
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, rpcs3
+#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
 msgstr "最大值"
@@ -11604,7 +11692,7 @@ msgctxt "game_options"
 msgid "Med Saving"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen, libretro/mesens, mupen64plus, openjk, openjkdf2, ...
+#. TRANSLATION: libretro/mesen, libretro/mesens, libretro/pcsx2, mupen64plus, openjk, ...
 msgctxt "game_options"
 msgid "Medium"
 msgstr "中"
@@ -11751,7 +11839,7 @@ msgctxt "game_options"
 msgid "Minimal"
 msgstr "最小值"
 
-#. TRANSLATION: openmohaa, pcsx2, rpcs3
+#. TRANSLATION: libretro/pcsx2, openmohaa, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "最小值"
@@ -12235,7 +12323,7 @@ msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Rumble)"
 
-#. TRANSLATION: f2bgl, libretro/duckstation, libretro/melondsds, libretro/parallel_n64, libretro/swanstation, ...
+#. TRANSLATION: f2bgl, libretro/duckstation, libretro/melondsds, libretro/parallel_n64, libretro/pcsx2, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr "最接近的"
@@ -12517,7 +12605,7 @@ msgctxt "game_options"
 msgid "Null"
 msgstr ""
 
-#. TRANSLATION: amiberry, flycast, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: amiberry, flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx2
 msgctxt "game_options"
 msgid "OFF"
 msgstr "關閉"
@@ -14164,6 +14252,12 @@ msgid ""
 "Reduces banding between colours and improves the perceived colour depth."
 msgstr ""
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid ""
+"Reduces banding between colours and improves the preceived colour depth."
+msgstr "減少顏色之間的條帶並提高感知的色彩深度。"
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -15122,6 +15216,11 @@ msgctxt "game_options"
 msgid "SYNCHRONOUS RENDERING"
 msgstr "同步算繪"
 
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "SYSTEM"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "SYSTEM CONTROLLERS"
@@ -15192,7 +15291,7 @@ msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "強制縮放"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Scaled"
 msgstr "已縮放"
@@ -16904,7 +17003,7 @@ msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "教練模式"
 
-#. TRANSLATION: model2emu, pcsx2
+#. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "三線濾波"
@@ -17073,7 +17172,7 @@ msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr "最終的輸出影像，與Wii的模擬NAND設定無關。"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid ""
 "The higher the setting, the more blending is emulated in the shader "
@@ -17317,12 +17416,12 @@ msgctxt "game_options"
 msgid "Trilinear"
 msgstr "三線的"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Trilinear (Forced)"
 msgstr "三線(強制)"
 
-#. TRANSLATION: pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Trilinear (PS2)"
 msgstr "三線(PS2)"
@@ -17796,6 +17895,11 @@ msgstr "無限"
 msgctxt "game_options"
 msgid "Unsaturated v6 (FirebrandX)"
 msgstr "不飽和v6 (FirebrandX)"
+
+#. TRANSLATION: libretro/pcsx2
+msgctxt "game_options"
+msgid "Unscaled"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -19884,11 +19988,6 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Real Wiimote"
 #~ msgstr "實體 Wiimote"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Reduces banding between colours and improves the preceived colour depth."
-#~ msgstr "減少顏色之間的條帶並提高感知的色彩深度。"
 
 #~ msgctxt "game_options"
 #~ msgid ""
