@@ -3,8 +3,11 @@
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|903eafcf6521601c0a2dc882c3d37d0e5a32ccd6|Jun 07, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|835425b79167268ba8009e6d95ee820474aa2004|Jun 07, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|5959e453c7916bea5c76e77f1cb7eed4908a1fab|Jun 07, 2025
+Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|2b2197db8c49d3ecb320d3f6bdaac8f613d294fc|Jun 07, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|8294e15d3c665cb472b001b3f06b9ae6fe0cb4b7|Jun 07, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|5dfd11257e7d452ff22d9474400034241c6a8181|Jun 07, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|5aefb761eb7c41451c71ae0009d96f6b40ca36e8|Jun 07, 2025
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c90d1100965ec5a072d95c0c257f853a6673ca74|Jun 07, 2025
+Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|7b3a2125a9e5397d0a7b91f3ab0c7e0f3b435533|Jun 07, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|ed45ae08169b953c178f592b6cd34b4934777fc0|Jun 06, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|ed45ae08169b953c178f592b6cd34b4934777fc0|Jun 06, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|8f033723a1b3437c8e3c8b42a92331eebe53ed0b|Jun 06, 2025
@@ -35,12 +38,10 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|205cf0e8a4150b
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|6bea16b6eb34278d68ff7be2617a157a7992520b|Jun 05, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45694|Jun 05, 2025
 Libraries|[python-cog](http://github.com/nedbat/cog)|v3.5.0|Jun 05, 2025
-Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|35872446412beb23e6c4e11da598ed76778e03e9|Jun 05, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0a84620bd9b1485c2b0115ccafa89370b4ccd4a9|Jun 05, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4289393beb2178a97218d7876272d79a70577e9c|Jun 05, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|2ecd1cdf844a1c1f80ca8a5c8b34c386607d5cb6|Jun 05, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|2ecd1cdf844a1c1f80ca8a5c8b34c386607d5cb6|Jun 05, 2025
-Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|f30a3917abad9361ef145960ab8e03703596acf0|Jun 05, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|37998493a0ae5850b4e8ece6415a44b0cc1eb179|Jun 04, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d2d44099fcd630901dd287601ace796107cb038e|Jun 04, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6cc4010bc0f87086b0b58dba5e570f1ea9628625|Jun 04, 2025
@@ -97,7 +98,6 @@ Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.17.0|May 28, 2025
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|2092db19f7b40854e0427a1b2e39eda9f8d0c3cd|May 28, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|3fb1e305efb9b5449ed90af108a29830d1327847|May 27, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|44049622bb622694cb7c532774ca271ca72ce6b3|May 27, 2025
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|05edde050d9df71c215884cd3a6a7f4c2c0c481a|May 27, 2025
 Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|dfdae65c0ab5cf5d459155e8fefe796105229959|May 27, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|5f7143ba5a0fefb71fd5d8f769a3596a6999f5b9|May 26, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|7117178c2dd56df32b6534ba6a54ad1f8547e693|May 26, 2025
