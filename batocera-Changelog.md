@@ -29,6 +29,7 @@
 - Add RTL8852AU wifi device support (x86_64)
 - Add OrangePi 5 Ultra board support
 - Add OrangePi 5 Max board support
+- Add RetroidPocket Mini v2 (thanks Spycat)
 ### Added
 - WireGuard VPN for RK3326 boards
 - WireGuard system service which runs [wg-quick](https://git.zx2c4.com/wireguard-tools/about/src/man/wg-quick.8) on `/userdata/system/wireguard/*.conf`
@@ -147,7 +148,7 @@
 - Linux Firmware to 20250509
 - Linux Kernel to 6.14.9
 - LLVM to 19.1.7
-- Mesa3D to 25.1.2
+- Mesa3D to 25.1.3
 - MPV to 0.40.0
 - Nvidia production driver to 575.57.08
 - Pipewire to 1.2.7
