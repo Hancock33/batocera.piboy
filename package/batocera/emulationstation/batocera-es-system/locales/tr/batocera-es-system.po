@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Options file\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-06 20:26+0300\n"
+"PO-Revision-Date: 2025-06-08 10:13+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish\n"
 "Language: tr\n"
@@ -392,7 +392,7 @@ msgstr "10x Doğal (6400x5280)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "10x Native (~3600p/6K)"
-msgstr ""
+msgstr "10x Doğal (~3600p/6K)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -417,7 +417,7 @@ msgstr "11x Doğal (7040x5808)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "11x Native (~3960p)"
-msgstr ""
+msgstr "11x Doğal (~3960p)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -512,7 +512,7 @@ msgstr "12x Doğal (7680x6336) 8K"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "12x Native (~4320p/8K)"
-msgstr ""
+msgstr "12x Doğal (~4320p/8K)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -537,7 +537,7 @@ msgstr "13."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "13x Native (~5824p)"
-msgstr ""
+msgstr "13x Doğal (~5824p)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -582,7 +582,7 @@ msgstr "14."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "14x Native (~6272p)"
-msgstr ""
+msgstr "14x Doğal (~6272p)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -632,7 +632,7 @@ msgstr "15."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "15x Native (~6720p)"
-msgstr ""
+msgstr "15x Doğal (~6720p)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -737,7 +737,7 @@ msgstr "16x MSAA"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "16x Native (~7168p)"
-msgstr ""
+msgstr "16x Doğal (~7168p)"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -832,7 +832,7 @@ msgstr "1x (~480)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "1x Native (PS2)"
-msgstr ""
+msgstr "1x Doğal (PS2)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1827,7 +1827,7 @@ msgstr "5x Doğal (~1620p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1800p/3K)"
-msgstr ""
+msgstr "5x Doğal (~1800p/3K)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2027,7 +2027,7 @@ msgstr "7x Doğal (~2520p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "7x Native (~2530p)"
-msgstr ""
+msgstr "7x Doğal (~2530p)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2212,13 +2212,15 @@ msgstr "9x Doğal (5760x4752)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "9x Native (~3240p)"
-msgstr ""
+msgstr "9x Doğal (~3240p)"
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
 "A small  number of games will ahve compatibility problems with this enabled."
 msgstr ""
+"Bu özellik etkinleştirildiğinde, az sayıda oyunda uyumluluk sorunları "
+"yaşanabilir."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -3812,7 +3814,7 @@ msgstr "ÖNYÜKLEME DİSKİ"
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "BORDER MODE"
-msgstr "SINIR MODU"
+msgstr "KENAR MODU"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -3892,7 +3894,7 @@ msgstr "Baltık"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Basic"
-msgstr ""
+msgstr "Temel"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -4809,7 +4811,7 @@ msgstr "ÇİZİMİ KIRP"
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
 msgid "CROP BORDER"
-msgstr "SINIRI KES"
+msgstr "KENARI KIRP"
 
 #. TRANSLATION: duckstation, libretro/duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, ...
 msgctxt "game_options"
@@ -4819,7 +4821,7 @@ msgstr "AŞIRI TARAMAYI KIRP"
 #. TRANSLATION: duckstation, mame, openmohaa, theforceengine
 msgctxt "game_options"
 msgid "CROSSHAIR"
-msgstr "CROSSHAIR"
+msgstr "NİŞANGAH"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -4844,7 +4846,7 @@ msgstr ""
 #. TRANSLATION: libretro/o2em
 msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
-msgstr "CRT GÖLGELENDİRME EFEKTİ"
+msgstr "CRT HAYALET EFEKTİ"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -7757,7 +7759,7 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
-msgstr ""
+msgstr "Hile dosyalarının `cheats` dizininden okunmasını sağlar."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -8149,7 +8151,7 @@ msgstr "HIZLI BLITTER (DAHA AZ UYUMLU)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "FAST CD/DVD ACCESS"
-msgstr ""
+msgstr "HIZLI CD/DVD ERİŞİMİ"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9937,6 +9939,8 @@ msgid ""
 "Helps forcing an international Japenese version to English. Unlocking more "
 "European languages etc."
 msgstr ""
+"Uluslararası Japonca sürümünü İngilizceye çevirmeye yardımcı olur. Daha "
+"fazla Avrupa dili vb. kilidini açar."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -9944,8 +9948,8 @@ msgid ""
 "Helps reduce CPU power consumption by throttling the CPU when not needed. "
 "Useful for handhelds."
 msgstr ""
-"Gerekmediğinde CPU'yu kısıtlayarak CPU güç tüketimini azaltmaya yardımcı "
-"olur. El bilgisayarları için kullanışlıdır."
+"Gerekmediğinde CPU kısıtlayarak CPU güç tüketimini azaltmaya yardımcı olur. "
+"El bilgisayarları için kullanışlıdır."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -9990,12 +9994,12 @@ msgstr ""
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games use the borders."
-msgstr "Birçok oyunda sınırları gizler. Bazı oyunlar sınırları kullanır."
+msgstr "Birçok oyunda kenarları gizler. Bazı oyunlar kenarları kullanır."
 
 #. TRANSLATION: libretro/bluemsx, libretro/fuse, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."
-msgstr "Birçok oyunda sınırları gizler. Bazı oyunlar sınırları kullandı."
+msgstr "Birçok oyunda kenarları gizler. Bazı oyunlar kenarları kullanır."
 
 #. TRANSLATION: amiberry, citron, libretro/fceumm, libretro/mesen, libretro/mesens, ...
 msgctxt "game_options"
@@ -10850,7 +10854,7 @@ msgstr "Tuş takımı"
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
 msgid "Keypad 3button"
-msgstr "Tuş takımı 3Tuş"
+msgstr "Tuş takımı 3tuş"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -10929,7 +10933,7 @@ msgstr "DİL"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
-msgstr ""
+msgstr "DİL KİLİDİNİ AÇ"
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -11189,7 +11193,7 @@ msgstr "Lihtenştayn"
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Light (load times)"
-msgstr "Hafif (yük süreleri)"
+msgstr "Hafif (yükleme süreleri)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -11254,7 +11258,7 @@ msgstr ""
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "Limit FPS to reduce high CPU usage."
-msgstr "Yüksek CPU kullanımını azaltmak için FPS'yi sınırlayın."
+msgstr "Yüksek CPU kullanımını azaltmak için FPS sınırlayın."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -11970,7 +11974,7 @@ msgstr "Megadrive"
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
 msgid "Megadrive (8 Buttons)"
-msgstr "Megadrive (8 Tuş)"
+msgstr "Megadrive (8 Tuşlu)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -12115,12 +12119,12 @@ msgstr "Tek Renkli"
 #. TRANSLATION: libretro/mesen, libretro/mesens
 msgctxt "game_options"
 msgid "Monochrome (Blargg)"
-msgstr "Tek renkli (Blargg)"
+msgstr "Tek Renkli (Blargg)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Monochrome High-Resolution"
-msgstr "Tekrenk Yüksek-Çözünürlük"
+msgstr "Tek Renkli Yüksek-Çözünürlük"
 
 #. TRANSLATION: libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -14932,7 +14936,7 @@ msgstr "TARAMA ÇİZGİLERİ"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "SCREEN BORDERS"
-msgstr "EKRAN SINIRLARI"
+msgstr "EKRAN KENARLARI"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -15432,7 +15436,7 @@ msgstr ""
 #. TRANSLATION: libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "SUPER GB BORDERS"
-msgstr "SUPER GB SINIRLARI"
+msgstr "SUPER GB KENARLARI"
 
 #. TRANSLATION: libretro/vice_xpet
 msgctxt "game_options"
@@ -15482,7 +15486,7 @@ msgstr "SENKRONİZE İŞLEYİCİ"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "SYSTEM"
-msgstr ""
+msgstr "SİSTEM"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -18222,7 +18226,7 @@ msgstr "Doymamış v6 (FirebrandX)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Unscaled"
-msgstr ""
+msgstr "Ölçeklenmemiş"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18985,12 +18989,12 @@ msgstr "GENİŞ EKRAN"
 #. TRANSLATION: libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
 msgid "WIDESCREEN CHEAT (PRIORITY)"
-msgstr "GENİŞ EKRAN HİLE (ÖNCELİK)"
+msgstr "GENİŞ EKRAN HİLE (ÖNCELİKLİ)"
 
 #. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/duckstation, ...
 msgctxt "game_options"
 msgid "WIDESCREEN HACK (GLITCHY)"
-msgstr "GENİŞ EKRAN GELİŞTİRMESİ (HATALI)"
+msgstr "GENİŞ EKRAN GELİŞTİRMESİ (KUSURLU)"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -19290,7 +19294,7 @@ msgstr "Yemen"
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid "You can hide the pointer on touchscreen devices."
-msgstr "Dokunmatik aygıtlarda işaretçiyi kapatabilirsiniz."
+msgstr "Dokunmatik ekranlı cihazlarda işaretçiyi gizleyebilirsiniz."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -19300,7 +19304,7 @@ msgstr "ZCULL DOĞRULUĞU"
 #. TRANSLATION: libretro/bluemsx, libretro/fuse, vice
 msgctxt "game_options"
 msgid "ZOOM (HIDE BORDERS)"
-msgstr "YAKINLAŞ (SINIRLARI GİZLE)"
+msgstr "YAKINLAŞ (KENARLARI GİZLE)"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -19351,7 +19355,7 @@ msgstr "Siyah kenarlıkları gizlemek için yakınlaştırır."
 msgctxt "game_options"
 msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr ""
-"Siyah kenarlıkları gizlemek için yakınlaştırır. Sınırlar oyun başına "
+"Siyah kenarlıkları gizlemek için yakınlaştırır. Kenarlıklar oyuna göre "
 "farklıdır."
 
 #. TRANSLATION: citron
@@ -20136,7 +20140,7 @@ msgstr "sarı/mavi"
 
 #~ msgctxt "game_options"
 #~ msgid "Keypad to joyport mappings for 2 players."
-#~ msgstr "2 oyuncu için tuş takımından joyport'a eşlemeler."
+#~ msgstr "İki oyuncu için tuş takımı ile joyport eşleştirmeleri."
 
 #~ msgctxt "game_options"
 #~ msgid "Lunar Ignore Brightness Color Fix"
@@ -20384,7 +20388,7 @@ msgstr "sarı/mavi"
 
 #~ msgctxt "game_options"
 #~ msgid "WiiMote + Classic Controller Pro"
-#~ msgstr "WiiMote + Klasik Controller Pro"
+#~ msgstr "WiiMote + Klasik Kontolcü Pro"
 
 #~ msgctxt "game_options"
 #~ msgid "WiiMote + Nunchuk"
