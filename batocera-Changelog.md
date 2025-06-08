@@ -29,6 +29,7 @@
 - Add RTL8852AU wifi device support (x86_64)
 - Add OrangePi 5 Ultra board support
 - Add OrangePi 5 Max board support
+- Add RetroidPocket Mini v2 (thanks Spycat)
 ### Added
 - WireGuard VPN for RK3326 boards
 - WireGuard system service which runs [wg-quick](https://git.zx2c4.com/wireguard-tools/about/src/man/wg-quick.8) on `/userdata/system/wireguard/*.conf`
@@ -66,6 +67,7 @@
 - OpenMOHAA to play Medal of Honor: Allied Assault including Spearhead and Breakthrough expansions
 - WiringOP-Python for OrangePi board GPIO scripting.
 ### Fixed
+- Fix CD System BRAM core option for Genesis Plus GX to use the per game setting
 - Fix some problems in ES and Batocera with IPv6 networks
 - Fix ES behavior with usb network tethering
 - Fix handling of luks.enabled setting to allow disabling LUKS integration
@@ -74,6 +76,7 @@
 - Fix MAME config for apple2p, apple2e, apple2ee
 - Fix GSPlus rom config and speed
 - DualShock 4 controller on Odroid XU4
+- Internal bezels still enabled for Libretro cores when a widescreen ratio selected
 ### Changed / Improved
 - Significantly improve ES shutdown time, especially with large and medium collections
 - BigPEmu now supports .bigpimg CD images
@@ -111,7 +114,7 @@
 - OpenMSX to release 20.0
 - PCSX2 to v2.3.185
 - Play! to 4th Feb build
-- PPSSPP to 28th February build
+- PPSSPP to 1.19
 - Raze to 1.11.0
 - RetroArch to v1.21.0
 - Ruffle to nightly-2025-02-12
@@ -127,7 +130,7 @@
 - Vice to 3.9
 - Vita3k to 3rd of March 2025 build
 - Xash3d-fwgs to 20th of Feb build
-- Xemu to v0.8.49
+- Xemu to v0.8.68
 - Xenia to build 5979274 (Jan 24, 2025)
 ### System
 - Bluez to 5.82
@@ -145,14 +148,14 @@
 - Linux Firmware to 20250509
 - Linux Kernel to 6.14.9
 - LLVM to 19.1.7
-- Mesa3D to 25.1.1
+- Mesa3D to 25.1.3
 - MPV to 0.40.0
 - Nvidia production driver to 575.57.08
 - Pipewire to 1.2.7
 - QT6 to 6.8.1
 - RClone to v1.69.1
-- RPi firmware to match Kernel 6.12.21
-- RPi Kernel to 6.12.21
+- RPi firmware to match Kernel 6.12.25
+- RPi Kernel to 6.12.25
 - Ryzenadj to v0.16.0
 - SDL2 to 2.30.11
 - Sound Open Firmware to 2025.01

@@ -3,8 +3,8 @@
 # gzdoom
 #
 ################################################################################
-# Version: Commits on May 28, 2025
-GZDOOM_VERSION = e7d0991798144b02133c1c03eb823e35fdfc31f8
+# Version: Commits on Jun 07, 2025
+GZDOOM_VERSION = bfefd2363e40795d47e3fa87c5a9babdb3dc6619
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = bzip2 fluidsynth host-gzdoom libglew libglu libvpx mesa3d openal sdl2 webp zmusic
@@ -33,7 +33,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
         GZDOOM_DEPENDENCIES += xlib_libX11 vulkan-headers vulkan-loader
         GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
         GZDOOM_CONF_OPTS += -DVULKAN_USE_XLIB=ON -DVULKAN_USE_WAYLAND=OFF
-    else ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_SWAY),y)
+    else ifeq ($(BR2_PACKAGE_WAYLAND),y)
         GZDOOM_DEPENDENCIES += wayland vulkan-headers vulkan-loader
         GZDOOM_CONF_OPTS += -DHAVE_VULKAN=ON
         GZDOOM_CONF_OPTS += -DVULKAN_USE_XLIB=OFF -DVULKAN_USE_WAYLAND=ON

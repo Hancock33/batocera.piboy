@@ -45,7 +45,6 @@ rockpro64-blobs.mk
 rpi-firmware.mk
 rtmidi.mk
 ruffle.mk
-ryujinx.mk
 ryzenadj.mk
 sockpp.mk
 sound-open-firmware.mk
@@ -58,6 +57,7 @@ vkd3d-proton.mk
 wildmidi.mk
 winbtrfs.mk
 wsdd.mk
+wtype.mk
 wxwidgets.mk
 x16emu.mk
 xbox-xcloud-client.mk
