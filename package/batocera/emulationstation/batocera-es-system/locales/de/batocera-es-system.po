@@ -2213,7 +2213,7 @@ msgstr "9x Nativ (~3240p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
-"A small  number of games will ahve compatibility problems with this enabled."
+"A small  number of games will have compatibility problems with this enabled."
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
@@ -9958,11 +9958,9 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
-"Helps forcing an international Japenese version to English. Unlocking more "
+"Helps forcing an international Japanese version to English. Unlocking more "
 "European languages etc."
 msgstr ""
-"Erzwingt Englisch in internationalen japanischen Versionen und schaltet ggf. "
-"weitere europäische Sprachen frei."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -20193,6 +20191,14 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "GamePad + 4 Sideway Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Helps forcing an international Japenese version to English. Unlocking "
+#~ "more European languages etc."
+#~ msgstr ""
+#~ "Erzwingt Englisch in internationalen japanischen Versionen und schaltet "
+#~ "ggf. weitere europäische Sprachen frei."
 
 #~ msgctxt "game_options"
 #~ msgid ""

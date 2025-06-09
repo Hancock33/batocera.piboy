@@ -2217,10 +2217,8 @@ msgstr "9x Doğal (~3240p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
-"A small  number of games will ahve compatibility problems with this enabled."
+"A small  number of games will have compatibility problems with this enabled."
 msgstr ""
-"Bu özellik etkinleştirildiğinde, az sayıda oyunda uyumluluk sorunları "
-"yaşanabilir."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -9936,11 +9934,9 @@ msgstr "Çok hızlı olan veya hataları olan oyunlara yardım et."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
-"Helps forcing an international Japenese version to English. Unlocking more "
+"Helps forcing an international Japanese version to English. Unlocking more "
 "European languages etc."
 msgstr ""
-"Uluslararası Japonca sürümünü İngilizceye çevirmeye yardımcı olur. Daha "
-"fazla Avrupa dili vb. kilidini açar."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -19845,6 +19841,14 @@ msgstr "sarı/mavi"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "A small  number of games will ahve compatibility problems with this "
+#~ "enabled."
+#~ msgstr ""
+#~ "Bu özellik etkinleştirildiğinde, az sayıda oyunda uyumluluk sorunları "
+#~ "yaşanabilir."
+
+#~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
 #~ msgstr "ANALOG ÖLÜ BÖLGE"
 
@@ -20105,6 +20109,14 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "OyunKolu + 4 Sideway Wiimote"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Helps forcing an international Japenese version to English. Unlocking "
+#~ "more European languages etc."
+#~ msgstr ""
+#~ "Uluslararası Japonca sürümünü İngilizceye çevirmeye yardımcı olur. Daha "
+#~ "fazla Avrupa dili vb. kilidini açar."
 
 #~ msgctxt "game_options"
 #~ msgid "INTEGER SCALE"

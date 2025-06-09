@@ -2214,7 +2214,7 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
-"A small  number of games will ahve compatibility problems with this enabled."
+"A small  number of games will have compatibility problems with this enabled."
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
@@ -9906,7 +9906,7 @@ msgstr "Aiuta i giochi che sono troppo veloci o che hanno bugs."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
-"Helps forcing an international Japenese version to English. Unlocking more "
+"Helps forcing an international Japanese version to English. Unlocking more "
 "European languages etc."
 msgstr ""
 
