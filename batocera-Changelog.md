@@ -118,7 +118,7 @@
 - Raze to 1.11.0
 - RetroArch to v1.21.0
 - Ruffle to nightly-2025-02-12
-- RPCS3 to v0.0.35
+- RPCS3 to v0.0.37
 - ScummVM to v2.9.0
 - Snes9x to 24th Jan build
 - Solarus Engine to 18th Jan build
@@ -157,7 +157,7 @@
 - RPi firmware to match Kernel 6.12.25
 - RPi Kernel to 6.12.25
 - Ryzenadj to v0.16.0
-- SDL2 to 2.30.11
+- SDL2 to 2.32.8
 - Sound Open Firmware to 2025.01
 - Syncthing to 1.29.3
 - VKD3D-Proton to 2.14.1
