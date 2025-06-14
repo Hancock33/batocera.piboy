@@ -403,7 +403,7 @@ Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.16|Mar 03, 2025
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|6fe51538a9082e61a982c085f539f1d31c7c72e3|Apr 25, 2025
 Libraries|[uthash](http://github.com/troydhanson/uthash)|v2.3.0|Feb 23, 2021
 Libraries|[wiringop-python](https://github.com/orangepi-xunlong/wiringOP-Python.git)|152a8c14a2273bfc5aeed3ed3f36d41aef002b45|Mar 13, 2025
-Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.8.1|May 25, 2025
+Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.0|Jun 06, 2025
 Looks|[adwaita-icon-theme-light](http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/)|$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0|Sep 10, 2021
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|016275c5785873c91adec0bb8397512a7f0a7a46|Feb 14, 2025
 Looks|[nanum_font](http://github.com/bulzipke/nanum-font)|2385eb085e4bf326590a2db6d4514e8477d9922f|Feb 03, 2025

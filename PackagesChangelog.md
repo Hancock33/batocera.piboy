@@ -90,6 +90,7 @@ Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|7c1c5662046fd7a309
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.30.0-rc.1|Jun 07, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c90d1100965ec5a072d95c0c257f853a6673ca74|Jun 07, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|dee42b6e7133491f00d72d1b6b418ac87ad87bb7|Jun 06, 2025
+Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.0|Jun 06, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|43d31406ab1009285c5abce254efd6e11be4aeba|Jun 06, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|47bc3f3af2c6f0b5cd556f87d60fddf60bb9d326|Jun 06, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|205cf0e8a4150b31e0392ef09d4f4f3a127420a5|Jun 06, 2025
@@ -129,7 +130,6 @@ Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|7117178c2dd56df32b653
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|1141733f88c4693a35e1f94cf0e091142e845666|May 26, 2025
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|05cee5f56c37eaa3a243e0906d2082b025598056|May 26, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|663d43924abf6fd7620de6bf25c009ce5b30ab83|May 26, 2025
-Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.2.8.1|May 25, 2025
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|98df0e76b212d31bfb465f5e7adb161260d21350|May 25, 2025
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|f048f7bd52748bc14e9d065b4a5eb6a54c714b90|May 25, 2025
 Ports|[avp](http://github.com/atsb/NakedAVP)|eaff12241fd9fff8e5e5e6d50b6d7bde4482241b|May 24, 2025
