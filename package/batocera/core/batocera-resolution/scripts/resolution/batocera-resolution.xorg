@@ -63,7 +63,7 @@ f_minTomaxResolution() {
     else
         echo "Could not find any ideal mode with a refresh rate >= 59Hz." >> "$log"
     fi
-    
+
     # Priority 1: An argument was passed to the script
     if [ -n "$MWIDTH" ] && [ -n "$MHEIGHT" ] && [ "$MWIDTH" -ne 0 ] && [ "$MHEIGHT" -ne 0 ]; then
         echo "Requested $MWIDTH x $MHEIGHT" >> "$log"
