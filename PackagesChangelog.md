@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.10|Jun 14, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250614|Jun 14, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250614|Jun 14, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|732e37585bdac6d4013a5ae30167815965fe1745|Jun 13, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|f3fe6f3455334a2ec858c9e9059a03cb9b9992e3|Jun 13, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|94b88fad23eb3998c7a3660d2462e7f1687a0058|Jun 13, 2025
@@ -20,9 +23,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|aeb4fa8329a3756dcb15f
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|717cccc84cd2270bb292abf34c3e8a412515236a|Jun 13, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|45695dfa93bfb95d315d423d9ee4d5a782601e4a|Jun 13, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|db256c34c61f1eb3f456f3d8a2769c3abad4a4e4|Jun 13, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250613|Jun 13, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|75a8193e6264a1de107faf4fa29f13d457d7049b|Jun 13, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250613|Jun 13, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a1631ac0a01545b395946c6d0970139a10340d79|Jun 13, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|47cf5aa2ac5046170852cbfc21849288f9523e11|Jun 13, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|47cf5aa2ac5046170852cbfc21849288f9523e11|Jun 13, 2025
@@ -97,7 +98,6 @@ Emulators|[clk](https://github.com/TomHarte/CLK)|c7dd4526c154ddd96e79176a28143e3
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|58fe069c61b6c94c899f83ff17cffdf2612b0f9a|Jun 02, 2025
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|5ea062a323aea8fdc49499d5c8aea9d575deb1fe|Jun 02, 2025
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/66/93/0d39e35e87159c8c1be45e175ddc3cc2e81805d524d0d612b610e4f01f45)|4.1.12|Jun 02, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.9|Jun 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.06|Jun 01, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|ba51502fdb68118695e85a51e13b833007dcfb23|Jun 01, 2025
 Utils|[wsdd](http://github.com/christgau/wsdd)|v0.9|Jun 01, 2025
