@@ -54,6 +54,10 @@ endif
 define DUCKSTATION_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/duckstation
 	cp -R $(@D)/buildroot-build/bin $(TARGET_DIR)/usr/bin/duckstation
+	rm -r $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSans*.ttf
+	ln -sf /usr/share/fonts/truetype/noto/NotoSansJP-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansJP-VariableFont_wght.ttf
+	ln -sf /usr/share/fonts/truetype/noto/NotoSansKR-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansKR-VariableFont_wght.ttf
+	ln -sf /usr/share/fonts/truetype/noto/NotoSansSC-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansSC-VariableFont_wght.ttf
 endef
 
 define DUCKSTATION_VERSION_DETAILS
