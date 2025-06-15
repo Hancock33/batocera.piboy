@@ -2,7 +2,9 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f5c32802022a36f37e611ead287d35075b2acbcd|Jun 15, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-06-15|Jun 15, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250615|Jun 15, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|bb0551bf1ed671086a70400cc5e73e8db1cf29cc|Jun 15, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250615|Jun 15, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8546fe09c2c53a25e311d142fcdc71b46edc62db|Jun 15, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|536b12633d56ae38cdc440a9804e9f245728bec1|Jun 15, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|bfffb29c8386df00d8674852d654b75c0ae0869c|Jun 14, 2025
@@ -23,9 +25,7 @@ Network|[rtl8852au](http://github.com/natimerry/rtl8852au)|708c17801ba3f83734e6d
 Ports|[box64](http://github.com/ptitseb/box64)|038835c81e3034cc84ec668beb23582769041d61|Jun 14, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|a5f7d9596a52cdf1bc8a9b3d17de20521b61aba3|Jun 14, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.10|Jun 14, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250614|Jun 14, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|79b8ea1035256740c22fb1686fa0c77d201fe45f|Jun 14, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250614|Jun 14, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|e981064e5cdb999c024e4c133136ceb946cc493d|Jun 14, 2025
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|ab365cd7fe5889ac2d55ebaa075b714e755c39c6|Jun 14, 2025
 Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|4b2ee1ac976f470bde21a0d0e24d52cf27b4608c|Jun 14, 2025
