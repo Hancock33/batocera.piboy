@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Jun 08, 2025
-DUCKSTATION_VERSION = 5eb8578edcbb25c30b20a6a331bc693f70ab659a
+# Version: Commits on Jun 15, 2025
+DUCKSTATION_VERSION = f5c32802022a36f37e611ead287d35075b2acbcd
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch plutosvg sdl3 stenzek-shaderc webp zstd
@@ -54,6 +54,10 @@ endif
 define DUCKSTATION_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/duckstation
 	cp -R $(@D)/buildroot-build/bin $(TARGET_DIR)/usr/bin/duckstation
+	rm -r $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSans*.ttf
+	ln -sf /usr/share/fonts/truetype/noto/NotoSansJP-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansJP-VariableFont_wght.ttf
+	ln -sf /usr/share/fonts/truetype/noto/NotoSansKR-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansKR-VariableFont_wght.ttf
+	ln -sf /usr/share/fonts/truetype/noto/NotoSansSC-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansSC-VariableFont_wght.ttf
 endef
 
 define DUCKSTATION_VERSION_DETAILS

@@ -3,8 +3,8 @@
 # stk
 #
 ################################################################################
-# Version: Commits on Jun 01, 2025
-STK_VERSION = 829873f52cfce76875df5b72f843a81fc780391c
+# Version: Commits on Jun 13, 2025
+STK_VERSION = 45695dfa93bfb95d315d423d9ee4d5a782601e4a
 STK_SITE = $(call github,supertuxkart,stk-code,$(STK_VERSION))
 STK_DEPENDENCIES = sdl2 sdl2_mixer shaderc
 STK_LICENSE = GPL-2.0

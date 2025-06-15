@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Jun 07, 2025
-DEVILUTIONX_VERSION = 0b6e99fa528e66bba6ca2923ed6e8ba185cfec38
+# Version: Commits on May 27, 2025
+DEVILUTIONX_VERSION = 3c188fb9dd7b6b677af410f658cbe9238381c577
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_DEPENDENCIES = bzip2 fmt libpng libsodium lpeg lua lua-lpeg-patterns luafilesystem luasec luasocket sdl2 sdl2_image
@@ -28,7 +28,7 @@ define DEVILUTIONX_INSTALL_TARGET_ASSETS
 	mkdir -p $(TARGET_DIR)/usr/bin/diablo
 	mv $(TARGET_DIR)/usr/bin/devilutionx	$(TARGET_DIR)/usr/bin/diablo
 	cp -a $(@D)/buildroot-build/assets		$(TARGET_DIR)/usr/bin/diablo
-	cp -a $(@D)/buildroot-build/_deps/sheenbidi-build/libsheenbidi.so 	$(TARGET_DIR)/usr/lib
+	cp -a $(@D)/buildroot-build/_deps/sheenbidi-build/libSheenBidi.so* $(TARGET_DIR)/usr/lib
 endef
 
 DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_ASSETS

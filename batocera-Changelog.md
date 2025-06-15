@@ -26,7 +26,6 @@
 - Initial support for Fusion P.I.G.S. light gun
 - Initial support for OneHit light gun (AimTrak clone)
 - Ayn Odin2 and Odin2 Portal support
-- Add RTL8852AU wifi device support (x86_64)
 - Add OrangePi 5 Ultra board support
 - Add OrangePi 5 Max board support
 - Add RetroidPocket Mini v2 (thanks Spycat)
@@ -118,7 +117,7 @@
 - Raze to 1.11.0
 - RetroArch to v1.21.0
 - Ruffle to nightly-2025-02-12
-- RPCS3 to v0.0.35
+- RPCS3 to v0.0.37
 - ScummVM to v2.9.0
 - Snes9x to 24th Jan build
 - Solarus Engine to 18th Jan build
@@ -131,7 +130,7 @@
 - Vita3k to 3rd of March 2025 build
 - Xash3d-fwgs to 20th of Feb build
 - Xemu to v0.8.68
-- Xenia to build 5979274 (Jan 24, 2025)
+- Xenia to build 1d7973a (June 10, 2025)
 ### System
 - Bluez to 5.82
 - BTop to 1.4.0
@@ -146,7 +145,7 @@
 - Kodi to 21.2
 - LibDRM to 2.4.124
 - Linux Firmware to 20250509
-- Linux Kernel to 6.14.9
+- Linux Kernel to 6.15.2
 - LLVM to 19.1.7
 - Mesa3D to 25.1.3
 - MPV to 0.40.0
@@ -157,7 +156,7 @@
 - RPi firmware to match Kernel 6.12.25
 - RPi Kernel to 6.12.25
 - Ryzenadj to v0.16.0
-- SDL2 to 2.30.11
+- SDL2 to 2.32.8
 - Sound Open Firmware to 2025.01
 - Syncthing to 1.29.3
 - VKD3D-Proton to 2.14.1
