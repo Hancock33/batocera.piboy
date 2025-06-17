@@ -159,6 +159,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'xenia': ('xenia.xeniaGenerator', 'XeniaGenerator'),
     'xenia-canary': ('xenia.xeniaGenerator', 'XeniaGenerator'),
     'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
+    'ymir': ('ymir.ymirGenerator', 'YmirGenerator'),
 }
 
 def get_generator(emulator: str) -> Generator:
