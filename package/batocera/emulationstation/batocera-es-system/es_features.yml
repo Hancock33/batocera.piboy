@@ -10169,7 +10169,7 @@ ppsspp:
         curves_quality:
             submenu: SPEED HACKS
             prompt: SPLINE/BEZIER CURVES QUALITY
-            description: Allows reducing the visual quality of these curves for higher performance..
+            description: Allows reducing the visual quality of these curves for higher performance.
             choices:
                 "Low":    0
                 "Medium": 1

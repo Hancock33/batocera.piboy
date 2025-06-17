@@ -12060,7 +12060,7 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Allows reducing the visual quality of these curves for higher performance.."
+"Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
 
 #. TRANSLATION: ppsspp

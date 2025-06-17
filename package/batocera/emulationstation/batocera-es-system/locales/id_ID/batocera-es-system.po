@@ -3026,7 +3026,7 @@ msgstr "Terima perlindungan membuat games tanpa informasi subchannel"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Allows reducing the visual quality of these curves for higher performance.."
+"Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
 
 #. TRANSLATION: mame
@@ -5269,6 +5269,11 @@ msgctxt "game_options"
 msgid "Choose console language. Not all games may support the language choice."
 msgstr ""
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose deinterlace option."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -6059,6 +6064,11 @@ msgctxt "game_options"
 msgid "DEFAULT POWER ON RAM STATE"
 msgstr "TENAGA STANDAR PADA STATUS RAM"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "DEINTERLACE"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
@@ -6382,6 +6392,11 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Darken"
+msgstr ""
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "De-Interlaced"
 msgstr ""
 
 #. TRANSLATION: libretro/melondsds
@@ -10297,6 +10312,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Integer Scale"
 msgstr "Skala Bilangan Bulat"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"

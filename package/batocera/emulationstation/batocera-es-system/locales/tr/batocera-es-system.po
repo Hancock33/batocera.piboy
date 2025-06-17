@@ -3038,10 +3038,8 @@ msgstr "Alt kanal bilgisi olmadan korumalı oyunların yüklenmesine izin ver."
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Allows reducing the visual quality of these curves for higher performance.."
+"Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
-"Daha yüksek performans için bu eğrilerin görsel kalitesinin azaltılmasına "
-"olanak tanır."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -5307,6 +5305,11 @@ msgctxt "game_options"
 msgid "Choose console language. Not all games may support the language choice."
 msgstr "Konsol dilini seçin. Tüm oyunlar dil seçimini desteklemeyebilir."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose deinterlace option."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -6123,6 +6126,11 @@ msgctxt "game_options"
 msgid "DEFAULT POWER ON RAM STATE"
 msgstr "VARSAYILAN GÜÇ AÇIK RAM DURUMU"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "DEINTERLACE"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
@@ -6447,6 +6455,11 @@ msgstr "Koyu Mor"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "Karartma"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "De-Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10452,6 +10465,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Integer Scale"
 msgstr "Tamsayı Ölçeği"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -19875,6 +19893,14 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "All VMUs"
 #~ msgstr "Tüm VMU"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Allows reducing the visual quality of these curves for higher "
+#~ "performance.."
+#~ msgstr ""
+#~ "Daha yüksek performans için bu eğrilerin görsel kalitesinin azaltılmasına "
+#~ "olanak tanır."
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."

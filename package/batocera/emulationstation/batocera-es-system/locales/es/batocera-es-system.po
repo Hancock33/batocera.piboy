@@ -3037,7 +3037,7 @@ msgstr "Permite cargar juegos protegidos sin información de subcanal."
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Allows reducing the visual quality of these curves for higher performance.."
+"Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
 
 #. TRANSLATION: mame
@@ -5316,6 +5316,11 @@ msgid "Choose console language. Not all games may support the language choice."
 msgstr ""
 "Elige el idioma de la consola. Es posible que no todos los juegos lo admitan."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose deinterlace option."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -6135,6 +6140,11 @@ msgctxt "game_options"
 msgid "DEFAULT POWER ON RAM STATE"
 msgstr "POTENCIA PREDETERMINADA SOBRE EL ESTADO DE RAM"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "DEINTERLACE"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
@@ -6459,6 +6469,11 @@ msgstr "Morado oscuro"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "Oscurecer"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "De-Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10480,6 +10495,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Integer Scale"
 msgstr "Escalado por enteros"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
