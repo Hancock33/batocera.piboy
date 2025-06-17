@@ -874,7 +874,7 @@ namco:
 
 namco22:
   name:                 Namco System 22
-  manufacturer:         Namco
+  manufacturer:         Arcade
   release:              1992
   hardware:             arcade
   extensions:           [zip, 7z]
