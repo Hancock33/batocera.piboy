@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[ymir](https://github.com/StrikerX3/Ymir)|b6c6b5305cc7d395ce9578d0013e6c75c6255d04|Jun 16, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|8f27bf84bc63d6cf467864061bea41351b1082da|Jun 15, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f5c32802022a36f37e611ead287d35075b2acbcd|Jun 15, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5f92f80a15169db456cdd8ae48be2350dae5bedf|Jun 15, 2025

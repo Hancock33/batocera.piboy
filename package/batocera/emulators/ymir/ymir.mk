@@ -1,4 +1,4 @@
-#
+################################################################################
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
 #
@@ -10,14 +10,13 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 # YOU MUST KEEP THIS HEADER AS IT IS
-#
 ################################################################################
 #
 # ymir
 #
 ################################################################################
-# Version: Commits on Jun 14, 2025
-YMIR_VERSION = d93546f99e59b234f7e09413a7cb5fd233eba884
+# Version: Commits on Jun 16, 2025
+YMIR_VERSION = b6c6b5305cc7d395ce9578d0013e6c75c6255d04
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD=git
 YMIR_GIT_SUBMODULES=YES
@@ -33,7 +32,6 @@ YMIR_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
 YMIR_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
 YMIR_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++"
 
-YMIR_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 YMIR_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 YMIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 YMIR_CONF_OPTS += -DYmir_DEV_BUILD=OFF

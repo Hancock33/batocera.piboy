@@ -84,14 +84,14 @@ class YmirGenerator(Generator):
                     "ForceAspectRatio": True
                 }
             }
-        
+
         # --- Apply Batocera Specific Overrides ---
 
         # General
         general_config = config.setdefault("General", {})
         # adds [General.PathOverrides]
         path_overrides = general_config.setdefault("PathOverrides", {})
-        
+
         # Set the path values.
         path_overrides["BackupMemory"] = ''
         path_overrides["Dumps"] = ''
