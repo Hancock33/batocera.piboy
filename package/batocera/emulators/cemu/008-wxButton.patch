@@ -1,0 +1,12 @@
+diff --git a/src/gui/GettingStartedDialog.cpp b/src/gui/GettingStartedDialog.cpp
+index 22426cf..b613c38 100644
+--- a/src/gui/GettingStartedDialog.cpp
++++ b/src/gui/GettingStartedDialog.cpp
+@@ -5,6 +5,7 @@
+ #include <wx/statbox.h>
+ #include <wx/msgdlg.h>
+ #include <wx/radiobox.h>
++#include <wx/button.h>
+ 
+ #include "config/ActiveSettings.h"
+ #include "gui/CemuApp.h"
