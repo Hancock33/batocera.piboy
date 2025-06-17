@@ -15,8 +15,8 @@
 # ymir
 #
 ################################################################################
-# Version: Commits on Jun 16, 2025
-YMIR_VERSION = b6c6b5305cc7d395ce9578d0013e6c75c6255d04
+# Version: Commits on Jun 17, 2025
+YMIR_VERSION = b17ce98e6f4d347d048346a24f61abf4bad2009d
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD=git
 YMIR_GIT_SUBMODULES=YES
@@ -49,8 +49,7 @@ endif
 
 define YMIR_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -m 0755 $(@D)/buildroot-build/apps/ymir-sdl3/ymir-sdl3-* \
-	    $(TARGET_DIR)/usr/bin/ymir
+	$(INSTALL) -m 0755 $(@D)/buildroot-build/apps/ymir-sdl3/ymir-sdl3-* $(TARGET_DIR)/usr/bin/ymir
 endef
 
 $(eval $(cmake-package))

@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Jun 15, 2025
-DOSBOX_STAGING_VERSION = 8f27bf84bc63d6cf467864061bea41351b1082da
+# Version: Commits on Jun 17, 2025
+DOSBOX_STAGING_VERSION = f8c24f87d7fb0f41c2b7ef2a1aa97d16a52206be
 DOSBOX_STAGING_BRANCH = release/0.82.x
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = iir libpng libogg libvorbis opus opusfile
