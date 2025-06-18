@@ -16,6 +16,7 @@
   when using the **standalone** emulator because standalone did not remove `(Disc X)` from the ROM name when saving VMUs.
   If you were using per-game saves with standalone, be sure to launch your multi-disc game with the disc you most recently
   played so its VMU is renamed using the game ID.
+- Bluetooth Xbox compatible controllers may need to be reconfigured under EmulationStation due to the driver change to `hid-microsoft`.
 ### Hardware
 - Add OrangePi 4a board support
 - Add OrangePi 3b board support
@@ -77,6 +78,7 @@
 - DualShock 4 controller on Odroid XU4
 - Internal bezels still enabled for Libretro cores when a widescreen ratio selected
 - Centering of PCSX2 messages
+- Xbox compatible bluetooth controllers not working in Steam.
 ### Changed / Improved
 - Significantly improve ES shutdown time, especially with large and medium collections
 - BigPEmu now supports .bigpimg CD images
@@ -86,10 +88,11 @@
 - Libretro-virtualjaguar core can now load .zip ROMs
 - Updated BlamCon code to new firmware (now compatible with 4 light guns)
 - Xenia now uses Wine-Proton for more compatibility (i.e. Halo 4)
+- Moved to the `hid-microsoft` driver for Xbox compatible Bluetooth controllers
 ### Updated
 - Amiberry to v7.0.4
 - AppleWin to 8th of Feb build
-- BigPEmu to v118
+- BigPEmu to 1.19
 - Cemu to 2.6
 - DevilutionX to 1.5.4
 - Dolphin-Emu to 2503a-328
@@ -108,18 +111,20 @@
 - Libretro-Kronos to 2.7.0
 - Libretro-MAME to 0.277
 - Libretro-Play! 4th Feb build
-- Libretro-PPSSPP to 28th February build
+- Libretro-PPSSPP v1.19.2
+- Libretro-ScummVM to 3rd June 2025 build
 - Libretro-Wasm4 to v2.7.1
 - MelonDS to 17th Jan build
 - OpenMSX to release 20.0
 - PCSX2 to v2.3.420
 - Play! to 4th Feb build
-- PPSSPP to 1.19
+- PPSSPP to v1.19.2
+- Play! to 0.70
 - Raze to 1.11.0
 - RetroArch to v1.21.0
 - Ruffle to nightly-2025-02-12
 - RPCS3 to v0.0.37
-- ScummVM to v2.9.0
+- ScummVM to v2.9.1
 - Snes9x to 24th Jan build
 - Solarus Engine to 18th Jan build
 - Sonic3 Air to v25.02.15.0-test
@@ -130,7 +135,7 @@
 - Vice to 3.9
 - Vita3k to 3rd of March 2025 build
 - Xash3d-fwgs to 20th of Feb build
-- Xemu to v0.8.68
+- Xemu to v0.8.73
 - Xenia to build 1d7973a (June 10, 2025)
 ### System
 - Bluez to 5.82
@@ -150,7 +155,7 @@
 - LLVM to 19.1.7
 - Mesa3D to 25.1.3
 - MPV to 0.40.0
-- Nvidia production driver to 575.57.08
+- Nvidia production driver to 575.64
 - Pipewire to 1.2.7
 - QT6 to 6.8.1
 - RClone to v1.69.1
