@@ -886,10 +886,10 @@ index c554ad8f246b..8a323ba824b1 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "OrangePi"),
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index 56c1c86a2c1e..191131e8f6c1 100644
+index e7688c7fdc56..b3801f8dc1d0 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
-@@ -1416,6 +1416,10 @@ config HID_KUNIT_TEST
+@@ -1418,6 +1418,10 @@ config HID_KUNIT_TEST
  
  	  If in doubt, say "N".
  
@@ -900,7 +900,7 @@ index 56c1c86a2c1e..191131e8f6c1 100644
  endmenu
  
  source "drivers/hid/bpf/Kconfig"
-@@ -1442,4 +1446,6 @@ source "drivers/hid/spi-hid/Kconfig"
+@@ -1444,4 +1448,6 @@ source "drivers/hid/spi-hid/Kconfig"
  
  source "drivers/hid/dockchannel-hid/Kconfig"
  
