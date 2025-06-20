@@ -30,6 +30,7 @@
 - Add OrangePi 5 Ultra board support
 - Add OrangePi 5 Max board support
 - Add RetroidPocket Mini v2 (thanks Spycat)
+- Add support for the Pironman5 Mini & Max cases
 ### Added
 - WireGuard VPN for RK3326 boards
 - WireGuard system service which runs [wg-quick](https://git.zx2c4.com/wireguard-tools/about/src/man/wg-quick.8) on `/userdata/system/wireguard/*.conf`
@@ -66,6 +67,7 @@
 - ShadPS4 emulator for PlayStation 4 gaming
 - OpenMOHAA to play Medal of Honor: Allied Assault including Spearhead and Breakthrough expansions
 - WiringOP-Python for OrangePi board GPIO scripting.
+- Libretro-BennuGD for compatible games
 ### Fixed
 - Fix CD System BRAM core option for Genesis Plus GX to use the per game setting
 - Fix some problems in ES and Batocera with IPv6 networks

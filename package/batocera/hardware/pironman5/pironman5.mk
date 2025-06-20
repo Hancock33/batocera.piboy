@@ -16,11 +16,10 @@ PIRONMAN5_DEPENDENCIES += python-gpiozero pm_auto sf_rpi_status rpi-eeprom
 define PIRONMAN5_INSTALL_OVERLAY
 	$(INSTALL) -D -m 0755 $(@D)/bin/pironman5 $(TARGET_DIR)/usr/bin/
 	mkdir -p $(BINARIES_DIR)/pironman5/
-	$(INSTALL) -D -m 0644 $(@D)/sunfounder-pironman5.dtbo $(BINARIES_DIR)/pironman5/
+	$(INSTALL) -D -m 0644 $(@D)/sunfounder-pironman5*.dtbo $(BINARIES_DIR)/pironman5/
 	# move the config.json
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/pironman5
-	mv $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/pironman5/config.json \
-		$(TARGET_DIR)/usr/share/batocera/datainit/system/configs/pironman5/
+	mv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/cases/pironman5/config.json $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/pironman5/
 endef
 
 PIRONMAN5_POST_INSTALL_TARGET_HOOKS = PIRONMAN5_INSTALL_OVERLAY
