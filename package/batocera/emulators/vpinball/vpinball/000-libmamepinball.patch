@@ -7,7 +7,7 @@ index d715c1b78..c67afdcd8 100644
     bass
     hidapi-hidraw
 -   pinmame
-+   -l:libpinmame.so.3.6
++   -l:libpinmame.so.3.7.0
     altsound
     dmdutil
     dof
@@ -20,7 +20,7 @@ index 6362b5e4d..b2a6391de 100644
     bass
     hidapi-hidraw
 -   pinmame
-+   -l:libpinmame.so.3.6
++   -l:libpinmame.so.3.7.0
     altsound
     dmdutil
     dof
