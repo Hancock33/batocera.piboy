@@ -12060,7 +12060,7 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Allows reducing the visual quality of these curves for higher performance.."
+"Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
 
 #. TRANSLATION: ppsspp
@@ -18267,6 +18267,26 @@ msgstr ""
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "WEAPONS BAR"
+msgstr ""
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose deinterlace option."
+msgstr ""
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "DEINTERLACE"
+msgstr ""
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Interlaced"
+msgstr ""
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "De-Interlaced"
 msgstr ""
 
 #. TRANSLATION: mugen.keys

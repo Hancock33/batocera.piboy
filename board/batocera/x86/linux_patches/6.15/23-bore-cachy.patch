@@ -618,7 +618,7 @@ index 000000000000..23aeb5649479
 +#endif // CONFIG_SYSCTL
 +#endif // CONFIG_SCHED_BORE
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index c81cf642dba0..9792da6a38d6 100644
+index d593d6612ba0..97964b8d7a02 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -96,6 +96,8 @@
@@ -630,7 +630,7 @@ index c81cf642dba0..9792da6a38d6 100644
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpu);
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpumask);
  
-@@ -8541,6 +8543,10 @@ void __init sched_init(void)
+@@ -8549,6 +8551,10 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
@@ -750,7 +750,7 @@ index 557246880a7e..c1f6219f20eb 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 6122df2b471a..d95eb42862b8 100644
+index 595a46f80810..9fef6c1f8cc7 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,8 @@
@@ -927,7 +927,7 @@ index 6122df2b471a..d95eb42862b8 100644
  	if (dequeue_entities(rq, &p->se, flags) < 0)
  		return false;
  
-@@ -9018,16 +9054,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9027,16 +9063,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -953,7 +953,7 @@ index 6122df2b471a..d95eb42862b8 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13141,6 +13186,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
+@@ -13150,6 +13195,9 @@ static void task_tick_fair(struct rq *rq, struct task_struct *curr, int queued)
  static void task_fork_fair(struct task_struct *p)
  {
  	set_task_max_allowed_capacity(p);
@@ -963,7 +963,7 @@ index 6122df2b471a..d95eb42862b8 100644
  }
  
  /*
-@@ -13251,6 +13299,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
+@@ -13260,6 +13308,10 @@ static void attach_task_cfs_rq(struct task_struct *p)
  
  static void switched_from_fair(struct rq *rq, struct task_struct *p)
  {

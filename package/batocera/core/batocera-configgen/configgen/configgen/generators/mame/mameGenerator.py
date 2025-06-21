@@ -115,7 +115,7 @@ class MameGenerator(Generator):
         if system.name == 'fmtowns' and softList == '' and (ROMS / "fmtowns" / f"{romDirname.name}.zip").exists():
             softList = 'fmtowns_cd'
 
-        commandArray: list[str | Path] =  [ "/usr/bin/mame/mame" ]
+        commandArray: list[str | Path] =  [ "/usr/bin/mame/mame", "-sound", "pipewire" ]
         # MAME options used here are explained as it's not always straightforward
         # A lot more options can be configured, just run mame -showusage and have a look
         commandArray += [ "-skip_gameinfo" ]
@@ -308,7 +308,7 @@ class MameGenerator(Generator):
                 if system.config.get_bool("ti99_32kram", True):
                     commandArray += ["-ioport:peb:slot2", "32kmem"]
                 if system.config.get_bool("ti99_speech", True):
-                    commandArray += ["-ioport:peb:slot3", "speech"]
+                    commandLine += ["-ioport", "speechsyn"]
 
             #Laser 310 Memory Expansion & Joystick
             if system.name == "laser310":

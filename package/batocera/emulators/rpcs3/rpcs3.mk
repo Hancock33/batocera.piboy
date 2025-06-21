@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jun 12, 2025
-RPCS3_VERSION = 5569c5c80350f7070f6ff5b986a7f9ceaedc4262
+# Version: Commits on Jun 19, 2025
+RPCS3_VERSION = 9c93ec0bc31bbc94ca4dce2a76ceea80da6f6554
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -36,10 +36,12 @@ RPCS3_CONF_OPTS += -DUSE_SYSTEM_OPENCV=ON
 
 ifeq ($(BR2_PACKAGE_SDL3),y)
     RPCS3_CONF_OPTS += -DUSE_SDL=ON
-    RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
+    RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=OFF
+    RPCS3_CONF_OPTS += -DUSE_FAUDIO=OFF
 else
     RPCS3_CONF_OPTS += -DUSE_SDL=OFF
     RPCS3_CONF_OPTS += -DBUILD_SDL3=OFF
+    RPCS3_CONF_OPTS += -DUSE_FAUDIO=ON
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)

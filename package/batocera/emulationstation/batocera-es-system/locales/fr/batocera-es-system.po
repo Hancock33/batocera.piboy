@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: MrMeteo <meteosto@gmail.com>\n"
+"Last-Translator: lbrpdx\n"
 "Language-Team: Batocera official\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -386,7 +386,7 @@ msgstr "10x Natif (6400x5280)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "10x Native (~3600p/6K)"
-msgstr ""
+msgstr "10x Natif (~3600p/6K)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -411,7 +411,7 @@ msgstr "11x Natif (7040x5808)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "11x Native (~3960p)"
-msgstr ""
+msgstr "11x Natif (~3960p)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -506,7 +506,7 @@ msgstr "12x Natif (7680x6336) pour 8K"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "12x Native (~4320p/8K)"
-msgstr ""
+msgstr "12x Natif (~4320p/8K)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -531,7 +531,7 @@ msgstr "13"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "13x Native (~5824p)"
-msgstr ""
+msgstr "13x Natif (~5824p)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -576,7 +576,7 @@ msgstr "14"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "14x Native (~6272p)"
-msgstr ""
+msgstr "14x Natif (~6272p)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -626,7 +626,7 @@ msgstr "15"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "15x Native (~6720p)"
-msgstr ""
+msgstr "15x Natif (~6720p)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -731,7 +731,7 @@ msgstr "16x MSAA"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "16x Native (~7168p)"
-msgstr ""
+msgstr "16x Natif (~7168p)"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -826,7 +826,7 @@ msgstr "1x (~480)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "1x Native (PS2)"
-msgstr ""
+msgstr "1x Natif (PS2)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1821,7 +1821,7 @@ msgstr "5x Natif (~1620p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1800p/3K)"
-msgstr ""
+msgstr "5x Natif (~1880p/3K)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2021,7 +2021,7 @@ msgstr "7x Natif (~2520p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "7x Native (~2530p)"
-msgstr ""
+msgstr "7x Natif (~2530p)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2206,13 +2206,14 @@ msgstr "9x Natif (5760x4752)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "9x Native (~3240p)"
-msgstr ""
+msgstr "9x Natif (~3240p)"
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
 "A small  number of games will have compatibility problems with this enabled."
 msgstr ""
+"Un petit nombre de jeux présenteront des problèmes avec ce mode activé."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -2867,8 +2868,8 @@ msgid ""
 "Mode(s)."
 msgstr ""
 "Ajustez le profil d'alimentation du processeur lorsque la batterie est "
-"employée\n"
-". Remplace les modes d'alimentation précédents."
+"employée.\n"
+"Remplace les modes d'alimentation précédents."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -3040,8 +3041,10 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Allows reducing the visual quality of these curves for higher performance.."
+"Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
+"Permet de résuire la qualité visuelle des courbures, pour de "
+"meilleures performances."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -3857,7 +3860,7 @@ msgstr "BT601_625/D65 (recommandé pour tous les jeux développés en EUR/AUS)"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "BUFFER GRAPHICS COMMANDS"
-msgstr ""
+msgstr "COMMANDES DU BUFFER DE GRAPHISMES"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -3892,7 +3895,7 @@ msgstr "Baltique"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Basic"
-msgstr ""
+msgstr "Basique"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -4800,11 +4803,13 @@ msgid ""
 "CPU-GPU latency limit. Lower values improve latency but may reduce "
 "performance."
 msgstr ""
+"Limite de latence CPU-GPU. Des valeurs basses baissent la "
+"latence mais peuvent réduire les performances."
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "CROP ARTWORK"
-msgstr "COUPER LES ARTWORK"
+msgstr "COUPER LES ARTWORKS"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
@@ -4814,7 +4819,7 @@ msgstr "DECOUPE LE POURTOUR"
 #. TRANSLATION: duckstation, libretro/duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, ...
 msgctxt "game_options"
 msgid "CROP OVERSCAN"
-msgstr "DÉCOUPE LE SURBALAYAGE"
+msgstr "COUPE LE SURBALAYAGE"
 
 # A vérifier
 #. TRANSLATION: duckstation, mame, openmohaa, theforceengine
@@ -5000,7 +5005,7 @@ msgid ""
 "Can fix bugs in some games. Only relevant for dynamic or LLVM SPU decoder."
 msgstr ""
 "Peut corriger les bugs de certains jeux. N'est utilse que pour le "
-"décodeurSPU LLVM ou dynamique."
+"décodeur SPU LLVM ou dynamique."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -5313,6 +5318,11 @@ msgstr ""
 "Choisissez la langue de la console. Ce choix n'est pas forcément disponible "
 "pour tous les jeux."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose deinterlace option."
+msgstr "Choisissez l'option de désentrelacement."
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -5578,8 +5588,8 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose which BIOS file for GSplus to boot with."
 msgstr ""
-"Choisir l\n"
-"e fichier BIOS avec lequel GSplus doit démarrer."
+"Choisir le fichier BIOS avec\n"
+"lequel GSplus doit démarrer."
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -5930,7 +5940,7 @@ msgstr "Converti les appels DirectX 8/9/10/11/12 vers Vulkan."
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Copy to texture"
-msgstr ""
+msgstr "Copier vers la texture"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -6134,6 +6144,11 @@ msgctxt "game_options"
 msgid "DEFAULT POWER ON RAM STATE"
 msgstr "ÉTAT DE LA RAM À LA MISE SOUS TENSION PAR DÉFAUT"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "DEINTERLACE"
+msgstr "DÉSENTRELACEMENT"
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
@@ -6202,7 +6217,7 @@ msgstr "DÉSACTIVER LE PACK RAM D'EXTENSION DE 4 Mo"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "DISABLE CULLING"
-msgstr ""
+msgstr "DÉSACTIVER L'ABATTAGE"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -6458,6 +6473,11 @@ msgstr "Violet foncé"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "Assombrir"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "De-Interlaced"
+msgstr "Désentrelacé"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -7742,8 +7762,8 @@ msgstr "Polygones maillés activés pour la translucidité."
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
 msgstr ""
-"Activation ou désactivation du curseur de la souris. Utile pour les menus de "
-"CG."
+"Activation ou désactivation du curseur de la souris. Utile pour "
+"les menus de CG."
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -7770,7 +7790,7 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
-msgstr ""
+msgstr "Activer les fichiers de triche depuis le dossier `cheats`."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -8159,7 +8179,7 @@ msgstr "FAST BLITTER (MOINS COMPATIBLE)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "FAST CD/DVD ACCESS"
-msgstr ""
+msgstr "ACCES RAPIDE CD/DVD"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -8359,7 +8379,7 @@ msgstr "LIMITE DE RAFRAÎCHISSEMENT"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "FRAME SKIPPING"
-msgstr ""
+msgstr "SAUT D'IMAGE"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -8384,7 +8404,7 @@ msgstr "FRAMESKIP (GL64MK2 UNIQUEMENT)"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "FRAMESKIP CONTROL"
-msgstr ""
+msgstr "CONTROLE DU SAUT D'IMAGE"
 
 #. TRANSLATION: drastic
 msgctxt "game_options"
@@ -8514,6 +8534,8 @@ msgstr "Avance rapide"
 msgctxt "game_options"
 msgid "Faster but can cause text problems in some games."
 msgstr ""
+"Plus rapide, mais peut provoquer des problèmes "
+"de texte dans certains jeux."
 
 #. TRANSLATION: flycast
 #, c-format
@@ -9730,7 +9752,7 @@ msgstr "LIMITE DE MÉMOIRE DU CACHE DES TEXTURES"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "HARDWARE TESSELLATION"
-msgstr ""
+msgstr "TESSELLATION HARDWARE"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -9953,6 +9975,8 @@ msgid ""
 "Helps forcing an international Japanese version to English. Unlocking more "
 "European languages etc."
 msgstr ""
+"Permet de forcer l'anglais sur les versions japonaises internationales. "
+"Débloque plus de langues européennes, etc."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10095,6 +10119,8 @@ msgctxt "game_options"
 msgid ""
 "House of the Dead 4 speed fix. Select CPU base frequency of your processor."
 msgstr ""
+"Corrige la vitesse dans House of the Dead 4. Choisissez la fréquence "
+"de base de votre processeur."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -10285,7 +10311,7 @@ msgstr "Islande"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
-msgstr ""
+msgstr "Si un jeu tourne à 30Hz, PPSSPP forcera un rendu à 60 images."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -10387,6 +10413,8 @@ msgid ""
 "In some games, this can fix severe slowdowns, but can also cause graphical "
 "issues."
 msgstr ""
+"Dans certains jeux, cela peut réduire les ralentissements, mais "
+"cela peut aussi génerer des bugs graphiques."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -10478,6 +10506,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Integer Scale"
 msgstr "Échelle entière"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Interlaced"
+msgstr "Entrelacé"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -10955,7 +10988,7 @@ msgstr "LANGUE"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
-msgstr ""
+msgstr "DÉBLOQUE LA LANGUE"
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -10965,7 +10998,7 @@ msgstr "RÉDUCTION DE LA LATENCE"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "LAZY TEXTURE CACHING"
-msgstr ""
+msgstr "CACHE DE TEXTURE PARESSEUX"
 
 #. TRANSLATION: libretro/pokemini
 msgctxt "game_options"
@@ -12699,12 +12732,12 @@ msgstr "Nicaragua"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "No (Default)"
-msgstr ""
+msgstr "Non (par défaut)"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "No Buffer"
-msgstr ""
+msgstr "Pas de tampon"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -13411,7 +13444,7 @@ msgstr "VMU PAR MATCH"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "PERFORMANCE"
-msgstr ""
+msgstr "PERFORMANCE"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -14299,7 +14332,7 @@ msgstr "MOTEUR DE RENDU"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "RENDER DUPLICATE FRAMES TO 60 HZ"
-msgstr ""
+msgstr "GÉNÉRER LES IMAGES EN DOUBLE POUR 60 HZ"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -14902,6 +14935,8 @@ msgid ""
 "Runs \"skinning\" on the CPU instead of the GPU, means that draw calls from "
 "the game can more easily be combined, which often improves things."
 msgstr ""
+"Utilise le CPU et non le GPU pour l'habillage, afin que les appels du rendu "
+"dans le jeu soient plus combinés, pour souvent améliorer le tout."
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -15196,7 +15231,7 @@ msgstr "PASSER LE MENU SYSTÈME DS"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "SKIP GPU READBACKS"
-msgstr ""
+msgstr "SAUTER LES LECTURES EN RETOUR DU GPU"
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
@@ -15236,7 +15271,7 @@ msgstr "SMAA"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "SMART 2D TEXTURE FILTERING"
-msgstr ""
+msgstr "FILTRAGE DE TEXTURE 2D INTELLIGENT"
 
 #. TRANSLATION: hypseus-singe, play, shared
 msgctxt "game_options"
@@ -15286,7 +15321,7 @@ msgstr "LISTE LOGICIELS"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "SOFTWARE SKINNING"
-msgstr ""
+msgstr "HABILLAGE LOGICIEL"
 
 #. TRANSLATION: libretro/mgba, libretro/vba-m
 msgctxt "game_options"
@@ -15351,7 +15386,7 @@ msgstr "SPEED HACK (SAFE)"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "SPEED HACKS"
-msgstr ""
+msgstr "SPEED HACKS"
 
 #. TRANSLATION: soniccd
 msgctxt "game_options"
@@ -15361,7 +15396,7 @@ msgstr "TYPE SPINDASH"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "SPLINE/BEZIER CURVES QUALITY"
-msgstr ""
+msgstr "QUALITÉ DES COURBES DE BEZIER"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -15516,7 +15551,7 @@ msgstr "RENDU SYNCHRONE"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "SYSTEM"
-msgstr ""
+msgstr "SYSTÈME"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -16323,6 +16358,8 @@ msgid ""
 "Skip buffer effects faster but may not render some games. Disables "
 "resolution, MSAA, auto frameskip and duplicate frames to 60Hz."
 msgstr ""
+"Ignore les effets du tampon plus vite, mais peut poser des problèmes "
+"dans certains jeux. Désactive MSAA, sauts d'image et duplication a 60Hz."
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
@@ -17243,7 +17280,7 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "TEXTURE SCALING"
-msgstr ""
+msgstr "MISE À l'ÉCHELLE DE TEXTURE"
 
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
@@ -17492,6 +17529,8 @@ msgid ""
 "The PSP will cull triangles that are outside a 4096x4096 clipping box, and "
 "also triangles crossing the Z=1 plane if clipping is enabled."
 msgstr ""
+"La PSP va ignorer les triangles en dehors d'une zone de 4096x4096. ainsi "
+"que les triangles dans le plan Z=1 si le clipping est activé."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -17564,6 +17603,8 @@ msgid ""
 "There is generally no point in going beyond 4x texture scaling unless you "
 "are running at very high resolutions."
 msgstr ""
+"En général, cela ne sert à rien de monter au delà de 4x pour les textures "
+"sauf si vous utlisez une très haute résolution."
 
 #. TRANSLATION: openmsx
 msgctxt "game_options"
@@ -18263,7 +18304,7 @@ msgstr "V6 non saturé (FirebrandX)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Unscaled"
-msgstr ""
+msgstr "Échelle originale"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -18283,12 +18324,12 @@ msgstr "Haut"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Up to 1"
-msgstr ""
+msgstr "Jusque 1"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Up to 2 (Default)"
-msgstr ""
+msgstr "Jusque 2 (par défaut)"
 
 #. TRANSLATION: openjk.keys
 msgctxt "keys_files"
@@ -18619,7 +18660,7 @@ msgstr ""
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Uses hardware to make curves."
-msgstr ""
+msgstr "Utilise le GPU pour faire des courbes."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -19110,7 +19151,7 @@ msgstr "Largage d'arme"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Weave (Bottom Field First)"
-msgstr "Tissage (bas en premierr)"
+msgstr "Tissage (bas en premier)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -19123,6 +19164,8 @@ msgid ""
 "When enabled and upscaling, textures look better than linear filtering for a "
 "lot of 2D art."
 msgstr ""
+"Lorsque cette option est activée et qu'il y a un upscaling, les textures "
+"auront un meilleur rendu que le filtrage linéaire pour la plupart du 2D."
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
@@ -19847,12 +19890,12 @@ msgstr "blanc"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "xBR (Very Slow)"
-msgstr "xBR (Très Lent)"
+msgstr "xBR (Très lent)"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "xBR (Very Slow, No Edge Blending)"
-msgstr "(Très lent, pas de fusion des bords"
+msgstr "xBR (Très lent, pas de fusion des bords)"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -19865,6 +19908,8 @@ msgid ""
 "xBRZ - a sharpening upscale algorithm, Bicubic - a smooth look, Hybrid - "
 "uses bicubic for smooth areas."
 msgstr ""
+"xBRZ - un algo de mise à l'échelle droite, Bicubique - un look lissé, "
+"Hybride - utilise le bicubique pour les zones à lisser."
 
 #. TRANSLATION: libretro/vice_xplus4
 msgctxt "game_options"

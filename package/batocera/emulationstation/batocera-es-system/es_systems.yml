@@ -872,6 +872,19 @@ namco:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
+namco22:
+  name:                 Namco System 22
+  manufacturer:         Arcade
+  release:              1992
+  hardware:             arcade
+  extensions:           [zip, 7z]
+  platform:             namco, arcade
+  emulators:
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+
 namco2x6:
   name:                 Namco System 246/256
   manufacturer:         Arcade
@@ -5973,6 +5986,8 @@ saturn:
       yabause:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_YABAUSE]       }
     yabasanshiro:
       yabasanshiro:     { requireAnyOf: [BR2_PACKAGE_YABASANSHIRO], incompatible_extensions: [ccd, m3u, zip] }
+    ymir:
+      ymir:             { requireAnyOf: [BR2_PACKAGE_YMIR] }
 
 segastv:
   name:                 Sega Titan Video

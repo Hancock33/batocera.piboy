@@ -10169,7 +10169,7 @@ ppsspp:
         curves_quality:
             submenu: SPEED HACKS
             prompt: SPLINE/BEZIER CURVES QUALITY
-            description: Allows reducing the visual quality of these curves for higher performance..
+            description: Allows reducing the visual quality of these curves for higher performance.
             choices:
                 "Low":    0
                 "Medium": 1
@@ -15824,3 +15824,19 @@ openmohaa:
       choices:
         "Off": 0
         "On":  1
+ymir:
+  features: [padtokeyboard]
+  shared: [powermode, tdp, videomode, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    ymir_aspect:
+      prompt: ASPECT RATIO
+      description: Change the output resolution ratio.
+      choices:
+        "4:3":  0
+        "16:9": 1
+    ymir_interlace:
+      prompt: DEINTERLACE
+      description: Choose deinterlace option.
+      choices:
+        "Interlaced":    0
+        "De-Interlaced": 1

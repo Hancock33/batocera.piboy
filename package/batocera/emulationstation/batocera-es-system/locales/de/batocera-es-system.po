@@ -3040,8 +3040,8 @@ msgstr "Erlaubt das Laden von geschützten Spielen ohne Subchannel-Information."
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Allows reducing the visual quality of these curves for higher performance.."
-msgstr "Erlaubt reduzierte Kurvenqualität für bessere Performance."
+"Allows reducing the visual quality of these curves for higher performance."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -5313,6 +5313,11 @@ msgid "Choose console language. Not all games may support the language choice."
 msgstr ""
 "Konsolensprache wählen. Nicht alle Spiele unterstützen die gewählte Sprache."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose deinterlace option."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -6125,6 +6130,11 @@ msgctxt "game_options"
 msgid "DEFAULT POWER ON RAM STATE"
 msgstr "DEFAULT POWER ON RAM STATE"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "DEINTERLACE"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
@@ -6449,6 +6459,11 @@ msgstr "Dunkles Lila"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "Verdunkeln"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "De-Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10491,6 +10506,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Integer Scale"
 msgstr "Ganzzahlig Skalieren"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -19958,6 +19978,12 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "Bei Gameboy-Spielen Farbe hinzufügen."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Allows reducing the visual quality of these curves for higher "
+#~ "performance.."
+#~ msgstr "Erlaubt reduzierte Kurvenqualität für bessere Performance."
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."

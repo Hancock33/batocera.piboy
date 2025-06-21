@@ -292,7 +292,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # Controllers
     select BR2_PACKAGE_XONE                                 if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.15)
     select BR2_PACKAGE_XPAD_NOONE                           if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.15)
-    select BR2_PACKAGE_XPADNEO                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.18)
+   #select BR2_PACKAGE_XPADNEO                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.18)
     select BR2_PACKAGE_WII_U_GC_ADAPTER                     if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # wii-u-gc-adapter
     select BR2_PACKAGE_WIIMOTES_RULES                       if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # wiimotes
     select BR2_PACKAGE_WIIMOTE_3RDPARTY                     if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # some non official wiimotes
@@ -1210,6 +1210,12 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     select BR2_PACKAGE_YABASANSHIRO                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
+    select BR2_PACKAGE_YMIR                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX         || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550
+
     # Gamecube / Wii
     select BR2_PACKAGE_DOLPHIN_EMU                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
@@ -2022,7 +2028,7 @@ config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
     select BR2_PACKAGE_GST1_PLUGINS_BAD
     select BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_MPEG2ENC
     select BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_OPENH264
-    select BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_VA           if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_VA           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_V4L2CODECS
     select BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_X265
     # Ugly
@@ -2030,7 +2036,7 @@ config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
     select BR2_PACKAGE_GST1_PLUGINS_UGLY_PLUGIN_MPEG2DEC
     select BR2_PACKAGE_GST1_PLUGINS_UGLY_PLUGIN_X264
     # VAAPI
-    select BR2_PACKAGE_GST1_VAAPI                           if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_GST1_VAAPI_ENCODERS                  if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_GST1_VAAPI                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_GST1_VAAPI_ENCODERS                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 ### ### ###

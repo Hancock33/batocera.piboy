@@ -3031,8 +3031,8 @@ msgstr "하위 채널 정보 없이 보호된 게임을 로드할 수 있습니�
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid ""
-"Allows reducing the visual quality of these curves for higher performance.."
-msgstr "더 높은 성능을 위해 이러한 곡선의 시각적 품질을 낮출 수 있습니다."
+"Allows reducing the visual quality of these curves for higher performance."
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -5288,6 +5288,11 @@ msgstr ""
 "콘솔 언어를 선택하세요. 일부 게임에서는 언어 선택이 지원되지 않을 수 있습니"
 "다."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose deinterlace option."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Choose difficulty for the game."
@@ -6094,6 +6099,11 @@ msgctxt "game_options"
 msgid "DEFAULT POWER ON RAM STATE"
 msgstr "램 상태의 기본 전원"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "DEINTERLACE"
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
@@ -6418,6 +6428,11 @@ msgstr "진보라색"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "어두워짐"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "De-Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10385,6 +10400,11 @@ msgstr "이미지 판독기 카드를 설치하여 idks 이미지 파일 읽기 
 msgctxt "game_options"
 msgid "Integer Scale"
 msgstr "정수 스케일"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Interlaced"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -19748,6 +19768,12 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "게임보이 게임에 색상을 추가합니다."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Allows reducing the visual quality of these curves for higher "
+#~ "performance.."
+#~ msgstr "더 높은 성능을 위해 이러한 곡선의 시각적 품질을 낮출 수 있습니다."
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."

@@ -3,8 +3,8 @@
 # libretro-beetle-psx
 #
 ################################################################################
-# Version: Commits on Jun 13, 2025
-LIBRETRO_BEETLE_PSX_VERSION = 4c271be26d8e456ab8a3900703af40a2d018235b
+# Version: Commits on Jun 20, 2025
+LIBRETRO_BEETLE_PSX_VERSION = 22ba62e8a2e0fb7a8d05b4eec039e58de46924de
 LIBRETRO_BEETLE_PSX_SITE = $(call github,libretro,beetle-psx-libretro,$(LIBRETRO_BEETLE_PSX_VERSION))
 LIBRETRO_BEETLE_PSX_LICENSE = GPLv2
 LIBRETRO_BEETLE_PSX_DEPENDENCIES = retroarch
