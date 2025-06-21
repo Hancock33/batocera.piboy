@@ -91,6 +91,7 @@
 - Updated BlamCon code to new firmware (now compatible with 4 light guns)
 - Xenia now uses Wine-Proton for more compatibility (i.e. Halo 4)
 - Moved to the `hid-microsoft` driver for Xbox compatible Bluetooth controllers
+- Dreamcast bios now goes into `bios/dc/dc_boot.bin`
 ### Updated
 - Amiberry to v7.0.4
 - AppleWin to 8th of Feb build
@@ -152,10 +153,10 @@
 - Intel Media Driver to 25.2.0
 - Kodi to 21.2
 - LibDRM to 2.4.124
-- Linux Firmware to 20250509
-- Linux Kernel to 6.15.2
+- Linux Firmware to 20250613
+- Linux Kernel to 6.15.3
 - LLVM to 19.1.7
-- Mesa3D to 25.1.3
+- Mesa3D to 25.1.4
 - MPV to 0.40.0
 - Nvidia production driver to 575.64
 - Pipewire to 1.2.7

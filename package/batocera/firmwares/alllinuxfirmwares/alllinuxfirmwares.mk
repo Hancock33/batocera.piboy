@@ -3,8 +3,8 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits on May 09, 2025
-ALLLINUXFIRMWARES_VERSION = 20250509
+# Version: Commits on Jun 13, 2025
+ALLLINUXFIRMWARES_VERSION = 20250613
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.xz
 ALLLINUXFIRMWARES_SITE = https://www.kernel.org/pub/linux/kernel/firmware
 
@@ -51,6 +51,16 @@ endif
 # Remove qualcomm firmware if not buidling Qualcomm Board
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_ODIN)$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)$(BR2_PACKAGE_BATOCERA_TARGET_SM8550),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/qcom
+endif
+
+# Remove amlogic firmware if not building an Amlogic board
+ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
+    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/amlogic
+endif
+
+# Remove non-x86 specific firmware if building x86
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/arm $(@D)/imx $(@D)/sun $(@D)/ti-keystone $(@D)/sxg $(@D)/meson
 endif
 
 define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
