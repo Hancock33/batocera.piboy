@@ -99,7 +99,7 @@ class HypseusSingeGenerator(Generator):
             "maddog": ["maddog", "maddog-hd", "maddog_hd"],
             "maddog2": ["maddog2", "maddog2-hd", "maddog2_hd"],
             "jack": ["jack", "samurai_jack"],
-            "johnnyrock": ["johnnyrock", "johnnyrock-hd", "johnnyrocknoir", "wsjr_hd"],
+            "johnnyrock": ["johnnyrock", "johnnyrock-hd", "johnnyrocknoir", "wsjr_hd", "wsjr-hd"],
             "pussinboots": ["pussinboots", "puss_in_boots"],
             "spacepirates": ["spacepirates", "spacepirates-hd", "space_pirates_hd"],
         }
@@ -284,19 +284,19 @@ class HypseusSingeGenerator(Generator):
                         borderColor = "w"
 
                 if bordersSize == "thin":
-                    commandArray.extend(["-sinden", "2", borderColor])
-                elif bordersSize == "medium":
                     commandArray.extend(["-sinden", "4", borderColor])
+                elif bordersSize == "medium":
+                    commandArray.extend(["-sinden", "7", borderColor])
                 else:
-                    commandArray.extend(["-sinden", "6", borderColor])
+                    commandArray.extend(["-sinden", "9", borderColor])
+
+            if guns: # enable manymouse for guns
+                commandArray.extend(["-manymouse"]) # sinden implies manymouse
+                if xratio is not None:
+                    commandArray.extend(["-xratio", str(xratio)]) # accuracy correction based on ratio
             else:
-                if guns: # enable manymouse for guns
-                    commandArray.extend(["-manymouse"]) # sinden implies manymouse
-                    if xratio is not None:
-                        commandArray.extend(["-xratio", str(xratio)]) # accuracy correction based on ratio
-                else:
-                    if system.config.get_bool("singe_abs"):
-                        commandArray.extend(["-manymouse"]) # this is causing issues on some "non-gun" games
+                if system.config.get_bool("singe_abs"):
+                    commandArray.extend(["-manymouse"]) # this is causing issues on some "non-gun" games
 
         # bezels
         if not system.config.get_bool('hypseus_bezels', True):
