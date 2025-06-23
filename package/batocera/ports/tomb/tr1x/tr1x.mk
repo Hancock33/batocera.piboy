@@ -1,10 +1,22 @@
 ################################################################################
+# This file is part of the batocera distribution (https://batocera.org).
+# Copyright (c) 2025+.
+#
+# This script is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 3.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+# YOU MUST KEEP THIS HEADER AS IT IS
+################################################################################
 #
 # tr1x
 #
 ################################################################################
-# Version: Commits on Jun 22, 2025
-TR1X_VERSION = b7a86369ca5095fd67ce83b434bc35034e9b9c9e
+# Version: Commits on Jun 23, 2025
+TR1X_VERSION = f2455d9e6b997573f53f1cc25b9ee300d440cfa1
 TR1X_SITE = $(call github,LostArtefacts,TRX,$(TR1X_VERSION))
 TR1X_LICENSE = GPL-3.0 license
 TR1X_LICENSE_FILES = COPYING.md
@@ -24,15 +36,3 @@ define TR1X_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(meson-package))
-################################################################################
-# This file is part of the batocera distribution (https://batocera.org).
-# Copyright (c) 2025+.
-# With this build script you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, version 3.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-# YOU MUST KEEP THIS FOOTER AS IT IS
-################################################################################

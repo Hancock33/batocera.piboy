@@ -2,7 +2,7 @@
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
 #
-# This program is free software: you can redistribute it and/or modify
+# This script is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3.
 #
@@ -15,8 +15,8 @@
 # ymir
 #
 ################################################################################
-# Version: Commits on Jun 22, 2025
-YMIR_VERSION = bab1d3932af787a0270369fa41e28798da9419c4
+# Version: Commits on Jun 23, 2025
+YMIR_VERSION = 8c6a47f05b6f3367e1a9fa3ce7fbbd1aa1d92b6a
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD=git
 YMIR_GIT_SUBMODULES=YES
