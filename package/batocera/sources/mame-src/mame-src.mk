@@ -3,8 +3,8 @@
 # mame-src
 #
 ################################################################################
-# Version: Commits on Jun 22, 2025
-MAME_SRC_VERSION = 7c0af047c6c408b60122e7f38e45137f35994f1f
+# Version: Commits on Apr 29, 2025
+MAME_SRC_VERSION = mame0277
 MAME_SRC_SOURCE = mame-src-$(MAME_SRC_VERSION).tar.gz
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
 MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl2 sdl2_ttf sqlite zlib

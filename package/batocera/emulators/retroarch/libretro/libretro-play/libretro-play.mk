@@ -3,8 +3,8 @@
 # libretro-play
 #
 ################################################################################
-# Version: Commits on Jun 18, 2025
-LIBRETRO_PLAY_VERSION = ea544501ba7d06f53188939254f671055ceaeaba
+# Version: Commits on Jun 24, 2025
+LIBRETRO_PLAY_VERSION = e9c40a9a5d81b9b5c5d6e0022cc171e43f2ebe98
 LIBRETRO_PLAY_SOURCE = play-$(LIBRETRO_PLAY_VERSION)-git4.tar.gz
 LIBRETRO_PLAY_SITE = https://github.com/jpd002/Play-.git
 LIBRETRO_PLAY_SITE_METHOD = git
