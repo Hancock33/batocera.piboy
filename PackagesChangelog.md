@@ -8,7 +8,9 @@ Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|0a58ead5f6bf9b0c
 Ports|[box64](http://github.com/ptitseb/box64)|d57416f4fb2b75a573e9731c1b33d0c9a1bea234|Jun 26, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|149b5c4db0e2182c54ebead4e9f5a6022b84ecc8|Jun 26, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|98fc7df6828d4b5609c776e12496a82bd87b5e2c|Jun 26, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250626|Jun 26, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|6dcb727c62740ec21916e61fde08c5ef29891030|Jun 26, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250626|Jun 26, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|bc30f7f2df30f6e97eaa15096305fc3df3783302|Jun 26, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|bc30f7f2df30f6e97eaa15096305fc3df3783302|Jun 26, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|44df43eaa72e2fc12517b463e89a54e3a32a9195|Jun 26, 2025
@@ -92,10 +94,8 @@ Hardware|[pironman5](http://github.com/sunfounder/pironman5)|378ac7ec83e588a74af
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|39c0dce2a3497910e73813d69171c2d0c9cc8107|Jun 20, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|ad25726263556b50bf56fcb52884bc700b6259de|Jun 20, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.22|Jun 20, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250620|Jun 20, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|50417b23b5d3e79c6c8fa4d1af69167dfa3de719|Jun 20, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|f3aa0a011e9d209630880795e3e15bce2e168050|Jun 20, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250620|Jun 20, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|1362fc8afda0502a5a427d409d8e40b95fe3f696|Jun 20, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|c0d6088ba16eab3ffbd99c6b5b27bbd227a87f48|Jun 20, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|449d256995de36de0629dd1b97f4d67a0e50c92e|Jun 20, 2025
