@@ -801,7 +801,7 @@ index 27200a50a..b08b95e96 100644
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 66de7c31e..1390f3cb8 100644
+index 27a4d78bd..a94a7e203 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,11 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -863,10 +863,10 @@ index 66de7c31e..1390f3cb8 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index a252ef607..252231404 100644
+index 7497a1649..26eca705b 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
-@@ -74,7 +74,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
+@@ -75,7 +75,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
  	{ GX4000, "30250" },
  	{ INTELLIVISION, "84444" },
  	{ SEGA_MASTER_SYSTEM, "82166" },
@@ -874,7 +874,7 @@ index a252ef607..252231404 100644
  	{ THOMSON_TO_MO, "183673" },
  	{ MSX, "113089" },
  	{ NOKIA_NGAGE, "128704" },
-@@ -106,6 +105,7 @@ const std::map<PlatformId, std::string> hfsdb_platformids
+@@ -107,6 +106,7 @@ const std::map<PlatformId, std::string> hfsdb_platformids
  	{ SCUMMVM, "82805" },
  	{ SEGA_32X, "33731" },
  	{ SEGA_CD, "83493" },
@@ -882,7 +882,7 @@ index a252ef607..252231404 100644
  	{ SEGA_SG1000, "75225" },
  	{ SUPER_NINTENDO, "82351" },
  	{ SUPER_NINTENDO_MSU1, "82351" },
-@@ -143,8 +143,7 @@ const std::map<PlatformId, std::string> hfsdb_platformids
+@@ -144,8 +144,7 @@ const std::map<PlatformId, std::string> hfsdb_platformids
  	{ CAMPUTER_LYNX, "240842" },
  	{ EPOCH_GAMEPOCKET, "190501" },
  	{ GP32, "240869"},
@@ -892,8 +892,21 @@ index a252ef607..252231404 100644
  };
  
  const std::set<Scraper::ScraperMediaSource>& HfsDBScraper::getSupportedMedias()
+diff --git a/es-app/src/scrapers/IGDBScraper.cpp b/es-app/src/scrapers/IGDBScraper.cpp
+index 0bde6c83c..4917d0e1f 100644
+--- a/es-app/src/scrapers/IGDBScraper.cpp
++++ b/es-app/src/scrapers/IGDBScraper.cpp
+@@ -67,7 +67,7 @@ const std::map<PlatformId, std::string> igdb_platformids
+ 	{ GX4000, "25" },
+ 	{ INTELLIVISION, "67" },
+ 	{ SEGA_MASTER_SYSTEM, "64" },
+-	{ SEGA_PICO, "339" },
++	{ PICO, "339" },
+ 	{ THOMSON_TO_MO, "156" },
+ 	{ MSX, "27" },
+ 	{ NINTENDO_64, "4" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 4b1cb8c75..616a9d1ef 100644
+index d635d3525..c7ff4f2c0 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -30,162 +30,237 @@ using namespace PlatformIds;
