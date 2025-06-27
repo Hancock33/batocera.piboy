@@ -10,7 +10,9 @@ Ports|[box64](http://github.com/ptitseb/box64)|2ce7bdf321e8334cc52e9b9d283c5d0fd
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b2666cae85972ff28a360e9bd64ed91f4caa38c5|Jun 27, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|4fc309efcbd2cdf30218e48d03f56a01295708e2|Jun 27, 2025
 Utils|[rclone](http://github.com/rclone/rclone)|v1.70.2|Jun 27, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250627|Jun 27, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|eea37466fc543ab382759ed4c5f726ac85a74086|Jun 27, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250627|Jun 27, 2025
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|04a6f2e85c7b4e79bb1bb402a8ea7d8f55132ad3|Jun 27, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|27aa688076606a272d024fcad67b330fe434ff0d|Jun 27, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|d9697514a1901b7fcace0a77a7deccc693db38fb|Jun 27, 2025
@@ -30,8 +32,7 @@ Emulators|[ymir](https://github.com/StrikerX3/Ymir)|e1be0ec536d7fa02666245dcf980
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|82868d5dfbb473909a2f5132bd8699b0defbeb3f|Jun 26, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|be43b164b89c9f7638158f6dc703e07d0dcda620|Jun 26, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|98fc7df6828d4b5609c776e12496a82bd87b5e2c|Jun 26, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250626|Jun 26, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250626|Jun 26, 2025
+Sources|[mame-src](http://github.com/mamedev/mame)|4a4bd5e1bff5fa0d38d3d337f2dc304c8e227a55|Jun 26, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|746c728d180fd6ff41352ba1cfae32034f193cf5|Jun 26, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|83c1f15384d69f391c60935048af12fb93c08c1a|Jun 26, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|83c1f15384d69f391c60935048af12fb93c08c1a|Jun 26, 2025
@@ -225,7 +226,6 @@ Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationL
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|3544ff567ecc417c170641587083b976739ef9db|May 01, 2025
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|f3be6d8132b09a3b5569d1981a37fe627a27e370|Apr 30, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
-Sources|[mame-src](http://github.com/mamedev/mame)|mame0277|Apr 29, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|2996daa5e2048a6502a335299cdec5d6393d70eb|Apr 27, 2025
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|9dd1ff9dddbb6c172af0dc15da9e53e3a72c686f|Apr 26, 2025

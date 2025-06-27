@@ -459,7 +459,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|87f52d64fe81df858384
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican)|3f4bfd340730c0dc4443dd35e4d9a310ecf612ad|Mar 26, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|4fc309efcbd2cdf30218e48d03f56a01295708e2|Jun 27, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250626|Jun 26, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250627|Jun 27, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14247|Jun 07, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|74218b803a1132a17f191ac52068193cac3b3ac5|Jun 16, 2025
@@ -507,7 +507,7 @@ Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f9fc26239b464340ed39c805a7ddca3f732cb324|Jun 24, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.2|Apr 13, 2025
 Sources|[libretro-mame-src](http://github.com/libretro/mame)|ee7155be0735e38f47c555a69217a2b77d6eca13|May 01, 2025
-Sources|[mame-src](http://github.com/mamedev/mame)|mame0277|Apr 29, 2025
+Sources|[mame-src](http://github.com/mamedev/mame)|4a4bd5e1bff5fa0d38d3d337f2dc304c8e227a55|Jun 26, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.0|May 20, 2025
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
@@ -566,5 +566,5 @@ Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|1f5e62cc1bbf51f8e4923df3d18ac4a3315ae8c8|Jun 11, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.5|Apr 04, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250626|Jun 26, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250627|Jun 27, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|50417b23b5d3e79c6c8fa4d1af69167dfa3de719|Jun 20, 2025
