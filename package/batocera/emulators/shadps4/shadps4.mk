@@ -21,11 +21,12 @@ SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 SHADPS4_CONF_OPTS += -DENABLE_QT_GUI=ON
 SHADPS4_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 SHADPS4_CONF_OPTS += -DENABLE_UPDATER=OFF
+SHADPS4_CONF_OPTS += -DVMA_ENABLE_INSTALL=ON
 
 define SHADPS4_INSTALL_TARGET_CMDS
-	 mkdir -p $(TARGET_DIR)/usr/bin/shadps4
-	 $(INSTALL) -m 0755 $(@D)/buildroot-build/shadps4 $(TARGET_DIR)/usr/bin/shadps4/
-	 cp -pr $(@D)/buildroot-build/translations $(TARGET_DIR)/usr/bin/shadps4/
+	mkdir -p $(TARGET_DIR)/usr/bin/shadps4
+	$(INSTALL) -m 0755 $(@D)/buildroot-build/shadps4 $(TARGET_DIR)/usr/bin/shadps4/
+	cp -pr $(@D)/buildroot-build/translations $(TARGET_DIR)/usr/bin/shadps4/
 endef
 
 $(eval $(cmake-package))
