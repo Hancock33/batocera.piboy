@@ -17,7 +17,7 @@ ALEPHONE_CONF_OPTS = \
 					--without-ffmpeg
 
 define ALEPHONE_AUTOCONFIG
-	cd $(@D) && autoreconf -f -i
+	cd $(@D) && PATH=/usr/bin autoreconf -f -i
 endef
 ALEPHONE_PRE_CONFIGURE_HOOKS += ALEPHONE_AUTOCONFIG
 
