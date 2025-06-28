@@ -1,12 +1,18 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|355c17bde96c79ede9c2c61ec25b34626591e14f|Jun 28, 2025
-Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|baad893bc0dba47164d4c50f6d70d882485dca79|Jun 28, 2025
+Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|4aaea218c1be7cc076d4f86407e273a36e66c3d7|Jun 28, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-06-28|Jun 28, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|83056712e0902ff764f8ffcead0ef8a8bd4ca2c8|Jun 28, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45707|Jun 28, 2025
+Emulators|[xemu](https://github.com/xemu-project/xemu)|8cc83dfc437312d31d20230383a99384edfe6bbd|Jun 28, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|95a021f9e9552d2be49061b99ccc068267cfe2d3|Jun 28, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b6dc8d70df5022b7570d4caf46cebecec7bd8260|Jun 28, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.11|Jun 28, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250628|Jun 28, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d40625b87cc2c5841a373b5a302b388f89fad475|Jun 28, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250628|Jun 28, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|09366bb6c642b06dbeb07a724f3b7e37366095c7|Jun 28, 2025
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|869099993de4c7a14e09fba0e6267dd4c6cccbd5|Jun 28, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|3f79b6baed2eebbf133b950197c418de06f28916|Jun 27, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|f1639d93c2d7dd13fab5c38039595a1ab045ed8e|Jun 27, 2025
@@ -17,9 +23,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b2666cae85972ff28a360
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|de04a52564b17d20151e859b31881cea2b8894f3|Jun 27, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|e243d24839293f90fcd0844817052f5d0b693131|Jun 27, 2025
 Utils|[rclone](http://github.com/rclone/rclone)|v1.70.2|Jun 27, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250627|Jun 27, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250627|Jun 27, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|ffe7d5ea1521233f89088611a7c831394b008f10|Jun 27, 2025
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|04a6f2e85c7b4e79bb1bb402a8ea7d8f55132ad3|Jun 27, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|27aa688076606a272d024fcad67b330fe434ff0d|Jun 27, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|d9697514a1901b7fcace0a77a7deccc693db38fb|Jun 27, 2025
@@ -59,12 +62,10 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|43aa7e9b9658d3c1
 Emulators|[hatari](http://github.com/hatari/hatari)|36d3b3ca3635a6573859d5a1ec4d7421420b435c|Jun 24, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|f819f23854933d38f5a28788879f811999b8e7d8|Jun 24, 2025
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|dfe1050e1abaca0bae7b699d117d66324b88425b|Jun 24, 2025
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0471a7dabaeea6c073db70b7cc7d927132bbd56a|Jun 24, 2025
 Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-input-sdl)|8889a0f3ecff726959389d988da810a2829c61b5|Jun 24, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.3|Jun 24, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f9fc26239b464340ed39c805a7ddca3f732cb324|Jun 24, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|145a8ef32144289d17471c3ef1d064e7a044e2b7|Jun 24, 2025
-Emulators|[xemu](https://github.com/xemu-project/xemu)|634577c753be80d51072d3337c0de552c5de8072|Jun 23, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|18497288979145853f9a60d61c592267de56cd5e|Jun 23, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|2fa4e2296aa1f2a80ed7000b1e4c16db495949a3|Jun 23, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|8a69ce6b142cbbeaa94ed59e24255b7567e47e49|Jun 23, 2025
@@ -120,7 +121,6 @@ Emulators|[libretro-handy](http://github.com/libretro/libretro-handy)|fca239207e
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|e3a3a2cfc93bc83403122b55a05a2d83c39f9a67|Jun 15, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|8c48d34327f5ffc44892899cf2567feaa9bbf72a|Jun 15, 2025
 Network|[rtl8852au](http://github.com/natimerry/rtl8852au)|708c17801ba3f83734e6d8cc39b74d1d528489f8|Jun 14, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.10|Jun 14, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|34132dc8ef627aad085188e67fefbd959fde19cd|Jun 14, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|34132dc8ef627aad085188e67fefbd959fde19cd|Jun 14, 2025
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20250613|Jun 13, 2025
