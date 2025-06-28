@@ -57,7 +57,7 @@
 - CLK can also be chosen as an emulator for C+4, VIC20, MSX1 and 2, Sega Master System, Colecovision,
   AmstradCPC, AtariST, ZX81, ZXSpectrum, AppleII, AppleIIGS, Macintosh, Archimedes, Electron
 - gun : option to hide the crosshair in ES
-- Azahar 3DS emulator: Version 2120.1
+- Azahar 3DS emulator: Version 2122
 - DICE libretro core for arcade machines without a CPU
 - Wine Proton 9.0.4 as a Wine runner from Kron4ek's Wine-Builds
 - Blake Stone port Bstone to play Aliens Of Gold or Planet Strike
@@ -141,6 +141,7 @@
 - Xemu to v0.8.73
 - Xenia to build 1d7973a (June 10, 2025)
 ### System
+- Alsa stack to 1.2.14
 - Bluez to 5.82
 - BTop to 1.4.0
 - Buildroot to 2024.11.x with supporting package updates
@@ -159,7 +160,7 @@
 - Mesa3D to 25.1.4
 - MPV to 0.40.0
 - Nvidia production driver to 575.64
-- Pipewire to 1.2.7
+- Pipewire to 1.4.6
 - QT6 to 6.8.1
 - RClone to v1.69.1
 - RPi firmware to match Kernel 6.12.25
@@ -172,7 +173,7 @@
 - Vulkan stack to v1.4.304
 - Wine Mono to 9.4.0
 - Wine-TKG to 10.7
-- Wireplumber to 0.5.8
+- Wireplumber to 0.5.10
 - Xone to Mar 13, 2025
 
 # 2025/01/06 - batocera.linux 41 - Golden-rayed Blue
