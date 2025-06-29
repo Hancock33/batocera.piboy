@@ -1,15 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# BATOCERA LİNUX TÜRKÇE ÇEVİRİSİ.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Sawex, 2023.
-# Serdar Sağlam, 2025.
+# Serdar Sağlam, 2025 <teknomobil@msn.com>.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Options file\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-08 10:13+0300\n"
+"PO-Revision-Date: 2025-06-22 13:38+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish\n"
 "Language: tr\n"
@@ -392,7 +392,7 @@ msgstr "10x Doğal (6400x5280)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "10x Native (~3600p/6K)"
-msgstr "10x Doğal (~3600p/6K)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -417,7 +417,7 @@ msgstr "11x Doğal (7040x5808)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "11x Native (~3960p)"
-msgstr "11x Doğal (~3960p)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -512,7 +512,7 @@ msgstr "12x Doğal (7680x6336) 8K"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "12x Native (~4320p/8K)"
-msgstr "12x Doğal (~4320p/8K)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -537,7 +537,7 @@ msgstr "13."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "13x Native (~5824p)"
-msgstr "13x Doğal (~5824p)"
+msgstr ""
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -582,7 +582,7 @@ msgstr "14."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "14x Native (~6272p)"
-msgstr "14x Doğal (~6272p)"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -632,7 +632,7 @@ msgstr "15."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "15x Native (~6720p)"
-msgstr "15x Doğal (~6720p)"
+msgstr ""
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -737,7 +737,7 @@ msgstr "16x MSAA"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "16x Native (~7168p)"
-msgstr "16x Doğal (~7168p)"
+msgstr ""
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -832,7 +832,7 @@ msgstr "1x (~480)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "1x Native (PS2)"
-msgstr "1x Doğal (PS2)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1827,7 +1827,7 @@ msgstr "5x Doğal (~1620p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1800p/3K)"
-msgstr "5x Doğal (~1800p/3K)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2027,7 +2027,7 @@ msgstr "7x Doğal (~2520p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "7x Native (~2530p)"
-msgstr "7x Doğal (~2530p)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2212,7 +2212,7 @@ msgstr "9x Doğal (5760x4752)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "9x Native (~3240p)"
-msgstr "9x Doğal (~3240p)"
+msgstr ""
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
@@ -3890,7 +3890,7 @@ msgstr "Baltık"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Basic"
-msgstr "Temel"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -5328,7 +5328,7 @@ msgstr "Bellek genişletme yuvası için donanım seç"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose mipmapping type."
-msgstr "Mipmap türünü seçin."
+msgstr "Eşleme türünü seçin."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -5969,12 +5969,12 @@ msgstr "Hırvatistan"
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Crop 1080p (270, 540)"
-msgstr "Kes 1080p (270, 540)"
+msgstr "Kırp 1080p (270, 540)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Crop 720p (240, 480)"
-msgstr "Kes 720p (240, 480)"
+msgstr "Kırp 720p (240, 480)"
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
@@ -6092,9 +6092,9 @@ msgid ""
 "D3D12, read render-to-texture results on the CPU. Needed in some games, but "
 "causes mid-frame synchronization, so it has a huge performance impact."
 msgstr ""
-"D3D12, CPU'daki dokuya dönüştürme sonuçlarını okuyun. Bazı oyunlarda "
-"gereklidir, ancak orta çerçeve senkronizasyonuna neden olur, dolayısıyla "
-"performansa çok büyük etkisi vardır."
+"D3D12, CPU dokuya dönüştürme sonuçlarını oku. Bazı oyunlarda gereklidir, "
+"ancak orta kare eşitlenmesine neden olur, performansa çok büyük etkisi "
+"vardır."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -6204,7 +6204,7 @@ msgstr "AYIKLAMAYI DEVRE DIŞI BIRAK"
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "DISABLE INTERLACING"
-msgstr "GEÇME DEVREDIŞI"
+msgstr "TARAMASIZLAŞTIRMAYI DEVRE DIŞI BIRAK"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -6319,7 +6319,7 @@ msgstr "KÜÇÜLTME FİLTRESİ"
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "DRAW CROSSHAIR"
-msgstr "NİŞANGAHI ÇİZ"
+msgstr "NİŞANGAHI GÖSTER"
 
 #. TRANSLATION: flycast, libretro
 msgctxt "game_options"
@@ -6434,7 +6434,7 @@ msgstr "Koyu Mavi"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Dark Forces Flat Tex Triangles Fix"
-msgstr "Dark Forces Flat Tex Üçgenleri Düzeltme"
+msgstr "Dark Forces Flat Tex Üçgenleri Düzelt"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -6479,7 +6479,7 @@ msgstr "Varsayılan (2 Tuş)"
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Default Only"
-msgstr "Sadece varsayılan"
+msgstr "Sadece Varsayılan"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -6498,7 +6498,7 @@ msgid ""
 "DS won't work with clone controllers."
 msgstr ""
 "Varsayılan SDL2 kullanır, yoksa kontrolcüye özgü yetenekleri etkinleştirir. "
-"Sony DS, klon kontrolcülerle çalışmaz."
+"Sony DS klon kontrolcülerle çalışmaz."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -6567,7 +6567,7 @@ msgstr "Almanca"
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Diablo Music Fix"
-msgstr "Diablo Müzik Düzeltme"
+msgstr "Diablo Müzik Düzeltmesi"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6582,7 +6582,7 @@ msgstr "Dick Smith Electronics VZ-200/300 bellek kopyaları"
 #. TRANSLATION: libretro/mame078plus, yabasanshiro
 msgctxt "game_options"
 msgid "Digital"
-msgstr "Digital"
+msgstr "Dijital"
 
 #. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -7770,7 +7770,7 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
-msgstr "Hile dosyalarının `cheats` dizininden okunmasını sağlar."
+msgstr ""
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -8162,7 +8162,7 @@ msgstr "HIZLI BLITTER (DAHA AZ UYUMLU)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "FAST CD/DVD ACCESS"
-msgstr "HIZLI CD/DVD ERİŞİMİ"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -9772,7 +9772,7 @@ msgstr ""
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "HIDE LIGHT GUN CROSSHAIRS"
-msgstr "SİLAH HEDEF İMLECİ GİZLE"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -10947,7 +10947,7 @@ msgstr "DİL"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
-msgstr "DİL KİLİDİNİ AÇ"
+msgstr ""
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -10957,7 +10957,7 @@ msgstr "GECİKMEYİ AZALT"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "LAZY TEXTURE CACHING"
-msgstr "TEMBEL DOKU ÖNBELLEMESİ"
+msgstr "TEMBEL DOKU ÖNBELLEKMESİ"
 
 #. TRANSLATION: libretro/pokemini
 msgctxt "game_options"
@@ -15500,7 +15500,7 @@ msgstr "SENKRONİZE İŞLEYİCİ"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "SYSTEM"
-msgstr "SİSTEM"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -18240,7 +18240,7 @@ msgstr "Doymamış v6 (FirebrandX)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Unscaled"
-msgstr "Ölçeklenmemiş"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -19859,14 +19859,6 @@ msgstr "sarı/mavi"
 #~ msgstr "5 Sideway Wiimote"
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "A small  number of games will ahve compatibility problems with this "
-#~ "enabled."
-#~ msgstr ""
-#~ "Bu özellik etkinleştirildiğinde, az sayıda oyunda uyumluluk sorunları "
-#~ "yaşanabilir."
-
-#~ msgctxt "game_options"
 #~ msgid "ANALOG DEADZONE"
 #~ msgstr "ANALOG ÖLÜ BÖLGE"
 
@@ -19889,10 +19881,6 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "Game Boy oyunlarına renk kat."
-
-#~ msgctxt "game_options"
-#~ msgid "All VMUs"
-#~ msgstr "Tüm VMU"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20023,7 +20011,7 @@ msgstr "sarı/mavi"
 
 #~ msgctxt "game_options"
 #~ msgid "DISABLE EMULATOR JOYSTICK"
-#~ msgstr "EMÜLATÖR JOYSTICK'İ DEVRE DIŞI BIRAK"
+#~ msgstr "EMÜLATÖR JOYSTICK DEVRE DIŞI BIRAK"
 
 #~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
@@ -20099,16 +20087,6 @@ msgstr "sarı/mavi"
 #~ "görünür, ancak bazı esneme yapılarına neden olabilir."
 
 #~ msgctxt "game_options"
-#~ msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
-#~ msgstr ""
-#~ "Mükemmel piksel ölçeklemesini uygulayın. Düzensiz ölçeklemeyi ve "
-#~ "bulanıklığı önler."
-
-#~ msgctxt "game_options"
-#~ msgid "Enhancement. Enables texture upscaling textures and their size."
-#~ msgstr "İyileştirme. Doku yükseltme dokuları ve boyutlarını etkinleştirir."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enhancement. Improves clarity of distant textures when mip-mapping is "
 #~ "enabled."
@@ -20135,18 +20113,6 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
 #~ msgstr "OyunKolu + 4 Sideway Wiimote"
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Helps forcing an international Japenese version to English. Unlocking "
-#~ "more European languages etc."
-#~ msgstr ""
-#~ "Uluslararası Japonca sürümünü İngilizceye çevirmeye yardımcı olur. Daha "
-#~ "fazla Avrupa dili vb. kilidini açar."
-
-#~ msgctxt "game_options"
-#~ msgid "INTEGER SCALE"
-#~ msgstr "TAM SAYI ÖLÇEĞİ"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20206,10 +20172,6 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Needed by some games that use special unicode characters."
 #~ msgstr "Özel unicode karakterler kullanan bazı oyunlar için gereklidir."
-
-#~ msgctxt "game_options"
-#~ msgid "Only A1"
-#~ msgstr "Sadece A1"
 
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
@@ -20325,14 +20287,6 @@ msgstr "sarı/mavi"
 #~ msgstr "LCD renk yanlışlığını simüle edin."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Skip buffer effects disables auto frameskip and renders at display output "
-#~ "resolution."
-#~ msgstr ""
-#~ "Önbellek atlama efektleri otomatik kare atlamasını devre dışı bırakır ve "
-#~ "görüntü çıkış çözünürlüğünde işler."
-
-#~ msgctxt "game_options"
 #~ msgid "Store past states to rewind to in realtime, if the core supports it."
 #~ msgstr ""
 #~ "Çekirdek destekliyorsa, gerçek zamanlı olarak geri sarmak için geçmiş "
@@ -20371,10 +20325,6 @@ msgstr "sarı/mavi"
 #~ msgstr "Tandy Radio Shack Renkli Bilgisayar disk imajları"
 
 #~ msgctxt "game_options"
-#~ msgid "The upscaling method used when enabled."
-#~ msgstr "Etkinleştirildiğinde kullanılan yükseltme yöntemi."
-
-#~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Sağ analog çubuğa ikinci joystick gibi davranır."
 
@@ -20391,22 +20341,12 @@ msgstr "sarı/mavi"
 #~ msgstr "Hızlı çalıştırmalar/hatalar için kullanışlıdır."
 
 #~ msgctxt "game_options"
-#~ msgid "VSYNC INTERVAL"
-#~ msgstr "VSYNC ARALIĞI"
-
-#~ msgctxt "game_options"
 #~ msgid "Vsync"
 #~ msgstr "Vsync"
 
 #~ msgctxt "game_options"
 #~ msgid "WRITE COLOR BUFFERS"
 #~ msgstr "RENK ARABELLEKLERİNİ YAZ"
-
-#~ msgctxt "game_options"
-#~ msgid "When enabled, each game has its own set of VMU save files."
-#~ msgstr ""
-#~ "Etkinleştirildiğinde, her oyunun kendine ait bir VMU kayıt dosyaları seti "
-#~ "olur."
 
 #~ msgctxt "game_options"
 #~ msgid ""

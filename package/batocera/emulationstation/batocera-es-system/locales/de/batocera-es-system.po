@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-12 15:02+0000\n"
+"PO-Revision-Date: 2025-06-24 07:15+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -3041,7 +3041,7 @@ msgstr "Erlaubt das Laden von geschützten Spielen ohne Subchannel-Information."
 msgctxt "game_options"
 msgid ""
 "Allows reducing the visual quality of these curves for higher performance."
-msgstr ""
+msgstr "Erlaubt reduzierte Kurvenqualität für bessere Performance."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -5316,7 +5316,7 @@ msgstr ""
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Choose deinterlace option."
-msgstr ""
+msgstr "Deinterlace-Option wählen."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -6133,7 +6133,7 @@ msgstr "DEFAULT POWER ON RAM STATE"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "DEINTERLACE"
-msgstr ""
+msgstr "DEINTERLACE"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -6463,7 +6463,7 @@ msgstr "Verdunkeln"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "De-Interlaced"
-msgstr ""
+msgstr "Deinterlaced"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10510,7 +10510,7 @@ msgstr "Ganzzahlig Skalieren"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Interlaced"
-msgstr ""
+msgstr "Interlaced"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -19980,12 +19980,6 @@ msgstr "gelb/blau"
 #~ msgstr "Bei Gameboy-Spielen Farbe hinzufügen."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Allows reducing the visual quality of these curves for higher "
-#~ "performance.."
-#~ msgstr "Erlaubt reduzierte Kurvenqualität für bessere Performance."
-
-#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr ""
 #~ "Erlaubt die Verwendung von Switchres-Profilen, wenn diese vorhanden sind."
@@ -20059,10 +20053,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Zeitzone für die Konsole auswählen."
-
-#~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Bevorzugtes Bildseitenverhältnis auswählen."
 
 #~ msgctxt "game_options"
 #~ msgid "Color"

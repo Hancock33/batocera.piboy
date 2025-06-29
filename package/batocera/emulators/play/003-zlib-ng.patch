@@ -1,23 +1,20 @@
-Submodule deps/Dependencies contains modified content
 diff --git a/deps/Dependencies/build_cmake/zstd_zlibwrapper/CMakeLists.txt b/deps/Dependencies/build_cmake/zstd_zlibwrapper/CMakeLists.txt
-index 4b13920..f069db9 100644
+index f180dd7..d783a40 100644
 --- a/deps/Dependencies/build_cmake/zstd_zlibwrapper/CMakeLists.txt
 +++ b/deps/Dependencies/build_cmake/zstd_zlibwrapper/CMakeLists.txt
-@@ -2,16 +2,16 @@ cmake_minimum_required(VERSION 3.5)
- 
+@@ -1,15 +1,15 @@
  project(libzstdwapper C)
  
 -find_package(ZLIB)
 -if(NOT ZLIB_FOUND)
--	MESSAGE("-- Using Provided zlib source")
--	if(NOT TARGET zlibstatic)
 +#find_package(ZLIB)
 +#if(NOT ZLIB_FOUND)
-+#	MESSAGE("-- Using Provided zlib source")
+ 	MESSAGE("-- Using Provided zlib source")
+-	if(NOT TARGET zlibstatic)
 +#	if(NOT TARGET zlibstatic)
  		add_subdirectory(
- 			${CMAKE_CURRENT_SOURCE_DIR}/../zlib-1.2.8
- 			${CMAKE_CURRENT_BINARY_DIR}/zlib-1.2.8
+ 			${CMAKE_CURRENT_SOURCE_DIR}/../zlib
+ 			${CMAKE_CURRENT_BINARY_DIR}/zlib
  		)
 -	endif()
 -endif(NOT ZLIB_FOUND)
@@ -26,7 +23,7 @@ index 4b13920..f069db9 100644
  
  set(ZSTD_BUILD_STATIC ON)
  set(ZSTD_BUILD_SHARED  OFF)
-@@ -29,4 +29,4 @@ file(GLOB zstd_zlibwrapperSource ${CMAKE_CURRENT_SOURCE_DIR}/../../zstd/zlibWrap
+@@ -27,4 +27,4 @@ file(GLOB zstd_zlibwrapperSource ${CMAKE_CURRENT_SOURCE_DIR}/../../zstd/zlibWrap
  add_library(libzstd_zlibwrapper_static STATIC ${zstd_zlibwrapperSource})
  target_link_libraries(libzstd_zlibwrapper_static PRIVATE libzstd_static PUBLIC ZLIB::ZLIB)
  target_include_directories(libzstd_zlibwrapper_static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../zstd/lib/ ${CMAKE_CURRENT_SOURCE_DIR}/../../zstd/zlibWrapper/)

@@ -3,9 +3,10 @@
 # libretro-melonds-ds
 #
 ################################################################################
-# Version: Commits on Feb 19, 2025
-LIBRETRO_MELONDS_DS_VERSION = 5d2ece5b6d7041aa9d0a7921eee42969f8bdf8a7
+# Version: Commits on Jun 03, 2025
+LIBRETRO_MELONDS_DS_VERSION = e1391cc10a53b205963b7d1bd2b1f8d87d0d2cc7
 LIBRETRO_MELONDS_DS_SITE = $(call github,JesseTG,melonds-ds,$(LIBRETRO_MELONDS_DS_VERSION))
+LIBRETRO_MELONDS_DS_BRANCH = dev
 LIBRETRO_MELONDS_DS_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_MELONDS_DS_LICENSE = GPLv2
 LIBRETRO_MELONDS_DS_DEPENDENCIES = libpcap retroarch

@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Jun 21, 2025
-SHADPS4_VERSION = 1fc95bf44b18f682bb7aa0d50c9628e0f9087cf3
+# Version: Commits on Jun 29, 2025
+SHADPS4_VERSION = 7f727340aaca02de29d9f0b69cbcf040b164ab49
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
@@ -21,11 +21,12 @@ SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 SHADPS4_CONF_OPTS += -DENABLE_QT_GUI=ON
 SHADPS4_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 SHADPS4_CONF_OPTS += -DENABLE_UPDATER=OFF
+SHADPS4_CONF_OPTS += -DVMA_ENABLE_INSTALL=ON
 
 define SHADPS4_INSTALL_TARGET_CMDS
-	 mkdir -p $(TARGET_DIR)/usr/bin/shadps4
-	 $(INSTALL) -m 0755 $(@D)/buildroot-build/shadps4 $(TARGET_DIR)/usr/bin/shadps4/
-	 cp -pr $(@D)/buildroot-build/translations $(TARGET_DIR)/usr/bin/shadps4/
+	mkdir -p $(TARGET_DIR)/usr/bin/shadps4
+	$(INSTALL) -m 0755 $(@D)/buildroot-build/shadps4 $(TARGET_DIR)/usr/bin/shadps4/
+	cp -pr $(@D)/buildroot-build/translations $(TARGET_DIR)/usr/bin/shadps4/
 endef
 
 $(eval $(cmake-package))

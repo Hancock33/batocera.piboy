@@ -2,7 +2,7 @@
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
 #
-# This program is free software: you can redistribute it and/or modify
+# This script is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3.
 #
@@ -10,14 +10,13 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 # YOU MUST KEEP THIS HEADER AS IT IS
-#
 ################################################################################
 #
 # openmohaa
 #
 ################################################################################
-# Version: Commits on Jun 20, 2025
-OPENMOHAA_VERSION = 1c5a33f82a0175c3a2e4980ad8e6d44c5912e239
+# Version: Commits on Jun 27, 2025
+OPENMOHAA_VERSION = e243d24839293f90fcd0844817052f5d0b693131
 OPENMOHAA_SITE = $(call github,openmoh,openmohaa,$(OPENMOHAA_VERSION))
 OPENMOHAA_SUPPORTS_IN_SOURCE_BUILD = NO
 OPENMOHAA_LICENSE = GPL-2.0 license

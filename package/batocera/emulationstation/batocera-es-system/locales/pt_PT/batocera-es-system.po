@@ -3038,6 +3038,7 @@ msgctxt "game_options"
 msgid ""
 "Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
+"Permite reduzir a qualidade visual destas curvas para um maior desempenho."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -5310,7 +5311,7 @@ msgstr ""
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Choose deinterlace option."
-msgstr ""
+msgstr "Escolha a opção de desentrelaçamento."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -6131,12 +6132,12 @@ msgstr "ESTADO DE ALIMENTAÇÃO PADRÃO DE RAM"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "DEINTERLACE"
-msgstr ""
+msgstr "DESENTRELAÇAR"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "DEINTERLACING"
-msgstr "DEINTERLACING"
+msgstr "DESENTRELAÇAMENTO"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -6461,7 +6462,7 @@ msgstr "Escurecer"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "De-Interlaced"
-msgstr ""
+msgstr "Desentrelaçado"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10469,7 +10470,7 @@ msgstr "Escala inteira"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Interlaced"
-msgstr ""
+msgstr "Entrelaçado"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -19895,14 +19896,6 @@ msgstr "amarelo/azul"
 #~ msgstr "Adicionar cor aos jogos do Game Boy."
 
 #~ msgctxt "game_options"
-#~ msgid ""
-#~ "Allows reducing the visual quality of these curves for higher "
-#~ "performance.."
-#~ msgstr ""
-#~ "Permite reduzir a qualidade visual destas curvas para um maior "
-#~ "desempenho.."
-
-#~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
 #~ msgstr "Permite o uso de perfis de interruptores se presentes."
 
@@ -19975,10 +19968,6 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Escolher o fuso horário da sua consola"
-
-#~ msgctxt "game_options"
-#~ msgid "Choose your preferred aspect ratio.."
-#~ msgstr "Escolha a sua proporção de ecrã preferida.."
 
 #~ msgctxt "game_options"
 #~ msgid "Color"

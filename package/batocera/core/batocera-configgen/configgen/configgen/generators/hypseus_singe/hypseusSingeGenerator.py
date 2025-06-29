@@ -99,7 +99,7 @@ class HypseusSingeGenerator(Generator):
             "maddog": ["maddog", "maddog-hd", "maddog_hd"],
             "maddog2": ["maddog2", "maddog2-hd", "maddog2_hd"],
             "jack": ["jack", "samurai_jack"],
-            "johnnyrock": ["johnnyrock", "johnnyrock-hd", "johnnyrocknoir", "wsjr_hd"],
+            "johnnyrock": ["johnnyrock", "johnnyrock-hd", "johnnyrocknoir", "wsjr_hd", "wsjr-hd"],
             "pussinboots": ["pussinboots", "puss_in_boots"],
             "spacepirates": ["spacepirates", "spacepirates-hd", "space_pirates_hd"],
         }
@@ -149,6 +149,7 @@ class HypseusSingeGenerator(Generator):
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]
+        zipFile = rom.name + "/" + romName + ".zip"
         frameFile = rom.name + "/" + romName + ".txt"
         commandsFile = rom.name + "/" + romName + ".commands"
         singeFile = rom.name + "/" + romName + ".singe"
@@ -194,14 +195,21 @@ class HypseusSingeGenerator(Generator):
             _logger.debug("Resolution: %s", video_resolution)
 
         if system.name == "singe":
-            commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
-                            "singe", "vldp", "-retropath", "-framefile", frameFile, "-script", singeFile,
-                            "-fullscreen", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir,
-                            "-romdir", batoceraFiles.singeRomdir, "-homedir", batoceraFiles.hypseusDatadir]
+            if zipFile.exists():
+                commandArray = ['/usr/bin/hypseus',
+                                "singe", "vldp", "-retropath", "-framefile", frameFile, "-zlua", zipFile,
+                                "-fullscreen", "-gamepad", "-datadir", _DATA_DIR, "-singedir", _SINGE_ROM_DIR,
+                                "-romdir", _SINGE_ROM_DIR, "-homedir", _DATA_DIR]
+            else:
+                commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
+                                "singe", "vldp", "-retropath", "-framefile", frameFile, "-script", singeFile,
+                                "-fullscreen", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir,
+                                "-romdir", batoceraFiles.singeRomdir, "-homedir", batoceraFiles.hypseusDatadir]
         elif (system.name == 'actionmax') or (system.name == 'alg') :
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                             "singe", "vldp", "-framefile", frameFile, "-script", singeFile,
                             "-fullscreen", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir, "-homedir", batoceraFiles.hypseusDatadir]
+
         else:
             commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
                             romName, "vldp", "-framefile", frameFile, "-fullscreen",
@@ -284,19 +292,19 @@ class HypseusSingeGenerator(Generator):
                         borderColor = "w"
 
                 if bordersSize == "thin":
-                    commandArray.extend(["-sinden", "2", borderColor])
-                elif bordersSize == "medium":
                     commandArray.extend(["-sinden", "4", borderColor])
+                elif bordersSize == "medium":
+                    commandArray.extend(["-sinden", "7", borderColor])
                 else:
-                    commandArray.extend(["-sinden", "6", borderColor])
+                    commandArray.extend(["-sinden", "9", borderColor])
+
+            if guns: # enable manymouse for guns
+                commandArray.extend(["-manymouse"]) # sinden implies manymouse
+                if xratio is not None:
+                    commandArray.extend(["-xratio", str(xratio)]) # accuracy correction based on ratio
             else:
-                if guns: # enable manymouse for guns
-                    commandArray.extend(["-manymouse"]) # sinden implies manymouse
-                    if xratio is not None:
-                        commandArray.extend(["-xratio", str(xratio)]) # accuracy correction based on ratio
-                else:
-                    if system.config.get_bool("singe_abs"):
-                        commandArray.extend(["-manymouse"]) # this is causing issues on some "non-gun" games
+                if system.config.get_bool("singe_abs"):
+                    commandArray.extend(["-manymouse"]) # this is causing issues on some "non-gun" games
 
         # bezels
         if not system.config.get_bool('hypseus_bezels', True):

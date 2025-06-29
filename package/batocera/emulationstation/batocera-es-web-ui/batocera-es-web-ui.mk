@@ -3,7 +3,8 @@
 # batocera-es-web-ui
 #
 ################################################################################
-BATOCERA_ES_WEB_UI_VERSION = 0.1
+# Version: Commits on Jun 22, 2025
+BATOCERA_ES_WEB_UI_VERSION = 0.2
 BATOCERA_ES_WEB_UI_LICENSE = LGPL
 BATOCERA_ES_WEB_UI_DEPENDENCIES = batocera-emulationstation
 BATOCERA_ES_WEB_UI_SOURCE =

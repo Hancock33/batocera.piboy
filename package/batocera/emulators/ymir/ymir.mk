@@ -2,7 +2,7 @@
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
 #
-# This program is free software: you can redistribute it and/or modify
+# This script is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3.
 #
@@ -15,26 +15,20 @@
 # ymir
 #
 ################################################################################
-# Version: Commits on Jun 20, 2025
-YMIR_VERSION = bab1d3932af787a0270369fa41e28798da9419c4
+# Version: Commits on Jun 29, 2025
+YMIR_VERSION = 31cb56d4f1b58981922ed2fe674f48ab9fc572ad
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD=git
 YMIR_GIT_SUBMODULES=YES
 YMIR_LICENSE = GPLv2
 YMIR_LICENSE_FILE = LICENSE
 YMIR_DEPENDENCIES += host-clang sdl3
-
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
-YMIR_CMAKE_BACKEND = ninja
-# Use clang
-YMIR_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
-YMIR_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
-YMIR_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++"
-
-YMIR_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 YMIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+YMIR_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 YMIR_CONF_OPTS += -DYmir_DEV_BUILD=OFF
+YMIR_CONF_OPTS += -DYmir_ENABLE_DEVLOG=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_IMGUI_DEMO=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_SANDBOX=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_TESTS=OFF
