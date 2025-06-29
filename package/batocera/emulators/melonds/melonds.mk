@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 28, 2025
-MELONDS_VERSION = 4aaea218c1be7cc076d4f86407e273a36e66c3d7
+MELONDS_VERSION = f352cf612ad16d494ece5ff49aed91e057b614be
 MELONDS_SITE = $(call github,melonDS-emu,melonDS,$(MELONDS_VERSION))
 MELONDS_LICENSE = GPLv2
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO
