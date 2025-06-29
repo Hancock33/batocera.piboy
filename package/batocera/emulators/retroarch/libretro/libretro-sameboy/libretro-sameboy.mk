@@ -3,8 +3,8 @@
 # libretro-sameboy
 #
 ################################################################################
-# Version: Commits on Jun 28, 2025
-LIBRETRO_SAMEBOY_VERSION = e381ebd1eaf2a16924d7763d02dd29dbcf1b23db
+# Version: Commits on Jun 29, 2025
+LIBRETRO_SAMEBOY_VERSION = ae2d68aaf3c6a4cabe32a34919ad9d4a13790604
 LIBRETRO_SAMEBOY_SITE = $(call github,LIJI32,SameBoy,$(LIBRETRO_SAMEBOY_VERSION))
 LIBRETRO_SAMEBOY_LICENSE = GPL
 LIBRETRO_SAMEBOY_DEPENDENCIES = host-rgbds
