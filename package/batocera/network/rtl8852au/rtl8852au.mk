@@ -3,7 +3,7 @@
 # rtl8852au
 #
 ################################################################################
-# Version: Commits on Jun 14, 2025
+# Version: Commits on Jun 13, 2025
 RTL8852AU_VERSION = 708c17801ba3f83734e6d8cc39b74d1d528489f8
 RTL8852AU_SITE = $(call github,natimerry,rtl8852au,$(RTL8852AU_VERSION))
 RTL8852AU_LICENSE = GPL-2.0

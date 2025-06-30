@@ -3,7 +3,7 @@
 # mame
 #
 ################################################################################
-# Version: Commits on Mar 30, 2025
+# Version: Commits on Apr 27, 2025
 MAME_VERSION = mame0277
 MAME_SITE = https://github.com/Hancock33/batocera-mame-builds/releases/download/$(MAME_VERSION)
 MAME_LICENSE = MAME

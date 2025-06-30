@@ -15,8 +15,8 @@
 # openmohaa
 #
 ################################################################################
-# Version: Commits on Jun 27, 2025
-OPENMOHAA_VERSION = e243d24839293f90fcd0844817052f5d0b693131
+# Version: Commits on Jun 29, 2025
+OPENMOHAA_VERSION = 8d431681bd6f80df545699254931aac1bf948008
 OPENMOHAA_SITE = $(call github,openmoh,openmohaa,$(OPENMOHAA_VERSION))
 OPENMOHAA_SUPPORTS_IN_SOURCE_BUILD = NO
 OPENMOHAA_LICENSE = GPL-2.0 license
