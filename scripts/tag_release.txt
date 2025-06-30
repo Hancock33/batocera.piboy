@@ -19,6 +19,8 @@ libsfdo.mk
 libsysstat.mk
 libzedmd.mk
 ossp.mk
+plutosvg.mk
+plutovg.mk
 polkitqt.mk
 python-cog.mk
 python-pyxel.mk

@@ -371,8 +371,8 @@ Libraries|[liblgpio](http://github.com/joan2937/lg)|746f0df43774175090b93abcc860
 Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.5.0|May 27, 2024
 Libraries|[libsfdo](http://github.com/jlindgren90/libsfdo)|v0.1.3|Sept 17, 2024
 Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.14.0|Mar 08, 2025
-Libraries|[plutosvg](http://github.com/stenzek/plutosvg)|c816e127bcba7ea311114be2cec0d1d3260abe06|Apr 19, 2025
-Libraries|[plutovg](http://github.com/sammycage/plutovg)|6cbcea0a01a8052a05d983fa7105b437abc32382|Jun 09, 2025
+Libraries|[plutosvg](https://github.com/sammycage/plutosvg.git)|v0.0.7|May 15, 2025
+Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.1.0|May 15, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|a30abeab04cf8c416e800a7f9c54ecfeeec48406|Jun 13, 2025
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|a02f26238672aee1542debfb5797c7d29acb7cb8|Jun 06, 2025
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/47/ea/1697fbb6bbeb9e201d11b3e7990035fe29ca18d8d58d7de74fff82cbcc63)|8.58.1|May 15, 2025

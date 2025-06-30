@@ -155,7 +155,6 @@ Utils|[warehouse](http://github.com/flattool/warehouse)|2.1.0|Jun 10, 2025
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.6.2|Jun 10, 2025
 Emulators|[libserum](http://github.com/zesinger/libserum)|v2.2.0|Jun 10, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|fdcbc279765e432cbabf19264273f4a87f61fc11|Jun 10, 2025
-Libraries|[plutovg](http://github.com/sammycage/plutovg)|6cbcea0a01a8052a05d983fa7105b437abc32382|Jun 09, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|e0224906d9a89e036f33e6e2d7aa6c9cbcc2a16d|Jun 09, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|5959e453c7916bea5c76e77f1cb7eed4908a1fab|Jun 07, 2025
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|8c71bdd0b25ae9402f4cf3be43b6f9b6b71f98b2|Jun 07, 2025
@@ -205,6 +204,8 @@ Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.o
 Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/9a/24/4830078eb5dfd260e2975f39287750a10d9e6135b7d55314f886dca36556)|3.1.4|May 17, 2025
 Libraries|[python-adafruit-circuitpython-pixelbuf](https://files.pythonhosted.org/packages/67/1d/ed36cd46c5f1b71c0cb5235ec21bf744ece2355b52b7f6c88a8d035ead24)|2.0.8|May 17, 2025
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|a09f78f735f0d2184f64ba5b134abe98ee99c65f|May 17, 2025
+Libraries|[plutosvg](https://github.com/sammycage/plutosvg.git)|v0.0.7|May 15, 2025
+Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.1.0|May 15, 2025
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/47/ea/1697fbb6bbeb9e201d11b3e7990035fe29ca18d8d58d7de74fff82cbcc63)|8.58.1|May 15, 2025
 Emulators|[citron](https://git.citron-emu.org/citron/emu)|046538bb473c99fe3d02f9b0e76f7a056e6cecc8|May 14, 2025
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/dc/fe/74c3cdba24f06e8748819dbbc4912e3e2193f1a900c96b659e5794dee3a8)|3.79.0|May 14, 2025
@@ -244,7 +245,6 @@ Gpu|[glslang](http://github.com/KhronosGroup/glslang)|vulkan-sdk-1.4.313.0|Apr 2
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|d2eefab298b0b9152d2934d6f0227b6803c877b3|Apr 24, 2025
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|42be798db5585f62b4bd34ce49dd1e8063c9d7c1|Apr 23, 2025
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.313.0|Apr 22, 2025
-Libraries|[plutosvg](http://github.com/stenzek/plutosvg)|c816e127bcba7ea311114be2cec0d1d3260abe06|Apr 19, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|5a0465b85b03d69c94351ef21f9d2591bdcbde77|Apr 19, 2025
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.313.0|Apr 18, 2025
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|efaaa1052dc427d64534531cf59a6a9a659dc6a6|Apr 16, 2025

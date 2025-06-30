@@ -3,10 +3,11 @@
 # plutosvg
 #
 ################################################################################
-# Version: Commits on Apr 19, 2025
-PLUTOSVG_VERSION = c816e127bcba7ea311114be2cec0d1d3260abe06
-PLUTOSVG_SITE = $(call github,stenzek,plutosvg,$(PLUTOSVG_VERSION))
-
+# Version: Commits on May 15, 2025
+PLUTOSVG_VERSION = v0.0.7
+PLUTOSVG_SITE = https://github.com/sammycage/plutosvg.git
+PLUTOSVG_SITE_METHOD=git
+PLUTOSVG_GIT_SUBMODULES=YES
 PLUTOSVG_LICENSE = BSD-2-Clause
 PLUTOSVG_INSTALL_STAGING = YES
 PLUTOSVG_SUPPORTS_IN_SOURCE_BUILD = NO
