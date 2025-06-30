@@ -3,8 +3,8 @@
 # kodi_resource_language_tr_tr
 #
 ################################################################################
-# Version: Commits on May 10, 2025
-KODI_RESOURCE_LANGUAGE_TR_TR_VERSION = 11.0.82
+# Version: Commits on Jun 14, 2025
+KODI_RESOURCE_LANGUAGE_TR_TR_VERSION = 11.0.83
 KODI_RESOURCE_LANGUAGE_TR_TR_SOURCE = resource.language.tr_tr-$(KODI_RESOURCE_LANGUAGE_TR_TR_VERSION).zip
 KODI_RESOURCE_LANGUAGE_TR_TR_SITE = http://mirrors.kodi.tv/addons/omega/resource.language.tr_tr
 KODI_RESOURCE_LANGUAGE_TR_TR_PLUGINNAME=resource.language.tr_tr
