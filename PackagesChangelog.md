@@ -17,7 +17,9 @@ Ports|[box64](http://github.com/ptitseb/box64)|569b7471f96ab17d04d548de4ca56d389
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b8e528ebfba266fa719c81c3b4afc2c36f01cd60|Jul 01, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|157000224c8503c0493742f33f102ee2403665e5|Jul 01, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v1.30.0|Jul 01, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250701|Jul 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d8012c901b03b82023614ddd6cc3fb03d2cc1ab0|Jul 01, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250701|Jul 01, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|3b329273dd303874196b77e79ee8833aa653b6cd|Jul 01, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|3b329273dd303874196b77e79ee8833aa653b6cd|Jul 01, 2025
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|a72f7995cce23b460586e058f2061cd0d6e50fbc|Jul 01, 2025
@@ -37,6 +39,7 @@ Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|23f57afd42b8f94
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0278|Jun 30, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.3|Jun 30, 2025
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v0.9.3|Jun 30, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.11|Jun 30, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|d31a04e35f0afcb2b06d5bc54240fb2ee634449a|Jun 30, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|586372e575f5cc1a7cbb170219ab6df98f394cae|Jun 30, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|3fba33204cfd0ffe2601b36aa516149ef348bed9|Jun 30, 2025
@@ -57,10 +60,7 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|473b0de0907740c841f0a
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|33d237706e18d92fb79e3fd7313d5181d8a806cd|Jun 29, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|f352cf612ad16d494ece5ff49aed91e057b614be|Jun 28, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b6dc8d70df5022b7570d4caf46cebecec7bd8260|Jun 28, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|10.11|Jun 28, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250628|Jun 28, 2025
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|49adf5c48ba2784d97384619a52e875daf4bc062|Jun 28, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250628|Jun 28, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|5b448437dfa0cd246a655ffc76b04a1be08c3af9|Jun 28, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|04fb75e4f1291a490574168f3a04f9455e4a008d|Jun 28, 2025
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|4f53f97418f72bbefefff8d5746aa49942fc9848|Jun 28, 2025
