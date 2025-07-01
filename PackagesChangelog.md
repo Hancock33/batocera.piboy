@@ -24,7 +24,7 @@ Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|39de4b3219312
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|c84784792fddc2a2b7b16680219726ab9d7c6460|Jun 30, 2025
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|eb4e7573da655944461a398e41ff45d1bdb360d1|Jun 30, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|d5c22e9e868ca3dadc72007440e20195c262d5f0|Jun 30, 2025
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|99373d053ed5b378b799d29733f16aba7f95624a|Jun 30, 2025
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|551a06e035e471363f3f45178bd1c5bb2724729f|Jun 30, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|9b7dba5931dc44850c09f55435d2e9cafe4a3f96|Jun 30, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|819b4f7effb40e21c4109a433250e090736469ea|Jun 29, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|6c392d5a22a827437de7dbab11c47d90d0b443cf|Jun 29, 2025
