@@ -248,7 +248,7 @@ Emulators|[libserum](http://github.com/zesinger/libserum)|v2.2.0|Jun 10, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.6|Feb 22, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|f1639d93c2d7dd13fab5c38039595a1ab045ed8e|Jun 27, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|ba51502fdb68118695e85a51e13b833007dcfb23|Jun 01, 2025
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0277|Apr 27, 2025
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0278|Jul 01, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|f352cf612ad16d494ece5ff49aed91e057b614be|Jun 28, 2025
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|07c866bd2b897fcbce2131dc36066c179422c3c9|Jun 21, 2025

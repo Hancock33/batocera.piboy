@@ -7,6 +7,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu)|35ecfa3f5478a94791b17e815
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2871fe08c97ac2153f3c7e29ebe72d3e32af61be|Jul 01, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|8484170eceed1d9b3ffa6dcc43a7cfde233ccbe8|Jul 01, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|2b43cab378ae3401c32df5459e755b449bc4aaf0|Jul 01, 2025
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0278|Jul 01, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|975ecef87984ab0aad69305016d510ee0dc72937|Jul 01, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-07-01|Jul 01, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|767e1dfafaa1b6e2e3fd3a3d0db3c1436aeb6bfd|Jul 01, 2025
@@ -235,7 +236,6 @@ Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|3544ff56
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|f3be6d8132b09a3b5569d1981a37fe627a27e370|Apr 30, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0277|Apr 27, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|2996daa5e2048a6502a335299cdec5d6393d70eb|Apr 27, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0277|Apr 27, 2025
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|9dd1ff9dddbb6c172af0dc15da9e53e3a72c686f|Apr 26, 2025
