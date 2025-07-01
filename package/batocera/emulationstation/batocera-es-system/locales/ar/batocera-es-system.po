@@ -8547,7 +8547,7 @@ msgid ""
 "may drop frames."
 msgstr ""
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "

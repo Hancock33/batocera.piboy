@@ -13604,6 +13604,19 @@ freedroid:
 gzdoom:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
+  cfeatures:
+    gz_api:
+      prompt: GRAPHICS API
+      description: Choose which graphics API library to use.
+      choices:
+        "OpenGL (Default)": 0
+        "Vulkan":           1
+    gz_vsync:
+      prompt: VSYNC
+      description: Fix screen tearing. With Some games you need to turn VSync on in the games options.
+      choices:
+        "Disabled": False
+        "Enabled":  True
 halflife2:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]

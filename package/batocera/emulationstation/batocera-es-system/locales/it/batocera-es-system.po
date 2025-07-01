@@ -8647,7 +8647,7 @@ msgstr ""
 "permette strisce mentre si riprende da un rallentamento. Mailbox può avere "
 "una latenza più bassa ma allo stesso tempo può ridurre i frame."
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "

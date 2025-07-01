@@ -8625,7 +8625,7 @@ msgstr ""
 "tillater riving når den kommer seg etter en hastighets-senking. Postboks kan "
 "ha lavere ventetid, men kan hoppe over bilder."
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "

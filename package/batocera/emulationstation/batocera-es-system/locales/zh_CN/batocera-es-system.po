@@ -8510,7 +8510,7 @@ msgstr ""
 "解决屏幕撕裂问题。FIFO（垂直同步）不会丢帧, FIFO Relaxed 在恢复时允许撕裂, "
 "Mailbox 可能具有较低的延迟, 但可能会丢帧。"
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "

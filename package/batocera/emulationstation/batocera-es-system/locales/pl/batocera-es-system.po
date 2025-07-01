@@ -8681,7 +8681,7 @@ msgstr ""
 "rwanie po spadku wydajności. Mailbox może mieć niższe opóźnienie, ale może "
 "tracić klatki."
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
