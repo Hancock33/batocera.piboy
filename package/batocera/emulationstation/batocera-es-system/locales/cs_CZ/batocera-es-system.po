@@ -8635,7 +8635,7 @@ msgstr ""
 "umožňuje trhání, když se zotavuje ze zpomalení. Mailbox může mít nižší "
 "latenci, ale může shazovat snímky."
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
@@ -13127,7 +13127,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Compute shader)"
 
-#. TRANSLATION: azahar, play, scummvm
+#. TRANSLATION: azahar, gzdoom, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Výchozí)"

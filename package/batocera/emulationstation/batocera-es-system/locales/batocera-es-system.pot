@@ -12973,7 +12973,7 @@ msgctxt "game_options"
 msgid "RENDERER"
 msgstr ""
 
-#. TRANSLATION: azahar, play, scummvm
+#. TRANSLATION: azahar, gzdoom, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr ""
@@ -15671,6 +15671,13 @@ msgctxt "game_options"
 msgid "Maximum Blood"
 msgstr ""
 
+#. TRANSLATION: gzdoom, xenia-canary
+msgctxt "game_options"
+msgid ""
+"Fix screen tearing. With Some games you need to turn VSync on in the games "
+"options."
+msgstr ""
+
 #. TRANSLATION: quake3, vkquake3
 msgctxt "game_options"
 msgid ""
@@ -17154,13 +17161,6 @@ msgstr ""
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "INTERNAL DISPLAY RESOLUTION"
-msgstr ""
-
-#. TRANSLATION: xenia-canary
-msgctxt "game_options"
-msgid ""
-"Fix screen tearing. With Some games you need to turn VSync on in the games "
-"options."
 msgstr ""
 
 #. TRANSLATION: xenia-canary

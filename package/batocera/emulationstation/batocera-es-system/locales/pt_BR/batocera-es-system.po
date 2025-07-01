@@ -13199,7 +13199,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (sombreamento do computador)"
 
-#. TRANSLATION: azahar, play, scummvm
+#. TRANSLATION: azahar, gzdoom, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Padrao)"

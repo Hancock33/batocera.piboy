@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Options file\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-22 13:38+0300\n"
+"PO-Revision-Date: 2025-06-30 20:18+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish\n"
 "Language: tr\n"
@@ -392,7 +392,7 @@ msgstr "10x Doğal (6400x5280)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "10x Native (~3600p/6K)"
-msgstr ""
+msgstr "10x Doğal (~3600p/6K)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -417,7 +417,7 @@ msgstr "11x Doğal (7040x5808)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "11x Native (~3960p)"
-msgstr ""
+msgstr "11x Doğal (~3960p)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -512,7 +512,7 @@ msgstr "12x Doğal (7680x6336) 8K"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "12x Native (~4320p/8K)"
-msgstr ""
+msgstr "12x Doğal (~4320p/8K)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -537,7 +537,7 @@ msgstr "13."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "13x Native (~5824p)"
-msgstr ""
+msgstr "13x Doğal (~5824p)"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -582,7 +582,7 @@ msgstr "14."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "14x Native (~6272p)"
-msgstr ""
+msgstr "14x Doğal (~6272p)"
 
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
@@ -632,7 +632,7 @@ msgstr "15."
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "15x Native (~6720p)"
-msgstr ""
+msgstr "15x Doğal (~6720p)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -737,7 +737,7 @@ msgstr "16x MSAA"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "16x Native (~7168p)"
-msgstr ""
+msgstr "16x Doğal (~7168p)"
 
 #. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
 msgctxt "game_options"
@@ -832,7 +832,7 @@ msgstr "1x (~480)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "1x Native (PS2)"
-msgstr ""
+msgstr "1x Doğal (PS2)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -1827,7 +1827,7 @@ msgstr "5x Doğal (~1620p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "5x Native (~1800p/3K)"
-msgstr ""
+msgstr "5x Doğal (~1800p/3K)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2027,7 +2027,7 @@ msgstr "7x Doğal (~2520p)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "7x Native (~2530p)"
-msgstr ""
+msgstr "7x Doğal (~2530p)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2212,13 +2212,15 @@ msgstr "9x Doğal (5760x4752)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "9x Native (~3240p)"
-msgstr ""
+msgstr "9x Doğal (~3240p)"
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid ""
 "A small  number of games will have compatibility problems with this enabled."
 msgstr ""
+"Bu özellik etkinleştirildiğinde, az sayıda oyunda uyumluluk sorunları "
+"yaşanabilir."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
@@ -3040,6 +3042,8 @@ msgctxt "game_options"
 msgid ""
 "Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
+"Daha yüksek performans için bu eğrilerin görsel kalitesinin azaltılmasına "
+"olanak tanır."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -3890,7 +3894,7 @@ msgstr "Baltık"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Basic"
-msgstr ""
+msgstr "BASİT"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -3954,7 +3958,7 @@ msgstr "Bikübik"
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
 msgid "Bicubic: B-Spine"
-msgstr "Bikübik: B-Omurga"
+msgstr "Bicubic: B-Spine"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -3979,7 +3983,7 @@ msgstr "Çift Doğrusal (Varsayılan)"
 #. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "Bilinear (Forced excluding sprite)"
-msgstr "Çift Doğrusal(Zorunlu hareketli grafik hariç)"
+msgstr "Çift Doğrusal (Zorunlu hareketli grafik hariç)"
 
 #. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
@@ -5088,22 +5092,22 @@ msgstr "Kartuş"
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 1)"
-msgstr "Kartuş (Slot 1)"
+msgstr "Kartuş (Yuva 1)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 2)"
-msgstr "Kartuş (Slot 2)"
+msgstr "Kartuş (Yuva 2)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 3)"
-msgstr "Kartuş (Slot 3)"
+msgstr "Kartuş (Yuva 3)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Cartridge (Slot 4)"
-msgstr "Kartuş (Slot 4)"
+msgstr "Kartuş (Yuva 4)"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -5308,7 +5312,7 @@ msgstr "Konsol dilini seçin. Tüm oyunlar dil seçimini desteklemeyebilir."
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Choose deinterlace option."
-msgstr ""
+msgstr "Taramasızlaştırma seçeneği seç."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -6129,7 +6133,7 @@ msgstr "VARSAYILAN GÜÇ AÇIK RAM DURUMU"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "DEINTERLACE"
-msgstr ""
+msgstr "TARAMASIZLAŞTIR"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -6309,7 +6313,7 @@ msgstr "DOOM ÇÖZÜNÜRLÜK GELİŞTİRMESİ"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "DOUBLE"
-msgstr "ÇİFTLİ"
+msgstr "ÇİFT"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6459,7 +6463,7 @@ msgstr "Karartma"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "De-Interlaced"
-msgstr ""
+msgstr "Taramasızlaştır"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -7770,7 +7774,7 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
-msgstr ""
+msgstr "Hile dosyalarının `cheats` dizininden okunmasını sağlar."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -8162,7 +8166,7 @@ msgstr "HIZLI BLITTER (DAHA AZ UYUMLU)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "FAST CD/DVD ACCESS"
-msgstr ""
+msgstr "HIZLI CD/DVD ERİŞİMİ"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -8676,7 +8680,7 @@ msgstr ""
 "yavaşlamanın ardından toparlanırken yırtılmaya izin verir. Posta kutusunun "
 "gecikme süresi daha düşük olabilir ancak kareler düşebilir."
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
@@ -9950,6 +9954,8 @@ msgid ""
 "Helps forcing an international Japanese version to English. Unlocking more "
 "European languages etc."
 msgstr ""
+"Uluslararası Japonca sürümün İngilizceye zorlanmasına yardımcı olur. Daha "
+"fazla Avrupa dilinin kilidini açar vb."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10469,7 +10475,7 @@ msgstr "Tamsayı Ölçeği"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Interlaced"
-msgstr ""
+msgstr "Tam Taramalı"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
@@ -10947,7 +10953,7 @@ msgstr "DİL"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
-msgstr ""
+msgstr "DİL KİLİDİNİ AÇ"
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -13183,7 +13189,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Gölgelendirici hesap)"
 
-#. TRANSLATION: azahar, play, scummvm
+#. TRANSLATION: azahar, gzdoom, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Varsayılan)"
@@ -15500,7 +15506,7 @@ msgstr "SENKRONİZE İŞLEYİCİ"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "SYSTEM"
-msgstr ""
+msgstr "SİSTEM"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17083,7 +17089,7 @@ msgstr "Suriye"
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "System 3.0 (LD Floppy)"
-msgstr "System 3.0 (LD Disket)"
+msgstr "Sistem 3.0 (LD Disket)"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -18240,7 +18246,7 @@ msgstr "Doymamış v6 (FirebrandX)"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Unscaled"
-msgstr ""
+msgstr "Ölçeklendirilmemiş"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -19881,14 +19887,6 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "Game Boy oyunlarına renk kat."
-
-#~ msgctxt "game_options"
-#~ msgid ""
-#~ "Allows reducing the visual quality of these curves for higher "
-#~ "performance.."
-#~ msgstr ""
-#~ "Daha yüksek performans için bu eğrilerin görsel kalitesinin azaltılmasına "
-#~ "olanak tanır."
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."
