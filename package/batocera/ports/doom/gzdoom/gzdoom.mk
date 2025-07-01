@@ -3,8 +3,8 @@
 # gzdoom
 #
 ################################################################################
-# Version: Commits on Jun 29, 2025
-GZDOOM_VERSION = 1a0df14170a2d420eda4919f7fc54c9d7e4042fd
+# Version: Commits on Jun 30, 2025
+GZDOOM_VERSION = 3fba33204cfd0ffe2601b36aa516149ef348bed9
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = bzip2 fluidsynth host-gzdoom libglew libglu libvpx mesa3d openal sdl2 webp zmusic
@@ -22,11 +22,12 @@ define HOST_GZDOOM_INSTALL_CMDS
 endef
 
 GZDOOM_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-GZDOOM_CONF_OPTS += -DNO_GTK=ON
 GZDOOM_CONF_OPTS += -DFORCE_CROSSCOMPILE=ON
 GZDOOM_CONF_OPTS += -DIMPORT_EXECUTABLES=$(HOST_GZDOOM_BUILDDIR)/ImportExecutables.cmake
-GZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/gzdoom"
 GZDOOM_CONF_OPTS += -DINSTALL_PK3_PATH="/usr/share/gzdoom"
+GZDOOM_CONF_OPTS += -DINSTALL_SOUNDFONT_PATH="/usr/share/gzdoom"
+GZDOOM_CONF_OPTS += -DNO_GTK=ON
+GZDOOM_CONF_OPTS += -DNO_SDL_JOYSTICK=OFF
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
