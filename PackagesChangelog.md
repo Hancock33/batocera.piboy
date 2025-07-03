@@ -22,6 +22,7 @@ Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|dfb9760b74a1eed
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|ffbb04c95fd746e9e9dd749916496832ab62c204|Jul 03, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0b40aa01d1199fb55814eb26ff366d3492c62b04|Jul 03, 2025
 Sources|[libretro-mame-src](http://github.com/libretro/mame)|fba50741006fa3e27e1897f589d2048a505b8fd6|Jul 03, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch7-10.11.r72|Jul 03, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250703|Jul 03, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|7979e7b29261c11ebce2deabc41ed081b6691398|Jul 03, 2025
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|e9a78d8e315dd8fba34df3c900fa92fcc425a9fd|Jul 03, 2025
@@ -65,7 +66,6 @@ Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|4
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0278|Jun 30, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.3|Jun 30, 2025
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v0.9.3|Jun 30, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.11|Jun 30, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|586372e575f5cc1a7cbb170219ab6df98f394cae|Jun 30, 2025
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|ccba5265f60f8e64a1984c9d14d383606193ea6a|Jun 30, 2025
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|39de4b321931207db2432f668c0d48b78fd4c212|Jun 30, 2025
