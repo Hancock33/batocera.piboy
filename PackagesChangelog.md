@@ -12,7 +12,9 @@ Hardware|[dmd-simulator](http://github.com/batocera-linux/dmd-simulator)|ad244a7
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|0983084625e2ad38f768411b332d7975fceafd1e|Jul 04, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|549b384c3c203bc949d86ff73e0134f6973e1e0a|Jul 04, 2025
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|388752735c68456b89d8acffcb836e6802308007|Jul 04, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250704|Jul 04, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d165787296205a16aa9e5e1f27d99a73b9580026|Jul 04, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250704|Jul 04, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|171cd3ec6bacda9b7e100c4744551f19f40e2090|Jul 04, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|171cd3ec6bacda9b7e100c4744551f19f40e2090|Jul 04, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|42dc44815131079db0de69d2b1d52e9f7edf842e|Jul 04, 2025
@@ -43,13 +45,11 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0b40aa01d1199fb55814
 Sources|[libretro-mame-src](http://github.com/libretro/mame)|fba50741006fa3e27e1897f589d2048a505b8fd6|Jul 03, 2025
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.4|Jul 03, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch7-10.11.r72|Jul 03, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250703|Jul 03, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|7979e7b29261c11ebce2deabc41ed081b6691398|Jul 03, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|2857eb7effeaeb8240f7587e2728990b37b7db52|Jul 03, 2025
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|e9a78d8e315dd8fba34df3c900fa92fcc425a9fd|Jul 03, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|291a41e952f87d6438fa2d48aeff0fbc88819034|Jul 03, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|afd13d4c7aa61d5111fe0fbdcf80f1d8571046fd|Jul 03, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250703|Jul 03, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f0d10dcdf9b050af4c1abd082d12de4c2e7593d1|Jul 03, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|291a41e952f87d6438fa2d48aeff0fbc88819034|Jul 03, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9c1b66c7729f8e5c5deed8e908be71fd1743cbec|Jul 03, 2025

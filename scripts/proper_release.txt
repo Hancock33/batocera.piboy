@@ -25,7 +25,6 @@ libretro-mame.mk
 libretro-mgba.mk
 libserum.mk
 libxmp.mk
-mame-src.mk
 mame.mk
 mold.mk
 mono-bin.mk
