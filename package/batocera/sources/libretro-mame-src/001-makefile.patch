@@ -1,8 +1,8 @@
 diff --git a/makefile b/makefile
-index 834b88c6168..524ebeb9b4a 100644
+index d9ca3fbaccc..fda92d932cb 100644
 --- a/makefile
 +++ b/makefile
-@@ -391,7 +391,7 @@ ifndef NOASM
+@@ -392,7 +392,7 @@ ifndef NOASM
  endif
  endif
  
