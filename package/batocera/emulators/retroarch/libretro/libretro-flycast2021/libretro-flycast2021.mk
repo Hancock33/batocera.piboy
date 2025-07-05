@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 04, 2025
-LIBRETRO_FLYCAST2021_VERSION = 2495c1e8c473c92c1f584252156b9ed6acd5fe8e
+LIBRETRO_FLYCAST2021_VERSION = 8b32dd8779b3ab40a79acf7f7aea8b3f47114f13
 LIBRETRO_FLYCAST2021_SITE = $(call github,metallic77,flycast,$(LIBRETRO_FLYCAST2021_VERSION))
 LIBRETRO_FLYCAST2021_LICENSE = GPLv2
 
