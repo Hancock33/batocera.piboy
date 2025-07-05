@@ -8511,7 +8511,7 @@ msgstr ""
 "修復螢幕撕裂。FIFO (Vsync)不會丟幀。先進先出放鬆允許撕裂因為它從一個緩慢恢"
 "復。郵箱可以有較低的延遲，但可能會丟幀。"
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
@@ -12944,7 +12944,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Compute shader)"
 
-#. TRANSLATION: azahar, play, scummvm
+#. TRANSLATION: azahar, gzdoom, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (預設)"

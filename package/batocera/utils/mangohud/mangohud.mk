@@ -3,7 +3,7 @@
 # mangohud
 #
 ################################################################################
-# Version: Commits on Jun 15, 2024
+# Version: Commits on Nov 28, 2021
 MANGOHUD_VERSION = 12620c91eaca0917a7939a92ec33915cadf24475
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 MANGOHUD_BRANCH = simple-image-loader

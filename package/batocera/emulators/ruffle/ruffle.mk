@@ -3,8 +3,8 @@
 # ruffle
 #
 ################################################################################
-# Version: Commits on Jun 29, 2025
-RUFFLE_VERSION = nightly-2025-06-29
+# Version: Commits on Jul 05, 2025
+RUFFLE_VERSION = nightly-2025-07-05
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
 RUFFLE_DEPENDENCIES = alsa-lib host-rust-bin host-rustc nghttp2 openssl udev
@@ -15,7 +15,7 @@ RUFFLE_CARGO_ENV = CARGO_HOME=$(DL_DIR)/br-cargo-home \
 	CARGO_TARGET_$(call UPPERCASE,$(RUSTC_TARGET_NAME))_LINKER=$(notdir $(TARGET_CROSS))gcc \
 	PKG_CONFIG="$(PKG_CONFIG_HOST_BINARY)"
 
-RUFFLE_CARGO_MODE = $(if $(BR2_ENABLE_DEBUG),,release)
+RUFFLE_CARGO_MODE = $(if $(BR2_ENABLE_DEBUG),debug,release)
 RUFFLE_BIN_DIR = target/$(RUSTC_TARGET_NAME)/$(RUFFLE_CARGO_MODE)
 
 RUFFLE_CARGO_OPTS = \

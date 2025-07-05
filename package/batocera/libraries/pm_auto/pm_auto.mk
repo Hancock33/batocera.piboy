@@ -3,8 +3,8 @@
 # pm_auto
 #
 ################################################################################
-# Version: Commits on Jun 13, 2025
-PM_AUTO_VERSION = a30abeab04cf8c416e800a7f9c54ecfeeec48406
+# Version: Commits on Jul 03, 2025
+PM_AUTO_VERSION = dc0c9e368b07f1a83ef41c32a625a0efbccd591a
 PM_AUTO_BRANCH = 1.2.x
 PM_AUTO_SITE = $(call github,sunfounder,pm_auto,$(PM_AUTO_VERSION))
 PM_AUTO_SETUP_TYPE = setuptools

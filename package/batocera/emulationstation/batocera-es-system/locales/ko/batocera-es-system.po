@@ -8617,7 +8617,7 @@ msgstr ""
 "FIFO 완화는 속도 저하에서 회복되면서 찢어짐을 허용합니다. 메일박스는 대기 시"
 "간이 낮을 수 있지만 프레임이 삭제될 수 있습니다."
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: gzdoom, xenia-canary
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. With Some games you need to turn VSync on in the games "
@@ -13106,7 +13106,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (컴퓨트 셰이더)"
 
-#. TRANSLATION: azahar, play, scummvm
+#. TRANSLATION: azahar, gzdoom, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (기본)"
