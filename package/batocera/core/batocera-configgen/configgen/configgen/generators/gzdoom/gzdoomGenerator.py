@@ -91,7 +91,7 @@ class GzdoomGenerator(Generator):
     def _determine_api_config(self, system) -> str:
         gzdoom_api = system.config.get("gz_api", "0")
         arch_path = BATOCERA_SHARE_DIR / "batocera.arch"
-        
+
         # Default to GLES on non-x86_64 architectures if API is auto ("0")
         if gzdoom_api == "0" and arch_path.exists():
             arch = arch_path.read_text().strip()
@@ -164,13 +164,13 @@ class GzdoomGenerator(Generator):
             "start":    "menu_main",
             "select":   "pause"
         }
-        
+
         GZDOOM_JOY_AUTOMAP_BINDINGS = {
             "a":        "am_clearmarks",
             "b":        "am_setmark",
             "y":        "am_togglefollow",
             "pageup":   "am_zoomin",
-            "pagedown": "am_zoomout"     
+            "pagedown": "am_zoomout"
         }
 
         # Add ROM path to search directories
@@ -187,7 +187,7 @@ class GzdoomGenerator(Generator):
         ]
         for path_line in sound_paths:
             ini.add_line_if_missing("[SoundfontSearch.Directories]", path_line)
-            
+
         # Vsync
         set_gz_vsync = system.config.get("gz_vsync", "false")
         ini.set_value("[GlobalSettings]", "vid_vsync", set_gz_vsync)
@@ -229,7 +229,7 @@ class GzdoomGenerator(Generator):
                             ini.set_value("[Doom.AutomapBindings]", f"Joy{joynum}", GZDOOM_JOY_AUTOMAP_BINDINGS[input.name])
             else:
                 ini.set_value(f"[Joy:JS:{n}]", "Enabled", "0")
-                
+
         ini.write()
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -273,7 +273,7 @@ class GzdoomGenerator(Generator):
 
         if system.config.get_bool("nologo"):
             commandArray.append("-nologo")
-            
+
         return Command.Command(array=commandArray, env={
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
             "SDL_JOYSTICK_HIDAPI": "0"
