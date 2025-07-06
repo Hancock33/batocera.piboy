@@ -746,7 +746,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 273748bec92c..763c8779e9f1 100644
+index 5aa62749a9b0..3c9453668502 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -166,6 +166,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -759,25 +759,7 @@ index 273748bec92c..763c8779e9f1 100644
  /**
   * DOC: overview
   *
-@@ -4692,7 +4695,7 @@ static u32 convert_brightness_from_user(const struct amdgpu_dm_backlight_caps *c
- 	}
- 
- 	// Rescale 0..255 to min..max
--	return min + DIV_ROUND_CLOSEST((max - min) * brightness,
-+	return min + DIV_ROUND_CLOSEST_ULL((u64)(max - min) * brightness,
- 				       AMDGPU_MAX_BL_LEVEL);
- }
- 
-@@ -4707,7 +4710,7 @@ static u32 convert_brightness_to_user(const struct amdgpu_dm_backlight_caps *cap
- 	if (brightness < min)
- 		return 0;
- 	// Rescale min..max to 0..255
--	return DIV_ROUND_CLOSEST(AMDGPU_MAX_BL_LEVEL * (brightness - min),
-+	return DIV_ROUND_CLOSEST_ULL((u64)AMDGPU_MAX_BL_LEVEL * (brightness - min),
- 				 max - min);
- }
- 
-@@ -9143,7 +9146,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9174,7 +9177,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -787,7 +769,7 @@ index 273748bec92c..763c8779e9f1 100644
  	bool pflip_present = false;
  	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/dc/dc.h b/drivers/gpu/drm/amd/display/dc/dc.h
-index 7c2ee0526926..d9170dc1877b 100644
+index 0761fc95a158..2081f0f5b907 100644
 --- a/drivers/gpu/drm/amd/display/dc/dc.h
 +++ b/drivers/gpu/drm/amd/display/dc/dc.h
 @@ -58,7 +58,7 @@ struct dmub_notification;
@@ -800,7 +782,7 @@ index 7c2ee0526926..d9170dc1877b 100644
   * MAX_PLANES - representative of the upper bound of planes that are supported by the HW
   */
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-index 12101b4a382c..ee97ee8fdcd0 100644
+index 9a6523560146..48ae77f338e9 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 @@ -96,6 +96,8 @@
@@ -812,7 +794,7 @@ index 12101b4a382c..ee97ee8fdcd0 100644
  struct dce110_hw_seq_reg_offsets {
  	uint32_t crtc;
  };
-@@ -3248,6 +3250,13 @@ void dce110_enable_dp_link_output(
+@@ -3249,6 +3251,13 @@ void dce110_enable_dp_link_output(
  			link->dc->res_pool->dp_clock_source;
  	const struct link_hwss *link_hwss = get_link_hwss(link, link_res);
  	unsigned int i;
@@ -944,10 +926,10 @@ index e7688c7fdc56..4f7feaac983c 100644
 +
  endif # HID_SUPPORT
 diff --git a/drivers/hid/Makefile b/drivers/hid/Makefile
-index a0f58475434c..6cafb07c7181 100644
+index a0f58475434c..137fc917a174 100644
 --- a/drivers/hid/Makefile
 +++ b/drivers/hid/Makefile
-@@ -174,6 +174,8 @@ obj-$(CONFIG_AMD_SFH_HID)       += amd-sfh-hid/
+@@ -174,10 +174,16 @@ obj-$(CONFIG_AMD_SFH_HID)       += amd-sfh-hid/
  
  obj-$(CONFIG_ASUS_ALLY_HID)  += asus-ally-hid/
  
@@ -956,14 +938,14 @@ index a0f58475434c..6cafb07c7181 100644
  obj-$(CONFIG_SURFACE_HID_CORE)  += surface-hid/
  
  obj-$(CONFIG_INTEL_THC_HID)     += intel-thc-hid/
-@@ -181,3 +183,7 @@ obj-$(CONFIG_INTEL_THC_HID)     += intel-thc-hid/
- obj-$(CONFIG_SPI_HID_APPLE_CORE)	+= spi-hid/
  
- obj-$(CONFIG_HID_DOCKCHANNEL)   += dockchannel-hid/
-+
 +obj-$(CONFIG_HID_MSI_CLAW)      += hid-msi-claw.o
 +
 +obj-$(CONFIG_LENOVO_LEGOS_HID)  += lenovo-legos-hid/
++
+ obj-$(CONFIG_SPI_HID_APPLE_CORE)	+= spi-hid/
+ 
+ obj-$(CONFIG_HID_DOCKCHANNEL)   += dockchannel-hid/
 diff --git a/drivers/hid/hid-core.c b/drivers/hid/hid-core.c
 index b991ed962366..a589f9c9b661 100644
 --- a/drivers/hid/hid-core.c

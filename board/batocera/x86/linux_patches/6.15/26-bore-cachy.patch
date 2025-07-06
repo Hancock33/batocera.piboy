@@ -1,5 +1,5 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index f96ac1982893..c8f5d491d77a 100644
+index f0bb88b01dfe..e7ab533c27ee 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -566,6 +566,15 @@ struct sched_statistics {
@@ -81,10 +81,10 @@ index 000000000000..a8faabc2885e
 +#endif // CONFIG_SCHED_BORE
 +#endif // _LINUX_SCHED_BORE_H
 diff --git a/init/Kconfig b/init/Kconfig
-index c524858118d2..880b48ef3888 100644
+index dfd93a277e5e..61f9fcf02997 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -1382,6 +1382,23 @@ config CHECKPOINT_RESTORE
+@@ -1413,6 +1413,23 @@ config CHECKPOINT_RESTORE
  
  	  If unsure, say N here.
  
@@ -107,7 +107,7 @@ index c524858118d2..880b48ef3888 100644
 +
  config SCHED_AUTOGROUP
  	bool "Automatic process group scheduling"
- 	select CGROUPS
+ 	depends on !SCHED_ALT
 diff --git a/kernel/Kconfig.hz b/kernel/Kconfig.hz
 index e1359db5561e..57c09523ac7b 100644
 --- a/kernel/Kconfig.hz
@@ -160,11 +160,11 @@ index 39e47bfaea58..28ebe13d2c28 100644
  	 * Make it visible to the rest of the system, but dont wake it up yet.
  	 * Need tasklist lock for parent etc handling!
 diff --git a/kernel/sched/Makefile b/kernel/sched/Makefile
-index 8ae86371ddcd..ab9ad886a1e9 100644
+index a972ef1e31a7..734abbd74f9e 100644
 --- a/kernel/sched/Makefile
 +++ b/kernel/sched/Makefile
-@@ -37,3 +37,4 @@ obj-y += core.o
- obj-y += fair.o
+@@ -42,3 +42,4 @@ obj-y += fair.o
+ endif
  obj-y += build_policy.o
  obj-y += build_utility.o
 +obj-y += bore.o
@@ -642,10 +642,10 @@ index 39fac649aa14..3f0b9d2d3930 100644
  
  #ifdef CONFIG_FAIR_GROUP_SCHED
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 557246880a7e..c1f6219f20eb 100644
+index 1236d8fb5f9b..a7f8de0a6e78 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
-@@ -167,7 +167,53 @@ static const struct file_operations sched_feat_fops = {
+@@ -168,7 +168,53 @@ static const struct file_operations sched_feat_fops = {
  };
  
  #ifdef CONFIG_SMP
@@ -699,37 +699,40 @@ index 557246880a7e..c1f6219f20eb 100644
  static ssize_t sched_scaling_write(struct file *filp, const char __user *ubuf,
  				   size_t cnt, loff_t *ppos)
  {
-@@ -213,7 +259,7 @@ static const struct file_operations sched_scaling_fops = {
+@@ -214,7 +260,7 @@ static const struct file_operations sched_scaling_fops = {
  	.llseek		= seq_lseek,
  	.release	= single_release,
  };
 -
 +#endif // CONFIG_SCHED_BORE
  #endif /* SMP */
+ #endif /* !CONFIG_SCHED_ALT */
  
- #ifdef CONFIG_PREEMPT_DYNAMIC
-@@ -507,13 +553,20 @@ static __init int sched_init_debug(void)
+@@ -515,14 +561,21 @@ static __init int sched_init_debug(void)
  	debugfs_create_file("preempt", 0644, debugfs_sched, NULL, &sched_dynamic_fops);
  #endif
  
+-	debugfs_create_u32("base_slice_ns", 0644, debugfs_sched, &sysctl_sched_base_slice);
 +#ifdef CONFIG_SCHED_BORE
 +	debugfs_create_file("min_base_slice_ns", 0644, debugfs_sched, NULL, &sched_min_base_slice_fops);
 +	debugfs_create_u32("base_slice_ns", 0444, debugfs_sched, &sysctl_sched_base_slice);
 +#else // !CONFIG_SCHED_BORE
- 	debugfs_create_u32("base_slice_ns", 0644, debugfs_sched, &sysctl_sched_base_slice);
++ 	debugfs_create_u32("base_slice_ns", 0644, debugfs_sched, &sysctl_sched_base_slice);
 +#endif // CONFIG_SCHED_BORE
  
+ #ifndef CONFIG_SCHED_ALT
  	debugfs_create_u32("latency_warn_ms", 0644, debugfs_sched, &sysctl_resched_latency_warn_ms);
  	debugfs_create_u32("latency_warn_once", 0644, debugfs_sched, &sysctl_resched_latency_warn_once);
  
  #ifdef CONFIG_SMP
+-	debugfs_create_file("tunable_scaling", 0644, debugfs_sched, NULL, &sched_scaling_fops);
 +#if !defined(CONFIG_SCHED_BORE)
- 	debugfs_create_file("tunable_scaling", 0644, debugfs_sched, NULL, &sched_scaling_fops);
++ 	debugfs_create_file("tunable_scaling", 0644, debugfs_sched, NULL, &sched_scaling_fops);
 +#endif // CONFIG_SCHED_BORE
  	debugfs_create_u32("migration_cost_ns", 0644, debugfs_sched, &sysctl_sched_migration_cost);
  	debugfs_create_u32("nr_migrate", 0644, debugfs_sched, &sysctl_sched_nr_migrate);
  
-@@ -762,6 +815,9 @@ print_task(struct seq_file *m, struct rq *rq, struct task_struct *p)
+@@ -775,6 +828,9 @@ print_task(struct seq_file *m, struct rq *rq, struct task_struct *p)
  		SPLIT_NS(schedstat_val_or_zero(p->stats.sum_sleep_runtime)),
  		SPLIT_NS(schedstat_val_or_zero(p->stats.sum_block_runtime)));
  
@@ -739,7 +742,7 @@ index 557246880a7e..c1f6219f20eb 100644
  #ifdef CONFIG_NUMA_BALANCING
  	SEQ_printf(m, "   %d      %d", task_node(p), task_numa_group_id(p));
  #endif
-@@ -1248,6 +1304,9 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
+@@ -1261,6 +1317,9 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
  
  	P(se.load.weight);
  #ifdef CONFIG_SMP
@@ -975,10 +978,10 @@ index ff9070239624..46291d60227a 100644
  }
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 0892942cf913..882b16a5494b 100644
+index 665dfbf2a6fd..0ee9b1912ad8 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2100,7 +2100,11 @@ extern int group_balance_cpu(struct sched_group *sg);
+@@ -2104,7 +2104,11 @@ extern int group_balance_cpu(struct sched_group *sg);
  extern void update_sched_domain_debugfs(void);
  extern void dirty_sched_domain_sysctl(int cpu);
  
@@ -990,7 +993,7 @@ index 0892942cf913..882b16a5494b 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2799,7 +2803,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
+@@ -2803,7 +2807,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  extern __read_mostly unsigned int sysctl_sched_nr_migrate;
  extern __read_mostly unsigned int sysctl_sched_migration_cost;
  
