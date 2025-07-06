@@ -1,5 +1,5 @@
 diff --git a/pcsx2/ImGui/ImGuiManager.cpp b/pcsx2/ImGui/ImGuiManager.cpp
-index 438ef02e7d..e409ebeeca 100644
+index 2c361e200..849f08f3a 100644
 --- a/pcsx2/ImGui/ImGuiManager.cpp
 +++ b/pcsx2/ImGui/ImGuiManager.cpp
 @@ -730,7 +730,7 @@ void ImGuiManager::DrawOSDMessages(Common::Timer::Value current_time)
