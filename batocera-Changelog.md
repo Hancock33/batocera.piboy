@@ -145,7 +145,7 @@
 - Bluez to 5.82
 - BTop to 1.4.0
 - Buildroot to 2024.11.x with supporting package updates
-- DXVK to 2.6.1
+- DXVK to 2.7
 - DXVK-NVApi to 0.9.0
 - Faudio to 25.02
 - FFMPEG to 7.1.1
@@ -157,7 +157,7 @@
 - Linux Firmware to 20250613
 - Linux Kernel to 6.15.4
 - LLVM to 19.1.7
-- Mesa3D to 25.1.4
+- Mesa3D to 25.1.5
 - MPV to 0.40.0
 - Nvidia production driver to 575.64
 - Pipewire to 1.4.6
