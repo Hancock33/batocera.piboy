@@ -27,7 +27,6 @@ gamecon_gpio_rpi*
 gcnano-binaries*
 guncon*
 guncon3*
-hid-nx*
 hid-t150*
 igh-ethercat*
 kernel-module-imx-gpu-viv*

@@ -33,7 +33,6 @@ Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|1adf04bb9cbc6f26
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|4e8ddf3c358baef7cbfe2c8ff66c2426338cd2c7|Jul 06, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.23|Jul 06, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250706|Jul 06, 2025
-Controllers|[hid-nx](http://github.com/emilyst/hid-nx-dkms)|e225fe1985710ca9ff820df886343e10a4891653|Jul 06, 2025
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|b0f786c1a736e3fcc2664db76f494c9d35cc44ec|Jul 06, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250706|Jul 06, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|f83ce97f0f0396846a3c9ed976259c67312e948e|Jul 06, 2025

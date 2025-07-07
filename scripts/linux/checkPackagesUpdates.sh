@@ -279,7 +279,6 @@ PACKAGES_CONTROLLERS="aelightgun
                       gun4ir-guns
                       guncon
                       guncon3
-                      hid-nx
                       input-wrapper
                       joycond
                       lightguns-games-precalibrations

@@ -36,7 +36,6 @@ Controllers|[dolphinCrosshairsPack](http://github.com/ProfgLX/Dolphin-Lightguns-
 Controllers|[gamecon_gpio_rpi](http://github.com/marqs85/gamecon_gpio_rpi)|v1.5|Oct 09, 2024
 Controllers|[guncon](http://github.com/Redemp/guncon2)|c5fa9fa19fe32c67b4e36eb9557d8fb06c9d200f|Sept 23, 2023
 Controllers|[guncon3](http://github.com/pcnimdock/guncon3_dkms)|0dfe0feaa2afc37a8a70f6cd0f6c803ee4d89f40|Mar 22, 2023
-Controllers|[hid-nx](http://github.com/emilyst/hid-nx-dkms)|e225fe1985710ca9ff820df886343e10a4891653|Jul 06, 2025
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|f7ecb30c65ee5f7870e921bc0a2354df8e1e8100|Feb 25, 2025
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|49adf5c48ba2784d97384619a52e875daf4bc062|Jun 28, 2025
 Controllers|[input-wrapper](http://github.com/macromorgan/input-wrapper)|e48e2081ac396441b685c0d162c6249f3b72572c|Mar 19, 2024
