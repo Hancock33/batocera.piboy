@@ -9,8 +9,8 @@ FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
 
 FLATPAK_DEPENDENCIES += appstream glib-networking host-pkgconf host-python-pyparsing
-FLATPAK_DEPENDENCIES += json-glib libarchive libcap libcurl libfuse3 libglib2 libgpgme libostree
-FLATPAK_DEPENDENCIES += libseccomp libsoup pkgconf polkit python-pyparsing yaml-cpp
+FLATPAK_DEPENDENCIES += json-glib libarchive libcap libcurl libfuse3 libglib2 libgpgme
+FLATPAK_DEPENDENCIES += libostree libseccomp pkgconf polkit python-pyparsing yaml-cpp
 FLATPAK_DEPENDENCIES += hicolor-icon-theme adwaita-icon-theme adwaita-icon-theme-light
 
 FLATPAK_CONF_OPTS += -Dsystem_install_dir=/userdata/saves/flatpak/binaries
