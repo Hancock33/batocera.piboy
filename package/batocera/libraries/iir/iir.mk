@@ -3,8 +3,8 @@
 # iir
 #
 ################################################################################
-# Version: Commits on Aug 12, 2024
-IIR_VERSION = 1.9.5
+# Version: Commits on Jul 06, 2025
+IIR_VERSION = 1.10.0
 IIR_SITE =  $(call github,berndporr,iir1,$(IIR_VERSION))
 IIR_LICENSE = MIT
 IIR_INSTALL_STAGING = YES

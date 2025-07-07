@@ -3,8 +3,8 @@
 # hid-nx
 #
 ################################################################################
-# Version: Commits on Sept 17, 2023
-HID_NX_VERSION = e0d36613969b51564e1e5a48c82d40314abf97c7
+# Version: Commits on Jul 06, 2025
+HID_NX_VERSION = e225fe1985710ca9ff820df886343e10a4891653
 HID_NX_SITE = $(call github,emilyst,hid-nx-dkms,$(HID_NX_VERSION))
 HID_NX_DEPENDENCIES = host-cabextract libusb
 
