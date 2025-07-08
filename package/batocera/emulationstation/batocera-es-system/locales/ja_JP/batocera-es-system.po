@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v42b(2025/06/15)\n"
+"Project-Id-Version: batocera-es v42b(2025/07/06)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-17 19:50+0900\n"
+"PO-Revision-Date: 2025-07-05 12:55+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -3032,6 +3032,8 @@ msgctxt "game_options"
 msgid ""
 "Allows reducing the visual quality of these curves for higher performance."
 msgstr ""
+"より高いパフォーマンスを得るために、これらの曲線の視覚的な品質を下げることが"
+"できます"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -5283,7 +5285,7 @@ msgstr ""
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Choose deinterlace option."
-msgstr ""
+msgstr "インターレース解除オプションを選択します"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -6093,7 +6095,7 @@ msgstr "標準の電源オン時のRAM状態"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "DEINTERLACE"
-msgstr ""
+msgstr "インターレース解除"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -6423,7 +6425,7 @@ msgstr "暗くする"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "De-Interlaced"
-msgstr ""
+msgstr "インターレース解除"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10398,7 +10400,7 @@ msgstr "整数スケール"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Interlaced"
-msgstr ""
+msgstr "インターレース"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
