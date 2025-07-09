@@ -15,7 +15,7 @@ FLATPAK_DEPENDENCIES += hicolor-icon-theme adwaita-icon-theme adwaita-icon-theme
 
 FLATPAK_CONF_OPTS += -Dsystem_install_dir=/userdata/saves/flatpak/binaries
 FLATPAK_CONF_OPTS += -Drun_media_dir=/media
-FLATPAK_CONF_OPTS += -Dhttp_backend=soup
+#FLATPAK_CONF_OPTS += -Dhttp_backend=soup
 FLATPAK_CONF_OPTS += -Dselinux_module=disabled
 FLATPAK_CONF_OPTS += -Dsystemd=disabled
 FLATPAK_CONF_OPTS += -Ddocbook_docs=disabled
