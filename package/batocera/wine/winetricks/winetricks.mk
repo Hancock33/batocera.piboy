@@ -3,8 +3,8 @@
 # winetricks
 #
 ################################################################################
-# Version: Commits on Jun 20, 2025
-WINETRICKS_VERSION = 50417b23b5d3e79c6c8fa4d1af69167dfa3de719
+# Version: Commits on Jul 10, 2025
+WINETRICKS_VERSION = 5eed63521781ffc2f0c4bbee7ec9e215b13a1243
 WINETRICKS_SITE = $(call github,Winetricks,winetricks,$(WINETRICKS_VERSION))
 
 define WINETRICKS_INSTALL_TARGET_CMDS

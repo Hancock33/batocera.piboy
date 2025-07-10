@@ -8,7 +8,6 @@ drastic.mk
 ecm.mk
 flatpak.mk
 fpinball.mk
-glslang.mk
 kddocwidgets.mk
 labwc.mk
 layershellqt.mk
