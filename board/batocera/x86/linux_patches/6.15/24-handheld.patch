@@ -7967,10 +7967,10 @@ index 000000000000..9d0a5471b181
 +MODULE_DESCRIPTION("Steam Deck EC sensors driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
-index 13d6bdd1bc93..dbc47b9c1ddd 100644
+index 234b6e011ded..e9dcb2211b52 100644
 --- a/drivers/input/joystick/xpad.c
 +++ b/drivers/input/joystick/xpad.c
-@@ -355,7 +355,9 @@ static const struct xpad_device {
+@@ -356,7 +356,9 @@ static const struct xpad_device {
  	{ 0x1bad, 0xfa01, "MadCatz GamePad", 0, XTYPE_XBOX360 },
  	{ 0x1bad, 0xfd00, "Razer Onza TE", 0, XTYPE_XBOX360 },
  	{ 0x1bad, 0xfd01, "Razer Onza", 0, XTYPE_XBOX360 },
@@ -7980,7 +7980,7 @@ index 13d6bdd1bc93..dbc47b9c1ddd 100644
  	{ 0x20d6, 0x2001, "BDA Xbox Series X Wired Controller", 0, XTYPE_XBOXONE },
  	{ 0x20d6, 0x2009, "PowerA Enhanced Wired Controller for Xbox Series X|S", 0, XTYPE_XBOXONE },
  	{ 0x20d6, 0x2064, "PowerA Wired Controller for Xbox", MAP_SHARE_BUTTON, XTYPE_XBOXONE },
-@@ -552,7 +554,9 @@ static const struct usb_device_id xpad_table[] = {
+@@ -554,7 +556,9 @@ static const struct usb_device_id xpad_table[] = {
  	XPAD_XBOX360_VENDOR(0x1949),		/* Amazon controllers */
  	XPAD_XBOX360_VENDOR(0x1a86),		/* Nanjing Qinheng Microelectronics (WCH) */
  	XPAD_XBOX360_VENDOR(0x1bad),		/* Harmonix Rock Band guitar and drums */
