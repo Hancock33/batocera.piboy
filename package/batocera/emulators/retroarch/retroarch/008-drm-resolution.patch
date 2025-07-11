@@ -1,5 +1,5 @@
 diff --git a/gfx/common/drm_common.c b/gfx/common/drm_common.c
-index a39e2e9af4..42900c166d 100644
+index 66aab29ce1..c6a93e52a6 100644
 --- a/gfx/common/drm_common.c
 +++ b/gfx/common/drm_common.c
 @@ -193,6 +193,22 @@ bool drm_get_encoder(int fd)

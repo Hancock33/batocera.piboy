@@ -1,5 +1,5 @@
 diff --git a/gfx/common/wayland_common.c b/gfx/common/wayland_common.c
-index 517d99b03d..8b15f99e91 100644
+index dc8c57985d..06d0416abc 100644
 --- a/gfx/common/wayland_common.c
 +++ b/gfx/common/wayland_common.c
 @@ -917,8 +917,8 @@ bool gfx_ctx_wl_init_common(
@@ -7,15 +7,15 @@ index 517d99b03d..8b15f99e91 100644
     if (video_monitor_index == 0 && wl_list_length (&wl->all_outputs) > 1)
     {
 -      if (!wl_draw_splash_screen(wl))
--         RARCH_ERR("[Wayland]: Failed to draw splash screen\n");
+-         RARCH_ERR("[Wayland] Failed to draw splash screen.\n");
 +      /*if (!wl_draw_splash_screen(wl))
-+         RARCH_ERR("[Wayland]: Failed to draw splash screen\n");*/
++         RARCH_ERR("[Wayland] Failed to draw splash screen.\n");*/
  
        /* Make sure splash screen is on screen and sized */
  #ifdef HAVE_LIBDECOR_H
 @@ -929,14 +929,14 @@ bool gfx_ctx_wl_init_common(
              if (wl->libdecor_dispatch(wl->libdecor_context, 0) < 0)
-                RARCH_ERR("[Wayland]: libdecor failed to dispatch\n");
+                RARCH_ERR("[Wayland] libdecor failed to dispatch.\n");
        }
 -      else
 +      //else

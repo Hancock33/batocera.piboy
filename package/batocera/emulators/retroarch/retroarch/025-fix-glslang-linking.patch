@@ -1,5 +1,5 @@
 diff --git a/Makefile.common b/Makefile.common
-index 4596b84651..7a54748e98 100644
+index a44606b7de..55c7a98886 100644
 --- a/Makefile.common
 +++ b/Makefile.common
 @@ -1904,10 +1904,6 @@ else ifeq ($(HAVE_GLSLANG),1)
