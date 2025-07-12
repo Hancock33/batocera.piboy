@@ -52,7 +52,7 @@ case "$1" in
 		if pidof emulationstation >/dev/null; then
 		    timeout -k 5 20 tail -q --pid=$(pidof emulationstation) -f /dev/null 2>/dev/null
 		fi
-		
+
 		# Clean up the communication pipe on a full system stop
 		rm -f "${FIFO_PATH}"
 		;;

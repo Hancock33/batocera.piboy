@@ -141,7 +141,7 @@ class EsSystemConf:
                 continue
 
             result_cores = {}
-            
+
             core_keys = [key for key in emulatorData if key not in ["archs_include", "archs_exclude"]]
 
             for core in sorted(core_keys):
@@ -152,7 +152,7 @@ class EsSystemConf:
                 if "requireAnyOf" in coreData and \
                    EsSystemConf.isValidRequirements(config, coreData["requireAnyOf"]) and \
                    EsSystemConf.archValid(arch, coreData):
-                    
+
                     result_cores[core]["enabled"] = True
                     nb_variants += 1
                     # tell why this core is selected

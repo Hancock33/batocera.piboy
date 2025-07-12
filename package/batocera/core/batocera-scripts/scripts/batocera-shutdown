@@ -308,7 +308,7 @@ set_low_power_tdp() {
     if ! _is_amd_tdp_supported; then
         return
     fi
-    
+
     # 3W is a common and safe low-power value for standby.
     local low_tdp_value=3
     echo "INFO: AMD TDP supported. Setting to low power mode (${low_tdp_value}W)."
@@ -321,16 +321,16 @@ restore_default_tdp() {
     fi
 
     echo "INFO: AMD TDP supported. Restoring user-configured TDP."
-    
+
     # Get the system's absolute maximum TDP, which is stored by the init.d script.
     local max_tdp
     max_tdp=$(/usr/bin/batocera-settings-get system.cpu.tdp)
-    
+
     if [ -z "${max_tdp}" ]; then
         echo "WARNING: Max TDP not defined in settings. Cannot restore TDP."
         return
     fi
-    
+
     # Get the desired TDP percentage from global settings.
     local tdp_percentage
     tdp_percentage=$(printf "%.0f" "$(/usr/bin/batocera-settings-get global.tdp)")
@@ -343,7 +343,7 @@ restore_default_tdp() {
         # Otherwise, restore to the default (maximum) TDP.
         final_tdp_value="${max_tdp}"
     fi
-    
+
     echo "INFO: Restoring TDP to ${final_tdp_value}W."
     /usr/bin/batocera-amd-tdp "${final_tdp_value}"
 }

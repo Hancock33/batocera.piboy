@@ -121,7 +121,7 @@ class EsSystemConf:
                    EsSystemConf.archValid(arch, coreData) and \
                    EsSystemConf.isValidRequirements(config, coreData["requireAnyOf"]):
                     return True
-        
+
         return False
 
     # Loads the .config file
