@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6a212ed910989887ff1eb4f79503b0bdf2a26dab|Jul 12, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6a212ed910989887ff1eb4f79503b0bdf2a26dab|Jul 12, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|699e1f0516bdcce76f5ea38de70e100b9c36668d|Jul 12, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-07-12|Jul 12, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|7601347db53e03c40bc64ddba0febc60b1ff2b51|Jul 12, 2025
@@ -51,8 +53,6 @@ Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerD
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|c59492b07f7c586064692110e8138c83ed8bc7c7|Jul 10, 2025
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|67a2c697ec8120556e1c0665a63a05ca271f245a|Jul 10, 2025
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|6b06593954f1cdde3117d85586871b94ace80799|Jul 10, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2c292c12c444badd437f2b4c6143748442f73d0d|Jul 09, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2c292c12c444badd437f2b4c6143748442f73d0d|Jul 09, 2025
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|ca2c61a8f5f4b3f73cf4be1fe72ec741f955e13a|Jul 09, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|b3b3e15357a526deea56a4a828b237b3fdf559fb|Jul 09, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|e543f1600523afee47a194ae36eba163862f15df|Jul 09, 2025
