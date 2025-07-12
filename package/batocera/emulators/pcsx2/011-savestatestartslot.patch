@@ -1,5 +1,5 @@
 diff --git a/pcsx2-qt/QtHost.cpp b/pcsx2-qt/QtHost.cpp
-index f59a302a6..4f5fb25a3 100644
+index 5e0581412..03e1df9f0 100644
 --- a/pcsx2-qt/QtHost.cpp
 +++ b/pcsx2-qt/QtHost.cpp
 @@ -2162,6 +2162,11 @@ bool QtHost::ParseCommandLineOptions(const QStringList& args, std::shared_ptr<VM
