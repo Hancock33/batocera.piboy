@@ -7,7 +7,10 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-07-12|Jul 12
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|7601347db53e03c40bc64ddba0febc60b1ff2b51|Jul 12, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|5afce53ffb7a680424ea10edf37b01d1a2d68883|Jul 12, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|38cdc63823fe185ae69be353c92b63bbc505cb77|Jul 12, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.12|Jul 12, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250712|Jul 12, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|743e0406bdedcc28d3203df9eabedf03067a8b90|Jul 12, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250712|Jul 12, 2025
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|5b17b41e074c78c722d400b0dbbabf885a9417b2|Jul 12, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|3d7cce05aadefcfc8b205603c07a93df1de31337|Jul 12, 2025
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|bf5a58a7dcab9c346a42b3cde7061c3878ce5508|Jul 11, 2025
@@ -26,8 +29,6 @@ Ports|[box64](http://github.com/ptitseb/box64)|78460724ea0770f4c5b85ec117273d4a3
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|5140b00ccf02de58d329eb0834ae4493ce6d824b|Jul 11, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|4340fdfc3d20a55e6da04e5caa4550ea1c2e3f18|Jul 11, 2025
 Utils|[labwc](http://github.com/labwc/labwc)|0.9.0|Jul 11, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250711|Jul 11, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250711|Jul 11, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2ac8083709b1eecec5a2bc1a643649aa95ee65bc|Jul 11, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|23b69769e8b68fd038f051454ff04a70ea2dd0dc|Jul 11, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|cc31fa868e56093c597c62ba19322b80136a8a89|Jul 11, 2025
@@ -48,6 +49,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1b0dc6667b1d2908ab1ff
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|183aac61c7ae2ba3fb7b1c203491f384c858e9e7|Jul 10, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|77ed0070864a2cf98574d03953d9a7b1c5810023|Jul 10, 2025
 Utils|[clevis](http://github.com/latchset/clevis)|321fc34c57bac7c757af2a3ced11bac977553cad|Jul 10, 2025
+Wine|[wine-proton](http://github.com/ValveSoftware/wine)|95c828518d818a7056dfe46dc89ee8f6f2c0677c|Jul 10, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|5eed63521781ffc2f0c4bbee7ec9e215b13a1243|Jul 10, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|0f63b5ea2932d1af560fcd874b9b8562b5c69403|Jul 10, 2025
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|c59492b07f7c586064692110e8138c83ed8bc7c7|Jul 10, 2025
@@ -103,7 +105,6 @@ Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|dc0c9e368b07f1a83ef41c
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|6f9e40eaf742e8ca985b069fc0db9b0c885dacec|Jul 03, 2025
 Sources|[libretro-mame-src](http://github.com/libretro/mame)|fba50741006fa3e27e1897f589d2048a505b8fd6|Jul 03, 2025
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.4|Jul 03, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch7-10.11.r72|Jul 03, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|2857eb7effeaeb8240f7587e2728990b37b7db52|Jul 03, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|afd13d4c7aa61d5111fe0fbdcf80f1d8571046fd|Jul 03, 2025
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|d2496ef0a5385edeee1c1853d88bb520e163d3f9|Jul 03, 2025
@@ -160,7 +161,6 @@ Audio|[portmidi](http://github.com/PortMidi/portmidi)|07ae853a20c7484c7bde1893ed
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|v3.7.0-46-2b48173|Jun 19, 2025
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|06219bec3e6b23e6eae48589fa19cea26baf8065|Jun 19, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.16.0|Jun 18, 2025
-Wine|[wine-proton](http://github.com/ValveSoftware/wine)|86acd4466ecae1ffe0f067ec1f23c6458f0f7bb1|Jun 18, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|405971457328dd364f345e2cb97e003099f83ee2|Jun 17, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|f8c24f87d7fb0f41c2b7ef2a1aa97d16a52206be|Jun 17, 2025
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/55/5c/d17ff26270289c11ea787a73a922c1a9d85d8dea67e8d2fad1e36b181bc1)|4.1.13|Jun 17, 2025
