@@ -1464,7 +1464,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_HODE                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Heart of Darkness
     select BR2_PACKAGE_NBLOOD                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # NBlood / Rednukem / PCExhumed / Witch Haven
     select BR2_PACKAGE_NUKEM2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Duke Nukem II
-    select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # One Must Fall 2097
+    select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                     # One Must Fall 2097
     select BR2_PACKAGE_OPENCLAW                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Captain Claw
     select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Tomb Raider
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Prototype (R-Type Clone)
