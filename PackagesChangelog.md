@@ -7,15 +7,17 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.62|Jul 13, 2025
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.4.6|Jul 13, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|c69d7bc758a15b77ae7c555e9cb9dcebb89168ea|Jul 13, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-07-13|Jul 13, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|81c1cb3a59adbfefa65faa73e8394ca60073568f|Jul 13, 2025
-Emulators|[ymir](https://github.com/StrikerX3/Ymir)|dfec4f7ac2e416406656005cdd80e76ac20bbc50|Jul 13, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|9cc632869cdce7b6ededdecc11fec18fd5a2e528|Jul 13, 2025
+Emulators|[ymir](https://github.com/StrikerX3/Ymir)|bb4dfb7468e79ed35ba45592da3ad416b11ca6da|Jul 13, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e5ad93fef89e4e9bb15ed837e75cc0fac60a0f1b|Jul 13, 2025
+Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.6.4|Jul 13, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250713|Jul 13, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250713|Jul 13, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8ef1083b5448c85899efc8ec79e73199def872b6|Jul 13, 2025
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|45e51d01d2f2330831c0353aacd67d1c24e0e930|Jul 13, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|80f595c0b0f42183b1039469bc96e8379ccf82b5|Jul 13, 2025
+Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|d0d6f07eb4c20e9e4845cdaa8e0ffb519d26fe63|Jul 13, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|f8c52377a313dcd420a098e6bbd1342818645174|Jul 13, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|82d91f7daf81a41ece49644d2a26b2a40228be61|Jul 13, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6a212ed910989887ff1eb4f79503b0bdf2a26dab|Jul 12, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6a212ed910989887ff1eb4f79503b0bdf2a26dab|Jul 12, 2025
@@ -291,7 +293,6 @@ Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.2.4|Ma
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f8605345e13c018a30c8f4ed03c05d8fc8f70be8|Mar 02, 2025
 Network|[qrtr](http://github.com/linux-msm/qrtr)|5923eea97377f4a3ed9121b358fd919e3659db7b|Mar 01, 2025
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|f7ecb30c65ee5f7870e921bc0a2354df8e1e8100|Feb 25, 2025
-Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|a203bbf2ab6c7164051ff90ad30cc8f6352a56ac|Feb 23, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.6|Feb 22, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|80c4233c712c1fcd8f631f17aaa40e89df9337ba|Feb 20, 2025
 Libraries|[python-gpiod](https://files.pythonhosted.org/packages/8f/74/cb43c6e2fe74cf1567160ccbf54db176f72481e5ac58567684a262672c7c)|2.3.0|Feb 19, 2025
@@ -403,7 +404,6 @@ Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749
 Ports|[realgibs](http://github.com/dhewm/dhewm3-sdk)|85d79f0565420a4e22598feecc84d3786a5a510d|Sept 27, 2024
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.37.0|Sept 26, 2024
 Libraries|[libsfdo](http://github.com/jlindgren90/libsfdo)|v0.1.3|Sept 17, 2024
-Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.6.3.1|Sept 08, 2024
 Utils|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|a6bf7154a743d4f74a1b377e730f188352a1b80c|Sept 08, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|0d26fd59103941e5f95e0ee665c6e0fb8c6b6f03|Sept 02, 2024
