@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Jul 13, 2025
-RETROARCH_VERSION = de76511ee7e4aa7011955ca64590fd73d2170743
+# Version: Commits on May 01, 2025
+RETROARCH_VERSION = v1.21.0
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -12,7 +12,7 @@ RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-font
 RETROARCH_INSTALL_STAGING = YES
 
 RETROARCH_CONF_OPTS = --disable-oss --disable-qt --enable-threads --enable-ozone \
-	--enable-xmb --disable-discord --enable-builtinflac --enable-flac --enable-lua --enable-networking \
+	--enable-xmb --disable-discord --disable-builtinflac --enable-flac --enable-lua --enable-networking \
 	--enable-translate --enable-rgui --disable-cdrom
 
 ifeq ($(BR2_ENABLE_DEBUG),y)
