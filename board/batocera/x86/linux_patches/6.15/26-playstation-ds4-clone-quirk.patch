@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-playstation.c b/drivers/hid/hid-playstation.c
-index 1468fb11e3..41e4885aa3 100644
+index 1468fb11e39d..41e4885aa3c9 100644
 --- a/drivers/hid/hid-playstation.c
 +++ b/drivers/hid/hid-playstation.c
 @@ -368,6 +368,7 @@ struct dualshock4 {
