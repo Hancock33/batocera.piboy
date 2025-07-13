@@ -6,7 +6,9 @@ Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-07-13|Jul 13
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|581b09fd9e7eca899ef4671d148d35a7c24c3ebc|Jul 13, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e5ad93fef89e4e9bb15ed837e75cc0fac60a0f1b|Jul 13, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250713|Jul 13, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|de76511ee7e4aa7011955ca64590fd73d2170743|Jul 13, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250713|Jul 13, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8ef1083b5448c85899efc8ec79e73199def872b6|Jul 13, 2025
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|45e51d01d2f2330831c0353aacd67d1c24e0e930|Jul 13, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|b0820a28b6da03a57b670c215596a776d6e3e349|Jul 13, 2025
@@ -28,8 +30,6 @@ Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|e759b5a7bab685b6
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|38cdc63823fe185ae69be353c92b63bbc505cb77|Jul 12, 2025
 Sources|[libretro-mame-src](http://github.com/libretro/mame)|d6423328d57857c05ef3513999fe4ff4917db197|Jul 12, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.12|Jul 12, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250712|Jul 12, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250712|Jul 12, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|32cf838ecf98550e079cf4a604951d4885488ca0|Jul 12, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|4e2301295045f8195aef3aabd71c5a68d9b0a842|Jul 12, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|acea1dd8dee480763a38f5676c6fa63daaddc599|Jul 12, 2025
