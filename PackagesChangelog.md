@@ -31,7 +31,6 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|37774d76c2b0a9a
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|e759b5a7bab685b6bf92aa96cd9010e282da3f28|Jul 12, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|38cdc63823fe185ae69be353c92b63bbc505cb77|Jul 12, 2025
 Sources|[libretro-mame-src](http://github.com/libretro/mame)|d6423328d57857c05ef3513999fe4ff4917db197|Jul 12, 2025
-Utils-host|[rgbds](http://github.com/gbdev/rgbds)|611b0041c4fcc33b05a227d3fc8283237eae9f4b|Jul 12, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.12|Jul 12, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|32cf838ecf98550e079cf4a604951d4885488ca0|Jul 12, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|4e2301295045f8195aef3aabd71c5a68d9b0a842|Jul 12, 2025
@@ -121,6 +120,7 @@ Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45709|Jun 30, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0278|Jun 30, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.3|Jun 30, 2025
+Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v0.9.3|Jun 30, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|586372e575f5cc1a7cbb170219ab6df98f394cae|Jun 30, 2025
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|ccba5265f60f8e64a1984c9d14d383606193ea6a|Jun 30, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|6d221ab092ff4577a6103ca4083ca6cdebced2a2|Jun 29, 2025
