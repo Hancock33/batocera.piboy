@@ -2434,6 +2434,7 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'fuse': _fuse_options,
     'gambatte': _gambatte_options,
     'genesisplusgx': _genesisplusgx_options,
+    'genesisplusgx-expanded': _genesisplusgx_options,
     'handy': _handy_options,
     'hatarib': _hatarib_options,
     'kronos': _kronos_options,
