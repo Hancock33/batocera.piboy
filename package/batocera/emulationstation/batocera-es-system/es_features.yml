@@ -577,6 +577,7 @@ libretro:
                     "Saturn Pad":    1
                     "Saturn 3D Pad": 261
     bennugd:
+      features: [padtokeyboard]
       cfeatures:
             bennugd_force_frame_limiter:
                 prompt:      FRAME LIMITER
