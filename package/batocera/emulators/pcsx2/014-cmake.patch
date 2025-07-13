@@ -1,5 +1,5 @@
 diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
-index e26188302..ae5ac6911 100644
+index 111c20e08..6ea547cc3 100644
 --- a/pcsx2/CMakeLists.txt
 +++ b/pcsx2/CMakeLists.txt
 @@ -768,7 +768,7 @@ if(DISABLE_ADVANCE_SIMD)

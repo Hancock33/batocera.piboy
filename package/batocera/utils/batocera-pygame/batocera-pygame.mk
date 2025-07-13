@@ -3,8 +3,8 @@
 # batocera-pygame
 #
 ################################################################################
-# Version: Commits on Jun 07, 2025
-BATOCERA_PYGAME_VERSION = 7c1c5662046fd7a3094302fdf649732bf9e28944
+# Version: Commits on Jul 08, 2025
+BATOCERA_PYGAME_VERSION = 44324a3cf678462eb8d87279ac82fd7bed16f295
 BATOCERA_PYGAME_RETROTRIVIA_VERSION = 1.3
 BATOCERA_PYGAME_LICENSE = GPLv3
 BATOCERA_PYGAME_SITE = $(call github,lbrpdx,retrotrivia,$(BATOCERA_PYGAME_VERSION))

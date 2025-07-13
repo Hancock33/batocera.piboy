@@ -300,8 +300,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_XWIIMOTE                             if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # a tool to analyse wiimote events (mainly to debug, but helps and is funny)
     select BR2_PACKAGE_BATOCERA_GUNS                        if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     select BR2_PACKAGE_BATOCERA_WHEEL_CALIBRATOR
-    select BR2_PACKAGE_HID_NX                               if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 # updated nintendo switch controller driver, requires kernel > 4.4
-    select BR2_PACKAGE_JOYCOND                              if  BR2_PACKAGE_HID_NX                         # nintendo switch joycon daemon (requires hid-nx)
+    select BR2_PACKAGE_JOYCOND
     select BR2_PACKAGE_NEW_LG4FF                            if !BR2_PACKAGE_BATOCERA_TARGET_RK3326         && !BR2_PACKAGE_BATOCERA_TARGET_XU4    && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        && !BR2_PACKAGE_BATOCERA_TARGET_RK3326 && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128         && !BR2_PACKAGE_BATOCERA_TARGET_SM8250 && \
@@ -370,7 +369,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     select BR2_PACKAGE_RTW89_TEMP                           if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
-   #select BR2_PACKAGE_RTL8852AU                            if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_RTL8852AU                            if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     select BR2_PACKAGE_AIC8800                              if  BR2_PACKAGE_BATOCERA_TARGET_RK3588      # Rock 5c
 
@@ -1209,9 +1208,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_YABASANSHIRO                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_GLES3
 
-    select BR2_PACKAGE_YABASANSHIRO                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+    select BR2_PACKAGE_YABASANSHIRO                         if  BR2_PACKAGE_BATOCERA_BCM27XX
 
-    select BR2_PACKAGE_YMIR                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX         || \
+    select BR2_PACKAGE_YMIR                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
@@ -1300,6 +1299,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Sega 8-bit/16-range (Mark III / Master System, Game Gear, Genesis / Megadrive, SegaCD / MegaCD, 32X)
     select BR2_PACKAGE_LIBRETRO_PICODRIVE                   # ALL
     select BR2_PACKAGE_LIBRETRO_GENESISPLUSGX               # ALL
+    select BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_EXPANDED      # ALL
     select BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE          if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_LIBRETRO_BLASTEM                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_LIBRETRO_SMSPLUS_GX                  # ALL
@@ -1464,7 +1464,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_HODE                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Heart of Darkness
     select BR2_PACKAGE_NBLOOD                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # NBlood / Rednukem / PCExhumed / Witch Haven
     select BR2_PACKAGE_NUKEM2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Duke Nukem II
-    select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # One Must Fall 2097
+    select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                     # One Must Fall 2097
     select BR2_PACKAGE_OPENCLAW                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Captain Claw
     select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Tomb Raider
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Prototype (R-Type Clone)

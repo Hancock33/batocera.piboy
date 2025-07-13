@@ -1,5 +1,5 @@
 diff --git a/gfx/drivers_context/drm_ctx.c b/gfx/drivers_context/drm_ctx.c
-index 935e549b7e..4e208eea98 100644
+index 935e549b7e..05f8e331fc 100644
 --- a/gfx/drivers_context/drm_ctx.c
 +++ b/gfx/drivers_context/drm_ctx.c
 @@ -821,6 +821,8 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
@@ -11,27 +11,7 @@ index 935e549b7e..4e208eea98 100644
  
     if (!drm)
        return false;
-@@ -846,8 +848,17 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
-    }
-    if ((width == 0 && height == 0) || !fullscreen)
-    {
--      RARCH_WARN("[KMS]: Falling back to mode 0 (default)\n");
--      g_drm_mode     = &g_drm_connector->modes[0];
-+      // on batocera, we won't guess a mode ; we want the one set by drmMode
-+      g_drm_mode = &g_drm_connector->modes[0];
-+      // batocera - set resolution
-+      if((fdDrmMode = fopen("/var/run/drmMode", "r")) != NULL) {
-+         if(fscanf(fdDrmMode, "%i", &drmMode) == 1) {
-+            if(drmMode>=0 && drmMode<g_drm_connector->count_modes) {
-+               g_drm_mode = &g_drm_connector->modes[drmMode];
-+            }
-+         }
-+         fclose(fdDrmMode);
-+      }
-    }
-    else
-    {
-@@ -859,34 +870,16 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
+@@ -859,34 +861,16 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
        }
        else
        {

@@ -17,6 +17,7 @@ faudio.mk
 fdupes.mk
 fheroes2.mk
 gamecon_gpio_rpi.mk
+glslang.mk
 iir.mk
 kodi-pvr-freebox
 ledspicer.mk
@@ -25,6 +26,7 @@ libretro-mame.mk
 libretro-mgba.mk
 libserum.mk
 libxmp.mk
+mame-src.mk
 mame.mk
 mold.mk
 mono-bin.mk

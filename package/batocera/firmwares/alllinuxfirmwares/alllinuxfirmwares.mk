@@ -3,8 +3,8 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits on Jun 13, 2025
-ALLLINUXFIRMWARES_VERSION = 20250613
+# Version: Commits on Jul 08, 2025
+ALLLINUXFIRMWARES_VERSION = 20250708
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.xz
 ALLLINUXFIRMWARES_SITE = https://www.kernel.org/pub/linux/kernel/firmware
 
@@ -81,11 +81,10 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	# here, adding symlink only for firmwares installed in the target directory.
 	cd $(TARGET_DIR)/lib/firmware ; \
 	sed -r -e '/^Link: (.+) -> (.+)$$/!d; s//\1 \2/' $(@D)/WHENCE | \
-	while read f d; do \
-		if test -f $$(readlink -m $$(dirname "$$f")/$$d); then \
-			if test -f $(TARGET_DIR)/lib/firmware/$$(dirname "$$f")/$$d; then \
-				ln -sf $$d "$$f" || exit 1; \
-			fi \
+	while read -r f d; do \
+		if test -f "$$(readlink -m "$$(dirname "$$f")/$${d}")"; then \
+			mkdir -p "$$(dirname "$$f")" && \
+			ln -sf "$$d" "$$f" || exit 1; \
 		fi ; \
 	done
 endef

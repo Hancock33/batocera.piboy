@@ -2351,21 +2351,21 @@ def _panda3ds_options(
 ) -> None:
     # USE SHADER JIT
     if system.isOptSet('panda3ds_use_shader_jit') == False:
-        coreSettings.save('panda3ds_use_shader_jit', '"enabled"')
-    else:
         coreSettings.save('panda3ds_use_shader_jit', '"disabled"')
+    else:
+        coreSettings.save('panda3ds_use_shader_jit', '"enabled"')
     # ACCURATE SHADER MUL
     if system.isOptSet('panda3ds_accurate_shader_mul') == True:
         coreSettings.save('panda3ds_accurate_shader_mul', '"enabled"')
     else:
         coreSettings.save('panda3ds_accurate_shader_mul', '"disabled"')
     # USE UBERSHADER
-    if system.isOptSet('panda3ds_use_ubershader') == False:
+    if system.isOptSet('panda3ds_use_ubershader') == True:
         coreSettings.save('panda3ds_use_ubershader', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_ubershader', '"disabled"')
     # USE VSYNC
-    if system.isOptSet('panda3ds_use_vsync') == False:
+    if system.isOptSet('panda3ds_use_vsync') == True:
         coreSettings.save('panda3ds_use_vsync', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_vsync', '"disabled"')
@@ -2376,14 +2376,14 @@ def _panda3ds_options(
         coreSettings.save('panda3ds_dsp_emulation', '"Null"')
     # USE AUDIO
     if system.isOptSet('panda3ds_use_audio') == False:
-        coreSettings.save('panda3ds_use_audio', '"enabled"')
-    else:
         coreSettings.save('panda3ds_use_audio', '"disabled"')
+    else:
+        coreSettings.save('panda3ds_use_audio', '"enabled"')
     # USE VIRTUAL SD
     if system.isOptSet('panda3ds_use_virtual_sd') == False:
-        coreSettings.save('panda3ds_use_virtual_sd', '"enabled"')
-    else:
         coreSettings.save('panda3ds_use_virtual_sd', '"disabled"')
+    else:
+        coreSettings.save('panda3ds_use_virtual_sd', '"enabled"')
     # WRITE PROTECT VIRTUAL SD
     if system.isOptSet('panda3ds_write_protect_virtual_sd') == True:
         coreSettings.save('panda3ds_write_protect_virtual_sd', '"enabled"')
@@ -2392,12 +2392,12 @@ def _panda3ds_options(
     # BATTERY LEVEL
     coreSettings.save('panda3ds_battery_level', '"' + str(int(float(system.config["panda3ds_battery_level"]))) +'"')
     # USE CHARGER
-    if system.isOptSet('panda3ds_use_charger') == False:
+    if system.isOptSet('panda3ds_use_charger') == True:
         coreSettings.save('panda3ds_use_charger', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_charger', '"disabled"')
        # UBERSHADER LIGHTING OVERRIDE
-    if system.isOptSet('panda3ds_ubershader_lighting_override') == False:
+    if system.isOptSet('panda3ds_ubershader_lighting_override') == True:
         coreSettings.save('panda3ds_ubershader_lighting_override', '"enabled"')
     else:
         coreSettings.save('panda3ds_ubershader_lighting_override', '"disabled"')
@@ -2434,6 +2434,7 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'fuse': _fuse_options,
     'gambatte': _gambatte_options,
     'genesisplusgx': _genesisplusgx_options,
+    'genesisplusgx-expanded': _genesisplusgx_options,
     'handy': _handy_options,
     'hatarib': _hatarib_options,
     'kronos': _kronos_options,

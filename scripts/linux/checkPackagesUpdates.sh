@@ -50,6 +50,7 @@ PACKAGES_LIBRETRO="libretro-81
                    libretro-gambatte
                    libretro-gearsystem
                    libretro-genesisplusgx
+                   libretro-genesisplusgx-expanded
                    libretro-genesisplusgx-wide
                    libretro-gpsp
                    libretro-gw
@@ -279,7 +280,6 @@ PACKAGES_CONTROLLERS="aelightgun
                       gun4ir-guns
                       guncon
                       guncon3
-                      hid-nx
                       input-wrapper
                       joycond
                       lightguns-games-precalibrations

@@ -5534,10 +5534,11 @@ megadrive:
   group:                megadrive
   emulators:
     libretro:
-      genesisplusgx:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
-      genesisplusgx-wide: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE] }
-      picodrive:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE] }
-      blastem:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLASTEM] }
+      genesisplusgx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX]          }
+      genesisplusgx-expanded: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_EXPANDED] }
+      genesisplusgx-wide:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE]     }
+      picodrive:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE]              }
+      blastem:                { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLASTEM]                }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:megadrive
   comment_fr:           |
@@ -5556,8 +5557,10 @@ model2:
     model2emu:
       model2emu:        { requireAnyOf: [BR2_PACKAGE_MODEL2EMU] }
     libretro:
+      archs_include:    [x86_64, x86-64-v3]
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
+      archs_include:    [x86_64, x86-64-v3]
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
  
   comment_en:           |
@@ -5799,8 +5802,9 @@ msu-md:
   group:                megadrive
   emulators:
     libretro:
-      genesisplusgx:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX], incompatible_extensions: [cue]      }
-      genesisplusgx-wide: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE], incompatible_extensions: [cue] }
+      genesisplusgx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX], incompatible_extensions: [cue]          }
+      genesisplusgx-expanded: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_EXPANDED], incompatible_extensions: [cue] }
+      genesisplusgx-wide:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE], incompatible_extensions: [cue]     }
 
 naomi:
   name:                 Naomi
@@ -5968,9 +5972,10 @@ pico:
   group:                megadrive
   emulators:
     libretro:
-      genesisplusgx:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
-      genesisplusgx-wide: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE] }
-      picodrive:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE] }
+      genesisplusgx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX]          }
+      genesisplusgx-expanded: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_EXPANDED] }
+      genesisplusgx-wide:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE]     }
+      picodrive:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PICODRIVE]              }
 
 saturn:
   name:                 Saturn
