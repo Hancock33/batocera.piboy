@@ -41,8 +41,5 @@ wii:
   options:
     gfxbackend: Vulkan
 saturn:
-  emulator: ymir
-  core:     ymir
-  options:
-    decorations: none
-    hud_support: none
+  emulator: libretro
+  core:     yabasanshiro

@@ -5,8 +5,8 @@ pcenginecd:
   emulator: libretro
   core:     pce
 saturn:
-  emulator: libretro
-  core:     beetle-saturn
+  emulator: ymir
+  core:     ymir
 n64:
   options:
     videomode: max-1920x1080
