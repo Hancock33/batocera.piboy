@@ -1,19 +1,21 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|a5e3f163a5b352482ced2fe1cf659835105df80e|Jul 13, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|a3d7fa03a7b5145116a41eccd0b0a1a86f98536a|Jul 13, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-07-13|Jul 13, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|581b09fd9e7eca899ef4671d148d35a7c24c3ebc|Jul 13, 2025
+Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|e5ad93fef89e4e9bb15ed837e75cc0fac60a0f1b|Jul 13, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|de76511ee7e4aa7011955ca64590fd73d2170743|Jul 13, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8ef1083b5448c85899efc8ec79e73199def872b6|Jul 13, 2025
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|45e51d01d2f2330831c0353aacd67d1c24e0e930|Jul 13, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|b0820a28b6da03a57b670c215596a776d6e3e349|Jul 13, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6a212ed910989887ff1eb4f79503b0bdf2a26dab|Jul 12, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6a212ed910989887ff1eb4f79503b0bdf2a26dab|Jul 12, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|633fd5df70788c50e8cec403e330f3f2aca2d97e|Jul 12, 2025
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|7eb2b07e391bf1bb16fd4f6029e715f6df446c13|Jul 12, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|4fb764ed4a84235e7d68686d7b22fc24736e2270|Jul 12, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|3ea8ba289a4f0ff8880906c6341ea1d5eb3d3435|Jul 12, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|5392f61cef3be97482c0cdc7d49ca2a2eba07f65|Jul 12, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|fd538038e8d789ecf64c8e413913debee1bc652e|Jul 12, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.60|Jul 12, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|acea1dd8dee480763a38f5676c6fa63daaddc599|Jul 12, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|5e7cbb0a139be8413c02e437804c4ae6a546a7f6|Jul 12, 2025
@@ -32,7 +34,6 @@ Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|32cf838ecf98550e079cf4a604951d488
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|4e2301295045f8195aef3aabd71c5a68d9b0a842|Jul 12, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|acea1dd8dee480763a38f5676c6fa63daaddc599|Jul 12, 2025
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|5b17b41e074c78c722d400b0dbbabf885a9417b2|Jul 12, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|1da359ba22d2e308857f69acd01e5473a9c92795|Jul 12, 2025
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|362ef28969b0a375ef849bf9309b3393a5560a2c|Jul 12, 2025
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|bf5a58a7dcab9c346a42b3cde7061c3878ce5508|Jul 11, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|269ba8ab292351862841aa8f20c2484af9049fe6|Jul 11, 2025
@@ -47,6 +48,7 @@ Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|df64459ea3a6c3e6e112f81c56d1426074a78d2f|Jul 11, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|bc691a1dd34d977444b80e1884235be9f8bcc1c3|Jul 11, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|48c58dbd18501fae92e641b6ee6ca5ca9de0d5c3|Jul 11, 2025
+Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genesis-Plus-GX-Expanded-Rom-Size)|c9db0fce9788b4d84a6dfa299d0bd49845f0d851|Jul 11, 2025
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|553770c8d886acb12ff43d06b83215f46be89acc|Jul 11, 2025
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.4.5|Jul 10, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|b403e1be339b55dd7ab3801e939e5ecd833da015|Jul 10, 2025
@@ -228,7 +230,6 @@ Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.1.0|May 15, 2025
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/47/ea/1697fbb6bbeb9e201d11b3e7990035fe29ca18d8d58d7de74fff82cbcc63)|8.58.1|May 15, 2025
 Emulators|[citron](https://git.citron-emu.org/citron/emu)|046538bb473c99fe3d02f9b0e76f7a056e6cecc8|May 14, 2025
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/dc/fe/74c3cdba24f06e8748819dbbc4912e3e2193f1a900c96b659e5794dee3a8)|3.79.0|May 14, 2025
-Ports|[bstone](http://github.com/bibendovsky/bstone)|83cd4c3f0123c23aa1f629c61697923fa956964c|May 13, 2025
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|26cefb8f1ff3b34e589b30c7b0a399ccc1b2ce96|May 12, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|55c436c706224eae6cd1395b88e083105b7d7834|May 12, 2025
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.3|May 11, 2025

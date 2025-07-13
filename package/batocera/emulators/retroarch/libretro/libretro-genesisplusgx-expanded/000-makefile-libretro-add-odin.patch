@@ -1,7 +1,9 @@
+diff --git a/Makefile.libretro b/Makefile.libretro
+index 06c51b6..5cd3d16 100644
 --- a/Makefile.libretro
 +++ b/Makefile.libretro
-@@ -77,6 +77,13 @@
-       PLATFORM_DEFINES += -DARM -march=armv8-a+crc -mcpu=cortex-a73 -mtune=cortex-a73.cortex-a53
+@@ -157,6 +157,13 @@ ifneq (,$(findstring unix,$(platform)))
+       PLATFORM_DEFINES += -mfloat-abi=hard -mfpu=neon-fp-armv8
     endif
  
 +   # Odroid-N2

@@ -3,11 +3,11 @@
 # libretro-genesisplusgx-expanded
 #
 ################################################################################
-# Version: Commits on Jul 7, 2025
-LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION = a0b5a033a1b924f50953eaa35f93221df9f08e6f
-LIBRETRO_GENESISPLUSGX_EXPANDED_SITE = \
-    $(call github,RapidEdwin08,Genesis-Plus-GX-Expanded-Rom-Size,$(LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION))
+# Version: Commits on Jul 11, 2025
+LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION = c9db0fce9788b4d84a6dfa299d0bd49845f0d851
+LIBRETRO_GENESISPLUSGX_EXPANDED_SITE = $(call github,RapidEdwin08,Genesis-Plus-GX-Expanded-Rom-Size,$(LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION))
 LIBRETRO_GENESISPLUSGX_EXPANDED_LICENSE = Non-commercial
+LIBRETRO_GENESISPLUSGX_EXPANDED_DEPENDENCIES = retroarch
 
 LIBRETRO_GENESISPLUSGX_EXPANDED_PLATFORM = $(LIBRETRO_PLATFORM)
 
@@ -28,15 +28,14 @@ LIBRETRO_GENESISPLUSGX_EXPANDED_PLATFORM += odin
 endif
 
 define LIBRETRO_GENESISPLUSGX_EXPANDED_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	    -C $(@D) -f Makefile.libretro \
-		platform="$(LIBRETRO_GENESISPLUSGX_EXPANDED_PLATFORM)" \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION) | cut -c 1-7)"
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) -f Makefile.libretro platform="$(LIBRETRO_GENESISPLUSGX_EXPANDED_PLATFORM)" \
+		GIT_VERSION="-$(shell echo $(LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_GENESISPLUSGX_EXPANDED_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/genesis_plus_gx_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/genesisplusgx-expanded_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	$(INSTALL) -D $(@D)/genesis_plus_gx_libretro.so $(TARGET_DIR)/usr/lib/libretro/genesisplusgx-expanded_libretro.so
 endef
 
 $(eval $(generic-package))

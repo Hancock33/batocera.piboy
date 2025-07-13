@@ -1,8 +1,9 @@
 config BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_EXPANDED
-    bool "libretro-genesisplusgx-expanded"
+	bool "libretro-genesisplusgx-expanded"
 	depends on BR2_INSTALL_LIBSTDCPP
-    help
-      A libretro SEGA 8 / 16 bits emulator core with expanded rom support.
+
+	help
+	  A libretro SEGA 8 / 16 bits emulator core with expanded rom support.
 
 	  http://www.libretro.com
 
