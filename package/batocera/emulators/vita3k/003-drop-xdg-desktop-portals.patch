@@ -1,8 +1,8 @@
 diff --git a/.gitmodules b/.gitmodules
-index bbade4f7..9c26428b 100644
+index 85b8fcf5..898979b9 100644
 --- a/.gitmodules
 +++ b/.gitmodules
-@@ -84,9 +84,9 @@
+@@ -81,9 +81,9 @@
  [submodule "external/tracy"]
  	path = external/tracy
  	url = https://github.com/wolfpld/tracy.git
@@ -16,10 +16,10 @@ index bbade4f7..9c26428b 100644
  	path = external/cubeb
  	url = https://github.com/mozilla/cubeb.git
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index 33624355..ca4f8ab3 100644
+index 12e72a94..f906a840 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
-@@ -436,11 +436,17 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
+@@ -424,11 +424,17 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
  #
  # target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
  
@@ -44,7 +44,7 @@ index 33624355..ca4f8ab3 100644
 +
 +set_property(TARGET nativefiledialog PROPERTY FOLDER externals)
 diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index e254b482..2bc8e9bb 100644
+index af53a151..fc343330 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
 @@ -103,7 +103,6 @@ add_subdirectory(features)
@@ -73,15 +73,15 @@ index b66bbd98..28d5a6f4 100644
   * @dir vita3k/io
   *
 diff --git a/vita3k/gui/CMakeLists.txt b/vita3k/gui/CMakeLists.txt
-index f9553f1b..023ab765 100644
+index b9cf9e2a..14d51392 100644
 --- a/vita3k/gui/CMakeLists.txt
 +++ b/vita3k/gui/CMakeLists.txt
 @@ -51,5 +51,5 @@ add_library(
  
  target_include_directories(gui PUBLIC include ${CMAKE_SOURCE_DIR}/vita3k)
  target_link_libraries(gui PUBLIC app compat config dialog emuenv ime imgui lang regmgr np)
--target_link_libraries(gui PRIVATE audio cppcommon ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages sdl2 touch vkutil host::dialog concurrentqueue)
-+target_link_libraries(gui PRIVATE audio cppcommon ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages sdl2 touch vkutil nativefiledialog concurrentqueue)
+-target_link_libraries(gui PRIVATE audio cppcommon ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages SDL3::SDL3 touch vkutil host::dialog concurrentqueue)
++target_link_libraries(gui PRIVATE audio cppcommon ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages SDL3 touch vkutil nativefiledialog concurrentqueue)
  target_link_libraries(gui PUBLIC tracy)
 diff --git a/vita3k/gui/src/archive_install_dialog.cpp b/vita3k/gui/src/archive_install_dialog.cpp
 index 03146b92..93e664b1 100644
@@ -475,7 +475,7 @@ index f8555692..fc0b19c2 100644
              }
              break;
 diff --git a/vita3k/gui/src/settings.cpp b/vita3k/gui/src/settings.cpp
-index c62f7fe2..425feb4a 100644
+index 2dfede43..3d3365da 100644
 --- a/vita3k/gui/src/settings.cpp
 +++ b/vita3k/gui/src/settings.cpp
 @@ -21,7 +21,7 @@
@@ -487,7 +487,7 @@ index c62f7fe2..425feb4a 100644
  #include <ime/functions.h>
  #include <io/VitaIoDevice.h>
  #include <io/state.h>
-@@ -652,16 +652,15 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
+@@ -653,16 +653,15 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
                          sub_menu = SubMenu::UNDEFINED;
                      }
                  } else if (sub_menu == SubMenu::IMAGE) {
@@ -510,7 +510,7 @@ index c62f7fe2..425feb4a 100644
                      }
                      sub_menu = SubMenu::UNDEFINED;
                  } else if (sub_menu == SubMenu::DEFAULT) {
-@@ -717,18 +716,16 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
+@@ -718,18 +717,16 @@ void draw_settings(GuiState &gui, EmuEnvState &emuenv) {
                  ImGui::NextColumn();
              }
              if (ImGui::Selectable(theme_background.home_screen_backgrounds["add_background"].c_str(), false, ImGuiSelectableFlags_None, SIZE_PACKAGE)) {
@@ -537,7 +537,7 @@ index c62f7fe2..425feb4a 100644
              }
              ImGui::PopStyleVar();
 diff --git a/vita3k/gui/src/settings_dialog.cpp b/vita3k/gui/src/settings_dialog.cpp
-index 80403aa7..398f889f 100644
+index 4a2f9617..6e7a58d8 100644
 --- a/vita3k/gui/src/settings_dialog.cpp
 +++ b/vita3k/gui/src/settings_dialog.cpp
 @@ -23,7 +23,7 @@
@@ -555,9 +555,9 @@ index 80403aa7..398f889f 100644
  #include <util/log.h>
 +#include <util/string_utils.h>
  
- #include <SDL.h>
+ #include <SDL3/SDL_video.h>
  
-@@ -105,20 +106,18 @@ static void reset_emulator(GuiState &gui, EmuEnvState &emuenv) {
+@@ -106,20 +107,18 @@ static void reset_emulator(GuiState &gui, EmuEnvState &emuenv) {
  }
  
  static void change_emulator_path(GuiState &gui, EmuEnvState &emuenv) {
@@ -585,7 +585,7 @@ index 80403aa7..398f889f 100644
  }
  
 diff --git a/vita3k/gui/src/user_management.cpp b/vita3k/gui/src/user_management.cpp
-index 4f688b92..1f95589f 100644
+index 27bb5823..68e1c131 100644
 --- a/vita3k/gui/src/user_management.cpp
 +++ b/vita3k/gui/src/user_management.cpp
 @@ -23,7 +23,7 @@
@@ -597,7 +597,7 @@ index 4f688b92..1f95589f 100644
  #include <io/state.h>
  #include <np/common.h>
  
-@@ -667,14 +667,13 @@ void draw_user_management(GuiState &gui, EmuEnvState &emuenv) {
+@@ -727,14 +727,13 @@ void draw_user_management(GuiState &gui, EmuEnvState &emuenv) {
          const ImVec2 CHANGE_AVATAR_BTN_SIZE(LARGE_AVATAR_SIZE.x, 36.f * SCALE.y);
          ImGui::SetCursorPos(ImVec2(AVATAR_POS.x + (LARGE_AVATAR_SIZE.x / 2.f) - (CHANGE_AVATAR_BTN_SIZE.x / 2.f), AVATAR_POS.y + LARGE_AVATAR_SIZE.y + (5.f * SCALE.y)));
          if (ImGui::Button(lang["choose_avatar"].c_str(), CHANGE_AVATAR_BTN_SIZE)) {
