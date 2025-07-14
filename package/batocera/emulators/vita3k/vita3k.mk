@@ -10,7 +10,7 @@ VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
 VITA3K_LICENSE = GPLv3
 VITA3K_DEPENDENCIES = boost fmt libcurl libgtk3 libogg libvorbis python-ruamel-yaml
-VITA3K_DEPENDENCIES += sdl2 sdl2_image sdl2_ttf zlib
+VITA3K_DEPENDENCIES += sdl3 zlib
 
 VITA3K_SUPPORTS_IN_SOURCE_BUILD = NO
 

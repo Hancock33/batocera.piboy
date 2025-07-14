@@ -1,13 +1,13 @@
 diff --git a/vita3k/interface.cpp b/vita3k/interface.cpp
-index b953f860..7d0ee79a 100644
+index a3c2a92f..d87e6c88 100644
 --- a/vita3k/interface.cpp
 +++ b/vita3k/interface.cpp
-@@ -663,6 +663,20 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
+@@ -657,6 +657,20 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
              return false;
  
-         case SDL_KEYDOWN: {
+         case SDL_EVENT_KEY_DOWN: {
 +            // Check for Ctrl+Q to exit
-+            if ((event.key.keysym.mod & KMOD_CTRL) && (event.key.keysym.sym == SDLK_q)) {
++            if ((event.key.mod & SDL_KMOD_CTRL) && (event.key.key == SDLK_Q)) {
 +                LOG_INFO("CTRL+Q detected, exiting gracefully...");
 +                if (!emuenv.io.app_path.empty())
 +                    gui::update_time_app_used(gui, emuenv, emuenv.io.app_path);
@@ -19,11 +19,11 @@ index b953f860..7d0ee79a 100644
 +                }
 +                return false;
 +            }
-+            
++
              const auto get_sce_ctrl_btn_from_scancode = [&emuenv](const SDL_Scancode scancode) {
                  if (scancode == emuenv.cfg.keyboard_button_up)
                      return SCE_CTRL_UP;
-@@ -682,8 +696,8 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
+@@ -676,8 +690,8 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
                      return SCE_CTRL_CIRCLE;
                  else if (scancode == emuenv.cfg.keyboard_button_cross)
                      return SCE_CTRL_CROSS;
@@ -34,7 +34,7 @@ index b953f860..7d0ee79a 100644
                  else
                      return static_cast<SceCtrlButtons>(0);
              };
-@@ -894,3 +908,4 @@ ExitCode run_app(EmuEnvState &emuenv, int32_t main_module_id) {
+@@ -895,3 +909,4 @@ ExitCode run_app(EmuEnvState &emuenv, int32_t main_module_id) {
  
      return Success;
  }
