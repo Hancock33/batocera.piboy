@@ -115,7 +115,7 @@ class MameGenerator(Generator):
         if system.name == 'fmtowns' and softList == '' and (ROMS / "fmtowns" / f"{romDirname.name}.zip").exists():
             softList = 'fmtowns_cd'
 
-        commandArray: list[str | Path] =  [ "/usr/bin/mame/mame", "-sound", "pipewire" ]
+        commandArray: list[str | Path] =  [ "/usr/bin/mame/mame", "-sound", "sdl" ]
         # MAME options used here are explained as it's not always straightforward
         # A lot more options can be configured, just run mame -showusage and have a look
         commandArray += [ "-skip_gameinfo" ]
