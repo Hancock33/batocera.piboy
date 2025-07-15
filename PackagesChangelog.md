@@ -12,6 +12,8 @@ Emulators|[ymir](https://github.com/StrikerX3/Ymir)|27b1215bfd97df5641101893c62a
 Ports|[box64](http://github.com/ptitseb/box64)|e5329d686429de905ddffdb71c073988259d1aa4|Jul 15, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|fe8eccc98f211b9af55c27dbdbd88c4f1703dcea|Jul 15, 2025
 Utils|[clevis](http://github.com/latchset/clevis)|be74547433b48d189af63aa79cd167e9ae08c026|Jul 15, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250715|Jul 15, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250715|Jul 15, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8f20a52ee82dd4514894e8562ba21a61b0a2d41c|Jul 15, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|61cfbee7394bd6952c2dec534c442b4932d369f9|Jul 15, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|1be027628b3c176f33f74ab2aae87af400d0284a|Jul 15, 2025
@@ -25,8 +27,6 @@ Emulators|[lightspark](http://github.com/lightspark/lightspark)|9a557f48daea6771
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45712|Jul 14, 2025
 Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.2.0|Jul 14, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|2435b33480c5c25d37d5e8e07bca14139e010720|Jul 14, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250714|Jul 14, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250714|Jul 14, 2025
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|6400024854702110c4019f5b0a7336dca7112fdb|Jul 14, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9e135123ab9015b962dd5eaa919be93a754bd050|Jul 14, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|ba51afa6b767a818a0788e071d89f408f6b88305|Jul 14, 2025
