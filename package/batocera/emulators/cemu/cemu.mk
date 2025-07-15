@@ -9,7 +9,7 @@ CEMU_SITE = https://github.com/cemu-project/Cemu
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
 CEMU_GIT_SUBMODULES=YES
-CEMU_DEPENDENCIES = bluez5_utils boost fmt glm glslang libcurl libpng libzip pugixml rapidjson sdl2 zlib zstd
+CEMU_DEPENDENCIES = bluez5_utils boost fmt glm glslang libcurl libpng libzip pugixml rapidjson sdl2 wxwidgets zlib zstd
 CEMU_DEPENDENCIES += host-glslang host-libusb host-nasm host-pugixml host-zstd
 
 CEMU_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -18,11 +18,6 @@ CEMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CEMU_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 CEMU_CONF_OPTS += -DENABLE_VCPKG=OFF
 CEMU_CONF_OPTS += -DENABLE_FERAL_GAMEMODE=OFF
-
-ifeq ($(BR2_PACKAGE_WXWIDGETS),y)
-    CEMU_CONF_OPTS += -DENABLE_WXWIDGETS=ON
-    CEMU_DEPENDENCIES += wxwidgets
-endif
 
 ifeq ($(BR2_PACKAGE_HIDAPI),y)
     CEMU_CONF_OPTS += -DENABLE_HIDAPI=ON
