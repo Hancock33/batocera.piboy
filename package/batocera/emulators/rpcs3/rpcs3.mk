@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jul 13, 2025
-RPCS3_VERSION = c69d7bc758a15b77ae7c555e9cb9dcebb89168ea
+# Version: Commits on Jul 15, 2025
+RPCS3_VERSION = 06f480cb83888741cfad8d9796de1160e46baf5a
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -36,8 +36,8 @@ RPCS3_CONF_OPTS += -DUSE_SYSTEM_OPENCV=ON
 
 ifeq ($(BR2_PACKAGE_SDL3),y)
     RPCS3_CONF_OPTS += -DUSE_SDL=ON
-    RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=OFF
-    RPCS3_CONF_OPTS += -DUSE_FAUDIO=OFF
+    RPCS3_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
+    RPCS3_CONF_OPTS += -DUSE_FAUDIO=ON
 else
     RPCS3_CONF_OPTS += -DUSE_SDL=OFF
     RPCS3_CONF_OPTS += -DBUILD_SDL3=OFF

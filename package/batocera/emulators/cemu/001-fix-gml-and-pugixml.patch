@@ -1,8 +1,8 @@
 diff --git a/src/Cafe/CMakeLists.txt b/src/Cafe/CMakeLists.txt
-index 6f9f5e3..fbe53ab 100644
+index 1b0def8..8032494 100644
 --- a/src/Cafe/CMakeLists.txt
 +++ b/src/Cafe/CMakeLists.txt
-@@ -563,7 +563,7 @@ target_link_libraries(CemuCafe PRIVATE
+@@ -574,7 +574,7 @@ target_link_libraries(CemuCafe PRIVATE
  	OpenSSL::Crypto
  	OpenSSL::SSL
  	PNG::PNG
@@ -25,23 +25,21 @@ index 1fce8ec..bb09cf7 100644
  )
  
 diff --git a/src/config/CMakeLists.txt b/src/config/CMakeLists.txt
-index d53e857..5c76d60 100644
+index abcacc6..0882ef5 100644
 --- a/src/config/CMakeLists.txt
 +++ b/src/config/CMakeLists.txt
-@@ -21,7 +21,7 @@ target_link_libraries(CemuConfig PRIVATE
+@@ -22,5 +22,5 @@ target_link_libraries(CemuConfig PRIVATE
  	CemuUtil
  	Boost::headers
  	Boost::program_options
 -	pugixml::pugixml
 +	pugixml
  )
- 
- if (ENABLE_WXWIDGETS)
-diff --git a/src/gui/CMakeLists.txt b/src/gui/CMakeLists.txt
-index 7cdc208..ea7d7b8 100644
---- a/src/gui/CMakeLists.txt
-+++ b/src/gui/CMakeLists.txt
-@@ -149,7 +149,7 @@ target_link_libraries(CemuGui PRIVATE
+diff --git a/src/gui/wxgui/CMakeLists.txt b/src/gui/wxgui/CMakeLists.txt
+index 921ba05..4690ee0 100644
+--- a/src/gui/wxgui/CMakeLists.txt
++++ b/src/gui/wxgui/CMakeLists.txt
+@@ -154,7 +154,7 @@ target_link_libraries(CemuWxGui PRIVATE
  	CURL::libcurl
  	libzip::zip
  	OpenSSL::Crypto
@@ -51,10 +49,10 @@ index 7cdc208..ea7d7b8 100644
  )
  
 diff --git a/src/input/CMakeLists.txt b/src/input/CMakeLists.txt
-index 004dc2b..d58a4ac 100644
+index 3158ce9..6a5b9a8 100644
 --- a/src/input/CMakeLists.txt
 +++ b/src/input/CMakeLists.txt
-@@ -92,7 +92,7 @@ target_link_libraries(CemuInput PRIVATE
+@@ -96,7 +96,7 @@ target_link_libraries(CemuInput PRIVATE
  	Boost::headers
  	Boost::program_options
  	glm::glm
@@ -62,4 +60,4 @@ index 004dc2b..d58a4ac 100644
 +	pugixml
  	SDL2::SDL2
  )
- if (ENABLE_HIDAPI)
+ 

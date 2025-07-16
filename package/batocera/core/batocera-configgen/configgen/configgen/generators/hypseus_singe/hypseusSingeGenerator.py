@@ -149,10 +149,10 @@ class HypseusSingeGenerator(Generator):
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]
-        zipFile = rom.name + "/" + romName + ".zip"
-        frameFile = rom.name + "/" + romName + ".txt"
-        commandsFile = rom.name + "/" + romName + ".commands"
-        singeFile = rom.name + "/" + romName + ".singe"
+        zipFile = str(Path(rom)) + "/" + romName + ".zip"
+        frameFile = str(Path(rom)) + "/" + romName + ".txt"
+        commandsFile = str(Path(rom)) + "/" + romName + ".commands"
+        singeFile = str(Path(rom)) + "/" + romName + ".singe"
 
         bezelFile = find_bezel(romName.lower())
         if bezelFile is not None:
@@ -169,7 +169,7 @@ class HypseusSingeGenerator(Generator):
             singeFile = amDir + romName + ".singe"
 
         # get the first video file from frameFile to determine the resolution
-        m2v_filename = self.find_m2v_from_txt(frameFile)
+        m2v_filename = str(Path(rom)) + "/" + self.find_m2v_from_txt(frameFile)
 
         if m2v_filename:
             _logger.debug("First .m2v file found: %s", m2v_filename)
@@ -180,7 +180,7 @@ class HypseusSingeGenerator(Generator):
         if (system.name == 'actionmax'):
             video_path = '/userdata/roms/actionmax/' + m2v_filename
         else:
-            video_path = rom + "/" + m2v_filename
+            video_path = m2v_filename
 
         # check the path exists
         if not os.path.exists(video_path):
