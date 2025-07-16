@@ -1,5 +1,5 @@
 diff --git a/src/Cafe/Filesystem/FST/KeyCache.cpp b/src/Cafe/Filesystem/FST/KeyCache.cpp
-index 29903e8..09d8fc8 100644
+index f85d2b5..5ecf7d2 100644
 --- a/src/Cafe/Filesystem/FST/KeyCache.cpp
 +++ b/src/Cafe/Filesystem/FST/KeyCache.cpp
 @@ -60,7 +60,18 @@ void KeyCache_Prepare()
@@ -15,7 +15,7 @@ index 29903e8..09d8fc8 100644
 +	std::error_code err;
 +	fs::create_directories(keysDir, err);
 +	if (err) {
-+		wxMessageBox("Unable to create /userdata/bios/cemu directory, to store the keys.txt file\nThis can happen if Cemu does not have write permission to /userdata/bios/ directory, the disk is full or if anti-virus software is blocking Cemu.", "Error", wxOK | wxCENTRE | wxICON_ERROR);
++		printf("Unable to create /userdata/bios/cemu directory, to store the keys.txt file\nThis can happen if Cemu does not have write permission to /userdata/bios/ directory, the disk is full or if anti-virus software is blocking Cemu.");
 +	}
 +
 +	auto keysPath = keysDir + "/keys.txt";

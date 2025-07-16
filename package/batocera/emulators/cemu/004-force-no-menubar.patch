@@ -1,8 +1,8 @@
 diff --git a/src/config/LaunchSettings.cpp b/src/config/LaunchSettings.cpp
-index b2b0c08..4406de1 100644
+index 4ac12c5..c4b2076 100644
 --- a/src/config/LaunchSettings.cpp
 +++ b/src/config/LaunchSettings.cpp
-@@ -72,6 +72,8 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
+@@ -74,6 +74,8 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
  		("force-interpreter", po::value<bool>()->implicit_value(true), "Force interpreter CPU emulation, disables recompiler. Useful for debugging purposes where you want to get accurate memory accesses and stack traces.")
  		("force-multicore-interpreter", po::value<bool>()->implicit_value(true), "Force multi-core interpreter CPU emulation, disables recompiler. Only useful for getting stack traces, but slightly faster than the single-core interpreter mode.")
  		("enable-gdbstub", po::value<bool>()->implicit_value(true), "Enable GDB stub to debug executables inside Cemu using an external debugger");
@@ -11,7 +11,7 @@ index b2b0c08..4406de1 100644
  
  	po::options_description hidden{ "Hidden options" };
  	hidden.add_options()
-@@ -180,10 +182,13 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
+@@ -185,10 +187,13 @@ bool LaunchSettings::HandleCommandline(const std::vector<std::wstring>& args)
  
  		if(vm.count("force-multicore-interpreter"))
  			s_force_multicore_interpreter = vm["force-multicore-interpreter"].as<bool>();
@@ -27,10 +27,10 @@ index b2b0c08..4406de1 100644
  		std::string output_path;
  		if (vm.count("extract"))
 diff --git a/src/config/LaunchSettings.h b/src/config/LaunchSettings.h
-index d1bed9e..5ade7bf 100644
+index 13665cb..f732c01 100644
 --- a/src/config/LaunchSettings.h
 +++ b/src/config/LaunchSettings.h
-@@ -28,6 +28,8 @@ public:
+@@ -30,6 +30,8 @@ public:
  	static bool ForceInterpreter() { return s_force_interpreter; };
  	static bool ForceMultiCoreInterpreter() { return s_force_multicore_interpreter; }
  
@@ -39,7 +39,7 @@ index d1bed9e..5ade7bf 100644
  	static std::optional<uint32> GetPersistentId() { return s_persistent_id; }
  
  	static uint32 GetPPCRecLowerAddr() { return ppcRec_limitLowerAddr; };
-@@ -46,6 +48,8 @@ private:
+@@ -50,6 +52,8 @@ private:
  
  	inline static bool s_force_interpreter = false;
  	inline static bool s_force_multicore_interpreter = false;
@@ -48,11 +48,11 @@ index d1bed9e..5ade7bf 100644
  	
  	inline static std::optional<uint32> s_persistent_id{};
  
-diff --git a/src/gui/MainWindow.cpp b/src/gui/MainWindow.cpp
-index f2a5a2f..a2006c0 100644
---- a/src/gui/MainWindow.cpp
-+++ b/src/gui/MainWindow.cpp
-@@ -1727,7 +1727,8 @@ void MainWindow::SetMenuVisible(bool state)
+diff --git a/src/gui/wxgui/MainWindow.cpp b/src/gui/wxgui/MainWindow.cpp
+index c1826ae..90d22fd 100644
+--- a/src/gui/wxgui/MainWindow.cpp
++++ b/src/gui/wxgui/MainWindow.cpp
+@@ -1748,7 +1748,8 @@ void MainWindow::SetMenuVisible(bool state)
  	if (m_menu_visible == state)
  		return;
  
@@ -62,7 +62,7 @@ index f2a5a2f..a2006c0 100644
  	m_menu_visible = state;
  }
  
-@@ -2289,7 +2290,8 @@ void MainWindow::RecreateMenu()
+@@ -2326,7 +2327,8 @@ void MainWindow::RecreateMenu()
  
  	m_menuBar->Append(helpMenu, _("&Help"));
  

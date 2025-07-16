@@ -1,21 +1,8 @@
-diff --git a/src/Cafe/HW/Latte/Renderer/Renderer.cpp b/src/Cafe/HW/Latte/Renderer/Renderer.cpp
-index 4db8835..f49c2b3 100644
---- a/src/Cafe/HW/Latte/Renderer/Renderer.cpp
-+++ b/src/Cafe/HW/Latte/Renderer/Renderer.cpp
-@@ -116,7 +116,7 @@ uint8 Renderer::RGBComponentToSRGB(uint8 cli)
- 
- static std::optional<fs::path> GenerateScreenshotFilename(bool isDRC)
- {
--	fs::path screendir = ActiveSettings::GetUserDataPath("screenshots");
-+	fs::path screendir = "/userdata/screenshots";
- 	// build screenshot name with format Screenshot_YYYY-MM-DD_HH-MM-SS[_GamePad].png
- 	// if the file already exists add a suffix counter (_2.png, _3.png etc)
- 	std::time_t time_t = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 diff --git a/src/Cemu/Logging/CemuLogging.cpp b/src/Cemu/Logging/CemuLogging.cpp
-index 5cde2a7..a0503e9 100644
+index 6a01e75..add2933 100644
 --- a/src/Cemu/Logging/CemuLogging.cpp
 +++ b/src/Cemu/Logging/CemuLogging.cpp
-@@ -92,7 +92,7 @@ void cemuLog_thread()
+@@ -151,7 +151,7 @@ void cemuLog_thread()
  
  fs::path cemuLog_GetLogFilePath()
  {
@@ -37,11 +24,11 @@ index 6b205d2..74120a4 100644
  	}
  
  	exit(0);
-diff --git a/src/gui/CemuApp.cpp b/src/gui/CemuApp.cpp
-index c360629..bbb11a2 100644
---- a/src/gui/CemuApp.cpp
-+++ b/src/gui/CemuApp.cpp
-@@ -142,7 +142,7 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
+diff --git a/src/gui/wxgui/CemuApp.cpp b/src/gui/wxgui/CemuApp.cpp
+index 78f4b83..dca06eb 100644
+--- a/src/gui/wxgui/CemuApp.cpp
++++ b/src/gui/wxgui/CemuApp.cpp
+@@ -144,7 +144,7 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
  	else
  #endif
  	{
@@ -50,7 +37,7 @@ index c360629..bbb11a2 100644
  		wxString appName = GetAppName();
  		standardPaths.SetFileLayout(wxStandardPaths::FileLayout::FileLayout_XDG);
  		auto getEnvDir = [&](const wxString& varName, const wxString& defaultValue)
-@@ -153,11 +153,10 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
+@@ -155,11 +155,10 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
  			return dir;
  		};
  		wxString homeDir = wxFileName::GetHomeDir();
@@ -65,3 +52,16 @@ index c360629..bbb11a2 100644
  	}
  	ActiveSettings::SetPaths(isPortable, exePath, user_data_path, config_path, cache_path, data_path, failedWriteAccess);
  }
+diff --git a/src/gui/wxgui/input/HotkeySettings.cpp b/src/gui/wxgui/input/HotkeySettings.cpp
+index 626bdcd..3470689 100644
+--- a/src/gui/wxgui/input/HotkeySettings.cpp
++++ b/src/gui/wxgui/input/HotkeySettings.cpp
+@@ -17,7 +17,7 @@
+ 
+ std::optional<fs::path> GenerateScreenshotFilename(bool isDRC)
+ {
+-	fs::path screendir = ActiveSettings::GetUserDataPath("screenshots");
++	fs::path screendir = "/userdata/screenshots";
+ 	// build screenshot name with format Screenshot_YYYY-MM-DD_HH-MM-SS[_GamePad].png
+ 	// if the file already exists add a suffix counter (_2.png, _3.png etc)
+ 	std::time_t time_t = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
