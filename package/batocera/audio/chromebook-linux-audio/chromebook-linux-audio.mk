@@ -3,8 +3,8 @@
 # chromebook-linux-audio
 #
 ################################################################################
-# Version: Commits on Jul 07, 2025
-CHROMEBOOK_LINUX_AUDIO_VERSION = 69d5910ec393f89a223a8da38034f8b2b40f5d73
+# Version: Commits on Jul 19, 2025
+CHROMEBOOK_LINUX_AUDIO_VERSION = 7edb05a14cd64ec8f4e51394c51e11abbbdff317
 CHROMEBOOK_LINUX_AUDIO_SITE = $(call github,WeirdTreeThing,chromebook-linux-audio,$(CHROMEBOOK_LINUX_AUDIO_VERSION))
 CHROMEBOOK_LINUX_AUDIO_LICENSE = BSD-3-Clause
 CHROMEBOOK_LINUX_AUDIO_LICENSE_FILES = LICENSE
