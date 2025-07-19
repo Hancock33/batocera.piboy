@@ -1,0 +1,23 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 64336d4f2..f1ff1c36d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -157,8 +157,7 @@ add_package(TARGET PNG
+ add_package(TARGET ZLIB
+   PKG ZLIB PKG_USE ZLIB::ZLIB PKG_CONFIG zlib REQUIRED)
+ add_package(TARGET PhysFS
+-  PKG PhysFS PKG_USE PhysFS::PhysFS CONFIG REQUIRED PKG_CONFIG physfs
+-  PREFER_PKGCONFIG)
++  PKG PhysFS PKG_USE PhysFS::PhysFS CONFIG REQUIRED PKG_CONFIG PhysFS)
+ add_package(TARGET fmt
+   PKG fmt PKG_USE fmt::fmt CONFIG REQUIRED PKG_CONFIG fmt)
+ add_package(TARGET glm
+@@ -306,7 +305,7 @@ target_compile_definitions(supertux2 PUBLIC GLM_ENABLE_EXPERIMENTAL)
+ if(NOT EMSCRIPTEN)
+   target_link_libraries(supertux2 PUBLIC
+     # SDL2_image
+-    SDL2_image
++    -lSDL2_image
+     # SDL2 main (windows?)
+     $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
+     # SDL2
