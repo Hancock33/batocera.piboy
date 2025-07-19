@@ -49,4 +49,3 @@ wine-proton.mk
 wine-staging.mk
 xbox-xcloud-client.mk
 xemu.mk
-

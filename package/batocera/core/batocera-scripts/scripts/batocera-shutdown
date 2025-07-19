@@ -71,9 +71,9 @@ display_off() {
             echo "ERROR: [Sway] Could not find sway socket file in /var/run. Cannot turn off display."
             return
         fi
-        
+
         echo "INFO: [Sway] Found socket file at: $sway_sock"
-        
+
         local active_displays
         active_displays=$(SWAYSOCK="${sway_sock}" swaymsg -t get_outputs | jq -r '.[] | select(.active==true) | .name')
 
@@ -136,7 +136,7 @@ display_on() {
             echo "ERROR: [Sway] Could not find sway socket file in /var/run. Cannot turn on display."
             return
         fi
-        
+
         echo "INFO: [Sway] Found socket file at: $sway_sock"
 
         if [ -f "${ACTIVE_DISPLAYS_FILE}" ]; then
