@@ -44,10 +44,10 @@ class DuckstationGenerator(Generator):
         if rom.suffix == ".m3u":
             rom = rewriteM3uFullPath(rom)
 
-        if Path('/usr/bin/duckstation/duckstation-qt').exists():
-            commandArray = ["/usr/bin/duckstation/duckstation-qt", "-batch", "-nogui", "--", rom ]
-        else:
+        if Path('/usr/bin/duckstation/duckstation-mini').exists():
             commandArray = ["/usr/bin/duckstation/duckstation-mini", "-batch", "-fullscreen", "--", rom ]
+        else:
+            commandArray = ["/usr/bin/duckstation/duckstation-qt", "-batch", "-nogui", "--", rom ]
 
         settings = CaseSensitiveConfigParser(interpolation=None)
         settings_path = CONFIGS / "duckstation" / "settings.ini"
