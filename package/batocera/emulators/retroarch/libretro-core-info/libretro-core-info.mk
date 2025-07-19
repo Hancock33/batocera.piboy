@@ -12,9 +12,6 @@ define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mv $(@D)/bsnes_hd_beta_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/bsnes_hd_libretro.info
 	cp $(@D)/fbalpha2012_libretro.info			$(TARGET_DIR)/usr/share/libretro/info/fbalpha_libretro.info
-	cp $(@D)/flycast_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/flycast-next_libretro.info
-	cp $(@D)/flycast_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/flycast2021_libretro.info
-	cp $(@D)/flycast_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/flycast2022_libretro.info
 	cp $(@D)/genesis_plus_gx_libretro.info		$(TARGET_DIR)/usr/share/libretro/genesisplusgx-expanded_libretro.info
 	mv $(@D)/genesis_plus_gx_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/genesisplusgx_libretro.info
 	mv $(@D)/genesis_plus_gx_wide_libretro.info $(TARGET_DIR)/usr/share/libretro/info/genesisplusgx-wide_libretro.info
