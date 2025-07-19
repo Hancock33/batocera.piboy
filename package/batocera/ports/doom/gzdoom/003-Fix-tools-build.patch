@@ -1,16 +1,16 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index f4ceaef28..92cec742a 100644
+index b13e1fa91..0afd3a3fb 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -216,7 +216,6 @@ endmacro()
+@@ -217,7 +217,6 @@ endmacro()
  option( NO_OPENAL "Disable OpenAL sound support" OFF )
  
  find_package( BZip2 )
 -find_package( VPX )
- 
- include( TargetArch )
- 
-@@ -226,7 +225,6 @@ if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
+ if (NOT FORCE_INTERNAL_CPPDAP)
+ 	find_package( cppdap CONFIG )
+ endif()
+@@ -230,7 +229,6 @@ if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
  	set( HAVE_VM_JIT ON )
  endif()
  if(NOT TOOLS_ONLY)
@@ -18,7 +18,7 @@ index f4ceaef28..92cec742a 100644
  	find_package( VPX )
  endif()
  
-@@ -396,42 +394,6 @@ if(NOT TOOLS_ONLY)
+@@ -413,42 +411,6 @@ if(NOT TOOLS_ONLY)
  	set( DRPC_LIBRARIES discord-rpc )
  	set( DRPC_LIBRARY discord-rpc )
  
