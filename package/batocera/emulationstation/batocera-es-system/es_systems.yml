@@ -5803,7 +5803,6 @@ msu-md:
   emulators:
     libretro:
       genesisplusgx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX], incompatible_extensions: [cue]          }
-      genesisplusgx-expanded: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_EXPANDED], incompatible_extensions: [cue] }
       genesisplusgx-wide:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE], incompatible_extensions: [cue]     }
 
 naomi:
