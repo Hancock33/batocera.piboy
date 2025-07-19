@@ -6004,9 +6004,6 @@ segastv:
     libretro:
       kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS]   }
       mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010] }
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]     }
-    mame:
-      mame:             { requireAnyOf: [ BR2_PACKAGE_MAME ]            }
 
 sega32x:
   name:                 32x
