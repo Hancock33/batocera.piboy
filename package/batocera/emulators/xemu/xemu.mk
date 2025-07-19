@@ -3,14 +3,14 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Jul 10, 2025
-XEMU_VERSION = 8f29452ca928ba52156bfff9f8102ee3dd14ad8a
-XEMU_SITE = https://github.com/xemu-project/xemu
+# Version: Commits on Jul 03, 2025
+XEMU_VERSION = v0.8.92
+XEMU_SITE = https://github.com/xemu-project/xemu.git
 XEMU_SITE_METHOD = git
 XEMU_GIT_SUBMODULES = YES
 XEMU_LICENSE = GPLv2
-XEMU_DEPENDENCIES = bzip2 gmp keyutils libgbm libgtk3 libopenssl libpcap libsamplerate
-XEMU_DEPENDENCIES += pixman python3 sdl2 slirp xlib_libX11 zlib
+XEMU_DEPENDENCIES = host-cmake host-meson host-pkgconf host-python-distlib host-python-pyyaml host-python3
+XEMU_DEPENDENCIES += json-for-modern-cpp libcurl libepoxy libglib2 libgtk3 libpcap libsamplerate sdl2 slirp zlib
 
 XEMU_EXTRA_DOWNLOADS = https://github.com/mborgerson/xemu-hdd-image/releases/download/1.0/xbox_hdd.qcow2.zip
 
@@ -72,7 +72,13 @@ XEMU_CONF_OPTS += --disable-whpx
 XEMU_CONF_OPTS += --with-default-devices
 XEMU_CONF_OPTS += --disable-renderdoc
 
+# Vulkan
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
+XEMU_DEPENDENCIES += vulkan-headers vulkan-loader
+endif
+
+# AVX2 is only available on x86_64_v3 or more
+ifeq ($(BR2_x86_x86_64_v3),y)
 XEMU_CONF_OPTS += --enable-avx2
 else
 XEMU_CONF_OPTS += --disable-avx2
@@ -87,7 +93,7 @@ define XEMU_BUILD_CMDS
 		CC_FOR_BUILD="$(TARGET_CC)" GCC_FOR_BUILD="$(TARGET_CC)" \
 		CXX_FOR_BUILD="$(TARGET_CXX)" LD_FOR_BUILD="$(TARGET_LD)" \
 		CROSS_COMPILE="$(STAGING_DIR)/usr/bin/" \
-			PREFIX="/$(BR2_ARCH)/host/$(BR2_ARCH)-buildroot-linux-gnu/sysroot/" \
+		PREFIX="/$(BR2_ARCH)/host/$(BR2_ARCH)-buildroot-linux-gnu/sysroot/" \
 		PKG_CONFIG="/$(BR2_ARCH)/host/$(BR2_ARCH)-buildroot-linux-gnu/sysroot/usr/bin/pkg-config" \
 		$(MAKE) -C $(@D)
 endef
@@ -136,24 +142,31 @@ define XEMU_GET_SUBMODULES
 
 	# tomlplusplus
 	mkdir -p $(@D)/subprojects/tomlplusplus
-	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/tomlplusplus.wrap))
 	curl -L -o tomlplusplus.tar.gz \
-		https://github.com/marzer/tomlplusplus/archive/$(REVISION).tar.gz
+		https://github.com/marzer/tomlplusplus/archive/refs/tags/v3.4.0.tar.gz
 	$(TAR) -xzf tomlplusplus.tar.gz --strip-components=1 -C $(@D)/subprojects/tomlplusplus
 	rm tomlplusplus.tar.gz
 
+	# glslang
+	mkdir -p $(@D)/subprojects/glslang
+#	$(eval REVISION = $(shell grep -Po '(?<=^revision=).+' $(@D)/subprojects/glslang.wrap))
+	curl -L -o glslang.tar.gz \
+		https://github.com/KhronosGroup/glslang/archive/refs/tags/15.4.0.tar.gz
+	$(TAR) -xzf glslang.tar.gz --strip-components=1 -C $(@D)/subprojects/glslang
+	rm glslang.tar.gz
+
 	# xxhash
-	mkdir -p $(@D)/subprojects/xxHash-0.8.2
+	mkdir -p $(@D)/subprojects/xxHash-0.8.3
 	curl -L -o xxhash.tar.gz \
-		http://github.com/mesonbuild/wrapdb/releases/download/xxhash_0.8.2-1/xxHash-0.8.2.tar.gz
-	$(TAR) -xzf xxhash.tar.gz --strip-components=1 -C $(@D)/subprojects/xxHash-0.8.2
+		http://github.com/mesonbuild/wrapdb/releases/download/xxhash_0.8.3-1/xxHash-0.8.3.tar.gz
+	$(TAR) -xzf xxhash.tar.gz --strip-components=1 -C $(@D)/subprojects/xxHash-0.8.3
 	rm xxhash.tar.gz
 
 	# xxhash patch
-	curl -L -o xxhash_0.8.2-1_patch.zip \
-		https://wrapdb.mesonbuild.com/v2/xxhash_0.8.2-1/get_patch
-	$(UNZIP) -o xxhash_0.8.2-1_patch.zip -d $(@D)/subprojects
-	rm xxhash_0.8.2-1_patch.zip
+	curl -L -o xxhash_0.8.3-1_patch.zip \
+		https://wrapdb.mesonbuild.com/v2/xxhash_0.8.3-1/get_patch
+	$(UNZIP) -o xxhash_0.8.3-1_patch.zip -d $(@D)/subprojects
+	rm xxhash_0.8.3-1_patch.zip
 
 	# keycodemapdb - revision variation
 	mkdir -p $(@D)/subprojects/keycodemapdb
@@ -173,9 +186,8 @@ define XEMU_GET_SUBMODULES
 
 	# berkeley-softfloat-3 - revision variation
 	mkdir -p $(@D)/subprojects/berkeley-softfloat-3
-	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/berkeley-softfloat-3.wrap))
 	curl -L -o berkeley-softfloat-3.tar.gz \
-		https://gitlab.com/qemu-project/berkeley-softfloat-3/-/archive/$(REVISION)/$(REVISION).tar.gz
+		https://gitlab.com/qemu-project/berkeley-softfloat-3/-/archive/master/berkeley-softfloat-3-master.tar.gz
 	$(TAR) -xzf berkeley-softfloat-3.tar.gz --strip-components=1 -C $(@D)/subprojects/berkeley-softfloat-3
 	cp $(@D)/subprojects/packagefiles/berkeley-softfloat-3/* $(@D)/subprojects/berkeley-softfloat-3
 	rm berkeley-softfloat-3.tar.gz
@@ -189,35 +201,24 @@ define XEMU_GET_SUBMODULES
 	cp $(@D)/subprojects/packagefiles/berkeley-testfloat-3/* $(@D)/subprojects/berkeley-testfloat-3
 	rm berkeley-testfloat-3.tar.gz
 
-	# glslang - revision variation
-	mkdir -p $(@D)/subprojects/glslang
-	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/glslang.wrap))
-	curl -L -o glslang.tar.gz \
-		https://github.com/KhronosGroup/glslang/archive/$(REVISION).tar.gz
-	$(TAR) -xzf glslang.tar.gz --strip-components=1 -C $(@D)/subprojects/glslang
-	rm glslang.tar.gz
-
-	# volk - revision variation
+	# volk
 	mkdir -p $(@D)/subprojects/volk
-	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/volk.wrap))
 	curl -L -o volk.tar.gz \
-		https://github.com/zeux/volk/archive/$(REVISION).tar.gz
+		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz
 	$(TAR) -xzf volk.tar.gz --strip-components=1 -C $(@D)/subprojects/volk
 	rm volk.tar.gz
 
-	# SPIRV-Reflect - revision variation
+	# SPIRV-Reflect
 	mkdir -p $(@D)/subprojects/SPIRV-Reflect
-	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/SPIRV-Reflect.wrap))
 	curl -L -o SPIRV-Reflect.tar.gz \
-		https://github.com/KhronosGroup/SPIRV-Reflect/archive/$(REVISION).tar.gz
+	https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz
 	$(TAR) -xzf SPIRV-Reflect.tar.gz --strip-components=1 -C $(@D)/subprojects/SPIRV-Reflect
 	rm SPIRV-Reflect.tar.gz
 
-	# VulkanMemoryAllocator - revision variation
+	# VulkanMemoryAllocator
 	mkdir -p $(@D)/subprojects/VulkanMemoryAllocator
-	$(eval REVISION = $(shell grep -Po '(?<=^revision = ).+' $(@D)/subprojects/VulkanMemoryAllocator.wrap))
 	curl -L -o VulkanMemoryAllocator.tar.gz \
-		https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/$(REVISION).tar.gz
+	https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/refs/tags/v3.3.0.tar.gz
 	$(TAR) -xzf VulkanMemoryAllocator.tar.gz --strip-components=1 -C $(@D)/subprojects/VulkanMemoryAllocator
 	rm VulkanMemoryAllocator.tar.gz
 endef
