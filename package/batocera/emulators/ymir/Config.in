@@ -1,6 +1,6 @@
 config BR2_PACKAGE_YMIR
 	bool "ymir"
-	select BR2_PACKAGE_SDL3
+	select BR2_PACKAGE_BATOCERA_SDL3
 
 	help
 	  Sega Saturn emulator.

@@ -119,7 +119,8 @@ class Pcsx2Generator(Generator):
                 _logger.warning("CPU does not support SSE4.1 which is required by pcsx2.  The emulator will likely crash with SIGILL (illegal instruction).")
 
         envcmd = {
-            "XDG_CONFIG_HOME": CONFIGS
+            "XDG_CONFIG_HOME": CONFIGS,
+            "SDL_JOYSTICK_HIDAPI": "0"
         }
 
         # ensure we have the patches.zip file to avoid message.

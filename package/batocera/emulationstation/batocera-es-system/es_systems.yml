@@ -5366,7 +5366,6 @@ atomiswave:
   emulators:
     libretro:
       flycast:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
-      flycast2021:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
     flycast:
       flycast:          { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
 
@@ -5392,7 +5391,6 @@ dreamcast:
   emulators:
     libretro:
       flycast:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
-      flycast2021:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
     flycast:
       flycast:          { requireAnyOf: [BR2_PACKAGE_FLYCAST]                            }
     redream:
@@ -5803,7 +5801,6 @@ msu-md:
   emulators:
     libretro:
       genesisplusgx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX], incompatible_extensions: [cue]          }
-      genesisplusgx-expanded: { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_EXPANDED], incompatible_extensions: [cue] }
       genesisplusgx-wide:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX_WIDE], incompatible_extensions: [cue]     }
 
 naomi:
@@ -5816,7 +5813,6 @@ naomi:
   emulators:
     libretro:
       flycast:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
-      flycast2021:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
     flycast:
       flycast:          { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
 
@@ -5959,7 +5955,6 @@ naomigd:
   emulators:
     libretro:
       flycast:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST]     }
-      flycast2021:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FLYCAST2021] }
     flycast:
       flycast:          { requireAnyOf: [BR2_PACKAGE_FLYCAST]              }
 
@@ -6004,10 +5999,6 @@ segastv:
   emulators:
     libretro:
       kronos:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_KRONOS]   }
-      mame0139:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2010] }
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]     }
-    mame:
-      mame:             { requireAnyOf: [ BR2_PACKAGE_MAME ]            }
 
 sega32x:
   name:                 32x
@@ -6366,9 +6357,6 @@ ps2:
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2], incompatible_extensions: [m3u] }
     libretro:
       ps2:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PS2] }
-      play:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PLAY], incompatible_extensions: [m3u]  }
-    play:
-      play:             { requireAnyOf: [BR2_PACKAGE_PLAY], incompatible_extensions: [m3u] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:ps2
   comment_fr:           |

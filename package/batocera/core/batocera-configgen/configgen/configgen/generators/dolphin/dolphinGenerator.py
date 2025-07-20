@@ -422,7 +422,8 @@ class DolphinGenerator(Generator):
             env={
                 "XDG_CONFIG_HOME": CONFIGS,
                 "XDG_DATA_HOME": SAVES,
-                "XDG_CACHE_HOME": CACHE
+                "XDG_CACHE_HOME": CACHE,
+                "SDL_JOYSTICK_HIDAPI": "0"
             }
         )
 

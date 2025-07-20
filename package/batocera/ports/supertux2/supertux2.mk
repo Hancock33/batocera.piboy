@@ -3,12 +3,13 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Jul 16, 2025
-SUPERTUX2_VERSION = 25753a1420e1dad8fa244f01e517c41339786855
+# Version: Commits on Jul 20, 2025
+SUPERTUX2_VERSION = 0ddc5266c6f2b27dbf029684ea7587f27726aeea
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
 SUPERTUX2_SUPPORTS_IN_SOURCE_BUILD = NO
+SUPERTUX2_CMAKE_BACKEND = make
 
 # Supertux itself is GPL-3.0+, but it bundles a few libraries with different
 # licenses (sexp-cpp, squirrel, tinygettext) which are linked statically.
@@ -20,7 +21,8 @@ SUPERTUX2_DEPENDENCIES = boost freetype host-pkgconf libcurl libogg libpng libvo
 SUPERTUX2_CONF_OPTS +=-DBUILD_DOCUMENTATION=OFF
 SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_BIN="bin"
 SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_SHARE="share/supertux2"
-SUPERTUX2_CONF_OPTS +=-DGIT_VERSION="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
+SUPERTUX2_CONF_OPTS +=-DSUPERTUX_PACKAGE_VERSION="v0.6.3-dev"
+SUPERTUX2_CONF_OPTS +=-DSUPERTUX_VERSION_STRING="$(shell echo $(SUPERTUX2_VERSION) | cut -c 1-7)"
 
 define SUPERTUX2_INSTALL_TARGET_CMDS
 	# install media

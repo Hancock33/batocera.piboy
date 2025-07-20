@@ -888,7 +888,7 @@ megacd:
   core:     genesisplusgx
 segastv:
   emulator: libretro
-  core:     mame0139
+  core:     kronos
 seibu:
   emulator: libretro
   core:     mame078plus

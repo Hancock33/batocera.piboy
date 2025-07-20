@@ -20,6 +20,7 @@ from typing import TYPE_CHECKING, cast
 import toml
 
 from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ...batoceraPaths import CONFIGS, mkdir_if_not_exists
 from ..Generator import Generator
 
@@ -33,7 +34,7 @@ class YmirGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "ymir",
-            "keys": {"exit": ["KEY_LEFTALT", "KEY_F4"]}
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -114,7 +115,12 @@ class YmirGenerator(Generator):
         # Run command
         commandArray: list[str | Path] = ["/usr/bin/ymir", "-p", configPath, rom]
 
-        return Command.Command(array=commandArray)
+        return Command.Command(
+            array=commandArray,
+            env={
+            "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
+            "SDL_JOYSTICK_HIDAPI": "0"
+        })
 
     def getInGameRatio(self, config, gameResolution, rom):
         if config.get_bool("ymir_aspect"):

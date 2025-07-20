@@ -2430,7 +2430,6 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'fbneo': _fbneo_options,
     'fceumm': _fceumm_options,
     'flycast': _flycast_options,
-    'flycast2021': _flycast_options,
     'fuse': _fuse_options,
     'gambatte': _gambatte_options,
     'genesisplusgx': _genesisplusgx_options,

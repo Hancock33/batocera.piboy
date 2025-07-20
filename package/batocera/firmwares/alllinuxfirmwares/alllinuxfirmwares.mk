@@ -8,6 +8,14 @@ ALLLINUXFIRMWARES_VERSION = 20250708
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.xz
 ALLLINUXFIRMWARES_SITE = https://www.kernel.org/pub/linux/kernel/firmware
 
+ifeq ($(BR2_PACKAGE_FIRMWARE_ARMBIAN),y)
+ALLLINUXFIRMWARES_DEPENDENCIES += firmware-armbian
+endif
+
+ifeq ($(BR2_PACKAGE_FIRMWARE_ORANGEPI),y)
+ALLLINUXFIRMWARES_DEPENDENCIES += firmware-orangepi
+endif
+
 # exclude some dirs not required on batocera
 ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 								$(@D)/cxgb4 \
@@ -69,9 +77,14 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	# exclude some dirs not required on batocera
 	rm -rf $(ALLLINUXFIRMWARES_REMOVE_DIRS)
 
+	if [ "$BR2_PACKAGE_BATOCERA_TARGET_RK3588" = "y" ] || [ "$BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO" = "y" ]; then \
+		find $(@D)/intel -type f ! -name 'ibt-*' -delete; \
+	fi
+
 	# -n is mandatory while some other packages provides firmwares too
-	# this is not ideal, but i don't know how to tell to buildroot to install this package first (and not worry about all packages installing firmwares)
-	cp --remove-destination -prn $(@D)/* $(TARGET_DIR)/lib/firmware/
+	# this is not ideal, but i don't know how to tell to buildroot to install this package first
+	# (and not worry about all packages installing firmwares)
+	rsync -au --checksum $(@D)/ $(TARGET_DIR)/lib/firmware/
 
 	# Some firmware are distributed as a symlink, for drivers to load them using a
 	# defined name other than the real one. Since 9cfefbd7fbda ("Remove duplicate

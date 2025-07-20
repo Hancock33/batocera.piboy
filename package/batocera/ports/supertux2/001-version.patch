@@ -1,29 +1,8 @@
-diff --git a/mk/cmake/SuperTux/BuildVersion.cmake b/mk/cmake/SuperTux/BuildVersion.cmake
-index b2c724b60..6887e65a7 100644
---- a/mk/cmake/SuperTux/BuildVersion.cmake
-+++ b/mk/cmake/SuperTux/BuildVersion.cmake
-@@ -27,9 +27,13 @@ endif()
- list(LENGTH VERSION_LIST VERSION_LIST_SIZE)
- 
- if(${VERSION_LIST_SIZE} GREATER 0)
--  list(GET VERSION_LIST 1 MAJOR_VERSION_GIT)
--  list(GET VERSION_LIST 2 MINOR_VERSION_GIT)
--  list(GET VERSION_LIST 3 PATCH_VERSION_GIT)
-+#  list(GET VERSION_LIST 1 MAJOR_VERSION_GIT)
-+#  list(GET VERSION_LIST 2 MINOR_VERSION_GIT)
-+#  list(GET VERSION_LIST 3 PATCH_VERSION_GIT)
-+
-+set(MAJOR_VERSION_GIT "0")
-+set(MINOR_VERSION_GIT "6")
-+set(PATCH_VERSION_GIT "3-${GIT_VERSION}")
- 
-   if("${VERSION_STRING_GIT}" STREQUAL "")
-     set(VERSION_STRING_GIT "${MAJOR_VERSION_GIT}.${MINOR_VERSION_GIT}.${PATCH_VERSION_GIT}")
 diff --git a/src/supertux/main.cpp b/src/supertux/main.cpp
-index 4658ecf6b..632ade6e6 100644
+index a1ce2e2a2..47cf36a20 100644
 --- a/src/supertux/main.cpp
 +++ b/src/supertux/main.cpp
-@@ -646,8 +646,8 @@ Main::launch_game(const CommandLineArguments& args)
+@@ -645,8 +645,8 @@ Main::launch_game(const CommandLineArguments& args)
      {
        m_screen_manager->push_screen(std::make_unique<TitleScreen>(*m_savegame, g_config->is_christmas()));
  

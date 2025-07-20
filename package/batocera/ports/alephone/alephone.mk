@@ -3,8 +3,8 @@
 # alephone
 #
 ################################################################################
-# Version: Commits on Jul 01, 2025
-ALEPHONE_VERSION = 1117cac10b7683f7f73e98dd5a5366660c6740f6
+# Version: Commits on Jul 20, 2025
+ALEPHONE_VERSION = f15aec5d0e5fc555de1850804d502926d36d3f41
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
 ALEPHONE_DEPENDENCIES = boost sdl2 sdl2_image sdl2_ttf sdl2_net
 ALEPHONE_LICENSE = GPLv3
@@ -13,8 +13,7 @@ ALEPHONE_CONF_OPTS = \
 					--with-sdl-prefix="$(STAGING_DIR)/usr" \
 					--with-boost="$(STAGING_DIR)/usr" \
 					--with-boost-libdir="$(STAGING_DIR)/usr/lib" \
-					--prefix=/usr \
-					--without-ffmpeg
+					--prefix=/usr
 
 define ALEPHONE_AUTOCONFIG
 	cd $(@D) && PATH=/usr/bin autoreconf -f -i

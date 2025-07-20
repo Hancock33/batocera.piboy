@@ -51,7 +51,7 @@ index edafa228bf83..9620b50ed0a9 100644
  
  static const struct h5_device_data h5_data_rtl8822cs = {
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index a2dc39c005f4..93b0dbb09fa1 100644
+index 976ec88a0f62..d024a3af28b6 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
 @@ -228,7 +228,6 @@ struct qca_serdev {
@@ -109,7 +109,7 @@ index a2dc39c005f4..93b0dbb09fa1 100644
  	if (data)
  		qcadev->btsoc_type = data->soc_type;
  	else
-@@ -2427,7 +2419,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2434,7 +2426,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  
  		qcadev->sw_ctrl = devm_gpiod_get_optional(&serdev->dev, "swctrl",
  					       GPIOD_IN);
