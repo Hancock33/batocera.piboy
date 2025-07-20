@@ -3,9 +3,10 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Jul 10, 2025
-XEMU_VERSION = v0.8.94
-XEMU_SITE = https://github.com/xemu-project/xemu.git
+# Version: Commits on Jul 15, 2025
+XEMU_VERSION = bc308d7db3a87bec489183c85dd4dcb336367e5c
+XEMU_BRANCH = Custom
+XEMU_SITE = https://github.com/backgamon/xemu.git
 XEMU_SITE_METHOD = git
 XEMU_GIT_SUBMODULES = YES
 XEMU_LICENSE = GPLv2
