@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250721|Jul 21, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250721|Jul 21, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|51992dd6f651d6126427bfde398f7c3c86affc75|Jul 20, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|12f601ce02831dcc6e1c2c0aded64ea799d6a98d|Jul 20, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|cf20c84edd3b92f57f61024408c1b1efbeecb81f|Jul 20, 2025
@@ -20,8 +22,6 @@ Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.10|Jul 20, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|8d792b49da16cffafde9a7b6784d9413759b92db|Jul 20, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|b21304e9f99d181c77a3de3c3fb12e7aba0efcd1|Jul 20, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0ddc5266c6f2b27dbf029684ea7587f27726aeea|Jul 20, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250720|Jul 20, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250720|Jul 20, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2ac914e451da2c68eab3f5cccb5b8bef863283de|Jul 20, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|53ffe3ddda489a16fdb92a4d083ac532da72ef11|Jul 20, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|834bb63cd966a0b94884175bc0e6757fb17b86e1|Jul 20, 2025
