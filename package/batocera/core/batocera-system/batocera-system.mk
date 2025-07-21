@@ -5,7 +5,9 @@
 ################################################################################
 
 BATOCERA_SYSTEM_SOURCE=
-BATOCERA_SYSTEM_VERSION = $(shell date "+%y.%m")
+BATOCERA_SYSTEM_ID_VERSION = $(shell date "+%y.%m")
+BATOCERA_SYSTEM_RELEASE_TYPE = -dev
+BATOCERA_SYSTEM_VERSION = $(BATOCERA_SYSTEM_ID_VERSION)$(BATOCERA_SYSTEM_RELEASE_TYPE)
 BATOCERA_SYSTEM_DATE_TIME = $(shell date "+%d/%m/%Y %H:%M")
 BATOCERA_SYSTEM_DATE = $(shell date "+%d/%m/%y")
 BATOCERA_SYSTEM_DEPENDENCIES = tzdata
@@ -86,17 +88,17 @@ else
 BATOCERA_SYSTEM_PYBOY_INSTALL=n
 endif
 
-ifneq (,$(findstring dev,$(BATOCERA_SYSTEM_VERSION)))
-    BATOCERA_SYSTEM_COMMIT = "-$(shell cd $(BR2_EXTERNAL_BATOCERA_PATH) && git rev-parse --short HEAD)"
+ifneq (,$(findstring dev,$(BATOCERA_SYSTEM_RELEASE_TYPE)))
+    BATOCERA_SYSTEM_BUILD_ID = "-$(shell cd $(BR2_EXTERNAL_BATOCERA_PATH) && git rev-parse --short HEAD)"
 else
-    BATOCERA_SYSTEM_COMMIT =
+    BATOCERA_SYSTEM_BUILD_ID =
 endif
 
 define BATOCERA_SYSTEM_INSTALL_TARGET_CMDS
 	# version/arch
 	mkdir -p $(TARGET_DIR)/usr/share/batocera
 	echo -n "$(BATOCERA_SYSTEM_ARCH)" > $(TARGET_DIR)/usr/share/batocera/batocera.arch
-	echo $(BATOCERA_SYSTEM_VERSION)$(BATOCERA_SYSTEM_COMMIT) $(BATOCERA_SYSTEM_DATE_TIME) > $(TARGET_DIR)/usr/share/batocera/batocera.version
+	echo $(BATOCERA_SYSTEM_VERSION)$(BATOCERA_SYSTEM_BUILD_ID) $(BATOCERA_SYSTEM_DATE_TIME) > $(TARGET_DIR)/usr/share/batocera/batocera.version
 
 	# datainit
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system
