@@ -6,7 +6,6 @@ config BR2_PACKAGE_ALEPHONE
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_SDL2_TTF
-	select BR2_PACKAGE_SDL2_NET
 
 	help
 	  Aleph One is the open source continuation of
