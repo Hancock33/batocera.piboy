@@ -30,7 +30,7 @@ endif
 ifneq ($(BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4),y)
     ifeq ($(BR2_PACKAGE_ROCKCHIP_RGA)$(BR2_PACKAGE_ROCKCHIP_MPP),yy)
     MOONLIGHT_EMBEDDED_DEPENDENCIES += rockchip-mpp rockchip-rga ffmpeg-rockchip
-    endif   
+    endif
 endif
 
 define MOONLIGHT_EMBEDDED_INSTALL_SCRIPTS
