@@ -506,7 +506,7 @@ macintosh:
   core:     minivmac
 mame:
   emulator: libretro
-  core:     mame078plus
+  core:     mame
 mastersystem:
   emulator: libretro
   core:     genesisplusgx
