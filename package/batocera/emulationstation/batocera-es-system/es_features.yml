@@ -13655,8 +13655,8 @@ gzdoom:
       prompt: GRAPHICS API
       description: Choose which graphics API library to use.
       choices:
-        "OpenGL (Default)": 0
-        "Vulkan":           1
+        "OpenGL": 0
+        "Vulkan (Default)": 1
     gz_vsync:
       prompt: VSYNC
       description: Fix screen tearing. With Some games you need to turn VSync on in the games options.
