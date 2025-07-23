@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|ac3e232b001129c740b7b65196ae0e1b13b82513|Jul 23, 2025
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|0a67c9928710340721b7c92472bacb529710ef4a|Jul 23, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu)|08609591aecc1973969281e77d0cd4746dd7fc3a|Jul 23, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-07-23|Jul 23, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|800b332f605806f59404c2d3f53f93c3c348f177|Jul 23, 2025
@@ -185,7 +186,6 @@ Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|f3aa0a011e9d209630
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|07ae853a20c7484c7bde1893ed68c06a852dcf17|Jun 19, 2025
 Emulators|[libpinmame](http://github.com/vpinball/pinmame)|v3.7.0-46-2b48173|Jun 19, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.16.0|Jun 18, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|405971457328dd364f345e2cb97e003099f83ee2|Jun 17, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|f8c24f87d7fb0f41c2b7ef2a1aa97d16a52206be|Jun 17, 2025
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/55/5c/d17ff26270289c11ea787a73a922c1a9d85d8dea67e8d2fad1e36b181bc1)|4.1.13|Jun 17, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|4371de8e34df9425e17e6ce70883b0794ee66f26|Jun 17, 2025
