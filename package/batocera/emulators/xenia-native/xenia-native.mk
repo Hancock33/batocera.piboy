@@ -21,6 +21,8 @@ define XENIA_NATIVE_CROSS_BUILD
 	PKGCONFIG_CONFIG=$(STAGING_DIR)/usr/lib/pkgconfig \
 	SYSROOT="$(STAGING_DIR)" \
 	SDL2CONFIG="$(STAGING_DIR)/usr/bin/sdl2-config" \
+	CC="$(HOST_DIR)/bin/clang" \
+	CXX="$(HOST_DIR)/bin/clang++" \
 	./xb premake --devenv=cmake
 endef
 
