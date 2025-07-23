@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 23, 2025
-DOLPHIN_EMU_VERSION = 69f331e98944467fc0ab638678de43b23f9158c3
+DOLPHIN_EMU_VERSION = 10cedc90af0068d2a78a454914c4d7ca4c1cdbdf
 DOLPHIN_EMU_VERSION_MINOR = 328
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
