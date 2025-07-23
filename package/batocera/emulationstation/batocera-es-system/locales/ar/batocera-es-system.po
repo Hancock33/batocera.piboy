@@ -12994,7 +12994,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr ""
 
-#. TRANSLATION: azahar, gzdoom, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "أوبن جي إل (افتراضي)"
@@ -18601,7 +18601,7 @@ msgctxt "game_options"
 msgid "Vulkan"
 msgstr "فولكان"
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu, flycast, gzdoom
 msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "‫Vulkan (الافتراضي)"

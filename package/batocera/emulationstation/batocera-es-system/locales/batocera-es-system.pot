@@ -9324,7 +9324,7 @@ msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr ""
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu, flycast, gzdoom
 msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr ""
@@ -12973,7 +12973,7 @@ msgctxt "game_options"
 msgid "RENDERER"
 msgstr ""
 
-#. TRANSLATION: azahar, gzdoom, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr ""
