@@ -814,7 +814,7 @@ index dd844ac8d910..4feb3b9f8f73 100644
  M:	Russell King <linux@armlinux.org.uk>
  L:	linux-clk@vger.kernel.org
 diff --git a/Makefile b/Makefile
-index 29a19c24428d..b56c068bfc53 100644
+index fb6a444874e7..99c5d1547120 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -298,7 +298,8 @@ no-dot-config-targets := $(clean-targets) \
@@ -2813,7 +2813,7 @@ index 931da4749e80..9764029754dc 100644
  	sysfs_add_file_to_group(&pdev->dev.kobj,
  				&dev_attr_remapped_nvme.attr,
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index ef9689f87769..f73e9b1b020f 100644
+index 6f2fd043fd3f..0da7dc0cf8b0 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
 @@ -705,6 +705,8 @@ static const struct usb_device_id quirks_table[] = {
@@ -3203,7 +3203,7 @@ index ebabfe3a512f..4d3ebcaacca1 100644
   *
   * AMD driver supports pre-defined mathematical functions for transferring
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
-index e8bdd7f0c460..5d5210f99dcf 100644
+index db157b38f862..5d5210f99dcf 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
 @@ -481,7 +481,7 @@ static int amdgpu_dm_crtc_late_register(struct drm_crtc *crtc)
@@ -3224,22 +3224,7 @@ index e8bdd7f0c460..5d5210f99dcf 100644
  	.atomic_set_property = amdgpu_dm_atomic_crtc_set_property,
  	.atomic_get_property = amdgpu_dm_atomic_crtc_get_property,
  #endif
-@@ -737,12 +737,21 @@ int amdgpu_dm_crtc_init(struct amdgpu_display_manager *dm,
- 	 * support programmable degamma anywhere.
- 	 */
- 	is_dcn = dm->adev->dm.dc->caps.color.dpp.dcn_arch;
--	drm_crtc_enable_color_mgmt(&acrtc->base, is_dcn ? MAX_COLOR_LUT_ENTRIES : 0,
-+	/* Dont't enable DRM CRTC degamma property for DCN401 since the
-+	 * pre-blending degamma LUT doesn't apply to cursor, and therefore
-+	 * can't work similar to a post-blending degamma LUT as in other hw
-+	 * versions.
-+	 * TODO: revisit it once KMS plane color API is merged.
-+	 */
-+	drm_crtc_enable_color_mgmt(&acrtc->base,
-+				   (is_dcn &&
-+				    dm->adev->dm.dc->ctx->dce_version != DCN_VERSION_4_01) ?
-+				     MAX_COLOR_LUT_ENTRIES : 0,
- 				   true, MAX_COLOR_LUT_ENTRIES);
+@@ -751,7 +751,7 @@ int amdgpu_dm_crtc_init(struct amdgpu_display_manager *dm,
  
  	drm_mode_crtc_set_gamma_size(&acrtc->base, MAX_COLOR_LEGACY_LUT_ENTRIES);
  
@@ -9232,7 +9217,7 @@ index 599c836507ff..52882d6589e1 100644
 +MODULE_IMPORT_NS("ASUS_WMI");
  MODULE_LICENSE("GPL");
 diff --git a/drivers/hid/hid-core.c b/drivers/hid/hid-core.c
-index 4741ff626771..b991ed962366 100644
+index cd4215007d1a..4dd55546f446 100644
 --- a/drivers/hid/hid-core.c
 +++ b/drivers/hid/hid-core.c
 @@ -464,7 +464,10 @@ static int hid_parser_global(struct hid_parser *parser, struct hid_item *item)
@@ -9247,7 +9232,7 @@ index 4741ff626771..b991ed962366 100644
  			hid_err(parser->device, "invalid report_size %d\n",
  					parser->global.report_size);
  			return -1;
-@@ -2294,6 +2297,12 @@ int hid_connect(struct hid_device *hdev, unsigned int connect_mask)
+@@ -2303,6 +2306,12 @@ int hid_connect(struct hid_device *hdev, unsigned int connect_mask)
  	case BUS_I2C:
  		bus = "I2C";
  		break;
@@ -30897,7 +30882,7 @@ index 138d9f4658d5..ff9070239624 100644
  	case group_misfit_task:
  		/*
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 47972f34ea70..0892942cf913 100644
+index d6f82833f652..ad6cbf2d9683 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2790,7 +2790,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
@@ -34799,7 +34784,7 @@ index e4c616bbd727..e4a7a25d667d 100644
  	event = icsk->icsk_pending;
  
 diff --git a/scripts/Makefile.build b/scripts/Makefile.build
-index 13dcd86e74ca..c5a026b700a5 100644
+index eb0d27812aec..e175942e1de8 100644
 --- a/scripts/Makefile.build
 +++ b/scripts/Makefile.build
 @@ -20,6 +20,10 @@ always-m :=
