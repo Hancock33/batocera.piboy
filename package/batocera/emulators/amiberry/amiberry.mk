@@ -7,8 +7,8 @@
 AMIBERRY_VERSION = 12f601ce02831dcc6e1c2c0aded64ea799d6a98d
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
-AMIBERRY_DEPENDENCIES += flac libmpeg2 libpng libserialport libxml2 mpg123 portmidi
-AMIBERRY_DEPENDENCIES += sdl2 sdl2_image sdl2_ttf zlib
+AMIBERRY_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123
+AMIBERRY_DEPENDENCIES += portmidi sdl2 sdl2_image sdl2_ttf zlib
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
 
 ifeq ($(BR2_PACKAGE_LIBGLEW),y)
