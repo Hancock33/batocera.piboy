@@ -37,10 +37,35 @@ f_usage() {
 }
 
 f_minTomaxResolution() {
-    xrandr --output "${PSCREEN}" --auto # reinit the screen (in case it was off)
 
-    CURRENT_ROTATION=$(xrandr --currentRotation "${PSCREEN}" | cut -c1)
     BOOTRESOLUTION="$(batocera-settings-get -f "$BOOTCONF" es.resolution)"
+    if [ -z "$1" ]; then
+        # reinit the screen (in case it was off)
+        if [ -n "${BOOTRESOLUTION}" ] && [ "${BOOTRESOLUTION}" != "auto" ]; then
+            BOOT_RES=$(echo "${BOOTRESOLUTION}" | cut -d'.' -f1)
+            BOOT_RATE=$(echo "${BOOTRESOLUTION}" | cut -s -d'.' -f2-)
+            if [ -n "$BOOT_RATE" ]; then
+                echo "es.resolution setting found. Initializing screen to: ${BOOT_RES} @ ${BOOT_RATE}Hz" >> "$log"
+                xrandr --output "${PSCREEN}" --mode "${BOOT_RES}" --rate "${BOOT_RATE}"
+            else
+                echo "es.resolution setting found. Initializing screen to: ${BOOT_RES}" >> "$log"
+                xrandr --output "${PSCREEN}" --mode "${BOOT_RES}"
+            fi
+        else
+            # No global setting or it's 'auto'. Re-initialize with --auto.
+            echo "No specific resolution requested, re-initializing screen with --auto" >> "$log"
+            xrandr --output "${PSCREEN}" --auto
+        fi
+    fi
+
+    CURRENT_RESOLUTION=$(xrandr --currentResolution "${PSCREEN}")
+    CURRENTWIDTH=$(echo "${CURRENT_RESOLUTION}" | cut -d x -f 1)
+    CURRENTHEIGHT=$(echo "${CURRENT_RESOLUTION}" | cut -d 'x' -f 2)
+    CURRENTRATE=$(xrandr --listModes "${PSCREEN}" | grep -E '\*$' | sed -E 's/.* ([0-9]+\.[0-9]+)\*?.*/\1/')
+    CURRENT_ROTATION=$(xrandr --currentRotation "${PSCREEN}" | cut -c1)
+    echo "Current resolution: $CURRENTWIDTH x $CURRENTHEIGHT @ $CURRENTRATE Hz" >> "$log"
+    echo "Current rotation: ${CURRENT_ROTATION}" >> "$log"
+
     MWIDTH=$(echo "$1"x | tr -d [[:blank:]] | cut -dx -f1) # the final added x is for compatibility with v29
     MHEIGHT=$(echo "$1"x | tr -d [[:blank:]] | cut -dx -f2)
 
@@ -48,7 +73,8 @@ f_minTomaxResolution() {
     IDEAL_MODE_INFO=$(xrandr --listModes "${PSCREEN}" | \
         grep -oE '[0-9]+x[0-9]+[[:space:]]+[0-9]+\.[0-9]+' | \
         # Keep only modes with a refresh rate of 59Hz or higher
-        awk '$2 >= 59 {print $0}' | \
+        # and not the excluded resolution on some 4k TV's - 4096x2160
+        awk '$1 != "4096x2160" && $2 >= 59 {print $0}' | \
         awk '{ split($1, res, "x"); print res[1], res[2], $2 }' | \
         # sort the resolutions and rates
         sort -k1,1nr -k2,2nr -k3,3nr | \
@@ -66,7 +92,7 @@ f_minTomaxResolution() {
 
     # Priority 1: An argument was passed to the script
     if [ -n "$MWIDTH" ] && [ -n "$MHEIGHT" ] && [ "$MWIDTH" -ne 0 ] && [ "$MHEIGHT" -ne 0 ]; then
-        echo "Requested $MWIDTH x $MHEIGHT" >> "$log"
+        echo "Requested: $MWIDTH x $MHEIGHT" >> "$log"
         MAXWIDTH="$MWIDTH"
         MAXHEIGHT="$MHEIGHT"
     # Priority 2: A resolution is set in the boot configuration
@@ -108,13 +134,6 @@ f_minTomaxResolution() {
         fi
     fi
 
-    CURRENT_RESOLUTION=$(xrandr --currentResolution "${PSCREEN}")
-    CURRENTWIDTH=$(echo "${CURRENT_RESOLUTION}" | cut -d x -f 1)
-    CURRENTHEIGHT=$(echo "${CURRENT_RESOLUTION}" | cut -d 'x' -f 2)
-    # get the refresh rate - very important
-    CURRENTRATE=$(xrandr --listModes "${PSCREEN}" | grep -E '\*$' | sed -E 's/.*\.([0-9]+\.[0-9]+) .*/\1/')
-    echo "Current resolution: $CURRENTWIDTH x $CURRENTHEIGHT @ $CURRENTRATE Hz" >> "$log"
-
     # did we set a resolution?
     if [ -n "$MAXWIDTH" ] && [ -n "$MAXHEIGHT" ] && [ "$MAXWIDTH" -ne 0 ] && [ "$MAXHEIGHT" -ne 0 ]; then
         if [ -n "$MAXRATE" ]; then
@@ -127,10 +146,19 @@ f_minTomaxResolution() {
         exit 0
     fi
 
+    # If rotated left/right, the target width/height are swapped.
+    TARGET_WIDTH=$MAXWIDTH
+    TARGET_HEIGHT=$MAXHEIGHT
+    if [ "${CURRENT_ROTATION}" = "1" ] || [ "${CURRENT_ROTATION}" = "3" ]; then
+        TARGET_WIDTH=$MAXHEIGHT
+        TARGET_HEIGHT=$MAXWIDTH
+    fi
+
     # check if there is any change required
-    if [ "$CURRENTWIDTH" -eq "$MAXWIDTH" ] && [ "$CURRENTHEIGHT" -eq "$MAXHEIGHT" ]; then
-        if [ -z "$MAXRATE" ] || [ "$CURRENTRATE" = "$MAXRATE" ]; then
+    if [ "$CURRENTWIDTH" -eq "$TARGET_WIDTH" ] && [ "$CURRENTHEIGHT" -eq "$TARGET_HEIGHT" ]; then
+        if [ -z "$MAXRATE" ] || [ "$(printf "%.2f" "${CURRENTRATE}")" = "$(printf "%.2f" "${MAXRATE}")" ]; then
             echo "We have a match, nothing to do..." >> $log
+            # Still re-apply rotation just in case it was lost
             if [ "${CURRENT_ROTATION}" != "0" ]; then
                 batocera-resolution --screen "${PSCREEN}" setRotation "${CURRENT_ROTATION}"
             fi
