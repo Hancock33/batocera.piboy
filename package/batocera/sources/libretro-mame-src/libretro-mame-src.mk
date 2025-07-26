@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 26, 2025
-LIBRETRO_MAME_SRC_VERSION = cb715d2ee49c8e163e19cdb48bb9ec71bd35a338
+LIBRETRO_MAME_SRC_VERSION = 9d6465555f2f885dbfcd100e0c812bc390832d0e
 LIBRETRO_MAME_SRC_SITE = $(call github,hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
 LIBRETRO_MAME_SRC_LICENSE = MAME
@@ -33,8 +33,11 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 endef
 
 define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
+	rm -rf /tmp/lr-mame
 	mkdir -p /tmp/lr-mame/usr/lib/libretro
+	mkdir -p /tmp/lr-mame/usr/bin/mame
 	$(INSTALL) -D $(@D)/mame_libretro.so /tmp/lr-mame/usr/lib/libretro/mame_libretro.so
+	cp -R $(@D)/hash /tmp/lr-mame/usr/bin/mame/
 
 	cd /tmp/lr-mame && tar -cf /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar .
 	xz -T0 -7 -v /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar
