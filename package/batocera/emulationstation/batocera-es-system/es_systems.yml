@@ -898,10 +898,6 @@ namco2x6:
   extensions:           [zip]
   platform:             namco, sega, arcade
   emulators:
-    libretro:
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
-    mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
     play:
       play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
   comment_en: |
@@ -5446,9 +5442,9 @@ hikaru:
   platform:             hikaru, arcade
   emulators:
     libretro:
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TOBEIMPLEMENTED] }
     mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_TOBEIMPLEMENTED] }
 
 lindbergh:
   name:                 Sega Lindbergh
