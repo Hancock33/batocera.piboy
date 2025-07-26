@@ -187,7 +187,7 @@ Emulators|[libretro-nxengine](http://github.com/libretro/nxengine-libretro)|9adc
 Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|3ba4231c1dc8dcdf487428712856b790d2e4b8f3|Nov 3, 2021
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|67a29e60a4d194b675c9272b21b61eaa022f3ba3|Oct 17, 2024
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|a81b74cf210878a4292d39aac15d98fb9a371d79|Jul 21, 2025
-Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|8b0b1939cfd9a74fa4edd7235b9e1444919b8ae2|Jul 24, 2025
+Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|0446bcdaa1e11e5b46f73cce756a78109cffc295|Jul 26, 2025
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f8605345e13c018a30c8f4ed03c05d8fc8f70be8|Mar 02, 2025
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|42be798db5585f62b4bd34ce49dd1e8063c9d7c1|Apr 23, 2025
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|d2496ef0a5385edeee1c1853d88bb520e163d3f9|Jul 03, 2025
@@ -295,10 +295,10 @@ Emulators|[vpinball](http://github.com/vpinball/vpinball)|ea1a126a56f135dca7453c
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|e817cd59203e17f26a49cd861c5c0495abecf61f|Jul 21, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|9132035|Mar 15, 2025
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|c4e86cfd2b21958891e8fc7818517e589a8f6d53|Jun 29, 2025
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|31173107bcd6b36879fe7a2335abc2166d76fc0a|Jul 20, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2817-master|May 25, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
-Emulators|[ymir](https://github.com/StrikerX3/Ymir)|75c0c9b3e8754777686add0e62d37d27965a49e6|Jul 26, 2025
+Emulators|[ymir](https://github.com/StrikerX3/Ymir)|294d4437e32349de1e3a61abe5e11125cc170730|Jul 26, 2025
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20250708|Jul 08, 2025
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
@@ -410,10 +410,10 @@ Network|[aic8800](http://github.com/batocera-linux/aic8800)|ccba7fffed8554fe861b
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|e7c42e1522249593302a5b8920b9e7b42dc3f25e|Jun 19, 2024
 Network|[qrtr](http://github.com/linux-msm/qrtr)|5923eea97377f4a3ed9121b358fd919e3659db7b|Mar 01, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|586372e575f5cc1a7cbb170219ab6df98f394cae|Jun 30, 2025
-Network|[rtl8852au](http://github.com/natimerry/rtl8852au)|a9bb48fbcbd3c6836072bda5f2147f64cd8256c2|Jul 06, 2025
+Network|[rtl8852au](http://github.com/natimerry/rtl8852au)|db4fa8263e0d504beee4fb4ae4bc9b86469d402e|Jul 06, 2025
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|9fc5fdc53b5bc3e8ffc0b8f285443e8d1917c5cb|Jul 09, 2025
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|2025.1.0|Jan 17, 2025
-Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|3556c2a386517cb8168b6ce49b0f8d9e3f33f03b|Jul 25, 2025
+Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|ed6eca40b3b6a6972ba262a1b7798c814a5a544c|Jul 26, 2025
 Ports|[avp](http://github.com/atsb/NakedAVP)|eaff12241fd9fff8e5e5e6d50b6d7bde4482241b|May 24, 2025
 Ports|[awgl](http://github.com/M-HT/rawgl)|df249583a87d5c2f73cb362f7163799e01cd0c4c|Jun 13, 2024
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
@@ -427,7 +427,7 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|461b0d5091dc06da1f4b
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|b741745b5c44ec677264175aa3cc9b5d33191a11|Jul 16, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|e9782c7328bcee0df33e401a9ff1a0ec563de88d|May 24, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|b2ce950af466fcf78ce765759e60071d78b96698|Jul 19, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|3c19c4a172494bb8884094ceec13a66d83056df0|Jul 26, 2025
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246|Feb 05, 2025
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
@@ -495,8 +495,8 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63f
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|94d303c076b068160a31ee30032e98d2b86dbc9d|Jul 26, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|b5f9899b64511170683cc9b517323f714baab3cc|Feb 12, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|5a0465b85b03d69c94351ef21f9d2591bdcbde77|Apr 19, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|e886265b8580cc16352b70cb049668b240cbc79a|Jul 26, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|e886265b8580cc16352b70cb049668b240cbc79a|Jul 26, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|8a9d3e807277654b8734b5008c8d8d9b68c18658|Jul 26, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|8a9d3e807277654b8734b5008c8d8d9b68c18658|Jul 26, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.8|Apr 25, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|cc9abf506b408ce91c3d14660920e6928668caf2|Jun 22, 2025
@@ -505,7 +505,7 @@ Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3e921c829f0e2ec519c296e1421ed6e060bf1f9e|Jul 25, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.2|Apr 13, 2025
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|9d6465555f2f885dbfcd100e0c812bc390832d0e|Jul 26, 2025
-Sources|[mame-src](http://github.com/mamedev/mame)|464a760553200f364a591f2501ca5cf911ab80e0|Jul 26, 2025
+Sources|[mame-src](http://github.com/mamedev/mame)|mame0278|Jun 30, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.0|May 20, 2025
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
