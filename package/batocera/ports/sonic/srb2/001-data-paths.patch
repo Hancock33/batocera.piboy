@@ -1,8 +1,8 @@
 diff --git a/src/d_main.c b/src/d_main.c
-index fa9e21337..12f0337d2 100644
+index 5d8211393..4f4c9f594 100644
 --- a/src/d_main.c
 +++ b/src/d_main.c
-@@ -1660,7 +1660,7 @@ const char *D_Home(void)
+@@ -1823,7 +1823,7 @@ const char *D_Home(void)
  			usehome = false; // Let's NOT use home
  		else
  #endif
