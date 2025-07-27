@@ -20,6 +20,7 @@ XEMU_CONF_OPTS += --target-list=i386-softmmu
 XEMU_CONF_OPTS += --cross-prefix="$(STAGING_DIR)"
 XEMU_CONF_OPTS += --extra-cflags="-DXBOX=1"
 XEMU_CONF_OPTS += --disable-werror
+XEMU_CONF_OPTS += --enable-lto
 
 # Vulkan
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
