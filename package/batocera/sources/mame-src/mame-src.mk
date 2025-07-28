@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 30, 2025
-MAME_SRC_VERSION = mame0278
+MAME_SRC_VERSION = fe916b8bb5ed41c704bb2fba09b19d8516bbb137
 MAME_SRC_SOURCE = mame-src-$(MAME_SRC_VERSION).tar.gz
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
 MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl2 sdl2_ttf sqlite zlib
@@ -81,6 +81,7 @@ define MAME_SRC_BUILD_CMDS
 	OVERRIDE_CXX="$(HOST_DIR)/bin/ccache $(TARGET_CXX)" \
 	OVERRIDE_LD="$(TARGET_LD)" \
 	OVERRIDE_STRIP="$(TARGET_STRIP)" \
+	PRECOMPILE=1 \
 	REGENIE=1 \
 	SDL_INSTALL_ROOT="$(STAGING_DIR)/usr" \
 	STRIP_SYMBOLS=1 \

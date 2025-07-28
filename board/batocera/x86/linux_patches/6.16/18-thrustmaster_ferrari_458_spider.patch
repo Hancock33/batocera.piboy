@@ -1,0 +1,52 @@
+diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
+index 1d8c579b5433..fd8ae212ec19 100644
+--- a/drivers/input/joystick/xpad.c
++++ b/drivers/input/joystick/xpad.c
+@@ -84,6 +84,7 @@
+ #define MAP_PADDLES			BIT(4)
+ #define MAP_PROFILE_BUTTON		BIT(5)
+ #define MAP_SHARE_OFFSET		BIT(6)
++#define MAP_THRUSTMASTER_WHEEL		(1 << 6)
+ 
+ #define DANCEPAD_MAP_CONFIG	(MAP_DPAD_TO_BUTTONS |			\
+ 				MAP_TRIGGERS_TO_BUTTONS | MAP_STICKS_TO_NULL)
+@@ -146,6 +147,7 @@ static const struct xpad_device {
+ 	{ 0x044f, 0x0f07, "Thrustmaster, Inc. Controller", 0, XTYPE_XBOX },
+ 	{ 0x044f, 0x0f10, "Thrustmaster Modena GT Wheel", 0, XTYPE_XBOX },
+ 	{ 0x044f, 0xb326, "Thrustmaster Gamepad GP XID", 0, XTYPE_XBOX360 },
++	{ 0x044f, 0xb671, "ThrustMaster, Inc. Ferrari 458 Spider", MAP_THRUSTMASTER_WHEEL, XTYPE_XBOXONE },
+ 	{ 0x044f, 0xd01e, "ThrustMaster, Inc. ESWAP X 2 ELDEN RING EDITION", 0, XTYPE_XBOXONE },
+ 	{ 0x045e, 0x0202, "Microsoft X-Box pad v1 (US)", 0, XTYPE_XBOX },
+ 	{ 0x045e, 0x0285, "Microsoft X-Box pad (Japan)", 0, XTYPE_XBOX },
+@@ -1133,6 +1135,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+ 		input_report_key(dev, BTN_THUMBR, data[5] & BIT(7));
+ 
+ 		if (!(xpad->mapping & MAP_STICKS_TO_NULL)) {
++			if (xpad->mapping & MAP_THRUSTMASTER_WHEEL) {
++				/* steering wheel */
++				input_report_abs(dev, ABS_X,
++						((__u16) le16_to_cpup((__le16 *)(data + 6)))-S16_MAX);
++			} else {
+ 			/* left stick */
+ 			input_report_abs(dev, ABS_X,
+ 					(__s16) le16_to_cpup((__le16 *)(data + 10)));
+@@ -1144,6 +1151,7 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+ 					(__s16) le16_to_cpup((__le16 *)(data + 14)));
+ 			input_report_abs(dev, ABS_RY,
+ 					~(__s16) le16_to_cpup((__le16 *)(data + 16)));
++			}
+ 		}
+ 
+ 		/* triggers left/right */
+@@ -1152,6 +1160,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+ 					(__u16) le16_to_cpup((__le16 *)(data + 6)));
+ 			input_report_key(dev, BTN_TR2,
+ 					(__u16) le16_to_cpup((__le16 *)(data + 8)));
++		} else if (xpad->mapping & MAP_THRUSTMASTER_WHEEL) {
++			input_report_abs(dev, ABS_Z,
++					((__u16) le16_to_cpup((__le16 *)(data + 10)))*2);
++			input_report_abs(dev, ABS_RZ,
++				((__u16) le16_to_cpup((__le16 *)(data + 8)))*2);
+ 		} else {
+ 			input_report_abs(dev, ABS_Z,
+ 					(__u16) le16_to_cpup((__le16 *)(data + 6)));
