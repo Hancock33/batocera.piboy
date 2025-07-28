@@ -1,26 +1,30 @@
 diff --git a/src/devices/machine/macseconds.cpp b/src/devices/machine/macseconds.cpp
-index 7ed18bc69f4..9ded7032d02 100644
+index 7ed18bc69f4..3fc4f429a63 100644
 --- a/src/devices/machine/macseconds.cpp
 +++ b/src/devices/machine/macseconds.cpp
-@@ -8,7 +8,7 @@
+@@ -7,10 +7,9 @@
+     This is a mix-in for anything wanting to convert MAME time to the classic Mac time format
      (seconds since 1/1/1904 at midnight).
  */
- 
--#include "dirtc.h"
-+//#include "dirtc.h"
- 
- #include "emu.h"
- #include "macseconds.h"
-diff --git a/src/devices/video/serialvfd.h b/src/devices/video/serialvfd.h
-index ca2a50e8b9b..f4a426a2554 100644
---- a/src/devices/video/serialvfd.h
-+++ b/src/devices/video/serialvfd.h
-@@ -13,6 +13,8 @@
- #define MAME_VIDEO_SERIALVFD_H
- 
- #pragma once
+-
 +#include "emu.h"
-+#include <cstdint>
+ #include "dirtc.h"
  
- class serial_vfd_device : 
- 	public device_t
+-#include "emu.h"
+ #include "macseconds.h"
+ 
+ macseconds_interface::macseconds_interface()
+diff --git a/src/devices/video/serialvfd.cpp b/src/devices/video/serialvfd.cpp
+index a6ac758bc04..5aa7508ab97 100644
+--- a/src/devices/video/serialvfd.cpp
++++ b/src/devices/video/serialvfd.cpp
+@@ -1,8 +1,8 @@
+ // license:BSD-3-Clause
+ // copyright-holders: NaokiS
+ 
+-#include "serialvfd.h"
+ #include "emu.h"
++#include "serialvfd.h"
+ 
+ #define LOG_VFD     (1U << 1)
+ //#define VERBOSE     ( LOG_VFD )
