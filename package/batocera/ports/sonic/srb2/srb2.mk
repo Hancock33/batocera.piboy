@@ -3,8 +3,8 @@
 # srb2
 #
 ################################################################################
-# Version: Commits on Jul 25, 2025
-SRB2_VERSION = 455f173479bd1ea8afeee93f156605409e6cde6e
+# Version: Commits on Jul 29, 2025
+SRB2_VERSION = 639b58c6d718452ef343a0bc927d043bed9e40d6
 SRB2_SITE = $(call github,STJr,SRB2,$(SRB2_VERSION))
 SRB2_DEPENDENCIES = libgme libopenmpt sdl2 sdl2_mixer
 SRB2_LICENSE = GPL-2.0
