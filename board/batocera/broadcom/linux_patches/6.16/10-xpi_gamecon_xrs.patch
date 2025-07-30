@@ -275,7 +275,7 @@ index 000000000000..ecc9a4404e62
 +
 +static void gc_timer(struct timer_list *t)
 +{
-+	struct gc *gc = from_timer(gc, t, timer);
++	struct gc *gc = timer_container_of(gc, t, timer);
 +
 +	unsigned char data[32];
 +	struct input_dev *dev = gc->dev;

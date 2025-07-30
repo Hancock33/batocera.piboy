@@ -464,7 +464,7 @@ index 000000000000..484c981fcf19
 +
 +#ifdef HAVE_TIMER_SETUP
 +static void mk_timer(struct timer_list *t) {
-+    struct mk *mk = from_timer(mk, t, timer);
++    struct mk *mk = timer_container_of(mk, t, timer);
 +#else
 +static void mk_timer(unsigned long private) {
 +    struct mk *mk = (void *) private;
