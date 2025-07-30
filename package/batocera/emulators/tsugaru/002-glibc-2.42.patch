@@ -1,0 +1,31 @@
+diff --git a/src/externals/fssimplewindow/src/nownd/fssimplenowindow.cpp b/src/externals/fssimplewindow/src/nownd/fssimplenowindow.cpp
+index 18e21329..5c9e8038 100644
+--- a/src/externals/fssimplewindow/src/nownd/fssimplenowindow.cpp
++++ b/src/externals/fssimplewindow/src/nownd/fssimplenowindow.cpp
+@@ -57,7 +57,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 	#include <dirent.h>
+ 	#include <fcntl.h>
+ 	#include <unistd.h>
+-	#include <termio.h>
++	#include <termios.h>
+ 	#include <stdio.h>
+ 	#include <stdlib.h>
+ 	#include <time.h>
+@@ -74,7 +74,7 @@ static int mapFSKEYtoVK[FSKEY_NUM_KEYCODE];
+ #ifdef __APPLE__
+ static struct sgttyb OriginalConsoleSetting;
+ #elif !defined(_WIN32)
+-struct termio OriginalConsoleSetting;
++struct termios OriginalConsoleSetting;
+ #endif
+ 
+ 
+@@ -263,7 +263,7 @@ static void FsSetUpInkeyConsole(void)
+ 	inkey.sg_flags&=~ECHO;
+ 	ioctl(fileno(stdin),TIOCSETP,&inkey);
+ #else
+-	struct termio inkey;
++	struct termios inkey;
+ 	ioctl(0,TCGETA,&OriginalConsoleSetting);
+ 	inkey=OriginalConsoleSetting;
+ 	inkey.c_lflag&=~ECHO;
