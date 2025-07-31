@@ -3,8 +3,8 @@
 # libretro-fmsx
 #
 ################################################################################
-# Version: Commits on Oct 21, 2024
-LIBRETRO_FMSX_VERSION = 9eb5f25df5397212a3e3088ca1a64db0740bbe5f
+# Version: Commits on Jul 31, 2025
+LIBRETRO_FMSX_VERSION = fbe4dfc4c3e3f7eb27089def3d663a905b181845
 LIBRETRO_FMSX_SITE = $(call github,libretro,fmsx-libretro,$(LIBRETRO_FMSX_VERSION))
 LIBRETRO_FMSX_LICENSE = GPLv2
 LIBRETRO_FMSX_DEPENDENCIES = retroarch
