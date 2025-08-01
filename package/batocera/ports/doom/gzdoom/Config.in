@@ -11,7 +11,6 @@ config BR2_PACKAGE_GZDOOM
 	select BR2_PACKAGE_WEBP
 	select BR2_PACKAGE_WEBP_DEMUX
 	select BR2_PACKAGE_WEBP_MUX
-	select BR2_PACKAGE_ZMUSIC
 
 	help
 	  GZDoom is a 3D-accelerated Doom source port based on ZDoom.

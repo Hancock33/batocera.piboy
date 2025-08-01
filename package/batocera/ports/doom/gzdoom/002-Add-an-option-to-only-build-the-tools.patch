@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 0ac374e55..f4ceaef28 100644
+index 471d66556..316670093 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -52,6 +52,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
+@@ -53,6 +53,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
  include( FindPackageHandleStandardArgs )
  
  # Support cross compiling
@@ -11,7 +11,7 @@ index 0ac374e55..f4ceaef28 100644
  option( FORCE_CROSSCOMPILE "Turn on cross compiling." NO )
  if( FORCE_CROSSCOMPILE )
  	set( CMAKE_CROSSCOMPILING TRUE )
-@@ -223,6 +225,10 @@ target_architecture(TARGET_ARCHITECTURE)
+@@ -228,6 +230,10 @@ target_architecture(TARGET_ARCHITECTURE)
  if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
  	set( HAVE_VM_JIT ON )
  endif()
@@ -22,8 +22,8 @@ index 0ac374e55..f4ceaef28 100644
  
  option (HAVE_VULKAN "Enable Vulkan support" ON)
  option (HAVE_GLES2 "Enable GLES2 support" ON)
-@@ -336,18 +342,11 @@ option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
- option(FORCE_INTERNAL_ASMJIT "Use internal asmjit" ON)
+@@ -343,18 +349,11 @@ option(FORCE_INTERNAL_CPPDAP "Use internal cppdap" ON)
+ 
  mark_as_advanced( FORCE_INTERNAL_ASMJIT )
  
 -if (HAVE_VULKAN)
@@ -44,7 +44,7 @@ index 0ac374e55..f4ceaef28 100644
  if( HAVE_VM_JIT AND UNIX )
  	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )
  	if( NOT HAVE_BACKTRACE )
-@@ -387,6 +386,57 @@ endif()
+@@ -418,6 +417,57 @@ endif()
  
  set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/lzma/C" )
  
@@ -102,7 +102,7 @@ index 0ac374e55..f4ceaef28 100644
  if( NOT CMAKE_CROSSCOMPILING )
  	if( NOT CROSS_EXPORTS )
  		set( CROSS_EXPORTS "" )
-@@ -394,26 +444,30 @@ if( NOT CMAKE_CROSSCOMPILING )
+@@ -425,25 +475,29 @@ if( NOT CMAKE_CROSSCOMPILING )
  endif()
  
  # Install the entire docs directory in the distributed zip package
@@ -111,14 +111,14 @@ index 0ac374e55..f4ceaef28 100644
 -else()
 -	set( INSTALL_DOCS_PATH share/doc/${ZDOOM_EXE_NAME} CACHE STRING "Directory where the zdoom documentation will be placed during install." )
 +if(NOT TOOLS_ONLY)
-+	if( WIN32 )
-+		set( INSTALL_DOCS_PATH docs CACHE STRING "Directory where the documentation will be placed during install." )
-+	else()
-+		set( INSTALL_DOCS_PATH share/doc/${ZDOOM_EXE_NAME} CACHE STRING "Directory where the zdoom documentation will be placed during install." )
-+	endif()
-+	install(DIRECTORY docs/
-+			DESTINATION ${INSTALL_DOCS_PATH}
-+			COMPONENT "Documentation")
++    if( WIN32 )
++	    set( INSTALL_DOCS_PATH docs CACHE STRING "Directory where the documentation will be placed during install." )
++    else()
++	    set( INSTALL_DOCS_PATH share/doc/${ZDOOM_EXE_NAME} CACHE STRING "Directory where the zdoom documentation will be placed during install." )
++    endif()
++    install(DIRECTORY docs/
++		    DESTINATION ${INSTALL_DOCS_PATH}
++		    COMPONENT "Documentation")
  endif()
 -install(DIRECTORY docs/
 -		DESTINATION ${INSTALL_DOCS_PATH}
@@ -127,7 +127,6 @@ index 0ac374e55..f4ceaef28 100644
  option( DYN_OPENAL "Dynamically load OpenAL" ON )
  
  add_subdirectory( libraries/lzma )
- add_subdirectory( libraries/miniz )
  add_subdirectory( tools )
 -add_subdirectory( wadsrc )
 -add_subdirectory( wadsrc_bm )
@@ -144,5 +143,5 @@ index 0ac374e55..f4ceaef28 100644
 +	add_subdirectory( src )
 +endif()
  
- if( NOT CMAKE_CROSSCOMPILING )
- 	export(TARGETS ${CROSS_EXPORTS} FILE "${CMAKE_BINARY_DIR}/ImportExecutables.cmake" )
+ if( ZMUSIC_SYSTEM_INSTALL )
+ 	# Internal ZMusic library provides miniz target, miniz.h file in partuclar
