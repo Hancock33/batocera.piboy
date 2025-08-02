@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-24 22:50+0200\n"
+"PO-Revision-Date: 2025-08-01 22:04+0200\n"
 "Last-Translator: borysus\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -2177,12 +2177,12 @@ msgstr "90 stopni"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "90 degrees clockwise"
-msgstr ""
+msgstr "90 stopni w prawo"
 
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "90 degrees counter-clockwise"
-msgstr ""
+msgstr "90 stopni w lewo"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -5240,7 +5240,7 @@ msgstr "Zmiana współczynnika rozdzielczości wyjściowej."
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Change the rotation of the rendered image."
-msgstr ""
+msgstr "Zmień obrót renderowanego obrazu."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -5561,7 +5561,7 @@ msgstr ""
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Choose to render meshes as transparent polygons."
-msgstr ""
+msgstr "Wybierz opcję renderowania siatek jako przezroczystych wielokątów."
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -14481,7 +14481,7 @@ msgstr "OBRÓĆ PRZYCISKI KIERUNKU"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "ROTATION"
-msgstr ""
+msgstr "OBRÓT"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -17379,7 +17379,7 @@ msgstr "TRYB TRENINGOWY"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
-msgstr ""
+msgstr "PRZEZROCZYSTE SIATKI"
 
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
