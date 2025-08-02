@@ -9,12 +9,12 @@ DMD_SIMULATOR_SITE =  $(call github,batocera-linux,dmd-simulator,$(DMD_SIMULATOR
 
 define DMD_SIMULATOR_INSTALL_DMD_SIMULATOR
 	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D -m 0755 $(@D)/dmd-simulator.py $(TARGET_DIR)/usr/bin/dmd-simulator
+	$(INSTALL) -D -m 0755 $(@D)/dmd_simulator/cli/dmd_simulator.py $(TARGET_DIR)/usr/bin/dmd-simulator
 endef
 
 define DMD_SIMULATOR_INSTALL_DMD_SIMULATOR_PLAYER
 	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D -m 0755 $(@D)/dmd-play.py      $(TARGET_DIR)/usr/bin/dmd-play
+	$(INSTALL) -D -m 0755 $(@D)/dmd_simulator/dmd_player.py $(TARGET_DIR)/usr/bin/dmd-play
 
 	mkdir -p $(TARGET_DIR)/usr/share/dmd-simulator/scripts
 	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/scripts/*.sh $(TARGET_DIR)/usr/share/dmd-simulator/scripts/
