@@ -2199,34 +2199,32 @@ index 687a3a7ba784..8589b58af79f 100644
  	 * bic associated with the task issuing current bio for
  	 * merging. This and the next field are used as a support to
 diff --git a/block/elevator.c b/block/elevator.c
-index a960bdc869bc..20981e8bd3f2 100644
+index a960bdc869bc..842a90a9461c 100644
 --- a/block/elevator.c
 +++ b/block/elevator.c
-@@ -728,22 +728,34 @@ void elevator_set_default(struct request_queue *q)
+@@ -728,6 +728,21 @@ void elevator_set_default(struct request_queue *q)
  	if (q->tag_set->flags & BLK_MQ_F_NO_SCHED_BY_DEFAULT)
  		return;
  
 +#ifdef CONFIG_MQ_IOSCHED_DEFAULT_ADIOS
 +	ctx.name = "adios";
-+	goto found;
-+#endif // CONFIG_MQ_IOSCHED_DEFAULT_ADIOS
-+
-+	if (q->nr_hw_queues == 1 || blk_mq_is_shared_tags(q->tag_set->flags))
-+#if defined(CONFIG_CACHY) && defined(CONFIG_IOSCHED_BFQ)
++#else // !CONFIG_MQ_IOSCHED_DEFAULT_ADIOS
++	bool is_sq = q->nr_hw_queues == 1 || blk_mq_is_shared_tags(q->tag_set->flags);
++#ifdef CONFIG_CACHY
++#ifdef CONFIG_IOSCHED_BFQ
++	if (is_sq)
 +		ctx.name = "bfq";
++#endif /* CONFIG_IOSCHED_BFQ */
 +#else
-+		;
-+	else
++	if (!is_sq)
 +		return;
-+#endif /* CONFIG_CACHY && CONFIG_IOSCHED_BFQ */
++#endif /* CONFIG_CACHY */
++#endif /* CONFIG_MQ_IOSCHED_DEFAULT_ADIOS */
 +
  	/*
  	 * For single queue devices, default to using mq-deadline. If we
  	 * have multiple queues or mq-deadline is not available, default
- 	 * to "none".
- 	 */
-+found:
- 	e = elevator_find_get(ctx.name);
+@@ -737,13 +752,10 @@ void elevator_set_default(struct request_queue *q)
  	if (!e)
  		return;
  
@@ -29680,6 +29678,78 @@ index ea3cab99c5d4..5d6dba681e50 100644
  	case PM_EVENT_PRETHAW:		/* explicitly discard hw state */
  		port_power(sl811, 0);
  		break;
+diff --git a/fs/btrfs/tree-log.c b/fs/btrfs/tree-log.c
+index cea8a7e9d6d3..cd904f281489 100644
+--- a/fs/btrfs/tree-log.c
++++ b/fs/btrfs/tree-log.c
+@@ -2413,23 +2413,30 @@ static int replay_one_buffer(struct btrfs_root *log, struct extent_buffer *eb,
+ 
+ 	nritems = btrfs_header_nritems(eb);
+ 	for (i = 0; i < nritems; i++) {
+-		btrfs_item_key_to_cpu(eb, &key, i);
++		struct btrfs_inode_item *inode_item;
+ 
+-		/* inode keys are done during the first stage */
+-		if (key.type == BTRFS_INODE_ITEM_KEY &&
+-		    wc->stage == LOG_WALK_REPLAY_INODES) {
+-			struct btrfs_inode_item *inode_item;
+-			u32 mode;
++		btrfs_item_key_to_cpu(eb, &key, i);
+ 
+-			inode_item = btrfs_item_ptr(eb, i,
+-					    struct btrfs_inode_item);
++		if (key.type == BTRFS_INODE_ITEM_KEY) {
++			inode_item = btrfs_item_ptr(eb, i, struct btrfs_inode_item);
+ 			/*
+-			 * If we have a tmpfile (O_TMPFILE) that got fsync'ed
+-			 * and never got linked before the fsync, skip it, as
+-			 * replaying it is pointless since it would be deleted
+-			 * later. We skip logging tmpfiles, but it's always
+-			 * possible we are replaying a log created with a kernel
+-			 * that used to log tmpfiles.
++			 * An inode with no links is either:
++			 *
++			 * 1) A tmpfile (O_TMPFILE) that got fsync'ed and never
++			 *    got linked before the fsync, skip it, as replaying
++			 *    it is pointless since it would be deleted later.
++			 *    We skip logging tmpfiles, but it's always possible
++			 *    we are replaying a log created with a kernel that
++			 *    used to log tmpfiles;
++			 *
++			 * 2) A non-tmpfile which got its last link deleted
++			 *    while holding an open fd on it and later got
++			 *    fsynced through that fd. We always log the
++			 *    parent inodes when inode->last_unlink_trans is
++			 *    set to the current transaction, so ignore all the
++			 *    inode items for this inode. We will delete the
++			 *    inode when processing the parent directory with
++			 *    replay_dir_deletes().
+ 			 */
+ 			if (btrfs_inode_nlink(eb, inode_item) == 0) {
+ 				wc->ignore_cur_inode = true;
+@@ -2437,6 +2444,13 @@ static int replay_one_buffer(struct btrfs_root *log, struct extent_buffer *eb,
+ 			} else {
+ 				wc->ignore_cur_inode = false;
+ 			}
++		}
++
++		/* Inode keys are done during the first stage. */
++		if (key.type == BTRFS_INODE_ITEM_KEY &&
++		    wc->stage == LOG_WALK_REPLAY_INODES) {
++			u32 mode;
++
+ 			ret = replay_xattr_deletes(wc->trans, root, log,
+ 						   path, key.objectid);
+ 			if (ret)
+@@ -2875,7 +2889,7 @@ static inline void btrfs_remove_log_ctx(struct btrfs_root *root,
+ 	mutex_unlock(&root->log_mutex);
+ }
+ 
+-/* 
++/*
+  * Invoked in log mutex context, or be sure there is no other task which
+  * can access the list.
+  */
 diff --git a/include/linux/hid.h b/include/linux/hid.h
 index 568a9d8c749b..7b1ee43d984b 100644
 --- a/include/linux/hid.h
