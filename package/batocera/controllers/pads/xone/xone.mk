@@ -3,8 +3,8 @@
 # xone
 #
 ################################################################################
-# Version: Commits on Aug 01, 2025
-XONE_VERSION = 827c1a2fc1ec1237785687e6b21957a0bb721fd7
+# Version: Commits on Aug 02, 2025
+XONE_VERSION = b90b148aae5687bbad4e68a1c18f22d9a90c53e6
 XONE_SITE = $(call github,dlundqvist,xone,$(XONE_VERSION))
 XONE_DEPENDENCIES = host-cabextract libusb
 
