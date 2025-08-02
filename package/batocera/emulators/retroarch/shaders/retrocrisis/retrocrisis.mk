@@ -16,6 +16,7 @@ define RETROCRISIS_EXTRACT_CMDS
 endef
 
 define RETROCRISIS_INSTALL_TARGET_CMDS
+	rm -rf $(TARGET_DIR)/usr/share/batocera/shaders/retrocrisis
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/shaders
 	cp -ar $(@D)/shaders/shaders_slang/retro* $(TARGET_DIR)/usr/share/batocera/shaders/retrocrisis
 endef
