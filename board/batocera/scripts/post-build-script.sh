@@ -179,6 +179,9 @@ find ${TARGET_DIR} -type f -name "changelog.txt" -exec rm {} \; || exit 1
 find ${TARGET_DIR} -type f -name "README*" -exec rm {} \; || exit 1
 sudo find ${TARGET_DIR} -type f -name "LICENSE*" -exec rm {} \; || exit 1
 sudo find ${TARGET_DIR} -type f -name "license*" -exec rm {} \; || exit 1
+sudo find ${TARGET_DIR} -type f -name ".files-list.before" -exec rm {} \; || exit 1
+sudo find ${TARGET_DIR} -type f -name ".files-list-host.before" -exec rm {} \; || exit 1
+sudo find ${TARGET_DIR} -type f -name ".files-list-staging.before" -exec rm {} \; || exit 1
 
 # With PARALLEL_BUILD it is difficult to control which of two
 # conflicting files from different packages will be the one ending up
