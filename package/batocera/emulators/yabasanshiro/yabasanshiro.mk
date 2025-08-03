@@ -23,7 +23,7 @@ YABASANSHIRO_CONF_OPTS += -Dpng_STATIC_LIBRARIES=$(STAGING_DIR)/usr/lib/libpng16
 YABASANSHIRO_CONF_OPTS += -DUSE_EGL=ON -DUSE_OPENGL=ON
 YABASANSHIRO_CONF_OPTS += -DYAB_PORTS=retro_arena
 
-YABASANSHIRO_TARGET_CFLAGS = -DCMAKE_C_FLAGS=$(TARGET_CFLAGS) -D__RETORO_ARENA__ -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-int-conversion
+YABASANSHIRO_TARGET_CFLAGS = $(TARGET_CFLAGS) -D__RETORO_ARENA__ -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-int-conversion
 
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
     YABASANSHIRO_CONF_OPTS += -DYAB_WANT_DYNAREC_DEVMIYAX=ON
