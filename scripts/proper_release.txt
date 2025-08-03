@@ -1,5 +1,4 @@
-﻿abuse.mk
-ayaneo-platform.mk
+﻿ayaneo-platform.mk
 ayn-platform.mk
 batocera-shim.mk
 bauh.mk
