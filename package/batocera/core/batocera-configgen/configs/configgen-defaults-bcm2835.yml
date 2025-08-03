@@ -11,9 +11,6 @@ default:
 gba:
   emulator: libretro
   core:     gpsp
-mame:
-  emulator: libretro
-  core:     imame4all
 gamegear:
   emulator: libretro
   core:     picodrive

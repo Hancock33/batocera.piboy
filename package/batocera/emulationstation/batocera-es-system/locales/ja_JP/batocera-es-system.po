@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: batocera-es v42b(2025/07/06)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-05 12:55+0900\n"
+"PO-Revision-Date: 2025-08-02 13:33+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -743,7 +743,7 @@ msgctxt "game_options"
 msgid "17th"
 msgstr "17"
 
-#. TRANSLATION: libretro/mesen, melonds, moonlight
+#. TRANSLATION: libretro/mesen, melonds, moonlight, ymir
 msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180度回転"
@@ -1571,7 +1571,7 @@ msgstr "4:3（標準）"
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "4:3 RENDERING RESOLUTION"
-msgstr "4：3 レンダリング解像度"
+msgstr "4:3 レンダリング解像度"
 
 #. TRANSLATION: libretro/yabasanshiro
 msgctxt "game_options"
@@ -2167,6 +2167,16 @@ msgstr "9 MHz（アンダークロック）"
 msgctxt "game_options"
 msgid "90 degrees"
 msgstr "右90度回転"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees clockwise"
+msgstr "右90度回転"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees counter-clockwise"
+msgstr "左　90度回転"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -3013,9 +3023,7 @@ msgctxt "game_options"
 msgid ""
 "Allow game that support different resolutions to be rendered in specific "
 "resolution."
-msgstr ""
-"異なる解像度をサポートするゲームを特定の解像度でレンダリングできるようにしま"
-"す"
+msgstr "異なる解像度をサポートするゲームを特定の解像度で表示するようにします"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -3896,8 +3904,8 @@ msgid ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
 msgstr ""
-"画面にレンダリングするときのジャガー ディスプレイの基本フィルタリング タイプ"
-"を選択します"
+"画面に表示するときのジャガー ディスプレイの基本フィルタリング タイプを選択し"
+"ます"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5201,6 +5209,11 @@ msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "出力解像度比を変更します"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Change the rotation of the rendered image."
+msgstr "表示する画像の回転方向を設定します"
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Change the speed of the emulated PowerPC chip (fixes some issues)."
@@ -5507,8 +5520,13 @@ msgid ""
 "Choose to render high definition graphics textures. Requires OpenGL, True "
 "Colour and the enhanced.gob file."
 msgstr ""
-"高解像度のグラフィック テクスチャをレンダリングすることを選択します\n"
+"高解像度のグラフィック テクスチャで表示することを選択します\n"
 "OpenGL、トゥルーカラー、およびenhanced.gobファイルが必要です"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose to render meshes as transparent polygons."
+msgstr "メッシュを透明なポリゴンとして表示するかを選択します"
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -7969,8 +7987,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Ensure every frame the console renders is displayed to screen."
-msgstr ""
-"コンソールがレンダリングするすべてのフレームが画面に表示されるようにします"
+msgstr "コンソールが表示するすべてのフレームが画面に表示されるようにします"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -8464,9 +8481,9 @@ msgid ""
 "option, custom sky/background functionality, and various other tweaks and "
 "options."
 msgstr ""
-"ネイティブ解像度のレンダリング、アナログ コントローラーとマウスのサポート、最"
-"大 60 Hz のフレーム レートのロック解除、チルト オプションを無効にする改善され"
-"たカメラ、カスタムの空/背景機能、その他のさまざまな調整とオプションが特徴です"
+"ネイティブ解像度での表示、アナログ コントローラーとマウスのサポート、最大 60 "
+"Hz のフレーム レートのロック解除、チルト オプションを無効にする改善されたカメ"
+"ラ、カスタムの空/背景機能、その他のさまざまな調整とオプションが特徴です"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -8745,8 +8762,8 @@ msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
 "screen devices/games."
 msgstr ""
-"3Dジオメトリを常に最前画面にレンダリングするように強制します。シングルスク"
-"リーンデバイス/ゲームに便利です"
+"3Dジオメトリを常に最前画面に表示するように強制します。シングルスクリーンデバ"
+"イス/ゲームに便利です"
 
 #. TRANSLATION: citron, dolphin, dolphin_triforce, hypseus-singe
 msgctxt "game_options"
@@ -8831,7 +8848,7 @@ msgstr ""
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
-msgstr "ゲームを指定アスペクト比で強制的にレンダリングします"
+msgstr "ゲームを指定アスペクト比で強制的に表示します"
 
 #. TRANSLATION: pcsx2, shared
 msgctxt "game_options"
@@ -9296,9 +9313,8 @@ msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
 "to ensure particles render correctly."
 msgstr ""
-"GPUエミュレーションの精度。ほとんどのゲームは通常で問題なくレンダリングされま"
-"す。\n"
-"パーティクルが正しくレンダリングされるようにするには、高い値が必要です"
+"GPUエミュレーションの精度。ほとんどのゲームは通常で問題なく表示されます。\n"
+"パーティクルが正しく表示されるようにするには、高い値が必要です"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -13094,7 +13110,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL（コンピュートシェーダ）"
 
-#. TRANSLATION: azahar, gzdoom, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (標準)"
@@ -14335,6 +14351,11 @@ msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "ボタンの位置を回転"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "ROTATION"
+msgstr "画面の回転"
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "ROV"
@@ -14508,7 +14529,7 @@ msgstr "ゲームを低解像度で描画しアップスケールしてFPSを上
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
 msgid "Renders polygons and textures at the native resolution."
-msgstr "ポリゴンとテクスチャをネイティブ解像度でレンダリングします"
+msgstr "ポリゴンとテクスチャをネイティブ解像度で表示します"
 
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
@@ -15854,7 +15875,7 @@ msgstr ""
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "Sets the scaler filter mode when rendering."
-msgstr "レンダリング時のスケーラー フィルター モードを設定します"
+msgstr "表示時のスケーラー フィルター モードを設定します"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -16197,9 +16218,9 @@ msgid ""
 "Skip buffer effects faster but may not render some games. Disables "
 "resolution, MSAA, auto frameskip and duplicate frames to 60Hz."
 msgstr ""
-"バッファ効果のスキップが高速化されますが、一部のゲームではレンダリングされな"
-"い場合があります。解像度、MSAA、自動フレームスキップ、フレーム複製を60Hzで無"
-"効にします"
+"バッファ効果のスキップが高速化されますが、一部のゲームでは表示されない場合が"
+"あります。解像度、MSAA、自動フレームスキップ、フレーム複製を60Hzで無効にしま"
+"す"
 
 #. TRANSLATION: rtcw.keys, theforceengine.keys
 msgctxt "keys_files"
@@ -17208,6 +17229,11 @@ msgstr "タッチスクリーンモード"
 msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "トレーナーモード"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "TRANSPARENT MESHES"
+msgstr "透明メッシュ"
 
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
@@ -18768,7 +18794,7 @@ msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu, flycast, gzdoom
 msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan (標準)"

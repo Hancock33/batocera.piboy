@@ -1,0 +1,13 @@
+diff --git a/gamecon_gpio_rpi.c b/gamecon_gpio_rpi.c
+index 95f63b9..853e8d4 100644
+--- a/gamecon_gpio_rpi.c
++++ b/gamecon_gpio_rpi.c
+@@ -951,7 +951,7 @@ static void gc_psx_process_packet(struct gc *gc)
+ #ifdef HAVE_TIMER_SETUP
+ static void gc_timer(struct timer_list *t)
+ {
+-	struct gc *gc = from_timer(gc, t, timer);
++	struct gc *gc = timer_container_of(gc, t, timer);
+ #else
+ static void gc_timer(unsigned long private)
+ {

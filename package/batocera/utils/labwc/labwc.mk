@@ -3,8 +3,8 @@
 # labwc
 #
 ################################################################################
-# Version: Commits on Jul 11, 2025
-LABWC_VERSION = 0.9.0
+# Version: Commits on Aug 02, 2025
+LABWC_VERSION = 0.9.1
 LABWC_SITE = $(call github,labwc,labwc,$(LABWC_VERSION))
 LABWC_LICENSE = GPLv2
 LABWC_LICENSE_FILES = LICENSE

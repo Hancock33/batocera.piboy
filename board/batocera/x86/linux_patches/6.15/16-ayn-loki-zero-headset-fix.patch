@@ -1,5 +1,5 @@
 diff --git a/sound/pci/hda/patch_realtek.c b/sound/pci/hda/patch_realtek.c
-index f7bb97230201..a03ce27e5a4e 100644
+index 5a6d0424bfed..a03a0cfa29d2 100644
 --- a/sound/pci/hda/patch_realtek.c
 +++ b/sound/pci/hda/patch_realtek.c
 @@ -6862,6 +6862,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
@@ -42,7 +42,7 @@ index f7bb97230201..a03ce27e5a4e 100644
  	[ALC299_FIXUP_PREDATOR_SPK] = {
  		.type = HDA_FIXUP_PINS,
  		.v.pins = (const struct hda_pintbl[]) {
-@@ -11395,6 +11414,7 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
+@@ -11397,6 +11416,7 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x1d72, 0x1901, "RedmiBook 14", ALC256_FIXUP_ASUS_HEADSET_MIC),
  	SND_PCI_QUIRK(0x1d72, 0x1945, "Redmi G", ALC256_FIXUP_ASUS_HEADSET_MIC),
  	SND_PCI_QUIRK(0x1d72, 0x1947, "RedmiBook Air", ALC255_FIXUP_XIAOMI_HEADSET_MIC),

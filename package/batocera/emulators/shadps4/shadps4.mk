@@ -3,9 +3,10 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Jul 21, 2025
-SHADPS4_VERSION = a4c5fa4b5c71dc8ab9962cce2a5809122f7b85cc
-SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
+# Version: Commits on Jul 30, 2025
+SHADPS4_VERSION = 6c34b86add1274c11f97ebfddd120d8d6bd57930
+SHADPS4_SITE = https://github.com/AzaharPlus/shadPS4Plus.git
+SHADPS4_BRANCH = main
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
 SHADPS4_LICENSE = GPLv2

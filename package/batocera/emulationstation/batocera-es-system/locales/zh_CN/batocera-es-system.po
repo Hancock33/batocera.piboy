@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-27 09:31+0800\n"
+"PO-Revision-Date: 2025-07-26 22:54+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -747,7 +747,7 @@ msgctxt "game_options"
 msgid "17th"
 msgstr "17号"
 
-#. TRANSLATION: libretro/mesen, melonds, moonlight
+#. TRANSLATION: libretro/mesen, melonds, moonlight, ymir
 msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180度"
@@ -2171,6 +2171,16 @@ msgstr "9 MHz（降频）"
 msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90度"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees clockwise"
+msgstr "顺时针旋转90度"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees counter-clockwise"
+msgstr "逆时针旋转90度"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -5178,6 +5188,11 @@ msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "更改输出分辨率。"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Change the rotation of the rendered image."
+msgstr "改变渲染图像的旋转角度."
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Change the speed of the emulated PowerPC chip (fixes some issues)."
@@ -5477,6 +5492,11 @@ msgid ""
 "Choose to render high definition graphics textures. Requires OpenGL, True "
 "Colour and the enhanced.gob file."
 msgstr "选择渲染高清晰度图形纹理. 需要OpenGL、True Colour和enhanced.gob文件."
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose to render meshes as transparent polygons."
+msgstr "选择将网格渲染为透明多边形."
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -12944,7 +12964,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (计算着色器)"
 
-#. TRANSLATION: azahar, gzdoom, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL（默认）"
@@ -14178,6 +14198,11 @@ msgstr "旋转"
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "旋转面板按钮"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "ROTATION"
+msgstr "旋转"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -17029,6 +17054,11 @@ msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "训练模式"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "TRANSPARENT MESHES"
+msgstr "透明网格"
+
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
@@ -18556,7 +18586,7 @@ msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu, flycast, gzdoom
 msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan（默认）"

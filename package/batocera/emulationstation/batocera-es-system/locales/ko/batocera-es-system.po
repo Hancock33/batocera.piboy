@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-24 22:23+0900\n"
+"PO-Revision-Date: 2025-07-30 20:29+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: Korean (KO)\n"
 "Language: ko_KO\n"
@@ -745,7 +745,7 @@ msgctxt "game_options"
 msgid "17th"
 msgstr "17일"
 
-#. TRANSLATION: libretro/mesen, melonds, moonlight
+#. TRANSLATION: libretro/mesen, melonds, moonlight, ymir
 msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180°"
@@ -2169,6 +2169,16 @@ msgstr "9 MHz (언더클럭)"
 msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90°"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees clockwise"
+msgstr "시계 방향으로 90°"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees counter-clockwise"
+msgstr "반시계 방향으로 90°"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -5207,6 +5217,11 @@ msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "출력 해상도 비율을 변경합니다."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Change the rotation of the rendered image."
+msgstr "렌더링된 이미지의 회전을 변경합니다."
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Change the speed of the emulated PowerPC chip (fixes some issues)."
@@ -5515,6 +5530,11 @@ msgid ""
 msgstr ""
 "고화질 그래픽 텍스처를 렌더링하도록 선택합니다. OpenGL, True Colour, 향상된 ."
 "gob 파일이 필요합니다."
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose to render meshes as transparent polygons."
+msgstr "메시를 투명한 다각형으로 렌더링하도록 선택합니다."
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -13106,7 +13126,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (컴퓨트 셰이더)"
 
-#. TRANSLATION: azahar, gzdoom, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (기본)"
@@ -14346,6 +14366,11 @@ msgstr "회전"
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "페이스 버튼 회전"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "ROTATION"
+msgstr "회전"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -17228,6 +17253,11 @@ msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "트레이너 모드"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "TRANSPARENT MESHES"
+msgstr "투명 메시"
+
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
@@ -18787,7 +18817,7 @@ msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu, flycast, gzdoom
 msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan (기본)"

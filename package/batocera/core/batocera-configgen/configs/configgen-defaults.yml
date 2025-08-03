@@ -185,7 +185,7 @@ cave:
   emulator: libretro
   core:     mame078plus
 cave3rd:
-  emulator: mame
+  emulator: libretro
   core:     mame
 cavestory:
   emulator: libretro
@@ -354,7 +354,7 @@ freedroid:
   emulator: freedroid
   core:     freedroid
 gaelco:
-  emulator: mame
+  emulator: libretro
   core:     mame
 gamate:
   emulator: libretro
@@ -421,7 +421,7 @@ hcl:
   emulator: hcl
   core:     hcl
 hikaru:
-  emulator: mame
+  emulator: libretro
   core:     mame
 hode:
   emulator: hode
@@ -439,6 +439,9 @@ ikemen:
   core:     ikemen
   options:
     videomode: max-720x480
+imame4all:
+  emulator: libretro
+  core:     imame4all
 incredibletech:
   emulator: libretro
   core:     mame078plus
@@ -522,6 +525,9 @@ macintosh:
   emulator: libretro
   core:     minivmac
 mame:
+  emulator: libretro
+  core:     mame
+mame2003:
   emulator: libretro
   core:     mame078plus
 mastersystem:

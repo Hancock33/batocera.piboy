@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-24 22:50+0200\n"
+"PO-Revision-Date: 2025-08-01 22:04+0200\n"
 "Last-Translator: borysus\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -749,7 +749,7 @@ msgctxt "game_options"
 msgid "17th"
 msgstr "17"
 
-#. TRANSLATION: libretro/mesen, melonds, moonlight
+#. TRANSLATION: libretro/mesen, melonds, moonlight, ymir
 msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180 stopni"
@@ -2173,6 +2173,16 @@ msgstr "9 MHz (podkręcanie)"
 msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 stopni"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees clockwise"
+msgstr "90 stopni w prawo"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees counter-clockwise"
+msgstr "90 stopni w lewo"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -5227,6 +5237,11 @@ msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "Zmiana współczynnika rozdzielczości wyjściowej."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Change the rotation of the rendered image."
+msgstr "Zmień obrót renderowanego obrazu."
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Change the speed of the emulated PowerPC chip (fixes some issues)."
@@ -5542,6 +5557,11 @@ msgid ""
 msgstr ""
 "Umożliwia renderowanie tekstur graficznych w wysokiej rozdzielczości. Wymaga "
 "OpenGL, True Colour i pliku enhanced.gob."
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose to render meshes as transparent polygons."
+msgstr "Wybierz opcję renderowania siatek jako przezroczystych wielokątów."
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -13209,7 +13229,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Compute shader)"
 
-#. TRANSLATION: azahar, gzdoom, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (domyślnie)"
@@ -14457,6 +14477,11 @@ msgstr "OBRÓĆ"
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "OBRÓĆ PRZYCISKI KIERUNKU"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "ROTATION"
+msgstr "OBRÓT"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -17351,6 +17376,11 @@ msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "TRYB TRENINGOWY"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "TRANSPARENT MESHES"
+msgstr "PRZEZROCZYSTE SIATKI"
+
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
@@ -18924,7 +18954,7 @@ msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu, flycast, gzdoom
 msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan (domyślnie)"

@@ -1,0 +1,33 @@
+diff --git a/hw/xbox/nv2a/pgraph/vk/instance.c b/hw/xbox/nv2a/pgraph/vk/instance.c
+index 3d993cb735..b1d5bc696c 100644
+--- a/hw/xbox/nv2a/pgraph/vk/instance.c
++++ b/hw/xbox/nv2a/pgraph/vk/instance.c
+@@ -222,8 +222,7 @@ static bool create_instance(PGRAPHState *pg, Error **errp)
+     VkApplicationInfo app_info = {
+         .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO,
+         .pApplicationName = "xemu",
+-        .applicationVersion = VK_MAKE_VERSION(
+-            xemu_version_major, xemu_version_minor, xemu_version_patch),
++        .applicationVersion = VK_MAKE_VERSION(1, 0, 0),
+         .pEngineName = "No Engine",
+         .engineVersion = VK_MAKE_VERSION(1, 0, 0),
+         .apiVersion = VK_API_VERSION_1_3,
+diff --git a/scripts/xemu-version.sh b/scripts/xemu-version.sh
+index 0e5b827acc..b6c270e5fa 100755
+--- a/scripts/xemu-version.sh
++++ b/scripts/xemu-version.sh
+@@ -38,10 +38,10 @@ get_version_dot () {
+   echo $(get_version_field 1) | cut -d. -f$1
+ }
+ 
+-XEMU_VERSION_MAJOR=$(get_version_dot 1)
+-XEMU_VERSION_MINOR=$(get_version_dot 2)
+-XEMU_VERSION_PATCH=$(get_version_dot 3)
+-XEMU_VERSION_COMMIT=$(get_version_field 2)
++XEMU_VERSION_MAJOR=0
++XEMU_VERSION_MINOR=8
++XEMU_VERSION_PATCH=1
++XEMU_VERSION_COMMIT=batocera
+ 
+ cat <<EOF
+ #define XEMU_VERSION       "$XEMU_VERSION"

@@ -1,0 +1,13 @@
+diff --git a/db9_gpio_rpi.c b/db9_gpio_rpi.c
+index b0276e9..96445fd 100644
+--- a/db9_gpio_rpi.c
++++ b/db9_gpio_rpi.c
+@@ -454,7 +454,7 @@ static void db9_saturn(int port, struct input_dev *dev)
+ #ifdef HAVE_TIMER_SETUP
+ static void db9_timer(struct timer_list *t)
+ {
+-	struct db9 *db9 = from_timer(db9, t, timer);
++	struct db9 *db9 = timer_container_of(db9, t, timer);
+ #else
+ static void db9_timer(unsigned long private)
+ {

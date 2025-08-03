@@ -1,4 +1,4 @@
-include batocera-toolchain.common
+include batocera-toolchain_Os.common
 
 # Target definition
 BR2_arm=y
@@ -10,12 +10,12 @@ BR2_PACKAGE_BATOCERA_TARGET_AARCH32_SUBSYSTEM=y
 BR2_TARGET_OPTIMIZATION="-pipe -march=armv8-a+crc+simd -mcpu=cortex-a72 -mtune=cortex-a72 -w"
 BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/piboy4/patches"
 
-# Kernel 6.15
-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_6_15=y
+# Kernel 6.16
+BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_6_16=y
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
-BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,861e9a02198e3ec125fe0d9b91ee7cd1bd912b71)/861e9a02198e3ec125fe0d9b91ee7cd1bd912b71.tar.gz"
-BR2_KERNEL_HEADERS_PATCHES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/6.15"
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,a0ed9fa179db3bc1db94c6a1e9742f2a5a3d7a6f)/a0ed9fa179db3bc1db94c6a1e9742f2a5a3d7a6f.tar.gz"
+BR2_KERNEL_HEADERS_PATCHES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/6.16"
 
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/aarch32-packager.sh"
 BR2_SYSTEM_BIN_SH_NONE=y

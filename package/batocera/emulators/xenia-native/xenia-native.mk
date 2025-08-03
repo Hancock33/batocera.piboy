@@ -3,8 +3,8 @@
 # xenia-native
 #
 ################################################################################
-# Version: Commits on Jun 26, 2025
-XENIA_NATIVE_VERSION = 01d46c20ff0efd44b6e7f5fb8e73c774e608d5e0
+# Version: Commits on Jul 29, 2025
+XENIA_NATIVE_VERSION = ada971aefc386fe6703e0f5482e193454d8ca42d
 XENIA_NATIVE_SITE = https://github.com/xenia-canary/xenia-canary.git
 XENIA_NATIVE_LICENSE = BSD
 XENIA_NATIVE_LICENSE_FILE = LICENSE
@@ -21,6 +21,8 @@ define XENIA_NATIVE_CROSS_BUILD
 	PKGCONFIG_CONFIG=$(STAGING_DIR)/usr/lib/pkgconfig \
 	SYSROOT="$(STAGING_DIR)" \
 	SDL2CONFIG="$(STAGING_DIR)/usr/bin/sdl2-config" \
+	CC="$(HOST_DIR)/bin/clang" \
+	CXX="$(HOST_DIR)/bin/clang++" \
 	./xb premake --devenv=cmake
 endef
 

@@ -89,7 +89,7 @@ class GzdoomGenerator(Generator):
         }
 
     def _determine_api_config(self, system) -> str:
-        gzdoom_api = system.config.get("gz_api", "0")
+        gzdoom_api = system.config.get("gz_api", "1")
         arch_path = BATOCERA_SHARE_DIR / "batocera.arch"
 
         # Default to GLES on non-x86_64 architectures if API is auto ("0")

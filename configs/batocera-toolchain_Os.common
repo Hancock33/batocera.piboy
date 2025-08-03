@@ -1,0 +1,31 @@
+# toolchain definition
+BR2_OPTIMIZE_S=y
+BR2_GCC_VERSION_GIT=y
+BR2_GCC_ENABLE_GRAPHITE=y
+BR2_GCC_ENABLE_OPENMP=y
+BR2_SHARED_STATIC_LIBS=y
+BR2_BINUTILS_VERSION_GIT=y
+BR2_TARGET_LDFLAGS="-fuse-ld=mold"
+BR2_ENABLE_LTO=y
+BR2_TOOLCHAIN_BUILDROOT_CXX=y
+BR2_TOOLCHAIN_BUILDROOT_GLIBC=y
+
+# required for utf-8
+BR2_TOOLCHAIN_GLIBC_GCONV_LIBS_COPY=y
+BR2_REMOVE_SOURCE_AFTER_COMPILE=n
+BR2_STRIP_EXCLUDE_FILES="abuse dmdserver ecwolf greenlight Ryujinx Vita3K vpinball VPinballX_GL"
+
+# Allow to build GOLD linker, but do not use as default
+BR2_BINUTILS_EXTRA_CONFIG_OPTIONS="--enable-gold --enable-plugins"
+
+# prefer linux tools over busybox tools
+BR2_PACKAGE_BUSYBOX=n
+BR2_PACKAGE_ZLIB_NG=y
+BR2_ZCAT="pigz -d -c"
+
+# Disable generating rootfs tar (speedup)
+BR2_TARGET_ROOTFS_TAR=n
+BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV=y
+
+# Enables ccache
+BR2_CCACHE=y

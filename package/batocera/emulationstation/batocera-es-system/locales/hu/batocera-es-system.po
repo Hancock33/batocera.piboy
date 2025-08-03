@@ -743,7 +743,7 @@ msgctxt "game_options"
 msgid "17th"
 msgstr "17."
 
-#. TRANSLATION: libretro/mesen, melonds, moonlight
+#. TRANSLATION: libretro/mesen, melonds, moonlight, ymir
 msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180 fok"
@@ -2167,6 +2167,16 @@ msgstr "9 MHz (alulhajtás)"
 msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 fok"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees clockwise"
+msgstr ""
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees counter-clockwise"
+msgstr ""
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -5223,6 +5233,11 @@ msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "Módosítsa a kimeneti felbontás arányát."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Change the rotation of the rendered image."
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Change the speed of the emulated PowerPC chip (fixes some issues)."
@@ -5531,6 +5546,11 @@ msgid ""
 msgstr ""
 "Válassza a nagyfelbontású grafikai textúrák renderelését. OpenGL, True "
 "Colour és az enhanced.gob fájl szükséges hozzá."
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose to render meshes as transparent polygons."
+msgstr ""
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -13202,7 +13222,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Számítási shader)"
 
-#. TRANSLATION: azahar, gzdoom, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (alapértelmezett)"
@@ -14449,6 +14469,11 @@ msgstr "FORGATÁS"
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "AZ ELŐLAPI GOMBOK FORGATÁSA"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "ROTATION"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -17349,6 +17374,11 @@ msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "EDZŐ MÓD"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "TRANSPARENT MESHES"
+msgstr ""
+
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
@@ -18918,7 +18948,7 @@ msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu, flycast, gzdoom
 msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan (Alap)"

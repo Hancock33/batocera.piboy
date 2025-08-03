@@ -31,6 +31,7 @@
 - Add OrangePi 5 Max board support
 - Add RetroidPocket Mini v2 (thanks Spycat)
 - Add support for the Pironman5 Mini & Max cases
+- Add CoolPi 4b board support
 ### Added
 - WireGuard VPN for RK3326 boards
 - WireGuard system service which runs [wg-quick](https://git.zx2c4.com/wireguard-tools/about/src/man/wg-quick.8) on `/userdata/system/wireguard/*.conf`
@@ -96,7 +97,7 @@
 - Dreamcast bios now goes into `bios/dc/dc_boot.bin`
 - MSI Claw devices now get the appropriate controller config on boot
 ### Updated
-- Amiberry to v7.0.4
+- Amiberry to v7.1.0
 - AppleWin to 8th of Feb build
 - BigPEmu to 1.19
 - Cemu to 2.6
@@ -114,6 +115,7 @@
 - Hypseus Singe to 2.11.5
 - IOQuake3 to 25th December build
 - Jazz2 to 3.3.0
+- Libretro-FBNeo to July 25, 2025 build
 - Libretro-Kronos to 2.7.0
 - Libretro-MAME to 0.278
 - Libretro-Play! 4th Feb build
@@ -153,15 +155,15 @@
 - DXVK-NVApi to 0.9.0
 - Faudio to 25.02
 - FFMPEG to 7.1.1
-- GStreamer codecs to 1.26.0
+- GStreamer codecs to 1.26.4
 - Intel GMMLib to 22.8.1
 - Intel Media Driver to 25.3.0
 - Kodi to 21.2
 - LibDRM to 2.4.124
 - Linux Firmware to 20250708
-- Linux Kernel to 6.15.6
+- Linux Kernel to 6.15.9
 - LLVM to 19.1.7
-- Mesa3D to 25.1.6
+- Mesa3D to 25.1.7
 - MPV to 0.40.0
 - Nvidia production driver to 575.64
 - Pipewire to 1.4.6

@@ -947,10 +947,10 @@ index a0f58475434c..137fc917a174 100644
  
  obj-$(CONFIG_HID_DOCKCHANNEL)   += dockchannel-hid/
 diff --git a/drivers/hid/hid-core.c b/drivers/hid/hid-core.c
-index b991ed962366..a589f9c9b661 100644
+index 4dd55546f446..df29a2a9ed81 100644
 --- a/drivers/hid/hid-core.c
 +++ b/drivers/hid/hid-core.c
-@@ -2838,6 +2838,17 @@ static int hid_uevent(const struct device *dev, struct kobj_uevent_env *env)
+@@ -2847,6 +2847,17 @@ static int hid_uevent(const struct device *dev, struct kobj_uevent_env *env)
  	if (add_uevent_var(env, "MODALIAS=hid:b%04Xg%04Xv%08Xp%08X",
  			   hdev->bus, hdev->group, hdev->vendor, hdev->product))
  		return -ENOMEM;
@@ -7967,7 +7967,7 @@ index 000000000000..9d0a5471b181
 +MODULE_DESCRIPTION("Steam Deck EC sensors driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
-index 234b6e011ded..e9dcb2211b52 100644
+index 2c0d0682c2e7..53dbecfa507e 100644
 --- a/drivers/input/joystick/xpad.c
 +++ b/drivers/input/joystick/xpad.c
 @@ -356,7 +356,9 @@ static const struct xpad_device {

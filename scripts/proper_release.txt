@@ -1,5 +1,4 @@
-﻿abuse.mk
-ayaneo-platform.mk
+﻿ayaneo-platform.mk
 ayn-platform.mk
 batocera-shim.mk
 bauh.mk
@@ -62,5 +61,6 @@ wtype.mk
 wxwidgets.mk
 x16emu.mk
 xbox-xcloud-client.mk
+xemu.mk
 xenia-canary.mk
 xenia.mk

@@ -3,9 +3,9 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Jul 20, 2025
-CEMU_VERSION = 1ec8c713b45f5e4e88a1e6a65c59a2ec1e42afe6
-CEMU_SITE = https://github.com/cemu-project/Cemu
+# Version: Commits on Jul 29, 2025
+CEMU_VERSION = 57fe7a53f1c842c3bfb222d2a82666dc7315f01f
+CEMU_SITE = https://github.com/cemu-project/Cemu.git
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
 CEMU_GIT_SUBMODULES=YES
@@ -16,8 +16,9 @@ CEMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
 CEMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CEMU_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
-CEMU_CONF_OPTS += -DENABLE_VCPKG=OFF
 CEMU_CONF_OPTS += -DENABLE_FERAL_GAMEMODE=OFF
+CEMU_CONF_OPTS += -DENABLE_VCPKG=OFF
+CEMU_CONF_OPTS += -DLINUX=ON
 
 ifeq ($(BR2_PACKAGE_HIDAPI),y)
     CEMU_CONF_OPTS += -DENABLE_HIDAPI=ON

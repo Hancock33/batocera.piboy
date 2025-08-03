@@ -3,8 +3,8 @@
 # avp
 #
 ################################################################################
-# Version: Commits on May 24, 2025
-AVP_VERSION = eaff12241fd9fff8e5e5e6d50b6d7bde4482241b
+# Version: Commits on Jul 28, 2025
+AVP_VERSION = a360b0b2c80196345ba3e2553476f4f649e7e54f
 AVP_SITE =  $(call github,atsb,NakedAVP,$(AVP_VERSION))
 AVP_DEPENDENCIES = sdl3 sdl3_mixer
 AVP_LICENSE = GPL-2.0

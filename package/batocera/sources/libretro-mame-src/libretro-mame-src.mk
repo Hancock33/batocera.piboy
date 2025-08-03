@@ -3,9 +3,9 @@
 # libretro-mame-src
 #
 ################################################################################
-# Version: Commits on Jul 12, 2025
-LIBRETRO_MAME_SRC_VERSION = d6423328d57857c05ef3513999fe4ff4917db197
-LIBRETRO_MAME_SRC_SITE = $(call github,libretro,mame,$(LIBRETRO_MAME_SRC_VERSION))
+# Version: Commits on Aug 01, 2025
+LIBRETRO_MAME_SRC_VERSION = 8fd894d095aa30d6bcf0c97c9d09dd858e3010a7
+LIBRETRO_MAME_SRC_SITE = $(call github,hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
 LIBRETRO_MAME_SRC_LICENSE = MAME
 
@@ -29,12 +29,15 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(HOST_DIR)/bin/ccache $(TARGET_CXX)" CC="$(HOST_DIR)/bin/ccache $(TARGET_CC)" -C $(@D)/ -f Makefile.libretro \
 		$(LIBRETRO_MAME_SRC_EXTRA_ARGS) \
 		FORCE_DRC_C_BACKEND=0 \
-		OPTIMIZE=s LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
+		OPTIMIZE=2 LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
 endef
 
 define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
+	rm -rf /tmp/lr-mame
 	mkdir -p /tmp/lr-mame/usr/lib/libretro
+	mkdir -p /tmp/lr-mame/usr/bin/mame
 	$(INSTALL) -D $(@D)/mame_libretro.so /tmp/lr-mame/usr/lib/libretro/mame_libretro.so
+	cp -R $(@D)/hash /tmp/lr-mame/usr/bin/mame/
 
 	cd /tmp/lr-mame && tar -cf /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar .
 	xz -T0 -7 -v /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar

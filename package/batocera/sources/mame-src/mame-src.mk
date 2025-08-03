@@ -3,8 +3,8 @@
 # mame-src
 #
 ################################################################################
-# Version: Commits on Jun 30, 2025
-MAME_SRC_VERSION = mame0278
+# Version: Commits on Aug 01, 2025
+MAME_SRC_VERSION = mame0279
 MAME_SRC_SOURCE = mame-src-$(MAME_SRC_VERSION).tar.gz
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
 MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl2 sdl2_ttf sqlite zlib
@@ -81,6 +81,7 @@ define MAME_SRC_BUILD_CMDS
 	OVERRIDE_CXX="$(HOST_DIR)/bin/ccache $(TARGET_CXX)" \
 	OVERRIDE_LD="$(TARGET_LD)" \
 	OVERRIDE_STRIP="$(TARGET_STRIP)" \
+	PRECOMPILE=1 \
 	REGENIE=1 \
 	SDL_INSTALL_ROOT="$(STAGING_DIR)/usr" \
 	STRIP_SYMBOLS=1 \
@@ -101,7 +102,7 @@ define MAME_SRC_BUILD_CMDS
 	USE_SYSTEM_LIB_SQLITE3=1 \
 	USE_SYSTEM_LIB_ZLIB=1 \
 	USE_SYSTEM_LIB_ZSTD=1 \
-	OPTIMIZE=s LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION) PTR64=1
+	OPTIMIZE=2 LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION) PTR64=1
 endef
 
 define MAME_SRC_INSTALL_TARGET_CMDS

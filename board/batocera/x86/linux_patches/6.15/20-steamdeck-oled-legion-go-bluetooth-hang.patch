@@ -1,5 +1,5 @@
 diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
-index edefb9dc76aa..9b4853bc5315 100644
+index 7c958d6065be..38d74c405338 100644
 --- a/drivers/bluetooth/btqca.c
 +++ b/drivers/bluetooth/btqca.c
 @@ -1005,15 +1005,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);
@@ -51,7 +51,7 @@ index edafa228bf83..9620b50ed0a9 100644
  
  static const struct h5_device_data h5_data_rtl8822cs = {
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index 976ec88a0f62..d024a3af28b6 100644
+index 4badab1e86a3..030725fee605 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
 @@ -228,7 +228,6 @@ struct qca_serdev {
@@ -94,7 +94,7 @@ index 976ec88a0f62..d024a3af28b6 100644
  	case QCA_WCN7850:
 -		qcadev = serdev_device_get_drvdata(hu->serdev);
 -		if (qcadev->bdaddr_property_broken)
--			set_bit(HCI_QUIRK_BDADDR_PROPERTY_BROKEN, &hdev->quirks);
+-			hci_set_quirk(hdev, HCI_QUIRK_BDADDR_PROPERTY_BROKEN);
 -
  		hci_set_aosp_capable(hdev);
  
@@ -119,7 +119,7 @@ index 976ec88a0f62..d024a3af28b6 100644
  		     data->soc_type == QCA_WCN6855 ||
  		     data->soc_type == QCA_WCN7850)) {
 diff --git a/drivers/bluetooth/hci_serdev.c b/drivers/bluetooth/hci_serdev.c
-index 89a22e9b3253..2a6e01dc0cf8 100644
+index 593d9cefbbf9..65cf98416f45 100644
 --- a/drivers/bluetooth/hci_serdev.c
 +++ b/drivers/bluetooth/hci_serdev.c
 @@ -300,9 +300,8 @@ static const struct serdev_device_ops hci_serdev_client_ops = {

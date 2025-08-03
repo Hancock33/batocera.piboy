@@ -182,7 +182,7 @@ cave:
   emulator: libretro
   core:     mame078plus
 cave3rd:
-  emulator: mame
+  emulator: libretro
   core:     mame
 cavestory:
   emulator: libretro
@@ -350,7 +350,7 @@ freedroid:
   emulator: freedroid
   core:     freedroid
 gaelco:
-  emulator: mame
+  emulator: libretro
   core:     mame
 gamate:
   emulator: libretro
@@ -417,7 +417,7 @@ hcl:
   emulator: hcl
   core:     hcl
 hikaru:
-  emulator: mame
+  emulator: libretro
   core:     mame
 hode:
   emulator: hode
@@ -506,7 +506,7 @@ macintosh:
   core:     minivmac
 mame:
   emulator: libretro
-  core:     mame078plus
+  core:     mame
 mastersystem:
   emulator: libretro
   core:     genesisplusgx

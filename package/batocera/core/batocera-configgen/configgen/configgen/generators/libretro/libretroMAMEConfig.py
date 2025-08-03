@@ -55,13 +55,14 @@ def generateMAMEConfigs(playersControllers: Controllers, system: Emulator, rom: 
     commandLine: list[str | Path] = []
     romDrivername = rom.stem
     specialController = 'none'
+    arcadepath = str(Path(rom))
 
     if system.config.core in [ 'mame', 'mess', 'mamevirtual' ]:
         corePath = f"lr-{system.config.core}"
     else:
         corePath = str(system.config.core)
 
-    if system.name in [ 'mame', 'neogeo', 'lcdgames', 'plugnplay', 'vis', 'namco22', 'model2']:
+    if system.name in [ 'mame', 'neogeo', 'lcdgames', 'plugnplay', 'vis', 'namco22', 'namco2x6', 'model2'] or "/arcade/" in arcadepath:
         # Set up command line for basic systems
         # ie. no media, softlists, etc.
         if system.config.get_bool("customcfg"):

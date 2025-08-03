@@ -12,7 +12,7 @@ index 4bbe88bbe..5e20d114a 100644
      if (logfd) {
          time_t curtime;
 diff --git a/src/common/platform/posix/sdl/i_main.cpp b/src/common/platform/posix/sdl/i_main.cpp
-index 4f29bb76e..0d5b56261 100644
+index 2ecc14686..0a9b4d043 100644
 --- a/src/common/platform/posix/sdl/i_main.cpp
 +++ b/src/common/platform/posix/sdl/i_main.cpp
 @@ -176,23 +176,7 @@ int main (int argc, char **argv)
@@ -41,10 +41,10 @@ index 4f29bb76e..0d5b56261 100644
  	I_StartupJoysticks();
  
 diff --git a/src/common/platform/posix/unix/i_specialpaths.cpp b/src/common/platform/posix/unix/i_specialpaths.cpp
-index 112e92ee7..14e6bc8d6 100644
+index c06e27b67..268d83e42 100644
 --- a/src/common/platform/posix/unix/i_specialpaths.cpp
 +++ b/src/common/platform/posix/unix/i_specialpaths.cpp
-@@ -45,59 +45,7 @@
+@@ -47,59 +47,7 @@ extern bool netgame;
  
  FString GetUserFile (const char *file)
  {
@@ -105,7 +105,7 @@ index 112e92ee7..14e6bc8d6 100644
  }
  
  //===========================================================================
-@@ -112,7 +60,7 @@ FString M_GetAppDataPath(bool create)
+@@ -114,7 +62,7 @@ FString M_GetAppDataPath(bool create)
  {
  	// Don't use GAME_DIR and such so that ZDoom and its child ports can
  	// share the node cache.
@@ -114,7 +114,7 @@ index 112e92ee7..14e6bc8d6 100644
  	if (create)
  	{
  		CreatePath(path.GetChars());
-@@ -132,7 +80,7 @@ FString M_GetCachePath(bool create)
+@@ -134,7 +82,7 @@ FString M_GetCachePath(bool create)
  {
  	// Don't use GAME_DIR and such so that ZDoom and its child ports can
  	// share the node cache.
@@ -123,7 +123,7 @@ index 112e92ee7..14e6bc8d6 100644
  	if (create)
  	{
  		CreatePath(path.GetChars());
-@@ -150,7 +98,7 @@ FString M_GetCachePath(bool create)
+@@ -152,7 +100,7 @@ FString M_GetCachePath(bool create)
  
  FString M_GetAutoexecPath()
  {
@@ -132,7 +132,7 @@ index 112e92ee7..14e6bc8d6 100644
  }
  
  //===========================================================================
-@@ -165,7 +113,7 @@ FString M_GetAutoexecPath()
+@@ -167,7 +115,7 @@ FString M_GetAutoexecPath()
  
  FString M_GetConfigPath(bool for_reading)
  {
@@ -141,7 +141,7 @@ index 112e92ee7..14e6bc8d6 100644
  }
  
  //===========================================================================
-@@ -178,7 +126,7 @@ FString M_GetConfigPath(bool for_reading)
+@@ -180,7 +128,7 @@ FString M_GetConfigPath(bool for_reading)
  
  FString M_GetScreenshotsPath()
  {
@@ -150,7 +150,7 @@ index 112e92ee7..14e6bc8d6 100644
  }
  
  //===========================================================================
-@@ -204,7 +152,7 @@ FString M_GetSavegamesPath()
+@@ -209,7 +157,7 @@ FString M_GetSavegamesPath()
  
  FString M_GetDocumentsPath()
  {
@@ -160,11 +160,11 @@ index 112e92ee7..14e6bc8d6 100644
  
  //===========================================================================
 diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
-index a0f27899e..f78dc265f 100644
+index 8f89f29ca..76821019d 100644
 --- a/src/gameconfigfile.cpp
 +++ b/src/gameconfigfile.cpp
-@@ -145,7 +145,7 @@ FGameConfigFile::FGameConfigFile ()
- 		SetValueForKey ("Path", SHARE_DIR, true);
+@@ -155,7 +155,7 @@ FGameConfigFile::FGameConfigFile ()
+ 		SetValueForKey ("Path", SHARE_DIR "/games/doom", true);
  		SetValueForKey ("Path", "/usr/local/share/doom", true);
  		SetValueForKey ("Path", "/usr/local/share/games/doom", true);
 -		SetValueForKey ("Path", "/usr/share/doom", true);
@@ -172,7 +172,7 @@ index a0f27899e..f78dc265f 100644
  		SetValueForKey ("Path", "/usr/share/games/doom", true);
  #endif
  		SetValueForKey ("Path", "$DOOMWADDIR", true);
-@@ -176,8 +176,10 @@ FGameConfigFile::FGameConfigFile ()
+@@ -186,8 +186,10 @@ FGameConfigFile::FGameConfigFile ()
  		SetValueForKey("Path", "/usr/local/share/doom/fm_banks", true);
  		SetValueForKey("Path", "/usr/local/share/games/doom/soundfonts", true);
  		SetValueForKey("Path", "/usr/local/share/games/doom/fm_banks", true);
@@ -184,4 +184,4 @@ index a0f27899e..f78dc265f 100644
 +		SetValueForKey("Path", "/userdata/system/configs/gzdoom/fm_banks", true);
  		SetValueForKey("Path", "/usr/share/games/doom/soundfonts", true);
  		SetValueForKey("Path", "/usr/share/games/doom/fm_banks", true);
- #endif
+ 		SetValueForKey("Path", SHARE_DIR "/doom/soundfonts", true);

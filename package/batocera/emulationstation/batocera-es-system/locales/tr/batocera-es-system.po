@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Options file\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-30 20:18+0300\n"
+"PO-Revision-Date: 2025-07-23 21:22+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish\n"
 "Language: tr\n"
@@ -749,7 +749,7 @@ msgctxt "game_options"
 msgid "17th"
 msgstr "17."
 
-#. TRANSLATION: libretro/mesen, melonds, moonlight
+#. TRANSLATION: libretro/mesen, melonds, moonlight, ymir
 msgctxt "game_options"
 msgid "180 degrees"
 msgstr "180 derece"
@@ -2174,6 +2174,16 @@ msgctxt "game_options"
 msgid "90 degrees"
 msgstr "90 derece"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees clockwise"
+msgstr "saat yönünde 90 derece"
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "90 degrees counter-clockwise"
+msgstr "saat yönünün tersine 90 derece"
+
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "90fps"
@@ -2385,7 +2395,7 @@ msgstr "AMD Fidelity FX Süper Çözünürlük"
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "AMIGA MODEL"
-msgstr "AMIGA MODELİ"
+msgstr "AMİGA MODELİ"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
@@ -2934,7 +2944,7 @@ msgstr "Yalnızca dürtmenin görsel efektini etkiler."
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Affects mouse speed globally."
-msgstr "Küresel olarak fare hızını etkiler."
+msgstr "Genel fare hızını etkiler."
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -3075,6 +3085,7 @@ msgctxt "game_options"
 msgid "Allows you to limit FPS to 60."
 msgstr "FPS sınırını 60 yapmanıza olanak tanır."
 
+# Oyun adını çevirmeyin.
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Alone in the Dark"
@@ -3904,7 +3915,7 @@ msgstr "Temel (Önerilen)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Basic (generated Mipmaps)"
-msgstr "Temel (oluşturulan Mipmaps)"
+msgstr "Temel (Oluşturulan Eşleme)"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -4362,7 +4373,7 @@ msgstr "CD EKLENTİSİ"
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "CD TURBO SPEED"
-msgstr "CD TURBO HIZ"
+msgstr "CD TURBO HIZI"
 
 #. TRANSLATION: libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -4457,7 +4468,7 @@ msgstr "BELLEK SAYFASI DURUMUNU TEMİZLE"
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
-msgstr "PARA SES EKLENTİSİ"
+msgstr "JETON SESİ EKLENTİSİ"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -4547,7 +4558,7 @@ msgstr "KONTROL SEÇİMİ"
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "CONTROL MAPPING"
-msgstr "KONTROL EŞLEME"
+msgstr "KONTROL EŞLEMESİ"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus, rpcs3
 msgctxt "game_options"
@@ -4562,7 +4573,7 @@ msgstr "KONTROLCÜ 1 ÖZELLİK PAKETİ"
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 1 INPUT MAPPING"
-msgstr "KONTROLCÜ 1 GİRİŞ EŞLEME"
+msgstr "KONTROLCÜ 1 GİRİŞ EŞLEMESİ"
 
 #. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
@@ -4582,7 +4593,7 @@ msgstr "KONTROLCÜ 2 ÖZELLİK PAKETİ"
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 2 INPUT MAPPING"
-msgstr "KONTROLCÜ 2 GİRİŞ EŞLEME"
+msgstr "KONTROLCÜ 2 GİRİŞ EŞLEMESİ"
 
 #. TRANSLATION: duckstation, libretro/beetle-saturn, libretro/dolphin, libretro/dosbox, libretro/dosbox_pure, ...
 msgctxt "game_options"
@@ -4602,7 +4613,7 @@ msgstr "KONTROLCÜ 3 ÖZELLİK PAKETİ"
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 3 INPUT MAPPING"
-msgstr "KONTROLCÜ 3 GİRİŞ EŞLEME"
+msgstr "KONTROLCÜ 3 GİRİŞ EŞLEMESİ"
 
 #. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
 msgctxt "game_options"
@@ -4622,7 +4633,7 @@ msgstr "KONTROLCÜ 4 ÖZELLİK PAKETİ"
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/picodrive
 msgctxt "game_options"
 msgid "CONTROLLER 4 INPUT MAPPING"
-msgstr "KONTROLCÜ 4 GİRİŞ EŞLEME"
+msgstr "KONTROLCÜ 4 GİRİŞ EŞLEMESİ"
 
 #. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021
 msgctxt "game_options"
@@ -5229,6 +5240,11 @@ msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "Çıkış çözünürlüğü oranını değiştir."
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Change the rotation of the rendered image."
+msgstr "Oluşturulan görüntünün yönünü değiştirin."
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "Change the speed of the emulated PowerPC chip (fixes some issues)."
@@ -5357,7 +5373,7 @@ msgstr "Yavaş çekimde ölüm seçeneğini seçin."
 #. TRANSLATION: libretro/kronos
 msgctxt "game_options"
 msgid "Choose system BIOS language."
-msgstr "Sistem BIOS dilini seçin."
+msgstr "Sistem BİOS dilini seçin."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -5520,7 +5536,7 @@ msgstr ""
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "Choose to display achievement messages in the UI."
-msgstr "Kullanıcı arayüzünde başarı mesajlarının görüntülenmesini seçin."
+msgstr "Kullanıcı arayüzünde başarım mesajlarının görüntülenmesini seçin."
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -5540,6 +5556,11 @@ msgid ""
 msgstr ""
 "Yüksek çözünürlüklü grafik dokuları işlemeyi seçin. OpenGL, Gerçek Renk ve "
 "enhanced.gob dosyası gerektirir."
+
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "Choose to render meshes as transparent polygons."
+msgstr "Kafesleri saydam çokgenler olarak oluşturmayı seçin."
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -5899,7 +5920,7 @@ msgstr "Konsol AES Dünya"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Control the texture filtering of the emulation."
-msgstr "Öykünmenin doku filtrelemesini kontrol edin."
+msgstr "Emülasyonun doku filtrelemesini kontrol edin."
 
 #. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
@@ -5909,7 +5930,7 @@ msgstr "Emülasyonun dokudaki üç doğrusal filtrelemesini kontrol edin."
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
-msgstr "5/6 tuş oyunları ve diğer benzersiz kontroller için ayarlar"
+msgstr "5/6 tuşlu oyunlar ve diğer benzersiz kontroller için ayarlar"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -5955,10 +5976,11 @@ msgctxt "game_options"
 msgid "Costa Rica"
 msgstr "Kosta Rika"
 
+# Oyun adını çevirmeyin.
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Crash-n Burn"
-msgstr "Çarpışma ve Yanma"
+msgstr "Crash-n Burn"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -6598,6 +6620,7 @@ msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
 msgstr "Dijital Kontrolcü (Oyun Kolu)"
 
+# Oyun adını çevirmeyin.
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Dinopark Tycoon"
@@ -6813,7 +6836,7 @@ msgid ""
 "Dreamcast BIOS's language setting. Can change the language of some games. "
 "Some games default to Japanese."
 msgstr ""
-"Dreamcast BIOS dil ayarı. Bazı oyunların dilini değiştirebilir. Bazı oyunlar "
+"Dreamcast BİOS dil ayarı. Bazı oyunların dilini değiştirebilir. Bazı oyunlar "
 "varsayılan olarak Japoncadır."
 
 #. TRANSLATION: pcsx2
@@ -8236,7 +8259,7 @@ msgstr ""
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "FLOPPY TURBO SPEED"
-msgstr "FLOPPY TURBO HIZ"
+msgstr "FLOPPY TURBO HIZI"
 
 #. TRANSLATION: libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -9011,12 +9034,12 @@ msgstr "Tam"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (Hash Cache)"
-msgstr "Tam (Karma Önbellek)"
+msgstr "Tam (Önbellek Doğrulamalı)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Full (PS2 Mipmaps)"
-msgstr "Tam (PS2 Mipmaps)"
+msgstr "Tam (PS2 Eşlemesi)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9531,7 +9554,7 @@ msgstr "Genel Klavye Bağları"
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
-msgstr "Genesis/Megadrive Stili"
+msgstr "Genesis/Megadrive Tarzı"
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -11507,7 +11530,7 @@ msgstr "MIDI ÇIKIŞI"
 #. TRANSLATION: pcsx2, theforceengine
 msgctxt "game_options"
 msgid "MIPMAPPING"
-msgstr "MIPMAPPING"
+msgstr "EŞLEME TÜRÜ"
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -11842,7 +11865,7 @@ msgstr ""
 #. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
-msgstr "Azami"
+msgstr "EN YÜKSEK"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -12066,6 +12089,7 @@ msgctxt "game_options"
 msgid "Mexico"
 msgstr "Meksika"
 
+# Oyun adını çevirmeyin.
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Microcosm"
@@ -12084,7 +12108,7 @@ msgstr "Düşük"
 #. TRANSLATION: libretro/pcsx2, openmohaa, pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Minimum"
-msgstr "Asgari"
+msgstr "EN DÜŞÜK"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -12114,7 +12138,7 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
-msgstr "Modern Fightstick Stili"
+msgstr "Modern Fightstick Tarzı"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12347,7 +12371,7 @@ msgstr "NEO GEO BIOS"
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
 msgid "NEO GEO CD BIOS"
-msgstr "NEO GEO CD BIOS"
+msgstr "NEO GEO CD BİOS"
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -12702,7 +12726,7 @@ msgstr "Hayır (Varsayılan)"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "No Buffer"
-msgstr "Önbellek Yok"
+msgstr "Arabellek Yok"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -13189,7 +13213,7 @@ msgctxt "game_options"
 msgid "OpenGL (Compute shader)"
 msgstr "OpenGL (Gölgelendirici hesap)"
 
-#. TRANSLATION: azahar, gzdoom, play, scummvm
+#. TRANSLATION: azahar, play, scummvm
 msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Varsayılan)"
@@ -14432,6 +14456,11 @@ msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "TUŞLARIN YÖNÜNÜ DÖNDÜR"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "ROTATION"
+msgstr "DÖNDÜR"
+
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "ROV"
@@ -15171,7 +15200,7 @@ msgstr "SIO HIZLANDIRMASI"
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "SKIP BUFFER EFFECTS"
-msgstr "ÖNBELLEK EFEKTLERİNİ ATLA"
+msgstr "ARABELLEK EFEKTLERİNİ ATLA"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15436,7 +15465,7 @@ msgstr "SIKI İŞLEME MODU"
 #. TRANSLATION: f2bgl, fallout1-ce, fallout2-ce, openjk, openmohaa
 msgctxt "game_options"
 msgid "SUBTITLES"
-msgstr "ALTYAZILAR"
+msgstr "ALT YAZILAR"
 
 #. TRANSLATION: libretro/mesens, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -15976,27 +16005,27 @@ msgstr "Pencere boyutunu bir tamsayı boyutuna ayarlar."
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for 16-position DIP switch number 1."
-msgstr "16 konumlu DIP switch numarası 1 için ayar."
+msgstr "16 konumlu DIP anahtar numarası 1 için ayar."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for 16-position DIP switch number 2."
-msgstr "16 konumlu DIP switch numarası 2 için ayar."
+msgstr "16 konumlu DIP anahtar numarası 2 için ayar."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 1."
-msgstr "DIP switch 1 için ayar."
+msgstr "DIP anahtar 1 için ayar."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 2."
-msgstr "DIP switch 2 için ayar."
+msgstr "DIP anahtar 2 için ayar."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Setting for DIP switch 3."
-msgstr "DIP switch 3 için ayar."
+msgstr "DIP anahtar 3 için ayar."
 
 #. TRANSLATION: libretro/mrboom
 msgctxt "game_options"
@@ -16226,7 +16255,7 @@ msgstr ""
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Simultaneous"
-msgstr "Eşzamanlı"
+msgstr "Eş zamanlı"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -16342,7 +16371,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Skip the bios boot logo, may cause default language issues."
 msgstr ""
-"Bios önyükleme logosunu atlayın, varsayılan dil sorunlarına neden olabilir."
+"Bios önyükleme logosunu atla, varsayılan dil sorunlarına neden olabilir."
 
 #. TRANSLATION: rtcw
 msgctxt "game_options"
@@ -17332,6 +17361,11 @@ msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "ÇALIŞTIRICI MODU"
 
+#. TRANSLATION: ymir
+msgctxt "game_options"
+msgid "TRANSPARENT MESHES"
+msgstr "ŞEFFAF KAFESLER"
+
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
@@ -17340,7 +17374,7 @@ msgstr "ÜÇ DOĞRUSAL FİLTRELEME"
 #. TRANSLATION: sonicmania
 msgctxt "game_options"
 msgid "TRIPLE BUFFERING"
-msgstr "ÜÇLÜ TAMPONLAMA"
+msgstr "ÜÇLÜ ARABELLEK"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -18231,7 +18265,7 @@ msgstr ""
 #. TRANSLATION: libretro/neocd
 msgctxt "game_options"
 msgid "Universe BIOS is not compatible with cheats."
-msgstr "Universe BIOS hilelerle uyumlu değildir."
+msgstr "Universe BİOS hilelerle uyumlu değildir."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -18906,7 +18940,7 @@ msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
 
-#. TRANSLATION: cemu, flycast
+#. TRANSLATION: cemu, flycast, gzdoom
 msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan (Varsayılan)"

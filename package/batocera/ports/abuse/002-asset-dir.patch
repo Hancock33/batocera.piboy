@@ -1,0 +1,27 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c1bd11e..bef9943 100755
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -57,13 +57,8 @@ elseif(APPLE)
+     set(ASSETDIR "abuse.app/Contents/Resources/data")
+ else()    
+     # Under Linux, use standard installation paths
+-    if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+-        # Standard system installation
+-        set(ASSETDIR "${CMAKE_INSTALL_FULL_DATADIR}/games/${PROJECT_NAME}/data")        
+-    else()
+-        # Local installation
+-        set(ASSETDIR "${CMAKE_INSTALL_PREFIX}/data")
+-    endif()
++    set(ASSETDIR "/userdata/roms/ports/abuse")
++
+     # Only define this for ports that actually use it
+     add_compile_definitions(ASSETDIR="${ASSETDIR}")
+     
+@@ -115,4 +110,4 @@ if(UNIX AND NOT APPLE)
+ endif()
+ 
+ add_subdirectory(src)
+-add_subdirectory(data)
+\ No newline at end of file
++add_subdirectory(data)
