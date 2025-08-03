@@ -63,3 +63,4 @@ x16emu.mk
 xbox-xcloud-client.mk
 xenia-canary.mk
 xenia.mk
+xemu.mk
