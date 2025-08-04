@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Options file\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-23 21:22+0300\n"
+"PO-Revision-Date: 2025-08-04 17:24+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish\n"
 "Language: tr\n"
@@ -2312,7 +2312,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "POWERPC FREKANSINI AYARLA"
 
-#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
+#. TRANSLATION: amiberry, azahar, bigpemu, cemu, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "GELİŞMİŞ SEÇENEKLER"
@@ -2656,6 +2656,11 @@ msgstr "OTOMATİK KARE ATLA"
 msgctxt "game_options"
 msgid "AUTO GRAB MOUSE"
 msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO HEIGHT"
+msgstr "OTOMATİK YÜKSEKLİK"
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
@@ -6127,6 +6132,11 @@ msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "VERİ EKLENTİSİ"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "DE"
+msgstr "DE"
+
 #. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
 msgid "DEADZONE"
@@ -7633,6 +7643,11 @@ msgstr ""
 "OutRun 2 ağının aynı ağdaki başka bir bilgisayara karşı oynatılması için IP "
 "adresini etkinleştirin."
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Enable the Virtual Keyboard."
+msgstr "Sanal klavyeyi etkinleştirin."
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
@@ -8351,10 +8366,10 @@ msgctxt "game_options"
 msgid "FPS TARGET"
 msgstr "FPS HEDEFİ"
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: amiberry, f2bgl
 msgctxt "game_options"
 msgid "FR"
-msgstr ""
+msgstr "FR"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -10064,6 +10079,11 @@ msgctxt "game_options"
 msgid "High Performance"
 msgstr "Yüksek Performans"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "High-Resolution Keyboard, which is larger and might be easier to see."
+msgstr "Daha büyük olan ve daha kolay görülebilen Yüksek Çözünürlüklü Klavye."
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "High-end Computer"
@@ -10819,6 +10839,16 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "ANA EKRANI ÜSTTE TUT"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD LAYOUT"
+msgstr "KLAVYE DÜZENİ"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD OPTIONS"
+msgstr "KLAVYE SEÇENEKLERİ"
+
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
@@ -10828,6 +10858,11 @@ msgstr "KLAVYE DOĞRUDAN GEÇİŞİ"
 msgctxt "game_options"
 msgid "KEYBOARD SUPPORT"
 msgstr "KLAVYE DESTEĞİ"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD TRANSPARENCY"
+msgstr "KLAVYE ŞEFFAFLIĞI"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -10977,6 +11012,11 @@ msgstr "DİL"
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
 msgstr "DİL KİLİDİNİ AÇ"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "LARGER KEYBOARD"
+msgstr "DAHA BÜYÜK KLAVYE"
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -14713,6 +14753,11 @@ msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
+msgid "Resize automatically screen height."
+msgstr "Ekran yüksekliğini otomatik olarak yeniden boyutlandırın."
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
 msgstr ""
 
@@ -15958,6 +16003,11 @@ msgstr "Görüş alanını ayarlayın."
 msgctxt "game_options"
 msgid "Set the fps limit."
 msgstr "Fps sınırını ayarlayın."
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Set the on-screen keyboard transparency (0-100%)."
+msgstr "Ekran klavyesi saydamlığını ayarlayın (%0-100)."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -17607,6 +17657,12 @@ msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "Bu seçenek, fare ile oynanan bazı silah oyunları için gereklidir."
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid ""
+"This setting controls the default language layout for the virtual keyboard."
+msgstr "Bu ayar sanal klavye için varsayılan dil düzenini kontrol eder."
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -17947,7 +18003,7 @@ msgctxt "game_options"
 msgid "UI PROMPTS"
 msgstr "ARAYÜZ İSTEMLERİ"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: amiberry, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "UK"
 msgstr "UK"
@@ -17966,6 +18022,11 @@ msgstr "YÜKSELTME MODU"
 msgctxt "game_options"
 msgid "US"
 msgstr "US"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "US (Default)"
+msgstr "ABD (Varsayılan)"
 
 #. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
@@ -18794,6 +18855,11 @@ msgstr "ŞİDDET SEVİYESİ"
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "SANAL MASAÜSTÜ"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD"
+msgstr "SANAL KLAVYE"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -19911,10 +19977,6 @@ msgstr "sarı/mavi"
 #~ msgstr "SES SÜRÜCÜSÜ"
 
 #~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "OTOMATİK YÜKSEKLİK"
-
-#~ msgctxt "game_options"
 #~ msgid "Acron Electron ROMs"
 #~ msgstr "Acron Electron ROMları"
 
@@ -20268,10 +20330,6 @@ msgstr "sarı/mavi"
 #~ msgstr ""
 #~ "İlerlemek için direksiyonun merkezinde ölü olmayan bölge oluşturun "
 #~ "(derece)"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "Ekran yüksekliğini otomatik olarak yeniden boyutlandırın."
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

@@ -2425,7 +2425,7 @@ msgctxt "game_options"
 msgid "Setting for DIP switch 1."
 msgstr ""
 
-#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
+#. TRANSLATION: amiberry, azahar, bigpemu, cemu, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr ""
@@ -9309,6 +9309,16 @@ msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
+msgid "Resize automatically screen height."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO HEIGHT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
 msgid "Enable the Virtual Keyboard."
 msgstr ""
 
@@ -9348,7 +9358,7 @@ msgctxt "game_options"
 msgid "US (Default)"
 msgstr ""
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, f2bgl
 msgctxt "game_options"
 msgid "FR"
 msgstr ""
@@ -15580,11 +15590,6 @@ msgstr ""
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "EN"
-msgstr ""
-
-#. TRANSLATION: f2bgl
-msgctxt "game_options"
-msgid "FR"
 msgstr ""
 
 #. TRANSLATION: f2bgl

@@ -2304,7 +2304,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "PowerPC の周波数を調整"
 
-#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
+#. TRANSLATION: amiberry, azahar, bigpemu, cemu, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "詳細設定"
@@ -2648,6 +2648,11 @@ msgstr "自動フレームスキップ"
 msgctxt "game_options"
 msgid "AUTO GRAB MOUSE"
 msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO HEIGHT"
+msgstr "高さを調整する"
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
@@ -6085,6 +6090,11 @@ msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "データ プラグイン"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "DE"
+msgstr ""
+
 #. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
 msgid "DEADZONE"
@@ -7579,6 +7589,11 @@ msgstr ""
 "同じネットワーク上のPCと対戦するためにOutRun 2などの\n"
 "ネットワークプレイのIPアドレスを有効にします"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Enable the Virtual Keyboard."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
@@ -8274,7 +8289,7 @@ msgctxt "game_options"
 msgid "FPS TARGET"
 msgstr "目標 FPS"
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: amiberry, f2bgl
 msgctxt "game_options"
 msgid "FR"
 msgstr ""
@@ -9987,6 +10002,11 @@ msgctxt "game_options"
 msgid "High Performance"
 msgstr "ハイパフォーマンス"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "High-Resolution Keyboard, which is larger and might be easier to see."
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "High-end Computer"
@@ -10737,6 +10757,16 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "メイン画面を最前面に表示"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD LAYOUT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD OPTIONS"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
@@ -10746,6 +10776,11 @@ msgstr "キーボード パススルー"
 msgctxt "game_options"
 msgid "KEYBOARD SUPPORT"
 msgstr "キーボード の使用"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD TRANSPARENCY"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -10894,6 +10929,11 @@ msgstr "言語"
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
 msgstr "言語ロック解除"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "LARGER KEYBOARD"
+msgstr ""
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -14600,6 +14640,11 @@ msgstr "古いBatocera(29より前)で実行していた場合、修正される
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
+msgid "Resize automatically screen height."
+msgstr "画面の高さを自動的に変更します"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
 msgstr ""
 
@@ -15838,6 +15883,11 @@ msgstr "視野を設定します"
 msgctxt "game_options"
 msgid "Set the fps limit."
 msgstr "fps制限を設定します"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Set the on-screen keyboard transparency (0-100%)."
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -17473,6 +17523,12 @@ msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "マウスを使ってプレイする時に、一部のガン専用ゲームに必要です"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid ""
+"This setting controls the default language layout for the virtual keyboard."
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -17810,7 +17866,7 @@ msgctxt "game_options"
 msgid "UI PROMPTS"
 msgstr "UI プロンプト 表示"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: amiberry, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "UK"
 msgstr "イギリス"
@@ -17829,6 +17885,11 @@ msgstr "アップスケール モード"
 msgctxt "game_options"
 msgid "US"
 msgstr "アメリカ"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "US (Default)"
+msgstr ""
 
 #. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
@@ -18648,6 +18709,11 @@ msgstr "バイオレンス レベル"
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "仮想デスクトップ"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -19758,10 +19824,6 @@ msgstr "黄/青"
 #~ msgstr "オーディオドライバ"
 
 #~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "高さを調整する"
-
-#~ msgctxt "game_options"
 #~ msgid "Acron Electron ROMs"
 #~ msgstr "Acron Electron ROM"
 
@@ -20120,10 +20182,6 @@ msgstr "黄/青"
 #~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
 #~ "(in degrees)"
 #~ msgstr "直進のためにステアリングの中間幅を設定 (度単位)"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "画面の高さを自動的に変更します"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
