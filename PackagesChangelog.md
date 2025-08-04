@@ -15,6 +15,8 @@ Ports|[box64](http://github.com/ptitseb/box64)|368f14b4ce1ae8635f4df2e1295fe745c
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|e1c95e0eab93214725b4e98f1225471695e92260|Aug 04, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|843dbdf59c3c7a41c864fdd314be6e4fcb1b6041|Aug 04, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2f7d44a9f1965b928fb75abec40363ae45d9815a|Aug 04, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250804|Aug 04, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250804|Aug 04, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4c0c4455c6f2e1875910a9834d7a46a90c0bd1ad|Aug 04, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|37d63273707a416d15548df0d5031cec329fb563|Aug 04, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|10ada3c141b493a24055e6293425f307c95cf34d|Aug 04, 2025
@@ -34,9 +36,7 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45724|Aug 03, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|7701657d562cb00e53c8a48afbf578092a336cce|Aug 03, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|9828f8d6a1ac4f1a6c87da13113cb856cb24c6b2|Aug 03, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|a72bc153db1e6ced6e30431b5217e1a53576712c|Aug 03, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250803|Aug 03, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|e1976761d4b8def9d9902578288107a80c691063|Aug 03, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250803|Aug 03, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|2f52f73b9b257e975d9e01fce1582b897b159c29|Aug 03, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|9719bb01552ca9bfa45282a7b816a79bab9eabe3|Aug 03, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|9719bb01552ca9bfa45282a7b816a79bab9eabe3|Aug 03, 2025
