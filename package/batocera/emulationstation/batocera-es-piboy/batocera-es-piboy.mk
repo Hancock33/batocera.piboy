@@ -3,8 +3,8 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Aug 04, 2025
-BATOCERA_ES_PIBOY_VERSION = c3d5c6737b5e0c5847d9a14dbac718d773ce92cc
+# Version: Commits on Aug 05, 2025
+BATOCERA_ES_PIBOY_VERSION = a0dd8319c67362acdcb3be64c35caffb15911b07
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
@@ -15,7 +15,7 @@ BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib 
 BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 
-BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -fpermissive -D$(call UPPERCASE,$(BATOCERA_SYSTEM_ARCH))"
+BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -D$(call UPPERCASE,$(BATOCERA_SYSTEM_ARCH))"
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 BATOCERA_ES_PIBOY_CONF_OPTS += -DGL=ON
