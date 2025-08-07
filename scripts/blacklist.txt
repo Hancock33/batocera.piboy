@@ -5,7 +5,6 @@ firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
 firmware-rk3588.mk
-kodi-pvr-freebox.mk
 lib32bit.mk
 model2emu.mk
 noto-cjk-fonts.mk

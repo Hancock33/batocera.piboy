@@ -9,6 +9,7 @@ ecm.mk
 flatpak.mk
 fpinball.mk
 kddocwidgets.mk
+kodi-pvr-freebox.mk
 labwc.mk
 layershellqt.mk
 libdbusmenu.mk
