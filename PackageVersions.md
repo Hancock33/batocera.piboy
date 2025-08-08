@@ -148,9 +148,9 @@ Emulators|[libretro-freeintv](http://github.com/libretro/freeintv)|6efc4b8fd4c74
 Emulators|[libretro-freej2me](http://github.com/hex007/freej2me)|8b9bc8a19baf26e3d92f88934a64a32f1cbc2795|Feb 16, 2024
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|cad85b7b1b864c65734f71aa4a510b6f6536881c|Nov 24, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|13b7af780e9893ae62cc24d567591b5eb6a6dd72|Jul 25, 2025
-Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|56e76e0f68b6f134d72a06a5d144041922d93542|Aug 06, 2025
-Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|6964ca4b49ab9882aa8dc733773d286d165b671e|Aug 08, 2025
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|ae1f1349f70f0dbc9d9ad889d0bc27718e6ed010|Aug 07, 2025
+Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|1b6146a33447c20dd0af1f049ede17dc7f8fe44a|Aug 08, 2025
+Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|2b24aa61273851c2616094240a23b1b9c8a2971d|Aug 08, 2025
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|ca91d3e6767a910380e2e6dd2337bc7dce1f052f|Aug 08, 2025
 Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genesis-Plus-GX-Expanded-Rom-Size)|258749423d02e9cba34ef4221c91ea3e01cef126|Jul 16, 2025
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|b7d314220d755537aebb7bc1750ac21f764365c4|Oct 21, 2024
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|a80e3b3b957d38961e274aa4da450245ddc63fe8|Aug 01, 2025
@@ -357,7 +357,7 @@ Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|18
 Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.1-Piers|Apr 18, 2025
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.0.5|Apr 24, 2025
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20250117|Jan 17, 2025
-Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.17.0-rc1|Aug 01, 2025
+Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.17.0|Aug 01, 2025
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|465b2b0f4a09ae987f112dbc3e66e6445b07847f|May 31, 2025
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|a246ee39c32cc4b34580dc24d434ac9a4007a74b|Jul 24, 2025
@@ -457,8 +457,8 @@ Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|8d4a4974bafe
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|5fd6760ed555049aab30aa5a97e9ac47d8f81f33|Aug 08, 2025
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|9933cbe887aaa2c75e723ba6322942fec2b838e7|Jul 25, 2025
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a98cb8f2abd8f25ed7f84591220da6d400788347|Aug 08, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250807|Aug 07, 2025
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|2abfa2f0a80e620f5c2352f8ba38e13167a5d85c|Aug 08, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250808|Aug 08, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14248|Aug 06, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|74218b803a1132a17f191ac52068193cac3b3ac5|Jun 16, 2025
@@ -566,5 +566,5 @@ Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|ca5ceaae14ac57900fa4fca46467620f4e7af765|Jul 18, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.5|Apr 04, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250807|Aug 07, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250808|Aug 08, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|2c76995ed67b5bf3e957e73afb4fbb4734593149|Jul 14, 2025

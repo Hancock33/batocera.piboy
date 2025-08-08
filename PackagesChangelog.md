@@ -11,7 +11,9 @@ Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.0|Aug 08, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|7d9d8694234d30e3e5172e79cb849a1324dd9495|Aug 08, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|df2e4f941f616a775388004138e605518d9cdb8d|Aug 08, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|caaeeaf06d3ef63f3600aecc84cd7d39d53c2123|Aug 08, 2025
-Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a98cb8f2abd8f25ed7f84591220da6d400788347|Aug 08, 2025
+Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|2abfa2f0a80e620f5c2352f8ba38e13167a5d85c|Aug 08, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250808|Aug 08, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250808|Aug 08, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|475775911ad53216ad93658db7e38a8b651d09be|Aug 08, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|d411893e44716968f0e305f64eba50704b503c7d|Aug 08, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|281d928871eadecbef3ab5acd274db32d5781201|Aug 08, 2025
@@ -19,7 +21,9 @@ Ports|[tr2x](http://github.com/LostArtefacts/TRX)|281d928871eadecbef3ab5acd274db
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|5fd6760ed555049aab30aa5a97e9ac47d8f81f33|Aug 08, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7c8e2a598fda0bcb641b472a5fa9183d5063713e|Aug 08, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|c4096a8e685e432fac5bbba6d41262d17ca8fa26|Aug 08, 2025
-Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|6964ca4b49ab9882aa8dc733773d286d165b671e|Aug 08, 2025
+Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|1b6146a33447c20dd0af1f049ede17dc7f8fe44a|Aug 08, 2025
+Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|2b24aa61273851c2616094240a23b1b9c8a2971d|Aug 08, 2025
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|ca91d3e6767a910380e2e6dd2337bc7dce1f052f|Aug 08, 2025
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|eb87bbfad308f6aee3f03d87391e80244885ddf5|Aug 08, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5898466330a56b1761af52c64cb1bca597292f89|Aug 08, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|22f381a19e4841711c0cd6b2621a587f53205549|Aug 08, 2025
@@ -35,9 +39,6 @@ Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|6a4738f3108e
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|192acace951633830ca6807a85c4a80e821c2ff7|Aug 07, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|e556f58cc4aa6788a90834c57bea6ddd8a9c5c80|Aug 07, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.0-rc.24|Aug 07, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250807|Aug 07, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250807|Aug 07, 2025
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|ae1f1349f70f0dbc9d9ad889d0bc27718e6ed010|Aug 07, 2025
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|bd81c72608817a46b85295454c7b852a0b6223a1|Aug 07, 2025
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|c26b06ac2752a11ee47abc6f9c73595ee874341c|Aug 07, 2025
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|92313128c3e2afdb9b3decf6642d342af18a1ab5|Aug 07, 2025
@@ -52,7 +53,6 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14248|Aug 06, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|0eda66c2d6709ce1939f4c39b673a233560c72f6|Aug 06, 2025
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|95268648af5547ebbbbeebf4007034e9bfabcd73|Aug 06, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|1e42a9076ab1ec5756d3f72e6d61923080fb2128|Aug 06, 2025
-Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|56e76e0f68b6f134d72a06a5d144041922d93542|Aug 06, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|a0dd8319c67362acdcb3be64c35caffb15911b07|Aug 05, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|a0dd8319c67362acdcb3be64c35caffb15911b07|Aug 05, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|31321f2c92402007cbeccd97be0089b6f4ddc67d|Aug 05, 2025
@@ -85,7 +85,7 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|40e400ab084175d3b
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|1d8ad1526511d966b6b78a3149b492ca124c1a0a|Aug 01, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0279|Aug 01, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0f74cff52b96841fe0efa01ffd1a6875b253e72a|Aug 01, 2025
-Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.17.0-rc1|Aug 01, 2025
+Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.17.0|Aug 01, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0279|Aug 01, 2025
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|408ca1ed5e4e0a9ac3650b13d3f3c60079b3e2a3|Aug 01, 2025
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|c95e401e1dd37522b6d84d0017702cfece2be840|Aug 01, 2025
