@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Aug 04, 2025
-SHADPS4_VERSION = 0044a27c1f3d1dfcab9c373c930024b06ac77145
+# Version: Commits on Aug 07, 2025
+SHADPS4_VERSION = befc5ec17bcc3d7fdbcd3631d1cfe1f71825cfaa
 SHADPS4_SITE = https://github.com/AzaharPlus/shadPS4Plus.git
 SHADPS4_BRANCH = main
 SHADPS4_SITE_METHOD=git
