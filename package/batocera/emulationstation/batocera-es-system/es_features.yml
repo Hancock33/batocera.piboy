@@ -12467,6 +12467,12 @@ xemu:
             choices:
                 "OpenGL": "OPENGL"
                 "Vulkan": "VULKAN"
+        xemu_zink:
+            prompt: USE ZINK FOR RENDERING
+            description: Fixes some issues for non Nvidia GPUs.
+            choices:
+                "Off (Default)": "false"
+                "On":            "true"
         xemu_scaling:
             group: VIDEO SETTINGS
             prompt: SCALING MODE

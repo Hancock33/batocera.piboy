@@ -59,8 +59,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|a0dd8319c67362acdcb3be64c35caffb15911b07|Aug 05, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|a0dd8319c67362acdcb3be64c35caffb15911b07|Aug 05, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2a5bcdab52ffb955191eb148df3ef8a4eb610ed4|Aug 09, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2a5bcdab52ffb955191eb148df3ef8a4eb610ed4|Aug 09, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|0a67c9928710340721b7c92472bacb529710ef4a|Jul 23, 2025
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|ca2c61a8f5f4b3f73cf4be1fe72ec741f955e13a|Jul 09, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|b6be35e919a417d0ba6a42ea784cc41172223ee9|Jul 30, 2025
@@ -261,7 +261,7 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|f3d4a2d0996d180cd0e0198bdc62b1c0fb9ad017|Jul 17, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|12b27b2b994e79bd8d13b47b71608aeb50bc6599|Aug 08, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|4d667f5151890d9d8b3b84d7e047470772153528|Aug 09, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.102|Aug 08, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|c7e327b5b86bfeaf13e89440a319ee5b0c039a3d|Jul 26, 2024
@@ -425,7 +425,7 @@ Ports|[box86](http://github.com/ptitseb/box86)|ac48800fbbdac4a547acf8044b92a4993
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|1bfbec8fe6797e6ee873573a97a447b3bd44ed56|Jul 29, 2025
-Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|75b85961478676af5d135cefa2e687c2755be655|Aug 09, 2025
+Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|4d958c4ed8e8653f660a286478d69dc0cd865629|Aug 09, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|e9782c7328bcee0df33e401a9ff1a0ec563de88d|May 24, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|7701657d562cb00e53c8a48afbf578092a336cce|Aug 03, 2025
@@ -496,8 +496,8 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63f
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2f7d44a9f1965b928fb75abec40363ae45d9815a|Aug 04, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c0efc619e85dc318b363e16fa64770c788f74a23|Mar 08, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|5a0465b85b03d69c94351ef21f9d2591bdcbde77|Apr 19, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|c0e5e98927b95a888df4745aa8631fd09523e837|Aug 09, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|c0e5e98927b95a888df4745aa8631fd09523e837|Aug 09, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|df30edebbaa604d13d3a7fcb52b741a4f42d9e51|Aug 09, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|df30edebbaa604d13d3a7fcb52b741a4f42d9e51|Aug 09, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.8|Apr 25, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|cc9abf506b408ce91c3d14660920e6928668caf2|Jun 22, 2025

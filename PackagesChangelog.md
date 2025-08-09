@@ -1,20 +1,22 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2a5bcdab52ffb955191eb148df3ef8a4eb610ed4|Aug 09, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2a5bcdab52ffb955191eb148df3ef8a4eb610ed4|Aug 09, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|2a2a011854279cb97050edf583d0e1e507f96895|Aug 09, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|4d667f5151890d9d8b3b84d7e047470772153528|Aug 09, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-09|Aug 09, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|fb4f802b89dd9a6527ffcf36152e0d5ebd1f8e7c|Aug 09, 2025
-Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|75b85961478676af5d135cefa2e687c2755be655|Aug 09, 2025
+Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|4d958c4ed8e8653f660a286478d69dc0cd865629|Aug 09, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|fe026a5c07a1f27825d9303c23932775b70eadcd|Aug 09, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|849be73e5704049a104d3bb616846148410ed498|Aug 09, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e2fce1453029b72812b784a6b6c254a81df9aaaa|Aug 09, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|c0e5e98927b95a888df4745aa8631fd09523e837|Aug 09, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|c0e5e98927b95a888df4745aa8631fd09523e837|Aug 09, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|df30edebbaa604d13d3a7fcb52b741a4f42d9e51|Aug 09, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|df30edebbaa604d13d3a7fcb52b741a4f42d9e51|Aug 09, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|8786f733836c56761fe897200feb20a8967fc9ed|Aug 08, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|ebd1a6b47c65482c3e1b1260761255325b25cd2b|Aug 08, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|f3e1fdc9af8df3b57742170631c7f62143b7f259|Aug 08, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|111fc6a34375ad0d964891bb925d132770739c8d|Aug 08, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|12b27b2b994e79bd8d13b47b71608aeb50bc6599|Aug 08, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.102|Aug 08, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5898466330a56b1761af52c64cb1bca597292f89|Aug 08, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|48d3b3020409c14f4c4388fa5c2d72e3da8bfc65|Aug 08, 2025
@@ -59,8 +61,6 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|d532e4c398feaf0df
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14248|Aug 06, 2025
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|95268648af5547ebbbbeebf4007034e9bfabcd73|Aug 06, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|1e42a9076ab1ec5756d3f72e6d61923080fb2128|Aug 06, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|a0dd8319c67362acdcb3be64c35caffb15911b07|Aug 05, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|a0dd8319c67362acdcb3be64c35caffb15911b07|Aug 05, 2025
 Ports|[avp](http://github.com/atsb/NakedAVP)|febda659bc62c69734a2e762dbad670ad6659d54|Aug 05, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|7543fc8af09232396f7d57e19c2342965c53e94f|Aug 05, 2025
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|83438f9b1a2c832319876a1fda130a5e33d4ef87|Aug 05, 2025
