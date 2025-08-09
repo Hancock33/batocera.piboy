@@ -24,15 +24,15 @@ OPENMOHAA_LICENSE_FILE = COPYING.txt
 
 OPENMOHAA_DEPENDENCIES += libcurl openal sdl2
 
-OPENMOHAA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-OPENMOHAA_CONF_OPTS += -DTARGET_LOCAL_SYSTEM=ON
+OPENMOHAA_CONF_OPTS += -DBUILD_SERVER=OFF
+OPENMOHAA_CONF_OPTS += -DUSE_INTERNAL_LIBS=ON
 
 # We just want the client
 define OPENMOHAA_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/openmohaa
-	cp $(@D)/buildroot-build/openmohaa $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/code/client/cgame/cgame.so $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/code/server/fgame/game.so  $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/openmohaa $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/cgame.so $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/game.so  $(TARGET_DIR)/usr/bin/openmohaa/
 endef
 
 define OPENMOHAA_EVMAPY
