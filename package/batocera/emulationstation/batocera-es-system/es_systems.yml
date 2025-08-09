@@ -4260,7 +4260,7 @@ mohaa:
   extensions:           [mohaa]
   platform:             pc
   group:                ports
-  path:                 /userdata/roms/ports/jknight
+  path:                 /userdata/roms/ports/mohaa
   emulators:
     openmohaa:
       openmohaa:        { requireAnyOf: [BR2_PACKAGE_OPENMOHAA] }
