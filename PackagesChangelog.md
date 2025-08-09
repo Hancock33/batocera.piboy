@@ -3,6 +3,7 @@
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2a5bcdab52ffb955191eb148df3ef8a4eb610ed4|Aug 09, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2a5bcdab52ffb955191eb148df3ef8a4eb610ed4|Aug 09, 2025
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e45310ce890add18f00c674680205b3ad381857b|Aug 09, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|2a2a011854279cb97050edf583d0e1e507f96895|Aug 09, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|6fcff16567cf0dcd92dbb5e24773d722c1d51ff9|Aug 09, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-09|Aug 09, 2025
@@ -124,7 +125,6 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|13b7
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|a246ee39c32cc4b34580dc24d434ac9a4007a74b|Jul 24, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|da068f8175e387ecdbc0499524316215011f609d|Jul 24, 2025
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|ac3e232b001129c740b7b65196ae0e1b13b82513|Jul 23, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|0a67c9928710340721b7c92472bacb529710ef4a|Jul 23, 2025
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|4e526f0c8057e4eae0e00a323d7d4c58cdee8813|Jul 23, 2025
 Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/piers/resource.language.el_gr)|11.0.71|Jul 22, 2025
 Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/piers/resource.language.es_es)|11.0.92|Jul 22, 2025
