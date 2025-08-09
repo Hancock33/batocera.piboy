@@ -1,13 +1,15 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|d65c8a307340e2014b42960ed32e0101878c942a|Aug 09, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|2a2a011854279cb97050edf583d0e1e507f96895|Aug 09, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-09|Aug 09, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|fb4f802b89dd9a6527ffcf36152e0d5ebd1f8e7c|Aug 09, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|75b85961478676af5d135cefa2e687c2755be655|Aug 09, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|fe026a5c07a1f27825d9303c23932775b70eadcd|Aug 09, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|849be73e5704049a104d3bb616846148410ed498|Aug 09, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e2fce1453029b72812b784a6b6c254a81df9aaaa|Aug 09, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|c0e5e98927b95a888df4745aa8631fd09523e837|Aug 09, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|c0e5e98927b95a888df4745aa8631fd09523e837|Aug 09, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|8786f733836c56761fe897200feb20a8967fc9ed|Aug 08, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|ebd1a6b47c65482c3e1b1260761255325b25cd2b|Aug 08, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|f3e1fdc9af8df3b57742170631c7f62143b7f259|Aug 08, 2025
@@ -26,10 +28,9 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|caaeeaf06d3e
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e48b2d94627f62b31246a229350bb3a9be1b5c82|Aug 08, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|59329b4fb311bf3b285a6dba160523ddb454eb51|Aug 08, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250808|Aug 08, 2025
+Controllers|[xone](http://github.com/dlundqvist/xone)|b26f7538734b5a123cbfee85fcae7f1c0d5a98b4|Aug 08, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250808|Aug 08, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|4b55e7ad14d8471cdbb57ce44c5ccb42763d5d1b|Aug 08, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|eeaeb43207ce4e38cdba04b9068363ee4fdabe98|Aug 08, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|eeaeb43207ce4e38cdba04b9068363ee4fdabe98|Aug 08, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|5fd6760ed555049aab30aa5a97e9ac47d8f81f33|Aug 08, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7c8e2a598fda0bcb641b472a5fa9183d5063713e|Aug 08, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|c4096a8e685e432fac5bbba6d41262d17ca8fa26|Aug 08, 2025
@@ -72,7 +73,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2f7d44a9f1965b928fb7
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|0f04103768ad52bd8915a4c0a839249443d00036|Aug 04, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin)|4421c8bd8c173100cdd1de7bd15ff1717805e498|Aug 03, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|7701657d562cb00e53c8a48afbf578092a336cce|Aug 03, 2025
-Controllers|[xone](http://github.com/dlundqvist/xone)|e1976761d4b8def9d9902578288107a80c691063|Aug 03, 2025
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|5b883465370bc7ad5a3576d26e7cee2ec553d3a0|Aug 03, 2025
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|82675dabc8b1c9b1f552d55176357c661d9047c2|Aug 02, 2025
 Utils|[labwc](http://github.com/labwc/labwc)|0.9.1|Aug 02, 2025
@@ -88,6 +88,7 @@ Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mam
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0f74cff52b96841fe0efa01ffd1a6875b253e72a|Aug 01, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.17.0|Aug 01, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0279|Aug 01, 2025
+Wine|[wine-proton](http://github.com/ValveSoftware/wine)|d6b38caea2580c68d87c4fda8bc2613cea536f0c|Aug 01, 2025
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|408ca1ed5e4e0a9ac3650b13d3f3c60079b3e2a3|Aug 01, 2025
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|c95e401e1dd37522b6d84d0017702cfece2be840|Aug 01, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|e90b821fc0507a6bdde3596ec32b7b59feae1d1a|Aug 01, 2025
@@ -151,7 +152,6 @@ Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|c00e8659b40841
 Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|8d4a4974bafe1135ded79d9b59279c0c770a38a2|Jul 19, 2025
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|3fc66ee4b562910a17e2e2f3bad74572a8bcc134|Jul 19, 2025
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|03263df64130ce98dc2d712638aae2a3d6722ae2|Jul 19, 2025
-Wine|[wine-proton](http://github.com/ValveSoftware/wine)|ca5ceaae14ac57900fa4fca46467620f4e7af765|Jul 18, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|28c358173a39d6311841c756ac0e82975d798048|Jul 18, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|2349daafacfb7a7abe2cfecf30a49ae837bdf2c6|Jul 17, 2025
 Utils|[picade](http://github.com/pimoroni/picade-hat)|1b6fdfb4fd10f0dc2e797f681922a371c36b6ab0|Jul 17, 2025

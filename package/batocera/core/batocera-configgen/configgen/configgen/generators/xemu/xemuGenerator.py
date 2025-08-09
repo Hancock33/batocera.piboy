@@ -34,7 +34,10 @@ class XemuGenerator(Generator):
 
         environment = {
             "XDG_CONFIG_HOME": CONFIGS,
-            "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)
+            "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
+           #"MESA_LOADER_DRIVER_OVERRIDE": "zink",
+            "GALLIUM_DRIVER": "zink",
+            "LIBGL_KOPPER_DRI2": "1"
         }
 
         return Command.Command(array=commandArray, env=environment)

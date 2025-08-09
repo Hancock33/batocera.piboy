@@ -50,7 +50,7 @@ Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 
 Controllers|[uinput-joystick](http://github.com/shantigilbert/uinput_joystick)|bea7d56f4947b547db2b827640bc9966fe770f84|Feb 11, 2022
 Controllers|[umtool](http://github.com/katie-snow/Ultimarc-linux)|20b8c56a3e6f94034b8529eddd777306f5b6152b|Jun 13, 2022
 Controllers|[xarcade2jstick](http://github.com/petrockblog/xarcade2jstick)|7b579e9e9554e6d997978d069ddeb566ff381007|Apr 10, 2023
-Controllers|[xone](http://github.com/dlundqvist/xone)|e1976761d4b8def9d9902578288107a80c691063|Aug 03, 2025
+Controllers|[xone](http://github.com/dlundqvist/xone)|b26f7538734b5a123cbfee85fcae7f1c0d5a98b4|Aug 08, 2025
 Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727d9b2f867871|Apr 24, 2022
 Controllers|[xpad-noone](http://github.com/medusalix/xpad-noone)|6970c40930bedd8b58d0764894e0d5f04813b7c5|Apr 24, 2024
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|a16acb03e7be191d47ebfbc8ca1d5223422dac3e|Jul 04, 2025
@@ -80,7 +80,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|d65c8a307340e2014b42960ed32e0101878c942a|Aug 09, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|2a2a011854279cb97050edf583d0e1e507f96895|Aug 09, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|7d0c9a8bf1cfbf9f8f48d9b036ec4fd3ef19478c|Jul 31, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|40e400ab084175d3bd0f9e10cf8d6ac78c8b9544|Aug 01, 2025
@@ -496,8 +496,8 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63f
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2f7d44a9f1965b928fb75abec40363ae45d9815a|Aug 04, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c0efc619e85dc318b363e16fa64770c788f74a23|Mar 08, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|5a0465b85b03d69c94351ef21f9d2591bdcbde77|Apr 19, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|eeaeb43207ce4e38cdba04b9068363ee4fdabe98|Aug 08, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|eeaeb43207ce4e38cdba04b9068363ee4fdabe98|Aug 08, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|c0e5e98927b95a888df4745aa8631fd09523e837|Aug 09, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|c0e5e98927b95a888df4745aa8631fd09523e837|Aug 09, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.8|Apr 25, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|cc9abf506b408ce91c3d14660920e6928668caf2|Jun 22, 2025
@@ -564,7 +564,7 @@ Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.11|
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-10.1.0|May 24, 2025
 Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
-Wine|[wine-proton](http://github.com/ValveSoftware/wine)|ca5ceaae14ac57900fa4fca46467620f4e7af765|Jul 18, 2025
+Wine|[wine-proton](http://github.com/ValveSoftware/wine)|d6b38caea2580c68d87c4fda8bc2613cea536f0c|Aug 01, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.5|Apr 04, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250808|Aug 08, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|2c76995ed67b5bf3e957e73afb4fbb4734593149|Jul 14, 2025
