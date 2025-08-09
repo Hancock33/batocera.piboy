@@ -8638,6 +8638,11 @@ msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr ""
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "Fixes some issues for non Nvidia GPUs."
+msgstr ""
+
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
@@ -17974,7 +17979,7 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "ERABILI BOLANTEAK"
 
-#. TRANSLATION: lindbergh-loader
+#. TRANSLATION: lindbergh-loader, xemu
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
 msgstr ""

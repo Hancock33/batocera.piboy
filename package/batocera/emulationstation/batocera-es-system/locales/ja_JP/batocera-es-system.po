@@ -8666,6 +8666,11 @@ msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "ちらつきを修正"
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "Fixes some issues for non Nvidia GPUs."
+msgstr ""
+
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
@@ -18006,7 +18011,7 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "ホイール(ハンドル)を使用"
 
-#. TRANSLATION: lindbergh-loader
+#. TRANSLATION: lindbergh-loader, xemu
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
 msgstr "レンダリングにZINKを使用します"

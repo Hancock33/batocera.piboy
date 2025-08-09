@@ -8708,6 +8708,11 @@ msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "Исправляет мерцание."
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "Fixes some issues for non Nvidia GPUs."
+msgstr ""
+
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
@@ -18114,7 +18119,7 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "ИСПОЛЬЗОВАТЬ РУЛЬ"
 
-#. TRANSLATION: lindbergh-loader
+#. TRANSLATION: lindbergh-loader, xemu
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
 msgstr "ИСП. ZINK ДЛЯ РЕНДЕРИНГА"

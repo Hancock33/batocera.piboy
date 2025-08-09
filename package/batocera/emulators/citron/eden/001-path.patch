@@ -1,0 +1,39 @@
+diff --git a/src/common/fs/path_util.cpp b/src/common/fs/path_util.cpp
+index e032360961..98f73e0179 100644
+--- a/src/common/fs/path_util.cpp
++++ b/src/common/fs/path_util.cpp
+@@ -156,21 +156,21 @@ public:
+ 
+ #endif
+ 
+-        GenerateEdenPath(EdenPath::EdenDir, eden_path);
+-        GenerateEdenPath(EdenPath::AmiiboDir, eden_path / AMIIBO_DIR);
+-        GenerateEdenPath(EdenPath::CacheDir, eden_path_cache);
+-        GenerateEdenPath(EdenPath::ConfigDir, eden_path_config);
++        GenerateEdenPath(EdenPath::EdenDir, "/userdata/saves/switch/yuzu");
++        GenerateEdenPath(EdenPath::AmiiboDir, "/userdata/bios/switch/amiibo");
++        GenerateEdenPath(EdenPath::CacheDir, "/userdata/system/cache/yuzu");
++        GenerateEdenPath(EdenPath::ConfigDir, "/userdata/system/configs/yuzu");
+         GenerateEdenPath(EdenPath::CrashDumpsDir, eden_path / CRASH_DUMPS_DIR);
+-        GenerateEdenPath(EdenPath::DumpDir, eden_path / DUMP_DIR);
+-        GenerateEdenPath(EdenPath::KeysDir, eden_path / KEYS_DIR);
+-        GenerateEdenPath(EdenPath::LoadDir, eden_path / LOAD_DIR);
+-        GenerateEdenPath(EdenPath::LogDir, eden_path / LOG_DIR);
+-        GenerateEdenPath(EdenPath::NANDDir, eden_path / NAND_DIR);
++        GenerateEdenPath(EdenPath::DumpDir, "/userdata/saves/switch/yuzu/dump");
++        GenerateEdenPath(EdenPath::KeysDir, "/userdata/bios/switch/keys");
++        GenerateEdenPath(EdenPath::LoadDir, "/userdata/saves/switch/yuzu/load");
++        GenerateEdenPath(EdenPath::LogDir, "/userdata/system/logs");
++        GenerateEdenPath(EdenPath::NANDDir, "/userdata/bios/switch/nand");
+         GenerateEdenPath(EdenPath::PlayTimeDir, eden_path / PLAY_TIME_DIR);
+-        GenerateEdenPath(EdenPath::ScreenshotsDir, eden_path / SCREENSHOTS_DIR);
+-        GenerateEdenPath(EdenPath::SDMCDir, eden_path / SDMC_DIR);
+-        GenerateEdenPath(EdenPath::ShaderDir, eden_path / SHADER_DIR);
+-        GenerateEdenPath(EdenPath::TASDir, eden_path / TAS_DIR);
++        GenerateEdenPath(EdenPath::ScreenshotsDir, "/userdata/screenshots/switch");
++        GenerateEdenPath(EdenPath::SDMCDir, "/userdata/bios/switch/sdmc");
++        GenerateEdenPath(EdenPath::ShaderDir, "/userdata/saves/switch/yuzu/shaders");
++        GenerateEdenPath(EdenPath::TASDir, "/userdata/saves/switch/yuzu/tas");
+         GenerateEdenPath(EdenPath::IconsDir, eden_path / ICONS_DIR);
+     }
+ 

@@ -13997,6 +13997,16 @@ msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
+msgid "Fixes some issues for non Nvidia GPUs."
+msgstr ""
+
+#. TRANSLATION: lindbergh-loader, xemu
+msgctxt "game_options"
+msgid "USE ZINK FOR RENDERING"
+msgstr ""
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
 msgstr ""
 
@@ -17587,11 +17597,6 @@ msgctxt "game_options"
 msgid ""
 "Fixes some shadows and textures in Virtua Tennis 3 and Virtua Fighter 5 "
 "franchise for non Nvidia GPUs. May need the FPS limiter option enabled."
-msgstr ""
-
-#. TRANSLATION: lindbergh-loader
-msgctxt "game_options"
-msgid "USE ZINK FOR RENDERING"
 msgstr ""
 
 #. TRANSLATION: lindbergh-loader

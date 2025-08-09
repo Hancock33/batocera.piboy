@@ -8676,6 +8676,11 @@ msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "깜빡이는 현상이 수정되었습니다."
 
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "Fixes some issues for non Nvidia GPUs."
+msgstr ""
+
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid ""
@@ -18030,7 +18035,7 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "핸들 사용"
 
-#. TRANSLATION: lindbergh-loader
+#. TRANSLATION: lindbergh-loader, xemu
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
 msgstr "렌더링에 ZINK 사용"
