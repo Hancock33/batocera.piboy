@@ -28,7 +28,6 @@ python-pyxel.mk
 qterminal.mk
 qtermwidget.mk
 qtxdg-tools.mk
-retroarch.mk
 rgbds.mk
 screengrab.mk
 sdl3_image.mk

@@ -74,7 +74,7 @@ index c7c2d0a3b1..142ee0183e 100755
  	for (int num = 0; num < num_devices; num++)
  	{
 diff --git a/gfx/common/drm_common.c b/gfx/common/drm_common.c
-index 4bbc826e8f..a39e2e9af4 100644
+index 10fb38835f..66aab29ce1 100644
 --- a/gfx/common/drm_common.c
 +++ b/gfx/common/drm_common.c
 @@ -68,6 +68,21 @@ bool drm_get_connector(int fd, unsigned monitor_index)
@@ -122,10 +122,10 @@ index 4bbc826e8f..a39e2e9af4 100644
              g_drm_resources->connectors[i]);
  
 diff --git a/gfx/drivers/drm_gfx.c b/gfx/drivers/drm_gfx.c
-index 7fec66d435..32787f3ade 100644
+index 9195d7735d..04957fe523 100644
 --- a/gfx/drivers/drm_gfx.c
 +++ b/gfx/drivers/drm_gfx.c
-@@ -599,6 +599,7 @@ static bool init_drm(void)
+@@ -600,6 +600,7 @@ static bool init_drm(void)
  {
     uint i;
     drmModeConnector *connector;
@@ -133,7 +133,7 @@ index 7fec66d435..32787f3ade 100644
  
     drm.fd = open("/dev/dri/card0", O_RDWR);
  
-@@ -632,9 +633,25 @@ static bool init_drm(void)
+@@ -633,9 +634,25 @@ static bool init_drm(void)
        return false;
     }
  
@@ -160,7 +160,7 @@ index 7fec66d435..32787f3ade 100644
        /* It's connected, let's use it. */
        if (connector->connection == DRM_MODE_CONNECTED)
 diff --git a/gfx/drivers/oga_gfx.c b/gfx/drivers/oga_gfx.c
-index 69fa7a75bb..adb1a73e7f 100644
+index fe3a99c6cb..29351f8036 100644
 --- a/gfx/drivers/oga_gfx.c
 +++ b/gfx/drivers/oga_gfx.c
 @@ -108,6 +108,7 @@ static bool oga_create_display(oga_video_t* vid)
