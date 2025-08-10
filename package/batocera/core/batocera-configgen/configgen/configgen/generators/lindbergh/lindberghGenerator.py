@@ -142,7 +142,9 @@ class LindberghGenerator(Generator):
         if system.config.get_bool("lindbergh_zink"):
             environment.update(
                 {
-                    "MESA_LOADER_DRIVER_OVERRIDE": "zink"
+                    "MESA_LOADER_DRIVER_OVERRIDE": "zink",
+                    "GALLIUM_DRIVER": "zink",
+                    "LIBGL_KOPPER_DRI2": "1"
                 }
             )
 
