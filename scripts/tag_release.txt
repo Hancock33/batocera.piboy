@@ -18,6 +18,7 @@ libpinmame.mk
 libsfdo.mk
 libsysstat.mk
 libzedmd.mk
+mt32emu.mk
 ossp.mk
 plutosvg.mk
 plutovg.mk

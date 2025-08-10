@@ -7,6 +7,7 @@ firmware-radxa-rkwifibt.mk
 firmware-rk3588.mk
 lib32bit.mk
 model2emu.mk
+mt32emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk

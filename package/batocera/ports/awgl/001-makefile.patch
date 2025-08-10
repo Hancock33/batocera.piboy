@@ -1,9 +1,9 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 new file mode 100644
-index 0000000..9d05fc8
+index 0000000..83a2eb8
 --- /dev/null
 +++ b/CMakeLists.txt
-@@ -0,0 +1,22 @@
+@@ -0,0 +1,23 @@
 +cmake_minimum_required(VERSION 3.0)
 +project("rawgl")
 +add_executable(rawgl
@@ -20,14 +20,15 @@ index 0000000..9d05fc8
 +
 +pkg_search_module(SDL2 REQUIRED IMPORTED_TARGET sdl2)
 +pkg_search_module(SDL2MIXER REQUIRED IMPORTED_TARGET SDL2_mixer)
++pkg_search_module(MT32EMU REQUIRED IMPORTED_TARGET mt32emu)
 +
 +find_library(GL OpenGL)
 +find_library(ZLIB z)
 +
 +target_include_directories(rawgl PUBLIC PkgConfig::SDL2)
-+target_link_libraries(rawgl PkgConfig::SDL2 PkgConfig::SDL2MIXER ${GL} ${ZLIB})
++target_link_libraries(rawgl PkgConfig::SDL2 PkgConfig::SDL2MIXER PkgConfig::MT32EMU ${GL} ${ZLIB})
 diff --git a/Makefile b/Makefile
-index 75655cb..91ec479 100644
+index ed4bc58..a9bd0bb 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -4,8 +4,8 @@ SRCS = aifcplayer.cpp bitmap.cpp file.cpp engine.cpp graphics_soft.cpp \
