@@ -1,0 +1,33 @@
+diff --git a/code/thirdparty/recastnavigation/Detour/CMakeLists.txt b/code/thirdparty/recastnavigation/Detour/CMakeLists.txt
+index c8eb858f..fad1d80b 100644
+--- a/code/thirdparty/recastnavigation/Detour/CMakeLists.txt
++++ b/code/thirdparty/recastnavigation/Detour/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ file(GLOB SOURCES Source/*.cpp)
+-add_library(Detour ${SOURCES})
++add_library(Detour STATIC ${SOURCES})
+ 
+ add_library(RecastNavigation::Detour ALIAS Detour)
+ set_target_properties(Detour PROPERTIES DEBUG_POSTFIX -d)
+diff --git a/code/thirdparty/recastnavigation/DetourCrowd/CMakeLists.txt b/code/thirdparty/recastnavigation/DetourCrowd/CMakeLists.txt
+index 214cb4ce..0639ee95 100644
+--- a/code/thirdparty/recastnavigation/DetourCrowd/CMakeLists.txt
++++ b/code/thirdparty/recastnavigation/DetourCrowd/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ file(GLOB SOURCES Source/*.cpp)
+-add_library(DetourCrowd ${SOURCES})
++add_library(DetourCrowd STATIC ${SOURCES})
+ 
+ add_library(RecastNavigation::DetourCrowd ALIAS DetourCrowd)
+ set_target_properties(DetourCrowd PROPERTIES DEBUG_POSTFIX -d)
+diff --git a/code/thirdparty/recastnavigation/Recast/CMakeLists.txt b/code/thirdparty/recastnavigation/Recast/CMakeLists.txt
+index 75a6939a..ecefe5da 100644
+--- a/code/thirdparty/recastnavigation/Recast/CMakeLists.txt
++++ b/code/thirdparty/recastnavigation/Recast/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ file(GLOB SOURCES Source/*.cpp)
+-add_library(Recast ${SOURCES})
++add_library(Recast STATIC ${SOURCES})
+ 
+ add_library(RecastNavigation::Recast ALIAS Recast)
+ set_target_properties(Recast PROPERTIES DEBUG_POSTFIX -d)

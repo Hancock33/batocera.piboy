@@ -1,6 +1,7 @@
 config BR2_PACKAGE_AWGL
 	bool "awgl"
 	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_MT32EMU
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
 

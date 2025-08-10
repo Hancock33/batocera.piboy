@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-24 07:15+0000\n"
+"PO-Revision-Date: 2025-08-07 09:09+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -2173,12 +2173,12 @@ msgstr "90 Grad"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "90 degrees clockwise"
-msgstr ""
+msgstr "90 Grad im Uhrzeigersinn"
 
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "90 degrees counter-clockwise"
-msgstr ""
+msgstr "90 Grad gegen den Uhrzeigersinn"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -2307,7 +2307,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "POWERPC TAKTFREQUENZ ANPASSEN"
 
-#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
+#. TRANSLATION: amiberry, azahar, bigpemu, cemu, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "ERWEITERTE OPTIONEN"
@@ -2651,6 +2651,11 @@ msgstr "AUTO FRAMESKIP"
 msgctxt "game_options"
 msgid "AUTO GRAB MOUSE"
 msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO HEIGHT"
+msgstr "AUTOMATISCHE HÖHE"
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
@@ -5244,7 +5249,7 @@ msgstr "Ändern Sie das Verhältnis der Ausgabeauflösung."
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Change the rotation of the rendered image."
-msgstr ""
+msgstr "Drehung des gerenderten Bildes ändern."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -5559,7 +5564,7 @@ msgstr ""
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Choose to render meshes as transparent polygons."
-msgstr ""
+msgstr "Netze als transparente Polygone rendern."
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -6124,6 +6129,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATEN-PLUGIN"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "DE"
+msgstr "DE"
 
 #. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
@@ -7641,6 +7651,11 @@ msgstr ""
 "Aktiviere die IP-Adresse für das OutRun 2-Netzwerkspiel gegen einen anderen "
 "PC im selben Netzwerk."
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Enable the Virtual Keyboard."
+msgstr "Virtuelle Tastatur aktivieren."
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
@@ -8357,10 +8372,10 @@ msgctxt "game_options"
 msgid "FPS TARGET"
 msgstr "FPS-ZIEL"
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: amiberry, f2bgl
 msgctxt "game_options"
 msgid "FR"
-msgstr ""
+msgstr "FR"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -8736,6 +8751,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "Behebt das Flackern."
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "Fixes some issues for non Nvidia GPUs."
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -10088,6 +10108,11 @@ msgctxt "game_options"
 msgid "High Performance"
 msgstr "Höchste Leistung"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "High-Resolution Keyboard, which is larger and might be easier to see."
+msgstr "Tastatur mit hoher Auflösung – größer und besser lesbar."
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "High-end Computer"
@@ -10851,6 +10876,16 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "HAUPTBILDSCHIRM AUF OBERSTER EBENE DARSTELLEN"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD LAYOUT"
+msgstr "TASTATUR-LAYOUT"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD OPTIONS"
+msgstr "TASTATUR-OPTIONEN"
+
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
@@ -10859,7 +10894,12 @@ msgstr "DURCHLEITEN VON TASTATUREINGABEN"
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "KEYBOARD SUPPORT"
-msgstr "TASTATURUNTERSTÜTZUNG"
+msgstr "TASTATUR-UNTERSTÜTZUNG"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD TRANSPARENCY"
+msgstr "TASTATUR-TRANSPARENZ"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -11011,6 +11051,11 @@ msgstr "SPRACHE"
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
 msgstr "SPRACHFREISCHALTUNG"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "LARGER KEYBOARD"
+msgstr "GRÖSSERE TASTATUR"
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -14513,7 +14558,7 @@ msgstr "FACE-BUTTONS ROTIEREN"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "ROTATION"
-msgstr ""
+msgstr "DREHUNG"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14764,6 +14809,11 @@ msgid ""
 msgstr ""
 "Ein Zurücksetzen des Caches kann Abstürze verhindern, wenn Spiele unter "
 "Batocera 29 gestartet werden."
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Resize automatically screen height."
+msgstr "Bildschirmhöhe automatisch skalieren."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -16019,6 +16069,11 @@ msgstr "Sichtfeld (FOV) festlegen."
 msgctxt "game_options"
 msgid "Set the fps limit."
 msgstr "FPS-Limit festlegen."
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Set the on-screen keyboard transparency (0-100%)."
+msgstr "Transparenz der Bildschirmtastatur einstellen (0–100%)."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -17434,7 +17489,7 @@ msgstr "TRAINERMODUS"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
-msgstr ""
+msgstr "TRANSPARENTE NETZE"
 
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
@@ -17680,6 +17735,13 @@ msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
 "Diese Option wird für einige Gun Games benötigt, wenn mit einer Maus "
 "gespielt wird."
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid ""
+"This setting controls the default language layout for the virtual keyboard."
+msgstr ""
+"Diese Einstellung bestimmt das Standard-Sprachlayout der virtuellen Tastatur."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -18023,7 +18085,7 @@ msgctxt "game_options"
 msgid "UI PROMPTS"
 msgstr "UI-MELDUNGEN"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: amiberry, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "UK"
 msgstr "UK"
@@ -18042,6 +18104,11 @@ msgstr "UPSCALE-MODUS"
 msgctxt "game_options"
 msgid "US"
 msgstr "US"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "US (Default)"
+msgstr "US (Standard)"
 
 #. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
@@ -18158,7 +18225,7 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "BENUTZE LENKRÄDER"
 
-#. TRANSLATION: lindbergh-loader
+#. TRANSLATION: lindbergh-loader, xemu
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
 msgstr "ZINK FÜR RENDERING VERWENDEN"
@@ -18881,6 +18948,11 @@ msgstr "GEWALTGRAD"
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "VIRTUELLER DESKTOP"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD"
+msgstr "VIRTUELLE TASTATUR"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -19998,10 +20070,6 @@ msgstr "gelb/blau"
 #~ msgstr "AUDIO TREIBER"
 
 #~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "AUTOMATISCHE HÖHE"
-
-#~ msgctxt "game_options"
 #~ msgid "Acron Electron ROMs"
 #~ msgstr "Acron Electron ROMs"
 
@@ -20111,11 +20179,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Composite (color bleeding + artifacts)"
 #~ msgstr "Composite (Color-Bleeding + Artefakte)"
-
-#~ msgctxt "game_options"
-#~ msgid "Configuring controllers in GZDoom can cause problems."
-#~ msgstr ""
-#~ "Die Konfiguration von Controllern in GZDoom kann zu Problemen führen."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20360,10 +20423,6 @@ msgstr "gelb/blau"
 #~ "Grad)"
 
 #~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "Bildschirmhöhe automatisch skalieren."
-
-#~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
 #~ msgstr "S-Video (nur Color-Bleeding)"
 
@@ -20450,10 +20509,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
 #~ msgstr "Behandelt den rechten Analogstick als zweiten Joystick."
-
-#~ msgctxt "game_options"
-#~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
-#~ msgstr "GZDOOM JOYSTICKKONFIGURATION VERWENDEN"
 
 #~ msgctxt "game_options"
 #~ msgid "Use your physical anaglypth 3D glasses!"

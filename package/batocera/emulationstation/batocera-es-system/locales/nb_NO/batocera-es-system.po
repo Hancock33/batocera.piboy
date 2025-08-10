@@ -2303,7 +2303,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "JUSTERE POWERPC-FREKVENSEN"
 
-#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
+#. TRANSLATION: amiberry, azahar, bigpemu, cemu, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "AVANSERTE ALTERNATIVER"
@@ -2647,6 +2647,11 @@ msgstr "AUTO FRAMESKIP"
 msgctxt "game_options"
 msgid "AUTO GRAB MOUSE"
 msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO HEIGHT"
+msgstr "AUTO HØYDE"
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
@@ -6093,6 +6098,11 @@ msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATA PLUGIN"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "DE"
+msgstr ""
+
 #. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
 msgid "DEADZONE"
@@ -7587,6 +7597,11 @@ msgid ""
 "same network."
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Enable the Virtual Keyboard."
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
@@ -8293,7 +8308,7 @@ msgctxt "game_options"
 msgid "FPS TARGET"
 msgstr "FPS MÅL"
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: amiberry, f2bgl
 msgctxt "game_options"
 msgid "FR"
 msgstr ""
@@ -8667,6 +8682,11 @@ msgstr "Løser en mulig feil med deteksjon av flere kontrollere."
 msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "Fikser flimring."
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "Fixes some issues for non Nvidia GPUs."
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -10004,6 +10024,11 @@ msgctxt "game_options"
 msgid "High Performance"
 msgstr "Høy ytelse"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "High-Resolution Keyboard, which is larger and might be easier to see."
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "High-end Computer"
@@ -10756,6 +10781,16 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "BEHOLDE HOVEDSKJERMEN ØVERST"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD LAYOUT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD OPTIONS"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
@@ -10765,6 +10800,11 @@ msgstr "TASTATURGJENNOMGANG"
 msgctxt "game_options"
 msgid "KEYBOARD SUPPORT"
 msgstr "TASTATURSTØTTE"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD TRANSPARENCY"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -10913,6 +10953,11 @@ msgstr "SPRÅK"
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "LARGER KEYBOARD"
 msgstr ""
 
 #. TRANSLATION: libretro, shared
@@ -14633,6 +14678,11 @@ msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
+msgid "Resize automatically screen height."
+msgstr "Endre størrelsen på skjermen automatisk."
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
 msgstr ""
 
@@ -15871,6 +15921,11 @@ msgstr ""
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Set the fps limit."
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Set the on-screen keyboard transparency (0-100%)."
 msgstr ""
 
 #. TRANSLATION: lindbergh-loader
@@ -17512,6 +17567,12 @@ msgid "This option is required for some gun games when playing with a mouse."
 msgstr ""
 "Dette alternativet er nødvendig for noen pistolspill når du spiller med mus."
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid ""
+"This setting controls the default language layout for the virtual keyboard."
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -17851,7 +17912,7 @@ msgctxt "game_options"
 msgid "UI PROMPTS"
 msgstr "UI PROMPTS"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: amiberry, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "UK"
 msgstr "UK"
@@ -17870,6 +17931,11 @@ msgstr "OPPSKALER MODUS"
 msgctxt "game_options"
 msgid "US"
 msgstr "US"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "US (Default)"
+msgstr ""
 
 #. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
@@ -17986,7 +18052,7 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "BRUK RATT"
 
-#. TRANSLATION: lindbergh-loader
+#. TRANSLATION: lindbergh-loader, xemu
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
 msgstr ""
@@ -18691,6 +18757,11 @@ msgstr "VOLDSNIVÅ"
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "VIRTUELT SKRIVEBORD"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD"
+msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -19896,10 +19967,6 @@ msgstr "gul/blå"
 #~ msgstr "AUDIO DRIVER"
 
 #~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "AUTO HØYDE"
-
-#~ msgctxt "game_options"
 #~ msgid "Acron Electron ROMs"
 #~ msgstr "Acorn Electron ROM-er"
 
@@ -20675,10 +20742,6 @@ msgstr "gul/blå"
 #~ msgctxt "keys_files"
 #~ msgid "Reset the table, sometimes required for PinMame"
 #~ msgstr "Tilbakestill spillet, noen ganger nødvendig for PinMame"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "Endre størrelsen på skjermen automatisk."
 
 #~ msgctxt "keys_files"
 #~ msgid "Restart Emulation"

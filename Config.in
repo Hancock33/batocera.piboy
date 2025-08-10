@@ -116,6 +116,7 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/rmtfs/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/qualcomm/tqftpserv/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8852au/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtw88/Config.in"
   endmenu
 endmenu
 
@@ -130,6 +131,7 @@ menu "Audio"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/liblc3/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/libldac/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/libxmp/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/mt32emu/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/ossp/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/portmidi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/audio/rtmidi/Config.in"

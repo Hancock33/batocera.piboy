@@ -9,6 +9,7 @@ ecm.mk
 flatpak.mk
 fpinball.mk
 kddocwidgets.mk
+kodi-pvr-freebox.mk
 labwc.mk
 layershellqt.mk
 libdbusmenu.mk
@@ -17,6 +18,7 @@ libpinmame.mk
 libsfdo.mk
 libsysstat.mk
 libzedmd.mk
+mt32emu.mk
 ossp.mk
 plutosvg.mk
 plutovg.mk
@@ -26,7 +28,6 @@ python-pyxel.mk
 qterminal.mk
 qtermwidget.mk
 qtxdg-tools.mk
-retroarch.mk
 rgbds.mk
 screengrab.mk
 sdl3_image.mk
@@ -45,6 +46,5 @@ warehouse.mk
 wine-custom.mk
 wine-mono.mk
 wine-native.mk
-wine-proton.mk
 wine-staging.mk
 xbox-xcloud-client.mk

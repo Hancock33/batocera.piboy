@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-30 20:29+0900\n"
+"PO-Revision-Date: 2025-08-06 18:00+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: Korean (KO)\n"
 "Language: ko_KO\n"
@@ -2306,7 +2306,7 @@ msgctxt "game_options"
 msgid "ADJUST POWERPC FREQUENCY"
 msgstr "파워피씨 주파수 조정"
 
-#. TRANSLATION: azahar, bigpemu, cemu, dolphin_triforce, drastic, ...
+#. TRANSLATION: amiberry, azahar, bigpemu, cemu, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ADVANCED OPTIONS"
 msgstr "고급 옵션"
@@ -2650,6 +2650,11 @@ msgstr "자동 프레임 건너뛰기"
 msgctxt "game_options"
 msgid "AUTO GRAB MOUSE"
 msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO HEIGHT"
+msgstr "자동 높이"
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
@@ -6094,6 +6099,11 @@ msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "데이터 플러그인"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "DE"
+msgstr "독일어 레이아웃"
+
 #. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
 msgid "DEADZONE"
@@ -7592,6 +7602,11 @@ msgstr ""
 "동일 네트워크에 있는 다른 PC와 아웃런 2 네트워크 플레이를 위해 IP 주소를 활성"
 "화합니다."
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Enable the Virtual Keyboard."
+msgstr "가상 키보드를 활성화합니다."
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Enable the cheat list (if available)."
@@ -8287,10 +8302,10 @@ msgctxt "game_options"
 msgid "FPS TARGET"
 msgstr "FPS 대사"
 
-#. TRANSLATION: f2bgl
+#. TRANSLATION: amiberry, f2bgl
 msgctxt "game_options"
 msgid "FR"
-msgstr ""
+msgstr "프랑스어 레이아웃"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -8660,6 +8675,11 @@ msgstr "여러 컨트롤러 검색에서 발생할 수 있는 버그를 수정�
 msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "깜빡이는 현상이 수정되었습니다."
+
+#. TRANSLATION: xemu
+msgctxt "game_options"
+msgid "Fixes some issues for non Nvidia GPUs."
+msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -9997,6 +10017,11 @@ msgctxt "game_options"
 msgid "High Performance"
 msgstr "고성능"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "High-Resolution Keyboard, which is larger and might be easier to see."
+msgstr "더 크고 보기 쉬운 고해상도 키보드입니다."
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "High-end Computer"
@@ -10747,6 +10772,16 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "메인 화면을 상단에 유지"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD LAYOUT"
+msgstr "키보드 레이아웃"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD OPTIONS"
+msgstr "키보드 옵션"
+
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
 msgid "KEYBOARD PASSTHROUGH"
@@ -10756,6 +10791,11 @@ msgstr "키보드 패스스루"
 msgctxt "game_options"
 msgid "KEYBOARD SUPPORT"
 msgstr "키보드 지원"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEYBOARD TRANSPARENCY"
+msgstr "키보드 투명도"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -10905,6 +10945,11 @@ msgstr "언어"
 msgctxt "game_options"
 msgid "LANGUAGE UNLOCK"
 msgstr "언어 잠금 해제"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "LARGER KEYBOARD"
+msgstr "더 큰 키보드"
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -14620,6 +14665,11 @@ msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
+msgid "Resize automatically screen height."
+msgstr "화면 높이의 크기를 자동으로 조정합니다."
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
 msgid "Resize automatically the screen. AUTO = Off."
 msgstr ""
 
@@ -15860,6 +15910,11 @@ msgstr "시야를 설정합니다."
 msgctxt "game_options"
 msgid "Set the fps limit."
 msgstr "FPS 제한을 설정합니다."
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Set the on-screen keyboard transparency (0-100%)."
+msgstr "화면 키보드 투명도 (0~100%)를 설정합니다."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -17497,6 +17552,12 @@ msgctxt "game_options"
 msgid "This option is required for some gun games when playing with a mouse."
 msgstr "이 옵션은 마우스로 플레이할 때 일부 총기 게임에 필요합니다."
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid ""
+"This setting controls the default language layout for the virtual keyboard."
+msgstr "이 설정은 가상 키보드의 기본 언어 레이아웃을 제어합니다."
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
@@ -17834,7 +17895,7 @@ msgctxt "game_options"
 msgid "UI PROMPTS"
 msgstr "UI 프롬프트"
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: amiberry, libretro/dosbox_pure
 msgctxt "game_options"
 msgid "UK"
 msgstr "영국"
@@ -17853,6 +17914,11 @@ msgstr "업스케일 모드"
 msgctxt "game_options"
 msgid "US"
 msgstr "미국"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "US (Default)"
+msgstr "미국 (기본)"
 
 #. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
@@ -17969,7 +18035,7 @@ msgctxt "game_options"
 msgid "USE WHEELS"
 msgstr "핸들 사용"
 
-#. TRANSLATION: lindbergh-loader
+#. TRANSLATION: lindbergh-loader, xemu
 msgctxt "game_options"
 msgid "USE ZINK FOR RENDERING"
 msgstr "렌더링에 ZINK 사용"
@@ -18671,6 +18737,11 @@ msgstr "폭력 수준"
 msgctxt "game_options"
 msgid "VIRTUAL DESKTOP"
 msgstr "가상 데스크톱"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD"
+msgstr "가상 키보드"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -19790,10 +19861,6 @@ msgstr "노란색/파란색"
 #~ msgstr "오디오 드라이버"
 
 #~ msgctxt "game_options"
-#~ msgid "AUTO HEIGHT"
-#~ msgstr "자동 높이"
-
-#~ msgctxt "game_options"
 #~ msgid "Acron Electron ROMs"
 #~ msgstr "아크론 일렉트론 롬"
 
@@ -20212,10 +20279,6 @@ msgstr "노란색/파란색"
 #~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
 #~ "(in degrees)"
 #~ msgstr "핸들 중앙에 사각지대가 없는 공간을 확보하여 직진 주행 (°)"
-
-#~ msgctxt "game_options"
-#~ msgid "Resize automatically screen height."
-#~ msgstr "화면 높이의 크기를 자동으로 조정합니다."
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

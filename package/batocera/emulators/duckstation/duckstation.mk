@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Aug 03, 2025
-DUCKSTATION_VERSION = d2caabd04a906f054996f09df1d8bd4dd1c5a9dd
+# Version: Commits on Aug 10, 2025
+DUCKSTATION_VERSION = c519d3ca760236f81a9a2c40c5a99a5553e69501
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
@@ -64,6 +64,7 @@ endef
 define DUCKSTATION_VERSION_DETAILS
 	echo '#pragma once' > $(@D)/src/scmversion/tag.h
 	echo '#define SCM_RELEASE_TAG "latest"' >> $(@D)/src/scmversion/tag.h
+	echo '#define SCM_RELEASE_TAGS {"latest", "preview"}' >> $(@D)/src/scmversion/tag.h
 endef
 
 DUCKSTATION_PRE_CONFIGURE_HOOKS = DUCKSTATION_VERSION_DETAILS

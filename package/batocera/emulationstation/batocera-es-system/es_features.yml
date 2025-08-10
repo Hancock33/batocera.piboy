@@ -7855,6 +7855,7 @@ amiberry:
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
         amiberry_linemode:
+            group: ADVANCED OPTIONS
             prompt:      LINE MODE
             description: Adjust screen line draw mode.
             choices:
@@ -7862,7 +7863,6 @@ amiberry:
                 "DOUBLE":                      double
                 "SCANLINES":                   scanlines
         amiberry_resolution:
-            group: VIDEO SETTINGS
             prompt:      VIDEO RESOLUTION
             description: Manually define which internal resolution to use. AUTO = High.
             choices:
@@ -7877,11 +7877,12 @@ amiberry:
                 "Pixelated (Nearest)":         pixelated
                 "Smooth (Linear)":             smooth
         amiberry_flickerfixer:
+            group: ADVANCED OPTIONS
             prompt:      REMOVE INTERLACE ARTIFACTS
             description: Fix flickering in a static screen like Workbench.
             choices:
-                "ON":                          enabled
-                "OFF":                         disabled
+                "ON":                          true
+                "OFF":                         false
         amiberry_image_center:
             prompt:      IMAGE CENTRING
             description: Centres the image screen. Disabled when using Auto Crop. AUTO = Full.
@@ -7913,6 +7914,42 @@ amiberry:
                 "80%":                         80
                 "90%":                         90
                 "100%":                        100
+        amiberry_auto_height:
+            prompt:      AUTO HEIGHT
+            description: Resize automatically screen height.
+            choices:
+                "OFF": false
+                "ON":  true
+        amiberry_virtual_keyboard:
+            group: KEYBOARD OPTIONS
+            prompt:      VIRTUAL KEYBOARD
+            description: Enable the Virtual Keyboard.
+            choices:
+                "OFF": 0
+                "ON":  1
+        amiberry_hires_keyboard:
+            group: KEYBOARD OPTIONS
+            prompt:      LARGER KEYBOARD
+            description: High-Resolution Keyboard, which is larger and might be easier to see.
+            choices:
+                "OFF": 0
+                "ON":  1
+        amiberry_vkbd_language:
+            group: KEYBOARD OPTIONS
+            prompt:      KEYBOARD LAYOUT
+            description: This setting controls the default language layout for the virtual keyboard.
+            choices:
+                "US (Default)": US
+                "UK":           UK
+                "FR":           FR
+                "DE":           DE
+        amiberry_vkbd_transparency:
+            group: KEYBOARD OPTIONS
+            prompt:      KEYBOARD TRANSPARENCY
+            description: Set the on-screen keyboard transparency (0-100%).
+            preset: slider
+            preset_parameters: 0 100 5 60
+
 cannonball:
   shared: [powermode, tdp, videomode, powersave, ratio, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
   cfeatures:
@@ -10248,7 +10285,7 @@ ppsspp:
             description: Uses hardware to make curves.
             choices:
                 "Off": 0
-                "On":  1    
+                "On":  1
         texture_scaling_type:
             submenu: TEXTURE SCALING
             prompt: TEXTURE UPSCALING TYPE
@@ -10257,7 +10294,7 @@ ppsspp:
                 "xBRZ (Default)":   0
                 "Hybrid":           1
                 "Bicubic":          2
-                "Hybrid + Bicubic": 3        
+                "Hybrid + Bicubic": 3
         texture_scaling_level:
             submenu: TEXTURE SCALING
             prompt: TEXTURE UPSCALING LEVEL
@@ -12430,6 +12467,12 @@ xemu:
             choices:
                 "OpenGL": "OPENGL"
                 "Vulkan": "VULKAN"
+        xemu_zink:
+            prompt: USE ZINK FOR RENDERING
+            description: Fixes some issues for non Nvidia GPUs.
+            choices:
+                "Off (Default)": "false"
+                "On":            "true"
         xemu_scaling:
             group: VIDEO SETTINGS
             prompt: SCALING MODE

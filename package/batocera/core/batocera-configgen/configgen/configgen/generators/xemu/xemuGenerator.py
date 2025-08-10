@@ -32,10 +32,19 @@ class XemuGenerator(Generator):
         commandArray: list[str | Path] = [XEMU_BIN]
         commandArray.extend(["-config_path", XEMU_CONFIG])
 
-        environment = {
+        environment={
             "XDG_CONFIG_HOME": CONFIGS,
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)
-        }
+            }
+
+        if system.config.get_bool("xemu_zink"):
+            environment.update(
+                {
+                    "MESA_LOADER_DRIVER_OVERRIDE": "zink",
+                    "GALLIUM_DRIVER": "zink",
+                    "LIBGL_KOPPER_DRI2": "1"
+                }
+            )
 
         return Command.Command(array=commandArray, env=environment)
 

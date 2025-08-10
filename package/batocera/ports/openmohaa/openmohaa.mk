@@ -15,8 +15,8 @@
 # openmohaa
 #
 ################################################################################
-# Version: Commits on Aug 03, 2025
-OPENMOHAA_VERSION = a72bc153db1e6ced6e30431b5217e1a53576712c
+# Version: Commits on Aug 08, 2025
+OPENMOHAA_VERSION = 59329b4fb311bf3b285a6dba160523ddb454eb51
 OPENMOHAA_SITE = $(call github,openmoh,openmohaa,$(OPENMOHAA_VERSION))
 OPENMOHAA_SUPPORTS_IN_SOURCE_BUILD = NO
 OPENMOHAA_LICENSE = GPL-2.0 license
@@ -24,15 +24,15 @@ OPENMOHAA_LICENSE_FILE = COPYING.txt
 
 OPENMOHAA_DEPENDENCIES += libcurl openal sdl2
 
-OPENMOHAA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-OPENMOHAA_CONF_OPTS += -DTARGET_LOCAL_SYSTEM=ON
+OPENMOHAA_CONF_OPTS += -DBUILD_SERVER=OFF
+OPENMOHAA_CONF_OPTS += -DUSE_INTERNAL_LIBS=ON
 
 # We just want the client
 define OPENMOHAA_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/openmohaa
-	cp $(@D)/buildroot-build/openmohaa $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/code/client/cgame/cgame.so $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/code/server/fgame/game.so  $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/openmohaa $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/cgame.so $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/game.so  $(TARGET_DIR)/usr/bin/openmohaa/
 endef
 
 define OPENMOHAA_EVMAPY

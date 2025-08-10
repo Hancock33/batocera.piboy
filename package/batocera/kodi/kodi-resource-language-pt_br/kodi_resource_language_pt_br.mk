@@ -3,10 +3,10 @@
 # kodi_resource_language_pt_br
 #
 ################################################################################
-# Version: Commits on Jun 26, 2025
-KODI_RESOURCE_LANGUAGE_PT_BR_VERSION = 11.0.92
+# Version: Commits on Jul 22, 2025
+KODI_RESOURCE_LANGUAGE_PT_BR_VERSION = 11.0.93
 KODI_RESOURCE_LANGUAGE_PT_BR_SOURCE = resource.language.pt_br-$(KODI_RESOURCE_LANGUAGE_PT_BR_VERSION).zip
-KODI_RESOURCE_LANGUAGE_PT_BR_SITE = http://mirrors.kodi.tv/addons/omega/resource.language.pt_br
+KODI_RESOURCE_LANGUAGE_PT_BR_SITE = http://mirrors.kodi.tv/addons/piers/resource.language.pt_br
 KODI_RESOURCE_LANGUAGE_PT_BR_PLUGINNAME=resource.language.pt_br
 
 KODI_RESOURCE_LANGUAGE_PT_BR_CP_DIR=$(TARGET_DIR)/usr/share/kodi/addons

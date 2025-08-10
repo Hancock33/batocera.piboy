@@ -1,5 +1,5 @@
 diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
-index e1db1da096..7a9a4a8b2f 100644
+index 3966a39562..a660a921bf 100644
 --- a/frontend/drivers/platform_unix.c
 +++ b/frontend/drivers/platform_unix.c
 @@ -31,7 +31,7 @@

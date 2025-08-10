@@ -3,13 +3,13 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on May 06, 2025
-RPCS3_VERSION = 81b33625f9e0f27d11247837ab5806ea3562e4f1
+# Version: Commits on Aug 09, 2025
+RPCS3_VERSION = 8e34d7885c325ebb20e01ceef1d2faf47a55609d
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
-RPCS3_DEPENDENCIES += alsa-lib faudio ffmpeg flatbuffers libcurl libevdev libglew libglu libpng
+RPCS3_DEPENDENCIES += alsa-lib ffmpeg flatbuffers libcurl libevdev libglew libglu libpng
 RPCS3_DEPENDENCIES += libusb libxml2 llvm mesa3d ncurses openal opencv4 rtmpdump wolfssl
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 
@@ -29,7 +29,6 @@ RPCS3_CONF_OPTS += -DUSE_NATIVE_INSTRUCTIONS=OFF
 RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=OFF
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CUBEB=OFF
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
-RPCS3_CONF_OPTS += -DUSE_SYSTEM_FAUDIO=OFF
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_LIBUSB=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_OPENCV=ON

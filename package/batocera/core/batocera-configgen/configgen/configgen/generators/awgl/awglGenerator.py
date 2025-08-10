@@ -14,28 +14,29 @@ class AwglGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         os.chdir("/userdata/roms/ports/awgl")
+        commandArray = ["awgl"]
+
         if  "15th" in rom.name:
-            game = "--datapath=/userdata/roms/ports/awgl/15th"
+            commandArray.append("--datapath=/userdata/roms/ports/awgl/15th")
 
         if  "20th" in rom.name:
-            game = "--datapath=/userdata/roms/ports/awgl/20th"
+            commandArray.append("--datapath=/userdata/roms/ports/awgl/20th")
 
         if  "3DO" in rom.name:
-            game = "--datapath=/userdata/roms/ports/awgl/3DO"
+            commandArray.append("--datapath=/userdata/roms/ports/awgl/3DO")
 
         if  "Amiga" in rom.name:
-            game = "--datapath=/userdata/roms/ports/awgl/Amiga"
+            commandArray.append("--datapath=/userdata/roms/ports/awgl/Amiga")
 
         if  "Atari" in rom.name:
-            game = "--datapath=/userdata/roms/ports/awgl/Atari"
+            commandArray.append("--datapath=/userdata/roms/ports/awgl/Atari")
 
         if  "DOS" in rom.name:
-            game = "--datapath=/userdata/roms/ports/awgl/DOS"
+            commandArray.append("--datapath=/userdata/roms/ports/awgl/DOS")
+            commandArray.append("--mt32")
 
         if  "Win31" in rom.name:
-            game = "--datapath=/userdata/roms/ports/awgl/Win31"
-
-        commandArray = ["awgl", game]
+            commandArray.append("--datapath=/userdata/roms/ports/awgl/Win31")
 
         # Rendering mode
         if system.isOptSet("awgl_render"):
@@ -99,7 +100,8 @@ class AwglGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
+                'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
 
     def getHotkeysContext(self) -> HotkeysContext:
