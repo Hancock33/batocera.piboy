@@ -1,15 +1,17 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|4fc3106761dcbb685f38a0cefc9332fa796a8966|Aug 10, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|e099a9c1802154b7c337a29045080878b8af33fe|Aug 10, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|c519d3ca760236f81a9a2c40c5a99a5553e69501|Aug 10, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-10|Aug 10, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|d38c5acb41981c7a0a84fcf6e81d89cfc884a895|Aug 10, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|a3b7861917159e4485db77839776f8cac718b73b|Aug 10, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|c62a19e29999098b17a9ae46628732c846ea967d|Aug 10, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|18be4d380cf414db49a5ce9ce753b4657494378b|Aug 10, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|659b5eb56977edac66754e42675683539319c48a|Aug 10, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|21c3646575a2dcd53ad366fad30a129f59579b30|Aug 10, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|2ef2243f7f90dcefd4a7126ccf09f05eb4d7943f|Aug 10, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|a13c34533cbeb09319bf3772dee6ebc9dd55d32a|Aug 10, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|a13c34533cbeb09319bf3772dee6ebc9dd55d32a|Aug 10, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|2a5bcdab52ffb955191eb148df3ef8a4eb610ed4|Aug 09, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|2a5bcdab52ffb955191eb148df3ef8a4eb610ed4|Aug 09, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e45310ce890add18f00c674680205b3ad381857b|Aug 09, 2025
@@ -17,6 +19,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|6fcff16567cf0dcd92dbb5e24
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.103|Aug 09, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|8e34d7885c325ebb20e01ceef1d2faf47a55609d|Aug 09, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.112|Aug 09, 2025
+Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|d1f9594b9d1b903d14a26ada8995cf1db2cddc50|Aug 09, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45733|Aug 09, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|338f3d638282fc9ae38a0027543ccda9354d91c9|Aug 09, 2025
 Ports|[awgl](http://github.com/M-HT/rawgl)|b85411238d5a1f06f8b612ba72e4c5df145dc90d|Aug 09, 2025
@@ -24,8 +27,6 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|4d958c4ed8e8653f660a286478d69dc
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|fe026a5c07a1f27825d9303c23932775b70eadcd|Aug 09, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|849be73e5704049a104d3bb616846148410ed498|Aug 09, 2025
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|172c316f53ac8f066afd7cb9e1da517084273368|Aug 09, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|9691109991b0f1a35cfeb09a592d1c51c18376b4|Aug 09, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|9691109991b0f1a35cfeb09a592d1c51c18376b4|Aug 09, 2025
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|d33852f5efe89c87a06f8ce7d12b8b5451e9ae71|Aug 09, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|8786f733836c56761fe897200feb20a8967fc9ed|Aug 08, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|ebd1a6b47c65482c3e1b1260761255325b25cd2b|Aug 08, 2025
@@ -49,7 +50,6 @@ Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5898466330a5
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|22f381a19e4841711c0cd6b2621a587f53205549|Aug 08, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|d0bf2faec93455fb69da30271724e3660233f8ca|Aug 07, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|240ea1df765de98f663d6ad42c716a3d7e4ebe50|Aug 07, 2025
-Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|befc5ec17bcc3d7fdbcd3631d1cfe1f71825cfaa|Aug 07, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|4ae9b91b13199e286092275379f46d8bd3468cd3|Aug 07, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|6a4738f3108ef49f0137770174ae4d9ba3ea67d4|Aug 07, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|192acace951633830ca6807a85c4a80e821c2ff7|Aug 07, 2025
@@ -285,6 +285,7 @@ Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|841229a6a81a
 Emulators|[liblcf](http://github.com/EasyRPG/liblcf)|92c4450a1bc1acb58bd02bbb99b57e5036919cdf|Apr 06, 2025
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4daf9d466ad00897f755163dd26f528d14e1db44|Apr 06, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.5|Apr 04, 2025
+Audio|[mt32emu](http://github.com/munt/munt)|libmt32emu_2_7_2|Apr 03, 2025
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.4.0|Mar 30, 2025
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|917d27b3b45a335137bd2c8597f8bcf2bac8a569|Mar 27, 2025

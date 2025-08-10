@@ -513,7 +513,7 @@ class MameGenerator(Generator):
                         autoRunList = csv.reader(openARFile, delimiter=';', quotechar="'")
                         for row in autoRunList:
                             if row and not row[0].startswith('#') and row[0].casefold() == romName.casefold():
-                                autoRunCmd = f"{row[1]}\\n"  
+                                autoRunCmd = f"{row[1]}\\n"
             elif system.name == "atom":
                 autoRunDelay = 1
                 autoRunCmd = messAutoRun[messMode]

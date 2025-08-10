@@ -332,7 +332,7 @@ def generateMAMEConfigs(playersControllers: Controllers, system: Emulator, rom: 
                     system.config.get("altromtype") == "cass"
                     or (softList != "" and softList[-4:] == "cass")
                 ):
-                    autoRunCmd = 'LOADM”“,,R\\n'
+                    autoRunCmd = 'LOADM' + chr(8221) + chr(8220) + ',,R\\n'
                     autoRunDelay = 5
             elif system.name == "coco":
                 romType = 'cart'
@@ -415,7 +415,7 @@ def generateMAMEConfigs(playersControllers: Controllers, system: Emulator, rom: 
                             for row in autoRunList:
                                 if row and not row[0].startswith('#') and row[0].casefold() == rom.stem.casefold():
                                     autoRunCmd = row[1] + "\\n"
-                                    break          
+                                    break
             else:
                 # Check for an override file, otherwise use generic (if it exists)
                 autoRunCmd = messAutoRun[messMode]
