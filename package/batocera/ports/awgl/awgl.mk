@@ -12,6 +12,7 @@ AWGL_LICENSE = GPLv2
 
 define AWGL_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/rawgl -D $(TARGET_DIR)/usr/bin/awgl
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/awgl/awgl.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(cmake-package))
