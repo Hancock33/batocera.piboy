@@ -3,8 +3,8 @@
 # awgl
 #
 ################################################################################
-# Version: Commits on Jun 13, 2024
-AWGL_VERSION = df249583a87d5c2f73cb362f7163799e01cd0c4c
+# Version: Commits on Aug 09, 2025
+AWGL_VERSION = b85411238d5a1f06f8b612ba72e4c5df145dc90d
 AWGL_SITE = $(call github,M-HT,rawgl,$(AWGL_VERSION))
 
 AWGL_DEPENDENCIES = sdl2 sdl2_mixer
