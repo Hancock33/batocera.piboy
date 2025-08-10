@@ -3,8 +3,8 @@
 # awgl
 #
 ################################################################################
-# Version: Commits on Aug 09, 2025
-AWGL_VERSION = b85411238d5a1f06f8b612ba72e4c5df145dc90d
+# Version: Commits on Aug 10, 2025
+AWGL_VERSION = 087860aee3ec7b85a86004378e2edc6fd5092741
 AWGL_SITE = $(call github,M-HT,rawgl,$(AWGL_VERSION))
 
 AWGL_DEPENDENCIES = mt32emu sdl2 sdl2_mixer
