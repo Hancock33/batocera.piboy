@@ -6,7 +6,7 @@ config BR2_PACKAGE_STENZEK_SHADERC
 	select BR2_PACKAGE_SPIRV_TOOLS
 	select BR2_PACKAGE_VULKAN_HEADERS
 	select BR2_PACKAGE_VULKAN_LOADER
-	select BR2_PACKAGE_WAYLAND
+	select BR2_PACKAGE_WAYLAND				if BR2_PACKAGE_BATOCERA_WAYLAND
 
 	help
 	  A collection of tools, libraries, and tests for
