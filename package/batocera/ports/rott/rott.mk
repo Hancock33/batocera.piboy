@@ -21,4 +21,9 @@ define ROTT_INSTALL_TARGET_CMDS
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/rott/rott.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
+define ROTT_FIX_SDL2MAIN
+	sed -i -e s+"SDL2_mixer::SDL2_mixer"+"-lSDL2_mixer"+ $(@D)/CMakeLists.txt
+endef
+ROTT_PRE_CONFIGURE_HOOKS += ROTT_FIX_SDL2MAIN
+
 $(eval $(cmake-package))
