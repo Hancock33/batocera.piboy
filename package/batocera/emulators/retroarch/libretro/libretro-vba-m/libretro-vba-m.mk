@@ -3,8 +3,8 @@
 # libretro-vba-m
 #
 ################################################################################
-# Version: Commits on Aug 08, 2025
-LIBRETRO_VBA_M_VERSION = 22f381a19e4841711c0cd6b2621a587f53205549
+# Version: Commits on Aug 13, 2025
+LIBRETRO_VBA_M_VERSION = 0510656ca3a24b30762e12c637fa548d2da5bd01
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
 LIBRETRO_VBA_M_DEPENDENCIES = retroarch
 

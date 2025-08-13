@@ -3,8 +3,8 @@
 # nvidia-open-driver
 #
 ################################################################################
-# Version: Commits on  Jul 22, 2025
-NVIDIA_OPEN_DRIVER_VERSION = 575.64.05
+# Version: Commits on  Aug 12, 2025
+NVIDIA_OPEN_DRIVER_VERSION = 580.76.05
 NVIDIA_OPEN_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA_OPEN_DRIVER_SITE = https://us.download.nvidia.com/XFree86/Linux-x86$(NVIDIA_OPEN_DRIVER_SUFFIX)/$(NVIDIA_OPEN_DRIVER_VERSION)
 NVIDIA_OPEN_DRIVER_SOURCE = NVIDIA-Linux-x86$(NVIDIA_OPEN_DRIVER_SUFFIX)-$(NVIDIA_OPEN_DRIVER_VERSION).run
@@ -52,7 +52,7 @@ NVIDIA_OPEN_DRIVER_LIBS_MISC = \
 	libnvidia-cfg.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-eglcore.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-egl-gbm.so.1.1.2 \
-	libnvidia-egl-wayland.so.1.1.19 \
+	libnvidia-egl-wayland.so.1.1.20 \
 	libnvidia-glcore.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-glsi.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-glvkspirv.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
