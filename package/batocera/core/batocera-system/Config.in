@@ -168,6 +168,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_USERDATAINIT                # userdata init files
     select BR2_PACKAGE_BATOCERA_WPA                         # wireless tools
     select BR2_PACKAGE_BOOST_ATOMIC                         # library that provides atomic data types and operations on these data types
+    select BR2_PACKAGE_BOOST_CONTAINER
     select BR2_PACKAGE_BOOST_CONTEXT
     select BR2_PACKAGE_BOOST_EXCEPTION
     select BR2_PACKAGE_BOOST_RANDOM
