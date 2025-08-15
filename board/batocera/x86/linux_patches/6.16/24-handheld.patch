@@ -906,10 +906,10 @@ index 7ac0fd5391fe..323dd636352b 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "OrangePi"),
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index 1c63bd5e8f5d..b316989d1daa 100644
+index e2fb06ecea1f..908ec9f15617 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
-@@ -1419,6 +1419,10 @@ config HID_KUNIT_TEST
+@@ -1427,6 +1427,10 @@ config HID_KUNIT_TEST
  
  	  If in doubt, say "N".
  
@@ -920,7 +920,7 @@ index 1c63bd5e8f5d..b316989d1daa 100644
  endmenu
  
  source "drivers/hid/bpf/Kconfig"
-@@ -1445,4 +1449,8 @@ source "drivers/hid/spi-hid/Kconfig"
+@@ -1451,4 +1455,8 @@ source "drivers/hid/spi-hid/Kconfig"
  
  source "drivers/hid/dockchannel-hid/Kconfig"
  
@@ -930,10 +930,10 @@ index 1c63bd5e8f5d..b316989d1daa 100644
 +
  endif # HID_SUPPORT
 diff --git a/drivers/hid/Makefile b/drivers/hid/Makefile
-index a0f58475434c..6cafb07c7181 100644
+index 53c2a170dd7d..6b7e932f9bbd 100644
 --- a/drivers/hid/Makefile
 +++ b/drivers/hid/Makefile
-@@ -174,6 +174,8 @@ obj-$(CONFIG_AMD_SFH_HID)       += amd-sfh-hid/
+@@ -175,6 +175,8 @@ obj-$(CONFIG_AMD_SFH_HID)       += amd-sfh-hid/
  
  obj-$(CONFIG_ASUS_ALLY_HID)  += asus-ally-hid/
  
@@ -942,7 +942,7 @@ index a0f58475434c..6cafb07c7181 100644
  obj-$(CONFIG_SURFACE_HID_CORE)  += surface-hid/
  
  obj-$(CONFIG_INTEL_THC_HID)     += intel-thc-hid/
-@@ -181,3 +183,7 @@ obj-$(CONFIG_INTEL_THC_HID)     += intel-thc-hid/
+@@ -182,3 +184,7 @@ obj-$(CONFIG_INTEL_THC_HID)     += intel-thc-hid/
  obj-$(CONFIG_SPI_HID_APPLE_CORE)	+= spi-hid/
  
  obj-$(CONFIG_HID_DOCKCHANNEL)   += dockchannel-hid/
@@ -951,10 +951,10 @@ index a0f58475434c..6cafb07c7181 100644
 +
 +obj-$(CONFIG_LENOVO_LEGOS_HID)  += lenovo-legos-hid/
 diff --git a/drivers/hid/hid-core.c b/drivers/hid/hid-core.c
-index 1b3099685ba0..3c34b230bfb4 100644
+index c754ef53ff43..770cffecaa77 100644
 --- a/drivers/hid/hid-core.c
 +++ b/drivers/hid/hid-core.c
-@@ -2854,6 +2854,17 @@ static int hid_uevent(const struct device *dev, struct kobj_uevent_env *env)
+@@ -2858,6 +2858,17 @@ static int hid_uevent(const struct device *dev, struct kobj_uevent_env *env)
  	if (add_uevent_var(env, "MODALIAS=hid:b%04Xg%04Xv%08Xp%08X",
  			   hdev->bus, hdev->group, hdev->vendor, hdev->product))
  		return -ENOMEM;
@@ -973,7 +973,7 @@ index 1b3099685ba0..3c34b230bfb4 100644
  	return 0;
  }
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index bc2fba4e7a4d..25e674f6e850 100644
+index 15e5b861a3fd..c53bd3c2258a 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
 @@ -724,6 +724,10 @@
