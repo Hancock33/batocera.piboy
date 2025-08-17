@@ -13,7 +13,9 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|7ef69435886180820
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e7b0be64e04475fbd99c610c2da7db265a8209ab|Aug 17, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|c65ab09e2a5bca6338830c22c8b6f4b15a1f6db7|Aug 17, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6697d02af724b4544e3afeccb5df5d23588701a5|Aug 17, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250817|Aug 17, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|adc8739ccbb4c980cc07e930302ca978fba5eff2|Aug 17, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250817|Aug 17, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|17bd5dabe2bf7afc2dab6e802b157307c79f8682|Aug 17, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|17bd5dabe2bf7afc2dab6e802b157307c79f8682|Aug 17, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|9a50fa4834bb1792168754135d95bcf1a3bd8de3|Aug 17, 2025
@@ -31,8 +33,6 @@ Emulators|[ymir](https://github.com/StrikerX3/Ymir)|a9c66112e1b50c4eb86e08118747
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|a824d9e9126934b5e57990ef7ef5ca14d8bfee21|Aug 16, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|35f90b0ee6e56f7fdc2943481db95d6d0eb351d5|Aug 16, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.2|Aug 16, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250816|Aug 16, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250816|Aug 16, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|9df725f1e96351718c540cafdcd19b9f31c13ec3|Aug 16, 2025
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|228c14e10e9a8fae0ead8adf30daad2cdd8655b9|Aug 16, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|00fad7e4248deb0b7a342ae261d3bd2f356abd69|Aug 15, 2025
