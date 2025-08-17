@@ -5,6 +5,7 @@ firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
 firmware-rk3588.mk
+kodi-audiodecoder-openmpt.mk
 lib32bit.mk
 model2emu.mk
 mt32emu.mk

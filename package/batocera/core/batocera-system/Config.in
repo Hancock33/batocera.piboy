@@ -168,7 +168,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_USERDATAINIT                # userdata init files
     select BR2_PACKAGE_BATOCERA_WPA                         # wireless tools
     select BR2_PACKAGE_BOOST_ATOMIC                         # library that provides atomic data types and operations on these data types
+    select BR2_PACKAGE_BOOST_CONTAINER
     select BR2_PACKAGE_BOOST_CONTEXT
+    select BR2_PACKAGE_BOOST_EXCEPTION
     select BR2_PACKAGE_BOOST_RANDOM
     select BR2_PACKAGE_BOOST_REGEX
     select BR2_PACKAGE_BTRFS_PROGS                          # btrfs
@@ -1080,7 +1082,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     # Commodore Amiga
     select BR2_PACKAGE_AMIBERRY                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_AMIBERRY_LITE                        if !BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && (!BR2_riscv || !BR2_RISCV_64) # No dynamic recompiler for riscv
-    select BR2_PACKAGE_FSUAE                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+   #select BR2_PACKAGE_FSUAE                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_LIBRETRO_PUAE                        if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && !BR2_PACKAGE_BATOCERA_TARGET_H3
     select BR2_PACKAGE_LIBRETRO_PUAE2021                    if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && !BR2_PACKAGE_BATOCERA_TARGET_H3
     select BR2_PACKAGE_LIBRETRO_UAE4ARM                     if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && (BR2_arm || BR2_aarch64)
@@ -1706,7 +1708,7 @@ config BR2_PACKAGE_BATOCERA_QT6
     select BR2_PACKAGE_QT6TOOLS
     select BR2_PACKAGE_QT6TOOLS_LINGUIST_TOOLS
     select BR2_PACKAGE_HOST_QT6TOOLS_LINGUIST_TOOLS
-    select BR2_PACKAGE_QT6WAYLAND                           if  BR2_PACKAGE_WAYLAND
+    select BR2_PACKAGE_QT6WAYLAND                           if  BR2_PACKAGE_BATOCERA_WAYLAND
     select BR2_PACKAGE_QT6WEBSOCKETS                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
 config BR2_PACKAGE_BATOCERA_RPI_VCORE
@@ -1911,7 +1913,7 @@ config BR2_PACKAGE_BATOCERA_XORG
 
     # xwayland based architecture (no more ddx drivers)
     select BR2_PACKAGE_LIBEPOXY                             # required to enable xorg glamor
-    select BR2_PACKAGE_WAYLAND_PROTOCOLS                    if  BR2_PACKAGE_WAYLAND
+    select BR2_PACKAGE_WAYLAND_PROTOCOLS                    if  BR2_PACKAGE_BATOCERA_WAYLAND
     select BR2_PACKAGE_XLIB_LIBXCOMPOSITE
 
     # drivers

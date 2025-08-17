@@ -3,8 +3,8 @@
 # rott
 #
 ################################################################################
-# Version: Commits on Aug 09, 2025
-ROTT_VERSION = 849be73e5704049a104d3bb616846148410ed498
+# Version: Commits on Aug 16, 2025
+ROTT_VERSION = 35f90b0ee6e56f7fdc2943481db95d6d0eb351d5
 ROTT_SITE = $(call github,fabiangreffrath,taradino,$(ROTT_VERSION))
 ROTT_LICENSE = GPLv2
 ROTT_LICENSE_FILE = README.md
@@ -20,5 +20,10 @@ define ROTT_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/rott/rott.keys $(TARGET_DIR)/usr/share/evmapy
 endef
+
+define ROTT_FIX_SDL2MAIN
+	sed -i -e s+"SDL2_mixer::SDL2_mixer"+"-lSDL2_mixer"+ $(@D)/CMakeLists.txt
+endef
+ROTT_PRE_CONFIGURE_HOOKS += ROTT_FIX_SDL2MAIN
 
 $(eval $(cmake-package))

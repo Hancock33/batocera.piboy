@@ -3,8 +3,8 @@
 # dolphin-triforce
 #
 ################################################################################
-# Version: Commits on Jul 20, 2025
-DOLPHIN_TRIFORCE_VERSION = 90044f9a97c78f782507ba2deb638c79a3005868
+# Version: Commits on Aug 15, 2025
+DOLPHIN_TRIFORCE_VERSION = 842a088dcecbc99348b24557396f56456ceaf2ac
 DOLPHIN_TRIFORCE_BRANCH = new
 DOLPHIN_TRIFORCE_SITE = https://github.com/Hancock33/dolphin-triforce.git
 DOLPHIN_TRIFORCE_SITE_METHOD = git

@@ -1,5 +1,5 @@
 diff --git a/source/frontends/sdl/CMakeLists.txt b/source/frontends/sdl/CMakeLists.txt
-index e5060120..9683b935 100644
+index 22af2324..b8833b41 100644
 --- a/source/frontends/sdl/CMakeLists.txt
 +++ b/source/frontends/sdl/CMakeLists.txt
 @@ -10,13 +10,7 @@ find_package(SDL2 REQUIRED)
@@ -7,8 +7,8 @@ index e5060120..9683b935 100644
  pkg_search_module(SDL2_IMAGE REQUIRED SDL2_image)
  
 -
--if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
--  # only OpenGL supported on MacOS
+-if ((${CMAKE_SYSTEM_NAME} MATCHES "Darwin") OR (${CMAKE_SYSTEM_NAME} MATCHES "Windows"))
+-  # only OpenGL supported on MacOS and Windows
 -  set (SA2_OPENGL ON)
 -else()
 -  option(SA2_OPENGL "Prefer OpenGL over OpenGL ES" OFF)

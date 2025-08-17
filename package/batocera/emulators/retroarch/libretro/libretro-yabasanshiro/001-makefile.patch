@@ -1,0 +1,57 @@
+diff --git a/_phaenon/yabause/src/libretro/Makefile b/_phaenon/yabause/src/libretro/Makefile
+index 08785729a..bde13f566 100644
+--- a/_phaenon/yabause/src/libretro/Makefile
++++ b/_phaenon/yabause/src/libretro/Makefile
+@@ -147,6 +147,52 @@ else ifneq (,$(findstring rockpro64,$(platform)))
+ 	DYNAREC_DEVMIYAX = 1
+ 	FLAGS += -march=armv8-a+crc -mcpu=cortex-a72 -mtune=cortex-a72.cortex-a53 -mfloat-abi=hard -mfpu=neon-vfpv4 -mvectorize-with-neon-quad
+ 
++
++# SM8250 (64-bit)
++else ifneq (,$(findstring sm8250,$(platform)))
++	override platform += unix
++	TARGET := $(TARGET_NAME)_libretro.so
++	fpic := -fPIC
++	SHARED := -shared -Wl,--no-undefined -Wl,--version-script=link.T
++	LDFLAGS += -lpthread
++	FLAGS += -DAARCH64
++	ARCH_IS_LINUX = 1
++	HAVE_SSE = 0
++	FORCE_GLES = 1
++	USE_AARCH64_DRC = 1
++	DYNAREC_DEVMIYAX = 1
++	FLAGS += -mcpu=cortex-a77 -mtune=cortex-a77
++
++# Rpi4 (64-bit)
++else ifeq ($(platform), rpi4)
++	override platform += unix
++	TARGET := $(TARGET_NAME)_libretro.so
++	fpic := -fPIC
++	SHARED := -shared -Wl,--no-undefined -Wl,--version-script=link.T
++	LDFLAGS += -lpthread
++	FLAGS += -DAARCH64
++	ARCH_IS_LINUX = 1
++	HAVE_SSE = 0
++	FORCE_GLES = 1
++	USE_AARCH64_DRC = 1
++	DYNAREC_DEVMIYAX = 1
++	FLAGS += -mcpu=cortex-a72 -mtune=cortex-a72
++
++# Rpi5 (64-bit)
++else ifeq ($(platform), rpi5)
++	override platform += unix
++	TARGET := $(TARGET_NAME)_libretro.so
++	fpic := -fPIC
++	SHARED := -shared -Wl,--no-undefined -Wl,--version-script=link.T
++	LDFLAGS += -lpthread
++	FLAGS += -DAARCH64
++	ARCH_IS_LINUX = 1
++	HAVE_SSE = 0
++	FORCE_GLES = 1
++	USE_AARCH64_DRC = 1
++	DYNAREC_DEVMIYAX = 1
++	FLAGS += -mcpu=cortex-a76 -mtune=cortex-a76
++
+ # ODROIDs
+ else ifeq ($(platform), odroid-n2)
+ 	override platform += unix

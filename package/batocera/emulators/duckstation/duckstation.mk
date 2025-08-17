@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Aug 10, 2025
-DUCKSTATION_VERSION = c519d3ca760236f81a9a2c40c5a99a5553e69501
+# Version: Commits on Aug 17, 2025
+DUCKSTATION_VERSION = 4e39c3061f3538d07e68d141d70c085f46225466
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
@@ -26,14 +26,14 @@ DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 ifeq ($(BR2_PACKAGE_BATOCERA_QT6),y)
     DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_MINI_FRONTEND=OFF
     DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg
-    ifeq ($(BR2_PACKAGE_WAYLAND),y)
+    ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
         DUCKSTATION_DEPENDENCIES += qt6wayland
     endif
 else
     DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_MINI_FRONTEND=ON
 endif
 
-ifeq ($(BR2_PACKAGE_WAYLAND),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
     DUCKSTATION_CONF_OPTS += -DENABLE_WAYLAND=ON
 else
     DUCKSTATION_CONF_OPTS += -DENABLE_WAYLAND=OFF
