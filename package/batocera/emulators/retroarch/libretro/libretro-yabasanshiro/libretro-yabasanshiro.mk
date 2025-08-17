@@ -3,10 +3,9 @@
 # libretro-yabasanshiro
 #
 ################################################################################
-# Version: Commits on May 23, 2024
-LIBRETRO_YABASANSHIRO_VERSION = 39535a6abcad5abf9f71c8b2a7975f005ee12ed6
-LIBRETRO_YABASANSHIRO_BRANCH = yabasanshiro
-LIBRETRO_YABASANSHIRO_SITE = $(call github,libretro,yabause,$(LIBRETRO_YABASANSHIRO_VERSION))
+# Version: Commits on May 21, 2025
+LIBRETRO_YABASANSHIRO_VERSION = d416e6e5de9a96579e47b09c1a08a7002d6f6e0e
+LIBRETRO_YABASANSHIRO_SITE = $(call github,KMFDManic,Phaenon-Xtreme,$(LIBRETRO_YABASANSHIRO_VERSION))
 LIBRETRO_YABASANSHIRO_LICENSE = GPLv2
 LIBRETRO_YABASANSHIRO_DEPENDENCIES = retroarch
 
@@ -33,15 +32,17 @@ else
 endif
 
 define LIBRETRO_YABASANSHIRO_BUILD_CMDS
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-implicit-function-declaration|g" $(@D)/yabause/src/libretro/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-implicit-function-declaration -Wno-int-conversion -Wno-incompatible-pointer-types|g" $(@D)/_phaenon/yabause/src/libretro/Makefile
 	$(TARGET_CONFIGURE_OPTS) LDFLAGS="$(LIBRETRO_YABASANSHIRO_TARGET_LDFLAGS)" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-		-C $(@D)/yabause/src/libretro -f Makefile platform="$(LIBRETRO_YABASANSHIRO_PLATFORM)" $(LIBRETRO_YABASANSHIRO_EXTRA_ARGS) \
+		-C $(@D)/_phaenon/yabause/src/libretro -f Makefile platform="$(LIBRETRO_YABASANSHIRO_PLATFORM)" $(LIBRETRO_YABASANSHIRO_EXTRA_ARGS) \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_YABASANSHIRO_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_YABASANSHIRO_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/yabause/src/libretro/yabasanshiro_libretro.so $(TARGET_DIR)/usr/lib/libretro/yabasanshiro_libretro.so
+	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/km_phaenon_xtreme_libretro.so $(TARGET_DIR)/usr/lib/libretro/yabasanshiro_libretro.so
+	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
+	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_libretro.info $(TARGET_DIR)/usr/share/libretro/info/yabasanshiro_libretro.info
 endef
 
 $(eval $(generic-package))
