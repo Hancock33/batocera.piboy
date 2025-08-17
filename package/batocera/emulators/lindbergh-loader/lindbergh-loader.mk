@@ -16,7 +16,7 @@ endif
 ifeq ($(BR2_i386),y)
 LINDBERGH_LOADER_DEPENDENCIES += alsa-lib alsa-plugins alsa-utils faudio libfreeglut pcsc-lite
 LINDBERGH_LOADER_DEPENDENCIES += libglew sdl2 ncurses openal pipewire xlib_libX11 libbsd
-LINDBERGH_LOADER_DEPENDENCIES += xlib_libXext xlib_libXi xlib_libXmu xlib_libXScrnSaver
+LINDBERGH_LOADER_DEPENDENCIES += xlib_libXcursor xlib_libXext xlib_libXi xlib_libXmu xlib_libXScrnSaver
 
 # match the makefile cflags
 LINDBERGH_LOADER_CFLAGS = -g -pipe -fPIC -I$(STAGING_DIR)/usr/include -flto
