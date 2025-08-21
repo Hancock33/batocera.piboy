@@ -3,8 +3,8 @@
 # pysdl3
 #
 ################################################################################
-# Version: Commits on Aug 07, 2025
-PYSDL3_VERSION = v0.9.8b8
+# Version: Commits on Aug 20, 2025
+PYSDL3_VERSION = v0.9.8b9
 PYSDL3_SITE = $(call github,Aermoss,PySDL3,$(PYSDL3_VERSION))
 PYSDL3_LICENSE = MIT
 PYSDL3_LICENSE_FILES = LICENSE
