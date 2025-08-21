@@ -16,8 +16,10 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e1e08023637472f
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|bb787453a7c37f7ffaeb77f864e0e9a26732934f|Aug 21, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|381697b866fc68ef25aeec7e22cf480638d1837d|Aug 21, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|28d55c98e5035ca41680743eeb3ce6ba3f637360|Aug 21, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250821|Aug 21, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|72da83a9a83d3dc4062cc49368486f5dfa449604|Aug 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f7877df5788d096f5b2988768bf12f229b02d72d|Aug 21, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250821|Aug 21, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|06235521ff49855678982e936116b145286109e8|Aug 21, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|b4bd11137907407ccb5c52e00ae6701ea116404f|Aug 21, 2025
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|88eb24c8e61ce580c8c32eee692b182fe1536c3f|Aug 21, 2025
@@ -71,8 +73,6 @@ Emulators|[applewin](https://github.com/audetto/AppleWin.git)|639b536e48c0294c93
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|aeb3154257299f6f70da92e4d04616cc3da2a88c|Aug 17, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|1baa1e8d892a39195e98843654b6878213804a6e|Aug 17, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|33c481586cd3a27034aae409a2acff1f194d7ed7|Aug 17, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250817|Aug 17, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250817|Aug 17, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|43061b59154ad59324b6cb4fe2b7d8d5a367cb15|Aug 17, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|74b196d2c362ea195967be6f139faeed18795a53|Aug 17, 2025
 Emulators|[libretro-citra](https://github.com/libretro/citra.git)|5263fae3344e5e9af43036e0e38bec2d10fb2407|Aug 17, 2025
