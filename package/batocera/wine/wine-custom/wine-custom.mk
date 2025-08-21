@@ -3,20 +3,29 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Jun 30, 2025
-WINE_CUSTOM_VERSION = ntsync7-10.11
-WINE_CUSTOM_BRANCH = ntsync
+# Version: Commits on Aug 16, 2025
+WINE_CUSTOM_VERSION = wine-10.13
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
-WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
+WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_CUSTOM_SELINUX_MODULES = wine
 WINE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_CUSTOM_DEPENDENCIES = host-bison host-flex
+WINE_CUSTOM_CUSTOM_VERSION = v$(subst wine-,,$(WINE_CUSTOM_VERSION))
+HOST_WINE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_CUSTOM_CUSTOM_VERSION).tar.gz
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
     HOST_WINE_CUSTOM_DEPENDENCIES += host-clang host-lld
 endif
+
+define WINE_CUSTOM_STAGING
+	# Use Staging Patches
+	tar -xf $(WINE_CUSTOM_DL_DIR)/$(WINE_CUSTOM_CUSTOM_VERSION).tar.gz -C $(@D)
+	cd $(@D); ./wine-staging-$(subst v,,$(WINE_CUSTOM_CUSTOM_VERSION))/staging/patchinstall.py --all -W server-Signal_Thread
+endef
+WINE_CUSTOM_PRE_PATCH_HOOKS += WINE_CUSTOM_STAGING
+HOST_WINE_CUSTOM_PRE_PATCH_HOOKS += WINE_CUSTOM_STAGING
 
 define WINE_CUSTOM_AUTOGEN
 	# Create folder for install
@@ -27,7 +36,6 @@ define WINE_CUSTOM_AUTOGEN
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
 	cd $(@D); autoreconf -fiv
 endef
-
 WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 HOST_WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 

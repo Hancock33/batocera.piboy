@@ -1,13 +1,13 @@
 diff --git a/dlls/winebus.sys/main.c b/dlls/winebus.sys/main.c
-index 82bc8667..3ddafdef 100644
+index ba8603204d4..1c18b2412a8 100644
 --- a/dlls/winebus.sys/main.c
 +++ b/dlls/winebus.sys/main.c
-@@ -1019,7 +1019,7 @@ static NTSTATUS udev_driver_init(BOOL enable_sdl)
-         .wait_code = udev_wait,
-     };
- 
--    bus_options.disable_hidraw = check_bus_option(L"DisableHidraw", 0);
-+    bus_options.disable_hidraw = TRUE;
-     if (bus_options.disable_hidraw) TRACE("UDEV hidraw devices disabled in registry\n");
-     bus_options.disable_input = check_bus_option(L"DisableInput", 0) || enable_sdl;
-     if (bus_options.disable_input) TRACE("UDEV input devices disabled in registry\n");
+@@ -1085,7 +1085,7 @@ static void bus_options_init(void)
+ {
+     options.disable_sdl = !check_bus_option(L"Enable SDL", 1);
+     if (options.disable_sdl) TRACE("SDL devices disabled in registry\n");
+-    options.disable_hidraw = check_bus_option(L"DisableHidraw", 0);
++    options.disable_hidraw = TRUE;
+     if (options.disable_hidraw) TRACE("UDEV hidraw devices disabled in registry\n");
+     options.disable_input = check_bus_option(L"DisableInput", 0);
+     if (options.disable_input) TRACE("UDEV input devices disabled in registry\n");
