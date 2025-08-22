@@ -24,7 +24,7 @@ MANGOHUD_DEPENDENCIES += xserver_xorg-server
 endif
 
 MANGOHUD_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
-MANGOHUD_CONF_OPTS = -Dwith_xnvctrl=disabled -Dtests=disabled
+MANGOHUD_CONF_OPTS = -Dwith_xnvctrl=disabled -Dtests=disabled -Duse_system_spdlog=enabled
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
 MANGOHUD_DEPENDENCIES += vulkan-headers
