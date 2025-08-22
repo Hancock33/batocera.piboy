@@ -750,7 +750,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index ef3b482a38c0..2c0fd3900c08 100644
+index 56b144b67d21..8e08171b8fdb 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -168,6 +168,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -763,7 +763,7 @@ index ef3b482a38c0..2c0fd3900c08 100644
  /**
   * DOC: overview
   *
-@@ -9252,7 +9255,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9264,7 +9267,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -906,10 +906,10 @@ index 7ac0fd5391fe..323dd636352b 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "OrangePi"),
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index e2fb06ecea1f..908ec9f15617 100644
+index 1c2522d95934..1c81b0f26da5 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
-@@ -1427,6 +1427,10 @@ config HID_KUNIT_TEST
+@@ -1428,6 +1428,10 @@ config HID_KUNIT_TEST
  
  	  If in doubt, say "N".
  
@@ -920,7 +920,7 @@ index e2fb06ecea1f..908ec9f15617 100644
  endmenu
  
  source "drivers/hid/bpf/Kconfig"
-@@ -1451,4 +1455,8 @@ source "drivers/hid/spi-hid/Kconfig"
+@@ -1452,4 +1456,8 @@ source "drivers/hid/spi-hid/Kconfig"
  
  source "drivers/hid/dockchannel-hid/Kconfig"
  
@@ -930,19 +930,19 @@ index e2fb06ecea1f..908ec9f15617 100644
 +
  endif # HID_SUPPORT
 diff --git a/drivers/hid/Makefile b/drivers/hid/Makefile
-index 53c2a170dd7d..6b7e932f9bbd 100644
+index f67db3d5d18f..ba29a3b6eafe 100644
 --- a/drivers/hid/Makefile
 +++ b/drivers/hid/Makefile
-@@ -175,6 +175,8 @@ obj-$(CONFIG_AMD_SFH_HID)       += amd-sfh-hid/
+@@ -173,6 +173,8 @@ obj-$(CONFIG_INTEL_ISH_HID)	+= intel-ish-hid/
  
- obj-$(CONFIG_ASUS_ALLY_HID)  += asus-ally-hid/
+ obj-$(CONFIG_AMD_SFH_HID)       += amd-sfh-hid/
  
 +obj-$(CONFIG_ZOTAC_ZONE_HID)  += zotac-zone-hid/
 +
  obj-$(CONFIG_SURFACE_HID_CORE)  += surface-hid/
  
  obj-$(CONFIG_INTEL_THC_HID)     += intel-thc-hid/
-@@ -182,3 +184,7 @@ obj-$(CONFIG_INTEL_THC_HID)     += intel-thc-hid/
+@@ -180,3 +182,7 @@ obj-$(CONFIG_INTEL_THC_HID)     += intel-thc-hid/
  obj-$(CONFIG_SPI_HID_APPLE_CORE)	+= spi-hid/
  
  obj-$(CONFIG_HID_DOCKCHANNEL)   += dockchannel-hid/
@@ -951,7 +951,7 @@ index 53c2a170dd7d..6b7e932f9bbd 100644
 +
 +obj-$(CONFIG_LENOVO_LEGOS_HID)  += lenovo-legos-hid/
 diff --git a/drivers/hid/hid-core.c b/drivers/hid/hid-core.c
-index c754ef53ff43..770cffecaa77 100644
+index cd6c1cc7d010..36d840677f67 100644
 --- a/drivers/hid/hid-core.c
 +++ b/drivers/hid/hid-core.c
 @@ -2858,6 +2858,17 @@ static int hid_uevent(const struct device *dev, struct kobj_uevent_env *env)
@@ -973,7 +973,7 @@ index c754ef53ff43..770cffecaa77 100644
  	return 0;
  }
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 15e5b861a3fd..c53bd3c2258a 100644
+index bc2fba4e7a4d..25e674f6e850 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
 @@ -724,6 +724,10 @@
@@ -12931,7 +12931,7 @@ index 9dc93c5e480b..05d5800c9756 100644
  }
  
 diff --git a/include/linux/hid.h b/include/linux/hid.h
-index 7b1ee43d984b..1d6f1d8ac81a 100644
+index 0075b9956d05..8cc380ef0a6b 100644
 --- a/include/linux/hid.h
 +++ b/include/linux/hid.h
 @@ -669,6 +669,7 @@ struct hid_device {
