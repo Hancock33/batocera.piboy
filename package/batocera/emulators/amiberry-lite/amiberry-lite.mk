@@ -3,8 +3,8 @@
 # amiberry-lite
 #
 ################################################################################
-# Version: Commits on Aug 20, 2025
-AMIBERRY_LITE_VERSION = 2efc21f2e928f59c7891ab1e8186fa61b141a1e5
+# Version: Commits on Aug 23, 2025
+AMIBERRY_LITE_VERSION = d927c785dd0a665a4b8550bd04245146773ee583
 AMIBERRY_LITE_SITE = $(call github,BlitterStudio,amiberry-lite,$(AMIBERRY_LITE_VERSION))
 AMIBERRY_LITE_LICENSE = GPLv3
 AMIBERRY_LITE_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123
