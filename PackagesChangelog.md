@@ -2,7 +2,7 @@
 -----|:-----:|:-----:|:-----:
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|a1423e386cded26b18770c3fa1b220208ebe8f94|Aug 23, 2025
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|6bef5a41aac3f1d49f4c66e5252b7732a9ab1a10|Aug 23, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|b67bf20335bf305a976b6fd5ac63393c20784188|Aug 23, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|862404fdacca96bde1dd378dae65799f861ea2bc|Aug 23, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-23|Aug 23, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c9abf4388ae8af72632a6b910ed15136c5092060|Aug 23, 2025
