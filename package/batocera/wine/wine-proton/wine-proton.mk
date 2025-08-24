@@ -49,7 +49,7 @@ WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 
 ifeq ($(BR2_x86_64),y)
     WINE_PROTON_CONF_OPTS += --enable-win64
-    WINE_PROTON_CONF_OPTS += --enable-tools \
+    WINE_PROTON_CONF_OPTS += --enable-tools
 else
     WINE_PROTON_CONF_OPTS += --disable-win64
 endif
