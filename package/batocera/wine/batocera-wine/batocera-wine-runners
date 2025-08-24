@@ -8,3 +8,4 @@ if [ -d "/userdata/system/wine/custom" ]; then
 else
     echo "wine-custom"
     echo "wine-proton"
+fi
