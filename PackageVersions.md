@@ -64,7 +64,7 @@ Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/b
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|92f400edbf2c66efcaaf148b10a7603aa43f7fe8|Aug 24, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e45310ce890add18f00c674680205b3ad381857b|Aug 09, 2025
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|d927c785dd0a665a4b8550bd04245146773ee583|Aug 23, 2025
-Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|aa67458e8012fa49ec4502da360dfac3e4fc0d46|Aug 23, 2025
+Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|90d5fc095df743dc9dec5e54844a3116552125b2|Aug 24, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|903d9017f5ad385c6ab9b569878d3ac68478cd42|Aug 24, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|e65ed7814fc7ce22ae87e683ef22a2efc18b7029|Aug 15, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
@@ -90,7 +90,7 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|55fb4fcafac612
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Emulators|[hatari](http://github.com/hatari/hatari)|1524b194b2b29e72938095d3642adea9a5bc0a60|Aug 21, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|1d8ad1526511d966b6b78a3149b492ca124c1a0a|Aug 01, 2025
-Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|65ec2dbe241935d4518b17a754f2b89e9c7f67f4|Aug 20, 2025
+Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|8ef85e52340e97fa64cd8671903e5ecb5cc94a3f|Aug 24, 2025
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|0656fc2eb39a6f4fdd557043c28cd8dfdc7e762f|Aug 10, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|f3aa0a011e9d209630880795e3e15bce2e168050|Jun 20, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|abf2520db90c4fe9fcaa309d36111def1c34051e|Aug 24, 2025
@@ -262,8 +262,8 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|fb76ba85dfefa329be2dabc430fe651dcc756f56|Aug 15, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|862404fdacca96bde1dd378dae65799f861ea2bc|Aug 23, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.123|Aug 24, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|7d00c814bdebe7195534d3fd0ec5c6b2d5daf393|Aug 24, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.124|Aug 24, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|7062c5e67a4a90b75fe1d0221c43f678a0d049b6|Aug 19, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|804ef50896b14fe9ebadf7b8bf0082969afb21c5|Aug 24, 2025
@@ -299,7 +299,7 @@ Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/r
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|765073021a3fd0ec193f89ff224aad5a3af31551|Aug 22, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2825-master|Aug 20, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
-Emulators|[ymir](https://github.com/StrikerX3/Ymir)|9d48a644b0fa71fd4ecd4300046924af404280ec|Aug 24, 2025
+Emulators|[ymir](https://github.com/StrikerX3/Ymir)|fb48a1f7a323d70851f3c5feaa326b70ad9a9de0|Aug 24, 2025
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20250708|Jul 08, 2025
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
@@ -430,7 +430,7 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|1bfbec8fe6797e6ee873
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c9abf4388ae8af72632a6b910ed15136c5092060|Aug 23, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|e9782c7328bcee0df33e401a9ff1a0ec563de88d|May 24, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|d304aba1cc0e2d8ced12daeb22ce92f1d9a986a3|Aug 24, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|abdf6fd9723a08172657fed9452b1375869cf1d2|Aug 24, 2025
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246|Feb 05, 2025
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
@@ -569,4 +569,4 @@ Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|J
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20250819-proton-native|Aug 19, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.5|Apr 04, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250824|Aug 24, 2025
-Wine|[winetricks](http://github.com/Winetricks/winetricks)|73b92d2f3c117cd21d96e2fc807e041e7a89fec3|Apr 03, 2025
+Wine|[winetricks](http://github.com/Winetricks/winetricks)|4a2830491750329b9ca606233d3bc2a02ea65205|Aug 24, 2025
