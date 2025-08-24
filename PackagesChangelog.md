@@ -1,17 +1,20 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|92f400edbf2c66efcaaf148b10a7603aa43f7fe8|Aug 24, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|92f400edbf2c66efcaaf148b10a7603aa43f7fe8|Aug 24, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|57df6d9bf72e85c56042fd1bd1cd395a4f99708c|Aug 24, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2b7faeb920da31edb11f01c9a0473f86e4023100|Aug 24, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|1ef1a2d3f4e473df3ddf461e9334bf654d374454|Aug 24, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.122|Aug 24, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-24|Aug 24, 2025
+Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5da091f8250d2e59750af671df97024f7ae87084|Aug 24, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|213df63197f0834cdaf4e93eb6350bf62c002f9d|Aug 24, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250824|Aug 24, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3f21e88f09621defc58f0a1e8e8eb87edbeb3729|Aug 24, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|abf2520db90c4fe9fcaa309d36111def1c34051e|Aug 24, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250824|Aug 24, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|99fb42ebf3a0b5024d63ff2df0502cba13aeb443|Aug 24, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|9b648b6a5b487768bef0d3f68fa9efac2fc2cbe0|Aug 24, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|06e9d64ca46e884682fdc4044d84e2487da1c9e8|Aug 24, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|aa67458e8012fa49ec4502da360dfac3e4fc0d46|Aug 23, 2025
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|d927c785dd0a665a4b8550bd04245146773ee583|Aug 23, 2025
@@ -40,8 +43,6 @@ Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|6474e07472f18925b27
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|2f847e9e3ccdc8086ab02ab3e6c97bf0729deadd|Aug 22, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|54eb537ad0d82b242a5fa63f061b1480ffa493da|Aug 22, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|063beb1f26a438fffcdf196ccde3ee496e545c0e|Aug 22, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|4adf26b43900d1a33887af6d8af3da2e99e398a5|Aug 21, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|4adf26b43900d1a33887af6d8af3da2e99e398a5|Aug 21, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|1524b194b2b29e72938095d3642adea9a5bc0a60|Aug 21, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|1793f5c4baa091941a8f85db756f6035c743ee5a|Aug 21, 2025
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|efe8351b61d116f7fedfcaf8ccfac8edb6a9f312|Aug 21, 2025
@@ -105,7 +106,6 @@ Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|126f35ca8c24368
 Wine|[wine-proton](http://github.com/ValveSoftware/wine)|8a7e644eead84e46f1a64b97651982be4381199d|Aug 13, 2025
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|5672d7e88acd7f583f01a559ad4a93e84b965ff2|Aug 13, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|b33f2afb33c61d675aaf0319bd3b8cc8d6924d49|Aug 12, 2025
-Network|[aic8800](http://github.com/radxa-pkg/aic8800)|553c43022bd87804ece08b13782c04386823c05a|Aug 12, 2025
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|580.76.05|Aug 12, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|36ac9a3444b615a80089ec5a04b8c7cf89ac4f80|Aug 12, 2025
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|a48e93ffc0efef1b2525c8dde25121fb289fb28c|Aug 11, 2025
@@ -127,7 +127,6 @@ Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|50d3d
 Hardware|[dmd-simulator](http://github.com/batocera-linux/dmd-simulator)|e313e5929390e37739e3d78eb50aaf73f860ba0a|Aug 04, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.20|Aug 04, 2025
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|509aed4e75954a918cc34a0ba89efb2c7ae868b3|Aug 04, 2025
-Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|fa35d00ba8d394105f4db81ed6c0c7d4cd16aa7e|Aug 03, 2025
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|82675dabc8b1c9b1f552d55176357c661d9047c2|Aug 02, 2025
 Utils|[labwc](http://github.com/labwc/labwc)|0.9.1|Aug 02, 2025
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|3f37a92f5ea3dc20b5f14176e9e4da2276fad101|Aug 02, 2025
@@ -176,6 +175,7 @@ Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/piers/resource
 Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/piers/resource.language.tr_tr)|11.0.84|Jul 22, 2025
 Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.3.0|Jul 22, 2025
 Gpu|[nvidia-proprietary-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Jul 22, 2025
+Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|0e621e2f3027c9ed11f8145f778ecee0cd97f35e|Jul 22, 2025
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|e7f337360c3e177ce2c027c7d5dcd40ba5d3f3c8|Jul 21, 2025
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.1|Jul 21, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|664fc451caa7559a39c2cdd70ff02ea781e2d4b3|Jul 21, 2025
