@@ -3,14 +3,16 @@
 # pysdl3
 #
 ################################################################################
-# Version: Commits on Aug 07, 2025
-PYSDL3_VERSION = v0.9.8b8
+# Version: Commits on Aug 20, 2025
+PYSDL3_VERSION = v0.9.8b9
 PYSDL3_SITE = $(call github,Aermoss,PySDL3,$(PYSDL3_VERSION))
 PYSDL3_LICENSE = MIT
 PYSDL3_LICENSE_FILES = LICENSE
 PYSDL3_SETUP_TYPE = setuptools
 
 HOST_PYSDL3_NEEDS_HOST_PYTHON = python3
+
+PYSDL3_DEPENDENCIES = host-python-setuptools-scm
 
 PYSDL3_BIN_FOLDER = \
     $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/sdl3/bin

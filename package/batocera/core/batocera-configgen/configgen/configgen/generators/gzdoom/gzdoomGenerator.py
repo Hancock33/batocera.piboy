@@ -12,6 +12,7 @@ from ..Generator import Generator
 
 if TYPE_CHECKING:
     from pathlib import Path
+
     from ...types import HotkeysContext
 
 _CONFIG_DIR: Final = CONFIGS / "gzdoom"
@@ -180,8 +181,8 @@ class GzdoomGenerator(Generator):
 
         # Add sound and music paths (system paths first, for precedence)
         sound_paths = [
-            f"Path=/usr/share/gzdoom/soundfonts",
-            f"Path=/usr/share/gzdoom/fm_banks",
+            "Path=/usr/share/gzdoom/soundfonts",
+            "Path=/usr/share/gzdoom/fm_banks",
             f"Path={_SOUND_FONTS_DIR}",
             f"Path={_FM_BANKS_DIR}",
         ]
@@ -221,12 +222,10 @@ class GzdoomGenerator(Generator):
                     input = pad.inputs[x]
                     # Set the Joy values +1 from the input id values
                     joynum = int(input.id)+1
-                    if input.name in GZDOOM_JOY_BINDINGS:
-                        if input.type == "button":
-                            ini.set_value("[Doom.Bindings]", f"Joy{joynum}", GZDOOM_JOY_BINDINGS[input.name])
-                    if input.name in GZDOOM_JOY_AUTOMAP_BINDINGS:
-                        if input.type == "button":
-                            ini.set_value("[Doom.AutomapBindings]", f"Joy{joynum}", GZDOOM_JOY_AUTOMAP_BINDINGS[input.name])
+                    if input.name in GZDOOM_JOY_BINDINGS and input.type == "button":
+                        ini.set_value("[Doom.Bindings]", f"Joy{joynum}", GZDOOM_JOY_BINDINGS[input.name])
+                    if input.name in GZDOOM_JOY_AUTOMAP_BINDINGS and input.type == "button":
+                        ini.set_value("[Doom.AutomapBindings]", f"Joy{joynum}", GZDOOM_JOY_AUTOMAP_BINDINGS[input.name])
             else:
                 ini.set_value(f"[Joy:JS:{n}]", "Enabled", "0")
 

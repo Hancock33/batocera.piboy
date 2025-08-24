@@ -1,8 +1,8 @@
 diff --git a/3rdparty/CMakeLists.txt b/3rdparty/CMakeLists.txt
-index 6c49a889ba..9abb26de02 100644
+index 46307746a..28b880844 100644
 --- a/3rdparty/CMakeLists.txt
 +++ b/3rdparty/CMakeLists.txt
-@@ -249,10 +249,23 @@ endif()
+@@ -254,10 +254,23 @@ endif()
  # FAudio
  set(FAUDIO_TARGET 3rdparty_dummy_lib)
  if(USE_FAUDIO)
@@ -29,7 +29,7 @@ index 6c49a889ba..9abb26de02 100644
  			message(STATUS "RPCS3: Using system FAudio")
  			find_package(FAudio REQUIRED CONFIGS FAudioConfig.cmake FAudio-config.cmake)
  			add_library(3rdparty_FAudio INTERFACE)
-@@ -261,12 +274,12 @@ if(USE_FAUDIO)
+@@ -266,12 +279,12 @@ if(USE_FAUDIO)
  			set(FAUDIO_TARGET 3rdparty_FAudio)
  		else()
  			message(WARNING
@@ -46,7 +46,7 @@ index 6c49a889ba..9abb26de02 100644
  			message(STATUS "RPCS3: Using builtin FAudio")
  			set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build shared library")
  			add_subdirectory(FAudio EXCLUDE_FROM_ALL)
-@@ -274,9 +287,10 @@ if(USE_FAUDIO)
+@@ -279,9 +292,10 @@ if(USE_FAUDIO)
  			set(FAUDIO_TARGET FAudio-static)
  		else()
  			message(FATAL_ERROR

@@ -247,6 +247,7 @@ class Rpcs3Generator(Generator):
 
         # determine the rom name
         romExt = os.path.splitext(rom)[1]
+        romConfig = os.path.splitext(rom)[0]
         if romExt == ".psn":
             romName: Path | None = None
 
@@ -257,7 +258,7 @@ class Rpcs3Generator(Generator):
 
             if romName is None:
                 raise BatoceraException(f'No game ID found in {rom}')
-        elif rom.name == "config":
+        elif romConfig == "config":
             romName: Path | None = None
         else:
             romName = rom  + "/PS3_GAME/USRDIR/EBOOT.BIN"

@@ -1,5 +1,5 @@
 diff --git a/drivers/media/usb/uvc/uvc_driver.c b/drivers/media/usb/uvc/uvc_driver.c
-index da24a655ab68..6bf41d53319f 100644
+index 5c7bf142fb21..58f7ac5059fd 100644
 --- a/drivers/media/usb/uvc/uvc_driver.c
 +++ b/drivers/media/usb/uvc/uvc_driver.c
 @@ -36,6 +36,7 @@ unsigned int uvc_no_drop_param = 1;
@@ -10,7 +10,7 @@ index da24a655ab68..6bf41d53319f 100644
  
  static struct usb_driver uvc_driver;
  
-@@ -2477,6 +2478,8 @@ module_param_named(trace, uvc_dbg_param, uint, 0644);
+@@ -2480,6 +2481,8 @@ module_param_named(trace, uvc_dbg_param, uint, 0644);
  MODULE_PARM_DESC(trace, "Trace level bitmask");
  module_param_named(timeout, uvc_timeout_param, uint, 0644);
  MODULE_PARM_DESC(timeout, "Streaming control requests timeout");
@@ -20,12 +20,12 @@ index da24a655ab68..6bf41d53319f 100644
  /* ------------------------------------------------------------------------
   * Driver initialization and cleanup
 diff --git a/drivers/media/usb/uvc/uvc_video.c b/drivers/media/usb/uvc/uvc_video.c
-index e3567aeb0007..6b5bf6680347 100644
+index 2e377e7b9e81..3e291463956a 100644
 --- a/drivers/media/usb/uvc/uvc_video.c
 +++ b/drivers/media/usb/uvc/uvc_video.c
-@@ -262,6 +262,11 @@ static void uvc_fixup_video_ctrl(struct uvc_streaming *stream,
- 
- 		ctrl->dwMaxPayloadTransferSize = bandwidth;
+@@ -271,6 +271,11 @@ static void uvc_fixup_video_ctrl(struct uvc_streaming *stream,
+ 				     stream->maxpsize);
+ 		ctrl->dwMaxPayloadTransferSize = stream->maxpsize;
  	}
 +
 +	if (uvc_bandwidth_cap_param && ctrl->dwMaxPayloadTransferSize > uvc_bandwidth_cap_param) {
@@ -36,10 +36,10 @@ index e3567aeb0007..6b5bf6680347 100644
  
  static size_t uvc_video_ctrl_size(struct uvc_streaming *stream)
 diff --git a/drivers/media/usb/uvc/uvcvideo.h b/drivers/media/usb/uvc/uvcvideo.h
-index b9f8eb62ba1d..a4ba5ef236eb 100644
+index 11d6e3c2ebdf..3066fa17d811 100644
 --- a/drivers/media/usb/uvc/uvcvideo.h
 +++ b/drivers/media/usb/uvc/uvcvideo.h
-@@ -659,6 +659,7 @@ extern unsigned int uvc_no_drop_param;
+@@ -661,6 +661,7 @@ extern unsigned int uvc_no_drop_param;
  extern unsigned int uvc_dbg_param;
  extern unsigned int uvc_timeout_param;
  extern unsigned int uvc_hw_timestamps_param;
