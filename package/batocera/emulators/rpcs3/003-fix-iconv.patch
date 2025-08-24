@@ -1,5 +1,5 @@
 diff --git a/rpcs3/CMakeLists.txt b/rpcs3/CMakeLists.txt
-index 727bee8ca..c4b6407ac 100644
+index b1d10d38e..f3c12e310 100644
 --- a/rpcs3/CMakeLists.txt
 +++ b/rpcs3/CMakeLists.txt
 @@ -11,7 +11,7 @@ include(CheckFunctionExists)
@@ -9,5 +9,5 @@ index 727bee8ca..c4b6407ac 100644
 -if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
 +if(TRUE)
      #on some Linux distros shm_unlink and similar functions are in librt only
-     set(ADDITIONAL_LIBS ${ADDITIONAL_LIBS} "rt")
+     list(APPEND ADDITIONAL_LIBS "rt")
  elseif(NOT WIN32 AND NOT CMAKE_CXX_FLAGS MATCHES "LIBICONV_PLUG")

@@ -1,16 +1,5 @@
-From ab3c318e2e4247f4f232f2ab5c64a58280cc849a Mon Sep 17 00:00:00 2001
-From: Megamouse <studienricky89@googlemail.com>
-Date: Tue, 8 Apr 2025 08:58:35 +0200
-Subject: [PATCH 2/2] Update ffmpeg to 7.1.1
-
----
- 3rdparty/ffmpeg                          |  2 +-
- rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp | 60 ++++++++++++----------
- rpcs3/util/media_utils.cpp               | 65 +++++++++++++++++++-----
- 3 files changed, 88 insertions(+), 39 deletions(-)
-
 diff --git a/rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp b/rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp
-index 36228d8a5e31..955727b05b50 100644
+index 36228d8a5..955727b05 100644
 --- a/rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp
 @@ -113,27 +113,6 @@ void AtracXdecDecoder::alloc_avcodec()
@@ -95,7 +84,7 @@ index 36228d8a5e31..955727b05b50 100644
  	ctx->ch_layout.nb_channels = nch_in;
  	ctx->sample_rate = sampling_freq;
 diff --git a/rpcs3/util/media_utils.cpp b/rpcs3/util/media_utils.cpp
-index 73bc86ef46c2..b25415617ef5 100644
+index d4f450ab6..51e7b9d5b 100644
 --- a/rpcs3/util/media_utils.cpp
 +++ b/rpcs3/util/media_utils.cpp
 @@ -347,9 +347,22 @@ namespace utils
