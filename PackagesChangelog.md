@@ -1,6 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250825|Aug 25, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250825|Aug 25, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|92f400edbf2c66efcaaf148b10a7603aa43f7fe8|Aug 24, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|92f400edbf2c66efcaaf148b10a7603aa43f7fe8|Aug 24, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|90d5fc095df743dc9dec5e54844a3116552125b2|Aug 24, 2025
@@ -22,11 +24,9 @@ Ports|[box64](http://github.com/ptitseb/box64)|747882cb4ef5d90955de8b21f74b9fc78
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|abdf6fd9723a08172657fed9452b1375869cf1d2|Aug 24, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|4cf1dc9ff3cf75363beb52ee735d0e989bb0b550|Aug 24, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|213df63197f0834cdaf4e93eb6350bf62c002f9d|Aug 24, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250824|Aug 24, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|4a2830491750329b9ca606233d3bc2a02ea65205|Aug 24, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|84c572218069b0b331aa7c298cb6f508d7de69fd|Aug 24, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|abf2520db90c4fe9fcaa309d36111def1c34051e|Aug 24, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250824|Aug 24, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|9b648b6a5b487768bef0d3f68fa9efac2fc2cbe0|Aug 24, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|abdacad8d39a34abea46d9ac552853c4991cc979|Aug 24, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|06e9d64ca46e884682fdc4044d84e2487da1c9e8|Aug 24, 2025
