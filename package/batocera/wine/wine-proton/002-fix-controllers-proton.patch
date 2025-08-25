@@ -1,8 +1,8 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index ca993515fbe..692b17f8576 100644
+index f37fa90442f..ee7f5a1c73e 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -74,7 +74,8 @@ AddReg=\
+@@ -75,7 +75,8 @@ AddReg=\
      Tapi,\
      ThemeManager,\
      VCRuntime.ntx86,\
@@ -12,7 +12,7 @@ index ca993515fbe..692b17f8576 100644
  
  [DefaultInstall.NT]
  RegisterDlls=RegisterDllsSection
-@@ -166,7 +167,8 @@ AddReg=\
+@@ -169,7 +170,8 @@ AddReg=\
      VCRuntime.ntamd64,\
      VCRuntime.ntarm64,\
      VersionInfo,\
@@ -22,7 +22,7 @@ index ca993515fbe..692b17f8576 100644
  
  [Wow64Install.ntx86]
  RegisterDlls=RegisterDllsSection
-@@ -205,7 +207,12 @@ AddReg=\
+@@ -209,7 +211,12 @@ AddReg=\
      SteamClient64,\
      Tapi,\
      VersionInfo,\

@@ -1,65 +1,8 @@
 diff --git a/configure.ac b/configure.ac
-index 012ad991159..f35f6e9c7b2 100644
+index 012ad991159..4458c692940 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -163,6 +163,14 @@ if test "x$enable_win64" = "xyes"
- then
-     test -z "$with_wine64" || AC_MSG_ERROR([--enable-win64 and --with-wine64 are mutually exclusive.
- --enable-win64 should be used in the 64-bit build tree, --with-wine64 in the 32-bit Wow64 build tree.])
-+elif test -n "$with_wine64"
-+then
-+    test -f "$with_wine64/Makefile" || AC_MSG_ERROR([the 64-bit tree in $with_wine64 has not been configured yet.])
-+    libdir64=$(grep "^libdir *=" "$with_wine64/Makefile" | sed 's/^libdir *= *//')
-+    if test "$libdir64" != "$libdir"; then
-+        AS_ECHO(["$as_me:${as_lineno-$LINENO}: libdir64: $libdir64"]) >&AS_MESSAGE_LOG_FD
-+        AC_MSG_ERROR([when using --with-wine64 you must use the same --libdir in both build trees.])
-+    fi
- fi
- 
- case $build_os in
-@@ -180,25 +188,26 @@ esac
- m4_set_add_all([_AC_SUBST_VARS],[HOST_ARCH]m4_foreach([cpu],[aarch64,arm,arm64ec,i386,x86_64],
-                                 [m4_foreach([var],[CC,CFLAGS,EXTRACFLAGS,CXXFLAGS,LDFLAGS,DEBUG,TARGET,STRIP,DELAYLOADFLAG,DISABLED_SUBDIRS],[,cpu[_]var])]))
- 
--AC_CACHE_CHECK([for the directory containing the Wine tools], wine_cv_toolsdir,
--  [wine_cv_toolsdir="$with_wine_tools"
--   if test -z "$with_wine_tools"; then
--     if test "$cross_compiling" = "yes"; then
--       AC_MSG_ERROR([you must use the --with-wine-tools option when cross-compiling.])
--     elif test -n "$with_wine64"; then
--       wine_cv_toolsdir="$with_wine64"
--     fi
--   fi])
--if test -z "$wine_cv_toolsdir"; then
-+AC_SUBST(toolsdir,[$with_wine_tools])
-+AC_MSG_CHECKING([for the directory containing the Wine tools])
-+if test -z "$toolsdir"; then
-+    if test "$cross_compiling" = "yes"; then
-+        AC_MSG_ERROR([you must use the --with-wine-tools option when cross-compiling.])
-+    elif test -n "$with_wine64" -a "x$enable_tools" != xyes; then
-+        toolsdir="$with_wine64"
-+    fi
-+fi
-+if test -z "$toolsdir"; then
-     wine_makedep=tools/makedep$toolsext
--elif test -d "$wine_cv_toolsdir/tools/winebuild"; then
--    wine_makedep=$wine_cv_toolsdir/tools/makedep$toolsext
-+elif test -d "$toolsdir/tools/winebuild"; then
-+    wine_makedep=$toolsdir/tools/makedep$toolsext
-     enable_tools=${enable_tools:-no}
--    test -f "$wine_makedep" || AC_MSG_ERROR([the Wine tools have not yet been built in $wine_cv_toolsdir])
-+    test -f "$wine_makedep" || AC_MSG_ERROR([the Wine tools have not yet been built in $toolsdir])
- else
--    AC_MSG_ERROR([could not find Wine tools in $wine_cv_toolsdir])
-+    AC_MSG_ERROR([could not find Wine tools in $toolsdir])
- fi
--AC_SUBST(toolsdir,[$wine_cv_toolsdir])
-+AC_MSG_RESULT([${toolsdir:-none needed}])
-+AC_SUBST(wine64dir,[$with_wine64])
- AC_SUBST(RUNTESTFLAGS,["-q -P wine"])
- AC_SUBST(SED_CMD,["LC_ALL=C sed -e 's,@bindir@,\${bindir},g' -e 's,@PACKAGE_STRING@,$PACKAGE_STRING,g' -e 's,@PACKAGE_VERSION@,$PACKAGE_VERSION,g'"])
- 
-@@ -615,6 +624,7 @@ case $host_os in
+@@ -615,6 +615,7 @@ case $host_os in
      dnl Disable modules that can't be used on Windows
      enable_loader=${enable_loader:-no}
      enable_server=${enable_server:-no}
@@ -67,7 +10,7 @@ index 012ad991159..f35f6e9c7b2 100644
      dnl Disable dependencies that are not useful on Windows
      with_x=${with_x:-no}
      with_pthread=${with_pthread:-no}
-@@ -2091,12 +2101,7 @@ fi
+@@ -2091,12 +2092,7 @@ fi
  
  dnl **** Platform-specific checks ****
  
@@ -81,7 +24,7 @@ index 012ad991159..f35f6e9c7b2 100644
  
  case $host_os in
    linux*)
-@@ -2109,8 +2114,7 @@ esac
+@@ -2109,8 +2105,7 @@ esac
  
  if test "$wine_use_preloader" = "yes"
  then
@@ -91,7 +34,7 @@ index 012ad991159..f35f6e9c7b2 100644
    AC_DEFINE(HAVE_WINE_PRELOADER, 1, [Define to 1 if the Wine preloader is being used.])
  fi
  
-@@ -2449,7 +2453,6 @@ wine_srcdir=
+@@ -2449,7 +2444,6 @@ wine_srcdir=
  test "$srcdir" = . || wine_srcdir="$srcdir/"
  
  WINE_CONFIG_SYMLINK(wine,tools/winewrapper)
@@ -99,7 +42,7 @@ index 012ad991159..f35f6e9c7b2 100644
  
  WINE_CONFIG_MAKEFILE(dlls/acledit)
  WINE_CONFIG_MAKEFILE(dlls/aclui)
-@@ -3648,6 +3651,7 @@ WINE_CONFIG_MAKEFILE(server)
+@@ -3648,6 +3642,7 @@ WINE_CONFIG_MAKEFILE(server)
  WINE_CONFIG_MAKEFILE(tools,,[test "x$enable_tools" = xno])
  WINE_CONFIG_MAKEFILE(tools/sfnt2fon,,[test "x$enable_tools" = xno])
  WINE_CONFIG_MAKEFILE(tools/widl,,[test "x$enable_tools" = xno])
@@ -107,7 +50,7 @@ index 012ad991159..f35f6e9c7b2 100644
  WINE_CONFIG_MAKEFILE(tools/winebuild,,[test "x$enable_tools" = xno])
  WINE_CONFIG_MAKEFILE(tools/winedump,,[test "x$enable_tools" = xno])
  WINE_CONFIG_MAKEFILE(tools/winegcc,,[test "x$enable_tools" = xno])
-@@ -3666,7 +3670,7 @@ WINE_IGNORE_FILE(config.log)
+@@ -3666,7 +3661,7 @@ WINE_IGNORE_FILE(config.log)
  WINE_IGNORE_FILE(config.status)
  WINE_IGNORE_FILE(include/config.h)
  WINE_IGNORE_FILE(include/stamp-h)
@@ -116,20 +59,17 @@ index 012ad991159..f35f6e9c7b2 100644
  
  if test "x$enable_tools" != xno
  then
-@@ -3734,25 +3738,8 @@ fi
+@@ -3736,22 +3731,16 @@ dnl Rules for wineloader
  
- dnl Rules for wineloader
- 
--if test -n "$with_wine64"
-+if test -z "$with_wine64"
+ if test -n "$with_wine64"
  then
 -    case "$with_wine64" in
 -      /*) reldir="" ;;
 -      *)  reldir="../" ;;
 -    esac
--    dnl Get rid of old symlinks
--    rm -f fonts server 2>/dev/null
--    WINE_APPEND_RULE(
+     dnl Get rid of old symlinks
+     rm -f fonts server 2>/dev/null
+     WINE_APPEND_RULE(
 -[all: loader/wine64 loader/wine64-preloader $with_wine64/loader/wine $with_wine64/loader/wine-preloader
 -loader/wine64 loader/wine64-preloader:
 -	rm -f \$[@] && \$(LN_S) $reldir$with_wine64/\$[@] \$[@]
@@ -137,14 +77,19 @@ index 012ad991159..f35f6e9c7b2 100644
 -	rm -f \$[@] && \$(LN_S) $ac_pwd/loader/wine \$[@]
 -$with_wine64/loader/wine-preloader:
 -	rm -f \$[@] && \$(LN_S) $ac_pwd/loader/wine-preloader \$[@]
--clean::
++[all: loader-wow64 $with_wine64/loader-wow64
++loader-wow64:
++	rm -f \$[@] && \$(LN_S) $with_wine64/loader \$[@]
++$with_wine64/loader-wow64:
++	rm -f \$[@] && \$(LN_S) $ac_pwd/loader \$[@]
+ clean::
 -	rm -f loader/wine64 loader/wine64-preloader $with_wine64/loader/wine $with_wine64/loader/wine-preloader])
--else
++	rm -f loader-wow64 $with_wine64/loader-wow64])
+ else
      TOP_INSTALL_DEV="$TOP_INSTALL_DEV include"
      TOP_INSTALL_LIB="$TOP_INSTALL_LIB \
- fonts \
 diff --git a/dlls/ntdll/unix/loader.c b/dlls/ntdll/unix/loader.c
-index 2b0037e39eb..58298bf00c8 100644
+index 2b0037e39eb..223378f2621 100644
 --- a/dlls/ntdll/unix/loader.c
 +++ b/dlls/ntdll/unix/loader.c
 @@ -98,18 +98,6 @@
@@ -270,12 +215,8 @@ index 2b0037e39eb..58298bf00c8 100644
      set_dll_path();
      set_system_dll_path();
      set_home_dir();
-@@ -553,42 +543,33 @@ static void init_paths( char *argv[] )
-  */
- char *get_alternate_wineloader( WORD machine )
+@@ -555,40 +545,29 @@ char *get_alternate_wineloader( WORD machine )
  {
-+    const char *arch;
-+    BOOL force_wow64 = (arch = getenv( "WINEARCH" )) && !strcmp( arch, "wow64" );
      char *ret = NULL;
  
 -    if (machine == current_machine) return NULL;
@@ -293,24 +234,23 @@ index 2b0037e39eb..58298bf00c8 100644
 -            strcat( ret, "64" );
 -        }
 -        return ret;
-+        if (force_wow64) return NULL;
 +        if (machine != get_alt_machine( current_machine )) return NULL;
 +    }
 +    else
 +    {
-+        if (!force_wow64 && machine == current_machine) return NULL;
++        if (machine == current_machine) return NULL;
 +        machine = get_alt_machine( current_machine );
      }
  
 -    return remove_tail( wineloader, "64" );
--}
 +    if (!build_dir)
 +        asprintf( &ret, "%s%s/wine", dll_dir, get_so_dir( machine ));
 +    else if (alt_build_dir)
 +        asprintf( &ret, "%s/loader/wine", alt_build_dir );
- 
++
 +    return ret;
-+}
+ }
+ 
  
  static void preloader_exec( char **argv )
  {
@@ -330,7 +270,7 @@ index 2b0037e39eb..58298bf00c8 100644
  #ifdef __APPLE__
      {
          posix_spawnattr_t attr;
-@@ -688,15 +669,11 @@ static int exec_wineserver( pid_t *pid, char **argv )
+@@ -688,15 +667,11 @@ static int exec_wineserver( pid_t *pid, char **argv )
  {
      char *path;
  
@@ -349,7 +289,7 @@ index 2b0037e39eb..58298bf00c8 100644
  
      if (!build_path_and_exec( pid, bin_dir, "wineserver", argv )) return 0;
      if ((path = getenv( "WINESERVER" )) && !build_path_and_exec( pid, "", path, argv )) return 0;
-@@ -1475,6 +1452,7 @@ static NTSTATUS find_builtin_dll( UNICODE_STRING *nt_name, void **module, SIZE_T
+@@ -1475,6 +1450,7 @@ static NTSTATUS find_builtin_dll( UNICODE_STRING *nt_name, void **module, SIZE_T
      unsigned int len = nt_name->Length / sizeof(WCHAR);
      char *ptr = NULL, *file, *ext = NULL;
      const char *pe_dir = get_pe_dir( search_machine );
@@ -357,7 +297,7 @@ index 2b0037e39eb..58298bf00c8 100644
      OBJECT_ATTRIBUTES attr;
      NTSTATUS status = STATUS_DLL_NOT_FOUND;
      BOOL found_image = FALSE;
-@@ -2394,7 +2372,7 @@ static jstring wine_init_jni( JNIEnv *env, jobject obj, jobjectArray cmdline, jo
+@@ -2394,7 +2370,7 @@ static jstring wine_init_jni( JNIEnv *env, jobject obj, jobjectArray cmdline, jo
      main_argc = argc;
      main_argv = argv;
  
@@ -366,7 +306,7 @@ index 2b0037e39eb..58298bf00c8 100644
      virtual_init();
      init_environment();
  
-@@ -2593,19 +2571,24 @@ DECLSPEC_EXPORT void __wine_main( int argc, char *argv[] )
+@@ -2593,19 +2569,24 @@ DECLSPEC_EXPORT void __wine_main( int argc, char *argv[] )
      main_argc = argc;
      main_argv = argv;
  
@@ -585,26 +525,10 @@ index 2ba32ea5176..0bd675bcc75 100644
          void (*init_func)(int, char **) = dlsym( handle, "__wine_main" );
          if (init_func) init_func( argc, argv );
 diff --git a/tools/makedep.c b/tools/makedep.c
-index 5847ba56869..63bdf1cfc47 100644
+index 5847ba56869..ebbf7da44fb 100644
 --- a/tools/makedep.c
 +++ b/tools/makedep.c
-@@ -147,6 +147,7 @@ static const char *root_src_dir;
- static const char *root_obj_dir;
- static const char *tools_dir;
- static const char *tools_ext;
-+static const char *wine64_dir;
- static const char *exe_ext;
- static const char *fontforge;
- static const char *convert;
-@@ -244,6 +245,7 @@ static const char *output_makefile_name = "Makefile";
- static const char *input_file_name;
- static const char *output_file_name;
- static const char *temp_file_name;
-+static char cwd[PATH_MAX];
- static int compile_commands_mode;
- static int silent_rules;
- static int input_line;
-@@ -3764,7 +3766,7 @@ static void output_programs( struct makefile *make )
+@@ -3764,7 +3764,7 @@ static void output_programs( struct makefile *make )
  
      for (i = 0; i < make->programs.count; i++)
      {
@@ -613,7 +537,7 @@ index 5847ba56869..63bdf1cfc47 100644
          char *program = strmake( "%s%s", make->programs.str[i], exe_ext );
          struct strarray deps = get_local_dependencies( make, make->programs.str[i], make->in_files );
          struct strarray all_libs = get_expanded_file_local_var( make, make->programs.str[i], "LDFLAGS" );
-@@ -3800,8 +3802,8 @@ static void output_programs( struct makefile *make )
+@@ -3800,8 +3800,8 @@ static void output_programs( struct makefile *make )
          }
          strarray_addall( &make->all_targets[arch], symlinks );
  
@@ -624,53 +548,6 @@ index 5847ba56869..63bdf1cfc47 100644
          for (j = 0; j < symlinks.count; j++)
              add_install_rule( make, symlinks.str[j], arch, program,
                                strmake( "y$(bindir)/%s%s", symlinks.str[j], exe_ext ));
-@@ -4209,12 +4211,9 @@ static void output_compile_commands( const char *dest )
-     struct compile_command *cmd;
-     unsigned int i;
-     const char *dir;
--    char buffer[PATH_MAX];
- 
-     output_file = create_temp_file( dest );
--
--    getcwd( buffer, sizeof(buffer) );
--    dir = escape_cstring( buffer );
-+    dir = escape_cstring( cwd );
- 
-     output( "[\n" );
-     LIST_FOR_EACH_ENTRY( cmd, &compile_commands, struct compile_command, entry )
-@@ -4415,6 +4414,16 @@ static void output_top_makefile( struct makefile *make )
-             silent_rules ? " -S" : "" );
-     strarray_add( &make->phony_targets, "depend" );
- 
-+    if (wine64_dir)
-+    {
-+        output( "loader-wow64:\n" );
-+	output( "\t%srm -f $@ && %s %s/loader $@\n", cmd_prefix( "LN" ), ln_s, wine64_dir );
-+        output( "%s/loader-wow64:\n", wine64_dir );
-+	output( "\t%srm -f $@ && %s %s/loader $@\n", cmd_prefix( "LN" ), ln_s, cwd );
-+        strarray_add( &make->all_targets[0], "loader-wow64" );
-+        strarray_add( &make->all_targets[0], strmake( "%s/loader-wow64", wine64_dir ));
-+    }
-+
-     for (i = 0; i < subdirs.count; i++) output_sources( submakes[i] );
-     output_sources( make );
- 
-@@ -4658,6 +4667,7 @@ int main( int argc, char *argv[] )
- 
-     atexit( cleanup_files );
-     init_signals( exit_on_signal );
-+    getcwd( cwd, sizeof(cwd) );
- 
-     for (i = 0; i < HASH_SIZE; i++) list_init( &files[i] );
-     for (i = 0; i < HASH_SIZE; i++) list_init( &global_includes[i] );
-@@ -4679,6 +4689,7 @@ int main( int argc, char *argv[] )
-     root_obj_dir       = get_expanded_make_variable( top_makefile, "objdir" );
-     tools_dir          = get_expanded_make_variable( top_makefile, "toolsdir" );
-     tools_ext          = get_expanded_make_variable( top_makefile, "toolsext" );
-+    wine64_dir         = get_expanded_make_variable( top_makefile, "wine64dir" );
-     exe_ext            = get_expanded_make_variable( top_makefile, "EXEEXT" );
-     dll_ext[0]         = get_expanded_make_variable( top_makefile, "DLLEXT" );
-     fontforge          = get_expanded_make_variable( top_makefile, "FONTFORGE" );
 diff --git a/tools/wine/Makefile.in b/tools/wine/Makefile.in
 new file mode 100644
 index 00000000000..55489a3444a
