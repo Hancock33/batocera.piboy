@@ -1,32 +1,13 @@
-diff --git a/deps/Dependencies/build_cmake/zstd_zlibwrapper/CMakeLists.txt b/deps/Dependencies/build_cmake/zstd_zlibwrapper/CMakeLists.txt
-index f180dd7..d783a40 100644
---- a/deps/Dependencies/build_cmake/zstd_zlibwrapper/CMakeLists.txt
-+++ b/deps/Dependencies/build_cmake/zstd_zlibwrapper/CMakeLists.txt
-@@ -1,15 +1,15 @@
- project(libzstdwapper C)
+--- a/deps/Dependencies/zstd/zlibWrapper/gzguts.h	2025-08-23 14:18:44.329688661 +0200
++++ b/deps/Dependencies/zstd/zlibWrapper/gzguts.h	2025-08-23 14:19:12.499503509 +0200
+@@ -22,6 +22,10 @@
+ #  define ZLIB_INTERNAL
+ #endif
  
--find_package(ZLIB)
--if(NOT ZLIB_FOUND)
-+#find_package(ZLIB)
-+#if(NOT ZLIB_FOUND)
- 	MESSAGE("-- Using Provided zlib source")
--	if(NOT TARGET zlibstatic)
-+#	if(NOT TARGET zlibstatic)
- 		add_subdirectory(
- 			${CMAKE_CURRENT_SOURCE_DIR}/../zlib
- 			${CMAKE_CURRENT_BINARY_DIR}/zlib
- 		)
--	endif()
--endif(NOT ZLIB_FOUND)
-+#	endif()
-+#endif(NOT ZLIB_FOUND)
- 
- set(ZSTD_BUILD_STATIC ON)
- set(ZSTD_BUILD_SHARED  OFF)
-@@ -27,4 +27,4 @@ file(GLOB zstd_zlibwrapperSource ${CMAKE_CURRENT_SOURCE_DIR}/../../zstd/zlibWrap
- add_library(libzstd_zlibwrapper_static STATIC ${zstd_zlibwrapperSource})
- target_link_libraries(libzstd_zlibwrapper_static PRIVATE libzstd_static PUBLIC ZLIB::ZLIB)
- target_include_directories(libzstd_zlibwrapper_static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../zstd/lib/ ${CMAKE_CURRENT_SOURCE_DIR}/../../zstd/zlibWrapper/)
--target_compile_definitions(libzstd_zlibwrapper_static PUBLIC ZWRAP_USE_ZSTD)
-\ No newline at end of file
-+target_compile_definitions(libzstd_zlibwrapper_static PUBLIC ZWRAP_USE_ZSTD)
++#ifndef STDC
++#define STDC
++#endif
++
+ #include <stdio.h>
+ #include "zstd_zlibwrapper.h"
+ #include "gzcompatibility.h"
