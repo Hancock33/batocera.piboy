@@ -1,8 +1,8 @@
 diff --git a/server/Makefile.in b/server/Makefile.in
-index 57250fd0..3760536d 100644
+index 6e4e68d6ebf..6c22e81b9a7 100644
 --- a/server/Makefile.in
 +++ b/server/Makefile.in
-@@ -49,6 +49,7 @@ SOURCES = \
+@@ -48,6 +48,7 @@ SOURCES = \
  	winstation.c
  
  UNIX_CFLAGS = $(INOTIFY_CFLAGS)

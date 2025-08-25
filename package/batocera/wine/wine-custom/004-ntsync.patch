@@ -1515,7 +1515,7 @@ index f3d920184ed..67432be048a 100644
  
  #endif /* __WINE_WINE_SERVER_PROTOCOL_H */
 diff --git a/server/Makefile.in b/server/Makefile.in
-index 6e4e68d6ebf..57250fd0332 100644
+index 6c22e81b9a7..3760536d8d2 100644
 --- a/server/Makefile.in
 +++ b/server/Makefile.in
 @@ -16,6 +16,7 @@ SOURCES = \

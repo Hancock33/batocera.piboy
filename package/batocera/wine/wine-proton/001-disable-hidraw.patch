@@ -1,8 +1,8 @@
 diff --git a/dlls/winebus.sys/main.c b/dlls/winebus.sys/main.c
-index fe785e5804a..bfb1215f4d5 100644
+index 3e074163b5b..9f0fd22c8ed 100644
 --- a/dlls/winebus.sys/main.c
 +++ b/dlls/winebus.sys/main.c
-@@ -1171,7 +1171,7 @@ static void bus_options_init(void)
+@@ -1212,7 +1212,7 @@ static void bus_options_init(void)
  
      options.disable_sdl = !check_bus_option(L"Enable SDL", 1);
      if (options.disable_sdl) TRACE("SDL devices disabled in registry\n");
