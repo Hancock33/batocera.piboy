@@ -4,7 +4,9 @@ Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource
 Emulators|[clk](https://github.com/TomHarte/CLK)|eeb06de916c23e48d425a6a772aebf897e94bae9|Aug 27, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-27|Aug 27, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|e3d071f80126c03a1106e50e4ae21bd437a9e902|Aug 27, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250827|Aug 27, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|aa1988088cc01997cf4e56995219bee13cba63df|Aug 27, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250827|Aug 27, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|a208812ca857cff18eae2f62b419f9f26fa51675|Aug 26, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f303d57447ced5e70189cae0852aa41951c4c27d|Aug 26, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|39b5854b31e4c103360e193b1cbddb21d7d46842|Aug 26, 2025
@@ -21,9 +23,7 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14260|Aug 26, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|f72e10a297317edaa4c6e2bfbd4d81c94d03a7b4|Aug 26, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|87eb137123eb80679d56b255ef72a5d8fb78120d|Aug 26, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|cf133928dd953d7d25692760cf1bff9407e3ff98|Aug 26, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250826|Aug 26, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|6707a4a5baccd40132bc98fb8cd1bbb6eec3efbe|Aug 26, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250826|Aug 26, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|dee6d30230fd491048f37cfff61b741907bb1df1|Aug 26, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|8a30faa8009b3f57ddd9f34e1861cfe52d80c6e5|Aug 26, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|8a30faa8009b3f57ddd9f34e1861cfe52d80c6e5|Aug 26, 2025
