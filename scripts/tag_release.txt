@@ -15,6 +15,7 @@ layershellqt.mk
 libdbusmenu.mk
 liblc3.mk
 libpinmame.mk
+libserum.mk
 libsfdo.mk
 libsysstat.mk
 libzedmd.mk

@@ -20,10 +20,10 @@ glslang.mk
 iir.mk
 kodi-pvr-freebox
 ledspicer.mk
+libdmdutil.mk
 libgme.mk
 libretro-mame.mk
 libretro-mgba.mk
-libserum.mk
 libxmp.mk
 mame-src.mk
 mame.mk
