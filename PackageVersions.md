@@ -72,7 +72,7 @@ Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v119|Jun 02, 2
 Emulators|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|de4bf7c2c1c31a8b9a238505843705aa33221f43|Aug 24, 2025
 Emulators|[citron](https://git.citron-emu.org/citron/emu)|046538bb473c99fe3d02f9b0e76f7a056e6cecc8|May 14, 2025
-Emulators|[clk](https://github.com/TomHarte/CLK)|e6b45c978c4b4b9ba4e908d2ce36e1d8f7eeb64c|Aug 26, 2025
+Emulators|[clk](https://github.com/TomHarte/CLK)|eeb06de916c23e48d425a6a772aebf897e94bae9|Aug 27, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2b7faeb920da31edb11f01c9a0473f86e4023100|Aug 24, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|842a088dcecbc99348b24557396f56456ceaf2ac|Aug 15, 2025
@@ -88,7 +88,7 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|9c5408a6d3fff939a
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|195e3d43c0ce921f7ddc45f3d1e44fa858823d37|Aug 13, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|ef33d25c43648cdf1f982b5ff1c7a26ffb11ce48|Aug 24, 2025
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Emulators|[hatari](http://github.com/hatari/hatari)|0e2d83876124ab35a8eb48cb5dddbdc45fed8cdd|Aug 26, 2025
+Emulators|[hatari](http://github.com/hatari/hatari)|39b5854b31e4c103360e193b1cbddb21d7d46842|Aug 26, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|1d8ad1526511d966b6b78a3149b492ca124c1a0a|Aug 01, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|8ef85e52340e97fa64cd8671903e5ecb5cc94a3f|Aug 24, 2025
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|0656fc2eb39a6f4fdd557043c28cd8dfdc7e762f|Aug 10, 2025
@@ -271,10 +271,10 @@ Emulators|[python-pygame2](http://github.com/pygame/pygame)|79807da84c9bacf8df5a
 Emulators|[python-pyxel](http://github.com/kitao/pyxel)|v2.5.0|Aug 25, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|2d24ef2972a709f870cc3f73853158fa2376f37d|May 23, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|a1de9d20515401215427a080ab54b154ad471859|Aug 26, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|aa1988088cc01997cf4e56995219bee13cba63df|Aug 27, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250825|Aug 25, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|6b238d847fd7576773d1d5653a90dbc1acadd313|Aug 25, 2025
-Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-26|Aug 26, 2025
+Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-27|Aug 27, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.124|Aug 25, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|fdcbc279765e432cbabf19264273f4a87f61fc11|Jun 10, 2025
 Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|788228c0f3f90e1df32da20c81930f80ba6a816b|Aug 22, 2025
@@ -299,7 +299,7 @@ Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/r
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|765073021a3fd0ec193f89ff224aad5a3af31551|Aug 22, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2825-master|Aug 20, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
-Emulators|[ymir](https://github.com/StrikerX3/Ymir)|f6bb3fd64844e14b042e8619ab4bed41295d815a|Aug 26, 2025
+Emulators|[ymir](https://github.com/StrikerX3/Ymir)|e3d071f80126c03a1106e50e4ae21bd437a9e902|Aug 27, 2025
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20250708|Jul 08, 2025
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
@@ -309,7 +309,7 @@ Firmwares|[firmware-orangepi](http://github.com/orangepi-xunlong/firmware)|db5e8
 Firmwares|[firmware-radxa-rkwifibt](http://github.com/JeffyCN/mirrors)|e7a4fc70448ca2f66b3df50cabe527916b42bdad|Nov 22, 2018
 Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|1793f5c4baa091941a8f85db756f6035c743ee5a|Aug 21, 2025
-Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|efe8351b61d116f7fedfcaf8ccfac8edb6a9f312|Aug 21, 2025
+Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|49621512ec33a52432aa826441f058ba8da2c3af|Aug 26, 2025
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.05.1|Aug 19, 2025
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|a744af14d4afbda77bf472bc53f43b9ceba39cc0|Dec 28, 2024
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|15.4.0|Jun 27, 2025

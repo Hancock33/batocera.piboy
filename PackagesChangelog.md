@@ -1,15 +1,17 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
+Emulators|[clk](https://github.com/TomHarte/CLK)|eeb06de916c23e48d425a6a772aebf897e94bae9|Aug 27, 2025
+Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-27|Aug 27, 2025
+Emulators|[ymir](https://github.com/StrikerX3/Ymir)|e3d071f80126c03a1106e50e4ae21bd437a9e902|Aug 27, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|aa1988088cc01997cf4e56995219bee13cba63df|Aug 27, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|a208812ca857cff18eae2f62b419f9f26fa51675|Aug 26, 2025
-Emulators|[clk](https://github.com/TomHarte/CLK)|e6b45c978c4b4b9ba4e908d2ce36e1d8f7eeb64c|Aug 26, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f303d57447ced5e70189cae0852aa41951c4c27d|Aug 26, 2025
-Emulators|[hatari](http://github.com/hatari/hatari)|0e2d83876124ab35a8eb48cb5dddbdc45fed8cdd|Aug 26, 2025
+Emulators|[hatari](http://github.com/hatari/hatari)|39b5854b31e4c103360e193b1cbddb21d7d46842|Aug 26, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|e24aa60635c422018d8b013c590c74512b6f7221|Aug 26, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.132|Aug 26, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|6e4d363f766f6e4c06074774ef883b8ef046f465|Aug 26, 2025
-Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-26|Aug 26, 2025
-Emulators|[ymir](https://github.com/StrikerX3/Ymir)|f6bb3fd64844e14b042e8619ab4bed41295d815a|Aug 26, 2025
+Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|49621512ec33a52432aa826441f058ba8da2c3af|Aug 26, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|bdb4aa5dc6b7836744af4c7181467586fdb5cdec|Aug 26, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|76cc7bbb96cb30277696e45bd0fdfa2666ff9696|Aug 26, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|644e42140dd0c4e44646e17420a0163f299d7dd0|Aug 26, 2025
@@ -20,7 +22,6 @@ Ports|[openmohaa](http://github.com/openmoh/openmohaa)|f72e10a297317edaa4c6e2bfb
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|87eb137123eb80679d56b255ef72a5d8fb78120d|Aug 26, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|cf133928dd953d7d25692760cf1bff9407e3ff98|Aug 26, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250826|Aug 26, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|a1de9d20515401215427a080ab54b154ad471859|Aug 26, 2025
 Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|6707a4a5baccd40132bc98fb8cd1bbb6eec3efbe|Aug 26, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250826|Aug 26, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|dee6d30230fd491048f37cfff61b741907bb1df1|Aug 26, 2025
@@ -69,7 +70,6 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.3|Aug 22, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|2f847e9e3ccdc8086ab02ab3e6c97bf0729deadd|Aug 22, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|54eb537ad0d82b242a5fa63f061b1480ffa493da|Aug 22, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|1793f5c4baa091941a8f85db756f6035c743ee5a|Aug 21, 2025
-Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|efe8351b61d116f7fedfcaf8ccfac8edb6a9f312|Aug 21, 2025
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|8ba7fd2a8e74c650e56b7b13b8351585cf1247e7|Aug 21, 2025
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|143b0abb02a6ff501757674c9fdf47e0fcd7cbd3|Aug 21, 2025
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|78002be334ea8a86e64d20dd8a85ac2af568f1fa|Aug 21, 2025
