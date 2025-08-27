@@ -2,16 +2,20 @@
 -----|:-----:|:-----:|:-----:
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.96|Aig 02, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|eeb06de916c23e48d425a6a772aebf897e94bae9|Aug 27, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|a4e1c760fb74cc29a0781ae5ed9482a56ac2027d|Aug 27, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.133|Aug 27, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-08-27|Aug 27, 2025
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45744|Aug 27, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|e3d071f80126c03a1106e50e4ae21bd437a9e902|Aug 27, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250827|Aug 27, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|aa1988088cc01997cf4e56995219bee13cba63df|Aug 27, 2025
+Emulators|[libserum](http://github.com/PPUC/libserum_concentrate)|v2.2.0-concentrate.6|Aug 27, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250827|Aug 27, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|4c3758a0f5fc92027246343c165126b6b6c5e3fc|Aug 27, 2025
+Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|cee2f9eb192559f130e6e5c880b1821af3c8632b|Aug 27, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|a208812ca857cff18eae2f62b419f9f26fa51675|Aug 26, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f303d57447ced5e70189cae0852aa41951c4c27d|Aug 26, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|39b5854b31e4c103360e193b1cbddb21d7d46842|Aug 26, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|e24aa60635c422018d8b013c590c74512b6f7221|Aug 26, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.132|Aug 26, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|6e4d363f766f6e4c06074774ef883b8ef046f465|Aug 26, 2025
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|49621512ec33a52432aa826441f058ba8da2c3af|Aug 26, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|bdb4aa5dc6b7836744af4c7181467586fdb5cdec|Aug 26, 2025
@@ -23,8 +27,7 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14260|Aug 26, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|f72e10a297317edaa4c6e2bfbd4d81c94d03a7b4|Aug 26, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|87eb137123eb80679d56b255ef72a5d8fb78120d|Aug 26, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|cf133928dd953d7d25692760cf1bff9407e3ff98|Aug 26, 2025
-Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|6707a4a5baccd40132bc98fb8cd1bbb6eec3efbe|Aug 26, 2025
-Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|dee6d30230fd491048f37cfff61b741907bb1df1|Aug 26, 2025
+Emulators|[libdmdutil](http://github.com/vpinball/libdmdutil)|v0.10.0|Aug 26, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|8a30faa8009b3f57ddd9f34e1861cfe52d80c6e5|Aug 26, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|8a30faa8009b3f57ddd9f34e1861cfe52d80c6e5|Aug 26, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|9d63fbff345315d0c5bc3709b1774046e8c7424f|Aug 26, 2025
@@ -54,11 +57,9 @@ Emulators|[applewin](https://github.com/audetto/AppleWin.git)|903d9017f5ad385c6a
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|de4bf7c2c1c31a8b9a238505843705aa33221f43|Aug 24, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2b7faeb920da31edb11f01c9a0473f86e4023100|Aug 24, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|8ef85e52340e97fa64cd8671903e5ecb5cc94a3f|Aug 24, 2025
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45743|Aug 24, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|4cf1dc9ff3cf75363beb52ee735d0e989bb0b550|Aug 24, 2025
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|2298d1d1e7c1a8d75e2182d6d7da2b5ac0908be7|Aug 24, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|abf2520db90c4fe9fcaa309d36111def1c34051e|Aug 24, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|9b648b6a5b487768bef0d3f68fa9efac2fc2cbe0|Aug 24, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|ef33d25c43648cdf1f982b5ff1c7a26ffb11ce48|Aug 24, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c9abf4388ae8af72632a6b910ed15136c5092060|Aug 23, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|4540b7790bf7b3bf6814d4d480a83179248b9ff6|Aug 23, 2025
@@ -236,7 +237,6 @@ Emulators|[libretro-handy](http://github.com/libretro/libretro-handy)|fca239207e
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|fdcbc279765e432cbabf19264273f4a87f61fc11|Jun 10, 2025
 Libraries|[python-cog](http://github.com/nedbat/cog)|v3.5.1|Jun 10, 2025
 Utils|[warehouse](http://github.com/flattool/warehouse)|2.1.0|Jun 10, 2025
-Emulators|[libserum](http://github.com/zesinger/libserum)|v2.2.0|Jun 10, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|fdcbc279765e432cbabf19264273f4a87f61fc11|Jun 10, 2025
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|e1391cc10a53b205963b7d1bd2b1f8d87d0d2cc7|Jun 03, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v119|Jun 02, 2025
