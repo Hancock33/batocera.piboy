@@ -12,10 +12,10 @@ index 4bbe88bbe..5e20d114a 100644
      if (logfd) {
          time_t curtime;
 diff --git a/src/common/platform/posix/sdl/i_main.cpp b/src/common/platform/posix/sdl/i_main.cpp
-index 2ecc14686..0a9b4d043 100644
+index a8ee3bf80..a83fc9db3 100644
 --- a/src/common/platform/posix/sdl/i_main.cpp
 +++ b/src/common/platform/posix/sdl/i_main.cpp
-@@ -176,23 +176,7 @@ int main (int argc, char **argv)
+@@ -184,23 +184,7 @@ int main (int argc, char **argv)
  
  	Args = new FArgs(argc, argv);
  
@@ -160,10 +160,10 @@ index c06e27b67..268d83e42 100644
  
  //===========================================================================
 diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
-index 8f89f29ca..76821019d 100644
+index 3b259e8f5..6ee1792c1 100644
 --- a/src/gameconfigfile.cpp
 +++ b/src/gameconfigfile.cpp
-@@ -155,7 +155,7 @@ FGameConfigFile::FGameConfigFile ()
+@@ -156,7 +156,7 @@ FGameConfigFile::FGameConfigFile ()
  		SetValueForKey ("Path", SHARE_DIR "/games/doom", true);
  		SetValueForKey ("Path", "/usr/local/share/doom", true);
  		SetValueForKey ("Path", "/usr/local/share/games/doom", true);
@@ -172,7 +172,7 @@ index 8f89f29ca..76821019d 100644
  		SetValueForKey ("Path", "/usr/share/games/doom", true);
  #endif
  		SetValueForKey ("Path", "$DOOMWADDIR", true);
-@@ -186,8 +186,10 @@ FGameConfigFile::FGameConfigFile ()
+@@ -187,8 +187,10 @@ FGameConfigFile::FGameConfigFile ()
  		SetValueForKey("Path", "/usr/local/share/doom/fm_banks", true);
  		SetValueForKey("Path", "/usr/local/share/games/doom/soundfonts", true);
  		SetValueForKey("Path", "/usr/local/share/games/doom/fm_banks", true);

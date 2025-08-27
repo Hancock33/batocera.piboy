@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 316670093..fe26c2851 100644
+index 77bf8aa7e..9af66316b 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -217,7 +217,6 @@ endmacro()
@@ -10,7 +10,7 @@ index 316670093..fe26c2851 100644
  if (NOT FORCE_INTERNAL_CPPDAP)
  	find_package( cppdap CONFIG )
  endif()
-@@ -231,7 +230,6 @@ if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
+@@ -233,7 +232,6 @@ if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
  	set( HAVE_VM_JIT ON )
  endif()
  if(NOT TOOLS_ONLY)
@@ -18,7 +18,7 @@ index 316670093..fe26c2851 100644
  	find_package( VPX )
  endif()
  
-@@ -427,42 +425,6 @@ if(NOT TOOLS_ONLY)
+@@ -430,42 +428,6 @@ if(NOT TOOLS_ONLY)
  	set( DRPC_LIBRARIES discord-rpc )
  	set( DRPC_LIBRARY discord-rpc )
  

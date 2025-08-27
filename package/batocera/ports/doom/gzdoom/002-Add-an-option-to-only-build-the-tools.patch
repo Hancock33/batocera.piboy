@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 471d66556..316670093 100644
+index 87177cece..77bf8aa7e 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -53,6 +53,8 @@ list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
@@ -11,7 +11,7 @@ index 471d66556..316670093 100644
  option( FORCE_CROSSCOMPILE "Turn on cross compiling." NO )
  if( FORCE_CROSSCOMPILE )
  	set( CMAKE_CROSSCOMPILING TRUE )
-@@ -228,6 +230,10 @@ target_architecture(TARGET_ARCHITECTURE)
+@@ -230,6 +232,10 @@ target_architecture(TARGET_ARCHITECTURE)
  if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
  	set( HAVE_VM_JIT ON )
  endif()
@@ -22,18 +22,21 @@ index 471d66556..316670093 100644
  
  option (HAVE_VULKAN "Enable Vulkan support" ON)
  option (HAVE_GLES2 "Enable GLES2 support" ON)
-@@ -343,18 +349,11 @@ option(FORCE_INTERNAL_CPPDAP "Use internal cppdap" ON)
+@@ -345,20 +351,12 @@ option(FORCE_INTERNAL_CPPDAP "Use internal cppdap" ON)
  
  mark_as_advanced( FORCE_INTERNAL_ASMJIT )
  
 -if (HAVE_VULKAN)
 -	add_subdirectory( libraries/ZVulkan )
 +if(NOT TOOLS_ONLY)
++    set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 +    add_subdirectory( libraries/ZWidget )
 +    add_subdirectory( libraries/webp )
  endif()
  
+-set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 -add_subdirectory( libraries/ZWidget )
+-
 -add_subdirectory( libraries/webp )
 -
 -add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
@@ -44,7 +47,7 @@ index 471d66556..316670093 100644
  if( HAVE_VM_JIT AND UNIX )
  	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )
  	if( NOT HAVE_BACKTRACE )
-@@ -418,6 +417,57 @@ endif()
+@@ -422,6 +420,57 @@ endif()
  
  set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/lzma/C" )
  
@@ -102,7 +105,7 @@ index 471d66556..316670093 100644
  if( NOT CMAKE_CROSSCOMPILING )
  	if( NOT CROSS_EXPORTS )
  		set( CROSS_EXPORTS "" )
-@@ -425,25 +475,29 @@ if( NOT CMAKE_CROSSCOMPILING )
+@@ -429,25 +478,29 @@ if( NOT CMAKE_CROSSCOMPILING )
  endif()
  
  # Install the entire docs directory in the distributed zip package
