@@ -286,7 +286,7 @@ index 9bef46151d53..0ee649d4808b 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 703ae114b033..3f6e00d44315 100644
+index 57e1b25bf267..f7c453cc9056 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -862,11 +862,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -2472,7 +2472,7 @@ index 000000000000..98c229dad177
 +MODULE_DESCRIPTION(ADIOS_PROGNAME);
 \ No newline at end of file
 diff --git a/block/bfq-iosched.c b/block/bfq-iosched.c
-index d68da9e92e1e..32d0acdf9c15 100644
+index 9483c529c958..6dd6a8f131a8 100644
 --- a/block/bfq-iosched.c
 +++ b/block/bfq-iosched.c
 @@ -467,6 +467,21 @@ static struct bfq_io_cq *bfq_bic_lookup(struct request_queue *q)
@@ -2569,7 +2569,7 @@ index d68da9e92e1e..32d0acdf9c15 100644
  	}
  }
  
-@@ -7251,6 +7289,8 @@ static int bfq_init_queue(struct request_queue *q, struct elevator_type *e)
+@@ -7245,6 +7283,8 @@ static int bfq_init_queue(struct request_queue *q, struct elevator_queue *eq)
  	q->elevator = eq;
  	spin_unlock_irq(&q->queue_lock);
  
@@ -2578,7 +2578,7 @@ index d68da9e92e1e..32d0acdf9c15 100644
  	/*
  	 * Our fallback bfqq if bfq_find_alloc_queue() runs into OOM issues.
  	 * Grab a permanent reference to it, so that the normal code flow
-@@ -7368,8 +7408,6 @@ static int bfq_init_queue(struct request_queue *q, struct elevator_type *e)
+@@ -7362,8 +7402,6 @@ static int bfq_init_queue(struct request_queue *q, struct elevator_queue *eq)
  	/* see comments on the definition of next field inside bfq_data */
  	bfqd->actuator_load_threshold = 4;
  
@@ -2624,10 +2624,10 @@ index 31217f196f4f..a250c559976f 100644
  	 * bic associated with the task issuing current bio for
  	 * merging. This and the next field are used as a support to
 diff --git a/block/elevator.c b/block/elevator.c
-index 88f8f36bed98..aaf438c278a8 100644
+index fe96c6f4753c..7b4f2913841f 100644
 --- a/block/elevator.c
 +++ b/block/elevator.c
-@@ -728,6 +728,21 @@ void elevator_set_default(struct request_queue *q)
+@@ -752,6 +752,21 @@ void elevator_set_default(struct request_queue *q)
  	if (q->tag_set->flags & BLK_MQ_F_NO_SCHED_BY_DEFAULT)
  		return;
  
@@ -2649,7 +2649,7 @@ index 88f8f36bed98..aaf438c278a8 100644
  	/*
  	 * For single queue devices, default to using mq-deadline. If we
  	 * have multiple queues or mq-deadline is not available, default
-@@ -737,13 +752,10 @@ void elevator_set_default(struct request_queue *q)
+@@ -761,13 +776,10 @@ void elevator_set_default(struct request_queue *q)
  	if (!e)
  		return;
  
@@ -2668,7 +2668,7 @@ index 88f8f36bed98..aaf438c278a8 100644
  }
  
 diff --git a/block/mq-deadline.c b/block/mq-deadline.c
-index 9ab6c6256695..cece25acb0c1 100644
+index b9b7cdf1d3c9..91e5acde679a 100644
 --- a/block/mq-deadline.c
 +++ b/block/mq-deadline.c
 @@ -79,10 +79,20 @@ struct dd_per_prio {
@@ -2728,7 +2728,7 @@ index 9ab6c6256695..cece25acb0c1 100644
  	spin_unlock(&dd->lock);
  
  	return rq;
-@@ -571,6 +592,9 @@ static int dd_init_sched(struct request_queue *q, struct elevator_type *e)
+@@ -565,6 +586,9 @@ static int dd_init_sched(struct request_queue *q, struct elevator_queue *eq)
  
  	eq->elevator_data = dd;
  
@@ -2738,7 +2738,7 @@ index 9ab6c6256695..cece25acb0c1 100644
  	for (prio = 0; prio <= DD_PRIO_MAX; prio++) {
  		struct dd_per_prio *per_prio = &dd->per_prio[prio];
  
-@@ -587,7 +611,6 @@ static int dd_init_sched(struct request_queue *q, struct elevator_type *e)
+@@ -581,7 +605,6 @@ static int dd_init_sched(struct request_queue *q, struct elevator_queue *eq)
  	dd->last_dir = DD_WRITE;
  	dd->fifo_batch = fifo_batch;
  	dd->prio_aging_expire = prio_aging_expire;
@@ -2746,7 +2746,7 @@ index 9ab6c6256695..cece25acb0c1 100644
  
  	/* We dispatch from request queue wide instead of hw queue */
  	blk_queue_flag_set(QUEUE_FLAG_SQ_SCHED, q);
-@@ -643,7 +666,19 @@ static bool dd_bio_merge(struct request_queue *q, struct bio *bio,
+@@ -633,7 +656,19 @@ static bool dd_bio_merge(struct request_queue *q, struct bio *bio,
  	struct request *free = NULL;
  	bool ret;
  
@@ -2767,7 +2767,7 @@ index 9ab6c6256695..cece25acb0c1 100644
  	ret = blk_mq_sched_try_merge(q, bio, nr_segs, &free);
  	spin_unlock(&dd->lock);
  
-@@ -656,10 +691,9 @@ static bool dd_bio_merge(struct request_queue *q, struct bio *bio,
+@@ -646,10 +681,9 @@ static bool dd_bio_merge(struct request_queue *q, struct bio *bio,
  /*
   * add rq to rbtree and fifo
   */
@@ -2779,7 +2779,7 @@ index 9ab6c6256695..cece25acb0c1 100644
  	struct deadline_data *dd = q->elevator->elevator_data;
  	const enum dd_data_dir data_dir = rq_data_dir(rq);
  	u16 ioprio = req_get_ioprio(rq);
-@@ -717,7 +751,7 @@ static void dd_insert_requests(struct blk_mq_hw_ctx *hctx,
+@@ -707,7 +741,7 @@ static void dd_insert_requests(struct blk_mq_hw_ctx *hctx,
  
  		rq = list_first_entry(list, struct request, queuelist);
  		list_del_init(&rq->queuelist);
@@ -2911,7 +2911,7 @@ index 06a1c7dd081f..5a75ec5d7e03 100644
  		default_driver = &intel_pstate;
  	else if (!strcmp(str, "passive"))
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu.h b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
-index a5ccd0ada16a..daa43ac8f307 100644
+index e1d79f483049..b9de7fc6095d 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu.h
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
 @@ -163,6 +163,7 @@ struct amdgpu_watchdog_timer {
@@ -2976,10 +2976,10 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 276aefc873aa..56b144b67d21 100644
+index 57914a3d040f..0ba2149ef7fc 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4650,7 +4650,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4652,7 +4652,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -3002,10 +3002,10 @@ index ebabfe3a512f..4d3ebcaacca1 100644
   *
   * AMD driver supports pre-defined mathematical functions for transferring
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
-index 2551823382f8..223023dc94dc 100644
+index 45feb404b097..ee8672919a05 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_crtc.c
-@@ -472,7 +472,7 @@ static int amdgpu_dm_crtc_late_register(struct drm_crtc *crtc)
+@@ -491,7 +491,7 @@ static int amdgpu_dm_crtc_late_register(struct drm_crtc *crtc)
  }
  #endif
  
@@ -3014,7 +3014,7 @@ index 2551823382f8..223023dc94dc 100644
  /**
   * dm_crtc_additional_color_mgmt - enable additional color properties
   * @crtc: DRM CRTC
-@@ -554,7 +554,7 @@ static const struct drm_crtc_funcs amdgpu_dm_crtc_funcs = {
+@@ -573,7 +573,7 @@ static const struct drm_crtc_funcs amdgpu_dm_crtc_funcs = {
  #if defined(CONFIG_DEBUG_FS)
  	.late_register = amdgpu_dm_crtc_late_register,
  #endif
@@ -3023,7 +3023,7 @@ index 2551823382f8..223023dc94dc 100644
  	.atomic_set_property = amdgpu_dm_atomic_crtc_set_property,
  	.atomic_get_property = amdgpu_dm_atomic_crtc_get_property,
  #endif
-@@ -742,7 +742,7 @@ int amdgpu_dm_crtc_init(struct amdgpu_display_manager *dm,
+@@ -770,7 +770,7 @@ int amdgpu_dm_crtc_init(struct amdgpu_display_manager *dm,
  
  	drm_mode_crtc_set_gamma_size(&acrtc->base, MAX_COLOR_LEGACY_LUT_ENTRIES);
  
@@ -3078,10 +3078,10 @@ index 39ee81085088..a2df219060dc 100644
  }
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index d79a1d94661a..2e12a07aea45 100644
+index 26b8e232f858..99f234e488c0 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-@@ -2854,7 +2854,10 @@ int smu_get_power_limit(void *handle,
+@@ -2870,7 +2870,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -3093,7 +3093,7 @@ index d79a1d94661a..2e12a07aea45 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2878,7 +2881,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
+@@ -2894,7 +2897,14 @@ static int smu_set_power_limit(void *handle, uint32_t limit)
  		if (smu->ppt_funcs->set_power_limit)
  			return smu->ppt_funcs->set_power_limit(smu, limit_type, limit);
  
