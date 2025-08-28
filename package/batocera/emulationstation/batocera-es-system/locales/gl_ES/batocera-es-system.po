@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-29 12:20+0200\n"
+"PO-Revision-Date: 2025-08-25 13:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
 "Language: gl_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -811,7 +811,7 @@ msgstr "1º"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "1st Joystick (2 Axes, 2 Btns)"
-msgstr "1º Joystick (2 eixes, 2 Btns)"
+msgstr "1º Panca de mando (2 eixes, 2 Btns)"
 
 #. TRANSLATION: citron
 msgctxt "game_options"
@@ -1151,7 +1151,7 @@ msgstr "2º"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "2nd Joystick (2 Axes, 2 Btns)"
-msgstr "2ª Joystick (2 Eixos, 2 Btns)"
+msgstr "2ª Panca de mando (2 Eixos, 2 Btns)"
 
 #. TRANSLATION: flycast/dolphin
 msgctxt "game_options"
@@ -2718,7 +2718,7 @@ msgstr "XFloat preciso"
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Acorn Analogue Joysticks"
-msgstr "Joysticks analóxicos Acorn"
+msgstr "Pancas de mando analóxicas Acorn"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -3303,8 +3303,8 @@ msgid ""
 "Apply a multiplier to the joystick's input to lower or increase "
 "responsiveness."
 msgstr ""
-"Aplique un multiplicador á entrada do joystick para reducir ou aumentar a "
-"capacidade de resposta."
+"Aplique un multiplicador á entrada da panca de mando para reducir ou "
+"aumentar a capacidade de resposta."
 
 #. TRANSLATION: libretro/dosbox, mame, openbor
 msgctxt "game_options"
@@ -3394,7 +3394,7 @@ msgstr "Arxentina"
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Arkanoid paddle"
-msgstr "Pala Arkanoid"
+msgstr "mando de roda Arkanoid"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4138,12 +4138,14 @@ msgstr "Ambos"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Both Joysticks (4 Axes, 4 Btns)"
-msgstr "Ambos Joysticks (4 eixes, 4 botóns)"
+msgstr "Ambas Pancas de mando (4 eixes, 4 botóns)"
 
 #. TRANSLATION: soniccd
 msgctxt "game_options"
 msgid "Both types require holding D-pad down during initial charge."
-msgstr "Ambos tipos requiren manter presionada D-pad durante a carga inicial."
+msgstr ""
+"Ambos tipos requiren manter presionada cruceta abaixo durante a carga "
+"inicial."
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -4955,7 +4957,7 @@ msgstr "CONFIGURACIÓN PERSONALIZADA DE MAME"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-msgstr "PERSONALIZAR WIIMOTE E GAMEPAD EMULADO"
+msgstr "PERSONALIZAR WIIMOTE E MANDO EMULADO"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5025,7 +5027,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Can fix drifting joysticks in games."
-msgstr "Pode arranxar Os joysticks con deriva nos xogos."
+msgstr "Pode arranxar as pancas de mando con deriva nos xogos."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -5466,7 +5468,7 @@ msgid ""
 "lightguns & steering wheels. SDL2 for gamepads only."
 msgstr ""
 "Escolla a configuración do controlador. EVDEV para unha ampla gama de "
-"controladores, pistolas lixeiras e volantes. SDL2 só para gamepads."
+"controladores, pistolas lixeiras e volantes. SDL2 só para mandos."
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -6062,7 +6064,7 @@ msgstr "Idioma actual"
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Cursor Joystick"
-msgstr "Cursor Joystick"
+msgstr "Panca de mando para o cursor"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -6144,7 +6146,7 @@ msgstr "COMPLEMENTO DE DATOS"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "DE"
-msgstr ""
+msgstr "DE"
 
 #. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
@@ -6632,12 +6634,12 @@ msgstr "Dixital"
 #. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Digital Controller"
-msgstr "Controlador dixital (Gamepad)"
+msgstr "Controlador dixital"
 
 #. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
-msgstr "Mando dixital (Gamepad)"
+msgstr "Controlador dixital (Mando)"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -7300,7 +7302,9 @@ msgstr ""
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
-msgstr "Emula un Wiimote Sideway con L2 para Shake e Nunchuk no R-stick."
+msgstr ""
+"Emular un Wiimote en posición horizontal: L2 para Sacudir, e o Nunchuk na "
+"panca Dereita"
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -7497,9 +7501,9 @@ msgid ""
 "features (like gyroscope for example), but can break older games with x-"
 "input support only."
 msgstr ""
-"Activa o acceso en bruto HID do gamepad. Isto permite que os xogos modernos "
-"utilicen funcións especiais do mando (como o xiroscopio, por exemplo), pero "
-"só poden romper os xogos máis antigos co soporte de entrada x."
+"Activar acceso HID directo ao mando. Isto permite que xogos modernos usen "
+"funcións especiais do mando (como o xiroscopio, por exemplo), pero pode "
+"afectar a xogos antigos que só soportan x-input."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7508,7 +7512,7 @@ msgid ""
 "Hotkey+R2 to switch screens."
 msgstr ""
 "Activa a vista do mando para xogos que teñen interacción en dúas pantallas. "
-"Use a tecla de atallo + R2 para cambiar de pantalla."
+"Use a tecla de atallo + R2 para trocar de pantalla."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -7653,7 +7657,7 @@ msgstr ""
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Enable the Virtual Keyboard."
-msgstr ""
+msgstr "Activar o teclado virtual."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -7810,7 +7814,7 @@ msgstr ""
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
-msgstr "Permite ler ficheiros de trucos desde o cartafol `cheats`"
+msgstr "Permite ler ficheiros de trucos desde o cartafol `cheats`."
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -8367,7 +8371,7 @@ msgstr "OBXECTIVO FPS"
 #. TRANSLATION: amiberry, f2bgl
 msgctxt "game_options"
 msgid "FR"
-msgstr ""
+msgstr "FR"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -8816,7 +8820,7 @@ msgid ""
 msgstr ""
 "Para xogar con xogos de condución cun mando, ás veces é unha boa idea "
 "utilizar un valor superior a 100%% so para que a dirección sexa menos "
-"sensible nun stick."
+"sensible na panca."
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -9105,7 +9109,7 @@ msgstr "A velocidade máxima pode romper algúns xogos."
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Fuller Joystick"
-msgstr "Joystick Fuller"
+msgstr "Panca de mando máis completa"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -9509,7 +9513,7 @@ msgstr "Mando GameCube"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "GamePad + 4 Pro Controller"
-msgstr "GamePad + 4 Pro Controller"
+msgstr "Mando + 4 Controlador Pro"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -9529,7 +9533,7 @@ msgstr "Mando"
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
 msgid "Gamepad (D-pad, 2 Buttons)"
-msgstr "Mando (D-pad, 2 botóns)"
+msgstr "Mando (cruceta, 2 botóns)"
 
 #. TRANSLATION: libretro/prboom, libretro/tyrquake
 msgctxt "game_options"
@@ -9677,7 +9681,7 @@ msgstr "Modelo de controlador de pantalla gráfica."
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
-msgstr "Gravis Mando (D-pad + 4 Btns)"
+msgstr "Mando Gravis (Cruceta + 4 Btns)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10092,6 +10096,7 @@ msgstr "Alto rendemento"
 msgctxt "game_options"
 msgid "High-Resolution Keyboard, which is larger and might be easier to see."
 msgstr ""
+"Teclado de alta resolución, que é máis grande e pode ser máis doado de ver."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10584,7 +10589,7 @@ msgstr ""
 #. TRANSLATION: hypseus-singe
 msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
-msgstr "Inverte o eixe vertical do joystick nos xogos de voo."
+msgstr "Inverte o eixe vertical da panca de mando nos xogos de voo."
 
 #. TRANSLATION: citron, xenia, xenia-canary
 msgctxt "game_options"
@@ -10664,37 +10669,37 @@ msgstr "TIPO DE MANDO BÁSICO"
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK DEADZONE"
-msgstr "JOYSTICK ZONA MORTA"
+msgstr "ZONA MORTA DA PANCA DE MANDO"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "JOYSTICK GATE SIZE"
-msgstr "TAMAÑO DE PORTA DE JOYSTICK"
+msgstr "TAMAÑO DA PORTA DA PANCA DE MANDO"
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "JOYSTICK HACK (FOR ROBOTRON 2084)"
-msgstr "TRUCAR JOYSTICK (PARA ROBOTRON 2084)"
+msgstr "MODIFICAR A PANCA DE MANDO (PARA ROBOTRON 2084)"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
 msgid "JOYSTICK SENSITIVITY"
-msgstr "SENSIBILIDADE DO JOYSTICK"
+msgstr "SENSIBILIDADE DA PANCA DE MANDO"
 
 #. TRANSLATION: hypseus-singe/zmachine
 msgctxt "game_options"
 msgid "JOYSTICK TO CURSOR SENSITIVITY"
-msgstr "JOYSTICK A SENSIBILIDADE DO CURSOR"
+msgstr "SENSIBILIDADE DA PANCA DE MANDO PARA O CURSOR"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JOYSTICK TO DPAD"
-msgstr "JOYSTICK PARA DPAD"
+msgstr "PANCA DE MANDO COMO CRUCETA"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "JOYSTICK TYPE"
-msgstr "TIPO DE JOYSTICK"
+msgstr "TIPO DE PANCA DE MANDO"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xscpu64
 msgctxt "game_options"
@@ -10809,12 +10814,12 @@ msgstr "Mando Básico Auto"
 #. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Joystick"
-msgstr "Joystick"
+msgstr "Panca de mando"
 
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
 msgid "Joystick (Analog, 2 Buttons)"
-msgstr "Joystick (analox, 2 botóns)"
+msgstr "Panca de mando (analox, 2 botóns)"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -10854,12 +10859,12 @@ msgstr "MANTÉN A PANTALLA PRINCIPAL ARRIBA"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "KEYBOARD LAYOUT"
-msgstr ""
+msgstr "DISTRIBUCIÓN DO TECLADO"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "KEYBOARD OPTIONS"
-msgstr ""
+msgstr "OPCIÓNS DE TECLADO"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -10874,7 +10879,7 @@ msgstr "SOPORTE DE TECLADO"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "KEYBOARD TRANSPARENCY"
-msgstr ""
+msgstr "TRANSPARENCIA DO TECLADO"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -10899,7 +10904,7 @@ msgstr "Manter a relación de aspecto (predeterminado)"
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Kempston Joystick"
-msgstr "Joystick Kempston"
+msgstr "Panca de mando Kempston"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -11028,7 +11033,7 @@ msgstr "DESBLOQUEO DE IDIOMA"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "LARGER KEYBOARD"
-msgstr ""
+msgstr "TECLADO MÁIS GRANDE"
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -11254,7 +11259,7 @@ msgstr "Magnasave esquerdo"
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Left stick"
-msgstr "Stick esquerdo"
+msgstr "Panca esquerda"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -11463,7 +11468,7 @@ msgstr ""
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "Lowest"
-msgstr "máis baixo"
+msgstr "Máis baixo"
 
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
@@ -11633,42 +11638,42 @@ msgstr "RATO COMO PUNTEIRO DE WIIMOTE"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 1 HORIZONTAL"
-msgstr "EIXO DO RATO PARA A PALA 1 HORIZONTAL"
+msgstr "EIXO DO RATO PARA O MANDO DE RODA 1 HORIZONTAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 1 VERTICAL"
-msgstr "EIXO DO RATO PARA A PALA 1 VERTICAL"
+msgstr "EIXO DO RATO PARA O MANDO DE RODA 1 VERTICAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 2 HORIZONTAL"
-msgstr "EIXO DO RATO PARA A PALA 2 HORIZONTAL"
+msgstr "EIXO DO RATO PARA O MANDO DE RODA 2 HORIZONTAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 2 VERTICAL"
-msgstr "EIXO DO RATO PARA A PALA 2 VERTICAL"
+msgstr "EIXO DO RATO PARA O MANDO DE RODA 2 VERTICAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 3 HORIZONTAL"
-msgstr "EIXO DO RATO PARA A PALA 3 HORIZONTAL"
+msgstr "EIXO DO RATO PARA O MANDO DE RODA 3 HORIZONTAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 3 VERTICAL"
-msgstr "EIXO DO RATO PARA A PALA 3 VERTICAL"
+msgstr "EIXO DO RATO PARA O MANDO DE RODA 3 VERTICAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 4 HORIZONTAL"
-msgstr "EIXO DO RATO PARA A PALA 4 HORIZONTAL"
+msgstr "EIXO DO RATO PARA O MANDO DE RODA 4 HORIZONTAL"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 4 VERTICAL"
-msgstr "EIXO DO RATO PARA A PALA 4 VERTICAL"
+msgstr "EIXO DO RATO PARA O MANDO DE RODA 4 VERTICAL"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -12188,7 +12193,7 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
-msgstr "Estilo Fightstick moderno"
+msgstr "Estilo panca de loita moderna"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12426,7 +12431,7 @@ msgstr "NEO GEO CD BIOS"
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "NES Gamepad"
-msgstr "Gamepad NES"
+msgstr "Mando NES"
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -13358,12 +13363,12 @@ msgstr "P2 só"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE ANALOG STICK SENSITIVITY"
-msgstr "SENSIBILIDADE DO MANDO ANALÓXICO DA PALA"
+msgstr "SENSIBILIDADE DA PANCA ANALÓXICA DO MANDO DE RODA"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
-msgstr "SENSIBILIDADE DO D-PAD DA PALA"
+msgstr "SENSIBILIDADE DA CRUCETA DO MANDO DE RODA"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -13669,7 +13674,7 @@ msgstr "PVM_20M2U/D93"
 #. TRANSLATION: libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid "Paddle Control"
-msgstr "Paddle Control"
+msgstr "Control mando de roda"
 
 #. TRANSLATION: triforce.dolphin_triforce.keys
 msgctxt "keys_files"
@@ -13684,12 +13689,12 @@ msgstr ""
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Paddle can only be used in port 2."
-msgstr "A paleta só se pode usar no porto 2."
+msgstr "o mando de roda só se pode usar no porto 2."
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
 msgid "Paddles"
-msgstr "Pas"
+msgstr "mandos de roda"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14846,7 +14851,7 @@ msgstr ""
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "Right Stick"
-msgstr "Stick dereito"
+msgstr "Panca dereita"
 
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
@@ -14861,7 +14866,7 @@ msgstr "Magnasave dereito"
 #. TRANSLATION: solarus
 msgctxt "game_options"
 msgid "Right stick"
-msgstr "Stick dereito"
+msgstr "Panca dereita"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -14911,7 +14916,7 @@ msgstr "Xirar a pantalla, útil para certos xogos en formato vertical."
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Rotated 4-Way Stick (Q*Bert)"
-msgstr "Stick xiratorio de 4 vías (Q*Bert)"
+msgstr "Panca xiratoria de 4 vías (Q*Bert)"
 
 #. TRANSLATION: libretro/mame078plus, mame
 msgctxt "game_options"
@@ -15703,7 +15708,7 @@ msgstr "Captura de pantalla"
 #. TRANSLATION: dolphin, dolphin_triforce
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
-msgstr "BuscaR perfís de joystick configurados personalizados."
+msgstr "Busca perfís de pancas de mando configuradas personalizadas."
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -15748,7 +15753,7 @@ msgstr "Seleccionar"
 #. TRANSLATION: libretro/dosbox
 msgctxt "game_options"
 msgid "Select Keyboard, Joystick or Gamepad mode"
-msgstr "Seleccione modo Teclado, Joystick ou Mando"
+msgstr "Seleccione modo Teclado, pancas de mando ou Mando"
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
@@ -15871,7 +15876,7 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Select which joystick to emulate."
-msgstr "Seleccione o joystick a emular."
+msgstr "Seleccione a panca de mando a emular."
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -15886,7 +15891,7 @@ msgstr "Selfie"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using D-pad for a paddle."
-msgstr "Sensibilidade ao usar o D-pad para unha panca."
+msgstr "Sensibilidade ao usar a cruceta para un mando de roda."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -15906,7 +15911,7 @@ msgstr ""
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using mouse for a paddle."
-msgstr "Sensibilidade ao usar o rato para controlar a pala"
+msgstr "Sensibilidade ao usar o rato para controlar o mando de roda."
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -15960,7 +15965,7 @@ msgstr "Establecer en Config - escolla se non hai saída de audio"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Set joystick deadzone."
-msgstr "Establece a zona morta do joystick."
+msgstr "Establece a zona morta da panca de mando."
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16026,7 +16031,7 @@ msgstr "Configurar o límite de FPS."
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Set the on-screen keyboard transparency (0-100%)."
-msgstr ""
+msgstr "Define a transparencia do teclado en pantalla (0-100%)."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -16059,8 +16064,8 @@ msgid ""
 "Set virtual joysticks gate size. Smaller increases sensitivity. Larger "
 "decreases it."
 msgstr ""
-"Establece o tamaño da porta dos joysticks virtuais. Menor aumenta a "
-"sensibilidade. Máis grande diminúeo."
+"Establece o tamaño da porta das pancas de mando virtuais. Menor aumenta a "
+"sensibilidade. Maior diminúeo."
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -16330,7 +16335,7 @@ msgstr "Simultáneos"
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Sinclair 1 Joystick"
-msgstr "Sinclair 1 Joystick"
+msgstr "Panca de mando Sinclair 1"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -16340,7 +16345,7 @@ msgstr "Mando Sinclair 1 configurado en AUTO."
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Sinclair 2 Joystick"
-msgstr "Sinclair 2 Joystick"
+msgstr "Panca de mando Sinclair 2"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -17593,8 +17598,8 @@ msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
 "help reduce unintended inputs."
 msgstr ""
-"A área ao redor da posición neutra do joystick sen resposta. Pode axudar a "
-"reducir movementos non desexadas."
+"A área ao redor da posición neutra da panca de mando sen resposta. Pode "
+"axudar a reducir movementos non desexadas."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -17686,6 +17691,8 @@ msgctxt "game_options"
 msgid ""
 "This setting controls the default language layout for the virtual keyboard."
 msgstr ""
+"Esta configuración controla a disposición do idioma predeterminado para o "
+"teclado virtual."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -17709,12 +17716,12 @@ msgstr "Estiramento do tempo (cambio de tempo, mellor son)"
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Timex 1 Joystick"
-msgstr "Joystick Timex 1"
+msgstr "Panca de mando Timex 1"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
 msgid "Timex 2 Joystick"
-msgstr "Joystick Timex 2"
+msgstr "Panca de mando Timex 2"
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -17767,7 +17774,7 @@ msgstr "Alternar arma"
 msgctxt "game_options"
 msgid "Toggle with hotkey + D-pad up or Scroll Lock in-game."
 msgstr ""
-"Alterna coa tecla de atallo + D-pad arriba ou Bloqueo de desprazamento no "
+"Alterna coa tecla de atallo + cruceta arriba ou Bloqueo de desprazamento no "
 "xogo."
 
 #. TRANSLATION: libretro/mame, mame/openbor7530
@@ -17897,7 +17904,7 @@ msgstr "Trindade e Tobago"
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Triple buffering"
-msgstr "búfer triple"
+msgstr "Búfer triple"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -17952,7 +17959,7 @@ msgstr "Turquesa"
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Twin Stick with Triggers"
-msgstr "Doble Stick con gatillos"
+msgstr "Doble Panca con gatillos"
 
 #. TRANSLATION: libretro/mame
 msgctxt "game_options"
@@ -17979,7 +17986,7 @@ msgstr "Tipo de tarxeta SoundBlaster emulada."
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Type of joystick connected to the game port."
-msgstr "Tipo de joystick conectado ao porto do xogo."
+msgstr "Tipo de panca de mando conectada ao porto do xogo."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -18054,7 +18061,7 @@ msgstr "EUA"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "US (Default)"
-msgstr ""
+msgstr "US (Predeterminado)"
 
 #. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
@@ -18099,27 +18106,27 @@ msgstr "UTILIZAR PISTOLAS ÓPTICAS"
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 1"
-msgstr "EMPREGAR O RATO PARA A PALA 1"
+msgstr "EMPREGAR O RATO PARA O MANDO DE RODA 1"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 2"
-msgstr "EMPREGAR O RATO PARA A PALA 2"
+msgstr "EMPREGAR O RATO PARA O MANDO DE RODA 2"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 3"
-msgstr "EMPREGAR O RATO PARA A PALA 3"
+msgstr "EMPREGAR O RATO PARA O MANDO DE RODA 3"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 4"
-msgstr "EMPREGAR O RATO PARA A PALA 4"
+msgstr "EMPREGAR O RATO PARA O MANDO DE RODA 4"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "USE MOUSE POINTER FOR PADDLE 1"
-msgstr "EMPREGAR O PUNTEIRO DO RATO PARA A PALA 1"
+msgstr "EMPREGAR O PUNTEIRO DO RATO PARA O MANDO DE RODA 1"
 
 #. TRANSLATION: themehospital
 msgctxt "game_options"
@@ -18467,7 +18474,8 @@ msgstr "Usar aspecto 1:1."
 msgctxt "game_options"
 msgid "Use Analog joysticks in addition to D-Pad for DualShock controllers."
 msgstr ""
-"Use joysticks analóxicos ademais do D-cruceta para os mandos DualShock."
+"Use pancas de mandos analóxicas ademais da cruceta para os controladores "
+"DualShock."
 
 #. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
@@ -18489,8 +18497,8 @@ msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
-"Usa L2/R2 para Frear/Acelerar e L1/R1 ou o stick dereito Arriba/Abaxo para "
-"Cambiar Arriba/Abaxo."
+"Usa L2/R2 para Frear/Acelerar e L1/R1 ou a panca dereita Arriba/Abaixo para "
+"Cambiar Arriba/Abaixo."
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
@@ -18530,29 +18538,29 @@ msgstr ""
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 1, chosen by Port 1's Mouse Index."
 msgstr ""
-"Empregar un rato específico para a Pala 1, elixido segundo o índice de rato "
-"do Porto 1."
+"Empregar un rato específico para o mando de roda 1, elixido segundo o índice "
+"de rato do Porto 1."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 2, chosen by Port 2's Mouse Index."
 msgstr ""
-"Empregar un rato específico para a Pala 2, elixido segundo o índice de rato "
-"do Porto 2."
+"Empregar un rato específico para o mando de roda 2, elixido segundo o índice "
+"de rato do Porto 2."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 3, chosen by Port 3's Mouse Index."
 msgstr ""
-"Empregar un rato específico para a Pala 3, elixido segundo o índice de rato "
-"do Porto 3."
+"Empregar un rato específico para o mando de roda 3, elixido segundo o índice "
+"de rato do Porto 3."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 4, chosen by Port 4's Mouse Index."
 msgstr ""
-"Empregar un rato específico para a Pala 4, elixido segundo o índice de rato "
-"do Porto 4."
+"Empregar un rato específico para o mando de roda 4, elixido segundo o índice "
+"de rato do Porto 4."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -18626,8 +18634,8 @@ msgid ""
 "Use the system mouse pointer as paddle controller 1.  Does not let you "
 "choose a specific mouse if you have several."
 msgstr ""
-"Emprega o punteiro do rato do sistema como controlador da Pala 1. Non "
-"permite escoller un rato específico se tes varios."
+"Emprega o punteiro do rato do sistema como controlador do mando de roda 1. "
+"Non permite escoller un rato específico se tes varios."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -18648,8 +18656,8 @@ msgctxt "game_options"
 msgid ""
 "Use to eliminate joystick drift/unwanted input. Effects all controllers."
 msgstr ""
-"Use para eliminar a deriva do joystick/entrada non desexada. afecta a todos "
-"os mandos."
+"Use para eliminar a deriva da panca de mando/entrada non desexada. afecta a "
+"todos os mandos."
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -18657,8 +18665,8 @@ msgid ""
 "Use to make joystick movement more or less sensitive. Effects all "
 "controllers."
 msgstr ""
-"Use para facer co movemento do joystick sexa máis ou menos sensible. Afecta "
-"a todos os controladores."
+"Use para facer co movemento da panca de mando sexa máis ou menos sensible. "
+"Afecta a todos os controladores."
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -18889,7 +18897,7 @@ msgstr "ESCRITORIO VIRTUAL"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "VIRTUAL KEYBOARD"
-msgstr ""
+msgstr "TECLADO VIRTUAL"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -19024,7 +19032,7 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
-msgstr "Joysticks dobles Voltmace Delta 3b"
+msgstr "Pancas de mando dobres Voltmace Delta 3b"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -20064,7 +20072,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "ANALOG JOYSTICK DEADZONE"
-#~ msgstr "JOYSTICK ANALÓXICO ZONA MORTA"
+#~ msgstr "ZONA MORTA DA PANCA DE MANDO ANALÓXICA"
 
 #~ msgctxt "game_options"
 #~ msgid "ASCI"
@@ -20132,15 +20140,15 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Joystick"
-#~ msgstr "Joystick analóxico"
+#~ msgstr "panca de mando analóxica"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Joystick (Flystick)"
-#~ msgstr "Joystick analóxico (Flystick)"
+#~ msgstr "Panca de mando analóxica (Flystick)"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Stick"
-#~ msgstr "Stick Analóxico"
+#~ msgstr "Panca Analóxica"
 
 #~ msgctxt "game_options"
 #~ msgid "Automatically reduce frameskip if the system has spare overhead."
@@ -20273,7 +20281,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "DISABLE EMULATOR JOYSTICK"
-#~ msgstr "DESACTIVAR JOYSTICK DO EMULADOR"
+#~ msgstr "DESACTIVAR PANCA DE MANDO DO EMULADOR"
 
 #~ msgctxt "game_options"
 #~ msgid "Determines the speed and the runahead behaviour of the system."
@@ -20466,12 +20474,12 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to left analog stick)"
 #~ msgstr ""
-#~ "Para xogos con xiroscopio habilitado  (ligado ao stick analóxico esquerdo)"
+#~ "Para xogos con xiroscopio habilitado (asignado a panca analóxica esquerda)"
 
 #~ msgctxt "game_options"
 #~ msgid "For Gyro-enabled games (bound to right analog stick)"
 #~ msgstr ""
-#~ "Para xogos con xiroscopio habilitado (ligado ao stick analóxico dereito)"
+#~ "Para xogos con xiroscopio habilitado (asignado a panca analóxica dereita)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Forward Nudge"
@@ -20487,7 +20495,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "GamePad + 4 Sideway Wiimote"
-#~ msgstr "GamePad + 4 Sideway Wiimote"
+#~ msgstr "Mando + 4 Wiimote lateral"
 
 #~ msgctxt "keys_files"
 #~ msgid "Graphics filtering on/off"
@@ -20650,7 +20658,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "PS1 Analog Joystick"
-#~ msgstr "Joystick analóxico PS1"
+#~ msgstr "Panca de mando analóxica PS1"
 
 #~ msgctxt "game_options"
 #~ msgid "PS3 CONTROLLER 1"
@@ -20854,17 +20862,18 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Sensitivity when using D-pad or analog stick for a throttle."
 #~ msgstr ""
-#~ "Sensibilidade cando usas o D-pad ou a panca analóxica para un acelerador."
+#~ "Sensibilidade cando usas a cruceta ou a panca analóxica para un "
+#~ "acelerador."
 
 #~ msgctxt "game_options"
 #~ msgid "Sensitivity when using D-pad or analog stick for a wheel."
 #~ msgstr ""
-#~ "Sensibilidade ao usar o D-pad ou o stick analóxico para controlar o "
-#~ "volante"
+#~ "Sensibilidade ao usar a cruceta ou a panca analóxica para un volante."
 
 #~ msgctxt "game_options"
 #~ msgid "Sensitivity when using analog stick for a paddle."
-#~ msgstr "Sensibilidade ao usar o stick analóxico para controlar a pala"
+#~ msgstr ""
+#~ "Sensibilidade ao usar a panca analóxica para controlar o mando de roda."
 
 #~ msgctxt "keys_files"
 #~ msgid "Service menu"
@@ -20880,7 +20889,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "Set the deadzone of the joystick analog sticks."
-#~ msgstr "Establece a zona morta dos joysticks analóxicos."
+#~ msgstr "Establece a zona morta das pancas de mando analóxicas."
 
 #~ msgctxt "game_options"
 #~ msgid "Set the desired maximum refresh rate when Vsync is off."
@@ -20996,7 +21005,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "Treats the right analog stick as the second joystick."
-#~ msgstr "Tratar o stick analóxico dereito como o segundo joystick."
+#~ msgstr "Tratar a panca analóxica dereita como a segunda panca de mando."
 
 #~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
