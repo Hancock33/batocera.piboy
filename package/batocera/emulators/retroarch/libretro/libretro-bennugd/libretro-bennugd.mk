@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 28, 2025
-LIBRETRO_BENNUGD_VERSION = 4baa440e4c5d55f482b20b2e28320d75ccf3eb34
+LIBRETRO_BENNUGD_VERSION = 04a3f3112e5adcc44ca47dd7e5c4a5e8f8fca81b
 LIBRETRO_BENNUGD_SITE = $(call github,diekleinekuh,BennuGD_libretro,$(LIBRETRO_BENNUGD_VERSION))
 LIBRETRO_BENNUGD_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_BENNUGD_LICENSE = GPLv2
