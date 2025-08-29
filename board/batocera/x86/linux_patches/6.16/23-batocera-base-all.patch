@@ -3110,87 +3110,40 @@ index 26b8e232f858..99f234e488c0 100644
  			"New power limit (%d) is out of range [%d,%d]\n",
  			limit, smu->min_power_limit, smu->max_power_limit);
 diff --git a/drivers/gpu/drm/drm_atomic_uapi.c b/drivers/gpu/drm/drm_atomic_uapi.c
-index c2726af6698e..2ae41a522e92 100644
+index c2726af6698e..317303cf5b8c 100644
 --- a/drivers/gpu/drm/drm_atomic_uapi.c
 +++ b/drivers/gpu/drm/drm_atomic_uapi.c
-@@ -1068,7 +1068,6 @@ int drm_atomic_set_property(struct drm_atomic_state *state,
- 		struct drm_plane *plane = obj_to_plane(obj);
- 		struct drm_plane_state *plane_state;
- 		struct drm_mode_config *config = &plane->dev->mode_config;
--		const struct drm_plane_helper_funcs *plane_funcs = plane->helper_private;
+@@ -1077,19 +1077,20 @@ int drm_atomic_set_property(struct drm_atomic_state *state,
+ 		}
  
- 		plane_state = drm_atomic_get_plane_state(state, plane);
- 		if (IS_ERR(plane_state)) {
-@@ -1084,21 +1083,8 @@ int drm_atomic_set_property(struct drm_atomic_state *state,
- 				ret = drm_atomic_plane_get_property(plane, plane_state,
- 								    prop, &old_val);
- 				ret = drm_atomic_check_prop_changes(ret, old_val, prop_value, prop);
+ 		if (async_flip) {
+-			/* check if the prop does a nop change */
+-			if ((prop != config->prop_fb_id &&
+-			     prop != config->prop_in_fence_fd &&
+-			     prop != config->prop_fb_damage_clips)) {
+-				ret = drm_atomic_plane_get_property(plane, plane_state,
+-								    prop, &old_val);
+-				ret = drm_atomic_check_prop_changes(ret, old_val, prop_value, prop);
 -			}
--
++			/* no-op changes are always allowed */
++			ret = drm_atomic_plane_get_property(plane, plane_state,
++							    prop, &old_val);
++			ret = drm_atomic_check_prop_changes(ret, old_val, prop_value, prop);
+ 
 -			/* ask the driver if this non-primary plane is supported */
 -			if (plane->type != DRM_PLANE_TYPE_PRIMARY) {
 -				ret = -EINVAL;
--
--				if (plane_funcs && plane_funcs->atomic_async_check)
--					ret = plane_funcs->atomic_async_check(plane, state, true);
--
--				if (ret) {
--					drm_dbg_atomic(prop->dev,
--						       "[PLANE:%d:%s] does not support async flips\n",
--						       obj->id, plane->name);
--					break;
--				}
-+				if (ret)
-+				    break;
- 			}
- 		}
- 
-@@ -1394,6 +1380,10 @@ int drm_mode_atomic_ioctl(struct drm_device *dev,
- 	int ret = 0;
- 	unsigned int i, j, num_fences;
- 	bool async_flip = false;
-+	struct drm_plane *plane;
-+	struct drm_plane_state *old_plane_state = NULL;
-+	struct drm_plane_state *new_plane_state = NULL;
-+	u64 fb_id = 0;
- 
- 	/* disallow for drivers not supporting atomic: */
- 	if (!drm_core_check_feature(dev, DRIVER_ATOMIC))
-@@ -1521,6 +1511,35 @@ int drm_mode_atomic_ioctl(struct drm_device *dev,
- 			copied_props++;
- 		}
- 
-+		if (async_flip && obj->type == DRM_MODE_OBJECT_PLANE &&
-+		    obj_to_plane(obj)->type != DRM_PLANE_TYPE_PRIMARY) {
-+			/* need to ask the driver if this plane is supported */
-+			plane = obj_to_plane(obj);
-+			old_plane_state = drm_atomic_get_old_plane_state(state, plane);
-+			new_plane_state = drm_atomic_get_new_plane_state(state, plane);
-+			ret = drm_atomic_plane_get_property(plane, new_plane_state,
-+							    dev->mode_config.prop_fb_id,
-+							    &fb_id);
-+			if (ret)
-+				break;
-+			/*
-+			 * Only do the check if the plane was or is enabled.
-+			 * Note that the new state doesn't have "visible" set yet,
-+			 * so this uses fb_id instead.
-+			 */
-+			if (old_plane_state->visible || fb_id)
-+				ret = -EINVAL;
-+			if (ret && plane->helper_private &&
-+			    plane->helper_private->atomic_async_check) {
-+				ret = plane->helper_private->atomic_async_check(plane, state, true);
-+			}
-+			if (ret) {
-+				drm_dbg_atomic(dev, "[PLANE:%d:%s] does not support async flips\n",
-+						obj->id, plane->name);
++			/* fail everything that isn't no-op or a pure flip */
++			if (ret && prop != config->prop_fb_id &&
++			    prop != config->prop_in_fence_fd &&
++			    prop != config->prop_fb_damage_clips) {
 +				break;
 +			}
-+		}
-+
- 		drm_mode_object_put(obj);
- 	}
+ 
++			if (ret && plane->type != DRM_PLANE_TYPE_PRIMARY) {
++				/* ask the driver if this non-primary plane is supported */
+ 				if (plane_funcs && plane_funcs->atomic_async_check)
+ 					ret = plane_funcs->atomic_async_check(plane, state, true);
  
 diff --git a/drivers/gpu/drm/i915/display/intel_ddi.c b/drivers/gpu/drm/i915/display/intel_ddi.c
 index d58f8fc37326..38df2d26baf2 100644
