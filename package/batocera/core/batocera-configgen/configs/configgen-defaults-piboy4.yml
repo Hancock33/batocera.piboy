@@ -9,6 +9,21 @@ default:
     batterymode: highperformance
     powermode: highperformance
 
+amiga1200:
+  emulator: libretro
+  core:     puae2021
+amiga500:
+  emulator: libretro
+  core:     puae2021
+amigacd32:
+  emulator: libretro
+  core:     puae2021
+amigacdtv:
+  emulator: libretro
+  core:     puae2021
+amigademo:
+  emulator: libretro
+  core:     puae2021
 c20:
   emulator: libretro
   core:     vice_xvic

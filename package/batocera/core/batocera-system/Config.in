@@ -295,7 +295,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # Controllers
     select BR2_PACKAGE_XONE                                 if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.15)
     select BR2_PACKAGE_XPAD_NOONE                           if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.15)
-   #select BR2_PACKAGE_XPADNEO                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.18)
+    select BR2_PACKAGE_XPADNEO                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # xbox receiver (require linux >= 4.18)
     select BR2_PACKAGE_WII_U_GC_ADAPTER                     if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # wii-u-gc-adapter
     select BR2_PACKAGE_WIIMOTES_RULES                       if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # wiimotes
     select BR2_PACKAGE_WIIMOTE_3RDPARTY                     if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # some non official wiimotes
@@ -1083,8 +1083,8 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_AMIBERRY                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_AMIBERRY_LITE                        if !BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && (!BR2_riscv || !BR2_RISCV_64) # No dynamic recompiler for riscv
    #select BR2_PACKAGE_FSUAE                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
-    select BR2_PACKAGE_LIBRETRO_PUAE                        if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && !BR2_PACKAGE_BATOCERA_TARGET_H3
-    select BR2_PACKAGE_LIBRETRO_PUAE2021                    if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && !BR2_PACKAGE_BATOCERA_TARGET_H3
+    select BR2_PACKAGE_LIBRETRO_PUAE                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_LIBRETRO_PUAE2021                    if !BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && !BR2_PACKAGE_BATOCERA_TARGET_H3
     select BR2_PACKAGE_LIBRETRO_UAE4ARM                     if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && (BR2_arm || BR2_aarch64)
 
     # Atari 800 computers

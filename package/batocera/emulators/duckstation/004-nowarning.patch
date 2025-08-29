@@ -1,0 +1,26 @@
+diff --git a/src/duckstation-mini/mini_host.cpp b/src/duckstation-mini/mini_host.cpp
+index d8d4f798c..cd228f9fa 100644
+--- a/src/duckstation-mini/mini_host.cpp
++++ b/src/duckstation-mini/mini_host.cpp
+@@ -1001,7 +1001,7 @@ void MiniHost::CPUThreadEntryPoint()
+   // start the fullscreen UI and get it going
+   if (GPUThread::StartFullscreenUI(s_state.start_fullscreen_ui_fullscreen, &error))
+   {
+-    WarnAboutInterface();
++    //WarnAboutInterface();
+ 
+     // kick a game list refresh if we're not in batch mode
+     if (!s_state.batch_mode)
+diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
+index ee5d3a336..752c2c3b8 100644
+--- a/src/duckstation-qt/qthost.cpp
++++ b/src/duckstation-qt/qthost.cpp
+@@ -3353,7 +3353,7 @@ int main(int argc, char* argv[])
+   QtHost::UpdateApplicationTheme();
+ 
+   // Build warning.
+-  AutoUpdaterWindow::warnAboutUnofficialBuild();
++  // AutoUpdaterWindow::warnAboutUnofficialBuild();
+ 
+   // Start logging early.
+   LogWindow::updateSettings();

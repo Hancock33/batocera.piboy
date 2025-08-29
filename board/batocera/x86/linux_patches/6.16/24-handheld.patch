@@ -399,7 +399,7 @@ index c0b444e5fd5a..0e4095c91bd8 100644
  M:	Hans de Goede <hansg@kernel.org>
  L:	linux-input@vger.kernel.org
 diff --git a/drivers/bus/mhi/host/boot.c b/drivers/bus/mhi/host/boot.c
-index efa3b6dddf4d..bc8459798bbe 100644
+index 205d83ac069f..b3a85aa3c476 100644
 --- a/drivers/bus/mhi/host/boot.c
 +++ b/drivers/bus/mhi/host/boot.c
 @@ -584,10 +584,17 @@ void mhi_fw_load_handler(struct mhi_controller *mhi_cntrl)
@@ -468,7 +468,7 @@ index 13e7a55f54ff..8419ea8a5419 100644
  EXPORT_SYMBOL_GPL(mhi_unprepare_after_power_down);
  
 diff --git a/drivers/bus/mhi/host/internal.h b/drivers/bus/mhi/host/internal.h
-index ce566f7d2e92..41b3fb835880 100644
+index 1dbc3f736161..437f7122e0d1 100644
 --- a/drivers/bus/mhi/host/internal.h
 +++ b/drivers/bus/mhi/host/internal.h
 @@ -427,4 +427,6 @@ void mhi_unmap_single_no_bb(struct mhi_controller *mhi_cntrl,
@@ -750,7 +750,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 56b144b67d21..8e08171b8fdb 100644
+index 0ba2149ef7fc..2304948564e7 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -168,6 +168,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -763,7 +763,7 @@ index 56b144b67d21..8e08171b8fdb 100644
  /**
   * DOC: overview
   *
-@@ -9264,7 +9267,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9269,7 +9272,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;

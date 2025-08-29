@@ -8548,10 +8548,10 @@ index 0000000000..472df7cb0e
 +
 diff --git a/libavcodec/v4l2_req_hevc_vx.c b/libavcodec/v4l2_req_hevc_vx.c
 new file mode 100644
-index 0000000000..d06ec854e5
+index 0000000000..a6339600ef
 --- /dev/null
 +++ b/libavcodec/v4l2_req_hevc_vx.c
-@@ -0,0 +1,1442 @@
+@@ -0,0 +1,1479 @@
 +/*
 +    Copyright (C) 2024  John Cox john.cox@raspberrypi.com
 +
@@ -8681,12 +8681,16 @@ index 0000000000..d06ec854e5
 +
 +//static uint8_t nalu_slice_start_code[] = { 0x00, 0x00, 0x01 };
 +
++static inline uint32_t vpixfmt(const struct v4l2_format *const format)
++{
++    return V4L2_TYPE_IS_MULTIPLANAR(format->type) ?
++            format->fmt.pix_mp.pixelformat : format->fmt.pix.pixelformat;
++}
 +
 +// Get an FFmpeg format from the v4l2 format
 +static enum AVPixelFormat pixel_format_from_format(const struct v4l2_format *const format)
 +{
-+    const uint32_t vfmt = V4L2_TYPE_IS_MULTIPLANAR(format->type) ?
-+            format->fmt.pix_mp.pixelformat : format->fmt.pix.pixelformat;
++    const uint32_t vfmt = vpixfmt(format);
 +    switch (vfmt) {
 +#if CONFIG_SAND
 +    case V4L2_PIX_FMT_NV12_COL128:
@@ -8822,6 +8826,23 @@ index 0000000000..d06ec854e5
 +    return b;
 +}
 +
++static uint32_t trimmed_bits(const uint8_t * b, unsigned int byte_len)
++{
++    const uint8_t * p = b + byte_len - 1;
++    unsigned int i;
++    // Strip simple trailing zeros
++    while (p > b && p[0] == 0)
++        --p;
++    // Strip cabac zero words
++    while (p > b + 2 && p[0] == 3 && p[-1] == 0 && p[-2] == 0)
++        p -= 3;
++    // We expect this byte to be non zero for a legal stream
++    for (i = 0; i != 7; ++i)
++        if (((1 << i) & p[0]) != 0)
++            break;
++    return (p - b) * 8 + 7 - i;
++}
++
 +static int slice_add(V4L2MediaReqDescriptor * const rd)
 +{
 +    if (rd->num_slices >= rd->alloced_slices) {
@@ -8902,7 +8923,7 @@ index 0000000000..d06ec854e5
 +                              const struct v4l2_ctrl_hevc_decode_params * const dec,
 +#endif
 +                              struct v4l2_ctrl_hevc_slice_params *slice_params,
-+                              uint32_t bit_size, uint32_t bit_offset)
++                              const uint32_t data_offset, const uint32_t bit_size)
 +{
 +    const SliceHeader * const sh = &h->sh;
 +#if HEVC_CTRLS_VERSION >= 2
@@ -8918,9 +8939,9 @@ index 0000000000..d06ec854e5
 +    *slice_params = (struct v4l2_ctrl_hevc_slice_params) {
 +        .bit_size = bit_size,
 +#if HEVC_CTRLS_VERSION <= 3
-+        .data_bit_offset = bit_offset,
++        .data_bit_offset = data_offset * 8 - 1,
 +#else
-+        .data_byte_offset = bit_offset / 8 + 1,
++        .data_byte_offset = data_offset,
 +#endif
 +        /* ISO/IEC 23008-2, ITU-T Rec. H.265: General slice segment header */
 +        .slice_segment_addr = sh->slice_segment_addr,
@@ -9249,6 +9270,7 @@ index 0000000000..d06ec854e5
 +        av_log(logctx, AV_LOG_ERROR, "%s: Decode fail\n", __func__);
 +        frame->flags |= AV_FRAME_FLAG_CORRUPT;
 +    }
++    av_dict_set_int(&frame->metadata, "v4l2_ts", rd->timestamp, 0);
 +    return 0;
 +}
 +
@@ -9497,13 +9519,16 @@ index 0000000000..d06ec854e5
 +
 +// This only works because we started out from a single coded frame buffer
 +// that will remain intact until after end_frame
-+static int v4l2_request_hevc_decode_slice(AVCodecContext *avctx, V4L2RequestContextHEVC *const ctx, const uint8_t *buffer, uint32_t size)
++static int v4l2_request_hevc_decode_slice(AVCodecContext *avctx, V4L2RequestContextHEVC *const ctx,
++                                          const uint8_t *buffer, uint32_t buffer_size)
 +{
++    uint32_t size = buffer_size;
 +    const HEVCContext * const h = avctx->priv_data;
 +    const SliceHeader * const sh = &h->sh;
 +    V4L2MediaReqDescriptor * const rd = (V4L2MediaReqDescriptor*)h->cur_frame->f->data[0];
-+    uint32_t boff = (ptr_from_index(buffer, sh->data_offset) - buffer) * 8 - 1;
-+
++    uint32_t data_offset = (ptr_from_index(buffer, sh->data_offset) - buffer);
++    uint32_t block_offset = 0;
++    uint32_t bsize;
 +    const unsigned int n = rd->num_slices;
 +    const unsigned int block_start = (n / ctx->max_slices) * ctx->max_slices;
 +
@@ -9515,7 +9540,7 @@ index 0000000000..d06ec854e5
 +    if (ctx->start_code == V4L2_STATELESS_HEVC_START_CODE_ANNEX_B) {
 +        buffer -= 3;
 +        size += 3;
-+        boff += 24;
++        data_offset += 3;
 +        if (buffer[0] != 0 || buffer[1] != 0 || buffer[2] != 1) {
 +            av_log(avctx, AV_LOG_ERROR, "Start code requested but missing %02x:%02x:%02x\n",
 +                   buffer[0], buffer[1], buffer[2]);
@@ -9532,18 +9557,19 @@ index 0000000000..d06ec854e5
 +
 +    if (n != block_start) {
 +        struct slice_info *const si0 = rd->slices + block_start;
-+        const size_t offset = (buffer - si0->ptr);
-+        boff += offset * 8;
-+        size += offset;
-+        si0->len = si->len + offset;
++        block_offset = (buffer - si0->ptr);
++        si0->len = si->len + block_offset;
 +    }
 +
++    bsize = ctx->bit_size_is_offset ?
++        (size + block_offset) * 8 :
++        trimmed_bits(buffer + data_offset, size - data_offset);
 +#if HEVC_CTRLS_VERSION >= 2
 +    if (n == 0)
 +        fill_decode_params(h, &rd->dec);
-+    fill_slice_params(h, &rd->dec, rd->slice_params + n, size * 8, boff);
++    fill_slice_params(h, &rd->dec, rd->slice_params + n, data_offset + block_offset, bsize);
 +#else
-+    fill_slice_params(h, rd->slice_params + n, size * 8, boff);
++    fill_slice_params(h, rd->slice_params + n, data_offset + block_offset, bsize);
 +#endif
 +
 +    {
@@ -9810,6 +9836,17 @@ index 0000000000..d06ec854e5
 +        { .id = V4L2_CID_STATELESS_HEVC_START_CODE, },
 +    };
 +
++    // Fix RPi Quirk
++    switch (vpixfmt(mediabufs_dst_fmt(ctx->mbufs))) {
++    case V4L2_PIX_FMT_NV12_COL128:
++    case V4L2_PIX_FMT_NV12_10_COL128:
++        ctx->bit_size_is_offset = 1;
++        break;
++    default:
++        ctx->bit_size_is_offset = 0;
++        break;
++    }
++
 +    mediabufs_ctl_query_ext_ctrls(ctx->mbufs, querys, FF_ARRAY_ELEMS(querys));
 +
 +    ctx->max_slices = (!(querys[2].flags & V4L2_CTRL_FLAG_DYNAMIC_ARRAY) ||
@@ -9996,7 +10033,7 @@ index 0000000000..d06ec854e5
 +
 diff --git a/libavcodec/v4l2_req_media.c b/libavcodec/v4l2_req_media.c
 new file mode 100644
-index 0000000000..ba9ccb31ce
+index 0000000000..3feb55ab11
 --- /dev/null
 +++ b/libavcodec/v4l2_req_media.c
 @@ -0,0 +1,1835 @@
@@ -10863,7 +10900,7 @@ index 0000000000..ba9ccb31ce
 +    return 0;
 +}
 +
-+const struct dmabuf_h * qent_dst_dmabuf(const struct qent_dst *const be_dst, unsigned int plane)
++struct dmabuf_h * qent_dst_dmabuf(const struct qent_dst *const be_dst, unsigned int plane)
 +{
 +    const struct qent_base *const be = &be_dst->base;
 +
@@ -11837,7 +11874,7 @@ index 0000000000..ba9ccb31ce
 +
 diff --git a/libavcodec/v4l2_req_media.h b/libavcodec/v4l2_req_media.h
 new file mode 100644
-index 0000000000..f3023df9e8
+index 0000000000..4c3a61960e
 --- /dev/null
 +++ b/libavcodec/v4l2_req_media.h
 @@ -0,0 +1,179 @@
@@ -11935,7 +11972,7 @@ index 0000000000..f3023df9e8
 +int qent_src_alloc(struct qent_src *const be_src, const size_t len, struct dmabufs_ctl * dbsc);
 +// dbsc may be NULL if realloc not required
 +int qent_src_data_copy(struct qent_src *const be_src, const size_t offset, const void *const src, const size_t len, struct dmabufs_ctl * dbsc);
-+const struct dmabuf_h * qent_dst_dmabuf(const struct qent_dst *const be, unsigned int plane);
++struct dmabuf_h * qent_dst_dmabuf(const struct qent_dst *const be, unsigned int plane);
 +int qent_dst_dup_fd(const struct qent_dst *const be, unsigned int plane);
 +MediaBufsStatus qent_dst_wait(struct qent_dst *const be);
 +void qent_dst_delete(struct qent_dst *const be);
@@ -12518,10 +12555,10 @@ index 0000000000..a6160c5e1c
 +#endif
 diff --git a/libavcodec/v4l2_request_hevc.c b/libavcodec/v4l2_request_hevc.c
 new file mode 100644
-index 0000000000..161a894c7b
+index 0000000000..9f14192fc7
 --- /dev/null
 +++ b/libavcodec/v4l2_request_hevc.c
-@@ -0,0 +1,433 @@
+@@ -0,0 +1,436 @@
 +/*
 + * This file is part of FFmpeg.
 + *
@@ -12697,6 +12734,7 @@ index 0000000000..161a894c7b
 +int ff_v4l2_request_init(AVCodecContext *avctx,
 +                         const struct v4l2_req_decode_fns * const * const try_fns,
 +                         const int width, const int height, const int bit_depth,
++                         const size_t src_bufsize,
 +                         const int dst_buffers)
 +{
 +    V4L2RequestPrivHEVC * const priv = avctx->internal->hwaccel_priv_data;
@@ -12708,7 +12746,8 @@ index 0000000000..161a894c7b
 +    enum mediabufs_memory src_memtype;
 +    enum mediabufs_memory dst_memtype;
 +
-+    av_log(avctx, AV_LOG_DEBUG, "<<< %s\n", __func__);
++    av_log(avctx, AV_LOG_DEBUG, "<<< %s (%dx%d %d bits src_size %zd dst_bufs %d\n", __func__,
++           width, height, bit_depth, src_bufsize, dst_buffers);
 +
 +    if ((ctx = av_mallocz(sizeof(*ctx))) == NULL) {
 +        av_log(avctx, AV_LOG_ERROR, "Unable to allocate context");
@@ -12777,7 +12816,7 @@ index 0000000000..161a894c7b
 +    // We will realloc if we need more
 +    // Must use sps->h/w as avctx contains cropped size
 +retry_src_memtype:
-+    src_size = bit_buf_size(width, height, bit_depth - 8);
++    src_size = src_bufsize;
 +    if (src_memtype == MEDIABUFS_MEMORY_DMABUF && mediabufs_src_resizable(ctx->mbufs))
 +        src_size /= 4;
 +    // Kludge for conformance tests which break Annex A limits
@@ -12931,7 +12970,8 @@ index 0000000000..161a894c7b
 +    }
 +
 +    return ff_v4l2_request_init(avctx, try_fns, sps->width, sps->height, sps->bit_depth,
-+                             sps->temporal_layer[sps->max_sub_layers - 1].max_dec_pic_buffering);
++                                bit_buf_size(sps->width, sps->height, sps->bit_depth - 8),
++                                sps->temporal_layer[sps->max_sub_layers - 1].max_dec_pic_buffering);
 +}
 +
 +const FFHWAccel ff_hevc_v4l2request_hwaccel = {
@@ -12957,10 +12997,10 @@ index 0000000000..161a894c7b
 +};
 diff --git a/libavcodec/v4l2_request_hevc.h b/libavcodec/v4l2_request_hevc.h
 new file mode 100644
-index 0000000000..4c145feb37
+index 0000000000..66b727ab14
 --- /dev/null
 +++ b/libavcodec/v4l2_request_hevc.h
-@@ -0,0 +1,160 @@
+@@ -0,0 +1,163 @@
 +/*
 +    Copyright (C) 2024  John Cox john.cox@raspberrypi.com
 +
@@ -13063,6 +13103,8 @@ index 0000000000..4c145feb37
 +    unsigned int max_slices;    // 0 => not wanted (frame mode)
 +    unsigned int max_offsets;   // 0 => not wanted
 +
++    int bit_size_is_offset;  // Quirk for old RPi decodes (not worth an entire VX)
++
 +    req_decode_q decode_q;
 +
 +    struct devscan *devscan;
@@ -13110,6 +13152,7 @@ index 0000000000..4c145feb37
 +int ff_v4l2_request_init(AVCodecContext *avctx,
 +                         const struct v4l2_req_decode_fns * const * const try_fns,
 +                         const int width, const int height, const int bit_depth,
++                         const size_t src_bufsize,
 +                         const int dst_buffers);
 +int ff_v4l2_request_uninit(AVCodecContext *avctx);
 +int ff_v4l2_request_update_thread_context(AVCodecContext *dst, const AVCodecContext *src);
@@ -17379,10 +17422,10 @@ index 305fa46532..34e993280d 100644
  extern const FFOutputFormat ff_dash_muxer;
 diff --git a/libavformat/conformenc.c b/libavformat/conformenc.c
 new file mode 100644
-index 0000000000..a2b31118d5
+index 0000000000..1fcc873916
 --- /dev/null
 +++ b/libavformat/conformenc.c
-@@ -0,0 +1,479 @@
+@@ -0,0 +1,488 @@
 +/*
 + * Copyright (c) 2020 John Cox for Raspberry Pi Trading
 + *
@@ -17563,10 +17606,9 @@ index 0000000000..a2b31118d5
 +        av_md5_update(de->frame_md5, line, size);
 +    if (de->md5)
 +        av_md5_update(de->md5, line, size);
-+    else {
++    else
 +        avio_write(s->pb, line, size);
-+        de->foffset += size;
-+    }
++    de->foffset += size;
 +}
 +
 +static void end_frame(AVFormatContext * const s, conform_display_env_t * const de)
@@ -17590,6 +17632,7 @@ index 0000000000..a2b31118d5
 +    int is_hw = (pix_desc->flags & AV_PIX_FMT_FLAG_HWACCEL) != 0;
 +    enum AVPixelFormat fmt = is_hw ? AV_PIX_FMT_NONE : sf->format;
 +    unsigned int i;
++    char * meta = NULL;
 +
 +    if (is_hw) {
 +        enum AVPixelFormat *xfmts = NULL;
@@ -17598,10 +17641,12 @@ index 0000000000..a2b31118d5
 +        av_free(xfmts);
 +    }
 +
-+    av_log(s, AV_LOG_DEBUG, "%s: Frame %3d: %#08llx %dx%d crop(ltrb) %zd,%zd,%zd,%zd fmt %s -> %s\n", __func__,
++    av_dict_get_string(sf->metadata, &meta, '=', ';');
++    av_log(s, AV_LOG_DEBUG, "%s: Frame %3d: %#08llx %dx%d crop(ltrb) %zd,%zd,%zd,%zd fmt %s -> %s PTS %"PRId64" [%s]\n", __func__,
 +           de->fno, de->foffset,
 +           sf->width, sf->height, sf->crop_left, sf->crop_top, sf->crop_right, sf->crop_bottom,
-+           av_get_pix_fmt_name(sf->format), av_get_pix_fmt_name(fmt));
++           av_get_pix_fmt_name(sf->format), av_get_pix_fmt_name(fmt), sf->pts, meta);
++    free(meta);
 +
 +    if (start_frame(s, de, sf))
 +        return 0;
@@ -17629,6 +17674,13 @@ index 0000000000..a2b31118d5
 +        for (y = 0; y < h; ++y) {
 +            const void *const lstart = f->data[cd->plane] + (y + (f->crop_top >> srh)) * f->linesize[cd->plane] + cd->offset + (f->crop_left >> srw) * cd->step;
 +            unsigned int x;
++
++            // If line_buf construction would be a simple copy then bypass
++            if (srp == 0 && cd->step == bpp) {
++                add_block(s, de, lstart, w * bpp);
++                continue;
++            }
++
 +            if (bpp == 1) {
 +                uint8_t *d = de->line_buf;
 +                const uint8_t *s = lstart;

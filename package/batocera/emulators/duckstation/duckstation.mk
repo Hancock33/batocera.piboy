@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Aug 25, 2025
-DUCKSTATION_VERSION = e5fd12acb377493db48b3d6aa9048e7bce900b62
+# Version: Commits on Aug 28, 2025
+DUCKSTATION_VERSION = 4738fceb43a67579da3fbe72fcc6c54e253a9870
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
@@ -61,11 +61,4 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansSC-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansSC-VariableFont_wght.ttf
 endef
 
-define DUCKSTATION_VERSION_DETAILS
-	echo '#pragma once' > $(@D)/src/scmversion/tag.h
-	echo '#define SCM_RELEASE_TAG "latest"' >> $(@D)/src/scmversion/tag.h
-	echo '#define SCM_RELEASE_TAGS {"latest", "preview"}' >> $(@D)/src/scmversion/tag.h
-endef
-
-DUCKSTATION_PRE_CONFIGURE_HOOKS = DUCKSTATION_VERSION_DETAILS
 $(eval $(cmake-package))

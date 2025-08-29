@@ -1,6 +1,5 @@
 ﻿batocera-luajit.mk
 duckstation-legacy.mk
-ecwolf.mk
 firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
@@ -12,6 +11,7 @@ mt32emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
+python-pyxel.mk
 wine-cachyos.mk
 wine-custom.mk
 wine-native.mk
