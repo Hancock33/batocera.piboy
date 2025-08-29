@@ -1,11 +1,13 @@
 diff --git a/rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp b/rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp
-index 36228d8a5..955727b05 100644
+index 36228d8a5..c28600b8d 100644
 --- a/rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellAtracXdec.cpp
-@@ -113,27 +113,6 @@ void AtracXdecDecoder::alloc_avcodec()
+@@ -111,28 +111,7 @@ void AtracXdecDecoder::alloc_avcodec()
+ 		fmt::throw_exception("avcodec_find_decoder() failed");
+ 	}
  
- 	ensure(!(codec->capabilities & AV_CODEC_CAP_SUBFRAMES));
- 
+-	ensure(!(codec->capabilities & AV_CODEC_CAP_SUBFRAMES));
+-
 -	ctx = avcodec_alloc_context3(codec);
 -	if (!ctx)
 -	{
@@ -26,10 +28,10 @@ index 36228d8a5..955727b05 100644
 -		frame->buf[0] = av_buffer_create(frame->data[0], ATXDEC_SAMPLES_PER_FRAME * sizeof(f32) * frame->ch_layout.nb_channels, [](void*, uint8_t*){}, nullptr, 0);
 -		return 0;
 -	};
--
++	ensure(!(codec->capabilities));
+ 
  	packet = av_packet_alloc();
  	if (!packet)
- 	{
 @@ -149,18 +128,47 @@ void AtracXdecDecoder::alloc_avcodec()
  
  void AtracXdecDecoder::free_avcodec()
