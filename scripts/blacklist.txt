@@ -1,6 +1,5 @@
 ﻿batocera-luajit.mk
 duckstation-legacy.mk
-ecwolf.mk
 firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
