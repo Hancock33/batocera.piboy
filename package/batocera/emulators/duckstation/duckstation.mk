@@ -61,11 +61,4 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansSC-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansSC-VariableFont_wght.ttf
 endef
 
-define DUCKSTATION_VERSION_DETAILS
-	echo '#pragma once' > $(@D)/src/scmversion/tag.h
-	echo '#define SCM_RELEASE_TAG "latest"' >> $(@D)/src/scmversion/tag.h
-	echo '#define SCM_RELEASE_TAGS {"latest", "preview"}' >> $(@D)/src/scmversion/tag.h
-endef
-
-DUCKSTATION_PRE_CONFIGURE_HOOKS = DUCKSTATION_VERSION_DETAILS
 $(eval $(cmake-package))
