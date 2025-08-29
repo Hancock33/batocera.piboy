@@ -1,0 +1,15 @@
+diff --git a/src/libtrx/engine/video.c b/src/libtrx/engine/video.c
+index b4d2fb535..4171a03bc 100644
+--- a/src/libtrx/engine/video.c
++++ b/src/libtrx/engine/video.c
+@@ -1716,7 +1716,9 @@ static int M_ReadThread(void *arg)
+     is->ic = ic;
+ 
+     avformat_find_stream_info(ic, nullptr);
+-    av_format_inject_global_side_data(ic);
++#if (LIBAVFORMAT_VERSION_MAJOR < 61) || ((LIBAVFORMAT_VERSION_MAJOR == 61) && (LIBAVFORMAT_VERSION_MINOR < 8))
++    av_format_inject_global_side_data(&ic);
++#endif 
+ 
+     if (ic->pb) {
+         ic->pb->eof_reached = 0;
