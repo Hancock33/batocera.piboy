@@ -1,7 +1,37 @@
+diff --git a/src/core/system.cpp b/src/core/system.cpp
+index 4c6bdf8af..4dc65a9da 100644
+--- a/src/core/system.cpp
++++ b/src/core/system.cpp
+@@ -4900,14 +4900,14 @@ void System::WarnAboutUnsafeSettings()
+              TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
+     }
+ 
+-    // Always display TC warning.
++    /* Always display TC warning.
+     if (g_settings.gpu_texture_cache)
+     {
+       append(
+         ICON_FA_PAINT_ROLLER,
+         TRANSLATE_SV("System",
+                      "Texture cache is enabled. This feature is experimental, some games may not render correctly."));
+-    }
++    }*/
+ 
+     // Potential performance issues.
+     if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
 diff --git a/src/duckstation-mini/mini_host.cpp b/src/duckstation-mini/mini_host.cpp
-index d8d4f798c..cd228f9fa 100644
+index d8d4f798c..ccce98e1a 100644
 --- a/src/duckstation-mini/mini_host.cpp
 +++ b/src/duckstation-mini/mini_host.cpp
+@@ -160,7 +160,7 @@ bool MiniHost::EarlyProcessStartup()
+     return false;
+   }
+ 
+-#if !__has_include("scmversion/tag.h")
++#if __has_include("scmversion/tag.h")
+   //
+   // To those distributing their own builds or packages of DuckStation, and seeing this message:
+   //
 @@ -1001,7 +1001,7 @@ void MiniHost::CPUThreadEntryPoint()
    // start the fullscreen UI and get it going
    if (GPUThread::StartFullscreenUI(s_state.start_fullscreen_ui_fullscreen, &error))
