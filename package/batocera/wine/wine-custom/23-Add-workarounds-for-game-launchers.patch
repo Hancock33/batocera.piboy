@@ -1,5 +1,5 @@
 diff --git a/dlls/kernelbase/process.c b/dlls/kernelbase/process.c
-index 23ce40319df..020a6c2382c 100644
+index 019e6c3b1b5..aa8becdfdb9 100644
 --- a/dlls/kernelbase/process.c
 +++ b/dlls/kernelbase/process.c
 @@ -590,6 +590,38 @@ static int battleye_launcher_redirect_hack(const WCHAR *app_name, WCHAR *new_nam
@@ -43,7 +43,7 @@ index 23ce40319df..020a6c2382c 100644
   */
 @@ -606,6 +638,7 @@ BOOL WINAPI DECLSPEC_HOTPATCH CreateProcessInternalW( HANDLE token, const WCHAR
      RTL_USER_PROCESS_PARAMETERS *params = NULL;
-     RTL_USER_PROCESS_INFORMATION rtl_info;
+     RTL_USER_PROCESS_INFORMATION rtl_info = { 0 };
      HANDLE parent = 0, debug = 0;
 +    const WCHAR *append;
      ULONG nt_flags = 0;

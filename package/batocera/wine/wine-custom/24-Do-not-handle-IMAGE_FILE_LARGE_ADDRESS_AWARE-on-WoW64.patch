@@ -1,5 +1,5 @@
 diff --git a/dlls/ntdll/unix/virtual.c b/dlls/ntdll/unix/virtual.c
-index b29a9790676..293f9b6905c 100644
+index 0c4c98e6bfe..09030f924bf 100644
 --- a/dlls/ntdll/unix/virtual.c
 +++ b/dlls/ntdll/unix/virtual.c
 @@ -4921,8 +4921,7 @@ BOOL WINAPI __wine_needs_override_large_address_aware(void)

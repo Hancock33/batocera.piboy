@@ -1,45 +1,48 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index 3b1d3b415ff..53d24044075 100644
+index 68415d7977e..8a8e56d633a 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -99,7 +99,8 @@ AddReg=\
-     ThemeManager,\
+@@ -84,13 +84,15 @@ Needs=BaseInstall
+ WineFakeDlls=FakeDllsWin32
+ AddReg=\
      VCRuntime.ntx86,\
-     VersionInfo,\
--    LicenseInformation
-+    LicenseInformation,\
+-    VersionInfo
+-
++    VersionInfo,\
++    BatoceraOverrides
++ 
+ [DefaultInstall.ntarm]
+ Needs=BaseInstall
+ WineFakeDlls=FakeDllsWin32
+ AddReg=\
+-    VersionInfo
++    VersionInfo,\
 +    BatoceraOverrides
  
  [DefaultInstall.ntamd64]
- RegisterDlls=RegisterDllsSection
-@@ -126,7 +127,8 @@ AddReg=\
-     ThemeManager,\
+ Needs=BaseInstall
+@@ -98,7 +100,8 @@ WineFakeDlls=FakeDllsWin64
+ AddReg=\
+     CurrentVersionWow64.ntamd64,\
      VCRuntime.ntamd64,\
-     VersionInfo,\
--    LicenseInformation
-+    LicenseInformation,\
+-    VersionInfo
++    VersionInfo,\
 +    BatoceraOverrides
  
  [DefaultInstall.ntarm64]
- RegisterDlls=RegisterDllsSection
-@@ -153,7 +155,8 @@ AddReg=\
+ Needs=BaseInstall
+@@ -107,7 +110,13 @@ AddReg=\
+     CurrentVersionWow64.ntarm64,\
      VCRuntime.ntamd64,\
      VCRuntime.ntarm64,\
-     VersionInfo,\
--    LicenseInformation
-+    LicenseInformation,\
+-    VersionInfo
++    VersionInfo,\
 +    BatoceraOverrides
- 
- [Wow64Install.ntx86]
- RegisterDlls=RegisterDllsSection
-@@ -187,6 +190,10 @@ AddReg=\
-     Tapi,\
-     VersionInfo,\
-     LicenseInformation
-+    
++
 +[BatoceraOverrides]
 +HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"
 +HKLM,System\CurrentControlSet\Services\winebus,"Enable SDL",0x10001,"1"
++HKCU,Software\Xenia,"XEFLAGS",0x10001,"1"
  
- [DefaultInstall.Services]
- AddService=BITS,0,BITSService
+ [BaseWow64Install]
+ RegisterDlls=RegisterDllsSection

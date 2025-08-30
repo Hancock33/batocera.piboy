@@ -1,8 +1,8 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index 1f32faa9fe0..c1c657122af 100644
+index f54d79da0a3..d06ea9f4bdf 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -387,7 +387,7 @@ HKCU,%CurrentVersion%\Run,,16
+@@ -335,7 +335,7 @@ HKCU,%CurrentVersion%\Run,,16
  HKCU,%CurrentVersionNT%\Winlogon,,16
  HKLM,%CurrentVersion%,"CommonFilesDir",,"%16427%"
  HKLM,%CurrentVersion%,"FirstInstallDateTime",1,21,81,7c,23
@@ -11,7 +11,7 @@ index 1f32faa9fe0..c1c657122af 100644
  HKLM,%CurrentVersion%,"ProgramFilesDir",,"%16422%"
  HKLM,%CurrentVersion%,"ProgramFilesPath",0x20000,"%%ProgramFiles%%"
  HKLM,%CurrentVersion%,"RegisteredOrganization",2,""
-@@ -413,7 +413,7 @@ HKLM,%CurrentVersion%\Shell Extensions\Approved,,16
+@@ -361,7 +361,7 @@ HKLM,%CurrentVersion%\Shell Extensions\Approved,,16
  HKLM,%CurrentVersion%\Time Zones,"SymbolicLinkValue",0x60000,"\Registry\Machine\%CurrentVersionNT%\Time Zones"
  HKLM,%CurrentVersion%\Uninstall,,16
  HKLM,%CurrentVersionNT%,"InstallDate",0x10003,1273299354
@@ -20,7 +20,7 @@ index 1f32faa9fe0..c1c657122af 100644
  HKLM,%CurrentVersionNT%,"RegisteredOrganization",2,""
  HKLM,%CurrentVersionNT%,"RegisteredOwner",2,""
  HKLM,%CurrentVersionNT%,"SystemRoot",,"%10%"
-@@ -2878,7 +2878,7 @@ HKLM,%CurrentVersionNT%,"CurrentBuild",2,"19045"
+@@ -1379,7 +1379,7 @@ HKLM,%CurrentVersionNT%,"CurrentBuild",2,"19045"
  HKLM,%CurrentVersionNT%,"CurrentBuildNumber",2,"19045"
  HKLM,%CurrentVersionNT%,"UBR",0x10003,5796
  HKLM,%CurrentVersionNT%,"CurrentType",2,"Multiprocessor Free"
@@ -29,7 +29,7 @@ index 1f32faa9fe0..c1c657122af 100644
  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
-@@ -2886,8 +2886,10 @@ HKLM,%CurrentVersionNT%,"DigitalProductId",1,00,00,00,00,00,00,00,00,00,00,00,\
+@@ -1387,8 +1387,10 @@ HKLM,%CurrentVersionNT%,"DigitalProductId",1,00,00,00,00,00,00,00,00,00,00,00,\
  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
  HKLM,%CurrentVersionNT%,"EditionId",2,"Professional"

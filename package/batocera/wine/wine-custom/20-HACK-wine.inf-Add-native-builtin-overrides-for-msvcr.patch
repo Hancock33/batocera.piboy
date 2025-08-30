@@ -1,8 +1,8 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index c1c657122af..46dc2d309cf 100644
+index d06ea9f4bdf..50e19573356 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -2969,6 +2969,37 @@ HKLM,Software\Wine\LicenseInformation,"Shell-InBoxGames-Shanghai-EnableGame",0x1
+@@ -1470,6 +1470,37 @@ HKLM,Software\Wine\LicenseInformation,"Shell-InBoxGames-Shanghai-EnableGame",0x1
  HKLM,Software\Wine\LicenseInformation,"Shell-InBoxGames-Solitaire-EnableGame",0x10001,0x00000001
  HKLM,Software\Wine\LicenseInformation,"Shell-InBoxGames-SpiderSolitaire-EnableGame",0x10001,0x00000001
  HKLM,Software\Wine\LicenseInformation,"Shell-PremiumInBoxGames-Chess-EnableGame",0x10001,0x00000001

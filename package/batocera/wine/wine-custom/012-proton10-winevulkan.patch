@@ -1,8 +1,8 @@
 diff --git a/configure.ac b/configure.ac
-index 1bbb1207c42..bf6406ced0e 100644
+index 2f37f98890f..c93aab68305 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -3144,6 +3144,7 @@ WINE_CONFIG_MAKEFILE(dlls/setupapi/tests)
+@@ -3147,6 +3147,7 @@ WINE_CONFIG_MAKEFILE(dlls/setupapi/tests)
  WINE_CONFIG_MAKEFILE(dlls/setupx.dll16)
  WINE_CONFIG_MAKEFILE(dlls/sfc)
  WINE_CONFIG_MAKEFILE(dlls/sfc_os)
@@ -570,7 +570,7 @@ index 71ad2c4cf34..10403f3bd26 100644
  }
  
 diff --git a/dlls/win32u/vulkan.c b/dlls/win32u/vulkan.c
-index 722bdd845cf..9a6f4b4ae88 100644
+index 6d6e5f81f54..a6c9052ef44 100644
 --- a/dlls/win32u/vulkan.c
 +++ b/dlls/win32u/vulkan.c
 @@ -353,6 +353,7 @@ void win32u_vkDestroySwapchainKHR( VkDevice client_device, VkSwapchainKHR client
@@ -656,10 +656,10 @@ index 722bdd845cf..9a6f4b4ae88 100644
      if (TRACE_ON( fps ))
      {
 diff --git a/dlls/winevulkan/make_vulkan b/dlls/winevulkan/make_vulkan
-index 61d5cc296cc..4846586afee 100755
+index 2a7b192685c..76c122bbb96 100755
 --- a/dlls/winevulkan/make_vulkan
 +++ b/dlls/winevulkan/make_vulkan
-@@ -97,11 +97,9 @@ UNSUPPORTED_EXTENSIONS = [
+@@ -97,14 +97,12 @@ UNSUPPORTED_EXTENSIONS = [
      "VK_EXT_full_screen_exclusive",
      "VK_GOOGLE_display_timing",
      "VK_KHR_external_fence_win32",
@@ -667,11 +667,14 @@ index 61d5cc296cc..4846586afee 100755
      # Relates to external_semaphore and needs type conversions in bitflags.
      "VK_KHR_maintenance7", # Causes infinity recursion in struct convert code
      "VK_KHR_shared_presentable_image", # Needs WSI work.
+     "VK_KHR_video_encode_h265", # StdVideoH265HrdParameters cannot be handled
+     "VK_KHR_video_decode_h265", # by struct conversions.
+     "VK_KHR_video_maintenance2", # Also affected by StdVideoH265HrdParameters.
 -    "VK_KHR_win32_keyed_mutex",
      "VK_NV_external_memory_rdma", # Needs shared resources work.
      "VK_NV_external_compute_queue", # Has a new dispatchable handle
  
-@@ -112,8 +110,6 @@ UNSUPPORTED_EXTENSIONS = [
+@@ -115,8 +113,6 @@ UNSUPPORTED_EXTENSIONS = [
      "VK_EXT_physical_device_drm",
      "VK_GOOGLE_surfaceless_query",
      "VK_KHR_external_fence_fd",
@@ -680,7 +683,7 @@ index 61d5cc296cc..4846586afee 100755
      "VK_SEC_amigo_profiling", # Angle specific.
  
      # Extensions which require callback handling
-@@ -129,7 +125,6 @@ UNSUPPORTED_EXTENSIONS = [
+@@ -132,7 +128,6 @@ UNSUPPORTED_EXTENSIONS = [
  # but not expose to applications (useful for test commits)
  UNEXPOSED_EXTENSIONS = {
      "VK_EXT_map_memory_placed",
@@ -688,7 +691,7 @@ index 61d5cc296cc..4846586afee 100755
      "VK_EXT_headless_surface",
  }
  
-@@ -175,22 +170,51 @@ FUNCTION_OVERRIDES = {
+@@ -178,22 +173,51 @@ FUNCTION_OVERRIDES = {
  
      # Instance functions
      "vkCreateDevice" : {"extra_param" : "client_ptr"},
@@ -744,7 +747,7 @@ index 61d5cc296cc..4846586afee 100755
  }
  
  # functions for which a user driver entry must be generated
-@@ -224,12 +248,15 @@ MANUAL_UNIX_THUNKS = {
+@@ -227,12 +251,15 @@ MANUAL_UNIX_THUNKS = {
      "vkCreateDevice",
      "vkCreateImage",
      "vkCreateInstance",
@@ -760,7 +763,7 @@ index 61d5cc296cc..4846586afee 100755
      "vkEnumerateDeviceExtensionProperties",
      "vkEnumerateDeviceLayerProperties",
      "vkEnumerateInstanceExtensionProperties",
-@@ -243,6 +270,8 @@ MANUAL_UNIX_THUNKS = {
+@@ -246,6 +273,8 @@ MANUAL_UNIX_THUNKS = {
      "vkGetCalibratedTimestampsEXT",
      "vkGetCalibratedTimestampsKHR",
      "vkGetDeviceProcAddr",
@@ -769,7 +772,7 @@ index 61d5cc296cc..4846586afee 100755
      "vkGetDeviceQueue",
      "vkGetDeviceQueue2",
      "vkGetInstanceProcAddr",
-@@ -260,6 +289,20 @@ MANUAL_UNIX_THUNKS = {
+@@ -263,6 +292,20 @@ MANUAL_UNIX_THUNKS = {
      "vkMapMemory2KHR",
      "vkUnmapMemory",
      "vkUnmapMemory2KHR",
@@ -790,7 +793,7 @@ index 61d5cc296cc..4846586afee 100755
  }
  
  # loader functions which are entirely manually implemented
-@@ -289,8 +332,21 @@ STRUCT_CHAIN_CONVERSIONS = {
+@@ -292,8 +335,21 @@ STRUCT_CHAIN_CONVERSIONS = {
      # Ignore to not confuse host loader.
      "VkDeviceCreateInfo": ["VK_STRUCTURE_TYPE_LOADER_DEVICE_CREATE_INFO"],
      "VkInstanceCreateInfo": ["VK_STRUCTURE_TYPE_LOADER_INSTANCE_CREATE_INFO"],
@@ -812,7 +815,7 @@ index 61d5cc296cc..4846586afee 100755
  # Some struct members are conditionally ignored and callers are free to leave them uninitialized.
  # We can't deduce that from XML, so we allow expressing it here.
  MEMBER_LENGTH_EXPRESSIONS = {
-@@ -807,7 +863,14 @@ class VkFunction(object):
+@@ -810,7 +866,14 @@ class VkFunction(object):
          proto += ", ".join([p.definition() for p in self.params])
  
          if is_thunk and self.extra_param:
@@ -828,7 +831,7 @@ index 61d5cc296cc..4846586afee 100755
  
          proto += ")"
          return proto
-@@ -894,7 +957,7 @@ class VkFunction(object):
+@@ -897,7 +960,7 @@ class VkFunction(object):
              if conv:
                  params += ", UlongToPtr({0}{1})".format(params_prefix, self.extra_param)
              else:
@@ -837,7 +840,7 @@ index 61d5cc296cc..4846586afee 100755
  
          if self.name in MANUAL_UNIX_THUNKS:
              func_prefix = "wine_"
-@@ -974,9 +1037,12 @@ class VkFunction(object):
+@@ -977,9 +1040,12 @@ class VkFunction(object):
          if conv:
              thunk += "    struct\n"
              thunk += "    {\n"
@@ -851,7 +854,7 @@ index 61d5cc296cc..4846586afee 100755
                  thunk += "        PTR32 {0};\n".format(self.extra_param)
              if self.type != "void":
                  thunk += "        {0} result;\n".format(self.type)
-@@ -1190,6 +1256,8 @@ class VkHandle(object):
+@@ -1193,6 +1259,8 @@ class VkHandle(object):
              return "vulkan_instance_from_handle({0})->host.instance".format(name)
          if self.name == "VkDeviceMemory":
              return "wine_device_memory_from_handle({0})->host.device_memory".format(name)
@@ -860,7 +863,7 @@ index 61d5cc296cc..4846586afee 100755
          if self.name == "VkPhysicalDevice":
              return "vulkan_physical_device_from_handle({0})->host.physical_device".format(name)
          if self.name == "VkQueue":
-@@ -1205,7 +1273,8 @@ class VkHandle(object):
+@@ -1208,7 +1276,8 @@ class VkHandle(object):
      def unwrap_handle(self, name, unwrap):
          if unwrap == Unwrap.HOST:
              return self.host_handle(name)
@@ -870,7 +873,7 @@ index 61d5cc296cc..4846586afee 100755
          return None
  
      def is_wrapped(self):
-@@ -1408,6 +1477,9 @@ class VkVariable(object):
+@@ -1411,6 +1480,9 @@ class VkVariable(object):
                  if struct.needs_conversion(conv, unwrap, Direction.OUTPUT, is_const):
                      conversions.append(StructConversionFunction(struct, Direction.OUTPUT, conv, unwrap, is_const))
  
@@ -880,7 +883,7 @@ index 61d5cc296cc..4846586afee 100755
          if self.is_static_array() or self.is_dynamic_array():
              for conv in [False, True]:
                  if self.needs_conversion(conv, unwrap, Direction.INPUT, parent_const):
-@@ -1530,14 +1602,14 @@ class VkMember(VkVariable):
+@@ -1533,14 +1605,14 @@ class VkMember(VkVariable):
                          values=values, object_type=object_type, bit_width=bit_width, returnedonly=returnedonly,
                          parent=parent, selection=selection, selector=selector)
  
@@ -897,7 +900,7 @@ index 61d5cc296cc..4846586afee 100755
              if self.is_dynamic_array():
                  # Array length is either a variable name (string) or an int.
                  count = self.get_dyn_array_len(input, conv)
-@@ -1567,8 +1639,9 @@ class VkMember(VkVariable):
+@@ -1570,8 +1642,9 @@ class VkMember(VkVariable):
                      return "{0}{1} = {2} ? {3} : 0;\n".format(output, self.name, self.value(input, conv),
                          handle.unwrap_handle(self.value(input, conv), unwrap))
                  else:
@@ -909,7 +912,7 @@ index 61d5cc296cc..4846586afee 100755
              elif self.is_generic_handle():
                  if direction == Direction.OUTPUT:
                      LOGGER.error("OUTPUT parameter {0}.{1} cannot be unwrapped".format(self.type, self.name))
-@@ -1587,6 +1660,11 @@ class VkMember(VkVariable):
+@@ -1590,6 +1663,11 @@ class VkMember(VkVariable):
              for l in self.array_lens:
                  bytes_count = "{0} * ".format(l) + bytes_count
              return "memcpy({0}{1}, {2}{1}, {3});\n".format(output, self.name, input, bytes_count)
@@ -921,7 +924,7 @@ index 61d5cc296cc..4846586afee 100755
          elif conv and direction == Direction.OUTPUT and self.is_pointer():
              return "{0}{1} = PtrToUlong({2}{1});\n".format(output, self.name, input)
          elif conv and direction == Direction.INPUT and self.is_pointer():
-@@ -2313,17 +2391,21 @@ class VkStruct(Sequence):
+@@ -2316,17 +2394,21 @@ class VkStruct(Sequence):
  
  
  class StructConversionFunction(object):
@@ -947,7 +950,7 @@ index 61d5cc296cc..4846586afee 100755
          self.name = name
  
      def __eq__(self, other):
-@@ -2355,7 +2437,7 @@ class StructConversionFunction(object):
+@@ -2358,7 +2440,7 @@ class StructConversionFunction(object):
  
          body = ""
  
@@ -956,7 +959,7 @@ index 61d5cc296cc..4846586afee 100755
              body += "#ifdef _WIN64\n"
  
          needs_alloc = self.direction != Direction.OUTPUT and self.operand.needs_alloc(self.conv, self.unwrap)
-@@ -2365,8 +2447,11 @@ class StructConversionFunction(object):
+@@ -2368,8 +2450,11 @@ class StructConversionFunction(object):
          if self.direction == Direction.OUTPUT and self.const:
              win_type = "const " + win_type
  
@@ -969,7 +972,7 @@ index 61d5cc296cc..4846586afee 100755
  
              if self.direction == Direction.OUTPUT:
                  params = ["const {0} *in".format(self.type), "{0} *out".format(win_type)]
-@@ -2383,8 +2468,6 @@ class StructConversionFunction(object):
+@@ -2386,8 +2471,6 @@ class StructConversionFunction(object):
              body += ")\n"
  
          else:
@@ -978,7 +981,7 @@ index 61d5cc296cc..4846586afee 100755
              params = ["const {0} *in".format(self.type), "{0} *out".format(self.type)]
  
              # Generate parameter list
-@@ -2427,7 +2510,7 @@ class StructConversionFunction(object):
+@@ -2430,7 +2513,7 @@ class StructConversionFunction(object):
                  body += " || ".join("selector == {}".format(s) for s in m.selection)
                  body += ")\n    "
  
@@ -987,7 +990,7 @@ index 61d5cc296cc..4846586afee 100755
  
          if needs_extensions:
              if self.conv and self.direction == Direction.INPUT:
-@@ -2441,9 +2524,12 @@ class StructConversionFunction(object):
+@@ -2444,9 +2527,12 @@ class StructConversionFunction(object):
              ident = "            "
  
              if self.direction == Direction.INPUT and self.type in STRUCT_CHAIN_CONVERSIONS:
@@ -1001,7 +1004,7 @@ index 61d5cc296cc..4846586afee 100755
  
              for ext in self.operand.struct_extensions:
                  if not ext.required:
-@@ -2453,6 +2539,8 @@ class StructConversionFunction(object):
+@@ -2456,6 +2542,8 @@ class StructConversionFunction(object):
                      continue
  
                  stype = next(x for x in ext.members if x.name == "sType").values
@@ -1010,7 +1013,7 @@ index 61d5cc296cc..4846586afee 100755
                  win_type = ext.name + "32" if self.conv and ext.needs_win32_type() else ext.name
                  if self.direction == Direction.INPUT:
                      in_type = "const " + win_type
-@@ -2481,7 +2569,7 @@ class StructConversionFunction(object):
+@@ -2484,7 +2572,7 @@ class StructConversionFunction(object):
                      if m.name == "pNext":
                          copy_body += ident + "out_ext->pNext = NULL;\n"
                          continue
@@ -1019,7 +1022,7 @@ index 61d5cc296cc..4846586afee 100755
  
                  # Generate the definition of "in_ext" if we need it
                  if "in_ext->" in copy_body:
-@@ -2496,7 +2584,18 @@ class StructConversionFunction(object):
+@@ -2499,7 +2587,18 @@ class StructConversionFunction(object):
  
              body += "        default:\n"
              if self.direction == Direction.INPUT:
@@ -1039,7 +1042,7 @@ index 61d5cc296cc..4846586afee 100755
              body += "            break;\n"
              body += "        }\n"
              body += "    }\n"
-@@ -2505,7 +2604,7 @@ class StructConversionFunction(object):
+@@ -2508,7 +2607,7 @@ class StructConversionFunction(object):
              body += "        FIXME(\"Unexpected pNext\\n\");\n"
  
          body += "}\n"
@@ -1048,7 +1051,7 @@ index 61d5cc296cc..4846586afee 100755
              body += "#endif /* _WIN64 */\n"
          body += "\n"
  
-@@ -3014,9 +3113,13 @@ class VkGenerator(object):
+@@ -3017,9 +3116,13 @@ class VkGenerator(object):
  
              f.write("struct {0}_params\n".format(vk_func.name))
              f.write("{\n");
@@ -1063,7 +1066,7 @@ index 61d5cc296cc..4846586afee 100755
                  f.write("    void *{0};\n".format(vk_func.extra_param))
              if vk_func.type != "void":
                  f.write("    {0} result;\n".format(vk_func.type))
-@@ -3151,6 +3254,28 @@ class VkGenerator(object):
+@@ -3161,6 +3264,28 @@ class VkGenerator(object):
                  f.write(" \\\n    USE_VK_FUNC({0})".format(vk_func.name))
          f.write("\n\n")
  
@@ -1092,7 +1095,7 @@ index 61d5cc296cc..4846586afee 100755
          f.write("#endif /* __WINE_VULKAN_H */\n")
  
      def generate_vulkan_spec(self, f):
-@@ -3234,6 +3359,10 @@ class VkRegistry(object):
+@@ -3244,6 +3369,10 @@ class VkRegistry(object):
  
          root.extend(video_root)
  
@@ -5324,18 +5327,18 @@ index 0579ea7773f..911230eb46e 100644
  {
      /* Vulkan global functions. These are the only calls at this point a graphics driver
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index 53d24044075..1f32faa9fe0 100644
+index 8a8e56d633a..f54d79da0a3 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -214,6 +214,7 @@ AddService=Winmgmt,0,WinmgmtService
+@@ -162,6 +162,7 @@ AddService=Winmgmt,0,WinmgmtService
  AddService=wuauserv,0,wuauService
  AddService=NDIS,0x800,NDISService
  AddService=nsiproxy,0x800,NsiProxyService
 +AddService=SharedGpuResources,0x800,SharedGpuResourcesService
  
- [DefaultInstall.NT.Services]
+ [DefaultInstall.ntx86.Services]
  AddService=BITS,0,BITSService
-@@ -234,6 +235,7 @@ AddService=Winmgmt,0,WinmgmtService
+@@ -182,6 +183,7 @@ AddService=Winmgmt,0,WinmgmtService
  AddService=wuauserv,0,wuauService
  AddService=NDIS,0x800,NDISService
  AddService=nsiproxy,0x800,NsiProxyService
@@ -5343,7 +5346,7 @@ index 53d24044075..1f32faa9fe0 100644
  
  [DefaultInstall.ntamd64.Services]
  AddService=BITS,0,BITSService
-@@ -254,6 +256,7 @@ AddService=Winmgmt,0,WinmgmtService
+@@ -202,6 +204,7 @@ AddService=Winmgmt,0,WinmgmtService
  AddService=wuauserv,0,wuauService
  AddService=NDIS,0x800,NDISService
  AddService=nsiproxy,0x800,NsiProxyService
@@ -5351,7 +5354,7 @@ index 53d24044075..1f32faa9fe0 100644
  
  [DefaultInstall.ntarm64.Services]
  AddService=BITS,0,BITSService
-@@ -274,6 +277,7 @@ AddService=Winmgmt,0,WinmgmtService
+@@ -222,6 +225,7 @@ AddService=Winmgmt,0,WinmgmtService
  AddService=wuauserv,0,wuauService
  AddService=NDIS,0x800,NDISService
  AddService=nsiproxy,0x800,NsiProxyService
@@ -5359,7 +5362,7 @@ index 53d24044075..1f32faa9fe0 100644
  
  [Strings]
  MciExtStr="Software\Microsoft\Windows NT\CurrentVersion\MCI Extensions"
-@@ -2703,6 +2707,15 @@ LoadOrderGroup="System Bus Extender"
+@@ -1204,6 +1208,15 @@ LoadOrderGroup="System Bus Extender"
  [NsiProxyServiceKeys]
  HKR,,"Tag",0x10001,1
  

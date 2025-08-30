@@ -1,8 +1,8 @@
 diff --git a/configure.ac b/configure.ac
-index bf6406ced0e..082b3252c57 100644
+index c93aab68305..898d1bafa14 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -3507,6 +3507,7 @@ WINE_CONFIG_MAKEFILE(po)
+@@ -3511,6 +3511,7 @@ WINE_CONFIG_MAKEFILE(po)
  WINE_CONFIG_MAKEFILE(programs/arp)
  WINE_CONFIG_MAKEFILE(programs/aspnet_regiis)
  WINE_CONFIG_MAKEFILE(programs/attrib)
@@ -11,7 +11,7 @@ index bf6406ced0e..082b3252c57 100644
  WINE_CONFIG_MAKEFILE(programs/cacls)
  WINE_CONFIG_MAKEFILE(programs/certutil)
 diff --git a/dlls/kernel32/kernel32.spec b/dlls/kernel32/kernel32.spec
-index 83c374d2254..93cfba877d3 100644
+index 3bb49206c6b..e0b4920847c 100644
 --- a/dlls/kernel32/kernel32.spec
 +++ b/dlls/kernel32/kernel32.spec
 @@ -622,7 +622,7 @@
@@ -43,7 +43,7 @@ index ae9943f1fa0..15a5d894001 100644
   *	GetConsoleTitleA   (kernelbase.@)
   */
 diff --git a/dlls/kernelbase/kernelbase.spec b/dlls/kernelbase/kernelbase.spec
-index 48471834735..0f11b27ddd1 100644
+index 3dc846e7326..17d3ae5ac11 100644
 --- a/dlls/kernelbase/kernelbase.spec
 +++ b/dlls/kernelbase/kernelbase.spec
 @@ -476,6 +476,7 @@
@@ -55,7 +55,7 @@ index 48471834735..0f11b27ddd1 100644
  @ stdcall GetConsoleTitleW(ptr long)
  @ stdcall GetConsoleWindow()
 diff --git a/dlls/kernelbase/process.c b/dlls/kernelbase/process.c
-index b75963fef1d..23ce40319df 100644
+index e1c28fc67ed..019e6c3b1b5 100644
 --- a/dlls/kernelbase/process.c
 +++ b/dlls/kernelbase/process.c
 @@ -26,6 +26,7 @@
