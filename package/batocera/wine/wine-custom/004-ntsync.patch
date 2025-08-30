@@ -1389,7 +1389,7 @@ index 8f665c0fe64..ef725d0f6a7 100644
  #undef HAVE_LINUX_PARAM_H
  
 diff --git a/include/wine/server_protocol.h b/include/wine/server_protocol.h
-index b8dad20381a..06e3510fd93 100644
+index b8dad20381a..6e5ee0e896c 100644
 --- a/include/wine/server_protocol.h
 +++ b/include/wine/server_protocol.h
 @@ -5979,6 +5979,81 @@ struct set_keyboard_repeat_reply
@@ -1498,15 +1498,19 @@ index b8dad20381a..06e3510fd93 100644
  };
  union generic_reply
  {
-@@ -6888,8 +6973,9 @@ union generic_reply
+@@ -6888,8 +6973,13 @@ union generic_reply
      struct get_next_process_reply get_next_process_reply;
      struct get_next_thread_reply get_next_thread_reply;
      struct set_keyboard_repeat_reply set_keyboard_repeat_reply;
 +    struct get_linux_sync_device_reply get_linux_sync_device_reply;
++    struct get_linux_sync_obj_reply get_linux_sync_obj_reply;
++    struct select_inproc_queue_reply select_inproc_queue_reply;
++    struct unselect_inproc_queue_reply unselect_inproc_queue_reply;
++    struct get_inproc_alert_event_reply get_inproc_alert_event_reply;
  };
  
 -#define SERVER_PROTOCOL_VERSION 891
-+#define SERVER_PROTOCOL_VERSION 892
++#define SERVER_PROTOCOL_VERSION 894
  
  #endif /* __WINE_WINE_SERVER_PROTOCOL_H */
 diff --git a/server/Makefile.in b/server/Makefile.in
