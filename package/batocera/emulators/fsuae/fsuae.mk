@@ -3,8 +3,8 @@
 # fsuae
 #
 ################################################################################
-# Version: Commits on Aug 13, 2025
-FSUAE_VERSION = 195e3d43c0ce921f7ddc45f3d1e44fa858823d37
+# Version: Commits on Aug 29, 2025
+FSUAE_VERSION = 3ea96e4a5938748150877d41b3ce64a87276b8c2
 FSUAE_SITE = $(call github,FrodeSolheim,fs-uae,$(FSUAE_VERSION))
 FSUAE_LICENSE = GPLv2
 FSUAE_DEPENDENCIES += libpng libmpeg2 libglib2 libcapsimage openal
