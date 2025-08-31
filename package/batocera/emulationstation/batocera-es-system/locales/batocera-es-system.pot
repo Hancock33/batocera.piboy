@@ -1264,16 +1264,6 @@ msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
-msgid "Enable audio"
-msgstr ""
-
-#. TRANSLATION: libretro/panda3ds
-msgctxt "game_options"
-msgid "USE AUDIO"
-msgstr ""
-
-#. TRANSLATION: libretro/panda3ds
-msgctxt "game_options"
 msgid "Enable virtual SD card"
 msgstr ""
 

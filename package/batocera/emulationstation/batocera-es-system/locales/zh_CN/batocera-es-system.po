@@ -7322,11 +7322,6 @@ msgctxt "game_options"
 msgid "Enable aiming crosshair."
 msgstr "启用瞄准十字准线."
 
-#. TRANSLATION: libretro/panda3ds
-msgctxt "game_options"
-msgid "Enable audio"
-msgstr ""
-
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "Enable auto aiming."
@@ -17720,11 +17715,6 @@ msgstr "美国"
 msgctxt "game_options"
 msgid "USA (Default)"
 msgstr "USA（默认）"
-
-#. TRANSLATION: libretro/panda3ds
-msgctxt "game_options"
-msgid "USE AUDIO"
-msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"

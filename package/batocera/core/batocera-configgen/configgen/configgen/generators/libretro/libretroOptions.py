@@ -2373,12 +2373,10 @@ def _panda3ds_options(
     if system.isOptSet('panda3ds_dsp_emulation'):
         coreSettings.save('panda3ds_dsp_emulation', '"' + system.config["panda3ds_dsp_emulation"] + '"')
     else:
-        coreSettings.save('panda3ds_dsp_emulation', '"Null"')
+        coreSettings.save('panda3ds_dsp_emulation', '"HLE"')
     # USE AUDIO
-    if system.isOptSet('panda3ds_use_audio') == False:
-        coreSettings.save('panda3ds_use_audio', '"disabled"')
-    else:
-        coreSettings.save('panda3ds_use_audio', '"enabled"')
+    coreSettings.save('panda3ds_use_audio', '"enabled"')
+    coreSettings.save('panda3ds_mute_audio', '"disabled"')
     # USE VIRTUAL SD
     if system.isOptSet('panda3ds_use_virtual_sd') == False:
         coreSettings.save('panda3ds_use_virtual_sd', '"disabled"')
