@@ -1,13 +1,13 @@
 diff --git a/libretro/libretro.cpp b/libretro/libretro.cpp
-index f26f34cb36..1754058810 100644
+index 8f9246fa1c..bd5cea1b40 100644
 --- a/libretro/libretro.cpp
 +++ b/libretro/libretro.cpp
-@@ -1246,7 +1246,7 @@ void retro_init(void)
+@@ -1245,7 +1245,7 @@ void retro_init(void)
     if (environ_cb(RETRO_ENVIRONMENT_GET_SAVE_DIRECTORY, &dir_ptr) && dir_ptr)
        retro_save_dir = Path(dir_ptr);
  
 -   retro_base_dir /= "PPSSPP";
 +   retro_base_dir = Path("/usr/share/ppsspp/PPSSPP/");
  
-    g_Config.currentDirectory = retro_base_dir;
-    g_Config.defaultCurrentDirectory = retro_base_dir;
+    // Check if '<system_dir>/PPSSPP/compat.ini' exists, if not we can assume
+    // the user is missing the assets entirely, so let's warn them about it.

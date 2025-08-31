@@ -3,19 +3,20 @@
 # libretro-citra
 #
 ################################################################################
-# Version: Commits on Aug 17, 2025
-LIBRETRO_CITRA_VERSION = 5263fae3344e5e9af43036e0e38bec2d10fb2407
-LIBRETRO_CITRA_SITE = https://github.com/libretro/citra.git
+# Version: Commits on Aug 30, 2025
+LIBRETRO_CITRA_VERSION = f1562fc9ba1c91b3c23a308c79221828de6672fc
+LIBRETRO_CITRA_SITE = https://github.com/warmenhoven/azahar.git
+LIBRETRO_CITRA_BRANCH = warmenhoven/dev/azahar_libretro
 LIBRETRO_CITRA_SITE_METHOD=git
 LIBRETRO_CITRA_GIT_SUBMODULES=YES
 LIBRETRO_CITRA_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_CITRA_LICENSE = GPLv2
 LIBRETRO_CITRA_DEPENDENCIES = azahar retroarch
 
-LIBRETRO_CITRA_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 LIBRETRO_CITRA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_CITRA_CONF_OPTS += -DCITRA_ENABLE_BUNDLE_TARGET=OFF
 LIBRETRO_CITRA_CONF_OPTS += -DCITRA_WARNINGS_AS_ERRORS=OFF
+LIBRETRO_CITRA_CONF_OPTS += -DENABLE_LIBRETRO=ON
 LIBRETRO_CITRA_CONF_OPTS += -DENABLE_LIBUSB=OFF
 LIBRETRO_CITRA_CONF_OPTS += -DENABLE_LTO=OFF
 LIBRETRO_CITRA_CONF_OPTS += -DENABLE_OPENAL=OFF
@@ -32,7 +33,7 @@ LIBRETRO_CITRA_CONF_OPTS += -DUSE_SYSTEM_OPENSSL=ON
 
 define LIBRETRO_CITRA_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/buildroot-build/citra_libretro.so $(TARGET_DIR)/usr/lib/libretro/citra_libretro.so
+	$(INSTALL) -D $(@D)/buildroot-build/azahar_libretro.so $(TARGET_DIR)/usr/lib/libretro/citra_libretro.so
 endef
 
 $(eval $(cmake-package))

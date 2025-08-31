@@ -1,8 +1,8 @@
 diff --git a/Core/System.cpp b/Core/System.cpp
-index 5c4b9f5d51..fe8bdc476a 100644
+index 39292b3cc3..475b65a92b 100644
 --- a/Core/System.cpp
 +++ b/Core/System.cpp
-@@ -722,26 +722,21 @@ void PSP_RunLoopFor(int cycles) {
+@@ -766,26 +766,21 @@ void PSP_RunLoopFor(int cycles) {
  }
  
  Path GetSysDirectory(PSPDirectories directoryType) {
@@ -36,7 +36,7 @@ index 5c4b9f5d51..fe8bdc476a 100644
  	case DIRECTORY_SYSTEM:
  		return pspDirectory / "SYSTEM";
  	case DIRECTORY_PAUTH:
-@@ -751,9 +746,9 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -795,9 +790,9 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  	case DIRECTORY_DUMP:
  		return pspDirectory / "SYSTEM/DUMP";
  	case DIRECTORY_SAVESTATE:
@@ -48,7 +48,7 @@ index 5c4b9f5d51..fe8bdc476a 100644
  	case DIRECTORY_TEXTURES:
  		return pspDirectory / "TEXTURES";
  	case DIRECTORY_PLUGINS:
-@@ -762,22 +757,22 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -806,22 +801,22 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  		if (!g_Config.appCacheDirectory.empty()) {
  			return g_Config.appCacheDirectory;
  		}
@@ -89,10 +89,10 @@ index 94a6f481ba..9ca8de78e5 100644
  
  	size_t size;
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index 7e4e908aa9..c8149f8826 100644
+index 8da6049971..cfb2296839 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -385,7 +385,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -386,7 +386,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -101,7 +101,7 @@ index 7e4e908aa9..c8149f8826 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -490,7 +490,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -491,7 +491,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  

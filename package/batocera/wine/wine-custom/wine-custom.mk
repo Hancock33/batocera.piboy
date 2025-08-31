@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Aug 16, 2025
-WINE_CUSTOM_VERSION = wine-10.13
+# Version: Commits on Aug 29, 2025
+WINE_CUSTOM_VERSION = wine-10.14
 WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
 WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
@@ -22,7 +22,7 @@ endif
 define WINE_CUSTOM_STAGING
 	# Use Staging Patches
 	tar -xf $(WINE_CUSTOM_DL_DIR)/$(WINE_CUSTOM_CUSTOM_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(subst v,,$(WINE_CUSTOM_CUSTOM_VERSION))/staging/patchinstall.py --all -W server-Signal_Thread
+	cd $(@D); ./wine-staging-$(subst v,,$(WINE_CUSTOM_CUSTOM_VERSION))/staging/patchinstall.py --all
 endef
 WINE_CUSTOM_PRE_PATCH_HOOKS += WINE_CUSTOM_STAGING
 HOST_WINE_CUSTOM_PRE_PATCH_HOOKS += WINE_CUSTOM_STAGING
@@ -41,7 +41,6 @@ HOST_WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
 WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_LARGENAME=1" \
-	CFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types" \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
 	--without-capi \
@@ -338,9 +337,13 @@ HOST_WINE_CUSTOM_CONF_OPTS += \
 	--without-xxf86vm
 
 # Cleanup final directory
+ifeq ($(BR2_x86_64),y)
 define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-custom/include
+	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-custom/lib/wine/i386-windows/*.{dll,exe}
+	x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-custom/lib/wine/x86_64-windows/*.{dll,exe}
 endef
+endif
 
 WINE_CUSTOM_POST_INSTALL_TARGET_HOOKS += WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 

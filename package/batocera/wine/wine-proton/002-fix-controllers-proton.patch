@@ -1,5 +1,5 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index f37fa90442f..ee7f5a1c73e 100644
+index 95c1a2dc07e..f3c1b70bd7a 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
 @@ -75,7 +75,8 @@ AddReg=\
@@ -22,7 +22,7 @@ index f37fa90442f..ee7f5a1c73e 100644
  
  [Wow64Install.ntx86]
  RegisterDlls=RegisterDllsSection
-@@ -209,7 +211,12 @@ AddReg=\
+@@ -209,7 +211,13 @@ AddReg=\
      SteamClient64,\
      Tapi,\
      VersionInfo,\
@@ -33,6 +33,7 @@ index f37fa90442f..ee7f5a1c73e 100644
 +[BatoceraOverrides]
 +HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"
 +HKLM,System\CurrentControlSet\Services\winebus,"Enable SDL",0x10001,"1"
++HKCU,Software\Xenia,"XEFLAGS",0x10001,"1"
  
  [DefaultInstall.Services]
  AddService=BITS,0,BITSService

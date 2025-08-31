@@ -1,77 +1,13 @@
-diff --git a/cmake/basegame.cmake b/cmake/basegame.cmake
-index 12858f5d..8c9e5f07 100644
---- a/cmake/basegame.cmake
-+++ b/cmake/basegame.cmake
-@@ -2,7 +2,7 @@ if(NOT BUILD_GAME_LIBRARIES AND NOT BUILD_GAME_QVMS)
-     return()
- endif()
- 
--include(utils/arch)
-+#include(utils/arch)
- include(utils/set_output_dirs)
- include(shared_script)
- 
-diff --git a/cmake/client.cmake b/cmake/client.cmake
-index 96c7acde..8aba7dcc 100644
---- a/cmake/client.cmake
-+++ b/cmake/client.cmake
-@@ -3,7 +3,7 @@ if(NOT BUILD_CLIENT)
- endif()
- 
- include(utils/add_git_dependency)
--include(utils/arch)
-+#include(utils/arch)
- include(utils/set_output_dirs)
- include(shared_sources)
- include(shared_script)
-diff --git a/cmake/compilers/msvc.cmake b/cmake/compilers/msvc.cmake
-index a00be384..e541f687 100644
---- a/cmake/compilers/msvc.cmake
-+++ b/cmake/compilers/msvc.cmake
-@@ -4,7 +4,7 @@ if(NOT CMAKE_C_COMPILER_ID STREQUAL "MSVC")
-     return()
- endif()
- 
--include(utils/arch)
-+#include(utils/arch)
- 
- #enable_language(ASM_MASM)
- 
 diff --git a/cmake/libraries/sdl.cmake b/cmake/libraries/sdl.cmake
-index b1e81ae5..69e4f106 100644
+index 04993833..9fa6765f 100644
 --- a/cmake/libraries/sdl.cmake
 +++ b/cmake/libraries/sdl.cmake
-@@ -1,6 +1,6 @@
+@@ -4,7 +4,7 @@ endif()
+ 
  set(INTERNAL_SDL_DIR ${SOURCE_DIR}/thirdparty/SDL2-2.32.8)
  
 -include(utils/arch)
 +#include(utils/arch)
  
- if(NOT WIN32 AND NOT APPLE)
-     set(SYSTEM_SDL_REQUIRED REQUIRED)
-diff --git a/cmake/renderer_gl1.cmake b/cmake/renderer_gl1.cmake
-index e8b34f13..76ba5cd9 100644
---- a/cmake/renderer_gl1.cmake
-+++ b/cmake/renderer_gl1.cmake
-@@ -2,7 +2,7 @@ if(NOT BUILD_RENDERER_GL1)
-     return()
- endif()
- 
--include(utils/arch)
-+#include(utils/arch)
- include(utils/set_output_dirs)
- include(renderer_common)
- 
-diff --git a/cmake/renderer_gl2.cmake b/cmake/renderer_gl2.cmake
-index bd464cc7..e1b25e0c 100644
---- a/cmake/renderer_gl2.cmake
-+++ b/cmake/renderer_gl2.cmake
-@@ -2,7 +2,7 @@ if(NOT BUILD_RENDERER_GL2)
-     return()
- endif()
- 
--include(utils/arch)
-+#include(utils/arch)
- include(utils/set_output_dirs)
- include(renderer_common)
- 
+ if(WIN32 OR APPLE)
+     # On Windows and macOS we have internal SDL binaries we can use

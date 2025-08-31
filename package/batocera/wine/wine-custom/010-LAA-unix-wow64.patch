@@ -39,10 +39,10 @@ index 834f4d07e9b..4d27b38ddca 100644
          if (lpBuffer->dwTotalPhys > MAXLONG) lpBuffer->dwTotalPhys = MAXLONG;
          if (lpBuffer->dwAvailPhys > MAXLONG) lpBuffer->dwAvailPhys = MAXLONG;
 diff --git a/dlls/ntdll/ntdll.spec b/dlls/ntdll/ntdll.spec
-index eb0b3bfabe4..4a339d32322 100644
+index 604c342ba35..9658271c7c3 100644
 --- a/dlls/ntdll/ntdll.spec
 +++ b/dlls/ntdll/ntdll.spec
-@@ -1753,6 +1753,9 @@
+@@ -1755,6 +1755,9 @@
  @ cdecl -norelay __wine_dbg_output(str)
  @ cdecl -norelay __wine_dbg_strdup(str)
  
@@ -53,7 +53,7 @@ index eb0b3bfabe4..4a339d32322 100644
  @ cdecl wine_get_version()
  @ cdecl wine_get_build_id()
 diff --git a/dlls/ntdll/signal_arm64ec.c b/dlls/ntdll/signal_arm64ec.c
-index 0f4b55b60c4..3666ad1b293 100644
+index a93aae89554..720603be613 100644
 --- a/dlls/ntdll/signal_arm64ec.c
 +++ b/dlls/ntdll/signal_arm64ec.c
 @@ -340,6 +340,7 @@ ALL_SYSCALLS
@@ -65,7 +65,7 @@ index 0f4b55b60c4..3666ad1b293 100644
  DEFINE_SYSCALL(NtAccessCheck, (PSECURITY_DESCRIPTOR descr, HANDLE token, ACCESS_MASK access, GENERIC_MAPPING *mapping, PRIVILEGE_SET *privs, ULONG *retlen, ULONG *access_granted, NTSTATUS *access_status))
  DEFINE_SYSCALL(NtAccessCheckAndAuditAlarm, (UNICODE_STRING *subsystem, HANDLE handle, UNICODE_STRING *typename, UNICODE_STRING *objectname, PSECURITY_DESCRIPTOR descr, ACCESS_MASK access, GENERIC_MAPPING *mapping, BOOLEAN creation, ACCESS_MASK *access_granted, NTSTATUS *access_status, BOOLEAN *onclose))
 diff --git a/dlls/ntdll/unix/unix_private.h b/dlls/ntdll/unix/unix_private.h
-index 68cb3cf5c38..ccc68a86e5b 100644
+index 0db2d50e439..3820a68abbc 100644
 --- a/dlls/ntdll/unix/unix_private.h
 +++ b/dlls/ntdll/unix/unix_private.h
 @@ -599,4 +599,6 @@ static inline NTSTATUS map_section( HANDLE mapping, void **ptr, SIZE_T *size, UL
@@ -76,7 +76,7 @@ index 68cb3cf5c38..ccc68a86e5b 100644
 +
  #endif /* __NTDLL_UNIX_PRIVATE_H */
 diff --git a/dlls/ntdll/unix/virtual.c b/dlls/ntdll/unix/virtual.c
-index a825e3cc23a..b29a9790676 100644
+index a3a1eed08fd..0c4c98e6bfe 100644
 --- a/dlls/ntdll/unix/virtual.c
 +++ b/dlls/ntdll/unix/virtual.c
 @@ -4906,6 +4906,24 @@ static void virtual_release_address_space(void)

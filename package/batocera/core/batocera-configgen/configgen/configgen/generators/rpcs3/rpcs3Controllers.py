@@ -26,7 +26,7 @@ class _InputMapping(TypedDict):
 
 # Method to get the SDL3 controller name for each connected controller
 def generateControllerConfig(system: Emulator, controllers: Controllers, rom: Path):
-    
+
     sdl_joystick_names = []
     if not sdl3.SDL_Init(sdl3.SDL_INIT_JOYSTICK):
         _logger.error(f"Could not initialize SDL joystick subsystem: {sdl3.SDL_GetError().decode()}")
@@ -43,7 +43,7 @@ def generateControllerConfig(system: Emulator, controllers: Controllers, rom: Pa
                         sdl_joystick_names.append(name_bytes.decode('utf-8', 'replace'))
                     else:
                         sdl_joystick_names.append("Unknown SDL Joystick")
-            
+
             if joystick_ids:
                 sdl3.SDL_free(joystick_ids)
         finally:
@@ -311,7 +311,7 @@ def generateControllerConfig(system: Emulator, controllers: Controllers, rom: Pa
                     # Fallback to the old method if SDL3 failed or the controller was not found
                     _logger.warning(f"Could not find SDL3 name for Player {nplayer}. Falling back to pad.real_name.")
                     ctrlname = pad.real_name
-                
+
                 # Remove duplicate starting name if it does not start with a space
                 if not ctrlname.startswith(' '):
                     words = ctrlname.split()

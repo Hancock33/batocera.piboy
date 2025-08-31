@@ -838,11 +838,6 @@ libretro:
             "HLE":       HLE
             "LLE":       LLE
             "Null":      Null
-        panda3ds_use_audio:
-          group: EMULATOR SETTINGS
-          prompt:      USE AUDIO
-          description: Enable audio
-          preset: switchauto
         panda3ds_use_virtual_sd:
           group: EMULATOR SETTINGS
           prompt:      USE VIRTUAL SD

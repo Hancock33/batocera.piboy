@@ -1,5 +1,5 @@
 diff --git a/dlls/kernelbase/thread.c b/dlls/kernelbase/thread.c
-index bc8210bd43a..c3b3f020ad6 100644
+index dbde4dcfaf3..d814c47db7d 100644
 --- a/dlls/kernelbase/thread.c
 +++ b/dlls/kernelbase/thread.c
 @@ -344,6 +344,7 @@ HANDLE WINAPI DECLSPEC_HOTPATCH OpenThread( DWORD access, BOOL inherit, DWORD id
