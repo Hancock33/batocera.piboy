@@ -48,8 +48,7 @@ AZAHAR_CONF_ENV += LDFLAGS=-lpthread
 
 define AZAHAR_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/azahar \
-		$(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/azahar $(TARGET_DIR)/usr/bin/
 endef
 
 define AZAHAR_EVMAPY
