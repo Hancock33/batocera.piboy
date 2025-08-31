@@ -1,0 +1,43 @@
+diff --git a/dlls/appwiz.cpl/addons.c b/dlls/appwiz.cpl/addons.c
+index 65d13a66c344..5791b782a060 100644
+--- a/dlls/appwiz.cpl/addons.c
++++ b/dlls/appwiz.cpl/addons.c
+@@ -56,10 +56,10 @@ WINE_DEFAULT_DEBUG_CHANNEL(appwizcpl);
+ #define GECKO_SHA "???"
+ #endif
+ 
+-#define MONO_VERSION "10.0.0"
++#define MONO_VERSION "10.2.0"
+ #if defined(__i386__) || defined(__x86_64__)
+ #define MONO_ARCH "x86"
+-#define MONO_SHA "dbaca73e5d09f7a3a7c157ad04289af9ca47c3ced7012d46544a607046902b87"
++#define MONO_SHA "4e1ed3f02e92d053133d03ddfbefcf6db4a4dc231a9aed3367b17117a88847d8"
+ #else
+ #define MONO_ARCH ""
+ #define MONO_SHA "???"
+diff --git a/dlls/mscoree/mscoree_private.h b/dlls/mscoree/mscoree_private.h
+index 7044cb968d9c..aa542c317b3d 100644
+--- a/dlls/mscoree/mscoree_private.h
++++ b/dlls/mscoree/mscoree_private.h
+@@ -45,7 +45,7 @@ extern HRESULT assembly_get_runtime_version(ASSEMBLY *assembly, LPSTR *version);
+ extern HRESULT assembly_get_vtable_fixups(ASSEMBLY *assembly, VTableFixup **fixups, DWORD *count);
+ extern HRESULT assembly_get_native_entrypoint(ASSEMBLY *assembly, NativeEntryPointFunc *func);
+ 
+-#define WINE_MONO_VERSION "10.0.0"
++#define WINE_MONO_VERSION "10.2.0"
+ 
+ /* Mono embedding */
+ typedef struct _MonoDomain MonoDomain;
+diff --git a/tools/gitlab/test.yml b/tools/gitlab/test.yml
+index 2b03a05264ff..03d85b50ec75 100644
+--- a/tools/gitlab/test.yml
++++ b/tools/gitlab/test.yml
+@@ -7,7 +7,7 @@
+   variables:
+     GIT_STRATEGY: none
+     GECKO_VER: 2.47.4
+-    MONO_VER: 10.0.0
++    MONO_VER: 10.2.0
+   cache:
+     - key: wine-gecko-$GECKO_VER
+       paths:
