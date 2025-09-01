@@ -10,7 +10,7 @@ CITRON_SITE_METHOD=git
 CITRON_GIT_SUBMODULES=YES
 CITRON_LICENSE = GPLv2
 CITRON_DEPENDENCIES += fmt boost ffmpeg zstd zlib libzip lz4 catch2 sdl2 opus
-CITRON_DEPENDENCIES += qt6base qt6svg qt6tools vulkan-headers vulkan-loader vulkan-validationlayers
+CITRON_DEPENDENCIES += qt6base qt6svg qt6tools
 CITRON_SUPPORTS_IN_SOURCE_BUILD = NO
 
 CITRON_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1
@@ -27,7 +27,7 @@ CITRON_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 CITRON_CONF_OPTS += -DUSE_SANITIZERS=OFF
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
-    CITRON_DEPENDENCIES += host-glslang vulkan-headers vulkan-loader
+    CITRON_DEPENDENCIES += host-glslang vulkan-headers vulkan-loader vulkan-validationlayers
 endif
 
 define CITRON_INSTALL_TARGET_CMDS

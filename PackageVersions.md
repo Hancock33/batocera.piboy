@@ -85,6 +85,7 @@ Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|ddaac7eb4c06123f1d9afee6ed21f42861124070|Sept 01, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|7d0c9a8bf1cfbf9f8f48d9b036ec4fd3ef19478c|Jul 31, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|be7a3e1e86431728b86a33ef7de0a587771d11be|Sept 01, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|0243f81c264ea8d1bbaa107f26fb6644f767c1e8|Aug 29, 2025
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|123f91cbded561f3072d9ea401df2bdd2e753dec|Aug 30, 2025
