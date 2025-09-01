@@ -23,8 +23,10 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|a40ad0e47a7e230696f7ba8
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|ebc50cd6633be6d506f8cc4b9b33e9335726ba3f|Sept 01, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|598183f486c5e6529b9daae0f5808e440b40f0b3|Sept 01, 2025
 Utils|[od-commander](http://github.com/od-contrib/commander)|779fbc947221e00d7db6621a583da7e93a94bcc5|Sept 01, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250901|Sept 01, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|f9ae36467874ee1b7efb0bc7521a3e769aaf1ce6|Sept 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c604a28146f7808e3c0a069ad01d27bea54f9fc|Sept 01, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250901|Sept 01, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|acf6eaa10ca9c4413fc339ce4213ac679119712a|Sept 01, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|172e33491069d772838fd5d00dc9fbdff58909fc|Sept 01, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|0eec99c8a10410521e174ca1f44c7f83325ec099|Aug 31, 2025
@@ -40,10 +42,8 @@ Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bee00e47805909d08
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|39292c39b99bd83eef5ad56805c9dfce5f5f0a37|Aug 31, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|ac67939b761b3356bff2e5d9d7f9bb6eec101fbb|Aug 31, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.4-rc.1|Aug 31, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250831|Aug 31, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|0ab1c5b819c96353a8571d8d5c324cc0cf0ff9f2|Aug 31, 2025
 Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-input-sdl)|cc808d57cd1aa1f619845ac9ac6be271266ab711|Aug 31, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250831|Aug 31, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d37220fe2e045ed9201cfc2dc309c7e8f810c66d|Aug 31, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7e3dc39cddbbb1d468746c74af6b396f679598ad|Aug 31, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0280|Aug 31, 2025
