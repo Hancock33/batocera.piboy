@@ -27,10 +27,12 @@ sed -i s@/usr/lib/@/lib32/@g                                        $DEST_DIR/us
 rm -rf $DEST_DIR/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale,bluez,gio}
 rm -rf $DEST_DIR/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
 rm -rf $DEST_DIR/usr/lib32/firmware
-rm -rf $DEST_DIR/usr/wine/wine-custom/share
 rm -rf $DEST_DIR/usr/wine/wine-custom/bin
-rm -rf $DEST_DIR/usr/wine/wine-proton/share
+rm -rf $DEST_DIR/usr/wine/wine-custom/include
+rm -rf $DEST_DIR/usr/wine/wine-custom/share
 rm -rf $DEST_DIR/usr/wine/wine-proton/bin
+rm -rf $DEST_DIR/usr/wine/wine-proton/include
+rm -rf $DEST_DIR/usr/wine/wine-proton/share
 rm -rf $DEST_DIR/usr/lib32/*/include
 
 find $DEST_DIR/ -type f -name "*.a" -exec rm {} \;
