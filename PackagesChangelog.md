@@ -3,6 +3,7 @@
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.09|Sept 01, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|a5f5eccdbeefec6bbc779c70eccd0a2dd4fe263b|Sept 01, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|ddaac7eb4c06123f1d9afee6ed21f42861124070|Sept 01, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|be7a3e1e86431728b86a33ef7de0a587771d11be|Sept 01, 2025
 Emulators|[lightspark](http://github.com/lightspark/lightspark)|330a174c59c59c99f33e3808f211315df9f7513c|Sept 01, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|9132fe02cfcf31b65ccd047fd086c2ca56356696|Sept 01, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.149|Sept 01, 2025
@@ -25,7 +26,6 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|598183f486c5e
 Utils|[od-commander](http://github.com/od-contrib/commander)|779fbc947221e00d7db6621a583da7e93a94bcc5|Sept 01, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250901|Sept 01, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|f9ae36467874ee1b7efb0bc7521a3e769aaf1ce6|Sept 01, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|be7a3e1e86431728b86a33ef7de0a587771d11be|Sept 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9c604a28146f7808e3c0a069ad01d27bea54f9fc|Sept 01, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250901|Sept 01, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|acf6eaa10ca9c4413fc339ce4213ac679119712a|Sept 01, 2025
