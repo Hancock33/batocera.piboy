@@ -48,7 +48,7 @@ WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 
 ifeq ($(BR2_x86_64),y)
     WINE_PROTON_CONF_OPTS += --enable-tools
-    WINE_PROTON_CONF_OPTS += --enable-archs=x86_64,i386
+    WINE_PROTON_CONF_OPTS += --enable-win64
 else
     WINE_PROTON_CONF_OPTS += --disable-win64
 endif
@@ -328,11 +328,19 @@ HOST_WINE_PROTON_CONF_OPTS += \
 	--without-xxf86vm
 
 # Cleanup final directory
+ifeq ($(BR2_x86_64),y)
+define WINE_PROTON_REMOVE_INCLUDES_HOOK
+	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
+	x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.{dll,exe}
+endef
+endif
+
+ifeq ($(BR2_i386),y)
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
 	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.{dll,exe}
-	x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.{dll,exe}
 endef
+endif
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
 
