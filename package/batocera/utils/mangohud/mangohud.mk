@@ -3,10 +3,9 @@
 # mangohud
 #
 ################################################################################
-# Version: Commits on Nov 28, 2021
-MANGOHUD_VERSION = 12620c91eaca0917a7939a92ec33915cadf24475
+# Version: Commits on Sept 02, 2025
+MANGOHUD_VERSION = 11a92acdf2c30100f6224a1e9618f1180dac354e
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
-MANGOHUD_BRANCH = simple-image-loader
 
 MANGOHUD_DEPENDENCIES += host-python-mako host-glslang dbus
 MANGOHUD_DEPENDENCIES += json-for-modern-cpp

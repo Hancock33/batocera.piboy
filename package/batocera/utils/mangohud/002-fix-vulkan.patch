@@ -1,9 +1,9 @@
 diff --git a/meson.build b/meson.build
-index 51329fd..85ea870 100644
+index 37cbbad..9cbc6ea 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -106,9 +106,9 @@ if dep_wayland_client.found()
-   vulkan_wsi_deps += dep_xkb
+@@ -110,9 +110,9 @@ if dep_wayland_client.found()
+   vulkan_wsi_deps += dep_wayland_client
  endif
  
 -if is_unixy and not dep_x11.found() and not dep_wayland_client.found()
@@ -16,10 +16,10 @@ index 51329fd..85ea870 100644
  inc_common = [
      include_directories('include'),
 diff --git a/src/keybinds.h b/src/keybinds.h
-index 62d33ac..d810a15 100644
+index cbf095b..d606771 100644
 --- a/src/keybinds.h
 +++ b/src/keybinds.h
-@@ -69,6 +69,10 @@ static inline bool keys_are_pressed(const std::vector<KeySym>& keys) {
+@@ -72,6 +72,10 @@ static inline bool keys_are_pressed(const std::vector<KeySym>& keys) {
  
      return false;
  }
