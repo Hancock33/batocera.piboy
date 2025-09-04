@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 4c6bdf8af..4dc65a9da 100644
+index 99702abe4..5bbc098bb 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -4900,14 +4900,14 @@ void System::WarnAboutUnsafeSettings()
+@@ -4904,14 +4904,14 @@ void System::WarnAboutUnsafeSettings()
               TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
      }
  
@@ -20,10 +20,10 @@ index 4c6bdf8af..4dc65a9da 100644
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
 diff --git a/src/duckstation-mini/mini_host.cpp b/src/duckstation-mini/mini_host.cpp
-index d8d4f798c..ccce98e1a 100644
+index 400081188..e5ffcc46d 100644
 --- a/src/duckstation-mini/mini_host.cpp
 +++ b/src/duckstation-mini/mini_host.cpp
-@@ -160,7 +160,7 @@ bool MiniHost::EarlyProcessStartup()
+@@ -158,7 +158,7 @@ bool MiniHost::EarlyProcessStartup()
      return false;
    }
  
@@ -32,7 +32,7 @@ index d8d4f798c..ccce98e1a 100644
    //
    // To those distributing their own builds or packages of DuckStation, and seeing this message:
    //
-@@ -1001,7 +1001,7 @@ void MiniHost::CPUThreadEntryPoint()
+@@ -1002,7 +1002,7 @@ void MiniHost::CPUThreadEntryPoint()
    // start the fullscreen UI and get it going
    if (GPUThread::StartFullscreenUI(s_state.start_fullscreen_ui_fullscreen, &error))
    {
@@ -42,7 +42,7 @@ index d8d4f798c..ccce98e1a 100644
      // kick a game list refresh if we're not in batch mode
      if (!s_state.batch_mode)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index ee5d3a336..752c2c3b8 100644
+index 65f0bb964..dcfaf232b 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
 @@ -3353,7 +3353,7 @@ int main(int argc, char* argv[])

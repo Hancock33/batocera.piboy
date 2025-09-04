@@ -1,15 +1,15 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index a43a501aa..279233fe7 100644
+index 6955a850b..2ff7418e2 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
-@@ -2141,30 +2141,30 @@ InputManager::VibrationMotorList InputManager::EnumerateVibrationMotors(std::opt
+@@ -2242,30 +2242,30 @@ InputManager::VibrationMotorList InputManager::EnumerateVibrationMotors(std::opt
  
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {
--  mapping->emplace_back(GenericInputBinding::DPadUp, "Keyboard/Up");
--  mapping->emplace_back(GenericInputBinding::DPadRight, "Keyboard/Right");
--  mapping->emplace_back(GenericInputBinding::DPadDown, "Keyboard/Down");
--  mapping->emplace_back(GenericInputBinding::DPadLeft, "Keyboard/Left");
+-  mapping->emplace_back(GenericInputBinding::DPadUp, "Keyboard/UpArrow");
+-  mapping->emplace_back(GenericInputBinding::DPadRight, "Keyboard/RightArrow");
+-  mapping->emplace_back(GenericInputBinding::DPadDown, "Keyboard/DownArrow");
+-  mapping->emplace_back(GenericInputBinding::DPadLeft, "Keyboard/LeftArrow");
 -  mapping->emplace_back(GenericInputBinding::LeftStickUp, "Keyboard/W");
 -  mapping->emplace_back(GenericInputBinding::LeftStickRight, "Keyboard/D");
 -  mapping->emplace_back(GenericInputBinding::LeftStickDown, "Keyboard/S");
@@ -18,7 +18,7 @@ index a43a501aa..279233fe7 100644
 -  mapping->emplace_back(GenericInputBinding::RightStickRight, "Keyboard/H");
 -  mapping->emplace_back(GenericInputBinding::RightStickDown, "Keyboard/G");
 -  mapping->emplace_back(GenericInputBinding::RightStickLeft, "Keyboard/F");
--  mapping->emplace_back(GenericInputBinding::Start, "Keyboard/Return");
+-  mapping->emplace_back(GenericInputBinding::Start, "Keyboard/Enter");
 -  mapping->emplace_back(GenericInputBinding::Select, "Keyboard/Backspace");
 -  mapping->emplace_back(GenericInputBinding::Triangle, "Keyboard/I");
 -  mapping->emplace_back(GenericInputBinding::Circle, "Keyboard/L");
