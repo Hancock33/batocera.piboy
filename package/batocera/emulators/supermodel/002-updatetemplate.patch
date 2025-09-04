@@ -1,19 +1,8 @@
 diff --git a/Src/OSD/DefaultConfigFile.h b/Src/OSD/DefaultConfigFile.h
-index 57c6768..1a4524a 100644
+index 6202eb9..c5e17a5 100644
 --- a/Src/OSD/DefaultConfigFile.h
 +++ b/Src/OSD/DefaultConfigFile.h
-@@ -214,8 +214,8 @@
-     "InputAnalogJoyUp = \"KEY_UP\"                 ; digital, move up\n"
-     "InputAnalogJoyDown = \"KEY_DOWN\"             ; digital, move down\n"
- #ifdef SUPERMODEL_MANYMOUSE
--    "InputAnalogJoyX = \"JOY_XAXIS,MOUSE1_XAXIS\"   ; analog, full X axis\n"
--    "InputAnalogJoyY = \"JOY_YAXIS,MOUSE1_YAXIS\"   ; analog, full Y axis\n"
-+    "InputAnalogJoyX = \"JOY_XAXIS_INV,MOUSE_XAXIS_INV\"   ; analog, full X axis\n"
-+    "InputAnalogJoyY = \"JOY_YAXIS_INV,MOUSE_YAXIS_INV\"   ; analog, full Y axis\n"
-     "InputAnalogJoyTrigger = \"KEY_A,JOY_BUTTON1,MOUSE1_LEFT_BUTTON\"\n"
-     "InputAnalogJoyEvent = \"KEY_S,JOY_BUTTON2,MOUSE1_RIGHT_BUTTON\"\n"
- #else
-@@ -281,10 +281,10 @@
+@@ -244,10 +244,10 @@
      "InputAnalogGunRight2 = \"NONE\"\n"
      "InputAnalogGunUp2 = \"NONE\"\n"
      "InputAnalogGunDown2 = \"NONE\"\n"
