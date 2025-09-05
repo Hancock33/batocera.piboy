@@ -1,8 +1,8 @@
 diff --git a/Sources/Shared/Core/Logger.h b/Sources/Shared/Core/Logger.h
-index 9adae2cb..7e83ac16 100644
+index d0ff4a07..3ce87b7b 100644
 --- a/Sources/Shared/Core/Logger.h
 +++ b/Sources/Shared/Core/Logger.h
-@@ -248,7 +248,7 @@ namespace Death { namespace Trace {
+@@ -246,7 +246,7 @@ namespace Death { namespace Trace {
  			__asm__ volatile("stck %0" : "=Q" (tsc) : : "cc");
  			return tsc;
  		}
@@ -11,7 +11,7 @@ index 9adae2cb..7e83ac16 100644
  		DEATH_ALWAYS_INLINE std::uint64_t rdtsc() noexcept {
  			return static_cast<std::uint64_t>(std::chrono::system_clock::now().time_since_epoch().count());
  		}
-@@ -1312,4 +1312,4 @@ namespace Death { namespace Trace {
+@@ -1348,4 +1348,4 @@ namespace Death { namespace Trace {
  
  }}
  
