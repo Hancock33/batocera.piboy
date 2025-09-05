@@ -18,7 +18,8 @@ HOST_GO_COMMON_ENV = GOFLAGS=-mod=mod \
 			 GOFLAGS="-modcacherw" \
 			 PATH=$(BR_PATH) \
 			 GOBIN= \
-			 CGO_ENABLED=$(HOST_GO_CGO_ENABLED)
+			 CGO_ENABLED=$(HOST_GO_CGO_ENABLED) \
+			 GOEXPERIMENT=arenas
 
 define IKEMEN_BUILD_CMDS
 	$(HOST_GO_TARGET_ENV) $(MAKE) -C $(@D) -f Makefile Ikemen_GO_Linux
