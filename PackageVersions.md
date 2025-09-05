@@ -65,7 +65,7 @@ Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/b
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|b0a610c545d7158651d8705aaaea3a18c64080aa|Aug 27, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e45310ce890add18f00c674680205b3ad381857b|Aug 09, 2025
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|bf9b3ae993bdddd636c6fea7c2644a7f55ed5bc6|Aug 28, 2025
-Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|0f5eee9c58813e5fb1ecb82b16b7ca221d4f4c99|Sept 04, 2025
+Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|ded93486bfa30852ddbcb807b91890913e3c6031|Sept 05, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|3defc868e1b8308cd5b87122f968d370fb7e41de|Aug 31, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|1dffa3d974cc818739266f814a2bcec2d88b4165|Aug 27, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|e65ed7814fc7ce22ae87e683ef22a2efc18b7029|Aug 15, 2025
@@ -89,7 +89,7 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|718891d11f53a8496ce1462
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|0243f81c264ea8d1bbaa107f26fb6644f767c1e8|Aug 29, 2025
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|ac02823e455e1f3e44421fc1ec069ec95f8b2703|Sept 03, 2025
-Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|93330db23c7355027962313d0b59d288c02e2804|Sept 04, 2025
+Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|177cff7ebf278434378d976a8a73183847a1b648|Sept 05, 2025
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Emulators|[hatari](http://github.com/hatari/hatari)|e40b31cfbf6cf3ac4bd14f11badd07ba159a98e5|Aug 30, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|1d8ad1526511d966b6b78a3149b492ca124c1a0a|Aug 01, 2025
@@ -282,7 +282,7 @@ Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|fdcbc279765e432cbabf19264273f4a87f61fc11|Jun 10, 2025
 Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|43b72b59a2fa928184853f8be860cc57cecfd7da|Sept 05, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0f74cff52b96841fe0efa01ffd1a6875b253e72a|Aug 01, 2025
-Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|7e72899471b2ec524bd92ffb5f7bec9939c6abb9|Sept 04, 2025
+Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|10b7e86738a8c3eeff7114bcc4ef110d382dd0fd|Sept 05, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|b33f2afb33c61d675aaf0319bd3b8cc8d6924d49|Aug 12, 2025
 Emulators|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|ec591b06eb834222c4e22d04f89516fc1a0d5a21|Aug 27, 2025
@@ -291,7 +291,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|1c
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|fa1e30570b36d137b24419d7a928082b789953c8|Jul 28, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|44280ae320a1ad4e1b8f72d714e97582d2b52989|Aug 19, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2ea8ef6b9ddda7e4e8d64f64c18c4023596aeb7e|Sept 05, 2025
-Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|4fe7012774fc3bcda9605c7a99878534a3cb0fdd|Sept 02, 2025
+Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|89157c1e6724bf851ee04928e9c259f246281a6a|Sept 05, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45756|Sept 05, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|f787cf09c3c9404f6799abea565cf13586e74e09|Aug 29, 2025
@@ -416,7 +416,7 @@ Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|e7c42e1522249593302a5
 Network|[qrtr](http://github.com/linux-msm/qrtr)|5923eea97377f4a3ed9121b358fd919e3659db7b|Mar 01, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|586372e575f5cc1a7cbb170219ab6df98f394cae|Jun 30, 2025
 Network|[rtl8852au](http://github.com/natimerry/rtl8852au)|db4fa8263e0d504beee4fb4ae4bc9b86469d402e|Jul 06, 2025
-Network|[rtw88](http://github.com/lwfinger/rtw88)|52072d874840f28c247b27f5d799f2c5c88a7e61|Aug 05, 2025
+Network|[rtw88](http://github.com/lwfinger/rtw88)|bb0ed9d5709afd30e928d2d11f7b650e03c8c72b|Aug 29, 2025
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|408ca1ed5e4e0a9ac3650b13d3f3c60079b3e2a3|Aug 01, 2025
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|5a43f974ad8d534ab5b7869eadda4eae69002050|Jan 28, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|64123217a7275aba951e22ab5e18aff36c54df74|Sept 04, 2025
@@ -425,7 +425,7 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|087860aee3ec7b85a86004378e2edc6fd5092
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|f639357591561e3487b29c55c56806ce702d020d|Sept 05, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|427f1b8c558b9ef7529aed7c69fe5619ea613b0f|Sept 05, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|ac48800fbbdac4a547acf8044b92a49934e8e4e7|Jul 28, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
@@ -472,7 +472,7 @@ Ports|[openjazz](http://github.com/AlisterT/openjazz)|a588027cc3706facb906a63d15
 Ports|[openjk](http://github.com/JACoders/OpenJK)|2f6abb4f6b930f19048dbc53ef00d837b4b05943|May 23, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|1baa1e8d892a39195e98843654b6878213804a6e|Aug 17, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|b4bcd4a9e1edecfdc71643d476e393a885a019e5|Jun 16, 2025
-Ports|[openmohaa](http://github.com/openmoh/openmohaa)|c93d0f69755f12ebfe364f977a7bdce44a821092|Sept 04, 2025
+Ports|[openmohaa](http://github.com/openmoh/openmohaa)|ab70d7035708ea8b34811f1fcde0d3b19487069d|Sept 05, 2025
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|dfe1050e1abaca0bae7b699d117d66324b88425b|Jun 24, 2025
 Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|20a7240238f9dcd4864e841343550b18605ac34a|Jul 28, 2024
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025
@@ -496,7 +496,7 @@ Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886
 Ports|[srb2](http://github.com/STJr/SRB2)|639b58c6d718452ef343a0bc927d043bed9e40d6|Jul 29, 2025
 Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2ac9f4b2889ad1a|Mar 31, 2024
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|8eb6ce331bdefbd494b9af712aee0aada9d4c3f3|Sept 04, 2025
-Ports|[stk](http://github.com/supertuxkart/stk-code)|060243d5c11df4ea50ea71e638b5925fb1b75715|Sept 04, 2025
+Ports|[stk](http://github.com/supertuxkart/stk-code)|baa9d60041ca28f930a7a8d8388c929f71baf900|Sept 05, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|737777c810a9097aaea2c6270c34765f862beeed|Sept 01, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c0efc619e85dc318b363e16fa64770c788f74a23|Mar 08, 2025
@@ -569,7 +569,7 @@ Wine|[wine-custom](http://github.com/wine-mirror/wine)|wine-10.14|Aug 29, 2025
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-10.2.0|Aug 14, 2025
 Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20250820-proton-native|Aug 20, 2025
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20250905-proton-slr|Sept 05, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.5|Apr 04, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250905|Sept 05, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|75118236ac5cb6f51918460a14f7bc40162a115e|Aug 25, 2025
