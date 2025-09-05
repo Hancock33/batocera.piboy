@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Aug 20, 2025
-WINE_PROTON_VERSION = cachyos-10.0-20250820-proton-native
+# Version: Commits on Sept 05, 2025
+WINE_PROTON_VERSION = cachyos-10.0-20250905-proton-slr
 WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -331,6 +331,7 @@ HOST_WINE_PROTON_CONF_OPTS += \
 ifeq ($(BR2_x86_64),y)
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
+	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.{dll,exe}
 	x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.{dll,exe}
 endef
 endif
