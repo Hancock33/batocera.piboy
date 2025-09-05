@@ -18,7 +18,9 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|f6b4665e9488
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14261|Sept 05, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|57779abae698b61e2e8b0670d393cbc3bea879af|Sept 05, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.7|Sept 05, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250905|Sept 05, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4c9357fff0f4c09ce462afba02d0f4e7d8fd3510|Sept 05, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250905|Sept 05, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|598d756af16b9fc63b6e04fbee6a19ae14c42d94|Sept 05, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|65f5ad254a9141b5b8ee5b0d6c742399a135314c|Sept 05, 2025
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|2fa79c1c643375662543afe9e1299a3cf1d55559|Sept 05, 2025
@@ -32,10 +34,8 @@ Ports|[openmohaa](http://github.com/openmoh/openmohaa)|c93d0f69755f12ebfe364f977
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|e8d4ee1d0ff53d4ae29416f0738cc1c91229be81|Sept 04, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|8eb6ce331bdefbd494b9af712aee0aada9d4c3f3|Sept 04, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|060243d5c11df4ea50ea71e638b5925fb1b75715|Sept 04, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250904|Sept 04, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|86e83c3c9c1c3574df44bbb9d28513bfee8a8e3b|Sept 04, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|fd1c4707c62cd0fbe65b9f5ea84bdd30b8cd0e1a|Sept 04, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250904|Sept 04, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|76c26a9c7a4e0a3f43a77131c8d6ee7f301d43f8|Sept 04, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|002ada89c94412bcef00d87fb6bf34958ca12dd9|Sept 04, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|002ada89c94412bcef00d87fb6bf34958ca12dd9|Sept 04, 2025
