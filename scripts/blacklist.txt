@@ -1,4 +1,5 @@
 ﻿batocera-luajit.mk
+citron.mk
 duckstation-legacy.mk
 firmware-armbian.mk
 firmware-orangepi.mk
