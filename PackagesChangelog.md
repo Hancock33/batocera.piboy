@@ -7,6 +7,7 @@ Emulators|[clk](https://github.com/TomHarte/CLK)|96fd0b78929577ed7e7da9cef11af16
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|78d22b8852b06c5228164b7fe283d5baaf7749d6|Sept 06, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|7e79356ef75c404616a9837e0c1103208b8ddef6|Sept 06, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|d9f789121cc010689dfab489064b0b793e931169|Sept 06, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|a996645764192165fab139e9b0eda65060862477|Sept 06, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-09-06|Sept 06, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.137|Sept 06, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|77a7cb7e40366b034fe5df78097568485a940893|Sept 06, 2025
@@ -27,7 +28,6 @@ Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|48e8086bfe31d95
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|5a3809be16f2e196ee8bc117b6e6759d83313506|Sept 05, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|718891d11f53a8496ce1462ce37a3c0d4083ba33|Sept 05, 2025
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|6c4d5ec2051cfaf45179cd02e10ff3af42486bdf|Sept 05, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|598d07305839eb74a4e75d93fa2bfbf074d5e1c8|Sept 05, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|05648428715b9f1f54707290eb9fc1b1a124744e|Sept 05, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|89157c1e6724bf851ee04928e9c259f246281a6a|Sept 05, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45756|Sept 05, 2025
