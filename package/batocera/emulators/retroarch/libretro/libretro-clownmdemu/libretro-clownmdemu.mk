@@ -3,8 +3,8 @@
 # libretro-clownmdemu
 #
 ################################################################################
-# Version: Commits on Sept 04, 2025
-LIBRETRO_CLOWNMDEMU_VERSION = 523a7c3734e655a62a66cf46a304752a95aeced9
+# Version: Commits on Sept 06, 2025
+LIBRETRO_CLOWNMDEMU_VERSION = 5f547d7f7d8a53ae8ed2d656eddef85d5bdbb8b7
 LIBRETRO_CLOWNMDEMU_SITE = https://github.com/Clownacy/clownmdemu-libretro
 LIBRETRO_CLOWNMDEMU_SITE_METHOD=git
 LIBRETRO_CLOWNMDEMU_GIT_SUBMODULES=YES
