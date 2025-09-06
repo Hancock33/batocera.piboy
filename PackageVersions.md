@@ -280,7 +280,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|05648428715b9f1f54707290eb
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-09-06|Sept 06, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.135|Sept 05, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|fdcbc279765e432cbabf19264273f4a87f61fc11|Jun 10, 2025
-Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|53181b005c84c21ef10dc6063b1ae4d37e96ade3|Sept 05, 2025
+Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|cf75a51790039777fbdc14648277411cfcf6f09e|Aug 31, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0f74cff52b96841fe0efa01ffd1a6875b253e72a|Aug 01, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|10b7e86738a8c3eeff7114bcc4ef110d382dd0fd|Sept 05, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|b33f2afb33c61d675aaf0319bd3b8cc8d6924d49|Aug 12, 2025

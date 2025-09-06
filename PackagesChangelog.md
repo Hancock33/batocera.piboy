@@ -16,7 +16,6 @@ Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|6c4d5ec2051cfaf45179cd0
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|598d07305839eb74a4e75d93fa2bfbf074d5e1c8|Sept 05, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|05648428715b9f1f54707290eb9fc1b1a124744e|Sept 05, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.135|Sept 05, 2025
-Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|53181b005c84c21ef10dc6063b1ae4d37e96ade3|Sept 05, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|2ea8ef6b9ddda7e4e8d64f64c18c4023596aeb7e|Sept 05, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|89157c1e6724bf851ee04928e9c259f246281a6a|Sept 05, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45756|Sept 05, 2025
@@ -78,6 +77,7 @@ Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.0-rc1|Sept 01, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|f9ae36467874ee1b7efb0bc7521a3e769aaf1ce6|Sept 01, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|3defc868e1b8308cd5b87122f968d370fb7e41de|Aug 31, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0280|Aug 31, 2025
+Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|cf75a51790039777fbdc14648277411cfcf6f09e|Aug 31, 2025
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|1c0468981e07028bfa5a63721a6d43fca53ecb31|Aug 31, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|360324a17edebeb625c3fffe872321a0e2c20dc4|Aug 31, 2025
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bee00e47805909d08568c640073a2123ca7021b1|Aug 31, 2025
