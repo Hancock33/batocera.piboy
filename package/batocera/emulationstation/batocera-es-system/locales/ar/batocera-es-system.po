@@ -19495,7 +19495,7 @@ msgstr "المنظر الخلفي"
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
 msgid "red/blue"
-msgstr "احمرازرق"
+msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
