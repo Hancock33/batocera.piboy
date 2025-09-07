@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|1459990394cca99f762764c58b2c05b24eda6385|Sept 07, 2025
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|258494709231245ca5143dd9862435997f3c0e1c|Sept 07, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|11b9e4027529bc0b1f45607c3fa397eb86479ccc|Sept 07, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|0136f721c476814e2cf452690fa8ae838121b135|Sept 07, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|654afdba797ab97134a4fed31cd2b3fd0a799eff|Sept 07, 2025
