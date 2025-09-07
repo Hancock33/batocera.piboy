@@ -3299,8 +3299,8 @@ switch:
   theme:                switch
   extensions:           [nsp, xci]
   emulators:
-    citron:
-      citron:           { requireAnyOf: [BR2_PACKAGE_CITRON]  }
+    eden:
+      eden:             { requireAnyOf: [BR2_PACKAGE_EDEN]  }
     ryujinx:
       ryujinx:          { requireAnyOf: [BR2_PACKAGE_RYUJINX] }
 
@@ -6346,12 +6346,12 @@ ps2:
   manufacturer:         Sony
   release:              2000
   hardware:             console
-  extensions:           [bin, chd, cso, dump, elf, gz, img, iso, m3u, mdf, nrg]
+  extensions:           [bin, chd, cso, dump, elf, gz, img, iso, mdf, nrg]
   emulators:
     pcsx2:
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2], incompatible_extensions: [m3u] }
     libretro:
-      ps2:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PS2] }
+      ps2:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PS2], incompatible_extensions: [m3u] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:ps2
   comment_fr:           |

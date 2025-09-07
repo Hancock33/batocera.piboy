@@ -1,5 +1,5 @@
 diff --git a/Sources/Jazz2/ContentResolver.cpp b/Sources/Jazz2/ContentResolver.cpp
-index c66c2924..405623c3 100644
+index 53142676..aa8beeb1 100644
 --- a/Sources/Jazz2/ContentResolver.cpp
 +++ b/Sources/Jazz2/ContentResolver.cpp
 @@ -220,17 +220,16 @@ namespace Jazz2
@@ -24,15 +24,15 @@ index c66c2924..405623c3 100644
  				!fs::FindPathCaseInsensitive(fs::CombinePath(_sourcePath, "AnimsSw.j2a"_s))) {
  				auto systemWideSource = NCINE_INSTALL_PREFIX "/share/" NCINE_LINUX_PACKAGE "/Source/";
 diff --git a/Sources/Shared/IO/FileSystem.cpp b/Sources/Shared/IO/FileSystem.cpp
-index 3693ea32..30d0f010 100644
+index 6654254e..c7a8b04f 100644
 --- a/Sources/Shared/IO/FileSystem.cpp
 +++ b/Sources/Shared/IO/FileSystem.cpp
-@@ -2684,7 +2684,7 @@ namespace Death { namespace IO {
+@@ -1249,7 +1249,7 @@ namespace Death { namespace IO {
  #elif defined(DEATH_TARGET_UNIX) || defined(DEATH_TARGET_EMSCRIPTEN)
  		StringView config = ::getenv("XDG_CONFIG_HOME");
  		if (IsAbsolutePath(config)) {
--			_savePath = CombinePath(config, applicationName);
-+			_savePath = CombinePath(config, "jazz2");
- 			return;
+-			return CombinePath(config, applicationName);
++			return CombinePath(config, "jazz2");
  		}
  
+ 		StringView home = ::getenv("HOME");

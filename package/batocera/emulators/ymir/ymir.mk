@@ -15,8 +15,8 @@
 # ymir
 #
 ################################################################################
-# Version: Commits on Aug 31, 2025
-YMIR_VERSION = 50719d50e78b331676d517bcfe29337fbcc2bfcd
+# Version: Commits on Sept 07, 2025
+YMIR_VERSION = 551324b93e00a264c475bb56820d9828a7c7ada8
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD=git
 YMIR_GIT_SUBMODULES=YES
@@ -25,6 +25,7 @@ YMIR_LICENSE_FILE = LICENSE
 YMIR_DEPENDENCIES += host-clang sdl3
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
+YMIR_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -lm"
 YMIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 YMIR_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 YMIR_CONF_OPTS += -DYmir_DEV_BUILD=OFF

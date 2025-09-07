@@ -345,6 +345,13 @@ define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 endef
 endif
 
+ifeq ($(BR2_i386),y)
+define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
+	rm -Rf $(TARGET_DIR)/usr/wine/wine-custom/include
+	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-custom/lib/wine/i386-windows/*.{dll,exe}
+endef
+endif
+
 WINE_CUSTOM_POST_INSTALL_TARGET_HOOKS += WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 
 $(eval $(autotools-package))

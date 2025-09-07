@@ -3,13 +3,13 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Aug 30, 2025
-CEMU_VERSION = 9267e72ef92fb30af35cc0e6c9b2afbc3dd703c7
+# Version: Commits on Sept 05, 2025
+CEMU_VERSION = 5a3809be16f2e196ee8bc117b6e6759d83313506
 CEMU_SITE = https://github.com/cemu-project/Cemu.git
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
 CEMU_GIT_SUBMODULES=YES
-CEMU_DEPENDENCIES = bluez5_utils boost fmt glm glslang libcurl libpng libzip pugixml rapidjson sdl2 wxwidgets zlib zstd
+CEMU_DEPENDENCIES = bluez5_utils boost cubeb fmt glm glslang libcurl libpng libzip pugixml rapidjson sdl2 wxwidgets zlib zstd
 CEMU_DEPENDENCIES += host-glslang host-libusb host-nasm host-pugixml host-zstd
 
 CEMU_SUPPORTS_IN_SOURCE_BUILD = NO

@@ -3,7 +3,7 @@
 # nvidia-proprietary-driver
 #
 ################################################################################
-# Version: Commits on  Jul 22, 2025
+# Version: Commits on  Sept 02, 2025
 NVIDIA_PROPRIETARY_DRIVER_VERSION = $(NVIDIA_OPEN_DRIVER_VERSION)
 NVIDIA_PROPRIETARY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA_PROPRIETARY_DRIVER_SITE = https://us.download.nvidia.com/XFree86/Linux-x86$(NVIDIA_PROPRIETARY_DRIVER_SUFFIX)/$(NVIDIA_PROPRIETARY_DRIVER_VERSION)

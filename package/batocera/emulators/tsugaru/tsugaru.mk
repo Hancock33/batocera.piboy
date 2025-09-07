@@ -3,13 +3,14 @@
 # tsugaru
 #
 ################################################################################
-# Version: Commits on Aug 28, 2025
-TSUGARU_VERSION = 6b87090fdd3c642d10ac85747a63f218e042daca
+# Version: Commits on Sept 05, 2025
+TSUGARU_VERSION = 89157c1e6724bf851ee04928e9c259f246281a6a
 TSUGARU_SITE = $(call github,captainys,TOWNSEMU,$(TSUGARU_VERSION))
-TSUGARU_DEPENDENCIES = libglu
 TSUGARU_LICENSE = GPLv2
 TSUGARU_SUPPORTS_IN_SOURCE_BUILD = NO
 TSUGARU_SUBDIR = src
+
+TSUGARU_DEPENDENCIES = alsa-lib libglu
 
 TSUGARU_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 TSUGARU_CONF_ENV += LDFLAGS=-lpthread

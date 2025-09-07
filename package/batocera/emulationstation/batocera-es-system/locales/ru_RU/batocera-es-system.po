@@ -69,7 +69,7 @@ msgctxt "game_options"
 msgid "0.5x (320x240)"
 msgstr "0.5x (320x240)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "0.5x (360p/540p) [EXPERIMENTAL]"
 msgstr "0.5x (360p/540p) [EXPERIMENTAL]"
@@ -79,7 +79,7 @@ msgctxt "game_options"
 msgid "0.6x"
 msgstr "0.6x"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "0.75x (540p/810p) [EXPERIMENTAL]"
 msgstr "0.75x (540p/810p) [EXPERIMENTAL]"
@@ -184,7 +184,7 @@ msgctxt "game_options"
 msgid "1.5x"
 msgstr "1.5x"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "1.5x (1080p/1620p) [EXPERIMENTAL]"
 msgstr "1.5x (1080p/1620p) [EXPERIMENTAL]"
@@ -684,7 +684,7 @@ msgctxt "game_options"
 msgid "1680 x 1050"
 msgstr "1680 x 1050"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (по умолчанию)"
@@ -809,7 +809,7 @@ msgctxt "game_options"
 msgid "1st Joystick (2 Axes, 2 Btns)"
 msgstr "1-й джойстик (2 оси, 2 кнопки)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "1x (720p/1080p)"
 msgstr "1x (720p/1080p)"
@@ -1159,7 +1159,7 @@ msgctxt "game_options"
 msgid "2x (1280x960) (Default)"
 msgstr "2x (1280x960) (по умолчанию)"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "2x (1440p/2160p)"
 msgstr "2x (1440p/2160p)"
@@ -1429,7 +1429,7 @@ msgctxt "keys_files"
 msgid "3rd Person"
 msgstr "От третьего лица"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "3x (2160p/3240p)"
 msgstr "3x (2160p/3240p)"
@@ -1609,7 +1609,7 @@ msgctxt "game_options"
 msgid "4th"
 msgstr "4"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
@@ -1804,7 +1804,7 @@ msgctxt "game_options"
 msgid "5th"
 msgstr "5"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "5x (3600p/5400p)"
 msgstr "5x (3600p/5400p)"
@@ -1919,7 +1919,7 @@ msgctxt "game_options"
 msgid "6th"
 msgstr "6"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "6x (4320p/6480p)"
 msgstr "6x (4320p/6480p)"
@@ -2004,7 +2004,7 @@ msgctxt "game_options"
 msgid "7th"
 msgstr "7"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "7x (5040p/7560p)"
 msgstr "7x (5040p/7560p)"
@@ -2109,7 +2109,7 @@ msgctxt "game_options"
 msgid "8th"
 msgstr "8"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
 msgstr "8x (5760p/8640p)"
@@ -2267,7 +2267,7 @@ msgctxt "game_options"
 msgid "ACCELEROMETER"
 msgstr "АКСЕЛЕРОМЕТР"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "ACCURACY LEVEL"
 msgstr "УРОВЕНЬ ТОЧНОСТИ"
@@ -2382,7 +2382,7 @@ msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "AMD FidelityFX Super Resolution"
 msgstr "AMD FidelityFX Super Resolution"
@@ -2422,7 +2422,7 @@ msgctxt "game_options"
 msgid "ANISOTROPIC FILTER"
 msgstr "АНИЗАТРОПНАЯ ФИЛЬТРАЦИЯ"
 
-#. TRANSLATION: citron, dolphin, dolphin_triforce, dxx-rebirth, flycast, ...
+#. TRANSLATION: dolphin, dolphin_triforce, dxx-rebirth, eden, flycast, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "АНИЗОТРОПНАЯ ФИЛЬТРАЦИЯ"
@@ -2447,7 +2447,7 @@ msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA/SSAA)"
 msgstr "СГЛАЖИВАНИЕ (MSAA/SSAA)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "ANTI-ALIASING METHOD"
 msgstr "МЕТОД СГЛАЖИВАНИЯ"
@@ -2502,12 +2502,12 @@ msgctxt "game_options"
 msgid "ASPECT"
 msgstr "СООТНОШЕНИЕ"
 
-#. TRANSLATION: bermuda, bigpemu, cemu, cgenius, citron, ...
+#. TRANSLATION: bermuda, bigpemu, cemu, cgenius, dolphin_triforce, ...
 msgctxt "game_options"
 msgid "ASPECT RATIO"
 msgstr "СООТНОШЕНИЕ СТОРОН"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "ASYNC SHADER COMPILE"
 msgstr "АСИНХРОННАЯ КОМПИЛЯЦИЯ ШЕЙДЕРОВ"
@@ -3486,7 +3486,7 @@ msgctxt "game_options"
 msgid "August"
 msgstr "Август"
 
-#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
+#. TRANSLATION: eden, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Australia"
 msgstr "Австралия"
@@ -3958,7 +3958,7 @@ msgctxt "game_options"
 msgid "Better performance with hardware rendering."
 msgstr "Лучшая производительность при hardware рендеринге."
 
-#. TRANSLATION: cemu, citron, ppsspp, supermodel
+#. TRANSLATION: cemu, eden, ppsspp, supermodel
 msgctxt "game_options"
 msgid "Bicubic"
 msgstr "Bicubic"
@@ -3978,7 +3978,7 @@ msgctxt "game_options"
 msgid "Bicubic: Mitchell-Netravali"
 msgstr "Bicubic: Mitchell-Netravali"
 
-#. TRANSLATION: bigpemu, cemu, citron, dolphin_triforce, drastic, ...
+#. TRANSLATION: bigpemu, cemu, dolphin_triforce, drastic, duckstation, ...
 msgctxt "game_options"
 msgid "Bilinear"
 msgstr "Билинейный"
@@ -4165,12 +4165,12 @@ msgctxt "game_options"
 msgid "Brazil"
 msgstr "Brazil"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "Brazilian Portuguese"
 msgstr "Бразильский португальский"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "British English"
 msgstr "Британский английский"
@@ -4423,7 +4423,7 @@ msgctxt "game_options"
 msgid "CDZ Universe 3.3"
 msgstr "CDZ Universe 3.3"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "CET"
 msgstr "CET"
@@ -4443,17 +4443,17 @@ msgctxt "game_options"
 msgid "CHECKERED FLAG"
 msgstr "КЛЕТЧАТЫЙ ФЛАГ"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "CHOOSE CONSOLE REGION"
 msgstr "ВЫБРАТЬ РЕГИОН КОНСОЛИ"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "CHOOSE CONSOLE TIMEZONE"
 msgstr "ВЫБАРТЬ ЧАСОВОЙ ПОЯС КОНСОЛИ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "CHOOSE SOUND OUTPUT MODE"
 msgstr "ВЫБРАТЬ РЕЖИМ ВЫВОДА ЗВУКА"
@@ -4877,7 +4877,7 @@ msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
 msgstr "Адаптация цвета, как у ЭЛТ. Требуется новый 3D-движок."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "CST6CDT"
 msgstr "CST6CDT"
@@ -5083,7 +5083,7 @@ msgctxt "game_options"
 msgid "Canada"
 msgstr "Canada"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "Canadian French"
 msgstr "Канадский французский"
@@ -5215,7 +5215,7 @@ msgctxt "game_options"
 msgid "Change the game's brightness."
 msgstr "Изменить яркость игры."
 
-#. TRANSLATION: citron, etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, ...
+#. TRANSLATION: eden, etlegacy, fallout1-ce, fallout2-ce, libretro/cap32, ...
 msgctxt "game_options"
 msgid "Change the game's language."
 msgstr "Изменяет язык игры."
@@ -5229,7 +5229,7 @@ msgstr ""
 "Изменить язык игры. Файлы игры требуют наличия поддерживаемых языковых строк "
 "в .pk4 файлах."
 
-#. TRANSLATION: bigpemu, cemu, citron, duckstation, libretro/vice_x128, ...
+#. TRANSLATION: bigpemu, cemu, duckstation, eden, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Change the output resolution ratio."
 msgstr "Изменяет соотношение разрешения вывода."
@@ -5274,12 +5274,12 @@ msgctxt "game_options"
 msgid "Chile"
 msgstr "Chile"
 
-#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
+#. TRANSLATION: eden, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "China"
 msgstr "Китай"
 
-#. TRANSLATION: cemu, citron, doom3, ryujinx, sonic2013, ...
+#. TRANSLATION: cemu, doom3, eden, ryujinx, sonic2013, ...
 msgctxt "game_options"
 msgid "Chinese"
 msgstr "Chinese"
@@ -5572,7 +5572,7 @@ msgctxt "game_options"
 msgid "Choose when to enable subtitles."
 msgstr "Выберите отображение субтитров."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Choose whether the virtual switch is docked or not."
 msgstr "Выберать, виртуальный switch находится в доке или нет."
@@ -5596,7 +5596,7 @@ msgctxt "game_options"
 msgid "Choose which audio API library to use."
 msgstr ""
 
-#. TRANSLATION: azahar, cemu, citron, dolphin, dolphin_triforce, ...
+#. TRANSLATION: azahar, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Выберите, какую API библиотеку использовать."
@@ -5657,12 +5657,12 @@ msgctxt "game_options"
 msgid "Choose your console UTC time zone."
 msgstr ""
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "Choose your console region."
 msgstr "Выберите регион консоли."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Choose your console time zone."
 msgstr ""
@@ -6026,7 +6026,7 @@ msgctxt "keys_files"
 msgid "Crouch Toggle"
 msgstr ""
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Cuba"
 msgstr "Cuba"
@@ -6307,7 +6307,7 @@ msgctxt "game_options"
 msgid "DNS OVERRIDE"
 msgstr "ПЕРЕОПРЕДЕЛЕНИЕ DNS"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "DOCK MODE"
 msgstr "РЕЖИМ ДОК-СТАНЦИИ"
@@ -6487,7 +6487,7 @@ msgctxt "game_options"
 msgid "December"
 msgstr "Декабрь"
 
-#. TRANSLATION: citron, libretro/dice, libretro/flycast, libretro/mesen, libretro/puae, ...
+#. TRANSLATION: eden, libretro/dice, libretro/flycast, libretro/mesen, libretro/puae, ...
 msgctxt "game_options"
 msgid "Default"
 msgstr "По умолчанию"
@@ -6660,7 +6660,7 @@ msgctxt "game_options"
 msgid "Disable weapon waggle."
 msgstr "Отключить \"тряску\" оружия."
 
-#. TRANSLATION: bigpemu, bstone, citron, duckstation, f2bgl, ...
+#. TRANSLATION: bigpemu, bstone, duckstation, eden, f2bgl, ...
 msgctxt "game_options"
 msgid "Disabled"
 msgstr "Отключено"
@@ -6762,7 +6762,7 @@ msgstr ""
 "Искажает вывод, чтобы полностью заполнить дисплей. Переопределяет "
 "соотношение сторон."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Docked (Default)"
 msgstr "В доке (по умолчанию)"
@@ -6893,7 +6893,7 @@ msgid ""
 "Libretro cores."
 msgstr ""
 
-#. TRANSLATION: cemu, citron, dolphin, etlegacy, libretro/dolphin, ...
+#. TRANSLATION: cemu, dolphin, eden, etlegacy, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Dutch"
 msgstr "Голландский"
@@ -6923,7 +6923,7 @@ msgctxt "game_options"
 msgid "Dynarec (Fastest)"
 msgstr "Dynarec (самый быстрый)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "EET"
 msgstr "EET"
@@ -7143,12 +7143,12 @@ msgctxt "game_options"
 msgid "ENHANCED RENDERING RESOLUTION"
 msgstr "УЛУЧШЕННОЕ РАЗРЕШЕНИЕ РЕНДЕРИНГА"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "EST"
 msgstr "EST"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "EST5EDT"
 msgstr "EST5EDT"
@@ -7203,12 +7203,12 @@ msgctxt "keys_files"
 msgid "Edit room"
 msgstr "Изменить комнату"
 
-#. TRANSLATION: citron, xenia, xenia-canary
+#. TRANSLATION: eden, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Egypt"
 msgstr "Egypt"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Eire"
 msgstr "Eire"
@@ -7729,7 +7729,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Включить поддержку широкоэкранного режима."
 
-#. TRANSLATION: bigpemu, bstone, cemu, cgenius, citron, ...
+#. TRANSLATION: bigpemu, bstone, cemu, cgenius, devilutionx, ...
 msgctxt "game_options"
 msgid "Enabled"
 msgstr "Включено"
@@ -7823,7 +7823,7 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr "Включение сгладит изображение."
 
-#. TRANSLATION: awgl, cemu, citron, doom3, etlegacy, ...
+#. TRANSLATION: awgl, cemu, doom3, eden, etlegacy, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "English"
@@ -7905,7 +7905,7 @@ msgctxt "game_options"
 msgid "Enhancement. Increase the rendering resolution."
 msgstr "Улучшение. Увеличивает разрешение рендеринга."
 
-#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, eden, ...
 msgctxt "game_options"
 msgid ""
 "Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
@@ -8062,7 +8062,7 @@ msgctxt "game_options"
 msgid "Estonia"
 msgstr "Estonia"
 
-#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
+#. TRANSLATION: eden, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "Europe"
 msgstr "Европа"
@@ -8142,7 +8142,7 @@ msgstr ""
 "Дополнительное окно DMD (Dot Matrix Display) для отображения счета на столах "
 "без rom. По умолчанию настройки берутся из файла VPinballX.ini."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Extreme"
 msgstr "Экстрим"
@@ -8187,12 +8187,12 @@ msgctxt "game_options"
 msgid "FIELD OF VIEW"
 msgstr "ПОЛЕ ЗРЕНИЯ (FOV)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "FIFO (VSync On)"
 msgstr "FIFO (VSync On)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "FIFO Relaxed"
 msgstr "FIFO Relaxed"
@@ -8446,12 +8446,12 @@ msgstr ""
 "FULLSCREEN обеспечивает вид сверху вниз на игровое поле. Для использования в "
 "кабинете или в многооконном режиме на рабочем столе."
 
-#. TRANSLATION: citron, pcsx2, vita3k
+#. TRANSLATION: eden, pcsx2, vita3k
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid ""
 "FXAA has a lower performance impact, goof for low resolutions. SMAA offers "
@@ -8668,7 +8668,7 @@ msgctxt "game_options"
 msgid "Fix screen tearing. CPU heavy."
 msgstr "Исправляет разрывы экрана. Нагрузка на CPU."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid ""
 "Fix screen tearing. FIFO (Vsync) does not drop frames. FIFO Relaxed allows "
@@ -8789,7 +8789,7 @@ msgctxt "game_options"
 msgid "For weak machines. Some games will not work with this."
 msgstr "Для слабых машин. Некоторые игры не будут работать."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Force 16:10"
 msgstr "Принудительно 16:10"
@@ -8799,12 +8799,12 @@ msgctxt "game_options"
 msgid "Force 16:9"
 msgstr "Принудительно 16:9"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Force 21:9"
 msgstr "Принудительно 21:9"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Force 32:9"
 msgstr "Принудительно 32:9"
@@ -8823,7 +8823,7 @@ msgstr ""
 "Заставляет 3D-геометрию всегда рендериться на верхнем экране. Полезно для "
 "одноэкранных устройств/игр."
 
-#. TRANSLATION: citron, dolphin, dolphin_triforce, hypseus-singe
+#. TRANSLATION: dolphin, dolphin_triforce, eden, hypseus-singe
 msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "Принудительно 4:3"
@@ -8949,7 +8949,7 @@ msgstr ""
 "не сможете выиграть или проиграть на картах, созданных на заказ. Вам также "
 "не нужно беспокоиться о деньгах."
 
-#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
+#. TRANSLATION: cemu, dolphin, doom3, eden, etlegacy, ...
 msgctxt "game_options"
 msgid "French"
 msgstr "French"
@@ -9199,7 +9199,7 @@ msgctxt "game_options"
 msgid "GAMMA"
 msgstr "ГАММА"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "GB"
 msgstr "GB"
@@ -9234,7 +9234,7 @@ msgctxt "game_options"
 msgid "GB COLOURISATION"
 msgstr ""
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "GB-Eire"
 msgstr "GB-Eire"
@@ -9334,22 +9334,22 @@ msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (самый быстрый)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "GMT"
 msgstr "GMT"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "GMT+0"
 msgstr "GMT+0"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "GMT-0"
 msgstr "GMT-0"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "GMT0"
 msgstr "GMT0"
@@ -9369,7 +9369,7 @@ msgctxt "game_options"
 msgid "GPU SYNC"
 msgstr "СИНХРОНИЗАЦИЯ GPU"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
@@ -9393,7 +9393,7 @@ msgctxt "game_options"
 msgid "GRAPHICS"
 msgstr "ГРАФИКА"
 
-#. TRANSLATION: azahar, cemu, citron, dolphin, dolphin_triforce, ...
+#. TRANSLATION: azahar, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr "ГРАФИЧЕСКИЙ API"
@@ -9521,7 +9521,7 @@ msgctxt "keys_files"
 msgid "Gas / Accelerate / Short Pass"
 msgstr ""
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Gaussian"
 msgstr "Gaussian"
@@ -9551,7 +9551,7 @@ msgctxt "game_options"
 msgid "Georgia"
 msgstr "Georgia"
 
-#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
+#. TRANSLATION: cemu, dolphin, doom3, eden, etlegacy, ...
 msgctxt "game_options"
 msgid "German"
 msgstr "German"
@@ -9696,7 +9696,7 @@ msgctxt "game_options"
 msgid "Green - TI-83"
 msgstr "Зелёный - TI-83"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Greenwich"
 msgstr "Greenwich"
@@ -9851,7 +9851,7 @@ msgctxt "game_options"
 msgid "HQ MODE"
 msgstr "HQ РЕЖИМ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
@@ -10024,7 +10024,7 @@ msgctxt "game_options"
 msgid "Hides borders on many games. Some games used the borders."
 msgstr "Скрывает рамки во многих играх."
 
-#. TRANSLATION: amiberry, citron, libretro/fceumm, libretro/mesen, libretro/mesens, ...
+#. TRANSLATION: amiberry, eden, libretro/fceumm, libretro/mesen, libretro/mesens, ...
 msgctxt "game_options"
 msgid "High"
 msgstr "Высокий"
@@ -10091,7 +10091,7 @@ msgctxt "game_options"
 msgid "Honduras"
 msgstr "Honduras"
 
-#. TRANSLATION: citron, xenia, xenia-canary
+#. TRANSLATION: eden, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Hong Kong"
 msgstr "Hong Kong"
@@ -10289,7 +10289,7 @@ msgctxt "game_options"
 msgid "IT"
 msgstr "IT"
 
-#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: eden, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Iceland"
 msgstr "Iceland"
@@ -10322,7 +10322,7 @@ msgctxt "game_options"
 msgid "Ignored with 'Cycle-exact'."
 msgstr "Игнорируется с 'Cycle-exact'."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Immediate"
 msgstr "Немедленный"
@@ -10368,7 +10368,7 @@ msgctxt "game_options"
 msgid "Improves clarity of distant textures when mipmapping is enabled."
 msgstr ""
 
-#. TRANSLATION: citron, dolphin, dolphin_triforce, dxx-rebirth, libretro/dolphin, ...
+#. TRANSLATION: dolphin, dolphin_triforce, dxx-rebirth, eden, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Повышает чёткость отдалённых текстур."
@@ -10547,7 +10547,7 @@ msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
 msgstr "Инвертировать вертикальную ось джойстика в играх про полеты."
 
-#. TRANSLATION: citron, xenia, xenia-canary
+#. TRANSLATION: eden, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Iran"
 msgstr "Iran"
@@ -10567,12 +10567,12 @@ msgctxt "game_options"
 msgid "Irish"
 msgstr "Ирландский"
 
-#. TRANSLATION: citron, xenia, xenia-canary
+#. TRANSLATION: eden, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Israel"
 msgstr "Israel"
 
-#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
+#. TRANSLATION: cemu, dolphin, doom3, eden, etlegacy, ...
 msgctxt "game_options"
 msgid "Italian"
 msgstr "Italian"
@@ -10662,7 +10662,7 @@ msgctxt "game_options"
 msgid "JUMP ON A"
 msgstr "ПРЫЖОК НА A"
 
-#. TRANSLATION: citron, xenia, xenia-canary
+#. TRANSLATION: eden, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Jamaica"
 msgstr "Jamaica"
@@ -10672,7 +10672,7 @@ msgctxt "game_options"
 msgid "January"
 msgstr "Январь"
 
-#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
+#. TRANSLATION: eden, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Япония"
@@ -10682,7 +10682,7 @@ msgctxt "game_options"
 msgid "Japan (Default)"
 msgstr "Япония (по умолчанию)"
 
-#. TRANSLATION: cemu, citron, doom3, etlegacy, flycast/dolphin, ...
+#. TRANSLATION: cemu, doom3, eden, etlegacy, flycast/dolphin, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japanese"
@@ -10941,12 +10941,12 @@ msgctxt "game_options"
 msgid "Konami Justifiers"
 msgstr "Konami Justifiers"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "Korea"
 msgstr "Корея"
 
-#. TRANSLATION: cemu, citron, doom3, easyrpg, etlegacy, ...
+#. TRANSLATION: cemu, doom3, easyrpg, eden, etlegacy, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr "Korean"
@@ -10956,7 +10956,7 @@ msgctxt "game_options"
 msgid "Kuwait"
 msgstr "Kuwait"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Kwajalein"
 msgstr "Kwajalein"
@@ -10976,7 +10976,7 @@ msgctxt "game_options"
 msgid "LAN / WAN STREAMING"
 msgstr "LAN / WAN СТРИМИНГ"
 
-#. TRANSLATION: citron, doom3, etlegacy, f2bgl, fallout1-ce, ...
+#. TRANSLATION: doom3, eden, etlegacy, f2bgl, fallout1-ce, ...
 msgctxt "game_options"
 msgid "LANGUAGE"
 msgstr "ЯЗЫК"
@@ -11162,7 +11162,7 @@ msgctxt "game_options"
 msgid "Laser/VZ 64k Memory (Default)"
 msgstr "Laser/VZ 64k Memory (по умолчанию)"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "Latin American Spanish"
 msgstr "Латиноамериканский испанский"
@@ -11237,7 +11237,7 @@ msgctxt "game_options"
 msgid "Legacy3D"
 msgstr "Legacy3D"
 
-#. TRANSLATION: citron, xenia, xenia-canary
+#. TRANSLATION: eden, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Libya"
 msgstr "Libya"
@@ -11530,7 +11530,7 @@ msgctxt "game_options"
 msgid "MENU SOUNDS"
 msgstr "ЗВУК МЕНЮ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "MET"
 msgstr "MET"
@@ -11635,12 +11635,12 @@ msgctxt "game_options"
 msgid "MOUSE SPEED"
 msgstr "СКОРОСТЬ МЫШИ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "MST"
 msgstr "MST"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "MST7MDT"
 msgstr "MST7MDT"
@@ -11740,7 +11740,7 @@ msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
 msgstr "Macintosh High Density Disk images"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
 msgstr "Mailbox (рекомендуется)"
@@ -12161,7 +12161,7 @@ msgctxt "game_options"
 msgid "Mongolia"
 msgstr "Mongolia"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Mono"
 msgstr "Моно"
@@ -12536,12 +12536,12 @@ msgctxt "game_options"
 msgid "NVRAM STORAGE"
 msgstr "NVRAM ХРАНЕНИЕ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "NZ"
 msgstr "NZ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "NZ-CHAT"
 msgstr "NZ-CHAT"
@@ -12585,7 +12585,7 @@ msgctxt "game_options"
 msgid "Native Vulkan (Default)"
 msgstr ""
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Navajo"
 msgstr "Navajo"
@@ -12610,7 +12610,7 @@ msgctxt "game_options"
 msgid "Nearest"
 msgstr "Ближайший"
 
-#. TRANSLATION: cemu, citron, sonic2013, soniccd
+#. TRANSLATION: cemu, eden, sonic2013, soniccd
 msgctxt "game_options"
 msgid "Nearest Neighbour"
 msgstr "Ближайший сосед"
@@ -12779,7 +12779,7 @@ msgctxt "game_options"
 msgid "No touch screen (Default)"
 msgstr "Нет сенсорного экрана (по умолчанию)"
 
-#. TRANSLATION: citron, dolphin, dolphin_triforce, drastic, fallout1-ce, ...
+#. TRANSLATION: dolphin, dolphin_triforce, drastic, eden, fallout1-ce, ...
 msgctxt "game_options"
 msgid "None"
 msgstr "Нет"
@@ -12794,7 +12794,7 @@ msgctxt "game_options"
 msgid "None/Sharp Pixels"
 msgstr "Нет/Резкие пиксели"
 
-#. TRANSLATION: awgl, citron, dosbox, duckstation, flycast, ...
+#. TRANSLATION: awgl, dosbox, duckstation, eden, flycast, ...
 msgctxt "game_options"
 msgid "Normal"
 msgstr "Нормальный"
@@ -13207,7 +13207,7 @@ msgctxt "keys_files"
 msgid "Open furnish corridor menu"
 msgstr "Открыть меню отделки коридора"
 
-#. TRANSLATION: awgl, cemu, citron, dolphin, dolphin_triforce, ...
+#. TRANSLATION: awgl, cemu, dolphin, dolphin_triforce, duckstation, ...
 msgctxt "game_options"
 msgid "OpenGL"
 msgstr "OpenGL"
@@ -13562,7 +13562,7 @@ msgctxt "game_options"
 msgid "PPU DECODER"
 msgstr "PPU ДЕКОДЕР"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "PRC"
 msgstr "PRC"
@@ -13608,7 +13608,7 @@ msgid "PS3's internal ratio setting. Some games only support 16/9."
 msgstr ""
 "PS3 настройка соотношения сторон. Некоторые игры поддерживают только 16/9."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "PST8PDT"
 msgstr "PST8PDT"
@@ -13961,7 +13961,7 @@ msgctxt "game_options"
 msgid "Pointer"
 msgstr "Указатель"
 
-#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: eden, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Poland"
 msgstr "Poland"
@@ -14011,7 +14011,7 @@ msgctxt "game_options"
 msgid "Portrait"
 msgstr "Портрет"
 
-#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: eden, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Portugal"
 msgstr "Portugal"
@@ -14021,7 +14021,7 @@ msgctxt "game_options"
 msgid "Portugese"
 msgstr "Portugese"
 
-#. TRANSLATION: cemu, citron, etlegacy, play, ryujinx, ...
+#. TRANSLATION: cemu, eden, etlegacy, play, ryujinx, ...
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Португальский"
@@ -14358,7 +14358,7 @@ msgctxt "game_options"
 msgid "RENDERER MODE"
 msgstr "РЕЖИМ РЕНДЕРЕРА"
 
-#. TRANSLATION: citron, dolphin, duckstation, pcsx2, ppsspp
+#. TRANSLATION: dolphin, duckstation, eden, pcsx2, ppsspp
 msgctxt "game_options"
 msgid "RENDERING"
 msgstr "РЕНДЕРИНГ"
@@ -14368,7 +14368,7 @@ msgctxt "game_options"
 msgid "RENDERING MODE"
 msgstr "РЕЖИМ РЕНДЕРЕРА"
 
-#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, eden, ...
 msgctxt "game_options"
 msgid "RENDERING RESOLUTION"
 msgstr "РАЗРЕШЕНИЕ РЕНДЕРИНГА"
@@ -14413,12 +14413,12 @@ msgctxt "game_options"
 msgid "RGB Colour Low/Medium-Resolution"
 msgstr "Цвет RGB низкое/среднее разрешение"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "ROC"
 msgstr "ROC"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "ROK"
 msgstr "ROK"
@@ -14941,7 +14941,7 @@ msgctxt "game_options"
 msgid "Russia"
 msgstr "Россия"
 
-#. TRANSLATION: cemu, citron, doom3, etlegacy, play, ...
+#. TRANSLATION: cemu, doom3, eden, etlegacy, play, ...
 msgctxt "game_options"
 msgid "Russian"
 msgstr "Русский"
@@ -15261,7 +15261,7 @@ msgctxt "game_options"
 msgid "SLOW MOTION DEATH"
 msgstr "СЛОУ-МО ПРИ ГИБЕЛИ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "SMAA"
 msgstr "SMAA"
@@ -15616,7 +15616,7 @@ msgctxt "game_options"
 msgid "Scale4x"
 msgstr "Scale4x"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
@@ -16248,7 +16248,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Простой 2x"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
+#. TRANSLATION: eden, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Упрощенный китайский"
@@ -16308,7 +16308,7 @@ msgctxt "game_options"
 msgid "Sine"
 msgstr "Sine"
 
-#. TRANSLATION: citron, xenia, xenia-canary
+#. TRANSLATION: eden, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Singapore"
 msgstr "Singapore"
@@ -16514,7 +16514,7 @@ msgctxt "game_options"
 msgid "Smooth 4"
 msgstr "Сглаживание 4"
 
-#. TRANSLATION: citron, dxx-rebirth, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp
+#. TRANSLATION: dxx-rebirth, eden, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp
 msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
 msgstr "Сглаживание текстур на 3D-объектах."
@@ -16663,7 +16663,7 @@ msgctxt "game_options"
 msgid "Spain"
 msgstr "Spain"
 
-#. TRANSLATION: cemu, citron, dolphin, doom3, etlegacy, ...
+#. TRANSLATION: cemu, dolphin, doom3, eden, etlegacy, ...
 msgctxt "game_options"
 msgid "Spanish"
 msgstr "Spanish"
@@ -16772,7 +16772,7 @@ msgstr ""
 "Speed hack, позволяет отключить синхронизацию поверхности между CPU и GPU. "
 "Синхронизация поверхности требуется для нескольких игр."
 
-#. TRANSLATION: cemu, citron
+#. TRANSLATION: cemu, eden
 msgctxt "game_options"
 msgid "Speed up shader compilation."
 msgstr "Ускорение компиляции шейдеров."
@@ -16872,7 +16872,7 @@ msgctxt "keys_files"
 msgid "Step right"
 msgstr "Шаг вправо"
 
-#. TRANSLATION: citron, rpcs3
+#. TRANSLATION: eden, rpcs3
 msgctxt "game_options"
 msgid "Stereo"
 msgstr "Стерео"
@@ -16952,7 +16952,7 @@ msgctxt "game_options"
 msgid "Stretch to screen"
 msgstr "Растягивание под экран"
 
-#. TRANSLATION: citron, dolphin
+#. TRANSLATION: dolphin, eden
 msgctxt "game_options"
 msgid "Stretch to window"
 msgstr "Растянуть по окну"
@@ -17043,7 +17043,7 @@ msgstr ""
 "Поддерживает нерегулируемую частоту кадров, аналоговые контроллеры и функцию "
 "просмотра мышью."
 
-#. TRANSLATION: cemu, citron
+#. TRANSLATION: cemu, eden
 msgctxt "game_options"
 msgid "Surround"
 msgstr "Surround"
@@ -17235,7 +17235,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr "ФИЛЬТР ТЕКСТУР"
 
-#. TRANSLATION: citron, duckstation, dxx-rebirth, libretro/duckstation, libretro/mupen64plus-next, ...
+#. TRANSLATION: duckstation, dxx-rebirth, eden, libretro/duckstation, libretro/mupen64plus-next, ...
 msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr "ФИЛЬТРАЦИЯ ТЕКСТУР"
@@ -17445,12 +17445,12 @@ msgctxt "game_options"
 msgid "TWB64 - Pack 2"
 msgstr "TWB64 - Pack 2"
 
-#. TRANSLATION: citron, ryujinx, xenia, xenia-canary
+#. TRANSLATION: eden, ryujinx, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Taiwan"
 msgstr "Тайвань"
 
-#. TRANSLATION: cemu, citron, ryujinx
+#. TRANSLATION: cemu, eden, ryujinx
 msgctxt "game_options"
 msgid "Taiwanese"
 msgstr "Тайваньский"
@@ -17788,7 +17788,7 @@ msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
 msgstr "Trackball (Atari CX-22)"
 
-#. TRANSLATION: citron, libretro/dolphin, play, ryujinx, shadps4, ...
+#. TRANSLATION: eden, libretro/dolphin, play, ryujinx, shadps4, ...
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Традиционный китайский"
@@ -17852,7 +17852,7 @@ msgctxt "game_options"
 msgid "Tunisia"
 msgstr "Tunisia"
 
-#. TRANSLATION: citron, libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: eden, libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
 msgid "Turkey"
 msgstr "Turkey"
@@ -17939,7 +17939,7 @@ msgctxt "game_options"
 msgid "UBERSHADERS"
 msgstr "УБЕРШЕЙДЕРЫ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "UCT"
 msgstr "UCT"
@@ -17999,7 +17999,7 @@ msgctxt "game_options"
 msgid "US (Default)"
 msgstr ""
 
-#. TRANSLATION: citron, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
+#. TRANSLATION: eden, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
 msgid "USA"
 msgstr "США"
@@ -18119,7 +18119,7 @@ msgctxt "game_options"
 msgid "USER DISK"
 msgstr "ДИСК ПОЛЬЗОВАТЕЛЯ"
 
-#. TRANSLATION: citron, ryujinx
+#. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "UTC"
 msgstr "UTC"
@@ -18259,7 +18259,7 @@ msgctxt "game_options"
 msgid "Ultra"
 msgstr "Ультра"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Undocked"
 msgstr "Вне дока"
@@ -18279,7 +18279,7 @@ msgctxt "game_options"
 msgid "United States"
 msgstr "United States"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Univarsal"
 msgstr "Univarsal"
@@ -18734,7 +18734,7 @@ msgctxt "game_options"
 msgid "VIC20 PAL Automatic"
 msgstr "VIC20 PAL Automatic"
 
-#. TRANSLATION: citron, openjk, openmohaa, rpcs3
+#. TRANSLATION: eden, openjk, openmohaa, rpcs3
 msgctxt "game_options"
 msgid "VIDEO"
 msgstr "ВИДЕО"
@@ -18839,7 +18839,7 @@ msgctxt "game_options"
 msgid "VOLUMETRIC SMOKE"
 msgstr "ОБЪЁМНЫЙ ДЫМ"
 
-#. TRANSLATION: azahar, bigpemu, bstone, cemu, citron, ...
+#. TRANSLATION: azahar, bigpemu, bstone, cemu, dolphin, ...
 msgctxt "game_options"
 msgid "VSYNC"
 msgstr "VSYNC"
@@ -18964,7 +18964,7 @@ msgctxt "game_options"
 msgid "Volumetric"
 msgstr "Объёмный"
 
-#. TRANSLATION: azahar, citron, dolphin, dolphin_triforce, duckstation, ...
+#. TRANSLATION: azahar, dolphin, dolphin_triforce, duckstation, eden, ...
 msgctxt "game_options"
 msgid "Vulkan"
 msgstr "Vulkan"
@@ -18974,7 +18974,7 @@ msgctxt "game_options"
 msgid "Vulkan (Default)"
 msgstr "Vulkan (по умолчанию)"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "W-SU"
 msgstr "W-SU"
@@ -19024,7 +19024,7 @@ msgctxt "game_options"
 msgid "WEATHER EFFECTS"
 msgstr "ПОГОДНЫЕ ЭФФЕКТЫ"
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "WET"
 msgstr "WET"
@@ -19439,7 +19439,7 @@ msgstr ""
 "Увеличивает масштаб, чтобы скрыть черные границы. Границы различаются в "
 "зависимости от игры."
 
-#. TRANSLATION: citron
+#. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Zulu"
 msgstr "Zulu"

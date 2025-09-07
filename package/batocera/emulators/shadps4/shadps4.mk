@@ -4,14 +4,13 @@
 #
 ################################################################################
 # Version: Commits on Aug 31, 2025
-SHADPS4_VERSION = e6f0ee7ed202d6095f29162ea2ab9c27d4bd9e78
+SHADPS4_VERSION = cf75a51790039777fbdc14648277411cfcf6f09e
 SHADPS4_SITE = https://github.com/AzaharPlus/shadPS4Plus.git
-SHADPS4_BRANCH = main
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
 SHADPS4_LICENSE = GPLv2
 SHADPS4_LICENSE_FILE = LICENSE
-SHADPS4_DEPENDENCIES += alsa-lib jack2 libedit libevdev openal openssl pulseaudio udev
+SHADPS4_DEPENDENCIES += alsa-lib jack2 libedit libevdev openal openssl pulseaudio sdl3 udev
 SHADPS4_DEPENDENCIES += glslang vulkan-headers vulkan-loader vulkan-validationlayers
 SHADPS4_DEPENDENCIES += qt6base qt6multimedia qt6svg qt6tools
 

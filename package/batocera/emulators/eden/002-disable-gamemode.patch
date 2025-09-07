@@ -1,5 +1,5 @@
 diff --git a/src/yuzu/main.cpp b/src/yuzu/main.cpp
-index 9cf2f9b76c..24e0b78ed1 100644
+index 4c6b176c56..59393c73be 100644
 --- a/src/yuzu/main.cpp
 +++ b/src/yuzu/main.cpp
 @@ -21,7 +21,7 @@
@@ -11,7 +11,7 @@ index 9cf2f9b76c..24e0b78ed1 100644
  #include "common/linux/gamemode.h"
  #endif
  
-@@ -340,7 +340,7 @@ GMainWindow::GMainWindow(bool has_broken_vulkan)
+@@ -427,7 +427,7 @@ GMainWindow::GMainWindow(bool has_broken_vulkan)
      SetupSigInterrupts();
  #endif
  
@@ -20,7 +20,7 @@ index 9cf2f9b76c..24e0b78ed1 100644
      SetGamemodeEnabled(Settings::values.enable_gamemode.GetValue());
  #endif
  
-@@ -2301,7 +2301,7 @@ void GMainWindow::OnEmulationStopped() {
+@@ -2385,7 +2385,7 @@ void GMainWindow::OnEmulationStopped() {
  
      discord_rpc->Update();
  
@@ -29,7 +29,7 @@ index 9cf2f9b76c..24e0b78ed1 100644
      Common::Linux::StopGamemode();
  #endif
  
-@@ -3487,7 +3487,7 @@ void GMainWindow::OnStartGame() {
+@@ -3571,7 +3571,7 @@ void GMainWindow::OnStartGame() {
  
      discord_rpc->Update();
  
@@ -38,7 +38,7 @@ index 9cf2f9b76c..24e0b78ed1 100644
      Common::Linux::StartGamemode();
  #endif
  }
-@@ -3511,7 +3511,7 @@ void GMainWindow::OnPauseGame() {
+@@ -3595,7 +3595,7 @@ void GMainWindow::OnPauseGame() {
      UpdateMenuState();
      AllowOSSleep();
  
@@ -47,7 +47,7 @@ index 9cf2f9b76c..24e0b78ed1 100644
      Common::Linux::StopGamemode();
  #endif
  }
-@@ -3804,7 +3804,7 @@ void GMainWindow::OnConfigure() {
+@@ -3892,7 +3892,7 @@ void GMainWindow::OnConfigure() {
      const auto old_theme = UISettings::values.theme;
      const bool old_discord_presence = UISettings::values.enable_discord_presence.GetValue();
      const auto old_language_index = Settings::values.language_index.GetValue();
@@ -56,7 +56,7 @@ index 9cf2f9b76c..24e0b78ed1 100644
      const bool old_gamemode = Settings::values.enable_gamemode.GetValue();
  #endif
  
-@@ -3866,7 +3866,7 @@ void GMainWindow::OnConfigure() {
+@@ -3954,7 +3954,7 @@ void GMainWindow::OnConfigure() {
      if (UISettings::values.enable_discord_presence.GetValue() != old_discord_presence) {
          SetDiscordEnabled(UISettings::values.enable_discord_presence.GetValue());
      }
@@ -65,7 +65,7 @@ index 9cf2f9b76c..24e0b78ed1 100644
      if (Settings::values.enable_gamemode.GetValue() != old_gamemode) {
          SetGamemodeEnabled(Settings::values.enable_gamemode.GetValue());
      }
-@@ -5468,7 +5468,7 @@ void GMainWindow::SetDiscordEnabled([[maybe_unused]] bool state) {
+@@ -5582,7 +5582,7 @@ void GMainWindow::SetDiscordEnabled([[maybe_unused]] bool state) {
      discord_rpc->Update();
  }
  
@@ -74,15 +74,6 @@ index 9cf2f9b76c..24e0b78ed1 100644
  void GMainWindow::SetGamemodeEnabled(bool state) {
      if (emulation_running) {
          Common::Linux::SetGamemodeState(state);
-@@ -5638,7 +5638,7 @@ int main(int argc, char* argv[]) {
-     chdir(Common::FS::PathToUTF8String(bin_path).c_str());
- #endif
- 
--#ifdef __linux__
-+#ifdef __gamemode__
-     // Set the DISPLAY variable in order to open web browsers
-     // TODO (lat9nq): Find a better solution for AppImages to start external applications
-     if (QString::fromLocal8Bit(qgetenv("DISPLAY")).isEmpty()) {
 diff --git a/src/yuzu_cmd/yuzu.cpp b/src/yuzu_cmd/yuzu.cpp
 index 599582aba9..ac75a0bb7a 100644
 --- a/src/yuzu_cmd/yuzu.cpp
