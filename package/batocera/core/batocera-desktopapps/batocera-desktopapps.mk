@@ -103,11 +103,11 @@ ifeq ($(BR2_PACKAGE_BAUH),y)
   BATOCERA_DESKTOPAPPS_APPS	+= flatpak-config.desktop
 endif
 
-# citron
+# eden
 ifeq ($(BR2_PACKAGE_CITRON),y)
-  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-citron
-  BATOCERA_DESKTOPAPPS_APPS    += citron-config.desktop
-  BATOCERA_DESKTOPAPPS_ICONS   += citron.png
+  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-eden
+  BATOCERA_DESKTOPAPPS_APPS    += eden-config.desktop
+  BATOCERA_DESKTOPAPPS_ICONS   += eden.png
 endif
 
 # ryujinx
