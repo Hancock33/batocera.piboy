@@ -277,7 +277,6 @@ Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.python
 Libraries|[python-adafruit-circuitpython-pixelbuf](https://files.pythonhosted.org/packages/67/1d/ed36cd46c5f1b71c0cb5235ec21bf744ece2355b52b7f6c88a8d035ead24)|2.0.8|May 17, 2025
 Libraries|[plutosvg](https://github.com/sammycage/plutosvg.git)|v0.0.7|May 15, 2025
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/47/ea/1697fbb6bbeb9e201d11b3e7990035fe29ca18d8d58d7de74fff82cbcc63)|8.58.1|May 15, 2025
-Emulators|[citron](https://git.citron-emu.org/citron/emu)|046538bb473c99fe3d02f9b0e76f7a056e6cecc8|May 14, 2025
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/dc/fe/74c3cdba24f06e8748819dbbc4912e3e2193f1a900c96b659e5794dee3a8)|3.79.0|May 14, 2025
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|26cefb8f1ff3b34e589b30c7b0a399ccc1b2ce96|May 12, 2025
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.3|May 11, 2025

@@ -104,7 +104,7 @@ ifeq ($(BR2_PACKAGE_BAUH),y)
 endif
 
 # eden
-ifeq ($(BR2_PACKAGE_CITRON),y)
+ifeq ($(BR2_PACKAGE_EDEN),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-eden
   BATOCERA_DESKTOPAPPS_APPS    += eden-config.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += eden.png
