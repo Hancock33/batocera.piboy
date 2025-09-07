@@ -84,7 +84,7 @@ Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|0136f721c476814e2cf452690fa8ae838121b135|Sept 07, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|7d0c9a8bf1cfbf9f8f48d9b036ec4fd3ef19478c|Jul 31, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|718891d11f53a8496ce1462ce37a3c0d4083ba33|Sept 05, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|37e0b80766f03ae3eb052f2eaa95506b34419bbe|Sept 07, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|0243f81c264ea8d1bbaa107f26fb6644f767c1e8|Aug 29, 2025
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|d43f413b3aea6651a7eeefbc0cf29baed1f46907|Sept 06, 2025
@@ -159,7 +159,7 @@ Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|2fa79c1c643375662543afe9e1299a3cf1d55559|Sept 05, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|b683c2f712a6647c69326961a90cf1990e25ccea|Jul 20, 2025
 Emulators|[libretro-gong](http://github.com/libretro/gong)|11d98233f9bba2dec60cae555b196684fd9d2aa5|Jun 28, 2024
-Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|143b0abb02a6ff501757674c9fdf47e0fcd7cbd3|Aug 21, 2025
+Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|f7a6a4314697ea5e4821a15aa7110795679f6ade|Sept 07, 2025
 Emulators|[libretro-gw](http://github.com/libretro/gw-libretro)|435e5cfd4bf6aea03a84259e9b8dba3daf3ff5bd|Oct 21, 2024
 Emulators|[libretro-handy](http://github.com/libretro/libretro-handy)|fca239207e9c111da3e85d2faf0b1b9d7524e498|Jun 16, 2025
 Emulators|[libretro-hatari](http://github.com/libretro/hatari)|7008194d3f951a157997f67a820578f56f7feee0|Oct 21, 2024
@@ -247,7 +247,7 @@ Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426d
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[libserum](http://github.com/PPUC/libserum_concentrate)|v2.2.0-concentrate.6|Aug 27, 2025
 Emulators|[libzedmd](http://github.com/PPUC/libzedmd)|v0.9.6|Feb 22, 2025
-Emulators|[lightspark](http://github.com/lightspark/lightspark)|e386d469f1710851e0deff589692c52bcc63bfe6|Sept 02, 2025
+Emulators|[lightspark](http://github.com/lightspark/lightspark)|5da4d510f1fc7e0a456d56021fcbf53679781027|Sept 07, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|b3b3e15357a526deea56a4a828b237b3fdf559fb|Jul 09, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0280|Aug 31, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|4d635e7f2d41a23527caa33424a05a2ab9f1b473|Sept 03, 2025
@@ -264,8 +264,8 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|fb76ba85dfefa329be2dabc430fe651dcc756f56|Aug 15, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|d9f789121cc010689dfab489064b0b793e931169|Sept 06, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.151|Sept 07, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|17954120b6d436f2a1cf1d8c77c35b01c965d094|Sept 07, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.153|Sept 07, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|fe54d0a413f8e7268bc8a321e691a562edd6b257|Aug 25, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|a996645764192165fab139e9b0eda65060862477|Sept 06, 2025
