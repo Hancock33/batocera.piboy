@@ -20,7 +20,7 @@ if TYPE_CHECKING:
 
 _logger = logging.getLogger(__name__)
 
-EDEN_CONFIG: Final = CONFIGS / 'eden'
+EDEN_CONFIG: Final = CONFIGS / 'yuzu'
 
 class EdenGenerator(Generator):
 
@@ -36,7 +36,7 @@ class EdenGenerator(Generator):
 
         EdenGenerator.writeEdenConfig(EDEN_CONFIG / "qt-config.ini", system, playersControllers)
 
-        commandArray = ["/usr/bin/eden", "-f", "-g", rom ]
+        commandArray = ["/usr/bin/eden", "-f", "-g", rom]
         return Command.Command(array=commandArray, env={
             "XDG_CONFIG_HOME": CONFIGS,
             "XDG_DATA_HOME": SAVES / "switch",
@@ -280,7 +280,7 @@ class EdenGenerator(Generator):
         edenConfig.set("Controls", "vibration_enabled\\default", "false")
 
         for y in range(len(playersControllers), 9):
-            edenConfig.set("Controls", f"player_{y-1}_connected", "false")
+            edenConfig.set("Controls", f"player_{y-1}_connected", "true")
             edenConfig.set("Controls", rf"player_{y-1}_connected\default", "false")
 
         # telemetry section
