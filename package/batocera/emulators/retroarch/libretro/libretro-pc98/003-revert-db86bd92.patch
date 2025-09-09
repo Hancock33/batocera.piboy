@@ -1,9 +1,181 @@
+diff --git a/NP2kai.code-workspace b/NP2kai.code-workspace
+deleted file mode 100644
+index 6469569..0000000
+--- a/NP2kai.code-workspace
++++ /dev/null
+@@ -1,15 +0,0 @@
+-{
+-	"folders": [
+-		{
+-			"path": "."
+-		}
+-	],
+-	"settings": {
+-		"files.associations": {
+-			"dosio.h": "c",
+-			"np2mt.h": "c",
+-			"cpu.h": "c",
+-			"pc9861k.h": "c"
+-		}
+-	}
+-}
+\ No newline at end of file
 diff --git a/vram/dispsync.c b/vram/dispsync.c
-new file mode 100755
-index 0000000..a761af2
---- /dev/null
+index 7e03f53..a761af2 100644
+--- a/vram/dispsync.c
 +++ b/vram/dispsync.c
-@@ -0,0 +1,151 @@
+@@ -1,151 +1,151 @@
+-#include	"compiler.h"
+-#include	"scrnmng.h"
+-#include	"pccore.h"
+-#include	"iocore.h"
+-#include	"scrndraw.h"
+-#include	"dispsync.h"
+-
+-
+-	DSYNC	dsync;
+-
+-
+-void dispsync_initialize(void) {
+-
+-	ZeroMemory(&dsync, sizeof(dsync));
+-	dsync.textymax = 400;
+-	dsync.grphymax = 400;
+-
+-	dsync.scrnxmax = 640;
+-	dsync.scrnxextend = 0;
+-	dsync.scrnymax = 400;
+-
+-//	scrnmng_setwidth(0, 640);
+-//	scrnmng_setextend(0);
+-//	scrnmng_setheight(0, 400);
+-}
+-
+-BOOL dispsync_renewalmode(void) {
+-
+-	UINT	disp;
+-
+-	if (!scrnmng_haveextend()) {
+-		return(FALSE);
+-	}
+-	disp = 0;
+-	if ((!(np2cfg.LCD_MODE & 1)) && ((gdc.display & 7) < 3)) {
+-		disp = 1;
+-	}
+-	if (dsync.scrnxextend != disp) {
+-		dsync.scrnxextend = disp;
+-		scrnmng_setextend(disp);
+-		return(TRUE);
+-	}
+-	return(FALSE);
+-}
+-
+-BOOL dispsync_renewalhorizontal(void) {
+-
+-	UINT	hbp;
+-	UINT	cr;
+-	UINT	scrnxpos;
+-	UINT	scrnxmax;
+-
+-	hbp = gdc.m.para[GDC_SYNC + 4] & 0x1f;
+-	cr = gdc.m.para[GDC_SYNC + 1];
+-
+-	scrnxpos = 0;
+-	if (hbp >= 7) {
+-		scrnxpos = hbp - 7;
+-	}
+-	scrnxmax = cr + 2;
+-	if ((scrnxpos + scrnxmax) > 80) {
+-		scrnxmax = min(scrnxmax, 80);
+-		scrnxpos = 80 - scrnxmax;
+-	}
+-	scrnxpos <<= 3;
+-	scrnxmax <<= 3;
+-	if ((dsync.scrnxpos != scrnxpos) || (dsync.scrnxmax != scrnxmax)) {
+-		dsync.scrnxpos = scrnxpos;
+-		dsync.scrnxmax = scrnxmax;
+-		scrnmng_setwidth(scrnxpos, scrnxmax);
+-		return(TRUE);
+-	}
+-	else {
+-		return(FALSE);
+-	}
+-}
+-
+-BOOL dispsync_renewalvertical(void) {
+-
+-	UINT	text_vbp;
+-	UINT	grph_vbp;
+-	UINT	textymax;
+-	UINT	grphymax;
+-	UINT	scrnymax;
+-
+-	text_vbp = gdc.m.para[GDC_SYNC + 7] >> 2;
+-	grph_vbp = gdc.s.para[GDC_SYNC + 7] >> 2;
+-	if (text_vbp >= grph_vbp) {
+-		text_vbp -= grph_vbp;
+-		grph_vbp = 0;
+-	}
+-	else {
+-		grph_vbp -= text_vbp;
+-		text_vbp = 0;
+-	}
+-
+-	textymax = LOADINTELWORD(gdc.m.para + GDC_SYNC + 6);
+-	textymax = ((textymax - 1) & 0x3ff) + 1;
+-	textymax += text_vbp;
+-
+-	grphymax = LOADINTELWORD(gdc.s.para + GDC_SYNC + 6);
+-	grphymax = ((grphymax - 1) & 0x3ff) + 1;
+-	grphymax += grph_vbp;
+-
+-#if defined(SUPPORT_CRT15KHZ)
+-	if (gdc.crt15khz & 2) {
+-		textymax *= 2;
+-		grphymax *= 2;
+-	}
+-#endif
+-	if (textymax > SURFACE_HEIGHT) {
+-		textymax = SURFACE_HEIGHT;
+-	}
+-	if (grphymax > SURFACE_HEIGHT) {
+-		grphymax = SURFACE_HEIGHT;
+-	}
+-	if ((dsync.text_vbp == text_vbp) && (dsync.grph_vbp == grph_vbp) &&
+-		(dsync.textymax == textymax) && (dsync.grphymax == grphymax)) {
+-		return(FALSE);
+-	}
+-	dsync.text_vbp = text_vbp;
+-	dsync.grph_vbp = grph_vbp;
+-	dsync.textymax = textymax;
+-	dsync.grphymax = grphymax;
+-
+-	scrnymax = max(grphymax, textymax);
+-	scrnymax = (scrnymax + 7) & (~7);
+-	if (dsync.scrnymax != scrnymax) {
+-		dsync.scrnymax = scrnymax;
+-		scrnmng_setheight(0, scrnymax);
+-	}
+-
+-	dsync.textvad = text_vbp * 640;
+-	dsync.grphvad = grph_vbp * 640;
+-	if (text_vbp) {
+-		ZeroMemory(np2_tram, text_vbp * 640);
+-	}
+-	if (scrnymax - textymax) {
+-		ZeroMemory(np2_tram + textymax * 640, (scrnymax - textymax) * 640);
+-	}
+-	if (grph_vbp) {
+-		ZeroMemory(np2_vram[0], grph_vbp * 640);
+-		ZeroMemory(np2_vram[1], grph_vbp * 640);
+-	}
+-	if (scrnymax - grphymax) {
+-		ZeroMemory(np2_vram[0] + grphymax * 640, (scrnymax - grphymax) * 640);
+-		ZeroMemory(np2_vram[1] + grphymax * 640, (scrnymax - grphymax) * 640);
+-	}
+-	return(TRUE);
+-}
+-
 +#include	<compiler.h>
 +#include	<scrnmng.h>
 +#include	<pccore.h>
@@ -156,11 +328,41 @@ index 0000000..a761af2
 +}
 +
 diff --git a/vram/dispsync.h b/vram/dispsync.h
-new file mode 100755
-index 0000000..6e91691
---- /dev/null
+index 3e6bd4a..6e91691 100644
+--- a/vram/dispsync.h
 +++ b/vram/dispsync.h
-@@ -0,0 +1,31 @@
+@@ -1,31 +1,31 @@
+-
+-typedef struct {
+-	UINT	text_vbp;
+-	UINT	textymax;
+-	UINT	grph_vbp;
+-	UINT	grphymax;
+-
+-	UINT	scrnxpos;
+-	UINT	scrnxmax;
+-	UINT	scrnxextend;
+-	UINT	scrnymax;
+-	UINT32	textvad;
+-	UINT32	grphvad;
+-} DSYNC;
+-
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-extern	DSYNC	dsync;
+-
+-void dispsync_initialize(void);
+-BOOL dispsync_renewalmode(void);
+-BOOL dispsync_renewalhorizontal(void);
+-BOOL dispsync_renewalvertical(void);
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +
 +typedef struct {
 +	UINT	text_vbp;
@@ -193,11 +395,331 @@ index 0000000..6e91691
 +#endif
 +
 diff --git a/vram/makegrex.c b/vram/makegrex.c
-new file mode 100755
-index 0000000..f70d4a1
---- /dev/null
+index 761b822..f70d4a1 100644
+--- a/vram/makegrex.c
 +++ b/vram/makegrex.c
-@@ -0,0 +1,321 @@
+@@ -1,321 +1,321 @@
+-#include	"compiler.h"
+-
+-#if defined(SUPPORT_PC9821)
+-
+-#include	"cpucore.h"
+-#include	"pccore.h"
+-#include	"iocore.h"
+-#include	"vram.h"
+-#include	"scrndraw.h"
+-#include	"dispsync.h"
+-#include	"makegrex.h"
+-
+-
+-typedef struct {
+-	UINT32	*vm;
+-	UINT	liney;
+-	UINT	pitch;
+-} _MKGREX, *MKGREX;
+-
+-
+-static BOOL grphput_indirty0(MKGREX mkgrex, int gpos) {
+-
+-	_MKGREX	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrex;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW15(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	remain = LOW14(remain) >> 4;
+-	while(1) {
+-		vc = vad;
+-		p = mg.vm;
+-		pterm = p + (80 * 2);
+-		do {
+-			if (vramupdate[vc] & 1) {
+-				renewal_line[mg.liney] |= 1;
+-				p[0] = *(UINT32 *)(vramex + (vc * 8) + 0);
+-				p[1] = *(UINT32 *)(vramex + (vc * 8) + 4);
+-			}
+-			vc = LOW15(vc + 1);
+-			p += 2;
+-		} while(p < pterm);
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		vad = LOW15(vad + mg.pitch);
+-	}
+-	mkgrex->vm = mg.vm;
+-	mkgrex->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-static BOOL grphput_all0(MKGREX mkgrex, int gpos) {
+-
+-	_MKGREX	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrex;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW15(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	remain = LOW14(remain) >> 4;
+-	while(1) {
+-		vc = vad;
+-		p = mg.vm;
+-		pterm = p + (80 * 2);
+-		do {
+-			p[0] = *(UINT32 *)(vramex + (vc * 8) + 0);
+-			p[1] = *(UINT32 *)(vramex + (vc * 8) + 4);
+-			vc = LOW15(vc + 1);
+-			p += 2;
+-		} while(p < pterm);
+-		renewal_line[mg.liney] |= 1;
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		vad = LOW15(vad + mg.pitch);
+-	}
+-	mkgrex->vm = mg.vm;
+-	mkgrex->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-static BOOL grphput_indirty1(MKGREX mkgrex, int gpos) {
+-
+-	_MKGREX	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrex;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW15(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	remain = LOW14(remain) >> 4;
+-	while(1) {
+-		vc = vad;
+-		p = mg.vm;
+-		pterm = p + (80 * 2);
+-		do {
+-			if (vramupdate[vc] & 2) {
+-				renewal_line[mg.liney] |= 2;
+-				p[0] = *(UINT32 *)(vramex + 0x40000 + (vc * 8) + 0);
+-				p[1] = *(UINT32 *)(vramex + 0x40000 + (vc * 8) + 4);
+-			}
+-			vc = LOW15(vc + 1);
+-			p += 2;
+-		} while(p < pterm);
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		vad = LOW15(vad + mg.pitch);
+-	}
+-	mkgrex->vm = mg.vm;
+-	mkgrex->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-static BOOL grphput_all1(MKGREX mkgrex, int gpos) {
+-
+-	_MKGREX	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrex;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW15(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	remain = LOW14(remain) >> 4;
+-	while(1) {
+-		vc = vad;
+-		p = mg.vm;
+-		pterm = p + (80 * 2);
+-		do {
+-			p[0] = *(UINT32 *)(vramex + 0x40000 + (vc * 8) + 0);
+-			p[1] = *(UINT32 *)(vramex + 0x40000 + (vc * 8) + 4);
+-			vc = LOW15(vc + 1);
+-			p += 2;
+-		} while(p < pterm);
+-		renewal_line[mg.liney] |= 2;
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		vad = LOW15(vad + mg.pitch);
+-	}
+-	mkgrex->vm = mg.vm;
+-	mkgrex->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-
+-// ---- all
+-
+-static BOOL grphput_indirty(MKGREX mkgrex, int gpos) {
+-
+-	_MKGREX	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrex;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW16(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	remain = LOW15(remain) >> 4;
+-	while(1) {
+-		vc = vad;
+-		p = mg.vm;
+-		pterm = p + (80 * 2);
+-		do {
+-			if (vramupdate[LOW15(vc)] & 3) {
+-				renewal_line[mg.liney] |= 3;
+-				p[0] = *(UINT32 *)(vramex + (vc * 8) + 0);
+-				p[1] = *(UINT32 *)(vramex + (vc * 8) + 4);
+-			}
+-			vc = LOW16(vc + 1);
+-			p += 2;
+-		} while(p < pterm);
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		vad = LOW16(vad + mg.pitch);
+-	}
+-	mkgrex->vm = mg.vm;
+-	mkgrex->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-static BOOL grphput_all(MKGREX mkgrex, int gpos) {
+-
+-	_MKGREX	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrex;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW16(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	remain = LOW15(remain) >> 4;
+-	while(1) {
+-		vc = vad;
+-		p = mg.vm;
+-		pterm = p + (80 * 2);
+-		do {
+-			p[0] = *(UINT32 *)(vramex + (vc * 8) + 0);
+-			p[1] = *(UINT32 *)(vramex + (vc * 8) + 4);
+-			vc = LOW16(vc + 1);
+-			p += 2;
+-		} while(p < pterm);
+-		renewal_line[mg.liney] |= 3;
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		vad = LOW16(vad + mg.pitch);
+-	}
+-	mkgrex->vm = mg.vm;
+-	mkgrex->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-
+-// ----
+-
+-void VRAMCALL makegrphex(int page, int alldraw) {
+-
+-	_MKGREX	mg;
+-	int		i;
+-	BOOL	(*grphput)(MKGREX mkgrex, int gpos);
+-	UINT32	mask;
+-
+-	mg.pitch = gdc.s.para[GDC_PITCH];
+-	if (!(gdc.clock & 0x80)) {
+-		mg.pitch <<= 1;
+-	}
+-	mg.pitch &= 0xfe;
+-	mg.liney = dsync.grph_vbp;
+-
+-	if (gdc.analog & 4) {
+-		mg.vm = (UINT32 *)(np2_vram[0] + dsync.grphvad);
+-		grphput = (alldraw)?grphput_all:grphput_indirty;
+-		mask = ~0x03030303;
+-	}
+-	else if (!page) {
+-		mg.vm = (UINT32 *)(np2_vram[0] + dsync.grphvad);
+-		grphput = (alldraw)?grphput_all0:grphput_indirty0;
+-		mask = ~0x01010101;
+-	}
+-	else {
+-		mg.vm = (UINT32 *)(np2_vram[1] + dsync.grphvad);
+-		grphput = (alldraw)?grphput_all1:grphput_indirty1;
+-		mask = ~0x02020202;
+-	}
+-	while(1) {
+-		if ((*grphput)(&mg, 0)) {
+-			break;
+-		}
+-		if ((*grphput)(&mg, 4)) {
+-			break;
+-		}
+-	}
+-	for (i=0; i<0x8000; i+=4) {
+-		*(UINT32 *)(vramupdate + i) &= mask;
+-	}
+-}
+-#endif
+-
 +#include	<compiler.h>
 +
 +#if defined(SUPPORT_PC9821)
@@ -520,11 +1042,25 @@ index 0000000..f70d4a1
 +#endif
 +
 diff --git a/vram/makegrex.h b/vram/makegrex.h
-new file mode 100755
-index 0000000..06faf8c
---- /dev/null
+index 1322124..06faf8c 100644
+--- a/vram/makegrex.h
 +++ b/vram/makegrex.h
-@@ -0,0 +1,15 @@
+@@ -1,15 +1,15 @@
+-
+-#if defined(SUPPORT_PC9821)
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-void VRAMCALL makegrphex(int page, int alldraw);
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
+-#endif
+-
 +
 +#if defined(SUPPORT_PC9821)
 +
@@ -541,11 +1077,463 @@ index 0000000..06faf8c
 +#endif
 +
 diff --git a/vram/makegrph.c b/vram/makegrph.c
-new file mode 100755
-index 0000000..e95ce37
---- /dev/null
+index 153d2fd..e95ce37 100644
+--- a/vram/makegrph.c
 +++ b/vram/makegrph.c
-@@ -0,0 +1,453 @@
+@@ -1,453 +1,453 @@
+-#include	"compiler.h"
+-#include	"cpucore.h"
+-#include	"pccore.h"
+-#include	"iocore.h"
+-#include	"vram.h"
+-#include	"scrndraw.h"
+-#include	"dispsync.h"
+-#include	"makegrph.h"
+-#include	"makegrph.mcr"
+-
+-
+-typedef struct {
+-	UINT32	*vm;
+-	UINT	liney;
+-//	UINT	pitch;
+-	UINT	lr;
+-} _MKGRPH, *MKGRPH;
+-
+-
+-#if (!defined(MEMOPTIMIZE)) || (MEMOPTIMIZE == 0)
+-
+-	UINT32	grph_table[4*256*2];
+-
+-void makegrph_initialize(void) {
+-
+-	int		i, j;
+-	UINT8	bit;
+-	UINT32	tmp;
+-
+-	tmp = 0;
+-	for (i=0; i<256; i++) {
+-#if defined(BYTESEX_LITTLE)
+-		for (bit=1; bit<0x10; bit<<=1)
+-#else
+-		for (bit=8; bit; bit>>=1)
+-#endif
+-		{
+-			tmp <<= 8;
+-			if (i & bit) {
+-				tmp++;
+-			}
+-		}
+-		for (j=0; j<4; j++, tmp<<=1) {
+-			grph_table[j*512+i*2+1] = tmp;
+-		}
+-#if defined(BYTESEX_LITTLE)
+-		for (; bit; bit<<=1)
+-#else
+-		for (bit=0x80; bit & 0xf0; bit>>=1)
+-#endif
+-		{
+-			tmp <<= 8;
+-			if (i & bit) {
+-				tmp++;
+-			}
+-		}
+-		for (j=0; j<4; j++, tmp<<=1) {
+-			grph_table[j*512+i*2+0] = tmp;
+-		}
+-	}
+-}
+-
+-#elif (MEMOPTIMIZE == 1)
+-
+-	UINT32	grph_table1[256*2];
+-
+-void makegrph_initialize(void) {
+-
+-	int		i;
+-	UINT8	bit;
+-	UINT32	tmp;
+-
+-	tmp = 0;
+-	for (i=0; i<256; i++) {
+-#if defined(BYTESEX_LITTLE)
+-		for (bit=1; bit<0x10; bit<<=1)
+-#else
+-		for (bit=8; bit; bit>>=1)
+-#endif
+-		{
+-			tmp <<= 8;
+-			if (i & bit) {
+-				tmp++;
+-			}
+-		}
+-		grph_table1[i*2+1] = tmp;
+-#if defined(BYTESEX_LITTLE)
+-		for (; bit; bit<<=1)
+-#else
+-		for (bit=0x80; bit & 0xf0; bit>>=1)
+-#endif
+-		{
+-			tmp <<= 8;
+-			if (i & bit) {
+-				tmp++;
+-			}
+-		}
+-		grph_table1[i*2+0] = tmp;
+-	}
+-}
+-
+-#else
+-
+-	UINT32	grph_table0[16];
+-
+-void makegrph_initialize(void) {
+-
+-	int		i;
+-	UINT8	bit;
+-	UINT32	tmp;
+-
+-	tmp = 0;
+-	for (i=0; i<16; i++) {
+-#if defined(BYTESEX_LITTLE)
+-		for (bit=1; bit<0x10; bit<<=1)
+-#else
+-		for (bit=8; bit; bit>>=1)
+-#endif
+-		{
+-			tmp <<= 8;
+-			if (i & bit) {
+-				tmp++;
+-			}
+-		}
+-		grph_table0[i] = tmp;
+-	}
+-}
+-#endif
+-
+-
+-static BOOL grphput_indirty0(MKGRPH mkgrph, int gpos) {
+-
+-	_MKGRPH	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	pitch;
+-	UINT	mul;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrph;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW15(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	pitch = gdc.s.para[GDC_PITCH];
+-	if (!(remain & (1 << 14))) {
+-		pitch <<= 1;
+-	}
+-	pitch &= 0xfe;
+-	remain = LOW14(remain) >> 4;
+-	mul = mg.lr;
+-	while(1) {
+-		if ((!(mg.liney & 1)) || (!(gdc.mode1 & 0x10))) {
+-			vc = vad;
+-			p = mg.vm;
+-			pterm = p + (80 * 2);
+-			do {
+-				if (vramupdate[vc] & 1) {
+-					renewal_line[mg.liney] |= 1;
+-					GRPHDATASET(p, vc);
+-				}
+-				vc = LOW15(vc + 1);
+-				p += 2;
+-			} while(p < pterm);
+-		}
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		mul--;
+-		if (!mul) {
+-			mul = mg.lr;
+-			vad = LOW15(vad + pitch);
+-		}
+-	}
+-	mkgrph->vm = mg.vm;
+-	mkgrph->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-static BOOL grphput_indirty1(MKGRPH mkgrph, int gpos) {
+-
+-	_MKGRPH	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	pitch;
+-	UINT	mul;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrph;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW15(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	pitch = gdc.s.para[GDC_PITCH];
+-	if (!(remain & (1 << 14))) {
+-		pitch <<= 1;
+-	}
+-	pitch &= 0xfe;
+-	remain = LOW14(remain) >> 4;
+-	mul = mg.lr;
+-	while(1) {
+-		if ((!(mg.liney & 1)) || (!(gdc.mode1 & 0x10))) {
+-			vc = vad;
+-			p = mg.vm;
+-			pterm = p + (80 * 2);
+-			do {
+-				if (vramupdate[vc] & 2) {
+-					renewal_line[mg.liney] |= 2;
+-					GRPHDATASET(p, vc + VRAM_STEP);
+-				}
+-				vc = LOW15(vc + 1);
+-				p += 2;
+-			} while(p < pterm);
+-		}
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		mul--;
+-		if (!mul) {
+-			mul = mg.lr;
+-			vad = LOW15(vad + pitch);
+-		}
+-	}
+-	mkgrph->vm = mg.vm;
+-	mkgrph->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-static BOOL grphput_all0(MKGRPH mkgrph, int gpos) {
+-
+-	_MKGRPH	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	pitch;
+-	UINT	mul;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrph;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW15(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	pitch = gdc.s.para[GDC_PITCH];
+-	if (!(remain & (1 << 14))) {
+-		pitch <<= 1;
+-	}
+-	pitch &= 0xfe;
+-	remain = LOW14(remain) >> 4;
+-	mul = mg.lr;
+-	while(1) {
+-		if ((!(mg.liney & 1)) || (!(gdc.mode1 & 0x10))) {
+-			vc = vad;
+-			p = mg.vm;
+-			pterm = p + (80 * 2);
+-			do {
+-				GRPHDATASET(p, vc);
+-				vc = LOW15(vc + 1);
+-				p += 2;
+-			} while(p < pterm);
+-		}
+-		renewal_line[mg.liney] |= 1;
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		mul--;
+-		if (!mul) {
+-			mul = mg.lr;
+-			vad = LOW15(vad + pitch);
+-		}
+-	}
+-	mkgrph->vm = mg.vm;
+-	mkgrph->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-static BOOL grphput_all1(MKGRPH mkgrph, int gpos) {
+-
+-	_MKGRPH	mg;
+-	UINT	vad;
+-	UINT	remain;
+-	UINT	pitch;
+-	UINT	mul;
+-	UINT	vc;
+-	UINT32	*p;
+-	UINT32	*pterm;
+-
+-	mg = *mkgrph;
+-	vad = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 0);
+-	vad = LOW15(vad << 1);
+-	remain = LOADINTELWORD(gdc.s.para + GDC_SCROLL + gpos + 2);
+-	pitch = gdc.s.para[GDC_PITCH];
+-	if (!(remain & (1 << 14))) {
+-		pitch <<= 1;
+-	}
+-	pitch &= 0xfe;
+-	remain = LOW14(remain) >> 4;
+-	mul = mg.lr;
+-	while(1) {
+-		if ((!(mg.liney & 1)) || (!(gdc.mode1 & 0x10))) {
+-			vc = vad;
+-			p = mg.vm;
+-			pterm = p + (80 * 2);
+-			do {
+-				GRPHDATASET(p, vc + VRAM_STEP);
+-				vc = LOW15(vc + 1);
+-				p += 2;
+-			} while(p < pterm);
+-		}
+-		renewal_line[mg.liney] |= 2;
+-		mg.liney++;
+-		if (mg.liney >= dsync.grphymax) {
+-			return(TRUE);
+-		}
+-		mg.vm += 80*2;
+-		remain--;
+-		if (!remain) {
+-			break;
+-		}
+-		mul--;
+-		if (!mul) {
+-			mul = mg.lr;
+-			vad = LOW15(vad + pitch);
+-		}
+-	}
+-	mkgrph->vm = mg.vm;
+-	mkgrph->liney = mg.liney;
+-	return(FALSE);
+-}
+-
+-void VRAMCALL makegrph(int page, int alldraw) {
+-
+-	_MKGRPH	mg;
+-	int		i;
+-
+-//	mg.pitch = gdc.s.para[GDC_PITCH];
+-//	if (!(gdc.clock & 0x80)) {
+-//		mg.pitch <<= 1;
+-//	}
+-//	mg.pitch &= 0xfe;
+-	mg.lr = (gdc.s.para[GDC_CSRFORM] & 0x1f) + 1;
+-	mg.liney = dsync.grph_vbp;
+-
+-	if (!page) {
+-		mg.vm = (UINT32 *)(np2_vram[0] + dsync.grphvad);
+-		if (!alldraw) {
+-			while(1) {
+-				if (grphput_indirty0(&mg, 0)) {
+-					break;
+-				}
+-				if (grphput_indirty0(&mg, 4)) {
+-					break;
+-				}
+-				if (np2cfg.uPD72020) {
+-					continue;
+-				}
+-				if (grphput_indirty0(&mg, 8)) {
+-					break;
+-				}
+-				if (grphput_indirty0(&mg, 12)) {
+-					break;
+-				}
+-			}
+-		}
+-		else {
+-			while(1) {
+-				if (grphput_all0(&mg, 0)) {
+-					break;
+-				}
+-				if (grphput_all0(&mg, 4)) {
+-					break;
+-				}
+-				if (np2cfg.uPD72020) {
+-					continue;
+-				}
+-				if (grphput_all0(&mg, 8)) {
+-					break;
+-				}
+-				if (grphput_all0(&mg, 12)) {
+-					break;
+-				}
+-			}
+-		}
+-		for (i=0; i<0x8000; i+=4) {
+-			*(UINT32 *)(vramupdate + i) &= ~0x01010101;
+-		}
+-	}
+-	else {
+-		mg.vm = (UINT32 *)(np2_vram[1] + dsync.grphvad);
+-		if (!alldraw) {
+-			while(1) {
+-				if (grphput_indirty1(&mg, 0)) {
+-					break;
+-				}
+-				if (grphput_indirty1(&mg, 4)) {
+-					break;
+-				}
+-				if (np2cfg.uPD72020) {
+-					continue;
+-				}
+-				if (grphput_indirty1(&mg, 8)) {
+-					break;
+-				}
+-				if (grphput_indirty1(&mg, 12)) {
+-					break;
+-				}
+-			}
+-		}
+-		else {
+-			while(1) {
+-				if (grphput_all1(&mg, 0)) {
+-					break;
+-				}
+-				if (grphput_all1(&mg, 4)) {
+-					break;
+-				}
+-				if (np2cfg.uPD72020) {
+-					continue;
+-				}
+-				if (grphput_all1(&mg, 8)) {
+-					break;
+-				}
+-				if (grphput_all1(&mg, 12)) {
+-					break;
+-				}
+-			}
+-		}
+-		for (i=0; i<0x8000; i+=4) {
+-			*(UINT32 *)(vramupdate + i) &= ~0x02020202;
+-		}
+-	}
+-}
+-
 +#include	<compiler.h>
 +#include	<cpucore.h>
 +#include	<pccore.h>
@@ -1000,11 +1988,28 @@ index 0000000..e95ce37
 +}
 +
 diff --git a/vram/makegrph.h b/vram/makegrph.h
-new file mode 100755
-index 0000000..c276afe
---- /dev/null
+index 9ab45d4..c276afe 100644
+--- a/vram/makegrph.h
 +++ b/vram/makegrph.h
-@@ -0,0 +1,18 @@
+@@ -1,18 +1,18 @@
+-
+-enum {
+-	GRPHXMAX	= 80,
+-	GRPHYMAX	= 400
+-};
+-
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-void makegrph_initialize(void);
+-void VRAMCALL makegrph(int page, int alldraw);
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +
 +enum {
 +	GRPHXMAX	= 80,
@@ -1024,11 +2029,90 @@ index 0000000..c276afe
 +#endif
 +
 diff --git a/vram/makegrph.mcr b/vram/makegrph.mcr
-new file mode 100755
-index 0000000..0c0bfb0
---- /dev/null
+index 8afe73b..0c0bfb0 100644
+--- a/vram/makegrph.mcr
 +++ b/vram/makegrph.mcr
-@@ -0,0 +1,80 @@
+@@ -1,80 +1,80 @@
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-#if (!defined(MEMOPTIMIZE)) || (MEMOPTIMIZE == 0)
+-
+-extern	UINT32	grph_table[4*256*2];
+-
+-#define GRPHDATASET(d, a) {							\
+-	UINT8 dat;										\
+-	UINT32 l32, r32;								\
+-	dat = mem[(a) + VRAM_B];						\
+-	l32 = grph_table[dat*2 + 0*0x200 + 0];			\
+-	r32 = grph_table[dat*2 + 0*0x200 + 1];			\
+-	dat = mem[(a) + VRAM_R];						\
+-	l32 += grph_table[dat*2 + 1*0x200 + 0];			\
+-	r32 += grph_table[dat*2 + 1*0x200 + 1];			\
+-	dat = mem[(a) + VRAM_G];						\
+-	l32 += grph_table[dat*2 + 2*0x200 + 0];			\
+-	r32 += grph_table[dat*2 + 2*0x200 + 1];			\
+-	dat = mem[(a) + VRAM_E];						\
+-	l32 += grph_table[dat*2 + 3*0x200 + 0];			\
+-	r32 += grph_table[dat*2 + 3*0x200 + 1];			\
+-	(d)[0] = l32;									\
+-	(d)[1] = r32;									\
+-}
+-
+-#elif (MEMOPTIMIZE == 1)						// for Mac
+-
+-extern	UINT32	grph_table1[256*2];
+-
+-#define GRPHDATASET(d, a) {							\
+-	UINT8 dat;										\
+-	UINT32 l32, r32;								\
+-	dat = mem[(a) + VRAM_B];						\
+-	l32 = grph_table1[dat*2 + 0];					\
+-	r32 = grph_table1[dat*2 + 1];					\
+-	dat = mem[(a) + VRAM_R];						\
+-	l32 += grph_table1[dat*2 + 0] << 1;				\
+-	r32 += grph_table1[dat*2 + 1] << 1;				\
+-	dat = mem[(a) + VRAM_G];						\
+-	l32 += grph_table1[dat*2 + 0] << 2;				\
+-	r32 += grph_table1[dat*2 + 1] << 2;				\
+-	dat = mem[(a) + VRAM_E];						\
+-	l32 += grph_table1[dat*2 + 0] << 3;				\
+-	r32 += grph_table1[dat*2 + 1] << 3;				\
+-	(d)[0] = l32;									\
+-	(d)[1] = r32;									\
+-}
+-
+-#else											// for ARM
+-
+-extern	UINT32	grph_table0[16];
+-
+-#define GRPHDATASET(d, a) {							\
+-	UINT8 dat;										\
+-	UINT32 l32, r32;								\
+-	dat = mem[(a) + VRAM_B];						\
+-	l32 = grph_table0[dat >> 4];					\
+-	r32 = grph_table0[dat & 15];					\
+-	dat = mem[(a) + VRAM_R];						\
+-	l32 += grph_table0[dat >> 4] << 1;				\
+-	r32 += grph_table0[dat & 15] << 1;				\
+-	dat = mem[(a) + VRAM_G];						\
+-	l32 += grph_table0[dat >> 4] << 2;				\
+-	r32 += grph_table0[dat & 15] << 2;				\
+-	dat = mem[(a) + VRAM_E];						\
+-	l32 += grph_table0[dat >> 4] << 3;				\
+-	r32 += grph_table0[dat & 15] << 3;				\
+-	(d)[0] = l32;									\
+-	(d)[1] = r32;									\
+-}
+-
+-#endif
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +
 +#ifdef __cplusplus
 +extern "C" {
@@ -1110,11 +2194,767 @@ index 0000000..0c0bfb0
 +#endif
 +
 diff --git a/vram/maketext.c b/vram/maketext.c
-new file mode 100755
-index 0000000..fd7ec3c
---- /dev/null
+index f68f30a..fd7ec3c 100644
+--- a/vram/maketext.c
 +++ b/vram/maketext.c
-@@ -0,0 +1,765 @@
+@@ -1,757 +1,765 @@
+-#include	"compiler.h"
+-#include	"cpucore.h"
+-#include	"pccore.h"
+-#include	"iocore.h"
+-#include	"vram.h"
+-#include	"scrndraw.h"
+-#include	"dispsync.h"
+-#include	"maketext.h"
+-#include	"font/font.h"
+-
+-
+-		TRAM_T	tramflag;
+-static	UINT32	text_table[512];
+-static	UINT32	text_tblx2[512][2];
+-
+-
+-void maketext_initialize(void) {
+-
+-	int		i;
+-	int		j;
+-	UINT8	bit;
+-
+-	ZeroMemory(text_table, sizeof(text_table));
+-	for (i=0; i<8; i++) {
+-		for (j=0; j<16; j++) {
+-#if defined(BYTESEX_LITTLE)
+-			for (bit=1; bit<0x10; bit<<=1)
+-#elif defined(BYTESEX_BIG)
+-			for (bit=8; bit; bit>>=1)
+-#endif
+-			{
+-				text_table[i*16+j] <<= 8;
+-				text_table[i*16+j+128] <<= 8;
+-				if (j & bit) {
+-					text_table[i*16+j] |= (i+1) << 4;
+-				}
+-				else {
+-					text_table[i*16+j+128] |= (i+1) << 4;
+-				}
+-			}
+-		}
+-	}
+-	for (i=0; i<256; i++) {
+-		text_table[i+256] = text_table[i ^ 0x80];
+-	}
+-	for (i=0; i<512; i++) {
+-#if defined(BYTESEX_LITTLE)
+-		text_tblx2[i][0] = (text_table[i] & 0x000000ff);
+-		text_tblx2[i][0] |= (text_table[i] & 0x0000ffff) << 8;
+-		text_tblx2[i][0] |= (text_table[i] & 0x0000ff00) << 16;
+-		text_tblx2[i][1] = (text_table[i] & 0x00ff0000) >> 16;
+-		text_tblx2[i][1] |= (text_table[i] & 0xffff0000) >> 8;
+-		text_tblx2[i][1] |= (text_table[i] & 0xff000000);
+-#elif defined(BYTESEX_BIG)
+-		text_tblx2[i][0]  = (text_table[i] & 0xff000000);
+-		text_tblx2[i][0] |= (text_table[i] & 0xffff0000) >> 8;
+-		text_tblx2[i][0] |= (text_table[i] & 0x00ff0000) >> 16;
+-		text_tblx2[i][1]  = (text_table[i] & 0x0000ff00) << 16;
+-		text_tblx2[i][1] |= (text_table[i] & 0x0000ffff) << 8;
+-		text_tblx2[i][1] |= (text_table[i] & 0x000000ff);
+-#endif
+-	}
+-}
+-
+-void maketext_reset(void) {
+-
+-	ZeroMemory(&tramflag, sizeof(tramflag));
+-}
+-
+-static UINT8 dirtyonblink(void) {
+-
+-	UINT8	ret;
+-	int		i;
+-
+-	ret = 0;
+-	for (i=0; i<0x1000; i++) {
+-		if (mem[0xa2000 + i*2] & TXTATR_BL) {
+-			ret = 1;
+-			tramupdate[i] |= 1;
+-		}
+-	}
+-	return(ret);
+-}
+-
+-UINT8 maketext_curblink(void) {
+-
+-	UINT8	ret;
+-	UINT16	csrw;
+-
+-	ret = 0;
+-	if (tramflag.renewal & 1) {
+-		tramflag.curdisp = tramflag.count & 1;
+-		if (!(gdc.m.para[GDC_CSRFORM] & 0x80)) {
+-			tramflag.curdisp = 0;
+-		}
+-		else if (gdc.m.para[GDC_CSRFORM+1] & 0x20) {
+-			tramflag.curdisp = 1;
+-		}
+-		csrw = LOADINTELWORD(gdc.m.para + GDC_CSRW);
+-		if ((tramflag.curdisp != tramflag.curdisplast) ||
+-			(tramflag.curpos != csrw)) {
+-			if ((tramflag.curdisplast) && (tramflag.curpos < 0x1000)) {
+-				tramupdate[tramflag.curpos] |= 1;
+-			}
+-			tramflag.curdisplast = tramflag.curdisp;
+-			tramflag.curpos = csrw;
+-			if ((tramflag.curdisplast) && (tramflag.curpos < 0x1000)) {
+-				tramupdate[tramflag.curpos] |= 1;
+-			}
+-			ret = GDCSCRN_REDRAW;
+-		}
+-	}
+-	if (tramflag.renewal & 2) {
+-		tramflag.blinkdisp = ((tramflag.count & 3)?1:0);
+-		if (tramflag.blink) {
+-			tramflag.blink = dirtyonblink();
+-			if (tramflag.blink) {
+-				ret = GDCSCRN_REDRAW;
+-			}
+-		}
+-	}
+-	tramflag.renewal = 0;
+-	return(ret);
+-}
+-
+-void maketext(int text_renewal) {
+-
+-	UINT8	multiple;
+-	UINT8	TEXT_LR;
+-	int		TEXT_PL;
+-	int		TEXT_BL;
+-	int		TEXT_CL;
+-	int		TEXT_SUR;
+-	int		TEXT_SDR;
+-	int 	topline;
+-	int		lines;
+-	int		nowline;
+-	UINT8	wait2;
+-	UINT	pitch;
+-	UINT	csrw;
+-	UINT	esi;
+-	UINT	scroll;
+-	int		scrp;
+-	UINT8	wait1;
+-	UINT8	LRcnt;
+-	BOOL	reloadline;
+-	int		new_flag;
+-	int		cur_line;
+-	int		linecnt;
+-	UINT8	*q;
+-	UINT	y;
+-	UINT8	line_effect = 0;		// for gcc
+-	int		x;
+-	UINT32	bitmap[TEXTXMAX];
+-	UINT8	curx[TEXTXMAX+1];
+-	UINT16	color[TEXTXMAX];
+-
+-	if (text_renewal) {
+-		tramflag.gaiji = 0;
+-	}
+-
+-	multiple = ((!(gdc.mode1 & 8)) && (!(gdc.crt15khz & 1)))?0x20:0x00;
+-	TEXT_LR = gdc.m.para[GDC_CSRFORM] & 0x1f;
+-	TEXT_PL = crtc.reg.pl;
+-	TEXT_BL = crtc.reg.bl + 1;
+-	TEXT_CL = crtc.reg.cl;
+-	TEXT_SUR = crtc.reg.sur;
+-	TEXT_SDR = -1;
+-	if (TEXT_CL > 16) {
+-		TEXT_CL = 16;
+-	}
+-	if (TEXT_PL >= 16) {
+-		topline = TEXT_PL - 32;
+-		lines = TEXT_BL;
+-	}
+-	else {
+-		topline = TEXT_PL;
+-		lines = TEXT_BL - topline;
+-		if (lines <= 0) {
+-			lines += 32;											// ï‚ê≥
+-		}
+-	}
+-	nowline = topline;
+-
+-	wait2 = 0;
+-	if (!TEXT_SUR) {
+-		wait2 = crtc.reg.ssl;
+-		TEXT_SDR = crtc.reg.sdr + 1;
+-	}
+-	else {
+-		TEXT_SUR = 32 - TEXT_SUR;
+-	}
+-
+-	pitch = gdc.m.para[GDC_PITCH] & 0xfe;
+-	csrw = LOADINTELWORD(gdc.m.para + GDC_CSRW);
+-	esi = LOW12(LOADINTELWORD(gdc.m.para + GDC_SCROLL));
+-	scroll = LOADINTELWORD(gdc.m.para + GDC_SCROLL + 2);
+-	scroll = LOW14(scroll) >> 4;
+-	scrp = 0;
+-
+-	wait1 = 0;
+-	LRcnt = 0;
+-	reloadline = FALSE;
+-	new_flag = 0;
+-	cur_line = -1;
+-	linecnt = 0;
+-	q = np2_tram + dsync.textvad;
+-	for (y=dsync.text_vbp; y<dsync.textymax;) {
+-		if (!wait1) {
+-			if (LRcnt-- == 0) {
+-				LRcnt = TEXT_LR;
+-				reloadline = TRUE;
+-			}
+-		}
+-		else {
+-			wait1--;
+-		}
+-		if (reloadline) {
+-			reloadline = FALSE;
+-			new_flag = text_renewal;
+-			cur_line = -1;
+-			line_effect = 0;
+-			if (!new_flag) {
+-				UINT edi;
+-				edi = esi;
+-				for (x=0; x<TEXTXMAX; x++) {
+-					if (tramupdate[edi]) {
+-						new_flag = 1;
+-						break;
+-					}
+-					edi = LOW12(edi + 1);
+-				}
+-			}
+-			if (new_flag) {
+-				UINT edi;
+-				UINT32 gaiji1st;
+-				BOOL kanji2nd;
+-				UINT32 lastbitp;
+-				edi = esi;
+-				gaiji1st = 0;
+-				kanji2nd = FALSE;
+-				lastbitp = 0;
+-				for (x=0; x<TEXTXMAX; x++) {						// width80
+-					if (edi == csrw) {
+-						cur_line = x;
+-					}
+-					curx[x] = mem[0xa2000 + edi*2] & (~TEXTATR_RGB);
+-					line_effect |= curx[x];
+-					color[x] = (mem[0xa2000 + edi*2] & (TEXTATR_RGB)) >> 1;
+-					if (curx[x] & TXTATR_RV) {				// text reverse
+-						color[x] |= 0x80;
+-					}
+-					if (kanji2nd) {
+-						kanji2nd = FALSE;
+-						bitmap[x] = lastbitp + 0x800;
+-						curx[x-1] |= 0x80;
+-						curx[x] |= curx[x-1] & 0x20;
+-					}
+-					else if (!(mem[0xa0001 + edi*2] & gdc.bitac)) {
+-						gaiji1st = 0;
+-						if (gdc.mode1 & 8) {
+-							bitmap[x] = 0x80000 +
+-										(mem[0xa0000 + edi*2] << 4);
+-							if ((curx[x] & TXTATR_BG) && (gdc.mode1 & 1)) {
+-								bitmap[x] += 0x1000;
+-							}
+-						}
+-						else {
+-							bitmap[x] = 0x82000 + 
+-										(mem[0xa0000 + edi*2] << 4);
+-							curx[x] |= multiple;					// ver0.74
+-							if ((curx[x] & TXTATR_BG) && (gdc.mode1 & 1)) {
+-								bitmap[x] += 8;
+-							}
+-						}
+-					}
+-					else {
+-						UINT kc;
+-						kc = LOADINTELWORD(mem + 0xa0000 + edi*2);
+-						bitmap[x] = (kc & 0x7f7f) << 4;
+-						kc &= 0x7f;									// ver0.78
+-						if ((kc == 0x56) || (kc == 0x57)) {
+-							tramflag.gaiji = 1;
+-							if ((gaiji1st) &&
+-								(bitmap[x] == (lastbitp & (~15)))) {
+-								curx[x-1] |= 0x80;
+-							}
+-							bitmap[x] += gaiji1st;
+-							gaiji1st ^= 0x800;
+-						}
+-						else {
+-							gaiji1st = 0;
+-							if ((kc < 0x09) || (kc >= 0x0c)) {
+-								kanji2nd = TRUE;
+-							}
+-						}
+-						if ((curx[x] & TXTATR_BG) && (gdc.mode1 & 1)) {
+-							curx[x] |= 0x20;
+-							bitmap[x] += 8;
+-						}
+-						else if (!(gdc.mode1 & 8)) {
+-							curx[x] |= multiple;
+-						}
+-					}
+-					lastbitp = bitmap[x];
+-					if (!(curx[x] & TXTATR_ST)) {
+-						bitmap[x] = 0;
+-					}
+-					else if (curx[x] & TXTATR_BL) {
+-						tramflag.blink = 1;
+-						if (!tramflag.blinkdisp) {
+-							bitmap[x] = 0;
+-						}
+-					}
+-					edi = LOW12(edi + 1);
+-				}
+-				if (!tramflag.curdisp) {
+-					cur_line = -1;
+-				}
+-			}
+-			esi = LOW12(esi + pitch);
+-		}
+-
+-		if ((!TEXT_SDR) && (nowline >= topline + crtc.reg.ssl)) {
+-			nowline = topline;
+-			TEXT_SDR--;
+-			wait1 = crtc.reg.ssl;
+-		}
+-
+-		if (!wait2) {
+-			if (new_flag) {
+-				renewal_line[y] |= 4;
+-				if (cur_line >= 0) {
+-					if ((nowline >= (gdc.m.para[GDC_CSRFORM+1] & 0x1f)) &&
+-						(nowline <= (gdc.m.para[GDC_CSRFORM+2] >> 3))) {
+-						color[cur_line] |= 256;
+-						if (curx[cur_line] & 0x80) {
+-							color[cur_line+1] |= 256;
+-						}
+-					}
+-					else {
+-						color[cur_line] &= ~(256);
+-						if (curx[cur_line] & 0x80) {
+-							color[cur_line+1] &= ~(256);
+-						}
+-					}
+-				}
+-				if ((nowline >= 0) && (nowline < TEXT_CL)) {
+-					// width80
+-					for (x=0; x<TEXTXMAX; x++) {
+-						int fntline;
+-						UINT8 data;
+-						fntline = nowline;
+-						if (curx[x] & 0x20) {
+-							fntline >>= 1;
+-						}
+-						data = fontrom[bitmap[x] + (fntline & 0x0f)];
+-						*(UINT32 *)(q+0) = text_table[color[x] + (data >> 4)];
+-						*(UINT32 *)(q+4) = text_table[color[x] + (data & 15)];
+-						q += 8;
+-					}
+-				}
+-				else {
+-					// width80
+-					for (x=0; x<(TEXTXMAX); x++) {
+-						*(UINT32 *)(q+0) = text_table[color[x]];
+-						*(UINT32 *)(q+4) = text_table[color[x]];
+-						q += 8;
+-					}
+-				}
+-				if ((line_effect & TXTATR_UL) &&
+-					((nowline + 1) == lines)) {			// ÉAÉìÉ_Å[ÉâÉCÉìà íu
+-					// width80
+-					q -= TEXTXMAX * 8;
+-					q += 4;
+-					for (x=0; x<(TEXTXMAX-1); x++) {
+-						if (curx[x] & TXTATR_UL) {
+-							*(UINT32 *)(q+0) = text_table[(color[x] & 0x70)
+-																	+ 0x0f];
+-							*(UINT32 *)(q+4) = text_table[(color[x+1] & 0x70)
+-																	+ 0x0f];
+-						}
+-						q += 8;
+-					}
+-					if (curx[TEXTXMAX-1] & TXTATR_UL) {
+-						*(UINT32 *)q = text_table[(color[TEXTXMAX-1] & 0x70)
+-																	+ 0x0f];
+-					}
+-					q += 4;
+-				}
+-				if ((line_effect & TXTATR_VL) && (!(gdc.mode1 & 1))) {
+-					// width80
+-					q -= TEXTXMAX * 8;
+-					for (x=0; x<TEXTXMAX; x++) {
+-						if (curx[x] & TXTATR_VL) {
+-							// text_table[] Ç égÇ¡ÇƒÇ»Ç¢ÇÃÇ≈íçà”
+-							*(q+4) |= (color[x] & 0x70) + 0x10;
+-						}
+-						q += 8;
+-					}
+-				}
+-				// *(q+4) |= (color[x] & 0x70) + 0x10; ÇÕÅc
+-				// *(DWORD *)(q+4) |= text_table[(color[x] & 0x70) + 8];
+-				// Ç≈ìôâøÇ…Ç»ÇÈî§ÅEÅEÅE
+-			}
+-			else {
+-				q += TEXTXMAX * 8;
+-			}
+-			y++;
+-			if (!(--scroll)) {
+-				scrp = (scrp + 4) & 0x0c;
+-				esi = LOW12(LOADINTELWORD(gdc.m.para + GDC_SCROLL + scrp));
+-				scroll = LOADINTELWORD(gdc.m.para + GDC_SCROLL + scrp + 2);
+-				scroll = LOW14(scroll) >> 4;
+-				reloadline = TRUE;
+-			}
+-		}
+-		else {
+-			wait2--;
+-		}
+-
+-		nowline++;
+-		if ((TEXT_SDR) && (nowline >= lines)) {
+-			nowline = topline;
+-			TEXT_SDR--;
+-			if (++linecnt == TEXT_SUR) {
+-				wait2 = crtc.reg.ssl;
+-				TEXT_SDR = crtc.reg.sdr + 1;
+-			}
+-		}
+-	}
+-	ZeroMemory(tramupdate, sizeof(tramupdate));
+-}
+-
+-void maketext40(int text_renewal) {
+-
+-	UINT8	multiple;
+-	UINT8	TEXT_LR;
+-	int		TEXT_PL;
+-	int		TEXT_BL;
+-	int		TEXT_CL;
+-	int		TEXT_SUR;
+-	int		TEXT_SDR;
+-	int		topline;
+-	int		lines;
+-	int		nowline;
+-	UINT8	wait2;
+-	UINT	pitch;
+-	UINT	csrw;
+-	UINT	esi;
+-	UINT	scroll;
+-	int		scrp;
+-	UINT8	wait1;
+-	UINT8	LRcnt;
+-	BOOL	reloadline;
+-	int		new_flag;
+-	int		cur_line;
+-	int		linecnt;
+-	UINT8	*q;
+-	UINT	y;
+-	UINT8	line_effect = 0;		// for gcc
+-	int		x;
+-	UINT32	bitmap[TEXTXMAX];
+-	UINT8	curx[TEXTXMAX+1];
+-	UINT16	color[TEXTXMAX];
+-
+-	if (text_renewal) {
+-		tramflag.gaiji = 0;
+-	}
+-
+-	multiple = ((!(gdc.mode1 & 8)) && (!(gdc.crt15khz & 1)))?0x20:0x00;
+-	TEXT_LR = gdc.m.para[GDC_CSRFORM] & 0x1f;
+-	TEXT_PL = crtc.reg.pl;
+-	TEXT_BL = crtc.reg.bl + 1;
+-	TEXT_CL = crtc.reg.cl;
+-	TEXT_SUR = crtc.reg.sur;
+-	TEXT_SDR = -1;
+-	if (TEXT_CL > 16) {
+-		TEXT_CL = 16;
+-	}
+-	if (TEXT_PL >= 16) {
+-		topline = TEXT_PL - 32;
+-		lines = TEXT_BL;
+-	}
+-	else {
+-		topline = TEXT_PL;
+-		lines = TEXT_BL - topline;
+-		if (lines <= 0) {
+-			lines += 32;											// ï‚ê≥
+-		}
+-	}
+-	nowline = topline;
+-
+-	wait2 = 0;
+-	if (!TEXT_SUR) {
+-		wait2 = crtc.reg.ssl;
+-		TEXT_SDR = crtc.reg.sdr + 1;
+-	}
+-	else {
+-		TEXT_SUR = 32 - TEXT_SUR;
+-	}
+-
+-	pitch = gdc.m.para[GDC_PITCH] & 0xfe;
+-	csrw = LOADINTELWORD(gdc.m.para + GDC_CSRW);
+-	esi = LOW12(LOADINTELWORD(gdc.m.para + GDC_SCROLL));
+-	scroll = LOADINTELWORD(gdc.m.para + GDC_SCROLL + 2);
+-	scroll = LOW14(scroll) >> 4;
+-	scrp = 0;
+-
+-	wait1 = 0;
+-	LRcnt = 0;
+-	reloadline = FALSE;
+-	new_flag = 0;
+-	cur_line = -1;
+-	linecnt = 0;
+-	q = np2_tram + dsync.textvad;
+-	for (y=dsync.text_vbp; y<dsync.textymax;) {
+-		if (!wait1) {
+-			if (LRcnt-- == 0) {
+-				LRcnt = TEXT_LR;
+-				reloadline = TRUE;
+-			}
+-		}
+-		else {
+-			wait1--;
+-		}
+-		if (reloadline) {
+-			reloadline = FALSE;
+-			new_flag = text_renewal;
+-			cur_line = -1;
+-			line_effect = 0;
+-			if (!new_flag) {
+-				UINT edi;
+-				edi = esi;
+-				for (x=0; x<TEXTXMAX; x++) {
+-					if (tramupdate[edi]) {
+-						new_flag = 1;
+-						break;
+-					}
+-					edi = LOW12(edi + 1);
+-				}
+-			}
+-			if (new_flag) {
+-				UINT edi;
+-				UINT32 gaiji1st;
+-				BOOL kanji2nd;
+-				UINT32 lastbitp;
+-				edi = esi;
+-				gaiji1st = 0;
+-				kanji2nd = FALSE;
+-				lastbitp = 0;
+-				for (x=0; x<(TEXTXMAX/2); x++) {					// width40
+-					if (edi == csrw) {
+-						cur_line = x;
+-					}
+-					curx[x] = mem[0xa2000 + edi*2] & (~TEXTATR_RGB);
+-					line_effect |= curx[x];
+-					color[x] = (mem[0xa2000 + edi*2] & (TEXTATR_RGB)) >> 1;
+-					if (curx[x] & TXTATR_RV) {				// text reverse
+-						color[x] |= 0x80;
+-					}
+-					if (kanji2nd) {
+-						kanji2nd = FALSE;
+-						bitmap[x] = lastbitp + 0x800;
+-						curx[x-1] |= 0x80;
+-						curx[x] |= curx[x-1] & 0x20;
+-					}
+-					else if (!(mem[0xa0001 + edi*2] & gdc.bitac)) {
+-						gaiji1st = 0;
+-						if (gdc.mode1 & 8) {
+-							bitmap[x] = 0x80000 +
+-										(mem[0xa0000 + edi*2] << 4);
+-							if ((curx[x] & TXTATR_BG) && (gdc.mode1 & 1)) {
+-								bitmap[x] += 0x1000;
+-							}
+-						}
+-						else {
+-							bitmap[x] = 0x82000 + 
+-										(mem[0xa0000 + edi*2] << 4);
+-							curx[x] |= multiple;					// ver0.74
+-							if ((curx[x] & TXTATR_BG) && (gdc.mode1 & 1)) {
+-								bitmap[x] += 8;
+-							}
+-						}
+-					}
+-					else {
+-						UINT kc;
+-						kc = LOADINTELWORD(mem + 0xa0000 + edi*2);
+-						bitmap[x] = (kc & 0x7f7f) << 4;
+-						kc &= 0x7f;									// ver0.78
+-						if ((kc == 0x56) || (kc == 0x57)) {
+-							tramflag.gaiji = 1;
+-							if ((gaiji1st) &&
+-								(bitmap[x] == (lastbitp & (~15)))) {
+-								curx[x-1] |= 0x80;
+-							}
+-							bitmap[x] += gaiji1st;
+-							gaiji1st ^= 0x800;
+-						}
+-						else {
+-							gaiji1st = 0;
+-							if ((kc < 0x09) || (kc >= 0x0c)) {
+-								kanji2nd = TRUE;
+-							}
+-						}
+-						if ((curx[x] & TXTATR_BG) && (gdc.mode1 & 1)) {
+-							curx[x] |= 0x20;
+-							bitmap[x] += 8;
+-						}
+-						else if (!(gdc.mode1 & 8)) {
+-							curx[x] |= multiple;
+-						}
+-					}
+-					lastbitp = bitmap[x];
+-					if (!(curx[x] & TXTATR_ST)) {
+-						bitmap[x] = 0;
+-					}
+-					else if (curx[x] & TXTATR_BL) {
+-						tramflag.blink = 1;
+-						if (!tramflag.blinkdisp) {
+-							bitmap[x] = 0;
+-						}
+-					}
+-					edi = LOW12(edi + 2);							// width40
+-				}
+-				if (!tramflag.curdisp) {
+-					cur_line = -1;
+-				}
+-			}
+-			esi = LOW12(esi + pitch);
+-		}
+-
+-		if ((!TEXT_SDR) && (nowline >= topline + crtc.reg.ssl)) {
+-			nowline = topline;
+-			TEXT_SDR--;
+-			wait1 = crtc.reg.ssl;
+-		}
+-
+-		if (!wait2) {
+-			if (new_flag) {
+-				renewal_line[y] |= 4;
+-				if (cur_line >= 0) {
+-					if ((nowline >= (gdc.m.para[GDC_CSRFORM+1] & 0x1f)) &&
+-						(nowline <= (gdc.m.para[GDC_CSRFORM+2] >> 3))) {
+-						color[cur_line] |= 256;
+-						if (curx[cur_line] & 0x80) {
+-							color[cur_line+1] |= 256;
+-						}
+-					}
+-					else {
+-						color[cur_line] &= ~(256);
+-						if (curx[cur_line] & 0x80) {
+-							color[cur_line+1] &= ~(256);
+-						}
+-					}
+-				}
+-				if ((nowline >= 0) && (nowline < TEXT_CL)) {
+-					// width40
+-					for (x=0; x<(TEXTXMAX/2); x++) {
+-						int fntline;
+-						UINT8 data;
+-						fntline = nowline;
+-						if (curx[x] & 0x20) {
+-							fntline >>= 1;
+-						}
+-						data = fontrom[bitmap[x] + (fntline & 0x0f)];
+-						*(UINT32 *)(q+ 0) = text_tblx2[color[x] +
+-															(data>>4)][0];
+-						*(UINT32 *)(q+ 4) = text_tblx2[color[x] +
+-															(data>>4)][1];
+-						*(UINT32 *)(q+ 8) = text_tblx2[color[x] +
+-															(data&0xf)][0];
+-						*(UINT32 *)(q+12) = text_tblx2[color[x] +
+-															(data&0xf)][1];
+-						q += 16;
+-					}
+-				}
+-				else {
+-					// width40
+-					for (x=0; x<(TEXTXMAX/2); x++) {
+-						*(UINT32 *)(q+ 0) = text_table[color[x]];
+-						*(UINT32 *)(q+ 4) = text_table[color[x]];
+-						*(UINT32 *)(q+ 8) = text_table[color[x]];
+-						*(UINT32 *)(q+12) = text_table[color[x]];
+-						q += 16;
+-					}
+-				}
+-				if ((line_effect & TXTATR_UL) &&
+-					((nowline + 1) == lines)) {			// ÉAÉìÉ_Å[ÉâÉCÉìà íu
+-					// width40
+-					q -= TEXTXMAX * 8;
+-					q += 4;
+-					for (x=0; x<((TEXTXMAX/2)-1); x++) {
+-						if (curx[x] & 8) {
+-							*(UINT32 *)(q+ 0) = text_table[(color[x] & 0x70)
+-																	+ 0x0f];
+-							*(UINT32 *)(q+ 4) = text_table[(color[x] & 0x70)
+-																	+ 0x0f];
+-							*(UINT32 *)(q+ 8) = text_table[(color[x] & 0x70)
+-																	+ 0x0f];
+-							*(UINT32 *)(q+12) = text_table[(color[x+1] & 0x70)
+-																	+ 0x0f];
+-						}
+-						q += 16;
+-					}
+-					if (curx[(TEXTXMAX/2)-1] & TXTATR_UL) {
+-						*(UINT32 *)(q+0) = text_table[
+-										(color[TEXTXMAX-1] & 0x70) + 0x0f];
+-						*(UINT32 *)(q+4) = text_table[
+-										(color[TEXTXMAX-1] & 0x70) + 0x0f];
+-						*(UINT32 *)(q+8) = text_table[
+-										(color[TEXTXMAX-1] & 0x70) + 0x0f];
+-					}
+-					q += 12;
+-				}
+-				if ((line_effect & TXTATR_VL) && (!(gdc.mode1 & 1))) {
+-					// width40
+-					q -= TEXTXMAX * 8;
+-					for (x=0; x<(TEXTXMAX/2); x++) {
+-						if (curx[x] & TXTATR_VL) {
+-							// text_table[] Ç égÇ¡ÇƒÇ»Ç¢ÇÃÇ≈íçà”
+-							*(q+ 4) |= (color[x] & 0x70) + 0x10;
+-							*(q+12) |= (color[x] & 0x70) + 0x10;
+-						}
+-						q += 16;
+-					}
+-				}
+-			}
+-			else {
+-				q += TEXTXMAX * 8;
+-			}
+-			y++;
+-			if (!(--scroll)) {
+-				scrp = (scrp + 4) & 0x0c;
+-				esi = LOW12(LOADINTELWORD(gdc.m.para + GDC_SCROLL + scrp));
+-				scroll = LOADINTELWORD(gdc.m.para + GDC_SCROLL + scrp + 2);
+-				scroll = LOW14(scroll) >> 4;
+-				reloadline = TRUE;
+-			}
+-		}
+-		else {
+-			wait2--;
+-		}
+-
+-		nowline++;
+-		if ((TEXT_SDR) && (nowline >= lines)) {
+-			nowline = topline;
+-			TEXT_SDR--;
+-			if (++linecnt == TEXT_SUR) {
+-				wait2 = crtc.reg.ssl;
+-				TEXT_SDR = crtc.reg.sdr + 1;
+-			}
+-		}
+-	}
+-	ZeroMemory(tramupdate, sizeof(tramupdate));
+-}
+-
 +#include	<compiler.h>
 +#include	<cpucore.h>
 +#include	<pccore.h>
@@ -1881,11 +3721,54 @@ index 0000000..fd7ec3c
 +}
 +
 diff --git a/vram/maketext.h b/vram/maketext.h
-new file mode 100755
-index 0000000..724d56b
---- /dev/null
+index 29257bf..724d56b 100644
+--- a/vram/maketext.h
 +++ b/vram/maketext.h
-@@ -0,0 +1,44 @@
+@@ -1,44 +1,44 @@
+-
+-enum {
+-	TEXTXMAX		= 80,
+-	TEXTYMAX		= 400,
+-
+-	TXTATR_ST		= 0x01,		// ~ÉVÅ[ÉNÉåÉbÉg
+-	TXTATR_BL		= 0x02,		// ÉuÉäÉìÉN
+-	TXTATR_RV		= 0x04,		// ÉäÉoÅ[ÉX
+-	TXTATR_UL		= 0x08,		// ÉAÉìÉ_Å[ÉâÉCÉì
+-	TXTATR_VL		= 0x10,		// ÉoÅ[É`ÉJÉãÉâÉCÉì
+-	TXTATR_BG		= 0x10,		// ä»à’ÉOÉâÉt
+-	TEXTATR_RGB		= 0xe0		// ÉrÉbÉgï¿Ç—ÇÕGRBÇÃèá
+-};
+-
+-typedef struct {
+-	UINT8	timing;
+-	UINT8	count;
+-	UINT8	renewal;
+-	UINT8	gaiji;
+-	UINT8	attr;
+-	UINT8	curdisp;
+-	UINT8	curdisplast;
+-	UINT8	blink;
+-	UINT8	blinkdisp;
+-	UINT16	curpos;
+-} TRAM_T;
+-
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-extern	TRAM_T	tramflag;
+-
+-void maketext_initialize(void);
+-void maketext_reset(void);
+-UINT8 maketext_curblink(void);
+-void maketext(int text_renewal);
+-void maketext40(int text_renewal);
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +
 +enum {
 +	TEXTXMAX		= 80,
@@ -1931,11 +3814,545 @@ index 0000000..724d56b
 +#endif
 +
 diff --git a/vram/maketgrp.c b/vram/maketgrp.c
-new file mode 100755
-index 0000000..cacb427
---- /dev/null
+index d1357d5..cacb427 100644
+--- a/vram/maketgrp.c
 +++ b/vram/maketgrp.c
-@@ -0,0 +1,535 @@
+@@ -1,535 +1,535 @@
+-#include	"compiler.h"
+-#include	"cpucore.h"
+-#include	"pccore.h"
+-#include	"iocore.h"
+-#include	"vram.h"
+-#include	"scrndraw.h"
+-#include	"dispsync.h"
+-#include	"palettes.h"
+-#include	"maketext.h"
+-#include	"maketgrp.h"
+-#include	"makegrph.h"
+-#include	"font/font.h"
+-#include	"makegrph.mcr"
+-
+-
+-// extern	int		displaymoder;
+-#define	displaymoder	dsync.scrnxextend
+-
+-
+-void maketextgrph(int plane, int text_renewal, int grph_renewal) {
+-
+-	UINT8	TEXT_LR;
+-	int		TEXT_PL;
+-	int		TEXT_BL;
+-	int		TEXT_CL;
+-	int		TEXT_SUR;
+-	int		TEXT_SDR;
+-	int		topline;
+-	int		lines;
+-	int		nowline;
+-	UINT8	wait2;
+-	UINT	m_pitch;
+-	UINT	esi;
+-	UINT	m_scr;
+-	int		m_scrp;
+-	UINT	s_pitch;
+-	UINT	ebp;
+-	UINT	s_scr;
+-	int		s_scrp;
+-	int		s_scrpmask;
+-	UINT8	GRPH_LR;
+-	UINT8	GRPH_LRcnt;
+-	UINT32	ppage;
+-	UINT32	gbit;
+-	UINT	ymax;
+-	UINT8	*q;
+-	UINT8	wait1;
+-	UINT8	TEXT_LRcnt;
+-	BOOL	reloadline;
+-	int		new_flag;
+-	int		linecnt;
+-	UINT	y;
+-	UINT	edi;
+-	UINT	x;
+-	int		i;
+-	UINT8	color[TEXTXMAX];
+-	UINT32	bit[160];
+-
+-	TEXT_LR = gdc.m.para[GDC_CSRFORM] & 0x1f;
+-	TEXT_PL = crtc.reg.pl;
+-	TEXT_BL = crtc.reg.bl + 1;
+-	TEXT_CL = crtc.reg.cl;
+-	TEXT_SUR = crtc.reg.sur;
+-	TEXT_SDR = -1;
+-	if (TEXT_CL > 16) {
+-		TEXT_CL = 16;
+-	}
+-	if (TEXT_PL >= 16) {
+-		topline = TEXT_PL - 32;
+-		lines = TEXT_BL;
+-	}
+-	else {
+-		topline = TEXT_PL;
+-		lines = TEXT_BL - topline;
+-		if (lines <= 0) {
+-			lines += 32;
+-		}
+-	}
+-	nowline = topline;
+-
+-	wait2 = 0;
+-	if (!TEXT_SUR) {
+-		wait2 = crtc.reg.ssl;
+-		TEXT_SDR = crtc.reg.sdr + 1;
+-	}
+-	else {
+-		TEXT_SUR = 32 - TEXT_SUR;
+-	}
+-
+-	m_pitch = gdc.m.para[GDC_PITCH] & 0xfe;
+-	esi = LOW12(LOADINTELWORD(gdc.m.para + GDC_SCROLL));
+-	m_scr = LOADINTELWORD(gdc.m.para + GDC_SCROLL + 2);
+-	m_scr = LOW14(m_scr) >> 4;
+-	m_scrp = 0;
+-
+-	s_pitch = gdc.s.para[GDC_PITCH];
+-	if (!(gdc.clock & 0x80)) {
+-		s_pitch <<= 1;
+-	}
+-	s_pitch &= 0xfe;
+-	ebp = LOADINTELWORD(gdc.s.para + GDC_SCROLL);
+-	ebp = LOW15(ebp << 1);
+-	s_scr = LOADINTELWORD(gdc.s.para + GDC_SCROLL + 2);
+-	s_scr = LOW14(s_scr) >> 4;
+-	s_scrp = 0;
+-	s_scrpmask = (np2cfg.uPD72020)?0x4:0xc;
+-
+-	GRPH_LR = gdc.s.para[GDC_CSRFORM] & 0x1f;
+-	GRPH_LRcnt = GRPH_LR;
+-
+-	// ÉOÉâÉtÇÃÇŸÅ[Ç™è„Åc
+-	if (dsync.text_vbp > dsync.grph_vbp) {
+-		UINT remain;
+-		remain = dsync.text_vbp - dsync.grph_vbp;
+-		do {
+-			if (!GRPH_LRcnt) {
+-				GRPH_LRcnt = GRPH_LR;
+-				s_scr--;
+-				if (!s_scr) {
+-					s_scrp = (s_scrp + 4) & s_scrpmask;
+-					ebp = LOADINTELWORD(gdc.s.para + GDC_SCROLL + s_scrp);
+-					ebp = LOW15(ebp << 1);
+-					s_scr = LOADINTELWORD(gdc.s.para + GDC_SCROLL +
+-																s_scrp + 2);
+-					s_scr = LOW14(s_scr) >> 4;
+-				}
+-				else {
+-					ebp = LOW15(ebp + s_pitch);
+-				}
+-			}
+-			else {
+-				GRPH_LRcnt--;
+-			}
+-		} while(--remain);
+-	}
+-
+-	ppage = (plane)?VRAM_STEP:0;
+-	gbit = 0x01010101 << plane;
+-	ymax = min(dsync.textymax, dsync.grphymax);
+-	q = np2_vram[plane] + dsync.textvad;
+-	wait1 = 0;
+-	TEXT_LRcnt = 0;
+-	reloadline = FALSE;
+-	new_flag = 0;
+-	linecnt = 0;
+-	for (y=dsync.text_vbp; y<ymax;) {
+-		if (!wait1) {
+-			if (TEXT_LRcnt-- == 0) {
+-				TEXT_LRcnt = TEXT_LR;
+-				reloadline = TRUE;
+-			}
+-		}
+-		else {
+-			wait1--;
+-		}
+-		if (reloadline) {
+-			reloadline = FALSE;
+-			new_flag = text_renewal;
+-			if (!new_flag) {
+-				edi = esi;
+-				for (x=0; x<TEXTXMAX; x++) {
+-					if (tramupdate[edi] & 2) {
+-						new_flag = 1;
+-						break;
+-					}
+-					edi = LOW12(edi + 1);
+-				}
+-			}
+-			edi = esi;
+-			for (x=0; x<TEXTXMAX; x++) {							// width80
+-				color[x] = (mem[0xa2000 + edi*2] & (TEXTATR_RGB)) >> 5;
+-				edi = LOW12(edi + 1);								// width80
+-			}
+-			esi = LOW12(esi + m_pitch);
+-		}
+-
+-		if ((!TEXT_SDR) && (nowline >= topline + crtc.reg.ssl)) {
+-			nowline = topline;
+-			TEXT_SDR--;
+-			wait1 = crtc.reg.ssl;
+-		}
+-
+-		if (!wait2) {
+-			int grph_new;
+-			grph_new = 0;
+-			if (y >= dsync.grph_vbp) {
+-				grph_new = new_flag | grph_renewal;
+-				if (!grph_new) {
+-					UINT vc = ebp;
+-					for (x=0; x<TEXTXMAX; x++) {
+-						if (vramupdate[vc] & (UINT8)gbit) {
+-							grph_new = 1;
+-							break;
+-						}
+-						vc = LOW15(vc + 1);
+-					}
+-				}
+-			}
+-			if (grph_new) {
+-				UINT32 vc = ebp + ppage;
+-				UINT32 *p;
+-				UINT8 *d;
+-				UINT xdot;
+-				p = bit;
+-				for (x=0; x<TEXTXMAX; x++) {
+-					GRPHDATASET(p, vc);
+-					p += 2;
+-					vc = VRAMADDRMASKEX(vc + 1);
+-				}
+-				d = (UINT8 *)bit;
+-				ZeroMemory(q, TEXTXMAX * 8);
+-				// width80
+-				xdot = 8 - displaymoder;
+-				for (x=0; x<TEXTXMAX; x++) {
+-					do {
+-						if (pal_monotable[*d++]) {
+-							*q = color[x];
+-						}
+-						q++;
+-					} while(--xdot);
+-					xdot = 8;
+-				}
+-				q += displaymoder;
+-				renewal_line[y] |= (UINT8)gbit;
+-			}
+-			else {
+-				q += TEXTXMAX * 8;
+-			}
+-			y++;
+-			m_scr--;
+-			if (!m_scr) {
+-				m_scrp = (m_scrp + 4) & 0x0c;
+-				esi = LOW12(LOADINTELWORD(gdc.m.para + GDC_SCROLL + m_scrp));
+-				m_scr = LOADINTELWORD(gdc.m.para + GDC_SCROLL + m_scrp + 2);
+-				m_scr = LOW14(m_scr) >> 4;
+-				reloadline = TRUE;
+-			}
+-			if (!GRPH_LRcnt) {
+-				GRPH_LRcnt = GRPH_LR;
+-				s_scr--;
+-				if (!s_scr) {
+-					s_scrp = (s_scrp + 4) & s_scrpmask;
+-					ebp = LOADINTELWORD(gdc.s.para + GDC_SCROLL + s_scrp);
+-					ebp = LOW15(ebp << 1);
+-					s_scr = LOADINTELWORD(gdc.s.para + GDC_SCROLL +
+-																s_scrp + 2);
+-					s_scr = LOW14(s_scr) >> 4;
+-				}
+-				else {
+-					ebp = LOW15(ebp + s_pitch);
+-				}
+-			}
+-			else {
+-				GRPH_LRcnt--;
+-			}
+-		}
+-		else {
+-			wait2--;
+-		}
+-
+-		nowline++;
+-		if ((TEXT_SDR) && (nowline >= lines)) {
+-			nowline = topline;
+-			TEXT_SDR--;
+-			if (++linecnt == TEXT_SUR) {
+-				wait2 = crtc.reg.ssl;
+-				TEXT_SDR = crtc.reg.sdr + 1;
+-			}
+-		}
+-	}
+-
+-	gbit = ~gbit;
+-	for (i=0; i<0x8000; i+=4) {
+-		*(UINT32 *)(vramupdate + i) &= gbit;
+-	}
+-}
+-
+-void maketextgrph40(int plane, int text_renewal, int grph_renewal) {
+-
+-	UINT8	TEXT_LR;
+-	int		TEXT_PL;
+-	int		TEXT_BL;
+-	int		TEXT_CL;
+-	int		TEXT_SUR;
+-	int		TEXT_SDR;
+-	int		topline;
+-	int		lines;
+-	int		nowline = 0;
+-	UINT8	wait2 = 0;
+-	UINT	m_pitch;
+-	UINT	esi;
+-	UINT	m_scr;
+-	int		m_scrp;
+-	UINT	s_pitch;
+-	UINT	ebp;
+-	UINT	s_scr;
+-	int		s_scrp;
+-	int		s_scrpmask;
+-	UINT8	GRPH_LR;
+-	UINT8	GRPH_LRcnt;
+-	UINT32	ppage;
+-	UINT32	gbit;
+-	UINT	ymax;
+-	UINT8	*q;
+-	UINT8	wait1;
+-	UINT8	TEXT_LRcnt;
+-	BOOL	reloadline;
+-	int		new_flag;
+-	int		linecnt;
+-	UINT	y;
+-	UINT	edi;
+-	UINT	x;
+-	int		i;
+-	UINT8	color[TEXTXMAX];
+-	UINT32	bit[160];
+-
+-	TEXT_LR = gdc.m.para[GDC_CSRFORM] & 0x1f;
+-	TEXT_PL = crtc.reg.pl;
+-	TEXT_BL = crtc.reg.bl + 1;
+-	TEXT_CL = crtc.reg.cl;
+-	TEXT_SUR = crtc.reg.sur;
+-	TEXT_SDR = -1;
+-	if (TEXT_CL > 16) {
+-		TEXT_CL = 16;
+-	}
+-	if (TEXT_PL >= 16) {
+-		topline = TEXT_PL - 32;
+-		lines = TEXT_BL;
+-	}
+-	else {
+-		topline = TEXT_PL;
+-		lines = TEXT_BL - topline;
+-		if (lines <= 0) {
+-			lines += 32;
+-		}
+-	}
+-	nowline = topline;
+-
+-	wait2 = 0;
+-	if (!TEXT_SUR) {
+-		wait2 = crtc.reg.ssl;
+-		TEXT_SDR = crtc.reg.sdr + 1;
+-	}
+-	else {
+-		TEXT_SUR = 32 - TEXT_SUR;
+-	}
+-
+-	m_pitch = gdc.m.para[GDC_PITCH] & 0xfe;
+-	esi = LOW12(LOADINTELWORD(gdc.m.para + GDC_SCROLL));
+-	m_scr = LOADINTELWORD(gdc.m.para + GDC_SCROLL + 2);
+-	m_scr = LOW14(m_scr) >> 4;
+-	m_scrp = 0;
+-
+-	s_pitch = gdc.s.para[GDC_PITCH];
+-	if (!(gdc.clock & 0x80)) {
+-		s_pitch <<= 1;
+-	}
+-	s_pitch &= 0xfe;
+-	ebp = LOADINTELWORD(gdc.s.para + GDC_SCROLL);
+-	ebp = LOW15(ebp << 1);
+-	s_scr = LOADINTELWORD(gdc.s.para + GDC_SCROLL + 2);
+-	s_scr = LOW14(s_scr) >> 4;
+-	s_scrp = 0;
+-	s_scrpmask = (np2cfg.uPD72020)?0x4:0xc;
+-
+-	GRPH_LR = gdc.s.para[GDC_CSRFORM] & 0x1f;
+-	GRPH_LRcnt = GRPH_LR;
+-
+-	// ÉOÉâÉtÇÃÇŸÅ[Ç™è„Åc
+-	if (dsync.text_vbp > dsync.grph_vbp) {
+-		UINT remain;
+-		remain = dsync.text_vbp - dsync.grph_vbp;
+-		do {
+-			if (!GRPH_LRcnt) {
+-				GRPH_LRcnt = GRPH_LR;
+-				s_scr--;
+-				if (!s_scr) {
+-					s_scrp = (s_scrp + 4) & s_scrpmask;
+-					ebp = LOADINTELWORD(gdc.s.para + GDC_SCROLL + s_scrp);
+-					ebp = LOW15(ebp << 1);
+-					s_scr = LOADINTELWORD(gdc.s.para + GDC_SCROLL +
+-																s_scrp + 2);
+-					s_scr = LOW14(s_scr) >> 4;
+-				}
+-				else {
+-					ebp = LOW15(ebp + s_pitch);
+-				}
+-			}
+-			else {
+-				GRPH_LRcnt--;
+-			}
+-		} while(--remain);
+-	}
+-
+-	ppage = (plane)?VRAM_STEP:0;
+-	gbit = 0x01010101 << plane;
+-	ymax = min(dsync.textymax, dsync.grphymax);
+-	q = np2_vram[plane] + dsync.textvad;
+-	wait1 = 0;
+-	TEXT_LRcnt = 0;
+-	reloadline = FALSE;
+-	new_flag = 0;
+-	linecnt = 0;
+-	for (y=dsync.text_vbp; y<ymax;) {
+-		if (!wait1) {
+-			if (TEXT_LRcnt-- == 0) {
+-				TEXT_LRcnt = TEXT_LR;
+-				reloadline = TRUE;
+-			}
+-		}
+-		else {
+-			wait1--;
+-		}
+-		if (reloadline) {
+-			reloadline = FALSE;
+-			new_flag = text_renewal;
+-			if (!new_flag) {
+-				edi = esi;
+-				for (x=0; x<TEXTXMAX; x++) {
+-					if (tramupdate[edi] & 2) {
+-						new_flag = 1;
+-						break;
+-					}
+-					edi = LOW12(edi + 1);
+-				}
+-			}
+-			edi = esi;
+-			for (x=0; x<TEXTXMAX/2; x++) {							// width40
+-				color[x] = (mem[0xa2000 + edi*2] & (TEXTATR_RGB)) >> 5;
+-				edi = LOW12(edi + 2);								// width40
+-			}
+-			esi = LOW12(esi + m_pitch);
+-		}
+-
+-		if ((!TEXT_SDR) && (nowline >= topline + crtc.reg.ssl)) {
+-			nowline = topline;
+-			TEXT_SDR--;
+-			wait1 = crtc.reg.ssl;
+-		}
+-
+-		if (!wait2) {
+-			int grph_new;
+-			grph_new = 0;
+-			if (y >= dsync.grph_vbp) {
+-				grph_new = new_flag | grph_renewal;
+-				if (!grph_new) {
+-					UINT vc = ebp;
+-					for (x=0; x<TEXTXMAX; x++) {
+-						if (vramupdate[vc] & (UINT8)gbit) {
+-							grph_new = 1;
+-							break;
+-						}
+-						vc = LOW15(vc + 1);
+-					}
+-				}
+-			}
+-			if (grph_new) {
+-				UINT32 vc = ebp + ppage;
+-				UINT32 *p;
+-				UINT8 *d;
+-				UINT xdot;
+-				p = bit;
+-				for (x=0; x<TEXTXMAX; x++) {
+-					GRPHDATASET(p, vc);
+-					p += 2;
+-					vc = VRAMADDRMASKEX(vc + 1);
+-				}
+-				d = (UINT8 *)bit;
+-				ZeroMemory(q, TEXTXMAX * 8);
+-				// width40
+-				xdot = 16 - displaymoder;
+-				for (x=0; x<TEXTXMAX/2; x++) {
+-					do {
+-						if (pal_monotable[*d++]) {
+-							*q = color[x];
+-						}
+-						q++;
+-					} while(--xdot);
+-					xdot = 16;
+-				}
+-				q += displaymoder;
+-				renewal_line[y] |= (UINT8)gbit;
+-			}
+-			else {
+-				q += TEXTXMAX * 8;
+-			}
+-			y++;
+-			m_scr--;
+-			if (!m_scr) {
+-				m_scrp = (m_scrp + 4) & 0x0c;
+-				esi = LOW12(LOADINTELWORD(gdc.m.para + GDC_SCROLL + m_scrp));
+-				m_scr = LOADINTELWORD(gdc.m.para + GDC_SCROLL + m_scrp + 2);
+-				m_scr = LOW14(m_scr) >> 4;
+-				reloadline = TRUE;
+-			}
+-			if (!GRPH_LRcnt) {
+-				GRPH_LRcnt = GRPH_LR;
+-				s_scr--;
+-				if (!s_scr) {
+-					s_scrp = (s_scrp + 4) & s_scrpmask;
+-					ebp = LOADINTELWORD(gdc.s.para + GDC_SCROLL + s_scrp);
+-					ebp = LOW15(ebp << 1);
+-					s_scr = LOADINTELWORD(gdc.s.para + GDC_SCROLL +
+-																s_scrp + 2);
+-					s_scr = LOW14(s_scr) >> 4;
+-				}
+-				else {
+-					ebp = LOW15(ebp + s_pitch);
+-				}
+-			}
+-			else {
+-				GRPH_LRcnt--;
+-			}
+-		}
+-		else {
+-			wait2--;
+-		}
+-
+-		nowline++;
+-		if ((TEXT_SDR) && (nowline >= lines)) {
+-			nowline = topline;
+-			TEXT_SDR--;
+-			if (++linecnt == TEXT_SUR) {
+-				wait2 = crtc.reg.ssl;
+-				TEXT_SDR = crtc.reg.sdr + 1;
+-			}
+-		}
+-	}
+-
+-	gbit = ~gbit;
+-	for (i=0; i<0x8000; i+=4) {
+-		*(UINT32 *)(vramupdate + i) &= gbit;
+-	}
+-}
+-
 +#include	<compiler.h>
 +#include	<cpucore.h>
 +#include	<pccore.h>
@@ -2472,11 +4889,22 @@ index 0000000..cacb427
 +}
 +
 diff --git a/vram/maketgrp.h b/vram/maketgrp.h
-new file mode 100755
-index 0000000..481c62e
---- /dev/null
+index 4e1afa4..481c62e 100644
+--- a/vram/maketgrp.h
 +++ b/vram/maketgrp.h
-@@ -0,0 +1,12 @@
+@@ -1,12 +1,12 @@
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-void maketextgrph(int plane, int text_renewal, int grph_renewal);
+-void maketextgrph40(int plane, int text_renewal, int grph_renewal);
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +
 +#ifdef __cplusplus
 +extern "C" {
@@ -2490,11 +4918,567 @@ index 0000000..481c62e
 +#endif
 +
 diff --git a/vram/palettes.c b/vram/palettes.c
-new file mode 100755
-index 0000000..ba54ac1
---- /dev/null
+index 8e21ac7..ba54ac1 100644
+--- a/vram/palettes.c
 +++ b/vram/palettes.c
-@@ -0,0 +1,557 @@
+@@ -1,557 +1,557 @@
+-#include	"compiler.h"
+-#include	"scrnmng.h"
+-#include	"pccore.h"
+-#include	"iocore.h"
+-#include	"scrndraw.h"
+-#include	"palettes.h"
+-
+-		RGB32		np2_pal32[NP2PAL_MAX];
+-#if defined(SUPPORT_16BPP)
+-		RGB16		np2_pal16[NP2PAL_MAX];
+-#endif
+-
+-		PALEVENT	palevent;
+-static	RGB32		degpal1[8];
+-static	RGB32		degpal2[8];
+-static	UINT8		anapal1[16];
+-static	UINT8		anapal2[16];
+-
+-static	RGB32		lcdpal[15];
+-static	UINT8		lcdtbl[0x1000];
+-		UINT8		pal_monotable[16] = {0, 0, 0, 0, 1, 1, 1, 1,
+-											0, 0, 0, 0, 1, 1, 1, 1};
+-
+-static const UINT8 lcdpal_a[27] = {	0, 1, 2, 3, 5, 2, 4, 4, 6,
+-									7, 9, 2,11,13, 2, 4, 4, 6,
+-									8, 8,10, 8, 8,10,12,12,14};
+-static const UINT8 deftbl[4] = {0x04, 0x15, 0x26, 0x37};
+-
+-
+-void pal_makegrad(RGB32 *pal, int pals, UINT32 bg, UINT32 fg) {
+-
+-	int		i;
+-
+-	if (pals >= 2) {
+-		pals--;
+-		for (i=0; i<=pals; i++) {
+-			pal[i].p.b = (UINT8)
+-				((((fg >> 0) & 0x0000ff) * i + 
+-				((bg >> 0) & 0x0000ff) * (pals-i)) / pals);
+-			pal[i].p.g = (UINT8)
+-				((((fg >> 8) & 0x0000ff) * i + 
+-				((bg >> 8) & 0x0000ff) * (pals-i)) / pals);
+-			pal[i].p.r = (UINT8)
+-				((((fg >> 16) & 0x0000ff) * i + 
+-				((bg >> 16) & 0x0000ff) * (pals-i)) / pals);
+-			pal[i].p.e = 0;
+-		}
+-	}
+-}
+-
+-
+-// ----
+-
+-void pal_initlcdtable(void) {
+-
+-	UINT	i;
+-	int		j;
+-
+-	for (i=0; i<0x1000; i++) {
+-		j = 0;
+-		if ((i & 0x00f) >= 0x004) {					// b
+-			j++;
+-			if ((i & 0x00f) >= 0x00b) {
+-				j++;
+-			}
+-		}
+-		if ((i & 0x0f0) >= 0x040) {					// r
+-			j += 3;
+-			if ((i & 0x0f0) >= 0x0b0) {
+-				j += 3;
+-			}
+-		}
+-		if ((i & 0xf00) >= 0x400) {					// g
+-			j += 9;
+-			if ((i & 0xf00) >= 0xb00) {
+-				j += 9;
+-			}
+-		}
+-		lcdtbl[i] = lcdpal_a[j];
+-	}
+-}
+-
+-void pal_makelcdpal(void) {
+-
+-	if (!(np2cfg.LCD_MODE & 2)) {
+-		pal_makegrad(lcdpal, 15, np2cfg.BG_COLOR, np2cfg.FG_COLOR);
+-	}
+-	else {
+-		pal_makegrad(lcdpal, 15, np2cfg.FG_COLOR, np2cfg.BG_COLOR);
+-	}
+-}
+-
+-void pal_makeskiptable(void) {
+-
+-	int		i;
+-	RGB32	pal;
+-	UINT8	ana;
+-
+-	for (i=0; i<8; i++) {
+-		pal.p.b = (UINT8)(i & 1);
+-		pal.p.r = (UINT8)((i >> 1) & 1);
+-		pal.p.g = (UINT8)((i >> 2) & 1);
+-		pal.p.e = 0;
+-		degpal1[i].d = pal.d * 255;
+-		degpal2[i].d = pal.d * np2cfg.skiplight;
+-	}
+-	for (i=0; i<16; i++) {
+-		ana = (UINT8)(i * 0x11);
+-		anapal1[i] = ana;
+-		anapal2[i] = (UINT8)((np2cfg.skiplight * anapal1[i]) / 255);
+-	}
+-}
+-
+-
+-// ---------------------------------------------------------------------------
+-
+-void pal_makeanalog(RGB32 *pal, UINT16 bit) {
+-
+-	UINT	i;
+-
+-	for (i=0; i<NP2PALS_GRPH; i++, pal++) {
+-		if (bit & (1 << i)) {
+-			np2_pal32[i+NP2PAL_GRPH].p.b = anapal1[pal->p.b & 15];
+-			np2_pal32[i+NP2PAL_GRPH].p.g = anapal1[pal->p.g & 15];
+-			np2_pal32[i+NP2PAL_GRPH].p.r = anapal1[pal->p.r & 15];
+-			if (np2cfg.skipline) {
+-				np2_pal32[i+NP2PAL_SKIP].p.b = anapal2[pal->p.b & 15];
+-				np2_pal32[i+NP2PAL_SKIP].p.g = anapal2[pal->p.g & 15];
+-				np2_pal32[i+NP2PAL_SKIP].p.r = anapal2[pal->p.r & 15];
+-			}
+-		}
+-	}
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		for (i=0; i<NP2PALS_GRPH; i++) {
+-			if (bit & (1 << i)) {
+-				np2_pal16[i+NP2PAL_GRPH] =
+-								scrnmng_makepal16(np2_pal32[i+NP2PAL_GRPH]);
+-				np2_pal16[i+NP2PAL_SKIP] =
+-								scrnmng_makepal16(np2_pal32[i+NP2PAL_SKIP]);
+-			}
+-		}
+-	}
+-#endif
+-}
+-
+-static void pal_makedegital(const UINT8 *paltbl) {
+-
+-	UINT	i;
+-
+-	for (i=0; i<4; i++) {
+-		np2_pal32[i+NP2PAL_GRPH+ 0].d =
+-		np2_pal32[i+NP2PAL_GRPH+ 8].d =
+-									degpal1[(paltbl[i] >> 4) & 7].d;
+-		np2_pal32[i+NP2PAL_GRPH+ 4].d =
+-		np2_pal32[i+NP2PAL_GRPH+12].d =
+-									degpal1[paltbl[i] & 7].d;
+-		if (np2cfg.skipline) {
+-			np2_pal32[i+NP2PAL_SKIP+ 0].d =
+-			np2_pal32[i+NP2PAL_SKIP+ 8].d =
+-									degpal2[(paltbl[i] >> 4) & 7].d;
+-			np2_pal32[i+NP2PAL_SKIP+ 4].d =
+-			np2_pal32[i+NP2PAL_SKIP+12].d =
+-									degpal2[paltbl[i] & 7].d;
+-		}
+-	}
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		for (i=0; i<4; i++) {
+-			np2_pal16[i+NP2PAL_GRPH+ 0] =
+-			np2_pal16[i+NP2PAL_GRPH+ 8] =
+-								scrnmng_makepal16(np2_pal32[i+NP2PAL_GRPH+0]);
+-			np2_pal16[i+NP2PAL_GRPH+ 4] =
+-			np2_pal16[i+NP2PAL_GRPH+12] =
+-								scrnmng_makepal16(np2_pal32[i+NP2PAL_GRPH+4]);
+-		}
+-		if (np2cfg.skipline) {
+-			for (i=0; i<4; i++) {
+-				np2_pal16[i+NP2PAL_SKIP+ 0] =
+-				np2_pal16[i+NP2PAL_SKIP+ 8] =
+-								scrnmng_makepal16(np2_pal32[i+NP2PAL_SKIP+0]);
+-				np2_pal16[i+NP2PAL_SKIP+ 4] =
+-				np2_pal16[i+NP2PAL_SKIP+12] =
+-								scrnmng_makepal16(np2_pal32[i+NP2PAL_SKIP+4]);
+-			}
+-		}
+-	}
+-#endif
+-}
+-
+-static void pal_makedegital_mono(const UINT8 *paltbl) {
+-
+-	UINT	i;
+-#if defined(SUPPORT_16BPP)
+-	RGB16	pal16;
+-#endif
+-
+-	if ((np2cfg.LCD_MODE & 3) == 3) {
+-		// LCD mode
+-		for (i = 0; i < 8; i++)
+-		{
+-			np2_pal32[i + NP2PAL_GRPH].d = lcdpal[i].d;
+-		}
+-		np2_pal32[8 + NP2PAL_GRPH].d = 0xffffff;
+-		if (np2cfg.skipline) {
+-			for (i = 0; i < 8; i++)
+-			{
+-				np2_pal32[i + NP2PAL_SKIP].d = lcdpal[i].d;
+-			}
+-		}
+-	}
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		for (i = 0; i < 8; i++)
+-		{
+-			pal16 = scrnmng_makepal16(lcdpal[i]);
+-			np2_pal16[i + NP2PAL_GRPH] = pal16;
+-		}
+-		 np2_pal16[8 + NP2PAL_GRPH] = scrnmng_makepal16(np2_pal32[8 + NP2PAL_GRPH]);
+-		if (np2cfg.skipline)
+-		{
+-			for (i = 0; i < 8; i++)
+-			{
+-				pal16 = scrnmng_makepal16(lcdpal[i]);
+-				np2_pal16[i + NP2PAL_SKIP] = pal16;
+-			}
+-		}
+-	} else
+-#endif
+-	{
+-		for (i = 0; i < 8; i++)
+-		{
+-			np2_pal32[i + NP2PAL_GRPH].d = degpal1[i].d;
+-		}
+-		np2_pal32[8 + NP2PAL_GRPH].d = 0x0000000;
+-		if (np2cfg.skipline) {
+-			for (i = 0; i < 8; i++)
+-			{
+-				np2_pal32[i + NP2PAL_SKIP].d = degpal1[i].d;
+-			}
+-		}
+-#if defined(SUPPORT_16BPP)
+-		if (scrnmng_getbpp() == 16)
+-		{
+-			for (i = 0; i < 8; i++)
+-			{
+-				pal16 = scrnmng_makepal16(degpal1[i]);
+-				np2_pal16[i + NP2PAL_GRPH] = pal16;
+-			}
+-			np2_pal16[8 + NP2PAL_GRPH] = scrnmng_makepal16(np2_pal32[8 + NP2PAL_GRPH]);
+-			if (np2cfg.skipline)
+-			{
+-				for (i = 0; i < 8; i++)
+-				{
+-					pal16 = scrnmng_makepal16(degpal1[i]);
+-					np2_pal16[i + NP2PAL_SKIP] = pal16;
+-				}
+-			}
+-		}
+-#endif
+-	}
+-}
+-
+-void pal_makeanalog_lcd(RGB32 *pal, UINT16 bit) {
+-
+-	UINT	i;
+-	UINT	j;
+-
+-	for (i=0; i<NP2PALS_GRPH; i++, pal++) {
+-		if (bit & (1 << i)) {
+-			j = (pal->p.b & 15);
+-			j |= (pal->p.r & 15) << 4;
+-			j |= (pal->p.g & 15) << 8;
+-			np2_pal32[i+NP2PAL_SKIP].d =
+-			np2_pal32[i+NP2PAL_GRPH].d = lcdpal[lcdtbl[j]].d;
+-		}
+-	}
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		for (i=0; i<NP2PALS_GRPH; i++) {
+-			if (bit & (1 << i)) {
+-				np2_pal16[i+NP2PAL_GRPH] =
+-				np2_pal16[i+NP2PAL_SKIP] =
+-								scrnmng_makepal16(np2_pal32[i+NP2PAL_GRPH]);
+-			}
+-		}
+-	}
+-#endif
+-}
+-
+-static void pal_makedegital_lcd(const UINT8 *paltbl) {
+-
+-	UINT	i;
+-	UINT32	pal32;
+-#if defined(SUPPORT_16BPP)
+-	RGB16	pal16;
+-#endif
+-
+-	for (i=0; i<4; i++) {
+-		pal32 = lcdpal[(paltbl[i] >> 3) & 14].d;
+-		np2_pal32[i+NP2PAL_GRPH+ 0].d = pal32;
+-		np2_pal32[i+NP2PAL_GRPH+ 8].d = pal32;
+-		pal32 = lcdpal[(paltbl[i] << 1) & 14].d;
+-		np2_pal32[i+NP2PAL_GRPH+ 4].d = pal32;
+-		np2_pal32[i+NP2PAL_GRPH+12].d = pal32;
+-		if (np2cfg.skipline) {
+-			pal32 = np2_pal32[i+NP2PAL_GRPH+ 0].d;
+-			np2_pal32[i+NP2PAL_SKIP+ 0].d = pal32;
+-			np2_pal32[i+NP2PAL_SKIP+ 8].d = pal32;
+-			pal32 = np2_pal32[i+NP2PAL_GRPH+ 4].d;
+-			np2_pal32[i+NP2PAL_SKIP+ 4].d = pal32;
+-			np2_pal32[i+NP2PAL_SKIP+12].d = pal32;
+-		}
+-	}
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		for (i=0; i<4; i++) {
+-			pal16 = scrnmng_makepal16(np2_pal32[i+NP2PAL_GRPH+0]);
+-			np2_pal16[i+NP2PAL_GRPH+ 0] = pal16;
+-			np2_pal16[i+NP2PAL_GRPH+ 8] = pal16;
+-			pal16 = scrnmng_makepal16(np2_pal32[i+NP2PAL_GRPH+4]);
+-			np2_pal16[i+NP2PAL_GRPH+ 4] = pal16;
+-			np2_pal16[i+NP2PAL_GRPH+12] = pal16;
+-		}
+-		if (np2cfg.skipline) {
+-			for (i=0; i<4; i++) {
+-				pal16 = np2_pal16[i+NP2PAL_GRPH+ 0];
+-				np2_pal16[i+NP2PAL_SKIP+ 0] = pal16;
+-				np2_pal16[i+NP2PAL_SKIP+ 8] = pal16;
+-				pal16 = np2_pal16[i+NP2PAL_GRPH+ 4];
+-				np2_pal16[i+NP2PAL_SKIP+ 4] = pal16;
+-				np2_pal16[i+NP2PAL_SKIP+12] = pal16;
+-			}
+-		}
+-	}
+-#endif
+-}
+-
+-static void pal_maketext(void) {
+-
+-	UINT	i;
+-	UINT	j;
+-	UINT	k;
+-#if defined(SUPPORT_16BPP)
+-	RGB16	pal16;
+-#endif
+-
+-	k = NP2PAL_TEXT2;
+-	for (i=0; i<8; i++) {
+-		np2_pal32[i+1+NP2PAL_TEXT].d = degpal1[i].d;
+-		np2_pal32[i+1+NP2PAL_TEXT3].d = degpal1[i].d;
+-		for (j=0; j<NP2PALS_GRPH; j++, k++) {
+-			np2_pal32[k].d = degpal1[i].d;
+-		}
+-	}
+-	np2_pal32[NP2PAL_TEXT3] = np2_pal32[NP2PAL_TEXT3 + 1];
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		k = NP2PAL_TEXT2;
+-		for (i=0; i<8; i++) {
+-			pal16 = scrnmng_makepal16(degpal1[i]);
+-			np2_pal16[i+1+NP2PAL_TEXT] = pal16;
+-			np2_pal16[i+1+NP2PAL_TEXT3] = pal16;
+-			for (j=0; j<NP2PALS_GRPH; j++, k++) {
+-				np2_pal16[k] = pal16;
+-			}
+-		}
+-		np2_pal16[NP2PAL_TEXT3] = np2_pal16[NP2PAL_TEXT3 + 1];
+-	}
+-#endif
+-}
+-
+-static void pal_maketext_lcd(void) {
+-
+-	UINT	i;
+-	UINT	j;
+-	UINT	k;
+-#if defined(SUPPORT_16BPP)
+-	RGB16	pal16;
+-#endif
+-
+-	k = NP2PAL_TEXT2;
+-	for (i=0; i<8; i++) {
+-		np2_pal32[i+1+NP2PAL_TEXT].d = lcdpal[i*2].d;
+-		np2_pal32[i+1+NP2PAL_TEXT3].d = lcdpal[i*2].d;
+-		for (j=0; j<NP2PALS_GRPH; j++, k++) {
+-			np2_pal32[k].d = lcdpal[i*2].d;
+-		}
+-	}
+-	np2_pal32[NP2PAL_TEXT3] = np2_pal32[NP2PAL_TEXT3 + 1];
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		k = NP2PAL_TEXT2;
+-		for (i=0; i<8; i++) {
+-			pal16 = scrnmng_makepal16(lcdpal[i*2]);
+-			np2_pal16[i+1+NP2PAL_TEXT] = pal16;
+-			np2_pal16[i+1+NP2PAL_TEXT3] = pal16;
+-			for (j=0; j<NP2PALS_GRPH; j++, k++) {
+-				np2_pal16[k] = pal16;
+-			}
+-		}
+-		np2_pal16[NP2PAL_TEXT3] = np2_pal16[NP2PAL_TEXT3 + 1];
+-	}
+-#endif
+-}
+-
+-#if defined(SUPPORT_PC9821)
+-static void pal_maketext256(void) {
+-
+-	UINT	i;
+-#if defined(SUPPORT_16BPP)
+-	RGB16	pal16;
+-#endif
+-
+-	for (i=0; i<8; i++) {
+-		np2_pal32[i+1+NP2PAL_TEXTEX].d = degpal1[i].d;
+-		np2_pal32[i+1+NP2PAL_TEXTEX3].d = degpal1[i].d;
+-	}
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		for (i=0; i<8; i++) {
+-			pal16 = scrnmng_makepal16(degpal1[i]);
+-			np2_pal16[i+1+NP2PAL_TEXTEX] = pal16;
+-			np2_pal16[i+1+NP2PAL_TEXTEX3] = pal16;
+-		}
+-	}
+-#endif
+-}
+-#endif
+-
+-static void pal_makeingmono(void) {							// ver0.28/pr4
+-
+-	int		i;
+-
+-	if (gdc.analog) {
+-		for (i=0; i<16; i++) {
+-			pal_monotable[i] = gdc.anapal[i].p.g & 8;
+-		}
+-	}
+-	else {
+-		for (i=0; i<4; i++) {
+-			pal_monotable[i+0] = gdc.degpal[i] & 0x40;
+-			pal_monotable[i+8] = gdc.degpal[i] & 0x40;
+-			pal_monotable[i+4] = gdc.degpal[i] & 0x4;
+-			pal_monotable[i+12] = gdc.degpal[i] & 0x4;
+-		}
+-	}
+-}
+-
+-
+-#if defined(SUPPORT_PC9821)
+-static void pal_make9821(const UINT8 *pal) {
+-
+-	int		i;
+-	RGB32	*p;
+-
+-	p = np2_pal32 + NP2PAL_GRPHEX;
+-	for (i=0; i<256; i++) {
+-		p[i].p.g = pal[i*4+0];
+-		p[i].p.r = pal[i*4+1];
+-		p[i].p.b = pal[i*4+2];
+-	}
+-	np2_pal32[NP2PAL_TEXTEX3].d = np2_pal32[NP2PAL_GRPHEX].d;
+-#if defined(SUPPORT_16BPP)
+-	if (scrnmng_getbpp() == 16) {
+-		for (i=0; i<256; i++) {
+-			np2_pal16[i + NP2PAL_GRPHEX] =
+-							scrnmng_makepal16(np2_pal32[i + NP2PAL_GRPHEX]);
+-		}
+-		np2_pal16[NP2PAL_TEXTEX3] = np2_pal16[NP2PAL_GRPHEX];
+-	}
+-#endif
+-}
+-#endif
+-
+-void pal_change(UINT8 textpalset) {
+-
+-	if (textpalset) {
+-		if (!(np2cfg.LCD_MODE & 1)) {
+-			pal_maketext();
+-		}
+-		else {
+-			pal_maketext_lcd();
+-		}
+-		np2_pal32[NP2PAL_TEXT].d = np2_pal32[NP2PAL_TEXT2].d;
+-#if defined(SUPPORT_16BPP)
+-		np2_pal16[NP2PAL_TEXT] = np2_pal16[NP2PAL_TEXT2];
+-#endif
+-#if defined(SUPPORT_PC9821)
+-		pal_maketext256();
+-#endif
+-	}
+-#if defined(SUPPORT_PC9821)
+-	if (gdc.analog & 2) {
+-		pal_make9821(gdc.anareg + (16 * 3));
+-		scrndraw_changepalette();
+-		return;
+-	}
+-#endif
+-	if (!(np2cfg.LCD_MODE & 1)) {
+-		if (gdc.mode1 & 2) {
+-			if (gdcs.textdisp & GDCSCRN_ENABLE) {
+-				pal_makedegital(deftbl);
+-			}else{
+-				pal_makedegital_mono(gdc.degpal);
+-			}
+-			pal_makeingmono();
+-		}
+-		else {
+-			if (gdc.analog) {
+-				pal_makeanalog(gdc.anapal, 0xffff);
+-			}
+-			else {
+-				pal_makedegital(gdc.degpal);
+-			}
+-		}
+-	}
+-	else {
+-		if (gdc.mode1 & 2) {
+-			if (gdcs.textdisp & GDCSCRN_ENABLE) {
+-				pal_makedegital(deftbl);
+-			}else{
+-				pal_makedegital_mono(gdc.degpal);
+-			}
+-			pal_makeingmono();
+-		}
+-		else {
+-			if (gdc.analog) {
+-				pal_makeanalog_lcd(gdc.anapal, 0xffff);
+-			}
+-			else {
+-				pal_makedegital_lcd(gdc.degpal);
+-			}
+-		}
+-	}
+-	if (np2cfg.skipline) {
+-		np2_pal32[NP2PAL_TEXT].d = np2_pal32[NP2PAL_SKIP].d;
+-#if defined(SUPPORT_16BPP)
+-		np2_pal16[NP2PAL_TEXT] = np2_pal16[NP2PAL_SKIP];
+-#endif
+-	}
+-	scrndraw_changepalette();
+-}
+-
+-void pal_eventclear(void) {
+-
+-	palevent.anabit = 0;
+-	palevent.events = 0;
+-	if ((!pcstat.drawframe) || (!np2cfg.RASTER) || (scrnmng_getbpp() == 8)) {
+-		palevent.events--;					// 0xffffffff Ç…Ç∑ÇÈ...
+-	}
+-	else {
+-		CopyMemory(palevent.pal, gdc.anapal, sizeof(gdc.anapal));
+-		palevent.vsyncpal = 0;
+-	}
+-}
+-
 +#include	<compiler.h>
 +#include	<scrnmng.h>
 +#include	<pccore.h>
@@ -3053,11 +6037,88 @@ index 0000000..ba54ac1
 +}
 +
 diff --git a/vram/palettes.h b/vram/palettes.h
-new file mode 100755
-index 0000000..47edf7f
---- /dev/null
+index 87fd040..47edf7f 100644
+--- a/vram/palettes.h
 +++ b/vram/palettes.h
-@@ -0,0 +1,78 @@
+@@ -1,78 +1,78 @@
+-// palette
+-//	 00		text palette				(NP2PAL_TEXT: pal0s + text)
+-//	+0A		skipline palette			(NP2PAL_SKIP: skiplines)
+-//	+10		grph palette				(NP2PAL_GRPH: grph only)
+-//	+80		text+grph					(NP2PAL_TEXT2:grph+text)
+-//	+0A		black + text palette		(NP2PAL_TEXT3: text/grph=black)
+-
+-enum {
+-	NP2PALS_TXT		= 10,
+-	NP2PALS_GRPH	= 16,
+-
+-	NP2PAL_TEXT		= 0,
+-	NP2PAL_SKIP		= (NP2PAL_TEXT + NP2PALS_TXT),
+-	NP2PAL_GRPH		= (NP2PAL_SKIP + NP2PALS_GRPH),
+-	NP2PAL_TEXT2	= (NP2PAL_GRPH + NP2PALS_GRPH),
+-	NP2PAL_TEXT3	= (NP2PAL_TEXT2 + (8 * NP2PALS_GRPH)),
+-	NP2PAL_NORMAL	= (NP2PAL_TEXT3 + NP2PALS_TXT),
+-
+-#ifdef SUPPORT_PC9821
+-	NP2PAL_TEXTEX	= NP2PAL_NORMAL,
+-	NP2PAL_TEXTEX3	= (NP2PAL_TEXTEX + NP2PALS_TXT),
+-	NP2PAL_GRPHEX	= (NP2PAL_TEXTEX3 + NP2PALS_TXT),
+-	NP2PAL_EXTEND	= (NP2PAL_GRPHEX + 256),
+-#endif		/* SUPPORT_PC9821 */
+-
+-#ifdef SUPPORT_PC9821
+-	NP2PAL_MAX		= NP2PAL_EXTEND
+-#else		/* SUPPORT_PC9821 */
+-	NP2PAL_MAX		= NP2PAL_NORMAL
+-#endif		/* SUPPORT_PC9821 */
+-};
+-
+-#define	PALEVENTMAX		1024
+-
+-typedef struct {
+-	SINT32	clock;
+-	UINT16	color;
+-	UINT8	value;
+-	UINT8	reserve;
+-} PAL1EVENT;
+-
+-typedef struct {
+-	UINT16		anabit;
+-	UINT16		degbit;
+-	RGB32		pal[16];
+-	UINT		vsyncpal;
+-	UINT		events;
+-	PAL1EVENT	event[PALEVENTMAX];
+-} PALEVENT;
+-
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-extern	RGB32		np2_pal32[NP2PAL_MAX];
+-#if defined(SUPPORT_16BPP)
+-extern	RGB16		np2_pal16[NP2PAL_MAX];
+-#endif
+-extern	PALEVENT	palevent;
+-extern	UINT8		pal_monotable[16];
+-
+-void pal_makegrad(RGB32 *pal, int pals, UINT32 bg, UINT32 fg);
+-
+-void pal_initlcdtable(void);
+-void pal_makelcdpal(void);
+-void pal_makeskiptable(void);
+-void pal_change(UINT8 textpalset);
+-
+-void pal_eventclear(void);
+-
+-void pal_makeanalog(RGB32 *pal, UINT16 bit);
+-void pal_makeanalog_lcd(RGB32 *pal, UINT16 bit);
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +// palette
 +//	 00		text palette				(NP2PAL_TEXT: pal0s + text)
 +//	+0A		skipline palette			(NP2PAL_SKIP: skiplines)
@@ -3137,271 +6198,95 @@ index 0000000..47edf7f
 +#endif
 +
 diff --git a/vram/scrndraw.c b/vram/scrndraw.c
-new file mode 100755
-index 0000000..8646c46
---- /dev/null
+index 5b40baf..8646c46 100644
+--- a/vram/scrndraw.c
 +++ b/vram/scrndraw.c
-@@ -0,0 +1,305 @@
+@@ -1,13 +1,16 @@
+-#include	"compiler.h"
+-#include	"scrnmng.h"
+-#include	"pccore.h"
+-#include	"iocore.h"
+-#include	"scrndraw.h"
 +#include	<compiler.h>
 +#include	<scrnmng.h>
 +#include	<pccore.h>
 +#include	<io/iocore.h>
 +#include	<vram/scrndraw.h>
-+#include	"sdraw.h"
+ #include	"sdraw.h"
+-#include	"dispsync.h"
+-#include	"palettes.h"
 +#include	<vram/dispsync.h>
 +#include	<vram/palettes.h>
 +#if defined(SUPPORT_VIDEOFILTER)
 +#include	<vram/videofilter.h>
 +#endif
-+#ifdef SUPPORT_WAB
+ #ifdef SUPPORT_WAB
+-#include	"wab/wab.h"
 +#include	<wab/wab.h>
-+#endif
-+
-+
-+	UINT8	renewal_line[SURFACE_HEIGHT];
-+	UINT8	np2_tram[SURFACE_SIZE];
-+	UINT8	np2_vram[2][SURFACE_SIZE];
-+	UINT8	redrawpending = 0;
+ #endif
+ 
+ 
+@@ -15,7 +18,9 @@
+ 	UINT8	np2_tram[SURFACE_SIZE];
+ 	UINT8	np2_vram[2][SURFACE_SIZE];
+ 	UINT8	redrawpending = 0;
+-
 +#if defined(SUPPORT_VIDEOFILTER)
 +	BOOL bPreEnable;
 +#endif
-+
-+static void updateallline(UINT32 update) {
-+
-+	UINT	i;
-+
-+	for (i=0; i<SURFACE_HEIGHT; i+=4) {
-+		*(UINT32 *)(renewal_line + i) |= update;
-+	}
-+}
-+
-+void scrndraw_updateallline(void) {
-+	redrawpending = 1;
-+}
-+
-+// ----
-+
-+void scrndraw_initialize(void) {
-+
-+	ZeroMemory(np2_tram, sizeof(np2_tram));
-+	ZeroMemory(np2_vram, sizeof(np2_vram));
-+	updateallline(0x80808080);
-+	scrnmng_allflash();
-+}
-+
-+void scrndraw_changepalette(void) {
-+
-+#if defined(SUPPORT_8BPP)
-+	if (scrnmng_getbpp() == 8) {
-+		scrnmng_palchanged();
-+		return;
-+	}
-+#endif
-+	updateallline(0x80808080);
-+}
-+
-+static UINT8 rasterdraw(SDRAWFN sdrawfn, SDRAW sdraw, int maxy) {
-+
-+	RGB32		pal[16];
-+	SINT32		clk;
-+	PAL1EVENT	*event;
-+	PAL1EVENT	*eventterm;
-+	int			nextupdate;
-+	int			y;
-+
-+	//TRACEOUT(("rasterdraw: maxy = %d", maxy));
-+	CopyMemory(pal, palevent.pal, sizeof(pal));
-+	clk = maxy;
-+	clk += 2;
-+	clk += np2cfg.realpal;
-+	clk -= 32;
-+	clk += (gdc.m.para[GDC_SYNC + 5] >> 2) & 0x3f;
-+	clk *= gdc.rasterclock;
-+	event = palevent.event;
-+	eventterm = event + palevent.events;
-+	nextupdate = 0;
-+	for (y=2; y<maxy; y+=2) {
-+		if (event >= eventterm) {
-+			break;
-+		}
+ 
+ static void updateallline(UINT32 update) {
+ 
+@@ -75,7 +80,7 @@ static UINT8 rasterdraw(SDRAWFN sdrawfn, SDRAW sdraw, int maxy) {
+ 		if (event >= eventterm) {
+ 			break;
+ 		}
+-		// Ç®ïŸìñÇÕÇ†Ç¡ÇΩÅH
 +		// „ÅäÂºÅÂΩì„ÅØ„ÅÇ„Å£„ÅüÔºü
-+		if (clk < event->clock) {
-+			if (!(np2cfg.LCD_MODE & 1)) {
-+				pal_makeanalog(pal, 0xffff);
-+			}
-+			else {
-+				pal_makeanalog_lcd(pal, 0xffff);
-+			}
-+			if (np2cfg.skipline) {
-+				np2_pal32[0].d = np2_pal32[NP2PAL_SKIP].d;
-+#if defined(SUPPORT_16BPP)
-+				np2_pal16[0] = np2_pal16[NP2PAL_SKIP];
-+#endif
-+			}
-+			(*sdrawfn)(sdraw, y);
-+			nextupdate = y;
+ 		if (clk < event->clock) {
+ 			if (!(np2cfg.LCD_MODE & 1)) {
+ 				pal_makeanalog(pal, 0xffff);
+@@ -91,7 +96,7 @@ static UINT8 rasterdraw(SDRAWFN sdrawfn, SDRAW sdraw, int maxy) {
+ 			}
+ 			(*sdrawfn)(sdraw, y);
+ 			nextupdate = y;
+-			// Ç®ïŸìñÇêHÇ◊ÇÈ
 +			// „ÅäÂºÅÂΩì„ÇíÈ£ü„Åπ„Çã
-+			while(clk < event->clock) {
-+				((UINT8 *)pal)[event->color] = event->value;
-+				event++;
-+				if (event >= eventterm) {
-+					break;
-+				}
-+			}
-+		}
-+		clk -= 2 * gdc.rasterclock;
-+	}
-+	if (nextupdate < maxy) {
-+		if (!(np2cfg.LCD_MODE & 1)) {
-+			pal_makeanalog(pal, 0xffff);
-+		}
-+		else {
-+			pal_makeanalog_lcd(pal, 0xffff);
-+		}
-+		if (np2cfg.skipline) {
-+			np2_pal32[0].d = np2_pal32[NP2PAL_SKIP].d;
-+#if defined(SUPPORT_16BPP)
-+			np2_pal16[0] = np2_pal16[NP2PAL_SKIP];
-+#endif
-+		}
-+		(*sdrawfn)(sdraw, maxy);
-+	}
-+	if (palevent.vsyncpal) {
-+		return(2);
-+	}
-+	else if (nextupdate) {
-+		for (y=0; y<nextupdate; y+=2) {
-+			*(UINT16 *)(renewal_line + y) |= 0x8080;
-+		}
-+		return(1);
-+	}
-+	else {
-+		return(0);
-+	}
-+}
-+
+ 			while(clk < event->clock) {
+ 				((UINT8 *)pal)[event->color] = event->value;
+ 				event++;
+@@ -131,6 +136,10 @@ static UINT8 rasterdraw(SDRAWFN sdrawfn, SDRAW sdraw, int maxy) {
+ 	}
+ }
+ 
 +#ifdef SUPPORT_WAB
 +void scrnmng_update(void);
 +#endif
 +
-+UINT8 scrndraw_draw(UINT8 redraw) {
-+
-+	UINT8		ret;
-+const SCRNSURF	*surf;
-+const SDRAWFN	*sdrawfn;
-+	_SDRAW		sdraw;
-+	UINT8		bit;
-+	int			i;
-+	int			height;
-+	
-+	if (redraw || redrawpending) {
-+		updateallline(0x80808080);
-+		redrawpending = 0;
-+	}
-+#if defined(SUPPORT_IA32_HAXM)
-+	gdcs.grphdisp |= GDCSCRN_ALLDRAW2;
-+#endif
-+
-+	ret = 0;
-+#ifdef SUPPORT_WAB
-+	if(np2wab.relay & 0x3){
-+		np2wab_drawframe(); 
-+		if(!np2wabwnd.multiwindow){
+ UINT8 scrndraw_draw(UINT8 redraw) {
+ 
+ 	UINT8		ret;
+@@ -141,7 +150,6 @@ const SDRAWFN	*sdrawfn;
+ 	int			i;
+ 	int			height;
+ 	
+-
+ 	if (redraw || redrawpending) {
+ 		updateallline(0x80808080);
+ 		redrawpending = 0;
+@@ -155,7 +163,7 @@ const SDRAWFN	*sdrawfn;
+ 	if(np2wab.relay & 0x3){
+ 		np2wab_drawframe(); 
+ 		if(!np2wabwnd.multiwindow){
+-			// XXX: ÉEÉBÉìÉhÉEÉAÉNÉZÉâÉåÅ[É^ìÆçÏíÜÇÕì‡ë†ÉOÉâÉtÉBÉbÉNÇï`âÊÇµÇ»Ç¢
 +			// XXX: „Ç¶„Ç£„É≥„Éâ„Ç¶„Ç¢„ÇØ„Çª„É©„É¨„Éº„ÇøÂãï‰Ωú‰∏≠„ÅØÂÜÖËîµ„Ç∞„É©„Éï„Ç£„ÉÉ„ÇØ„ÇíÊèèÁîª„Åó„Å™„ÅÑ
-+			ret = 1;
-+			return(ret);
-+		}
-+	}
-+#endif
-+	surf = scrnmng_surflock();
-+	if (surf == NULL) {
-+		goto sddr_exit1;
-+	}
-+#if defined(SUPPORT_PC9821)
-+	if (gdc.analog & 2) {
-+		sdrawfn = sdraw_getproctblex(surf);
-+	}
-+	else
-+#endif
-+	sdrawfn = sdraw_getproctbl(surf);
-+	if (sdrawfn == NULL) {
-+		goto sddr_exit2;
-+	}
-+	
-+	bit = 0x00;
-+	if (gdc.mode1 & 0x80) {						// ver0.28
-+		if (gdcs.grphdisp & GDCSCRN_ENABLE) {
-+#if defined(SUPPORT_PC9821)
-+			if ((gdc.analog & 6) == 6) {
-+				bit |= 0x01;
-+			}
-+			else
-+#endif
-+			bit |= (1 << gdcs.disp);
-+		}
-+		if (gdcs.textdisp & GDCSCRN_ENABLE) {
-+			bit |= 4;
-+		}
-+		else if (gdc.mode1 & 2) {
-+			//bit = 0; // nothing to do
-+		}
-+	}
-+	bit |= 0x80;
-+	for (i=0; i<SURFACE_HEIGHT; i++) {
-+		sdraw.dirty[i] = renewal_line[i] & bit;
-+		if (sdraw.dirty[i]) {
-+			renewal_line[i] &= ~bit;
-+		}
-+	}
-+	height = surf->height;
-+	do {
-+#if defined(SUPPORT_PC9821)
-+		if (gdc.analog & 2) {
-+			break;
-+		}
-+#endif
-+#if defined(SUPPORT_CRT15KHZ)
-+		if (gdc.crt15khz & 2) {
-+			sdrawfn += 12;
-+			height >>= 1;
-+			break;
-+		}
-+#endif
-+		if (gdc.mode1 & 0x10) {
-+			sdrawfn += 4;
-+			if (np2cfg.skipline) {
-+				sdrawfn += 4;
-+			}
-+		}
-+	} while(0);
-+	switch(bit & 7) {
-+		case 1:								// grph1
-+			sdrawfn += 2;
-+			sdraw.src = np2_vram[0];
-+			break;
-+
-+		case 2:								// grph2
-+			sdrawfn += 2;
-+			sdraw.src = np2_vram[1];
-+			break;
-+
-+		case 4:								// text
-+			sdrawfn += 1;
-+			sdraw.src = np2_tram;
-+			break;
-+
-+		case 5:								// text + grph1
-+			sdrawfn += 3;
-+			sdraw.src = np2_vram[0];
-+			sdraw.src2 = np2_tram;
-+			break;
-+
-+		case 6:								// text + grph2
-+			sdrawfn += 3;
-+			sdraw.src = np2_vram[1];
-+			sdraw.src2 = np2_tram;
-+			break;
-+	}
+ 			ret = 1;
+ 			return(ret);
+ 		}
+@@ -250,6 +258,21 @@ const SDRAWFN	*sdrawfn;
+ 			sdraw.src2 = np2_tram;
+ 			break;
+ 	}
 +#if defined(SUPPORT_VIDEOFILTER)
 +	bVFEnable = VideoFilter_GetEnable(hVFMng1) & !np2cfg.vf1_bmponly;
 +	bVFImport = FALSE;
@@ -3417,42 +6302,47 @@ index 0000000..8646c46
 +		bPreEnable = bVFEnable;
 +	}
 +#endif
-+	sdraw.dst = surf->ptr;
-+	sdraw.width = surf->width;
-+	sdraw.xbytes = surf->xalign * surf->width;
-+	sdraw.y = 0;
-+	sdraw.xalign = surf->xalign;
-+	sdraw.yalign = surf->yalign;
-+	if (((gdc.analog & 3) != 1) || (palevent.events >= PALEVENTMAX)) {
-+		(*(*sdrawfn))(&sdraw, height);
-+	}
-+	else {
-+		ret = rasterdraw(*sdrawfn, &sdraw, height);
-+	}
-+
-+sddr_exit2:
-+	scrnmng_surfunlock(surf);
-+
-+sddr_exit1:
-+	return(ret);
-+}
-+
-+void scrndraw_redraw(void) {
-+
-+	scrnmng_allflash();
-+	pal_change(1);
-+	dispsync_renewalmode();
-+	scrndraw_updateallline();
-+	pcstat.screenupdate = 1;
-+	//scrndraw_draw(1);
-+}
-+
+ 	sdraw.dst = surf->ptr;
+ 	sdraw.width = surf->width;
+ 	sdraw.xbytes = surf->xalign * surf->width;
 diff --git a/vram/scrndraw.h b/vram/scrndraw.h
-new file mode 100755
-index 0000000..10a25b0
---- /dev/null
+index 5a64ecf..10a25b0 100644
+--- a/vram/scrndraw.h
 +++ b/vram/scrndraw.h
-@@ -0,0 +1,37 @@
+@@ -1,33 +1,37 @@
+-
+-#ifndef SCRNCALL
+-#define	SCRNCALL
+-#endif
+-
+-enum {
+-	SURFACE_WIDTH		= 640,
+-	SURFACE_HEIGHT		= 480,
+-	SURFACE_SIZE		= (SURFACE_WIDTH * SURFACE_HEIGHT),
+-
+-	START_PALORG		= 0x0a,
+-	START_PAL			= 0x10
+-};
+-
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-extern	UINT8	renewal_line[SURFACE_HEIGHT];
+-extern	UINT8	np2_tram[SURFACE_SIZE];
+-extern	UINT8	np2_vram[2][SURFACE_SIZE];
+-
+-void scrndraw_initialize(void);
+-void scrndraw_changepalette(void);
+-UINT8 scrndraw_draw(UINT8 update);
+-void scrndraw_redraw(void);
+-void scrndraw_updateallline(void);
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +#ifndef NP2_SCRNDRAW_H
 +#define NP2_SCRNDRAW_H
 +
@@ -3491,11 +6381,807 @@ index 0000000..10a25b0
 +#endif	/* NP2_SCRNDRAW_H */
 +
 diff --git a/vram/scrnsave.c b/vram/scrnsave.c
-new file mode 100755
-index 0000000..479cc9c
---- /dev/null
+index b72e843..479cc9c 100644
+--- a/vram/scrnsave.c
 +++ b/vram/scrnsave.c
-@@ -0,0 +1,860 @@
+@@ -1,797 +1,860 @@
+-/**
+- * @file	scrnsave.c
+- * @brief	Implementation of the screen saver
+- */
+-
+-#include	"compiler.h"
+-#include	"bmpdata.h"
+-#include	"scrnsave.h"
+-#include	"dosio.h"
+-#include	"pccore.h"
+-#include	"iocore.h"
+-#include	"scrndraw.h"
+-#include	"dispsync.h"
+-#include	"palettes.h"
+-
+-/**
+- * @brief The structure of screen saver
+- */
+-struct tagScrnSave
+-{
+-	int		width;
+-	int		height;
+-	UINT	pals;
+-	UINT	type;
+-};
+-
+-#if defined(SUPPORT_PC9821)
+-typedef	unsigned short	PALNUM;
+-#else
+-typedef	unsigned char	PALNUM;
+-#endif
+-
+-typedef union {
+-	UINT32	d;
+-	UINT8	rgb[4];
+-} BMPPAL;
+-
+-typedef struct {
+-	int		width;
+-	int		height;
+-	UINT	pals;
+-	UINT	type;
+-	BMPPAL	pal[NP2PAL_MAX];
+-	PALNUM	dat[SURFACE_WIDTH * SURFACE_HEIGHT];
+-} SCRNDATA;
+-
+-
+-static void screenmix(PALNUM *dest, const UINT8 *src1, const UINT8 *src2) {
+-
+-	int		i;
+-
+-	for (i=0; i<(SURFACE_WIDTH * SURFACE_HEIGHT); i++) {
+-		dest[i] = src1[i] + src2[i] + NP2PAL_GRPH;
+-	}
+-}
+-
+-static void screenmix2(PALNUM *dest, const UINT8 *src1, const UINT8 *src2) {
+-
+-	int		x, y;
+-
+-	for (y=0; y<(SURFACE_HEIGHT/2); y++) {
+-		for (x=0; x<SURFACE_WIDTH; x++) {
+-			dest[x] = src1[x] + src2[x] + NP2PAL_GRPH;
+-		}
+-		dest += SURFACE_WIDTH;
+-		src1 += SURFACE_WIDTH;
+-		src2 += SURFACE_WIDTH;
+-		for (x=0; x<SURFACE_WIDTH; x++) {
+-			dest[x] = (src1[x] >> 4) + NP2PAL_TEXT;
+-		}
+-		dest += SURFACE_WIDTH;
+-		src1 += SURFACE_WIDTH;
+-		src2 += SURFACE_WIDTH;
+-	}
+-}
+-
+-static void screenmix3(PALNUM *dest, const UINT8 *src1, const UINT8 *src2) {
+-
+-	PALNUM	c;
+-	int		x, y;
+-
+-	for (y=0; y<(SURFACE_HEIGHT/2); y++) {
+-		// dest == src1, dest == src2 ÇÃéûÇ™Ç†ÇÈÇÃÇ≈Åc
+-		for (x=0; x<SURFACE_WIDTH; x++) {
+-			c = (src1[x + SURFACE_WIDTH]) >> 4;
+-			if (!c) {
+-				c = src2[x] + NP2PAL_SKIP;
+-			}
+-			dest[x + SURFACE_WIDTH] = c;
+-			dest[x] = src1[x] + src2[x] + NP2PAL_GRPH;
+-		}
+-		dest += SURFACE_WIDTH * 2;
+-		src1 += SURFACE_WIDTH * 2;
+-		src2 += SURFACE_WIDTH * 2;
+-	}
+-}
+-
+-#if defined(SUPPORT_PC9821)
+-static void screenmix4(PALNUM *dest, const UINT8 *src1, const UINT8 *src2) {
+-
+-	int		i;
+-
+-	for (i=0; i<(SURFACE_WIDTH * SURFACE_HEIGHT); i++) {
+-		if (src1[i]) {
+-			dest[i] = (src1[i] >> 4) + NP2PAL_TEXTEX;
+-		}
+-		else {
+-			dest[i] = src2[i] + NP2PAL_GRPHEX;
+-		}
+-	}
+-}
+-#endif
+-
+-
+-// ----
+-
+-/**
+- * Create
+- * @return The handle of saver
+- */
+-SCRNSAVE scrnsave_create(void)
+-{
+-	int			width;
+-	int			height;
+-	SCRNDATA	*sd;
+-	PALNUM		*dat;
+-	UINT		scrnsize;
+-	UINT8		*datanull;
+-	UINT8		*datatext;
+-	UINT8		*datagrph;
+-	void		(*mix)(PALNUM *dest, const UINT8 *src1, const UINT8 *src2);
+-	PALNUM		*s;
+-	UINT		pals;
+-	PALNUM		remap[NP2PAL_MAX];
+-	UINT8		remapflag[NP2PAL_MAX];
+-	int			x;
+-	int			y;
+-	PALNUM		col;
+-	BMPPAL		curpal;
+-	UINT		pos;
+-
+-	width = dsync.scrnxmax;
+-	height = dsync.scrnymax;
+-	if ((width <= 0) || (height <= 0)) {
+-		goto ssg_err;
+-	}
+-	sd = (SCRNDATA *)_MALLOC(sizeof(SCRNDATA), "screen data");
+-	if (sd == NULL) {
+-		goto ssg_err;
+-	}
+-	ZeroMemory(sd, sizeof(SCRNDATA));
+-
+-	dat = sd->dat;
+-	scrnsize = SURFACE_WIDTH * SURFACE_HEIGHT;
+-	datanull = ((UINT8 *)dat) + (scrnsize * (sizeof(PALNUM) - 1));
+-	datatext = datanull;
+-	datagrph = datanull;
+-	if (gdcs.textdisp & 0x80) {
+-		datatext = np2_tram;
+-	}
+-	if (gdcs.grphdisp & 0x80) {
+-#if defined(SUPPORT_PC9821)
+-		if ((gdc.analog & 6) == 6) {
+-			datagrph = np2_vram[0];
+-		}
+-		else
+-#endif
+-		datagrph = np2_vram[gdcs.disp];
+-	}
+-#if defined(SUPPORT_PC9821)
+-	if (gdc.analog & 2) {
+-		mix = screenmix4;
+-	}
+-	else
+-#endif
+-	if (!(gdc.mode1 & 0x10)) {
+-		mix = screenmix;
+-	}
+-	else if (!np2cfg.skipline) {
+-		mix = screenmix2;
+-	}
+-	else {
+-		mix = screenmix3;
+-	}
+-	(*mix)(sd->dat, datatext, datagrph);
+-
+-	// ÉpÉåÉbÉgç≈ìKâª
+-	s = sd->dat;
+-	pals = 0;
+-	ZeroMemory(remap, sizeof(remap));
+-	ZeroMemory(remapflag, sizeof(remapflag));
+-	for (y=0; y<height; y++) {
+-		for (x=0; x<width; x++) {
+-			col = s[x];
+-			if (!remapflag[col]) {
+-				remapflag[col] = 1;
+-				curpal.rgb[0] = np2_pal32[col].p.b;
+-				curpal.rgb[1] = np2_pal32[col].p.g;
+-				curpal.rgb[2] = np2_pal32[col].p.r;
+-				for (pos=0; pos<pals; pos++) {
+-					if (sd->pal[pos].d == curpal.d) {
+-						break;
+-					}
+-				}
+-				if (pos >= pals) {
+-					sd->pal[pos].d = curpal.d;
+-					pals++;
+-				}
+-				remap[col] = (PALNUM)pos;
+-			}
+-			s[x] = remap[col];
+-		}
+-		s += SURFACE_WIDTH;
+-	}
+-	sd->width = width;
+-	sd->height = height;
+-	sd->pals = pals;
+-	if (pals <= 2) {
+-		sd->type = SCRNSAVE_1BIT;
+-	}
+-	else if (pals <= 16) {
+-		sd->type = SCRNSAVE_4BIT;
+-	}
+-	else if (pals <= 256) {
+-		sd->type = SCRNSAVE_8BIT;
+-	}
+-	else {
+-		sd->type = SCRNSAVE_24BIT;
+-	}
+-	return((SCRNSAVE)sd);
+-
+-ssg_err:
+-	return(NULL);
+-}
+-
+-/**
+- * Destroy
+- * @param[in] hdl The handle of saver
+- */
+-void scrnsave_destroy(SCRNSAVE hdl)
+-{
+-	if (hdl)
+-	{
+-		_MFREE(hdl);
+-	}
+-}
+-
+-/**
+- * Get BPP
+- * @param[in] hdl The handle of saver
+- * @return bpp
+- */
+-int scrnsave_gettype(SCRNSAVE hdl)
+-{
+-	int ret = 0;
+-
+-	if (hdl)
+-	{
+-		ret = hdl->type;
+-	}
+-	return ret;
+-}
+-
+-// ---- BMP
+-
+-BRESULT scrnsave_writebmp(SCRNSAVE hdl, const OEMCHAR *filename, UINT flag) {
+-
+-const SCRNDATA	*sd;
+-	FILEH		fh;
+-	BMPDATA		bd;
+-	UINT		type;
+-	UINT		palsize;
+-	BMPFILE		bf;
+-	UINT		pos;
+-	BMPINFO		bi;
+-	UINT8		palwork[1024];
+-	UINT		align;
+-	UINT8		*work;
+-const PALNUM	*s;
+-	int			r;
+-	int			x;
+-	BMPPAL		curpal;
+-
+-	(void)flag;
+-
+-	if (hdl == NULL) {
+-		goto sswb_err1;
+-	}
+-	sd = (SCRNDATA *)hdl;
+-
+-	fh = file_create(filename);
+-	if (fh == FILEH_INVALID) {
+-		goto sswb_err1;
+-	}
+-
+-	bd.width = sd->width;
+-	bd.height = sd->height;
+-	if (sd->pals <= 2) {
+-		type = SCRNSAVE_1BIT;
+-		bd.bpp = 1;
+-		palsize = 4 << 1;
+-	}
+-	else if (sd->pals <= 16) {
+-		type = SCRNSAVE_4BIT;
+-		bd.bpp = 4;
+-		palsize = 4 << 4;
+-	}
+-	else if (sd->pals <= 256) {
+-		type = SCRNSAVE_8BIT;
+-		bd.bpp = 8;
+-		palsize = 4 << 8;
+-	}
+-	else {
+-		type = SCRNSAVE_24BIT;
+-		bd.bpp = 24;
+-		palsize = 0;
+-	}
+-
+-	// Bitmap File
+-	ZeroMemory(&bf, sizeof(bf));
+-	bf.bfType[0] = 'B';
+-	bf.bfType[1] = 'M';
+-	pos = sizeof(BMPFILE) + sizeof(BMPINFO) + palsize;
+-	STOREINTELDWORD(bf.bfOffBits, pos);
+-
+-	// Bitmap Info
+-	bmpdata_setinfo(&bi, &bd);
+-	STOREINTELDWORD(bi.biClrImportant, sd->pals);
+-	align = bmpdata_getalign(&bi);
+-	
+-	// Bitmap File (size)
+-	STOREINTELDWORD(bf.bfSize, (sizeof(BMPFILE) + sizeof(BMPINFO) + palsize + bmpdata_getalign(&bi) * bd.height));
+-
+-	if (file_write(fh, &bf, sizeof(bf)) != sizeof(bf)) {
+-		goto sswb_err2;
+-	}
+-	if (file_write(fh, &bi, sizeof(bi)) != sizeof(bi)) {
+-		goto sswb_err2;
+-	}
+-
+-	if (palsize) {
+-		ZeroMemory(palwork, palsize);
+-		CopyMemory(palwork, sd->pal, sd->pals * 4);
+-		if (file_write(fh, palwork, palsize) != palsize) {
+-			goto sswb_err2;
+-		}
+-	}
+-
+-	work = (UINT8 *)_MALLOC(align, filename);
+-	if (work == NULL) {
+-		goto sswb_err2;
+-	}
+-	ZeroMemory(work, align);
+-
+-	s = sd->dat + (SURFACE_WIDTH * bd.height);
+-	do {
+-		s -= SURFACE_WIDTH;
+-		switch(type) {
+-			case SCRNSAVE_1BIT:
+-				ZeroMemory(work, align);
+-				for (x=0; x<bd.width; x++) {
+-					if (s[x]) {
+-						work[x >> 3] |= 0x80 >> (x & 7);
+-					}
+-				}
+-				break;
+-
+-			case SCRNSAVE_4BIT:
+-				r = bd.width / 2;
+-				for (x=0; x<r; x++) {
+-					work[x] = (s[x*2+0] << 4) + s[x*2+1];
+-				}
+-				if (bd.width & 1) {
+-					work[x] = s[x*2+0] << 4;
+-				}
+-				break;
+-
+-			case SCRNSAVE_8BIT:
+-				for (x=0; x<bd.width; x++) {
+-					work[x] = (UINT8)s[x];
+-				}
+-				break;
+-
+-			case SCRNSAVE_24BIT:
+-				for (x=0; x<bd.width; x++) {
+-					curpal.d = sd->pal[s[x]].d;
+-					work[x*3+0] = curpal.rgb[0];
+-					work[x*3+1] = curpal.rgb[1];
+-					work[x*3+2] = curpal.rgb[2];
+-				}
+-				break;
+-		}
+-		if (file_write(fh, work, align) != align) {
+-			goto sswb_err3;
+-		}
+-	} while(--bd.height);
+-
+-	file_close(fh);
+-	_MFREE(work);
+-	return(SUCCESS);
+-
+-sswb_err3:
+-	_MFREE(work);
+-
+-sswb_err2:
+-	file_close(fh);
+-	file_delete(filename);
+-
+-sswb_err1:
+-	return(FAILURE);
+-}
+-
+-BRESULT scrnsave_getbmp(SCRNSAVE hdl, BMPFILE *lpbf, BMPINFO *lpbi, UINT8 **lplppal, UINT8 **lplppixels, UINT flag) {
+-
+-const SCRNDATA	*sd;
+-	BMPDATA		bd;
+-	UINT		type;
+-	UINT		palsize;
+-	BMPFILE		bf;
+-	UINT		pos;
+-	BMPINFO		bi;
+-	UINT8		palwork[1024];
+-	UINT		align;
+-	UINT8		*work;
+-const PALNUM	*s;
+-	int			r;
+-	int			x;
+-	BMPPAL		curpal;
+-	UINT8		*dstpix;
+-
+-	(void)flag;
+-
+-	if (hdl == NULL) {
+-		goto sswb_err1;
+-	}
+-	sd = (SCRNDATA *)hdl;
+-
+-	bd.width = sd->width;
+-	bd.height = sd->height;
+-	if (sd->pals <= 2) {
+-		type = SCRNSAVE_1BIT;
+-		bd.bpp = 1;
+-		palsize = 4 << 1;
+-	}
+-	else if (sd->pals <= 16) {
+-		type = SCRNSAVE_4BIT;
+-		bd.bpp = 4;
+-		palsize = 4 << 4;
+-	}
+-	else if (sd->pals <= 256) {
+-		type = SCRNSAVE_8BIT;
+-		bd.bpp = 8;
+-		palsize = 4 << 8;
+-	}
+-	else {
+-		type = SCRNSAVE_24BIT;
+-		bd.bpp = 24;
+-		palsize = 0;
+-	}
+-
+-	// Bitmap File
+-	ZeroMemory(&bf, sizeof(bf));
+-	bf.bfType[0] = 'B';
+-	bf.bfType[1] = 'M';
+-	pos = sizeof(BMPFILE) + sizeof(BMPINFO) + palsize;
+-	STOREINTELDWORD(bf.bfOffBits, pos);
+-
+-	// Bitmap Info
+-	bmpdata_setinfo(&bi, &bd);
+-	STOREINTELDWORD(bi.biClrImportant, sd->pals);
+-	align = bmpdata_getalign(&bi);
+-	CopyMemory(lpbi, &bi, sizeof(bi));
+-	*lplppal = (UINT8*)malloc(palsize);
+-	if (palsize) {
+-		ZeroMemory(palwork, palsize);
+-		CopyMemory(palwork, sd->pal, sd->pals * 4);
+-		CopyMemory(*lplppal, palwork, palsize);
+-	}
+-	
+-	// Bitmap File (size)
+-	STOREINTELDWORD(bf.bfSize, (sizeof(BMPFILE) + sizeof(BMPINFO) + palsize + bmpdata_getalign(&bi) * bd.height));
+-	CopyMemory(lpbf, &bf, sizeof(bf));
+-
+-	work = (UINT8 *)_MALLOC(align, filename);
+-	if (work == NULL) {
+-		goto sswb_err2;
+-	}
+-	ZeroMemory(work, align);
+-	
+-	*lplppixels = (UINT8*)malloc(bmpdata_getalign(&bi) * bd.height);
+-	dstpix = *lplppixels;
+-	s = sd->dat + (SURFACE_WIDTH * bd.height);
+-	do {
+-		s -= SURFACE_WIDTH;
+-		switch(type) {
+-			case SCRNSAVE_1BIT:
+-				ZeroMemory(work, align);
+-				for (x=0; x<bd.width; x++) {
+-					if (s[x]) {
+-						work[x >> 3] |= 0x80 >> (x & 7);
+-					}
+-				}
+-				break;
+-
+-			case SCRNSAVE_4BIT:
+-				r = bd.width / 2;
+-				for (x=0; x<r; x++) {
+-					work[x] = (s[x*2+0] << 4) + s[x*2+1];
+-				}
+-				if (bd.width & 1) {
+-					work[x] = s[x*2+0] << 4;
+-				}
+-				break;
+-
+-			case SCRNSAVE_8BIT:
+-				for (x=0; x<bd.width; x++) {
+-					work[x] = (UINT8)s[x];
+-				}
+-				break;
+-
+-			case SCRNSAVE_24BIT:
+-				for (x=0; x<bd.width; x++) {
+-					curpal.d = sd->pal[s[x]].d;
+-					work[x*3+0] = curpal.rgb[0];
+-					work[x*3+1] = curpal.rgb[1];
+-					work[x*3+2] = curpal.rgb[2];
+-				}
+-				break;
+-		}
+-		
+-		CopyMemory(dstpix, work, align);
+-		dstpix += align;
+-	} while(--bd.height);
+-	
+-
+-	_MFREE(work);
+-	return(SUCCESS);
+-
+-//sswb_err3:
+-//	_MFREE(work);
+-sswb_err2:
+-sswb_err1:
+-	return(FAILURE);
+-}
+-
+-
+-// ---- GIF
+-
+-#if 1
+-#define	MAXGIFBITS			12
+-
+-#if MAXGIFBITS == 12
+-#define	HASHTBLSIZE			5003
+-#elif MAXGIFBITS == 13
+-#define	HASHTBLSIZE			9001
+-#elif MAXGIFBITS == 14
+-#define	HASHTBLSIZE			18013
+-#elif MAXGIFBITS == 15
+-#define	HASHTBLSIZE			35023
+-#elif MAXGIFBITS == 16
+-#define	HASHTBLSIZE			69001
+-#endif
+-
+-#define GIFBITDATAWRITE(dat) 											\
+-	do {																\
+-		bitdata |= (dat) << bits;										\
+-		bits += bitcount;												\
+-		while(bits >= 8) {												\
+-			bitbuf[++bitdatas] = (UINT8)bitdata;						\
+-			if (bitdatas >= 255) {										\
+-				bitbuf[0] = (UINT8)bitdatas;							\
+-				r = 1 + bitdatas;										\
+-				if (file_write(fh, bitbuf, r) != r) {					\
+-					goto sswg_err4;										\
+-				}														\
+-				bitdatas = 0;											\
+-			}															\
+-			bitdata >>= 8;												\
+-			bits -= 8;													\
+-		}																\
+-	} while(/*CONSTCOND*/ 0)
+-
+-#define GIFBITEXTENSION													\
+-	do {																\
+-		if (codefree > codemax) {										\
+-			bitcount++;													\
+-			if (bitcount < MAXGIFBITS) {								\
+-				codemax = (codemax << 1) + 1;							\
+-			}															\
+-			else {														\
+-				codemax = 1 << MAXGIFBITS;								\
+-			}															\
+-		}																\
+-	} while(/*CONSTCOND*/ 0)
+-
+-#define GIFBITDATAFLASH													\
+-	do {																\
+-		if (bits) {														\
+-			bitbuf[++bitdatas] = (UINT8)bitdata;						\
+-		}																\
+-		if (bitdatas) {													\
+-			bitbuf[0] = (UINT8)bitdatas;								\
+-			r = 1 + bitdatas;											\
+-			if (file_write(fh, bitbuf, r) != r) {						\
+-				goto sswg_err4;											\
+-			}															\
+-		}																\
+-	} while(/*CONSTCOND*/ 0)
+-
+-
+-BRESULT scrnsave_writegif(SCRNSAVE hdl, const OEMCHAR *filename, UINT flag) {
+-
+-const SCRNDATA	*sd;
+-	UINT		bpp;
+-	UINT		*hash_code;
+-	UINT32		*hash_data;
+-	FILEH		fh;
+-	UINT		r;
+-const PALNUM	*s;
+-
+-	UINT		codeclear;
+-	UINT		codeeoi;
+-	UINT		codefree;
+-	UINT		codemax;
+-
+-	UINT8		bits;
+-	UINT8		bitcount;
+-	UINT		bitdata;
+-	UINT		bitdatas;
+-	UINT8		bitbuf[3+256*3];
+-
+-	int			x;
+-	int			y;
+-	UINT		b;
+-	UINT32		c;
+-	int			i;
+-	int			disp;
+-
+-	(void)flag;
+-
+-	if (hdl == NULL) {
+-		goto sswg_err1;
+-	}
+-	sd = (SCRNDATA *)hdl;
+-
+-	bpp = 1;
+-	while(sd->pals > (UINT)(1 << bpp)) {
+-		bpp++;
+-	}
+-	if (bpp > 8) {
+-		goto sswg_err1;
+-	}
+-
+-	hash_code = (UINT *)_MALLOC(HASHTBLSIZE * sizeof(UINT), "hash_code");
+-	if (hash_code == NULL) {
+-		goto sswg_err1;
+-	}
+-	hash_data = (UINT32 *)_MALLOC(HASHTBLSIZE * sizeof(UINT32), "hash_data");
+-	if (hash_data == NULL) {
+-		goto sswg_err2;
+-	}
+-
+-	fh = file_create(filename);
+-	if (fh == FILEH_INVALID) {
+-		goto sswg_err3;
+-	}
+-
+-	CopyMemory(bitbuf, "GIF87a", 6);
+-	STOREINTELWORD(bitbuf + 6, sd->width);
+-	STOREINTELWORD(bitbuf + 8, sd->height);
+-	if (file_write(fh, bitbuf, 10) != 10) {
+-		goto sswg_err4;
+-	}
+-
+-	ZeroMemory(bitbuf, sizeof(bitbuf));
+-	bitbuf[0] = (UINT8)(0x80 + ((8 - 1) << 4) + (bpp - 1));
+-//	bitbuf[1] = 0;									// background
+-//	bitbuf[2] = 0;									// reserved
+-	for (r=0; r<sd->pals; r++) {
+-		bitbuf[r*3+3] = sd->pal[r].rgb[2];			// R
+-		bitbuf[r*3+4] = sd->pal[r].rgb[1];			// G
+-		bitbuf[r*3+5] = sd->pal[r].rgb[0];			// B
+-	}
+-	r = (1 << bpp) * 3 + 3;
+-	if (file_write(fh, bitbuf, r) != r) {
+-		goto sswg_err4;
+-	}
+-
+-	bitbuf[0] = 0x2c;							// separator
+-	STOREINTELWORD(bitbuf + 1, 0);				// sx
+-	STOREINTELWORD(bitbuf + 3, 0);				// sy
+-	STOREINTELWORD(bitbuf + 5, sd->width);		// cx
+-	STOREINTELWORD(bitbuf + 7, sd->height);		// cy
+-	bitbuf[9] = 0;								// noninterlace
+-
+-	bpp = max(bpp, 2);
+-	bitbuf[10] = (UINT8)bpp;
+-	if (file_write(fh, bitbuf, 11) != 11) {
+-		goto sswg_err4;
+-	}
+-
+-	codeclear = 1 << bpp;
+-	codeeoi = codeclear + 1;
+-	codefree = codeclear + 2;
+-	codemax = (codeclear << 1) - 1;
+-
+-	bits = 0;
+-	bitdata = 0;
+-	bitdatas = 0;
+-	bitcount = (UINT8)(bpp + 1);
+-	GIFBITDATAWRITE(codeclear);
+-
+-	ZeroMemory(hash_code, HASHTBLSIZE * sizeof(UINT));
+-
+-	x = 0;
+-	y = 0;
+-	s = sd->dat;
+-	b = s[x++];
+-	do {
+-		while(x < sd->width) {
+-			c = s[x++];
+-			i = (c << (MAXGIFBITS - 8)) + b;
+-			c = (c << 16) + b;
+-			if (i >= HASHTBLSIZE) {
+-				i -= HASHTBLSIZE;
+-			}
+-			disp = (i != 0)?(i - HASHTBLSIZE):-1;
+-			while(1) {
+-				if (hash_code[i] == 0) {
+-					GIFBITDATAWRITE(b);
+-					GIFBITEXTENSION;
+-					if (codefree < (1 << MAXGIFBITS)) {
+-						hash_code[i] = codefree++;
+-						hash_data[i] = c;
+-					}
+-					else {
+-						ZeroMemory(hash_code, HASHTBLSIZE * sizeof(UINT));
+-						GIFBITDATAWRITE(codeclear);
+-						codefree = codeclear + 2;
+-						codemax = (codeclear << 1) - 1;
+-						bitcount = (UINT8)(bpp + 1);
+-					}
+-					b = c >> 16;
+-					break;
+-				}
+-				else if (hash_data[i] == c) {
+-					b = hash_code[i];
+-					break;
+-				}
+-				else {
+-					i += disp;
+-					if (i < 0) {
+-						i += HASHTBLSIZE;
+-					}
+-				}
+-			}
+-		}
+-		x = 0;
+-		s += SURFACE_WIDTH;
+-		y++;
+-	} while(y < sd->height);
+-
+-	GIFBITDATAWRITE(b);
+-	GIFBITEXTENSION;
+-	GIFBITDATAWRITE(codeeoi);
+-	GIFBITDATAFLASH;
+-
+-	bitbuf[0] = 0;
+-	if (file_write(fh, bitbuf, 1) != 1) {
+-		goto sswg_err4;
+-	}
+-
+-	bitbuf[0] = 0x3b;								// terminator
+-	if (file_write(fh, bitbuf, 1) != 1) {
+-		goto sswg_err4;
+-	}
+-
+-	file_close(fh);
+-	_MFREE(hash_data);
+-	_MFREE(hash_code);
+-	return(SUCCESS);
+-
+-sswg_err4:
+-	file_close(fh);
+-	file_delete(filename);
+-
+-sswg_err3:
+-	_MFREE(hash_data);
+-
+-sswg_err2:
+-	_MFREE(hash_code);
+-
+-sswg_err1:
+-	return(FAILURE);
+-}
+-#endif
+-
 +/**
 + * @file	scrnsave.c
 + * @brief	Implementation of the screen saver
@@ -4357,11 +8043,55 @@ index 0000000..479cc9c
 +#endif
 +
 diff --git a/vram/scrnsave.h b/vram/scrnsave.h
-new file mode 100755
-index 0000000..0bf87f9
---- /dev/null
+index 48ad29a..0bf87f9 100644
+--- a/vram/scrnsave.h
 +++ b/vram/scrnsave.h
-@@ -0,0 +1,47 @@
+@@ -1,45 +1,47 @@
+-/**
+- * @file	scrnsave.h
+- * @brief	Interface of the screen saver
+- */
+-
+-#pragma once
+-
+-/**
+- * types
+- */
+-enum tagScrnSaveType
+-{
+-	SCRNSAVE_1BIT	= 0,
+-	SCRNSAVE_4BIT	= 1,
+-	SCRNSAVE_8BIT	= 2,
+-	SCRNSAVE_24BIT	= 3
+-};
+-
+-/**
+- * flags
+- */
+-enum tagScrnSaveFlags
+-{
+-	SCRNSAVE_AUTO	= 0
+-};
+-
+-struct tagScrnSave;
+-typedef struct tagScrnSave *		SCRNSAVE;
+-
+-
+-#ifdef __cplusplus
+-extern "C"
+-{
+-#endif
+-
+-SCRNSAVE scrnsave_create(void);
+-void scrnsave_destroy(SCRNSAVE hdl);
+-int scrnsave_gettype(SCRNSAVE hdl);
+-BRESULT scrnsave_writebmp(SCRNSAVE hdl, const OEMCHAR *filename, UINT flag);
+-BRESULT scrnsave_getbmp(SCRNSAVE hdl, BMPFILE *lpbf, BMPINFO *lpbi, UINT8 **lplppal, UINT8 **lplppixels, UINT flag);
+-BRESULT scrnsave_writegif(SCRNSAVE hdl, const OEMCHAR *filename, UINT flag);
+-
+-#ifdef __cplusplus
+-}
+-#endif
 +/**
 + * @file	scrnsave.h
 + * @brief	Interface of the screen saver
@@ -4410,11 +8140,176 @@ index 0000000..0bf87f9
 +}
 +#endif
 diff --git a/vram/sdraw.c b/vram/sdraw.c
-new file mode 100755
-index 0000000..605babf
---- /dev/null
+index c030736..605babf 100644
+--- a/vram/sdraw.c
 +++ b/vram/sdraw.c
-@@ -0,0 +1,174 @@
+@@ -1,166 +1,174 @@
+-#include	"compiler.h"
+-#include	"scrnmng.h"
+-#include	"scrndraw.h"
+-#include	"sdraw.h"
+-#include	"palettes.h"
+-
+-#if !defined(SIZE_QVGA) || defined(SIZE_VGATEST)
+-
+-#if defined(SUPPORT_8BPP)
+-#define	SDSYM(sym)				sdraw8##sym
+-#define	SDSETPIXEL(ptr, pal)	*(ptr) = (pal) + START_PAL
+-#include	"sdraw.mcr"
+-#undef	SDSYM
+-#undef	SDSETPIXEL
+-#endif
+-
+-#if defined(SUPPORT_16BPP)
+-#define	SDSYM(sym)				sdraw16##sym
+-#define	SDSETPIXEL(ptr, pal)	*(UINT16 *)(ptr) = np2_pal16[(pal)]
+-#include	"sdraw.mcr"
+-#include	"sdrawex.mcr"
+-#undef	SDSYM
+-#undef	SDSETPIXEL
+-#endif
+-
+-#if defined(SUPPORT_24BPP)
+-#define	SDSYM(sym)				sdraw24##sym
+-#define	SDSETPIXEL(ptr, pal)	(ptr)[RGB24_R] = np2_pal32[(pal)].p.r;	\
+-								(ptr)[RGB24_G] = np2_pal32[(pal)].p.g;	\
+-								(ptr)[RGB24_B] = np2_pal32[(pal)].p.b
+-#include	"sdraw.mcr"
+-#include	"sdrawex.mcr"
+-#undef	SDSYM
+-#undef	SDSETPIXEL
+-#endif
+-
+-#if defined(SUPPORT_32BPP)
+-#define	SDSYM(sym)				sdraw32##sym
+-#define	SDSETPIXEL(ptr, pal)	*(UINT32 *)(ptr) = np2_pal32[(pal)].d
+-#include	"sdraw.mcr"
+-#include	"sdrawex.mcr"
+-#undef	SDSYM
+-#undef	SDSETPIXEL
+-#endif
+-
+-
+-// ----
+-
+-static const SDRAWFN *tbl[] = {
+-#if defined(SUPPORT_8BPP)
+-			sdraw8p,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_16BPP)
+-			sdraw16p,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_24BPP)
+-			sdraw24p,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_32BPP)
+-			sdraw32p,
+-#else
+-			NULL,
+-#endif
+-
+-#if defined(SUPPORT_NORMALDISP)
+-#if defined(SUPPORT_8BPP)
+-			sdraw8n,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_16BPP)
+-			sdraw16n,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_24BPP)
+-			sdraw24n,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_32BPP)
+-			sdraw32n,
+-#else
+-			NULL,
+-#endif
+-#endif
+-};
+-
+-const SDRAWFN *sdraw_getproctbl(const SCRNSURF *surf) {
+-
+-	int		proc;
+-
+-	proc = ((surf->bpp >> 3) - 1) & 3;
+-#if defined(SUPPORT_NORMALDISP)
+-	if (surf->extend) {
+-		proc += 4;
+-	}
+-#endif
+-	return(tbl[proc]);
+-}
+-
+-
+-// ---- PC-9821
+-
+-#if defined(SUPPORT_PC9821)
+-
+-static const SDRAWFN *tblex[] = {
+-			NULL,
+-#if defined(SUPPORT_16BPP)
+-			sdraw16pex,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_24BPP)
+-			sdraw24pex,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_32BPP)
+-			sdraw32pex,
+-#else
+-			NULL,
+-#endif
+-
+-#if defined(SUPPORT_NORMALDISP)
+-			NULL,
+-#if defined(SUPPORT_16BPP)
+-			sdraw16nex,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_24BPP)
+-			sdraw24nex,
+-#else
+-			NULL,
+-#endif
+-#if defined(SUPPORT_32BPP)
+-			sdraw32nex,
+-#else
+-			NULL,
+-#endif
+-#endif
+-};
+-
+-const SDRAWFN *sdraw_getproctblex(const SCRNSURF *surf) {
+-
+-	int		proc;
+-
+-	proc = ((surf->bpp >> 3) - 1) & 3;
+-#if defined(SUPPORT_NORMALDISP)
+-	if (surf->extend) {
+-		proc += 4;
+-	}
+-#endif
+-	return(tblex[proc]);
+-}
+-#endif
+-
+-#endif
+-
 +#include	<compiler.h>
 +#include	<scrnmng.h>
 +#include	<vram/scrndraw.h>
@@ -4590,11 +8485,40 @@ index 0000000..605babf
 +#endif
 +
 diff --git a/vram/sdraw.h b/vram/sdraw.h
-new file mode 100755
-index 0000000..e235522
---- /dev/null
+index 3dcd69c..e235522 100644
+--- a/vram/sdraw.h
 +++ b/vram/sdraw.h
-@@ -0,0 +1,38 @@
+@@ -1,30 +1,38 @@
+-
+-typedef struct {
+-const UINT8	*src;
+-const UINT8	*src2;
+-	UINT8	*dst;
+-	int		width;
+-	int		xbytes;
+-	int		y;
+-	int		xalign;
+-	int		yalign;
+-	UINT8	dirty[SURFACE_HEIGHT];
+-} _SDRAW, *SDRAW;
+-
+-typedef void (SCRNCALL * SDRAWFN)(SDRAW sdraw, int maxy);
+-
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-const SDRAWFN *sdraw_getproctbl(const SCRNSURF *surf);
+-
+-#if defined(SUPPORT_PC9821)
+-const SDRAWFN *sdraw_getproctblex(const SCRNSURF *surf);
+-#endif
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +
 +#include	<vram/scrndraw.h>
 +#include	<scrnmng.h>
@@ -4634,11 +8558,873 @@ index 0000000..e235522
 +#endif
 +
 diff --git a/vram/sdraw.mcr b/vram/sdraw.mcr
-new file mode 100755
-index 0000000..f040511
---- /dev/null
+index 3c62660..f040511 100644
+--- a/vram/sdraw.mcr
 +++ b/vram/sdraw.mcr
-@@ -0,0 +1,1054 @@
+@@ -1,863 +1,1054 @@
+-
+-// ---- plasma display
+-
+-// vram off
+-static void SCRNCALL SDSYM(p_0)(SDRAW sdraw, int maxy) {
+-
+-	UINT8	*p;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(p, NP2PAL_TEXT2);
+-				p += sdraw->xalign;
+-			}
+-			p -= sdraw->xbytes;
+-		}
+-		p += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->dst = p;
+-	sdraw->y = y;
+-}
+-
+-// text or grph 1ÉvÉåÅ[Éì
+-static void SCRNCALL SDSYM(p_1)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph
+-static void SCRNCALL SDSYM(p_2)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(r, p[x] + q[x] + NP2PAL_GRPH);
+-				r += sdraw->xalign;
+-			}
+-			r -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-// text + (grph:interleave)
+-static void SCRNCALL SDSYM(p_ti)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, (p[x] >> 4) + NP2PAL_TEXT);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// grph:interleave
+-static void SCRNCALL SDSYM(p_gi)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, NP2PAL_TEXT);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph:interleave
+-static void SCRNCALL SDSYM(p_2i)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(r, p[x] + q[x] + NP2PAL_GRPH);
+-				r += sdraw->xalign;
+-			}
+-			r -= sdraw->xbytes;
+-		}
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(r, (q[x] >> 4) + NP2PAL_TEXT);
+-				r += sdraw->xalign;
+-			}
+-			r -= sdraw->xbytes;
+-		}
+-		p += (SURFACE_WIDTH * 2);
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-//	grph:interleave ex
+-static void SCRNCALL SDSYM(p_gie)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			sdraw->dirty[y+1] |= 0xff;
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		q += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, p[x] + NP2PAL_SKIP);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += (SURFACE_WIDTH * 2);
+-		q += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-//	text + grph:interleave ex
+-static void SCRNCALL SDSYM(p_2ie)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-	UINT8	c;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			sdraw->dirty[y+1] |= 0xff;
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(r, p[x] + q[x] + NP2PAL_GRPH);
+-				r += sdraw->xalign;
+-			}
+-			r -= sdraw->xbytes;
+-		}
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				c = q[x] >> 4;
+-				if (!c) {
+-					c = p[x] + NP2PALS_TXT;
+-				}
+-				SDSETPIXEL(r, c + NP2PAL_TEXT);
+-				r += sdraw->xalign;
+-			}
+-			r -= sdraw->xbytes;
+-		}
+-		p += (SURFACE_WIDTH * 2);
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-#if defined(SUPPORT_CRT15KHZ)
+-// text or grph 1ÉvÉåÅ[Éì(15kHz)
+-static void SCRNCALL SDSYM(p_1d)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		a;
+-	int		y;
+-	int		x;
+-	int		c;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	a = sdraw->yalign;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				c = p[x] + NP2PAL_GRPH;
+-				SDSETPIXEL(q, c);
+-				SDSETPIXEL((q + a), c);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += a * 2;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph (15kHz)
+-static void SCRNCALL SDSYM(p_2d)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		a;
+-	int		y;
+-	int		x;
+-	int		c;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	a = sdraw->yalign;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				c = p[x] + q[x] + NP2PAL_GRPH;
+-				SDSETPIXEL(r, c);
+-				SDSETPIXEL((r + a), c);
+-				r += sdraw->xalign;
+-			}
+-			r -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += a * 2;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-#endif
+-
+-static const SDRAWFN SDSYM(p)[] = {
+-		SDSYM(p_0),		SDSYM(p_1),		SDSYM(p_1),		SDSYM(p_2),
+-		SDSYM(p_0),		SDSYM(p_ti),	SDSYM(p_gi),	SDSYM(p_2i),
+-		SDSYM(p_0),		SDSYM(p_ti),	SDSYM(p_gie),	SDSYM(p_2ie),
+-#if defined(SUPPORT_CRT15KHZ)
+-		SDSYM(p_0),		SDSYM(p_1d),	SDSYM(p_1d),	SDSYM(p_2d),
+-#endif
+-	};
+-
+-// ---- normal display
+-
+-#ifdef SUPPORT_NORMALDISP
+-
+-// vram off
+-static void SCRNCALL SDSYM(n_0)(SDRAW sdraw, int maxy) {
+-
+-	UINT8	*p;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(p, NP2PAL_TEXT3);
+-			for (x=0; x<sdraw->width; x++) {
+-				p += sdraw->xalign;
+-				SDSETPIXEL(p, NP2PAL_TEXT2);
+-			}
+-			p -= sdraw->xbytes;
+-		}
+-		p += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->dst = p;
+-	sdraw->y = y;
+-}
+-
+-// text 1ÉvÉåÅ[Éì
+-static void SCRNCALL SDSYM(n_t)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(q, (p[0] >> 4) + NP2PAL_TEXT3);
+-			q += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-				q += sdraw->xalign;
+-			}
+-			SDSETPIXEL(q, NP2PAL_TEXT2);
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// grph 1ÉvÉåÅ[Éì
+-static void SCRNCALL SDSYM(n_g)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(q, NP2PAL_TEXT3);
+-			for (x=0; x<sdraw->width; x++) {
+-				q += sdraw->xalign;
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph
+-static void SCRNCALL SDSYM(n_2)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(r, (q[0] >> 4) + NP2PAL_TEXT3);
+-			r += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				SDSETPIXEL(r, p[x-1] + q[x] + NP2PAL_GRPH);
+-				r += sdraw->xalign;
+-			}
+-			SDSETPIXEL(r, p[x-1] + NP2PAL_GRPH);
+-			r -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-// text + (grph:interleave)
+-static void SCRNCALL SDSYM(n_ti)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(q, (p[0] >> 4) + NP2PAL_TEXT3);
+-			q += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-				q += sdraw->xalign;
+-			}
+-			SDSETPIXEL(q, NP2PAL_GRPH);
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			SDSETPIXEL(q, (p[0] >> 4) + NP2PAL_TEXT3);
+-			q += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, (p[x] >> 4) + NP2PAL_TEXT);
+-				q += sdraw->xalign;
+-			}
+-			SDSETPIXEL(q, NP2PAL_TEXT);
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// grph:interleave
+-static void SCRNCALL SDSYM(n_gi)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(q, NP2PAL_TEXT3);
+-			for (x=0; x<sdraw->width; x++) {
+-				q += sdraw->xalign;
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			SDSETPIXEL(q, NP2PAL_TEXT3);
+-			for (x=0; x<sdraw->width; x++) {
+-				q += sdraw->xalign;
+-				SDSETPIXEL(q, NP2PAL_TEXT);
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph:interleave
+-static void SCRNCALL SDSYM(n_2i)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(r, (q[0] >> 4) + NP2PAL_TEXT3);
+-			r += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				SDSETPIXEL(r, p[x-1] + q[x] + NP2PAL_GRPH);
+-				r += sdraw->xalign;
+-			}
+-			SDSETPIXEL(r, p[x-1] + NP2PAL_GRPH);
+-			r -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			SDSETPIXEL(r, (q[0] >> 4) + NP2PAL_TEXT3);
+-			r += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				SDSETPIXEL(r, (q[x] >> 4) + NP2PAL_TEXT);
+-				r += sdraw->xalign;
+-			}
+-			SDSETPIXEL(r, NP2PAL_TEXT);
+-			r -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-//	grph:interleave ex
+-static void SCRNCALL SDSYM(n_gie)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			sdraw->dirty[y+1] |= 0xff;
+-			SDSETPIXEL(q, NP2PAL_TEXT3);
+-			for (x=0; x<sdraw->width; x++) {
+-				q += sdraw->xalign;
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPH);
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		q += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			SDSETPIXEL(q, NP2PAL_TEXT3);
+-			for (x=0; x<sdraw->width; x++) {
+-				q += sdraw->xalign;
+-				SDSETPIXEL(q, p[x] + NP2PAL_SKIP);
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += (SURFACE_WIDTH * 2);
+-		q += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-//	text + grph:interleave ex
+-static void SCRNCALL SDSYM(n_2ie)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-	UINT8	c;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			sdraw->dirty[y+1] |= 0xff;
+-			SDSETPIXEL(r, (q[0] >> 4) + NP2PAL_TEXT3);
+-			r += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				SDSETPIXEL(r, p[x-1] + q[x] + NP2PAL_GRPH);
+-				r += sdraw->xalign;
+-			}
+-			SDSETPIXEL(r, p[x-1] + NP2PAL_GRPH);
+-			r -= sdraw->xbytes;
+-		}
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-
+-		if (sdraw->dirty[y+1]) {
+-			SDSETPIXEL(r, (q[0] >> 4) + NP2PAL_TEXT3);
+-			r += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				c = q[x] >> 4;
+-				if (!c) {
+-					c = p[x-1] + NP2PALS_TXT;
+-				}
+-				SDSETPIXEL(r, c + NP2PAL_TEXT);
+-				r += sdraw->xalign;
+-			}
+-			SDSETPIXEL(r, p[x-1] + NP2PAL_SKIP);
+-			r -= sdraw->xbytes;
+-		}
+-		p += (SURFACE_WIDTH * 2);
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-#if defined(SUPPORT_CRT15KHZ)
+-// text 1ÉvÉåÅ[Éì (15kHz)
+-static void SCRNCALL SDSYM(n_td)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		a;
+-	int		y;
+-	int		x;
+-	int		c;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	a = sdraw->yalign;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			c = (p[0] >> 4) + NP2PAL_TEXT3;
+-			SDSETPIXEL(q, c);
+-			SDSETPIXEL((q + a), c);
+-			q += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				c = p[x] + NP2PAL_GRPH;
+-				SDSETPIXEL(q, c);
+-				SDSETPIXEL((q + a), c);
+-				q += sdraw->xalign;
+-			}
+-			SDSETPIXEL(q, NP2PAL_TEXT2);
+-			SDSETPIXEL((q + a), NP2PAL_TEXT2);
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += a * 2;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// grph 1ÉvÉåÅ[Éì (15kHz)
+-static void SCRNCALL SDSYM(n_gd)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		a;
+-	int		y;
+-	int		x;
+-	int		c;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	a = sdraw->yalign;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(q, NP2PAL_TEXT3);
+-			SDSETPIXEL((q + a), NP2PAL_TEXT3);
+-			for (x=0; x<sdraw->width; x++) {
+-				q += sdraw->xalign;
+-				c = p[x] + NP2PAL_GRPH;
+-				SDSETPIXEL(q, c);
+-				SDSETPIXEL((q + a), c);
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += a * 2;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph (15kHz)
+-static void SCRNCALL SDSYM(n_2d)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		a;
+-	int		y;
+-	int		x;
+-	int		c;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	a = sdraw->yalign;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			c = (q[0] >> 4) + NP2PAL_TEXT3;
+-			SDSETPIXEL(r, c);
+-			SDSETPIXEL((r + a), c);
+-			r += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				c = p[x-1] + q[x] + NP2PAL_GRPH;
+-				SDSETPIXEL(r, c);
+-				SDSETPIXEL((r + a), c);
+-				r += sdraw->xalign;
+-			}
+-			c = p[x-1] + NP2PAL_GRPH;
+-			SDSETPIXEL(r, c);
+-			SDSETPIXEL((r + a), c);
+-			r -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += a * 2;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-#endif
+-
+-static const SDRAWFN SDSYM(n)[] = {
+-		SDSYM(n_0),		SDSYM(n_t),		SDSYM(n_g),		SDSYM(n_2),
+-		SDSYM(n_0),		SDSYM(n_ti),	SDSYM(n_gi),	SDSYM(n_2i),
+-		SDSYM(n_0),		SDSYM(n_ti),	SDSYM(n_gie),	SDSYM(n_2ie),
+-#if defined(SUPPORT_CRT15KHZ)
+-		SDSYM(n_0),		SDSYM(n_td),	SDSYM(n_gd),	SDSYM(n_2d),
+-#endif
+-	};
+-#endif
+-
 +
 +// ---- plasma display
 +
@@ -5694,11 +10480,280 @@ index 0000000..f040511
 +#endif
 +
 diff --git a/vram/sdrawex.mcr b/vram/sdrawex.mcr
-new file mode 100755
-index 0000000..a072fb6
---- /dev/null
+index f5d2612..a072fb6 100644
+--- a/vram/sdrawex.mcr
 +++ b/vram/sdrawex.mcr
-@@ -0,0 +1,302 @@
+@@ -1,270 +1,302 @@
+-
+-#if defined(SUPPORT_PC9821)
+-
+-// ---- plasma display
+-
+-// vram off
+-static void SCRNCALL SDSYM(pex_0)(SDRAW sdraw, int maxy) {
+-
+-	UINT8	*p;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(p, NP2PAL_TEXTEX);
+-				p += sdraw->xalign;
+-			}
+-			p -= sdraw->xbytes;
+-		}
+-		p += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->dst = p;
+-	sdraw->y = y;
+-}
+-
+-// text 1ÉvÉåÅ[Éì
+-static void SCRNCALL SDSYM(pex_t)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, (p[x] >> 4) + NP2PAL_TEXTEX);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// grph 1ÉvÉåÅ[Éì
+-static void SCRNCALL SDSYM(pex_g)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPHEX);
+-				q += sdraw->xalign;
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph
+-static void SCRNCALL SDSYM(pex_2)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-	int		c;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x++) {
+-				c = q[x];
+-				if (c != 0) {
+-					c = (c >> 4) + NP2PAL_TEXTEX;
+-				}
+-				else {
+-					c = p[x] + NP2PAL_GRPHEX;
+-				}
+-				SDSETPIXEL(r, c);
+-				r += sdraw->xalign;
+-			}
+-			r -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-
+-static const SDRAWFN SDSYM(pex)[] = {
+-		SDSYM(pex_0),	SDSYM(pex_t),	SDSYM(pex_g),	SDSYM(pex_2),
+-	};
+-
+-
+-// ---- normal display
+-
+-#ifdef SUPPORT_NORMALDISP
+-
+-// vram off
+-static void SCRNCALL SDSYM(nex_0)(SDRAW sdraw, int maxy) {
+-
+-	UINT8	*p;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(p, NP2PAL_TEXTEX3);
+-			for (x=0; x<sdraw->width; x++) {
+-				p += sdraw->xalign;
+-				SDSETPIXEL(p, NP2PAL_TEXTEX);
+-			}
+-			p -= sdraw->xbytes;
+-		}
+-		p += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->dst = p;
+-	sdraw->y = y;
+-}
+-
+-// text 1ÉvÉåÅ[Éì
+-static void SCRNCALL SDSYM(nex_t)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(q, (p[0] >> 4) + NP2PAL_TEXTEX3);
+-			q += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				SDSETPIXEL(q, (p[x] >> 4) + NP2PAL_TEXTEX);
+-				q += sdraw->xalign;
+-			}
+-			SDSETPIXEL(q, NP2PAL_TEXTEX);
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// grph 1ÉvÉåÅ[Éì
+-static void SCRNCALL SDSYM(nex_g)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(q, NP2PAL_TEXTEX3);
+-			for (x=0; x<sdraw->width; x++) {
+-				q += sdraw->xalign;
+-				SDSETPIXEL(q, p[x] + NP2PAL_GRPHEX);
+-			}
+-			q -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph
+-static void SCRNCALL SDSYM(nex_2)(SDRAW sdraw, int maxy) {
+-
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-	int		c;
+-
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			SDSETPIXEL(r, (q[0] >> 4) + NP2PAL_TEXT3);
+-			r += sdraw->xalign;
+-			for (x=1; x<sdraw->width; x++) {
+-				c = q[x];
+-				if (c) {
+-					c = (c >> 4) + NP2PAL_TEXTEX;
+-				}
+-				else {
+-					c = p[x-1] + NP2PAL_GRPHEX;
+-				}
+-				SDSETPIXEL(r, c);
+-				r += sdraw->xalign;
+-			}
+-			SDSETPIXEL(r, p[x-1] + NP2PAL_GRPHEX);
+-			r -= sdraw->xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-static const SDRAWFN SDSYM(nex)[] = {
+-		SDSYM(nex_0),	SDSYM(nex_t),	SDSYM(nex_g),	SDSYM(nex_2)
+-	};
+-#endif
+-
+-#endif
+-
 +
 +#if defined(SUPPORT_PC9821)
 +
@@ -6002,11 +11057,316 @@ index 0000000..a072fb6
 +#endif
 +
 diff --git a/vram/sdrawq16.c b/vram/sdrawq16.c
-new file mode 100755
-index 0000000..e741117
---- /dev/null
+index f61843a..e741117 100644
+--- a/vram/sdrawq16.c
 +++ b/vram/sdrawq16.c
-@@ -0,0 +1,306 @@
+@@ -1,306 +1,306 @@
+-#include	"compiler.h"
+-#include	"scrnmng.h"
+-#include	"scrndraw.h"
+-#include	"sdraw.h"
+-#include	"palettes.h"
+-
+-
+-#if defined(SIZE_QVGA) && !defined(SIZE_VGATEST) && defined(SUPPORT_16BPP)
+-
+-// vram off
+-static void SCRNCALL qvga16p_0(SDRAW sdraw, int maxy) {
+-
+-	int		xbytes;
+-	UINT32	palwork;
+-	UINT16	pal;
+-	UINT8	*p;
+-	int		y;
+-	int		x;
+-
+-	xbytes = sdraw->xalign * sdraw->width / 2;
+-	palwork = np2_pal16[NP2PAL_TEXT2];
+-	pal = (UINT16)(palwork + (palwork >> 16));
+-	p = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (*(UINT16 *)(sdraw->dirty + y)) {
+-			for (x=0; x<sdraw->width; x+=2) {
+-				*(UINT16 *)p = pal;
+-				p += sdraw->xalign;
+-			}
+-			p -= xbytes;
+-		}
+-		p += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->dst = p;
+-	sdraw->y = y;
+-}
+-
+-// text or grph 1ÉvÉåÅ[Éì
+-static void SCRNCALL qvga16p_1(SDRAW sdraw, int maxy) {
+-
+-	int		xbytes;
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-	UINT32	work;
+-
+-	xbytes = sdraw->xalign * sdraw->width / 2;
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (*(UINT16 *)(sdraw->dirty + y)) {
+-			for (x=0; x<sdraw->width; x+=2) {
+-				work = np2_pal16[p[x+0] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+1] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+0+SURFACE_WIDTH] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+1+SURFACE_WIDTH] + NP2PAL_GRPH];
+-				work &= 0x07e0f81f << 2;
+-				*(UINT16 *)q = (UINT16)((work >> 2) + (work >> 18));
+-				q += sdraw->xalign;
+-			}
+-			q -= xbytes;
+-		}
+-		p += SURFACE_WIDTH * 2;
+-		q += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph
+-static void SCRNCALL qvga16p_2(SDRAW sdraw, int maxy) {
+-
+-	int		xbytes;
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-	UINT32	work;
+-
+-	xbytes = sdraw->xalign * sdraw->width / 2;
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (*(UINT16 *)(sdraw->dirty + y)) {
+-			for (x=0; x<sdraw->width; x+=2) {
+-				work = np2_pal16[p[x+0] + q[x+0] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+1] + q[x+1] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+0+SURFACE_WIDTH] +
+-										q[x+0+SURFACE_WIDTH] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+1+SURFACE_WIDTH] + 
+-										q[x+1+SURFACE_WIDTH] + NP2PAL_GRPH];
+-				work &= 0x07e0f81f << 2;
+-				*(UINT16 *)r = (UINT16)((work >> 2) + (work >> 18));
+-				r += sdraw->xalign;
+-			}
+-			r -= xbytes;
+-		}
+-		p += SURFACE_WIDTH * 2;
+-		q += SURFACE_WIDTH * 2;
+-		r += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-// text + (grph:interleave) - > qvga16p_1
+-
+-// grph:interleave
+-static void SCRNCALL qvga16p_gi(SDRAW sdraw, int maxy) {
+-
+-	int		xbytes;
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-	UINT32	work;
+-
+-	xbytes = sdraw->xalign * sdraw->width / 2;
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (*(UINT16 *)(sdraw->dirty + y)) {
+-			for (x=0; x<sdraw->width; x+=2) {
+-				work = np2_pal16[p[x+0] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+1] + NP2PAL_GRPH];
+-				work &= 0x07e0f81f << 1;
+-				*(UINT16 *)q = (UINT16)((work >> 1) + (work >> 17));
+-				q += sdraw->xalign;
+-			}
+-			q -= xbytes;
+-		}
+-		p += SURFACE_WIDTH * 2;
+-		q += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph:interleave
+-static void SCRNCALL qvga16p_2i(SDRAW sdraw, int maxy) {
+-
+-	int		xbytes;
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-	UINT32	work;
+-
+-	xbytes = sdraw->xalign * sdraw->width / 2;
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (*(UINT16 *)(sdraw->dirty + y)) {
+-			for (x=0; x<sdraw->width; x+=2) {
+-				work = np2_pal16[p[x+0] + q[x+0] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+1] + q[x+1] + NP2PAL_GRPH];
+-				if (q[x+0+SURFACE_WIDTH] & 0xf0) {
+-					work += np2_pal16[(q[x+0+SURFACE_WIDTH] >> 4)
+-															+ NP2PAL_TEXT];
+-				}
+-				else {
+-					work += np2_pal16[p[x+0] + NP2PAL_GRPH];
+-				}
+-				if (q[x+1+SURFACE_WIDTH] & 0xf0) {
+-					work += np2_pal16[(q[x+1+SURFACE_WIDTH] >> 4)
+-															+ NP2PAL_TEXT];
+-				}
+-				else {
+-					work += np2_pal16[p[x+1] + NP2PAL_GRPH];
+-				}
+-				work &= 0x07e0f81f << 2;
+-				*(UINT16 *)r = (UINT16)((work >> 2) + (work >> 18));
+-				r += sdraw->xalign;
+-			}
+-			r -= xbytes;
+-		}
+-		p += SURFACE_WIDTH * 2;
+-		q += SURFACE_WIDTH * 2;
+-		r += sdraw->yalign;
+-		y += 2;
+-	} while(y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-
+-#if defined(SUPPORT_CRT15KHZ)
+-// text or grph 1ÉvÉåÅ[Éì (15kHz)
+-static void SCRNCALL qvga16p_1d(SDRAW sdraw, int maxy) {
+-
+-	int		xbytes;
+-const UINT8	*p;
+-	UINT8	*q;
+-	int		y;
+-	int		x;
+-	UINT32	work;
+-
+-	xbytes = sdraw->xalign * sdraw->width / 2;
+-	p = sdraw->src;
+-	q = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x+=2) {
+-				work = np2_pal16[p[x+0] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+1] + NP2PAL_GRPH];
+-				work &= 0x07e0f81f << 1;
+-				*(UINT16 *)q = (UINT16)((work >> 1) + (work >> 17));
+-				q += sdraw->xalign;
+-			}
+-			q -= xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->dst = q;
+-	sdraw->y = y;
+-}
+-
+-// text + grph (15kHz)
+-static void SCRNCALL qvga16p_2d(SDRAW sdraw, int maxy) {
+-
+-	int		xbytes;
+-const UINT8	*p;
+-const UINT8	*q;
+-	UINT8	*r;
+-	int		y;
+-	int		x;
+-	UINT32	work;
+-
+-	xbytes = sdraw->xalign * sdraw->width / 2;
+-	p = sdraw->src;
+-	q = sdraw->src2;
+-	r = sdraw->dst;
+-	y = sdraw->y;
+-	do {
+-		if (sdraw->dirty[y]) {
+-			for (x=0; x<sdraw->width; x+=2) {
+-				work = np2_pal16[p[x+0] + q[x+0] + NP2PAL_GRPH];
+-				work += np2_pal16[p[x+1] + q[x+1] + NP2PAL_GRPH];
+-				work &= 0x07e0f81f << 1;
+-				*(UINT16 *)r = (UINT16)((work >> 1) + (work >> 17));
+-				r += sdraw->xalign;
+-			}
+-			r -= xbytes;
+-		}
+-		p += SURFACE_WIDTH;
+-		q += SURFACE_WIDTH;
+-		r += sdraw->yalign;
+-	} while(++y < maxy);
+-
+-	sdraw->src = p;
+-	sdraw->src2 = q;
+-	sdraw->dst = r;
+-	sdraw->y = y;
+-}
+-#endif
+-
+-
+-static const SDRAWFN qvga16p[] = {
+-		qvga16p_0,		qvga16p_1,		qvga16p_1,		qvga16p_2,
+-		qvga16p_0,		qvga16p_1,		qvga16p_gi,		qvga16p_2i,
+-		qvga16p_0,		qvga16p_1,		qvga16p_gi,		qvga16p_2i,
+-#if defined(SUPPORT_CRT15KHZ)
+-		qvga16p_0,		qvga16p_1d,		qvga16p_1d,		qvga16p_2d,
+-#endif
+-	};
+-
+-const SDRAWFN *sdraw_getproctbl(const SCRNSURF *surf) {
+-
+-	if (surf->bpp == 16) {
+-		return(qvga16p);
+-	}
+-	else {
+-		return(NULL);
+-	}
+-}
+-
+-#endif
+-
 +#include	<compiler.h>
 +#include	<scrnmng.h>
 +#include	<vram/scrndraw.h>
@@ -6314,7 +11674,7 @@ index 0000000..e741117
 +#endif
 +
 diff --git a/vram/videofilter.c b/vram/videofilter.c
-new file mode 100755
+new file mode 100644
 index 0000000..1d14bd1
 --- /dev/null
 +++ b/vram/videofilter.c
@@ -8096,11 +13456,34 @@ index 0000000..1c9bbd8
 +#endif  // _VIDEOFILTER_H_
 +
 diff --git a/vram/vram.c b/vram/vram.c
-new file mode 100755
-index 0000000..85e1ca7
---- /dev/null
+index 0511998..85e1ca7 100644
+--- a/vram/vram.c
 +++ b/vram/vram.c
-@@ -0,0 +1,24 @@
+@@ -1,24 +1,24 @@
+-#include	"compiler.h"
+-#include	"cpucore.h"
+-#include	"vram.h"
+-
+-
+-	_VRAMOP	vramop;
+-	UINT8	tramupdate[0x1000];
+-	UINT8	vramupdate[0x8000];
+-#if defined(SUPPORT_PC9821)
+-#if defined(SUPPORT_IA32_HAXM)
+-	UINT8	vramex_base[0x80000]; // PEGC VRAM
+-	UINT8	*vramex = vramex_base; // PEGC VRAM  Alloc in pccore_mem_malloc()
+-#else
+-	UINT8	vramex[0x80000]; // PEGC VRAM
+-#endif
+-#endif
+-
+-
+-void vram_initialize(void) {
+-
+-	ZeroMemory(&vramop, sizeof(vramop));
+-	MEMM_VRAM(0);
+-}
+-
 +#include	<compiler.h>
 +#include	<cpucore.h>
 +#include	<vram/vram.h>
@@ -8126,11 +13509,83 @@ index 0000000..85e1ca7
 +}
 +
 diff --git a/vram/vram.h b/vram/vram.h
-new file mode 100755
-index 0000000..7aa64a5
---- /dev/null
+index 398cf3b..7aa64a5 100644
+--- a/vram/vram.h
 +++ b/vram/vram.h
-@@ -0,0 +1,73 @@
+@@ -1,73 +1,73 @@
+-
+-#ifndef VRAMCALL
+-#define	VRAMCALL
+-#endif
+-
+-
+-typedef struct {
+-	UINT	operate;
+-#if !defined(CPUSTRUC_MEMWAIT)
+-	UINT	tramwait;
+-	UINT	vramwait;
+-	UINT	grcgwait;
+-#endif
+-#if defined(SUPPORT_PC9821)
+-	UINT8	mio1[4]; // PEGC Packed-pixel Mode ÉoÉìÉNêÿÇËë÷Ç¶(mio1[0Å`1] E0004H, mio1[2Å`3] E0006H)
+-	UINT8	mio2[0x100]; // PEGC MMIOÉåÉWÉXÉ^(mio2[0Å`1] E0100H Å` E0200H)
+-#endif
+-} _VRAMOP, *VRAMOP;
+-
+-// operate:		bit0	access page
+-//				bit1	egc enable
+-//				bit2	grcg bit6
+-//				bit3	grcg bit7
+-//				bit4	analog enable
+-//				bit5	pc9821 vga
+-
+-enum {
+-	VOPBIT_ACCESS	= 0,
+-	VOPBIT_EGC		= 1,
+-	VOPBIT_GRCG		= 2,
+-	VOPBIT_ANALOG	= 4,
+-	VOPBIT_VGA		= 5
+-};
+-
+-//	VOP_ACCESSBIT	= 0x01,
+-//	VOP_EGCBIT		= 0x02,
+-//	VOP_GRCGBIT		= 0x0c,
+-//	VOP_ANALOGBIT	= 0x10,
+-
+-//	VOP_ACCESSMASK	= ~(0x01),
+-//	VOP_EGCMASK		= ~(0x02),
+-//	VOP_GRCGMASK	= ~(0x0c),
+-//	VOP_ANALOGMASK	= ~(0x10)
+-
+-
+-#ifdef __cplusplus
+-extern "C" {
+-#endif
+-
+-extern	_VRAMOP	vramop;
+-extern	UINT8	tramupdate[0x1000];
+-extern	UINT8	vramupdate[0x8000];
+-#if defined(SUPPORT_PC9821)
+-#if defined(SUPPORT_IA32_HAXM)
+-extern	UINT8	vramex_base[0x80000];
+-extern	UINT8	*vramex; // PEGC VRAM  Alloc in pccore_mem_malloc()
+-#else
+-extern	UINT8	vramex[0x80000];
+-#endif
+-#endif
+-
+-void vram_initialize(void);
+-
+-#if !defined(CPUSTRUC_MEMWAIT)
+-#define	MEMWAIT_TRAM	vramop.tramwait
+-#define	MEMWAIT_VRAM	vramop.vramwait
+-#define	MEMWAIT_GRCG	vramop.grcgwait
+-#endif
+-
+-#ifdef __cplusplus
+-}
+-#endif
+-
 +
 +#ifndef VRAMCALL
 +#define	VRAMCALL
@@ -8204,3 +13659,27 @@ index 0000000..7aa64a5
 +}
 +#endif
 +
+diff --git a/x/cmserial.c b/x/cmserial.c
+index 303f376..1b8d3c4 100755
+--- a/x/cmserial.c
++++ b/x/cmserial.c
+@@ -278,6 +278,7 @@ print_status(const struct termios *tio)
+ }
+ #endif
+ 
++static void
+ convert_np2tocm(UINT port, UINT8* param, UINT32* speed) {
+ 	static const int cmserial_pc98_ch1_speed[] = {
+ 		0, 75, 150, 300, 600, 1200, 2400, 4800, 9600
+diff --git a/x/gtk2/gtk_menu.c b/x/gtk2/gtk_menu.c
+index a0f61e0..97d30e5 100755
+--- a/x/gtk2/gtk_menu.c
++++ b/x/gtk2/gtk_menu.c
+@@ -796,6 +796,7 @@ xmenu_toggle_item(MENU_HDL hdl, const char *name, BOOL onoff)
+ 	}
+ }
+ 
++static void
+ xmenu_visible_item(MENU_HDL hdl, const char *name, BOOL onoff)
+ {
+ 	GtkAction *action;
