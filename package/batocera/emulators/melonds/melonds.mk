@@ -3,8 +3,8 @@
 # melonds
 #
 ################################################################################
-# Version: Commits on Sept 03, 2025
-MELONDS_VERSION = 4d635e7f2d41a23527caa33424a05a2ab9f1b473
+# Version: Commits on Sept 07, 2025
+MELONDS_VERSION = 7e60fee91b7c2312e808352261775aaf15911c5b
 MELONDS_SITE = $(call github,melonDS-emu,melonDS,$(MELONDS_VERSION))
 MELONDS_LICENSE = GPLv2
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO

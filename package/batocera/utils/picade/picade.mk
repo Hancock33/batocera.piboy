@@ -3,8 +3,8 @@
 # picade
 #
 ################################################################################
-# Version: Commits on Jul 17, 2025
-PICADE_VERSION = 1b6fdfb4fd10f0dc2e797f681922a371c36b6ab0
+# Version: Commits on Sept 08, 2025
+PICADE_VERSION = f97c2ac7211c8d9ff866b22a82c3b2ae6d01e0df
 PICADE_SITE = $(call github,pimoroni,picade-hat,$(PICADE_VERSION))
 
 define PICADE_BUILD_CMDS
