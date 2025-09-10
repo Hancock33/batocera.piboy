@@ -3,8 +3,8 @@
 # rockchip-mpp
 #
 ################################################################################
-# Version: Commits on May 20, 2025
-ROCKCHIP_MPP_VERSION = 1.0.9
+# Version: Commits on Sept 10, 2025
+ROCKCHIP_MPP_VERSION = 1.0.11
 ROCKCHIP_MPP_SITE =  $(call github,rockchip-linux,mpp,$(ROCKCHIP_MPP_VERSION))
 ROCKCHIP_MPP_LICENSE = Apache License 2.0
 ROCKCHIP_MPP_DEPENDENCIES = libdrm
