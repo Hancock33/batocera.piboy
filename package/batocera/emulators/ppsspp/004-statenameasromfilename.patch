@@ -1,8 +1,8 @@
 diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
-index 2971b88068..48e786a0b3 100644
+index 684ad2a17e..99fcb44f94 100644
 --- a/Core/SaveState.cpp
 +++ b/Core/SaveState.cpp
-@@ -542,7 +542,7 @@ double g_lastSaveTime = -1.0;
+@@ -543,7 +543,7 @@ double g_lastSaveTime = -1.0;
  
  	Path GenerateSaveSlotFilename(const Path &gameFilename, int slot, const char *extension)
  	{
@@ -12,10 +12,10 @@ index 2971b88068..48e786a0b3 100644
  	}
  
 diff --git a/Core/System.cpp b/Core/System.cpp
-index 475b65a92b..38d57e12e3 100644
+index 5136ddcfd9..e6caede6d8 100644
 --- a/Core/System.cpp
 +++ b/Core/System.cpp
-@@ -790,7 +790,7 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -791,7 +791,7 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  	case DIRECTORY_DUMP:
  		return pspDirectory / "SYSTEM/DUMP";
  	case DIRECTORY_SAVESTATE:
