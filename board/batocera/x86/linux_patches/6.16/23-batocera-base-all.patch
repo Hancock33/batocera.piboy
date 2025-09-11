@@ -159,7 +159,7 @@ index 28144371a0f1..765d50b0d9df 100644
  			* 0 - False,
  			* 1 - True
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index f6d317e1674d..5856aa83a2ad 100644
+index 089e1a395178..28693b65f079 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -2336,6 +2336,9 @@
@@ -172,7 +172,7 @@ index f6d317e1674d..5856aa83a2ad 100644
                          active
                            Use intel_pstate driver to bypass the scaling
                            governors layer of cpufreq and provides it own
-@@ -4732,6 +4735,15 @@
+@@ -4733,6 +4736,15 @@
  		nomsi		[MSI] If the PCI_MSI kernel config parameter is
  				enabled, this kernel boot option can be used to
  				disable the use of MSI interrupts system-wide.
@@ -286,7 +286,7 @@ index 9bef46151d53..0ee649d4808b 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 2a8b9af9767a..b7d2750c09c3 100644
+index 67c8f077e4d0..a5e59dc9686b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -862,11 +862,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
