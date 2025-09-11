@@ -5,10 +5,12 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|492116a6baa5b3384666c
 Emulators|[hatari](http://github.com/hatari/hatari)|83143fd22446d5f9ad549c3e5cde1f2151cc01dc|Sept 11, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.156|Sept 11, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|7deaec781c84e1e3cca42de9d42f66a3b9214ea4|Sept 11, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|c36d01b46b68139b4c17ffda0b46ce3e20b5c2e0|Sept 11, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-09-11|Sept 11, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|1dbb057dec1dbc5c6ccb983dd692a7de7fb63b96|Sept 11, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a478bad7fa9bdbf716a5316caf2ba7757d301ae7|Sept 11, 2025
-Ports|[omf2097](http://github.com/omf2097/openomf)|12659dd00aee49eeac8d598f20d6fd9907c42507|Sept 11, 2025
+Ports|[omf2097](http://github.com/omf2097/openomf)|6d17958ba059a250442c11c1f0fe164de453edbe|Sept 11, 2025
+Ports|[openmohaa](http://github.com/openmoh/openmohaa)|bef56ad16da8a7f4e9186c4a7345dca0382f4f4e|Sept 11, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250911|Sept 11, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|1961f86c06e03e7f80525ef16e85b330dd456436|Sept 11, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a0732357fff85582d77e76ff39d4ea9fd5ad5416|Sept 11, 2025
@@ -27,7 +29,6 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|13ecc1e481cbb455ef89291
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|945a885950a29214319b8e491609a385b0372a2b|Sept 10, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|5d36d8296e56a8c79f5675b5240d6f4998c5676a|Sept 10, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|68668bec357c12d7c00d3d6fb8a70901172eaf2f|Sept 10, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b3d5493a6b5ed1f5b74625cf94d92587182252ff|Sept 10, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.138|Sept 10, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|8b1d4026e8ce8d3802a91090428d9d2b4c8379a2|Sept 10, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|f486b4caee97a022462b93cbee691b546aa834c3|Sept 10, 2025
@@ -50,8 +51,6 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|d5c5839a92ee94523
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.98|Sept 08, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|a8d292707a703edc1fc1fee0555e8f53aceb7d65|Sept 08, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e7f160e8c951408f1827a3f9aab4778fdd6dc3f7|Sept 08, 2025
-Ports|[openmohaa](http://github.com/openmoh/openmohaa)|031eb7ac2a72707bfe8e845f384d2617f6da4e28|Sept 08, 2025
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|36b8a37fc6ab4f6cb336369f78810f1f6500c274|Sept 08, 2025
 Utils|[picade](http://github.com/pimoroni/picade-hat)|f97c2ac7211c8d9ff866b22a82c3b2ae6d01e0df|Sept 08, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.8|Sept 08, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|29033e16226bea4458b53fffc6177b95f6907f26|Sept 08, 2025
@@ -176,6 +175,7 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|087860aee3ec7b85a86004378e2edc6fd5092
 Emulators|[libaltsound](http://github.com/vpinball/libaltsound)|0656fc2eb39a6f4fdd557043c28cd8dfdc7e762f|Aug 10, 2025
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|172c316f53ac8f066afd7cb9e1da517084273368|Aug 09, 2025
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.0|Aug 08, 2025
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|9352fe4bb24a4eb31052142302af5ad19b918ca8|Aug 07, 2025
 Ports|[avp](http://github.com/atsb/NakedAVP)|febda659bc62c69734a2e762dbad670ad6659d54|Aug 05, 2025
 Emulators|[libretro-dolphin](http://github.com/libretro/dolphin)|83438f9b1a2c832319876a1fda130a5e33d4ef87|Aug 05, 2025
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|50d3ddd55b5774da643d90d7ad1e3cbd2c618883|Aug 05, 2025
