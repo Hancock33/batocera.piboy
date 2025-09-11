@@ -275,7 +275,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|2d24ef2972a709f870cc3f73853158fa2376f37d|May 23, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a0732357fff85582d77e76ff39d4ea9fd5ad5416|Sept 11, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250831|Aug 31, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b3d5493a6b5ed1f5b74625cf94d92587182252ff|Sept 10, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|c36d01b46b68139b4c17ffda0b46ce3e20b5c2e0|Sept 11, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-09-11|Sept 11, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.138|Sept 10, 2025
 Emulators|[scummvm](http://github.com/scummvm/scummvm)|fdcbc279765e432cbabf19264273f4a87f61fc11|Jun 10, 2025
@@ -465,13 +465,13 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e7f160e8c951408
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250911|Sept 11, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14262|Sept 05, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
-Ports|[omf2097](http://github.com/omf2097/openomf)|12659dd00aee49eeac8d598f20d6fd9907c42507|Sept 11, 2025
+Ports|[omf2097](http://github.com/omf2097/openomf)|6d17958ba059a250442c11c1f0fe164de453edbe|Sept 11, 2025
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|a588027cc3706facb906a63d154b698f2529e0af|Sept 02, 2025
 Ports|[openjk](http://github.com/JACoders/OpenJK)|2f6abb4f6b930f19048dbc53ef00d837b4b05943|May 23, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|1baa1e8d892a39195e98843654b6878213804a6e|Aug 17, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|b4bcd4a9e1edecfdc71643d476e393a885a019e5|Jun 16, 2025
-Ports|[openmohaa](http://github.com/openmoh/openmohaa)|031eb7ac2a72707bfe8e845f384d2617f6da4e28|Sept 08, 2025
+Ports|[openmohaa](http://github.com/openmoh/openmohaa)|bef56ad16da8a7f4e9186c4a7345dca0382f4f4e|Sept 11, 2025
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|dfe1050e1abaca0bae7b699d117d66324b88425b|Jun 24, 2025
 Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|20a7240238f9dcd4864e841343550b18605ac34a|Jul 28, 2024
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025
@@ -494,7 +494,7 @@ Ports|[sorr](http://github.com/Cpasjuste/bennugd-monolithic)|0290c3719fd74121ff9
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886244a27773f66b0b19fdc2998392565e|Aug 21, 2024
 Ports|[srb2](http://github.com/STJr/SRB2)|639b58c6d718452ef343a0bc927d043bed9e40d6|Jul 29, 2025
 Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2ac9f4b2889ad1a|Mar 31, 2024
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|36b8a37fc6ab4f6cb336369f78810f1f6500c274|Sept 08, 2025
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|9352fe4bb24a4eb31052142302af5ad19b918ca8|Aug 07, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|2227dcdace09b12abc752fc663ad011c784c20ba|Sept 06, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c7c26f81a36292d6546358c250ba1264f173b5d4|Sept 07, 2025
