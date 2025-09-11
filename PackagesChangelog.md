@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250911|Sept 11, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250911|Sept 11, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|d254d71ea35755494f45d2acaf965aaf79398003|Sept 10, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5c7b976367298c61ca3b4096c6564b941bbd89e1|Sept 10, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|13ecc1e481cbb455ef89291ee9f2421386657dcb|Sept 10, 2025
@@ -17,6 +19,7 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|cc25205cc94c3
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b2f6d4dcb9a70f49d10f631f23e9218b76fc362b|Sept 10, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|41b144ef3821ef6143c5f79dd2f846ce0c6cb11b|Sept 10, 2025
 Emulators|[libdof](http://github.com/jsm174/libdof)|11079f33a4eb371c1002673a23287433addf0a4b|Sept 10, 2025
+Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|580.82.09|Sept 10, 2025
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|1f84377bd22401df07a4e44f9066cb73a679890d|Sept 10, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|03192be24549c99d40230b310c26dfb5aaef687a|Sept 10, 2025
@@ -28,8 +31,6 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|f8261ae7ff93baa30f942
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6e562911d95957f54b2f1bbf82dd38afab1990d1|Sept 09, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|159a00ed1a5e8b0afce5085c4dfeb1352e4e9978|Sept 09, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|f4c7f57b0db3ea390f8c86e5bfb64b8d0d941fcb|Sept 09, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250909|Sept 09, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250909|Sept 09, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|f8261ae7ff93baa30f94214965547ed0f124da14|Sept 09, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|f46cea22ac5030746b27b945aa3e17bd10a2b8bc|Sept 09, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|4cfcd80ee58dcc31511a5016add55f91284d2987|Sept 09, 2025
@@ -85,7 +86,6 @@ Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|a5dbb223
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|7f681e10e8b5352c4e468e901ee3770bfff37c40|Sept 02, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|75b945e17a60894926f1d2889cd37434d1610283|Sept 02, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|a588027cc3706facb906a63d154b698f2529e0af|Sept 02, 2025
-Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|580.82.07|Sept 02, 2025
 Gpu|[nvidia-proprietary-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Sept 02, 2025
 Emulators|[libretro-citra](https://github.com/warmenhoven/azahar.git)|7632bc18f0df76ab13ec46773210004cddc98440|Sept 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.09|Sept 01, 2025
