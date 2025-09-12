@@ -1,16 +1,13 @@
 diff --git a/ext/CMakeLists.txt b/ext/CMakeLists.txt
-index a0c8e7096e..8c8bdf4ad2 100644
+index dd7464ce82..7cfe62101f 100644
 --- a/ext/CMakeLists.txt
 +++ b/ext/CMakeLists.txt
-@@ -43,8 +43,9 @@ set(FT_REQUIRE_BZIP2 OFF CACHE BOOL "" FORCE)
+@@ -43,7 +43,7 @@ set(FT_REQUIRE_BZIP2 OFF CACHE BOOL "" FORCE)
  set(FT_REQUIRE_PNG OFF CACHE BOOL "" FORCE)
  set(FT_REQUIRE_HARFBUZZ OFF CACHE BOOL "" FORCE)
  set(FT_REQUIRE_BROTLI OFF CACHE BOOL "" FORCE)
--add_subdirectory(freetype)
--
+-if(NOT LIBRETRO)
 +if(ATLAS_TOOL)
-+    add_subdirectory(freetype)
-+endif()
- if(NOT LIBRETRO)
-     add_subdirectory(imgui)
+   add_subdirectory(freetype)
  endif()
+ 
