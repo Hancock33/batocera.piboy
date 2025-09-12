@@ -9,8 +9,7 @@ from typing import TYPE_CHECKING, Any, cast
 from ruamel.yaml import YAML
 
 from ... import Command
-from ...batoceraPaths import BIOS, CACHE, CONFIGS, mkdir_if_not_exists
-from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
+from ...batoceraPaths import BIOS, CACHE, CONFIGS, configure_emulator, mkdir_if_not_exists
 from ...exceptions import BatoceraException
 from ...utils import vulkan
 from ...utils.configparser import CaseSensitiveConfigParser
@@ -258,7 +257,7 @@ class Rpcs3Generator(Generator):
 
             if romName is None:
                 raise BatoceraException(f'No game ID found in {rom}')
-        elif romConfig == "config":
+        elif configure_emulator(rom):
             romName: Path | None = None
         else:
             romName = rom  + "/PS3_GAME/USRDIR/EBOOT.BIN"
