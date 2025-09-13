@@ -9,11 +9,13 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|ee9f32185eb034bca
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|f362278ccd4c60991caac3b4d240d4a3f751bea2|Sept 13, 2025
 Emulators|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|4515f67e9716e9f73d8f82069cecd425c870de44|Sept 13, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|afb0ededd8eeccfcb697a58d18716516be1d2d9f|Sept 13, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.157|Sept 13, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-09-13|Sept 13, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45757|Sept 13, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|52fe2485ae9d68d4cf3ffdcd91aeffecd43a66db|Sept 13, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|7e6bd186af0b5a48ca0104e1efd8f740246a7e98|Sept 13, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14265|Sept 13, 2025
+Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|a3ba75ec55bdaba562eb16f5334e5254b18e3643|Sept 13, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.9|Sept 13, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250913|Sept 13, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a650525e6e1665e9beb4d050c4609b6f2b231822|Sept 13, 2025
@@ -49,7 +51,6 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|503b81c81ce2b1
 Audio|[cubeb](http://github.com/mozilla/cubeb)|6f5a5986d356da246475e152132f62c0b556da52|Sept 11, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|492116a6baa5b3384666c671e7dbe819dfe5f4a9|Sept 11, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|83143fd22446d5f9ad549c3e5cde1f2151cc01dc|Sept 11, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.156|Sept 11, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a478bad7fa9bdbf716a5316caf2ba7757d301ae7|Sept 11, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|6d17958ba059a250442c11c1f0fe164de453edbe|Sept 11, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|f93444c4620e851dd26b4937ff2ed7d25d0d7d08|Sept 11, 2025
@@ -59,7 +60,6 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|19b3995e6d09d9cbd4de9871ad
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.138|Sept 10, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|f486b4caee97a022462b93cbee691b546aa834c3|Sept 10, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|1424d2d8a41b3091a92730e9d575b0c7e52f2b84|Sept 10, 2025
-Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|cc25205cc94c36a396f6f50295772f6ec83069a2|Sept 10, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|bc4abc9daff498eaa479a7d1efacb5ea97d2a79a|Sept 10, 2025
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|580.82.09|Sept 10, 2025
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025

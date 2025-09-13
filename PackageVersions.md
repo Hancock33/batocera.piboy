@@ -265,7 +265,7 @@ Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|fb76ba85dfefa329be2dabc430fe651dcc756f56|Aug 15, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|17954120b6d436f2a1cf1d8c77c35b01c965d094|Sept 07, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.156|Sept 11, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.157|Sept 13, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|19b3995e6d09d9cbd4de9871ad94ea183ca53a6e|Sept 10, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c7aa2bcd01c3aa4e243a7f9054ca5d1cedc67c23|Sept 12, 2025
@@ -499,7 +499,7 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|2227dcdace09b12abc752fc663a
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|f93444c4620e851dd26b4937ff2ed7d25d0d7d08|Sept 11, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c0efc619e85dc318b363e16fa64770c788f74a23|Mar 08, 2025
-Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|cc25205cc94c36a396f6f50295772f6ec83069a2|Sept 10, 2025
+Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|a3ba75ec55bdaba562eb16f5334e5254b18e3643|Sept 13, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|363b400115f3d4b58fbfd49e3e1bc50c07e3be70|Sept 12, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|363b400115f3d4b58fbfd49e3e1bc50c07e3be70|Sept 12, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
