@@ -1,19 +1,20 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20250906-proton-slr|Sept 05, 2026
-Emulators|[applewin](https://github.com/audetto/AppleWin.git)|e2c5a6ad04a6a9453d40441426fe7d0e815804d6|Sept 14, 2025
+Emulators|[applewin](https://github.com/audetto/AppleWin.git)|badbf0e802525b93071f2ff7db6e10a221be857f|Sept 14, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|0413af79e9716ab25ef21e38000da2f9ff6373c4|Sept 14, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|66bef3e3ed25fb11a4f575255b62ef65aa4187ce|Sept 14, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|3d6e87d83b37904e126eac474043a26b723f22ff|Sept 14, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.159|Sept 14, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.160|Sept 14, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-09-14|Sept 14, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.142|Sept 14, 2025
 Emulators|[solarus-engine](http://gitlab.com/solarus-games/solarus)|4e3c33a47607ef9e9d7ed75956b3578e76170f7f|Sep 14, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|1a7b58d7c4612f1827006aee09139775ccd49d32|Sept 14, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45768|Sept 14, 2025
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|9ed888bf5814f10a1dc173be6dc84428bf5829e0|Sept 14, 2025
 Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.3.1|Sept 14, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|04c1998f1c4579c2bff99c91f4765798ce2714c6|Sept 14, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|e21266af5141a708f40ff1ee4f16747992dd5f7e|Sept 14, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5c42b801053396012e46d49e41ce565403973e35|Sept 14, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|6ecb8325a2c13f96c9e9ff088ea5600ed3f624f7|Sept 14, 2025
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.11|Sept 14, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|56bc1821f73b67a584b8d16777b50abceb0a0c0f|Sept 14, 2025
@@ -72,7 +73,6 @@ Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|bc
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|580.82.09|Sept 10, 2025
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|1e2be6664685efd7805ca19031f279fcaec25e15|Sept 10, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6e562911d95957f54b2f1bbf82dd38afab1990d1|Sept 09, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|8d03766d039569e36539d19283ed14c5c2683b8d|Sept 09, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|f4c7f57b0db3ea390f8c86e5bfb64b8d0d941fcb|Sept 09, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.98|Sept 08, 2025

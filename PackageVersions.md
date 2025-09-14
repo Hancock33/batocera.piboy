@@ -66,7 +66,7 @@ Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|258494709231245ca5143dd9862435997f3c0e1c|Sept 07, 2025
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|63e67c14fe0084a98bacbe0295ba2f809c01103c|Sept 06, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|f74ad7fd8efe20d3754315db13e43ce87168899a|Sept 13, 2025
-Emulators|[applewin](https://github.com/audetto/AppleWin.git)|e2c5a6ad04a6a9453d40441426fe7d0e815804d6|Sept 14, 2025
+Emulators|[applewin](https://github.com/audetto/AppleWin.git)|badbf0e802525b93071f2ff7db6e10a221be857f|Sept 14, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|f39ca5e3a77de73588e599469c9f7a090f40c06b|Sept 12, 2025
 Emulators|[azahar](https://github.com/AzaharPlus/AzaharPlus.git)|48e8086bfe31d954c2d5a66fbccd3a811e76d63f|Sept 05, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
@@ -265,7 +265,7 @@ Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|fb76ba85dfefa329be2dabc430fe651dcc756f56|Aug 15, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|17954120b6d436f2a1cf1d8c77c35b01c965d094|Sept 07, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.159|Sept 14, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.160|Sept 14, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|19b3995e6d09d9cbd4de9871ad94ea183ca53a6e|Sept 10, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c7aa2bcd01c3aa4e243a7f9054ca5d1cedc67c23|Sept 12, 2025
@@ -289,7 +289,7 @@ Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|1c0468981e07028bfa5a63721a6d43fca53ecb31|Aug 31, 2025
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|fa1e30570b36d137b24419d7a928082b789953c8|Jul 28, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|44280ae320a1ad4e1b8f72d714e97582d2b52989|Aug 19, 2025
-Emulators|[thextech](https://github.com/TheXTech/TheXTech)|6e562911d95957f54b2f1bbf82dd38afab1990d1|Sept 09, 2025
+Emulators|[thextech](https://github.com/TheXTech/TheXTech)|1a7b58d7c4612f1827006aee09139775ccd49d32|Sept 14, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|89157c1e6724bf851ee04928e9c259f246281a6a|Sept 05, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45768|Sept 14, 2025
 Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
@@ -432,7 +432,7 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|1bfbec8fe6797e6ee873
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c337d85e16fdd36cdaf455e5779ecbdfc0300c6f|Sept 06, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bee00e47805909d08568c640073a2123ca7021b1|Aug 31, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|e21266af5141a708f40ff1ee4f16747992dd5f7e|Sept 14, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5c42b801053396012e46d49e41ce565403973e35|Sept 14, 2025
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246|Feb 05, 2025
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
