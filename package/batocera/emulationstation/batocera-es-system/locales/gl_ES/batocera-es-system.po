@@ -9773,6 +9773,11 @@ msgctxt "game_options"
 msgid "HARD TEXTURE CACHE MEMORY LIMIT"
 msgstr "LÍMITE DE MEMORIA CACHE DE TEXTURA DURA"
 
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "HARDWARE SHADER"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "HARDWARE TESSELLATION"
@@ -10010,6 +10015,11 @@ msgid ""
 msgstr ""
 "Axuda a reducir o consumo de enerxía da CPU limitando a CPU cando non é "
 "necesario. Útil para portátiles."
+
+#. TRANSLATION: azahar
+msgctxt "game_options"
+msgid "Helps some games to launch when disabled. May affect performance."
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"

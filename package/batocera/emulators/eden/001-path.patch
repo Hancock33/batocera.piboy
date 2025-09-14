@@ -1,11 +1,11 @@
 diff --git a/src/common/fs/path_util.cpp b/src/common/fs/path_util.cpp
-index e032360961..98f73e0179 100644
+index 318f311891..3575dcb600 100644
 --- a/src/common/fs/path_util.cpp
 +++ b/src/common/fs/path_util.cpp
-@@ -156,21 +156,21 @@ public:
- 
+@@ -148,21 +148,21 @@ public:
+         LEGACY_PATH(Suyu, SUYU)
+ #undef LEGACY_PATH
  #endif
- 
 -        GenerateEdenPath(EdenPath::EdenDir, eden_path);
 -        GenerateEdenPath(EdenPath::AmiiboDir, eden_path / AMIIBO_DIR);
 -        GenerateEdenPath(EdenPath::CacheDir, eden_path_cache);

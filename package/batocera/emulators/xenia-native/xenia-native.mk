@@ -3,8 +3,8 @@
 # xenia-native
 #
 ################################################################################
-# Version: Commits on Aug 22, 2025
-XENIA_NATIVE_VERSION = 765073021a3fd0ec193f89ff224aad5a3af31551
+# Version: Commits on Sept 09, 2025
+XENIA_NATIVE_VERSION = 8d03766d039569e36539d19283ed14c5c2683b8d
 XENIA_NATIVE_SITE = https://github.com/xenia-canary/xenia-canary.git
 XENIA_NATIVE_LICENSE = BSD
 XENIA_NATIVE_LICENSE_FILE = LICENSE
@@ -14,6 +14,7 @@ XENIA_NATIVE_SUPPORTS_IN_SOURCE_BUILD = NO
 XENIA_NATIVE_SUBDIR = build
 
 XENIA_NATIVE_DEPENDENCIES = xserver_xorg-server alsa-lib fmt freetype libgtk3 libpng lz4 sdl2 zlib
+XENIA_NATIVE_CONF_ENV += CFLAGS="$(TARGET_CFLAGS) -std=gnu99" CXXFLAGS="$(TARGET_CFLAGS) -std=gnu++17"
 
 define XENIA_NATIVE_CROSS_BUILD
 	mkdir -p $(@D) && cd $(@D) && \
@@ -23,10 +24,10 @@ define XENIA_NATIVE_CROSS_BUILD
 	SDL2CONFIG="$(STAGING_DIR)/usr/bin/sdl2-config" \
 	CC="$(HOST_DIR)/bin/clang" \
 	CXX="$(HOST_DIR)/bin/clang++" \
-	./xb premake --devenv=cmake
+	./xenia-build.py premake --devenv=cmake
 endef
 
-XENIA_NATIVE_POST_PATCH_HOOKS = XENIA_NATIVE_CROSS_BUILD
+XENIA_NATIVE_PRE_CONFIGURE_HOOKS = XENIA_NATIVE_CROSS_BUILD
 
 define XENIA_NATIVE_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/build/bin/Linux/Release/xenia_canary $(TARGET_DIR)/usr/bin/xenia-native

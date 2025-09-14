@@ -1,8 +1,8 @@
 diff --git a/Core/System.cpp b/Core/System.cpp
-index 39292b3cc3..475b65a92b 100644
+index 096b2b62f8..5136ddcfd9 100644
 --- a/Core/System.cpp
 +++ b/Core/System.cpp
-@@ -766,26 +766,21 @@ void PSP_RunLoopFor(int cycles) {
+@@ -767,26 +767,21 @@ void PSP_RunLoopFor(int cycles) {
  }
  
  Path GetSysDirectory(PSPDirectories directoryType) {
@@ -36,7 +36,7 @@ index 39292b3cc3..475b65a92b 100644
  	case DIRECTORY_SYSTEM:
  		return pspDirectory / "SYSTEM";
  	case DIRECTORY_PAUTH:
-@@ -795,9 +790,9 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -796,9 +791,9 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  	case DIRECTORY_DUMP:
  		return pspDirectory / "SYSTEM/DUMP";
  	case DIRECTORY_SAVESTATE:
@@ -48,7 +48,7 @@ index 39292b3cc3..475b65a92b 100644
  	case DIRECTORY_TEXTURES:
  		return pspDirectory / "TEXTURES";
  	case DIRECTORY_PLUGINS:
-@@ -806,22 +801,22 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -807,22 +802,22 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  		if (!g_Config.appCacheDirectory.empty()) {
  			return g_Config.appCacheDirectory;
  		}
@@ -89,7 +89,7 @@ index 94a6f481ba..9ca8de78e5 100644
  
  	size_t size;
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index 8da6049971..cfb2296839 100644
+index 55e89c5867..3ee9bea648 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
 @@ -386,7 +386,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch

@@ -3,8 +3,8 @@
 # ecwolf
 #
 ################################################################################
-# Version: Commits on Sept 01, 2025
-ECWOLF_VERSION = f241a01d5cb524bf6cbc83449d693a7e3eac28db
+# Version: Commits on Sept 14, 2025
+ECWOLF_VERSION = 6ecb8325a2c13f96c9e9ff088ea5600ed3f624f7
 ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
 ECWOLF_SITE_METHOD=git
 ECWOLF_GIT_SUBMODULES=YES

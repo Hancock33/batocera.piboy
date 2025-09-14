@@ -7,6 +7,7 @@ from ... import Command
 from ...batoceraPaths import ensure_parents_and_open
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+import os
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
@@ -179,6 +180,7 @@ class IkemenGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         config_path = rom / "save" / "config.json"
+        os.chdir(rom)
 
         try:
             with config_path.open() as c:
@@ -196,6 +198,6 @@ class IkemenGenerator(Generator):
         with ensure_parents_and_open(config_path, "w") as jout:
             jout.write(js_out)
 
-        commandArray = ["/usr/bin/batocera-ikemen", rom]
+        commandArray = ["/usr/bin/ikemen", rom]
 
         return Command.Command(array=commandArray, env={ "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers) })

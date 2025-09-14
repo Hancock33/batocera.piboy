@@ -1,0 +1,17 @@
+diff --git a/third_party/premake-core/premake5.lua b/third_party/premake-core/premake5.lua
+index c1ec5435..b337d440 100644
+--- a/third_party/premake-core/premake5.lua
++++ b/third_party/premake-core/premake5.lua
+@@ -311,9 +311,9 @@
+ 			"binmodules/**.*"
+ 		}
+ 
+-		if git_tag then
+-			defines { 'PREMAKE_VERSION="' .. git_tag .. '"'}
+-		end
++		---if git_tag then
++		---	defines { 'PREMAKE_VERSION="' .. git_tag .. '"'}
++		---end
+ 
+ 		filter { "options:lua-src=contrib" }
+ 			includedirs { "contrib/lua/src", "contrib/luashim" }
