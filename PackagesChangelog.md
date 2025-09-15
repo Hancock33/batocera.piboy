@@ -17,7 +17,9 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|26801267de761b68862864dfba
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|5e609f600b91d9bf0ef07b7c83d491db66c9ff6a|Sept 15, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|e9cce1a14ff7515f4ae32a41cc26b7206f3e9af6|Sept 15, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|630a13f352876c12cf48720d957c4b9e28e7b50c|Sept 15, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250915|Sept 15, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|db88400ee95b6869e6cbfb869da7c2e8fc6957de|Sept 15, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250915|Sept 15, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|79ce083c3b1f0bedb60ada7ea68077140650d098|Sept 15, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|79ce083c3b1f0bedb60ada7ea68077140650d098|Sept 15, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2da0db4a31818ca417fabaff5d9b7c8fe141122f|Sept 15, 2025
@@ -36,9 +38,7 @@ Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.3.1|Sept 14, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.11|Sept 14, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|335082046fa1a011e1f039e18769614b80770d62|Sept 14, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250914|Sept 14, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|38fc811c715365e963a6942092cae147eddddc90|Sept 14, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250914|Sept 14, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d163a3594815d36d0d02dd4b3fe5518aec10b59f|Sept 14, 2025
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|bb03c99fa968b50309bd80d74598f053fe9168ce|Sept 14, 2025
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|6b38c535755b4ff2b069efac404b2844292249b7|Sept 14, 2025
