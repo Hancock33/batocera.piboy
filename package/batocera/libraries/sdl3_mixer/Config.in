@@ -2,6 +2,7 @@ config BR2_PACKAGE_SDL3_MIXER
 	bool "sdl3_mixer"
 	depends on !BR2_STATIC_LIBS
 	depends on BR2_PACKAGE_SDL3
+	select BR2_PACKAGE_LIBXMP
 
 	help
 	  SDL3-based simple multi-channel audio mixer.
