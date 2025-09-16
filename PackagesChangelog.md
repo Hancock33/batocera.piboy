@@ -1,6 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20250906-proton-slr|Sept 05, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250916|Sept 16, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250916|Sept 16, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|a9c89457fdbdd4facc8414d8305661f24a734da1|Sept 15, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|e2bf15a6ceb45351960b385ee5f01c2cd390569c|Sept 15, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|9a1a8c226a4c9f309d5a171d8ad52d5b6b0983a4|Sept 15, 2025
@@ -17,9 +19,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|26801267de761b68862864dfba
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|5e609f600b91d9bf0ef07b7c83d491db66c9ff6a|Sept 15, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|e9cce1a14ff7515f4ae32a41cc26b7206f3e9af6|Sept 15, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|630a13f352876c12cf48720d957c4b9e28e7b50c|Sept 15, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250915|Sept 15, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|db88400ee95b6869e6cbfb869da7c2e8fc6957de|Sept 15, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250915|Sept 15, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|79ce083c3b1f0bedb60ada7ea68077140650d098|Sept 15, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|79ce083c3b1f0bedb60ada7ea68077140650d098|Sept 15, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2da0db4a31818ca417fabaff5d9b7c8fe141122f|Sept 15, 2025
