@@ -1,13 +1,13 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index fdf8900775..eb44ff4847 100644
+index 673aab9e6e..639f2ab826 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -485,7 +485,7 @@ else()
-     find_package(Opus 1.3 MODULE REQUIRED)
-     find_package(ZLIB 1.2 REQUIRED)
-     find_package(zstd 1.5 REQUIRED MODULE)
--    find_package(Boost 1.57.0 REQUIRED context system fiber)
-+    find_package(Boost 1.57.0 REQUIRED context fiber)
-     find_package(MbedTLS 3)
+@@ -495,7 +495,7 @@ else()
  
-     find_package(VulkanUtilityLibraries REQUIRED)
+     # wow
+     if (PLATFORM_LINUX)
+-        find_package(Boost 1.57.0 REQUIRED headers context system fiber)
++        find_package(Boost 1.57.0 REQUIRED headers context fiber)
+     else()
+         find_package(Boost 1.57.0 REQUIRED)
+     endif()
