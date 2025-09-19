@@ -344,10 +344,10 @@ index dc8d713e1d94..0c77c42625f3 100644
  
  	list_for_each_entry(mode, &connector->modes, head) {
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index 1fe19af1ca39..7161e7cbde28 100644
+index a0e8ba35c515..d76c730c386b 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
-@@ -1966,6 +1966,14 @@ struct drm_connector {
+@@ -1968,6 +1968,14 @@ struct drm_connector {
  	 */
  	struct list_head probed_modes;
  

@@ -750,7 +750,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 0ba2149ef7fc..2304948564e7 100644
+index 1722d20034fa..a6e83b9f915e 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -168,6 +168,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -763,7 +763,7 @@ index 0ba2149ef7fc..2304948564e7 100644
  /**
   * DOC: overview
   *
-@@ -9269,7 +9272,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9316,7 +9319,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -773,7 +773,7 @@ index 0ba2149ef7fc..2304948564e7 100644
  	bool pflip_present = false;
  	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/dc/dc.h b/drivers/gpu/drm/amd/display/dc/dc.h
-index f41073c0147e..0091a34af917 100644
+index 7dfbfb18593c..5906f9d92b70 100644
 --- a/drivers/gpu/drm/amd/display/dc/dc.h
 +++ b/drivers/gpu/drm/amd/display/dc/dc.h
 @@ -58,7 +58,7 @@ struct dmub_notification;
@@ -8319,7 +8319,7 @@ index 000000000000..9d0a5471b181
 +MODULE_DESCRIPTION("Steam Deck EC sensors driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
-index fd8ae212ec19..55be184690c6 100644
+index 233ae51384b0..e704ebfb88ad 100644
 --- a/drivers/input/joystick/xpad.c
 +++ b/drivers/input/joystick/xpad.c
 @@ -359,7 +359,9 @@ static const struct xpad_device {
@@ -8332,7 +8332,7 @@ index fd8ae212ec19..55be184690c6 100644
  	{ 0x20d6, 0x2001, "BDA Xbox Series X Wired Controller", 0, XTYPE_XBOXONE },
  	{ 0x20d6, 0x2009, "PowerA Enhanced Wired Controller for Xbox Series X|S", 0, XTYPE_XBOXONE },
  	{ 0x20d6, 0x2064, "PowerA Wired Controller for Xbox", MAP_SHARE_BUTTON, XTYPE_XBOXONE },
-@@ -558,7 +560,9 @@ static const struct usb_device_id xpad_table[] = {
+@@ -559,7 +561,9 @@ static const struct usb_device_id xpad_table[] = {
  	XPAD_XBOX360_VENDOR(0x1949),		/* Amazon controllers */
  	XPAD_XBOX360_VENDOR(0x1a86),		/* Nanjing Qinheng Microelectronics (WCH) */
  	XPAD_XBOX360_VENDOR(0x1bad),		/* Harmonix Rock Band guitar and drums */
