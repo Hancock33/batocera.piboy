@@ -324,10 +324,10 @@ index 6b3541159c0f..03db1ff0301a 100644
  
  		/*
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index f13d597370a3..1fe19af1ca39 100644
+index da49d520aa3b..a0e8ba35c515 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
-@@ -1665,6 +1665,13 @@ struct drm_cmdline_mode {
+@@ -1667,6 +1667,13 @@ struct drm_cmdline_mode {
  	 */
  	bool interlace;
  
