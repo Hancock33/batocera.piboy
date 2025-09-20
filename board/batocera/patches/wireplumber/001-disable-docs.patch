@@ -1,0 +1,12 @@
+diff --git a/meson.build b/meson.build
+index f966f135..07741eb0 100644
+--- a/meson.build
++++ b/meson.build
+@@ -168,7 +168,6 @@ if build_modules
+ endif
+ subdir('src')
+ subdir('po')
+-subdir('docs')
+ 
+ if get_option('tests')
+   subdir('tests')

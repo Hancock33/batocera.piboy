@@ -1,13 +1,13 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 6a9e15cfbd..121764e59d 100644
+index 673aab9e6e..639f2ab826 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -467,7 +467,7 @@ else()
-     find_package(Opus 1.3 MODULE REQUIRED)
-     find_package(ZLIB 1.2 REQUIRED)
-     find_package(zstd 1.5 REQUIRED MODULE)
--    find_package(Boost 1.79.0 REQUIRED headers context system fiber)
-+    find_package(Boost 1.79.0 REQUIRED headers context fiber)
+@@ -495,7 +495,7 @@ else()
  
-     if (YUZU_TESTS)
-         find_package(Catch2 3.0.1 REQUIRED)
+     # wow
+     if (PLATFORM_LINUX)
+-        find_package(Boost 1.57.0 REQUIRED headers context system fiber)
++        find_package(Boost 1.57.0 REQUIRED headers context fiber)
+     else()
+         find_package(Boost 1.57.0 REQUIRED)
+     endif()

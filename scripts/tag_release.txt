@@ -13,6 +13,7 @@ kodi-pvr-freebox.mk
 labwc.mk
 layershellqt.mk
 libdbusmenu.mk
+libfyaml.mk
 liblc3.mk
 libpinmame.mk
 libserum.mk

@@ -3,14 +3,14 @@
 # EDEN
 #
 ################################################################################
-# Version: Commits on Sept 12, 2025
-EDEN_VERSION = 28d26b0d7677801a0da2bd9253c5bc342e1c8a4c
+# Version: Commits on Sept 19, 2025
+EDEN_VERSION = 6510818fca962ebee78089e79e972221dfbe3ef4
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD=git
 EDEN_GIT_SUBMODULES=YES
 EDEN_LICENSE = GPLv2
 EDEN_DEPENDENCIES += boost catch2 enet ffmpeg fmt json-for-modern-cpp libva
-EDEN_DEPENDENCIES += libzip lz4 opus sdl2 zlib zstd qt6base qt6svg qt6tools
+EDEN_DEPENDENCIES += libzip lz4 mbedtls opus sdl2 zlib zstd qt6base qt6svg qt6tools
 EDEN_SUPPORTS_IN_SOURCE_BUILD = NO
 
 EDEN_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1

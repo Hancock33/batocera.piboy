@@ -51,7 +51,7 @@ class LindberghGenerator(Generator):
         "GPU_VENDOR":                True, "DEBUG_MSGS":                True, "BORDER_ENABLED":            True, "WHITE_BORDER_PERCENTAGE":   True,
         "BLACK_BORDER_PERCENTAGE":   True, "HUMMER_FLICKER_FIX":        True, "KEEP_ASPECT_RATIO":         True, "OUTRUN_LENS_GLARE_ENABLED": True,
         "SKIP_OUTRUN_CABINET_CHECK": True, "FPS_LIMITER_ENABLED":       True, "FPS_TARGET":                True, "LGJ_RENDER_WITH_MESA":      True,
-        "PRIMEVAL_HUNT_MODE":        True, "MJ4_ENABLED_ALL_THE_TIME":  True, "LINDBERGH_COLOUR":          True, "TEST_KEY":                  True,
+        "PRIMEVAL_HUNT_SCREEN_MODE": True, "MJ4_ENABLED_ALL_THE_TIME":  True, "LINDBERGH_COLOUR":          True, "TEST_KEY":                  True,
         "PLAYER_1_START_KEY":        True, "PLAYER_1_SERVICE_KEY":      True, "PLAYER_1_COIN_KEY":         True, "PLAYER_1_UP_KEY":           True,
         "PLAYER_1_DOWN_KEY":         True, "PLAYER_1_LEFT_KEY":         True, "PLAYER_1_RIGHT_KEY":        True, "PLAYER_1_BUTTON_1_KEY":     True,
         "PLAYER_1_BUTTON_2_KEY":     True, "PLAYER_1_BUTTON_3_KEY":     True, "PLAYER_1_BUTTON_4_KEY":     True, "TEST_BUTTON":               True,
@@ -68,8 +68,8 @@ class LindberghGenerator(Generator):
         "ANALOGUE_1-":               True, "ANALOGUE_2-":               True, "ANALOGUE_3-":               True, "ANALOGUE_4-":               True,
         "ANALOGUE_DEADZONE_1":       True, "ANALOGUE_DEADZONE_2":       True, "ANALOGUE_DEADZONE_3":       True, "ANALOGUE_DEADZONE_4":       True,
         "ANALOGUE_DEADZONE_5":       True, "ANALOGUE_DEADZONE_6":       True, "ANALOGUE_DEADZONE_7":       True, "ANALOGUE_DEADZONE_8":       True,
-        "EMULATE_CARDREADER":        True, "CARDFILE_01":               True, "CARDFILE_02":               True, "CPU_FREQ_GHZ":              True,
-        "OR2_IP":                    True, "PLAYER_1_COIN":             True, "BOOST_RENDER_RES":          True,
+        "EMULATE_HW210_CARDREADER":  True, "CARDFILE_01":               True, "CARDFILE_02":               True, "CPU_FREQ_GHZ":              True,
+        "OR2_IPADDRESS":             True, "PLAYER_1_COIN":             True, "BOOST_RENDER_RES":          True,
     }
 
     def getHotkeysContext(self) -> HotkeysContext:
@@ -232,7 +232,7 @@ class LindberghGenerator(Generator):
             conf["keys"][key] = { "line": len(conf["raw"]) }
             conf["raw"].append("###")
 
-        conf["keys"][key]["value"]     = str(value)
+        conf["keys"][key]["value"]     = "= " + str(value)
         conf["keys"][key]["modified"]  = True
         conf["keys"][key]["commented"] = False
 
@@ -277,14 +277,14 @@ class LindberghGenerator(Generator):
         self.setConf(conf, "FULLSCREEN",                1)
         self.setConf(conf, "REGION",                    system.config.get("lindbergh_region", "EX"))
         self.setConf(conf, "FPS_TARGET",                system.config.get("lindbergh_fps", "60"))
-        self.setConf(conf, "FPS_LIMITER_ENABLED",       system.config.get_bool("lindbergh_limit", return_values=(1, 0)))
-        self.setConf(conf, "FREEPLAY",                  system.config.get_bool("lindbergh_freeplay", return_values=(1, 0)))
-        self.setConf(conf, "KEEP_ASPECT_RATIO",         system.config.get_bool("lindbergh_aspect", return_values=(1, 0)))
-        self.setConf(conf, "DEBUG_MSGS",                system.config.get_bool("lindbergh_debug", return_values=(1, 0)))
-        self.setConf(conf, "HUMMER_FLICKER_FIX",        system.config.get_bool("lindbergh_hummer", return_values=(1, 0)))
-        self.setConf(conf, "OUTRUN_LENS_GLARE_ENABLED", system.config.get_bool("lindbergh_lens", return_values=(1, 0)))
-        self.setConf(conf, "BOOST_RENDER_RES",          system.config.get_bool("lindbergh_boost", return_values=(1, 0)))
-        self.setConf(conf, "SKIP_OUTRUN_CABINET_CHECK", 1 if "outrun" in romName.lower() or "outr2sdx" in romName.lower() else 0)
+        self.setConf(conf, "FPS_LIMITER_ENABLED",       system.config.get_bool("lindbergh_limit", return_values=("true", "false")))
+        self.setConf(conf, "FREEPLAY",                  system.config.get_bool("lindbergh_freeplay", return_values=("true", "none")))
+        self.setConf(conf, "KEEP_ASPECT_RATIO",         system.config.get_bool("lindbergh_aspect", return_values=("true", "false")))
+        self.setConf(conf, "DEBUG_MSGS",                system.config.get_bool("lindbergh_debug", return_values=("true", "false")))
+        self.setConf(conf, "HUMMER_FLICKER_FIX",        system.config.get_bool("lindbergh_hummer", return_values=("true", "false")))
+        self.setConf(conf, "OUTRUN_LENS_GLARE_ENABLED", system.config.get_bool("lindbergh_lens", return_values=("true", "false")))
+        self.setConf(conf, "BOOST_RENDER_RES",          system.config.get_bool("lindbergh_boost", return_values=("true", "false")))
+        self.setConf(conf, "SKIP_OUTRUN_CABINET_CHECK", "true" if "outrun" in romName.lower() or "outr2sdx" in romName.lower() else "false")
         self.setConf(conf, "SRAM_PATH",   f"{self.LINDBERGH_SAVES}/sram.bin.{Path(romName).stem}")
         self.setConf(conf, "EEPROM_PATH", f"{self.LINDBERGH_SAVES}/eeprom.bin.{Path(romName).stem}")
 
@@ -292,11 +292,11 @@ class LindberghGenerator(Generator):
 
         # Virtua Tennis - Card Reader
         if "tennis" in romName.lower() and system.config.get_bool("lindbergh_card"):
-            self.setConf(conf, "EMULATE_CARDREADER", 1)
+            self.setConf(conf, "EMULATE_HW210_CARDREADER", "true")
             self.setConf(conf, "CARDFILE_01", f"{self.LINDBERGH_SAVES}/VT3_Card_01.crd")
             self.setConf(conf, "CARDFILE_02", f"{self.LINDBERGH_SAVES}/VT3_Card_02.crd")
         else:
-            self.setConf(conf, "EMULATE_CARDREADER", 0)
+            self.setConf(conf, "EMULATE_HW210_CARDREADER", "AUTO")
 
         # House of the Dead 4 - CPU speed
         cpu_speed = system.config.get("lindbergh_speed")
@@ -315,13 +315,13 @@ class LindberghGenerator(Generator):
         if ip:
             _logger.debug("Current IP Address: %s", ip)
             if "outr2sdx" in romName.lower() and system.config.get_bool("lindbergh_ip"):
-                self.setConf(conf, "OR2_IP", ip)
+                self.setConf(conf, "OR2_IPADDRESS", chr(34) + ip + chr(34))
         else:
             _logger.debug("Unable to retrieve IP address.")
 
         # Primeval Hunt mode (touch screen)
         if "primeva" in romName.lower() or "primehunt" in romName.lower():
-            self.setConf(conf, "PRIMEVAL_HUNT_MODE", system.config.get("lindbergh_hunt", "1"))
+            self.setConf(conf, "PRIMEVAL_HUNT_SCREEN_MODE", system.config.get("lindbergh_hunt", "1"))
 
         ## Guns
         if system.config.use_guns and guns:
@@ -331,9 +331,9 @@ class LindberghGenerator(Generator):
                 bordersInnerSize, bordersOuterSize = bezelsUtil.gunBordersSize(bordersSize)
                 self.setConf(conf, "WHITE_BORDER_PERCENTAGE", bordersInnerSize)
                 self.setConf(conf, "BLACK_BORDER_PERCENTAGE", bordersOuterSize)
-            self.setConf(conf, "BORDER_ENABLED", 1 if need_guns_border else 0)
+            self.setConf(conf, "BORDER_ENABLED", "true" if need_guns_border else "false")
         else:
-            self.setConf(conf, "BORDER_ENABLED", 0)
+            self.setConf(conf, "BORDER_ENABLED", "false")
 
         self.setup_controllers(conf, system, romName, playersControllers, guns, wheels)
 
@@ -347,12 +347,11 @@ class LindberghGenerator(Generator):
         wheels: DeviceInfoMapping,
         /,
     ) -> None:
-        # 0: SDL, 1: EVDEV, 2: RAW EVDEV
+        # 1: SDL, 2: EVDEV
         if system.config.get("lindbergh_controller") == "1":
-            input_mode = 0
+            input_mode = 1
         else:
             input_mode = 2
-
 
         shortRomName = Path(romName.lower()).stem
 
@@ -903,14 +902,14 @@ class LindberghGenerator(Generator):
         romName: str,
         /,
     ) -> None:
-        LINDBERGH_CONFIG_FILE = Path("/userdata/system/configs/lindbergh/lindbergh.conf")
+        LINDBERGH_CONFIG_FILE = Path("/userdata/system/configs/lindbergh/lindbergh.ini")
         mkdir_if_not_exists(LINDBERGH_CONFIG_FILE.parent)
 
         # get an initial version if no version is here
-        source_file = source_dir / "lindbergh.conf"
+        source_file = source_dir / "lindbergh.ini"
         if not LINDBERGH_CONFIG_FILE.exists() or source_file.stat().st_mtime > LINDBERGH_CONFIG_FILE.stat().st_mtime:
             shutil.copy2(source_file, LINDBERGH_CONFIG_FILE)
-            _logger.debug("Updated lindbergh.conf")
+            _logger.debug("Updated lindbergh.ini")
 
         # load and modify it if needed and save it
         conf = self.loadConf(LINDBERGH_CONFIG_FILE)
@@ -918,7 +917,7 @@ class LindberghGenerator(Generator):
         self.saveConf(conf, LINDBERGH_CONFIG_FILE)
 
         # copy the config file in the rom dir, where it is used
-        shutil.copy2(LINDBERGH_CONFIG_FILE, romDir / "lindbergh.conf")
+        shutil.copy2(LINDBERGH_CONFIG_FILE, romDir / "lindbergh.ini")
 
 #    def get_cpu_min_speed(self):
 #        try:

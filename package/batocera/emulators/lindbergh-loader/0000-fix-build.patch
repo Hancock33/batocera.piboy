@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index bdb05b4..0e18290 100644
+index 9893fdb..6a1d6f5 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -22,7 +22,7 @@ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/log.c src/lindbergh/log.h src
+@@ -24,7 +24,7 @@ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdl
  
  libxdiff.a: $(XDIFF_OBJS)
  	mkdir -p $(BUILD)
@@ -11,12 +11,12 @@ index bdb05b4..0e18290 100644
  
  src/libxdiff/xdiff/%.o: src/libxdiff/xdiff/%.c
  	$(CC) -m32 -DHAVE_CONFIG_H -fPIC -c $< -o $@
-@@ -35,7 +35,7 @@ lindbergh.so: $(OBJS)
+@@ -37,7 +37,7 @@ lindbergh.so: $(OBJS)
  	$(CC) $(CFLAGS) -c $< -o $@
  
  libsegaapi.so: src/libsegaapi/libsegaapi.o
--	$(CC) -m32 -O0 -g src/libsegaapi/libsegaapi.c -lFAudio -L/app/lib32 -fPIC -shared -o $(BUILD)/libsegaapi.so
-+	$(CC) $(CFLAGS) -m32 -O0 -g src/libsegaapi/libsegaapi.c -fPIC -shared -o $(BUILD)/libsegaapi.so
+-	$(CC) -m32 -O0 -g src/libsegaapi/libsegaapi.c -Wl,-Bstatic -lFAudio -Wl,-Bdynamic -L/app/lib32 -fPIC -shared -o $(BUILD)/libsegaapi.so
++	$(CC) $(CFLAGS) -m32 -g src/libsegaapi/libsegaapi.c -fPIC -shared -o $(BUILD)/libsegaapi.so
  
  libkswapapi.so: src/libkswapapi/libkswapapi.o
  	$(CC) -m32 src/libkswapapi/libkswapapi.o -fPIC -shared -o $(BUILD)/libkswapapi.so

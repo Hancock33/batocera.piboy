@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: Batocera.linux Options\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-13 08:38+0200\n"
+"PO-Revision-Date: 2025-09-16 11:19+0200\n"
 "Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -2175,12 +2175,12 @@ msgstr "90 grader"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "90 degrees clockwise"
-msgstr ""
+msgstr "90 grader medurs"
 
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "90 degrees counter-clockwise"
-msgstr ""
+msgstr "90 grader moturs"
 
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
@@ -5236,7 +5236,7 @@ msgstr "Ändra upplösningsförhållandet för utmatningen."
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Change the rotation of the rendered image."
-msgstr ""
+msgstr "Ändra rotationen på den renderade bilden."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -5553,7 +5553,7 @@ msgstr ""
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Choose to render meshes as transparent polygons."
-msgstr ""
+msgstr "Välj att rendera maskor som transparenta polygoner."
 
 #. TRANSLATION: openjkdf2, theforceengine
 msgctxt "game_options"
@@ -6121,7 +6121,7 @@ msgstr "DATAINSTICKSMODUL"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "DE"
-msgstr ""
+msgstr "DE"
 
 #. TRANSLATION: dolphin, mupen64plus
 msgctxt "game_options"
@@ -7620,7 +7620,7 @@ msgstr ""
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Enable the Virtual Keyboard."
-msgstr ""
+msgstr "Aktivera det virtuella tangentbordet."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8329,7 +8329,7 @@ msgstr "FPS-MÅL"
 #. TRANSLATION: amiberry, f2bgl
 msgctxt "game_options"
 msgid "FR"
-msgstr ""
+msgstr "FR"
 
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
@@ -10059,7 +10059,7 @@ msgstr "Hög prestanda"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "High-Resolution Keyboard, which is larger and might be easier to see."
-msgstr ""
+msgstr "Högupplöst tangentbord som är större och kanske lättare att se."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10824,12 +10824,12 @@ msgstr "BEHÅLL HUVUDSKÄRMEN ÖVERST"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "KEYBOARD LAYOUT"
-msgstr ""
+msgstr "TANGENTBORDSLAYOUT"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "KEYBOARD OPTIONS"
-msgstr ""
+msgstr "TANGENTBORDSALTERNATIV"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -10844,7 +10844,7 @@ msgstr "STÖD FÖR TANGENTBORD"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "KEYBOARD TRANSPARENCY"
-msgstr ""
+msgstr "TANGENTBORDETS TRANSPARENS"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -10998,7 +10998,7 @@ msgstr "LÅS UPP SPRÅK"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "LARGER KEYBOARD"
-msgstr ""
+msgstr "STÖRRE TANGENTBORD"
 
 #. TRANSLATION: libretro, shared
 msgctxt "game_options"
@@ -14472,7 +14472,7 @@ msgstr "ROTERA HANDLINGSKNAPPAR"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "ROTATION"
-msgstr ""
+msgstr "ROTATION"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15974,7 +15974,7 @@ msgstr "Ställ in bildfrekvensgräns."
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "Set the on-screen keyboard transparency (0-100%)."
-msgstr ""
+msgstr "Ställ in transparensen för tangentbordet på skärmen (0-100%)."
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
@@ -17377,7 +17377,7 @@ msgstr "TRÄNINGSLÄGE"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
-msgstr ""
+msgstr "GENOMSKINLIGA MASKOR"
 
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
@@ -17625,6 +17625,8 @@ msgctxt "game_options"
 msgid ""
 "This setting controls the default language layout for the virtual keyboard."
 msgstr ""
+"Den här inställningen styr standardspråklayouten för det virtuella "
+"tangentbordet."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -17989,7 +17991,7 @@ msgstr "USA"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "US (Default)"
-msgstr ""
+msgstr "USA (standard)"
 
 #. TRANSLATION: eden, flycast/dolphin, libretro/flycast, libretro/geolith, libretro/neocd, ...
 msgctxt "game_options"
@@ -18810,7 +18812,7 @@ msgstr "VIRTUELLT SKRIVBORD"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "VIRTUAL KEYBOARD"
-msgstr ""
+msgstr "VIRTUELLT TANGENTBORD"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"

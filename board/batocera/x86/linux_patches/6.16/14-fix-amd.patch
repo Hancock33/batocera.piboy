@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 29343925d472..57914a3d040f 100644
+index 338d1b61d2de..772ae73af171 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -8427,7 +8427,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -8437,7 +8437,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	if (!aconnector->mst_root)
  		drm_connector_attach_max_bpc_property(&aconnector->base, 8, 16);
  

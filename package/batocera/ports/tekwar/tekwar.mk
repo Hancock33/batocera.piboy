@@ -3,8 +3,8 @@
 # tekwar
 #
 ################################################################################
-# Version: Commits on Mar 08, 2025
-TEKWAR_VERSION = c0efc619e85dc318b363e16fa64770c788f74a23
+# Version: Commits on Sept 20, 2025
+TEKWAR_VERSION = a2459ca2ab6758e8d60a021a19e2b8f03e28856d
 TEKWAR_SITE = https://github.com/jonof/jftekwar.git
 
 TEKWAR_DEPENDENCIES = sdl2 sdl2_image

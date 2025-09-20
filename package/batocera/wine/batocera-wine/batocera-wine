@@ -595,6 +595,7 @@ trick_wine() {
     GAMENAME="$1"
     WINEPOINT="$2"
     TRICK="$3"
+
     if [[ -e "${WINETRICKS}" ]]; then
         echo "Winetricks is installed"
     else
@@ -624,7 +625,7 @@ play_exe() {
     sandboxing_prefix "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
 
-    (cd "${ROMBASEDIR}" && WINEPREFIX=${WINEPOINT} wine "${ROMGAMENAME}")
+    (cd "${ROMBASEDIR}" && WINEPREFIX=${WINEPOINT} "${WINE}" "${ROMGAMENAME}")
     waitWineServer 0
 }
 
@@ -794,7 +795,7 @@ install_exe_msi() {
     GAMENAME="$2"
     WINEPOINT="$3"
     createWineDirectory "${WINEPOINT}"
-    [[ "${GAMEEXT}" == "exe" ]] && WINEPREFIX=${WINEPOINT} wine "${GAMENAME}"
+    [[ "${GAMEEXT}" == "exe" ]] && WINEPREFIX=${WINEPOINT} "${WINE}" "${GAMENAME}"
     [[ "${GAMEEXT}" == "msi" ]] && WINEPREFIX=${WINEPOINT} "${MSIEXEC}" -i "${GAMENAME}"
     waitWineServer 0
     createAutorunCmd "${WINEPOINT}" "drive_c/P*"
@@ -816,7 +817,7 @@ install_iso() {
     createWineDirectory "${WINEPOINT}"
 
     if mkdir -p "${WINEPOINT}/dosdevices" && rm -f "${WINEPOINT}/dosdevices/d:" && ln -sf "${GAMEISOMOUNT}" "${WINEPOINT}/dosdevices/d:"; then
-        WINEPREFIX=${WINEPOINT} wine explorer "d:"
+        WINEPREFIX=${WINEPOINT} "${WINE}" explorer "d:"
         rm -f "${WINEPOINT}/dosdevices/d:"
     fi
 

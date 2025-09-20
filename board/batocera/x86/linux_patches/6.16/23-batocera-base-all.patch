@@ -286,7 +286,7 @@ index 9bef46151d53..0ee649d4808b 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 67c8f077e4d0..a5e59dc9686b 100644
+index 405e42114ab7..a1c2b983423f 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -862,11 +862,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -590,10 +590,10 @@ index c65f4da93702..105b12fd86b8 100644
 +
 diff --git a/block/adios.c b/block/adios.c
 new file mode 100644
-index 000000000000..201e5be610ed
+index 000000000000..318505265d76
 --- /dev/null
 +++ b/block/adios.c
-@@ -0,0 +1,2010 @@
+@@ -0,0 +1,2015 @@
 +// SPDX-License-Identifier: GPL-2.0
 +/*
 + * Adaptive Deadline I/O Scheduler (ADIOS)
@@ -621,7 +621,7 @@ index 000000000000..201e5be610ed
 +#include "blk-mq.h"
 +#include "blk-mq-sched.h"
 +
-+#define ADIOS_VERSION "3.1.4"
++#define ADIOS_VERSION "3.1.6"
 +
 +/* Request Types:
 + *
@@ -1920,7 +1920,7 @@ index 000000000000..201e5be610ed
 +		struct request *trq, *next;
 +		LIST_HEAD(free_list);
 +
-+		scoped_guard(spinlock_irqsave, &ad->lock)
++		/* ad->lock is already held */
 +		list_for_each_entry_safe(trq, next, &local_list, queuelist) {
 +			list_del_init(&trq->queuelist);
 +			if (merge_or_insert_to_dl_tree(ad, trq, ad->queue, &free_list))
@@ -1956,8 +1956,13 @@ index 000000000000..201e5be610ed
 +	if (eval_adios_state(ad, ADIOS_STATE_BP)) {
 +		union adios_in_flight_rqs ifr;
 +		ifr.scalar = atomic64_read(&ad->in_flight_rqs.atomic);
-+		if (!ifr.count && release_barrier_requests(ad))
-+			goto retry;
++		if (!ifr.count) {
++			bool barrier_released = false;
++			scoped_guard(spinlock_irqsave, &ad->lock)
++				barrier_released = release_barrier_requests(ad);
++			if (barrier_released)
++				goto retry;
++		}
 +	}
 +
 +	return NULL;
@@ -3032,7 +3037,7 @@ index 2c5c228408bf..918e2bebfe78 100644
  	  This driver adds a CPUFreq driver which utilizes a fine grain
  	  processor performance frequency control range instead of legacy
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index 06a1c7dd081f..5a75ec5d7e03 100644
+index 9a85c58922a0..70ae0bee2ae6 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
 @@ -3949,6 +3949,8 @@ static int __init intel_pstate_setup(char *str)
@@ -3110,10 +3115,10 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 57914a3d040f..0ba2149ef7fc 100644
+index 772ae73af171..1722d20034fa 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4652,7 +4652,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4662,7 +4662,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -3122,6 +3127,60 @@ index 57914a3d040f..0ba2149ef7fc 100644
  	if (amdgpu_dm_create_color_properties(adev)) {
  		dc_state_release(state->context);
  		kfree(state);
+@@ -8692,7 +8692,16 @@ static int amdgpu_dm_encoder_init(struct drm_device *dev,
+ static void manage_dm_interrupts(struct amdgpu_device *adev,
+ 				 struct amdgpu_crtc *acrtc,
+ 				 struct dm_crtc_state *acrtc_state)
+-{
++{	/*
++	 * We cannot be sure that the frontend index maps to the same
++	 * backend index - some even map to more than one.
++	 * So we have to go through the CRTC to find the right IRQ.
++	 */
++	int irq_type = amdgpu_display_crtc_idx_to_irq_type(
++			adev,
++			acrtc->crtc_id);
++	struct drm_device *dev = adev_to_drm(adev);
++
+ 	struct drm_vblank_crtc_config config = {0};
+ 	struct dc_crtc_timing *timing;
+ 	int offdelay;
+@@ -8745,7 +8754,35 @@ static void manage_dm_interrupts(struct amdgpu_device *adev,
+ 
+ 		drm_crtc_vblank_on_config(&acrtc->base,
+ 					  &config);
++		/* Allow RX6xxx, RX7700, RX7800 GPUs to call amdgpu_irq_get.*/
++		switch (amdgpu_ip_version(adev, DCE_HWIP, 0)) {
++		case IP_VERSION(3, 0, 0):
++		case IP_VERSION(3, 0, 2):
++		case IP_VERSION(3, 0, 3):
++		case IP_VERSION(3, 2, 0):
++			if (amdgpu_irq_get(adev, &adev->pageflip_irq, irq_type))
++				drm_err(dev, "DM_IRQ: Cannot get pageflip irq!\n");
++#if defined(CONFIG_DRM_AMD_SECURE_DISPLAY)
++			if (amdgpu_irq_get(adev, &adev->vline0_irq, irq_type))
++				drm_err(dev, "DM_IRQ: Cannot get vline0 irq!\n");
++#endif
++		}
++
+ 	} else {
++		/* Allow RX6xxx, RX7700, RX7800 GPUs to call amdgpu_irq_put.*/
++		switch (amdgpu_ip_version(adev, DCE_HWIP, 0)) {
++		case IP_VERSION(3, 0, 0):
++		case IP_VERSION(3, 0, 2):
++		case IP_VERSION(3, 0, 3):
++		case IP_VERSION(3, 2, 0):
++#if defined(CONFIG_DRM_AMD_SECURE_DISPLAY)
++			if (amdgpu_irq_put(adev, &adev->vline0_irq, irq_type))
++				drm_err(dev, "DM_IRQ: Cannot put vline0 irq!\n");
++#endif
++			if (amdgpu_irq_put(adev, &adev->pageflip_irq, irq_type))
++				drm_err(dev, "DM_IRQ: Cannot put pageflip irq!\n");
++		}
++
+ 		drm_crtc_vblank_off(&acrtc->base);
+ 	}
+ }
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
 index ebabfe3a512f..4d3ebcaacca1 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
@@ -16448,50 +16507,6 @@ index 000000000000..d855a3796554
 +	},
 +#endif /* V4L2_PIX_FMT_HEVC */
 +};
-diff --git a/drivers/net/wireless/intel/iwlwifi/pcie/drv.c b/drivers/net/wireless/intel/iwlwifi/pcie/drv.c
-index 4e47ccb43bd8..edd99d71016c 100644
---- a/drivers/net/wireless/intel/iwlwifi/pcie/drv.c
-+++ b/drivers/net/wireless/intel/iwlwifi/pcie/drv.c
-@@ -124,13 +124,13 @@ VISIBLE_IF_IWLWIFI_KUNIT const struct pci_device_id iwl_hw_card_ids[] = {
- 	{IWL_PCI_DEVICE(0x0082, 0x1304, iwl6005_mac_cfg)},/* low 5GHz active */
- 	{IWL_PCI_DEVICE(0x0082, 0x1305, iwl6005_mac_cfg)},/* high 5GHz active */
- 
--/* 6x30 Series */
--	{IWL_PCI_DEVICE(0x008A, 0x5305, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x008A, 0x5307, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x008A, 0x5325, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x008A, 0x5327, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x008B, 0x5315, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x008B, 0x5317, iwl1000_mac_cfg)},
-+/* 1030/6x30 Series */
-+	{IWL_PCI_DEVICE(0x008A, 0x5305, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x008A, 0x5307, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x008A, 0x5325, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x008A, 0x5327, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x008B, 0x5315, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x008B, 0x5317, iwl6030_mac_cfg)},
- 	{IWL_PCI_DEVICE(0x0090, 0x5211, iwl6030_mac_cfg)},
- 	{IWL_PCI_DEVICE(0x0090, 0x5215, iwl6030_mac_cfg)},
- 	{IWL_PCI_DEVICE(0x0090, 0x5216, iwl6030_mac_cfg)},
-@@ -181,12 +181,12 @@ VISIBLE_IF_IWLWIFI_KUNIT const struct pci_device_id iwl_hw_card_ids[] = {
- 	{IWL_PCI_DEVICE(0x08AE, 0x1027, iwl1000_mac_cfg)},
- 
- /* 130 Series WiFi */
--	{IWL_PCI_DEVICE(0x0896, 0x5005, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x0896, 0x5007, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x0897, 0x5015, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x0897, 0x5017, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x0896, 0x5025, iwl1000_mac_cfg)},
--	{IWL_PCI_DEVICE(0x0896, 0x5027, iwl1000_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x0896, 0x5005, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x0896, 0x5007, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x0897, 0x5015, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x0897, 0x5017, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x0896, 0x5025, iwl6030_mac_cfg)},
-+	{IWL_PCI_DEVICE(0x0896, 0x5027, iwl6030_mac_cfg)},
- 
- /* 2x00 Series */
- 	{IWL_PCI_DEVICE(0x0890, 0x4022, iwl2000_mac_cfg)},
 diff --git a/drivers/pci/controller/Makefile b/drivers/pci/controller/Makefile
 index 038ccbd9e3ba..de5e4f5145af 100644
 --- a/drivers/pci/controller/Makefile

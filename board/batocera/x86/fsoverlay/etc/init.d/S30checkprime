@@ -19,6 +19,7 @@ case "$1" in
             echo "Two GPUs detected in the system" >> "$display_log"
         else
             echo "Two GPUs detected in the system" > "$display_log"
+        fi
         echo "Setting best primary GPU..." >> "$display_log"
 
         # Check for NVIDIA GPUs

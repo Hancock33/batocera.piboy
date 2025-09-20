@@ -1,8 +1,8 @@
 diff --git a/src/yuzu/main.cpp b/src/yuzu/main.cpp
-index e23e9a6a48..779f471429 100644
+index d7d4e94ab7..35b6b94449 100644
 --- a/src/yuzu/main.cpp
 +++ b/src/yuzu/main.cpp
-@@ -21,7 +21,7 @@
+@@ -22,7 +22,7 @@
  #include <csignal>
  #include <sys/socket.h>
  #endif
@@ -11,7 +11,7 @@ index e23e9a6a48..779f471429 100644
  #include "common/linux/gamemode.h"
  #endif
  
-@@ -431,7 +431,7 @@ GMainWindow::GMainWindow(bool has_broken_vulkan)
+@@ -419,7 +419,7 @@ GMainWindow::GMainWindow(bool has_broken_vulkan)
      SetupSigInterrupts();
  #endif
  
@@ -20,7 +20,7 @@ index e23e9a6a48..779f471429 100644
      SetGamemodeEnabled(Settings::values.enable_gamemode.GetValue());
  #endif
  
-@@ -2393,7 +2393,7 @@ void GMainWindow::OnEmulationStopped() {
+@@ -2255,7 +2255,7 @@ void GMainWindow::OnEmulationStopped() {
  
      discord_rpc->Update();
  
@@ -29,7 +29,7 @@ index e23e9a6a48..779f471429 100644
      Common::Linux::StopGamemode();
  #endif
  
-@@ -3579,7 +3579,7 @@ void GMainWindow::OnStartGame() {
+@@ -3097,7 +3097,7 @@ void GMainWindow::OnStartGame() {
  
      discord_rpc->Update();
  
@@ -38,7 +38,7 @@ index e23e9a6a48..779f471429 100644
      Common::Linux::StartGamemode();
  #endif
  }
-@@ -3603,7 +3603,7 @@ void GMainWindow::OnPauseGame() {
+@@ -3121,7 +3121,7 @@ void GMainWindow::OnPauseGame() {
      UpdateMenuState();
      AllowOSSleep();
  
@@ -47,7 +47,7 @@ index e23e9a6a48..779f471429 100644
      Common::Linux::StopGamemode();
  #endif
  }
-@@ -3900,7 +3900,7 @@ void GMainWindow::OnConfigure() {
+@@ -3418,7 +3418,7 @@ void GMainWindow::OnConfigure() {
      const auto old_theme = UISettings::values.theme;
      const bool old_discord_presence = UISettings::values.enable_discord_presence.GetValue();
      const auto old_language_index = Settings::values.language_index.GetValue();
@@ -56,7 +56,7 @@ index e23e9a6a48..779f471429 100644
      const bool old_gamemode = Settings::values.enable_gamemode.GetValue();
  #endif
  
-@@ -3962,7 +3962,7 @@ void GMainWindow::OnConfigure() {
+@@ -3480,7 +3480,7 @@ void GMainWindow::OnConfigure() {
      if (UISettings::values.enable_discord_presence.GetValue() != old_discord_presence) {
          SetDiscordEnabled(UISettings::values.enable_discord_presence.GetValue());
      }
@@ -65,7 +65,7 @@ index e23e9a6a48..779f471429 100644
      if (Settings::values.enable_gamemode.GetValue() != old_gamemode) {
          SetGamemodeEnabled(Settings::values.enable_gamemode.GetValue());
      }
-@@ -5626,7 +5626,7 @@ void GMainWindow::SetDiscordEnabled([[maybe_unused]] bool state) {
+@@ -4771,7 +4771,7 @@ void GMainWindow::SetDiscordEnabled([[maybe_unused]] bool state) {
      discord_rpc->Update();
  }
  
