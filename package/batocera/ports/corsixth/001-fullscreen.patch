@@ -1,13 +1,13 @@
 diff --git a/CorsixTH/Src/th_lua_gfx.cpp b/CorsixTH/Src/th_lua_gfx.cpp
-index 7af59ba0..7eb53a1e 100644
+index 24aaa776..269688ff 100644
 --- a/CorsixTH/Src/th_lua_gfx.cpp
 +++ b/CorsixTH/Src/th_lua_gfx.cpp
-@@ -555,7 +555,7 @@ render_target_creation_params l_surface_creation_params(lua_State* L,
-   oParams.width = static_cast<int>(luaL_checkinteger(L, iArgStart));
-   oParams.height = static_cast<int>(luaL_checkinteger(L, iArgStart + 1));
+@@ -588,7 +588,7 @@ render_target_creation_params l_surface_creation_params(lua_State* L,
+   params.width = static_cast<int>(luaL_checkinteger(L, iArgStart));
+   params.height = static_cast<int>(luaL_checkinteger(L, iArgStart + 1));
  
--  oParams.fullscreen = false;
-+  oParams.fullscreen = true;
-   oParams.present_immediate = false;
-   oParams.direct_zoom = false;
+-  params.fullscreen = false;
++  params.fullscreen = true;
+   params.present_immediate = false;
+   params.direct_zoom = false;
  

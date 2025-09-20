@@ -1,17 +1,17 @@
 diff --git a/CorsixTH/Lua/config_finder.lua b/CorsixTH/Lua/config_finder.lua
-index 0f1a687a..705bc536 100644
+index 96fca4c4..ed8ef59e 100644
 --- a/CorsixTH/Lua/config_finder.lua
 +++ b/CorsixTH/Lua/config_finder.lua
-@@ -127,7 +127,7 @@ local config_defaults = {
+@@ -129,7 +129,7 @@ local config_defaults = {
    audio_frequency = 22050,
    audio_channels = 2,
    audio_buffer_size = 2048,
 -  theme_hospital_install = [[X:\ThemeHospital\hospital]],
 +  theme_hospital_install = [[/userdata/roms/ports/themehospital]],
    debug = false,
-   DBGp_client_idehost = nil,
-   DBGp_client_ideport = nil,
-@@ -423,7 +423,7 @@ unicode_font = nil -- [[X:\ThemeHospital\font.ttc]]
+   track_fps = false,
+   zoom_speed = 80,
+@@ -433,7 +433,7 @@ unicode_font = nil -- [[X:\ThemeHospital\font.ttc]]
  -- uncomment the following line, and point it to a directory which exists and
  -- is more suitable.
  --
@@ -20,7 +20,7 @@ index 0f1a687a..705bc536 100644
  
  -------------------------------------------------------------------------------
  -- Levels and Campaigns. By default, the "Levels" and "Campaigns" directory next to
-@@ -456,7 +456,7 @@ new_graphics_folder = nil -- [[X:\ThemeHospital\Graphics]]
+@@ -466,7 +466,7 @@ new_graphics_folder = nil -- [[X:\ThemeHospital\Graphics]]
  -- uncomment the following line, and point it to a directory which exists and
  -- is more suitable.
  --
@@ -29,12 +29,12 @@ index 0f1a687a..705bc536 100644
  
  -------------------------------------------------------------------------------
  -- If you want to listen to non-Theme-Hospital music, then follow these steps:
-@@ -467,7 +467,7 @@ screenshots = nil -- [[X:\ThemeHospital\Screenshots]]
+@@ -477,7 +477,7 @@ screenshots = nil -- [[X:\ThemeHospital\Screenshots]]
  --     "names.txt" and write the file name on one row, followed by the desired
  --     ingame name on the next row.
  --
 -audio_music = nil -- [[X:\ThemeHospital\Music]]
 +audio_music = nil -- [[/userdata/music]]
  
- ------------------------------- SPECIAL SETTINGS ------------------------------
- -- These settings can only be changed here
+ -------------------------------------------------------------------------------
+ -- SoundFont: CorsixTH uses the FluidR3 SoundFont by default for playing MIDI music.
