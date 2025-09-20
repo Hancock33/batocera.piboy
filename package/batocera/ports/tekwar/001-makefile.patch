@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 82a947f..c7707c1 100644
+index 661d6ca..3113cd4 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -28,7 +28,8 @@ USE_ASM ?= 1
@@ -12,7 +12,7 @@ index 82a947f..c7707c1 100644
  
  ##
  ##
-@@ -127,8 +128,8 @@ ifeq ($(PLATFORM),DARWIN)
+@@ -126,8 +127,8 @@ ifeq ($(PLATFORM),DARWIN)
  endif
  
  ifeq ($(RENDERTYPE),SDL)
@@ -23,7 +23,7 @@ index 82a947f..c7707c1 100644
  
  	ifeq (1,$(HAVE_GTK))
  		OURCFLAGS+= $(GTKCONFIG_CFLAGS)
-@@ -154,7 +155,7 @@ endif
+@@ -153,7 +154,7 @@ endif
  
  # TARGETS
  .PHONY: clean veryclean all
@@ -32,19 +32,18 @@ index 82a947f..c7707c1 100644
  
  include Makefile.deps
  
-Submodule jfaudiolib contains modified content
 diff --git a/jfaudiolib/Makefile b/jfaudiolib/Makefile
-index a753a4e..f4550ba 100644
+index 49c8673..38433ff 100644
 --- a/jfaudiolib/Makefile
 +++ b/jfaudiolib/Makefile
 @@ -39,7 +39,7 @@ else
    LDFLAGS+= -framework Foundation
   endif
   ifneq (0,$(JFAUDIOLIB_HAVE_SDL))
--  CPPFLAGS+= -DHAVE_SDL=2 $(shell $(SDL2CONFIG) --cflags)
-+  CPPFLAGS+= -DHAVE_SDL=2 `pkg-config sdl2 --cflags`
+-  JFAUDIOLIB_CPPFLAGS+= -DHAVE_SDL=2 $(shell $(SDL2CONFIG) --cflags)
++  JFAUDIOLIB_CPPFLAGS+= -DHAVE_SDL=2 `pkg-config sdl2 --cflags`
    ifeq (1,$(JFAUDIOLIB_USE_SDLMIXER))
-    CPPFLAGS+= -DUSE_SDLMIXER
+    JFAUDIOLIB_CPPFLAGS+= -DUSE_SDLMIXER
     SOURCES+= src/driver_sdlmixer.c
 diff --git a/jfaudiolib/Makefile.shared b/jfaudiolib/Makefile.shared
 index aea6279..241491e 100644
