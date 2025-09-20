@@ -4,16 +4,16 @@
 #
 ################################################################################
 # Version: Commits on Sept 12, 2025
-WINE_CUSTOM_VERSION = wine-10.15
-WINE_CUSTOM_SOURCE = wine-$(WINE_CUSTOM_VERSION).tar.gz
+WINE_CUSTOM_VERSION = wine-10.15-125-gfc70990d579a74974c6e4f1550f892188114f5cf
 WINE_CUSTOM_SITE = $(call github,wine-mirror,wine,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_CUSTOM_SELINUX_MODULES = wine
 WINE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-custom
 HOST_WINE_CUSTOM_DEPENDENCIES = host-bison host-flex
-WINE_CUSTOM_CUSTOM_VERSION = v$(subst wine-,,$(WINE_CUSTOM_VERSION))
-HOST_WINE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_CUSTOM_CUSTOM_VERSION).tar.gz
+#WINE_CUSTOM_STAGING_VERSION = v$(subst wine-,,$(WINE_CUSTOM_VERSION))
+WINE_CUSTOM_STAGING_VERSION = v10.15-11-g64988e15df3baf59b73e383245c84b2e531049f4
+HOST_WINE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_CUSTOM_STAGING_VERSION).tar.gz
 
 ifeq ($(BR_CMAKE_USE_CLANG),y)
     HOST_WINE_CUSTOM_DEPENDENCIES += host-clang host-lld
@@ -21,8 +21,8 @@ endif
 
 define WINE_CUSTOM_STAGING
 	# Use Staging Patches
-	tar -xf $(WINE_CUSTOM_DL_DIR)/$(WINE_CUSTOM_CUSTOM_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(subst v,,$(WINE_CUSTOM_CUSTOM_VERSION))/staging/patchinstall.py --all
+	tar -xf $(WINE_CUSTOM_DL_DIR)/$(WINE_CUSTOM_STAGING_VERSION).tar.gz -C $(@D)
+	cd $(@D); ./wine-staging-$(subst v,,$(WINE_CUSTOM_STAGING_VERSION))/staging/patchinstall.py --all
 endef
 WINE_CUSTOM_PRE_PATCH_HOOKS += WINE_CUSTOM_STAGING
 HOST_WINE_CUSTOM_PRE_PATCH_HOOKS += WINE_CUSTOM_STAGING
