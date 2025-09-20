@@ -8,7 +8,9 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.166|Sept 20, 2025
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-09-20|Sept 20, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.103|Sept 20, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|a9d4dce54256b998b513cb7bde516724b4074566|Sept 20, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250920|Sept 20, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|19bbc713ed9f55610bdaae799efc62165e70951d|Sept 20, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250920|Sept 20, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|01d3626f40986f6339fdd3c2f8dabda4a08e52f1|Sept 20, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|65cfb976fa56e344711f5bf07d273b142bf51529|Sept 20, 2025
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|64f2097fce744ad58199ad6ddf35145e5c478291|Sept 20, 2025
@@ -26,9 +28,7 @@ Ports|[box64](http://github.com/ptitseb/box64)|5bfb27d3fa867c5d204d5f7e23507e36b
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|c84b93fb77d5b2f78baf364eeb865d3cb67760e3|Sept 19, 2025
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.5|Sept 19, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|e8e3898fb8ca5a24829d45329949251962c8a94f|Sept 19, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250919|Sept 19, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|3e388e5f0f6551ef86663c67b4d80e3a01bb63f9|Sept 19, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250919|Sept 19, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|664c4d6d2b34aa6da31c2b8758ba3dc9b5ed308b|Sept 19, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|664c4d6d2b34aa6da31c2b8758ba3dc9b5ed308b|Sept 19, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|96557c2ca64b82debed50dd8c5bfe48a6c850c5a|Sept 19, 2025
