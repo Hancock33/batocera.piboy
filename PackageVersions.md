@@ -84,7 +84,7 @@ Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|7de84817f84e2ddde7d4903012cafe2cca503261|Sept 21, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|7d0c9a8bf1cfbf9f8f48d9b036ec4fd3ef19478c|Jul 31, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|34302300d9102aa6e1974cef4f71aa61d86663b4|Sept 21, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|191e4c75a16aa56451f72b371b4e15717c4a7022|Sept 21, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|851dd226648c3e2706cef99a02a5cddad3e2f4b1|Sept 19, 2025
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|f362278ccd4c60991caac3b4d240d4a3f751bea2|Sept 13, 2025
@@ -229,7 +229,7 @@ Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|dfdae65c0ab5c
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 05, 2022
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|cd6004ea143435cfdb6b12e7c6779dab499f7829|Oct 21, 2024
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|4d4dcb556ed9b80ed7636f37340a1320823cea4d|Jul 04, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|46326939eb7c1528077f69db1e01147b2b5e326c|Sept 19, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|5bd890474683096814ab0555071645c3553194fd|Sept 21, 2025
 Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|841229a6a81a0461d08af6488f252dcec5266c6a|Apr 12, 2025
 Emulators|[libretro-vemulator](http://github.com/libretro/vemulator-libretro)|45d7556667549bb1c1b84d27fbffb7d2a633f5d3|Oct 21, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|e9f8ac034ddef3025f0567768f7af8219f7cfdb8|Jul 29, 2025
@@ -264,8 +264,8 @@ Emulators|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d
 Emulators|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Emulators|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|f71c4fd95f9bbf101a758a3e82832f31be00d1cf|Sept 21, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|da0337f0557fe19b19711480d7bf77b2c61977c1|Sept 20, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.166|Sept 20, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|17ae3d6d1c8af04917e8cef14606003b07311fc7|Sept 21, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.167|Sept 21, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|19b3995e6d09d9cbd4de9871ad94ea183ca53a6e|Sept 10, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|32c47d7bc069297f2b50c42cc9ad4140e9447f80|Sept 18, 2025
@@ -302,7 +302,7 @@ Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|e05b9
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2825-master|Aug 20, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|a32969a0f952e8974247f0ae104feab5df526262|Sept 21, 2025
-Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20250708|Jul 08, 2025
+Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20250917|Sept 17, 2025
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
 Firmwares|[firmware-armbian](http://github.com/armbian/firmware)|4050e02da2dce2b74c97101f7964ecfb962f5aec|Mar 19, 2025
@@ -472,7 +472,7 @@ Ports|[openjazz](http://github.com/AlisterT/openjazz)|a588027cc3706facb906a63d15
 Ports|[openjk](http://github.com/JACoders/OpenJK)|2f6abb4f6b930f19048dbc53ef00d837b4b05943|May 23, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2)|961540c6c9d9fa79c8136b48df186053fa684ced|Sept 20, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|b4bcd4a9e1edecfdc71643d476e393a885a019e5|Jun 16, 2025
-Ports|[openmohaa](http://github.com/openmoh/openmohaa)|c84b93fb77d5b2f78baf364eeb865d3cb67760e3|Sept 19, 2025
+Ports|[openmohaa](http://github.com/openmoh/openmohaa)|05e086e0157f8a30b506a140983c5ab755c4c250|Sept 21, 2025
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|dfe1050e1abaca0bae7b699d117d66324b88425b|Jun 24, 2025
 Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|20a7240238f9dcd4864e841343550b18605ac34a|Jul 28, 2024
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025
@@ -500,9 +500,9 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|2b54ed5b244c17b0a83a8a3960f
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|630a13f352876c12cf48720d957c4b9e28e7b50c|Sept 15, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|a2459ca2ab6758e8d60a021a19e2b8f03e28856d|Sept 20, 2025
-Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|0d889dfeaa3304bbc85ee65a50e6b75de06424bc|Sept 13, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|f88155081ba05986ef0bf6292eb389bf02489ab6|Sept 21, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|f88155081ba05986ef0bf6292eb389bf02489ab6|Sept 21, 2025
+Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|3e3cfa34a21b1108a7e0d0ff778afad37fbfc0a6|Sept 21, 2025
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|cda0ab8df1a2f8adfae75b36fa18dd05c3bd1f00|Sept 21, 2025
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|cda0ab8df1a2f8adfae75b36fa18dd05c3bd1f00|Sept 21, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.8|Apr 25, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|36ac9a3444b615a80089ec5a04b8c7cf89ac4f80|Aug 12, 2025
