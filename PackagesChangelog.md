@@ -13,8 +13,10 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14268|Sept 21, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|8e5ab30a2c3ec8afdf64a76736014c886588bc84|Sept 21, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|601bf257d45ad63a7e359ad40428d90ac82c30e8|Sept 21, 2025
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|9881e94ceee51bb16275e95570a55b322d3bd9ad|Sept 21, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250921|Sept 21, 2025
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|f71c4fd95f9bbf101a758a3e82832f31be00d1cf|Sept 21, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b73d76445f67744e1201176d0cde06fe6257cc2f|Sept 21, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250921|Sept 21, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2d63b9ed8a7303c09e126cc8c57beb806bb58eb1|Sept 21, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|12eb4dc53412f6b8dfd0a6676c73b8702138d950|Sept 21, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|12eb4dc53412f6b8dfd0a6676c73b8702138d950|Sept 21, 2025
@@ -33,9 +35,7 @@ Ports|[tekwar](https://github.com/jonof/jftekwar.git)|a2459ca2ab6758e8d60a021a19
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.3|Sept 20, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|5c52e66245dd934b7410cd0989b2980e4367ba79|Sept 20, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.15|Sept 20, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250920|Sept 20, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|fa14e0ab1417303455ca3b716a5ad545fb132d4a|Sept 20, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250920|Sept 20, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2e852e4398c692c80e87938bd08dd68016ae1161|Sept 20, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|a4239124d4da03ae4658610832e425febb0db134|Sept 20, 2025
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|331d2324c0ba5c0b8b6b744675897c1147e6ecba|Sept 20, 2025
