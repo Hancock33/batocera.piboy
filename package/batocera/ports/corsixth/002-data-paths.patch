@@ -1,8 +1,8 @@
 diff --git a/CorsixTH/Lua/app.lua b/CorsixTH/Lua/app.lua
-index 402abb07..d794cdf4 100644
+index 879bdc41..25112b9f 100644
 --- a/CorsixTH/Lua/app.lua
 +++ b/CorsixTH/Lua/app.lua
-@@ -1393,6 +1393,7 @@ function App:checkInstallFolder()
+@@ -1465,6 +1465,7 @@ function App:checkInstallFolder()
        if win_home_dir == user_dir then win_home_dir = nil; end
      end
      local possible_locations = {
@@ -10,7 +10,7 @@ index 402abb07..d794cdf4 100644
        user_dir,
        user_dir and (user_dir .. pathsep .. "Documents"),
        win_home_dir,
-@@ -1406,7 +1407,7 @@ function App:checkInstallFolder()
+@@ -1478,7 +1479,7 @@ function App:checkInstallFolder()
        os.getenv("ProgramFiles"),
        os.getenv("ProgramFiles(x86)"),
        [[C:]], [[D:]], [[E:]], [[F:]], [[G:]], [[H:]] }
