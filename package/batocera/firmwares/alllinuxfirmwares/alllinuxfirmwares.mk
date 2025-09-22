@@ -36,8 +36,7 @@ ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
 ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
-								$(@D)/amd \
-								$(@D)/amdgpu \
+								$(@D)/amd* \
 								$(@D)/ath10k \
 								$(@D)/ath11k \
 								$(@D)/ath12k \
@@ -46,6 +45,7 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
 								$(@D)/i915 \
 								$(@D)/intel \
 								$(@D)/iwlwifi* \
+								$(@D)/LENOVO \
 								$(@D)/nvidia \
 								$(@D)/q*.bin \
 								$(@D)/qat_* \
