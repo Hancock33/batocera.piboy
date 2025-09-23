@@ -19,7 +19,9 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|685c4fc7560efba3052c15beaaeac
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c2045b374184309dd0fb94706b0c3b8453f5d8bf|Sept 23, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|be12df22f4d8a482591948024c8597a3d82523a1|Sept 23, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.10-rc.1|Sept 23, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250923|Sept 23, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|8141b31151c2cf93efabfdae2778cf8be614694f|Sept 23, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250923|Sept 23, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|282a0178fd31fc1e8bb9737fd7f71d893f028ce2|Sept 23, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|376bef703321ae6a7589246aa420b03986910f45|Sept 23, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|dca1860a0746c022163d861190bc594708952a69|Sept 23, 2025
@@ -59,9 +61,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|36e1413f863f97c405a967042f
 Ports|[openjk](http://github.com/JACoders/OpenJK)|e934a3464b624c66649f54c32f7d86c5bd84d22a|Sept 21, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|05e086e0157f8a30b506a140983c5ab755c4c250|Sept 21, 2025
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|9881e94ceee51bb16275e95570a55b322d3bd9ad|Sept 21, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250921|Sept 21, 2025
 Emulators|[openbor7530](http://github.com/DCurrent/openbor)|f71c4fd95f9bbf101a758a3e82832f31be00d1cf|Sept 21, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250921|Sept 21, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|ffbcbf0b0b2cb95337e599d82f185a6fdafca478|Sept 21, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|5bd890474683096814ab0555071645c3553194fd|Sept 21, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.103|Sept 20, 2025
