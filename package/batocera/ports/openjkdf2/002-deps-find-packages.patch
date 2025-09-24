@@ -1,8 +1,8 @@
 diff --git a/cmake_modules/config_platform_deps.cmake b/cmake_modules/config_platform_deps.cmake
-index b3e60d94a3..2985434a3e 100644
+index 373915c3..4630f72b 100644
 --- a/cmake_modules/config_platform_deps.cmake
 +++ b/cmake_modules/config_platform_deps.cmake
-@@ -63,14 +63,32 @@ if (NOT TARGET_USE_BASICSOCKETS AND NOT TARGET_USE_GAMENETWORKINGSOCKETS)
+@@ -72,14 +72,32 @@ if (NOT TARGET_USE_BASICSOCKETS AND NOT TARGET_USE_GAMENETWORKINGSOCKETS)
      set(TARGET_USE_NOSOCKETS TRUE)
  endif()
  
@@ -40,7 +40,7 @@ index b3e60d94a3..2985434a3e 100644
  endif()
  
  if(TARGET_USE_GAMENETWORKINGSOCKETS)
-@@ -124,8 +142,15 @@ if(TARGET_USE_NOSOCKETS AND NOT TARGET_HOOKS)
+@@ -133,8 +151,15 @@ if(TARGET_USE_NOSOCKETS AND NOT TARGET_HOOKS)
      add_definitions(-DPLATFORM_NOSOCKETS)
  endif()
  
@@ -58,7 +58,7 @@ index b3e60d94a3..2985434a3e 100644
  
  if(TARGET_USE_LIBSMACKER)
      list(APPEND ENGINE_SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/external/libsmacker/smacker.c ${PROJECT_SOURCE_DIR}/src/external/libsmacker/smk_bitstream.c ${PROJECT_SOURCE_DIR}/src/external/libsmacker/smk_hufftree.c)
-@@ -135,19 +160,38 @@ if(TARGET_USE_LIBSMUSHER)
+@@ -144,19 +169,38 @@ if(TARGET_USE_LIBSMUSHER)
      list(APPEND ENGINE_SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/external/libsmusher/src/smush.c ${PROJECT_SOURCE_DIR}/src/external/libsmusher/src/codec48.c)
  endif()
  
@@ -108,7 +108,7 @@ index b3e60d94a3..2985434a3e 100644
      file(GLOB TARGET_SDL2_SRCS ${PROJECT_SOURCE_DIR}/src/Platform/SDL2/*.c)
      list(APPEND ENGINE_SOURCE_FILES ${TARGET_SDL2_SRCS})
      add_compile_definitions(SDL2_RENDER)
-@@ -246,67 +290,3 @@ if(TARGET_WIN32)
+@@ -260,71 +304,6 @@ if(TARGET_WIN32)
      endif()
  endif()
  
@@ -176,3 +176,7 @@ index b3e60d94a3..2985434a3e 100644
 -    add_dependencies(GameNetworkingSockets::GameNetworkingSockets_s GNS_HACK_ZLIB)
 -    add_dependencies(GNS_HACK_ZLIB PROTOBUF)
 -endif()
+-
+ file(GLOB EMBEDDED_RESOURCES ${PROJECT_SOURCE_DIR}/resource/ui/*)
+ if (TARGET_USE_SDL2)
+     file(GLOB SDL2_EMBEDDED_RES ${PROJECT_SOURCE_DIR}/resource/shaders/*)
