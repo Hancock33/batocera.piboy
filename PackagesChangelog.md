@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20250919-proton-slr|Sept 19, 2026
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|c5a67d10c9157c202d800c1c607415a497cc4feb|Sept 25, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|9dd2ec8bdaee9b144437309a45850d75edd6cc07|Sept 25, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|fd21774aaef60bc5b8e5aa85d5da8166e728cafa|Sept 25, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.179|Sept 25, 2025
@@ -132,7 +133,6 @@ Utils|[picade](http://github.com/pimoroni/picade-hat)|f97c2ac7211c8d9ff866b22a82
 Controllers|[xone](http://github.com/dlundqvist/xone)|29033e16226bea4458b53fffc6177b95f6907f26|Sept 08, 2025
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|5a40cd5514e63e691e39141d64267798357a1424|Sept 08, 2025
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|7e978e1ef5bf199ad9ea43e3d224cd3f19cb2077|Sept 07, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|258494709231245ca5143dd9862435997f3c0e1c|Sept 07, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d22417d8c3d109609a61406f84cd2f68e2d65662|Sept 06, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|d22417d8c3d109609a61406f84cd2f68e2d65662|Sept 06, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|13bf50cbf84e00a7d5a0f13e1beefad306d58622|Sept 06, 2025
