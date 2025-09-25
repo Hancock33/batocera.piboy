@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 24, 2025
-ETLEGACY_VERSION = 87449615af801547f057b32dd627ce6a24ef07c6
+ETLEGACY_VERSION = f4a3104c8295da09a01b35f7d3520c816749053c
 ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES

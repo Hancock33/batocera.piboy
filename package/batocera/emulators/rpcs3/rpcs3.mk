@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Sept 12, 2025
-RPCS3_VERSION = 8163c6c041ab77d40f69946285c323ed9db7ea67
+# Version: Commits on Aug 29, 2025
+RPCS3_VERSION = 359163c44298ef9baac835936fce192337ac560a
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES

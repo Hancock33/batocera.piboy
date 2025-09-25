@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 24, 2025
-SUPERMODEL_ES_VERSION = 369c9f421511f4c37234e4061bcaaab4dfc544ac
+SUPERMODEL_ES_VERSION = cf6eb69d54013bd16c423dcb5fc89e303fc3e4e3
 SUPERMODEL_ES_SITE = $(call github,DirtBagXon,model3emu-code-sinden,$(SUPERMODEL_ES_VERSION))
 SUPERMODEL_ES_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_ES_LICENSE = GPLv3
