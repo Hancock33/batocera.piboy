@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c73a26ac..cc78bd2d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -226,7 +226,7 @@ endif ()
+ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+ find_package(Boost 1.84.0 CONFIG)
+ find_package(FFmpeg 5.1.2 MODULE)
+-find_package(fmt 10.2.0 CONFIG)
++find_package(fmt 99.2.0 CONFIG)
+ find_package(glslang 15 CONFIG)
+ find_package(half 1.12.0 MODULE)
+ find_package(magic_enum 0.9.7 CONFIG)
