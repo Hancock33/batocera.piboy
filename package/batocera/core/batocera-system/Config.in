@@ -1059,7 +1059,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_CATACOMBGL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     # Jedi Knight - Dark Forces 2
-    select BR2_PACKAGE_OPENJKDF2                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    # select BR2_PACKAGE_OPENJKDF2                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # OpenJK: JediAcademy / Jedi Outcast
     select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
