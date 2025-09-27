@@ -41,7 +41,6 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
 								$(@D)/ath11k \
 								$(@D)/ath12k \
 								$(@D)/c*.bin \
-								$(@D)/cypress \
 								$(@D)/i915 \
 								$(@D)/intel \
 								$(@D)/iwlwifi* \
@@ -52,7 +51,7 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
 								$(@D)/radeon
 endif
 
-ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI)$(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
+ifeq ($(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
 endif
 
