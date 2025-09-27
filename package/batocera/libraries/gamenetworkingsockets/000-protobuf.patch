@@ -1,4 +1,4 @@
-From 18da6a3744793a8727ec9a2ebfeeabed540bc090 Mon Sep 17 00:00:00 2001
+From f938f6f887d284338e249d9de950303f8540e00d Mon Sep 17 00:00:00 2001
 From: Pavel Solodovnikov <pavel.al.solodovnikov@gmail.com>
 Date: Mon, 17 Mar 2025 12:05:46 +0300
 Subject: [PATCH] build: Fix compilation errors when building with Protobuf
@@ -12,33 +12,33 @@ For more details, see:
 
 	https://github.com/protocolbuffers/protobuf/commit/e13b8e999b3922d0633802c7f90e39af50a31d76
 
-Detect the return type of the method in compile-time and construct a
-supplementary `std::string`, from which we can obtain a proper
-null-terminated buffer and pass it to the internal assertion function,
-if needed.
+Construct a temporary `std::string` to obtain a proper null-terminated
+buffer to use in `AssertMsg*`.
+Note that the lifetime of this instance will end just after the
+`AssertMsg2()` function call returns, hence this usage is safe (see
+https://eel.is/c++draft/class.temporary#4 for more details).
 
 Fixes: ValveSoftware/GameNetworkingSockets#370
 
 Signed-off-by: Pavel Solodovnikov <pavel.al.solodovnikov@gmail.com>
 ---
- .../steamnetworkingsockets_internal.h           | 17 ++++++++++++++++-
- 1 file changed, 16 insertions(+), 1 deletion(-)
+ .../steamnetworkingsockets_internal.h                 | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
 
 diff --git a/src/steamnetworkingsockets/steamnetworkingsockets_internal.h b/src/steamnetworkingsockets/steamnetworkingsockets_internal.h
-index 50dba236..4513919b 100644
+index 50dba236..935ae3e1 100644
 --- a/src/steamnetworkingsockets/steamnetworkingsockets_internal.h
 +++ b/src/steamnetworkingsockets/steamnetworkingsockets_internal.h
-@@ -29,6 +29,9 @@
+@@ -29,6 +29,8 @@
  
  #include <tier0/memdbgon.h>
  
-+#include <type_traits>
 +#include <string>
 +
  #ifdef STEAMNETWORKINGSOCKETS_ENABLE_MEM_OVERRIDE
  	#define STEAMNETWORKINGSOCKETS_DECLARE_CLASS_OPERATOR_NEW \
  		static void* operator new( size_t s ) noexcept { return malloc( s ); } \
-@@ -667,10 +670,22 @@ extern bool BSteamNetworkingIdentityToProtobufInternal( const SteamNetworkingIde
+@@ -667,10 +669,17 @@ extern bool BSteamNetworkingIdentityToProtobufInternal( const SteamNetworkingIde
  		( (identity).GetSteamID64() ? (void)(msg).set_ ## field_legacy_steam_id( (identity).GetSteamID64() ) : (void)0 ), \
  		BSteamNetworkingIdentityToProtobufInternal( identity, (msg).mutable_ ## field_identity_string(), (msg).mutable_ ## field_identity_legacy_binary(), errMsg ) \
  	)
@@ -46,19 +46,14 @@ index 50dba236..4513919b 100644
 +// For more details, see:
 +// https://github.com/protocolbuffers/protobuf/commit/e13b8e999b3922d0633802c7f90e39af50a31d76
 +//
-+// Detect the return type of the method in compile-time and construct a supplementary
-+// `std::string`, from which we can obtain a proper null-terminated buffer and pass it
-+// to the internal assertion function, if needed.
++// Construct a temporary `std::string` to obtain a proper null-terminated buffer to use in `AssertMsg*`.
++// Note that the lifetime of this instance will end just after the `AssertMsg2()` function call returns,
++// hence this usage is safe (see https://eel.is/c++draft/class.temporary#4 for more details).
  #define SteamNetworkingIdentityToProtobuf( identity, msg, field_identity_string, field_identity_legacy_binary, field_legacy_steam_id ) \
  	{ SteamDatagramErrMsg identityToProtobufErrMsg; \
  		if ( !BSteamNetworkingIdentityToProtobuf( identity, msg, field_identity_string, field_identity_legacy_binary, field_legacy_steam_id, identityToProtobufErrMsg ) ) { \
 -			AssertMsg2( false, "Failed to serialize identity to %s message.  %s", msg.GetTypeName().c_str(), identityToProtobufErrMsg ); \
-+			if constexpr (std::is_same_v<std::string, decltype(msg.GetTypeName())>) { \
-+				AssertMsg2( false, "Failed to serialize identity to %s message.  %s", msg.GetTypeName().c_str(), identityToProtobufErrMsg ); \
-+			} else { \
-+				const std::string protobufTypeNameStr { msg.GetTypeName() }; \
-+				AssertMsg2( false, "Failed to serialize identity to %s message.  %s", protobufTypeNameStr.c_str(), identityToProtobufErrMsg ); \
-+			} \
++			AssertMsg2( false, "Failed to serialize identity to %s message.  %s", std::string(msg.GetTypeName()).c_str(), identityToProtobufErrMsg ); \
  		} \
  	}
  

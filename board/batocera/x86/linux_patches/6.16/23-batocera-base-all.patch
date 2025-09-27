@@ -286,7 +286,7 @@ index 9bef46151d53..0ee649d4808b 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 405e42114ab7..a1c2b983423f 100644
+index 3242cba0f44c..f59b10010df6 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -862,11 +862,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -3115,7 +3115,7 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 772ae73af171..1722d20034fa 100644
+index cf5c4bd49bbb..1722d20034fa 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -4662,7 +4662,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
@@ -3127,60 +3127,6 @@ index 772ae73af171..1722d20034fa 100644
  	if (amdgpu_dm_create_color_properties(adev)) {
  		dc_state_release(state->context);
  		kfree(state);
-@@ -8692,7 +8692,16 @@ static int amdgpu_dm_encoder_init(struct drm_device *dev,
- static void manage_dm_interrupts(struct amdgpu_device *adev,
- 				 struct amdgpu_crtc *acrtc,
- 				 struct dm_crtc_state *acrtc_state)
--{
-+{	/*
-+	 * We cannot be sure that the frontend index maps to the same
-+	 * backend index - some even map to more than one.
-+	 * So we have to go through the CRTC to find the right IRQ.
-+	 */
-+	int irq_type = amdgpu_display_crtc_idx_to_irq_type(
-+			adev,
-+			acrtc->crtc_id);
-+	struct drm_device *dev = adev_to_drm(adev);
-+
- 	struct drm_vblank_crtc_config config = {0};
- 	struct dc_crtc_timing *timing;
- 	int offdelay;
-@@ -8745,7 +8754,35 @@ static void manage_dm_interrupts(struct amdgpu_device *adev,
- 
- 		drm_crtc_vblank_on_config(&acrtc->base,
- 					  &config);
-+		/* Allow RX6xxx, RX7700, RX7800 GPUs to call amdgpu_irq_get.*/
-+		switch (amdgpu_ip_version(adev, DCE_HWIP, 0)) {
-+		case IP_VERSION(3, 0, 0):
-+		case IP_VERSION(3, 0, 2):
-+		case IP_VERSION(3, 0, 3):
-+		case IP_VERSION(3, 2, 0):
-+			if (amdgpu_irq_get(adev, &adev->pageflip_irq, irq_type))
-+				drm_err(dev, "DM_IRQ: Cannot get pageflip irq!\n");
-+#if defined(CONFIG_DRM_AMD_SECURE_DISPLAY)
-+			if (amdgpu_irq_get(adev, &adev->vline0_irq, irq_type))
-+				drm_err(dev, "DM_IRQ: Cannot get vline0 irq!\n");
-+#endif
-+		}
-+
- 	} else {
-+		/* Allow RX6xxx, RX7700, RX7800 GPUs to call amdgpu_irq_put.*/
-+		switch (amdgpu_ip_version(adev, DCE_HWIP, 0)) {
-+		case IP_VERSION(3, 0, 0):
-+		case IP_VERSION(3, 0, 2):
-+		case IP_VERSION(3, 0, 3):
-+		case IP_VERSION(3, 2, 0):
-+#if defined(CONFIG_DRM_AMD_SECURE_DISPLAY)
-+			if (amdgpu_irq_put(adev, &adev->vline0_irq, irq_type))
-+				drm_err(dev, "DM_IRQ: Cannot put vline0 irq!\n");
-+#endif
-+			if (amdgpu_irq_put(adev, &adev->pageflip_irq, irq_type))
-+				drm_err(dev, "DM_IRQ: Cannot put pageflip irq!\n");
-+		}
-+
- 		drm_crtc_vblank_off(&acrtc->base);
- 	}
- }
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
 index ebabfe3a512f..4d3ebcaacca1 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
@@ -3271,7 +3217,7 @@ index f417c5eb0f41..accf1f539f9e 100644
  }
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index 26b8e232f858..99f234e488c0 100644
+index 2278a123db23..a592cf07457a 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 @@ -2870,7 +2870,10 @@ int smu_get_power_limit(void *handle,
@@ -28893,10 +28839,10 @@ index 2ef3c07266b3..6da4c6d09448 100644
  int defrag_mode;
  
 diff --git a/mm/swap.c b/mm/swap.c
-index 4fc322f7111a..26137e1b74a3 100644
+index a524736323c8..038a9af02dde 100644
 --- a/mm/swap.c
 +++ b/mm/swap.c
-@@ -1091,6 +1091,10 @@ static const struct ctl_table swap_sysctl_table[] = {
+@@ -1093,6 +1093,10 @@ static const struct ctl_table swap_sysctl_table[] = {
   */
  void __init swap_setup(void)
  {
@@ -28907,7 +28853,7 @@ index 4fc322f7111a..26137e1b74a3 100644
  	unsigned long megs = totalram_pages() >> (20 - PAGE_SHIFT);
  
  	/* Use a smaller cluster for small-memory machines */
-@@ -1098,6 +1102,7 @@ void __init swap_setup(void)
+@@ -1100,6 +1104,7 @@ void __init swap_setup(void)
  		page_cluster = 2;
  	else
  		page_cluster = 3;
@@ -28977,7 +28923,7 @@ index bd5183dfd879..3a410f53a07c 100644
  
  /*
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 424412680cfc..0d58febd4819 100644
+index b7ed263e6dd7..8f3bd826ea9b 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -148,6 +148,15 @@ struct scan_control {
@@ -29282,10 +29228,10 @@ index f4157d26ec9e..542906a73a49 100644
  		release_sock(sk);
  		if (reqsk_queue_empty(&icsk->icsk_accept_queue))
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 461a9ab540af..02ae796fa17e 100644
+index 98da33e0c308..848968b9f94d 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3442,6 +3442,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3443,6 +3443,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tp->rx_opt.dsack = 0;
  	tp->rx_opt.num_sacks = 0;
  	tp->rcv_ooopack = 0;
@@ -29293,7 +29239,7 @@ index 461a9ab540af..02ae796fa17e 100644
  
  
  	/* Clean up fastopen related fields */
-@@ -4189,6 +4190,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
+@@ -4194,6 +4195,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
  		info->tcpi_options |= TCPI_OPT_ECN;
  	if (tp->ecn_flags & TCP_ECN_SEEN)
  		info->tcpi_options |= TCPI_OPT_ECN_SEEN;

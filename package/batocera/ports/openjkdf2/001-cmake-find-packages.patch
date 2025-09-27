@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 2b074c0567..576a8899b0 100644
+index 9e5e19d5..10b9351c 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -174,8 +174,23 @@ include_directories(
+@@ -176,8 +176,23 @@ include_directories(
      ${PROJECT_SOURCE_DIR}/src/external/nativefiledialog-extended
  )
  
@@ -27,7 +27,7 @@ index 2b074c0567..576a8899b0 100644
  endif()
  
  if(TARGET_USE_OPENAL AND NOT OPENAL_COMPILING_FROM_SRC)
-@@ -214,6 +229,19 @@ include(cmake_modules/precompile_globals.cmake)
+@@ -241,6 +256,19 @@ endif()
  add_library(sith_engine OBJECT ${ENGINE_SOURCE_FILES})
  plat_specific_deps()
  
@@ -47,7 +47,7 @@ index 2b074c0567..576a8899b0 100644
  if(TARGET_ANDROID)
      add_library(${BIN_NAME} SHARED ${GAME_MAIN_SOURCE_FILES})
      target_link_libraries(${BIN_NAME} PRIVATE ${SDL2_COMMON_LIBS} sith_engine)
-@@ -228,7 +256,14 @@ elseif(TARGET_HOOKS)
+@@ -255,7 +283,14 @@ elseif(TARGET_HOOKS)
      target_link_libraries(${BIN_NAME}_kvm PRIVATE  ${SDL2_COMMON_LIBS} sith_engine)
  else()
      add_executable(${BIN_NAME} ${GAME_MAIN_SOURCE_FILES})
@@ -62,4 +62,4 @@ index 2b074c0567..576a8899b0 100644
 +    endif()
  
      if(TARGET_BUILD_TESTS AND TARGET_MACOS)
-         add_executable(rle_test src/Tests/rle_test.c)
+         if(NOT EXPERIMENTAL_FIXED_POINT)

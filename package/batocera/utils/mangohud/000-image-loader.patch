@@ -163,7 +163,7 @@ index 2b6a522..3046a9c 100644
  #include "mesa/util/macros.h"
  #include "mesa/util/os_time.h"
 diff --git a/src/hud_elements.cpp b/src/hud_elements.cpp
-index 30b3f8d..e6cceb2 100644
+index 2f4cd81..789aa67 100644
 --- a/src/hud_elements.cpp
 +++ b/src/hud_elements.cpp
 @@ -27,6 +27,7 @@
@@ -271,7 +271,7 @@ index 30b3f8d..e6cceb2 100644
  void HudElements::custom_text(){
      ImguiNextColumnFirstItem();
      ImGui::PushFont(HUDElements.sw_stats->font_secondary);
-@@ -1965,6 +2042,8 @@ void HudElements::sort_elements(const std::pair<std::string, std::string>& optio
+@@ -1962,6 +2039,8 @@ void HudElements::sort_elements(const std::pair<std::string, std::string>& optio
          {"winesync", {winesync}},
          {"present_mode", {present_mode}},
          {"network", {network}},
@@ -281,10 +281,10 @@ index 30b3f8d..e6cceb2 100644
          {"fex_stats", {fex_stats}},
          {"ftrace", {ftrace}},
 diff --git a/src/hud_elements.h b/src/hud_elements.h
-index 1218102..5005332 100644
+index 25285ee..2ad3402 100644
 --- a/src/hud_elements.h
 +++ b/src/hud_elements.h
-@@ -20,9 +20,29 @@ struct Function {
+@@ -20,8 +20,27 @@ struct Function {
      std::string value;
  };
  
@@ -305,16 +305,14 @@ index 1218102..5005332 100644
 +  }
 +};
 +
-+
- struct overlay_params;
  class HudElements{
      public:
 +        struct image_infos image_infos;
 +        struct image_infos background_image_infos;
          struct swapchain_stats *sw_stats;
-         struct overlay_params *params;
+         std::shared_ptr<const overlay_params> params;
          struct exec_entry {
-@@ -97,6 +117,8 @@ class HudElements{
+@@ -96,6 +115,8 @@ class HudElements{
          static void show_fps_limit();
          static void custom_text_center();
          static void custom_text();
@@ -471,10 +469,10 @@ index 86b6662..960c2c5 100644
  void render_mpris_metadata(const overlay_params& params, mutexed_metadata& meta, uint64_t frame_timing);
  #endif
 diff --git a/src/overlay_params.cpp b/src/overlay_params.cpp
-index f6717a6..af1cb85 100644
+index 22ad0d1..27e1e8a 100644
 --- a/src/overlay_params.cpp
 +++ b/src/overlay_params.cpp
-@@ -578,6 +578,9 @@ parse_ftrace(const char *str) {
+@@ -579,6 +579,9 @@ parse_ftrace(const char *str) {
  #define parse_blacklist(s) parse_str_tokenize(s)
  #define parse_custom_text_center(s) parse_str(s)
  #define parse_custom_text(s) parse_str(s)
@@ -484,7 +482,7 @@ index f6717a6..af1cb85 100644
  #define parse_fps_value(s) parse_load_value(s)
  #define parse_fps_color(s) parse_load_color(s)
  #define parse_battery_color(s) parse_color(s)
-@@ -870,6 +873,7 @@ static void set_param_defaults(struct overlay_params *params){
+@@ -871,6 +874,7 @@ static void set_param_defaults(struct overlay_params *params){
     params->table_columns = 3;
     params->text_outline_color = 0x000000;
     params->text_outline_thickness = 1.5;
@@ -493,7 +491,7 @@ index f6717a6..af1cb85 100644
  
  static std::string verify_pci_dev(std::string pci_dev) {
 diff --git a/src/overlay_params.h b/src/overlay_params.h
-index 22dea90..bae68d5 100644
+index ed50024..6354cf4 100644
 --- a/src/overlay_params.h
 +++ b/src/overlay_params.h
 @@ -82,6 +82,9 @@ struct Tracepoint;
