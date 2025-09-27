@@ -15,9 +15,11 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|bd8fbe0f61efc9499db943bf6b6a348
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|28b97fde333561d3f28a5983f3add83286c35104|Sept 27, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14276|Sept 27, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|a6d3088f2e9367c584f588d8d440550bca7d4c90|Sept 27, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250927|Sept 27, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|1f4599161c8454d7def030a0ee7716a386ff0aa8|Sept 27, 2025
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|21f8bc494305fac47003202522249e81af95067e|Sept 27, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a9ba292d9ea34f50e371bc813630b1dbe438604d|Sept 27, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250927|Sept 27, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2b7629a034e0e63cd7f9304196682db75ca9051d|Sept 27, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|0beba423026d2391fda81a7ed40015bda6524eb1|Sept 27, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|afbedf55bb50cb5565ae948607225c9c01120b56|Sept 27, 2025
@@ -35,11 +37,9 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|d8b1a461a495184b340d
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|bb8b8aea6d69caa1b1c89c98aa0ca173f4526c1d|Sept 26, 2025
 Ports|[openjk](http://github.com/JACoders/OpenJK)|1dd147b0f2ab8b63bb7e04256c967c4561964772|Sept 26, 2025
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|084b61e037281b0d6e9f026098ece88051f1a6b4|Sept 26, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250926|Sept 26, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|14e1f0484e91fc5d2bab3b36836a7063939bb20d|Sept 26, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|bdf2fd8a940ed792f195b6bc172b7dbd9be66af5|Sept 26, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|f7566e4c8262c618c09173b93282bec6a340663c|Sept 26, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20250926|Sept 26, 2025
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|6c89e833b1aa0e0c5cd894f90a2dd09b579ffa4d|Sept 26, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|2238e216a77698c90c90afebfae8614bdddab597|Sept 26, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|bc47b57968f19d19359e7c920319e4e64f739dbe|Sept 26, 2025
