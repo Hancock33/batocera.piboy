@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 97d9eba17963..4320950a8ced 100644
+index ef026143dc1c..b7c229f5abcb 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -6373,6 +6373,8 @@ static void fill_stream_properties_from_drm_display_mode(
+@@ -6376,6 +6376,8 @@ static void fill_stream_properties_from_drm_display_mode(
  			timing_out->flags.HSYNC_POSITIVE_POLARITY = 1;
  		if (mode_in->flags & DRM_MODE_FLAG_PVSYNC)
  			timing_out->flags.VSYNC_POSITIVE_POLARITY = 1;
@@ -11,7 +11,7 @@ index 97d9eba17963..4320950a8ced 100644
  	}
  
  	if (stream->signal == SIGNAL_TYPE_HDMI_TYPE_A) {
-@@ -6978,6 +6980,8 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -6981,6 +6983,8 @@ create_stream_for_sink(struct drm_connector *connector,
  
  	if (recalculate_timing)
  		drm_mode_set_crtcinfo(&saved_mode, 0);
@@ -20,7 +20,7 @@ index 97d9eba17963..4320950a8ced 100644
  
  	/*
  	 * If scaling is enabled and refresh rate didn't change
-@@ -7670,8 +7674,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
+@@ -7673,8 +7677,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
  	 */
  	struct amdgpu_dm_connector *aconnector = to_amdgpu_dm_connector(connector);
  
@@ -30,7 +30,7 @@ index 97d9eba17963..4320950a8ced 100644
  		return result;
  
  	/*
-@@ -8404,7 +8407,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -8407,7 +8410,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->connector_id = link_index;
  	aconnector->bl_idx = -1;
  	aconnector->dc_link = link;
@@ -107,7 +107,7 @@ index 39910f73ecd0..448821f542df 100644
  			pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  }
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-index b7c2d3095b25..b9f3d1cf65c6 100644
+index 5e57bd1a08e7..427dd31eb316 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 @@ -1770,6 +1770,9 @@ void dcn20_update_dchubp_dpp(

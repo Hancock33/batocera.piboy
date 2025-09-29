@@ -153,7 +153,7 @@ index 593d9cefbbf9..65cf98416f45 100644
  void hci_uart_unregister_device(struct hci_uart *hu)
  {
 diff --git a/drivers/bluetooth/hci_uart.h b/drivers/bluetooth/hci_uart.h
-index 5ea5dd80e297..daca1a3cec8c 100644
+index cbbe79b241ce..1f094a8da992 100644
 --- a/drivers/bluetooth/hci_uart.h
 +++ b/drivers/bluetooth/hci_uart.h
 @@ -98,17 +98,7 @@ struct hci_uart {

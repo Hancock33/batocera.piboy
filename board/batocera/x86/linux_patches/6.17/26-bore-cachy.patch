@@ -1,8 +1,8 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index f8188b833350..86b5c8c2ba85 100644
+index e4ce0a76831e..fa9c48412888 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
-@@ -815,6 +815,32 @@ struct kmap_ctrl {
+@@ -813,6 +813,32 @@ struct kmap_ctrl {
  #endif
  };
  
@@ -35,7 +35,7 @@ index f8188b833350..86b5c8c2ba85 100644
  struct task_struct {
  #ifdef CONFIG_THREAD_INFO_IN_TASK
  	/*
-@@ -873,6 +899,9 @@ struct task_struct {
+@@ -871,6 +897,9 @@ struct task_struct {
  #ifdef CONFIG_SCHED_CLASS_EXT
  	struct sched_ext_entity		scx;
  #endif
@@ -91,10 +91,10 @@ index 000000000000..646291bb4706
 +
 +#endif /* _KERNEL_SCHED_BORE_H */
 diff --git a/init/Kconfig b/init/Kconfig
-index 14b467ccea51..b4653fcb07dc 100644
+index 550ec4e79823..e33040bf00fc 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -1430,6 +1430,23 @@ config CHECKPOINT_RESTORE
+@@ -1433,6 +1433,23 @@ config CHECKPOINT_RESTORE
  
  	  If unsure, say N here.
  
@@ -144,7 +144,7 @@ index e1359db5561e..31053e61972f 100644
 +	 an unnecessarily large base slice, resulting in high scheduling
 +	 latency and poor system responsiveness.
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 41d3153248a0..229a673a6d94 100644
+index 8100984e11e6..c8ac02d0203e 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -120,6 +120,10 @@
@@ -752,7 +752,7 @@ index 02e16b70a790..751df396d94b 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 226a96cd2536..0295537da1a7 100644
+index 245e721d9f7b..4f702f0b2a6a 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,10 @@
@@ -1182,7 +1182,7 @@ index 226a96cd2536..0295537da1a7 100644
  		update_protect_slice(cfs_rq, se);
  
  	return;
-@@ -8917,16 +8962,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -8912,16 +8957,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -1208,7 +1208,7 @@ index 226a96cd2536..0295537da1a7 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13174,6 +13228,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
+@@ -13169,6 +13223,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
  	WARN_ON_ONCE(p->se.sched_delayed);
  
  	attach_task_cfs_rq(p);
@@ -1233,10 +1233,10 @@ index 3c12d9f93331..abadc5ca74e2 100644
   * Allow wakeup of tasks with a shorter slice to cancel RUN_TO_PARITY for
   * current.
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 4ee277cb92b9..162cf640186b 100644
+index 6361f1b7ef52..ed45c54f120d 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2102,7 +2102,11 @@ extern int group_balance_cpu(struct sched_group *sg);
+@@ -2127,7 +2127,11 @@ extern int group_balance_cpu(struct sched_group *sg);
  extern void update_sched_domain_debugfs(void);
  extern void dirty_sched_domain_sysctl(int cpu);
  
@@ -1248,7 +1248,7 @@ index 4ee277cb92b9..162cf640186b 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2778,7 +2782,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
+@@ -2803,7 +2807,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  extern __read_mostly unsigned int sysctl_sched_nr_migrate;
  extern __read_mostly unsigned int sysctl_sched_migration_cost;
  
