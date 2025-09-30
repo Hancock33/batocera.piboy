@@ -1,3 +1,62 @@
+diff --git a/Documentation/wmi/devices/msi-wmi-platform.rst b/Documentation/wmi/devices/msi-wmi-platform.rst
+index 73197b31926a..704bfdac5203 100644
+--- a/Documentation/wmi/devices/msi-wmi-platform.rst
++++ b/Documentation/wmi/devices/msi-wmi-platform.rst
+@@ -169,6 +169,32 @@ The fan RPM readings can be calculated with the following formula:
+ 
+ If the fan speed reading is zero, then the fan RPM is zero too.
+ 
++The subfeature ``0x01`` is used to retrieve the fan speed table for the CPU fan. The output
++data contains the fan speed table and two bytes with unknown data. The fan speed table
++consists of six 8-bit entries, each containing a fan speed value in percent.
++
++The subfeature ``0x02`` is used tho retrieve the same data for the GPU fan.
++
++WMI method Set_Fan()
++--------------------
++
++The fan speed tables can be accessed using subfeature ``0x01`` (CPU fan) and subfeature ``0x02``
++(GPU fan). The input data has the same format as the output data of the ``Get_Fan`` WMI method.
++
++WMI method Get_AP()
++-------------------
++
++The current fan mode can be accessed using subfeature ``0x01``. The output data contains a flag
++byte and two bytes of unknown data. If the 7th bit inside the flag byte is cleared then all fans
++are operating in automatic mode, otherwise the fans operate based on the fan speed tables
++accessible thru the ``Get_Fan``/``Set_Fan`` WMI methods.
++
++WMI method Set_AP()
++-------------------
++
++The current fan mode can be changed using subfeature ``0x01``. The input data has the same format
++as the output data of the ``Get_AP`` WMI method.
++
+ WMI method Get_WMI()
+ --------------------
+ 
+diff --git a/MAINTAINERS b/MAINTAINERS
+index 97d958c945e4..d2f696b9f6fc 100644
+--- a/MAINTAINERS
++++ b/MAINTAINERS
+@@ -13893,6 +13893,17 @@ L:	platform-driver-x86@vger.kernel.org
+ S:	Maintained
+ F:	drivers/platform/x86/lenovo/wmi-hotkey-utilities.c
+ 
++LENOVO LEGION GO S HID
++M:	Derek J. Clark <derekjohn.clark@gmail.com>
++L:	linux-input@vger.kernel.org
++S:	Maintained
++F:	drivers/hid/lenovo-legos-hid/Kconfig
++F:	drivers/hid/lenovo-legos-hid/Makefile
++F:	drivers/hid/lenovo-legos-hid/lenovo-legos-hid-config.c
++F:	drivers/hid/lenovo-legos-hid/lenovo-legos-hid-config.h
++F:	drivers/hid/lenovo-legos-hid/lenovo-legos-hid-core.c
++F:	drivers/hid/lenovo-legos-hid/lenovo-legos-hid-core.h
++
+ LETSKETCH HID TABLET DRIVER
+ M:	Hans de Goede <hansg@kernel.org>
+ L:	linux-input@vger.kernel.org
 diff --git a/drivers/bus/mhi/host/boot.c b/drivers/bus/mhi/host/boot.c
 index 205d83ac069f..b3a85aa3c476 100644
 --- a/drivers/bus/mhi/host/boot.c
@@ -8341,6 +8400,51 @@ index 08f44baf182a..3af524ccf4a5 100644
  }
  
  void ath12k_mhi_suspend(struct ath12k_pci *ab_pci)
+diff --git a/drivers/platform/x86/Kconfig b/drivers/platform/x86/Kconfig
+index fc45a7c8c201..866f6c0a1233 100644
+--- a/drivers/platform/x86/Kconfig
++++ b/drivers/platform/x86/Kconfig
+@@ -555,8 +555,11 @@ config MSI_WMI
+ 
+ config MSI_WMI_PLATFORM
+ 	tristate "MSI WMI Platform features"
++	depends on ACPI_BATTERY
+ 	depends on ACPI_WMI
+ 	depends on HWMON
++	select ACPI_PLATFORM_PROFILE
++	select FW_ATTR_CLASS
+ 	help
+ 	  Say Y here if you want to have support for WMI-based platform features
+ 	  like fan sensor access on MSI machines.
+@@ -1047,6 +1050,16 @@ config OXP_EC
+ 
+ source "drivers/platform/x86/tuxedo/Kconfig"
+ 
++config ZOTAC_ZONE_PLATFORM
++	tristate "Zotac Zone platform driver"
++	select FW_ATTR_CLASS
++	select ACPI_PLATFORM_PROFILE
++	help
++	  Support for fans and PPT on Zotac Zone devices.
++
++	  To compile this driver as a module, choose M here: the module
++	  will be called zotac-zone.
++
+ endif # X86_PLATFORM_DEVICES
+ 
+ config P2SB
+diff --git a/drivers/platform/x86/Makefile b/drivers/platform/x86/Makefile
+index 4279f5443f30..027444c7409d 100644
+--- a/drivers/platform/x86/Makefile
++++ b/drivers/platform/x86/Makefile
+@@ -161,5 +161,7 @@ obj-$(CONFIG_WINMATE_FM07_KEYS)		+= winmate-fm07-keys.o
+ # SEL
+ obj-$(CONFIG_SEL3350_PLATFORM)		+= sel3350-platform.o
+ 
++obj-$(CONFIG_ZOTAC_ZONE_PLATFORM)	+= zotac-zone-platform.o
++
+ # OneXPlayer
+ obj-$(CONFIG_OXP_EC)			+= oxpec.o
 diff --git a/drivers/platform/x86/msi-wmi-platform.c b/drivers/platform/x86/msi-wmi-platform.c
 index dc5e9878cb68..b00b2b52e0f2 100644
 --- a/drivers/platform/x86/msi-wmi-platform.c
