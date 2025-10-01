@@ -3,8 +3,8 @@
 # EDEN
 #
 ################################################################################
-# Version: Commits on Sept 28, 2025
-EDEN_VERSION = d19a7c3782d8402a5c3d8c730fb2ef080da7a8b5
+# Version: Commits on Oct 01, 2025
+EDEN_VERSION = 4be6d30cd95634777e0ea0790d7c51a3d09bb773
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD=git
 EDEN_GIT_SUBMODULES=YES
