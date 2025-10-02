@@ -19,6 +19,9 @@ Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.24|Oct 02, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|c4c9f1b8cdc3d45a3f17b97556f43cb2133605d7|Oct 02, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|22dae6896c00e5f1bec19c886b01e28de2b26c1a|Oct 02, 2025
 Ports|[raptorcots](http://github.com/skynettx/raptor)|86fc2688e9dd488f3a809781529720c43d6f498b|Oct 02, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsynch7-10.15.r323|Oct 02, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251002|Oct 02, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251002|Oct 02, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|22db4535c45e013cdf496d20a851269a52926583|Oct 02, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|f654947f5af0415046d258ba880e6781435a2c9c|Oct 02, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|f654947f5af0415046d258ba880e6781435a2c9c|Oct 02, 2025
@@ -32,9 +35,7 @@ Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|9f61b87db715fe9729305
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|43804304a5320d90dc4e3ce273c196331fc97be6|Oct 01, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|4e833f2626f8ba2514f8f4748b0fcba717e6e567|Oct 01, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|afdfa82bec6cb2448a9ddd21112b44ce94961989|Oct 01, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251001|Oct 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|5ace54acc403b75c7bed0757c9dfb287cd08a4c0|Oct 01, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251001|Oct 01, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|be9382f6e1f5fe2632db85ce102434c34b9b576a|Oct 01, 2025
 Emulators|[libretro-citra](https://github.com/warmenhoven/azahar.git)|d6f50f7e03901bf2e6958b42d4737f8137abaae8|Oct 01, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|51a90ea44632ccd17d74653b7f18197d84b31888|Oct 01, 2025
@@ -127,7 +128,6 @@ Emulators|[openbor7530](http://github.com/DCurrent/openbor)|f71c4fd95f9bbf101a75
 Kodi|[kodi_resource_language_fr_fr](http://mirrors.kodi.tv/addons/piers/resource.language.fr_fr)|11.0.97|Sept 20, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|961540c6c9d9fa79c8136b48df186053fa684ced|Sept 20, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.3|Sept 20, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.15|Sept 20, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|fa14e0ab1417303455ca3b716a5ad545fb132d4a|Sept 20, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|5b3fa18afd78ca5577c006e9073b9c28ad0e3eea|Sept 19, 2025
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.5|Sept 19, 2025
