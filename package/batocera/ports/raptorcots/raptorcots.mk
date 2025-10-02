@@ -3,8 +3,8 @@
 # raptorcots
 #
 ################################################################################
-# Version: Commits on May 29, 2025
-RAPTORCOTS_VERSION = 63b3beb6d70c2ef943f1359cfc2d07616f3471d0
+# Version: Commits on Oct 02, 2025
+RAPTORCOTS_VERSION = 86fc2688e9dd488f3a809781529720c43d6f498b
 RAPTORCOTS_SITE = $(call github,skynettx,raptor,$(RAPTORCOTS_VERSION))
 
 RAPTORCOTS_DEPENDENCIES = sdl2 openal

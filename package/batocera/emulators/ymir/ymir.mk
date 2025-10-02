@@ -15,8 +15,8 @@
 # ymir
 #
 ################################################################################
-# Version: Commits on Oct 01, 2025
-YMIR_VERSION = 6599af08e5a9f42dc54d496667c9a763f06e8a47
+# Version: Commits on Oct 02, 2025
+YMIR_VERSION = 29f3b95e8b74f42d158ef2eb5df6c5b6fa43a350
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD=git
 YMIR_GIT_SUBMODULES=YES
