@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 03, 2025
-CLK_VERSION = d0d8c2316b4217db0bbcc8eb75cd28567c009913
+CLK_VERSION = 7229acb34f29b041b858829f5e1d107ef34fc976
 CLK_SITE = https://github.com/TomHarte/CLK
 CLK_LICENSE = MIT
 CLK_DEPENDENCIES = sdl2 libgl
