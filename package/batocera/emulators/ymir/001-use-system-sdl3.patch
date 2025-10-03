@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 90d32811f2..2f91d074d0 100644
+index ebbb1a75..06c53569 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -87,6 +87,9 @@ else ()
+@@ -94,6 +94,9 @@ else ()
      message(STATUS "IPO / LTO not supported: ${IPO_ERROR}")
  endif ()
  
@@ -13,7 +13,7 @@ index 90d32811f2..2f91d074d0 100644
  add_subdirectory(vendor)
  
 diff --git a/vendor/CMakeLists.txt b/vendor/CMakeLists.txt
-index 5893b1e167..13f12d65bf 100644
+index 5893b1e1..13f12d65 100644
 --- a/vendor/CMakeLists.txt
 +++ b/vendor/CMakeLists.txt
 @@ -35,19 +35,19 @@ message(STATUS "==> mio")
