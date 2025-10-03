@@ -40,6 +40,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|43804304a5320d90dc4e3ce273
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|4e833f2626f8ba2514f8f4748b0fcba717e6e567|Oct 01, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|afdfa82bec6cb2448a9ddd21112b44ce94961989|Oct 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|5ace54acc403b75c7bed0757c9dfb287cd08a4c0|Oct 01, 2025
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|a1ff2dbc7e50828def8098c5ebf0fee10b714f85|Oct 01, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|be9382f6e1f5fe2632db85ce102434c34b9b576a|Oct 01, 2025
 Emulators|[libretro-citra](https://github.com/warmenhoven/azahar.git)|d6f50f7e03901bf2e6958b42d4737f8137abaae8|Oct 01, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|cc9d2d31e7e5ed71b4e6a34234cac2fff7774baf|Oct 01, 2025
@@ -96,6 +97,7 @@ Ports|[openjk](http://github.com/JACoders/OpenJK)|1dd147b0f2ab8b63bb7e04256c967c
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|084b61e037281b0d6e9f026098ece88051f1a6b4|Sept 26, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|14e1f0484e91fc5d2bab3b36836a7063939bb20d|Sept 26, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|bdf2fd8a940ed792f195b6bc172b7dbd9be66af5|Sept 26, 2025
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|4322db5906e67b57ec9c327e6afe3d98ed893df7|Sept 26, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|f7566e4c8262c618c09173b93282bec6a340663c|Sept 26, 2025
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|6c89e833b1aa0e0c5cd894f90a2dd09b579ffa4d|Sept 26, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|2238e216a77698c90c90afebfae8614bdddab597|Sept 26, 2025
@@ -116,6 +118,7 @@ Ports|[stk](http://github.com/supertuxkart/stk-code)|1a8aeeddca37b32fcef2d2847f3
 Utils|[rclone](http://github.com/rclone/rclone)|v1.71.1|Sept 24, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.10|Sept 24, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|5a543dbc7bcb2465f3fb77bcfb28c0fc21d508b5|Sept 24, 2025
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|7affe74d77f93a622bb5002789d5332d32e512ee|Sept 24, 2025
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|4b443225eae919c31dc99e47c4ef217a75bb1927|Sept 23, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|4e5905f9fdd5fe504b659fafe8e694b07aea6801|Sept 23, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c2045b374184309dd0fb94706b0c3b8453f5d8bf|Sept 23, 2025
@@ -237,16 +240,13 @@ Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genes
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.6.4|Jul 13, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|38cdc63823fe185ae69be353c92b63bbc505cb77|Jul 12, 2025
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.321.0|Jul 11, 2025
 Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|44324a3cf678462eb8d87279ac82fd7bed16f295|Jul 08, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|86152bb83728c82bd4f44d5382d8027b1578e1ed|Jul 07, 2025
 Libraries|[iir](http://github.com/berndporr/iir1)|1.10.0|Jul 06, 2025
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|a16acb03e7be191d47ebfbc8ca1d5223422dac3e|Jul 04, 2025
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.321.0|Jul 04, 2025
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|4d4dcb556ed9b80ed7636f37340a1320823cea4d|Jul 04, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|dc0c9e368b07f1a83ef41c32a625a0efbccd591a|Jul 03, 2025
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|6f9e40eaf742e8ca985b069fc0db9b0c885dacec|Jul 03, 2025
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.321.0|Jul 01, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.3|Jun 30, 2025
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|ccba5265f60f8e64a1984c9d14d383606193ea6a|Jun 30, 2025
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|dfe1050e1abaca0bae7b699d117d66324b88425b|Jun 24, 2025

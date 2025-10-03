@@ -36,14 +36,9 @@ sdl3_image.mk
 sdl3_ttf.mk
 sdl3.mk
 shaderc.mk
-spirv-cross.mk
-spirv-headers.mk
 spirv-llvm-translator.mk
 uthash.mk
 vice.mk
-vulkan-headers.mk
-vulkan-utility-libraries.mk
-vulkan-validationlayers.mk
 warehouse.mk
 wine-custom.mk
 wine-mono.mk
