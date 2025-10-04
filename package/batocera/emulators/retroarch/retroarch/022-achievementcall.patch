@@ -17,10 +17,10 @@ index 7b19526b10..8a3dca17e7 100644
     /* Play the unlock sound */
     if (settings->bools.cheevos_unlock_sound_enable)
 diff --git a/configuration.c b/configuration.c
-index 6848e41fee..2d79f125ec 100644
+index fa950dc7d0..b999ddfda7 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -1590,6 +1590,7 @@ static struct config_array_setting *populate_settings_array(
+@@ -1593,6 +1593,7 @@ static struct config_array_setting *populate_settings_array(
  
  #ifdef HAVE_CHEEVOS
     SETTING_ARRAY("cheevos_custom_host",          settings->arrays.cheevos_custom_host, false, NULL, true);
@@ -29,10 +29,10 @@ index 6848e41fee..2d79f125ec 100644
     SETTING_ARRAY("cheevos_password",             settings->arrays.cheevos_password, false, NULL, true);
     SETTING_ARRAY("cheevos_token",                settings->arrays.cheevos_token, false, NULL, true);
 diff --git a/configuration.h b/configuration.h
-index 8c1a7460a4..60f2e9d928 100644
+index 120d3cc057..a38fc9523a 100644
 --- a/configuration.h
 +++ b/configuration.h
-@@ -484,6 +484,7 @@ typedef struct settings
+@@ -487,6 +487,7 @@ typedef struct settings
        char cheevos_unlock_sound[128];
        char cheevos_token[32];
        char cheevos_leaderboards_enable[32];

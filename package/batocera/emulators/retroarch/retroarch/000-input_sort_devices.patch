@@ -1,8 +1,8 @@
 diff --git a/input/drivers_joypad/udev_joypad.c b/input/drivers_joypad/udev_joypad.c
-index 52fff04a3a..38d052b254 100644
+index ee1d474344..7e80e16cd0 100644
 --- a/input/drivers_joypad/udev_joypad.c
 +++ b/input/drivers_joypad/udev_joypad.c
-@@ -583,6 +583,60 @@ static void udev_joypad_poll(void)
+@@ -593,6 +593,60 @@ static void udev_joypad_poll(void)
     }
  }
  
@@ -63,7 +63,7 @@ index 52fff04a3a..38d052b254 100644
  static void *udev_joypad_init(void *data)
  {
     int i;
-@@ -614,11 +668,31 @@ static void *udev_joypad_init(void *data)
+@@ -624,11 +678,31 @@ static void *udev_joypad_init(void *data)
     if (!(devs = udev_enumerate_get_list_entry(enumerate)))
        RARCH_DBG("[udev] Couldn't open any joypads. Are permissions set correctly for /dev/input/event* and /run/udev/?\n");
  

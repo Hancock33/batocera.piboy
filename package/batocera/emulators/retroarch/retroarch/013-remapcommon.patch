@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 55975bf7ef..9f57fecb99 100644
+index 666101dca9..9e8919282d 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -4854,6 +4854,7 @@ bool config_load_remap(const char *directory_input_remapping,
+@@ -4863,6 +4863,7 @@ bool config_load_remap(const char *directory_input_remapping,
  {
     /* final path for core-specific configuration (prefix+suffix) */
     char core_path[PATH_MAX_LENGTH];
@@ -10,7 +10,7 @@ index 55975bf7ef..9f57fecb99 100644
     /* final path for game-specific configuration (prefix+suffix) */
     char game_path[PATH_MAX_LENGTH];
     /* final path for content-dir-specific configuration (prefix+suffix) */
-@@ -4878,6 +4879,7 @@ bool config_load_remap(const char *directory_input_remapping,
+@@ -4887,6 +4888,7 @@ bool config_load_remap(const char *directory_input_remapping,
        return false;
  
     game_path[0]        = '\0';
@@ -18,7 +18,7 @@ index 55975bf7ef..9f57fecb99 100644
     content_path[0]     = '\0';
  
     if (   sort_remaps_by_controller
-@@ -4957,6 +4959,12 @@ bool config_load_remap(const char *directory_input_remapping,
+@@ -4966,6 +4968,12 @@ bool config_load_remap(const char *directory_input_remapping,
           FILE_PATH_REMAP_EXTENSION,
           sizeof(core_path));
  
@@ -31,7 +31,7 @@ index 55975bf7ef..9f57fecb99 100644
     /* If a core remap file exists, load it. */
     if ((new_conf = config_file_new_from_path_to_string(core_path)))
     {
-@@ -4972,6 +4980,19 @@ bool config_load_remap(const char *directory_input_remapping,
+@@ -4981,6 +4989,19 @@ bool config_load_remap(const char *directory_input_remapping,
        }
     }
  
