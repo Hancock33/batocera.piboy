@@ -6,7 +6,9 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|48bf30aa2d82e18933ddac2464
 Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-10-05|Oct 05, 2025
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|ad015ca782d41344f928113a7137313e16f9765c|Oct 05, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|c9dbfd138fc041c6b433c6e53336f9b35d557d3a|Oct 05, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251005|Oct 05, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ff5fd9d5278afe4ce96402f75d8d538e7be94cfa|Oct 05, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251005|Oct 05, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|e37c293a8255b88fdf971d6ce5836a7078027d91|Oct 05, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|1834bd6076afea285d7dd8b9d2857661bee3e944|Oct 05, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|047550cc6c0b7fd161a5a3352972c512e11d67e3|Oct 04, 2025
@@ -32,8 +34,6 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|0ec9311fbede8d0
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14291|Oct 04, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|a07e6428200fccd0045f0a5aabd5f543c111253a|Oct 04, 2025
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|12e7987dfd7d0bab974317cc18183068a1637834|Oct 04, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251004|Oct 04, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251004|Oct 04, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|f0f78ac8eee5966f498d54936e22467320427bd4|Oct 04, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|f0f78ac8eee5966f498d54936e22467320427bd4|Oct 04, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|7591c16337b217006c524727df76670a85efad0f|Oct 04, 2025
