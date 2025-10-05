@@ -1,6 +1,5 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20250919-proton-slr|Sept 19, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|f7eb91462d7f2e8d5aff35bcf9852f51015584c7|Oct 05, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|1b7e42920bb6d61f8921b99b4460ad556c964f36|Oct 05, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|f6d99e5032e8aeb55833c0b8edce01dc12297269|Oct 05, 2025
@@ -138,6 +137,7 @@ Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2
 Ports|[box86](http://github.com/ptitseb/box86)|fa14e0ab1417303455ca3b716a5ad545fb132d4a|Sept 20, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|5b3fa18afd78ca5577c006e9073b9c28ad0e3eea|Sept 19, 2025
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.5|Sept 19, 2025
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20250919-proton-slr|Sept 19, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|0092232a0aaef0ded0ead1c2003ccf7a85ccdfc0|Sept 18, 2025
 Emulators|[libretro-watara](http://github.com/libretro/potator)|ad87bc6068ef126e48339b440465fb0bf5a2794f|Sept 18, 2025
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20250917|Sept 17, 2025
