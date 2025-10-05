@@ -524,7 +524,7 @@ Utils|[cabextract](http://github.com/kyz/libmspack)|v1.11|Feb 24, 2023
 Utils|[clevis](http://github.com/latchset/clevis)|2ad7027b7182b8f46404f8ec0735a83738f7ca7f|Jul 25, 2025
 Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d6b108b75d|Jul 09, 2015
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|2b1bcd046829db69617f2a47d8d554f20cd0ec08|Oct 05, 2025
-Utils|[fake-hwclock](https://git.einval.com/git/fake-hwclock.git)|00a0feb706bfc11e1e0dbaa887c603b8f9875c78|N/A
+Utils|[fake-hwclock](https://git.einval.com/git/fake-hwclock.git)|00a0feb706bfc11e1e0dbaa887c603b8f9875c78|Jul 14, 2024
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.4.0|Mar 30, 2025
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.16.1|May 11, 2025
 Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.1|Jun 14, 2023
