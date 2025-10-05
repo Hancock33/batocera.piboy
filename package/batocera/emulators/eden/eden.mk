@@ -3,8 +3,8 @@
 # EDEN
 #
 ################################################################################
-# Version: Commits on Sept 28, 2025
-EDEN_VERSION = d19a7c3782d8402a5c3d8c730fb2ef080da7a8b5
+# Version: Commits on Oct 05, 2025
+EDEN_VERSION = f6d99e5032e8aeb55833c0b8edce01dc12297269
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD=git
 EDEN_GIT_SUBMODULES=YES
@@ -30,6 +30,7 @@ EDEN_CONF_OPTS += -DYUZU_TESTS=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_BUNDLED_FFMPEG=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_CPM=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_EXTERNAL_SDL2=OFF
+EDEN_CONF_OPTS += -DYUZU_USE_FASTER_LD=ON
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
     EDEN_DEPENDENCIES += host-glslang vulkan-headers vulkan-loader vulkan-validationlayers

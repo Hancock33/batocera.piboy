@@ -286,7 +286,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 77cc1b997975..3b9b9ddbaa58 100644
+index 35f4dda5e542..aee657634686 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -3116,10 +3116,10 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index dca3616cef6f..4d20dce39332 100644
+index 6675119b987e..a3d003168b17 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4665,7 +4665,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4668,7 +4668,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -3129,7 +3129,7 @@ index dca3616cef6f..4d20dce39332 100644
  		dc_state_release(state->context);
  		kfree(state);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
-index ebabfe3a512f..4d3ebcaacca1 100644
+index c0dfe2d8b3be..f057a8d335ec 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_color.c
 @@ -97,7 +97,7 @@ static inline struct fixed31_32 amdgpu_dm_fixpt_from_s3132(__u64 x)
@@ -3173,7 +3173,7 @@ index 45feb404b097..ee8672919a05 100644
  #endif
  	return 0;
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
-index eef51652ca35..d5c932c191b2 100644
+index 3d2f8eedeef2..6664c569a7eb 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
 @@ -1601,7 +1601,7 @@ static void amdgpu_dm_plane_drm_plane_destroy_state(struct drm_plane *plane,
@@ -3286,10 +3286,10 @@ index ecc73d52bfae..85dbdaa4a2e2 100644
  					ret = plane_funcs->atomic_async_check(plane, state, true);
  
 diff --git a/drivers/gpu/drm/i915/display/intel_ddi.c b/drivers/gpu/drm/i915/display/intel_ddi.c
-index 0405396c7750..b3c172158417 100644
+index 9ecbb4b99c37..872356315e9e 100644
 --- a/drivers/gpu/drm/i915/display/intel_ddi.c
 +++ b/drivers/gpu/drm/i915/display/intel_ddi.c
-@@ -4865,6 +4865,9 @@ static bool intel_ddi_a_force_4_lanes(struct intel_digital_port *dig_port)
+@@ -4866,6 +4866,9 @@ static bool intel_ddi_a_force_4_lanes(struct intel_digital_port *dig_port)
  	if (dig_port->ddi_a_4_lanes)
  		return false;
  
@@ -3381,7 +3381,7 @@ index 68e45a26e85f..7580172daade 100644
  	}
  
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index 79997553d8f9..060f022d2139 100644
+index b934523593d9..7e6c7591bd6f 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
 @@ -129,7 +129,7 @@ config HID_APPLE
@@ -3409,7 +3409,7 @@ index 79997553d8f9..060f022d2139 100644
  config HID_AUREAL
  	tristate "Aureal"
  	help
-@@ -717,11 +726,13 @@ config LOGIWHEELS_FF
+@@ -715,11 +724,13 @@ config LOGIWHEELS_FF
  
  config HID_MAGICMOUSE
  	tristate "Apple Magic Mouse/Trackpad multi-touch support"
@@ -3424,7 +3424,7 @@ index 79997553d8f9..060f022d2139 100644
  
  config HID_MALTRON
  	tristate "Maltron L90 keyboard"
-@@ -1436,4 +1447,8 @@ endif # HID
+@@ -1434,4 +1445,8 @@ endif # HID
  
  source "drivers/hid/usbhid/Kconfig"
  
@@ -7408,7 +7408,7 @@ index 000000000000..c83817589082
 +		.attrs = _fname##_turbo_attrs,                                    \
 +	}
 diff --git a/drivers/hid/hid-asus.c b/drivers/hid/hid-asus.c
-index d27dcfb2b9e4..188eff9d3573 100644
+index 8db9d4e7c3b0..894586f6a8eb 100644
 --- a/drivers/hid/hid-asus.c
 +++ b/drivers/hid/hid-asus.c
 @@ -23,6 +23,7 @@
@@ -7467,7 +7467,7 @@ index d27dcfb2b9e4..188eff9d3573 100644
  
  	} else {
  		/* Initialize keyboard */
-@@ -1122,8 +1125,10 @@ static int __maybe_unused asus_reset_resume(struct hid_device *hdev)
+@@ -1125,8 +1128,10 @@ static int __maybe_unused asus_reset_resume(struct hid_device *hdev)
  
  static int asus_probe(struct hid_device *hdev, const struct hid_device_id *id)
  {
@@ -7479,7 +7479,7 @@ index d27dcfb2b9e4..188eff9d3573 100644
  
  	drvdata = devm_kzalloc(&hdev->dev, sizeof(*drvdata), GFP_KERNEL);
  	if (drvdata == NULL) {
-@@ -1135,6 +1140,18 @@ static int asus_probe(struct hid_device *hdev, const struct hid_device_id *id)
+@@ -1138,6 +1143,18 @@ static int asus_probe(struct hid_device *hdev, const struct hid_device_id *id)
  
  	drvdata->quirks = id->driver_data;
  
@@ -27776,10 +27776,10 @@ index bdac8c42fa82..362644a272ba 100644
  /*
   * Sender's congestion state indicating normal or abnormal situations
 diff --git a/init/Kconfig b/init/Kconfig
-index e3eb63eadc87..14b467ccea51 100644
+index ecddb94db8dc..550ec4e79823 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -174,6 +174,10 @@ config THREAD_INFO_IN_TASK
+@@ -177,6 +177,10 @@ config THREAD_INFO_IN_TASK
  
  menu "General setup"
  
@@ -27790,7 +27790,7 @@ index e3eb63eadc87..14b467ccea51 100644
  config BROKEN
  	bool
  	help
-@@ -1378,6 +1382,22 @@ config USER_NS
+@@ -1381,6 +1385,22 @@ config USER_NS
  
  	  If unsure, say N.
  
@@ -27813,7 +27813,7 @@ index e3eb63eadc87..14b467ccea51 100644
  config PID_NS
  	bool "PID Namespaces"
  	default y
-@@ -1527,6 +1547,12 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
+@@ -1530,6 +1550,12 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
  	  with the "-O2" compiler flag for best performance and most
  	  helpful compile-time warnings.
  
@@ -27882,7 +27882,7 @@ index 54ea59ff8fbe..18f87e0dd137 100644
  	help
  	  This option turns the kernel into a real-time kernel by replacing
 diff --git a/kernel/fork.c b/kernel/fork.c
-index c4ada32598bd..41d3153248a0 100644
+index 6ca8689a83b5..8100984e11e6 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -107,6 +107,10 @@
@@ -27943,7 +27943,7 @@ index 24df4d98f7d2..1d5923996fa5 100644
  
  	return state;
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index b173a059315c..226a96cd2536 100644
+index 8ce56a8d507f..245e721d9f7b 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -76,10 +76,19 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
@@ -27980,10 +27980,10 @@ index b173a059315c..226a96cd2536 100644
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index be9745d104f7..4ee277cb92b9 100644
+index cf2109b67f9a..6361f1b7ef52 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2769,7 +2769,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
+@@ -2794,7 +2794,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
  
  extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  

@@ -1,13 +1,13 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 673aab9e6e..639f2ab826 100644
+index f436c0a183..c60172b34d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -495,7 +495,7 @@ else()
+@@ -507,7 +507,7 @@ else()
  
      # wow
      if (PLATFORM_LINUX)
--        find_package(Boost 1.57.0 REQUIRED headers context system fiber)
-+        find_package(Boost 1.57.0 REQUIRED headers context fiber)
+-        find_package(Boost 1.57.0 CONFIG REQUIRED headers context system fiber)
++        find_package(Boost 1.57.0 CONFIG REQUIRED headers context fiber)
      else()
-         find_package(Boost 1.57.0 REQUIRED)
+         find_package(Boost 1.57.0 CONFIG REQUIRED)
      endif()

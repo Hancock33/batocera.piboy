@@ -80,10 +80,10 @@ index c553d34d67..b6ba8630fc 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index d56fff55cc..8b80f2a229 100644
+index 8463bc0201..805e91db90 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -6490,7 +6490,7 @@ static void retroarch_print_help(const char *arg0)
+@@ -6510,7 +6510,7 @@ static void retroarch_print_help(const char *arg0)
           "                                 "
           "  $XDG_CONFIG_HOME/retroarch/retroarch.cfg,\n"
           "                                 "

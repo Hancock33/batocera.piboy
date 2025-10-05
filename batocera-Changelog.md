@@ -1,4 +1,4 @@
-# 2025/09/xx - Batocera.linux 42 - Papilio Ulysses
+# 2025/10/xx - Batocera.linux 42 - Papilio Ulysses
 ### Special Notes
 - Quake 1 & 2 ROMs need moving from tyrquake to quake & vitaquake2 to quake2 folders respectively
   See the _info.txt file for directory layouts & ES file launcher naming conventions.
@@ -143,7 +143,7 @@
 - libretro-Wasm4 to v2.7.1
 - melonDS to 17th Jan build
 - OpenMSX to release 20.0
-- PCSX2 to v2.3.420
+- PCSX2 to v2.4.0
 - Play! to 4th Feb build
 - PPSSPP to v1.19.3
 - Play! to 0.70

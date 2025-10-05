@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Sept 20, 2025
-WINE_CUSTOM_VERSION = ntsync7-10.15
+# Version: Commits on Oct 03, 2025
+WINE_CUSTOM_VERSION = ntsync-10.16
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE

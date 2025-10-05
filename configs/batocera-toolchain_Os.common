@@ -18,6 +18,9 @@ BR2_STRIP_EXCLUDE_FILES="abuse dmdserver ecwolf greenlight Ryujinx Vita3K vpinba
 # Allow to build GOLD linker, but do not use as default
 BR2_BINUTILS_EXTRA_CONFIG_OPTIONS="--enable-gold --enable-plugins"
 
+# Skip stack protection
+BR2_SSP_NONE=y
+
 # prefer linux tools over busybox tools
 BR2_PACKAGE_BUSYBOX=n
 BR2_PACKAGE_ZLIB_NG=y

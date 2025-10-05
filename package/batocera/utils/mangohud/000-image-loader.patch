@@ -281,7 +281,7 @@ index 2f4cd81..789aa67 100644
          {"fex_stats", {fex_stats}},
          {"ftrace", {ftrace}},
 diff --git a/src/hud_elements.h b/src/hud_elements.h
-index 25285ee..2ad3402 100644
+index 7efc601..a38a8a9 100644
 --- a/src/hud_elements.h
 +++ b/src/hud_elements.h
 @@ -20,8 +20,27 @@ struct Function {
@@ -310,7 +310,7 @@ index 25285ee..2ad3402 100644
 +        struct image_infos image_infos;
 +        struct image_infos background_image_infos;
          struct swapchain_stats *sw_stats;
-         std::shared_ptr<const overlay_params> params;
+         std::shared_ptr<overlay_params> params;
          struct exec_entry {
 @@ -96,6 +115,8 @@ class HudElements{
          static void show_fps_limit();
@@ -457,10 +457,10 @@ index dc6bb00..313a888 100644
 +    fColor = In.Color * texture(sTexture, In.UV.st);
  }
 diff --git a/src/overlay.h b/src/overlay.h
-index 86b6662..960c2c5 100644
+index d20e09b..c5c59d9 100644
 --- a/src/overlay.h
 +++ b/src/overlay.h
-@@ -117,6 +117,7 @@ extern void control_client_check(int control, int& control_client, const std::st
+@@ -116,6 +116,7 @@ extern void control_client_check(int control, int& control_client, const std::st
  extern void process_control_socket(int& control_client, overlay_params &params);
  extern void control_send(int control_client, const char *cmd, unsigned cmdlen, const char *param, unsigned paramlen);
  extern int global_control_client;
@@ -469,10 +469,10 @@ index 86b6662..960c2c5 100644
  void render_mpris_metadata(const overlay_params& params, mutexed_metadata& meta, uint64_t frame_timing);
  #endif
 diff --git a/src/overlay_params.cpp b/src/overlay_params.cpp
-index 22ad0d1..27e1e8a 100644
+index 36f87d4..c0c6672 100644
 --- a/src/overlay_params.cpp
 +++ b/src/overlay_params.cpp
-@@ -579,6 +579,9 @@ parse_ftrace(const char *str) {
+@@ -582,6 +582,9 @@ parse_ftrace(const char *str) {
  #define parse_blacklist(s) parse_str_tokenize(s)
  #define parse_custom_text_center(s) parse_str(s)
  #define parse_custom_text(s) parse_str(s)
@@ -482,7 +482,7 @@ index 22ad0d1..27e1e8a 100644
  #define parse_fps_value(s) parse_load_value(s)
  #define parse_fps_color(s) parse_load_color(s)
  #define parse_battery_color(s) parse_color(s)
-@@ -871,6 +874,7 @@ static void set_param_defaults(struct overlay_params *params){
+@@ -874,6 +877,7 @@ static void set_param_defaults(struct overlay_params *params){
     params->table_columns = 3;
     params->text_outline_color = 0x000000;
     params->text_outline_thickness = 1.5;
@@ -491,7 +491,7 @@ index 22ad0d1..27e1e8a 100644
  
  static std::string verify_pci_dev(std::string pci_dev) {
 diff --git a/src/overlay_params.h b/src/overlay_params.h
-index ed50024..6354cf4 100644
+index 793859a..628f2e5 100644
 --- a/src/overlay_params.h
 +++ b/src/overlay_params.h
 @@ -82,6 +82,9 @@ struct Tracepoint;
@@ -18881,7 +18881,7 @@ index 0000000..f48c509
 +------------------------------------------------------------------------------
 +*/
 diff --git a/src/vulkan.cpp b/src/vulkan.cpp
-index 41f225a..50b079f 100644
+index 826a298..98bce53 100644
 --- a/src/vulkan.cpp
 +++ b/src/vulkan.cpp
 @@ -60,6 +60,11 @@
