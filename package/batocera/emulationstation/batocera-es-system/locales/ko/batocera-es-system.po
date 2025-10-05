@@ -6164,7 +6164,7 @@ msgctxt "game_options"
 msgid "DIGITAL AUDIO"
 msgstr "디지털 오디오"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, virtualjaguar
+#. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "디지털 사운드 프로세서"
@@ -6342,11 +6342,6 @@ msgstr "DS (기본)"
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "DSP EMULATION"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "DSP PIPELINED CORE"
 msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
@@ -7573,11 +7568,6 @@ msgstr "중국어, 일본어, 한국어 입력 방법에 대한 지원을 활성
 msgctxt "game_options"
 msgid "Enable the BASIC interpreter. Some games need this."
 msgstr "기본 해석기를 활성화합니다. 일부 게임에서는 이것이 필요합니다."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
-msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9472,7 +9462,7 @@ msgctxt "game_options"
 msgid "Gamepad Modern"
 msgstr "게임패드 현대식"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
@@ -12402,7 +12392,7 @@ msgctxt "game_options"
 msgid "NTSC (Composite)"
 msgstr "NTSC (컴포지트)"
 
-#. TRANSLATION: redream, virtualjaguar
+#. TRANSLATION: redream
 msgctxt "game_options"
 msgid "NTSC (Default)"
 msgstr "NTSC (기본)"
@@ -12963,7 +12953,7 @@ msgctxt "game_options"
 msgid "Off at Start"
 msgstr "시작 시 끄기"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "끄기가 더 안전하고, 특정 게임의 경우 켜기가 더 안전합니다."
@@ -14242,7 +14232,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "새로 고침 빈도"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream
 msgctxt "game_options"
 msgid "REGION"
 msgstr "지역"
@@ -18458,11 +18448,6 @@ msgid ""
 msgstr ""
 "런-어헤드 대신 선점형 프레임을 사용합니다. 컨트롤러 상태가 변경될 때만 선점합"
 "니다."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Use the DSP pipelined core."
-msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"

@@ -6139,7 +6139,7 @@ msgctxt "game_options"
 msgid "DIGITAL AUDIO"
 msgstr "Digitálne audio"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, virtualjaguar
+#. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "Digitálny zvukový procesor"
@@ -6317,11 +6317,6 @@ msgstr "DS (predvolené)"
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "DSP EMULATION"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "DSP PIPELINED CORE"
 msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
@@ -7536,11 +7531,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable the BASIC interpreter. Some games need this."
 msgstr "Povoliť interpreter BASICu. Niektoré hry to potrebujú."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
-msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9412,7 +9402,7 @@ msgctxt "game_options"
 msgid "Gamepad Modern"
 msgstr "Gamepad moderný"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
@@ -12329,7 +12319,7 @@ msgctxt "game_options"
 msgid "NTSC (Composite)"
 msgstr "NTSC (kompozitné)"
 
-#. TRANSLATION: redream, virtualjaguar
+#. TRANSLATION: redream
 msgctxt "game_options"
 msgid "NTSC (Default)"
 msgstr "NTSC (predvolené)"
@@ -12888,7 +12878,7 @@ msgctxt "game_options"
 msgid "Off at Start"
 msgstr "Vypnuté pri štarte"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Vypnuté je bezpečnejšie, zapnuté pre určité hry."
@@ -14157,7 +14147,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "Obnovovacia frekvencia"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream
 msgctxt "game_options"
 msgid "REGION"
 msgstr "Región"
@@ -18331,11 +18321,6 @@ msgctxt "game_options"
 msgid ""
 "Use preemptive frames instead of run-ahead. Only runs ahead when controller "
 "state changes."
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Use the DSP pipelined core."
 msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual

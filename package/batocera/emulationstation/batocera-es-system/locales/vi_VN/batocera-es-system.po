@@ -6178,7 +6178,7 @@ msgctxt "game_options"
 msgid "DIGITAL AUDIO"
 msgstr "ÂM THANH KỸ THUẬT SỐ"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, virtualjaguar
+#. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "BỘ XỬ LÝ ÂM THANH KỸ THUẬT SỐ"
@@ -6356,11 +6356,6 @@ msgstr "DS (Mặc định)"
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "DSP EMULATION"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "DSP PIPELINED CORE"
 msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
@@ -7587,11 +7582,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable the BASIC interpreter. Some games need this."
 msgstr "Bật trình thông dịch cơ bản. Một số trò chơi cần bật chức năng này."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
-msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9505,7 +9495,7 @@ msgctxt "game_options"
 msgid "Gamepad Modern"
 msgstr "Gamepad Modern"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
@@ -12438,7 +12428,7 @@ msgctxt "game_options"
 msgid "NTSC (Composite)"
 msgstr "NTSC (Tổng hợp)"
 
-#. TRANSLATION: redream, virtualjaguar
+#. TRANSLATION: redream
 msgctxt "game_options"
 msgid "NTSC (Default)"
 msgstr "NTSC (Mặc định)"
@@ -13001,7 +12991,7 @@ msgctxt "game_options"
 msgid "Off at Start"
 msgstr "Tắt khi bắt đầu"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Tắt an toàn hơn, bật cho một vài trò chơi cụ thể."
@@ -14284,7 +14274,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "TỶ LỆ LÀM MỚI"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream
 msgctxt "game_options"
 msgid "REGION"
 msgstr "KHU VỰC"
@@ -18510,11 +18500,6 @@ msgid ""
 msgstr ""
 "Sử dụng các khung ưu tiên thay vì chạy về phía trước. Chỉ chạy về phía trước "
 "khi trạng thái bộ điều khiển thay đổi."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Use the DSP pipelined core."
-msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"

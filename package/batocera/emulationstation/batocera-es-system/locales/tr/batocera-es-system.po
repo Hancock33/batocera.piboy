@@ -6197,7 +6197,7 @@ msgctxt "game_options"
 msgid "DIGITAL AUDIO"
 msgstr "DİJİTAL SES"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, virtualjaguar
+#. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "DİJİTAL SES İŞLEMCİSİ"
@@ -6375,11 +6375,6 @@ msgstr "DS (Varsayılan)"
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "DSP EMULATION"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "DSP PIPELINED CORE"
 msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
@@ -7614,11 +7609,6 @@ msgstr "Çince, Japonca ve Korece giriş yöntemleri desteğini etkinleştirin."
 msgctxt "game_options"
 msgid "Enable the BASIC interpreter. Some games need this."
 msgstr "Basit yorumlayıcıyı etkinleştirin. Bazı oyunların ihtiyacı vardır."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
-msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9540,7 +9530,7 @@ msgctxt "game_options"
 msgid "Gamepad Modern"
 msgstr "Oyun Kolu Modern"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
@@ -12483,7 +12473,7 @@ msgctxt "game_options"
 msgid "NTSC (Composite)"
 msgstr "NTSC (Karışık)"
 
-#. TRANSLATION: redream, virtualjaguar
+#. TRANSLATION: redream
 msgctxt "game_options"
 msgid "NTSC (Default)"
 msgstr "NTSC (Varsayılan)"
@@ -13043,7 +13033,7 @@ msgctxt "game_options"
 msgid "Off at Start"
 msgstr "Açılışta kapalı"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Kapalı olması daha güvenlidir, belirli oyunlar için Açık."
@@ -14331,7 +14321,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "YENİLEME ORANI"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream
 msgctxt "game_options"
 msgid "REGION"
 msgstr "ÜLKE"
@@ -18580,11 +18570,6 @@ msgid ""
 msgstr ""
 "Önden giden kareler yerine, önleyici kareler kullan. Kontrolcü durumu "
 "değiştiğinde önden giden kare çalışır."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Use the DSP pipelined core."
-msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
