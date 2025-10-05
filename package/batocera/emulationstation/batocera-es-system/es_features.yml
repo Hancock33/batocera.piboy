@@ -14114,50 +14114,6 @@ vanillatd:
 vcmi:
   features: [padtokeyboard]
   shared: [powermode, tdp, videomode, powersave, bezel, bezel_stretch, hud, hud_corner, bezel.tattoo, bezel.tattoo_corner, bezel.tattoo_file, bezel.resize_tattoo]
-virtualjaguar:
-  features: [padtokeyboard]
-  shared: [powermode, tdp, videomode, powersave]
-  cfeatures:
-        virtualjaguar_frameskip:
-            group: VIDEO SETTINGS
-            prompt:      FRAMESKIP
-            description: Skip frames to improve performance, at the cost of choppy motion.
-            choices:
-                "Off": 0
-                "1":   1
-                "2":   2
-                "3":   3
-                "4":   4
-                "5":   5
-                "6":   6
-                "7":   7
-                "8":   8
-                "9":   9
-                "10":  10
-        virtualjaguar_bios:
-            prompt: SHOW BIOS BOOTLOGO
-            description: Off is safer, On for specific games.
-            choices:
-                "On": 1
-                "Off (Default)": 0
-        virtualjaguar_dsp:
-          prompt:      DIGITAL SOUND PROCESSOR
-          description: Enable the Digital Sound Processor.
-          choices:
-            "Disabled"          : "no"
-            "Enabled (Default)" : "yes"
-        virtualjaguar_dsp_pipe:
-          prompt:      DSP PIPELINED CORE
-          description: Use the DSP pipelined core.
-          choices:
-            "Disabled (Default)": "no"
-            "Enabled"           : "yes"
-        virtualjaguar_region:
-            prompt:      REGION
-            description: Games may run faster/slower than normal if the incorrect region is selected.
-            choices:
-                "NTSC (Default)":   ntsc
-                "PAL":  pal
 # vita3k doesn't handle the hud - so no deocrations etc
 vita3k:
   shared: [powermode, tdp, videomode, powersave]

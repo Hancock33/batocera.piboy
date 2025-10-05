@@ -291,7 +291,6 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|6b0f050186922d7e6032d2
 Emulators|[thextech](https://github.com/TheXTech/TheXTech)|ad015ca782d41344f928113a7137313e16f9765c|Oct 05, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|ef8a5f5564a1736e22b12563f40eae449615329a|Oct 04, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45786|Oct 05, 2025
-Emulators|[virtualjaguar](http://github.com/gameblabla/virtualjaguar-sdl)|66d2d56317b39b5bde65209865c64ca072b6f83d|May 28, 2019
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|3df27923b48c2ddf579b773814e05a315b00196f|Jul 28, 2025
 Emulators|[vpinball](http://github.com/vpinball/vpinball)|3ec37c7f9a7f57168802ca7bbb3fd9f6b745bdc3|Jul 23, 2024
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r48|Sept 06, 2024

@@ -1275,8 +1275,6 @@ jaguar:
   emulators:
     libretro:
       virtualjaguar:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VIRTUALJAGUAR], incompatible_extensions: [7z] }
-    virtualjaguar:
-      virtualjaguar:    { requireAnyOf: [BR2_PACKAGE_VIRTUALJAGUAR] }
     bigpemu:
       bigpemu:          { requireAnyOf: [BR2_PACKAGE_BIGPEMU] }
 

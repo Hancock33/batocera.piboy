@@ -1437,9 +1437,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_WASM4
     select BR2_PACKAGE_LIBRETRO_YABAUSE                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
-    # Emulators
-    select BR2_PACKAGE_VIRTUALJAGUAR                        if  BR2_PACKAGE_BATOCERA_BCM27XX     # Atari Jaguar
-
     # Sony PS4
     select BR2_PACKAGE_SHADPS4                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
