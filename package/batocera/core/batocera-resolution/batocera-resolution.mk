@@ -30,7 +30,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_SWAY),y)
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_LABWC),y)
-    BATOCERA_SCRIPT_TYPE=wayland-labwc
+    BATOCERA_RESOLUTION_DPROG=wayland-labwc
     BATOCERA_RESOLUTION_DEPENDENCIES += grim wf-recorder
 endif
 
