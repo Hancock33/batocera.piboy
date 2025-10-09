@@ -3,8 +3,8 @@
 # rtl8852au
 #
 ################################################################################
-# Version: Commits on Sept 24, 2025
-RTL8852AU_VERSION = b2028425c8a4b22fecfc0561e9e9b396284be34a
+# Version: Commits on Oct 08, 2025
+RTL8852AU_VERSION = 5224a68597bca02fc49fea7a2bc0bfa2ec554b8d
 RTL8852AU_SITE = $(call github,pulponair,rtl8852au,$(RTL8852AU_VERSION))
 RTL8852AU_LICENSE = GPL-2.0
 RTL8852AU_LICENSE_FILES = LICENSE

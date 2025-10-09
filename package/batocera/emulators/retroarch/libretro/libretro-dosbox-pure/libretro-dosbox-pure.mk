@@ -3,8 +3,8 @@
 # libretro-dosbox-pure
 #
 ################################################################################
-# Version: Commits on Oct 08, 2025
-LIBRETRO_DOSBOX_PURE_VERSION = d743cfd9342c083ef6d3cecfc08c9af28a1481c8
+# Version: Commits on Oct 09, 2025
+LIBRETRO_DOSBOX_PURE_VERSION = a0e52aa542e50e944e23d4469f6e6b29e154cc9d
 LIBRETRO_DOSBOX_PURE_SITE = $(call github,schellingb,dosbox-pure,$(LIBRETRO_DOSBOX_PURE_VERSION))
 LIBRETRO_DOSBOX_PURE_LICENSE = GPLv2
 LIBRETRO_DOSBOX_PURE_DEPENDENCIES = retroarch
