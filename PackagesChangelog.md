@@ -12,7 +12,9 @@ Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|e8624151a79e8753acd8df
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|f56b6ec134bc7bc094e6be191b2faec61d49455d|Oct 09, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|535798a7301442c1a1da3bd05c283ea62da48609|Oct 09, 2025
 Ports|[openjk](http://github.com/JACoders/OpenJK)|d1cb662f07dfa4c1999edfb5c1a86fd1c6285372|Oct 09, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251009|Oct 09, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|2aad8ad8e65b1287e19e23f0ebe6e910b499a428|Oct 09, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251009|Oct 09, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f2a68e4a0e581aef58b8cdf3a7bbff06628ef404|Oct 09, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|51a9524465e94ca406685b992ee87499269d95a6|Oct 09, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|a0e52aa542e50e944e23d4469f6e6b29e154cc9d|Oct 09, 2025
@@ -28,11 +30,9 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|8298963da982ca39fd8ddac9e9
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|be77ad32a44baeb8c0a56db9627ff5bd2480208b|Oct 08, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|edb2419c98432f97b7ad90f33ef72cf25e929368|Oct 08, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|d302940ad0fc4b19f0ae59eecdae8a11d37b25c1|Oct 08, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251008|Oct 08, 2025
 Emulators|[easyrpg-player](http://github.com/EasyRPG/Player)|4a623c8c18dd2ac85464778e9b5fdaf393b06de9|Oct 08, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|614c363d90002c577d26f06a22eb0ef95bf818ad|Oct 08, 2025
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|83bcbddf0813cbe5cbf1b916b612e493e2cacd70|Oct 08, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251008|Oct 08, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|4a623c8c18dd2ac85464778e9b5fdaf393b06de9|Oct 08, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|d928861997bf4a75c5b1f7386867c48728da1559|Oct 08, 2025
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|53c043c5dbe9bf42e56b19797b466953156a377a|Oct 08, 2025
