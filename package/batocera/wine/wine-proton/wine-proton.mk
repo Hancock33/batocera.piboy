@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Sept 19, 2025
-WINE_PROTON_VERSION = cachyos-10.0-20250919-proton-slr
+# Version: Commits on Oct 10, 2025
+WINE_PROTON_VERSION = cachyos-10.0-20251006-proton-slr
 WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
