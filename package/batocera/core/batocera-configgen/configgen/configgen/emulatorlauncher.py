@@ -12,6 +12,7 @@ import argparse
 import json
 import logging
 import os
+import shutil
 import signal
 import subprocess
 import time
@@ -153,9 +154,36 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 system.config["sdlvsync"] = '1'
             os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
+            #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
+            # check if we're running wayland
+            if os.environ.get("WAYLAND_DISPLAY"):
+                os.environ.update({'QT_QPA_PLATFORM': 'wayland'})
+            else:
+                os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
+
+            os.environ.update({'QT_XCB_NO_XI2': '1'})
+            os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
+
             # run a script before emulator starts
             callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
             callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
+
+            f=open('/usr/share/batocera/batocera.arch')
+            arch=f.readline().strip('\n')
+            if 'x86_64' in arch:
+                if system.isOptSet("powersave"):
+                    if system.config['powersave'] == '0':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+                        _logger.debug("CPU power config set to maximum power saving")
+                    elif system.config['powersave'] == '1':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
+                        _logger.debug("CPU power config set to medium power saving")
+                    elif system.config['powersave'] == '2':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
+                        _logger.debug("CPU power config set to no power saving")
+                else:
+                    subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+                    _logger.debug("CPU power config set to maximum power saving")
 
             # run the emulator
             _evmapy_instance = evmapy(systemName, system.config.emulator, effectiveCore, original_rom, player_controllers, guns)
@@ -189,6 +217,9 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
             # run a script after emulator shuts down
             callExternalScripts(USER_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, rom])
             callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, rom])
+
+            if 'x86_64' in arch:
+                subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
 
         finally:
             # always restore the resolution
@@ -644,6 +675,10 @@ def launch() -> None:
                 exitcode = 0
 
         _logger.debug("Exiting configgen with status %s", exitcode)
+
+        if not endSystem == "settings":
+            shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
+            shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
 
         exit(exitcode)
 

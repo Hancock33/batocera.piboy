@@ -1,21 +1,22 @@
 config BR2_PACKAGE_BATOCERA_CONFIGGEN
-    bool "batocera configgen"
-	select BR2_PACKAGE_PYTHON3
-	select BR2_PACKAGE_PYTHON_PYYAML
-	select BR2_PACKAGE_PYTHON_RUAMEL_YAML
-	select BR2_PACKAGE_PYTHON_TOML
+	bool "batocera configgen"
+	select BR2_PACKAGE_MANGOHUD            if (BR2_PACKAGE_BATOCERA_WAYLAND || BR2_PACKAGE_XORG7 || BR2_PACKAGE_LIBDRM) && !BR2_PACKAGE_BATOCERA_TARGET_S905
+	select BR2_PACKAGE_PYTHON_CONFIGOBJ
 	select BR2_PACKAGE_PYTHON_PILLOW
 	select BR2_PACKAGE_PYTHON_QRCODE # for retroachievement urls
 	select BR2_PACKAGE_PYTHON_PSUTIL
-	select BR2_PACKAGE_PYTHON3_CONFIGOBJ
+	select BR2_PACKAGE_PYTHON_PYUDEV       # for guns
+	select BR2_PACKAGE_PYTHON_PYYAML
 	select BR2_PACKAGE_PYTHON_REQUESTS
-	select BR2_PACKAGE_PYTHON_PYUDEV # for guns
-	select BR2_PACKAGE_MANGOHUD      if (BR2_PACKAGE_WAYLAND || BR2_PACKAGE_XORG7 || BR2_PACKAGE_LIBDRM) && !BR2_PACKAGE_BATOCERA_TARGET_S905
+	select BR2_PACKAGE_PYTHON_RUAMEL_YAML
+	select BR2_PACKAGE_PYTHON_TOML
+	select BR2_PACKAGE_PYTHON3
 	select BR2_PACKAGE_PYSDL2
-    help
-      The configuration utility for batocera.
-	  
-	  The purpose of the lib is to automatically configure emulators,
-	  using the environment variables available in Batocera.
-      The main program is emulatorlauncher.py, taking 13 parameters,
-	  that are the system and 4 controllers configurations.
+
+	help
+	  This is the configuration utility for Batocera
+	  The purpose of this utility is to automatically configure
+	  emulators using the environment variables in Batocera.
+	  The main program is emulatorlauncher.py, taking 13
+	  parameters, that are the system and 4 controllers
+	  configurations.
