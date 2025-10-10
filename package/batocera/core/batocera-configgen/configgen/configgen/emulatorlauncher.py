@@ -12,12 +12,17 @@ import argparse
 import json
 import logging
 import os
-import shutil
 import signal
 import subprocess
 import time
+import threading
+import pyudev
+import sdl2
+import sdl2.ext
+import ctypes
 from pathlib import Path
 from sys import exit
+from copy import deepcopy
 from typing import TYPE_CHECKING
 
 from . import controllersConfig as controllers
@@ -31,6 +36,7 @@ from .utils import bezels as bezelsUtil, videoMode, wheelsUtils
 from .utils.hotkeygen import set_hotkeygen_context
 from .utils.logger import setup_logging
 from .utils.squashfs import squashfs_rom
+from .utils.evmapy import evmapy
 
 if TYPE_CHECKING:
     from collections.abc import Iterable
@@ -42,6 +48,13 @@ if TYPE_CHECKING:
 
 _logger = logging.getLogger(__name__)
 
+# A lock to safely modify the active controller list from multiple threads
+_player_controllers_lock = threading.Lock()
+# A global variable to hold the current, up-to-date list of player controllers
+_active_player_controllers = []
+# Global reference to the evmapy configurator instance
+_evmapy_instance = None
+
 def main(args: argparse.Namespace, maxnbplayers: int) -> int:
     # squashfs roms if squashed
     if args.rom.suffix == ".squashfs":
@@ -51,9 +64,17 @@ def main(args: argparse.Namespace, maxnbplayers: int) -> int:
         return start_rom(args, maxnbplayers, args.rom, args.rom)
 
 def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_rom: Path) -> int:
+    global _active_player_controllers, _evmapy_instance
+
     player_controllers = Controller.load_for_players(maxnbplayers, args)
-    global endSystem
-    endSystem = args.system
+
+    # Initialize the global state with the initial controller list
+    with _player_controllers_lock:
+        _active_player_controllers = list(player_controllers)
+    
+    # Start the background monitor thread.
+    monitor_thread = threading.Thread(target=_controller_monitor_thread, daemon=True)
+
     # find the system to run
     systemName = args.system
     _logger.debug("Running system: %s", systemName)
@@ -132,41 +153,14 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 system.config["sdlvsync"] = '1'
             os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
-            #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
-            # check if we're running wayland
-            if os.environ.get("WAYLAND_DISPLAY"):
-                os.environ.update({'QT_QPA_PLATFORM': 'wayland'})
-            else:
-                os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
-
-            os.environ.update({'QT_XCB_NO_XI2': '1'})
-            os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
-
             # run a script before emulator starts
             callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
             callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
 
-            f=open('/usr/share/batocera/batocera.arch')
-            arch=f.readline().strip('\n')
-            if 'x86_64' in arch:
-                if system.isOptSet("powersave"):
-                    if system.config['powersave'] == '0':
-                        subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                        _logger.debug("CPU power config set to maximum power saving")
-                    elif system.config['powersave'] == '1':
-                        subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
-                        _logger.debug("CPU power config set to medium power saving")
-                    elif system.config['powersave'] == '2':
-                        subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
-                        _logger.debug("CPU power config set to no power saving")
-                else:
-                    subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                    _logger.debug("CPU power config set to maximum power saving")
-
             # run the emulator
-            from .utils.evmapy import evmapy
+            _evmapy_instance = evmapy(systemName, system.config.emulator, effectiveCore, original_rom, player_controllers, guns)
             with (
-                evmapy(systemName, system.config.emulator, effectiveCore, original_rom, player_controllers, guns),
+                _evmapy_instance,
                 set_hotkeygen_context(generator, system)
             ):
                 # change directory if wanted
@@ -189,14 +183,12 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                             cmd.array.insert(0, "mangohud")
 
                 with profiler.pause():
+                    monitor_thread.start()
                     exitCode = runCommand(cmd)
 
             # run a script after emulator shuts down
             callExternalScripts(USER_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, rom])
             callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, rom])
-
-            if 'x86_64' in arch:
-                subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
 
         finally:
             # always restore the resolution
@@ -421,6 +413,123 @@ def getHudConfig(system: Emulator, systemName: str, emulator: str, core: str, ro
     configstr = configstr.replace("%EMULATORCORE%", hudConfig_protectStr(emulatorstr))
     return configstr.replace("%THUMBNAIL%", hudConfig_protectStr(gameThumbnail))
 
+def _reconfigure_evmapy_on_the_fly():
+    # Re-runs the evmapy configuration by creating a NEW evmapy instance with the latest controller list.
+    global _evmapy_instance, _active_player_controllers
+
+    with _player_controllers_lock:
+        if not _evmapy_instance:
+            return
+
+        _logger.info(">>> --- STARTING EVMAPY RECONFIGURATION ---")
+        
+        valid_controllers = [c for c in _active_player_controllers if c is not None]
+        _logger.info(f">>> Found {len(valid_controllers)} valid controllers to configure.")
+        for c in valid_controllers:
+            _logger.info(f">>>   - Configuring P{c.player_number} with Path: {c.device_path}")
+
+        new_evmapy_instance = evmapy(
+            system=_evmapy_instance.system,
+            emulator=_evmapy_instance.emulator,
+            core=_evmapy_instance.core,
+            rom=_evmapy_instance.rom,
+            controllers=deepcopy(valid_controllers),
+            guns=_evmapy_instance.guns
+        )
+        
+        _evmapy_instance = new_evmapy_instance
+        
+        subprocess.call(['batocera-evmapy', 'stop'])
+        time.sleep(0.5)
+        _evmapy_instance._evmapy__prepare()
+        subprocess.call(['batocera-evmapy', 'start'])
+        
+        _logger.info(">>> --- EVMAPY RECONFIGURATION COMPLETE ---")
+
+
+def _controller_monitor_thread():
+    # Runs in the background, watching for controller add/remove events.
+    # Uses pysdl2 to reliably get controller GUIDs and paths, then intelligently "revives"
+    # the original controller object to preserve player order without disrupting the emulator.
+    global _active_player_controllers
+    
+    initial_controllers_snapshot = []
+    with _player_controllers_lock:
+        initial_controllers_snapshot = deepcopy(_active_player_controllers)
+        for i, p_controller in enumerate(initial_controllers_snapshot):
+            if p_controller and p_controller.guid:
+                _logger.info(f">>>   [P{i+1}] Stored GUID: {p_controller.guid}, Initial Path: {p_controller.device_path}")
+
+    we_initialized_sdl = False
+    try:
+        if sdl2.SDL_WasInit(sdl2.SDL_INIT_JOYSTICK) == 0:
+            _logger.info(">>> SDL2 joystick subsystem not initialized. Initializing it now.")
+            sdl2.SDL_Init(sdl2.SDL_INIT_JOYSTICK)
+            we_initialized_sdl = True
+        else:
+            _logger.info(">>> SDL2 joystick subsystem already initialized by host (emulator). Will not re-initialize.")
+    except Exception as e:
+        _logger.error(f"FATAL: Could not initialize pysdl2 for controller monitoring: {e}")
+        return
+
+    context = pyudev.Context()
+    monitor = pyudev.Monitor.from_netlink(context)
+    monitor.filter_by(subsystem='input')
+
+    _logger.info(">>> Starting background controller monitor.")
+    for device in iter(monitor.poll, None):
+        if device.get('ID_INPUT_JOYSTICK') != '1':
+            continue
+
+        _logger.info(f"--- Joystick Event Detected: {device.action} on {device.sys_path} ---")
+        reconfigure_needed = False
+        
+        sdl2.SDL_JoystickUpdate()
+        online_controllers_map = {}
+        for i in range(sdl2.SDL_NumJoysticks()):
+            try:
+                guid_struct = sdl2.SDL_JoystickGetDeviceGUID(i)
+                guid_str_buffer = (ctypes.c_char * 33)()
+                sdl2.SDL_JoystickGetGUIDString(guid_struct, guid_str_buffer, 33)
+                guid = guid_str_buffer.value.decode('utf-8')
+                
+                path_bytes = sdl2.SDL_JoystickPathForIndex(i)
+                path = path_bytes.decode('utf-8') if path_bytes else None
+                
+                if guid and path:
+                    online_controllers_map[guid] = path
+            except Exception as e:
+                _logger.warning(f"Error while querying joystick index {i} with pysdl2: {e}")
+        
+        _logger.info(f">>> [Check 1] Pysdl2 scan found online controllers: {online_controllers_map}")
+        
+        with _player_controllers_lock:
+            new_active_controllers = [None] * len(initial_controllers_snapshot)
+            
+            for i, initial_controller in enumerate(initial_controllers_snapshot):
+                if initial_controller and initial_controller.guid in online_controllers_map:
+                    new_path = online_controllers_map[initial_controller.guid]
+                    if initial_controller.device_path != new_path:
+                        _logger.info(f">>> [Revival] Player {initial_controller.player_number} (GUID: {initial_controller.guid}) path has changed.")
+                        initial_controller.device_path = new_path
+                    new_active_controllers[i] = initial_controller
+
+            current_paths = [c.device_path if c else None for c in _active_player_controllers]
+            new_paths = [c.device_path if c else None for c in new_active_controllers]
+            
+            if current_paths != new_paths:
+                _logger.info(f">>> [Check 2] Controller state changed. Old Paths: {current_paths}. New Paths: {new_paths}")
+                _active_player_controllers = new_active_controllers
+                reconfigure_needed = True
+            else:
+                _logger.info(">>> [Check 2] No change in assigned controller paths detected.")
+
+        if reconfigure_needed:
+            time.sleep(1) 
+            _reconfigure_evmapy_on_the_fly()
+
+    if we_initialized_sdl:
+        sdl2.SDL_QuitSubSystem(sdl2.SDL_INIT_JOYSTICK)
 
 def runCommand(command: Command) -> int:
     global proc
@@ -535,10 +644,6 @@ def launch() -> None:
                 exitcode = 0
 
         _logger.debug("Exiting configgen with status %s", exitcode)
-
-        if not endSystem == "settings":
-            shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
-            shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
 
         exit(exitcode)
 
