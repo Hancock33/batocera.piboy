@@ -2142,7 +2142,7 @@ uzebox:
   manufacturer:         Homebrew Systems
   release:              2008
   hardware:             console
-  extensions: [uze, bin, zip]
+  extensions:           [uze, bin, zip]
   emulators:
     libretro:
       uzem:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UZEM], incompatible_extensions: [bin, zip] }
