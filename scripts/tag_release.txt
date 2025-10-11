@@ -4,6 +4,7 @@ appstream.mk
 batocera-settings.mk
 cabextract.mk
 cbindgen.mk
+cxxopts.mk
 drastic.mk
 ecm.mk
 flatpak.mk
@@ -37,6 +38,7 @@ sdl3_ttf.mk
 sdl3.mk
 shaderc.mk
 spirv-llvm-translator.mk
+tomlplusplus.mk
 uthash.mk
 vice.mk
 warehouse.mk
