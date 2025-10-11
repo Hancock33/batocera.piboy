@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-06 18:00+0900\n"
+"PO-Revision-Date: 2025-10-09 22:17+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: Korean (KO)\n"
 "Language: ko_KO\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Loco-Source-Locale: ko_KR\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 "X-Loco-Parser: loco_parse_po\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
@@ -9692,7 +9692,7 @@ msgstr "하드 텍스처 캐시 메모리 제한"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "HARDWARE SHADER"
-msgstr ""
+msgstr "하드웨어 셰이더"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -9936,6 +9936,8 @@ msgstr ""
 msgctxt "game_options"
 msgid "Helps some games to launch when disabled. May affect performance."
 msgstr ""
+"비활성화된 상태에서도 일부 게임을 실행하는 데 도움이 됩니다. 하지만 성능에 영"
+"향을 미칠 수 있습니다."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"

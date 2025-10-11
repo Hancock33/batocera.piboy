@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-07 09:09+0000\n"
+"PO-Revision-Date: 2025-10-06 17:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -9778,7 +9778,7 @@ msgstr "FESTE TEXTUR CACHE SPEICHERBEGRENZUNG"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "HARDWARE SHADER"
-msgstr ""
+msgstr "HARDWARE-SHADER"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10023,6 +10023,8 @@ msgstr ""
 msgctxt "game_options"
 msgid "Helps some games to launch when disabled. May affect performance."
 msgstr ""
+"Wenn deaktiviert, starten manche Spiele besser. Kann die Leistung "
+"beeinflussen."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"

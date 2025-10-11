@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Options file\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-04 17:24+0300\n"
+"PO-Revision-Date: 2025-10-09 17:03+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish\n"
 "Language: tr\n"
@@ -9759,7 +9759,7 @@ msgstr "SERT DOKU ÖNBELLEK HAFIZA SINIRI"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "HARDWARE SHADER"
-msgstr ""
+msgstr "DONANIMSAL GÖLGELENDİRİCİ"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10003,6 +10003,8 @@ msgstr ""
 msgctxt "game_options"
 msgid "Helps some games to launch when disabled. May affect performance."
 msgstr ""
+"Bazı oyunların devre dışı bırakıldığında başlatılmasına yardımcı olur. "
+"Performansı etkileyebilir."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"

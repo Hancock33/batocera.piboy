@@ -53,7 +53,7 @@ define AZAHAR_INSTALL_TARGET_CMDS
 endef
 
 define AZAHAR_QT6
-	ln -sf $(STAGING_DIR)/usr/include/QtGui/*/QtGui/qpa  $(STAGING_DIR)/usr/include/QtCore/6.*/QtCore/private
+	ln -sf $(STAGING_DIR)/usr/include/QtGui/*/QtGui/qpa  $(STAGING_DIR)/usr/include/QtCore
 endef
 
 define AZAHAR_EVMAPY
