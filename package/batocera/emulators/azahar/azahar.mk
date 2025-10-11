@@ -11,7 +11,7 @@ AZAHAR_GIT_SUBMODULES = YES
 AZAHAR_LICENSE = GPLv2
 AZAHAR_SUPPORTS_IN_SOURCE_BUILD = NO
 
-AZAHAR_DEPENDENCIES += boost fdk-aac ffmpeg fmt openal sdl2
+AZAHAR_DEPENDENCIES += boost cubeb fdk-aac ffmpeg fmt openal sdl2
 
 AZAHAR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 AZAHAR_CONF_OPTS += -DCITRA_WARNINGS_AS_ERRORS=OFF
@@ -52,11 +52,16 @@ define AZAHAR_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/azahar $(TARGET_DIR)/usr/bin/
 endef
 
+define AZAHAR_QT6
+	ln -sf $(STAGING_DIR)/usr/include/QtGui/*/QtGui/qpa  $(STAGING_DIR)/usr/include/QtCore/6.*/QtCore/private
+endef
+
 define AZAHAR_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/azahar/3ds.azahar.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
+AZAHAR_PRE_CONFIGURE_HOOKS = AZAHAR_QT6
 AZAHAR_POST_INSTALL_TARGET_HOOKS = AZAHAR_EVMAPY
 
 $(eval $(cmake-package))
