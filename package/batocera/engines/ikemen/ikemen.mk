@@ -30,7 +30,7 @@ define IKEMEN_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/Ikemen_GO_Linux $(TARGET_DIR)/usr/bin/ikemen
 	# evmapy
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ikemen/ikemen.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/ikemen/ikemen.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(golang-package))
