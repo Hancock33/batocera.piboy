@@ -14,3 +14,5 @@ config BR2_PACKAGE_INNOEXTRACT
 	help
 	  innoextract - A tool to unpack installers created
 	  by Inno Setup
+
+	  https://constexpr.org/innoextract/
