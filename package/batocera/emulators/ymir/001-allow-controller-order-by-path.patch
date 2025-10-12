@@ -1,8 +1,8 @@
 diff --git a/apps/ymir-sdl3/src/app/app.cpp b/apps/ymir-sdl3/src/app/app.cpp
-index 73b129f9..1d41db31 100644
+index 53e0301e..95a6f618 100644
 --- a/apps/ymir-sdl3/src/app/app.cpp
 +++ b/apps/ymir-sdl3/src/app/app.cpp
-@@ -1607,19 +1607,17 @@ void App::RunEmulator() {
+@@ -1634,19 +1634,17 @@ void App::RunEmulator() {
      // Track connected gamepads and player indices
      // NOTE: SDL3 has a bug with Windows raw input where new controllers are always assigned to player index 0.
      // We'll manage player indices manually instead.
@@ -27,7 +27,7 @@ index 73b129f9..1d41db31 100644
          } else {
              auto first = freePlayerIndices.begin();
              int index = *first;
-@@ -1632,6 +1630,8 @@ void App::RunEmulator() {
+@@ -1659,6 +1657,8 @@ void App::RunEmulator() {
          assert(freePlayerIndices.insert(free).second);
      };
  
@@ -36,7 +36,7 @@ index 73b129f9..1d41db31 100644
      std::array<GUIEvent, 64> evts{};
  
  #if Ymir_ENABLE_IMGUI_DEMO
-@@ -1860,30 +1860,37 @@ void App::RunEmulator() {
+@@ -1887,30 +1887,37 @@ void App::RunEmulator() {
  
              case SDL_EVENT_GAMEPAD_ADDED: //
              {
@@ -89,7 +89,7 @@ index 73b129f9..1d41db31 100644
                  break;
              }
              case SDL_EVENT_GAMEPAD_REMAPPED: [[fallthrough]];
-@@ -4788,4 +4795,55 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
+@@ -4903,4 +4910,55 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
      app->m_context.EnqueueEvent(events::emu::ReceiveMidiInput(delta, std::move(*msg)));
  }
  
@@ -146,7 +146,7 @@ index 73b129f9..1d41db31 100644
 +
  } // namespace app
 diff --git a/apps/ymir-sdl3/src/app/app.hpp b/apps/ymir-sdl3/src/app/app.hpp
-index 1f4db966..431e4219 100644
+index fa213e71..1c2a8a2c 100644
 --- a/apps/ymir-sdl3/src/app/app.hpp
 +++ b/apps/ymir-sdl3/src/app/app.hpp
 @@ -38,6 +38,12 @@
@@ -163,10 +163,10 @@ index 1f4db966..431e4219 100644
      App();
  
 diff --git a/apps/ymir-sdl3/src/app/settings.cpp b/apps/ymir-sdl3/src/app/settings.cpp
-index f4025131..f2a8f6e2 100644
+index e7ebb144..30804830 100644
 --- a/apps/ymir-sdl3/src/app/settings.cpp
 +++ b/apps/ymir-sdl3/src/app/settings.cpp
-@@ -982,6 +982,7 @@ SettingsLoadResult Settings::Load(const std::filesystem::path &path) {
+@@ -988,6 +988,7 @@ SettingsLoadResult Settings::Load(const std::filesystem::path &path) {
          auto parsePort = [&](const char *name, Input::Port &portSettings) {
              if (auto tblPort = tblInput[name]) {
                  Parse(tblPort, "PeripheralType", portSettings.type);
@@ -175,10 +175,10 @@ index f4025131..f2a8f6e2 100644
                  auto parseControlPadBinds = [&](auto &tblBinds) {
                      Parse(tblBinds, "A", portSettings.controlPad.binds.a);
 diff --git a/apps/ymir-sdl3/src/app/settings.hpp b/apps/ymir-sdl3/src/app/settings.hpp
-index 1cde3d8b..2d0ccc86 100644
+index 4f2c1f90..63848cab 100644
 --- a/apps/ymir-sdl3/src/app/settings.hpp
 +++ b/apps/ymir-sdl3/src/app/settings.hpp
-@@ -275,6 +275,7 @@ struct Settings {
+@@ -278,6 +278,7 @@ struct Settings {
      struct Input {
          struct Port {
              util::Observable<ymir::peripheral::PeripheralType> type;

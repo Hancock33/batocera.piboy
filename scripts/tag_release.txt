@@ -13,6 +13,7 @@ kddocwidgets.mk
 kodi-pvr-freebox.mk
 labwc.mk
 layershellqt.mk
+libdate.mk
 libdbusmenu.mk
 libfyaml.mk
 liblc3.mk
@@ -36,6 +37,7 @@ screengrab.mk
 sdl3_image.mk
 sdl3_ttf.mk
 sdl3.mk
+semver.mk
 shaderc.mk
 spirv-llvm-translator.mk
 tomlplusplus.mk
