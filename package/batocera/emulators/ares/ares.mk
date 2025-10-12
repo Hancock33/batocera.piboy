@@ -3,8 +3,8 @@
 # ares
 #
 ################################################################################
-# Version: Commits on Oct 03, 2025
-ARES_VERSION = 9671ec7c3dd6891aaa401bd06345f5d3432e41d3
+# Version: Commits on Oct 08, 2025
+ARES_VERSION = c95ddfe7548f022095e072c8e6c2b824eb90a8ec
 ARES_SITE = $(call github,ares-emulator,ares,$(ARES_VERSION))
 ARES_LICENSE = GPLv3
 ARES_DEPENDENCIES = cairo libgl libgtk3 pango sdl2 zlib

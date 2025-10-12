@@ -43,11 +43,11 @@ ryujinxCtrl: dict[str, Any] = {
         "rotate90_cw": False,
         "stick_button": "RightStick"
       },
-      "deadzone_left": 0,
-      "deadzone_right": 0,
+      "deadzone_left": 0.1,
+      "deadzone_right": 0.1,
       "range_left": 1,
       "range_right": 1,
-      "trigger_threshold": 0,
+      "trigger_threshold": 0.5,
       "motion": {
         "motion_backend": "GamepadDriver",
         "sensitivity": 100,
@@ -69,8 +69,8 @@ ryujinxCtrl: dict[str, Any] = {
         "button_minus": "Minus",
         "button_l": "LeftShoulder",
         "button_zl": "LeftTrigger",
-        "button_sl": "Unbound",
-        "button_sr": "Unbound",
+        "button_sl": "SingleLeftTrigger0",
+        "button_sr": "SingleRightTrigger0",
         "dpad_up": "DpadUp",
         "dpad_down": "DpadDown",
         "dpad_left": "DpadLeft",
@@ -80,8 +80,8 @@ ryujinxCtrl: dict[str, Any] = {
         "button_plus": "Plus",
         "button_r": "RightShoulder",
         "button_zr": "RightTrigger",
-        "button_sl": "Unbound",
-        "button_sr": "Unbound",
+        "button_sl": "SingleLeftTrigger1",
+        "button_sr": "SingleRightTrigger1",
         "button_x": btn_x,
         "button_b": btn_b,
         "button_y": btn_y,
@@ -155,7 +155,7 @@ class RyujinxGenerator(Generator):
             for dev in devices:
                 if dev.path == pad.device_path:
                     bustype = f"{dev.info.bustype:x}"
-                    bustype = "17f6" + bustype.zfill(4)
+                    bustype = "0000" + bustype.zfill(4)
                     vendor = f"{dev.info.vendor:x}"
                     vendor = vendor.zfill(4)
                     product = f"{dev.info.product:x}"

@@ -156,7 +156,7 @@ fi
 rm -rf "${TARGET_DIR}/usr/bin/mame/docs" || exit 1
 rm -rf "${TARGET_DIR}/usr/wine/wine-custom/share/man" || exit 1
 rm -rf "${TARGET_DIR}/usr/wine/wine-proton/share/man" || exit 1
-rm -rf "${TARGET_DIR}/usr/lib/python3.13/site-packages/numpy/doc" || exit 1
+rm -rf "${TARGET_DIR}/usr/lib/python3.14/site-packages/numpy/doc" || exit 1
 rm -rf "${TARGET_DIR}/usr/share/ledspicer/doc" || exit 1
 rm -rf "${TARGET_DIR}/usr/share/lirc/python-pkg/lirc/doc" || exit 1
 rm -rf "${TARGET_DIR}/usr/share/qt6/doc" || exit 1
@@ -166,7 +166,7 @@ rm -rf "${TARGET_DIR}/usr/share/batocera/shaders/bezel/Mega_Bezel/resource/docs"
 rm -rf "${TARGET_DIR}/usr/share/batocera/shaders/docs" || exit 1
 rm -rf "${TARGET_DIR}/usr/bin/mame/ini/examples" || exit 1
 rm -rf "${TARGET_DIR}/usr/libexec/lzo/examples" || exit 1
-rm -rf "${TARGET_DIR}/usr/lib/python3.13/site-packages/numpy/_core/tests/examples" || exit 1
+rm -rf "${TARGET_DIR}/usr/lib/python3.14/site-packages/numpy/_core/tests/examples" || exit 1
 rm -rf "${TARGET_DIR}/usr/share/mc/examples" || exit 1
 rm -rf "${TARGET_DIR}/usr/share/examples" || exit 1
 rm -rf "${TARGET_DIR}/usr/share/vpl" || exit 1

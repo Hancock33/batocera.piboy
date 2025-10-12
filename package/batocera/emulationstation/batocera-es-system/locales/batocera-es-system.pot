@@ -3602,7 +3602,7 @@ msgid ""
 "systems."
 msgstr ""
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, virtualjaguar
+#. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr ""
@@ -4174,13 +4174,13 @@ msgctxt "game_options"
 msgid "TWB64 - Pack 2"
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
 msgstr ""
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream
 msgctxt "game_options"
 msgid "REGION"
 msgstr ""
@@ -7174,7 +7174,7 @@ msgctxt "game_options"
 msgid "Basic"
 msgstr ""
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr ""
@@ -13194,7 +13194,7 @@ msgctxt "game_options"
 msgid "Choose broadcast standard (for older TV's)."
 msgstr ""
 
-#. TRANSLATION: redream, virtualjaguar
+#. TRANSLATION: redream
 msgctxt "game_options"
 msgid "NTSC (Default)"
 msgstr ""
@@ -16115,21 +16115,6 @@ msgctxt "game_options"
 msgid "VSync"
 msgstr ""
 
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Use the DSP pipelined core."
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "DSP PIPELINED CORE"
-msgstr ""
-
 #. TRANSLATION: vita3k
 msgctxt "game_options"
 msgid ""
@@ -18560,66 +18545,6 @@ msgctxt "keys_files"
 msgid "Virtual Keyboard"
 msgstr ""
 
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Start game"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Insert coin"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Nudge up"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Nudge left"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Nudge right"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Pull plunger"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Lockbar Fire Button"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Buy extraball for a credit"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Left flipper"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Right flipper"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Left magnasave"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Right magnasave"
-msgstr ""
-
 #. TRANSLATION: 3ds.azahar.keys
 msgctxt "keys_files"
 msgid "Move Stylet Pointer"
@@ -19513,4 +19438,64 @@ msgstr ""
 #. TRANSLATION: dxx-rebirth.keys
 msgctxt "keys_files"
 msgid "smart missile"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Start game"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Insert coin"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge up"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge left"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge right"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Pull plunger"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Lockbar Fire Button"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Left flipper"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Right flipper"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Left magnasave"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Right magnasave"
 msgstr ""

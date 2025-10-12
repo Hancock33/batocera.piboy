@@ -6194,7 +6194,7 @@ msgctxt "game_options"
 msgid "DIGITAL AUDIO"
 msgstr "AUDIO DIGITAL"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, virtualjaguar
+#. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "PROCESSADOR DE SOM DIGITAL"
@@ -6372,11 +6372,6 @@ msgstr "DS (Predefinição)"
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "DSP EMULATION"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "DSP PIPELINED CORE"
 msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
@@ -7607,11 +7602,6 @@ msgstr "Ativar o suporte para métodos de entrada em chinês, japonês e coreano
 msgctxt "game_options"
 msgid "Enable the BASIC interpreter. Some games need this."
 msgstr "Ativar o interpretador BASIC. Alguns jogos precisam disso."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
-msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9521,7 +9511,7 @@ msgctxt "game_options"
 msgid "Gamepad Modern"
 msgstr "Comando Moderno"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
@@ -9752,7 +9742,7 @@ msgstr "LIMITE DA MEMÓRIA DE CACHE DA TEXTURA DURA"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "HARDWARE SHADER"
-msgstr ""
+msgstr "SHADER POR HARDWARE"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -9997,6 +9987,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Helps some games to launch when disabled. May affect performance."
 msgstr ""
+"Ajuda a iniciar alguns jogos quando desativado. Pode afetar o desempenho."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -12474,7 +12465,7 @@ msgctxt "game_options"
 msgid "NTSC (Composite)"
 msgstr "NTSC (Composto)"
 
-#. TRANSLATION: redream, virtualjaguar
+#. TRANSLATION: redream
 msgctxt "game_options"
 msgid "NTSC (Default)"
 msgstr "NTSC (Predefinição)"
@@ -13036,7 +13027,7 @@ msgctxt "game_options"
 msgid "Off at Start"
 msgstr "Desligado no inicio"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Desligado é mais seguro, Ativado para jogos específicos."
@@ -14330,7 +14321,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "TAXA DE ACTUALIZAÇÃO"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream
 msgctxt "game_options"
 msgid "REGION"
 msgstr "REGIÃO"
@@ -18587,11 +18578,6 @@ msgid ""
 msgstr ""
 "Utilize frames preemptivos em run-ahead. Apenas corre à frente quando o "
 "comando alterações de estado."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Use the DSP pipelined core."
-msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"

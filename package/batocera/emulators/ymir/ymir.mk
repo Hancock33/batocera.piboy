@@ -15,14 +15,14 @@
 # ymir
 #
 ################################################################################
-# Version: Commits on Oct 05, 2025
-YMIR_VERSION = b6584f0826535b5786bc61d9e3faad74cef74dd9
+# Version: Commits on Oct 12, 2025
+YMIR_VERSION = eb974756c05c6a404ab228df9724c0db9a942993
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD=git
 YMIR_GIT_SUBMODULES=YES
 YMIR_LICENSE = GPLv2
 YMIR_LICENSE_FILE = LICENSE
-YMIR_DEPENDENCIES += host-clang sdl3
+YMIR_DEPENDENCIES += cereal cxxopts host-clang libdate rtmidi sdl3 semver stb tomlplusplus
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 YMIR_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -lm"

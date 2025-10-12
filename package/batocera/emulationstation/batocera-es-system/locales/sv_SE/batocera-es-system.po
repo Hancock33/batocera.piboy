@@ -6183,7 +6183,7 @@ msgctxt "game_options"
 msgid "DIGITAL AUDIO"
 msgstr "DIGITALT LJUD"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, virtualjaguar
+#. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
 msgstr "DIGITAL LJUDPROCESSOR"
@@ -6361,11 +6361,6 @@ msgstr "DS (standard)"
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "DSP EMULATION"
-msgstr ""
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "DSP PIPELINED CORE"
 msgstr ""
 
 #. TRANSLATION: libretro/panda3ds
@@ -7593,11 +7588,6 @@ msgstr "Aktivera stöd för kinesiska, japanska och koreanska inmatningsmetoder.
 msgctxt "game_options"
 msgid "Enable the BASIC interpreter. Some games need this."
 msgstr "Aktivera BASIC-tolken. Vissa spel behöver detta."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Enable the Digital Sound Processor."
-msgstr ""
 
 #. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
@@ -9507,7 +9497,7 @@ msgctxt "game_options"
 msgid "Gamepad Modern"
 msgstr "Gamepad Modern"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, virtualjaguar
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid ""
 "Games may run faster/slower than normal if the incorrect region is selected."
@@ -12451,7 +12441,7 @@ msgctxt "game_options"
 msgid "NTSC (Composite)"
 msgstr "NTSC (komposit)"
 
-#. TRANSLATION: redream, virtualjaguar
+#. TRANSLATION: redream
 msgctxt "game_options"
 msgid "NTSC (Default)"
 msgstr "NTSC (standard)"
@@ -13012,7 +13002,7 @@ msgctxt "game_options"
 msgid "Off at Start"
 msgstr "Av vid start"
 
-#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar, virtualjaguar
+#. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
 msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Av är säkrare, På för specifika spel."
@@ -14294,7 +14284,7 @@ msgctxt "game_options"
 msgid "REFRESH RATE"
 msgstr "UPPDATERINGSFREKVENS"
 
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream, ...
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded, libretro/geolith, lindbergh-loader, redream
 msgctxt "game_options"
 msgid "REGION"
 msgstr "REGION"
@@ -18529,11 +18519,6 @@ msgid ""
 msgstr ""
 "Använd preemptive frames istället för run-ahead. Kör endast framåt när "
 "styrenhetens tillstånd ändras."
-
-#. TRANSLATION: virtualjaguar
-msgctxt "game_options"
-msgid "Use the DSP pipelined core."
-msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
