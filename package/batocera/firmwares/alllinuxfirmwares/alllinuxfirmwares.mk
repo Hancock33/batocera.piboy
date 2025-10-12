@@ -3,9 +3,9 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits on Sept 17, 2025
-ALLLINUXFIRMWARES_VERSION = 20250917
-ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.xz
+# Version: Commits on Oct 11, 2025
+ALLLINUXFIRMWARES_VERSION = 20251011
+ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://www.kernel.org/pub/linux/kernel/firmware
 
 ifeq ($(BR2_PACKAGE_FIRMWARE_ARMBIAN),y)
