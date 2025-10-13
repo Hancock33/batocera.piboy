@@ -1,8 +1,8 @@
 diff --git a/apps/ymir-sdl3/src/app/app.cpp b/apps/ymir-sdl3/src/app/app.cpp
-index 53e0301e..95a6f618 100644
+index 623e8e31..d94d8684 100644
 --- a/apps/ymir-sdl3/src/app/app.cpp
 +++ b/apps/ymir-sdl3/src/app/app.cpp
-@@ -1634,19 +1634,17 @@ void App::RunEmulator() {
+@@ -1644,19 +1644,17 @@ void App::RunEmulator() {
      // Track connected gamepads and player indices
      // NOTE: SDL3 has a bug with Windows raw input where new controllers are always assigned to player index 0.
      // We'll manage player indices manually instead.
@@ -27,7 +27,7 @@ index 53e0301e..95a6f618 100644
          } else {
              auto first = freePlayerIndices.begin();
              int index = *first;
-@@ -1659,6 +1657,8 @@ void App::RunEmulator() {
+@@ -1669,6 +1667,8 @@ void App::RunEmulator() {
          assert(freePlayerIndices.insert(free).second);
      };
  
@@ -36,7 +36,7 @@ index 53e0301e..95a6f618 100644
      std::array<GUIEvent, 64> evts{};
  
  #if Ymir_ENABLE_IMGUI_DEMO
-@@ -1887,30 +1887,37 @@ void App::RunEmulator() {
+@@ -1897,30 +1897,37 @@ void App::RunEmulator() {
  
              case SDL_EVENT_GAMEPAD_ADDED: //
              {
@@ -89,7 +89,7 @@ index 53e0301e..95a6f618 100644
                  break;
              }
              case SDL_EVENT_GAMEPAD_REMAPPED: [[fallthrough]];
-@@ -4903,4 +4910,55 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
+@@ -4969,4 +4976,55 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
      app->m_context.EnqueueEvent(events::emu::ReceiveMidiInput(delta, std::move(*msg)));
  }
  
@@ -146,10 +146,10 @@ index 53e0301e..95a6f618 100644
 +
  } // namespace app
 diff --git a/apps/ymir-sdl3/src/app/app.hpp b/apps/ymir-sdl3/src/app/app.hpp
-index fa213e71..1c2a8a2c 100644
+index c734a25d..33089716 100644
 --- a/apps/ymir-sdl3/src/app/app.hpp
 +++ b/apps/ymir-sdl3/src/app/app.hpp
-@@ -38,6 +38,12 @@
+@@ -41,6 +41,12 @@
  namespace app {
  
  class App {

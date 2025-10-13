@@ -4,4 +4,4 @@ config BR2_PACKAGE_CXXOPTS
 	help
 	  Lightweight C++ command line option parser.
 
-      https://github.com/jarro2783/cxxopts
+	  https://github.com/jarro2783/cxxopts

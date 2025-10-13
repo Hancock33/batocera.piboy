@@ -1,5 +1,5 @@
 diff --git a/apps/ymir-sdl3/CMakeLists.txt b/apps/ymir-sdl3/CMakeLists.txt
-index 67fea3e744..7b5734d1a8 100644
+index 67fea3e7..7b5734d1 100644
 --- a/apps/ymir-sdl3/CMakeLists.txt
 +++ b/apps/ymir-sdl3/CMakeLists.txt
 @@ -357,7 +357,7 @@ find_package(CURL REQUIRED)
