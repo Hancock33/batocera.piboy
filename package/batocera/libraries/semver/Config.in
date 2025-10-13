@@ -2,4 +2,6 @@ config BR2_PACKAGE_SEMVER
 	bool "semver"
 
 	help
-	  Lightweight C++ command line option parser.
+	  Semantic Versioning for modern C++.
+
+	  https://github.com/Neargye/semver
