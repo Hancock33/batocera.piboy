@@ -43,7 +43,7 @@ list_archive () {
         *.tar) readarray -t array < <(tar -tvf "$FILE"  | awk '{ print "FALSE"; for(i=6; i<NF; ++i) printf $i" "; print $NF; if ($1 ~ /^d/) print "DIR"; else print $3; print $4, $5; }') ;;
         *.tar.gz|*.tgz) readarray -t array < <(tar -tvzf "$FILE" | awk '{ print "FALSE"; for(i=6; i<NF; ++i) printf $i" "; print $NF; if ($1 ~ /^d/) print "DIR"; else print $3; print $4, $5; }') ;;
         *.gz) readarray -t array < <($bin7z l -ba "$FILE"  | awk '{ print "FALSE"; for(i=6; i<NF; ++i) printf $i" "; print $NF; if ($3 ~ /^D/) print "DIR"; else print $4; print $1,$2 }') ;;
-        *.tar.xz) readarray -t array < <(tar -tvJf "$FILE" | awk '{ print "FALSE"; for(i=6; i<NF; ++i) printf $i" "; print $NF; if ($1 ~ /^d/) print "DIR"; else $3; print $4, $5; }') ;; 
+        *.tar.xz) readarray -t array < <(tar -tvJf "$FILE" | awk '{ print "FALSE"; for(i=6; i<NF; ++i) printf $i" "; print $NF; if ($1 ~ /^d/) print "DIR"; else $3; print $4, $5; }') ;;
         *) return 12
     esac
 
