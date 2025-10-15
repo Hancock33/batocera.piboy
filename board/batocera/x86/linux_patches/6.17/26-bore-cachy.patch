@@ -91,7 +91,7 @@ index 000000000000..5afb5fed4e10
 +
 +#endif /* _KERNEL_SCHED_BORE_H */
 diff --git a/init/Kconfig b/init/Kconfig
-index 550ec4e79823..e33040bf00fc 100644
+index 38451dfa51a9..d06f41915cad 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -1433,6 +1433,23 @@ config CHECKPOINT_RESTORE
