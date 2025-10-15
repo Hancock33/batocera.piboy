@@ -3,8 +3,8 @@
 # wine-mono
 #
 ################################################################################
-# Version: Commits on Aug 14, 2025
-WINE_MONO_VERSION = wine-mono-10.2.0
+# Version: Commits on Oct 13, 2025
+WINE_MONO_VERSION = wine-mono-10.3.0
 WINE_MONO_SOURCE = $(WINE_MONO_VERSION)-x86.tar.xz
 WINE_MONO_SITE = https://github.com/wine-mono/wine-mono/releases/download/$(WINE_MONO_VERSION)
 
