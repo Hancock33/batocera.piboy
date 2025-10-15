@@ -14,7 +14,9 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d9db74e9065ef2382db7
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-10-15|Oct 15, 2025
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|d1281eaa864042218870616b7e7e16582562d954|Oct 15, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|d0045b158b30434c2077693d970e2167a1089e84|Oct 15, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251015|Oct 15, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|6bf2950b1683b5e0e726046284e93ca173edb322|Oct 15, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251015|Oct 15, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|182262857e4f85cfa6b4ea451fbf67ab41b03b23|Oct 15, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|37f0108d8bd8bc3d9fd920a48fc48b90db6a1172|Oct 15, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|37f0108d8bd8bc3d9fd920a48fc48b90db6a1172|Oct 15, 2025
@@ -59,9 +61,7 @@ Engines|[scummvm](http://github.com/scummvm/scummvm)|a78571655eee9c1538a0d711967
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20251011|Oct 11, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|5c320cc9d46a1a941749b3d2d080cee9f41ae51f|Oct 11, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|f5ce6d900c89292becff514c40cf12329ecfdea1|Oct 11, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251011|Oct 11, 2025
 Engines|[libserum](http://github.com/PPUC/libserum_concentrate)|v2.3.0-concentrate.1|Oct 11, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251011|Oct 11, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|d76579dba9daad6e0898997c2bec47cdba9aecf9|Oct 11, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|a78571655eee9c1538a0d711967cf4c21159221b|Oct 11, 2025
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|dd2bc88788c5934fcda4efea624cd2ce09b9d0c7|Oct 10, 2025
