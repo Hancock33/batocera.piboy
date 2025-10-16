@@ -1,8 +1,8 @@
 diff --git a/rpcs3/Input/evdev_joystick_handler.cpp b/rpcs3/Input/evdev_joystick_handler.cpp
-index 3b8677afd..99cbb106d 100644
+index a9011af5c..b3c3c7fe2 100644
 --- a/rpcs3/Input/evdev_joystick_handler.cpp
 +++ b/rpcs3/Input/evdev_joystick_handler.cpp
-@@ -749,7 +749,7 @@ std::vector<pad_list_entry> evdev_joystick_handler::list_devices()
+@@ -751,7 +751,7 @@ std::vector<pad_list_entry> evdev_joystick_handler::list_devices()
  				if (is_pad_device || is_motion_device)
  				{
  					// It's a joystick or motion device.
@@ -11,7 +11,7 @@ index 3b8677afd..99cbb106d 100644
  
  					if (unique_names.find(name) == unique_names.end())
  						unique_names.emplace(name, 1);
-@@ -794,7 +794,7 @@ std::shared_ptr<evdev_joystick_handler::EvdevDevice> evdev_joystick_handler::add
+@@ -796,7 +796,7 @@ std::shared_ptr<evdev_joystick_handler::EvdevDevice> evdev_joystick_handler::add
  				continue;
  			}
  
