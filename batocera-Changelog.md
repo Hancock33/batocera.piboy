@@ -21,18 +21,25 @@
   This improves Wifi connectivity by aligning your device with regional regulations as well as 6GHz band support.
 ### Updated
 - Azahar Plus to AZAHAR_PLUS_2123_3_A
+- Dolphin-Emu to 2509-188
+- DXX-Rebirth to May 25, 2025
+- EDuke32 to Oct 10, 2025
 - Groovy MAME to 0.281
 - Hatari to v2.6.1
+- Hurrican to Jul 26, 2025 build
 - Jazz2 to 3.4.0
 - Libretro MAME to 0.281
 - Libretro Play! to 0.71
+- OpenJK to 10th of October 2025 build
+- OpenMOHAA to v0.82.1
 - Play! to 0.71
 - RPCS3 to v0.0.38
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_11_0
 - Taradino to 20250816
 - TheXTech to v1.3.7.1-2
 - TheForceEngine to v1.22.420
-- Xemu to v0.8.106
+- Xash3D FWGS engine to Oct 17 build
+- Xemu to v0.8.108
 - Ymir to 0.2.0
 ### System
 - Bluez to 5.84
