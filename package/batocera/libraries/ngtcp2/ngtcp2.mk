@@ -3,8 +3,8 @@
 # ngtcp2
 #
 ################################################################################
-# Version: Commits on Sept 24, 2025
-NGTCP2_VERSION = v1.16.0
+# Version: Commits on Oct 17, 2025
+NGTCP2_VERSION = v1.17.0
 NGTCP2_SITE = https://github.com/ngtcp2/ngtcp2.git
 NGTCP2_SITE_METHOD = git
 NGTCP2_GIT_SUBMODULES = YES
