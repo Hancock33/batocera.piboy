@@ -33,7 +33,7 @@ class AzaharGenerator(Generator):
 
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        AzaharGenerator.writeAZAHARConfig(CONFIGS / "azaharplus-emu" / "qt-config.ini", system, playersControllers)
+        AzaharGenerator.writeAZAHARConfig(CONFIGS / "azahar-emu" / "qt-config.ini", system, playersControllers)
 
         if "squashfs" in str(rom):
             romsInDir = glob.glob(glob.escape(rom) + '/*')
@@ -45,7 +45,7 @@ class AzaharGenerator(Generator):
             "XDG_CONFIG_HOME": CONFIGS,
             "XDG_DATA_HOME": SAVES / "3ds",
             "XDG_CACHE_HOME": CACHE,
-            "XDG_RUNTIME_DIR": SAVES / "3ds" / "azaharplus-emu",
+            "XDG_RUNTIME_DIR": SAVES / "3ds" / "azahar-emu",
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
             "SDL_JOYSTICK_HIDAPI": "0"
             }
