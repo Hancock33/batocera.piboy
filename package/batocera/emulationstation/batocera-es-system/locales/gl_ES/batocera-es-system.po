@@ -4152,10 +4152,25 @@ msgctxt "game_options"
 msgid "Bottom (Default)"
 msgstr "Abaixo (predeterminado)"
 
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bottom Center"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bottom Left"
+msgstr ""
+
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Só abaixo"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bottom Right"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5158,10 +5173,20 @@ msgctxt "game_options"
 msgid "Catalan"
 msgstr "Catalán"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: pcsx2, scummvm
 msgctxt "game_options"
 msgid "Center"
 msgstr "Centro"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Center Left"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Center Right"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5516,6 +5541,17 @@ msgstr "Elixe o nivel de detalle do terreo."
 msgctxt "game_options"
 msgid "Choose the level of texture detail."
 msgstr "Elixe o nivel de detalle das texturas."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid ""
+"Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Choose the on-screen position for system messages."
+msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -12838,7 +12874,7 @@ msgctxt "game_options"
 msgid "None"
 msgstr "Ningún"
 
-#. TRANSLATION: cgenius, libretro/mame, mame/openbor7530, rtcw, supermodel
+#. TRANSLATION: cgenius, libretro/mame, mame/openbor7530, pcsx2, rtcw, ...
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Ningún (predeterminado)"
@@ -12989,6 +13025,16 @@ msgstr "RITMO ÓPTIMO DO FOTOGRAMA"
 msgctxt "game_options"
 msgid "OSD MESSAGES"
 msgstr "MENSAXES OSD"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "OSD MESSAGES POSITION"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "OSD PERFORMANCE POSITION"
+msgstr ""
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -17776,10 +17822,30 @@ msgctxt "game_options"
 msgid "Top"
 msgstr "Arriba"
 
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Top Center"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Top Center (Default)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Top Left"
+msgstr ""
+
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Só arriba"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Top Right"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
