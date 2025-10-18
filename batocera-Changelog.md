@@ -8,10 +8,13 @@
 - TheXTech update in v43 needs minimum of 1.3.7 assets, ensure you update accordingly.
 ### Hardware
 - Odin 2 Mini initial support
+- Legion Go S Controller & LED updates
 ### Added
 - LED colour control for Arm based handhelds
 - The ability to turn the controller LED's off
 - batocera-xtract for handling archives, systems with pcmanFM filemanager can use a small GUI and mouse context menus
+- in-game hotkeys configuration via emulationstation menus (and via batocera-hotkeys command)
+- dmd-play-rust is now used by default to play dmd images (performances)
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
@@ -43,13 +46,20 @@
 - Ymir to 0.2.0
 ### System
 - Bluez to 5.84
+- DXVK to 2.7.1
 - GStreamer codecs to 1.26.6
 - Linux Firmware to 20251011
 - Linux Kernel to 6.17.1
+- LabWC to 0.9.2
 - LLVM Project to 20.1.8
 - Mesa3D to 25.2.5
 - Nvidia production drivers to 580.95.05
 - Vulkan stack to 1.4.328.1
+- Wayland to 1.24.0
+- Wayland Protocols to 1.45
+- Wine-TKG to 10.16
+- Wine Proton to 10.0-2
+- WLRoots to 0.19.1
 
 # 2025/10/12 - batocera.linux 42 - Papilio Ulysses
 ### Special Notes

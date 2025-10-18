@@ -13712,24 +13712,14 @@ msgctxt "game_options"
 msgid "DXVK HUD"
 msgstr ""
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: wine
 msgctxt "game_options"
-msgid "Can increase performance for games that stress the CPU."
-msgstr ""
-
-#. TRANSLATION: mugen, wine
-msgctxt "game_options"
-msgid "ESYNC"
+msgid "Improves frame rate and responsiveness."
 msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
-msgid "Can improve frame rate and responsiveness."
-msgstr ""
-
-#. TRANSLATION: mugen, wine
-msgctxt "game_options"
-msgid "FSYNC"
+msgid "NTSYNC"
 msgstr ""
 
 #. TRANSLATION: mugen, wine
@@ -13840,6 +13830,28 @@ msgstr ""
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
+"Choose the Wayland driver mode if on a handheld device. XWayland has more "
+"compatibility."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "WAYLAND DRIVER MODE"
+msgstr ""
+
+#. TRANSLATION: wine, xemu
+msgctxt "game_options"
+msgid "Native"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "XWayland (Default)"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
 "Enable this mode if you have issue for run your game on NTFS storage (by "
 "default it is better to use LinuxFS)."
 msgstr ""
@@ -13886,7 +13898,22 @@ msgstr ""
 
 #. TRANSLATION: mugen
 msgctxt "game_options"
+msgid "Can increase performance for games that stress the CPU."
+msgstr ""
+
+#. TRANSLATION: mugen
+msgctxt "game_options"
+msgid "ESYNC"
+msgstr ""
+
+#. TRANSLATION: mugen
+msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
+msgstr ""
+
+#. TRANSLATION: mugen
+msgctxt "game_options"
+msgid "FSYNC"
 msgstr ""
 
 #. TRANSLATION: drastic
@@ -13998,11 +14025,6 @@ msgid "Stretch to full"
 msgstr ""
 
 #. TRANSLATION: xemu, yabasanshiro
-msgctxt "game_options"
-msgid "Native"
-msgstr ""
-
-#. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Enhancement."
 msgstr ""
