@@ -7,6 +7,7 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.233|Oct 18, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.169|Oct 18, 2025
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|c4c737d28985143dcb71c422258f9b0a45812317|Oct 18, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-10-18|Oct 18, 2025
+Engines|[scummvm](http://github.com/scummvm/scummvm)|135bdfae217a1483933a42b866d9071a2f521920|Oct 18, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|bd616a3779f41ebd104c9294134e6a2d269399ce|Oct 18, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|4fbd647bdbbd8b9599d730965fdf222619f223db|Oct 18, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.17|Oct 18, 2025
@@ -14,6 +15,7 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251018|Oct 18, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f75718b35a4fa443f23a44c15ab554c40d24c4c3|Oct 18, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|c9a723e37dfdd5f8ab9702ef127dd7424b5dc093|Oct 18, 2025
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|135bdfae217a1483933a42b866d9071a2f521920|Oct 18, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|7b994d965432687e194c87b347e584ddda08bfae|Oct 17, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|d1ed878446d6cf579827499b9f057fd1d4c55ac3|Oct 17, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|aad3f648c4266779fac1cc577373490c7ccec00d|Oct 17, 2025
@@ -73,12 +75,10 @@ Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|31de2a75e2187360bc55b
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|31de2a75e2187360bc55b1b43f9524779485fe8a|Oct 12, 2025
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|115efd5cfdad89fe6186ba9bfe44840c50f449d1|Oct 12, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|096c6f5195f11f673b15670533f7e86d0826255e|Oct 11, 2025
-Engines|[scummvm](http://github.com/scummvm/scummvm)|a78571655eee9c1538a0d711967cf4c21159221b|Oct 11, 2025
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20251011|Oct 11, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|5c320cc9d46a1a941749b3d2d080cee9f41ae51f|Oct 11, 2025
 Engines|[libserum](http://github.com/PPUC/libserum_concentrate)|v2.3.0-concentrate.1|Oct 11, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|d76579dba9daad6e0898997c2bec47cdba9aecf9|Oct 11, 2025
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|a78571655eee9c1538a0d711967cf4c21159221b|Oct 11, 2025
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|dd2bc88788c5934fcda4efea624cd2ce09b9d0c7|Oct 10, 2025
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|d353533e7447c23f26edf8c72cd0ef5995c459f5|Oct 10, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|262218e4fe7a66330f3c1f56f2dc8e3d15bdeb08|Oct 10, 2025

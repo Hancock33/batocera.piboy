@@ -201,7 +201,7 @@ Emulators|[libretro-reminiscence](http://github.com/libretro/REminiscence)|e80d7
 Emulators|[libretro-retro8](http://github.com/libretro/retro8)|a235ff8e3ca1b44bcf88293748d5a492c76a2c7b|Oct 21, 2024
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|4c57a761517d3d11bb8d2ce31037b17d3a85b745|Oct 17, 2025
 Emulators|[libretro-sameduck](http://github.com/LIJI32/SameBoy)|5619abdb01cee6bedb47599cdb5532c318443b52|Dec 10, 2023
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|a78571655eee9c1538a0d711967cf4c21159221b|Oct 11, 2025
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|135bdfae217a1483933a42b866d9071a2f521920|Oct 18, 2025
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|c642bbd0680b5959180a420036108893d0aec961|Oct 21, 2024
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|f9ae8fd28b13070a945a829ccf41cbf90a21d0f7|Nov 18, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|5a40cd5514e63e691e39141d64267798357a1424|Sept 08, 2025
@@ -296,7 +296,7 @@ Engines|[openbor7530](http://github.com/DCurrent/openbor)|f71c4fd95f9bbf101a758a
 Engines|[python-pygame2](http://github.com/pygame/pygame)|85fda3f719d437cf27106afae8c890e6b88ba5f5|Oct 05, 2025
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v2.4.10|Aug 28, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-10-18|Oct 18, 2025
-Engines|[scummvm](http://github.com/scummvm/scummvm)|a78571655eee9c1538a0d711967cf4c21159221b|Oct 11, 2025
+Engines|[scummvm](http://github.com/scummvm/scummvm)|135bdfae217a1483933a42b866d9071a2f521920|Oct 18, 2025
 Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|4e3c33a47607ef9e9d7ed75956b3578e76170f7f|Sep 14, 2025
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|6a9aa4cc514ce7fc7ff6e83b80629f159cff8167|Oct 16, 2025
