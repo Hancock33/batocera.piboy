@@ -1,14 +1,15 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[clk](https://github.com/TomHarte/CLK)|ad162a4e4a644e28ee630a70e6f65172301633ca|Oct 18, 2025
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|9ca1c9730f91ff5e6f1224c89a304272440e7a18|Oct 18, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|a2913abeb9b25f73d54f1bd179ce877fa5531a77|Oct 18, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|aa980a44cda4314a182af8628a97b295480728a2|Oct 18, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|d24db9c3cb39243cbbeac3f6e7b51a0003fc7064|Oct 18, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|e281622b56c6d60c02daff85950e516686da3840|Oct 18, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.233|Oct 18, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|42be86552ff4a036338b53e6626f650fa2a82e2e|Oct 18, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|0c4e7fc178d1a96497ac36ad4471cd8821181cf9|Oct 18, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.169|Oct 18, 2025
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|c4c737d28985143dcb71c422258f9b0a45812317|Oct 18, 2025
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|a35532b110496bda71f6aaeebc72d1a039f97a4d|Oct 18, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-10-18|Oct 18, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|135bdfae217a1483933a42b866d9071a2f521920|Oct 18, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|25134fca481c52c523d22cc111529865de132899|Oct 18, 2025
@@ -19,10 +20,13 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251018|Oct 18, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f75718b35a4fa443f23a44c15ab554c40d24c4c3|Oct 18, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|c9a723e37dfdd5f8ab9702ef127dd7424b5dc093|Oct 18, 2025
+Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|9554e05ebe8ca0816649f930cbc9de93d6466d88|Oct 18, 2025
+Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|f7d7e1050fbd4b87fed467552c4ad82ef27a1d85|Oct 18, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|fe0bdab8a04eedb912634d89ad8137de75529cff|Oct 18, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|42be86552ff4a036338b53e6626f650fa2a82e2e|Oct 18, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|135bdfae217a1483933a42b866d9071a2f521920|Oct 18, 2025
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|7b994d965432687e194c87b347e584ddda08bfae|Oct 17, 2025
+Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|28643f63dd8d95dec49fb7241d3d35e3d037e14a|Oct 18, 2025
+Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|f97ff186a86cf718608dfd332defedf83a27c8eb|Oct 18, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|d1ed878446d6cf579827499b9f057fd1d4c55ac3|Oct 17, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|aad3f648c4266779fac1cc577373490c7ccec00d|Oct 17, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|033dbae8aaf247293ef68dc98993c2f6604a0ee9|Oct 17, 2025
@@ -44,8 +48,6 @@ Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|ecdfaf2e855d1
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|d1ed878446d6cf579827499b9f057fd1d4c55ac3|Oct 17, 2025
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|4c57a761517d3d11bb8d2ce31037b17d3a85b745|Oct 17, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|704f2f19db20601c1fd3596cfb9d4d4db59f729f|Oct 17, 2025
-Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|536d81193091d036becfd9f53a58d7a01dfcafdf|Oct 17, 2025
-Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|c76376c960323d912cf1b3d6d4fb3c5427cd0b7b|Oct 17, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|665c5fa864e28eeb7b27e0f71f5ce3c694ac5956|Oct 16, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|665c5fa864e28eeb7b27e0f71f5ce3c694ac5956|Oct 16, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|5319fe68f0c9f0a65469638117d270f3fee663f8|Oct 16, 2025
@@ -232,12 +234,10 @@ Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|e9f8ac034dd
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|b84d0605e847e07657a44a1a11374a03a6e8a489|Jul 26, 2025
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|9933cbe887aaa2c75e723ba6322942fec2b838e7|Jul 25, 2025
 Utils|[clevis](http://github.com/latchset/clevis)|2ad7027b7182b8f46404f8ec0735a83738f7ca7f|Jul 25, 2025
-Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|3a7168f179e0587526e719d1ac2a8c91138901b8|Jul 25, 2025
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.1|Jul 21, 2025
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|a81b74cf210878a4292d39aac15d98fb9a371d79|Jul 21, 2025
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|edc6da073ec4e6120edfe6d063e49415f21bbdf4|Jul 20, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|b683c2f712a6647c69326961a90cf1990e25ccea|Jul 20, 2025
-Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|91b51c4663a216086b4e2cdbe23733f2a58be5b0|Jul 17, 2025
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|35844a263d06655b806f18158a85abca75c99005|Jul 17, 2025
 Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genesis-Plus-GX-Expanded-Rom-Size)|258749423d02e9cba34ef4221c91ea3e01cef126|Jul 16, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
@@ -576,4 +576,5 @@ Libraries|[python-proxy-tools](https://files.pythonhosted.org/packages/f2/cf/77d
 Utils|[xxd](http://github.com/ConorOG/xxd)|084dc9dec6b6a6d048934916aa9a539d49ba898d|Jul 25, 2013
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
+Hardware|[dmd-play-rust](http://github.com/batocera-linux/dmd-play-rust)|912cd34b1d1895d7913eb60fc653f6c6f60d4f2c|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
