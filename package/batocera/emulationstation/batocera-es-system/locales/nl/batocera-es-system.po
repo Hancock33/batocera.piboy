@@ -5037,11 +5037,6 @@ msgctxt "game_options"
 msgid "Can fix slowdown. Only works on some drivers."
 msgstr "Kan vertraging verhelpen. Werkt alleen op sommige drivers."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Can improve frame rate and responsiveness."
-msgstr "Kan frame rate en reactietijd verbeteren."
-
 #. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
@@ -5061,7 +5056,7 @@ msgstr ""
 "Kan de videoprestaties verbeteren. Niet gebruiken met ActionMax-spellen of "
 "scanlines."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can increase performance for games that stress the CPU."
 msgstr "Kan prestatie verhogen voor spellen die de CPU veel belasten."
@@ -5403,6 +5398,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
 msgstr "Kies de Parallel N64 grafische plug-in."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Choose the Wayland driver mode if on a handheld device. XWayland has more "
+"compatibility."
+msgstr ""
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -7168,7 +7170,7 @@ msgctxt "game_options"
 msgid "EST5EDT"
 msgstr "EST5EDT"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "ESYNC"
 msgstr "ESYNC"
@@ -8429,7 +8431,7 @@ msgctxt "game_options"
 msgid "FREE PLAY"
 msgstr "GRATIS SPELEN"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "FSYNC"
 msgstr "FSYNC"
@@ -10418,6 +10420,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Verbeterd helderheid van verre textures."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Improves frame rate and responsiveness."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12563,6 +12570,11 @@ msgctxt "game_options"
 msgid "NTSC-U/C"
 msgstr "NTSC-U/C"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "NTSYNC"
+msgstr ""
+
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "NULL"
@@ -12610,7 +12622,7 @@ msgstr ""
 "Nat voor toegang tot internet vanaf de Xemu-machine. UDP voor systeemlink. "
 "Standaard (Auto) schakelt netwerktoegang uit."
 
-#. TRANSLATION: xemu, yabasanshiro
+#. TRANSLATION: wine, xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr "Native"
@@ -19048,6 +19060,11 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "WAARSCHUW VOOR NIET-ONDERSTEUNDE FUNCTIES"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "WAYLAND DRIVER MODE"
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON PICKUP"
@@ -19384,6 +19401,11 @@ msgstr "XBLA licentie aan (Standaard)"
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
 msgstr "XBOX LIVE ARCADE"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "XWayland (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -20049,6 +20071,10 @@ msgstr "geel/blauw"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr ""
 #~ "Kan gebruikt worden om kleuren van specifieke beeldschermen te simuleren."
+
+#~ msgctxt "game_options"
+#~ msgid "Can improve frame rate and responsiveness."
+#~ msgstr "Kan frame rate en reactietijd verbeteren."
 
 #~ msgctxt "game_options"
 #~ msgid ""

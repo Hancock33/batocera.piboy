@@ -4990,11 +4990,6 @@ msgctxt "game_options"
 msgid "Can fix slowdown. Only works on some drivers."
 msgstr ""
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Can improve frame rate and responsiveness."
-msgstr ""
-
 #. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
@@ -5011,7 +5006,7 @@ msgid ""
 "Can improve video performance. Do not use with ActionMax games or scanlines."
 msgstr ""
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can increase performance for games that stress the CPU."
 msgstr ""
@@ -5340,6 +5335,13 @@ msgstr ""
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Choose the Wayland driver mode if on a handheld device. XWayland has more "
+"compatibility."
 msgstr ""
 
 #. TRANSLATION: openjkdf2
@@ -7058,7 +7060,7 @@ msgctxt "game_options"
 msgid "EST5EDT"
 msgstr ""
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "ESYNC"
 msgstr ""
@@ -8244,7 +8246,7 @@ msgctxt "game_options"
 msgid "FREE PLAY"
 msgstr ""
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "FSYNC"
 msgstr ""
@@ -10169,6 +10171,11 @@ msgstr ""
 #. TRANSLATION: dolphin, dolphin_triforce, dxx-rebirth, eden, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Improves frame rate and responsiveness."
 msgstr ""
 
 #. TRANSLATION: shared
@@ -12275,6 +12282,11 @@ msgctxt "game_options"
 msgid "NTSC-U/C"
 msgstr ""
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "NTSYNC"
+msgstr ""
+
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "NULL"
@@ -12318,7 +12330,7 @@ msgid ""
 "(Auto) disables network access."
 msgstr ""
 
-#. TRANSLATION: xemu, yabasanshiro
+#. TRANSLATION: wine, xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr ""
@@ -18580,6 +18592,11 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr ""
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "WAYLAND DRIVER MODE"
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON PICKUP"
@@ -18903,6 +18920,11 @@ msgstr ""
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "XWayland (Default)"
 msgstr ""
 
 #. TRANSLATION: libretro/dice

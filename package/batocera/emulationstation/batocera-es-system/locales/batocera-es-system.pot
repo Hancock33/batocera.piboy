@@ -13839,7 +13839,7 @@ msgctxt "game_options"
 msgid "WAYLAND DRIVER MODE"
 msgstr ""
 
-#. TRANSLATION: wine, xemu
+#. TRANSLATION: wine, xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr ""
@@ -14024,7 +14024,7 @@ msgctxt "game_options"
 msgid "Stretch to full"
 msgstr ""
 
-#. TRANSLATION: xemu, yabasanshiro
+#. TRANSLATION: xemu
 msgctxt "game_options"
 msgid "Enhancement."
 msgstr ""

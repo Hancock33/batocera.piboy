@@ -5024,11 +5024,6 @@ msgctxt "game_options"
 msgid "Can fix slowdown. Only works on some drivers."
 msgstr "Có thể giảm làm chậm. Chỉ chạy trên một số trình điều khiển."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Can improve frame rate and responsiveness."
-msgstr "Có thể cải thiện tốc độ khung hình và khả năng phản hồi."
-
 #. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
@@ -5048,7 +5043,7 @@ msgstr ""
 "Có thể cải thiện hiệu suất video. Không sử dụng với các trò chơi ActionMax "
 "hoặc scanlines."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can increase performance for games that stress the CPU."
 msgstr "Có thể tăng hiệu suất cho game nhưng gây áp lực cho CPU."
@@ -5385,6 +5380,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
 msgstr "Chọn plugin đồ họa N64 song song."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Choose the Wayland driver mode if on a handheld device. XWayland has more "
+"compatibility."
+msgstr ""
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -7144,7 +7146,7 @@ msgctxt "game_options"
 msgid "EST5EDT"
 msgstr "EST5EDT"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "ESYNC"
 msgstr "ESYNC"
@@ -8394,7 +8396,7 @@ msgctxt "game_options"
 msgid "FREE PLAY"
 msgstr "FREE PLAY"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "FSYNC"
 msgstr "FSYNC"
@@ -10361,6 +10363,11 @@ msgstr "Cải thiện sự rõ ràng của kết cấu xa khi mip-mapping đư�
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Cải thiện độ rõ nét của kết cấu ở xa."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Improves frame rate and responsiveness."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12500,6 +12507,11 @@ msgctxt "game_options"
 msgid "NTSC-U/C"
 msgstr "NTSC-U/C"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "NTSYNC"
+msgstr ""
+
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "NULL"
@@ -12547,7 +12559,7 @@ msgstr ""
 "Nat để truy cập internet từ máy xemu. Udp cho Liên kết hệ thống. Mặc định "
 "(Tự động) vô hiệu hóa truy cập mạng."
 
-#. TRANSLATION: xemu, yabasanshiro
+#. TRANSLATION: wine, xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr "Tự nhiên"
@@ -18936,6 +18948,11 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "CẢNH BÁO VỀ TÍNH NĂNG KHÔNG ĐƯỢC HỖ TRỢ"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "WAYLAND DRIVER MODE"
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON PICKUP"
@@ -19263,6 +19280,11 @@ msgstr "Đã bật giấy phép XBLA (Mặc định)"
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
 msgstr "XBOX LIVE ARCADE"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "XWayland (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -19958,6 +19980,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "Có thể được sử dụng để mô phỏng màu sắc của màn hình cụ thể."
+
+#~ msgctxt "game_options"
+#~ msgid "Can improve frame rate and responsiveness."
+#~ msgstr "Có thể cải thiện tốc độ khung hình và khả năng phản hồi."
 
 #~ msgctxt "keys_files"
 #~ msgid "Change Camera Angle"

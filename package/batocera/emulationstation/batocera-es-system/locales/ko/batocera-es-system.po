@@ -5014,11 +5014,6 @@ msgctxt "game_options"
 msgid "Can fix slowdown. Only works on some drivers."
 msgstr "속도 저하를 수정할 수 있습니다. 일부 드라이버에서만 작동합니다."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Can improve frame rate and responsiveness."
-msgstr "프레임 속도와 응답성을 향상시킬 수 있습니다."
-
 #. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
@@ -5037,7 +5032,7 @@ msgstr ""
 "비디오 성능을 향상시킬 수 있습니다. 액션 맥스 게임 또는 스캔라인과 함께 사용"
 "하지 마십시오."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can increase performance for games that stress the CPU."
 msgstr "CPU에 부하를 주는 게임의 성능을 향상시킬 수 있습니다."
@@ -5377,6 +5372,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
 msgstr "Parallel N64 그래픽 플러그인을 선택하세요."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Choose the Wayland driver mode if on a handheld device. XWayland has more "
+"compatibility."
+msgstr ""
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -7130,7 +7132,7 @@ msgctxt "game_options"
 msgid "EST5EDT"
 msgstr "EST5EDT"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "ESYNC"
 msgstr "ESYNC"
@@ -8362,7 +8364,7 @@ msgctxt "game_options"
 msgid "FREE PLAY"
 msgstr "무료 플레이"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "FSYNC"
 msgstr "FSYNC"
@@ -10331,6 +10333,11 @@ msgstr "밉매핑이 활성화되면 멀리 있는 텍스처의 선명도가 향
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "멀리 있는 텍스처의 선명도를 향상시킵니다."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Improves frame rate and responsiveness."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12466,6 +12473,11 @@ msgctxt "game_options"
 msgid "NTSC-U/C"
 msgstr "NTSC-U/C"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "NTSYNC"
+msgstr ""
+
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "NULL"
@@ -12513,7 +12525,7 @@ msgstr ""
 "Nat은 xemu 장치에서 인터넷에 접속합니다. 시스템 링크용 UDP입니다. 기본값 (자"
 "동)은 네트워크 접속을 비활성화합니다."
 
-#. TRANSLATION: xemu, yabasanshiro
+#. TRANSLATION: wine, xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr "원본"
@@ -18887,6 +18899,11 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "지원되지 않는 기능에 대한 경고"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "WAYLAND DRIVER MODE"
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON PICKUP"
@@ -19218,6 +19235,11 @@ msgstr "XBLA 라이선스 활성화 (기본)"
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
 msgstr "엑스박스 라이브 아케이드"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "XWayland (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -19895,6 +19917,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "특정 디스플레이의 색상을 시뮬레이션하는 데 사용할 수 있습니다."
+
+#~ msgctxt "game_options"
+#~ msgid "Can improve frame rate and responsiveness."
+#~ msgstr "프레임 속도와 응답성을 향상시킬 수 있습니다."
 
 #~ msgctxt "game_options"
 #~ msgid ""
