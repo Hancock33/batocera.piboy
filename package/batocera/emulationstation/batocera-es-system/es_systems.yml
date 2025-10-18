@@ -1461,6 +1461,7 @@ colecovision:
     libretro:
       bluemsx:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BLUEMSX] }
       gearcoleco:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GEARCOLECO] }
+      jollycv:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_JOLLYCV] }
     openmsx:
       openmsx:          { requireAnyOf: [BR2_PACKAGE_OPENMSX] }
     clk:
@@ -6782,6 +6783,7 @@ crvision:
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+      jollycv:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_JOLLYCV] }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en:           |

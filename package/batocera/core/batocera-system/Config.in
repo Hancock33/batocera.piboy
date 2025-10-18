@@ -1109,6 +1109,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_BLUEMSX                     # ALL
     select BR2_PACKAGE_LIBRETRO_FMSX                        # ALL
     select BR2_PACKAGE_LIBRETRO_GEARCOLECO                  # ALL
+    select BR2_PACKAGE_LIBRETRO_JOLLYCV                     # ALL
     select BR2_PACKAGE_OPENMSX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Thomson 8-bit
