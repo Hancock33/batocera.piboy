@@ -30,7 +30,7 @@ def read_hotkey_mapping(hotkey_mapping_file: Path):
     for k in non_game_hotkeys:
         if k in by_keys:
             del by_keys["KEY_FILE"]
-    
+
     by_names = {}
     for m in by_keys:
         by_names[by_keys[m]] = m
@@ -85,7 +85,7 @@ def list_hotkeys_xml(config: dict, default_config: dict, hotkeys_mapping: dict):
                 default_action_name = hotkeys_mapping["by_keys"][default_keys[btn]["action"]]
 
         print("  <hotkey button=\"{}\" action=\"{}\" default=\"{}\" />".format(btn, action_name, default_action_name))
-        
+
     print("</hotkeys>")
 
 def list_hotkeys_text(config: dict, default_config: dict, hotkeys_mapping: dict):
@@ -164,7 +164,7 @@ def update_hotkeys(config: dict, new_keys: dict, user_config_file: Path, default
 def list_values(hotkeys_mapping):
     for key in sorted(hotkeys_mapping["by_names"]):
         print(key)
-        
+
 parser = argparse.ArgumentParser(prog="batocera-hotkeys")
 parser.add_argument("--values", action="store_true", help="list possible values. none and default can be used too.")
 parser.add_argument("--start", type=str, help="key for hotkey+start")

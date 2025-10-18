@@ -74,7 +74,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
     # Initialize the global state with the initial controller list
     with _player_controllers_lock:
         _active_player_controllers = list(player_controllers)
-    
+
     # Start the background monitor thread.
     monitor_thread = threading.Thread(target=_controller_monitor_thread, daemon=True)
 
@@ -455,7 +455,7 @@ def _reconfigure_evmapy_on_the_fly():
             return
 
         _logger.info(">>> --- STARTING EVMAPY RECONFIGURATION ---")
-        
+
         valid_controllers = [c for c in _active_player_controllers if c is not None]
         _logger.info(f">>> Found {len(valid_controllers)} valid controllers to configure.")
         for c in valid_controllers:
@@ -469,14 +469,14 @@ def _reconfigure_evmapy_on_the_fly():
             controllers=deepcopy(valid_controllers),
             guns=_evmapy_instance.guns
         )
-        
+
         _evmapy_instance = new_evmapy_instance
-        
+
         subprocess.call(['batocera-evmapy', 'stop'])
         time.sleep(0.5)
         _evmapy_instance._evmapy__prepare()
         subprocess.call(['batocera-evmapy', 'start'])
-        
+
         _logger.info(">>> --- EVMAPY RECONFIGURATION COMPLETE ---")
 
 
@@ -485,7 +485,7 @@ def _controller_monitor_thread():
     # Uses pysdl2 to reliably get controller GUIDs and paths, then intelligently "revives"
     # the original controller object to preserve player order without disrupting the emulator.
     global _active_player_controllers
-    
+
     initial_controllers_snapshot = []
     with _player_controllers_lock:
         initial_controllers_snapshot = deepcopy(_active_player_controllers)
@@ -516,7 +516,7 @@ def _controller_monitor_thread():
 
         _logger.info(f"--- Joystick Event Detected: {device.action} on {device.sys_path} ---")
         reconfigure_needed = False
-        
+
         sdl2.SDL_JoystickUpdate()
         online_controllers_map = {}
         for i in range(sdl2.SDL_NumJoysticks()):
@@ -525,20 +525,20 @@ def _controller_monitor_thread():
                 guid_str_buffer = (ctypes.c_char * 33)()
                 sdl2.SDL_JoystickGetGUIDString(guid_struct, guid_str_buffer, 33)
                 guid = guid_str_buffer.value.decode('utf-8')
-                
+
                 path_bytes = sdl2.SDL_JoystickPathForIndex(i)
                 path = path_bytes.decode('utf-8') if path_bytes else None
-                
+
                 if guid and path:
                     online_controllers_map[guid] = path
             except Exception as e:
                 _logger.warning(f"Error while querying joystick index {i} with pysdl2: {e}")
-        
+
         _logger.info(f">>> [Check 1] Pysdl2 scan found online controllers: {online_controllers_map}")
-        
+
         with _player_controllers_lock:
             new_active_controllers = [None] * len(initial_controllers_snapshot)
-            
+
             for i, initial_controller in enumerate(initial_controllers_snapshot):
                 if initial_controller and initial_controller.guid in online_controllers_map:
                     new_path = online_controllers_map[initial_controller.guid]
@@ -549,7 +549,7 @@ def _controller_monitor_thread():
 
             current_paths = [c.device_path if c else None for c in _active_player_controllers]
             new_paths = [c.device_path if c else None for c in new_active_controllers]
-            
+
             if current_paths != new_paths:
                 _logger.info(f">>> [Check 2] Controller state changed. Old Paths: {current_paths}. New Paths: {new_paths}")
                 _active_player_controllers = new_active_controllers
@@ -558,7 +558,7 @@ def _controller_monitor_thread():
                 _logger.info(">>> [Check 2] No change in assigned controller paths detected.")
 
         if reconfigure_needed:
-            time.sleep(1) 
+            time.sleep(1)
             _reconfigure_evmapy_on_the_fly()
 
     if we_initialized_sdl:
