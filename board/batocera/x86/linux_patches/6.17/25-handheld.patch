@@ -8345,19 +8345,6 @@ index 000000000000..a60fa7db9141
 +MODULE_AUTHOR("Andrey Smirnov <andrew.smirnov@gmail.com>");
 +MODULE_DESCRIPTION("Steam Deck EC MFD core driver");
 +MODULE_LICENSE("GPL");
-diff --git a/drivers/net/wireless/ath/ath11k/core.c b/drivers/net/wireless/ath/ath11k/core.c
-index d49353b6b2e7..baf20e01134f 100644
---- a/drivers/net/wireless/ath/ath11k/core.c
-+++ b/drivers/net/wireless/ath/ath11k/core.c
-@@ -734,7 +734,7 @@ static const struct ath11k_hw_params ath11k_hw_params[] = {
- 		.name = "qca2066 hw2.1",
- 		.hw_rev = ATH11K_HW_QCA2066_HW21,
- 		.fw = {
--			.dir = "QCA2066/hw2.1",
-+			.dir = "QCA206X/hw2.1",
- 			.board_size = 256 * 1024,
- 			.cal_offset = 128 * 1024,
- 		},
 diff --git a/drivers/net/wireless/ath/ath11k/mhi.c b/drivers/net/wireless/ath/ath11k/mhi.c
 index acd76e9392d3..c5dc776b2364 100644
 --- a/drivers/net/wireless/ath/ath11k/mhi.c
