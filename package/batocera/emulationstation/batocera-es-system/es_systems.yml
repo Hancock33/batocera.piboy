@@ -1,3 +1,4 @@
+
 archimedes:
   name:                 Archimedes
   manufacturer:         Acorn Computers
@@ -2951,7 +2952,7 @@ tg-cd:
   manufacturer:         Nintendo
   release:              2011
   hardware:             portable
-  extensions:           [3ds, 3dsx, app, axf, cci, cxi, elf, squashfs]
+  extensions:           [app, axf, cci, cia, cxi, elf, squashfs, zcci, zcia, zcxi]
   emulators:
     azahar:
       azahar:           { requireAnyOf: [BR2_PACKAGE_AZAHAR]            }
