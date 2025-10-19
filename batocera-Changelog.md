@@ -6,6 +6,8 @@
 - The ability to use a custom.sh script is deprecated in this version. If you already used such a script, then it will be one time transformed into a service.
   Please use the services for future scripts and refer to our [Wikipedia](https://wiki.batocera.org/scripting_services_rules_examples)
 - TheXTech update in v43 needs minimum of 1.3.7 assets, ensure you update accordingly.
+- Azahar Plus has been replaced with the source project Azahar.
+  3DS roms will need to be decrypted.
 ### Hardware
 - Odin 2 Mini initial support
 - Legion Go S Controller & LED updates
@@ -15,6 +17,8 @@
 - batocera-xtract for handling archives, systems with pcmanFM filemanager can use a small GUI and mouse context menus
 - in-game hotkeys configuration via emulationstation menus (and via batocera-hotkeys command)
 - dmd-play-rust is now used by default to play dmd images (performances)
+- New steering wheel support:
+ - Logitech Formula Vibration Feedback
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
