@@ -8,7 +8,7 @@ Emulators|[hatari](http://github.com/hatari/hatari)|7dfc48b181b3b887c1089b0b95fa
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|54e6d04f9a78c984e89ab8ba04373594f2c7c109|Oct 19, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.170|Oct 19, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45795|Oct 19, 2025
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|87192812c34cedcc67e0ca180cbfe58c5d76c93b|Oct 19, 2025
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d81f67ca5c4b13a750f8852cd79dcf5770f8bfc5|Oct 19, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-10-19|Oct 19, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|2db2532092029ab62575bbec1fb560d7839ff9cb|Oct 19, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|ad76b14f9296951c5bcec58808bf95aa50e48772|Oct 19, 2025

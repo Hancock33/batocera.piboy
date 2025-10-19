@@ -278,7 +278,7 @@ Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|2ef8a9aca179c638abb3d52eb7643bfe2dec068d|Oct 16, 2025
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|31de2a75e2187360bc55b1b43f9524779485fe8a|Oct 12, 2025
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|87192812c34cedcc67e0ca180cbfe58c5d76c93b|Oct 19, 2025
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d81f67ca5c4b13a750f8852cd79dcf5770f8bfc5|Oct 19, 2025
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|v0.10.0|Aug 26, 2025
 Engines|[libdof](http://github.com/jsm174/libdof)|2711a23f7ec1085448f944145e0d63b7ab792033|Sept 28, 2025
