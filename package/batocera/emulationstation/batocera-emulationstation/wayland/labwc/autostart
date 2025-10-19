@@ -3,7 +3,7 @@
 
 # Poll wlr-randr until it succeeds, which proves the compositor is ready.
 # Add a 5s timeout to prevent an infinite loop if something is wrong.
-timeout=5 
+timeout=5
 waited=0
 while ! wlr-randr > /dev/null 2>&1; do
   sleep 0.1

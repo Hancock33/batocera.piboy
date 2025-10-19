@@ -5,12 +5,12 @@ BOOTCONF="/boot/batocera-boot.conf"
 _wait_for_display_server() {
     local timeout=5
     local waited=0
-    
+
     local display_mode
     while [ -z "$display_mode" ]; do
         display_mode=$(batocera-resolution getDisplayMode 2>/dev/null)
         if [ -n "$display_mode" ]; then break; fi
-        
+
         sleep 0.1
         waited=$(echo "$waited + 0.1" | bc)
         if [ "$(echo "$waited > $timeout" | bc)" -eq 1 ]; then
@@ -57,10 +57,10 @@ case "$1" in
             # The wait function failed and logged the error, so we exit.
             exit 1
         fi
-        
+
         # Now that we know the display server is ready, it's safe to proceed.
         echo "Resume: Display server is ready. Applying touchscreen settings." >> /userdata/system/logs/display.log
-        
+
         CURRENT_ROTATION=$(batocera-resolution getRotation)
         if [ "${CURRENT_ROTATION}" != "0" ]; then
             bootresolution="$(batocera-settings-get-master -f "$BOOTCONF" es.resolution)"
