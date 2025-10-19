@@ -189,7 +189,7 @@ Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|228c14e10e9a8
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|975cdafb613e84e305f87b43e70d1e19df7e60e0|May 31, 2025
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|19095803f1434eb980db6e4004187a4b786e20b6|May 10, 2025
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|699391814b3cb16508b190c9432c5e0dde1ddcf7|Oct 19, 2025
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|54e6d04f9a78c984e89ab8ba04373594f2c7c109|Oct 19, 2025
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|b3e5f8b2e8855f9c6fc7ff7a0036e4e61379177d|Dec 27, 2024
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|acae250da8d98b8b9707cd499e2a0bf6d8500652|Oct 21, 2024
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|9485a53fa5aa2bff17e04518116107f81a8c82e3|Sept 28, 2025
@@ -251,7 +251,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|aad3f648c4266779fac1cc577
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.233|Oct 18, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|2180be50f804952f94ce848fab8d3f8b6d76d027|Oct 02, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|699391814b3cb16508b190c9432c5e0dde1ddcf7|Oct 19, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|54e6d04f9a78c984e89ab8ba04373594f2c7c109|Oct 19, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|2d24ef2972a709f870cc3f73853158fa2376f37d|May 23, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|2d1f5070ee1b9e337f31e9a45cfe9f8e2357bb40|Oct 17, 2025
@@ -278,7 +278,7 @@ Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|2ef8a9aca179c638abb3d52eb7643bfe2dec068d|Oct 16, 2025
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|31de2a75e2187360bc55b1b43f9524779485fe8a|Oct 12, 2025
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|a91333ed348b71c9bb856b6b47934f3093c9dd94|Oct 19, 2025
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|87192812c34cedcc67e0ca180cbfe58c5d76c93b|Oct 19, 2025
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|v0.10.0|Aug 26, 2025
 Engines|[libdof](http://github.com/jsm174/libdof)|2711a23f7ec1085448f944145e0d63b7ab792033|Sept 28, 2025
@@ -433,7 +433,7 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|087860aee3ec7b85a86004378e2edc6fd5092
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|aa4dbe72c9f7a6297a68ef4edce70a105cbd0f4c|Oct 19, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|2db2532092029ab62575bbec1fb560d7839ff9cb|Oct 19, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|fa14e0ab1417303455ca3b716a5ad545fb132d4a|Sept 20, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
