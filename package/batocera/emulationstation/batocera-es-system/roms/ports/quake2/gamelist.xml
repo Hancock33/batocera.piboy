@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gameList>
   <game>
     <path>./rogue/Ground Zero.game</path>
@@ -16,7 +16,7 @@
   <game>
     <path>./baseq2/Quake II.game</path>
     <name>Quake 2</name>
-    <desc>A sequel in name only, this follow up to id’s 1996 Quake, is a first-person shooter revolving around the Earth-Strogg war. The Strogg alien race threatens the Earth, but Earth has launched a counter-offensive, Operation Alien Overlord. Overlord takes the battle to the Strogg homeworld with the ultimate objective of securing their capital city and killing their ruler. As a FPS, Quake II contains a variety of weapons including the fall back Blaster, the Railgun, and the secret BFG10K. Health, armor, and ammunition pick-ups can be found during levels, as can the classic Quake’s Quad Damage power-up. Game play involves mowing down alien opponents as the player progresses through levels, completing in-game objectives. Quake II also comes with multiplayer support for Deathmatches.</desc>
+    <desc>A sequel in name only, this follow up to id's 1996 Quake, is a first-person shooter revolving around the Earth-Strogg war. The Strogg alien race threatens the Earth, but Earth has launched a counter-offensive, Operation Alien Overlord. Overlord takes the battle to the Strogg homeworld with the ultimate objective of securing their capital city and killing their ruler. As a FPS, Quake II contains a variety of weapons including the fall back Blaster, the Railgun, and the secret BFG10K. Health, armor, and ammunition pick-ups can be found during levels, as can the classic Quake's Quad Damage power-up. Game play involves mowing down alien opponents as the player progresses through levels, completing in-game objectives. Quake II also comes with multiplayer support for Deathmatches.</desc>
     <rating>0.6</rating>
     <releasedate>19990930T000000</releasedate>
     <developer>Activision</developer>
