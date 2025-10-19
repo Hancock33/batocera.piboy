@@ -159,7 +159,7 @@ index 28144371a0f1..765d50b0d9df 100644
  			* 0 - False,
  			* 1 - True
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 5a7a83c411e9..cedcbc99cf07 100644
+index e92c0056e4e0..2e6b508babd8 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -2384,6 +2384,9 @@
@@ -286,7 +286,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 530f3ef8528e..5cc3c57ac9e2 100644
+index 6b64777787a4..688c5133bd45 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -3045,10 +3045,10 @@ index 2c5c228408bf..918e2bebfe78 100644
  	  This driver adds a CPUFreq driver which utilizes a fine grain
  	  processor performance frequency control range instead of legacy
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index 0d5d283a5429..cd47a0f0c842 100644
+index fc02a3542f65..3d0a8db2f425 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -3950,6 +3950,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3952,6 +3952,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -3123,10 +3123,10 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 6675119b987e..a3d003168b17 100644
+index 35d6337addec..25e15d690e2f 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -4668,7 +4668,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4672,7 +4672,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -27521,7 +27521,7 @@ index c32425b5d011..f55d1e59a63b 100644
  #define HID_REPORT_ID(rep) \
  	.report_type = (rep)
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index c6794d0e24eb..98ea9a40ec13 100644
+index f23dd28f193f..75497c1dcbbf 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
 @@ -194,6 +194,14 @@ static inline void __mm_zero_struct_page(struct page *page)
@@ -28171,7 +28171,7 @@ index 54ea59ff8fbe..18f87e0dd137 100644
  	help
  	  This option turns the kernel into a real-time kernel by replacing
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 6ca8689a83b5..8100984e11e6 100644
+index bb86c57cc0d9..1db319e89543 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -107,6 +107,10 @@
@@ -28430,7 +28430,7 @@ index bf021b31c7ec..cd1c1ece9888 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 9c38a95e9f09..4bc77b92d649 100644
+index fceaf965f264..e51e04b32544 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -63,7 +63,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -28486,7 +28486,7 @@ index 3e248d1c3969..4fe0b14d8d73 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index d1d037f97c5f..caabeb362291 100644
+index 09241bb7663e..ad3dbc00e32f 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -274,7 +274,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -28525,10 +28525,10 @@ index b74ebe865dd9..cc881058efe0 100644
  	 * Right now other parts of the system means that we
  	 * _really_ don't want to cluster much more
 diff --git a/mm/util.c b/mm/util.c
-index f814e6a59ab1..a84d4f4a6195 100644
+index 98d301875b75..a351aa09df8d 100644
 --- a/mm/util.c
 +++ b/mm/util.c
-@@ -858,6 +858,40 @@ static const struct ctl_table util_sysctl_table[] = {
+@@ -859,6 +859,40 @@ static const struct ctl_table util_sysctl_table[] = {
  		.mode		= 0644,
  		.proc_handler	= proc_doulongvec_minmax,
  	},
@@ -28878,10 +28878,10 @@ index e01492234b0b..27893b774e08 100644
  	.undo_cwnd = bpf_tcp_ca_undo_cwnd,
  	.sndbuf_expand = bpf_tcp_ca_sndbuf_expand,
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 89040007c7b7..ce38780d3b32 100644
+index ba36f558f144..fda4c8deb5d8 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3441,6 +3441,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3444,6 +3444,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tp->rx_opt.dsack = 0;
  	tp->rx_opt.num_sacks = 0;
  	tp->rcv_ooopack = 0;
@@ -28889,7 +28889,7 @@ index 89040007c7b7..ce38780d3b32 100644
  
  
  	/* Clean up fastopen related fields */
-@@ -4197,6 +4198,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
+@@ -4200,6 +4201,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
  		info->tcpi_options |= TCPI_OPT_ECN;
  	if (tp->ecn_flags & TCP_ECN_SEEN)
  		info->tcpi_options |= TCPI_OPT_ECN_SEEN;
@@ -31557,7 +31557,7 @@ index df758adbb445..e98e5dbc050e 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 64f93668a845..9d87b9ce3c34 100644
+index a88e82f7ec48..37cf722b6a0a 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -381,7 +381,7 @@ static void tcp_data_ecn_check(struct sock *sk, const struct sk_buff *skb)

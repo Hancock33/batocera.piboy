@@ -84,10 +84,10 @@ index 205d83ac069f..b3a85aa3c476 100644
  
  		/* Load the firmware into BHIE vec table */
 diff --git a/drivers/bus/mhi/host/init.c b/drivers/bus/mhi/host/init.c
-index 7f72aab38ce9..263da546f656 100644
+index 099be8dd1900..5a21c8f9b105 100644
 --- a/drivers/bus/mhi/host/init.c
 +++ b/drivers/bus/mhi/host/init.c
-@@ -1173,8 +1173,9 @@ int mhi_prepare_for_power_up(struct mhi_controller *mhi_cntrl)
+@@ -1172,8 +1172,9 @@ int mhi_prepare_for_power_up(struct mhi_controller *mhi_cntrl)
  		/*
  		 * Allocate RDDM table for debugging purpose if specified
  		 */
@@ -99,7 +99,7 @@ index 7f72aab38ce9..263da546f656 100644
  		if (mhi_cntrl->rddm_image) {
  			ret = mhi_rddm_prepare(mhi_cntrl,
  					       mhi_cntrl->rddm_image);
-@@ -1200,6 +1201,14 @@ int mhi_prepare_for_power_up(struct mhi_controller *mhi_cntrl)
+@@ -1199,6 +1200,14 @@ int mhi_prepare_for_power_up(struct mhi_controller *mhi_cntrl)
  }
  EXPORT_SYMBOL_GPL(mhi_prepare_for_power_up);
  
@@ -114,7 +114,7 @@ index 7f72aab38ce9..263da546f656 100644
  void mhi_unprepare_after_power_down(struct mhi_controller *mhi_cntrl)
  {
  	if (mhi_cntrl->fbc_image) {
-@@ -1212,10 +1221,7 @@ void mhi_unprepare_after_power_down(struct mhi_controller *mhi_cntrl)
+@@ -1211,10 +1220,7 @@ void mhi_unprepare_after_power_down(struct mhi_controller *mhi_cntrl)
  		mhi_cntrl->rddm_image = NULL;
  	}
  
@@ -409,7 +409,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index a3d003168b17..b84b9a93c995 100644
+index 25e15d690e2f..5f79a90fc6dd 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -168,6 +168,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -422,7 +422,7 @@ index a3d003168b17..b84b9a93c995 100644
  /**
   * DOC: overview
   *
-@@ -9347,7 +9350,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9351,7 +9354,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
