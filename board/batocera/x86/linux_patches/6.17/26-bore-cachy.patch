@@ -91,7 +91,7 @@ index 000000000000..5afb5fed4e10
 +
 +#endif /* _KERNEL_SCHED_BORE_H */
 diff --git a/init/Kconfig b/init/Kconfig
-index 550ec4e79823..e33040bf00fc 100644
+index 38451dfa51a9..d06f41915cad 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -1433,6 +1433,23 @@ config CHECKPOINT_RESTORE
@@ -144,7 +144,7 @@ index e1359db5561e..31053e61972f 100644
 +	 an unnecessarily large base slice, resulting in high scheduling
 +	 latency and poor system responsiveness.
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 8100984e11e6..c8ac02d0203e 100644
+index 1db319e89543..682ff4fb124b 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -120,6 +120,10 @@

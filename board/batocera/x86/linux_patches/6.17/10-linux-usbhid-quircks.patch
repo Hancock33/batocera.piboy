@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-quirks.c b/drivers/hid/hid-quirks.c
-index f619ed10535d..8bf1a1e8a4a1 100644
+index ffd034566e2e..95fcac973050 100644
 --- a/drivers/hid/hid-quirks.c
 +++ b/drivers/hid/hid-quirks.c
 @@ -25,6 +25,60 @@

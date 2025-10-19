@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Oct 12, 2025
-RETROARCH_VERSION = b3a2f802b90bfe6f6f630d3dbb4ed5c52899a758
+# Version: Commits on Oct 17, 2025
+RETROARCH_VERSION = 2d1f5070ee1b9e337f31e9a45cfe9f8e2357bb40
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -178,7 +178,7 @@ define RETROARCH_CONFIGURE_CMDS
 endef
 
 define RETROARCH_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC) -Wno-incompatible-pointer-types" LD="$(TARGET_LD)" -C $(@D)/ HAVE_BUILTINFLAC=1
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC) -Wno-incompatible-pointer-types" LD="$(TARGET_LD)" -C $(@D)/ HAVE_BUILTINFLAC=1 HAVE_BUILTINMBEDTLS=1
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/gfx/video_filters
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/libretro-common/audio/dsp_filters
 endef

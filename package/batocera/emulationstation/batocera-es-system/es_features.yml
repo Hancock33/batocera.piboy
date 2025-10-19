@@ -2261,6 +2261,13 @@ libretro:
                     "2x":  2
                     "4x":  4
                     "6x":  6
+            reicast_native_depth_interpolation:
+                group: ADVANCED OPTIONS
+                prompt:      NATIVE DEPTH INTERPOLATION
+                description: Helps with texture corruption and depth issues on AMD GPUs. Can also help Intel GPUs in some cases.
+                choices:
+                    "Off": disabled
+                    "On":  enabled
             reicast_frame_skipping:
                 prompt:      FRAMESKIP
                 description: Skip frames to improve performance, at the cost of choppy motion.
@@ -2366,258 +2373,6 @@ libretro:
                 choices:
                     "Off":     0
                     "On":      1
-      systems:
-            atomiswave:
-                cfeatures:
-                    screen_rotation_atomiswave:
-                        prompt:      SCREEN ORIENTATION
-                        description: Useful for certain arcade games.
-                        choices:
-                            "Horizontal": horizontal
-                            "Vertical":   vertical
-                    analog_to_dpad_atomiswave_p1:
-                        group:       CONTROLLER SETTINGS
-                        prompt:      ANALOGUE TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analogue stick (Controller 1).
-                        choices:
-                            "Left Analogue (Auto)":    1
-                            "Right Analogue (Auto)":   2
-                            "Left Analogue (Forced)":  3
-                            "Right Analogue (Forced)": 4
-                    analog_to_dpad_atomiswave_p2:
-                        group:       CONTROLLER SETTINGS
-                        prompt:      ANALOGUE TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analogue stick (Controller 2).
-                        choices:
-                            "Left Analogue (Auto)":    1
-                            "Right Analogue (Auto)":   2
-                            "Left Analogue (Forced)":  3
-                            "Right Analogue (Forced)": 4
-            naomi:
-                cfeatures:
-                    screen_rotation_naomi:
-                        prompt:      SCREEN ORIENTATION
-                        description: Useful for certain arcade games.
-                        choices:
-                            "Horizontal": horizontal
-                            "Vertical":   vertical
-                    analog_to_dpad_naomi_p1:
-                        group:       CONTROLLER SETTINGS
-                        prompt:      ANALOGUE TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analogue stick (Controller 1).
-                        choices:
-                            "Left Analogue (Auto)":    1
-                            "Right Analogue (Auto)":   2
-                            "Left Analogue (Forced)":  3
-                            "Right Analogue (Forced)": 4
-                    analog_to_dpad_naomi_p2:
-                        group:       CONTROLLER SETTINGS
-                        prompt:      ANALOGUE TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analogue stick (Controller 2).
-                        choices:
-                            "Left Analogue (Auto)":    1
-                            "Right Analogue (Auto)":   2
-                            "Left Analogue (Forced)":  3
-                            "Right Analogue (Forced)": 4
-            naomigd:
-                cfeatures:
-                    screen_rotation_naomi:
-                        prompt:      SCREEN ORIENTATION
-                        description: Useful for certain arcade games.
-                        choices:
-                            "Horizontal": horizontal
-                            "Vertical":   vertical
-                    analog_to_dpad_naomi_p1:
-                        group:       CONTROLLER SETTINGS
-                        prompt:      ANALOGUE TO D-PAD TYPE P1
-                        description: Adds d-pad mapping to the analogue stick (Controller 1).
-                        choices:
-                            "Left Analogue (Auto)":    1
-                            "Right Analogue (Auto)":   2
-                            "Left Analogue (Forced)":  3
-                            "Right Analogue (Forced)": 4
-                    analog_to_dpad_naomi_p2:
-                        group:       CONTROLLER SETTINGS
-                        prompt:      ANALOGUE TO D-PAD TYPE P2
-                        description: Adds d-pad mapping to the analogue stick (Controller 2).
-                        choices:
-                            "Left Analogue (Auto)":    1
-                            "Right Analogue (Auto)":   2
-                            "Left Analogue (Forced)":  3
-                            "Right Analogue (Forced)": 4
-    flycast2021:
-      features: [padtokeyboard, cheevos]
-      shared: [autosave, use_guns]
-      cfeatures:
-            reicast_synchronous_rendering:
-                prompt:      SYNCHRONOUS RENDERING
-                description: Can avoid flashing screen issues. Significant performance cost.
-                choices:
-                    "Off": disabled
-                    "On":  enabled
-            reicast_internal_resolution:
-                group: VIDEO SETTINGS
-                prompt:      RENDERING RESOLUTION
-                description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
-                choices:
-                    "1x (640x480)":      640x480
-                    "1.25x (800x600)":   800x600
-                    "1.5x (960x720)":    960x720
-                    "1.6x (1024x768)":   1024x768
-                    "2x (1280x960)":     1280x960
-                    "2.25x (1440x1080)": 1440x1080
-                    "2.5x (1600x1200)":  1600x1200
-                    "3x (1920x1440)":    1920x1440
-                    "4x (2560x1920)":    2560x1920
-                    "5x (3200x2400)":    3200x2400
-                    "6x (3840x2880)":    3840x2880
-                    "7x (4480x3360)":    4480x3360
-                    "8x (5120x3840)":    5120x3840
-                    "9x (5760x4320)":    5760x4320
-                    "10x (6400x4800)":   6400x4800
-                    "11x (7040x5280)":   7040x5280
-                    "12x (7680x5760)":   7680x5760
-            reicast_lightgun1_crosshair:
-                group: LIGHT GUN
-                prompt:      Target colour for player 1.
-                choices:
-                    Red: Red
-                    Blue: Blue
-                    Green: Green
-                    White: White
-                    Disabled: disabled
-            reicast_lightgun2_crosshair:
-                group: LIGHT GUN
-                prompt:      Target colour for player 2.
-                choices:
-                    Red: Red
-                    Blue: Blue
-                    Green: Green
-                    White: White
-                    Disabled: disabled
-            reicast_lightgun3_crosshair:
-                group: LIGHT GUN
-                prompt:      Target colour for player 3.
-                choices:
-                    Red: Red
-                    Blue: Blue
-                    Green: Green
-                    White: White
-                    Disabled: disabled
-            reicast_lightgun4_crosshair:
-                group: LIGHT GUN
-                prompt:      Target colour for player 4.
-                choices:
-                    Red: Red
-                    Blue: Blue
-                    Green: Green
-                    White: White
-                    Disabled: disabled
-            reicast_mipmapping:
-                prompt:      TEXTURE MIP-MAPPING (BLUR)
-                description: Smooth textures on distant 3D objects based on angle.
-                choices:
-                    "Off": disabled
-                    "On":  enabled
-            reicast_anisotropic_filtering:
-                prompt:      ANISOTROPIC FILTERING
-                description: Improves clarity of distant textures when mipmapping is enabled.
-                choices:
-                    "Off": off
-                    "2x":  2
-                    "4x":  4
-                    "8x":  8
-                    "16x": 16
-            reicast_texupscale:
-                prompt:      TEXTURE UPSCALING (XBRZ)
-                description: Enhancement. Upscales screen textures (2D games only).
-                choices:
-                    "Off": off
-                    "2x":  2x
-                    "4x":  4x
-                    "6x":  6x
-            reicast_render_to_texture_upscaling:
-                prompt:      RENDER TO TEXTURE UPSCALING
-                description: Enhancement. Upscale in-game screen-captures.
-                choices:
-                    "Off": 1x
-                    "2x":  2x
-                    "3x":  3x
-                    "4x":  4x
-                    "8x":  8x
-            reicast_frame_skipping:
-                prompt:      FRAMESKIP
-                description: Skip frames to improve performance, at the cost of choppy motion.
-                choices:
-                    "Off": disabled
-                    "1":   1
-                    "2":   2
-                    "3":   3
-                    "4":   4
-                    "5":   5
-                    "6":   6
-            reicast_alpha_sorting:
-                prompt:      ALPHA SORTING
-                choices:
-                    "Per-Strip (fast, least accurate)":  Least
-                    "Per-Triangle (normal)":             Normal
-                    "Per-Pixel (accurate, but slowest)": Accurate
-            reicast_auto_skip_frame:
-                prompt:      AUTO FRAME SKIPPING
-                choices:
-                    "OFF"    : disabled
-                    "Normal" : some
-                    "Maximum": more
-            reicast_force_wince:
-                prompt:      FORCE WINDOWS CE MODE
-                description: Required for some games.
-                choices:
-                    "Off": disabled
-                    "On":  enabled
-            reicast_widescreen_cheats:
-                prompt:      WIDESCREEN CHEAT (PRIORITY)
-                description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
-                choices:
-                    "Off": disabled
-                    "On":  enabled
-            reicast_widescreen_hack:
-                prompt:      WIDESCREEN HACK (GLITCHY)
-                description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
-                choices:
-                    "Off": disabled
-                    "On":  enabled
-            controller1_dc:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER 1 TYPE
-                choices:
-                    "Gamepad":   1
-                    "Keyboard":  3
-                    "Mouse":     2
-                    "Light Gun": 4
-            controller2_dc:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER 2 TYPE
-                choices:
-                    "Gamepad":   1
-                    "Keyboard":  3
-                    "Mouse":     2
-                    "Light Gun": 4
-            controller3_dc:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER 3 TYPE
-                choices:
-                    "Gamepad":   1
-                    "Keyboard":  3
-                    "Mouse":     2
-                    "Light Gun": 4
-            controller4_dc:
-                group: CONTROLLER SETTINGS
-                prompt:      CONTROLLER 4 TYPE
-                choices:
-                    "Gamepad":   1
-                    "Keyboard":  3
-                    "Mouse":     2
-                    "Light Gun": 4
       systems:
             atomiswave:
                 cfeatures:
@@ -9936,6 +9691,35 @@ pcsx2:
             choices:
                 "Enabled (Default)":  "true"
                 "Disabled": "false"
+        pcsx2_osd_messages_position:
+            submenu: DISPLAY
+            prompt: OSD MESSAGES POSITION
+            description: Choose the on-screen position for system messages.
+            choices:
+                "Top Left":             1
+                "Top Center (Default)": 2
+                "Top Right":            3
+                "Center Left":          4
+                "Center":               5
+                "Center Right":         6
+                "Bottom Left":          7
+                "Bottom Center":        8
+                "Bottom Right":         9
+        pcsx2_osd_performance_position:
+            submenu: DISPLAY
+            prompt: OSD PERFORMANCE POSITION
+            description: Choose the on-screen position for performance metrics (FPS, CPU usage, etc.).
+            choices:
+                "None (Default)":  0
+                "Top Left":        1
+                "Top Center":      2
+                "Top Right":       3
+                "Center Left":     4
+                "Center":          5
+                "Center Right":    6
+                "Bottom Left":     7
+                "Bottom Center":   8
+                "Bottom Right":    9
         pcsx2_ratio:
             submenu: DISPLAY
             prompt: GAME ASPECT RATIO
@@ -12247,20 +12031,13 @@ wine:
             choices:
                 "Off": 0
                 "On":  1
-        esync:
+        ntsync:
             group: ADVANCED OPTIONS
-            prompt: ESYNC
-            description: Can increase performance for games that stress the CPU.
+            prompt: NTSYNC
+            description: Improves frame rate and responsiveness.
             choices:
-                "Off": 0
-                "On":  1
-        fsync:
-            group: ADVANCED OPTIONS
-            prompt: FSYNC
-            description: Can improve frame rate and responsiveness.
-            choices:
-                "Off": 0
-                "On":  1
+                "Off":          0
+                "On (Default)": 1
         pba:
             group: ADVANCED OPTIONS
             prompt: PBA
@@ -12331,6 +12108,13 @@ wine:
             choices:
                 "Off": 0
                 "On":  1
+        wayland_driver:
+            group: ADVANCED OPTIONS
+            prompt: WAYLAND DRIVER MODE
+            description: Choose the Wayland driver mode if on a handheld device. XWayland has more compatibility.
+            choices:
+                "Native": "native"
+                "XWayland (Default)": "xwayland"
         wine_ntfs:
             group: ADVANCED OPTIONS
             prompt: ENABLE NTFS MODE

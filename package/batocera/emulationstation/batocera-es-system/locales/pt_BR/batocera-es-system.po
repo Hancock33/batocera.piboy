@@ -150,7 +150,7 @@ msgctxt "game_options"
 msgid "1.1x (13.75Mhz)"
 msgstr "1.1x (13.75Mhz)"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "1.25x (800x600)"
 msgstr "1.25x (800x600)"
@@ -195,7 +195,7 @@ msgctxt "game_options"
 msgid "1.5x (18.75Mhz)"
 msgstr "1.5x (18.75Mhz)"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: flycast, libretro/flycast
 msgctxt "game_options"
 msgid "1.5x (960x720)"
 msgstr "1.5x (960x720)"
@@ -205,7 +205,7 @@ msgctxt "game_options"
 msgid "1.5x Native"
 msgstr "1.5x Nativo"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "1.6x (1024x768)"
 msgstr "1.6x (1024x768)"
@@ -880,7 +880,7 @@ msgctxt "game_options"
 msgid "2.0x (25.00Mhz)"
 msgstr "2.0x (25.00Mhz)"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "2.25x (1440x1080)"
 msgstr "2.25x (1440x1080)"
@@ -895,7 +895,7 @@ msgctxt "game_options"
 msgid "2.5 MB"
 msgstr "2.5 MB"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: flycast, libretro/flycast
 msgctxt "game_options"
 msgid "2.5x (1600x1200)"
 msgstr "2.5x (1600x1200)"
@@ -2353,7 +2353,7 @@ msgctxt "game_options"
 msgid "ALLOW ROTATION"
 msgstr "PERMITIR ROTAÇÃO"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: flycast, libretro/flycast
 msgctxt "game_options"
 msgid "ALPHA SORTING"
 msgstr "ORDENAÇÃO ALPHA"
@@ -2408,12 +2408,12 @@ msgctxt "game_options"
 msgid "ANALOGUE JOYSTICK DEADZONE"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "ANALOGUE TO D-PAD TYPE P1"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "ANALOGUE TO D-PAD TYPE P2"
 msgstr ""
@@ -2638,7 +2638,7 @@ msgctxt "game_options"
 msgid "AUTO CROP"
 msgstr ""
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: flycast, libretro/flycast
 msgctxt "game_options"
 msgid "AUTO FRAME SKIPPING"
 msgstr ""
@@ -2844,12 +2844,12 @@ msgctxt "game_options"
 msgid "Add debug logging to help troubleshoot issues."
 msgstr "Incluir logs de depuração para ajudar com resolução de problemas."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Adds d-pad mapping to the analogue stick (Controller 1)."
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Adds d-pad mapping to the analogue stick (Controller 2)."
 msgstr ""
@@ -4066,7 +4066,7 @@ msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr "Bloco Filtrado"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/melondsds, libretro/pcsx_rearmed
+#. TRANSLATION: flycast, libretro/flycast, libretro/melondsds, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Blue"
 msgstr "Azul"
@@ -4152,10 +4152,25 @@ msgctxt "game_options"
 msgid "Bottom (Default)"
 msgstr "Inferior (Padrão)"
 
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bottom Center"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bottom Left"
+msgstr ""
+
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Bottom Only"
 msgstr "Apenas Inferior"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Bottom Right"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -4625,7 +4640,7 @@ msgctxt "game_options"
 msgid "CONTROLLER 3 INPUT MAPPING"
 msgstr "MAPEAMENTO DE ENTRADA DO CONTROLE 3"
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021, libretro/snes9x
+#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/snes9x
 msgctxt "game_options"
 msgid "CONTROLLER 3 TYPE"
 msgstr "TIPO DE CONTROLE 3"
@@ -4645,7 +4660,7 @@ msgctxt "game_options"
 msgid "CONTROLLER 4 INPUT MAPPING"
 msgstr "MAPEAMENTO DE ENTRADA DO CONTROLE 4"
 
-#. TRANSLATION: libretro/dolphin, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "CONTROLLER 4 TYPE"
 msgstr "TIPO DE CONTROLE 4"
@@ -4999,7 +5014,7 @@ msgctxt "game_options"
 msgid "Camputers Lynx floppies"
 msgstr "Disquetes Camputers Lynx"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Can avoid flashing screen issues. Significant performance cost."
 msgstr ""
@@ -5041,11 +5056,6 @@ msgctxt "game_options"
 msgid "Can fix slowdown. Only works on some drivers."
 msgstr "Pode corrigir lentidão. Funciona apenas em alguns controles."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Can improve frame rate and responsiveness."
-msgstr "Pode melhorar a taxa de quadros e a capacidade de resposta."
-
 #. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
@@ -5064,7 +5074,7 @@ msgstr ""
 "Pode melhorar o desempenho do vídeo. Não usar com jogos ActionMax ou linhas "
 "de varredura ."
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "Can increase performance for games that stress the CPU."
 msgstr "Pode aumentar o desempenho de jogos que estressam o processador."
@@ -5159,10 +5169,20 @@ msgctxt "game_options"
 msgid "Catalan"
 msgstr "Catalao"
 
-#. TRANSLATION: scummvm
+#. TRANSLATION: pcsx2, scummvm
 msgctxt "game_options"
 msgid "Center"
 msgstr "Central"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Center Left"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Center Right"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5404,6 +5424,13 @@ msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
 msgstr "Escolha a extensão gráfica Parallel N64."
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Choose the Wayland driver mode if on a handheld device. XWayland has more "
+"compatibility."
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid ""
@@ -5509,6 +5536,17 @@ msgstr "Escolha o nível de detalhe do terreno."
 msgctxt "game_options"
 msgid "Choose the level of texture detail."
 msgstr "Escolha o nível de detalhe das texturas."
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid ""
+"Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Choose the on-screen position for system messages."
+msgstr ""
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -7171,7 +7209,7 @@ msgctxt "game_options"
 msgid "EST5EDT"
 msgstr "EST5EDT"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "ESYNC"
 msgstr "DESCRITORES DE ARQUIVO DE EVENTO"
@@ -8033,17 +8071,12 @@ msgstr ""
 "Aprimoramento. Troca da interpolação guassiana do SNES para cúbica. Melhora "
 "a qualidade do som."
 
-#. TRANSLATION: libretro/flycast2021
-msgctxt "game_options"
-msgid "Enhancement. Upscale in-game screen-captures."
-msgstr ""
-
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "Enhancement. Upscale textures."
 msgstr "Aprimoramento. Texturas de alto nível."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Enhancement. Upscales screen textures (2D games only)."
 msgstr "Aprimoramento. Melhora as texturas da tela (somente jogos 2D)."
@@ -8327,7 +8360,7 @@ msgctxt "game_options"
 msgid "FORCE NTSC TIMINGS ON PAL"
 msgstr "FORÇAR TEMPORIZACÕES NTSC NO PAL"
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: flycast/dolphin, libretro/flycast
 msgctxt "game_options"
 msgid "FORCE WINDOWS CE MODE"
 msgstr "FORÇAR MODO WINDOWS CE"
@@ -8402,7 +8435,7 @@ msgctxt "game_options"
 msgid "FRAMERATE"
 msgstr ""
 
-#. TRANSLATION: flycast, libretro/desmume, libretro/fbneo, libretro/flycast, libretro/flycast2021, ...
+#. TRANSLATION: flycast, libretro/desmume, libretro/fbneo, libretro/flycast, libretro/mame078plus, ...
 msgctxt "game_options"
 msgid "FRAMESKIP"
 msgstr "SALTO DE QUADROS"
@@ -8432,7 +8465,7 @@ msgctxt "game_options"
 msgid "FREE PLAY"
 msgstr "JOGO LIVRE"
 
-#. TRANSLATION: mugen, wine
+#. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "FSYNC"
 msgstr "SINCRONIZAÇÃO DE ARQUIVOS"
@@ -9510,7 +9543,7 @@ msgctxt "game_options"
 msgid "GamePark GP32 SmartMedia cards"
 msgstr "Cartões GamePark GP32 SmartMedia"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Gamepad"
 msgstr "Controle"
@@ -9688,7 +9721,7 @@ msgctxt "game_options"
 msgid "Greek (gk)"
 msgstr "Grego (gk)"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx_rearmed
+#. TRANSLATION: flycast, libretro/flycast, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Green"
 msgstr "Verde"
@@ -10012,6 +10045,13 @@ msgctxt "game_options"
 msgid "Helps some games to launch when disabled. May affect performance."
 msgstr ""
 
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid ""
+"Helps with texture corruption and depth issues on AMD GPUs. Can also help "
+"Intel GPUs in some cases."
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Hercules"
@@ -10134,7 +10174,7 @@ msgctxt "game_options"
 msgid "Hong Kong"
 msgstr "Hong Kong"
 
-#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast2021, libretro/nestopia
+#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/nestopia
 msgctxt "game_options"
 msgid "Horizontal"
 msgstr "Horizontal"
@@ -10404,15 +10444,15 @@ msgid "Improves clarity of distant textures when mip-mapping is enabled."
 msgstr ""
 "Melhora a clareza de texturas distantes quando o mapeamento mip está ativado."
 
-#. TRANSLATION: libretro/flycast2021
-msgctxt "game_options"
-msgid "Improves clarity of distant textures when mipmapping is enabled."
-msgstr ""
-
 #. TRANSLATION: dolphin, dolphin_triforce, dxx-rebirth, eden, libretro/dolphin, ...
 msgctxt "game_options"
 msgid "Improves clarity of distant textures."
 msgstr "Melhora a clareza de texturas distantes."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Improves frame rate and responsiveness."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -10910,7 +10950,7 @@ msgctxt "game_options"
 msgid "Kenya"
 msgstr "Quênia"
 
-#. TRANSLATION: dolphin, libretro/flycast, libretro/flycast2021, libretro/puae, libretro/puae2021, ...
+#. TRANSLATION: dolphin, libretro/flycast, libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Keyboard"
 msgstr "Teclado"
@@ -11235,12 +11275,12 @@ msgctxt "keys_files"
 msgid "Left"
 msgstr "Esquerda"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Left Analogue (Auto)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Left Analogue (Forced)"
 msgstr ""
@@ -11305,7 +11345,7 @@ msgctxt "game_options"
 msgid "Light Green"
 msgstr "Verde Claro"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Light Gun"
 msgstr "Pistola"
@@ -11919,7 +11959,7 @@ msgctxt "game_options"
 msgid "Max Saving"
 msgstr ""
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx2, rpcs3
+#. TRANSLATION: flycast, libretro/flycast, libretro/pcsx2, rpcs3
 msgctxt "game_options"
 msgid "Maximum"
 msgstr "Máximo"
@@ -12257,7 +12297,7 @@ msgctxt "game_options"
 msgid "Mount a floppy for user data, creates if needed"
 msgstr "Monta um disquete para dados do usuário, cria se necessário"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, libretro/genesisplusgx-expanded, libretro/melonds, libretro/np2kai
+#. TRANSLATION: libretro/flycast, libretro/genesisplusgx-expanded, libretro/melonds, libretro/np2kai
 msgctxt "game_options"
 msgid "Mouse"
 msgstr "Mouse"
@@ -12413,6 +12453,11 @@ msgctxt "game_options"
 msgid "NAT"
 msgstr "NAT"
 
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "NATIVE DEPTH INTERPOLATION"
+msgstr ""
+
 #. TRANSLATION: libretro/melonds, libretro/melondsds
 msgctxt "game_options"
 msgid "NDS VERSION"
@@ -12558,6 +12603,11 @@ msgctxt "game_options"
 msgid "NTSC-U/C"
 msgstr "NTSC-U/C"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "NTSYNC"
+msgstr ""
+
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "NULL"
@@ -12605,7 +12655,7 @@ msgstr ""
 "Nat para acessar a Internet a partir da máquina xemu. Udp para o System "
 "Link. O padrão (Automático) desativa o acesso à rede."
 
-#. TRANSLATION: xemu, yabasanshiro
+#. TRANSLATION: wine, xemu, yabasanshiro
 msgctxt "game_options"
 msgid "Native"
 msgstr "Nativo"
@@ -12829,7 +12879,7 @@ msgctxt "game_options"
 msgid "None"
 msgstr "Nenhum"
 
-#. TRANSLATION: cgenius, libretro/mame, mame/openbor7530, rtcw, supermodel
+#. TRANSLATION: cgenius, libretro/mame, mame/openbor7530, pcsx2, rtcw, ...
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Nenhum (Padrão)"
@@ -12936,7 +12986,7 @@ msgctxt "game_options"
 msgid "Null"
 msgstr ""
 
-#. TRANSLATION: amiberry, flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx2
+#. TRANSLATION: amiberry, flycast, libretro/flycast, libretro/pcsx2
 msgctxt "game_options"
 msgid "OFF"
 msgstr "DESLIGADO"
@@ -12980,6 +13030,16 @@ msgstr "RITMO IDEAL DOS QUADROS"
 msgctxt "game_options"
 msgid "OSD MESSAGES"
 msgstr "MENSAGENS EXIBIDAS NA TELA"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "OSD MESSAGES POSITION"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "OSD PERFORMANCE POSITION"
+msgstr ""
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -13846,17 +13906,17 @@ msgstr ""
 "da mesa associada. Se estiver desativada, consulte o Wiki para obter mais "
 "detalhes."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Per-Pixel (accurate, but slowest)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Per-Strip (fast, least accurate)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Per-Triangle (normal)"
 msgstr ""
@@ -14395,11 +14455,6 @@ msgctxt "game_options"
 msgid "RENDER TARGET PATH"
 msgstr "CAMINHO DO ALVO DE RENDERIZAÇÃO"
 
-#. TRANSLATION: libretro/flycast2021
-msgctxt "game_options"
-msgid "RENDER TO TEXTURE UPSCALING"
-msgstr ""
-
 #. TRANSLATION: rtcw, scummvm
 msgctxt "game_options"
 msgid "RENDERER"
@@ -14591,7 +14646,7 @@ msgctxt "game_options"
 msgid "Recompiler (Fastest)(Default)"
 msgstr "Recompilador (Mais Rápido)(Padrão)"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/melondsds, libretro/pcsx_rearmed
+#. TRANSLATION: flycast, libretro/flycast, libretro/melondsds, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Red"
 msgstr "Vermelho"
@@ -14729,7 +14784,7 @@ msgstr ""
 "Necessário para alguns efeitos no jogo (transições para Banjo Kazooie e "
 "DK64), pode causar lentidão."
 
-#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/flycast2021, libretro/quasi88
+#. TRANSLATION: flycast/dolphin, libretro/flycast, libretro/quasi88
 msgctxt "game_options"
 msgid "Required for some games."
 msgstr "Necessário para alguns jogos."
@@ -14840,12 +14895,12 @@ msgctxt "keys_files"
 msgid "Right"
 msgstr "Direita"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Right Analogue (Auto)"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Right Analogue (Forced)"
 msgstr ""
@@ -15081,7 +15136,7 @@ msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "DISPOSIÇÃO DA TELA"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "SCREEN ORIENTATION"
 msgstr "ORIENTAÇÃO DA TELA"
@@ -15596,7 +15651,7 @@ msgctxt "game_options"
 msgid "SYNC TO HOST REFRESH RATE"
 msgstr "SINCRONIZAÇÃO COM A TAXA DE ATUALIZAÇÃO DA MÁQUINA ANFITRIÃ"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "SYNCHRONOUS RENDERING"
 msgstr "RENDERIZAÇÃO SÍNCRONA"
@@ -16573,7 +16628,7 @@ msgctxt "game_options"
 msgid "Smooth textures on 3D objects."
 msgstr "Texturas suaves em objetos 3D."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
+#. TRANSLATION: libretro/flycast, mupen64plus
 msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Texturas suaves em objetos 3D distantes com base no ângulo."
@@ -17309,7 +17364,7 @@ msgctxt "game_options"
 msgid "TEXTURE MEMORY SCALE SIZE"
 msgstr "TAMANHO DA ESCALA DA MEMÓRIA DE TEXTURA"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021, mupen64plus
+#. TRANSLATION: libretro/flycast, mupen64plus
 msgctxt "game_options"
 msgid "TEXTURE MIP-MAPPING (BLUR)"
 msgstr "MAPEAMENTO DE TEXTURAS (DESFOQUE)"
@@ -17354,7 +17409,7 @@ msgctxt "game_options"
 msgid "TEXTURE UPSCALING (RICE ONLY)"
 msgstr "AUMENTAR ESCALA DE TEXTURA (RICE APENAS)"
 
-#. TRANSLATION: libretro/desmume, libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/desmume, libretro/flycast
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING (XBRZ)"
 msgstr "AUMENTAR ESCALA DA TEXTURA (XBRZ)"
@@ -17532,26 +17587,6 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Tandy Radio Shack Colour Computer disk images"
-msgstr ""
-
-#. TRANSLATION: libretro/flycast2021
-msgctxt "game_options"
-msgid "Target colour for player 1."
-msgstr ""
-
-#. TRANSLATION: libretro/flycast2021
-msgctxt "game_options"
-msgid "Target colour for player 2."
-msgstr ""
-
-#. TRANSLATION: libretro/flycast2021
-msgctxt "game_options"
-msgid "Target colour for player 3."
-msgstr ""
-
-#. TRANSLATION: libretro/flycast2021
-msgctxt "game_options"
-msgid "Target colour for player 4."
 msgstr ""
 
 #. TRANSLATION: prboom.gzdoom.keys
@@ -17793,10 +17828,30 @@ msgctxt "game_options"
 msgid "Top"
 msgstr "Top"
 
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Top Center"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Top Center (Default)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Top Left"
+msgstr ""
+
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Top Only"
 msgstr "Apenas Superior"
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "Top Right"
+msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -18692,7 +18747,7 @@ msgstr ""
 "Útil para controladores estilo N64. Teclas de atalho (hotkeys) limitadas "
 "para controles sem tecla de atalho dedicada."
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Useful for certain arcade games."
 msgstr "Útil para certos jogos de arcade."
@@ -18955,7 +19010,7 @@ msgctxt "game_options"
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/flycast2021, libretro/nestopia
+#. TRANSLATION: drastic, libretro/fceumm, libretro/flycast, libretro/nestopia
 msgctxt "game_options"
 msgid "Vertical"
 msgstr "Vertical"
@@ -19070,6 +19125,11 @@ msgctxt "game_options"
 msgid "WARN ABOUT UNSUPPORTED FEATURES"
 msgstr "AVISAR SOBRE RECURSOS NÃO SUPORTADOS"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "WAYLAND DRIVER MODE"
+msgstr ""
+
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "WEAPON PICKUP"
@@ -19135,7 +19195,7 @@ msgctxt "game_options"
 msgid "WIDESCREEN"
 msgstr "WIDESCREEN"
 
-#. TRANSLATION: libretro/flycast, libretro/flycast2021
+#. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "WIDESCREEN CHEAT (PRIORITY)"
 msgstr "TRUQUE DE TELA PLANA (PRIORIDADE)"
@@ -19272,7 +19332,7 @@ msgctxt "game_options"
 msgid "While Touching"
 msgstr "Enquanto estiver tocando"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/flycast2021, libretro/pcsx_rearmed
+#. TRANSLATION: flycast, libretro/flycast, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "White"
 msgstr "Branco"
@@ -19403,6 +19463,11 @@ msgstr "Licença XBLA habilitada (Padrão)"
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
 msgstr "XBOX LIVE ARCADE"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "XWayland (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -20068,6 +20133,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "Pode ser usado para simular cores de telas especí­ficas."
+
+#~ msgctxt "game_options"
+#~ msgid "Can improve frame rate and responsiveness."
+#~ msgstr "Pode melhorar a taxa de quadros e a capacidade de resposta."
 
 #~ msgctxt "game_options"
 #~ msgid ""

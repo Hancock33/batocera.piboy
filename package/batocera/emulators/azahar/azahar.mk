@@ -3,9 +3,9 @@
 # azahar
 #
 ################################################################################
-# Version: Commits on Sept 16, 2025
-AZAHAR_VERSION = 517dccaff646537576cf68d7c046c8d8dfca0f8f
-AZAHAR_SITE = https://github.com/AzaharPlus/AzaharPlus.git
+# Version: Commits on Oct 03, 2025
+AZAHAR_VERSION = 068fec0d5f70431830019e4d927e28103d60efd7
+AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
 AZAHAR_SITE_METHOD=git
 AZAHAR_GIT_SUBMODULES = YES
 AZAHAR_LICENSE = GPLv2

@@ -705,8 +705,8 @@ opentyrian:
   emulator: opentyrian
   core:     opentyrian
 oricatmos:
-  emulator: clk
-  core:     clk
+  emulator: libretro
+  core:     mame
 
 # P-S
 

@@ -1,0 +1,12 @@
+config BR2_PACKAGE_LIBRETRO_JOLLYCV
+	bool "libretro-jollycv"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  Jolly Good ColecoVision, CreatiVision,
+	  and My Vision Emulator
+
+	  http://www.libretro.com
+
+comment "LIBRETRO_JOLLYCV needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

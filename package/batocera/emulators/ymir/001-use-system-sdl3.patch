@@ -1,0 +1,14 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6c03f29c..c9d30367 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -98,6 +98,9 @@ else ()
+     message(STATUS "IPO / LTO not supported: ${IPO_ERROR}")
+ endif ()
+ 
++# batocera - use system sdl3
++find_package(SDL3 REQUIRED)
++
+ ## Include third-party libraries
+ add_subdirectory(vendor)
+ 

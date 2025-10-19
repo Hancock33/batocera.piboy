@@ -1665,6 +1665,9 @@ def _flycast_options(
     # Auto Frame Skipping
     _set_from_system(coreSettings, 'reicast_auto_skip_frame', system, 'reicast_auto_skip_frame', default='disabled')
 
+    # Native Depth Interpolation
+    _set_from_system(coreSettings, 'reicast_native_depth_interpolation', system, 'reicast_native_depth_interpolation', default='disabled')
+
     ## Atomiswave / Naomi
 
     # Screen Orientation

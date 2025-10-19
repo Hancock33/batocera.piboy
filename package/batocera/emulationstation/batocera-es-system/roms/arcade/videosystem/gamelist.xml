@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <gameList>
   <provider>
     <System>Mame</System>
@@ -149,7 +149,7 @@ When playing as player 2 you get a different plane type. 2 player mode is co-ope
   <game id="43502" source="ScreenScraper.fr">
     <path>./tail2nos.zip</path>
     <name>Tail To Nose - Great Championship</name>
-    <desc>Tail to Nose - Great Championship, connu sous le nom de Super Formula: Chijo Saisoku no Battle au Japon, est un des premiers jeux consacré à la Formule 1. Bien que ne possédant pas de licence, les écuries, les pilotes, les sponsors et les 4 circuits disponibles sont fortement inspirés de la réalité.</desc>
+    <desc>Super Formula was one of the earliest arcade games related to Formula 1, in this case the 1988 season. Although being an unlicensed game, the teams, drivers, sponsors and the only four circuits available were inspired by real-life ones. The selectable drivers are also recognizable in the graphic representations of their faces.</desc>
     <rating>0.5</rating>
     <releasedate>19890101T000000</releasedate>
     <publisher>V-System Co.</publisher>

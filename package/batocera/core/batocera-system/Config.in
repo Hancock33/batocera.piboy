@@ -330,6 +330,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # screens
     select BR2_PACKAGE_DMD_SIMULATOR                        if  BR2_PACKAGE_VPINBALL
     select BR2_PACKAGE_DMD_SIMULATOR_PLAYER                 if  BR2_PACKAGE_VPINBALL
+    select BR2_PACKAGE_DMD_PLAY_RUST                        if  BR2_PACKAGE_VPINBALL
     select BR2_PACKAGE_LIBDMDUTIL                           if  BR2_PACKAGE_VPINBALL
    #select BR2_PACKAGE_BATOCERA_BACKGLASS                   if  (BR2_PACKAGE_XSERVER_XORG_SERVER || BR2_PACKAGE_BATOCERA_WAYLAND) && !BR2_PACKAGE_BATOCERA_TARGET_JH7110
 
@@ -339,7 +340,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_WM8960_AUDIO_HAT                     if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835     || BR2_PACKAGE_BATOCERA_TARGET_BCM2836  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2837     || BR2_PACKAGE_BATOCERA_TARGET_BCM2711  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712
-
     # swap
     select BR2_PACKAGE_SWAPIT                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3128      || BR2_PACKAGE_BATOCERA_TARGET_RK3326   || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2835     || BR2_PACKAGE_BATOCERA_TARGET_BCM2836  || \
@@ -513,7 +513,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "x86-64-v3"                                                                                                                                                                        if  BR2_PACKAGE_BATOCERA_TARGET_ZEN3
     default "qualcomm/sd845/odin"                                                                                                                                                              if  BR2_PACKAGE_BATOCERA_TARGET_ODIN
     default "qualcomm/sm8250/rpflip2 qualcomm/sm8250/rp5 qualcomm/sm8250/rpmini qualcomm/sm8250/rpminiv2"                                                                                      if  BR2_PACKAGE_BATOCERA_TARGET_SM8250
-    default "qualcomm/sm8550/odin2 qualcomm/sm8550/odin2portal"                                                                                                                                if  BR2_PACKAGE_BATOCERA_TARGET_SM8550
+    default "qualcomm/sm8550/odin2 qualcomm/sm8550/odin2portal qualcomm/sm8550/odin2mini"                                                                                                      if  BR2_PACKAGE_BATOCERA_TARGET_SM8550
     default "starfive/jh7110"                                                                                                                                                                  if  BR2_PACKAGE_BATOCERA_TARGET_JH7110
     default "amlogic/s922x/ogu amlogic/s922x/gtkingpro amlogic/s922x/gtking amlogic/s922x/odroidn2l amlogic/s922x/vim3 amlogic/s922x/odroidn2 amlogic/s922x/odroidn2plus amlogic/s922x/zero2"  if  BR2_PACKAGE_BATOCERA_TARGET_S922X
     default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201 amlogic/s905/lepotatov2 amlogic/s905/minix-neo-u1"                              if  BR2_PACKAGE_BATOCERA_TARGET_S905
@@ -1109,6 +1109,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_BLUEMSX                     # ALL
     select BR2_PACKAGE_LIBRETRO_FMSX                        # ALL
     select BR2_PACKAGE_LIBRETRO_GEARCOLECO                  # ALL
+    select BR2_PACKAGE_LIBRETRO_JOLLYCV                     # ALL
     select BR2_PACKAGE_OPENMSX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Thomson 8-bit
@@ -1225,10 +1226,11 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8550      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
-    select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
+   #select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
+   #                                                            BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
+   #                                                            BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
+   #                                                            BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
+   #                                                            BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     select BR2_PACKAGE_EDEN                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_RYUJINX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY

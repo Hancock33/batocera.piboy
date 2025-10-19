@@ -23,6 +23,8 @@ libsfdo.mk
 libsysstat.mk
 libzedmd.mk
 mt32emu.mk
+nghttp3.mk
+ngtcp2.mk
 ossp.mk
 plutosvg.mk
 plutovg.mk
