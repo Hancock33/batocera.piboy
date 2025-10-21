@@ -3,8 +3,8 @@
 # pywebview
 #
 ################################################################################
-# Version: Commits on Aug 08, 2025
-PYWEBVIEW_VERSION = 6.0
+# Version: Commits on Oct 21, 2025
+PYWEBVIEW_VERSION = 6.1
 PYWEBVIEW_SITE = $(call github,r0x0r,pywebview,$(PYWEBVIEW_VERSION))
 PYWEBVIEW_LICENSE = BSD
 
