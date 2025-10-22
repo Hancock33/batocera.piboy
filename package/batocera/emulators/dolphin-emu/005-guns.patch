@@ -1,5 +1,5 @@
 diff --git a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-index 2aac382ab5..9de144dffc 100644
+index 92c8180d24..cb3a8144a0 100644
 --- a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 +++ b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 @@ -23,6 +23,8 @@

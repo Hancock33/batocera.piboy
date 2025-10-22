@@ -102,10 +102,10 @@ index 0000000000..d2091cbfb4
 +
 +mark_as_advanced(LIBGBM_INCLUDE_DIRS LIBGBM_LIBRARIES)
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b67e31838d..b1b5686695 100644
+index edebd2af5b..6ecfdb9bf4 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -528,6 +528,12 @@ if(ENABLE_EGL)
+@@ -531,6 +531,12 @@ if(ENABLE_EGL)
    if(EGL_FOUND)
      add_definitions(-DHAVE_EGL=1)
      message(STATUS "EGL OpenGL interface enabled")
@@ -119,10 +119,10 @@ index b67e31838d..b1b5686695 100644
      message(WARNING "EGL support enabled but not found. This build will not support EGL.")
    endif()
 diff --git a/Source/Core/Common/CMakeLists.txt b/Source/Core/Common/CMakeLists.txt
-index aca142b9cd..9afd64ae56 100644
+index a2c4b6eb07..f5b4df3319 100644
 --- a/Source/Core/Common/CMakeLists.txt
 +++ b/Source/Core/Common/CMakeLists.txt
-@@ -282,10 +282,19 @@ target_sources(common PRIVATE
+@@ -285,10 +285,19 @@ target_sources(common PRIVATE
  )
  
  if(ENABLE_EGL AND EGL_FOUND)
@@ -146,7 +146,7 @@ index aca142b9cd..9afd64ae56 100644
    if(ANDROID)
      target_sources(common PRIVATE
        GL/GLInterface/EGLAndroid.cpp
-@@ -297,8 +306,13 @@ if(ENABLE_EGL AND EGL_FOUND)
+@@ -300,8 +309,13 @@ if(ENABLE_EGL AND EGL_FOUND)
        GL/GLInterface/EGLX11.h
      )
    endif()
@@ -1394,10 +1394,10 @@ index 566a643c89..c495dca869 100644
  
  set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME dolphin-emu-nogui)
 diff --git a/Source/Core/DolphinNoGUI/MainNoGUI.cpp b/Source/Core/DolphinNoGUI/MainNoGUI.cpp
-index 2d677aa7ba..3afdf6b63c 100644
+index 6132085b15..25a4913344 100644
 --- a/Source/Core/DolphinNoGUI/MainNoGUI.cpp
 +++ b/Source/Core/DolphinNoGUI/MainNoGUI.cpp
-@@ -180,6 +180,8 @@ static std::unique_ptr<Platform> GetPlatform(const optparse::Values& options)
+@@ -166,6 +166,8 @@ static std::unique_ptr<Platform> GetPlatform(const optparse::Values& options)
  #ifdef __linux__
    if (platform_name == "fbdev" || platform_name.empty())
      return Platform::CreateFBDevPlatform();
@@ -1406,7 +1406,7 @@ index 2d677aa7ba..3afdf6b63c 100644
  #endif
  
  #ifdef _WIN32
-@@ -212,7 +214,7 @@ int main(int argc, char* argv[])
+@@ -199,7 +201,7 @@ int main(const int argc, char* argv[])
        .choices({"headless"
  #ifdef __linux__
                  ,

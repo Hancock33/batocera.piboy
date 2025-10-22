@@ -15,7 +15,7 @@ index fc93d01a1e..915e77da77 100644
    auto& movie = system.GetMovie();
    if (movie.IsPlayingInput() && movie.IsConfigSaved())
 diff --git a/Source/Core/Core/ConfigManager.cpp b/Source/Core/Core/ConfigManager.cpp
-index e005e78341..2f03111a83 100644
+index 4e0b7dd3ac..305010a81e 100644
 --- a/Source/Core/Core/ConfigManager.cpp
 +++ b/Source/Core/Core/ConfigManager.cpp
 @@ -192,6 +192,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
@@ -52,11 +52,11 @@ index f441cd888b..869b3fcf93 100644
    std::string m_gametdb_id;
    std::string m_triforce_id;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index e80e382930..e2eaa6c611 100644
+index 3292abbff9..04fcbde503 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
-@@ -764,10 +764,14 @@ void SaveScreenShot()
-   g_frame_dumper->SaveScreenshot(GenerateScreenshotName());
+@@ -762,10 +762,14 @@ void SaveScreenShot()
+     g_frame_dumper->SaveScreenshot(*name);
  }
  
 -void SaveScreenShot(std::string_view name)
@@ -73,7 +73,7 @@ index e80e382930..e2eaa6c611 100644
  
  static bool PauseAndLock(Core::System& system, bool do_lock, bool unpause_on_unlock)
 diff --git a/Source/Core/Core/Core.h b/Source/Core/Core/Core.h
-index 8ff3b32626..855300ad3f 100644
+index 68a402772a..70437502ee 100644
 --- a/Source/Core/Core/Core.h
 +++ b/Source/Core/Core/Core.h
 @@ -150,6 +150,7 @@ void SetState(Core::System& system, State state, bool report_state_change = true
@@ -85,7 +85,7 @@ index 8ff3b32626..855300ad3f 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index 556aff170a..eda0dd451a 100644
+index ffd811bd6c..882ab95e27 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
 @@ -289,7 +289,10 @@ static std::string SystemTimeAsDoubleToString(double time)
@@ -109,7 +109,7 @@ index 556aff170a..eda0dd451a 100644
      if (File::Exists(filename))
      {
        if (ReadHeader(filename, header))
-@@ -630,7 +633,7 @@ bool ReadHeader(const std::string& filename, StateHeader& header)
+@@ -628,7 +631,7 @@ bool ReadHeader(const std::string& filename, StateHeader& header)
  
  std::string GetInfoStringOfSlot(int slot, bool translate)
  {
@@ -118,7 +118,7 @@ index 556aff170a..eda0dd451a 100644
    if (!File::Exists(filename))
      return translate ? Common::GetStringT("Empty") : "Empty";
  
-@@ -644,7 +647,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
+@@ -642,7 +645,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
  u64 GetUnixTimeOfSlot(int slot)
  {
    State::StateHeader header;
@@ -127,7 +127,7 @@ index 556aff170a..eda0dd451a 100644
      return 0;
  
    constexpr u64 MS_PER_SEC = 1000;
-@@ -949,20 +952,49 @@ void Shutdown()
+@@ -947,20 +950,49 @@ void Shutdown()
    s_undo_load_buffer.reset();
  }
  
