@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v42(2025/10/18)\n"
+"Project-Id-Version: batocera-es v42(2025/10/21)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-18 11:20+0900\n"
+"PO-Revision-Date: 2025-10-21 05:33+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -4131,12 +4131,12 @@ msgstr "下 (標準)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Center"
-msgstr ""
+msgstr "中央下"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Left"
-msgstr ""
+msgstr "左下"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -4146,7 +4146,7 @@ msgstr "下画面のみ（切替不可）"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Right"
-msgstr ""
+msgstr "右下"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5146,12 +5146,12 @@ msgstr "中央"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Left"
-msgstr ""
+msgstr "中央左"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Right"
-msgstr ""
+msgstr "中央右"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5396,6 +5396,8 @@ msgid ""
 "Choose the Wayland driver mode if on a handheld device. XWayland has more "
 "compatibility."
 msgstr ""
+"ハンドヘルド場合は、Wayland ドライバモードを選択してください。互換性が高くな"
+"ります"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5506,11 +5508,12 @@ msgctxt "game_options"
 msgid ""
 "Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
 msgstr ""
+"パフォーマンス メトリック (FPS、CPU 使用率など) の画面表示位置を選択します"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose the on-screen position for system messages."
-msgstr ""
+msgstr "システム メッセージの画面表示位置を選択します"
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -10364,7 +10367,7 @@ msgstr "離れたテクスチャの鮮明度を向上させます"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Improves frame rate and responsiveness."
-msgstr ""
+msgstr "フレームレートと応答性が向上します"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12501,7 +12504,7 @@ msgstr "NTSC-U/C"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "NTSYNC"
-msgstr ""
+msgstr "NTSYNC"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -12926,12 +12929,12 @@ msgstr "OSD メッセージを表示"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES POSITION"
-msgstr ""
+msgstr "OSD メッセージ表示位置"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD PERFORMANCE POSITION"
-msgstr ""
+msgstr "OSDパフォーマンス表示位置"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -17663,17 +17666,17 @@ msgstr "上"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center"
-msgstr ""
+msgstr "中央上"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center (Default)"
-msgstr ""
+msgstr "中央上 (標準)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Left"
-msgstr ""
+msgstr "左上"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -17683,7 +17686,7 @@ msgstr "上画面のみ（切替不可）"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Right"
-msgstr ""
+msgstr "右上"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -18947,7 +18950,7 @@ msgstr "サポートしていない機能についての警告"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WAYLAND DRIVER MODE"
-msgstr ""
+msgstr "WAYLAND ドライバーモード"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -19282,7 +19285,7 @@ msgstr "XBOX LIVE アーケード ライセンス"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "XWayland (Default)"
-msgstr ""
+msgstr "XWayland(標準)"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -19951,10 +19954,6 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "特定のディスプレイの色をシミュレートするために使用します"
-
-#~ msgctxt "game_options"
-#~ msgid "Can improve frame rate and responsiveness."
-#~ msgstr "フレームレートと応答性が向上します"
 
 #~ msgctxt "game_options"
 #~ msgid ""
