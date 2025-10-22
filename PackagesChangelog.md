@@ -26,7 +26,9 @@ Hardware|[pironman5](http://github.com/sunfounder/pironman5)|6de9102054d1155aca5
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.1|Oct 21, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|ac10fe4adf27b25351bb04a9fbf8e1a8d50b55f7|Oct 21, 2025
 Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.2|Oct 21, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251021|Oct 21, 2025
 Controllers|[dolphinCrosshairsPack](http://github.com/ProfgLX/Dolphin-Lightguns-Accuracy-Inis)|e5a6dce4b6e12b0659381d56dfabe2d478dd25b1|Oct 21, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251021|Oct 21, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|a2c875f7275541e7724199ce8e504fb578b819a6|Oct 21, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|9a08114907a022042667097e4dca183e0e2edd12|Oct 20, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8540f172aa9cedeb03cfeecaba1bc53204be85bd|Oct 20, 2025
@@ -66,10 +68,8 @@ Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/piers/resource
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|b3bf5d8d9503fb380a7da56ad11699ad7fedead8|Oct 18, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|3e0297b4973c9bebdf3534186dd9a2cfbcc13e56|Oct 18, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.17|Oct 18, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251018|Oct 18, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|3ec5e6d5c6f88188f354b243a19035817d4088fc|Oct 18, 2025
 Engines|[libserum](http://github.com/PPUC/libserum_concentrate)|v2.3.1-concentrate.1|Oct 18, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251018|Oct 18, 2025
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|9554e05ebe8ca0816649f930cbc9de93d6466d88|Oct 18, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|f7d7e1050fbd4b87fed467552c4ad82ef27a1d85|Oct 18, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|fe0bdab8a04eedb912634d89ad8137de75529cff|Oct 18, 2025
