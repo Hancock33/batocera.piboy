@@ -5,7 +5,7 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|05c721bb41c490dcb7e0396
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|28790c19af7ddfa822c4152a3cae4a7fb6c06bc7|Oct 22, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|311e7a99923b6e274279d7db6a879e21f3044039|Oct 22, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.183|Oct 22, 2025
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|09115aa8c67650e38f357b3997fe98715237f90a|Oct 22, 2025
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|7d167f2a50e97ef56a8ddf79b802ab7ddf7c9379|Oct 22, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-10-22|Oct 22, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|0e717217d3a4e14ac91b631c48bce42636cdb2cd|Oct 22, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|1cd7edf172fe24c914590fd19f1d6b477927ae66|Oct 22, 2025
