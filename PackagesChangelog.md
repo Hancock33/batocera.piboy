@@ -7,6 +7,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|311e7a99923b6e274279d7db6a
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.183|Oct 22, 2025
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|09115aa8c67650e38f357b3997fe98715237f90a|Oct 22, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-10-22|Oct 22, 2025
+Engines|[scummvm](http://github.com/scummvm/scummvm)|0e717217d3a4e14ac91b631c48bce42636cdb2cd|Oct 22, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|1cd7edf172fe24c914590fd19f1d6b477927ae66|Oct 22, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|bd5ed517ed34219bd7741146df605b7863b6a14f|Oct 22, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d43a6410c6aa810ac779d4c1f2f155d202619367|Oct 22, 2025
@@ -14,6 +15,7 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|a04efb6efefaa9415b45c
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|ccc35f7c60de956564d7dd4173f26f0d39173e34|Oct 22, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|ccc35f7c60de956564d7dd4173f26f0d39173e34|Oct 22, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|28790c19af7ddfa822c4152a3cae4a7fb6c06bc7|Oct 22, 2025
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|0e717217d3a4e14ac91b631c48bce42636cdb2cd|Oct 22, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|67f6735f02055c3ef7c524b3df364b821b061d8a|Oct 21, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|326a6e391fa3e3ce25ec16e86bccab47658d6664|Oct 21, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|e626bb1f063ee66701f817ddf2ecfc25768db227|Oct 21, 2025
@@ -226,9 +228,7 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|087860aee3ec7b85a86004378e2edc6fd5092
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|172c316f53ac8f066afd7cb9e1da517084273368|Aug 09, 2025
 Ports|[avp](http://github.com/atsb/NakedAVP)|febda659bc62c69734a2e762dbad670ad6659d54|Aug 05, 2025
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|50d3ddd55b5774da643d90d7ad1e3cbd2c618883|Aug 05, 2025
-Engines|[scummvm](http://github.com/scummvm/scummvm)|0fb6764759ad04b4d895c7cb95305b6f7393b0c4|Aug 04, 2025
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|509aed4e75954a918cc34a0ba89efb2c7ae868b3|Aug 04, 2025
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|0fb6764759ad04b4d895c7cb95305b6f7393b0c4|Aug 04, 2025
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|3f37a92f5ea3dc20b5f14176e9e4da2276fad101|Aug 02, 2025
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|4d309c05fd7bdc503d91d267bd542edb8d192b09|Aug 02, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0f74cff52b96841fe0efa01ffd1a6875b253e72a|Aug 01, 2025
