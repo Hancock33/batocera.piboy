@@ -16469,6 +16469,44 @@ index 000000000000..e105e6f5cc91
 +
 +MODULE_AUTHOR("Daniel Drake <drake@endlessm.com>");
 +MODULE_LICENSE("GPL v2");
+diff --git a/drivers/pci/controller/vmd.c b/drivers/pci/controller/vmd.c
+index 1bd5bf4a6097..b4b62b9ccc45 100644
+--- a/drivers/pci/controller/vmd.c
++++ b/drivers/pci/controller/vmd.c
+@@ -192,6 +192,12 @@ static void vmd_pci_msi_enable(struct irq_data *data)
+ 	data->chip->irq_unmask(data);
+ }
+ 
++static unsigned int vmd_pci_msi_startup(struct irq_data *data)
++{
++	vmd_pci_msi_enable(data);
++	return 0;
++}
++
+ static void vmd_irq_disable(struct irq_data *data)
+ {
+ 	struct vmd_irq *vmdirq = data->chip_data;
+@@ -210,6 +216,11 @@ static void vmd_pci_msi_disable(struct irq_data *data)
+ 	vmd_irq_disable(data->parent_data);
+ }
+ 
++static void vmd_pci_msi_shutdown(struct irq_data *data)
++{
++	vmd_pci_msi_disable(data);
++}
++
+ static struct irq_chip vmd_msi_controller = {
+ 	.name			= "VMD-MSI",
+ 	.irq_compose_msi_msg	= vmd_compose_msi_msg,
+@@ -309,6 +320,8 @@ static bool vmd_init_dev_msi_info(struct device *dev, struct irq_domain *domain,
+ 	if (!msi_lib_init_dev_msi_info(dev, domain, real_parent, info))
+ 		return false;
+ 
++	info->chip->irq_startup		= vmd_pci_msi_startup;
++	info->chip->irq_shutdown	= vmd_pci_msi_shutdown;
+ 	info->chip->irq_enable		= vmd_pci_msi_enable;
+ 	info->chip->irq_disable		= vmd_pci_msi_disable;
+ 	return true;
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
 index d97335a40193..acab5556a354 100644
 --- a/drivers/pci/quirks.c
