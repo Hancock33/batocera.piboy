@@ -40,9 +40,9 @@ endef
 
 define LIBRETRO_YABASANSHIRO_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/km_phaenon_xtreme_libretro.so $(TARGET_DIR)/usr/lib/libretro/yabasanshiro_libretro.so
-	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
-	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_libretro.info $(TARGET_DIR)/usr/share/libretro/info/yabasanshiro_libretro.info
+	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/km_phaenon_xtreme_amped_libretro.so $(TARGET_DIR)/usr/lib/libretro/yabasanshiro_libretro.so
+	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_amped_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
+	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_amped_libretro.info $(TARGET_DIR)/usr/share/libretro/info/yabasanshiro_libretro.info
 endef
 
 $(eval $(generic-package))
