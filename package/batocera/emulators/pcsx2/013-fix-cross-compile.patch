@@ -1,8 +1,8 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index e551edae2..7addd6823 100644
+index 8178d2e95..d98068822 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
-@@ -75,8 +75,8 @@ mark_as_advanced(CMAKE_C_FLAGS_DEVEL CMAKE_CXX_FLAGS_DEVEL CMAKE_LINKER_FLAGS_DE
+@@ -76,8 +76,8 @@ mark_as_advanced(CMAKE_C_FLAGS_DEVEL CMAKE_CXX_FLAGS_DEVEL CMAKE_LINKER_FLAGS_DE
  #-------------------------------------------------------------------------------
  # Select the architecture
  #-------------------------------------------------------------------------------
@@ -13,7 +13,7 @@ index e551edae2..7addd6823 100644
  	# Multi-ISA only exists on x86.
  	option(DISABLE_ADVANCE_SIMD "Disable advance use of SIMD (SSE2+ & AVX)" OFF)
  
-@@ -102,12 +102,12 @@ if("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64" OR "${CMAKE_HOST_SYSTEM_PR
+@@ -103,12 +103,12 @@ if("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64" OR "${CMAKE_HOST_SYSTEM_PR
  			add_compile_options("-msse" "-msse2" "-msse4.1" "-mfxsr")
  		else()
  			# Can't use march=native on Apple Silicon.
@@ -28,7 +28,7 @@ index e551edae2..7addd6823 100644
         "${CMAKE_OSX_ARCHITECTURES}" STREQUAL "arm64")
  	message(STATUS "Building for Apple Silicon (ARM64).")
  	list(APPEND PCSX2_DEFS _M_ARM64=1)
-@@ -130,7 +130,7 @@ elseif("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "arm64" OR "${CMAKE_HOST_SYSTEM
+@@ -131,7 +131,7 @@ elseif("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "arm64" OR "${CMAKE_HOST_SYSTEM
  		list(APPEND PCSX2_DEFS OVERRIDE_HOST_CACHE_LINE_SIZE=64)
  	endif()
  else()

@@ -1,5 +1,5 @@
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 4240dd0dc..e834b5d6a 100644
+index 9dde9e5ef..01dd4d2ad 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
 @@ -1769,20 +1769,11 @@ bool SaveStateBase::vmFreeze()

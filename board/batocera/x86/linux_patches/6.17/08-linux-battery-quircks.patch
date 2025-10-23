@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-input.c b/drivers/hid/hid-input.c
-index f45f856a127f..98b49c92ef5c 100644
+index 2c743e35c1d3..19212c536173 100644
 --- a/drivers/hid/hid-input.c
 +++ b/drivers/hid/hid-input.c
 @@ -383,6 +383,8 @@ static const struct hid_device_id hid_battery_quirks[] = {
