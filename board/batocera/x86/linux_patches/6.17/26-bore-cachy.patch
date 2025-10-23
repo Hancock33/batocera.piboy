@@ -608,7 +608,7 @@ index 000000000000..c9e76eda35c8
 +#endif // CONFIG_SYSCTL
 +#endif /* CONFIG_SCHED_BORE */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index ccba6fc3c3fe..5bd3d55af4e4 100644
+index 8575d67cbf73..88b2d6408cef 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -98,6 +98,10 @@
@@ -634,7 +634,7 @@ index ccba6fc3c3fe..5bd3d55af4e4 100644
  	struct load_weight lw;
  
  	if (task_has_idle_policy(p)) {
-@@ -8685,6 +8693,10 @@ void __init sched_init(void)
+@@ -8687,6 +8695,10 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
@@ -752,7 +752,7 @@ index 02e16b70a790..751df396d94b 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 245e721d9f7b..507e1c1ef837 100644
+index efdc97a7bd91..e5cb3fb0cdeb 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,10 @@
