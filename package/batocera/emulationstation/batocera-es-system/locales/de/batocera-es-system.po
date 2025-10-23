@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-06 17:53+0000\n"
+"PO-Revision-Date: 2025-10-23 12:57+0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany)\n"
 "Language: de-DE\n"
@@ -4147,12 +4147,12 @@ msgstr "Unten (Standard)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Center"
-msgstr ""
+msgstr "Unten Mitte"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Left"
-msgstr ""
+msgstr "Unten Links"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -4162,7 +4162,7 @@ msgstr "Nur unten"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Right"
-msgstr ""
+msgstr "Unten Rechts"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5176,12 +5176,12 @@ msgstr "Zentriert"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Left"
-msgstr ""
+msgstr "Mitte Links"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Right"
-msgstr ""
+msgstr "Mitte Rechts"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5429,6 +5429,8 @@ msgid ""
 "Choose the Wayland driver mode if on a handheld device. XWayland has more "
 "compatibility."
 msgstr ""
+"Wayland-Treibermodus für Handheld-Geräte wählen. XWayland ist meist "
+"kompatibler."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5538,12 +5540,12 @@ msgstr "Textur-Detailgrad wählen."
 msgctxt "game_options"
 msgid ""
 "Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
-msgstr ""
+msgstr "Position für Leistungsanzeigen auf dem Bildschirm wählen "
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose the on-screen position for system messages."
-msgstr ""
+msgstr "Position für Systemnachrichten auf dem Bildschirm wählen."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -8844,9 +8846,6 @@ msgid ""
 "use a value larger than 100%% so that the steering feels less sensitive on a "
 "thumbstick."
 msgstr ""
-"Beim Spielen von Rennspielen mit einem Gamepad ist es manchmal besser, einen "
-"Wert größer als 100%% zu verwenden, damit sich die Lenkung auf einem "
-"Thumbstick weniger empfindlich anfühlt."
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -10064,7 +10063,7 @@ msgctxt "game_options"
 msgid ""
 "Helps with texture corruption and depth issues on AMD GPUs. Can also help "
 "Intel GPUs in some cases."
-msgstr ""
+msgstr "Hilft bei Texturfehlern und Tiefenproblemen auf AMD-GPUs, teils "
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10472,7 +10471,7 @@ msgstr "Verbessert Schärfe und Klarheit weit entfernter Texturen."
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Improves frame rate and responsiveness."
-msgstr ""
+msgstr "Verbessert Bildrate und Reaktionszeit."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11684,7 +11683,7 @@ msgstr "MODELL TYP"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "MODERN PEDAL CONTROLS"
-msgstr "MODERNE PEDALSTEUERUNG"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12484,7 +12483,7 @@ msgstr "NAT"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "NATIVE DEPTH INTERPOLATION"
-msgstr ""
+msgstr "NATIVE TIEFENINTERPOLATION"
 
 #. TRANSLATION: libretro/melonds, libretro/melondsds
 msgctxt "game_options"
@@ -12634,7 +12633,7 @@ msgstr "NTSC-U/C"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "NTSYNC"
-msgstr ""
+msgstr "NTSYNC"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -13062,12 +13061,12 @@ msgstr "BILDSCHIRMBENACHRICHTIGUNGEN"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES POSITION"
-msgstr ""
+msgstr "OSD-NACHRICHTENPOSITION"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD PERFORMANCE POSITION"
-msgstr ""
+msgstr "OSD-LEISTUNGSPOSITION"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -15588,7 +15587,7 @@ msgstr "STE"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "STEERING SENSITIVITY"
-msgstr "EMPFINDLICHKEIT DER LENKUNG"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17874,17 +17873,17 @@ msgstr "Oben"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center"
-msgstr ""
+msgstr "Oben Mitte"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center (Default)"
-msgstr ""
+msgstr "Oben Mitte (Standard)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Left"
-msgstr ""
+msgstr "Oben Links"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -17894,7 +17893,7 @@ msgstr "Nur oben"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Right"
-msgstr ""
+msgstr "Oben Rechts"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -18593,8 +18592,6 @@ msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
-"Benutze L2/R2 zum Bremsen/Beschleunigen und L1/R1 oder den rechten Stick "
-"nach oben/unten zum Hoch-/Runterschalten."
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
@@ -19179,7 +19176,7 @@ msgstr "WARNUNG VOR NICHT UNTERSTÜTZTEN FUNKTIONEN"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WAYLAND DRIVER MODE"
-msgstr ""
+msgstr "WAYLAND-TREIBERMODUS"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -19518,7 +19515,7 @@ msgstr "XBOX LIVE ARCADE"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "XWayland (Default)"
-msgstr ""
+msgstr "XWayland (Standard)"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -20187,10 +20184,6 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Can be used to simulate colors of particular displays."
 #~ msgstr "Kann verwendet werden, um Farben bestimmter Displays zu simulieren."
-
-#~ msgctxt "game_options"
-#~ msgid "Can improve frame rate and responsiveness."
-#~ msgstr "Kann Bildrate und Reaktionsfähigkeit erhöhen."
 
 #~ msgctxt "game_options"
 #~ msgid ""
