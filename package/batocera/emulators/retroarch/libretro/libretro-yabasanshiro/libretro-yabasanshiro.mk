@@ -3,8 +3,8 @@
 # libretro-yabasanshiro
 #
 ################################################################################
-# Version: Commits on Oct 24, 2025
-LIBRETRO_YABASANSHIRO_VERSION = fa3464ff3d82197f588f4359932b93c7a658ee8d
+# Version: Commits on Oct 25, 2025
+LIBRETRO_YABASANSHIRO_VERSION = 125d417cc8d4c776ec5fd71561297e51134105e9
 LIBRETRO_YABASANSHIRO_SITE = $(call github,KMFDManic,Phaenon-Xtreme,$(LIBRETRO_YABASANSHIRO_VERSION))
 LIBRETRO_YABASANSHIRO_LICENSE = GPLv2
 LIBRETRO_YABASANSHIRO_DEPENDENCIES = retroarch
