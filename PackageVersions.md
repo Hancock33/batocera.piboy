@@ -13,7 +13,7 @@ Audio|[libldac](https://github.com/EHfive/ldacBT.git)|af2dd23979453bcd1cad7c4086
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.3|May 11, 2025
 Audio|[mt32emu](http://github.com/munt/munt)|libmt32emu_2_7_2|Apr 03, 2025
 Audio|[ossp](http://github.com/OpenMandrivaSoftware/ossp)|v1.3.3|Aug 31, 2024
-Audio|[portmidi](http://github.com/PortMidi/portmidi)|8341a6713842d2374c3aad8998d43b20ad0db435|Oct 25, 2025
+Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.7|Oct 25, 2025
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.0.0|Aug 03, 2023
 Audio|[wildmidi](http://github.com/Mindwerks/wildmidi)|wildmidi-0.4.6|Apr 11, 2024
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|dd2bc88788c5934fcda4efea624cd2ce09b9d0c7|Oct 10, 2025

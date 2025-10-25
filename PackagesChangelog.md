@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Audio|[portmidi](http://github.com/PortMidi/portmidi)|8341a6713842d2374c3aad8998d43b20ad0db435|Oct 25, 2025
+Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.7|Oct 25, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|cc37d7617f2dec4a4ee69822955465e0c78fc45f|Oct 25, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|cc37d7617f2dec4a4ee69822955465e0c78fc45f|Oct 25, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5a7094b8121a9072949072530739b50382e38acc|Oct 25, 2025
