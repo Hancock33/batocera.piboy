@@ -3,6 +3,7 @@
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|3a2a1bdd9ca3e70e8d44c225b8e809b70a0ddae9|Oct 25, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5a7094b8121a9072949072530739b50382e38acc|Oct 25, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|8d565d779393f917d42135396b77cf28526f3856|Oct 25, 2025
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0282pre|Oct 25, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|eb92ca3be6f445494a83758d3f1bad0aa13c159c|Oct 25, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.253|Oct 25, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.192|Oct 25, 2025
@@ -22,6 +23,7 @@ Ports|[vkquake](http://github.com/Novum/vkQuake)|51a2083634651dcc049dfa998c00219
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|a583e2cacda59902f9702468e18723f441a5d64f|Oct 25, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|a583e2cacda59902f9702468e18723f441a5d64f|Oct 25, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|11a9e9e451b5013c6a19d58b26bbc75316f4080d|Oct 25, 2025
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0282pre|Oct 25, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|58fd0f574704cd8ab729dba0c0f281c72c498646|Oct 25, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|48ed03b02701b1cd72cbededeb07d9bc18bcee03|Oct 25, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|0d078c3768e60f12c33728ed39c2cae4100697cf|Oct 25, 2025
@@ -163,11 +165,9 @@ Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/rel
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.3.0|Sept 27, 2025
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|21f8bc494305fac47003202522249e81af95067e|Sept 27, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|c2e12cfe2043ba4d62207e9343f7e66c02679cde|Sept 26, 2025
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0281|Sept 26, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|d8b1a461a495184b340dc0b2fac4172149475a6c|Sept 26, 2025
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|4322db5906e67b57ec9c327e6afe3d98ed893df7|Sept 26, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|f7566e4c8262c618c09173b93282bec6a340663c|Sept 26, 2025
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0281|Sept 26, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0281|Sept 25, 2025
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.0.0|Sept 25, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.4|Sept 25, 2025

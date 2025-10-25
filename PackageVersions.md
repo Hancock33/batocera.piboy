@@ -162,7 +162,7 @@ Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|d0384bc33aad06bfa9cf5cd308c4bd7ae6cfc814|Mar 12, 2025
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|85c80181d26bb5c2147ebc76bfc48bce9f8d73a8|Oct 21, 2024
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|b84d0605e847e07657a44a1a11374a03a6e8a489|Jul 26, 2025
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0281|Sept 26, 2025
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0282pre|Oct 25, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|870e8ba3fa4e6635e2eb9d85c939589498659c32|Oct 05, 2025
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|7f3b41c33d3e1d982f40068f22353fedc5b1db0d|Aug 29, 2025
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|7a3c11ff970cd36ca806961fae6db94b30dd5401|Oct 21, 2024
@@ -236,7 +236,7 @@ Emulators|[libretro-yabause](http://github.com/libretro/yabause)|c35712c5ed33e18
 Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426da40b074245fda097fd345fa7c9cdbf152a|Apr 26, 2022
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|ab20dd9420ebee6e1c0d9f20041d920181700c25|Oct 09, 2025
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0281|Sept 26, 2025
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0282pre|Oct 25, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|420a1fa7e75121d5f9de2a886b5c2742563d9a3d|Oct 24, 2025
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|07c866bd2b897fcbce2131dc36066c179422c3c9|Jun 21, 2025
