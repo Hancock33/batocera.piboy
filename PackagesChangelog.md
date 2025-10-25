@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251026|Oct 26, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251026|Oct 26, 2025
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.7|Oct 25, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|cc37d7617f2dec4a4ee69822955465e0c78fc45f|Oct 25, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|cc37d7617f2dec4a4ee69822955465e0c78fc45f|Oct 25, 2025
@@ -46,14 +48,13 @@ Libraries|[pysdl3](http://github.com/Aermoss/PySDL3)|v0.9.9b0|Oct 24, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|0487696dc34d23b7e903cf26db8e9910f0977db1|Oct 24, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|ecbd1ce57f6deb413988af88225c7eab582a7ac5|Oct 24, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|036f8582087c17d00794a89174b8269bf3ee6f83|Oct 24, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251024|Oct 24, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|a0a3e32fca09d5122b675b508a4c40cf47287627|Oct 24, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251024|Oct 24, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f22a50b6800c88d99b09bbecd045ad853e76ba84|Oct 24, 2025
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|3a2855e30c7f39a41064ca36264e9bf9f6170f8e|Oct 24, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|df351b60591140d70d7d1ef87f5332875b2b5322|Oct 23, 2025
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|cef5085f8bba13a58b3504ccf181e34317295af6|Oct 23, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|f0cb8fd643f0b7d07a42e002944d797d6c964b8e|Oct 23, 2025
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20251023-proton-slr|Oct 23, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|a3ae94cf0ebac5a25c8b51bf540a778096260fb4|Oct 23, 2025
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|12e994ffcb6d051289d7875d3670fd8fce9c7a62|Oct 23, 2025
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|5b8cdea5cb06fb8d3d8ce7b88695f8dd00b4ac12|Oct 23, 2025
@@ -128,7 +129,6 @@ Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|dd2bc
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|d353533e7447c23f26edf8c72cd0ef5995c459f5|Oct 10, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|4eed497d73cb2565bcf82b21843d32066eb31810|Oct 10, 2025
 Utils|[labwc](http://github.com/labwc/labwc)|0.9.2|Oct 10, 2025
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20251006-proton-slr|Oct 10, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|57155d8037463346307123daabeaa27298e0f956|Oct 10, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|b75225203ffea8b65124bb31acb598e91e7f22d9|Oct 10, 2025
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|ab20dd9420ebee6e1c0d9f20041d920181700c25|Oct 09, 2025

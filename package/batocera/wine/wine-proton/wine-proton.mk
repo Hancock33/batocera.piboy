@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Oct 10, 2025
-WINE_PROTON_VERSION = cachyos-10.0-20251006-proton-slr
+# Version: Commits on Oct 23, 2025
+WINE_PROTON_VERSION = cachyos-10.0-20251023-proton-slr
 WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -47,8 +47,8 @@ WINE_PROTON_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" CPPFLAGS="-DMPG123_NO_L
 	--exec-prefix=/usr/wine/wine-proton
 
 ifeq ($(BR2_x86_64),y)
+    WINE_PROTON_CONF_OPTS += --enable-win64
     WINE_PROTON_CONF_OPTS += --enable-tools
-    WINE_PROTON_CONF_OPTS += --enable-archs=x86_64,i386
 else
     WINE_PROTON_CONF_OPTS += --disable-win64
 endif
