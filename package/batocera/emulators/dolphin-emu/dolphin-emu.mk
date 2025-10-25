@@ -5,7 +5,8 @@
 ################################################################################
 # Version: Commits on Oct 23, 2025
 DOLPHIN_EMU_VERSION = df351b60591140d70d7d1ef87f5332875b2b5322
-DOLPHIN_EMU_VERSION_MINOR = 328
+DOLPHIN_EMU_VERSION_MAJOR = 2509
+DOLPHIN_EMU_VERSION_MINOR = 217
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -55,6 +56,7 @@ else
 endif
 
 define DOLPHIN_EMU_PRE_CONFIGURE_HOOK
+	sed -i 's/set(DOLPHIN_VERSION_MAJOR .*)/set(DOLPHIN_VERSION_MAJOR "$(DOLPHIN_EMU_VERSION_MAJOR)")/' $(@D)/CMake/ScmRevGen.cmake
 	sed -i 's/set(DOLPHIN_VERSION_MINOR .*)/set(DOLPHIN_VERSION_MINOR "$(DOLPHIN_EMU_VERSION_MINOR)")/' $(@D)/CMake/ScmRevGen.cmake
 endef
 
