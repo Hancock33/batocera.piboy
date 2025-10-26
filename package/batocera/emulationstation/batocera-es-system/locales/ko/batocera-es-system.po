@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-09 22:17+0900\n"
+"PO-Revision-Date: 2025-10-21 23:44+0900\n"
 "Last-Translator: DDinghoya <ddinghoya@gmail.com>\n"
 "Language-Team: Korean (KO)\n"
 "Language: ko_KO\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Loco-Source-Locale: ko_KR\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 "X-Loco-Parser: loco_parse_po\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
@@ -4131,12 +4131,12 @@ msgstr "하단 (기본)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Center"
-msgstr ""
+msgstr "하단 중앙"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Left"
-msgstr ""
+msgstr "왼쪽 하단"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -4146,7 +4146,7 @@ msgstr "하단만"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Right"
-msgstr ""
+msgstr "오른쪽 하단"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5152,12 +5152,12 @@ msgstr "중앙"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Left"
-msgstr ""
+msgstr "중앙 왼쪽"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Right"
-msgstr ""
+msgstr "중앙 오른쪽"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5404,6 +5404,8 @@ msgid ""
 "Choose the Wayland driver mode if on a handheld device. XWayland has more "
 "compatibility."
 msgstr ""
+"휴대용 기기를 사용하는 경우 Wayland 드라이버 모드를 선택하세요. XWayland의 호"
+"환성이 더 좋습니다."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5513,12 +5515,12 @@ msgstr "텍스처 세부 수준을 선택하세요."
 msgctxt "game_options"
 msgid ""
 "Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
-msgstr ""
+msgstr "성능 지표 (FPS, CPU 사용량 등)에 대한 화면 위치를 선택합니다."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose the on-screen position for system messages."
-msgstr ""
+msgstr "시스템 메시지의 화면 위치를 선택하세요."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -9978,6 +9980,8 @@ msgid ""
 "Helps with texture corruption and depth issues on AMD GPUs. Can also help "
 "Intel GPUs in some cases."
 msgstr ""
+"AMD GPU의 텍스처 손상 및 깊이 문제 해결에 도움이 됩니다. 경우에 따라 Intel "
+"GPU에도 도움이 될 수 있습니다."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10373,7 +10377,7 @@ msgstr "멀리 있는 텍스처의 선명도를 향상시킵니다."
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Improves frame rate and responsiveness."
-msgstr ""
+msgstr "프레임 속도와 반응성이 향상됩니다."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12362,7 +12366,7 @@ msgstr "NAT"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "NATIVE DEPTH INTERPOLATION"
-msgstr ""
+msgstr "네이티브 뎁스 보간"
 
 #. TRANSLATION: libretro/melonds, libretro/melondsds
 msgctxt "game_options"
@@ -12512,7 +12516,7 @@ msgstr "NTSC-U/C"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "NTSYNC"
-msgstr ""
+msgstr "NT 동기화"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -12938,12 +12942,12 @@ msgstr "OSD 메시지"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES POSITION"
-msgstr ""
+msgstr "OSD 메시지 위치"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD PERFORMANCE POSITION"
-msgstr ""
+msgstr "OSD 성능 위치"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -17686,17 +17690,17 @@ msgstr "상단"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center"
-msgstr ""
+msgstr "상단 중앙"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center (Default)"
-msgstr ""
+msgstr "상단 중앙 (기본)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Left"
-msgstr ""
+msgstr "왼쪽 상단"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -17706,7 +17710,7 @@ msgstr "상단만"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Right"
-msgstr ""
+msgstr "오른쪽 상단"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -18968,7 +18972,7 @@ msgstr "지원되지 않는 기능에 대한 경고"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WAYLAND DRIVER MODE"
-msgstr ""
+msgstr "WAYLAND 드라이버 모드"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -19305,7 +19309,7 @@ msgstr "엑스박스 라이브 아케이드"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "XWayland (Default)"
-msgstr ""
+msgstr "XWayland (기본)"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"

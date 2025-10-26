@@ -15,11 +15,26 @@ f_usage() {
     echo "${0} listOutputs" >&2
     echo "${0} currentOutput" >&2
     echo "${0} setOutput <PRIMARY_OUTPUT> [SECOND_OUTPUT] [THIRD_OUTPUT]" >&2
+    echo "${0} repositionOutputs <PRIMARY_OUTPUT> [SECOND_OUTPUT] [THIRD_OUTPUT]" >&2
     echo "${0} minTomaxResolution [<MAX_RESOLUTION>]" >&2
     echo "${0} minTomaxResolution-secure [<MAX_RESOLUTION>]" >&2
     echo "${0} setRotation (0|1|2|3)" >&2
     echo "${0} getRotation" >&2
     echo "${0} getDisplayMode" >&2
+    echo "${0} getDisplayComp" >&2
+}
+
+_reconfigure_labwc() {
+    local LABWC_PID
+    LABWC_PID=$(pidof labwc | cut -d' ' -f1)
+
+    if [ -n "${LABWC_PID}" ]; then
+        _log "Found running labwc PID: ${LABWC_PID}. Executing Reconfigure action."
+        # Set the environment variable just for this command
+        LABWC_PID="${LABWC_PID}" labwc --reconfigure
+    else
+        _log "Could not find running labwc process to trigger reconfigure action."
+    fi
 }
 
 # Extract output block for a specific screen
@@ -152,7 +167,6 @@ f_minTomaxResolution() {
     local MAXWIDTH MAXHEIGHT MAX_PIXELS
     local CURRENT_MODE_STR CURRENT_RESOLUTION
     local CURRENTWIDTH CURRENTHEIGHT CURRENT_PIXELS
-    local BEST_MODE="" BEST_AREA=0
     
     if [ -z "${PSCREEN}" ]; then 
         _log "f_minTomaxResolution: PSCREEN is empty."
@@ -190,24 +204,29 @@ f_minTomaxResolution() {
         exit 0
     fi
     
-    # This part will only run if the current resolution is > 1080p, e.g. a 4K TV.
-    _get_available_modes "${PSCREEN}" | while IFS= read -r mode; do
-        resolution=$(echo "${mode}" | cut -d'@' -f1)
-        width=$(echo "${resolution}" | cut -dx -f1)
-        height=$(echo "${resolution}" | cut -dx -f2)
-        
-        if ! echo "${width}" | grep -qE '^[0-9]+$' || ! echo "${height}" | grep -qE '^[0-9]+$'; then
-            continue
-        fi
-        
-        area=$((width * height))
-        if [ "${area}" -le "${MAX_PIXELS}" ]; then
-            if [ "${area}" -gt "${BEST_AREA}" ]; then
-                BEST_MODE="${mode}"
-                BEST_AREA="${area}"
+    BEST_MODE=$(_get_available_modes "${PSCREEN}" | {
+        _BEST_MODE_SUB=""
+        _BEST_AREA_SUB=0
+
+        while IFS= read -r mode; do
+            resolution=$(echo "${mode}" | cut -d'@' -f1)
+            width=$(echo "${resolution}" | cut -dx -f1)
+            height=$(echo "${resolution}" | cut -dx -f2)
+            
+            if ! echo "${width}" | grep -qE '^[0-9]+$' || ! echo "${height}" | grep -qE '^[0-9]+$'; then
+                continue
             fi
-        fi
-    done
+            
+            area=$((width * height))
+            if [ "${area}" -le "${MAX_PIXELS}" ]; then
+                if [ "${area}" -gt "${_BEST_AREA_SUB}" ]; then
+                    _BEST_MODE_SUB="${mode}"
+                    _BEST_AREA_SUB="${area}"
+                fi
+            fi
+        done
+        echo "${_BEST_MODE_SUB}"
+    })
     
     if [ -n "${BEST_MODE}" ]; then
         _log "f_minTomaxResolution: Best mode found: ${BEST_MODE}. Setting it."
@@ -400,74 +419,127 @@ case "${ACTION}" in
         ;;
 
     "setOutput")
-        TARGET_OUT1=$1
-        TARGET_OUT2=$2
-        TARGET_OUT3=$3
+        # We receive TARGETS as positional parameters $1, $2, $3...
+        _log "setOutput: Received desired outputs (in order): $*"
 
-        if [ -z "${TARGET_OUT1}" ]; then 
-            _log "setOutput: Error: No target output specified."
-            echo "Error: At least one output must be specified." >&2
-            exit 1
+        RC_XML="${HOME}/.config/labwc/rc.xml"
+        if [ -f "${RC_XML}" ]; then
+            _log "Updating labwc window rules in ${RC_XML}"
+            PRIMARY_OUT=$1
+            SECONDARY_OUT=$2
+
+            # Set EmulationStation to the primary output
+            if [ -n "${PRIMARY_OUT}" ]; then
+                _log "Setting emulationstation window to output: ${PRIMARY_OUT}"
+                sed -i '/<windowRule title="emulationstation"/,/\/windowRule>/ s/output="[^"]*"/output="'"${PRIMARY_OUT}"'"/' "${RC_XML}"
+            fi
+
+            # Set backglass to the secondary output, or clear if no secondary output
+            if [ -n "${SECONDARY_OUT}" ]; then
+                _log "Setting backglass window to output: ${SECONDARY_OUT}"
+                sed -i '/<windowRule title="backglass"/,/\/windowRule>/ s/output="[^"]*"/output="'"${SECONDARY_OUT}"'"/' "${RC_XML}"
+            else
+                _log "No secondary output. Clearing backglass window output rule."
+                sed -i '/<windowRule title="backglass"/,/\/windowRule>/ s/output="[^"]*"/output=""/' "${RC_XML}"
+            fi
+
+            # Trigger labwc to reload the configuration
+            _reconfigure_labwc
         fi
 
-        DESIRED_OUTPUTS="${TARGET_OUT1}"
-        [ -n "${TARGET_OUT2}" ] && DESIRED_OUTPUTS="${DESIRED_OUTPUTS} ${TARGET_OUT2}"
-        [ -n "${TARGET_OUT3}" ] && DESIRED_OUTPUTS="${DESIRED_OUTPUTS} ${TARGET_OUT3}"
-        
-        _log "setOutput: Desired active outputs: ${DESIRED_OUTPUTS}"
-
-        # Get a list of all available outputs from the system
         ALL_OUTPUTS=$("${WLR_RANDR}" 2>/dev/null | grep -E '^[A-Za-z0-9.-]+ "' | cut -d' ' -f1)
 
-        # Ensure all desired outputs actually exist
-        for target in ${DESIRED_OUTPUTS}; do
-            if ! echo "${ALL_OUTPUTS}" | grep -wq "${target}"; then
-                _log "setOutput: Error: Target output '${target}' not found."
-                echo "Error: Output '${target}' not found." >&2
-                exit 1
+        CMD_ARGS_VAR=""
+
+        # 1. Add the --on commands for desired outputs, IN THE CORRECT ORDER.
+        for target in "$@"; do
+            if [ -z "$target" ]; then continue; fi
+
+            if echo "${ALL_OUTPUTS}" | grep -wq "${target}"; then
+                CMD_ARGS_VAR="${CMD_ARGS_VAR} --output ${target} --on"
+                _log "setOutput: Queuing ON for ${target}"
+            else
+                _log "setOutput: Warning: Desired output '${target}' not found. Skipping."
             fi
         done
 
-        set --
-
-        # Iterate through ALL connected outputs
+        # 2. Add the --off commands for any other connected outputs.
         for connected_output in ${ALL_OUTPUTS}; do
-            IS_TARGET=0
-            
-            # Check if this connected output is in our DESIRED list
-            for target in ${DESIRED_OUTPUTS}; do
+            IS_DESIRED=0
+            for target in "$@"; do
                 if [ "${connected_output}" = "${target}" ]; then
-                    IS_TARGET=1
+                    IS_DESIRED=1
                     break
                 fi
             done
-
-            # Construct the argument based on whether it's a target or not
-            if [ "${IS_TARGET}" -eq 1 ]; then
-                # It's desired: Add --output <name> --on to the list
-                set -- "$@" --output "${connected_output}" --on
-                _log "setOutput: Queuing ON for ${connected_output}"
-            else
-                # It's connected but not desired: Add --output <name> --off
-                set -- "$@" --output "${connected_output}" --off
+            if [ "${IS_DESIRED}" -eq 0 ]; then
+                CMD_ARGS_VAR="${CMD_ARGS_VAR} --output ${connected_output} --off"
                 _log "setOutput: Queuing OFF for ${connected_output}"
             fi
         done
 
-        # Execute with all the collected arguments
-        _log "Executing: ${WLR_RANDR} $*"
-        if "${WLR_RANDR}" "$@"; then
-            _log "setOutput: Successfully configured outputs."
+        # Execute the command. The `eval` is needed to handle the string of arguments correctly.
+        _log "Executing: ${WLR_RANDR}${CMD_ARGS_VAR}"
+        if ! eval "${WLR_RANDR}${CMD_ARGS_VAR}"; then
+            _log "setOutput: The main wlr-randr command failed. Trying fallback."
+            # Fallback for safety: just try to enable the primary (the first argument).
+            if [ -n "$1" ]; then
+                "${WLR_RANDR}" --output "$1" --on
+            fi
         else
-            _log "setOutput: The main wlr-randr command failed."
+            _log "setOutput: Successfully configured outputs."
+        fi
+        ;;
+
+    "repositionOutputs")
+        # This function should be called AFTER resolutions and rotations are set.
+        # It arranges the specified outputs horizontally.
+        _log "repositionOutputs: Arranging outputs: $*"
+
+        CMD_ARGS_VAR=""
+        CURRENT_X_POS=0
+
+        for target in "$@"; do
+            if [ -z "$target" ]; then continue; fi
+
+            # Set the position for the current screen
+            CMD_ARGS_VAR="${CMD_ARGS_VAR} --output ${target} --pos ${CURRENT_X_POS},0"
+            _log "repositionOutputs: Setting ${target} to position ${CURRENT_X_POS},0"
+
+            # Get the current resolution and rotation to calculate the effective width
+            TARGET_RESOLUTION_STR=$(_get_current_mode_string "${target}")
+            if [ -z "${TARGET_RESOLUTION_STR}" ]; then
+                _log "repositionOutputs: Warning: Could not get resolution for '${target}'. Next screen position may be wrong."
+                continue
+            fi
+
+            RAW_RESOLUTION=$(echo "${TARGET_RESOLUTION_STR}" | cut -d'@' -f1)
+            RAW_ROTATION=$(_get_current_transform "${target}")
             
-            # Fallback: Build a new, simpler argument list
-            set --
-            for target in ${DESIRED_OUTPUTS}; do
-                set -- "$@" --output "${target}" --on
-            done
-            _log "setOutput: Fallback: Trying to enable targets only: ${WLR_RANDR} $*"
-            "${WLR_RANDR}" "$@"
+            # Use the effective width (swapped for 90/270 degree rotations)
+            if [ "${RAW_ROTATION}" = "1" ] || [ "${RAW_ROTATION}" = "3" ]; then
+                # Rotated 90 or 270 degrees, so height becomes the effective width
+                EFFECTIVE_WIDTH=$(echo "${RAW_RESOLUTION}" | cut -dx -f2)
+            else
+                # Normal or 180 degree rotation, width is width
+                EFFECTIVE_WIDTH=$(echo "${RAW_RESOLUTION}" | cut -dx -f1)
+            fi
+
+            if echo "${EFFECTIVE_WIDTH}" | grep -qE '^[0-9]+$'; then
+                CURRENT_X_POS=$((CURRENT_X_POS + EFFECTIVE_WIDTH))
+                _log "repositionOutputs: Effective width of ${target} is ${EFFECTIVE_WIDTH}. Next X position is ${CURRENT_X_POS}."
+            else
+                _log "repositionOutputs: Warning: Could not parse effective width for '${target}'."
+            fi
+        done
+
+        if [ -n "${CMD_ARGS_VAR}" ]; then
+            _log "Executing: ${WLR_RANDR}${CMD_ARGS_VAR}"
+            if ! eval "${WLR_RANDR}${CMD_ARGS_VAR}"; then
+                _log "repositionOutputs: Failed to apply final positions."
+            else
+                _log "repositionOutputs: Successfully positioned outputs."
+            fi
         fi
         ;;
 
@@ -508,7 +580,7 @@ case "${ACTION}" in
             if [ "$CURRENT_MATRIX" != "$MATRIX" ]; then
                 sed -i '/<device category="touch">/,/<\/device>/ s|<calibrationMatrix>.*</calibrationMatrix>|<calibrationMatrix>'"$MATRIX"'</calibrationMatrix>|' "$CONFIG_FILE"
                 _log "Touchscreen '${TOUCHSCREEN}' detected. Updated calibrationMatrix from '$CURRENT_MATRIX' to: $MATRIX"
-                labwc --reconfigure
+                _reconfigure_labwc
             else
                 _log "Touchscreen '${TOUCHSCREEN}' detected. calibrationMatrix already set to: $MATRIX — no update needed."
             fi
@@ -535,6 +607,10 @@ case "${ACTION}" in
 
     "getDisplayMode")
         echo "wayland"
+        ;;
+    
+    "getDisplayComp")
+        echo "labwc"
         ;;
 
     *)

@@ -134,15 +134,18 @@ class AzaharGenerator(Generator):
         azaharConfig.set("UI", r"calloutFlags\default", "false")
         # Close without confirmation
         azaharConfig.set("UI", "confirmClose", "false")
-        azaharConfig.set("UI", r"confirmclose\default", "false")
+        azaharConfig.set("UI", r"confirmClose\default", "false")
 
         # screenshots
         azaharConfig.set("UI", r"Paths\screenshotPath", "/userdata/screenshots")
         azaharConfig.set("UI", r"Paths\screenshotPath\default", "false")
 
-        # don't check updates
-        azaharConfig.set("UI", r"Updater\check_for_update_on_start", "false")
-        azaharConfig.set("UI", r"Updater\check_for_update_on_start\default", "false")
+        ## [MISCELLANEOUS]
+        if not azaharConfig.has_section("Miscellaneous"):
+            azaharConfig.add_section("Miscellaneous")
+        # Don't check for update at start
+        azaharConfig.set("Miscellaneous", "check_for_update_on_start", "false")
+        azaharConfig.set("Miscellaneous", r"check_for_update_on_start\default", "false")
 
         ## [RENDERER]
         if not azaharConfig.has_section("Renderer"):

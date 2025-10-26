@@ -1,0 +1,12 @@
+diff --git a/Makefile b/Makefile
+index 5c4c58e2..9f44f37f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -35,7 +35,6 @@ srcFiles=src/resources/defaultConfig.ini \
+ 	src/system.go \
+ 	src/system_glfw.go \
+ 	src/util_desktop.go \
+-	src/util_js.go \
+ 	src/util_raw.go \
+ 	src/video_ffmpeg.go
+ 	

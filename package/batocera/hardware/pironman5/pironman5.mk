@@ -3,8 +3,8 @@
 # pironman5
 #
 ################################################################################
-# Version: Commits on Sept 16, 2025
-PIRONMAN5_VERSION = cf1b40f11f06b4b83273bed097db589a0d099f9b
+# Version: Commits on Oct 21, 2025
+PIRONMAN5_VERSION = 6de9102054d1155aca5adb74403211ac849c1b9b
 PIRONMAN5_SITE = $(call github,sunfounder,pironman5,$(PIRONMAN5_VERSION))
 PIRONMAN5_SETUP_TYPE = setuptools
 PIRONMAN5_LICENSE = GPL-2.0

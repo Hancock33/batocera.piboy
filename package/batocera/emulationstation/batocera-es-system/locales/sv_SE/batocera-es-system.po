@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: Batocera.linux Options\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-16 11:19+0200\n"
+"PO-Revision-Date: 2025-10-21 20:35+0200\n"
 "Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -4142,12 +4142,12 @@ msgstr "Botten (standard)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Center"
-msgstr ""
+msgstr "Nedre mitten"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Left"
-msgstr ""
+msgstr "Nedre vänster"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -4157,7 +4157,7 @@ msgstr "Endast botten"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Right"
-msgstr ""
+msgstr "Nedre höger"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5163,12 +5163,12 @@ msgstr "Centrera"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Left"
-msgstr ""
+msgstr "Mitten vänster"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Right"
-msgstr ""
+msgstr "Mitten höger"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5415,6 +5415,8 @@ msgid ""
 "Choose the Wayland driver mode if on a handheld device. XWayland has more "
 "compatibility."
 msgstr ""
+"Välj Wayland-drivrutinsläget om du använder en handhållen enhet. XWayland "
+"har mer kompatibilitet."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5526,11 +5528,13 @@ msgctxt "game_options"
 msgid ""
 "Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
 msgstr ""
+"Välj position på skärmen för prestandamätvärden (bildfrekvens, CPU-"
+"användning etc.)."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose the on-screen position for system messages."
-msgstr ""
+msgstr "Välj position på skärmen för systemmeddelanden."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -9759,7 +9763,7 @@ msgstr "GRÄNS FÖR MINNE I HÅRD TEXTURCACHE"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "HARDWARE SHADER"
-msgstr ""
+msgstr "HÅRDVARU-SHADER"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10003,6 +10007,7 @@ msgstr ""
 msgctxt "game_options"
 msgid "Helps some games to launch when disabled. May affect performance."
 msgstr ""
+"Hjälper vissa spel att starta när de är inaktiverade. Kan påverka prestandan."
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
@@ -10010,6 +10015,8 @@ msgid ""
 "Helps with texture corruption and depth issues on AMD GPUs. Can also help "
 "Intel GPUs in some cases."
 msgstr ""
+"Hjälper till med texturkorruption och djupproblem på AMD GPU:er. Kan även "
+"hjälpa Intel GPU:er i vissa fall."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10409,7 +10416,7 @@ msgstr "Förbättrar tydligheten i avlägsna texturer."
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Improves frame rate and responsiveness."
-msgstr ""
+msgstr "Förbättrar bildfrekvens och respons."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12409,7 +12416,7 @@ msgstr "NAT"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "NATIVE DEPTH INTERPOLATION"
-msgstr ""
+msgstr "INTERPOLATION AV INBYGGT DJUP"
 
 #. TRANSLATION: libretro/melonds, libretro/melondsds
 msgctxt "game_options"
@@ -12559,7 +12566,7 @@ msgstr "NTSC-U/C"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "NTSYNC"
-msgstr ""
+msgstr "NTSYNC"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -12985,12 +12992,12 @@ msgstr "OSD-MEDDELANDEN"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES POSITION"
-msgstr ""
+msgstr "POSITION FÖR OSD-MEDDELANDEN"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD PERFORMANCE POSITION"
-msgstr ""
+msgstr "POSITION FÖR OSD-PRESTANDA"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -17715,7 +17722,7 @@ msgstr "Växla objekt"
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Toggle menu"
-msgstr "Visa meny"
+msgstr "Växla meny"
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -17750,17 +17757,17 @@ msgstr "Överst"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center"
-msgstr ""
+msgstr "Övre mitten"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center (Default)"
-msgstr ""
+msgstr "Övre mitten (standard)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Left"
-msgstr ""
+msgstr "Övre vänster"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -17770,7 +17777,7 @@ msgstr "Endast topp"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Right"
-msgstr ""
+msgstr "Övre höger"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -19037,7 +19044,7 @@ msgstr "VARNA FÖR FUNKTIONER SOM INTE STÖDS"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WAYLAND DRIVER MODE"
-msgstr ""
+msgstr "DRIVRUTINSLÄGE FÖR WAYLAND"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -19376,7 +19383,7 @@ msgstr "XBOX LIVE ARCADE"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "XWayland (Default)"
-msgstr ""
+msgstr "XWayland (Standard)"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"

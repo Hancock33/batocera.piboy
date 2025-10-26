@@ -3,8 +3,8 @@
 # portmidi
 #
 ################################################################################
-# Version: Commits on Oct 07, 2025
-PORTMIDI_VERSION = 251b860ecfab9f0c6aa6a3744085190bb053f02c
+# Version: Commits on Oct 25, 2025
+PORTMIDI_VERSION = v2.0.7
 PORTMIDI_SITE = $(call github,PortMidi,portmidi,$(PORTMIDI_VERSION))
 PORTMIDI_LICENSE = MIT
 PORTMIDI_SUPPORTS_IN_SOURCE_BUILD = NO

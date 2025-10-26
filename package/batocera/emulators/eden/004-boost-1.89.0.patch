@@ -1,13 +1,13 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index f436c0a183..c60172b34d 100644
+index c0c117fcf1..2b6d927f82 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -507,7 +507,7 @@ else()
+@@ -539,7 +539,7 @@ else()
+     find_package(zstd 1.5 REQUIRED MODULE)
  
      # wow
-     if (PLATFORM_LINUX)
--        find_package(Boost 1.57.0 CONFIG REQUIRED headers context system fiber)
-+        find_package(Boost 1.57.0 CONFIG REQUIRED headers context fiber)
-     else()
-         find_package(Boost 1.57.0 CONFIG REQUIRED)
-     endif()
+-    find_package(Boost 1.57.0 CONFIG REQUIRED OPTIONAL_COMPONENTS headers context system fiber)
++    find_package(Boost 1.57.0 CONFIG REQUIRED OPTIONAL_COMPONENTS headers context fiber)
+ 
+     if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR ANDROID)
+         find_package(gamemode 1.7 MODULE)

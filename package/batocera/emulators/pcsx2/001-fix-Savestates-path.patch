@@ -1,5 +1,5 @@
 diff --git a/pcsx2-qt/Settings/FolderSettingsWidget.cpp b/pcsx2-qt/Settings/FolderSettingsWidget.cpp
-index 309f1e605c..5c4356e1b4 100644
+index 309f1e605..5c4356e1b 100644
 --- a/pcsx2-qt/Settings/FolderSettingsWidget.cpp
 +++ b/pcsx2-qt/Settings/FolderSettingsWidget.cpp
 @@ -23,7 +23,7 @@ FolderSettingsWidget::FolderSettingsWidget(SettingsWindow* settings_dialog, QWid

@@ -29,6 +29,7 @@ ossp.mk
 plutosvg.mk
 plutovg.mk
 polkitqt.mk
+portmidi.mk
 python-cog.mk
 python-pyxel.mk
 qterminal.mk

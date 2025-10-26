@@ -66,7 +66,7 @@ index c8459337fcb8..81f7be96e3e7 100644
  	if (amdgpu_sriov_vf(adev))
  		amdgpu_virt_release_full_gpu(adev, false);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-index f0a9400d86c3..7fa48cd7e544 100644
+index fa6988ff3eb8..0cd16f683574 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 @@ -2566,7 +2566,8 @@ amdgpu_pci_shutdown(struct pci_dev *pdev)

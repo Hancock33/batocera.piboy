@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-25 13:16+0200\n"
+"PO-Revision-Date: 2025-10-21 22:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: Galician\n"
 "Language: gl_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -4155,12 +4155,12 @@ msgstr "Abaixo (predeterminado)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Center"
-msgstr ""
+msgstr "Inferior centro"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Left"
-msgstr ""
+msgstr "Inferior esquerdo"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -4170,7 +4170,7 @@ msgstr "Só abaixo"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Right"
-msgstr ""
+msgstr "Inferior dereito"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5181,12 +5181,12 @@ msgstr "Centro"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Left"
-msgstr ""
+msgstr "Centro esquerda"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Right"
-msgstr ""
+msgstr "Centro dereita"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5435,6 +5435,8 @@ msgid ""
 "Choose the Wayland driver mode if on a handheld device. XWayland has more "
 "compatibility."
 msgstr ""
+"Escolle o modo de controlador Wayland se estás nun dispositivo portátil. "
+"XWayland ten máis compatibilidade."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5547,11 +5549,13 @@ msgctxt "game_options"
 msgid ""
 "Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
 msgstr ""
+"Escolle a posición na pantalla para as métricas de rendemento (FPS, uso da "
+"CPU, etc.)."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose the on-screen position for system messages."
-msgstr ""
+msgstr "Escolle a posición na pantalla para as mensaxes do sistema."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -9799,7 +9803,7 @@ msgstr "LÍMITE DE MEMORIA CACHE DE TEXTURA DURA"
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "HARDWARE SHADER"
-msgstr ""
+msgstr "SOMBREADOR DE SOPORTE FÍSICO"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -10043,6 +10047,8 @@ msgstr ""
 msgctxt "game_options"
 msgid "Helps some games to launch when disabled. May affect performance."
 msgstr ""
+"Axuda a que algúns xogos arrinquen cando está desactivado. Pode afectar ao "
+"rendemento."
 
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
@@ -10050,6 +10056,8 @@ msgid ""
 "Helps with texture corruption and depth issues on AMD GPUs. Can also help "
 "Intel GPUs in some cases."
 msgstr ""
+"Axuda coa corrupción de texturas e problemas de profundidade nas GPU AMD. "
+"Tamén pode axudar ás GPU Intel nalgúns casos."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10450,7 +10458,7 @@ msgstr "Mellora a claridade de texturas distantes."
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Improves frame rate and responsiveness."
-msgstr ""
+msgstr "Mellora a taxa de fotogramas e a capacidade de resposta."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -12451,7 +12459,7 @@ msgstr "NAT"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "NATIVE DEPTH INTERPOLATION"
-msgstr ""
+msgstr "INTERPOLACIÓN NATIVA DE PROFUNDIDADE"
 
 #. TRANSLATION: libretro/melonds, libretro/melondsds
 msgctxt "game_options"
@@ -12601,7 +12609,7 @@ msgstr "NTSC-U/C"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "NTSYNC"
-msgstr ""
+msgstr "NTSYNC"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -13029,12 +13037,12 @@ msgstr "MENSAXES OSD"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES POSITION"
-msgstr ""
+msgstr "POSICIÓN DAS MENSAXES OSD"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD PERFORMANCE POSITION"
-msgstr ""
+msgstr "POSICIÓN DO RENDEMENTO OSD"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -17825,17 +17833,17 @@ msgstr "Arriba"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center"
-msgstr ""
+msgstr "Superior Centro"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center (Default)"
-msgstr ""
+msgstr "Superior Centro (Por defecto)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Left"
-msgstr ""
+msgstr "superior esquerda"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -17845,7 +17853,7 @@ msgstr "Só arriba"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Right"
-msgstr ""
+msgstr "superior dereita"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -19122,7 +19130,7 @@ msgstr "ADVERTENCIA ACERCA DE CARACTERÍSTICAS NON COMPATIBLES"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WAYLAND DRIVER MODE"
-msgstr ""
+msgstr "MODO DE CONTROLADOR WAYLAND"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -19462,7 +19470,7 @@ msgstr "XBOX LIVE ARCADE"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "XWayland (Default)"
-msgstr ""
+msgstr "XWayland (Por defecto)"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"

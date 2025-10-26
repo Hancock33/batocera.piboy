@@ -3,8 +3,8 @@
 # libretro-yabasanshiro
 #
 ################################################################################
-# Version: Commits on May 21, 2025
-LIBRETRO_YABASANSHIRO_VERSION = d416e6e5de9a96579e47b09c1a08a7002d6f6e0e
+# Version: Commits on Oct 25, 2025
+LIBRETRO_YABASANSHIRO_VERSION = 125d417cc8d4c776ec5fd71561297e51134105e9
 LIBRETRO_YABASANSHIRO_SITE = $(call github,KMFDManic,Phaenon-Xtreme,$(LIBRETRO_YABASANSHIRO_VERSION))
 LIBRETRO_YABASANSHIRO_LICENSE = GPLv2
 LIBRETRO_YABASANSHIRO_DEPENDENCIES = retroarch
@@ -40,9 +40,9 @@ endef
 
 define LIBRETRO_YABASANSHIRO_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/km_phaenon_xtreme_libretro.so $(TARGET_DIR)/usr/lib/libretro/yabasanshiro_libretro.so
-	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
-	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_libretro.info $(TARGET_DIR)/usr/share/libretro/info/yabasanshiro_libretro.info
+	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/km_phaenon_xtreme_amped_libretro.so $(TARGET_DIR)/usr/lib/libretro/yabasanshiro_libretro.so
+	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_amped_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
+	cp -av $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_amped_libretro.info $(TARGET_DIR)/usr/share/libretro/info/yabasanshiro_libretro.info
 endef
 
 $(eval $(generic-package))
