@@ -46,7 +46,7 @@ Controllers|[lightguns-games-precalibrations](http://github.com/batocera-linux/l
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|2092db19f7b40854e0427a1b2e39eda9f8d0c3cd|May 28, 2025
 Controllers|[qtsixa-shanwan](http://github.com/batocera-linux/qtsixa)|f01193703070a0d0f5db582bb0a6fe8c21ebf517|May 01, 2016
 Controllers|[qtsixa](http://github.com/batocera-linux/qtsixa)|eec727030f341cf543a56bd9aeb821ea901bca64|May 01, 2016
-Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|a0a3e32fca09d5122b675b508a4c40cf47287627|Oct 24, 2025
+Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|e40b8910f859cd988124def50dcdb63b2f2ff48b|Oct 26, 2025
 Controllers|[sinden-guns-libs](http://github.com/batocera-linux/batocera-sinden-bundles)|a18005ab0ce07d0d18f8575ba21162c58fbd2520|Sept 18, 2023
 Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 2024
 Controllers|[uinput-joystick](http://github.com/shantigilbert/uinput_joystick)|bea7d56f4947b547db2b827640bc9966fe770f84|Feb 11, 2022
@@ -82,7 +82,7 @@ Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5a7094b8121a9072949072530739b50382e38acc|Oct 25, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|8d565d779393f917d42135396b77cf28526f3856|Oct 25, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|470214412b4d67d51219461634c28120bccb15b8|Oct 26, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|bf2bd7efed41e9f3367a764c2d90fcaa9c38a1f9|Oct 20, 2025
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|f362278ccd4c60991caac3b4d240d4a3f751bea2|Sept 13, 2025
@@ -257,10 +257,10 @@ Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|2d24ef
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|11d4e46e9fcd62e422447d7af65f3fc50ff54f5b|Oct 25, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20250928|Sept 28, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3c1ebe9f4ad940b6f08de641f7b309be39fff92a|Oct 04, 2025
-Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.192|Oct 25, 2025
+Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.194|Oct 26, 2025
 Emulators|[shadps4](https://github.com/AzaharPlus/shadPS4Plus.git)|edf0c21505299a3b9bccca1f04959f5f2fab9547|Sept 22, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0f74cff52b96841fe0efa01ffd1a6875b253e72a|Aug 01, 2025
-Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|c062a8f726d15425e6265a998ad584bc94088f00|Oct 25, 2025
+Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|af11bab9f136a943392ef6cd37d7955acfaed1cf|Oct 26, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|abfc018c90799eb55b773fc46d486167d8b3c762|Oct 16, 2025
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb13998e06b83710201960181b|Nov 24, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|d353533e7447c23f26edf8c72cd0ef5995c459f5|Oct 10, 2025
@@ -404,7 +404,7 @@ Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/8f/b4/8578b8e4
 Libraries|[python-smbus3](https://files.pythonhosted.org/packages/75/39/4b7fe2b7cfb42a39e5bb4ef2970a3befc0febbf2b5b8ef85fac04ca6dcb3)|0.5.5|Jun 29, 2024
 Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f861155e9749f981e6c58f2a482d3ab458bf8c35ae24d4b4d5899ebf9)|1.1.0|Jan 17, 2021
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.1|Oct 21, 2025
-Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|192cef725169c0732175884ad1bebe430bb0034b|Oct 25, 2025
+Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|2d3c96bf024153ed18cb1e41ce8e452fbcc4dc9e|Oct 26, 2025
 Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.2.4|Mar 03, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|5b3fa18afd78ca5577c006e9073b9c28ad0e3eea|Sept 19, 2025
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
@@ -447,7 +447,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|942bebb664e25636aeadbfadcdeeba15e2cfe826|Oct 25, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|86152bb83728c82bd4f44d5382d8027b1578e1ed|Jul 07, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|5437e188b6354e3f3bc561a42a7f2db8663b21ce|Oct 25, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|3d74bf7f5aa517e9f217afbf682d3e26243faa76|Oct 26, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|7a84b3f307ac6f72fd440e55b149d7c2c942dfaf|May 24, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025
