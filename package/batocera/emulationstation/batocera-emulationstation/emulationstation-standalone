@@ -161,7 +161,7 @@ while [ -e "${REBOOT_FLAG}" ]; do
     ###################
 
     # And now we can apply the setting per output...
-    
+
     ### RESOLUTION ###
     echo "Standalone: --- Applying Resolutions ---" >> "$log"
     ## The resolution for the first screen is on the boot file so that it is easier to change it
@@ -341,7 +341,7 @@ while [ -e "${REBOOT_FLAG}" ]; do
             BGOFFSETX=$(batocera-resolution --screen "${settings_output}" currentResolution | cut -d x -f 1)
             BGSIZE=$(batocera-resolution --screen "${settings_output2}" currentResolution | tr "x" " ")
             THEME="$(batocera-settings-get backglass.theme)"
-                
+
             echo "Launching backglass on '${settings_output2}' with OffsetX=${BGOFFSETX}, Size=${BGSIZE}" >> $log
             batocera-backglass enable ${BGOFFSETX} 0 ${BGSIZE} "${THEME}"
         fi
