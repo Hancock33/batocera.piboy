@@ -3,8 +3,8 @@
 # supermodel-legacy
 #
 ################################################################################
-# Version: Commits on Sept 24, 2025
-SUPERMODEL_LEGACY_VERSION = 108386afb84b2bbab968e8640444fd8201309152
+# Version: Commits on Oct 28, 2025
+SUPERMODEL_LEGACY_VERSION = 8c6af6842af37769c984215461030bea92219acb
 SUPERMODEL_LEGACY_BRANCH = arm
 SUPERMODEL_LEGACY_SITE = $(call github,DirtBagXon,model3emu-code-sinden,$(SUPERMODEL_LEGACY_VERSION))
 SUPERMODEL_LEGACY_DEPENDENCIES = sdl2 zlib libzip sdl2_net
