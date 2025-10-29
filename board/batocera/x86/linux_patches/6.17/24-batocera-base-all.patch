@@ -286,7 +286,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index d33656b7bd45..91dadb866579 100644
+index 40ec5131a2d8..527db5a7eb47 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -28232,7 +28232,7 @@ index 24df4d98f7d2..1d5923996fa5 100644
  
  	return state;
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 8f0b1acace0a..efdc97a7bd91 100644
+index 4770d25ae240..9c7729b41c3b 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -76,10 +76,19 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
@@ -28269,7 +28269,7 @@ index 8f0b1acace0a..efdc97a7bd91 100644
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index cf2109b67f9a..6361f1b7ef52 100644
+index 72fb9129afb6..af458a056a83 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2794,7 +2794,7 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
@@ -28430,7 +28430,7 @@ index bf021b31c7ec..cd1c1ece9888 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index fceaf965f264..e51e04b32544 100644
+index 24cb81c8d838..eb836db3109b 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -63,7 +63,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
