@@ -20,7 +20,9 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|1a235060bafd
 Ports|[stk](http://github.com/supertuxkart/stk-code)|d69f4b3ca7f57e86f387b2eb51c0104840124062|Oct 29, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c02926a2388e5713e21b7bfa23817f35e8b7e2c8|Oct 29, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|2953783318ef11a9773e95419e89c54dd03865e3|Oct 29, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251029|Oct 29, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|7e0d99f7455caf2aaf1107819e2fd613c7c69f37|Oct 29, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251029|Oct 29, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|11178ae256746235855b589556f94b9eff032d59|Oct 29, 2025
 Ports|[tr1x](http://github.com/LostArtefacts/TRX)|59009741b0f44b8a231bc0a21a50bac1bb4d8226|Oct 29, 2025
 Ports|[tr2x](http://github.com/LostArtefacts/TRX)|59009741b0f44b8a231bc0a21a50bac1bb4d8226|Oct 29, 2025
@@ -33,8 +35,6 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|4a301c1b90eb76fb69fc
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|6664980e293123ca0d61eb5ef9f78ad844adf454|Oct 28, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|bfedf3437619f1b5854b6b2e416a6d432c47015e|Oct 28, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|548f07cc5ae87c2653eed10437940cdee68a01d1|Oct 28, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251028|Oct 28, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251028|Oct 28, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|8bdd903a33a6676881b68d31ff91f3fd8e2c68d6|Oct 28, 2025
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|d4df6944dc4948b5f4277e5520fa45ee7cd3ddc2|Oct 28, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|ca76b0b381b9af8bbde3d7fabafda07bd3bd624d|Oct 28, 2025
