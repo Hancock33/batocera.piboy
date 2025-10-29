@@ -752,7 +752,7 @@ index 02e16b70a790..751df396d94b 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index efdc97a7bd91..e5cb3fb0cdeb 100644
+index 9c7729b41c3b..a7ecbb2b8274 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,10 @@
@@ -1038,7 +1038,7 @@ index efdc97a7bd91..e5cb3fb0cdeb 100644
  			break;
  		}
  		cfs_rq = cfs_rq_of(se);
-@@ -7090,6 +7150,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
+@@ -7093,6 +7153,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
  		util_est_dequeue(&rq->cfs, p);
  
  	util_est_update(&rq->cfs, p, flags & DEQUEUE_SLEEP);
@@ -1054,7 +1054,7 @@ index efdc97a7bd91..e5cb3fb0cdeb 100644
  	if (dequeue_entities(rq, &p->se, flags) < 0)
  		return false;
  
-@@ -8738,7 +8807,13 @@ static void check_preempt_wakeup_fair(struct rq *rq, struct task_struct *p, int
+@@ -8741,7 +8810,13 @@ static void check_preempt_wakeup_fair(struct rq *rq, struct task_struct *p, int
  	if (__pick_eevdf(cfs_rq, !do_preempt_short) == pse)
  		goto preempt;
  
@@ -1068,7 +1068,7 @@ index efdc97a7bd91..e5cb3fb0cdeb 100644
  		update_protect_slice(cfs_rq, se);
  
  	return;
-@@ -8912,16 +8987,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -8915,16 +8990,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -1094,7 +1094,7 @@ index efdc97a7bd91..e5cb3fb0cdeb 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13169,6 +13253,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
+@@ -13172,6 +13256,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
  	WARN_ON_ONCE(p->se.sched_delayed);
  
  	attach_task_cfs_rq(p);
@@ -1119,7 +1119,7 @@ index 3c12d9f93331..abadc5ca74e2 100644
   * Allow wakeup of tasks with a shorter slice to cancel RUN_TO_PARITY for
   * current.
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 6361f1b7ef52..ed45c54f120d 100644
+index af458a056a83..539efdfb6224 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2127,7 +2127,11 @@ extern int group_balance_cpu(struct sched_group *sg);
