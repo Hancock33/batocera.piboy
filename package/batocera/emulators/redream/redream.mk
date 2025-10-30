@@ -7,7 +7,6 @@
 REDREAM_VERSION = 1.5.0-1133-g03c2ae9
 REDREAM_SITE = https://redream.io/download
 
-
 ifeq ($(BR2_aarch64),y)
     REDREAM_SOURCE = redream.universal-raspberry-linux-v$(REDREAM_VERSION).tar.gz
 else
