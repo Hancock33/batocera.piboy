@@ -1,21 +1,21 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index c5f735b19..417a7a3fe 100644
+index c772720e1..cab9b3787 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
-@@ -18,7 +18,7 @@ find_package(JPEG REQUIRED)
- find_package(Freetype 2.13.2 REQUIRED) # 2.13.3, but flatpak is still on 2.13.2.
+@@ -39,7 +39,7 @@ find_package(Freetype 2.13.3 REQUIRED)
+ find_package(harfbuzz REQUIRED)
  find_package(plutosvg 0.0.6 REQUIRED)
  find_package(cpuinfo REQUIRED)
 -find_package(DiscordRPC 3.4.0 REQUIRED)
 +#find_package(DiscordRPC 3.4.0 REQUIRED)
  find_package(SoundTouch 2.3.3 REQUIRED)
  find_package(libzip 1.11.4 REQUIRED)
- 
+ find_package(Shaderc REQUIRED)
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index f53d4c0c6..99702abe4 100644
+index 48e414e3a..b45d84715 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -94,7 +94,7 @@ LOG_CHANNEL(System);
+@@ -96,7 +96,7 @@ LOG_CHANNEL(System);
  #endif
  
  #ifndef __ANDROID__
