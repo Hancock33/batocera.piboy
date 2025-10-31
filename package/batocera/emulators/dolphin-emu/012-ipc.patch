@@ -1,0 +1,26 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 2f4572f5f1..3ddf17e7bb 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -793,7 +793,7 @@ endif()
+ 
+ add_subdirectory(Externals/watcher)
+ 
+-if(WIN32 OR LINUX)
++if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+   add_subdirectory(Externals/cpp-ipc)
+ endif()
+ 
+diff --git a/Source/Core/Core/CMakeLists.txt b/Source/Core/Core/CMakeLists.txt
+index cb2a3ac58a..e110436338 100644
+--- a/Source/Core/Core/CMakeLists.txt
++++ b/Source/Core/Core/CMakeLists.txt
+@@ -797,7 +797,7 @@ if(UNIX)
+   )
+ endif()
+ 
+-if(WIN32 OR LINUX)
++if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+   target_sources(core PRIVATE HW/EXI/BBA/IPC.cpp)
+   target_link_libraries(core PRIVATE cpp-ipc::ipc)
+ endif()
