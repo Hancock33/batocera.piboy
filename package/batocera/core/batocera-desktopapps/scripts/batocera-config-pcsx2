@@ -10,4 +10,4 @@ fi
 
 export XDG_CONFIG_HOME=/userdata/system/configs
 
-/usr/pcsx2/bin/pcsx2-qt
+/usr/bin/pcsx2/pcsx2

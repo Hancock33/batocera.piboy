@@ -3,6 +3,6 @@ config BR2_PACKAGE_UBOOT_ANBERNIC_RGXX3
 	select BR2_PACKAGE_HOST_DTC
 
 	help
-	  u-boot for Anbernic RG35P/PS/V/VS/M and RG503
+	  U-Boot for the Anbernic RGxx3 devices & Powkiddy clones.
 
-	  https://github.com/pkegg/RG353P_uboot
+	  https://u-boot.org/

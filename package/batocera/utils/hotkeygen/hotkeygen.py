@@ -302,6 +302,10 @@ def do_new_context(context_name: str | None = None, context_json: str | None = N
     pid = int(read_pid())
     os.kill(pid, signal.SIGHUP)
 
+def do_reload_devices_config():
+    # inform the process
+    pid = int(read_pid())
+    os.kill(pid, signal.SIGHUP)
 
 def do_list() -> None:
     context = get_context()
@@ -342,6 +346,7 @@ class Daemon:
     monitor: pyudev.Monitor = field(init=False)
     poll: select.poll = field(init=False)
     target: evdev.UInput = field(init=False)
+    require_reconfig: bool = field(init=False, default=False)
 
     def __post_init__(self) -> None:
         self.udev_context = pyudev.Context()
@@ -371,7 +376,6 @@ class Daemon:
                             if gdebug:
                                 print(f"Adding device {device.device_node}: {input_device.name}")
                                 print_mapping(mapping, associations)
-
                             self.input_devices[device.device_node] = input_device
                             self.input_devices_by_fd[input_device.fileno()] = input_device
                             self.mappings_by_fd[input_device.fileno()] = mapping
@@ -410,6 +414,19 @@ class Daemon:
 
     def __handle_sighup(self, signum: int, frame: FrameType | None) -> None:
         self.context = get_context()
+        self.require_reconfig = True # done outside of the event cause, to make it safely
+
+    def __reload_devices_configs(self) -> None:
+        # reload config files for devices
+        for fd in self.input_devices_by_fd:
+            input_device = self.input_devices_by_fd[fd]
+            mapping = get_mapping(input_device)
+            self.mappings_by_fd[fd] = mapping
+
+        # try to load a device that had not configuration file before
+        for device in self.udev_context.list_devices(subsystem='input'):
+            if device.device_node not in self.input_devices:
+                self.__handle_actions('add', device)
 
     def run(self) -> None:
         if self.running:
@@ -435,7 +452,11 @@ class Daemon:
 
         # read all devices
         while True:
-            for fd, _ in self.poll.poll():
+            if self.require_reconfig:
+                self.require_reconfig = False
+                self.__reload_devices_configs()
+
+            for fd, _ in self.poll.poll(1000):
                 try:
                     if fd == self.monitor.fileno():
                         (action, device) = self.monitor.receive_device()
@@ -484,6 +505,7 @@ if __name__ == "__main__":
     parser.add_argument("--default-context", action="store_true")
     parser.add_argument("--new-context", nargs=2, metavar=("new-context-name", "new-context-json"))
     parser.add_argument("--disable-common", action="store_true")
+    parser.add_argument("--reload", action="store_true")
     parser.add_argument("--permanent", action="store_true")
     args = parser.parse_args()
     if args.debug:
@@ -496,6 +518,8 @@ if __name__ == "__main__":
     elif args.new_context is not None:
         new_context_name, new_context_json = args.new_context
         do_new_context(new_context_name, new_context_json, not args.disable_common)
+    elif args.reload:
+        do_reload_devices_config()
     elif args.default_context:
         do_new_context()
     else:

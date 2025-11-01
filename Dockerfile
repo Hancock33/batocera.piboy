@@ -17,7 +17,7 @@ RUN dpkg --add-architecture i386 && \
 		device-tree-compiler \
 		dosfstools \
 		flex \
-		g++-multilib \ 
+		g++-multilib \
 		gcc-multilib \
 		gettext \
 		git \

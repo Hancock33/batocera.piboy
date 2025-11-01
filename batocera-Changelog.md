@@ -9,13 +9,16 @@
 - Azahar Plus has been replaced with the source project Azahar.
   3DS roms will need to be decrypted.
 ### Hardware
-- Odin 2 Mini initial support
+- AYN Thor initial support
 - Legion Go S Controller & LED updates
+- Odin 2 Mini initial support
+- Powkiddy X55 initial support
 ### Added
 - LED colour control for Arm based handhelds
 - The ability to turn the controller LED's off
 - batocera-xtract for handling archives, systems with pcmanFM filemanager can use a small GUI and mouse context menus
-- in-game hotkeys configuration via emulationstation menus (and via batocera-hotkeys command)
+- in-game joysticks hotkeys configuration via emulationstation menus (and via batocera-joysticks-hotkeys command)
+- global hotkeys configuration (buttons from any device (unused joystick buttons, arcade special buttons, any keyboard button)) via emulationstation menus (and via batocera-hotkeys command)
 - dmd-play-rust is now used by default to play dmd images (performances)
 - New steering wheel support:
  - Logitech Formula Vibration Feedback
@@ -52,18 +55,20 @@
 - Bluez to 5.84
 - DXVK to 2.7.1
 - GStreamer codecs to 1.26.6
-- Linux Firmware to 20251011
-- Linux Kernel to 6.17.4
+- Linux Firmware to 20251021
+- Linux Kernel to 6.17.5
 - LabWC to 0.9.2
 - LLVM Project to 20.1.8
 - Mesa3D to 25.2.5
 - Nvidia production drivers to 580.95.05
+- Sway to 1.11
 - Vulkan stack to 1.4.328.1
 - Wayland to 1.24.0
 - Wayland Protocols to 1.45
 - Wine-TKG to 10.16
 - Wine Proton to 10.0-2
-- WLRoots to 0.19.1
+- WLRoots to 0.19.2
+- XWayland to 24.1.9
 
 # 2025/10/12 - batocera.linux 42 - Papilio Ulysses
 ### Special Notes

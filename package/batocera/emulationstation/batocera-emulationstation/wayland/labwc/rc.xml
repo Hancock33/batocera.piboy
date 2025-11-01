@@ -1,4 +1,3 @@
-<!-- DO NOT manually modify this file -->
 <?xml version="1.0" encoding="UTF-8"?>
 <labwc_config>
   <core>
@@ -58,11 +57,18 @@
     </keybind>
   </keyboard>
   <windowRules>
-    <windowRule title="emulationstation" serverDecoration="no">
-      <action name="MoveToOutput" output=""/>
+    <windowRule identifier="emulationstation" serverDecoration="no">
+      <action name="FocusOutput">
+        <output></output>
+      </action>
+      <action name="MoveToOutput">
+        <output></output>
+      </action>
     </windowRule>
     <windowRule title="backglass" serverDecoration="no">
-      <action name="MoveToOutput" output=""/>
+      <action name="MoveToOutput">
+        <output></output>
+      </action>
     </windowRule>
     <windowRule title="dolphin" fullscreen="yes" serverDecoration="no" />
   </windowRules>

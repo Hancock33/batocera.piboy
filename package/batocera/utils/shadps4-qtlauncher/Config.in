@@ -1,0 +1,14 @@
+config BR2_PACKAGE_SHADPS4_QTLAUNCHER
+	bool "shadps4_qtlauncher"
+	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_8
+	select BR2_HOST_CMAKE_AT_LEAST_3_24
+	select BR2_PACKAGE_QT6BASE
+	select BR2_PACKAGE_QT6MULTIMEDIA
+	select BR2_PACKAGE_QT6SVG
+	select BR2_PACKAGE_QT6TOOLS
+	select BR2_PACKAGE_SHADPS4
+
+	help
+	  The official Qt launcher for shadps4 emulator.
+
+	  https://github.com/shadps4-emu/shadps4-qtlauncher

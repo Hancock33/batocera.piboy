@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Oct 18, 2025
-WINE_CUSTOM_VERSION = ntsync-10.17
+# Version: Commits on Nov 01, 2025
+WINE_CUSTOM_VERSION = ntsync-10.18
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
@@ -339,15 +339,12 @@ HOST_WINE_CUSTOM_CONF_OPTS += \
 ifeq ($(BR2_x86_64),y)
 define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-custom/include
-	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-custom/lib/wine/i386-windows/*.{dll,exe}
-	x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-custom/lib/wine/x86_64-windows/*.{dll,exe}
 endef
 endif
 
 ifeq ($(BR2_i386),y)
 define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-custom/include
-	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-custom/lib/wine/i386-windows/*.{dll,exe}
 endef
 endif
 

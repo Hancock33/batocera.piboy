@@ -13056,7 +13056,7 @@ index 000000000000..9638819cdc7e
 +#endif
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx_acf_bin.c b/sound/soc/codecs/aw87xxx/aw87xxx_acf_bin.c
 new file mode 100644
-index 000000000000..00c7aedb7c11
+index 000000000000..0de7085cb345
 --- /dev/null
 +++ b/sound/soc/codecs/aw87xxx/aw87xxx_acf_bin.c
 @@ -0,0 +1,1558 @@
@@ -14620,7 +14620,7 @@ index 000000000000..00c7aedb7c11
 +
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx_acf_bin.h b/sound/soc/codecs/aw87xxx/aw87xxx_acf_bin.h
 new file mode 100644
-index 000000000000..ebe0c77f5674
+index 000000000000..3a14d9b8af9b
 --- /dev/null
 +++ b/sound/soc/codecs/aw87xxx/aw87xxx_acf_bin.h
 @@ -0,0 +1,191 @@
@@ -14817,7 +14817,7 @@ index 000000000000..ebe0c77f5674
 +#endif
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx_bin_parse.c b/sound/soc/codecs/aw87xxx/aw87xxx_bin_parse.c
 new file mode 100644
-index 000000000000..7eab9efde147
+index 000000000000..c40055460278
 --- /dev/null
 +++ b/sound/soc/codecs/aw87xxx/aw87xxx_bin_parse.c
 @@ -0,0 +1,515 @@
