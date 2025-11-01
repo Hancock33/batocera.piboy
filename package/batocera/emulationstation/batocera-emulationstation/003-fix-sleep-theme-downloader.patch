@@ -1,8 +1,8 @@
 diff --git a/es-app/src/ApiSystem.cpp b/es-app/src/ApiSystem.cpp
-index 71bfcd3..ba26c41 100644
+index 7a24ab4f5..3ec9fc2ba 100644
 --- a/es-app/src/ApiSystem.cpp
 +++ b/es-app/src/ApiSystem.cpp
-@@ -904,7 +904,7 @@ bool ApiSystem::downloadGitRepository(const std::string& url, const std::string&
+@@ -912,7 +912,7 @@ bool ApiSystem::downloadGitRepository(const std::string& url, const std::string&
  			}
  		}
  

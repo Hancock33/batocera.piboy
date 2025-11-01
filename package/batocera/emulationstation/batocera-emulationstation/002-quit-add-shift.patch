@@ -1,10 +1,10 @@
 diff --git a/es-app/src/main.cpp b/es-app/src/main.cpp
-index 7ca557311..45f28ae03 100644
+index 4491e2f8e..ac32573f1 100644
 --- a/es-app/src/main.cpp
 +++ b/es-app/src/main.cpp
-@@ -679,8 +679,9 @@ int main(int argc, char* argv[])
- 			{
- 				TRYCATCH("InputManager::parseEvent", InputManager::getInstance()->parseEvent(event, &window));
+@@ -700,8 +700,9 @@ int main(int argc, char* argv[])
+ 					}
+ 				}				
  
 -				if (event.type == SDL_QUIT)
 -					running = false;
@@ -15,7 +15,7 @@ index 7ca557311..45f28ae03 100644
  			while(SDL_PollEvent(&event));
  
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 891f8bc75..b61e30f38 100644
+index 469af25a8..7dafcd458 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
 @@ -581,22 +581,16 @@ bool InputManager::parseEvent(const SDL_Event& ev, Window* window)
@@ -46,7 +46,7 @@ index 891f8bc75..b61e30f38 100644
  		return true;
  
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 43e30f120..0b3d04db0 100644
+index c48248520..4579a5f9b 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -31,6 +31,8 @@ namespace Utils
@@ -58,7 +58,7 @@ index 43e30f120..0b3d04db0 100644
  		ProcessStartInfo::ProcessStartInfo()
  		{
  			window = nullptr;
-@@ -224,6 +226,8 @@ return system("/sbin/rmmod xpi_gamecon ; /sbin/rmmod xpi_gamecon_xrs ; shutdown
+@@ -229,6 +231,8 @@ namespace Utils
  				break;
  			}
  
