@@ -3,8 +3,8 @@
 # rgbds
 #
 ################################################################################
-# Version: Commits on Sept 30, 2025
-RGBDS_VERSION = v1.0.0-rc2
+# Version: Commits on Nov 01, 2025
+RGBDS_VERSION = v1.0.0
 RGBDS_SITE = $(call github,gbdev,rgbds,$(RGBDS_VERSION))
 RGBDS_LICENSE = MIT
 RGBDS_SUPPORTS_IN_SOURCE_BUILD = NO
