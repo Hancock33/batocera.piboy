@@ -26,7 +26,6 @@ SHADPS4_CONF_OPTS += -DVMA_ENABLE_INSTALL=ON
 define SHADPS4_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/shadps4
 	$(INSTALL) -m 0755 $(@D)/buildroot-build/shadps4 $(TARGET_DIR)/usr/bin/shadps4/
-	cp -pr $(@D)/buildroot-build/translations $(TARGET_DIR)/usr/bin/shadps4/
 endef
 
 $(eval $(cmake-package))
