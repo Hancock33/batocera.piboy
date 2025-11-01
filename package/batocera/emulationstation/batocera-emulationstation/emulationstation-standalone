@@ -78,7 +78,7 @@ while [ -e "${REBOOT_FLAG}" ]; do
     if [ -e "/var/run/switch_screen_request" ]; then
         echo "Standalone: Switch screen request" >> "$log"
         requested_output=$(cat "/var/run/switch_screen_request")
-        
+
         # Set the primary output to the requested screen
         settings_output="$requested_output"
         settings_output2=""

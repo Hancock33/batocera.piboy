@@ -26,7 +26,7 @@ start() {
         PRIMARY_OUT=$(batocera-settings-get-master global.videooutput)
         SECONDARY_OUT=$(batocera-settings-get-master global.videooutput2)
         echo "Found Primary Output: ${PRIMARY_OUT:-'none'}" >> "$display_log"
-        echo "Found Secondary Output: ${SECONDARY_OUT:-'none'}" >> "$display_log"       
+        echo "Found Secondary Output: ${SECONDARY_OUT:-'none'}" >> "$display_log"
         # Set EmulationStation to the primary output
         if [ -n "${PRIMARY_OUT}" ]; then
             echo "Applying window rules for EmulationStation -> ${PRIMARY_OUT}" >> "$display_log"

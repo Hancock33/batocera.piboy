@@ -136,7 +136,7 @@ def do_list():
                                 with path.open() as fd:
                                         values = json.load(fd)
                                 fancy_name = getConfigFancyName(file)
-                
+
                                 if sys.stdout.isatty():
                                         if n != 0:
                                                 print("")
