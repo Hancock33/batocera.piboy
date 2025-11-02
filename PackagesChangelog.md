@@ -1,11 +1,14 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|5ca35363d4de275b7e7a39bbaca427af9b122a5a|Nov 02, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|8ae797409205be4ab8ccc9a87283b77ba01cfb9c|Nov 02, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|85275a196541c15670b5f40018034367b8681156|Nov 02, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|c70abc8e437d0c9b66b5c766341a505e6c155bd1|Nov 02, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-11-02|Nov 02, 2025
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|d723e3ac8d0d614e44629c9a6a59b4d1b6fe0e01|Nov 02, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|68c5d3c10905f9233e9fe6dc6c88f5ecdce5cd0b|Nov 02, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|22f4c04da59208a7dff78fe2794a146ef7f57f93|Nov 02, 2025
+Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|b746be8a6ba982903ce222307baa4fc26d1a91dd|Nov 02, 2025
+Ports|[trx](http://github.com/LostArtefacts/TRX)|735dd5ddb2077f943021e3c76ff12f849d27b5d0|Nov 02, 2025
+Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|442a0e901c3d7d60c94f21caf46c0535233086f6|Nov 02, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|7d7a005a859271e749d52a13aa3da96219298ea3|Nov 02, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|cbc1c9fa5aec1fc4df8c1e0a3beb9d17cb0b203d|Nov 02, 2025
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.11|Nov 01, 2025
@@ -32,8 +35,6 @@ Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|2025
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|f5f1e87e2b19acc915a5e86c6057a3f5b8f7793d|Nov 01, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|6ecf9590d1610a79f09c047d3d3789a1ffac2eea|Nov 01, 2025
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|56cf1bbac45ebf9da5df781c2983317c3fbb6d5f|Nov 01, 2025
-Ports|[tr1x](http://github.com/LostArtefacts/TRX)|3ad66b6c4a9cf5698279a640f157d7fc2b5e9dcc|Nov 01, 2025
-Ports|[tr2x](http://github.com/LostArtefacts/TRX)|3ad66b6c4a9cf5698279a640f157d7fc2b5e9dcc|Nov 01, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|43066656bd1dc06280ff8c34d8f673f3d507df12|Nov 01, 2025
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|1f8aeb9ac3f3a4202736ac22e1785f01a834b975|Nov 01, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|8b97a5dab554581f555eb59b49ee44c21d9e3711|Nov 01, 2025
@@ -65,7 +66,6 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|fd4ebb95b727df165ec8d2f525b
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|216d766c5bd6350c30393226ab8e4a8d14d5d0b3|Oct 30, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.26|Oct 30, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|540826f8e8a2d4a32c6aa2650070d736c9a4f713|Oct 30, 2025
-Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|23ea81dbefd7165c3cfdb653f88bfc06240ffedb|Oct 30, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|4e799d1a11fd21c9e62193f048b05b2165ebcbb2|Oct 30, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.111|Oct 29, 2025
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|9e6ebda5f5601e87bebb7bc39f6cb65b6731e86d|Oct 29, 2025
@@ -117,7 +117,6 @@ Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.or
 Libraries|[python-adafruit-circuitpython-ws2801](https://files.pythonhosted.org/packages/88/4e/b711402fcf6113b276f0b2407769c05b9d32b984fc67de9f7064221a5f64)|1.0.4|Oct 20, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|c71b79237ca6ed91de76b4b5dbf8a470a9b688c9|Oct 20, 2025
 Utils|[rclone](http://github.com/rclone/rclone)|v1.71.2|Oct 20, 2025
-Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|78dcc8a994ad9b51e487d4e52671f7a6ae20b5c2|Oct 20, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|bf2bd7efed41e9f3367a764c2d90fcaa9c38a1f9|Oct 20, 2025
 Network|[rtw88](http://github.com/lwfinger/rtw88)|9bc8fecb61d4ad59e46b4dbd003d60ef2d8437a8|Oct 19, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|6fa1f50483cf7b490e9a4b5e9fa513299fff699c|Oct 19, 2025
