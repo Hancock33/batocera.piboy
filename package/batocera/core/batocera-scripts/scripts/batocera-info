@@ -186,7 +186,7 @@ if [ "${NUM_OUTPUTS}" -le 1 ]; then
 else
     i=1
     for output in ${OUTPUTS}; do
-        echo "Display Output ${i}: ${output}"     
+        echo "Display Output ${i}: ${output}"
         DISPLAYRES=$(batocera-resolution --screen "${output}" currentResolution)
         CURRENT_MODE=$(batocera-resolution --screen "${output}" currentMode)
         if [ ! -z "$WAYLAND_DISPLAY" ]; then # wayland
