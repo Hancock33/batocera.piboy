@@ -4780,7 +4780,7 @@ traider1:
     openlara:
       openlara:         { requireAnyOf: [BR2_PACKAGE_OPENLARA] }
     tr1x:
-      tr1x:             { requireAnyOf: [BR2_PACKAGE_TR1X] }
+      tr1x:             { requireAnyOf: [BR2_PACKAGE_TRX] }
   comment_en:           |
                         The origianl Tomb Raider files should go in this rom folder from your previous Windows installation.
                         You can safetly remove .exe & .dll files which are not necessary for TR1X to run the game.
@@ -4812,7 +4812,7 @@ traider2:
   path:                 /userdata/roms/ports/traider2
   emulators:
     tr2x:
-      tr2x:             { requireAnyOf: [BR2_PACKAGE_TR2X] }
+      tr2x:             { requireAnyOf: [BR2_PACKAGE_TRX] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:traider2
   comment_fr:           |
