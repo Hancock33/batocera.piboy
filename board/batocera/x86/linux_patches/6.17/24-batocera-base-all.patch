@@ -286,7 +286,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 40ec5131a2d8..527db5a7eb47 100644
+index e7b59ec61b15..b604202f262d 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -28514,10 +28514,10 @@ index 54ea59ff8fbe..18f87e0dd137 100644
  	help
  	  This option turns the kernel into a real-time kernel by replacing
 diff --git a/kernel/events/core.c b/kernel/events/core.c
-index 6e9427c4aaff..5827685dc5d2 100644
+index c0e938d28758..026d95bdca56 100644
 --- a/kernel/events/core.c
 +++ b/kernel/events/core.c
-@@ -11756,7 +11756,8 @@ static enum hrtimer_restart perf_swevent_hrtimer(struct hrtimer *hrtimer)
+@@ -11757,7 +11757,8 @@ static enum hrtimer_restart perf_swevent_hrtimer(struct hrtimer *hrtimer)
  
  	event = container_of(hrtimer, struct perf_event, hw.hrtimer);
  
@@ -28527,7 +28527,7 @@ index 6e9427c4aaff..5827685dc5d2 100644
  		return HRTIMER_NORESTART;
  
  	event->pmu->read(event);
-@@ -11802,15 +11803,18 @@ static void perf_swevent_cancel_hrtimer(struct perf_event *event)
+@@ -11803,15 +11804,18 @@ static void perf_swevent_cancel_hrtimer(struct perf_event *event)
  	struct hw_perf_event *hwc = &event->hw;
  
  	/*
@@ -28550,7 +28550,7 @@ index 6e9427c4aaff..5827685dc5d2 100644
  	}
  }
  
-@@ -11854,12 +11858,14 @@ static void cpu_clock_event_update(struct perf_event *event)
+@@ -11855,12 +11859,14 @@ static void cpu_clock_event_update(struct perf_event *event)
  
  static void cpu_clock_event_start(struct perf_event *event, int flags)
  {
@@ -28565,7 +28565,7 @@ index 6e9427c4aaff..5827685dc5d2 100644
  	perf_swevent_cancel_hrtimer(event);
  	if (flags & PERF_EF_UPDATE)
  		cpu_clock_event_update(event);
-@@ -11933,12 +11939,14 @@ static void task_clock_event_update(struct perf_event *event, u64 now)
+@@ -11934,12 +11940,14 @@ static void task_clock_event_update(struct perf_event *event, u64 now)
  
  static void task_clock_event_start(struct perf_event *event, int flags)
  {

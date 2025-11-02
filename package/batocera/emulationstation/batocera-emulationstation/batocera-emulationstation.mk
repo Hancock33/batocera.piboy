@@ -3,8 +3,8 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Nov 01, 2025
-BATOCERA_EMULATIONSTATION_VERSION = 9470412c3557ee5857b43f1cce61d267ca4d577a
+# Version: Commits on Nov 02, 2025
+BATOCERA_EMULATIONSTATION_VERSION = 9247e381e66ea10fd5af9acfdc935df4d3aaece2
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
@@ -190,6 +190,8 @@ define BATOCERA_EMULATIONSTATION_WAYLAND_LABWC
 	    $(TARGET_DIR)/etc/init.d/S14labwc
     $(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart \
 	    $(TARGET_DIR)/usr/share/labwc/autostart
+    $(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart_* \
+	    $(TARGET_DIR)/usr/share/labwc/
     $(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/labwc-launch \
 	    $(TARGET_DIR)/usr/bin/labwc-launch
 endef

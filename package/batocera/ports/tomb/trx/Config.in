@@ -1,5 +1,5 @@
-config BR2_PACKAGE_TR1X
-	bool "tr1x"
+config BR2_PACKAGE_TRX
+	bool "trx"
 	select BR2_PACKAGE_FFMPEG
 	select BR2_PACKAGE_LIBGLEW
 	select BR2_PACKAGE_PCRE2
@@ -7,7 +7,7 @@ config BR2_PACKAGE_TR1X
 	select BR2_PACKAGE_UTHASH
 
 	help
-	  Open source re-implementation of Tomb Raider I
+	  Open source re-implementation of Tomb Raider 1/2
 	  along with additional enhancements and bugfixes.
 
 	  https://github.com/LostArtefacts/TRX

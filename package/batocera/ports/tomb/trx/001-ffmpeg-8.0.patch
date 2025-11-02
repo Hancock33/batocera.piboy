@@ -1,7 +1,7 @@
-diff --git a/src/libtrx/engine/video.c b/src/libtrx/engine/video.c
+diff --git a/src/trx/engine/video.c b/src/trx/engine/video.c
 index b4d2fb535..4171a03bc 100644
---- a/src/libtrx/engine/video.c
-+++ b/src/libtrx/engine/video.c
+--- a/src/trx/engine/video.c
++++ b/src/trx/engine/video.c
 @@ -1716,7 +1716,9 @@ static int M_ReadThread(void *arg)
      is->ic = ic;
  

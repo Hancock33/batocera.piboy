@@ -51,7 +51,7 @@ while [ -e "${REBOOT_FLAG}" ]; do
 
     ### VIDEO OUTPUT ###
     echo "Standalone: --- Determining Video Outputs ---" >> "$log"
-    
+
     # Use --init to get the current screens...
     batocera-switch-screen-checker --init
 
@@ -93,28 +93,6 @@ while [ -e "${REBOOT_FLAG}" ]; do
         fi
     else
         echo "Standalone: Using pre-configured video outputs - ${settings_output}, ${settings_output2}, ${settings_output3}" >> "$log"
-    fi
-
-    # Because of xinerama breaking es, enable only one screen at a time
-    # /var/run/switch_screen_request is a file to request screen switch
-    if [ -e "/var/run/switch_screen_request" ]; then
-        echo "Standalone: Switch screen request" >> "$log"
-        requested_output=$(cat "/var/run/switch_screen_request")
-
-        # Set the primary output to the requested screen
-        settings_output="$requested_output"
-        settings_output2=""
-        settings_output3=""
-
-        # Try to fill the second screen with a different, non-requested output
-        for output in $(batocera-settings-get global.videooutput) $(batocera-settings-get global.videooutput2) $(batocera-settings-get global.videooutput3); do
-            if [ "$output" != "$requested_output" ]; then
-                settings_output2="$output"
-                break
-            fi
-        done
-
-        rm "/var/run/switch_screen_request"
     fi
 
     echo "Standalone: Validating detected outputs..." >> "$log"
@@ -291,7 +269,10 @@ while [ -e "${REBOOT_FLAG}" ]; do
         # Now that all screens are enabled and have their final resolution/rotation,
         # we can correctly position them next to each other
         echo "Standalone: --- Repositioning Outputs ---" >> "$log"
-        batocera-resolution repositionOutputs "${settings_output}" "${settings_output2}" "${settings_output3}"
+	display_position=$(/usr/bin/batocera-settings-get-master "display.position")
+	if [ -n "${display_position}" ]; then
+            batocera-resolution repositionOutputs "${display_position}" "${settings_output}" "${settings_output2}" "${settings_output3}"
+	fi
     fi
     ###################
 
@@ -381,8 +362,9 @@ while [ -e "${REBOOT_FLAG}" ]; do
             # Get the device model
             MODEL="$(batocera-model)"
 
-            # For AYN_Thor, set a vertical (Y) offset. For all other models, use the default horizontal (X) offset.
-            if [ "${MODEL}" = "AYN_Thor" ]; then
+            # For AYN_Thor, set a vertical (Y) offset (for mouse usage). For all other models, use the default horizontal (X) offset.
+            DISPLAY_POSITION=$(/usr/bin/batocera-settings-get-master "display.position")
+            if [ "${DISPLAY_POSITION}" = "top-bottom" ]; then
                 BGOFFSETY=$(echo "${PRIMARY_RES}" | cut -d x -f 2) # Height of the primary screen
             else
                 BGOFFSETX=$(echo "${PRIMARY_RES}" | cut -d x -f 1) # Width of the primary screen
