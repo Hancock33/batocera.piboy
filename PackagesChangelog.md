@@ -55,7 +55,6 @@ Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mam
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|884ec9d16e39272d6f04ce6e7e202290ec31f45d|Oct 31, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.203|Oct 31, 2025
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b800011265bf47ea6b3f4f2b234d25249823a9be|Oct 31, 2025
-Engines|[scummvm](http://github.com/scummvm/scummvm)|7ed502f749637b3775b181e3388e26e0c823d39a|Oct 31, 2025
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.4.0|Oct 31, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|03c2503dee6cbbdf658a6d95064dd0de3b8d8277|Oct 31, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|e81fd4da44164e04cd72abef0f8bdf85f4074d17|Oct 31, 2025
@@ -63,14 +62,15 @@ Sources|[mame-src](http://github.com/mamedev/mame)|mame0282|Oct 31, 2025
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|61f5bc623f3a25034ef3de1d45b22ac95709a49f|Oct 31, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0282|Oct 31, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|884ec9d16e39272d6f04ce6e7e202290ec31f45d|Oct 31, 2025
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|7ed502f749637b3775b181e3388e26e0c823d39a|Oct 31, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|8a1ef8e30d6c1c2f2b0c9151b74e427dcf112a7a|Oct 30, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|2fe8f3dda5b7e693d4d03d46c9e1fe535219c534|Oct 30, 2025
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|fd4ebb95b727df165ec8d2f525bb9ad65f47ba6e|Oct 30, 2025
+Engines|[scummvm](http://github.com/scummvm/scummvm)|2572183706009f356833a36ec24ac2c121e3135e|Oct 30, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|216d766c5bd6350c30393226ab8e4a8d14d5d0b3|Oct 30, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.26|Oct 30, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|540826f8e8a2d4a32c6aa2650070d736c9a4f713|Oct 30, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|4e799d1a11fd21c9e62193f048b05b2165ebcbb2|Oct 30, 2025
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|2572183706009f356833a36ec24ac2c121e3135e|Oct 30, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.111|Oct 29, 2025
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|9e6ebda5f5601e87bebb7bc39f6cb65b6731e86d|Oct 29, 2025
 Hardware|[pironman5](http://github.com/sunfounder/pironman5)|50f6e6f95fdf37e1a09b9d032bf2f5ccf3ac89f8|Oct 29, 2025
