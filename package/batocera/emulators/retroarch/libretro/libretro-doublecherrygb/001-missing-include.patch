@@ -1,0 +1,20 @@
+diff --git a/libretro-common/include/retro_timers.h b/libretro-common/include/retro_timers.h
+index b4e51c7..34a30e6 100644
+--- a/libretro-common/include/retro_timers.h
++++ b/libretro-common/include/retro_timers.h
+@@ -55,7 +55,7 @@
+ #ifdef _MSC_VER
+ #include <compat/msvc.h>
+ #endif
+-#include <retro_inline.h>
++#include "libretro-common/include/retro_inline.h"
+ 
+ #ifdef DJGPP
+ #define timespec timeval
+@@ -117,4 +117,4 @@ static INLINE void retro_sleep(unsigned msec)
+ }
+ #endif
+ 
+-#endif
+\ No newline at end of file
++#endif
