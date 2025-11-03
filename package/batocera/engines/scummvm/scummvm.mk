@@ -3,8 +3,8 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Oct 30, 2025
-SCUMMVM_VERSION = 2572183706009f356833a36ec24ac2c121e3135e
+# Version: Commits on Nov 03, 2025
+SCUMMVM_VERSION = af6f7461a31b4769c0c7e820d7faf70da6a9dabc
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_DEPENDENCIES += faad2 flac fluidsynth freetype jpeg libmad libmpeg2
