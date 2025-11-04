@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|94d6b684f738ceb3df6dc658aca80aef2a2832b4|Nov 04, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|94d6b684f738ceb3df6dc658aca80aef2a2832b4|Nov 04, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|35671b2f8dee508e01155f14b38a370528b281da|Nov 04, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|0332bb4f12f707a19e06d00774257dc2d4970d48|Nov 04, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|947ed4aaf69714d6df0209bf1c55bd419ab8a3a3|Nov 04, 2025
@@ -33,8 +35,6 @@ Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|f2583ba24eae
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|c08ea1e6536c25353f6e7dda717cc174f116b4c7|Nov 04, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|557ac4ccb54c0e4d66fbb29ac894c2a77d0b3878|Nov 04, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|f812f217baa4997c32979b882239dba869ccacbb|Nov 04, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|a105c837797b18ba142c3addff0dabe4c1d14211|Nov 03, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|a105c837797b18ba142c3addff0dabe4c1d14211|Nov 03, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|4df48fe4ceae69a21930a815e525941eb06f9a1c|Nov 03, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.274|Nov 03, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|77c62d3a942e219bc9d072b4800fa0881208ce2a|Nov 03, 2025
