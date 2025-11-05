@@ -10,7 +10,9 @@ Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-11-05|Nov 05, 
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|f13caa27fca082886d73131f3aa2a7776b44d0c9|Nov 05, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|e0a67969cacb46e9f30b576bf279f85d26c45961|Nov 05, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|88e9de7a96a2e36a7686f3a45e1e8131dcc7b478|Nov 05, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251105|Nov 05, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|1f2bf727347a248860d64f0da89987d06913dddb|Nov 05, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251105|Nov 05, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|27c60041910569f0c7e75c053115f27c472069a3|Nov 05, 2025
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|5dbc8c9a27f7bc717cc2f4264db8d29446270340|Nov 05, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|1acec17045061c0f655d40e176a2ff925df168f1|Nov 05, 2025
@@ -33,12 +35,10 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14310|Nov 04, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|f2dac63e3bea40877f41b16424b70b76abbc03a5|Nov 04, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|54a3823147c0ddd3cf620e438911ea173107af76|Nov 04, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.11|Nov 04, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251104|Nov 04, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|533f41704766765cfb3706fb2aa197acbb05df32|Nov 04, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|958e252520ece96cd1b03d5ff0d835db2f048991|Nov 04, 2025
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|580.105.08|Nov 04, 2025
 Gpu|[nvidia-proprietary-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Nov 04, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251104|Nov 04, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|deefe47a89f9a4432f9dd1d852d0073687f7bf39|Nov 04, 2025
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|5e9e2302f4c8193d227a5c5ddffc8ab8be4bb05d|Nov 04, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|df23a5348bb6846553e6fdcf5abb938bf5ec9003|Nov 04, 2025
