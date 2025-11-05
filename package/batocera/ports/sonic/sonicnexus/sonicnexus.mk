@@ -11,7 +11,7 @@ SONICNEXUS_SUPPORTS_IN_SOURCE_BUILD = NO
 SONICNEXUS_LICENSE = Custom
 
 define SONICNEXUS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/Nexus  $(TARGET_DIR)/usr/bin/sonicnexus
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/RSDKv2 $(TARGET_DIR)/usr/bin/sonicnexus
 endef
 
 $(eval $(cmake-package))
