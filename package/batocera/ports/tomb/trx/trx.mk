@@ -18,8 +18,8 @@ TRX_CONF_OPTS = -Dstaticdeps=false
 define TRX_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/{tr1x,tr2x}
 	mkdir -p $(TARGET_DIR)/usr/bin/{tr1x,tr2x}
-	cp -f $(@D)/src/buildroot-build/TR1X $(TARGET_DIR)/usr/bin/tr1x/
-	cp -f $(@D)/src/buildroot-build/TR2X $(TARGET_DIR)/usr/bin/tr2x/
+	cp -f $(@D)/src/buildroot-build/TRX $(TARGET_DIR)/usr/bin/tr1x/TR1X
+	cp -f $(@D)/src/buildroot-build/TRX $(TARGET_DIR)/usr/bin/tr2x/TR2X
 	cp -rf $(@D)/data/tr1/ship/* $(TARGET_DIR)/usr/bin/tr1x/
 	cp -rf $(@D)/data/tr2/ship/* $(TARGET_DIR)/usr/bin/tr2x/
 endef
