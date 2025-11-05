@@ -1,0 +1,177 @@
+diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
+index 7c958d6065be..38d74c405338 100644
+--- a/drivers/bluetooth/btqca.c
++++ b/drivers/bluetooth/btqca.c
+@@ -1005,15 +1005,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);
+ 
+ int qca_set_bdaddr(struct hci_dev *hdev, const bdaddr_t *bdaddr)
+ {
+-	bdaddr_t bdaddr_swapped;
+ 	struct sk_buff *skb;
+ 	int err;
+ 
+-	baswap(&bdaddr_swapped, bdaddr);
+-
+-	skb = __hci_cmd_sync_ev(hdev, EDL_WRITE_BD_ADDR_OPCODE, 6,
+-				&bdaddr_swapped, HCI_EV_VENDOR,
+-				HCI_INIT_TIMEOUT);
++	skb = __hci_cmd_sync_ev(hdev, EDL_WRITE_BD_ADDR_OPCODE, 6, bdaddr,
++				HCI_EV_VENDOR, HCI_INIT_TIMEOUT);
+ 	if (IS_ERR(skb)) {
+ 		err = PTR_ERR(skb);
+ 		bt_dev_err(hdev, "QCA Change address cmd failed (%d)", err);
+diff --git a/drivers/bluetooth/hci_h5.c b/drivers/bluetooth/hci_h5.c
+index d0d4420c1a0f..6fb944b45204 100644
+--- a/drivers/bluetooth/hci_h5.c
++++ b/drivers/bluetooth/hci_h5.c
+@@ -113,7 +113,6 @@ struct h5_vnd {
+ 	int (*suspend)(struct h5 *h5);
+ 	int (*resume)(struct h5 *h5);
+ 	const struct acpi_gpio_mapping *acpi_gpio_map;
+-	int sizeof_priv;
+ };
+ 
+ struct h5_device_data {
+@@ -864,8 +863,7 @@ static int h5_serdev_probe(struct serdev_device *serdev)
+ 	if (IS_ERR(h5->device_wake_gpio))
+ 		return PTR_ERR(h5->device_wake_gpio);
+ 
+-	return hci_uart_register_device_priv(&h5->serdev_hu, &h5p,
+-					     h5->vnd->sizeof_priv);
++	return hci_uart_register_device(&h5->serdev_hu, &h5p);
+ }
+ 
+ static void h5_serdev_remove(struct serdev_device *serdev)
+@@ -1072,7 +1070,6 @@ static struct h5_vnd rtl_vnd = {
+ 	.suspend	= h5_btrtl_suspend,
+ 	.resume		= h5_btrtl_resume,
+ 	.acpi_gpio_map	= acpi_btrtl_gpios,
+-	.sizeof_priv    = sizeof(struct btrealtek_data),
+ };
+ 
+ static const struct h5_device_data h5_data_rtl8822cs = {
+diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
+index 888176b0faa9..908b02d4d002 100644
+--- a/drivers/bluetooth/hci_qca.c
++++ b/drivers/bluetooth/hci_qca.c
+@@ -228,7 +228,6 @@ struct qca_serdev {
+ 	struct qca_power *bt_power;
+ 	u32 init_speed;
+ 	u32 oper_speed;
+-	bool bdaddr_property_broken;
+ 	const char *firmware_name[2];
+ };
+ 
+@@ -1842,12 +1841,13 @@ static int qca_power_on(struct hci_dev *hdev)
+ 
+ static void hci_coredump_qca(struct hci_dev *hdev)
+ {
+-	int err;
+ 	static const u8 param[] = { 0x26 };
++	struct sk_buff *skb;
+ 
+-	err = __hci_cmd_send(hdev, 0xfc0c, 1, param);
+-	if (err < 0)
+-		bt_dev_err(hdev, "%s: trigger crash failed (%d)", __func__, err);
++	skb = __hci_cmd_sync(hdev, 0xfc0c, 1, param, HCI_CMD_TIMEOUT);
++	if (IS_ERR(skb))
++		bt_dev_err(hdev, "%s: trigger crash failed (%ld)", __func__, PTR_ERR(skb));
++	kfree_skb(skb);
+ }
+ 
+ static int qca_get_data_path_id(struct hci_dev *hdev, __u8 *data_path_id)
+@@ -1879,7 +1879,6 @@ static int qca_setup(struct hci_uart *hu)
+ 	const char *rampatch_name = qca_get_rampatch_name(hu);
+ 	int ret;
+ 	struct qca_btsoc_version ver;
+-	struct qca_serdev *qcadev;
+ 	const char *soc_name;
+ 
+ 	ret = qca_check_speeds(hu);
+@@ -1943,10 +1942,6 @@ static int qca_setup(struct hci_uart *hu)
+ 	case QCA_WCN6750:
+ 	case QCA_WCN6855:
+ 	case QCA_WCN7850:
+-		qcadev = serdev_device_get_drvdata(hu->serdev);
+-		if (qcadev->bdaddr_property_broken)
+-			hci_set_quirk(hdev, HCI_QUIRK_BDADDR_PROPERTY_BROKEN);
+-
+ 		hci_set_aosp_capable(hdev);
+ 
+ 		ret = qca_read_soc_version(hdev, &ver, soc_type);
+@@ -2352,9 +2347,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+ 	if (!qcadev->oper_speed)
+ 		BT_DBG("UART will pick default operating speed");
+ 
+-	qcadev->bdaddr_property_broken = device_property_read_bool(&serdev->dev,
+-			"qcom,local-bd-address-broken");
+-
+ 	if (data)
+ 		qcadev->btsoc_type = data->soc_type;
+ 	else
+@@ -2435,7 +2427,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+ 
+ 		qcadev->sw_ctrl = devm_gpiod_get_optional(&serdev->dev, "swctrl",
+ 					       GPIOD_IN);
+-		if (IS_ERR(qcadev->sw_ctrl) &&
++		if (IS_ERR_OR_NULL(qcadev->sw_ctrl) &&
+ 		    (data->soc_type == QCA_WCN6750 ||
+ 		     data->soc_type == QCA_WCN6855 ||
+ 		     data->soc_type == QCA_WCN7850)) {
+diff --git a/drivers/bluetooth/hci_serdev.c b/drivers/bluetooth/hci_serdev.c
+index 593d9cefbbf9..65cf98416f45 100644
+--- a/drivers/bluetooth/hci_serdev.c
++++ b/drivers/bluetooth/hci_serdev.c
+@@ -300,9 +300,8 @@ static const struct serdev_device_ops hci_serdev_client_ops = {
+ 	.write_wakeup = hci_uart_write_wakeup,
+ };
+ 
+-int hci_uart_register_device_priv(struct hci_uart *hu,
+-			     const struct hci_uart_proto *p,
+-			     int sizeof_priv)
++int hci_uart_register_device(struct hci_uart *hu,
++			     const struct hci_uart_proto *p)
+ {
+ 	int err;
+ 	struct hci_dev *hdev;
+@@ -326,7 +325,7 @@ int hci_uart_register_device_priv(struct hci_uart *hu,
+ 	set_bit(HCI_UART_PROTO_READY, &hu->flags);
+ 
+ 	/* Initialize and register HCI device */
+-	hdev = hci_alloc_dev_priv(sizeof_priv);
++	hdev = hci_alloc_dev();
+ 	if (!hdev) {
+ 		BT_ERR("Can't allocate HCI device");
+ 		err = -ENOMEM;
+@@ -390,7 +389,7 @@ int hci_uart_register_device_priv(struct hci_uart *hu,
+ 	percpu_free_rwsem(&hu->proto_lock);
+ 	return err;
+ }
+-EXPORT_SYMBOL_GPL(hci_uart_register_device_priv);
++EXPORT_SYMBOL_GPL(hci_uart_register_device);
+ 
+ void hci_uart_unregister_device(struct hci_uart *hu)
+ {
+diff --git a/drivers/bluetooth/hci_uart.h b/drivers/bluetooth/hci_uart.h
+index 48ac7ca9334e..eacb9f4a2122 100644
+--- a/drivers/bluetooth/hci_uart.h
++++ b/drivers/bluetooth/hci_uart.h
+@@ -98,17 +98,7 @@ struct hci_uart {
+ 
+ int hci_uart_register_proto(const struct hci_uart_proto *p);
+ int hci_uart_unregister_proto(const struct hci_uart_proto *p);
+-
+-int hci_uart_register_device_priv(struct hci_uart *hu,
+-				  const struct hci_uart_proto *p,
+-				  int sizeof_priv);
+-
+-static inline int hci_uart_register_device(struct hci_uart *hu,
+-					   const struct hci_uart_proto *p)
+-{
+-	return hci_uart_register_device_priv(hu, p, 0);
+-}
+-
++int hci_uart_register_device(struct hci_uart *hu, const struct hci_uart_proto *p);
+ void hci_uart_unregister_device(struct hci_uart *hu);
+ 
+ int hci_uart_tx_wakeup(struct hci_uart *hu);
