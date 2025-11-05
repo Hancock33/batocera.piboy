@@ -1874,6 +1874,7 @@ config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
     # Compositor for wayland
     select BR2_PACKAGE_SWAY                                 if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_SWAYBG                               if !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_WLR_RANDR                            if !BR2_PACKAGE_BATOCERA_LIB32
 
 config BR2_PACKAGE_BATOCERA_WAYLAND_LABWC
     bool "batocera.linux wayland labwc packages selection"
