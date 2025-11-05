@@ -3,8 +3,8 @@
 # rott
 #
 ################################################################################
-# Version: Commits on Oct 31, 2025
-ROTT_VERSION = e81fd4da44164e04cd72abef0f8bdf85f4074d17
+# Version: Commits on Nov 05, 2025
+ROTT_VERSION = 978913d7a19fe036375fa2d094e78cf610f94bf0
 ROTT_SITE = $(call github,fabiangreffrath,taradino,$(ROTT_VERSION))
 ROTT_LICENSE = GPLv2
 ROTT_LICENSE_FILE = README.md
