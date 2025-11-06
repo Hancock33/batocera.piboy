@@ -5945,7 +5945,7 @@ msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "Ovládání trilineárního filtrování emulace textury."
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "Ovládání pro hry s 5/6 tlačítky a další jedinečné ovládací prvky"
@@ -6518,7 +6518,7 @@ msgctxt "game_options"
 msgid "Default (2 Buttons)"
 msgstr "Výchozí (2 Tlačítka)"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Default Only"
 msgstr "Pouze Výchozí"
@@ -12154,7 +12154,7 @@ msgctxt "game_options"
 msgid "Modern Alternative"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "Moderní Styl Bojových Holí"
@@ -15376,7 +15376,7 @@ msgctxt "game_options"
 msgid "SP"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "SPECIÁLNÍ ROZLOŽENÍ OVLÁDACÍCH PRVKŮ"
