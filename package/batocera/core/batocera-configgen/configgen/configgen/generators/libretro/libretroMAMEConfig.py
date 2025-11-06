@@ -37,10 +37,10 @@ retroPad = {
     "joystick2down":    "RYAXIS_POS_SWITCH",
     "joystick2left":    "RXAXIS_NEG_SWITCH",
     "joystick2right":   "RXAXIS_POS_SWITCH",
-    "a":                "BUTTON1",
-    "b":                "BUTTON2",
-    "x":                "BUTTON3",
-    "y":                "BUTTON4",
+    "b":                "BUTTON1",
+    "a":                "BUTTON2",
+    "y":                "BUTTON3",
+    "x":                "BUTTON4",
     "pageup":           "BUTTON5",
     "pagedown":         "BUTTON6",
     "l2":               "RZAXIS_POS_SWITCH",
@@ -525,26 +525,20 @@ def getMameControlScheme(system: Emulator, rom: Path) -> str:
 
     romName = rom.stem
     if romName in capcomList:
-        if controllerType in [ "auto", "snes" ]:
+        if controllerType in [ "auto", "snes", "fightstick" ]:
             return "sfsnes"
         if controllerType == "megadrive":
             return "megadrive"
-        if controllerType == "fightstick":
-            return "sfstick"
     elif romName in mkList:
-        if controllerType in [ "auto", "snes" ]:
+        if controllerType in [ "auto", "snes", "fightstick" ]:
             return "mksnes"
         if controllerType == "megadrive":
             return "mkmegadrive"
-        if controllerType == "fightstick":
-            return "mkstick"
     elif romName in kiList:
-        if controllerType in [ "auto", "snes" ]:
+        if controllerType in [ "auto", "snes", "fightstick" ]:
             return "kisnes"
         if controllerType == "megadrive":
             return "megadrive"
-        if controllerType == "fightstick":
-            return "sfstick"
     elif romName in  neogeoList:
         return "neomini"
     elif romName in  twinstickList:
@@ -553,7 +547,7 @@ def getMameControlScheme(system: Emulator, rom: Path) -> str:
         return "qbert"
     else:
         if controllerType == "fightstick":
-            return "fightstick"
+            return "sfsnes"
 
     return "default"
 
