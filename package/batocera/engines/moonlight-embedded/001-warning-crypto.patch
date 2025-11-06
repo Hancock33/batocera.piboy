@@ -1,5 +1,5 @@
 diff --git a/libgamestream/mkcert.c b/libgamestream/mkcert.c
-index 64fede042a..6bfb4cb79b 100644
+index 64fede0..8a40c96 100644
 --- a/libgamestream/mkcert.c
 +++ b/libgamestream/mkcert.c
 @@ -42,7 +42,7 @@ CERT_KEY_PAIR mkcert_generate() {
@@ -7,7 +7,7 @@ index 64fede042a..6bfb4cb79b 100644
  
      OpenSSL_add_all_algorithms();
 -    ERR_load_crypto_strings();
-+    //ERR_load_crypto_strings();
++    ERR_load_CRYPTO_strings();
  
      mkcert(&x509, &pkey, NUM_BITS, SERIAL, NUM_YEARS);
  
