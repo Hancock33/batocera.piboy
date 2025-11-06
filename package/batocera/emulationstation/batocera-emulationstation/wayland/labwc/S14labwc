@@ -76,13 +76,13 @@ start() {
             n
             s#\s*<output>.*</output>#        <output>'"${AZAHAR_SECONDARY_OUT}"'</output>#
         } }' "${RC_XML_PATH}"
-        
+
         # Set the calibration matrix based on the primary output's rotation
         if [ -n "${PRIMARY_OUT}" ]; then
             echo "Fetching rotation for ${PRIMARY_OUT} to set calibration matrix..." >> "$display_log"
             ROTATION=$(batocera-settings-get-master "display.rotate.${PRIMARY_OUT}")
             echo "Found rotation value: ${ROTATION:-'default'}" >> "$display_log"
-            
+
             case "${ROTATION}" in
                 "1") MATRIX="0 -1 1 1 0 0" ;;  # 90 degrees
                 "2") MATRIX="-1 0 1 0 -1 1" ;; # 180 degrees

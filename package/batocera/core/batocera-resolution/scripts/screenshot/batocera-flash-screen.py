@@ -76,7 +76,7 @@ def build_text_popup_top_center(text: str, text_color: str, font_pt: int) -> Gtk
     out_x, out_y, out_w, _ = get_primary_geometry()
     height_px = max(12, font_pt + 10)
 
-    # Popup bypasses WM (override-redirect) — avoids fullscreen/decoration behavior
+    # Popup bypasses WM (override-redirect) - avoids fullscreen/decoration behavior
     win = Gtk.Window(type=Gtk.WindowType.POPUP)
     win.set_title(WINDOW_TITLE_OSD)
     win.set_decorated(False)
