@@ -1,0 +1,20 @@
+diff --git a/packaging/pep517_backend/_backend.py b/packaging/pep517_backend/_backend.py
+index a163f9c..7277eff 100644
+--- a/packaging/pep517_backend/_backend.py
++++ b/packaging/pep517_backend/_backend.py
+@@ -376,7 +376,7 @@ def get_requires_for_build_wheel(
+     if is_pure_python_build:
+         c_ext_build_deps = []
+     else:
+-        c_ext_build_deps = ['Cython ~= 3.1.0']
++        c_ext_build_deps = ['Cython ~= 3.2.0']
+ 
+     return _setuptools_get_requires_for_build_wheel(
+         config_settings=config_settings,
+diff --git a/requirements/cython.txt b/requirements/cython.txt
+index 97dc5a1..5dc42eb 100644
+--- a/requirements/cython.txt
++++ b/requirements/cython.txt
+@@ -1 +1 @@
+-cython==3.1.4
++cython==3.2.0
