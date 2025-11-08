@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c0c117fcf1..2b6d927f82 100644
+index 9ced1ff77a..e0473cdeb5 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -539,7 +539,7 @@ else()
+@@ -586,7 +586,7 @@ else()
      find_package(zstd 1.5 REQUIRED MODULE)
  
      # wow
