@@ -47,7 +47,6 @@ tomlplusplus.mk
 uthash.mk
 vice.mk
 warehouse.mk
-wine-custom.mk
 wine-mono.mk
 wine-native.mk
 wine-staging.mk

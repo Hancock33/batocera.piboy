@@ -3,8 +3,8 @@
 # libserum
 #
 ################################################################################
-# Version: Commits on Oct 18, 2025
-LIBSERUM_VERSION = v2.3.1-concentrate.1
+# Version: Commits on Nov 07, 2025
+LIBSERUM_VERSION = v2.3.1-concentrate.2
 LIBSERUM_SITE = $(call github,PPUC,libserum_concentrate,$(LIBSERUM_VERSION))
 LIBSERUM_LICENSE = GPLv2+
 LIBSERUM_LICENSE_FILES = LICENSE.md
