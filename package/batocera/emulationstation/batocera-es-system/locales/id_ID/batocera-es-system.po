@@ -5909,7 +5909,7 @@ msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "Kontrol untuk permainan 5/6 tombol dan kontrol unik lainnya"
@@ -6477,7 +6477,7 @@ msgctxt "game_options"
 msgid "Default (2 Buttons)"
 msgstr "Standar (2 Tombol)"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Default Only"
 msgstr "Hanya Default"
@@ -12038,7 +12038,7 @@ msgctxt "game_options"
 msgid "Modern Alternative"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "Gaya Modern Fightstick"
@@ -15228,7 +15228,7 @@ msgctxt "game_options"
 msgid "SP"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "TATA LETAK KONTROL"

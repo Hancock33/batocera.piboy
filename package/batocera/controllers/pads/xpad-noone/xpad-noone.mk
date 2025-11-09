@@ -3,9 +3,9 @@
 # xpad-noone
 #
 ################################################################################
-# Version: Commits on Apr 24, 2024
-XPAD_NOONE_VERSION = 6970c40930bedd8b58d0764894e0d5f04813b7c5
-XPAD_NOONE_SITE = $(call github,medusalix,xpad-noone,$(XPAD_NOONE_VERSION))
+# Version: Commits on Jun 26, 2025
+XPAD_NOONE_VERSION = 8e903676dd9514c07ce5e06e43c5f7d8cc51cb7d
+XPAD_NOONE_SITE = $(call github,forkymcforkface,xpad-noone,$(XPAD_NOONE_VERSION))
 XPAD_NOONE_DEPENDENCIES = host-cabextract libusb
 
 XPAD_NOONE_USER_EXTRA_CFLAGS = -w -Wno-error=unused-function

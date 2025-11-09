@@ -143,13 +143,6 @@ if [ "$MODE" = "proprietary" ] || [ "$MODE" = "open" ]; then
     # libnvidia-tls.so
     ln -sf /usr/lib/libnvidia-tls.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-tls.so
     ln -sf /var/run/nvidia/lib/libnvidia-tls.so /usr/lib/libnvidia-tls.so
-    # libvdpau_nvidia.so
-    ln -sf /usr/lib/vdpau/libvdpau_nvidia.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libvdpau_nvidia.so
-    ln -sf /var/run/nvidia/lib/libvdpau_nvidia.so /usr/lib/vdpau/libvdpau_nvidia.so
-    ln -sf /usr/lib/vdpau/libvdpau_nvidia.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libvdpau_nvidia.so.1
-    ln -sf /var/run/nvidia/lib/libvdpau_nvidia.so.1 /usr/lib/vdpau/libvdpau_nvidia.so.1
-    ln -sf /usr/lib/vdpau/libvdpau_nvidia.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libvdpau_nvidia.so.1.0
-    ln -sf /var/run/nvidia/lib/libvdpau_nvidia.so.1.0 /usr/lib/vdpau/libvdpau_nvidia.so.1.0
     # libnvidia-ml.so
     ln -sf /usr/lib/libnvidia-ml.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-ml.so
     ln -sf /var/run/nvidia/lib/libnvidia-ml.so /usr/lib/libnvidia-ml.so
@@ -204,13 +197,6 @@ if [ "$MODE" = "proprietary" ] || [ "$MODE" = "open" ]; then
     # libnvidia-tls.so
     ln -sf /lib32/libnvidia-tls.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib32/libnvidia-tls.so
     ln -sf /var/run/nvidia/lib32/libnvidia-tls.so /lib32/libnvidia-tls.so
-    # libvdpau_nvidia.so
-    ln -sf /lib32/vdpau/libvdpau_nvidia.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib32/libvdpau_nvidia.so
-    ln -sf /var/run/nvidia/lib32/libvdpau_nvidia.so /lib32/vdpau/libvdpau_nvidia.so
-    ln -sf /lib32/vdpau/libvdpau_nvidia.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib32/libvdpau_nvidia.so.1
-    ln -sf /var/run/nvidia/lib32/libvdpau_nvidia.so.1 /lib32/vdpau/libvdpau_nvidia.so.1
-    ln -sf /lib32/vdpau/libvdpau_nvidia.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib32/libvdpau_nvidia.so.1.0
-    ln -sf /var/run/nvidia/lib32/libvdpau_nvidia.so.1.0 /lib32/vdpau/libvdpau_nvidia.so.1.0
     # libnvidia-ml.so
     ln -sf /lib32/libnvidia-ml.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib32/libnvidia-ml.so
     ln -sf /var/run/nvidia/lib32/libnvidia-ml.so /lib32/libnvidia-ml.so
@@ -351,9 +337,6 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
         mkdir -p /var/run/nvidia/configs/
         ln -sf /usr/share/nvidia/X11/20-nvidia.conf /var/run/nvidia/configs/20-nvidia.conf
         ln -sf /var/run/nvidia/configs/20-nvidia.conf /etc/X11/xorg.conf.d/20-nvidia.conf
-        # libvdpau_trace.so
-        ln -sf /usr/lib/vdpau/libvdpau_trace.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libvdpau_trace.so.1.0.0
-        ln -sf /var/run/nvidia/lib/libvdpau_trace.so.1.0.0 /usr/lib/vdpau/libvdpau_trace.so.1.0.0
         # libcuda.so
         ln -sf /usr/lib/libcuda.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libcuda.so.1
         ln -sf /var/run/nvidia/lib/libcuda.so.1 /usr/lib/libcuda.so.1
@@ -398,13 +381,6 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
     ln -sf /var/run/nvidia/lib/libnvidia-ml.so /usr/lib/libnvidia-ml.so
     ln -sf /usr/lib/libnvidia-ml.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-ml.so.1
     ln -sf /var/run/nvidia/lib/libnvidia-ml.so.1 /usr/lib/libnvidia-ml.so.1
-    # libvdpau_nvidia.so
-    ln -sf /usr/lib/vdpau/libvdpau_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libvdpau_nvidia.so
-    ln -sf /var/run/nvidia/lib/libvdpau_nvidia.so /usr/lib/vdpau/libvdpau_nvidia.so
-    ln -sf /usr/lib/vdpau/libvdpau_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libvdpau_nvidia.so.1
-    ln -sf /var/run/nvidia/lib/libvdpau_nvidia.so.1 /usr/lib/vdpau/libvdpau_nvidia.so.1
-    ln -sf /usr/lib/vdpau/libvdpau_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libvdpau_nvidia.so.1.0
-    ln -sf /var/run/nvidia/lib/libvdpau_nvidia.so.1.0 /usr/lib/vdpau/libvdpau_nvidia.so.1.0
 
     if [ "$MODE" = "legacy470" ]; then
         # libnvidia-glvkspirv.so
@@ -492,13 +468,6 @@ elif echo "$MODE" | grep -q -E '^(legacy470|legacy340|legacy390)$'; then
     ln -sf /var/run/nvidia/lib32/libnvidia-ml.so /lib32/libnvidia-ml.so
     ln -sf /lib32/libnvidia-ml.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib32/libnvidia-ml.so.1
     ln -sf /var/run/nvidia/lib32/libnvidia-ml.so.1 /lib32/libnvidia-ml.so.1
-    # libvdpau_nvidia.so
-    ln -sf /lib32/vdpau/libvdpau_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib32/libvdpau_nvidia.so
-    ln -sf /var/run/nvidia/lib32/libvdpau_nvidia.so /lib32/vdpau/libvdpau_nvidia.so
-    ln -sf /lib32/vdpau/libvdpau_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib32/libvdpau_nvidia.so.1
-    ln -sf /var/run/nvidia/lib32/libvdpau_nvidia.so.1 /lib32/vdpau/libvdpau_nvidia.so.1
-    ln -sf /lib32/vdpau/libvdpau_nvidia.so.$NVIDIA_LEGACY_DRIVER_VERSION /var/run/nvidia/lib32/libvdpau_nvidia.so.1.0
-    ln -sf /var/run/nvidia/lib32/libvdpau_nvidia.so.1.0 /lib32/vdpau/libvdpau_nvidia.so.1.0
 
     if [ "$MODE" = "legacy470" ]; then
         # libnvidia-glvkspirv.so

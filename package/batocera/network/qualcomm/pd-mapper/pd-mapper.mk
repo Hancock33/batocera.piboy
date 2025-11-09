@@ -3,8 +3,8 @@
 # pd-mapper
 #
 ################################################################################
-# Version: Commits on Jun 19, 2024
-PD_MAPPER_VERSION = e7c42e1522249593302a5b8920b9e7b42dc3f25e
+# Version: Commits on Nov 03, 2025
+PD_MAPPER_VERSION = 0a43c8be564feae0493b6e24b2e3e98459a4f9b6
 PD_MAPPER_SITE = $(call github,linux-msm,pd-mapper,$(PD_MAPPER_VERSION))
 PD_MAPPER_LICENSE_FILE = LICENSE
 PD_MAPPER_DEPENDENCIES = host-qrtr qrtr

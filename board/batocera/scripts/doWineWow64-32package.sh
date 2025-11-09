@@ -82,10 +82,6 @@ if ! mkdir -p "${TMPOUT}/lib32/gstreamer-1.0"
 then
     exit 1
 fi
-if ! mkdir -p "${TMPOUT}/lib32/vdpau"
-then
-    exit 1
-fi
 if ! mkdir -p "${TMPOUT}/usr/share/gst-plugins-base"
 then
     exit 1
@@ -106,7 +102,6 @@ cp -dpv "${G_TARGETDIR}/usr/lib/libXrandr.so"* "${TMPOUT}/lib32" || exit 1
 cp -dpv "${G_TARGETDIR}/usr/lib/libXft.so"* "${TMPOUT}/lib32" || exit 1
 cp -dpv "${G_TARGETDIR}/usr/lib/libXi.so"* "${TMPOUT}/lib32" || exit 1
 cp -dpv "${G_TARGETDIR}/usr/lib/libXinerama.so"* "${TMPOUT}/lib32" || exit 1
-cp -prv "${G_TARGETDIR}/usr/lib/vdpau/"* "${TMPOUT}/lib32/vdpau" || exit 1
 
 # libglvnd
 echo

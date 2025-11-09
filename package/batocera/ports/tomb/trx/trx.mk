@@ -3,8 +3,8 @@
 # trx
 #
 ################################################################################
-# Version: Commits on Nov 02, 2025
-TRX_VERSION = 400aafaab2717fd01b6178b17bb2bcd400f02f7c
+# Version: Commits on Nov 08, 2025
+TRX_VERSION = 3cde9d3d5a9fd275fa0b5bbdd3a17c5933cedab3
 TRX_SITE = $(call github,LostArtefacts,TRX,$(TRX_VERSION))
 TRX_LICENSE = GPL-3.0 license
 TRX_LICENSE_FILES = COPYING.md
@@ -18,8 +18,8 @@ TRX_CONF_OPTS = -Dstaticdeps=false
 define TRX_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/{tr1x,tr2x}
 	mkdir -p $(TARGET_DIR)/usr/bin/{tr1x,tr2x}
-	cp -f $(@D)/src/buildroot-build/TR1X $(TARGET_DIR)/usr/bin/tr1x/
-	cp -f $(@D)/src/buildroot-build/TR2X $(TARGET_DIR)/usr/bin/tr2x/
+	cp -f $(@D)/src/buildroot-build/TRX $(TARGET_DIR)/usr/bin/tr1x/TR1X
+	cp -f $(@D)/src/buildroot-build/TRX $(TARGET_DIR)/usr/bin/tr2x/TR2X
 	cp -rf $(@D)/data/tr1/ship/* $(TARGET_DIR)/usr/bin/tr1x/
 	cp -rf $(@D)/data/tr2/ship/* $(TARGET_DIR)/usr/bin/tr2x/
 endef

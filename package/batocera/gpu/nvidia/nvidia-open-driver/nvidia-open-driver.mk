@@ -3,8 +3,8 @@
 # nvidia-open-driver
 #
 ################################################################################
-# Version: Commits on  Sept 30, 2025
-NVIDIA_OPEN_DRIVER_VERSION = 580.95.05
+# Version: Commits on Nov 04, 2025
+NVIDIA_OPEN_DRIVER_VERSION = 580.105.08
 NVIDIA_OPEN_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA_OPEN_DRIVER_SITE = https://us.download.nvidia.com/XFree86/Linux-x86$(NVIDIA_OPEN_DRIVER_SUFFIX)/$(NVIDIA_OPEN_DRIVER_VERSION)
 NVIDIA_OPEN_DRIVER_SOURCE = NVIDIA-Linux-x86$(NVIDIA_OPEN_DRIVER_SUFFIX)-$(NVIDIA_OPEN_DRIVER_VERSION).run
@@ -61,9 +61,6 @@ NVIDIA_OPEN_DRIVER_LIBS_MISC = \
 	libnvidia-tls.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-ml.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-wayland-client.so.$(NVIDIA_OPEN_DRIVER_VERSION)
-
-NVIDIA_OPEN_DRIVER_LIBS_VDPAU = \
-	libvdpau_nvidia.so.$(NVIDIA_OPEN_DRIVER_VERSION)
 
 NVIDIA_OPEN_DRIVER_LIBS += \
 	$(NVIDIA_OPEN_DRIVER_LIBS_GL) \
@@ -195,19 +192,6 @@ define NVIDIA_OPEN_DRIVER_INSTALL_LIBS
 			ln -sf $(notdir $(lib)) $(1)/usr/lib/$${baseso}; \
 		fi
 	)
-	$(foreach lib,$(NVIDIA_OPEN_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/$(lib) $(1)/usr/lib/vdpau/$(notdir $(lib))
-		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
-			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
-		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) \
-				$(1)/usr/lib/vdpau/$${libsoname}; \
-		fi
-		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
-		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/usr/lib/vdpau/$${baseso}; \
-		fi
-	)
 endef
 
 # batocera install 32bit libraries
@@ -223,19 +207,6 @@ define NVIDIA_OPEN_DRIVER_INSTALL_32
 		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
 		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
 			ln -sf $(notdir $(lib)) $(1)/usr/lib32/$${baseso}; \
-		fi
-	)
-	$(foreach lib,$(NVIDIA_OPEN_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/vdpau/$(notdir $(lib))
-		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
-			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
-		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) \
-				$(1)/usr/lib32/vdpau/$${libsoname}; \
-		fi
-		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
-		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/usr/lib32/vdpau/$${baseso}; \
 		fi
 	)
 endef

@@ -1,5 +1,5 @@
 diff --git a/src/common/fs/path_util.cpp b/src/common/fs/path_util.cpp
-index a095e0c239..0111507f39 100644
+index dc1071b9ca..bed0feb36f 100644
 --- a/src/common/fs/path_util.cpp
 +++ b/src/common/fs/path_util.cpp
 @@ -149,21 +149,21 @@ public:
@@ -35,5 +35,5 @@ index a095e0c239..0111507f39 100644
 +        GenerateEdenPath(EdenPath::ShaderDir, "/userdata/saves/switch/yuzu/shaders");
 +        GenerateEdenPath(EdenPath::TASDir, "/userdata/saves/switch/yuzu/tas");
          GenerateEdenPath(EdenPath::IconsDir, eden_path / ICONS_DIR);
-     }
  
+ #ifdef _WIN32

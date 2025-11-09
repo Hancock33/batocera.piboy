@@ -9,6 +9,7 @@
     <reuseOutputMode>no</reuseOutputMode>
     <xwaylandPersistence>no</xwaylandPersistence>
   </core>
+  <touch deviceName="" mapToOutput="" mouseEmulation="yes"/>
   <libinput>
     <device category="touch">
       <calibrationMatrix>1 0 0 0 1 0</calibrationMatrix>
@@ -64,6 +65,9 @@
       <action name="MoveToOutput">
         <output></output>
       </action>
+    </windowRule>
+    <windowRule title="Batocera OSD" serverDecoration="no">
+      <action name="MoveToEdge" direction="up" snapWindows="no" />
     </windowRule>
     <windowRule title="backglass" serverDecoration="no">
       <action name="MoveToOutput">

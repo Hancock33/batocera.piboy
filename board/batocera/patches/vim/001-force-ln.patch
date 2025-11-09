@@ -1,8 +1,8 @@
 diff --git a/src/Makefile b/src/Makefile
-index d1b08be25..6ffe75f16 100644
+index 6fb1eb95e..6a0dcfd79 100644
 --- a/src/Makefile
 +++ b/src/Makefile
-@@ -2772,40 +2772,40 @@ installvimdiff: $(DEST_BIN)/$(VIMDIFFTARGET)
+@@ -2746,40 +2746,40 @@ installvimdiff: $(DEST_BIN)/$(VIMDIFFTARGET)
  installgvimdiff: $(DEST_BIN)/$(GVIMDIFFTARGET)
  
  $(DEST_BIN)/$(EXTARGET): $(DEST_BIN)
@@ -55,7 +55,7 @@ index d1b08be25..6ffe75f16 100644
  
  # Create links for the manual pages with various names to vim.	This is only
  # done when the links (or manpages with the same name) don't exist yet.
-@@ -2986,7 +2986,7 @@ clean celan: testclean
+@@ -2960,7 +2960,7 @@ clean celan: testclean
  # another way.  When new source files are added use "shadowupdate":
  #  % cd shadow
  #  % rm Makefile
@@ -64,7 +64,7 @@ index d1b08be25..6ffe75f16 100644
  #  % ./configure {options}
  #  % make
  # And later:
-@@ -3000,24 +3000,24 @@ LINKEDFILES = ../*.[chm] ../*.cc ../*.in ../*.sh ../*.xs ../*.xbm ../gui_gtk_res
+@@ -2974,24 +2974,24 @@ LINKEDFILES = ../*.[chm] ../*.cc ../*.in ../*.sh ../*.xs ../*.xbm ../gui_gtk_res
  
  shadow:	runtime pixmaps
  	$(MKDIR_P) $(SHADOWDIR)

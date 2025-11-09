@@ -5,7 +5,7 @@
 ################################################################################
 # Keep the version aligned to buildroot ffmpeg
 # Version: Commits on May 31, 2025
-FFMPEG_ROCKCHIP_VERSION = a9b3a6d3df69439e115d6dded5463a71b2d9519c
+FFMPEG_ROCKCHIP_VERSION = 06da171770b8c7489df227ce0612385abae6c78c
 FFMPEG_ROCKCHIP_BRANCH = 7.1
 FFMPEG_ROCKCHIP_SITE = https://github.com/nyanmisaka/ffmpeg-rockchip.git
 FFMPEG_ROCKCHIP_SITE_METHOD = git
@@ -282,13 +282,6 @@ FFMPEG_ROCKCHIP_CONF_OPTS += --enable-vaapi
 FFMPEG_ROCKCHIP_DEPENDENCIES += libva
 else
 FFMPEG_ROCKCHIP_CONF_OPTS += --disable-vaapi
-endif
-
-ifeq ($(BR2_PACKAGE_LIBVDPAU),y)
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-vdpau
-FFMPEG_ROCKCHIP_DEPENDENCIES += libvdpau
-else
-FFMPEG_ROCKCHIP_CONF_OPTS += --disable-vdpau
 endif
 
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)

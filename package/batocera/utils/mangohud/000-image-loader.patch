@@ -151,7 +151,7 @@ index ee1d943..d23264e 100644
  
      SPDLOG_DEBUG("glsl_version: {}", glsl_version);
 diff --git a/src/gl/inject_egl.cpp b/src/gl/inject_egl.cpp
-index 2b6a522..3046a9c 100644
+index 1c4654a..43d45a3 100644
 --- a/src/gl/inject_egl.cpp
 +++ b/src/gl/inject_egl.cpp
 @@ -5,6 +5,7 @@
@@ -163,18 +163,18 @@ index 2b6a522..3046a9c 100644
  #include "mesa/util/macros.h"
  #include "mesa/util/os_time.h"
 diff --git a/src/hud_elements.cpp b/src/hud_elements.cpp
-index 8e9ac4c..003a220 100644
+index 7057755..b295fc5 100644
 --- a/src/hud_elements.cpp
 +++ b/src/hud_elements.cpp
-@@ -28,6 +28,7 @@
+@@ -27,6 +27,7 @@
+ #include "fps_metrics.h"
  #include "fex.h"
  #include "ftrace.h"
- #include "winesync.h"
 +#include "load_textures.h"
+ #include "winesync.h"
+ #include "fps_limiter.h"
  
- #define CHAR_CELSIUS    "\xe2\x84\x83"
- #define CHAR_FAHRENHEIT "\xe2\x84\x89"
-@@ -884,6 +885,7 @@ void HudElements::engine_version(){
+@@ -885,6 +886,7 @@ void HudElements::engine_version(){
          ImguiNextColumnFirstItem();
          ImGui::PushFont(HUDElements.sw_stats->font_secondary);
          if (HUDElements.is_vulkan) {
@@ -182,7 +182,7 @@ index 8e9ac4c..003a220 100644
              if ((HUDElements.sw_stats->engine == EngineTypes::DXVK || HUDElements.sw_stats->engine == EngineTypes::VKD3D)){
                  HUDElements.TextColored(HUDElements.colors.engine,
                      "%s/%d.%d.%d", HUDElements.sw_stats->engineVersion.c_str(),
-@@ -897,6 +899,7 @@ void HudElements::engine_version(){
+@@ -898,6 +900,7 @@ void HudElements::engine_version(){
                      HUDElements.sw_stats->version_vk.minor,
                      HUDElements.sw_stats->version_vk.patch);
              }
@@ -457,10 +457,10 @@ index dc6bb00..313a888 100644
 +    fColor = In.Color * texture(sTexture, In.UV.st);
  }
 diff --git a/src/overlay.h b/src/overlay.h
-index 0fad8e6..610a38d 100644
+index 2ecc25e..378f1da 100644
 --- a/src/overlay.h
 +++ b/src/overlay.h
-@@ -168,6 +168,7 @@ extern void control_client_check(int control, int& control_client, const std::st
+@@ -157,6 +157,7 @@ extern void control_client_check(int control, int& control_client, const std::st
  extern void process_control_socket(int& control_client, overlay_params &params);
  extern void control_send(int control_client, const char *cmd, unsigned cmdlen, const char *param, unsigned paramlen);
  extern int global_control_client;
@@ -469,10 +469,10 @@ index 0fad8e6..610a38d 100644
  void render_mpris_metadata(const overlay_params& params, mutexed_metadata& meta, uint64_t frame_timing);
  #endif
 diff --git a/src/overlay_params.cpp b/src/overlay_params.cpp
-index e713dc6..13047b9 100644
+index ee10e99..7ca64fc 100644
 --- a/src/overlay_params.cpp
 +++ b/src/overlay_params.cpp
-@@ -582,6 +582,9 @@ parse_ftrace(const char *str) {
+@@ -584,6 +584,9 @@ parse_ftrace(const char *str) {
  #define parse_blacklist(s) parse_str_tokenize(s)
  #define parse_custom_text_center(s) parse_str(s)
  #define parse_custom_text(s) parse_str(s)
@@ -482,7 +482,7 @@ index e713dc6..13047b9 100644
  #define parse_fps_value(s) parse_load_value(s)
  #define parse_fps_color(s) parse_load_color(s)
  #define parse_battery_color(s) parse_color(s)
-@@ -878,6 +881,7 @@ static void set_param_defaults(struct overlay_params *params){
+@@ -880,6 +883,7 @@ static void set_param_defaults(struct overlay_params *params){
     params->table_columns = 3;
     params->text_outline_color = 0x000000;
     params->text_outline_thickness = 1.5;
@@ -18881,12 +18881,12 @@ index 0000000..f48c509
 +------------------------------------------------------------------------------
 +*/
 diff --git a/src/vulkan.cpp b/src/vulkan.cpp
-index be37311..60dfdea 100644
+index 6bb2256..e8f1319 100644
 --- a/src/vulkan.cpp
 +++ b/src/vulkan.cpp
-@@ -60,6 +60,11 @@
- #include "implot.h"
+@@ -61,6 +61,11 @@
  #endif
+ #include "fps_limiter.h"
  
 +#define STB_IMAGE_IMPLEMENTATION
 +#include "stb_image.h"
@@ -18896,7 +18896,7 @@ index be37311..60dfdea 100644
  using namespace std;
  
  float offset_x, offset_y, hudSpacing;
-@@ -72,6 +77,22 @@ namespace MangoHud { namespace GL {
+@@ -73,6 +78,22 @@ namespace MangoHud { namespace GL {
  }}
  #endif
  
@@ -18919,8 +18919,8 @@ index be37311..60dfdea 100644
  /* Mapped from VkInstace/VkPhysicalDevice */
  struct instance_data {
     struct vk_instance_dispatch_table vtable;
-@@ -168,12 +189,16 @@ struct swapchain_data {
-    std::list<overlay_draw *> draws; /* List of struct overlay_draw */
+@@ -169,12 +190,16 @@ struct swapchain_data {
+    std::vector<overlay_draw *> draws; /* vector of struct overlay_draw */
  
     bool font_uploaded;
 -   VkImage font_image;
@@ -18939,7 +18939,7 @@ index be37311..60dfdea 100644
     /**/
     ImGuiContext* imgui_context;
     ImFontAtlas* font_atlas;
-@@ -224,6 +249,7 @@ static void unmap_object(uint64_t obj)
+@@ -225,6 +250,7 @@ static void unmap_object(uint64_t obj)
  /**/
  
  static void shutdown_swapchain_font(struct swapchain_data*);
@@ -18947,7 +18947,7 @@ index be37311..60dfdea 100644
  
  static VkLayerInstanceCreateInfo *get_instance_chain_info(const VkInstanceCreateInfo *pCreateInfo,
                                                            VkLayerFunction func)
-@@ -633,12 +659,13 @@ static void create_image(struct swapchain_data *data,
+@@ -634,12 +660,13 @@ static void create_image(struct swapchain_data *data,
                          uint32_t width,
                          uint32_t height,
                          VkFormat format,
@@ -18964,7 +18964,7 @@ index be37311..60dfdea 100644
     VkImageCreateInfo image_info = {};
     image_info.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;
     image_info.imageType = VK_IMAGE_TYPE_2D;
-@@ -654,10 +681,10 @@ static void create_image(struct swapchain_data *data,
+@@ -655,10 +682,10 @@ static void create_image(struct swapchain_data *data,
     image_info.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
     image_info.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
     VK_CHECK(device_data->vtable.CreateImage(device_data->device, &image_info,
@@ -18977,7 +18977,7 @@ index be37311..60dfdea 100644
     VkMemoryAllocateInfo image_alloc_info = {};
     image_alloc_info.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
     image_alloc_info.allocationSize = font_image_req.size;
-@@ -665,33 +692,31 @@ static void create_image(struct swapchain_data *data,
+@@ -666,33 +693,31 @@ static void create_image(struct swapchain_data *data,
                                                       VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,
                                                       font_image_req.memoryTypeBits);
     VK_CHECK(device_data->vtable.AllocateMemory(device_data->device, &image_alloc_info,
@@ -19018,7 +19018,7 @@ index be37311..60dfdea 100644
  {
     struct device_data *device_data = data->device;
  
-@@ -706,10 +731,71 @@ static VkDescriptorSet create_image_with_desc(struct swapchain_data *data,
+@@ -707,10 +732,71 @@ static VkDescriptorSet create_image_with_desc(struct swapchain_data *data,
                                                         &alloc_info,
                                                         &descriptor_set));
  
@@ -19091,7 +19091,7 @@ index be37311..60dfdea 100644
  static void check_fonts(struct swapchain_data* data)
  {
     struct device_data *device_data = data->device;
-@@ -723,16 +809,16 @@ static void check_fonts(struct swapchain_data* data)
+@@ -724,16 +810,16 @@ static void check_fonts(struct swapchain_data* data)
        create_fonts(data->font_atlas, instance_data->params, data->sw_stats.font_small, data->sw_stats.font_text, data->sw_stats.font_secondary);
        unsigned char* pixels;
        int width, height;
@@ -19111,7 +19111,7 @@ index be37311..60dfdea 100644
  
        data->font_atlas->SetTexID((ImTextureID)desc_set);
        data->font_uploaded = false;
-@@ -754,9 +840,38 @@ static void ensure_swapchain_fonts(struct swapchain_data *data,
+@@ -755,9 +841,38 @@ static void ensure_swapchain_fonts(struct swapchain_data *data,
     data->font_uploaded = true;
     unsigned char* pixels;
     int width, height;
@@ -19153,7 +19153,7 @@ index be37311..60dfdea 100644
  }
  
  static void CreateOrResizeBuffer(struct device_data *data,
-@@ -826,6 +941,36 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -827,6 +942,36 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
  
     ensure_swapchain_fonts(data, draw->command_buffer);
  
@@ -19190,7 +19190,7 @@ index be37311..60dfdea 100644
     /* Bounce the image to display back to color attachment layout for
      * rendering on top of it.
      */
-@@ -902,7 +1047,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -903,7 +1048,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
     /* Bind pipeline and descriptor sets */
     device_data->vtable.CmdBindPipeline(draw->command_buffer, VK_PIPELINE_BIND_POINT_GRAPHICS, data->pipeline);
  
@@ -19199,7 +19199,7 @@ index be37311..60dfdea 100644
     VkDescriptorSet desc_set[1] = {
        //data->descriptor_set
        reinterpret_cast<VkDescriptorSet>(data->font_atlas->TexID)
-@@ -965,7 +1110,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -966,7 +1111,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
           scissor.extent.width = (uint32_t)(pcmd->ClipRect.z - pcmd->ClipRect.x);
           scissor.extent.height = (uint32_t)(pcmd->ClipRect.w - pcmd->ClipRect.y + 1); // FIXME: Why +1 here?
           device_data->vtable.CmdSetScissor(draw->command_buffer, 0, 1, &scissor);
@@ -19208,7 +19208,7 @@ index be37311..60dfdea 100644
           VkDescriptorSet desc_set[1] = { (VkDescriptorSet)pcmd->TextureId };
           device_data->vtable.CmdBindDescriptorSets(draw->command_buffer, VK_PIPELINE_BIND_POINT_GRAPHICS,
                                                     data->pipeline_layout, 0, 1, desc_set, 0, NULL);
-@@ -1101,12 +1246,13 @@ static void setup_swapchain_data_pipeline(struct swapchain_data *data)
+@@ -1102,12 +1247,13 @@ static void setup_swapchain_data_pipeline(struct swapchain_data *data)
     /* Descriptor pool */
     VkDescriptorPoolSize sampler_pool_size = {};
     sampler_pool_size.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
@@ -19224,7 +19224,7 @@ index be37311..60dfdea 100644
     VK_CHECK(device_data->vtable.CreateDescriptorPool(device_data->device,
                                                       &desc_pool_info,
                                                       NULL, &data->descriptor_pool));
-@@ -1449,18 +1595,37 @@ static void setup_swapchain_data(struct swapchain_data *data,
+@@ -1450,18 +1596,37 @@ static void setup_swapchain_data(struct swapchain_data *data,
                                                    NULL, &data->command_pool));
  }
  
@@ -19267,7 +19267,7 @@ index be37311..60dfdea 100644
  static void shutdown_swapchain_data(struct swapchain_data *data)
  {
     struct device_data *device_data = data->device;
-@@ -1481,6 +1646,9 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
+@@ -1482,6 +1647,9 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
        device_data->vtable.DestroyFramebuffer(device_data->device, data->framebuffers[i], NULL);
     }
  
@@ -19277,7 +19277,7 @@ index be37311..60dfdea 100644
     device_data->vtable.DestroyRenderPass(device_data->device, data->render_pass, NULL);
  
     device_data->vtable.DestroyCommandPool(device_data->device, data->command_pool, NULL);
-@@ -1494,7 +1662,6 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
+@@ -1495,7 +1663,6 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
                                                    data->descriptor_layout, NULL);
  
     device_data->vtable.DestroySampler(device_data->device, data->font_sampler, NULL);

@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index 732de59292..1a149564b6 100755
+index 38decb7cb9..88f3438a6c 100755
 --- a/configure
 +++ b/configure
-@@ -201,6 +201,7 @@ External library support:
+@@ -202,6 +202,7 @@ External library support:
    --disable-bzlib          disable bzlib [autodetect]
    --disable-coreimage      disable Apple CoreImage framework [autodetect]
    --enable-chromaprint     enable audio fingerprinting with chromaprint [no]
@@ -10,7 +10,7 @@ index 732de59292..1a149564b6 100755
    --enable-frei0r          enable frei0r video filtering [no]
    --enable-gcrypt          enable gcrypt, needed for rtmp(t)e support
                             if openssl, librtmp or gmp is not used [no]
-@@ -287,6 +288,7 @@ External library support:
+@@ -288,6 +289,7 @@ External library support:
    --enable-libtorch        enable Torch as one DNN backend [no]
    --enable-libtwolame      enable MP2 encoding via libtwolame [no]
    --enable-libuavs3d       enable AVS3 decoding via libuavs3d [no]
@@ -18,7 +18,7 @@ index 732de59292..1a149564b6 100755
    --enable-libv4l2         enable libv4l2/v4l-utils [no]
    --enable-libvidstab      enable video stabilization using vid.stab [no]
    --enable-libvmaf         enable vmaf filter via libvmaf [no]
-@@ -355,12 +357,16 @@ External library support:
+@@ -356,12 +358,16 @@ External library support:
    --enable-libvpl          enable Intel oneVPL code via libvpl if libmfx is not used [no]
    --enable-libnpp          enable Nvidia Performance Primitives-based code [no]
    --enable-mmal            enable Broadcom Multi-Media Abstraction Layer (Raspberry Pi) via MMAL [no]
@@ -35,7 +35,7 @@ index 732de59292..1a149564b6 100755
    --disable-vaapi          disable Video Acceleration API (mainly Unix/Intel) code [autodetect]
    --disable-vdpau          disable Nvidia Video Decode and Presentation API for Unix code [autodetect]
    --disable-videotoolbox   disable VideoToolbox code [autodetect]
-@@ -1861,7 +1867,9 @@ EXTERNAL_AUTODETECT_LIBRARY_LIST="
+@@ -1862,7 +1868,9 @@ EXTERNAL_AUTODETECT_LIBRARY_LIST="
      avfoundation
      bzlib
      coreimage
@@ -45,7 +45,7 @@ index 732de59292..1a149564b6 100755
      libxcb
      libxcb_shm
      libxcb_shape
-@@ -1935,6 +1943,7 @@ EXTERNAL_LIBRARY_LIST="
+@@ -1936,6 +1944,7 @@ EXTERNAL_LIBRARY_LIST="
      libcodec2
      libdav1d
      libdc1394
@@ -53,7 +53,7 @@ index 732de59292..1a149564b6 100755
      libflite
      libfontconfig
      libfreetype
-@@ -2048,6 +2057,7 @@ HWACCEL_LIBRARY_LIST="
+@@ -2049,6 +2058,7 @@ HWACCEL_LIBRARY_LIST="
      mmal
      omx
      opencl
@@ -61,7 +61,7 @@ index 732de59292..1a149564b6 100755
  "
  
  DOCUMENT_LIST="
-@@ -2065,10 +2075,14 @@ FEATURE_LIST="
+@@ -2066,10 +2076,14 @@ FEATURE_LIST="
      omx_rpi
      runtime_cpudetect
      safe_bitstream_reader
@@ -76,7 +76,7 @@ index 732de59292..1a149564b6 100755
  "
  
  # this list should be kept in linking order
-@@ -2651,6 +2665,7 @@ CONFIG_EXTRA="
+@@ -2654,6 +2668,7 @@ CONFIG_EXTRA="
      rtpdec
      rtpenc_chain
      rv34dsp
@@ -84,7 +84,7 @@ index 732de59292..1a149564b6 100755
      scene_sad
      sinewin
      smpte_436m
-@@ -3195,6 +3210,7 @@ dxva2_deps="dxva2api_h DXVA2_ConfigPictureDecode ole32 user32"
+@@ -3198,6 +3213,7 @@ dxva2_deps="dxva2api_h DXVA2_ConfigPictureDecode ole32 user32"
  ffnvcodec_deps_any="libdl LoadLibrary"
  mediacodec_deps="android mediandk pthreads"
  nvdec_deps="ffnvcodec"
@@ -92,7 +92,7 @@ index 732de59292..1a149564b6 100755
  vaapi_x11_deps="xlib_x11"
  videotoolbox_hwaccel_deps="videotoolbox pthreads"
  videotoolbox_hwaccel_extralibs="-framework QuartzCore"
-@@ -3253,6 +3269,8 @@ hevc_dxva2_hwaccel_deps="dxva2 DXVA_PicParams_HEVC"
+@@ -3256,6 +3272,8 @@ hevc_dxva2_hwaccel_deps="dxva2 DXVA_PicParams_HEVC"
  hevc_dxva2_hwaccel_select="hevc_decoder"
  hevc_nvdec_hwaccel_deps="nvdec"
  hevc_nvdec_hwaccel_select="hevc_decoder"
@@ -101,7 +101,7 @@ index 732de59292..1a149564b6 100755
  hevc_vaapi_hwaccel_deps="vaapi VAPictureParameterBufferHEVC"
  hevc_vaapi_hwaccel_select="hevc_decoder"
  hevc_vdpau_hwaccel_deps="vdpau VdpPictureInfoHEVC"
-@@ -3831,8 +3849,11 @@ sndio_indev_deps="sndio"
+@@ -3834,8 +3852,11 @@ sndio_indev_deps="sndio"
  sndio_outdev_deps="sndio"
  v4l2_indev_deps_any="linux_videodev2_h sys_videoio_h"
  v4l2_indev_suggest="libv4l2"
@@ -113,7 +113,7 @@ index 732de59292..1a149564b6 100755
  vfwcap_indev_deps="vfw32 vfwcap_defines"
  xcbgrab_indev_deps="libxcb"
  xcbgrab_indev_suggest="libxcb_shm libxcb_shape libxcb_xfixes"
-@@ -3943,6 +3964,7 @@ cropdetect_filter_deps="gpl"
+@@ -3946,6 +3967,7 @@ cropdetect_filter_deps="gpl"
  deinterlace_qsv_filter_deps="libmfx"
  deinterlace_qsv_filter_select="qsvvpp"
  deinterlace_vaapi_filter_deps="vaapi"
@@ -121,7 +121,7 @@ index 732de59292..1a149564b6 100755
  delogo_filter_deps="gpl"
  denoise_vaapi_filter_deps="vaapi"
  derain_filter_select="dnn"
-@@ -4055,6 +4077,7 @@ transpose_opencl_filter_deps="opencl"
+@@ -4059,6 +4081,7 @@ transpose_opencl_filter_deps="opencl"
  transpose_vaapi_filter_deps="vaapi VAProcPipelineCaps_rotation_flags"
  transpose_vt_filter_deps="videotoolbox VTPixelRotationSessionCreate"
  transpose_vulkan_filter_deps="vulkan spirv_compiler"
@@ -129,7 +129,7 @@ index 732de59292..1a149564b6 100755
  unsharp_opencl_filter_deps="opencl"
  uspp_filter_deps="gpl avcodec"
  vaguedenoiser_filter_deps="gpl"
-@@ -4066,6 +4089,7 @@ libvmaf_cuda_filter_deps="libvmaf libvmaf_cuda ffnvcodec"
+@@ -4070,6 +4093,7 @@ libvmaf_cuda_filter_deps="libvmaf libvmaf_cuda ffnvcodec"
  zmq_filter_deps="libzmq"
  zoompan_filter_deps="swscale"
  zscale_filter_deps="libzimg const_nan"
@@ -137,7 +137,7 @@ index 732de59292..1a149564b6 100755
  scale_vaapi_filter_deps="vaapi"
  scale_vt_filter_deps="videotoolbox VTPixelTransferSessionCreate"
  scale_vulkan_filter_deps="vulkan spirv_compiler"
-@@ -6763,6 +6787,12 @@ if enabled xlib; then
+@@ -6769,6 +6793,12 @@ if enabled xlib; then
          disable xlib
  fi
  
@@ -150,7 +150,7 @@ index 732de59292..1a149564b6 100755
  check_headers direct.h
  check_headers dirent.h
  check_headers dxgidebug.h
-@@ -7271,6 +7301,10 @@ enabled rkmpp             && { require_pkg_config rkmpp rockchip_mpp  rockchip/r
+@@ -7278,6 +7308,10 @@ enabled rkmpp             && { require_pkg_config rkmpp rockchip_mpp  rockchip/r
                                 { enabled libdrm ||
                                   die "ERROR: rkmpp requires --enable-libdrm"; }
                               }
@@ -161,7 +161,7 @@ index 732de59292..1a149564b6 100755
  enabled vapoursynth       && require_headers "vapoursynth/VSScript4.h vapoursynth/VapourSynth4.h"
  
  enabled openssl            && {
-@@ -7281,6 +7315,9 @@ enabled openssl            && {
+@@ -7288,6 +7322,9 @@ enabled openssl            && {
      }
  }
  
@@ -171,7 +171,7 @@ index 732de59292..1a149564b6 100755
  
  if enabled gcrypt; then
      GCRYPT_CONFIG="${cross_prefix}libgcrypt-config"
-@@ -7367,6 +7404,10 @@ if enabled v4l2_m2m; then
+@@ -7374,6 +7411,10 @@ if enabled v4l2_m2m; then
      check_cc vp9_v4l2_m2m linux/videodev2.h "int i = V4L2_PIX_FMT_VP9;"
  fi
  
@@ -182,7 +182,7 @@ index 732de59292..1a149564b6 100755
  check_headers sys/videoio.h
  test_code cc sys/videoio.h "struct v4l2_frmsizeenum vfse; vfse.discrete.width = 0;" && enable_sanitized struct_v4l2_frmivalenum_discrete
  
-@@ -7912,6 +7953,9 @@ enabled threads || warn \
+@@ -7919,6 +7960,9 @@ enabled threads || warn \
      "that the libraries from this build MUST NOT be used in a multi-threaded"\
      "environment."
  
@@ -5145,7 +5145,7 @@ index 8f633e2aeb..706cf959cf 100644
      priv->context->frame = av_frame_alloc();
      if (!priv->context->frame) {
 diff --git a/libavcodec/v4l2_m2m.h b/libavcodec/v4l2_m2m.h
-index 4ba33dc335..36f61ee2a9 100644
+index 4ba33dc335..b958a0ac34 100644
 --- a/libavcodec/v4l2_m2m.h
 +++ b/libavcodec/v4l2_m2m.h
 @@ -30,6 +30,7 @@
@@ -5203,7 +5203,7 @@ index 4ba33dc335..36f61ee2a9 100644
      AVPacket buf_pkt;
  
      /* Reference to a frame. Only used during encoding */
-@@ -66,6 +95,36 @@ typedef struct V4L2m2mContext {
+@@ -66,6 +95,37 @@ typedef struct V4L2m2mContext {
  
      /* reference back to V4L2m2mPriv */
      void *priv;
@@ -5233,6 +5233,7 @@ index 4ba33dc335..36f61ee2a9 100644
 +
 +#define FF_V4L2_QUIRK_REINIT_ALWAYS             1
 +#define FF_V4L2_QUIRK_ENUM_FRAMESIZES_BROKEN    2
++#define FF_V4L2_QUIRK_8192_MACRO_MAX            4   // Size limited to 8192 macroblocks
 +    /* Quirks */
 +    unsigned int quirks;
 +
@@ -5240,7 +5241,7 @@ index 4ba33dc335..36f61ee2a9 100644
  } V4L2m2mContext;
  
  typedef struct V4L2m2mPriv {
-@@ -75,6 +134,8 @@ typedef struct V4L2m2mPriv {
+@@ -75,6 +135,8 @@ typedef struct V4L2m2mPriv {
  
      int num_output_buffers;
      int num_capture_buffers;
@@ -5249,7 +5250,7 @@ index 4ba33dc335..36f61ee2a9 100644
  } V4L2m2mPriv;
  
  /**
-@@ -128,4 +189,26 @@ int ff_v4l2_m2m_codec_reinit(V4L2m2mContext *ctx);
+@@ -128,4 +190,26 @@ int ff_v4l2_m2m_codec_reinit(V4L2m2mContext *ctx);
   */
  int ff_v4l2_m2m_codec_full_reinit(V4L2m2mContext *ctx);
  
@@ -5277,7 +5278,7 @@ index 4ba33dc335..36f61ee2a9 100644
 +
  #endif /* AVCODEC_V4L2_M2M_H */
 diff --git a/libavcodec/v4l2_m2m_dec.c b/libavcodec/v4l2_m2m_dec.c
-index ba1fe769e0..c7b73812d0 100644
+index ba1fe769e0..5e8dafe8e4 100644
 --- a/libavcodec/v4l2_m2m_dec.c
 +++ b/libavcodec/v4l2_m2m_dec.c
 @@ -21,8 +21,15 @@
@@ -5376,13 +5377,13 @@ index ba1fe769e0..c7b73812d0 100644
 +    for (i = 0; i != 8; ++i) {
 +        *s++ = ' ';
 +        s = len > i + offset ? hex2(s, *m++) : dash2(s);
-+    }
+     }
 +    *s++ = ' ';
 +    *s++ = ':';
 +    for (; i != 16; ++i) {
 +        *s++ = ' ';
 +        s = len > i + offset ? hex2(s, *m++) : dash2(s);
-     }
++    }
 +    *s++ = 0;
 +}
  
@@ -5624,7 +5625,7 @@ index ba1fe769e0..c7b73812d0 100644
      return 0;
  }
  
-@@ -133,50 +344,821 @@ static int v4l2_prepare_decoder(V4L2m2mContext *s)
+@@ -133,51 +344,887 @@ static int v4l2_prepare_decoder(V4L2m2mContext *s)
      return 0;
  }
  
@@ -5836,28 +5837,28 @@ index ba1fe769e0..c7b73812d0 100644
 -                return ret;
 +            av_log(avctx, AV_LOG_ERROR, "Failed to get coded packet: err=%d\n", ret);
 +            return ret;
-+        }
-+    }
-+
-+    if (s->draining) {
-+        if (s->buf_pkt.size) {
-+            av_log(avctx, AV_LOG_WARNING, "Unexpected input whilst draining\n");
-+            av_packet_unref(&s->buf_pkt);
          }
-+        return NQ_DRAINING;
      }
  
 -    if (s->draining)
 -        goto dequeue;
++    if (s->draining) {
++        if (s->buf_pkt.size) {
++            av_log(avctx, AV_LOG_WARNING, "Unexpected input whilst draining\n");
++            av_packet_unref(&s->buf_pkt);
++        }
++        return NQ_DRAINING;
++    }
++
 +    if (!s->buf_pkt.size)
 +        return NQ_NONE;
++
++    if ((ret = check_output_streamon(avctx, s)) != 0)
++        return ret;
  
 -    ret = ff_v4l2_context_enqueue_packet(output, &s->buf_pkt);
 -    if (ret < 0 && ret != AVERROR(EAGAIN))
 -        goto fail;
-+    if ((ret = check_output_streamon(avctx, s)) != 0)
-+        return ret;
-+
 +    if (s->extdata_sent)
 +        ret = ff_v4l2_context_enqueue_packet(&s->output, &s->buf_pkt, NULL, 0);
 +    else
@@ -5883,6 +5884,15 @@ index ba1fe769e0..c7b73812d0 100644
 -            goto fail;
 +            av_log(avctx, AV_LOG_ERROR, "Packet enqueue failure: err=%d\n", ret);
 +            return ret;
++        }
++    }
++
++    // Start if we haven't
++    {
++        const int ret2 = v4l2_try_start(avctx);
++        if (ret2) {
++            av_log(avctx, AV_LOG_DEBUG, "Start failure: err=%d\n", ret2);
++            ret = (ret2 == AVERROR(ENOMEM)) ? ret2 : NQ_DEAD;
          }
      }
  
@@ -5890,18 +5900,9 @@ index ba1fe769e0..c7b73812d0 100644
 -    return ff_v4l2_context_dequeue_frame(capture, frame, -1);
 -fail:
 -    av_packet_unref(&s->buf_pkt);
-+    // Start if we haven't
-+    {
-+        const int ret2 = v4l2_try_start(avctx);
-+        if (ret2) {
-+            av_log(avctx, AV_LOG_DEBUG, "Start failure: err=%d\n", ret2);
-+            ret = (ret2 == AVERROR(ENOMEM)) ? ret2 : NQ_DEAD;
-+        }
-+    }
-+
-+    return ret;
-+}
-+
+     return ret;
+ }
+ 
 +static int qbuf_wait(AVCodecContext * const avctx, V4L2Context * const ctx)
 +{
 +    int rv = 0;
@@ -6058,8 +6059,8 @@ index ba1fe769e0..c7b73812d0 100644
 +    ret = v4l2_receive_frame2(avctx, frame);
 +    done = us_time();
 +    av_log(avctx, AV_LOG_TRACE, ">>> %s: rx time=%" PRId64 ", rv=%d\n", __func__, done - now, ret);
-     return ret;
- }
++    return ret;
++}
 +#endif
 +
 +static uint32_t
@@ -6194,6 +6195,68 @@ index ba1fe769e0..c7b73812d0 100644
 +        av_log(avctx, AV_LOG_TRACE, "%s: Size %dx%d or fcc %s empty\n", __func__, w, h, av_fourcc2str(fcc));
 +        return 0;
 +    }
++
++    if ((s->quirks & FF_V4L2_QUIRK_8192_MACRO_MAX) != 0 &&
++        ((w + 15) >> 4) * ((h + 15) >> 4) > 8192)
++    {
++        av_log(avctx, AV_LOG_DEBUG, "%s: %d x %d > 8192 macroblocks (quirk)\n", __func__, w, h);
++        return AVERROR(-EINVAL);
++    }
++
++    // Test with TRY_FMT
++    {
++        struct v4l2_format fmt = {
++            .type = s->capture.format.type,
++        };
++        int rv;
++
++        if (V4L2_TYPE_IS_MULTIPLANAR(s->capture.format.type))
++        {
++            fmt.fmt.pix.width = w;
++            fmt.fmt.pix.height = h;
++            fmt.fmt.pix.pixelformat = fcc;
++        }
++        else
++        {
++            fmt.fmt.pix_mp.width = w;
++            fmt.fmt.pix_mp.height = h;
++            fmt.fmt.pix_mp.pixelformat = fcc;
++        }
++
++        while ((rv = ioctl(s->fd, VIDIOC_TRY_FMT, &fmt)) != 0 && errno == EINTR)
++            /* Loop */;
++
++        if (rv != 0) {
++            rv = AVERROR(errno);
++            if (rv != AVERROR(ENOTTY)) {
++                av_log(avctx, AV_LOG_WARNING, "%s: Try FMT failed\n", __func__);
++                return rv;
++            }
++            av_log(avctx, AV_LOG_DEBUG, "%s: Try FMT not supported\n", __func__);
++            // Just continue hopefully
++        }
++        else if (V4L2_TYPE_IS_MULTIPLANAR(s->capture.format.type))
++        {
++            av_log(avctx, AV_LOG_TRACE, "%s: requested %s %dx%d TRY_FMT %s %dx%d\n", __func__,
++                   av_fourcc2str(fcc), w, h,
++                   av_fourcc2str(fmt.fmt.pix.pixelformat), fmt.fmt.pix.width, fmt.fmt.pix.height);
++            if (fmt.fmt.pix.width < w || fmt.fmt.pix.height < h || fmt.fmt.pix.pixelformat != fcc) {
++                av_log(avctx, AV_LOG_DEBUG, "%s: TRY_FMT returned incompatible size\n", __func__);
++                return AVERROR(EINVAL);
++            }
++        }
++        else
++        {
++            av_log(avctx, AV_LOG_TRACE, "%s: requested %s %dx%d TRY_FMT %s %dx%d\n", __func__,
++                   av_fourcc2str(fcc), w, h,
++                   av_fourcc2str(fmt.fmt.pix_mp.pixelformat), fmt.fmt.pix_mp.width, fmt.fmt.pix_mp.height);
++            if (fmt.fmt.pix_mp.width < w || fmt.fmt.pix_mp.height < h || fmt.fmt.pix_mp.pixelformat != fcc) {
++                av_log(avctx, AV_LOG_DEBUG, "%s: TRY_FMT returned incompatible size\n", __func__);
++                return AVERROR(EINVAL);
++            }
++        }
++    }
++
 +    if ((s->quirks & FF_V4L2_QUIRK_ENUM_FRAMESIZES_BROKEN) != 0) {
 +        av_log(avctx, AV_LOG_TRACE, "%s: Skipped (quirk): Size %dx%d, fcc %s\n", __func__, w, h, av_fourcc2str(fcc));
 +        return 0;
@@ -6279,6 +6342,9 @@ index ba1fe769e0..c7b73812d0 100644
 +    // size in the first place.
 +    if (strcmp(cap.driver, "meson-vdec") == 0)
 +        s->quirks |= FF_V4L2_QUIRK_REINIT_ALWAYS | FF_V4L2_QUIRK_ENUM_FRAMESIZES_BROKEN;
++    // RPI has a max 8192 macroblock limit but no way of signaling it
++    if (strcmp(cap.driver, "bcm2835-codec") == 0)
++        s->quirks |= FF_V4L2_QUIRK_8192_MACRO_MAX;
 +
 +    av_log(avctx, AV_LOG_DEBUG, "Driver '%s': Quirks=%#x\n", cap.driver, s->quirks);
 +    return 0;
@@ -6470,10 +6536,11 @@ index ba1fe769e0..c7b73812d0 100644
 +    av_free(fmts);
 +    return rv;
 +}
- 
++
  static av_cold int v4l2_decode_init(AVCodecContext *avctx)
  {
-@@ -185,10 +1167,17 @@ static av_cold int v4l2_decode_init(AVCodecContext *avctx)
+     V4L2Context *capture, *output;
+@@ -185,10 +1232,17 @@ static av_cold int v4l2_decode_init(AVCodecContext *avctx)
      V4L2m2mPriv *priv = avctx->priv_data;
      int ret;
  
@@ -6491,7 +6558,7 @@ index ba1fe769e0..c7b73812d0 100644
      capture = &s->capture;
      output = &s->output;
  
-@@ -196,14 +1185,45 @@ static av_cold int v4l2_decode_init(AVCodecContext *avctx)
+@@ -196,14 +1250,45 @@ static av_cold int v4l2_decode_init(AVCodecContext *avctx)
       * by the v4l2 driver; this event will trigger a full pipeline reconfig and
       * the proper values will be retrieved from the kernel driver.
       */
@@ -6539,7 +6606,7 @@ index ba1fe769e0..c7b73812d0 100644
  
      s->avctx = avctx;
      ret = ff_v4l2_m2m_codec_init(priv);
-@@ -212,12 +1232,90 @@ static av_cold int v4l2_decode_init(AVCodecContext *avctx)
+@@ -212,12 +1297,90 @@ static av_cold int v4l2_decode_init(AVCodecContext *avctx)
          return ret;
      }
  
@@ -6632,7 +6699,7 @@ index ba1fe769e0..c7b73812d0 100644
  }
  
  #define OFFSET(x) offsetof(V4L2m2mPriv, x)
-@@ -227,9 +1325,16 @@ static const AVOption options[] = {
+@@ -227,9 +1390,16 @@ static const AVOption options[] = {
      V4L_M2M_DEFAULT_OPTS,
      { "num_capture_buffers", "Number of buffers in the capture context",
          OFFSET(num_capture_buffers), AV_OPT_TYPE_INT, {.i64 = 20}, 2, INT_MAX, FLAGS },
@@ -6649,7 +6716,7 @@ index ba1fe769e0..c7b73812d0 100644
  #define M2MDEC_CLASS(NAME) \
      static const AVClass v4l2_m2m_ ## NAME ## _dec_class = { \
          .class_name = #NAME "_v4l2m2m_decoder", \
-@@ -250,11 +1355,17 @@ static const AVOption options[] = {
+@@ -250,11 +1420,17 @@ static const AVOption options[] = {
          .init           = v4l2_decode_init, \
          FF_CODEC_RECEIVE_FRAME_CB(v4l2_receive_frame), \
          .close          = v4l2_decode_close, \
@@ -14803,7 +14870,7 @@ index 0000000000..0c8c629852
 +};
 +
 diff --git a/libavfilter/Makefile b/libavfilter/Makefile
-index 07fb4c3d6c..21e879cf17 100644
+index 3794a1386e..a345998a32 100644
 --- a/libavfilter/Makefile
 +++ b/libavfilter/Makefile
 @@ -278,6 +278,7 @@ OBJS-$(CONFIG_DEFLATE_FILTER)                += vf_neighbor.o
@@ -14814,7 +14881,7 @@ index 07fb4c3d6c..21e879cf17 100644
  OBJS-$(CONFIG_DEJUDDER_FILTER)               += vf_dejudder.o
  OBJS-$(CONFIG_DELOGO_FILTER)                 += vf_delogo.o
  OBJS-$(CONFIG_DENOISE_VAAPI_FILTER)          += vf_misc_vaapi.o vaapi_vpp.o
-@@ -547,6 +548,7 @@ OBJS-$(CONFIG_TRANSPOSE_VT_FILTER)           += vf_transpose_vt.o
+@@ -548,6 +549,7 @@ OBJS-$(CONFIG_TRANSPOSE_VT_FILTER)           += vf_transpose_vt.o
  OBJS-$(CONFIG_TRANSPOSE_VULKAN_FILTER)       += vf_transpose_vulkan.o vulkan.o vulkan_filter.o
  OBJS-$(CONFIG_TRIM_FILTER)                   += trim.o
  OBJS-$(CONFIG_UNPREMULTIPLY_FILTER)          += vf_premultiply.o framesync.o
@@ -14823,7 +14890,7 @@ index 07fb4c3d6c..21e879cf17 100644
  OBJS-$(CONFIG_UNSHARP_OPENCL_FILTER)         += vf_unsharp_opencl.o opencl.o \
                                                  opencl/unsharp.o
 diff --git a/libavfilter/allfilters.c b/libavfilter/allfilters.c
-index cca4ce0288..057843d5d4 100644
+index a934a012ad..3e494eeff4 100644
 --- a/libavfilter/allfilters.c
 +++ b/libavfilter/allfilters.c
 @@ -252,6 +252,7 @@ extern const FFFilter ff_vf_dedot;
@@ -14834,7 +14901,7 @@ index cca4ce0288..057843d5d4 100644
  extern const FFFilter ff_vf_deinterlace_vaapi;
  extern const FFFilter ff_vf_dejudder;
  extern const FFFilter ff_vf_delogo;
-@@ -442,6 +443,7 @@ extern const FFFilter ff_vf_scale_cuda;
+@@ -443,6 +444,7 @@ extern const FFFilter ff_vf_scale_cuda;
  extern const FFFilter ff_vf_scale_d3d11;
  extern const FFFilter ff_vf_scale_npp;
  extern const FFFilter ff_vf_scale_qsv;
@@ -14842,7 +14909,7 @@ index cca4ce0288..057843d5d4 100644
  extern const FFFilter ff_vf_scale_vaapi;
  extern const FFFilter ff_vf_scale_vt;
  extern const FFFilter ff_vf_scale_vulkan;
-@@ -514,6 +516,7 @@ extern const FFFilter ff_vf_transpose_vt;
+@@ -515,6 +517,7 @@ extern const FFFilter ff_vf_transpose_vt;
  extern const FFFilter ff_vf_transpose_vulkan;
  extern const FFFilter ff_vf_trim;
  extern const FFFilter ff_vf_unpremultiply;
@@ -23928,7 +23995,7 @@ index 366afa0373..69756f27ce 100644
                  fate-checkasm-rv34dsp                                   \
                  fate-checkasm-rv40dsp                                   \
 diff --git a/tests/fate/filter-video.mak b/tests/fate/filter-video.mak
-index 2b41574df2..5f6c421c59 100644
+index 7518017095..ca44c81eb6 100644
 --- a/tests/fate/filter-video.mak
 +++ b/tests/fate/filter-video.mak
 @@ -452,9 +452,9 @@ fate-filter-fps-down-eof-pass: CMD = framecrc -lavfi testsrc2=r=7:d=3.5,fps=3:eo

@@ -3,8 +3,8 @@
 # EDEN
 #
 ################################################################################
-# Version: Commits on Nov 02, 2025
-EDEN_VERSION = 903106c9b203b073bd8e258797adb91d8d79a383
+# Version: Commits on Nov 09, 2025
+EDEN_VERSION = 08f3639c80f188a3efd7ed1277b0bf8baaa33681
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD=git
 EDEN_GIT_SUBMODULES=YES
@@ -25,7 +25,7 @@ EDEN_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 EDEN_CONF_OPTS += -DUSE_SANITIZERS=OFF
 EDEN_CONF_OPTS += -DYUZU_CHECK_SUBMODULES=OFF
 EDEN_CONF_OPTS += -DYUZU_CMD=OFF
-EDEN_CONF_OPTS += -DYUZU_ROOM=OFF
+EDEN_CONF_OPTS += -DYUZU_ROOM=ON
 EDEN_CONF_OPTS += -DYUZU_TESTS=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_BUNDLED_FFMPEG=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_CPM=OFF
@@ -38,7 +38,6 @@ endif
 
 define EDEN_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
-	mkdir -p $(TARGET_DIR)/usr/lib/eden
 	$(INSTALL) -D $(@D)/buildroot-build/bin/eden $(TARGET_DIR)/usr/bin/
 endef
 

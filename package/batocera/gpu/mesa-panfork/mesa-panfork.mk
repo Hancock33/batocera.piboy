@@ -197,13 +197,6 @@ else
 MESA_PANFORK_CONF_OPTS += -Dlibunwind=disabled
 endif
 
-ifeq ($(BR2_PACKAGE_MESA_PANFORK_VDPAU),y)
-MESA_PANFORK_DEPENDENCIES += libvdpau
-MESA_PANFORK_CONF_OPTS += -Dgallium-vdpau=enabled
-else
-MESA_PANFORK_CONF_OPTS += -Dgallium-vdpau=disabled
-endif
-
 ifeq ($(BR2_PACKAGE_LM_SENSORS),y)
 MESA_PANFORK_CONF_OPTS += -Dlmsensors=enabled
 MESA_PANFORK_DEPENDENCIES += lm-sensors

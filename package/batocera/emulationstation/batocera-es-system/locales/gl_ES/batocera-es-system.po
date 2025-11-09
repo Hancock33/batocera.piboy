@@ -5984,7 +5984,7 @@ msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "Controla o filtrado trilineal da textura da emulación."
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "Controis para xogos de 5/6 botóns e outros controis exclusivos"
@@ -6560,7 +6560,7 @@ msgctxt "game_options"
 msgid "Default (2 Buttons)"
 msgstr "Predeterminado (2 botóns)"
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Default Only"
 msgstr "Só por defecto"
@@ -12233,7 +12233,7 @@ msgctxt "game_options"
 msgid "Modern Alternative"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "Estilo panca de loita moderna"
@@ -15473,7 +15473,7 @@ msgctxt "game_options"
 msgid "SP"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, mame/openbor7530
+#. TRANSLATION: libretro/fbneo, libretro/flycast, libretro/mame, mame/openbor7530
 msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "DISPOSICIÓNS DE CONTROIS ESPECIAIS"
