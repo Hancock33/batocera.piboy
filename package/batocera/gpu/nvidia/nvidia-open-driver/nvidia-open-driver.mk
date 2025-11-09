@@ -62,9 +62,6 @@ NVIDIA_OPEN_DRIVER_LIBS_MISC = \
 	libnvidia-ml.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-wayland-client.so.$(NVIDIA_OPEN_DRIVER_VERSION)
 
-NVIDIA_OPEN_DRIVER_LIBS_VDPAU = \
-	libvdpau_nvidia.so.$(NVIDIA_OPEN_DRIVER_VERSION)
-
 NVIDIA_OPEN_DRIVER_LIBS += \
 	$(NVIDIA_OPEN_DRIVER_LIBS_GL) \
 	$(NVIDIA_OPEN_DRIVER_LIBS_EGL) \
@@ -195,19 +192,6 @@ define NVIDIA_OPEN_DRIVER_INSTALL_LIBS
 			ln -sf $(notdir $(lib)) $(1)/usr/lib/$${baseso}; \
 		fi
 	)
-	$(foreach lib,$(NVIDIA_OPEN_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/$(lib) $(1)/usr/lib/vdpau/$(notdir $(lib))
-		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
-			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
-		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) \
-				$(1)/usr/lib/vdpau/$${libsoname}; \
-		fi
-		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
-		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/usr/lib/vdpau/$${baseso}; \
-		fi
-	)
 endef
 
 # batocera install 32bit libraries
@@ -223,19 +207,6 @@ define NVIDIA_OPEN_DRIVER_INSTALL_32
 		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
 		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
 			ln -sf $(notdir $(lib)) $(1)/usr/lib32/$${baseso}; \
-		fi
-	)
-	$(foreach lib,$(NVIDIA_OPEN_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/vdpau/$(notdir $(lib))
-		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
-			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
-		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) \
-				$(1)/usr/lib32/vdpau/$${libsoname}; \
-		fi
-		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
-		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/usr/lib32/vdpau/$${baseso}; \
 		fi
 	)
 endef

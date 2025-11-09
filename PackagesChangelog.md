@@ -519,7 +519,6 @@ Emulators|[libretro-blastem](http://github.com/libretro/blastem)|277e4a62668597d
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Gpu|[img-mesa3d](https://archive.mesa3d.org/older-versions/)|22.1.3|Jun 29, 2022
-Utils|[vdpauinfo](https://gitlab.freedesktop.org/vdpau/vdpauinfo/-/archive/)|1.5|Jun 23, 2022
 Controllers|[joycond](http://github.com/DanielOgorchock/joycond)|39d5728d41b70840342ddc116a59125b337fbde2|Jun 16, 2022
 Controllers|[umtool](http://github.com/katie-snow/Ultimarc-linux)|20b8c56a3e6f94034b8529eddd777306f5b6152b|Jun 13, 2022
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022

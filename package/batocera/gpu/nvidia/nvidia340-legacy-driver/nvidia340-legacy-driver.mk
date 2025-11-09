@@ -47,11 +47,6 @@ NVIDIA340_LEGACY_DRIVER_LIBS_MISC = \
 
 NVIDIA340_LEGACY_DRIVER_LIBS_TLS = libnvidia-tls.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
 
-NVIDIA340_LEGACY_DRIVER_LIBS_VDPAU = \
-	libvdpau.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	libvdpau_trace.so.$(NVIDIA340_LEGACY_DRIVER_VERSION) \
-	libvdpau_nvidia.so.$(NVIDIA340_LEGACY_DRIVER_VERSION)
-
 NVIDIA340_LEGACY_DRIVER_LIBS += \
 	$(NVIDIA340_LEGACY_DRIVER_LIBS_GL) \
 	$(NVIDIA340_LEGACY_DRIVER_LIBS_EGL) \
@@ -158,9 +153,6 @@ define NVIDIA340_LEGACY_DRIVER_INSTALL_LIBS
 	$(foreach lib,$(NVIDIA340_LEGACY_DRIVER_LIBS_TLS),\
 		$(INSTALL) -D -m 0644 $(@D)/tls/$(lib) $(1)/usr/lib/$(notdir $(lib))
 	)
-	$(foreach lib,$(NVIDIA340_LEGACY_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/$(lib) $(1)/usr/lib/vdpau/$(notdir $(lib))
-	)
 endef
 
 # batocera install 32bit libraries
@@ -170,9 +162,6 @@ define NVIDIA340_LEGACY_DRIVER_INSTALL_32
 	)
 	$(foreach lib,$(NVIDIA340_LEGACY_DRIVER_LIBS_TLS),\
 		$(INSTALL) -D -m 0644 $(@D)/32/tls/$(lib) $(1)/usr/lib32/$(notdir $(lib))
-	)
-	$(foreach lib,$(NVIDIA340_LEGACY_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/vdpau/$(notdir $(lib))
 	)
 endef
 

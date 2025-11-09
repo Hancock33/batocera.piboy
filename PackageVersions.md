@@ -559,7 +559,6 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.11|Nov 04, 2025
 Utils|[touchegg](http://github.com/JoseExposito/touchegg)|2.0.18|May 24, 2025
 Utils|[tvtextviewer](https://github.com/lethal-guitar/TvTextViewer.git)|d3cc00a5009ece2d1df6cfc571709d0c5752bade|Nov 29, 2023
 Utils|[unclutter](https://github.com/batocera-linux/unclutter-xfixes/archive/refs/tags)|v1.5-batocera|Aug 13, 2019
-Utils|[vdpauinfo](https://gitlab.freedesktop.org/vdpau/vdpauinfo/-/archive/)|1.5|Jun 23, 2022
 Utils|[warehouse](http://github.com/flattool/warehouse)|2.1.0|Jun 10, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|ca103be2473db0983baf74e17b291385c3c79d79|Oct 17, 2025
 Utils|[wii-u-gc-adapter](http://github.com/ToadKing/wii-u-gc-adapter)|fa098efa7f6b34f8cd82e2c249c81c629901976c|Sept 06, 2021
