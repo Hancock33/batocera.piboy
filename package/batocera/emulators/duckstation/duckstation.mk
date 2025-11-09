@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Nov 08, 2025
-DUCKSTATION_VERSION = 4a246a74a22f936ca0323c2650927b873e728ed4
+# Version: Commits on Nov 09, 2025
+DUCKSTATION_VERSION = 127cc70ba1cc8af457552e1b8b0788ee1858f306
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
