@@ -11,7 +11,7 @@ index 56c1140a6a4a..8120ded1d106 100644
  void amdgpu_device_complete(struct drm_device *dev);
  int amdgpu_device_suspend(struct drm_device *dev, bool fbcon);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index 3d032c4e2dce..ef3f485c53d6 100644
+index 2819aceaab74..fbc171317687 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 @@ -3780,7 +3780,6 @@ static int amdgpu_device_ip_suspend_phase1(struct amdgpu_device *adev)
@@ -66,7 +66,7 @@ index 3d032c4e2dce..ef3f485c53d6 100644
  	if (amdgpu_sriov_vf(adev))
  		amdgpu_virt_release_full_gpu(adev, false);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-index abdb9378aade..814223fb27d1 100644
+index da1e65b65669..11fda9378534 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 @@ -2577,7 +2577,8 @@ amdgpu_pci_shutdown(struct pci_dev *pdev)

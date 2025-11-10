@@ -36,10 +36,10 @@ index 73197b31926a..704bfdac5203 100644
  --------------------
  
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 46bd8e033042..b354c0ccde12 100644
+index ddecf1ef3bed..3c06a3bdb5ed 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -14130,6 +14130,17 @@ L:	platform-driver-x86@vger.kernel.org
+@@ -14133,6 +14133,17 @@ L:	platform-driver-x86@vger.kernel.org
  S:	Maintained
  F:	drivers/platform/x86/lenovo/wmi-hotkey-utilities.c
  
@@ -409,7 +409,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 4f8f42011089..696a00670de2 100644
+index 87fb2e783f74..7fb46d1c0cf2 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -158,6 +158,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -422,7 +422,7 @@ index 4f8f42011089..696a00670de2 100644
  /**
   * DOC: overview
   *
-@@ -9481,7 +9484,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9489,7 +9492,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -8442,7 +8442,7 @@ index 08f44baf182a..3af524ccf4a5 100644
  
  void ath12k_mhi_suspend(struct ath12k_pci *ab_pci)
 diff --git a/drivers/platform/x86/Kconfig b/drivers/platform/x86/Kconfig
-index a17288401746..f0f00618b000 100644
+index aef7e8a746fa..514d291a5e2d 100644
 --- a/drivers/platform/x86/Kconfig
 +++ b/drivers/platform/x86/Kconfig
 @@ -567,8 +567,11 @@ config MSI_WMI
