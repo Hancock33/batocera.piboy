@@ -1,17 +1,17 @@
 diff --git a/pcsx2/Config.h b/pcsx2/Config.h
-index 9b4a948f8..3fd31453e 100644
+index 14776ae8d..715b52ae7 100644
 --- a/pcsx2/Config.h
 +++ b/pcsx2/Config.h
-@@ -1314,6 +1314,7 @@ struct Pcsx2Config
+@@ -1316,6 +1316,7 @@ struct Pcsx2Config
  		InhibitScreensaver : 1,
  		BackupSavestate : 1,
  		McdFolderAutoManage : 1,
 +		AutoIncrementSlot : 1,
- 		ManuallySetRealTimeClock : 1,
+ 		ManuallySetRealTimeClock : 1, // passes user-set real-time clock information to cdvd at startup
  		UseSystemLocaleFormat : 1, // presents OS time format instead of yyyy-MM-dd HH:mm:ss for manual RTC
  
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index 71e9d984e..eed716db7 100644
+index b25ea49d3..7a62ba8de 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
 @@ -1925,6 +1925,7 @@ Pcsx2Config::Pcsx2Config()
@@ -31,10 +31,10 @@ index 71e9d984e..eed716db7 100644
  	SettingsWrapBitBool(BackupSavestate);
  	SettingsWrapBitBool(McdFolderAutoManage);
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index de43ce5bc..5104b2edd 100644
+index 5a218fbad..8d9a298a7 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -2039,6 +2039,12 @@ bool VMManager::SaveState(const char* filename, bool zip_on_thread, bool backup_
+@@ -2053,6 +2053,12 @@ bool VMManager::SaveState(const char* filename, bool zip_on_thread, bool backup_
  
  bool VMManager::SaveStateToSlot(s32 slot, bool zip_on_thread)
  {

@@ -1,5 +1,5 @@
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index a23970529..71e9d984e 100644
+index 663bc74d1..b25ea49d3 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
 @@ -2247,18 +2247,18 @@ bool EmuFolders::SetDataDirectory(Error* error)
