@@ -199,6 +199,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_INNOEXTRACT                          # Extract InnoSetup files (useful for Wine and GOG games)
     select BR2_PACKAGE_IW                                   # wireless country config for regulatoryDB
     select BR2_PACKAGE_LEDSPICER                            if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 # LED Manager for Linux
+    select BR2_PACKAGE_MERGERFS                             # Use FUSE to merge multiple directories into a single one
     select BR2_PACKAGE_NTFS_3G                              # ntfs
     select BR2_PACKAGE_NTFS_3G_NTFSPROGS                    # ntfs
     select BR2_PACKAGE_NUMACTL                              # simple NUMA policy support
