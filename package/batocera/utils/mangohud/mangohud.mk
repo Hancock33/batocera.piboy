@@ -3,8 +3,8 @@
 # mangohud
 #
 ################################################################################
-# Version: Commits on Nov 12, 2025
-MANGOHUD_VERSION = 8c940d5fe125002fbb6b8931a97165772e46f060
+# Version: Commits on Nov 13, 2025
+MANGOHUD_VERSION = a523979d7ef717c8d62dbab263ea1140fd6cd911
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 
 MANGOHUD_DEPENDENCIES += host-python-mako host-glslang dbus

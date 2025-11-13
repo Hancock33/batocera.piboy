@@ -28,11 +28,9 @@ define MERGERFS_BUILD_CMDS
 endef
 
 define MERGERFS_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/etc/init.d/
-	$(INSTALL) -D -m 0755 $(@D)/build/$(MERGERFS_TARGET) \
-	    $(TARGET_DIR)/usr/bin/mergerfs
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/mergerfs/S12mergerfs \
-	    $(TARGET_DIR)/etc/init.d/
+	mkdir -p $(TARGET_DIR)/etc/init.d/
+	$(INSTALL) -D -m 0755 $(@D)/build/$(MERGERFS_TARGET) $(TARGET_DIR)/usr/bin/mergerfs
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/mergerfs/S12mergerfs $(TARGET_DIR)/etc/init.d/
 endef
 
 $(eval $(generic-package))
