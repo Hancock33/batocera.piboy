@@ -1,10 +1,9 @@
 ################################################################################
 #
-# Batocera control center
+# batocera-controlcenter
 #
 ################################################################################
-
-# Last commit on Nov 14, 2025
+# Version: Commits on Nov 14, 2025
 BATOCERA_CONTROLCENTER_VERSION = d4b0363ee45f99228525d50aa03da1b593aa6fe5
 BATOCERA_CONTROLCENTER_SITE = $(call github,lbrpdx,batocera-controlcenter,$(BATOCERA_CONTROLCENTER_VERSION))
 BATOCERA_CONTROLCENTER_STE_METHOD = git
