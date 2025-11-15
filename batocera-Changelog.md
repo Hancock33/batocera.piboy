@@ -16,20 +16,20 @@
 - AYN Thor initial support
 - Legion Go S Controller & LED updates
 - New steering wheel support:
- - Logitech Formula Vibration Feedback
+  - Logitech Formula Vibration Feedback
 - Odin 2 Mini initial support
 - Powkiddy X55 initial support
 - RTL8832CU and RTL8852CU USB wifi adapter support (x86_64)
 ### Added
 - EmulationStation:
- - New UI for configuring in-game controller hotkeys (plus batocera-joysticks-hotkeys command)
- - Global hotkeys configuration for any device (unused device buttons, any arcade special buttons or keyboard key), also via batocera-hotkeys command
- - LED colour control for Arm based handhelds
- - Ability to turn the controller LED's off
- - Added missing characters on the on-screen AZERTY keyboard
- - New sorting option: hardware type, then release year
- - Control brightness on multiple screens (Ayn Thor)
- - Wifi country selector
+  - New UI for configuring in-game controller hotkeys (plus batocera-joysticks-hotkeys command)
+  - Global hotkeys configuration for any device (unused device buttons, any arcade special buttons or keyboard key), also via batocera-hotkeys command
+  - LED colour control for Arm based handhelds
+  - Ability to turn the controller LED's off
+  - Added missing characters on the on-screen AZERTY keyboard
+  - New sorting option: hardware type, then release year
+  - Control brightness on multiple screens (Ayn Thor)
+  - Wifi country selector
 - Batocera Control Center (on-screen interface for global configuration and control, [hotkey][east] by default)
 - batocera-xtract for handling archives, systems with pcmanFM filemanager can use a small GUI and mouse context menus
 - dmd-play-rust is now used by default to play dmd images (performances)
@@ -56,6 +56,7 @@
 - Play! to 0.71
 - RPCS3 to v0.0.38
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_11_0
+- Supermodel to 13th of November 2025 build
 - Taradino to 20250816
 - TheXTech to v1.3.7.1-2
 - TheForceEngine to v1.22.420
