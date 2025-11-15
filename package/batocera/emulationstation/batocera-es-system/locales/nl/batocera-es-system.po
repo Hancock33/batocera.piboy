@@ -3937,6 +3937,11 @@ msgstr ""
 "Basisfiltertype voor het Jaguar-display bij renderen naar het "
 "oorspronkelijke display."
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -14831,11 +14836,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Reset"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20430,6 +20430,10 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "Reserveer een niet-deadzone in het midden van het wiel om rechtdoor te "
 #~ "gaan (in graden)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Reset"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

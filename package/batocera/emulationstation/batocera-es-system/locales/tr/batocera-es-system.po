@@ -20175,10 +20175,6 @@ msgstr "sarı/mavi"
 #~ msgid "D3D12 (Default)"
 #~ msgstr "D3D12 (Varsayılan)"
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset"
-#~ msgstr "Sıfırla"
-
 #~ msgctxt "game_options"
 #~ msgid "DISABLE EMULATOR JOYSTICK"
 #~ msgstr "EMÜLATÖR JOYSTICK DEVRE DIŞI BIRAK"
@@ -20406,6 +20402,10 @@ msgstr "sarı/mavi"
 #~ msgstr ""
 #~ "İlerlemek için direksiyonun merkezinde ölü olmayan bölge oluşturun "
 #~ "(derece)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Sıfırla"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

@@ -20289,10 +20289,6 @@ msgstr "노란색/파란색"
 #~ msgid "Not all games support all languages."
 #~ msgstr "모든 게임이 모든 언어를 지원하는 것은 아닙니다."
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset"
-#~ msgstr "재설정"
-
 #~ msgctxt "game_options"
 #~ msgid "OpenGL (x86 only)"
 #~ msgstr "OpenGL (x86 전용)"
@@ -20353,6 +20349,10 @@ msgstr "노란색/파란색"
 #~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
 #~ "(in degrees)"
 #~ msgstr "핸들 중앙에 사각지대가 없는 공간을 확보하여 직진 주행 (°)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "재설정"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

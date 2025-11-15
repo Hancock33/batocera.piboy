@@ -20169,10 +20169,6 @@ msgstr "amarelo/azul"
 #~ msgid "Choose your console UTC timezone."
 #~ msgstr "Escolha o fuso horário UTC do seu videogame."
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset"
-#~ msgstr "Reset"
-
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
 #~ msgstr "Escolha o fuso horário do seu videogame."
@@ -20448,6 +20444,10 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Reserva uma zona não morta no centro do volante para seguir em frente (em "
 #~ "graus)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Reset"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

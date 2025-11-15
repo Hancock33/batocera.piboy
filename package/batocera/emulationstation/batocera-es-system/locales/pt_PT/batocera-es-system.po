@@ -20088,10 +20088,6 @@ msgstr "amarelo/azul"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "BGFX para pós-processamento, acelerar/opengl para imagem bruta."
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset"
-#~ msgstr "Reiniciar"
-
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"
 #~ msgstr "MODELO DO COLOR COMPUTER"
@@ -20400,6 +20396,10 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Reserve uma zona não morta no centro do volante para seguir em frente (em "
 #~ "graus)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Reiniciar"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

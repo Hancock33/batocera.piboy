@@ -20149,10 +20149,6 @@ msgstr "黄/青"
 #~ "イメージ リーダー カードで、ディスクイメージに対応します (Mac IIx のみ) 最"
 #~ "小 4MBメモリを推奨"
 
-#~ msgctxt "keys_files"
-#~ msgid "Reset"
-#~ msgstr "リセット"
-
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Internal accelerometer. Disable if you experience random tilts or "
@@ -20258,6 +20254,10 @@ msgstr "黄/青"
 #~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
 #~ "(in degrees)"
 #~ msgstr "直進のためにステアリングの中間幅を設定 (度単位)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "リセット"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"
