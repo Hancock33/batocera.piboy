@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-21 00:43+0000\n"
+"PO-Revision-Date: 2025-11-11 10:50+0000\n"
 "Last-Translator: Leonardo Colman Lopes <dev@leonardo.colman.com.br>\n"
 "Language-Team: Brazilian Portuguese\n"
-"Language: pt-BR\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Loco-Source-Locale: pt_BR\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Loco-Parser: loco_parse_po\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
@@ -2691,12 +2691,12 @@ msgstr "ATRASO DA TAXA DE QUADROS AUTOMÁTICO"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTOMATICALLY RELOAD WEAPON"
-msgstr "RECARGA AUTOMÁTICA DE ARMA "
+msgstr "RECARGA AUTOMÁTICA DE ARMA"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "AUTOMATICALLY RUN"
-msgstr "CORRIDA AUTOMÁTICA "
+msgstr "CORRIDA AUTOMÁTICA"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -5275,7 +5275,7 @@ msgstr "Altera a taxa de resolução de saí­da."
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Change the rotation of the rendered image."
-msgstr "90 graus no sentido anti-horário"
+msgstr "90 graus no sentido anti-horário."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -17516,7 +17516,7 @@ msgstr "MODO DE TREINO"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
-msgstr "MALHAS TRANSPARENTES "
+msgstr "MALHAS TRANSPARENTES"
 
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
