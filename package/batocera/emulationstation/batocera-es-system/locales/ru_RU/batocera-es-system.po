@@ -3928,6 +3928,11 @@ msgstr ""
 "Базовый тип фильтрации для дисплея Jaguar при рендеринге на собственном "
 "дисплее."
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -14772,11 +14777,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Сброс"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -21728,6 +21728,10 @@ msgstr "жёлтая/синяя"
 #~ msgstr ""
 #~ "Зарезервируйте немертвую зону в центре руля для движения прямо (в "
 #~ "градусах)."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Сброс"
 
 #~ msgctxt "keys_files"
 #~ msgid "Reset the application"

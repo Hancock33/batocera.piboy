@@ -3917,6 +3917,11 @@ msgstr ""
 "画面に表示するときのジャガー ディスプレイの基本フィルタリング タイプを選択し"
 "ます"
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -14698,11 +14703,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "リセット"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20148,6 +20148,10 @@ msgstr "黄/青"
 #~ msgstr ""
 #~ "イメージ リーダー カードで、ディスクイメージに対応します (Mac IIx のみ) 最"
 #~ "小 4MBメモリを推奨"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "リセット"
 
 #~ msgctxt "game_options"
 #~ msgid ""

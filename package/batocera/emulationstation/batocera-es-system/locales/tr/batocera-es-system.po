@@ -3936,6 +3936,11 @@ msgstr ""
 "Jaguar ekranının yerel ekrana dönüştürülmesi sırasında kullanılan Temel "
 "Filtreleme türü."
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -14809,11 +14814,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Sıfırla"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20174,6 +20174,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
 #~ msgstr "D3D12 (Varsayılan)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Sıfırla"
 
 #~ msgctxt "game_options"
 #~ msgid "DISABLE EMULATOR JOYSTICK"

@@ -3928,6 +3928,11 @@ msgstr ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -14748,11 +14753,6 @@ msgctxt "game_options"
 msgid ""
 "Reserve a non dead zone at the centre of the wheel to go straight ahead (in "
 "degrees)"
-msgstr ""
-
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
 msgstr ""
 
 #. TRANSLATION: wine

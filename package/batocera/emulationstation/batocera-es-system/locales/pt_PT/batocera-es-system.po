@@ -3931,6 +3931,11 @@ msgstr ""
 "Tipo de filtragem básica para a execução do jaguar ao renderizar para o ecrã "
 "nativo"
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -14804,11 +14809,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Reiniciar"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20087,6 +20087,10 @@ msgstr "amarelo/azul"
 #~ msgctxt "game_options"
 #~ msgid "BGFX for post-processing, accel/opengl for raw image."
 #~ msgstr "BGFX para pós-processamento, acelerar/opengl para imagem bruta."
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Reiniciar"
 
 #~ msgctxt "game_options"
 #~ msgid "COLOR COMPUTER MODEL"

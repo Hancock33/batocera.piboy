@@ -6,8 +6,8 @@ TRICK=${4,,}                                                                    
 ROMGAMENAME=$(basename "${GAMENAME}")                                                # gamedir or gameexecutable: e.g. "Age of Empires.wine" or "AoE_inst.exe"
 ROMBASEDIR=$(dirname "${GAMENAME}")                                                  # gamedir or rootdir: eg "/userdata/roms/windows" if AoE is a wine.dir
 GAMEEXT="${GAMENAME##*.}"                                                            # gameextension: pc, wine, exe, msi
-# log wineserver running time
-TIMESTAMP=$(date +%s)
+# log scripts (aka winserver) running time with bash builtin command
+SECONDS=0
 
 ## Folders
 WINE_BOTTLE_DIR="/userdata/system/wine-bottles/${SYSTEM}"                            # Basestorage for our bottles, more variables in init_wine()
@@ -15,6 +15,7 @@ G_ROMS_DIR="/userdata/roms/${SYSTEM}"                                           
 
 ## WINE-VARS, these need to be prepared in init_wine()
 ## in general Wine detection routines, for specific game if entered in batocera.conf
+G_RESCUR=
 WINE_RUNNER=
 WINE_VERSION=
 ## Wine executables, to be populated in init_wine() with find_wine_dir()
@@ -38,7 +39,7 @@ AUTORUN_FOUNDEXE=
 # Use requestFileSystem() to check dirs and files for symlinks and filesystem, it's a small dev-tool for monitoring the entire script
 # Usage requestFileSystem "FILE" "DIR" "FILE"
 
-# Global variables for Wayland/X.org handling
+# Global variables for Wayland/X.org handling, SYSTEM_DISPLAY_MODE is in init_wine()
 SYSTEM_DISPLAY_MODE=""
 CMD_PREFIX=""
 
@@ -152,12 +153,12 @@ wine_options() {
 
     # Handle Wayland driver option only if the system is running Wayland
     if [[ "${SYSTEM_DISPLAY_MODE}" == "wayland" ]]; then
-        if [[ "${WAYLAND_DRIVER}" == "native" ]]; then
-            CMD_PREFIX="DISPLAY="
-            echo "*** System is Wayland and 'native' driver requested. Forcing Wine native Wayland mode. ***"
-        else
+        if [[ "${WAYLAND_DRIVER}" != "native" ]]; then
             echo "*** System is Wayland, using XWayland by default or as requested. ***"
             setxkbmap "${KEYBOARD}"
+        else
+            CMD_PREFIX="DISPLAY="
+            echo "*** System is Wayland and 'native' driver requested. Forcing Wine native Wayland mode. ***"
         fi
     else
         # System is X.org, run as normal
@@ -466,22 +467,22 @@ winedevices_setup() {
 
     for XSYSPATH in system32 syswow64
     do
-	if [[ "${WINEDEVICES}" = 1 ]]; then
-	    if test ! -e "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe"
-	    then
-		if test -e "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe.wine"
-		then
-		    cp "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe.wine" "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe" || return 1
-		fi
-	    fi
-	else
-	    # disable by default (causing issues on dmd, guns, (usb tty devices)) when windevice exits
-	    # ps -> root     16126     1  0 11:58 ttyUSB0  00:00:00 C:\windows\system32\winedevice.exe
-	    if test -e "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe"
-	    then
-		mv "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe" "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe.wine" || return 1
-	    fi
-	fi
+    if [[ "${WINEDEVICES}" = 1 ]]; then
+        if test ! -e "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe"
+        then
+        if test -e "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe.wine"
+        then
+            cp "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe.wine" "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe" || return 1
+        fi
+        fi
+    else
+        # disable by default (causing issues on dmd, guns, (usb tty devices)) when windevice exits
+        # ps -> root     16126     1  0 11:58 ttyUSB0  00:00:00 C:\windows\system32\winedevice.exe
+        if test -e "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe"
+        then
+        mv "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe" "${WINEPREFIX}/drive_c/windows/${XSYSPATH}/winedevice.exe.wine" || return 1
+        fi
+    fi
     done
 
     return 0
@@ -957,11 +958,14 @@ cleanAndExit() {
             [[ -n "${WINEPOINT}" ]] && [[ -d "${WINEPOINT}" ]] && rm -rf "${WINEPOINT}"
             ;;
     esac
-    echo "WineServer was $(($(date +%s) - TIMESTAMP))s active"
+    echo "WineServer was ${SECONDS}s active"
     return $?
 }
 
 init_wine() {
+    # Check the system's display mode once at the start
+    SYSTEM_DISPLAY_MODE=$(batocera-resolution getDisplayMode)
+
     ## Wine detection
     WINE_RUNNER="$(/usr/bin/batocera-settings-get windows.wine-runner)"
     [[ -z "$WINE_RUNNER" ]] && WINE_RUNNER="wine-custom"
@@ -1035,12 +1039,9 @@ init_wine() {
 ###### MAIN #######
 trap stopWineServer SIGHUP SIGINT SIGTERM
 
-# Check the system's display mode once at the start
-SYSTEM_DISPLAY_MODE=$(batocera-resolution getDisplayMode)
-
 #Init WINE Folders and Extension only if parameters are correct and a system is setted
-[[ -z "${SYSTEM}" ]] && SYSTEM="!missing!"
-[[ -z "${ACTION}" ]] && ACTION="!missing!"
+[[ -z "${SYSTEM}" ]] && SYSTEM="~NO SYSTEM~"
+[[ -z "${ACTION}" ]] && ACTION="~NO ACTION~"
 
 case "${ACTION}" in
    "stop")
@@ -1072,12 +1073,12 @@ case "${ACTION}" in
 #        ;;
         "wsquashfs")
         #Arguments, ROMNAME, WINEPREFIX as squashfs, SAVEDIR, WORKDIR
-        requestFileSystem "${GAMENAME}" "${WINE_BOTTLE_DIR}/${ROMGAMENAME}"
-        play_squashfs "${GAMENAME}" "/var/run/wine/${ROMGAMENAME}" "${WINE_BOTTLE_DIR}/${ROMGAMENAME}" "${WINE_BOTTLE_DIR}/${ROMGAMENAME}.work"
+        requestFileSystem "${GAMENAME}" "${WINE_BOTTLE_DIR}/${WINE_VERSION}/${ROMGAMENAME}.wine"
+        play_squashfs "${GAMENAME}" "/var/run/wine/${ROMGAMENAME}" "${WINE_BOTTLE_DIR}/${WINE_VERSION}/${ROMGAMENAME}.wine" "${WINE_BOTTLE_DIR}/${ROMGAMENAME}.work"
         ;;
         "wtgz")
-        requestFileSystem "${GAMENAME}" "${WINE_BOTTLE_DIR}/${ROMGAMENAME}.wine"
-        play_winetgz "${GAMENAME}" "${WINE_BOTTLE_DIR}/${ROMGAMENAME}.wine"
+        requestFileSystem "${GAMENAME}" "${WINE_BOTTLE_DIR}/${WINE_VERSION}/${ROMGAMENAME}.wine"
+        play_winetgz "${GAMENAME}" "${WINE_BOTTLE_DIR}/${WINE_VERSION}/${ROMGAMENAME}.wine"
         ;;
         *)
         echo "unknown extension ${GAMEEXT}" >&2

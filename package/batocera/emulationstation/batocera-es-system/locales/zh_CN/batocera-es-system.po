@@ -3903,6 +3903,11 @@ msgid ""
 "display."
 msgstr "雅达利美洲豹渲染到本地显示屏时的基本滤镜类型."
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -14535,11 +14540,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "重置"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20600,6 +20600,10 @@ msgstr "黄色/蓝色"
 #~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
 #~ "(in degrees)"
 #~ msgstr "在方向盘中心保留一个非死区以便直行（以度数表示）"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "重置"
 
 #~ msgctxt "keys_files"
 #~ msgid "Reset the application"

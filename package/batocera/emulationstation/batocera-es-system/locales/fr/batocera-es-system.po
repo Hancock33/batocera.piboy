@@ -3936,6 +3936,11 @@ msgstr ""
 "Type de filtrage de base pour l'affichage Jaguar lors du rendu sur "
 "l'affichage natif."
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -14852,11 +14857,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Réinitialiser"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -21784,6 +21784,10 @@ msgstr "jaune/bleu"
 #~ msgstr ""
 #~ "Réserve une zone active au milieu du volant pour aller tout droit (en "
 #~ "degrés)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Réinitialiser"
 
 #~ msgctxt "keys_files"
 #~ msgid "Reset the application"
