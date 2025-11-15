@@ -1,0 +1,23 @@
+diff --git a/cmake/StandardProjectSettings.cmake b/cmake/StandardProjectSettings.cmake
+index 9f53b118..09133924 100644
+--- a/cmake/StandardProjectSettings.cmake
++++ b/cmake/StandardProjectSettings.cmake
+@@ -29,7 +29,9 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+         add_compile_options("-g")
+     endif()
+ elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+-    add_compile_options("-fdata-sections -ffunction-sections")
++    if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
++        add_compile_options("-fdata-sections -ffunction-sections")
++    endif()
+ elseif(CMAKE_BUILD_TYPE)
+     add_compile_options("-O1")
+ endif()
+@@ -45,7 +47,6 @@ if(NOT CMAKE_SYSTEM_NAME MATCHES "Darwin")
+             "-Wl,-O1"
+             "-Wl,-z,relro"
+             "-Wl,-z,now"
+-            "-Wl,--sort-common=descending"
+             "-Wl,--hash-style=gnu"
+         )
+     endif()
