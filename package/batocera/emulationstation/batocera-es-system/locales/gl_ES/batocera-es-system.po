@@ -3043,6 +3043,11 @@ msgstr ""
 "Permite cos xogos compatibles con diferentes resolucións se rendericen nunha "
 "resolución específica."
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -3932,6 +3937,11 @@ msgid ""
 msgstr ""
 "Tipo de filtrado básico para a pantalla de Jaguar ao renderizar na "
 "resolución nativa."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6455,6 +6465,11 @@ msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "MODO DOBRE NÚCLEO"
 
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "DUAL SCREEN"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUALSHOCK MOTION CONTROL"
@@ -7203,6 +7218,11 @@ msgstr "ACTIVAR PARCHES DE PANTALLA ANCHA"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE XIM"
 msgstr "ACTIVAR XIM"
 
@@ -7435,6 +7455,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable High Dynamic Range if your display supports it."
 msgstr "Habilita o rango dinámico alto se a túa pantalla o admite."
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid ""
+"Enable MelonDS to display over two screens. Some related screen options will "
+"be ignored."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14817,11 +14844,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Restablecer"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20865,6 +20887,10 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Reserva unha zona non morta no centro do volante para seguir recto (en "
 #~ "graos)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Restablecer"
 
 #~ msgctxt "keys_files"
 #~ msgid "Reset the application"

@@ -3040,6 +3040,11 @@ msgstr ""
 "Farklı çözünürlükleri destekleyen oyunların belirli çözünürlükte işlenmesine "
 "izin verin."
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -3930,6 +3935,11 @@ msgid ""
 msgstr ""
 "Jaguar ekranının yerel ekrana dönüştürülmesi sırasında kullanılan Temel "
 "Filtreleme türü."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6443,6 +6453,11 @@ msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "ÇİFT ÇEKİRDEK MODU"
 
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "DUAL SCREEN"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUALSHOCK MOTION CONTROL"
@@ -7189,6 +7204,11 @@ msgstr "GENİŞ EKRAN YAMALARINI ETKİNLEŞTİR"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE XIM"
 msgstr "XIM ETKİNLEŞTİR"
 
@@ -7420,6 +7440,13 @@ msgctxt "game_options"
 msgid "Enable High Dynamic Range if your display supports it."
 msgstr ""
 "Ekranınız destekliyorsa Yüksek Dinamik Aralık özelliğini etkinleştirin."
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid ""
+"Enable MelonDS to display over two screens. Some related screen options will "
+"be ignored."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14799,11 +14826,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Sıfırla"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20392,6 +20414,10 @@ msgstr "sarı/mavi"
 #~ msgstr ""
 #~ "İlerlemek için direksiyonun merkezinde ölü olmayan bölge oluşturun "
 #~ "(derece)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Sıfırla"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

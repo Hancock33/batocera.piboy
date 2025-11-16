@@ -3031,6 +3031,11 @@ msgid ""
 "resolution."
 msgstr "다양한 해상도를 지원하는 게임이 특정 해상도로 렌더링되도록 허용합니다."
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -3912,6 +3917,11 @@ msgid ""
 msgstr ""
 "원본 디스플레이로 렌더링할 때 재규어 디스플레이에 대한 기본 필터링 유형입니"
 "다."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6409,6 +6419,11 @@ msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "듀얼 코어 모드"
 
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "DUAL SCREEN"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUALSHOCK MOTION CONTROL"
@@ -7152,6 +7167,11 @@ msgstr "와이드스크린 패치 활성화"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE XIM"
 msgstr "XIM 활성화"
 
@@ -7385,6 +7405,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable High Dynamic Range if your display supports it."
 msgstr "디스플레이가 지원한다면 HDR(High Dynamic Range)을 활성화하세요."
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid ""
+"Enable MelonDS to display over two screens. Some related screen options will "
+"be ignored."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14705,11 +14732,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "재설정"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20339,6 +20361,10 @@ msgstr "노란색/파란색"
 #~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
 #~ "(in degrees)"
 #~ msgstr "핸들 중앙에 사각지대가 없는 공간을 확보하여 직진 주행 (°)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "재설정"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

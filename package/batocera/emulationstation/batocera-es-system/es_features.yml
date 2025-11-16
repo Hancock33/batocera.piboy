@@ -9317,6 +9317,12 @@ melonds:
             choices:
                 "Off": False
                 "On":  True
+        melonds_dual_screen:
+            prompt: DUAL SCREEN
+            description: Enable MelonDS to display over two screens. Some related screen options will be ignored.
+            choices:
+                "Off": False
+                "On":  True
         melonds_cheats:
             prompt: ENABLE CHEATS
             choices:
@@ -12021,6 +12027,12 @@ wine:
         force_mouse:
             prompt: ENABLE MOUSE
             description: Force mouse in games.
+            choices:
+                "Off": 0
+                "On":  1
+        winedevices:
+            prompt: ENABLE WINE DEVICES SERVICES
+            description: Allow wine to access raw io ports (usb, parallel, ...)
             choices:
                 "Off": 0
                 "On":  1

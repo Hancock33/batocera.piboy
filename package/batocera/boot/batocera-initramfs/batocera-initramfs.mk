@@ -65,13 +65,25 @@ BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_RISCV_EARLY_FI
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SM8550),y)
-BATOCERA_INITRAMFS_DEPENDENCIES += firmware-armbian
 define BATOCERA_INITRAMFS_SM8550_EARLY_FIRMWARE
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
-    cp -R $(FIRMWARE_ARMBIAN_DIR)/qcom/sm8550/* \
-        $(INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
+    mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/
+    cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/qualcomm/sm8550/fsoverlay/lib/firmware/qcom/* \
+        $(INITRAMFS_DIR)/lib/firmware/qcom/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_SM8550_EARLY_FIRMWARE
+endif
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H700),y)
+BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
+define BATOCERA_INITRAMFS_H700_EARLY_FIRMWARE
+    mkdir -p $(INITRAMFS_DIR)/lib/firmware/rtw88
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/panels
+    cp $(ALLLINUXFIRMWARES_DIR)/rtw88/rtw8821c_fw.bin \
+        $(INITRAMFS_DIR)/lib/firmware/rtw88/
+	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/allwinner/h700/fsoverlay/lib/firmware/panels/* \
+        $(INITRAMFS_DIR)/lib/firmware/panels
+endef
+BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_H700_EARLY_FIRMWARE
 endif
 
 define BATOCERA_INITRAMFS_INSTALL_TARGET_CMDS

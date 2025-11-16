@@ -3038,6 +3038,11 @@ msgstr ""
 "Permite que jogos com suporte a diferentes resoluções sejam renderizados "
 "numa resolução específica."
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgstr "Permitir que o Wine aceda a portas de I/O raw (usb, paralela, ..."
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -3926,6 +3931,11 @@ msgstr ""
 "Tipo de filtragem básica para a execução do jaguar ao renderizar para o ecrã "
 "nativo"
 
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "Batocera sets first audio device (Default)"
@@ -4148,12 +4158,12 @@ msgstr "Parte inferior (Padrão)"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Center"
-msgstr ""
+msgstr "Centro inferior"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Left"
-msgstr ""
+msgstr "Canto inferior esquerdo"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -4163,7 +4173,7 @@ msgstr "Somente a parte inferior"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Bottom Right"
-msgstr ""
+msgstr "Canto inferior direito"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -5172,12 +5182,12 @@ msgstr "Centro"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Left"
-msgstr ""
+msgstr "Centro Esquerda"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Center Right"
-msgstr ""
+msgstr "Centro Direita"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -5424,6 +5434,8 @@ msgid ""
 "Choose the Wayland driver mode if on a handheld device. XWayland has more "
 "compatibility."
 msgstr ""
+"Escolha o modo do driver Wayland se estiver num dispositivo portátil. "
+"XWayland têm mais compatibilidade."
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -5536,11 +5548,13 @@ msgctxt "game_options"
 msgid ""
 "Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
 msgstr ""
+"Escolha a posição no ecrã para as métricas de desempenho (FPS, utilização da "
+"CPU, etc.)."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Choose the on-screen position for system messages."
-msgstr ""
+msgstr "Escolha a posição no ecrã para as mensagens do sistema."
 
 #. TRANSLATION: fallout1-ce, fallout2-ce
 msgctxt "game_options"
@@ -6159,7 +6173,7 @@ msgid ""
 "causes mid-frame synchronization, so it has a huge performance impact."
 msgstr ""
 "D3D12, leia os resultados da renderização para textura na CPU. Necessário em "
-"alguns jogos, mas causa sincronização de mid-frame, por isso tem um enorme "
+"alguns jogos, mas causa sincronização de mid-frame, por isso têm um enorme "
 "impacto no desempenho."
 
 #. TRANSLATION: mame
@@ -6436,6 +6450,11 @@ msgstr "DSi (experiemental)"
 msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "MODO DUAL CORE"
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "DUAL SCREEN"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -7182,6 +7201,11 @@ msgstr "ATIVAR PATCHES WIDESCREEN"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
+msgstr "ATIVAR SERVIÇOS DE DISPOSITIVOS WINE"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE XIM"
 msgstr "ATIVAR XIM"
 
@@ -7414,6 +7438,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable High Dynamic Range if your display supports it."
 msgstr "Ativar o High Dynamic Range se o seu monitor for compatível."
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid ""
+"Enable MelonDS to display over two screens. Some related screen options will "
+"be ignored."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -8813,9 +8844,6 @@ msgid ""
 "use a value larger than 100%% so that the steering feels less sensitive on a "
 "thumbstick."
 msgstr ""
-"Para jogar jogos de condução com um comando, às vezes é uma boa ideia usar "
-"um valor maior que 100%% para que a direção pareça menos sensível no "
-"analógico"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -10028,6 +10056,8 @@ msgid ""
 "Helps with texture corruption and depth issues on AMD GPUs. Can also help "
 "Intel GPUs in some cases."
 msgstr ""
+"Ajuda a resolver problemas de corrupção de texturas e profundidade em GPUs "
+"AMD. Também pode ajudar Em alguns casos, os GPUs da Intel."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -10428,7 +10458,7 @@ msgstr "Melhora a clareza de texturas distantes."
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Improves frame rate and responsiveness."
-msgstr ""
+msgstr "Melhora a taxa de frames e a capacidade de resposta."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -11639,7 +11669,7 @@ msgstr "TIPO DE MODELO"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "MODERN PEDAL CONTROLS"
-msgstr "COMANDOS E PEDAIS MODERNOS"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -12433,7 +12463,7 @@ msgstr "NAT"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "NATIVE DEPTH INTERPOLATION"
-msgstr ""
+msgstr "INTERPOLAÇÃO DE PROFUNDIDADE NATIVA"
 
 #. TRANSLATION: libretro/melonds, libretro/melondsds
 msgctxt "game_options"
@@ -12583,7 +12613,7 @@ msgstr "NTSC-U/C"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "NTSYNC"
-msgstr ""
+msgstr "NTSYNC"
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
@@ -13010,12 +13040,12 @@ msgstr "MENSAGENS OSD"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD MESSAGES POSITION"
-msgstr ""
+msgstr "POSIÇÃO DAS MENSAGENS OSD"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "OSD PERFORMANCE POSITION"
-msgstr ""
+msgstr "POSIÇÃO DE DESEMPENHO OSD"
 
 #. TRANSLATION: dolphin_triforce
 msgctxt "game_options"
@@ -14791,11 +14821,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Reiniciar"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -15530,7 +15555,7 @@ msgstr "STE"
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "STEERING SENSITIVITY"
-msgstr "SENSIBILIDADE DA DIREÇÃO"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17801,17 +17826,17 @@ msgstr "Topo"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center"
-msgstr ""
+msgstr "Centro Superior"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Center (Default)"
-msgstr ""
+msgstr "Centro Superior (Padrão)"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Left"
-msgstr ""
+msgstr "Canto Superior Esquerdo"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -17821,7 +17846,7 @@ msgstr "Somente o Topo"
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Top Right"
-msgstr ""
+msgstr "Canto Superior Direito"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -18516,8 +18541,6 @@ msgctxt "game_options"
 msgid ""
 "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 msgstr ""
-"Utilizar L2/R2 para Travar/Acelerar e L1/R1 ou Analógico Direito para Cima/"
-"Baixopara Aumentar/Reduzir a Mudança."
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual, mame/openbor7530
 msgctxt "game_options"
@@ -19095,7 +19118,7 @@ msgstr "AVISAR SOBRE RECURSOS NÃO SUPORTADOS"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WAYLAND DRIVER MODE"
-msgstr ""
+msgstr "MODO DE CONDUÇÃO WAYLAND"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -19434,7 +19457,7 @@ msgstr "XBOX LIVE ARCADE"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "XWayland (Default)"
-msgstr ""
+msgstr "XWayland (Padrão)"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -20102,10 +20125,6 @@ msgstr "amarelo/azul"
 #~ msgstr "Pode ser usado para simular cores de ecrãs específicas."
 
 #~ msgctxt "game_options"
-#~ msgid "Can improve frame rate and responsiveness."
-#~ msgstr "Pode melhorar os fps e a capacidade de resposta."
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Changing driver can improve audio performance and reduce distortion. "
 #~ "Alsathread is recommended for low-end systems."
@@ -20119,7 +20138,7 @@ msgstr "amarelo/azul"
 
 #~ msgctxt "game_options"
 #~ msgid "Choose your console timezone."
-#~ msgstr "Escolher o fuso horário da sua consola"
+#~ msgstr "Escolha o fuso horário da sua consola"
 
 #~ msgctxt "game_options"
 #~ msgid "Color"
@@ -20389,6 +20408,10 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Reserve uma zona não morta no centro do volante para seguir em frente (em "
 #~ "graus)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Reiniciar"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

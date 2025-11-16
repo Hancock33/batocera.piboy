@@ -608,7 +608,7 @@ index 000000000000..c9e76eda35c8
 +#endif // CONFIG_SYSCTL
 +#endif /* CONFIG_SCHED_BORE */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index f1ebf67b48e2..7927f0596d06 100644
+index f754a60de848..c5a6f727fef1 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -100,6 +100,10 @@
@@ -752,7 +752,7 @@ index 02e16b70a790..751df396d94b 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index eb780006b9fb..1d8af694951f 100644
+index aa254188a497..403a6f7b36eb 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,10 @@
@@ -987,7 +987,7 @@ index eb780006b9fb..1d8af694951f 100644
  			set_delayed(se);
  			return false;
  		}
-@@ -6895,7 +6946,7 @@ static int sched_idle_cpu(int cpu)
+@@ -6892,7 +6943,7 @@ static int sched_idle_cpu(int cpu)
  }
  
  static void
@@ -996,7 +996,7 @@ index eb780006b9fb..1d8af694951f 100644
  {
  	struct cfs_rq *cfs_rq = cfs_rq_of(se);
  
-@@ -6908,13 +6959,22 @@ requeue_delayed_entity(struct sched_entity *se)
+@@ -6905,13 +6956,22 @@ requeue_delayed_entity(struct sched_entity *se)
  	WARN_ON_ONCE(!se->on_rq);
  
  	if (sched_feat(DELAY_ZERO)) {
@@ -1020,7 +1020,7 @@ index eb780006b9fb..1d8af694951f 100644
  			if (se != cfs_rq->curr)
  				__enqueue_entity(cfs_rq, se);
  			cfs_rq->nr_queued++;
-@@ -6954,7 +7014,7 @@ enqueue_task_fair(struct rq *rq, struct task_struct *p, int flags)
+@@ -6951,7 +7011,7 @@ enqueue_task_fair(struct rq *rq, struct task_struct *p, int flags)
  		util_est_enqueue(&rq->cfs, p);
  
  	if (flags & ENQUEUE_DELAYED) {
@@ -1029,7 +1029,7 @@ index eb780006b9fb..1d8af694951f 100644
  		return;
  	}
  
-@@ -6972,7 +7032,7 @@ enqueue_task_fair(struct rq *rq, struct task_struct *p, int flags)
+@@ -6969,7 +7029,7 @@ enqueue_task_fair(struct rq *rq, struct task_struct *p, int flags)
  	for_each_sched_entity(se) {
  		if (se->on_rq) {
  			if (se->sched_delayed)
@@ -1038,7 +1038,7 @@ index eb780006b9fb..1d8af694951f 100644
  			break;
  		}
  		cfs_rq = cfs_rq_of(se);
-@@ -7185,6 +7245,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
+@@ -7182,6 +7242,15 @@ static bool dequeue_task_fair(struct rq *rq, struct task_struct *p, int flags)
  		util_est_dequeue(&rq->cfs, p);
  
  	util_est_update(&rq->cfs, p, flags & DEQUEUE_SLEEP);
@@ -1054,7 +1054,7 @@ index eb780006b9fb..1d8af694951f 100644
  	if (dequeue_entities(rq, &p->se, flags) < 0)
  		return false;
  
-@@ -8833,7 +8902,13 @@ static void check_preempt_wakeup_fair(struct rq *rq, struct task_struct *p, int
+@@ -8830,7 +8899,13 @@ static void check_preempt_wakeup_fair(struct rq *rq, struct task_struct *p, int
  	if (__pick_eevdf(cfs_rq, !do_preempt_short) == pse)
  		goto preempt;
  
@@ -1068,7 +1068,7 @@ index eb780006b9fb..1d8af694951f 100644
  		update_protect_slice(cfs_rq, se);
  
  	return;
-@@ -9013,16 +9088,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9010,16 +9085,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -1094,7 +1094,7 @@ index eb780006b9fb..1d8af694951f 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13272,6 +13356,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
+@@ -13269,6 +13353,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
  	WARN_ON_ONCE(p->se.sched_delayed);
  
  	attach_task_cfs_rq(p);

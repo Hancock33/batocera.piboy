@@ -27,6 +27,7 @@ libretro-mgba.mk
 libxmp.mk
 mame-src.mk
 mame.mk
+mergerfs.mk
 mold.mk
 mono-bin.mk
 nblood.mk

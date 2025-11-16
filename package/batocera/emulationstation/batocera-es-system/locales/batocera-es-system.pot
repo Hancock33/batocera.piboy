@@ -11205,6 +11205,18 @@ msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
+msgid ""
+"Enable MelonDS to display over two screens. Some related screen options will "
+"be ignored."
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "DUAL SCREEN"
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
 msgid "CONSOLE TYPE"
 msgstr ""
 
@@ -13741,6 +13753,16 @@ msgstr ""
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Force mouse in games."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
 msgstr ""
 
 #. TRANSLATION: wine
@@ -18812,7 +18834,7 @@ msgstr ""
 
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
-msgid "Reset"
+msgid "Batocera Control Center"
 msgstr ""
 
 #. TRANSLATION: hotkeys.keys

@@ -1,8 +1,8 @@
 diff --git a/.gitmodules b/.gitmodules
-index 85b8fcf5..898979b9 100644
+index 542466d4..e79a44c2 100644
 --- a/.gitmodules
 +++ b/.gitmodules
-@@ -81,9 +81,9 @@
+@@ -78,9 +78,9 @@
  [submodule "external/tracy"]
  	path = external/tracy
  	url = https://github.com/wolfpld/tracy.git
@@ -16,10 +16,10 @@ index 85b8fcf5..898979b9 100644
  	path = external/cubeb
  	url = https://github.com/mozilla/cubeb.git
 diff --git a/external/CMakeLists.txt b/external/CMakeLists.txt
-index 12e72a94..f906a840 100644
+index ddf7546d..07ce55a0 100644
 --- a/external/CMakeLists.txt
 +++ b/external/CMakeLists.txt
-@@ -424,11 +424,17 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
+@@ -421,11 +421,17 @@ target_compile_definitions(tracy PUBLIC $<$<CONFIG:Debug,RelWithDebInfo>:TRACY_E
  #
  # target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
  
@@ -73,7 +73,7 @@ index b66bbd98..28d5a6f4 100644
   * @dir vita3k/io
   *
 diff --git a/vita3k/gui/CMakeLists.txt b/vita3k/gui/CMakeLists.txt
-index b9cf9e2a..14d51392 100644
+index b9cf9e2a..8806afc9 100644
 --- a/vita3k/gui/CMakeLists.txt
 +++ b/vita3k/gui/CMakeLists.txt
 @@ -51,5 +51,5 @@ add_library(
@@ -84,7 +84,7 @@ index b9cf9e2a..14d51392 100644
 +target_link_libraries(gui PRIVATE audio cppcommon ctrl kernel miniz psvpfsparser pugixml::pugixml stb renderer packages SDL3 touch vkutil nativefiledialog concurrentqueue)
  target_link_libraries(gui PUBLIC tracy)
 diff --git a/vita3k/gui/src/archive_install_dialog.cpp b/vita3k/gui/src/archive_install_dialog.cpp
-index 03146b92..93e664b1 100644
+index e20c585a..5cc9ff77 100644
 --- a/vita3k/gui/src/archive_install_dialog.cpp
 +++ b/vita3k/gui/src/archive_install_dialog.cpp
 @@ -20,7 +20,7 @@
@@ -475,7 +475,7 @@ index f8555692..fc0b19c2 100644
              }
              break;
 diff --git a/vita3k/gui/src/settings.cpp b/vita3k/gui/src/settings.cpp
-index 2dfede43..3d3365da 100644
+index a5e9ad78..793385dc 100644
 --- a/vita3k/gui/src/settings.cpp
 +++ b/vita3k/gui/src/settings.cpp
 @@ -21,7 +21,7 @@
@@ -537,7 +537,7 @@ index 2dfede43..3d3365da 100644
              }
              ImGui::PopStyleVar();
 diff --git a/vita3k/gui/src/settings_dialog.cpp b/vita3k/gui/src/settings_dialog.cpp
-index 4a2f9617..6e7a58d8 100644
+index 9f09f30a..0a03ccd3 100644
 --- a/vita3k/gui/src/settings_dialog.cpp
 +++ b/vita3k/gui/src/settings_dialog.cpp
 @@ -23,7 +23,7 @@
@@ -554,10 +554,10 @@ index 4a2f9617..6e7a58d8 100644
  #include <util/fs.h>
  #include <util/log.h>
 +#include <util/string_utils.h>
+ #include <util/net_utils.h>
  
  #include <SDL3/SDL_video.h>
- 
-@@ -106,20 +107,18 @@ static void reset_emulator(GuiState &gui, EmuEnvState &emuenv) {
+@@ -107,20 +108,18 @@ static void reset_emulator(GuiState &gui, EmuEnvState &emuenv) {
  }
  
  static void change_emulator_path(GuiState &gui, EmuEnvState &emuenv) {
@@ -585,7 +585,7 @@ index 4a2f9617..6e7a58d8 100644
  }
  
 diff --git a/vita3k/gui/src/user_management.cpp b/vita3k/gui/src/user_management.cpp
-index 27bb5823..68e1c131 100644
+index 9777ced4..7faf2b08 100644
 --- a/vita3k/gui/src/user_management.cpp
 +++ b/vita3k/gui/src/user_management.cpp
 @@ -23,7 +23,7 @@
@@ -597,7 +597,7 @@ index 27bb5823..68e1c131 100644
  #include <io/state.h>
  #include <np/common.h>
  
-@@ -727,14 +727,13 @@ void draw_user_management(GuiState &gui, EmuEnvState &emuenv) {
+@@ -726,14 +726,13 @@ void draw_user_management(GuiState &gui, EmuEnvState &emuenv) {
          const ImVec2 CHANGE_AVATAR_BTN_SIZE(LARGE_AVATAR_SIZE.x, 36.f * SCALE.y);
          ImGui::SetCursorPos(ImVec2(AVATAR_POS.x + (LARGE_AVATAR_SIZE.x / 2.f) - (CHANGE_AVATAR_BTN_SIZE.x / 2.f), AVATAR_POS.y + LARGE_AVATAR_SIZE.y + (5.f * SCALE.y)));
          if (ImGui::Button(lang["choose_avatar"].c_str(), CHANGE_AVATAR_BTN_SIZE)) {

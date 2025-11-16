@@ -1,5 +1,5 @@
 diff --git a/drivers/media/usb/uvc/uvc_driver.c b/drivers/media/usb/uvc/uvc_driver.c
-index fb6afb8e84f0..72bed68b0a2d 100644
+index ee4f54d68349..2a711bb419b3 100644
 --- a/drivers/media/usb/uvc/uvc_driver.c
 +++ b/drivers/media/usb/uvc/uvc_driver.c
 @@ -36,6 +36,7 @@ unsigned int uvc_no_drop_param = 1;
@@ -10,7 +10,7 @@ index fb6afb8e84f0..72bed68b0a2d 100644
  
  static struct usb_driver uvc_driver;
  
-@@ -2479,6 +2480,8 @@ module_param_named(trace, uvc_dbg_param, uint, 0644);
+@@ -2492,6 +2493,8 @@ module_param_named(trace, uvc_dbg_param, uint, 0644);
  MODULE_PARM_DESC(trace, "Trace level bitmask");
  module_param_named(timeout, uvc_timeout_param, uint, 0644);
  MODULE_PARM_DESC(timeout, "Streaming control requests timeout");

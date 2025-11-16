@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: batocera-emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-09-21 00:43+0000\n"
+"PO-Revision-Date: 2025-11-11 10:50+0000\n"
 "Last-Translator: Leonardo Colman Lopes <dev@leonardo.colman.com.br>\n"
 "Language-Team: Brazilian Portuguese\n"
-"Language: pt-BR\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Loco-Source-Locale: pt_BR\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Loco-Parser: loco_parse_po\n"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
@@ -2691,12 +2691,12 @@ msgstr "ATRASO DA TAXA DE QUADROS AUTOMÁTICO"
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
 msgid "AUTOMATICALLY RELOAD WEAPON"
-msgstr "RECARGA AUTOMÁTICA DE ARMA "
+msgstr "RECARGA AUTOMÁTICA DE ARMA"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "AUTOMATICALLY RUN"
-msgstr "CORRIDA AUTOMÁTICA "
+msgstr "CORRIDA AUTOMÁTICA"
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -3039,6 +3039,11 @@ msgid ""
 msgstr ""
 "Permite que jogos com suporte a diferentes resoluções sejam renderizados em "
 "uma resolução específica."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -3930,6 +3935,11 @@ msgid ""
 msgstr ""
 "Tipo de filtragem básica para a exibição do jaguar ao renderizar para a "
 "exibição nativa."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5270,7 +5280,7 @@ msgstr "Altera a taxa de resolução de saí­da."
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "Change the rotation of the rendered image."
-msgstr "90 graus no sentido anti-horário"
+msgstr "90 graus no sentido anti-horário."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -6449,6 +6459,11 @@ msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "MODO DOIS NÚCLEOS"
 
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "DUAL SCREEN"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUALSHOCK MOTION CONTROL"
@@ -7195,6 +7210,11 @@ msgstr "ATIVAR CORREÇÕES DE TELA PLANA"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE XIM"
 msgstr "ATIVAR XIM"
 
@@ -7427,6 +7447,13 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable High Dynamic Range if your display supports it."
 msgstr "Ativar o High Dynamic Range se o seu monitor for compatível."
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid ""
+"Enable MelonDS to display over two screens. Some related screen options will "
+"be ignored."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14825,11 +14852,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "Reset"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -17506,7 +17528,7 @@ msgstr "MODO DE TREINO"
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
-msgstr "MALHAS TRANSPARENTES "
+msgstr "MALHAS TRANSPARENTES"
 
 #. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
 msgctxt "game_options"
@@ -20434,6 +20456,10 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Reserva uma zona não morta no centro do volante para seguir em frente (em "
 #~ "graus)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "Reset"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

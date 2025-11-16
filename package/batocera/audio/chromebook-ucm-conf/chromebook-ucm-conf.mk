@@ -3,8 +3,8 @@
 # chromebook-ucm-conf
 #
 ################################################################################
-# Version: Commits on Nov 25, 2024
-CHROMEBOOK_UCM_CONF_VERSION = 0.7
+# Version: Commits on Nov 13, 2025
+CHROMEBOOK_UCM_CONF_VERSION = 0.8
 CHROMEBOOK_UCM_CONF_BRANCH = standalone
 CHROMEBOOK_UCM_CONF_SITE = $(call github,WeirdTreeThing,alsa-ucm-conf-cros,$(CHROMEBOOK_UCM_CONF_VERSION))
 CHROMEBOOK_UCM_CONF_LICENSE = BSD-3-Clause

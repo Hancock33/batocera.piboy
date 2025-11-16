@@ -3030,6 +3030,11 @@ msgid ""
 "resolution."
 msgstr "異なる解像度をサポートするゲームを特定の解像度で表示するようにします"
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -3911,6 +3916,11 @@ msgid ""
 msgstr ""
 "画面に表示するときのジャガー ディスプレイの基本フィルタリング タイプを選択し"
 "ます"
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6401,6 +6411,11 @@ msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "デュアルコアモード"
 
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "DUAL SCREEN"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUALSHOCK MOTION CONTROL"
@@ -7142,6 +7157,11 @@ msgstr "ワイドスクリーン パッチを有効"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE XIM"
 msgstr "XIMを有効"
 
@@ -7376,6 +7396,13 @@ msgid "Enable High Dynamic Range if your display supports it."
 msgstr ""
 "ディスプレイがハイダイナミックレンジに対応している場合は、有効にしてくださ"
 "い。"
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid ""
+"Enable MelonDS to display over two screens. Some related screen options will "
+"be ignored."
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -14688,11 +14715,6 @@ msgid ""
 "degrees)"
 msgstr ""
 
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
-msgstr "リセット"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -20244,6 +20266,10 @@ msgstr "黄/青"
 #~ "Reserve a non dead zone at the center of the wheel to go straight ahead "
 #~ "(in degrees)"
 #~ msgstr "直進のためにステアリングの中間幅を設定 (度単位)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Reset"
+#~ msgstr "リセット"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

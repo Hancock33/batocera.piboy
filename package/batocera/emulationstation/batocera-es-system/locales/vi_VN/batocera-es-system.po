@@ -3034,6 +3034,11 @@ msgstr ""
 "Cho phép trò chơi hỗ trợ các độ phân giải khác nhau được hiển thị ở độ phân "
 "giải cụ thể."
 
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -3922,6 +3927,11 @@ msgid ""
 msgstr ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
+
+#. TRANSLATION: hotkeys.keys
+msgctxt "keys_files"
+msgid "Batocera Control Center"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6421,6 +6431,11 @@ msgctxt "game_options"
 msgid "DUAL CORE MODE"
 msgstr "CHẾ ĐỘ LÕI KÉP"
 
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid "DUAL SCREEN"
+msgstr ""
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "DUALSHOCK MOTION CONTROL"
@@ -7164,6 +7179,11 @@ msgstr "BẬT BẢN VÁ MÀN HÌNH RỘNG"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE XIM"
 msgstr "BẬT XIM"
 
@@ -7393,6 +7413,13 @@ msgstr ""
 #. TRANSLATION: shadps4
 msgctxt "game_options"
 msgid "Enable High Dynamic Range if your display supports it."
+msgstr ""
+
+#. TRANSLATION: melonds
+msgctxt "game_options"
+msgid ""
+"Enable MelonDS to display over two screens. Some related screen options will "
+"be ignored."
 msgstr ""
 
 #. TRANSLATION: pcsx2
@@ -14738,11 +14765,6 @@ msgctxt "game_options"
 msgid ""
 "Reserve a non dead zone at the centre of the wheel to go straight ahead (in "
 "degrees)"
-msgstr ""
-
-#. TRANSLATION: hotkeys.keys
-msgctxt "keys_files"
-msgid "Reset"
 msgstr ""
 
 #. TRANSLATION: wine

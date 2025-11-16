@@ -9,10 +9,10 @@
     <reuseOutputMode>no</reuseOutputMode>
     <xwaylandPersistence>no</xwaylandPersistence>
   </core>
-  <touch deviceName="" mapToOutput="" mouseEmulation="yes"/>
+  <touch deviceName="" mapToOutput=""/>
   <libinput>
-    <device category="touch">
-      <calibrationMatrix>1 0 0 0 1 0</calibrationMatrix>
+    <device name="">
+      <calibrationMatrix></calibrationMatrix>
     </device>
   </libinput>
   <keyboard>
@@ -85,6 +85,16 @@
         <output></output>
       </action>
       <action name="ToggleFullscreen" />
+    </windowRule>
+    <windowRule identifier="net.kuribo64.melonDS" title="*w1*" serverDecoration="no">
+      <action name="MoveToOutput">
+        <output></output>
+      </action>
+    </windowRule>
+    <windowRule identifier="net.kuribo64.melonDS" title="*w2*" serverDecoration="no">
+      <action name="MoveToOutput">
+        <output></output>
+      </action>
     </windowRule>
   </windowRules>
 </labwc_config>
