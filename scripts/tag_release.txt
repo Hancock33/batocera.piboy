@@ -42,6 +42,7 @@ sdl3_ttf.mk
 sdl3.mk
 semver.mk
 shaderc.mk
+shadps4.mk
 spirv-llvm-translator.mk
 tomlplusplus.mk
 uthash.mk
