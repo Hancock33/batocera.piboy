@@ -1,5 +1,5 @@
 diff --git a/3rdparty/CMakeLists.txt b/3rdparty/CMakeLists.txt
-index 46307746a..28b880844 100644
+index 324069e36..32499b5dd 100644
 --- a/3rdparty/CMakeLists.txt
 +++ b/3rdparty/CMakeLists.txt
 @@ -254,10 +254,23 @@ endif()
@@ -49,7 +49,7 @@ index 46307746a..28b880844 100644
 @@ -279,9 +292,10 @@ if(USE_FAUDIO)
  			set(FAUDIO_TARGET FAudio-static)
  		else()
- 			message(FATAL_ERROR
+ 			message(WARNING
 -				"-- RPCS3: 3rdparty FAudio requires SDL 3.2.0 or newer. Since a valid SDL3"
 -				">=3.2.0 version cannot be found, building with FAudio will be skipped.")
 -			set(USE_FAUDIO OFF CACHE BOOL "Disabled FAudio with SDL < 3.2.0" FORCE)
