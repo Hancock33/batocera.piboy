@@ -1,5 +1,5 @@
 diff --git a/Oxygen/sonic3air/build/_cmake/CMakeLists.txt b/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
-index 1b30e99f..6d0f765c 100644
+index 2328b460..1ae41fd2 100644
 --- a/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
 +++ b/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
 @@ -14,7 +14,7 @@ option(BUILD_OXYGEN_ENGINEAPP "Build the Oxygen App executable" ON)

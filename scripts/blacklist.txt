@@ -15,7 +15,6 @@ openbor6412.mk
 openbor7142.mk
 python-pyxel.mk
 scummvm.mk
-sonic3-air.mk
 wine-cachyos.mk
 wine-custom.mk
 wine-native.mk
