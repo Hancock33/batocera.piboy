@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Action
-Name=WINE: Create Symlink to Prefix 
+Name=WINE: Create Symlink to Prefix
 Folders=*/windows*;
 Basenames=*.pc;*.wsquashfs;*.wgtz;
 Profiles=Batocera

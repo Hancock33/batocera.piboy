@@ -76,7 +76,7 @@ evaluate_and_create_pad() {
         rm -f "${TIMER_PIDFILE}"
         unlockAndExit 0
     fi
-    
+
     # If there are no component files, abort.
     if [ ! -e "${NAMESFILE}" ]; then
         rm -f "${TIMER_PIDFILE}"
@@ -106,7 +106,7 @@ evaluate_and_create_pad() {
 
     # Clean up all tracking files for the next boot.
     rm -f "${DEVSFILE}" "${NAMESFILE}" "${TIMER_PIDFILE}"
-    
+
     unlockAndExit 0
 }
 
@@ -124,9 +124,9 @@ else
     (
         evaluate_and_create_pad
     ) &
-    
+
     # Save the PID of our background evaluator so we don't launch another one.
     echo $! > "${TIMER_PIDFILE}"
-    
+
     unlockAndExit 0
 fi

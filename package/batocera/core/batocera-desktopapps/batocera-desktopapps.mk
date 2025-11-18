@@ -180,7 +180,7 @@ endif
 BATOCERA_DESKTOPAPPS_ACTIONS = system.md5sum.desktop
 
 # wine
-ifeq ($(BR2_PACKAGE_WINE_TKG),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_WINE),y)
   BATOCERA_DESKTOPAPPS_TOOLBOX  = wine.toolbox
   BATOCERA_DESKTOPAPPS_ACTIONS += wine.toolbox.wsquashfs.desktop
   BATOCERA_DESKTOPAPPS_ACTIONS += wine.toolbox.symlinkprefix.desktop
