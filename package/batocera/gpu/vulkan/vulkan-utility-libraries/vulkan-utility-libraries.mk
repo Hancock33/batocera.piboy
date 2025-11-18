@@ -3,9 +3,9 @@
 # vulkan-utility-libraries
 #
 ################################################################################
-# Version: Commits on Sept 26, 2025
-VULKAN_UTILITY_LIBRARIES_VERSION = 4322db5906e67b57ec9c327e6afe3d98ed893df7
-VULKAN_UTILITY_LIBRARIES_BRANCH = vulkan-sdk-1.4.328
+# Version: Commits on Nov 14, 2025
+VULKAN_UTILITY_LIBRARIES_VERSION = 3249c4eedf225c113c6a341b0dc08d3681716895
+VULKAN_UTILITY_LIBRARIES_BRANCH = vulkan-tmp-1.4.333
 VULKAN_UTILITY_LIBRARIES_SITE = https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git
 VULKAN_UTILITY_LIBRARIES_SITE_METHOD = git
 VULKAN_UTILITY_LIBRARIES_INSTALL_STAGING = YES
