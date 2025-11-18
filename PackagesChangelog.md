@@ -22,8 +22,10 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|47f01c0aeed3cba4119e29d
 Ports|[stk](http://github.com/supertuxkart/stk-code)|94712c31fb6f5155243779a9551c441c7795b831|Nov 18, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|7ada82625b38bff2b63d12e15378ca5e0101d05e|Nov 18, 2025
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.0a|Nov 18, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251118|Nov 18, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|e1efb4bad8730b2c0c6316617cbd06b9def1192e|Nov 18, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|1efcc55bff10b662568fcf863374bdc8571e669a|Nov 18, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251118|Nov 18, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|6f9c012a9176ee36663fd7a6d30b6291a0dbbcc1|Nov 18, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|aac77f308486c8f345d39ec6a64a0d09fe17b94f|Nov 18, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|27086bfb977358d4b7c878951a23bca781dc8deb|Nov 18, 2025
@@ -59,8 +61,6 @@ Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|16205675479d49f9a
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|1ba1e689a4d0cd1e00cc789a041770e4fe2a4809|Nov 16, 2025
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|d0f10bfa1440c1e65e9916e1d93ee48cfff4b1f9|Nov 16, 2025
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|d65696417ceb964a9a4767b297ed397dae71fefb|Nov 16, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251116|Nov 16, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251116|Nov 16, 2025
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|be6531d0804a2b8828414a94b599fcc1a3c1cd26|Nov 16, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|f3e3e1812a3421bf24fca26ff257fb36842d33a9|Nov 16, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|af2652e4082ef23f6826b5acf8338900d08cab2a|Nov 16, 2025
