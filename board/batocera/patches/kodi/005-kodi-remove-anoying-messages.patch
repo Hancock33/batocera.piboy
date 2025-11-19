@@ -1,14 +1,14 @@
-diff --git a/xbmc/application/Application.cpp b/xbmc/application/Application.cpp
-index e1db281f08..791bfd2df6 100644
---- a/xbmc/application/Application.cpp
-+++ b/xbmc/application/Application.cpp
-@@ -3060,7 +3060,8 @@ bool CApplication::OnMessage(CGUIMessage& message)
-   }
+diff --git a/xbmc/application/ApplicationMessageHandling.cpp b/xbmc/application/ApplicationMessageHandling.cpp
+index 0d7bff1105..d897ae7f53 100644
+--- a/xbmc/application/ApplicationMessageHandling.cpp
++++ b/xbmc/application/ApplicationMessageHandling.cpp
+@@ -765,7 +765,8 @@ bool CApplicationMessageHandling::OnMessage(const CGUIMessage& message)
+     }
  
-   case GUI_MSG_PLAYBACK_ERROR:
--    HELPERS::ShowOKDialogText(CVariant{16026}, CVariant{16027});
-+    // hide unsupportable message even when we don't care the cause
-+    //HELPERS::ShowOKDialogText(CVariant{16026}, CVariant{16027});
-     return true;
+     case GUI_MSG_PLAYBACK_ERROR:
+-      MESSAGING::HELPERS::ShowOKDialogText(CVariant{16026}, CVariant{16027});
++      // hide unsupportable message even when we don't care the cause
++      // MESSAGING::HELPERS::ShowOKDialogText(CVariant{16026}, CVariant{16027});
+       return true;
  
-   case GUI_MSG_PLAYLISTPLAYER_STARTED:
+     case GUI_MSG_PLAYLISTPLAYER_STARTED:

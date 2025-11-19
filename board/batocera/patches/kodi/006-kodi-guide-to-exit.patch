@@ -1,8 +1,8 @@
 diff --git a/system/keymaps/joystick.xml b/system/keymaps/joystick.xml
-index 2db760b4c0..b364c58281 100644
+index 8097e32c4d..262ce4c537 100644
 --- a/system/keymaps/joystick.xml
 +++ b/system/keymaps/joystick.xml
-@@ -50,7 +50,7 @@
+@@ -65,7 +65,7 @@
        <y>FullScreen</y>
        <start>ActivateWindow(PlayerControls)</start>
        <back>ActivateWindow(Home)</back>
