@@ -74,6 +74,7 @@ Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|eca
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|14d19f8339e3646b645c1c33e612b1888e632145|Nov 16, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|cf2ccf096d3e5dfb4b9dce14331e2439ea11444d|Nov 15, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|7e70ea3eae94f37d58f9f194ebaf7a6bcbfecff5|Nov 15, 2025
+Engines|[scummvm](http://github.com/scummvm/scummvm)|bf4fb93857eed2799c0c9e0d279b4e1163f2fa7b|Nov 14, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|f5c5598e3783f69f24f5eebd5aea7e14fecce50e|Nov 14, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.19|Nov 14, 2025
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|3249c4eedf225c113c6a341b0dc08d3681716895|Nov 14, 2025
@@ -85,6 +86,7 @@ Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|71a10a822b738
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|6924c76ba03dadddc6e97fa3660f3d3bc08faa94|Nov 14, 2025
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|680e033fc8ed1a49df7b156d97164e0050ee13bc|Nov 14, 2025
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|c50fdfd222ac5a2e07cf9c6f43c645e2dbe0a62d|Nov 14, 2025
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|bf4fb93857eed2799c0c9e0d279b4e1163f2fa7b|Nov 14, 2025
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.8|Nov 13, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|c995ce547756d6642bd44b5391e062a1140aef06|Nov 13, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|938f24313afe37f62ac122bb77980decdf1b1b4f|Nov 13, 2025
@@ -107,9 +109,7 @@ Hardware|[pironman5](http://github.com/sunfounder/pironman5)|f1a4b9d046e8459e484
 Controllers|[xone](http://github.com/dlundqvist/xone)|90d965254e534151202e79f768bf7a68ea9f9d4f|Nov 10, 2025
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|76cc6cf03507429c5a136cb50d83a14e05430fcd|Nov 10, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|4f660e876053cb39fca4ddb5e77e83bead60913b|Nov 09, 2025
-Engines|[scummvm](http://github.com/scummvm/scummvm)|aa23ef5677fcc1ea4b57cfd5bc66415c3e876b72|Nov 09, 2025
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.12|Nov 09, 2025
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|aa23ef5677fcc1ea4b57cfd5bc66415c3e876b72|Nov 09, 2025
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|7c4e3b2f8c027ae54a3ad9c90d7f00fccde15de9|Nov 09, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|83ebd9d9d94521dde231beac0ad5ca253bd767f1|Nov 08, 2025
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|3eb1c46ce18d3ad30f3f3c3037ff0c9b00dbbd0c|Nov 08, 2025
