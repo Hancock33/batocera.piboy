@@ -3,8 +3,8 @@
 # mergerfs
 #
 ################################################################################
-# Version: Commits on Nov 12, 2025
-MERGERFS_VERSION = 2.41.0
+# Version: Commits on Nov 19, 2025
+MERGERFS_VERSION = 2.41.1
 MERGERFS_SOURCE = mergerfs-$(MERGERFS_VERSION).tar.gz
 MERGERFS_SITE = $(call github,trapexit,mergerfs,$(MERGERFS_VERSION))
 MERGERFS_LICENSE = MIT
