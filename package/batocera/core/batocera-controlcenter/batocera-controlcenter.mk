@@ -3,8 +3,8 @@
 # batocera-controlcenter
 #
 ################################################################################
-# Version: Commits on Nov 17, 2025
-BATOCERA_CONTROLCENTER_VERSION = f5000150ca71b9c97c4ec57c3200ead02d531568
+# Version: Commits on Nov 18, 2025
+BATOCERA_CONTROLCENTER_VERSION = 87377e333995e67c1879e5d25fc58e89b276c88c
 BATOCERA_CONTROLCENTER_SITE = $(call github,lbrpdx,batocera-controlcenter,$(BATOCERA_CONTROLCENTER_VERSION))
 BATOCERA_CONTROLCENTER_STE_METHOD = git
 BATOCERA_CONTROLCENTER_LICENSE = GPL3
@@ -25,10 +25,8 @@ define BATOCERA_CONTROLCENTER_INSTALL_TARGET_CMDS
 	install -m 0755 $(@D)/xml_utils.py      $(TARGET_DIR)/usr/share/batocera/controlcenter
 	install -m 0755 $(@D)/shell.py          $(TARGET_DIR)/usr/share/batocera/controlcenter
 	install -m 0755 $(@D)/refresh.py        $(TARGET_DIR)/usr/share/batocera/controlcenter
-	cd $(TARGET_DIR)/usr/bin; ln -sf ../share/batocera/controlcenter/controlcenter.py \
-	    ./batocera-controlcenter-app
-	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/batocera-controlcenter-toogle.sh \
-	    $(TARGET_DIR)/usr/bin/batocera-controlcenter
+	cd $(TARGET_DIR)/usr/bin; ln -sf ../share/batocera/controlcenter/controlcenter.py ./batocera-controlcenter-app
+	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/batocera-controlcenter-toogle.sh $(TARGET_DIR)/usr/bin/batocera-controlcenter
 endef
 
 $(eval $(generic-package))
