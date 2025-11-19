@@ -53,7 +53,7 @@
 - Jazz2 to 3.4.0
 - Libretro MAME to 0.281
 - Libretro Play! to 0.71
-- MelonDS to 7th of November 2025 build
+- MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenMOHAA to v0.82.1
 - Play! to 0.71
@@ -74,7 +74,7 @@
 - Linux Kernel to 6.17.7
 - LabWC to 0.9.2
 - LLVM Project to 20.1.8
-- Mesa3D to 25.2.6
+- Mesa3D to 25.3.0
 - Nvidia production drivers to 580.95.05
 - Sway to 1.11
 - Vulkan stack to 1.4.328.1
