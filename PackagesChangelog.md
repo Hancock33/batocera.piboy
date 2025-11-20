@@ -15,6 +15,7 @@ Engines|[scummvm](http://github.com/scummvm/scummvm)|86f01d4cca2fe38becf26aefead
 Ports|[box64](http://github.com/ptitseb/box64)|ad90eaef8dfd22ba43300242564704f25980eab4|Nov 20, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|c2d5f203b8816ce21cf12127c883609548cf634e|Nov 20, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|831186f99d22798fdb42c4c058b6e7e6f42a140b|Nov 20, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|cbaa5bebdc829460a0dc862e2b3b98df12565d71|Nov 20, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251120|Nov 20, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576|Nov 20, 2025
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|6fb6e7101d7b4484cd19604c2e304e2038ca1dc5|Nov 20, 2025
@@ -88,7 +89,6 @@ Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/piers/resource
 Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/piers/resource.language.zh_cn)|11.0.92|Nov 15, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|cf2ccf096d3e5dfb4b9dce14331e2439ea11444d|Nov 15, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|f5c5598e3783f69f24f5eebd5aea7e14fecce50e|Nov 14, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.19|Nov 14, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|bd475a24c8cf509e36dff1a6eaf1b4d4167fc46d|Nov 14, 2025
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|7e9b257b8a591cb7e00f9e55371edba19db9799c|Nov 14, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|d6383bff89a93e02aad10a586e804829861c3de1|Nov 14, 2025
