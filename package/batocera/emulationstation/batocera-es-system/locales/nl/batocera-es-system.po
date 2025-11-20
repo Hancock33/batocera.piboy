@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-15 23:48+0100\n"
-"PO-Revision-Date: 2025-10-20 14:39+0000\n"
+"PO-Revision-Date: 2025-11-17 10:06+0000\n"
 "Last-Translator: THa_MuSHeR\n"
 "Language-Team: Dutch (Netherlands)\n"
 "Language: nl-NL\n"
@@ -3044,7 +3044,7 @@ msgstr ""
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
+msgstr "Geef Wine toegang tot raw io-poorten (USB, parallel, ...)"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -3940,7 +3940,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Batocera Control Center"
-msgstr ""
+msgstr "Batocera Controle Centrum"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6459,7 +6459,7 @@ msgstr "DUAL CORE MODUS"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "DUAL SCREEN"
-msgstr ""
+msgstr "DUAL SCREEN"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -7208,7 +7208,7 @@ msgstr "BREEDBEELDPATCHES INSCHAKELEN"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE WINE DEVICES SERVICES"
-msgstr ""
+msgstr "SCHAKEL WINE APPARAATSERVICES IN"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7451,6 +7451,8 @@ msgid ""
 "Enable MelonDS to display over two screens. Some related screen options will "
 "be ignored."
 msgstr ""
+"Schakel weergave op twee schermen in voor MelonDS. Sommige gerelateerde "
+"schermopties worden genegeerd."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -20442,10 +20444,6 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "Reserveer een niet-deadzone in het midden van het wiel om rechtdoor te "
 #~ "gaan (in graden)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Reset"
-#~ msgstr "Reset"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

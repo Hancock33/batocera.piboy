@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v42(2025/10/21)\n"
+"Project-Id-Version: batocera-es v43b(2025/11/16)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-21 05:33+0900\n"
+"PO-Revision-Date: 2025-11-16 20:43+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -3033,7 +3033,7 @@ msgstr "異なる解像度をサポートするゲームを特定の解像度で
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
+msgstr "Wine がraw IO ポート (USB、パラレルなど) にアクセスできるようにします"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -3920,7 +3920,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Batocera Control Center"
-msgstr ""
+msgstr "Batocera コントロールセンター"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6414,7 +6414,7 @@ msgstr "デュアルコアモード"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "DUAL SCREEN"
-msgstr ""
+msgstr "デュアルスクリーン"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -7158,7 +7158,7 @@ msgstr "ワイドスクリーン パッチを有効"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE WINE DEVICES SERVICES"
-msgstr ""
+msgstr "ワインデバイスサービスを有効"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7403,6 +7403,7 @@ msgid ""
 "Enable MelonDS to display over two screens. Some related screen options will "
 "be ignored."
 msgstr ""
+"MelonDS を2画面表示できるようにします。一部の関連画面オプションは無視されます"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
