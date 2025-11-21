@@ -86,13 +86,13 @@ Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f7e6c20fedc1d3793e66d15c9291dd2016c0893b|Nov 21, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|61f3ce643c59bc4f6a657af73d4953de012523cd|Nov 21, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|73713737c61320c79a6921a0066a0b3f2756d721|Nov 21, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|5bce763f66d77831604cded71b4435f141fa9f54|Nov 21, 2025
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|f362278ccd4c60991caac3b4d240d4a3f751bea2|Sept 13, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|468f67b6f6788e2719d1dd28dfb2c9b7c3db3cc7|Nov 17, 2025
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Emulators|[hatari](http://github.com/hatari/hatari)|f46d03f0db41dcdabf86a618c788193d20faa894|Nov 19, 2025
+Emulators|[hatari](http://github.com/hatari/hatari)|6da06056d89bb39777063388d82d065d9e2e31fd|Nov 20, 2025
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|8397498bccd5dd8afc55b2200d533d66e17be56f|Sept 15, 2025
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|86e02d3c2dd76858db7370f5df1ccfc33b3abee1|Dec 27, 2024
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|ffc99f27f092addc9ddd34dd0e3a3d4d1c053cbf|Oct 21, 2024
@@ -241,7 +241,7 @@ Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426d
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|ab20dd9420ebee6e1c0d9f20041d920181700c25|Oct 09, 2025
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0282|Oct 31, 2025
-Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|e6aa4bdffefdb6129b7e3e0989849b58463fca02|Nov 20, 2025
+Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|c06632e124bd26ab26262f427ce254ad2d689832|Nov 21, 2025
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|07c866bd2b897fcbce2131dc36066c179422c3c9|Jun 21, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|e0afbb2c2f67377c9d47bc4e3a9bee47b6ea54c9|Oct 17, 2025
@@ -477,7 +477,7 @@ Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|16205675479d49f9a6ef5236dc42eab4f133318e|Nov 16, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|09123bd8ed7593da0e6b977cca3751504bc8a6e9|Nov 21, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251120|Nov 20, 2025
-Ports|[nblood](http://github.com/NBlood/NBlood)|r14326|Nov 11, 2025
+Ports|[nblood](http://github.com/NBlood/NBlood)|r14327|Nov 21, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|4eed497d73cb2565bcf82b21843d32066eb31810|Oct 10, 2025
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
@@ -552,7 +552,7 @@ Utils|[pacman](https://sources.archlinux.org/other/pacman)|5.2.2|Jun 26, 2020
 Utils|[picade](http://github.com/pimoroni/picade-hat)|f97c2ac7211c8d9ff866b22a82c3b2ae6d01e0df|Sept 08, 2025
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Utils|[raspi2png](http://github.com/AndrewFromMelbourne/raspi2png)|07f5e76e72516f24329def599ac2d8841946a5f6|Feb 05, 2025
-Utils|[rclone](http://github.com/rclone/rclone)|v1.71.2|Oct 20, 2025
+Utils|[rclone](http://github.com/rclone/rclone)|v1.72.0|Nov 21, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.3|Jun 30, 2025
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|21c1e2c51832dccfac64981b345745ce0cccf524|Oct 22, 2025
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.17.0|May 28, 2025
