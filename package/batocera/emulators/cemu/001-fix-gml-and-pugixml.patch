@@ -1,63 +1,26 @@
 diff --git a/src/Cafe/CMakeLists.txt b/src/Cafe/CMakeLists.txt
-index 1b0def8..8032494 100644
+index 7033014..9b27a34 100644
 --- a/src/Cafe/CMakeLists.txt
 +++ b/src/Cafe/CMakeLists.txt
-@@ -574,7 +574,7 @@ target_link_libraries(CemuCafe PRIVATE
- 	OpenSSL::Crypto
- 	OpenSSL::SSL
- 	PNG::PNG
--	pugixml::pugixml
-+	pugixml
- 	ZArchive::zarchive
- 	ZLIB::ZLIB
- 	zstd::zstd
-diff --git a/src/Cemu/CMakeLists.txt b/src/Cemu/CMakeLists.txt
-index 1fce8ec..bb09cf7 100644
---- a/src/Cemu/CMakeLists.txt
-+++ b/src/Cemu/CMakeLists.txt
-@@ -46,7 +46,7 @@ target_link_libraries(CemuComponents PRIVATE
- 	CURL::libcurl
- 	OpenSSL::Crypto
- 	OpenSSL::SSL
--	pugixml::pugixml
-+	pugixml
- 	ZLIB::ZLIB
- )
- 
-diff --git a/src/config/CMakeLists.txt b/src/config/CMakeLists.txt
-index abcacc6..0882ef5 100644
---- a/src/config/CMakeLists.txt
-+++ b/src/config/CMakeLists.txt
-@@ -22,5 +22,5 @@ target_link_libraries(CemuConfig PRIVATE
- 	CemuUtil
- 	Boost::headers
- 	Boost::program_options
--	pugixml::pugixml
-+	pugixml
- )
+@@ -563,7 +563,7 @@ target_link_libraries(CemuCafe PRIVATE
+   CemuGui
+   ZArchive::zarchive
+   imguiImpl
+-  pugixml::pugixml
++  pugixml
+   ZLIB::ZLIB
+   CURL::libcurl
+   ih264d
 diff --git a/src/gui/wxgui/CMakeLists.txt b/src/gui/wxgui/CMakeLists.txt
-index 921ba05..4690ee0 100644
+index 9e24a59..5aa85c2 100644
 --- a/src/gui/wxgui/CMakeLists.txt
 +++ b/src/gui/wxgui/CMakeLists.txt
-@@ -154,7 +154,7 @@ target_link_libraries(CemuWxGui PRIVATE
- 	CURL::libcurl
- 	libzip::zip
- 	OpenSSL::Crypto
--	pugixml::pugixml
-+	pugixml
- 	ZArchive::zarchive
- )
- 
-diff --git a/src/input/CMakeLists.txt b/src/input/CMakeLists.txt
-index 3158ce9..6a5b9a8 100644
---- a/src/input/CMakeLists.txt
-+++ b/src/input/CMakeLists.txt
-@@ -96,7 +96,7 @@ target_link_libraries(CemuInput PRIVATE
- 	Boost::headers
- 	Boost::program_options
- 	glm::glm
--	pugixml::pugixml
-+	pugixml
- 	SDL2::SDL2
- )
- 
+@@ -132,7 +132,7 @@ target_link_libraries(CemuWxGui PRIVATE
+   ZArchive::zarchive
+   CemuComponents
+   SDL2::SDL2
+-  pugixml::pugixml
++  pugixml
+   CemuCafe
+   PUBLIC
+   CURL::libcurl

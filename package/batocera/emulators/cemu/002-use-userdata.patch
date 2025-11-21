@@ -1,5 +1,5 @@
 diff --git a/src/Cemu/Logging/CemuLogging.cpp b/src/Cemu/Logging/CemuLogging.cpp
-index 6a01e75..add2933 100644
+index ecd2544..87b0666 100644
 --- a/src/Cemu/Logging/CemuLogging.cpp
 +++ b/src/Cemu/Logging/CemuLogging.cpp
 @@ -151,7 +151,7 @@ void cemuLog_thread()
@@ -25,7 +25,7 @@ index 6b205d2..74120a4 100644
  
  	exit(0);
 diff --git a/src/gui/wxgui/CemuApp.cpp b/src/gui/wxgui/CemuApp.cpp
-index 78f4b83..dca06eb 100644
+index 17d8e57..5229ee4 100644
 --- a/src/gui/wxgui/CemuApp.cpp
 +++ b/src/gui/wxgui/CemuApp.cpp
 @@ -144,7 +144,7 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
@@ -53,10 +53,10 @@ index 78f4b83..dca06eb 100644
  	ActiveSettings::SetPaths(isPortable, exePath, user_data_path, config_path, cache_path, data_path, failedWriteAccess);
  }
 diff --git a/src/gui/wxgui/input/HotkeySettings.cpp b/src/gui/wxgui/input/HotkeySettings.cpp
-index 626bdcd..3470689 100644
+index 195061d..299ea74 100644
 --- a/src/gui/wxgui/input/HotkeySettings.cpp
 +++ b/src/gui/wxgui/input/HotkeySettings.cpp
-@@ -17,7 +17,7 @@
+@@ -18,7 +18,7 @@
  
  std::optional<fs::path> GenerateScreenshotFilename(bool isDRC)
  {
