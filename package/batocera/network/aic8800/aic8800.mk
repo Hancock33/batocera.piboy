@@ -3,8 +3,8 @@
 # aic8800
 #
 ################################################################################
-# Version: Commits on Oct 27, 2025
-AIC8800_VERSION = 451a1c8f14dad821034017ccb902eaf0a2b8c2ee
+# Version: Commits on Nov 21, 2025
+AIC8800_VERSION = 5220943ea16e465d576ec44d12e7d709cff36ebd
 AIC8800_SITE = $(call github,radxa-pkg,aic8800,$(AIC8800_VERSION))
 AIC8800_LICENSE = GPL-3.0
 AIC8800_LICENSE_FILES = LICENSE
@@ -14,7 +14,7 @@ AIC8800_MODULE_SUBDIRS = src/SDIO/driver_fw/driver/aic8800
 endif
 
 ifeq ($(BR2_PACKAGE_AIC8800_USB),y)
-AIC8800_MODULE_SUBDIRS += src/USB/driver_fw/drivers/aic8800 src/USB/driver_fw/drivers/aic_btusb   
+AIC8800_MODULE_SUBDIRS += src/USB/driver_fw/drivers/aic8800 src/USB/driver_fw/drivers/aic_btusb
 endif
 
 # set configs to be sure
