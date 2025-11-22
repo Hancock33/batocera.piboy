@@ -172,7 +172,6 @@ Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.7|Oct 25, 2025
 Utils|[od-commander](http://github.com/od-contrib/commander)|a6ef30eb3bd6ef80a031744aae0f5b9cd974c182|Oct 25, 2025
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|339684bb7a2fd2cdc885e0db08baebf594d2886e|Oct 25, 2025
 Libraries|[pysdl3](http://github.com/Aermoss/PySDL3)|v0.9.9b0|Oct 24, 2025
-Libraries|[python-gpiod](https://files.pythonhosted.org/packages/0c/dc/5a6bd309345bd9cfa7e098174ab7e65367e408539b6c1998e4f267c673cd)|2.4.0|Oct 24, 2025
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|21c1e2c51832dccfac64981b345745ce0cccf524|Oct 22, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|67f6735f02055c3ef7c524b3df364b821b061d8a|Oct 21, 2025
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.1|Oct 21, 2025
