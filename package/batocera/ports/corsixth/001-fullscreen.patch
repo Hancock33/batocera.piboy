@@ -1,8 +1,8 @@
 diff --git a/CorsixTH/Src/th_lua_gfx.cpp b/CorsixTH/Src/th_lua_gfx.cpp
-index 24aaa776..269688ff 100644
+index 816beeab..18b0279b 100644
 --- a/CorsixTH/Src/th_lua_gfx.cpp
 +++ b/CorsixTH/Src/th_lua_gfx.cpp
-@@ -588,7 +588,7 @@ render_target_creation_params l_surface_creation_params(lua_State* L,
+@@ -685,7 +685,7 @@ render_target_creation_params l_surface_creation_params(lua_State* L,
    params.width = static_cast<int>(luaL_checkinteger(L, iArgStart));
    params.height = static_cast<int>(luaL_checkinteger(L, iArgStart + 1));
  
