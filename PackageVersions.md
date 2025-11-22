@@ -78,7 +78,7 @@ Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v119|Jun 02, 2
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|1382ee0381919e97b211a1908722581c51091dc6|Nov 21, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|d3cda5d878ffff9c77ca2abdf0b208a567264c3b|Nov 20, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|e526c1ffde96e619bc764167f6fc337db74551ed|Nov 22, 2025
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|f4f7424a9f059a25ec09b22a280d03fcf0e751eb|Nov 22, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|842a088dcecbc99348b24557396f56456ceaf2ac|Aug 15, 2025
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|f8c24f87d7fb0f41c2b7ef2a1aa97d16a52206be|Jun 17, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.10.07|Oct 07, 2025
@@ -193,7 +193,7 @@ Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|228c14e10e9a8
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|046e5ff91eb4bfa728e51e01304ff73cf6b4ee96|Nov 17, 2025
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|19095803f1434eb980db6e4004187a4b786e20b6|May 10, 2025
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|c1581e6c3873331b93868bccd2f53f34a2316f89|Nov 19, 2025
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|61302d5af0d8df3938536b2e6e4018e315558aea|Nov 22, 2025
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|b3e5f8b2e8855f9c6fc7ff7a0036e4e61379177d|Dec 27, 2024
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|acae250da8d98b8b9707cd499e2a0bf6d8500652|Oct 21, 2024
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|14d19f8339e3646b645c1c33e612b1888e632145|Nov 16, 2025
@@ -255,7 +255,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|2f7185c0923b043921d1cd25d
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.317|Nov 21, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|77c62d3a942e219bc9d072b4800fa0881208ce2a|Nov 03, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c1581e6c3873331b93868bccd2f53f34a2316f89|Nov 19, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|61302d5af0d8df3938536b2e6e4018e315558aea|Nov 22, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|76cc6cf03507429c5a136cb50d83a14e05430fcd|Nov 10, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|5b9763b3eaf434f3c80ee8b78479e63eb1aa8a0c|Nov 22, 2025
@@ -282,7 +282,7 @@ Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|b1731764af3d7f552ace0c9aa9df2a868b983280|Nov 18, 2025
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|31de2a75e2187360bc55b1b43f9524779485fe8a|Oct 12, 2025
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|3650cdd7dc99226a4381debb8a6faf54756f4684|Nov 22, 2025
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|9b26800d21741db35fe6e4623f573282052af51e|Nov 22, 2025
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|v0.10.0|Aug 26, 2025
 Engines|[libdof](http://github.com/jsm174/libdof)|2711a23f7ec1085448f944145e0d63b7ab792033|Sept 28, 2025
@@ -437,8 +437,8 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|087860aee3ec7b85a86004378e2edc6fd5092
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|187b9af1b6b2627ba42baf76f2400eba2d6a510a|Nov 22, 2025
-Ports|[box86](http://github.com/ptitseb/box86)|10224524df8138ccc08311d59565fb99e49af9b0|Nov 11, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|0c405897d366fc02d79bda7716fab6aa319098a1|Nov 22, 2025
+Ports|[box86](http://github.com/ptitseb/box86)|50a2603027d0faf2f6ba5d97c0169f824fb95d85|Nov 22, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|ea08f2155a53a215ab74d1616b68135cae2d592a|Jul 13, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|cf2ccf096d3e5dfb4b9dce14331e2439ea11444d|Nov 15, 2025
@@ -484,7 +484,7 @@ Ports|[openjazz](http://github.com/AlisterT/openjazz)|03c2503dee6cbbdf658a6d9506
 Ports|[openjk](http://github.com/JACoders/OpenJK)|d1cb662f07dfa4c1999edfb5c1a86fd1c6285372|Oct 09, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|961540c6c9d9fa79c8136b48df186053fa684ced|Sept 20, 2025
 Ports|[openlara](http://github.com/XProger/OpenLara)|b4bcd4a9e1edecfdc71643d476e393a885a019e5|Jun 16, 2025
-Ports|[openmohaa](http://github.com/openmoh/openmohaa)|a7675998936d7282ee1eca77c7be2b9e08b36453|Nov 21, 2025
+Ports|[openmohaa](http://github.com/openmoh/openmohaa)|e39f9dc6e56c8d471bb52aeb0fd0d1479d9f07bb|Nov 22, 2025
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|dfe1050e1abaca0bae7b699d117d66324b88425b|Jun 24, 2025
 Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|20a7240238f9dcd4864e841343550b18605ac34a|Jul 28, 2024
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025

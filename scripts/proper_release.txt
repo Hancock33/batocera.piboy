@@ -36,7 +36,6 @@ pcmanfmqt6.mk
 pcsx2.mk
 pysdl2.mk
 pysdl3.mk
-python3-gpiod.mk
 pywebview.mk
 qps.mk
 rclone.mk
