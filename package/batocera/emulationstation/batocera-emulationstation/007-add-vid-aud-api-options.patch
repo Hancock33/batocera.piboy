@@ -41,7 +41,7 @@ index 0c89062ef..15e74981c 100644
  	};
  
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index f4142a6fb..be31b2260 100644
+index ad5dc9fb8..b28c4751c 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -2689,7 +2689,7 @@ void GuiMenu::openGamesSettings()
