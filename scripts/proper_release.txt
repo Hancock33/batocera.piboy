@@ -16,7 +16,6 @@ faudio.mk
 fdupes.mk
 fheroes2.mk
 gamecon_gpio_rpi.mk
-glslang.mk
 iir.mk
 kodi-pvr-freebox
 ledspicer.mk
@@ -37,7 +36,6 @@ pcmanfmqt6.mk
 pcsx2.mk
 pysdl2.mk
 pysdl3.mk
-python3-gpiod.mk
 pywebview.mk
 qps.mk
 rclone.mk

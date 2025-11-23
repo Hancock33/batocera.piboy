@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index aa491b9..3b4a9de 100644
+index 33a994d..5765f32 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -71,8 +71,8 @@ add_definitions(-DEMULATOR_VERSION_PATCH=${EMULATOR_VERSION_PATCH})

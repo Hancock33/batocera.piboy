@@ -3,8 +3,8 @@
 # x16emu
 #
 ################################################################################
-# Version: Commits on Sept 06, 2024
-X16EMU_VERSION = r48
+# Version: Commits on Nov 19, 2025
+X16EMU_VERSION = r49
 X16EMU_SITE = $(call github,X16Community,x16-emulator,$(X16EMU_VERSION))
 X16EMU_LICENSE = BSD-2-Clause license
 X16EMU_LICENSE_FILE = LICENSE

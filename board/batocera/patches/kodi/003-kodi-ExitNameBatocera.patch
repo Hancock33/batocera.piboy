@@ -1,5 +1,5 @@
 diff --git a/addons/skin.estuary/xml/DialogButtonMenu.xml b/addons/skin.estuary/xml/DialogButtonMenu.xml
-index 2481777f1f..ad7b7e48e3 100644
+index a02833352d..946df0fbb2 100644
 --- a/addons/skin.estuary/xml/DialogButtonMenu.xml
 +++ b/addons/skin.estuary/xml/DialogButtonMenu.xml
 @@ -18,7 +18,7 @@

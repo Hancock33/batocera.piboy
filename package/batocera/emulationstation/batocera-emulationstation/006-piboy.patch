@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 3fa6d0a03..7382de7f7 100644
+index 530eed5b8..cb45921c2 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -9,6 +9,8 @@ option(BCM "BCM host" OFF)
@@ -11,7 +11,7 @@ index 3fa6d0a03..7382de7f7 100644
  
  option(ENABLE_FILEMANAGER "Set to ON to enable f1 shortcut for filesystem" OFF)
  option(DISABLE_KODI "Set to ON to disable kodi in menu" OFF)
-@@ -97,6 +99,16 @@ if(RETROBAT)
+@@ -101,6 +103,16 @@ if(RETROBAT)
    add_definitions(-DRETROBAT)
  endif()
  
@@ -29,7 +29,7 @@ index 3fa6d0a03..7382de7f7 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index d81829323..f4142a6fb 100644
+index 6674d688f..ad5dc9fb8 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -84,8 +84,15 @@
@@ -108,7 +108,7 @@ index d81829323..f4142a6fb 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index ca759f01c..12c539e12 100644
+index cb50add28..6c80d2764 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -23,6 +23,7 @@
@@ -137,7 +137,7 @@ index ca759f01c..12c539e12 100644
  #else // osx / linux
  			return system("shutdown -t1 now -r");
  #endif
-@@ -431,9 +436,20 @@ namespace Utils
+@@ -432,9 +437,20 @@ namespace Utils
  				std::string fuelgaugeRootPath;
  				std::string chargerRootPath;
  
@@ -159,7 +159,7 @@ index ca759f01c..12c539e12 100644
  					if ((Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()))
  						batteryRootPath = file;
  
-@@ -446,7 +462,8 @@ namespace Utils
+@@ -447,7 +463,8 @@ namespace Utils
  
  					if ((Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()))
  						chargerRootPath = file;
@@ -169,7 +169,7 @@ index ca759f01c..12c539e12 100644
  
  				// If there's no battery device, look for discrete charger and fuel gauge
  				if (batteryRootPath.empty())
-@@ -470,8 +487,13 @@ namespace Utils
+@@ -472,9 +489,14 @@ namespace Utils
  				}
  				else
  				{
@@ -181,11 +181,12 @@ index ca759f01c..12c539e12 100644
 +    		    #else
 +     			    batteryStatusPath = batteryRootPath + "/status";
 +     			    batteryCapacityPath = batteryRootPath + "/capacity";
+ 					batteryCurrentPath = batteryRootPath + "/current_avg";
 +    		    #endif
  				}
  			}
  
-@@ -484,9 +506,33 @@ namespace Utils
+@@ -487,9 +509,33 @@ namespace Utils
  			else
  			{
  				ret.hasBattery = true;
@@ -216,10 +217,10 @@ index ca759f01c..12c539e12 100644
  				chargerStatus = Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "");
  				ret.isCharging = ((chargerStatus != "Not charging") && (chargerStatus != "Discharging"));
 +    		#endif
- 				// If reading from fuel gauge, we have to calculate remaining charge
- 				if (batteryCapacityPath.length() <= 1)
+ 
+ 				if (batteryCurrentPath.length() > 1 && Utils::FileSystem::exists(batteryCurrentPath))
  				{
-@@ -507,7 +553,11 @@ namespace Utils
+@@ -518,7 +564,11 @@ namespace Utils
  						file.close();
  						if (!buffer.empty())
  						{

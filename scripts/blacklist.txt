@@ -7,15 +7,12 @@ firmware-rk3588.mk
 kodi-audiodecoder-openmpt.mk
 lib32bit.mk
 libaltsound.mk
-libretro-scummvm.mk
 model2emu.mk
 mt32emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
 python-pyxel.mk
-scummvm.mk
-sonic3-air.mk
 wine-cachyos.mk
 wine-custom.mk
 wine-native.mk

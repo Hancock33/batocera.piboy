@@ -1,5 +1,5 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index 462a0e21cbf..9fda330e769 100644
+index d0a0ffd0774..6acd79f1829 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
 @@ -75,7 +75,8 @@ AddReg=\
@@ -12,24 +12,54 @@ index 462a0e21cbf..9fda330e769 100644
  
  [DefaultInstall.NT]
  RegisterDlls=RegisterDllsSection
-@@ -169,7 +170,8 @@ AddReg=\
-     VCRuntime.ntamd64,\
-     VCRuntime.ntarm64,\
+@@ -106,7 +107,8 @@ AddReg=\
      VersionInfo,\
--    LicenseInformation
-+    LicenseInformation,\
+     LicenseInformation,\
+     NVIDIANGX, \
+-    ProtonOverrides
++    ProtonOverrides,\
++    BatoceraOverrides
+ 
+ [DefaultInstall.ntamd64]
+ RegisterDlls=RegisterDllsSection
+@@ -139,7 +141,8 @@ AddReg=\
+     LicenseInformation,\
+     NVIDIANGX, \
+     TTS, \
+-    ProtonOverrides
++    ProtonOverrides,\
++    BatoceraOverrides
+ 
+ [DefaultInstall.ntarm64]
+ RegisterDlls=RegisterDllsSection
+@@ -172,7 +175,8 @@ AddReg=\
+     LicenseInformation,\
+     NVIDIANGX, \
+     TTS, \
+-    ProtonOverrides
++    ProtonOverrides,\
 +    BatoceraOverrides
  
  [Wow64Install.ntx86]
  RegisterDlls=RegisterDllsSection
-@@ -209,7 +211,13 @@ AddReg=\
+@@ -195,7 +199,8 @@ AddReg=\
+     VersionInfo,\
+     LicenseInformation,\
+     NVIDIANGX, \
+-    ProtonOverrides
++    ProtonOverrides,\
++    BatoceraOverrides
+ 
+ [Wow64Install.ntarm]
+ RegisterDlls=RegisterDllsSection
+@@ -212,7 +217,13 @@ AddReg=\
      SteamClient64,\
      Tapi,\
      VersionInfo,\
 -    LicenseInformation
 +    LicenseInformation,\
 +    BatoceraOverrides
-+    
++
 +[BatoceraOverrides]
 +HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"
 +HKLM,System\CurrentControlSet\Services\winebus,"Enable SDL",0x10001,"1"

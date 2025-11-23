@@ -322,7 +322,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 7156431c850f..a84105628fd5 100644
+index df871a0a19ac..b089cbdf4f53 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -3426,7 +3426,7 @@ index b3ab80a03365..5e883b397ff3 100644
     already-configured bus numbers - to be used for buggy BIOSes
     or architectures with incomplete PCI setup by the loader */
 diff --git a/arch/x86/kernel/cpu/amd.c b/arch/x86/kernel/cpu/amd.c
-index 2ba9f2d42d8c..6c473ff3a56f 100644
+index 5d46709c58d0..1bf7f64e321f 100644
 --- a/arch/x86/kernel/cpu/amd.c
 +++ b/arch/x86/kernel/cpu/amd.c
 @@ -1035,6 +1035,7 @@ static void init_amd_zen4(struct cpuinfo_x86 *c)
@@ -3436,8 +3436,8 @@ index 2ba9f2d42d8c..6c473ff3a56f 100644
 +#ifndef CONFIG_CACHY
  static const struct x86_cpu_id zen5_rdseed_microcode[] = {
  	ZEN_MODEL_STEP_UCODE(0x1a, 0x02, 0x1, 0x0b00215a),
- 	ZEN_MODEL_STEP_UCODE(0x1a, 0x11, 0x0, 0x0b101054),
-@@ -1049,6 +1050,11 @@ static void init_amd_zen5(struct cpuinfo_x86 *c)
+ 	ZEN_MODEL_STEP_UCODE(0x1a, 0x08, 0x1, 0x0b008121),
+@@ -1056,6 +1057,11 @@ static void init_amd_zen5(struct cpuinfo_x86 *c)
  		pr_emerg_once("RDSEED32 is broken. Disabling the corresponding CPUID bit.\n");
  	}
  }
@@ -3575,10 +3575,10 @@ index 981f8b1f0792..5ac928b86ab7 100644
  
  #ifdef CONFIG_PROC_SYSCTL
 diff --git a/arch/x86/kvm/x86.c b/arch/x86/kvm/x86.c
-index b4b5d2d09634..3567fe072420 100644
+index c9c2aa6f4705..ef18c31c402d 100644
 --- a/arch/x86/kvm/x86.c
 +++ b/arch/x86/kvm/x86.c
-@@ -11397,8 +11397,9 @@ static int vcpu_enter_guest(struct kvm_vcpu *vcpu)
+@@ -11396,8 +11396,9 @@ static int vcpu_enter_guest(struct kvm_vcpu *vcpu)
  	 * set for the CPU that actually ran the guest, and not the CPU that it
  	 * may migrate to.
  	 */
@@ -6208,10 +6208,10 @@ index b44f0f7a5ba1..b3dad7cde46f 100644
  	if (mode_state_machine[cppc_state][mode_idx]) {
  		guard(mutex)(&amd_pstate_driver_lock);
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index 38897bb14a2c..eaaf62c85e98 100644
+index 492a10f1bdbf..0bd2c3ffedf3 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -912,6 +912,11 @@ static struct freq_attr *hwp_cpufreq_attrs[] = {
+@@ -909,6 +909,11 @@ static struct freq_attr *hwp_cpufreq_attrs[] = {
  	[HWP_CPUFREQ_ATTR_COUNT] = NULL,
  };
  
@@ -6223,7 +6223,7 @@ index 38897bb14a2c..eaaf62c85e98 100644
  static bool no_cas __ro_after_init;
  
  static struct cpudata *hybrid_max_perf_cpu __read_mostly;
-@@ -928,11 +933,8 @@ static int hybrid_active_power(struct device *dev, unsigned long *power,
+@@ -925,11 +930,8 @@ static int hybrid_active_power(struct device *dev, unsigned long *power,
  			       unsigned long *freq)
  {
  	/*
@@ -6237,7 +6237,7 @@ index 38897bb14a2c..eaaf62c85e98 100644
  	 *
  	 * For this purpose, return the "frequency" of 2 for the first
  	 * performance level and otherwise leave the value set by the caller.
-@@ -946,38 +948,40 @@ static int hybrid_active_power(struct device *dev, unsigned long *power,
+@@ -943,38 +945,40 @@ static int hybrid_active_power(struct device *dev, unsigned long *power,
  	return 0;
  }
  
@@ -6304,7 +6304,7 @@ index 38897bb14a2c..eaaf62c85e98 100644
  	}
  
  	return 0;
-@@ -2298,18 +2302,14 @@ static int knl_get_turbo_pstate(int cpu)
+@@ -2297,18 +2301,14 @@ static int knl_get_turbo_pstate(int cpu)
  static int hwp_get_cpu_scaling(int cpu)
  {
  	if (hybrid_scaling_factor) {
@@ -6325,7 +6325,7 @@ index 38897bb14a2c..eaaf62c85e98 100644
  	}
  
  	/* Use core scaling on non-hybrid systems. */
-@@ -3946,6 +3946,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3945,6 +3945,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -19791,56 +19791,6 @@ index 000000000000..d855a3796554
 +	},
 +#endif /* V4L2_PIX_FMT_HEVC */
 +};
-diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c b/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
-index 9c9e0e1c6e1d..867807abde66 100644
---- a/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
-+++ b/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
-@@ -938,19 +938,12 @@ u8 iwl_mvm_mac_ctxt_get_lowest_rate(struct iwl_mvm *mvm,
- 
- u16 iwl_mvm_mac_ctxt_get_beacon_flags(const struct iwl_fw *fw, u8 rate_idx)
- {
-+	u16 flags = iwl_mvm_mac80211_idx_to_hwrate(fw, rate_idx);
- 	bool is_new_rate = iwl_fw_lookup_cmd_ver(fw, BEACON_TEMPLATE_CMD, 0) > 10;
--	u16 flags, cck_flag;
--
--	if (is_new_rate) {
--		flags = iwl_mvm_mac80211_idx_to_hwrate(fw, rate_idx);
--		cck_flag = IWL_MAC_BEACON_CCK;
--	} else {
--		cck_flag = IWL_MAC_BEACON_CCK_V1;
--		flags = iwl_fw_rate_idx_to_plcp(rate_idx);
--	}
- 
- 	if (rate_idx <= IWL_LAST_CCK_RATE)
--		flags |= cck_flag;
-+		flags |= is_new_rate ? IWL_MAC_BEACON_CCK
-+			  : IWL_MAC_BEACON_CCK_V1;
- 
- 	return flags;
- }
-diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/utils.c b/drivers/net/wireless/intel/iwlwifi/mvm/utils.c
-index 22602c32faa5..fa995e235d9b 100644
---- a/drivers/net/wireless/intel/iwlwifi/mvm/utils.c
-+++ b/drivers/net/wireless/intel/iwlwifi/mvm/utils.c
-@@ -159,9 +159,15 @@ int iwl_mvm_legacy_rate_to_mac80211_idx(u32 rate_n_flags,
- 
- u8 iwl_mvm_mac80211_idx_to_hwrate(const struct iwl_fw *fw, int rate_idx)
- {
--	return (rate_idx >= IWL_FIRST_OFDM_RATE ?
--		rate_idx - IWL_FIRST_OFDM_RATE :
--		rate_idx);
-+	if (iwl_fw_lookup_cmd_ver(fw, TX_CMD, 0) > 8)
-+		/* In the new rate legacy rates are indexed:
-+		 * 0 - 3 for CCK and 0 - 7 for OFDM.
-+		 */
-+		return (rate_idx >= IWL_FIRST_OFDM_RATE ?
-+			rate_idx - IWL_FIRST_OFDM_RATE :
-+			rate_idx);
-+
-+	return iwl_fw_rate_idx_to_plcp(rate_idx);
- }
- 
- u8 iwl_mvm_mac80211_ac_to_ucode_ac(enum ieee80211_ac_numbers ac)
 diff --git a/drivers/pci/controller/Makefile b/drivers/pci/controller/Makefile
 index 038ccbd9e3ba..de5e4f5145af 100644
 --- a/drivers/pci/controller/Makefile
@@ -20325,10 +20275,10 @@ index 000000000000..e105e6f5cc91
 +MODULE_AUTHOR("Daniel Drake <drake@endlessm.com>");
 +MODULE_LICENSE("GPL v2");
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
-index 214ed060ca1b..00c7b6fc6796 100644
+index b9c252aa6fe0..abb9ac410176 100644
 --- a/drivers/pci/quirks.c
 +++ b/drivers/pci/quirks.c
-@@ -3746,6 +3746,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
+@@ -3748,6 +3748,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
  	dev->dev_flags |= PCI_DEV_FLAGS_NO_BUS_RESET;
  }
  
@@ -20435,7 +20385,7 @@ index 214ed060ca1b..00c7b6fc6796 100644
  /*
   * Some NVIDIA GPU devices do not work with bus reset, SBR needs to be
   * prevented for those affected devices.
-@@ -5193,6 +5293,7 @@ static const struct pci_dev_acs_enabled {
+@@ -5195,6 +5295,7 @@ static const struct pci_dev_acs_enabled {
  	{ PCI_VENDOR_ID_ZHAOXIN, PCI_ANY_ID, pci_quirk_zhaoxin_pcie_ports_acs },
  	/* Wangxun nics */
  	{ PCI_VENDOR_ID_WANGXUN, PCI_ANY_ID, pci_quirk_wangxun_nic_acs },
@@ -20553,10 +20503,10 @@ index 1417e230edbd..e69785af8e1d 100644
  	 * and need eDP pre-calibration. They are distinguishable from
 diff --git a/drivers/platform/x86/asus-armoury.c b/drivers/platform/x86/asus-armoury.c
 new file mode 100644
-index 000000000000..9f0bbdc45ca0
+index 000000000000..ebfef8600243
 --- /dev/null
 +++ b/drivers/platform/x86/asus-armoury.c
-@@ -0,0 +1,1431 @@
+@@ -0,0 +1,1169 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Asus Armoury (WMI) attributes driver.
@@ -20619,38 +20569,8 @@ index 000000000000..9f0bbdc45ca0
 +#define ATTR_NV_BASE_TGP        "nv_base_tgp"
 +#define ATTR_NV_TGP             "nv_tgp"
 +
-+#define ASUS_POWER_CORE_MASK	GENMASK(15, 8)
-+#define ASUS_PERF_CORE_MASK	GENMASK(7, 0)
-+
 +#define ASUS_ROG_TUNABLE_DC 0
 +#define ASUS_ROG_TUNABLE_AC 1
-+
-+enum cpu_core_type {
-+	CPU_CORE_PERF = 0,
-+	CPU_CORE_POWER,
-+};
-+
-+enum cpu_core_value {
-+	CPU_CORE_DEFAULT = 0,
-+	CPU_CORE_MIN,
-+	CPU_CORE_MAX,
-+	CPU_CORE_CURRENT,
-+};
-+
-+/* Minimum number of performance cores (P-cores) */
-+#define CPU_PERF_CORE_COUNT_MIN 4
-+/* Minimum number of efficiency cores (E-cores) */
-+#define CPU_POWR_CORE_COUNT_MIN 0
-+
-+/* Tunables provided by ASUS for gaming laptops */
-+struct cpu_cores {
-+	u32 cur_perf_cores;
-+	u32 min_perf_cores;
-+	u32 max_perf_cores;
-+	u32 cur_power_cores;
-+	u32 min_power_cores;
-+	u32 max_power_cores;
-+};
 +
 +struct rog_tunables {
 +	const struct power_limits *power_limits;
@@ -20677,14 +20597,6 @@ index 000000000000..9f0bbdc45ca0
 +	 */
 +	struct mutex egpu_mutex;
 +
-+	/*
-+	 * Mutex to prevent big/little core count changes writing to same
-+	 * endpoint at the same time. Must lock during attr store.
-+	 */
-+	struct mutex cpu_core_mutex;
-+	struct cpu_cores *cpu_cores;
-+	bool cpu_cores_changeable;
-+
 +	/* Index 0 for DC, 1 for AC */
 +	struct rog_tunables *rog_tunables[2];
 +
@@ -20694,8 +20606,6 @@ index 000000000000..9f0bbdc45ca0
 +
 +static struct asus_armoury_priv asus_armoury = {
 +	.egpu_mutex = __MUTEX_INITIALIZER(asus_armoury.egpu_mutex),
-+
-+	.cpu_core_mutex = __MUTEX_INITIALIZER(asus_armoury.cpu_core_mutex),
 +};
 +
 +struct fw_attrs_group {
@@ -20727,8 +20637,6 @@ index 000000000000..9f0bbdc45ca0
 +static bool asus_bios_requires_reboot(struct kobj_attribute *attr)
 +{
 +	return !strcmp(attr->attr.name, "gpu_mux_mode") ||
-+	       !strcmp(attr->attr.name, "cores_performance") ||
-+	       !strcmp(attr->attr.name, "cores_efficiency") ||
 +	       !strcmp(attr->attr.name, "panel_hd_mode");
 +}
 +
@@ -20792,6 +20700,7 @@ index 000000000000..9f0bbdc45ca0
 + * armoury_set_devstate() - Set the WMI function state.
 + * @attr: The kobj_attribute associated to called WMI function.
 + * @dev_id: The WMI method ID to call.
++ * @value: The new value to be set.
 + * @retval: Where to store the value returned from WMI or NULL.
 + *
 + * Intended usage is from sysfs attribute setting associated WMI function.
@@ -20833,16 +20742,14 @@ index 000000000000..9f0bbdc45ca0
 +		break;
 +	case ASUS_WMI_DEVID_CORES:
 +		/*
-+		 * Prevent risk disabling cores essential for booting the system
-+		 * up to a point where system settings can be reset:
-+		 * this has already caused unrecoverable bricks in the past.
++		 * Due to out-of-specification usage, this WMI interface
++		 * has already caused unrecoverable bricks in the past.
 +		 */
-+		if ((FIELD_GET(ASUS_POWER_CORE_MASK, value) < CPU_POWR_CORE_COUNT_MIN) ||
-+		    (FIELD_GET(ASUS_PERF_CORE_MASK, value) < CPU_PERF_CORE_COUNT_MIN)) {
-+			pr_err("Refusing to set CPU cores to unsafe value: 0x%x\n", value);
-+			return -EINVAL;
-+		}
-+		break;
++		pr_err("Refusing to use CPU cores count unsafe interface\n");
++		return -EINVAL;
++	case ASUS_WMI_DEVID_CORES_MAX:
++		pr_err("Refusing to write to readonly devstate part of unsafe interface\n");
++		return -EINVAL;
 +	default:
 +		/* No known problems are known for this dev_id */
 +		break;
@@ -20870,7 +20777,7 @@ index 000000000000..9f0bbdc45ca0
 +	return 0;
 +}
 +
-+static int attr_enum_list(char *buf, size_t enum_values)
++static int armoury_attr_enum_list(char *buf, size_t enum_values)
 +{
 +	size_t i;
 +	int len = 0;
@@ -20886,30 +20793,9 @@ index 000000000000..9f0bbdc45ca0
 +	return len;
 +}
 +
-+/**
-+ * attr_uint_store() - Send an uint to WMI method if within min/max inclusive.
-+ * @kobj: Pointer to the driver object.
-+ * @attr: Pointer to the attribute calling this function.
-+ * @buf: The buffer to read from, this is parsed to `uint` type.
-+ * @count: Required by sysfs attribute macros, pass in from the callee attr.
-+ * @min: Minimum accepted value. Below this returns -EINVAL.
-+ * @max: Maximum accepted value. Above this returns -EINVAL.
-+ * @store_value: Pointer to where the parsed value should be stored.
-+ * @wmi_dev: The WMI function ID to use.
-+ *
-+ * This function is intended to be generic so it can be called from any "_store"
-+ * attribute which works only with integers.
-+ * Integer to be sent to the WMI method is range checked and
-+ * an error returned if out of range.
-+ *
-+ * If the value is valid and WMI is success then the sysfs attribute is notified
-+ * and if asus_bios_requires_reboot() is true then reboot attribute
-+ * is also notified.
-+ *
-+ * Returns: Either count, or an error.
-+ */
-+static ssize_t attr_uint_store(struct kobject *kobj, struct kobj_attribute *attr, const char *buf,
-+			      size_t count, u32 min, u32 max, u32 *store_value, u32 wmi_dev)
++ssize_t armoury_attr_uint_store(struct kobject *kobj, struct kobj_attribute *attr,
++				const char *buf, size_t count, u32 min, u32 max,
++				u32 *store_value, u32 wmi_dev)
 +{
 +	u32 value;
 +	int err;
@@ -20935,6 +20821,19 @@ index 000000000000..9f0bbdc45ca0
 +	return count;
 +}
 +
++ssize_t armoury_attr_uint_show(struct kobject *kobj, struct kobj_attribute *attr,
++				char *buf, u32 wmi_dev)
++{
++	u32 result;
++	int err;
++
++	err = armoury_get_devstate(attr, &result, wmi_dev);
++	if (err)
++		return err;
++
++	return sysfs_emit(buf, "%u\n", result);
++}
++
 +static ssize_t enum_type_show(struct kobject *kobj, struct kobj_attribute *attr,
 +			      char *buf)
 +{
@@ -20948,43 +20847,63 @@ index 000000000000..9f0bbdc45ca0
 +}
 +
 +/* Mini-LED mode **************************************************************/
++
++/* Values map for mini-led modes on 2023 and earlier models. */
++static u32 mini_led_mode1_map[] = {
++	[0] = ASUS_MINI_LED_OFF,
++	[1] = ASUS_MINI_LED_ON,
++};
++
++/* Values map for mini-led modes on 2024 and later models. */
++static u32 mini_led_mode2_map[] = {
++	[0] = ASUS_MINI_LED_2024_OFF,
++	[1] = ASUS_MINI_LED_2024_WEAK,
++	[2] = ASUS_MINI_LED_2024_STRONG,
++};
++
 +static ssize_t mini_led_mode_current_value_show(struct kobject *kobj,
 +						struct kobj_attribute *attr, char *buf)
 +{
-+	u32 value;
++	u32 *mini_led_mode_map;
++	size_t mini_led_mode_map_size;
++	u32 i, mode;
 +	int err;
 +
-+	err = armoury_get_devstate(attr, &value, asus_armoury.mini_led_dev_id);
++	switch (asus_armoury.mini_led_dev_id) {
++	case ASUS_WMI_DEVID_MINI_LED_MODE:
++		mini_led_mode_map = mini_led_mode1_map;
++		mini_led_mode_map_size = ARRAY_SIZE(mini_led_mode1_map);
++		break;
++
++	case ASUS_WMI_DEVID_MINI_LED_MODE2:
++		mini_led_mode_map = mini_led_mode2_map;
++		mini_led_mode_map_size = ARRAY_SIZE(mini_led_mode2_map);
++		break;
++
++	default:
++		pr_err("Unrecognized mini-LED device: %u\n", asus_armoury.mini_led_dev_id);
++		return -ENODEV;
++	}
++
++	err = armoury_get_devstate(attr, &mode, asus_armoury.mini_led_dev_id);
 +	if (err)
 +		return err;
 +
-+	value = FIELD_GET(ASUS_MINI_LED_MODE_MASK, 0);
++	mode = FIELD_GET(ASUS_MINI_LED_MODE_MASK, 0);
 +
-+	/*
-+	 * Remap the mode values to match previous generation mini-LED. The last gen
-+	 * WMI 0 == off, while on this version WMI 2 == off (flipped).
-+	 */
-+	if (asus_armoury.mini_led_dev_id == ASUS_WMI_DEVID_MINI_LED_MODE2) {
-+		switch (value) {
-+		case ASUS_MINI_LED_2024_WEAK:
-+			value = ASUS_MINI_LED_ON;
-+			break;
-+		case ASUS_MINI_LED_2024_STRONG:
-+			value = ASUS_MINI_LED_STRONG_MODE;
-+			break;
-+		case ASUS_MINI_LED_2024_OFF:
-+			value = ASUS_MINI_LED_OFF;
-+			break;
-+		}
-+	}
++	for (i = 0; i < mini_led_mode_map_size; i++)
++		return sysfs_emit(buf, "%u\n", mini_led_mode_map[i]);
 +
-+	return sysfs_emit(buf, "%u\n", value);
++	pr_warn("Unrecognized mini-LED mode: %u", mode);
++	return -EINVAL;
 +}
 +
 +static ssize_t mini_led_mode_current_value_store(struct kobject *kobj,
 +						 struct kobj_attribute *attr,
 +						 const char *buf, size_t count)
 +{
++	u32 *mini_led_mode_map;
++	size_t mini_led_mode_map_size;
 +	u32 mode;
 +	int err;
 +
@@ -20992,37 +20911,30 @@ index 000000000000..9f0bbdc45ca0
 +	if (err)
 +		return err;
 +
-+	if (asus_armoury.mini_led_dev_id == ASUS_WMI_DEVID_MINI_LED_MODE &&
-+	    mode > ASUS_MINI_LED_ON)
-+		return -EINVAL;
++	switch (asus_armoury.mini_led_dev_id) {
++	case ASUS_WMI_DEVID_MINI_LED_MODE:
++		mini_led_mode_map = mini_led_mode1_map;
++		mini_led_mode_map_size = ARRAY_SIZE(mini_led_mode1_map);
++		break;
 +
-+	/*
-+	 * Remap the mode values so expected behaviour is the same as the last
-+	 * generation of mini-LED with 0 == off, 1 == on.
-+	 */
-+	if (asus_armoury.mini_led_dev_id == ASUS_WMI_DEVID_MINI_LED_MODE2) {
-+		switch (mode) {
-+		case ASUS_MINI_LED_OFF:
-+			mode = ASUS_MINI_LED_2024_OFF;
-+			break;
-+		case ASUS_MINI_LED_ON:
-+			mode = ASUS_MINI_LED_2024_WEAK;
-+			break;
-+		case ASUS_MINI_LED_STRONG_MODE:
-+			mode = ASUS_MINI_LED_2024_STRONG;
-+			break;
-+		default:
-+			return -EINVAL;
-+		}
++	case ASUS_WMI_DEVID_MINI_LED_MODE2:
++		mini_led_mode_map = mini_led_mode2_map;
++		mini_led_mode_map_size = ARRAY_SIZE(mini_led_mode2_map);
++		break;
++
++	default:
++		pr_err("Unrecognized mini-LED devid: %u\n", asus_armoury.mini_led_dev_id);
++		return -EINVAL;
 +	}
 +
-+	err = armoury_set_devstate(attr, mode, NULL, asus_armoury.mini_led_dev_id);
-+	if (err)
-+		return err;
++	if (mode >= mini_led_mode_map_size) {
++		return pr_warn("mini-LED mode unrecognized device: %u\n", mode);
++		return -ENODEV;
++	}
 +
-+	sysfs_notify(kobj, NULL, attr->attr.name);
-+
-+	return count;
++	return armoury_attr_uint_store(kobj, attr, buf, count,
++				       0, mini_led_mode_map[mode],
++				       NULL, asus_armoury.mini_led_dev_id);
 +}
 +
 +static ssize_t mini_led_mode_possible_values_show(struct kobject *kobj,
@@ -21030,9 +20942,9 @@ index 000000000000..9f0bbdc45ca0
 +{
 +	switch (asus_armoury.mini_led_dev_id) {
 +	case ASUS_WMI_DEVID_MINI_LED_MODE:
-+		return sysfs_emit(buf, "0;1\n");
++		return armoury_attr_enum_list(buf, ARRAY_SIZE(mini_led_mode1_map));
 +	case ASUS_WMI_DEVID_MINI_LED_MODE2:
-+		return sysfs_emit(buf, "0;1;2\n");
++		return armoury_attr_enum_list(buf, ARRAY_SIZE(mini_led_mode2_map));
 +	default:
 +		return -ENODEV;
 +	}
@@ -21260,7 +21172,7 @@ index 000000000000..9f0bbdc45ca0
 +static ssize_t egpu_enable_possible_values_show(struct kobject *kobj, struct kobj_attribute *attr,
 +						char *buf)
 +{
-+	return attr_enum_list(buf, ARRAY_SIZE(egpu_status_map));
++	return armoury_attr_enum_list(buf, ARRAY_SIZE(egpu_status_map));
 +}
 +ASUS_ATTR_GROUP_ENUM(egpu_enable, "egpu_enable", "Enable the eGPU (also disables dGPU)");
 +
@@ -21336,177 +21248,9 @@ index 000000000000..9f0bbdc45ca0
 +static ssize_t apu_mem_possible_values_show(struct kobject *kobj, struct kobj_attribute *attr,
 +					    char *buf)
 +{
-+	return attr_enum_list(buf, ARRAY_SIZE(apu_mem_map));
++	return armoury_attr_enum_list(buf, ARRAY_SIZE(apu_mem_map));
 +}
 +ASUS_ATTR_GROUP_ENUM(apu_mem, "apu_mem", "Set available system RAM (in GB) for the APU to use");
-+
-+static struct cpu_cores *init_cpu_cores_ctrl(void)
-+{
-+	u32 cores;
-+	int err;
-+	struct cpu_cores *cores_p __free(kfree) = NULL;
-+
-+	cores_p = kzalloc(sizeof(struct cpu_cores), GFP_KERNEL);
-+	if (!cores_p)
-+		return ERR_PTR(-ENOMEM);
-+
-+	err = armoury_get_devstate(NULL, &cores, ASUS_WMI_DEVID_CORES_MAX);
-+	if (err) {
-+		pr_err("ACPI does not support CPU core count control\n");
-+		return ERR_PTR(-ENODEV);
-+	}
-+
-+	cores_p->max_power_cores = FIELD_GET(ASUS_POWER_CORE_MASK, cores);
-+	cores_p->max_perf_cores = FIELD_GET(ASUS_PERF_CORE_MASK, cores);
-+
-+	err = armoury_get_devstate(NULL, &cores, ASUS_WMI_DEVID_CORES);
-+	if (err) {
-+		pr_err("Could not get CPU core count: error %d\n", err);
-+		return ERR_PTR(-EIO);
-+	}
-+
-+	cores_p->cur_power_cores = FIELD_GET(ASUS_POWER_CORE_MASK, cores);
-+	cores_p->cur_perf_cores = FIELD_GET(ASUS_PERF_CORE_MASK, cores);
-+
-+	cores_p->min_power_cores = CPU_POWR_CORE_COUNT_MIN;
-+	cores_p->min_perf_cores = CPU_PERF_CORE_COUNT_MIN;
-+
-+	if ((cores_p->min_perf_cores > cores_p->max_perf_cores) ||
-+	    (cores_p->min_power_cores > cores_p->max_power_cores) ||
-+		(cores_p->cur_perf_cores > cores_p->max_perf_cores) ||
-+		(cores_p->cur_power_cores > cores_p->max_power_cores) ||
-+		(cores_p->cur_perf_cores < cores_p->min_perf_cores) ||
-+		(cores_p->cur_power_cores < cores_p->min_power_cores)
-+	) {
-+		pr_err("Invalid CPU cores count detected: interface is not safe to be used.\n");
-+		return ERR_PTR(-EINVAL);
-+	}
-+
-+	return no_free_ptr(cores_p);
-+}
-+
-+static ssize_t cores_value_show(struct kobject *kobj, struct kobj_attribute *attr, char *buf,
-+				enum cpu_core_type core_type, enum cpu_core_value core_value)
-+{
-+	u32 cpu_core_value;
-+
-+	switch (core_value) {
-+	case CPU_CORE_DEFAULT:
-+	case CPU_CORE_MAX:
-+		cpu_core_value = (core_type == CPU_CORE_PERF) ?
-+			asus_armoury.cpu_cores->max_perf_cores :
-+			asus_armoury.cpu_cores->max_power_cores;
-+		break;
-+	case CPU_CORE_MIN:
-+		cpu_core_value = (core_type == CPU_CORE_PERF) ?
-+			asus_armoury.cpu_cores->min_perf_cores :
-+			asus_armoury.cpu_cores->min_power_cores;
-+		break;
-+	case CPU_CORE_CURRENT:
-+		cpu_core_value = (core_type == CPU_CORE_PERF) ?
-+			asus_armoury.cpu_cores->cur_perf_cores :
-+			asus_armoury.cpu_cores->cur_power_cores;
-+		break;
-+	default:
-+		return -EINVAL;
-+	}
-+
-+	return sysfs_emit(buf, "%u\n", cpu_core_value);
-+}
-+
-+static ssize_t cores_current_value_store(struct kobject *kobj, struct kobj_attribute *attr,
-+					 const char *buf, enum cpu_core_type core_type)
-+{
-+	u32 new_cores, perf_cores, power_cores, out_val, min, max, result;
-+	int err;
-+
-+	result = kstrtou32(buf, 10, &new_cores);
-+	if (result)
-+		return result;
-+
-+	scoped_guard(mutex, &asus_armoury.cpu_core_mutex) {
-+		if (!asus_armoury.cpu_cores_changeable) {
-+			pr_warn("CPU core count change not allowed until reboot\n");
-+			return -EBUSY;
-+		}
-+
-+		if (core_type == CPU_CORE_PERF) {
-+			perf_cores = new_cores;
-+			power_cores = asus_armoury.cpu_cores->cur_power_cores;
-+			min = asus_armoury.cpu_cores->min_perf_cores;
-+			max = asus_armoury.cpu_cores->max_perf_cores;
-+		} else {
-+			perf_cores = asus_armoury.cpu_cores->cur_perf_cores;
-+			power_cores = new_cores;
-+			min = asus_armoury.cpu_cores->min_power_cores;
-+			max = asus_armoury.cpu_cores->max_power_cores;
-+		}
-+
-+		if (new_cores < min || new_cores > max)
-+			return -EINVAL;
-+
-+		out_val = FIELD_PREP(ASUS_PERF_CORE_MASK, perf_cores) |
-+			FIELD_PREP(ASUS_POWER_CORE_MASK, power_cores);
-+
-+		asus_armoury.cpu_cores_changeable = false;
-+		err = armoury_set_devstate(attr, out_val, &result, ASUS_WMI_DEVID_CORES);
-+		if (err) {
-+			pr_warn("Failed to set CPU core count: %d\n", err);
-+			return err;
-+		}
-+
-+		if (result > 1) {
-+			pr_warn("Failed to set CPU core count (result): 0x%x\n", result);
-+			return -EIO;
-+		}
-+	}
-+
-+	pr_info("CPU core count changed, reboot required\n");
-+
-+	sysfs_notify(kobj, NULL, attr->attr.name);
-+	asus_set_reboot_and_signal_event();
-+
-+	return 0;
-+}
-+
-+static ssize_t cores_performance_min_value_show(struct kobject *kobj,
-+						struct kobj_attribute *attr, char *buf)
-+{
-+	return cores_value_show(kobj, attr, buf, CPU_CORE_PERF, CPU_CORE_MIN);
-+}
-+
-+static ssize_t cores_performance_max_value_show(struct kobject *kobj,
-+						struct kobj_attribute *attr, char *buf)
-+{
-+	return cores_value_show(kobj, attr, buf, CPU_CORE_PERF, CPU_CORE_MAX);
-+}
-+
-+static ssize_t cores_performance_default_value_show(struct kobject *kobj,
-+						    struct kobj_attribute *attr, char *buf)
-+{
-+	return cores_value_show(kobj, attr, buf, CPU_CORE_PERF, CPU_CORE_DEFAULT);
-+}
-+
-+static ssize_t cores_performance_current_value_show(struct kobject *kobj,
-+						    struct kobj_attribute *attr, char *buf)
-+{
-+	return cores_value_show(kobj, attr, buf, CPU_CORE_PERF, CPU_CORE_CURRENT);
-+}
-+
-+static ssize_t cores_performance_current_value_store(struct kobject *kobj,
-+						     struct kobj_attribute *attr,
-+						     const char *buf, size_t count)
-+{
-+	int err;
-+
-+	err = cores_current_value_store(kobj, attr, buf, CPU_CORE_PERF);
-+	if (err)
-+		return err;
-+
-+	return count;
-+}
-+ASUS_ATTR_GROUP_CORES_RW(cores_performance, "cores_performance",
-+			 "Set the max available performance cores");
 +
 +/* Define helper to access the current power mode tunable values */
 +static inline struct rog_tunables *get_current_tunables(void)
@@ -21517,47 +21261,8 @@ index 000000000000..9f0bbdc45ca0
 +	return asus_armoury.rog_tunables[ASUS_ROG_TUNABLE_DC];
 +}
 +
-+static ssize_t cores_efficiency_min_value_show(struct kobject *kobj, struct kobj_attribute *attr,
-+					       char *buf)
-+{
-+	return cores_value_show(kobj, attr, buf, CPU_CORE_POWER, CPU_CORE_MIN);
-+}
-+
-+static ssize_t cores_efficiency_max_value_show(struct kobject *kobj, struct kobj_attribute *attr,
-+					       char *buf)
-+{
-+	return cores_value_show(kobj, attr, buf, CPU_CORE_POWER, CPU_CORE_MAX);
-+}
-+
-+static ssize_t cores_efficiency_default_value_show(struct kobject *kobj,
-+						   struct kobj_attribute *attr, char *buf)
-+{
-+	return cores_value_show(kobj, attr, buf, CPU_CORE_POWER, CPU_CORE_DEFAULT);
-+}
-+
-+static ssize_t cores_efficiency_current_value_show(struct kobject *kobj,
-+						   struct kobj_attribute *attr, char *buf)
-+{
-+	return cores_value_show(kobj, attr, buf, CPU_CORE_POWER, CPU_CORE_CURRENT);
-+}
-+
-+static ssize_t cores_efficiency_current_value_store(struct kobject *kobj,
-+						    struct kobj_attribute *attr, const char *buf,
-+						    size_t count)
-+{
-+	int err;
-+
-+	err = cores_current_value_store(kobj, attr, buf, CPU_CORE_POWER);
-+	if (err)
-+		return err;
-+
-+	return count;
-+}
-+ASUS_ATTR_GROUP_CORES_RW(cores_efficiency, "cores_efficiency",
-+		    "Set the max available efficiency cores");
-+
 +/* Simple attribute creation */
-+ASUS_ATTR_GROUP_ENUM_INT_RO(charge_mode, "charge_mode", ASUS_WMI_DEVID_CHARGE_MODE, "0;1;2",
++ASUS_ATTR_GROUP_ENUM_INT_RO(charge_mode, "charge_mode", ASUS_WMI_DEVID_CHARGE_MODE, "0;1;2\n",
 +			    "Show the current mode of charging");
 +ASUS_ATTR_GROUP_BOOL_RW(boot_sound, "boot_sound", ASUS_WMI_DEVID_BOOT_SOUND,
 +			"Set the boot POST sound");
@@ -21597,8 +21302,6 @@ index 000000000000..9f0bbdc45ca0
 +	{ &egpu_enable_attr_group, ASUS_WMI_DEVID_EGPU },
 +	{ &dgpu_disable_attr_group, ASUS_WMI_DEVID_DGPU },
 +	{ &apu_mem_attr_group, ASUS_WMI_DEVID_APU_MEM },
-+	{ &cores_efficiency_attr_group, ASUS_WMI_DEVID_CORES_MAX },
-+	{ &cores_performance_attr_group, ASUS_WMI_DEVID_CORES_MAX },
 +
 +	{ &ppt_pl1_spl_attr_group, ASUS_WMI_DEVID_PPT_PL1_SPL },
 +	{ &ppt_pl2_sppt_attr_group, ASUS_WMI_DEVID_PPT_PL2_SPPT },
@@ -21684,6 +21387,7 @@ index 000000000000..9f0bbdc45ca0
 +
 +static int asus_fw_attr_add(void)
 +{
++	const struct rog_tunables *const ac_rog_tunables = asus_armoury.rog_tunables[ASUS_ROG_TUNABLE_DC];
 +	const struct power_limits *limits;
 +	bool should_create;
 +	const char *name;
@@ -21748,10 +21452,9 @@ index 000000000000..9f0bbdc45ca0
 +		name = armoury_attr_groups[i].attr_group->name;
 +
 +		/* Check if this is a power-related tunable requiring limits */
-+		if (asus_armoury.rog_tunables[ASUS_ROG_TUNABLE_AC] &&
-+		    asus_armoury.rog_tunables[ASUS_ROG_TUNABLE_AC]->power_limits &&
++		if (ac_rog_tunables && ac_rog_tunables->power_limits &&
 +		    is_power_tunable_attr(name)) {
-+			limits = asus_armoury.rog_tunables[ASUS_ROG_TUNABLE_AC]->power_limits;
++			limits = ac_rog_tunables->power_limits;
 +			/* Check only AC: if not present then DC won't be either */
 +			should_create = has_valid_limit(name, limits);
 +			if (!should_create)
@@ -21923,8 +21626,6 @@ index 000000000000..9f0bbdc45ca0
 +static int __init asus_fw_init(void)
 +{
 +	char *wmi_uid;
-+	struct cpu_cores *cpu_cores_ctrl;
-+	int err;
 +
 +	wmi_uid = wmi_get_acpi_device_uid(ASUS_WMI_MGMT_GUID);
 +	if (!wmi_uid)
@@ -21936,19 +21637,6 @@ index 000000000000..9f0bbdc45ca0
 +	 */
 +	if (!strcmp(wmi_uid, ASUS_ACPI_UID_ASUSWMI))
 +		return -ENODEV;
-+
-+	asus_armoury.cpu_cores_changeable = false;
-+	if (armoury_has_devstate(ASUS_WMI_DEVID_CORES_MAX)) {
-+		cpu_cores_ctrl = init_cpu_cores_ctrl();
-+		if (IS_ERR(cpu_cores_ctrl)) {
-+			err = PTR_ERR(cpu_cores_ctrl);
-+			pr_err("Could not initialise CPU core control: %d\n", err);
-+			return err;
-+		}
-+
-+		asus_armoury.cpu_cores = cpu_cores_ctrl;
-+		asus_armoury.cpu_cores_changeable = true;
-+	}
 +
 +	init_rog_tunables();
 +
@@ -21990,25 +21678,68 @@ index 000000000000..9f0bbdc45ca0
 +MODULE_ALIAS("wmi:" ASUS_NB_WMI_EVENT_GUID);
 diff --git a/drivers/platform/x86/asus-armoury.h b/drivers/platform/x86/asus-armoury.h
 new file mode 100644
-index 000000000000..da4b0a2b90d4
+index 000000000000..d4ad492731a8
 --- /dev/null
 +++ b/drivers/platform/x86/asus-armoury.h
-@@ -0,0 +1,1458 @@
+@@ -0,0 +1,1467 @@
 +/* SPDX-License-Identifier: GPL-2.0
 + *
 + * Definitions for kernel modules using asus-armoury driver
 + *
-+ *  Copyright (c) 2024 Luke Jones <luke@ljones.dev>
++ * Copyright (c) 2024 Luke Jones <luke@ljones.dev>
 + */
 +
 +#ifndef _ASUS_ARMOURY_H_
 +#define _ASUS_ARMOURY_H_
 +
 +#include <linux/dmi.h>
++#include <linux/sysfs.h>
 +#include <linux/types.h>
 +#include <linux/platform_device.h>
 +
 +#define DRIVER_NAME "asus-armoury"
++
++/**
++ * armoury_attr_uint_store() - Send an uint to WMI method if within min/max.
++ * @kobj: Pointer to the driver object.
++ * @attr: Pointer to the attribute calling this function.
++ * @buf: The buffer to read from, this is parsed to `uint` type.
++ * @count: Required by sysfs attribute macros, pass in from the callee attr.
++ * @min: Minimum accepted value. Below this returns -EINVAL.
++ * @max: Maximum accepted value. Above this returns -EINVAL.
++ * @store_value: Pointer to where the parsed value should be stored.
++ * @wmi_dev: The WMI function ID to use.
++ *
++ * This function is intended to be generic so it can be called from any "_store"
++ * attribute which works only with integers.
++ *
++ * Integers to be sent to the WMI method is inclusive range checked and
++ * an error returned if out of range.
++ *
++ * If the value is valid and WMI is success then the sysfs attribute is notified
++ * and if asus_bios_requires_reboot() is true then reboot attribute
++ * is also notified.
++ *
++ * Returns: Either count, or an error.
++ */
++ssize_t armoury_attr_uint_store(struct kobject *kobj, struct kobj_attribute *attr,
++				const char *buf, size_t count, u32 min, u32 max,
++				u32 *store_value, u32 wmi_dev);
++
++/**
++ * armoury_attr_uint_show() - Receive an uint from a WMI method.
++ * @kobj: Pointer to the driver object.
++ * @attr: Pointer to the attribute calling this function.
++ * @buf: The buffer to write to, as an `uint` type.
++ * @wmi_dev: The WMI function ID to use.
++ *
++ * This function is intended to be generic so it can be called from any "_show"
++ * attribute which works only with integers.
++ *
++ * Returns: Either count, or an error.
++ */
++ssize_t armoury_attr_uint_show(struct kobject *kobj, struct kobj_attribute *attr,
++				char *buf, u32 wmi_dev);
 +
 +#define __ASUS_ATTR_RO(_func, _name)					\
 +	{								\
@@ -22025,26 +21756,20 @@ index 000000000000..da4b0a2b90d4
 +#define __ASUS_ATTR_RW(_func, _name) \
 +	__ATTR(_name, 0644, _func##_##_name##_show, _func##_##_name##_store)
 +
-+#define __WMI_STORE_INT(_attr, _min, _max, _wmi)			\
-+	static ssize_t _attr##_store(struct kobject *kobj,		\
-+				     struct kobj_attribute *attr,	\
-+				     const char *buf, size_t count)	\
-+	{								\
-+		return attr_uint_store(kobj, attr, buf, count, _min,	\
-+					_max, NULL, _wmi);		\
++#define __WMI_STORE_INT(_attr, _min, _max, _wmi)				\
++	static ssize_t _attr##_store(struct kobject *kobj,			\
++				     struct kobj_attribute *attr,		\
++				     const char *buf, size_t count)		\
++	{									\
++		return armoury_attr_uint_store(kobj, attr, buf, count, _min,	\
++					_max, NULL, _wmi);			\
 +	}
 +
 +#define ASUS_WMI_SHOW_INT(_attr, _fmt, _wmi)					\
 +	static ssize_t _attr##_show(struct kobject *kobj,			\
 +				    struct kobj_attribute *attr, char *buf)	\
 +	{									\
-+		u32 result;							\
-+		int err;							\
-+										\
-+		err = armoury_get_devstate(attr, &result, _wmi);		\
-+		if (err)							\
-+			return err;						\
-+		return sysfs_emit(buf, _fmt, result);				\
++		return armoury_attr_uint_show(kobj, attr, buf, _wmi);		\
 +	}
 +
 +/* Create functions and attributes for use in other macros or on their own */
@@ -22157,34 +21882,6 @@ index 000000000000..da4b0a2b90d4
 +		.name = _fsname, .attrs = _attrname##_attrs			\
 +	}
 +
-+/* CPU core attributes need a little different in setup */
-+#define ASUS_ATTR_GROUP_CORES_RW(_attrname, _fsname, _dispname)		\
-+	__ATTR_SHOW_FMT(scalar_increment, _attrname, "%d\n", 1);	\
-+	__ATTR_SHOW_FMT(display_name, _attrname, "%s\n", _dispname);	\
-+	static struct kobj_attribute attr_##_attrname##_current_value =	\
-+		__ASUS_ATTR_RW(_attrname, current_value);		\
-+	static struct kobj_attribute attr_##_attrname##_default_value = \
-+		__ASUS_ATTR_RO(_attrname, default_value);		\
-+	static struct kobj_attribute attr_##_attrname##_min_value =	\
-+		__ASUS_ATTR_RO(_attrname, min_value);			\
-+	static struct kobj_attribute attr_##_attrname##_max_value =	\
-+		__ASUS_ATTR_RO(_attrname, max_value);			\
-+	static struct kobj_attribute attr_##_attrname##_type =		\
-+		__ASUS_ATTR_RO_AS(type, int_type_show);			\
-+	static struct attribute *_attrname##_attrs[] = {		\
-+		&attr_##_attrname##_current_value.attr,			\
-+		&attr_##_attrname##_default_value.attr,			\
-+		&attr_##_attrname##_min_value.attr,			\
-+		&attr_##_attrname##_max_value.attr,			\
-+		&attr_##_attrname##_scalar_increment.attr,		\
-+		&attr_##_attrname##_display_name.attr,			\
-+		&attr_##_attrname##_type.attr,				\
-+		NULL							\
-+	};								\
-+	static const struct attribute_group _attrname##_attr_group = {	\
-+		.name = _fsname, .attrs = _attrname##_attrs		\
-+	}
-+
 +#define ASUS_ATTR_GROUP_INT_VALUE_ONLY_RO(_attrname, _fsname, _wmi, _dispname)	\
 +	ASUS_WMI_SHOW_INT(_attrname##_current_value, "%d\n", _wmi);		\
 +	static struct kobj_attribute attr_##_attrname##_current_value =		\
@@ -22252,7 +21949,7 @@ index 000000000000..da4b0a2b90d4
 +		    tunables->power_limits->_attr##_max)			\
 +			return -EINVAL;						\
 +										\
-+		return attr_uint_store(kobj, attr, buf, count,			\
++		return armoury_attr_uint_store(kobj, attr, buf, count,		\
 +				       tunables->power_limits->_attr##_min,	\
 +				       tunables->power_limits->_attr##_max,	\
 +				       &tunables->_attr, _wmi);			\
@@ -23424,7 +23121,7 @@ index 000000000000..da4b0a2b90d4
 +	},
 +	{
 +		.matches = {
-+			DMI_MATCH(DMI_BOARD_NAME, "RC73"),
++			DMI_MATCH(DMI_BOARD_NAME, "RC73XA"),
 +		},
 +		.driver_data = &(struct power_data) {
 +			.ac_data = &(struct power_limits) {
@@ -31730,7 +31427,7 @@ index a4ddb94e3ee5..8c6d3124c20c 100644
  #define HID_REPORT_ID(rep) \
  	.report_type = (rep)
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index d16b33bacc32..4ab1bffc9032 100644
+index 7c79b3369b82..e33c0f3404c6 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
 @@ -205,6 +205,14 @@ static inline void __mm_zero_struct_page(struct page *page)
@@ -31818,20 +31515,21 @@ index 000000000000..281b98ba0ca7
 +
 +#endif	/* __PLATFORM_DATA_X86_ASUS_WMI_LEDS_IDS_H */
 diff --git a/include/linux/platform_data/x86/asus-wmi.h b/include/linux/platform_data/x86/asus-wmi.h
-index 8a515179113d..8fedf818563f 100644
+index 8a515179113d..076b709f980e 100644
 --- a/include/linux/platform_data/x86/asus-wmi.h
 +++ b/include/linux/platform_data/x86/asus-wmi.h
-@@ -6,6 +6,9 @@
- #include <linux/types.h>
- #include <linux/dmi.h>
+@@ -4,7 +4,9 @@
  
+ #include <linux/errno.h>
+ #include <linux/types.h>
+-#include <linux/dmi.h>
++
 +#define ASUS_WMI_MGMT_GUID	"97845ED0-4E6D-11DE-8A39-0800200C9A66"
 +#define ASUS_ACPI_UID_ASUSWMI	"ASUSWMI"
-+
+ 
  /* WMI Methods */
  #define ASUS_WMI_METHODID_SPEC	        0x43455053 /* BIOS SPECification */
- #define ASUS_WMI_METHODID_SFBD		0x44424653 /* Set First Boot Device */
-@@ -73,12 +76,14 @@
+@@ -73,12 +75,14 @@
  #define ASUS_WMI_DEVID_THROTTLE_THERMAL_POLICY_VIVO 0x00110019
  
  /* Misc */
@@ -31846,7 +31544,7 @@ index 8a515179113d..8fedf818563f 100644
  
  /* Storage */
  #define ASUS_WMI_DEVID_CARDREADER	0x00080013
-@@ -103,7 +108,7 @@
+@@ -103,7 +107,7 @@
  #define ASUS_WMI_DEVID_PPT_PL1_SPL		0x001200A3
  #define ASUS_WMI_DEVID_PPT_APU_SPPT		0x001200B0
  #define ASUS_WMI_DEVID_PPT_PLAT_SPPT	0x001200B1
@@ -31855,13 +31553,13 @@ index 8a515179113d..8fedf818563f 100644
  #define ASUS_WMI_DEVID_NV_DYN_BOOST		0x001200C0
  #define ASUS_WMI_DEVID_NV_THERM_TARGET	0x001200C2
  
-@@ -133,6 +138,16 @@
+@@ -133,6 +137,16 @@
  /* dgpu on/off */
  #define ASUS_WMI_DEVID_DGPU		0x00090020
  
 +/* Intel E-core and P-core configuration in a format 0x0[E]0[P] */
 +#define ASUS_WMI_DEVID_CORES		0x001200D2
-+ /* Maximum Intel E-core and P-core availability */
++/* Maximum Intel E-core and P-core availability */
 +#define ASUS_WMI_DEVID_CORES_MAX	0x001200D3
 +
 +#define ASUS_WMI_DEVID_APU_MEM		0x000600C1
@@ -31872,7 +31570,7 @@ index 8a515179113d..8fedf818563f 100644
  /* gpu mux switch, 0 = dGPU, 1 = Optimus */
  #define ASUS_WMI_DEVID_GPU_MUX		0x00090016
  #define ASUS_WMI_DEVID_GPU_MUX_VIVO	0x00090026
-@@ -166,6 +181,7 @@ enum asus_ally_mcu_hack {
+@@ -166,6 +180,7 @@ enum asus_ally_mcu_hack {
  #if IS_REACHABLE(CONFIG_ASUS_WMI)
  void set_ally_mcu_hack(enum asus_ally_mcu_hack status);
  void set_ally_mcu_powersave(bool enabled);
@@ -31880,7 +31578,7 @@ index 8a515179113d..8fedf818563f 100644
  int asus_wmi_set_devstate(u32 dev_id, u32 ctrl_param, u32 *retval);
  int asus_wmi_evaluate_method(u32 method_id, u32 arg0, u32 arg1, u32 *retval);
  #else
-@@ -179,6 +195,10 @@ static inline int asus_wmi_set_devstate(u32 dev_id, u32 ctrl_param, u32 *retval)
+@@ -179,6 +194,10 @@ static inline int asus_wmi_set_devstate(u32 dev_id, u32 ctrl_param, u32 *retval)
  {
  	return -ENODEV;
  }
@@ -31891,7 +31589,7 @@ index 8a515179113d..8fedf818563f 100644
  static inline int asus_wmi_evaluate_method(u32 method_id, u32 arg0, u32 arg1,
  					   u32 *retval)
  {
-@@ -186,44 +206,4 @@ static inline int asus_wmi_evaluate_method(u32 method_id, u32 arg0, u32 arg1,
+@@ -186,44 +205,4 @@ static inline int asus_wmi_evaluate_method(u32 method_id, u32 arg0, u32 arg1,
  }
  #endif
  
@@ -32802,7 +32500,7 @@ index adfb6e3409d7..51e432eb9c48 100644
  #else
  # define SCHED_NR_MIGRATE_BREAK 32
 diff --git a/mm/Kconfig b/mm/Kconfig
-index 0e26f4fc8717..65ee25dacfcf 100644
+index ca3f146bc705..37ca84a23090 100644
 --- a/mm/Kconfig
 +++ b/mm/Kconfig
 @@ -435,6 +435,69 @@ config ARCH_WANT_OPTIMIZE_HUGETLB_VMEMMAP
@@ -32901,7 +32599,7 @@ index 1e8f8eca318c..32326c48162b 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 1d1b74950332..5295140e922e 100644
+index 2f2a521e5d68..9c85d987730f 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -63,7 +63,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -32917,7 +32615,7 @@ index 1d1b74950332..5295140e922e 100644
  	(1<<TRANSPARENT_HUGEPAGE_USE_ZERO_PAGE_FLAG);
  
 diff --git a/mm/mm_init.c b/mm/mm_init.c
-index 3db2dea7db4c..b180f065a68d 100644
+index 7712d887b696..a431c4457f59 100644
 --- a/mm/mm_init.c
 +++ b/mm/mm_init.c
 @@ -2663,6 +2663,7 @@ static void __init mem_init_print_info(void)

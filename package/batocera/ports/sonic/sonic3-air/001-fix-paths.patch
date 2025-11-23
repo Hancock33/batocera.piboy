@@ -1,8 +1,8 @@
 diff --git a/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp b/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
-index a2d2dfb3..b0992da6 100644
+index 6634b280..072fc904 100644
 --- a/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
 +++ b/Oxygen/oxygenengine/source/oxygen/application/EngineMain.cpp
-@@ -486,7 +486,7 @@ void EngineMain::loadConfigJson()
+@@ -502,7 +502,7 @@ void EngineMain::loadConfigJson()
  	#if (defined(PLATFORM_MAC) || defined(PLATFORM_IOS)) && defined(ENDUSER)
  		config.loadConfiguration(config.mGameDataPath + L"/config.json");
  	#else
@@ -12,10 +12,10 @@ index a2d2dfb3..b0992da6 100644
  	}
  }
 diff --git a/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp b/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
-index d5a35b16..8e69803c 100644
+index 23d8e134..4ad4649d 100644
 --- a/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
 +++ b/Oxygen/oxygenengine/source/oxygen/resources/ResourcesCache.cpp
-@@ -63,7 +63,7 @@ bool ResourcesCache::loadRom()
+@@ -64,7 +64,7 @@ bool ResourcesCache::loadRom()
  	{
  		for (const GameProfile::RomInfo& romInfo : gameProfile.mRomInfos)
  		{

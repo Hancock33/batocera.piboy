@@ -32,9 +32,6 @@ polkitqt.mk
 portmidi.mk
 python-cog.mk
 python-pyxel.mk
-qterminal.mk
-qtermwidget.mk
-qtxdg-tools.mk
 rgbds.mk
 screengrab.mk
 sdl3_image.mk
@@ -42,11 +39,11 @@ sdl3_ttf.mk
 sdl3.mk
 semver.mk
 shaderc.mk
+shadps4.mk
 spirv-llvm-translator.mk
 tomlplusplus.mk
 uthash.mk
 vice.mk
-warehouse.mk
 wine-custom.mk
 wine-mono.mk
 wine-native.mk

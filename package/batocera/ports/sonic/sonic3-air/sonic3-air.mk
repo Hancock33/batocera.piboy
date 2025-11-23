@@ -3,8 +3,8 @@
 # sonic3-air
 #
 ################################################################################
-# Version: Commits on Aug 26, 2025
-SONIC3_AIR_VERSION = 68f1847b57d24d41f305516aa7acdac4c79d563c
+# Version: Commits on Nov 14, 2025
+SONIC3_AIR_VERSION = bd475a24c8cf509e36dff1a6eaf1b4d4167fc46d
 SONIC3_AIR_SITE = $(call github,Eukaryot,sonic3air,$(SONIC3_AIR_VERSION))
 SONIC3_AIR_LICENSE = GPL-3.0
 SONIC3_AIR_LICENSE_FILE = COPYING.txt
@@ -16,6 +16,8 @@ SONIC3_AIR_DEPENDENCIES += xlib_libXcomposite xlib_libXxf86vm
 
 SONIC3_AIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
+SONIC3_AIR_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+SONIC3_AIR_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 SONIC3_AIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
 define SONIC3_AIR_INSTALL_TARGET_CMDS

@@ -12,6 +12,7 @@
   `~/wine-bottles/windows/<gamename>` turns to `~/wine-bottles/windows/<winerunner>/<gamename>.wine`
   We recommend following the procedure described in our wiki to back up Windows savegames.
 ### Hardware
+- AIC8800 USB driver support for Raxda Boards
 - Anbernic RG28XX, RG34XX, RG35XX, RG40XX, RGCUBEXX device variant support
 - AYN Thor initial support
 - Legion Go S Controller & LED updates
@@ -19,6 +20,7 @@
   - Logitech Formula Vibration Feedback
 - Odin 2 Mini initial support
 - Powkiddy X55 initial support
+- Raxda Dragon Q6A initial support
 - RTL8832CU and RTL8852CU USB wifi adapter support (x86_64)
 ### Added
 - EmulationStation:
@@ -51,7 +53,7 @@
 - Jazz2 to 3.4.0
 - Libretro MAME to 0.281
 - Libretro Play! to 0.71
-- MelonDS to 7th of November 2025 build
+- MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenMOHAA to v0.82.1
 - Play! to 0.71
@@ -72,8 +74,8 @@
 - Linux Kernel to 6.17.7
 - LabWC to 0.9.2
 - LLVM Project to 20.1.8
-- Mesa3D to 25.2.6
-- Nvidia production drivers to 580.95.05
+- Mesa3D to 25.3.0
+- Nvidia production drivers to 580.105.08
 - Sway to 1.11
 - Vulkan stack to 1.4.328.1
 - Wayland to 1.24.0

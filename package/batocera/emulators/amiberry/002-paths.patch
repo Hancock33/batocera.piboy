@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 80d21dbb..571d6449 100644
+index 98fef0b7..125b4ca8 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4506,8 +4506,10 @@ static bool locate_amiberry_conf(const bool portable_mode)
+@@ -4515,8 +4515,10 @@ static bool locate_amiberry_conf(const bool portable_mode)
  		if (!my_existsdir(xdg_config_home.c_str()))
  			my_mkdir(xdg_config_home.c_str());
  

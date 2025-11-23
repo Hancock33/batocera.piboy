@@ -3,9 +3,9 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Nov 16, 2025
-PCSX2_VERSION = v2.5.297
-PCSX2_HASH = aca775f8b82af7393c89ad7287fda6ace5bca867
+# Version: Commits on Nov 21, 2025
+PCSX2_VERSION = v2.5.317
+PCSX2_HASH = f8882c4da6c0cf5db1c7b8c9ac4266d3a51a8721
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -76,7 +76,7 @@ define PCSX2_CROSSHAIRS
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/crosshairs/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
-define PCSX2_CROSSHAIRS_RETROACHIEVEMENTS
+define PCSX2_RETROACHIEVEMENTS
 	sed -i "s|GIT_TAGGED_COMMIT|1|" $(@D)/pcsx2/BuildVersion.cpp
 	sed -i "s|GIT_TAG_HI|$(PCSX2_GIT_TAG_HI)|" $(@D)/pcsx2/BuildVersion.cpp
 	sed -i "s|GIT_TAG_MID|$(PCSX2_GIT_TAG_MID)|" $(@D)/pcsx2/BuildVersion.cpp
@@ -89,6 +89,6 @@ endef
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_PATCHES
 PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_CROSSHAIRS
-PCSX2_PRE_PATCH_HOOKS += PCSX2_CROSSHAIRS_RETROACHIEVEMENTS
+PCSX2_PRE_PATCH_HOOKS += PCSX2_RETROACHIEVEMENTS
 
 $(eval $(cmake-package))

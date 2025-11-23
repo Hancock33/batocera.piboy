@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/Cell/Modules/cellGem.cpp b/rpcs3/Emu/Cell/Modules/cellGem.cpp
-index c50c93fc4..22658f30d 100644
+index 7f02a0eab..652257daf 100644
 --- a/rpcs3/Emu/Cell/Modules/cellGem.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellGem.cpp
 @@ -2182,15 +2182,15 @@ static bool gun_input_to_pad(u32 gem_no, be_t<u16>& digital_buttons, be_t<u16>&

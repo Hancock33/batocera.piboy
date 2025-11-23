@@ -1,8 +1,8 @@
 diff --git a/xbmc/windowing/gbm/drm/DRMUtils.cpp b/xbmc/windowing/gbm/drm/DRMUtils.cpp
-index 3dd4ee9783..262e63a23f 100644
+index 8d7df82490..859b0005f1 100644
 --- a/xbmc/windowing/gbm/drm/DRMUtils.cpp
 +++ b/xbmc/windowing/gbm/drm/DRMUtils.cpp
-@@ -353,8 +353,24 @@ bool CDRMUtils::OpenDrm(bool needConnector)
+@@ -331,8 +331,24 @@ bool CDRMUtils::OpenDrm(bool needConnector)
        if (!resources)
          continue;
  
@@ -27,7 +27,7 @@ index 3dd4ee9783..262e63a23f 100644
          m_connectors.emplace_back(std::make_unique<CDRMConnector>(m_fd, resources->connectors[i]));
  
        drmModeFreeResources(resources);
-@@ -429,7 +445,24 @@ bool CDRMUtils::InitDrm()
+@@ -403,7 +419,24 @@ bool CDRMUtils::InitDrm()
    }
  
    m_connectors.clear();

@@ -3,9 +3,10 @@
 # glslang
 #
 ################################################################################
-# Version: Commits on Sept 25, 2025
-GLSLANG_VERSION = 16.0.0
+# Version: Commits on Nov 04, 2025
+GLSLANG_VERSION = e2ab21f20bade6b85cace3b94485d31337dfe9ef
 GLSLANG_SITE = $(call github,KhronosGroup,glslang,$(GLSLANG_VERSION))
+GLSLANG_BRANCH = vulkan-tmp-1.4.333
 GLSLANG_DEPENDENCIES = vulkan-headers vulkan-loader spirv-tools
 GLSLANG_INSTALL_STAGING = YES
 GLSLANG_SUPPORTS_IN_SOURCE_BUILD = NO

@@ -49,10 +49,10 @@ index 13665cb..f732c01 100644
  	inline static std::optional<uint32> s_persistent_id{};
  
 diff --git a/src/gui/wxgui/MainWindow.cpp b/src/gui/wxgui/MainWindow.cpp
-index c1826ae..90d22fd 100644
+index c17bdb0..72ee936 100644
 --- a/src/gui/wxgui/MainWindow.cpp
 +++ b/src/gui/wxgui/MainWindow.cpp
-@@ -1748,7 +1748,8 @@ void MainWindow::SetMenuVisible(bool state)
+@@ -1757,7 +1757,8 @@ void MainWindow::SetMenuVisible(bool state)
  	if (m_menu_visible == state)
  		return;
  
@@ -62,7 +62,7 @@ index c1826ae..90d22fd 100644
  	m_menu_visible = state;
  }
  
-@@ -2326,7 +2327,8 @@ void MainWindow::RecreateMenu()
+@@ -2347,7 +2348,8 @@ void MainWindow::RecreateMenu()
  
  	m_menuBar->Append(helpMenu, _("&Help"));
  
