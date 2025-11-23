@@ -3,8 +3,8 @@
 # lib32bit
 #
 ################################################################################
-# Version: Commits on Nov 22, 2025
-LIB32BIT_VERSION = 20251122
+# Version: Commits on Nov 23, 2025
+LIB32BIT_VERSION = 20251123
 LIB32BIT_SOURCE = batocera-rpi4-32bit-libs-$(LIB32BIT_VERSION).tar.xz
 LIB32BIT_SITE = https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(LIB32BIT_VERSION)
 
