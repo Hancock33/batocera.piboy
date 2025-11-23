@@ -3,8 +3,8 @@
 # libretro-ep128emu
 #
 ################################################################################
-# Version: Commits on Jul 20, 2025
-LIBRETRO_EP128EMU_VERSION = edc6da073ec4e6120edfe6d063e49415f21bbdf4
+# Version: Commits on Nov 23, 2025
+LIBRETRO_EP128EMU_VERSION = 812dd1b35225b64d9392a3e21de28c3a5861ddf7
 LIBRETRO_EP128EMU_SITE = $(call github,libretro,ep128emu-core,$(LIBRETRO_EP128EMU_VERSION))
 LIBRETRO_EP128EMU_LICENSE = GPL-2.0
 
