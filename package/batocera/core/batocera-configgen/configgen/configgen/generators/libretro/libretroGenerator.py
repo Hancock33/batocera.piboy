@@ -375,6 +375,7 @@ class LibretroGenerator(Generator):
             if rom.suffix.lower() in ['.hd', '.gemdos']:
                 #don't pass hd drive as parameter, it need to be added in configuration
                 dontAppendROM = True
+                targetlink.unlink(missing_ok=True)
                 targetlink.symlink_to(rom)
 
         if not dontAppendROM:
