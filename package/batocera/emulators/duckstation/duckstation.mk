@@ -61,4 +61,13 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansSC-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansSC-VariableFont_wght.ttf
 endef
 
+ifeq ($(BR2_PACKAGE_BATOCERA_QT6),)
+define DUCKSTATION_EVMPAY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+endif
+
+DUCKSTATION_POST_INSTALL_TARGET_HOOKS += DUCKSTATION_EVMPAY
+
 $(eval $(cmake-package))
