@@ -36,10 +36,10 @@ index 73197b31926a..704bfdac5203 100644
  --------------------
  
 diff --git a/MAINTAINERS b/MAINTAINERS
-index e64b94e6b5a9..11bcaa185dd4 100644
+index 6df89b14b521..ed5bd3614a06 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -14135,6 +14135,17 @@ L:	platform-driver-x86@vger.kernel.org
+@@ -14134,6 +14134,17 @@ L:	platform-driver-x86@vger.kernel.org
  S:	Maintained
  F:	drivers/platform/x86/lenovo/wmi-hotkey-utilities.c
  
@@ -409,7 +409,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 87fb2e783f74..7fb46d1c0cf2 100644
+index ad84ccf1ffe7..c6d50c5deced 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -158,6 +158,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -422,7 +422,7 @@ index 87fb2e783f74..7fb46d1c0cf2 100644
  /**
   * DOC: overview
   *
-@@ -9489,7 +9492,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9627,7 +9630,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -657,10 +657,10 @@ index b353fd819989..2bae6f91262f 100644
  	return 0;
  }
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 768fe0a107ab..fb034c28202f 100644
+index d3aa204bd34c..74e381cf6ada 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
-@@ -732,6 +732,10 @@
+@@ -734,6 +734,10 @@
  #define USB_DEVICE_ID_ITE8595		0x8595
  #define USB_DEVICE_ID_ITE_MEDION_E1239T	0xce50
  
@@ -671,7 +671,7 @@ index 768fe0a107ab..fb034c28202f 100644
  #define USB_VENDOR_ID_JABRA		0x0b0e
  #define USB_DEVICE_ID_JABRA_SPEAK_410	0x0412
  #define USB_DEVICE_ID_JABRA_SPEAK_510	0x0420
-@@ -1065,6 +1069,7 @@
+@@ -1067,6 +1071,7 @@
  #define USB_VENDOR_ID_NOVATEK		0x0603
  #define USB_DEVICE_ID_NOVATEK_PCT	0x0600
  #define USB_DEVICE_ID_NOVATEK_MOUSE	0x1602
@@ -679,7 +679,7 @@ index 768fe0a107ab..fb034c28202f 100644
  
  #define USB_VENDOR_ID_NTI               0x0757
  #define USB_DEVICE_ID_USB_SUN           0x0a00
-@@ -1522,6 +1527,10 @@
+@@ -1524,6 +1529,10 @@
  #define USB_VENDOR_ID_ZYTRONIC		0x14c8
  #define USB_DEVICE_ID_ZYTRONIC_ZXY100	0x0005
  
@@ -691,13 +691,13 @@ index 768fe0a107ab..fb034c28202f 100644
  #define USB_DEVICE_ID_PRIMAX_MOUSE_4D22	0x4d22
  #define USB_DEVICE_ID_PRIMAX_MOUSE_4E2A	0x4e2a
 diff --git a/drivers/hid/hid-input.c b/drivers/hid/hid-input.c
-index a808fec00f15..75cb576d0ff9 100644
+index a1d5885f3946..f9faec23c165 100644
 --- a/drivers/hid/hid-input.c
 +++ b/drivers/hid/hid-input.c
-@@ -405,6 +405,8 @@ static const struct hid_device_id hid_battery_quirks[] = {
- 	 * set HID_BATTERY_QUIRK_IGNORE for all Elan I2C-HID devices.
+@@ -406,6 +406,8 @@ static const struct hid_device_id hid_battery_quirks[] = {
  	 */
  	{ HID_I2C_DEVICE(USB_VENDOR_ID_ELAN, HID_ANY_ID), HID_BATTERY_QUIRK_IGNORE },
+ 	{ HID_USB_DEVICE(USB_VENDOR_ID_ELAN, HID_ANY_ID), HID_BATTERY_QUIRK_IGNORE },
 +	{ HID_I2C_DEVICE(USB_VENDOR_ID_NOVATEK, I2C_DEVICE_ID_ONEXPLAYER_X1),
 +	  HID_BATTERY_QUIRK_IGNORE },
  	{}
@@ -8442,22 +8442,23 @@ index 08f44baf182a..3af524ccf4a5 100644
  
  void ath12k_mhi_suspend(struct ath12k_pci *ab_pci)
 diff --git a/drivers/platform/x86/Kconfig b/drivers/platform/x86/Kconfig
-index aef7e8a746fa..514d291a5e2d 100644
+index ea1aff5d8a3f..75b17baee8c9 100644
 --- a/drivers/platform/x86/Kconfig
 +++ b/drivers/platform/x86/Kconfig
-@@ -567,8 +567,11 @@ config MSI_WMI
+@@ -567,9 +567,12 @@ config MSI_WMI
  
  config MSI_WMI_PLATFORM
  	tristate "MSI WMI Platform features"
 +	depends on ACPI_BATTERY
  	depends on ACPI_WMI
+ 	depends on DMI
  	depends on HWMON
 +	select ACPI_PLATFORM_PROFILE
 +	select FW_ATTR_CLASS
  	help
  	  Say Y here if you want to have support for WMI-based platform features
  	  like fan sensor access on MSI machines.
-@@ -1059,6 +1062,16 @@ config OXP_EC
+@@ -1060,6 +1063,16 @@ config OXP_EC
  
  source "drivers/platform/x86/tuxedo/Kconfig"
  
@@ -8487,7 +8488,7 @@ index 4b1220f9b194..010f695de80a 100644
  # OneXPlayer
  obj-$(CONFIG_OXP_EC)			+= oxpec.o
 diff --git a/drivers/platform/x86/msi-wmi-platform.c b/drivers/platform/x86/msi-wmi-platform.c
-index dc5e9878cb68..b00b2b52e0f2 100644
+index e912fcc12d12..9f30e3406f3c 100644
 --- a/drivers/platform/x86/msi-wmi-platform.c
 +++ b/drivers/platform/x86/msi-wmi-platform.c
 @@ -1,8 +1,9 @@
@@ -8502,11 +8503,9 @@ index dc5e9878cb68..b00b2b52e0f2 100644
   */
  
  #define pr_format(fmt) KBUILD_MODNAME ": " fmt
-@@ -14,27 +15,40 @@
- #include <linux/debugfs.h>
- #include <linux/device.h>
+@@ -16,14 +17,26 @@
  #include <linux/device/driver.h>
-+#include <linux/dmi.h>
+ #include <linux/dmi.h>
  #include <linux/errno.h>
 +#include <linux/fixp-arith.h>
 +#include <linux/platform_profile.h>
@@ -8524,14 +8523,14 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  #include <linux/types.h>
  #include <linux/wmi.h>
 +#include <acpi/battery.h>
++
++#include <linux/unaligned.h>
++ 
++#include "firmware_attributes_class.h"
  
  #include <linux/unaligned.h>
  
-+#include "firmware_attributes_class.h"
-+
- #define DRIVER_NAME	"msi-wmi-platform"
- 
- #define MSI_PLATFORM_GUID	"ABBC0F6E-8EA1-11d1-00A0-C90629100000"
+@@ -33,9 +46,11 @@
  
  #define MSI_WMI_PLATFORM_INTERFACE_VERSION	2
  
@@ -8543,7 +8542,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  #define MSI_PLATFORM_EC_FLAGS_OFFSET	1
  #define MSI_PLATFORM_EC_MINOR_MASK	GENMASK(3, 0)
  #define MSI_PLATFORM_EC_MAJOR_MASK	GENMASK(5, 4)
-@@ -42,6 +56,33 @@
+@@ -43,6 +58,33 @@
  #define MSI_PLATFORM_EC_IS_TIGERLAKE	BIT(7)
  #define MSI_PLATFORM_EC_VERSION_OFFSET	2
  
@@ -8577,7 +8576,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  static bool force;
  module_param_unsafe(force, bool, 0);
  MODULE_PARM_DESC(force, "Force loading without checking for supported WMI interface versions");
-@@ -78,9 +119,68 @@ enum msi_wmi_platform_method {
+@@ -79,9 +121,68 @@ enum msi_wmi_platform_method {
  	MSI_PLATFORM_GET_WMI		= 0x1d,
  };
  
@@ -8646,7 +8645,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  };
  
  struct msi_wmi_platform_debugfs_data {
-@@ -123,6 +223,53 @@ static const char * const msi_wmi_platform_debugfs_names[] = {
+@@ -124,6 +225,53 @@ static const char * const msi_wmi_platform_debugfs_names[] = {
  	"get_wmi"
  };
  
@@ -8700,7 +8699,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  static int msi_wmi_platform_parse_buffer(union acpi_object *obj, u8 *output, size_t length)
  {
  	if (obj->type != ACPI_TYPE_BUFFER)
-@@ -139,45 +286,332 @@ static int msi_wmi_platform_parse_buffer(union acpi_object *obj, u8 *output, siz
+@@ -140,45 +288,332 @@ static int msi_wmi_platform_parse_buffer(union acpi_object *obj, u8 *output, siz
  	return 0;
  }
  
@@ -8813,8 +8812,8 @@ index dc5e9878cb68..b00b2b52e0f2 100644
 +		return ret;
 +
 +	return count;
-+}
-+
+ }
+ 
 +static ssize_t msi_wmi_platform_temp_table_show(struct device *dev, struct device_attribute *attr,
 +						char *buf)
 +{
@@ -8865,8 +8864,8 @@ index dc5e9878cb68..b00b2b52e0f2 100644
 +		return ret;
 +
 +	return count;
- }
- 
++}
++
 +static SENSOR_DEVICE_ATTR_2_RW(pwm1_auto_point1_temp, msi_wmi_platform_temp_table,
 +			       MSI_PLATFORM_FAN_SUBFEATURE_CPU_TEMP_TABLE, 0x0);
 +static SENSOR_DEVICE_ATTR_2_RW(pwm1_auto_point2_temp, msi_wmi_platform_temp_table,
@@ -9048,7 +9047,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  	return 0444;
  }
  
-@@ -185,28 +619,114 @@ static int msi_wmi_platform_read(struct device *dev, enum hwmon_sensor_types typ
+@@ -186,28 +621,114 @@ static int msi_wmi_platform_read(struct device *dev, enum hwmon_sensor_types typ
  				 int channel, long *val)
  {
  	struct msi_wmi_platform_data *data = dev_get_drvdata(dev);
@@ -9175,7 +9174,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  };
  
  static const struct hwmon_channel_info * const msi_wmi_platform_info[] = {
-@@ -216,6 +736,10 @@ static const struct hwmon_channel_info * const msi_wmi_platform_info[] = {
+@@ -217,6 +738,10 @@ static const struct hwmon_channel_info * const msi_wmi_platform_info[] = {
  			   HWMON_F_INPUT,
  			   HWMON_F_INPUT
  			   ),
@@ -9186,7 +9185,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  	NULL
  };
  
-@@ -224,8 +748,497 @@ static const struct hwmon_chip_info msi_wmi_platform_chip_info = {
+@@ -225,8 +750,497 @@ static const struct hwmon_chip_info msi_wmi_platform_chip_info = {
  	.info = msi_wmi_platform_info,
  };
  
@@ -9686,7 +9685,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  {
  	struct seq_file *seq = fp->private_data;
  	struct msi_wmi_platform_debugfs_data *data = seq->private;
-@@ -245,17 +1258,21 @@ static ssize_t msi_wmi_platform_write(struct file *fp, const char __user *input,
+@@ -246,17 +1260,21 @@ static ssize_t msi_wmi_platform_write(struct file *fp, const char __user *input,
  		return ret;
  
  	down_write(&data->buffer_lock);
@@ -9710,7 +9709,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  {
  	struct msi_wmi_platform_debugfs_data *data = seq->private;
  	int ret;
-@@ -267,19 +1284,19 @@ static int msi_wmi_platform_show(struct seq_file *seq, void *p)
+@@ -268,19 +1286,19 @@ static int msi_wmi_platform_show(struct seq_file *seq, void *p)
  	return ret;
  }
  
@@ -9734,7 +9733,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  	.llseek = seq_lseek,
  	.release = single_release,
  };
-@@ -340,31 +1357,32 @@ static int msi_wmi_platform_hwmon_init(struct msi_wmi_platform_data *data)
+@@ -341,31 +1359,32 @@ static int msi_wmi_platform_hwmon_init(struct msi_wmi_platform_data *data)
  {
  	struct device *hdev;
  
@@ -9775,7 +9774,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  
  	if (!(flags & MSI_PLATFORM_EC_IS_TIGERLAKE)) {
  		if (!force)
-@@ -378,35 +1396,46 @@ static int msi_wmi_platform_ec_init(struct msi_wmi_platform_data *data)
+@@ -379,35 +1398,46 @@ static int msi_wmi_platform_ec_init(struct msi_wmi_platform_data *data)
  
  static int msi_wmi_platform_init(struct msi_wmi_platform_data *data)
  {
@@ -9831,7 +9830,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  	int ret;
  
  	data = devm_kzalloc(&wdev->dev, sizeof(*data), GFP_KERNEL);
-@@ -416,6 +1445,12 @@ static int msi_wmi_platform_probe(struct wmi_device *wdev, const void *context)
+@@ -417,6 +1447,12 @@ static int msi_wmi_platform_probe(struct wmi_device *wdev, const void *context)
  	data->wdev = wdev;
  	dev_set_drvdata(&wdev->dev, data);
  
@@ -9844,7 +9843,7 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  	ret = devm_mutex_init(&wdev->dev, &data->wmi_lock);
  	if (ret < 0)
  		return ret;
-@@ -428,11 +1463,44 @@ static int msi_wmi_platform_probe(struct wmi_device *wdev, const void *context)
+@@ -429,11 +1465,44 @@ static int msi_wmi_platform_probe(struct wmi_device *wdev, const void *context)
  	if (ret < 0)
  		return ret;
  
@@ -9889,14 +9888,14 @@ index dc5e9878cb68..b00b2b52e0f2 100644
  static const struct wmi_device_id msi_wmi_platform_id_table[] = {
  	{ MSI_PLATFORM_GUID, NULL },
  	{ }
-@@ -446,6 +1514,7 @@ static struct wmi_driver msi_wmi_platform_driver = {
+@@ -447,6 +1516,7 @@ static struct wmi_driver msi_wmi_platform_driver = {
  	},
  	.id_table = msi_wmi_platform_id_table,
  	.probe = msi_wmi_platform_probe,
 +	.remove = msi_wmi_platform_remove,
  	.no_singleton = true,
  };
- module_wmi_driver(msi_wmi_platform_driver);
+ 
 diff --git a/drivers/platform/x86/zotac-zone-platform.c b/drivers/platform/x86/zotac-zone-platform.c
 new file mode 100644
 index 000000000000..d097f7b9c5a0

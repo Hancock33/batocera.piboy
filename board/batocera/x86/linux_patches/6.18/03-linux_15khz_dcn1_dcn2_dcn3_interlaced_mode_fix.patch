@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 91c0188a29b2..fa589be74119 100644
+index 2a7a491a62e0..a40f2b2a1176 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -6470,6 +6470,8 @@ static void fill_stream_properties_from_drm_display_mode(
+@@ -6597,6 +6597,8 @@ static void fill_stream_properties_from_drm_display_mode(
  			timing_out->flags.HSYNC_POSITIVE_POLARITY = 1;
  		if (mode_in->flags & DRM_MODE_FLAG_PVSYNC)
  			timing_out->flags.VSYNC_POSITIVE_POLARITY = 1;
@@ -11,7 +11,7 @@ index 91c0188a29b2..fa589be74119 100644
  	}
  
  	if (stream->signal == SIGNAL_TYPE_HDMI_TYPE_A) {
-@@ -7077,6 +7079,8 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -7204,6 +7206,8 @@ create_stream_for_sink(struct drm_connector *connector,
  
  	if (recalculate_timing)
  		drm_mode_set_crtcinfo(&saved_mode, 0);
@@ -20,7 +20,7 @@ index 91c0188a29b2..fa589be74119 100644
  
  	/*
  	 * If scaling is enabled and refresh rate didn't change
-@@ -7791,8 +7795,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
+@@ -7925,8 +7929,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
  	 */
  	struct amdgpu_dm_connector *aconnector = to_amdgpu_dm_connector(connector);
  
@@ -30,7 +30,7 @@ index 91c0188a29b2..fa589be74119 100644
  		return result;
  
  	/*
-@@ -8537,7 +8540,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -8671,7 +8674,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->connector_id = link_index;
  	aconnector->bl_idx = -1;
  	aconnector->dc_link = link;
@@ -107,10 +107,10 @@ index e9fe97f0c4ea..9b64df570862 100644
  			pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  }
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-index 9477c9f9e196..4f2e56fbdbac 100644
+index 59c42db5382e..4652b8dba1cc 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-@@ -1770,6 +1770,9 @@ void dcn20_update_dchubp_dpp(
+@@ -1778,6 +1778,9 @@ void dcn20_update_dchubp_dpp(
  		pipe_ctx->plane_res.scl_data.lb_params.alpha_en = pipe_ctx->plane_state->per_pixel_alpha;
  		ASSERT(pipe_ctx->plane_res.scl_data.lb_params.depth == LB_PIXEL_DEPTH_36BPP);
  		/* scaler configuration */

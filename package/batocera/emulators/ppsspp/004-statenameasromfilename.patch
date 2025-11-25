@@ -11,11 +11,11 @@ index 684ad2a17e..99fcb44f94 100644
  		return GetSysDirectory(DIRECTORY_SAVESTATE) / filename;
  	}
  
-diff --git a/Core/System.cpp b/Core/System.cpp
-index 5136ddcfd9..e6caede6d8 100644
---- a/Core/System.cpp
-+++ b/Core/System.cpp
-@@ -791,7 +791,7 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+diff --git a/Core/Util/PathUtil.cpp b/Core/Util/PathUtil.cpp
+index fe0aaed13e..a50ca2f402 100644
+--- a/Core/Util/PathUtil.cpp
++++ b/Core/Util/PathUtil.cpp
+@@ -66,7 +66,7 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  	case DIRECTORY_DUMP:
  		return pspDirectory / "SYSTEM/DUMP";
  	case DIRECTORY_SAVESTATE:

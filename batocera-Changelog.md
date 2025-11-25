@@ -53,18 +53,23 @@
 - Jazz2 to 3.4.0
 - Libretro MAME to 0.281
 - Libretro Play! to 0.71
+- Libretro Opera to 17th of October 2024 build
 - MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenMOHAA to v0.82.1
 - Play! to 0.71
 - RPCS3 to v0.0.38
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_11_0
+- Sonic 2013 to 1.3.3
+- Sonic CD to 1.3.3
+- Sonic Mania to v1.1.1
 - Supermodel to 13th of November 2025 build
 - Taradino to 20250816
 - TheXTech to v1.3.7.1-2
 - TheForceEngine to v1.22.420
+- VkQuake to 19th of November 2025 build 
 - Xash3D FWGS engine to Oct 17 build
-- Xemu to v0.8.108
+- Xemu to v0.8.115
 - Ymir to 0.2.0
 ### System
 - Bluez to 5.84
