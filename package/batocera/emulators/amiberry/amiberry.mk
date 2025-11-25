@@ -11,8 +11,11 @@ AMIBERRY_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg1
 AMIBERRY_DEPENDENCIES += portmidi sdl2 sdl2_image sdl2_ttf zlib
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
 
-ifeq ($(BR2_PACKAGE_LIBGLEW),y)
-    AMIBERRY_DEPENDENCIES += libglew
+ifeq ($(BR2_PACKAGE_LIBGLEW)$(BR2_PACKAGE_LIBGLU),yy)
+    AMIBERRY_DEPENDENCIES += libglew libglu
+    AMIBERRY_CONF_OPTS += -DUSE_OPENGL=ON
+else
+    AMIBERRY_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
 AMIBERRY_CONF_OPTS += -DWITH_LTO=ON
