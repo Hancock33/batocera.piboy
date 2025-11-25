@@ -5,6 +5,11 @@ enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.ena
 
 case "$1" in
 	start)
+		echo always > /sys/kernel/mm/transparent_hugepage/enabled
+		echo advise > /sys/kernel/mm/transparent_hugepage/shmem_enabled
+		echo 0 > /proc/sys/vm/compaction_proactiveness
+		echo 0 > /sys/kernel/mm/transparent_hugepage/khugepaged/defrag
+
 		if [ "$enabled" = "1" ];then
 			echo "Starting PiBoy"
 			modprobe xpi_gamecon
