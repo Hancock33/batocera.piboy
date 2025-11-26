@@ -3,8 +3,8 @@
 # corsixth
 #
 ################################################################################
-# Version: Commits on Nov 24, 2025
-CORSIXTH_VERSION = 6005581722b895d835b60a26f1f16cedd07c9aae
+# Version: Commits on Nov 25, 2025
+CORSIXTH_VERSION = 5679889b3bb02180e575b5401853e7c0102c9b78
 CORSIXTH_SITE = $(call github,CorsixTH,CorsixTH,$(CORSIXTH_VERSION))
 CORSIXTH_DEPENDENCIES = ffmpeg libcurl lpeg lua luafilesystem lua-lpeg-patterns luasec luasocket rtmidi sdl2 sdl2_image sdl2_mixer
 CORSIXTH_LICENSE = GPL-2.0

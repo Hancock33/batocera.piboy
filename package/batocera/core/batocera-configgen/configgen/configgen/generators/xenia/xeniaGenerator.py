@@ -43,7 +43,7 @@ class XeniaGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # Use wine proton
-        wine_runner = wine.Runner("wine-proton", 'xbox360')
+        wine_runner = wine.Runner("wine-custom", 'xbox360')
 
         xeniaConfig = CONFIGS / 'xenia'
         xeniaCache = CACHE / 'xenia'
