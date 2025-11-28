@@ -62,7 +62,7 @@ Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727
 Controllers|[xpad-noone](http://github.com/forkymcforkface/xpad-noone)|8e903676dd9514c07ce5e06e43c5f7d8cc51cb7d|Jun 26, 2025
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|a16acb03e7be191d47ebfbc8ca1d5223422dac3e|Jul 04, 2025
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|d454288864605823efdd716eb93a9a5b5602ab68|Nov 26, 2025
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|89e73ab7ba07de0cb95fa5aa37bd3e095d2c6700|Nov 27, 2025
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|17fd68a47e9d25f1f1880911a4931c4b916ae125|May 06, 2025
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
@@ -523,8 +523,8 @@ Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ab5ac3aae86b24632989e91c051dd739f0b675c1|Nov 27, 2025
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.3.3|Sept 20, 2025
-Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|4f1035cb37ba8c2f6e501aa4166300a4a5e930f0|Nov 26, 2025
-Sources|[mame-src](http://github.com/mamedev/mame)|mame0282|Oct 31, 2025
+Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|62459ac06e770a7397fab878eee89f5742e5a79b|Nov 28, 2025
+Sources|[mame-src](http://github.com/mamedev/mame)|mame0283|Nov 28, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.2|Oct 21, 2025
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
@@ -580,7 +580,7 @@ Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|4a9a45ccaf9b90
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-10.3.0|Oct 13, 2025
 Wine|[wine-native](http://github.com/wine-mirror/wine)|wine-10.0|Jan 21, 2025
 Wine|[wine-ntsync](http://github.com/Hancock33/wine-tkg-batocera)|ntsync7-10.0|Jan 21, 2025
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20251120-proton-slr|Nov 20, 2025
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20251126-proton-slr|Nov 26, 2025
 Wine|[wine-staging](http://github.com/wine-mirror/wine)|wine-10.5|Apr 04, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251125|Nov 25, 2025
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|533f41704766765cfb3706fb2aa197acbb05df32|Nov 04, 2025

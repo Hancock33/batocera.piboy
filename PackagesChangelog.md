@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|62459ac06e770a7397fab878eee89f5742e5a79b|Nov 28, 2025
+Sources|[mame-src](http://github.com/mamedev/mame)|mame0283|Nov 28, 2025
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|89e73ab7ba07de0cb95fa5aa37bd3e095d2c6700|Nov 27, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|bd0608ac9c946e2a19df0378bf1dc46ca43d0d8c|Nov 27, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|bd0608ac9c946e2a19df0378bf1dc46ca43d0d8c|Nov 27, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|6c8ccc1c7ed90f325a12214a4ce32313105bbb29|Nov 27, 2025
@@ -29,7 +32,6 @@ Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ab5ac3aae86b2463298
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|3609f054a65aea4b4cab5a87b2fdc876d911d244|Nov 27, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|e5bafa4264e88cf2699e44740e2580ced0454a90|Nov 27, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|7a3a0c64efd11c196cc320c1bbbb14c93a4da104|Nov 27, 2025
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|d454288864605823efdd716eb93a9a5b5602ab68|Nov 26, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|024df6b20fdc63600f0bbc28cb034bc46da8aac7|Nov 26, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|cc6bfeb976b97ed71998448c9ed6392f6d668b44|Nov 26, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|825d54d965ed61f6499d83ab2a8c3350917e9cfa|Nov 26, 2025
@@ -37,7 +39,7 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45871|Nov 26, 2025
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|95f4b5cc089843f245896dba3eba969b2bab1b1d|Nov 26, 2025
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|12d45da546964f13ba89aa0432e97a213f485b2f|Nov 26, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a5bacb5aa26d14c8aeee646763de7b0a0c656c5b|Nov 26, 2025
-Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|4f1035cb37ba8c2f6e501aa4166300a4a5e930f0|Nov 26, 2025
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20251126-proton-slr|Nov 26, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|44202fcf63b0e5eaa6dbea7e7404753026bb994c|Nov 26, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|7c3f07689bc8a046dcd5419232da4e5265fe86d9|Nov 26, 2025
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|ec7ad887c777a7924fdc786a9c5901e65d4c6cd0|Nov 26, 2025
@@ -86,7 +88,6 @@ Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|3e94dd09a23f3f90c99713f5af34532e20dd9db7|Nov 20, 2025
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|f4e0cbdc034d955d687d067154e70796766eb1cb|Nov 20, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|831186f99d22798fdb42c4c058b6e7e6f42a140b|Nov 20, 2025
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20251120-proton-slr|Nov 20, 2025
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|6fb6e7101d7b4484cd19604c2e304e2038ca1dc5|Nov 20, 2025
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|3c7d2be6d7abec36add420fd3aeb99c65da3c70b|Nov 19, 2025
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
@@ -172,7 +173,6 @@ Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|6ecf959
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0282|Oct 31, 2025
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.4.0|Oct 31, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|03c2503dee6cbbdf658a6d95064dd0de3b8d8277|Oct 31, 2025
-Sources|[mame-src](http://github.com/mamedev/mame)|mame0282|Oct 31, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0282|Oct 31, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.26|Oct 30, 2025
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|9e6ebda5f5601e87bebb7bc39f6cb65b6731e86d|Oct 29, 2025
