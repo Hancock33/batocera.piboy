@@ -7454,8 +7454,8 @@ msgid ""
 "Enable MelonDS to display over two screens. Some related screen options will "
 "be ignored."
 msgstr ""
-"Permitir que MelonDS exiba em duas telas. Algumas opções de tela relacionadas "
-"serão ignoradas."
+"Permitir que MelonDS exiba em duas telas. Algumas opções de tela "
+"relacionadas serão ignoradas."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
