@@ -27,8 +27,10 @@ Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|6fb61b398c49c44
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0283|Nov 28, 2025
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|c3bb98945be0c6cb4ef54e9bbc1647a2b1bb4a6c|Nov 28, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|6c2a0c8d892e1dc3e5b08bb90aa32307734323ce|Nov 28, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251128|Nov 28, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|cbfc87488e446c446d5b5ded1d99a0df2273d499|Nov 28, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a5dec7028495a0c6e36abccbca6178b5bc2e8b4f|Nov 28, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251128|Nov 28, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|998be64cadc8146df4fa45af97cdfaeaaf16f59a|Nov 28, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|1420c90299b1d9f4ef59373b3e5fa538a1e17a65|Nov 28, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|764693f8055d6fefcf4163c8575c7965141bf805|Nov 28, 2025
@@ -60,8 +62,6 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5679889b3bb02180e575b54018
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d21bd747fac623e10959a5da6e2b722ffde2eb69|Nov 25, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|3c3683536bbcd1bf2ee49e2a85869b41b0bcd722|Nov 25, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.12-rc.1|Nov 25, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251125|Nov 25, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251125|Nov 25, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|334654204d5b70b0e29a8a4d85622eb684140807|Nov 24, 2025
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|59101ab757be25cd658c9dc7656f7c736dbf1014|Nov 24, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|c8c7983eaded808dc72cb2b1404ef19e11e1e1d3|Nov 24, 2025
