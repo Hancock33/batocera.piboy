@@ -1,5 +1,5 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 7f1cbbd33..176d8641a 100644
+index ff0eff710..0599d2b23 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
 @@ -4977,12 +4977,12 @@ void System::WarnAboutUnsafeSettings()
@@ -40,7 +40,7 @@ index 122811c4d..b51ded2c9 100644
      // kick a game list refresh if we're not in batch mode
      if (!s_state.batch_mode)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index 993cd9ade..c8a3d7028 100644
+index 993cd9ade..6970ec101 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
 @@ -3344,7 +3344,7 @@ int main(int argc, char* argv[])
@@ -52,3 +52,12 @@ index 993cd9ade..c8a3d7028 100644
  
    // Start logging early.
    LogWindow::updateSettings();
+@@ -3383,7 +3383,7 @@ int main(int argc, char* argv[])
+     s_state.start_fullscreen_ui_fullscreen = false;
+ 
+   // Always kick off update check. It'll take over if the user is booting a game fullscreen.
+-  g_main_window->startupUpdateCheck();
++  //g_main_window->startupUpdateCheck();
+ 
+   if (autoboot)
+     g_emu_thread->bootSystem(std::move(autoboot));
