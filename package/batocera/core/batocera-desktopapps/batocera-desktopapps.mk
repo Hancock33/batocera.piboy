@@ -4,8 +4,7 @@
 #
 ################################################################################
 BATOCERA_DESKTOPAPPS_VERSION = 1.0
-BATOCERA_DESKTOPAPPS_SOURCE=
-BATOCERA_DESKTOPAPPS_DEPENDENCIES = yad
+BATOCERA_DESKTOPAPPS_SOURCE =
 
 BATOCERA_DESKTOPAPPS_SCRIPTS = filemanagerlauncher
 BATOCERA_DESKTOPAPPS_APPS    = xterm.desktop
@@ -183,6 +182,7 @@ endif
 
 # wine
 ifeq ($(BR2_PACKAGE_BATOCERA_WINE),y)
+  BATOCERA_DESKTOPAPPS_DEPENDENCIES += yad
   BATOCERA_DESKTOPAPPS_TOOLBOX  = wine.toolbox
   BATOCERA_DESKTOPAPPS_ACTIONS += wine.toolbox.configit.desktop
   BATOCERA_DESKTOPAPPS_ACTIONS += wine.toolbox.wsquashfs.desktop
