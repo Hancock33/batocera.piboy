@@ -1,7 +1,7 @@
 config BR2_PACKAGE_BATOCERA_DESKTOPAPPS
 	bool "batocera-desktopapps"
+	depends on BR2_PACKAGE_XORG7
 	depends on BR2_PACKAGE_PCMANFM     # file manager
-	depends on BR2_PACKAGE_XORG71
 	select BR2_PACKAGE_YAD             if BR2_PACKAGE_BATOCERA_WINE
 
 	help
