@@ -5,6 +5,7 @@
 ################################################################################
 BATOCERA_DESKTOPAPPS_VERSION = 1.0
 BATOCERA_DESKTOPAPPS_SOURCE=
+BATOCERA_DESKTOPAPPS_DEPENDENCIES = yad
 
 BATOCERA_DESKTOPAPPS_SCRIPTS = filemanagerlauncher
 BATOCERA_DESKTOPAPPS_APPS    = xterm.desktop
