@@ -1,10 +1,33 @@
 diff --git a/Makefile b/Makefile
-index 5c4c58e2..9f44f37f 100644
+index 5c4c58e2..a3b87661 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -35,7 +35,6 @@ srcFiles=src/resources/defaultConfig.ini \
+@@ -15,16 +15,18 @@ srcFiles=src/resources/defaultConfig.ini \
+ 	src/config.go \
+ 	src/dllsearch_windows.go \
+ 	src/font.go \
++	src/font_vk.go \
+ 	src/image.go \
+ 	src/iniutils.go \
+ 	src/input.go \
+-	src/input_glfw.go \
++	src/input_sdl.go \
+ 	src/lifebar.go \
+ 	src/main.go \
+ 	src/net.go \
+ 	src/render.go \
+ 	src/render_gl.go \
+ 	src/render_gl_gl32.go \
++	src/render_vk.go \
+ 	src/rollback.go \
+ 	src/script.go \
+ 	src/sound.go \
+@@ -33,9 +35,8 @@ srcFiles=src/resources/defaultConfig.ini \
+ 	src/state_clone.go \
+ 	src/stdout_windows.go \
  	src/system.go \
- 	src/system_glfw.go \
+-	src/system_glfw.go \
++	src/system_sdl.go \
  	src/util_desktop.go \
 -	src/util_js.go \
  	src/util_raw.go \
