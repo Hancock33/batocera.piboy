@@ -6,6 +6,7 @@ broadcom-bt-firmware.mk
 btop.mk
 cargs.mk
 chromebook-ucm-conf.mk
+clk.mk
 d8vk.mk
 db9_gpio_rpi.mk
 dosbox-x.mk

@@ -1,8 +1,8 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index 7a5a3f89b..83b54b857 100644
+index 3e12515a7..f21a54c54 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
-@@ -2301,30 +2301,30 @@ InputManager::DeviceEffectList InputManager::EnumerateDeviceEffects(std::optiona
+@@ -2300,30 +2300,30 @@ InputManager::DeviceEffectList InputManager::EnumerateDeviceEffects(std::optiona
  
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {

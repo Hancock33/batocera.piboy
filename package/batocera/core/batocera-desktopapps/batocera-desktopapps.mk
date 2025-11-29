@@ -4,11 +4,13 @@
 #
 ################################################################################
 BATOCERA_DESKTOPAPPS_VERSION = 1.0
-BATOCERA_DESKTOPAPPS_SOURCE=
+BATOCERA_DESKTOPAPPS_SOURCE =
 
 BATOCERA_DESKTOPAPPS_SCRIPTS = filemanagerlauncher
-BATOCERA_DESKTOPAPPS_APPS  = xterm.desktop
-BATOCERA_DESKTOPAPPS_ICONS =
+BATOCERA_DESKTOPAPPS_APPS    = xterm.desktop
+BATOCERA_DESKTOPAPPS_ICONS   =
+BATOCERA_DESKTOPAPPS_TOOLBOX =
+BATOCERA_DESKTOPAPPS_ACTIONS = system.md5sum.desktop
 
 #file-roller integration for pcmanfm - open/list archives
 BATOCERA_DESKTOPAPPS_APPS    += file-roller-mimics.desktop
@@ -177,11 +179,12 @@ ifeq ($(BR2_PACKAGE_LINDBERGH_LOADER),y)
 endif
 
 ## Context Menu Actions
-BATOCERA_DESKTOPAPPS_ACTIONS = system.md5sum.desktop
 
 # wine
 ifeq ($(BR2_PACKAGE_BATOCERA_WINE),y)
+  BATOCERA_DESKTOPAPPS_DEPENDENCIES += yad
   BATOCERA_DESKTOPAPPS_TOOLBOX  = wine.toolbox
+  BATOCERA_DESKTOPAPPS_ACTIONS += wine.toolbox.configit.desktop
   BATOCERA_DESKTOPAPPS_ACTIONS += wine.toolbox.wsquashfs.desktop
   BATOCERA_DESKTOPAPPS_ACTIONS += wine.toolbox.symlinkprefix.desktop
   BATOCERA_DESKTOPAPPS_ACTIONS += wine.toolbox.listprefix.desktop

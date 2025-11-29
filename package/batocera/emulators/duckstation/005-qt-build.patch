@@ -1,0 +1,13 @@
+diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
+index c92df0405..c73a51b72 100644
+--- a/CMakeModules/DuckStationDependencies.cmake
++++ b/CMakeModules/DuckStationDependencies.cmake
+@@ -73,7 +73,7 @@ if(BUILD_QT_FRONTEND)
+ 
+   # Have to verify it down here, don't want users using unpatched Qt.
+   if(NOT Qt6_DIR MATCHES "^${CMAKE_PREFIX_PATH}")
+-    message(FATAL_ERROR "Using incorrect Qt library. Check your dependencies.")
++    #message(FATAL_ERROR "Using incorrect Qt library. Check your dependencies.")
+   endif()
+ endif()
+ 

@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index b45d84715..2602f7884 100644
+index 7f1cbbd33..176d8641a 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -4875,12 +4875,12 @@ void System::WarnAboutUnsafeSettings()
+@@ -4977,12 +4977,12 @@ void System::WarnAboutUnsafeSettings()
      if (g_settings.cpu_execution_mode == CPUExecutionMode::CachedInterpreter)
        append(TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
  
@@ -18,10 +18,10 @@ index b45d84715..2602f7884 100644
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
 diff --git a/src/duckstation-mini/mini_host.cpp b/src/duckstation-mini/mini_host.cpp
-index def940f43..e7859bb5c 100644
+index 122811c4d..b51ded2c9 100644
 --- a/src/duckstation-mini/mini_host.cpp
 +++ b/src/duckstation-mini/mini_host.cpp
-@@ -160,7 +160,7 @@ bool MiniHost::EarlyProcessStartup()
+@@ -159,7 +159,7 @@ bool MiniHost::EarlyProcessStartup()
      return false;
    }
  
@@ -30,7 +30,7 @@ index def940f43..e7859bb5c 100644
    //
    // To those distributing their own builds or packages of DuckStation, and seeing this message:
    //
-@@ -1004,7 +1004,7 @@ void MiniHost::CPUThreadEntryPoint()
+@@ -975,7 +975,7 @@ void MiniHost::CPUThreadEntryPoint()
    // start the fullscreen UI and get it going
    if (GPUThread::StartFullscreenUI(s_state.start_fullscreen_ui_fullscreen, &error))
    {
@@ -40,15 +40,15 @@ index def940f43..e7859bb5c 100644
      // kick a game list refresh if we're not in batch mode
      if (!s_state.batch_mode)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index 0eb7c9e35..1dd6562c7 100644
+index 993cd9ade..c8a3d7028 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
-@@ -3409,7 +3409,7 @@ int main(int argc, char* argv[])
+@@ -3344,7 +3344,7 @@ int main(int argc, char* argv[])
    QtHost::UpdateApplicationTheme();
  
    // Build warning.
--  AutoUpdaterWindow::warnAboutUnofficialBuild();
-+  // AutoUpdaterWindow::warnAboutUnofficialBuild();
+-  AutoUpdaterDialog::warnAboutUnofficialBuild();
++  //AutoUpdaterDialog::warnAboutUnofficialBuild();
  
    // Start logging early.
    LogWindow::updateSettings();

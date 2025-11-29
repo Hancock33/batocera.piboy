@@ -314,6 +314,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
     select BR2_PACKAGE_KEYBOARDTOPADS
     select BR2_PACKAGE_NSO_N64
+    select BR2_PACKAGE_ROCKNIX_JOYPAD                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
 

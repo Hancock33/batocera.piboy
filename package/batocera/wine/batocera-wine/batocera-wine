@@ -1121,16 +1121,18 @@ case "${ACTION}" in
     exit $?
     ;;
 
-    "autorun"|"autorun-list")
+    "autorun"|"autorun-list"|"autorun-count")
         # Create autorunfile, works only in SSH mode, recommended is arg1=gamepath, arg2=searchmask
         # It's held small: "batocera-wine windows autorun . bin" will search current directory in dir bin
         [[ -z "${GAMENAME}" ]] && GAMENAME="$PWD"
         [[ -z "${AUTORUN_FILEMASK}" ]] && AUTORUN_FILEMASK="."
-        pushd "${GAMENAME}" > /dev/null || { echo "Error: Can't enter dir '${GAMENAME}'" >&2; exit 1; }
+        pushd "${GAMENAME}" &> /dev/null || { echo "Error: Can't enter dir '${GAMENAME}'" >&2; exit 1; }
         GAMENAME="$PWD"
         createAutorunCmd "${GAMENAME}" "${AUTORUN_FILEMASK}" || exit 1
-        #show only list of exes if autorun-list is set otherwise...
-        [[ "${ACTION}" == "autorun-list" ]] && { printf '%s\n' "${AUTORUN_FOUNDEXE[@]}"; exit 0; }
+        [[ ${#AUTORUN_FOUNDEXE[@]} -eq 0 ]] && { ! [[ "${ACTION}" == "autorun-count" ]] && echo "Error: No windows executable found in '${GAMENAME}/${AUTORUN_FILEMASK}'" >&2 || echo 0; exit 2; }
+        #show only list of exes if autorun-list/count is set otherwise...
+        [[ "${ACTION}" == "autorun-list" ]]  && { printf '%s\n' "${AUTORUN_FOUNDEXE[@]}"; exit 0; }
+        [[ "${ACTION}" == "autorun-count" ]] && { printf '%s\n' "${AUTORUN_FOUNDEXE[@]}" | wc -l; exit 0; }
         #...show list with entries numbers to select
         if [[ ${#AUTORUN_FOUNDEXE[@]} -gt 1 ]]; then
             echo "Found ${#AUTORUN_FOUNDEXE[@]} files in ${GAMENAME}"
@@ -1170,6 +1172,8 @@ case "${ACTION}" in
         echo "${0} windows wine2squashfs <game.wine>"            >&2
         echo "${0} windows wine2winetgz  <game.wine>"            >&2
         echo "${0} windows autorun       <game>.*    drive_c/P*" >&2
+        echo "${0} windows autorun-list  <game>"                 >&2
+        echo "${0} windows autorun-count <game>"                 >&2
         echo "${0} windows stop"                                 >&2
         exit 1
 esac

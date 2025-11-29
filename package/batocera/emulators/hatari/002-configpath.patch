@@ -1,8 +1,8 @@
 diff --git a/src/paths.c b/src/paths.c
-index 53aece07..681945f8 100644
+index 8a45d528..d62a769d 100644
 --- a/src/paths.c
 +++ b/src/paths.c
-@@ -209,6 +209,10 @@ static void Paths_InitHomeDirs(void)
+@@ -202,6 +202,10 @@ static void Paths_InitHomeDirs(void)
  {
  	char *psHome;
  
