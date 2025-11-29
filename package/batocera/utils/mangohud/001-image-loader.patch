@@ -38,7 +38,7 @@ index d7d9a9b..95072c9 100644
  # media_player
  ## for example spotify
 diff --git a/meson.build b/meson.build
-index 9e495f7..7918a84 100644
+index 3382807..0b77bb2 100644
 --- a/meson.build
 +++ b/meson.build
 @@ -170,6 +170,7 @@ else
@@ -93,10 +93,10 @@ index 2bdaed1..7d65538 100644
  option('loglevel', type: 'combo', choices : ['trace', 'debug', 'info', 'warn', 'err', 'critical', 'off'], value : 'info', description: 'Max log level in non-debug build')
  option('mangoapp', type: 'boolean', value : false)
 diff --git a/src/gl/gl_renderer.cpp b/src/gl/gl_renderer.cpp
-index ee1d943..d23264e 100644
+index 7fea63f..d7c5213 100644
 --- a/src/gl/gl_renderer.cpp
 +++ b/src/gl/gl_renderer.cpp
-@@ -109,7 +109,7 @@ bool ImGui_ImplOpenGL3_CreateFontsTexture()
+@@ -104,7 +104,7 @@ bool ImGui_ImplOpenGL3_CreateFontsTexture(gl_context *ctx)
      ImGuiIO& io = ImGui::GetIO();
      unsigned char* pixels;
      int width, height;
@@ -105,7 +105,7 @@ index ee1d943..d23264e 100644
  
      GLint last_texture, last_unpack_buffer;
  
-@@ -128,7 +128,7 @@ bool ImGui_ImplOpenGL3_CreateFontsTexture()
+@@ -123,7 +123,7 @@ bool ImGui_ImplOpenGL3_CreateFontsTexture(gl_context *ctx)
      if (g_IsGLES || g_GlVersion >= 200)
          glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
  
@@ -113,8 +113,8 @@ index ee1d943..d23264e 100644
 +    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
  
      // Store our identifier
-     io.Fonts->SetTexID((ImTextureID)(intptr_t)g_FontTexture);
-@@ -259,7 +259,7 @@ static bool    ImGui_ImplOpenGL3_CreateDeviceObjects()
+     io.Fonts->SetTexID((ImTextureID)(intptr_t)ctx->FontTexture);
+@@ -245,7 +245,7 @@ static bool    ImGui_ImplOpenGL3_CreateDeviceObjects(gl_context *ctx)
          "varying vec4 Frag_Color;\n"
          "void main()\n"
          "{\n"
@@ -123,7 +123,7 @@ index ee1d943..d23264e 100644
          "}\n";
  
      const GLchar* fragment_shader_glsl_130 =
-@@ -269,7 +269,7 @@ static bool    ImGui_ImplOpenGL3_CreateDeviceObjects()
+@@ -255,7 +255,7 @@ static bool    ImGui_ImplOpenGL3_CreateDeviceObjects(gl_context *ctx)
          "out vec4 Out_Color;\n"
          "void main()\n"
          "{\n"
@@ -132,7 +132,7 @@ index ee1d943..d23264e 100644
          "}\n";
  
      const GLchar* fragment_shader_glsl_300_es =
-@@ -280,7 +280,7 @@ static bool    ImGui_ImplOpenGL3_CreateDeviceObjects()
+@@ -266,7 +266,7 @@ static bool    ImGui_ImplOpenGL3_CreateDeviceObjects(gl_context *ctx)
          "layout (location = 0) out vec4 Out_Color;\n"
          "void main()\n"
          "{\n"
@@ -141,7 +141,7 @@ index ee1d943..d23264e 100644
          "}\n";
  
      const GLchar* fragment_shader_glsl_410_core =
-@@ -290,7 +290,7 @@ static bool    ImGui_ImplOpenGL3_CreateDeviceObjects()
+@@ -276,7 +276,7 @@ static bool    ImGui_ImplOpenGL3_CreateDeviceObjects(gl_context *ctx)
          "layout (location = 0) out vec4 Out_Color;\n"
          "void main()\n"
          "{\n"
@@ -151,10 +151,10 @@ index ee1d943..d23264e 100644
  
      SPDLOG_DEBUG("glsl_version: {}", glsl_version);
 diff --git a/src/gl/inject_egl.cpp b/src/gl/inject_egl.cpp
-index 1c4654a..43d45a3 100644
+index 6de08e7..7aad40c 100644
 --- a/src/gl/inject_egl.cpp
 +++ b/src/gl/inject_egl.cpp
-@@ -5,6 +5,7 @@
+@@ -6,6 +6,7 @@
  #include <chrono>
  #include <iomanip>
  #include <spdlog/spdlog.h>
@@ -163,7 +163,7 @@ index 1c4654a..43d45a3 100644
  #include "mesa/util/macros.h"
  #include "mesa/util/os_time.h"
 diff --git a/src/hud_elements.cpp b/src/hud_elements.cpp
-index 7057755..b295fc5 100644
+index b9310b3..c98f831 100644
 --- a/src/hud_elements.cpp
 +++ b/src/hud_elements.cpp
 @@ -27,6 +27,7 @@
@@ -271,7 +271,7 @@ index 7057755..b295fc5 100644
  void HudElements::custom_text(){
      ImguiNextColumnFirstItem();
      ImGui::PushFont(HUDElements.sw_stats->font_secondary);
-@@ -1955,6 +2032,8 @@ void HudElements::sort_elements(const std::pair<std::string, std::string>& optio
+@@ -1960,6 +2037,8 @@ void HudElements::sort_elements(const std::pair<std::string, std::string>& optio
          {"winesync", {winesync}},
          {"present_mode", {present_mode}},
          {"network", {network}},
@@ -281,7 +281,7 @@ index 7057755..b295fc5 100644
          {"fex_stats", {fex_stats}},
          {"ftrace", {ftrace}},
 diff --git a/src/hud_elements.h b/src/hud_elements.h
-index ee2d801..31db1b4 100644
+index 70deb51..bfd9954 100644
 --- a/src/hud_elements.h
 +++ b/src/hud_elements.h
 @@ -19,8 +19,27 @@ struct Function {
@@ -457,10 +457,10 @@ index dc6bb00..313a888 100644
 +    fColor = In.Color * texture(sTexture, In.UV.st);
  }
 diff --git a/src/overlay.h b/src/overlay.h
-index 2ecc25e..378f1da 100644
+index dbb81b9..7d802e6 100644
 --- a/src/overlay.h
 +++ b/src/overlay.h
-@@ -157,6 +157,7 @@ extern void control_client_check(int control, int& control_client, const std::st
+@@ -173,6 +173,7 @@ extern void control_client_check(int control, int& control_client, const std::st
  extern void process_control_socket(int& control_client, overlay_params &params);
  extern void control_send(int control_client, const char *cmd, unsigned cmdlen, const char *param, unsigned paramlen);
  extern int global_control_client;
@@ -469,10 +469,10 @@ index 2ecc25e..378f1da 100644
  void render_mpris_metadata(const overlay_params& params, mutexed_metadata& meta, uint64_t frame_timing);
  #endif
 diff --git a/src/overlay_params.cpp b/src/overlay_params.cpp
-index ee10e99..7ca64fc 100644
+index bd6296d..c0d77eb 100644
 --- a/src/overlay_params.cpp
 +++ b/src/overlay_params.cpp
-@@ -584,6 +584,9 @@ parse_ftrace(const char *str) {
+@@ -582,6 +582,9 @@ parse_ftrace(const char *str) {
  #define parse_blacklist(s) parse_str_tokenize(s)
  #define parse_custom_text_center(s) parse_str(s)
  #define parse_custom_text(s) parse_str(s)
@@ -482,7 +482,7 @@ index ee10e99..7ca64fc 100644
  #define parse_fps_value(s) parse_load_value(s)
  #define parse_fps_color(s) parse_load_color(s)
  #define parse_battery_color(s) parse_color(s)
-@@ -880,6 +883,7 @@ static void set_param_defaults(struct overlay_params *params){
+@@ -878,6 +881,7 @@ static void set_param_defaults(struct overlay_params *params){
     params->table_columns = 3;
     params->text_outline_color = 0x000000;
     params->text_outline_thickness = 1.5;
@@ -491,7 +491,7 @@ index ee10e99..7ca64fc 100644
  
  static std::string verify_pci_dev(std::string pci_dev) {
 diff --git a/src/overlay_params.h b/src/overlay_params.h
-index 42353a0..25c9ae8 100644
+index 7f0795d..d1b0fef 100644
 --- a/src/overlay_params.h
 +++ b/src/overlay_params.h
 @@ -82,6 +82,9 @@ struct Tracepoint;

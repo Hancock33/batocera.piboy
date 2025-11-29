@@ -1,5 +1,5 @@
 diff --git a/src/overlay_params.cpp b/src/overlay_params.cpp
-index 13047b9..f786d9c 100644
+index c0d77eb..9984ee6 100644
 --- a/src/overlay_params.cpp
 +++ b/src/overlay_params.cpp
 @@ -922,15 +922,15 @@ parse_overlay_config(struct overlay_params *params,
