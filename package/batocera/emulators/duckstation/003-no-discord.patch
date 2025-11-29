@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index c772720e1..cab9b3787 100644
+index 0d2419c8c..c92df0405 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -39,7 +39,7 @@ find_package(Freetype 2.13.3 REQUIRED)
@@ -12,7 +12,7 @@ index c772720e1..cab9b3787 100644
  find_package(libzip 1.11.4 REQUIRED)
  find_package(Shaderc REQUIRED)
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 48e414e3a..b45d84715 100644
+index ff0eff710..7f1cbbd33 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
 @@ -96,7 +96,7 @@ LOG_CHANNEL(System);

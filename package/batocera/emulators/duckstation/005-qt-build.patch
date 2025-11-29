@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index cab9b3787..a89549cec 100644
+index c92df0405..c73a51b72 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -73,7 +73,7 @@ if(BUILD_QT_FRONTEND)
