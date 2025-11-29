@@ -3,15 +3,16 @@
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|de36fefad4c969df01d178c3e1a149ebc83ef0fd|Nov 29, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|d656e347c851b6aa0e1624b8864bc061788b2e2e|Nov 29, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|0de072028d6260be5a9d59ae5f85451227104a56|Nov 29, 2025
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.339|Nov 29, 2025
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.340|Nov 29, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e09be04df6ec35c2b2bedb0c62bc6d1bc55f5b28|Nov 29, 2025
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|f2554eb7427d49744f38801578828e3a878b0893|Nov 29, 2025
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|ce5100cbf384d441f7ccfd0269938616a345722f|Nov 29, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-11-29|Nov 29, 2025
-Ports|[box64](http://github.com/ptitseb/box64)|90babc5c45372cec0088910bc471bb342a4fcfe1|Nov 29, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|185de7eaf7b1e7995047c4f45c5db930ac522737|Nov 29, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|7c5fe5835dfbeacba498d469e60badd3bfd23bfd|Nov 29, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|697d6ac1e901ce0e14cdc302edc7bfd01ff06003|Nov 29, 2025
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|ced81cd17dd69126964e1cb1ac640bd104d3476c|Nov 29, 2025
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|805d08b730f77dfa47ba633289800e07d5c533fe|Nov 29, 2025
+Ports|[openmohaa](http://github.com/openmoh/openmohaa)|634a2371e65bf9cafba802d347f3737be7766940|Nov 29, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|89bf5c11c10e6179088cf9688d4dbf741a3f0dce|Nov 29, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|01e25038cd972216fb681dd11a5e3adfe0b91d6e|Nov 29, 2025
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|c60eb15271c947726c98a82c0409be47523c9bf4|Nov 29, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-10.20|Nov 29, 2025
@@ -20,6 +21,7 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|35c5c51d4e1ca1e02354
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251129|Nov 29, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|c690aa2efab5630bd75a40845ab6f83d8fa81b57|Nov 29, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|6021714e2f60e32bfddccd1dfbee820389414965|Nov 29, 2025
+Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|4a9024615209ab12a33cd7d0e37977058b0e88f7|Nov 29, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|4f35245295ebf8c6a238c474b2dcca217829a212|Nov 29, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|5d643bfcf6327718d3ccc6c7676e57cb70e0203c|Nov 28, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|5d643bfcf6327718d3ccc6c7676e57cb70e0203c|Nov 28, 2025
@@ -52,7 +54,6 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|68774da0beba449
 Ports|[openjk](http://github.com/JACoders/OpenJK)|e76263d85b6ba47e761ba6d0e07e5aaba967f4a6|Nov 27, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.5|Nov 27, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ab5ac3aae86b24632989e91c051dd739f0b675c1|Nov 27, 2025
-Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|3609f054a65aea4b4cab5a87b2fdc876d911d244|Nov 27, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|024df6b20fdc63600f0bbc28cb034bc46da8aac7|Nov 26, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|2025-11-26|Nov 26, 2025
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|95f4b5cc089843f245896dba3eba969b2bab1b1d|Nov 26, 2025
@@ -62,7 +63,6 @@ Emulators|[libretro-stella](http://github.com/stella-emu/stella)|ec7ad887c777a79
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|c2017ddd0c2850253abe34a9b0e1cae9a78ab33c|Nov 25, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5679889b3bb02180e575b5401853e7c0102c9b78|Nov 25, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d21bd747fac623e10959a5da6e2b722ffde2eb69|Nov 25, 2025
-Ports|[openmohaa](http://github.com/openmoh/openmohaa)|3c3683536bbcd1bf2ee49e2a85869b41b0bcd722|Nov 25, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.12-rc.1|Nov 25, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|334654204d5b70b0e29a8a4d85622eb684140807|Nov 24, 2025
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|59101ab757be25cd658c9dc7656f7c736dbf1014|Nov 24, 2025
