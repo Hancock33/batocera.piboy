@@ -78,7 +78,7 @@ Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|375c8c19107ee194ce6
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v119|Jun 02, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|47b8d911b960e9228fe6c29062aaa325b15e8779|Nov 28, 2025
-Emulators|[clk](https://github.com/TomHarte/CLK)|2cc4b6469f331a33f45ac2a8463c5a6ac6e2ecbb|Nov 27, 2025
+Emulators|[clk](https://github.com/TomHarte/CLK)|2025-11-26|Nov 26, 2025
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|e8c512dfb5b26b464c70f6bb89475533d5351a94|Nov 27, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|842a088dcecbc99348b24557396f56456ceaf2ac|Aug 15, 2025
@@ -253,7 +253,7 @@ Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hl
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|44bc0d8e82da88efa2bd700472c10f9166314e00|Jun 21, 2025
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|d82d5715111bc50cf6dd8066e531e9cc6fbb9eab|Jun 21, 2025
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|50be36007f26500bd48d4b2c1574bb977af9e2e4|Jun 21, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|8636fa4ad42c3b27c8bff78af44ac47226d3772c|Nov 28, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|0de072028d6260be5a9d59ae5f85451227104a56|Nov 29, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.339|Nov 29, 2025
 Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|77c62d3a942e219bc9d072b4800fa0881208ce2a|Nov 03, 2025
@@ -303,7 +303,7 @@ Engines|[openbor7530](http://github.com/DCurrent/openbor)|52921e774f4e8ff28ae838
 Engines|[python-pygame2](http://github.com/pygame/pygame)|85fda3f719d437cf27106afae8c890e6b88ba5f5|Oct 05, 2025
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v2.4.10|Aug 28, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-11-29|Nov 29, 2025
-Engines|[scummvm](http://github.com/scummvm/scummvm)|f7fbf44a9ad0e49188eb79bd87b8da513413fe21|Nov 23, 2025
+Engines|[scummvm](http://github.com/scummvm/scummvm)|f8a998632e1cb7481fed390ba362351acb9fc1fb|Nov 18, 2025
 Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|79bafe92455b445321cdadb805cb37bfd610a6d1|Nov 18, 2025
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|12d45da546964f13ba89aa0432e97a213f485b2f|Nov 26, 2025
@@ -453,13 +453,13 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0fb4b6d5a0d9e4ea11aa10a142995915a508af77|Nov 28, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|47ae2727bed14cb09578b81f22293e4ef65f0cbb|Nov 23, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|649ac7d4900a9e797e5f4129628ce23cea3e8e9d|Nov 29, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|c690aa2efab5630bd75a40845ab6f83d8fa81b57|Nov 29, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|b58db2dd9161cdba9b41fc29b969aba338123321|Nov 22, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|39967d86610a140c9d372788f0bc2bb1992bd35c|Nov 11, 2025
 Ports|[eldoom](http://github.com/dhewm/dhewm3-sdk)|50dc874961cf14d3c7ca2182d655ba46ecc7f5a1|Oct 21, 2024
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b5375179305974a6f7276975fdaff36efe3fac30|Nov 29, 2025
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|697d6ac1e901ce0e14cdc302edc7bfd01ff06003|Nov 29, 2025
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a478bad7fa9bdbf716a5316caf2ba7757d301ae7|Sept 11, 2025
@@ -512,7 +512,7 @@ Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2a
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|831186f99d22798fdb42c4c058b6e7e6f42a140b|Nov 20, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|3a9171418b08aace6df0ba974e6b5a3428120fd3|Nov 28, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|55dab3b74f15f7eb6380ccfc7fea89cab1a274c0|Nov 27, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|805d08b730f77dfa47ba633289800e07d5c533fe|Nov 29, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c2045b374184309dd0fb94706b0c3b8453f5d8bf|Sept 23, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|4b48c5c3203ed1bdcda667b05cfcd64fd055c00a|Sept 22, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|8bd38c9aaedd30c74aa57c515bd79678723a2258|Nov 28, 2025
@@ -557,7 +557,7 @@ Utils|[rclone](http://github.com/rclone/rclone)|v1.72.0|Nov 21, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.3|Jun 30, 2025
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|21c1e2c51832dccfac64981b345745ce0cccf524|Oct 22, 2025
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.17.0|May 28, 2025
-Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|ec3e5912c176e609c3ca81d619eb1523c8484c5e|Nov 27, 2025
+Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|c60eb15271c947726c98a82c0409be47523c9bf4|Nov 29, 2025
 Utils|[switchres](http://github.com/antonioginer/switchres)|v2.2.1|May 15, 2024
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.12-rc.1|Nov 25, 2025
 Utils|[touchegg](http://github.com/JoseExposito/touchegg)|2.0.18|May 24, 2025
