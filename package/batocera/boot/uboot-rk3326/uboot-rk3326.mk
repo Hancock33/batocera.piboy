@@ -55,7 +55,7 @@ define UBOOT_RK3326_INSTALL_IMAGES_CMDS
         --rsa 3 \
         --replace tools/rk_tools/ ./ \
         ./RKTRUST/RK3326TRUST.ini
-    
+
     $(INSTALL) -D -m 0644 $(UBOOT_RK3326_RKBIN_DIR)/trust.img $(BINARIES_DIR)/trust.img
 endef
 

@@ -74,7 +74,7 @@ Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|c2017dd
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|024df6b20fdc63600f0bbc28cb034bc46da8aac7|Nov 26, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|9a139a36701352854722e18dcf689b125973111b|Nov 16, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|35ead94515afc71c6fbfdeb42aae12e4f764b50b|Nov 28, 2025
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|375c8c19107ee194ce641637ee9ef8f29156e9cc|Oct 27, 2025
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|4cc9792f66665bd66f32ac061d8faba4af62f15a|Nov 29, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v119|Jun 02, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|47b8d911b960e9228fe6c29062aaa325b15e8779|Nov 28, 2025
@@ -262,11 +262,11 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|76cc6cf03507429c5a136cb50d83a14e05430fcd|Nov 10, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|35c5c51d4e1ca1e0235404982aed787af3680821|Nov 29, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20251119|Nov 19, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e09be04df6ec35c2b2bedb0c62bc6d1bc55f5b28|Nov 29, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|4a042ae84ff43d35f631b62c20ab69a7934e862c|Nov 29, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.227|Nov 20, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.12.5|Nov 07, 2025
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0f74cff52b96841fe0efa01ffd1a6875b253e72a|Aug 01, 2025
-Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|2907b8d9e49ec2e2f23ce8ed3a360e77917a8f26|Nov 23, 2025
+Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|540f5b309b919034f927ca4dfe59b1ccef0da268|Nov 29, 2025
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|83ebd9d9d94521dde231beac0ad5ca253bd767f1|Nov 08, 2025
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb13998e06b83710201960181b|Nov 24, 2024
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|f4e0cbdc034d955d687d067154e70796766eb1cb|Nov 20, 2025
@@ -308,7 +308,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|79bafe92455b445321cdadb805cb37bfd610a6d1|Nov 18, 2025
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|12d45da546964f13ba89aa0432e97a213f485b2f|Nov 26, 2025
 Engines|[vpinball](http://github.com/vpinball/vpinball)|afc7c38ffb1078076ec523c37b30055061c93ff1|Jul 23, 2024
-Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20251111|Nov 11, 2025
+Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20251125|Nov 25, 2025
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
 Firmwares|[firmware-armbian](https://github.com/armbian/firmware)|5d4dd2fc8dd4e28ac4c85696b8ab86775babc7c7|Nov 05, 2025
@@ -447,11 +447,11 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|cf2ccf096d3e5dfb4b9d
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|7c5fe5835dfbeacba498d469e60badd3bfd23bfd|Nov 29, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bee00e47805909d08568c640073a2123ca7021b1|Aug 31, 2025
-Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5679889b3bb02180e575b5401853e7c0102c9b78|Nov 25, 2025
+Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|14f971fd2ab3f7c348f53381e6a69d30dea23457|Nov 29, 2025
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|f1cf9267b0f3b7100ae6ecdbdc5a44b98547f246|Feb 05, 2025
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6db4a46e060145d|Apr 19, 2024
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0fb4b6d5a0d9e4ea11aa10a142995915a508af77|Nov 28, 2025
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|d8b1f00cb558d7a958ea7cee94dc0c8c7970ad8d|Nov 29, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|47ae2727bed14cb09578b81f22293e4ef65f0cbb|Nov 23, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|c690aa2efab5630bd75a40845ab6f83d8fa81b57|Nov 29, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
@@ -512,7 +512,7 @@ Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2a
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|831186f99d22798fdb42c4c058b6e7e6f42a140b|Nov 20, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|3a9171418b08aace6df0ba974e6b5a3428120fd3|Nov 28, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|2f8d8487df5df8f38a63fdf3670bfb187a1e1266|Apr 29, 2025
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|89bf5c11c10e6179088cf9688d4dbf741a3f0dce|Nov 29, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c62055b431817567c208617c53ba6152204e81b4|Nov 29, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c2045b374184309dd0fb94706b0c3b8453f5d8bf|Sept 23, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|4b48c5c3203ed1bdcda667b05cfcd64fd055c00a|Sept 22, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|8bd38c9aaedd30c74aa57c515bd79678723a2258|Nov 28, 2025
