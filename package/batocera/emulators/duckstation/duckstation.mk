@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Nov 29, 2025
-DUCKSTATION_VERSION = de36fefad4c969df01d178c3e1a149ebc83ef0fd
+# Version: Commits on Nov 30, 2025
+DUCKSTATION_VERSION = 8e3a65c152a353618a2d0ccec93cf5fff561a86b
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
@@ -21,7 +21,6 @@ DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
 DUCKSTATION_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
 DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
 DUCKSTATION_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/stenzek-shaderc
-DUCKSTATION_CONF_ENV += LDFLAGS=-lpthread
 
 ifeq ($(BR2_PACKAGE_BATOCERA_QT6),y)
     DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_MINI_FRONTEND=OFF

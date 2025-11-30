@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LIBRETRO_BRIMIR
+	bool "libretro-brimir"
+
+	help
+	  Sega Saturn emulation for RetroArch via libretro.
+	  Performance-focused fork built on Ymir.
+
+	  https://github.com/coredds/brimir

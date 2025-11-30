@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index 38decb7cb9..88f3438a6c 100755
+index a0eed36abf..518f03212f 100755
 --- a/configure
 +++ b/configure
-@@ -202,6 +202,7 @@ External library support:
+@@ -201,6 +201,7 @@ External library support:
    --disable-bzlib          disable bzlib [autodetect]
    --disable-coreimage      disable Apple CoreImage framework [autodetect]
    --enable-chromaprint     enable audio fingerprinting with chromaprint [no]
@@ -10,7 +10,7 @@ index 38decb7cb9..88f3438a6c 100755
    --enable-frei0r          enable frei0r video filtering [no]
    --enable-gcrypt          enable gcrypt, needed for rtmp(t)e support
                             if openssl, librtmp or gmp is not used [no]
-@@ -288,6 +289,7 @@ External library support:
+@@ -287,6 +288,7 @@ External library support:
    --enable-libtorch        enable Torch as one DNN backend [no]
    --enable-libtwolame      enable MP2 encoding via libtwolame [no]
    --enable-libuavs3d       enable AVS3 decoding via libuavs3d [no]
@@ -18,7 +18,7 @@ index 38decb7cb9..88f3438a6c 100755
    --enable-libv4l2         enable libv4l2/v4l-utils [no]
    --enable-libvidstab      enable video stabilization using vid.stab [no]
    --enable-libvmaf         enable vmaf filter via libvmaf [no]
-@@ -356,12 +358,16 @@ External library support:
+@@ -355,12 +357,16 @@ External library support:
    --enable-libvpl          enable Intel oneVPL code via libvpl if libmfx is not used [no]
    --enable-libnpp          enable Nvidia Performance Primitives-based code [no]
    --enable-mmal            enable Broadcom Multi-Media Abstraction Layer (Raspberry Pi) via MMAL [no]
@@ -35,7 +35,7 @@ index 38decb7cb9..88f3438a6c 100755
    --disable-vaapi          disable Video Acceleration API (mainly Unix/Intel) code [autodetect]
    --disable-vdpau          disable Nvidia Video Decode and Presentation API for Unix code [autodetect]
    --disable-videotoolbox   disable VideoToolbox code [autodetect]
-@@ -1862,7 +1868,9 @@ EXTERNAL_AUTODETECT_LIBRARY_LIST="
+@@ -1861,7 +1867,9 @@ EXTERNAL_AUTODETECT_LIBRARY_LIST="
      avfoundation
      bzlib
      coreimage
@@ -45,7 +45,7 @@ index 38decb7cb9..88f3438a6c 100755
      libxcb
      libxcb_shm
      libxcb_shape
-@@ -1936,6 +1944,7 @@ EXTERNAL_LIBRARY_LIST="
+@@ -1935,6 +1943,7 @@ EXTERNAL_LIBRARY_LIST="
      libcodec2
      libdav1d
      libdc1394
@@ -53,7 +53,7 @@ index 38decb7cb9..88f3438a6c 100755
      libflite
      libfontconfig
      libfreetype
-@@ -2049,6 +2058,7 @@ HWACCEL_LIBRARY_LIST="
+@@ -2048,6 +2057,7 @@ HWACCEL_LIBRARY_LIST="
      mmal
      omx
      opencl
@@ -61,7 +61,7 @@ index 38decb7cb9..88f3438a6c 100755
  "
  
  DOCUMENT_LIST="
-@@ -2066,10 +2076,14 @@ FEATURE_LIST="
+@@ -2065,10 +2075,14 @@ FEATURE_LIST="
      omx_rpi
      runtime_cpudetect
      safe_bitstream_reader
@@ -76,7 +76,7 @@ index 38decb7cb9..88f3438a6c 100755
  "
  
  # this list should be kept in linking order
-@@ -2654,6 +2668,7 @@ CONFIG_EXTRA="
+@@ -2651,6 +2665,7 @@ CONFIG_EXTRA="
      rtpdec
      rtpenc_chain
      rv34dsp
@@ -84,7 +84,7 @@ index 38decb7cb9..88f3438a6c 100755
      scene_sad
      sinewin
      smpte_436m
-@@ -3198,6 +3213,7 @@ dxva2_deps="dxva2api_h DXVA2_ConfigPictureDecode ole32 user32"
+@@ -3195,6 +3210,7 @@ dxva2_deps="dxva2api_h DXVA2_ConfigPictureDecode ole32 user32"
  ffnvcodec_deps_any="libdl LoadLibrary"
  mediacodec_deps="android mediandk pthreads"
  nvdec_deps="ffnvcodec"
@@ -92,7 +92,7 @@ index 38decb7cb9..88f3438a6c 100755
  vaapi_x11_deps="xlib_x11"
  videotoolbox_hwaccel_deps="videotoolbox pthreads"
  videotoolbox_hwaccel_extralibs="-framework QuartzCore"
-@@ -3256,6 +3272,8 @@ hevc_dxva2_hwaccel_deps="dxva2 DXVA_PicParams_HEVC"
+@@ -3253,6 +3269,8 @@ hevc_dxva2_hwaccel_deps="dxva2 DXVA_PicParams_HEVC"
  hevc_dxva2_hwaccel_select="hevc_decoder"
  hevc_nvdec_hwaccel_deps="nvdec"
  hevc_nvdec_hwaccel_select="hevc_decoder"
@@ -101,7 +101,7 @@ index 38decb7cb9..88f3438a6c 100755
  hevc_vaapi_hwaccel_deps="vaapi VAPictureParameterBufferHEVC"
  hevc_vaapi_hwaccel_select="hevc_decoder"
  hevc_vdpau_hwaccel_deps="vdpau VdpPictureInfoHEVC"
-@@ -3834,8 +3852,11 @@ sndio_indev_deps="sndio"
+@@ -3831,8 +3849,11 @@ sndio_indev_deps="sndio"
  sndio_outdev_deps="sndio"
  v4l2_indev_deps_any="linux_videodev2_h sys_videoio_h"
  v4l2_indev_suggest="libv4l2"
@@ -113,7 +113,7 @@ index 38decb7cb9..88f3438a6c 100755
  vfwcap_indev_deps="vfw32 vfwcap_defines"
  xcbgrab_indev_deps="libxcb"
  xcbgrab_indev_suggest="libxcb_shm libxcb_shape libxcb_xfixes"
-@@ -3946,6 +3967,7 @@ cropdetect_filter_deps="gpl"
+@@ -3943,6 +3964,7 @@ cropdetect_filter_deps="gpl"
  deinterlace_qsv_filter_deps="libmfx"
  deinterlace_qsv_filter_select="qsvvpp"
  deinterlace_vaapi_filter_deps="vaapi"
@@ -121,7 +121,7 @@ index 38decb7cb9..88f3438a6c 100755
  delogo_filter_deps="gpl"
  denoise_vaapi_filter_deps="vaapi"
  derain_filter_select="dnn"
-@@ -4059,6 +4081,7 @@ transpose_opencl_filter_deps="opencl"
+@@ -4055,6 +4077,7 @@ transpose_opencl_filter_deps="opencl"
  transpose_vaapi_filter_deps="vaapi VAProcPipelineCaps_rotation_flags"
  transpose_vt_filter_deps="videotoolbox VTPixelRotationSessionCreate"
  transpose_vulkan_filter_deps="vulkan spirv_compiler"
@@ -129,7 +129,7 @@ index 38decb7cb9..88f3438a6c 100755
  unsharp_opencl_filter_deps="opencl"
  uspp_filter_deps="gpl avcodec"
  vaguedenoiser_filter_deps="gpl"
-@@ -4070,6 +4093,7 @@ libvmaf_cuda_filter_deps="libvmaf libvmaf_cuda ffnvcodec"
+@@ -4066,6 +4089,7 @@ libvmaf_cuda_filter_deps="libvmaf libvmaf_cuda ffnvcodec"
  zmq_filter_deps="libzmq"
  zoompan_filter_deps="swscale"
  zscale_filter_deps="libzimg const_nan"
@@ -137,7 +137,7 @@ index 38decb7cb9..88f3438a6c 100755
  scale_vaapi_filter_deps="vaapi"
  scale_vt_filter_deps="videotoolbox VTPixelTransferSessionCreate"
  scale_vulkan_filter_deps="vulkan spirv_compiler"
-@@ -6769,6 +6793,12 @@ if enabled xlib; then
+@@ -6763,6 +6787,12 @@ if enabled xlib; then
          disable xlib
  fi
  
@@ -150,7 +150,7 @@ index 38decb7cb9..88f3438a6c 100755
  check_headers direct.h
  check_headers dirent.h
  check_headers dxgidebug.h
-@@ -7278,6 +7308,10 @@ enabled rkmpp             && { require_pkg_config rkmpp rockchip_mpp  rockchip/r
+@@ -7275,6 +7305,10 @@ enabled rkmpp             && { require_pkg_config rkmpp rockchip_mpp  rockchip/r
                                 { enabled libdrm ||
                                   die "ERROR: rkmpp requires --enable-libdrm"; }
                               }
@@ -161,7 +161,7 @@ index 38decb7cb9..88f3438a6c 100755
  enabled vapoursynth       && require_headers "vapoursynth/VSScript4.h vapoursynth/VapourSynth4.h"
  
  enabled openssl            && {
-@@ -7288,6 +7322,9 @@ enabled openssl            && {
+@@ -7285,6 +7319,9 @@ enabled openssl            && {
      }
  }
  
@@ -171,7 +171,7 @@ index 38decb7cb9..88f3438a6c 100755
  
  if enabled gcrypt; then
      GCRYPT_CONFIG="${cross_prefix}libgcrypt-config"
-@@ -7374,6 +7411,10 @@ if enabled v4l2_m2m; then
+@@ -7371,6 +7408,10 @@ if enabled v4l2_m2m; then
      check_cc vp9_v4l2_m2m linux/videodev2.h "int i = V4L2_PIX_FMT_VP9;"
  fi
  
@@ -182,7 +182,7 @@ index 38decb7cb9..88f3438a6c 100755
  check_headers sys/videoio.h
  test_code cc sys/videoio.h "struct v4l2_frmsizeenum vfse; vfse.discrete.width = 0;" && enable_sanitized struct_v4l2_frmivalenum_discrete
  
-@@ -7919,6 +7960,9 @@ enabled threads || warn \
+@@ -7916,6 +7957,9 @@ enabled threads || warn \
      "that the libraries from this build MUST NOT be used in a multi-threaded"\
      "environment."
  
@@ -1615,7 +1615,7 @@ index 0000000000..c02fdbe5a8
 +
 +#endif
 diff --git a/libavcodec/hevc/hevcdec.c b/libavcodec/hevc/hevcdec.c
-index f44bda8a92..dc75f88b51 100644
+index 8a845f54f3..a625d3ab88 100644
 --- a/libavcodec/hevc/hevcdec.c
 +++ b/libavcodec/hevc/hevcdec.c
 @@ -351,6 +351,19 @@ static void export_stream_params(HEVCContext *s, const HEVCSPS *sps)
@@ -1771,7 +1771,7 @@ index 16b40e2b10..cf9830648a 100644
          num = sps->vps->vps_num_units_in_tick;
          den = sps->vps->vps_time_scale;
 diff --git a/libavcodec/hevc/refs.c b/libavcodec/hevc/refs.c
-index ab2e075af0..342e7a6de9 100644
+index 15f37bfcd8..cdeb2709c5 100644
 --- a/libavcodec/hevc/refs.c
 +++ b/libavcodec/hevc/refs.c
 @@ -167,16 +167,19 @@ static HEVCFrame *alloc_frame(HEVCContext *s, HEVCLayerContext *l)
@@ -1804,7 +1804,7 @@ index ab2e075af0..342e7a6de9 100644
  
          if (s->sei.picture_timing.picture_struct == AV_PICTURE_STRUCTURE_TOP_FIELD)
              frame->f->flags |= AV_FRAME_FLAG_TOP_FIELD_FIRST;
-@@ -327,14 +330,17 @@ static int init_slice_rpl(HEVCContext *s)
+@@ -328,14 +331,17 @@ static int init_slice_rpl(HEVCContext *s)
      int ctb_count    = frame->ctb_count;
      int ctb_addr_ts  = s->pps->ctb_addr_rs_to_ts[s->sh.slice_segment_addr];
      int i;
@@ -14870,7 +14870,7 @@ index 0000000000..0c8c629852
 +};
 +
 diff --git a/libavfilter/Makefile b/libavfilter/Makefile
-index 3794a1386e..a345998a32 100644
+index 07fb4c3d6c..21e879cf17 100644
 --- a/libavfilter/Makefile
 +++ b/libavfilter/Makefile
 @@ -278,6 +278,7 @@ OBJS-$(CONFIG_DEFLATE_FILTER)                += vf_neighbor.o
@@ -14881,7 +14881,7 @@ index 3794a1386e..a345998a32 100644
  OBJS-$(CONFIG_DEJUDDER_FILTER)               += vf_dejudder.o
  OBJS-$(CONFIG_DELOGO_FILTER)                 += vf_delogo.o
  OBJS-$(CONFIG_DENOISE_VAAPI_FILTER)          += vf_misc_vaapi.o vaapi_vpp.o
-@@ -548,6 +549,7 @@ OBJS-$(CONFIG_TRANSPOSE_VT_FILTER)           += vf_transpose_vt.o
+@@ -547,6 +548,7 @@ OBJS-$(CONFIG_TRANSPOSE_VT_FILTER)           += vf_transpose_vt.o
  OBJS-$(CONFIG_TRANSPOSE_VULKAN_FILTER)       += vf_transpose_vulkan.o vulkan.o vulkan_filter.o
  OBJS-$(CONFIG_TRIM_FILTER)                   += trim.o
  OBJS-$(CONFIG_UNPREMULTIPLY_FILTER)          += vf_premultiply.o framesync.o
@@ -14890,7 +14890,7 @@ index 3794a1386e..a345998a32 100644
  OBJS-$(CONFIG_UNSHARP_OPENCL_FILTER)         += vf_unsharp_opencl.o opencl.o \
                                                  opencl/unsharp.o
 diff --git a/libavfilter/allfilters.c b/libavfilter/allfilters.c
-index a934a012ad..3e494eeff4 100644
+index cca4ce0288..057843d5d4 100644
 --- a/libavfilter/allfilters.c
 +++ b/libavfilter/allfilters.c
 @@ -252,6 +252,7 @@ extern const FFFilter ff_vf_dedot;
@@ -14901,7 +14901,7 @@ index a934a012ad..3e494eeff4 100644
  extern const FFFilter ff_vf_deinterlace_vaapi;
  extern const FFFilter ff_vf_dejudder;
  extern const FFFilter ff_vf_delogo;
-@@ -443,6 +444,7 @@ extern const FFFilter ff_vf_scale_cuda;
+@@ -442,6 +443,7 @@ extern const FFFilter ff_vf_scale_cuda;
  extern const FFFilter ff_vf_scale_d3d11;
  extern const FFFilter ff_vf_scale_npp;
  extern const FFFilter ff_vf_scale_qsv;
@@ -14909,7 +14909,7 @@ index a934a012ad..3e494eeff4 100644
  extern const FFFilter ff_vf_scale_vaapi;
  extern const FFFilter ff_vf_scale_vt;
  extern const FFFilter ff_vf_scale_vulkan;
-@@ -515,6 +517,7 @@ extern const FFFilter ff_vf_transpose_vt;
+@@ -514,6 +516,7 @@ extern const FFFilter ff_vf_transpose_vt;
  extern const FFFilter ff_vf_transpose_vulkan;
  extern const FFFilter ff_vf_trim;
  extern const FFFilter ff_vf_unpremultiply;
@@ -17986,7 +17986,7 @@ index 8142d9125e..f25936de93 100644
          case AV_CODEC_ID_VVC:
              if (((par->codec_id == AV_CODEC_ID_H264 && par->extradata_size > 0) ||
 diff --git a/libavformat/movenc.c b/libavformat/movenc.c
-index 585a018e35..ce170f5401 100644
+index efd6329d70..de9b1d9793 100644
 --- a/libavformat/movenc.c
 +++ b/libavformat/movenc.c
 @@ -7114,6 +7114,7 @@ static int mov_write_single_packet(AVFormatContext *s, AVPacket *pkt)
@@ -23995,7 +23995,7 @@ index 366afa0373..69756f27ce 100644
                  fate-checkasm-rv34dsp                                   \
                  fate-checkasm-rv40dsp                                   \
 diff --git a/tests/fate/filter-video.mak b/tests/fate/filter-video.mak
-index 7518017095..ca44c81eb6 100644
+index 2b41574df2..5f6c421c59 100644
 --- a/tests/fate/filter-video.mak
 +++ b/tests/fate/filter-video.mak
 @@ -452,9 +452,9 @@ fate-filter-fps-down-eof-pass: CMD = framecrc -lavfi testsrc2=r=7:d=3.5,fps=3:eo
