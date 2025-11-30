@@ -19,10 +19,8 @@ else
     MOONLIGHT_EMBEDDED_CONF_OPTS += -DENABLE_X11=OFF
 endif
 
-ifeq ($(BR2_PACKAGE_LIBVA),y)
-    ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-        MOONLIGHT_EMBEDDED_DEPENDENCIES += libva-intel-driver intel-mediadriver
-    endif
+ifeq ($(BR2_PACKAGE_LIBVA_INTEL_DRIVER),y)
+    MOONLIGHT_EMBEDDED_DEPENDENCIES += libva-intel-driver intel-mediadriver
 endif
 
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
