@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 01, 2025
-STUNTCAR_VERSION = 5f7300242e713c36aca10e372a6fc3de7bbb28dc
+STUNTCAR_VERSION = d2fa3ad31e456bd44736d98d00f99ab627ec7ebc
 STUNTCAR_SITE = $(call github,ptitSeb,stuntcarremake,$(STUNTCAR_VERSION))
 
 STUNTCAR_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
