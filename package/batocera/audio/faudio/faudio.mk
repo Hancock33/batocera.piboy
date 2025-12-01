@@ -3,8 +3,8 @@
 # faudio
 #
 ################################################################################
-# Version: Commits on Nov 01, 2025
-FAUDIO_VERSION = 25.11
+# Version: Commits on Dec 01, 2025
+FAUDIO_VERSION = 25.12
 FAUDIO_SITE = $(call github,FNA-XNA,FAudio,$(FAUDIO_VERSION))
 FAUDIO_LICENSE = ZLIB
 FAUDIO_LICENSE_FILES = LICENSE
