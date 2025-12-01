@@ -305,7 +305,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_XWIIMOTE                             if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # a tool to analyse wiimote events (mainly to debug, but helps and is funny)
     select BR2_PACKAGE_BATOCERA_GUNS                        if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     select BR2_PACKAGE_BATOCERA_WHEEL_CALIBRATOR
-    select BR2_PACKAGE_JOYCOND
+    select BR2_PACKAGE_JOYCOND                              if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_7         # nintendo switch joycon daemon (requires hid-nx or hid-nintendo in kernel 6.7 or later)
     select BR2_PACKAGE_NEW_LG4FF                            if !BR2_PACKAGE_BATOCERA_TARGET_RK3326         && !BR2_PACKAGE_BATOCERA_TARGET_XU4    && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        && !BR2_PACKAGE_BATOCERA_TARGET_RK3326 && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128         && !BR2_PACKAGE_BATOCERA_TARGET_SM8250 && \
@@ -313,7 +313,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_ODIN           # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
     select BR2_PACKAGE_KEYBOARDTOPADS
-    select BR2_PACKAGE_NSO_N64
+    select BR2_PACKAGE_NSO_N64                              if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_7         # nintendo switch joycon daemon (requires hid-nx or hid-nintendo in kernel 6.7 or later)
     select BR2_PACKAGE_ROCKNIX_JOYPAD                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
