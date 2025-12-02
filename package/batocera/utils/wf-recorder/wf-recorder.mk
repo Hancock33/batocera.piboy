@@ -3,8 +3,8 @@
 # wf-recorder
 #
 ################################################################################
-# Version: Commits on Oct 17, 2025
-WF_RECORDER_VERSION = ca103be2473db0983baf74e17b291385c3c79d79
+# Version: Commits on Dec 02, 2025
+WF_RECORDER_VERSION = bf6d914612efb437a91f572b01ffdfdcf2223157
 WF_RECORDER_SITE = $(call github,ammen99,wf-recorder,$(WF_RECORDER_VERSION))
 WF_RECORDER_LICENSE = MIT
 WF_RECORDER_LICENSE_FILES = LICENSE
