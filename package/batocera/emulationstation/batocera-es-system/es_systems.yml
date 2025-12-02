@@ -2842,14 +2842,14 @@ library:
   force:                True
 
 moonlight:
-  name:                 Moonlight Embedded
+  name:                 Moonlight
   manufacturer:         Misc. System
   release:
   hardware:             system
   extensions:           [moonlight]
   emulators:
     moonlight:
-      moonlight:        { requireAnyOf: [BR2_PACKAGE_MOONLIGHT_EMBEDDED] }
+      moonlight:        { requireAnyOf: [BR2_PACKAGE_MOONLIGHT_EMBEDDED, BR2_PACKAGE_MOONLIGHT_QT] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:moonlight
   comment_fr:           |

@@ -43,6 +43,8 @@
 ### Changed / Improved
 - Wifi country can now be chosen under the Network Setting option.
   This improves Wifi connectivity by aligning your device with regional regulations as well as 6GHz band support.
+- Moonlight has transitioned from Moonlight Embedded to Moonlight QT for the majority of boards to allow for more hardware acceleration.
+  Hardware acceleration depends on supported codecs for devices in FFmpeg.
 ### Updated
 - Azahar Plus to AZAHAR_PLUS_2123_3_A
 - Dolphin-Emu to 2509-188
@@ -83,11 +85,13 @@
 - Mesa3D to 25.3.0
 - Nvidia production drivers to 580.105.08
 - Sway to 1.11
+- VKD3D Proton to 3.0a
 - Vulkan stack to 1.4.328.1
 - Wayland to 1.24.0
 - Wayland Protocols to 1.45
-- Wine-TKG to 10.16
-- Wine Proton to 10.0-2
+- Wine Mono to 10.4.0
+- Wine-TKG to 10.20
+- Wine Proton to 10.0-3
 - WLRoots to 0.19.2
 - XWayland to 24.1.9
 
