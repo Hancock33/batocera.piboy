@@ -3,6 +3,7 @@
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0efae8fae18a6e5290f31fc27251e33e369cdc6f|Dec 02, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3c747b377f8e7112cfe85ed3b2a8147a9946ca39|Dec 02, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|dc2671d5864970e8f467224313d3e6ca0326a0ca|Dec 02, 2025
+Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|58f9b2a83b05759ccfd6a5e73e0bfa3eaeccb740|Dec 02, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-02|Dec 02, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|db31ebb24f2a07fe3020c80a02593166ec8e7b7b|Dec 02, 2025
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|b4c0f0bce24682960ff9a971e2912abc1eadaddf|Dec 02, 2025

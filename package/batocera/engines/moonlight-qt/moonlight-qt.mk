@@ -3,22 +3,14 @@
 # moonlight-qt
 #
 ################################################################################
-
-MOONLIGHT_QT_VERSION = v6.1.0
+# Version: Commits on Dec 02, 2025
+MOONLIGHT_QT_VERSION = 58f9b2a83b05759ccfd6a5e73e0bfa3eaeccb740
 MOONLIGHT_QT_SITE = https://github.com/moonlight-stream/moonlight-qt
 MOONLIGHT_QT_SITE_METHOD = git
 MOONLIGHT_QT_GIT_SUBMODULES = YES
 MOONLIGHT_QT_LICENSE = GPLv3
 
-MOONLIGHT_QT_DEPENDENCIES = \
-	qt6base \
-	qt6svg \
-	qt6declarative \
-	sdl2 \
-	sdl2_ttf \
-	opus \
-	ffmpeg \
-	openssl
+MOONLIGHT_QT_DEPENDENCIES = ffmpeg openssl opus qt6base qt6declarative qt6svg sdl2 sdl2_ttf
 
 MOONLIGHT_QT_CONF_OPTS += PREFIX=/usr
 
