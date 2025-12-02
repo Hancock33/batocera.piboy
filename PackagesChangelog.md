@@ -8,25 +8,27 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|60dbc5ad3d7398eaa
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|a0f33aab037fd92f1a1776222487efde32890d1d|Dec 02, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.349|Dec 02, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4ece9aba6ff89fc5036b54b13d9d19c6cec71949|Dec 02, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3c747b377f8e7112cfe85ed3b2a8147a9946ca39|Dec 02, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|dc2671d5864970e8f467224313d3e6ca0326a0ca|Dec 02, 2025
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|58f9b2a83b05759ccfd6a5e73e0bfa3eaeccb740|Dec 02, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-02|Dec 02, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|b18e1ea21fb1b2da4d53f5714095a57e47432376|Dec 02, 2025
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|b4c0f0bce24682960ff9a971e2912abc1eadaddf|Dec 02, 2025
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|cc1b2045231f2e4f5c93174c12dc8958bc300bfb|Dec 02, 2025
-Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|9eedb893fdf0bb209ca1b26a3e38739595650bee|Dec 02, 2025
+Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|fc2ec0c128197f1f5050e48359bc41e618f3abfb|Dec 02, 2025
+Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.28|Dec 02, 2025
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|80e7d448d9431f919860b3654f75500b06528c3f|Dec 02, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|dc42cd528a88a9d04d6e76851846a6df6f1f9059|Dec 02, 2025
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|09d5d1d7fa6d44146e62237886d24501d98254fb|Dec 02, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|a9b723990ecbab06f6d5d53df97b3285ccc0eafd|Dec 02, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|e34d9e976c8c904dd20f52363b82e681f881c13a|Dec 02, 2025
+Ports|[stk](http://github.com/supertuxkart/stk-code)|2d0a96ec493be375141d544c771794998696edd8|Dec 02, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|be106c73ebc02a6f5189b01f471aa9f77fc40398|Dec 02, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.12|Dec 02, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|bf6d914612efb437a91f572b01ffdfdcf2223157|Dec 02, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251202|Dec 02, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|80bf5d847bda0255b244c42640953f6375ae8913|Dec 02, 2025
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|590.44.01|Dec 02, 2025
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|1b0d0ce8c3a439c21fd582b414e557ca7e3759f0|Dec 02, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251202|Dec 02, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|5b2cfac536686053734208dc510b704b1202f89b|Dec 02, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|198f6aa08c23afcea32821afaaa1938d4215df41|Dec 02, 2025
@@ -46,13 +48,13 @@ Engines|[lightspark](http://github.com/lightspark/lightspark)|e6a761ad4f9a39d91a
 Ports|[box64](http://github.com/ptitseb/box64)|056999e8fd7ec7649762179f52e32819ef5e48e1|Dec 01, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b408ba1327d96ec00a80a5c69632ddb083e49139|Dec 01, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|9168f32cdbb14b58d82cd70ffb3197895f82a0e3|Dec 01, 2025
-Ports|[stk](http://github.com/supertuxkart/stk-code)|7df9411f5f4cd3f445fc65eb2740341baa76b57b|Dec 01, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|d2fa3ad31e456bd44736d98d00f99ab627ec7ebc|Dec 01, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|9553d85306a5a317a9571990c08bac10a8cac10a|Dec 01, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.3.1|Dec 01, 2025
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|0d56f29269af7447f1030d99d3e24bb54f363019|Dec 01, 2025
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|c4b70d4ec36404c9454199bec208eaf3116ef453|Dec 01, 2025
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|a7b711dfd74871e9985ba3b2fe2c15048a928aaf|Dec 01, 2025
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|b5782e52ee2f7b3e40bb9c80d15b47016e008bc9|Dec 01, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|32ea94f119cb3361daf437943c52adc29e17b3a9|Dec 01, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|651e8ceb3cdc0e51c736068cfe05b61eabc21379|Dec 01, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|1874da98c8eb53952199119989c34adf37b5be41|Dec 01, 2025
@@ -62,6 +64,7 @@ Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|a558f03db8aea6ddc65
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|0648e766ea1761a006fe012d45baf61b3be8b073|Dec 01, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|911624d6973a7391732788fbccb67e060ee371f4|Nov 30, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|aae0b3f2bef21998a99ff8c97d7cc102d6e50dce|Nov 30, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|6489fca16b81e4517a71ae7773819b1bbadd312f|Nov 30, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45883|Nov 30, 2025
 Engines|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|775444287305849ebdf4736c75298ad0713e2d5d|Nov 30, 2025
 Network|[rtw88](http://github.com/lwfinger/rtw88)|3309c45c283cbd996e1e05eeddf90c4fa589b90b|Nov 30, 2025
@@ -81,6 +84,7 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|6916fadefb6d11ad
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0283|Nov 28, 2025
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|c3bb98945be0c6cb4ef54e9bbc1647a2b1bb4a6c|Nov 28, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|cbfc87488e446c446d5b5ded1d99a0df2273d499|Nov 28, 2025
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|c010c19e796035e92fb3b0462cb887518a41a7c1|Nov 28, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|1420c90299b1d9f4ef59373b3e5fa538a1e17a65|Nov 28, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0283|Nov 28, 2025
 Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|89e73ab7ba07de0cb95fa5aa37bd3e095d2c6700|Nov 27, 2025
@@ -186,7 +190,6 @@ Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|f5f1e
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|6ecf9590d1610a79f09c047d3d3789a1ffac2eea|Nov 01, 2025
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.4.0|Oct 31, 2025
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|03c2503dee6cbbdf658a6d95064dd0de3b8d8277|Oct 31, 2025
-Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.26|Oct 30, 2025
 Emulators|[libretro-yabasanshiro](http://github.com/KMFDManic/Phaenon-Xtreme)|04d978d010e614c66c00d7ebff93fe444f51032e|Oct 29, 2025
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|8c6af6842af37769c984215461030bea92219acb|Oct 28, 2025
 Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/packages/65/a2/40a3440aed2375371507af668570b68523ee01db9c25c47ce5a05883170e)|1.12.3|Oct 27, 2025
@@ -582,6 +585,3 @@ Boot|[uboot-powkiddy-x55](https://ftp.denx.de/pub/u-boot)|2025.10|N/A
 Boot|[uboot-rk3326](https://github.com/ROCKNIX/hardkernel-uboot)|611716febddb824a7203d0d3b5d399608a54ccf6|N/A
 Hardware|[dmd-play-rust](http://github.com/batocera-linux/dmd-play-rust)|912cd34b1d1895d7913eb60fc653f6c6f60d4f2c|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|N/A|N/A
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|N/A|N/A
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|N/A|N/A
