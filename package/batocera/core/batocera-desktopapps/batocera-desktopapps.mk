@@ -178,6 +178,13 @@ ifeq ($(BR2_PACKAGE_LINDBERGH_LOADER),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-lindbergh
 endif
 
+# moonlight-qt
+ifeq ($(BR2_PACKAGE_MOONLIGHT_QT),y)
+  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-moonlight-qt
+  BATOCERA_DESKTOPAPPS_APPS    += moonlight-qt-config.desktop
+  BATOCERA_DESKTOPAPPS_ICONS   += moonlight-qt.png
+endif
+
 ## Context Menu Actions
 
 # wine
