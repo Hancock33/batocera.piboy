@@ -44,7 +44,7 @@ else
 MOONLIGHT_QT_CONF_OPTS += CONFIG+=disable-x11
 endif
 
-ifeq ($(BR2_PACKAGE_WAYLAND),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
 MOONLIGHT_QT_DEPENDENCIES += wayland wayland-protocols qt6wayland
 else
 MOONLIGHT_QT_CONF_OPTS += CONFIG+=disable-wayland

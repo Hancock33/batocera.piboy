@@ -1,6 +1,6 @@
 [Paths]
 Prefix=/usr
 HostPrefix=@@HOST_DIR@@
-HostData=@@STAGING_DIR@@/usr
+HostData=@@STAGING_DIR@@/usr/lib/qt6
 Sysroot=@@STAGING_DIR@@
 SysrootifyPrefix=true
