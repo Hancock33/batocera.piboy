@@ -32,7 +32,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H616)$(BR2_PACKAGE_BATOCERA_TARGET_H700)$(BR
 endif
 
 define LIBRETRO_VITAQUAKE2_BUILD_CMDS
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-int-conversion|g" $(@D)/Makefile
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	# build the mission cores
 	$(foreach game,xatrix rogue zaero, \
 		$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D) clean && \

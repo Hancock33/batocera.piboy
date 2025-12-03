@@ -1,16 +1,27 @@
-diff -Naur vitaquake2-0fc99af0936735198e1788fb943498be78a9e740.org/Makefile vitaquake2-0fc99af0936735198e1788fb943498be78a9e740/Makefile
---- vitaquake2-0fc99af0936735198e1788fb943498be78a9e740.org/Makefile	2021-03-14 09:01:05.000000000 +0000
-+++ vitaquake2-0fc99af0936735198e1788fb943498be78a9e740/Makefile	2021-07-03 14:47:29.115013958 +0100
-@@ -86,6 +86,26 @@
+diff --git a/Makefile b/Makefile
+index 2214802..83901e1 100644
+--- a/Makefile
++++ b/Makefile
+@@ -87,6 +87,36 @@ else ifneq (,$(findstring rockchip,$(platform)))
         GLES31 := 1
     endif
  
++# Raspberry Pi 5 (64-bit)
++else ifeq ($(platform), rpi5_64)
++    TARGET := $(TARGET_NAME)_libretro.so
++	fpic := -fPIC
++    SHARED := -shared -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
++	CFLAGS += -mcpu=cortex-a76 -mtune=cortex-a76 -ffast-math -DARM
++    CFLAGS += -D_POSIX_C_SOURCE=199309L
++    GLES := 1
++    GLES31 := 1
++
 +# Raspberry Pi 4 (64-bit)
 +else ifeq ($(platform), rpi4_64)
 +    TARGET := $(TARGET_NAME)_libretro.so
 +	fpic := -fPIC
 +    SHARED := -shared -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
-+	CFLAGS += -mcpu=cortex-a72 -mtune=cortex-a72 -ffast-math -DARM
++	CFLAGS += -mcpu=cortex-a72 -mtune=cortex-a72 -Wno-implicit-function-declaration -Wno-int-conversion -ffast-math -DARM
 +    CFLAGS += -D_POSIX_C_SOURCE=199309L
 +    GLES := 1
 +    GLES31 := 1
@@ -28,7 +39,7 @@ diff -Naur vitaquake2-0fc99af0936735198e1788fb943498be78a9e740.org/Makefile vita
  else ifneq (,$(findstring osx,$(platform)))
     TARGET := $(TARGET_NAME)_libretro.dylib
     fpic := -fPIC
-@@ -261,7 +261,7 @@
+@@ -247,7 +277,7 @@ endif
  ifeq ($(GLES), 1)
     HAVE_OPENGL = 0
     CFLAGS += -DHAVE_OPENGLES
