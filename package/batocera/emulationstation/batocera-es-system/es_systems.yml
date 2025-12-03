@@ -6552,7 +6552,6 @@ psx:
       mednafen_psx:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PSX] }
     duckstation:
       duckstation:      { requireAnyOf: [BR2_PACKAGE_DUCKSTATION]  }
-      duckstation-legacy: { requireAnyOf: [BR2_PACKAGE_DUCKSTATION_LEGACY] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:psx
   comment_fr:           |
