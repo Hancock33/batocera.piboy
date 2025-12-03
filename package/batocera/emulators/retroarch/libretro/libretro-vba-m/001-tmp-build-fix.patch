@@ -1,0 +1,28 @@
+diff --git a/src/libretro/libretro.cpp b/src/libretro/libretro.cpp
+index 357057f9..ee20376e 100644
+--- a/src/libretro/libretro.cpp
++++ b/src/libretro/libretro.cpp
+@@ -1265,14 +1265,7 @@ static void update_variables_gb(bool startup) {
+             set_gbPalette();
+     }
+ 
+-    var.key = "vbam_gbcoloroption";
+-    var.value = NULL;
+-
+-    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value) {
+-        gbColorOption = (!strcmp(var.value, "enabled"));
+-    }
+-
+-    char options[9][35] = {
++    char options[8][35] = {
+         "vbam_showborders",
+         "vbam_gbHardware",
+         "vbam_allowcolorizerhack",
+@@ -1281,7 +1274,6 @@ static void update_variables_gb(bool startup) {
+         "vbam_gb_effects_stereo_enabled",
+         "vbam_gb_effects_surround_enabled",
+         "vbam_palettes",
+-        "vbam_gbcoloroption",
+     };
+ 
+     struct retro_core_option_display option_display_gb;
