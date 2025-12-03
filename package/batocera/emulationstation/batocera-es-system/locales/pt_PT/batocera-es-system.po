@@ -725,7 +725,7 @@ msgctxt "game_options"
 msgid "16x Anistropic"
 msgstr "16x Anisotrópico"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16x MSAA"
@@ -735,7 +735,7 @@ msgctxt "game_options"
 msgid "16x Native (~7168p)"
 msgstr "16x Nativo (~7168p)"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "16x SSAA"
 msgstr "16x SSAA"
@@ -1180,7 +1180,7 @@ msgctxt "game_options"
 msgid "2x Anistropic"
 msgstr "2x Anisotrópico"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "2x MSAA"
 msgstr "2x MSAA"
@@ -1195,7 +1195,7 @@ msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr "2x Nativo (~720p)"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "2x SSAA"
 msgstr "2x SSAA"
@@ -1335,12 +1335,12 @@ msgctxt "game_options"
 msgid "32k RAM expansion card installed"
 msgstr "Placa de expansão de 32k RAM instalada"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "32x MSAA"
 msgstr "32x MSAA"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "32x SSAA"
 msgstr "32x SSAA"
@@ -1625,7 +1625,7 @@ msgctxt "game_options"
 msgid "4x Anistropic"
 msgstr "4x Anisotrópico"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "4x MSAA"
 msgstr "4x MSAA"
@@ -1645,7 +1645,7 @@ msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr "4x Nativo (~1440p/2K)"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "4x SSAA"
 msgstr "4x SSAA"
@@ -2135,7 +2135,7 @@ msgctxt "game_options"
 msgid "8x Anistropic"
 msgstr "8x Anisotrópico"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "8x MSAA"
 msgstr "8x MSAA"
@@ -2150,7 +2150,7 @@ msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr "8x Nativo (~2880p/5K)"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "8x SSAA"
 msgstr "8x SSAA"
@@ -2443,7 +2443,7 @@ msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA)"
 msgstr "ANTI-ALIASING (MSAA)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA/SSAA)"
 msgstr "ANTI-ALIASING (MSAA/SSAA)"
@@ -3004,7 +3004,7 @@ msgctxt "game_options"
 msgid "All 1s"
 msgstr "Todos 1s"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "All Borders"
 msgstr "Todas as Bordas"
@@ -3182,7 +3182,7 @@ msgctxt "game_options"
 msgid "Analogue Controller"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "Analogue Controller (DualShock)"
 msgstr ""
@@ -3195,11 +3195,6 @@ msgstr ""
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Analogue Joystick (Flystick)"
-msgstr ""
-
-#. TRANSLATION: libretro/duckstation
-msgctxt "game_options"
-msgid "Analogue Stick"
 msgstr ""
 
 #. TRANSLATION: libretro/parallel_n64
@@ -4852,7 +4847,7 @@ msgctxt "game_options"
 msgid "CROP BORDER"
 msgstr "CORTAR BORDA"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, ...
+#. TRANSLATION: duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, libretro/picodrive, ...
 msgctxt "game_options"
 msgid "CROP OVERSCAN"
 msgstr "CORTAR BORDAS (OVERSCAN)"
@@ -6669,7 +6664,7 @@ msgctxt "game_options"
 msgid "Digital"
 msgstr "Digital"
 
-#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Digital Controller"
 msgstr "Comando Digital"
@@ -6932,7 +6927,7 @@ msgctxt "game_options"
 msgid "DualShock Controller"
 msgstr "Comando DualShock"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr ""
@@ -7985,7 +7980,7 @@ msgstr ""
 "Melhorias. Aumente a resolução de renderização. Torna os objetos 3D mais "
 "nítido"
 
-#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/duckstation, ...
+#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "Melhoria. Funciona apenas com proporção 16/9 e molduras desativadas."
@@ -8049,12 +8044,12 @@ msgctxt "game_options"
 msgid "Enhancement. Removes disc loading."
 msgstr "Melhoria. Remove carregamento do disco."
 
-#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/swanstation
+#. TRANSLATION: libretro/mednafen_psx, libretro/swanstation
 msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
 msgstr "Melhoramento. Pular pode romper alguns jogos."
 
-#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/desmume, libretro/duckstation, ...
+#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/desmume, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr "Melhoria. Suaviza as bordas serrilhadas em polignos de objetos 3D."
@@ -8069,7 +8064,7 @@ msgctxt "game_options"
 msgid "Enhancement. Smooth/upscale textures on 3D objects."
 msgstr "Melhoria. Texturas suaves/de alto nível em objetos 3D."
 
-#. TRANSLATION: libretro/duckstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "Enhancement. Smooth/upscale textures."
 msgstr "Melhoria. Texturas suaves/de alto padrão."
@@ -12272,7 +12267,7 @@ msgctxt "game_options"
 msgid "Monochrome High-Resolution"
 msgstr "Alta resolução monocromática"
 
-#. TRANSLATION: libretro/duckstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "More accurate emulation, but slower."
 msgstr "Emulação mais precisa, porém mais lenta."
@@ -12648,7 +12643,7 @@ msgctxt "game_options"
 msgid "NZ-CHAT"
 msgstr "NZ-CHAT"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "Namco GunCon"
@@ -12696,7 +12691,7 @@ msgctxt "game_options"
 msgid "Navite"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "NeGcon"
 msgstr "NeGcon"
@@ -12706,7 +12701,7 @@ msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Vibração)"
 
-#. TRANSLATION: f2bgl, libretro/duckstation, libretro/melondsds, libretro/parallel_n64, libretro/pcsx2, ...
+#. TRANSLATION: f2bgl, libretro/melondsds, libretro/parallel_n64, libretro/pcsx2, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr "Mais próximo"
@@ -13238,7 +13233,7 @@ msgstr ""
 "Apenas o assíncronar (saltar desenho no ecrã) evita o congelamento durante a "
 "compilação dos sombreamentos."
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "Somente área da borda (overscan)"
@@ -14008,7 +14003,7 @@ msgctxt "game_options"
 msgid "PlayStation 2 wheel type"
 msgstr ""
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "Rato da PlayStation"
@@ -15257,7 +15252,7 @@ msgctxt "game_options"
 msgid "SHOW ACHIEVEMENT MESSAGES"
 msgstr "MOSTRAR MENSAGENS DE CONQUISTA"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
+#. TRANSLATION: duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, libretro/pcsx_rearmed, ...
 msgctxt "game_options"
 msgid "SHOW BIOS BOOTLOGO"
 msgstr "MOSTRAR O LOGOTIPO DE INICIALIZAÇÃO DA BIOS"
@@ -16215,7 +16210,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "Borda curta do ecrã visível (cm)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
+#. TRANSLATION: duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "Mostrar"
@@ -16430,7 +16425,7 @@ msgctxt "game_options"
 msgid "Sirius/Atari (2x 1-button Digital, II+ Only)"
 msgstr "Sirius/Atari (2x 1-Botão Digital, II+ Apenas)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
+#. TRANSLATION: duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Skip"
 msgstr "Saltar"
@@ -17345,7 +17340,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr "FILTRO DA TEXTURA"
 
-#. TRANSLATION: duckstation, dxx-rebirth, eden, libretro/duckstation, libretro/mupen64plus-next, ...
+#. TRANSLATION: duckstation, dxx-rebirth, eden, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr "FILTRO DE TEXTURA"
@@ -18199,7 +18194,7 @@ msgctxt "game_options"
 msgid "USE SHADER JIT"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "USE SOFTWARE RENDERING"
 msgstr "USAR SOFTWARE DE RENDERIZAÇÃO"
@@ -19190,7 +19185,7 @@ msgctxt "game_options"
 msgid "WIDESCREEN CHEAT (PRIORITY)"
 msgstr "CÓDIGO DE WIDESCREEN (PRIORITÁRIO)"
 
-#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/duckstation, ...
+#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "WIDESCREEN HACK (GLITCHY)"
 msgstr "WIDESCREEN HACK (PODE CAUSAR FALHAS)"
@@ -19555,7 +19550,7 @@ msgctxt "game_options"
 msgid "Zooms in to hide black borders."
 msgstr "Ampliar para ocultar bordas pretas."
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/fceumm, libretro/nestopia, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/fceumm, libretro/nestopia, libretro/swanstation
 msgctxt "game_options"
 msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr "Ampliar para esconder as bordas pretas. As bordas diferem por jogo."
