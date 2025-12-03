@@ -136,7 +136,6 @@ Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|c57ad894d5942740
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|812dd1b35225b64d9392a3e21de28c3a5861ddf7|Nov 23, 2025
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|0d26fd59103941e5f95e0ee665c6e0fb8c6b6f03|Sept 02, 2024
-Emulators|[libretro-fbalpha](http://github.com/libretro/fbalpha2012)|77167cea72e808384c136c8c163a6b4975ce7a84|Oct 21, 2024
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|a558f03db8aea6ddc65c6f5805317b774098a894|Dec 01, 2025
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|5cd4a43e16a7f3cd35628d481c347a0a98cfdfa2|Sept 13, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|1666eb0875613ee16b04e08be8ed89c27dbd5c25|Nov 22, 2025
@@ -254,7 +253,6 @@ Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64pl
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|50be36007f26500bd48d4b2c1574bb977af9e2e4|Jun 21, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|a0f33aab037fd92f1a1776222487efde32890d1d|Dec 02, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.349|Dec 02, 2025
-Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|Dec 22, 2015
 Emulators|[play](https://github.com/jpd002/Play-.git)|77c62d3a942e219bc9d072b4800fa0881208ce2a|Nov 03, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4ece9aba6ff89fc5036b54b13d9d19c6cec71949|Dec 02, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
