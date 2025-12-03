@@ -495,7 +495,6 @@ Controllers|[sinden-guns-libs](http://github.com/batocera-linux/batocera-sinden-
 Controllers|[lightguns-games-precalibrations](http://github.com/batocera-linux/lightguns-games-precalibrations)|3b16ec84fc1ad60d5e9f77e04bde2441813ad14e|Aug 27, 2023
 Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f997460697013fc54029fcac681|Aug 13, 2023
 Gpu|[mali-G31](http://github.com/Multi-Retropie/vim1s-g31)|2e33bb43d343336fbcf1f4d4a241af6c04f6af3d|Aug 06, 2023
-Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.0.0|Aug 03, 2023
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.1|Jun 14, 2023
@@ -535,7 +534,6 @@ Controllers|[uinput-joystick](http://github.com/shantigilbert/uinput_joystick)|b
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
 Looks|[noto-cjk-fonts](https://github.com/notofonts/noto-cjk/releases)|Sans2.004|Jan 27, 2022
 Utils|[wtype](http://github.com/atx/wtype)|v0.4|Jan 27, 2022
-Emulators|[libretro-duckstation](http://github.com/batocera-linux/lr-duckstation)|5c0d746e4ccb725fc03e53dc530b90bc570253d7|Dec 03, 2021
 Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|3ba4231c1dc8dcdf487428712856b790d2e4b8f3|Nov 3, 2021
 Ports|[sorr](http://github.com/Cpasjuste/bennugd-monolithic)|0290c3719fd74121ff9c9e690c955285e4ba391c|Oct 07, 2021
 Boot|[uboot-powkiddy-a13](http://github.com/alpgarcia/caesar-u-boot)|e2c76fb6b0f89c5385273b3a83fbd2ce16903396|Sept 13, 2021

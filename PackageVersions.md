@@ -86,7 +86,6 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|f8c2
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.12.01|Dec 01, 2025
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
-Emulators|[duckstation-legacy](http://github.com/stenzek/duckstation)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|760b7b4740cbbfeab9bbb5f3b9505c112f4e0d09|Dec 03, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|fe8017734b48eaf092ebe4e4930c4d9a48a586c6|Dec 03, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
@@ -132,7 +131,6 @@ Emulators|[libretro-dinothawr](http://github.com/libretro/Dinothawr)|e57e780a963
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|df2b1a754bba4f0595d3ed07ccd0711019e014b8|Nov 21, 2025
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|492d8a3996429dbaa4a13b2e90c522e7b34fc2bb|Nov 30, 2025
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|5dbc8c9a27f7bc717cc2f4264db8d29446270340|Nov 05, 2025
-Emulators|[libretro-duckstation](http://github.com/batocera-linux/lr-duckstation)|5c0d746e4ccb725fc03e53dc530b90bc570253d7|Dec 03, 2021
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|31de2a75e2187360bc55b1b43f9524779485fe8a|Oct 12, 2025
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|c57ad894d5942740b4896511e8554c9a776b04a6|Apr 16, 2025
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
