@@ -387,7 +387,16 @@ class LibretroGenerator(Generator):
             # a link would work, but on fat32, we need to copy
             commandArray.extend(["-e", state_slot])
 
-        return Command.Command(array=commandArray, env={"XDG_CONFIG_HOME":CONFIGS})
+        environment={"XDG_CONFIG_HOME":CONFIGS}
+        
+        if system.config.core == 'dolphin':
+            environment.update(
+                {
+                    "SDL_JOYSTICK_HIDAPI": "0"
+                }
+            )
+
+        return Command.Command(array=commandArray, env=environment)
 
 def getGFXBackend(system: Emulator) -> str:
         # Start with the selected option

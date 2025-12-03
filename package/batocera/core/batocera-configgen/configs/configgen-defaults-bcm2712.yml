@@ -19,6 +19,9 @@ model3:
   core:     supermodel-legacy
   options:
     videomode: max-1920x1080
+saturn:
+  emulator: libretro
+  core:     yabausesa
 scummvm:
   emulator: scummvm
   core:     scummvm
@@ -33,13 +36,15 @@ quake3:
     decorations: none
     hud_support: none
 gamecube:
-  emulator: dolphin
+  emulator: libretro
   core:     dolphin
 wii:
-  emulator: dolphin
+  emulator: libretro
   core:     dolphin
   options:
     gfxbackend: Vulkan
-saturn:
+wiiware:
   emulator: libretro
-  core:     yabasanshiro
+  core:     dolphin
+  options:
+    videomode: max-480x240

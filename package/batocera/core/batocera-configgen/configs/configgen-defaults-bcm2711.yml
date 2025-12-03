@@ -8,6 +8,8 @@ default:
     retroarch.menu_scale_factor: 0.800000
     retroarch.menu_widget_scale_auto: false
     retroarch.menu_widget_scale_factor: 0.800000
+    batterymode: highperformance
+    powermode: highperformance
 
 amiga1200:
   emulator: libretro
