@@ -2427,7 +2427,6 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'dice': _dice_options,
     'dolphin': _dolphin_options,
     'dosbox_pure': _dosbox_pure_options,
-    'duckstation': _duckstation_options,
     'fbneo': _fbneo_options,
     'fceumm': _fceumm_options,
     'flycast': _flycast_options,

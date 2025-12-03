@@ -725,7 +725,7 @@ msgctxt "game_options"
 msgid "16x Anistropic"
 msgstr "16x 비등방성"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "16x MSAA"
 msgstr "16배 MSAA"
@@ -735,7 +735,7 @@ msgctxt "game_options"
 msgid "16x Native (~7168p)"
 msgstr "16배 실기 (~7168p)"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "16x SSAA"
 msgstr "16배 SSAA"
@@ -1180,7 +1180,7 @@ msgctxt "game_options"
 msgid "2x Anistropic"
 msgstr "2x 비등방성"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "2x MSAA"
 msgstr "2배 MSAA"
@@ -1195,7 +1195,7 @@ msgctxt "game_options"
 msgid "2x Native (~720p)"
 msgstr "2배 원본 (~720p)"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "2x SSAA"
 msgstr "2배 SSAA"
@@ -1335,12 +1335,12 @@ msgctxt "game_options"
 msgid "32k RAM expansion card installed"
 msgstr "32k 램 확장 카드가 설치됨"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "32x MSAA"
 msgstr "32배 MSAA"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "32x SSAA"
 msgstr "32배 SSAA"
@@ -1625,7 +1625,7 @@ msgctxt "game_options"
 msgid "4x Anistropic"
 msgstr "4x 비등방성"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "4x MSAA"
 msgstr "4배 MSAA"
@@ -1645,7 +1645,7 @@ msgctxt "game_options"
 msgid "4x Native (~1440p/2K)"
 msgstr "4배 원본 (~1440p/2K)"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "4x SSAA"
 msgstr "4배 SSAA"
@@ -2135,7 +2135,7 @@ msgctxt "game_options"
 msgid "8x Anistropic"
 msgstr "8x 비등방성"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "8x MSAA"
 msgstr "8배 MSAA"
@@ -2150,7 +2150,7 @@ msgctxt "game_options"
 msgid "8x Native (~2880p/5K)"
 msgstr "8배 원본 (~2880p/5K)"
 
-#. TRANSLATION: dolphin_triforce, duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: dolphin_triforce, duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "8x SSAA"
 msgstr "8배 SSAA"
@@ -2441,7 +2441,7 @@ msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA)"
 msgstr "안티에일리어싱 (MSAA)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "ANTI-ALIASING (MSAA/SSAA)"
 msgstr "안티에일리어싱 (MSAA/SSAA)"
@@ -2999,7 +2999,7 @@ msgctxt "game_options"
 msgid "All 1s"
 msgstr "모두 1 초"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "All Borders"
 msgstr "모든 테투리"
@@ -3174,7 +3174,7 @@ msgctxt "game_options"
 msgid "Analogue Controller"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "Analogue Controller (DualShock)"
 msgstr ""
@@ -3187,11 +3187,6 @@ msgstr ""
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Analogue Joystick (Flystick)"
-msgstr ""
-
-#. TRANSLATION: libretro/duckstation
-msgctxt "game_options"
-msgid "Analogue Stick"
 msgstr ""
 
 #. TRANSLATION: libretro/parallel_n64
@@ -4833,7 +4828,7 @@ msgctxt "game_options"
 msgid "CROP BORDER"
 msgstr "테두리 자르기"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, ...
+#. TRANSLATION: duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, libretro/picodrive, ...
 msgctxt "game_options"
 msgid "CROP OVERSCAN"
 msgstr "오버스캔 자르기"
@@ -6637,7 +6632,7 @@ msgctxt "game_options"
 msgid "Digital"
 msgstr "디지털"
 
-#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Digital Controller"
 msgstr "디지털 컨트롤러"
@@ -6898,7 +6893,7 @@ msgctxt "game_options"
 msgid "DualShock Controller"
 msgstr "듀얼쇼크 컨트롤러"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "DualShock has rumble support. Not all games support DualShock."
 msgstr ""
@@ -7947,7 +7942,7 @@ msgid ""
 "Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
 msgstr "향상. 렌더링 해상도를 높입니다. 3D 개체를 더 선명하게 만듭니다."
 
-#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/duckstation, ...
+#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "향상. 16/9 비율과 베젤이 비활성화된 경우에만 작동합니다."
@@ -8009,12 +8004,12 @@ msgctxt "game_options"
 msgid "Enhancement. Removes disc loading."
 msgstr "향상. 디스크 로드를 제거합니다."
 
-#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/swanstation
+#. TRANSLATION: libretro/mednafen_psx, libretro/swanstation
 msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
 msgstr "향상. 건너뛰면 일부 게임이 중단 될 수 있습니다."
 
-#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/desmume, libretro/duckstation, ...
+#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/desmume, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr "향상. 3D 개체 다각형의 들쭉날쭉한 모서리를 부드럽게 다듬습니다."
@@ -8029,7 +8024,7 @@ msgctxt "game_options"
 msgid "Enhancement. Smooth/upscale textures on 3D objects."
 msgstr "향상. 3D 개체의 텍스쳐를 매끄럽고 고급스럽게 만듭니다."
 
-#. TRANSLATION: libretro/duckstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "Enhancement. Smooth/upscale textures."
 msgstr "향상. 부드러운/고급스러운 텍스쳐."
@@ -12204,7 +12199,7 @@ msgctxt "game_options"
 msgid "Monochrome High-Resolution"
 msgstr "모노크롬 고해상도"
 
-#. TRANSLATION: libretro/duckstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "More accurate emulation, but slower."
 msgstr "더 정확한 에뮬레이션이지만 느립니다."
@@ -12580,7 +12575,7 @@ msgctxt "game_options"
 msgid "NZ-CHAT"
 msgstr "NZ 채팅"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "남코 건콘"
@@ -12629,7 +12624,7 @@ msgctxt "game_options"
 msgid "Navite"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
+#. TRANSLATION: libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "NeGcon"
 msgstr "네지콘"
@@ -12639,7 +12634,7 @@ msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "네지콘 (진동)"
 
-#. TRANSLATION: f2bgl, libretro/duckstation, libretro/melondsds, libretro/parallel_n64, libretro/pcsx2, ...
+#. TRANSLATION: f2bgl, libretro/melondsds, libretro/parallel_n64, libretro/pcsx2, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr "최근접"
@@ -13166,7 +13161,7 @@ msgid "Only Async (skip draw) avoids freezing while compiling shaders."
 msgstr ""
 "비동기(그리기 건너뛰기)만 셰이더를 컴파일하는 동안 중지되는 것을 방지합니다."
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/swanstation
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "오버스캔 영역만"
@@ -13929,7 +13924,7 @@ msgctxt "game_options"
 msgid "PlayStation 2 wheel type"
 msgstr ""
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/mednafen_psx, libretro/pcsx_rearmed, libretro/swanstation
 msgctxt "game_options"
 msgid "PlayStation Mouse"
 msgstr "플레이스테이션 마우스"
@@ -15166,7 +15161,7 @@ msgctxt "game_options"
 msgid "SHOW ACHIEVEMENT MESSAGES"
 msgstr "도전과제 메세지 표시"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
+#. TRANSLATION: duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, libretro/pcsx_rearmed, ...
 msgctxt "game_options"
 msgid "SHOW BIOS BOOTLOGO"
 msgstr "바이오스 부트로고 표시"
@@ -16124,7 +16119,7 @@ msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "짧은 가시 화면 가장자리 (cm)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
+#. TRANSLATION: duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Show"
 msgstr "표시"
@@ -16339,7 +16334,7 @@ msgctxt "game_options"
 msgid "Sirius/Atari (2x 1-button Digital, II+ Only)"
 msgstr "시리우스/아타리 (2배 1버튼 디지털, II+ 전용)"
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, ...
+#. TRANSLATION: duckstation, libretro/gambatte, libretro/mednafen_psx, libretro/mgba, libretro/swanstation, ...
 msgctxt "game_options"
 msgid "Skip"
 msgstr "건너뛰기"
@@ -17243,7 +17238,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTER"
 msgstr "텍스처 필터"
 
-#. TRANSLATION: duckstation, dxx-rebirth, eden, libretro/duckstation, libretro/mupen64plus-next, ...
+#. TRANSLATION: duckstation, dxx-rebirth, eden, libretro/mupen64plus-next, libretro/parallel_n64, ...
 msgctxt "game_options"
 msgid "TEXTURE FILTERING"
 msgstr "텍스처 필터링"
@@ -18085,7 +18080,7 @@ msgctxt "game_options"
 msgid "USE SHADER JIT"
 msgstr ""
 
-#. TRANSLATION: libretro/duckstation, libretro/swanstation
+#. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
 msgid "USE SOFTWARE RENDERING"
 msgstr "소프트웨어 렌더링 사용"
@@ -19068,7 +19063,7 @@ msgctxt "game_options"
 msgid "WIDESCREEN CHEAT (PRIORITY)"
 msgstr "와이드스크린 치트 (우선)"
 
-#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/duckstation, ...
+#. TRANSLATION: dolphin, dolphin_triforce, duckstation, libretro/dolphin, libretro/flycast, ...
 msgctxt "game_options"
 msgid "WIDESCREEN HACK (GLITCHY)"
 msgstr "와이드 스크린 해킹 (결함)"
@@ -19430,7 +19425,7 @@ msgctxt "game_options"
 msgid "Zooms in to hide black borders."
 msgstr "확대하여 검은색 테두리를 숨깁니다."
 
-#. TRANSLATION: duckstation, libretro/duckstation, libretro/fceumm, libretro/nestopia, libretro/swanstation
+#. TRANSLATION: duckstation, libretro/fceumm, libretro/nestopia, libretro/swanstation
 msgctxt "game_options"
 msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr "확대/축소하여 검은색 테두리를 숨깁니다. 테두리는 게임마다 다릅니다."

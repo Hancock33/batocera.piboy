@@ -3,8 +3,8 @@
 # libretro-picodrive
 #
 ################################################################################
-# Version: Commits on Nov 17, 2025
-LIBRETRO_PICODRIVE_VERSION = 046e5ff91eb4bfa728e51e01304ff73cf6b4ee96
+# Version: Commits on Dec 03, 2025
+LIBRETRO_PICODRIVE_VERSION = 3365b1774bc8680be9899968fe45b224ad2f11c1
 LIBRETRO_PICODRIVE_SITE = https://github.com/libretro/picodrive.git
 LIBRETRO_PICODRIVE_SITE_METHOD=git
 LIBRETRO_PICODRIVE_GIT_SUBMODULES=YES

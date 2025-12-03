@@ -1,6 +1,4 @@
-﻿ayaneo-platform.mk
-ayn-platform.mk
-batocera-shim.mk
+﻿batocera-shim.mk
 bauh.mk
 broadcom-bt-firmware.mk
 btop.mk

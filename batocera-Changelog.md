@@ -11,6 +11,7 @@
 - WINE: Compressed applications (wsquashfs, wtgz) use the same storage paths to store the PREFIX as uncompressed ones.
   `~/wine-bottles/windows/<gamename>` turns to `~/wine-bottles/windows/<winerunner>/<gamename>.wine`
   We recommend following the procedure described in our wiki to back up Windows savegames.
+- We have moved to the mainline Nintendo controller driver. You may need to reconfigure your Nintendo controller accordingly for wired & bluetooth.
 ### Hardware
 - AIC8800 USB driver support for Raxda Boards
 - Anbernic RG28XX, RG34XX, RG35XX, RG40XX, RGCUBEXX device variant support
@@ -42,6 +43,8 @@
 ### Changed / Improved
 - Wifi country can now be chosen under the Network Setting option.
   This improves Wifi connectivity by aligning your device with regional regulations as well as 6GHz band support.
+- Moonlight has transitioned from Moonlight Embedded to Moonlight QT for the majority of boards to allow for more hardware acceleration.
+  Hardware acceleration depends on supported codecs for devices in FFmpeg.
 ### Updated
 - Azahar Plus to AZAHAR_PLUS_2123_3_A
 - Dolphin-Emu to 2509-188
@@ -59,7 +62,7 @@
 - OpenMOHAA to v0.82.1
 - Play! to 0.71
 - RPCS3 to v0.0.38
-- ShadPS4 Plus to SHAD_PS4_PLUS_0_11_0
+- ShadPS4 Plus to SHAD_PS4_PLUS_0_12_0_A
 - Sonic 2013 to 1.3.3
 - Sonic CD to 1.3.3
 - Sonic Mania to v1.1.1
@@ -81,12 +84,15 @@
 - LLVM Project to 20.1.8
 - Mesa3D to 25.3.0
 - Nvidia production drivers to 580.105.08
+- Sound Open Firmware to 2025.05.1
 - Sway to 1.11
+- VKD3D Proton to 3.0a
 - Vulkan stack to 1.4.328.1
 - Wayland to 1.24.0
 - Wayland Protocols to 1.45
-- Wine-TKG to 10.16
-- Wine Proton to 10.0-2
+- Wine Mono to 10.4.0
+- Wine-TKG to 10.20
+- Wine Proton to 10.0-3
 - WLRoots to 0.19.2
 - XWayland to 24.1.9
 

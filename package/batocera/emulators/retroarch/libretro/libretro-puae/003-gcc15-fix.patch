@@ -1,0 +1,14 @@
+diff --git a/Makefile.common b/Makefile.common
+index e0e36be4..05bc93f1 100644
+--- a/Makefile.common
++++ b/Makefile.common
+@@ -4,6 +4,9 @@ DEPS_DIR = $(CORE_DIR)/deps
+ RETRODEP = $(CORE_DIR)/retrodep
+ LIBRETRO_COMM_DIR := $(CORE_DIR)/libretro-common
+ 
++# GCC15 workaround
++CFLAGS +=  -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types
++
+ INCFLAGS := \
+ 	-I$(EMU) \
+ 	-I$(EMU)/include \

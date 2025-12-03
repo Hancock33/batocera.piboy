@@ -624,10 +624,7 @@ fbneo:
   platform:             arcade
   emulators:
     libretro:
-      fbalpha:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FBALPHA]  }
       fbneo:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FBNEO]    }
-    fba2x:
-      fba2x:            { requireAnyOf: [BR2_PACKAGE_PIFBA] }
   comment_en:           |
                         ROMs must come from the FBNeo romset version 1.0.0.2
 
@@ -2842,14 +2839,14 @@ library:
   force:                True
 
 moonlight:
-  name:                 Moonlight Embedded
+  name:                 Moonlight
   manufacturer:         Misc. System
   release:
   hardware:             system
   extensions:           [moonlight]
   emulators:
     moonlight:
-      moonlight:        { requireAnyOf: [BR2_PACKAGE_MOONLIGHT_EMBEDDED] }
+      moonlight:        { requireAnyOf: [BR2_PACKAGE_MOONLIGHT_EMBEDDED, BR2_PACKAGE_MOONLIGHT_QT] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:moonlight
   comment_fr:           |
@@ -6296,15 +6293,12 @@ neogeo:
   platform:             neogeo, arcade
   emulators:
     libretro:
-      fbalpha:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FBALPHA]        }
       fbneo:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FBNEO]          }
       imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME]                    }
-    fba2x:
-      fba2x:            { requireAnyOf: [BR2_PACKAGE_PIFBA]                   }
 
 neogeocd:
   name:                 Neo-Geo CD
@@ -6548,11 +6542,9 @@ psx:
     libretro:
       pcsx_rearmed:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PCSX] }
       swanstation:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SWANSTATION] }
-      duckstation:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_DUCKSTATION] }
       mednafen_psx:     { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_PSX] }
     duckstation:
       duckstation:      { requireAnyOf: [BR2_PACKAGE_DUCKSTATION]  }
-      duckstation-legacy: { requireAnyOf: [BR2_PACKAGE_DUCKSTATION_LEGACY] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:psx
   comment_fr:           |

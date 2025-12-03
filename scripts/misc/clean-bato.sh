@@ -68,7 +68,6 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-perl-parse-yapp-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/mupen64plus-core*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/libretro-core-info*
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/libretro-duckstation*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/redream-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/scummvm-*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/adwaita-icon-theme-light*

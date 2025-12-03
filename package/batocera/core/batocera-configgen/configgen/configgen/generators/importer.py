@@ -39,7 +39,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'drastic': ('drastic.drasticGenerator', 'DrasticGenerator'),
     'droidports': ('droidports.droidportsGenerator', 'DroidportsGenerator'),
     'duckstation': ('duckstation.duckstationGenerator', 'DuckstationGenerator'),
-    'duckstation_legacy': ('duckstation_legacy.duckstationLegacyGenerator', 'DuckstationLegacyGenerator'),
     'dxx-rebirth': ('dxx_rebirth.dxx_rebirthGenerator', 'DXX_RebirthGenerator'),
     'easyrpg': ('easyrpg.easyrpgGenerator', 'EasyRPGGenerator'),
     'ecwolf': ('ecwolf.ecwolfGenerator', 'ECWolfGenerator'),

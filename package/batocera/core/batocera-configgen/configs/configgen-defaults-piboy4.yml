@@ -78,3 +78,8 @@ wii:
   core:     dolphin
   options:
     videomode: max-480x240
+wiiware:
+  emulator: libretro
+  core:     dolphin
+  options:
+    videomode: max-480x240

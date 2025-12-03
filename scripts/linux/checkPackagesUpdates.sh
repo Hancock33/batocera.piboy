@@ -39,7 +39,6 @@ PACKAGES_LIBRETRO="libretro-81
                    libretro-ecwolf
                    libretro-emuscv
                    libretro-fake08
-                   libretro-fbalpha
                    libretro-fbneo
                    libretro-fceumm
                    libretro-flycast
@@ -169,7 +168,6 @@ PACKAGES_EMULATORS="amiberry
                     model2
                     openmsx
                     pcsx2
-                    pifba
                     play
                     ppsspp
                     python-pygame2
@@ -309,6 +307,7 @@ PACKAGES_CONTROLLERS="aelightgun
 PACKAGES_UTILS="btop
                 mangohud
                 moonlight-embedded
+                moonlight-qt
                 ryzenadj
                 switchres
                 syncthing

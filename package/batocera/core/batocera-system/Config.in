@@ -1,5 +1,3 @@
-
-
 ##### define variables to use in this file
 if  BR2_PACKAGE_BATOCERA_RPI_VCORE || BR2_PACKAGE_BATOCERA_RPI_MESA3D
 config BR2_PACKAGE_BATOCERA_RPI_ANY
@@ -305,7 +303,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_XWIIMOTE                             if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        # a tool to analyse wiimote events (mainly to debug, but helps and is funny)
     select BR2_PACKAGE_BATOCERA_GUNS                        if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
     select BR2_PACKAGE_BATOCERA_WHEEL_CALIBRATOR
-    select BR2_PACKAGE_JOYCOND
+    select BR2_PACKAGE_JOYCOND                              if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_7         # nintendo switch joycon daemon (requires hid-nx or hid-nintendo in kernel 6.7 or later)
     select BR2_PACKAGE_NEW_LG4FF                            if !BR2_PACKAGE_BATOCERA_TARGET_RK3326         && !BR2_PACKAGE_BATOCERA_TARGET_XU4    && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_BCM2835        && !BR2_PACKAGE_BATOCERA_TARGET_RK3326 && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128         && !BR2_PACKAGE_BATOCERA_TARGET_SM8250 && \
@@ -313,7 +311,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_ODIN           # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
     select BR2_PACKAGE_KEYBOARDTOPADS
-    select BR2_PACKAGE_NSO_N64
+    select BR2_PACKAGE_NSO_N64                              if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_7         # nintendo switch joycon daemon (requires hid-nx or hid-nintendo in kernel 6.7 or later)
     select BR2_PACKAGE_ROCKNIX_JOYPAD                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
@@ -716,7 +714,8 @@ config BR2_PACKAGE_BATOCERA_GAMESTREAM_SYSTEMS
     bool "batocera.linux game streaming support"
 
     # Game streaming
-    select BR2_PACKAGE_MOONLIGHT_EMBEDDED                   if !BR2_PACKAGE_BATOCERA_TARGET_RK3128 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+    select BR2_PACKAGE_MOONLIGHT_EMBEDDED                   if !BR2_PACKAGE_BATOCERA_QT6 && !BR2_PACKAGE_BATOCERA_TARGET_RK3128 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
+    select BR2_PACKAGE_MOONLIGHT_QT                         if  BR2_PACKAGE_BATOCERA_QT6
 
 #### ScummVM ####
 config BR2_PACKAGE_BATOCERA_SCUMMVM_SYSTEMS
@@ -792,10 +791,6 @@ config BR2_PACKAGE_BATOCERA_SEGADC
 #### Arcade cores ####
 config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     bool "batocera.linux arcade emulators packages selection"
-
-    # Final Burn Alpha
-    select BR2_PACKAGE_LIBRETRO_FBALPHA                     if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835
-    select BR2_PACKAGE_PIFBA                                if  BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
     # Final Burn NEO
     select BR2_PACKAGE_LIBRETRO_FBNEO                       # ALL
@@ -1180,13 +1175,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                # newer versions of duckstation are stricter on OpenGL 3.1
                                                                # requires X11 or Sway. 2GB boards aren't great.
 
-    select BR2_PACKAGE_DUCKSTATION_LEGACY                   if !BR2_PACKAGE_BATOCERA_GLES3              && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2835     && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_H3          && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3326      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128      && \
-                                                               !BR2_riscv
-
     select BR2_PACKAGE_LIBRETRO_SWANSTATION                 if !BR2_PACKAGE_BATOCERA_TARGET_X86         && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_H3          && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
@@ -1222,11 +1210,11 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8550      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
-   #select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
-   #                                                            BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
-   #                                                            BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
-   #                                                            BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
-   #                                                            BR2_PACKAGE_BATOCERA_TARGET_RK3588
+    select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
+                                                                BR2_PACKAGE_BATOCERA_BCM27XX            || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     select BR2_PACKAGE_EDEN                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_RYUJINX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1697,7 +1685,7 @@ config BR2_PACKAGE_BATOCERA_QT6
     select BR2_PACKAGE_QT6BASE_OPENGL_ES2                   if  BR2_PACKAGE_HAS_LIBGLES
    #select BR2_PACKAGE_QT6BASE_EGLFS                        if  (BR2_PACKAGE_HAS_LIBEGL && !BR2_PACKAGE_BATOCERA_TARGET_X86_ANY)
     select BR2_PACKAGE_QT6BASE_XCB                          if  BR2_PACKAGE_XORG7
-   #select BR2_PACKAGE_QT6DECLARATIVE                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_QT6DECLARATIVE                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_QT6MULTIMEDIA                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_QT6SHADERTOOLS                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_QT6SVG
