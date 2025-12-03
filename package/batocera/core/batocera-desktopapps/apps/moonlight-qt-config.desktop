@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Icon=/usr/share/icons/batocera/moonlight.png
+Icon=/usr/share/icons/batocera/moonlight-qt.png
 Exec=/usr/bin/moonlight-qt
 Terminal=false
 Type=Application
