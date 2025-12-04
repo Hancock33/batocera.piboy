@@ -4,7 +4,9 @@ Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|3
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|f882ff72eb4ca20a7c680f5c87a52ea7d349770e|Dec 04, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-04|Dec 04, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|dd40f0f52cf7c836fc8c951c03e223e04681200b|Dec 04, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251204|Dec 04, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|4914929b5fd236445c46de27a43f278894a8cb81|Dec 04, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251204|Dec 04, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|1c7afd683826129b91285d73b48fa982e3cfa826|Dec 04, 2025
 Audio|[cubeb](http://github.com/mozilla/cubeb)|bed368eb0d901ec4b7921a8d704ca469b7fb4e19|Dec 03, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|760b7b4740cbbfeab9bbb5f3b9505c112f4e0d09|Dec 03, 2025
@@ -48,10 +50,8 @@ Ports|[rott](http://github.com/fabiangreffrath/taradino)|e34d9e976c8c904dd20f523
 Ports|[stk](http://github.com/supertuxkart/stk-code)|2d0a96ec493be375141d544c771794998696edd8|Dec 02, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.12|Dec 02, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|bf6d914612efb437a91f572b01ffdfdcf2223157|Dec 02, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251202|Dec 02, 2025
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|590.44.01|Dec 02, 2025
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|1b0d0ce8c3a439c21fd582b414e557ca7e3759f0|Dec 02, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251202|Dec 02, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|5b2cfac536686053734208dc510b704b1202f89b|Dec 02, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|e58d3285f4323a19a0f5aea01f4cdf7a934e1155|Dec 02, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|4ece9aba6ff89fc5036b54b13d9d19c6cec71949|Dec 02, 2025
