@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-BATOCERA_SPLASH_VERSION = 5.6
+BATOCERA_SPLASH_VERSION = 5.8
 BATOCERA_SPLASH_SOURCE=
 
 BATOCERA_SPLASH_TGVERSION=$(BATOCERA_SYSTEM_VERSION) $(BATOCERA_SYSTEM_DATE)
