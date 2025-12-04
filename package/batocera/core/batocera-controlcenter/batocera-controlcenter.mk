@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 04, 2025
-BATOCERA_CONTROLCENTER_VERSION = 3762bd40993728f5b0828ae96ced42744ab290ba
+BATOCERA_CONTROLCENTER_VERSION = dccf9be85e6cd5139bc494536d24b1669651411d
 BATOCERA_CONTROLCENTER_SITE = $(call github,lbrpdx,batocera-controlcenter,$(BATOCERA_CONTROLCENTER_VERSION))
 BATOCERA_CONTROLCENTER_STE_METHOD = git
 BATOCERA_CONTROLCENTER_LICENSE = GPL3
