@@ -388,7 +388,7 @@ class LibretroGenerator(Generator):
             commandArray.extend(["-e", state_slot])
 
         environment={"XDG_CONFIG_HOME":CONFIGS}
-        
+
         if system.config.core == 'dolphin':
             environment.update(
                 {
