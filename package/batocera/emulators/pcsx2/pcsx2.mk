@@ -3,9 +3,9 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Dec 05, 2025
-PCSX2_VERSION = v2.5.356
-PCSX2_HASH = 3cecd894a36533389ae4d290258e7e49d44fa8b1
+# Version: Commits on Dec 06, 2025
+PCSX2_VERSION = v2.5.357
+PCSX2_HASH = 4eb0b097d61a18bcfa7395825554c4642e51092f
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
