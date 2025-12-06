@@ -90,7 +90,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_GAMECON_RPI
-	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/package/batocera/core/batocera-scripts/scripts/batocera-info.piboy $(TARGET_DIR)/usr/bin/batocera-info
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-info.piboy $(TARGET_DIR)/usr/bin/batocera-info
 endef
 
 ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
