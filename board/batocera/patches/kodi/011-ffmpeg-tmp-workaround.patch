@@ -1,8 +1,26 @@
 diff --git a/cmake/modules/FindFFMPEG.cmake b/cmake/modules/FindFFMPEG.cmake
-index 4fb003c12b..6d07bf9bb1 100644
+index 37cf1451a3..6d07bf9bb1 100644
 --- a/cmake/modules/FindFFMPEG.cmake
 +++ b/cmake/modules/FindFFMPEG.cmake
-@@ -42,8 +42,6 @@ macro(buildFFMPEG)
+@@ -30,15 +30,8 @@ macro(buildFFMPEG)
+   include(cmake/scripts/common/ModuleHelpers.cmake)
+ 
+   # Check for dependencies - Must be done before SETUP_BUILD_VARS
+-  if(KODI_DEPENDSBUILD OR (WIN32 OR WINDOWS_STORE))
+-    get_libversion_data("dav1d" "target")
+-    set(DAV1D_REQUIRED REQUIRED)
+-  else()
+-    # FFMPEG 7+ currently only has a version requirement of Dav1d 1.0.0
+-    set(LIB_DAV1D_VER 1.0.0)
+-  endif()
+-
+-  find_package(Dav1d ${LIB_DAV1D_VER} ${DAV1D_REQUIRED} ${SEARCH_QUIET})
++  get_libversion_data("dav1d" "target")
++  find_package(Dav1d ${LIB_DAV1D_VER} MODULE ${SEARCH_QUIET})
+   if(NOT TARGET LIBRARY::Dav1d)
+     message(STATUS "dav1d not found, internal ffmpeg build will be missing AV1 support!")
+   else()
+@@ -49,8 +42,6 @@ macro(buildFFMPEG)
  
    SETUP_BUILD_VARS()
  
@@ -11,7 +29,7 @@ index 4fb003c12b..6d07bf9bb1 100644
    if(WIN32 OR WINDOWS_STORE)
  
      find_package(Msys REQUIRED ${SEARCH_QUIET})
-@@ -172,14 +170,9 @@ macro(buildFFMPEG)
+@@ -179,14 +170,9 @@ macro(buildFFMPEG)
      if(NOT BASH_COMMAND)
        message(FATAL_ERROR "Internal FFmpeg requires bash.")
      endif()
@@ -27,7 +45,7 @@ index 4fb003c12b..6d07bf9bb1 100644
    then
      avcodec=`PKG_CONFIG_PATH=${DEPENDS_PATH}/lib/pkgconfig ${PKG_CONFIG_EXECUTABLE} --libs --static libavcodec`
      avformat=`PKG_CONFIG_PATH=${DEPENDS_PATH}/lib/pkgconfig ${PKG_CONFIG_EXECUTABLE} --libs --static libavformat`
-@@ -189,9 +182,9 @@ macro(buildFFMPEG)
+@@ -196,9 +182,9 @@ macro(buildFFMPEG)
      swscale=`PKG_CONFIG_PATH=${DEPENDS_PATH}/lib/pkgconfig ${PKG_CONFIG_EXECUTABLE} --libs --static libswscale`
      swresample=`PKG_CONFIG_PATH=${DEPENDS_PATH}/lib/pkgconfig ${PKG_CONFIG_EXECUTABLE} --libs --static libswresample`
      gnutls=`PKG_CONFIG_PATH=${DEPENDS_PATH}/lib/pkgconfig/ ${PKG_CONFIG_EXECUTABLE}  --libs-only-l --static --silence-errors gnutls`
@@ -39,7 +57,7 @@ index 4fb003c12b..6d07bf9bb1 100644
    fi")
      file(COPY ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/ffmpeg/ffmpeg-link-wrapper
           DESTINATION ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}
-@@ -199,7 +192,6 @@ macro(buildFFMPEG)
+@@ -206,7 +192,6 @@ macro(buildFFMPEG)
  
      set(FFMPEG_LINK_EXECUTABLE "${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/ffmpeg-link-wrapper <CMAKE_CXX_COMPILER> <FLAGS> <CMAKE_CXX_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>" PARENT_SCOPE)
      set(FFMPEG_CREATE_SHARED_LIBRARY "${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/ffmpeg-link-wrapper <CMAKE_CXX_COMPILER> <CMAKE_SHARED_LIBRARY_CXX_FLAGS> <LANGUAGE_COMPILE_FLAGS> <LINK_FLAGS> <CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS> <SONAME_FLAG><TARGET_SONAME> -o <TARGET> <OBJECTS> <LINK_LIBRARIES>" PARENT_SCOPE)
@@ -47,7 +65,7 @@ index 4fb003c12b..6d07bf9bb1 100644
      set(FFMPEG_INCLUDE_DIRS ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/include)
    endif()
  
-@@ -221,19 +213,18 @@ macro(buildFFMPEG)
+@@ -228,19 +213,18 @@ macro(buildFFMPEG)
    endif()
  
    foreach(_ffmpeg_pkg IN ITEMS ${FFMPEG_PKGS})
@@ -76,7 +94,7 @@ index 4fb003c12b..6d07bf9bb1 100644
    endforeach()
  endmacro()
  
-@@ -245,29 +236,15 @@ if(WITH_FFMPEG)
+@@ -252,29 +236,15 @@ if(WITH_FFMPEG)
    message(STATUS "Warning: FFmpeg version checking disabled")
    set(REQUIRED_FFMPEG_VERSION undef)
  else()
@@ -115,7 +133,7 @@ index 4fb003c12b..6d07bf9bb1 100644
  endif()
  
  # Allows building with external ffmpeg not found in system paths,
-@@ -298,40 +275,20 @@ else()
+@@ -305,40 +275,20 @@ else()
  
    # macro for find_library usage
    # arg1: lowercase libname (eg libavcodec, libpostproc, etc)
@@ -136,7 +154,7 @@ index 4fb003c12b..6d07bf9bb1 100644
 -
 -      # ToDo: We cant use IMPORTED_TARGET yet.
 -      # Linux CI fails with gmp related link issues when using the imported target
--      pkg_check_modules(FFMPEG_${libname_UPPER} ${libname}${libversion} REQUIRED ${SEARCH_QUIET})
+-      pkg_check_modules(FFMPEG_${libname_UPPER} ${libname}${libversion} ${SEARCH_QUIET})
 -
 -      # As windows does a simple find_library call, the output is a filename to the library
 -      # for the pkgconfig search, we can get the full file path from _LINK_LIBRARIES first element
@@ -164,7 +182,7 @@ index 4fb003c12b..6d07bf9bb1 100644
    endforeach()
  
    # Check all libs are found, and set found.
-@@ -383,23 +340,29 @@ else()
+@@ -390,23 +340,29 @@ else()
                                                     IMPORTED_LOCATION "${FFMPEG_${libname_UPPER}}"
                                                     INTERFACE_INCLUDE_DIRECTORIES "${FFMPEG_INCLUDE_DIRS}")
          else()
@@ -199,7 +217,7 @@ index 4fb003c12b..6d07bf9bb1 100644
                # replace -l<ffmpeglib> flag with ffmpeg target
                # This provides correct link ordering and deduplication
                string(REGEX REPLACE "-l${shortname}" "ffmpeg::${_shortlibname}" ldflag ${ldflag})
-@@ -417,7 +380,7 @@ else()
+@@ -424,7 +380,7 @@ else()
      endmacro()
  
      foreach(_ffmpeg_pkg IN ITEMS ${FFMPEG_PKGS})
@@ -208,7 +226,7 @@ index 4fb003c12b..6d07bf9bb1 100644
        ffmpeg_create_target(${_libname})
      endforeach()
    else()
-@@ -446,7 +409,7 @@ if(FFMPEG_FOUND)
+@@ -453,7 +409,7 @@ if(FFMPEG_FOUND)
    endif()
  
    foreach(_ffmpeg_pkg IN ITEMS ${FFMPEG_PKGS})
@@ -217,7 +235,7 @@ index 4fb003c12b..6d07bf9bb1 100644
      if(TARGET ffmpeg::${_libname})
        target_link_libraries(${APP_NAME_LC}::${CMAKE_FIND_PACKAGE_NAME} INTERFACE ffmpeg::${_libname})
  
-@@ -458,12 +421,8 @@ if(FFMPEG_FOUND)
+@@ -465,12 +421,8 @@ if(FFMPEG_FOUND)
      endif()
    endforeach()
  
