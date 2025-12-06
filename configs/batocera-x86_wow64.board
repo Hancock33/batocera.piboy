@@ -1,4 +1,4 @@
-include batocera-toolchain_Os.common
+include batocera-toolchain.common
 
 # Target definition
 BR2_x86_prescott=y

@@ -1,4 +1,4 @@
-include batocera-toolchain_Os.common
+include batocera-toolchain.common
 
 # Target definition
 BR2_arm=y
