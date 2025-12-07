@@ -1,5 +1,5 @@
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index e65cdd611..6674d688f 100644
+index 45e5dc910..7fdf3cafe 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -815,7 +815,7 @@ void GuiMenu::openDeveloperSettings()

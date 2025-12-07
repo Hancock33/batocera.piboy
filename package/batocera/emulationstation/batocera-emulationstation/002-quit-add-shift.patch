@@ -1,8 +1,8 @@
 diff --git a/es-app/src/main.cpp b/es-app/src/main.cpp
-index 4491e2f8e..ac32573f1 100644
+index 4892972a8..9cf5e0204 100644
 --- a/es-app/src/main.cpp
 +++ b/es-app/src/main.cpp
-@@ -700,8 +700,9 @@ int main(int argc, char* argv[])
+@@ -747,8 +747,9 @@ int main(int argc, char* argv[])
  					}
  				}				
  

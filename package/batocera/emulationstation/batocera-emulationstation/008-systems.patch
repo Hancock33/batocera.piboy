@@ -1,5 +1,5 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 6acc05970..d7e84a0e9 100644
+index bf29b49e3..5247f83b9 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
 @@ -9,198 +9,285 @@ namespace PlatformIds
@@ -863,7 +863,7 @@ index 27a4d78bd..a94a7e203 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index 7497a1649..f1b4f285d 100644
+index 571b2e7f4..23c18e4f1 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -75,7 +75,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
