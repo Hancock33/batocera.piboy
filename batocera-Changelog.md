@@ -47,6 +47,7 @@
   Hardware acceleration depends on supported codecs for devices in FFmpeg.
 ### Updated
 - Azahar Plus to AZAHAR_PLUS_2123_3_A
+- CLK to 2025-11-26
 - Dolphin-Emu to 2509-188
 - DXX-Rebirth to May 25, 2025
 - EDuke32 to Oct 10, 2025
@@ -67,11 +68,12 @@
 - Sonic CD to 1.3.3
 - Sonic Mania to v1.1.1
 - Supermodel to 13th of November 2025 build
-- Taradino to 20250816
+- Taradino to 20251031
 - TheXTech to v1.3.7.1-2
 - TheForceEngine to v1.22.420
 - VkQuake to 19th of November 2025 build 
 - Xash3D FWGS engine to Oct 17 build
+- Xenia-Canary to build f85f4c3
 - Xemu to v0.8.115
 - Ymir to 0.2.0
 ### System
@@ -82,8 +84,9 @@
 - Linux Kernel to 6.17.7
 - LabWC to 0.9.2
 - LLVM Project to 20.1.8
-- Mesa3D to 25.3.0
+- Mesa3D to 25.3.1
 - Nvidia production drivers to 580.105.08
+- QT to 6.9.2
 - Sound Open Firmware to 2025.05.1
 - Sway to 1.11
 - VKD3D Proton to 3.0a

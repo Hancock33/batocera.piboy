@@ -1,0 +1,54 @@
+diff --git a/src/netdev.c b/src/netdev.c
+index cdb3f1d7..f734c312 100644
+--- a/src/netdev.c
++++ b/src/netdev.c
+@@ -1641,7 +1641,8 @@ static void try_handshake_complete(struct netdev_handshake_state *nhs)
+ 
+ 		l_debug("Invoking handshake_event()");
+ 
+-		handshake_state_cache_pmksa(&nhs->super);
++		if (nhs->type != CONNECTION_TYPE_FULLMAC)
++			handshake_state_cache_pmksa(&nhs->super);
+ 
+ 		if (handshake_event(&nhs->super, HANDSHAKE_EVENT_COMPLETE))
+ 			return;
+@@ -2578,6 +2579,19 @@ static void netdev_driver_connected(struct netdev *netdev)
+ 		eapol_register(netdev->sm);
+ }
+ 
++static bool netdev_handshake_can_use_pmksa(struct netdev_handshake_state *nhs)
++{
++	/*
++	 * Do not use PMKSA if this is a fullmac driver as they need additional
++	 * support (SET_PMKSA) in order to function properly. Until this support
++	 * is added fullmac drivers will not utilize PMKSA.
++	 */
++	if (nhs->type == CONNECTION_TYPE_FULLMAC)
++		return false;
++
++	return nhs->super.have_pmksa;
++}
++
+ static struct l_genl_msg *netdev_build_cmd_connect(struct netdev *netdev,
+ 						struct handshake_state *hs,
+ 						const uint8_t *prev_bssid)
+@@ -2596,7 +2610,8 @@ static struct l_genl_msg *netdev_build_cmd_connect(struct netdev *netdev,
+ 	 *       0 (open) for FT Initial Mobility Domain Association over
+ 	 *         PMKSA caching
+ 	 */
+-	uint32_t auth_type = IE_AKM_IS_SAE(hs->akm_suite) && !hs->have_pmksa ?
++	uint32_t auth_type = IE_AKM_IS_SAE(hs->akm_suite) &&
++					!netdev_handshake_can_use_pmksa(nhs) ?
+ 					NL80211_AUTHTYPE_SAE :
+ 					NL80211_AUTHTYPE_OPEN_SYSTEM;
+ 	enum mpdu_management_subtype subtype = prev_bssid ?
+@@ -4198,7 +4213,8 @@ static void netdev_connect_common(struct netdev *netdev,
+ 	 * If SAE, and we have a valid PMKSA cache we can skip the entire SAE
+ 	 * protocol and authenticate using the cached keys.
+ 	 */
+-	if (IE_AKM_IS_SAE(hs->akm_suite) && hs->have_pmksa) {
++	if (IE_AKM_IS_SAE(hs->akm_suite) &&
++					netdev_handshake_can_use_pmksa(nhs)) {
+ 		l_debug("Skipping SAE by using PMKSA cache");
+ 		goto build_cmd_connect;
+ 	}

@@ -1,0 +1,21 @@
+diff --git a/es-app/src/services/HttpServerThread.cpp b/es-app/src/services/HttpServerThread.cpp
+index 3463ae3d7..7384adb50 100644
+--- a/es-app/src/services/HttpServerThread.cpp
++++ b/es-app/src/services/HttpServerThread.cpp
+@@ -560,7 +560,7 @@ void HttpServerThread::run()
+ 
+ 		mWindow->displayNotificationMessage(req.body);
+ 	});
+-	
++#ifdef BATOCERA_DISKS
+ 	mHttpServer->Post("/storage/event", [this](const httplib::Request& req, httplib::Response& res)
+ 	{
+ 		if (!isAllowed(req, res))
+@@ -582,6 +582,7 @@ void HttpServerThread::run()
+ 
+         res.set_content("OK", "text/plain");
+ 	});
++#endif
+ 
+ 	mHttpServer->Post("/launch", [this](const httplib::Request& req, httplib::Response& res)
+ 	{

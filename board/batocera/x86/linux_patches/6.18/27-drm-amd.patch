@@ -11,10 +11,10 @@ index 56c1140a6a4a..8120ded1d106 100644
  void amdgpu_device_complete(struct drm_device *dev);
  int amdgpu_device_suspend(struct drm_device *dev, bool fbcon);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index 96b6738e6252..094d699b071c 100644
+index 9640818d21a0..16accf3c0750 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-@@ -3783,7 +3783,6 @@ static int amdgpu_device_ip_suspend_phase1(struct amdgpu_device *adev)
+@@ -3782,7 +3782,6 @@ static int amdgpu_device_ip_suspend_phase1(struct amdgpu_device *adev)
  		if (adev->ip_blocks[i].version->type != AMD_IP_BLOCK_TYPE_DCE)
  			continue;
  
@@ -22,7 +22,7 @@ index 96b6738e6252..094d699b071c 100644
  		r = amdgpu_ip_block_suspend(&adev->ip_blocks[i]);
  		if (r)
  			return r;
-@@ -3866,9 +3865,9 @@ static int amdgpu_device_ip_suspend_phase2(struct amdgpu_device *adev)
+@@ -3865,9 +3864,9 @@ static int amdgpu_device_ip_suspend_phase2(struct amdgpu_device *adev)
  		    adev->ip_blocks[i].version->type == AMD_IP_BLOCK_TYPE_PSP)
  			continue;
  
@@ -34,7 +34,7 @@ index 96b6738e6252..094d699b071c 100644
  
  		/* handle putting the SMC in the appropriate state */
  		if (!amdgpu_sriov_vf(adev)) {
-@@ -3898,7 +3897,7 @@ static int amdgpu_device_ip_suspend_phase2(struct amdgpu_device *adev)
+@@ -3897,7 +3896,7 @@ static int amdgpu_device_ip_suspend_phase2(struct amdgpu_device *adev)
   * in each IP into a state suitable for suspend.
   * Returns 0 on success, negative error code on failure.
   */
@@ -43,7 +43,7 @@ index 96b6738e6252..094d699b071c 100644
  {
  	int r;
  
-@@ -5228,7 +5227,9 @@ int amdgpu_device_suspend(struct drm_device *dev, bool notify_clients)
+@@ -5227,7 +5226,9 @@ int amdgpu_device_suspend(struct drm_device *dev, bool notify_clients)
  
  	amdgpu_ras_suspend(adev);
  
@@ -54,7 +54,7 @@ index 96b6738e6252..094d699b071c 100644
  
  	amdgpu_amdkfd_suspend(adev, !amdgpu_sriov_vf(adev) && !adev->in_runpm);
  	amdgpu_userq_suspend(adev);
-@@ -5241,7 +5242,9 @@ int amdgpu_device_suspend(struct drm_device *dev, bool notify_clients)
+@@ -5240,7 +5241,9 @@ int amdgpu_device_suspend(struct drm_device *dev, bool notify_clients)
  
  	amdgpu_fence_driver_hw_fini(adev);
  

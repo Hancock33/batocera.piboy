@@ -143,7 +143,7 @@ PACKAGES_EMULATORS="amiberry
                     azahar
                     bigpemu
                     cemu
-                    eden
+                    clk
                     hypseus-singe
                     dolphin-emu
                     dolphin-triforce
@@ -153,6 +153,7 @@ PACKAGES_EMULATORS="amiberry
                     drastic
                     duckstation
                     easyrpg-player
+                    eden
                     liblcf
                     eka2l1
                     flycast

@@ -3929,7 +3929,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Batocera Control Center"
-msgstr ""
+msgstr "Centro de Controlo Batocera"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6449,7 +6449,7 @@ msgstr "MODO DUAL CORE"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "DUAL SCREEN"
-msgstr ""
+msgstr "ECRÃ DUPLO"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -7440,6 +7440,8 @@ msgid ""
 "Enable MelonDS to display over two screens. Some related screen options will "
 "be ignored."
 msgstr ""
+"Permita que o MelonDS seja apresentado em dois ecrãs. Algumas opções de ecrã "
+"relacionadas serão ignorados."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -20403,10 +20405,6 @@ msgstr "amarelo/azul"
 #~ msgstr ""
 #~ "Reserve uma zona não morta no centro do volante para seguir em frente (em "
 #~ "graus)"
-
-#~ msgctxt "keys_files"
-#~ msgid "Reset"
-#~ msgstr "Reiniciar"
 
 #~ msgctxt "game_options"
 #~ msgid "SVideo (color bleeding only)"

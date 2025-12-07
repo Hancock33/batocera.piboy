@@ -100,7 +100,7 @@ define XEMU_GET_SUBMODULES
 	# glslang
 	mkdir -p $(@D)/subprojects/glslang
 	curl -L -o glslang.tar.gz \
-		https://github.com/KhronosGroup/glslang/archive/refs/tags/15.4.0.tar.gz
+		https://github.com/KhronosGroup/glslang/archive/refs/tags/16.1.0.tar.gz
 	$(TAR) -xzf glslang.tar.gz --strip-components=1 -C $(@D)/subprojects/glslang
 	rm glslang.tar.gz
 
@@ -153,21 +153,21 @@ define XEMU_GET_SUBMODULES
 	# volk
 	mkdir -p $(@D)/subprojects/volk
 	curl -L -o volk.tar.gz \
-		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz
+		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.328.1.tar.gz
 	$(TAR) -xzf volk.tar.gz --strip-components=1 -C $(@D)/subprojects/volk
 	rm volk.tar.gz
 
 	# SPIRV-Reflect
 	mkdir -p $(@D)/subprojects/SPIRV-Reflect
 	curl -L -o SPIRV-Reflect.tar.gz \
-	https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz
+		https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.328.1.tar.gz
 	$(TAR) -xzf SPIRV-Reflect.tar.gz --strip-components=1 -C $(@D)/subprojects/SPIRV-Reflect
 	rm SPIRV-Reflect.tar.gz
 
 	# VulkanMemoryAllocator
 	mkdir -p $(@D)/subprojects/VulkanMemoryAllocator
 	curl -L -o VulkanMemoryAllocator.tar.gz \
-	https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/refs/tags/v3.3.0.tar.gz
+		https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/refs/tags/v3.3.0.tar.gz
 	$(TAR) -xzf VulkanMemoryAllocator.tar.gz --strip-components=1 -C $(@D)/subprojects/VulkanMemoryAllocator
 	rm VulkanMemoryAllocator.tar.gz
 endef

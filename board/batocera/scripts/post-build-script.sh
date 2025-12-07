@@ -80,9 +80,10 @@ rm -f "${TARGET_DIR}/etc/init.d/S40bluetoothd" || exit 1
 rm -rf "${TARGET_DIR}/boot/grub" || exit 1
 
 # reorder the boot scripts for the network boot
-if test -e "${TARGET_DIR}/etc/init.d/S10udev"
+if test -e "${TARGET_DIR}/etc/init.d/S10udevd"
 then
-    mv "${TARGET_DIR}/etc/init.d/S10udev"    "${TARGET_DIR}/etc/init.d/S05udev"    || exit 1 # move to make number spaces
+    mv "${TARGET_DIR}/etc/init.d/S10udevd"    "${TARGET_DIR}/etc/init.d/S05udevd"    || exit 1 # move to make number spaces
+    sed -i "s|=30|=1|g" "${TARGET_DIR}/etc/init.d/S05udevd" || exit 1
 fi
 if test -e "${TARGET_DIR}/etc/init.d/S30dbus"
 then

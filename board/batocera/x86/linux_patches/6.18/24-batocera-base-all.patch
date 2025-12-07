@@ -322,7 +322,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 7d608d99a387..adb3e1695137 100644
+index a082a1d7c7d9..a7a0c4a3e9dc 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -3425,6 +3425,30 @@ index b3ab80a03365..5e883b397ff3 100644
  /* Can be used to override the logic in pci_scan_bus for skipping
     already-configured bus numbers - to be used for buggy BIOSes
     or architectures with incomplete PCI setup by the loader */
+diff --git a/arch/x86/kernel/cpu/amd.c b/arch/x86/kernel/cpu/amd.c
+index 5d46709c58d0..1bf7f64e321f 100644
+--- a/arch/x86/kernel/cpu/amd.c
++++ b/arch/x86/kernel/cpu/amd.c
+@@ -1035,6 +1035,7 @@ static void init_amd_zen4(struct cpuinfo_x86 *c)
+ 	}
+ }
+ 
++#ifndef CONFIG_CACHY
+ static const struct x86_cpu_id zen5_rdseed_microcode[] = {
+ 	ZEN_MODEL_STEP_UCODE(0x1a, 0x02, 0x1, 0x0b00215a),
+ 	ZEN_MODEL_STEP_UCODE(0x1a, 0x08, 0x1, 0x0b008121),
+@@ -1056,6 +1057,11 @@ static void init_amd_zen5(struct cpuinfo_x86 *c)
+ 		pr_emerg_once("RDSEED32 is broken. Disabling the corresponding CPUID bit.\n");
+ 	}
+ }
++#else
++static void init_amd_zen5(struct cpuinfo_x86 *c)
++{
++}
++#endif /* !CONFIG_CACHY */
+ 
+ static void init_amd(struct cpuinfo_x86 *c)
+ {
 diff --git a/arch/x86/kernel/cpu/bugs.c b/arch/x86/kernel/cpu/bugs.c
 index d7fa03bf51b4..3d738f6a1ebb 100644
 --- a/arch/x86/kernel/cpu/bugs.c
@@ -6322,6 +6346,23 @@ index 6f5b4a0e0a34..56c1140a6a4a 100644
  extern int amdgpu_vis_vram_limit;
  extern int amdgpu_gart_size;
  extern int amdgpu_gtt_size;
+diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
+index 96b6738e6252..9640818d21a0 100644
+--- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
++++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
+@@ -3416,11 +3416,10 @@ int amdgpu_device_set_pg_state(struct amdgpu_device *adev,
+ 		    (adev->ip_blocks[i].version->type == AMD_IP_BLOCK_TYPE_GFX ||
+ 		     adev->ip_blocks[i].version->type == AMD_IP_BLOCK_TYPE_SDMA))
+ 			continue;
+-		/* skip CG for VCE/UVD/VPE, it's handled specially */
++		/* skip CG for VCE/UVD, it's handled specially */
+ 		if (adev->ip_blocks[i].version->type != AMD_IP_BLOCK_TYPE_UVD &&
+ 		    adev->ip_blocks[i].version->type != AMD_IP_BLOCK_TYPE_VCE &&
+ 		    adev->ip_blocks[i].version->type != AMD_IP_BLOCK_TYPE_VCN &&
+-		    adev->ip_blocks[i].version->type != AMD_IP_BLOCK_TYPE_VPE &&
+ 		    adev->ip_blocks[i].version->type != AMD_IP_BLOCK_TYPE_JPEG &&
+ 		    adev->ip_blocks[i].version->funcs->set_powergating_state) {
+ 			/* enable powergating to save power */
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 index 7333e19291cf..da1e65b65669 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c

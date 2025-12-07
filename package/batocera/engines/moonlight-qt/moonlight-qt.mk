@@ -3,8 +3,8 @@
 # moonlight-qt
 #
 ################################################################################
-# Version: Commits on Dec 02, 2025
-MOONLIGHT_QT_VERSION = 58f9b2a83b05759ccfd6a5e73e0bfa3eaeccb740
+# Version: Commits on Dec 06, 2025
+MOONLIGHT_QT_VERSION = 9c6d2bab19839e4904758d77f802aea3d7c9fc29
 MOONLIGHT_QT_SITE = https://github.com/moonlight-stream/moonlight-qt
 MOONLIGHT_QT_SITE_METHOD = git
 MOONLIGHT_QT_GIT_SUBMODULES = YES
@@ -51,9 +51,12 @@ MOONLIGHT_QT_CONF_OPTS += CONFIG+=disable-wayland
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
-ifneq ($(BR2_PACKAGE_BATOCERA_RPI_ANY),y)
-MOONLIGHT_QT_DEPENDENCIES += libplacebo vulkan-headers vulkan-loader
-endif
+    ifneq ($(BR2_PACKAGE_BATOCERA_RPI_ANY),y)
+        MOONLIGHT_QT_DEPENDENCIES += libplacebo vulkan-headers vulkan-loader
+    endif
+else
+    # Explicitly disable libplacebo if Vulkan is not enabled
+    MOONLIGHT_QT_CONF_OPTS += CONFIG+=disable-libplacebo
 endif
 
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)

@@ -78,7 +78,7 @@ discrete_name() {
 # Function to retrieve the name of the DEFAULT (first) GPU
 default_name() {
     device_name=$(vulkaninfo | grep deviceName | sed -n '1p' | awk -F'= ' '{print $2}')
-    
+
     if [ -z "$device_name" ]; then
         echo "Failed to retrieve name for the default GPU."
         exit 1
