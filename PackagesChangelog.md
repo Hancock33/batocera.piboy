@@ -1,24 +1,29 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|9aacc9808ce61a813ac13753f8fcea8157c85738|Dec 07, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|cf8398df7aa34403d6f46dd23f132b065529fa88|Dec 07, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|6070bff9f6b77af759caafb7a085ec2a20518083|Dec 07, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|83332316aa382e11e6af79b8432520ff4c9950b6|Dec 07, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|9aab65445144dacf7488afa080bba8eeed2a9233|Dec 07, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.366|Dec 07, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|bb767fa537c2e02b8213cd1945777fea33e8ec5a|Dec 07, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|0f1d516d9ae6a1725e4db5553c99463b1aa6d821|Dec 07, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.233|Dec 07, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45889|Dec 07, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-07|Dec 07, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|8dc9c1bcfeeaad87d97e25ea43c13222b9755c8e|Dec 07, 2025
+Ports|[openjk](http://github.com/JACoders/OpenJK)|407a56fbca21310ff158fabbb3207410e381bfc8|Dec 07, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251207|Dec 07, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|31e192f2c04a876a09c5f5ce02a6e24ad1f5b56b|Dec 07, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251207|Dec 07, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|58d88230cc8991c17eff0eb45f1901bbb5fa3901|Dec 07, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|ac06357000757b5187ebd5701739fdae0a0864c9|Dec 07, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|be25fee8fdec4f7150c9519046bb0083d2ee6ca3|Dec 07, 2025
-Ports|[trx](http://github.com/LostArtefacts/TRX)|166cc3a78b65737f2a00c30eba156619b0252607|Dec 07, 2025
-Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|8e43eea5d1c26d3d8ea9e8c791d2dbbf85f0ec59|Dec 07, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|d25d999fc640b3ac600a3777c7e75a655e93dc6b|Dec 07, 2025
+Ports|[trx](http://github.com/LostArtefacts/TRX)|9d43b9c97d286e97d99088b925847c8124726581|Dec 07, 2025
+Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|3462bbc6fbb2eb5a1090a0858c06acc8e5f83f8b|Dec 07, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|bb767fa537c2e02b8213cd1945777fea33e8ec5a|Dec 07, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|8dc9c1bcfeeaad87d97e25ea43c13222b9755c8e|Dec 07, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|ac33dda47d692b44dd8e73a300f1e658bc027725|Dec 07, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|956a0f772c919efc59a1fd29eebb6866404f09dd|Dec 07, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|67baed02730b8f91b644e9a82f576251feae5bc0|Dec 06, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|67baed02730b8f91b644e9a82f576251feae5bc0|Dec 06, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|9996a07e8732b212ee10b03dbd861e2f3da02240|Dec 06, 2025
@@ -33,8 +38,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|9890251595e118539b1b
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|05019a683d7ca45fd1febc33f896303b0435654e|Dec 06, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|fafc106d6bf6d90fed181c7b0e665545be8046fa|Dec 06, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-11-rc1|Dec 06, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251206|Dec 06, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251206|Dec 06, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2ef374ff4aa58083ca7283e69f34fd8f9fc4e7d7|Dec 06, 2025
 Emulators|[libretro-freeintv](http://github.com/libretro/freeintv)|ac167a20eee52b2b149a15d000c9b747d01684b5|Dec 06, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|5136ddf9fcda4f8ca379ad7518d3d7cc98ebe085|Dec 06, 2025
@@ -49,7 +52,6 @@ Emulators|[libretro-bsnes-hd](http://github.com/DerKoun/bsnes-hd)|fc26b25ea236f0
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|db02ef59a64209954b47965ae186ec95cf1da706|Dec 05, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|230d971d4d09747c8c107f740d85a63f9f15b646|Dec 05, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|1b67618d3c718131e8e3c6badbf1cca518996400|Dec 05, 2025
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|dccf9be85e6cd5139bc494536d24b1669651411d|Dec 04, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|63a35e28d102e482daaa5454a68c07192b4d3210|Dec 04, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|ee6ce0588ab94ffc9ac0c965e0472ece302428a9|Dec 04, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14330|Dec 04, 2025
@@ -87,7 +89,6 @@ Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.12|Dec 01, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|dfb355495ac512c3d8451b004ed83884419957da|Dec 01, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|213dc1c9afb4979dab357327387ab49ce17f174a|Dec 01, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.12.01|Dec 01, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3f6529fecbacdf90aa556ae0fd39b478ae28c27f|Dec 01, 2025
 Engines|[lightspark](http://github.com/lightspark/lightspark)|e6a761ad4f9a39d91af0d1993d0e7e3df9c45171|Dec 01, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|056999e8fd7ec7649762179f52e32819ef5e48e1|Dec 01, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|d2fa3ad31e456bd44736d98d00f99ab627ec7ebc|Dec 01, 2025
@@ -114,7 +115,6 @@ Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Li
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|1420c90299b1d9f4ef59373b3e5fa538a1e17a65|Nov 28, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0283|Nov 28, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|68774da0beba4490723e4c7065663ce70c866d82|Nov 27, 2025
-Ports|[openjk](http://github.com/JACoders/OpenJK)|e76263d85b6ba47e761ba6d0e07e5aaba967f4a6|Nov 27, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2025.5|Nov 27, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|2025-11-26|Nov 26, 2025
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|9b2a602d1869b2b687c35845ab540012d54a933e|Nov 26, 2025
