@@ -180,6 +180,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_CONNMAN_CLIENT                       # network manager
     select BR2_PACKAGE_CONNMAN_LOOPBACK                     # network manager
     select BR2_PACKAGE_CONNMAN_WIFI                         # network manager
+    select BR2_PACKAGE_IWD                                  if  BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_DOSFSTOOLS                           # fat
     select BR2_PACKAGE_DOSFSTOOLS_FSCK_FAT                  # fat
     select BR2_PACKAGE_DOSFSTOOLS_MKFS_FAT                  # fat
