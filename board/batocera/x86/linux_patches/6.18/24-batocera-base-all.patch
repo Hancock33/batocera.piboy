@@ -3425,6 +3425,30 @@ index b3ab80a03365..5e883b397ff3 100644
  /* Can be used to override the logic in pci_scan_bus for skipping
     already-configured bus numbers - to be used for buggy BIOSes
     or architectures with incomplete PCI setup by the loader */
+diff --git a/arch/x86/kernel/cpu/amd.c b/arch/x86/kernel/cpu/amd.c
+index 5d46709c58d0..1bf7f64e321f 100644
+--- a/arch/x86/kernel/cpu/amd.c
++++ b/arch/x86/kernel/cpu/amd.c
+@@ -1035,6 +1035,7 @@ static void init_amd_zen4(struct cpuinfo_x86 *c)
+ 	}
+ }
+ 
++#ifndef CONFIG_CACHY
+ static const struct x86_cpu_id zen5_rdseed_microcode[] = {
+ 	ZEN_MODEL_STEP_UCODE(0x1a, 0x02, 0x1, 0x0b00215a),
+ 	ZEN_MODEL_STEP_UCODE(0x1a, 0x08, 0x1, 0x0b008121),
+@@ -1056,6 +1057,11 @@ static void init_amd_zen5(struct cpuinfo_x86 *c)
+ 		pr_emerg_once("RDSEED32 is broken. Disabling the corresponding CPUID bit.\n");
+ 	}
+ }
++#else
++static void init_amd_zen5(struct cpuinfo_x86 *c)
++{
++}
++#endif /* !CONFIG_CACHY */
+ 
+ static void init_amd(struct cpuinfo_x86 *c)
+ {
 diff --git a/arch/x86/kernel/cpu/bugs.c b/arch/x86/kernel/cpu/bugs.c
 index d7fa03bf51b4..3d738f6a1ebb 100644
 --- a/arch/x86/kernel/cpu/bugs.c
