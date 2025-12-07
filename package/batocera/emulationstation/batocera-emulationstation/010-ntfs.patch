@@ -1,0 +1,13 @@
+diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
+index 4d643abf6..5e911eed9 100644
+--- a/es-app/src/guis/GuiMenu.cpp
++++ b/es-app/src/guis/GuiMenu.cpp
+@@ -1992,7 +1992,7 @@ void GuiMenu::openSystemSettings()
+     if (selectedFormat.empty()) selectedFormat = "btrfs";
+ 
+     std::vector<std::string> fstypes = ApiSystem::getInstance()->getFormatFileSystems();
+-    if (fstypes.empty()) fstypes = { "ext4", "btrfs", "exfat" };
++    if (fstypes.empty()) fstypes = { "ext4", "btrfs", "exfat", "ntfs" };
+ 
+     for (const auto& fs : fstypes) {
+         diskFormat->add(Utils::String::toUpper(fs), fs, selectedFormat == fs);

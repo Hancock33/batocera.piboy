@@ -53,6 +53,7 @@ do_listFstypes() {
 	echo "ext4"
 	echo "btrfs"
 	echo "exfat"
+	echo "ntfs"
 }
 
 do_unmount_disk() {
@@ -142,6 +143,9 @@ do_format() {
 	;;
 	"exfat")
 		mkfs.exfat -n "${FORMATLABEL}" "${FORMATPARTNAME}" || return 1
+	;;
+	"ntfs")
+		mkfs.ntfs -f -L "${FORMATLABEL}" "${FORMATPARTNAME}" || return 1
 	;;
 	*)
 		echo "unknown partition type ${FORMATTYPE}" >&2
