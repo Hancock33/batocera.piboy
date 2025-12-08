@@ -1,40 +1,44 @@
 diff --git a/scripts/genie.lua b/scripts/genie.lua
-index 6487dcc3ec0..737e0e1f22f 100644
+index 9cb7ee2a4df..f561265ec94 100644
 --- a/scripts/genie.lua
 +++ b/scripts/genie.lua
-@@ -853,7 +853,7 @@ if _OPTIONS["OPTIMIZE"] then
+@@ -795,7 +795,7 @@ if _OPTIONS["OPTIMIZE"] then
  	if _OPTIONS["LTO"]=="1" then
  		buildoptions {
  -- windows native mingw GCC 5.2 fails with -flto=x with x > 1. bug unfixed as of this commit
 -			"-flto=1",
-+			"-flto=28",
++			"-flto=thin",
  -- if ld fails, just buy more RAM or uncomment this!
  --          "-Wl,-no-keep-memory",
  			"-Wl,-v",
-@@ -871,12 +871,12 @@ if _OPTIONS["OPTIMIZE"] then
+@@ -806,9 +806,9 @@ if _OPTIONS["OPTIMIZE"] then
+ -- some GCC 4.9.x on Windows do not have -Wodr and -flto-odr-type-merging enabled. adjust accordingly...
+ -- no-fat-lto-objects is faster to compile and uses less memory, but you can't mix with a non-lto .o/.a without rebuilding
+ 			"-fno-fat-lto-objects",
+-			"-flto-odr-type-merging",
++--			"-flto-odr-type-merging",
+ 			"-Wodr",
+-			"-flto-compression-level=0", -- lto doesn't work with anything <9 on linux with < 12G RAM, much slower if <> 0
++--			"-flto-compression-level=0", -- lto doesn't work with anything <9 on linux with < 12G RAM, much slower if <> 0
+ --          "-flto-report", -- if you get an error in lto after [WPA] stage, but before [LTRANS] stage, you need more memory!
  --          "-fmem-report-wpa","-fmem-report","-fpre-ipa-mem-report","-fpost-ipa-mem-report","-flto-report-wpa","-fmem-report",
  -- this six flag combo lets MAME compile with LTO=1 on linux with no errors and ~2% speed boost, but compile time is much longer
- -- if you are going to wait on lto, you might as well enable these for GCC
----          "-fdevirtualize-at-ltrans","-fgcse-sm","-fgcse-las",
----          "-fipa-pta","-fipa-icf","-fvariable-expansion-in-unroller",
-+			"-fdevirtualize-at-ltrans","-fgcse-sm","-fgcse-las",
-+			"-fipa-pta","-fipa-icf","-fvariable-expansion-in-unroller",
+@@ -818,15 +818,15 @@ if _OPTIONS["OPTIMIZE"] then
  		}
  -- same flags are needed by linker
  		linkoptions {
 -			"-flto=1",
-+			"-flto=28",
++			"-flto=thin",
  --          "-Wl,-no-keep-memory",
  			"-Wl,-v",
  			"-Wl,-allow-multiple-definition",
-@@ -889,8 +889,8 @@ if _OPTIONS["OPTIMIZE"] then
+ 			"-fuse-linker-plugin",
+ 			"-fno-fat-lto-objects",
+-			"-flto-odr-type-merging",
++--			"-flto-odr-type-merging",
+ 			"-Wodr",
+-			"-flto-compression-level=0", -- lto doesn't work with anything <9 on linux with < 12G RAM, much slower if <> 0
++--			"-flto-compression-level=0", -- lto doesn't work with anything <9 on linux with < 12G RAM, much slower if <> 0
+ --          "-flto-report", -- if you get an error in lto after [WPA] stage, but before [LTRANS] stage, you need more memory!
  --          "-fmem-report-wpa","-fmem-report","-fpre-ipa-mem-report","-fpost-ipa-mem-report","-flto-report-wpa","-fmem-report",
  -- this six flag combo lets MAME compile with LTO=1 on linux with no errors and ~2% speed boost, but compile time is much longer
- -- if you are going to wait on lto, you might as well enable these for GCC
----          "-fdevirtualize-at-ltrans","-fgcse-sm","-fgcse-las",
----          "-fipa-pta","-fipa-icf","-fvariable-expansion-in-unroller",
-+			"-fdevirtualize-at-ltrans","-fgcse-sm","-fgcse-las",
-+			"-fipa-pta","-fipa-icf","-fvariable-expansion-in-unroller",
- 
- 		}
- 
