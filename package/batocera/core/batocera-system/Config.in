@@ -196,6 +196,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_FBDUMP                               # tool to capture snapshots from the Linux kernel framebuffer device and write them out as a PPM file
     select BR2_PACKAGE_FBGRAB                               # framebuffer screenshot program, capturing the linux framebuffer and converting it to a png-picture
     select BR2_PACKAGE_FBV                                  # very simple graphic file viewer for the framebuffer console, capable of displaying GIF, JPEG, PNG and BMP files using libungif, libjpeg and libpng
+    select BR2_PACKAGE_FUSE_OVERLAYFS
     select BR2_PACKAGE_HOST_MTOOLS                          # Buggy mcopy on Ubuntu 21.10!
     select BR2_PACKAGE_HOTKEYGEN
     select BR2_PACKAGE_INNOEXTRACT                          # Extract InnoSetup files (useful for Wine and GOG games)
