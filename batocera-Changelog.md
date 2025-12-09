@@ -51,17 +51,18 @@
 - Dolphin-Emu to 2509-188
 - DXX-Rebirth to May 25, 2025
 - EDuke32 to Oct 10, 2025
-- Groovy MAME to 0.281
+- Groovy MAME to 0.283
 - Hatari to v2.6.1
 - Hurrican to Jul 26, 2025 build
 - Jazz2 to 3.4.0
-- Libretro MAME to 0.281
+- Libretro MAME to 0.283
 - Libretro Play! to 0.71
 - Libretro Opera to 17th of October 2024 build
 - MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenMOHAA to v0.82.1
 - Play! to 0.71
+- RetroArch to 1.22.2
 - RPCS3 to v0.0.38
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_12_0_A
 - Sonic 2013 to 1.3.3
@@ -79,6 +80,7 @@
 ### System
 - Bluez to 5.84
 - DXVK to 2.7.1
+- Flac to 1.5.0
 - GStreamer codecs to 1.26.6
 - Linux Firmware to 20251125
 - Linux Kernel to 6.17.7
