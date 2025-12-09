@@ -1,8 +1,8 @@
 diff --git a/Makefile.common b/Makefile.common
-index 411f959f39..c2b25561ca 100644
+index 90c760effe..4d910b637e 100644
 --- a/Makefile.common
 +++ b/Makefile.common
-@@ -1888,10 +1888,6 @@ else ifeq ($(HAVE_GLSLANG),1)
+@@ -1891,10 +1891,6 @@ else ifeq ($(HAVE_GLSLANG),1)
  
     # The order of these libs are somewhat specific
     LIBS += $(GLSLANG_LIBS) \

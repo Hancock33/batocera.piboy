@@ -1,0 +1,20 @@
+diff --git a/gfx/common/wayland_common.c b/gfx/common/wayland_common.c
+index afa0b51065..9f3545ddfb 100644
+--- a/gfx/common/wayland_common.c
++++ b/gfx/common/wayland_common.c
+@@ -921,6 +921,7 @@ bool gfx_ctx_wl_init_common(
+    /* Bind SHM based wl_buffer to wl_surface until the vulkan surface is ready.
+     * This shows the window which assigns us a display (wl_output)
+     * which is useful for HiDPI and auto selecting a display for fullscreen. */
++#if 0
+    if (video_monitor_index == 0 && wl_list_length (&wl->all_outputs) > 1)
+    {
+       if (!wl_draw_splash_screen(wl))
+@@ -932,6 +933,7 @@ bool gfx_ctx_wl_init_common(
+       while (wl->configured)
+       wl_display_dispatch(wl->input.dpy);
+    }
++#endif
+ #endif
+ 
+    // Ignore configure events until splash screen has been replaced

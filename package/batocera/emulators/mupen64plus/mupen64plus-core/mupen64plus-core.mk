@@ -42,8 +42,8 @@ endif
 
 ifeq ($(BR2_arm)$(BR2_ARM_CPU_HAS_NEON),yy)
     MUPEN64PLUS_CORE_CPUFLAGS += -marm -DNO_ASM -DARM -D__arm__ -DARM_ASM -D__NEON_OPT -DNOSSE
-    MUPEN64PLUS_GL_CFLAGS += -D__ARM_NEON__ -D__NEON_OPT -ftree-vectorize -mvectorize-with-neon-quad
-    MUPEN64PLUS_GL_CFLAGS += -ftree-vectorizer-verbose=2 -funsafe-math-optimizations -fno-finite-math-only
+    MUPEN64PLUS_CORE_GL_CFLAGS += -D__ARM_NEON__ -D__NEON_OPT -ftree-vectorize -mvectorize-with-neon-quad
+    MUPEN64PLUS_CORE_GL_CFLAGS += -ftree-vectorizer-verbose=2 -funsafe-math-optimizations -fno-finite-math-only
 
     ifeq ($(BR2_ARM_CPU_HAS_VFPV4),y)
         MUPEN64PLUS_CORE_CPUFLAGS += -mfpu=neon-vfpv4
@@ -77,7 +77,8 @@ define MUPEN64PLUS_CORE_BUILD_CMDS
 		PREFIX="$(STAGING_DIR)/usr" \
 		PKG_CONFIG="$(HOST_DIR)/bin/pkg-config" \
 		HOST_CPU="$(MUPEN64PLUS_HOST_CPU)" \
-		-C $(@D)/projects/unix all $(MUPEN64PLUS_PARAMS) OPTFLAGS="$(TARGET_CXXFLAGS) -Wno-implicit-function-declaration -Wno-int-conversion"
+		-C $(@D)/projects/unix all $(MUPEN64PLUS_PARAMS) \
+		OPTFLAGS="$(TARGET_CXXFLAGS) -Wno-implicit-function-declaration -Wno-int-conversion -I$(BUILD_DIR)/minizip-zlib-$(MINIZIP_ZLIB_VERSION)/contrib/minizip"
 endef
 
 define MUPEN64PLUS_CORE_INSTALL_STAGING_CMDS
