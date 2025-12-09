@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|90863f481447bbce89e21c94bb51045eb43d9f1e|Dec 09, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|90863f481447bbce89e21c94bb51045eb43d9f1e|Dec 09, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6594723fb80691ba94446b73b7c9bf5580f713fc|Dec 09, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6594723fb80691ba94446b73b7c9bf5580f713fc|Dec 09, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|95a196144c299513522d0d6e69b4e9f8bc41e9e4|Dec 09, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|9da38715fe3e84794e8f583d7706b72d13dfe2ce|Dec 09, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|14f759eeb7326664e8a7e90633720551b49308ed|Dec 09, 2025
@@ -24,7 +24,7 @@ Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|744cb9150f8edaa69c4
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|a5dbd9aa083945a6e37ab9396373d0d706a1da96|Dec 09, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251209|Dec 09, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|abc086333c93058c4ae8db48d015cd227b6ba568|Dec 09, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|6943c93ff2fb918f9e367c80a864edf1eca6904b|Dec 09, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|184fd68c46d35f7ddf5ea550c09979312fead57b|Dec 09, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251209|Dec 09, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|3194f537e27c62c2de07e11f6e1dd6bb8635807c|Dec 09, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|09a68bbebd2512877517c69be030dc5bc3514e4e|Dec 09, 2025

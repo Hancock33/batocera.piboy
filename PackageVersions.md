@@ -67,8 +67,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|90863f481447bbce89e21c94bb51045eb43d9f1e|Dec 09, 2025
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|90863f481447bbce89e21c94bb51045eb43d9f1e|Dec 09, 2025
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6594723fb80691ba94446b73b7c9bf5580f713fc|Dec 09, 2025
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6594723fb80691ba94446b73b7c9bf5580f713fc|Dec 09, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|c2e12cfe2043ba4d62207e9343f7e66c02679cde|Sept 26, 2025
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|c2017ddd0c2850253abe34a9b0e1cae9a78ab33c|Nov 25, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|cf8398df7aa34403d6f46dd23f132b065529fa88|Dec 07, 2025
@@ -257,7 +257,7 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|63a35e28d102e482daaa5454a6
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|bb767fa537c2e02b8213cd1945777fea33e8ec5a|Dec 07, 2025
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|a7b711dfd74871e9985ba3b2fe2c15048a928aaf|Dec 01, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|6943c93ff2fb918f9e367c80a864edf1eca6904b|Dec 09, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|184fd68c46d35f7ddf5ea550c09979312fead57b|Dec 09, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20251119|Nov 19, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|aff645272fb51440276b07fac8d8c219eaee1772|Dec 09, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.233|Dec 07, 2025
