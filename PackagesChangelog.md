@@ -25,7 +25,7 @@ Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|146244f1f42c69c26b1185f3cc8351789754cc2c|Dec 10, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|0e8de267b7f92b8d4a3b5f125664cb774f90c102|Dec 10, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|3d582fa0629ffd7b678267bc8f4e18703b36cea0|Dec 10, 2025
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|7f90739445231a99506779a44187e35c4eef1b62|Dec 10, 2025
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|5d9355f9855f4a3cedeace2987e188bb6805b24d|Dec 10, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|08ee50be43b2bbede48493efcefaacf9605d579e|Dec 10, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|95a196144c299513522d0d6e69b4e9f8bc41e9e4|Dec 09, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|4edb70c8f055aa8774443446dbd1b0afe387d284|Dec 09, 2025

@@ -210,7 +210,7 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|3d582fa0629ffd7b
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|c642bbd0680b5959180a420036108893d0aec961|Oct 21, 2024
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|f9ae8fd28b13070a945a829ccf41cbf90a21d0f7|Nov 18, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|5a40cd5514e63e691e39141d64267798357a1424|Sept 08, 2025
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|7f90739445231a99506779a44187e35c4eef1b62|Dec 10, 2025
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|5d9355f9855f4a3cedeace2987e188bb6805b24d|Dec 10, 2025
 Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|3cc89f0d316d6c924a5e3f4011d17421df58e615|Oct 21, 2024
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|e25f66765938d33f9ad5850e8d6cd597e55b7299|Oct 01, 2024
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|d8d5d58f3cbc1e08f91a0e218bc990ec47282c08|Oct 21, 2024
