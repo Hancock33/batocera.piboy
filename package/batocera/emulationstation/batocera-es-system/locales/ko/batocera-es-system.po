@@ -7162,6 +7162,11 @@ msgstr "와이드스크린 패치 활성화"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WIN32"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE WINE DEVICES SERVICES"
 msgstr "WINE 장치 서비스 활성화"
 
@@ -16023,6 +16028,13 @@ msgid ""
 msgstr ""
 "가상 조이스틱 게이트 크기를 설정합니다. 작을수록 감도가 증가합니다. 클수록 감"
 "도가 감소합니다."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Sets Runner to 32bit, works only if there is no prefix for current app is "
+"installed."
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"

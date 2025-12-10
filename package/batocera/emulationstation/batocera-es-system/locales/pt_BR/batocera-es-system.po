@@ -7205,6 +7205,11 @@ msgstr "ATIVAR CORREÇÕES DE TELA PLANA"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WIN32"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE WINE DEVICES SERVICES"
 msgstr "HABILITAR SERVIÇOS DE APARELHOS DE WINE"
 
@@ -16149,6 +16154,13 @@ msgid ""
 msgstr ""
 "Defina o tamanho virtual da porta dos controles. O menor aumenta a "
 "sensibilidade. Quanto maior, menor a sensibilidade."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Sets Runner to 32bit, works only if there is no prefix for current app is "
+"installed."
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"

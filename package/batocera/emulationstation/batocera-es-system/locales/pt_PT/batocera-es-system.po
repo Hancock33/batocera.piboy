@@ -7196,6 +7196,11 @@ msgstr "ATIVAR PATCHES WIDESCREEN"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WIN32"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE WINE DEVICES SERVICES"
 msgstr "ATIVAR SERVIÇOS DE DISPOSITIVOS WINE"
 
@@ -16116,6 +16121,13 @@ msgid ""
 msgstr ""
 "Define o tamanho da entrada dos analógicos virtuais. Um tamanho mais pequeno "
 "aumenta a sensibilidade. Maior diminui a sensibilidade."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Sets Runner to 32bit, works only if there is no prefix for current app is "
+"installed."
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"

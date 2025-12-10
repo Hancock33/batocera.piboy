@@ -7184,6 +7184,11 @@ msgstr "AKTIVERA PATCHAR FÖR BREDBILD"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WIN32"
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE WINE DEVICES SERVICES"
 msgstr "AKTIVERA TJÄNSTER FÖR WINE-ENHETER"
 
@@ -8189,8 +8194,8 @@ msgid ""
 "configuration file."
 msgstr ""
 "Extra DMD-fönster (Dot Matrix Display) för att visa poängen för bord utan "
-"rom. Som standard kommer inställningarna från konfigurationsfilen "
-"VPinballX.ini."
+"rom. Som standard kommer inställningarna från konfigurationsfilen VPinballX."
+"ini."
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -14195,8 +14200,8 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Presets which can improve performance without manually editing the "
-"VPinballX.ini file to fine tune performance."
+"Presets which can improve performance without manually editing the VPinballX."
+"ini file to fine tune performance."
 msgstr ""
 "Förinställningar som kan förbättra prestandan utan att manuellt redigera "
 "filen VPinballX.ini för att finjustera prestandan."
@@ -15969,8 +15974,8 @@ msgctxt "game_options"
 msgid ""
 "Set if you want to limit the FPS in games that are not limited like OutRun2."
 msgstr ""
-"Ställ in om du vill begränsa bildfrekvens i spel som inte är begränsade, "
-"t.ex. OutRun2."
+"Ställ in om du vill begränsa bildfrekvens i spel som inte är begränsade, t."
+"ex. OutRun2."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -16080,6 +16085,13 @@ msgid ""
 msgstr ""
 "Ställ in portstorleken för virtuella joysticks. Mindre ökar känsligheten. "
 "Större minskar den."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid ""
+"Sets Runner to 32bit, works only if there is no prefix for current app is "
+"installed."
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
