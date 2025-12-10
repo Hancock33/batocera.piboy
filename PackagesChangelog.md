@@ -18,8 +18,10 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|0f81c2cc0e7c56735c64
 Utils|[rclone](http://github.com/rclone/rclone)|v1.72.1|Dec 10, 2025
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|2fc83777e9427863aa6627b3575d7f16e093246c|Dec 10, 2025
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.0b|Dec 10, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251210|Dec 10, 2025
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|ff1dc973268613a6fcc4b5017f5537c845e0bfe8|Dec 10, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|102b9f126743eee2eccde3bebf2f0c14a430d9f1|Dec 10, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251210|Dec 10, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|146244f1f42c69c26b1185f3cc8351789754cc2c|Dec 10, 2025
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|0e8de267b7f92b8d4a3b5f125664cb774f90c102|Dec 10, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|3d582fa0629ffd7b678267bc8f4e18703b36cea0|Dec 10, 2025
@@ -38,8 +40,6 @@ Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|d8eb817
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|cb1a22eff0b15b15a686318a885d1f1a2563ff6f|Dec 09, 2025
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|39353303d3f2d7973786d94440c04c6b8008efb6|Dec 09, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|744cb9150f8edaa69c45e87fc976afd87757fc66|Dec 09, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251209|Dec 09, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251209|Dec 09, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|3194f537e27c62c2de07e11f6e1dd6bb8635807c|Dec 09, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|14f759eeb7326664e8a7e90633720551b49308ed|Dec 09, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|ec37caccfbfa4cf9710c3b249b9efb73f695ffc3|Dec 08, 2025
