@@ -1,3 +1,4 @@
+
 #!/bin/bash
 # Batocera Master Storage Manager
 
@@ -394,21 +395,24 @@ case "$COMMAND" in
 
     if is_system_disk "$PARENT_DISK"; then
          log_msg "CRITICAL: Request to format system disk ($PARENT_DISK) denied."
+         send_notification "NOTIFY:Error: Cannot format system disk"
          exit 1
     fi
 
     log_msg "FORMAT: Formatting $DEVICE as $FSTYPE_REQ..."
     umount ${DEVICE}* 2>/dev/null
-    send_notification "NOTIFY:Formatting"
+    send_notification "NOTIFY:Formatting $DEVNAME..."
 
     log_msg "FORMAT: Executing batocera-format..."
     # Delegate to batocera-format with "ROMS" label
     /usr/bin/batocera-format format "$DEVNAME" "$FSTYPE_REQ" "ROMS" >> "$LOG_FILE" 2>&1
     if [ $? -ne 0 ]; then
         log_msg "FORMAT: batocera-format failed."
+        send_notification "NOTIFY:Error: Format Failed"
         exit 1
     fi
 
+    send_notification "NOTIFY:Format Complete. Mounting..."
     log_msg "FORMAT: Format successful. Waiting for partition..."
 
     # Find the new partition
@@ -424,6 +428,7 @@ case "$COMMAND" in
 
     if [ -z "$NEW_PART" ]; then
         log_msg "FORMAT: Could not find new partition."
+        send_notification "NOTIFY:Error: Partition Not Found"
         exit 1
     fi
 
@@ -439,6 +444,7 @@ case "$COMMAND" in
 
     if [ $RET -ne 0 ] && [ $RET -ne 2 ]; then
         log_msg "FORMAT: Failed to mount new partition."
+        send_notification "NOTIFY:Error: Mount Failed"
         exit 1
     fi
 
@@ -446,6 +452,15 @@ case "$COMMAND" in
     MOUNT_POINT=$(findmnt -n -o TARGET "$NEW_PART")
     log_msg "FORMAT: Setting up structure at $MOUNT_POINT..."
     mkdir -p "$MOUNT_POINT/roms"
+
+    log_msg "FORMAT: Replicating empty folder structure from internal storage..."
+    # rsync directories only. This ensures the external drive has snes, gba, etc.
+    # We sync FROM /userdata/roms/ (Internal) TO $MOUNT_POINT/roms/
+    if [ -d "/userdata/roms" ]; then
+        rsync -a -f"+ */" -f"- *" "/userdata/roms/" "$MOUNT_POINT/roms/" 2>/dev/null
+    fi
+
+    send_notification "NOTIFY:Configuring Storage..."
     $0 merge "$MOUNT_POINT"
     ;;
 
@@ -471,6 +486,8 @@ case "$COMMAND" in
         fi
     fi
 
+    send_notification "NOTIFY:Merging Drive..."
+
     BRANCH_PATH="$MOUNT_POINT/roms"
     mount -o remount,rw /boot
 
@@ -491,7 +508,18 @@ case "$COMMAND" in
     BASE_DIR="/userdata/.roms_base"
     mkdir -p "$BASE_DIR"
 
+    # Check if /userdata/roms (Internal) has files. If so, move them to .roms_base
+    # so they can be part of the pool instead of being masked by the mount.
+    if [ -n "$(ls -A "$POOL_PATH" 2>/dev/null)" ]; then
+        log_msg "MERGE: Moving internal ROMs to base directory ($BASE_DIR) to prevent masking..."
+        # Move visible contents
+        mv "$POOL_PATH"/* "$BASE_DIR"/ 2>/dev/null
+        # Move hidden files (like .scrapers)
+        mv "$POOL_PATH"/.[!.]* "$BASE_DIR"/ 2>/dev/null
+    fi
+
     FULL_BRANCHES=$(batocera-settings-get -f "$BOOT_CONF_FILE" "$CONFIG_KEY" | cut -d'@' -f2)
+    # Ensure BASE_DIR is first in the list
     BRANCHES_CMD="$BASE_DIR:$FULL_BRANCHES"
 
     log_msg "MERGE: Executing mergerfs..."
@@ -499,9 +527,13 @@ case "$COMMAND" in
 
     if [ $? -eq 0 ]; then
         log_msg "MERGERFS: Live pool active."
+        send_notification "NOTIFY:Storage Expanded Successfully"
+        sleep 1
+        send_notification "RELOAD_GAMELISTS:true"
         exit 0
     else
         log_msg "MERGERFS: Live mount failed."
+        send_notification "NOTIFY:Error: Merge Failed"
         exit 1
     fi
     ;;
@@ -538,7 +570,7 @@ case "$COMMAND" in
     fi
 
     log_msg "REMOVE: Abrupt removal of /dev/$DEVNAME detected at $MOUNT_POINT."
-    send_notification "NOTIFY:DriveUnplugged"
+    send_notification "NOTIFY:Drive Unplugged"
 
     $0 eject "$MOUNT_POINT"
 
@@ -549,11 +581,14 @@ case "$COMMAND" in
 
 "unmount_live_pool")
     MOUNT_POINT=$1
+    # Check if the mount point being removed is currently part of the active pool
     if mount | grep "fuse.mergerfs on $POOL_PATH" | grep -q "$MOUNT_POINT"; then
         log_msg "POOL: Unmounting MergerFS pool..."
         umount -l "$POOL_PATH"
+
         BASE_DIR="/userdata/.roms_base"
         if [ -d "$BASE_DIR" ]; then
+            log_msg "POOL: Restoring internal ROMs to main folder..."
             mv "$BASE_DIR"/* "$POOL_PATH/" 2>/dev/null || true
             mv "$BASE_DIR"/.[!.]* "$POOL_PATH/" 2>/dev/null || true
             rmdir "$BASE_DIR"
@@ -578,6 +613,8 @@ case "$COMMAND" in
     mount -o remount,ro /boot
 
     log_msg "PERSISTENCE: Removed $BRANCH_PATH from config."
+
+    # This calls the restoration logic
     $0 unmount_live_pool "$MOUNT_POINT"
 
     log_msg "EJECT: Unmounting $MOUNT_POINT..."
@@ -589,6 +626,9 @@ case "$COMMAND" in
     fi
 
     log_msg "EJECT: Drive ejected."
+    send_notification "NOTIFY:Drive Ejected"
+    sleep 1
+    send_notification "RELOAD_GAMELISTS:true"
     exit 0
     ;;
 
@@ -611,6 +651,7 @@ case "$COMMAND" in
         fi
         batocera-settings-set -f "$BOOT_CONF_FILE" "ignore.drives" "$NEW_IGNORES"
         log_msg "IGNORE: Added $UNIQUE_ID to ignore.drives in boot config."
+        send_notification "NOTIFY:Drive Ignored"
     fi
 
     mount -o remount,ro /boot
