@@ -5,7 +5,7 @@ btop.mk
 cargs.mk
 chromebook-ucm-conf.mk
 clk.mk
-d8vk.mk
+d7vk.mk
 db9_gpio_rpi.mk
 dosbox-x.mk
 dxvk-nvapi.mk

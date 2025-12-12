@@ -156,6 +156,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 system.config["sdlvsync"] = '1'
             os.environ.update({'SDL_RENDER_VSYNC': system.config["sdlvsync"]})
 
+            os.environ.update({'GLIBC_TUNABLES': 'glibc.malloc.hugetlb=1'})
             #os.environ.update({'PIPEWIRE_LATENCY': '1024/48000'})
             # check if we're running wayland
             if os.environ.get("WAYLAND_DISPLAY"):
