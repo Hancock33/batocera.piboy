@@ -2,9 +2,14 @@
 -----|:-----:|:-----:|:-----:
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-13|Dec 13, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|381038385191e0611ffbc9d08613ab3fc4dd030b|Dec 13, 2025
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|402d5a4a1b9c41cf19dd0df9ae2848dafa0de5e7|Dec 13, 2025
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|b3ae7bc6f1a3933131db861a5c5c9062be1a2a98|Dec 13, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|4f96c642061d341a31507a5020c50beff12ca6ed|Dec 13, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251213|Dec 13, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|11cd891eafdaa685a206def234f22f04ac266fe7|Dec 13, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|36bc8a509fc90e923fecb983695e40fb4ff348fd|Dec 13, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251213|Dec 13, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|98e7d0102739d28673dc99240243d0d302e389af|Dec 13, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|d94677cd17c7315006e54b3d64774a26db200bcd|Dec 13, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|20d4130f391a2cbf3b9aeebd9fb23ff3bd8b60bf|Dec 13, 2025
 Emulators|[clk](https://github.com/TomHarte/CLK)|2025-12-12|Dec 12, 2025
@@ -18,12 +23,8 @@ Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|ae0e10f8dedcbdc99fe46dab92abbc4c39037996|Dec 12, 2025
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|de844f2a0cbedddd9def6baf62fd61cf2265d6ad|Dec 12, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|c77d47cbecf813ed7da668be516c15842de7d552|Dec 12, 2025
-Ports|[box64](http://github.com/ptitseb/box64)|466e5eb84b34f592666f9bf1563e058157849755|Dec 12, 2025
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|37daef5de3a002b507efb67d6ecce384e83d0b73|Dec 12, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|3e16d8a2ff04eaf434cf57f66b7eab0ec4ba3285|Dec 12, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|ntsync-11-rc2|Dec 12, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251212|Dec 12, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251212|Dec 12, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11-rc2|Dec 12, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|12cb435b0e65e5ff5724b2ad833eb5f59dc5d9e0|Dec 12, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|af8b9857eb3994fd5f818a7cee49071f3a6e3260|Dec 12, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|837bf652c5895f032126b44837a4027cab5b5a25|Dec 12, 2025
@@ -90,7 +91,6 @@ Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|5f83fcf505142
 Audio|[cubeb](http://github.com/mozilla/cubeb)|bed368eb0d901ec4b7921a8d704ca469b7fb4e19|Dec 03, 2025
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|a66e0178eddd510b9d1a86007ff484751f8e551f|Dec 03, 2025
 Libraries|[pysdl3](http://github.com/Aermoss/PySDL3)|v0.9.9b1|Dec 03, 2025
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|bb6b1539a0d31a8ee48ed7a75d2c593ae62b2db3|Dec 03, 2025
 Engines|[openbor7530](http://github.com/DCurrent/openbor)|7a293b79cc698d50e9e3a9e74d3bff8ef2108b0b|Dec 03, 2025
 Gpu|[nvidia-proprietary-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Dec 03, 2025
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|3365b1774bc8680be9899968fe45b224ad2f11c1|Dec 03, 2025
