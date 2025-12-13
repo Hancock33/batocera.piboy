@@ -64,16 +64,11 @@ define AZAHAR_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/azahar $(TARGET_DIR)/usr/bin/
 endef
 
-define AZAHAR_QT6
-	ln -sf $(STAGING_DIR)/usr/include/QtGui/*/QtGui/qpa  $(STAGING_DIR)/usr/include/QtCore
-endef
-
 define AZAHAR_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/azahar/3ds.azahar.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-AZAHAR_PRE_CONFIGURE_HOOKS = AZAHAR_QT6
 AZAHAR_POST_INSTALL_TARGET_HOOKS = AZAHAR_EVMAPY
 
 $(eval $(cmake-package))
