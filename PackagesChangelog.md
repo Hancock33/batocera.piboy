@@ -13,6 +13,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|402d5a4a1b9c
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|debb0911206e4090ee984528bdf4e1baef7fcf99|Dec 13, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|bb4549b272d66998dc54df067dde75cfe26c55b0|Dec 13, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|3293a037047522fc3b0e8187630679204ad00a71|Dec 13, 2025
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.00-rc2|Dec 13, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251213|Dec 13, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0be544b82de69cce2ffabc0655d8a9df97d5447c|Dec 13, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251213|Dec 13, 2025
@@ -38,7 +39,6 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|ae0e10f8dedcbdc99fe4
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|de844f2a0cbedddd9def6baf62fd61cf2265d6ad|Dec 12, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|c77d47cbecf813ed7da668be516c15842de7d552|Dec 12, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|3e16d8a2ff04eaf434cf57f66b7eab0ec4ba3285|Dec 12, 2025
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11-rc2|Dec 12, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|12cb435b0e65e5ff5724b2ad833eb5f59dc5d9e0|Dec 12, 2025
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|d095d5de9399f0612db35c73a639406ec3e74ca6|Dec 12, 2025
 Emulators|[libretro-dinothawr](http://github.com/libretro/Dinothawr)|d66dde551be8e68e47c05e88838b4f1c6b114c99|Dec 12, 2025
