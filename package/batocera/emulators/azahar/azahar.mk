@@ -3,8 +3,8 @@
 # azahar
 #
 ################################################################################
-# Version: Commits on Dec 06, 2025
-AZAHAR_VERSION = 9996a07e8732b212ee10b03dbd861e2f3da02240
+# Version: Commits on Jun 05, 2025
+AZAHAR_VERSION = f7eaf13a4d3cce144ac2bfcd4915b12c7c5c186e
 AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
 AZAHAR_SITE_METHOD=git
 AZAHAR_GIT_SUBMODULES = YES
@@ -64,16 +64,11 @@ define AZAHAR_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/azahar $(TARGET_DIR)/usr/bin/
 endef
 
-define AZAHAR_QT6
-	ln -sf $(STAGING_DIR)/usr/include/QtGui/*/QtGui/qpa  $(STAGING_DIR)/usr/include/QtCore
-endef
-
 define AZAHAR_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/azahar/3ds.azahar.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-AZAHAR_PRE_CONFIGURE_HOOKS = AZAHAR_QT6
 AZAHAR_POST_INSTALL_TARGET_HOOKS = AZAHAR_EVMAPY
 
 $(eval $(cmake-package))

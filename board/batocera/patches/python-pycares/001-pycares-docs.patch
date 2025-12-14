@@ -1,0 +1,14 @@
+Submodule deps/c-ares contains modified content
+diff --git a/deps/c-ares/CMakeLists.txt b/deps/c-ares/CMakeLists.txt
+index a2a9c193..025b700b 100644
+--- a/deps/c-ares/CMakeLists.txt
++++ b/deps/c-ares/CMakeLists.txt
+@@ -744,7 +744,7 @@ ADD_SUBDIRECTORY (include)
+ ADD_SUBDIRECTORY (src)
+ 
+ # Docs
+-ADD_SUBDIRECTORY (docs)
++#ADD_SUBDIRECTORY (docs)
+ 
+ # Tests
+ IF (CARES_BUILD_TESTS OR CARES_BUILD_CONTAINER_TESTS)

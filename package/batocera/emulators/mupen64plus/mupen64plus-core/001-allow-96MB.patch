@@ -1,12 +1,12 @@
 diff --git a/src/device/cart/cart_rom.c b/src/device/cart/cart_rom.c
-index 86657df1..64233b75 100644
+index 395b4941..66694485 100644
 --- a/src/device/cart/cart_rom.c
 +++ b/src/device/cart/cart_rom.c
-@@ -32,7 +32,7 @@
+@@ -33,7 +33,7 @@
  #define __STDC_FORMAT_MACROS
  #include <inttypes.h>
  
--#define CART_ROM_ADDR_MASK UINT32_C(0x03ffffff);
+-#define CART_ROM_ADDR_MASK UINT32_C(0xefffffff);
 +#define CART_ROM_ADDR_MASK UINT32_C(0x0fffffff);
  
  

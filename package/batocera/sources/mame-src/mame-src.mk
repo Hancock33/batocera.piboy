@@ -11,8 +11,8 @@ MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl2 sdl
 MAME_SRC_LICENSE = MAME
 
 MAME_SRC_CROSS_ARCH = unknown
-MAME_SRC_CROSS_OPTS = PRECOMPILE=0
-MAME_SRC_CFLAGS += -I$(STAGING_DIR)/usr/include/pipewire-0.3 -I$(STAGING_DIR)/usr/include/spa-0.2 -I$(@D)/3rdparty/asio/include
+MAME_SRC_CROSS_OPTS = PRECOMPILE=1
+MAME_SRC_CFLAGS += -I$(STAGING_DIR)/usr/include/pipewire-0.3 -I$(STAGING_DIR)/usr/include/spa-0.2 -I$(@D)/3rdparty/asio/include -pipe -w
 
 # Limit number of jobs not to eat too much RAM....
 MAME_SRC_JOBS = $(shell expr $(shell nproc))
@@ -21,7 +21,7 @@ ifeq ($(BR2_x86_64),y)
     MAME_SRC_EXTRA_ARGS += PLATFORM=x86
     MAME_SRC_CROSS_ARCH = x86_64
 else ifeq ($(BR2_aarch64),y)
-    MAME_SRC_EXTRA_ARGS += PLATFORM=arm64 ARCHITECTURE=
+    MAME_SRC_EXTRA_ARGS += PLATFORM=arm64
     MAME_SRC_CROSS_ARCH = aarch64
 endif
 
@@ -70,21 +70,16 @@ define MAME_SRC_BUILD_CMDS
 	$(MAKE) -j$(MAME_SRC_JOBS) TARGETOS=linux OSD=sdl \
 	$(MAME_SRC_CROSS_OPTS) \
 	ARCHOPTS=-fuse-ld=mold \
-	CROSS_ARCH="$(MAME_SRC_CROSS_ARCH)" \
-	CROSS_BUILD=1 \
 	FORCE_DRC_C_BACKEND=0 \
 	LDOPTS="-lasound -lfontconfig" \
 	NOWERROR=1 \
-	OPENMP=1 \
-	OVERRIDE_AR="$(TARGET_AR)" \
-	OVERRIDE_CC="$(HOST_DIR)/bin/ccache $(TARGET_CC)" \
-	OVERRIDE_CXX="$(HOST_DIR)/bin/ccache $(TARGET_CXX)" \
-	OVERRIDE_LD="$(TARGET_LD)" \
-	OVERRIDE_STRIP="$(TARGET_STRIP)" \
-	PRECOMPILE=1 \
+	OPENMP=0 \
+	AR="$(HOST_DIR)/bin/llvm-ar" \
+	CC="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang" \
+	CXX="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang++" \
+	LD="$(TARGET_LD)" \
 	REGENIE=1 \
 	SDL_INSTALL_ROOT="$(STAGING_DIR)/usr" \
-	STRIP_SYMBOLS=1 \
 	SUBTARGET=mame \
 	SYMBOLS=0 \
 	TARGET=mame \
@@ -122,6 +117,7 @@ define MAME_SRC_INSTALL_TARGET_CMDS
 
 	# Install binaries and default distro
 	$(INSTALL) -D $(@D)/mame	/tmp/mame/usr/bin/mame/mame
+	$(HOST_DIR)/bin/llvm-strip	/tmp/mame/usr/bin/mame/mame
 	cp $(@D)/COPYING			/tmp/mame/usr/bin/mame/
 	cp $(@D)/README.md			/tmp/mame/usr/bin/mame/
 	cp $(@D)/uismall.bdf		/tmp/mame/usr/bin/mame/
@@ -148,7 +144,7 @@ define MAME_SRC_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/ldresample	/tmp/mame/usr/bin/mame/
 	$(INSTALL) -D $(@D)/ldverify	/tmp/mame/usr/bin/mame/
 	$(INSTALL) -D $(@D)/romcmp		/tmp/mame/usr/bin/mame/
-
+	$(HOST_DIR)/bin/llvm-strip		/tmp/mame/usr/bin/mame/{castool,chdman,floptool,imgtool,jedutil,ldresample,ldverify,romcmp}
 	# MAME dev tools skipped
 	#$(INSTALL) -D $(@D)/unidasm	/tmp/mame/usr/bin/mame/
 	#$(INSTALL) -D $(@D)/nltool		/tmp/mame/usr/bin/mame/

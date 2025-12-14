@@ -196,6 +196,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_FBDUMP                               # tool to capture snapshots from the Linux kernel framebuffer device and write them out as a PPM file
     select BR2_PACKAGE_FBGRAB                               # framebuffer screenshot program, capturing the linux framebuffer and converting it to a png-picture
     select BR2_PACKAGE_FBV                                  # very simple graphic file viewer for the framebuffer console, capable of displaying GIF, JPEG, PNG and BMP files using libungif, libjpeg and libpng
+    select BR2_PACKAGE_FUSE_OVERLAYFS
     select BR2_PACKAGE_HOST_MTOOLS                          # Buggy mcopy on Ubuntu 21.10!
     select BR2_PACKAGE_HOTKEYGEN
     select BR2_PACKAGE_INNOEXTRACT                          # Extract InnoSetup files (useful for Wine and GOG games)
@@ -240,7 +241,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_PYTHON3_XZ
 
     select BR2_PACKAGE_PARTED                               # partition management (for the first boot)
-    select BR2_PACKAGE_USBMOUNT                             # usb key/sd card mounter
+   #select BR2_PACKAGE_USBMOUNT                             # usb key/sd card mounter <- use batocera-stoage-manager now
     select BR2_PACKAGE_USBUTILS                             # usb key/sd card tools
     select BR2_PACKAGE_BATOCERA_SPLASH                      # boot splash
     select BR2_PACKAGE_BATOCERA_SCRIPTS                     # batocera scripts
@@ -1206,7 +1207,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     # Gamecube / Wii
     select BR2_PACKAGE_DOLPHIN_EMU                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712     || \
+                                                                BR2_PACKAGE_BATOCERA_BCM27XX            || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8550      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588

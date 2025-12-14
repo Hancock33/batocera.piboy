@@ -3,8 +3,8 @@
 # mupen64plus-core
 #
 ################################################################################
-# Version: Commits on Oct 17, 2025
-MUPEN64PLUS_CORE_VERSION = e0afbb2c2f67377c9d47bc4e3a9bee47b6ea54c9
+# Version: Commits on Dec 08, 2025
+MUPEN64PLUS_CORE_VERSION = 37791911f120d43cd108aa8eea261729cbd0628b
 MUPEN64PLUS_CORE_SITE = $(call github,mupen64plus,mupen64plus-core,$(MUPEN64PLUS_CORE_VERSION))
 MUPEN64PLUS_CORE_LICENSE = GPLv2
 MUPEN64PLUS_CORE_DEPENDENCIES = alsa-lib freetype dejavu host-nasm sdl2
@@ -42,8 +42,8 @@ endif
 
 ifeq ($(BR2_arm)$(BR2_ARM_CPU_HAS_NEON),yy)
     MUPEN64PLUS_CORE_CPUFLAGS += -marm -DNO_ASM -DARM -D__arm__ -DARM_ASM -D__NEON_OPT -DNOSSE
-    MUPEN64PLUS_GL_CFLAGS += -D__ARM_NEON__ -D__NEON_OPT -ftree-vectorize -mvectorize-with-neon-quad
-    MUPEN64PLUS_GL_CFLAGS += -ftree-vectorizer-verbose=2 -funsafe-math-optimizations -fno-finite-math-only
+    MUPEN64PLUS_CORE_GL_CFLAGS += -D__ARM_NEON__ -D__NEON_OPT -ftree-vectorize -mvectorize-with-neon-quad
+    MUPEN64PLUS_CORE_GL_CFLAGS += -ftree-vectorizer-verbose=2 -funsafe-math-optimizations -fno-finite-math-only
 
     ifeq ($(BR2_ARM_CPU_HAS_VFPV4),y)
         MUPEN64PLUS_CORE_CPUFLAGS += -mfpu=neon-vfpv4
@@ -77,7 +77,8 @@ define MUPEN64PLUS_CORE_BUILD_CMDS
 		PREFIX="$(STAGING_DIR)/usr" \
 		PKG_CONFIG="$(HOST_DIR)/bin/pkg-config" \
 		HOST_CPU="$(MUPEN64PLUS_HOST_CPU)" \
-		-C $(@D)/projects/unix all $(MUPEN64PLUS_PARAMS) OPTFLAGS="$(TARGET_CXXFLAGS) -Wno-implicit-function-declaration -Wno-int-conversion"
+		-C $(@D)/projects/unix all $(MUPEN64PLUS_PARAMS) \
+		OPTFLAGS="$(TARGET_CXXFLAGS) -Wno-implicit-function-declaration -Wno-int-conversion -I$(BUILD_DIR)/minizip-zlib-$(MINIZIP_ZLIB_VERSION)/contrib/minizip"
 endef
 
 define MUPEN64PLUS_CORE_INSTALL_STAGING_CMDS

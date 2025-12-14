@@ -3,10 +3,10 @@
 # python-adafruit-platformdetect
 #
 ################################################################################
-# Version: Commits on Oct 14, 2025
-PYTHON_ADAFRUIT_PLATFORMDETECT_VERSION = 3.84.1
+# Version: Commits on Nov 20, 2025
+PYTHON_ADAFRUIT_PLATFORMDETECT_VERSION = 3.85.0
 PYTHON_ADAFRUIT_PLATFORMDETECT_SOURCE = adafruit_platformdetect-$(PYTHON_ADAFRUIT_PLATFORMDETECT_VERSION).tar.gz
-PYTHON_ADAFRUIT_PLATFORMDETECT_SITE = https://files.pythonhosted.org/packages/1e/52/9641f5de40e9a85e69c01873eaee3e992e3d7dad32cd14fa7a8542994b1f
+PYTHON_ADAFRUIT_PLATFORMDETECT_SITE = https://files.pythonhosted.org/packages/8a/b5/c454d998188ea45898ada67dd302da4f138b7fc41f9c31f7aaf8b7a28cf7
 PYTHON_ADAFRUIT_PLATFORMDETECT_SETUP_TYPE = setuptools
 PYTHON_ADAFRUIT_PLATFORMDETECT_LICENSE = MIT
 PYTHON_ADAFRUIT_PLATFORMDETECT_LICENSE_FILES = LICENSE

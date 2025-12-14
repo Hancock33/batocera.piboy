@@ -32,3 +32,4 @@ batocera-mok.key
 .venv*
 /messages.mo
 typescript
+.ruff_cache

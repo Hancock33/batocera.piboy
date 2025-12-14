@@ -3,8 +3,8 @@
 # vkquake
 #
 ################################################################################
-# Version: Commits on Dec 07, 2025
-VKQUAKE_VERSION = ac06357000757b5187ebd5701739fdae0a0864c9
+# Version: Commits on Dec 12, 2025
+VKQUAKE_VERSION = 12cb435b0e65e5ff5724b2ad833eb5f59dc5d9e0
 VKQUAKE_SITE = $(call github,Novum,vkQuake,$(VKQUAKE_VERSION))
 VKQUAKE_DEPENDENCIES = alsa-lib flac glslang mpg123 libvorbis opus opusfile sdl2
 VKQUAKE_DEPENDENCIES += spirv-tools vulkan-headers vulkan-loader

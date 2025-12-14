@@ -711,6 +711,7 @@ endmenu
 
 menu "WINE"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/batocera-wine/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/d7vk/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/dxvk/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/dxvk-nvapi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/wine/rtkit/Config.in"

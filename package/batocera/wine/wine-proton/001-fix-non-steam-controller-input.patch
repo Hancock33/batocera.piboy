@@ -1,5 +1,5 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index d0a0ffd0774..6acd79f1829 100644
+index d0a0ffd0774..ece6bb197a4 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
 @@ -75,7 +75,8 @@ AddReg=\
@@ -8,7 +8,7 @@ index d0a0ffd0774..6acd79f1829 100644
      VCRuntime.ntx86,\
 -    LicenseInformation
 +    LicenseInformation,\
-+    BatoceraOverrides
++    WineBatoOverrides
  
  [DefaultInstall.NT]
  RegisterDlls=RegisterDllsSection
@@ -17,8 +17,8 @@ index d0a0ffd0774..6acd79f1829 100644
      LicenseInformation,\
      NVIDIANGX, \
 -    ProtonOverrides
-+    ProtonOverrides,\
-+    BatoceraOverrides
++    ProtonOverrides, \
++    WineBatoOverrides
  
  [DefaultInstall.ntamd64]
  RegisterDlls=RegisterDllsSection
@@ -27,8 +27,8 @@ index d0a0ffd0774..6acd79f1829 100644
      NVIDIANGX, \
      TTS, \
 -    ProtonOverrides
-+    ProtonOverrides,\
-+    BatoceraOverrides
++    ProtonOverrides, \
++    WineBatoOverrides
  
  [DefaultInstall.ntarm64]
  RegisterDlls=RegisterDllsSection
@@ -37,8 +37,8 @@ index d0a0ffd0774..6acd79f1829 100644
      NVIDIANGX, \
      TTS, \
 -    ProtonOverrides
-+    ProtonOverrides,\
-+    BatoceraOverrides
++    ProtonOverrides, \
++    WineBatoOverrides
  
  [Wow64Install.ntx86]
  RegisterDlls=RegisterDllsSection
@@ -47,23 +47,28 @@ index d0a0ffd0774..6acd79f1829 100644
      LicenseInformation,\
      NVIDIANGX, \
 -    ProtonOverrides
-+    ProtonOverrides,\
-+    BatoceraOverrides
++    ProtonOverrides, \
++    WineBatoOverrides
  
  [Wow64Install.ntarm]
  RegisterDlls=RegisterDllsSection
-@@ -212,7 +217,13 @@ AddReg=\
+@@ -212,7 +217,8 @@ AddReg=\
      SteamClient64,\
      Tapi,\
      VersionInfo,\
 -    LicenseInformation
-+    LicenseInformation,\
-+    BatoceraOverrides
-+
-+[BatoceraOverrides]
-+HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"
-+HKLM,System\CurrentControlSet\Services\winebus,"Enable SDL",0x10001,"1"
-+HKCU,Software\Xenia,"XEFLAGS",0x10001,"1"
++    LicenseInformation, \
++    WineBatoOverrides
  
  [DefaultInstall.Services]
  AddService=BITS,0,BITSService
+@@ -3287,3 +3293,9 @@ HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode
+ ;;Other app-specific overrides
+ HKCU,Software\Wine\AppDefaults\Pentiment.exe\DllOverrides,"SpeechSynthesisWrapper",,"disabled"
+ HKCU,Software\Wine\AppDefaults\Maine-Win64-Shipping.exe\DllOverrides,"SpeechSynthWrapper",0x2,"disabled"
++
++[WineBatoOverrides]
++HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"
++HKLM,System\CurrentControlSet\Services\winebus,"Enable SDL",0x10001,"1"
++HKCU,Software\Xenia,"XEFLAGS",0x10001,"1"
++

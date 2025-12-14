@@ -43,10 +43,10 @@ index 3effe5bb27..ffc4ad3e35 100644
        return true;
     }
 diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
-index a660a921bf..58ba0426be 100644
+index e5dd04d564..b50fbcb5e2 100644
 --- a/frontend/drivers/platform_unix.c
 +++ b/frontend/drivers/platform_unix.c
-@@ -1742,7 +1742,7 @@ static void frontend_unix_get_env(int *argc,
+@@ -1796,7 +1796,7 @@ static void frontend_unix_get_env(int *argc,
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
@@ -55,7 +55,7 @@ index a660a921bf..58ba0426be 100644
     }
     else
        strlcpy(base_path, "retroarch", sizeof(base_path));
-@@ -2299,7 +2299,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
+@@ -2396,7 +2396,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
@@ -65,7 +65,7 @@ index a660a921bf..58ba0426be 100644
  #endif
  
 diff --git a/pkg/sailfishos/retroarch-sailfishos.spec b/pkg/sailfishos/retroarch-sailfishos.spec
-index c553d34d67..b6ba8630fc 100644
+index bbdc9ac076..42992c59d4 100644
 --- a/pkg/sailfishos/retroarch-sailfishos.spec
 +++ b/pkg/sailfishos/retroarch-sailfishos.spec
 @@ -41,8 +41,8 @@ make %{?_smp_mflags}
@@ -80,10 +80,10 @@ index c553d34d67..b6ba8630fc 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index 8463bc0201..805e91db90 100644
+index e1e007fc38..b69e1ab2ad 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -6510,7 +6510,7 @@ static void retroarch_print_help(const char *arg0)
+@@ -6523,7 +6523,7 @@ static void retroarch_print_help(const char *arg0)
           "                                 "
           "  $XDG_CONFIG_HOME/retroarch/retroarch.cfg,\n"
           "                                 "

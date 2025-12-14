@@ -5,6 +5,8 @@
 # executing them in numerical order.
 #
 ln -s /run /var/run
+chmod 755 /var/run
+
 for i in /etc/init.d/S??* ;do
 
      # Ignore dangling symlinks (if any).

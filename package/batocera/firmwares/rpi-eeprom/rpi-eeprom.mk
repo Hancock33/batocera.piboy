@@ -3,15 +3,15 @@
 # rpi-eeprom
 #
 ################################################################################
-# Version: Commits on Nov 27, 2025
-RPI_EEPROM_VERSION = 68774da0beba4490723e4c7065663ce70c866d82
+# Version: Commits on Dec 12, 2025
+RPI_EEPROM_VERSION = c77d47cbecf813ed7da668be516c15842de7d552
 RPI_EEPROM_SITE = $(call github,raspberrypi,rpi-eeprom,$(RPI_EEPROM_VERSION))
 RPI_EEPROM_DEPENDENCIES = rpi-utils
 
 RPI_EEPROM_LICENSE = BSD-3-Clause
 
-RPI_EEPROM_RPI4_VERSION=2025-11-27
-RPI_EEPROM_RPI5_VERSION=2025-11-27
+RPI_EEPROM_RPI4_VERSION=2025-12-08
+RPI_EEPROM_RPI5_VERSION=2025-12-08
 
 RPI_EEPROM_RPI4_FW_DIR=$(TARGET_DIR)/lib/firmware/raspberrypi/bootloader-2711/default
 RPI_EEPROM_RPI5_FW_DIR=$(TARGET_DIR)/lib/firmware/raspberrypi/bootloader-2712/default
