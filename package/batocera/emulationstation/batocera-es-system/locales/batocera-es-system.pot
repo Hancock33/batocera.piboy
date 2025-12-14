@@ -13752,7 +13752,7 @@ msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
 msgstr ""
 
 #. TRANSLATION: wine

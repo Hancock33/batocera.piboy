@@ -3025,11 +3025,6 @@ msgid ""
 "resolution."
 msgstr ""
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6657,6 +6652,11 @@ msgctxt "game_options"
 msgid ""
 "Disables the vertex cache. Might resolve missing or flickering graphics "
 "output but degrade performance."
+msgstr ""
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame

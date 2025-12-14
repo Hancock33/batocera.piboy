@@ -3040,11 +3040,6 @@ msgstr ""
 "Farklı çözünürlükleri destekleyen oyunların belirli çözünürlükte işlenmesine "
 "izin verin."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6761,6 +6756,11 @@ msgid ""
 msgstr ""
 "Köşe önbelleğini devre dışı bırakır. Eksik veya titreyen grafik çıktısını "
 "çözebilir ancak performansı düşürebilir."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"

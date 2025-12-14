@@ -3025,11 +3025,6 @@ msgid ""
 "resolution."
 msgstr "允許支援不同解析度的遊戲以特定解析度進行算繪。"
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6668,6 +6663,11 @@ msgid ""
 "Disables the vertex cache. Might resolve missing or flickering graphics "
 "output but degrade performance."
 msgstr "停用頂點快取。可能會解決遺失或閃爍的圖形輸出，但會降低效能。"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"

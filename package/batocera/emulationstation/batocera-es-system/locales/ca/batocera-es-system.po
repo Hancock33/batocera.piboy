@@ -3029,11 +3029,6 @@ msgstr ""
 "Força jocs que suporten diferents resolucions a ser renderitzats en una "
 "resolució específica."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6692,6 +6687,11 @@ msgid ""
 msgstr ""
 "Deshabilita la memòria cau de vèrtexs. Pot comportar parpelleig o absència "
 "de gràfics però degrada el rendiment."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"

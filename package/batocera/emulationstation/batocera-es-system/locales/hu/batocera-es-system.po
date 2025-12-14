@@ -3037,12 +3037,6 @@ msgstr ""
 "Lehetővé teszi, hogy a különböző felbontásokat támogató játékok egy adott "
 "felbontásban jelenjenek meg."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
-"Engedélyezd a wine számára a nyers IO portok elérését (USB, párhuzamos, ...)"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6762,6 +6756,11 @@ msgid ""
 msgstr ""
 "Letiltja a csúcsgyorsítótárat. Megoldhatja a hiányzó vagy villogó grafikus "
 "kimenetet, de rontja a teljesítményt."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -20228,6 +20227,12 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Engedélyezze a Future Pinball billentyűzettel való leképezését a "
 #~ "billentyűzethez."
+
+#~ msgctxt "game_options"
+#~ msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+#~ msgstr ""
+#~ "Engedélyezd a wine számára a nyers IO portok elérését (USB, "
+#~ "párhuzamos, ...)"
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."

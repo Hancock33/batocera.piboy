@@ -3030,11 +3030,6 @@ msgid ""
 "resolution."
 msgstr "Povolit vykreslování her s různými rozlišeními v určitém rozlišení."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6730,6 +6725,11 @@ msgid ""
 msgstr ""
 "Zakáže vrchol cache. Může vyřešit chybějící nebo blikající grafický výstup, "
 "ale sníží výkon."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"

@@ -3026,11 +3026,6 @@ msgid ""
 "resolution."
 msgstr "允许以特定分辨率渲染支持不同分辨率的游戏。"
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr "允许wine访问原始输入输出端口 (usb, parallel, ...)"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6669,6 +6664,11 @@ msgid ""
 "Disables the vertex cache. Might resolve missing or flickering graphics "
 "output but degrade performance."
 msgstr "禁用顶点缓存。可能会解决丢失或闪烁的图形输出，但会降低性能。"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -19817,6 +19817,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
 #~ msgstr "允许将Future Pinball手柄映射到键盘."
+
+#~ msgctxt "game_options"
+#~ msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+#~ msgstr "允许wine访问原始输入输出端口 (usb, parallel, ...)"
 
 #~ msgctxt "game_options"
 #~ msgid ""

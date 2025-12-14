@@ -3040,11 +3040,6 @@ msgstr ""
 "Rendern von spezifischen Auflösungen bei Spielen erlauben, die verschiedene "
 "Auflösungen unterstützen."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr "Wine den Zugriff auf RAW-I/O-Ports erlauben (USB, Parallelport usw.)"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6759,6 +6754,11 @@ msgid ""
 msgstr ""
 "Deaktivierung des Vertex-Cache kann eine fehlende oder flackernde "
 "Grafikausgabe beheben, aber auch die Systemleistung herabsetzen."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -20156,6 +20156,11 @@ msgstr "gelb/blau"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "Bei Gameboy-Spielen Farbe hinzufügen."
+
+#~ msgctxt "game_options"
+#~ msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+#~ msgstr ""
+#~ "Wine den Zugriff auf RAW-I/O-Ports erlauben (USB, Parallelport usw.)"
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."

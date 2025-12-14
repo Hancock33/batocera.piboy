@@ -3031,11 +3031,6 @@ msgid ""
 "resolution."
 msgstr "다양한 해상도를 지원하는 게임이 특정 해상도로 렌더링되도록 허용합니다."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr "Wine이 원시 io 포트(USB, 병렬 등)에 접근하도록 허"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6726,6 +6721,11 @@ msgid ""
 msgstr ""
 "Vertex 캐시를 비활성화합니다. 누락되거나 깜빡이는 그래픽 출력을 해결할 수 있"
 "지만 성능이 저하될 수 있습니다."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -19954,6 +19954,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "게임보이 게임에 색상을 추가합니다."
+
+#~ msgctxt "game_options"
+#~ msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+#~ msgstr "Wine이 원시 io 포트(USB, 병렬 등)에 접근하도록 허"
 
 #~ msgctxt "game_options"
 #~ msgid ""

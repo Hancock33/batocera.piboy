@@ -3030,11 +3030,6 @@ msgid ""
 "resolution."
 msgstr "異なる解像度をサポートするゲームを特定の解像度で表示するようにします"
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr "Wine がraw IO ポート (USB、パラレルなど) にアクセスできるようにします"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6718,6 +6713,11 @@ msgid ""
 msgstr ""
 "頂点キャッシュを無効にします。グラフィック出力の欠落や、ちらつきは解決される"
 "可能性がありますが、動作は低下します"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -19922,6 +19922,11 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "ゲームボーイのゲームに色を追加します"
+
+#~ msgctxt "game_options"
+#~ msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+#~ msgstr ""
+#~ "Wine がraw IO ポート (USB、パラレルなど) にアクセスできるようにします"
 
 #~ msgctxt "game_options"
 #~ msgid ""

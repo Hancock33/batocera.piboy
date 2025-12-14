@@ -3041,11 +3041,6 @@ msgstr ""
 "Toestaan ​​dat spellen die verschillende resoluties ondersteunen, in een "
 "specifieke resolutie worden weergegeven."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr "Geef Wine toegang tot raw io-poorten (USB, parallel, ...)"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6764,6 +6759,11 @@ msgid ""
 msgstr ""
 "Schakelt de vertex cache uit. Kan ontbrekende of flikkerende grafische "
 "uitvoer oplossen, maar de prestaties verminderen."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -20113,6 +20113,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Add color to Game Boy games."
 #~ msgstr "Voeg kleuren toe aan Game Boy spellen."
+
+#~ msgctxt "game_options"
+#~ msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+#~ msgstr "Geef Wine toegang tot raw io-poorten (USB, parallel, ...)"
 
 #~ msgctxt "game_options"
 #~ msgid "Allows the use of switchres profiles if present."

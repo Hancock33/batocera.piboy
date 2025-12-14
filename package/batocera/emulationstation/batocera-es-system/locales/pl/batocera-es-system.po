@@ -3041,12 +3041,6 @@ msgstr ""
 "Umożliwia renderowanie gier obsługujących różne rozdzielczości w określonej "
 "rozdzielczości."
 
-#. TRANSLATION: wine
-msgctxt "game_options"
-msgid "Allow wine to access raw io ports (usb, parallel, ...)"
-msgstr ""
-"Zezwól Wine na dostęp do portów wejścia/wyjścia (USB, równoległe itp.)."
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
@@ -6765,6 +6759,11 @@ msgid ""
 msgstr ""
 "Wyłącza pamięć podręczną wierzchołków. Może rozwiązać problem braku lub "
 "migotania grafiki, ale obniża wydajność."
+
+#. TRANSLATION: wine
+msgctxt "game_options"
+msgid "Disallow wine to access raw io ports (usb, parallel, ...)"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -20405,6 +20404,11 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "Allow mapping Future Pinball with Pad to Keyboard."
 #~ msgstr "Zezwól na mapowanie Future Pinball za pomocą Pada na klawiaturę."
+
+#~ msgctxt "game_options"
+#~ msgid "Allow wine to access raw io ports (usb, parallel, ...)"
+#~ msgstr ""
+#~ "Zezwól Wine na dostęp do portów wejścia/wyjścia (USB, równoległe itp.)."
 
 #~ msgctxt "game_options"
 #~ msgid ""
