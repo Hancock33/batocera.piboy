@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 13, 2025
-EDEN_VERSION = 363d8610113e83e2eec972b98c62112ed639787c
+EDEN_VERSION = d7de29894801fc99cba2ac22bcf05962e5ae9314
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD=git
 EDEN_GIT_SUBMODULES=YES
