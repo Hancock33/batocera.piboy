@@ -1,21 +1,34 @@
+From 8066a5eca448d8dd6c9858db5ad89f3b221d2599 Mon Sep 17 00:00:00 2001
+From: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
+Date: Sun, 26 May 2024 09:10:14 +0000
+Subject: [PATCH] 005-hyseus-udev-proper-gun-detection
+
+Signed-off-by: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
+---
+ src/CMakeLists.txt               |   3 +-
+ src/cmake/modules/FindUdev.cmake |  15 +++
+ src/manymouse/linux_evdev.c      | 173 ++++++++++++++++++++++++++-----
+ 3 files changed, 164 insertions(+), 27 deletions(-)
+ create mode 100644 src/cmake/modules/FindUdev.cmake
+
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 9841c5d..d29e717 100644
+index 6a85063..13a86bf 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -108,13 +108,14 @@ find_package(SDL2_TTF REQUIRED)
+@@ -105,13 +105,14 @@
  find_package(SDL2_IMAGE REQUIRED)
  find_package(SDL2_MIXER REQUIRED)
  find_package(Vorbis REQUIRED)
 +find_package(Udev REQUIRED)
- 
+
  if(APPLE)
      set( SDL2_LIBRARIES ${SDL2_LIBRARY} )
  endif(APPLE)
- 
+
  add_executable( hypseus hypseus.cpp globals.h )
 -target_link_libraries( hypseus plog io timer sound video cpu game ${Vorbis_Enc_LIBRARY} Vorbis::vorbis ${OGG_LIBRARIES} ${VORBISFILE_LIBRARIES} ${Vorbis_File_LIBRARY} ${SDL2_LIBRARIES} ${SDL2_TTF_LIBRARY} ${SDL2_MIXER_LIBRARY} ${SDL2_IMAGE_LIBRARY} ${LIBZIP_LIBRARY} )
 +target_link_libraries( hypseus plog io timer sound video cpu game ${Vorbis_Enc_LIBRARY} Vorbis::vorbis ${OGG_LIBRARIES} ${VORBISFILE_LIBRARIES} ${Vorbis_File_LIBRARY} ${SDL2_LIBRARIES} ${SDL2_TTF_LIBRARY} ${SDL2_MIXER_LIBRARY} ${SDL2_IMAGE_LIBRARY} ${LIBZIP_LIBRARY} ${UDEV_LIBRARY} )
- 
+
  if(ASAN)
      target_link_options(hypseus PRIVATE -fsanitize=address -fno-omit-frame-pointer -g)
 diff --git a/src/cmake/modules/FindUdev.cmake b/src/cmake/modules/FindUdev.cmake
@@ -40,12 +53,12 @@ index 0000000..161027f
 +
 +mark_as_advanced(UDEV_LIBRARY UDEV_INCLUDE_DIR)
 diff --git a/src/manymouse/linux_evdev.c b/src/manymouse/linux_evdev.c
-index ab11b38..d1cd3d3 100644
+index a8da4fb..2053006 100644
 --- a/src/manymouse/linux_evdev.c
 +++ b/src/manymouse/linux_evdev.c
-@@ -23,6 +23,65 @@
+@@ -25,6 +25,66 @@
  
- #include <linux/input.h>  /* evdev interface...  */
+ #define test_bit(array, bit)    (array[bit/8] & (1<<(bit%8)))
  
 +struct event_udev_entry
 +{
@@ -106,10 +119,11 @@ index ab11b38..d1cd3d3 100644
 +  return event_strcmp_events(aa->devnode, bb->devnode);
 +}
 +
- #define test_bit(array, bit)    (array[bit/8] & (1<<(bit%8)))
- 
++
  /* linux allows 32 evdev nodes currently. */
-@@ -222,21 +281,7 @@ static int init_mouse(const char *fname, int fd)
+ #define MAX_MICE 32
+ typedef struct
+@@ -222,21 +282,7 @@ static int init_mouse(const char *fname, int fd)
  /* Return a file descriptor if this is really a mouse, -1 otherwise. */
  static int open_if_mouse(const char *fname)
  {
@@ -131,7 +145,7 @@ index ab11b38..d1cd3d3 100644
  
      if ((fd = open(fname, O_RDONLY | O_NONBLOCK)) == -1)
          return 0;
-@@ -266,25 +311,97 @@ static int linux_evdev_init(const unsigned char filter)
+@@ -267,25 +313,99 @@ static int linux_evdev_init(const unsigned char filter)
      DIR *dirp;
      struct dirent *dent;
      int i;
@@ -144,9 +158,11 @@ index ab11b38..d1cd3d3 100644
 +    struct event_udev_entry sorted[8]; // max devices
  
      for (i = 0; i < MAX_MICE; i++)
--        mice[i].fd = -1;
-+      mice[i].fd = -1;
-+
+         mice[i].fd = -1;
+ 
+-    dirp = opendir("/dev/input");
+-    if (!dirp)
+-        return -1;
 +    m_udev = udev_new();
 +    // look for guns
 +    enumerate = udev_enumerate_new(m_udev);
@@ -205,10 +221,7 @@ index ab11b38..d1cd3d3 100644
 +	      sizeof(struct event_udev_entry), sort_devnodes);
 +      }
 +    }
- 
--    dirp = opendir("/dev/input");
--    if (!dirp)
--        return -1;
++
 +    for (i = 0; i < sorted_count; i++) {
 +      const char *name = udev_list_entry_get_name(sorted[i].item);
  
@@ -231,14 +244,16 @@ index ab11b38..d1cd3d3 100644
 +	udev_device_unref(dev);
 +      }
 +    }
- 
--    closedir(dirp);
++
 +    if(enumerate != NULL) {
 +      udev_enumerate_unref(enumerate);
 +    }
 +    if(enumerate2 != NULL) {
 +      udev_enumerate_unref(enumerate2);
 +    }
+ 
+-    closedir(dirp);
++    udev_unref(m_udev);
  
      /* Sort devices based on eventfile number (from first to most recently registered) */
      if (available_mice)
