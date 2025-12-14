@@ -658,7 +658,7 @@ play_wine() {
     fonts_install "${WINEPOINT}" || return 1
     sandboxing_prefix "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
-    winedevices_setup "${WINEPOINT}" || return 1
+    #winedevices_setup "${WINEPOINT}" || return 1
     saveFilesToUserdata "${ROMGAMENAME}" "${WINE_SAVEDIR}" "${WINE_SAVEFILES}" || return 1
 
     if [[ -n "${WINE_LANG}" ]]; then
@@ -690,7 +690,7 @@ play_pc() {
     fonts_install "${WINEPOINT}" || return 1
     sandboxing_prefix "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
-    winedevices_setup "${WINEPOINT}" || return 1
+    #winedevices_setup "${WINEPOINT}" || return 1
     saveFilesToUserdata "${ROMGAMENAME}" "${WINE_SAVEDIR}" "${WINE_SAVEFILES}" || return 1
 
     env
@@ -739,7 +739,7 @@ play_exe() {
     fonts_install "${WINEPOINT}" || return 1
     sandboxing_prefix "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
-    winedevices_setup "${WINEPOINT}" || return 1
+    #winedevices_setup "${WINEPOINT}" || return 1
 
     (cd "${ROMBASEDIR}" && WINEPREFIX=${WINEPOINT} ${CMD_PREFIX} "${WINE}" "${ROMGAMENAME}")
     waitWineServer 0
@@ -770,7 +770,7 @@ play_winetgz() {
     fonts_install "${WINEPOINT}" || return 1
     sandboxing_prefix "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
-    winedevices_setup "${WINEPOINT}" || return 1
+    #winedevices_setup "${WINEPOINT}" || return 1
     saveFilesToUserdata "${ROMGAMENAME}" "${WINE_SAVEDIR}" "${WINE_SAVEFILES}" || return 1
 
     if [[ -n "${WINE_LANG}" ]]; then
@@ -853,7 +853,7 @@ play_squashfs() {
     reg_install "${WINEPOINT}" || return 1
     fonts_install "${WINEPOINT}" || return 1
     dxvk_install "${WINEPOINT}" || return 1
-    winedevices_setup "${WINEPOINT}" || return 1
+    #winedevices_setup "${WINEPOINT}" || return 1
     saveFilesToUserdata "${ROMGAMENAME}" "${WINE_SAVEDIR}" "${WINE_SAVEFILES}" || return 1
 
     if [[ -n "${WINE_LANG}" ]]; then
