@@ -602,7 +602,7 @@ index 000000000000..7c1baa1bdf6c
 +#endif // CONFIG_SYSCTL
 +#endif /* CONFIG_SCHED_BORE */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index f754a60de848..c5a6f727fef1 100644
+index d90b290aad66..a48dbcf3e726 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -100,6 +100,10 @@
@@ -616,7 +616,7 @@ index f754a60de848..c5a6f727fef1 100644
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpu);
  EXPORT_TRACEPOINT_SYMBOL_GPL(ipi_send_cpumask);
  
-@@ -1431,7 +1435,11 @@ int tg_nop(struct task_group *tg, void *data)
+@@ -1426,7 +1430,11 @@ int tg_nop(struct task_group *tg, void *data)
  
  void set_load_weight(struct task_struct *p, bool update_load)
  {
@@ -628,7 +628,7 @@ index f754a60de848..c5a6f727fef1 100644
  	struct load_weight lw;
  
  	if (task_has_idle_policy(p)) {
-@@ -8655,6 +8663,10 @@ void __init sched_init(void)
+@@ -8650,6 +8658,10 @@ void __init sched_init(void)
  	BUG_ON(!sched_class_above(&ext_sched_class, &idle_sched_class));
  #endif
  
@@ -1113,10 +1113,10 @@ index 3c12d9f93331..abadc5ca74e2 100644
   * Allow wakeup of tasks with a shorter slice to cancel RUN_TO_PARITY for
   * current.
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 51e432eb9c48..7cc12cb63453 100644
+index 73d20396d6f4..cdcc8c379e57 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -2130,7 +2130,11 @@ extern int group_balance_cpu(struct sched_group *sg);
+@@ -2134,7 +2134,11 @@ extern int group_balance_cpu(struct sched_group *sg);
  extern void update_sched_domain_debugfs(void);
  extern void dirty_sched_domain_sysctl(int cpu);
  
@@ -1128,7 +1128,7 @@ index 51e432eb9c48..7cc12cb63453 100644
  
  static inline const struct cpumask *task_user_cpus(struct task_struct *p)
  {
-@@ -2809,7 +2813,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
+@@ -2813,7 +2817,12 @@ extern void wakeup_preempt(struct rq *rq, struct task_struct *p, int flags);
  extern __read_mostly unsigned int sysctl_sched_nr_migrate;
  extern __read_mostly unsigned int sysctl_sched_migration_cost;
  
