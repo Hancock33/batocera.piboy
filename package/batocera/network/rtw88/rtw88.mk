@@ -3,8 +3,8 @@
 # rtw88
 #
 ################################################################################
-# Version: Commits on Dec 06, 2025
-RTW88_VERSION = 3bc79b254235b9187866d0293de8e46ae1d439a0
+# Version: Commits on Dec 14, 2025
+RTW88_VERSION = d61b2c2366060818c2e6a3f2ed8959b52a8d0ec1
 RTW88_SITE = $(call github,lwfinger,rtw88,$(RTW88_VERSION))
 
 RTW88_MODULE_MAKE_OPTS = \

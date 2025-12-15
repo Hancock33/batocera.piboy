@@ -3,8 +3,8 @@
 # xenia-native
 #
 ################################################################################
-# Version: Commits on Dec 09, 2025
-XENIA_NATIVE_VERSION = 4cbcae5b649378d9e839e58e42a121d3a4e69d99
+# Version: Commits on Dec 15, 2025
+XENIA_NATIVE_VERSION = a89513864c728cf9ba75ac0c24a0ea5be2b68e67
 XENIA_NATIVE_SITE = https://github.com/xenia-canary/xenia-canary.git
 XENIA_NATIVE_LICENSE = BSD
 XENIA_NATIVE_LICENSE_FILE = LICENSE
