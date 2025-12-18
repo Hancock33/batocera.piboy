@@ -51,7 +51,7 @@ NVIDIA_OPEN_DRIVER_LIBS_MISC = \
 	libnvidia-api.so.1 \
 	libnvidia-cfg.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-eglcore.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
-	libnvidia-egl-gbm.so.1.1.2 \
+	libnvidia-egl-gbm.so.1.1.3 \
 	libnvidia-egl-wayland.so.1.1.20 \
 	libnvidia-glcore.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
 	libnvidia-glsi.so.$(NVIDIA_OPEN_DRIVER_VERSION) \
