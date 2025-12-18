@@ -19,16 +19,17 @@ else
     LIBRETRO_BEETLE_PSX_PLATFORM = $(LIBRETRO_PLATFORM)
 endif
 
-LIBRETRO_BEETLE_PSX_EXTRAOPT=
-LIBRETRO_BEETLE_PSX_OUTFILE=mednafen_psx_libretro.so
+LIBRETRO_BEETLE_PSX_EXTRAOPT =
+LIBRETRO_BEETLE_PSX_OUTFILE = mednafen_psx_libretro.so
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
     LIBRETRO_BEETLE_PSX_DEPENDENCIES += libglvnd
-    # Batocera - SBC required_hw_api = "OpenGL Core >= 3.3 | Vulkan >= 1.0"
-    ifneq ($(BR2_PACKAGE_BATOCERA_SBC_XORG)$(BR2_PACKAGE_XWAYLAND),y)
-        LIBRETRO_BEETLE_PSX_EXTRAOPT += HAVE_HW=1
-        LIBRETRO_BEETLE_PSX_OUTFILE=mednafen_psx_hw_libretro.so
-    endif
+endif
+
+# Batocera - SBC required_hw_api = "OpenGL Core >= 3.3 | Vulkan >= 1.0"
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN)$(BR2_PACKAGE_BATOCERA_GLES3),yy)
+    LIBRETRO_BEETLE_PSX_EXTRAOPT += HAVE_HW=1
+    LIBRETRO_BEETLE_PSX_OUTFILE = mednafen_psx_hw_libretro.so
 endif
 
 define LIBRETRO_BEETLE_PSX_BUILD_CMDS
