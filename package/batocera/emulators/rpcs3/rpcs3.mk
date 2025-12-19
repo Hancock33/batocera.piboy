@@ -10,7 +10,7 @@ RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
 RPCS3_DEPENDENCIES += alsa-lib cubeb ffmpeg flatbuffers libcurl libevdev libglew libglu libpng
-RPCS3_DEPENDENCIES += libusb libxml2 llvm mesa3d ncurses openal opencv4 rtmpdump sdl3 wolfssl
+RPCS3_DEPENDENCIES += libusb libxml2 llvm mesa3d ncurses openal opencv4 pugixml rtmpdump sdl3 wolfssl
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
