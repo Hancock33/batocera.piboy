@@ -33,7 +33,7 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\\n"
 
 """)
-        
+
         for key in sorted(keys.items()):
             f.write(f"msgid \"{key[0]}\"\n")
             f.write("msgstr \"\"\n\n")
