@@ -5,12 +5,13 @@ ENDCOLOR="\e[0m"
 STARTLINE="\e[1;44m--------------------------------------------------\n"
 ENDLINE="\n--------------------------------------------------"${ENDCOLOR}
 clear
-echo  ${STARTLINE}"Building Batocera Image(s)                       "${ENDLINE}
+echo  ${STARTLINE}"Building Batocera Image(s)                        "${ENDLINE}
 
 cd $HOME/batocera.se &&
 git pull
 git submodule init
 git submodule update
+sh /home/lee/dl/ikemen/makeupdate.sh
 ./build.sh $HOME/build-dir/batocera.aarch32 aarch32-subsystem > /dev/null 2>&1
 ./build.sh $HOME/build-dir/batocera.rpi4 piboy4 > /dev/null 2>&1
 ./build.sh $HOME/build-dir/batocera.x86_64 x86_64 > /dev/null 2>&1

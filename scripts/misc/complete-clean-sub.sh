@@ -55,10 +55,11 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/target
 
 	echo "Removing Package Sources: "${RED}$i${ENDCOLOR}
-	cd  $HOME/build-dir/batocera.$i/build && find -maxdepth 1 -type d ! -name 'host*' -exec rm -rf {} \;
+	cd  $HOME/build-dir/batocera.$i/build && find -maxdepth 1 -type d ! -name 'host*' -a ! -name 'llvm-*' -exec rm -rf {} \;
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-skeleton*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-gcc-final-*/.stamp_built
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-libopenssl*
+	sudo rm -rf $HOME/build-dir/batocera.$i/build/host-perl-parse-yapp*
 
 	echo "Removing Installed Packages: "${RED}$i${ENDCOLOR}
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/*/.stamp*_installed

@@ -27,6 +27,7 @@ gamecon_gpio_rpi*
 gcnano-binaries*
 guncon*
 guncon3*
+hid-nx*
 hid-t150*
 igh-ethercat*
 kernel-module-imx-gpu-viv*
@@ -41,6 +42,7 @@ openvmtools*
 owl-linux*
 r81*
 rtl8*
+ryzen*
 v4l2loopback*
 wilc-driver*
 wireguard-linux-compat*
