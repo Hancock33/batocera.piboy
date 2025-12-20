@@ -333,7 +333,6 @@ Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|a5d96c5ebb
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|17fd68a47e9d25f1f1880911a4931c4b916ae125|May 06, 2025
 Ports|[omf2097](http://github.com/omf2097/openomf)|eb314c456480eefb3ae00cd912964418521ee303|May 04, 2025
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|f3be6d8132b09a3b5569d1981a37fe627a27e370|Apr 30, 2025
-Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|b60da16be1b36453aa46599889c28310fd148fb8|Apr 28, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.6.8|Apr 25, 2025
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|42be798db5585f62b4bd34ce49dd1e8063c9d7c1|Apr 23, 2025
@@ -507,7 +506,6 @@ Boot|[uboot-rk3588](http://github.com/stvhay/u-boot)|2f6e967dc901ae570f522d1b473
 Utils|[cabextract](http://github.com/kyz/libmspack)|v1.11|Feb 24, 2023
 Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
-Gpu|[mesa-panfork](https://gitlab.com/Peter756729890/panfork-mesa.git)|120202c675749c5ef81ae4c8cdc30019b4de08f4|Dec 10, 2022
 Gpu|[nvidia390-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|390.157|Nov 22, 2022
 Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09feb0191c77fb8|Nov 21, 2022
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
@@ -517,7 +515,6 @@ Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|277e4a62668597d4f59cadda1cbafb844f981d45|Jul 26, 2022
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
-Gpu|[img-mesa3d](https://archive.mesa3d.org/older-versions/)|22.1.3|Jun 29, 2022
 Controllers|[joycond](http://github.com/DanielOgorchock/joycond)|39d5728d41b70840342ddc116a59125b337fbde2|Jun 16, 2022
 Controllers|[umtool](http://github.com/katie-snow/Ultimarc-linux)|20b8c56a3e6f94034b8529eddd777306f5b6152b|Jun 13, 2022
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022

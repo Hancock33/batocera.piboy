@@ -319,15 +319,12 @@ Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|230d67ad28e74b17a4206
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12|Dec 19, 2025
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|8b424fa5aeea8a2445961ae98c326dc6061e109a|Nov 10, 2025
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|b5782e52ee2f7b3e40bb9c80d15b47016e008bc9|Dec 01, 2025
-Gpu|[img-gpu-powervr](https://github.com/starfive-tech/soft_3rdpart/raw/JH7110_VisionFive2_devel/IMG_GPU/out)|b60da16be1b36453aa46599889c28310fd148fb8|Apr 28, 2025
-Gpu|[img-mesa3d](https://archive.mesa3d.org/older-versions/)|22.1.3|Jun 29, 2022
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
 Gpu|[mali-G31](http://github.com/Multi-Retropie/vim1s-g31)|2e33bb43d343336fbcf1f4d4a241af6c04f6af3d|Aug 06, 2023
 Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f997460697013fc54029fcac681|Aug 13, 2023
 Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09feb0191c77fb8|Nov 21, 2022
 Gpu|[mali-mp400-gbm](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Gpu|[mali-mp400-wayland](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
-Gpu|[mesa-panfork](https://gitlab.com/Peter756729890/panfork-mesa.git)|120202c675749c5ef81ae4c8cdc30019b4de08f4|Dec 10, 2022
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n13.0.19.0|Jan 30, 2025
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|590.48.01|Dec 18, 2025
 Gpu|[nvidia-proprietary-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|$(NVIDIA_OPEN_DRIVER_VERSION)|Dec 18, 2025
