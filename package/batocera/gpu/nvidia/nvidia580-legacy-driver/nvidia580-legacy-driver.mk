@@ -22,8 +22,7 @@ ifeq ($(BR2_PACKAGE_NVIDIA580_LEGACY_DRIVER_XORG),y)
 # they should be built prior to those packages, and the only simple
 # way to do so is to make nvidia-driver depend on them.
 #batocera enable nvidia-driver and mesa3d to coexist in the same fs
-NVIDIA580_LEGACY_DRIVER_DEPENDENCIES = mesa3d xlib_libX11 xlib_libXext libglvnd \
-	nvidia470-legacy-driver
+NVIDIA580_LEGACY_DRIVER_DEPENDENCIES = mesa3d xlib_libX11 xlib_libXext libglvnd
 
 # NVIDIA580_LEGACY_DRIVER_PROVIDES = libgl libegl libgles
 
@@ -212,29 +211,29 @@ endef
 # batocera install 32bit libraries
 define NVIDIA580_LEGACY_DRIVER_INSTALL_32
 	$(foreach lib,$(NVIDIA580_LEGACY_DRIVER_32),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/$(notdir $(lib))
 		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
 			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
 		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
 			ln -sf $(notdir $(lib)) \
-				$(1)/lib32/$${libsoname}; \
+				$(1)/usr/lib32/$${libsoname}; \
 		fi
 		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
 		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/lib32/$${baseso}; \
+			ln -sf $(notdir $(lib)) $(1)/usr/lib32/$${baseso}; \
 		fi
 	)
 	$(foreach lib,$(NVIDIA580_LEGACY_DRIVER_LIBS_VDPAU),\
-		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/lib32/vdpau/$(notdir $(lib))
+		$(INSTALL) -D -m 0644 $(@D)/32/$(lib) $(1)/usr/lib32/vdpau/$(notdir $(lib))
 		libsoname="$$( $(TARGET_READELF) -d "$(@D)/$(lib)" \
 			|sed -r -e '/.*\(SONAME\).*\[(.*)\]$$/!d; s//\1/;' )"; \
 		if [ -n "$${libsoname}" -a "$${libsoname}" != "$(notdir $(lib))" ]; then \
 			ln -sf $(notdir $(lib)) \
-				$(1)/lib32/vdpau/$${libsoname}; \
+				$(1)/usr/lib32/vdpau/$${libsoname}; \
 		fi
 		baseso=$(firstword $(subst .,$(space),$(notdir $(lib)))).so; \
 		if [ -n "$${baseso}" -a "$${baseso}" != "$(notdir $(lib))" ]; then \
-			ln -sf $(notdir $(lib)) $(1)/lib32/vdpau/$${baseso}; \
+			ln -sf $(notdir $(lib)) $(1)/usr/lib32/vdpau/$${baseso}; \
 		fi
 	)
 endef

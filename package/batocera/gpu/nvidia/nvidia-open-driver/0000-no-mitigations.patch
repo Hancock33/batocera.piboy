@@ -1,5 +1,17 @@
-diff -Naur nvidia-open-driver-590.44.01/kernel-open/common/inc/nv-retpoline.h nvidia-open-driver-590.44.01.new/kernel-open/common/inc/nv-retpoline.h
---- nvidia-open-driver-590.44.01/kernel-open/common/inc/nv-retpoline.h	2025-11-21 13:44:03.000000000 +0000
+diff -Naur nvidia580-legacy-driver-580.119.02/kernel/common/inc/nv-retpoline.h nvidia-open-driver-590.44.01.new/kernel/common/inc/nv-retpoline.h
+--- nvidia580-legacy-driver-580.119.02/kernel/common/inc/nv-retpoline.h	2025-11-21 13:44:03.000000000 +0000
++++ nvidia-open-driver-590.44.01.new/kernel/common/inc/nv-retpoline.h	2025-12-02 19:51:52.113674840 +0000
+@@ -26,7 +26,7 @@
+ 
+ #include "cpuopsys.h"
+ 
+-#if (NV_SPECTRE_V2 == 0)
++#if (NV_SPECTRE_V2 1)
+ #define NV_RETPOLINE_THUNK NV_SPEC_THUNK
+ #else
+ #define NV_RETPOLINE_THUNK NV_NOSPEC_THUNK
+diff -Naur nvidia580-legacy-driver-580.119.02/kernel-open/common/inc/nv-retpoline.h nvidia-open-driver-590.44.01.new/kernel-open/common/inc/nv-retpoline.h
+--- nvidia580-legacy-driver-580.119.02/kernel-open/common/inc/nv-retpoline.h	2025-11-21 13:44:03.000000000 +0000
 +++ nvidia-open-driver-590.44.01.new/kernel-open/common/inc/nv-retpoline.h	2025-12-02 19:51:52.113674840 +0000
 @@ -26,7 +26,7 @@
  
