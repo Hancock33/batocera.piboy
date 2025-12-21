@@ -25,10 +25,10 @@ index e5a614ca..36decde9 100644
  
  
 diff --git a/Oxygen/sonic3air/build/_cmake/CMakeLists.txt b/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
-index 6d7493ab..2328b460 100644
+index 36e38330..6e0943b3 100644
 --- a/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
 +++ b/Oxygen/sonic3air/build/_cmake/CMakeLists.txt
-@@ -102,9 +102,9 @@ endif()
+@@ -105,9 +105,9 @@ endif()
  add_subdirectory(${WORKSPACE_DIR}/framework/external/sdl/SDL2 SDL)
  
  
@@ -41,7 +41,7 @@ index 6d7493ab..2328b460 100644
  
  
  
-@@ -146,7 +146,7 @@ file(GLOB MINIZIP_SOURCES ${WORKSPACE_DIR}/framework/external/zlib/zlib/contrib/
+@@ -149,7 +149,7 @@ file(GLOB MINIZIP_SOURCES ${WORKSPACE_DIR}/framework/external/zlib/zlib/contrib/
  
  add_library(minizip ${MINIZIP_SOURCES})
  
@@ -50,7 +50,7 @@ index 6d7493ab..2328b460 100644
  
  if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
  	target_compile_options(minizip PRIVATE -Wno-implicit-function-declaration -Wno-int-conversion)	# Silence these warnings in minizip build
-@@ -191,7 +191,7 @@ if (NOT CMAKE_VERSION VERSION_LESS "3.16.0")
+@@ -194,7 +194,7 @@ if (NOT CMAKE_VERSION VERSION_LESS "3.16.0")
  endif()
  
  target_link_libraries(rmxbase stdc++fs)
