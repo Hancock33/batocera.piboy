@@ -3,19 +3,20 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Dec 14, 2025
-BATOCERA_ES_PIBOY_VERSION = 062cc5a097c8eaaf5152f88c5fcb81a3716a5905
+# Version: Commits on Dec 16, 2025
+BATOCERA_ES_PIBOY_VERSION = 1ff81c9ec287580250f2f0cd445e03c49e178c47
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
 BATOCERA_ES_PIBOY_LICENSE = MIT
-BATOCERA_ES_PIBOY_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib libcurl vlc rapidjson pulseaudio batocera-es-system host-gettext
+BATOCERA_ES_PIBOY_DEPENDENCIES = alsa-lib batocera-es-system freetype libcurl libfreeimage pugixml rapidjson sdl2 sdl2_mixer vlc
+BATOCERA_ES_PIBOY_DEPENDENCIES += host-gettext
 
 # use gcc to build
 BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
 BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
-
 BATOCERA_ES_PIBOY_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -D$(call UPPERCASE,$(BATOCERA_SYSTEM_ARCH))"
+BATOCERA_ES_PIBOY_CONF_OPTS += -DUSE_SYSTEM_PUGIXML=ON
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 BATOCERA_ES_PIBOY_CONF_OPTS += -DGL=ON
@@ -34,7 +35,7 @@ BATOCERA_ES_PIBOY_CONF_OPTS += -DENABLE_TTS=ON
 BATOCERA_ES_PIBOY_DEPENDENCIES += espeak
 endif
 
-ifeq ($(BR2_PACKAGE_KODI)$(BR2_PACKAGE_KODI20),y)
+ifeq ($(BR2_PACKAGE_KODI),y)
 BATOCERA_ES_PIBOY_CONF_OPTS += -DDISABLE_KODI=OFF
 else
 BATOCERA_ES_PIBOY_CONF_OPTS += -DDISABLE_KODI=ON

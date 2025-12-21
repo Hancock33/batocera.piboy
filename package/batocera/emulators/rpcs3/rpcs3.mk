@@ -3,14 +3,14 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Dec 13, 2025
-RPCS3_VERSION = c3db85c68e6c1724b239d6b538dd436c404613f6
+# Version: Commits on Dec 21, 2025
+RPCS3_VERSION = 2fb697322f77fc30969692c63972a567b8bfb573
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
 RPCS3_DEPENDENCIES += alsa-lib cubeb ffmpeg flatbuffers libcurl libevdev libglew libglu libpng
-RPCS3_DEPENDENCIES += libusb libxml2 llvm mesa3d ncurses openal opencv4 rtmpdump sdl3 wolfssl
+RPCS3_DEPENDENCIES += libusb libxml2 llvm mesa3d ncurses openal opencv4 pugixml rtmpdump sdl3 wolfssl
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO

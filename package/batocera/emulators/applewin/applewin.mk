@@ -3,8 +3,8 @@
 # applewin
 #
 ################################################################################
-# Version: Commits on Nov 16, 2025
-APPLEWIN_VERSION = 9a139a36701352854722e18dcf689b125973111b
+# Version: Commits on Dec 21, 2025
+APPLEWIN_VERSION = c019da9b7d591db7707e7c7aaa393815f1d6af65
 APPLEWIN_SITE = https://github.com/audetto/AppleWin.git
 APPLEWIN_SITE_METHOD=git
 APPLEWIN_GIT_SUBMODULES=YES

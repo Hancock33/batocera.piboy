@@ -1,6 +1,4 @@
-﻿batocera-shim.mk
-bauh.mk
-broadcom-bt-firmware.mk
+﻿broadcom-bt-firmware.mk
 btop.mk
 cargs.mk
 chromebook-ucm-conf.mk
@@ -30,13 +28,10 @@ mold.mk
 mono-bin.mk
 nblood.mk
 nv-codec-headers.mk
-pavucontrol_qt.mk
-pcmanfmqt6.mk
 pcsx2.mk
 pysdl2.mk
 pysdl3.mk
 pywebview.mk
-qps.mk
 rclone.mk
 re2c.mk
 retrocrisis.mk

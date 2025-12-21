@@ -3,8 +3,8 @@
 # stalker
 #
 ################################################################################
-# Version: Commits on Dec 14, 2025
-STALKER_VERSION = db06c3ba7d19d9cb9379a10141a8d2e0fdfd4770
+# Version: Commits on Dec 21, 2025
+STALKER_VERSION = 5c4a40fd9fce9e6c3469506442fefe2bb37e707d
 STALKER_BRANCH = dev
 STALKER_SITE = https://github.com/OpenXRay/xray-16.git
 STALKER_SITE_METHOD=git

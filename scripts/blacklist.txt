@@ -13,12 +13,7 @@ openbor6412.mk
 openbor7142.mk
 python-pyxel.mk
 stuntcar.mk
-wine-cachyos.mk
 wine-custom.mk
-wine-native.mk
-wine-ntsync.mk
 wine-proton.mk
-wine-staging.mk
 wine-x86.mk
 wxwidgets.mk
-xosd.mk

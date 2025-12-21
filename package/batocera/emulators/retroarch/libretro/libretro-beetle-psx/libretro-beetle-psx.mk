@@ -3,8 +3,8 @@
 # libretro-beetle-psx
 #
 ################################################################################
-# Version: Commits on Nov 28, 2025
-LIBRETRO_BEETLE_PSX_VERSION = 1420c90299b1d9f4ef59373b3e5fa538a1e17a65
+# Version: Commits on Dec 19, 2025
+LIBRETRO_BEETLE_PSX_VERSION = ee3e73cf7b3959ad75f01f30afde286d427a5bee
 LIBRETRO_BEETLE_PSX_SITE = $(call github,libretro,beetle-psx-libretro,$(LIBRETRO_BEETLE_PSX_VERSION))
 LIBRETRO_BEETLE_PSX_LICENSE = GPLv2
 LIBRETRO_BEETLE_PSX_DEPENDENCIES = retroarch
@@ -19,16 +19,17 @@ else
     LIBRETRO_BEETLE_PSX_PLATFORM = $(LIBRETRO_PLATFORM)
 endif
 
-LIBRETRO_BEETLE_PSX_EXTRAOPT=
-LIBRETRO_BEETLE_PSX_OUTFILE=mednafen_psx_libretro.so
+LIBRETRO_BEETLE_PSX_EXTRAOPT =
+LIBRETRO_BEETLE_PSX_OUTFILE = mednafen_psx_libretro.so
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
     LIBRETRO_BEETLE_PSX_DEPENDENCIES += libglvnd
-    # Batocera - SBC required_hw_api = "OpenGL Core >= 3.3 | Vulkan >= 1.0"
-    ifneq ($(BR2_PACKAGE_BATOCERA_SBC_XORG)$(BR2_PACKAGE_XWAYLAND),y)
-        LIBRETRO_BEETLE_PSX_EXTRAOPT += HAVE_HW=1
-        LIBRETRO_BEETLE_PSX_OUTFILE=mednafen_psx_hw_libretro.so
-    endif
+endif
+
+# Batocera - SBC required_hw_api = "OpenGL Core >= 3.3 | Vulkan >= 1.0"
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN)$(BR2_PACKAGE_BATOCERA_GLES3),yy)
+    LIBRETRO_BEETLE_PSX_EXTRAOPT += HAVE_HW=1
+    LIBRETRO_BEETLE_PSX_OUTFILE = mednafen_psx_hw_libretro.so
 endif
 
 define LIBRETRO_BEETLE_PSX_BUILD_CMDS
