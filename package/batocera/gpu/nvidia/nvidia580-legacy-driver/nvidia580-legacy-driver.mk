@@ -3,13 +3,11 @@
 # nvidia580-legacy-driver
 #
 ################################################################################
-
+# Version: Commits on Dec 08, 2025
 NVIDIA580_LEGACY_DRIVER_VERSION = 580.119.02
 NVIDIA580_LEGACY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
-NVIDIA580_LEGACY_DRIVER_SITE = \
-    http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA580_LEGACY_DRIVER_SUFFIX)/$(NVIDIA580_LEGACY_DRIVER_VERSION)
-NVIDIA580_LEGACY_DRIVER_SOURCE = \
-    NVIDIA-Linux-x86$(NVIDIA580_LEGACY_DRIVER_SUFFIX)-$(NVIDIA580_LEGACY_DRIVER_VERSION).run
+NVIDIA580_LEGACY_DRIVER_SITE = http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA580_LEGACY_DRIVER_SUFFIX)/$(NVIDIA580_LEGACY_DRIVER_VERSION)
+NVIDIA580_LEGACY_DRIVER_SOURCE = NVIDIA-Linux-x86$(NVIDIA580_LEGACY_DRIVER_SUFFIX)-$(NVIDIA580_LEGACY_DRIVER_VERSION).run
 NVIDIA580_LEGACY_DRIVER_LICENSE = NVIDIA Software License
 NVIDIA580_LEGACY_DRIVER_LICENSE_FILES = LICENSE
 NVIDIA580_LEGACY_DRIVER_REDISTRIBUTE = NO
@@ -25,7 +23,7 @@ ifeq ($(BR2_PACKAGE_NVIDIA580_LEGACY_DRIVER_XORG),y)
 # way to do so is to make nvidia-driver depend on them.
 #batocera enable nvidia-driver and mesa3d to coexist in the same fs
 NVIDIA580_LEGACY_DRIVER_DEPENDENCIES = mesa3d xlib_libX11 xlib_libXext libglvnd \
-    nvidia470-legacy-driver
+	nvidia470-legacy-driver
 
 # NVIDIA580_LEGACY_DRIVER_PROVIDES = libgl libegl libgles
 
@@ -48,7 +46,7 @@ NVIDIA580_LEGACY_DRIVER_LIBS_GLES = \
 
 #batocera libnvidia-egl-wayland soname bump
 NVIDIA580_LEGACY_DRIVER_LIBS_MISC = \
-    libnvidia-allocator.so.$(NVIDIA580_LEGACY_DRIVER_VERSION) \
+	libnvidia-allocator.so.$(NVIDIA580_LEGACY_DRIVER_VERSION) \
 	libnvidia-api.so.1 \
 	libnvidia-cfg.so.$(NVIDIA580_LEGACY_DRIVER_VERSION) \
 	libnvidia-eglcore.so.$(NVIDIA580_LEGACY_DRIVER_VERSION) \
@@ -93,9 +91,9 @@ define NVIDIA580_LEGACY_DRIVER_INSTALL_GL_DEV
 	$(SED) 's:__LIBGL_PATH__:/usr/lib:' $(STAGING_DIR)/usr/lib/libGL.la
 	$(SED) 's:-L[^[:space:]]\+::' $(STAGING_DIR)/usr/lib/libGL.la
 	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/nvidia-driver/gl.pc \
-	    $(STAGING_DIR)/usr/lib/pkgconfig/gl.pc
+		$(STAGING_DIR)/usr/lib/pkgconfig/gl.pc
 	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/nvidia-driver/egl.pc \
-	    $(STAGING_DIR)/usr/lib/pkgconfig/egl.pc
+		$(STAGING_DIR)/usr/lib/pkgconfig/egl.pc
 endef
 
 # Those libraries are 'private' libraries requiring an agreement with
@@ -169,7 +167,7 @@ endif # BR2_PACKAGE_NVIDIA580_LEGACY_DRIVER_MODULE == y
 # Except it can't extract into an existing (even empty) directory.
 define NVIDIA580_LEGACY_DRIVER_EXTRACT_CMDS
 	PATH="$(HOST_DIR)/bin:$(PATH)" $(SHELL) \
-	    $(NVIDIA580_LEGACY_DRIVER_DL_DIR)/$(NVIDIA580_LEGACY_DRIVER_SOURCE) \
+		$(NVIDIA580_LEGACY_DRIVER_DL_DIR)/$(NVIDIA580_LEGACY_DRIVER_SOURCE) \
 		--extract-only --target $(@D)/tmp-extract
 	chmod u+w -R $(@D)
 	mv $(@D)/tmp-extract/* $(@D)/tmp-extract/.manifest $(@D)
@@ -273,7 +271,7 @@ define NVIDIA580_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0644 $(@D)/10_nvidia_wayland.json \
 		$(TARGET_DIR)/usr/share/egl/egl_external_platform.d/10_nvidia_wayland.json
 	$(INSTALL) -D -m 0644 $(@D)/15_nvidia_gbm.json \
-	    $(TARGET_DIR)/usr/share/egl/egl_external_platform.d/15_nvidia_gbm.json
+		$(TARGET_DIR)/usr/share/egl/egl_external_platform.d/15_nvidia_gbm.json
 
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/X11
@@ -288,34 +286,34 @@ define NVIDIA580_LEGACY_DRIVER_INSTALL_TARGET_CMDS
 	 	$(TARGET_DIR)/usr/lib/xorg/modules/extensions/libglxserver_nvidia.so.1
 
 # firmware
-    mkdir -p $(TARGET_DIR)/lib/firmware/nvidia/$(NVIDIA580_LEGACY_DRIVER_VERSION)
+	mkdir -p $(TARGET_DIR)/lib/firmware/nvidia/$(NVIDIA580_LEGACY_DRIVER_VERSION)
 	$(INSTALL) -D -m 0644 $(@D)/firmware/* $(TARGET_DIR)/lib/firmware/nvidia/$(NVIDIA580_LEGACY_DRIVER_VERSION)
 
 endef
 
 define NVIDIA580_LEGACY_DRIVER_VULKANJSON_X86_64
-    mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json \
-	    $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.x86_64.json
-    sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ \
-	    $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.x86_64.json
+		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.x86_64.json
+	sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ \
+		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.x86_64.json
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json \
-	    $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json
-    sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/lib32/libGLX_nvidia'+ \
-	    $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json
+		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json
+	sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/lib32/libGLX_nvidia'+ \
+		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json
 endef
 
 define NVIDIA580_LEGACY_DRIVER_VULKANJSON_X86
-    mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
+	mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json \
-	    $(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json
+		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json
 endef
 
 ifeq ($(BR2_x86_64),y)
-    NVIDIA580_LEGACY_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA580_LEGACY_DRIVER_VULKANJSON_X86_64
+	NVIDIA580_LEGACY_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA580_LEGACY_DRIVER_VULKANJSON_X86_64
 endif
 ifeq ($(BR2_i686),y)
-    NVIDIA580_LEGACY_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA580_LEGACY_DRIVER_VULKANJSON_X86
+	NVIDIA580_LEGACY_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA580_LEGACY_DRIVER_VULKANJSON_X86
 endif
 
 KVER = $(shell expr $(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE))
@@ -324,15 +322,15 @@ KVER = $(shell expr $(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE))
 define NVIDIA580_LEGACY_DRIVER_RENAME_KERNEL_MODULES
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia/modules
-    # rename the kernel modules to avoid conflict
+	# rename the kernel modules to avoid conflict
 	cp $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia580-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia580-legacy.ko
 	cp $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-modeset.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia580-modeset-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia580-modeset-legacy.ko
 	cp $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-drm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia580-drm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia580-drm-legacy.ko
 	cp $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/updates/nvidia-uvm.ko \
-	    $(TARGET_DIR)/usr/share/nvidia/modules/nvidia580-uvm-legacy.ko
+		$(TARGET_DIR)/usr/share/nvidia/modules/nvidia580-uvm-legacy.ko
 	# set the driver version file
 	echo $(NVIDIA580_LEGACY_DRIVER_VERSION) > $(TARGET_DIR)/usr/share/nvidia/legacy580.version
 endef
