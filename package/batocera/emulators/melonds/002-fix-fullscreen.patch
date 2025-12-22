@@ -1,8 +1,8 @@
 diff --git a/src/frontend/qt_sdl/Window.cpp b/src/frontend/qt_sdl/Window.cpp
-index 0e4f1b06de..b0181ee6bf 100644
+index 9b3ab95c..aaf351ba 100755
 --- a/src/frontend/qt_sdl/Window.cpp
 +++ b/src/frontend/qt_sdl/Window.cpp
-@@ -670,6 +670,12 @@ MainWindow::MainWindow(int id, EmuInstance* inst, QWidget* parent) :
+@@ -703,6 +703,12 @@ MainWindow::MainWindow(int id, EmuInstance* inst, QWidget* parent) :
          // if the window was closed in fullscreen do not restore this
          setWindowState(windowState() & ~Qt::WindowFullScreen);
      }
@@ -14,4 +14,4 @@ index 0e4f1b06de..b0181ee6bf 100644
 +    
      show();
  
-     createScreenPanel();
+     panel = nullptr;

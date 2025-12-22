@@ -1,5 +1,5 @@
 diff --git a/src/frontend/qt_sdl/Config.cpp b/src/frontend/qt_sdl/Config.cpp
-index 7a0ec698ba..0b06f8f120 100644
+index f767fcc9..09a9ca1a 100644
 --- a/src/frontend/qt_sdl/Config.cpp
 +++ b/src/frontend/qt_sdl/Config.cpp
 @@ -39,10 +39,9 @@ namespace Config
@@ -15,7 +15,7 @@ index 7a0ec698ba..0b06f8f120 100644
  
  toml::value RootTable;
  
-@@ -671,16 +671,7 @@ template<typename T> T Table::FindDefault(const std::string& path, T def, Defaul
+@@ -682,16 +681,7 @@ template<typename T> T Table::FindDefault(const std::string& path, T def, Defaul
  bool LoadLegacyFile(int inst)
  {
      Platform::FileHandle* f;
