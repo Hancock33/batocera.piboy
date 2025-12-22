@@ -1,5 +1,7 @@
 ﻿alsa-topology-conf.mk
 alsa-ucm-conf.mk
+amiberry-lite.mk
+amiberry.mk
 appstream.mk
 batocera-settings.mk
 cabextract.mk

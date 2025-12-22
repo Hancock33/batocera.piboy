@@ -3,8 +3,8 @@
 # libretro-mame-src
 #
 ################################################################################
-# Version: Commits on Dec 19, 2025
-LIBRETRO_MAME_SRC_VERSION = c6c8ef7bc39380d23b71551a953344e69fefebee
+# Version: Commits on Dec 22, 2025
+LIBRETRO_MAME_SRC_VERSION = b013cabe6c3d9c17f30a2ff2e5f033ca254d4a61
 LIBRETRO_MAME_SRC_SITE = $(call github,hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
 LIBRETRO_MAME_SRC_LICENSE = MAME

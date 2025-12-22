@@ -1,5 +1,5 @@
 diff --git a/src/frontend/qt_sdl/Config.cpp b/src/frontend/qt_sdl/Config.cpp
-index 09a9ca1af8..5d035223de 100644
+index 09a9ca1a..5d035223 100644
 --- a/src/frontend/qt_sdl/Config.cpp
 +++ b/src/frontend/qt_sdl/Config.cpp
 @@ -205,6 +205,17 @@ LegacyEntry LegacyFile[] =
@@ -21,10 +21,10 @@ index 09a9ca1af8..5d035223de 100644
      {"ScreenUseGL",         1, "Screen.UseGL", false},
      {"ScreenVSync",         1, "Screen.VSync", false},
 diff --git a/src/frontend/qt_sdl/main.cpp b/src/frontend/qt_sdl/main.cpp
-index 0e077b7630..03e6dc0924 100644
+index ad6eca91..adca2b9c 100644
 --- a/src/frontend/qt_sdl/main.cpp
 +++ b/src/frontend/qt_sdl/main.cpp
-@@ -383,7 +383,11 @@ int main(int argc, char** argv)
+@@ -391,7 +391,11 @@ int main(int argc, char** argv)
          win->preloadROMs(dsfile, gbafile, options->boot);
  
          if (options->fullscreen)
