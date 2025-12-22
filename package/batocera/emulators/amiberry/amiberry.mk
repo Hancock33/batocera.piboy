@@ -3,20 +3,13 @@
 # amiberry
 #
 ################################################################################
-# Version: Commits on Dec 21, 2025
-AMIBERRY_VERSION = db1a798c86a4318c4c11f844a3ccb6aeb4d6bd6e
+# Version: Commits on Sept 02, 2025
+AMIBERRY_VERSION = v7.1.1
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123
 AMIBERRY_DEPENDENCIES += portmidi sdl2 sdl2_image sdl2_ttf zlib
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
-
-ifeq ($(BR2_PACKAGE_LIBGLEW)$(BR2_PACKAGE_LIBGLU),yy)
-    AMIBERRY_DEPENDENCIES += libglew libglu
-    AMIBERRY_CONF_OPTS += -DUSE_OPENGL=ON
-else
-    AMIBERRY_CONF_OPTS += -DUSE_OPENGL=OFF
-endif
 
 AMIBERRY_CONF_OPTS += -DWITH_LTO=ON
 
