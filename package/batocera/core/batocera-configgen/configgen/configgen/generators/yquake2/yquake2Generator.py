@@ -105,7 +105,7 @@ class YQuake2Generator(Generator):
         romName = rom.name
         swapButtons = "1" if esSettings.getInvertButtonsValue() else "0"
 
-        commandArray = [ "/usr/bin/yquake2/quake2", "-cfgdir", "configs/yquake2",
+        commandArray = [ "/usr/bin/yquake2/quake2", "-datadir", "/userdata/roms/ports/quake2",  "-cfgdir", "configs/yquake2",
                          "+set", "joy_confirm", swapButtons ]
 
         if pad := Controller.find_player_number(playersControllers, 1):
