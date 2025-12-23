@@ -20,8 +20,10 @@ Ports|[openmohaa](http://github.com/openmoh/openmohaa)|be4e3fd7ac1b2560e481e64cd
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|57a82460278a4f42b4a64273b87abe174ac17731|Dec 23, 2025
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.13-rc.1|Dec 23, 2025
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-10.4.1|Dec 23, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251223|Dec 23, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|1ad5896b1708be58395178a00df3c0adc79cca83|Dec 23, 2025
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|f9847a777c4b1bd4c9dfdef457e46e8c5dc8e753|Dec 23, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251223|Dec 23, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|3d55b626fe6300290a8675bcc117ff896a065969|Dec 23, 2025
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|381bf10364c9ce0b38574d158a0233875d44eb44|Dec 23, 2025
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|a61d86a9387b646be88f4f2f89c85d7b9183383b|Dec 23, 2025
@@ -59,9 +61,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|6547d407132098847bbbe
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.13|Dec 21, 2025
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|f7f3936339b56298213c9de0ed9ed607295ae5d2|Dec 21, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.00-rc3|Dec 21, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251221|Dec 21, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|17d9b6a8939085d6e13b8c3ad684d28ca3166a02|Dec 21, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251221|Dec 21, 2025
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|b088afa8b5949f3d039edfea3222497cd08afbbe|Dec 21, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|7bfa1f62efc5bebe07c74daaf3e160c1cff05215|Dec 21, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|98efdf7d1da6573ecc00d63dc821142924f30d76|Dec 21, 2025
