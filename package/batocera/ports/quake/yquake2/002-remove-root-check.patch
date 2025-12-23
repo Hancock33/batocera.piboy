@@ -1,5 +1,5 @@
 diff --git a/src/backends/unix/main.c b/src/backends/unix/main.c
-index 97b74a8a..392bd082 100644
+index ca4a452c..9e43b10b 100644
 --- a/src/backends/unix/main.c
 +++ b/src/backends/unix/main.c
 @@ -110,30 +110,6 @@ main(int argc, char **argv)

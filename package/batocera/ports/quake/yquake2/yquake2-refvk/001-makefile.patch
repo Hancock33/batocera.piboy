@@ -1,0 +1,22 @@
+diff --git a/Makefile b/Makefile
+index 7f831d3..538e55a 100644
+--- a/Makefile
++++ b/Makefile
+@@ -261,7 +261,7 @@ endif
+ 
+ # Base include path.
+ ifeq ($(YQ2_OSTYPE),Linux)
+-INCLUDE ?= -I/usr/include
++#INCLUDE ?= -I/usr/include
+ else ifeq ($(YQ2_OSTYPE),FreeBSD)
+ INCLUDE ?= -I/usr/local/include
+ else ifeq ($(YQ2_OSTYPE),NetBSD)
+@@ -279,7 +279,7 @@ endif
+ 
+ # Base LDFLAGS. This is just the library path.
+ ifeq ($(YQ2_OSTYPE),Linux)
+-LDFLAGS ?= -L/usr/lib
++#LDFLAGS ?= -L/usr/lib
+ else ifeq ($(YQ2_OSTYPE),FreeBSD)
+ LDFLAGS ?= -L/usr/local/lib
+ else ifeq ($(YQ2_OSTYPE),NetBSD)
