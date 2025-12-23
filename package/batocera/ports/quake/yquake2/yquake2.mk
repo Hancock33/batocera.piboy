@@ -3,67 +3,46 @@
 # yquake2
 #
 ################################################################################
-# Version: Commits on Dec 20, 2025
-YQUAKE2_VERSION = 1ff91739174bf93da02988e580709bb8f81eba40
-YQUAKE2_SITE = $(call github,yquake2,yquake2,$(YQUAKE2_VERSION))
+# Version: Commits on Dec 21, 2025
+YQUAKE2_VERSION = a91de0b3ba86ec163673b11d6a08bbda880e76b4
+YQUAKE2_SITE = $(call github,yquake2,yquake2remaster,$(YQUAKE2_VERSION))
 YQUAKE2_LICENSE = GPLv2
 YQUAKE2_LICENSE_FILES = LICENSE
 
-YQUAKE2_BUILD_ARCH = YQ2_OSTYPE=Linux
-YQUAKE2_BUILD_ARGS = WITH_SYSTEMWIDE=yes \
-	WITH_SYSTEMDIR=/userdata/roms/quake2 \
-	INCLUDE= LDFLAGS=
-
 ifeq ($(BR2_PACKAGE_SDL3),y)
     YQUAKE2_DEPENDENCIES += sdl3
-    YQUAKE2_BUILD_ARGS += WITH_SDL3=yes
 else
     YQUAKE2_DEPENDENCIES += sdl2
-    YQUAKE2_BUILD_ARGS += WITH_SDL3=no
+    YQUAKE2_CONF_OPTS += -DSDL3_SUPPORT=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_OPENAL),y)
     YQUAKE2_DEPENDENCIES += openal
 else
-    YQUAKE2_BUILD_ARGS += WITH_OPENAL=no
+    YQUAKE2_CONF_OPTS += -DOPENAL_SUPPORT=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_LIBCURL),y)
     YQUAKE2_DEPENDENCIES += libcurl
 else
-    YQUAKE2_BUILD_ARGS += WITH_CURL=no
+    YQUAKE2_CONF_OPTS += -DCURL_SUPPORT=OFF
 endif
-
-ifeq ($(BR2_aarch64),y)
-    YQUAKE2_BUILD_ARCH += YQ2_ARCH=aarch64
-else ifeq ($(BR2_arm),y)
-    YQUAKE2_BUILD_ARCH += YQ2_ARCH=arm
-else ifeq ($(BR2_x86_64),y)
-    YQUAKE2_BUILD_ARCH += YQ2_ARCH=x86_64
-else ifeq ($(BR2_i386),y)
-    YQUAKE2_BUILD_ARCH += YQ2_ARCH=i386
-endif
-
-# Delete the following line once the hidraw/hidapi conflict gets solved
-YQUAKE2_BUILD_ARGS += NO_SDL_GYRO=On
-
-# Available renderers in the current target
-YQUAKE2_BUILD_ARGS += config client game ref_soft
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
-    YQUAKE2_BUILD_ARGS += ref_gles1
+    YQUAKE2_CONF_OPTS += -DGLES1_RENDERER=ON
 endif
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
-    YQUAKE2_BUILD_ARGS += ref_gl1 ref_gl3
+    YQUAKE2_CONF_OPTS += -DGL1_RENDERER=ON -DGL3_RENDERER=ON
+endif
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+    GL4_RENDERER=on
 endif
 ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
-    YQUAKE2_BUILD_ARGS += ref_gles3
+    YQUAKE2_CONF_OPTS += -DGLES3_RENDERER=ON
 endif
-
-# Build & install
-define YQUAKE2_BUILD_CMDS
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) $(YQUAKE2_BUILD_ARGS) $(YQUAKE2_BUILD_ARCH) -C $(@D)
-endef
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+    YQUAKE2_CONF_OPTS += -DVK_RENDERER=ON
+endif
 
 define YQUAKE2_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/yquake2/baseq2
@@ -72,4 +51,4 @@ define YQUAKE2_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0644 $(@D)/release/baseq2/game.so $(TARGET_DIR)/usr/bin/yquake2/baseq2/
 endef
 
-$(eval $(generic-package))
+$(eval $(cmake-package))

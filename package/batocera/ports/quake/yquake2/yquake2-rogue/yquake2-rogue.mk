@@ -10,13 +10,9 @@ YQUAKE2_ROGUE_LICENSE = GPLv2
 YQUAKE2_ROGUE_LICENSE_FILES = LICENSE
 YQUAKE2_ROGUE_DEPENDENCIES += yquake2
 
-define YQUAKE2_ROGUE_BUILD_CMDS
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) $(YQUAKE2_ROGUE_BUILD_ARGS) $(YQUAKE2_BUILD_ARCH) -C $(@D)
-endef
-
 define YQUAKE2_ROGUE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/yquake2/rogue
-	$(INSTALL) -D -m 0644 $(@D)/release/game.so $(TARGET_DIR)/usr/bin/yquake2/rogue/
+	$(INSTALL) -D -m 0644 $(@D)/Release/game.so $(TARGET_DIR)/usr/bin/yquake2/rogue/
 endef
 
-$(eval $(generic-package))
+$(eval $(cmake-package))
