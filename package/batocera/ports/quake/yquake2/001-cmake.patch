@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 85999a50..1d77a7fb 100644
+index 79b1ba5f..fd0f0c62 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -65,13 +65,13 @@ option(CURL_SUPPORT "cURL support" ON)
@@ -18,6 +18,6 @@ index 85999a50..1d77a7fb 100644
  option(SOFT_RENDERER "Build the software renderer" ON)
 -option(VK_RENDERER "Build the Vulkan renderer" ON)
 +option(VK_RENDERER "Build the Vulkan renderer" OFF)
+ option(XDG_SUPPORT "Use XDG Directories to store user data" ON)
  
  set(SYSTEMDIR "" CACHE STRING "Override the system default directory")
- 
