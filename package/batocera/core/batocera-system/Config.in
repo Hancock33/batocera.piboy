@@ -1971,7 +1971,7 @@ config BR2_PACKAGE_BATOCERA_XORG
 config BR2_PACKAGE_BATOCERA_GPU_X86
     bool "batocera.linux GPU support for x86 platform"
 
-    # nvidiag
+    # nvidia
     select BR2_PACKAGE_BATOCERA_NVIDIA                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     # AMD
     select BR2_PACKAGE_BATOCERA_AMD                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
