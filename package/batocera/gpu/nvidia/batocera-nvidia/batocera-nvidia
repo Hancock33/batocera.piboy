@@ -260,9 +260,6 @@ elif [ "$MODE" = "legacy580" ]; then
     # Clean up any production driver symlink files
     find -L /lib32 -name "*${NVIDIA_DRIVER_VERSION}*" -print0 | tee -a "$log" | xargs -0 -r rm -f
     find -L /usr/lib -name "*${NVIDIA_DRIVER_VERSION}*" -print0 | tee -a "$log" | xargs -0 -r rm -f
-    # Clean up any other legacy driver symlink files
-    find -L /lib32 -name "*${NVIDIA470_LEGACY_DRIVER_VERSION}*" -print0 | tee -a "$log" | xargs -0 -r rm -f
-    find -L /usr/lib -name "*${NVIDIA470_LEGACY_DRIVER_VERSION}*" -print0 | tee -a "$log" | xargs -0 -r rm -f
     echo "" >> $log
     # Blacklist the Nouveau driver
     echo "blacklist nouveau" > /var/run/nvidia/modprobe/blacklist-nouveau.conf
@@ -422,10 +419,9 @@ elif [ "$MODE" = "legacy580" ]; then
     ln -sf /usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json /var/run/nvidia/configs/nvidia_icd.i686.json
     ln -sf /var/run/nvidia/configs/nvidia_icd.i686.json /usr/share/vulkan/icd.d/nvidia_icd.i686.json
 
-    # finally link appropriate open kernel modules
+    # finally link appropriate 580.xx kernel modules
     mkdir -p /var/run/nvidia/modules
-    echo "Linking NVIDIA open modules" >> $log
-
+    echo "Linking NVIDIA 580.xx kernel modules" >> $log
     ln -sf /usr/share/nvidia/modules/nvidia580-legacy.ko /var/run/nvidia/modules/nvidia.ko
     ln -sf /var/run/nvidia/modules/nvidia.ko /lib/modules/$LINUX_VER/updates/nvidia.ko
     ln -sf /usr/share/nvidia/modules/nvidia580-modeset-legacy.ko /var/run/nvidia/modules/nvidia-modeset.ko
