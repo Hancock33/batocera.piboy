@@ -17,7 +17,7 @@ from typing import TYPE_CHECKING
 from pathlib import Path
 
 from ... import Command
-from ...batoceraPaths import CONFIGS
+from ...batoceraPaths import CACHE, CONFIGS, ROMS, SAVES, mkdir_if_not_exists
 from ...controller import Controller, generate_sdl_game_controller_config
 from ...utils import esSettings, currentPlatform
 from ..Generator import Generator
@@ -122,6 +122,9 @@ class YQuake2Generator(Generator):
         return Command.Command(
             array=commandArray,
             env={
+                'XDG_CONFIG_HOME': CONFIGS,
+                'XDG_CACHE_HOME': CACHE,
+                'XDG_DATA_HOME': SAVES,
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
                 'SDL_JOYSTICK_HIDAPI': '0'
             }
