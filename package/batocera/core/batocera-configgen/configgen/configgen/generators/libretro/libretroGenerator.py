@@ -247,9 +247,9 @@ class LibretroGenerator(Generator):
         elif system.name == 'quake2':
             if "reckoning" in rom.name.lower():
                 system.config['core'] = "vitaquake2-xatrix"
-            elif "rogue" in rom_path.name.lower():
+            elif "rogue" in rom.name.lower():
                 system.config['core'] = "vitaquake2-rogue"
-            elif "zaero" in rom_path.name.lower():
+            elif "zaero" in rom.name.lower():
                 system.config['core'] = "vitaquake2-zaero"
             else:
                 system.config['core'] = "vitaquake2"
