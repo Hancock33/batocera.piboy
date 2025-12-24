@@ -39,7 +39,6 @@ shadps4.mk
 spirv-llvm-translator.mk
 tomlplusplus.mk
 uthash.mk
-vice.mk
 wine-custom.mk
 wine-mono.mk
 xbox-xcloud-client.mk

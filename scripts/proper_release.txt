@@ -48,6 +48,7 @@ syncthing.mk
 touchegg.mk
 unclutter.mk
 vcmi.mk
+vice.mk
 vkd3d-proton.mk
 wildmidi.mk
 winbtrfs.mk
