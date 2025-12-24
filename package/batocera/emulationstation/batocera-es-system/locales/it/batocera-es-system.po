@@ -9172,7 +9172,7 @@ msgctxt "game_options"
 msgid "GAME REGION (ENCODING)"
 msgstr "REGIONE GIOCO (ENCODING)"
 
-#. TRANSLATION: awgl, yquake2
+#. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr ""
@@ -15844,7 +15844,7 @@ msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "Seleziona il modello da emulare"
 
-#. TRANSLATION: awgl, yquake2
+#. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""

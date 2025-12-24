@@ -9150,7 +9150,7 @@ msgctxt "game_options"
 msgid "GAME REGION (ENCODING)"
 msgstr "OBLAST HRY (KÓDOVÁNÍ)"
 
-#. TRANSLATION: awgl, yquake2
+#. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr "RENDERING HRY"
@@ -15798,7 +15798,7 @@ msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "Vyberte model, který chcete napodobit"
 
-#. TRANSLATION: awgl, yquake2
+#. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""

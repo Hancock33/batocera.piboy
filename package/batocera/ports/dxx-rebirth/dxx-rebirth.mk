@@ -3,8 +3,8 @@
 # dxx-rebirth
 #
 ################################################################################
-# Version: Commits on Dec 22, 2025
-DXX_REBIRTH_VERSION = 25db0a73478c933c80f590a49909b62a3ef8aa3b
+# Version: Commits on Dec 23, 2025
+DXX_REBIRTH_VERSION = b8fe5053c44a04b0114de34cdf9e4f52ecf1e50c
 DXX_REBIRTH_SITE = $(call github,dxx-rebirth,dxx-rebirth,$(DXX_REBIRTH_VERSION))
 DXX_REBIRTH_LICENSE = GPLv3
 DXX_REBIRTH_LICENSE_FILE = COPYING.txt

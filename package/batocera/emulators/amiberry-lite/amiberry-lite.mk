@@ -16,7 +16,7 @@ AMIBERRY_LITE_CONF_OPTS += -DWITH_LTO=ON
 define AMIBERRY_LITE_EVMAP
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/amiberry-lite/controllers/*.amiberry.keys $(TARGET_DIR)/usr/share/evmapy
-	ln -sf $(TARGET_DIR)/usr/share/amiberry-lite $(TARGET_DIR)/usr/share/amiberry
+	ln -sf /usr/share/amiberry-lite $(TARGET_DIR)/usr/share/amiberry
 endef
 
 AMIBERRY_LITE_POST_INSTALL_TARGET_HOOKS = AMIBERRY_LITE_EVMAP

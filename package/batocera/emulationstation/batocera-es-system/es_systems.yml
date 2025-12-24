@@ -1,4 +1,3 @@
-
 archimedes:
   name:                 Archimedes
   manufacturer:         Acorn Computers
@@ -5277,6 +5276,8 @@ quake2:
       vitaquake2:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VITAQUAKE2] }
     vkquake2:
       vkquake2:         { requireAnyOf: [BR2_PACKAGE_VKQUAKE2], incompatible_extensions: [zip, 7zip] }
+    yquake2:
+      yquake2:          { requireAnyOf: [BR2_PACKAGE_YQUAKE2], incompatible_extensions: [zip, 7zip] }
   comment_en:           |
                         For the standard Quake II copy your 'baseq2' directory and contents here.
                         Make sure all data files are lowercase, e.g. "baseq2", not "BASEQ2" and "pak0.pak", not "PAK0.PAK".
@@ -5285,7 +5286,15 @@ quake2:
                         Launch files should be in `/userdata/roms/ports/quake2`.
                         Mission Packs
                         -------------
-                        Copy necessary data file to `rogue` ("Ground Zero"), `xatrix` ("The Reckoning"), `zaero` ("Quake II: Zaero") and `smd` ("Slight Mechanical Destruction") directories respectively.
+                        Copy the necessary data files to the corresponding directories:
+                        `xatrix` for "The Reckoning" (MP1), `rogue` for "Ground Zero" (MP2),
+                        `zaero` for "Quake II: Zaero", and `smd` for "Slight Mechanical Destruction".
+
+                        All ports can run `xatrix`, `rogue` and `zaero`.
+                        vkQuake2 additionally supports `smd`, and also supports the
+                        Capture the Flag mod using the `ctf` directory.
+
+                        Note: neither yquake2 nor vkQuake2 support the zip or 7zip extensions.
 
                         The libretro vitaquake2 supported mission pack ROMs are: xatrix, rogue, and zaero.
                         If you have vkQuake2 the additional `smd` ("Slight Mechanical Destruction") pack is supported.

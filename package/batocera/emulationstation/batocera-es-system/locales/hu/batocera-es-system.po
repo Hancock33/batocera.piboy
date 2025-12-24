@@ -9217,7 +9217,7 @@ msgctxt "game_options"
 msgid "GAME REGION (ENCODING)"
 msgstr "JÁTÉK RÉGIÓ (KÓDOLÁS)"
 
-#. TRANSLATION: awgl, yquake2
+#. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "GAME RENDERING"
 msgstr ""
@@ -15910,7 +15910,7 @@ msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "Válassza ki az emulálni kívánt modellt"
 
-#. TRANSLATION: awgl, yquake2
+#. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""

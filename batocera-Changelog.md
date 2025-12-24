@@ -41,6 +41,7 @@
 - Batocera Control Center (on-screen interface for global configuration and control, [hotkey][east] by default)
 - batocera-xtract for handling archives, systems with pcmanFM filemanager can use a small GUI and mouse context menus
 - dmd-play-rust is now used by default to play dmd images (performances)
+- Yamagi Quake II added which support more systems, especially lower-end hardware
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
@@ -91,7 +92,7 @@
 - GStreamer codecs to 1.26.6
 - Linux Firmware to 20251125
 - Linux Kernel to 6.18.1
-- LabWC to 0.9.2
+- LabWC to 0.9.3
 - LLVM Project to 20.1.8
 - Mesa3D to 25.3.2
 - MPV to v0.41.0

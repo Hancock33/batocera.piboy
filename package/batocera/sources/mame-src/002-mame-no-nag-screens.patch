@@ -1,8 +1,8 @@
 diff --git a/src/frontend/mame/ui/ui.cpp b/src/frontend/mame/ui/ui.cpp
-index dbfd5531be6..a33b007d8cc 100644
+index cb6a66b24a2..435f1d593d9 100644
 --- a/src/frontend/mame/ui/ui.cpp
 +++ b/src/frontend/mame/ui/ui.cpp
-@@ -638,6 +638,8 @@ void mame_ui_manager::display_startup_screens(bool first_time)
+@@ -637,6 +637,8 @@ void mame_ui_manager::display_startup_screens(bool first_time)
  	// or if we are debugging, or if there's no mame window to send inputs to
  	if (!first_time || (str > 0 && str < 60*5) || &machine().system() == &GAME_NAME(___empty) || (machine().debug_flags & DEBUG_FLAG_ENABLED) || video_none)
  		show_gameinfo = show_warnings = false;

@@ -3,15 +3,14 @@ from __future__ import annotations
 import json
 import logging
 import subprocess
-import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, NotRequired, TypedDict, cast
 
 from ... import controllersConfig
-from ...batoceraPaths import DEFAULTS_DIR, ES_SETTINGS, SAVES, mkdir_if_not_exists
+from ...batoceraPaths import DEFAULTS_DIR, SAVES, mkdir_if_not_exists
 from ...controller import Controller
 from ...settings.unixSettings import UnixSettings
-from ...utils import bezels as bezelsUtil, videoMode, vulkan
+from ...utils import bezels as bezelsUtil, videoMode, vulkan, esSettings
 from ..hatari.hatariGenerator import HATARI_CONFIG
 from . import libretroMAMEConfig, libretroOptions
 from .libretroPaths import (
@@ -41,19 +40,6 @@ class _GunMappingItem(TypedDict):
     p4: NotRequired[int]
     gameDependant: NotRequired[list[dict[str, Any]]]
 
-
-# Return value for es invertedbuttons
-def getInvertButtonsValue() -> bool:
-    try:
-        tree = ET.parse(ES_SETTINGS)
-        root = tree.getroot()
-        # Find the InvertButtons element and return value
-        elem = root.find(".//bool[@name='InvertButtons']")
-        if elem is not None:
-            return elem.get('value') == 'true'
-        return False  # Return False if not found
-    except Exception:
-        return False # when file is not yet here or malformed
 
 # return true if the option is considered defined
 def defined(key: str, dict: Mapping[str, Any] | SystemConfig, /) -> bool:
@@ -171,7 +157,7 @@ def createLibretroConfig(
     renderConfig = system.renderconfig
     systemCore = system.config.core
     # Get value from ES settings
-    swapButtons = '"false"' if getInvertButtonsValue() else '"true"'
+    swapButtons = '"false"' if esSettings.getInvertButtonsValue() else '"true"'
 
     # Basic configuration
     retroarchConfig['quit_press_twice'] = 'false'                 # not aligned behavior on other emus
@@ -452,14 +438,24 @@ def createLibretroConfig(
 
     ## WII controller
     if system.config.core == 'dolphin' or system.config.core == 'dolphin':
-        # Controller 1 Type
-        retroarchConfig['input_libretro_device_p1'] = system.config.get('controller1_wii', '1')
-        # Controller 2 Type
-        retroarchConfig['input_libretro_device_p2'] = system.config.get('controller2_wii', '1')
-        # Controller 3 Type
-        retroarchConfig['input_libretro_device_p3'] = system.config.get('controller3_wii', '1')
-        # Controller 4 Type
-        retroarchConfig['input_libretro_device_p4'] = system.config.get('controller4_wii', '1')
+        if (".cc." in rom.name or ".pro." in rom.name or ".side." in rom.name or ".is." in rom.name or ".it." in rom.name or ".in." in rom.name or ".ti." in rom.name or ".ts." in rom.name or ".tn." in rom.name or ".ni." in rom.name or ".ns." in rom.name or ".nt." in rom.name) or "sideWiimote" in system.config:
+            # Controller 1 Type
+            retroarchConfig['input_libretro_device_p1'] = system.config.get('controller1_wii', '513')
+            # Controller 2 Type
+            retroarchConfig['input_libretro_device_p2'] = system.config.get('controller2_wii', '513')
+            # Controller 3 Type
+            retroarchConfig['input_libretro_device_p3'] = system.config.get('controller3_wii', '513')
+            # Controller 4 Type
+            retroarchConfig['input_libretro_device_p4'] = system.config.get('controller4_wii', '513')
+        else:
+            # Controller 1 Type
+            retroarchConfig['input_libretro_device_p1'] = system.config.get('controller1_wii', '1')
+            # Controller 2 Type
+            retroarchConfig['input_libretro_device_p2'] = system.config.get('controller2_wii', '1')
+            # Controller 3 Type
+            retroarchConfig['input_libretro_device_p3'] = system.config.get('controller3_wii', '1')
+            # Controller 4 Type
+            retroarchConfig['input_libretro_device_p4'] = system.config.get('controller4_wii', '1')
 
     ## MS-DOS controller
     if system.config.core == 'dosbox_pure':               # Dosbox-Pure

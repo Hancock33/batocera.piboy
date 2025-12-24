@@ -23,7 +23,7 @@ _logger = logging.getLogger(__name__)
 # Create the controller configuration file
 def generateControllerConfig(system: Emulator, playersControllers: Controllers, metadata: Mapping[str, str], wheels: DeviceInfoMapping, rom: Path, guns: Guns) -> None:
 
-    if system.name == "wii":
+    if system.name == "wii" or system.name == "wiiware":
         if system.config.use_guns and guns:
             generateControllerConfig_guns("WiimoteNew.ini", "Wiimote", metadata, guns)
             generateControllerConfig_gamecube(system, playersControllers, {}, rom)           # You can use the gamecube pads on the wii together with wiimotes
@@ -568,6 +568,8 @@ def generateControllerConfig_any_from_profiles(f: codecs.StreamReaderWriter, pad
     if system.name == "gamecube":
         glob_path = DOLPHIN_CONFIG / "Profiles" / "GCPad"
     if system.name == "wii":
+        glob_path = DOLPHIN_CONFIG / "Profiles" / "Wiimote"
+    if system.name == "wiiware":
         glob_path = DOLPHIN_CONFIG / "Profiles" / "Wiimote"
 
     if glob_path is None:

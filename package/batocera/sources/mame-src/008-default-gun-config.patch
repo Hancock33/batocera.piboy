@@ -1,5 +1,5 @@
 diff --git a/src/emu/crsshair.cpp b/src/emu/crsshair.cpp
-index d90cc9a7f5e..903e7840d4f 100644
+index 1fa238734b3..89550b52e97 100644
 --- a/src/emu/crsshair.cpp
 +++ b/src/emu/crsshair.cpp
 @@ -455,7 +455,7 @@ void crosshair_manager::config_load(config_type cfg_type, config_level cfg_level
