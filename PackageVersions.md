@@ -74,7 +74,7 @@ Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.1|
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v7.1.1|Sept 02, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|c019da9b7d591db7707e7c7aaa393815f1d6af65|Dec 21, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|adfc78f9523adce9fef1d7ac282e08ab7fc66dd4|Dec 23, 2025
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|1d2591ab8c56665e8af5d99911a1102b9e0fa622|Dec 18, 2025
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|5f5ba99168358ddccbb857d5673aaaf590984199|Aug 17, 2025
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v121|Dec 22, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|aaf6d5d67766e4fed773d1e54ab0ed67057babd9|Dec 23, 2025
@@ -504,7 +504,7 @@ Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2a
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|57a82460278a4f42b4a64273b87abe174ac17731|Dec 23, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|bb4549b272d66998dc54df067dde75cfe26c55b0|Dec 13, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|d2fa3ad31e456bd44736d98d00f99ab627ec7ebc|Dec 01, 2025
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6ba0981703058e8c77baceecad91e068f66f2b5c|Dec 24, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6d315e7e9eb4db76520c95146885021b23421359|Dec 24, 2025
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|c2045b374184309dd0fb94706b0c3b8453f5d8bf|Sept 23, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|4b48c5c3203ed1bdcda667b05cfcd64fd055c00a|Sept 22, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|0e80be5ef5f98353dfb8ba9d7fc5653199142dfa|Dec 22, 2025
@@ -519,7 +519,7 @@ Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|40a8a6ee8a941b64b509437e7
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|cbc43db1975f71143be2eb01c9a5eaba0b62b024|Dec 10, 2025
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|aec3276b792df437823b845b045368ee260dd250|Dec 10, 2025
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|381bf10364c9ce0b38574d158a0233875d44eb44|Dec 23, 2025
-Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|b013cabe6c3d9c17f30a2ff2e5f033ca254d4a61|Dec 22, 2025
+Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|3579759fb37423cc270fe200db5a357fca2eed72|Dec 24, 2025
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0283|Nov 28, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.2|Oct 21, 2025

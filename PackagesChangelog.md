@@ -9,7 +9,8 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|1d7f27d4bab36de6edb8
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-24|Dec 24, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|a8bb97f7e220b3dc8301bcf966be762663db3ce2|Dec 24, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|3c5add5fb7f83d4ceb542823ab66d00146c4271b|Dec 24, 2025
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6ba0981703058e8c77baceecad91e068f66f2b5c|Dec 24, 2025
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|6d315e7e9eb4db76520c95146885021b23421359|Dec 24, 2025
+Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|3579759fb37423cc270fe200db5a357fca2eed72|Dec 24, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|68cf48025fcb9b857d134876bbaee8c2c98030a3|Dec 24, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251224|Dec 24, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|e5eff6db27cd37c3c318741ee8bb9a3b8b60ec62|Dec 24, 2025
@@ -56,7 +57,6 @@ Engines|[thextech](https://github.com/TheXTech/TheXTech)|0480b3ab4d053f90f7c9acd
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|f82c5a87e205a569a0a8f862f0ec92b5cbd7e679|Dec 22, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|1b1c399a9b16edee25b4a9203699d8d733bd7dd0|Dec 22, 2025
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|7ecc532b7ab47d805b2c528797d1ca31876a49bf|Dec 22, 2025
-Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|b013cabe6c3d9c17f30a2ff2e5f033ca254d4a61|Dec 22, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|0e80be5ef5f98353dfb8ba9d7fc5653199142dfa|Dec 22, 2025
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|036013ef87d2ac6b9fea36dbb513617c72e11254|Dec 22, 2025
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|131d4575eae9ef1e22b32d25d5f771c2995a31af|Dec 21, 2025
@@ -94,7 +94,6 @@ Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|d9b7c292cfb15959c9928e3b76bb1047b8499938|Dec 19, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|308255e4a3acb38a054ebb42a5e2fe5c50eebd66|Dec 19, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|632777e6944ee4e220d01fff9d7c7eff40f318bb|Dec 18, 2025
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|1d2591ab8c56665e8af5d99911a1102b9e0fa622|Dec 18, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|d0f1375248e3003199cb973a12332b4cc9f0724f|Dec 18, 2025
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|28dd246e765962de7d4df6aa1ee618e45a9a367d|Dec 18, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|9da69a705ba44e4df6d85027e244b1c36612f96c|Dec 18, 2025
@@ -288,6 +287,7 @@ Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|1d06c2a54b617947
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|a781ead2cc4680f84799f7536486cf9ee3338738|Aug 19, 2025
 Ports|[hlsdk-xash3d-zombiex](http://github.com/FWGS/hlsdk-portable)|c431cea986dde9da67f4f0f2170e43f7ab0fbfc9|Aug 19, 2025
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|9e2aa770a9b6b0a4e1f4fc05eb0db6c8e7aba8ee|Aug 19, 2025
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|5f5ba99168358ddccbb857d5673aaaf590984199|Aug 17, 2025
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|43061b59154ad59324b6cb4fe2b7d8d5a367cb15|Aug 17, 2025
 Emulators|[dolphin-triforce](https://github.com/Hancock33/dolphin-triforce.git)|842a088dcecbc99348b24557396f56456ceaf2ac|Aug 15, 2025
 Emulators|[libretro-mu](http://github.com/libretro/Mu)|d9766f139ece646703b5785097374a3a68dd07ad|Aug 14, 2025
