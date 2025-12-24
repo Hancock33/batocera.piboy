@@ -438,14 +438,24 @@ def createLibretroConfig(
 
     ## WII controller
     if system.config.core == 'dolphin' or system.config.core == 'dolphin':
-        # Controller 1 Type
-        retroarchConfig['input_libretro_device_p1'] = system.config.get('controller1_wii', '1')
-        # Controller 2 Type
-        retroarchConfig['input_libretro_device_p2'] = system.config.get('controller2_wii', '1')
-        # Controller 3 Type
-        retroarchConfig['input_libretro_device_p3'] = system.config.get('controller3_wii', '1')
-        # Controller 4 Type
-        retroarchConfig['input_libretro_device_p4'] = system.config.get('controller4_wii', '1')
+        if (".cc." in rom.name or ".pro." in rom.name or ".side." in rom.name or ".is." in rom.name or ".it." in rom.name or ".in." in rom.name or ".ti." in rom.name or ".ts." in rom.name or ".tn." in rom.name or ".ni." in rom.name or ".ns." in rom.name or ".nt." in rom.name) or "sideWiimote" in system.config:
+            # Controller 1 Type
+            retroarchConfig['input_libretro_device_p1'] = system.config.get('controller1_wii', '513')
+            # Controller 2 Type
+            retroarchConfig['input_libretro_device_p2'] = system.config.get('controller2_wii', '513')
+            # Controller 3 Type
+            retroarchConfig['input_libretro_device_p3'] = system.config.get('controller3_wii', '513')
+            # Controller 4 Type
+            retroarchConfig['input_libretro_device_p4'] = system.config.get('controller4_wii', '513')
+        else:
+            # Controller 1 Type
+            retroarchConfig['input_libretro_device_p1'] = system.config.get('controller1_wii', '1')
+            # Controller 2 Type
+            retroarchConfig['input_libretro_device_p2'] = system.config.get('controller2_wii', '1')
+            # Controller 3 Type
+            retroarchConfig['input_libretro_device_p3'] = system.config.get('controller3_wii', '1')
+            # Controller 4 Type
+            retroarchConfig['input_libretro_device_p4'] = system.config.get('controller4_wii', '1')
 
     ## MS-DOS controller
     if system.config.core == 'dosbox_pure':               # Dosbox-Pure
