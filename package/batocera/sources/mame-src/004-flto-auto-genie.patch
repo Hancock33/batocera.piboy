@@ -1,8 +1,8 @@
 diff --git a/scripts/genie.lua b/scripts/genie.lua
-index 9cb7ee2a4df..f561265ec94 100644
+index 706611fe8a4..d6a6741a904 100644
 --- a/scripts/genie.lua
 +++ b/scripts/genie.lua
-@@ -795,7 +795,7 @@ if _OPTIONS["OPTIMIZE"] then
+@@ -810,7 +810,7 @@ if _OPTIONS["OPTIMIZE"] then
  	if _OPTIONS["LTO"]=="1" then
  		buildoptions {
  -- windows native mingw GCC 5.2 fails with -flto=x with x > 1. bug unfixed as of this commit
@@ -11,7 +11,7 @@ index 9cb7ee2a4df..f561265ec94 100644
  -- if ld fails, just buy more RAM or uncomment this!
  --          "-Wl,-no-keep-memory",
  			"-Wl,-v",
-@@ -806,9 +806,9 @@ if _OPTIONS["OPTIMIZE"] then
+@@ -821,9 +821,9 @@ if _OPTIONS["OPTIMIZE"] then
  -- some GCC 4.9.x on Windows do not have -Wodr and -flto-odr-type-merging enabled. adjust accordingly...
  -- no-fat-lto-objects is faster to compile and uses less memory, but you can't mix with a non-lto .o/.a without rebuilding
  			"-fno-fat-lto-objects",
@@ -23,7 +23,7 @@ index 9cb7ee2a4df..f561265ec94 100644
  --          "-flto-report", -- if you get an error in lto after [WPA] stage, but before [LTRANS] stage, you need more memory!
  --          "-fmem-report-wpa","-fmem-report","-fpre-ipa-mem-report","-fpost-ipa-mem-report","-flto-report-wpa","-fmem-report",
  -- this six flag combo lets MAME compile with LTO=1 on linux with no errors and ~2% speed boost, but compile time is much longer
-@@ -818,15 +818,15 @@ if _OPTIONS["OPTIMIZE"] then
+@@ -833,15 +833,15 @@ if _OPTIONS["OPTIMIZE"] then
  		}
  -- same flags are needed by linker
  		linkoptions {
