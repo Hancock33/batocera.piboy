@@ -1,0 +1,60 @@
+diff --git a/Source/Core/Core/Config/GraphicsSettings.cpp b/Source/Core/Core/Config/GraphicsSettings.cpp
+index 53090bec8a..d9be0dec26 100644
+--- a/Source/Core/Core/Config/GraphicsSettings.cpp
++++ b/Source/Core/Core/Config/GraphicsSettings.cpp
+@@ -102,7 +102,7 @@ const Info<bool> GFX_SHADER_CACHE{{System::GFX, "Settings", "ShaderCache"}, true
+ const Info<bool> GFX_WAIT_FOR_SHADERS_BEFORE_STARTING{
+     {System::GFX, "Settings", "WaitForShadersBeforeStarting"}, false};
+ const Info<ShaderCompilationMode> GFX_SHADER_COMPILATION_MODE{
+-    {System::GFX, "Settings", "ShaderCompilationMode"}, ShaderCompilationMode::Synchronous};
++    {System::GFX, "Settings", "ShaderCompilationMode"}, ShaderCompilationMode::AsynchronousSkipRendering};
+ const Info<int> GFX_SHADER_COMPILER_THREADS{{System::GFX, "Settings", "ShaderCompilerThreads"}, 1};
+ const Info<int> GFX_SHADER_PRECOMPILER_THREADS{
+     {System::GFX, "Settings", "ShaderPrecompilerThreads"}, -1};
+@@ -183,11 +183,11 @@ const Info<float> GFX_STEREO_DEPTH_PERCENTAGE{{System::GFX, "Stereoscopy", "Ster
+ 
+ // Graphics.Hacks
+ 
+-const Info<bool> GFX_HACK_EFB_ACCESS_ENABLE{{System::GFX, "Hacks", "EFBAccessEnable"}, false};
++const Info<bool> GFX_HACK_EFB_ACCESS_ENABLE{{System::GFX, "Hacks", "EFBAccessEnable"}, true};
+ const Info<bool> GFX_HACK_EFB_DEFER_INVALIDATION{
+     {System::GFX, "Hacks", "EFBAccessDeferInvalidation"}, false};
+ const Info<int> GFX_HACK_EFB_ACCESS_TILE_SIZE{{System::GFX, "Hacks", "EFBAccessTileSize"}, 64};
+-const Info<bool> GFX_HACK_BBOX_ENABLE{{System::GFX, "Hacks", "BBoxEnable"}, false};
++const Info<bool> GFX_HACK_BBOX_ENABLE{{System::GFX, "Hacks", "BBoxEnable"}, true};
+ const Info<bool> GFX_HACK_FORCE_PROGRESSIVE{{System::GFX, "Hacks", "ForceProgressive"}, true};
+ const Info<bool> GFX_HACK_SKIP_EFB_COPY_TO_RAM{{System::GFX, "Hacks", "EFBToTextureEnable"}, true};
+ const Info<bool> GFX_HACK_SKIP_XFB_COPY_TO_RAM{{System::GFX, "Hacks", "XFBToTextureEnable"}, true};
+diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
+index e42796e864..5518179a88 100644
+--- a/Source/Core/Core/Config/MainSettings.cpp
++++ b/Source/Core/Core/Config/MainSettings.cpp
+@@ -55,7 +55,7 @@ const Info<bool> MAIN_SMOOTH_EARLY_PRESENTATION{{System::Main, "Core", "SmoothEa
+ // Currently enabled by default on Android because the performance boost is really needed.
+ constexpr bool DEFAULT_CPU_THREAD = true;
+ #else
+-constexpr bool DEFAULT_CPU_THREAD = false;
++constexpr bool DEFAULT_CPU_THREAD = true;
+ #endif
+ const Info<bool> MAIN_CPU_THREAD{{System::Main, "Core", "CPUThread"}, DEFAULT_CPU_THREAD};
+ const Info<bool> MAIN_LOAD_GAME_INTO_MEMORY{{System::Main, "Core", "LoadGameIntoMemory"}, false};
+@@ -229,7 +229,7 @@ const Info<float> MAIN_EMULATION_SPEED{{System::Main, "Core", "EmulationSpeed"},
+ // It is also not yet exposed in the UI on Android.
+ constexpr bool DEFAULT_PRECISION_FRAME_TIMING = false;
+ #else
+-constexpr bool DEFAULT_PRECISION_FRAME_TIMING = true;
++constexpr bool DEFAULT_PRECISION_FRAME_TIMING = false;
+ #endif
+ const Info<bool> MAIN_PRECISION_FRAME_TIMING{{System::Main, "Core", "PrecisionFrameTiming"},
+                                              DEFAULT_PRECISION_FRAME_TIMING};
+@@ -425,8 +425,8 @@ const Info<bool> MAIN_USE_PANIC_HANDLERS{{System::Main, "Interface", "UsePanicHa
+ const Info<bool> MAIN_ABORT_ON_PANIC_ALERT{{System::Main, "Interface", "AbortOnPanicAlert"}, false};
+ const Info<bool> MAIN_OSD_MESSAGES{{System::Main, "Interface", "OnScreenDisplayMessages"}, true};
+ const Info<int> MAIN_OSD_FONT_SIZE{{System::Main, "Settings", "OSDFontSize"}, 13};
+-const Info<bool> MAIN_SKIP_NKIT_WARNING{{System::Main, "Interface", "SkipNKitWarning"}, false};
+-const Info<bool> MAIN_CONFIRM_ON_STOP{{System::Main, "Interface", "ConfirmStop"}, true};
++const Info<bool> MAIN_SKIP_NKIT_WARNING{{System::Main, "Interface", "SkipNKitWarning"}, true};
++const Info<bool> MAIN_CONFIRM_ON_STOP{{System::Main, "Interface", "ConfirmStop"}, false};
+ const Info<ShowCursor> MAIN_SHOW_CURSOR{{System::Main, "Interface", "CursorVisibility"},
+                                         ShowCursor::OnMovement};
+ const Info<bool> MAIN_LOCK_CURSOR{{System::Main, "Interface", "LockCursor"}, false};
