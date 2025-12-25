@@ -7,7 +7,9 @@ Engines|[thextech](https://github.com/TheXTech/TheXTech)|30663a7b13dff4d67797ad5
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|da40b056a080cc490c011fcc9f9dc771dbbe7706|Dec 25, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|559538f01290bf0fab914c4b6fb65b0c4e43430c|Dec 25, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|9c684bfc173ebcd91bdf810964d5164ce5c9ec06|Dec 25, 2025
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251225|Dec 25, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c071f5491bd815c49ca6b1de8c49ceb244bfbc2d|Dec 25, 2025
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251225|Dec 25, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|1a4fee7e6fa2c381721da3ea75aafd76bd15590a|Dec 25, 2025
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|d298697e9870d06a86d05db0ead8f1a2a680eb3c|Dec 25, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|158ea3273a9412b037cb60375f04b275e349b3e9|Dec 24, 2025
@@ -28,11 +30,9 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|8907fb958b038f45f1eac71
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.0|Dec 24, 2025
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|3579759fb37423cc270fe200db5a357fca2eed72|Dec 24, 2025
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|68cf48025fcb9b857d134876bbaee8c2c98030a3|Dec 24, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251224|Dec 24, 2025
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|b29b1f068e17ef9071d9cfd52115fcad03918765|Dec 24, 2025
 Engines|[openbor7530](http://github.com/DCurrent/openbor)|7569231a0ae3f0a7f5a6697b2ce4f09a0cf50a43|Dec 24, 2025
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|0ed681362b6f7ac7381e0320501823be6d843006|Dec 24, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251224|Dec 24, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c950530e44195a487f58237f6366982eb2c47553|Dec 24, 2025
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|b29b1f068e17ef9071d9cfd52115fcad03918765|Dec 24, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|effe9bb09c89ed7f41d358c8c8b65cc7bca4c6b8|Dec 24, 2025
