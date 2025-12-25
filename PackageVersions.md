@@ -87,7 +87,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.1
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|ef2cf6e223ae670c1a80ac6fc6e203726f85f746|Dec 25, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|00ec67d65bbb85f693b76bd3bc2a32bb6ce72bc6|Dec 23, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|bc9af86269b58a76cb88ed51343b8fad845b3783|Dec 25, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|f65907a25625403ef0e20548ed5fbbf25ba9e5ca|Dec 15, 2025
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|f362278ccd4c60991caac3b4d240d4a3f751bea2|Sept 13, 2025
@@ -445,7 +445,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|1b1c399a9b16edee25b4a9203699d8d733bd7dd0|Dec 22, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|eb2685871fb93c9c2be5fa2a17d6e73608863d2c|Nov 30, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|1a4fee7e6fa2c381721da3ea75aafd76bd15590a|Dec 25, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|65f702c936cc791b8663fcc95998123d461b5adb|Dec 25, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|b8fe5053c44a04b0114de34cdf9e4f52ecf1e50c|Dec 23, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025

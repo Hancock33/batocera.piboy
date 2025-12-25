@@ -2,6 +2,7 @@
 -----|:-----:|:-----:|:-----:
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|ef2cf6e223ae670c1a80ac6fc6e203726f85f746|Dec 25, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|bc9af86269b58a76cb88ed51343b8fad845b3783|Dec 25, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ae856c5d45fa45557f242f6fdb56d458075ac536|Dec 25, 2025
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|dea1a3e550af4d6c6e9e37d8779099cb33a27ddc|Dec 25, 2025
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|c42aeacf2518b7001d9192b555247503fd314869|Dec 25, 2025
@@ -19,7 +20,7 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|9c684bfc173ebcd91bdf
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251225|Dec 25, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c071f5491bd815c49ca6b1de8c49ceb244bfbc2d|Dec 25, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251225|Dec 25, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|1a4fee7e6fa2c381721da3ea75aafd76bd15590a|Dec 25, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|65f702c936cc791b8663fcc95998123d461b5adb|Dec 25, 2025
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|ac93f1bb78377f2585d005e1c2958001d9adcdf7|Dec 25, 2025
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|177f246a692e19504239b0e1973eb4f8d86dcb6a|Dec 25, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|b82227a31b82a094f0ffc67a85b03adea4c62aaa|Dec 25, 2025
@@ -52,7 +53,6 @@ Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|b29b1f068e17
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|17c7b14aecf74a98a49fa6e7215886969224a62f|Dec 24, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|adfc78f9523adce9fef1d7ac282e08ab7fc66dd4|Dec 23, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|4b086b1256855be85873b9cee5b2bdd4efb91caf|Dec 23, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|00ec67d65bbb85f693b76bd3bc2a32bb6ce72bc6|Dec 23, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.238|Dec 23, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.122|Dec 23, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|021083f48f8de0808da311af4b627efb92a82981|Dec 23, 2025
