@@ -1,4 +1,6 @@
-﻿broadcom-bt-firmware.mk
+﻿amiberry-lite.mk
+amiberry.mk
+broadcom-bt-firmware.mk
 btop.mk
 cargs.mk
 chromebook-ucm-conf.mk

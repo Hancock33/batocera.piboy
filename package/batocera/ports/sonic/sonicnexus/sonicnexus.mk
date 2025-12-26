@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 25, 2025
-SONICNEXUS_VERSION = f13e789420b975bfeb64e1edeffce8e383beba55
+SONICNEXUS_VERSION = fd4c240da0753caa5a0362e1d8f64ee33ab20fa9
 SONICNEXUS_SITE = $(call github,RSDKModding,RSDKv2-Decompilation,$(SONICNEXUS_VERSION))
 SONICNEXUS_DEPENDENCIES = libogg libvorbis sdl2
 SONICNEXUS_SUPPORTS_IN_SOURCE_BUILD = NO
