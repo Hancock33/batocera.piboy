@@ -18,6 +18,7 @@ endif
 
 # exclude some dirs not required on batocera
 ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
+								$(@D)/cavium \
 								$(@D)/cxgb4 \
 								$(@D)/dpaa2 \
 								$(@D)/liquidio \
@@ -25,10 +26,13 @@ ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 								$(@D)/mrvl/prestera \
 								$(@D)/myri* \
 								$(@D)/netronome \
+								$(@D)/nfp \
+								$(@D)/pensando \
 								$(@D)/phanfw.bin \
 								$(@D)/qcom \
-								$(@D)/ql2* \
 								$(@D)/qed \
+								$(@D)/ql2* \
+								$(@D)/qlogic \
 								$(@D)/s5p-mfc* \
 								$(@D)/ueagle-atm \
 								$(@D)/LICENCE* \
@@ -37,6 +41,7 @@ ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
 ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
 								$(@D)/amd* \
+								$(@D)/apple \
 								$(@D)/ath10k \
 								$(@D)/ath11k \
 								$(@D)/ath12k \
@@ -51,6 +56,27 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
 								$(@D)/radeon
 endif
 
+# This removes strictly ARM/RISC-V SoC components while preserving all Wi-Fi/BT.
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/apple \
+								$(@D)/arm \
+								$(@D)/imx \
+								$(@D)/meson \
+								$(@D)/microchip
+								$(@D)/nvidia/tegra \
+								$(@D)/rockchip \
+								$(@D)/s5p-* \
+								$(@D)/starfive \
+								$(@D)/sun \
+								$(@D)/sunxi \
+								$(@D)/sxg \
+								$(@D)/ti \
+								$(@D)/ti-keystone
+								$(@D)/v3d \
+								$(@D)/vc4
+endif
+
+# Remove Broadcom if RPi/External firmware is already handling it
 ifeq ($(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
 endif
@@ -65,17 +91,13 @@ ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/amlogic
 endif
 
-# Remove non-x86 specific firmware if building x86
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/arm $(@D)/imx $(@D)/sun $(@D)/ti-keystone $(@D)/sxg $(@D)/meson
-endif
-
 define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/lib/firmware
 
 	# exclude some dirs not required on batocera
 	rm -rf $(ALLLINUXFIRMWARES_REMOVE_DIRS)
 
+	# RK3588 specific: Keep only Bluetooth 'ibt-*' from the Intel folder
 	if [ "$BR2_PACKAGE_BATOCERA_TARGET_RK3588" = "y" ] || [ "$BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO" = "y" ]; then \
 		find $(@D)/intel -type f ! -name 'ibt-*' -delete; \
 	fi
@@ -120,21 +142,21 @@ define ALLLINUXFIRMWARES_FIX_SER9
 	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/S03firmware $(TARGET_DIR)/etc/init.d/
 endef
 
-# Copy Qualcomm firmware for Steam Deck OLED etc
+# Realtek BT symlinks for RK3588 kernel compatibility
+define ALLLINUXFIRMWARES_LINK_RTL_BT
+    ln -sf /lib/firmware/rtl_bt/rtl8852bu_fw.bin $(TARGET_DIR)/lib/firmware/rtl8852bu_fw
+    ln -sf /lib/firmware/rtl_bt/rtl8852bu_config.bin $(TARGET_DIR)/lib/firmware/rtl8852bu_config
+endef
+
+# Apply hooks based on architecture
 ifeq ($(BR2_x86_64),y)
     ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS = ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
     ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_AMD_890M
     ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_SER9
 endif
 
-# symlink BT firmware for RK3588 kernel
-define ALLLINUXFIRMWARES_LINK_RTL_BT
-	ln -sf /lib/firmware/rtl_bt/rtl8852bu_fw.bin     $(TARGET_DIR)/lib/firmware/rtl8852bu_fw
-	ln -sf /lib/firmware/rtl_bt/rtl8852bu_config.bin $(TARGET_DIR)/lib/firmware/rtl8852bu_config
-endef
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588),y)
-    ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS = ALLLINUXFIRMWARES_LINK_RTL_BT
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO),y)
+    ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_LINK_RTL_BT
 endif
 
 $(eval $(generic-package))
