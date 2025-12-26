@@ -1,16 +1,20 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|c206bd63110bbe2a97f7d11467421d2b3bbd1ff7|Dec 26, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|21abd248700d59f6dcaf18a41b728ff4e5a70b41|Dec 26, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|cfae726289e38008ace558ab8bd42fd5189a3ab6|Dec 26, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|485e2333807e487853706b4b5dc6f8c5fd81dd31|Dec 26, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45926|Dec 26, 2025
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|e9605f0a2a62b58a3274082d5b21201609d7959c|Dec 26, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-26|Dec 26, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|4dcc3a49138febf0e9a27c7d5517bfc0dd1c2a6b|Dec 26, 2025
-Ports|[box64](http://github.com/ptitseb/box64)|894285b1db130f69c398532e98739897482de328|Dec 26, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|80dafff3c5ce1b214aed05081c9e5f8b2b4394b6|Dec 26, 2025
+Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|b1633a471048797981218144860e226ea19e3a6e|Dec 26, 2025
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|bf27fba43d15ee5df042c6a2c1d7d375de197a08|Dec 26, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4b74434a30c534c763b60ba4cc16f6a94a611c5f|Dec 26, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|b8d0126782034ac99d861f79d2ed45696833774f|Dec 26, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|26a3e1235a279ba195810118a1fbbca315d79fa8|Dec 26, 2025
+Ports|[vkquake](http://github.com/Novum/vkQuake)|80cb0142db92b33134ef8cca43210f38463d7a3e|Dec 26, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|dcd9abff949ee1963639aee0409dc766246a23b6|Dec 26, 2025
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|e217308ad1ceeb67af42c65fb89cb0ee55df478b|Dec 26, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|4dcc3a49138febf0e9a27c7d5517bfc0dd1c2a6b|Dec 26, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ae856c5d45fa45557f242f6fdb56d458075ac536|Dec 25, 2025
@@ -22,13 +26,12 @@ Engines|[thextech](https://github.com/TheXTech/TheXTech)|30663a7b13dff4d67797ad5
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|da40b056a080cc490c011fcc9f9dc771dbbe7706|Dec 25, 2025
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|8a9734de377bf74ba720661917751bffac856f5d|Dec 25, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|559538f01290bf0fab914c4b6fb65b0c4e43430c|Dec 25, 2025
-Ports|[omf2097](http://github.com/omf2097/openomf)|d376dfb507a738b4405f66980c566ae077108b24|Dec 25, 2025
+Ports|[omf2097](http://github.com/omf2097/openomf)|01bab72b57fec87cfac79342a95c1cdf8ddab3ca|Dec 25, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|9c684bfc173ebcd91bdf810964d5164ce5c9ec06|Dec 25, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251225|Dec 25, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251225|Dec 25, 2025
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|ac93f1bb78377f2585d005e1c2958001d9adcdf7|Dec 25, 2025
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|177f246a692e19504239b0e1973eb4f8d86dcb6a|Dec 25, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|075df90d8bf51a78ca65f3e947511b0282ecae1a|Dec 25, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|b82227a31b82a094f0ffc67a85b03adea4c62aaa|Dec 25, 2025
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|fd4c240da0753caa5a0362e1d8f64ee33ab20fa9|Dec 25, 2025
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9e65eff7536221b42f23e6df7e4eefb570e03baa|Dec 25, 2025
@@ -77,7 +80,6 @@ Ports|[trx](http://github.com/LostArtefacts/TRX)|0e80be5ef5f98353dfb8ba9d7fc5653
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|131d4575eae9ef1e22b32d25d5f771c2995a31af|Dec 21, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|56c8a4cbedb99b35b90896e12576a715368ae8ea|Dec 21, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|3a3388c4c50e8735af125c1af4d89e457f5e9035|Dec 21, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|2b3997c090dd63f54d5eb71a79f716b95f14b5ae|Dec 21, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|b6673bf124d63dcd253f7127e2654288e85212b1|Dec 21, 2025
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|db5b95877af5b97db442ac39ba94d16aa1494a3a|Dec 21, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|6547d407132098847bbbe2ec0aa6c520f6a946eb|Dec 21, 2025
@@ -97,7 +99,6 @@ Emulators|[ymir](https://github.com/StrikerX3/Ymir)|92bc20a34653be79db29fb07a8cc
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12|Dec 19, 2025
 Network|[rtw88](http://github.com/lwfinger/rtw88)|3e03f9a20a39b284a3b924294c6566ac81a48a33|Dec 19, 2025
 Utils|[labwc](http://github.com/labwc/labwc)|0.9.3|Dec 19, 2025
-Ports|[vkquake](http://github.com/Novum/vkQuake)|6bfad760f5cb5c2f1ed5d5823aab57f062d85801|Dec 19, 2025
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|ee3e73cf7b3959ad75f01f30afde286d427a5bee|Dec 19, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|d9b7c292cfb15959c9928e3b76bb1047b8499938|Dec 19, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|308255e4a3acb38a054ebb42a5e2fe5c50eebd66|Dec 19, 2025
@@ -116,7 +117,6 @@ Engines|[libdof](http://github.com/jsm174/libdof)|fb313228b474f48d2aa53228e4a07a
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|4d033fc9cf306d6a7c3ca9508cb05d2662826c59|Dec 17, 2025
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|9e9a95477262ccc23c847475ba16a1446b86a52d|Dec 16, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|2eea59a1e9a133ffad3dfa1fe194b7cf0547819a|Dec 16, 2025
-Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|69f6b85b52f19032223789aa70498ae82c7ad42c|Dec 16, 2025
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|90ed6cd74e07dfa44e51a3ec114fde2468a50dd7|Dec 16, 2025
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|d2da8bc99de0782c4856ea3ab553a74b4ebdff02|Dec 16, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|f65907a25625403ef0e20548ed5fbbf25ba9e5ca|Dec 15, 2025

@@ -86,7 +86,7 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|f8c2
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.12.01|Dec 01, 2025
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|c206bd63110bbe2a97f7d11467421d2b3bbd1ff7|Dec 26, 2025
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|21abd248700d59f6dcaf18a41b728ff4e5a70b41|Dec 26, 2025
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|cfae726289e38008ace558ab8bd42fd5189a3ab6|Dec 26, 2025
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|f65907a25625403ef0e20548ed5fbbf25ba9e5ca|Dec 15, 2025
@@ -251,7 +251,7 @@ Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hl
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|44bc0d8e82da88efa2bd700472c10f9166314e00|Jun 21, 2025
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|d82d5715111bc50cf6dd8066e531e9cc6fbb9eab|Jun 21, 2025
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|50be36007f26500bd48d4b2c1574bb977af9e2e4|Jun 21, 2025
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|2b3997c090dd63f54d5eb71a79f716b95f14b5ae|Dec 21, 2025
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|485e2333807e487853706b4b5dc6f8c5fd81dd31|Dec 26, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.402|Dec 24, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|d0f1375248e3003199cb973a12332b4cc9f0724f|Dec 18, 2025
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ae856c5d45fa45557f242f6fdb56d458075ac536|Dec 25, 2025
@@ -431,11 +431,11 @@ Ports|[awgl](http://github.com/M-HT/rawgl)|087860aee3ec7b85a86004378e2edc6fd5092
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Ports|[bloodmod](http://github.com/dhewm/dhewm3-sdk)|f35e2718939b68c75f2f3a07749554129e049c30|Sept 27, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
-Ports|[box64](http://github.com/ptitseb/box64)|894285b1db130f69c398532e98739897482de328|Dec 26, 2025
+Ports|[box64](http://github.com/ptitseb/box64)|80dafff3c5ce1b214aed05081c9e5f8b2b4394b6|Dec 26, 2025
 Ports|[box86](http://github.com/ptitseb/box86)|50a2603027d0faf2f6ba5d97c0169f824fb95d85|Nov 22, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|5aab7bbd10af8d032e78cc18f9034825c64339d9|Dec 24, 2025
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
-Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|69f6b85b52f19032223789aa70498ae82c7ad42c|Dec 16, 2025
+Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|b1633a471048797981218144860e226ea19e3a6e|Dec 26, 2025
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|559538f01290bf0fab914c4b6fb65b0c4e43430c|Dec 25, 2025
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|c6d2afac06b3b0b16e2efc7e23e27c60822eefa9|Apr 19, 2024
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|bee00e47805909d08568c640073a2123ca7021b1|Aug 31, 2025
@@ -445,7 +445,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|72d2c417645d47a382b061d2a6
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|ee6addacfe721e587c3b2c9a2594953cd9c774bc|Oct 20, 2024
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|1b1c399a9b16edee25b4a9203699d8d733bd7dd0|Dec 22, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|eb2685871fb93c9c2be5fa2a17d6e73608863d2c|Nov 30, 2025
-Ports|[doomretro](http://github.com/bradharding/doomretro)|b8d0126782034ac99d861f79d2ed45696833774f|Dec 26, 2025
+Ports|[doomretro](http://github.com/bradharding/doomretro)|26a3e1235a279ba195810118a1fbbca315d79fa8|Dec 26, 2025
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|b8fe5053c44a04b0114de34cdf9e4f52ecf1e50c|Dec 23, 2025
 Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025
@@ -472,7 +472,7 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d21bd747fac623e
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251225|Dec 25, 2025
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14330|Dec 04, 2025
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
-Ports|[omf2097](http://github.com/omf2097/openomf)|d376dfb507a738b4405f66980c566ae077108b24|Dec 25, 2025
+Ports|[omf2097](http://github.com/omf2097/openomf)|01bab72b57fec87cfac79342a95c1cdf8ddab3ca|Dec 25, 2025
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|5ea6d14d8cbf54f898d49be9c1899a2173122dae|Dec 17, 2025
 Ports|[openjk](http://github.com/JACoders/OpenJK)|407a56fbca21310ff158fabbb3207410e381bfc8|Dec 07, 2025
@@ -493,7 +493,7 @@ Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|d40a12ea57d
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|177f246a692e19504239b0e1973eb4f8d86dcb6a|Dec 25, 2025
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|075df90d8bf51a78ca65f3e947511b0282ecae1a|Dec 25, 2025
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|dcd9abff949ee1963639aee0409dc766246a23b6|Dec 26, 2025
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|b82227a31b82a094f0ffc67a85b03adea4c62aaa|Dec 25, 2025
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|cb35e4ae569c8bd963e2f48e0a51a95b20b16231|Dec 18, 2025
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|fd4c240da0753caa5a0362e1d8f64ee33ab20fa9|Dec 25, 2025
@@ -510,7 +510,7 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|4b48c5c3203ed
 Ports|[trx](http://github.com/LostArtefacts/TRX)|0e80be5ef5f98353dfb8ba9d7fc5653199142dfa|Dec 22, 2025
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.0|Dec 24, 2025
-Ports|[vkquake](http://github.com/Novum/vkQuake)|6bfad760f5cb5c2f1ed5d5823aab57f062d85801|Dec 19, 2025
+Ports|[vkquake](http://github.com/Novum/vkQuake)|80cb0142db92b33134ef8cca43210f38463d7a3e|Dec 26, 2025
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c950530e44195a487f58237f6366982eb2c47553|Dec 24, 2025
