@@ -62,7 +62,7 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/apple \
 								$(@D)/arm \
 								$(@D)/imx \
 								$(@D)/meson \
-								$(@D)/microchip
+								$(@D)/microchip \
 								$(@D)/nvidia/tegra \
 								$(@D)/rockchip \
 								$(@D)/s5p-* \
@@ -71,7 +71,7 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/apple \
 								$(@D)/sunxi \
 								$(@D)/sxg \
 								$(@D)/ti \
-								$(@D)/ti-keystone
+								$(@D)/ti-keystone \
 								$(@D)/v3d \
 								$(@D)/vc4
 endif
