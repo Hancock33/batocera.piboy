@@ -71,6 +71,7 @@
 - OpenJKDF2 to v0.9.8
 - OpenMOHAA to v0.82.1
 - Play! to 0.71
+- RClone to v1.72.1
 - RetroArch to 1.22.2
 - RPCS3 to v0.0.38
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_12_0_A
@@ -90,6 +91,7 @@
 - Bluez to 5.84
 - DXVK to 2.7.1
 - Flac to 1.5.0
+- Go language compiler to 1.25.5
 - GStreamer codecs to 1.26.6
 - Linux Firmware to 20251125
 - Linux Kernel to 6.18.1
@@ -100,6 +102,7 @@
 - Nvidia 580.xx legacy drivers to 580.119.02
 - Nvidia production drivers to 590.48.01
 - QT to 6.9.2
+- Raspberry Pi kernel and associated firmware / utils to 6.12.62
 - Sound Open Firmware to 2025.05.1
 - Sway to 1.11
 - VKD3D Proton to 3.0a
