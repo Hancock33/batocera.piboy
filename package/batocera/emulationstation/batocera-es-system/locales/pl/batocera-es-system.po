@@ -7207,6 +7207,11 @@ msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
+msgid "ENABLE WINE DEVICES SERVICES"
+msgstr "WŁĄCZ USŁUGI URZĄDZEŃ WINE"
+
+#. TRANSLATION: wine
+msgctxt "game_options"
 msgid "ENABLE XIM"
 msgstr "WŁĄCZ XIM"
 
@@ -20982,10 +20987,6 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"
 #~ msgstr "WŁĄCZ TRUE KOLOR"
-
-#~ msgctxt "game_options"
-#~ msgid "ENABLE WINE DEVICES SERVICES"
-#~ msgstr "WŁĄCZ USŁUGI URZĄDZEŃ WINE"
 
 #~ msgctxt "game_options"
 #~ msgid "ENHANCED RENDERING RESOLUTION (32-BIT ONLY)"
