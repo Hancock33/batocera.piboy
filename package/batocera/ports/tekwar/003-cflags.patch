@@ -1,14 +1,25 @@
+Submodule jfaudiolib contains modified content
+diff --git a/jfaudiolib/Makefile b/jfaudiolib/Makefile
+index 8b68585..52a2006 100644
+--- a/jfaudiolib/Makefile
++++ b/jfaudiolib/Makefile
+@@ -3,7 +3,7 @@
+ ifeq (0,$(RELEASE))
+  OPTLEVEL=-Og
+ else
+- OPTLEVEL=-fomit-frame-pointer -O2
++ OPTLEVEL=-fomit-frame-pointer -O2 -Wno-type-limits
+ endif
+ 
+ CC?=gcc
 Submodule jfbuild contains modified content
 diff --git a/jfbuild/Makefile b/jfbuild/Makefile
-index 7330136..ec4da2e 100644
+index 01e8ea2..62ed78c 100644
 --- a/jfbuild/Makefile
 +++ b/jfbuild/Makefile
-@@ -251,9 +251,9 @@ cacheinfo$(EXESUFFIX): $(TOOLS)/cacheinfo.$o $(ENGINELIB)
+@@ -208,7 +208,7 @@ wad2map$(EXESUFFIX): $(TOOLS)/wad2map.$o $(ENGINELIB)
  # These tools are only used at build time and should be compiled
  # using the host toolchain rather than any cross-compiler.
- generatesdlappicon$(EXESUFFIX): $(TOOLS)/generatesdlappicon.c $(SRC)/kplib.c
--	$(HOSTCC) $(CFLAGS) -I$(SRC) -I$(INC) -o $@ $^
-+	$(HOSTCC) -I$(SRC) -I$(INC) -o $@ $^
  bin2c$(EXESUFFIX): $(TOOLS)/bin2c.cc
 -	$(HOSTCXX) $(CXXFLAGS) -o $@ $^
 +	$(HOSTCXX) -o $@ $^
