@@ -1,7 +1,5 @@
 ﻿alsa-topology-conf.mk
 alsa-ucm-conf.mk
-amiberry-lite.mk
-amiberry.mk
 appstream.mk
 batocera-settings.mk
 cabextract.mk
@@ -39,7 +37,6 @@ shadps4.mk
 spirv-llvm-translator.mk
 tomlplusplus.mk
 uthash.mk
-vice.mk
 wine-custom.mk
 wine-mono.mk
 xbox-xcloud-client.mk

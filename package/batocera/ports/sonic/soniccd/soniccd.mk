@@ -3,8 +3,8 @@
 # soniccd
 #
 ################################################################################
-# Version: Commits on Dec 23, 2025
-SONICCD_VERSION = 6097eb0ed854dcd9f4caeded96644689e0694b73
+# Version: Commits on Dec 25, 2025
+SONICCD_VERSION = b82227a31b82a094f0ffc67a85b03adea4c62aaa
 SONICCD_SITE = https://github.com/RSDKModding/RSDKv3-Decompilation.git
 SONICCD_SITE_METHOD = git
 SONICCD_GIT_SUBMODULES = YES

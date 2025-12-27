@@ -3,8 +3,8 @@
 # libretro-freeintv
 #
 ################################################################################
-# Version: Commits on Dec 11, 2025
-LIBRETRO_FREEINTV_VERSION = d29846b67e948e7e2bfe33fe3580cd12e71871c6
+# Version: Commits on Dec 26, 2025
+LIBRETRO_FREEINTV_VERSION = df5a5312985b66b1ec71b496868641e40b7ad1c9
 LIBRETRO_FREEINTV_SITE = $(call github,libretro,freeintv,$(LIBRETRO_FREEINTV_VERSION))
 LIBRETRO_FREEINTV_LICENSE = GPLv3
 LIBRETRO_FREEINTV_DEPENDENCIES = retroarch
@@ -30,7 +30,7 @@ endef
 
 define LIBRETRO_FREEINTV_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/FreeIntv_libretro.so $(TARGET_DIR)/usr/lib/libretro/freeintv_libretro.so
+	$(INSTALL) -D $(@D)/freeintv_libretro.so $(TARGET_DIR)/usr/lib/libretro/freeintv_libretro.so
 endef
 
 $(eval $(generic-package))

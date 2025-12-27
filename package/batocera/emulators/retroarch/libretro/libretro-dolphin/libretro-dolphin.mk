@@ -3,10 +3,10 @@
 # libretro-dolphin
 #
 ################################################################################
-# Version: Commits on Nov 21, 2025
-LIBRETRO_DOLPHIN_VERSION = df2b1a754bba4f0595d3ed07ccd0711019e014b8
+# Version: Commits on Dec 23, 2025
+LIBRETRO_DOLPHIN_VERSION = 990bffac731a86ecb075d5d786d4b348310beea6
 LIBRETRO_DOLPHIN_SITE = https://github.com/libretro/dolphin.git
-LIBRETRO_DOLPHIN_SITE_METHOD=git
+LIBRETRO_DOLPHIN_SITE_METHOD = git
 LIBRETRO_DOLPHIN_GIT_SUBMODULES = YES
 LIBRETRO_DOLPHIN_LICENSE = GPLv2
 LIBRETRO_DOLPHIN_DEPENDENCIES = fmt bluez5_utils libevdev retroarch

@@ -1,8 +1,8 @@
 diff --git a/lib/VCMIDirs.cpp b/lib/VCMIDirs.cpp
-index 24b1b45eb..0f5f88f37 100644
+index b6e7aeb06..778f91e99 100644
 --- a/lib/VCMIDirs.cpp
 +++ b/lib/VCMIDirs.cpp
-@@ -602,7 +602,7 @@ bfs::path VCMIDirsXDG::userDataPath() const
+@@ -542,7 +542,7 @@ bfs::path VCMIDirsXDG::userDataPath() const
  	if((homeDir = getenv("XDG_DATA_HOME")))
  		return bfs::path(homeDir) / "vcmi";
  	else if((homeDir = getenv("HOME")))
@@ -11,7 +11,7 @@ index 24b1b45eb..0f5f88f37 100644
  	else
  		return ".";
  }
-@@ -626,7 +626,7 @@ bfs::path VCMIDirsXDG::userConfigPath() const
+@@ -566,7 +566,7 @@ bfs::path VCMIDirsXDG::userConfigPath() const
  	
  	tempResult = getenv("HOME");
  	if (tempResult)

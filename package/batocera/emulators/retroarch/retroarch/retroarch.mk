@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Dec 24, 2025
-RETROARCH_VERSION = e5eff6db27cd37c3c318741ee8bb9a3b8b60ec62
+# Version: Commits on Dec 27, 2025
+RETROARCH_VERSION = 34d69198d49ae0e3c8ad2c4cf22c529af01cdd9f
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -81,7 +81,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
-    RETROARCH_CONF_OPTS += --enable-opengles3 --enable-opengles --enable-opengles3_1
+    RETROARCH_CONF_OPTS += --enable-opengles --enable-opengles3 --enable-opengles3_1
     RETROARCH_DEPENDENCIES += libgles
 endif
 # don't enable --enable-opengles3_2, breaks lr-swanstation
@@ -141,11 +141,8 @@ ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),)
     endif
 endif
 
-# disable libdecor : A client-side decorations library for Wayland client
-# it makes retroarch unable to start on dual screen. It looks like a ra bug
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
     RETROARCH_CONF_OPTS += --enable-wayland
-    RETROARCH_CONF_OPTS += --disable-libdecor
 else
     RETROARCH_CONF_OPTS += --disable-wayland
 endif
