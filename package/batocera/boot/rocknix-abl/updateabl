@@ -81,7 +81,7 @@ check_power
 cat << EOF
 ------------------------------------------------------------
 Disclaimer
-Flashing a custom ABL carries inherent risk and may result 
+Flashing a custom ABL carries inherent risk and may result
 in an unbootable device if used incorrectly.
 
 - You are responsible for any damage caused

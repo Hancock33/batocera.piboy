@@ -271,7 +271,7 @@ handle_disk_event() {
         log_msg "SAFETY: [$devname] No partitions seen. Probing for hidden tables..."
         partprobe "/dev/$devname" >/dev/null 2>&1
         # Use a short sleep to let the kernel update /dev
-        sleep 1 
+        sleep 1
     fi
 
     # Check if this disk contains any Android/Qualcomm/Critical labels

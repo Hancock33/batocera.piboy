@@ -470,7 +470,7 @@ class rgbledaddr(object):
         self.all_r = sorted(glob.glob('/sys/class/leds/[lr]:r?/brightness'))
         self.all_g = sorted(glob.glob('/sys/class/leds/[lr]:g?/brightness'))
         self.all_b = sorted(glob.glob('/sys/class/leds/[lr]:b?/brightness'))
-        
+
         # Determine hardware max brightness (usually 255)
         self.max_val = 255
         if self.all_r:
@@ -481,7 +481,7 @@ class rgbledaddr(object):
 
     def _get_factor(self):
         val = batoconf("led.brightness")
-        if val is None: 
+        if val is None:
             return 1.0
         try:
             f_val = float(val)
@@ -494,7 +494,7 @@ class rgbledaddr(object):
     def _write_scaled(self, r, g, b):
         factor = self._get_factor()
         rs, gs, bs = str(int(r * factor)), str(int(g * factor)), str(int(b * factor))
-        
+
         for path in self.all_r:
             with open(path, 'w') as f: f.write(rs)
         for path in self.all_g:
@@ -555,7 +555,7 @@ class rgbledaddr(object):
                 coeff = float(1 - 2*i/EFFECT_STEP)
             else:
                 coeff = float((i - EFFECT_STEP/2) / (EFFECT_STEP/2))
-            
+
             # Apply pulse coefficient AND brightness factor via _write_scaled
             self._write_scaled(int(int(r_base)*coeff), int(int(g_base)*coeff), int(int(b_base)*coeff))
             time.sleep(PULSE_DURATION/EFFECT_STEP)
