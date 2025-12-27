@@ -266,6 +266,21 @@ handle_disk_event() {
     fi
     trap "rmdir '$parent_lock' 2>/dev/null" EXIT
 
+    # Force the kernel to look for partitions before we decide the disk is "empty"
+    if [ -z "$(lsblk -no NAME "/dev/$devname" | grep -v "^$devname$")" ]; then
+        log_msg "SAFETY: [$devname] No partitions seen. Probing for hidden tables..."
+        partprobe "/dev/$devname" >/dev/null 2>&1
+        # Use a short sleep to let the kernel update /dev
+        sleep 1 
+    fi
+
+    # Check if this disk contains any Android/Qualcomm/Critical labels
+    # This prevents prompting for format if we see things like 'abl', 'xbl', 'boot', etc.
+    if lsblk -no PARTLABEL "/dev/$devname" | grep -qiE "abl|xbl|boot|modem|vendor|system|persist|tz|hyp"; then
+        log_msg "SAFETY: [$devname] Critical bootloader/system partitions detected. Aborting format prompt."
+        exit 0
+    fi
+
     local pttype=$(blkid -s PTTYPE -o value "/dev/$devname")
     if [ -n "$pttype" ]; then
         # Check if any actual partition nodes exist in /dev (e.g. /dev/sda1)
@@ -336,6 +351,7 @@ handle_disk_event() {
 case "$COMMAND" in
 "detect")
     DEVNAME=$ARG2
+    [ -z "$DEVNAME" ] && exit 0
     log_msg "ENTRY: [$DEVNAME] Detect event triggered."
 
     PARENT_DISK=$(get_parent_disk "$DEVNAME")

@@ -16,7 +16,7 @@ ifeq ($(BR2_PACKAGE_FIRMWARE_ORANGEPI),y)
 ALLLINUXFIRMWARES_DEPENDENCIES += firmware-orangepi
 endif
 
-# exclude some dirs not required on batocera
+# These folders contain massive blobs for 40Gb/100Gb SmartNICs and Mainframes.rs not required on batocera
 ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 								$(@D)/cavium \
 								$(@D)/cxgb4 \
@@ -38,34 +38,27 @@ ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 								$(@D)/LICENCE* \
 								$(@D)/LICENSE*
 
-ifeq ($(BR2_arm)$(BR2_aarch64),y)
-ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
-								$(@D)/amd* \
-								$(@D)/apple \
-								$(@D)/ath10k \
-								$(@D)/ath11k \
-								$(@D)/ath12k \
-								$(@D)/c*.bin \
-								$(@D)/i915 \
-								$(@D)/intel \
-								$(@D)/iwlwifi* \
-								$(@D)/LENOVO \
-								$(@D)/nvidia \
-								$(@D)/q*.bin \
-								$(@D)/qat_* \
-								$(@D)/radeon
-endif
-
-# This removes strictly ARM/RISC-V SoC components while preserving all Wi-Fi/BT.
+# Remove strictly ARM/Mobile SoC components
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/apple \
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/airoha \
+								$(@D)/amlogic \
+								$(@D)/amphion \
+								$(@D)/apple \
+								$(@D)/ar3k \
 								$(@D)/arm \
+								$(@D)/cadence \
+								$(@D)/cis \
+								$(@D)/cnm \
+								$(@D)/dsp56k \
 								$(@D)/imx \
+								$(@D)/inside-secure \
+								$(@D)/ixp4xx \
 								$(@D)/meson \
 								$(@D)/microchip \
 								$(@D)/nvidia/tegra \
+								$(@D)/nxp \
+								$(@D)/powervr \
 								$(@D)/rockchip \
-								$(@D)/s5p-* \
 								$(@D)/starfive \
 								$(@D)/sun \
 								$(@D)/sunxi \
@@ -73,7 +66,45 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/apple \
 								$(@D)/ti \
 								$(@D)/ti-keystone \
 								$(@D)/v3d \
-								$(@D)/vc4
+								$(@D)/vc4 \
+								$(@D)/vicam
+endif
+
+# This removes strictly ARM/RISC-V SoC components while preserving all Wi-Fi/BT.
+ifeq ($(BR2_arm)$(BR2_aarch64),y)
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
+								$(@D)/3com \
+								$(@D)/acenic \
+								$(@D)/adaptec \
+								$(@D)/advansys \
+								$(@D)/amd-ucode \
+								$(@D)/amd* \
+								$(@D)/apple \
+								$(@D)/ath10k \
+								$(@D)/ath11k \
+								$(@D)/ath12k \
+								$(@D)/c*.bin \
+								$(@D)/cis \
+								$(@D)/dsp56k \
+								$(@D)/HP \
+								$(@D)/i915 \
+								$(@D)/intel \
+								$(@D)/iwlwifi* \
+								$(@D)/LENOVO \
+								$(@D)/matrox \
+								$(@D)/nvidia \
+								$(@D)/q*.bin \
+								$(@D)/qat_* \
+								$(@D)/radeon \
+								$(@D)/xe \
+								$(@D)/yamaha
+	# Prune other ARM SoC vendors if building a specific ARM target
+	ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
+		ALLLINUXFIRMWARES_REMOVE_DIRS += \
+		$(@D)/rockchip $(@D)/amlogic $(@D)/meson $(@D)/sunxi \
+		$(@D)/nxp $(@D)/imx $(@D)/starfive $(@D)/powervr \
+		$(@D)/airoha $(@D)/amphion $(@D)/cadence $(@D)/ar3k
+	endif
 endif
 
 # Remove Broadcom if RPi/External firmware is already handling it
@@ -94,7 +125,7 @@ endif
 define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/lib/firmware
 
-	# exclude some dirs not required on batocera
+	# Exclude defined directories
 	rm -rf $(ALLLINUXFIRMWARES_REMOVE_DIRS)
 
 	# RK3588 specific: Keep only Bluetooth 'ibt-*' from the Intel folder
@@ -106,6 +137,28 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	# this is not ideal, but i don't know how to tell to buildroot to install this package first
 	# (and not worry about all packages installing firmwares)
 	rsync -au --checksum $(@D)/ $(TARGET_DIR)/lib/firmware/
+
+	# Logic for X86_64: Prune ARM blobs inside folders used by both
+	if [ "$(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY)" = "y" ]; then \
+		find $(TARGET_DIR)/lib/firmware/mediatek -name "mt81*" -delete; \
+		rm -rf $(TARGET_DIR)/lib/firmware/mediatek/sof*; \
+		rm -rf $(TARGET_DIR)/lib/firmware/mrvl/cpt*; \
+		rm -f $(TARGET_DIR)/lib/firmware/a300_*.fw; \
+		rm -f $(TARGET_DIR)/lib/firmware/*.inp; \
+		rm -f $(TARGET_DIR)/lib/firmware/lt9611uxc_fw.bin; \
+		find $(TARGET_DIR)/lib/firmware/ti -maxdepth 1 -type f -delete; \
+	fi
+
+	# Logic for ARM SM8250: Prune other QCOM SoCs, keep only sm8250 folder
+	if [ "$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)" = "y" ]; then \
+		find $(TARGET_DIR)/lib/firmware/qcom -maxdepth 1 -type d ! -name "sm8250" ! -name "qcom" -exec rm -rf {} +; \
+		rm -f $(TARGET_DIR)/lib/firmware/a300_*.fw; \
+		rm -f $(TARGET_DIR)/lib/firmware/a420_*.fw; \
+		rm -f $(TARGET_DIR)/lib/firmware/a530_*.fw; \
+		rm -f $(TARGET_DIR)/lib/firmware/yamato_*.fw; \
+		rm -f $(TARGET_DIR)/lib/firmware/leia_*.fw; \
+	fi
+
 
 	# Some firmware are distributed as a symlink, for drivers to load them using a
 	# defined name other than the real one. Since 9cfefbd7fbda ("Remove duplicate
@@ -123,6 +176,7 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	done
 endef
 
+# Link Qualcomm Wi-Fi/BT for Steam Deck OLED and other x86 handhelds
 define ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
 	mkdir -p $(TARGET_DIR)/lib/firmware
 	tar -xf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/steamdeck-oled-firmware.tar.xz -C $(TARGET_DIR)/lib/firmware
