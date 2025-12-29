@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e8c5970fafdf1ae71dc460e70572c6c006653675|Dec 29, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|d6c58cc5a077f81c6d7656a9fd7cfb9a701ad35b|Dec 29, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|cc4db187075a60fc886f0c8f9ca5721cb5236edf|Dec 29, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|e035bd3a21edf86e9ab849151eb02483f60a89af|Dec 29, 2025
@@ -144,7 +145,6 @@ Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|ef33d51424950
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|ab6f942122e8511c573c9b0218520a1216fa809c|Dec 14, 2025
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2827-master|Dec 14, 2025
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|a137836711bbbd6e279310dc6e91bedc03904016|Dec 14, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|20af297d4f4cd00cb9c05a365f3178be2b015925|Dec 13, 2025
 Ports|[stk](http://github.com/supertuxkart/stk-code)|bb4549b272d66998dc54df067dde75cfe26c55b0|Dec 13, 2025
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|e70c3f82d2b861c64943aaff7fcc29a63013997d|Dec 13, 2025
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|93c8e7a2074e4fd8410398e3d571c6d9afec1d84|Dec 13, 2025
