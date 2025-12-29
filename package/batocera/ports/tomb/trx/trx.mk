@@ -3,8 +3,8 @@
 # trx
 #
 ################################################################################
-# Version: Commits on Dec 27, 2025
-TRX_VERSION = 8e721ef859a84c8c1bcf39b389a0578fe9fc9c7f
+# Version: Commits on Dec 28, 2025
+TRX_VERSION = 74d1b6e328eeba8a69cde2b56d7254df4ff2a4e6
 TRX_SITE = $(call github,LostArtefacts,TRX,$(TRX_VERSION))
 TRX_LICENSE = GPL-3.0 license
 TRX_LICENSE_FILES = COPYING.md
