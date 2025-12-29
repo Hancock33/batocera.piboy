@@ -10,4 +10,4 @@ LIBFYAML_INSTALL_STAGING = YES
 LIBFYAML_AUTORECONF = YES
 
 $(eval $(autotools-package))
-$(eval $(host-autotools-package))
+$(eval $(host-cmake-package))
