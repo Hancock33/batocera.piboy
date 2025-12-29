@@ -145,9 +145,8 @@ class MameGenerator(Generator):
         commandArray += [ "-cheat" ]
         commandArray += [ "-cheatpath",    MAME_CHEATS ]       # Should this point to path containing the cheat.7z file
 
-        # Logs and Swithres ini read by default (including its own verbose)
+        # logs
         commandArray += [ "-verbose" ]
-        commandArray += [ "-switchres_ini" ]
 
         # MAME saves a lot of stuff, we need to map this on /userdata/saves/mame/<subfolder> for each one
         commandArray += [ "-nvram_directory" ,    MAME_SAVES / "nvram" ]

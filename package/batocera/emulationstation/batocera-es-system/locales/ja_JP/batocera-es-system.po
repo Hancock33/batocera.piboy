@@ -4913,7 +4913,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "カスタム画像(png)のパス"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "カスタム設定"
@@ -5112,6 +5112,11 @@ msgstr "カートリッジ (スロット 4)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "ケースブック"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18437,7 +18442,7 @@ msgstr ""
 "アンチエイリアシングには MSAA ではなく SSAA を使用します。 SSAA は見た目は良"
 "くなりますが、パフォーマンスのコストが高くなります"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr "MAMEカスタム構成を使用する（起動時、設定を上書きしない）"

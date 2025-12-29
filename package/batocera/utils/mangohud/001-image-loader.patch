@@ -38,7 +38,7 @@ index d7d9a9b..95072c9 100644
  # media_player
  ## for example spotify
 diff --git a/meson.build b/meson.build
-index 6c44f5e..4b48ba0 100644
+index 1146a26..becd754 100644
 --- a/meson.build
 +++ b/meson.build
 @@ -170,6 +170,7 @@ else
@@ -48,38 +48,20 @@ index 6c44f5e..4b48ba0 100644
 +if get_option('use_vulkan')
  # Commented code can be used if mangohud start using latest SDK Vulkan-Headers
  # Allowing user to build mangohud using system Vulkan-Headers
- #if not dependency('VulkanHeaders').found()
-@@ -181,17 +182,19 @@ endif
- #  vk_api_xml = files('/usr/share/vulkan/registry/vk.xml')
- #endif
- 
--
--
--vk_enum_to_str = custom_target(
--  'vk_enum_to_str',
--  input : ['bin/gen_enum_to_str.py', vk_api_xml],
--  output : ['vk_enum_to_str.c', 'vk_enum_to_str.h'],
--  command : [
--    prog_python, '@INPUT0@', '--xml', '@INPUT1@',
--    '--outdir', meson.current_build_dir()
--  ],
+ # if not dependency('VulkanHeaders').found()
+@@ -192,7 +193,11 @@ vk_enum_to_str = custom_target(
+     '--out-d', '@OUTPUT2@',
+     '--beta', 'false'
+   ],
 -)
-+  vk_enum_to_str = custom_target(
-+    'vk_enum_to_str',
-+    input : ['bin/gen_enum_to_str.py', vk_api_xml],
-+    output : ['vk_enum_to_str.c', 'vk_enum_to_str.h'],
-+    command : [
-+      prog_python, '@INPUT0@', '--xml', '@INPUT1@',
-+      '--outdir', meson.current_build_dir()
-+    ],
 +  )
 +else
 +  dep_vulkan = null_dep
 +  vk_enum_to_str = []
 +endif
  
- imgui_options = [
-   'default_library=static',
+ vk_dispatch_table = custom_target(
+   'vk_dispatch_table',
 diff --git a/meson_options.txt b/meson_options.txt
 index 2bdaed1..7d65538 100644
 --- a/meson_options.txt
@@ -163,7 +145,7 @@ index 6de08e7..7aad40c 100644
  #include "mesa/util/macros.h"
  #include "mesa/util/os_time.h"
 diff --git a/src/hud_elements.cpp b/src/hud_elements.cpp
-index e76f192..c1eac87 100644
+index 92cfe59..7bc69f8 100644
 --- a/src/hud_elements.cpp
 +++ b/src/hud_elements.cpp
 @@ -27,6 +27,7 @@
@@ -174,7 +156,7 @@ index e76f192..c1eac87 100644
  #include "winesync.h"
  #include "fps_limiter.h"
  
-@@ -905,6 +906,7 @@ void HudElements::engine_version(){
+@@ -903,6 +904,7 @@ void HudElements::engine_version(){
          ImguiNextColumnFirstItem();
          ImGui::PushFont(HUDElements.sw_stats->font_secondary);
          if (HUDElements.is_vulkan) {
@@ -182,7 +164,7 @@ index e76f192..c1eac87 100644
              if ((HUDElements.sw_stats->engine == EngineTypes::DXVK || HUDElements.sw_stats->engine == EngineTypes::VKD3D)){
                  HUDElements.TextColored(HUDElements.colors.engine,
                      "%s/%d.%d.%d", HUDElements.sw_stats->engineVersion.c_str(),
-@@ -918,6 +920,7 @@ void HudElements::engine_version(){
+@@ -916,6 +918,7 @@ void HudElements::engine_version(){
                      HUDElements.sw_stats->version_vk.minor,
                      HUDElements.sw_stats->version_vk.patch);
              }
@@ -190,7 +172,7 @@ index e76f192..c1eac87 100644
          } else {
              HUDElements.TextColored(HUDElements.colors.engine,
                  "%d.%d%s", HUDElements.sw_stats->version_gl.major, HUDElements.sw_stats->version_gl.minor,
-@@ -1163,6 +1166,80 @@ void HudElements::custom_text_center(){
+@@ -1161,6 +1164,80 @@ void HudElements::custom_text_center(){
      }
  }
  
@@ -271,7 +253,7 @@ index e76f192..c1eac87 100644
  void HudElements::custom_text(){
      ImguiNextColumnFirstItem();
      ImGui::PushFont(HUDElements.sw_stats->font_secondary);
-@@ -1986,6 +2063,8 @@ void HudElements::sort_elements(const std::pair<std::string, std::string>& optio
+@@ -1984,6 +2061,8 @@ void HudElements::sort_elements(const std::pair<std::string, std::string>& optio
          {"winesync", {winesync}},
          {"present_mode", {present_mode}},
          {"network", {network}},
@@ -402,7 +384,7 @@ index 0000000..c12ca07
 +
 +bool GL_LoadTextureFromFile(const char* filename, GLuint* out_texture, int* out_width, int* out_height, int maxwidth);
 diff --git a/src/meson.build b/src/meson.build
-index df7a164..e293608 100644
+index e500c0c..18c8faf 100644
 --- a/src/meson.build
 +++ b/src/meson.build
 @@ -109,6 +109,7 @@ if is_unixy
@@ -421,7 +403,7 @@ index df7a164..e293608 100644
  mangohud_static_lib = static_library(
    'MangoHud',
    mangohud_version,
-@@ -190,11 +192,13 @@ mangohud_static_lib = static_library(
+@@ -192,11 +194,13 @@ mangohud_static_lib = static_library(
    overlay_spv,
    c_args : [
      pre_args,
@@ -437,7 +419,7 @@ index df7a164..e293608 100644
      ],
    gnu_symbol_visibility : 'hidden',
    dependencies : [
-@@ -214,6 +218,7 @@ mangohud_static_lib = static_library(
+@@ -216,6 +220,7 @@ mangohud_static_lib = static_library(
    install_dir : libdir_mangohud,
    install : false
  )
@@ -457,7 +439,7 @@ index dc6bb00..313a888 100644
 +    fColor = In.Color * texture(sTexture, In.UV.st);
  }
 diff --git a/src/overlay.h b/src/overlay.h
-index dbb81b9..7d802e6 100644
+index cad97c2..442623a 100644
 --- a/src/overlay.h
 +++ b/src/overlay.h
 @@ -173,6 +173,7 @@ extern void control_client_check(int control, int& control_client, const std::st
@@ -18881,10 +18863,10 @@ index 0000000..f48c509
 +------------------------------------------------------------------------------
 +*/
 diff --git a/src/vulkan.cpp b/src/vulkan.cpp
-index 4565a93..3931dcb 100644
+index ffadf25..91a7666 100644
 --- a/src/vulkan.cpp
 +++ b/src/vulkan.cpp
-@@ -62,6 +62,11 @@
+@@ -63,6 +63,11 @@
  #include "imgui_utils.h"
  #include "fps_limiter.h"
  
@@ -18896,7 +18878,7 @@ index 4565a93..3931dcb 100644
  using namespace std;
  
  float offset_x, offset_y, hudSpacing;
-@@ -74,6 +79,22 @@ namespace MangoHud { namespace GL {
+@@ -75,6 +80,22 @@ namespace MangoHud { namespace GL {
  }}
  #endif
  
@@ -18919,7 +18901,7 @@ index 4565a93..3931dcb 100644
  /* Mapped from VkInstace/VkPhysicalDevice */
  struct instance_data {
     struct vk_instance_dispatch_table vtable;
-@@ -170,12 +191,17 @@ struct swapchain_data {
+@@ -172,12 +193,17 @@ struct swapchain_data {
     std::vector<overlay_draw *> draws; /* vector of struct overlay_draw */
  
     bool font_uploaded;
@@ -18940,7 +18922,7 @@ index 4565a93..3931dcb 100644
     struct imgui_contexts imgui_contexts;
  
     ImFontAtlas* font_atlas;
-@@ -226,6 +252,7 @@ static void unmap_object(uint64_t obj)
+@@ -228,6 +254,7 @@ static void unmap_object(uint64_t obj)
  /**/
  
  static void shutdown_swapchain_font(struct swapchain_data*);
@@ -18948,7 +18930,7 @@ index 4565a93..3931dcb 100644
  
  static VkLayerInstanceCreateInfo *get_instance_chain_info(const VkInstanceCreateInfo *pCreateInfo,
                                                            VkLayerFunction func)
-@@ -641,12 +668,13 @@ static void create_image(struct swapchain_data *data,
+@@ -643,12 +670,13 @@ static void create_image(struct swapchain_data *data,
                          uint32_t width,
                          uint32_t height,
                          VkFormat format,
@@ -18965,7 +18947,7 @@ index 4565a93..3931dcb 100644
     VkImageCreateInfo image_info = {};
     image_info.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;
     image_info.imageType = VK_IMAGE_TYPE_2D;
-@@ -662,10 +690,10 @@ static void create_image(struct swapchain_data *data,
+@@ -664,10 +692,10 @@ static void create_image(struct swapchain_data *data,
     image_info.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
     image_info.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
     VK_CHECK(device_data->vtable.CreateImage(device_data->device, &image_info,
@@ -18978,7 +18960,7 @@ index 4565a93..3931dcb 100644
     VkMemoryAllocateInfo image_alloc_info = {};
     image_alloc_info.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
     image_alloc_info.allocationSize = font_image_req.size;
-@@ -673,33 +701,31 @@ static void create_image(struct swapchain_data *data,
+@@ -675,33 +703,31 @@ static void create_image(struct swapchain_data *data,
                                                       VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,
                                                       font_image_req.memoryTypeBits);
     VK_CHECK(device_data->vtable.AllocateMemory(device_data->device, &image_alloc_info,
@@ -19019,7 +19001,7 @@ index 4565a93..3931dcb 100644
  {
     struct device_data *device_data = data->device;
  
-@@ -714,10 +740,71 @@ static VkDescriptorSet create_image_with_desc(struct swapchain_data *data,
+@@ -716,10 +742,71 @@ static VkDescriptorSet create_image_with_desc(struct swapchain_data *data,
                                                         &alloc_info,
                                                         &descriptor_set));
  
@@ -19092,7 +19074,7 @@ index 4565a93..3931dcb 100644
  static void check_fonts(struct swapchain_data* data)
  {
     struct device_data *device_data = data->device;
-@@ -731,16 +818,16 @@ static void check_fonts(struct swapchain_data* data)
+@@ -733,16 +820,16 @@ static void check_fonts(struct swapchain_data* data)
        create_fonts(data->font_atlas, instance_data->params, data->sw_stats.font_small, data->sw_stats.font_text, data->sw_stats.font_secondary);
        unsigned char* pixels;
        int width, height;
@@ -19112,7 +19094,7 @@ index 4565a93..3931dcb 100644
  
        data->font_atlas->SetTexID((ImTextureID)desc_set);
        data->font_uploaded = false;
-@@ -762,9 +849,38 @@ static void ensure_swapchain_fonts(struct swapchain_data *data,
+@@ -764,9 +851,38 @@ static void ensure_swapchain_fonts(struct swapchain_data *data,
     data->font_uploaded = true;
     unsigned char* pixels;
     int width, height;
@@ -19133,7 +19115,7 @@ index 4565a93..3931dcb 100644
 +   // load
 +   int ret = stbi_info(filename.c_str(), &original_width, &original_height, &channels);
 +   if (!ret)
-+      return nullptr;
++      return 0;
 +
 +   // reduce the image
 +   float ratio = 1.0;
@@ -19154,7 +19136,7 @@ index 4565a93..3931dcb 100644
  }
  
  static void CreateOrResizeBuffer(struct device_data *data,
-@@ -840,6 +956,36 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -842,6 +958,36 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
  
     ensure_swapchain_fonts(data, draw->command_buffer);
  
@@ -19191,7 +19173,7 @@ index 4565a93..3931dcb 100644
     /* Bounce the image to display back to color attachment layout for
      * rendering on top of it.
      */
-@@ -916,7 +1062,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -918,7 +1064,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
     /* Bind pipeline and descriptor sets */
     device_data->vtable.CmdBindPipeline(draw->command_buffer, VK_PIPELINE_BIND_POINT_GRAPHICS, data->pipeline);
  
@@ -19200,7 +19182,7 @@ index 4565a93..3931dcb 100644
     VkDescriptorSet desc_set[1] = {
        //data->descriptor_set
        reinterpret_cast<VkDescriptorSet>(data->font_atlas->TexID)
-@@ -979,7 +1125,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -981,7 +1127,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
           scissor.extent.width = (uint32_t)(pcmd->ClipRect.z - pcmd->ClipRect.x);
           scissor.extent.height = (uint32_t)(pcmd->ClipRect.w - pcmd->ClipRect.y + 1); // FIXME: Why +1 here?
           device_data->vtable.CmdSetScissor(draw->command_buffer, 0, 1, &scissor);
@@ -19209,7 +19191,7 @@ index 4565a93..3931dcb 100644
           VkDescriptorSet desc_set[1] = { (VkDescriptorSet)pcmd->TextureId };
           device_data->vtable.CmdBindDescriptorSets(draw->command_buffer, VK_PIPELINE_BIND_POINT_GRAPHICS,
                                                     data->pipeline_layout, 0, 1, desc_set, 0, NULL);
-@@ -1116,12 +1262,13 @@ static void setup_swapchain_data_pipeline(struct swapchain_data *data)
+@@ -1118,12 +1264,13 @@ static void setup_swapchain_data_pipeline(struct swapchain_data *data)
     /* Descriptor pool */
     VkDescriptorPoolSize sampler_pool_size = {};
     sampler_pool_size.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
@@ -19225,7 +19207,7 @@ index 4565a93..3931dcb 100644
     VK_CHECK(device_data->vtable.CreateDescriptorPool(device_data->device,
                                                       &desc_pool_info,
                                                       NULL, &data->descriptor_pool));
-@@ -1465,18 +1612,37 @@ static void setup_swapchain_data(struct swapchain_data *data,
+@@ -1467,18 +1614,37 @@ static void setup_swapchain_data(struct swapchain_data *data,
     make_imgui_contexts_current(saved_imgui_contexts);
  }
  
@@ -19268,7 +19250,7 @@ index 4565a93..3931dcb 100644
  static void shutdown_swapchain_data(struct swapchain_data *data)
  {
     struct device_data *device_data = data->device;
-@@ -1499,6 +1665,9 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
+@@ -1501,6 +1667,9 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
        device_data->vtable.DestroyFramebuffer(device_data->device, data->framebuffers[i], NULL);
     }
  
@@ -19278,7 +19260,7 @@ index 4565a93..3931dcb 100644
     device_data->vtable.DestroyRenderPass(device_data->device, data->render_pass, NULL);
  
     device_data->vtable.DestroyCommandPool(device_data->device, data->command_pool, NULL);
-@@ -1512,7 +1681,6 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
+@@ -1514,7 +1683,6 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
                                                    data->descriptor_layout, NULL);
  
     device_data->vtable.DestroySampler(device_data->device, data->font_sampler, NULL);

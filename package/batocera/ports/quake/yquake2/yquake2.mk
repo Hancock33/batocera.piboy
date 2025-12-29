@@ -3,8 +3,8 @@
 # yquake2
 #
 ################################################################################
-# Version: Commits on Dec 25, 2025
-YQUAKE2_VERSION = ac93f1bb78377f2585d005e1c2958001d9adcdf7
+# Version: Commits on Dec 29, 2025
+YQUAKE2_VERSION = aae4be811053c0857d4022eb26d76ac655e51c37
 YQUAKE2_SITE = $(call github,yquake2,yquake2remaster,$(YQUAKE2_VERSION))
 YQUAKE2_LICENSE = GPLv2
 YQUAKE2_LICENSE_FILES = LICENSE
@@ -35,7 +35,7 @@ ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
     YQUAKE2_CONF_OPTS += -DGL1_RENDERER=ON -DGL3_RENDERER=ON
 endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-    GL4_RENDERER=on
+    YQUAKE2_CONF_OPTS += -DGL4_RENDERER=ON
 endif
 ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
     YQUAKE2_CONF_OPTS += -DGLES3_RENDERER=ON

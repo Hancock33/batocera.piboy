@@ -34,6 +34,8 @@ ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 								$(@D)/ql2* \
 								$(@D)/qlogic \
 								$(@D)/s5p-mfc* \
+								$(@D)/ti-keystone \
+								$(@D)/ti-connectivity \
 								$(@D)/ueagle-atm \
 								$(@D)/LICENCE* \
 								$(@D)/LICENSE*
@@ -64,7 +66,6 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/airoha \
 								$(@D)/sunxi \
 								$(@D)/sxg \
 								$(@D)/ti \
-								$(@D)/ti-keystone \
 								$(@D)/v3d \
 								$(@D)/vc4 \
 								$(@D)/vicam
@@ -140,13 +141,12 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 
 	# Logic for X86_64: Prune ARM blobs inside folders used by both
 	if [ "$(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY)" = "y" ]; then \
-		find $(TARGET_DIR)/lib/firmware/mediatek -name "mt81*" -delete; \
+		rm -rf $(TARGET_DIR)/lib/firmware/mediatek/mt81*; \
 		rm -rf $(TARGET_DIR)/lib/firmware/mediatek/sof*; \
 		rm -rf $(TARGET_DIR)/lib/firmware/mrvl/cpt*; \
 		rm -f $(TARGET_DIR)/lib/firmware/a300_*.fw; \
 		rm -f $(TARGET_DIR)/lib/firmware/*.inp; \
 		rm -f $(TARGET_DIR)/lib/firmware/lt9611uxc_fw.bin; \
-		find $(TARGET_DIR)/lib/firmware/ti -maxdepth 1 -type f -delete; \
 	fi
 
 	# Logic for ARM SM8250: Prune other QCOM SoCs, keep only sm8250 folder

@@ -4932,7 +4932,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "EGYÉNI .PNG KÉPÚTVONAL"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "EGYÉNI BEÁLLÍTÁS"
@@ -5138,6 +5138,11 @@ msgstr "Cartridge (Slot 4)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "Casebook"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18625,7 +18630,7 @@ msgstr ""
 "Használja az SSAA-t az MSAA helyett az anti-aliasinghez. Az SSAA jobban "
 "nézhet ki, de nagyobb teljesítményköltséggel jár."
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""

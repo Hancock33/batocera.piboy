@@ -4855,16 +4855,6 @@ msgctxt "game_options"
 msgid "BIOS Language"
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
-msgctxt "game_options"
-msgid "Use a custom MAME config, do not overwrite config on launch."
-msgstr ""
-
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
-msgctxt "game_options"
-msgid "CUSTOM CONFIG"
-msgstr ""
-
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "SNES Style"
@@ -4941,6 +4931,16 @@ msgstr ""
 #. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "CROP ARTWORK"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
+msgctxt "game_options"
+msgid "Use a custom MAME config, do not overwrite config on launch."
+msgstr ""
+
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
+msgctxt "game_options"
+msgid "CUSTOM CONFIG"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
@@ -5426,6 +5426,11 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "Lynx 128k"
+msgstr ""
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
