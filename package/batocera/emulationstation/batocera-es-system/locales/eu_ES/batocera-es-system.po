@@ -4906,7 +4906,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "NEURRIRA EGINIKO .PNG IRUDIRAKO BIDEA"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "NEURRIRAKO KONFIGURAZIOA"
@@ -5111,6 +5111,11 @@ msgstr "Kartutxo (4 Zirrikitua)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "Erregistroa"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18393,7 +18398,7 @@ msgid ""
 "higher performance cost."
 msgstr ""
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""

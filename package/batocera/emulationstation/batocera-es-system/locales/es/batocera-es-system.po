@@ -4940,7 +4940,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "RUTA DE IMAGEN .PNG PERSONALIZADA"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "CONFIG. PERSONALIZADA"
@@ -5149,6 +5149,11 @@ msgstr "Cartucho (Ranura 4)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "Libro de casos"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18648,7 +18653,7 @@ msgstr ""
 "Utiliza SSAA en lugar de MSAA para suavizar. SSAA puede verse mejor pero "
 "tiene un coste de rendimiento más alto."
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""

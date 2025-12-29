@@ -4923,7 +4923,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "ĐƯỜNG DẪN HÌNH ẢNH .PNG CÁ NHÂN"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "CẤU HÌNH TÙY CHỈNH"
@@ -5130,6 +5130,11 @@ msgstr "Cartridge (Slot 4)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "Casebook"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18507,7 +18512,7 @@ msgstr ""
 "Sử dụng SSAA thay vì MSAA để khử răng cưa. SSAA có thể trông đẹp hơn nhưng "
 "sẽ làm giảm hiệu năng toàn hệ thống."
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""

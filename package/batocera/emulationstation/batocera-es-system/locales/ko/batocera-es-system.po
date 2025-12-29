@@ -4913,7 +4913,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "커스텀 .PNG 이미지 경로"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "커스텀 구성"
@@ -5118,6 +5118,11 @@ msgstr "카트리지 (슬롯 4)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "사례집"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18468,7 +18473,7 @@ msgstr ""
 "안티에일리어싱을 위해 MSAA 대신 SSAA를 사용합니다. SSAA는 보기에는 더 좋지만 "
 "성능 비용이 더 높습니다."
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr "커스텀 마메 구성을 사용하고, 시작 시 구성을 덮어쓰지 마세요."

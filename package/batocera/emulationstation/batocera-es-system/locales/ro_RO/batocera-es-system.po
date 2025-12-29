@@ -4929,7 +4929,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "CALE IMAGINE PERSONALIZATĂ .PNG"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "CONFIGURAȚIE PERSONALIZATĂ"
@@ -5136,6 +5136,11 @@ msgstr "Cartelă (Slot 4)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "Registru de caz"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18606,7 +18611,7 @@ msgstr ""
 "Folosește SSAA în loc de MSAA pentru anti-aliasing. SSAA poate să arate mai "
 "bine, dar are un cost de performanță mai mare."
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""

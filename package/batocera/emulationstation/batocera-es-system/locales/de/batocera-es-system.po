@@ -4931,7 +4931,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "BENUTZERDEFINIERTER .PNG BILD-DATEIPFAD"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "BENUTZERDEF. KONFIGURATION"
@@ -5142,6 +5142,11 @@ msgstr "Steckmodul (Steckplatz 4)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "Fallbuch"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18654,7 +18659,7 @@ msgstr ""
 "Verwende SSAA anstelle von MSAA für Antialiasing. SSAA sieht zwar besser "
 "aus, hat aber einen höheren Leistungsaufwand."
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr ""

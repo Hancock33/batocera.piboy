@@ -4896,7 +4896,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "自定义PNG图像路径"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "自定义配置"
@@ -5093,6 +5093,11 @@ msgstr "卡带（插槽 4）"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "案例集"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18241,7 +18246,7 @@ msgid ""
 "higher performance cost."
 msgstr "使用SSAA而不是MSAA来消除混叠, SSAA可能看起来更好, 但性能成本更高."
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr "使用自定义MAME配置文件，不在启动时覆盖默认配置。"

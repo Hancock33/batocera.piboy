@@ -4937,7 +4937,7 @@ msgctxt "game_options"
 msgid "CUSTOM .PNG IMAGE PATH"
 msgstr "CHEMIN DE L'IMAGE .PNG PERSONALISÉ"
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi, mame
+#. TRANSLATION: libretro/mame, libretro/mamevirtual, mame
 msgctxt "game_options"
 msgid "CUSTOM CONFIG"
 msgstr "CONFIG PERSONNALISÉE"
@@ -5147,6 +5147,11 @@ msgstr "Cartouche (Fente 4)"
 msgctxt "keys_files"
 msgid "Casebook"
 msgstr "Recueil de cas"
+
+#. TRANSLATION: libretro/mame, mame
+msgctxt "game_options"
+msgid "Casio Loopy cartridges"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18636,7 +18641,7 @@ msgstr ""
 "Utiliser SSAA au lieu de MSAA pour l'anticrénelage. SSAA peut paraître "
 "meilleur mais a un coût de performance plus élevé."
 
-#. TRANSLATION: libretro/mame, libretro/mamevirtual, libretro/same_cdi
+#. TRANSLATION: libretro/mame, libretro/mamevirtual
 msgctxt "game_options"
 msgid "Use a custom MAME config, do not overwrite config on launch."
 msgstr "Utiliser une config MAME personnalisée, ne l'écrase pas au lancement."
