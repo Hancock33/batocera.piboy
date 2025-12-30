@@ -18,6 +18,7 @@ Ports|[box64](http://github.com/ptitseb/box64)|4759e2d20d221354c935cc9e94fac35e5
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|1c9e1bddc21e21e16a1c12c6b2304977657edd16|Dec 30, 2025
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|148c80ae5732956551f3304cbf4216fe479d311f|Dec 30, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|4197bcabf25d91e0af83c0418350b768cfddbd29|Dec 30, 2025
+Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.1|Dec 30, 2025
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251230|Dec 30, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3bd71352f807a61537a7f9dd04424d5784141b62|Dec 30, 2025
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|5ecd2fe926aca7abfe40724177f63b942cff3947|Dec 30, 2025
@@ -102,7 +103,6 @@ Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|fd4c240da
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.13.0|Dec 24, 2025
 Ports|[bstone](http://github.com/bibendovsky/bstone)|5aab7bbd10af8d032e78cc18f9034825c64339d9|Dec 24, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|3c5add5fb7f83d4ceb542823ab66d00146c4271b|Dec 24, 2025
-Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.0|Dec 24, 2025
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|b29b1f068e17ef9071d9cfd52115fcad03918765|Dec 24, 2025
 Engines|[openbor7530](http://github.com/DCurrent/openbor)|7569231a0ae3f0a7f5a6697b2ce4f09a0cf50a43|Dec 24, 2025
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|0ed681362b6f7ac7381e0320501823be6d843006|Dec 24, 2025
