@@ -1,8 +1,8 @@
-#
+################################################################################
 # This file is part of the batocera distribution (https://batocera.org).
 # Copyright (c) 2025+.
 #
-# This program is free software: you can redistribute it and/or modify
+# This script is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3.
 #
@@ -10,7 +10,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 # YOU MUST KEEP THIS HEADER AS IT IS
-#
+################################################################################
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
@@ -105,7 +105,7 @@ class YQuake2Generator(Generator):
         romName = rom.name
         swapButtons = "1" if esSettings.getInvertButtonsValue() else "0"
 
-        commandArray = [ "/usr/bin/yquake2/quake2", "-datadir", "/userdata/roms/ports/quake2",  "-cfgdir", "configs/yquake2",
+        commandArray = [ "/usr/bin/yquake2/quake2", "-cfgdir", "configs/yquake2",
                          "+set", "joy_confirm", swapButtons ]
 
         if pad := Controller.find_player_number(playersControllers, 1):
@@ -118,6 +118,11 @@ class YQuake2Generator(Generator):
             commandArray.extend(["+set", "game", "rogue"])
         elif "zaero" in romName.lower():
             commandArray.extend(["+set", "game", "zaero"])
+            
+        if "rtx" in romName.lower():
+            commandArray.extend(["-datadir", "/userdata/roms/ports/quake2/rtx"])
+        else:
+            commandArray.extend(["-datadir", "/userdata/roms/ports/quake2"])
 
         return Command.Command(
             array=commandArray,

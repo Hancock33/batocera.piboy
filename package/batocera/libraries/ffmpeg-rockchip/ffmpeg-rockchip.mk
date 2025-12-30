@@ -309,9 +309,10 @@ endif
 
 # To avoid a circular dependency only use opencv if opencv itself does
 # not depend on ffmpeg.
-ifeq ($(BR2_PACKAGE_OPENCV3_LIB_IMGPROC)x$(BR2_PACKAGE_OPENCV3_WITH_FFMPEG),yx)
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-libopencv
-FFMPEG_ROCKCHIP_DEPENDENCIES += opencv3
+ifeq ($(BR2_PACKAGE_OPENCV4_LIB_IMGPROC)x$(BR2_PACKAGE_OPENCV4_WITH_FFMPEG),yx)
+FFMPEG_ROCKCHIP_CONF_OPTS += --enable-libopencv \
+	--extra-cflags=-I$(STAGING_DIR)/usr/include/opencv4
+FFMPEG_ROCKCHIP_DEPENDENCIES += opencv4
 else
 FFMPEG_ROCKCHIP_CONF_OPTS += --disable-libopencv
 endif

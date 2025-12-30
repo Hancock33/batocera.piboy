@@ -35,6 +35,13 @@ else
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
 
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+    CEMU_CONF_OPTS += -DENABLE_VULKAN=ON
+    CEMU_DEPENDENCIES += glslang
+else
+    CEMU_DEPENDENCIES += -DENABLE_VULKAN=OFF
+endif
+
 define CEMU_WAYLAND_CMAKE
 	$(SED) 's:$${WaylandProtocols_DATADIR}:$(STAGING_DIR)/usr/share/wayland-protocols:g' $(@D)/CMakeLists.txt
 endef
