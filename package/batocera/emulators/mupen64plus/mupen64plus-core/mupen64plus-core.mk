@@ -78,7 +78,7 @@ define MUPEN64PLUS_CORE_BUILD_CMDS
 		PKG_CONFIG="$(HOST_DIR)/bin/pkg-config" \
 		HOST_CPU="$(MUPEN64PLUS_HOST_CPU)" \
 		-C $(@D)/projects/unix all $(MUPEN64PLUS_PARAMS) \
-		OPTFLAGS="$(TARGET_CXXFLAGS) -Wno-implicit-function-declaration -Wno-int-conversion -I$(BUILD_DIR)/minizip-zlib-$(MINIZIP_ZLIB_VERSION)/contrib/minizip"
+		OPTFLAGS="$(TARGET_CXXFLAGS) -Wno-implicit-function-declaration -Wno-int-conversion"
 endef
 
 define MUPEN64PLUS_CORE_INSTALL_STAGING_CMDS
