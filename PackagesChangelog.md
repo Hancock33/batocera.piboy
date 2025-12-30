@@ -3,18 +3,21 @@
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|7402350c466ba20f175ebc9f1304ae4354c503a7|Dec 30, 2025
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|7402350c466ba20f175ebc9f1304ae4354c503a7|Dec 30, 2025
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|40d512cafdd59ceb85e32e56d2651065a3f43492|Dec 30, 2025
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|e639d565f71975ac4b6cdd021d73462a5de81ba2|Dec 30, 2025
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|83f5fdcab93f11e2ad86af6cb8c9e6e42691de75|Dec 30, 2025
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|e4cbcec2f10b1d03626eb0c79971eb6272fd6e87|Dec 30, 2025
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|e12a73e8a0c5701dd87b23c51dacf1375319d70f|Dec 30, 2025
 Emulators|[hatari](http://github.com/hatari/hatari)|c16877c82bd8784b9bdac5a4d44e042ba2bec57a|Dec 30, 2025
 Emulators|[play](https://github.com/jpd002/Play-.git)|8de4a71f5215ef38e357ac77a07948eb3424448f|Dec 30, 2025
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|34fde065b76805c851d7c4b5bc4c67a3d347aab9|Dec 30, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|d929596b0fbde73ebccc3bccb530b10b8f6fc3d0|Dec 30, 2025
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45929|Dec 30, 2025
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|afc66a3ba07fcf1294372cb7b02b92d7eadcdb46|Dec 30, 2025
-Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|f3f1d56e8de72a9663438be36534afb4713557ef|Dec 30, 2025
+Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|ceef792f0416732060cb3d3b991d70e4fb820039|Dec 30, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-30|Dec 30, 2025
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|7af8ef10bd0222a4e1ee54c25904d5e0e3ca37f7|Dec 30, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|4759e2d20d221354c935cc9e94fac35e5e1ad9e4|Dec 30, 2025
+Ports|[bstone](http://github.com/bibendovsky/bstone)|da2e014577d00bcd37d21e83e6b5c97f66913072|Dec 30, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|1c9e1bddc21e21e16a1c12c6b2304977657edd16|Dec 30, 2025
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|148c80ae5732956551f3304cbf4216fe479d311f|Dec 30, 2025
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|4197bcabf25d91e0af83c0418350b768cfddbd29|Dec 30, 2025
@@ -24,22 +27,22 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|3bd71352f807a61537a7
 Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|5ecd2fe926aca7abfe40724177f63b942cff3947|Dec 30, 2025
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251230|Dec 30, 2025
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ff80a30e9de3aa2c42002529e4e7fa1a438a8a9a|Dec 30, 2025
-Ports|[trx](http://github.com/LostArtefacts/TRX)|6b84a19f7a7f7ed9a3c4ec1bcc732cc72b7e72d8|Dec 30, 2025
-Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|87397c6628cfa52ede42489f47e3c2a2cd523c35|Dec 30, 2025
+Ports|[trx](http://github.com/LostArtefacts/TRX)|8d66ccbd768000473e17ef82596666ef1b0e5d7f|Dec 30, 2025
+Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|4495975e7e794bc25efc8afeef780d36f1f67897|Dec 30, 2025
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|34fde065b76805c851d7c4b5bc4c67a3d347aab9|Dec 30, 2025
+Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|2f4a6f231ec40ecfc0ab7df0a09eb932e7ccddec|Dec 30, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|881828910e77c799c1a6894cadc2d05a5c2f3f70|Dec 30, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|825654b39ed908e09285282a58b39e14b8f6da8c|Dec 30, 2025
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|ab0c81f11b7b25a33cc502f37ad4887dbd24037a|Dec 30, 2025
 Emulators|[libretro-xrick](http://github.com/libretro/xrick-libretro)|34e4c3fc8a679d0209debc3738dc7264d3112a03|Dec 30, 2025
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e8c5970fafdf1ae71dc460e70572c6c006653675|Dec 29, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|d6c58cc5a077f81c6d7656a9fd7cfb9a701ad35b|Dec 29, 2025
 Emulators|[ares](http://github.com/ares-emulator/ares)|cc4db187075a60fc886f0c8f9ca5721cb5236edf|Dec 29, 2025
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|e035bd3a21edf86e9ab849151eb02483f60a89af|Dec 29, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|7330cdf3a9cdf109a5368ab36cc0543a945b08ee|Dec 29, 2025
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|4886dcb1c20cd4a85627cc4970d9d01cdf1c2d7d|Dec 29, 2025
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|8fa251f40ef40db3987bc4c5786e78ad9e5db294|Dec 29, 2025
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|62f8c527e2c870a1b61c077097bf672f08c71ffe|Dec 29, 2025
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.405|Dec 29, 2025
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|894882c710b0011dc812e6d5813ed1c2d9717ed0|Dec 29, 2025
-Emulators|[vita3k](https://github.com/vita3k/vita3k)|7b21f596aa7e1e4513461983fb1e958746719818|Dec 29, 2025
+Emulators|[vita3k](https://github.com/vita3k/vita3k)|fe808487a654499779c09fe40bb1116e01368973|Dec 29, 2025
 Engines|[lightspark](http://github.com/lightspark/lightspark)|2ed1d3e0a3d61bc3d05d1f3ddef33ac2b40d5013|Dec 29, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|e2bd2bc5fc84323c5518140e9bfa24f270cb08d3|Dec 29, 2025
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v0.9.2|Dec 29, 2025
@@ -56,8 +59,6 @@ Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|4886dcb1
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|ab107c492cfc14fc13b19b5dbca1fab25c5aab99|Dec 29, 2025
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|ec548718df7a9873797a2c3e130e0150f770cd1f|Dec 29, 2025
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|5ba93bd17c02d7389316cbc69acd1b8eb87b29d6|Dec 29, 2025
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|894882c710b0011dc812e6d5813ed1c2d9717ed0|Dec 29, 2025
-Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|858f0034650fc91778f2cf9adaf801ce77d2fe68|Dec 29, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|e2bd2bc5fc84323c5518140e9bfa24f270cb08d3|Dec 29, 2025
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|f2943c96ced8e139f6e43f2c586fcc4b5ef9f532|Dec 29, 2025
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|ad911d1ea6be131e23e1877d15fb4dd5a389fd63|Dec 29, 2025
@@ -101,7 +102,6 @@ Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|177f2
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|b82227a31b82a094f0ffc67a85b03adea4c62aaa|Dec 25, 2025
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|fd4c240da0753caa5a0362e1d8f64ee33ab20fa9|Dec 25, 2025
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.13.0|Dec 24, 2025
-Ports|[bstone](http://github.com/bibendovsky/bstone)|5aab7bbd10af8d032e78cc18f9034825c64339d9|Dec 24, 2025
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|3c5add5fb7f83d4ceb542823ab66d00146c4271b|Dec 24, 2025
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|b29b1f068e17ef9071d9cfd52115fcad03918765|Dec 24, 2025
 Engines|[openbor7530](http://github.com/DCurrent/openbor)|7569231a0ae3f0a7f5a6697b2ce4f09a0cf50a43|Dec 24, 2025
@@ -576,4 +576,5 @@ Boot|[uboot-odroid-m1s](https://ftp.denx.de/pub/u-boot)|2025.10|N/A
 Boot|[uboot-powkiddy-x55](https://ftp.denx.de/pub/u-boot)|2025.10|N/A
 Boot|[uboot-rk3326](https://github.com/ROCKNIX/hardkernel-uboot)|611716febddb824a7203d0d3b5d399608a54ccf6|N/A
 Hardware|[dmd-play-rust](http://github.com/batocera-linux/dmd-play-rust)|912cd34b1d1895d7913eb60fc653f6c6f60d4f2c|N/A
+Libraries|[libfreeimage](http://downloads.sourceforge.net/freeimage)|3.18.0|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
