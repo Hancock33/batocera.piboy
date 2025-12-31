@@ -657,7 +657,7 @@ config BR2_PACKAGE_BATOCERA_TOOLS
     select BR2_PACKAGE_NCDU                                 # Disk Usage
     select BR2_PACKAGE_SQUASHFS                             # mksquash tool
     select BR2_PACKAGE_SWITCHRES                            if !BR2_PACKAGE_BATOCERA_WAYLAND # switchres 15kHzf
-    select BR2_PACKAGE_VIM                                  # basic vi emulator
+   #select BR2_PACKAGE_VIM                                  # basic vi emulator
     select BR2_PACKAGE_ZIP                                  # zip tool
 
     help
