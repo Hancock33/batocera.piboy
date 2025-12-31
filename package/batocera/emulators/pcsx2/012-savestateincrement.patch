@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Config.h b/pcsx2/Config.h
-index 14776ae8d..715b52ae7 100644
+index cdd49113f..e957c7379 100644
 --- a/pcsx2/Config.h
 +++ b/pcsx2/Config.h
-@@ -1316,6 +1316,7 @@ struct Pcsx2Config
+@@ -1319,6 +1319,7 @@ struct Pcsx2Config
  		InhibitScreensaver : 1,
  		BackupSavestate : 1,
  		McdFolderAutoManage : 1,
@@ -11,10 +11,10 @@ index 14776ae8d..715b52ae7 100644
  		UseSystemLocaleFormat : 1, // presents OS time format instead of yyyy-MM-dd HH:mm:ss for manual RTC
  
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index b25ea49d3..7a62ba8de 100644
+index ba8a09011..c431c6d1b 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -1925,6 +1925,7 @@ Pcsx2Config::Pcsx2Config()
+@@ -1931,6 +1931,7 @@ Pcsx2Config::Pcsx2Config()
  	EnableDiscordPresence = false;
  	ManuallySetRealTimeClock = false;
  	UseSystemLocaleFormat = false;
@@ -22,7 +22,7 @@ index b25ea49d3..7a62ba8de 100644
  
  	// To be moved to FileMemoryCard pluign (someday)
  	for (uint slot = 0; slot < 8; ++slot)
-@@ -1967,6 +1968,7 @@ void Pcsx2Config::LoadSaveCore(SettingsWrapper& wrap)
+@@ -1973,6 +1974,7 @@ void Pcsx2Config::LoadSaveCore(SettingsWrapper& wrap)
  	SettingsWrapBitBool(EnableDiscordPresence);
  	SettingsWrapBitBool(InhibitScreensaver);
  	SettingsWrapBitBool(HostFs);
@@ -31,12 +31,12 @@ index b25ea49d3..7a62ba8de 100644
  	SettingsWrapBitBool(BackupSavestate);
  	SettingsWrapBitBool(McdFolderAutoManage);
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 5a218fbad..8d9a298a7 100644
+index 672a35b84..9e597c224 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -2053,6 +2053,12 @@ bool VMManager::SaveState(const char* filename, bool zip_on_thread, bool backup_
+@@ -2072,6 +2072,12 @@ void VMManager::SaveState(
  
- bool VMManager::SaveStateToSlot(s32 slot, bool zip_on_thread)
+ void VMManager::SaveStateToSlot(s32 slot, bool zip_on_thread, std::function<void(const std::string&)> error_callback)
  {
 +	//increment the slot before saving
 +	if(EmuConfig.AutoIncrementSlot) {
@@ -46,4 +46,4 @@ index 5a218fbad..8d9a298a7 100644
 +
  	const std::string filename(GetCurrentSaveStateFileName(slot));
  	if (filename.empty())
- 		return false;
+ 	{

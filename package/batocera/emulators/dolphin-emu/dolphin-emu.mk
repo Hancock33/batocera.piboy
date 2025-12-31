@@ -3,17 +3,17 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Dec 30, 2025
-DOLPHIN_EMU_VERSION = e639d565f71975ac4b6cdd021d73462a5de81ba2
+# Version: Commits on Dec 31, 2025
+DOLPHIN_EMU_VERSION = 09a0e95efee5edbe62e2f88b27ae079fdc42641d
 DOLPHIN_EMU_VERSION_MAJOR = 2512
-DOLPHIN_EMU_VERSION_MINOR = 94
+DOLPHIN_EMU_VERSION_MINOR = 101
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
 DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl3 xz zlib
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cpp-ipc ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl3 xz zlib
 # add dolphin-triforce as a dependency so it builds first
 ifeq ($(BR2_PACKAGE_DOLPHIN_TRIFORCE),y)
     DOLPHIN_EMU_DEPENDENCIES += dolphin-triforce
