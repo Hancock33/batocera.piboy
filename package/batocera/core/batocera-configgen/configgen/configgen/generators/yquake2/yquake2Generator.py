@@ -118,7 +118,7 @@ class YQuake2Generator(Generator):
             commandArray.extend(["+set", "game", "rogue"])
         elif "zaero" in romName.lower():
             commandArray.extend(["+set", "game", "zaero"])
-            
+
         if "rtx" in romName.lower():
             commandArray.extend(["-datadir", "/userdata/roms/ports/quake2/rtx"])
         else:

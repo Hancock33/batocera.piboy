@@ -232,7 +232,6 @@ acclaim:
   path:                 /userdata/roms/arcade/acclaim
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -259,7 +258,6 @@ alphadenshi:
   path:                 /userdata/roms/arcade/alphadenshi
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -275,7 +273,6 @@ amcoe:
   path:                 /userdata/roms/arcade/amcoe
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -291,7 +288,6 @@ atari:
   path:                 /userdata/roms/arcade/atari
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -307,7 +303,6 @@ atlus:
   path:                 /userdata/roms/arcade/atlus
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -323,7 +318,6 @@ banpresto:
   path:                 /userdata/roms/arcade/banpresto
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -339,7 +333,6 @@ cave:
   path:                 /userdata/roms/arcade/cave
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -355,7 +348,6 @@ centurye:
   path:                 /userdata/roms/arcade/centurye
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -402,7 +394,6 @@ cinematronics:
   path:                 /userdata/roms/arcade/cinematronics
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -418,7 +409,6 @@ comad:
   path:                 /userdata/roms/arcade/comad
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -434,7 +424,6 @@ cps1:
   path:                 /userdata/roms/arcade/cps1
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -450,7 +439,6 @@ cps2:
   path:                 /userdata/roms/arcade/cps2
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -466,7 +454,6 @@ cps3:
   path:                 /userdata/roms/arcade/cps3
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -538,7 +525,6 @@ dataeast:
   path:                 /userdata/roms/arcade/dataeast
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -576,7 +562,6 @@ dynax:
   path:                 /userdata/roms/arcade/dynax
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -592,7 +577,6 @@ eighting:
   path:                 /userdata/roms/arcade/eighting
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -608,7 +592,6 @@ exidy:
   path:                 /userdata/roms/arcade/exidy
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -653,7 +636,6 @@ gaelco:
   path:                 /userdata/roms/arcade/gaelco
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -669,7 +651,6 @@ gottlieb:
   path:                 /userdata/roms/arcade/gottlieb
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -685,7 +666,6 @@ igs:
   path:                 /userdata/roms/arcade/igs
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -701,7 +681,6 @@ incredibletech:
   path:                 /userdata/roms/arcade/incredibletech
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -717,7 +696,6 @@ irem:
   path:                 /userdata/roms/arcade/irem
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -733,7 +711,6 @@ jaleco:
   path:                 /userdata/roms/arcade/jaleco
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -749,7 +726,6 @@ kaneko:
   path:                 /userdata/roms/arcade/kaneko
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -765,7 +741,6 @@ konami:
   path:                 /userdata/roms/arcade/konami
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -793,27 +768,6 @@ mame:
   comment_br:           |
                         O sistema usa o libretro mame (0.278+)
                         Para mais informações: https://wiki.batocera.org/arcade
-
-imame4all:
-  name:                 Mame (0.37b5)
-  manufacturer:         Arcade
-  release:              1997
-  hardware:             arcade
-  extensions:           [zip, 7z]
-  platform:             arcade
-  emulators:
-    libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME] }
-
-  comment_en:           |
-                        The system uses libretro imame4all (0.37b5) as default core: compatible ROMs must come from set 0.78+
-                        For more info: https://wiki.batocera.org/arcade
-  comment_fr:           |
-                        Le système utilise le core libretro imame4all (0.37b5) par défaut: Les ROMs compatibles doivent provenir du set 0.78+
-                        Vous pouvez trouver la doc arcade là : https://wiki.batocera.org/arcade
-  comment_br:           |
-                        O sistema usa o libretro imame4all (0.37b5) como núcleo padrão: ROMs compatíveis devem vir da versão de romset 0.78+
-                        Para mais informações: https://wiki.batocera.org/arcade
 mame2003:
   name:                 Mame (2003 Plus)
   manufacturer:         Arcade
@@ -835,7 +789,6 @@ midway:
   path:                 /userdata/roms/arcade/midway
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -851,7 +804,6 @@ mitchell:
   path:                 /userdata/roms/arcade/mitchell
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -867,7 +819,6 @@ namco:
   path:                 /userdata/roms/arcade/namco
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -920,7 +871,6 @@ nichibutsu:
   path:                 /userdata/roms/arcade/nichibutsu
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -936,7 +886,6 @@ nintendo:
   path:                 /userdata/roms/arcade/nintendo
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -952,7 +901,6 @@ nmk:
   path:                 /userdata/roms/arcade/nmk
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -968,7 +916,6 @@ psikyo:
   path:                 /userdata/roms/arcade/psikyo
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -984,7 +931,6 @@ sammy:
   path:                 /userdata/roms/arcade/sammy
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1000,7 +946,6 @@ sega:
   path:                 /userdata/roms/arcade/sega
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1016,7 +961,6 @@ semicom:
   path:                 /userdata/roms/arcade/semicom
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1032,7 +976,6 @@ seta:
   path:                 /userdata/roms/arcade/seta
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1074,7 +1017,6 @@ snk:
   path:                 /userdata/roms/arcade/snk
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1090,7 +1032,6 @@ taito:
   path:                 /userdata/roms/arcade/taito
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1106,7 +1047,6 @@ technos:
   path:                 /userdata/roms/arcade/technos
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1122,7 +1062,6 @@ tecmo:
   path:                 /userdata/roms/arcade/tecmo
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1138,7 +1077,6 @@ toaplan:
   path:                 /userdata/roms/arcade/toaplan
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1173,7 +1111,6 @@ universal:
   path:                 /userdata/roms/arcade/universal
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1189,7 +1126,6 @@ visco:
   path:                 /userdata/roms/arcade/visco
   emulators:
     libretro:
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:
@@ -1204,9 +1140,8 @@ atari2600:
   emulators:
     libretro:
       stella:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_STELLA]     }
-      stella2014:       { requireAnyOf: [BR2_PACKAGE_LIBRETRO_STELLA2014] }
     stella:
-      stella:           { requireAnyOf: [BR2_PACKAGE_BATOCERA_STELLA]     }
+      stella:           { requireAnyOf: [BR2_PACKAGE_STELLA]              }
 
 atari5200:
   name:                 Atari 5200
@@ -6321,7 +6256,6 @@ neogeo:
   emulators:
     libretro:
       fbneo:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FBNEO]          }
-      imame4all:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_IMAME]          }
       mame078plus:      { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME2003_PLUS]  }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME]           }
     mame:

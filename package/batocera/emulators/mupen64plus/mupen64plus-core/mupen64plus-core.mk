@@ -20,12 +20,6 @@ else
     MUPEN64PLUS_PARAMS = USE_GLES=1
 endif
 
-ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
-    MUPEN64PLUS_CORE_DEPENDENCIES += rpi-userland
-    MUPEN64PLUS_GL_LDLIBS = -lbcm_host
-    MUPEN64PLUS_PARAMS = VC=1
-endif
-
 ifeq ($(BR2_arm),y)
     ifeq ($(BR2_ARM_CPU_ARMV8A),y)
         MUPEN64PLUS_HOST_CPU = armv8

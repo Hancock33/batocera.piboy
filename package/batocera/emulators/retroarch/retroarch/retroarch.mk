@@ -39,12 +39,6 @@ else
     endif
 endif
 
-ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
-    RETROARCH_CONF_OPTS += --enable-videocore
-else
-    RETROARCH_CONF_OPTS += --disable-videocore
-endif
-
 ifeq ($(BR2_PACKAGE_LIBDRM),y)
     RETROARCH_CONF_OPTS += --enable-kms
 endif
@@ -232,10 +226,6 @@ endif
 
 ifeq ($(BR2_ARM_CPU_HAS_NEON),y)
     LIBRETRO_PLATFORM += neon
-endif
-
-ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
-    LIBRETRO_PLATFORM += rpi armv
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)

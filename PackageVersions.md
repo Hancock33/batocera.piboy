@@ -160,7 +160,6 @@ Emulators|[libretro-handy](http://github.com/libretro/libretro-handy)|fca239207e
 Emulators|[libretro-hatari](http://github.com/libretro/hatari)|7008194d3f951a157997f67a820578f56f7feee0|Oct 21, 2024
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|162d2ed3ee40d8ea394607e7f886a084b660ad5f|Feb 09, 2025
 Emulators|[libretro-holani](http://github.com/LLeny/holani-retro)|b1d2ac521489f473c1ac101f04b734762c3fc8ac|Dec 27, 2025
-Emulators|[libretro-imame](http://github.com/libretro/mame2000-libretro)|2ec60f6e1078cf9ba173e80432cc28fd4eea200f|Jul 01, 2024
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|4825aad24716f67924cd949354aae490a14b4d2d|Apr 16, 2025
 Emulators|[libretro-jollycv](http://github.com/libretro/jollycv)|5b01c1e43f9040bfae25cc9f9dfb14d73951ec3c|Oct 18, 2025
 Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e68831f5576075c45c147f86865812afb816139|Nov 02, 2023
@@ -212,7 +211,6 @@ Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|c642bbd06
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|f9ae8fd28b13070a945a829ccf41cbf90a21d0f7|Nov 18, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|5a40cd5514e63e691e39141d64267798357a1424|Sept 08, 2025
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|7f62c3e1390f629cbd56cbb5172f7e2143b30440|Dec 28, 2025
-Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|3cc89f0d316d6c924a5e3f4011d17421df58e615|Oct 21, 2024
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|e25f66765938d33f9ad5850e8d6cd597e55b7299|Oct 01, 2024
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|ae824f626ad80c8b7ee848698b3d1dcebe9a5ccb|Dec 12, 2025
 Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libretro-superflappybirds)|4b798ecc6948017ca79aad1ea20fe57e680228c8|Apr 13, 2023
@@ -550,7 +548,6 @@ Utils|[od-commander](http://github.com/od-contrib/commander)|a6ef30eb3bd6ef80a03
 Utils|[pacman](https://sources.archlinux.org/other/pacman)|5.2.2|Jun 26, 2020
 Utils|[picade](http://github.com/pimoroni/picade-hat)|f97c2ac7211c8d9ff866b22a82c3b2ae6d01e0df|Sept 08, 2025
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
-Utils|[raspi2png](http://github.com/AndrewFromMelbourne/raspi2png)|07f5e76e72516f24329def599ac2d8841946a5f6|Feb 05, 2025
 Utils|[rclone](http://github.com/rclone/rclone)|v1.72.1|Dec 10, 2025
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.4|Dec 20, 2025
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|21c1e2c51832dccfac64981b345745ce0cccf524|Oct 22, 2025

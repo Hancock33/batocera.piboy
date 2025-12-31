@@ -2938,9 +2938,6 @@ libretro:
               choices:
                   "IDE (Default)": IDE
                   "ACSI":          ACSI
-    imame4all:
-      features: [padtokeyboard, netplay]
-      shared: [autosave, rewind]
     kronos:
       features: [padtokeyboard, cheevos]
       shared: [autosave]
