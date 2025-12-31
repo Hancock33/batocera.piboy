@@ -21,9 +21,7 @@ else
     endif
 endif
 
-ifeq ($(BR2_PACKAGE_RASPI2PNG),y)
-    LIBRETRO_VECX_PLATFORM = rpi
-else ifeq ($(BR2_PACKAGE_BATOCERA_RPI_MESA3D),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_RPI_MESA3D),y)
     LIBRETRO_VECX_PLATFORM = rpi-mesa
 else ifeq ($(BR2_aarch64),y)
     LIBRETRO_VECX_PLATFORM = unix
