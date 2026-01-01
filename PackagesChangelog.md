@@ -13,6 +13,7 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|45a9248abfb70425b967
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|57f6cb98908389ad11562f4379dd48bc740fd8f1|Jan 01, 2026
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.4.0|Jan 01, 2026
 Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.2.6|Jan 01, 2026
+Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|382ff3b90e4fbc2ce250e20faa16fa9f3094a43c|Jan 01, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2f741ed9986de8d5042b7aab6fd5eaddba295ea6|Jan 01, 2026
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.1|Jan 01, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260101|Jan 01, 2026
@@ -33,7 +34,6 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|b0d8cd59e55f0b48128db7b3be3
 Engines|[lightspark](http://github.com/lightspark/lightspark)|3ad09f05cd6e618783c5755f2aab176ac2878fad|Dec 31, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-31|Dec 31, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|5010c3102e4e217b8168c31e2effebda0dfefa0e|Dec 31, 2025
-Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|732bbfe3f402d6a40797e73ff1783e655413fcc4|Dec 31, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|7f6e5fca9005c446b6d1613840a8e1fab320c123|Dec 31, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|fa8a298fe3c2928f5acd5dda93a4c4db8e586d1a|Dec 31, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|15f2ac427221b84288798ddebe9ad8a99e363b48|Dec 31, 2025

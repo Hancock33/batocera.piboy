@@ -404,7 +404,7 @@ Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f86
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.1|Oct 21, 2025
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|2eea59a1e9a133ffad3dfa1fe194b7cf0547819a|Dec 16, 2025
 Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.2.6|Jan 01, 2026
-Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|732bbfe3f402d6a40797e73ff1783e655413fcc4|Dec 31, 2025
+Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|382ff3b90e4fbc2ce250e20faa16fa9f3094a43c|Jan 01, 2026
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.4.0|Jan 01, 2026
 Libraries|[semver](http://github.com/Neargye/semver)|v1.0.0-rc|Mar 29, 2025
