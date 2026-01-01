@@ -1,8 +1,8 @@
 diff --git a/src/common/fs/path_util.cpp b/src/common/fs/path_util.cpp
-index dc1071b9ca..bed0feb36f 100644
+index 9b57fda295..c418f48060 100644
 --- a/src/common/fs/path_util.cpp
 +++ b/src/common/fs/path_util.cpp
-@@ -149,21 +149,21 @@ public:
+@@ -149,22 +149,22 @@ public:
          LEGACY_PATH(Suyu, SUYU)
  #undef LEGACY_PATH
  #endif
@@ -26,6 +26,7 @@ index dc1071b9ca..bed0feb36f 100644
 +        GenerateEdenPath(EdenPath::LogDir, "/userdata/system/logs");
 +        GenerateEdenPath(EdenPath::NANDDir, "/userdata/bios/switch/nand");
          GenerateEdenPath(EdenPath::PlayTimeDir, eden_path / PLAY_TIME_DIR);
+         GenerateEdenPath(EdenPath::SaveDir, eden_path / NAND_DIR);
 -        GenerateEdenPath(EdenPath::ScreenshotsDir, eden_path / SCREENSHOTS_DIR);
 -        GenerateEdenPath(EdenPath::SDMCDir, eden_path / SDMC_DIR);
 -        GenerateEdenPath(EdenPath::ShaderDir, eden_path / SHADER_DIR);
