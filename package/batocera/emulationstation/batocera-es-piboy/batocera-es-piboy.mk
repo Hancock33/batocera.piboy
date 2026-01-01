@@ -3,8 +3,8 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Dec 30, 2025
-BATOCERA_ES_PIBOY_VERSION = 7402350c466ba20f175ebc9f1304ae4354c503a7
+# Version: Commits on Jan 01, 2026
+BATOCERA_ES_PIBOY_VERSION = f0ad952101b2a35b727f2ca18886e8250c4f457c
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
