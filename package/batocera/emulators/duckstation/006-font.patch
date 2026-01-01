@@ -1,5 +1,5 @@
 diff --git a/src/util/imgui_manager.cpp b/src/util/imgui_manager.cpp
-index 99450b214..c77bab25e 100644
+index 99450b214..64c2ef5a6 100644
 --- a/src/util/imgui_manager.cpp
 +++ b/src/util/imgui_manager.cpp
 @@ -118,7 +118,7 @@ static constexpr std::array<const char*, static_cast<size_t>(TextFont::MaxCount)
@@ -11,3 +11,12 @@ index 99450b214..c77bab25e 100644
  static constexpr const char* PF_FONT_NAME = "promptfont.otf";
  static constexpr const char* EMOJI_FONT_NAME = "TwitterColorEmoji-SVGinOT.ttf";
  
+@@ -770,7 +770,7 @@ bool ImGuiManager::CreateFontAtlas(Error* error)
+                                                   default_text_size * 0.75f, 0.0f, &icon_cfg)) [[unlikely]]
+   {
+     Error::SetStringView(error, "Failed to add FA icon font");
+-    return false;
++    //return false;
+   }
+ 
+   // Now we can add the remaining text fonts.
