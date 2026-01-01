@@ -3,8 +3,8 @@
 # sdl3_image
 #
 ################################################################################
-# Version: Commits on Mar 03, 2025
-SDL3_IMAGE_VERSION = release-3.2.4
+# Version: Commits on Jan 01, 2026
+SDL3_IMAGE_VERSION = release-3.2.6
 SDL3_IMAGE_SITE = https://github.com/libsdl-org/SDL_image
 SDL3_IMAGE_SITE_METHOD = git
 SDL3_IMAGE_GIT_SUBMODULES = yes
