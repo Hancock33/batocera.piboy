@@ -15,7 +15,9 @@ Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.4.0|Jan 01, 2026
 Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.2.6|Jan 01, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2f741ed9986de8d5042b7aab6fd5eaddba295ea6|Jan 01, 2026
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.1|Jan 01, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260101|Jan 01, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3f35d2cf1755d9b37cf5394d168add72d656f62a|Jan 01, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260101|Jan 01, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|9274daacac758d12b348061c33fddc0c3105db17|Jan 01, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|f38f2a5c4c37d0b7e63bc2eac5eb100a5c0451e3|Jan 01, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|859c2433443b718fa3dd46a8c322a80091fe7dd2|Jan 01, 2026
@@ -38,9 +40,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|15f2ac427221
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|bf149d327ba85ad6aecac992865630947db5d47d|Dec 31, 2025
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|bb74155adde5e3638159b301d5e84663a3a35b4a|Dec 31, 2025
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|950f6264de2e4f1b53a82c759cd140a6d4c3a646|Dec 31, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251231|Dec 31, 2025
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.10.0|Dec 31, 2025
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20251231|Dec 31, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0284|Dec 31, 2025
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|5010c3102e4e217b8168c31e2effebda0dfefa0e|Dec 31, 2025
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|c435107c7e19f6b428acf50f8d051834210566e8|Dec 31, 2025
