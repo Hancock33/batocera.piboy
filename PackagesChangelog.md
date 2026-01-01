@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
+Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.01|Jan 01, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|0ad425f58436da3578f1eb917773e2ca6501d18a|Jan 01, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|82f9d489e7916318b56dac59fc52efc46fe0df7e|Jan 01, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.5.407|Jan 01, 2026
@@ -9,6 +10,7 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|ee06dccdea91814bf7d76b3037
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.243|Jan 01, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|45a9248abfb70425b967ae46d9303cff53a324e5|Jan 01, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|12f0859d5ae81f07de39299471c9d56a71d551a4|Jan 01, 2026
+Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.4.0|Jan 01, 2026
 Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.2.6|Jan 01, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|603973e659481279fbfc4e8a0a5f8dc81a7e90c0|Jan 01, 2026
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.1|Jan 01, 2026
@@ -26,6 +28,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|45edb5b6a115de0649a5b44ad7c
 Engines|[lightspark](http://github.com/lightspark/lightspark)|3ad09f05cd6e618783c5755f2aab176ac2878fad|Dec 31, 2025
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2025-12-31|Dec 31, 2025
 Engines|[scummvm](http://github.com/scummvm/scummvm)|5010c3102e4e217b8168c31e2effebda0dfefa0e|Dec 31, 2025
+Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|732bbfe3f402d6a40797e73ff1783e655413fcc4|Dec 31, 2025
 Ports|[box64](http://github.com/ptitseb/box64)|7f6e5fca9005c446b6d1613840a8e1fab320c123|Dec 31, 2025
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|fa8a298fe3c2928f5acd5dda93a4c4db8e586d1a|Dec 31, 2025
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|15f2ac427221b84288798ddebe9ad8a99e363b48|Dec 31, 2025
@@ -128,7 +131,6 @@ Ports|[rott](http://github.com/fabiangreffrath/taradino)|7ecc532b7ab47d805b2c528
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20251222-proton-slr|Dec 22, 2025
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|131d4575eae9ef1e22b32d25d5f771c2995a31af|Dec 21, 2025
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|b6673bf124d63dcd253f7127e2654288e85212b1|Dec 21, 2025
-Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|db5b95877af5b97db442ac39ba94d16aa1494a3a|Dec 21, 2025
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|6547d407132098847bbbe2ec0aa6c520f6a946eb|Dec 21, 2025
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.13|Dec 21, 2025
 Controllers|[xone](http://github.com/dlundqvist/xone)|17d9b6a8939085d6e13b8c3ad684d28ca3166a02|Dec 21, 2025
@@ -186,8 +188,6 @@ Libraries|[pysdl3](http://github.com/Aermoss/PySDL3)|v0.9.9b1|Dec 03, 2025
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|3365b1774bc8680be9899968fe45b224ad2f11c1|Dec 03, 2025
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.8|Dec 02, 2025
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|cc1b2045231f2e4f5c93174c12dc8958bc300bfb|Dec 02, 2025
-Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.2.28|Dec 02, 2025
-Audio|[faudio](http://github.com/FNA-XNA/FAudio)|25.12|Dec 01, 2025
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2025.12.01|Dec 01, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|d2fa3ad31e456bd44736d98d00f99ab627ec7ebc|Dec 01, 2025
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|a7b711dfd74871e9985ba3b2fe2c15048a928aaf|Dec 01, 2025
