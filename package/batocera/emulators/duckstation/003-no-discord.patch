@@ -1,8 +1,8 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 0d2419c8c..c92df0405 100644
+index e1e411525..d8260d279 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
-@@ -39,7 +39,7 @@ find_package(Freetype 2.13.3 REQUIRED)
+@@ -46,7 +46,7 @@ find_package(Freetype 2.14.1 REQUIRED)
  find_package(harfbuzz REQUIRED)
  find_package(plutosvg 0.0.6 REQUIRED)
  find_package(cpuinfo REQUIRED)
@@ -12,10 +12,10 @@ index 0d2419c8c..c92df0405 100644
  find_package(libzip 1.11.4 REQUIRED)
  find_package(Shaderc REQUIRED)
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index ff0eff710..7f1cbbd33 100644
+index 579566951..c20caff01 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -96,7 +96,7 @@ LOG_CHANNEL(System);
+@@ -99,7 +99,7 @@ LOG_CHANNEL(System);
  #endif
  
  #ifndef __ANDROID__

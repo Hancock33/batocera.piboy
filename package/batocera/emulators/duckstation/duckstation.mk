@@ -3,12 +3,12 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Dec 31, 2025
-DUCKSTATION_VERSION = 45dd5001cdf15b2365b78d7d50bd2a0572c98369
+# Version: Commits on Jan 01, 2026
+DUCKSTATION_VERSION = 0ad425f58436da3578f1eb917773e2ca6501d18a
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
-DUCKSTATION_DEPENDENCIES += plutosvg plutovg sdl3 stenzek-shaderc webp zstd
+DUCKSTATION_DEPENDENCIES += noto-cjk-fonts plutosvg plutovg sdl3 stenzek-shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += host-clang host-spirv-cross spirv-cross
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 
