@@ -55,7 +55,7 @@
 ### Updated
 - Azahar Plus to AZAHAR_PLUS_2123_3_A
 - BigPEmu to v121
-- CLK to 2025-11-26
+- CLK to 2025-12-19
 - Dolphin-Emu to 2512-99
 - DXX-Rebirth to May 25, 2025
 - EDuke32 to Oct 10, 2025
@@ -65,13 +65,13 @@
 - Jazz2 to 3.4.0
 - Libretro Dolphin to 24th of December 2025 build
 - Libretro MAME to 0.283
-- Libretro Play! to 0.71
+- Libretro Play! to 0.72
 - Libretro Opera to 17th of October 2024 build
 - MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenJKDF2 to v0.9.8
 - OpenMOHAA to v0.82.1
-- Play! to 0.71
+- Play! to 0.72
 - PCSX2 to v2.5.405
 - RClone to v1.72.1
 - RetroArch to 1.22.2
@@ -81,9 +81,10 @@
 - Sonic CD to 1.3.3
 - Sonic Mania to v1.1.1
 - Supermodel to 13th of November 2025 build
-- Taradino to 20251031
+- Taradino to 20251222
 - TheXTech to v1.3.7.2-1
 - TheForceEngine to v1.22.420
+- Vice to 3.10
 - VkQuake to 19th of November 2025 build 
 - Xash3D FWGS engine to Oct 17 build
 - Xenia-Canary to build f85f4c3
@@ -96,10 +97,10 @@
 - Go language compiler to 1.25.5
 - GStreamer codecs to 1.26.6
 - Linux Firmware to 20251125
-- Linux Kernel to 6.18.1
+- Linux Kernel to 6.18.2
 - LabWC to 0.9.3
 - LLVM Project to 20.1.8
-- Mesa3D to 25.3.2
+- Mesa3D to 25.3.3
 - MPV to v0.41.0
 - Nvidia 580.xx legacy drivers to 580.119.02
 - Nvidia production drivers to 590.48.01
