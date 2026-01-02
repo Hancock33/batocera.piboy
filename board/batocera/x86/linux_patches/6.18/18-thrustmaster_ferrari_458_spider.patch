@@ -1,5 +1,5 @@
 diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
-index d72e89c25e50..f80737d90d19 100644
+index 363d50949386..c02d4c383363 100644
 --- a/drivers/input/joystick/xpad.c
 +++ b/drivers/input/joystick/xpad.c
 @@ -84,6 +84,7 @@
@@ -10,7 +10,7 @@ index d72e89c25e50..f80737d90d19 100644
  
  #define DANCEPAD_MAP_CONFIG	(MAP_DPAD_TO_BUTTONS |			\
  				MAP_TRIGGERS_TO_BUTTONS | MAP_STICKS_TO_NULL)
-@@ -146,6 +147,7 @@ static const struct xpad_device {
+@@ -148,6 +149,7 @@ static const struct xpad_device {
  	{ 0x044f, 0x0f07, "Thrustmaster, Inc. Controller", 0, XTYPE_XBOX },
  	{ 0x044f, 0x0f10, "Thrustmaster Modena GT Wheel", 0, XTYPE_XBOX },
  	{ 0x044f, 0xb326, "Thrustmaster Gamepad GP XID", 0, XTYPE_XBOX360 },
@@ -18,7 +18,7 @@ index d72e89c25e50..f80737d90d19 100644
  	{ 0x044f, 0xd01e, "ThrustMaster, Inc. ESWAP X 2 ELDEN RING EDITION", 0, XTYPE_XBOXONE },
  	{ 0x045e, 0x0202, "Microsoft X-Box pad v1 (US)", 0, XTYPE_XBOX },
  	{ 0x045e, 0x0285, "Microsoft X-Box pad (Japan)", 0, XTYPE_XBOX },
-@@ -1135,6 +1137,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+@@ -1140,6 +1142,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
  		input_report_key(dev, BTN_THUMBR, data[5] & BIT(7));
  
  		if (!(xpad->mapping & MAP_STICKS_TO_NULL)) {
@@ -30,7 +30,7 @@ index d72e89c25e50..f80737d90d19 100644
  			/* left stick */
  			input_report_abs(dev, ABS_X,
  					(__s16) le16_to_cpup((__le16 *)(data + 10)));
-@@ -1146,6 +1153,7 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+@@ -1151,6 +1158,7 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
  					(__s16) le16_to_cpup((__le16 *)(data + 14)));
  			input_report_abs(dev, ABS_RY,
  					~(__s16) le16_to_cpup((__le16 *)(data + 16)));
@@ -38,7 +38,7 @@ index d72e89c25e50..f80737d90d19 100644
  		}
  
  		/* triggers left/right */
-@@ -1154,6 +1162,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
+@@ -1159,6 +1167,11 @@ static void xpadone_process_packet(struct usb_xpad *xpad, u16 cmd, unsigned char
  					(__u16) le16_to_cpup((__le16 *)(data + 6)));
  			input_report_key(dev, BTN_TR2,
  					(__u16) le16_to_cpup((__le16 *)(data + 8)));
