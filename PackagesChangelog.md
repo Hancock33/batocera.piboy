@@ -17,8 +17,10 @@ Engines|[scummvm](http://github.com/scummvm/scummvm)|6e38696a4ff4ea999a788e7e976
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|4f55c202dfd3bc5a2bfae57f9e6a8e35ab15053f|Jan 04, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b98f03513b3563c34a4c43b9e162543cf8bfa35c|Jan 04, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|d27a4bd99990b39b5fd35903e1cfe956ff6dbd57|Jan 04, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260104|Jan 04, 2026
 Controllers|[lightguns-games-precalibrations](http://github.com/batocera-linux/lightguns-games-precalibrations)|b672c3a882fa27964e5e69d77c5857b214e5d58e|Jan 04, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|233db048ee6229086076d24cb8f85005112eff83|Jan 04, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260104|Jan 04, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ac400e65a2600b8cea0a9d447a824a584a278904|Jan 04, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|7cc5e7606923f702efc936439e5f826c331bd107|Jan 04, 2026
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|a3d0e8398cc6957a0a7bc9fe2ffce740145f48e7|Jan 04, 2026
@@ -42,8 +44,6 @@ Ports|[box64](http://github.com/ptitseb/box64)|dae0917c47b4edd8956f314210417a20f
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|d3a116c67844081b42ef96e77dbfd1a5c8cd7da7|Jan 03, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|8d693507ae48b4234f2b8338dbe3bac6c5e95ad8|Jan 03, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|14e73b06840ab179b9b45c344c4ec3935a79ebd2|Jan 03, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260103|Jan 03, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260103|Jan 03, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|2f6f1aa9de603274a14a8a621f2489a3bad7f21b|Jan 03, 2026
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|e784df7e3c2352f0885f983ea19a452a313ca343|Jan 03, 2026
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|10515481c659fc750bfe3a45b7cea520fa79374c|Jan 03, 2026
