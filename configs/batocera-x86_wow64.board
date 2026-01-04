@@ -5,7 +5,7 @@ BR2_x86_prescott=y
 BR2_PACKAGE_BATOCERA_TARGET_X86=y
 
 # Toolchain definition
-BR2_TARGET_OPTIMIZATION="-march=prescott -mtune=generic -fno-semantic-interposition"
+BR2_TARGET_OPTIMIZATION="-march=prescott -mtune=generic"
 BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/patches"
 
 # Kernel 6.18

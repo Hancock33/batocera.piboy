@@ -7,7 +7,7 @@ BR2_x86_x86_64_v3=y
 BR2_PACKAGE_BATOCERA_TARGET_X86_64=y
 
 # Toolchain definition
-BR2_TARGET_OPTIMIZATION="-march=x86-64-v3 -mtune=generic -fno-semantic-interposition"
+BR2_TARGET_OPTIMIZATION="-march=x86-64-v3 -mtune=generic"
 #BR2_TARGET_GENERIC_GETTY_PORT="tty1"
 BR2_TARGET_GENERIC_GETTY_BAUDRATE_115200=y
 BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/patches"
