@@ -3,9 +3,9 @@
 # libretro-freej2me
 #
 ################################################################################
-# Version: Commits on Feb 16, 2024
-LIBRETRO_FREEJ2ME_VERSION = 8b9bc8a19baf26e3d92f88934a64a32f1cbc2795
-LIBRETRO_FREEJ2ME_SITE = $(call github,hex007,freej2me,$(LIBRETRO_FREEJ2ME_VERSION))
+# Version: Commits on Dec 29, 2025
+LIBRETRO_FREEJ2ME_VERSION = 331ee719d6c76815498e1c288b97429cd18c9da6
+LIBRETRO_FREEJ2ME_SITE = $(call github,TASEmulators,freej2me-plus,$(LIBRETRO_FREEJ2ME_VERSION))
 LIBRETRO_FREEJ2ME_LICENSE = GPL-3.0
 
 define LIBRETRO_FREEJ2ME_BUILD_CMDS
