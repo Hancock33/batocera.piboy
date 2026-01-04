@@ -1,118 +1,115 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: controlcenter\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-02 21:32+0000\n"
-"PO-Revision-Date: 2026-01-02 21:32+0000\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: French\n"
-"Language: fr\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Language-Team: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Loco-Source-Locale: de_DE\n"
-"X-Loco-Parser: loco_parse_po\n"
-"X-Generator: Loco https://localise.biz/"
+"X-Generator: Poedit 3.8\n"
 
 msgid "AC"
 msgstr "AC"
 
 msgid "Balanced"
-msgstr "Ausgeglichen"
+msgstr "バランス"
 
 msgid "Batocera"
 msgstr "Batocera"
 
 msgid "Battery"
-msgstr "Akku"
+msgstr "バッテリー"
 
 msgid "CPU:"
 msgstr "CPU:"
 
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "キャンセル"
 
 msgid "Close"
-msgstr "Schließen"
+msgstr "閉じる"
 
 msgid "Confirm"
-msgstr "Bestätigen"
+msgstr "確認"
 
 msgid "Default"
-msgstr "Standard"
+msgstr "標準"
 
 msgid "Free data storage:"
-msgstr "Freier Speicherplatz:"
+msgstr "データストレージ空容量:"
 
 msgid "Game"
-msgstr "Spiel"
+msgstr "ゲーム"
 
 msgid "High Perf"
-msgstr "Hohe Leistung"
+msgstr "高性能"
 
 msgid "Kill it!"
-msgstr "Beenden!"
+msgstr "殺せ！"
 
 msgid "Manual"
-msgstr "Handbuch"
+msgstr "マニュアル"
 
 msgid "Map"
-msgstr ""
+msgstr "マップ"
 
 msgid "Mute Sound"
-msgstr "Ton stummschalten"
+msgstr "音声ミュート"
 
 msgid "Network IP address:"
-msgstr "Netzwerk-IP-Adresse:"
+msgstr "ネットワークIPアドレス:"
 
 msgid "Next"
-msgstr "Weiter"
+msgstr "次"
 
 msgid "OFF"
-msgstr "AUS"
+msgstr "オフ"
 
 msgid "ON"
-msgstr "AN"
+msgstr "オン"
 
 msgid "Plane Mode"
-msgstr "Flugmodus"
+msgstr "機内モード"
 
 msgid "Power Mode"
-msgstr "Strom-Modus"
+msgstr "パワーモード"
 
 msgid "Previous"
-msgstr "Zurück"
+msgstr "前"
 
 msgid "Quick Access"
-msgstr "Schnellzugriff"
+msgstr "クイックアクセス"
 
 msgid "Quit game"
-msgstr "Spiel beenden"
+msgstr "ゲーム終了"
 
 msgid "Resolution:"
-msgstr "Auflösung:"
+msgstr "解像度:"
 
 msgid "RetroAchievements"
 msgstr "RetroAchievements"
 
 msgid "Saver"
-msgstr "Sparmodus"
+msgstr "セーバー"
 
 msgid "Select"
-msgstr "Auswählen"
+msgstr "選択"
 
 msgid "Sound & Power"
-msgstr "Ton & Energie"
+msgstr "サウンド＆パワー"
 
 msgid "Stuck emulator?"
-msgstr "Emulator hängt?"
+msgstr "エミュレータスタック?"
 
 msgid "System"
-msgstr "System"
+msgstr "システム"
 
 msgid "Temp:"
-msgstr "Temp:"
+msgstr "温度:"
 
 msgid "Vol +"
 msgstr "Vol +"
