@@ -3,8 +3,8 @@
 # yquake2
 #
 ################################################################################
-# Version: Commits on Jan 01, 2026
-YQUAKE2_VERSION = f4e3773959e94c486eda4f4785ab1f5ec8917d7d
+# Version: Commits on Jan 04, 2026
+YQUAKE2_VERSION = 75795736387ed3b8cc2014b36fd1658e56de5f16
 YQUAKE2_SITE = $(call github,yquake2,yquake2remaster,$(YQUAKE2_VERSION))
 YQUAKE2_LICENSE = GPLv2
 YQUAKE2_LICENSE_FILES = LICENSE
