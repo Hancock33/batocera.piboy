@@ -1,0 +1,26 @@
+diff --git a/cmake/sdl.cmake b/cmake/sdl.cmake
+index 5c5627d7..36c98949 100644
+--- a/cmake/sdl.cmake
++++ b/cmake/sdl.cmake
+@@ -1,7 +1,7 @@
+ ################################
+ # SDL2
+ ################################
+-if(PREFER_SYSTEM_LIBRARIES)
++#if(PREFER_SYSTEM_LIBRARIES)
+     find_package(SDL2)
+     if(SDL2_FOUND)
+         if(NINTENDO_SWITCH)
+@@ -15,10 +15,10 @@ if(PREFER_SYSTEM_LIBRARIES)
+     else()
+         message(WARNING "System library SDL2 not found")
+     endif()
+-endif()
++#endif()
+ 
+ 
+-if(BUILD_SDL AND NOT EMSCRIPTEN AND NOT RPI AND NOT PREFER_SYSTEM_LIBRARIES)
++if(BUILD_SDL AND NOT EMSCRIPTEN AND NOT RPI AND PREFER_SYSTEM_LIBRARIES)
+ 
+     if(WIN32)
+         set(HAVE_LIBC TRUE)

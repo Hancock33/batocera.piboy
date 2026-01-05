@@ -3,8 +3,8 @@
 # sdl3
 #
 ################################################################################
-# Version: Commits on Dec 02, 2025
-SDL3_VERSION = release-3.2.28
+# Version: Commits on Jan 01, 2026
+SDL3_VERSION = release-3.4.0
 SDL3_SITE = $(call github,libsdl-org,SDL,$(SDL3_VERSION))
 SDL3_LICENSE = Zlib
 SDL3_LICENSE_FILES = LICENSE.txt
@@ -111,7 +111,7 @@ SDL3_CONF_OPTS += -DSDL_WAYLAND=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_SDL3_X11),y)
-SDL3_DEPENDENCIES += xlib_libX11 xlib_libXext xlib_libXi
+SDL3_DEPENDENCIES += xlib_libX11 xlib_libXext xlib_libXi xlib_libXtst
 SDL3_CONF_OPTS += -DSDL_X11=ON
 SDL3_CONF_OPTS += -DSDL_X11_SHARED=ON
 ifeq ($(BR2_PACKAGE_XLIB_LIBXCURSOR),y)

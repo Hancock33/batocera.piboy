@@ -746,7 +746,7 @@ index 02e16b70a790..751df396d94b 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index fe2310a9ccc5..8ce1cc177f4d 100644
+index a3b584727e86..ba104577c57e 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,10 @@
@@ -1088,7 +1088,7 @@ index fe2310a9ccc5..8ce1cc177f4d 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13284,6 +13368,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
+@@ -13271,6 +13355,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
  	WARN_ON_ONCE(p->se.sched_delayed);
  
  	attach_task_cfs_rq(p);

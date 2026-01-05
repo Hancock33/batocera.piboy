@@ -84,7 +84,7 @@ try:
                 fanFile.close()
         cpuTempOld = cpuTemp
 
-        # Read Battery < 5% shutdown
+        # Read Battery
         battctrlFile = open("/sys/kernel/xpi_gamecon/percent", "r")
         battctrl = int(battctrlFile.read())
         battctrlFile.close()
@@ -116,9 +116,9 @@ try:
             os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
             time.sleep(0.4)
 
-        if battctrl <= 5:
-            os.system("touch /tmp/shutdown.please")
-            os.system("/usr/bin/batocera-es-swissknife --shutdown")
+        #if battctrl <= 5:
+        #    os.system("touch /tmp/shutdown.please")
+        #    os.system("/usr/bin/batocera-es-swissknife --shutdown")
 
         # Wait until next refresh
         time.sleep(WAIT_TIME)

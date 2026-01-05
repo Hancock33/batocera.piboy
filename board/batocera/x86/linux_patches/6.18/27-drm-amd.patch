@@ -11,7 +11,7 @@ index 56c1140a6a4a..8120ded1d106 100644
  void amdgpu_device_complete(struct drm_device *dev);
  int amdgpu_device_suspend(struct drm_device *dev, bool fbcon);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index 9640818d21a0..16accf3c0750 100644
+index 0cba31ec025c..9b3c32364f78 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 @@ -3782,7 +3782,6 @@ static int amdgpu_device_ip_suspend_phase1(struct amdgpu_device *adev)

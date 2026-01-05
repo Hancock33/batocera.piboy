@@ -77,6 +77,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'mugen': ('mugen.mugenGenerator', 'MugenGenerator'),
     'mupen64plus': ('mupen.mupenGenerator', 'MupenGenerator'),
     'nblood': ('nblood.nbloodGenerator', 'NbloodGenerator'),
+    'nesbox': ('nesbox.nesboxGenerator', 'NesboxGenerator'),
     'nukem2': ('nukem2.nukem2Generator', 'Nukem2Generator'),
     'odcommander': ('odcommander.odcommanderGenerator', 'OdcommanderGenerator'),
     'omf2097': ('omf2097.omf2097Generator', 'Omf2097Generator'),

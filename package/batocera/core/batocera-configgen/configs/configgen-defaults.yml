@@ -175,6 +175,9 @@ c64:
 camplynx:
   emulator: libretro
   core:     mame
+casloopy:
+  emulator: libretro
+  core:     mame
 catacomb:
   emulator: catacombgl
   core:     catacombgl

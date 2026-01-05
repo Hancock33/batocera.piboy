@@ -1369,10 +1369,10 @@ casloopy:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en:           |
                         Requires MAME BIOS file:
-                        casloopy.zip
+                        bios/mame/casloopy.zip
   comment_br:           |
                         Requer arquivo de BIOS do MAME:
-                        casloopy.zip  
+                        bios/mame/casloopy.zip  
 
 pv1000:
   name:                 PV-1000
@@ -2074,6 +2074,8 @@ tic80:
   emulators:
     libretro:
       tic80:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TIC80] }
+    nesbox:
+      tic80:            { requireAnyOf: [BR2_PACKAGE_TIC80] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:tic-80
   comment_fr:           |

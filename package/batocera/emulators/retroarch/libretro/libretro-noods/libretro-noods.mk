@@ -3,8 +3,8 @@
 # libretro-noods
 #
 ################################################################################
-# Version: Commits on Nov 22, 2024
-LIBRETRO_NOODS_VERSION = b0f658cca2f3a6a6a6166a8c893020432f79f971
+# Version: Commits on Jan 05, 2026
+LIBRETRO_NOODS_VERSION = aae9dc6e5ae0d9187e8dea4b74e529a8e9c8b1d3
 LIBRETRO_NOODS_SITE = $(call github,jonian,libretro-noods,$(LIBRETRO_NOODS_VERSION))
 LIBRETRO_NOODS_LICENSE = GPL-3.0
 
