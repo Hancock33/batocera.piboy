@@ -310,9 +310,6 @@ electron:
   emulator: libretro
   core:     mame
 enterprise:
-  emulator: clk
-  core:     clk
-ep128emu:
   emulator: libretro
   core:     ep128emu
 etekwar:

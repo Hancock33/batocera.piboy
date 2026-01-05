@@ -1784,23 +1784,15 @@ arcadia:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
-ep128emu:
-  name:                 EP64/128
-  manufacturer:         Enterprise
-  release:              1985
-  hardware:             computer
-  extensions:           [128, 7z, bas, cas, cdt, com, dsk, dtf, img, tap, trn, tvcwav, tzx, wav, zip]
-  emulators:
-    libretro:
-      ep128emu:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU] }
-
 enterprise:
   name:                 Enterprise
   manufacturer:         Enterprise Computers
   release:              1985
   hardware:             computer
-  extensions:           [bas, com, zip]
+  extensions:           [128, bas, com, trn, zip]
   emulators:
+    libretro:
+      ep128emu:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU] }
     clk:
       clk:              { requireAnyOf: [BR2_PACKAGE_CLK] }
   comment_en:           |

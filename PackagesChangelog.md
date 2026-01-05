@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|988752f5bcbce5d9ba19e78daf538405fa38fc29|Jan 05, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|15735c0cfa5510567eabdc955cd0a79abe73bd6f|Jan 05, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|cd9e3ffb85ab09b5234ee7131c443e008445e921|Jan 05, 2026
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|7f34531c6b76798057f3af69da531840139230d5|Jan 05, 2026
@@ -99,7 +100,6 @@ Network|[pd-mapper](http://github.com/linux-msm/pd-mapper)|5ecd2fe926aca7abfe407
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|2794f6982753adc8d0a234b680ec3ecfa9871214|Dec 30, 2025
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|881828910e77c799c1a6894cadc2d05a5c2f3f70|Dec 30, 2025
 Emulators|[libretro-xrick](http://github.com/libretro/xrick-libretro)|34e4c3fc8a679d0209debc3738dc7264d3112a03|Dec 30, 2025
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|e8c5970fafdf1ae71dc460e70572c6c006653675|Dec 29, 2025
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v0.9.2|Dec 29, 2025
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|6446aa466b9f2ad8ce4ab6f22e3b86eea3e494c4|Dec 29, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|f74343b183c5fd4af6857a3d9b51a4a9328aadd4|Dec 29, 2025
