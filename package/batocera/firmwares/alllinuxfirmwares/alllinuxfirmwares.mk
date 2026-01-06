@@ -176,12 +176,6 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	done
 endef
 
-# Link Qualcomm Wi-Fi/BT for Steam Deck OLED and other x86 handhelds
-define ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
-	mkdir -p $(TARGET_DIR)/lib/firmware
-	tar -xf $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/alllinuxfirmwares/steamdeck-oled-firmware.tar.xz -C $(TARGET_DIR)/lib/firmware
-endef
-
 # symlink AMD GPU firmware for 890M devices
 define ALLLINUXFIRMWARES_FIX_AMD_890M
 	ln -sf /lib/firmware/amdgpu/isp_4_1_1.bin $(TARGET_DIR)/lib/firmware/amdgpu/isp_4_1_0.bin
@@ -204,7 +198,6 @@ endef
 
 # Apply hooks based on architecture
 ifeq ($(BR2_x86_64),y)
-    ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS = ALLLINUXFIRMWARES_BATOCERA_STEAM_DECK_OLED_FW
     ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_AMD_890M
     ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_SER9
 endif

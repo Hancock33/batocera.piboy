@@ -4,12 +4,12 @@
 #
 ################################################################################
 
-BATOCERA_AUDIO_VERSION = 6.8
+BATOCERA_AUDIO_VERSION = 6.10
 BATOCERA_AUDIO_LICENSE = GPL
 BATOCERA_AUDIO_SOURCE=
 
 # this one is important because the package erase the default pipewire config files, so it must be built after it
-BATOCERA_AUDIO_DEPENDENCIES = pipewire wireplumber
+BATOCERA_AUDIO_DEPENDENCIES = pipewire wireplumber alsa-ucm-conf
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3326),y)
 BATOCERA_AUDIO_ALSA_SUFFIX = "-rk3326"
@@ -64,24 +64,18 @@ define BATOCERA_AUDIO_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/80-disable-alsa-reserve.conf \
 		$(TARGET_DIR)/usr/share/wireplumber/wireplumber.conf.d/80-disable-alsa-reserve.conf
 
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/pipewire.conf       $(TARGET_DIR)/usr/share/pipewire/pipewire.conf
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/pipewire.conf $(TARGET_DIR)/usr/share/pipewire/pipewire.conf
 endef
 
 define BATOCERA_AUDIO_X86_INTEL_DSP
 	mkdir -p $(TARGET_DIR)/etc/modprobe.d
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/intel-dsp.conf $(TARGET_DIR)/etc/modprobe.d/intel-dsp.conf
-endef
-
-# Steam Deck OLED SOF files are not in the sound-open-firmware package yet
-define BATOCERA_AUDIO_STEAM_DECK_OLED
-	rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/AMD/acp5x
-	rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/conf.d/acp5x
-	rm -rf $(TARGET_DIR)/usr/share/alsa/ucm2/conf.d/sof-nau8821-max
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-audio/intel-dsp.conf \
+		$(TARGET_DIR)/etc/modprobe.d/intel-dsp.conf
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
+    BATOCERA_AUDIO_DEPENDENCIES += sound-open-firmware steamdeck-dsp
     BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS += BATOCERA_AUDIO_X86_INTEL_DSP
-    BATOCERA_AUDIO_POST_INSTALL_TARGET_HOOKS += BATOCERA_AUDIO_STEAM_DECK_OLED
 endif
 
 $(eval $(generic-package))
