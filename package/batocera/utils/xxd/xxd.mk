@@ -3,16 +3,12 @@
 # xxd
 #
 ################################################################################
-# Version: Commits on Jul 25, 2013
-XXD_VERSION = 084dc9dec6b6a6d048934916aa9a539d49ba898d
-XXD_SITE =  $(call github,ConorOG,xxd,$(XXD_VERSION))
-
-define HOST_XXD_BUILD_CMDS
-	$(MAKE) -C $(@D)
-endef
+# Version: Commits on Aug 06, 2024
+XXD_VERSION = v1.2
+XXD_SITE =  $(call github,ckormanyos,xxd,$(XXD_VERSION))
 
 define HOST_XXD_INSTALL_CMDS
 	$(INSTALL) -D $(@D)/xxd $(HOST_DIR)/bin/xxd
 endef
 
-$(eval $(host-generic-package))
+$(eval $(host-cmake-package))

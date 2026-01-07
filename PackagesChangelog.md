@@ -2,7 +2,6 @@
 -----|:-----:|:-----:|:-----:
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|1009523145fdde2c4a66c1caf611379c82add321|Jan 07, 2026
-Emulators|[ares](http://github.com/ares-emulator/ares)|bdf4dc9ce19f35bfd04609a98267a4bb0b4c1e26|Jan 07, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5b5b6bbf778d51afe201f70470cc75de162087f0|Jan 07, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|8440c2074da7b4c901641dea317f570b256f2c03|Jan 07, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|392a429e8b040b3e5bf6696cb4f984274fc44123|Jan 07, 2026
@@ -163,6 +162,7 @@ Utils|[labwc](http://github.com/labwc/labwc)|0.9.3|Dec 19, 2025
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|d9b7c292cfb15959c9928e3b76bb1047b8499938|Dec 19, 2025
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|308255e4a3acb38a054ebb42a5e2fe5c50eebd66|Dec 19, 2025
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|632777e6944ee4e220d01fff9d7c7eff40f318bb|Dec 18, 2025
+Emulators|[ares](http://github.com/ares-emulator/ares)|v147|Dec 18, 2025
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|28dd246e765962de7d4df6aa1ee618e45a9a367d|Dec 18, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|9da69a705ba44e4df6d85027e244b1c36612f96c|Dec 18, 2025
 Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-input-sdl)|0b4d1d7eb676ed3cffab1af31bbea8a5c872190f|Dec 18, 2025
@@ -447,6 +447,7 @@ Wine|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886244a27773f66b0b19fdc2998392565e|Aug 21, 2024
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.44~1+deb12u1+15.8-1~deb12u1|Aug 16, 2024
+Utils|[xxd](http://github.com/ckormanyos/xxd)|v1.2|Aug 06, 2024
 Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|20a7240238f9dcd4864e841343550b18605ac34a|Jul 28, 2024
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|03aae2f5b74a18ed5fdbfe9c345a4d50203c7518|Jul 28, 2024
 Hardware|[pironman](http://github.com/sunfounder/pironman)|997c361ed71fff859d832e171f63180fbbb4e314|Jul 24, 2024
@@ -567,7 +568,6 @@ Controllers|[qtsixa](http://github.com/batocera-linux/qtsixa)|eec727030f341cf543
 Controllers|[qtsixa-shanwan](http://github.com/batocera-linux/qtsixa)|f01193703070a0d0f5db582bb0a6fe8c21ebf517|May 01, 2016
 Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d6b108b75d|Jul 09, 2015
 Libraries|[python-proxy-tools](https://files.pythonhosted.org/packages/f2/cf/77d3e19b7fabd03895caca7857ef51e4c409e0ca6b37ee6e9f7daa50b642)|0.1.0|May 06, 2014
-Utils|[xxd](http://github.com/ConorOG/xxd)|084dc9dec6b6a6d048934916aa9a539d49ba898d|Jul 25, 2013
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
 Boot|[uboot-anbernic-rgxx3](https://ftp.denx.de/pub/u-boot)|2025.10|N/A

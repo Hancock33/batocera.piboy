@@ -74,7 +74,7 @@ Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.1|Nov 25, 2025
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v7.1.1|Sept 02, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|1009523145fdde2c4a66c1caf611379c82add321|Jan 07, 2026
-Emulators|[ares](http://github.com/ares-emulator/ares)|bdf4dc9ce19f35bfd04609a98267a4bb0b4c1e26|Jan 07, 2026
+Emulators|[ares](http://github.com/ares-emulator/ares)|v147|Dec 18, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|3dd7103e62924e5d6f134ca7c8dd746ffab8a97a|Jan 06, 2026
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v121|Dec 22, 2025
@@ -566,7 +566,7 @@ Utils|[winbtrfs](https://github.com/maharmstone/btrfs/releases)|v1.9|Mar 16, 202
 Utils|[wsdd](http://github.com/christgau/wsdd)|v0.9|Jun 01, 2025
 Utils|[wtype](http://github.com/atx/wtype)|v0.4|Jan 27, 2022
 Utils|[xwiimote](http://github.com/xwiimote/xwiimote)|4df713d9037d814cc0c64197f69e5c78d55caaf1|Feb 28, 2024
-Utils|[xxd](http://github.com/ConorOG/xxd)|084dc9dec6b6a6d048934916aa9a539d49ba898d|Jul 25, 2013
+Utils|[xxd](http://github.com/ckormanyos/xxd)|v1.2|Aug 06, 2024
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v1.1|Dec 28, 2025
 Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.9.0|Mar 16, 2025
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.7.1|Aug 30, 2025
