@@ -46,7 +46,6 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/airoha \
 								$(@D)/amlogic \
 								$(@D)/amphion \
 								$(@D)/apple \
-								$(@D)/ar3k \
 								$(@D)/arm \
 								$(@D)/cadence \
 								$(@D)/cis \
