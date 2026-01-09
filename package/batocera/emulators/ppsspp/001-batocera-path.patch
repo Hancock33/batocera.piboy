@@ -1,5 +1,5 @@
 diff --git a/Core/Util/PathUtil.cpp b/Core/Util/PathUtil.cpp
-index c8219cbded..fe0aaed13e 100644
+index c8219cbded..470b3a0e4a 100644
 --- a/Core/Util/PathUtil.cpp
 +++ b/Core/Util/PathUtil.cpp
 @@ -42,26 +42,21 @@ Path FindConfigFile(const Path &searchPath, std::string_view baseFilename, bool
@@ -75,7 +75,7 @@ index c8219cbded..fe0aaed13e 100644
  }
  
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index 94a6f481ba..9ca8de78e5 100644
+index 290cf57ce1..82378bdb01 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -24,7 +24,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
@@ -88,10 +88,10 @@ index 94a6f481ba..9ca8de78e5 100644
  
  	size_t size;
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index af874315da..00751f7608 100644
+index ff8064c997..7390ccbf85 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -376,7 +376,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -378,7 +378,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -100,7 +100,7 @@ index af874315da..00751f7608 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -481,7 +481,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -483,7 +483,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  
