@@ -15,6 +15,8 @@ Engines|[scummvm](http://github.com/scummvm/scummvm)|75dfe0c6247ca430e7925728b89
 Ports|[box64](http://github.com/ptitseb/box64)|71f5207f6d7a2569c263cd641c399513783748af|Jan 09, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|e01381e301ac6d23f002f46d0ab0ae3a9b8e5920|Jan 09, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|0011437d81cfd35472fce77371a0ee46dfdb0323|Jan 09, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260109|Jan 09, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260109|Jan 09, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2fa03283dbcf4c6ba868200b15dde9426cf7b2c6|Jan 09, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|ef1d64e91ba7abdad83b9074dd1fc8ab04d400b8|Jan 09, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|a4e5cf8bac0bf35a07b94dc32ccd264496f82ac9|Jan 09, 2026
@@ -37,11 +39,9 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|2a7ccef207be68f
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14331|Jan 08, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|9563013d95a6afb5c40fb3949bb782af8f537e57|Jan 08, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|d7654ebcefb3bdb106d581c937417aa2007eaeeb|Jan 08, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260108|Jan 08, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|3c2955c910d535b3da7721c66b5b8e01b3361160|Jan 08, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.4.1|Jan 08, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.10.1|Jan 08, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260108|Jan 08, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|fb2e5520b0cf27ed693f09fe550d0e312501f29e|Jan 08, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|720d2d867b79680e7bb72479c269fc9abe205136|Jan 08, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|c2f3c5b0ce8c5e7e3ed9d885a924f85712cb38a0|Jan 08, 2026
