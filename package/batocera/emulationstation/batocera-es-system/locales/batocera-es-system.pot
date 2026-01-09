@@ -3776,6 +3776,11 @@ msgctxt "game_options"
 msgid "Gamepad"
 msgstr ""
 
+#. TRANSLATION: libretro/flycast
+msgctxt "game_options"
+msgid "Gamepad Using Left Analog Stick"
+msgstr ""
+
 #. TRANSLATION: dolphin, libretro/flycast, libretro/puae, libretro/puae2021, libretro/uae4arm
 msgctxt "game_options"
 msgid "Keyboard"
