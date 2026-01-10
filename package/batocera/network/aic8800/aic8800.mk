@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 30, 2025
-AIC8800_VERSION = 7af8ef10bd0222a4e1ee54c25904d5e0e3ca37f7
+AIC8800_VERSION = 4.0+git20250410.b99ca8b6-5
 AIC8800_SITE = $(call github,radxa-pkg,aic8800,$(AIC8800_VERSION))
 AIC8800_LICENSE = GPL-3.0
 AIC8800_LICENSE_FILES = LICENSE
