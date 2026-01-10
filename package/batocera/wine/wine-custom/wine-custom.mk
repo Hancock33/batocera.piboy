@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Dec 27, 2025
-WINE_CUSTOM_VERSION = 11.00-rc4
+# Version: Commits on Jan 10, 2026
+WINE_CUSTOM_VERSION = 11.00-rc5
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE

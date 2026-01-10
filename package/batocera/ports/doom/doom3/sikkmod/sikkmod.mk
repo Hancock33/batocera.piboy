@@ -3,8 +3,8 @@
 # sikkmod
 #
 ################################################################################
-# Version: Commits on Jul 28, 2024
-SIKKMOD_VERSION = 03aae2f5b74a18ed5fdbfe9c345a4d50203c7518
+# Version: Commits on Jan 06, 2026
+SIKKMOD_VERSION = 746a8fcc27f4c67ee48ff06f6cf328900346ea28
 SIKKMOD_SITE = $(call github,dhewm,dhewm3-sdk,$(SIKKMOD_VERSION))
 SIKKMOD_BRANCH = sikkmod
 SIKKMOD_LICENSE = GPLv3
