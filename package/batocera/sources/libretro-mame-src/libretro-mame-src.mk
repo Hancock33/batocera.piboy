@@ -6,7 +6,7 @@
 # Version: Commits on Jan 10, 2026
 LIBRETRO_MAME_SRC_VERSION = 61f1a5036c0988b8baa3b643ef333bb70a4c3fe3
 LIBRETRO_MAME_SRC_SITE = $(call github,hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
-LIBRETRO_MAME_SRC_DEPENDENCIES = sdl2 sdl2_ttf zlib libpng fontconfig sqlite jpeg flac rapidjson expat glm pulseaudio
+LIBRETRO_MAME_SRC_DEPENDENCIES = host-python3 alsa-lib fontconfig sdl2 sdl2_ttf zlib
 LIBRETRO_MAME_SRC_LICENSE = MAME
 
 ifeq ($(BR2_x86_64),y)
@@ -39,16 +39,13 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 		$(MAKE) -j$(LIBRETRO_MAME_SRC_JOBS) -C $(@D)/ -f Makefile.libretro \
 		$(LIBRETRO_MAME_SRC_EXTRA_ARGS) \
 		ARCHOPTS=-fuse-ld=mold \
-		FORCE_DRC_C_BACKEND=0 \
-		NOWERROR=1 \
 		OPENMP=0 \
 		AR="$(HOST_DIR)/bin/llvm-ar" \
 		CC="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang" \
 		CXX="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang++" \
 		LD="$(TARGET_LD)" \
 		PRECOMPILE=1 \
-		SYMBOLS=0 \
-		OPTIMIZE=3 LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION) PTR64=1
+		OPTIMIZE=3 LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
 endef
 
 define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
