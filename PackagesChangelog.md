@@ -1,6 +1,5 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/38/ca/362177fd0830201fd2a9ae34cecdd5593c9fa9d9d3bc81a6941a54cbe221)|8.68.0|Mov 20, 2025
 Boot|[rocknix-abl](http://github.com/ROCKNIX/abl)|64fb3fca6af9bc097f024464747dd51aaca201b5|Jan 11, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|1cb8bcf531f6ad1b0afcc3b2179a136535760984|Jan 11, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|8484905c9f29bf0f21e9d69533576ff46e9a7c09|Jan 11, 2026
@@ -48,6 +47,7 @@ Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|e22f836b980c4969d855c079d9376fa6b1af3d39|Jan 10, 2026
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|62d7343379945538d9feba0339452f825768ff73|Jan 09, 2026
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|d67a7561536f298e3ac711189242150c52bfe4c3|Jan 09, 2026
+Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/f2/5e/59208c6dd05ebc6f46ce2023c4fc01ffe814a1967d21b35d312c7e6ffeae)|1.2.0|Jan 09, 2026
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|63f2c5a21760e3f1ad406ec8a8b18c6346f204b3|Jan 09, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|3e8a5e75e78649b1624665a85777635f036dde1b|Jan 09, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|a4e5cf8bac0bf35a07b94dc32ccd264496f82ac9|Jan 09, 2026
@@ -72,6 +72,7 @@ Emulators|[applewin](https://github.com/audetto/AppleWin.git)|1009523145fdde2c4a
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|392a429e8b040b3e5bf6696cb4f984274fc44123|Jan 07, 2026
 Libraries|[cpp-ipc](http://github.com/mutouyun/cpp-ipc)|7aa56c5f01c2d6a451a9b1362b6fb81a43cd47b0|Jan 07, 2026
 Libraries|[pysdl3](http://github.com/Aermoss/PySDL3)|v0.9.10b0|Jan 07, 2026
+Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/f8/97/f715e5171de12dfe169a3d182400295f83fe9257d48f0160e2683525633e)|5.2.15|Jan 07, 2026
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|443c82aadae2862dc7c12af48ac0b900f4bb0fe7|Jan 07, 2026
 Ports|[box86](http://github.com/ptitseb/box86)|0579f8b9c47d87d700724f4cce559b06cbd2b0f5|Jan 07, 2026
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|f1b8e84e9d464c52716e6973554e52bb6302de40|Jan 07, 2026
@@ -138,6 +139,8 @@ Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|54eabbb210
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|6efad98f0058e803ac675ead6dbe33c054db1492|Jan 01, 2026
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0284|Dec 31, 2025
 Engines|[lightspark](http://github.com/lightspark/lightspark)|3ad09f05cd6e618783c5755f2aab176ac2878fad|Dec 31, 2025
+Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/a5/72/3d9c217874691b1a1008b47158e0f33d704d131a30289a31d5f65c71fe21)|8.69.0|Dec 31, 2025
+Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/8c/d8/71fb0371fcf0aee9a77baba5b6b2e6aaf5ab1e9bcf1ea596f4341522e7aa)|3.86.0|Dec 31, 2025
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0284|Dec 31, 2025
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|881828910e77c799c1a6894cadc2d05a5c2f3f70|Dec 30, 2025
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|4.0+git20250410.b99ca8b6-5|Dec 30, 2025
@@ -220,6 +223,7 @@ Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|26995429a3b92047f0c2f9ab90fe4202c86fd72b|Dec 11, 2025
 Utils|[rclone](http://github.com/rclone/rclone)|v1.72.1|Dec 10, 2025
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.0b|Dec 10, 2025
+Libraries|[python-hidapi](https://files.pythonhosted.org/packages/74/f6/caad9ed701fbb9223eb9e0b41a5514390769b4cb3084a2704ab69e9df0fe)|0.15.0|Dec 09, 2025
 Gpu|[nvidia580-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|580.119.02|Dec 08, 2025
 Network|[qrtr](http://github.com/linux-msm/qrtr)|a38e9afbe76270262dc157749602229b8b681f09|Dec 08, 2025
 Ports|[openjk](http://github.com/JACoders/OpenJK)|407a56fbca21310ff158fabbb3207410e381bfc8|Dec 07, 2025
@@ -254,7 +258,6 @@ Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|6d4
 Controllers|[rocknix-joypad](http://github.com/ROCKNIX/rocknix-joypad)|15b5a29b6b24c0fc59dd6f61602dacf34cbb7eae|Nov 22, 2025
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|20e7d555f911f5aa6712d5937f7b9b834015d88d|Nov 22, 2025
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
-Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/8a/b5/c454d998188ea45898ada67dd302da4f138b7fc41f9c31f7aaf8b7a28cf7)|3.85.0|Nov 20, 2025
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|76fe82f5eb318fdeb30ba9fb27093a9a10bc3821|Nov 19, 2025
 Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.41.1|Nov 19, 2025
@@ -285,7 +288,6 @@ Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|21c1e2c51832dccfac64981b
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.1|Oct 21, 2025
 Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.2|Oct 21, 2025
 Controllers|[dolphinCrosshairsPack](http://github.com/ProfgLX/Dolphin-Lightguns-Accuracy-Inis)|e5a6dce4b6e12b0659381d56dfabe2d478dd25b1|Oct 21, 2025
-Libraries|[python-adafruit-circuitpython-busdevice](https://files.pythonhosted.org/packages/99/70/2bb69cf3e79fc1bda7b111bcf9f90ff25ac705960eff6bd1375ffad754ff)|5.2.14|Oct 20, 2025
 Libraries|[python-adafruit-circuitpython-connectionmanager](https://files.pythonhosted.org/packages/bc/82/69ca5ef604b0513a5f85a583d255b2d0c48042592842dfbc955b610cf3b6)|3.1.6|Oct 20, 2025
 Libraries|[python-adafruit-circuitpython-neopixel-spi](https://files.pythonhosted.org/packages/e8/68/3b81de3c5cb1890c5ae5fd6c411cdd2d4048bb252b866a1fa569b5afc46a)|1.0.14|Oct 20, 2025
 Libraries|[python-adafruit-circuitpython-pixelbuf](https://files.pythonhosted.org/packages/87/1e/1662a9c023affdc2e8a3f5c47dc5c4288955d4741164747d5250202bca24)|2.0.10|Oct 20, 2025
@@ -412,7 +414,6 @@ Utils|[7zip](https://www.7-zip.org/a)|2501|Nov 29, 2024
 Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)|ec83dc1a5ea8bdbcd02cee81779c6dbe0e996ed2|Nov 27, 2024
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|9b927f280322b6bb13998e06b83710201960181b|Nov 24, 2024
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|cad85b7b1b864c65734f71aa4a510b6f6536881c|Nov 24, 2024
-Libraries|[python-hidapi](https://files.pythonhosted.org/packages/47/72/21ccaaca6ffb06f544afd16191425025d831c2a6d318635e9c8854070f2d)|0.14.0.post4|Nov 19, 2024
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|f9ae8fd28b13070a945a829ccf41cbf90a21d0f7|Nov 18, 2024
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|a776133c34ae8da5daf7d9ccb43e3e292e2b07b0|Nov 15, 2024
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases)|2.7.11|Nov 11, 2024
@@ -554,7 +555,6 @@ Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|M
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|af2dd23979453bcd1cad7c4086af5fb421a955c5|Mar 05, 2021
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Libraries|[uthash](http://github.com/troydhanson/uthash)|v2.3.0|Feb 23, 2021
-Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/0c/d7/5d2f861155e9749f981e6c58f2a482d3ab458bf8c35ae24d4b4d5899ebf9)|1.1.0|Jan 17, 2021
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Engines|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d59842e87e75f415dfb4322ead93|Jan 14, 2021
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
