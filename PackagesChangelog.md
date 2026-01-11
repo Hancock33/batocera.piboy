@@ -381,7 +381,6 @@ Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|c57ad894d5942740
 Emulators|[libretro-minivmac](https://github.com/libretro/libretro-minivmac)|2eb65cd5ca80174435867d2453d702390e5aab45|Apr 16, 2025
 Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|841229a6a81a0461d08af6488f252dcec5266c6a|Apr 12, 2025
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|92c4450a1bc1acb58bd02bbb99b57e5036919cdf|Apr 06, 2025
-Audio|[mt32emu](http://github.com/munt/munt)|libmt32emu_2_7_2|Apr 03, 2025
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.4.0|Mar 30, 2025
 Libraries|[semver](http://github.com/Neargye/semver)|v1.0.0-rc|Mar 29, 2025
@@ -524,6 +523,7 @@ Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firm
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|277e4a62668597d4f59cadda1cbafb844f981d45|Jul 26, 2022
+Audio|[mt32emu](http://github.com/munt/munt)|munt_2_7_0|Jul 23, 2022
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Controllers|[joycond](http://github.com/DanielOgorchock/joycond)|39d5728d41b70840342ddc116a59125b337fbde2|Jun 16, 2022

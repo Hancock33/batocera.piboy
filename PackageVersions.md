@@ -11,7 +11,7 @@ Audio|[libfreeaptx](http://github.com/regularhunter/libfreeaptx)|6dee419f934ec78
 Audio|[liblc3](https://github.com/google/liblc3/archive/refs/tags)|v1.1.3|Feb 12, 2025
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|af2dd23979453bcd1cad7c4086af5fb421a955c5|Mar 05, 2021
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.3|May 11, 2025
-Audio|[mt32emu](http://github.com/munt/munt)|libmt32emu_2_7_2|Apr 03, 2025
+Audio|[mt32emu](http://github.com/munt/munt)|munt_2_7_0|Jul 23, 2022
 Audio|[ossp](http://github.com/OpenMandrivaSoftware/ossp)|v1.3.3|Aug 31, 2024
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.8|Dec 02, 2025
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.0.0|Aug 03, 2023
