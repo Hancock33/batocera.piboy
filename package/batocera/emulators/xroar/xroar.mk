@@ -10,7 +10,7 @@ XROAR_SITE = https://www.6809.org.uk/xroar/dl
 XROAR_LICENSE = GPLv3
 XROAR_LICENSE_FILE = COPYING.GPL
 
-XROAR_DEPENDENCIES = alsa-lib libevdev libpng sdl2 sdl2_image libzlib
+XROAR_DEPENDENCIES = alsa-lib libevdev libpng sdl2 sdl2_image zlib
 
 # supported systems
 XROAR_CONF_OPTS += --enable-dragon
