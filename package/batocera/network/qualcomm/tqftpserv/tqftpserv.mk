@@ -3,8 +3,8 @@
 # tqftpserv
 #
 ################################################################################
-# Version: Commits on Dec 24, 2025
-TQFTPSERV_VERSION = 0ed681362b6f7ac7381e0320501823be6d843006
+# Version: Commits on Jan 07, 2026
+TQFTPSERV_VERSION = 443c82aadae2862dc7c12af48ac0b900f4bb0fe7
 TQFTPSERV_SITE = $(call github,linux-msm,tqftpserv,$(TQFTPSERV_VERSION))
 TQFTPSERV_LICENSE = BSD-3-Clause license
 TQFTPSERV_LICENSE_FILE = LICENSE

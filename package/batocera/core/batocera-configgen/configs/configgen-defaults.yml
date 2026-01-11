@@ -309,7 +309,7 @@ eighting:
 electron:
   emulator: libretro
   core:     mame
-ep128emu:
+enterprise:
   emulator: libretro
   core:     ep128emu
 etekwar:

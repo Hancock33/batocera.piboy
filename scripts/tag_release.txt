@@ -1,6 +1,8 @@
-﻿alsa-topology-conf.mk
+﻿aic8800.mk
+alsa-topology-conf.mk
 alsa-ucm-conf.mk
 appstream.mk
+ares.mk
 batocera-settings.mk
 cabextract.mk
 cbindgen.mk
@@ -40,3 +42,4 @@ uthash.mk
 wine-custom.mk
 wine-mono.mk
 xbox-xcloud-client.mk
+xxd.mk

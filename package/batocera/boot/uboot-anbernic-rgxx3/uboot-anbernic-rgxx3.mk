@@ -3,7 +3,7 @@
 # uboot-anbernic-rgxx3
 #
 ################################################################################
-
+# Version: Commits on Oct 06, 2025
 UBOOT_ANBERNIC_RGXX3_VERSION = 2025.10
 UBOOT_ANBERNIC_RGXX3_SITE = https://ftp.denx.de/pub/u-boot
 UBOOT_ANBERNIC_RGXX3_SOURCE = u-boot-$(UBOOT_ANBERNIC_RGXX3_VERSION).tar.bz2

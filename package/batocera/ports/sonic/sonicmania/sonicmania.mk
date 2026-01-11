@@ -3,8 +3,8 @@
 # sonicmania
 #
 ################################################################################
-# Version: Commits on Dec 18, 2025
-SONICMANIA_VERSION = cb35e4ae569c8bd963e2f48e0a51a95b20b16231
+# Version: Commits on Jan 07, 2026
+SONICMANIA_VERSION = f1b8e84e9d464c52716e6973554e52bb6302de40
 SONICMANIA_SITE = https://github.com/RSDKModding/Sonic-Mania-Decompilation
 SONICMANIA_SITE_METHOD = git
 SONICMANIA_GIT_SUBMODULES = YES

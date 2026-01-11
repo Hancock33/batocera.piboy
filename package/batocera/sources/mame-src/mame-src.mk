@@ -70,7 +70,6 @@ define MAME_SRC_BUILD_CMDS
 	$(MAKE) -j$(MAME_SRC_JOBS) TARGETOS=linux OSD=sdl \
 	$(MAME_SRC_CROSS_OPTS) \
 	ARCHOPTS=-fuse-ld=mold \
-	FORCE_DRC_C_BACKEND=0 \
 	LDOPTS="-lasound -lfontconfig" \
 	NOWERROR=1 \
 	OPENMP=0 \
@@ -78,10 +77,8 @@ define MAME_SRC_BUILD_CMDS
 	CC="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang" \
 	CXX="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang++" \
 	LD="$(TARGET_LD)" \
-	REGENIE=1 \
 	SDL_INSTALL_ROOT="$(STAGING_DIR)/usr" \
 	SUBTARGET=mame \
-	SYMBOLS=0 \
 	TARGET=mame \
 	TOOLS=1 \
 	USE_QTDEBUG=0 DEBUG=0 IGNORE_GIT=1 \

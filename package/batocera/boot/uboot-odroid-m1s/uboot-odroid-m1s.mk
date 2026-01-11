@@ -3,7 +3,7 @@
 # uboot-odroid-m1s
 #
 ################################################################################
-
+# Version: Commits on Oct 06, 2025
 UBOOT_ODROID_M1S_VERSION = 2025.10
 UBOOT_ODROID_M1S_SITE = https://ftp.denx.de/pub/u-boot
 UBOOT_ODROID_M1S_SOURCE = u-boot-$(UBOOT_ODROID_M1S_VERSION).tar.bz2

@@ -1,5 +1,5 @@
 diff --git a/Common/GPU/Vulkan/VulkanLoader.cpp b/Common/GPU/Vulkan/VulkanLoader.cpp
-index 03d5645674..cb7dc36352 100644
+index cb1f03b528..026cdf184e 100644
 --- a/Common/GPU/Vulkan/VulkanLoader.cpp
 +++ b/Common/GPU/Vulkan/VulkanLoader.cpp
 @@ -263,8 +263,9 @@ typedef void *VulkanLibraryHandle;

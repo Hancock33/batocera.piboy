@@ -1370,6 +1370,9 @@ casloopy:
   comment_en:           |
                         Requires MAME BIOS file:
                         bios/mame/casloopy.zip
+  comment_fr:           |
+                        Nécessite ce fichier de BIOS MAME:
+                        bios/mame/casloopy.zip
   comment_br:           |
                         Requer arquivo de BIOS do MAME:
                         bios/mame/casloopy.zip  
@@ -1781,15 +1784,29 @@ arcadia:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
-ep128emu:
-  name:                 EP64/128
-  manufacturer:         Enterprise
+enterprise:
+  name:                 Enterprise
+  manufacturer:         Enterprise Computers
   release:              1985
   hardware:             computer
-  extensions:           [128, 7z, bas, cas, cdt, com, dsk, dtf, img, tap, trn, tvcwav, tzx, wav, zip]
+  extensions:           [128, bas, com, trn, zip]
   emulators:
     libretro:
       ep128emu:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU] }
+    clk:
+      clk:              { requireAnyOf: [BR2_PACKAGE_CLK] }
+  comment_en:           |
+                        Requires BIOS files:
+                        bios/Enterprise/basic21.bin
+                        bios/Enterprise/exos21.bin
+  comment_fr: |
+                        Nécessite ces fichiers de BIOS:
+                        bios/Enterprise/basic21.bin
+                        bios/Enterprise/exos21.bin
+  comment_br: |
+                        Requer arquivo de BIOS:
+                        bios/Enterprise/basic21.bin
+                        bios/Enterprise/exos21.bin
 
 advision:
   name:                 Adventure Vision
@@ -6584,8 +6601,11 @@ coco:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
-  comment_en:           |
-                        Requires MAME BIOS file coco.zip and coco3.zip
+    xroar:
+      xroar:            { requireAnyOf: [BR2_PACKAGE_XROAR], incompatible_extensions: [zip, 7z] }
+  comment_en: |
+                        MAME requires BIOS file coco.zip and coco3.zip
+
                         Default Autoload Behaviors
                         1. "usage" info field when using MAME software lists (if declared)
                         2. Cassette (.cas) files autoload as binary (CLOADM:EXEC)
@@ -6595,6 +6615,13 @@ coco:
                             3b. GROVER.bas.cas  autoloads using CLOAD:RUN
                         user definable autoload overrides in: `system/configs/mame/autoload/coco_{cass,flop}_autoload.csv`
                         syntax: <romBasename>;<autoload command> (see comments in .csv files for detailed help & examples)
+
+                        --------------------------------------------------------------------------------------------------
+
+                        Xroar requires BASIC and DOS ROMs to be in the /usertdata/bios/xroar folder.
+                        The required rom files can be obtained from here: https://colorcomputerarchive.com/repo/ROMs/XRoar
+                        Obtain the roms depending on the Machine Type you choose to use.
+                        The default is Tandy CoCo 2B (NTSC,T1)
   comment_br:           |
                         Requer o arquivo coco.zip da BIOS do MAME
 
