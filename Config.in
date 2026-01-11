@@ -414,6 +414,7 @@ menu "Emulators"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xenia-native/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/yabasanshiro/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/ymir/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/xroar/Config.in"
   endmenu
 
   menu "Mupen64Plus"
