@@ -3,7 +3,7 @@
 # xroar
 #
 ################################################################################
-
+# Version: Commits on Nov 21, 2025
 XROAR_VERSION = 1.10
 XROAR_SOURCE = xroar-${XROAR_VERSION}.tar.gz
 XROAR_SITE = https://www.6809.org.uk/xroar/dl

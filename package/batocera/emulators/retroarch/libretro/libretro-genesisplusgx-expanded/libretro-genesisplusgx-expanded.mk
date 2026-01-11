@@ -3,8 +3,8 @@
 # libretro-genesisplusgx-expanded
 #
 ################################################################################
-# Version: Commits on Jul 16, 2025
-LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION = 258749423d02e9cba34ef4221c91ea3e01cef126
+# Version: Commits on Jan 11, 2026
+LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION = 83c2daff0f26620fec51a29820b85f8409bd5840
 LIBRETRO_GENESISPLUSGX_EXPANDED_SITE = $(call github,RapidEdwin08,Genesis-Plus-GX-Expanded-Rom-Size,$(LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION))
 LIBRETRO_GENESISPLUSGX_EXPANDED_LICENSE = Non-commercial
 LIBRETRO_GENESISPLUSGX_EXPANDED_DEPENDENCIES = retroarch
