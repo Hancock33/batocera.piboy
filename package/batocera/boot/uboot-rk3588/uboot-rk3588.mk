@@ -3,7 +3,7 @@
 # uboot-rk3588
 #
 ################################################################################
-# Version: Commits on Mar 06, 2025
+# Version: Commits on Oct 06, 2025
 UBOOT_RK3588_VERSION = 2025.10
 UBOOT_RK3588_SITE = https://ftp.denx.de/pub/u-boot
 UBOOT_RK3588_SOURCE = u-boot-$(UBOOT_RK3588_VERSION).tar.bz2

@@ -3,6 +3,7 @@
 # dmd-play-rust
 #
 ################################################################################
+# Version: Commits on Oct 04, 2025
 DMD_PLAY_RUST_VERSION = 912cd34b1d1895d7913eb60fc653f6c6f60d4f2c
 DMD_PLAY_RUST_SITE =  $(call github,batocera-linux,dmd-play-rust,$(DMD_PLAY_RUST_VERSION))
 

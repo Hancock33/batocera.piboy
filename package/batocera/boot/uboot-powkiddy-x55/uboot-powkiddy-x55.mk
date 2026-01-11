@@ -3,7 +3,7 @@
 # uboot-powkiddy-x55
 #
 ################################################################################
-
+# Version: Commits on Oct 06, 2025
 UBOOT_POWKIDDY_X55_VERSION = 2025.10
 UBOOT_POWKIDDY_X55_SITE = https://ftp.denx.de/pub/u-boot
 UBOOT_POWKIDDY_X55_SOURCE = u-boot-$(UBOOT_POWKIDDY_X55_VERSION).tar.bz2

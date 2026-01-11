@@ -3,7 +3,7 @@
 # uboot-radxa-zero-3
 #
 ################################################################################
-
+# Version: Commits on Oct 06, 2025
 UBOOT_RADXA_ZERO_3_VERSION = 2025.10
 UBOOT_RADXA_ZERO_3_SITE = https://ftp.denx.de/pub/u-boot
 UBOOT_RADXA_ZERO_3_SOURCE = u-boot-$(UBOOT_RADXA_ZERO_3_VERSION).tar.bz2

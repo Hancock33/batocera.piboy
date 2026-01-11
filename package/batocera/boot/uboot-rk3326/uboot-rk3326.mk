@@ -3,8 +3,8 @@
 # uboot-rk3326
 #
 ################################################################################
-
-UBOOT_RK3326_VERSION = 611716febddb824a7203d0d3b5d399608a54ccf6
+# Version: Commits on Dec 05, 2025
+UBOOT_RK3326_VERSION = 2492a3e467e332e2350d987234ce6123700b3392
 UBOOT_RK3326_SITE = https://github.com/ROCKNIX/hardkernel-uboot
 UBOOT_RK3326_SITE_METHOD = git
 UBOOT_RK3326_LICENSE = GPL-2.0+
