@@ -5863,10 +5863,10 @@ index 000000000000..f3623871edbf
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/hid/hid-msi-claw.c b/drivers/hid/hid-msi-claw.c
 new file mode 100644
-index 000000000000..03cf1d449d50
+index 000000000000..3d95e31c1ae3
 --- /dev/null
 +++ b/drivers/hid/hid-msi-claw.c
-@@ -0,0 +1,845 @@
+@@ -0,0 +1,842 @@
 +#include <linux/dmi.h>
 +#include <linux/hid.h>
 +#include <linux/module.h>
@@ -6703,9 +6703,6 @@ index 000000000000..03cf1d449d50
 +	.raw_event		= msi_claw_raw_event,
 +	.probe			= msi_claw_probe,
 +	.remove			= msi_claw_remove,
-+#ifdef CONFIG_PM
-+	.resume			= msi_claw_resume,
-+#endif
 +};
 +module_hid_driver(msi_claw_driver);
 +
