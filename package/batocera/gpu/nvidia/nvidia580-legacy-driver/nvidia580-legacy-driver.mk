@@ -3,8 +3,8 @@
 # nvidia580-legacy-driver
 #
 ################################################################################
-# Version: Commits on Dec 08, 2025
-NVIDIA580_LEGACY_DRIVER_VERSION = 580.119.02
+# Version: Commits on Jan 08, 2026
+NVIDIA580_LEGACY_DRIVER_VERSION = 580.126.09
 NVIDIA580_LEGACY_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA580_LEGACY_DRIVER_SITE = http://download.nvidia.com/XFree86/Linux-x86$(NVIDIA580_LEGACY_DRIVER_SUFFIX)/$(NVIDIA580_LEGACY_DRIVER_VERSION)
 NVIDIA580_LEGACY_DRIVER_SOURCE = NVIDIA-Linux-x86$(NVIDIA580_LEGACY_DRIVER_SUFFIX)-$(NVIDIA580_LEGACY_DRIVER_VERSION).run
@@ -49,7 +49,7 @@ NVIDIA580_LEGACY_DRIVER_LIBS_MISC = \
 	libnvidia-api.so.1 \
 	libnvidia-cfg.so.$(NVIDIA580_LEGACY_DRIVER_VERSION) \
 	libnvidia-eglcore.so.$(NVIDIA580_LEGACY_DRIVER_VERSION) \
-	libnvidia-egl-gbm.so.1.1.2 \
+	libnvidia-egl-gbm.so.1.1.3 \
 	libnvidia-egl-wayland.so.1.1.20 \
 	libnvidia-glcore.so.$(NVIDIA580_LEGACY_DRIVER_VERSION) \
 	libnvidia-glsi.so.$(NVIDIA580_LEGACY_DRIVER_VERSION) \
