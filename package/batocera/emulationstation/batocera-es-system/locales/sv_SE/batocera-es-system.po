@@ -4969,6 +4969,11 @@ msgctxt "game_options"
 msgid "CUTSCENES"
 msgstr "MELLANSCENER"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "CXA2025AS (JP)"
+msgstr ""
+
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CXD4 (LLE Fallback)"
@@ -6667,6 +6672,11 @@ msgstr "Digital styrenhet"
 msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
 msgstr "Digital styrenhet (Gamepad)"
+
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Digital Prime FBX"
+msgstr ""
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -11866,6 +11876,11 @@ msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
 msgstr "Macintosh High Density-diskettavbilder"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Magnum FBX"
+msgstr ""
+
 #. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
@@ -14660,6 +14675,11 @@ msgctxt "game_options"
 msgid "Random Values"
 msgstr "Slumpmässiga värden"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Raw"
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
@@ -14882,6 +14902,11 @@ msgstr "Återställ BLANDNINGSLÄGE-konturen på Singe-sprites."
 msgctxt "keys_files"
 msgid "Restore state"
 msgstr "Återställ tillstånd"
+
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Restored Wii VC"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
@@ -16661,6 +16686,11 @@ msgstr "Mjuk 3"
 msgctxt "game_options"
 msgid "Smooth 4"
 msgstr "Mjuk 4"
+
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Smooth V2 FBX"
+msgstr ""
 
 #. TRANSLATION: dxx-rebirth, eden, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp
 msgctxt "game_options"
@@ -19460,6 +19490,11 @@ msgctxt "game_options"
 msgid "Wii U Classic Controller"
 msgstr "Wii U Classic Controller"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Wii Virtual Console"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Wiimmfi (95.217.77.181)"
@@ -19734,6 +19769,11 @@ msgctxt "keys_files"
 msgid "concussion missile"
 msgstr "hjärnskakningsmissil"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "cxa2025as (US)"
+msgstr ""
+
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "dark knight"
@@ -19996,6 +20036,11 @@ msgstr "röd/elektrisk cyan"
 msgctxt "game_options"
 msgid "right/left"
 msgstr "höger/vänster"
+
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "royaltea"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

@@ -4941,6 +4941,11 @@ msgctxt "game_options"
 msgid "CUTSCENES"
 msgstr "过场动画"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "CXA2025AS (JP)"
+msgstr ""
+
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "CXD4 (LLE Fallback)"
@@ -6593,6 +6598,11 @@ msgstr "数字控制器"
 msgctxt "game_options"
 msgid "Digital Controller (Gamepad)"
 msgstr "数字控制器（游戏手柄）"
+
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Digital Prime FBX"
+msgstr ""
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -11675,6 +11685,11 @@ msgctxt "game_options"
 msgid "Macintosh High Density Disk images"
 msgstr "Macintosh高密度磁盘映像"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Magnum FBX"
+msgstr ""
+
 #. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Mailbox (Recommended)"
@@ -14432,6 +14447,11 @@ msgctxt "game_options"
 msgid "Random Values"
 msgstr "随机值"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Raw"
+msgstr ""
+
 #. TRANSLATION: model2emu
 msgctxt "game_options"
 msgid ""
@@ -14643,6 +14663,11 @@ msgstr "恢复单个精灵的BLENDMODE描边效果。"
 msgctxt "keys_files"
 msgid "Restore state"
 msgstr "恢复状态"
+
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Restored Wii VC"
+msgstr ""
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
@@ -16402,6 +16427,11 @@ msgstr "平滑 3"
 msgctxt "game_options"
 msgid "Smooth 4"
 msgstr "平滑 4"
+
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Smooth V2 FBX"
+msgstr ""
 
 #. TRANSLATION: dxx-rebirth, eden, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp
 msgctxt "game_options"
@@ -19141,6 +19171,11 @@ msgctxt "game_options"
 msgid "Wii U Classic Controller"
 msgstr "Wii U经典控制器"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "Wii Virtual Console"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Wiimmfi (95.217.77.181)"
@@ -19413,6 +19448,11 @@ msgctxt "keys_files"
 msgid "concussion missile"
 msgstr "震爆导弹"
 
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "cxa2025as (US)"
+msgstr ""
+
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
 msgid "dark knight"
@@ -19674,6 +19714,11 @@ msgstr "红色/铁青色"
 msgctxt "game_options"
 msgid "right/left"
 msgstr "右/左"
+
+#. TRANSLATION: libretro/nestopia
+msgctxt "game_options"
+msgid "royaltea"
+msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
