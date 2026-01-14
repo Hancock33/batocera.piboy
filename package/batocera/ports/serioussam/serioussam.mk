@@ -3,8 +3,8 @@
 # serioussam
 #
 ################################################################################
-# Version: Commits on Dec 30, 2025
-SERIOUSSAM_VERSION = 148c80ae5732956551f3304cbf4216fe479d311f
+# Version: Commits on Jan 14, 2026
+SERIOUSSAM_VERSION = 510d36f901cbe883c56b155b53717e4efdeb6522
 SERIOUSSAM_SITE = $(call github,tx00100xt,SeriousSamClassic-VK,$(SERIOUSSAM_VERSION))
 SERIOUSSAM_SUPPORTS_IN_SOURCE_BUILD = NO
 SERIOUSSAM_DEPENDENCIES = sdl2 sdl2_mixer host-serioussam
