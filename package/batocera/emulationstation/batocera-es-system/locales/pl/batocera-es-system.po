@@ -2562,7 +2562,7 @@ msgctxt "game_options"
 msgid "ATARI SYSTEM"
 msgstr "SYSTEM ATARI"
 
-#. TRANSLATION: dolphin, rpcs3, vpinball
+#. TRANSLATION: dolphin, libretro/stella, rpcs3, vpinball
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr "AUDIO"
@@ -3172,6 +3172,16 @@ msgctxt "keys_files"
 msgid "Analog Up"
 msgstr "Analog w górę"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Analog deadzone for paddles. Core default (15)."
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Analog sensitivity for paddles. Core default (20)."
+msgstr ""
+
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "Analogue"
@@ -3496,6 +3506,11 @@ msgstr "Australia"
 msgctxt "game_options"
 msgid "Austria"
 msgstr "Austria"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Auto (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -3879,6 +3894,11 @@ msgstr "Wstecz / Menu"
 msgctxt "keys_files"
 msgid "Backpedal"
 msgstr "Cofanie"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Badly adjusted"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4554,6 +4574,11 @@ msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
 msgstr "KRAJ KONSOLI"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "CONSOLE DISPLAY"
+msgstr ""
+
 #. TRANSLATION: cemu, redream, shadps4
 msgctxt "game_options"
 msgid "CONSOLE LANGUAGE"
@@ -4734,7 +4759,7 @@ msgctxt "game_options"
 msgid "CONTROLLERS"
 msgstr "KONTROLERY"
 
-#. TRANSLATION: dolphin, libretro/dice, rpcs3, shared
+#. TRANSLATION: dolphin, libretro/dice, libretro/stella, rpcs3, shared
 msgctxt "game_options"
 msgid "CONTROLS"
 msgstr "STEROWANIE"
@@ -4843,10 +4868,20 @@ msgctxt "game_options"
 msgid "CROP BORDER"
 msgstr "PRZYTNIJ RAMKĘ"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "CROP HORIZONTAL OVERSCAN"
+msgstr ""
+
 #. TRANSLATION: duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, libretro/picodrive, ...
 msgctxt "game_options"
 msgid "CROP OVERSCAN"
 msgstr "PRZYCINAJ OVERSCAN"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "CROP VERTICAL OVERSCAN"
+msgstr ""
 
 #. TRANSLATION: duckstation, mame, openmohaa, theforceengine
 msgctxt "game_options"
@@ -5945,7 +5980,7 @@ msgctxt "game_options"
 msgid "Complex"
 msgstr "Złożone"
 
-#. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next, libretro/stella, redream
 msgctxt "game_options"
 msgid "Composite"
 msgstr "Composite"
@@ -6079,6 +6114,16 @@ msgstr ""
 "Przycinaj grafikę, aby maksymalnie powiększyć ekran gry i wypełnić tylko "
 "niewykorzystane miejsce."
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Crop horizontal overscan."
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Crop vertical overscan (lines). Core default (0)."
+msgstr ""
+
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
 msgid "Cross"
@@ -6121,7 +6166,7 @@ msgstr ""
 "Limit czasu kursora w sekundach podczas korzystania z trybu kursora - "
 "Limitowany czasowo."
 
-#. TRANSLATION: libretro/gambatte, libretro/mesen, shared
+#. TRANSLATION: libretro/gambatte, libretro/mesen, libretro/stella, shared
 msgctxt "game_options"
 msgid "Custom"
 msgstr "Niestandardowe"
@@ -6326,7 +6371,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "TYP DYSKU"
 
-#. TRANSLATION: dolphin, duckstation, openjkdf2, pcsx2, vpinball
+#. TRANSLATION: dolphin, duckstation, libretro/stella, openjkdf2, pcsx2, ...
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "EKRAN"
@@ -7513,6 +7558,11 @@ msgctxt "game_options"
 msgid "Enable QOS settings to optimize for internet or local network."
 msgstr "Włącz ustawienia QOS, aby zoptymalizować sieć internetową lub lokalną."
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Enable TV-like filtering / effects."
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable VSync"
@@ -7684,6 +7734,11 @@ msgstr "Włączanie lub wyłączanie zapisywania najlepszych wyników."
 msgctxt "game_options"
 msgid "Enable per-game custom configuration via MAME menu."
 msgstr "Umożliwienie własnej konfiguracji dla osobnej gry poprzez menu MAME."
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Enable phosphor mode (motion blur) for flickering effects."
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -10941,6 +10996,11 @@ msgctxt "game_options"
 msgid "Joypad Auto"
 msgstr "Joypad Auto"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Joypad sensitivity for paddles. Core default  (3)."
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Joystick"
@@ -11222,7 +11282,7 @@ msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
 msgstr "CELOWNIK PISTOLETU ŚWIETLNEGO"
 
-#. TRANSLATION: hypseus-singe
+#. TRANSLATION: hypseus-singe, libretro/stella
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIRS"
 msgstr "CELOWNIKI PISTOLETÓW ŚWIETLNYCH"
@@ -12459,6 +12519,11 @@ msgctxt "game_options"
 msgid "Mouse axis for player 4, vertical screen motion."
 msgstr "Oś myszy dla gracza 4, pionowy ruch na ekranie."
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Mouse sensitivity for paddles. Core default (10)."
+msgstr ""
+
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
 msgid "Move Backward"
@@ -12685,6 +12750,11 @@ msgctxt "game_options"
 msgid "NTSC 60Hz"
 msgstr "NTSC 60Hz"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "NTSC ASPECT"
+msgstr ""
+
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "NTSC FILTER"
@@ -12694,6 +12764,11 @@ msgstr "FILTR NTSC"
 msgctxt "game_options"
 msgid "NTSC TV"
 msgstr "NTSC TV"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "NTSC aspect ratio correction. Core default (PAR)."
+msgstr ""
 
 #. TRANSLATION: duckstation, libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -12709,6 +12784,11 @@ msgstr "NTSC-U"
 msgctxt "game_options"
 msgid "NTSC-U/C"
 msgstr "NTSC-U/C"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "NTSC50"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13527,6 +13607,21 @@ msgctxt "game_options"
 msgid "P2 only"
 msgstr "P2 tylko"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PADDLE ANALOG ABSOLUTE"
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PADDLE ANALOG DEADZONE"
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PADDLE ANALOG SENSITIVITY"
+msgstr ""
+
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE ANALOG STICK SENSITIVITY"
@@ -13537,7 +13632,12 @@ msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
 msgstr "CZUŁOŚĆ D-PAD"
 
-#. TRANSLATION: libretro/dice
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PADDLE JOYPAD SENSITIVITY"
+msgstr ""
+
+#. TRANSLATION: libretro/dice, libretro/stella
 msgctxt "game_options"
 msgid "PADDLE MOUSE SENSITIVITY"
 msgstr "CZUŁOŚĆ MYSZY"
@@ -13562,10 +13662,20 @@ msgctxt "game_options"
 msgid "PAL 576x312px"
 msgstr "PAL 576x312px"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PAL ASPECT"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "PAL TV"
 msgstr "PAL TV"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PAL aspect ratio correction. Core default (PAR)."
+msgstr ""
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -13575,6 +13685,16 @@ msgstr ""
 #. TRANSLATION: flycast
 msgctxt "game_options"
 msgid "PAL/N"
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PAL60"
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PALETTE COLORS"
 msgstr ""
 
 #. TRANSLATION: redream
@@ -13671,6 +13791,16 @@ msgstr "HAKI WYDAJNOŚCIOWE (wymaga przeglądu)"
 msgctxt "game_options"
 msgid "PERFORMANCE PRESETS"
 msgstr "PRESETY WYDAJNOŚCI"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PHOSPHOR BLEND"
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "PHOSPHOR MODE"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -14052,6 +14182,11 @@ msgstr "Filipiny"
 msgctxt "game_options"
 msgid "Philips CD-i CD-ROMs"
 msgstr "CD-ROMy Philips CD-i"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Phosphor blend level. Core default (60%)."
+msgstr ""
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -14611,7 +14746,7 @@ msgctxt "game_options"
 msgid "RF"
 msgstr "RF"
 
-#. TRANSLATION: libretro/snes9x, libretro/snes9x_next, redream
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next, libretro/stella, redream
 msgctxt "game_options"
 msgid "RGB"
 msgstr "RGB"
@@ -15171,7 +15306,7 @@ msgctxt "game_options"
 msgid "Russian (ru)"
 msgstr "Rosyjski (ru)"
 
-#. TRANSLATION: libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/snes9x, libretro/snes9x_next, libretro/stella
 msgctxt "game_options"
 msgid "S-Video"
 msgstr "S-Video"
@@ -15315,6 +15450,16 @@ msgstr "STRUMIENIOWY DOSTĘP DO TEKSTUR SDL"
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "SECAM"
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "SECAM60"
+msgstr ""
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -15666,6 +15811,11 @@ msgctxt "game_options"
 msgid "STEERING SENSITIVITY"
 msgstr "CZUŁOŚĆ STEROWANIA"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "STEREO SOUND"
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "STRETCH BEZELS (4K & ULTRAWIDE)"
@@ -16014,6 +16164,11 @@ msgctxt "game_options"
 msgid "Select the colour palette to use"
 msgstr ""
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Select the console video standard / display mode."
+msgstr ""
+
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid ""
@@ -16028,6 +16183,11 @@ msgstr "Wybierz typ wprowadzania, aby poruszać się po ekranie dotykowym"
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "Select the model of Colour Computer to emulate"
+msgstr ""
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Select the palette used to render colors."
 msgstr ""
 
 #. TRANSLATION: libretro/np2kai
@@ -16374,6 +16534,11 @@ msgstr "Pokaż celownik z pięścią."
 msgctxt "game_options"
 msgid "Show Crosshair with lightsaber."
 msgstr "Pokaż celownik z mieczem świetlnym."
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Show a crosshair for lightgun games."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17037,6 +17202,11 @@ msgctxt "game_options"
 msgid "Standard (4:3)"
 msgstr "Standardowe (4:3)"
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Standard (Default)"
+msgstr "Standard (domyślnie)"
+
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Standard Controller"
@@ -17116,6 +17286,11 @@ msgstr "Stereo"
 msgctxt "game_options"
 msgid "Stereo (Default)"
 msgstr "Stereo (domyślnie)"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Stereo sound output."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17666,6 +17841,11 @@ msgstr "TT ETOS 512k"
 msgctxt "game_options"
 msgid "TV"
 msgstr "TV"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "TV EFFECTS"
+msgstr ""
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -18780,6 +18960,11 @@ msgctxt "game_options"
 msgid "Use a specific mouse for Paddle 4, chosen by Port 4's Mouse Index."
 msgstr "Użyj określonej myszy dla pada 4, wybranej przez indeks myszy portu 4."
 
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Use absolute analog input for paddles."
+msgstr ""
+
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
@@ -18931,6 +19116,11 @@ msgid "Useful to troubleshoot when your Windows game won't start of crashes."
 msgstr ""
 "Przydatne do rozwiązywania problemów, gdy gra w systemie Windows nie "
 "uruchamia się lub ulega awarii."
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "User"
+msgstr ""
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -19681,6 +19871,11 @@ msgstr "Jemen"
 msgctxt "game_options"
 msgid "You can hide the pointer on touchscreen devices."
 msgstr "Na urządzeniach z ekranem dotykowym można ukryć wskaźnik."
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
+msgid "Z26"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -22465,10 +22660,6 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "Standard"
 #~ msgstr "Standard"
-
-#~ msgctxt "game_options"
-#~ msgid "Standard (Default)"
-#~ msgstr "Standard (domyślnie)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Start"
