@@ -58,5 +58,4 @@ wsdd.mk
 wtype.mk
 x16emu.mk
 xbox-xcloud-client.mk
-xemu.mk
 xenia.mk

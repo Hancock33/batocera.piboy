@@ -3,8 +3,8 @@
 # sdl3_mixer
 #
 ################################################################################
-# Version: Commits on Jan 12, 2026
-SDL3_MIXER_VERSION = bf351431f8b4788fe819977e99e7067c182b2d7d
+# Version: Commits on Jan 14, 2026
+SDL3_MIXER_VERSION = 4ffd769c08dfe8611aeaef9507057f6ef411ac8e
 SDL3_MIXER_SITE = https://github.com/libsdl-org/SDL_mixer
 SDL3_MIXER_SITE_METHOD = git
 SDL3_MIXER_GIT_SUBMODULES = yes
