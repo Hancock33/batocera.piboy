@@ -89,7 +89,7 @@ case "$1" in
         else
             mkdir -p "$DEST"
         fi
-        ! [[ -d "$DEST" ]] && ret=3 || { extract_archive "${FILE,,}"; ret=$?; } 
+        ! [[ -d "$DEST" ]] && ret=3 || { extract_archive "${FILE,,}"; ret=$?; }
     ;;
     pyx) #CLI for python hook, extraction of single files possible
         [[ -f "$2" ]] || { echo "Error! Archive '$2' not found"; exit 1; }
