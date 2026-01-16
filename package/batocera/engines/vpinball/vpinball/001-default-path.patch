@@ -1,26 +1,13 @@
-diff --git a/standalone/inc/vpinmame/VPinMAMEController.cpp b/standalone/inc/vpinmame/VPinMAMEController.cpp
-index afaf53690..3fd7dc90a 100644
---- a/standalone/inc/vpinmame/VPinMAMEController.cpp
-+++ b/standalone/inc/vpinmame/VPinMAMEController.cpp
-@@ -174,7 +174,7 @@ VPinMAMEController::VPinMAMEController()
- #if (defined(__APPLE__) && ((defined(TARGET_OS_IOS) && TARGET_OS_IOS) || (defined(TARGET_OS_TV) && TARGET_OS_TV))) || defined(__ANDROID__)
-          m_szPath = find_directory_case_insensitive(g_pvp->m_szMyPath, "pinmame");
- #else
--         m_szPath = string(getenv("HOME")) + PATH_SEPARATOR_CHAR + ".pinmame" + PATH_SEPARATOR_CHAR;
-+         m_szPath = string("/userdata/system/configs/vpinball/pinmame/");
- #endif
-       }
-    }
-diff --git a/vpinball.cpp b/vpinball.cpp
-index 9bd231109..90a38a135 100644
---- a/vpinball.cpp
-+++ b/vpinball.cpp
-@@ -233,7 +233,7 @@ void VPinball::GetMyPrefPath()
-    m_szMyPrefPath = szPrefPath;
-    SDL_free(szPrefPath);
- #else
--   m_szMyPrefPath = string(getenv("HOME")) + PATH_SEPARATOR_CHAR + ".vpinball" + PATH_SEPARATOR_CHAR;
-+   m_szMyPrefPath = string("/userdata/system/configs") + PATH_SEPARATOR_CHAR + "vpinball" + PATH_SEPARATOR_CHAR;
- #endif
-    if (!DirExists(m_szMyPrefPath))
-       std::filesystem::create_directory(m_szMyPrefPath);
+diff --git a/plugins/pinmame/PinMAMEPlugin.cpp b/plugins/pinmame/PinMAMEPlugin.cpp
+index 6056cb76b..9de899b4e 100644
+--- a/plugins/pinmame/PinMAMEPlugin.cpp
++++ b/plugins/pinmame/PinMAMEPlugin.cpp
+@@ -416,7 +416,7 @@ MSGPI_EXPORT void MSGPIAPI PinMAMEPluginLoad(const uint32_t sessionId, const Msg
+                LOGE("PinMAME path is not defined.");
+             }
+          #elif defined(__APPLE__) || defined(__linux__)
+-            pinmamePath = string(getenv("HOME")) + PATH_SEPARATOR_CHAR + ".pinmame" + PATH_SEPARATOR_CHAR;
++            pinmamePath = string("/userdata/system/configs/vpinball/pinmame/");
+          #else
+             // FIXME implement a last resort or just ask the user to define its path setup in the settings ?
+             LOGE("PinMAME path is not defined.");

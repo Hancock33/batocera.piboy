@@ -1,0 +1,100 @@
+diff --git a/make/CMakeLists_plugin_B2SLegacy.txt b/make/CMakeLists_plugin_B2SLegacy.txt
+index 8955d1c30..63a47353c 100644
+--- a/make/CMakeLists_plugin_B2SLegacy.txt
++++ b/make/CMakeLists_plugin_B2SLegacy.txt
+@@ -199,7 +199,7 @@ if(BUILD_SHARED)
+             COMMAND "${CMAKE_COMMAND}" -E copy "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/windows-x86/SDL3.dll" "${PLUGINS_DIR}/b2slegacy/SDL3.dll"
+          )
+       endif()
+-   elseif(PluginPlatform STREQUAL "linux")
++   elseif(POST_BUILD_COPY_EXT_LIBS)
+       add_custom_command(TARGET B2SLegacyPlugin POST_BUILD
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libSDL3.so" "${PLUGINS_DIR}/b2slegacy/"
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libSDL3.so.*" "${PLUGINS_DIR}/b2slegacy/"
+diff --git a/make/CMakeLists_plugin_DMDUtil.txt b/make/CMakeLists_plugin_DMDUtil.txt
+index afc02f426..9458d64d5 100644
+--- a/make/CMakeLists_plugin_DMDUtil.txt
++++ b/make/CMakeLists_plugin_DMDUtil.txt
+@@ -93,7 +93,7 @@ if(BUILD_SHARED)
+             COMMAND "${CMAKE_COMMAND}" -E copy "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/windows-${PluginArch}/dmdutil.dll" "${PLUGINS_DIR}/dmdutil/dmdutil.dll"
+          )
+       endif()
+-   elseif(PluginPlatform STREQUAL "linux")
++   elseif(POST_BUILD_COPY_EXT_LIBS)
+       add_custom_command(TARGET DMDUtilPlugin POST_BUILD
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libdmdutil.so" "${PLUGINS_DIR}/dmdutil/"
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libdmdutil.so.*" "${PLUGINS_DIR}/dmdutil/"
+diff --git a/make/CMakeLists_plugin_DOF.txt b/make/CMakeLists_plugin_DOF.txt
+index b7d4fae3c..6e540a746 100644
+--- a/make/CMakeLists_plugin_DOF.txt
++++ b/make/CMakeLists_plugin_DOF.txt
+@@ -101,7 +101,7 @@ if(BUILD_SHARED)
+             COMMAND "${CMAKE_COMMAND}" -E copy "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/windows-${PluginArch}/libftdi1.dll" "${PLUGINS_DIR}/dof/libftdi1.dll"
+          )
+       endif()
+-   elseif(PluginPlatform STREQUAL "linux")
++   elseif(POST_BUILD_COPY_EXT_LIBS)
+       add_custom_command(TARGET DOFPlugin POST_BUILD
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libdof.so" "${PLUGINS_DIR}/dof/"
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libdof.so.*" "${PLUGINS_DIR}/dof/"
+diff --git a/make/CMakeLists_plugin_FlexDMD.txt b/make/CMakeLists_plugin_FlexDMD.txt
+index cd60507e3..07d2a206f 100644
+--- a/make/CMakeLists_plugin_FlexDMD.txt
++++ b/make/CMakeLists_plugin_FlexDMD.txt
+@@ -202,7 +202,7 @@ if(BUILD_SHARED)
+             COMMAND "${CMAKE_COMMAND}" -E copy "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/windows-${PluginArch}/SWSCALE.dll" "${PLUGINS_DIR}/flexdmd/SWSCALE-8.dll"
+          )
+       endif()
+-   elseif(PluginPlatform STREQUAL "linux")
++   elseif(POST_BUILD_COPY_EXT_LIBS)
+       add_custom_command(TARGET FlexDMDPlugin POST_BUILD
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libSDL3.so" "${PLUGINS_DIR}/flexdmd/"
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libSDL3.so.*" "${PLUGINS_DIR}/flexdmd/"
+diff --git a/make/CMakeLists_plugin_PUP.txt b/make/CMakeLists_plugin_PUP.txt
+index bf47e139c..3705a81ec 100644
+--- a/make/CMakeLists_plugin_PUP.txt
++++ b/make/CMakeLists_plugin_PUP.txt
+@@ -164,7 +164,7 @@ if(BUILD_SHARED)
+             COMMAND "${CMAKE_COMMAND}" -E copy "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/windows-${PluginArch}/pupdmd.dll" "${PLUGINS_DIR}/pup/pupdmd.dll"
+          )
+       endif()
+-   elseif(PluginPlatform STREQUAL "linux")
++   elseif(POST_BUILD_COPY_EXT_LIBS)
+       add_custom_command(TARGET PUPPlugin POST_BUILD
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libSDL3.so" "${PLUGINS_DIR}/pup/"
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libSDL3.so.*" "${PLUGINS_DIR}/pup/"
+diff --git a/make/CMakeLists_plugin_PinMAME.txt b/make/CMakeLists_plugin_PinMAME.txt
+index 4372918d0..0765c1c5f 100644
+--- a/make/CMakeLists_plugin_PinMAME.txt
++++ b/make/CMakeLists_plugin_PinMAME.txt
+@@ -93,7 +93,7 @@ if(BUILD_SHARED)
+       target_link_directories(PinMAMEPlugin PUBLIC
+          ${CMAKE_SOURCE_DIR}/third-party/runtime-libs/${PluginPlatform}-${PluginArch}
+       )
+-      target_link_libraries(PinMAMEPlugin PUBLIC pinmame)
++      target_link_libraries(PinMAMEPlugin PUBLIC -l:libpinmame.so.3.7.0)
+    endif()
+ 
+    add_custom_command(TARGET PinMAMEPlugin POST_BUILD
+@@ -112,7 +112,7 @@ if(BUILD_SHARED)
+             COMMAND "${CMAKE_COMMAND}" -E copy "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/windows-${PluginArch}/pinmame.dll" "${PLUGINS_DIR}/pinmame/pinmame.dll"
+          )
+       endif()
+-   elseif(PluginPlatform STREQUAL "linux")
++   elseif(POST_BUILD_COPY_EXT_LIBS)
+       add_custom_command(TARGET PinMAMEPlugin POST_BUILD
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libpinmame.so" "${PLUGINS_DIR}/pinmame/"
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libpinmame.so.*" "${PLUGINS_DIR}/pinmame/"
+diff --git a/make/CMakeLists_plugin_Serum.txt b/make/CMakeLists_plugin_Serum.txt
+index 555524602..af6ab7cfa 100644
+--- a/make/CMakeLists_plugin_Serum.txt
++++ b/make/CMakeLists_plugin_Serum.txt
+@@ -94,7 +94,7 @@ if(BUILD_SHARED)
+             COMMAND "${CMAKE_COMMAND}" -E copy "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/windows-${PluginArch}/serum.dll" "${PLUGINS_DIR}/serum/serum.dll"
+          )
+       endif()
+-   elseif(PluginPlatform STREQUAL "linux")
++   elseif(POST_BUILD_COPY_EXT_LIBS)
+       add_custom_command(TARGET SerumPlugin POST_BUILD
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libserum.so" "${PLUGINS_DIR}/serum/"
+          COMMAND cp -a "${CMAKE_SOURCE_DIR}/third-party/runtime-libs/linux-${PluginArch}/libserum.so.*" "${PLUGINS_DIR}/serum/"
