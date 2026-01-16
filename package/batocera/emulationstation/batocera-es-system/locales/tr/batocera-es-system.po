@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Options file\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-21 15:41+0300\n"
+"PO-Revision-Date: 2026-01-11 22:06+0300\n"
 "Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
 "Language-Team: Turkish\n"
 "Language: tr\n"
@@ -3929,7 +3929,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Batocera Control Center"
-msgstr ""
+msgstr "Batocera Kontrol Merkezi"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -5143,7 +5143,7 @@ msgstr "Kartuş (Yuva 4)"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Cartridge Autostart"
-msgstr ""
+msgstr "Kartuş Otomatik Başlat"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -6461,7 +6461,7 @@ msgstr "ÇİFT ÇEKİRDEK MODU"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "DUAL SCREEN"
-msgstr ""
+msgstr "ÇİFT EKRAN"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -6909,27 +6909,27 @@ msgstr "Aşağı/Çömel"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 200-E"
-msgstr ""
+msgstr "Dragon 200-E"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 32"
-msgstr ""
+msgstr "Dragon 32"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 64"
-msgstr ""
+msgstr "Dragon 64"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 64 + SAMx8 (512K)"
-msgstr ""
+msgstr "Dragon 64 + SAMx8 (512K)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon Professional (Alpha)"
-msgstr ""
+msgstr "Dragon Professional (Alpha)"
 
 #. TRANSLATION: flycast, libretro/flycast
 msgctxt "game_options"
@@ -7015,7 +7015,7 @@ msgstr "Felemenkçe (nl)"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dynacom MX-1600"
-msgstr ""
+msgstr "Dynacom MX-1600"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
@@ -7250,7 +7250,7 @@ msgstr "GENİŞ EKRAN YAMALARINI ETKİNLEŞTİR"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE WIN32"
-msgstr ""
+msgstr "WIN32 ETKİNLEŞTİR"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7497,6 +7497,8 @@ msgid ""
 "Enable MelonDS to display over two screens. Some related screen options will "
 "be ignored."
 msgstr ""
+"MelonDS iki ekranda görüntülenmesini etkinleştirin. Bazı ilgili ekran "
+"seçenekleri göz ardı edilecektir."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -9646,7 +9648,7 @@ msgstr "Oyun Kolu Modern"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Gamepad Using Left Analog Stick"
-msgstr ""
+msgstr "Oyun Kolunu Sol Analog Çubuk Olarak Kullan"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -11889,7 +11891,7 @@ msgstr "Makao"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Machine Type"
-msgstr ""
+msgstr "Makine Türü"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -12019,7 +12021,7 @@ msgstr "Eşleme Penceresi"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Matra & Hachette Alice"
-msgstr ""
+msgstr "Matra & Hachette Alice"
 
 #. TRANSLATION: dosbox, openmohaa
 msgctxt "game_options"
@@ -14369,7 +14371,7 @@ msgstr "Temiz bir LCD efekti üretir."
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Prologica CP-400"
-msgstr ""
+msgstr "Prologica CP-400"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15997,7 +15999,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Select the emulated hardware architecture machine type and architecture."
-msgstr ""
+msgstr "Taklit edilecek donanım mimarisi makine tipini ve mimarisini seçin."
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -16223,6 +16225,8 @@ msgid ""
 "Sets Runner to 32bit, works only if there is no prefix for current app is "
 "installed."
 msgstr ""
+"Çalıştırıcıyı 32 bit olarak ayarlar, yalnızca mevcut uygulamanın ön eki "
+"yüklü değilse çalışır."
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -17681,52 +17685,52 @@ msgstr "Tandy"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo (NTSC)"
-msgstr ""
+msgstr "Tandy CoCo (NTSC)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo (PAL)"
-msgstr ""
+msgstr "Tandy CoCo (PAL)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 2B (NTSC,T1)"
-msgstr ""
+msgstr "Tandy CoCo 2B (NTSC,T1)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 2B (PAL,T1)"
-msgstr ""
+msgstr "Tandy CoCo 2B (PAL,T1)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3"
-msgstr ""
+msgstr "Tandy CoCo 3"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (6309)"
-msgstr ""
+msgstr "Tandy CoCo 3 (6309)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (PAL)"
-msgstr ""
+msgstr "Tandy CoCo 3 (PAL)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (PAL, 6309)"
-msgstr ""
+msgstr "Tandy CoCo 3 (PAL, 6309)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy Deluxe CoCo"
-msgstr ""
+msgstr "Tandy Deluxe CoCo"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy MC-10"
-msgstr ""
+msgstr "Tandy MC-10"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -17746,7 +17750,7 @@ msgstr ""
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
-msgstr ""
+msgstr "Tano Dragon (NTSC)"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"

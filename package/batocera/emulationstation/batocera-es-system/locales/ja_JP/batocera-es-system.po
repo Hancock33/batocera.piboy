@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: batocera-es v43b(2025/11/16)\n"
+"Project-Id-Version: batocera-es v43b(20260112)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-16 20:43+0900\n"
+"PO-Revision-Date: 2026-01-12 16:07+0900\n"
 "Last-Translator: mikakunin\n"
 "Language-Team: mikakunin\n"
 "Language: ja\n"
@@ -341,7 +341,7 @@ msgstr "1040 STE 1.62"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "1040 STE AUTO"
-msgstr "1040 STE (自動)"
+msgstr "1040 STE (TOS自動)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -1751,7 +1751,7 @@ msgstr "512kB (1750)"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "520 ST AUTO"
-msgstr "520 ST (自動)"
+msgstr "520 ST (TOS自動)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -5116,7 +5116,7 @@ msgstr "カートリッジ (スロット 4)"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Cartridge Autostart"
-msgstr ""
+msgstr "カートリッジ 自動スタート"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -6864,27 +6864,27 @@ msgstr "下/しゃがむ"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 200-E"
-msgstr ""
+msgstr "Dragon 200-E"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 32"
-msgstr ""
+msgstr "Dragon 32"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 64"
-msgstr ""
+msgstr "Dragon 64"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 64 + SAMx8 (512K)"
-msgstr ""
+msgstr "Dragon 64 + SAMx8 (512K)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon Professional (Alpha)"
-msgstr ""
+msgstr "Dragon Professional (アルファ版)"
 
 #. TRANSLATION: flycast, libretro/flycast
 msgctxt "game_options"
@@ -6968,7 +6968,7 @@ msgstr "オランダ語 (nl)"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dynacom MX-1600"
-msgstr ""
+msgstr "Dynacom MX-1600"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
@@ -7203,7 +7203,7 @@ msgstr "ワイドスクリーン パッチを有効"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE WIN32"
-msgstr ""
+msgstr "WIN32 を有効"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7385,7 +7385,7 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Emutos language && region setting."
-msgstr "EmuTOS のと地域の設定"
+msgstr "Emutos の言語と地域の設定"
 
 #. TRANSLATION: mupen64plus, ppsspp
 msgctxt "game_options"
@@ -8544,7 +8544,7 @@ msgstr "Falcon 4.04"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Falcon AUTO"
-msgstr "Falcon 自動"
+msgstr "Falcon (Ver自動)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -9568,7 +9568,7 @@ msgstr "ゲームパッド"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Gamepad Using Left Analog Stick"
-msgstr ""
+msgstr "ゲームパッドの左アナログスティックを使用"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -11806,7 +11806,7 @@ msgstr "マカオ"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Machine Type"
-msgstr ""
+msgstr "機種"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -11931,7 +11931,7 @@ msgstr "ウィンドウに合わせる"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Matra & Hachette Alice"
-msgstr ""
+msgstr "Matra & Hachette Alice"
 
 #. TRANSLATION: dosbox, openmohaa
 msgctxt "game_options"
@@ -12082,7 +12082,7 @@ msgstr "Mega STE 2.06"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "Mega STE AUTO"
-msgstr "Mega STE (自動)"
+msgstr "Mega STE (TOS自動)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -14265,7 +14265,7 @@ msgstr "すっきりとしたLCD効果を生み出します"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Prologica CP-400"
-msgstr ""
+msgstr "Prologica CP-400"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15882,7 +15882,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Select the emulated hardware architecture machine type and architecture."
-msgstr ""
+msgstr "エミュレートするハードウェア機種とアーキテクチャを選択します"
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -16104,6 +16104,8 @@ msgid ""
 "Sets Runner to 32bit, works only if there is no prefix for current app is "
 "installed."
 msgstr ""
+"ランナーを 32 ビットに設定します。 prefix がインストールされていると機能しま"
+"せん"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -17506,7 +17508,7 @@ msgstr "TT 3.06"
 #. TRANSLATION: hatari
 msgctxt "game_options"
 msgid "TT AUTO"
-msgstr "TT (自動)"
+msgstr "TT (TOS自動)"
 
 #. TRANSLATION: hatari
 msgctxt "game_options"
@@ -17551,52 +17553,52 @@ msgstr "Tandy"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo (NTSC)"
-msgstr ""
+msgstr "Tandy CoCo (NTSC)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo (PAL)"
-msgstr ""
+msgstr "Tandy CoCo (PAL)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 2B (NTSC,T1)"
-msgstr ""
+msgstr "Tandy CoCo 2B (NTSC,T1)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 2B (PAL,T1)"
-msgstr ""
+msgstr "Tandy CoCo 2B (PAL,T1)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3"
-msgstr ""
+msgstr "Tandy CoCo 3"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (6309)"
-msgstr ""
+msgstr "Tandy CoCo 3 (6309)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (PAL)"
-msgstr ""
+msgstr "Tandy CoCo 3 (PAL)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (PAL, 6309)"
-msgstr ""
+msgstr "Tandy CoCo 3 (PAL, 6309)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy Deluxe CoCo"
-msgstr ""
+msgstr "Tandy Deluxe CoCo"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy MC-10"
-msgstr ""
+msgstr "Tandy MC-10"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -17616,7 +17618,7 @@ msgstr ""
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
-msgstr ""
+msgstr "Tano Dragon (NTSC)"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"

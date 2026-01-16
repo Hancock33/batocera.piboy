@@ -62,9 +62,9 @@
   Hardware acceleration depends on supported codecs for devices in FFmpeg.
 - You can now choose to create a Win32 WINE bottle only via the option to run 32-bit Windows games.
 ### Updated
-- Azahar to 2123.4
+- Azahar to 2124
 - BigPEmu to v121
-- CLK to 2025-12-19
+- CLK to 2026-01-06
 - Dolphin-Emu to 2512-99
 - DXX-Rebirth to May 25, 2025
 - EDuke32 to Oct 10, 2025
@@ -72,24 +72,31 @@
 - Groovy MAME to 0.284
 - Hatari to v2.6.1
 - Hurrican to Jul 26, 2025 build
-- Jazz2 to 3.4.0
+- Jazz2 to 3.5.0
+- Libretro Atari800 to 4th of December 2025 build
+- Libretro BlueMSX to 4th of November 2025 build
 - Libretro Bsnes to 19th of December 2025 build
 - Libretro Dolphin to 24th of December 2025 build
+- Libretro FBNeo to 11th of January 2026 build
 - Libretro Fceumm to 12th of September 2025 build
 - Libretro Flycast to 2.6
+- Libretro Genesis Plus GX to 21th of December 2025 build
+- Libretro Genesis Plus GX-Wide to 21th of October 2024 build
 - Libretro MAME to 0.284
-- Libretro Nestopia to 10th of January 2026 build
 - Libretro Mesen to 24th of October 2024 build
+- Libretro Nestopia to 10th of January 2026 build
 - Libretro Opera to 17th of October 2024 build
+- Libretro Picodrive to 3rd of December 2025 build
 - Libretro Play! to 0.72
 - Libretro Snes9x to 8th of September 2025 build
 - Libretro Stella to 28th of December 2025 build
+- Libretro Vecx to 12th of January 2026 build
 - MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenJKDF2 to v0.9.8
 - OpenMOHAA to v0.82.1
 - Play! to 0.72
-- PCSX2 to v2.6.0
+- PCSX2 to v2.6.2
 - RClone to v1.72.1
 - RetroArch to 1.22.2
 - RPCS3 to v0.0.39
