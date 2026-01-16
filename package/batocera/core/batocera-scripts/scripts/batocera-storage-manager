@@ -280,7 +280,7 @@ handle_partition_event() {
     # Comprehensive Android/Qualcomm check
     shopt -s nocasematch
     local combined_test="$label $part_label"
-    
+
     if [[ "$combined_test" =~ $android_regex ]]; then
         shopt -u nocasematch
         log_msg "SKIP: [$devname] Android system partition detected (Label: $label, PartLabel: $part_label)."
@@ -312,7 +312,7 @@ handle_disk_event() {
         log_msg "SAFETY: [$devname] No partitions seen. Probing for hidden tables..."
         partprobe "/dev/$devname" >/dev/null 2>&1
         # Use a short sleep to let the kernel update /dev
-        sleep 0.2 
+        sleep 0.2
     fi
 
     # Check if this disk contains any Android/Qualcomm/Critical labels

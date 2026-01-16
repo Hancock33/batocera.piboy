@@ -298,7 +298,7 @@ def send_reset_signal(target_device: evdev.UInput) -> None:
 def do_reset_mouse() -> None:
     # Create temporary device
     sender = evdev.UInput(
-        name="batocera-mouse-reset", 
+        name="batocera-mouse-reset",
         events={
             ecodes.EV_REL: [ecodes.REL_X, ecodes.REL_Y],
             ecodes.EV_KEY: [ecodes.BTN_LEFT]
