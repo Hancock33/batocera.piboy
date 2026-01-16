@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-13 20:39+0800\n"
+"PO-Revision-Date: 2026-01-11 17:46+0800\n"
 "Last-Translator: R.Chan\n"
 "Language-Team: Ray Chan\n"
 "Language: zh_CN\n"
@@ -5132,7 +5132,7 @@ msgstr "卡带（插槽 4）"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Cartridge Autostart"
-msgstr ""
+msgstr "卡匣自动运行"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -6859,27 +6859,27 @@ msgstr "蹲伏/蹲下"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 200-E"
-msgstr ""
+msgstr "Dragon 200-E"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 32"
-msgstr ""
+msgstr "Dragon 32"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 64"
-msgstr ""
+msgstr "Dragon 64"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 64 + SAMx8 (512K)"
-msgstr ""
+msgstr "Dragon 64 + SAMx8 (512K)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon Professional (Alpha)"
-msgstr ""
+msgstr "Dragon Professional (Alpha)"
 
 #. TRANSLATION: flycast, libretro/flycast
 msgctxt "game_options"
@@ -6960,7 +6960,7 @@ msgstr "荷兰语"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dynacom MX-1600"
-msgstr ""
+msgstr "Dynacom MX-1600"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
@@ -9513,7 +9513,7 @@ msgstr "现代游戏板"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Gamepad Using Left Analog Stick"
-msgstr ""
+msgstr "使用左模拟摇杆的游戏手柄"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -11733,7 +11733,7 @@ msgstr "澳门"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Machine Type"
-msgstr ""
+msgstr "机器类型"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -11856,7 +11856,7 @@ msgstr "匹配窗口"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Matra & Hachette Alice"
-msgstr ""
+msgstr "Matra & Hachette Alice"
 
 #. TRANSLATION: dosbox, openmohaa
 msgctxt "game_options"
@@ -14243,7 +14243,7 @@ msgstr "产生干净的LCD效果。"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Prologica CP-400"
-msgstr ""
+msgstr "Prologica CP-400"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -15867,7 +15867,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Select the emulated hardware architecture machine type and architecture."
-msgstr ""
+msgstr "选择模拟的硬件架构和机器类型."
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -17548,52 +17548,52 @@ msgstr "坦迪"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo (NTSC)"
-msgstr ""
+msgstr "Tandy CoCo (NTSC)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo (PAL)"
-msgstr ""
+msgstr "Tandy CoCo (PAL)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 2B (NTSC,T1)"
-msgstr ""
+msgstr "Tandy CoCo 2B (NTSC,T1)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 2B (PAL,T1)"
-msgstr ""
+msgstr "Tandy CoCo 2B (PAL,T1)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3"
-msgstr ""
+msgstr "Tandy CoCo 3"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (6309)"
-msgstr ""
+msgstr "Tandy CoCo 3 (6309)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (PAL)"
-msgstr ""
+msgstr "Tandy CoCo 3 (PAL)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (PAL, 6309)"
-msgstr ""
+msgstr "Tandy CoCo 3 (PAL, 6309)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy Deluxe CoCo"
-msgstr ""
+msgstr "Tandy Deluxe CoCo"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy MC-10"
-msgstr ""
+msgstr "Tandy MC-10"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -17613,7 +17613,7 @@ msgstr ""
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
-msgstr ""
+msgstr "Tano Dragon (NTSC)"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"

@@ -503,7 +503,7 @@ while true; do
     sleep 60 # Check every minute
 
     if is_power_connected; then
-        # Reset timer while plugged in so the 1-hour limit 
+        # Reset timer while plugged in so the 1-hour limit
         START_TIME=\$(date +%s)
         continue
     fi
