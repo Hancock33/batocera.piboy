@@ -31,8 +31,7 @@ define BATOCERA_CONTROLCENTER_INSTALL_TARGET_CMDS
 	install -m 0755 $(@D)/shell.py          $(TARGET_DIR)/usr/share/batocera/controlcenter
 	install -m 0755 $(@D)/refresh.py        $(TARGET_DIR)/usr/share/batocera/controlcenter
 	install -m 0755 $(@D)/gamepads.py       $(TARGET_DIR)/usr/share/batocera/controlcenter
-	install -m 0755 $(@D)/PdfViewer.py      $(TARGET_DIR)/usr/share/batocera/controlcenter
-
+	install -m 0755 $(@D)/DocViewer.py      $(TARGET_DIR)/usr/share/batocera/controlcenter
 	cd $(TARGET_DIR)/usr/bin; ln -sf ../share/batocera/controlcenter/controlcenter.py ./batocera-controlcenter-app
 	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/batocera-controlcenter-toogle.sh $(TARGET_DIR)/usr/bin/batocera-controlcenter
 	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/controlcenter.xml $(TARGET_DIR)/usr/share/batocera/controlcenter
