@@ -48,6 +48,7 @@
 - Casio Loopy as a separate system
 - Enterprise 64/128 (via CLK emulator)
 - Xroar emulator as an option for the Color Computer (Tandy TRS-80)
+- PC60 as a separate system
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
@@ -82,6 +83,7 @@
 - Libretro Flycast to 2.6
 - Libretro Genesis Plus GX to 21th of December 2025 build
 - Libretro Genesis Plus GX-Wide to 21th of October 2024 build
+- Libretro MAME2003plus to 16th of January 2026 build
 - Libretro MAME to 0.284
 - Libretro Mesen to 24th of October 2024 build
 - Libretro Nestopia to 10th of January 2026 build
