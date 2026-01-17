@@ -3,8 +3,8 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Jan 16, 2026
-VPINBALL_VERSION = b23024b2284989a20bcbc8ba0b1109fd5c2e0d70
+# Version: Commits on Jan 17, 2026
+VPINBALL_VERSION = c640a71e74e361ffff81032bf82eb222905ff706
 VPINBALL_BRANCH = master
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
@@ -22,7 +22,6 @@ endef
 define VPINBALL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/vpinball
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/VPinballX_GL	$(TARGET_DIR)/usr/bin/vpinball
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/libglad.so		$(TARGET_DIR)/usr/bin/vpinball
 	cp -R $(@D)/buildroot-build/assets			$(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/plugins			$(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/scripts			$(TARGET_DIR)/usr/bin/vpinball/

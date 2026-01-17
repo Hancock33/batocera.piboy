@@ -3,8 +3,8 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Jan 16, 2026
-SCUMMVM_VERSION = c1413bafb90fb8cb3073c732e2bed520d34b1bc1
+# Version: Commits on Jan 03, 2026
+SCUMMVM_VERSION = 65b8d2f0e93187cd16ecffb3e3f0b7a0481613d4
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_BRANCH = branch-3-0
 SCUMMVM_LICENSE = GPLv2
