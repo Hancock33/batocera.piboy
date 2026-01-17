@@ -1,8 +1,8 @@
 diff --git a/src/overlay_params.cpp b/src/overlay_params.cpp
-index 13b1960..87c3555 100644
+index 3232af7..1de0e10 100644
 --- a/src/overlay_params.cpp
 +++ b/src/overlay_params.cpp
-@@ -924,15 +924,15 @@ parse_overlay_config(struct overlay_params *params,
+@@ -944,15 +944,15 @@ parse_overlay_config(struct overlay_params *params,
     }
  
  #if defined(HAVE_X11) || defined(HAVE_WAYLAND)

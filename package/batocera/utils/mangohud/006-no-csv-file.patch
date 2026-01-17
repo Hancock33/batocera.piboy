@@ -1,12 +1,19 @@
---- MangoHud-12620c91eaca0917a7939a92ec33915cadf24475/src/logging.cpp   2024-06-15 04:27:17.000000000 -0700
-+++ mangohud-new/src/logging.cpp        2026-01-16 15:51:51.076963588 -0800
-@@ -264,7 +264,8 @@
-
-   calculate_benchmark_data();
-   output_file.close();
--  writeSummary(m_log_files.back());
+diff --git a/src/logging.cpp b/src/logging.cpp
+index 9ef29ec..b5d0628 100644
+--- a/src/logging.cpp
++++ b/src/logging.cpp
+@@ -290,11 +290,11 @@ void Logger::stop_logging() {
+   } catch (...) {
+     SPDLOG_INFO("Something went wrong when closing output_file");
+   }
+-
+-  if (!m_log_files.empty())
 +  // Batocera: skip that
-+  // writeSummary(m_log_files.back());
++  /*if (!m_log_files.empty())
+     writeSummary(m_log_files.back());
+   else
+-    SPDLOG_INFO("Can't write summary because m_log_files is empty");
++    SPDLOG_INFO("Can't write summary because m_log_files is empty");*/
+ 
    clear_log_data();
  #ifdef __linux__
-   control_client_check(HUDElements.params->control, global_control_client, gpu.c_str());

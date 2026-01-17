@@ -1,8 +1,8 @@
 diff --git a/src/cpu.cpp b/src/cpu.cpp
-index 093a55d..d1d7046 100644
+index f46faba..2e97710 100644
 --- a/src/cpu.cpp
 +++ b/src/cpu.cpp
-@@ -606,6 +606,10 @@ bool CPUStats::GetCpuFile() {
+@@ -615,6 +615,10 @@ bool CPUStats::GetCpuFile() {
          } else if (name == "apm_xgene") {
              find_input(path, "temp", input, "SoC Temperature");
              break;
