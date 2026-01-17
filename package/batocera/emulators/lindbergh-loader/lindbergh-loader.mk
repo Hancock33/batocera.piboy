@@ -19,12 +19,11 @@ LINDBERGH_LOADER_DEPENDENCIES += libglew sdl3 sdl3_image sdl3_ttf ncurses openal
 LINDBERGH_LOADER_DEPENDENCIES += xlib_libXcursor xlib_libXext xlib_libXi xlib_libXmu xlib_libXScrnSaver
 
 # match the makefile cflags
-LINDBERGH_LOADER_CFLAGS = -O3 -pipe -w -march=prescott -mtune=generic -g0 -fPIC -I$(STAGING_DIR)/usr/include -flto -std=gnu17
+LINDBERGH_LOADER_CFLAGS = -pipe -w -march=prescott -mtune=generic -std=gnu17 -fPIC
 # match the makefile ldflags
-LINDBERGH_LOADER_LDFLAGS += -L$(STAGING_DIR)/usr/lib
-LINDBERGH_LOADER_LDFLAGS += -flto -Wl,-z,defs -rdynamic -static-libgcc -lc -ldl -lGL
-LINDBERGH_LOADER_LDFLAGS += -lglut -lX11 -lXcursor -lSDL3 -lSDL3_image -lSDL3_ttf -lFAudio -lm -lpthread -shared -lgcc_s -lgcc
-LINDBERGH_LOADER_LDFLAGS += -nostdlib -lasound -L./src/libxdiff -lxdiff
+LINDBERGH_LOADER_LDFLAGS += -L$(STAGING_DIR)/usr/lib -L./src/libxdiff
+LINDBERGH_LOADER_LDFLAGS += -shared -nostdlib
+LINDBERGH_LOADER_LDFLAGS += -lasound -lc -ldl -lFAudio -lgcc -lgcc_s -lGL -lglut -lm -lpthread -lSDL3 -lSDL3_image -lSDL3_ttf -lX11 -lXcursor -lxdiff
 
 define LINDBERGH_LOADER_BUILD_CMDS
 	$(MAKE) \
@@ -44,7 +43,7 @@ define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
 	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/lib32/extralibs
 	mv $(TARGET_DIR)/usr/bin/lindbergh/lib* $(TARGET_DIR)/usr/lib32/extralibs
-	#LD_LIBRARY_PATH=$(TARGET_DIR)/usr/lib32:$(TARGET_DIR)/usr/bin/lindbergh:/usr/lib32 $(TARGET_DIR)/usr/bin/lindbergh/lindbergh --create config $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
+	#LD_LIBRARY_PATH=$(STAGING_DIR)/lib:$(STAGING_DIR)/usr/lib $(@D)/build/lindbergh --create config $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
 	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lindbergh.ini $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
 	sed -i "s|FULLSCREEN = false|FULLSCREEN = true|" $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
 endef
