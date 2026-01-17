@@ -1,13 +1,13 @@
 diff --git a/plugins/pinmame/PinMAMEPlugin.cpp b/plugins/pinmame/PinMAMEPlugin.cpp
-index 6056cb76b..9de899b4e 100644
+index 3b2002fc6..117109ce2 100644
 --- a/plugins/pinmame/PinMAMEPlugin.cpp
 +++ b/plugins/pinmame/PinMAMEPlugin.cpp
-@@ -416,7 +416,7 @@ MSGPI_EXPORT void MSGPIAPI PinMAMEPluginLoad(const uint32_t sessionId, const Msg
-                LOGE("PinMAME path is not defined.");
-             }
-          #elif defined(__APPLE__) || defined(__linux__)
--            pinmamePath = string(getenv("HOME")) + PATH_SEPARATOR_CHAR + ".pinmame" + PATH_SEPARATOR_CHAR;
-+            pinmamePath = string("/userdata/system/configs/vpinball/pinmame/");
-          #else
-             // FIXME implement a last resort or just ask the user to define its path setup in the settings ?
-             LOGE("PinMAME path is not defined.");
+@@ -414,7 +414,7 @@ MSGPI_EXPORT void MSGPIAPI PinMAMEPluginLoad(const uint32_t sessionId, const Msg
+       }
+       #elif defined(__APPLE__) || defined(__linux__)
+       if (pinmamePath.empty())
+-         pinmamePath = std::filesystem::path(getenv("HOME")) / ".pinmame";
++         pinmamePath = string("/userdata/system/configs/vpinball/pinmame/");
+       #endif
+ 
+       // FIXME implement a last resort or just ask the user to define its path setup in the settings ?
