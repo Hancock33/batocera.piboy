@@ -1,0 +1,26 @@
+diff --git a/standalone/cmake/CMakeLists_gl-linux-aarch64.txt b/standalone/cmake/CMakeLists_gl-linux-aarch64.txt
+index d715c1b78..c67afdcd8 100644
+--- a/standalone/cmake/CMakeLists_gl-linux-aarch64.txt
++++ b/standalone/cmake/CMakeLists_gl-linux-aarch64.txt
+@@ -685,7 +685,7 @@ target_link_libraries(vpinball PUBLIC
+    freeimage
+    bass
+    hidapi-hidraw
+-   pinmame
++   -l:libpinmame.so.3.7.0
+    altsound
+    dmdutil
+    dof
+diff --git a/standalone/cmake/CMakeLists_gl-linux-x64.txt b/standalone/cmake/CMakeLists_gl-linux-x64.txt
+index 6362b5e4d..b2a6391de 100644
+--- a/standalone/cmake/CMakeLists_gl-linux-x64.txt
++++ b/standalone/cmake/CMakeLists_gl-linux-x64.txt
+@@ -673,7 +673,7 @@ target_link_libraries(vpinball PUBLIC
+    freeimage
+    bass
+    hidapi-hidraw
+-   pinmame
++   -l:libpinmame.so.3.7.0
+    altsound
+    dmdutil
+    dof
