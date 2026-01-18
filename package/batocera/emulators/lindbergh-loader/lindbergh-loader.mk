@@ -27,13 +27,12 @@ LINDBERGH_LOADER_LDFLAGS += -lasound -lc -ldl -lFAudio -lgcc -lgcc_s -lGL -lglut
 
 define LINDBERGH_LOADER_BUILD_CMDS
 	$(MAKE) \
-	CC="$(TARGET_CC)" \
-	CFLAGS_FOR_BUILD="-I$(STAGING_DIR)/usr/include" \
-	CFLAGS="$(LINDBERGH_LOADER_CFLAGS)" \
-	CXX="$(TARGET_CXX)" \
-	CPPFLAGS="-I$(STAGING_DIR)/usr/include" \
-	LDFLAGS="$(LINDBERGH_LOADER_LDFLAGS)" \
 	AR="$(TARGET_AR)" \
+	CC="$(TARGET_CC)" \
+	CXX="$(TARGET_CXX)" \
+	LD="$(TARGET_CC)" \
+	CFLAGS="$(LINDBERGH_LOADER_CFLAGS)" \
+	LDFLAGS="$(LINDBERGH_LOADER_LDFLAGS)" \
 	-C $(@D) all
 endef
 
