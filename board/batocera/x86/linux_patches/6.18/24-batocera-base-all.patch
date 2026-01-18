@@ -286,7 +286,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 30c332829b0f..b63f8e86d37d 100644
+index 23a575ce425c..83bce69edc7a 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -3471,10 +3471,10 @@ index c65f4da93702..105b12fd86b8 100644
 +
 diff --git a/block/adios.c b/block/adios.c
 new file mode 100644
-index 000000000000..41de52785cd1
+index 000000000000..c6eaa85911d3
 --- /dev/null
 +++ b/block/adios.c
-@@ -0,0 +1,2006 @@
+@@ -0,0 +1,2002 @@
 +// SPDX-License-Identifier: GPL-2.0
 +/*
 + * Adaptive Deadline I/O Scheduler (ADIOS)
@@ -3502,7 +3502,7 @@ index 000000000000..41de52785cd1
 +#include "blk-mq.h"
 +#include "blk-mq-sched.h"
 +
-+#define ADIOS_VERSION "3.1.7"
++#define ADIOS_VERSION "3.1.8"
 +
 +/* Request Types:
 + *
@@ -4832,15 +4832,11 @@ index 000000000000..41de52785cd1
 +	 * due to a REQ_OP_FLUSH barrier.
 +	 */
 +	if (eval_adios_state(ad, ADIOS_STATE_BP)) {
-+		union adios_in_flight_rqs ifr;
-+		ifr.scalar = atomic64_read(&ad->in_flight_rqs.atomic);
-+		if (!ifr.count) {
-+			bool barrier_released = false;
-+			scoped_guard(spinlock_irqsave, &ad->lock)
-+				barrier_released = release_barrier_requests(ad);
-+			if (barrier_released)
-+				goto retry;
-+		}
++		bool barrier_released = false;
++		scoped_guard(spinlock_irqsave, &ad->lock)
++			barrier_released = release_barrier_requests(ad);
++		if (barrier_released)
++			goto retry;
 +	}
 +
 +	return NULL;
@@ -5763,19 +5759,6 @@ index 8e1ffa4358d5..2a9eec99c1f7 100644
  obj-$(CONFIG_TARGET_CORE)	+= target/
  obj-$(CONFIG_MTD)		+= mtd/
  obj-$(CONFIG_SPI)		+= spi/
-diff --git a/drivers/android/binder/page_range.rs b/drivers/android/binder/page_range.rs
-index 9379038f61f5..fdd97112ef5c 100644
---- a/drivers/android/binder/page_range.rs
-+++ b/drivers/android/binder/page_range.rs
-@@ -727,8 +727,5 @@ fn drop(self: Pin<&mut Self>) {
-     drop(mm);
-     drop(page);
- 
--    // SAFETY: We just unlocked the lru lock, but it should be locked when we return.
--    unsafe { bindings::spin_lock(&raw mut (*lru).lock) };
--
-     LRU_REMOVED_ENTRY
- }
 diff --git a/drivers/android/binder/thread.rs b/drivers/android/binder/thread.rs
 index 7e34ccd394f8..33a9053b6adf 100644
 --- a/drivers/android/binder/thread.rs
@@ -6633,6 +6616,41 @@ index e027798ece03..daee9ece63c0 100644
  	dm_atomic_plane_attach_color_mgmt_properties(dm, plane);
  #endif
  	/* Create (reset) the plane state */
+diff --git a/drivers/gpu/drm/amd/display/dc/dc_hdmi_types.h b/drivers/gpu/drm/amd/display/dc/dc_hdmi_types.h
+index b015e80672ec..fcd3ab4b0045 100644
+--- a/drivers/gpu/drm/amd/display/dc/dc_hdmi_types.h
++++ b/drivers/gpu/drm/amd/display/dc/dc_hdmi_types.h
+@@ -41,7 +41,7 @@
+ /* kHZ*/
+ #define DP_ADAPTOR_DVI_MAX_TMDS_CLK 165000
+ /* kHZ*/
+-#define DP_ADAPTOR_HDMI_SAFE_MAX_TMDS_CLK 165000
++#define DP_ADAPTOR_HDMI_SAFE_MAX_TMDS_CLK 340000
+ 
+ struct dp_hdmi_dongle_signature_data {
+ 	int8_t id[15];/* "DP-HDMI ADAPTOR"*/
+diff --git a/drivers/gpu/drm/amd/display/dc/link/link_detection.c b/drivers/gpu/drm/amd/display/dc/link/link_detection.c
+index 1173c53359b0..31b404e9b9ae 100644
+--- a/drivers/gpu/drm/amd/display/dc/link/link_detection.c
++++ b/drivers/gpu/drm/amd/display/dc/link/link_detection.c
+@@ -332,7 +332,7 @@ static void query_dp_dual_mode_adaptor(
+ 
+ 	/* Assume we have no valid DP passive dongle connected */
+ 	*dongle = DISPLAY_DONGLE_NONE;
+-	sink_cap->max_hdmi_pixel_clock = DP_ADAPTOR_HDMI_SAFE_MAX_TMDS_CLK;
++	sink_cap->max_hdmi_pixel_clock = DP_ADAPTOR_DVI_MAX_TMDS_CLK;
+ 
+ 	/* Read DP-HDMI dongle I2c (no response interpreted as DP-DVI dongle)*/
+ 	if (!i2c_read(
+@@ -388,6 +388,8 @@ static void query_dp_dual_mode_adaptor(
+ 
+ 		}
+ 	}
++	if (is_valid_hdmi_signature)
++		sink_cap->max_hdmi_pixel_clock = DP_ADAPTOR_HDMI_SAFE_MAX_TMDS_CLK;
+ 
+ 	if (is_type2_dongle) {
+ 		uint32_t max_tmds_clk =
 diff --git a/drivers/gpu/drm/amd/display/include/ddc_service_types.h b/drivers/gpu/drm/amd/display/include/ddc_service_types.h
 index 1c603b12957f..e838f7c1269c 100644
 --- a/drivers/gpu/drm/amd/display/include/ddc_service_types.h
@@ -15492,7 +15510,7 @@ index 104aa5355090..cac4926fc340 100644
  	help
  	  This device-mapper target creates a read-only device that
 diff --git a/drivers/md/dm-verity-fec.c b/drivers/md/dm-verity-fec.c
-index 72047b47a7a0..0c858b9ee06b 100644
+index e41bde1d3b15..9b873c0df8f1 100644
 --- a/drivers/md/dm-verity-fec.c
 +++ b/drivers/md/dm-verity-fec.c
 @@ -188,14 +188,13 @@ static int fec_decode_bufs(struct dm_verity *v, struct dm_verity_io *io,
@@ -15547,7 +15565,7 @@ index 72047b47a7a0..0c858b9ee06b 100644
  {
  	int r;
  	struct dm_verity_fec_io *fio = fec_io(io);
-@@ -447,9 +446,9 @@ int verity_fec_decode(struct dm_verity *v, struct dm_verity_io *io,
+@@ -445,9 +444,9 @@ int verity_fec_decode(struct dm_verity *v, struct dm_verity_io *io,
  	 * them first. Do a second attempt with erasures if the corruption is
  	 * bad enough.
  	 */
@@ -15560,10 +15578,10 @@ index 72047b47a7a0..0c858b9ee06b 100644
  			goto done;
  	}
 diff --git a/drivers/md/dm-verity-fec.h b/drivers/md/dm-verity-fec.h
-index 09123a612953..a6689cdc489d 100644
+index ec37e607cb3f..c9dce904cd6c 100644
 --- a/drivers/md/dm-verity-fec.h
 +++ b/drivers/md/dm-verity-fec.h
-@@ -68,8 +68,8 @@ struct dm_verity_fec_io {
+@@ -65,8 +65,8 @@ struct dm_verity_fec_io {
  extern bool verity_fec_is_enabled(struct dm_verity *v);
  
  extern int verity_fec_decode(struct dm_verity *v, struct dm_verity_io *io,
@@ -15574,7 +15592,7 @@ index 09123a612953..a6689cdc489d 100644
  
  extern unsigned int verity_fec_status_table(struct dm_verity *v, unsigned int sz,
  					char *result, unsigned int maxlen);
-@@ -99,6 +99,7 @@ static inline bool verity_fec_is_enabled(struct dm_verity *v)
+@@ -96,6 +96,7 @@ static inline bool verity_fec_is_enabled(struct dm_verity *v)
  static inline int verity_fec_decode(struct dm_verity *v,
  				    struct dm_verity_io *io,
  				    enum verity_block_type type,
@@ -15583,7 +15601,7 @@ index 09123a612953..a6689cdc489d 100644
  {
  	return -EOPNOTSUPP;
 diff --git a/drivers/md/dm-verity-target.c b/drivers/md/dm-verity-target.c
-index 66a00a8ccb39..bf0aee73b074 100644
+index c8695c079cfe..c7190885db76 100644
 --- a/drivers/md/dm-verity-target.c
 +++ b/drivers/md/dm-verity-target.c
 @@ -117,11 +117,25 @@ static sector_t verity_position_at_level(struct dm_verity *v, sector_t block,
@@ -20612,7 +20630,7 @@ index b9c252aa6fe0..abb9ac410176 100644
  };
  
 diff --git a/drivers/pci/vgaarb.c b/drivers/pci/vgaarb.c
-index 436fa7f4c387..b16531d08688 100644
+index baa242b14099..d89a00080046 100644
 --- a/drivers/pci/vgaarb.c
 +++ b/drivers/pci/vgaarb.c
 @@ -143,6 +143,7 @@ void vga_set_default_device(struct pci_dev *pdev)
@@ -21888,10 +21906,10 @@ index 000000000000..9c1a9ad42bc4
 +MODULE_ALIAS("wmi:" ASUS_NB_WMI_EVENT_GUID);
 diff --git a/drivers/platform/x86/asus-armoury.h b/drivers/platform/x86/asus-armoury.h
 new file mode 100644
-index 000000000000..40fcd7c04b73
+index 000000000000..2f49cee21a39
 --- /dev/null
 +++ b/drivers/platform/x86/asus-armoury.h
-@@ -0,0 +1,1527 @@
+@@ -0,0 +1,1852 @@
 +/* SPDX-License-Identifier: GPL-2.0
 + *
 + * Definitions for kernel modules using asus-armoury driver
@@ -22242,6 +22260,37 @@ index 000000000000..40fcd7c04b73
 +static const struct dmi_system_id power_limits[] = {
 +	{
 +		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "FA401UV"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 80,
++				.ppt_pl2_sppt_min = 35,
++				.ppt_pl2_sppt_max = 80,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 80,
++				.nv_dynamic_boost_min = 5,
++				.nv_dynamic_boost_max = 25,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++				.nv_tgp_min = 55,
++				.nv_tgp_max = 75,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 25,
++				.ppt_pl1_spl_max = 35,
++				.ppt_pl2_sppt_min = 31,
++				.ppt_pl2_sppt_max = 44,
++				.ppt_pl3_fppt_min = 45,
++				.ppt_pl3_fppt_max = 65,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++		},
++	},
++	{
++		.matches = {
 +			DMI_MATCH(DMI_BOARD_NAME, "FA401W"),
 +		},
 +		.driver_data = &(struct power_data) {
@@ -22343,12 +22392,27 @@ index 000000000000..40fcd7c04b73
 +			.ac_data = &(struct power_limits) {
 +				.ppt_pl1_spl_min = 15,
 +				.ppt_pl1_spl_max = 80,
-+				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_min = 35,
 +				.ppt_pl2_sppt_max = 80,
 +				.ppt_pl3_fppt_min = 35,
-+				.ppt_pl3_fppt_max = 80
++				.ppt_pl3_fppt_max = 80,
++				.nv_dynamic_boost_min = 5,
++				.nv_dynamic_boost_max = 25,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
 +			},
-+			.dc_data = NULL,
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_def = 45,
++				.ppt_pl1_spl_max = 65,
++				.ppt_pl2_sppt_min = 35,
++				.ppt_pl2_sppt_def = 54,
++				.ppt_pl2_sppt_max = 65,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 65,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
 +		},
 +	},
 +	{
@@ -22441,6 +22505,42 @@ index 000000000000..40fcd7c04b73
 +				.ppt_pl2_sppt_max = 80,
 +				.ppt_pl3_fppt_min = 25,
 +				.ppt_pl3_fppt_max = 80,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++		},
++	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "FA608UM"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_def = 45,
++				.ppt_pl1_spl_max = 90,
++				.ppt_pl2_sppt_min = 35,
++				.ppt_pl2_sppt_def = 54,
++				.ppt_pl2_sppt_max = 90,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_def = 90,
++				.ppt_pl3_fppt_max = 65,
++				.nv_dynamic_boost_min = 10,
++				.nv_dynamic_boost_max = 15,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++				.nv_tgp_min = 55,
++				.nv_tgp_max = 100,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_def = 45,
++				.ppt_pl1_spl_max = 65,
++				.ppt_pl2_sppt_min = 35,
++				.ppt_pl2_sppt_def = 54,
++				.ppt_pl2_sppt_max = 65,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 65,
 +				.nv_temp_target_min = 75,
 +				.nv_temp_target_max = 87,
 +			},
@@ -22541,6 +22641,25 @@ index 000000000000..40fcd7c04b73
 +				.ppt_platform_sppt_max = 100,
 +				.nv_temp_target_min = 75,
 +				.nv_temp_target_max = 87,
++			},
++		},
++	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "FA617XT"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_apu_sppt_min = 15,
++				.ppt_apu_sppt_max = 80,
++				.ppt_platform_sppt_min = 30,
++				.ppt_platform_sppt_max = 145,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_apu_sppt_min = 25,
++				.ppt_apu_sppt_max = 35,
++				.ppt_platform_sppt_min = 45,
++				.ppt_platform_sppt_max = 100,
 +			},
 +		},
 +	},
@@ -22686,7 +22805,7 @@ index 000000000000..40fcd7c04b73
 +	},
 +	{
 +		.matches = {
-+			DMI_MATCH(DMI_BOARD_NAME, "GA403U"),
++			DMI_MATCH(DMI_BOARD_NAME, "GA403UI"),
 +		},
 +		.driver_data = &(struct power_data) {
 +			.ac_data = &(struct power_limits) {
@@ -22714,6 +22833,116 @@ index 000000000000..40fcd7c04b73
 +				.nv_temp_target_max = 87,
 +			},
 +			.requires_fan_curve = true,
++		},
++	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "GA403UV"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 80,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 80,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 80,
++				.nv_dynamic_boost_min = 5,
++				.nv_dynamic_boost_max = 25,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++				.nv_tgp_min = 55,
++				.nv_tgp_max = 65,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 35,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 35,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 65,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++			.requires_fan_curve = true,
++		},
++	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "GA403WR"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 80,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 80,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 80,
++				.nv_dynamic_boost_min = 0,
++				.nv_dynamic_boost_max = 25,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++				.nv_tgp_min = 80,
++				.nv_tgp_max = 95,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 35,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 35,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 65,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++			.requires_fan_curve = true,
++		},
++	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "GA403WM"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 80,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 80,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 80,
++				.nv_dynamic_boost_min = 0,
++				.nv_dynamic_boost_max = 15,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++				.nv_tgp_min = 55,
++				.nv_tgp_max = 85,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 35,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 35,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 65,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++			.requires_fan_curve = true,
++		},
++	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "GA503QR"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_def = 35,
++				.ppt_pl1_spl_max = 80,
++				.ppt_pl2_sppt_min = 65,
++				.ppt_pl2_sppt_max = 80,
++			},
 +		},
 +	},
 +	{
@@ -22832,6 +23061,35 @@ index 000000000000..40fcd7c04b73
 +	},
 +	{
 +		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "GU605CR"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 30,
++				.ppt_pl1_spl_max = 85,
++				.ppt_pl2_sppt_min = 38,
++				.ppt_pl2_sppt_max = 110,
++				.nv_dynamic_boost_min = 5,
++				.nv_dynamic_boost_max = 20,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++				.nv_tgp_min = 80,
++				.nv_tgp_def = 90,
++				.nv_tgp_max = 105,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 30,
++				.ppt_pl1_spl_max = 85,
++				.ppt_pl2_sppt_min = 38,
++				.ppt_pl2_sppt_max = 110,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++			.requires_fan_curve = true,
++		},
++	},
++	{
++		.matches = {
 +			DMI_MATCH(DMI_BOARD_NAME, "GU605CW"),
 +		},
 +		.driver_data = &(struct power_data) {
@@ -22938,6 +23196,33 @@ index 000000000000..40fcd7c04b73
 +				.ppt_pl1_spl_max = 45,
 +				.ppt_pl2_sppt_min = 25,
 +				.ppt_pl2_sppt_max = 54,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 65,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 35,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 35,
++				.ppt_pl3_fppt_min = 35,
++				.ppt_pl3_fppt_max = 65,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++		},
++	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "GV302XV"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 15,
++				.ppt_pl1_spl_max = 55,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 60,
 +				.ppt_pl3_fppt_min = 35,
 +				.ppt_pl3_fppt_max = 65,
 +				.nv_temp_target_min = 75,
@@ -23142,6 +23427,35 @@ index 000000000000..40fcd7c04b73
 +	},
 +	{
 +		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "G615LR"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 28,
++				.ppt_pl1_spl_def = 140,
++				.ppt_pl1_spl_max = 175,
++				.ppt_pl2_sppt_min = 28,
++				.ppt_pl2_sppt_max = 175,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++				.nv_dynamic_boost_min = 5,
++				.nv_dynamic_boost_max = 25,
++				.nv_tgp_min = 65,
++				.nv_tgp_max = 115,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 25,
++				.ppt_pl1_spl_max = 55,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 70,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++			.requires_fan_curve = true,
++		},
++	},
++	{
++		.matches = {
 +			DMI_MATCH(DMI_BOARD_NAME, "G634J"),
 +		},
 +		.driver_data = &(struct power_data) {
@@ -23294,6 +23608,35 @@ index 000000000000..40fcd7c04b73
 +				.nv_dynamic_boost_max = 25,
 +				.nv_temp_target_min = 75,
 +				.nv_temp_target_max = 87,
++			},
++			.dc_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 25,
++				.ppt_pl1_spl_max = 55,
++				.ppt_pl2_sppt_min = 25,
++				.ppt_pl2_sppt_max = 70,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++			},
++			.requires_fan_curve = true,
++		},
++	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_BOARD_NAME, "G835LW"),
++		},
++		.driver_data = &(struct power_data) {
++			.ac_data = &(struct power_limits) {
++				.ppt_pl1_spl_min = 28,
++				.ppt_pl1_spl_def = 140,
++				.ppt_pl1_spl_max = 175,
++				.ppt_pl2_sppt_min = 28,
++				.ppt_pl2_sppt_max = 175,
++				.nv_dynamic_boost_min = 5,
++				.nv_dynamic_boost_max = 25,
++				.nv_temp_target_min = 75,
++				.nv_temp_target_max = 87,
++				.nv_tgp_min = 80,
++				.nv_tgp_max = 150,
 +			},
 +			.dc_data = &(struct power_limits) {
 +				.ppt_pl1_spl_min = 25,
@@ -31672,65 +32015,6 @@ index 000000000000..6c2e22622f4c
 +struct bce_vhci *bce_vhci_from_hcd(struct usb_hcd *hcd);
 +
 +#endif //BCE_VHCI_H
-diff --git a/fs/btrfs/delayed-inode.c b/fs/btrfs/delayed-inode.c
-index 3df7b9d7fbe8..59b489d7e4b5 100644
---- a/fs/btrfs/delayed-inode.c
-+++ b/fs/btrfs/delayed-inode.c
-@@ -152,37 +152,39 @@ static struct btrfs_delayed_node *btrfs_get_or_create_delayed_node(
- 		return ERR_PTR(-ENOMEM);
- 	btrfs_init_delayed_node(node, root, ino);
- 
-+	/* Cached in the inode and can be accessed. */
-+	refcount_set(&node->refs, 2);
-+	btrfs_delayed_node_ref_tracker_alloc(node, tracker, GFP_NOFS);
-+	btrfs_delayed_node_ref_tracker_alloc(node, &node->inode_cache_tracker, GFP_NOFS);
-+
- 	/* Allocate and reserve the slot, from now it can return a NULL from xa_load(). */
- 	ret = xa_reserve(&root->delayed_nodes, ino, GFP_NOFS);
--	if (ret == -ENOMEM) {
--		btrfs_delayed_node_ref_tracker_dir_exit(node);
--		kmem_cache_free(delayed_node_cache, node);
--		return ERR_PTR(-ENOMEM);
--	}
-+	if (ret == -ENOMEM)
-+		goto cleanup;
-+
- 	xa_lock(&root->delayed_nodes);
- 	ptr = xa_load(&root->delayed_nodes, ino);
- 	if (ptr) {
- 		/* Somebody inserted it, go back and read it. */
- 		xa_unlock(&root->delayed_nodes);
--		btrfs_delayed_node_ref_tracker_dir_exit(node);
--		kmem_cache_free(delayed_node_cache, node);
--		node = NULL;
--		goto again;
-+		goto cleanup;
- 	}
- 	ptr = __xa_store(&root->delayed_nodes, ino, node, GFP_ATOMIC);
- 	ASSERT(xa_err(ptr) != -EINVAL);
- 	ASSERT(xa_err(ptr) != -ENOMEM);
- 	ASSERT(ptr == NULL);
--
--	/* Cached in the inode and can be accessed. */
--	refcount_set(&node->refs, 2);
--	btrfs_delayed_node_ref_tracker_alloc(node, tracker, GFP_ATOMIC);
--	btrfs_delayed_node_ref_tracker_alloc(node, &node->inode_cache_tracker, GFP_ATOMIC);
--
- 	btrfs_inode->delayed_node = node;
- 	xa_unlock(&root->delayed_nodes);
- 
- 	return node;
-+cleanup:
-+	btrfs_delayed_node_ref_tracker_free(node, tracker);
-+	btrfs_delayed_node_ref_tracker_free(node, &node->inode_cache_tracker);
-+	btrfs_delayed_node_ref_tracker_dir_exit(node);
-+	kmem_cache_free(delayed_node_cache, node);
-+	if (ret)
-+		return ERR_PTR(ret);
-+	goto again;
- }
- 
- /*
 diff --git a/include/linux/hid.h b/include/linux/hid.h
 index a4ddb94e3ee5..8c6d3124c20c 100644
 --- a/include/linux/hid.h
@@ -32969,7 +33253,7 @@ index 31eda2a56920..cd34d913458f 100644
  BTF_ID_FLAGS(func, bpf_iter_scx_dsq_next, KF_ITER_NEXT | KF_RET_NULL)
  BTF_ID_FLAGS(func, bpf_iter_scx_dsq_destroy, KF_ITER_DESTROY)
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index d1206f81f8b2..98bf92ce2f92 100644
+index d1206f81f8b2..4bf8c616d0d0 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -76,10 +76,19 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
@@ -33005,6 +33289,31 @@ index d1206f81f8b2..98bf92ce2f92 100644
  
  #ifdef CONFIG_NUMA_BALANCING
  /* Restrict the NUMA promotion throughput (MB/s) for each target node. */
+@@ -2447,11 +2460,8 @@ static void task_numa_find_cpu(struct task_numa_env *env,
+ 		maymove = !load_too_imbalanced(src_load, dst_load, env);
+ 	}
+ 
+-	for_each_cpu(cpu, cpumask_of_node(env->dst_nid)) {
+-		/* Skip this CPU if the source task cannot migrate */
+-		if (!cpumask_test_cpu(cpu, env->p->cpus_ptr))
+-			continue;
+-
++	/* Skip CPUs if the source task cannot migrate */
++	for_each_cpu_and(cpu, cpumask_of_node(env->dst_nid), env->p->cpus_ptr) {
+ 		env->dst_cpu = cpu;
+ 		if (task_numa_compare(env, taskimp, groupimp, maymove))
+ 			break;
+@@ -8370,9 +8380,7 @@ static int find_energy_efficient_cpu(struct task_struct *p, int prev_cpu)
+ 		int max_spare_cap_cpu = -1;
+ 		int fits, max_fits = -1;
+ 
+-		cpumask_and(cpus, perf_domain_span(pd), cpu_online_mask);
+-
+-		if (cpumask_empty(cpus))
++		if (!cpumask_and(cpus, perf_domain_span(pd), cpu_online_mask))
+ 			continue;
+ 
+ 		/* Account external pressure for the energy estimation */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
 index 2f8b06b12a98..a3f52e493b42 100644
 --- a/kernel/sched/sched.h
@@ -33642,10 +33951,10 @@ index 05828d4cb6cd..abd77162f5e7 100644
  						     : htons(ETH_P_IP);
  
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 8a18aeca7ab0..fe4c1b143de1 100644
+index 74079eab8980..96dbcdd2f09e 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3469,6 +3469,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3467,6 +3467,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tp->rx_opt.dsack = 0;
  	tp->rx_opt.num_sacks = 0;
  	tp->rcv_ooopack = 0;
@@ -33653,7 +33962,7 @@ index 8a18aeca7ab0..fe4c1b143de1 100644
  
  
  	/* Clean up fastopen related fields */
-@@ -4226,6 +4227,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
+@@ -4224,6 +4225,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
  		info->tcpi_options |= TCPI_OPT_ECN;
  	if (tp->ecn_flags & TCP_ECN_SEEN)
  		info->tcpi_options |= TCPI_OPT_ECN_SEEN;
@@ -36991,6 +37300,51 @@ index 452374d63c24..08f80d7c5df0 100644
  	echo "Installing System.map and config..."
  	mkdir -p "${builddir}"
  	cp System.map "${builddir}/System.map"
+diff --git a/sound/hda/codecs/side-codecs/tas2781_hda_i2c.c b/sound/hda/codecs/side-codecs/tas2781_hda_i2c.c
+index f7a7f216d586..0e4bda3a544e 100644
+--- a/sound/hda/codecs/side-codecs/tas2781_hda_i2c.c
++++ b/sound/hda/codecs/side-codecs/tas2781_hda_i2c.c
+@@ -60,6 +60,7 @@ struct tas2781_hda_i2c_priv {
+ 	int (*save_calibration)(struct tas2781_hda *h);
+ 
+ 	int hda_chip_id;
++	bool skip_calibration;
+ };
+ 
+ static int tas2781_get_i2c_res(struct acpi_resource *ares, void *data)
+@@ -491,7 +492,8 @@ static void tasdevice_dspfw_init(void *context)
+ 	/* If calibrated data occurs error, dsp will still works with default
+ 	 * calibrated data inside algo.
+ 	 */
+-	hda_priv->save_calibration(tas_hda);
++	if (!hda_priv->skip_calibration)
++		hda_priv->save_calibration(tas_hda);
+ }
+ 
+ static void tasdev_fw_ready(const struct firmware *fmw, void *context)
+@@ -548,6 +550,7 @@ static int tas2781_hda_bind(struct device *dev, struct device *master,
+ 	void *master_data)
+ {
+ 	struct tas2781_hda *tas_hda = dev_get_drvdata(dev);
++	struct tas2781_hda_i2c_priv *hda_priv = tas_hda->hda_priv;
+ 	struct hda_component_parent *parent = master_data;
+ 	struct hda_component *comp;
+ 	struct hda_codec *codec;
+@@ -573,6 +576,14 @@ static int tas2781_hda_bind(struct device *dev, struct device *master,
+ 		break;
+ 	}
+ 
++	/*
++	 * Using ASUS ROG Xbox Ally X (RC73XA) UEFI calibration data
++	 * causes audio dropouts during playback, use fallback data
++	 * from DSP firmware as a workaround.
++	 */
++	if (codec->core.subsystem_id == 0x10431384)
++		hda_priv->skip_calibration = true;
++
+ 	pm_runtime_get_sync(dev);
+ 
+ 	comp->dev = dev;
 diff --git a/tools/sched_ext/include/scx/common.bpf.h b/tools/sched_ext/include/scx/common.bpf.h
 index 06e2551033cb..fbf3e7f9526c 100644
 --- a/tools/sched_ext/include/scx/common.bpf.h
