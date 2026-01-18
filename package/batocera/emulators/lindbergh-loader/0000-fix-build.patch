@@ -1,8 +1,25 @@
 diff --git a/Makefile b/Makefile
-index 9893fdb..6a1d6f5 100644
+index 9893fdb..1ee233f 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -24,7 +24,7 @@ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdl
+@@ -1,8 +1,9 @@
++AR ?= ar
+ CC ?= gcc
+-CFLAGS = -g -fPIC -m32 -pthread -Wall -Werror -Wno-misleading-indentation -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unused-function -D_GNU_SOURCE -Wno-char-subscripts
++CFLAGS = -g -fPIC -pthread -Wall -Werror -Wno-misleading-indentation -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unused-function -D_GNU_SOURCE -Wno-char-subscripts
+ CXX ?= g++
+ LD = $(CXX) 
+-LDFLAGS = -m32 -Wl,-z,defs -rdynamic -static-libgcc -lc -ldl -lGL -lglut -lX11 -lXcursor -lSDL3 -lSDL3_image -lSDL3_ttf -lm -ludev -lpthread -shared -nostdlib -L./src/libxdiff -lxdiff -L/app/lib32
++LDFLAGS = -Wl,-z,defs -rdynamic -static-libgcc -lc -ldl -lGL -lglut -lX11 -lXcursor -lSDL3 -lSDL3_image -lSDL3_ttf -lm -ludev -lpthread -shared -nostdlib -L./src/libxdiff -lxdiff
+ 
+ BUILD = build
+ 
+@@ -20,14 +21,14 @@ all: lindbergh libxdiff.a lindbergh.so libsegaapi.so libkswapapi.so libposixtime
+ 
+ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c
+ 	mkdir -p $(BUILD)
+-	$(CC) -m32 -DCOMPILING_LINDBERGH_ELF src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c -o $(BUILD)/lindbergh -lm -lSDL3 -L/app/lib32
++	$(CC) $(CFLAGS) -O3 -DCOMPILING_LINDBERGH_ELF src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c -o $(BUILD)/lindbergh -lm -lSDL3
  
  libxdiff.a: $(XDIFF_OBJS)
  	mkdir -p $(BUILD)
@@ -10,13 +27,25 @@ index 9893fdb..6a1d6f5 100644
 +	$(AR) rcs src/libxdiff/libxdiff.a $(XDIFF_OBJS)
  
  src/libxdiff/xdiff/%.o: src/libxdiff/xdiff/%.c
- 	$(CC) -m32 -DHAVE_CONFIG_H -fPIC -c $< -o $@
-@@ -37,7 +37,7 @@ lindbergh.so: $(OBJS)
+-	$(CC) -m32 -DHAVE_CONFIG_H -fPIC -c $< -o $@
++	$(CC) -DHAVE_CONFIG_H -fPIC -c $< -o $@
+ 
+ lindbergh.so: $(OBJS)
+ 	mkdir -p $(BUILD)
+@@ -37,13 +38,13 @@ lindbergh.so: $(OBJS)
  	$(CC) $(CFLAGS) -c $< -o $@
  
  libsegaapi.so: src/libsegaapi/libsegaapi.o
 -	$(CC) -m32 -O0 -g src/libsegaapi/libsegaapi.c -Wl,-Bstatic -lFAudio -Wl,-Bdynamic -L/app/lib32 -fPIC -shared -o $(BUILD)/libsegaapi.so
-+	$(CC) $(CFLAGS) -m32 -g src/libsegaapi/libsegaapi.c -fPIC -shared -o $(BUILD)/libsegaapi.so
++	$(CC) $(CFLAGS) -O3 -g src/libsegaapi/libsegaapi.c -shared -o $(BUILD)/libsegaapi.so
  
  libkswapapi.so: src/libkswapapi/libkswapapi.o
- 	$(CC) -m32 src/libkswapapi/libkswapapi.o -fPIC -shared -o $(BUILD)/libkswapapi.so
+-	$(CC) -m32 src/libkswapapi/libkswapapi.o -fPIC -shared -o $(BUILD)/libkswapapi.so
++	$(CC) $(CFLAGS) -O3 src/libkswapapi/libkswapapi.o -shared -o $(BUILD)/libkswapapi.so
+ 
+ libposixtime.so:
+-	$(CC) -m32 src/libposixtime/libposixtime.c src/libposixtime/libposixtime.h -m32 -shared -o $(BUILD)/libposixtime.so
++	$(CC) $(CFLAGS) -O3 src/libposixtime/libposixtime.c src/libposixtime/libposixtime.h -shared -o $(BUILD)/libposixtime.so
+ 	ln -s -f libposixtime.so $(BUILD)/libposixtime.so.1
+ 	ln -s -f libposixtime.so $(BUILD)/libposixtime.so.2.4
+ 
