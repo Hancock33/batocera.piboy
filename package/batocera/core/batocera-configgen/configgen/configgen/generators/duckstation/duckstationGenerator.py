@@ -59,7 +59,7 @@ class DuckstationGenerator(Generator):
             settings.add_section("Main")
         # Settings, Language and ConfirmPowerOff
         settings.set("Main", "SettingsVersion", "3") # Probably to be updated in the future
-        settings.set("Main", "InhibitScreensaver", "true")
+        settings.set("Main", "InhibitScreensaver", "false")
         settings.set("Main", "StartPaused", "false")
         # Force Fullscreen
         settings.set("Main", "StartFullscreen", "true")
