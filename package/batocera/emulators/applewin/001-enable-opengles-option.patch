@@ -1,12 +1,11 @@
 diff --git a/source/frontends/sdl/CMakeLists.txt b/source/frontends/sdl/CMakeLists.txt
-index 22af2324..b8833b41 100644
+index 03d2bad2..81ddc258 100644
 --- a/source/frontends/sdl/CMakeLists.txt
 +++ b/source/frontends/sdl/CMakeLists.txt
-@@ -10,13 +10,7 @@ find_package(SDL2 REQUIRED)
- # we should use find_package, but Ubuntu does not provide it for SDL2_image
- pkg_search_module(SDL2_IMAGE REQUIRED SDL2_image)
+@@ -49,12 +49,7 @@ else()
+   )
+ endif()
  
--
 -if ((${CMAKE_SYSTEM_NAME} MATCHES "Darwin") OR (${CMAKE_SYSTEM_NAME} MATCHES "Windows"))
 -  # only OpenGL supported on MacOS and Windows
 -  set (SA2_OPENGL ON)
@@ -17,7 +16,7 @@ index 22af2324..b8833b41 100644
  
  if (SA2_OPENGL)
    find_package(OpenGL REQUIRED)
-@@ -54,6 +48,7 @@ target_include_directories(sa2 PRIVATE
+@@ -91,6 +86,7 @@ target_include_directories(sa2 PRIVATE
    ${GLES2_INCLUDE_DIRS}
    )
  
@@ -25,10 +24,10 @@ index 22af2324..b8833b41 100644
  target_link_libraries(sa2 PRIVATE
    appleii
    common2
-@@ -66,9 +61,24 @@ target_link_libraries(sa2 PRIVATE
+@@ -98,9 +94,24 @@ target_link_libraries(sa2 PRIVATE
+   ${PCAP_LIBRARIES}
+   ${SLIRP_LIBRARIES}
  
-   ${SDL2_LIBRARIES}
-   ${SDL2_IMAGE_LIBRARIES}
 -  ${GLES2_LIBRARIES}
    OpenGL::GL
    )
@@ -49,5 +48,5 @@ index 22af2324..b8833b41 100644
 +  )
 +endif()
  
- if (NOT WIN32)
-   target_link_libraries(sa2 PUBLIC
+ target_link_directories(sa2 PRIVATE
+   ${GLES2_LIBRARY_DIRS}
