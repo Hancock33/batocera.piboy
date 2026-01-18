@@ -40,11 +40,13 @@
   - Control brightness on multiple screens (Ayn Thor)
   - Wifi country selector
   - Ability to add a "sort name" that take precedence over the (scraped) game name in metadata
+  - New Keyboard Layout and Keyboard Variant options
 - Batocera Control Center (on-screen interface for global configuration and control, [hotkey][east] by default)
 - batocera-xtract for handling archives, systems with pcmanFM filemanager can use a small GUI and mouse context menus
 - dmd-play-rust is now used by default to play dmd images (performances)
 - Yamagi Quake II added which support more systems, especially lower-end hardware
 - Light gun support to the new Libretro Dolphin core
+- Light gun support to Duckstation (multi-light guns)
 - Casio Loopy as a separate system
 - Enterprise 64/128 (via CLK emulator)
 - Xroar emulator as an option for the Color Computer (Tandy TRS-80)
@@ -85,14 +87,18 @@
 - Libretro Genesis Plus GX-Wide to 21th of October 2024 build
 - Libretro MAME2003plus to 16th of January 2026 build
 - Libretro MAME to 0.284
+- Libretro MGBA to 17th of January 2026 build
 - Libretro Mesen to 24th of October 2024 build
 - Libretro Nestopia to 10th of January 2026 build
 - Libretro Opera to 17th of October 2024 build
 - Libretro Picodrive to 3rd of December 2025 build
 - Libretro Play! to 0.72
+- Libretro PUAE to 2nd of November 2025 build
 - Libretro Snes9x to 8th of September 2025 build
 - Libretro Stella to 28th of December 2025 build
+- Libretro Swanstation to 2nd of August 2025 build
 - Libretro Vecx to 12th of January 2026 build
+- Libretro YabaSanshiro to 20th of December 2025 build
 - MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenJKDF2 to v0.9.8
