@@ -282,13 +282,13 @@ Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|57cd9da1aaccb13a7c10a035e8e83a9a5c061ca1|Jan 17, 2026
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|b3dc772b7778a51d98a74ce5438acda1da5f16f9|Jan 10, 2026
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d7bc744d693732e2b2645065e5d766f8f652c03c|Jan 17, 2026
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|8484ca462694ed2680d3bcc5aa8d2a49431a2c14|Jan 18, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|b8f397858cbc7a879f7392c14a509f00c8bdc7dd|Jun 28, 2024
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|v0.11.0|Jan 02, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|fb313228b474f48d2aa53228e4a07a359f2415ed|Dec 17, 2025
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|30048ca23d41ca0a8f7d5ab75d3f646a19a90182|Apr 13, 2024
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|92c4450a1bc1acb58bd02bbb99b57e5036919cdf|Apr 06, 2025
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|v3.7.0-222-8133307|Jan 10, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|v3.7.0-46-2b48173|Jun 19, 2025
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|124f45e5ddd59ceb339591de88fcca72f8c54612|Jun 28, 2024
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.5.2|Jan 13, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.10.1|Jan 08, 2026
@@ -307,7 +307,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|d73e6c6d6ce51555fb48aa1835f4fc4516a777da|Jan 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|a370ef1d31ceafac3148e92d8330cd836e4c2d44|Jan 16, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|7020500a6e88f6ee91301933bb77f082a10e10f5|Jan 16, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|32be0a2034ef8448f90c4c5ffe4ba8e6015bdc8a|Jan 17, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|afc7c38ffb1078076ec523c37b30055061c93ff1|Jul 23, 2024
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260110|Jan 10, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
@@ -447,7 +447,7 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|0e7fc26b88a4dfdf62fc6eabd5
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|8beee4aa3ad27508852c0f7db547fc32ece07c9f|Jan 06, 2026
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|31e54504de31c55105ce54a2aa967908f797a4f5|Jan 06, 2026
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|402b18a7ce9646be6dcc531a303baff1558570ad|Jan 14, 2026
-Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|f08ec40b2921f2105920408ea95f5a48228fb0b1|Jan 16, 2026
+Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|85606e52df3f666d8e6dfc98a96ac0094f5d8366|Jan 18, 2026
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|8dc5c8204222b37771b9b0ef4e69b8f505796be8|Jan 14, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|da11b4c0529e46803464f70bfdc0f70e18ad20a5|Jan 17, 2026
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
@@ -511,7 +511,7 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|d2fa3ad31e456bd44736d
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|3c8d9b43d40f3ffb178c2bb766142fa6c669addf|Jan 18, 2026
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|cd1cd3a9a6a1f2d2e555a36f55b828f36ca7fe06|Dec 27, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|4b48c5c3203ed1bdcda667b05cfcd64fd055c00a|Sept 22, 2025
-Ports|[trx](http://github.com/LostArtefacts/TRX)|90c39e6a23050bcc9fbaad91e32c79df5c49f4cd|Jan 16, 2026
+Ports|[trx](http://github.com/LostArtefacts/TRX)|0e60e96159a51825f8eadb7472cc20ad1f36665a|Jan 18, 2026
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.1|Dec 30, 2025
 Ports|[vkquake](http://github.com/Novum/vkQuake)|c160eaa119e151c03906ceaa2f1ff0ffd34e621a|Jan 12, 2026
@@ -522,7 +522,7 @@ Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|ad911d1ea6be131e23e1877d15fb4dd5a389fd63|Dec 29, 2025
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|bb5e1b481603d46c140313966fbe71e9791ae7f5|Jan 13, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|16d74a82ddbe0e881425268ea73ec2b4947c7e9e|Dec 29, 2025
-Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|0c655d388b0a9c07bc194a1bdd05ae02ae86997c|Jan 13, 2026
+Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|3d1035da7655c9bcdb04977d482c2672524ebc71|Jan 18, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|2f6bba57db8395cd99a3c441b0d9b3528dfbbd29|Jan 17, 2026
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0284|Dec 30, 2025
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
@@ -546,7 +546,7 @@ Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|c3bb98945be0c6cb4ef54e9bb
 Utils|[l3afpad](http://github.com/stevenhoneyman/l3afpad)|16f22222116b78b7f6a6fd83289937cdaabed624|Feb 14, 2022
 Utils|[labwc](http://github.com/labwc/labwc)|0.9.3|Dec 19, 2025
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.7.0|Jan 15, 2026
-Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|10c3a130296c10477e54ddbdb6b7f819fd224edb|Jan 17, 2026
+Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|7434893b2d82c56a6fb15c94bd1dd8f8a703146d|Jan 18, 2026
 Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.41.1|Nov 19, 2025
 Utils|[od-commander](http://github.com/od-contrib/commander)|a6ef30eb3bd6ef80a031744aae0f5b9cd974c182|Oct 25, 2025
 Utils|[pacman](https://sources.archlinux.org/other/pacman)|5.2.2|Jun 26, 2020
