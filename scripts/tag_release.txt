@@ -42,4 +42,5 @@ uthash.mk
 wine-custom.mk
 wine-mono.mk
 xbox-xcloud-client.mk
+xemu.mk
 xxd.mk

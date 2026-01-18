@@ -1,8 +1,8 @@
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index 5b5c1732d..ee9adb491 100644
+index 563f5ce0c..8abde2766 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
-@@ -2656,20 +2656,20 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
+@@ -2678,20 +2678,20 @@ static std::string LoadPathFromSettings(SettingsInterface& si, const std::string
  
  void EmuFolders::LoadConfig(SettingsInterface& si)
  {
@@ -35,7 +35,7 @@ index 5b5c1732d..ee9adb491 100644
    UserResources = LoadPathFromSettings(si, DataRoot, "Folders", "UserResources", "resources");
    Videos = LoadPathFromSettings(si, DataRoot, "Folders", "Videos", "videos");
  
-@@ -2695,20 +2695,20 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
+@@ -2717,20 +2717,20 @@ void EmuFolders::LoadConfig(SettingsInterface& si)
  void EmuFolders::Save(SettingsInterface& si)
  {
    // convert back to relative

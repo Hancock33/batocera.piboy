@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index c20caff01..69d98874a 100644
+index 0c59ea075..7e637c3f7 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -5036,12 +5036,12 @@ void System::WarnAboutUnsafeSettings()
+@@ -5134,12 +5134,12 @@ void System::WarnAboutUnsafeSettings()
      if (g_settings.cpu_execution_mode == CPUExecutionMode::CachedInterpreter)
        append(TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
  
@@ -18,10 +18,10 @@ index c20caff01..69d98874a 100644
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
 diff --git a/src/duckstation-mini/mini_host.cpp b/src/duckstation-mini/mini_host.cpp
-index ac6658321..9af0f14b3 100644
+index c68ba6183..69d9f410e 100644
 --- a/src/duckstation-mini/mini_host.cpp
 +++ b/src/duckstation-mini/mini_host.cpp
-@@ -164,7 +164,7 @@ bool MiniHost::EarlyProcessStartup()
+@@ -165,7 +165,7 @@ bool MiniHost::EarlyProcessStartup()
      return false;
    }
  
@@ -30,7 +30,7 @@ index ac6658321..9af0f14b3 100644
    //
    // To those distributing their own builds or packages of DuckStation, and seeing this message:
    //
-@@ -986,7 +986,7 @@ void MiniHost::CoreThreadEntryPoint()
+@@ -989,7 +989,7 @@ void MiniHost::CoreThreadEntryPoint()
    // start the fullscreen UI and get it going
    if (GPUThread::StartFullscreenUI(s_state.start_fullscreen_ui_fullscreen, &error))
    {
@@ -40,10 +40,10 @@ index ac6658321..9af0f14b3 100644
      // kick a game list refresh if we're not in batch mode
      if (!s_state.batch_mode)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index 970320321..9eb53c02d 100644
+index 3c27f6631..0a0498c82 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
-@@ -3415,7 +3415,7 @@ int main(int argc, char* argv[])
+@@ -3438,7 +3438,7 @@ int main(int argc, char* argv[])
    QtHost::UpdateApplicationTheme();
  
    // Build warning.
@@ -52,7 +52,7 @@ index 970320321..9eb53c02d 100644
  
    // Start logging early.
    LogWindow::updateSettings();
-@@ -3452,7 +3452,7 @@ int main(int argc, char* argv[])
+@@ -3475,7 +3475,7 @@ int main(int argc, char* argv[])
      s_state.start_fullscreen_ui_fullscreen = false;
  
    // Always kick off update check. It'll take over if the user is booting a game fullscreen.

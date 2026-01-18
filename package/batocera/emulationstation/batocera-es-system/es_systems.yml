@@ -2825,6 +2825,21 @@ moonlight:
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:moonlight
 
+pc60:
+  name:                 PC-6000
+  manufacturer:         NEC
+  release:              1981
+  hardware:             computer
+  extensions:           [zip]
+  emulators:
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+  comment_en:           |
+                        Requires MAME BIOS file:
+                        bios/mame/pc6001.zip
+
 pc88:
   name:                 PC-8800
   manufacturer:         NEC

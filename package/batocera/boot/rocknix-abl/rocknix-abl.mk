@@ -4,9 +4,11 @@
 #
 ################################################################################
 
-# Version: Commits on Jan 11, 2026
-ROCKNIX_ABL_VERSION = 64fb3fca6af9bc097f024464747dd51aaca201b5
+# Version: Commits on Jan 17, 2026
+ROCKNIX_ABL_VERSION = 4c1dd97fea6524bbbfcf064e2fb19b422695672b
 ROCKNIX_ABL_SITE = $(call github,ROCKNIX,abl,$(ROCKNIX_ABL_VERSION))
+
+ROCKNIX_ABL_DEPENDENCIES = pv
 
 # Handle sm8650 & sm6115 in future
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SM8250),y)

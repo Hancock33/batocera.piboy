@@ -1,5 +1,5 @@
 diff --git a/meson.build b/meson.build
-index 0b77bb2..1833d12 100644
+index becd754..db701f6 100644
 --- a/meson.build
 +++ b/meson.build
 @@ -110,9 +110,9 @@ if dep_wayland_client.found()

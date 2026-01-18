@@ -23,6 +23,7 @@
 - Legion Go S Controller & LED updates
 - New steering wheel support:
   - Logitech Formula Vibration Feedback
+  - MOZA R12 V2 (Direct Drive)
 - Odin 2 Mini initial support
 - Powkiddy X55 initial support
 - Raxda Dragon Q6A initial support
@@ -39,14 +40,17 @@
   - Control brightness on multiple screens (Ayn Thor)
   - Wifi country selector
   - Ability to add a "sort name" that take precedence over the (scraped) game name in metadata
+  - New Keyboard Layout and Keyboard Variant options
 - Batocera Control Center (on-screen interface for global configuration and control, [hotkey][east] by default)
 - batocera-xtract for handling archives, systems with pcmanFM filemanager can use a small GUI and mouse context menus
 - dmd-play-rust is now used by default to play dmd images (performances)
 - Yamagi Quake II added which support more systems, especially lower-end hardware
 - Light gun support to the new Libretro Dolphin core
+- Light gun support to Duckstation (multi-light guns)
 - Casio Loopy as a separate system
 - Enterprise 64/128 (via CLK emulator)
 - Xroar emulator as an option for the Color Computer (Tandy TRS-80)
+- PC60 as a separate system
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
@@ -61,26 +65,46 @@
   Hardware acceleration depends on supported codecs for devices in FFmpeg.
 - You can now choose to create a Win32 WINE bottle only via the option to run 32-bit Windows games.
 ### Updated
-- Azahar to 2123.3
+- Azahar to 2124
 - BigPEmu to v121
-- CLK to 2025-12-19
+- CLK to 2026-01-06
 - Dolphin-Emu to 2512-99
 - DXX-Rebirth to May 25, 2025
 - EDuke32 to Oct 10, 2025
+- Flycast to 2.6
 - Groovy MAME to 0.284
 - Hatari to v2.6.1
 - Hurrican to Jul 26, 2025 build
-- Jazz2 to 3.4.0
+- Jazz2 to 3.5.0
+- Libretro Atari800 to 4th of December 2025 build
+- Libretro BlueMSX to 4th of November 2025 build
+- Libretro Bsnes to 19th of December 2025 build
 - Libretro Dolphin to 24th of December 2025 build
+- Libretro FBNeo to 11th of January 2026 build
+- Libretro Fceumm to 12th of September 2025 build
+- Libretro Flycast to 2.6
+- Libretro Genesis Plus GX to 21th of December 2025 build
+- Libretro Genesis Plus GX-Wide to 21th of October 2024 build
+- Libretro MAME2003plus to 16th of January 2026 build
 - Libretro MAME to 0.284
-- Libretro Play! to 0.72
+- Libretro MGBA to 17th of January 2026 build
+- Libretro Mesen to 24th of October 2024 build
+- Libretro Nestopia to 10th of January 2026 build
 - Libretro Opera to 17th of October 2024 build
+- Libretro Picodrive to 3rd of December 2025 build
+- Libretro Play! to 0.72
+- Libretro PUAE to 2nd of November 2025 build
+- Libretro Snes9x to 8th of September 2025 build
+- Libretro Stella to 28th of December 2025 build
+- Libretro Swanstation to 2nd of August 2025 build
+- Libretro Vecx to 12th of January 2026 build
+- Libretro YabaSanshiro to 20th of December 2025 build
 - MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenJKDF2 to v0.9.8
 - OpenMOHAA to v0.82.1
 - Play! to 0.72
-- PCSX2 to v2.6.0
+- PCSX2 to v2.6.2
 - RClone to v1.72.1
 - RetroArch to 1.22.2
 - RPCS3 to v0.0.39
@@ -97,8 +121,8 @@
 - VkQuake to 19th of November 2025 build
 - Xash3D FWGS engine to Oct 17 build
 - Xenia-Canary to build f85f4c3
-- Xemu to v0.8.129
-- Ymir to 0.2.0
+- Xemu to v0.8.132
+- Ymir to 0.2.1
 ### System
 - Bluez to 5.84
 - DXVK to 2.7.1
@@ -111,7 +135,7 @@
 - LLVM Project to 20.1.8
 - Mesa3D to 25.3.3
 - MPV to v0.41.0
-- Nvidia 580.xx legacy drivers to 580.119.02
+- Nvidia 580.xx legacy drivers to 580.126.09
 - Nvidia production drivers to 590.48.01
 - QT to 6.9.2
 - Raspberry Pi kernel and associated firmware / utils to 6.12.62

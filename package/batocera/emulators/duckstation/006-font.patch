@@ -1,8 +1,8 @@
 diff --git a/src/util/imgui_manager.cpp b/src/util/imgui_manager.cpp
-index 99450b214..64c2ef5a6 100644
+index e67868c32..fa5bb9893 100644
 --- a/src/util/imgui_manager.cpp
 +++ b/src/util/imgui_manager.cpp
-@@ -118,7 +118,7 @@ static constexpr std::array<const char*, static_cast<size_t>(TextFont::MaxCount)
+@@ -122,7 +122,7 @@ static constexpr std::array<const char*, static_cast<size_t>(TextFont::MaxCount)
    "NotoSansKR-VariableFont_wght.ttf",  // Korean
  }};
  static constexpr const char* FIXED_FONT_NAME = "JetBrainsMono-VariableFont_wght.ttf";
@@ -11,7 +11,7 @@ index 99450b214..64c2ef5a6 100644
  static constexpr const char* PF_FONT_NAME = "promptfont.otf";
  static constexpr const char* EMOJI_FONT_NAME = "TwitterColorEmoji-SVGinOT.ttf";
  
-@@ -770,7 +770,7 @@ bool ImGuiManager::CreateFontAtlas(Error* error)
+@@ -775,7 +775,7 @@ bool ImGuiManager::CreateFontAtlas(Error* error)
                                                    default_text_size * 0.75f, 0.0f, &icon_cfg)) [[unlikely]]
    {
      Error::SetStringView(error, "Failed to add FA icon font");

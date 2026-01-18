@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Jan 11, 2026
-DUCKSTATION_VERSION = 3952477d39a021c5ae6a3774f2f59c63cf2618f8
+# Version: Commits on Jan 18, 2026
+DUCKSTATION_VERSION = 525dba5c52b2976acfdacbd20cefcc3e4d318d59
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
@@ -23,7 +23,7 @@ DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
 DUCKSTATION_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/stenzek-shaderc
 
 ifeq ($(BR2_PACKAGE_BATOCERA_QT6),y)
-    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_MINI_FRONTEND=OFF
+    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_MINI_FRONTEND=ON
     DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg
     ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
         DUCKSTATION_DEPENDENCIES += qt6wayland

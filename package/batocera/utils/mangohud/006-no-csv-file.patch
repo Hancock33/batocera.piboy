@@ -1,0 +1,19 @@
+diff --git a/src/logging.cpp b/src/logging.cpp
+index 9ef29ec..b5d0628 100644
+--- a/src/logging.cpp
++++ b/src/logging.cpp
+@@ -290,11 +290,11 @@ void Logger::stop_logging() {
+   } catch (...) {
+     SPDLOG_INFO("Something went wrong when closing output_file");
+   }
+-
+-  if (!m_log_files.empty())
++  // Batocera: skip that
++  /*if (!m_log_files.empty())
+     writeSummary(m_log_files.back());
+   else
+-    SPDLOG_INFO("Can't write summary because m_log_files is empty");
++    SPDLOG_INFO("Can't write summary because m_log_files is empty");*/
+ 
+   clear_log_data();
+ #ifdef __linux__

@@ -1,5 +1,5 @@
 diff --git a/sdl/scrnmng.c b/sdl/scrnmng.c
-index 1d59b5b..23065b9 100755
+index 21e1807..e9f8b88 100755
 --- a/sdl/scrnmng.c
 +++ b/sdl/scrnmng.c
 @@ -6,8 +6,6 @@
@@ -34,23 +34,6 @@ index 1d59b5b..23065b9 100755
  static SCRNSURF scrnsurf;
  
  #if !defined(__LIBRETRO__)
-@@ -156,16 +170,6 @@ BRESULT scrnmng_create(UINT8 mode) {
- 	scrnsurf.extend = 0;																// ?
- 
- 	scrnmng.enable = TRUE;
--	#if SDL_MAJOR_VERSION != 1
--		if((mode & SCRNMODE_FULLSCREEN) && !scrnmng_isfullscreen()) {
--			scrnmng.flag |= SCRNFLAG_FULLSCREEN;
--			SDL_SetWindowFullscreen(s_window, SDL_WINDOW_FULLSCREEN_DESKTOP);
--		} else { 
--			if(!(mode & SCRNMODE_FULLSCREEN) && scrnmng_isfullscreen()) {
--				scrnmng.flag &= ~SCRNFLAG_FULLSCREEN;
--			}
--		}
--	#endif
- 	return(SUCCESS);
- }
- 
 diff --git a/sdl/scrnmng.h b/sdl/scrnmng.h
 index 93af0c7..50cd212 100755
 --- a/sdl/scrnmng.h
