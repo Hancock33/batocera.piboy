@@ -142,8 +142,8 @@ elif fc-list -q "${ft}"; then
   fx="</span>"
 fi
 
-# if there is a WINE-default-runner setted use it -> fallback to 'wine-tkg'
-WR_BATO_DEFAULT=$(batocera-settings-get windows.wine-runner || echo wine-tkg)
+# if there is a WINE-default-runner setted use it -> fallback to 'wine-custom'
+WR_BATO_DEFAULT=$(batocera-settings-get windows.wine-runner || echo wine-custom)
 
 case ${1} in
   --del-unused-prefix)
