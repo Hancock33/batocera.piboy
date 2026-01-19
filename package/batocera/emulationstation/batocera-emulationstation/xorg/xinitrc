@@ -10,6 +10,7 @@ fi
 display_log="/userdata/system/logs/display.log"
 nvidia_log="/userdata/system/logs/nvidia.log"
 amd_log="/var/log/amd.log"
+intel_log="/var/log/intel.log"
 
 # hide mouse cursor
 unclutter --timeout 1 -b
@@ -78,6 +79,19 @@ if [ -f /sys/devices/virtual/dmi/id/board_name ]; then
 	if [ "$board" = "Jupiter" ]; then
 		export LIBVA_DRIVER_NAME=radeonsi
 	fi
+fi
+
+# intel
+if [ -f "/var/tmp/intel.prime" ]; then
+    echo "Setting Intel Prime environment variable" >> "$intel_log"
+    intel_prime_value=$(<"/var/tmp/intel.prime")
+    
+    if [ -z "$intel_prime_value" ]; then
+        export DRI_PRIME=1
+    else
+        export DRI_PRIME="$intel_prime_value"
+        echo "Intel Prime environment variable set to $intel_prime_value" >> "$intel_log"
+    fi
 fi
 
 xrdb -merge /etc/openbox/Xresources

@@ -391,6 +391,8 @@ while [ -e "${REBOOT_FLAG}" ]; do
     feh --no-fehbg --bg-scale '/usr/share/emulationstation/resources/loading.jpg'
 
     # start emulationstation / emulationstation_piboy
+    /etc/init.d/S08connman restart > /dev/null 2>&1
+    /etc/init.d/S91smb restart > /dev/null 2>&1
     if test ${enabledpi} = 1
        then
           /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
