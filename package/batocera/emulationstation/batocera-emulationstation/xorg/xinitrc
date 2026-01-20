@@ -85,7 +85,7 @@ fi
 if [ -f "/var/tmp/intel.prime" ]; then
     echo "Setting Intel Prime environment variable" >> "$intel_log"
     intel_prime_value=$(<"/var/tmp/intel.prime")
-    
+
     if [ -z "$intel_prime_value" ]; then
         export DRI_PRIME=1
     else

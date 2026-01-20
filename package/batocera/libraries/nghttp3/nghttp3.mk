@@ -3,8 +3,8 @@
 # nghttp3
 #
 ################################################################################
-# Version: Commits on Dec 23, 2025
-NGHTTP3_VERSION = v1.14.0
+# Version: Commits on Jan 20, 2026
+NGHTTP3_VERSION = v1.15.0
 NGHTTP3_SITE = https://github.com/ngtcp2/nghttp3.git
 NGHTTP3_SITE_METHOD = git
 NGHTTP3_GIT_SUBMODULES = YES
