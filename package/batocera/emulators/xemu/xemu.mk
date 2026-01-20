@@ -27,13 +27,6 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
 XEMU_DEPENDENCIES += vulkan-headers vulkan-loader
 endif
 
-# AVX2 is only available on x86_64_v3 or more
-ifeq ($(BR2_x86_x86_64_v3),y)
-XEMU_CONF_OPTS += --enable-avx2
-else
-XEMU_CONF_OPTS += --disable-avx2
-endif
-
 define XEMU_CONFIGURE_CMDS
 	cd $(@D) && $(TARGET_CONFIGURE_OPTS) SSL_CERT_DIR=/etc/ssl/certs ./configure $(XEMU_CONF_OPTS)
 endef
@@ -153,14 +146,14 @@ define XEMU_GET_SUBMODULES
 	# volk
 	mkdir -p $(@D)/subprojects/volk
 	curl -L -o volk.tar.gz \
-		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.328.1.tar.gz
+		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.335.0.tar.gz
 	$(TAR) -xzf volk.tar.gz --strip-components=1 -C $(@D)/subprojects/volk
 	rm volk.tar.gz
 
 	# SPIRV-Reflect
 	mkdir -p $(@D)/subprojects/SPIRV-Reflect
 	curl -L -o SPIRV-Reflect.tar.gz \
-		https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.328.1.tar.gz
+		https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.335.0.tar.gz
 	$(TAR) -xzf SPIRV-Reflect.tar.gz --strip-components=1 -C $(@D)/subprojects/SPIRV-Reflect
 	rm SPIRV-Reflect.tar.gz
 
