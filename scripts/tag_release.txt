@@ -10,6 +10,7 @@ cxxopts.mk
 drastic.mk
 ecm.mk
 flatpak.mk
+fsuae.mk
 kddocwidgets.mk
 kodi-pvr-freebox.mk
 labwc.mk
