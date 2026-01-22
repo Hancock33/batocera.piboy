@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index bf29b49e3..5247f83b9 100644
+index faedc7934..8b580419b 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,198 +9,285 @@ namespace PlatformIds
+@@ -9,199 +9,286 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -55,6 +55,7 @@ index bf29b49e3..5247f83b9 100644
 +		{ "pv1000",					CASIO_PV1000 },
 +		{ "casloopy",				CASLOOPY },
 +		{ "loopy",		    		CASLOOPY },
++		{ "cassettevision",			CASSETTE_VISION },
 +		{ "cave",					CAVE },
 +		{ "centurye",				CENTURYE },
 +		{ "cgenie",					CGENIE },
@@ -374,11 +375,12 @@ index bf29b49e3..5247f83b9 100644
 +		{ "crvision",				VTECH_CREATIVISION },
  		{ "watara",					WATARA_SUPERVISION },
 -		{ "supervision",			WATARA_SUPERVISION },
- 
+-
 -		{ "model3",					MODEL3 },
 -			
 -		{ "imageviewer",			IMAGEVIEWER },
 -			
+-		{ "cassettevision",			CASSETTE_VISION },
 -		{ "scv",					SUPER_CASSETTE_VISION },
 -		{ "easyrpg",				EASYRPG },			
 -		{ "pet",					COMMODORE_PET },
@@ -409,7 +411,7 @@ index bf29b49e3..5247f83b9 100644
 -		{ "arduboy",				ARDUBOY },
 -						
 -		{ "snes-msu1",				SUPER_NINTENDO_MSU1 },
--
+ 
 -		{ "gamate",					GAMATE },
 -		{ "gmaster",				HARTUNG_GAME_MASTER },
 -		{ "megaduck",				CREATONIC_MEGA_DUCK },
@@ -430,10 +432,10 @@ index bf29b49e3..5247f83b9 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 27200a50a..b08b95e96 100644
+index a73dce8c5..c646e6cba 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,54 +11,171 @@ namespace PlatformIds
+@@ -11,54 +11,172 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -483,6 +485,7 @@ index 27200a50a..b08b95e96 100644
 +		CAPCOM,
 +		CASIO_PV1000,
 +		CASLOOPY,
++		CASSETTE_VISION,
 +		CAVE,
 +		CENTURYE,
 +		CGENIE,
@@ -621,7 +624,7 @@ index 27200a50a..b08b95e96 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_CHIHIRO,
-@@ -66,115 +183,82 @@ namespace PlatformIds
+@@ -66,116 +184,82 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -702,6 +705,7 @@ index 27200a50a..b08b95e96 100644
 -
 -		VIC20,
 -		TI99,
+-		CASSETTE_VISION,
 +		SONICH,
 +		SPECTRAVIDEO,
 +		STV,
@@ -801,7 +805,7 @@ index 27200a50a..b08b95e96 100644
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 27a4d78bd..a94a7e203 100644
+index d4a437971..c99932f35 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,11 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -863,7 +867,7 @@ index 27a4d78bd..a94a7e203 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index 571b2e7f4..23c18e4f1 100644
+index 003115586..b68d24347 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -75,7 +75,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
@@ -893,7 +897,7 @@ index 571b2e7f4..23c18e4f1 100644
  
  const std::set<Scraper::ScraperMediaSource>& HfsDBScraper::getSupportedMedias()
 diff --git a/es-app/src/scrapers/IGDBScraper.cpp b/es-app/src/scrapers/IGDBScraper.cpp
-index 0bde6c83c..4917d0e1f 100644
+index b1cd80a04..bdc54b912 100644
 --- a/es-app/src/scrapers/IGDBScraper.cpp
 +++ b/es-app/src/scrapers/IGDBScraper.cpp
 @@ -67,7 +67,7 @@ const std::map<PlatformId, std::string> igdb_platformids
@@ -906,10 +910,10 @@ index 0bde6c83c..4917d0e1f 100644
  	{ MSX, "27" },
  	{ NINTENDO_64, "4" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index d635d3525..c7ff4f2c0 100644
+index ca75a0ae0..29f88fe46 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -30,162 +30,237 @@ using namespace PlatformIds;
+@@ -30,164 +30,239 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1219,6 +1223,7 @@ index d635d3525..c7ff4f2c0 100644
 +	{ TIC80, 222 },
  	{ SOLARUS, 223 },
 -	{ PICO8, 234 },
+-	{ CASSETTE_VISION, 300 },
 -	{ SUPER_CASSETTE_VISION, 67 },
 +	{ NINTENDO_SWITCH, 225 },
 +	{ NAOMIGD, 227 },
@@ -1264,8 +1269,11 @@ index d635d3525..c7ff4f2c0 100644
 -	{ GAMATE, 266 },
  	{ ARDUBOY, 263 },
 -	{ LOWRESNX, 244 },
+-	{ VC4000, 281 }
 +	{ GAMATE, 266 },
 +	{ VIRCON32, 272 },
- 	{ VC4000, 281 }
++	{ VC4000, 281 },
++	{ CASSETTE_VISION, 300 }
  };
  
+ const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()

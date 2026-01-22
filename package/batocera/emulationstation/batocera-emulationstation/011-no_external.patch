@@ -1,5 +1,5 @@
 diff --git a/es-app/src/services/HttpServerThread.cpp b/es-app/src/services/HttpServerThread.cpp
-index 3463ae3d7..7384adb50 100644
+index 839d5de4d..d88a9c64d 100644
 --- a/es-app/src/services/HttpServerThread.cpp
 +++ b/es-app/src/services/HttpServerThread.cpp
 @@ -560,7 +560,7 @@ void HttpServerThread::run()

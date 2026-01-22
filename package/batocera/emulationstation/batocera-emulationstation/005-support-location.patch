@@ -1,8 +1,8 @@
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 45e5dc910..7fdf3cafe 100644
+index c21b7dff3..a47efb9ec 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -815,7 +815,7 @@ void GuiMenu::openDeveloperSettings()
+@@ -809,7 +809,7 @@ void GuiMenu::openDeveloperSettings()
  		// support
  		s->addEntry(_("CREATE A SUPPORT FILE"), true, [window] 
  		{
