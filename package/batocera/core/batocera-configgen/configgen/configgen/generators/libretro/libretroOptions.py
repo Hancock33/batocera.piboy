@@ -2523,6 +2523,7 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'scummvm': _scummvm_options,
     'snes9x': _snes9x_options,
     'snes9x_next': _snes9x_next_options,
+    'stella': _stella_options,
     'swanstation': _duckstation_options,
     'tgbdual': _tgbdual_options,
     'theodore': _theodore_options,

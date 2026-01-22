@@ -47,6 +47,7 @@
 - Yamagi Quake II added which support more systems, especially lower-end hardware
 - Light gun support to the new Libretro Dolphin core
 - Light gun support to Duckstation (multi-light guns)
+- Light gun support (single light gun only) to the Play! namco 2x6 gun games
 - Casio Loopy as a separate system
 - Enterprise 64/128 (via CLK emulator)
 - Xroar emulator as an option for the Color Computer (Tandy TRS-80)
@@ -76,6 +77,7 @@
 - DXX-Rebirth to May 25, 2025
 - EDuke32 to Oct 10, 2025
 - Flycast to 2.6
+- FS-UAE to v3.2.35
 - Groovy MAME to 0.284
 - Hatari to v2.6.1
 - Hurrican to Jul 26, 2025 build
@@ -155,6 +157,8 @@
 - Wine-TKG to 10.20
 - Wine Proton to 10.0-3
 - WLRoots to 0.19.2
+- Xpad-noone to Oct 30, 2025 build
+- XOne to v0.5.2
 - XWayland to 24.1.9
 
 # 2025/10/12 - batocera.linux 42 - Papilio Ulysses
