@@ -257,7 +257,7 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|bf245b03076b97eed14abd54c7
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|83543e13a3fc01f5e73731fa8c6e77f691434a1c|Jan 22, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|a7b711dfd74871e9985ba3b2fe2c15048a928aaf|Dec 01, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|584338515f1eb5367998360729b3fbd0faa0407c|Jan 22, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|e177cdc4049d1f4bca02a5b5f256821bf78504e3|Jan 22, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20251119|Nov 19, 2025
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3e49c32c9c59b2bdf6bb29ec7d1e44074ffad4e5|Jan 18, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.244|Jan 20, 2026

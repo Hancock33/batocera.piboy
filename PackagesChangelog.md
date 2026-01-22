@@ -15,7 +15,7 @@ Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-01-22|Jan 22, 
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12.1|Jan 22, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|17662a66055c25df1c5fc2a26a55d06b745e597d|Jan 22, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260122|Jan 22, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|584338515f1eb5367998360729b3fbd0faa0407c|Jan 22, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|e177cdc4049d1f4bca02a5b5f256821bf78504e3|Jan 22, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|03d2483d5cded0bdef84bec24c9ddfdede324b5c|Jan 22, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260122|Jan 22, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|77b50d022af5f831a31c47ef4c77ca8d2dd4ba10|Jan 22, 2026
