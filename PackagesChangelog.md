@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|cdacbf02883e22d19e3f24c15c1b24fc43eb0c16|Jan 22, 2026
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|5e399ce5235c038b0fc129efb3266f80f1ad2199|Jan 22, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|c00ce05b39a0ab9cb6c40d98a0fb58d45b682100|Jan 22, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|c00ce05b39a0ab9cb6c40d98a0fb58d45b682100|Jan 22, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|b0fea112e8d6af3f5ee1bbe2c08086381bfdd8f7|Jan 22, 2026
@@ -14,8 +14,10 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|0bceebfc7d4a7d597840
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-01-22|Jan 22, 2026
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12.1|Jan 22, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|17662a66055c25df1c5fc2a26a55d06b745e597d|Jan 22, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260122|Jan 22, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|584338515f1eb5367998360729b3fbd0faa0407c|Jan 22, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|03d2483d5cded0bdef84bec24c9ddfdede324b5c|Jan 22, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260122|Jan 22, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|77b50d022af5f831a31c47ef4c77ca8d2dd4ba10|Jan 22, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|56a6ece382be5377377461777c9e5038395722ca|Jan 22, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|cefdc29874fa2d72ac073c1197b93494d27a0246|Jan 22, 2026
@@ -77,8 +79,6 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45957|Jan 18, 2026
 Libraries|[cpp-ipc](http://github.com/mutouyun/cpp-ipc)|46be39b2b17662de0857898f15b404443a7936a9|Jan 18, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|85606e52df3f666d8e6dfc98a96ac0094f5d8366|Jan 18, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|c8aebb60f475abd23aa6bf8db1e4d7a626a80884|Jan 18, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260118|Jan 18, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260118|Jan 18, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|8e7522f05318e1c0a6b124241f5640e04b1b1746|Jan 18, 2026
 Emulators|[libretro-citra](https://github.com/warmenhoven/azahar.git)|07119967fb0e9bb7339bb681917301ace52eee60|Jan 18, 2026
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|129c98a9466538dc6b51fe450482c1f23337b324|Jan 18, 2026
