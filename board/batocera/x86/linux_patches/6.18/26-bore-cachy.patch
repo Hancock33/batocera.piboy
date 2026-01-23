@@ -602,7 +602,7 @@ index 000000000000..7c1baa1bdf6c
 +#endif // CONFIG_SYSCTL
 +#endif /* CONFIG_SCHED_BORE */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 96255e5fe4c2..2fa76c11c7cb 100644
+index 3f02e0846e92..666ff37c4fb7 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -100,6 +100,10 @@
