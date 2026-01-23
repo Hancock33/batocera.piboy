@@ -19,7 +19,10 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|3c386a09bd26333120e4
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|33d72a61b459ff00130dfe3303d6a9684c0cf71c|Jan 23, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b6005cfbc04445f8cc25dc8a16867d5ba31c2727|Jan 23, 2026
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|36e4e95c18f600c49ebd46edb284ea94bff2e0da|Jan 23, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.01|Jan 23, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260123|Jan 23, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a04ff9fd7f1d40c7049bbb5c8bd27e9a67805bb1|Jan 23, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260123|Jan 23, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|336bd922e502e03a83b16547fa821e3bddffa3a9|Jan 23, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|52675734da114a19b3705f03906b1455f3d76644|Jan 23, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|3a1184d1e1c7ed15752e9fe4a0594e68b4a41e11|Jan 23, 2026
@@ -33,10 +36,8 @@ Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|ab6c7607d53d11
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12.1|Jan 22, 2026
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|d85c04c395ac7310a04102312b7e4e53afcd91c2|Jan 22, 2026
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|879e2397ced113c65f909eb5a5bd29dc2997d18e|Jan 22, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260122|Jan 22, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|03d2483d5cded0bdef84bec24c9ddfdede324b5c|Jan 22, 2026
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.1|Jan 22, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260122|Jan 22, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|34defeeb3547765136cc5a3f81432650c191e16d|Jan 22, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|e8d10cfbf245f6a1c69cc800a1461e44b770662b|Jan 22, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|f88ae4cdbdd6e122c15e380043adbf849d7b8966|Jan 22, 2026
@@ -113,7 +114,6 @@ Ports|[dhewm3](http://github.com/dhewm/dhewm3)|8dc5c8204222b37771b9b0ef4e69b8f50
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.15.3|Jan 13, 2026
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|1d69dd6a9867f8c2a9592e035ba00090f74071d7|Jan 13, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|ffdf858645d179186d84244dfe18556297cf3bad|Jan 13, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.00|Jan 13, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.5.2|Jan 13, 2026
 Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|882ea139758fef5e5d711324d138d812abd5c10c|Jan 13, 2026
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|bb5e1b481603d46c140313966fbe71e9791ae7f5|Jan 13, 2026
