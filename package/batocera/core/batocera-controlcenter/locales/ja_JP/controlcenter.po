@@ -24,6 +24,12 @@ msgstr "Batocera"
 msgid "Battery"
 msgstr "バッテリー"
 
+msgid "Bright +"
+msgstr ""
+
+msgid "Bright -"
+msgstr ""
+
 msgid "CPU:"
 msgstr "CPU:"
 
@@ -44,6 +50,9 @@ msgstr "データストレージ空容量:"
 
 msgid "Game"
 msgstr "ゲーム"
+
+msgid "Gun"
+msgstr ""
 
 msgid "High Perf"
 msgstr "高パフォーマンス"
@@ -117,5 +126,5 @@ msgstr "音量 +"
 msgid "Vol -"
 msgstr "音量 -"
 
-msgid "Playing for"
-msgstr "プレイ時間: "
+#~ msgid "Playing for"
+#~ msgstr "プレイ時間: "
