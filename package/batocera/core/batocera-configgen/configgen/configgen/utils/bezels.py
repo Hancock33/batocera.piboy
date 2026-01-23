@@ -434,21 +434,21 @@ def png_to_png_with_texts(input_png_path, output_png_path, data, width=None, hei
                 # x, y
                 x = round(text["x"]*img_width)
                 y = round(text["y"]*img_height)
-                
+
                 # color
                 color = "black"
                 if "color" in data:
                     color = data["color"]
                 if "color" in text:
                     color = text["color"]
-                
+
                 # font
                 font_size = int(data["font_size_per_height"]*img_height)
                 if "font_size_per_height" in text:
                     font_size = int(text["font_size_per_height"]*img_height)
                     if font_size not in font:
                         font[font_size] = ImageFont.truetype(font_path, font_size)
-                
+
                 # alignment
                 text_width = draw.textlength(text["value"], font[font_size])
                 align = "left"
