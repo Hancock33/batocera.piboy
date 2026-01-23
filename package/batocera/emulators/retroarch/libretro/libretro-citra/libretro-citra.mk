@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 18, 2026
-LIBRETRO_CITRA_VERSION = 07119967fb0e9bb7339bb681917301ace52eee60
+LIBRETRO_CITRA_VERSION = 77627983b41fd9842cd20d0901495a3fc06e307c
 LIBRETRO_CITRA_SITE = https://github.com/warmenhoven/azahar.git
 LIBRETRO_CITRA_BRANCH = warmenhoven/dev/azahar_libretro
 LIBRETRO_CITRA_SITE_METHOD=git
