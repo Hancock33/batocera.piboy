@@ -754,7 +754,6 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
     select BR2_PACKAGE_LEXALOFFLE_PICO8                     # ALL
     select BR2_PACKAGE_LEXALOFFLE_VOXATRON                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  #  No engine for ARM yet
     select BR2_PACKAGE_LIBRETRO_FAKE08                      # ALL
-    select BR2_PACKAGE_LIBRETRO_RETRO8                      # ALL but deprecated in favour of FAKE08
     select BR2_PACKAGE_LIBRETRO_TIC80                       # ALL
     select BR2_PACKAGE_TIC80                                # ALL
     select BR2_PACKAGE_LIBRETRO_VIRCON32                    # ALL

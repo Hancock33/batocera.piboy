@@ -91,7 +91,6 @@ PACKAGES_LIBRETRO="libretro-81
                    libretro-puae2021
                    libretro-px68k
                    libretro-reminiscence
-                   libretro-retro8
                    libretro-same-cdi
                    libretro-sameduck
                    libretro-scummvm

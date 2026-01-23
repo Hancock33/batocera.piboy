@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|5e399ce5235c038b0fc129efb3266f80f1ad2199|Jan 22, 2026
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|99b9a5791224ef8ff3623d3744fe1f3364c01c27|Jan 22, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|c00ce05b39a0ab9cb6c40d98a0fb58d45b682100|Jan 22, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|c00ce05b39a0ab9cb6c40d98a0fb58d45b682100|Jan 22, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|b0fea112e8d6af3f5ee1bbe2c08086381bfdd8f7|Jan 22, 2026
@@ -443,7 +443,6 @@ Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|ac
 Emulators|[libretro-quicknes](http://github.com/libretro/QuickNES_Core)|dbf19f73e3eb9701d1c7f5898f57c097e05c9fbd|Oct 21, 2024
 Emulators|[libretro-race](http://github.com/libretro/RACE)|171950ea64c96ead503340ed60fa7ba18f56325c|Oct 21, 2024
 Emulators|[libretro-reminiscence](http://github.com/libretro/REminiscence)|e80d7b1aa287010e30c54f72252a9303173f1c7e|Oct 21, 2024
-Emulators|[libretro-retro8](http://github.com/libretro/retro8)|a235ff8e3ca1b44bcf88293748d5a492c76a2c7b|Oct 21, 2024
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|c642bbd0680b5959180a420036108893d0aec961|Oct 21, 2024
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|cd6004ea143435cfdb6b12e7c6779dab499f7829|Oct 21, 2024
 Emulators|[libretro-vemulator](http://github.com/libretro/vemulator-libretro)|45d7556667549bb1c1b84d27fbffb7d2a633f5d3|Oct 21, 2024
