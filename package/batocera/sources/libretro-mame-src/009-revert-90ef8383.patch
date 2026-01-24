@@ -1,0 +1,220 @@
+diff --git a/scripts/src/cpu.lua b/scripts/src/cpu.lua
+index 6bffe28edf2..78da4896a49 100644
+--- a/scripts/src/cpu.lua
++++ b/scripts/src/cpu.lua
+@@ -269,16 +269,16 @@ end
+ 
+ if CPUS["ADSP21062"] then
+ 	files {
+-		MAME_DIR .. "src/devices/cpu/sharc/compute.hxx",
+ 		MAME_DIR .. "src/devices/cpu/sharc/sharc.cpp",
+ 		MAME_DIR .. "src/devices/cpu/sharc/sharc.h",
++		MAME_DIR .. "src/devices/cpu/sharc/compute.hxx",
+ 		MAME_DIR .. "src/devices/cpu/sharc/sharcdma.hxx",
++		MAME_DIR .. "src/devices/cpu/sharc/sharcmem.hxx",
++		MAME_DIR .. "src/devices/cpu/sharc/sharcops.h",
++		MAME_DIR .. "src/devices/cpu/sharc/sharcops.hxx",
+ 		MAME_DIR .. "src/devices/cpu/sharc/sharcdrc.cpp",
+ 		MAME_DIR .. "src/devices/cpu/sharc/sharcfe.cpp",
+ 		MAME_DIR .. "src/devices/cpu/sharc/sharcfe.h",
+-		MAME_DIR .. "src/devices/cpu/sharc/sharcmem.hxx",
+-		MAME_DIR .. "src/devices/cpu/sharc/sharcops.hxx",
+-		MAME_DIR .. "src/devices/cpu/sharc/sharcops_table.cpp",
+ 	}
+ end
+ 
+diff --git a/src/devices/cpu/sharc/sharc.cpp b/src/devices/cpu/sharc/sharc.cpp
+index 3fd01c6bd1a..439f10b42d4 100644
+--- a/src/devices/cpu/sharc/sharc.cpp
++++ b/src/devices/cpu/sharc/sharc.cpp
+@@ -390,33 +390,36 @@ void adsp21062_device::iop_w(offs_t offset, uint32_t data)
+ #include "sharcmem.hxx"
+ #include "sharcdma.hxx"
+ #include "sharcops.hxx"
++#include "sharcops.h"
+ 
+ 
+ 
+ void adsp21062_device::build_opcode_table()
+ {
+-	for (int i = 0; i < std::size(m_sharc_op); i++)
++	int i, j;
++	int num_ops = sizeof(s_sharc_opcode_table) / sizeof(SHARC_OP);
++
++	for (i=0; i < 512; i++)
+ 	{
+ 		m_sharc_op[i] = &adsp21062_device::sharcop_unimplemented;
++	}
+ 
+-		const uint16_t op = i << 7;
++	for (i=0; i < 512; i++)
++	{
++		uint16_t op = i << 7;
+ 
+-		int j = 0;
+-		while (j < s_num_ops)
+-		{
+-			auto &opcode = s_sharc_opcode_table[j++];
+-			if ((opcode.op_mask & op) == opcode.op_bits)
+-			{
+-				m_sharc_op[i] = opcode.handler;
+-				break;
+-			}
+-		}
+-		while (j < s_num_ops)
++		for (j=0; j < num_ops; j++)
+ 		{
+-			auto &opcode = s_sharc_opcode_table[j++];
+-			if ((opcode.op_mask & op) == opcode.op_bits)
++			if ((s_sharc_opcode_table[j].op_mask & op) == s_sharc_opcode_table[j].op_bits)
+ 			{
+-				fatalerror("build_opcode_table: table already filled! (i=%04X, j=%d)\n", i, j);
++				if (m_sharc_op[i] != &adsp21062_device::sharcop_unimplemented)
++				{
++					fatalerror("build_opcode_table: table already filled! (i=%04X, j=%d)\n", i, j);
++				}
++				else
++				{
++					m_sharc_op[i] = s_sharc_opcode_table[j].handler;
++				}
+ 			}
+ 		}
+ 	}
+diff --git a/src/devices/cpu/sharc/sharc.h b/src/devices/cpu/sharc/sharc.h
+index 999fd466a17..e8246a32d8f 100644
+--- a/src/devices/cpu/sharc/sharc.h
++++ b/src/devices/cpu/sharc/sharc.h
+@@ -282,7 +282,6 @@ private:
+ 		opcode_func handler;
+ 	};
+ 	static const SHARC_OP s_sharc_opcode_table[];
+-	static const size_t s_num_ops;
+ 
+ 	struct ASTAT_DRC
+ 	{
+diff --git a/src/devices/cpu/sharc/sharcdrc.cpp b/src/devices/cpu/sharc/sharcdrc.cpp
+index dd92c0cd9ab..40fcb1f6e6d 100644
+--- a/src/devices/cpu/sharc/sharcdrc.cpp
++++ b/src/devices/cpu/sharc/sharcdrc.cpp
+@@ -167,17 +167,20 @@ static void cfunc_unimplemented_shiftimm(void *param)
+ 
+ void adsp21062_device::sharc_cfunc_unimplemented()
+ {
+-	fatalerror("PC=%08X: Unimplemented op %012X\n", m_core->pc, m_core->arg64);
++	uint64_t op = m_core->arg64;
++	fatalerror("PC=%08X: Unimplemented op %04X%08X\n", m_core->pc, (uint32_t)(op >> 32), (uint32_t)(op));
+ }
+ 
+ void adsp21062_device::sharc_cfunc_unimplemented_compute()
+ {
+-	fatalerror("PC=%08X: Unimplemented compute %012X\n", m_core->pc, m_core->arg64);
++	uint64_t op = m_core->arg64;
++	fatalerror("PC=%08X: Unimplemented compute %04X%08X\n", m_core->pc, (uint32_t)(op >> 32), (uint32_t)(op));
+ }
+ 
+ void adsp21062_device::sharc_cfunc_unimplemented_shiftimm()
+ {
+-	fatalerror("PC=%08X: Unimplemented shiftimm %012X\n", m_core->pc, m_core->arg64);
++	uint64_t op = m_core->arg64;
++	fatalerror("PC=%08X: Unimplemented shiftimm %04X%08X\n", m_core->pc, (uint32_t)(op >> 32), (uint32_t)(op));
+ }
+ 
+ void adsp21062_device::sharc_cfunc_pcstack_overflow()
+diff --git a/src/devices/cpu/sharc/sharcops_table.cpp b/src/devices/cpu/sharc/sharcops.h
+similarity index 98%
+rename from src/devices/cpu/sharc/sharcops_table.cpp
+rename to src/devices/cpu/sharc/sharcops.h
+index 6387d3d56aa..42c305d8d10 100644
+--- a/src/devices/cpu/sharc/sharcops_table.cpp
++++ b/src/devices/cpu/sharc/sharcops.h
+@@ -1,6 +1,5 @@
+ // license:BSD-3-Clause
+ // copyright-holders:Ville Linde
+-#include "sharc.h"
+ 
+ const adsp21062_device::SHARC_OP adsp21062_device::s_sharc_opcode_table[] =
+ {
+@@ -133,6 +132,3 @@ const adsp21062_device::SHARC_OP adsp21062_device::s_sharc_opcode_table[] =
+ 	//  |0 0 0|0 0 0 0 0|1|
+ 	{   0xff80,     0x0080,     &adsp21062_device::sharcop_idle                                        },
+ };
+-
+-
+-const size_t adsp21062_device::s_num_ops = std::size(s_sharc_opcode_table);
+diff --git a/src/devices/cpu/sharc/sharcops.hxx b/src/devices/cpu/sharc/sharcops.hxx
+index 38a1a04fd3f..ebb179ae8ef 100644
+--- a/src/devices/cpu/sharc/sharcops.hxx
++++ b/src/devices/cpu/sharc/sharcops.hxx
+@@ -2728,5 +2728,5 @@ void adsp21062_device::sharcop_idle()
+ 
+ void adsp21062_device::sharcop_unimplemented()
+ {
+-	fatalerror("SHARC: Unimplemented opcode %012X at %08X\n", m_core->opcode, m_core->pc);
++	fatalerror("SHARC: Unimplemented opcode %04X%08X at %08X\n", (uint16_t)(m_core->opcode >> 32), (uint32_t)(m_core->opcode), m_core->pc);
+ }
+diff --git a/src/devices/cpu/tms320c3x/tms320c3x.cpp b/src/devices/cpu/tms320c3x/tms320c3x.cpp
+index e05d81347b0..666ab5acf1a 100644
+--- a/src/devices/cpu/tms320c3x/tms320c3x.cpp
++++ b/src/devices/cpu/tms320c3x/tms320c3x.cpp
+@@ -971,9 +971,9 @@ void tms320c3x_device::execute_run()
+ 		return;
+ 	}
+ 
++	// non-debug case
+ 	if (!debugger_enabled())
+ 	{
+-		// non-debug case
+ 		while (m_icount > 0)
+ 		{
+ 			if ((IREG(TMR_ST) & RMFLAG) && m_pc == IREG(TMR_RE) + 1)
+@@ -999,9 +999,10 @@ void tms320c3x_device::execute_run()
+ 			execute_one();
+ 		}
+ 	}
++
++	// debugging case
+ 	else
+ 	{
+-		// debugging case
+ 		while (m_icount > 0)
+ 		{
+ 			// watch for out-of-range stack pointers
+diff --git a/src/devices/cpu/tms320c3x/tms320c3x.h b/src/devices/cpu/tms320c3x/tms320c3x.h
+index e33a27ac98f..59ef276961d 100644
+--- a/src/devices/cpu/tms320c3x/tms320c3x.h
++++ b/src/devices/cpu/tms320c3x/tms320c3x.h
+@@ -85,13 +85,6 @@ enum
+ };
+ 
+ 
+-// device type declaration
+-DECLARE_DEVICE_TYPE(TMS320C30,  tms320c30_device)
+-DECLARE_DEVICE_TYPE(TMS320C31,  tms320c31_device)
+-DECLARE_DEVICE_TYPE(TMS320C32,  tms320c32_device)
+-DECLARE_DEVICE_TYPE(TMS320VC33, tms320vc33_device)
+-
+-
+ 
+ //**************************************************************************
+ //  TYPE DEFINITIONS
+@@ -841,8 +834,6 @@ protected:
+ class tms320vc33_device : public tms320c3x_device
+ {
+ public:
+-	static auto parent_rom_device_type() { return &TMS320C31; }
+-
+ 	// construction/destruction
+ 	tms320vc33_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
+ 
+@@ -852,4 +843,11 @@ protected:
+ 	void internal_320vc33(address_map &map) ATTR_COLD;
+ };
+ 
++
++// device type definition
++DECLARE_DEVICE_TYPE(TMS320C30,  tms320c30_device)
++DECLARE_DEVICE_TYPE(TMS320C31,  tms320c31_device)
++DECLARE_DEVICE_TYPE(TMS320C32,  tms320c32_device)
++DECLARE_DEVICE_TYPE(TMS320VC33, tms320vc33_device)
++
+ #endif // MAME_CPU_TMS320C3X_TMS320C3X_H
