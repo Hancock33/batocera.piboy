@@ -126,6 +126,7 @@ class DolphinTriforceGenerator(Generator):
         # Serial Port 1 to AM-Baseband
         dolphinTriforceSettings.set("Core", "SerialPort1", "6")
         dolphinTriforceSettings.set("Core", "SIDevice0", "11")
+        dolphinTriforceSettings.set("Core", "SIDevice1", "11")
 
         # Save dolphin.ini
         with DOLPHIN_TRIFORCE_INI.open('w') as configfile:
