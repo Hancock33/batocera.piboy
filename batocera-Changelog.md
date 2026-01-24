@@ -69,6 +69,7 @@
 - You can now choose to create a Win32 WINE bottle only via the option to run 32-bit Windows games.
 - DOSBox Staging's working directory is now set to the games' folder, allowing for local and relative (img)mount and conf file references.
 - DOSBox Staging will fallback to a C:\> prompt inside the games' folder if its missing dosbox.cfg/.conf/.bat files.
+- DOSBox Staging now stores DOS filesystem changes in /userdata/saves/dos/<game> for squashfs ROMs.
 ### Updated
 - Azahar to 2124
 - BigPEmu to v121
