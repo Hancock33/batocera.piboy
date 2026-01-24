@@ -1500,6 +1500,7 @@ config BR2_PACKAGE_BATOCERA_GUNS
     select BR2_PACKAGE_GUN4IR_GUNS                          # GUN4IR light gun
     select BR2_PACKAGE_GUNCON                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_BCM27XX || BR2_PACKAGE_BATOCERA_TARGET_BCM2837 # GunCon2 light gun
     select BR2_PACKAGE_GUNCON3                              if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4                                                                     # GunCon3 Light gun
+    select BR2_PACKAGE_LIGHTGUN_CONTROLLERS_ART             # gun images for the bcc
     select BR2_PACKAGE_LIGHTGUNS_GAMES_PRECALIBRATIONS      # Light gun accuracy precalibration
     select BR2_PACKAGE_ONEHIT_GUNS                          # OneHit light gun
     select BR2_PACKAGE_OPENFIRE_GUNS                        # OpenFIRE light gun
