@@ -25,10 +25,10 @@ msgid "Battery"
 msgstr "Akkumulátor"
 
 msgid "Bright +"
-msgstr ""
+msgstr "Fényerő +"
 
 msgid "Bright -"
-msgstr ""
+msgstr "Fényerő -"
 
 msgid "CPU:"
 msgstr "CPU:"
@@ -52,7 +52,7 @@ msgid "Game"
 msgstr "Játék"
 
 msgid "Gun"
-msgstr ""
+msgstr "Fegyver"
 
 msgid "High Perf"
 msgstr "Nagy teljesítmény"
