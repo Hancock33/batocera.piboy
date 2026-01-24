@@ -11,7 +11,9 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|82d09f77fd982f25
 Ports|[omf2097](http://github.com/omf2097/openomf)|70782d3e53e4e5232120a4df748d8c16628de649|Jan 24, 2026
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.7.2|Jan 24, 2026
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|d3bfbe97623a2a26c46c5b88b2053cfa2b08e91a|Jan 24, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260124|Jan 24, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|70816e850af8c254c4c32fb9bfcb3ce3373c0776|Jan 24, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260124|Jan 24, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8ef2c5d46ccf8b49feae0a0ef673955dbc5d6ab5|Jan 24, 2026
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|8f232208c4ec68828737343627316ee9fc75bf12|Jan 24, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c029def67d0451a43ea0a879d2d656298edaa9a5|Jan 24, 2026
@@ -33,8 +35,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|f67e23be209179c7a889c
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b6005cfbc04445f8cc25dc8a16867d5ba31c2727|Jan 23, 2026
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|36e4e95c18f600c49ebd46edb284ea94bff2e0da|Jan 23, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.01|Jan 23, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260123|Jan 23, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260123|Jan 23, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|c6eb67c3209cdd80c9ff23c3a91fba1ff824f14b|Jan 23, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|52675734da114a19b3705f03906b1455f3d76644|Jan 23, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|3a1184d1e1c7ed15752e9fe4a0594e68b4a41e11|Jan 23, 2026
@@ -577,15 +577,5 @@ Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d
 Libraries|[python-proxy-tools](https://files.pythonhosted.org/packages/f2/cf/77d3e19b7fabd03895caca7857ef51e4c409e0ca6b37ee6e9f7daa50b642)|0.1.0|May 06, 2014
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
-Kodi|[kodi21_resource_language_de_de](\)|11.0.101|N/A
-Kodi|[kodi21_resource_language_el_gr](\)|11.0.75|N/A
-Kodi|[kodi21_resource_language_es_es](\)|11.0.97|N/A
-Kodi|[kodi21_resource_language_eu_es](\)|11.0.72|N/A
-Kodi|[kodi21_resource_language_fr_fr](https://mirrors.kodi.tv/addons/omega/resource.language.fr_fr)|11.0.101|N/A
-Kodi|[kodi21_resource_language_it_it](\)|11.0.100|N/A
-Kodi|[kodi21_resource_language_pt_br](\)|11.0.98|N/A
-Kodi|[kodi21_resource_language_sv_se](\)|11.0.94|N/A
-Kodi|[kodi21_resource_language_tr_tr](\)|11.0.88|N/A
-Kodi|[kodi21_resource_language_zh_cn](https://mirrors.kodi.tv/addons/omega/resource.language.zh_cn)|11.0.93|N/A
 Looks|[lightgun-controllers-art](\)|d47d62153ade6d0ae0c35ca67879fcc72893810b|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
