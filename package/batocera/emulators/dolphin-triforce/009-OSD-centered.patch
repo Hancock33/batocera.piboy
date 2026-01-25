@@ -1,5 +1,5 @@
 diff --git a/Source/Core/VideoCommon/OnScreenDisplay.cpp b/Source/Core/VideoCommon/OnScreenDisplay.cpp
-index cc7fa6e22b..d743528892 100644
+index 6f42879c34..e38f804a36 100644
 --- a/Source/Core/VideoCommon/OnScreenDisplay.cpp
 +++ b/Source/Core/VideoCommon/OnScreenDisplay.cpp
 @@ -71,7 +71,7 @@ static float DrawMessage(int index, Message& msg, const ImVec2& position, int ti

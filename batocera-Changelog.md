@@ -47,6 +47,7 @@
 - Yamagi Quake II added which support more systems, especially lower-end hardware
 - Light gun support to the new Libretro Dolphin core
 - Light gun support to Duckstation (multi-light guns)
+- Light gun support (single light gun only) to the Play! namco 2x6 gun games
 - Casio Loopy as a separate system
 - Enterprise 64/128 (via CLK emulator)
 - Xroar emulator as an option for the Color Computer (Tandy TRS-80)
@@ -59,6 +60,7 @@
 - Crosshairs for light guns in PCSX2
 - Massive MAME log (switchres verbose disabled by default)
 - PCSX2 light gun mapping (START can now be pressed on the light gun instead of controller)
+- PS4 and PSVita games not appearing in the "last played" auto collection
 ### Changed / Improved
 - Wifi country can now be chosen under the Network Setting option.
   This improves Wifi connectivity by aligning your device with regional regulations as well as 6GHz band support.
@@ -67,6 +69,7 @@
 - You can now choose to create a Win32 WINE bottle only via the option to run 32-bit Windows games.
 - DOSBox Staging's working directory is now set to the games' folder, allowing for local and relative (img)mount and conf file references.
 - DOSBox Staging will fallback to a C:\> prompt inside the games' folder if its missing dosbox.cfg/.conf/.bat files.
+- DOSBox Staging now stores DOS filesystem changes in /userdata/saves/dos/<game> for squashfs ROMs.
 ### Updated
 - Azahar to 2124
 - BigPEmu to v121
@@ -75,6 +78,7 @@
 - DXX-Rebirth to May 25, 2025
 - EDuke32 to Oct 10, 2025
 - Flycast to 2.6
+- FS-UAE to v3.2.35
 - Groovy MAME to 0.284
 - Hatari to v2.6.1
 - Hurrican to Jul 26, 2025 build
@@ -83,6 +87,7 @@
 - Libretro BlueMSX to 4th of November 2025 build
 - Libretro Bsnes to 19th of December 2025 build
 - Libretro Dolphin to 24th of December 2025 build
+- Libretro Fake-08 to 22nd of January 2026 build
 - Libretro FBNeo to 11th of January 2026 build
 - Libretro Fceumm to 12th of September 2025 build
 - Libretro Flycast to 2.6
@@ -154,6 +159,8 @@
 - Wine-TKG to 10.20
 - Wine Proton to 10.0-3
 - WLRoots to 0.19.2
+- Xpad-noone to Oct 30, 2025 build
+- XOne to v0.5.2
 - XWayland to 24.1.9
 
 # 2025/10/12 - batocera.linux 42 - Papilio Ulysses

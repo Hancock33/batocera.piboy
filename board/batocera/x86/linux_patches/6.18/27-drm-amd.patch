@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu.h b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
-index 56c1140a6a4a..8120ded1d106 100644
+index 266d9111e20b..13df0822c5e7 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu.h
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu.h
-@@ -1639,7 +1639,6 @@ void amdgpu_driver_postclose_kms(struct drm_device *dev,
+@@ -1641,7 +1641,6 @@ void amdgpu_driver_postclose_kms(struct drm_device *dev,
  				 struct drm_file *file_priv);
  void amdgpu_driver_release_kms(struct drm_device *dev);
  
@@ -11,7 +11,7 @@ index 56c1140a6a4a..8120ded1d106 100644
  void amdgpu_device_complete(struct drm_device *dev);
  int amdgpu_device_suspend(struct drm_device *dev, bool fbcon);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index 0cba31ec025c..9b3c32364f78 100644
+index 49107475af61..8b22cec68e1b 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 @@ -3782,7 +3782,6 @@ static int amdgpu_device_ip_suspend_phase1(struct amdgpu_device *adev)
@@ -43,7 +43,7 @@ index 0cba31ec025c..9b3c32364f78 100644
  {
  	int r;
  
-@@ -5227,7 +5226,9 @@ int amdgpu_device_suspend(struct drm_device *dev, bool notify_clients)
+@@ -5235,7 +5234,9 @@ int amdgpu_device_suspend(struct drm_device *dev, bool notify_clients)
  
  	amdgpu_ras_suspend(adev);
  
@@ -54,7 +54,7 @@ index 0cba31ec025c..9b3c32364f78 100644
  
  	amdgpu_amdkfd_suspend(adev, !amdgpu_sriov_vf(adev) && !adev->in_runpm);
  	amdgpu_userq_suspend(adev);
-@@ -5240,7 +5241,9 @@ int amdgpu_device_suspend(struct drm_device *dev, bool notify_clients)
+@@ -5248,7 +5249,9 @@ int amdgpu_device_suspend(struct drm_device *dev, bool notify_clients)
  
  	amdgpu_fence_driver_hw_fini(adev);
  
@@ -66,10 +66,10 @@ index 0cba31ec025c..9b3c32364f78 100644
  	if (amdgpu_sriov_vf(adev))
  		amdgpu_virt_release_full_gpu(adev, false);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-index da1e65b65669..11fda9378534 100644
+index 9667d000b8c2..0308e2d287ed 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-@@ -2577,7 +2577,8 @@ amdgpu_pci_shutdown(struct pci_dev *pdev)
+@@ -2602,7 +2602,8 @@ amdgpu_pci_shutdown(struct pci_dev *pdev)
  	 */
  	if (!amdgpu_passthrough(adev))
  		adev->mp1_state = PP_MP1_STATE_UNLOAD;

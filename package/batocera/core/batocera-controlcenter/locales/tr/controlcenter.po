@@ -24,6 +24,12 @@ msgstr "Batocera"
 msgid "Battery"
 msgstr "Pil"
 
+msgid "Bright +"
+msgstr ""
+
+msgid "Bright -"
+msgstr ""
+
 msgid "CPU:"
 msgstr "CPU:"
 
@@ -44,6 +50,9 @@ msgstr "Kalan veri depolama:"
 
 msgid "Game"
 msgstr "Oyun"
+
+msgid "Gun"
+msgstr ""
 
 msgid "High Perf"
 msgstr "Yüksek Performans"
@@ -90,9 +99,6 @@ msgstr "Oyundan çık"
 msgid "Resolution:"
 msgstr "Çözünürlük:"
 
-msgid "RetroAchievements"
-msgstr "RetroAchievements"
-
 msgid "Saver"
 msgstr "Tasarruf"
 
@@ -116,3 +122,6 @@ msgstr "Ses +"
 
 msgid "Vol -"
 msgstr "Ses -"
+
+#~ msgid "RetroAchievements"
+#~ msgstr "RetroAchievements"

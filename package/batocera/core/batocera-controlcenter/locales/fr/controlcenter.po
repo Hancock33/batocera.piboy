@@ -19,6 +19,12 @@ msgstr "Batocera"
 msgid "Battery"
 msgstr "Batterie"
 
+msgid "Bright +"
+msgstr "Lumi +"
+
+msgid "Bright -"
+msgstr "Lumi -"
+
 msgid "CPU:"
 msgstr "CPU:"
 
@@ -39,6 +45,9 @@ msgstr "Espace disque libre:"
 
 msgid "Game"
 msgstr "Jeu"
+
+msgid "Gun"
+msgstr ""
 
 msgid "High Perf"
 msgstr "Hautes performances"
@@ -85,9 +94,6 @@ msgstr "Quitter"
 msgid "Resolution:"
 msgstr "Résoluition"
 
-msgid "RetroAchievements"
-msgstr "RetroAchievements"
-
 msgid "Saver"
 msgstr "Économe"
 
@@ -111,3 +117,6 @@ msgstr "Vol +"
 
 msgid "Vol -"
 msgstr "Vol -"
+
+#~ msgid "RetroAchievements"
+#~ msgstr "RetroAchievements"

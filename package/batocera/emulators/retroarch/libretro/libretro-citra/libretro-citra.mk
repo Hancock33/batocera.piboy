@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jan 18, 2026
-LIBRETRO_CITRA_VERSION = 55242b95ed97448017655ba48755ab9ec2f46883
+LIBRETRO_CITRA_VERSION = 77627983b41fd9842cd20d0901495a3fc06e307c
 LIBRETRO_CITRA_SITE = https://github.com/warmenhoven/azahar.git
 LIBRETRO_CITRA_BRANCH = warmenhoven/dev/azahar_libretro
 LIBRETRO_CITRA_SITE_METHOD=git
@@ -33,7 +33,7 @@ LIBRETRO_CITRA_CONF_OPTS += -DUSE_SYSTEM_OPENSSL=ON
 
 define LIBRETRO_CITRA_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/buildroot-build/azahar_libretro.so $(TARGET_DIR)/usr/lib/libretro/citra_libretro.so
+	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/azahar_libretro.so $(TARGET_DIR)/usr/lib/libretro/citra_libretro.so
 endef
 
 $(eval $(cmake-package))

@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
-from ... import controllersConfig
-from ...batoceraPaths import BIOS, ROMS, ensure_parents_and_open
+from ...batoceraPaths import BIOS, ROMS, ES_GAMES_METADATA, ensure_parents_and_open
 from ...gun import Guns, guns_need_crosses
-from ...utils import videoMode
+from ...utils import videoMode, metadata
 from ...utils.configparser import CaseSensitiveConfigParser
+
 
 if TYPE_CHECKING:
     from collections.abc import Callable
@@ -626,6 +626,15 @@ def _dolphin_options(
     else:
         _set(coreSettings, 'dolphin_ir_mode', '1')
 
+
+# Epoch - Cassette Vision
+def _pd777_options(
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
+) -> None:
+    # Course selection switch visual feedback
+    _set_from_system(coreSettings, 'pd777_announce_course_switch', system, 'cassettevision_announce_course_switch', default='enabled')
+
+
 # Magnavox - Odyssey2 / Phillips Videopac+
 def _o2em_options(
     coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
@@ -809,6 +818,30 @@ def _dosbox_pure_options(
     # Midi Type
     _set_from_system(coreSettings, 'dosbox_pure_midi', system, 'pure_midi', default='disabled')
 
+# Elektronika BK-0010/0011
+def _bk_options(
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
+) -> None:
+    # Model: BK-0010, BK-0010.01, BK-0010.01 + FDD, BK-0011M + FDD, Terak 8510/a, Slow BK-0011M
+    _set_from_system(coreSettings, 'bk_model', system, default='BK-0011M + FDD')
+
+    # Peripheral (UP port): none, covox, ay_3_8910, mouse_high, mouse_low, joystick
+    _set_from_system(coreSettings, 'bk_peripheral', system, default='none')
+
+    # Double CPU speed: disabled, enabled
+    _set_from_system(coreSettings, 'bk_doublespeed', system, default='disabled')
+
+    # Use color display: enabled, disabled
+    _set_from_system(coreSettings, 'bk_color', system, default='enabled')
+
+    # Aspect ratio: 1:1, 4:3
+    _set_from_system(coreSettings, 'bk_aspect_ratio', system, default='1:1')
+
+    # Keyboard layout: qwerty, jcuken
+    _set_from_system(coreSettings, 'bk_layout', system, default='qwerty')
+
+    # Keyboard type: poll, callback
+    _set_from_system(coreSettings, 'bk_keyboard_type', system, default='poll')
 
 # Microsoft MSX and Colecovision
 def _bluemsx_options(
@@ -973,7 +1006,7 @@ def _mupen64plus_next_options(
 
         if pak_value == 'auto_rumble':
             if metadata is None:
-                metadata = controllersConfig.getGamesMetaData(system.name, rom)
+                metadata = metadata.getGamesMetaData(ES_GAMES_METADATA, system.name, rom)
 
             pak_value = 'rumble' if metadata.get('controller_rumble') == 'true' else pak_default
 
@@ -1041,7 +1074,7 @@ def _parallel_n64_options(
 
         if pak_value == 'auto_rumble':
             if metadata is None:
-                metadata = controllersConfig.getGamesMetaData(system.name, rom)
+                metadata = metadata.getGamesMetaData(ES_GAMES_METADATA, system.name, rom)
 
             pak_value = 'rumble' if metadata.get('controller_rumble') == 'true' else pak_default
 
@@ -2465,6 +2498,7 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'atari800': _atari800_options,
     'beetle-saturn': _beetle_saturn_options,
     'bennugd': _bennugd_options,
+    'bk': _bk_options,
     'bluemsx': _bluemsx_options,
     'bsnes': _bsnes_options,
     'cap32': _cap32_options,
@@ -2509,6 +2543,7 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'pcfx': _pcfx_options,
     'pcsx_rearmed': _pcsx_rearmed_options,
     'pcsx2': _pcsx2_options,
+    'pd777': _pd777_options,
     'picodrive': _picodrive_options,
     'pokemini': _pokemini_options,
     'potator': _potator_options,
@@ -2523,6 +2558,7 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'scummvm': _scummvm_options,
     'snes9x': _snes9x_options,
     'snes9x_next': _snes9x_next_options,
+    'stella': _stella_options,
     'swanstation': _duckstation_options,
     'tgbdual': _tgbdual_options,
     'theodore': _theodore_options,

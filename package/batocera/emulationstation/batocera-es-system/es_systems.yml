@@ -1767,10 +1767,20 @@ bk:
   manufacturer:         Electronica
   release:              1984
   hardware:             computer
-  extensions:           [7z, bin, zip]
+  extensions:           [7z, bin, bkd, dsk, img, zip]
   emulators:
     libretro:
       bk:               { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BK_EMULATOR] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en:           |
+                        BK-0010/0011 was a Soviet home computer series from Elektronika.
+                        Supports BK-0010, BK-0010.01, BK-0011(M) and Terak 8510/a emulation.
+                        https://wiki.batocera.org/systems:bk
+  comment_ru:          |
+                        БК-0010/0011 - серия советских домашних компьютеров от Электроники.
+                        Поддерживает эмуляцию БК-0010, БК-0010.01, БК-0011(М) и Terak 8510/a.
 
 arcadia:
   name:                 Arcadia 2001
@@ -1823,6 +1833,17 @@ advision:
                         Requires MAME BIOS file advision.zip
   comment_br:           |
                         Requer o arquivo advision.zip da BIOS do MAME
+
+
+cassettevision:
+  name:                 Cassette Vision
+  manufacturer:         Epoch
+  release:              1981
+  hardware:             console
+  extensions:           [zip, bin777]
+  emulators:
+    libretro:
+      pd777:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PD777] }
 
 gamepock:
   name:                 Game Pocket Computer
@@ -2041,7 +2062,6 @@ pico8:
   extensions:           [m3u, p8, png]
   emulators:
     libretro:
-      retro8:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_RETRO8] }
       fake08:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_FAKE08] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:pico-8

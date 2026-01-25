@@ -23,6 +23,12 @@ msgstr "Batocera"
 msgid "Battery"
 msgstr "电池"
 
+msgid "Bright +"
+msgstr ""
+
+msgid "Bright -"
+msgstr ""
+
 msgid "CPU:"
 msgstr "CPU:"
 
@@ -43,6 +49,9 @@ msgstr "自由数据存储:"
 
 msgid "Game"
 msgstr "游戏"
+
+msgid "Gun"
+msgstr ""
 
 msgid "High Perf"
 msgstr "高性能"
@@ -89,9 +98,6 @@ msgstr "退出游戏"
 msgid "Resolution:"
 msgstr "分辨率:"
 
-msgid "RetroAchievements"
-msgstr "复古成就"
-
 msgid "Saver"
 msgstr "保存器"
 
@@ -115,3 +121,6 @@ msgstr "音量 +"
 
 msgid "Vol -"
 msgstr "音量 -"
+
+#~ msgid "RetroAchievements"
+#~ msgstr "复古成就"

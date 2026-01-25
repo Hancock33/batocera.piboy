@@ -75,6 +75,9 @@
     <windowRule title="Batocera OSD">
       <action name="MoveToEdge" direction="up" snapWindows="no" />
     </windowRule>
+    <windowRule title="Batocera Control Center">
+      <action name="MoveToEdge" direction="up" snapWindows="no" />
+    </windowRule>
     <windowRule title="backglass">
       <action name="MoveToOutput">
         <output></output>
@@ -102,6 +105,9 @@
       </action>
     </windowRule>
     <windowRule identifier="pcmanfm">
+      <action name="ToggleFullscreen" />
+    </windowRule>
+    <windowRule identifier="clksignal">
       <action name="ToggleFullscreen" />
     </windowRule>
     <windowRule identifier="xterm" serverDecoration="yes" />

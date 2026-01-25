@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: emulationstation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-01-11 21:19+0100\n"
+"PO-Revision-Date: 2026-01-18 18:44+0100\n"
 "Last-Translator: Albi\n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -2430,6 +2430,11 @@ msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
 msgstr "ANISTROPIC SZŰRŐ"
 
+#. TRANSLATION: libretro/pd777
+msgctxt "game_options"
+msgid "ANNOUNCE COURSE SWITCH"
+msgstr ""
+
 #. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 msgctxt "game_options"
 msgid "ANTI-ALIASING"
@@ -2694,6 +2699,11 @@ msgstr "FEGYVER AUTOMATIKUS ÚJRATÖLTÉSE"
 msgctxt "game_options"
 msgid "AUTOMATICALLY RUN"
 msgstr "AUTOMATIKUS FUTÁS"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "AY-3-8910"
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -3172,12 +3182,12 @@ msgstr "Analóg felfelé"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Analog deadzone for paddles. Core default (15)."
-msgstr ""
+msgstr "Analóg holtzóna a lapátokhoz. Alapértelmezés (15)."
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Analog sensitivity for paddles. Core default (20)."
-msgstr ""
+msgstr "Analóg érzékenység a lapátokhoz. Alapértelmezés (20)."
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
@@ -3508,7 +3518,7 @@ msgstr "Ausztria"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Auto (Default)"
-msgstr ""
+msgstr "Automatikus (alapértelmezett)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -3789,6 +3799,26 @@ msgctxt "game_options"
 msgid "BIRTH MONTH"
 msgstr "SZÜLETÉSI HÓNAP"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010.01"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010.01 + FDD"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0011M + FDD"
+msgstr ""
+
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx-expanded, libretro/mesens, libretro/nestopia, libretro/snes9x, ...
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
@@ -3897,7 +3927,7 @@ msgstr "Backpedal"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Badly adjusted"
-msgstr ""
+msgstr "Rossz beállítás"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -4140,11 +4170,6 @@ msgctxt "game_options"
 msgid "Bolivia"
 msgstr "Bolívia"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Boost"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm, libretro/nestopia
 msgctxt "game_options"
 msgid "Both"
@@ -4194,11 +4219,6 @@ msgstr "Csak alul"
 msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "Pattogó doboz"
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Brake / Shoot"
-msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -4508,6 +4528,11 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "ÉRME HANG PLUGIN"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "COLOR DISPLAY"
+msgstr ""
+
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "COLOR PALETTE"
@@ -4576,7 +4601,7 @@ msgstr "KONZOL ORSZÁGA"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "CONSOLE DISPLAY"
-msgstr ""
+msgstr "KONZOL KIJELZŐ"
 
 #. TRANSLATION: cemu, redream, shadps4
 msgctxt "game_options"
@@ -4870,7 +4895,7 @@ msgstr "VÁGÁS SZEGÉLY"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "CROP HORIZONTAL OVERSCAN"
-msgstr ""
+msgstr "VÍZSZINTES TÚLSZKENNELÉS VÁGÁSA"
 
 #. TRANSLATION: duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, libretro/picodrive, ...
 msgctxt "game_options"
@@ -4880,7 +4905,7 @@ msgstr "Túlpáztázás levágása"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "CROP VERTICAL OVERSCAN"
-msgstr ""
+msgstr "FÜGGŐLEGES TÚLSZKENNELÉS VÁGÁSA"
 
 #. TRANSLATION: duckstation, mame, openmohaa, theforceengine
 msgctxt "game_options"
@@ -5015,7 +5040,7 @@ msgstr "ÁTVEZETŐJELENETEK"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "CXA2025AS (JP)"
-msgstr ""
+msgstr "CXA2025AS (JP)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5036,6 +5061,11 @@ msgstr "Cache-interpretátor"
 msgctxt "game_options"
 msgid "Cached Interpreter (Faster)"
 msgstr "Gyorsítótárazott fordító (gyorsabb)"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Callback"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -5237,26 +5267,6 @@ msgstr ""
 #. TRANSLATION: hurrican
 msgctxt "game_options"
 msgid "ChJees"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 1 / Right"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 2 / Left"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 3 / Up"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 4 / Down"
 msgstr ""
 
 #. TRANSLATION: libretro/mesens
@@ -6073,6 +6083,11 @@ msgctxt "game_options"
 msgid "Costa Rica"
 msgstr "Costa Rica"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Covox"
+msgstr ""
+
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Crash-n Burn"
@@ -6115,12 +6130,12 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Crop horizontal overscan."
-msgstr ""
+msgstr "Vízszintes túlszkennelés kivágása."
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Crop vertical overscan (lines). Core default (0)."
-msgstr ""
+msgstr "Függőleges túlszkenneléssel vágása (vonalak). Alapértelmezés (0)."
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
@@ -6369,7 +6384,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "LEMEZ TÍPUSA"
 
-#. TRANSLATION: dolphin, duckstation, libretro/stella, openjkdf2, pcsx2, ...
+#. TRANSLATION: dolphin, duckstation, libretro/pd777, libretro/stella, openjkdf2, ...
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "KIJELZŐ"
@@ -6448,6 +6463,11 @@ msgstr "DOOM RES HACK"
 msgctxt "game_options"
 msgid "DOUBLE"
 msgstr "DUPLA"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "DOUBLE CPU SPEED"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -6735,7 +6755,7 @@ msgstr "Digitális vezérlő (Gamepad)"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Digital Prime FBX"
-msgstr ""
+msgstr "Digital Prime FBX"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -7565,7 +7585,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Enable TV-like filtering / effects."
-msgstr ""
+msgstr "TV-szerű szűrés/effektusok."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -7611,6 +7631,11 @@ msgid ""
 msgstr ""
 "Engedélyezze a gyorsítótár csatlakoztatását. Egyes játékokban javíthatja a "
 "teljesítményt és a kompatibilitást."
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Enable colour display emulation."
+msgstr ""
 
 #. TRANSLATION: dolphin, rpcs3
 msgctxt "game_options"
@@ -7749,6 +7774,8 @@ msgstr "Játékonkénti egyéni konfiguráció engedélyezése a MAME menün ker
 msgctxt "game_options"
 msgid "Enable phosphor mode (motion blur) for flickering effects."
 msgstr ""
+"Foszfor módot engedélyezése (mozgás okozta elmosódás) a villódzó effektek "
+"eléréséhez."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -9724,11 +9751,6 @@ msgstr ""
 "A játékok a normálnál gyorsabban/lassabban futhatnak, ha nem megfelelő "
 "régiót választ ki."
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Gas / Accelerate / Short Pass"
-msgstr ""
-
 #. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Gaussian"
@@ -10833,6 +10855,11 @@ msgctxt "game_options"
 msgid "JAST SOUND"
 msgstr "JAST HANG"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "JCUKEN"
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JINC2 (Slow)"
@@ -11006,9 +11033,9 @@ msgstr "Joypad Auto"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Joypad sensitivity for paddles. Core default  (3)."
-msgstr ""
+msgstr "Joypad érzékenység a pedálokhoz. Alapértelmezés (3)."
 
-#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, libretro/vice_x128, ...
+#. TRANSLATION: libretro/bk, libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Joystick"
 msgstr "Joystick"
@@ -11053,7 +11080,7 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "TARTSA A FŐKÉPERNYŐT FENT"
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, libretro/bk
 msgctxt "game_options"
 msgid "KEYBOARD LAYOUT"
 msgstr "BILLENTYŰZET KIOSZTÁS"
@@ -11077,6 +11104,11 @@ msgstr "BILLENTYŰZET TÁMOGATÁS"
 msgctxt "game_options"
 msgid "KEYBOARD TRANSPARENCY"
 msgstr "BILLENTYŰZET ÁTLÁTSZÓSÁGA"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "KEYBOARD TYPE"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -11609,11 +11641,6 @@ msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "Lockbar tűz gomb"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Long Pass"
-msgstr ""
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
@@ -11798,7 +11825,7 @@ msgctxt "game_options"
 msgid "MISSION START"
 msgstr "KÜLDETÉS KEZDÉS"
 
-#. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame
+#. TRANSLATION: hatari, libretro/bk, libretro/fuse, libretro/mame, mame
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "MODELL"
@@ -11991,7 +12018,7 @@ msgstr "Macintosh High Density Disk images"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Magnum FBX"
-msgstr ""
+msgstr "Magnum FBX"
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -12490,6 +12517,16 @@ msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Egérkattintás"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Mouse High"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Mouse Low"
+msgstr ""
+
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Mouse axis for player 1, horizontal screen motion."
@@ -12533,7 +12570,7 @@ msgstr "Egértengely a 4. játékoshoz, vízszintes képernyőmozgás."
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Mouse sensitivity for paddles. Core default (10)."
-msgstr ""
+msgstr "Egér érzékenysége a lapátokhoz. Alapértelmezés (10)."
 
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -12764,7 +12801,7 @@ msgstr "NTSC 60Hz"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "NTSC ASPECT"
-msgstr ""
+msgstr "NTSC ASPECT"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -12779,7 +12816,7 @@ msgstr "NTSC TV"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "NTSC aspect ratio correction. Core default (PAR)."
-msgstr ""
+msgstr "NTSC képarány-korrekció. Alapértelmezés (PAR)."
 
 #. TRANSLATION: duckstation, libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -12799,7 +12836,7 @@ msgstr "NTSC-U/C"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "NTSC50"
-msgstr ""
+msgstr "NTSC50"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13620,17 +13657,17 @@ msgstr "P2 csak"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG ABSOLUTE"
-msgstr ""
+msgstr "ANALÓG LAPÁT"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG DEADZONE"
-msgstr ""
+msgstr "ANALÓG LAPÁT HOLTZÓNA"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG SENSITIVITY"
-msgstr ""
+msgstr "ANALÓG LAPÁT ÉRZÉKENYSÉG"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -13645,7 +13682,7 @@ msgstr "D-PAD LAPÁT  ÉRZÉKENYSÉGE"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE JOYPAD SENSITIVITY"
-msgstr ""
+msgstr "JOYPAD LAPÁT ÉRZÉKENYSÉGE"
 
 #. TRANSLATION: libretro/dice, libretro/stella
 msgctxt "game_options"
@@ -13675,7 +13712,7 @@ msgstr "PAL 576x312px"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PAL ASPECT"
-msgstr ""
+msgstr "PAL ASPECT"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -13685,7 +13722,7 @@ msgstr "PAL TV"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PAL aspect ratio correction. Core default (PAR)."
-msgstr ""
+msgstr "PAL képarány-korrekció. Alapértelmezés (PAR)."
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -13700,12 +13737,12 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PAL60"
-msgstr ""
+msgstr "PAL60"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PALETTE COLORS"
-msgstr ""
+msgstr "PALETTA SZÍNEK"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -13802,15 +13839,20 @@ msgctxt "game_options"
 msgid "PERFORMANCE PRESETS"
 msgstr "TELJESÍTMÉNYBEÁLLÍTÁSOK"
 
-#. TRANSLATION: libretro/stella
+#. TRANSLATION: libretro/bk
 msgctxt "game_options"
-msgid "PHOSPHOR BLEND"
+msgid "PERIPHERAL (UP PORT)"
 msgstr ""
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
+msgid "PHOSPHOR BLEND"
+msgstr "FOSZFORKEVERÉK"
+
+#. TRANSLATION: libretro/stella
+msgctxt "game_options"
 msgid "PHOSPHOR MODE"
-msgstr ""
+msgstr "FOSZFOR MÓD"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -13981,16 +14023,6 @@ msgstr "PVM_20M2U/D93"
 msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "Tekerővezérlés"
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Left / Long Pass"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Right"
-msgstr ""
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -14194,7 +14226,7 @@ msgstr "Philips CD-i CD-ROMs"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Phosphor blend level. Core default (60%)."
-msgstr ""
+msgstr "Foszforkeverék szintje. Alapértelmezett mag (60%)."
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -14337,6 +14369,11 @@ msgstr "Lengyel (pl)"
 msgctxt "game_options"
 msgid "Polish"
 msgstr "Lengyel"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Poll"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, ...
 msgctxt "game_options"
@@ -14598,6 +14635,11 @@ msgstr "LEKÉRDEZÉS ELZÁRÓDÁS"
 msgctxt "game_options"
 msgid "QUIT ON HOST"
 msgstr "KILÉPÉS A HÁZIGAZDÁNÁL"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "QWERTY"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -14882,7 +14924,7 @@ msgstr "Véletlen értékek"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Raw"
-msgstr ""
+msgstr "Nyers"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -15110,7 +15152,7 @@ msgstr "Állapot helyreállítása"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Restored Wii VC"
-msgstr ""
+msgstr "Felújított Wii VC"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
@@ -15268,6 +15310,11 @@ msgstr "Rumble Pak (automatikus)"
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Futás"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Run CPU at double speed."
+msgstr ""
 
 #. TRANSLATION: tr1x
 msgctxt "game_options"
@@ -15468,12 +15515,12 @@ msgstr "SDL2"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "SECAM"
-msgstr ""
+msgstr "SECAM"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "SECAM60"
-msgstr ""
+msgstr "SECAM60"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -15828,7 +15875,7 @@ msgstr "KORMÁNYZÁS ÉRZÉKENYSÉGE"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "STEREO SOUND"
-msgstr ""
+msgstr "SZTEREO HANG"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -16030,7 +16077,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Képernyő dőlésszöge (fok)"
 
-#. TRANSLATION: hotkeys.keys, triforce.dolphin_triforce.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Pillanatkép"
@@ -16100,6 +16147,11 @@ msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
 msgstr "Válassza ki az Amiga P2 vezérlő típusát."
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select display aspect ratio."
+msgstr ""
+
 #. TRANSLATION: awgl, bermuda
 msgctxt "game_options"
 msgid "Select full screen mode."
@@ -16124,6 +16176,16 @@ msgstr ""
 "Válassza ki, hogy mennyi grafikus memória van lefoglalva a GPU számára, "
 "bizonyos játékoknál/rendszereknél módosításra szorulhat."
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select keyboard input method. Requires restart."
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select keyboard layout."
+msgstr ""
+
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid ""
@@ -16144,6 +16206,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "Válassza ki az emulálni kívánt modellt"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select peripheral device. Requires restart."
+msgstr ""
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -16181,6 +16248,11 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Select the console video standard / display mode."
+msgstr "Válassza ki a konzol videó szabványát / megjelenítési módját."
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select the emulated computer model. Requires restart."
 msgstr ""
 
 #. TRANSLATION: xroar
@@ -16203,7 +16275,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Select the palette used to render colors."
-msgstr ""
+msgstr "Válassza ki a színek megjelenítéséhez használt palettát."
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -16274,11 +16346,6 @@ msgstr "Szeptember"
 msgctxt "game_options"
 msgid "Serbian"
 msgstr "Szerb"
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Service / Insert Coins Button"
-msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -16557,7 +16624,7 @@ msgstr "Mutasd a célkeresztet fénykarddal."
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Show a crosshair for lightgun games."
-msgstr ""
+msgstr "Célkereszt megjelenítése fénypisztolyos játékoknál."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -16579,6 +16646,13 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Show the cheat menu"
 msgstr "Mutasd meg a csaló menüt"
+
+#. TRANSLATION: libretro/pd777
+msgctxt "game_options"
+msgid ""
+"Show the new setting of the Course Select Switch when changing it with up/"
+"down buttons."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -16889,6 +16963,11 @@ msgctxt "game_options"
 msgid "Slovenian"
 msgstr "Szlovén"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Slow BK-0011M"
+msgstr ""
+
 #. TRANSLATION: libretro/px68k, libretro/quasi88
 msgctxt "game_options"
 msgid "Slow down or speed up games as appropriate."
@@ -16937,7 +17016,7 @@ msgstr "Sima 4"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Smooth V2 FBX"
-msgstr ""
+msgstr "Smooth V2 FBX"
 
 #. TRANSLATION: dxx-rebirth, eden, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp
 msgctxt "game_options"
@@ -17230,7 +17309,7 @@ msgstr "Standard (4:3)"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Standard (Default)"
-msgstr ""
+msgstr "Normál (alapértelmezett)"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -17252,11 +17331,6 @@ msgctxt "keys_files"
 msgid "Start / Valid"
 msgstr "Kezdés / Érvényes"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Start Button"
-msgstr ""
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Start at level number"
@@ -17266,16 +17340,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Start game"
 msgstr "Játék kezdése"
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Load from Selected Slot"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Save to Selected Slot"
-msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -17315,7 +17379,7 @@ msgstr "Sztereó (alapértelmezett)"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Stereo sound output."
-msgstr ""
+msgstr "Sztereó hangkimenet."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17868,7 +17932,7 @@ msgstr "TV"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "TV EFFECTS"
-msgstr ""
+msgstr "TV-EFEKTUSOK"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -17980,9 +18044,9 @@ msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
 msgstr ""
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Test Button"
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Terak 8510/a"
 msgstr ""
 
 #. TRANSLATION: shadps4
@@ -18995,7 +19059,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Use absolute analog input for paddles."
-msgstr ""
+msgstr "Használjon abszolút analóg bemenetet a lapátokhoz."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -19154,7 +19218,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "User"
-msgstr ""
+msgstr "Felhasználó"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -19787,7 +19851,7 @@ msgstr "Wii U Classic kontroller"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Wii Virtual Console"
-msgstr ""
+msgstr "Wii virtuális konzol"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -19911,7 +19975,7 @@ msgstr "Érintőképernyős eszközökön elrejtheti a mutatót."
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Z26"
-msgstr ""
+msgstr "Z26"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -20072,7 +20136,7 @@ msgstr "agyrázkódásos rakéta"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "cxa2025as (US)"
-msgstr ""
+msgstr "cxa2025as (US)"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -20341,7 +20405,7 @@ msgstr "jobb/bal"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "royaltea"
-msgstr ""
+msgstr "royaltea"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

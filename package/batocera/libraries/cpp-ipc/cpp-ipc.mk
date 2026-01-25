@@ -3,8 +3,8 @@
 # cpp-ipc
 #
 ################################################################################
-# Version: Commits on Jan 18, 2026
-CPP_IPC_VERSION = 46be39b2b17662de0857898f15b404443a7936a9
+# Version: Commits on Jan 23, 2026
+CPP_IPC_VERSION = 6562e40453d7e76a6488b5dd82a293a1cdc2b71f
 CPP_IPC_SITE = $(call github,mutouyun,cpp-ipc,$(CPP_IPC_VERSION))
 CPP_IPC_LICENSE_FILES = LICENSE
 CPP_IPC_SUPPORTS_IN_SOURCE_BUILD = NO

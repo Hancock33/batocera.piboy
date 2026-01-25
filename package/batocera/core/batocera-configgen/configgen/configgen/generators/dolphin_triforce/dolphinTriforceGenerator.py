@@ -43,7 +43,7 @@ class DolphinTriforceGenerator(Generator):
         # Dir required for saves
         mkdir_if_not_exists(DOLPHIN_TRIFORCE_SAVES / "StateSaves")
 
-        #dolphinTriforceControllers.generateControllerConfig(system, playersControllers, rom)
+        dolphinTriforceControllers.generateControllerConfig(system, playersControllers, rom)
 
         ## dolphin.ini ##
 
@@ -126,6 +126,7 @@ class DolphinTriforceGenerator(Generator):
         # Serial Port 1 to AM-Baseband
         dolphinTriforceSettings.set("Core", "SerialPort1", "6")
         dolphinTriforceSettings.set("Core", "SIDevice0", "11")
+        dolphinTriforceSettings.set("Core", "SIDevice1", "11")
 
         # Save dolphin.ini
         with DOLPHIN_TRIFORCE_INI.open('w') as configfile:

@@ -1,11 +1,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: controlcenter\n"
+"Project-Id-Version: controlcenter 260124\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: \n"
+"Language-Team: mikakunin\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,6 +24,12 @@ msgstr "Batocera"
 msgid "Battery"
 msgstr "バッテリー"
 
+msgid "Bright +"
+msgstr "輝度 +"
+
+msgid "Bright -"
+msgstr "輝度 -"
+
 msgid "CPU:"
 msgstr "CPU:"
 
@@ -34,7 +40,7 @@ msgid "Close"
 msgstr "閉じる"
 
 msgid "Confirm"
-msgstr "確認"
+msgstr "実行"
 
 msgid "Default"
 msgstr "標準"
@@ -45,11 +51,14 @@ msgstr "データストレージ空容量:"
 msgid "Game"
 msgstr "ゲーム"
 
+msgid "Gun"
+msgstr "ガンコン"
+
 msgid "High Perf"
-msgstr "高性能"
+msgstr "高パフォーマンス"
 
 msgid "Kill it!"
-msgstr "殺せ！"
+msgstr "強制終了!"
 
 msgid "Manual"
 msgstr "マニュアル"
@@ -67,16 +76,16 @@ msgid "Next"
 msgstr "次"
 
 msgid "OFF"
-msgstr "オフ"
+msgstr "無効"
 
 msgid "ON"
-msgstr "オン"
+msgstr "有効"
 
 msgid "Plane Mode"
 msgstr "機内モード"
 
 msgid "Power Mode"
-msgstr "パワーモード"
+msgstr "電源モード"
 
 msgid "Previous"
 msgstr "前"
@@ -90,9 +99,6 @@ msgstr "ゲーム終了"
 msgid "Resolution:"
 msgstr "解像度:"
 
-msgid "RetroAchievements"
-msgstr "RetroAchievements"
-
 msgid "Saver"
 msgstr "セーバー"
 
@@ -100,7 +106,7 @@ msgid "Select"
 msgstr "選択"
 
 msgid "Sound & Power"
-msgstr "サウンド＆パワー"
+msgstr "音声＆電源"
 
 msgid "Stuck emulator?"
 msgstr "エミュレータスタック?"
@@ -112,7 +118,13 @@ msgid "Temp:"
 msgstr "温度:"
 
 msgid "Vol +"
-msgstr "Vol +"
+msgstr "音量 +"
 
 msgid "Vol -"
-msgstr "Vol -"
+msgstr "音量 -"
+
+#~ msgid "RetroAchievements"
+#~ msgstr "RetroAchievements"
+
+#~ msgid "Playing for"
+#~ msgstr "プレイ時間: "

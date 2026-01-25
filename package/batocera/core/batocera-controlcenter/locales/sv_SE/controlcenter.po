@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: controlcenter\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: \n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,12 @@ msgstr "Batocera"
 
 msgid "Battery"
 msgstr "Batteri"
+
+msgid "Bright +"
+msgstr "Ljus +"
+
+msgid "Bright -"
+msgstr "Ljus -"
 
 msgid "CPU:"
 msgstr "CPU:"
@@ -44,6 +50,9 @@ msgstr "Ledig datalagring:"
 
 msgid "Game"
 msgstr "Spel"
+
+msgid "Gun"
+msgstr "Pistol"
 
 msgid "High Perf"
 msgstr "Hög prestanda"
@@ -90,9 +99,6 @@ msgstr "Avsluta spelet"
 msgid "Resolution:"
 msgstr "Upplösning:"
 
-msgid "RetroAchievements"
-msgstr "RetroAchievements"
-
 msgid "Saver"
 msgstr "Spara"
 
@@ -116,3 +122,6 @@ msgstr "Volym +"
 
 msgid "Vol -"
 msgstr "Volym -"
+
+#~ msgid "RetroAchievements"
+#~ msgstr "RetroAchievements"

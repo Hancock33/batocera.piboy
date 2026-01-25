@@ -19,6 +19,12 @@ msgstr ""
 msgid "Battery"
 msgstr ""
 
+msgid "Bright +"
+msgstr ""
+
+msgid "Bright -"
+msgstr ""
+
 msgid "CPU:"
 msgstr ""
 
@@ -38,6 +44,9 @@ msgid "Free data storage:"
 msgstr ""
 
 msgid "Game"
+msgstr ""
+
+msgid "Gun"
 msgstr ""
 
 msgid "High Perf"
@@ -83,9 +92,6 @@ msgid "Quit game"
 msgstr ""
 
 msgid "Resolution:"
-msgstr ""
-
-msgid "RetroAchievements"
 msgstr ""
 
 msgid "Saver"

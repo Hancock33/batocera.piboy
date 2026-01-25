@@ -82,10 +82,10 @@ index aef374d46..ac2f33736 100644
  					if (Utils::FileSystem::copyFile(fileName, mNewSlotFile))
  						mNewSlotCheckSum = ApiSystem::getInstance()->getMD5(fileName, false);
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 4d643abf6..45e5dc910 100644
+index 331b0a4f1..c21b7dff3 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -2690,7 +2690,6 @@ void GuiMenu::openGamesSettings()
+@@ -2811,7 +2811,6 @@ void GuiMenu::openGamesSettings()
  	auto incrementalSaveStates = std::make_shared<OptionListComponent<std::string>>(mWindow, _("INCREMENTAL SAVESTATES"));
  	incrementalSaveStates->addRange({
  		{ _("INCREMENT PER SAVE"), _("Never overwrite old savestates, always make new ones."), "" }, // Don't use 1 -> 1 is YES, auto too

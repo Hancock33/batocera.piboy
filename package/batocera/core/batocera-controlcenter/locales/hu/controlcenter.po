@@ -24,6 +24,12 @@ msgstr "Batocera"
 msgid "Battery"
 msgstr "Akkumulátor"
 
+msgid "Bright +"
+msgstr "Fényerő +"
+
+msgid "Bright -"
+msgstr "Fényerő -"
+
 msgid "CPU:"
 msgstr "CPU:"
 
@@ -44,6 +50,9 @@ msgstr "Ingyenes adattároló:"
 
 msgid "Game"
 msgstr "Játék"
+
+msgid "Gun"
+msgstr "Fegyver"
 
 msgid "High Perf"
 msgstr "Nagy teljesítmény"
@@ -90,9 +99,6 @@ msgstr "Kilépés a játékból"
 msgid "Resolution:"
 msgstr "Felbontás:"
 
-msgid "RetroAchievements"
-msgstr "RetroAchievements"
-
 msgid "Saver"
 msgstr "Lementés"
 
@@ -116,3 +122,6 @@ msgstr "Hang +"
 
 msgid "Vol -"
 msgstr "Hang -"
+
+#~ msgid "RetroAchievements"
+#~ msgstr "RetroAchievements"
