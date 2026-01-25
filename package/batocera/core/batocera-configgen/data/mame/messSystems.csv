@@ -12,7 +12,7 @@ astrocde;astrocde;cart;
 atom;atom;flop1;'\n*DOS\n*DIR\n*CAT\n*RUN"'
 bbc;bbcb;flop1;
 beena;beena;cart;
-bk001001;bk001001;cass;
+bk;bk001001;cass;
 bml3;bml3;cass;
 camplynx;lynx128k;cass;'mload""'
 camplynx;lynx48k;cass;'mload""'

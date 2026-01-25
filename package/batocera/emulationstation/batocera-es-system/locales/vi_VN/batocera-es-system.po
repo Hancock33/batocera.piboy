@@ -2699,6 +2699,11 @@ msgctxt "game_options"
 msgid "AUTOMATICALLY RUN"
 msgstr "TỰ ĐỘNG CHẠY"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "AY-3-8910"
+msgstr ""
+
 #. TRANSLATION: mame
 msgctxt "game_options"
 msgid "Accel"
@@ -3786,6 +3791,26 @@ msgctxt "game_options"
 msgid "BIRTH MONTH"
 msgstr "THÁNG SINH"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010.01"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010.01 + FDD"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0011M + FDD"
+msgstr ""
+
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx-expanded, libretro/mesens, libretro/nestopia, libretro/snes9x, ...
 msgctxt "game_options"
 msgid "BLARGG NTSC FILTER"
@@ -4496,6 +4521,11 @@ msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
 msgstr "PLUGIN ÂM THANH ĐỒNG XU"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "COLOR DISPLAY"
+msgstr ""
+
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
 msgid "COLOR PALETTE"
@@ -5022,6 +5052,11 @@ msgstr "Trình biên dịch bộ nhớ cache"
 msgctxt "game_options"
 msgid "Cached Interpreter (Faster)"
 msgstr "Cached Interpreter (Nhanh hơn)"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Callback"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -6024,6 +6059,11 @@ msgctxt "game_options"
 msgid "Costa Rica"
 msgstr "Costa Rica"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Covox"
+msgstr ""
+
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "Crash-n Burn"
@@ -6400,6 +6440,11 @@ msgstr "DOOM RES HACK"
 msgctxt "game_options"
 msgid "DOUBLE"
 msgstr "ĐÔI"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "DOUBLE CPU SPEED"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7551,6 +7596,11 @@ msgid ""
 msgstr ""
 "Kích hoạt gắn kết bộ đệm. Có thể cải thiện hiệu suất và khả năng tương thích "
 "trong một số trò chơi."
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Enable colour display emulation."
+msgstr ""
 
 #. TRANSLATION: dolphin, rpcs3
 msgctxt "game_options"
@@ -10730,6 +10780,11 @@ msgctxt "game_options"
 msgid "JAST SOUND"
 msgstr "ÂM THANH JAST"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "JCUKEN"
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "JINC2 (Slow)"
@@ -10905,7 +10960,7 @@ msgctxt "game_options"
 msgid "Joypad sensitivity for paddles. Core default  (3)."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, libretro/vice_x128, ...
+#. TRANSLATION: libretro/bk, libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
 msgid "Joystick"
 msgstr "Cần điều khiển"
@@ -10950,7 +11005,7 @@ msgctxt "game_options"
 msgid "KEEP MAIN SCREEN ON TOP"
 msgstr "GIỮ MÀN HÌNH CHÍNH TRÊN CÙNG"
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, libretro/bk
 msgctxt "game_options"
 msgid "KEYBOARD LAYOUT"
 msgstr ""
@@ -10973,6 +11028,11 @@ msgstr "HỖ TRỢ BÀN PHÍM"
 #. TRANSLATION: amiberry
 msgctxt "game_options"
 msgid "KEYBOARD TRANSPARENCY"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "KEYBOARD TYPE"
 msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
@@ -11689,7 +11749,7 @@ msgctxt "game_options"
 msgid "MISSION START"
 msgstr ""
 
-#. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame
+#. TRANSLATION: hatari, libretro/bk, libretro/fuse, libretro/mame, mame
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "THIẾT KẾ"
@@ -12373,6 +12433,16 @@ msgstr "Chuột (1351)"
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "Nhấp chuột"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Mouse High"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Mouse Low"
+msgstr ""
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -13683,6 +13753,11 @@ msgctxt "game_options"
 msgid "PERFORMANCE PRESETS"
 msgstr "CÀI ĐẶT HIỆU SUẤT"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "PERIPHERAL (UP PORT)"
+msgstr ""
+
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PHOSPHOR BLEND"
@@ -14206,6 +14281,11 @@ msgctxt "game_options"
 msgid "Polish"
 msgstr "Ba Lan"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Poll"
+msgstr ""
+
 #. TRANSLATION: libretro/mednafen_psx, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, ...
 msgctxt "game_options"
 msgid "Port 1"
@@ -14465,6 +14545,11 @@ msgstr "QUERY OCCLUSION"
 msgctxt "game_options"
 msgid "QUIT ON HOST"
 msgstr "THOÁT KHỎI MÁY CHỦ"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "QWERTY"
+msgstr ""
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -15132,6 +15217,11 @@ msgstr "Rumble Pak (Tự động)"
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Chạy"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Run CPU at double speed."
+msgstr ""
 
 #. TRANSLATION: tr1x
 msgctxt "game_options"
@@ -15961,6 +16051,11 @@ msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
 msgstr "Chọn loại bộ điều khiển cho Amiga P2."
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select display aspect ratio."
+msgstr ""
+
 #. TRANSLATION: awgl, bermuda
 msgctxt "game_options"
 msgid "Select full screen mode."
@@ -15985,6 +16080,16 @@ msgstr ""
 "Chọn dung lượng bộ nhớ đồ họa được phân bổ cho GPU, có thể cần sửa đổi đối "
 "với một số trò chơi/hệ thống."
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select keyboard input method. Requires restart."
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select keyboard layout."
+msgstr ""
+
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid ""
@@ -16005,6 +16110,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "Chọn mô hình để mô phỏng"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select peripheral device. Requires restart."
+msgstr ""
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -16042,6 +16152,11 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Select the console video standard / display mode."
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select the emulated computer model. Requires restart."
 msgstr ""
 
 #. TRANSLATION: xroar
@@ -16740,6 +16855,11 @@ msgstr "Slovenia"
 msgctxt "game_options"
 msgid "Slovenian"
 msgstr "Người Slovenia"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Slow BK-0011M"
+msgstr ""
 
 #. TRANSLATION: libretro/px68k, libretro/quasi88
 msgctxt "game_options"
@@ -17815,6 +17935,11 @@ msgstr ""
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Terak 8510/a"
 msgstr ""
 
 #. TRANSLATION: shadps4
