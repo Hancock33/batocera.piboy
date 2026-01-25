@@ -1824,6 +1824,17 @@ advision:
   comment_br:           |
                         Requer o arquivo advision.zip da BIOS do MAME
 
+
+cassettevision:
+  name:                 Cassette Vision
+  manufacturer:         Epoch
+  release:              1981
+  hardware:             console
+  extensions:           [zip, bin777]
+  emulators:
+    libretro:
+      pd777:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PD777] }
+
 gamepock:
   name:                 Game Pocket Computer
   manufacturer:         Epoch

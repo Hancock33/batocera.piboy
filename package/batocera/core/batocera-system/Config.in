@@ -1349,7 +1349,10 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_SONICMANIA                           # ALL
     select BR2_PACKAGE_SONICNEXUS                           # ALL
 
-    # Super Cassette Vision
+    # Epoch Cassette Vision
+    select BR2_PACKAGE_LIBRETRO_PD777                       # ALL
+
+    # Epoch Super Cassette Vision
     select BR2_PACKAGE_LIBRETRO_EMUSCV                      # ALL
 
     # Apple 2 GS

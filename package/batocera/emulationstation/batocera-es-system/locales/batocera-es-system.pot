@@ -2218,6 +2218,23 @@ msgctxt "game_options"
 msgid "SHOW LID STATE"
 msgstr ""
 
+#. TRANSLATION: libretro/pd777
+msgctxt "game_options"
+msgid ""
+"Show the new setting of the Course Select Switch when changing it with up/"
+"down buttons."
+msgstr ""
+
+#. TRANSLATION: dolphin, duckstation, libretro/pd777, libretro/stella, openjkdf2, ...
+msgctxt "game_options"
+msgid "DISPLAY"
+msgstr ""
+
+#. TRANSLATION: libretro/pd777
+msgctxt "game_options"
+msgid "ANNOUNCE COURSE SWITCH"
+msgstr ""
+
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid ""
@@ -8375,11 +8392,6 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Select the console video standard / display mode."
-msgstr ""
-
-#. TRANSLATION: dolphin, duckstation, libretro/stella, openjkdf2, pcsx2, ...
-msgctxt "game_options"
-msgid "DISPLAY"
 msgstr ""
 
 #. TRANSLATION: libretro/stella

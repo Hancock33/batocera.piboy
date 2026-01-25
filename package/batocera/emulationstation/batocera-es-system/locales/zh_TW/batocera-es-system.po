@@ -2433,6 +2433,11 @@ msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
 msgstr "非均向性過濾器"
 
+#. TRANSLATION: libretro/pd777
+msgctxt "game_options"
+msgid "ANNOUNCE COURSE SWITCH"
+msgstr ""
+
 #. TRANSLATION: dolphin, dolphin_triforce, rpcs3, rtcw
 msgctxt "game_options"
 msgid "ANTI-ALIASING"
@@ -6251,7 +6256,7 @@ msgctxt "game_options"
 msgid "DISK TYPE"
 msgstr "磁碟類型"
 
-#. TRANSLATION: dolphin, duckstation, libretro/stella, openjkdf2, pcsx2, ...
+#. TRANSLATION: dolphin, duckstation, libretro/pd777, libretro/stella, openjkdf2, ...
 msgctxt "game_options"
 msgid "DISPLAY"
 msgstr "顯示"
@@ -16194,6 +16199,13 @@ msgstr "在螢幕上顯示資訊(儲存卡儲存..)."
 msgctxt "keys_files"
 msgid "Show the cheat menu"
 msgstr "顯示作弊選單"
+
+#. TRANSLATION: libretro/pd777
+msgctxt "game_options"
+msgid ""
+"Show the new setting of the Course Select Switch when changing it with up/"
+"down buttons."
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
