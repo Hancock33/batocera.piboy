@@ -25,11 +25,10 @@ def generateControllerConfig(system: Emulator, playersControllers: Controllers, 
     generateControllerConfig_arcade(system, playersControllers, rom) # Pass ROM name to allow for per ROM configuration
 
 def generateControllerConfig_arcade(system: Emulator, playersControllers: Controllers, rom: Path) -> None:
-    # Exclude Buttons/Z from mapping as that is the test mode. Buttons/X is used to insert credit. Therefore it is set to Select.
     arcadeMapping = {
         'a':             'Buttons/B',
         'b':             'Buttons/A',
-        'select':        'Buttons/X',
+        'y':             'Buttons/X',
         'x':             'Buttons/Y',
         'start':         'Buttons/Start',
         'pageup':        'Triggers/L',
@@ -44,40 +43,15 @@ def generateControllerConfig_arcade(system: Emulator, playersControllers: Contro
         'joystick1left': 'Main Stick/Left',
         'joystick2up':   'C-Stick/Up',
         'joystick2left': 'C-Stick/Left',
-        'hotkey':        'Buttons/Hotkey'
-    }
-    # Reversed directional mappings for Virtua Striker games
-    virtuaMapping = {
-        'a':             'Buttons/B',
-        'b':             'Buttons/A',
-        'select':        'Buttons/X',
-        'x':             'Buttons/Y',
-        'start':         'Buttons/Start',
-        'pageup':        'Triggers/L',
-        'pagedown':      'Triggers/R',
-        'l2':            'Triggers/L',
-        'r2':            'Triggers/R',
-        'up':            'D-Pad/Up',
-        'down':          'D-Pad/Down',
-        'left':          'D-Pad/Left',
-        'right':         'D-Pad/Right',
-        'joystick1up':   'Main Stick/Left',
-        'joystick1left': 'Main Stick/Down',
-        'joystick2up':   'C-Stick/Up',
-        'joystick2left': 'C-Stick/Left',
-        'hotkey':        'Buttons/Hotkey'
-    }
+        'hotkey':        'Buttons/Hotkey',
+        'select':        'Triforce/Coin',
+        'l3':            'Triforce/Test',
+        'r3':            'Triforce/Service'
 
+    }
     # Applies the opposing directional value we don't have
     arcadeReverseAxes = {
         'Main Stick/Up':   'Main Stick/Down',
-        'Main Stick/Left': 'Main Stick/Right',
-        'C-Stick/Up':      'C-Stick/Down',
-        'C-Stick/Left':    'C-Stick/Right'
-    }
-    # Handles Virtua Striker also
-    virtuaReverseAxes = {
-        'Main Stick/Down':   'Main Stick/Up',
         'Main Stick/Left': 'Main Stick/Right',
         'C-Stick/Up':      'C-Stick/Down',
         'C-Stick/Left':    'C-Stick/Right'
@@ -105,10 +79,7 @@ def generateControllerConfig_arcade(system: Emulator, playersControllers: Contro
                 arcadeMapping.update(res)
                 line = cconfig.readline()
 
-    if "virtua" in rom.name.lower():
-        generateControllerConfig_any(system, playersControllers, "Config/GCPadNew.ini", "GCPad", virtuaMapping, virtuaReverseAxes, arcadeReplacements)
-    else:
-        generateControllerConfig_any(system, playersControllers, "Config/GCPadNew.ini", "GCPad", arcadeMapping, arcadeReverseAxes, arcadeReplacements)
+    generateControllerConfig_any(system, playersControllers, "Config/GCPadNew.ini", "GCPad", arcadeMapping, arcadeReverseAxes, arcadeReplacements)
 
 def generateHotkeys(playersControllers: Controllers) -> None:
     configFileName = DOLPHIN_TRIFORCE_CONFIG / "Config" / "Hotkeys.ini"
