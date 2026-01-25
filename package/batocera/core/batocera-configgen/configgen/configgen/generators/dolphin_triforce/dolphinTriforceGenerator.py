@@ -43,7 +43,7 @@ class DolphinTriforceGenerator(Generator):
         # Dir required for saves
         mkdir_if_not_exists(DOLPHIN_TRIFORCE_SAVES / "StateSaves")
 
-        #dolphinTriforceControllers.generateControllerConfig(system, playersControllers, rom)
+        dolphinTriforceControllers.generateControllerConfig(system, playersControllers, rom)
 
         ## dolphin.ini ##
 

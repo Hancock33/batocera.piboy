@@ -1,10 +1,10 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index 3f9fd2253f..852e678562 100644
+index 10289424c4..d0ab90f947 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -626,7 +626,7 @@ std::string GetBootROMPath(const std::string& region_directory)
-   }
- 
+@@ -686,7 +686,7 @@ const char* GetDirectoryForRegion(DiscIO::Region region, RegionDirectoryStyle st
+ std::string GetBootROMPath(const std::string& region_directory)
+ {
    const std::string path =
 -      File::GetUserPath(D_GCUSER_IDX) + DIR_SEP + region_directory + DIR_SEP GC_IPL;
 +      std::string("/userdata/bios/GC") + DIR_SEP + region_directory + DIR_SEP + GC_IPL;

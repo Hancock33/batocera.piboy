@@ -4135,11 +4135,6 @@ msgctxt "game_options"
 msgid "Bolivia"
 msgstr "Bolivia"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Boost"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm, libretro/nestopia
 msgctxt "game_options"
 msgid "Both"
@@ -4191,11 +4186,6 @@ msgstr "Doar jos"
 msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "Cutie mișcătoare"
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Brake / Shoot"
-msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
 msgctxt "game_options"
@@ -5235,26 +5225,6 @@ msgstr ""
 #. TRANSLATION: hurrican
 msgctxt "game_options"
 msgid "ChJees"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 1 / Right"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 2 / Left"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 3 / Up"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Change View 4 / Down"
 msgstr ""
 
 #. TRANSLATION: libretro/mesens
@@ -9707,11 +9677,6 @@ msgstr ""
 "Jocurile pot rula mai repede/încet decât normal dacă regiunea este incorect "
 "selectată."
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Gas / Accelerate / Short Pass"
-msgstr ""
-
 #. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Gaussian"
@@ -11596,11 +11561,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "Buton foc Lockbar"
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Long Pass"
-msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -13965,16 +13925,6 @@ msgctxt "game_options"
 msgid "Paddle Control"
 msgstr "Control Paddle"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Left / Long Pass"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Paddle Right"
-msgstr ""
-
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Paddle can only be used in port 2."
@@ -16014,7 +15964,7 @@ msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Înclinare ecran (grade)"
 
-#. TRANSLATION: hotkeys.keys, triforce.dolphin_triforce.keys
+#. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Screenshot"
 msgstr "Captură de ecran"
@@ -16257,11 +16207,6 @@ msgstr "Septembrie"
 msgctxt "game_options"
 msgid "Serbian"
 msgstr "Sârbă"
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Service / Insert Coins Button"
-msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -17229,11 +17174,6 @@ msgctxt "keys_files"
 msgid "Start / Valid"
 msgstr "Start / Valid"
 
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Start Button"
-msgstr ""
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "Start at level number"
@@ -17243,16 +17183,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Start game"
 msgstr "Începe jocul"
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Load from Selected Slot"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "State/Save to Selected Slot"
-msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -17956,11 +17886,6 @@ msgstr ""
 #. TRANSLATION: libretro/sameboy
 msgctxt "game_options"
 msgid "Teal (Game Boy Light)"
-msgstr ""
-
-#. TRANSLATION: triforce.dolphin_triforce.keys
-msgctxt "keys_files"
-msgid "Test Button"
 msgstr ""
 
 #. TRANSLATION: shadps4
