@@ -4,10 +4,10 @@
 #
 ################################################################################
 # Version: Commits on Jan 17, 2026
-LIBRETRO_SCUMMVM_VERSION = 59f4176fd731eac3dedca125971fc8a41c9a5a55
+LIBRETRO_SCUMMVM_VERSION = f8d66eae4e6f7454196ded0ebb113c6a74842f5c
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
-LIBRETRO_SCUMMVM_BRANCH = branch-3-0
+LIBRETRO_SCUMMVM_BRANCH = branch-2026-1-0
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
 LIBRETRO_SCUMMVM_DEPENDENCIES = faad2 flac freetype jpeg libmad libmpeg2 libogg libpng libtheora libvorbis
 LIBRETRO_SCUMMVM_DEPENDENCIES += retroarch sdl2 zlib
