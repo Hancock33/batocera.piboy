@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|6952ff5b671548288cf4c7a1611bb93c9542bf31|Jan 25, 2026
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8b052ba561814bbbce6a4acbcddd552a09bb619e|Jan 25, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|0a705b74492cc4bd05bb9194fb330017b08c0df9|Jan 25, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|cdbea8867df3d0a6fc375e78726dae95612fb1fd|Jan 25, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|1608a6f7f54d5dd8d3676f8b33171c345d0f2d1a|Jan 25, 2026
@@ -169,7 +170,6 @@ Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|41f1beabf0611cfe2a1feb6bc9
 Ports|[realgibs](http://github.com/dhewm/dhewm3-sdk)|56a89fb69a8aea5cd5f3cb8260c31d125b0b6646|Jan 06, 2026
 Ports|[rivensin](http://github.com/dhewm/dhewm3-sdk)|47f01de50ce60cb6ea82549a93288a90e9b456b9|Jan 06, 2026
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|746a8fcc27f4c67ee48ff06f6cf328900346ea28|Jan 06, 2026
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|988752f5bcbce5d9ba19e78daf538405fa38fc29|Jan 05, 2026
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|7f34531c6b76798057f3af69da531840139230d5|Jan 05, 2026
 Ports|[stk](http://github.com/supertuxkart/stk-code)|a7c1a28668396cc5c977a0a697d2d45e6011aa89|Jan 05, 2026
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|aae9dc6e5ae0d9187e8dea4b74e529a8e9c8b1d3|Jan 05, 2026
