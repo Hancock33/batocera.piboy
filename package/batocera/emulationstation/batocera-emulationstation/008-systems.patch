@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index faedc7934..8b580419b 100644
+index 09993692b..106aeb18c 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,199 +9,286 @@ namespace PlatformIds
+@@ -9,200 +9,287 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -179,6 +179,7 @@ index faedc7934..8b580419b 100644
 +		{ "pico",					PICO },
 +		{ "pico8",					PICO8 },
 +		{ "pinball",				PINBALL },
++		{ "laseractive",			PIONEER_LASERACTIVE },
 +		{ "playchoice",				PLAYCHOICE },
 +		{ "psx",					PLAYSTATION },
 +		{ "ps2",					PLAYSTATION_2 },
@@ -340,6 +341,7 @@ index faedc7934..8b580419b 100644
 -		{ "vpinball",				VISUALPINBALL },
 -		{ "fpinball",				FUTUREPINBALL },
 -		{ "o2em",					VIDEOPAC_ODYSSEY2 },
+-		{ "laseractive",			PIONEER_LASERACTIVE },
 -
 -		// Misc systems
 -		{ "channelf",				CHANNELF },
@@ -432,10 +434,10 @@ index faedc7934..8b580419b 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index a73dce8c5..c646e6cba 100644
+index 659c7600e..d32d7ae1e 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,54 +11,172 @@ namespace PlatformIds
+@@ -11,54 +11,173 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -605,6 +607,7 @@ index a73dce8c5..c646e6cba 100644
 +		PICO,
 +		PICO8,
 +		PINBALL,
++		PIONEER_LASERACTIVE,
 +		PLAYCHOICE,
 +		PLAYSTATION,
 +		PLAYSTATION_2,
@@ -624,7 +627,7 @@ index a73dce8c5..c646e6cba 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_CHIHIRO,
-@@ -66,116 +184,82 @@ namespace PlatformIds
+@@ -66,117 +185,82 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -685,6 +688,7 @@ index a73dce8c5..c646e6cba 100644
 -		// Windows Specific
 -		VISUALPINBALL,
 -		FUTUREPINBALL,
+-		PIONEER_LASERACTIVE,
 -
 -		// Misc systems
 -		CHANNELF,
@@ -805,7 +809,7 @@ index a73dce8c5..c646e6cba 100644
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index d4a437971..c99932f35 100644
+index 33680b338..f53823b7d 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,11 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -828,10 +832,10 @@ index d4a437971..c99932f35 100644
  	{ SEGA_SATURN, "17" },
  	{ SEGA_SG1000, "4949" },
  	{ PLAYSTATION, "10" },
-@@ -106,17 +102,17 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
- 	{ VIC20, "4945" },
+@@ -107,17 +103,17 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ CHANNELF, "4928" },
  	{ SAMCOUPE, "4979" },
+ 	{ CASSETTE_VISION , "4965" },
 -	{ SUPER_CASSETTE_VISION , "4966" },
 +	{ SUPER_CASSETTE_VISION, "4966" },
  	{ ARCHIMEDES, "4944" },
@@ -851,7 +855,7 @@ index d4a437971..c99932f35 100644
  	// 1 = PC
  	{ PC, "1" },
  	{ MOONLIGHT, "1" },
-@@ -144,7 +140,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
+@@ -145,7 +141,13 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
  	{ CREATONIC_MEGA_DUCK, "4948" },
  	{ TOMY_TUTOR, "4960" },
  	{ APF_MP_1000, "4969" },
