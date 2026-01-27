@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 9893fdb..1ee233f 100644
+index da45e31..fc5064e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1,8 +1,9 @@
@@ -14,12 +14,13 @@ index 9893fdb..1ee233f 100644
  
  BUILD = build
  
-@@ -20,14 +21,14 @@ all: lindbergh libxdiff.a lindbergh.so libsegaapi.so libkswapapi.so libposixtime
+@@ -20,15 +21,15 @@ all: lindbergh libxdiff.a lindbergh.so libsegaapi.so libkswapapi.so libposixtime
  
- lindbergh: src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c
+ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/output.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c
  	mkdir -p $(BUILD)
--	$(CC) -m32 -DCOMPILING_LINDBERGH_ELF src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c -o $(BUILD)/lindbergh -lm -lSDL3 -L/app/lib32
-+	$(CC) $(CFLAGS) -O3 -DCOMPILING_LINDBERGH_ELF src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c -o $(BUILD)/lindbergh -lm -lSDL3
+-	$(CC) -m32 -DCOMPILING_LINDBERGH_ELF src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/output.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c -o $(BUILD)/lindbergh -lm -lSDL3 -L/app/lib32
++	$(CC) $(CFLAGS) -O3 -DCOMPILING_LINDBERGH_ELF src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdlInput.c src/lindbergh/controlIniGen.c src/lindbergh/log.c src/lindbergh/output.c src/lindbergh/jvs.c src/lindbergh/config.c src/lindbergh/evdevInput.c src/lindbergh/gameData.c src/lindbergh/configIni.c -o $(BUILD)/lindbergh -lm -lSDL3
+ 
  
  libxdiff.a: $(XDIFF_OBJS)
  	mkdir -p $(BUILD)
@@ -32,7 +33,7 @@ index 9893fdb..1ee233f 100644
  
  lindbergh.so: $(OBJS)
  	mkdir -p $(BUILD)
-@@ -37,13 +38,13 @@ lindbergh.so: $(OBJS)
+@@ -38,13 +39,13 @@ lindbergh.so: $(OBJS)
  	$(CC) $(CFLAGS) -c $< -o $@
  
  libsegaapi.so: src/libsegaapi/libsegaapi.o
