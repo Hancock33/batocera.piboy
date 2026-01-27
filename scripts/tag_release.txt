@@ -4,6 +4,7 @@ alsa-ucm-conf.mk
 appstream.mk
 ares.mk
 batocera-settings.mk
+bgfx.mk
 cabextract.mk
 cbindgen.mk
 cxxopts.mk
