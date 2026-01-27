@@ -15,7 +15,6 @@ Libraries|[cpp-ipc](http://github.com/mutouyun/cpp-ipc)|f7a181210c2efe19cc7354e1
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|667d7450b93b9aa5eb81783809c1c232ddfdb0a0|Jan 27, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|627b857cb47710abb621d6bf96634d6f3c0f49b5|Jan 27, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|effdc64d44311e8622409e36b9944b37c0ab3ad2|Jan 27, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260127-base|Jan 27, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260127|Jan 27, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9871829243ee5358bf6246600d9d7b32b64c725a|Jan 27, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|df4e1eedfdcb5634a2fab0f6ea5138c5de19cc6c|Jan 27, 2026
@@ -207,6 +206,7 @@ Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.01|Jan 01, 2026
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|0d61fa1cf9f7024730be33986bc9f2991465cc5e|Jan 01, 2026
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.4.0|Jan 01, 2026
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.1|Jan 01, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260101-proton-slr|Jan 01, 2026
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|54eabbb210a6149496b1d023bebddb3f0120bc33|Jan 01, 2026
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0284|Dec 31, 2025
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/a5/72/3d9c217874691b1a1008b47158e0f33d704d131a30289a31d5f65c71fe21)|8.69.0|Dec 31, 2025
