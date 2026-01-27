@@ -1,17 +1,17 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c8c494bfdb..219dd097b9 100644
+index 170b7e0632..de0c7fe2d1 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -20,7 +20,7 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "10.14.0" CACHE STRING "")
- 
- set(CMAKE_USER_MAKE_RULES_OVERRIDE "CMake/FlagsOverride.cmake")
+@@ -21,7 +21,7 @@ set(CMAKE_USER_MAKE_RULES_OVERRIDE "${CMAKE_CURRENT_SOURCE_DIR}/CMake/FlagsOverr
+ # "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND: not found".
+ set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
  
 -project(dolphin-emu)
 +project(dolphin-triforce)
  
- if (MSVC)
-   if (POLICY CMP0117)
-@@ -1035,7 +1035,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD|OpenBSD")
+ if (CMAKE_VERSION VERSION_LESS "3.25" AND CMAKE_SYSTEM_NAME MATCHES "Linux")
+   set(LINUX TRUE)
+@@ -868,7 +868,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD|OpenBSD")
  endif()
  
  # packaging information
@@ -20,11 +20,32 @@ index c8c494bfdb..219dd097b9 100644
  set(CPACK_PACKAGE_VENDOR "Dolphin Team")
  set(CPACK_PACKAGE_VERSION_MAJOR ${DOLPHIN_VERSION_MAJOR})
  set(CPACK_PACKAGE_VERSION_MINOR ${DOLPHIN_VERSION_MINOR})
+diff --git a/Source/Core/DolphinNoGUI/CMakeLists.txt b/Source/Core/DolphinNoGUI/CMakeLists.txt
+index 9dad1b5f86..75b0ae676a 100644
+--- a/Source/Core/DolphinNoGUI/CMakeLists.txt
++++ b/Source/Core/DolphinNoGUI/CMakeLists.txt
+@@ -31,7 +31,7 @@ if (WIN32)
+     OUTPUT_NAME      DolphinNoGUI
+   )
+ else()
+-  set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME dolphin-emu-nogui)
++  set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME dolphin-triforce-nogui)
+ endif()
+ 
+ target_link_libraries(dolphin-nogui
+@@ -64,6 +64,6 @@ if(USE_DISCORD_PRESENCE)
+   target_compile_definitions(dolphin-nogui PRIVATE -DUSE_DISCORD_PRESENCE)
+ endif()
+ 
+-set(CPACK_PACKAGE_EXECUTABLES ${CPACK_PACKAGE_EXECUTABLES} dolphin-nogui)
++set(CPACK_PACKAGE_EXECUTABLES ${CPACK_PACKAGE_EXECUTABLES} dolphin-triforce-nogui)
+ install(TARGETS dolphin-nogui RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+ 
 diff --git a/Source/Core/DolphinQt/CMakeLists.txt b/Source/Core/DolphinQt/CMakeLists.txt
-index 31f8153c2e..5302fa8acb 100644
+index 457ed8a157..e24f6c6428 100644
 --- a/Source/Core/DolphinQt/CMakeLists.txt
 +++ b/Source/Core/DolphinQt/CMakeLists.txt
-@@ -705,6 +705,12 @@ if(USE_DISCORD_PRESENCE)
+@@ -708,6 +708,12 @@ if(USE_DISCORD_PRESENCE)
    target_compile_definitions(dolphin-emu PRIVATE -DUSE_DISCORD_PRESENCE)
  endif()
  
@@ -37,17 +58,3 @@ index 31f8153c2e..5302fa8acb 100644
  if(USE_RETRO_ACHIEVEMENTS)
    target_link_libraries(dolphin-emu PRIVATE rcheevos)
    target_compile_definitions(dolphin-emu PRIVATE -DUSE_RETRO_ACHIEVEMENTS)
-diff --git a/Source/Core/DolphinNoGUI/CMakeLists.txt b/Source/Core/DolphinNoGUI/CMakeLists.txt
-index f21955d809..e16f11a932 100644
---- a/Source/Core/DolphinNoGUI/CMakeLists.txt
-+++ b/Source/Core/DolphinNoGUI/CMakeLists.txt
-@@ -17,7 +17,7 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-   target_sources(dolphin-nogui PRIVATE PlatformFBDev.cpp)
- endif()
- 
--set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME dolphin-emu-nogui)
-+set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME dolphin-triforce-nogui)
- 
- target_link_libraries(dolphin-nogui
- PRIVATE
- 
