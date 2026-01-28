@@ -3188,7 +3188,8 @@ msgstr "Zona muerta analógica para palancas. Núcleo predeterminado (15)."
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Analog sensitivity for paddles. Core default (20)."
-msgstr "Sensibilidad analógica de las palancas. Valor predeterminado del núcleo (20)."
+msgstr ""
+"Sensibilidad analógica de las palancas. Valor predeterminado del núcleo (20)."
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
@@ -7787,8 +7788,8 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable phosphor mode (motion blur) for flickering effects."
 msgstr ""
-"Habilita el modo fósforo (desenfoque de movimiento) para obtener "
-"efectos de parpadeo."
+"Habilita el modo fósforo (desenfoque de movimiento) para obtener efectos de "
+"parpadeo."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -13693,7 +13694,7 @@ msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
 msgstr "SENSIBILIDAD PALANCA DE D-PAD"
 
- #. TRANSLATION: libretro/stella
+#. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE JOYPAD SENSITIVITY"
 msgstr "SENSIBILIDAD PALANCA DE JOYPAD"
@@ -16276,8 +16277,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Select the emulated hardware architecture machine type and architecture."
-msgstr ""
-"Selecciona el tipo de máquina y la arquitectura de hardware emulado."
+msgstr "Selecciona el tipo de máquina y la arquitectura de hardware emulado."
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
