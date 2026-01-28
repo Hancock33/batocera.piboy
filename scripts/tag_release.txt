@@ -18,7 +18,6 @@ labwc.mk
 libdate.mk
 libfyaml.mk
 liblc3.mk
-libpinmame.mk
 libserum.mk
 libsfdo.mk
 libzedmd.mk
