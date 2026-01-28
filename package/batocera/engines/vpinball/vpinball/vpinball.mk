@@ -34,7 +34,6 @@ define VPINBALL_INSTALL_TARGET_CMDS
 	cp -R $(@D)/buildroot-build/plugins $(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/assets  $(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/scripts $(TARGET_DIR)/usr/bin/vpinball/
-	$(INSTALL) -D -m 0755 $(STAGING_DIR)/usr/lib/libbgfx.so $(TARGET_DIR)/usr/bin/vpinball/libbgfx.so
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/vpinball/vpinball/batocera-vpx-scraper.py $(TARGET_DIR)/usr/bin/batocera-vpx-scraper
 	#evmapy install
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

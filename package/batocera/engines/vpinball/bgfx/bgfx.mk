@@ -30,8 +30,4 @@ endef
 
 BGFX_PRE_CONFIGURE_HOOKS += BGFX_PATCH_CMAKE
 
-define BGFX_INSTALL_TARGET_CMDS
-	echo "we dont install anything here"
-endef
-
 $(eval $(cmake-package))
