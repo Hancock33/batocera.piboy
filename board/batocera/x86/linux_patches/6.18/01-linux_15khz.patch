@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/Makefile b/drivers/gpu/drm/Makefile
-index da2565e6de71..ed879e43888c 100644
+index 742f0d590c5a..7ed8e221d395 100644
 --- a/drivers/gpu/drm/Makefile
 +++ b/drivers/gpu/drm/Makefile
 @@ -56,6 +56,7 @@ drm-y := \
