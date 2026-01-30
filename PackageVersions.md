@@ -89,7 +89,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|5cf8d080c9efd1b4a223e7d36b42f59c7fe11f1c|Jan 30, 2026
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|385b7cad77c3546082087c3993a3944c2050dd15|Jan 30, 2026
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|2b7b44c3e4e8b6c1d1bf695c789259f26ee298ed|Jan 30, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|21eb24f86d785b1c631161f03057b22c160182c0|Jan 20, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v3.2.35|Sept 07, 2025
@@ -167,7 +167,7 @@ Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|d0384bc33aad06bfa9cf5cd308c4bd7ae6cfc814|Mar 12, 2025
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|85c80181d26bb5c2147ebc76bfc48bce9f8d73a8|Oct 21, 2024
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|b84d0605e847e07657a44a1a11374a03a6e8a489|Jul 26, 2025
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0284|Dec 31, 2025
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0285|Jan 30, 2026
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|b9b7bfaa2d9e40ca5b94af1f6e9ec77332e4f6c3|Jan 16, 2026
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|0d65bd473d2dfda180fab7444664d76a4159350a|Jan 07, 2026
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|7a3c11ff970cd36ca806961fae6db94b30dd5401|Oct 21, 2024
@@ -240,7 +240,7 @@ Emulators|[libretro-yabause](http://github.com/libretro/yabause)|65af22e96beb6d9
 Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426da40b074245fda097fd345fa7c9cdbf152a|Apr 26, 2022
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|3b7d10514fbf35e9f209eb91cbeb82e645633177|Jan 27, 2026
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0284|Dec 31, 2025
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0285|Jan 30, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|bc4726cca9db07baa227a0a02f6670a89ba61c8c|Jan 26, 2026
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|07c866bd2b897fcbce2131dc36066c179422c3c9|Jun 21, 2025
@@ -274,8 +274,8 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45962|Jan 26, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|750a516d8fb8ffaaa063db3d226d8f382db58063|Dec 08, 2025
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.133|Jan 20, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|a8fe4666ad125ac33fa95a4e2a83ba89ea9ad310|Jan 10, 2026
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|a8fe4666ad125ac33fa95a4e2a83ba89ea9ad310|Jan 10, 2026
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|78d700af413c9398763f846b75e1c3ac00fbd634|Jan 16, 2026
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|78d700af413c9398763f846b75e1c3ac00fbd634|Jan 16, 2026
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2841-master|Jan 20, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
@@ -500,7 +500,7 @@ Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|510d36f901c
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|6103ee0772f4216a14ea4946fd9eff7f3a6f4326|Jan 26, 2026
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|e1b4368eaae58141687b7c39031f2ac087eb85f8|Jan 25, 2026
-Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|678a5b880711161bc2ab309c7e23747d18027b7b|Jan 28, 2026
+Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|d37702b46fa43ae8736f6887f7906b966da25fa3|Jan 30, 2026
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|2f5fdb6ad601f99e6be411e235766e2425ca0613|Jan 25, 2026
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|ae485fb757e51e5869a29e9187faee97fc5b50ee|Jan 26, 2026
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|fd4c240da0753caa5a0362e1d8f64ee33ab20fa9|Dec 25, 2025
@@ -526,7 +526,7 @@ Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|ad911d1ea6be131e23e1877d1
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|bb5e1b481603d46c140313966fbe71e9791ae7f5|Jan 13, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|b357489fc4542ff9d168bb29ae59a11d63c36b1f|Jan 24, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|a6963f4ecc45002f1a15c1893ca6b97ae94815ab|Jan 29, 2026
-Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|092f8ea9acd72ecc29ab5264d985e4c040de6835|Jan 29, 2026
+Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|1adc4b5cfcef8b28b526c2cec0eb411d43a7eb4e|Jan 30, 2026
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0285|Jan 29, 2026
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.2|Oct 21, 2025
