@@ -3,9 +3,9 @@
 # libpinmame
 #
 ################################################################################
-# Version: Commits on Jan 25, 2026
-LIBPINMAME_VERSION = 95b7971ec30273940ad6ced75758fc8c4ec10d79
-LIBPINMAME_SITE = $(call github,vbousquet,pinmame,$(LIBPINMAME_VERSION))
+# Version: Commits on Jun 19, 2025
+LIBPINMAME_VERSION = v3.7.0-46-2b48173
+LIBPINMAME_SITE = $(call github,vpinball,pinmame,$(LIBPINMAME_VERSION))
 LIBPINMAME_LICENSE = BSD-3-Clause
 LIBPINMAME_LICENSE_FILES = LICENSE
 LIBPINMAME_DEPENDENCIES = zlib
