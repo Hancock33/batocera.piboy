@@ -18,13 +18,13 @@ log_initial_info() {
     # Try to acquire the lock
     if mkdir "$INIT_LOCK_DIR" 2>/dev/null; then
         trap 'rmdir "$INIT_LOCK_DIR" 2>/dev/null' EXIT
-        
+
         local version=$(batocera-version)
         log_msg "SYSTEM: Batocera Version: $version"
         log_msg ""
         log_msg "---------------------------------------"
         log_msg "SYSTEM: --- Initial Disk Scan Start ---"
-        
+
         # Log disk layout
         local major_disks=""
         # Iterate over all non-partition devices (sd[a-z], nvme[0-9]n[0-9], mmcblk[0-9])
@@ -35,14 +35,14 @@ log_initial_info() {
                 [ -b "/dev/$DEVNAME" ] && major_disks="$major_disks $DEVNAME"
             fi
         done
-        
+
         if [ -n "$major_disks" ]; then
             for disk in $major_disks; do
-                
+
                 # Check if the device actually exists as a block device
                 if [ -b "/dev/$disk" ]; then
                     parted_output=$(parted -s "/dev/$disk" unit MiB print 2>&1)
-                    
+
                     if [ $? -eq 0 ]; then
                         log_msg "SYSTEM: DISK: /dev/$disk"
                         # Log each line of the parted output
@@ -60,11 +60,11 @@ log_initial_info() {
         else
             log_msg "SYSTEM: No major disk devices found to list."
         fi
-        
+
         log_msg "SYSTEM: --- Initial Disk Scan End ---"
         log_msg "-------------------------------------"
         log_msg ""
-        
+
         # Log mergerfs.roms
         CURRENT_MERGERFS_SETTING=$(batocera-settings-get -f "$BOOT_CONF_FILE" "$CONFIG_KEY" 2>/dev/null)
         if [ -n "$CURRENT_MERGERFS_SETTING" ]; then
@@ -72,7 +72,7 @@ log_initial_info() {
         else
             log_msg "CONFIG: $CONFIG_KEY = [EMPTY or NOT FOUND]"
         fi
-        
+
         # Log all sharedevice keys
         SHAREDEVICE_LINES=$(grep -E '^\s*sharedevice.*=' "$BOOT_CONF_FILE" 2>/dev/null)
         if [ -n "$SHAREDEVICE_LINES" ]; then
@@ -185,7 +185,7 @@ mount_partition() {
     else
         local LABEL=$(blkid -s LABEL -o value "$PART_DEV")
         local MOUNT_NAME=""
-        
+
         if [ -n "$LABEL" ]; then
             # Use filesystem label if present
             MOUNT_NAME=$(echo "$LABEL" | tr ' ' '_' | tr -cd '[:alnum:]_-')

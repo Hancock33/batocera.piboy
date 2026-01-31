@@ -183,7 +183,7 @@ if pgrep -x "sway" > /dev/null; then
         # Try to locate socket if not in env
         SWAYSOCK_FIND=$(ls /run/user/$(id -u)/sway-ipc.*.sock 2>/dev/null | head -n 1)
         [ -z "$SWAYSOCK" ] && [ -n "$SWAYSOCK_FIND" ] && export SWAYSOCK="$SWAYSOCK_FIND"
-        
+
         swaymsg -t get_outputs > "${DDISPLAY}/sway_outputs.json" 2>/dev/null
         swaymsg -t get_tree > "${DDISPLAY}/sway_tree.json" 2>/dev/null
         swaymsg -t get_config > "${DDISPLAY}/sway_config_dump.txt" 2>/dev/null

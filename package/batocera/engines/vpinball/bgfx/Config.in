@@ -2,7 +2,7 @@ config BR2_PACKAGE_BGFX
 	bool "bgfx"
 
 	help
-	  CMake build scripts for bgfx. 
+	  CMake build scripts for bgfx.
 	  Released under public domain.
 
 	  bkaradzic.github.io/bgfx/index.html
