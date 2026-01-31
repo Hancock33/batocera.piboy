@@ -1,5 +1,5 @@
 diff --git a/src/Cemu/Logging/CemuLogging.cpp b/src/Cemu/Logging/CemuLogging.cpp
-index ecd2544..87b0666 100644
+index f2d9ac0..50fade3 100644
 --- a/src/Cemu/Logging/CemuLogging.cpp
 +++ b/src/Cemu/Logging/CemuLogging.cpp
 @@ -151,7 +151,7 @@ void cemuLog_thread()
@@ -25,18 +25,9 @@ index 6b205d2..74120a4 100644
  
  	exit(0);
 diff --git a/src/gui/wxgui/CemuApp.cpp b/src/gui/wxgui/CemuApp.cpp
-index 17d8e57..5229ee4 100644
+index 1c803bf..a31a7a3 100644
 --- a/src/gui/wxgui/CemuApp.cpp
 +++ b/src/gui/wxgui/CemuApp.cpp
-@@ -144,7 +144,7 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
- 	else
- #endif
- 	{
--		SetAppName("Cemu");
-+		SetAppName("cemu");
- 		wxString appName = GetAppName();
- 		standardPaths.SetFileLayout(wxStandardPaths::FileLayout::FileLayout_XDG);
- 		auto getEnvDir = [&](const wxString& varName, const wxString& defaultValue)
 @@ -155,11 +155,10 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
  			return dir;
  		};
@@ -44,19 +35,19 @@ index 17d8e57..5229ee4 100644
 -		user_data_path = (getEnvDir(wxS("XDG_DATA_HOME"), homeDir + wxS("/.local/share")) + "/" + appName).ToStdString();
 -		config_path = (getEnvDir(wxS("XDG_CONFIG_HOME"), homeDir + wxS("/.config")) + "/" + appName).ToStdString();
 +		user_data_path = (getEnvDir(wxS("XDG_DATA_HOME"), wxS("/userdata/saves")) + "/" + "wiiu").ToStdString();
-+		config_path = (getEnvDir(wxS("XDG_CONFIG_HOME"), wxS("/userdata/system/configs")) + "/" + appName).ToStdString();
++		config_path = (getEnvDir(wxS("XDG_CONFIG_HOME"), wxS("/userdata/system/configs")) + "/" + appName.Lower()).ToStdString();
  		data_path = standardPaths.GetDataDir().ToStdString();
 -		cache_path = standardPaths.GetUserDir(wxStandardPaths::Dir::Dir_Cache).ToStdString();
 -		cache_path /= appName.ToStdString();
-+		cache_path = (getEnvDir(wxS("XDG_CACHE_HOME"), wxS("userdata/system/cache")) + "/" + appName).ToStdString();
++		cache_path = (getEnvDir(wxS("XDG_CACHE_HOME"), wxS("userdata/system/cache")) + "/" + appName.Lower()).ToStdString();
  	}
  	ActiveSettings::SetPaths(isPortable, exePath, user_data_path, config_path, cache_path, data_path, failedWriteAccess);
  }
 diff --git a/src/gui/wxgui/input/HotkeySettings.cpp b/src/gui/wxgui/input/HotkeySettings.cpp
-index 195061d..299ea74 100644
+index d84ffa1..c8f41a0 100644
 --- a/src/gui/wxgui/input/HotkeySettings.cpp
 +++ b/src/gui/wxgui/input/HotkeySettings.cpp
-@@ -18,7 +18,7 @@
+@@ -19,7 +19,7 @@
  
  std::optional<fs::path> GenerateScreenshotFilename(bool isDRC)
  {
