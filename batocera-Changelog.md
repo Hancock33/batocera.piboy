@@ -75,6 +75,7 @@
 ### Updated
 - Azahar to 2124
 - BigPEmu to v121
+- Cemu to 22nd of January 2026 build
 - CLK to 2026-01-06
 - Dolphin-Emu to 2512-99
 - DXX-Rebirth to May 25, 2025
@@ -115,10 +116,11 @@
 - OpenJKDF2 to v0.9.8
 - OpenMOHAA to v0.82.1
 - Play! to 0.72
-- PCSX2 to v2.6.2
+- PCSX2 to v2.6.3
 - RClone to v1.72.1
 - RetroArch to 1.22.2
 - RPCS3 to v0.0.39
+- Ruffle to 31th of January 2026 nightly build
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_12_0_A
 - Sonic 2013 to 1.3.3
 - Sonic CD to 1.3.3
