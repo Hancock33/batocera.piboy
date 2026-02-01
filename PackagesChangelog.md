@@ -11,7 +11,9 @@ Ports|[box64](http://github.com/ptitseb/box64)|3bbb84502e8061d6fb5543e505c830119
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|02de33a5c88efcbdeb70f352c7a417b8b6760ee3|Feb 01, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|da4b9aa263f5d039916c73323abbc6f864690815|Feb 01, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|4ba1bfd3e24aa86135e27bfb53b4fc1298cc85f7|Feb 01, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260201|Feb 01, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9804687c7bc832a65cdff4f5d2bf7242e131337b|Feb 01, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260201|Feb 01, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d93afd5a8ead497895c67acf095a010bdefdd535|Feb 01, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|15676585b9a370e874ea9309252bd8236df3f642|Feb 01, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|1a8599295a8ca0741c07f796d9087f5af9481a4d|Jan 31, 2026
@@ -32,9 +34,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|afdaa2ac5e8e
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a478e24c8aeaa1d7dc1cbb0a2b6617d5b64f0b65|Jan 31, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|7a66365b5c8bbd5b9ba0ac82ca805e8b63101b32|Jan 31, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|26f1e557033f5212145ca764b972a432b2d71f18|Jan 31, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260131|Jan 31, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|8ad12494fffd13d8f11107142ce2f318665de45d|Jan 31, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260131|Jan 31, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|09da1c553f121cd2a40d6f78a1d4fe8d375aeefe|Jan 31, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|9417689fc6de5ab72a8cc83f80dffb2102f0cce8|Jan 31, 2026
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|669491083ed40ca84561ae88a4ba43aac593299d|Jan 31, 2026
