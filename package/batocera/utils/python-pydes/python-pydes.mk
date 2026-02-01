@@ -3,7 +3,7 @@
 # python-pydes
 #
 ################################################################################
-
+# Version: Commits on Jan 08, 2019
 PYTHON_PYDES_VERSION = e988a5ffc9abb8010fc75dba54904d1c5dbe83db
 PYTHON_PYDES_SITE = $(call github,twhiteman,pyDes,$(PYTHON_PYDES_VERSION))
 PYTHON_PYDES_DEPENDENCIES =

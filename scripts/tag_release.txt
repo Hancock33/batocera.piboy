@@ -29,6 +29,8 @@ plutosvg.mk
 plutovg.mk
 portmidi.mk
 python-cog.mk
+python-ndeflib.mk
+python-nfcpy.mk
 python-pyxel.mk
 rgbds.mk
 sdl3_image.mk

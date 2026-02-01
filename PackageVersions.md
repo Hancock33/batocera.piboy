@@ -556,6 +556,9 @@ Utils|[od-commander](http://github.com/od-contrib/commander)|a6ef30eb3bd6ef80a03
 Utils|[pacman](https://sources.archlinux.org/other/pacman)|5.2.2|Jun 26, 2020
 Utils|[picade](http://github.com/pimoroni/picade-hat)|f97c2ac7211c8d9ff866b22a82c3b2ae6d01e0df|Sept 08, 2025
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
+Utils|[python-ndeflib](http://github.com/nfcpy/ndeflib)|v0.3.3|May 27, 2019
+Utils|[python-nfcpy](http://github.com/nfcpy/nfcpy)|v1.0.4|Mar 10, 2022
+Utils|[python-pydes](http://github.com/twhiteman/pyDes)|e988a5ffc9abb8010fc75dba54904d1c5dbe83db|Jan 08, 2019
 Utils|[rclone](http://github.com/rclone/rclone)|v1.73.0|Jan 30, 2026
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.4|Dec 20, 2025
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|d3bfbe97623a2a26c46c5b88b2053cfa2b08e91a|Jan 24, 2026

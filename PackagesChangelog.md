@@ -538,6 +538,7 @@ Boot|[uboot-odroid-goa](https://github.com/hardkernel/u-boot.git)|154ddfc826e72c
 Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727d9b2f867871|Apr 24, 2022
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|86cfa146a8dfddf6377ddb5dbcff552feae2e5bf|Apr 16, 2022
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 05, 2022
+Utils|[python-nfcpy](http://github.com/nfcpy/nfcpy)|v1.0.4|Mar 10, 2022
 Gpu|[mali-mp400-gbm](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Gpu|[mali-mp400-wayland](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Utils|[l3afpad](http://github.com/stevenhoneyman/l3afpad)|16f22222116b78b7f6a6fd83289937cdaabed624|Feb 14, 2022
@@ -569,6 +570,8 @@ Boot|[rockpro64-blobs](https://github.com/batocera-linux/rockpro64-blobs.git)|2.
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Ports|[bermuda](http://github.com/cyxx/bermuda)|cf6bdb68d53a1618967da565a44c931b15daf791|Dec 29, 2019
 Utils|[unclutter](https://github.com/batocera-linux/unclutter-xfixes/archive/refs/tags)|v1.5-batocera|Aug 13, 2019
+Utils|[python-ndeflib](http://github.com/nfcpy/ndeflib)|v0.3.3|May 27, 2019
+Utils|[python-pydes](http://github.com/twhiteman/pyDes)|e988a5ffc9abb8010fc75dba54904d1c5dbe83db|Jan 08, 2019
 Firmwares|[firmware-radxa-rkwifibt](http://github.com/JeffyCN/mirrors)|e7a4fc70448ca2f66b3df50cabe527916b42bdad|Nov 22, 2018
 Engines|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Libraries|[libfreeimage](http://downloads.sourceforge.net/freeimage)|3.18.0|Jul 31, 2018
