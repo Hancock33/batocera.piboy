@@ -484,7 +484,10 @@ def generate_gun_help(system, rom, use_guns: bool, guns: dict, gun_help_dir, gun
         "<SUB1>":    "SUB1",
         "<SUB2>":    "SUB2",
         "<SUB3>":    "SUB3",
-        "<D-PAD>":   "D-PAD"
+        "<UP>":      "UP",
+        "<DOWN>":    "DOWN",
+        "<LEFT>":    "LEFT",
+        "<RIGHT>":   "RIGHT",
     }
 
     if not gun_help_dir.exists():

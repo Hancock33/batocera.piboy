@@ -1,0 +1,17 @@
+config BR2_PACKAGE_LIBVNI
+	bool "libvni"
+	select BR2_PACKAGE_CARGS
+	select BR2_PACKAGE_LIBPUPDMD
+	select BR2_PACKAGE_LIBSERIALPORT
+	select BR2_PACKAGE_LIBSERUM
+	select BR2_PACKAGE_LIBZEDMD
+	select BR2_PACKAGE_SOCKPP
+
+	help
+	  A simple platform-independent conversion to C++
+	  of the VNI converter of LibDmd which written in C#,
+	  keeping the same license GPLv2. LibDmd is part of
+	  DMD Extensions.
+
+	  https://github.com/PPUC/libvni
+	  www.vpforums.org

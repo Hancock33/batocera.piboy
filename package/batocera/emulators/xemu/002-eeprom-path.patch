@@ -1,8 +1,8 @@
 diff --git a/ui/xemu-settings.cc b/ui/xemu-settings.cc
-index 5237d5682b..63b319e2ce 100644
+index 70113c7bc1..6402340303 100644
 --- a/ui/xemu-settings.cc
 +++ b/ui/xemu-settings.cc
-@@ -102,6 +102,9 @@ const char *xemu_settings_get_path(void)
+@@ -103,6 +103,9 @@ const char *xemu_settings_get_path(void)
  const char *xemu_settings_get_default_eeprom_path(void)
  {
      static char *eeprom_path = NULL;

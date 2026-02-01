@@ -3,8 +3,8 @@
 # rivensin
 #
 ################################################################################
-# Version: Commits on Jan 06, 2026
-RIVENSIN_VERSION = 47f01de50ce60cb6ea82549a93288a90e9b456b9
+# Version: Commits on Jan 26, 2026
+RIVENSIN_VERSION = 9cbfc2b03a4aca42f4e848f9e8b465b410c8984e
 RIVENSIN_SITE = $(call github,dhewm,dhewm3-sdk,$(RIVENSIN_VERSION))
 RIVENSIN_BRANCH = rivensin
 RIVENSIN_LICENSE = GPLv3

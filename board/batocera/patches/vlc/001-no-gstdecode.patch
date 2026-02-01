@@ -1,0 +1,21 @@
+diff --git a/modules/codec/Makefile.am b/modules/codec/Makefile.am
+index 31f6dd27fa..24b3d2cbf1 100644
+--- a/modules/codec/Makefile.am
++++ b/modules/codec/Makefile.am
+@@ -641,16 +641,3 @@ libmft_plugin_la_LIBADD = $(LIBCOM) -luuid -lmfuuid -lmfplat
+ codec_LTLIBRARIES += libmft_plugin.la
+ endif
+ 
+-libgstdecode_plugin_la_SOURCES = codec/gstreamer/gstdecode.c \
+-								 codec/gstreamer/gstvlcpictureplaneallocator.c \
+-								 codec/gstreamer/gstvlcpictureplaneallocator.h \
+-								 codec/gstreamer/gstvlcvideopool.c \
+-								 codec/gstreamer/gstvlcvideopool.h \
+-								 codec/gstreamer/gstvlcvideosink.c \
+-								 codec/gstreamer/gstvlcvideosink.h \
+-								 codec/gstreamer/fourcc.c
+-libgstdecode_plugin_la_CFLAGS = $(AM_CFLAGS) $(GST_VIDEO_CFLAGS) $(GST_APP_CFLAGS)
+-libgstdecode_plugin_la_LIBADD = $(GST_VIDEO_LIBS) $(GST_APP_LIBS)
+-if HAVE_GST_DECODE
+-codec_LTLIBRARIES += libgstdecode_plugin.la
+-endif

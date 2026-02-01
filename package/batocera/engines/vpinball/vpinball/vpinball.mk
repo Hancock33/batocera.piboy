@@ -23,8 +23,9 @@ define VPINBALL_CMAKE_HACKS
 endef
 
 define VPINBALL_INSTALL_TARGET_CMDS
+	rm -rf   $(TARGET_DIR)/usr/bin/vpinball
 	mkdir -p $(TARGET_DIR)/usr/bin/vpinball
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/VPinballX_GL	$(TARGET_DIR)/usr/bin/vpinball
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/VPinballX_GL $(TARGET_DIR)/usr/bin/vpinball
 	cp -R $(@D)/buildroot-build/flexdmd			$(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/assets			$(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/scripts			$(TARGET_DIR)/usr/bin/vpinball/

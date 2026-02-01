@@ -1,25 +1,24 @@
 diff --git a/src/DataLoader.cpp b/src/DataLoader.cpp
-index 97de2af..f4cb3a8 100644
+index 1c2fc5d..5ff9bf0 100644
 --- a/src/DataLoader.cpp
 +++ b/src/DataLoader.cpp
-@@ -731,7 +731,7 @@ Input* DataLoader::createInput(StringUMap& inputData, ItemPtrUMap& inputMaps) {
+@@ -748,6 +748,7 @@ Input* DataLoader::createInput(StringUMap& inputData, ItemPtrUMap& inputMaps) {
+ }
  
  string DataLoader::createFilename(const string& name) {
- 	return (
--		string(PROJECT_DATA_DIR)
-+		string("/userdata/system/configs/ledspicer/")
- 			.append(Utility::removeChar(name, '.'))
- 			.append(".xml")
- 	);
++	string("/userdata/system/configs/ledspicer/");
+ 	string r(Utility::removeChar(name, '.'));
+ 	r.append(".xml");
+ 	return r;
 diff --git a/src/Emitter.hpp b/src/Emitter.hpp
-index a10c5e5..ef43cdb 100644
+index bc710d7..ef43cdb 100644
 --- a/src/Emitter.hpp
 +++ b/src/Emitter.hpp
 @@ -33,7 +33,7 @@
  #define DATA_SOURCE_CONTROLSINI "controls.ini"
  
  // dataSource fields.
--#define CONTROLLERS_FILE PROJECT_DATA_DIR "/gameData.xml"
+-#define CONTROLLERS_FILE PROJECT_DATA_DIR "gameData.xml"
 +#define CONTROLLERS_FILE "/userdata/system/configs/ledspicer/" "gameData.xml"
  #define CONTROL "C"
  #define PLAYERS "ps"
@@ -28,7 +27,7 @@ index a10c5e5..ef43cdb 100644
  #define CCOINS   "coins"
  
  // controls.ini fields.
--#define CONTROLINI_FILE PROJECT_DATA_DIR "/controls.ini"
+-#define CONTROLINI_FILE PROJECT_DATA_DIR "controls.ini"
 +#define CONTROLINI_FILE "/userdata/system/configs/ledspicer/" "controls.ini"
  
  // Controllers
@@ -37,33 +36,33 @@ index a10c5e5..ef43cdb 100644
  #define POSITIONAL "POSITIONAL"
  #define JOYSTICK   "JOYSTICK"
  
--#define COLORINI_FILE PROJECT_DATA_DIR "/colors.ini"
+-#define COLORINI_FILE PROJECT_DATA_DIR "colors.ini"
 +#define COLORINI_FILE "/userdata/system/configs/ledspicer/" "colors.ini"
  
  bool ignoreMissingColors = false;
  
 diff --git a/src/Main.cpp b/src/Main.cpp
-index 25ec16e..ae372d6 100644
+index 216dfbf..f258d9d 100644
 --- a/src/Main.cpp
 +++ b/src/Main.cpp
-@@ -292,7 +292,7 @@ int main(int argc, char **argv) {
+@@ -296,7 +296,7 @@ int main(int argc, char **argv) {
  				"-e or --elements\t\t\tTest registered elements.\n"
  				"-v or --version\t\t\t\tDisplay version information\n"
  				"-h or --help\t\t\t\tDisplay this help screen.\n"
--				"Data dir:    " PROJECT_DATA_DIR "\n"
-+				"Data directory:    " "/userdata/system/configs/ledspicer/" "\n"
- 				"Devices dir: " DEVICES_DIR "\n"
- 				"If -c or --config is not provided " PROJECT_NAME " will use " CONFIG_FILE
- 				<< endl;
+-				"Data dir:     " PROJECT_DATA_DIR "\n"
++				"Data dir:     " "/userdata/system/configs/ledspicer/" "\n"
+ 				"Devices dir:  " DEVICES_DIR "\n"
+ 				"Projects dir: " << Utility::getConfigDir() << PROJECTS_DIR "\n"
+ 				"Please note that if the program runs as different user id, the projects dir will be different\n"
 diff --git a/src/restrictors/UltraStik360.hpp b/src/restrictors/UltraStik360.hpp
-index 95b942d..742ee2f 100644
+index 7088e20..742ee2f 100644
 --- a/src/restrictors/UltraStik360.hpp
 +++ b/src/restrictors/UltraStik360.hpp
 @@ -34,7 +34,7 @@
  #define ULTRASTIK_MAX_BOARDS 4
  #define ULTRASTIK_DATA_SIZE  4
  
--#define UM_FILES_DIR PROJECT_DATA_DIR "/umaps/"
+-#define UM_FILES_DIR PROJECT_DATA_DIR "umaps/"
 +#define UM_FILES_DIR "/userdata/system/configs/ledspicer/" "umaps/"
  #define DEFAULT_MAP_BORDERS {30,58,86,114,142,170,198,226}
  

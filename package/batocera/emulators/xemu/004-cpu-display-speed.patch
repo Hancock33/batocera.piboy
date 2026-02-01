@@ -22,10 +22,10 @@ Co-authored-by: Hugo Locurcio <hugo.locurcio@hugo.pro>
  7 files changed, 81 insertions(+), 16 deletions(-)
 
 diff --git a/config_spec.yml b/config_spec.yml
-index 68db468d9c..9862d8b2b1 100644
+index 3e36d1e5c6..07584d6992 100644
 --- a/config_spec.yml
 +++ b/config_spec.yml
-@@ -278,3 +278,15 @@ perf:
+@@ -370,3 +370,15 @@ perf:
    cache_shaders:
      type: bool
      default: true
@@ -42,12 +42,12 @@ index 68db468d9c..9862d8b2b1 100644
 +    type: number
 +    default: 1
 diff --git a/hw/i386/x86-cpu.c b/hw/i386/x86-cpu.c
-index 7170e9082e..b90eac93d7 100644
+index a26055f5b9..859667ba04 100644
 --- a/hw/i386/x86-cpu.c
 +++ b/hw/i386/x86-cpu.c
 @@ -31,11 +31,19 @@
  #include "hw/irq.h"
- #include "sysemu/kvm.h"
+ #include "system/kvm.h"
  
 +#ifdef XBOX
 +#include "ui/xemu-settings.h"
@@ -67,7 +67,7 @@ index 7170e9082e..b90eac93d7 100644
  #else
      return cpus_get_elapsed_ticks();
 diff --git a/ui/xemu.c b/ui/xemu.c
-index 81a951d35c..1f6a258025 100644
+index d998438e5e..3d047d8f9f 100644
 --- a/ui/xemu.c
 +++ b/ui/xemu.c
 @@ -320,7 +320,7 @@ static void handle_keydown(SDL_Event *ev)
@@ -79,7 +79,7 @@ index 81a951d35c..1f6a258025 100644
      int gui_key_modifier_pressed = get_mod_state();
      int gui_keysym = 0;
  
-@@ -1081,10 +1081,14 @@ void sdl2_gl_refresh(DisplayChangeListener *dcl)
+@@ -1083,10 +1083,14 @@ void sdl2_gl_refresh(DisplayChangeListener *dcl)
      qemu_mutex_unlock_main_loop();
  
      /*
@@ -97,10 +97,10 @@ index 81a951d35c..1f6a258025 100644
  #ifdef DEBUG_XEMU_C
      int64_t sleep_acc = 0;
 diff --git a/ui/xui/compat.cc b/ui/xui/compat.cc
-index d0405389f5..5f9d93507b 100644
+index 0fcaf18086..f13d008794 100644
 --- a/ui/xui/compat.cc
 +++ b/ui/xui/compat.cc
-@@ -203,6 +203,14 @@ void CompatibilityReporter::Draw()
+@@ -202,6 +202,14 @@ void CompatibilityReporter::Draw()
          ImGui::SameLine();
      }
  
@@ -115,7 +115,7 @@ index d0405389f5..5f9d93507b 100644
      ImGui::SetCursorPosX(ImGui::GetWindowWidth()-(120+10)*g_viewport_mgr.m_scale);
  
      ImGui::SetItemDefaultFocus();
-@@ -213,7 +221,10 @@ void CompatibilityReporter::Draw()
+@@ -212,7 +220,10 @@ void CompatibilityReporter::Draw()
              is_open = false;
          }
      }
@@ -128,10 +128,10 @@ index d0405389f5..5f9d93507b 100644
  }
  
 diff --git a/ui/xui/main-menu.cc b/ui/xui/main-menu.cc
-index fbc4f5fc11..583bce7465 100644
+index af290093ec..bb042fe041 100644
 --- a/ui/xui/main-menu.cc
 +++ b/ui/xui/main-menu.cc
-@@ -66,6 +66,30 @@ void MainMenuGeneralView::Draw()
+@@ -68,6 +68,30 @@ void MainMenuGeneralView::Draw()
      Toggle("Cache shaders to disk", &g_config.perf.cache_shaders,
             "Reduce stutter in games by caching previously generated shaders");
  
@@ -163,7 +163,7 @@ index fbc4f5fc11..583bce7465 100644
      Toggle("Skip startup animation", &g_config.general.skip_boot_anim,
             "Skip the full Xbox boot animation sequence");
 diff --git a/ui/xui/widgets.cc b/ui/xui/widgets.cc
-index 67430ecda8..b5d7f044c1 100644
+index 6fea4c6308..03ddd3e81f 100644
 --- a/ui/xui/widgets.cc
 +++ b/ui/xui/widgets.cc
 @@ -22,6 +22,7 @@

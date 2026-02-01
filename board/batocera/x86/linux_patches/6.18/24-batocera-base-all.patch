@@ -286,7 +286,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index e3e3b82d94c0..0abb9dea82bb 100644
+index 6b6539f2f11d..33272148206e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -5668,7 +5668,7 @@ index 7e34ccd394f8..33a9053b6adf 100644
                          pr_warn!("Failed copying ptr into alloc: {:?}", err);
                          return Err(err.into());
 diff --git a/drivers/ata/ahci.c b/drivers/ata/ahci.c
-index 7a7f88b3fa2b..cb26ab099da2 100644
+index 931d0081169b..02ee4c4fa5b7 100644
 --- a/drivers/ata/ahci.c
 +++ b/drivers/ata/ahci.c
 @@ -1672,7 +1672,7 @@ static irqreturn_t ahci_thunderx_irq_handler(int irq, void *dev_instance)
@@ -6012,7 +6012,7 @@ index 6f5b4a0e0a34..266d9111e20b 100644
  #define AMDGPU_VM_MAX_NUM_CTX			4096
  #define AMDGPU_SG_THRESHOLD			(256*1024*1024)
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-index 7333e19291cf..9667d000b8c2 100644
+index 7333e19291cf..d302ea0e9628 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 @@ -149,6 +149,7 @@ enum AMDGPU_DEBUG_MASK {
@@ -6057,7 +6057,7 @@ index 7333e19291cf..9667d000b8c2 100644
 + * Changes ALLM triggering mode (if sink supports ALLM). Possible values:
 + *
 + * -  0 = ALLM disabled
-+ * -  1 = ALLM dynamically triggered with VRR
++ * -  1 = ALLM dynamically triggered based on VRR state / Game Content Type Hint
 + * -  2 = ALLM forced always on
 + */
 +MODULE_PARM_DESC(allm_mode, "Changes ALLM trigger mode (0 = disable, 1 = enable (default), 2 = force enable)");
@@ -6248,7 +6248,7 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index d889b9cc44c5..347736bd2ab3 100644
+index d889b9cc44c5..28a93991e3ad 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -2069,6 +2069,9 @@ static int amdgpu_dm_init(struct amdgpu_device *adev)
@@ -6279,26 +6279,19 @@ index d889b9cc44c5..347736bd2ab3 100644
  
  	if (stream->signal == SIGNAL_TYPE_DISPLAY_PORT ||
  	    stream->signal == SIGNAL_TYPE_DISPLAY_PORT_MST ||
-@@ -9362,7 +9365,8 @@ static void update_freesync_state_on_stream(
+@@ -9362,7 +9365,11 @@ static void update_freesync_state_on_stream(
  
  	aconn = (struct amdgpu_dm_connector *)new_stream->dm_stream_context;
  
 -	if (aconn && (aconn->as_type == FREESYNC_TYPE_PCON_IN_WHITELIST || aconn->vsdb_info.replay_mode)) {
-+	if (aconn && (aconn->as_type == ADAPTIVE_SYNC_TYPE_PCON_ALLOWED ||
++	if (aconn && aconn->as_type == ADAPTIVE_SYNC_TYPE_HDMI)
++		packet_type = PACKET_TYPE_VTEM;
++
++	else if (aconn && (aconn->as_type == ADAPTIVE_SYNC_TYPE_PCON_ALLOWED ||
 +		      aconn->vsdb_info.replay_mode)) {
  		pack_sdp_v1_3 = aconn->pack_sdp_v1_3;
  
  		if (aconn->vsdb_info.amd_vsdb_version == 1)
-@@ -9376,6 +9380,9 @@ static void update_freesync_state_on_stream(
- 					&new_stream->adaptive_sync_infopacket);
- 	}
- 
-+	if (aconn && aconn->as_type == ADAPTIVE_SYNC_TYPE_HDMI)
-+		packet_type = PACKET_TYPE_VTEM;
-+
- 	mod_freesync_build_vrr_infopacket(
- 		dm->freesync_module,
- 		new_stream,
 @@ -12864,8 +12871,8 @@ static void parse_edid_displayid_vrr(struct drm_connector *connector,
  	}
  }
@@ -6320,7 +6313,7 @@ index d889b9cc44c5..347736bd2ab3 100644
  	while (j < EDID_LENGTH - sizeof(struct amd_vsdb_block)) {
  		struct amd_vsdb_block *amd_vsdb = (struct amd_vsdb_block *)&edid_ext[j];
  		unsigned int ieeeId = (amd_vsdb->ieee_id[2] << 16) | (amd_vsdb->ieee_id[1] << 8) | (amd_vsdb->ieee_id[0]);
-@@ -12899,9 +12909,9 @@ static int parse_amd_vsdb(struct amdgpu_dm_connector *aconnector,
+@@ -12899,13 +12909,13 @@ static int parse_amd_vsdb(struct amdgpu_dm_connector *aconnector,
  	return false;
  }
  
@@ -6331,19 +6324,32 @@ index d889b9cc44c5..347736bd2ab3 100644
 +			      const struct edid *edid,
 +			      struct amdgpu_hdmi_vsdb_info *vsdb_info)
  {
++	struct amdgpu_hdmi_vsdb_info vsdb_local = {0};
  	u8 *edid_ext = NULL;
  	int i;
-@@ -12931,6 +12941,82 @@ static int parse_hdmi_amd_vsdb(struct amdgpu_dm_connector *aconnector,
- 	return valid_vsdb_found ? i : -ENODEV;
- }
+-	bool valid_vsdb_found = false;
  
+ 	/*----- drm_find_cea_extension() -----*/
+ 	/* No EDID or EDID extensions */
+@@ -12926,9 +12936,87 @@ static int parse_hdmi_amd_vsdb(struct amdgpu_dm_connector *aconnector,
+ 	if (edid_ext[0] != CEA_EXT)
+ 		return -ENODEV;
+ 
+-	valid_vsdb_found = parse_edid_cea(aconnector, edid_ext, EDID_LENGTH, vsdb_info);
++	if (!parse_edid_cea(aconnector, edid_ext, EDID_LENGTH, &vsdb_local))
++		return -ENODEV;
++
++	*vsdb_info = vsdb_local;
++	return i;
++}
++
 +static bool is_monitor_range_invalid(struct drm_connector *conn)
 +{
 +	return conn->display_info.monitor_range.min_vfreq == 0 ||
 +	       conn->display_info.monitor_range.max_vfreq == 0;
 +}
 +
-+/**
++/*
 + * Returns true if (max_vfreq - min_vfreq) > 10
 + */
 +static bool is_freesync_capable(struct drm_monitor_range_info *range)
@@ -6360,12 +6366,12 @@ index d889b9cc44c5..347736bd2ab3 100644
 +	range->max_vfreq = vsdb->max_refresh_rate_hz;
 +}
 +
-+/*
++/**
 + * Get VRR range from HDMI VRR info in EDID. If VRRmax == 0,
-+ * try getting upper bound from AMD vsdb (if passed).
++ * try getting upper bound from AMD vsdb.
 + *
 + * @conn: drm_connector with HDMI VRR info
-+ * @vsdb: AMD vsdb from CAE. Can be NULL if not found.
++ * @vsdb: AMD vsdb from CAE
 + */
 +static void monitor_range_from_hdmi(struct drm_connector *conn,
 +				    const struct amdgpu_hdmi_vsdb_info *vsdb)
@@ -6375,18 +6381,19 @@ index d889b9cc44c5..347736bd2ab3 100644
 +	u16 vrr_max = caps->vrr_max;
 +
 +	/* Try getting upper vrr bound from AMD vsdb */
-+	if (vrr_max == 0 && vsdb)
++	if (vrr_max == 0 && vsdb->freesync_supported)
 +		vrr_max = vsdb->max_refresh_rate_hz;
 +
 +	/* Use max possible BRR value as a last resort */
 +	if (vrr_max == 0)
 +		vrr_max = VTEM_BRR_MAX;
-+
+ 
+-	return valid_vsdb_found ? i : -ENODEV;
 +	range->min_vfreq = caps->vrr_min;
 +	range->max_vfreq = vrr_max;
 +}
 +
-+/**
++/*
 + * Returns true if connector is capable of freesync
 + * Optionally, can fetch the range from AMD vsdb
 + */
@@ -6401,7 +6408,7 @@ index d889b9cc44c5..347736bd2ab3 100644
 +	return is_freesync_capable(range);
 +}
 +
-+/**
++/*
 + * Returns true if range from AMD vsdb is bigger
 + */
 +static bool compare_ranges(struct drm_connector *conn,
@@ -6411,12 +6418,10 @@ index d889b9cc44c5..347736bd2ab3 100644
 +
 +	return (vsdb->max_refresh_rate_hz - vsdb->min_refresh_rate_hz) >
 +	       (range->max_vfreq - range->min_vfreq);
-+}
-+
+ }
+ 
  /**
-  * amdgpu_dm_update_freesync_caps - Update Freesync capabilities
-  *
-@@ -12945,16 +13031,21 @@ static int parse_hdmi_amd_vsdb(struct amdgpu_dm_connector *aconnector,
+@@ -12945,16 +13033,19 @@ static int parse_hdmi_amd_vsdb(struct amdgpu_dm_connector *aconnector,
  void amdgpu_dm_update_freesync_caps(struct drm_connector *connector,
  				    const struct drm_edid *drm_edid)
  {
@@ -6429,26 +6434,23 @@ index d889b9cc44c5..347736bd2ab3 100644
  	struct amdgpu_hdmi_vsdb_info vsdb_info = {0};
 +	struct amdgpu_hdmi_vsdb_info vsdb_did = {0};
 +	struct dpcd_caps dpcd_caps = {0};
-+	struct drm_hdmi_vrr_cap *hdmi_vrr;
++	struct drm_hdmi_vrr_cap hdmi_vrr;
  	const struct edid *edid;
  	bool freesync_capable = false;
 -	enum adaptive_sync_type as_type = ADAPTIVE_SYNC_TYPE_NONE;
-+	bool valid_vsdb_cea = false;
-+	bool vsdb_freesync = false;
 +	bool pcon_allowed = false;
 +	bool is_pcon = false;
  
  	if (!connector->state) {
  		drm_err(adev_to_drm(adev), "%s - Connector has no state", __func__);
-@@ -12982,63 +13073,74 @@ void amdgpu_dm_update_freesync_caps(struct drm_connector *connector,
+@@ -12982,63 +13073,73 @@ void amdgpu_dm_update_freesync_caps(struct drm_connector *connector,
  	if (!adev->dm.freesync_module || !dc_supports_vrr(sink->ctx->dce_version))
  		goto update;
  
 +	/* Gather all data */
  	edid = drm_edid_raw(drm_edid); // FIXME: Get rid of drm_edid_raw()
-+	valid_vsdb_cea = parse_amd_vsdb_cea(amdgpu_dm_connector, edid, &vsdb_info) >= 0;
-+	vsdb_freesync = valid_vsdb_cea && vsdb_info.freesync_supported;
-+	hdmi_vrr = &connector->display_info.hdmi.vrr_cap;
++	parse_amd_vsdb_cea(amdgpu_dm_connector, edid, &vsdb_info);
++	hdmi_vrr = connector->display_info.hdmi.vrr_cap;
 +
 +	if (amdgpu_dm_connector->dc_link) {
 +		dpcd_caps = amdgpu_dm_connector->dc_link->dpcd_caps;
@@ -6479,12 +6481,12 @@ index d889b9cc44c5..347736bd2ab3 100644
 +		 * Many monitors expose AMD vsdb in CAE even for DP and their
 +		 * monitor ranges do not contain Range Limits Only flag
 +		 */
-+		if (valid_vsdb_cea && is_monitor_range_invalid(connector))
++		if (is_monitor_range_invalid(connector))
 +			monitor_range_from_vsdb(connector, &vsdb_info);
  
 -		parse_amd_vsdb(amdgpu_dm_connector, edid, &vsdb_info);
 +		/* Use bigger range if found in AMD vsdb */
-+		if (valid_vsdb_cea && compare_ranges(connector, &vsdb_info))
++		if (compare_ranges(connector, &vsdb_info))
 +			monitor_range_from_vsdb(connector, &vsdb_info);
  
 -		if (vsdb_info.replay_mode) {
@@ -6520,10 +6522,10 @@ index d889b9cc44c5..347736bd2ab3 100644
 +	/* HDMI */
 +	} else if (sink->sink_signal == SIGNAL_TYPE_HDMI_TYPE_A) {
 +		/* Prefer HDMI VRR */
-+		if (hdmi_vrr->supported) {
++		if (hdmi_vrr.supported) {
 +			amdgpu_dm_connector->as_type = ADAPTIVE_SYNC_TYPE_HDMI;
-+			monitor_range_from_hdmi(connector, valid_vsdb_cea ? &vsdb_info : NULL);
-+		} else if (vsdb_freesync)
++			monitor_range_from_hdmi(connector, &vsdb_info);
++		} else if (vsdb_info.freesync_supported)
 +			monitor_range_from_vsdb(connector, &vsdb_info);
  
 -	if (as_type == FREESYNC_TYPE_PCON_IN_WHITELIST) {
@@ -6536,9 +6538,9 @@ index d889b9cc44c5..347736bd2ab3 100644
 +	/* DP -> HDMI PCON */
 +	} else if (pcon_allowed) {
 +		/* Prefer HDMI VRR */
-+		if (hdmi_vrr->supported)
-+			monitor_range_from_hdmi(connector, valid_vsdb_cea ? &vsdb_info : NULL);
-+		else if (vsdb_freesync) {
++		if (hdmi_vrr.supported)
++			monitor_range_from_hdmi(connector, &vsdb_info);
++		else if (vsdb_info.freesync_supported) {
  			amdgpu_dm_connector->vsdb_info = vsdb_info;
 -
 -			amdgpu_dm_connector->min_vfreq = vsdb_info.min_refresh_rate_hz;
@@ -6709,25 +6711,33 @@ index e027798ece03..daee9ece63c0 100644
  #endif
  	/* Create (reset) the plane state */
 diff --git a/drivers/gpu/drm/amd/display/dc/core/dc_resource.c b/drivers/gpu/drm/amd/display/dc/core/dc_resource.c
-index bc5dedf5f60c..b96e2f86f2ea 100644
+index bc5dedf5f60c..8e7a67240ce9 100644
 --- a/drivers/gpu/drm/amd/display/dc/core/dc_resource.c
 +++ b/drivers/gpu/drm/amd/display/dc/core/dc_resource.c
-@@ -4409,6 +4409,7 @@ static void set_avi_info_frame(
+@@ -44,6 +44,7 @@
+ #include "clk_mgr.h"
+ #include "dc_state_priv.h"
+ #include "dc_stream_priv.h"
++#include "modules/inc/mod_info_packet.h"
+ 
+ #include "virtual/virtual_link_hwss.h"
+ #include "link/hwss/link_hwss_dio.h"
+@@ -4408,7 +4409,6 @@ static void set_avi_info_frame(
+ 	unsigned int vic = pipe_ctx->stream->timing.vic;
  	unsigned int rid = pipe_ctx->stream->timing.rid;
  	unsigned int fr_ind = pipe_ctx->stream->timing.fr_index;
- 	enum dc_timing_3d_format format;
-+	bool allm;
+-	enum dc_timing_3d_format format;
  
  	if (stream->avi_infopacket.valid) {
  		*info_packet = stream->avi_infopacket;
-@@ -4563,8 +4564,9 @@ static void set_avi_info_frame(
+@@ -4562,9 +4562,8 @@ static void set_avi_info_frame(
+ 	///VIC
  	if (pipe_ctx->stream->timing.hdmi_vic != 0)
  		vic = 0;
- 	format = stream->timing.timing_3d_format;
-+	allm = stream->link->local_sink->edid_caps.allm;
+-	format = stream->timing.timing_3d_format;
  	/*todo, add 3DStereo support*/
 -	if (format != TIMING_3D_FORMAT_NONE) {
-+	if ((format != TIMING_3D_FORMAT_NONE) || allm) {
++	if (!is_hdmi_vic_mode(pipe_ctx->stream)) {
  		// Based on HDMI specs hdmi vic needs to be converted to cea vic when 3D is enabled
  		switch (pipe_ctx->stream->timing.hdmi_vic) {
  		case 1:
@@ -6814,19 +6824,20 @@ index 1aae46d703ba..db197cf048e1 100644
  		build_vrr_infopacket_v3(stream->signal, vrr, app_tf, infopacket, stream->freesync_on_desktop);
  		break;
 diff --git a/drivers/gpu/drm/amd/display/modules/inc/mod_info_packet.h b/drivers/gpu/drm/amd/display/modules/inc/mod_info_packet.h
-index 66dc9a19aebe..2b4abfbd8488 100644
+index 66dc9a19aebe..6383966d01c5 100644
 --- a/drivers/gpu/drm/amd/display/modules/inc/mod_info_packet.h
 +++ b/drivers/gpu/drm/amd/display/modules/inc/mod_info_packet.h
-@@ -33,6 +33,8 @@ struct dc_stream_state;
+@@ -33,6 +33,9 @@ struct dc_stream_state;
  struct dc_info_packet;
  struct mod_vrr_params;
  
-+#define VTEM_BRR_MAX 1000
++#define VTEM_BRR_MAX 1023
 +
++bool is_hdmi_vic_mode(const struct dc_stream_state *stream);
  void mod_build_vsc_infopacket(const struct dc_stream_state *stream,
  		struct dc_info_packet *info_packet,
  		enum dc_color_space cs,
-@@ -41,12 +43,17 @@ void mod_build_vsc_infopacket(const struct dc_stream_state *stream,
+@@ -41,12 +44,17 @@ void mod_build_vsc_infopacket(const struct dc_stream_state *stream,
  void mod_build_hf_vsif_infopacket(const struct dc_stream_state *stream,
  		struct dc_info_packet *info_packet);
  
@@ -6850,7 +6861,7 @@ index 66dc9a19aebe..2b4abfbd8488 100644
  
  enum adaptive_sync_sdp_version {
 diff --git a/drivers/gpu/drm/amd/display/modules/info_packet/info_packet.c b/drivers/gpu/drm/amd/display/modules/info_packet/info_packet.c
-index b3d55cac3569..e1b7f0c36b9b 100644
+index b3d55cac3569..a4edbf44a829 100644
 --- a/drivers/gpu/drm/amd/display/modules/info_packet/info_packet.c
 +++ b/drivers/gpu/drm/amd/display/modules/info_packet/info_packet.c
 @@ -23,12 +23,13 @@
@@ -6951,9 +6962,9 @@ index b3d55cac3569..e1b7f0c36b9b 100644
 +#define HF_VSIF_ALLM_BIT 1
 +
 +enum allm_trigger_mode {
-+	ALLM_DISABLED        = 0,
-+	ALLM_ENABLED_DYNAMIC = 1,
-+	ALLM_ENABLED_FORCED  = 2,
++	ALLM_MODE_DISABLED        = 0,
++	ALLM_MODE_ENABLED_DYNAMIC = 1,
++	ALLM_MODE_ENABLED_FORCED  = 2,
 +};
 +
 +#define VTEM_ORG_ID          1
@@ -7004,13 +7015,35 @@ index b3d55cac3569..e1b7f0c36b9b 100644
  
  enum ColorimetryRGBDP {
  	ColorimetryRGB_DP_sRGB               = 0,
-@@ -441,9 +430,49 @@ void mod_build_vsc_infopacket(const struct dc_stream_state *stream,
+@@ -441,9 +430,50 @@ void mod_build_vsc_infopacket(const struct dc_stream_state *stream,
  	}
  }
  
-+static bool is_hdmi_vic_mode(const struct dc_stream_state *stream)
++static bool is_hdmi_allm_mode(const struct dc_stream_state *stream)
 +{
-+	bool allm = stream->link->local_sink->edid_caps.allm;
++	/* Sink doesn't expose ALLM support in edid */
++	if (!stream->link->local_sink ||
++	    !stream->link->local_sink->edid_caps.allm)
++		return false;
++
++	switch (amdgpu_allm_mode) {
++	case ALLM_MODE_DISABLED:
++		return false;
++
++	case ALLM_MODE_ENABLED_DYNAMIC:
++		break;
++
++	case ALLM_MODE_ENABLED_FORCED:
++		return true;
++	}
++
++	return stream->content_type == DISPLAY_CONTENT_TYPE_GAME ||
++	       stream->vrr_active_variable;
++}
++
++bool is_hdmi_vic_mode(const struct dc_stream_state *stream)
++{
++	bool allm = is_hdmi_allm_mode(stream);
 +	bool stereo = stream->view_format != VIEW_3D_FORMAT_NONE;
 +
 +	if (stream->timing.hdmi_vic == 0)
@@ -7026,27 +7059,6 @@ index b3d55cac3569..e1b7f0c36b9b 100644
 +	return true;
 +}
 +
-+static bool should_enable_allm(const struct dc_stream_state *stream)
-+{
-+	/* Sink doesn't expose ALLM support in edid */
-+	if (!stream->link->local_sink->edid_caps.allm)
-+		return false;
-+
-+	switch (amdgpu_allm_mode) {
-+	case ALLM_DISABLED:
-+		break;
-+
-+	case ALLM_ENABLED_FORCED:
-+		return true;
-+
-+	case ALLM_ENABLED_DYNAMIC:
-+	default:
-+		return stream->vrr_active_variable;
-+	}
-+
-+	return false;
-+}
-+
  /**
   *  mod_build_hf_vsif_infopacket - Prepare HDMI Vendor Specific info frame.
   *                                 Follows HDMI Spec to build up Vendor Specific info frame
@@ -7054,7 +7066,7 @@ index b3d55cac3569..e1b7f0c36b9b 100644
   *
   *  @stream:      contains data we may need to construct VSIF (i.e. timing_3d_format, etc.)
   *  @info_packet: output structure where to store VSIF
-@@ -451,63 +480,76 @@ void mod_build_vsc_infopacket(const struct dc_stream_state *stream,
+@@ -451,63 +481,76 @@ void mod_build_vsc_infopacket(const struct dc_stream_state *stream,
  void mod_build_hf_vsif_infopacket(const struct dc_stream_state *stream,
  		struct dc_info_packet *info_packet)
  {
@@ -7080,7 +7092,7 @@ index b3d55cac3569..e1b7f0c36b9b 100644
 -				&& stream->timing.v_total >= 2160
 -				&& format == TIMING_3D_FORMAT_NONE)
 -			hdmi_vic_mode = true;
-+		allm = should_enable_allm(stream);
++		allm = is_hdmi_allm_mode(stream);
 +		format = stream->view_format == VIEW_3D_FORMAT_NONE ?
 +			 TIMING_3D_FORMAT_NONE :
 +			 stream->timing.timing_3d_format;
@@ -7149,12 +7161,12 @@ index b3d55cac3569..e1b7f0c36b9b 100644
 +			case TIMING_3D_FORMAT_TB_SW_PACKED:
 +				info_packet->sb[5 + offset] = (0x6 << 4);
 +				break;
-+
+ 
+-		if (hdmi_vic_mode)
 +			default:
 +				break;
 +			}
- 
--		if (hdmi_vic_mode)
++
 +		/* Doesn't need the offset as it can't be used with hf-vsif */
 +		} else if (hdmi_vic_mode) {
 +			info_packet->sb[4] = (1 << 5);
@@ -7168,7 +7180,7 @@ index b3d55cac3569..e1b7f0c36b9b 100644
  
  		checksum += info_packet->hb0;
  		checksum += info_packet->hb1;
-@@ -521,6 +563,89 @@ void mod_build_hf_vsif_infopacket(const struct dc_stream_state *stream,
+@@ -521,6 +564,89 @@ void mod_build_hf_vsif_infopacket(const struct dc_stream_state *stream,
  		info_packet->valid = true;
  }
  
@@ -7258,7 +7270,7 @@ index b3d55cac3569..e1b7f0c36b9b 100644
  void mod_build_adaptive_sync_infopacket(const struct dc_stream_state *stream,
  		enum adaptive_sync_type asType,
  		const struct AS_Df_params *param,
-@@ -535,12 +660,13 @@ void mod_build_adaptive_sync_infopacket(const struct dc_stream_state *stream,
+@@ -535,12 +661,13 @@ void mod_build_adaptive_sync_infopacket(const struct dc_stream_state *stream,
  		if (stream != NULL)
  			mod_build_adaptive_sync_infopacket_v2(stream, param, info_packet);
  		break;
@@ -24518,7 +24530,7 @@ index 000000000000..b3ed73cb62d0
 +
 +#endif /* _ASUS_ARMOURY_H_ */
 diff --git a/drivers/platform/x86/asus-wmi.c b/drivers/platform/x86/asus-wmi.c
-index 8e3300f5c294..2bb6459d9b6e 100644
+index 8e3300f5c294..622a073be4ea 100644
 --- a/drivers/platform/x86/asus-wmi.c
 +++ b/drivers/platform/x86/asus-wmi.c
 @@ -15,6 +15,7 @@
@@ -25042,16 +25054,25 @@ index 8e3300f5c294..2bb6459d9b6e 100644
  	asus->ppt_pl2_sppt = 5;
  	asus->ppt_pl1_spl = 5;
  	asus->ppt_apu_sppt = 5;
-@@ -4792,17 +4900,18 @@ static int asus_wmi_add(struct platform_device *pdev)
+@@ -4781,7 +4889,6 @@ static int asus_wmi_add(struct platform_device *pdev)
+ 	asus->egpu_enable_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_EGPU);
+ 	asus->dgpu_disable_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_DGPU);
+ 	asus->kbd_rgb_state_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_TUF_RGB_STATE);
+-	asus->oobe_state_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_OOBE);
+ 
+ 	if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_MINI_LED_MODE))
+ 		asus->mini_led_dev_id = ASUS_WMI_DEVID_MINI_LED_MODE;
+@@ -4792,17 +4899,20 @@ static int asus_wmi_add(struct platform_device *pdev)
  		asus->gpu_mux_dev = ASUS_WMI_DEVID_GPU_MUX;
  	else if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_GPU_MUX_VIVO))
  		asus->gpu_mux_dev = ASUS_WMI_DEVID_GPU_MUX_VIVO;
--
++#endif /* IS_ENABLED(CONFIG_ASUS_WMI_DEPRECATED_ATTRS) */
+ 
 -	if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_TUF_RGB_MODE))
 -		asus->kbd_rgb_dev = ASUS_WMI_DEVID_TUF_RGB_MODE;
 -	else if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_TUF_RGB_MODE2))
 -		asus->kbd_rgb_dev = ASUS_WMI_DEVID_TUF_RGB_MODE2;
-+#endif /* IS_ENABLED(CONFIG_ASUS_WMI_DEPRECATED_ATTRS) */
++	asus->oobe_state_available = asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_OOBE);
  
  	if (asus_wmi_dev_is_present(asus, ASUS_WMI_DEVID_THROTTLE_THERMAL_POLICY))
  		asus->throttle_thermal_policy_dev = ASUS_WMI_DEVID_THROTTLE_THERMAL_POLICY;
@@ -32879,10 +32900,10 @@ index 86b60c2a9815..165be118c5f2 100644
  extern unsigned long sysctl_admin_reserve_kbytes;
  
 diff --git a/include/linux/pagemap.h b/include/linux/pagemap.h
-index 09b581c1d878..35437d521dad 100644
+index e3534d573ebc..3dd623bccd99 100644
 --- a/include/linux/pagemap.h
 +++ b/include/linux/pagemap.h
-@@ -1347,7 +1347,7 @@ struct readahead_control {
+@@ -1358,7 +1358,7 @@ struct readahead_control {
  		._index = i,						\
  	}
  
@@ -34073,7 +34094,7 @@ index 31eda2a56920..cd34d913458f 100644
  BTF_ID_FLAGS(func, bpf_iter_scx_dsq_next, KF_ITER_NEXT | KF_RET_NULL)
  BTF_ID_FLAGS(func, bpf_iter_scx_dsq_destroy, KF_ITER_DESTROY)
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index d1206f81f8b2..4bf8c616d0d0 100644
+index f0c7c94421be..f29c544a6d69 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -76,10 +76,19 @@ unsigned int sysctl_sched_tunable_scaling = SCHED_TUNABLESCALING_LOG;
@@ -34464,7 +34485,7 @@ index 8989d5767528..b03a92a1dced 100644
  
  static int __init init_vm_util_sysctls(void)
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index b2fc8b626d3d..6856191cc993 100644
+index 06071995dacc..58b510c6153d 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -147,6 +147,15 @@ struct scan_control {

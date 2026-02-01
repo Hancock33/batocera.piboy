@@ -1,0 +1,22 @@
+diff --git a/plugins/pinmame/PinMAMEPlugin.cpp b/plugins/pinmame/PinMAMEPlugin.cpp
+index f5be1629a..e48281a8e 100644
+--- a/plugins/pinmame/PinMAMEPlugin.cpp
++++ b/plugins/pinmame/PinMAMEPlugin.cpp
+@@ -464,7 +464,7 @@ MSGPI_EXPORT void MSGPIAPI PinMAMEPluginLoad(const uint32_t sessionId, const Msg
+    scriptApi->SubmitTypeLibrary();
+    scriptApi->SetCOMObjectOverride("VPinMAME.Controller", Controller_SCD);
+ 
+-   PinmameSetMsgAPI(const_cast<MsgPluginAPI*>(msgApi), endpointId);
++   //PinmameSetMsgAPI(const_cast<MsgPluginAPI*>(msgApi), endpointId);
+ }
+ 
+ MSGPI_EXPORT void MSGPIAPI PinMAMEPluginUnload()
+@@ -472,7 +472,7 @@ MSGPI_EXPORT void MSGPIAPI PinMAMEPluginUnload()
+    if (controller)
+       controller->Stop();
+    StopAudioStream();
+-   PinmameSetMsgAPI(nullptr, 0);
++   //PinmameSetMsgAPI(nullptr, 0);
+    msgApi->ReleaseMsgID(getVpxApiMsgId);
+    msgApi->ReleaseMsgID(getScriptApiMsgId);
+    msgApi->ReleaseMsgID(onAudioUpdateId);

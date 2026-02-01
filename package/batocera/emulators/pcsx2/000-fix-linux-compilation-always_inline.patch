@@ -1,5 +1,5 @@
 diff --git a/common/Pcsx2Defs.h b/common/Pcsx2Defs.h
-index be997ecd2..231d61e3f 100644
+index d34f78b75..92a37076f 100644
 --- a/common/Pcsx2Defs.h
 +++ b/common/Pcsx2Defs.h
 @@ -81,7 +81,7 @@ static constexpr unsigned int __pagealignsize = 0x1000;

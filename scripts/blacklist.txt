@@ -6,6 +6,7 @@ firmware-rk3588.mk
 kodi-audiodecoder-openmpt.mk
 lib32bit.mk
 libaltsound.mk
+libdmdutil.mk
 libpinmame.mk
 model2emu.mk
 mt32emu.mk

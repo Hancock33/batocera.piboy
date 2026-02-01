@@ -15,8 +15,8 @@
 # wiringop-python
 #
 ################################################################################
-# Version: Commits on Mar 13, 2025
-WIRINGOP_PYTHON_VERSION = 152a8c14a2273bfc5aeed3ed3f36d41aef002b45
+# Version: Commits on Jan 30, 2026
+WIRINGOP_PYTHON_VERSION = cde245b3183c3abe48194180b2d2203da08225ee
 WIRINGOP_PYTHON_BRANCH = next
 WIRINGOP_PYTHON_SITE = https://github.com/orangepi-xunlong/wiringOP-Python.git
 WIRINGOP_PYTHON_SITE_METHOD = git

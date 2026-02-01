@@ -185,7 +185,7 @@ sudo find ${TARGET_DIR} -type f -name ".files-list-staging.before" -exec rm {} \
 TARGET2_DIR=${TARGET_DIR}2
 echo "Generating target2 (${TARGET2_DIR})..."
 mkdir -p "${TARGET2_DIR}" || exit 1
-for XDIR in lib/firmware usr/lib/libretro
+for XDIR in usr/bin/duckstation usr/bin/mame usr/bin/sonic3-air usr/lib/libretro usr/share/soundfonts
 do
     echo -n "${XDIR}..."
     if test -e "${TARGET_DIR}/${XDIR}"
@@ -198,8 +198,7 @@ do
     then
     echo "Already in target2. Continuing..."
     else
-	echo "${TARGET_DIR}/${XDIR} not found."
-	exit 1
+	echo "${TARGET_DIR}/${XDIR} not found. Skipping."
     fi
 done
 

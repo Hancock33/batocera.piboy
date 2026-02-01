@@ -18,7 +18,6 @@ gamecon_gpio_rpi.mk
 iir.mk
 kodi-pvr-freebox
 ledspicer.mk
-libdmdutil.mk
 libgme.mk
 libretro-mame.mk
 libretro-mgba.mk

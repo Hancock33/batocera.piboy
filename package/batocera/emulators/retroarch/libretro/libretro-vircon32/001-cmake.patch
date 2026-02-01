@@ -1,0 +1,32 @@
+diff --git a/embed-binaries/embed-binaries.cmake b/embed-binaries/embed-binaries.cmake
+index d46353e..1211b8a 100644
+--- a/embed-binaries/embed-binaries.cmake
++++ b/embed-binaries/embed-binaries.cmake
+@@ -230,14 +230,17 @@ function(write_embedded_binary_code asset_name asset_path byte_type constexpr nu
+ 	endif()
+ endfunction()
+ 
+-# Running in script mode
+-# https://stackoverflow.com/questions/51427538/cmake-test-if-i-am-in-scripting-mode
+-if(CMAKE_SCRIPT_MODE_FILE AND NOT CMAKE_PARENT_LIST_FILE)
+-    foreach(variable "asset_name" "asset_path" "byte_type" "constexpr" "null_terminate" "generated_header_path" "generated_implementation_path")
+-        if (NOT DEFINED ${variable})
+-            message(FATAL_ERROR "'${variable}' is not defined")
+-        endif()
+-    endforeach()
+-
+-    write_embedded_binary_code("${asset_name}" "${asset_path}" "${byte_type}" "${constexpr}" "${null_terminate}" "${generated_header_path}" "${generated_implementation_path}")
++
++if(CMAKE_SCRIPT_MODE_FILE)
++	if(NOT CMAKE_SCRIPT_MODE_FILE STREQUAL "${_path_to_embed_binary_myself}")
++		message(WARNING "Including 'embed-binaries.cmake' while in script mode, but it's not the main file, skipping embedding step.\nIn order to silence this warning, please avoid including 'embed-binaries.cmake' while in script mode.\nIf you intended to embed an asset, this is a bug, please create an issue in GitHub")
++	else()
++		foreach(variable "asset_name" "asset_path" "byte_type" "constexpr" "null_terminate" "generated_header_path" "generated_implementation_path")
++			if (NOT DEFINED ${variable})
++				message(FATAL_ERROR "'${variable}' is not defined")
++			endif()
++		endforeach()
++
++		write_embedded_binary_code("${asset_name}" "${asset_path}" "${byte_type}" "${constexpr}" "${null_terminate}" "${generated_header_path}" "${generated_implementation_path}")
++	endif()
+ endif()

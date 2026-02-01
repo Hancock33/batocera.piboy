@@ -1,20 +1,20 @@
 diff --git a/pcsx2/Config.h b/pcsx2/Config.h
-index cdd49113f..e957c7379 100644
+index a81113edf..26a3d5eff 100644
 --- a/pcsx2/Config.h
 +++ b/pcsx2/Config.h
-@@ -1319,6 +1319,7 @@ struct Pcsx2Config
- 		InhibitScreensaver : 1,
+@@ -1328,6 +1328,7 @@ struct Pcsx2Config
  		BackupSavestate : 1,
- 		McdFolderAutoManage : 1,
-+		AutoIncrementSlot : 1,
  		ManuallySetRealTimeClock : 1, // passes user-set real-time clock information to cdvd at startup
  		UseSystemLocaleFormat : 1, // presents OS time format instead of yyyy-MM-dd HH:mm:ss for manual RTC
++		AutoIncrementSlot : 1,
+ 
+ 		HostFs : 1,
  
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index ba8a09011..c431c6d1b 100644
+index 2fa0dcad3..8236748d2 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -1931,6 +1931,7 @@ Pcsx2Config::Pcsx2Config()
+@@ -1934,6 +1934,7 @@ Pcsx2Config::Pcsx2Config()
  	EnableDiscordPresence = false;
  	ManuallySetRealTimeClock = false;
  	UseSystemLocaleFormat = false;
@@ -22,19 +22,19 @@ index ba8a09011..c431c6d1b 100644
  
  	// To be moved to FileMemoryCard pluign (someday)
  	for (uint slot = 0; slot < 8; ++slot)
-@@ -1973,6 +1974,7 @@ void Pcsx2Config::LoadSaveCore(SettingsWrapper& wrap)
+@@ -1976,6 +1977,7 @@ void Pcsx2Config::LoadSaveCore(SettingsWrapper& wrap)
  	SettingsWrapBitBool(EnableDiscordPresence);
  	SettingsWrapBitBool(InhibitScreensaver);
  	SettingsWrapBitBool(HostFs);
 +	SettingsWrapBitBool(AutoIncrementSlot);
  
  	SettingsWrapBitBool(BackupSavestate);
- 	SettingsWrapBitBool(McdFolderAutoManage);
+ 
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 672a35b84..9e597c224 100644
+index e5885ea3e..31e04a0e2 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -2072,6 +2072,12 @@ void VMManager::SaveState(
+@@ -2073,6 +2073,12 @@ void VMManager::SaveState(
  
  void VMManager::SaveStateToSlot(s32 slot, bool zip_on_thread, std::function<void(const std::string&)> error_callback)
  {

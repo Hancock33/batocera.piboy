@@ -1,8 +1,8 @@
 diff --git a/ui/xemu-input.c b/ui/xemu-input.c
-index de1db08f21..7822faa4fd 100644
+index 8d8388916e..24e99a8467 100644
 --- a/ui/xemu-input.c
 +++ b/ui/xemu-input.c
-@@ -214,9 +214,9 @@ void xemu_input_init(void)
+@@ -301,9 +301,9 @@ void xemu_input_init(void)
      int port = xemu_input_get_controller_default_bind_port(new_con, 0);
      if (port >= 0) {
          xemu_input_bind(port, new_con, 0);
@@ -15,7 +15,7 @@ index de1db08f21..7822faa4fd 100644
          xemu_input_rebind_xmu(port);
      }
  
-@@ -337,9 +337,9 @@ void xemu_input_process_sdl_events(const SDL_Event *event)
+@@ -424,9 +424,9 @@ void xemu_input_process_sdl_events(const SDL_Event *event)
          }
  
          if (did_bind) {
