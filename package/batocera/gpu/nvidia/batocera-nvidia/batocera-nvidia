@@ -149,6 +149,9 @@ if [ "$MODE" = "open" ]; then
     # libnvidia-wayland-client.so
     ln -sf /usr/lib/libnvidia-wayland-client.so.$NVIDIA_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-wayland-client.so
     ln -sf /var/run/nvidia/lib/libnvidia-wayland-client.so /usr/lib/libnvidia-wayland-client.so
+    # GBM symlink for Wayland/labwc
+    mkdir -p /usr/lib/gbm
+    ln -sf /usr/lib/libnvidia-allocator.so.$NVIDIA_DRIVER_VERSION /usr/lib/gbm/nvidia-drm_gbm.so
 
     # [symbolic link 32-bit library files]
     mkdir -p /var/run/nvidia/lib32
@@ -224,6 +227,7 @@ if [ "$MODE" = "open" ]; then
     ln -sf /var/run/nvidia/configs/nvidia_layers.json /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
     ln -sf /usr/share/glvnd/egl_vendor.d/10_nvidia_production.json /var/run/nvidia/configs/10_nvidia.json
     ln -sf /var/run/nvidia/configs/10_nvidia.json /usr/share/glvnd/egl_vendor.d/10_nvidia.json
+    mkdir -p /usr/share/X11/xorg.conf.d
     ln -sf /usr/share/nvidia/X11/10-nvidia-production-drm-outputclass.conf /var/run/nvidia/configs/10-nvidia-drm-outputclass.conf
     ln -sf /var/run/nvidia/configs/10-nvidia-drm-outputclass.conf /usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
@@ -335,6 +339,9 @@ elif [ "$MODE" = "legacy580" ]; then
     # libnvidia-wayland-client.so
     ln -sf /usr/lib/libnvidia-wayland-client.so.$NVIDIA580_LEGACY_DRIVER_VERSION /var/run/nvidia/lib/libnvidia-wayland-client.so
     ln -sf /var/run/nvidia/lib/libnvidia-wayland-client.so /usr/lib/libnvidia-wayland-client.so
+    # GBM symlink for Wayland/labwc
+    mkdir -p /usr/lib/gbm
+    ln -sf /usr/lib/libnvidia-allocator.so.$NVIDIA580_LEGACY_DRIVER_VERSION /usr/lib/gbm/nvidia-drm_gbm.so
 
     # [symbolic link 32-bit library files]
     mkdir -p /var/run/nvidia/lib32
@@ -410,6 +417,7 @@ elif [ "$MODE" = "legacy580" ]; then
     ln -sf /var/run/nvidia/configs/nvidia_layers.json /usr/share/vulkan/implicit_layer.d/nvidia_layers.json
     ln -sf /usr/share/glvnd/egl_vendor.d/10_nvidia580_legacy.json /var/run/nvidia/configs/10_nvidia.json
     ln -sf /var/run/nvidia/configs/10_nvidia.json /usr/share/glvnd/egl_vendor.d/10_nvidia.json
+    mkdir -p /usr/share/X11/xorg.conf.d
     ln -sf /usr/share/nvidia/X11/10-nvidia-production-drm-outputclass.conf /var/run/nvidia/configs/10-nvidia-drm-outputclass.conf
     ln -sf /var/run/nvidia/configs/10-nvidia-drm-outputclass.conf /usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
 
@@ -450,4 +458,6 @@ elif test "${MODE}" = "nouveau"; then
     echo "Using OpenSource Mesa Nouveau driver" >> $log
     test -e /var/run/nvidia/modprobe/blacklist-nouveau.conf && rm -f /var/run/nvidia/modprobe/blacklist-nouveau.conf
     test -e /var/run/nvidia/modprobe/nvidia-drm.conf        && rm -f /var/run/nvidia/modprobe/nvidia-drm.conf
+    # Remove the NVIDIA GBM symlink so it defaults back to Mesa
+    rm -f /usr/lib/gbm/nvidia-drm_gbm.so
 fi
