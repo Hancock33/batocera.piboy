@@ -7,12 +7,14 @@ import argparse
 import serial.tools.list_ports
 import subprocess
 import time
+import signal
 from pathlib import Path
 
 NFC_WRITE_TAG_PATH = Path("/var/run/batocera-nfc-write-tag")
 NFC_WRITE_TIME = 30
 NFC_SCRIPTS_SYSTEM_PATH = Path("/usr/share/batocera/scripts")
 NFC_SCRIPTS_USER_PATH   = Path("/userdata/system/configs/emulationstation/scripts")
+NFC_AVAILABLE           = Path("/var/run/batocera-nfc.running")
 
 def get_any_device(vids_pids):
     device = get_pn532_by_id(vids_pids)
@@ -103,6 +105,10 @@ def nfc_write(txt):
         return False
     return True
 
+def cleanup(signum, frame):
+    NFC_AVAILABLE.unlink(missing_ok=True)
+    sys.exit(0)
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--device", type=str, help="example : tty:USB0:pn532")
 parser.add_argument("--write",  type=str, help="string to write")
@@ -134,12 +140,18 @@ if device is None:
     print("No device found")
     exit(0)
 
+signal.signal(signal.SIGTERM, cleanup)
+signal.signal(signal.SIGINT, cleanup)
+
 while True:
     try:
         with nfc.ContactlessFrontend(device) as clf:
+            NFC_AVAILABLE.touch()  # declare that reading is available
             clf.connect(rdwr={'on-connect': on_connect, 'on-release': on_disconnect})
             clf.connect(rdwr={'on-connect': on_connect, 'on-release': on_disconnect})
     except Exception as e:
         print("reader failed with (" + str(e) + ")")
+    finally:
+        NFC_AVAILABLE.unlink(missing_ok=True) # reading is no more available
     time.sleep(3) # avoid looping in case of strange behavior
 ### end ###
