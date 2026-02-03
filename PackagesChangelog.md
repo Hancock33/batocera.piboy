@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|a02548e709b513571908424c763fd853d0c1a5a5|Feb 03, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|f30c6cb1f2f09d25bf6be01ad4e9e7b86fa04c9d|Feb 02, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|f30c6cb1f2f09d25bf6be01ad4e9e7b86fa04c9d|Feb 02, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|f010863ecec4c03af5b7ad7ffe0a40ab145f9cd7|Feb 02, 2026
@@ -118,7 +119,6 @@ Ports|[perfected](http://github.com/dhewm/dhewm3-sdk)|74624368cb2bec65bd14949dc1
 Ports|[realgibs](http://github.com/dhewm/dhewm3-sdk)|ed06a7b12cf836a9c2f8abd746c26acb9eeb99f0|Jan 26, 2026
 Ports|[rivensin](http://github.com/dhewm/dhewm3-sdk)|9cbfc2b03a4aca42f4e848f9e8b465b410c8984e|Jan 26, 2026
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|6103ee0772f4216a14ea4946fd9eff7f3a6f4326|Jan 26, 2026
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|6952ff5b671548288cf4c7a1611bb93c9542bf31|Jan 25, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|8b052ba561814bbbce6a4acbcddd552a09bb619e|Jan 25, 2026
 Ports|[bstone](http://github.com/bibendovsky/bstone)|0bed02e8291e44429f6a2f814db4a801cba6ad12|Jan 25, 2026
 Controllers|[xone](http://github.com/dlundqvist/xone)|8e772cf696e6fd78ff6b9ca3eba9505391dc44d2|Jan 25, 2026
@@ -327,6 +327,7 @@ Engines|[python-pygame2](http://github.com/pygame/pygame)|85fda3f719d437cf27106a
 Ports|[raptorcots](http://github.com/skynettx/raptor)|0019c5dd8e3cf283086a0ab7538dbceb4dc4862c|Oct 05, 2025
 Hardware|[dmd-play-rust](http://github.com/batocera-linux/dmd-play-rust)|912cd34b1d1895d7913eb60fc653f6c6f60d4f2c|Oct 04, 2025
 Hardware|[dmd-simulator](http://github.com/batocera-linux/dmd-simulator)|6298b07d0a083f4531236adb54d4d272e82f297b|Oct 03, 2025
+Emulators|[vpinball](http://github.com/vpinball/vpinball)|3ec37c7f9a7f57168802ca7bbb3fd9f6b745bdc3|Sep 27, 2025
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|21f8bc494305fac47003202522249e81af95067e|Sept 27, 2025
 Libraries|[python-cog](http://github.com/nedbat/cog)|v3.6.0|Sept 21, 2025
 Emulators|[libretro-watara](http://github.com/libretro/potator)|ad87bc6068ef126e48339b440465fb0bf5a2794f|Sept 18, 2025
@@ -416,6 +417,7 @@ Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6f
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Libraries|[pysdl2](http://github.com/py-sdl/py-sdl2)|0.9.17|Dec 30, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
+Ports|[ioquake3](http://github.com/ioquake/ioq3)|3fb9006e6461b877b67781cd0f0d94032804a475|Dec 25, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
 Utils|[7zip](https://www.7-zip.org/a)|2501|Nov 29, 2024
 Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)|ec83dc1a5ea8bdbcd02cee81779c6dbe0e996ed2|Nov 27, 2024
@@ -468,6 +470,7 @@ Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Boot|[batocera-shim-signed-efi-ia32](https://ftp.debian.org/debian/pool/main/s/shim-signed)|1.44~1+deb12u1+15.8-1~deb12u1|Aug 16, 2024
 Utils|[xxd](http://github.com/ckormanyos/xxd)|v1.2|Aug 06, 2024
+Emulators|[ikemen](https://github.com/ikemen-engine/Ikemen-GO)|02a078d6bf189ff56bbcbbbc8dbfd81753692c56|Aug 1, 2024
 Hardware|[pironman](http://github.com/sunfounder/pironman)|997c361ed71fff859d832e171f63180fbbb4e314|Jul 24, 2024
 Engines|[vpinball](http://github.com/vpinball/vpinball)|afc7c38ffb1078076ec523c37b30055061c93ff1|Jul 23, 2024
 Utils|[fake-hwclock](https://git.einval.com/git/fake-hwclock.git)|00a0feb706bfc11e1e0dbaa887c603b8f9875c78|Jul 14, 2024
@@ -478,6 +481,7 @@ Emulators|[libretro-freechaf](https://github.com/libretro/FreeChaF.git)|cdb8ad6f
 Emulators|[libretro-gong](http://github.com/libretro/gong)|11d98233f9bba2dec60cae555b196684fd9d2aa5|Jun 28, 2024
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.5.0|May 27, 2024
+Ports|[iortcw](https://github.com/iortcw/iortcw.git)|438e7d413b5f7277187c35b032eb0ef9093ae778|May 27, 2024
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[rtcw](http://github.com/iortcw/iortcw)|438e7d413b5f7277187c35b032eb0ef9093ae778|May 26, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
@@ -506,11 +510,13 @@ Boot|[batocera-syslinux-efi](binaries)|6.04.pre2.r11.gbf6db5b4-2|Nov 29, 2023
 Utils|[tvtextviewer](https://github.com/lethal-guitar/TvTextViewer.git)|d3cc00a5009ece2d1df6cfc571709d0c5752bade|Nov 29, 2023
 Engines|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
 Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e68831f5576075c45c147f86865812afb816139|Nov 02, 2023
+Emulators|[libretro-imame](http://github.com/libretro/mame2000-libretro)|1472da3a39ab14fff8325b1f51a1dfdb8eabb5c8|Oct 31, 2023
 Libraries|[tomlplusplus](http://github.com/marzer/tomlplusplus)|v3.4.0|Oct 13, 2023
 Controllers|[guncon](http://github.com/Redemp/guncon2)|c5fa9fa19fe32c67b4e36eb9557d8fb06c9d200f|Sept 23, 2023
 Controllers|[sinden-guns-libs](http://github.com/batocera-linux/batocera-sinden-bundles)|a18005ab0ce07d0d18f8575ba21162c58fbd2520|Sept 18, 2023
 Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f997460697013fc54029fcac681|Aug 13, 2023
 Gpu|[mali-G31](http://github.com/Multi-Retropie/vim1s-g31)|2e33bb43d343336fbcf1f4d4a241af6c04f6af3d|Aug 06, 2023
+Emulators|[duckstation-legacy](https://github.com/stenzek/duckstation.git)|56ac3d6c324ec4520dac433b071ecab6227fb459|Aug 4, 2023 - DON'T BUMP
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.0.0|Aug 03, 2023
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.1|Jun 14, 2023
@@ -519,6 +525,7 @@ Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libret
 Controllers|[xarcade2jstick](http://github.com/petrockblog/xarcade2jstick)|7b579e9e9554e6d997978d069ddeb566ff381007|Apr 10, 2023
 Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.58+15.8-0ubuntu1|Apr 04, 2023
 Controllers|[guncon3](http://github.com/pcnimdock/guncon3_dkms)|0dfe0feaa2afc37a8a70f6cd0f6c803ee4d89f40|Mar 22, 2023
+Emulators|[libretro-same-cdi](http://github.com/libretro/same_cdi)|54cf493c2dee4c46666059c452f8aaaa0bd7c8e0|Mar 1, 2023
 Utils|[cabextract](http://github.com/kyz/libmspack)|v1.11|Feb 24, 2023
 Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
@@ -526,6 +533,7 @@ Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09fe
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
+Emulators|[libretro-boom3](http://github.com/libretro/boom3)|0bea79abf5ec8262dfe9af73cb8c54ea6e2aeb98|Aug 10, 2022
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|277e4a62668597d4f59cadda1cbafb844f981d45|Jul 26, 2022
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
@@ -584,5 +592,24 @@ Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d
 Libraries|[python-proxy-tools](https://files.pythonhosted.org/packages/f2/cf/77d3e19b7fabd03895caca7857ef51e4c409e0ca6b37ee6e9f7daa50b642)|0.1.0|May 06, 2014
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
+Emulators|[cemu-android](https://github.com/SSimco/Cemu)|$(CEMU_ANDROID_MAJOR).$(CEMU_ANDROID_MINOR)-$(CEMU_ANDROID_PATCH)|N/A
+Emulators|[citron](https://git.citron-emu.org/Citron/Citron.git)|v0.6.1-canary-refresh|N/A
+Emulators|[pifba](http://github.com/batocera-linux/pifba)|419faa7c3967560f6fa149f2f78b5aedca5b123a|N/A
+Emulators|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-01-31|N/A
+Emulators|[scummvm](http://github.com/scummvm/scummvm)|v2.9.1|N/A
 Looks|[lightgun-controllers-art](\)|e97a86c2fa659018d069fb2ae8ae1cb439f7a6c5|N/A
+Ports|[gzdoom](https://github.com/ZDoom/gzdoom.git)|g4.14.2|N/A
+Ports|[sonic-mania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|v1.1.1|N/A
+Ports|[taradino](https://github.com/fabiangreffrath/taradino.git)|20251222|N/A
+Ports|[tr1x](http://github.com/LostArtefacts/TRX)|tr1-4.8.3|N/A
+Ports|[tr2x](http://github.com/LostArtefacts/TRX)|tr2-0.9.2|N/A
+Ports|[tyrian](http://github.com/opentyrian/opentyrian)|v2.1.20221123|N/A
+Ports|[yquake2](http://github.com/yquake2/yquake2)|QUAKE2_8_60|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A
+Wine|[wine-tkg](https://github.com/Kron4ek/wine-tkg)|10.20|N/A
+Emulators|[openbor6330](http://github.com/DCurrent/openbor)|v6330|N/A
+Emulators|[openbor6510](http://github.com/DCurrent/openbor)|v6510-dev|N/A
+Emulators|[libretro-fbalpha](http://github.com/libretro/fbalpha2012)|b7ac554c53561d41640372f23dab15cd6fc4f0c4|N/A
+Emulators|[libretro-flycastvl](http://github.com/libretro/flycast)|4a913e063c95d1fae98afc64645831de0bcad57e|N/A
+Emulators|[libretro-play](https://github.com/jpd002/Play-.git)|0.72|N/A
+Emulators|[libretro-stella2014](http://github.com/libretro/stella2014-libretro)|8ab051edd4816f33a5631d230d54059eeed52c5f|N/A

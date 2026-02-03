@@ -10,7 +10,7 @@ SONICMANIA_SITE_METHOD = git
 SONICMANIA_GIT_SUBMODULES = YES
 SONICMANIA_SUPPORTS_IN_SOURCE_BUILD = NO
 SONICMANIA_LICENSE = Custom
-
+SONICMANIA_EMULATOR_INFO = sonicmania.emulator.yml
 SONICMANIA_DEPENDENCIES += libogg libtheora portaudio sdl2
 
 SONICMANIA_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -24,3 +24,4 @@ define SONICMANIA_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))
