@@ -7,7 +7,8 @@
 LIBRETRO_FMSX_VERSION = fbe4dfc4c3e3f7eb27089def3d663a905b181845
 LIBRETRO_FMSX_SITE = $(call github,libretro,fmsx-libretro,$(LIBRETRO_FMSX_VERSION))
 LIBRETRO_FMSX_LICENSE = GPLv2
-LIBRETRO_FMSX_DEPENDENCIES = retroarch
+LIBRETRO_FMSX_DEPENDENCIES += retroarch
+LIBRETRO_FMSX_EMULATOR_INFO = fmsx.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_FMSX_PLATFORM = rpi2
@@ -41,3 +42,4 @@ define LIBRETRO_FMSX_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

@@ -21,6 +21,7 @@ OPENMOHAA_SITE = $(call github,openmoh,openmohaa,$(OPENMOHAA_VERSION))
 OPENMOHAA_SUPPORTS_IN_SOURCE_BUILD = NO
 OPENMOHAA_LICENSE = GPL-2.0 license
 OPENMOHAA_LICENSE_FILE = COPYING.txt
+OPENMOHAA_EMULATOR_INFO = openmohaa.emulator.yml
 
 OPENMOHAA_DEPENDENCIES += libcurl openal sdl2
 
@@ -43,3 +44,4 @@ endef
 OPENMOHAA_POST_INSTALL_TARGET_HOOKS += OPENMOHAA_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

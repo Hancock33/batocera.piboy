@@ -9,7 +9,8 @@ LIBRETRO_ZC210_SITE = https://github.com/netux79/zc210-libretro.git
 LIBRETRO_ZC210_SITE_METHOD=git
 LIBRETRO_ZC210_GIT_SUBMODULES=YES
 LIBRETRO_ZC210_LICENSE = GPLv2
-LIBRETRO_ZC210_DEPENDENCIES = retroarch
+LIBRETRO_ZC210_DEPENDENCIES += retroarch
+LIBRETRO_ZC210_EMULATOR_INFO = zc210.libretro.core.yml
 
 define LIBRETRO_ZC210_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -28,3 +29,4 @@ define LIBRETRO_ZC210_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

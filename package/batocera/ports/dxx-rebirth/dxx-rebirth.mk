@@ -8,6 +8,7 @@ DXX_REBIRTH_VERSION = 51726f3c82763ced293e204494fa22376e9e787b
 DXX_REBIRTH_SITE = $(call github,dxx-rebirth,dxx-rebirth,$(DXX_REBIRTH_VERSION))
 DXX_REBIRTH_LICENSE = GPLv3
 DXX_REBIRTH_LICENSE_FILE = COPYING.txt
+DXX_REBIRTH_EMULATOR_INFO = dxx-rebirth.emulator.yml
 DXX_REBIRTH_DEPENDENCIES = host-scons sdl2 sdl2_image sdl2_mixer libpng physfs libglu
 
 DXX_REBIRTH_LDFLAGS   = $(TARGET_LDFLAGS)
@@ -48,3 +49,4 @@ endef
 DXX_REBIRTH_POST_INSTALL_TARGET_HOOKS += DXX_REBIRTH_EVMAPY
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

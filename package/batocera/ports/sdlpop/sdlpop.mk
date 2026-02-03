@@ -9,6 +9,7 @@ SDLPOP_SITE = $(call github,NagyD,SDLPoP,$(SDLPOP_VERSION))
 SDLPOP_SUBDIR = src
 SDLPOP_LICENSE = GPLv3
 SDLPOP_DEPENDENCIES = sdl2 sdl2_image
+SDLPOP_EMULATOR_INFO = sdlpop.emulator.yml
 
 define SDLPOP_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/Makefile
@@ -32,3 +33,4 @@ define SDLPOP_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

@@ -11,6 +11,9 @@ RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-font
 # install in staging for debugging (gdb)
 RETROARCH_INSTALL_STAGING = YES
 
+$(eval $(call register,libretro.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.libretro.emulator.yml))
+
 RETROARCH_CONF_OPTS = --disable-oss --disable-qt --enable-threads --enable-ozone \
 	--enable-xmb --disable-discord --enable-flac --enable-lua --enable-networking \
 	--enable-translate --enable-rgui --disable-cdrom
@@ -200,6 +203,7 @@ RETROARCH_POST_INSTALL_TARGET_HOOKS += RETROARCH_LIBRETRO_FFMPEG_INSTALL
 #endif
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))
 
 # DEFINITION OF LIBRETRO PLATFORM
 LIBRETRO_PLATFORM = unix

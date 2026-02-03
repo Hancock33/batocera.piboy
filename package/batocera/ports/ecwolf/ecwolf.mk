@@ -10,6 +10,7 @@ ECWOLF_SITE_METHOD=git
 ECWOLF_GIT_SUBMODULES=YES
 ECWOLF_LICENSE = Non-commercial
 ECWOLF_DEPENDENCIES = host-ecwolf sdl2 sdl2_mixer sdl2_net zlib bzip2 jpeg
+ECWOLF_EMULATOR_INFO = ecwolf.emulator.yml
 ECWOLF_SUPPORTS_IN_SOURCE_BUILD = YES
 
 HOST_ECWOLF_CONF_OPTS += -DTOOLS_ONLY=ON
@@ -39,3 +40,4 @@ endef
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
+$(eval $(emulator-info-package))

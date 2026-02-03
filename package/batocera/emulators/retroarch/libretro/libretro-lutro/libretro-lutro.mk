@@ -7,7 +7,8 @@
 LIBRETRO_LUTRO_VERSION = b84d0605e847e07657a44a1a11374a03a6e8a489
 LIBRETRO_LUTRO_SITE = $(call github,libretro,libretro-lutro,$(LIBRETRO_LUTRO_VERSION))
 LIBRETRO_LUTRO_LICENSE = MIT
-LIBRETRO_LUTRO_DEPENDENCIES = retroarch
+LIBRETRO_LUTRO_DEPENDENCIES += retroarch
+LIBRETRO_LUTRO_EMULATOR_INFO = lutro.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_LUTRO_PLATFORM = rpi2
@@ -39,3 +40,4 @@ define LIBRETRO_LUTRO_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

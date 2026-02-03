@@ -10,6 +10,10 @@ MAME_LICENSE = MAME
 MAME_DEPENDENCIES += expat flac fontconfig glm jpeg libpng lua pulseaudio
 MAME_DEPENDENCIES += rapidjson sdl2 sdl2_ttf sqlite zlib
 
+$(eval $(call register,mame.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,bgfxbackend.mame.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY,sega-arcade.mame.emulator.yml))
+
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     MAME_CROSS_ARCH = x86_64
 endif
@@ -157,3 +161,4 @@ endef
 MAME_POST_INSTALL_TARGET_HOOKS += MAME_EVMAPY
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

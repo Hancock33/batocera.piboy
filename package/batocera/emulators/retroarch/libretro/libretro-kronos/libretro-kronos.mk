@@ -7,7 +7,8 @@
 LIBRETRO_KRONOS_VERSION = d0384bc33aad06bfa9cf5cd308c4bd7ae6cfc814
 LIBRETRO_KRONOS_SITE = $(call github,FCare,kronos,$(LIBRETRO_KRONOS_VERSION))
 LIBRETRO_KRONOS_LICENSE = BSD-3-Clause
-LIBRETRO_KRONOS_DEPENDENCIES += mesa3d retroarch
+LIBRETRO_KRONOS_DEPENDENCIES += mesa3d
+LIBRETRO_KRONOS_EMULATOR_INFO = kronos.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 LIBRETRO_KRONOS_DEPENDENCIES += libglvnd
@@ -43,3 +44,4 @@ define LIBRETRO_KRONOS_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

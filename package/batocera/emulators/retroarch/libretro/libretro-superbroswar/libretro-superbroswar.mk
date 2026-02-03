@@ -9,7 +9,8 @@ LIBRETRO_SUPERBROSWAR_SITE = https://github.com/libretro/superbroswar-libretro.g
 LIBRETRO_SUPERBROSWAR_SITE_METHOD = git
 LIBRETRO_SUPERBROSWAR_LICENSE = GPLv3
 LIBRETRO_SUPERBROSWAR_GIT_SUBMODULES = YES
-LIBRETRO_SUPERBROSWAR_DEPENDENCIES = retroarch
+LIBRETRO_SUPERBROSWAR_DEPENDENCIES += retroarch
+LIBRETRO_SUPERBROSWAR_EMULATOR_INFO = superbroswar.libretro.core.yml
 
 define LIBRETRO_SUPERBROSWAR_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-incompatible-pointer-types|g" $(@D)/Makefile.libretro
@@ -22,3 +23,4 @@ define LIBRETRO_SUPERBROSWAR_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

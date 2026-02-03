@@ -7,7 +7,8 @@
 LIBRETRO_PCSX_VERSION = 94a7ee303c7852799caceb5af93cfd4f75c442e0
 LIBRETRO_PCSX_SITE = $(call github,libretro,pcsx_rearmed,$(LIBRETRO_PCSX_VERSION))
 LIBRETRO_PCSX_LICENSE = GPLv2
-LIBRETRO_PCSX_DEPENDENCIES = retroarch
+LIBRETRO_PCSX_DEPENDENCIES += retroarch
+LIBRETRO_PCSX_EMULATOR_INFO = pcsx_rearmed.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
     LIBRETRO_PCSX_PLATFORM = CortexA73_G12B
@@ -51,3 +52,4 @@ define LIBRETRO_PCSX_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

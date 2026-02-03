@@ -7,10 +7,12 @@
 DUCKSTATION_VERSION = 016c08b9c35a0ccf4196b21bc10c7d057af689d8
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
+DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
 DUCKSTATION_DEPENDENCIES += noto-cjk-fonts plutosvg plutovg sdl3 stenzek-shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += host-clang host-spirv-cross spirv-cross
-DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
+DUCKSTATION_DEPENDENCIES += duckstation-common
+DUCKSTATION_EMULATOR_INFO = duckstation.duckstation.core.yml
 
 DUCKSTATION_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -flto"
 DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -flto"
@@ -70,3 +72,4 @@ endif
 DUCKSTATION_POST_INSTALL_TARGET_HOOKS += DUCKSTATION_EVMPAY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

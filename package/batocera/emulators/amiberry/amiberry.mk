@@ -10,6 +10,7 @@ AMIBERRY_LICENSE = GPLv3
 AMIBERRY_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123
 AMIBERRY_DEPENDENCIES += portmidi sdl2 sdl2_image sdl2_ttf zlib
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
+AMIBERRY_EMULATOR_INFO = amiberry.emulator.yml
 
 AMIBERRY_CONF_OPTS += -DWITH_LTO=ON
 
@@ -21,3 +22,4 @@ endef
 AMIBERRY_POST_INSTALL_TARGET_HOOKS = AMIBERRY_EVMAP
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

@@ -19,6 +19,9 @@ ifeq ($(BR2_PACKAGE_DOLPHIN_TRIFORCE),y)
     DOLPHIN_EMU_DEPENDENCIES += dolphin-triforce
 endif
 
+$(eval $(call register,dolphin.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.dolphin.emulator.yml))
+
 DOLPHIN_EMU_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_EMU_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_EMU_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -flto"
@@ -66,3 +69,4 @@ endef
 DOLPHIN_EMU_PRE_CONFIGURE_HOOKS = DOLPHIN_EMU_PRE_CONFIGURE_HOOK
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

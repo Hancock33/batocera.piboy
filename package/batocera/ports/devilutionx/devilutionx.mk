@@ -7,6 +7,7 @@
 DEVILUTIONX_VERSION = afdaa2ac5e8e92830e8dac5be1976ea42ae67434
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
+DEVILUTIONX_EMULATOR_INFO = devilutionx.emulator.yml
 DEVILUTIONX_DEPENDENCIES = bzip2 fmt libpng libsodium lpeg lua lua-lpeg-patterns luafilesystem luasec luasocket sdl2 sdl2_image
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -34,3 +35,4 @@ endef
 DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_ASSETS
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

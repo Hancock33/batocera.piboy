@@ -7,7 +7,8 @@
 LIBRETRO_GEARSYSTEM_VERSION = 8a96f3dfb8e3dab33b3fdad6fa34463cd86e694e
 LIBRETRO_GEARSYSTEM_SITE = $(call github,drhelius,Gearsystem,$(LIBRETRO_GEARSYSTEM_VERSION))
 LIBRETRO_GEARSYSTEM_LICENSE = GPLv3
-LIBRETRO_GEARSYSTEM_DEPENDENCIES = retroarch
+LIBRETRO_GEARSYSTEM_DEPENDENCIES += retroarch
+LIBRETRO_GEARSYSTEM_EMULATOR_INFO = gearsystem.libretro.core.yml
 
 define LIBRETRO_GEARSYSTEM_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/platforms/libretro/Makefile
@@ -21,3 +22,4 @@ define LIBRETRO_GEARSYSTEM_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

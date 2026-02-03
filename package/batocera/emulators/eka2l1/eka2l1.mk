@@ -10,6 +10,7 @@ EKA2L1_SITE_METHOD=git
 EKA2L1_GIT_SUBMODULES=YES
 EKA2L1_LICENSE = GPLv2
 EKA2L1_DEPENDENCIES = qt6base qt6multimedia qt6svg
+EKA2L1_EMULATOR_INFO = eka2l1.emulator.yml
 
 EKA2L1_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -39,3 +40,4 @@ define EKA2L1_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

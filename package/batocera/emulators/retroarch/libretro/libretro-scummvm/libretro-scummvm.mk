@@ -11,6 +11,7 @@ LIBRETRO_SCUMMVM_BRANCH = branch-2026-1-0
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
 LIBRETRO_SCUMMVM_DEPENDENCIES = faad2 flac freetype jpeg libmad libmpeg2 libogg libpng libtheora libvorbis
 LIBRETRO_SCUMMVM_DEPENDENCIES += retroarch sdl2 zlib
+LIBRETRO_SCUMMVM_EMULATOR_INFO = scummvm.libretro.core.yml
 
 LIBRETRO_SCUMMVM_PLATFORM = $(LIBRETRO_PLATFORM)
 
@@ -56,3 +57,4 @@ endef
 LIBRETRO_SCUMMVM_POST_EXTRACT_HOOKS = LIBRETRO_SCUMMVM_GIT_DL
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

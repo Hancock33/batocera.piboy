@@ -12,6 +12,7 @@ PCSX2_GIT_SUBMODULES = YES
 PCSX2_LICENSE = GPLv3
 PCSX2_LICENSE_FILE = COPYING.GPLv3
 PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
+PCSX2_EMULATOR_INFO = pcsx2.emulator.yml
 
 PCSX2_GIT_TAG_HI = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 1)
 PCSX2_GIT_TAG_MID = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 2)
@@ -92,3 +93,4 @@ PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_CROSSHAIRS
 PCSX2_PRE_PATCH_HOOKS += PCSX2_RETROACHIEVEMENTS
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

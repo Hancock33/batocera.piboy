@@ -10,6 +10,7 @@ PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
 PLAY_DEPENDENCIES = ecm libevdev openal qt6base sqlite
+PLAY_EMULATOR_INFO = play.emulator.yml
 
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PLAY_CONF_OPTS += -DINSTALL_STATIC_LIBS=ON
@@ -39,3 +40,4 @@ endef
 PLAY_POST_INSTALL_TARGET_HOOKS += PLAY_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

@@ -10,6 +10,7 @@ SONICCD_SITE_METHOD = git
 SONICCD_GIT_SUBMODULES = YES
 SONICCD_SUPPORTS_IN_SOURCE_BUILD = NO
 SONICCD_LICENSE = Custom
+SONICCD_EMULATOR_INFO = soniccd.emulator.yml
 
 SONICCD_DEPENDENCIES = libogg libtheora libvorbis sdl2
 
@@ -22,3 +23,4 @@ define SONICCD_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

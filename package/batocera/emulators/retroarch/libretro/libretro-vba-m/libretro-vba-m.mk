@@ -6,7 +6,8 @@
 # Version: Commits on Jan 26, 2026
 LIBRETRO_VBA_M_VERSION = d24e4bf7f55edd30a1867639df2cdab9f871329c
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
-LIBRETRO_VBA_M_DEPENDENCIES = retroarch
+LIBRETRO_VBA_M_DEPENDENCIES += retroarch
+LIBRETRO_VBA_M_EMULATOR_INFO = vba-m.libretro.core.yml
 
 define LIBRETRO_VBA_M_BUILD_CMDS
 	$(SED) "s|\-O[23fast]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/libretro/Makefile
@@ -19,3 +20,4 @@ define LIBRETRO_VBA_M_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

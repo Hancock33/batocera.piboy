@@ -10,6 +10,7 @@ MELONDS_LICENSE = GPLv2
 MELONDS_SUPPORTS_IN_SOURCE_BUILD = NO
 MELONDS_DEPENDENCIES += ecm enet libarchive libepoxy sdl2 slirp
 MELONDS_DEPENDENCIES += qt6base qt6multimedia qt6svg
+MELONDS_EMULATOR_INFO = melonds.emulator.yml
 
 MELONDS_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr"
 MELONDS_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -26,3 +27,4 @@ define MELONDS_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

@@ -9,6 +9,7 @@ LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = sdl2 freetype pcre jpeg libpng cairo pango ffmpeg libcurl rtmpdump
 LIGHTSPARK_SUPPORTS_IN_SOURCE_BUILD = NO
+LIGHTSPARK_EMULATOR_INFO = lightspark.emulator.yml
 
 LIGHTSPARK_CONF_OPTS += -DCOMPILE_NPAPI_PLUGIN=FALSE -DCOMPILE_PPAPI_PLUGIN=FALSE
 
@@ -38,3 +39,4 @@ define LIGHTSPARK_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

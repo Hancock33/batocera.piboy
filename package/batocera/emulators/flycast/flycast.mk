@@ -10,6 +10,8 @@ FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
 FLYCAST_LICENSE = GPLv2
 FLYCAST_DEPENDENCIES = libao libcurl libminiupnpc libpng libzip sdl2
+FLYCAST_EMULATOR_INFO = flycast.emulator.yml
+
 FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 FLYCAST_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -41,3 +43,4 @@ endef
 FLYCAST_POST_EXTRACT_HOOKS = FLYCAST_GET_SUBMODULE
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

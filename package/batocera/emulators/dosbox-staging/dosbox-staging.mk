@@ -10,6 +10,8 @@ DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGI
 DOSBOX_STAGING_DEPENDENCIES = iir libpng libogg libvorbis mt32emu opus opusfile
 DOSBOX_STAGING_DEPENDENCIES += sdl2 sdl2_image speexdsp zlib
 DOSBOX_STAGING_LICENSE = GPLv2
+DOSBOX_STAGING_EMULATOR_INFO = dosbox_staging.emulator.yml
+
 DOSBOX_STAGING_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
 
 DOSBOX_STAGING_CONF_OPTS = \
@@ -60,3 +62,4 @@ endef
 DOSBOX_STAGING_POST_INSTALL_TARGET_HOOKS = DOSBOX_STAGING_ORIGINAL
 
 $(eval $(meson-package))
+$(eval $(emulator-info-package))

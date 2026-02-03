@@ -10,6 +10,8 @@ HURRICAN_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image libepoxy libopenmpt
 HURRICAN_SITE_METHOD=git
 HURRICAN_GIT_SUBMODULES=YES
 HURRICAN_LICENSE = GPL-2.0
+HURRICAN_EMULATOR_INFO = hurrican.emulator.yml
+
 HURRICAN_SUPPORTS_IN_SOURCE_BUILD = NO
 HURRICAN_SUBDIR = Hurrican
 
@@ -31,3 +33,4 @@ define HURRICAN_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

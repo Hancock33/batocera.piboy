@@ -8,6 +8,7 @@ LINDBERGH_LOADER_VERSION = 3b7d10514fbf35e9f209eb91cbeb82e645633177
 LINDBERGH_LOADER_SITE = $(call github,lindbergh-loader,lindbergh-loader,$(LINDBERGH_LOADER_VERSION))
 LINDBERGH_LOADER_LICENSE = ShareAlike 4.0 International
 LINDBERGH_LOADER_LICENSE_FILES = LICENSE.md
+LINDBERGH_LOADER_EMULATOR_INFO = lindbergh-loader.emulator.yml
 
 ifeq ($(BR2_x86_64),y)
 LINDBERGH_LOADER_DEPENDENCIES = wine-x86 dmidecode ossp
@@ -49,3 +50,4 @@ endef
 endif
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

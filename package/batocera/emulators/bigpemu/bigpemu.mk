@@ -7,6 +7,7 @@
 BIGPEMU_VERSION = v121
 BIGPEMU_SOURCE = BigPEmu_$(BIGPEMU_ARCH)_$(BIGPEMU_VERSION).tar.gz
 BIGPEMU_SITE = https://www.richwhitehouse.com/jaguar/builds
+BIGPEMU_EMULATOR_INFO = bigpemu.emulator.yml
 
 ifeq ($(BR2_aarch64),y)
     BIGPEMU_ARCH = LinuxARM64
@@ -21,3 +22,4 @@ define BIGPEMU_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

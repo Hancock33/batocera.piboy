@@ -13,6 +13,9 @@ AZAHAR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AZAHAR_DEPENDENCIES += boost cubeb fdk-aac ffmpeg fmt openal sdl2
 
+$(eval $(call register,azahar.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,graphics.azahar.emulator.yml))
+
 AZAHAR_CONF_OPTS += -DAZAHAR_ENABLE_COMPATIBILITY_REPORTING=ON
 AZAHAR_CONF_OPTS += -DAZAHAR_WARNINGS_AS_ERRORS=OFF
 AZAHAR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -72,3 +75,4 @@ endef
 AZAHAR_POST_INSTALL_TARGET_HOOKS = AZAHAR_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

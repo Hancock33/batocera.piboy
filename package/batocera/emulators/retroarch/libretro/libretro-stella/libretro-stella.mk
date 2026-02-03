@@ -7,7 +7,8 @@
 LIBRETRO_STELLA_VERSION = 2da2e050d261f0f2df40eec3ca64f73e05bde5f6
 LIBRETRO_STELLA_SITE = $(call github,stella-emu,stella,$(LIBRETRO_STELLA_VERSION))
 LIBRETRO_STELLA_LICENSE = GPLv2
-LIBRETRO_STELLA_DEPENDENCIES = retroarch
+LIBRETRO_STELLA_DEPENDENCIES += retroarch
+LIBRETRO_STELLA_EMULATOR_INFO = stella.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_STELLA_PLATFORM = rpi2
@@ -33,3 +34,4 @@ define LIBRETRO_STELLA_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

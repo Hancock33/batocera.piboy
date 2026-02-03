@@ -12,6 +12,7 @@ DOLPHIN_TRIFORCE_GIT_SUBMODULES = YES
 DOLPHIN_TRIFORCE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DOLPHIN_TRIFORCE_DEPENDENCIES += bluez5_utils cpp-ipc ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl3 xz zlib
+DOLPHIN_TRIFORCE_EMULATOR_INFO = dolphin_triforce.emulator.yml
 
 DOLPHIN_TRIFORCE_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_TRIFORCE_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
@@ -82,3 +83,4 @@ endef
 DOLPHIN_TRIFORCE_POST_INSTALL_TARGET_HOOKS += DOLPHIN_TRIFORCE_EXTRAS
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

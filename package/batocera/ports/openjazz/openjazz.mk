@@ -8,6 +8,7 @@ OPENJAZZ_VERSION = 5ea6d14d8cbf54f898d49be9c1899a2173122dae
 OPENJAZZ_SITE =  $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
 OPENJAZZ_DEPENDENCIES = sdl2
 OPENJAZZ_LICENSE = GPLv2
+OPENJAZZ_EMULATOR_INFO = openjazz.emulator.yml
 
 OPENJAZZ_CONF_OPTS += -DDATAPATH=/userdata/roms/ports/openjazz
 OPENJAZZ_CONF_OPTS += -DFULLSCREEN_ONLY=ON
@@ -18,3 +19,4 @@ define OPENJAZZ_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

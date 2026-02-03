@@ -7,7 +7,8 @@
 LIBRETRO_UZEM_VERSION = cd6004ea143435cfdb6b12e7c6779dab499f7829
 LIBRETRO_UZEM_SITE = $(call github,libretro,libretro-uzem,$(LIBRETRO_UZEM_VERSION))
 LIBRETRO_UZEM_LICENSE = MIT
-LIBRETRO_UZEM_DEPENDENCIES = retroarch
+LIBRETRO_UZEM_DEPENDENCIES += retroarch
+LIBRETRO_UZEM_EMULATOR_INFO = uzem.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_UZEM_PLATFORM = rpi2
@@ -32,3 +33,4 @@ define LIBRETRO_UZEM_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

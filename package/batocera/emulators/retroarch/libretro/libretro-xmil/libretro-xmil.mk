@@ -7,7 +7,8 @@
 LIBRETRO_XMIL_VERSION = 6a52dc21a5ff106137670bb600ab2ce3fcebeb1b
 LIBRETRO_XMIL_SITE =  $(call github,libretro,xmil-libretro,$(LIBRETRO_XMIL_VERSION))
 LIBRETRO_XMIL_LICENSE = BSD-3
-LIBRETRO_XMIL_DEPENDENCIES = retroarch
+LIBRETRO_XMIL_DEPENDENCIES += retroarch
+LIBRETRO_XMIL_EMULATOR_INFO = x1.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_XMIL_PLATFORM = rpi2
@@ -32,3 +33,4 @@ define LIBRETRO_XMIL_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

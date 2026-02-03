@@ -8,6 +8,7 @@ LIBRETRO_NEOCD_VERSION = 5eca2c8fd567b5261251c65ecafa8cf5b179d1d2
 LIBRETRO_NEOCD_SITE = $(call github,libretro,neocd_libretro,$(LIBRETRO_NEOCD_VERSION))
 LIBRETRO_NEOCD_LICENSE = GPLv3
 LIBRETRO_NEOCD_DEPENDENCIES = retroarch
+LIBRETRO_NEOCD_EMULATOR_INFO = neocd.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_NEOCD_PLATFORM = rpi2
@@ -33,3 +34,4 @@ define LIBRETRO_NEOCD_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

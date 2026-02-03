@@ -7,6 +7,7 @@
 FLATPAK_VERSION = 1.17.2
 FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
+FLATPAK_EMULATOR_INFO = flatpak.emulator.yml
 
 FLATPAK_DEPENDENCIES += appstream glib-networking host-pkgconf host-python-pyparsing
 FLATPAK_DEPENDENCIES += json-glib libarchive libcap libcurl libfuse3 libglib2 libgpgme
@@ -34,3 +35,4 @@ FLATPAK_POST_INSTALL_TARGET_HOOKS += FLATPAK_INSTALL_SCRIPTS
 
 $(eval $(meson-package))
 $(eval $(host-meson-package))
+$(eval $(emulator-info-package))

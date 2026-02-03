@@ -8,7 +8,8 @@
 LIBRETRO_O2EM_VERSION = 3ba4231c1dc8dcdf487428712856b790d2e4b8f3
 LIBRETRO_O2EM_SITE = $(call github,libretro,libretro-o2em,$(LIBRETRO_O2EM_VERSION))
 LIBRETRO_O2EM_LICENSE = Artistic License
-LIBRETRO_O2EM_DEPENDENCIES = retroarch
+LIBRETRO_O2EM_DEPENDENCIES += retroarch
+LIBRETRO_O2EM_EMULATOR_INFO = o2em.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_O2EM_PLATFORM = rpi2
@@ -38,3 +39,4 @@ define LIBRETRO_O2EM_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

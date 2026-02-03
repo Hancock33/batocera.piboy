@@ -7,7 +7,8 @@
 LIBRETRO_HANDY_VERSION = fca239207e9c111da3e85d2faf0b1b9d7524e498
 LIBRETRO_HANDY_SITE = $(call github,libretro,libretro-handy,$(LIBRETRO_HANDY_VERSION))
 LIBRETRO_HANDY_LICENSE = Zlib
-LIBRETRO_HANDY_DEPENDENCIES = retroarch
+LIBRETRO_HANDY_DEPENDENCIES += retroarch
+LIBRETRO_HANDY_EMULATOR_INFO = handy.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_HANDY_PLATFORM = rpi2
@@ -33,3 +34,4 @@ define LIBRETRO_HANDY_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

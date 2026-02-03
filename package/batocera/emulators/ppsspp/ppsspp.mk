@@ -11,6 +11,9 @@ PPSSPP_GIT_SUBMODULES=YES
 PPSSPP_LICENSE = GPLv2
 PPSSPP_DEPENDENCIES = sdl2 sdl2_ttf libzip
 
+$(eval $(call register,ppsspp.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.ppsspp.emulator.yml))
+
 PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
 PPSSPP_CONF_OPTS += -DUSE_FFMPEG=ON
@@ -110,3 +113,4 @@ endef
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))
