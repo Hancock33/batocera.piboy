@@ -23,3 +23,4 @@ define LIBRETRO_PD777_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

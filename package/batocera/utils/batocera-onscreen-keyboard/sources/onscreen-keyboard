@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-2.0
 #
 # Batocera On-Screen Keyboard toggle (Wayland only)
-# Control Center–compatible, process-based toggle
+# Control Centre-compatible, process-based toggle
 #
 # IMPORTANT:
 # - wvkbd-mobintl does NOT support SIGUSR1
