@@ -6,7 +6,7 @@
 # Version: Commits on Jan 02, 2026
 SUPERMODEL_ES_VERSION = 22e1bffcd4f5b2c31342dbc29edc64cd6d669081
 SUPERMODEL_ES_SITE = $(call github,DirtBagXon,model3emu-code-sinden,$(SUPERMODEL_ES_VERSION))
-SUPERMODEL_ES_DEPENDENCIES = sdl2 zlib libzip sdl2_net
+SUPERMODEL_ES_DEPENDENCIES = sdl2 sdl2_net supermodel-common zlib
 SUPERMODEL_ES_LICENSE = GPLv3
 
 define SUPERMODEL_ES_BUILD_CMDS

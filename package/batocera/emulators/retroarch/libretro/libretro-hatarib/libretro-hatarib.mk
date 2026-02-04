@@ -8,7 +8,7 @@ LIBRETRO_HATARIB_VERSION = 162d2ed3ee40d8ea394607e7f886a084b660ad5f
 LIBRETRO_HATARIB_SITE = https://github.com/bbbradsmith/hatariB
 LIBRETRO_HATARIB_SITE_METHOD=git
 LIBRETRO_HATARIB_LICENSE = GPLv2
-LIBRETRO_HATARIB_DEPENDENCIES = libcapsimage libpng libzlib sdl2 retroarch
+LIBRETRO_HATARIB_DEPENDENCIES = libcapsimage libpng retroarch sdl2 zlib
 LIBRETRO_HATARIB_EMULATOR_INFO = hatarib.libretro.core.yml
 
 LIBRETRO_HATARIB_CONF_ENV += \

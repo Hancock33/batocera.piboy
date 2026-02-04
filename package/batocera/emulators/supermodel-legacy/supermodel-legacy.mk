@@ -7,7 +7,7 @@
 SUPERMODEL_LEGACY_VERSION = 8c6af6842af37769c984215461030bea92219acb
 SUPERMODEL_LEGACY_BRANCH = arm
 SUPERMODEL_LEGACY_SITE = $(call github,DirtBagXon,model3emu-code-sinden,$(SUPERMODEL_LEGACY_VERSION))
-SUPERMODEL_LEGACY_DEPENDENCIES = sdl2 zlib libzip sdl2_net supermodel-common
+SUPERMODEL_LEGACY_DEPENDENCIES = sdl2 sdl2_net supermodel-common zlib
 SUPERMODEL_LEGACY_LICENSE = GPLv3
 SUPERMODEL_LEGACY_EMULATOR_INFO = supermodel-legacy.supermodel.core.yml
 
