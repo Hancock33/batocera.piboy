@@ -128,6 +128,9 @@ define BATOCERA_CONFIGGEN_CONFIGS
 	@if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
 	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-bcm2711.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
 	cp $(BATOCERA_CONFIGGEN_CP_DIR)/configs/configgen-defaults-piboy4.yml							$(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
+
+	rm -rf $(TARGET_DIR)/usr/bin/emulatorlauncher
+	rm -rf $(TARGET_DIR)/usr/lib/python3.14/site-packages/configgen
 endef
 
 define BATOCERA_CONFIGGEN_ES_HOOKS

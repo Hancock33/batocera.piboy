@@ -14,7 +14,7 @@ DHEWM3_DEPENDENCIES = host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
 
 DHEWM3_CONF_OPTS += -DSDL2=ON
 
-DHEWM3_EMULATOR_INFO = dhewm3.emulator.yml
+DHEWM3_EMULATOR_INFO = doom3.emulator.yml
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
