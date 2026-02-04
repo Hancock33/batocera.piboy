@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Sept 14, 2025
 ECWOLF_VERSION = 51994bef41dc3598d370761371773e47859affd6
-ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
+ECWOLF_SITE = https://github.com/ECWolfEngine/ECWolf.git
 ECWOLF_SITE_METHOD=git
 ECWOLF_GIT_SUBMODULES=YES
 ECWOLF_LICENSE = Non-commercial

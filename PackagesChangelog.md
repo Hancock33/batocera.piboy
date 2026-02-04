@@ -332,7 +332,7 @@ Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hl
 Libraries|[python-cog](http://github.com/nedbat/cog)|v3.6.0|Sept 21, 2025
 Emulators|[libretro-watara](http://github.com/libretro/potator)|ad87bc6068ef126e48339b440465fb0bf5a2794f|Sept 18, 2025
 Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|22.0.2-Piers|Sept 16, 2025
-Ports|[ecwolf](https://bitbucket.org/ecwolf/ecwolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025
+Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|5cd4a43e16a7f3cd35628d481c347a0a98cfdfa2|Sept 13, 2025
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025
 Utils|[picade](http://github.com/pimoroni/picade-hat)|f97c2ac7211c8d9ff866b22a82c3b2ae6d01e0df|Sept 08, 2025
