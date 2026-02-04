@@ -41,18 +41,22 @@
   - Wifi country selector
   - Ability to add a "sort name" that take precedence over the (scraped) game name in metadata
   - New Keyboard Layout and Keyboard Variant options
-- Batocera Control Center (on-screen interface for global configuration and control, [hotkey][east] by default)
+- Batocera Control Center (on-screen interface for global configuration and control, [hotkey]+[east] by default)
+- Virtual keyboard for devices using Wayland with a touchscreen, launched from Batocera Control Center
 - batocera-xtract for handling archives, systems with PCManFM filemanager can use a small GUI and mouse context menus
 - dmd-play-rust is now used by default to play dmd images (performances)
 - Yamagi Quake II added which support more systems, especially lower-end hardware
-- Light gun support to the new Libretro Dolphin core
-- Light gun support to Duckstation (multi-light guns)
-- Light gun support (single light gun only) to the Play! namco 2x6 gun games
+- Light gun support to:
+  - new Libretro Dolphin core (multi-light guns)
+  - Duckstation (multi-light guns)
+  - Play! emulator for Namco 2x6 gun games (single-light gun only)
+  - Flycast standalone (multi-light guns)
 - Casio Loopy as a separate system
 - Enterprise 64/128 (via CLK emulator)
 - Xroar emulator as an option for the Color Computer (Tandy TRS-80)
 - PC60 as a separate system
 - Cemu for SM8550 devices
+- PD777 libretro core for the Epoch Cassette Vision
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
