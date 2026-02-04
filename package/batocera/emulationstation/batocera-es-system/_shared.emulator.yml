@@ -7,6 +7,15 @@ custom_features:
       High Performance: highperformance
       Balanced: balanced
       Power Saver: powersaver
+  powersave:
+    archs_include: [x86, x86_64]
+    group: POWER OPTIONS
+    prompt: POWER SAVE
+    description: Disables CPU cores to helps reduce CPU power consumption. Useful for handhelds.
+    choices:
+      "Max Saving":  0
+      "Med Saving":  1
+      "No Saving":   2
   batterymode:
     group: POWER OPTIONS
     prompt: BATTERY MODE
@@ -256,7 +265,7 @@ custom_features:
     group: CONTROLS
     submenu: WHEELS
     prompt: WHEEL MIDZONE
-    description: Reserve a non dead zone at the center of the wheel to go straight ahead (in degrees)
+    description: Reserve a non dead zone at the centre of the wheel to go straight ahead (in degrees)
     choices:
       "1": 1
       "2": 2
