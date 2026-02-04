@@ -8,7 +8,8 @@ GZDOOM_VERSION = 092b9c0515c2861270cde175cd8eaa30a253c8b1
 GZDOOM_SITE = $(call github,ZDoom,gzdoom,$(GZDOOM_VERSION))
 GZDOOM_LICENSE = GPL-3.0
 GZDOOM_DEPENDENCIES = bzip2 fluidsynth host-gzdoom libglew libglu libvpx mesa3d openal sdl2 webp
-GZDOOM_SUPPORTS_IN_SOURCE_BUILD = YES
+GZDOOM_SUPPORTS_IN_SOURCE_BUILD = NO
+GZDOOM_EMULATOR_INFO = gzdoom.emulator.yml
 
 # We need the tools from the host package to build the target package
 HOST_GZDOOM_DEPENDENCIES = zlib bzip2 host-webp
