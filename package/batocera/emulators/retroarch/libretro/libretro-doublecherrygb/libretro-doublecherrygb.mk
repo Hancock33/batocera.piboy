@@ -3,8 +3,8 @@
 # libretro-doublecherrygb
 #
 ################################################################################
-# Version: Commits on Jan 18, 2026
-LIBRETRO_DOUBLECHERRYGB_VERSION = 129c98a9466538dc6b51fe450482c1f23337b324
+# Version: Commits on Feb 05, 2026
+LIBRETRO_DOUBLECHERRYGB_VERSION = eacb7e4d4b75ce838ba7782f38e5686a6a051969
 LIBRETRO_DOUBLECHERRYGB_SITE = $(call github,TimOelrichs,doublecherryGB-libretro,$(LIBRETRO_DOUBLECHERRYGB_VERSION))
 LIBRETRO_DOUBLECHERRYGB_LICENSE = GPLv2
 
