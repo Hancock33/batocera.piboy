@@ -102,10 +102,10 @@ index 0000000000..d2091cbfb4
 +
 +mark_as_advanced(LIBGBM_INCLUDE_DIRS LIBGBM_LIBRARIES)
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index edebd2af5b..6ecfdb9bf4 100644
+index 170b7e0632..7209cff5d4 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -531,6 +531,12 @@ if(ENABLE_EGL)
+@@ -519,6 +519,12 @@ if(ENABLE_EGL)
    if(EGL_FOUND)
      add_definitions(-DHAVE_EGL=1)
      message(STATUS "EGL OpenGL interface enabled")
@@ -119,7 +119,7 @@ index edebd2af5b..6ecfdb9bf4 100644
      message(WARNING "EGL support enabled but not found. This build will not support EGL.")
    endif()
 diff --git a/Source/Core/Common/CMakeLists.txt b/Source/Core/Common/CMakeLists.txt
-index a2c4b6eb07..f5b4df3319 100644
+index fac5900f76..66f57a3d2e 100644
 --- a/Source/Core/Common/CMakeLists.txt
 +++ b/Source/Core/Common/CMakeLists.txt
 @@ -285,10 +285,19 @@ target_sources(common PRIVATE
@@ -1382,7 +1382,7 @@ index 9d154776f6..5c50412f5a 100644
  
  struct WindowSystemInfo
 diff --git a/Source/Core/DolphinNoGUI/CMakeLists.txt b/Source/Core/DolphinNoGUI/CMakeLists.txt
-index 566a643c89..c495dca869 100644
+index 9dad1b5f86..34fd32ffba 100644
 --- a/Source/Core/DolphinNoGUI/CMakeLists.txt
 +++ b/Source/Core/DolphinNoGUI/CMakeLists.txt
 @@ -21,6 +21,7 @@ endif()
@@ -1392,12 +1392,12 @@ index 566a643c89..c495dca869 100644
 +  target_sources(dolphin-nogui PRIVATE PlatformDRM.cpp)
  endif()
  
- set_target_properties(dolphin-nogui PROPERTIES OUTPUT_NAME dolphin-emu-nogui)
+ if (WIN32)
 diff --git a/Source/Core/DolphinNoGUI/MainNoGUI.cpp b/Source/Core/DolphinNoGUI/MainNoGUI.cpp
-index 6132085b15..25a4913344 100644
+index 1e1ff6e39f..3a0d365374 100644
 --- a/Source/Core/DolphinNoGUI/MainNoGUI.cpp
 +++ b/Source/Core/DolphinNoGUI/MainNoGUI.cpp
-@@ -166,6 +166,8 @@ static std::unique_ptr<Platform> GetPlatform(const optparse::Values& options)
+@@ -163,6 +163,8 @@ static std::unique_ptr<Platform> GetPlatform(const optparse::Values& options)
  #ifdef __linux__
    if (platform_name == "fbdev" || platform_name.empty())
      return Platform::CreateFBDevPlatform();
@@ -1406,7 +1406,7 @@ index 6132085b15..25a4913344 100644
  #endif
  
  #ifdef _WIN32
-@@ -199,7 +201,7 @@ int main(const int argc, char* argv[])
+@@ -194,7 +196,7 @@ int main(const int argc, char* argv[])
        .choices({"headless"
  #ifdef __linux__
                  ,

@@ -1,8 +1,8 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index 2a9bad56e0..8ce9b3b5ee 100644
+index d11d48c898..72b03cb7f0 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -320,6 +320,7 @@ bool ShouldUseDPL2Decoder()
+@@ -327,6 +327,7 @@ bool ShouldUseDPL2Decoder()
  const Info<std::string> MAIN_DUMP_PATH{{System::Main, "General", "DumpPath"}, ""};
  const Info<std::string> MAIN_LOAD_PATH{{System::Main, "General", "LoadPath"}, ""};
  const Info<std::string> MAIN_RESOURCEPACK_PATH{{System::Main, "General", "ResourcePackPath"}, ""};
@@ -11,10 +11,10 @@ index 2a9bad56e0..8ce9b3b5ee 100644
  const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH{{System::Main, "General", "WiiSDCardPath"}, ""};
  const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH{
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 2355508f9f..3320e274bb 100644
+index 00c11ea6dd..3fedccbaa7 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
-@@ -200,6 +200,7 @@ extern const Info<bool> MAIN_TIME_TRACKING;
+@@ -205,6 +205,7 @@ extern const Info<bool> MAIN_TIME_TRACKING;
  extern const Info<std::string> MAIN_DUMP_PATH;
  extern const Info<std::string> MAIN_LOAD_PATH;
  extern const Info<std::string> MAIN_RESOURCEPACK_PATH;
@@ -23,10 +23,10 @@ index 2355508f9f..3320e274bb 100644
  extern const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH;
  extern const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH;
 diff --git a/Source/Core/UICommon/UICommon.cpp b/Source/Core/UICommon/UICommon.cpp
-index 40f31a231d..63cf862feb 100644
+index 43973a02e0..7c332deff4 100644
 --- a/Source/Core/UICommon/UICommon.cpp
 +++ b/Source/Core/UICommon/UICommon.cpp
-@@ -96,6 +96,12 @@ static void CreateResourcePackPath(std::string path)
+@@ -93,6 +93,12 @@ static void CreateResourcePackPath(std::string path)
      File::SetUserPath(D_RESOURCEPACK_IDX, std::move(path));
  }
  
@@ -39,7 +39,7 @@ index 40f31a231d..63cf862feb 100644
  static void CreateWFSPath(const std::string& path)
  {
    if (!path.empty())
-@@ -108,6 +114,7 @@ static void InitCustomPaths()
+@@ -105,6 +111,7 @@ static void InitCustomPaths()
    CreateLoadPath(Config::Get(Config::MAIN_LOAD_PATH));
    CreateDumpPath(Config::Get(Config::MAIN_DUMP_PATH));
    CreateResourcePackPath(Config::Get(Config::MAIN_RESOURCEPACK_PATH));
