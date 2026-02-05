@@ -1,8 +1,8 @@
 diff --git a/Common.mak b/Common.mak
-index 56d1be9ad..f4beb41bd 100644
+index cba2c8484..38fd460bb 100644
 --- a/Common.mak
 +++ b/Common.mak
-@@ -908,7 +908,7 @@ endif
+@@ -903,7 +903,7 @@ endif
  
  ifeq ($(RENDERTYPE),SDL)
      ifeq ($(SDL_TARGET),2)
@@ -11,7 +11,7 @@ index 56d1be9ad..f4beb41bd 100644
          SDLNAME := SDL2
      else ifeq ($(SDL_TARGET),1)
          SDLCONFIG := sdl-config
-@@ -956,8 +956,8 @@ ifeq ($(RENDERTYPE),SDL)
+@@ -951,8 +951,8 @@ ifeq ($(RENDERTYPE),SDL)
              SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
              SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
  
@@ -23,26 +23,26 @@ index 56d1be9ad..f4beb41bd 100644
              ifeq ($(SDL_TARGET),1)
                  COMPILERFLAGS += -D_GNU_SOURCE=1
 diff --git a/source/imgui/src/imgui_impl_sdl2.cpp b/source/imgui/src/imgui_impl_sdl2.cpp
-index 24ad4cd61..878a02188 100644
+index 4fb9c4d99..263ce718c 100644
 --- a/source/imgui/src/imgui_impl_sdl2.cpp
 +++ b/source/imgui/src/imgui_impl_sdl2.cpp
-@@ -78,8 +78,8 @@
+@@ -114,8 +114,8 @@
+ #endif
  
  // SDL
- // (the multi-viewports feature requires SDL features supported from SDL 2.0.4+. SDL 2.0.5+ is highly recommended)
 -#include <SDL.h>
 -#include <SDL_syswm.h>
 +#include <SDL2/SDL.h>
 +#include <SDL2/SDL_syswm.h>
- #if defined(__APPLE__)
+ #include <stdio.h>              // for snprintf()
+ #ifdef __APPLE__
  #include <TargetConditionals.h>
- #endif
-@@ -960,7 +960,7 @@ static void ImGui_ImplSDL2_SwapBuffers(ImGuiViewport* viewport, void*)
- // Vulkan support (the Vulkan renderer needs to call a platform-side support function to create the surface)
- // SDL is graceful enough to _not_ need <vulkan/vulkan.h> so we can safely include this.
+@@ -134,7 +134,7 @@
+ #define SDL_HAS_VULKAN                      SDL_VERSION_ATLEAST(2,0,6)
+ #define SDL_HAS_OPEN_URL                    SDL_VERSION_ATLEAST(2,0,14)
  #if SDL_HAS_VULKAN
 -#include <SDL_vulkan.h>
 +#include <SDL2/SDL_vulkan.h>
- static int ImGui_ImplSDL2_CreateVkSurface(ImGuiViewport* viewport, ImU64 vk_instance, const void* vk_allocator, ImU64* out_vk_surface)
- {
-     ImGui_ImplSDL2_ViewportData* vd = (ImGui_ImplSDL2_ViewportData*)viewport->PlatformUserData;
+ #endif
+ 
+ // SDL Data

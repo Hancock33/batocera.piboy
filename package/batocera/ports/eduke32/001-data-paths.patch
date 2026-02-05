@@ -12,7 +12,7 @@ index a6b36170f..f868f57fa 100644
          // test unmolested filename first
          if (buildvfs_exists(fn))
 diff --git a/source/duke3d/src/common.cpp b/source/duke3d/src/common.cpp
-index 5f3fcf114..93525bc80 100644
+index 0c3376865..ce78a7639 100644
 --- a/source/duke3d/src/common.cpp
 +++ b/source/duke3d/src/common.cpp
 @@ -271,15 +271,7 @@ void G_ExtPreInit(int32_t argc,char const * const * argv)
@@ -33,10 +33,10 @@ index 5f3fcf114..93525bc80 100644
              if (asperr == -2)
              {
 diff --git a/source/duke3d/src/game.cpp b/source/duke3d/src/game.cpp
-index 99e184adc..3eb1be957 100644
+index a3f46b528..eef726722 100644
 --- a/source/duke3d/src/game.cpp
 +++ b/source/duke3d/src/game.cpp
-@@ -6595,7 +6595,7 @@ int app_main(int argc, char const* const* argv)
+@@ -6599,7 +6599,7 @@ int app_main(int argc, char const* const* argv)
  
      G_ExtPreInit(argc, argv);
  
@@ -45,7 +45,7 @@ index 99e184adc..3eb1be957 100644
      engineSetLogVerbosityCallback(dukeVerbosityCallback);
  
  #ifdef __APPLE__
-@@ -6906,7 +6906,7 @@ int app_main(int argc, char const* const* argv)
+@@ -6910,7 +6910,7 @@ int app_main(int argc, char const* const* argv)
  
      CONFIG_ReadSettings();
  
@@ -55,10 +55,10 @@ index 99e184adc..3eb1be957 100644
      CONFIG_SetDefaultKeys(keydefaults, true);
  
 diff --git a/source/duke3d/src/startgtk.game.cpp b/source/duke3d/src/startgtk.game.cpp
-index f29a84f80..88b12fe6c 100644
+index 24d8fb29a..761bccee9 100644
 --- a/source/duke3d/src/startgtk.game.cpp
 +++ b/source/duke3d/src/startgtk.game.cpp
-@@ -286,7 +286,7 @@ static unsigned char GetModsDirNames(GtkListStore *list)
+@@ -287,7 +287,7 @@ static unsigned char GetModsDirNames(GtkListStore *list)
          if (buildvfs_exists("user_profiles_disabled"))
              buildvfs_getcwd(pdir, sizeof(pdir));
          else
