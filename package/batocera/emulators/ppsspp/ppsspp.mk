@@ -97,6 +97,7 @@ PPSSPP_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(PPSSPP_TARGET_CFLAGS)"
 define PPSSPP_UPDATE_INCLUDES
 	sed -i 's/unknown/"$(shell echo $(PPSSPP_VERSION) | cut -c 1-7)"/g' $(@D)/git-version.cmake
 	sed -i "s+/opt/vc+$(STAGING_DIR)/usr+g" $(@D)/CMakeLists.txt
+	sed -i -e s+"SDL2_ttf::SDL2_ttf"+"SDL2_ttf"+ $(@D)/CMakeLists.txt
 endef
 
 define PPSSPP_INSTALL_TARGET_CMDS
