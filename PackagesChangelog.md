@@ -11,6 +11,7 @@ Emulators|[ymir](https://github.com/StrikerX3/Ymir)|708eddc0e518bc2951acc4124131
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|ad12c170ed79b5644fe533d3d8eb9784cd58c3e5|Feb 05, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|8795fb54f493e594ec77fff66187a6f8f221fb2f|Feb 05, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-02-05|Feb 05, 2026
+Looks|[lightgun-controllers-art](http://github.com/batocera-linux/lightgun-controllers-art)|fdb22eb1e36a124af597e412e94eca8d3e2e2c79|Feb 05, 2026
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|f2d733d3f36d0185d25c8dddd1ed7e11d3c29c4e|Feb 05, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|b3b7f3a6f1172adf3d9da7188f48a9c1464a5c1c|Feb 05, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|02f1f25447914f22e1d71e005281c1ef33557931|Feb 05, 2026
@@ -585,5 +586,4 @@ Utils|[evmapy](http://github.com/kempniu/evmapy)|bd65338c236cd30b4f2d7835733ea5d
 Libraries|[python-proxy-tools](https://files.pythonhosted.org/packages/f2/cf/77d3e19b7fabd03895caca7857ef51e4c409e0ca6b37ee6e9f7daa50b642)|0.1.0|May 06, 2014
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Audio|[freepats](https://freepats.zenvoid.org)|20060219|Feb 19, 2006
-Looks|[lightgun-controllers-art](\)|e97a86c2fa659018d069fb2ae8ae1cb439f7a6c5|N/A
 Utils-host|[python-mkbootimg](https://raw.githubusercontent.com/aosp-mirror/platform_system_core/master/mkbootimg/mkbootimg)|N/A|N/A

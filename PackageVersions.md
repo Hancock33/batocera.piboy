@@ -421,7 +421,7 @@ Libraries|[wiringop-python](https://github.com/orangepi-xunlong/wiringOP-Python.
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.1|Jul 21, 2025
 Looks|[adwaita-icon-theme-light](http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/)|$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0|Sep 10, 2021
 Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_bezels)|8a9734de377bf74ba720661917751bffac856f5d|Dec 25, 2025
-Looks|[lightgun-controllers-art](\)|e97a86c2fa659018d069fb2ae8ae1cb439f7a6c5|N/A
+Looks|[lightgun-controllers-art](http://github.com/batocera-linux/lightgun-controllers-art)|fdb22eb1e36a124af597e412e94eca8d3e2e2c79|Feb 05, 2026
 Looks|[nanum_font](http://github.com/bulzipke/nanum-font)|2385eb085e4bf326590a2db6d4514e8477d9922f|Feb 02, 2025
 Looks|[noto-cjk-fonts](https://github.com/notofonts/noto-cjk/releases)|Sans2.004|Jan 27, 2022
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|4.0+git20250410.b99ca8b6-5|Dec 30, 2025
