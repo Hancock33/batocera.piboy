@@ -427,8 +427,8 @@ hcl:
   emulator: hcl
   core:     hcl
 hikaru:
-  emulator: libretro
-  core:     mame
+  emulator: demul
+  core:     demul
 hode:
   emulator: hode
   core:     hode

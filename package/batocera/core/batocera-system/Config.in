@@ -804,6 +804,9 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     select BR2_PACKAGE_HYPSEUS_SINGE                        # daphne
     select BR2_PACKAGE_HYPSEUS_SINGE_BEZELS                 if  BR2_PACKAGE_HYPSEUS_SINGE
 
+    # Demul emulator - multiple Sega arcade systems
+    select BR2_PACKAGE_DEMUL                                if  BR2_PACKAGE_BATOCERA_WINE
+
     # Standalone Sega Model 2 emulator
     select BR2_PACKAGE_MODEL2EMU                            if  BR2_PACKAGE_BATOCERA_WINE
 

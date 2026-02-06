@@ -57,6 +57,9 @@
 - PC60 as a separate system
 - Cemu for SM8550 devices
 - PD777 libretro core for the Epoch Cassette Vision
+- Sega Cave CV1000 support (currently x86 systems only)
+- Sega Gaelco support (currently x86 systems only)
+- Sega Hikaru support (currently x86 systems only)
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
@@ -121,12 +124,13 @@
 - OpenJK to 10th of October 2025 build
 - OpenJKDF2 to v0.9.8
 - OpenMOHAA to v0.82.1
-- Play! to 0.72
+- Play! to 0.73
 - PCSX2 to v2.6.3
 - RClone to v1.72.1
 - RetroArch to 1.22.2
 - RPCS3 to v0.0.39
 - Ruffle to 31th of January 2026 nightly build
+- ScummVM to v2026.1.0
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_12_0_A
 - Sonic 2013 to 1.3.3
 - Sonic CD to 1.3.3
