@@ -15,7 +15,7 @@ SUPERTUX2_CMAKE_BACKEND = make
 # licenses (sexp-cpp, squirrel, tinygettext) which are linked statically.
 SUPERTUX2_LICENSE = GPL-3.0+ (code), CC-BY-SA-2.0, CC-BY-SA-3.0, CC-BY-SA-4.0, GPL-2.0+ (images music sounds)
 SUPERTUX2_LICENSE_FILES = LICENSE.txt data/AUTHORS
-
+SUPERTUX2_EMULATOR_INFO = supertux2.emulator.yml
 SUPERTUX2_DEPENDENCIES = boost freetype host-pkgconf libcurl libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib
 
 SUPERTUX2_CONF_OPTS +=-DBUILD_DOCUMENTATION=OFF
@@ -35,3 +35,4 @@ define SUPERTUX2_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

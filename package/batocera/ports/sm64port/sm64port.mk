@@ -6,6 +6,7 @@
 # Version: Commits on Dec 17, 2024
 SM64PORT_VERSION = d7ca2c04364a6dd0dac58b47151e04e26887e6f0
 SM64PORT_SITE = $(call github,sm64pc,sm64ex,$(SM64PORT_VERSION))
+SM64PORT_EMULATOR_INFO = sm64port.emulator.yml
 SM64PORT_DEPENDENCIES = sdl2
 
 define SM64PORT_BUILD_CMDS
@@ -23,3 +24,4 @@ define SM64PORT_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

@@ -6,7 +6,7 @@
 # Version: Commits on Dec 28, 2024
 BLUES_VERSION = a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751
 BLUES_SITE = $(call github,twojstaryzdomu,blues,$(BLUES_VERSION))
-
+BLUES_EMULATOR_INFO = blues.emulator.yml
 BLUES_DEPENDENCIES = sdl2 sdl2_mixer
 BLUES_LICENSE = GPLv2
 
@@ -25,3 +25,4 @@ define BLUES_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

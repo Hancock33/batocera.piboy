@@ -6,7 +6,7 @@
 # Version: Commits on Jan 08, 2024
 FREEDROID_VERSION = 126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac
 FREEDROID_SITE = $(call github,ReinhardPrix,FreedroidClassic,$(FREEDROID_VERSION))
-
+FREEDROID_EMULATOR_INFO = freedroid.emulator.yml
 FREEDROID_DEPENDENCIES = sdl12-compat sdl_mixer sdl_image sdl_gfx jpeg
 FREEDROID_LICENSE = GPL-2.0
 
@@ -25,3 +25,4 @@ define FREEDROID_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(autotools-package))
+$(eval $(emulator-info-package))

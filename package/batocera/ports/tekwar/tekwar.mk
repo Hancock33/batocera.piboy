@@ -6,7 +6,7 @@
 # Version: Commits on Dec 27, 2025
 TEKWAR_VERSION = cd1cd3a9a6a1f2d2e555a36f55b828f36ca7fe06
 TEKWAR_SITE = https://github.com/jonof/jftekwar.git
-
+TEKWAR_EMULATOR_INFO = etekwar.emulator.yml
 TEKWAR_DEPENDENCIES = sdl2 sdl2_image
 TEKWAR_SITE_METHOD=git
 TEKWAR_GIT_SUBMODULES=YES
@@ -32,3 +32,4 @@ define TEKWAR_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

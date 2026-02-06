@@ -6,6 +6,7 @@
 # Version: Commits on Feb 05, 2026
 ALEPHONE_VERSION = f2d733d3f36d0185d25c8dddd1ed7e11d3c29c4e
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
+ALEPHONE_EMULATOR_INFO = alephone.emulator.yml
 ALEPHONE_DEPENDENCIES = boost sdl2 sdl2_image sdl2_ttf
 ALEPHONE_LICENSE = GPLv3
 ALEPHONE_CONF_OPTS = \
@@ -25,3 +26,4 @@ define ALEPHONE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(autotools-package))
+$(eval $(emulator-info-package))

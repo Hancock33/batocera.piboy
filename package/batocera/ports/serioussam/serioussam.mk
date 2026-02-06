@@ -7,6 +7,7 @@
 SERIOUSSAM_VERSION = 510d36f901cbe883c56b155b53717e4efdeb6522
 SERIOUSSAM_SITE = $(call github,tx00100xt,SeriousSamClassic-VK,$(SERIOUSSAM_VERSION))
 SERIOUSSAM_SUPPORTS_IN_SOURCE_BUILD = NO
+SERIOUSSAM_EMULATOR_INFO = serioussam.emulator.yml
 SERIOUSSAM_DEPENDENCIES = sdl2 sdl2_mixer host-serioussam
 SERIOUSSAM_LICENSE = GPL-2.0
 
@@ -91,4 +92,5 @@ endef
 SERIOUSSAM_POST_EXTRACT_HOOKS += SERIOUSSAM_CP_WEAPONS
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))
 $(eval $(host-cmake-package))

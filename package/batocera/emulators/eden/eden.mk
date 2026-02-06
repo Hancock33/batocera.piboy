@@ -9,6 +9,7 @@ EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD=git
 EDEN_GIT_SUBMODULES=YES
 EDEN_LICENSE = GPLv2
+EDEN_EMULATOR_INFO = eden.emulator.yml
 EDEN_DEPENDENCIES += boost catch2 enet ffmpeg fmt json-for-modern-cpp libva
 EDEN_DEPENDENCIES += libzip lz4 mbedtls opus sdl2 zlib zstd qt6base qt6svg qt6tools
 EDEN_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -42,3 +43,4 @@ define EDEN_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

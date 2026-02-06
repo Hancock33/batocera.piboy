@@ -21,3 +21,5 @@ custom_features:
       'On': 1
 systems:
   - traider1
+  - traider2
+

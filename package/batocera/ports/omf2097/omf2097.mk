@@ -6,6 +6,7 @@
 # Version: Commits on Jan 31, 2026
 OMF2097_VERSION = 7a66365b5c8bbd5b9ba0ac82ca805e8b63101b32
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
+OMF2097_EMULATOR_INFO = omf2097.emulator.yml
 OMF2097_DEPENDENCIES = enet host-omf2097 libconfuse libminiupnpc sdl2 sdl2_mixer
 OMF2097_LICENSE = MIT
 OMF2097_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -26,4 +27,5 @@ endef
 OMF2097_POST_INSTALL_TARGET_HOOKS += OMF2097_POST_PROCESS
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))
 $(eval $(host-cmake-package))

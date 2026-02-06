@@ -7,7 +7,7 @@
 RUFFLE_VERSION = nightly-2026-02-05
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
-RUFFLE_EMULATOR_INFO = abuse.emulator.yml
+RUFFLE_EMULATOR_INFO = ruffle.emulator.yml
 RUFFLE_DEPENDENCIES = alsa-lib host-rust-bin host-rustc nghttp2 openssl udev
 
 RUFFLE_CARGO_ENV = CARGO_HOME=$(DL_DIR)/br-cargo-home \
