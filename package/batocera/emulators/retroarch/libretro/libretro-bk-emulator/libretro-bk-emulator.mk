@@ -7,6 +7,7 @@
 LIBRETRO_BK_EMULATOR_VERSION = f95d929c8eca6c85075cd5c56a08aac9c58f3802
 LIBRETRO_BK_EMULATOR_SITE = $(call github,libretro,bk-emulator,$(LIBRETRO_BK_EMULATOR_VERSION))
 LIBRETRO_BK_EMULATOR_LICENSE = Custom
+LIBRETRO_BK_EMULATOR_INFO = bk.libretro.core.yml
 
 LIBRETRO_BK_EMULATOR_PLATFORM = $(LIBRETRO_PLATFORM)
 
@@ -22,3 +23,4 @@ define LIBRETRO_BK_EMULATOR_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

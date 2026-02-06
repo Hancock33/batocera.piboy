@@ -1,0 +1,75 @@
+features:
+  - netplay
+  - padtokeyboard
+shared_features:
+  - autosave
+  - rewind
+  - use_guns
+  - use_wheels
+  - wheel_rotation
+  - wheel_deadzone
+  - wheel_midzone
+custom_features:
+  panda3ds_use_shader_jit:
+    group: EMULATOR SETTINGS
+    prompt: USE SHADER JIT
+    description: Enable shader JIT
+    preset: switchauto
+  panda3ds_accurate_shader_mul:
+    group: EMULATOR SETTINGS
+    prompt: ACCURATE SHADER MUL
+    description: Enable accurate shader multiplication
+    preset: switchauto
+  panda3ds_use_ubershader:
+    group: EMULATOR SETTINGS
+    prompt: USE UBERSHADER
+    description: Use ubershaders (No stutter, maybe slower)
+    preset: switchauto
+  panda3ds_use_vsync:
+    group: EMULATOR SETTINGS
+    prompt: USE VSYNC
+    description: Enable VSync
+    preset: switchauto
+  panda3ds_dsp_emulation:
+    group: EMULATOR SETTINGS
+    prompt: DSP EMULATION
+    description: DSP emulation
+    choices:
+      "HLE": HLE
+      "LLE": LLE
+      "Null": Null
+  panda3ds_use_virtual_sd:
+    group: EMULATOR SETTINGS
+    prompt: USE VIRTUAL SD
+    description: Enable virtual SD card
+    preset: switchauto
+  panda3ds_write_protect_virtual_sd:
+    group: EMULATOR SETTINGS
+    prompt: WRITE PROTECT VIRTUAL SD
+    description: Write protect virtual SD card
+    preset: switchauto
+  panda3ds_battery_level:
+    group: EMULATOR SETTINGS
+    prompt: BATTERY LEVEL
+    description: Battery percentage
+    preset: slider
+    preset_parameters: 0 100 5 100 %
+  panda3ds_use_charger:
+    group: EMULATOR SETTINGS
+    prompt: USE CHARGER
+    description: Charger plugged
+    preset: switchauto
+  panda3ds_ubershader_lighting_override:
+    group: EMULATOR SETTINGS
+    prompt: UBERSHADER LIGHTING OVERRIDE
+    description: Force shadergen when rendering lights
+    preset: switchauto
+  panda3ds_ubershader_lighting_override_threshold:
+    group: EMULATOR SETTINGS
+    prompt: UBERSHADER LIGHTING OVERRIDE THRESHOLD
+    description: Light threshold for forcing shadergen
+    preset: slider
+    preset_parameters: 1 8 1 8
+systems:
+  - 3ds
+

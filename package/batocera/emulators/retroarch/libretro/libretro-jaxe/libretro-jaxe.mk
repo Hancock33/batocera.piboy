@@ -9,6 +9,7 @@ LIBRETRO_JAXE_SITE = https://github.com/kurtjd/jaxe.git
 LIBRETRO_JAXE_SITE_METHOD=git
 LIBRETRO_JAXE_GIT_SUBMODULES=YES
 LIBRETRO_JAXE_LICENSE = MIT
+LIBRETRO_JAXE_EMULATOR_INFO = jaxe.libretro.core.yml
 
 define LIBRETRO_JAXE_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
@@ -21,3 +22,4 @@ define LIBRETRO_JAXE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

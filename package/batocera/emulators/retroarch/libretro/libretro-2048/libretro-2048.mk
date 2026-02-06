@@ -8,6 +8,7 @@ LIBRETRO_2048_VERSION = e70c3f82d2b861c64943aaff7fcc29a63013997d
 LIBRETRO_2048_SITE = $(call github,libretro,libretro-2048,$(LIBRETRO_2048_VERSION))
 LIBRETRO_2048_LICENSE = UNLICENSE
 LIBRETRO_2048_LICENSE_FILES = LICENSE
+LIBRETRO_2048_EMULATOR_INFO = 2048.libretro.core.yml
 
 define LIBRETRO_2048_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
@@ -23,3 +24,4 @@ define LIBRETRO_2048_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

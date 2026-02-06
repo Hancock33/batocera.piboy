@@ -7,6 +7,7 @@
 LIBRETRO_NOODS_VERSION = aae9dc6e5ae0d9187e8dea4b74e529a8e9c8b1d3
 LIBRETRO_NOODS_SITE = $(call github,jonian,libretro-noods,$(LIBRETRO_NOODS_VERSION))
 LIBRETRO_NOODS_LICENSE = GPL-3.0
+LIBRETRO_NOODS_EMULATOR_INFO = noods.libretro.core.yml
 
 define LIBRETRO_NOODS_BUILD_CMDS
 	$(SED) "s|\-Ofast|$(TARGET_OPTIMIZATION) -flto=auto|g" $(@D)/Makefile.libretro
@@ -20,3 +21,4 @@ define LIBRETRO_NOODS_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

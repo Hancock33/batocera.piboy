@@ -11,6 +11,7 @@ LIBRETRO_BRIMIR_GIT_SUBMODULES = yes
 LIBRETRO_BRIMIR_SUPPORTS_IN_SOURCE_BUILD = YES
 LIBRETRO_BRIMIR_LICENSE = GPL-3.0
 LIBRETRO_BRIMIR_DEPENDENCIES = retroarch
+LIBRETRO_BRIMIR_EMULATOR_INFO = brimir.libretro.core.yml
 
 define LIBRETRO_BRIMIR_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
@@ -18,3 +19,4 @@ define LIBRETRO_BRIMIR_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

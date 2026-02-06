@@ -7,6 +7,7 @@
 LIBRETRO_GONG_VERSION = 11d98233f9bba2dec60cae555b196684fd9d2aa5
 LIBRETRO_GONG_SITE = $(call github,libretro,gong,$(LIBRETRO_GONG_VERSION))
 LIBRETRO_GONG_LICENSE = GPLv3
+LIBRETRO_GONG_EMULATOR_INFO = gong.libretro.core.yml
 
 define LIBRETRO_GONG_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
@@ -23,3 +24,4 @@ define LIBRETRO_GONG_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

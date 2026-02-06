@@ -12,7 +12,7 @@ shared_features:
   - bezel.tattoo_corner
   - bezel.tattoo_file
   - bezel.resize_tattoo
-cfeatures:
+custom_features:
   bermuda_aspect:
     group: VIDEO SETTINGS
     prompt:      ASPECT RATIO

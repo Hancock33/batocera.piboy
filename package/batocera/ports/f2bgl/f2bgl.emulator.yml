@@ -12,7 +12,7 @@ shared_features:
   - bezel.tattoo_corner
   - bezel.tattoo_file
   - bezel.resize_tattoo
-cfeatures:
+custom_features:
   f2b_fog:
     group: VIDEO SETTINGS
     prompt: FOG RENDERING

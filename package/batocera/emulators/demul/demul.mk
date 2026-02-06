@@ -10,12 +10,11 @@ DEMUL_SITE = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul
 DEMUL_SITE_METHOD = file
 
 DEMUL_DEPENDENCIES = xdotool
-DEMUL_EXTRACT_DEPENDENCIES = host-p7zip
 
 $(eval $(call register,demul.emulator.yml))
 
 define DEMUL_EXTRACT_CMDS
-	mkdir -p $(@D) && cd $(@D) && $(HOST_DIR)/usr/bin/7zr x -y \
+	mkdir -p $(@D) && cd $(@D) && 7zr x -y \
 	    $(DL_DIR)/$(DEMUL_DL_SUBDIR)/$(DEMUL_SOURCE)
 endef
 

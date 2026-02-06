@@ -12,7 +12,7 @@ shared_features:
   - bezel.tattoo_corner
   - bezel.tattoo_file
   - bezel.resize_tattoo
-cfeatures:
+custom_features:
   nointro:
     prompt: SKIP INTRO VIDEOS
     description: Skips the Peach and Castle intro when starting a new game.

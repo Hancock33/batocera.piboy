@@ -9,6 +9,7 @@ LIBRETRO_CRAFT_SITE = $(call github,libretro,Craft,$(LIBRETRO_CRAFT_VERSION))
 LIBRETRO_CRAFT_LICENSE = MIT
 LIBRETRO_CRAFT_LICENSE_FILES = LICENSE.md
 LIBRETRO_CRAFT_DEPENDENCIES = retroarch
+LIBRETRO_CRAFT_EMULATOR_INFO = craft.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 LIBRETRO_CRAFT_DEPENDENCIES += libgl
@@ -49,3 +50,4 @@ define LIBRETRO_CRAFT_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

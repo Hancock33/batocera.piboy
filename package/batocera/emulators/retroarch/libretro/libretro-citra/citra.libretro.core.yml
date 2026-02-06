@@ -1,8 +1,7 @@
 features:
-  - netplay
+  - padtokeyboard
 shared_features:
-  - rewind
   - autosave
+  - rewind
 systems:
-  - mame
-  - neogeo
+  - citra
