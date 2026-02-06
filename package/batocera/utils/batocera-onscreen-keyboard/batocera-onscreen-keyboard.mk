@@ -6,8 +6,8 @@
 # wvkbd - On-screen keyboard for wlroots
 # Converted from ROCKNIX touchscreen-keyboard package
 ################################################################################
-# Version: Commits on Jan 22, 2026
-BATOCERA_ONSCREEN_KEYBOARD_VERSION = v0.19.2
+# Version: Commits on Feb 06, 2026
+BATOCERA_ONSCREEN_KEYBOARD_VERSION = v0.19.4
 BATOCERA_ONSCREEN_KEYBOARD_SITE = $(call github,jjsullivan5196,wvkbd,$(BATOCERA_ONSCREEN_KEYBOARD_VERSION))
 BATOCERA_ONSCREEN_KEYBOARD_LICENSE = GPL-3.0+
 BATOCERA_ONSCREEN_KEYBOARD_LICENSE_FILES = LICENSE
