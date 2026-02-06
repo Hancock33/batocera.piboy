@@ -9,8 +9,8 @@ PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = maturin
 PYTHON_PYXEL_LICENSE = MIT
 PYTHON_PYXEL_CARGO_MANIFEST_PATH = rust/Cargo.toml
-PYTHON_PYXEL_DEPENDENCIES = host-rust-bin sdl2 evmapy
 PYTHON_PYXEL_EMULATOR_INFO = pyxel.emulator.yml
+PYTHON_PYXEL_DEPENDENCIES = host-rust-bin sdl2 evmapy
 
 PYTHON_PYXEL_SUBDIR = python
 
