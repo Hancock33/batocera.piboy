@@ -14,22 +14,19 @@ DEMUL_DEPENDENCIES = xdotool
 $(eval $(call register,demul.emulator.yml))
 
 define DEMUL_EXTRACT_CMDS
-	mkdir -p $(@D) && cd $(@D) && 7zr x -y \
-	    $(DL_DIR)/$(DEMUL_DL_SUBDIR)/$(DEMUL_SOURCE)
+	mkdir -p $(@D) && cd $(@D) && 7zr x -y $(DL_DIR)/$(DEMUL_DL_SUBDIR)/$(DEMUL_SOURCE)
 endef
 
 define DEMUL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr
 	cp -pr $(@D) $(TARGET_DIR)/usr/demul
 
-    # copy evmapy configs
+	# copy evmapy configs
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/*.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/*.keys $(TARGET_DIR)/usr/share/evmapy
 
 	# copy modified pad ini file for 2 players
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/padDemul.ini \
-	    $(TARGET_DIR)/usr/demul/
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/padDemul.ini $(TARGET_DIR)/usr/demul/
 endef
 
 $(eval $(generic-package))

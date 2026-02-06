@@ -47,7 +47,7 @@ class DemulGenerator(Generator):
         wine_runner = wine.Runner("wine-proton", "demul")
         demulSaves = SAVES / demulsystem
         emupath = wine_runner.bottle_dir / "demul"
-        
+
         # Check Vulkan first
         if vulkan.is_available():
             _logger.debug("Vulkan driver is available on the system.")
@@ -64,27 +64,27 @@ class DemulGenerator(Generator):
 
         # Create dir & copy demul binary to wine bottle as necessary
         source_emu = Path("/usr/demul")
-        
+
         if not emupath.exists():
             shutil.copytree(source_emu, emupath)
-        
+
         # Check binary then copy updated files as necessary
         if not filecmp.cmp(source_emu / "demul.exe", emupath / "demul.exe"):
             self.sync_directories(source_emu, emupath)
 
         # Install necessary wine tricks if needed
-        wine_runner.install_wine_trick("d3dcompiler_47") 
+        wine_runner.install_wine_trick("d3dcompiler_47")
 
         # Handle DLLs (DXVK)
         # Since we are using WINEARCH=win32, 32-bit DLLs go into system32
         dll_files = ["d3d11.dll", "dxgi.dll", "d3dcompiler_43.dll", "d3dcompiler_47.dll"]
-        
+
         for dll in dll_files:
             try:
                 src_path = wine.WINE_BASE / "dxvk" / "x32" / dll
                 # In a win32 prefix, system32 holds 32-bit files
                 dest_path = wine_runner.bottle_dir / "drive_c" / "windows" / "system32" / dll
-                
+
                 if src_path.exists():
                     # Remove existing link/file if it already exists to ensure update
                     if dest_path.exists() or dest_path.is_symlink():
@@ -114,7 +114,7 @@ class DemulGenerator(Generator):
         nvram_path_win = PureWindowsPath(nvram)
         roms0 = BIOS
         roms0_path_win = PureWindowsPath(roms0)
-        
+
         # Specific rom paths
         roms1 = Path("/userdata/roms/hikaru")
         roms1_path_win = PureWindowsPath(roms1)
@@ -122,7 +122,7 @@ class DemulGenerator(Generator):
         roms2_path_win = PureWindowsPath(roms2)
         roms3 = Path("/userdata/roms/cave3rd")
         roms3_path_win = PureWindowsPath(roms3)
-        
+
         plugins = Path("/userdata/saves/demul/demul/plugins/")
         # If user plugins don't exist, point to emu plugins
         if not plugins.exists():
@@ -146,7 +146,7 @@ class DemulGenerator(Generator):
         Config.set("plugins", "spu", "spuDemul.dll")
         Config.set("plugins", "pad", "padDemul.dll")
         Config.set("plugins", "net", "netDemul.dll")
-        
+
         # Gaelco won't work with the new DX11 plugin
         if demulsystem == "gaelco":
             Config.set("plugins", "gpu", "gpuDX11old.dll")
@@ -166,10 +166,10 @@ class DemulGenerator(Generator):
             gpuConfigFileName = emupath / "gpuDX11old.ini"
         else:
             gpuConfigFileName = emupath / "gpuDX11.ini"
-        
+
         GpuConfig = configparser.ConfigParser(interpolation=None)
         GpuConfig.optionxform = str
-        
+
         if gpuConfigFileName.exists():
             try:
                 with gpuConfigFileName.open("r", encoding="utf_8_sig") as fp:
@@ -179,10 +179,10 @@ class DemulGenerator(Generator):
 
         if not GpuConfig.has_section("main"):
             GpuConfig.add_section("main")
-        
+
         # Always fullscreen
         GpuConfig.set("main", "UseFullscreen", "1")
-        
+
         # Aspect Ratio
         if system.isOptSet("demulRatio"):
             GpuConfig.set("main", "aspect", format(system.config["demulRatio"]))
@@ -194,7 +194,7 @@ class DemulGenerator(Generator):
             GpuConfig.set("main", "Vsync", format(system.config["demulVSync"]))
         else:
             GpuConfig.set("main", "Vsync", "0")
-        
+
         # Scaling
         if system.isOptSet("demulScaling"):
             GpuConfig.set("main", "scaling", format(system.config["demulScaling"]))
@@ -203,7 +203,7 @@ class DemulGenerator(Generator):
 
         if not GpuConfig.has_section("resolution"):
             GpuConfig.add_section("resolution")
-        
+
         # Use game resolution
         GpuConfig.set("resolution", "Width", str(gameResolution["width"]))
         GpuConfig.set("resolution", "Height", str(gameResolution["height"]))
@@ -212,16 +212,16 @@ class DemulGenerator(Generator):
         with gpuConfigFileName.open("w", encoding="utf_8_sig") as configfile:
             GpuConfig.write(configfile)
 
-        # Setup Command 
+        # Setup Command
         commandArray = [wine_runner.wine, emupath / "demul.exe"]
-        
+
         if demulsystem:
             commandArray.append(f"-run={demulsystem}")
-        
+
         commandArray.append(f"-rom={smplromname}")
 
         environment = wine_runner.get_environment()
-        
+
         # Add necessary overrides
         environment.update(
             {
