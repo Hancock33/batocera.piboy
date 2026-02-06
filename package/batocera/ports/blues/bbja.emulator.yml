@@ -13,4 +13,4 @@ shared_features:
   - bezel.tattoo_file
   - bezel.resize_tattoo
 systems:
-  - prboom
+  - bbja

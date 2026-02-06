@@ -14,5 +14,3 @@ shared_features:
   - bezel.resize_tattoo
 systems:
   - blues
-  - bbja
-  - pre

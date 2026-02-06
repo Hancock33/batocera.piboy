@@ -20,6 +20,5 @@ custom_features:
       Off (Default): 0
       'On': 1
 systems:
-  - traider1
   - traider2
 
