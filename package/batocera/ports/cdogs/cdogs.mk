@@ -3,8 +3,8 @@
 # cdogs
 #
 ################################################################################
-# Version: Commits on Jan 26, 2026
-CDOGS_VERSION = 4240f917953944abfd8dfcdb141e871e653b059e
+# Version: Commits on Feb 07, 2026
+CDOGS_VERSION = e83129ab9ae61cda21f551dc7e87c7394afaad78
 CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
 CDOGS_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer enet
 CDOGS_LICENSE = GPL-2.0
