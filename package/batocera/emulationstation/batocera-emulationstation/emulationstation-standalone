@@ -344,8 +344,6 @@ while [ -e "${REBOOT_FLAG}" ]; do
     fi
 
     echo "${settings_output}" > "/var/run/switch_screen_current"
-    # DBUS launch is required for the gio/gvfs/trash:///...
-    eval "$(dbus-launch --sh-syntax --exit-with-session)"
 
     ### BACKGLASS ###
     if which batocera-backglass; then
@@ -395,12 +393,12 @@ while [ -e "${REBOOT_FLAG}" ]; do
     /etc/init.d/S91smb restart > /dev/null 2>&1
     if test ${enabledpi} = 1
        then
-          /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
+          dbus-run-session -- /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
     elif test ${enabledxrs} = 1
        then
-          /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
+          dbus-run-session -- /usr/bin/emulationstation_piboy ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
     else
-          /usr/bin/emulationstation ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
+          dbus-run-session -- /usr/bin/emulationstation ${GAMELAUNCHOPT} --exit-on-reboot-required %BATOCERA_EMULATIONSTATION_ARGS% ${CUSTOMESOPTIONS}
     fi
 
     if which batocera-backglass; then
