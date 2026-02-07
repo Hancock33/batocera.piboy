@@ -1,0 +1,54 @@
+features:
+  - padtokeyboard
+shared_features:
+  - powermode
+  - tdp
+  - videomode
+  - ratio
+  - bezel
+  - bezel_stretch
+  - hud
+  - hud_corner
+  - bezel.tattoo
+  - bezel.tattoo_corner
+  - bezel.tattoo_file
+  - bezel.resize_tattoo
+custom_features:
+  yaba_aspect:
+    prompt:   GAME ASPECT RATIO
+    description: Change the output resolution ratio.
+    choices:
+      "Original": 0
+      "4:3":   1
+      "16:9":  2
+      "Full Screen": 3
+  yaba_resolution:
+    prompt:   RENDER RESOLUTION
+    description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+    choices:
+      "Native":   0
+      "4x": 1
+      "2x": 2
+      "Original": 3
+      "720p":  4
+      "1080p": 5
+  yaba_shader:
+    prompt:   COMPUTE SHADER
+    description: Enhancement. Use the compute shader.
+    choices:
+      "On":  False
+      "Off": True
+  yaba_player1:
+    prompt:   CONTROLLER 1 TYPE
+    description: Choose the controller 1 user mode.
+    choices:
+      "Digital": 0
+      "Analog":  1
+  yaba_player2:
+    prompt:   CONTROLLER 2 TYPE
+    description: Choose the controller 2 user mode.
+    choices:
+      "Digital": 0
+      "Analog":  1
+systems:
+  - name: saturn

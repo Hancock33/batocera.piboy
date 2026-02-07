@@ -12,7 +12,7 @@ YABASANSHIRO_LICENSE = GPLv2
 YABASANSHIRO_LICENSE_FILE = LICENSE
 YABASANSHIRO_SUBDIR = yabause
 YABASANSHIRO_CMAKE_BACKEND = make
-
+YABASANSHIRO_INFO = yabasanshiro.emulator.yml
 YABASANSHIRO_DEPENDENCIES = sdl2 boost libglfw
 
 YABASANSHIRO_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
@@ -51,3 +51,4 @@ define YABASANSHIRO_POST_PROCESS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))
