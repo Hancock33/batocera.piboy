@@ -232,6 +232,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_WIRELESS_REGDB                       # wireless regulatory DB
     select BR2_PACKAGE_WIRELESS_TOOLS                       # wireless tools
     select BR2_PACKAGE_WIRELESS_TOOLS_LIB                   # wireless tools
+    select BR2_PACKAGE_WLRCTL                               if  BR2_PACKAGE_BATOCERA_WAYLAND
     select BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     select BR2_TARGET_ROOTFS_SQUASHFS                       # tool to generate the target image
 
