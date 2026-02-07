@@ -286,7 +286,7 @@ index 4d71211fdad8..57af938f1969 100644
  unprivileged_userfaultfd
  ========================
 diff --git a/Makefile b/Makefile
-index 6b6539f2f11d..33272148206e 100644
+index 64af72f16125..6eaafad1c864 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -869,11 +869,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -382,7 +382,7 @@ index 6b6539f2f11d..33272148206e 100644
  	       compile_commands.json rust/test \
  	       rust-project.json .vmlinux.objs .vmlinux.export.c \
                 .builtin-dtbs-list .builtin-dtb.S
-@@ -2018,7 +2024,7 @@ clean: $(clean-dirs)
+@@ -2019,7 +2025,7 @@ clean: $(clean-dirs)
  	$(call cmd,rmfiles)
  	@find . $(RCS_FIND_IGNORE) \
  		\( -name '*.[aios]' -o -name '*.rsi' -o -name '*.ko' -o -name '.*.cmd' \
@@ -3471,10 +3471,10 @@ index c65f4da93702..105b12fd86b8 100644
 +
 diff --git a/block/adios.c b/block/adios.c
 new file mode 100644
-index 000000000000..c6eaa85911d3
+index 000000000000..6ae4bce22463
 --- /dev/null
 +++ b/block/adios.c
-@@ -0,0 +1,2002 @@
+@@ -0,0 +1,2004 @@
 +// SPDX-License-Identifier: GPL-2.0
 +/*
 + * Adaptive Deadline I/O Scheduler (ADIOS)
@@ -3502,7 +3502,7 @@ index 000000000000..c6eaa85911d3
 +#include "blk-mq.h"
 +#include "blk-mq-sched.h"
 +
-+#define ADIOS_VERSION "3.1.8"
++#define ADIOS_VERSION "3.1.9"
 +
 +/* Request Types:
 + *
@@ -3710,8 +3710,7 @@ index 000000000000..c6eaa85911d3
 +	atomic_t state;
 +	u8  bq_state[ADIOS_BQ_PAGES];
 +
-+	void (*insert_request_fn)(struct blk_mq_hw_ctx *, struct request *,
-+								blk_insert_t, struct list_head *);
++	bool models_stable;
 +
 +	u64 global_latency_window;
 +	u64 compliance_flags;
@@ -4423,7 +4422,7 @@ index 000000000000..c6eaa85911d3
 +	struct adios_rq_data *rd = get_rq_data(rq);
 +	u8 optype = adios_optype(rq);
 +	u8 pq_idx = !(insert_flags & BLK_MQ_INSERT_AT_HEAD);
-+	bool models_stable = false;
++	bool stable = false;
 +
 +	rd->managed = true;
 +	rd->block_size = blk_rq_bytes(rq);
@@ -4435,11 +4434,11 @@ index 000000000000..c6eaa85911d3
 +	rcu_read_lock();
 +	if (rcu_dereference(ad->latency_model[ADIOS_READ].params)->base > 0 &&
 +		rcu_dereference(ad->latency_model[ADIOS_WRITE].params)->base > 0)
-+			models_stable = true;
++			stable = true;
 +	rcu_read_unlock();
 +
-+	if (models_stable)
-+		ad->insert_request_fn = insert_request_post_stability;
++	if (stable)
++		ad->models_stable = true;
 +}
 +
 +// Insert multiple requests into the scheduler
@@ -4461,7 +4460,10 @@ index 000000000000..c6eaa85911d3
 +		}
 +		rq = list_first_entry(list, struct request, queuelist);
 +		list_del_init(&rq->queuelist);
-+		ad->insert_request_fn(hctx, rq, insert_flags, &free);
++		if (likely(ad->models_stable))
++			insert_request_post_stability(hctx, rq, insert_flags, &free);
++		else
++			insert_request_pre_stability(hctx, rq, insert_flags, &free);
 +	}} while (!stop);
 +
 +	blk_mq_free_requests(&free);
@@ -5018,7 +5020,7 @@ index 000000000000..c6eaa85911d3
 +	ad->batch_order = default_batch_order;
 +	ad->compliance_flags = default_compliance_flags;
 +
-+	ad->insert_request_fn = insert_request_pre_stability;
++	ad->models_stable = false;
 +
 +	atomic_set(&ad->state, 0);
 +
@@ -6012,7 +6014,7 @@ index 6f5b4a0e0a34..266d9111e20b 100644
  #define AMDGPU_VM_MAX_NUM_CTX			4096
  #define AMDGPU_SG_THRESHOLD			(256*1024*1024)
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-index 7333e19291cf..d302ea0e9628 100644
+index 7333e19291cf..f5a19da41939 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 @@ -149,6 +149,7 @@ enum AMDGPU_DEBUG_MASK {
@@ -6088,6 +6090,16 @@ index 7333e19291cf..d302ea0e9628 100644
  	if ((pdev->class >> 8) == PCI_CLASS_DISPLAY_VGA ||
  	    (pdev->class >> 8) == PCI_CLASS_DISPLAY_OTHER) {
  		if (drm_firmware_drivers_only() && amdgpu_modeset == -1)
+@@ -2334,9 +2372,6 @@ static int amdgpu_pci_probe(struct pci_dev *pdev,
+ 			return -ENODEV;
+ 	}
+ 
+-	if (amdgpu_aspm == -1 && !pcie_aspm_enabled(pdev))
+-		amdgpu_aspm = 0;
+-
+ 	if (amdgpu_virtual_display ||
+ 	    amdgpu_device_asic_has_dc_support(pdev, flags & AMD_ASIC_MASK))
+ 		supports_atomic = true;
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_ids.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_ids.c
 index 3ef5bc95642c..9cab36322c16 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_ids.c
@@ -32791,6 +32803,26 @@ index 000000000000..6c2e22622f4c
 +struct bce_vhci *bce_vhci_from_hcd(struct usb_hcd *hcd);
 +
 +#endif //BCE_VHCI_H
+diff --git a/drivers/usb/core/quirks.c b/drivers/usb/core/quirks.c
+index c4d85089d19b..3c09bb61ed41 100644
+--- a/drivers/usb/core/quirks.c
++++ b/drivers/usb/core/quirks.c
+@@ -453,6 +453,15 @@ static const struct usb_device_id usb_quirk_list[] = {
+ 	/* Elgato 4K X - BOS descriptor fetch hangs at SuperSpeed Plus */
+ 	{ USB_DEVICE(0x0fd9, 0x009b), .driver_info = USB_QUIRK_NO_BOS },
+ 
++	/* ASUS TUF 4K PRO - BOS descriptor fetch hangs at SuperSpeed Plus */
++	{ USB_DEVICE(0x0b05, 0x1ab9), .driver_info = USB_QUIRK_NO_BOS },
++
++	/* Avermedia Live Gamer Ultra 2.1 (GC553G2)
++	{ USB_DEVICE(0x07ca, 0x2553), .driver_info = USB_QUIRK_NO_BOS },
++
++	/* UGREEN 35871 - BOS descriptor fetch hangs at SuperSpeed Plus */
++	{ USB_DEVICE(0x2b89, 0x5871), .driver_info = USB_QUIRK_NO_BOS },
++
+ 	/* Sony Xperia XZ1 Compact (lilac) smartphone in fastboot mode */
+ 	{ USB_DEVICE(0x0fce, 0x0dde), .driver_info = USB_QUIRK_NO_LPM },
+ 
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
 index 84810bbc6ebb..37a31594e223 100644
 --- a/include/drm/drm_connector.h
@@ -33959,7 +33991,7 @@ index e460c22de8ad..3f02e0846e92 100644
  {
  	struct rq *rq = this_rq();
 diff --git a/kernel/sched/ext.c b/kernel/sched/ext.c
-index 31eda2a56920..cd34d913458f 100644
+index 2ff7034841c7..0aedbbeb12d1 100644
 --- a/kernel/sched/ext.c
 +++ b/kernel/sched/ext.c
 @@ -1004,8 +1004,11 @@ static void dispatch_enqueue(struct scx_sched *sch, struct scx_dispatch_q *dsq,
@@ -34010,7 +34042,7 @@ index 31eda2a56920..cd34d913458f 100644
  }
  
  static void dispatch_dequeue(struct rq *rq, struct task_struct *p)
-@@ -4551,7 +4570,7 @@ static struct scx_sched *scx_alloc_and_add_sched(struct sched_ext_ops *ops)
+@@ -4552,7 +4571,7 @@ static struct scx_sched *scx_alloc_and_add_sched(struct sched_ext_ops *ops)
  	return ERR_PTR(ret);
  }
  
@@ -34019,7 +34051,7 @@ index 31eda2a56920..cd34d913458f 100644
  			      const struct sched_ext_ops *ops)
  {
  	unsigned long long global_hotplug_seq;
-@@ -4568,8 +4587,11 @@ static void check_hotplug_seq(struct scx_sched *sch,
+@@ -4569,8 +4588,11 @@ static void check_hotplug_seq(struct scx_sched *sch,
  				 SCX_ECODE_ACT_RESTART | SCX_ECODE_RSN_HOTPLUG,
  				 "expected hotplug seq %llu did not match actual %llu",
  				 ops->hotplug_seq, global_hotplug_seq);
@@ -34031,7 +34063,7 @@ index 31eda2a56920..cd34d913458f 100644
  }
  
  static int validate_ops(struct scx_sched *sch, const struct sched_ext_ops *ops)
-@@ -4671,7 +4693,11 @@ static int scx_enable(struct sched_ext_ops *ops, struct bpf_link *link)
+@@ -4672,7 +4694,11 @@ static int scx_enable(struct sched_ext_ops *ops, struct bpf_link *link)
  		if (((void (**)(void))ops)[i])
  			set_bit(i, sch->has_op);
  
@@ -34044,7 +34076,7 @@ index 31eda2a56920..cd34d913458f 100644
  	scx_idle_update_selcpu_topology(ops);
  
  	cpus_read_unlock();
-@@ -6219,6 +6245,40 @@ __bpf_kfunc void bpf_iter_scx_dsq_destroy(struct bpf_iter_scx_dsq *it)
+@@ -6230,6 +6256,40 @@ __bpf_kfunc void bpf_iter_scx_dsq_destroy(struct bpf_iter_scx_dsq *it)
  	kit->dsq = NULL;
  }
  
@@ -34085,7 +34117,7 @@ index 31eda2a56920..cd34d913458f 100644
  __bpf_kfunc_end_defs();
  
  static s32 __bstr_format(struct scx_sched *sch, u64 *data_buf, char *line_buf,
-@@ -6776,6 +6836,7 @@ BTF_KFUNCS_START(scx_kfunc_ids_any)
+@@ -6787,6 +6847,7 @@ BTF_KFUNCS_START(scx_kfunc_ids_any)
  BTF_ID_FLAGS(func, scx_bpf_kick_cpu)
  BTF_ID_FLAGS(func, scx_bpf_dsq_nr_queued)
  BTF_ID_FLAGS(func, scx_bpf_destroy_dsq)

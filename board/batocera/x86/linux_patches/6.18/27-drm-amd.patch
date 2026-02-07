@@ -66,10 +66,10 @@ index 49107475af61..8b22cec68e1b 100644
  	if (amdgpu_sriov_vf(adev))
  		amdgpu_virt_release_full_gpu(adev, false);
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-index d302ea0e9628..d65870c9e15f 100644
+index f5a19da41939..40a4e5d3a392 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
-@@ -2602,7 +2602,8 @@ amdgpu_pci_shutdown(struct pci_dev *pdev)
+@@ -2599,7 +2599,8 @@ amdgpu_pci_shutdown(struct pci_dev *pdev)
  	 */
  	if (!amdgpu_passthrough(adev))
  		adev->mp1_state = PP_MP1_STATE_UNLOAD;
