@@ -21,9 +21,11 @@ Ports|[openjazz](http://github.com/AlisterT/openjazz)|81df06925c66ad237a1384419e
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|79385fdf7e9d2fede1d3198585ea659fcfa15169|Feb 08, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|2f10920dc0e24a6861827c0655fa51d33495d0cb|Feb 08, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v1.3|Feb 08, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260208|Feb 08, 2026
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|f004195a73be722f6384ecae7d98161481151dff|Feb 08, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|24a1a4c0d6c7d498f0525c2fbef57d5bf6a72e97|Feb 08, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|42101dec35c71ac5e6f288728350c3967b170dde|Feb 08, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260208|Feb 08, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|503fc049b1cf0ddfe46a301fde3e36952471acfe|Feb 08, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|9f996a3317ad3e3a516747fc373b7b5c9f5278c9|Feb 08, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|98aed82a25ef7bdc32d2f4c97e6572d303f6b11e|Feb 08, 2026
@@ -53,9 +55,7 @@ Engines|[tic80](https://github.com/nesbox/TIC-80.git)|8f7f36d2db99748bef8c65ee48
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|50f77c0b3977389033d259eb4ce97fb0af2d776a|Feb 07, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.02|Feb 07, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.0.0|Feb 07, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260207|Feb 07, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|21c8985152ff0d8e3e6cbc7c0d0f930c81838109|Feb 07, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260207|Feb 07, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|bf74112ade2c7e90993bc7e3ada6d79f448bcd6c|Feb 07, 2026
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|0bd84f8c257f383863196d47e0a3783514852f18|Feb 07, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|21c8985152ff0d8e3e6cbc7c0d0f930c81838109|Feb 07, 2026
