@@ -52,3 +52,47 @@ custom_features:
 systems:
   - mame
   - neogeo
+  - acclaim
+  - alphadenshi
+  - amcoe
+  - atari
+  - atlus
+  - banpresto
+  - cave
+  - centurye
+  - cinematronics
+  - comad
+  - cps1
+  - cps2
+  - cps3
+  - dataeast
+  - dynax
+  - eighting
+  - exidy
+  - gaelco
+  - gottlieb
+  - igs
+  - incredibletech
+  - irem
+  - jaleco
+  - kaneko
+  - konami
+  - mame2003
+  - midway
+  - mitchell
+  - namco
+  - nichibutsu
+  - nintendo
+  - nmk
+  - psikyo
+  - sammy
+  - sega
+  - semicom
+  - seta
+  - snk
+  - taito
+  - technos
+  - tecmo
+  - toaplan
+  - universal
+  - visco
