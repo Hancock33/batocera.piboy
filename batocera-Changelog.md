@@ -113,7 +113,8 @@
 - Libretro Nestopia to 10th of January 2026 build
 - Libretro Opera to 17th of October 2024 build
 - Libretro Picodrive to 3rd of December 2025 build
-- Libretro Play! to 0.72
+- Libretro Play! to 0.73
+- Libretro PS2 to 6th of February 2026 build
 - Libretro PUAE to 2nd of November 2025 build
 - Libretro Snes9x to 8th of September 2025 build
 - Libretro Stella to 28th of December 2025 build
@@ -153,10 +154,10 @@
 - Go language compiler to 1.25.5
 - GStreamer codecs to 1.26.6
 - Linux Firmware to 20251125
-- Linux Kernel to 6.18.8
+- Linux Kernel to 6.18.9
 - LabWC to 0.9.3
 - LLVM Project to 20.1.8
-- Mesa3D to 25.3.4
+- Mesa3D to 25.3.5
 - MPV to v0.41.0
 - Nvidia 580.xx legacy drivers to 580.126.09
 - Nvidia production drivers to 590.48.01

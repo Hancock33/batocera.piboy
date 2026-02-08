@@ -49,6 +49,10 @@ class MupenGenerator(Generator):
         if state_filename := system.config.get('state_filename'):
             commandArray.extend(["--savestate", state_filename])
 
+        # custom cheats option
+        if cheats := system.config.get_str('mupen64plus_cheats', '').strip():
+            commandArray.extend(["--cheats", cheats])
+
         if "squashfs" in str(rom):
             romsInDir = glob.glob(glob.escape(rom) + '/*')
             rom = romsInDir[0]

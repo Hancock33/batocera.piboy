@@ -1,5 +1,6 @@
 config BR2_PACKAGE_WLRCTL
 	bool "wlrctl"
+	select BR2_PACKAGE_LIBXKBCOMMON
 	select BR2_PACKAGE_WAYLAND
 
 	help
@@ -8,4 +9,3 @@ config BR2_PACKAGE_WLRCTL
 	  - foreign-toplevel-management
 	  - virtual-keyboard
 	  - virtual-pointer
-
