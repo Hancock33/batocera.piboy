@@ -794,6 +794,7 @@ ps3:
   core:     rpcs3
   options:
     powersave: '2'
+    hud_support: false
 ps4:
   emulator: shadps4
   core:     shadps4
