@@ -7,6 +7,7 @@
 LIBRETRO_MU_VERSION = d9766f139ece646703b5785097374a3a68dd07ad
 LIBRETRO_MU_SITE = $(call github,libretro,Mu,$(LIBRETRO_MU_VERSION))
 LIBRETRO_MU_LICENSE = CCANC-3.0
+LIBRETRO_MU_EMULATOR_INFO = mu.libretro.core.yml
 
 define LIBRETRO_MU_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/libretroBuildSystem/Makefile.libretro
@@ -19,3 +20,4 @@ define LIBRETRO_MU_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

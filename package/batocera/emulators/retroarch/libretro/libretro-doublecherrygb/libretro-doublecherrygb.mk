@@ -3,10 +3,11 @@
 # libretro-doublecherrygb
 #
 ################################################################################
-# Version: Commits on Jan 18, 2026
-LIBRETRO_DOUBLECHERRYGB_VERSION = 129c98a9466538dc6b51fe450482c1f23337b324
+# Version: Commits on Feb 08, 2026
+LIBRETRO_DOUBLECHERRYGB_VERSION = e3c07c7524d3265efa536ee92f2e5c1f6541c479
 LIBRETRO_DOUBLECHERRYGB_SITE = $(call github,TimOelrichs,doublecherryGB-libretro,$(LIBRETRO_DOUBLECHERRYGB_VERSION))
 LIBRETRO_DOUBLECHERRYGB_LICENSE = GPLv2
+LIBRETRO_DOUBLECHERRYGB_EMULATOR_INFO = doublecherrygb.libretro.core.yml
 
 define LIBRETRO_DOUBLECHERRYGB_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -19,3 +20,4 @@ define LIBRETRO_DOUBLECHERRYGB_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

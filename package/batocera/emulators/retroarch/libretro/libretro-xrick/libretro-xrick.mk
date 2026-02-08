@@ -7,7 +7,8 @@
 LIBRETRO_XRICK_VERSION = 34e4c3fc8a679d0209debc3738dc7264d3112a03
 LIBRETRO_XRICK_SITE = $(call github,libretro,xrick-libretro,$(LIBRETRO_XRICK_VERSION))
 LIBRETRO_XRICK_LICENSE = GPL-3.0
-LIBRETRO_XRICK_DEPENDENCIES = retroarch
+LIBRETRO_XRICK_DEPENDENCIES += retroarch
+LIBRETRO_XRICK_EMULATOR_INFO = xrick.libretro.core.yml
 
 define LIBRETRO_XRICK_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
@@ -23,3 +24,4 @@ define LIBRETRO_XRICK_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

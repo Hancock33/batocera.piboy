@@ -11,6 +11,7 @@ VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
 VPINBALL_DEPENDENCIES = ffmpeg libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil libdof sdl2 sdl2_image sdl2_ttf
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
+VPINBALL_EMULATOR_INFO = vpinball.emulator.yml
 
 VPINBALL_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)
 VPINBALL_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -39,3 +40,4 @@ endef
 VPINBALL_PRE_CONFIGURE_HOOKS += VPINBALL_CMAKE_HACKS
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

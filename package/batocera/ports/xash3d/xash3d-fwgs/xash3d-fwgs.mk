@@ -3,14 +3,15 @@
 # xash3d-fwgs
 #
 ################################################################################
-# Version: Commits on Jan 29, 2026
-XASH3D_FWGS_VERSION = e9ffe124817e2ad251e3577665bc24f1d2e3dc5b
+# Version: Commits on Feb 08, 2026
+XASH3D_FWGS_VERSION = d9221c8491761094a002dfdaff6d21aef0bc5657
 XASH3D_FWGS_SITE = https://github.com/FWGS/xash3d-fwgs.git
 XASH3D_FWGS_SITE_METHOD = git
 XASH3D_FWGS_GIT_SUBMODULES = yes
 XASH3D_FWGS_LICENSE = GPL-3.0+
 XASH3D_FWGS_DEPENDENCIES += fontconfig freetype hlsdk-xash3d
 XASH3D_FWGS_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer sdl2_ttf
+XASH3D_FWGS_EMULATOR_INFO = xash3d_fwgs.emulator.yml
 
 XASH3D_FWGS_CONF_OPTS += --build-type=release
 XASH3D_FWGS_CONF_OPTS += --enable-packaging
@@ -37,3 +38,4 @@ else
 endif
 
 $(eval $(waf-package))
+$(eval $(emulator-info-package))

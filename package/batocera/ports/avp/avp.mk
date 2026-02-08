@@ -6,6 +6,7 @@
 # Version: Commits on Jan 12, 2026
 AVP_VERSION = 8cda80a2274f27454b60d6f2cd94756aea004486
 AVP_SITE =  $(call github,atsb,NakedAVP,$(AVP_VERSION))
+AVP_EMULATOR_INFO = avp.emulator.yml
 AVP_DEPENDENCIES = sdl3 sdl3_mixer
 AVP_LICENSE = GPL-2.0
 AVP_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -22,3 +23,4 @@ define AVP_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

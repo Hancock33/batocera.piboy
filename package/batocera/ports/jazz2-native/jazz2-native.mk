@@ -3,11 +3,12 @@
 # jazz2-native
 #
 ################################################################################
-# Version: Commits on Jan 08, 2026
-JAZZ2_NATIVE_VERSION = 2a7ccef207be68f5e1365467ab064c4c98e829f6
+# Version: Commits on Feb 08, 2026
+JAZZ2_NATIVE_VERSION = ca9d139cd5a96a63adf4156e27a74e7fe8fcd348
 JAZZ2_NATIVE_SITE =  $(call github,deathkiller,jazz2-native,$(JAZZ2_NATIVE_VERSION))
 JAZZ2_NATIVE_LICENSE = GPL-3.0
 JAZZ2_NATIVE_LICENSE_FILE = LICENSE
+JAZZ2_NATIVE_EMULATOR_INFO = jazz2-native.emulator.yml
 
 JAZZ2_NATIVE_DEPENDENCIES += sdl2 openal libopenmpt zlib
 
@@ -26,3 +27,4 @@ else
 endif
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

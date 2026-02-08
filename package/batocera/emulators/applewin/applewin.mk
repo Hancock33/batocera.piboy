@@ -3,13 +3,14 @@
 # applewin
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-APPLEWIN_VERSION = 86a7ffb88301b8c445225902253fb0ab498e119a
+# Version: Commits on Feb 08, 2026
+APPLEWIN_VERSION = e8eca6285c8f6a239959cc204760204e0bc17b1c
 APPLEWIN_SITE = https://github.com/audetto/AppleWin.git
 APPLEWIN_SITE_METHOD=git
 APPLEWIN_GIT_SUBMODULES=YES
 APPLEWIN_LICENSE = GPLv2
 APPLEWIN_DEPENDENCIES = host-xxd libpcap sdl2 sdl2_image slirp
+APPLEWIN_EMULATOR_INFO = applewin.emulator.yml applewin.libretro.core.yml
 
 APPLEWIN_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -32,3 +33,4 @@ define APPLEWIN_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

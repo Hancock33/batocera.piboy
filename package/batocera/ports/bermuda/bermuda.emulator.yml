@@ -1,0 +1,24 @@
+features:
+  - padtokeyboard
+shared_features:
+  - powermode
+  - tdp
+  - videomode
+  - bezel
+  - bezel_stretch
+  - hud
+  - hud_corner
+  - bezel.tattoo
+  - bezel.tattoo_corner
+  - bezel.tattoo_file
+  - bezel.resize_tattoo
+custom_features:
+  bermuda_aspect:
+    group: VIDEO SETTINGS
+    prompt:      ASPECT RATIO
+    description: Select full screen mode.
+    choices:
+      "4:3 (Default)": 0
+      "16:9": 1
+systems:
+  - bermuda

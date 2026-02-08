@@ -3,11 +3,12 @@
 # libretro-gearcoleco
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-LIBRETRO_GEARCOLECO_VERSION = 59829cc69cb722f552094f96129ad4a89426f900
+# Version: Commits on Feb 08, 2026
+LIBRETRO_GEARCOLECO_VERSION = b9a4763bceb4cc595e19b187e14436b43b1b5a1c
 LIBRETRO_GEARCOLECO_SITE = $(call github,drhelius,Gearcoleco,$(LIBRETRO_GEARCOLECO_VERSION))
 LIBRETRO_GEARCOLECO_LICENSE = GPLv3
 LIBRETRO_GEARCOLECO_DEPENDENCIES = retroarch
+LIBRETRO_GEARCOLECO_EMULATOR_INFO = gearcoleco.libretro.core.yml
 
 define LIBRETRO_GEARCOLECO_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/platforms/libretro/Makefile
@@ -21,3 +22,4 @@ define LIBRETRO_GEARCOLECO_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

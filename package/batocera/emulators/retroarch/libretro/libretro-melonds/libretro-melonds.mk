@@ -8,6 +8,7 @@ LIBRETRO_MELONDS_VERSION = 7a3c11ff970cd36ca806961fae6db94b30dd5401
 LIBRETRO_MELONDS_SITE = $(call github,libretro,melonds,$(LIBRETRO_MELONDS_VERSION))
 LIBRETRO_MELONDS_LICENSE = GPLv2
 LIBRETRO_MELONDS_DEPENDENCIES = libpcap retroarch
+LIBRETRO_MELONDS_EMULATOR_INFO = melonds.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
     LIBRETRO_MELONDS_PLATFORM = rpi4_64
@@ -51,3 +52,4 @@ define LIBRETRO_MELONDS_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

@@ -3,13 +3,14 @@
 # etlegacy
 #
 ################################################################################
-# Version: Commits on Jan 27, 2026
-ETLEGACY_VERSION = effdc64d44311e8622409e36b9944b37c0ab3ad2
+# Version: Commits on Feb 08, 2026
+ETLEGACY_VERSION = 7f33ce53b13ec5aeab0732d1c966958d80a022b1
 ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES
 ETLEGACY_LICENSE = GPL-3.0
 ETLEGACY_LICENSE_FILE = COPYING.txt
+ETLEGACY_EMULATOR_INFO = etlegacy.emulator.yml
 
 ETLEGACY_DEPENDENCIES += freetype libcurl libglew libpng libtheora libglu
 ETLEGACY_DEPENDENCIES += libvorbis lua openal openssl sdl2 sqlite
@@ -57,3 +58,4 @@ define ETLEGACY_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

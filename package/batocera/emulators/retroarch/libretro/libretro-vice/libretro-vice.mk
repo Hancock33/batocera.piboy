@@ -7,7 +7,8 @@
 LIBRETRO_VICE_VERSION = e9f8ac034ddef3025f0567768f7af8219f7cfdb8
 LIBRETRO_VICE_SITE = $(call github,sonninnos,libretro-vice,$(LIBRETRO_VICE_VERSION))
 LIBRETRO_VICE_LICENSE = GPLv2
-LIBRETRO_VICE_DEPENDENCIES = retroarch
+LIBRETRO_VICE_DEPENDENCIES += retroarch
+LIBRETRO_VICE_EMULATOR_INFO = vice_x128.libretro.core.yml vice_x64.libretro.core.yml vice_x64sc.libretro.core.yml vice_xpet.libretro.core.yml vice_xplus4.libretro.core.yml vice_xscpu64.libretro.core.yml vice_xvic.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_VICE_PLATFORM = rpi2
@@ -54,3 +55,4 @@ define LIBRETRO_VICE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

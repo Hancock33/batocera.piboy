@@ -6,7 +6,7 @@
 # Version: Commits on Oct 05, 2025
 RAPTORCOTS_VERSION = 0019c5dd8e3cf283086a0ab7538dbceb4dc4862c
 RAPTORCOTS_SITE = $(call github,skynettx,raptor,$(RAPTORCOTS_VERSION))
-
+RAPTORCOTS_EMULATOR_INFO = raptorcots.emulator.yml
 RAPTORCOTS_DEPENDENCIES = sdl2 openal
 RAPTORCOTS_LICENSE = GPL-2.0
 RAPTORCOTS_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -23,3 +23,4 @@ define RAPTORCOTS_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

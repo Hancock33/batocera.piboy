@@ -3,13 +3,14 @@
 # vice
 #
 ################################################################################
-# Version: Commits on Jan 26, 2026
-VICE_VERSION = r45962
+# Version: Commits on Feb 04, 2026
+VICE_VERSION = r45965
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
 VICE_SUBDIR  = vice
 VICE_DEPENDENCIES = alsa-lib giflib host-dos2unix host-xa jpeg libcurl sdl2 sdl2_image zlib
 VICE_CONF_ENV += LDFLAGS=-lSDL2
+VICE_EMULATOR_INFO = vice.emulator.yml
 
 VICE_CONF_OPTS += --disable-debug-gtk3ui
 VICE_CONF_OPTS += --disable-html-docs
@@ -57,3 +58,4 @@ endef
 VICE_POST_EXTRACT_HOOKS += VICE_SRC_AUTOCONFIGURE
 
 $(eval $(autotools-package))
+$(eval $(emulator-info-package))

@@ -6,7 +6,7 @@
 # Version: Commits on Jan 11, 2025
 PROTOTYPE_VERSION = 80a045a3a3796c3d7506d2e6fdeada5ec3eedf73
 PROTOTYPE_SITE = $(call github,ptitSeb,prototype,$(PROTOTYPE_VERSION))
-
+PROTOTYPE_EMULATOR_INFO = prototype.emulator.yml
 PROTOTYPE_DEPENDENCIES = sdl2 sdl2_mixer
 PROTOTYPE_LICENSE = GPL-2.0
 
@@ -23,3 +23,4 @@ define PROTOTYPE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

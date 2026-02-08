@@ -3,17 +3,17 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jan 31, 2026
-RPCS3_VERSION = 1c08439907753a86ee1628f07d5fcbe86bfdda2f
+# Version: Commits on Feb 08, 2026
+RPCS3_VERSION = aeaa62a28c36f352d5c2bf6bb4e1cadc4600ff00
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
+RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 RPCS3_DEPENDENCIES += alsa-lib cubeb ffmpeg flatbuffers libcurl libevdev libglew libglu libpng
 RPCS3_DEPENDENCIES += libusb libxml2 llvm mesa3d ncurses openal opencv4 pugixml rtmpdump sdl3 wolfssl
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
-
-RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
+RPCS3_EMULATOR_INFO = rpcs3.emulator.yml
 
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON
@@ -53,3 +53,4 @@ endef
 RPCS3_PRE_PATCH_HOOKS += RPCS3_VER_STRING
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

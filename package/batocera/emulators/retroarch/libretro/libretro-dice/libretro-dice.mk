@@ -3,11 +3,12 @@
 # libretro-dice
 #
 ################################################################################
-# Version: Commits on Jan 16, 2026
-LIBRETRO_DICE_VERSION = f41ed433ed90716521b05437c49684c370faa9df
+# Version: Commits on Feb 06, 2026
+LIBRETRO_DICE_VERSION = 480bf145aaafc8c5f4bee9440613e8e79d30ff11
 LIBRETRO_DICE_SITE = $(call github,mittonk,dice-libretro,$(LIBRETRO_DICE_VERSION))
 LIBRETRO_DICE_LICENSE = GPLv3
 LIBRETRO_DICE_DEPENDENCIES += retroarch
+LIBRETRO_DICE_EMULATOR_INFO = dice.libretro.core.yml
 
 LIBRETRO_DICE_PLATFORM = $(LIBRETRO_PLATFORM)
 
@@ -23,3 +24,4 @@ define LIBRETRO_DICE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

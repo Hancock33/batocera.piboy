@@ -10,6 +10,7 @@ SONIC2013_SITE_METHOD = git
 SONIC2013_GIT_SUBMODULES = YES
 SONIC2013_SUPPORTS_IN_SOURCE_BUILD = NO
 SONIC2013_LICENSE = Custom
+SONIC2013_EMULATOR_INFO = sonic2013.emulator.yml
 
 SONIC2013_DEPENDENCIES = libogg libvorbis sdl2
 
@@ -22,3 +23,4 @@ define SONIC2013_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

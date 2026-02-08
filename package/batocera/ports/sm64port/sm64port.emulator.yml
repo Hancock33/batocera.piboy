@@ -1,0 +1,29 @@
+features:
+  - padtokeyboard
+shared_features:
+  - powermode
+  - tdp
+  - videomode
+  - bezel
+  - bezel_stretch
+  - hud
+  - hud_corner
+  - bezel.tattoo
+  - bezel.tattoo_corner
+  - bezel.tattoo_file
+  - bezel.resize_tattoo
+custom_features:
+  nointro:
+    prompt: SKIP INTRO VIDEOS
+    description: Skips the Peach and Castle intro when starting a new game.
+    choices:
+      "Skip": 1
+      "Show (Default)": 0
+  cheatsmenu:
+    prompt: SHOW CHEATS MENU
+    description: Show Cheat Menu (Pause + R Shoulder button)
+    choices:
+      "On": 1
+      "Off": 0
+systems:
+  - sm64port

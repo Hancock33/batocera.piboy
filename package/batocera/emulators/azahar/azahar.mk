@@ -3,8 +3,8 @@
 # azahar
 #
 ################################################################################
-# Version: Commits on Jan 29, 2026
-AZAHAR_VERSION = dd65ef47491ff659b02ed1257411317ab4975f29
+# Version: Commits on Feb 06, 2026
+AZAHAR_VERSION = 37e688f82d42917a8d232b8e9b49ecee814846b4
 AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
 AZAHAR_SITE_METHOD=git
 AZAHAR_GIT_SUBMODULES = YES
@@ -12,6 +12,9 @@ AZAHAR_LICENSE = GPLv2
 AZAHAR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AZAHAR_DEPENDENCIES += boost cubeb fdk-aac ffmpeg fmt openal sdl2
+
+$(eval $(call register,azahar.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,graphics.azahar.emulator.yml))
 
 AZAHAR_CONF_OPTS += -DAZAHAR_ENABLE_COMPATIBILITY_REPORTING=ON
 AZAHAR_CONF_OPTS += -DAZAHAR_WARNINGS_AS_ERRORS=OFF
@@ -72,3 +75,4 @@ endef
 AZAHAR_POST_INSTALL_TARGET_HOOKS = AZAHAR_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

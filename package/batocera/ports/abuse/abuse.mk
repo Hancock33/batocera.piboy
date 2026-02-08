@@ -6,6 +6,7 @@
 # Version: Commits on Jan 28, 2025
 ABUSE_VERSION = 5a43f974ad8d534ab5b7869eadda4eae69002050
 ABUSE_SITE = $(call github,apancik,Abuse_2025,$(ABUSE_VERSION))
+ABUSE_EMULATOR_INFO = abuse.emulator.yml
 ABUSE_DEPENDENCIES = sdl2 sdl2_mixer
 ABUSE_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -17,3 +18,4 @@ define ABUSE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

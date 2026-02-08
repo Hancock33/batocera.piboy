@@ -7,7 +7,8 @@
 LIBRETRO_PX68K_VERSION = 9dfa6abc25ddd6e597790f7a535cd0a1d7f9c385
 LIBRETRO_PX68K_SITE = $(call github,libretro,px68k-libretro,$(LIBRETRO_PX68K_VERSION))
 LIBRETRO_PX68K_LICENSE = Unknown
-LIBRETRO_PX68K_DEPENDENCIES = retroarch
+LIBRETRO_PX68K_DEPENDENCIES += retroarch
+LIBRETRO_PX68K_EMULATOR_INFO = px68k.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_PX68K_PLATFORM = rpi2
@@ -37,3 +38,4 @@ define LIBRETRO_PX68K_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

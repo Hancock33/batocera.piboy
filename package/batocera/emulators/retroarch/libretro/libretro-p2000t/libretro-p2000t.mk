@@ -7,6 +7,7 @@
 LIBRETRO_P2000T_VERSION = bd06cffd663b8f33f46a7d78f82df83ddebd6eff
 LIBRETRO_P2000T_SITE = $(call github,p2000t,M2000,$(LIBRETRO_P2000T_VERSION))
 LIBRETRO_P2000T_LICENSE = GPL-3.0
+LIBRETRO_P2000T_EMULATOR_INFO = p2000t.libretro.core.yml
 
 define LIBRETRO_P2000T_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/libretro/Makefile
@@ -19,3 +20,4 @@ define LIBRETRO_P2000T_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

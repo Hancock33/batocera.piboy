@@ -1,8 +1,8 @@
 diff --git a/GNUmakefile b/GNUmakefile
-index bbbf0c0ec..c10246239 100644
+index 54618b2e6..d10bc0e0e 100644
 --- a/GNUmakefile
 +++ b/GNUmakefile
-@@ -707,7 +707,7 @@ components := \
+@@ -727,7 +727,7 @@ components := \
  
  roles := \
      game \

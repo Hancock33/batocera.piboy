@@ -1834,7 +1834,6 @@ advision:
   comment_br:           |
                         Requer o arquivo advision.zip da BIOS do MAME
 
-
 cassettevision:
   name:                 Cassette Vision
   manufacturer:         Epoch
@@ -2287,6 +2286,7 @@ vectrex:
   emulators:
     libretro:
       vecx:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VECX] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
@@ -2850,15 +2850,26 @@ pc60:
   manufacturer:         NEC
   release:              1981
   hardware:             computer
-  extensions:           [zip]
+  extensions:           [1dd, 2hd, 7z, bin, cas, cqi, cqm, d77, d88, dfi, dsk, fdi, hdm, imd, mfi, mfm, p6, td0, xdf, zip]
   emulators:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
   comment_en:           |
-                        Requires MAME BIOS file:
-                        bios/mame/pc6001.zip
+                        Requires MAME BIOS files (depending on model):
+                        bios/pc6001.zip (PC-6001)
+                        bios/pc6001mk2.zip (PC-6001mkII)
+                        bios/pc6001mk2sr.zip (PC-6001mkIISR)
+
+                        Models available:
+                        - PC-6001 (Japan) - Base model, cartridge and cassette
+                        - PC-6001A (US) - NEC Trek version
+                        - PC-6001mkII (Japan) - Enhanced version
+                        - PC-6001mkIISR (Japan) - With floppy drive support
+
+                        Cassette files (.cas, .p6) load via cart2 slot.
+                        Floppy disks only work with PC-6001mkIISR model.
 
 pc88:
   name:                 PC-8800
@@ -5471,9 +5482,69 @@ hikaru:
   platform:             hikaru, arcade
   emulators:
     libretro:
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_TOBEIMPLEMENTED] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_TOBEIMPLEMENTED] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+    demul:
+      demul: { requireAnyOf: [BR2_PACKAGE_DEMUL] }
+  comment_en:           |
+                        ---------------------------------
+                        ## HIKARU IMPORTANT INFO ##
+                        ---------------------------------
+
+                        You can now play Sega Hikaru games using Mame or Demul (with WINE).
+                        The emulators are still work in progress for Hikaru games so mileage will vary.
+                        Zipped roms should be stored in the appropriate hikaru directory compatible with MAME 0.284 or later.
+
+                        Performance depends on your x86_64 system hardware.
+                        If you get audio stuttering & slow music, your system isn't performant enough to run this system.
+
+                        Note: Your graphics card requires Vulkan drivers for Demul to work.
+
+                        -----------------
+                        Demul First Start
+                        -----------------
+
+                        You need to run a ROM at least once AND be connected to the internet.
+                        This creates the directory structure & installs the associated Windows libraries for WINE.
+
+                        Note: It may take some minutes before the game starts with the first use, this is NORMAL!
+                        *** Please be patient as it can take up to 2 minutes depending on your internet connection speed ***
+
+                        -----------------
+                        Demul Controllers
+                        -----------------
+
+                        Currently controllers cannot be configured using the desktop app.
+                        This is a limitation of the Demul app under Wine but also a known buggy pad plugin, even under Windows.
+                        Currently we map 2 players using the emulators default keyboard configuration using evmapy.
+
+                        ------------------
+                        Demul Service Menu
+                        ------------------
+
+                        Note: Keyboard required.
+                        You can access the Service Menu using F4 and then use F2 to navigate with F4 to select.
+
+                        ---------------------
+                        Demul Compatible ROMs
+                        ---------------------
+
+                        Demul has a specific list of currently compatible roms:
+                        
+                        airtrix: Air Trix (Rev. A)
+                        airtrixo: Air Trix (original)
+                        braveff: Brave Firefighters
+                        hikcheck: Hikaru Check ROM BD
+                        pharrier: Planet Harriers (Rev. A)
+                        swracer: Star Wars: Racer Arcade
+                        sgnascar: NASCAR Arcade (Rev. A)
+                        sgnascaro: NASCAR Arcade (original)
+                        von4: Cyber Troopers Virtual-On 4: Force (Rev. E)
+                        
+                        With both MAME and Demul you should be able to play a good collection of games.
+
+                        Enjoy Sega Hikaru games under Linux!
 
 lindbergh:
   name:                 Sega Lindbergh

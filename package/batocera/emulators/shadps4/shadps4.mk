@@ -3,11 +3,13 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Dec 24, 2025
-SHADPS4_VERSION = v.0.13.0
+# Version: Commits on Feb 07, 2026
+SHADPS4_VERSION = v.0.14.0
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
+SHADPS4_EMULATOR_INFO = shadps4.emulator.yml
+
 SHADPS4_LICENSE = GPLv2
 SHADPS4_LICENSE_FILE = LICENSE
 SHADPS4_DEPENDENCIES += alsa-lib jack2 libedit libevdev openal openssl pulseaudio sdl3 udev
@@ -27,3 +29,4 @@ define SHADPS4_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

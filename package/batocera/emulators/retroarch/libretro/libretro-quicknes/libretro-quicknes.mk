@@ -7,6 +7,7 @@
 LIBRETRO_QUICKNES_VERSION = dbf19f73e3eb9701d1c7f5898f57c097e05c9fbd
 LIBRETRO_QUICKNES_SITE = $(call github,libretro,QuickNES_Core,$(LIBRETRO_QUICKNES_VERSION))
 LIBRETRO_QUICKNES_LICENSE = GPL
+LIBRETRO_QUICKNES_EMULATOR_INFO = quicknes.libretro.core.yml
 
 define LIBRETRO_QUICKNES_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -20,3 +21,4 @@ define LIBRETRO_QUICKNES_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

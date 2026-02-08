@@ -9,6 +9,8 @@ LIBRETRO_MAME_SITE = https://github.com/Hancock33/batocera-mame-builds/releases/
 LIBRETRO_MAME_LICENSE = MAME
 LIBRETRO_MAME_SOURCE = libretro-mame-$(MAME_CROSS_ARCH)-$(subst mame,,$(LIBRETRO_MAME_VERSION)).tar.xz
 LIBRETRO_MAME_DEPENDENCIES = alsa-lib retroarch
+$(eval $(call register,mame.libretro.core.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY,sega-arcade.mame.libretro.core.yml))
 
 define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/lib/libretro/mame_libretro.so
@@ -27,3 +29,4 @@ define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

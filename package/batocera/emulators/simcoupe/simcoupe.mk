@@ -7,6 +7,7 @@
 SIMCOUPE_VERSION = 0f74cff52b96841fe0efa01ffd1a6875b253e72a
 SIMCOUPE_SITE = $(call github,simonowen,simcoupe,$(SIMCOUPE_VERSION))
 SIMCOUPE_DEPENDENCIES = sdl2
+SIMCOUPE_EMULATOR_INFO = samcoupe.emulator.yml
 SIMCOUPE_LICENSE = GPL-3.0
 SIMCOUPE_SUPPORTS_IN_SOURCE_BUILD = YES
 SIMCOUPE_BIOS_AND_RESOURCES = /usr/share/simcoupe
@@ -22,3 +23,4 @@ define SIMCOUPE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

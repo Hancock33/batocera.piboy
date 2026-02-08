@@ -3,12 +3,13 @@
 # thextech
 #
 ################################################################################
-# Version: Commits on Jan 26, 2026
-THEXTECH_VERSION = fdd963a7d6b604869f4d9e58cac93d3d53d9b371
+# Version: Commits on Feb 08, 2026
+THEXTECH_VERSION = c8cad1e8250afad45cd6d8547f7c8465bb913069
 THEXTECH_SITE = https://github.com/TheXTech/TheXTech
 THEXTECH_SITE_METHOD = git
 THEXTECH_GIT_SUBMODULES = YES
 THEXTECH_LICENSE = GPLv3
+THEXTECH_EMULATOR_INFO = thextech.emulator.yml
 THEXTECH_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf
 
 THEXTECH_CONF_ENV = GIT_DISCOVERY_ACROSS_FILESYSTEM=1
@@ -50,3 +51,4 @@ endef
 THEXTECH_POST_EXTRACT_HOOKS = THEXTECH_NO_ASM
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

@@ -3,11 +3,12 @@
 # openmsx
 #
 ################################################################################
-# Version: Commits on Jan 10, 2026
-OPENMSX_VERSION = 175a0492e33a5387ed39c7d531f5d89b6e98b475
+# Version: Commits on Feb 07, 2026
+OPENMSX_VERSION = e7f600e17b48d2f7e3e22a4f23acee91e8913c63
 OPENMSX_SITE = $(call github,openMSX,openMSX,$(OPENMSX_VERSION))
 OPENMSX_LICENSE = GPLv2
 OPENMSX_DEPENDENCIES = freetype libogg libpng libtheora libvorbis sdl2 sdl2_ttf tcl zlib
+OPENMSX_EMULATOR_INFO = openmsx.emulator.yml
 
 OPENMSX_CONF_ENV += $(TARGET_CONFIGURE_OPTS) \
 				OPENMSX_TARGET_CPU=$(BR2_ARCH) \
@@ -79,3 +80,4 @@ OPENMSX_PRE_CONFIGURE_HOOKS += OPENMSX_TCL_CONFIG_FIXUP
 OPENMSX_POST_INSTALL_TARGET_HOOKS += OPENMSX_POST_INSTALL_CLEANUP
 
 $(eval $(autotools-package))
+$(eval $(emulator-info-package))

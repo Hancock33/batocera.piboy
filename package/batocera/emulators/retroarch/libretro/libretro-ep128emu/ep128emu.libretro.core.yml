@@ -1,0 +1,10 @@
+features:
+  - cheevos
+  - netplay
+  - padtokeyboard
+shared_features:
+  - autosave
+  - rewind
+  
+systems:
+  - enterprise

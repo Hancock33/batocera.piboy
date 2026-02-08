@@ -3,11 +3,12 @@
 # sonic3-air
 #
 ################################################################################
-# Version: Commits on Jan 31, 2026
-SONIC3_AIR_VERSION = 09da1c553f121cd2a40d6f78a1d4fe8d375aeefe
+# Version: Commits on Feb 08, 2026
+SONIC3_AIR_VERSION = 9f996a3317ad3e3a516747fc373b7b5c9f5278c9
 SONIC3_AIR_SITE = $(call github,Eukaryot,sonic3air,$(SONIC3_AIR_VERSION))
 SONIC3_AIR_LICENSE = GPL-3.0
 SONIC3_AIR_LICENSE_FILE = COPYING.txt
+SONIC3_AIR_EMULATOR_INFO = sonic3-air.emulator.yml
 # CMakeLists.txt in subfolder
 SONIC3_AIR_SUBDIR = Oxygen/sonic3air/build/_cmake
 
@@ -32,3 +33,4 @@ define SONIC3_AIR_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

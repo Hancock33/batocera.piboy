@@ -3,8 +3,8 @@
 # batocera-emulationstation
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-BATOCERA_EMULATIONSTATION_VERSION = 8bc6a9e4ee4a6511c9863dc98bef3fff27d6d982
+# Version: Commits on Feb 07, 2026
+BATOCERA_EMULATIONSTATION_VERSION = ff933d97e527a3cea7ec3715ad957191bad5c578
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
@@ -98,7 +98,16 @@ endef
 
 define BATOCERA_EMULATIONSTATION_EXTERNAL_POS
 	cp $(STAGING_DIR)/usr/share/batocera-es-system/es_external_translations.h $(STAGING_DIR)/usr/share/batocera-es-system/es_keys_translations.h $(@D)/es-app/src
-	for P in $(STAGING_DIR)/usr/share/batocera-es-system/locales/*; do if test -e $$P/batocera-es-system.po; then cp $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po.tmp && $(HOST_DIR)/bin/msgcat $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po.tmp $$P/batocera-es-system.po > $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po; fi; done
+	for P in $(STAGING_DIR)/usr/share/batocera-es-system/locales/*; do \
+		if test -e $$P/batocera-es-system.po; then \
+			cp $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po \
+				$(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po.tmp; \
+			$(HOST_DIR)/bin/msgcat \
+				$(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po.tmp \
+				$$P/batocera-es-system.po > \
+				$(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po; \
+		fi; \
+	done
 endef
 
 define BATOCERA_EMULATIONSTATION_RESOURCES

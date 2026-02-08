@@ -1,8 +1,8 @@
 diff --git a/Common.mak b/Common.mak
-index f4beb41bd..c657d9a69 100644
+index 38fd460bb..9159ab657 100644
 --- a/Common.mak
 +++ b/Common.mak
-@@ -542,9 +542,6 @@ else ifeq ($(PLATFORM),WII)
+@@ -540,9 +540,6 @@ else ifeq ($(PLATFORM),WII)
      LIBDIRS += -L$(LIBOGC_LIB)
  else ifeq ($(PLATFORM),$(filter $(PLATFORM),DINGOO GCW))
      COMPILERFLAGS += -D__OPENDINGUX__

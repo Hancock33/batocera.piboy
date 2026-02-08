@@ -8,6 +8,7 @@ LIBRETRO_EMUSCV_VERSION = dfce10df090ce3f5eb23bdbee289702ec1478246
 LIBRETRO_EMUSCV_SITE = $(call gitlab,MaaaX-EmuSCV,libretro-emuscv,$(LIBRETRO_EMUSCV_VERSION))
 LIBRETRO_EMUSCV_LICENSE = GPLv2
 LIBRETRO_EMUSCV_DEPENDENCIES = sdl2 retroarch
+LIBRETRO_EMUSCV_EMULATOR_INFO = emuscv.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_EMUSCV_PLATFORM = rpi2
@@ -47,3 +48,4 @@ define LIBRETRO_EMUSCV_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

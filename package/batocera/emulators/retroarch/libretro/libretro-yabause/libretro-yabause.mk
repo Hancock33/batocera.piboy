@@ -7,6 +7,7 @@
 LIBRETRO_YABAUSE_VERSION = 65af22e96beb6d9b0b9a50a81a39c86a6d604c1c
 LIBRETRO_YABAUSE_SITE = $(call github,libretro,yabause,$(LIBRETRO_YABAUSE_VERSION))
 LIBRETRO_YABAUSE_LICENSE = GPL
+LIBRETRO_YABAUSE_EMULATOR_INFO = yabause.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2711),y)
     LIBRETRO_YABAUSE_EXTRA_ARGS = ARCH=aarch64
@@ -29,3 +30,4 @@ define LIBRETRO_YABAUSE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

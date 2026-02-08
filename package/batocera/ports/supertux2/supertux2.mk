@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-SUPERTUX2_VERSION = da4b9aa263f5d039916c73323abbc6f864690815
+# Version: Commits on Feb 08, 2026
+SUPERTUX2_VERSION = 79385fdf7e9d2fede1d3198585ea659fcfa15169
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -15,7 +15,7 @@ SUPERTUX2_CMAKE_BACKEND = make
 # licenses (sexp-cpp, squirrel, tinygettext) which are linked statically.
 SUPERTUX2_LICENSE = GPL-3.0+ (code), CC-BY-SA-2.0, CC-BY-SA-3.0, CC-BY-SA-4.0, GPL-2.0+ (images music sounds)
 SUPERTUX2_LICENSE_FILES = LICENSE.txt data/AUTHORS
-
+SUPERTUX2_EMULATOR_INFO = supertux2.emulator.yml
 SUPERTUX2_DEPENDENCIES = boost freetype host-pkgconf libcurl libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib
 
 SUPERTUX2_CONF_OPTS +=-DBUILD_DOCUMENTATION=OFF
@@ -35,3 +35,4 @@ define SUPERTUX2_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

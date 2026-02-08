@@ -8,6 +8,7 @@ SCUMMVM_VERSION = f8d66eae4e6f7454196ded0ebb113c6a74842f5c
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_BRANCH = branch-2026-1-0
 SCUMMVM_LICENSE = GPLv2
+SCUMMVM_EMULATOR_INFO = scummvm.emulator.yml
 SCUMMVM_DEPENDENCIES += faad2 flac fluidsynth freetype jpeg libmad libmpeg2
 SCUMMVM_DEPENDENCIES += libogg libpng libtheora libvorbis sdl2 zlib
 
@@ -98,3 +99,4 @@ endef
 SCUMMVM_POST_INSTALL_TARGET_HOOKS += SCUMMVM_ADD_VIRTUAL_KEYBOARD
 
 $(eval $(autotools-package))
+$(eval $(emulator-info-package))

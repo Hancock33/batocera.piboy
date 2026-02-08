@@ -17,7 +17,8 @@ BR_DIR         := $(PROJECT_DIR)/buildroot
 -include $(LOCAL_MK)
 
 ifdef PARALLEL_BUILD
-	EXTRA_OPTS +=  BR2_PER_PACKAGE_DIRECTORIES=y
+	EXTRA_OPTS += BR2_PER_PACKAGE_DIRECTORIES=y
+	EXTRA_OPTS += BR2_JLEVEL=$(MAKE_JLEVEL)
 	MAKE_OPTS  += -j$(MAKE_JLEVEL)
 	MAKE_OPTS  += -l$(MAKE_LLEVEL)
 endif
@@ -25,41 +26,41 @@ endif
 # List of packages that are always good to rebuild for versioning/stamps etc
 MANDATORY_REBUILD_PKGS := batocera-es-system batocera-configgen batocera-system batocera-splash
 
+# Lazily evaluated variable to avoid re-evaluation on each use
+# VAR = $(eval VAR := ...)$(VAR)
+
 # List of out-of-tree kernel modules that must be removed if the kernel is reset
 # This list needs to be maintained if new modules are added or removed
-KERNEL_MODULE_PKGS := rtl88x2bu rtl8852au rtl8852cu rtl8188eu rtl8192eu rtl8189fs rtl8821cu rtl8723bu rtl8812au guncon guncon3 hid-nx hid-tmff2 xpadneo xpad-noone nvidia nvidia470 nvidia580 r8125 rtw89 xone r8168 ayn-platform ayaneo-platform hid-t150 new-lg4ff ryzen-smu aic-8800 rwt88
+KERNEL_MODULE_PKGS = $(eval KERNEL_MODULE_PKGS := $(sort $(patsubst %.mk,%,$(notdir $(shell grep -rl '\$$(eval \$$(kernel-module))' $(PROJECT_DIR)/package 2>/dev/null)))))$(KERNEL_MODULE_PKGS)
+
+define __git_log
+	git -C $(1) log --since="$(DAYS) days ago" --name-only --format=%n -- package/
+endef
 
 # Across all batocera & buildroot packages find any updates and add to a list to rebuild
-GIT_PACKAGES_TO_REBUILD := $(shell ( \
-							  git log --since="$(DAYS) days ago" --name-only --format=%n -- $(PROJECT_DIR)/package/ \
-							; cd $(BR_DIR) && git log --since="$(DAYS) days ago" --name-only --format=%n -- package/ \
-						  ) \
-						| grep -E '^package/' \
-						| sed -r -e 's:package/batocera/(audio|boot|cases|controllers|core|database|emulationstation|emulators|firmwares|fonts|gpu|kodi|leds|libraries|looks|network|ports|screens|toolchain|utils|utils-host|wine)/([^/]+)/.*:\2:' \
-						         -e 's:package/([^/]+)/.*:\1:' \
-						| sort -u)
+GIT_PACKAGES_TO_REBUILD = $(eval GIT_PACKAGES_TO_REBUILD := $(shell \
+	{ git -C $(PROJECT_DIR) log --since="$(DAYS) days ago" --name-only --format=%n -- package/ ; \
+	  git -C $(PROJECT_DIR)/buildroot log --since="$(DAYS) days ago" --name-only --format=%n -- package/ ; } \
+	| sed -r 's:^package/::; /^batocera\/[^/]*$$/d; s:^batocera/[^/]+/::; s:^([^/]+)/.*:\1:' \
+	| sort -u))$(GIT_PACKAGES_TO_REBUILD)
 
 # Base list of all target packages to be reset
-TARGET_PKGS_BASE := $(GIT_PACKAGES_TO_REBUILD) $(MANDATORY_REBUILD_PKGS)
+TARGET_PKGS_BASE = $(GIT_PACKAGES_TO_REBUILD) $(MANDATORY_REBUILD_PKGS)
 
 # Check if a kernel package is present and conditionally add 'linux' and kernel modules
-ifneq ($(filter linux linux-headers, $(TARGET_PKGS_BASE)),)
-	TARGET_PKGS_BASE += linux
-	KERNEL_MODULES_TO_RESET := $(KERNEL_MODULE_PKGS)
-else
-	KERNEL_MODULES_TO_RESET :=
-endif
+KERNEL_MODULES_TO_RESET = $(if $(filter linux linux-headers,$(TARGET_PKGS_BASE)),linux $(KERNEL_MODULE_PKGS))
 
 # Final list of all target packages to be reset (Base + Conditional Kernel Modules)
-TARGET_PKGS := $(TARGET_PKGS_BASE) $(KERNEL_MODULES_TO_RESET)
+TARGET_PKGS = $(TARGET_PKGS_BASE) $(KERNEL_MODULES_TO_RESET)
 
 # Cheats way, add 'host-' to each target package to ensure we are covered
-HOST_PKGS_TO_RESET := $(foreach pkg,$(TARGET_PKGS),host-$(pkg))
+HOST_PKGS_TO_RESET = $(addprefix host-,$(TARGET_PKGS))
 
 # Final list is a combination of all target and host packages
-PKGS_TO_RESET := $(sort $(TARGET_PKGS) $(HOST_PKGS_TO_RESET))
+PKGS_TO_RESET = $(sort $(TARGET_PKGS) $(HOST_PKGS_TO_RESET))
 
-TARGETS := $(sort $(shell find $(PROJECT_DIR)/configs/ -name 'b*.board' | sed -n 's/.*\/batocera-\(.*\).board/\1/p'))
+TARGETS := $(sort $(patsubst batocera-%.board,%,$(notdir $(wildcard $(PROJECT_DIR)/configs/*.board))))
+
 UID  := $(shell id -u)
 GID  := $(shell id -g)
 OS := $(shell uname)
@@ -152,26 +153,43 @@ update-docker-image: _check_docker
 publish-docker-image: _check_docker
 	@$(DOCKER) push $(DOCKER_REPO)/$(IMAGE_NAME):latest
 
-output-dir-%: %-supported
-	@mkdir -p $(OUTPUT_DIR)/$*
+define __initialize_directory
+$(1)/.stamp_initialized:
+	@mkdir -p $$(@D)
+	@touch $$@
 
-ccache-dir:
-	@mkdir -p $(CCACHE_DIR)
+$(2): $(1)/.stamp_initialized
+	@:
 
-dl-dir:
-	@mkdir -p $(DL_DIR)
+$(if $(findstring %,$(1)),.PRECIOUS: $(1)/.stamp_initialized,)
+endef
+
+$(eval $(call __initialize_directory,$(OUTPUT_DIR)/%,%-output-dir))
+$(eval $(call __initialize_directory,$(CCACHE_DIR),ccache-dir))
+$(eval $(call __initialize_directory,$(DL_DIR),dl-dir))
 
 %-supported:
-	$(if $(findstring $*, $(TARGETS)),,$(error "$* not supported!"))
+	$(if $(filter $*,$(TARGETS)),,$(error "$* not supported!"))
 
-%-clean: batocera-docker-image output-dir-%
+%-clean: batocera-docker-image %-output-dir
 	@$(MAKE_BUILDROOT) clean
+	@if [ -f $(PROJECT_DIR)/configs/batocera-$*_defconfig ]; then \
+		echo "Removing config for $*..."; \
+		rm $(PROJECT_DIR)/configs/batocera-$*_defconfig; \
+	fi
 
-%-config: batocera-docker-image output-dir-%
+$(PROJECT_DIR)/configs/batocera-%_defconfig: $(PROJECT_DIR)/configs/batocera-%.board $(PROJECT_DIR)/configs/batocera-board.common
 	@$(PROJECT_DIR)/configs/createDefconfig.sh $(PROJECT_DIR)/configs/batocera-$*
 	@for opt in $(EXTRA_OPTS); do \
 		echo $$opt >> $(PROJECT_DIR)/configs/batocera-$*_defconfig ; \
 	done
+
+.PRECIOUS: $(PROJECT_DIR)/configs/batocera-%_defconfig
+
+%-defconfig: $(PROJECT_DIR)/configs/batocera-%_defconfig
+	@:
+
+%-config: batocera-docker-image %-defconfig %-output-dir
 	@$(MAKE_BUILDROOT) batocera-$*_defconfig
 
 %-build: batocera-docker-image %-config ccache-dir dl-dir
@@ -190,7 +208,7 @@ dl-dir:
 %-graph-depends: batocera-docker-image %-config ccache-dir dl-dir
 	@$(MAKE_BUILDROOT) -j1 BR2_GRAPH_OUT=svg graph-depends
 
-%-shell: batocera-docker-image output-dir-% _check_docker
+%-shell: batocera-docker-image %-output-dir _check_docker
 	$(if $(BATCH_MODE),$(if $(CMD),,$(error "not supported in BATCH_MODE if CMD not specified!")),)
 	@$(RUN_DOCKER) $(CMD)
 
@@ -200,7 +218,7 @@ dl-dir:
 %-build-cmd:
 	@echo $(MAKE_BUILDROOT)
 
-%-refresh: batocera-docker-image output-dir-%
+%-refresh: batocera-docker-image %-output-dir
 	$(if $(PARALLEL_BUILD),,$(error "PARALLEL_BUILD=y must be set for %-refresh"))
 	@echo "--- Refresh & Targeted Rebuild Trigger (DAYS=$(DAYS)) ---"
 
@@ -216,13 +234,20 @@ dl-dir:
 	fi
 
 	@echo "--- Removing Host and Target directories ---"
-	rm -rf $(OUTPUT_DIR)/$*/host
+	@for dir in include share lib/pkgconfig; do \
+		if [ -d "$(OUTPUT_DIR)/$*/host/$$dir" ]; then \
+			echo "Cleaning host staging: $$dir..."; \
+			rm -rf $(OUTPUT_DIR)/$*/host/$$dir; \
+		fi; \
+	done
 	rm -rf $(OUTPUT_DIR)/$*/target
 	rm -rf $(OUTPUT_DIR)/$*/target2
-	
+
 	@$(MAKE) $*-build
 
-%-cleanbuild: %-clean %-build
+%-cleanbuild:
+	$(MAKE) $*-clean
+	$(MAKE) $*-build
 	@echo
 
 %-pkg:
@@ -230,7 +255,7 @@ dl-dir:
 
 	@$(MAKE) $*-build CMD=$(PKG)
 
-%-webserver: output-dir-%
+%-webserver: %-output-dir
 	$(if $(wildcard $(OUTPUT_DIR)/$*/images/batocera/*),,$(error "$* not built!"))
 	$(if $(shell which python3 2>/dev/null),,$(error "python3 not found!"))
 ifeq ($(strip $(BOARD)),)
@@ -241,13 +266,13 @@ else
 	python3 -m http.server --directory $(OUTPUT_DIR)/$*/images/batocera/images/$(BOARD)/
 endif
 
-%-rsync: output-dir-%
+%-rsync: %-output-dir
 	$(eval TMP := $(call UC, $*)_IP)
 	$(if $(shell which rsync 2>/dev/null),, $(error "rsync not found!"))
 	$(if $($(TMP)),,$(error "$(TMP) not set!"))
 	rsync -e "ssh -o 'UserKnownHostsFile /dev/null' -o StrictHostKeyChecking=no" -av $(OUTPUT_DIR)/$*/target/ root@$($(TMP)):/
 
-%-tail: output-dir-%
+%-tail: %-output-dir
 	@tail -F $(OUTPUT_DIR)/$*/build/build-time.log
 
 %-snapshot: %-supported
@@ -312,3 +337,24 @@ uart:
 	$(if $(SERIAL_BAUDRATE),,$(error "SERIAL_BAUDRATE not specified!"))
 	$(if $(wildcard $(SERIAL_DEV)),,$(error "$(SERIAL_DEV) not available!"))
 	@picocom $(SERIAL_DEV) -b $(SERIAL_BAUDRATE)
+
+%-update-po-files: %-output-dir batocera-docker-image
+	@$(MAKE_BUILDROOT) update-po-files
+
+SYSTEMS_REPORT_EXCLUDE_TARGETS := odin t527
+SYSTEMS_REPORT_TARGETS := $(filter-out $(SYSTEMS_REPORT_EXCLUDE_TARGETS) x86_wow64,$(TARGETS))
+SYSTEMS_REPORT_TARGET_DEFCONFIGS := $(addsuffix -defconfig,$(SYSTEMS_REPORT_TARGETS))
+
+$(OUTPUT_DIR)/%/.systems_report_targets.mk: %-output-dir
+	@echo "SYSTEMS_REPORT_TARGETS := $(SYSTEMS_REPORT_TARGETS)" > $@
+
+%-systems-report-targets-mk: $(OUTPUT_DIR)/%/.systems_report_targets.mk
+	@:
+
+%-systems-report: batocera-docker-image %-defconfig %-systems-report-targets-mk
+	$(MAKE_BUILDROOT) systems-report
+
+%-systems-report-serve: %-output-dir
+	$(if $(wildcard $(OUTPUT_DIR)/$*/systems-report/*),,$(error "$* not built!"))
+	$(if $(shell which python3 2>/dev/null),,$(error "python3 not found!"))
+	python3 -m http.server --directory $(OUTPUT_DIR)/$*/systems-report/

@@ -3,11 +3,12 @@
 # libretro-pc98
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-LIBRETRO_PC98_VERSION = 15676585b9a370e874ea9309252bd8236df3f642
+# Version: Commits on Feb 07, 2026
+LIBRETRO_PC98_VERSION = 44c8a8c61640f2d5476af5224dbd88a36079f45d
 LIBRETRO_PC98_SITE = $(call github,AZO234,NP2kai,$(LIBRETRO_PC98_VERSION))
 LIBRETRO_PC98_LICENSE = GPLv3
-LIBRETRO_PC98_DEPENDENCIES = retroarch
+LIBRETRO_PC98_DEPENDENCIES += retroarch
+LIBRETRO_PC98_EMULATOR_INFO = np2kai.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_PC98_PLATFORM = rpi2
@@ -44,3 +45,4 @@ define LIBRETRO_PC98_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

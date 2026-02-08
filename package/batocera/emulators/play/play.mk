@@ -3,13 +3,14 @@
 # play
 #
 ################################################################################
-# Version: Commits on Jan 31, 2026
-PLAY_VERSION = ee8fee9d7dcadb295f8c0cad87e0441c67da1eaa
+# Version: Commits on Feb 06, 2026
+PLAY_VERSION = d88b549d77ffe9a654b9f3cbbb0d4a3b666643d3
 PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
 PLAY_DEPENDENCIES = ecm libevdev openal qt6base sqlite
+PLAY_EMULATOR_INFO = play.emulator.yml
 
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PLAY_CONF_OPTS += -DINSTALL_STATIC_LIBS=ON
@@ -39,3 +40,4 @@ endef
 PLAY_POST_INSTALL_TARGET_HOOKS += PLAY_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

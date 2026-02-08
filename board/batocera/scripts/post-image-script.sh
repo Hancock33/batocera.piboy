@@ -133,4 +133,3 @@ done
 #### update the target dir with some information files
 #cp "${TARGET_DIR}/usr/share/batocera/batocera.version" "${BATOCERA_BINARIES_DIR}" || exit 1
 cp -av "${BATOCERA_BINARIES_DIR}"/images/* /mnt/smb || exit 1
-#"${BR2_EXTERNAL_BATOCERA_PATH}"/scripts/linux/systemsReport.sh "${PWD}" "${BATOCERA_BINARIES_DIR}" || exit 1

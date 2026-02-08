@@ -6,7 +6,7 @@
 # Version: Commits on Nov 24, 2025
 OPENLARA_VERSION = 7a80d8f3104460603cacdb3b3cb0fabe1bfdffd6
 OPENLARA_SITE = $(call github,XProger,OpenLara,$(OPENLARA_VERSION))
-
+OPENLARA_EMULATOR_INFO = openlara.emulator.yml
 OPENLARA_DEPENDENCIES = openal sdl2 zlib
 OPENLARA_LICENSE = GPL-2.0
 
@@ -21,3 +21,4 @@ define OPENLARA_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

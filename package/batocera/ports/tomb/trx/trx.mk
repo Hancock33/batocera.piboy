@@ -3,14 +3,14 @@
 # trx
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-TRX_VERSION = ff93476bcc3aab31d02711cf2e3a39eec36296eb
+# Version: Commits on Feb 08, 2026
+TRX_VERSION = 98aed82a25ef7bdc32d2f4c97e6572d303f6b11e
 TRX_SITE = $(call github,LostArtefacts,TRX,$(TRX_VERSION))
 TRX_LICENSE = GPL-3.0 license
 TRX_LICENSE_FILES = COPYING.md
 TRX_SUPPORTS_IN_SOURCE_BUILD = NO
 TRX_SUBDIR = src
-
+TRX_EMULATOR_INFO = tr1x.emulator.yml tr2x.emulator.yml
 TRX_DEPENDENCIES = ffmpeg libglew pcre2 sdl2 uthash
 
 TRX_CONF_OPTS = -Dstaticdeps=false
@@ -25,3 +25,4 @@ define TRX_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(meson-package))
+$(eval $(emulator-info-package))

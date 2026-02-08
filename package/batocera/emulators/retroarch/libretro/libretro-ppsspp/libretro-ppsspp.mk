@@ -3,14 +3,15 @@
 # libretro-ppsspp
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-LIBRETRO_PPSSPP_VERSION = 0b529c231689c67a1ba590f7458ef76e7a32ecfe
+# Version: Commits on Feb 08, 2026
+LIBRETRO_PPSSPP_VERSION = 51a57409ec4dcf10f29f421e8961f223ab864b49
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-git4.tar.gz
 LIBRETRO_PPSSPP_SITE_METHOD=git
 LIBRETRO_PPSSPP_GIT_SUBMODULES=YES
 LIBRETRO_PPSSPP_LICENSE = GPLv2
-LIBRETRO_PPSSPP_DEPENDENCIES = ppsspp retroarch
+LIBRETRO_PPSSPP_DEPENDENCIES += ppsspp retroarch
+LIBRETRO_PPSSPP_EMULATOR_INFO = ppsspp.libretro.core.yml
 
 LIBRETRO_PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
@@ -102,3 +103,4 @@ define LIBRETRO_PPSSPP_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

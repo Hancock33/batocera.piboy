@@ -9,6 +9,7 @@ VCMI_BRANCH = develop
 VCMI_SITE = https://github.com/vcmi/vcmi.git
 VCMI_SITE_METHOD=git
 VCMI_GIT_SUBMODULES=YES
+VCMI_EMULATOR_INFO = vcmi.emulator.yml
 VCMI_DEPENDENCIES = boost ffmpeg libsquish minizip sdl2 sdl2_image sdl2_mixer sdl2_ttf tbb
 
 VCMI_CONF_OPTS += -DENABLE_EDITOR=OFF
@@ -28,3 +29,4 @@ endef
 VCMI_POST_INSTALL_TARGET_HOOKS += VCMI_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

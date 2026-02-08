@@ -8,8 +8,9 @@ OPENBOR7530_VERSION = 7569231a0ae3f0a7f5a6697b2ce4f09a0cf50a43
 OPENBOR7530_SITE = $(call github,DCurrent,openbor,$(OPENBOR7530_VERSION))
 OPENBOR7530_LICENSE = BSD
 OPENBOR7530_LICENSE_FILE = LICENSE
+OPENBOR7530_DEPENDENCIES = openbor-common libvpx sdl2 libpng libogg libvorbis host-yasm sdl2_gfx
+OPENBOR7530_EMULATOR_INFO = openbor7530.openbor.core.yml
 
-OPENBOR7530_DEPENDENCIES = libvpx sdl2 libpng libogg libvorbis host-yasm sdl2_gfx
 OPENBOR7530_EXTRAOPTS=""
 
 ifeq ($(BR2_x86_64),y)
@@ -41,3 +42,4 @@ endef
 OPENBOR7530_PRE_CONFIGURE_HOOKS += OPENBOR7530_PRE_CONFIGURE_VERSION
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

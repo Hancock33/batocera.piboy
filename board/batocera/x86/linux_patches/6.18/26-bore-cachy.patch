@@ -1,5 +1,5 @@
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index b469878de25c..ca23845c4b5b 100644
+index 6ad294330c0b..3f98d36c6f7e 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -816,6 +816,37 @@ struct kmap_ctrl {
@@ -52,7 +52,7 @@ index b469878de25c..ca23845c4b5b 100644
  #ifdef CONFIG_SCHED_CORE
 diff --git a/include/linux/sched/bore.h b/include/linux/sched/bore.h
 new file mode 100644
-index 000000000000..976dd80a52ff
+index 000000000000..85d14089c5d1
 --- /dev/null
 +++ b/include/linux/sched/bore.h
 @@ -0,0 +1,39 @@
@@ -68,7 +68,7 @@ index 000000000000..976dd80a52ff
 +#define SCHED_BORE_AUTHOR   "Masahito Suzuki"
 +#define SCHED_BORE_PROGNAME "BORE CPU Scheduler modification"
 +
-+#define SCHED_BORE_VERSION  "6.6.0"
++#define SCHED_BORE_VERSION  "6.6.1"
 +
 +extern u8   __read_mostly sched_bore;
 +extern u8   __read_mostly sched_burst_inherit_type;
@@ -802,7 +802,7 @@ index 41caa22e0680..1c5ace627176 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index f29c544a6d69..b438e4c5dffe 100644
+index f29c544a6d69..948a1f97f391 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,10 @@
@@ -1093,11 +1093,11 @@ index f29c544a6d69..b438e4c5dffe 100644
  
  	util_est_update(&rq->cfs, p, flags & DEQUEUE_SLEEP);
 +#ifdef CONFIG_SCHED_BORE
-+	struct cfs_rq *cfs_rq = &rq->cfs;
++	struct cfs_rq *cfs_rq = cfs_rq_of(&p->se);
 +	struct sched_entity *se = &p->se;
 +	if ((flags & DEQUEUE_SLEEP) && entity_is_task(se)) {
 +		if (cfs_rq->curr == se)
-+			update_curr(cfs_rq_of(&p->se));
++			update_curr(cfs_rq);
 +		restart_burst_bore(p);
 +	}
 +#endif /* CONFIG_SCHED_BORE */

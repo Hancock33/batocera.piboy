@@ -10,6 +10,7 @@ BSTONE_SITE = $(call github,bibendovsky,bstone,$(BSTONE_VERSION))
 BSTONE_DEPENDENCIES = openal sdl2 sdl2_mixer
 BSTONE_LICENSE = GPL-2.0
 BSTONE_SUPPORTS_IN_SOURCE_BUILD = NO
+BSTONE_EMULATOR_INFO = bstone.emulator.yml
 
 BSTONE_CONF_OPTS += -DBSTONE_CI_GIT_HASH="$(shell echo $(BSTONE_VERSION) | cut -c 1-7)"
 BSTONE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -23,3 +24,4 @@ define BSTONE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

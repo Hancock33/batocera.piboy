@@ -3,8 +3,8 @@
 # libvni
 #
 ################################################################################
-# Version: Commits on Jan 27, 2026
-LIBVNI_VERSION = a8020e7a0968d377db7943db48486beb1aa49bbe
+# Version: Commits on Feb 03, 2026
+LIBVNI_VERSION = 6055ec2b1de7f795d4f540c97b4181909ee1b225
 LIBVNI_SITE = $(call github,PPUC,libvni,$(LIBVNI_VERSION))
 LIBVNI_LICENSE = BSD-3-Clause
 LIBVNI_LICENSE_FILES = LICENSE

@@ -9,6 +9,7 @@ LIBRETRO_TAMALIBRETRO_SITE = https://github.com/celerizer/tamalibretro.git
 LIBRETRO_TAMALIBRETRO_SITE_METHOD=git
 LIBRETRO_TAMALIBRETRO_GIT_SUBMODULES=YES
 LIBRETRO_TAMALIBRETRO_LICENSE = GPL-2.0
+LIBRETRO_TAMALIBRETRO_EMULATOR_INFO = tamalibretro.libretro.core.yml
 
 define LIBRETRO_TAMALIBRETRO_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -22,3 +23,4 @@ define LIBRETRO_TAMALIBRETRO_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

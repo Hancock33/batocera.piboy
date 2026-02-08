@@ -154,7 +154,7 @@ class MameGenerator(Generator):
         # Set custom config path if option is selected or default path if not
         customCfg = system.config.get_bool("customcfg")
 
-        if system.name == "mame":
+        if messMode == -1:
             if customCfg:
                 cfgPath = MAME_CONFIG / "custom"
             else:
@@ -249,6 +249,8 @@ class MameGenerator(Generator):
             pluginsToLoad += [ "coindrop" ]
         if system.config.get_bool("dataplugin"):
             pluginsToLoad += [ "data" ]
+        if system.config.get_bool('offscreenreload'): # new offscreenreload for light guns games
+            pluginsToLoad += [ "offscreenreload" ]
         if pluginsToLoad:
             commandArray += [ "-plugins", "-plugin", ",".join(pluginsToLoad) ]
 
@@ -286,8 +288,6 @@ class MameGenerator(Generator):
             commandArray += [ "-lightgunprovider", "udev" ]
             commandArray += [ "-lightgun_device", "lightgun" ]
             commandArray += [ "-adstick_device", "lightgun" ]
-        if system.config.get_bool('offscreenreload'):
-            commandArray += [ "-offscreen_reload" ]
 
         # wheels
         useWheels = system.config.use_wheels

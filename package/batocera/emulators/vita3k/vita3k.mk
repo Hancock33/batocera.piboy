@@ -3,14 +3,15 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Dec 08, 2025
-VITA3K_VERSION = 750a516d8fb8ffaaa063db3d226d8f382db58063
+# Version: Commits on Jan 26, 2026
+VITA3K_VERSION = 1167cb63ac6df13f1952a31b3adf816aceaa04d3
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD=git
 VITA3K_GIT_SUBMODULES=YES
 VITA3K_LICENSE = GPLv3
 VITA3K_DEPENDENCIES = boost fmt libcurl libgtk3 libogg libvorbis python-ruamel-yaml
 VITA3K_DEPENDENCIES += sdl3 zlib
+VITA3K_EMULATOR_INFO = vita3k.emulator.yml
 
 VITA3K_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -40,3 +41,4 @@ define VITA3K_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

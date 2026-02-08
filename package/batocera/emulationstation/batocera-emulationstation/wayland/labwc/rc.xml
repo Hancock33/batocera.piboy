@@ -111,6 +111,10 @@
     <windowRule identifier="clksignal">
       <action name="ToggleFullscreen" />
     </windowRule>
+    <windowRule identifier="steam_proton" title="Demul">
+      <action name="ToggleFullscreen" />
+    </windowRule>
     <windowRule identifier="xterm" serverDecoration="yes" />
+    <windowRule identifier="batocera-config-scummvm" serverDecoration="yes" />
   </windowRules>
 </labwc_config>

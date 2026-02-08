@@ -9,6 +9,7 @@ RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
 RAZE_LICENSE = GPLv2
 RAZE_DEPENDENCIES = bzip2 fluidsynth host-raze libvpx openal sdl2 webp zmusic
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
+RAZE_EMULATOR_INFO = raze.emulator.yml
 
 # We need the tools from the host package to build the target package
 HOST_RAZE_DEPENDENCIES = zlib bzip2 host-webp
@@ -71,3 +72,4 @@ RAZE_POST_INSTALL_TARGET_HOOKS += RAZE_INSTALL
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
+$(eval $(emulator-info-package))

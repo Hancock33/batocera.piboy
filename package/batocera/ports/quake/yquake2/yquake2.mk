@@ -3,11 +3,12 @@
 # yquake2
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-YQUAKE2_VERSION = 918575c2d74bdfc9639aaf7f9736faacbe205ecb
+# Version: Commits on Feb 07, 2026
+YQUAKE2_VERSION = bf74112ade2c7e90993bc7e3ada6d79f448bcd6c
 YQUAKE2_SITE = $(call github,yquake2,yquake2remaster,$(YQUAKE2_VERSION))
 YQUAKE2_LICENSE = GPLv2
 YQUAKE2_LICENSE_FILES = LICENSE
+YQUAKE2_EMULATOR_INFO = yquake2.emulator.yml
 
 ifeq ($(BR2_PACKAGE_SDL3),y)
     YQUAKE2_DEPENDENCIES += sdl3
@@ -52,3 +53,4 @@ define YQUAKE2_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

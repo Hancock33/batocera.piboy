@@ -3,13 +3,16 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-PPSSPP_VERSION = 0b529c231689c67a1ba590f7458ef76e7a32ecfe
+# Version: Commits on Feb 08, 2026
+PPSSPP_VERSION = 51a57409ec4dcf10f29f421e8961f223ab864b49
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
 PPSSPP_LICENSE = GPLv2
 PPSSPP_DEPENDENCIES = sdl2 sdl2_ttf libzip
+
+$(eval $(call register,ppsspp.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.ppsspp.emulator.yml))
 
 PPSSPP_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PPSSPP_CONF_OPTS += -DCMAKE_SYSTEM_NAME=Linux
@@ -94,6 +97,7 @@ PPSSPP_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(PPSSPP_TARGET_CFLAGS)"
 define PPSSPP_UPDATE_INCLUDES
 	sed -i 's/unknown/"$(shell echo $(PPSSPP_VERSION) | cut -c 1-7)"/g' $(@D)/git-version.cmake
 	sed -i "s+/opt/vc+$(STAGING_DIR)/usr+g" $(@D)/CMakeLists.txt
+	sed -i -e s+"SDL2_ttf::SDL2_ttf"+"SDL2_ttf"+ $(@D)/CMakeLists.txt
 endef
 
 define PPSSPP_INSTALL_TARGET_CMDS
@@ -110,3 +114,4 @@ endef
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

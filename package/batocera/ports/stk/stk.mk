@@ -6,6 +6,7 @@
 # Version: Commits on Jan 29, 2026
 STK_VERSION = 0334c6cd7432de391b7981b153df32b7bf6d83ea
 STK_SITE = $(call github,supertuxkart,stk-code,$(STK_VERSION))
+STK_EMULATOR_INFO = stk.emulator.yml
 STK_DEPENDENCIES = sdl2 sdl2_mixer shaderc
 STK_LICENSE = GPL-2.0
 STK_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -25,3 +26,4 @@ define STK_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

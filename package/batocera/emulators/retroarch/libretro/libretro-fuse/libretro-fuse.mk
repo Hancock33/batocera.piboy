@@ -7,7 +7,8 @@
 LIBRETRO_FUSE_VERSION = cad85b7b1b864c65734f71aa4a510b6f6536881c
 LIBRETRO_FUSE_SITE = $(call github,libretro,fuse-libretro,$(LIBRETRO_FUSE_VERSION))
 LIBRETRO_FUSE_LICENSE = GPLv3
-LIBRETRO_FUSE_DEPENDENCIES = retroarch
+LIBRETRO_FUSE_DEPENDENCIES += retroarch
+LIBRETRO_FUSE_EMULATOR_INFO = fuse.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_FUSE_PLATFORM = rpi2
@@ -32,3 +33,4 @@ define LIBRETRO_FUSE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

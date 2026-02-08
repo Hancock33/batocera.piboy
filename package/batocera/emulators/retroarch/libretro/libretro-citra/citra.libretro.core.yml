@@ -1,0 +1,7 @@
+features:
+  - padtokeyboard
+shared_features:
+  - autosave
+  - rewind
+systems:
+  - citra

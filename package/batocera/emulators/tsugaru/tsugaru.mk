@@ -3,11 +3,12 @@
 # tsugaru
 #
 ################################################################################
-# Version: Commits on Jan 28, 2026
-TSUGARU_VERSION = 3de0871fcff887c64dc80f4badc45c3f969f77a4
+# Version: Commits on Feb 07, 2026
+TSUGARU_VERSION = 4447eb32b2616d02a7ed025ca3db5cc8f3ce9e20
 TSUGARU_SITE = $(call github,captainys,TOWNSEMU,$(TSUGARU_VERSION))
 TSUGARU_LICENSE = GPLv2
 TSUGARU_SUPPORTS_IN_SOURCE_BUILD = NO
+TSUGARU_EMULATOR_INFO = tsugaru.emulator.yml
 TSUGARU_SUBDIR = src
 
 TSUGARU_DEPENDENCIES = alsa-lib libglu
@@ -24,3 +25,4 @@ define TSUGARU_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

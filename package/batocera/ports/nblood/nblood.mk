@@ -6,6 +6,7 @@
 # Version: Commits on Jan 08, 2026
 NBLOOD_VERSION = r14331
 NBLOOD_SITE = $(call github,NBlood,NBlood,$(NBLOOD_VERSION))
+NBLOOD_EMULATOR_INFO = nblood.emulator.yml
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
 NBLOOD_LICENSE = GPLv3
 NBLOOD_VC_REV="$(shell echo $(NBLOOD_VERSION) | cut -c 1-7)"
@@ -41,3 +42,4 @@ define NBLOOD_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

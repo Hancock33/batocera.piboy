@@ -1,0 +1,22 @@
+features:
+  - padtokeyboard
+shared_features:
+  - powermode
+  - tdp
+  - videomode
+  - bezel
+  - bezel_stretch
+  - hud
+  - hud_corner
+  - bezel.tattoo
+  - bezel.tattoo_corner
+  - bezel.tattoo_file
+  - bezel.resize_tattoo
+custom_features:
+  stalker_intro:
+    prompt: SKIP SPLASH SCREEN
+    choices:
+      "Skip": 1
+      "Show (Default)": 0
+systems:
+  - stalker

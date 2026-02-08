@@ -8,6 +8,7 @@ OD_COMMANDER_VERSION = a6ef30eb3bd6ef80a031744aae0f5b9cd974c182
 OD_COMMANDER_SITE = $(call github,od-contrib,commander,$(OD_COMMANDER_VERSION))
 OD_COMMANDER_DEPENDENCIES = sdl2 sdl2_gfx sdl2_image sdl2_ttf dejavu nanum-font
 OD_COMMANDER_RESOURCES_DIR = /usr/share/od-commander/
+OD_COMMANDER_EMULATOR_INFO = odcommander.emulator.yml
 
 OD_COMMANDER_CONF_OPTS += \
 	-DWITH_SYSTEM_SDL_GFX=ON -DWITH_SYSTEM_SDL_TTF=ON \
@@ -61,3 +62,4 @@ define OD_COMMANDER_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

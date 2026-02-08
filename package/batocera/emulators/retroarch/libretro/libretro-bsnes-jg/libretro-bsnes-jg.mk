@@ -7,6 +7,7 @@
 LIBRETRO_BSNES_JG_VERSION = f729ad4074c1955bd8bfebbb2e1a3078794804c6
 LIBRETRO_BSNES_JG_SITE = $(call github,libretro,bsnes-jg,$(LIBRETRO_BSNES_JG_VERSION))
 LIBRETRO_BSNES_JG_LICENSE = GPL-3.0
+LIBRETRO_BSNES_JG_EMULATOR_INFO = bsnes-jg.libretro.core.yml
 
 define LIBRETRO_BSNES_JG_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/libretro/Makefile
@@ -20,3 +21,4 @@ define LIBRETRO_BSNES_JG_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

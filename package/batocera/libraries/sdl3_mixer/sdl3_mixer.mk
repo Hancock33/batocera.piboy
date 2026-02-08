@@ -3,14 +3,15 @@
 # sdl3_mixer
 #
 ################################################################################
-# Version: Commits on Jan 28, 2026
-SDL3_MIXER_VERSION = 61566f03f4940a3af5685588527a7fe67fbdbc96
+# Version: Commits on Feb 06, 2026
+SDL3_MIXER_VERSION = 37b2f3325a0fb1e98ba265aa38826aa9e16624fb
 SDL3_MIXER_SITE = https://github.com/libsdl-org/SDL_mixer
 SDL3_MIXER_SITE_METHOD = git
 SDL3_MIXER_GIT_SUBMODULES = yes
 SDL3_MIXER_LICENSE = Zlib
 SDL3_MIXER_LICENSE_FILES = LICENSE.txt
 SDL3_MIXER_INSTALL_STAGING = YES
+SDL3_MIXER_CMAKE_BACKEND = make
 
 SDL3_MIXER_DEPENDENCIES += alsa-lib libogg sdl3
 

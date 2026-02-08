@@ -7,7 +7,8 @@
 LIBRETRO_NXENGINE_VERSION = 9adc032a5f6aa913d71d22042bb72cb11cf0f4a2
 LIBRETRO_NXENGINE_SITE = $(call github,libretro,nxengine-libretro,$(LIBRETRO_NXENGINE_VERSION))
 LIBRETRO_NXENGINE_LICENSE = GPLv3
-LIBRETRO_NXENGINE_DEPENDENCIES = retroarch
+LIBRETRO_NXENGINE_DEPENDENCIES += retroarch
+LIBRETRO_NXENGINE_EMULATOR_INFO = nxengine.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S812),y)
     LIBRETRO_NXENGINE_PLATFORM = armv
@@ -36,3 +37,4 @@ define LIBRETRO_NXENGINE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

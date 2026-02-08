@@ -1,3 +1,4 @@
+
 ##### define variables to use in this file
 if  BR2_PACKAGE_BATOCERA_RPI_MESA3D
 config BR2_PACKAGE_BATOCERA_RPI_ANY
@@ -166,6 +167,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_ES_WEB_UI                   # emulationstation web ui
     select BR2_PACKAGE_BATOCERA_IMAGE                       # tools to generate batocera image
     select BR2_PACKAGE_BATOCERA_INITRAMFS                   # initramfs to boot the system
+    select BR2_PACKAGE_BATOCERA_ONSCREEN_KEYBOARD           if  BR2_PACKAGE_BATOCERA_WAYLAND
     select BR2_PACKAGE_BATOCERA_TRIGGERHAPPY                # multimedia/power buttons
     select BR2_PACKAGE_BATOCERA_UDEV_RULES                  # extra udev rules for specifics joysticks/devices
     select BR2_PACKAGE_BATOCERA_USERDATAINIT                # userdata init files
@@ -230,6 +232,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_WIRELESS_REGDB                       # wireless regulatory DB
     select BR2_PACKAGE_WIRELESS_TOOLS                       # wireless tools
     select BR2_PACKAGE_WIRELESS_TOOLS_LIB                   # wireless tools
+    select BR2_PACKAGE_WLRCTL                               if  BR2_PACKAGE_BATOCERA_WAYLAND
     select BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     select BR2_TARGET_ROOTFS_SQUASHFS                       # tool to generate the target image
 
@@ -803,6 +806,9 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     select BR2_PACKAGE_HYPSEUS_SINGE                        # daphne
     select BR2_PACKAGE_HYPSEUS_SINGE_BEZELS                 if  BR2_PACKAGE_HYPSEUS_SINGE
 
+    # Demul emulator - multiple Sega arcade systems
+    select BR2_PACKAGE_DEMUL                                if  BR2_PACKAGE_BATOCERA_WINE
+
     # Standalone Sega Model 2 emulator
     select BR2_PACKAGE_MODEL2EMU                            if  BR2_PACKAGE_BATOCERA_WINE
 
@@ -1131,7 +1137,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
 
     # CLK - Oric Atmos and other old computers (requires OpenGL 3.2 or higher)
     select BR2_PACKAGE_CLK                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_SM8550  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8250
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8250      || BR2_PACKAGE_BATOCERA_TARGET_QCS6490
 
     # Colour Computer (Tandy TRS-80)
     select BR2_PACKAGE_XROAR                                if  BR2_PACKAGE_HAS_LIBGL                      # Xroar requires OpenGL

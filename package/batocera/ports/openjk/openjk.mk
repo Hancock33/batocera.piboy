@@ -9,6 +9,7 @@ OPENJK_SITE = $(call github,JACoders,OpenJK,$(OPENJK_VERSION))
 OPENJK_DEPENDENCIES += host-libjpeg libpng openal sdl2 zlib
 OPENJK_LICENSE = GPL-2.0
 OPENJK_SUPPORTS_IN_SOURCE_BUILD = NO
+OPENJK_EMULATOR_INFO = openjk.emulator.yml
 
 OPENJK_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 OPENJK_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr/bin"
@@ -36,3 +37,4 @@ endef
 OPENJK_POST_INSTALL_TARGET_HOOKS += OPENJK_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

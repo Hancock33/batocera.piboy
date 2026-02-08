@@ -1,0 +1,82 @@
+features:
+  - padtokeyboard
+shared_features:
+  - powermode
+  - tdp
+  - videomode
+  - bezel
+  - bezel_stretch
+  - hud
+  - hud_corner
+  - bezel.tattoo
+  - bezel.tattoo_corner
+  - bezel.tattoo_file
+  - bezel.resize_tattoo
+custom_features:
+  f2b_fog:
+    group: VIDEO SETTINGS
+    prompt: FOG RENDERING
+    description: Disable fog rendering
+    choices:
+      "Enabled (Default)": 1
+      "Disabled": 0
+  f2b_gouraud:
+    group: VIDEO SETTINGS
+    prompt: GOURAUD RENDERING
+    description: Disable gouraud shading
+    choices:
+      "Enabled (Default)": 1
+      "Disabled": 0
+  f2b_filter:
+    group: VIDEO SETTINGS
+    prompt: TEXTURE FILTER
+    description: Select which filter is used to scale up the resolution.
+    choices:
+      "Nearest": nearest
+      "Linear (Default)": linear
+  f2b_scaler:
+    group: VIDEO SETTINGS
+    prompt: TEXTURE SCALER
+    description: Select which scaler is used to scale up the resolution.
+    choices:
+      "Point1x": point1x
+      "Point2x": point2x
+      "Point3x": point3x
+      "Scale2x (Default)": scale2x
+      "Scale3x": scale3x
+  f2b_sub:
+    group: GAME TRANSLATION
+    prompt: SUBTITLES
+    description: Display cutscene subtitles
+    choices:
+      "TRUE": 1
+      "FALSE": 0
+  f2b_lang:
+    group: GAME TRANSLATION
+    prompt: LANGUAGE
+    choices:
+      "EN": EN
+      "FR": FR
+      "GR": GR
+      "SP": SP
+      "IT": IT
+  f2b_level:
+    prompt: START LEVEL
+    description: Start at level number
+    choices:
+      "1": 1
+      "2": 2
+      "3": 3
+      "4": 4
+      "5": 5
+      "6": 6
+      "7": 7
+      "8": 8
+      "9": 9
+      "10": 10
+      "11": 11
+      "12": 12
+      "13": 13
+      "14": 14
+systems:
+  - f2bgl

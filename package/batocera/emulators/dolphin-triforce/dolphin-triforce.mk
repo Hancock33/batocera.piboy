@@ -3,8 +3,8 @@
 # dolphin-triforce
 #
 ################################################################################
-# Version: Commits on Jan 31, 2026
-DOLPHIN_TRIFORCE_VERSION = 5bf8fe93286ebe4f08fb469a44f259a8397c89e0
+# Version: Commits on Feb 08, 2026
+DOLPHIN_TRIFORCE_VERSION = 5689a310fb4cf2623c6f34b379730e1c0f52d46f
 DOLPHIN_TRIFORCE_SITE = https://github.com/crediar/dolphin.git
 DOLPHIN_TRIFORCE_SITE_METHOD = git
 DOLPHIN_TRIFORCE_LICENSE = GPLv2+
@@ -12,6 +12,7 @@ DOLPHIN_TRIFORCE_GIT_SUBMODULES = YES
 DOLPHIN_TRIFORCE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 DOLPHIN_TRIFORCE_DEPENDENCIES += bluez5_utils cpp-ipc ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl3 xz zlib
+DOLPHIN_TRIFORCE_EMULATOR_INFO = dolphin_triforce.emulator.yml
 
 DOLPHIN_TRIFORCE_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_TRIFORCE_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
@@ -82,3 +83,4 @@ endef
 DOLPHIN_TRIFORCE_POST_INSTALL_TARGET_HOOKS += DOLPHIN_TRIFORCE_EXTRAS
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

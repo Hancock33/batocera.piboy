@@ -178,6 +178,9 @@ camplynx:
 casloopy:
   emulator: libretro
   core:     mame
+cassettevision:
+  emulator: libretro
+  core:     pd777
 catacomb:
   emulator: catacombgl
   core:     catacombgl
@@ -424,8 +427,8 @@ hcl:
   emulator: hcl
   core:     hcl
 hikaru:
-  emulator: libretro
-  core:     mame
+  emulator: demul
+  core:     demul
 hode:
   emulator: hode
   core:     hode
@@ -736,9 +739,6 @@ pcexhumed:
 pcfx:
   emulator: libretro
   core:     pcfx
-cassettevision:
-  emulator: libretro
-  core:     pd777
 pdp1:
   emulator: libretro
   core:     mame
@@ -794,6 +794,7 @@ ps3:
   core:     rpcs3
   options:
     powersave: '2'
+    hud_support: false
 ps4:
   emulator: shadps4
   core:     shadps4

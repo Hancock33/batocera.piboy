@@ -7,6 +7,7 @@
 LIBRETRO_GEOLITH_VERSION = a137836711bbbd6e279310dc6e91bedc03904016
 LIBRETRO_GEOLITH_SITE = $(call github,libretro,geolith-libretro,$(LIBRETRO_GEOLITH_VERSION))
 LIBRETRO_GEOLITH_LICENSE = GPL-3.0
+LIBRETRO_GEOLITH_EMULATOR_INFO = geolith.libretro.core.yml
 
 define LIBRETRO_GEOLITH_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/libretro/Makefile
@@ -19,3 +20,4 @@ define LIBRETRO_GEOLITH_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

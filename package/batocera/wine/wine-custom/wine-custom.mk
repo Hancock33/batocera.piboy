@@ -3,13 +3,14 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Jan 23, 2026
-WINE_CUSTOM_VERSION = 11.01
+# Version: Commits on Feb 07, 2026
+WINE_CUSTOM_VERSION = 11.02
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_CUSTOM_SELINUX_MODULES = wine
 WINE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-custom
+WINE_TKG_EMULATOR_INFO = wine-custom.wine.core.yml wine-custom.mugen.core.yml
 HOST_WINE_CUSTOM_DEPENDENCIES = host-bison host-flex
 WINE_CUSTOM_STAGING_VERSION = v$(subst wine-,,$(WINE_CUSTOM_VERSION))
 #HOST_WINE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_CUSTOM_STAGING_VERSION).tar.gz
@@ -352,3 +353,4 @@ WINE_CUSTOM_POST_INSTALL_TARGET_HOOKS += WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))
+$(eval $(emulator-info-package))

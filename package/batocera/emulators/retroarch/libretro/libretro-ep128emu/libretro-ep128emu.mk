@@ -7,6 +7,7 @@
 LIBRETRO_EP128EMU_VERSION = db2e0e5bb4239fd49fd90cf24002f47dc5f35ea0
 LIBRETRO_EP128EMU_SITE = $(call github,libretro,ep128emu-core,$(LIBRETRO_EP128EMU_VERSION))
 LIBRETRO_EP128EMU_LICENSE = GPL-2.0
+LIBRETRO_EP128EMU_EMULATOR_INFO = ep128emu.libretro.core.yml
 
 define LIBRETRO_EP128EMU_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -21,3 +22,4 @@ define LIBRETRO_EP128EMU_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

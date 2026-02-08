@@ -7,7 +7,8 @@
 LIBRETRO_CAP32_VERSION = 54eabbb210a6149496b1d023bebddb3f0120bc33
 LIBRETRO_CAP32_SITE = $(call github,libretro,libretro-cap32,$(LIBRETRO_CAP32_VERSION))
 LIBRETRO_CAP32_LICENSE = GPLv2
-LIBRETRO_CAP32_DEPENDENCIES = retroarch
+LIBRETRO_CAP32_DEPENDENCIES += retroarch
+LIBRETRO_CAP32_EMULATOR_INFO = cap32.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_CAP32_PLATFORM = rpi2
@@ -37,3 +38,4 @@ define LIBRETRO_CAP32_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

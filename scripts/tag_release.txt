@@ -3,6 +3,7 @@ alsa-topology-conf.mk
 alsa-ucm-conf.mk
 appstream.mk
 ares.mk
+batocera-onscreen-keyboard.mk
 batocera-settings.mk
 bgfx.mk
 cabextract.mk

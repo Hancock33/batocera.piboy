@@ -5,11 +5,12 @@
 ################################################################################
 # Version: Commits on Sept 14, 2025
 ECWOLF_VERSION = 51994bef41dc3598d370761371773e47859affd6
-ECWOLF_SITE = https://bitbucket.org/ecwolf/ecwolf.git
+ECWOLF_SITE = https://github.com/ECWolfEngine/ECWolf.git
 ECWOLF_SITE_METHOD=git
 ECWOLF_GIT_SUBMODULES=YES
 ECWOLF_LICENSE = Non-commercial
 ECWOLF_DEPENDENCIES = host-ecwolf sdl2 sdl2_mixer sdl2_net zlib bzip2 jpeg
+ECWOLF_EMULATOR_INFO = ecwolf.emulator.yml
 ECWOLF_SUPPORTS_IN_SOURCE_BUILD = YES
 
 HOST_ECWOLF_CONF_OPTS += -DTOOLS_ONLY=ON
@@ -39,3 +40,4 @@ endef
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
+$(eval $(emulator-info-package))

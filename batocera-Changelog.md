@@ -41,18 +41,26 @@
   - Wifi country selector
   - Ability to add a "sort name" that take precedence over the (scraped) game name in metadata
   - New Keyboard Layout and Keyboard Variant options
-- Batocera Control Center (on-screen interface for global configuration and control, [hotkey][east] by default)
+- Batocera Control Center (on-screen interface for global configuration and control, [hotkey]+[east] by default)
+- Virtual keyboard for devices using Wayland with a touchscreen, launched from Batocera Control Center
 - batocera-xtract for handling archives, systems with PCManFM filemanager can use a small GUI and mouse context menus
 - dmd-play-rust is now used by default to play dmd images (performances)
 - Yamagi Quake II added which support more systems, especially lower-end hardware
-- Light gun support to the new Libretro Dolphin core
-- Light gun support to Duckstation (multi-light guns)
-- Light gun support (single light gun only) to the Play! namco 2x6 gun games
+- Light gun support to:
+  - new Libretro Dolphin core (multi-light guns)
+  - Duckstation (multi-light guns)
+  - Play! emulator for Namco 2x6 gun games (single-light gun only)
+  - Flycast standalone (multi-light guns)
+- nfc reader support
 - Casio Loopy as a separate system
 - Enterprise 64/128 (via CLK emulator)
 - Xroar emulator as an option for the Color Computer (Tandy TRS-80)
 - PC60 as a separate system
 - Cemu for SM8550 devices
+- PD777 libretro core for the Epoch Cassette Vision
+- Sega Cave CV1000 support (currently x86 systems only)
+- Sega Gaelco support (currently x86 systems only)
+- Sega Hikaru support (currently x86 systems only)
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
@@ -80,10 +88,11 @@
 - CLK to 2026-01-06
 - Dolphin-Emu to 2512-99
 - DXX-Rebirth to May 25, 2025
+- EasyRPG to 0.8.1.1
 - EDuke32 to Oct 10, 2025
 - Flycast to 2.6
 - FS-UAE to v3.2.35
-- Groovy MAME to 0.284
+- Groovy MAME to 0.285
 - Hatari to v2.6.1
 - Hurrican to Jul 26, 2025 build
 - Jazz2 to 3.5.0
@@ -99,13 +108,14 @@
 - Libretro Genesis Plus GX-Wide to 21th of October 2024 build
 - Libretro Holani to 0.9.9
 - Libretro MAME2003plus to 16th of January 2026 build
-- Libretro MAME to 0.284
+- Libretro MAME to 0.285
 - Libretro MGBA to 17th of January 2026 build
 - Libretro Mesen to 24th of October 2024 build
 - Libretro Nestopia to 10th of January 2026 build
 - Libretro Opera to 17th of October 2024 build
 - Libretro Picodrive to 3rd of December 2025 build
-- Libretro Play! to 0.72
+- Libretro Play! to 0.73
+- Libretro PS2 to 6th of February 2026 build
 - Libretro PUAE to 2nd of November 2025 build
 - Libretro Snes9x to 8th of September 2025 build
 - Libretro Stella to 28th of December 2025 build
@@ -116,12 +126,13 @@
 - OpenJK to 10th of October 2025 build
 - OpenJKDF2 to v0.9.8
 - OpenMOHAA to v0.82.1
-- Play! to 0.72
+- Play! to 0.73
 - PCSX2 to v2.6.3
 - RClone to v1.72.1
 - RetroArch to 1.22.2
 - RPCS3 to v0.0.39
 - Ruffle to 31th of January 2026 nightly build
+- ScummVM to v2026.1.0
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_12_0_A
 - Sonic 2013 to 1.3.3
 - Sonic CD to 1.3.3
@@ -144,10 +155,10 @@
 - Go language compiler to 1.25.5
 - GStreamer codecs to 1.26.6
 - Linux Firmware to 20251125
-- Linux Kernel to 6.18.8
+- Linux Kernel to 6.18.9
 - LabWC to 0.9.3
 - LLVM Project to 20.1.8
-- Mesa3D to 25.3.4
+- Mesa3D to 25.3.5
 - MPV to v0.41.0
 - Nvidia 580.xx legacy drivers to 580.126.09
 - Nvidia production drivers to 590.48.01

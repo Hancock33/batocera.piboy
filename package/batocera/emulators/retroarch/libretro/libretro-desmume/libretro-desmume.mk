@@ -9,6 +9,7 @@ LIBRETRO_DESMUME_SITE = $(call github,libretro,desmume,$(LIBRETRO_DESMUME_VERSIO
 LIBRETRO_DESMUME_LICENSE = GPLv2
 
 LIBRETRO_DESMUME_DEPENDENCIES = libpcap retroarch
+LIBRETRO_DESMUME_EMULATOR_INFO = desmume.libretro.core.yml
 
 define LIBRETRO_DESMUME_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/desmume/src/frontend/libretro/Makefile
@@ -21,3 +22,4 @@ define LIBRETRO_DESMUME_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

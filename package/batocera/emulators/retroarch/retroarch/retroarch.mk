@@ -3,13 +3,16 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-RETROARCH_VERSION = 03d0f1aa91a80b3a6b78c2b3db70e0c1e2af5e3f
+# Version: Commits on Feb 08, 2026
+RETROARCH_VERSION = 24a1a4c0d6c7d498f0525c2fbef57d5bf6a72e97
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
 # install in staging for debugging (gdb)
 RETROARCH_INSTALL_STAGING = YES
+
+$(eval $(call register,libretro.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.libretro.emulator.yml))
 
 RETROARCH_CONF_OPTS = --disable-oss --disable-qt --enable-threads --enable-ozone \
 	--enable-xmb --disable-discord --enable-flac --enable-lua --enable-networking \
@@ -200,6 +203,7 @@ RETROARCH_POST_INSTALL_TARGET_HOOKS += RETROARCH_LIBRETRO_FFMPEG_INSTALL
 #endif
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))
 
 # DEFINITION OF LIBRETRO PLATFORM
 LIBRETRO_PLATFORM = unix

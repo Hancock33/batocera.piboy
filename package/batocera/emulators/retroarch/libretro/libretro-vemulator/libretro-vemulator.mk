@@ -7,7 +7,8 @@
 LIBRETRO_VEMULATOR_VERSION = 45d7556667549bb1c1b84d27fbffb7d2a633f5d3
 LIBRETRO_VEMULATOR_SITE = $(call github,libretro,vemulator-libretro,$(LIBRETRO_VEMULATOR_VERSION))
 LIBRETRO_VEMULATOR_LICENSE = GPLv3
-LIBRETRO_VEMULATOR_DEPENDENCIES = retroarch
+LIBRETRO_VEMULATOR_DEPENDENCIES += retroarch
+LIBRETRO_VEMULATOR_EMULATOR_INFO = vemulator.libretro.core.yml
 
 define LIBRETRO_VEMULATOR_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -20,3 +21,4 @@ define LIBRETRO_VEMULATOR_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

@@ -3,12 +3,13 @@
 # corsixth
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-CORSIXTH_VERSION = 459e542e9157e1b8bad22c6f2490dec8ab32b64b
+# Version: Commits on Feb 08, 2026
+CORSIXTH_VERSION = da320a25f5566a7b855f54813c0c19019ed28fa9
 CORSIXTH_SITE = $(call github,CorsixTH,CorsixTH,$(CORSIXTH_VERSION))
 CORSIXTH_DEPENDENCIES = ffmpeg libcurl lpeg lua luafilesystem lua-lpeg-patterns luasec luasocket rtmidi sdl2 sdl2_image sdl2_mixer
 CORSIXTH_LICENSE = GPL-2.0
 CORSIXTH_SUPPORTS_IN_SOURCE_BUILD = NO
+CORSIXTH_EMULATOR_INFO = corsixth.emulator.yml
 
 CORSIXTH_CONF_OPTS += -DWITH_LUAJIT=OFF
 
@@ -22,3 +23,4 @@ endef
 CORSIXTH_POST_INSTALL_TARGET_HOOKS += CORSIXTH_INSTALL_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

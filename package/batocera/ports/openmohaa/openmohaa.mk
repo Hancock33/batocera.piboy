@@ -15,12 +15,13 @@
 # openmohaa
 #
 ################################################################################
-# Version: Commits on Feb 01, 2026
-OPENMOHAA_VERSION = 489bd9385c35e2c016f038fcdcd49c4fc2909a3c
+# Version: Commits on Feb 04, 2026
+OPENMOHAA_VERSION = 5b663c969917e3c6dace5da4480cfba8d3e45a00
 OPENMOHAA_SITE = $(call github,openmoh,openmohaa,$(OPENMOHAA_VERSION))
 OPENMOHAA_SUPPORTS_IN_SOURCE_BUILD = NO
 OPENMOHAA_LICENSE = GPL-2.0 license
 OPENMOHAA_LICENSE_FILE = COPYING.txt
+OPENMOHAA_EMULATOR_INFO = openmohaa.emulator.yml
 
 OPENMOHAA_DEPENDENCIES += libcurl openal sdl2
 
@@ -43,3 +44,4 @@ endef
 OPENMOHAA_POST_INSTALL_TARGET_HOOKS += OPENMOHAA_EVMAPY
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

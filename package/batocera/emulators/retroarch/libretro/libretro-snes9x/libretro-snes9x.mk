@@ -9,6 +9,7 @@ LIBRETRO_SNES9X_SITE = $(call github,libretro,snes9x,$(LIBRETRO_SNES9X_VERSION))
 LIBRETRO_SNES9X_LICENSE = Non-commercial
 LIBRETRO_SNES9X_DEPENDENCIES = zlib retroarch
 LIBRETRO_SNES9X_PLATFORM = $(LIBRETRO_PLATFORM)
+LIBRETRO_SNES9X_EMULATOR_INFO = snes9x.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S922X),y)
     LIBRETRO_SNES9X_PLATFORM = CortexA73_G12B
@@ -37,3 +38,4 @@ define LIBRETRO_SNES9X_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

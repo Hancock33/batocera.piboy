@@ -7,7 +7,8 @@
 LIBRETRO_GPSP_VERSION = 602512d7c687acb84cd56265cbcf2d7b7c75fb37
 LIBRETRO_GPSP_SITE = $(call github,libretro,gpsp,$(LIBRETRO_GPSP_VERSION))
 LIBRETRO_GPSP_LICENSE = GPLv2
-LIBRETRO_GPSP_DEPENDENCIES = retroarch
+LIBRETRO_GPSP_DEPENDENCIES += retroarch
+LIBRETRO_GPSP_EMULATOR_INFO = gpsp.libretro.core.yml
 
 ifeq ($(BR2_aarch64),y)
     LIBRETRO_GPSP_PLATFORM = arm64
@@ -29,3 +30,4 @@ define LIBRETRO_GPSP_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

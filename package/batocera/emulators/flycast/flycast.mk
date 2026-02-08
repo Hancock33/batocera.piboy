@@ -3,13 +3,15 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Jan 20, 2026
-FLYCAST_VERSION = 21eb24f86d785b1c631161f03057b22c160182c0
+# Version: Commits on Feb 06, 2026
+FLYCAST_VERSION = c577e29f43edc5a86c6ed4edca46706000d214b2
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
 FLYCAST_LICENSE = GPLv2
-FLYCAST_DEPENDENCIES = libao libcurl libminiupnpc libpng libzip sdl2
+FLYCAST_DEPENDENCIES = libao libcurl libevdev libminiupnpc libpng libzip sdl2
+FLYCAST_EMULATOR_INFO = flycast.emulator.yml
+
 FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 FLYCAST_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -41,3 +43,4 @@ endef
 FLYCAST_POST_EXTRACT_HOOKS = FLYCAST_GET_SUBMODULE
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

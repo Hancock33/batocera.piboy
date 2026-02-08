@@ -3,12 +3,13 @@
 # libretro-clownmdemu
 #
 ################################################################################
-# Version: Commits on Jan 31, 2026
-LIBRETRO_CLOWNMDEMU_VERSION = 669491083ed40ca84561ae88a4ba43aac593299d
+# Version: Commits on Feb 07, 2026
+LIBRETRO_CLOWNMDEMU_VERSION = 0bd84f8c257f383863196d47e0a3783514852f18
 LIBRETRO_CLOWNMDEMU_SITE = https://github.com/Clownacy/clownmdemu-libretro
 LIBRETRO_CLOWNMDEMU_SITE_METHOD=git
 LIBRETRO_CLOWNMDEMU_GIT_SUBMODULES=YES
 LIBRETRO_CLOWNMDEMU_LICENSE = GPLv2
+LIBRETRO_CLOWNMDEMU_EMULATOR_INFO = clownmdemu.libretro.core.yml
 
 define LIBRETRO_CLOWNMDEMU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
@@ -16,3 +17,4 @@ define LIBRETRO_CLOWNMDEMU_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

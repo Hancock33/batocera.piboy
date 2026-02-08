@@ -3,10 +3,10 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Jan 31, 2026
-DOLPHIN_EMU_VERSION = 6711d77b9901ed0a4418203db49ed4d8576e6fe0
+# Version: Commits on Feb 08, 2026
+DOLPHIN_EMU_VERSION = ebc8c9d857f8cbc99d555c4c2b16e3e8098a718a
 DOLPHIN_EMU_VERSION_MAJOR = 2512
-DOLPHIN_EMU_VERSION_MINOR = 263
+DOLPHIN_EMU_VERSION_MINOR = 293
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -18,6 +18,9 @@ DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cpp-ipc ffmpeg hidapi host-xz libcurl l
 ifeq ($(BR2_PACKAGE_DOLPHIN_TRIFORCE),y)
     DOLPHIN_EMU_DEPENDENCIES += dolphin-triforce
 endif
+
+$(eval $(call register,dolphin.emulator.yml))
+$(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.dolphin.emulator.yml))
 
 DOLPHIN_EMU_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_EMU_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
@@ -66,3 +69,4 @@ endef
 DOLPHIN_EMU_PRE_CONFIGURE_HOOKS = DOLPHIN_EMU_PRE_CONFIGURE_HOOK
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

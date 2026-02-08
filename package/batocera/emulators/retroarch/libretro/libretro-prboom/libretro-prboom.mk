@@ -7,7 +7,8 @@
 LIBRETRO_PRBOOM_VERSION = 93c8e7a2074e4fd8410398e3d571c6d9afec1d84
 LIBRETRO_PRBOOM_SITE = $(call github,libretro,libretro-prboom,$(LIBRETRO_PRBOOM_VERSION))
 LIBRETRO_PRBOOM_LICENSE = GPLv2
-LIBRETRO_PRBOOM_DEPENDENCIES = retroarch
+LIBRETRO_PRBOOM_DEPENDENCIES += retroarch
+LIBRETRO_PRBOOM_EMULATOR_INFO = prboom.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S812),y)
     LIBRETRO_PRBOOM_PLATFORM = armv neon
@@ -29,3 +30,4 @@ define LIBRETRO_PRBOOM_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

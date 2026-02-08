@@ -9,6 +9,7 @@ XEMU_SITE = https://github.com/xemu-project/xemu.git
 XEMU_SITE_METHOD = git
 XEMU_GIT_SUBMODULES = YES
 XEMU_LICENSE = GPLv2
+XEMU_EMULATOR_INFO = xemu.emulator.yml
 XEMU_DEPENDENCIES = host-cmake host-meson host-pkgconf host-python-distlib host-python-pyyaml host-python3
 XEMU_DEPENDENCIES += json-for-modern-cpp libcurl libepoxy libglib2 libgtk3 libpcap libsamplerate sdl2 slirp zlib
 
@@ -169,3 +170,4 @@ XEMU_PRE_CONFIGURE_HOOKS = XEMU_VERSION_DETAILS
 XEMU_PRE_CONFIGURE_HOOKS += XEMU_GET_SUBMODULES
 
 $(eval $(autotools-package))
+$(eval $(emulator-info-package))

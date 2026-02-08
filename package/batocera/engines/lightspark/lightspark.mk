@@ -3,12 +3,13 @@
 # lightspark
 #
 ################################################################################
-# Version: Commits on Jan 21, 2026
-LIGHTSPARK_VERSION = af116cc4cc648b7fd42feb85737eae437e417b90
+# Version: Commits on Feb 04, 2026
+LIGHTSPARK_VERSION = 9b729eb7a3e41571fbba6f2b44aa859e0f6536cb
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = sdl2 freetype pcre jpeg libpng cairo pango ffmpeg libcurl rtmpdump
 LIGHTSPARK_SUPPORTS_IN_SOURCE_BUILD = NO
+LIGHTSPARK_EMULATOR_INFO = lightspark.emulator.yml
 
 LIGHTSPARK_CONF_OPTS += -DCOMPILE_NPAPI_PLUGIN=FALSE -DCOMPILE_PPAPI_PLUGIN=FALSE
 
@@ -38,3 +39,4 @@ define LIGHTSPARK_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

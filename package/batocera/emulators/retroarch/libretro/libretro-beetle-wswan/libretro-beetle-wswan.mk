@@ -9,6 +9,7 @@ LIBRETRO_BEETLE_WSWAN_SITE = $(call github,libretro,beetle-wswan-libretro,$(LIBR
 LIBRETRO_BEETLE_WSWAN_LICENSE = GPLv2
 
 LIBRETRO_BEETLE_WSWAN_DEPENDENCIES = libpng retroarch
+LIBRETRO_BEETLE_WSWAN_EMULATOR_INFO = mednafen_wswan.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_BEETLE_WSWAN_PLATFORM = rpi2
@@ -34,3 +35,4 @@ define LIBRETRO_BEETLE_WSWAN_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

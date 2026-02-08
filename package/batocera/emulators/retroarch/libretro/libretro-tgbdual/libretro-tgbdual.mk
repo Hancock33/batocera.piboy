@@ -7,7 +7,8 @@
 LIBRETRO_TGBDUAL_VERSION = 933707c0ba8f12360f6d79712f735a917713709a
 LIBRETRO_TGBDUAL_SITE = $(call github,libretro,tgbdual-libretro,$(LIBRETRO_TGBDUAL_VERSION))
 LIBRETRO_TGBDUAL_LICENSE = GPLv2
-LIBRETRO_TGBDUAL_DEPENDENCIES = retroarch
+LIBRETRO_TGBDUAL_DEPENDENCIES += retroarch
+LIBRETRO_TGBDUAL_EMULATOR_INFO = tgbdual.libretro.core.yml
 
 define LIBRETRO_TGBDUAL_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -20,3 +21,4 @@ define LIBRETRO_TGBDUAL_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

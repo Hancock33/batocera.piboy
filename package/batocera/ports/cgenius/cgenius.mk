@@ -11,6 +11,7 @@ CGENIUS_GIT_SUBMODULES=YES
 CGENIUS_SUPPORTS_IN_SOURCE_BUILD = NO
 CGENIUS_CONF_LICENSE = GPL-2.0
 CGENIUS_CONF_LICENSE_FILES = LICENSE
+CGENIUS_EMULATOR_INFO = cgenius.emulator.yml
 CGENIUS_DEPENDENCIES += boost host-xxd libcurl python-configobj
 CGENIUS_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer sdl2_ttf
 
@@ -33,3 +34,4 @@ endef
 CGENIUS_POST_INSTALL_TARGET_HOOKS += CGENIUS_INSTALL_TARGET_ASSETS
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

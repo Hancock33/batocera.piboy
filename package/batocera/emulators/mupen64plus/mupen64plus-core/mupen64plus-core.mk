@@ -9,6 +9,7 @@ MUPEN64PLUS_CORE_SITE = $(call github,mupen64plus,mupen64plus-core,$(MUPEN64PLUS
 MUPEN64PLUS_CORE_LICENSE = GPLv2
 MUPEN64PLUS_CORE_DEPENDENCIES = alsa-lib freetype dejavu host-nasm sdl2
 MUPEN64PLUS_CORE_INSTALL_STAGING = YES
+MUPEN64PLUS_CORE_EMULATOR_INFO = mupen64plus.emulator.yml
 
 MUPEN64PLUS_CORE_GL_CFLAGS = -I$(STAGING_DIR)/usr/include -L$(STAGING_DIR)/usr/lib
 
@@ -107,3 +108,4 @@ endef
 MUPEN64PLUS_CORE_PRE_CONFIGURE_HOOKS += MUPEN64PLUS_CORE_CROSS_FIXUP
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

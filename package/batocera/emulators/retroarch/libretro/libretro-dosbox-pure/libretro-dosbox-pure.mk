@@ -3,11 +3,12 @@
 # libretro-dosbox-pure
 #
 ################################################################################
-# Version: Commits on Jan 31, 2026
-LIBRETRO_DOSBOX_PURE_VERSION = 77f067eed8e0ea2ad9e86fbc690922f1f1671fc4
+# Version: Commits on Feb 04, 2026
+LIBRETRO_DOSBOX_PURE_VERSION = 6fe60a669e8781d738150ad2353b87c1e1de7dd4
 LIBRETRO_DOSBOX_PURE_SITE = $(call github,schellingb,dosbox-pure,$(LIBRETRO_DOSBOX_PURE_VERSION))
 LIBRETRO_DOSBOX_PURE_LICENSE = GPLv2
-LIBRETRO_DOSBOX_PURE_DEPENDENCIES = retroarch
+LIBRETRO_DOSBOX_PURE_DEPENDENCIES += retroarch
+LIBRETRO_DOSBOX_PURE_EMULATOR_INFO = dosbox_pure.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_DOSBOX_PURE_PLATFORM = rpi2
@@ -45,3 +46,4 @@ define LIBRETRO_DOSBOX_PURE_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

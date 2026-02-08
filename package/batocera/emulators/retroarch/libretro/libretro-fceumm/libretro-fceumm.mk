@@ -7,7 +7,8 @@
 LIBRETRO_FCEUMM_VERSION = 5cd4a43e16a7f3cd35628d481c347a0a98cfdfa2
 LIBRETRO_FCEUMM_SITE = $(call github,libretro,libretro-fceumm,$(LIBRETRO_FCEUMM_VERSION))
 LIBRETRO_FCEUMM_LICENSE = GPLv2
-LIBRETRO_FCEUMM_DEPENDENCIES = retroarch
+LIBRETRO_FCEUMM_DEPENDENCIES += retroarch
+LIBRETRO_FCEUMM_EMULATOR_INFO = fceumm.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_FCEUMM_PLATFORM = rpi2
@@ -37,3 +38,4 @@ define LIBRETRO_FCEUMM_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

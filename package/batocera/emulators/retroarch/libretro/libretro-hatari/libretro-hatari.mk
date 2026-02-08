@@ -7,6 +7,7 @@
 LIBRETRO_HATARI_VERSION = 7008194d3f951a157997f67a820578f56f7feee0
 LIBRETRO_HATARI_SITE = $(call github,libretro,hatari,$(LIBRETRO_HATARI_VERSION))
 LIBRETRO_HATARI_DEPENDENCIES = libcapsimage zlib retroarch
+LIBRETRO_HATARI_EMULATOR_INFO = hatari.libretro.core.yml
 LIBRETRO_HATARI_LICENSE = GPLv2
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
@@ -37,3 +38,4 @@ define LIBRETRO_HATARI_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

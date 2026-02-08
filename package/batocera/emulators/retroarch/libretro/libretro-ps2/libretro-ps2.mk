@@ -3,14 +3,15 @@
 # libretro-ps2
 #
 ################################################################################
-# Version: Commits on Jan 23, 2026
-LIBRETRO_PS2_VERSION = c250dd849177f5903b4407e11212c8040ae64985
+# Version: Commits on Feb 06, 2026
+LIBRETRO_PS2_VERSION = 416291ad7dc3caf5df4501c9249cbbe30cbef811
 LIBRETRO_PS2_SITE = https://github.com/libretro/ps2.git
 LIBRETRO_PS2_SITE_METHOD = git
 LIBRETRO_PS2_GIT_SUBMODULES = YES
-LIBRETRO_PS2_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_PS2_LICENSE = GPLv2
-LIBRETRO_PS2_DEPENDENCIES = pcsx2 retroarch
+LIBRETRO_PS2_DEPENDENCIES = libaio xz host-xxd retroarch
+LIBRETRO_PS2_EMULATOR_INFO = pcsx2.libretro.core.yml
+LIBRETRO_PS2_SUPPORTS_IN_SOURCE_BUILD = NO
 
 LIBRETRO_PS2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_PS2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
@@ -50,3 +51,4 @@ define LIBRETRO_PS2_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

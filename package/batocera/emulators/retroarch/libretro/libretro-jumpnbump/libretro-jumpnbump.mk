@@ -7,6 +7,7 @@
 LIBRETRO_JUMPNBUMP_VERSION = 4e68831f5576075c45c147f86865812afb816139
 LIBRETRO_JUMPNBUMP_SITE = $(call github,libretro,jumpnbump-libretro,$(LIBRETRO_JUMPNBUMP_VERSION))
 LIBRETRO_JUMPNBUMP_LICENSE = GPL-2.0
+LIBRETRO_JUMPNBUMP_EMULATOR_INFO = jumpnbump.libretro.core.yml
 
 define LIBRETRO_JUMPNBUMP_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -19,3 +20,4 @@ define LIBRETRO_JUMPNBUMP_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

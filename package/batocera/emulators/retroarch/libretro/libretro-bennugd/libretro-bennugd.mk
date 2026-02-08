@@ -3,11 +3,13 @@
 # libretro-bennugd
 #
 ################################################################################
-# Version: Commits on Jan 30, 2026
-LIBRETRO_BENNUGD_VERSION = 115b4019d4e555024eb7a5a1793260e268a8087e
+# Version: Commits on Feb 01, 2026
+LIBRETRO_BENNUGD_VERSION = a78319991d62520bed4e873d3538657ad0ae2ca7
 LIBRETRO_BENNUGD_SITE = $(call github,diekleinekuh,BennuGD_libretro,$(LIBRETRO_BENNUGD_VERSION))
 LIBRETRO_BENNUGD_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_BENNUGD_LICENSE = GPLv2
+LIBRETRO_BENNUGD_DEPENDENCIES = libpng openssl zlib
+LIBRETRO_BENNUGD_EMULATOR_INFO = bennugd.libretro.core.yml
 
 LIBRETRO_BENNUGD_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_BENNUGD_CONF_OPTS += -Dlibretro_core=ON
@@ -23,3 +25,4 @@ define LIBRETRO_BENNUGD_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

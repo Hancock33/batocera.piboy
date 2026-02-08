@@ -8,6 +8,7 @@ LIBRETRO_JOLLYCV_VERSION = 5b01c1e43f9040bfae25cc9f9dfb14d73951ec3c
 LIBRETRO_JOLLYCV_SITE = $(call github,libretro,jollycv,$(LIBRETRO_JOLLYCV_VERSION))
 LIBRETRO_JOLLYCV_LICENSE = GPL-3.0
 LIBRETRO_JOLLYCV_DEPENDENCIES = retroarch
+LIBRETRO_JOLLYCV_EMULATOR_INFO = jollycv.libretro.core.yml
 
 define LIBRETRO_JOLLYCV_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/libretro/Makefile
@@ -20,3 +21,4 @@ define LIBRETRO_JOLLYCV_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

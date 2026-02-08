@@ -6,7 +6,7 @@
 # Version: Commits on Mar 31, 2024
 SRB2KART_VERSION = 44b4a6852858eebba5f9f50da2ac9f4b2889ad1a
 SRB2KART_SITE = $(call github,STJr,Kart-Public,$(SRB2KART_VERSION))
-
+SRB2KART_EMULATOR_INFO = srb2kart.emulator.yml
 SRB2KART_DEPENDENCIES = sdl2 sdl2_mixer libgme
 SRB2KART_LICENSE = GPL-2.0
 SRB2KART_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -25,3 +25,4 @@ define SRB2KART_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

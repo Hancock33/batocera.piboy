@@ -7,7 +7,8 @@
 LIBRETRO_PC88_VERSION = 5fd599cdf34249bf7593e2b49b22ca69ca915538
 LIBRETRO_PC88_SITE = $(call github,libretro,quasi88-libretro,$(LIBRETRO_PC88_VERSION))
 LIBRETRO_PC88_LICENSE = BSD 3-Clause
-LIBRETRO_PC88_DEPENDENCIES = retroarch
+LIBRETRO_PC88_DEPENDENCIES += retroarch
+LIBRETRO_PC88_EMULATOR_INFO = quasi88.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
     LIBRETRO_PC88_PLATFORM = unix-rpi2
@@ -33,3 +34,4 @@ define LIBRETRO_PC88_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))
