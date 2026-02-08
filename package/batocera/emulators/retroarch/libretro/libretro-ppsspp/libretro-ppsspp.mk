@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 08, 2026
-LIBRETRO_PPSSPP_VERSION = 37052cc1aeeef1aa6a9c735cff00ccb093984bc2
+LIBRETRO_PPSSPP_VERSION = 51a57409ec4dcf10f29f421e8961f223ab864b49
 LIBRETRO_PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 LIBRETRO_PPSSPP_SOURCE = ppsspp-$(LIBRETRO_PPSSPP_VERSION)-git4.tar.gz
 LIBRETRO_PPSSPP_SITE_METHOD=git
