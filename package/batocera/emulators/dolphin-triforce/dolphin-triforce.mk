@@ -78,6 +78,8 @@ define DOLPHIN_TRIFORCE_EXTRAS
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/ini/SBLL.ini $(TARGET_DIR)/usr/share/triforce/GLLP6E.ini
 	# Mario Kart Arcade GP2
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/ini/SBNL.ini $(TARGET_DIR)/usr/share/triforce/GNLJ82.ini
+
+	cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-triforce dolphin-triforce.desktopconfig
 endef
 
 DOLPHIN_TRIFORCE_POST_INSTALL_TARGET_HOOKS += DOLPHIN_TRIFORCE_EXTRAS
