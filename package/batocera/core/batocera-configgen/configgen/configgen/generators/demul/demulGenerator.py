@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import configparser
 import filecmp
 import logging
 import os
@@ -8,7 +7,9 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path, PureWindowsPath
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING
+
+from configgen.utils.configparser import CaseSensitiveRawConfigParser
 
 from ... import Command
 from ...batoceraPaths import BIOS, SAVES, mkdir_if_not_exists
@@ -99,8 +100,7 @@ class DemulGenerator(Generator):
 
         # Prepare Config Parsing
         configFileName = emupath / "Demul.ini"
-        Config = configparser.ConfigParser(interpolation=None)
-        Config.optionxform = str
+        Config = CaseSensitiveRawConfigParser()
 
         if configFileName.exists():
             try:
@@ -167,8 +167,7 @@ class DemulGenerator(Generator):
         else:
             gpuConfigFileName = emupath / "gpuDX11.ini"
 
-        GpuConfig = configparser.ConfigParser(interpolation=None)
-        GpuConfig.optionxform = str
+        GpuConfig = CaseSensitiveRawConfigParser()
 
         if gpuConfigFileName.exists():
             try:
@@ -213,7 +212,7 @@ class DemulGenerator(Generator):
             GpuConfig.write(configfile)
 
         # Setup Command
-        commandArray = [wine_runner.wine, emupath / "demul.exe"]
+        commandArray: list[str | Path] = [wine_runner.wine, emupath / "demul.exe"]
 
         if demulsystem:
             commandArray.append(f"-run={demulsystem}")
@@ -258,7 +257,7 @@ class DemulGenerator(Generator):
                     start_new_session=True
                 )
             except Exception as e:
-                _logger.error(f"Failed to schedule Alt+Enter: {e}")
+                _logger.error("Failed to schedule Alt+Enter: %s", e)
 
         return Command.Command(array=commandArray, env=environment)
 

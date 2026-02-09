@@ -9,36 +9,37 @@ profiler.start()
 
 ### import always needed ###
 import argparse
+import ctypes
 import json
 import logging
 import os
 import shutil
 import signal
 import subprocess
-import time
 import threading
-import pyudev
-import sdl2
-import sdl2.ext
-import ctypes
+import time
+from copy import deepcopy
 from pathlib import Path
 from sys import exit
-from copy import deepcopy
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any, cast
 
-from . import controllersConfig as controllers
-from .batoceraPaths import BATOCERA_SHARE_DIR, SAVES, SYSTEM_SCRIPTS, USER_SCRIPTS, ES_GAMES_METADATA
+import pyudev
+import sdl2
+
+from .batoceraPaths import BATOCERA_SHARE_DIR, ES_GAMES_METADATA, SAVES, SYSTEM_SCRIPTS, USER_SCRIPTS
 from .controller import Controller
 from .Emulator import Emulator
 from .exceptions import BadCommandLineArguments, BaseBatoceraException, BatoceraException, UnexpectedEmulatorExit
 from .generators import get_generator
 from .gun import Gun
-from .utils import bezels as bezelsUtil, videoMode, wheelsUtils, metadata
+from .utils import bezels as bezelsUtil, metadata, videoMode, wheelsUtils
+from .utils.evmapy import evmapy
 from .utils.hotkeygen import set_hotkeygen_context
 from .utils.logger import setup_logging
 from .utils.squashfs import mount_squashfs
 from .utils.overlayfs import mount_overlayfs
 from .utils.evmapy import evmapy
+from .utils.squashfs import squashfs_rom
 
 if TYPE_CHECKING:
     from collections.abc import Iterable
@@ -91,7 +92,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
     monitor_thread = threading.Thread(target=_controller_monitor_thread, daemon=True)
 
     # find the system to run
-    systemName = args.system
+    systemName: str = args.system
     _logger.debug("Running system: %s", systemName)
     system = Emulator(args, original_rom)
 
@@ -106,7 +107,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
             _logger.debug('emulator: %s', system.config.emulator)
 
     # metadata
-    md = metadata.getGamesMetaData(ES_GAMES_METADATA, systemName, rom)
+    md = metadata.get_games_meta_data(ES_GAMES_METADATA, systemName, rom)
 
     guns = Gun.get_and_precalibrate_all(system, rom)
 
@@ -243,10 +244,14 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                             gun_border_size_name = system.guns_borders_size_name(guns)
                             if gun_border_size_name is not None:
                                 _logger.debug("using configgen internal gun borders for emulator %s", system.config.emulator)
-                                from .utils.GunBorders import GunBorders
-                                GunBorders.draw_borders(gun_border_size_name, bezelsUtil.gunsBordersColorFomConfig(system.config), system.guns_border_ratio_type(guns))
+                                from .utils.gun_borders import draw_gun_borders
+                                draw_gun_borders(
+                                    gun_border_size_name,
+                                    bezelsUtil.gunsBordersColorFomConfig(system.config),
+                                    system.guns_border_ratio_type(guns)
+                                )
                 except Exception as e:
-                    _logger.error("Failed to draw_borders for GunBorders")
+                    _logger.error("Failed to draw_gun_borders for gun_borders")
                     _logger.error(e)
 
                 with profiler.pause():
@@ -254,7 +259,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                         _logger.debug("Triggering mouse reset to primary display")
                         subprocess.call(["/usr/bin/hotkeygen", "--reset-mouse"])
                     except Exception as e:
-                        _logger.warning(f"Failed to reset mouse: {e}")
+                        _logger.warning("Failed to reset mouse: %s", e)
                     monitor_thread.start()
                     exitCode = runCommand(cmd)
 
@@ -499,9 +504,9 @@ def _reconfigure_evmapy_on_the_fly():
         _logger.info(">>> --- STARTING EVMAPY RECONFIGURATION ---")
 
         valid_controllers = [c for c in _active_player_controllers if c is not None]
-        _logger.info(f">>> Found {len(valid_controllers)} valid controllers to configure.")
+        _logger.info(">>> Found %s valid controllers to configure.", len(valid_controllers))
         for c in valid_controllers:
-            _logger.info(f">>>   - Configuring P{c.player_number} with Path: {c.device_path}")
+            _logger.info(">>>   - Configuring P%s with Path: %s", c.player_number, c.device_path)
 
         new_evmapy_instance = evmapy(
             system=_evmapy_instance.system,
@@ -516,7 +521,7 @@ def _reconfigure_evmapy_on_the_fly():
 
         subprocess.call(['batocera-evmapy', 'stop'])
         time.sleep(0.5)
-        _evmapy_instance._evmapy__prepare()
+        cast('Any', _evmapy_instance)._evmapy__prepare()
         subprocess.call(['batocera-evmapy', 'start'])
 
         _logger.info(">>> --- EVMAPY RECONFIGURATION COMPLETE ---")
@@ -533,7 +538,7 @@ def _controller_monitor_thread():
         initial_controllers_snapshot = deepcopy(_active_player_controllers)
         for i, p_controller in enumerate(initial_controllers_snapshot):
             if p_controller and p_controller.guid:
-                _logger.info(f">>>   [P{i+1}] Stored GUID: {p_controller.guid}, Initial Path: {p_controller.device_path}")
+                _logger.info(">>>   [P%s] Stored GUID: %s, Initial Path: %s", i+1, p_controller.guid, p_controller.device_path)
 
     we_initialized_sdl = False
     try:
@@ -544,7 +549,7 @@ def _controller_monitor_thread():
         else:
             _logger.info(">>> SDL2 joystick subsystem already initialized by host (emulator). Will not re-initialize.")
     except Exception as e:
-        _logger.error(f"FATAL: Could not initialize pysdl2 for controller monitoring: {e}")
+        _logger.error("FATAL: Could not initialize pysdl2 for controller monitoring: %s", e)
         return
 
     context = pyudev.Context()
@@ -553,10 +558,10 @@ def _controller_monitor_thread():
 
     _logger.info(">>> Starting background controller monitor.")
     for device in iter(monitor.poll, None):
-        if device.get('ID_INPUT_JOYSTICK') != '1':
+        if device.properties.get('ID_INPUT_JOYSTICK') != '1':
             continue
 
-        _logger.info(f"--- Joystick Event Detected: {device.action} on {device.sys_path} ---")
+        _logger.info("--- Joystick Event Detected: %s on %s ---", device.action, device.sys_path)
         reconfigure_needed = False
 
         sdl2.SDL_JoystickUpdate()
@@ -574,18 +579,18 @@ def _controller_monitor_thread():
                 if guid and path:
                     online_controllers_map[guid] = path
             except Exception as e:
-                _logger.warning(f"Error while querying joystick index {i} with pysdl2: {e}")
+                _logger.warning("Error while querying joystick index %s with pysdl2: %s", i, e)
 
-        _logger.info(f">>> [Check 1] Pysdl2 scan found online controllers: {online_controllers_map}")
+        _logger.info(">>> [Check 1] Pysdl2 scan found online controllers: %s", online_controllers_map)
 
         with _player_controllers_lock:
-            new_active_controllers = [None] * len(initial_controllers_snapshot)
+            new_active_controllers: list[Controller | None] = [None] * len(initial_controllers_snapshot)
 
             for i, initial_controller in enumerate(initial_controllers_snapshot):
                 if initial_controller and initial_controller.guid in online_controllers_map:
                     new_path = online_controllers_map[initial_controller.guid]
                     if initial_controller.device_path != new_path:
-                        _logger.info(f">>> [Revival] Player {initial_controller.player_number} (GUID: {initial_controller.guid}) path has changed.")
+                        _logger.info(">>> [Revival] Player %s (GUID: %s) path has changed.", initial_controller.player_number, initial_controller.guid)
                         initial_controller.device_path = new_path
                     new_active_controllers[i] = initial_controller
 
@@ -593,7 +598,7 @@ def _controller_monitor_thread():
             new_paths = [c.device_path if c else None for c in new_active_controllers]
 
             if current_paths != new_paths:
-                _logger.info(f">>> [Check 2] Controller state changed. Old Paths: {current_paths}. New Paths: {new_paths}")
+                _logger.info(">>> [Check 2] Controller state changed. Old Paths: %s. New Paths: %s", current_paths, new_paths)
                 _active_player_controllers = new_active_controllers
                 reconfigure_needed = True
             else:
