@@ -98,7 +98,7 @@ else
     size=$(echo "$headers" | grep -i "Content-Length: " | tail -1 | sed -e s+'^Content-Length: \([0-9]*\).*$'+'\1'+I) # take the last one in case of redirection
     size=$((size / 1024 / 1024))
     # Add 5% overhead estimate to account compression vs extracted data
-    size=$((size * 105 / 100)) 
+    size=$((size * 105 / 100))
     test $? -eq 0 || exit 1
     echo "need to download and extract ~${size}mb"
 fi

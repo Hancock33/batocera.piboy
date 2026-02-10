@@ -44,7 +44,7 @@ KEY=$RANDOM
 for i in "${LOGS[@]}"; do
   if [[ -e "${i}" ]]; then
     TABS+=( "--tab=$(basename "$i")" )
-    yad --plug=$KEY --tabnum=${#TABS[@]} --text-info < "${i}" &>/dev/null & 
+    yad --plug=$KEY --tabnum=${#TABS[@]} --text-info < "${i}" &>/dev/null &
   fi
 done
 
