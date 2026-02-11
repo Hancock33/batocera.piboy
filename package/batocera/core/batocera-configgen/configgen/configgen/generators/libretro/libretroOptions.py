@@ -817,6 +817,9 @@ def _dosbox_pure_options(
     # Midi Type
     _set_from_system(coreSettings, 'dosbox_pure_midi', system, 'pure_midi', default='disabled')
 
+    # OS Disk Modifications
+    _set_from_system(coreSettings, 'dosbox_pure_bootos_ramdisk', system, 'pure_bootos_ramdisk', default='false')
+
 # Elektronika BK-0010/0011
 def _bk_options(
     coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
