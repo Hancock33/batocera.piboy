@@ -104,8 +104,8 @@ define BATOCERA_CONFIGGEN_INSTALL_STAGING_CMDS
     cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-$(BATOCERA_CONFIGGEN_SYSTEM).yml $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
 
     @if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
-    cp $(BATOCERA_CONFIGGEN_OVERRIDE_SRCDIR)/configs/configgen-defaults-bcm2711.yml             $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-    cp $(BATOCERA_CONFIGGEN_OVERRIDE_SRCDIR)/configs/configgen-defaults-piboy4.yml              $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
+    cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-bcm2711.yml $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
+    cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-piboy4.yml  $(STAGING_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_CONFIGS
@@ -119,8 +119,8 @@ define BATOCERA_CONFIGGEN_CONFIGS
     cp $(BATOCERA_CONFIGGEN_PKGDIR)/hotkeys.keys $(TARGET_DIR)/usr/share/evmapy/hotkeys.keys
 
     @if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
-    cp $(BATOCERA_CONFIGGEN_OVERRIDE_SRCDIR)/configs/configgen-defaults-bcm2711.yml             $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-    cp $(BATOCERA_CONFIGGEN_OVERRIDE_SRCDIR)/configs/configgen-defaults-piboy4.yml              $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
+    cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-bcm2711.yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
+    cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-piboy4.yml  $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_ES_HOOKS
