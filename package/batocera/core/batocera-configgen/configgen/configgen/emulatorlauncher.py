@@ -39,7 +39,6 @@ from .utils.logger import setup_logging
 from .utils.squashfs import mount_squashfs
 from .utils.overlayfs import mount_overlayfs
 from .utils.evmapy import evmapy
-from .utils.squashfs import squashfs_rom
 
 if TYPE_CHECKING:
     from collections.abc import Iterable
