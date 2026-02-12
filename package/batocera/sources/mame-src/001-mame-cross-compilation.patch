@@ -32,7 +32,7 @@ index 3220ae1a85b..66858415c36 100644
      {
          float a = left[i];
 diff --git a/makefile b/makefile
-index 0815065bff8..18b424caffc 100644
+index 1f3990f6f50..8a1a63364e1 100644
 --- a/makefile
 +++ b/makefile
 @@ -33,6 +33,7 @@
@@ -99,7 +99,7 @@ index 0815065bff8..18b424caffc 100644
  PARAMS += --NO_USE_PORTAUDIO='$(NO_USE_PORTAUDIO)'
  endif
 diff --git a/scripts/genie.lua b/scripts/genie.lua
-index 9cb7ee2a4df..706611fe8a4 100644
+index a8c9b8f3abe..e5f2d6958c4 100644
 --- a/scripts/genie.lua
 +++ b/scripts/genie.lua
 @@ -192,6 +192,16 @@ newoption {
@@ -152,10 +152,10 @@ index 1482c3d71a4..59e898265be 100755
  	configuration { "android-*"}
  		buildoptions {
 diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
-index 4b796a1f5b4..c3d4d864077 100644
+index fddf73b4046..d1fb030ca27 100644
 --- a/scripts/src/osd/modules.lua
 +++ b/scripts/src/osd/modules.lua
-@@ -287,11 +287,16 @@ function osdmodulesbuild()
+@@ -292,11 +292,16 @@ function osdmodulesbuild()
  		MAME_DIR .. "3rdparty/bgfx/examples/common",
  		MAME_DIR .. "3rdparty/bgfx/include",
  		MAME_DIR .. "3rdparty/bgfx/3rdparty",
