@@ -14,9 +14,11 @@ Ports|[box64](http://github.com/ptitseb/box64)|1e17b17ae15cdb4936b9d89280191a681
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|44eda7c5ad880fee8e0d89695c5a6d2e69783853|Feb 12, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|3f3d0e18506865dfa0adefa8a452c7e19afab684|Feb 12, 2026
 Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|879a88badc15725f52074de1c4de23cfd8906a32|Feb 12, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260212|Feb 12, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c9e695ef7709d9f2e5d8e44e36e27b56b881366f|Feb 12, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|83c258227a79c1d89ad28649665c47af9fcc4832|Feb 12, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|29e21e3fccbb02f55641a25d1bce7410f4129152|Feb 12, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260212|Feb 12, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|9b5eb57e37c97acc95f726aef02d4bf13eb4dcee|Feb 12, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|02018ea464b7ec4981dd0965031f378065c44144|Feb 12, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|80e0d45c09ca58094594b5a0ded7d2299e100ac8|Feb 12, 2026
@@ -51,11 +53,9 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|bc450f8949dd8250
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|729e72ae40478a73eafe3a4e1567e7fbcfe03e05|Feb 10, 2026
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|b557d7ce797cec6e7028ba08fe2b8796b6581b95|Feb 10, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|088820e2c35974f64e995a9be4705646f4b48cd3|Feb 10, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260210|Feb 10, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|17eafddc94e7372591f0e7982b32cd7a077e3b7c|Feb 10, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|bd81a0b73b50449c0862b65bd755d87860925f65|Feb 10, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|2b3bee4c304369d80e4ce4beebf129be00db2492|Feb 10, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260210|Feb 10, 2026
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|09a236696bd53655680aecfca4974bf9cf33ce54|Feb 10, 2026
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|aadd3a1c7a6aca56b2e40287ba25d2776df14506|Feb 10, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|2b3bee4c304369d80e4ce4beebf129be00db2492|Feb 10, 2026
