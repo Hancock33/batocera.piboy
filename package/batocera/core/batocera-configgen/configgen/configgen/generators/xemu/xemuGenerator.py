@@ -34,8 +34,9 @@ class XemuGenerator(Generator):
 
         environment={
             "XDG_CONFIG_HOME": CONFIGS,
-            "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)
-            }
+            "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
+            "LC_NUMERIC": "C"
+        }
 
         if system.config.get_bool("xemu_zink"):
             environment.update(
