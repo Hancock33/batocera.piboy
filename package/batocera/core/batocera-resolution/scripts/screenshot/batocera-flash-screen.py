@@ -77,7 +77,11 @@ def build_text_popup_top_center(text: str, text_color: str, font_pt: int) -> Gtk
     height_px = max(12, font_pt + 10)
 
     # Popup bypasses WM (override-redirect) - avoids fullscreen/decoration behavior
-    win = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
+    if os.environ.get("WAYLAND_DISPLAY"):
+        win = Gtk.Window(type=Gtk.WindowType.TOPLEVEL)
+    else:
+        win = Gtk.Window(type=Gtk.WindowType.POPUP)
+
     win.set_title(WINDOW_TITLE_OSD)
     win.set_decorated(False)
     win.set_app_paintable(True) # allow CSS color
@@ -158,7 +162,7 @@ def flash(duration_seconds: float = 0.1, color: str = "#ffffff", text: str | Non
 
     try: font_pt = int(font_pt)
     except Exception: font_pt = 36
-    font_pt = max(6, min(200, font_pt))
+    font_pt = max(6, min(18, font_pt))
 
     if text and text.strip():
         win = build_text_popup_top_center(text.strip(), color, font_pt)
