@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 07, 2026
-DOLPHIN_TRIFORCE_VERSION = 6a38f85cf6aa127039c32a7159c705b38d93bc00
+DOLPHIN_TRIFORCE_VERSION = 065d36784e207656c713a0b4e08c67894b3ab196
 DOLPHIN_TRIFORCE_SITE = https://github.com/crediar/dolphin.git
 DOLPHIN_TRIFORCE_SITE_METHOD = git
 DOLPHIN_TRIFORCE_LICENSE = GPLv2+
