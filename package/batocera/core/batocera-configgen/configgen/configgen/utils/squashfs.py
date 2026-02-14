@@ -18,20 +18,20 @@ _SQUASHFS_DIR: Final = Path("/var/run/squashfs/")
 
 
 @contextmanager
-def squashfs_rom(rom: Path, /) -> Iterator[Path]:
-    _logger.debug("squashfs_rom(%s)", rom)
+def mount_squashfs(rom: Path, /) -> Iterator[Path]:
+    _logger.debug("mount_squashfs(%s)", rom)
     mount_point = _SQUASHFS_DIR / rom.stem
 
     mkdir_if_not_exists(_SQUASHFS_DIR)
 
     # first, try to clean an empty remaining directory (for example because of a crash)
     if mount_point.exists() and mount_point.is_dir():
-        _logger.debug("squashfs_rom: %s already exists", mount_point)
+        _logger.debug("mount_squashfs: %s already exists", mount_point)
         # try to remove an empty directory, else, run the directory, ignoring the .squashfs
         try:
             mount_point.rmdir()
         except (FileNotFoundError, OSError):
-            _logger.debug("squashfs_rom: failed to rmdir %s", mount_point)
+            _logger.debug("mount_squashfs: failed to rmdir %s", mount_point)
             yield mount_point
             # No cleanup is necessary
             return
@@ -41,7 +41,7 @@ def squashfs_rom(rom: Path, /) -> Iterator[Path]:
 
     return_code = subprocess.call(["mount", rom, mount_point])
     if return_code != 0:
-        _logger.debug("squashfs_rom: mounting %s failed", mount_point)
+        _logger.debug("mount_squashfs: mounting %s failed", mount_point)
         try:
             mount_point.rmdir()
         except (FileNotFoundError, OSError):
@@ -70,12 +70,12 @@ def squashfs_rom(rom: Path, /) -> Iterator[Path]:
                 _logger.debug("squashfs: linked rom %s", rom_linked)
                 yield rom_linked
     finally:
-        _logger.debug("squashfs_rom: cleaning up %s", mount_point)
+        _logger.debug("mount_squashfs: cleaning up %s", mount_point)
 
         # unmount
         return_code = subprocess.call(["umount", mount_point])
         if return_code != 0:
-            _logger.debug("squashfs_rom: unmounting %s failed", mount_point)
+            _logger.debug("mount_squashfs: unmounting %s failed", mount_point)
             raise BatoceraException(f"Unable to unmount the file {mount_point}")
 
         # cleaning the empty directory
