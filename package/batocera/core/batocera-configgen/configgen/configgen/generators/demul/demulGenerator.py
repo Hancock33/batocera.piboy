@@ -45,7 +45,7 @@ class DemulGenerator(Generator):
         # Determine what system to define for demul
         demulsystem = system.name
 
-        wine_runner = wine.Runner("wine-proton", "demul")
+        wine_runner = wine.Runner("wine-custom", "demul")
         demulSaves = SAVES / demulsystem
         emupath = wine_runner.bottle_dir / "demul"
 
@@ -64,7 +64,7 @@ class DemulGenerator(Generator):
         mkdir_if_not_exists(demulSaves)
 
         # Create dir & copy demul binary to wine bottle as necessary
-        source_emu = Path("/usr/demul")
+        source_emu = Path("/usr/bin/demul")
 
         if not emupath.exists():
             shutil.copytree(source_emu, emupath)

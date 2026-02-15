@@ -18,15 +18,15 @@ define DEMUL_EXTRACT_CMDS
 endef
 
 define DEMUL_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr
-	cp -pr $(@D) $(TARGET_DIR)/usr/demul
+	mkdir -p $(TARGET_DIR)/usr/bin
+	cp -pr $(@D) $(TARGET_DIR)/usr/bin/demul
 
 	# copy evmapy configs
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/*.keys $(TARGET_DIR)/usr/share/evmapy
 
 	# copy modified pad ini file for 2 players
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/padDemul.ini $(TARGET_DIR)/usr/demul/
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/padDemul.ini $(TARGET_DIR)/usr/bin/demul/
 endef
 
 $(eval $(generic-package))
