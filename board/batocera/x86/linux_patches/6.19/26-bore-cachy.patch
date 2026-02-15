@@ -658,7 +658,7 @@ index 000000000000..ac685f116680
 +#endif // CONFIG_SYSCTL
 +#endif /* CONFIG_SCHED_BORE */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index cb1140f0f4d8..f0cbfa97d6d6 100644
+index 9dc6e37dcad1..9c619335c1f8 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -100,6 +100,10 @@
@@ -1169,7 +1169,7 @@ index 136a6584be79..9c7f4bf82b1d 100644
   * Allow wakeup of tasks with a shorter slice to cancel RUN_TO_PARITY for
   * current.
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index ebccf24b3737..62cdc29a8a4d 100644
+index c00b1be1224a..dfee5fd91115 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2172,7 +2172,11 @@ extern int group_balance_cpu(struct sched_group *sg);

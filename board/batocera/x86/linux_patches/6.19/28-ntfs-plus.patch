@@ -1,5 +1,5 @@
 diff --git a/CREDITS b/CREDITS
-index ca75f110edb6..4cf780e71775 100644
+index ec8a2acf1947..97388e4be61b 100644
 --- a/CREDITS
 +++ b/CREDITS
 @@ -71,11 +71,6 @@ D: dosfs, LILO, some fd features, ATM, various other hacks here and there
@@ -203,10 +203,10 @@ index 000000000000..94f368fb3b06
 +                        storage.
 +======================= ==================================================
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 12f49de7fe03..adf80c8207f1 100644
+index 12999c82c8ab..4747801c2f53 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -18646,6 +18646,15 @@ W:	https://github.com/davejiang/linux/wiki
+@@ -18703,6 +18703,15 @@ W:	https://github.com/davejiang/linux/wiki
  T:	git https://github.com/davejiang/linux.git
  F:	drivers/ntb/hw/intel/
  
