@@ -41,6 +41,8 @@ custom_features:
     description: Use controller settings manually defined in custom.ini.
     preset: switchauto
 systems:
+  - actionmax
+  - alg
   - daphne
   - name: singe
     custom_features:
