@@ -1,8 +1,8 @@
 diff --git a/src/m_config.h b/src/m_config.h
-index dbf072b34..599c0d565 100644
+index a01ead603..1a760a0ca 100644
 --- a/src/m_config.h
 +++ b/src/m_config.h
-@@ -909,7 +909,7 @@ enum
+@@ -1134,7 +1134,7 @@ enum
  
  #define CONTROLLERALWAYSRUN_DEFAULT         0
  #define CONTROLLERAUTOMAP_DEFAULT           CONTROLLER_BACK
@@ -11,22 +11,23 @@ index dbf072b34..599c0d565 100644
  #define CONTROLLERBFG9000_DEFAULT           0
  #define CONTROLLERCHAINGUN_DEFAULT          0
  #define CONTROLLERCHAINSAW_DEFAULT          0
-@@ -918,11 +918,11 @@ enum
+@@ -1143,12 +1143,12 @@ enum
  #define CONTROLLERFIRE_DEFAULT              CONTROLLER_RIGHT_TRIGGER
  #define CONTROLLERFISTS_DEFAULT             0
  #define CONTROLLERFOLLOWMODE_DEFAULT        0
 -#define CONTROLLERFORWARD_DEFAULT           0
 +#define CONTROLLERFORWARD_DEFAULT           CONTROLLER_DPAD_UP
  #define CONTROLLERFREELOOK_DEFAULT          0
+ #define CONTROLLERFULLZOOM_DEFAULT          0
  #define CONTROLLERGRID_DEFAULT              0
 -#define CONTROLLERJUMP_DEFAULT              0
 -#define CONTROLLERLEFT_DEFAULT              0
 +#define CONTROLLERJUMP_DEFAULT              CONTROLLER_X
 +#define CONTROLLERLEFT_DEFAULT              CONTROLLER_DPAD_LEFT
  #define CONTROLLERMARK_DEFAULT              0
- #define CONTROLLERMAXZOOM_DEFAULT           0
  #define CONTROLLERMENU_DEFAULT              CONTROLLER_START
-@@ -930,7 +930,7 @@ enum
+ #define CONTROLLERNEXTWEAPON_DEFAULT        CONTROLLER_RIGHT_SHOULDER
+@@ -1156,7 +1156,7 @@ enum
  #define CONTROLLERPISTOL_DEFAULT            0
  #define CONTROLLERPLASMARIFLE_DEFAULT       0
  #define CONTROLLERPREVWEAPON_DEFAULT        CONTROLLER_LEFT_SHOULDER
