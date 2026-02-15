@@ -230,5 +230,8 @@ systems:
           Horizontal: horizontal
           Vertical: vertical
   - dreamcast
+  - naomi
   - naomi2
+  - naomigd
+  - naomi2gd
   - systemsp

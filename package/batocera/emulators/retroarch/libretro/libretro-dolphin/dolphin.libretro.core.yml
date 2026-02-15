@@ -63,6 +63,7 @@ custom_features:
       Disabled: disabled
       Enabled: enabled
 systems:
+  - wiiware
   - gamecube
   - name: wii
     custom_features:

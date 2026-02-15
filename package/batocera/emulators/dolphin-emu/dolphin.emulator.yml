@@ -317,6 +317,7 @@ cores:
         description: Show on screen display messages (memory card saves..).
         preset: switchauto
     systems:
+      - wiiware
       - name: gamecube
         custom_features:
           widescreen_hack:

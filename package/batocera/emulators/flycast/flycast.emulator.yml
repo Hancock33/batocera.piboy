@@ -177,7 +177,9 @@ systems:
         choices:
           Disabled (Default): "no"
           Enabled: "yes"
-  - naomi
   - atomiswave
-  - systemsp
+  - naomi
   - naomi2
+  - naomigd
+  - naomi2gd
+  - systemsp
