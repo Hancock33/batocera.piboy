@@ -18,8 +18,9 @@ define DEMUL_EXTRACT_CMDS
 endef
 
 define DEMUL_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	cp -pr $(@D) $(TARGET_DIR)/usr/bin/demul
+	rm -rf $(TARGET_DIR)/usr/bin/demul
+	mkdir -p $(TARGET_DIR)/usr/bin/demul
+	cp -av $(@D)/* $(TARGET_DIR)/usr/bin/demul
 
 	# copy evmapy configs
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
