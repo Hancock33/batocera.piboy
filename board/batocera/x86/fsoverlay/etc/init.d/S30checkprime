@@ -12,7 +12,7 @@ intel_log="/var/log/intel.log"
 find_connected_gpu() {
     local -a gpu_list=("$@")
     local selected_pci_id=""
-    
+
     for gpu_entry in "${gpu_list[@]}"; do
         local pci_id_full=$(echo "$gpu_entry" | awk -F ' ' '{print $1}')
         local drm_card=""
@@ -43,7 +43,7 @@ case "$1" in
   start)
     # Check if there are two (or more) GPUs in the system
     gpu_count=$(lspci -nn | grep -E "(VGA|3D|Display controller)" | wc -l)
-    
+
     # Initialize state flags
     nvidia_conditions_met=false
     amd_conditions_met=false
@@ -80,7 +80,7 @@ case "$1" in
                 mapfile -t all_amd_gpus < <(lspci -nn | grep -iE "AMD/ATI" | grep -iE "VGA|3D|Display controller")
                 amd_count=${#all_amd_gpus[@]}
                 gpu_name=""
-                
+
                 if [ "$amd_count" -eq 0 ]; then
                     echo "No AMD/ATI GPU found." >> "$amd_log"
                 elif [ "$amd_count" -eq 1 ]; then
@@ -88,7 +88,7 @@ case "$1" in
                     echo "Found a single AMD/ATI GPU: $gpu_name" >> "$amd_log"
                 elif [ "$amd_count" -ge 2 ]; then
                     connected_pci_id=$(find_connected_gpu "${all_amd_gpus[@]}")
-                    
+
                     if [ -n "$connected_pci_id" ]; then
                         gpu_entry_index=0
                         for i in "${!all_amd_gpus[@]}"; do
@@ -106,7 +106,7 @@ case "$1" in
                         echo "Setting AMD/ATI Prime to use GPU: $gpu_name" >> "$amd_log"
                     fi
                 fi
-                
+
                 if [ -n "$gpu_name" ]; then
                     # Get the pci number for prime.
                     formatted_info=$(echo "$gpu_name" | awk -F ' ' '{print $1}' | sed -e 's/:/_/g' -e 's/\./_/' -e 's/^/pci-0000_/')
@@ -124,7 +124,7 @@ case "$1" in
         # Check for Intel Discrete GPUs (Arc/Xe)
         if [ "$nvidia_conditions_met" = "false" ] && [ "$amd_conditions_met" = "false" ]; then
             intel_prime=$(/usr/bin/batocera-settings-get -f /boot/batocera-boot.conf intel-prime)
-            
+
             if [ "$intel_prime" = "false" ]; then
                 echo "'intel-prime' manually set to false, skipping checks" >> "$intel_log"
             else
@@ -156,9 +156,9 @@ case "$1" in
 
                 if [ -n "$gpu_name" ]; then
                     formatted_info=$(echo "$gpu_name" | awk -F ' ' '{print $1}' | sed -e 's/:/_/g' -e 's/\./_/' -e 's/^/pci-0000_/')
-                    
+
                     echo $formatted_info > "/var/tmp/intel.prime"
-                    
+
                     echo "Setting Intel Prime ID: $formatted_info" >> "$intel_log"
                     echo "$gpu_name is the primary GPU" >> "$display_log"
                 fi

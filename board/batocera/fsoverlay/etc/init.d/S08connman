@@ -95,7 +95,7 @@ wifi_enable() {
         fi
     done
     echo "*** Wifi Hardware detected. ***" > /dev/kmsg
-    
+
     # If wifi interface is available then apply the country code if set by the user
     settingsCountry="$(/usr/bin/batocera-settings-get -f "$BATOCONF" wifi.country)"
     if [ -n "$settingsCountry" ]; then
@@ -111,7 +111,7 @@ wifi_enable() {
     # Connection Check Loop (30 Seconds Max)
     for i in $(seq 1 30); do
         state=$(connmanctl state 2>/dev/null | grep "State =" | awk '{print $3}')
-        
+
         # Check if connected
         if [ "$state" = "ready" ] || [ "$state" = "online" ]; then
             echo "*** Wifi connected successfully. ***" > /dev/kmsg
