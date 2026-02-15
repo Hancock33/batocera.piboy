@@ -19,6 +19,7 @@ define RYUJINX_INSTALL_TARGET_CMDS
 	rm -rf   $(TARGET_DIR)/usr/bin/ryujinx
 	mkdir -p $(TARGET_DIR)/usr/bin/ryujinx
 	cp -pr $(@D)/target/publish/* $(TARGET_DIR)/usr/bin/ryujinx
+	rm -rf   $(TARGET_DIR)/usr/bin/ryujinx/{libSDL3.so,libav*,libglfw*}
 endef
 
 $(eval $(generic-package))

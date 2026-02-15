@@ -4373,6 +4373,7 @@ settings:
   emulators:
     sh:
       sh:               { requireAnyOf: [] }
+  force:                True
 
 pre2:
   name:                 Prehistorik 2
@@ -5798,10 +5799,6 @@ model3:
     supermodel:
       supermodel:        { requireAnyOf: [BR2_PACKAGE_SUPERMODEL] }
       supermodel-legacy: { requireAnyOf: [BR2_PACKAGE_SUPERMODEL_LEGACY] }
-    libretro:
-      mame:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
-    mame:
-      mame:              { requireAnyOf: [BR2_PACKAGE_MAME] }
 
   comment_en:           |
                         ## SEGA MODEL 3 IMPORTANT INFO ##

@@ -3,8 +3,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN dpkg --add-architecture i386 && \
 	apt-get update && \
 	apt-get install -y -o APT::Immediate-Configure=0 libc6:i386 \
-		libncurses6:i386 \
-		libstdc++6:i386 \
 		autoconf \
 		automake \
 		bc \
@@ -28,15 +26,18 @@ RUN dpkg --add-architecture i386 && \
 		libglib2.0-dev \
 		libgmock-dev \
 		libgtest-dev \
-		libncurses6 \
 		libncurses-dev \
+		libncurses6 \
+		libncurses6:i386 \
 		libsodium-dev \
 		libssl-dev \
+		libstdc++6:i386 \
 		libtool \
 		locales \
 		mercurial \
 		mtools \
 		po4a \
+		python-is-python3 \
 		python3 \
 		rsync \
 		scons \
@@ -46,7 +47,7 @@ RUN dpkg --add-architecture i386 && \
 		texinfo \
 		u-boot-tools \
 		wget \
-		zip \
+		zip
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 

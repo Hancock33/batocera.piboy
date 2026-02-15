@@ -3,10 +3,9 @@
 # batocera-controller-overlays
 #
 ################################################################################
-# Version: Commits on May 06, 2025
-BATOCERA_CONTROLLER_OVERLAYS_VERSION = 17fd68a47e9d25f1f1880911a4931c4b916ae125
+# Version: Commits on Feb 12, 2026
+BATOCERA_CONTROLLER_OVERLAYS_VERSION = 448f87fc0ec9825df13c1e0d4721b741aa5c32aa
 BATOCERA_CONTROLLER_OVERLAYS_SITE = $(call github,hancock33,batocera-controller-overlays,$(BATOCERA_CONTROLLER_OVERLAYS_VERSION))
-
 
 define BATOCERA_CONTROLLER_OVERLAYS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/controller-overlays/

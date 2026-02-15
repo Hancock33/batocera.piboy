@@ -3185,12 +3185,12 @@ msgstr "Analogique vers le haut"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Analog deadzone for paddles. Core default (15)."
-msgstr ""
+msgstr "Zone morte analogique pour les palettes. Valeur par défaut (15)."
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Analog sensitivity for paddles. Core default (20)."
-msgstr ""
+msgstr "Sensibilité analogique pour les palettes. Valeur par défaut (20)."
 
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
@@ -3520,7 +3520,7 @@ msgstr "Australie"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Auto (Default)"
-msgstr ""
+msgstr "Auto (Défaut)"
 
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
@@ -3930,7 +3930,7 @@ msgstr "Rétropédalage"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Badly adjusted"
-msgstr ""
+msgstr "Mal ajusté"
 
 #. TRANSLATION: xenia, xenia-canary
 msgctxt "game_options"
@@ -3979,7 +3979,7 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Batocera Control Center"
-msgstr ""
+msgstr "Centre de contrôle Batocera"
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -4605,7 +4605,7 @@ msgstr "PAYS CONSOLE"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "CONSOLE DISPLAY"
-msgstr ""
+msgstr "AFFICHAGE CONSOLE"
 
 #. TRANSLATION: cemu, redream, shadps4
 msgctxt "game_options"
@@ -4899,7 +4899,7 @@ msgstr "DECOUPE LE POURTOUR"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "CROP HORIZONTAL OVERSCAN"
-msgstr ""
+msgstr "SURBALAYAGE HORIZONTAL DE RECADRAGE"
 
 #. TRANSLATION: duckstation, libretro/fceumm, libretro/nestopia, libretro/o2em, libretro/picodrive, ...
 msgctxt "game_options"
@@ -4909,7 +4909,7 @@ msgstr "COUPE LE SURBALAYAGE"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "CROP VERTICAL OVERSCAN"
-msgstr ""
+msgstr "RECADREMENT SURBALAYAGE VERTICAL"
 
 # A vérifier
 #. TRANSLATION: duckstation, mame, openmohaa, theforceengine
@@ -5045,7 +5045,7 @@ msgstr "CINÉMATIQUE"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "CXA2025AS (JP)"
-msgstr ""
+msgstr "CXA2025AS (JP)"
 
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
@@ -5216,7 +5216,7 @@ msgstr "Cartouche (Fente 4)"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Cartridge Autostart"
-msgstr ""
+msgstr "Démarrage cartouche automatique"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -6143,12 +6143,13 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Crop horizontal overscan."
-msgstr ""
+msgstr "Recadrer le surbalayage horizontal."
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Crop vertical overscan (lines). Core default (0)."
 msgstr ""
+"Recadrage du surbalayage vertical (lignes). Valeur par défaut du noyau (0)."
 
 #. TRANSLATION: libretro/beetle-saturn
 msgctxt "game_options"
@@ -6539,7 +6540,7 @@ msgstr "MODE DUAL CORE"
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "DUAL SCREEN"
-msgstr ""
+msgstr "DOUBLE ÉCRAN"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -6770,7 +6771,7 @@ msgstr "Contrôleur numérique (Gamepad)"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Digital Prime FBX"
-msgstr ""
+msgstr "Digital Prime FBX"
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -6992,27 +6993,27 @@ msgstr "Vers le bas/accroupi"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 200-E"
-msgstr ""
+msgstr "Dragon 200-E"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 32"
-msgstr ""
+msgstr "Dragon 32"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 64"
-msgstr ""
+msgstr "Dragon 64"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon 64 + SAMx8 (512K)"
-msgstr ""
+msgstr "Dragon 64 + SAMx8 (512K)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dragon Professional (Alpha)"
-msgstr ""
+msgstr "Dragon Professional (Alpha)"
 
 #. TRANSLATION: flycast, libretro/flycast
 msgctxt "game_options"
@@ -7099,7 +7100,7 @@ msgstr "Néerlandais (nl)"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Dynacom MX-1600"
-msgstr ""
+msgstr "Dynacom MX-1600"
 
 #. TRANSLATION: dosbox
 msgctxt "game_options"
@@ -7334,7 +7335,7 @@ msgstr "ACTIVER LES PATCHES POUR ÉCRAN LARGE"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE WIN32"
-msgstr ""
+msgstr "ACTIVER WIN32"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7581,6 +7582,8 @@ msgid ""
 "Enable MelonDS to display over two screens. Some related screen options will "
 "be ignored."
 msgstr ""
+"Activez l'affichage de MelonDS sur deux écrans. Certaines options "
+"d'affichage seront ignorées."
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
@@ -7596,7 +7599,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Enable TV-like filtering / effects."
-msgstr ""
+msgstr "Activer le filtrage/les effets de type télévision."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -7780,6 +7783,8 @@ msgstr "Activer la configuration personnalisée par jeu via le menu MAME."
 msgctxt "game_options"
 msgid "Enable phosphor mode (motion blur) for flickering effects."
 msgstr ""
+"Activez le mode phosphore (flou de mouvement) pour obtenir des effets de "
+"scintillement."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -9744,7 +9749,7 @@ msgstr "Manette de jeu Modern"
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Gamepad Using Left Analog Stick"
-msgstr ""
+msgstr "Manette utilisant le joystick analogique gauche"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -11039,6 +11044,7 @@ msgstr "Joypad automatique"
 msgctxt "game_options"
 msgid "Joypad sensitivity for paddles. Core default  (3)."
 msgstr ""
+"Sensibilité des manettes pour les palettes. Valeur par défaut du noyau (3)."
 
 #. TRANSLATION: libretro/bk, libretro/melondsds, libretro/puae, libretro/puae2021, libretro/uae4arm, ...
 msgctxt "game_options"
@@ -12007,7 +12013,7 @@ msgstr "Macao"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Machine Type"
-msgstr ""
+msgstr "Type de machine"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -12022,7 +12028,7 @@ msgstr "Images de disque haute densité Macintosh"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Magnum FBX"
-msgstr ""
+msgstr "Magnum FBX"
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -12135,7 +12141,7 @@ msgstr "Même que la fenêtre"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Matra & Hachette Alice"
-msgstr ""
+msgstr "Matra & Hachette Alice"
 
 #. TRANSLATION: dosbox, openmohaa
 msgctxt "game_options"
@@ -12570,6 +12576,7 @@ msgstr "Axe de la souris Joueur 4, mouvement vertical de l'écran."
 msgctxt "game_options"
 msgid "Mouse sensitivity for paddles. Core default (10)."
 msgstr ""
+"Sensibilité de la souris pour les palettes. Valeur par défaut du noyau (10)."
 
 #. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -12802,7 +12809,7 @@ msgstr "NTSC 60Hz"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "NTSC ASPECT"
-msgstr ""
+msgstr "ASPECT NTSC"
 
 #. TRANSLATION: libretro/mesen
 msgctxt "game_options"
@@ -12817,7 +12824,7 @@ msgstr "Télé NTSC"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "NTSC aspect ratio correction. Core default (PAR)."
-msgstr ""
+msgstr "Correction du format d'image NTSC. Valeur par défaut du noyau (PAR)."
 
 #. TRANSLATION: duckstation, libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -12837,7 +12844,7 @@ msgstr "NTSC-U/C"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "NTSC50"
-msgstr ""
+msgstr "NTSC50"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -13658,17 +13665,17 @@ msgstr "P2 uniquement"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG ABSOLUTE"
-msgstr ""
+msgstr "PALETTE ANALOGIQUE ABSOLUE"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG DEADZONE"
-msgstr ""
+msgstr "ZONE MORTE PALETTE ANALOGIQUE"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG SENSITIVITY"
-msgstr ""
+msgstr "SENSIBILITÉ ANALOGIQUE DE LA PALETTE"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -13683,7 +13690,7 @@ msgstr "SENSIBILITÉ D-PAD DE LA MANETTE"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE JOYPAD SENSITIVITY"
-msgstr ""
+msgstr "SENSIBILITÉ DU JOYPAD"
 
 #. TRANSLATION: libretro/dice, libretro/stella
 msgctxt "game_options"
@@ -13713,7 +13720,7 @@ msgstr "PAL 576x312px"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PAL ASPECT"
-msgstr ""
+msgstr "ASPECT PAL"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -13723,7 +13730,7 @@ msgstr "Télé PAL"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PAL aspect ratio correction. Core default (PAR)."
-msgstr ""
+msgstr "Correction du format d'image PAL. Valeur par défaut du noyau (PAR)."
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -13738,12 +13745,12 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PAL60"
-msgstr ""
+msgstr "PAL60"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PALETTE COLORS"
-msgstr ""
+msgstr "COULEURS DE LA PALETTE"
 
 #. TRANSLATION: redream
 msgctxt "game_options"
@@ -13848,12 +13855,12 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PHOSPHOR BLEND"
-msgstr ""
+msgstr "MÉLANGE DE PHOSPHOR"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PHOSPHOR MODE"
-msgstr ""
+msgstr "MODE PHOSPHOR"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -14229,7 +14236,7 @@ msgstr "Philips CD-i CD-ROMs"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Phosphor blend level. Core default (60%)."
-msgstr ""
+msgstr "Niveau de mélange de phosphore. Valeur par défaut du noyau (60 %)."
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -14580,7 +14587,7 @@ msgstr "Produit un effet LCD net."
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Prologica CP-400"
-msgstr ""
+msgstr "Prologica CP-400"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -14931,7 +14938,7 @@ msgstr "Valeurs aléatoires"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Raw"
-msgstr ""
+msgstr "Brute"
 
 #. TRANSLATION: model2emu
 msgctxt "game_options"
@@ -15161,7 +15168,7 @@ msgstr "Restaurer l'état"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Restored Wii VC"
-msgstr ""
+msgstr "Console virtuelle Wii restaurée"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64, mupen64plus
 msgctxt "game_options"
@@ -15520,12 +15527,12 @@ msgstr "SDL2"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "SECAM"
-msgstr ""
+msgstr "SECAM"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "SECAM60"
-msgstr ""
+msgstr "SECAM60"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -15880,7 +15887,7 @@ msgstr "SENSIBILITÉ DU VOLANT"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "STEREO SOUND"
-msgstr ""
+msgstr "SON STÉRÉO"
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -16254,7 +16261,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Select the console video standard / display mode."
-msgstr ""
+msgstr "Sélectionnez la norme vidéo / le mode d'affichage de la console."
 
 #. TRANSLATION: libretro/bk
 msgctxt "game_options"
@@ -16266,6 +16273,8 @@ msgctxt "game_options"
 msgid ""
 "Select the emulated hardware architecture machine type and architecture."
 msgstr ""
+"Sélectionnez le type et l'architecture de la machine pour l'architecture "
+"matérielle émulée."
 
 #. TRANSLATION: libretro/melonds
 msgctxt "game_options"
@@ -16280,7 +16289,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Select the palette used to render colors."
-msgstr ""
+msgstr "Sélectionnez la palette utilisée pour le rendu des couleurs."
 
 #. TRANSLATION: libretro/np2kai
 msgctxt "game_options"
@@ -16493,6 +16502,8 @@ msgid ""
 "Sets Runner to 32bit, works only if there is no prefix for current app is "
 "installed."
 msgstr ""
+"Configure Runner en 32 bits ; fonctionne uniquement si aucun préfixe n'est "
+"installé pour l'application actuelle."
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -16627,7 +16638,7 @@ msgstr "Afficher la visée avec le sabre laser."
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Show a crosshair for lightgun games."
-msgstr ""
+msgstr "Afficher une mire pour les jeux de pistolet optique."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17015,7 +17026,7 @@ msgstr "Lisse 4"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Smooth V2 FBX"
-msgstr ""
+msgstr "Smooth V2 FBX"
 
 #. TRANSLATION: dxx-rebirth, eden, libretro/mupen64plus-next, libretro/parallel_n64, ppsspp
 msgctxt "game_options"
@@ -17381,7 +17392,7 @@ msgstr "Stéréo (par défaut)"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Stereo sound output."
-msgstr ""
+msgstr "Sortie audio stéréo."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -17934,7 +17945,7 @@ msgstr "Téléviseur"
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "TV EFFECTS"
-msgstr ""
+msgstr "EFFETS TV"
 
 #. TRANSLATION: scummvm
 msgctxt "game_options"
@@ -17969,52 +17980,52 @@ msgstr "Tandy"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo (NTSC)"
-msgstr ""
+msgstr "Tandy CoCo (NTSC)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo (PAL)"
-msgstr ""
+msgstr "Tandy CoCo (PAL)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 2B (NTSC,T1)"
-msgstr ""
+msgstr "Tandy CoCo 2B (NTSC,T1)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 2B (PAL,T1)"
-msgstr ""
+msgstr "Tandy CoCo 2B (PAL,T1)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3"
-msgstr ""
+msgstr "Tandy CoCo 3"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (6309)"
-msgstr ""
+msgstr "Tandy CoCo 3 (6309)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (PAL)"
-msgstr ""
+msgstr "Tandy CoCo 3 (PAL)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy CoCo 3 (PAL, 6309)"
-msgstr ""
+msgstr "Tandy CoCo 3 (PAL, 6309)"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy Deluxe CoCo"
-msgstr ""
+msgstr "Tandy Deluxe CoCo"
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tandy MC-10"
-msgstr ""
+msgstr "Tandy MC-10"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18034,7 +18045,7 @@ msgstr ""
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
-msgstr ""
+msgstr "Tano Dragon (NTSC)"
 
 #. TRANSLATION: prboom.gzdoom.keys
 msgctxt "keys_files"
@@ -19065,7 +19076,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Use absolute analog input for paddles."
-msgstr ""
+msgstr "Utilisez une entrée analogique absolue pour les palettes."
 
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
@@ -19226,7 +19237,7 @@ msgstr "Utile pour voir quand un jeu Windows ne démarre pas ou plante."
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "User"
-msgstr ""
+msgstr "Utilisateur"
 
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
@@ -19860,7 +19871,7 @@ msgstr "Wii U Classic Controller"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "Wii Virtual Console"
-msgstr ""
+msgstr "Console virtuelle Wii"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -19984,7 +19995,7 @@ msgstr "Vous pouvez masquer le pointeur sur les appareils à écran tactile."
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Z26"
-msgstr ""
+msgstr "Z26"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -20147,7 +20158,7 @@ msgstr "missile à concussion"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "cxa2025as (US)"
-msgstr ""
+msgstr "cxa2025as (US)"
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -20416,7 +20427,7 @@ msgstr "droite/gauche"
 #. TRANSLATION: libretro/nestopia
 msgctxt "game_options"
 msgid "royaltea"
-msgstr ""
+msgstr "royaltea"
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"

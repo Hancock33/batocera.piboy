@@ -1,5 +1,5 @@
 diff --git a/scripts/genie.lua b/scripts/genie.lua
-index 706611fe8a4..d6a6741a904 100644
+index e5f2d6958c4..532ec239039 100644
 --- a/scripts/genie.lua
 +++ b/scripts/genie.lua
 @@ -810,7 +810,7 @@ if _OPTIONS["OPTIMIZE"] then

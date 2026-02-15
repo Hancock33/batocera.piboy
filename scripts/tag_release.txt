@@ -12,6 +12,7 @@ cxxopts.mk
 drastic.mk
 ecm.mk
 flatpak.mk
+freepats.mk
 fsuae.mk
 kddocwidgets.mk
 kodi-pvr-freebox.mk
@@ -34,10 +35,12 @@ python-ndeflib.mk
 python-nfcpy.mk
 python-pyxel.mk
 rgbds.mk
+sdl12-compat.mk
 sdl3_image.mk
 sdl3_ttf.mk
 sdl3.mk
 semver.mk
+sf_rpi_status.mk
 shaderc.mk
 shadps4.mk
 spirv-llvm-translator.mk

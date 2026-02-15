@@ -3,8 +3,8 @@
 # vcmi
 #
 ################################################################################
-# Version: Commits on Dec 30, 2025
-VCMI_VERSION = 1.7.1
+# Version: Commits on Feb 13, 2026
+VCMI_VERSION = 1.7.2
 VCMI_BRANCH = develop
 VCMI_SITE = https://github.com/vcmi/vcmi.git
 VCMI_SITE_METHOD=git
@@ -12,6 +12,7 @@ VCMI_GIT_SUBMODULES=YES
 VCMI_EMULATOR_INFO = vcmi.emulator.yml
 VCMI_DEPENDENCIES = boost ffmpeg libsquish minizip sdl2 sdl2_image sdl2_mixer sdl2_ttf tbb
 
+VCMI_CONF_OPTS += -DENABLE_DISCORD=OFF
 VCMI_CONF_OPTS += -DENABLE_EDITOR=OFF
 VCMI_CONF_OPTS += -DENABLE_GITVERSION=OFF
 VCMI_CONF_OPTS += -DENABLE_LAUNCHER=OFF

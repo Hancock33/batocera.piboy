@@ -1,0 +1,17 @@
+diff --git a/drivers/hid/hid-input.c b/drivers/hid/hid-input.c
+index a431e9698024..233a43e5de22 100644
+--- a/drivers/hid/hid-input.c
++++ b/drivers/hid/hid-input.c
+@@ -1587,8 +1587,10 @@ void hidinput_hid_event(struct hid_device *hid, struct hid_field *field, struct
+ 		if (field->flags & HID_MAIN_ITEM_NULL_STATE &&
+ 		    (value < field->logical_minimum ||
+ 		     value > field->logical_maximum)) {
+-			dbg_hid("Ignoring out-of-range value %x\n", value);
+-			return;
++		  if(value < field->logical_minimum)
++		    value = field->logical_minimum;
++		  else
++		    value = field->logical_maximum;
+ 		}
+ 		value = clamp(value,
+ 			      field->logical_minimum,

@@ -1,5 +1,5 @@
 diff --git a/src/frontend/mame/mameopts.cpp b/src/frontend/mame/mameopts.cpp
-index cd754fcb0f3..c483157f2f8 100644
+index cd754fcb0f37..c483157f2f82 100644
 --- a/src/frontend/mame/mameopts.cpp
 +++ b/src/frontend/mame/mameopts.cpp
 @@ -41,6 +41,9 @@ void mame_options::parse_standard_inis(emu_options &options, std::ostream &error

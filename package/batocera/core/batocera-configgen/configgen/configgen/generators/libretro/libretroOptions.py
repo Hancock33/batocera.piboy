@@ -2,11 +2,10 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
-from ...batoceraPaths import BIOS, ROMS, ES_GAMES_METADATA, ensure_parents_and_open
+from ...batoceraPaths import BIOS, ES_GAMES_METADATA, ROMS, ensure_parents_and_open
 from ...gun import Guns, guns_need_crosses
-from ...utils import videoMode, metadata
+from ...utils import metadata as _metadataUtils, videoMode
 from ...utils.configparser import CaseSensitiveConfigParser
-
 
 if TYPE_CHECKING:
     from collections.abc import Callable
@@ -818,6 +817,9 @@ def _dosbox_pure_options(
     # Midi Type
     _set_from_system(coreSettings, 'dosbox_pure_midi', system, 'pure_midi', default='disabled')
 
+    # OS Disk Modifications
+    _set_from_system(coreSettings, 'dosbox_pure_bootos_ramdisk', system, 'pure_bootos_ramdisk', default='false')
+
 # Elektronika BK-0010/0011
 def _bk_options(
     coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
@@ -1006,7 +1008,7 @@ def _mupen64plus_next_options(
 
         if pak_value == 'auto_rumble':
             if metadata is None:
-                metadata = metadata.getGamesMetaData(ES_GAMES_METADATA, system.name, rom)
+                metadata = _metadataUtils.get_games_meta_data(ES_GAMES_METADATA, system.name, rom)
 
             pak_value = 'rumble' if metadata.get('controller_rumble') == 'true' else pak_default
 
@@ -1074,7 +1076,7 @@ def _parallel_n64_options(
 
         if pak_value == 'auto_rumble':
             if metadata is None:
-                metadata = metadata.getGamesMetaData(ES_GAMES_METADATA, system.name, rom)
+                metadata = _metadataUtils.get_games_meta_data(ES_GAMES_METADATA, system.name, rom)
 
             pak_value = 'rumble' if metadata.get('controller_rumble') == 'true' else pak_default
 

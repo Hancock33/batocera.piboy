@@ -3,10 +3,10 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Feb 08, 2026
-DOLPHIN_EMU_VERSION = ebc8c9d857f8cbc99d555c4c2b16e3e8098a718a
+# Version: Commits on Feb 15, 2026
+DOLPHIN_EMU_VERSION = 5aacc1ca7c8f25d347f86ca917258c6978bf6aed
 DOLPHIN_EMU_VERSION_MAJOR = 2512
-DOLPHIN_EMU_VERSION_MINOR = 293
+DOLPHIN_EMU_VERSION_MINOR = 321
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -24,9 +24,6 @@ $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.dolphin
 
 DOLPHIN_EMU_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_EMU_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
-DOLPHIN_EMU_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -flto"
-DOLPHIN_EMU_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -flto"
-DOLPHIN_EMU_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -flto"
 
 DOLPHIN_EMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DDISTRIBUTOR='batocera.linux'
@@ -66,7 +63,12 @@ define DOLPHIN_EMU_PRE_CONFIGURE_HOOK
 	sed -i 's/set(DOLPHIN_VERSION_MINOR .*)/set(DOLPHIN_VERSION_MINOR "$(DOLPHIN_EMU_VERSION_MINOR)")/' $(@D)/CMake/ScmRevGen.cmake
 endef
 
+define DOLPHIN_EMU_LINK
+    cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-emu dolphin-emu.desktopconfig
+endef
+
 DOLPHIN_EMU_PRE_CONFIGURE_HOOKS = DOLPHIN_EMU_PRE_CONFIGURE_HOOK
+DOLPHIN_EMU_POST_INSTALL_TARGET_HOOKS += DOLPHIN_EMU_LINK
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))

@@ -231,4 +231,6 @@ systems:
           Vertical: vertical
   - dreamcast
   - naomi2
+  - naomigd
+  - naomi2gd
   - systemsp

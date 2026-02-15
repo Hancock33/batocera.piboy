@@ -5,7 +5,7 @@ config BR2_PACKAGE_WLRCTL
 
 	help
 	  wlrctl is a command line utility for miscellaneous wlroots
-	  Wayland extensions 
+	  Wayland extensions
 	  - foreign-toplevel-management
 	  - virtual-keyboard
 	  - virtual-pointer

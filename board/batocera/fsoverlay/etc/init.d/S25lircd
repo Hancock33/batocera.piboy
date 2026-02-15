@@ -20,8 +20,8 @@ if [ ! -x "$DAEMON" ]; then
 fi
 
 start() {
-    printf "Starting %s: " "$NAME"   
-    mkdir -p "$LIRC_RUN_DIR"   
+    printf "Starting %s: " "$NAME"
+    mkdir -p "$LIRC_RUN_DIR"
     start-stop-daemon -S -b -q -m -p "$PIDFILE" --exec "$DAEMON" -- $DAEMON_ARGS
     if [ $? -eq 0 ]; then
         echo "OK"

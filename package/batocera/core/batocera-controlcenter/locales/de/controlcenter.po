@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: controlcenter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-02 21:32+0000\n"
-"PO-Revision-Date: 2026-01-02 21:32+0000\n"
+"PO-Revision-Date: 2026-02-10 17:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr\n"
@@ -18,6 +18,9 @@ msgstr ""
 msgid "AC"
 msgstr "AC"
 
+msgid "Audio Source"
+msgstr "Audioquelle"
+
 msgid "Balanced"
 msgstr "Ausgeglichen"
 
@@ -28,10 +31,10 @@ msgid "Battery"
 msgstr "Akku"
 
 msgid "Bright +"
-msgstr ""
+msgstr "Helligkeit +"
 
 msgid "Bright -"
-msgstr ""
+msgstr "Helligkeit -"
 
 msgid "CPU:"
 msgstr "CPU:"
@@ -55,7 +58,10 @@ msgid "Game"
 msgstr "Spiel"
 
 msgid "Gun"
-msgstr ""
+msgstr "Pistole"
+
+msgid "High (60fps)"
+msgstr "Hoch (60fps)"
 
 msgid "High Perf"
 msgstr "Hohe Leistung"
@@ -63,11 +69,20 @@ msgstr "Hohe Leistung"
 msgid "Kill it!"
 msgstr "Beenden!"
 
+msgid "Low (30fps)"
+msgstr "Niedrig (30fps)"
+
 msgid "Manual"
 msgstr "Handbuch"
 
 msgid "Map"
-msgstr ""
+msgstr "Karte"
+
+msgid "Microphone"
+msgstr "Mikrofon"
+
+msgid "Mid (30fps)"
+msgstr "Mittel (30fps)"
 
 msgid "Mute Sound"
 msgstr "Ton stummschalten"
@@ -77,6 +92,9 @@ msgstr "Netzwerk-IP-Adresse:"
 
 msgid "Next"
 msgstr "Weiter"
+
+msgid "No Audio"
+msgstr "Kein Audio"
 
 msgid "OFF"
 msgstr "AUS"
@@ -93,11 +111,20 @@ msgstr "Strom-Modus"
 msgid "Previous"
 msgstr "Zurück"
 
+msgid "Quality"
+msgstr "Qualität"
+
 msgid "Quick Access"
 msgstr "Schnellzugriff"
 
 msgid "Quit game"
 msgstr "Spiel beenden"
+
+msgid "Record"
+msgstr "Aufnehmen"
+
+msgid "Record All Screens"
+msgstr "Alle Bildschirme aufnehmen"
 
 msgid "Resolution:"
 msgstr "Auflösung:"
@@ -108,20 +135,35 @@ msgstr "Sparmodus"
 msgid "Select"
 msgstr "Auswählen"
 
+msgid "Start Recording"
+msgstr "Aufnahme starten"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Stop Recording"
+msgstr "Aufnahme stoppen"
+
 msgid "Stuck emulator?"
 msgstr "Emulator hängt?"
 
 msgid "System"
 msgstr "System"
 
+msgid "System (Default)"
+msgstr "System (Standard)"
+
 msgid "Temp:"
 msgstr "Temp:"
 
 msgid "Toggle"
-msgstr ""
+msgstr "Umschalten"
 
 msgid "Touch keyboard"
-msgstr ""
+msgstr "Bildschirmtastatur"
+
+msgid "Ultra (60fps)"
+msgstr "Ultra (60fps)"
 
 msgid "Vol +"
 msgstr "Vol +"
@@ -129,5 +171,5 @@ msgstr "Vol +"
 msgid "Vol -"
 msgstr "Vol -"
 
-#~ msgid "RetroAchievements"
-#~ msgstr "RetroAchievements"
+#~ msgid "/usr/share/batocera/controlcenter/bato-record.gif"
+#~ msgstr "/usr/share/batocera/controlcenter/bato-record.gif"

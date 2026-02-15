@@ -3,8 +3,8 @@
 # dolphin-triforce
 #
 ################################################################################
-# Version: Commits on Feb 08, 2026
-DOLPHIN_TRIFORCE_VERSION = 5689a310fb4cf2623c6f34b379730e1c0f52d46f
+# Version: Commits on Feb 07, 2026
+DOLPHIN_TRIFORCE_VERSION = 065d36784e207656c713a0b4e08c67894b3ab196
 DOLPHIN_TRIFORCE_SITE = https://github.com/crediar/dolphin.git
 DOLPHIN_TRIFORCE_SITE_METHOD = git
 DOLPHIN_TRIFORCE_LICENSE = GPLv2+
@@ -16,9 +16,6 @@ DOLPHIN_TRIFORCE_EMULATOR_INFO = dolphin_triforce.emulator.yml
 
 DOLPHIN_TRIFORCE_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
 DOLPHIN_TRIFORCE_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
-DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -flto"
-DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -flto"
-DOLPHIN_TRIFORCE_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -flto"
 
 DOLPHIN_TRIFORCE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 DOLPHIN_TRIFORCE_CONF_OPTS += -DDISTRIBUTOR='batocera.linux'
@@ -78,6 +75,8 @@ define DOLPHIN_TRIFORCE_EXTRAS
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/ini/SBLL.ini $(TARGET_DIR)/usr/share/triforce/GLLP6E.ini
 	# Mario Kart Arcade GP2
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-triforce/ini/SBNL.ini $(TARGET_DIR)/usr/share/triforce/GNLJ82.ini
+
+	cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-triforce dolphin-triforce.desktopconfig
 endef
 
 DOLPHIN_TRIFORCE_POST_INSTALL_TARGET_HOOKS += DOLPHIN_TRIFORCE_EXTRAS
