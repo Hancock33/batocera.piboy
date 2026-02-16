@@ -1322,6 +1322,18 @@ wswanc:
     libretro:
       mednafen_wswan:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_WSWAN] }
 
+settings:
+  name:                 Batocera Logs
+  manufacturer:         Batocera
+  release:
+  hardware:
+  extensions:           [sh]
+  path:                 /userdata/roms/settings
+  emulators:
+    sh:
+      sh:               { requireAnyOf: [] }
+  force:                True
+
 gamate:
   name:                 Gamate
   manufacturer:         Bitcorp
@@ -1356,6 +1368,18 @@ camplynx:
                         Requer os arquivo de BIOS MAME lynx128k.zip, lynx96k.zip, lynx48k.zip
                         Também pacote de samples bbc.zip em bios/mame/samples
 
+pv1000:
+  name:                 PV-1000
+  manufacturer:         Casio
+  release:              1983
+  hardware:             console
+  extensions:           [7z, bin, zip]
+  emulators:
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+
 casloopy:
   name:                 Casio Loopy
   manufacturer:         Casio
@@ -1376,18 +1400,6 @@ casloopy:
   comment_br:           |
                         Requer arquivo de BIOS do MAME:
                         bios/mame/casloopy.zip  
-
-pv1000:
-  name:                 PV-1000
-  manufacturer:         Casio
-  release:              1983
-  hardware:             console
-  extensions:           [7z, bin, zip]
-  emulators:
-    libretro:
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
-    mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 adam:
   name:                 ADAM
@@ -4362,18 +4374,6 @@ ports:
                         -------------------------------------------------- -----------------------------
                         Aqui você pode encontrar jogos e aplicativos para Linux, iniciados via scripts shell que terminam em
                         ".sh". Apenas os scripts ".sh" aparecem no EmulationStation.
-
-settings:
-  name:                 Batocera Logs
-  manufacturer:         Batocera
-  release:
-  hardware:
-  extensions:           [sh]
-  path:                 /userdata/roms/settings
-  emulators:
-    sh:
-      sh:               { requireAnyOf: [] }
-  force:                True
 
 pre2:
   name:                 Prehistorik 2
