@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Feb 16, 2026
-STK_VERSION = 60e79758c8147c6f8b862ad286b29e2592be85fd
+STK_VERSION = 94ad67a1ab87689fba8b60452a61fd04cb728648
 STK_SITE = $(call github,supertuxkart,stk-code,$(STK_VERSION))
 STK_EMULATOR_INFO = stk.emulator.yml
 STK_DEPENDENCIES = sdl2 sdl2_mixer shaderc
