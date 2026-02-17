@@ -1,8 +1,8 @@
-diff --git a/src/trx/engine/video.c b/src/trx/engine/video.c
-index b4d2fb535..4171a03bc 100644
---- a/src/trx/engine/video.c
-+++ b/src/trx/engine/video.c
-@@ -1716,7 +1716,9 @@ static int M_ReadThread(void *arg)
+diff --git a/src/trx/av/video.c b/src/trx/av/video.c
+index b167a0bdf..672002e0f 100644
+--- a/src/trx/av/video.c
++++ b/src/trx/av/video.c
+@@ -1758,7 +1758,9 @@ static int M_ReadThread(void *arg)
      is->ic = ic;
  
      avformat_find_stream_info(ic, nullptr);
