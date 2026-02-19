@@ -1091,7 +1091,7 @@ triforce:
   platform:             arcade
   emulators:
     dolphin_triforce:
-      dolphin_triforce: { requireAnyOf: [BR2_PACKAGE_DOLPHIN_TRIFORCE]       }
+      dolphin_triforce: { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
   comment_en:           |
                         Triforce is an arcade machine based on the GameCube's hardware.
                         If your game dump doesn't work, please try the configuration via F1.
