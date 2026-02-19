@@ -11,7 +11,7 @@ if TYPE_CHECKING:
 
 
 def _build_long_config_name(name, buttons, axes, hats):
-    # e.g.: "Xbox Wireless Controller", 11, 6, 1 → "xbox_wireless_controller_11_6_1_0_linux"
+    # e.g.: "Xbox Wireless Controller", 11, 6, 1 > "xbox_wireless_controller_11_6_1_0_linux"
     name = name.split('#')[0].lower().strip()
     for c in name:
         if not c.isalnum() and c != '_':

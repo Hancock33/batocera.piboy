@@ -14,6 +14,7 @@ ecm.mk
 flatpak.mk
 freepats.mk
 fsuae.mk
+gtk-layer-shell.mk
 kddocwidgets.mk
 kodi-pvr-freebox.mk
 labwc.mk

@@ -5,7 +5,7 @@
 ################################################################################
 
 DOLPHIN_TRIFORCE_VERSION = 1.0
-DOLPHIN_TRIFORCE_SOURCE = 
+DOLPHIN_TRIFORCE_SOURCE =
 DOLPHIN_TRIFORCE_EMULATOR_INFO = dolphin_triforce.emulator.yml
 
 define DOLPHIN_TRIFORCE_EXTRAS

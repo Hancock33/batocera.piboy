@@ -312,6 +312,7 @@ Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|036376
 Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.org/packages/f5/ae/ec54c3e224a012d620997604fdd6abdbff1b945df3b4aef43d780fd1d5c3)|4.1.15|Nov 03, 2025
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|58527ce9e8cc5f19faae9e6010d2f06fc70b10de|Nov 02, 2025
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.4.0|Oct 31, 2025
+Gpu|[gtk-layer-shell](http://github.com/wmww/gtk-layer-shell)|v0.10.0|Oct 29, 2025
 Emulators|[libretro-yabasanshiro](http://github.com/KMFDManic/Phaenon-Xtreme)|04d978d010e614c66c00d7ebff93fe444f51032e|Oct 29, 2025
 Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/packages/65/a2/40a3440aed2375371507af668570b68523ee01db9c25c47ce5a05883170e)|1.12.3|Oct 27, 2025
 Controllers|[joycond](http://github.com/DanielOgorchock/joycond)|0df025ac5dc284b1f31172b6b252321ba788c4de|Oct 26, 2025

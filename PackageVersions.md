@@ -324,6 +324,7 @@ Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|58d5da926965ad78fb863
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12.2|Jan 27, 2026
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|9e8037b0c344127993e7d66a17ff42228b0bb806|Feb 17, 2026
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|f0bd0257c308b9a26562c1a30c4748a0219cc951|Jan 23, 2026
+Gpu|[gtk-layer-shell](http://github.com/wmww/gtk-layer-shell)|v0.10.0|Oct 29, 2025
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
 Gpu|[mali-G31](http://github.com/Multi-Retropie/vim1s-g31)|2e33bb43d343336fbcf1f4d4a241af6c04f6af3d|Aug 06, 2023
 Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f997460697013fc54029fcac681|Aug 13, 2023
