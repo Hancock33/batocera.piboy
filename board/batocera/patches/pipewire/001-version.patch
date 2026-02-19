@@ -2,13 +2,6 @@ diff --git a/meson.build b/meson.build
 index 5c3adc361..9529b8a85 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -1,5 +1,5 @@
- project('pipewire', ['c' ],
--  version : '1.5.85',
-+  version : '1.6.0',
-   license : [ 'MIT', 'LGPL-2.1-or-later', 'GPL-2.0-only' ],
-   meson_version : '>= 0.61.1',
-   default_options : [ 'warning_level=3',
 @@ -567,7 +567,7 @@ if get_option('tests').allowed()
    cdata.set('HAVE_GSTACK', gstack.found())
  endif
