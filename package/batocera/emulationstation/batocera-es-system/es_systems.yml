@@ -40,7 +40,7 @@ atom:
                         Recomenda-se o uso do modo de lista de software. Os cassetes de lista de software não funcionam, mas os disquetes sim.
                         Os discos mostrarão automaticamente o conteúdo, se o programa não for iniciado automaticamente, digite o nome do programa seguido por aspas duplas (mapeado para shift-2) e pressione enter para executar.
 
-bbc:
+bbcmicro:
   name:                 BBC Micro
   manufacturer:         Acorn Computers
   release:              1981
@@ -1258,12 +1258,11 @@ xegs:
                         Requer o arquivo xegs.zip da BIOS do MAME
                         Modo de lista de software recomendado
 
-astrocde:
+astrocade:
   name:                 Astrocade
   manufacturer:         Bally
   release:              1978
   hardware:             console
-  theme:                astrocade
   extensions:           [7z, bin, zip]
   emulators:
     libretro:
@@ -1380,7 +1379,7 @@ pv1000:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
-casloopy:
+loopy:
   name:                 Casio Loopy
   manufacturer:         Casio
   release:              1995
@@ -3485,7 +3484,6 @@ odyssey2:
   release:              1978
   hardware:             console
   extensions:           [7z, bin, zip]
-  path:                 o2em
   emulators:
     libretro:
       o2em:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_O2EM] }
@@ -4984,7 +4982,7 @@ vpinball:
                         ou dans le même dossier que votre fichier vpx dans son propre dossier 'musique'.
                         Le dossier de musique doit être en minuscules - c'est-à-dire /userdata/roms/vpinball/Kiss/music
 
-xash3d_fwgs:
+halflife:
   name:                 Half-Life
   manufacturer:         Ports
   release:              1998
@@ -4992,7 +4990,7 @@ xash3d_fwgs:
   extensions:           [game]
   platform:             pc
   group:                ports
-  path:                 /userdata/roms/ports/xash3d_fwgs
+  path:                 /userdata/roms/ports/halflife
   emulators:
     xash3d_fwgs:
       xash3d_fwgs:      { requireAnyOf: [BR2_PACKAGE_XASH3D_FWGS] }
@@ -5008,7 +5006,7 @@ xash3d_fwgs:
                         Installation:
 
                         Copy the game's directory from your Steam installation (Steam/steamapps/common/Half-Life/<game data folder>/)
-                        to /userdata/roms/xash3d_fwgs/<game folder> and create an empty `<game folder>.game` file in the same directory.
+                        to /userdata/roms/ports/halflife/<game folder> and create an empty `<game folder>.game` file in the same directory.
 
                         For Half-Life 1, the game folder is `valve/`.
   comment_br:           |
@@ -5023,7 +5021,7 @@ xash3d_fwgs:
                         Instalação:
 
                         Copie o diretório do jogo da sua instalação do Steam (Steam/steamapps/common/Half-Life/<game data folder>/)
-                        para /userdata/roms/xash3d_fwgs/<pasta do jogo> e crie um arquivo `<pasta do jogo>.game` vazio no mesmo diretório.
+                        para /userdata/roms/ports/halflife/<pasta do jogo> e crie um arquivo `<pasta do jogo>.game` vazio no mesmo diretório.
 
                         Para Half-Life 1, a pasta do jogo é `valve/`.
 
@@ -5897,7 +5895,7 @@ model3:
 
                         Veja as Perguntas e dúvidas mais frequentes sobre supermodelos aqui - https://www.supermodel3.com/FAQ.html
 
-msu-md:
+mmegadrive-msu:
   name:                 MSU-MD
   manufacturer:         Sega
   release:              2020
@@ -6125,8 +6123,8 @@ megacd:
   release:              1991
   hardware:             console
   extensions:           [chd, cue, iso, m3u]
-  platform:             segacd
-  theme:                segacd
+  platform:             megacd
+  theme:                megacd
   emulators:
     libretro:
       genesisplusgx:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
@@ -6833,7 +6831,7 @@ lcdgames:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME], incompatible_extensions: [mgw]          }
 
-plugnplay:
+tvgames:
   name:                 Plug and Play TV Games
   manufacturer:         Various
   release:              2002
