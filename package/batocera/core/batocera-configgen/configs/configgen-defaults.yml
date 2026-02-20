@@ -98,7 +98,7 @@ archimedes:
 arduous:
   emulator: libretro
   core:     arduous
-astrocde:
+astrocade:
   emulator: libretro
   core:     mame
 atari:
@@ -139,7 +139,7 @@ awgl:
 banpresto:
   emulator: libretro
   core:     mame078plus
-bbc:
+bbcmicro:
   emulator: libretro
   core:     mame
 bbja:
@@ -420,6 +420,12 @@ gzdoom:
   core:     gzdoom
   options:
     powersave: '1'
+halflife:
+  emulator: xash3d_fwgs
+  core:     xash3d_fwgs
+  options:
+    powersave: '1'
+    hud_support: false
 halflife2:
   emulator: halflife2
   core:     halflife2
@@ -545,6 +551,9 @@ media:
 megadrive:
   emulator: libretro
   core:     genesisplusgx
+megadrive-msu:
+  emulator: libretro
+  core:     genesisplusgx
 midway:
   emulator: libretro
   core:     mame078plus
@@ -578,9 +587,6 @@ mplayer:
 mrboom:
   emulator: libretro
   core:     mrboom
-msu-md:
-  emulator: libretro
-  core:     genesisplusgx
 msx1:
   emulator: libretro
   core:     bluemsx
@@ -757,9 +763,6 @@ pico:
 pico8:
   emulator: libretro
   core:     fake08
-plugnplay:
-  emulator: libretro
-  core:     mame
 pokemini:
   emulator: libretro
   core:     pokemini
@@ -1081,6 +1084,9 @@ triforce:
 tutor:
   emulator: libretro
   core:     mame
+tvgames:
+  emulator: libretro
+  core:     mame
 tyrian:
   emulator: tyrian
   core:     tyrian
@@ -1194,12 +1200,6 @@ x1:
 x68000:
   emulator: libretro
   core:     px68k
-xash3d_fwgs:
-  emulator: xash3d_fwgs
-  core:     xash3d_fwgs
-  options:
-    powersave: '1'
-    hud_support: false
 xbox:
   emulator: xemu
   core:     xemu
@@ -1259,9 +1259,6 @@ bk001001:
 bml3:
   emulator: libretro
   core:     mame
-casloopy:
-  emulator: libretro
-  core:     mame
 cpc464p:
   emulator: libretro
   core:     mame
@@ -1296,6 +1293,9 @@ jupace:
   emulator: libretro
   core:     mame
 konamilcd:
+  emulator: libretro
+  core:     mame
+loopy:
   emulator: libretro
   core:     mame
 m24:
