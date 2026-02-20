@@ -8,7 +8,7 @@ RTCW_VERSION = 438e7d413b5f7277187c35b032eb0ef9093ae778
 RTCW_SITE = $(call github,iortcw,iortcw,$(RTCW_VERSION))
 RTCW_LICENSE = GPL-3.0
 RTCW_LICENSE_FILE = COPYING
-
+RTCW_EMULATOR_INFO = rtcw.emulator.yml
 RTCW_DEPENDENCIES = sdl2 openal
 
 # Common args
@@ -101,3 +101,4 @@ RTCW_POST_INSTALL_TARGET_HOOKS += RTCW_CONFIG_FILE
 RTCW_POST_INSTALL_TARGET_HOOKS += RTCW_EVMAPY
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

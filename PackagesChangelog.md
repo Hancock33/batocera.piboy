@@ -1,13 +1,15 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|ed7bb6b8a878c8c561b1c128d1b1dfd61040d395|Feb 20, 2026
+Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|26465e14e2b8d37d5d0d78e593b244fa95104710|Feb 20, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|cd5838fc7fe3995563257c3f4c1b8436a5ae4ec1|Feb 19, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|6f9d025ad2eafdaedc636531db256e4f4649b8d9|Feb 19, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|2346663e9a34c33760eb79a41898ddba9f90ce2a|Feb 19, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.132|Feb 19, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|d22f4b474175e5345c8cf583fe31e84e6c3cbaf4|Feb 19, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.253|Feb 19, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|bc69b95db698efdcb4dcf36101b9c252d28f0c95|Feb 19, 2026
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|bc69b95db698efdcb4dcf36101b9c252d28f0c95|Feb 19, 2026
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|b2b13078224741c7f7a31a48d714ce19c2409ef3|Feb 19, 2026
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b2b13078224741c7f7a31a48d714ce19c2409ef3|Feb 19, 2026
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|31e5691e5673a4f162fa400ca856c05c5132fc36|Feb 19, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|8e9caf30a20fd936dea65e41c57e0b8a19e8eed4|Feb 19, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|8f994dd11351eb402c9a84c7e73d221c3124ebc0|Feb 19, 2026
@@ -62,7 +64,6 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|96444914d3faebae595f
 Utils|[rclone](http://github.com/rclone/rclone)|v1.73.1|Feb 17, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|44375cf1e9d25c7063e52068f6915cb7a3c888d6|Feb 17, 2026
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|8c7e15e69d4138a9f4f2a784767109ddf363f043|Feb 16, 2026
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|6c01ef573e50ae1f50948093c5090c20544b4ef2|Feb 16, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ba5b3c71ecc966e52f698f41443e7cc9b81bf824|Feb 16, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|bdd85c9ccb40c0a3fcaa6103baf79c2d2d52d6ad|Feb 16, 2026
 Emulators|[play](https://github.com/jpd002/Play-.git)|2a125b5d28cb2c02cbd2fdb00ce268581ffca05b|Feb 16, 2026
@@ -394,7 +395,6 @@ Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.6.3|May 11, 2025
 Emulators|[libretro-beetle-lynx](http://github.com/libretro/beetle-lynx-libretro)|efd1797c7aa5a83c354507b1b61ac24222ebaa58|May 10, 2025
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|19095803f1434eb980db6e4004187a4b786e20b6|May 10, 2025
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|933707c0ba8f12360f6d79712f735a917713709a|May 10, 2025
-Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
 Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.1-Piers|Apr 18, 2025
 Emulators|[libretro-minivmac](https://github.com/libretro/libretro-minivmac)|2eb65cd5ca80174435867d2453d702390e5aab45|Apr 16, 2025
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|92c4450a1bc1acb58bd02bbb99b57e5036919cdf|Apr 06, 2025

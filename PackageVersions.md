@@ -64,7 +64,7 @@ Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727
 Controllers|[xpad-noone](http://github.com/forkymcforkface/xpad-noone)|8e903676dd9514c07ce5e06e43c5f7d8cc51cb7d|Jun 26, 2025
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|fc1b13afc8dbaf85fc8ea8dadac460cee1ebda06|Dec 28, 2025
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|6c01ef573e50ae1f50948093c5090c20544b4ef2|Feb 16, 2026
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|ed7bb6b8a878c8c561b1c128d1b1dfd61040d395|Feb 20, 2026
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|448f87fc0ec9825df13c1e0d4721b741aa5c32aa|Feb 12, 2026
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|e6241340d292dee20406a0567262a78ff34d45f7|Jun 02, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
@@ -77,7 +77,7 @@ Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v7.1.1|Sept 02, 2
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|e8eca6285c8f6a239959cc204760204e0bc17b1c|Feb 08, 2026
 Emulators|[ares](http://github.com/ares-emulator/ares)|v147|Dec 18, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|d0eaf07a400685a489c99c54fcbf6ecee82ac7ac|Feb 17, 2026
-Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|e27092adacb4462e9ce472fd95e07ab74934e299|Apr 28, 2025
+Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|26465e14e2b8d37d5d0d78e593b244fa95104710|Feb 20, 2026
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v121|Dec 22, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|cd5838fc7fe3995563257c3f4c1b8436a5ae4ec1|Feb 19, 2026
 Emulators|[clk](https://github.com/TomHarte/CLK)|2026-02-10|Feb 10, 2026
@@ -274,8 +274,8 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45972|Feb 16, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|f52f6e0899afc80729a62184be07c52e88bf3152|Feb 08, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.133|Jan 20, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|bc69b95db698efdcb4dcf36101b9c252d28f0c95|Feb 19, 2026
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|bc69b95db698efdcb4dcf36101b9c252d28f0c95|Feb 19, 2026
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|b2b13078224741c7f7a31a48d714ce19c2409ef3|Feb 19, 2026
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b2b13078224741c7f7a31a48d714ce19c2409ef3|Feb 19, 2026
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2844-master|Feb 18, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
