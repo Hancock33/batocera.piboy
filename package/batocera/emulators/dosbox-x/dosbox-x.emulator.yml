@@ -15,7 +15,5 @@ shared_features:
   - bezel.resize_tattoo
 systems:
   - name: dos
-    as_emulator: dosboxx
-    as_core: dosbox-x
     exclude_extensions:
       - zip
