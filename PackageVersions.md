@@ -88,14 +88,14 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|f8c2
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.01.02|Jan 03, 2026
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|3072e65c4c231987d8445e0e7564acd5cf327cb7|Feb 21, 2026
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|fdd724f34c817fa6463d189d3a2a5424aeb3cc64|Feb 21, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|f94bae10f27eb60a9a51bf614c28eba4fbd63d3d|Feb 21, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|3339416089a446a2f72a3d930f93091286c2453a|Feb 20, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v3.2.35|Sept 07, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|ad982c951e70a5a9609b173a2c5fa50afb5f58ad|Jan 18, 2026
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Emulators|[hatari](http://github.com/hatari/hatari)|d4605b8d4818646583d2648d0aa06e7c3fedd3aa|Feb 20, 2026
+Emulators|[hatari](http://github.com/hatari/hatari)|7d2e52ca159e8cd3d5dcbae71ff16b83ba49ca4f|Feb 21, 2026
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|8334d98367e0e02b3fe6e390e13560b39e1b1c28|Feb 12, 2026
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|e70c3f82d2b861c64943aaff7fcc29a63013997d|Dec 13, 2025
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|ffc99f27f092addc9ddd34dd0e3a3d4d1c053cbf|Oct 21, 2024
@@ -455,7 +455,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|95e71bd01c5b0a4f39cd2ea7bf
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|c5aa467045194fcd2a86f1f8aa3c8ca365cbf49a|Jan 26, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|1f1a5bdd5c0309e8646c73e876c138cd6763b132|Feb 20, 2026
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|aacab7a5c4588e2e4e88b9bdec39cfbcd6baee27|Feb 15, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|3539aa022c844f9fe2d74e6343e0496632c905d8|Feb 21, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|dc4c0cb262f21e0c8ae05fa376fa89b808dff940|Feb 21, 2026
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|51726f3c82763ced293e204494fa22376e9e787b|Jan 24, 2026
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025
@@ -517,7 +517,7 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|d2fa3ad31e456bd44736d
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|5388426757834024d805df836157b1687a61420b|Feb 20, 2026
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|cd1cd3a9a6a1f2d2e555a36f55b828f36ca7fe06|Dec 27, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|b557d7ce797cec6e7028ba08fe2b8796b6581b95|Feb 10, 2026
-Ports|[trx](http://github.com/LostArtefacts/TRX)|378c282f070977478b9cae4da06c1057d432a9c5|Feb 20, 2026
+Ports|[trx](http://github.com/LostArtefacts/TRX)|69978a4a22147199e8cb5899630e2afbcc59c7a7|Feb 20, 2026
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.2|Feb 13, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|ebf65d02edd3cb4aefc4310a5fd930f3431cbab3|Feb 13, 2026
@@ -588,6 +588,6 @@ Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|
 Wine|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.03|Feb 21, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.0.0|Feb 07, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260203-proton-slr|Feb 03, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260207-proton-slr|Feb 07, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260221|Feb 21, 2026
-Wine|[winetricks](http://github.com/Winetricks/winetricks)|abbbf7f40ac5a3d2dbb4fbcba9ec138331fee4f3|Feb 18, 2026
+Wine|[winetricks](http://github.com/Winetricks/winetricks)|b792287f5bec9086916aa9b81788e0ea38f02c24|Feb 21, 2026

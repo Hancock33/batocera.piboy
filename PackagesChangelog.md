@@ -2,22 +2,23 @@
 -----|:-----:|:-----:|:-----:
 Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|bc6c2385e959a927431492b063b67e280d33402c|Feb 21, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2eeff845bd01aa3f1bdca5682940a80356591236|Feb 21, 2026
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|3072e65c4c231987d8445e0e7564acd5cf327cb7|Feb 21, 2026
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|fdd724f34c817fa6463d189d3a2a5424aeb3cc64|Feb 21, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|f94bae10f27eb60a9a51bf614c28eba4fbd63d3d|Feb 21, 2026
+Emulators|[hatari](http://github.com/hatari/hatari)|7d2e52ca159e8cd3d5dcbae71ff16b83ba49ca4f|Feb 21, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|7002d76aa9936e85a298c52b74ba09d8dbd95519|Feb 21, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|2e9fbecfea388ba762ffce93ceaecc6d76f9fbba|Feb 21, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.03|Feb 21, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260221|Feb 21, 2026
+Wine|[winetricks](http://github.com/Winetricks/winetricks)|b792287f5bec9086916aa9b81788e0ea38f02c24|Feb 21, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4583df044d161710eb4a587a17cb3cc70c383961|Feb 21, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|ae77ad00834c3ca3cd2ef4b33f23d73d0f16ff7b|Feb 21, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260221|Feb 21, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|3539aa022c844f9fe2d74e6343e0496632c905d8|Feb 21, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|dc4c0cb262f21e0c8ae05fa376fa89b808dff940|Feb 21, 2026
 Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|ede0048cf9418c2fd18809a26fc3745391489c4b|Feb 21, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|67259674e080028bc6be89d1e80e6514aedc1a55|Feb 20, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|c55165e19b8f015bf754bfd32b71b2794cfe9436|Feb 20, 2026
 Emulators|[clk](https://github.com/TomHarte/CLK)|2026-02-20|Feb 20, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|3339416089a446a2f72a3d930f93091286c2453a|Feb 20, 2026
-Emulators|[hatari](http://github.com/hatari/hatari)|d4605b8d4818646583d2648d0aa06e7c3fedd3aa|Feb 20, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.133|Feb 20, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|d81785496fe31801abda4e1d265bdec178d2f76e|Feb 20, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|6bfb33279f6989f3ff9ea2dc40ef45d6aeb57ef8|Feb 20, 2026
@@ -40,7 +41,7 @@ Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-vid
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|26465e14e2b8d37d5d0d78e593b244fa95104710|Feb 20, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.139.9155-513|Feb 20, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|62d84dd8e4f52cdcc846c4230d4b12d9dc5bd969|Feb 20, 2026
-Ports|[trx](http://github.com/LostArtefacts/TRX)|378c282f070977478b9cae4da06c1057d432a9c5|Feb 20, 2026
+Ports|[trx](http://github.com/LostArtefacts/TRX)|69978a4a22147199e8cb5899630e2afbcc59c7a7|Feb 20, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|07937f5f6c25eb04bfbda66d0575a5a9eaad48a6|Feb 20, 2026
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|b7e2d76444633a86d717b8feeaa1033c2f79c235|Feb 20, 2026
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|8ea03eb4b1db8c0b713f7004e44fc703cb1d333a|Feb 20, 2026
@@ -72,7 +73,6 @@ Ports|[box64](http://github.com/ptitseb/box64)|857991c5006c4f8002a58275a40f84171
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a2505f8412ce4237a9374f88180c0373976c30f2|Feb 18, 2026
 Ports|[stk](http://github.com/supertuxkart/stk-code)|1e794cee07c58d1e8dec782395c5fbcdf0c71301|Feb 18, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|9ebc85dfd1730a95f0334bf14151a02859aa9f97|Feb 18, 2026
-Wine|[winetricks](http://github.com/Winetricks/winetricks)|abbbf7f40ac5a3d2dbb4fbcba9ec138331fee4f3|Feb 18, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|a050623bb0e35e3e0ba635c48faddecf42ff225c|Feb 18, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|e0fef00082c2f3f710e78d8815dd733c5716e68e|Feb 18, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|8046cc52643861f9af98b563477de6243b4fdd9b|Feb 18, 2026
@@ -146,6 +146,7 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|fe00551bbffc60242a6429
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|8f7f36d2db99748bef8c65ee48657937ce4764cc|Feb 07, 2026
 Firmwares|[firmware-armbian](https://github.com/armbian/firmware)|f065f271d492193a472a12103a0604ef4178a5c7|Feb 07, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.0.0|Feb 07, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260207-proton-slr|Feb 07, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|44c8a8c61640f2d5476af5224dbd88a36079f45d|Feb 07, 2026
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|8f7f36d2db99748bef8c65ee48657937ce4764cc|Feb 07, 2026
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|59107843a639c3fd17e15dfdf7bbe65360f3080e|Feb 07, 2026
@@ -158,7 +159,6 @@ Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|de8d5ee595324eb3
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v0.9.4|Feb 03, 2026
 Libraries|[sdl12-compat](http://github.com/libsdl-org/sdl12-compat)|release-1.2.74|Feb 03, 2026
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|ba6b7bb1d50d7db820ec03d9bbd66404fab5c543|Feb 03, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260203-proton-slr|Feb 03, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260203|Feb 03, 2026
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.02|Feb 01, 2026
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|a78319991d62520bed4e873d3538657ad0ae2ca7|Feb 01, 2026
