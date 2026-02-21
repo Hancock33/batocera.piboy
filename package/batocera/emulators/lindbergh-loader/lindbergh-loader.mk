@@ -39,13 +39,12 @@ endef
 
 define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh
-	mkdir -p $(TARGET_DIR)/usr/lib32/extralibs
+	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/lib32/extralibs
-	mv $(TARGET_DIR)/usr/bin/lindbergh/lib* $(TARGET_DIR)/usr/lib32/extralibs
+
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 	#LD_LIBRARY_PATH=$(STAGING_DIR)/lib:$(STAGING_DIR)/usr/lib $(@D)/build/lindbergh --create config $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lindbergh.ini $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
-	sed -i "s|FULLSCREEN = false|FULLSCREEN = true|" $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/*.ini $(TARGET_DIR)/usr/bin/lindbergh/
 endef
 endif
 
