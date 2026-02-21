@@ -6,6 +6,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|3072e65c4c231987d
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|f94bae10f27eb60a9a51bf614c28eba4fbd63d3d|Feb 21, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|7002d76aa9936e85a298c52b74ba09d8dbd95519|Feb 21, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|2e9fbecfea388ba762ffce93ceaecc6d76f9fbba|Feb 21, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.03|Feb 21, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260221|Feb 21, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4583df044d161710eb4a587a17cb3cc70c383961|Feb 21, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|ae77ad00834c3ca3cd2ef4b33f23d73d0f16ff7b|Feb 21, 2026
@@ -144,7 +145,6 @@ Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.14.0|Feb 07,
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|fe00551bbffc60242a6429494a7bb4ed568d1b81|Feb 07, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|8f7f36d2db99748bef8c65ee48657937ce4764cc|Feb 07, 2026
 Firmwares|[firmware-armbian](https://github.com/armbian/firmware)|f065f271d492193a472a12103a0604ef4178a5c7|Feb 07, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.02|Feb 07, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.0.0|Feb 07, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|44c8a8c61640f2d5476af5224dbd88a36079f45d|Feb 07, 2026
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|8f7f36d2db99748bef8c65ee48657937ce4764cc|Feb 07, 2026
