@@ -2818,7 +2818,7 @@ kodi:
     kodi:
       kodi:             { requireAnyOf: [BR2_PACKAGE_KODI] }
     libretro:
-      ffmpeg:           { requireAnyOf: [BR2_PACKAGE_BATOCERA_TARGET_X86_ANY] }
+      ffmpeg:           { requireAnyOf: [BR2_PACKAGE_RETROARCH] }
 
 recordings:
   name:                 Recordings
