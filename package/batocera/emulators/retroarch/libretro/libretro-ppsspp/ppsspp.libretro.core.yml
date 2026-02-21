@@ -20,3 +20,4 @@ custom_features:
       4800x2720: 4800x2720
 systems:
   - psp
+  - pspmini

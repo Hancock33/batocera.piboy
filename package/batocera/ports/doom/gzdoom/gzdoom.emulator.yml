@@ -26,4 +26,4 @@ custom_features:
       Disabled: false
       Enabled: true
 systems:
-  - gzdoom
+  - prboom

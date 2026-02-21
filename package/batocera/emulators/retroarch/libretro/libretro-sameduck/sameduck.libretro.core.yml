@@ -6,4 +6,4 @@ shared_features:
   - rewind
   - autosave
 systems:
-  - megaduck
+  - sameduck
