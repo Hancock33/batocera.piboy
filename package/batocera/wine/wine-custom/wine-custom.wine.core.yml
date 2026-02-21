@@ -1,3 +1,5 @@
 systems:
   - windows
   - windows_installers
+  - bigfish
+  - popcap
