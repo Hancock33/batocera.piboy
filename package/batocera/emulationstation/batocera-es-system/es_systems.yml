@@ -5551,7 +5551,7 @@ lindbergh:
   release:              2005
   hardware:             arcade
   extensions:           [game]
-  platform:             lindbergh, arcade
+  platform:             arcade
   emulators:
     lindbergh-loader:
       lindbergh-loader: { requireAnyOf: [BR2_PACKAGE_LINDBERGH_LOADER] }
