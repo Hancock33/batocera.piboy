@@ -128,7 +128,7 @@ class LindberghGenerator(Generator):
 
         environment={
                 # Libraries
-                "LD_LIBRARY_PATH": f"/lib32:/lib32/extralibs:/lib:/usr/lib:{source_dir}:{romDir}",
+                "LD_LIBRARY_PATH": f"/lib32:{source_dir}/extralibs:/lib:/usr/lib:{source_dir}:{romDir}",
                 "LD_PRELOAD": f"{source_dir}/lindbergh.so",
                 # Graphics
                 "GST_PLUGIN_SYSTEM_PATH_1_0": "/lib32/gstreamer-1.0:/usr/lib/gstreamer-1.0",
@@ -903,10 +903,10 @@ class LindberghGenerator(Generator):
             destCg = Path(romDir) / "libCg.so"
             destCgGL = Path(romDir) / "libCgGL.so"
             if not destCg.exists():
-                shutil.copy2("/lib32/extralibs/libCg.so.harley", destCg)
+                shutil.copy2("{source_dir}/extralibs/libCg.so.harley", destCg)
                 _logger.debug("Copied: %s", destCg)
             if not destCgGL.exists():
-                shutil.copy2("/lib32/extralibs/libCgGL.so.harley", destCgGL)
+                shutil.copy2("{source_dir}/extralibs/libCgGL.so.harley", destCgGL)
                 _logger.debug("Copied: %s", destCgGL)
 
         # fixes shadows and textures
@@ -914,10 +914,10 @@ class LindberghGenerator(Generator):
             destCg = Path(romDir) / "libCg.so"
             destCgGL = Path(romDir) / "libCgGL.so"
             if not destCg.exists():
-                shutil.copy2("/lib32/extralibs/libCg.so.other", destCg)
+                shutil.copy2("{source_dir}/extralibs/libCg.so.other", destCg)
                 _logger.debug("Copied: %s", destCg)
             if not destCgGL.exists():
-                shutil.copy2("/lib32/extralibs/libCgGL.so.other", destCgGL)
+                shutil.copy2("{source_dir}/extralibs/libCgGL.so.other", destCgGL)
                 _logger.debug("Copied: %s", destCgGL)
 
         # remove any legacy libsegaapi.so

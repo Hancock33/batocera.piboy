@@ -20,11 +20,11 @@ LINDBERGH_LOADER_DEPENDENCIES += libglew sdl3 sdl3_image sdl3_ttf ncurses openal
 LINDBERGH_LOADER_DEPENDENCIES += xlib_libXcursor xlib_libXext xlib_libXi xlib_libXmu xlib_libXScrnSaver
 
 # match the makefile cflags
-LINDBERGH_LOADER_CFLAGS = -pipe -w -march=prescott -mtune=generic -std=gnu17 -fPIC
+LINDBERGH_LOADER_CFLAGS = -m32 -pipe -w -march=prescott -mtune=generic -std=gnu17 -fPIC
 # match the makefile ldflags
 LINDBERGH_LOADER_LDFLAGS += -L$(STAGING_DIR)/usr/lib -L./src/libxdiff
-LINDBERGH_LOADER_LDFLAGS += -shared -nostdlib
-LINDBERGH_LOADER_LDFLAGS += -lasound -lc -ldl -lFAudio -lgcc -lgcc_s -lGL -lglut -lm -lpthread -lSDL3 -lSDL3_image -lSDL3_ttf -lX11 -lXcursor -lxdiff
+LINDBERGH_LOADER_LDFLAGS += -m32  -shared -nostdlib
+LINDBERGH_LOADER_LDFLAGS += -lasound -lc -ldl -lFAudio -lgcc -lgcc_s -lGL -lglut -lm -lpthread -lSDL3 -lSDL3_image -lSDL3_ttf -ludev -lX11 -lXcursor -lxdiff
 
 define LINDBERGH_LOADER_BUILD_CMDS
 	$(MAKE) \
