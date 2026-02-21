@@ -8,7 +8,6 @@ DROIDPORTS_VERSION = 9e43646b43ca3bf80a50edfc1a212d2c702b617d
 DROIDPORTS_SITE = https://github.com/JohnnyonFlame/droidports.git
 DROIDPORTS_SITE_METHOD=git
 DROIDPORTS_GIT_SUBMODULES=YES
-DROIDPORTS_EMULATOR_INFO = droidports.emulator.yml
 DROIDPORTS_DEPENDENCIES = sdl2 sdl2_image zlib libzip freetype bzip2 libpng openal
 DROIDPORTS_LICENSE = GPL-2.0
 
@@ -24,4 +23,3 @@ define DROIDPORTS_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(cmake-package))
-$(eval $(emulator-info-package))

@@ -6283,7 +6283,7 @@ x68000:
   manufacturer:         Sharp
   release:              1987
   hardware:             computer
-  extensions:           [2hd, 88d, cmd, d88, dim, dup, hdf, hdm, img, m3u, xdf]
+  extensions:           [2hd, 88d, cmd, d88, dim, dup, hdf, hdm, img, m3u, xdf, zip]
   emulators:
     libretro:
       px68k:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PX68K] }
