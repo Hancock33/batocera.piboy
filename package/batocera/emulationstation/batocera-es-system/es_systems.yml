@@ -2980,7 +2980,7 @@ tg-cd:
   manufacturer:         Nintendo
   release:              2011
   hardware:             portable
-  extensions:           [app, axf, cci, cia, cxi, elf, squashfs, zcci, zcia, zcxi]
+  extensions:           [3ds, app, axf, cci, cia, cxi, elf, squashfs, zcci, zcia, zcxi]
   emulators:
     azahar:
       azahar:           { requireAnyOf: [BR2_PACKAGE_AZAHAR]            }
