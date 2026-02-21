@@ -70,6 +70,15 @@ class LindberghGenerator(Generator):
         "ANALOGUE_DEADZONE_5":       True, "ANALOGUE_DEADZONE_6":       True, "ANALOGUE_DEADZONE_7":       True, "ANALOGUE_DEADZONE_8":       True,
         "EMULATE_HW210_CARDREADER":  True, "CARDFILE_01":               True, "CARDFILE_02":               True, "CPU_FREQ_GHZ":              True,
         "OR2_IPADDRESS":             True, "PLAYER_1_COIN":             True, "BOOST_RENDER_RES":          True,
+        "HIDE_CURSOR":               True, "EMULATE_ID_CARD READER":    True, "EMULATE_TOUCHSCREEN":       True, "ID_CARDFILE_AUTOLOAD":      True,
+        "ID_CARDFOLDER":             True, "DISABLE_BUILTIN_FONT":      True, "DISABLE_BUILTIN_LOGOS":     True, "CUSTOM_CURSOR_ENABLED":     True,
+        "CUSTOM_CURSOR":             True, "CUSTOM_CURSOR_WIDTH":       True, "CUSTOM_CURSOR_HEIGHT":      True, "TOUCH_CURSOR":              True,
+        "TOUCH_CURSOR_WIDTH":        True, "TOUCH_CURSOR_HEIGHT":       True, "PRIMEVAL_HUNT_TEST_SCREEN_SINGLE": True, "RAMBO_GUNS_SWITCH": True,
+        "ID5_CHINESE_LANGUAGE":      True, "ID_STEERING_REDUCTION_PERCENTAGE": True, "ENABLE_CROSSHAIRS": True, "P1_CROSSHAIR_PATH":        True,
+        "P2_CROSSHAIR_PATH":         True, "CUSTOM_CROSSHAIRS_WIDTH":   True, "CUSTOM_CROSSHAIRS_HEIGHT":  True, "ENABLE_NETWORK_PATCHES":   True,
+        "NIC_NAME":                  True, "OR2_NETMASK":               True, "ID_IP_SEAT_1":              True, "ID_IP_SEAT_2":              True,
+        "IP_CAB1":                   True, "IP_CAB2":                   True, "IP_CAB3":                   True, "IP_CAB4":                   True,
+        "2SPICY_IP_CAB1":            True, "2SPICY_IP_CAB2":            True, "SRTV_IPADDRESS":            True,
     }
 
     def getHotkeysContext(self) -> HotkeysContext:
@@ -85,14 +94,6 @@ class LindberghGenerator(Generator):
 
         source_dir = Path("/usr/bin32/lindbergh")
 
-        ### target to romdir
-        for file_name in ["lindbergh", "lindbergh.so"]:
-            source_file = source_dir / file_name
-            destination_file = romDir / file_name
-            if not destination_file.exists() or source_file.stat().st_mtime > destination_file.stat().st_mtime:
-                shutil.copy2(source_file, destination_file)
-                _logger.debug("Updated %s", file_name)
-
         ### Setup eeprom files as necessary
         self.setup_eeprom()
 
@@ -102,16 +103,17 @@ class LindberghGenerator(Generator):
         ### libraries
         self.setup_libraries(romDir, romName)
 
-        # Change to the ROM path before launching
-        os.chdir(romDir)
+        # Change to the source binary path before launching
+        os.chdir(source_dir)
 
         # Check for known executable files and make them executable if needed
         # Details in the Lindbergh.c file
         executable_files = [
-            "main.exe", "ramboM.elf", "vt3_Lindbergh", "hummer_Master.elf",
-            "drive.elf", "chopperM.elf", "vsg", "Jennifer", "dsr", "abc",
-            "hod4M.elf", "lgj_final", "vt3", "id4.elf", "id5.elf",
-            "lgjsp_app", "gsevo", "vf5", "apacheM.elf", "hodexRI.elf", "a.elf"
+            "a.elf", "abc", "apacheM.elf", "chopperM.elf", "drive.elf",
+            "dsr", "gsevo", "hod4M.elf", "hodexRI.elf", "hummer_Master.elf",
+            "id4.elf", "id5.elf", "Jennifer", "lgj_final", "lgjsp_app",
+            "main.exe", "mj4", "q2satl_lind", "ramboM.elf", "vf5",
+            "vsg", "vt3", "vt3_Lindbergh"
         ]
 
         for exe_file in executable_files:
@@ -126,7 +128,8 @@ class LindberghGenerator(Generator):
 
         environment={
                 # Libraries
-                "LD_LIBRARY_PATH": f"/lib32:/lib32/extralibs:/lib:/usr/lib:{romDir}",
+                "LD_LIBRARY_PATH": f"/lib32:/lib32/extralibs:/lib:/usr/lib:{source_dir}:{romDir}",
+                "LD_PRELOAD": f"{source_dir}/lindbergh.so",
                 # Graphics
                 "GST_PLUGIN_SYSTEM_PATH_1_0": "/lib32/gstreamer-1.0:/usr/lib/gstreamer-1.0",
                 "GST_REGISTRY_1_0": "/userdata/system/.cache/gstreamer-1.0/registry..bin:/userdata/system/.cache/gstreamer-1.0/registry.x86_64.bin",
@@ -137,22 +140,23 @@ class LindberghGenerator(Generator):
                 # Controller(s)
                 "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0",
+                "SDL_AUDIODRIVER": "alsa",
             }
 
         if system.config.get_bool("lindbergh_zink"):
             environment.update(
                 {
-                    "MESA_LOADER_DRIVER_OVERRIDE": "zink",
-                    "GALLIUM_DRIVER": "zink",
-                    "LIBGL_KOPPER_DRI2": "1"
+                    "MESA_LOADER_DRIVER_OVERRIDE": "zink"
                 }
             )
 
-        # Run command
+        # Run command - Use -c * -o for ini files and -g for the game folder
+        config_file = "/userdata/system/configs/lindbergh/lindbergh.ini"
+        controller_file = "/userdata/system/configs/lindbergh/controls.ini"
+        commandArray: list[str | Path] = [str(source_dir / "lindbergh"), "-c", config_file, "-o", controller_file, "-g", str(romDir)]
+
         if system.config.get_bool("lindbergh_test"):
-            commandArray: list[str | Path] = [str(romDir / "lindbergh"), "-t"]
-        else:
-            commandArray: list[str | Path] = [str(romDir / "lindbergh")]
+            commandArray.append("-t")
 
         return Command.Command(array=commandArray, env=environment)
 
@@ -182,13 +186,13 @@ class LindberghGenerator(Generator):
         conf: dict[str, Any] = { "raw": lines, "keys": {}}
 
         # find keys and values
-        pattern = re.compile(r"^\s*(#?)\s*([A-Z0-9_]+)\s(.*)$")
+        pattern = re.compile(r"^\s*(#?)\s*([A-Z0-9_\s]+[A-Z0-9_])\s*=\s*(.*)$")
 
         # analyze lines
         for n, line in enumerate(lines):
             matches = pattern.match(line)
             if matches:
-                key = matches.group(2)
+                key = matches.group(2).strip()
 
                 if key in self.CONF_KEYS:
                     if key in conf["keys"]: # take care of duplicated keys
@@ -232,7 +236,7 @@ class LindberghGenerator(Generator):
             conf["keys"][key] = { "line": len(conf["raw"]) }
             conf["raw"].append("###")
 
-        conf["keys"][key]["value"]     = "= " + str(value)
+        conf["keys"][key]["value"]     = str(value)
         conf["keys"][key]["modified"]  = True
         conf["keys"][key]["commented"] = False
 
@@ -249,7 +253,8 @@ class LindberghGenerator(Generator):
         for key in conf["keys"]:
             if conf["keys"][key]["modified"]:
                 nline = conf["keys"][key]["line"]
-                line = f'{key} {conf["keys"][key]["value"]}\n'
+                # Updated for INI format (KEY = VALUE)
+                line = f'{key} = {conf["keys"][key]["value"]}\n'
                 if conf["keys"][key]["commented"]:
                     line = f"# {line}"
                 conf["raw"][nline] = line
@@ -274,36 +279,52 @@ class LindberghGenerator(Generator):
     ) -> None:
         self.setConf(conf, "WIDTH",                     gameResolution['width'])
         self.setConf(conf, "HEIGHT",                    gameResolution['height'])
-        self.setConf(conf, "FULLSCREEN",                1)
+        self.setConf(conf, "FULLSCREEN",                "true" if system.config.get_bool("lindbergh_fullscreen", True) else "false")
         self.setConf(conf, "REGION",                    system.config.get("lindbergh_region", "EX"))
-        self.setConf(conf, "FPS_TARGET",                system.config.get("lindbergh_fps", "60"))
-        self.setConf(conf, "FPS_LIMITER_ENABLED",       system.config.get_bool("lindbergh_limit", return_values=("true", "false")))
-        self.setConf(conf, "FREEPLAY",                  system.config.get_bool("lindbergh_freeplay", return_values=("true", "none")))
-        self.setConf(conf, "KEEP_ASPECT_RATIO",         system.config.get_bool("lindbergh_aspect", return_values=("true", "false")))
-        self.setConf(conf, "DEBUG_MSGS",                system.config.get_bool("lindbergh_debug", return_values=("true", "false")))
-        self.setConf(conf, "HUMMER_FLICKER_FIX",        system.config.get_bool("lindbergh_hummer", return_values=("true", "false")))
-        self.setConf(conf, "OUTRUN_LENS_GLARE_ENABLED", system.config.get_bool("lindbergh_lens", return_values=("true", "false")))
-        self.setConf(conf, "BOOST_RENDER_RES",          system.config.get_bool("lindbergh_boost", return_values=("true", "false")))
+        self.setConf(conf, "FPS_TARGET",                system.config.get("lindbergh_fps", "60.0"))
+        self.setConf(conf, "FPS_LIMITER_ENABLED",       "true" if system.config.get_bool("lindbergh_limit", True) else "false")
+        self.setConf(conf, "FREEPLAY",                  "true" if system.config.get_bool("lindbergh_freeplay") else "false")
+        self.setConf(conf, "KEEP_ASPECT_RATIO",         "true" if system.config.get_bool("lindbergh_aspect", True) else "false")
+        self.setConf(conf, "DEBUG_MSGS",                "true" if system.config.get_bool("lindbergh_debug") else "false")
+        self.setConf(conf, "HUMMER_FLICKER_FIX",        "true" if system.config.get_bool("lindbergh_hummer") else "false")
+        self.setConf(conf, "OUTRUN_LENS_GLARE_ENABLED", "true" if system.config.get_bool("lindbergh_lens", True) else "false")
+        self.setConf(conf, "BOOST_RENDER_RES",          "true" if system.config.get_bool("lindbergh_boost") else "false")
         self.setConf(conf, "SKIP_OUTRUN_CABINET_CHECK", "true" if "outrun" in romName.lower() or "outr2sdx" in romName.lower() else "false")
-        self.setConf(conf, "SRAM_PATH",   f"{self.LINDBERGH_SAVES}/sram.bin.{Path(romName).stem}")
-        self.setConf(conf, "EEPROM_PATH", f"{self.LINDBERGH_SAVES}/eeprom.bin.{Path(romName).stem}")
+        self.setConf(conf, "SRAM_PATH",   f'"{self.LINDBERGH_SAVES}/sram.bin.{Path(romName).stem}"')
+        self.setConf(conf, "EEPROM_PATH", f'"{self.LINDBERGH_SAVES}/eeprom.bin.{Path(romName).stem}"')
+        self.setConf(conf, "HIDE_CURSOR", "true" if system.config.get_bool("lindbergh_hide_cursor", True) else "false")
+        self.setConf(conf, "DISABLE_BUILTIN_FONT", "true" if system.config.get_bool("lindbergh_disable_font") else "false")
+        self.setConf(conf, "DISABLE_BUILTIN_LOGOS", "true" if system.config.get_bool("lindbergh_disable_logos") else "false")
+        self.setConf(conf, "ENABLE_NETWORK_PATCHES", "true" if system.config.get_bool("lindbergh_network_patches", True) else "false")
 
         ## Additional game specific options
 
-        # Virtua Tennis - Card Reader
-        if "tennis" in romName.lower() and system.config.get_bool("lindbergh_card"):
+        # Virtua Tennis / R-Tuned / Initial D - Card Reader
+        if ("tennis" in romName.lower() or "rtuned" in romName.lower()) and system.config.get_bool("lindbergh_card"):
             self.setConf(conf, "EMULATE_HW210_CARDREADER", "true")
-            self.setConf(conf, "CARDFILE_01", f"{self.LINDBERGH_SAVES}/VT3_Card_01.crd")
-            self.setConf(conf, "CARDFILE_02", f"{self.LINDBERGH_SAVES}/VT3_Card_02.crd")
+            self.setConf(conf, "CARDFILE_01", "Card_01.crd")
+            self.setConf(conf, "CARDFILE_02", "Card_02.crd")
+            self.setConf(conf, "ID_CARDFOLDER", f'"{self.LINDBERGH_SAVES}"')
         else:
-            self.setConf(conf, "EMULATE_HW210_CARDREADER", "AUTO")
+            self.setConf(conf, "EMULATE_HW210_CARDREADER", "false")
+
+        if "initiad" in romName.lower() and system.config.get_bool("lindbergh_card"):
+            self.setConf(conf, "EMULATE_ID_CARD READER", "true")
+            self.setConf(conf, "ID_CARDFILE_AUTOLOAD", "true")
+            self.setConf(conf, "ID_CARDFOLDER", f'"{self.LINDBERGH_SAVES}"')
+        else:
+            self.setConf(conf, "EMULATE_ID_CARD READER", "false")
+
+        # Rambo switch
+        if "rambo" in romName.lower():
+            self.setConf(conf, "RAMBO_GUNS_SWITCH", "true" if system.config.get_bool("lindbergh_rambo_switch") else "false")
 
         # House of the Dead 4 - CPU speed
         cpu_speed = system.config.get("lindbergh_speed")
         if "hotd4" in romName.lower() and cpu_speed:
             cpu_speed = float(cpu_speed)
             _logger.debug("Current CPU Speed : %.2f GHz", cpu_speed)
-            self.setConf(conf, "CPU_FREQ_GHZ", cpu_speed)
+            self.setConf(conf, "CPU_FREQ_GHZ", f"{cpu_speed:.1f}")
         else:
             self.commentConf(conf, "CPU_FREQ_GHZ")
 
@@ -315,13 +336,17 @@ class LindberghGenerator(Generator):
         if ip:
             _logger.debug("Current IP Address: %s", ip)
             if "outr2sdx" in romName.lower() and system.config.get_bool("lindbergh_ip"):
-                self.setConf(conf, "OR2_IPADDRESS", chr(34) + ip + chr(34))
+                self.setConf(conf, "OR2_IPADDRESS", f'"{ip}"')
+                self.setConf(conf, "OR2_NETMASK", "255.255.255.0")
         else:
             _logger.debug("Unable to retrieve IP address.")
 
         # Primeval Hunt mode (touch screen)
         if "primevah" in romName.lower() or "primehunt" in romName.lower():
-            self.setConf(conf, "PRIMEVAL_HUNT_SCREEN_MODE", system.config.get("lindbergh_hunt", "1"))
+            self.setConf(conf, "PRIMEVAL_HUNT_SCREEN_MODE", system.config.get("lindbergh_hunt", "2"))
+            self.setConf(conf, "EMULATE_TOUCHSCREEN", "true")
+
+        # TO DO - LIBCG_PATH
 
         ## Guns
         if system.config.use_guns and guns:
@@ -353,12 +378,13 @@ class LindberghGenerator(Generator):
         else:
             input_mode = 2
 
+
         shortRomName = Path(romName.lower()).stem
 
         self.setConf(conf, "INPUT_MODE", input_mode)
 
         # comment all player values
-        for key in conf["keys"]:
+        for key in list(conf["keys"].keys()):
             if key.startswith(("PLAYER_", "ANALOGUE_")) or key == "TEST_BUTTON":
                 self.commentConf(conf, key)
 
@@ -912,47 +938,25 @@ class LindberghGenerator(Generator):
         /,
     ) -> None:
         LINDBERGH_CONFIG_FILE = Path("/userdata/system/configs/lindbergh/lindbergh.ini")
+        LINDBERGH_CONTROLS_FILE = Path("/userdata/system/configs/lindbergh/controls.ini")
         mkdir_if_not_exists(LINDBERGH_CONFIG_FILE.parent)
 
-        # get an initial version if no version is here
+        # get an initial version if no version is here - Sync lindbergh.ini
         source_file = source_dir / "lindbergh.ini"
         if not LINDBERGH_CONFIG_FILE.exists() or source_file.stat().st_mtime > LINDBERGH_CONFIG_FILE.stat().st_mtime:
             shutil.copy2(source_file, LINDBERGH_CONFIG_FILE)
             _logger.debug("Updated lindbergh.ini")
 
+        # Sync controls.ini
+        source_controls = source_dir / "controls.ini"
+        if not LINDBERGH_CONTROLS_FILE.exists() or source_controls.stat().st_mtime > LINDBERGH_CONTROLS_FILE.stat().st_mtime:
+            shutil.copy2(source_controls, LINDBERGH_CONTROLS_FILE)
+            _logger.debug("Updated controls.ini")
+
         # load and modify it if needed and save it
         conf = self.loadConf(LINDBERGH_CONFIG_FILE)
         self.buildConfFile(conf, system, gameResolution, guns, wheels, playersControllers, romName)
         self.saveConf(conf, LINDBERGH_CONFIG_FILE)
-
-        # copy the config file in the rom dir, where it is used
-        shutil.copy2(LINDBERGH_CONFIG_FILE, romDir / "lindbergh.ini")
-
-#    def get_cpu_min_speed(self):
-#        try:
-#            # Run lscpu to get CPU frequency information
-#            result = subprocess.run(
-#                ["lscpu"],
-#                capture_output=True,
-#                text=True,
-#                check=True
-#            )
-#            output = result.stdout
-#
-#            # Find the "CPU min MHz" value
-#            match = re.search(r"CPU min MHz:\s+([\d.]+)", output)
-#            if match:
-#                min_speed_mhz = float(match.group(1))
-#                # Convert to GHz
-#                _logger.debug(f"CPU min MHz is {min_speed_mhz}.")
-#                return min_speed_mhz / 1000
-#
-#            _logger.debug("CPU min MHz information not found.")
-#            return None
-#
-#        except subprocess.CalledProcessError as e:
-#            _logger.debug("Error running lscpu: %s", e)
-#            return None
 
     def get_ip_address(self, destination: str = "1.1.1.1", port: int = 80) -> Any | None:
         try:
