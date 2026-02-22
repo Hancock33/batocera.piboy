@@ -65,6 +65,7 @@ endef
 
 define DOLPHIN_EMU_LINK
     cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-emu dolphin-emu.desktopconfig
+    cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-emu dolphin-triforce.desktopconfig
 endef
 
 DOLPHIN_EMU_PRE_CONFIGURE_HOOKS = DOLPHIN_EMU_PRE_CONFIGURE_HOOK

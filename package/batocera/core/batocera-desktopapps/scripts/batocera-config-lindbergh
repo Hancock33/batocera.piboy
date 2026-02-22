@@ -13,7 +13,7 @@ Arguments:
   GAME_PATH    Optional. Path to the game directory.
   FLAGS        Optional. Additional flags passed to the emulator.
 
-Note: 
+Note:
   Config (-c) and Control (-o) paths are handled automatically.
   You do not need to specify them.
   Default Config:   $CONFIG_INI
