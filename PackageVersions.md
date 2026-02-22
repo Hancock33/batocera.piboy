@@ -76,7 +76,7 @@ Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.1|
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v7.1.1|Sept 02, 2025
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|e8eca6285c8f6a239959cc204760204e0bc17b1c|Feb 08, 2026
 Emulators|[ares](http://github.com/ares-emulator/ares)|v147|Dec 18, 2025
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|ac0ec5edea2ff2d8c5343308ed0fccfec8944876|Feb 21, 2026
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|43cecd1692f09aa25d527987f07aabda68ee63d4|Feb 22, 2026
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|26465e14e2b8d37d5d0d78e593b244fa95104710|Feb 20, 2026
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v121|Dec 22, 2025
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|cd5838fc7fe3995563257c3f4c1b8436a5ae4ec1|Feb 19, 2026
@@ -224,7 +224,7 @@ Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|471f2a72d2a7b
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|177c2f0e892adf2603ada9b150e31beffe0f76c3|Apr 05, 2022
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|cd6004ea143435cfdb6b12e7c6779dab499f7829|Oct 21, 2024
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|4d4dcb556ed9b80ed7636f37340a1320823cea4d|Jul 04, 2025
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|567adba425f87b44e45a3f0e8bad8ef8a7a4263a|Feb 22, 2026
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|e46fd5cab2f00c858215a8c66f344942b9c3a9cf|Feb 22, 2026
 Emulators|[libretro-vecx](http://github.com/libretro/libretro-vecx)|eacee1f6f029688b043ed802cece29dd3c320e21|Jan 12, 2026
 Emulators|[libretro-vemulator](http://github.com/libretro/vemulator-libretro)|45d7556667549bb1c1b84d27fbffb7d2a633f5d3|Oct 21, 2024
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|e9f8ac034ddef3025f0567768f7af8219f7cfdb8|Jul 29, 2025
@@ -270,7 +270,7 @@ Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|33
 Emulators|[supermodel-legacy](http://github.com/DirtBagXon/model3emu-code-sinden)|6ae0cf2f237586c4a3cc791514ec1b0f3cd4c56c|Feb 08, 2026
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|fe00551bbffc60242a6429494a7bb4ed568d1b81|Feb 07, 2026
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|35de8edbd8bf06e934b56d2bd8963d7b3fb35a9e|Feb 16, 2026
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45978|Feb 21, 2026
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45982|Feb 22, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|32ac86a3a901522a3547d3615821eedac3a6801c|Jan 13, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.133|Jan 20, 2026
@@ -461,10 +461,10 @@ Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|51726f3c82763ced2
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|51994bef41dc3598d370761371773e47859affd6|Sept 14, 2025
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|ba6b7bb1d50d7db820ec03d9bbd66404fab5c543|Feb 03, 2026
 Ports|[eldoom](http://github.com/dhewm/dhewm3-sdk)|ff4d6d201b0443465ccbf097e240b47f43f24787|Jan 26, 2026
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|0302eee27cfcf890fa1c2847c53b972b71b23e5c|Feb 22, 2026
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|61dd79d9781d081e679a46c7d03aabbba0cb51e0|Feb 22, 2026
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
-Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a2505f8412ce4237a9374f88180c0373976c30f2|Feb 18, 2026
+Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a738c38a81fd069039c02c04f908e1da628c2234|Feb 22, 2026
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.13|Dec 21, 2025
 Ports|[fitz](http://github.com/dhewm/dhewm3-sdk)|06af5d131c12f244a54d9964818ad9799e8d6654|Jan 26, 2026
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|126664e034d17bb7fd1e6c3cfa1e9e6f1ebf48ac|Jan 08, 2024

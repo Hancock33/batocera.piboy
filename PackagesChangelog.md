@@ -1,17 +1,20 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|43cecd1692f09aa25d527987f07aabda68ee63d4|Feb 22, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|dc31d7d67f848ef4d20bf27adc3279dcafece2bd|Feb 22, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|2d273590747cec4716a2e3c293a5b8693abb0403|Feb 22, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|2ae34e5fffa249d1f5441657720da173754c0420|Feb 22, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.136|Feb 22, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/api/v4/projects/68/packages/generic/Ryubing-Canary/)|1.3.256|Feb 22, 2026
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45982|Feb 22, 2026
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|9190ce3e362fc5ce46784423899479a0fd95019d|Feb 22, 2026
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|9190ce3e362fc5ce46784423899479a0fd95019d|Feb 22, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-02-22|Feb 22, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|dff10fdfc7818a7ac28136e77377890a1ac21e9d|Feb 22, 2026
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|569fc99d76d3c3e5e71e8214c1a181b8b997774a|Feb 22, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|d00ca7022c613989af950b768f04a79214f3a7d7|Feb 22, 2026
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|0302eee27cfcf890fa1c2847c53b972b71b23e5c|Feb 22, 2026
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|61dd79d9781d081e679a46c7d03aabbba0cb51e0|Feb 22, 2026
+Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a738c38a81fd069039c02c04f908e1da628c2234|Feb 22, 2026
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|d6ad5e3438a597d40ae658d60406b6e844a3a3df|Feb 22, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|97d68072174145a6816061e936d07ffd67e1eaf4|Feb 22, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f724cc370fa6863c15bd4e52c3435bf29e628a21|Feb 22, 2026
@@ -19,11 +22,9 @@ Engines|[vpinball-next](http://github.com/vpinball/vpinball)|a5d8b6e5fa1dbef331d
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|d72697bfc353b547efc58421ad54ac0345441bf4|Feb 22, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ccf4faf1f25374fb71fa787e75bcb287daf717e4|Feb 22, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|70d236c36327d1e92359f9a48dc0e26a6e9e0677|Feb 22, 2026
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|567adba425f87b44e45a3f0e8bad8ef8a7a4263a|Feb 22, 2026
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|e46fd5cab2f00c858215a8c66f344942b9c3a9cf|Feb 22, 2026
 Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|bc6c2385e959a927431492b063b67e280d33402c|Feb 21, 2026
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|ac0ec5edea2ff2d8c5343308ed0fccfec8944876|Feb 21, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|b55aaa8ca78619785ca334c62d5e9d3743c29171|Feb 21, 2026
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r45978|Feb 21, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|7002d76aa9936e85a298c52b74ba09d8dbd95519|Feb 21, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|2e9fbecfea388ba762ffce93ceaecc6d76f9fbba|Feb 21, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|ae1195a9d0fbda243bf0ebd861d6876d072a979e|Feb 21, 2026
@@ -75,7 +76,6 @@ Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2844-master|Feb 18, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|1f92ec3d6156c81c4758aae1ccc3156f2407a57e|Feb 18, 2026
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|b24cc73fbf9352281e91f0a0b1bdbf7eb8d5c548|Feb 18, 2026
-Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a2505f8412ce4237a9374f88180c0373976c30f2|Feb 18, 2026
 Ports|[stk](http://github.com/supertuxkart/stk-code)|1e794cee07c58d1e8dec782395c5fbcdf0c71301|Feb 18, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|9ebc85dfd1730a95f0334bf14151a02859aa9f97|Feb 18, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|a050623bb0e35e3e0ba635c48faddecf42ff225c|Feb 18, 2026
