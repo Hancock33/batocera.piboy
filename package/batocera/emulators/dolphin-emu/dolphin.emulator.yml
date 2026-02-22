@@ -397,3 +397,4 @@ cores:
             submenu: LIGHT GUNS
             prompt: SHOW LIGHT GUN CROSSHAIRS
             preset: switchauto
+      - name: triforce
