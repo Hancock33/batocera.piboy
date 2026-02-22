@@ -21,7 +21,10 @@ class SonicManiaGenerator(Generator):
         source_file = '/usr/bin/sonicmania'
         rom_directory = '/userdata/roms/ports/sonicmania'
         destination_file = rom_directory + '/sonicmania'
-        if not os.path.exists(destination_file):
+        if os.path.exists(destination_file):
+            os.remove(destination_file)
+            shutil.copy(source_file, destination_file)
+        else:
             shutil.copy(source_file, destination_file)
 
         ## Configuration
