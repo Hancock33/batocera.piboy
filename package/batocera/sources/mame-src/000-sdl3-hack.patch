@@ -1,0 +1,30 @@
+diff --git a/scripts/src/osd/sdl3.lua b/scripts/src/osd/sdl3.lua
+index 18c20675281..6baaf44f7aa 100644
+--- a/scripts/src/osd/sdl3.lua
++++ b/scripts/src/osd/sdl3.lua
+@@ -26,6 +26,8 @@ function maintargetosdoptions(_target,_subtarget)
+ 
+ 	if _OPTIONS["NO_X11"]~="1" then
+ 		links {
++			"SDL3",
++			"SDL3_ttf",
+ 			"X11",
+ 			"Xinerama",
+ 		}
+diff --git a/scripts/src/tools.lua b/scripts/src/tools.lua
+index 32e3537443d..0b4378a86f6 100644
+--- a/scripts/src/tools.lua
++++ b/scripts/src/tools.lua
+@@ -780,6 +780,12 @@ if (_OPTIONS["osd"] == "sdl") or (_OPTIONS["osd"] == "sdl3") then
+ 		"Symbols", -- always include minimum symbols for executables
+ 	}
+ 
++	if _OPTIONS["osd"] == "sdl3" then
++		links {
++			"SDL3",
++		}
++	end
++
+ 	if _OPTIONS["SEPARATE_BIN"]~="1" then
+ 		targetdir(MAME_DIR)
+ 	end

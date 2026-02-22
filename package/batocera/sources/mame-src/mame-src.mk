@@ -3,11 +3,12 @@
 # mame-src
 #
 ################################################################################
-# Version: Commits on Jan 29, 2026
-MAME_SRC_VERSION = mame0285
+# Version: Commits on Feb 22, 2026
+MAME_SRC_VERSION = 7942b4a90c5012a738c1078b5bc88fdf8cda0a37
 MAME_SRC_SOURCE = mame-src-$(MAME_SRC_VERSION).tar.gz
+MAME_SRC_BRANCH = release0286
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
-MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl2 sdl2_ttf sqlite zlib
+MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl3 sdl3_ttf sqlite zlib
 MAME_SRC_LICENSE = MAME
 
 MAME_SRC_CROSS_ARCH = unknown
@@ -67,7 +68,7 @@ define MAME_SRC_BUILD_CMDS
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	PKG_CONFIG="$(HOST_DIR)/bin/pkg-config --define-prefix" \
 	SYSROOT="$(STAGING_DIR)" \
-	$(MAKE) -j$(MAME_SRC_JOBS) TARGETOS=linux OSD=sdl \
+	$(MAKE) -j$(MAME_SRC_JOBS) TARGETOS=linux OSD=sdl3 \
 	$(MAME_SRC_CROSS_OPTS) \
 	ARCHOPTS=-fuse-ld=mold \
 	LDOPTS="-lasound -lfontconfig" \
@@ -78,6 +79,7 @@ define MAME_SRC_BUILD_CMDS
 	CXX="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang++" \
 	LD="$(TARGET_LD)" \
 	SDL_INSTALL_ROOT="$(STAGING_DIR)/usr" \
+	SDL_PKGCONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	SUBTARGET=mame \
 	TARGET=mame \
 	TOOLS=1 \
