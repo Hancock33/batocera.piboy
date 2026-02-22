@@ -19,5 +19,7 @@ custom_features:
       Show (Default): 0
 systems:
   - eduke32
-  - name: fury
-    as_core: fury
+  - ionfury
+  - pcexhumed
+  - rednukem
+  - voidsw

@@ -179,3 +179,4 @@ custom_features:
       'On': true
 systems:
   - psp
+  - pspmini

@@ -154,3 +154,5 @@ custom_features:
 systems:
   - windows
   - windows_installers
+  - bigfish
+  - popcap

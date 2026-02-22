@@ -6,6 +6,7 @@
 # Version: Commits on Jan 29, 2026
 MAME_SRC_VERSION = mame0285
 MAME_SRC_SOURCE = mame-src-$(MAME_SRC_VERSION).tar.gz
+MAME_SRC_BRANCH = release0286
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
 MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl2 sdl2_ttf sqlite zlib
 MAME_SRC_LICENSE = MAME
@@ -78,6 +79,7 @@ define MAME_SRC_BUILD_CMDS
 	CXX="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang++" \
 	LD="$(TARGET_LD)" \
 	SDL_INSTALL_ROOT="$(STAGING_DIR)/usr" \
+	SDL_PKGCONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	SUBTARGET=mame \
 	TARGET=mame \
 	TOOLS=1 \

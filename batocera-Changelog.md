@@ -15,6 +15,11 @@
 - Legacy Nvidia 340.xx & 390.xx drivers have been removed from the image going forward.
   These version continue to have problems with later kernel versions and are not longer sustainable.
   Only the legacy 470.xx, 580.xx and current 590.xx drivers will be supported in v43.
+- A few roms directories have changed names for consistency with themes and the overall rule of naming them after systems, not
+  emulators: now please use odyssey2 (o2em), megadrive-msu (msu-md), halflife (xash3d_fwgs), tvgames (plugnplay),
+  astrocade (astrocde), bbcmicro (bbc), rtcw (iortcw), loopy (casloopy).
+- Dolphin-Emu now supports Triforce. The older Dolphin-Triforce emulator has been removed as a result.
+  Saves should be moved from /userdata/saves/dolphin-triforce to dolphin accordingly.
 ### Hardware
 - AIC8800 USB driver support for Raxda Boards
 - Anbernic RG28XX, RG34XX, RG35XX, RG40XX, RGCUBEXX device variant support
@@ -61,6 +66,7 @@
 - Sega Cave CV1000 support (currently x86 systems only)
 - Sega Gaelco support (currently x86 systems only)
 - Sega Hikaru support (currently x86 systems only)
+- Added support for GUO HUA PS3 GamePad in the Bluez package's Sixaxis plugin (models VOYEE - HY-2208 and MiniThink - CECHZC2U)
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
@@ -86,7 +92,7 @@
 - BigPEmu to v121
 - Cemu to 22nd of January 2026 build
 - CLK to 2026-01-06
-- Dolphin-Emu to 2512-99
+- Dolphin-Emu to 2512-421
 - DXX-Rebirth to May 25, 2025
 - EasyRPG to 0.8.1.1
 - EDuke32 to Oct 10, 2025
@@ -122,6 +128,7 @@
 - Libretro Swanstation to 2nd of August 2025 build
 - Libretro Vecx to 12th of January 2026 build
 - Libretro YabaSanshiro to 20th of December 2025 build
+- Lindbergh Loader to v2.1.3
 - MelonDS to 1.1
 - OpenJK to 10th of October 2025 build
 - OpenJKDF2 to v0.9.8

@@ -50,7 +50,7 @@ index b45d501b10c8..1b7930249a68 100644
  		obj = NULL;
  
 diff --git a/drivers/gpu/drm/drm_modes.c b/drivers/gpu/drm/drm_modes.c
-index 35e07d1b9f94..0f53c7c8b0ff 100644
+index 6e7ca8f25f17..a97b80dfd7e9 100644
 --- a/drivers/gpu/drm/drm_modes.c
 +++ b/drivers/gpu/drm/drm_modes.c
 @@ -41,6 +41,7 @@
@@ -230,7 +230,7 @@ index 35e07d1b9f94..0f53c7c8b0ff 100644
  /**
   * drm_cvt_mode -create a modeline based on the CVT algorithm
   * @dev: drm device
-@@ -1887,7 +2050,7 @@ EXPORT_SYMBOL(drm_mode_sort);
+@@ -1889,7 +2052,7 @@ EXPORT_SYMBOL(drm_mode_sort);
   */
  void drm_connector_list_update(struct drm_connector *connector)
  {
@@ -239,7 +239,7 @@ index 35e07d1b9f94..0f53c7c8b0ff 100644
  
  	WARN_ON(!mutex_is_locked(&connector->dev->mode_config.mutex));
  
-@@ -1933,6 +2096,40 @@ void drm_connector_list_update(struct drm_connector *connector)
+@@ -1935,6 +2098,40 @@ void drm_connector_list_update(struct drm_connector *connector)
  			list_move_tail(&pmode->head, &connector->modes);
  		}
  	}

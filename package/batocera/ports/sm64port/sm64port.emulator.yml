@@ -26,4 +26,4 @@ custom_features:
       "On": 1
       "Off": 0
 systems:
-  - sm64port
+  - sm64

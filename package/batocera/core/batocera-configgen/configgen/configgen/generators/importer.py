@@ -30,7 +30,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'clk': ('clk.clkGenerator', 'ClkGenerator'),
     'devilutionx': ('devilutionx.devilutionxGenerator', 'DevilutionXGenerator'),
     'dolphin': ('dolphin.dolphinGenerator', 'DolphinGenerator'),
-    'dolphin_triforce': ('dolphin_triforce.dolphinTriforceGenerator', 'DolphinTriforceGenerator'),
     'doom3': ('doom3.doom3Generator', 'Doom3Generator'),
     'doomretro': ('doomretro.doomretroGenerator', 'DoomretroGenerator'),
     'dosbox': ('dosbox.dosboxGenerator', 'DosBoxGenerator'),

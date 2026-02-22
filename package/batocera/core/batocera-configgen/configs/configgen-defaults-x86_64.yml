@@ -98,7 +98,7 @@ archimedes:
 arduous:
   emulator: libretro
   core:     arduous
-astrocde:
+astrocade:
   emulator: libretro
   core:     mame
 atari:
@@ -410,6 +410,12 @@ gzdoom:
   core:     gzdoom
   options:
     powersave: '1'
+halflife:
+  emulator: xash3d_fwgs
+  core:     xash3d_fwgs
+  options:
+    powersave: '1'
+    hud_support: false
 halflife2:
   emulator: halflife2
   core:     halflife2
@@ -546,7 +552,7 @@ mplayer:
 mrboom:
   emulator: libretro
   core:     mrboom
-msu-md:
+megadrive-msu:
   emulator: libretro
   core:     genesisplusgx
 msx1:
@@ -728,9 +734,6 @@ pico:
 pico8:
   emulator: libretro
   core:     fake08
-plugnplay:
-  emulator: libretro
-  core:     mame
 pokemini:
   emulator: libretro
   core:     pokemini
@@ -1019,11 +1022,14 @@ toaplan:
   emulator: libretro
   core:     mame078plus
 triforce:
-  emulator: dolphin_triforce
-  core:     dolphin_triforce
+  emulator: dolphin
+  core:     dolphin
   options:
     powersave: '1'
 tutor:
+  emulator: libretro
+  core:     mame
+bbcmicro:
   emulator: libretro
   core:     mame
 tyrian:
@@ -1142,12 +1148,6 @@ x1:
 x68000:
   emulator: libretro
   core:     px68k
-xash3d_fwgs:
-  emulator: xash3d_fwgs
-  core:     xash3d_fwgs
-  options:
-    powersave: '1'
-    hud_support: false
 xbox:
   emulator: xemu
   core:     xemu

@@ -3,8 +3,8 @@
 # batocera-controlcenter
 #
 ################################################################################
-# Version: Commits on Feb 09, 2026
-BATOCERA_CONTROLCENTER_VERSION = d94927c3754f7dc7648449c40d425547eb4c8b70
+# Version: Commits on Feb 21, 2026
+BATOCERA_CONTROLCENTER_VERSION = bc6c2385e959a927431492b063b67e280d33402c
 BATOCERA_CONTROLCENTER_SITE = $(call github,lbrpdx,batocera-controlcenter,$(BATOCERA_CONTROLCENTER_VERSION))
 BATOCERA_CONTROLCENTER_STE_METHOD = git
 BATOCERA_CONTROLCENTER_LICENSE = GPL3
@@ -17,11 +17,8 @@ BATOCERA_CONTROLCENTER_PATH = \
 
 define BATOCERA_CONTROLCENTER_BUILD_CMDS
 	# update translation files
-	$(HOST_DIR)/bin/python $(BATOCERA_CONTROLCENTER_PATH)/getpot.py \
-	    $(BATOCERA_CONTROLCENTER_PATH)/controlcenter.xml \
-	        $(BATOCERA_CONTROLCENTER_PATH)/locales/controlcenter.pot
-	$(BATOCERA_CONTROLCENTER_PATH)/updatepo.sh update \
-	    $(BATOCERA_CONTROLCENTER_PATH)/locales
+	$(HOST_DIR)/bin/python $(BATOCERA_CONTROLCENTER_PATH)/getpot.py $(BATOCERA_CONTROLCENTER_PATH)/controlcenter.xml $(BATOCERA_CONTROLCENTER_PATH)/locales/controlcenter.pot
+	$(BATOCERA_CONTROLCENTER_PATH)/updatepo.sh update $(BATOCERA_CONTROLCENTER_PATH)/locales
 endef
 
 define BATOCERA_CONTROLCENTER_INSTALL_TARGET_CMDS
@@ -37,16 +34,14 @@ define BATOCERA_CONTROLCENTER_INSTALL_TARGET_CMDS
 	install -m 0755 $(@D)/gamepads.py       $(TARGET_DIR)/usr/share/batocera/controlcenter
 	install -m 0755 $(@D)/DocViewer.py      $(TARGET_DIR)/usr/share/batocera/controlcenter
 	install -m 0755 $(@D)/log.py            $(TARGET_DIR)/usr/share/batocera/controlcenter
-	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/images/bato-record.gif   $(TARGET_DIR)/usr/share/batocera/controlcenter
-	cd $(TARGET_DIR)/usr/bin; ln -sf ../share/batocera/controlcenter/controlcenter.py ./batocera-controlcenter-app
+	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/images/bato-record.gif           $(TARGET_DIR)/usr/share/batocera/controlcenter
 	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/batocera-controlcenter-toogle.sh $(TARGET_DIR)/usr/bin/batocera-controlcenter
-	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/controlcenter.xml $(TARGET_DIR)/usr/share/batocera/controlcenter
-	install -m 0644 $(BATOCERA_CONTROLCENTER_PATH)/ra-icon.png $(TARGET_DIR)/usr/share/batocera/controlcenter/resources/ra-icon.png
+	install -m 0755 $(BATOCERA_CONTROLCENTER_PATH)/controlcenter.xml                $(TARGET_DIR)/usr/share/batocera/controlcenter
+	install -m 0644 $(BATOCERA_CONTROLCENTER_PATH)/ra-icon.png                      $(TARGET_DIR)/usr/share/batocera/controlcenter/resources/ra-icon.png
+	cd $(TARGET_DIR)/usr/bin; ln -sf ../share/batocera/controlcenter/controlcenter.py  ./batocera-controlcenter-app
 
 	# install translations
-	$(BATOCERA_CONTROLCENTER_PATH)/updatepo.sh build \
-	    $(BATOCERA_CONTROLCENTER_PATH)/locales \
-		    $(TARGET_DIR)/usr/share/locale
+	$(BATOCERA_CONTROLCENTER_PATH)/updatepo.sh build $(BATOCERA_CONTROLCENTER_PATH)/locales $(TARGET_DIR)/usr/share/locale
 endef
 
 $(eval $(generic-package))

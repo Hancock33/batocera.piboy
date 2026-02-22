@@ -40,7 +40,7 @@ atom:
                         Recomenda-se o uso do modo de lista de software. Os cassetes de lista de software não funcionam, mas os disquetes sim.
                         Os discos mostrarão automaticamente o conteúdo, se o programa não for iniciado automaticamente, digite o nome do programa seguido por aspas duplas (mapeado para shift-2) e pressione enter para executar.
 
-bbc:
+bbcmicro:
   name:                 BBC Micro
   manufacturer:         Acorn Computers
   release:              1981
@@ -1091,7 +1091,7 @@ triforce:
   platform:             arcade
   emulators:
     dolphin_triforce:
-      dolphin_triforce: { requireAnyOf: [BR2_PACKAGE_DOLPHIN_TRIFORCE]       }
+      dolphin_triforce: { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
   comment_en:           |
                         Triforce is an arcade machine based on the GameCube's hardware.
                         If your game dump doesn't work, please try the configuration via F1.
@@ -1258,12 +1258,11 @@ xegs:
                         Requer o arquivo xegs.zip da BIOS do MAME
                         Modo de lista de software recomendado
 
-astrocde:
+astrocade:
   name:                 Astrocade
   manufacturer:         Bally
   release:              1978
   hardware:             console
-  theme:                astrocade
   extensions:           [7z, bin, zip]
   emulators:
     libretro:
@@ -1322,6 +1321,18 @@ wswanc:
     libretro:
       mednafen_wswan:   { requireAnyOf: [BR2_PACKAGE_LIBRETRO_BEETLE_WSWAN] }
 
+settings:
+  name:                 Batocera Logs
+  manufacturer:         Batocera
+  release:
+  hardware:
+  extensions:           [sh]
+  path:                 /userdata/roms/settings
+  emulators:
+    sh:
+      sh:               { requireAnyOf: [] }
+  force:                True
+
 gamate:
   name:                 Gamate
   manufacturer:         Bitcorp
@@ -1356,7 +1367,19 @@ camplynx:
                         Requer os arquivo de BIOS MAME lynx128k.zip, lynx96k.zip, lynx48k.zip
                         Também pacote de samples bbc.zip em bios/mame/samples
 
-casloopy:
+pv1000:
+  name:                 PV-1000
+  manufacturer:         Casio
+  release:              1983
+  hardware:             console
+  extensions:           [7z, bin, zip]
+  emulators:
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+
+loopy:
   name:                 Casio Loopy
   manufacturer:         Casio
   release:              1995
@@ -1376,18 +1399,6 @@ casloopy:
   comment_br:           |
                         Requer arquivo de BIOS do MAME:
                         bios/mame/casloopy.zip  
-
-pv1000:
-  name:                 PV-1000
-  manufacturer:         Casio
-  release:              1983
-  hardware:             console
-  extensions:           [7z, bin, zip]
-  emulators:
-    libretro:
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
-    mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
 adam:
   name:                 ADAM
@@ -2807,7 +2818,7 @@ kodi:
     kodi:
       kodi:             { requireAnyOf: [BR2_PACKAGE_KODI] }
     libretro:
-      ffmpeg:           { requireAnyOf: [BR2_PACKAGE_BATOCERA_TARGET_X86_ANY] }
+      ffmpeg:           { requireAnyOf: [BR2_PACKAGE_RETROARCH] }
 
 recordings:
   name:                 Recordings
@@ -2969,7 +2980,7 @@ tg-cd:
   manufacturer:         Nintendo
   release:              2011
   hardware:             portable
-  extensions:           [app, axf, cci, cia, cxi, elf, squashfs, zcci, zcia, zcxi]
+  extensions:           [3ds, app, axf, cci, cia, cxi, elf, squashfs, zcci, zcia, zcxi]
   emulators:
     azahar:
       azahar:           { requireAnyOf: [BR2_PACKAGE_AZAHAR]            }
@@ -3473,7 +3484,6 @@ odyssey2:
   release:              1978
   hardware:             console
   extensions:           [7z, bin, zip]
-  path:                 o2em
   emulators:
     libretro:
       o2em:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_O2EM] }
@@ -4363,18 +4373,6 @@ ports:
                         Aqui você pode encontrar jogos e aplicativos para Linux, iniciados via scripts shell que terminam em
                         ".sh". Apenas os scripts ".sh" aparecem no EmulationStation.
 
-settings:
-  name:                 Batocera Logs
-  manufacturer:         Batocera
-  release:
-  hardware:
-  extensions:           [sh]
-  path:                 /userdata/roms/settings
-  emulators:
-    sh:
-      sh:               { requireAnyOf: [] }
-  force:                True
-
 pre2:
   name:                 Prehistorik 2
   manufacturer:         Ports
@@ -4984,7 +4982,7 @@ vpinball:
                         ou dans le même dossier que votre fichier vpx dans son propre dossier 'musique'.
                         Le dossier de musique doit être en minuscules - c'est-à-dire /userdata/roms/vpinball/Kiss/music
 
-xash3d_fwgs:
+halflife:
   name:                 Half-Life
   manufacturer:         Ports
   release:              1998
@@ -4992,7 +4990,7 @@ xash3d_fwgs:
   extensions:           [game]
   platform:             pc
   group:                ports
-  path:                 /userdata/roms/ports/xash3d_fwgs
+  path:                 /userdata/roms/ports/halflife
   emulators:
     xash3d_fwgs:
       xash3d_fwgs:      { requireAnyOf: [BR2_PACKAGE_XASH3D_FWGS] }
@@ -5008,7 +5006,7 @@ xash3d_fwgs:
                         Installation:
 
                         Copy the game's directory from your Steam installation (Steam/steamapps/common/Half-Life/<game data folder>/)
-                        to /userdata/roms/xash3d_fwgs/<game folder> and create an empty `<game folder>.game` file in the same directory.
+                        to /userdata/roms/ports/halflife/<game folder> and create an empty `<game folder>.game` file in the same directory.
 
                         For Half-Life 1, the game folder is `valve/`.
   comment_br:           |
@@ -5023,7 +5021,7 @@ xash3d_fwgs:
                         Instalação:
 
                         Copie o diretório do jogo da sua instalação do Steam (Steam/steamapps/common/Half-Life/<game data folder>/)
-                        para /userdata/roms/xash3d_fwgs/<pasta do jogo> e crie um arquivo `<pasta do jogo>.game` vazio no mesmo diretório.
+                        para /userdata/roms/ports/halflife/<pasta do jogo> e crie um arquivo `<pasta do jogo>.game` vazio no mesmo diretório.
 
                         Para Half-Life 1, a pasta do jogo é `valve/`.
 
@@ -5553,7 +5551,7 @@ lindbergh:
   release:              2005
   hardware:             arcade
   extensions:           [game]
-  platform:             lindbergh, arcade
+  platform:             arcade
   emulators:
     lindbergh-loader:
       lindbergh-loader: { requireAnyOf: [BR2_PACKAGE_LINDBERGH_LOADER] }
@@ -5897,7 +5895,7 @@ model3:
 
                         Veja as Perguntas e dúvidas mais frequentes sobre supermodelos aqui - https://www.supermodel3.com/FAQ.html
 
-msu-md:
+megadrive-msu:
   name:                 MSU-MD
   manufacturer:         Sega
   release:              2020
@@ -6125,8 +6123,8 @@ megacd:
   release:              1991
   hardware:             console
   extensions:           [chd, cue, iso, m3u]
-  platform:             segacd
-  theme:                segacd
+  platform:             megacd
+  theme:                megacd
   emulators:
     libretro:
       genesisplusgx:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GENESISPLUSGX] }
@@ -6285,7 +6283,7 @@ x68000:
   manufacturer:         Sharp
   release:              1987
   hardware:             computer
-  extensions:           [2hd, 88d, cmd, d88, dim, dup, hdf, hdm, img, m3u, xdf]
+  extensions:           [2hd, 88d, cmd, d88, dim, dup, hdf, hdm, img, m3u, xdf, zip]
   emulators:
     libretro:
       px68k:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PX68K] }
@@ -6833,7 +6831,7 @@ lcdgames:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME], incompatible_extensions: [mgw]          }
 
-plugnplay:
+tvgames:
   name:                 Plug and Play TV Games
   manufacturer:         Various
   release:              2002

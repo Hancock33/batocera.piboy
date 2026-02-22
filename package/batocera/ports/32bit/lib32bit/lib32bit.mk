@@ -3,10 +3,11 @@
 # lib32bit
 #
 ################################################################################
-# Version: Commits on Feb 15, 2026
-LIB32BIT_VERSION = 20260215
+# Version: Commits on Feb 21, 2026
+LIB32BIT_VERSION = 20260221
 LIB32BIT_SOURCE = batocera-rpi4-32bit-libs-$(LIB32BIT_VERSION).tar.xz
 LIB32BIT_SITE = https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(LIB32BIT_VERSION)
+LIB32BIT_EMULATOR_INFO = droidports.emulator.yml sorr.emulator.yml
 
 define LIB32BIT_EXTRACT_CMDS
 	mkdir -p $(TARGET_DIR)/{lib,usr}
@@ -29,3 +30,4 @@ define LIB32BIT_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

@@ -3,8 +3,8 @@
 # kodi_resource_language_fr_fr
 #
 ################################################################################
-# Version: Commits on Jan 03, 2026
-KODI_RESOURCE_LANGUAGE_FR_FR_VERSION = 11.0.101
+# Version: Commits on Feb 14, 2026
+KODI_RESOURCE_LANGUAGE_FR_FR_VERSION = 11.0.102
 KODI_RESOURCE_LANGUAGE_FR_FR_SOURCE = resource.language.fr_fr-$(KODI_RESOURCE_LANGUAGE_FR_FR_VERSION).zip
 KODI_RESOURCE_LANGUAGE_FR_FR_SITE = http://mirrors.kodi.tv/addons/piers/resource.language.fr_fr
 KODI_RESOURCE_LANGUAGE_FR_FR_PLUGINNAME=resource.language.fr_fr

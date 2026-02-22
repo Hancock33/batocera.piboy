@@ -3,8 +3,8 @@
 # sdl3
 #
 ################################################################################
-# Version: Commits on Jan 01, 2026
-SDL3_VERSION = release-3.4.0
+# Version: Commits on Feb 20, 2026
+SDL3_VERSION = release-3.4.2
 SDL3_SITE = $(call github,libsdl-org,SDL,$(SDL3_VERSION))
 SDL3_LICENSE = Zlib
 SDL3_LICENSE_FILES = LICENSE.txt
@@ -34,13 +34,6 @@ SDL3_DEPENDENCIES += dbus
 SDL3_CONF_OPTS += -DSDL_DBUS=ON
 else
 SDL3_CONF_OPTS += -DSDL_DBUS=OFF
-endif
-
-ifeq ($(BR2_PACKAGE_DXVK),y)
-SDL3_DEPENDENCIES += dxvk
-SDL3_CONF_OPTS += -DSDL_GPU_DXVK=ON
-else
-SDL3_CONF_OPTS += -DSDL_GPU_DXVK=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
@@ -147,6 +140,11 @@ endif
 else
 SDL3_CONF_OPTS += -DSDL_X11=OFF
 SDL3_CONF_OPTS += -DSDL_X11_SHARED=OFF
+endif
+
+# Add option for a system without a standard desktop windowing environment.
+ifeq ($(BR2_PACKAGE_SDL3_WAYLAND)$(BR2_PACKAGE_SDL3_X11),)
+SDL3_CONF_OPTS += -DSDL_UNIX_CONSOLE_BUILD=ON
 endif
 
 $(eval $(cmake-package))

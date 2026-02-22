@@ -64,3 +64,4 @@ GZDOOM_POST_INSTALL_TARGET_HOOKS += GZDOOM_INSTALL
 
 $(eval $(cmake-package))
 $(eval $(host-cmake-package))
+$(eval $(emulator-info-package))

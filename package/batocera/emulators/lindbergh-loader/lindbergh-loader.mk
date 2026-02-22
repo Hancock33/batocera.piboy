@@ -3,8 +3,8 @@
 # lindbergh-loader
 #
 ################################################################################
-# Version: Commits on Jan 27, 2026
-LINDBERGH_LOADER_VERSION = 3b7d10514fbf35e9f209eb91cbeb82e645633177
+# Version: Commits on Feb 18, 2026
+LINDBERGH_LOADER_VERSION = 973cfb7058daa8109685631705742a4086295f29
 LINDBERGH_LOADER_SITE = $(call github,lindbergh-loader,lindbergh-loader,$(LINDBERGH_LOADER_VERSION))
 LINDBERGH_LOADER_LICENSE = ShareAlike 4.0 International
 LINDBERGH_LOADER_LICENSE_FILES = LICENSE.md
@@ -20,11 +20,11 @@ LINDBERGH_LOADER_DEPENDENCIES += libglew sdl3 sdl3_image sdl3_ttf ncurses openal
 LINDBERGH_LOADER_DEPENDENCIES += xlib_libXcursor xlib_libXext xlib_libXi xlib_libXmu xlib_libXScrnSaver
 
 # match the makefile cflags
-LINDBERGH_LOADER_CFLAGS = -pipe -w -march=prescott -mtune=generic -std=gnu17 -fPIC
+LINDBERGH_LOADER_CFLAGS = -m32 -pipe -w -march=prescott -mtune=generic -std=gnu17 -fPIC
 # match the makefile ldflags
 LINDBERGH_LOADER_LDFLAGS += -L$(STAGING_DIR)/usr/lib -L./src/libxdiff
-LINDBERGH_LOADER_LDFLAGS += -shared -nostdlib
-LINDBERGH_LOADER_LDFLAGS += -lasound -lc -ldl -lFAudio -lgcc -lgcc_s -lGL -lglut -lm -lpthread -lSDL3 -lSDL3_image -lSDL3_ttf -lX11 -lXcursor -lxdiff
+LINDBERGH_LOADER_LDFLAGS += -m32  -shared -nostdlib
+LINDBERGH_LOADER_LDFLAGS += -lasound -lc -ldl -lFAudio -lgcc -lgcc_s -lGL -lglut -lm -lpthread -lSDL3 -lSDL3_image -lSDL3_ttf -ludev -lX11 -lXcursor -lxdiff
 
 define LINDBERGH_LOADER_BUILD_CMDS
 	$(MAKE) \
@@ -39,13 +39,12 @@ endef
 
 define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh
-	mkdir -p $(TARGET_DIR)/usr/lib32/extralibs
+	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/lib32/extralibs
-	mv $(TARGET_DIR)/usr/bin/lindbergh/lib* $(TARGET_DIR)/usr/lib32/extralibs
+
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 	#LD_LIBRARY_PATH=$(STAGING_DIR)/lib:$(STAGING_DIR)/usr/lib $(@D)/build/lindbergh --create config $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lindbergh.ini $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
-	sed -i "s|FULLSCREEN = false|FULLSCREEN = true|" $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/*.ini $(TARGET_DIR)/usr/bin/lindbergh/
 endef
 endif
 

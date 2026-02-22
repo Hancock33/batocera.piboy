@@ -7,7 +7,6 @@ from typing import TYPE_CHECKING
 
 from ... import Command
 from ...batoceraPaths import CACHE, CONFIGS, SAVES, mkdir_if_not_exists
-from ...gun import guns_need_crosses
 from ...utils import vulkan
 from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
@@ -34,6 +33,9 @@ class DolphinGenerator(Generator):
 
         # Dir required for saves
         mkdir_if_not_exists(DOLPHIN_SAVES / "StateSaves")
+
+        # GaemSettings
+        mkdir_if_not_exists(DOLPHIN_SAVES / "GameSettings")
 
         # Generate the controller config(s)
         dolphinControllers.generateControllerConfig(system, playersControllers, metadata, wheels, rom, guns)
@@ -424,8 +426,7 @@ class DolphinGenerator(Generator):
             env={
                 "XDG_CONFIG_HOME": CONFIGS,
                 "XDG_DATA_HOME": SAVES,
-                "XDG_CACHE_HOME": CACHE,
-                "SDL_JOYSTICK_HIDAPI": "0"
+                "XDG_CACHE_HOME": CACHE
             }
         )
 

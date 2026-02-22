@@ -265,7 +265,9 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      # Used for screen rotation (SDL, Retroarch, Moonlight)
     select BR2_PACKAGE_LIBDRM
     select BR2_PACKAGE_BATOCERA_DRMINFO                     if  BR2_PACKAGE_LIBDRM
-    select BR2_PACKAGE_LIRC_TOOLS                           # lirc (remote control)
+    select BR2_PACKAGE_LIRC_TOOLS                           if !BR2_PACKAGE_BATOCERA_TARGET_SM8550      && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_SM8250      && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_H700        # lirc (remote control)
     select BR2_PACKAGE_LIBCEC                               # libcec
     select BR2_PACKAGE_LIBCEC_LINUX_API                     # libcec linux api
     select BR2_PACKAGE_EDID_DECODE                          # edid monitor/tv support
@@ -510,7 +512,7 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
     default "allwinner/h5/tritium-h5 allwinner/h5/orangepi-pc2"                                                                                                                                if  BR2_PACKAGE_BATOCERA_TARGET_H5
     default "allwinner/h6/orangepi-3-lts allwinner/h6/orangepi-3 allwinner/h6/orangepi-one-plus"                                                                                               if  BR2_PACKAGE_BATOCERA_TARGET_H6
     default "allwinner/h616/orangepi-zero2 allwinner/h616/orangepi-zero3 allwinner/h616/x96-mate"                                                                                              if  BR2_PACKAGE_BATOCERA_TARGET_H616
-    default "allwinner/h700/anbernic-rg35xx-h allwinner/h700/anbernic-rg28xx allwinner/h700/anbernic-rg34xx allwinner/h700/anbernic-rg34xx-sp allwinner/h700/anbernic-rg35xx-2024 allwinner/h700/anbernic-rg35xx-2024-rev6-panel allwinner/h700/anbernic-rg35xx-h-rev6-panel allwinner/h700/anbernic-rg35xx-plus allwinner/h700/anbernic-rg35xx-plus-rev6-panel allwinner/h700/anbernic-rg35xx-pro allwinner/h700/anbernic-rg35xx-sp allwinner/h700/anbernic-rg35xx-sp-v2-panel allwinner/h700/anbernic-rg40xx-h allwinner/h700/anbernic-rg40xx-v allwinner/h700/anbernic-rgcubexx"  if  BR2_PACKAGE_BATOCERA_TARGET_H700
+    default "allwinner/h700/anbernic-rg40xx-h allwinner/h700/anbernic-rg35xx-h allwinner/h700/anbernic-rg35xx-plus allwinner/h700/anbernic-rg28xx allwinner/h700/anbernic-rg34xx allwinner/h700/anbernic-rg34xx-sp allwinner/h700/anbernic-rg35xx-2024 allwinner/h700/anbernic-rg35xx-2024-rev6-panel allwinner/h700/anbernic-rg35xx-h-rev6-panel allwinner/h700/anbernic-rg35xx-plus-rev6-panel allwinner/h700/anbernic-rg35xx-pro allwinner/h700/anbernic-rg35xx-sp allwinner/h700/anbernic-rg35xx-sp-v2-panel allwinner/h700/anbernic-rg40xx-v allwinner/h700/anbernic-rgcubexx"  if  BR2_PACKAGE_BATOCERA_TARGET_H700
     default "amlogic/s812"                                                                                                                                                                     if  BR2_PACKAGE_BATOCERA_TARGET_S812
     default "samsung/exynos5422/odroidxu4"                                                                                                                                                     if  BR2_PACKAGE_BATOCERA_TARGET_XU4
     default "x86"                                                                                                                                                                              if  BR2_PACKAGE_BATOCERA_TARGET_X86
@@ -989,7 +991,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Quake 2
     select BR2_PACKAGE_LIBRETRO_VITAQUAKE2                  if  BR2_PACKAGE_BATOCERA_GLES3
     select BR2_PACKAGE_VKQUAKE2                             if  BR2_PACKAGE_BATOCERA_VULKAN && BR2_PACKAGE_XORG7
-    select BR2_PACKAGE_YQUAKE2                              # ALL
+    select BR2_PACKAGE_YQUAKE2                              if !BR2_riscv
     select BR2_PACKAGE_YQUAKE2_ROGUE                        if  BR2_PACKAGE_YQUAKE2
     select BR2_PACKAGE_YQUAKE2_XATRIX                       if  BR2_PACKAGE_YQUAKE2
     select BR2_PACKAGE_YQUAKE2_ZAERO                        if  BR2_PACKAGE_YQUAKE2
@@ -1213,7 +1215,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8550
 
-    # Gamecube / Wii
+    # Gamecube / Triforce / Wii
     select BR2_PACKAGE_DOLPHIN_EMU                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
                                                                 BR2_PACKAGE_BATOCERA_BCM27XX            || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
@@ -1228,9 +1230,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     select BR2_PACKAGE_EDEN                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_RYUJINX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-
-    # Triforce
-    select BR2_PACKAGE_DOLPHIN_TRIFORCE                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Microsoft XBOX
     select BR2_PACKAGE_XEMU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1852,6 +1851,7 @@ config BR2_PACKAGE_BATOCERA_WAYLAND
     select BR2_PACKAGE_WAYLAND
     select BR2_PACKAGE_WAYLAND_UTILS
     select BR2_PACKAGE_WAYLAND_PROTOCOLS
+    select BR2_PACKAGE_GTK_LAYER_SHELL
 
 config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
     bool "batocera.linux wayland sway packages selection"

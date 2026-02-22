@@ -3,12 +3,12 @@
 # rott
 #
 ################################################################################
-# Version: Commits on Dec 22, 2025
-ROTT_VERSION = 7ecc532b7ab47d805b2c528797d1ca31876a49bf
+# Version: Commits on Feb 16, 2026
+ROTT_VERSION = 8ac55a77f842f2bb1953883cba94335dd021a758
 ROTT_SITE = $(call github,fabiangreffrath,taradino,$(ROTT_VERSION))
 ROTT_LICENSE = GPLv2
 ROTT_LICENSE_FILE = README.md
-
+ROTT_EMULATOR_INFO = rott.emulator.yml
 ROTT_DEPENDENCIES = sdl2 sdl2_mixer
 
 ROTT_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -27,3 +27,4 @@ endef
 ROTT_PRE_CONFIGURE_HOOKS += ROTT_FIX_SDL2MAIN
 
 $(eval $(cmake-package))
+$(eval $(emulator-info-package))

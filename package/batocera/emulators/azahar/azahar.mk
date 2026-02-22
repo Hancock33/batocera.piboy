@@ -3,8 +3,8 @@
 # azahar
 #
 ################################################################################
-# Version: Commits on Feb 13, 2026
-AZAHAR_VERSION = 91abe7f7d07d840bcc8c45e3b4ed9e0ded110f56
+# Version: Commits on Feb 22, 2026
+AZAHAR_VERSION = 43cecd1692f09aa25d527987f07aabda68ee63d4
 AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
 AZAHAR_SITE_METHOD=git
 AZAHAR_GIT_SUBMODULES = YES
@@ -50,7 +50,6 @@ ifeq ($(BR2_PACKAGE_QT6),y)
     AZAHAR_CONF_OPTS += -DENABLE_QT_UPDATE_CHECKER=OFF
 else
     AZAHAR_CONF_OPTS += -DENABLE_QT=OFF
-    AZAHAR_CONF_OPTS += -DENABLE_SDL2_FRONTEND=ON
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)

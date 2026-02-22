@@ -74,6 +74,3 @@ custom_features:
       Simplified Chinese: "11"
 systems:
   - namco2x6
-  - name: ps2
-    exclude_extensions:
-      - m3u

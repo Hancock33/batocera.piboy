@@ -1449,7 +1449,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 263f7cdc9447..5d4c51a6dd74 100644
+index 249b97aee258..f8574bc94218 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -158,6 +158,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -1462,7 +1462,7 @@ index 263f7cdc9447..5d4c51a6dd74 100644
  /**
   * DOC: overview
   *
-@@ -9930,7 +9933,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9923,7 +9926,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -1472,7 +1472,7 @@ index 263f7cdc9447..5d4c51a6dd74 100644
  	bool pflip_present = false;
  	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/dc/dc.h b/drivers/gpu/drm/amd/display/dc/dc.h
-index f24ece2eafc5..b9bf4ad8d73b 100644
+index 29edfa51ea2c..94147fcf16c2 100644
 --- a/drivers/gpu/drm/amd/display/dc/dc.h
 +++ b/drivers/gpu/drm/amd/display/dc/dc.h
 @@ -68,7 +68,7 @@ struct dcn_dccg_reg_state;

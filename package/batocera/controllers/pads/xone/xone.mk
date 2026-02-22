@@ -3,10 +3,10 @@
 # xone
 #
 ################################################################################
-# Version: Commits on Feb 06, 2026
-XONE_VERSION = 2fe1386074c73deec984dd42c3781688913df2ea
+# Version: Commits on Feb 15, 2026
+XONE_VERSION = 725a46c45f06475bf7631d9ca1852f9778df128f
 XONE_SITE = $(call github,dlundqvist,xone,$(XONE_VERSION))
-XONE_DEPENDENCIES = host-cabextract host-coreutils host-libcurl libusb
+XONE_DEPENDENCIES = host-cabextract host-libcurl libusb
 
 XONE_FIRMWARE_URLS = \
 https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2017/03/2ea9591b-f751-442c-80ce-8f4692cdc67b_6b555a3a288153cf04aec6e03cba360afe2fce34.cab \
@@ -47,7 +47,7 @@ define XONE_PREPARE_FIRMWARE
 		mkdir -p "$$TEMP_EXTRACT_DIR"; \
 		$(HOST_DIR)/bin/cabextract -d "$$TEMP_EXTRACT_DIR" "$$TEMP_CAB"; \
 		if [ -f "$$TEMP_EXTRACT_DIR/$$FILENAME" ]; then \
-			echo "$$HASH  $$TEMP_EXTRACT_DIR/$$FILENAME" | $(HOST_DIR)/bin/sha256sum -c -; \
+			echo "$$HASH  $$TEMP_EXTRACT_DIR/$$FILENAME" | sha256sum -c -; \
 			mv "$$TEMP_EXTRACT_DIR/$$FILENAME" "$$FIRMWARE_STAGING_DIR/$$DEST_NAME"; \
 			echo "--- Staged $$DEST_NAME ---"; \
 		else \

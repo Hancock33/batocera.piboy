@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Feb 15, 2026
-RETROARCH_VERSION = c556a64e76c688a6f106dc93dd1cce8ffc9aeea5
+# Version: Commits on Feb 22, 2026
+RETROARCH_VERSION = f724cc370fa6863c15bd4e52c3435bf29e628a21
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -193,14 +193,12 @@ define RETROARCH_INSTALL_STAGING_CMDS
 	$(MAKE) CXX="$(TARGET_CXX)" -C $(@D) DESTDIR=$(STAGING_DIR) install
 endef
 
-#ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
 define RETROARCH_LIBRETRO_FFMPEG_INSTALL
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/cores/libretro-ffmpeg
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/cores/libretro-ffmpeg/ffmpeg_libretro.so $(TARGET_DIR)/usr/lib/libretro/ffmpeg_libretro.so
 endef
 RETROARCH_POST_INSTALL_TARGET_HOOKS += RETROARCH_LIBRETRO_FFMPEG_INSTALL
-#endif
 
 $(eval $(generic-package))
 $(eval $(emulator-info-package))
