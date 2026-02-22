@@ -1,8 +1,8 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index 998b556184..ccffb9c406 100644
+index 78a5241576..0bf36359ef 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -343,6 +343,8 @@ const Info<std::string> MAIN_SKYLANDERS_PATH{{System::Main, "General", "Skylande
+@@ -347,6 +347,8 @@ const Info<std::string> MAIN_SKYLANDERS_PATH{{System::Main, "General", "Skylande
                                               ""};
  const Info<bool> MAIN_TIME_TRACKING{{System::Main, "General", "EnablePlayTimeTracking"}, true};
  
@@ -12,7 +12,7 @@ index 998b556184..ccffb9c406 100644
  {
    return Config::Info<std::string>{{Config::System::Main, "General", fmt::format("ISOPath{}", idx)},
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 3fedccbaa7..ab5f7a19e3 100644
+index 1107494b42..e204570b13 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
 @@ -217,6 +217,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
@@ -25,10 +25,10 @@ index 3fedccbaa7..ab5f7a19e3 100644
  void SetIsoPaths(const std::vector<std::string>& paths);
  
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 3f90c18ca1..9fbf375c0f 100644
+index ee2a577506..892f69ab10 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -1493,6 +1493,10 @@ void MainWindow::StateLoadSlot()
+@@ -1525,6 +1525,10 @@ void MainWindow::StateLoadSlot()
  
  void MainWindow::StateSaveSlot()
  {

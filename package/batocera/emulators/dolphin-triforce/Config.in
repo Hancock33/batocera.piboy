@@ -1,7 +1,0 @@
-config BR2_PACKAGE_DOLPHIN_TRIFORCE
-	bool "dolphin-triforce"
-
-	help
-	  TriForce arcade emulator
-
-comment "DOLPHIN_TRIFORCE needs a toolchain w/ C++, OpenGL"

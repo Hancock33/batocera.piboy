@@ -1,5 +1,5 @@
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 9f25e66ad4..61633c8a1e 100644
+index 962f75e96c..0bb65eff26 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
 @@ -922,8 +922,13 @@ void MainWindow::OnStopComplete()

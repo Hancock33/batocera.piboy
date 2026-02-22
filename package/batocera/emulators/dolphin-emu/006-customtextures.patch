@@ -1,8 +1,8 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index d11d48c898..72b03cb7f0 100644
+index 441c5dd031..902a571300 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -327,6 +327,7 @@ bool ShouldUseDPL2Decoder()
+@@ -331,6 +331,7 @@ bool ShouldUseDPL2Decoder()
  const Info<std::string> MAIN_DUMP_PATH{{System::Main, "General", "DumpPath"}, ""};
  const Info<std::string> MAIN_LOAD_PATH{{System::Main, "General", "LoadPath"}, ""};
  const Info<std::string> MAIN_RESOURCEPACK_PATH{{System::Main, "General", "ResourcePackPath"}, ""};
@@ -11,7 +11,7 @@ index d11d48c898..72b03cb7f0 100644
  const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH{{System::Main, "General", "WiiSDCardPath"}, ""};
  const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH{
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 00c11ea6dd..3fedccbaa7 100644
+index 1946045e48..1107494b42 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
 @@ -205,6 +205,7 @@ extern const Info<bool> MAIN_TIME_TRACKING;
@@ -23,7 +23,7 @@ index 00c11ea6dd..3fedccbaa7 100644
  extern const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH;
  extern const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH;
 diff --git a/Source/Core/UICommon/UICommon.cpp b/Source/Core/UICommon/UICommon.cpp
-index 43973a02e0..7c332deff4 100644
+index c56d1e1d09..02c8460179 100644
 --- a/Source/Core/UICommon/UICommon.cpp
 +++ b/Source/Core/UICommon/UICommon.cpp
 @@ -93,6 +93,12 @@ static void CreateResourcePackPath(std::string path)
