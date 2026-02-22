@@ -62,7 +62,7 @@ endef
 define DOLPHIN_EMU_INI
 	mkdir -p $(TARGET_DIR)/usr/share/dolphin-emu/sys/GameSettings
 	# copy extra triforce ini files
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/sys/GameSettings
+	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/sys/GameSettings
 	cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-emu dolphin-emu.desktopconfig
 endef
 
