@@ -1022,8 +1022,8 @@ toaplan:
   emulator: libretro
   core:     mame078plus
 triforce:
-  emulator: dolphin_triforce
-  core:     dolphin_triforce
+  emulator: dolphin
+  core:     dolphin
   options:
     powersave: '1'
 tutor:

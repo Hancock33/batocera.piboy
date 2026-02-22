@@ -1077,8 +1077,8 @@ traider2:
   emulator: tr2x
   core:     tr2x
 triforce:
-  emulator: dolphin_triforce
-  core:     dolphin_triforce
+  emulator: dolphin
+  core:     dolphin
   options:
     powersave: '1'
 tutor:
