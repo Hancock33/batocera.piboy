@@ -269,7 +269,7 @@ def generateControllerConfig_triforce(system: Emulator, playersControllers: Cont
         'joystick2left': 'C-Stick/Left',
         'hotkey':        'Triforce/Test'
     }
-    
+
     triforceReverseAxes: dict[str | None, str] = {
         'Main Stick/Up':   'Main Stick/Down',
         'Main Stick/Left': 'Main Stick/Right',

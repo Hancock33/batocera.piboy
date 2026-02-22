@@ -3,8 +3,8 @@
 # mame-src
 #
 ################################################################################
-# Version: Commits on Feb 22, 2026
-MAME_SRC_VERSION = 7942b4a90c5012a738c1078b5bc88fdf8cda0a37
+# Version: Commits on Jan 29, 2026
+MAME_SRC_VERSION = mame0285
 MAME_SRC_SOURCE = mame-src-$(MAME_SRC_VERSION).tar.gz
 MAME_SRC_BRANCH = release0286
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))

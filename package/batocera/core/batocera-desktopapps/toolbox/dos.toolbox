@@ -28,7 +28,7 @@ Setup_Fonts() {
   for i in "${!textarray[@]}"; do
     i=$(yad --font --button="Reset to defaults":2 --button="Abort":1 --button="Next Item":0 --preview="${textarray[$i]}" --fontname="${f[$i]}")
     ret=$?
-    [[ $ret -eq 0 ]] && new_fonts="${new_fonts}|$i" 
+    [[ $ret -eq 0 ]] && new_fonts="${new_fonts}|$i"
     [[ $ret -eq 1 ]] && exit $ret
     [[ $ret -eq 2 ]] && { sed -i "s/^[^#]*${CONF_KEY}/#&/" "${CONF_FILE}"; exit $ret; }
   done
