@@ -1,0 +1,31 @@
+config BR2_PACKAGE_NTFS_PLUS
+	bool "ntfs-plus"
+	depends on BR2_USE_WCHAR
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on BR2_USE_MMU
+	depends on !BR2_STATIC_LIBS
+	help
+	  NTFS filesystem userspace utilities
+
+	  https://github.com/ntfsprogs-plus/ntfsprogs-plus
+
+if BR2_PACKAGE_NTFS_PLUS
+
+config BR2_PACKAGE_NTFS_PLUS_ENCRYPTED
+	bool "encrypted volumes"
+	depends on BR2_PACKAGE_LIBGPG_ERROR_ARCH_SUPPORTS # libgcrypt
+	select BR2_PACKAGE_GNUTLS
+	select BR2_PACKAGE_LIBGCRYPT
+	help
+	  Enable support for NTFS encrypted volumes.
+
+config BR2_PACKAGE_NTFS_PLUS_NTFSPROGS
+	bool "ntfsprogs"
+	help
+	  Install NTFS utilities.
+
+endif
+
+comment "ntfs-plus needs a toolchain w/ wchar, threads, dynamic library"
+	depends on BR2_USE_MMU
+	depends on !BR2_USE_WCHAR || !BR2_TOOLCHAIN_HAS_THREADS || BR2_STATIC_LIBS
