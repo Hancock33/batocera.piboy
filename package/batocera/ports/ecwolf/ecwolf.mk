@@ -3,8 +3,8 @@
 # ecwolf
 #
 ################################################################################
-# Version: Commits on Sept 14, 2025
-ECWOLF_VERSION = 51994bef41dc3598d370761371773e47859affd6
+# Version: Commits on Feb 18, 2026
+ECWOLF_VERSION = 1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e
 ECWOLF_SITE = https://github.com/ECWolfEngine/ECWolf.git
 ECWOLF_SITE_METHOD=git
 ECWOLF_GIT_SUBMODULES=YES

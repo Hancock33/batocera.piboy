@@ -3,8 +3,8 @@
 # opentyrian2000
 #
 ################################################################################
-# Version: Commits on Jun 24, 2025
-OPENTYRIAN2000_VERSION = dfe1050e1abaca0bae7b699d117d66324b88425b
+# Version: Commits on Feb 22, 2026
+OPENTYRIAN2000_VERSION = aad5aca01af139c0b089237c38ef765f7a84355d
 OPENTYRIAN2000_SITE = $(call github,KScl,opentyrian2000,$(OPENTYRIAN2000_VERSION))
 OPENTYRIAN2000_EMULATOR_INFO = opentyrian.emulator.yml
 OPENTYRIAN2000_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
