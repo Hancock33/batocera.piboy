@@ -3,8 +3,8 @@
 # openjazz
 #
 ################################################################################
-# Version: Commits on Feb 22, 2026
-OPENJAZZ_VERSION = d6ad5e3438a597d40ae658d60406b6e844a3a3df
+# Version: Commits on Feb 23, 2026
+OPENJAZZ_VERSION = 0a27146060ea5ba008564d927134a92c8e73788f
 OPENJAZZ_SITE =  $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
 OPENJAZZ_DEPENDENCIES = sdl2
 OPENJAZZ_LICENSE = GPLv2
