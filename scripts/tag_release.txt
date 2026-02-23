@@ -27,6 +27,7 @@ libzedmd.mk
 mt32emu.mk
 nghttp3.mk
 ngtcp2.mk
+ntfs-plus.mk
 ossp.mk
 plutosvg.mk
 plutovg.mk

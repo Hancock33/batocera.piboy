@@ -3,10 +3,10 @@
 # opentyrian2000
 #
 ################################################################################
-# Version: Commits on Jun 24, 2025
-OPENTYRIAN2000_VERSION = dfe1050e1abaca0bae7b699d117d66324b88425b
+# Version: Commits on Feb 22, 2026
+OPENTYRIAN2000_VERSION = aad5aca01af139c0b089237c38ef765f7a84355d
 OPENTYRIAN2000_SITE = $(call github,KScl,opentyrian2000,$(OPENTYRIAN2000_VERSION))
-
+OPENTYRIAN2000_EMULATOR_INFO = opentyrian.emulator.yml
 OPENTYRIAN2000_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
 OPENTYRIAN2000_LICENSE = GPL-2.0
 OPENTYRIAN2000_EXTRA_DOWNLOADS = https://www.camanis.net/tyrian/tyrian2000.zip
@@ -32,3 +32,4 @@ define OPENTYRIAN2000_INSTALL_TARGET_CMDS
 endef
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))
