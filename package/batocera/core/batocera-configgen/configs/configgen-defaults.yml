@@ -652,7 +652,7 @@ nblood:
     powersave: '1'
 nds:
   emulator: libretro
-  core:     desmume
+  core:     melonds
 neogeo:
   emulator: libretro
   core:     fbneo
