@@ -6508,10 +6508,10 @@ index 000000000000..1892a3934d3a
 +#endif /* defined _NTFS_ATTRLIST_H */
 diff --git a/fs/ntfs/bdev-io.c b/fs/ntfs/bdev-io.c
 new file mode 100644
-index 000000000000..234061d2740c
+index 000000000000..67e65c88d681
 --- /dev/null
 +++ b/fs/ntfs/bdev-io.c
-@@ -0,0 +1,109 @@
+@@ -0,0 +1,117 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS block device I/O.
@@ -6526,54 +6526,62 @@ index 000000000000..234061d2740c
 +/*
 + * ntfs_bdev_read - Read data directly from block device using bio
 + * @bdev:	block device to read from
-+ * @sector:	starting sector number
-+ * @count:	number of bytes to read
 + * @data:	destination buffer
++ * @start:	starting byte offset on the block device
++ * @size:	number of bytes to read
 + *
-+ * Reads @count bytes starting from @sector directly from the block device
-+ * using one or more BIOs. This function bypasses the page cache completely
-+ * and performs synchronous I/O with REQ_META | REQ_SYNC flags set.
++ * Reads @size bytes starting from byte offset @start directly from the block
++ * device using one or more BIOs. This function bypasses the page cache
++ * completely and performs synchronous I/O with REQ_META | REQ_SYNC flags set.
++ *
++ * The @start offset must be sector-aligned (512 bytes). If it is not aligned,
++ * the function will return -EINVAL.
 + *
 + * If the destination buffer @data is not a vmalloc address, it falls back
 + * to the more efficient bdev_rw_virt() helper.
++ *
++ * Return: 0 on success, negative error code on failure.
 + */
-+int ntfs_bdev_read(struct block_device *bdev, sector_t sector, unsigned int count,
-+		 char *data)
++int ntfs_bdev_read(struct block_device *bdev, char *data, loff_t start, size_t size)
 +{
 +	unsigned int done = 0, added;
 +	int error;
 +	struct bio *bio;
 +	enum req_op op;
++	sector_t sector = start >> SECTOR_SHIFT;
++
++	if (start & (SECTOR_SIZE - 1))
++		return -EINVAL;
 +
 +	op = REQ_OP_READ | REQ_META | REQ_SYNC;
 +	if (!is_vmalloc_addr(data))
-+		return bdev_rw_virt(bdev, sector, data, count, op);
++		return bdev_rw_virt(bdev, sector, data, size, op);
 +
 +	bio = bio_alloc(bdev,
-+			bio_max_segs(DIV_ROUND_UP(count, PAGE_SIZE)),
++			bio_max_segs(DIV_ROUND_UP(size, PAGE_SIZE)),
 +			op, GFP_KERNEL);
 +	bio->bi_iter.bi_sector = sector;
 +
 +	do {
-+		added = bio_add_vmalloc_chunk(bio, data + done, count - done);
++		added = bio_add_vmalloc_chunk(bio, data + done, size - done);
 +		if (!added) {
 +			struct bio	*prev = bio;
 +
 +			bio = bio_alloc(prev->bi_bdev,
-+					bio_max_segs(DIV_ROUND_UP(count - done, PAGE_SIZE)),
++					bio_max_segs(DIV_ROUND_UP(size - done, PAGE_SIZE)),
 +					prev->bi_opf, GFP_KERNEL);
 +			bio->bi_iter.bi_sector = bio_end_sector(prev);
 +			bio_chain(prev, bio);
 +			submit_bio(prev);
 +		}
 +		done += added;
-+	} while (done < count);
++	} while (done < size);
 +
 +	error = submit_bio_wait(bio);
 +	bio_put(bio);
 +
 +	if (op == REQ_OP_READ)
-+		invalidate_kernel_vmap_range(data, count);
++		invalidate_kernel_vmap_range(data, size);
 +	return error;
 +}
 +
@@ -6588,7 +6596,7 @@ index 000000000000..234061d2740c
 + * at byte offset @start. The write is performed entirely through the page
 + * cache of the block device's address space.
 + */
-+int ntfs_bdev_write(struct super_block *sb, void *buf, loff_t start, loff_t size)
++int ntfs_bdev_write(struct super_block *sb, void *buf, loff_t start, size_t size)
 +{
 +	pgoff_t idx, idx_end;
 +	loff_t offset, end = start + size;
@@ -9045,10 +9053,10 @@ index 000000000000..d8831d492d7d
 +#endif /* _LINUX_NTFS_DEBUG_H */
 diff --git a/fs/ntfs/dir.c b/fs/ntfs/dir.c
 new file mode 100644
-index 000000000000..c421a6f21ce7
+index 000000000000..ae7aa0adc836
 --- /dev/null
 +++ b/fs/ntfs/dir.c
-@@ -0,0 +1,1233 @@
+@@ -0,0 +1,1236 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel directory operations.
@@ -9065,6 +9073,8 @@ index 000000000000..c421a6f21ce7
 +#include "ntfs.h"
 +#include "index.h"
 +#include "reparse.h"
++
++#include <linux/filelock.h>
 +
 +/*
 + * The little endian Unicode string $I30 as a global constant.
@@ -10281,6 +10291,7 @@ index 000000000000..c421a6f21ce7
 +#ifdef CONFIG_COMPAT
 +	.compat_ioctl	= ntfs_compat_ioctl,
 +#endif
++	.setlease	= generic_setlease,
 +};
 diff --git a/fs/ntfs/dir.h b/fs/ntfs/dir.h
 new file mode 100644
@@ -10322,10 +10333,10 @@ index 000000000000..a38c6b071678
 +#endif /* _LINUX_NTFS_FS_DIR_H */
 diff --git a/fs/ntfs/ea.c b/fs/ntfs/ea.c
 new file mode 100644
-index 000000000000..8620305aceec
+index 000000000000..82ad9b61ec64
 --- /dev/null
 +++ b/fs/ntfs/ea.c
-@@ -0,0 +1,947 @@
+@@ -0,0 +1,942 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Pocessing of EA's
@@ -11117,8 +11128,7 @@ index 000000000000..8620305aceec
 +	int err;
 +	void *buf;
 +
-+	/* Allocate PATH_MAX bytes. */
-+	buf = __getname();
++	buf = kmalloc(PATH_MAX, GFP_KERNEL);
 +	if (!buf)
 +		return ERR_PTR(-ENOMEM);
 +
@@ -11146,7 +11156,7 @@ index 000000000000..8620305aceec
 +	if (!IS_ERR(acl))
 +		set_cached_acl(inode, type, acl);
 +
-+	__putname(buf);
++	kfree(buf);
 +
 +	return acl;
 +}
@@ -11195,13 +11205,9 @@ index 000000000000..8620305aceec
 +		value = NULL;
 +		flags = XATTR_REPLACE;
 +	} else {
-+		size = posix_acl_xattr_size(acl->a_count);
-+		value = kmalloc(size, GFP_NOFS);
++		value = posix_acl_to_xattr(&init_user_ns, acl, &size, GFP_NOFS);
 +		if (!value)
 +			return -ENOMEM;
-+		err = posix_acl_to_xattr(&init_user_ns, acl, value, size);
-+		if (err < 0)
-+			goto out;
 +		flags = 0;
 +	}
 +
@@ -11311,10 +11317,10 @@ index 000000000000..1f63bd55e057
 +#endif /* _LINUX_NTFS_EA_H */
 diff --git a/fs/ntfs/file.c b/fs/ntfs/file.c
 new file mode 100644
-index 000000000000..f6a0a62981d3
+index 000000000000..4b9126f9fe52
 --- /dev/null
 +++ b/fs/ntfs/file.c
-@@ -0,0 +1,1158 @@
+@@ -0,0 +1,1161 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel file operations.
@@ -11339,6 +11345,8 @@ index 000000000000..f6a0a62981d3
 +#include "ea.h"
 +#include "iomap.h"
 +#include "bitmap.h"
++
++#include <linux/filelock.h>
 +
 +/*
 + * ntfs_file_open - called when an inode is about to be opened
@@ -12445,6 +12453,7 @@ index 000000000000..f6a0a62981d3
 +	.compat_ioctl	= ntfs_compat_ioctl,
 +#endif
 +	.fallocate	= ntfs_fallocate,
++	.setlease	= generic_setlease,
 +};
 +
 +const struct inode_operations ntfs_file_inode_ops = {
@@ -14715,10 +14724,10 @@ index 000000000000..e68d6fabaf9f
 +#endif /* _LINUX_NTFS_INDEX_H */
 diff --git a/fs/ntfs/inode.c b/fs/ntfs/inode.c
 new file mode 100644
-index 000000000000..e822c97f33e8
+index 000000000000..7d4c33b3b7a2
 --- /dev/null
 +++ b/fs/ntfs/inode.c
-@@ -0,0 +1,3821 @@
+@@ -0,0 +1,3820 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel inode handling.
@@ -16492,9 +16501,8 @@ index 000000000000..e822c97f33e8
 +		if (al + rl_byte_len > al_end)
 +			rl_byte_len = al_end - al;
 +
-+		err = ntfs_bdev_read(sb->s_bdev, rl_byte_off,
-+				   round_up(rl_byte_len, SECTOR_SIZE),
-+				   al);
++		err = ntfs_bdev_read(sb->s_bdev, al, rl_byte_off,
++				   round_up(rl_byte_len, SECTOR_SIZE));
 +		if (err) {
 +			ntfs_error(sb, "Cannot read attribute list.");
 +			goto err_out;
@@ -16616,8 +16624,8 @@ index 000000000000..e822c97f33e8
 +		nr_blocks = 1;
 +
 +	/* Load $MFT/$DATA's first mft record. */
-+	err = ntfs_bdev_read(sb->s_bdev, ntfs_cluster_to_bytes(vol, vol->mft_lcn) >>
-+			   SECTOR_SHIFT, i, (char *)m);
++	err = ntfs_bdev_read(sb->s_bdev, (char *)m,
++			     ntfs_cluster_to_bytes(vol, vol->mft_lcn), i);
 +	if (err) {
 +		ntfs_error(sb, "Device read failed.");
 +		goto err_out;
@@ -24475,10 +24483,10 @@ index 000000000000..7068425735f1
 +#endif /* _LINUX_NTFS_MALLOC_H */
 diff --git a/fs/ntfs/mft.c b/fs/ntfs/mft.c
 new file mode 100644
-index 000000000000..79fbe90e2bb4
+index 000000000000..56012477d3f0
 --- /dev/null
 +++ b/fs/ntfs/mft.c
-@@ -0,0 +1,2920 @@
+@@ -0,0 +1,2922 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel mft record operations.
@@ -25778,7 +25786,8 @@ index 000000000000..79fbe90e2bb4
 +		ret = ntfs_mft_attr_extend(mftbmp_ni);
 +		if (!ret)
 +			goto extended_ok;
-+		status.mp_extended = 1;
++		if (ret != -EAGAIN)
++			status.mp_extended = 1;
 +		goto undo_alloc;
 +	}
 +	status.mp_rebuilt = 1;
@@ -25803,6 +25812,7 @@ index 000000000000..79fbe90e2bb4
 +		 * first ensure the changes will make it to disk later.
 +		 */
 +		mark_mft_record_dirty(ctx->ntfs_ino);
++extended_ok:
 +		ntfs_attr_reinit_search_ctx(ctx);
 +		ret = ntfs_attr_lookup(mftbmp_ni->type, mftbmp_ni->name,
 +				mftbmp_ni->name_len, CASE_SENSITIVE, 0, NULL,
@@ -25815,7 +25825,6 @@ index 000000000000..79fbe90e2bb4
 +		a = ctx->attr;
 +	}
 +
-+extended_ok:
 +	write_lock_irqsave(&mftbmp_ni->size_lock, flags);
 +	mftbmp_ni->allocated_size += vol->cluster_size;
 +	a->data.non_resident.allocated_size =
@@ -26215,7 +26224,8 @@ index 000000000000..79fbe90e2bb4
 +		ret = ntfs_mft_attr_extend(mft_ni);
 +		if (!ret)
 +			goto extended_ok;
-+		mp_extended = true;
++		if (ret != -EAGAIN)
++			mp_extended = true;
 +		goto undo_alloc;
 +	}
 +	mp_rebuilt = true;
@@ -26241,6 +26251,7 @@ index 000000000000..79fbe90e2bb4
 +		 * first ensure the changes will make it to disk later.
 +		 */
 +		mark_mft_record_dirty(ctx->ntfs_ino);
++extended_ok:
 +		ntfs_attr_reinit_search_ctx(ctx);
 +		ret = ntfs_attr_lookup(mft_ni->type, mft_ni->name,
 +				mft_ni->name_len, CASE_SENSITIVE, 0, NULL, 0,
@@ -26253,7 +26264,6 @@ index 000000000000..79fbe90e2bb4
 +		a = ctx->attr;
 +	}
 +
-+extended_ok:
 +	write_lock_irqsave(&mft_ni->size_lock, flags);
 +	mft_ni->allocated_size += NTFS_CLU_TO_B(vol, nr);
 +	a->data.non_resident.allocated_size =
@@ -29402,7 +29412,7 @@ index 000000000000..a21eeaec57b4
 +};
 diff --git a/fs/ntfs/ntfs.h b/fs/ntfs/ntfs.h
 new file mode 100644
-index 000000000000..16d4a7a2d7d6
+index 000000000000..45064dbcc2e4
 --- /dev/null
 +++ b/fs/ntfs/ntfs.h
 @@ -0,0 +1,294 @@
@@ -29420,6 +29430,7 @@ index 000000000000..16d4a7a2d7d6
 +
 +#include <linux/stddef.h>
 +#include <linux/kernel.h>
++#include <linux/hex.h>
 +#include <linux/module.h>
 +#include <linux/compiler.h>
 +#include <linux/fs.h>
@@ -29695,9 +29706,8 @@ index 000000000000..16d4a7a2d7d6
 +}
 +
 +/* From fs/ntfs/bdev-io.c */
-+int ntfs_bdev_read(struct block_device *bdev, sector_t sector, unsigned int count,
-+		 char *data);
-+int ntfs_bdev_write(struct super_block *sb, void *buf, loff_t start, loff_t size);
++int ntfs_bdev_read(struct block_device *bdev, char *data, loff_t start, size_t size);
++int ntfs_bdev_write(struct super_block *sb, void *buf, loff_t start, size_t size);
 +
 +#endif /* _LINUX_NTFS_H */
 diff --git a/fs/ntfs/object_id.c b/fs/ntfs/object_id.c
@@ -30613,7 +30623,7 @@ index 000000000000..28da40257f2a
 +#endif /* _LINUX_NTFS_REPARSE_H */
 diff --git a/fs/ntfs/runlist.c b/fs/ntfs/runlist.c
 new file mode 100644
-index 000000000000..fd6595067a25
+index 000000000000..c844845f627c
 --- /dev/null
 +++ b/fs/ntfs/runlist.c
 @@ -0,0 +1,2066 @@
@@ -31464,27 +31474,27 @@ index 000000000000..fd6595067a25
 +			lcn += deltaxcn;
 +#ifdef DEBUG
 +			/*
-+			 * On NTFS 1.2-, apparently can have lcn == LCN_HOLE to
++			 * On NTFS 1.2-, apparently can have lcn == -1 to
 +			 * indicate a hole. But we haven't verified ourselves
 +			 * whether it is really the lcn or the deltaxcn that is
-+			 * LCN_HOLE. So if either is found give us a message so we
++			 * -1. So if either is found give us a message so we
 +			 * can investigate it further!
 +			 */
 +			if (vol->major_ver < 3) {
-+				if (unlikely(deltaxcn == LCN_HOLE))
-+					ntfs_error(vol->sb, "lcn delta == LCN_HOLE");
-+				if (unlikely(lcn == LCN_HOLE))
-+					ntfs_error(vol->sb, "lcn == LCN_HOLE");
++				if (unlikely(deltaxcn == -1))
++					ntfs_error(vol->sb, "lcn delta == -1");
++				if (unlikely(lcn == -1))
++					ntfs_error(vol->sb, "lcn == -1");
 +			}
 +#endif
-+			/* Check lcn is not below LCN_HOLE. */
-+			if (unlikely(lcn < LCN_HOLE)) {
-+				ntfs_error(vol->sb, "Invalid s64 < -2 in mapping pairs array.");
++			/* Check lcn is not below -1. */
++			if (unlikely(lcn < -1)) {
++				ntfs_error(vol->sb, "Invalid s64 < -1 in mapping pairs array.");
 +				goto err_out;
 +			}
 +
 +			/* chkdsk accepts zero-sized runs only for holes */
-+			if ((lcn != LCN_HOLE) && !rl[rlpos].length) {
++			if ((lcn != -1) && !rl[rlpos].length) {
 +				ntfs_error(vol->sb,
 +					   "Invalid zero-sized data run(lcn : %lld).\n",
 +					   lcn);
@@ -32788,10 +32798,10 @@ index 000000000000..cc92e09fbf68
 +#endif /* _LINUX_NTFS_RUNLIST_H */
 diff --git a/fs/ntfs/super.c b/fs/ntfs/super.c
 new file mode 100644
-index 000000000000..3bb7ed32742d
+index 000000000000..3f559df4856b
 --- /dev/null
 +++ b/fs/ntfs/super.c
-@@ -0,0 +1,2769 @@
+@@ -0,0 +1,2770 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel super block handling.
@@ -33353,7 +33363,7 @@ index 000000000000..3bb7ed32742d
 +	if (!boot_sector)
 +		return NULL;
 +
-+	if (ntfs_bdev_read(sb->s_bdev, 0, PAGE_SIZE, boot_sector)) {
++	if (ntfs_bdev_read(sb->s_bdev, boot_sector, 0, PAGE_SIZE)) {
 +		if (!silent)
 +			ntfs_error(sb, "Unable to read primary boot sector.");
 +		kfree(boot_sector);
@@ -34647,6 +34657,7 @@ index 000000000000..3bb7ed32742d
 +
 +	iput(vol->mft_ino);
 +	vol->mft_ino = NULL;
++	blkdev_issue_flush(sb->s_bdev);
 +
 +	ntfs_volume_free(vol);
 +}
