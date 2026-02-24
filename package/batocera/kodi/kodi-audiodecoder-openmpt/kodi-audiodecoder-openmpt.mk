@@ -3,8 +3,8 @@
 # kodi-audiodecoder-openmpt
 #
 ################################################################################
-# Version: Commits on Sept 16, 2025
-KODI_AUDIODECODER_OPENMPT_VERSION = 22.0.2-Piers
+# Version: Commits on Feb 23, 2025
+KODI_AUDIODECODER_OPENMPT_VERSION = 22.0.3-Piers
 KODI_AUDIODECODER_OPENMPT_BRANCH = Piers
 KODI_AUDIODECODER_OPENMPT_SITE = $(call github,xbmc,audiodecoder.openmpt,$(KODI_AUDIODECODER_OPENMPT_VERSION))
 KODI_AUDIODECODER_OPENMPT_LICENSE = GPL-2.0+
