@@ -53,6 +53,7 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/images
 	sudo rm -rf $HOME/build-dir/batocera.$i/staging
 	sudo rm -rf $HOME/build-dir/batocera.$i/target
+	sudo rm -rf $HOME/build-dir/batocera.$i/target2
 
 	echo "Removing Installed Packages: "${RED}$i${ENDCOLOR}
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/*/.stamp*_installed
