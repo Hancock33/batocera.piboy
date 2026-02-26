@@ -367,6 +367,8 @@ class LindberghGenerator(Generator):
                 self.setConf(conf, "WHITE_BORDER_PERCENTAGE", bordersInnerSize)
                 self.setConf(conf, "BLACK_BORDER_PERCENTAGE", bordersOuterSize)
             self.setConf(conf, "BORDER_ENABLED", "true" if need_guns_border else "false")
+            if "letsgojusp" in romName.lower():
+                self.setConf(conf, "BORDER_ENABLED", "false")
         else:
             self.setConf(conf, "BORDER_ENABLED", "false")
 
@@ -956,7 +958,7 @@ class LindberghGenerator(Generator):
                         self.setConf(conf, f"PLAYER_{nplayer}_{action}", f"{evplayer}:KEY:{code}")
 
     def setup_eeprom(self):
-        DOWNLOADED_FLAG: Final = self.LINDBERGH_SAVES / "downloaded.txt"
+        DOWNLOADED_FLAG: Final = self.LINDBERGH_SAVES / "downloadedv43.txt"
         RAW_URL: Final = "https://raw.githubusercontent.com/batocera-linux/lindbergh-eeprom/main/lindbergh-eeprom.tar.xz"
 
         mkdir_if_not_exists(self.LINDBERGH_SAVES)
@@ -1007,10 +1009,16 @@ class LindberghGenerator(Generator):
                 shutil.copy2(srcCgGL, destCgGL)
                 _logger.debug("Overwriting bad lib: %s", destCgGL)
 
-        # remove any legacy libsegaapi.so
-        if Path(romDir, "libsegaapi.so").exists():
-            Path(romDir, "libsegaapi.so").unlink()
-            _logger.debug("Removed: %s/libsegaapi.so", romDir)
+        # Remove legacy/conflicting files from the ROM directory
+        legacy_files = ["libsegaapi.so", "lindbergh", "lindbergh.conf", "lindbergh.so"]
+        for legacy_file in legacy_files:
+            legacy_path = romDir / legacy_file
+            if legacy_path.exists():
+                try:
+                    legacy_path.unlink()
+                    _logger.debug("Removed legacy file: %s", legacy_path)
+                except Exception as e:
+                    _logger.debug("Could not remove legacy file %s: %s", legacy_path, e)
 
     def setup_config(
         self,
