@@ -207,6 +207,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_IW                                   # wireless country config for regulatoryDB
     select BR2_PACKAGE_LEDSPICER
     select BR2_PACKAGE_MERGERFS                             # Use FUSE to merge multiple directories into a single one
+    select BR2_PACKAGE_NTFS_3G                              # ntfs
+    select BR2_PACKAGE_NTFS_3G_NTFSPROGS                    # ntfs
     select BR2_PACKAGE_NTFS_PLUS                            # ntfs
     select BR2_PACKAGE_NTFS_PLUS_NTFSPROGS                  # ntfs
     select BR2_PACKAGE_NUMACTL                              # simple NUMA policy support
