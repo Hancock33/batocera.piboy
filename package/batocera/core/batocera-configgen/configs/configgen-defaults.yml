@@ -521,6 +521,8 @@ lcdgames:
 lindbergh:
   emulator: lindbergh-loader
   core:     lindbergh-loader
+  options:
+    hud_support: false
 lowresnx:
   emulator: libretro
   core:     lowresnx
