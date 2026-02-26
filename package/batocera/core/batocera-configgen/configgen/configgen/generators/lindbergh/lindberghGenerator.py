@@ -155,7 +155,7 @@ class LindberghGenerator(Generator):
                 "MESA_LOADER_DRIVER_OVERRIDE": "zink",
                 "VK_LOADER_LAYERS_DISABLE": "~all~"
             })
-        
+
         if system.config.get_bool("lindbergh_test"):
             commandArray.append("-t")
 
