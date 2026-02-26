@@ -144,18 +144,18 @@ class LindberghGenerator(Generator):
                 "SDL_AUDIODRIVER": "alsa",
             }
 
-        if system.config.get_bool("lindbergh_zink"):
-            environment.update(
-                {
-                    "MESA_LOADER_DRIVER_OVERRIDE": "zink"
-                }
-            )
-
         # Run command - Use -c * -o for ini files and -g for the game folder
         config_file = "/userdata/system/configs/lindbergh/lindbergh.ini"
         controller_file = "/userdata/system/configs/lindbergh/controls.ini"
         commandArray: list[str | Path] = [str(source_dir / "lindbergh"), "-c", config_file, "-o", controller_file, "-g", str(romDir)]
 
+        if system.config.get_bool("lindbergh_zink"):
+            commandArray.append("--zink")
+            environment.update({
+                "MESA_LOADER_DRIVER_OVERRIDE": "zink",
+                "VK_LOADER_LAYERS_DISABLE": "~all~"
+            })
+        
         if system.config.get_bool("lindbergh_test"):
             commandArray.append("-t")
 
@@ -291,8 +291,8 @@ class LindberghGenerator(Generator):
         self.setConf(conf, "OUTRUN_LENS_GLARE_ENABLED", "true" if system.config.get_bool("lindbergh_lens", True) else "false")
         self.setConf(conf, "BOOST_RENDER_RES",          "true" if system.config.get_bool("lindbergh_boost") else "false")
         self.setConf(conf, "SKIP_OUTRUN_CABINET_CHECK", "false" if "outrun" in romName.lower() or "outr2sdx" in romName.lower() else "true") #disable by default, otherwise no FFB
-        self.setConf(conf, "SRAM_PATH",   f'"{self.LINDBERGH_SAVES}/sram.bin.{Path(romName).stem}"')
-        self.setConf(conf, "EEPROM_PATH", f'"{self.LINDBERGH_SAVES}/eeprom.bin.{Path(romName).stem}"')
+        self.setConf(conf, "SRAM_PATH",   f'"{self.LINDBERGH_SAVES}/sram.bin.{Path(romName).stem.lower()}"')
+        self.setConf(conf, "EEPROM_PATH", f'"{self.LINDBERGH_SAVES}/eeprom.bin.{Path(romName).stem.lower()}"')
         self.setConf(conf, "HIDE_CURSOR", "true" if system.config.get_bool("lindbergh_hide_cursor", True) else "false")
         self.setConf(conf, "DISABLE_BUILTIN_FONT", "true" if system.config.get_bool("lindbergh_disable_font") else "false")
         self.setConf(conf, "DISABLE_BUILTIN_LOGOS", "true" if system.config.get_bool("lindbergh_disable_logos") else "false")
