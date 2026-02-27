@@ -115,6 +115,13 @@ custom_features:
     choices:
       Off (Default): 0
       'On': 1
+  lindbergh_network_patches:
+    group: GAME OPTIONS
+    prompt: NETWORK PATCHES
+    description: Required for multi-cabinet networking with specific IP address.
+    choices:
+      Off (Default): 0
+      'On': 1
   lindbergh_rambo_switch:
     group: GAME OPTIONS
     prompt: RAMBO GUNS SWITCH
@@ -133,6 +140,20 @@ custom_features:
     group: GAME OPTIONS
     prompt: SKIP OUTRUN CABINET CHECK
     description: Bypass steering wheel and actuator hardware checks in OutRun 2 SP SDX. This may help booting on some systems but will disable force feedback.
+    choices:
+      Off (Default): 0
+      'On': 1
+  lindbergh_disable_font:
+    group: GAME OPTIONS
+    prompt: ORIGINAL FONTS
+    description: Use the original fonts instead of the built in font.
+    choices:
+      Off (Default): 0
+      'On': 1
+  lindbergh_disable_logos:
+    group: GAME OPTIONS
+    prompt: ORIGINAL LOGOS
+    description: Use the original logos instead of the built in logos.
     choices:
       Off (Default): 0
       'On': 1
