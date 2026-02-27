@@ -1449,7 +1449,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 249b97aee258..f8574bc94218 100644
+index 80807f97a667..2de7709dbd38 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -158,6 +158,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -1462,7 +1462,7 @@ index 249b97aee258..f8574bc94218 100644
  /**
   * DOC: overview
   *
-@@ -9923,7 +9926,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9939,7 +9942,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -1472,7 +1472,7 @@ index 249b97aee258..f8574bc94218 100644
  	bool pflip_present = false;
  	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/dc/dc.h b/drivers/gpu/drm/amd/display/dc/dc.h
-index 29edfa51ea2c..94147fcf16c2 100644
+index f120dd5c05c6..f4ad961db8aa 100644
 --- a/drivers/gpu/drm/amd/display/dc/dc.h
 +++ b/drivers/gpu/drm/amd/display/dc/dc.h
 @@ -68,7 +68,7 @@ struct dcn_dccg_reg_state;
@@ -1485,7 +1485,7 @@ index 29edfa51ea2c..94147fcf16c2 100644
   * MAX_PLANES - representative of the upper bound of planes that are supported by the HW
   */
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-index f20b0e819aa6..dba07fe63ffd 100644
+index 18ff2c925e8e..543ac60e2602 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 @@ -96,6 +96,8 @@
@@ -1497,7 +1497,7 @@ index f20b0e819aa6..dba07fe63ffd 100644
  struct dce110_hw_seq_reg_offsets {
  	uint32_t crtc;
  };
-@@ -3330,6 +3332,13 @@ void dce110_enable_dp_link_output(
+@@ -3296,6 +3298,13 @@ void dce110_enable_dp_link_output(
  			link->dc->res_pool->dp_clock_source;
  	const struct link_hwss *link_hwss = get_link_hwss(link, link_res);
  	unsigned int i;
@@ -1699,7 +1699,7 @@ index ecb3059c68fb..c721270c29ba 100644
 +
  endif # HID_SUPPORT
 diff --git a/drivers/hid/Makefile b/drivers/hid/Makefile
-index 397b6cf5b6c3..4fb469b3b7e9 100644
+index 2ed494282153..7e21e01ce9fb 100644
 --- a/drivers/hid/Makefile
 +++ b/drivers/hid/Makefile
 @@ -34,6 +34,7 @@ obj-$(CONFIG_HID_APPLETB_BL)	+= hid-appletb-bl.o
@@ -1719,7 +1719,7 @@ index 397b6cf5b6c3..4fb469b3b7e9 100644
  obj-$(CONFIG_HID_LETSKETCH)	+= hid-letsketch.o
  obj-$(CONFIG_HID_LOGITECH)	+= hid-logitech.o
  obj-$(CONFIG_HID_LOGITECH)	+= hid-lg-g15.o
-@@ -177,6 +180,10 @@ obj-$(CONFIG_SPI_HID_APPLE_CORE)	+= spi-hid/
+@@ -179,6 +182,10 @@ obj-$(CONFIG_SPI_HID_APPLE_CORE)	+= spi-hid/
  
  obj-$(CONFIG_HID_DOCKCHANNEL)   += dockchannel-hid/
  
@@ -14238,10 +14238,10 @@ index 000000000000..3d56ec4403cd
 +MODULE_DESCRIPTION("Steam Deck LEDs driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/mfd/Kconfig b/drivers/mfd/Kconfig
-index aace5766b38a..6e2ada9bdab4 100644
+index f7f12a0428aa..9e8d434d3ef6 100644
 --- a/drivers/mfd/Kconfig
 +++ b/drivers/mfd/Kconfig
-@@ -2566,5 +2566,16 @@ config MFD_MAX7360
+@@ -2577,5 +2577,16 @@ config MFD_MAX7360
  	  additional drivers must be enabled in order to use the functionality
  	  of the device.
  
@@ -17269,7 +17269,7 @@ index dd372b0123a6..6fd218a87785 100644
  	size_t rddm_size;
  	size_t sbl_size;
 diff --git a/sound/hda/codecs/realtek/alc269.c b/sound/hda/codecs/realtek/alc269.c
-index 9afa52ff5e0c..8b45b9213ed4 100644
+index c1791b136620..ef2f41bb400c 100644
 --- a/sound/hda/codecs/realtek/alc269.c
 +++ b/sound/hda/codecs/realtek/alc269.c
 @@ -2555,6 +2555,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
@@ -17370,7 +17370,7 @@ index 9afa52ff5e0c..8b45b9213ed4 100644
  	[ALC299_FIXUP_PREDATOR_SPK] = {
  		.type = HDA_FIXUP_PINS,
  		.v.pins = (const struct hda_pintbl[]) {
-@@ -7370,6 +7426,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
+@@ -7372,6 +7428,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x2782, 0x1701, "Infinix Y4 Max", ALC269VC_FIXUP_INFINIX_Y4_MAX),
  	SND_PCI_QUIRK(0x2782, 0x1705, "MEDION E15433", ALC269VC_FIXUP_INFINIX_Y4_MAX),
  	SND_PCI_QUIRK(0x2782, 0x1707, "Vaio VJFE-ADL", ALC298_FIXUP_SPK_VOLUME),
@@ -17379,7 +17379,7 @@ index 9afa52ff5e0c..8b45b9213ed4 100644
  	SND_PCI_QUIRK(0x2782, 0x4900, "MEDION E15443", ALC233_FIXUP_MEDION_MTL_SPK),
  	SND_PCI_QUIRK(0x8086, 0x2074, "Intel NUC 8", ALC233_FIXUP_INTEL_NUC8_DMIC),
  	SND_PCI_QUIRK(0x8086, 0x2080, "Intel NUC 8 Rugged", ALC256_FIXUP_INTEL_NUC8_RUGGED),
-@@ -7496,6 +7554,7 @@ static const struct hda_model_fixup alc269_fixup_models[] = {
+@@ -7498,6 +7556,7 @@ static const struct hda_model_fixup alc269_fixup_models[] = {
  	{.id = ALC269VB_FIXUP_ASUS_ZENBOOK, .name = "asus-zenbook"},
  	{.id = ALC269VB_FIXUP_ASUS_ZENBOOK_UX31A, .name = "asus-zenbook-ux31a"},
  	{.id = ALC269VB_FIXUP_ORDISSIMO_EVE2, .name = "ordissimo"},

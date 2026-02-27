@@ -36652,10 +36652,10 @@ index b98e95d6b4d9..fc39e7330365 100644
 -#endif
  // clang-format on
 diff --git a/fs/ntfs3/file.c b/fs/ntfs3/file.c
-index 2e7b2e566ebe..0faa856fc470 100644
+index 5120bd785169..3e0d9cbb8039 100644
 --- a/fs/ntfs3/file.c
 +++ b/fs/ntfs3/file.c
-@@ -1478,14 +1478,4 @@ const struct file_operations ntfs_file_operations = {
+@@ -1482,14 +1482,4 @@ const struct file_operations ntfs_file_operations = {
  	.fallocate	= ntfs_fallocate,
  	.release	= ntfs_file_release,
  };
@@ -36671,7 +36671,7 @@ index 2e7b2e566ebe..0faa856fc470 100644
 -#endif
  // clang-format on
 diff --git a/fs/ntfs3/inode.c b/fs/ntfs3/inode.c
-index 0a9ac5efeb67..826840c257d3 100644
+index ec8e954f4426..ccb3d2acab44 100644
 --- a/fs/ntfs3/inode.c
 +++ b/fs/ntfs3/inode.c
 @@ -444,9 +444,7 @@ static struct inode *ntfs_read_mft(struct inode *inode,
@@ -36696,7 +36696,7 @@ index 0a9ac5efeb67..826840c257d3 100644
  		inode->i_mapping->a_ops = is_compressed(ni) ? &ntfs_aops_cmpr :
  							      &ntfs_aops;
  		if (ino != MFT_REC_MFT)
-@@ -1590,9 +1586,7 @@ int ntfs_create_inode(struct mnt_idmap *idmap, struct inode *dir,
+@@ -1589,9 +1585,7 @@ int ntfs_create_inode(struct mnt_idmap *idmap, struct inode *dir,
  
  	if (S_ISDIR(mode)) {
  		inode->i_op = &ntfs_dir_inode_operations;
@@ -36707,7 +36707,7 @@ index 0a9ac5efeb67..826840c257d3 100644
  	} else if (S_ISLNK(mode)) {
  		inode->i_op = &ntfs_link_inode_operations;
  		inode->i_fop = NULL;
-@@ -1601,9 +1595,7 @@ int ntfs_create_inode(struct mnt_idmap *idmap, struct inode *dir,
+@@ -1600,9 +1594,7 @@ int ntfs_create_inode(struct mnt_idmap *idmap, struct inode *dir,
  		inode_nohighmem(inode);
  	} else if (S_ISREG(mode)) {
  		inode->i_op = &ntfs_file_inode_operations;
@@ -36719,7 +36719,7 @@ index 0a9ac5efeb67..826840c257d3 100644
  							      &ntfs_aops;
  		init_rwsem(&ni->file.run_lock);
 diff --git a/fs/ntfs3/ntfs_fs.h b/fs/ntfs3/ntfs_fs.h
-index a4559c9f64e6..326644d23110 100644
+index 7b619bb151ce..82562d14115a 100644
 --- a/fs/ntfs3/ntfs_fs.h
 +++ b/fs/ntfs3/ntfs_fs.h
 @@ -501,7 +501,6 @@ struct inode *dir_search_u(struct inode *dir, const struct cpu_str *uni,
@@ -36753,7 +36753,7 @@ index a4559c9f64e6..326644d23110 100644
 -
  #endif /* _LINUX_NTFS3_NTFS_FS_H */
 diff --git a/fs/ntfs3/super.c b/fs/ntfs3/super.c
-index 8b0cf0ed4f72..4e0448af3e7e 100644
+index 0567a3b224ed..b06378014109 100644
 --- a/fs/ntfs3/super.c
 +++ b/fs/ntfs3/super.c
 @@ -415,12 +415,6 @@ static int ntfs_fs_reconfigure(struct fs_context *fc)
@@ -36777,7 +36777,7 @@ index 8b0cf0ed4f72..4e0448af3e7e 100644
  	sync_filesystem(sb);
  	swap(sbi->options, fc->fs_private);
  
-@@ -1670,8 +1663,6 @@ static int ntfs_fill_super(struct super_block *sb, struct fs_context *fc)
+@@ -1667,8 +1660,6 @@ static int ntfs_fill_super(struct super_block *sb, struct fs_context *fc)
  
  	ntfs_create_procdir(sb);
  
@@ -36786,7 +36786,7 @@ index 8b0cf0ed4f72..4e0448af3e7e 100644
  	return 0;
  
  put_inode_out:
-@@ -1796,7 +1787,7 @@ static const struct fs_context_operations ntfs_context_ops = {
+@@ -1791,7 +1782,7 @@ static const struct fs_context_operations ntfs_context_ops = {
   * This will called when mount/remount. We will first initialize
   * options so that if remount we can use just that.
   */
@@ -36795,7 +36795,7 @@ index 8b0cf0ed4f72..4e0448af3e7e 100644
  {
  	struct ntfs_mount_options *opts;
  	struct ntfs_sb_info *sbi;
-@@ -1850,11 +1841,6 @@ static int __ntfs_init_fs_context(struct fs_context *fc)
+@@ -1845,11 +1836,6 @@ static int __ntfs_init_fs_context(struct fs_context *fc)
  	return -ENOMEM;
  }
  
@@ -36807,7 +36807,7 @@ index 8b0cf0ed4f72..4e0448af3e7e 100644
  static void ntfs3_kill_sb(struct super_block *sb)
  {
  	struct ntfs_sb_info *sbi = sb->s_fs_info;
-@@ -1876,47 +1862,6 @@ static struct file_system_type ntfs_fs_type = {
+@@ -1871,47 +1857,6 @@ static struct file_system_type ntfs_fs_type = {
  	.fs_flags		= FS_REQUIRES_DEV | FS_ALLOW_IDMAP,
  };
  
@@ -36855,7 +36855,7 @@ index 8b0cf0ed4f72..4e0448af3e7e 100644
  // clang-format on
  
  static int __init init_ntfs_fs(void)
-@@ -1945,7 +1890,6 @@ static int __init init_ntfs_fs(void)
+@@ -1940,7 +1885,6 @@ static int __init init_ntfs_fs(void)
  		goto out1;
  	}
  
@@ -36863,7 +36863,7 @@ index 8b0cf0ed4f72..4e0448af3e7e 100644
  	err = register_filesystem(&ntfs_fs_type);
  	if (err)
  		goto out;
-@@ -1965,7 +1909,6 @@ static void __exit exit_ntfs_fs(void)
+@@ -1960,7 +1904,6 @@ static void __exit exit_ntfs_fs(void)
  	rcu_barrier();
  	kmem_cache_destroy(ntfs_inode_cachep);
  	unregister_filesystem(&ntfs_fs_type);
