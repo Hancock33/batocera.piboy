@@ -3,8 +3,8 @@
 # xpad-noone
 #
 ################################################################################
-# Version: Commits on Jun 26, 2025
-XPAD_NOONE_VERSION = 8e903676dd9514c07ce5e06e43c5f7d8cc51cb7d
+# Version: Commits on Feb 27, 2026
+XPAD_NOONE_VERSION = 3a85b3359f564d2aa13dca09bde85e3d6544722c
 XPAD_NOONE_SITE = $(call github,forkymcforkface,xpad-noone,$(XPAD_NOONE_VERSION))
 XPAD_NOONE_DEPENDENCIES = host-cabextract libusb
 
