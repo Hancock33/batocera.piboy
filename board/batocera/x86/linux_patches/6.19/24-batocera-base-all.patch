@@ -311,7 +311,7 @@ index e08767323763..2f1439d6fe7e 100644
  M:	Felix Kuehling <Felix.Kuehling@amd.com>
  L:	amd-gfx@lists.freedesktop.org
 diff --git a/Makefile b/Makefile
-index e9396657c546..fcadaa817b1a 100644
+index f486050e0bee..acd713d2bd35 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -888,11 +888,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -28374,26 +28374,6 @@ index ecb362025c4e..9de884b7fe01 100644
  };
  
  #define ICSK_TIME_RETRANS	1	/* Retransmit timer */
-diff --git a/include/net/netfilter/nf_tables.h b/include/net/netfilter/nf_tables.h
-index 7eac73f9b4ce..05f57ba62244 100644
---- a/include/net/netfilter/nf_tables.h
-+++ b/include/net/netfilter/nf_tables.h
-@@ -456,6 +456,7 @@ struct nft_set_ext;
-  *	@init: initialize private data of new set instance
-  *	@destroy: destroy private data of set instance
-  *	@gc_init: initialize garbage collection
-+ *	@abort_skip_removal: skip removal of elements from abort path
-  *	@elemsize: element private size
-  *
-  *	Operations lookup, update and delete have simpler interfaces, are faster
-@@ -513,6 +514,7 @@ struct nft_set_ops {
- 						   const struct nft_set *set);
- 	void				(*gc_init)(const struct nft_set *set);
- 
-+	bool				abort_skip_removal;
- 	unsigned int			elemsize;
- };
- 
 diff --git a/include/net/tcp.h b/include/net/tcp.h
 index e0a5cf2f7818..6a4a5f38c072 100644
 --- a/include/net/tcp.h
@@ -32929,40 +32909,6 @@ index 160080c9021d..06ee74f2c01d 100644
  	tcp_mstamp_refresh(tcp_sk(sk));
  	event = icsk->icsk_pending;
  
-diff --git a/net/netfilter/nf_tables_api.c b/net/netfilter/nf_tables_api.c
-index 8dae197c7faf..3b9c559ab123 100644
---- a/net/netfilter/nf_tables_api.c
-+++ b/net/netfilter/nf_tables_api.c
-@@ -7702,7 +7702,8 @@ static bool nft_trans_elems_new_abort(const struct nft_ctx *ctx,
- 			continue;
- 		}
- 
--		if (!te->set->ops->abort || nft_setelem_is_catchall(te->set, te->elems[i].priv))
-+		if (!te->set->ops->abort_skip_removal ||
-+		    nft_setelem_is_catchall(te->set, te->elems[i].priv))
- 			nft_setelem_remove(ctx->net, te->set, te->elems[i].priv);
- 
- 		if (!nft_setelem_is_catchall(te->set, te->elems[i].priv))
-diff --git a/net/netfilter/nft_set_pipapo.c b/net/netfilter/nft_set_pipapo.c
-index 6d77a5f0088a..18e1903b1d3d 100644
---- a/net/netfilter/nft_set_pipapo.c
-+++ b/net/netfilter/nft_set_pipapo.c
-@@ -2370,6 +2370,7 @@ const struct nft_set_type nft_set_pipapo_type = {
- 		.gc_init	= nft_pipapo_gc_init,
- 		.commit		= nft_pipapo_commit,
- 		.abort		= nft_pipapo_abort,
-+		.abort_skip_removal = true,
- 		.elemsize	= offsetof(struct nft_pipapo_elem, ext),
- 	},
- };
-@@ -2394,6 +2395,7 @@ const struct nft_set_type nft_set_pipapo_avx2_type = {
- 		.gc_init	= nft_pipapo_gc_init,
- 		.commit		= nft_pipapo_commit,
- 		.abort		= nft_pipapo_abort,
-+		.abort_skip_removal = true,
- 		.elemsize	= offsetof(struct nft_pipapo_elem, ext),
- 	},
- };
 diff --git a/scripts/Makefile.lib b/scripts/Makefile.lib
 index 28a1c08e3b22..13f100a3381d 100644
 --- a/scripts/Makefile.lib
