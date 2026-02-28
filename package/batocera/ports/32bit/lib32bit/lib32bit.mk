@@ -10,8 +10,8 @@ LIB32BIT_SITE = https://github.com/Hancock33/batocera-32bit-libs/releases/downlo
 LIB32BIT_EMULATOR_INFO = droidports.emulator.yml sorr.emulator.yml
 
 define LIB32BIT_EXTRACT_CMDS
-	mkdir -p $(TARGET_DIR)/{lib,usr}
-	tar xf $(DL_DIR)/$(LIB32BIT_DL_SUBDIR)/$(LIB32BIT_SOURCE) -C $(TARGET_DIR)/usr
+	mkdir -p $(TARGET_DIR)/{etc,lib,usr}
+	tar xf $(DL_DIR)/$(LIB32BIT_DL_SUBDIR)/$(LIB32BIT_SOURCE) -C $(TARGET_DIR)/
 endef
 
 define LIB32BIT_GLIBC_LIB
