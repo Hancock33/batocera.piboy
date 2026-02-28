@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 from os import environ
+from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
