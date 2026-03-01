@@ -138,7 +138,7 @@ Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|15c1aa3114b2b9cd
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|52f1d521db460953fd0c28fb5a944dd725eb9974|Feb 14, 2026
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|f6bab5a7ba521ce440e45d1aeef6122674be6ee9|Jan 19, 2026
-Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|08ac52f548390c7764b0e94b82ef31ad1ae75342|Feb 28, 2026
+Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|6fa0fe0f42d82ea771e0f7f374b324ecd33a329d|Mar 01, 2026
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|5cd4a43e16a7f3cd35628d481c347a0a98cfdfa2|Sept 13, 2025
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|94e9b349f947d5d312531a312bdcbac2e99b8368|Feb 27, 2026
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|fbe4dfc4c3e3f7eb27089def3d663a905b181845|Jul 31, 2025
@@ -211,7 +211,7 @@ Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|f8d66eae4e6f7454
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|c642bbd0680b5959180a420036108893d0aec961|Oct 21, 2024
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|f9ae8fd28b13070a945a829ccf41cbf90a21d0f7|Nov 18, 2024
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|5a40cd5514e63e691e39141d64267798357a1424|Sept 08, 2025
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|e0e8857f986bce1200881928193629a2105ae65d|Feb 25, 2026
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|05a4e917e2a3bae6d83b3c4e6940b048933ce670|Mar 01, 2026
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|e25f66765938d33f9ad5850e8d6cd597e55b7299|Oct 01, 2024
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|ae824f626ad80c8b7ee848698b3d1dcebe9a5ccb|Dec 12, 2025
 Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libretro-superflappybirds)|4b798ecc6948017ca79aad1ea20fe57e680228c8|Apr 13, 2023
@@ -461,7 +461,7 @@ Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|51726f3c82763ced2
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e|Feb 18, 2026
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|ba6b7bb1d50d7db820ec03d9bbd66404fab5c543|Feb 03, 2026
 Ports|[eldoom](http://github.com/dhewm/dhewm3-sdk)|ff4d6d201b0443465ccbf097e240b47f43f24787|Jan 26, 2026
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|15f6d1fc7892c16bcb9085a5f2a168c458969506|Mar 01, 2026
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|3f413360fdcf3dd5fde178d50706682ff2446630|Feb 27, 2026
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|3cd817d4b5b999e89aa68ae6f081bc4dbc82cf32|Mar 01, 2026
@@ -517,10 +517,10 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|d2fa3ad31e456bd44736d
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|ba2cc13eb04251986eac72a01ba4e1f2e3e68202|Feb 27, 2026
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|cd1cd3a9a6a1f2d2e555a36f55b828f36ca7fe06|Dec 27, 2025
 Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|b557d7ce797cec6e7028ba08fe2b8796b6581b95|Feb 10, 2026
-Ports|[trx](http://github.com/LostArtefacts/TRX)|bd8c0c96feeb13d14cd157c3701c6f8db706348f|Feb 28, 2026
+Ports|[trx](http://github.com/LostArtefacts/TRX)|b2f1ad7214a426e5620560aca5a5550700e25dc4|Mar 01, 2026
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
-Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.2|Feb 13, 2026
-Ports|[vkquake](http://github.com/Novum/vkQuake)|5dfca693cd1ad5c9095ec8ae17b8c1c3f856be33|Feb 27, 2026
+Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.3|Mar 01, 2026
+Ports|[vkquake](http://github.com/Novum/vkQuake)|26bffcc6547fc567718fc5365e1557dbb26e7cbc|Feb 27, 2026
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|5300b32803c1c61bc3b6bdf86a084c1db1a217ad|Jan 25, 2025
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|c19a824a421848707a4fba567c68881ee4e6dd4f|Feb 28, 2026
@@ -528,7 +528,7 @@ Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|ecb8db1a5e71047dcebb7b8d15838d7a00ab0768|Mar 01, 2026
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|0860e0c9b1e74a77db92ef3e2a8c1393fbbd648c|Mar 01, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|f2d8d96382755e79b172bb3ba49e3aa926fdce0f|Mar 01, 2026
-Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|79344b735abe7b60ffbdf4ae0e2132449091f143|Feb 28, 2026
+Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|8ebd2aa7e626ed096bea58c65d1deb867c0d2690|Mar 01, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|e5dbe4c3638664f900c122ae24fac1cde9a0bc9e|Feb 27, 2026
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0286|Feb 25, 2026
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
