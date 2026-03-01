@@ -3,8 +3,8 @@
 # box64
 #
 ################################################################################
-# Version: Commits on Feb 28, 2026
-BOX64_VERSION = 388d9c88a4740fad14cfbb3c063ef6678b66a684
+# Version: Commits on Mar 01, 2026
+BOX64_VERSION = dbfafb82fae4e556a3bede88610a966de72c421e
 BOX64_SITE = $(call github,ptitseb,box64,$(BOX64_VERSION))
 BOX64_SUPPORTS_IN_SOURCE_BUILD = NO
 BOX64_LICENSE = MIT
@@ -58,4 +58,3 @@ BOX64_BIN_ARCH_EXCLUDE = \
 	/usr/lib/box64-x86_64-linux-gnu \
 	/usr/lib/box64-i386-linux-gnu
 
-$(eval $(cmake-package))
