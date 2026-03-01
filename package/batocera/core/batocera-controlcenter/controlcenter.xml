@@ -2,7 +2,7 @@
 	<vgroup name="Top bar" role="header">
 		<feature>
 			<text display="${batocera-info --short}" refresh="2" />
-			<img display="/usr/share/batocera/controlcenter/bato-record.gif" if='${/usr/bin/batocera-record is_running}' refresh="2" height="3%" />
+			<img display="/usr/share/batocera/controlcenter/bato-record.gif" if='${/usr/bin/batocera-record is_running | grep true}' refresh="2" height="3%" />
 		</feature>
 		<feature display="Batocera">
 			<text display="${batocera-version | cut -d' ' -f1}" />
@@ -23,9 +23,9 @@
 	<hgroup name="Record" display="Record">
 		<!-- Main Controls Row -->
 		<feature display="Recording in progress">
-			<switch value='${batocera-record is_running}'
+			<switch value='${batocera-record is_running | grep true}'
 				action_on="batocera-record start" action_off="batocera-record stop"
-				afterclick="bcc_refresh" refresh="2" />
+				afterclick="bcc_close" refresh="2" />
 		</feature>
 
 		<!-- Quality Row: Clicking 'Select' will open the choice popup -->
@@ -66,7 +66,7 @@
 		</hgroup>
 		<vgroup>
 			<feature>
-				<button_confirm display="Quit game" action="hotkeygen --send exit" />
+				<button_confirm display="Quit game" action="hotkeygen --send exit" afterclick="bcc_close" />
 				<doc display="Manual" content='${IMG=$(curl http://127.0.0.1:1234/runningGame | jq -r .manual | sed "s/null//"); [ -n "$IMG" ] &amp;&amp; [ "$IMG" != "null" ] &amp;&amp; echo http://127.0.0.1:1234$IMG}' id="manual" refresh="3"/>
 				<doc display="Map" content='${IMG=$(curl http://127.0.0.1:1234/runningGame | jq -r .map | sed "s/null//"); [ -n "$IMG" ] &amp;&amp; [ "$IMG" != "null" ] &amp;&amp; echo http://127.0.0.1:1234$IMG}' id="map" refresh="3"/>
 			</feature>
@@ -108,7 +108,7 @@
 			action_on="batocera-planemode enable" action_off="batocera-planemode disable" refresh="2" align="left"/>
 		</feature>
 		<feature display="Stuck emulator?">
-			<button_confirm display="Kill it!" action="curl http://127.0.0.1:1234/emukill" align="left" />
+			<button_confirm display="Kill it!" action="curl http://127.0.0.1:1234/emukill" align="left" afterclick="bcc_close" />
 		</feature>
 		<feature name="PowerMode" display="Power Mode">
 			<choice display="Default"      action="batocera-power-mode default" />

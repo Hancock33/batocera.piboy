@@ -521,6 +521,8 @@ lcdgames:
 lindbergh:
   emulator: lindbergh-loader
   core:     lindbergh-loader
+  options:
+    hud_support: false
 lowresnx:
   emulator: libretro
   core:     lowresnx
@@ -652,7 +654,7 @@ nblood:
     powersave: '1'
 nds:
   emulator: libretro
-  core:     desmume
+  core:     melonds
 neogeo:
   emulator: libretro
   core:     fbneo

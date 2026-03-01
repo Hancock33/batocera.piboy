@@ -20,6 +20,8 @@ rm -rf $HOME/build-dir/batocera.*/build/batocera-system-* > /dev/null 2>&1
 rm -rf $HOME/build-dir/batocera.*/build/batocera-splash-* > /dev/null 2>&1
 rm -rf $HOME/build-dir/batocera.*/build/batocera-es-system-* > /dev/null 2>&1
 rm -rf $HOME/build-dir/batocera.*/build/batocera-configgen-* > /dev/null 2>&1
+rm -rf $HOME/build-dir/batocera.*/build/batocera-desktopapps-* > /dev/null 2>&1
+rm -rf $HOME/build-dir/batocera.*/build/batocera-scripts-* > /dev/null 2>&1
 
 read -p "Clean Batocera packages? (y/n)" yn
 case $yn in

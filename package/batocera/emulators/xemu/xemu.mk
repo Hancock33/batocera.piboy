@@ -3,15 +3,15 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Jan 20, 2026
-XEMU_VERSION = v0.8.133
+# Version: Commits on Feb 21, 2026
+XEMU_VERSION = v0.8.134
 XEMU_SITE = https://github.com/xemu-project/xemu.git
 XEMU_SITE_METHOD = git
 XEMU_GIT_SUBMODULES = YES
 XEMU_LICENSE = GPLv2
 XEMU_EMULATOR_INFO = xemu.emulator.yml
 XEMU_DEPENDENCIES = host-cmake host-meson host-pkgconf host-python-distlib host-python-pyyaml host-python3
-XEMU_DEPENDENCIES += json-for-modern-cpp libcurl libepoxy libglib2 libgtk3 libpcap libsamplerate sdl2 slirp zlib
+XEMU_DEPENDENCIES += json-for-modern-cpp libcurl libepoxy libglib2 libgtk3 libpcap libsamplerate sdl3 slirp zlib
 
 XEMU_EXTRA_DOWNLOADS = https://github.com/xemu-project/xemu-dashboard/releases/download/v20250806-0635/xbox_hdd.qcow2
 
@@ -22,6 +22,7 @@ XEMU_CONF_OPTS += --cross-prefix="$(STAGING_DIR)"
 XEMU_CONF_OPTS += --extra-cflags="-DXBOX=1"
 XEMU_CONF_OPTS += --disable-werror
 XEMU_CONF_OPTS += --enable-lto
+XEMU_CONF_OPTS += --enable-pixman
 
 # Vulkan
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
@@ -147,14 +148,14 @@ define XEMU_GET_SUBMODULES
 	# volk
 	mkdir -p $(@D)/subprojects/volk
 	curl -L -o volk.tar.gz \
-		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.335.0.tar.gz
+		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.341.0.tar.gz
 	$(TAR) -xzf volk.tar.gz --strip-components=1 -C $(@D)/subprojects/volk
 	rm volk.tar.gz
 
 	# SPIRV-Reflect
 	mkdir -p $(@D)/subprojects/SPIRV-Reflect
 	curl -L -o SPIRV-Reflect.tar.gz \
-		https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.335.0.tar.gz
+		https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.341.0.tar.gz
 	$(TAR) -xzf SPIRV-Reflect.tar.gz --strip-components=1 -C $(@D)/subprojects/SPIRV-Reflect
 	rm SPIRV-Reflect.tar.gz
 

@@ -20,7 +20,7 @@ index ee4f54d68349..2a711bb419b3 100644
  /* ------------------------------------------------------------------------
   * Driver initialization and cleanup
 diff --git a/drivers/media/usb/uvc/uvc_video.c b/drivers/media/usb/uvc/uvc_video.c
-index 2094e059d7d3..34f195eedb36 100644
+index ec76595f3c4b..dc42bc46a814 100644
 --- a/drivers/media/usb/uvc/uvc_video.c
 +++ b/drivers/media/usb/uvc/uvc_video.c
 @@ -271,6 +271,11 @@ static void uvc_fixup_video_ctrl(struct uvc_streaming *stream,

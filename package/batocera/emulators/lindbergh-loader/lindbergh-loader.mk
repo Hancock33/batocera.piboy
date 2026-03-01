@@ -3,8 +3,8 @@
 # lindbergh-loader
 #
 ################################################################################
-# Version: Commits on Feb 18, 2026
-LINDBERGH_LOADER_VERSION = 973cfb7058daa8109685631705742a4086295f29
+# Version: Commits on Feb 24, 2026
+LINDBERGH_LOADER_VERSION = 88e1628382949dc543d42e4ec366de009e19598f
 LINDBERGH_LOADER_SITE = $(call github,lindbergh-loader,lindbergh-loader,$(LINDBERGH_LOADER_VERSION))
 LINDBERGH_LOADER_LICENSE = ShareAlike 4.0 International
 LINDBERGH_LOADER_LICENSE_FILES = LICENSE.md
@@ -40,11 +40,12 @@ endef
 define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/extralibs
+	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/crosshairs
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
-
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so* $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 	#LD_LIBRARY_PATH=$(STAGING_DIR)/lib:$(STAGING_DIR)/usr/lib $(@D)/build/lindbergh --create config $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
 	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/*.ini $(TARGET_DIR)/usr/bin/lindbergh/
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/crosshairs/* $(TARGET_DIR)/usr/bin/lindbergh/crosshairs/
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so*     $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 endef
 endif
 

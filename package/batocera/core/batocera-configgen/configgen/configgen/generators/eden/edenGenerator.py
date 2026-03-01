@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 from os import environ
+from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
@@ -33,6 +34,9 @@ class EdenGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         mkdir_if_not_exists(EDEN_CONFIG)
+        mkdir_if_not_exists(Path("/userdata/roms/switch"))
+        mkdir_if_not_exists(Path("/userdata/roms/switch/dlc"))
+        mkdir_if_not_exists(Path("/userdata/roms/switch/update"))
 
         EdenGenerator.writeEdenConfig(EDEN_CONFIG / "qt-config.ini", system, playersControllers)
 
@@ -112,6 +116,9 @@ class EdenGenerator(Generator):
         edenConfig.set("UI", "Paths\\gamedirs\\1\\expanded\\default", "false")
         edenConfig.set("UI", "Paths\\gamedirs\\1\\path", "/userdata/roms/switch")
         edenConfig.set("UI", "Paths\\gamedirs\\size", "1")
+        edenConfig.set("UI", "Paths\\external_content_dirs\\size", "2")
+        edenConfig.set("UI", "Paths\\external_content_dirs\\1\\path", "/userdata/roms/switch/dlc")
+        edenConfig.set("UI", "Paths\\external_content_dirs\\2\\path", "/userdata/roms/switch/update")
 
         edenConfig.set("UI", "Screenshots\\enable_screenshot_save_as", "true")
         edenConfig.set("UI", "Screenshots\\enable_screenshot_save_as\\default", "false")

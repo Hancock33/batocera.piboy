@@ -3,8 +3,8 @@
 # liblgpio
 #
 ################################################################################
-# Version: Commits on Mar 28, 2024
-LIBLGPIO_VERSION = 746f0df43774175090b93abcc860b6733eefc09b
+# Version: Commits on Feb 24, 2026
+LIBLGPIO_VERSION = bcccd782eceedc5b278b3056ea81d5fbbb89c489
 LIBLGPIO_SITE = $(call github,joan2937,lg,$(LIBLGPIO_VERSION))
 LIBLGPIO_INSTALL_STAGING = YES
 

@@ -53,6 +53,7 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/images
 	sudo rm -rf $HOME/build-dir/batocera.$i/staging
 	sudo rm -rf $HOME/build-dir/batocera.$i/target
+	sudo rm -rf $HOME/build-dir/batocera.$i/target2
 
 	echo "Removing Package Sources: "${RED}$i${ENDCOLOR}
 	cd  $HOME/build-dir/batocera.$i/build && find -maxdepth 1 -type d ! -name 'host*' -a ! -name 'llvm-*' -exec rm -rf {} \;
