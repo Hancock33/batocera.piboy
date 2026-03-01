@@ -30,6 +30,7 @@ endef
 WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 
+WINE_PROTON_CONF_ENV += CROSSCFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types"
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_CONF_OPTS = \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-proton-$(WINE_PROTON_VERSION) \
