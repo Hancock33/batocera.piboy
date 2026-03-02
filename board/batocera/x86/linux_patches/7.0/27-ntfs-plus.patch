@@ -1,45 +1,6 @@
-diff --git a/CREDITS b/CREDITS
-index d74c8b2b7ed3..65305ac376ef 100644
---- a/CREDITS
-+++ b/CREDITS
-@@ -71,11 +71,6 @@ D: dosfs, LILO, some fd features, ATM, various other hacks here and there
- S: Buenos Aires
- S: Argentina
- 
--NTFS FILESYSTEM
--N: Anton Altaparmakov
--E: anton@tuxera.com
--D: NTFS filesystem
--
- N: Tim Alpaerts
- E: tim_alpaerts@toyota-motor-europe.com
- D: 802.2 class II logical link control layer,
-@@ -85,8 +80,8 @@ S: B-2610 Wilrijk-Antwerpen
- S: Belgium
- 
- N: Anton Altaparmakov
--E: aia21@cantab.net
--W: http://www-stu.christs.cam.ac.uk/~aia21/
-+E: anton@tuxera.com
-+W: http://www.tuxera.com/
- D: Author of new NTFS driver, various other kernel hacks.
- S: Christ's College
- S: Cambridge CB2 3BU
-diff --git a/Documentation/filesystems/index.rst b/Documentation/filesystems/index.rst
-index f4873197587d..0d1f88185b73 100644
---- a/Documentation/filesystems/index.rst
-+++ b/Documentation/filesystems/index.rst
-@@ -98,6 +98,7 @@ Documentation for filesystem implementations.
-    isofs
-    nilfs2
-    nfs/index
-+   ntfs
-    ntfs3
-    ocfs2
-    ocfs2-online-filecheck
 diff --git a/Documentation/filesystems/ntfs.rst b/Documentation/filesystems/ntfs.rst
 new file mode 100644
-index 000000000000..94f368fb3b06
+index 000000000000..5c96b04a4d7a
 --- /dev/null
 +++ b/Documentation/filesystems/ntfs.rst
 @@ -0,0 +1,159 @@
@@ -84,7 +45,7 @@ index 000000000000..94f368fb3b06
 +
 +The NTFS driver supports the following mount options:
 +
-+======================= ===================================================
++======================= ====================================================
 +iocharset=name          Character set to use for converting between
 +                        the encoding is used for user visible filename and
 +                        16 bit Unicode characters.
@@ -201,51 +162,7 @@ index 000000000000..94f368fb3b06
 +discard=<BOOL>          Issue block device discard for clusters freed on
 +                        file deletion/truncation to inform underlying
 +                        storage.
-+======================= ==================================================
-diff --git a/MAINTAINERS b/MAINTAINERS
-index 5c350fcf0ee9..2703fb520bfc 100644
---- a/MAINTAINERS
-+++ b/MAINTAINERS
-@@ -18904,6 +18904,15 @@ W:	https://github.com/davejiang/linux/wiki
- T:	git https://github.com/davejiang/linux.git
- F:	drivers/ntb/hw/intel/
- 
-+NTFS FILESYSTEM
-+M:	Namjae Jeon <linkinjeon@kernel.org>
-+M:	Hyunchul Lee <hyc.lee@gmail.com>
-+L:	linux-fsdevel@vger.kernel.org
-+S:	Maintained
-+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/linkinjeon/ntfs.git
-+F:	Documentation/filesystems/ntfs.rst
-+F:	fs/ntfs/
-+
- NTFS3 FILESYSTEM
- M:	Konstantin Komarov <almaz.alexandrovich@paragon-software.com>
- L:	ntfs3@lists.linux.dev
-diff --git a/fs/Kconfig b/fs/Kconfig
-index 0bfdaecaa877..43cb06de297f 100644
---- a/fs/Kconfig
-+++ b/fs/Kconfig
-@@ -152,6 +152,7 @@ menu "DOS/FAT/EXFAT/NT Filesystems"
- 
- source "fs/fat/Kconfig"
- source "fs/exfat/Kconfig"
-+source "fs/ntfs/Kconfig"
- source "fs/ntfs3/Kconfig"
- 
- endmenu
-diff --git a/fs/Makefile b/fs/Makefile
-index cf4a745e9679..ae1b07f9c6a0 100644
---- a/fs/Makefile
-+++ b/fs/Makefile
-@@ -90,6 +90,7 @@ obj-$(CONFIG_NLS)		+= nls/
- obj-y				+= unicode/
- obj-$(CONFIG_SMBFS)		+= smb/
- obj-$(CONFIG_HPFS_FS)		+= hpfs/
-+obj-$(CONFIG_NTFS_FS)		+= ntfs/
- obj-$(CONFIG_NTFS3_FS)		+= ntfs3/
- obj-$(CONFIG_UFS_FS)		+= ufs/
- obj-$(CONFIG_EFS_FS)		+= efs/
++======================= ====================================================
 diff --git a/fs/ntfs/Kconfig b/fs/ntfs/Kconfig
 new file mode 100644
 index 000000000000..e5fd1378fbbf
@@ -586,10 +503,10 @@ index 000000000000..01ed11f56890
 +};
 diff --git a/fs/ntfs/attrib.c b/fs/ntfs/attrib.c
 new file mode 100644
-index 000000000000..e8285264f619
+index 000000000000..2af45df2aab1
 --- /dev/null
 +++ b/fs/ntfs/attrib.c
-@@ -0,0 +1,5425 @@
+@@ -0,0 +1,5428 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS attribute operations.
@@ -2700,12 +2617,12 @@ index 000000000000..e8285264f619
 +	int err, offset;
 +	struct ntfs_inode *base_ni;
 +
++	if (!ni || (!name && name_len))
++		return -EINVAL;
++
 +	ntfs_debug("Entering for inode 0x%llx, attr 0x%x, flags 0x%x.\n",
 +			(long long) ni->mft_no, (unsigned int) le32_to_cpu(type),
 +			(unsigned int) le16_to_cpu(flags));
-+
-+	if (!ni || (!name && name_len))
-+		return -EINVAL;
 +
 +	err = ntfs_attr_can_be_resident(ni->vol, type);
 +	if (err) {
@@ -2821,13 +2738,13 @@ index 000000000000..e8285264f619
 +	struct ntfs_inode *base_ni;
 +	int err, offset;
 +
++	if (!ni || dataruns_size <= 0 || (!name && name_len))
++		return -EINVAL;
++
 +	ntfs_debug("Entering for inode 0x%llx, attr 0x%x, lowest_vcn %lld, dataruns_size %d, flags 0x%x.\n",
 +			(long long) ni->mft_no, (unsigned int) le32_to_cpu(type),
 +			(long long) lowest_vcn, dataruns_size,
 +			(unsigned int) le16_to_cpu(flags));
-+
-+	if (!ni || dataruns_size <= 0 || (!name && name_len))
-+		return -EINVAL;
 +
 +	err = ntfs_attr_can_be_non_resident(ni->vol, type);
 +	if (err) {
@@ -3253,6 +3170,7 @@ index 000000000000..e8285264f619
 +	/* Open new attribute and resize it. */
 +	attr_vi = ntfs_attr_iget(VFS_I(ni), type, name, name_len);
 +	if (IS_ERR(attr_vi)) {
++		err = PTR_ERR(attr_vi);
 +		ntfs_error(sb, "Failed to open just added attribute");
 +		goto rm_attr_err_out;
 +	}
@@ -5715,8 +5633,10 @@ index 000000000000..e8285264f619
 +
 +	down_write(&ni->runlist.lock);
 +	ret = ntfs_attr_map_whole_runlist(ni);
-+	if (ret)
++	if (ret) {
++		up_write(&ni->runlist.lock);
 +		return ret;
++	}
 +
 +	len = min(len, end_vcn - start_vcn);
 +	for (rl = ni->runlist.rl, dst_cnt = 0; rl && rl->length; rl++)
@@ -10333,10 +10253,10 @@ index 000000000000..a38c6b071678
 +#endif /* _LINUX_NTFS_FS_DIR_H */
 diff --git a/fs/ntfs/ea.c b/fs/ntfs/ea.c
 new file mode 100644
-index 000000000000..82ad9b61ec64
+index 000000000000..b2b0a9a043a9
 --- /dev/null
 +++ b/fs/ntfs/ea.c
-@@ -0,0 +1,942 @@
+@@ -0,0 +1,943 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Pocessing of EA's
@@ -11023,7 +10943,8 @@ index 000000000000..82ad9b61ec64
 +	a->flags = new_aflags;
 +	mark_mft_record_dirty(ctx->ntfs_ino);
 +err_out:
-+	ntfs_attr_put_search_ctx(ctx);
++	if (ctx)
++		ntfs_attr_put_search_ctx(ctx);
 +	unmap_mft_record(ni);
 +	return err;
 +}
@@ -24483,7 +24404,7 @@ index 000000000000..7068425735f1
 +#endif /* _LINUX_NTFS_MALLOC_H */
 diff --git a/fs/ntfs/mft.c b/fs/ntfs/mft.c
 new file mode 100644
-index 000000000000..56012477d3f0
+index 000000000000..6d88922ddba9
 --- /dev/null
 +++ b/fs/ntfs/mft.c
 @@ -0,0 +1,2922 @@
@@ -25931,7 +25852,7 @@ index 000000000000..56012477d3f0
 +	struct attr_record *a;
 +	int ret;
 +
-+	ntfs_debug("Extending mft bitmap initiailized (and data) size.");
++	ntfs_debug("Extending mft bitmap initialized (and data) size.");
 +	mft_ni = NTFS_I(vol->mft_ino);
 +	mftbmp_vi = vol->mftbmp_ino;
 +	mftbmp_ni = NTFS_I(mftbmp_vi);
@@ -27711,10 +27632,10 @@ index 000000000000..7f9faad924ad
 +}
 diff --git a/fs/ntfs/namei.c b/fs/ntfs/namei.c
 new file mode 100644
-index 000000000000..a21eeaec57b4
+index 000000000000..2952b377dda2
 --- /dev/null
 +++ b/fs/ntfs/namei.c
-@@ -0,0 +1,1695 @@
+@@ -0,0 +1,1692 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel directory inode operations.
@@ -28805,7 +28726,7 @@ index 000000000000..a21eeaec57b4
 +	}
 +
 +	d_instantiate_new(dentry, VFS_I(ni));
-+	return ERR_PTR(err);
++	return NULL;
 +}
 +
 +static int ntfs_rmdir(struct inode *dir, struct dentry *dentry)
@@ -28889,10 +28810,7 @@ index 000000000000..a21eeaec57b4
 +
 +	/* Create FILE_NAME attribute. */
 +	fn_len = sizeof(struct file_name_attr) + name_len * sizeof(__le16);
-+	if (name_len > NTFS_MAX_NAME_LEN) {
-+		err = -EIO;
-+		goto err_out;
-+	}
++
 +	fn = kzalloc(fn_len, GFP_NOFS);
 +	if (!fn) {
 +		err = -ENOMEM;
@@ -32798,7 +32716,7 @@ index 000000000000..cc92e09fbf68
 +#endif /* _LINUX_NTFS_RUNLIST_H */
 diff --git a/fs/ntfs/super.c b/fs/ntfs/super.c
 new file mode 100644
-index 000000000000..3f559df4856b
+index 000000000000..830dfc5aed2d
 --- /dev/null
 +++ b/fs/ntfs/super.c
 @@ -0,0 +1,2770 @@
@@ -34141,7 +34059,7 @@ index 000000000000..3f559df4856b
 +				addr, size);
 +		kunmap_local(addr);
 +		folio_put(folio);
-+	};
++	}
 +	if (size == PAGE_SIZE) {
 +		size = i_size & ~PAGE_MASK;
 +		if (size)
@@ -35574,10 +35492,10 @@ index 000000000000..3f559df4856b
 +#endif
 diff --git a/fs/ntfs/sysctl.c b/fs/ntfs/sysctl.c
 new file mode 100644
-index 000000000000..aa4a821a117b
+index 000000000000..8c5c1b7cd483
 --- /dev/null
 +++ b/fs/ntfs/sysctl.c
-@@ -0,0 +1,55 @@
+@@ -0,0 +1,54 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Code for sysctl handling in NTFS Linux kernel driver.
@@ -35607,7 +35525,6 @@ index 000000000000..aa4a821a117b
 +		.mode		= 0644,			/* Mode, proc handler. */
 +		.proc_handler	= proc_dointvec
 +	},
-+	{}
 +};
 +
 +/* Storage for the sysctls header. */
@@ -35622,7 +35539,7 @@ index 000000000000..aa4a821a117b
 +int ntfs_sysctl(int add)
 +{
 +	if (add) {
-+		sysctls_root_table = register_sysctl("fs", ntfs_sysctls);
++		sysctls_root_table = register_sysctl("fs/ntfs", ntfs_sysctls);
 +		if (!sysctls_root_table)
 +			return -ENOMEM;
 +	} else {
@@ -36619,289 +36536,3 @@ index 000000000000..af41427ec622
 +s64 ntfs_available_clusters_count(struct ntfs_volume *vol, s64 nr_clusters);
 +s64 get_nr_free_clusters(struct ntfs_volume *vol);
 +#endif /* _LINUX_NTFS_VOLUME_H */
-diff --git a/fs/ntfs3/Kconfig b/fs/ntfs3/Kconfig
-index 7bc31d69f680..876dbc613ae6 100644
---- a/fs/ntfs3/Kconfig
-+++ b/fs/ntfs3/Kconfig
-@@ -1,6 +1,7 @@
- # SPDX-License-Identifier: GPL-2.0-only
- config NTFS3_FS
- 	tristate "NTFS Read-Write file system support"
-+	depends on !NTFS_FS || m
- 	select BUFFER_HEAD
- 	select NLS
- 	select LEGACY_DIRECT_IO
-@@ -46,12 +47,3 @@ config NTFS3_FS_POSIX_ACL
- 	  NOTE: this is linux only feature. Windows will ignore these ACLs.
- 
- 	  If you don't know what Access Control Lists are, say N.
--
--config NTFS_FS
--	tristate "NTFS file system support"
--	select NTFS3_FS
--	select BUFFER_HEAD
--	select NLS
--	help
--	  This config option is here only for backward compatibility. NTFS
--	  filesystem is now handled by the NTFS3 driver.
-diff --git a/fs/ntfs3/dir.c b/fs/ntfs3/dir.c
-index 4652a56ad105..d99ab086ef6f 100644
---- a/fs/ntfs3/dir.c
-+++ b/fs/ntfs3/dir.c
-@@ -676,14 +676,4 @@ const struct file_operations ntfs_dir_operations = {
- #endif
- 	.setlease	= generic_setlease,
- };
--
--#if IS_ENABLED(CONFIG_NTFS_FS)
--const struct file_operations ntfs_legacy_dir_operations = {
--	.llseek		= generic_file_llseek,
--	.read		= generic_read_dir,
--	.iterate_shared	= ntfs_readdir,
--	.open		= ntfs_file_open,
--	.setlease	= generic_setlease,
--};
--#endif
- // clang-format on
-diff --git a/fs/ntfs3/file.c b/fs/ntfs3/file.c
-index 7eecf1e01f74..bb8f5ed4b89f 100644
---- a/fs/ntfs3/file.c
-+++ b/fs/ntfs3/file.c
-@@ -1569,15 +1569,4 @@ const struct file_operations ntfs_file_operations = {
- 	.release	= ntfs_file_release,
- 	.setlease	= generic_setlease,
- };
--
--#if IS_ENABLED(CONFIG_NTFS_FS)
--const struct file_operations ntfs_legacy_file_operations = {
--	.llseek		= generic_file_llseek,
--	.read_iter	= ntfs_file_read_iter,
--	.splice_read	= ntfs_file_splice_read,
--	.open		= ntfs_file_open,
--	.release	= ntfs_file_release,
--	.setlease	= generic_setlease,
--};
--#endif
- // clang-format on
-diff --git a/fs/ntfs3/inode.c b/fs/ntfs3/inode.c
-index 6e65066ebcc1..d2009053c93a 100644
---- a/fs/ntfs3/inode.c
-+++ b/fs/ntfs3/inode.c
-@@ -443,9 +443,7 @@ static struct inode *ntfs_read_mft(struct inode *inode,
- 		 * Usually a hard links to directories are disabled.
- 		 */
- 		inode->i_op = &ntfs_dir_inode_operations;
--		inode->i_fop = unlikely(is_legacy_ntfs(sb)) ?
--				       &ntfs_legacy_dir_operations :
--				       &ntfs_dir_operations;
-+		inode->i_fop = &ntfs_dir_operations;
- 		ni->i_valid = 0;
- 	} else if (S_ISLNK(mode)) {
- 		ni->std_fa &= ~FILE_ATTRIBUTE_DIRECTORY;
-@@ -455,9 +453,7 @@ static struct inode *ntfs_read_mft(struct inode *inode,
- 	} else if (S_ISREG(mode)) {
- 		ni->std_fa &= ~FILE_ATTRIBUTE_DIRECTORY;
- 		inode->i_op = &ntfs_file_inode_operations;
--		inode->i_fop = unlikely(is_legacy_ntfs(sb)) ?
--				       &ntfs_legacy_file_operations :
--				       &ntfs_file_operations;
-+		inode->i_fop = &ntfs_file_operations;
- 		inode->i_mapping->a_ops = is_compressed(ni) ? &ntfs_aops_cmpr :
- 							      &ntfs_aops;
- 		if (ino != MFT_REC_MFT)
-@@ -1646,9 +1642,7 @@ int ntfs_create_inode(struct mnt_idmap *idmap, struct inode *dir,
- 
- 	if (S_ISDIR(mode)) {
- 		inode->i_op = &ntfs_dir_inode_operations;
--		inode->i_fop = unlikely(is_legacy_ntfs(sb)) ?
--				       &ntfs_legacy_dir_operations :
--				       &ntfs_dir_operations;
-+		inode->i_fop = &ntfs_dir_operations;
- 	} else if (S_ISLNK(mode)) {
- 		inode->i_op = &ntfs_link_inode_operations;
- 		inode->i_fop = NULL;
-@@ -1657,9 +1651,7 @@ int ntfs_create_inode(struct mnt_idmap *idmap, struct inode *dir,
- 		inode_nohighmem(inode);
- 	} else if (S_ISREG(mode)) {
- 		inode->i_op = &ntfs_file_inode_operations;
--		inode->i_fop = unlikely(is_legacy_ntfs(sb)) ?
--				       &ntfs_legacy_file_operations :
--				       &ntfs_file_operations;
-+		inode->i_fop = &ntfs_file_operations;
- 		inode->i_mapping->a_ops = is_compressed(ni) ? &ntfs_aops_cmpr :
- 							      &ntfs_aops;
- 		init_rwsem(&ni->file.run_lock);
-diff --git a/fs/ntfs3/ntfs_fs.h b/fs/ntfs3/ntfs_fs.h
-index daf5a1f47275..56e608de4f70 100644
---- a/fs/ntfs3/ntfs_fs.h
-+++ b/fs/ntfs3/ntfs_fs.h
-@@ -530,7 +530,6 @@ struct inode *dir_search_u(struct inode *dir, const struct cpu_str *uni,
- 			   struct ntfs_fnd *fnd);
- bool dir_is_empty(struct inode *dir);
- extern const struct file_operations ntfs_dir_operations;
--extern const struct file_operations ntfs_legacy_dir_operations;
- 
- /* Globals from file.c */
- int ntfs_getattr(struct mnt_idmap *idmap, const struct path *path,
-@@ -546,7 +545,6 @@ long ntfs_compat_ioctl(struct file *filp, u32 cmd, unsigned long arg);
- extern const struct inode_operations ntfs_special_inode_operations;
- extern const struct inode_operations ntfs_file_inode_operations;
- extern const struct file_operations ntfs_file_operations;
--extern const struct file_operations ntfs_legacy_file_operations;
- 
- /* Globals from frecord.c */
- void ni_remove_mi(struct ntfs_inode *ni, struct mft_inode *mi);
-@@ -1250,13 +1248,4 @@ static inline void le64_sub_cpu(__le64 *var, u64 val)
- 	*var = cpu_to_le64(le64_to_cpu(*var) - val);
- }
- 
--#if IS_ENABLED(CONFIG_NTFS_FS)
--bool is_legacy_ntfs(struct super_block *sb);
--#else
--static inline bool is_legacy_ntfs(struct super_block *sb)
--{
--	return false;
--}
--#endif
--
- #endif /* _LINUX_NTFS3_NTFS_FS_H */
-diff --git a/fs/ntfs3/super.c b/fs/ntfs3/super.c
-index 174a7cb202a0..cf5c2c00f505 100644
---- a/fs/ntfs3/super.c
-+++ b/fs/ntfs3/super.c
-@@ -434,12 +434,6 @@ static int ntfs_fs_reconfigure(struct fs_context *fc)
- 	struct ntfs_mount_options *new_opts = fc->fs_private;
- 	int ro_rw;
- 
--	/* If ntfs3 is used as legacy ntfs enforce read-only mode. */
--	if (is_legacy_ntfs(sb)) {
--		fc->sb_flags |= SB_RDONLY;
--		goto out;
--	}
--
- 	ro_rw = sb_rdonly(sb) && !(fc->sb_flags & SB_RDONLY);
- 	if (ro_rw && (sbi->flags & NTFS_FLAGS_NEED_REPLAY)) {
- 		errorf(fc,
-@@ -466,7 +460,6 @@ static int ntfs_fs_reconfigure(struct fs_context *fc)
- 		return -EINVAL;
- 	}
- 
--out:
- 	sync_filesystem(sb);
- 	swap(sbi->options, fc->fs_private);
- 
-@@ -1699,8 +1692,6 @@ static int ntfs_fill_super(struct super_block *sb, struct fs_context *fc)
- 
- 	ntfs_create_procdir(sb);
- 
--	if (is_legacy_ntfs(sb))
--		sb->s_flags |= SB_RDONLY;
- 	return 0;
- 
- put_inode_out:
-@@ -1823,7 +1814,7 @@ static const struct fs_context_operations ntfs_context_ops = {
-  * This will called when mount/remount. We will first initialize
-  * options so that if remount we can use just that.
-  */
--static int __ntfs_init_fs_context(struct fs_context *fc)
-+static int ntfs_init_fs_context(struct fs_context *fc)
- {
- 	struct ntfs_mount_options *opts;
- 	struct ntfs_sb_info *sbi;
-@@ -1877,11 +1868,6 @@ static int __ntfs_init_fs_context(struct fs_context *fc)
- 	return -ENOMEM;
- }
- 
--static int ntfs_init_fs_context(struct fs_context *fc)
--{
--	return __ntfs_init_fs_context(fc);
--}
--
- static void ntfs3_kill_sb(struct super_block *sb)
- {
- 	struct ntfs_sb_info *sbi = sb->s_fs_info;
-@@ -1903,47 +1889,6 @@ static struct file_system_type ntfs_fs_type = {
- 	.fs_flags		= FS_REQUIRES_DEV | FS_ALLOW_IDMAP,
- };
- 
--#if IS_ENABLED(CONFIG_NTFS_FS)
--static int ntfs_legacy_init_fs_context(struct fs_context *fc)
--{
--	int ret;
--
--	ret = __ntfs_init_fs_context(fc);
--	/* If ntfs3 is used as legacy ntfs enforce read-only mode. */
--	fc->sb_flags |= SB_RDONLY;
--	return ret;
--}
--
--static struct file_system_type ntfs_legacy_fs_type = {
--	.owner			= THIS_MODULE,
--	.name			= "ntfs",
--	.init_fs_context	= ntfs_legacy_init_fs_context,
--	.parameters		= ntfs_fs_parameters,
--	.kill_sb		= ntfs3_kill_sb,
--	.fs_flags		= FS_REQUIRES_DEV | FS_ALLOW_IDMAP,
--};
--MODULE_ALIAS_FS("ntfs");
--
--static inline void register_as_ntfs_legacy(void)
--{
--	int err = register_filesystem(&ntfs_legacy_fs_type);
--	if (err)
--		pr_warn("ntfs3: Failed to register legacy ntfs filesystem driver: %d\n", err);
--}
--
--static inline void unregister_as_ntfs_legacy(void)
--{
--	unregister_filesystem(&ntfs_legacy_fs_type);
--}
--bool is_legacy_ntfs(struct super_block *sb)
--{
--	return sb->s_type == &ntfs_legacy_fs_type;
--}
--#else
--static inline void register_as_ntfs_legacy(void) {}
--static inline void unregister_as_ntfs_legacy(void) {}
--#endif
--
- // clang-format on
- 
- static int __init init_ntfs_fs(void)
-@@ -1972,7 +1917,6 @@ static int __init init_ntfs_fs(void)
- 		goto out1;
- 	}
- 
--	register_as_ntfs_legacy();
- 	err = register_filesystem(&ntfs_fs_type);
- 	if (err)
- 		goto out;
-@@ -1992,7 +1936,6 @@ static void __exit exit_ntfs_fs(void)
- 	rcu_barrier();
- 	kmem_cache_destroy(ntfs_inode_cachep);
- 	unregister_filesystem(&ntfs_fs_type);
--	unregister_as_ntfs_legacy();
- 	ntfs3_exit_bitmap();
- 	ntfs_remove_proc_root();
- }
-diff --git a/include/uapi/linux/fs.h b/include/uapi/linux/fs.h
-index 70b2b661f42c..13f71202845e 100644
---- a/include/uapi/linux/fs.h
-+++ b/include/uapi/linux/fs.h
-@@ -657,4 +657,16 @@ struct procmap_query {
- 	__u64 build_id_addr;		/* in */
- };
- 
-+/*
-+ * Shutdown the filesystem.
-+ */
-+#define FS_IOC_SHUTDOWN _IOR('X', 125, __u32)
-+
-+/*
-+ * Flags for FS_IOC_SHUTDOWN
-+ */
-+#define FS_SHUTDOWN_FLAGS_DEFAULT	0x0
-+#define FS_SHUTDOWN_FLAGS_LOGFLUSH	0x1	/* flush log but not data*/
-+#define FS_SHUTDOWN_FLAGS_NOLOGFLUSH	0x2	/* don't flush log nor data */
-+
- #endif /* _UAPI_LINUX_FS_H */
