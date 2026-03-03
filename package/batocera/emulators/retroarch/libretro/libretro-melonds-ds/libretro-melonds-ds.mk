@@ -3,8 +3,8 @@
 # libretro-melonds-ds
 #
 ################################################################################
-# Version: Commits on Feb 28, 2026
-LIBRETRO_MELONDS_DS_VERSION = f7dfdcfb6f9cb703086b151fbb804d392d9f989f
+# Version: Commits on Mar 03, 2026
+LIBRETRO_MELONDS_DS_VERSION = bac0256dc6a8736c5a228f57c562257e45fd49f3
 LIBRETRO_MELONDS_DS_SITE = $(call github,JesseTG,melonds-ds,$(LIBRETRO_MELONDS_DS_VERSION))
 LIBRETRO_MELONDS_DS_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_MELONDS_DS_LICENSE = GPLv2
