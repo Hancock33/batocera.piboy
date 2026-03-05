@@ -36634,10 +36634,10 @@ index 7bc31d69f680..876dbc613ae6 100644
 -	  This config option is here only for backward compatibility. NTFS
 -	  filesystem is now handled by the NTFS3 driver.
 diff --git a/fs/ntfs3/dir.c b/fs/ntfs3/dir.c
-index b98e95d6b4d9..fc39e7330365 100644
+index cf038d713f50..721f6a1e44e6 100644
 --- a/fs/ntfs3/dir.c
 +++ b/fs/ntfs3/dir.c
-@@ -631,13 +631,4 @@ const struct file_operations ntfs_dir_operations = {
+@@ -630,13 +630,4 @@ const struct file_operations ntfs_dir_operations = {
  	.compat_ioctl   = ntfs_compat_ioctl,
  #endif
  };
@@ -36652,10 +36652,10 @@ index b98e95d6b4d9..fc39e7330365 100644
 -#endif
  // clang-format on
 diff --git a/fs/ntfs3/file.c b/fs/ntfs3/file.c
-index 5120bd785169..3e0d9cbb8039 100644
+index 13d014b878f6..ce08f0c7039d 100644
 --- a/fs/ntfs3/file.c
 +++ b/fs/ntfs3/file.c
-@@ -1482,14 +1482,4 @@ const struct file_operations ntfs_file_operations = {
+@@ -1480,14 +1480,4 @@ const struct file_operations ntfs_file_operations = {
  	.fallocate	= ntfs_fallocate,
  	.release	= ntfs_file_release,
  };
@@ -36671,7 +36671,7 @@ index 5120bd785169..3e0d9cbb8039 100644
 -#endif
  // clang-format on
 diff --git a/fs/ntfs3/inode.c b/fs/ntfs3/inode.c
-index ec8e954f4426..ccb3d2acab44 100644
+index bf6ef525d956..0f47a918092a 100644
 --- a/fs/ntfs3/inode.c
 +++ b/fs/ntfs3/inode.c
 @@ -444,9 +444,7 @@ static struct inode *ntfs_read_mft(struct inode *inode,
