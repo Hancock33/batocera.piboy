@@ -59,7 +59,7 @@ endef
 
 # Details from backends/platform/libretro/dependencies.mk
 define LIBRETRO_SCUMMVM_GIT_DL
-	$(call LIBRETRO_CLONE_AND_INIT,libretro-deps,abf5246b016569759e7d1b0ea91bb98c2e34d160)
+	$(call LIBRETRO_CLONE_AND_INIT,libretro-deps,7e6e34f0319f4c7448d72f0e949e76265ccf55a1)
 	$(call LIBRETRO_CLONE_AND_INIT,libretro-common,70ed90c42ddea828f53dd1b984c6443ddb39dbd6)
 endef
 
