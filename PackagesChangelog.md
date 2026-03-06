@@ -58,6 +58,7 @@ Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|3b7
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|c1a40ae924d4356c19485ead4645becce7bac432|Mar 04, 2026
 Boot|[rocknix-abl](http://github.com/ROCKNIX/abl)|e4e056485d6f34c05f9cdfaa84ff3d4e2e3cc709|Mar 3, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|8d010533199b8783bc0c543479f857cd40504586|Mar 03, 2026
+Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.2|Mar 03, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|7ea938e212d34d59ac4afd9081d8dd98653ae790|Mar 03, 2026
 Ports|[stk](http://github.com/supertuxkart/stk-code)|f68334ead5449bc7777cf758dea6cdfa4ec27598|Mar 03, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.16-rc.1|Mar 03, 2026
@@ -375,7 +376,6 @@ Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0f74cff52b96841fe0efa
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|fbe4dfc4c3e3f7eb27089def3d663a905b181845|Jul 31, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|639b58c6d718452ef343a0bc927d043bed9e40d6|Jul 29, 2025
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|b84d0605e847e07657a44a1a11374a03a6e8a489|Jul 26, 2025
-Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.1|Jul 21, 2025
 Libraries|[iir](http://github.com/berndporr/iir1)|1.10.0|Jul 06, 2025
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|4d4dcb556ed9b80ed7636f37340a1320823cea4d|Jul 04, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|dc0c9e368b07f1a83ef41c32a625a0efbccd591a|Jul 03, 2025
