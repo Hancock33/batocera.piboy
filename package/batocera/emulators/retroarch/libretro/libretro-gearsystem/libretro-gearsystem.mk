@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 06, 2026
-LIBRETRO_GEARSYSTEM_VERSION = 4c29037728b9d5f156c6a00405bd3094bc01c9e4
+LIBRETRO_GEARSYSTEM_VERSION = eb0ae83effbee998141c188b60cb9176c9801dcd
 LIBRETRO_GEARSYSTEM_SITE = $(call github,drhelius,Gearsystem,$(LIBRETRO_GEARSYSTEM_VERSION))
 LIBRETRO_GEARSYSTEM_LICENSE = GPLv3
 LIBRETRO_GEARSYSTEM_DEPENDENCIES += retroarch
