@@ -1,40 +1,49 @@
 diff --git a/CorsixTH/Lua/config_finder.lua b/CorsixTH/Lua/config_finder.lua
-index 73815c6e..e2880401 100644
+index 6068bd02..e021e59c 100644
 --- a/CorsixTH/Lua/config_finder.lua
 +++ b/CorsixTH/Lua/config_finder.lua
-@@ -132,7 +132,7 @@ local config_defaults = {
-   midi_api = nil,
-   midi_port = nil,
-   midi_sysex_master_volume = false,
--  theme_hospital_install = [[X:\ThemeHospital\hospital]],
-+  theme_hospital_install = [[/userdata/roms/ports/themehospital]],
-   debug = false,
-   track_fps = false,
-   zoom_speed = 80,
-@@ -436,7 +436,7 @@ unicode_font = nil -- [[X:\ThemeHospital\font.ttc]]
+@@ -164,7 +164,7 @@ local function new_config_defaults()
+     midi_api = nil,
+     midi_port = nil,
+     midi_sysex_master_volume = false,
+-    theme_hospital_install = [[X:\ThemeHospital\hospital]],
++    theme_hospital_install = [[/userdata/roms/ports/themehospital]],
+     debug = false,
+     track_fps = false,
+     zoom_speed = 80,
+@@ -541,7 +541,7 @@ param(config_values, 'autosave_frequency') .. '\n'
+ -- the Theme Hospital demo, though a full install of the original game is
+ -- preferred.
+ --]=] .. '\n' ..
+-param(config_values, 'theme_hospital_install', '[[X:\\ThemeHospital]]') .. [=[
++param(config_values, 'theme_hospital_install', '[[/userdata/roms/ports/themehospital]') .. [=[
+ 
+ -------------------------------------------------------------------------------
+ -- Font file setting. Can be changed from main game menu
+@@ -556,7 +556,7 @@ param(config_values, 'unicode_font', '[[X:\\ThemeHospital\\font.ttc]]') .. [=[
  -- uncomment the following line, and point it to a directory which exists and
  -- is more suitable.
- --
--savegames = nil -- [[X:\ThemeHospital\Saves]]
-+savegames = nil -- [[/userdata/saves/themehospital]]
+ --]=] .. '\n' ..
+-param(config_values, 'savegames', '[[X:\\ThemeHospital\\Saves]]') .. [=[
++param(config_values, 'savegames', '[[/userdata/saves/themehospital]]') .. [=[
  
  -------------------------------------------------------------------------------
  -- Levels and Campaigns. By default, the "Levels" and "Campaigns" directory next to
-@@ -469,7 +469,7 @@ new_graphics_folder = nil -- [[X:\ThemeHospital\Graphics]]
+@@ -591,7 +591,7 @@ param(config_values, 'new_graphics_folder', '[[X:\\ThemeHospital\\Graphics]]') .
  -- uncomment the following line, and point it to a directory which exists and
  -- is more suitable.
- --
--screenshots = nil -- [[X:\ThemeHospital\Screenshots]]
-+screenshots = nil -- [[/userdata/screenshots]]
+ --]=] .. '\n' ..
+-param(config_values, 'screenshots', '[[X:\\ThemeHospital\\Screenshots]]') .. [=[
++param(config_values, 'screenshots', '[[/userdata/screenshots]]') .. [=[
  
  -------------------------------------------------------------------------------
  -- If you want to listen to non-Theme-Hospital music, then follow these steps:
-@@ -480,7 +480,7 @@ screenshots = nil -- [[X:\ThemeHospital\Screenshots]]
+@@ -602,7 +602,7 @@ param(config_values, 'screenshots', '[[X:\\ThemeHospital\\Screenshots]]') .. [=[
  --     "names.txt" and write the file name on one row, followed by the desired
  --     ingame name on the next row.
- --
--audio_music = nil -- [[X:\ThemeHospital\Music]]
-+audio_music = nil -- [[/userdata/music]]
+ --]=] .. '\n' ..
+-param(config_values, 'audio_music', '[[X:\\ThemeHospital\\Music]]') .. [=[
++param(config_values, 'audio_music', '[[/userdata/music]]') .. [=[
  
  -------------------------------------------------------------------------------
  -- SoundFont: CorsixTH uses the FluidR3 SoundFont by default for playing MIDI music.
