@@ -3,8 +3,8 @@
 # libretro-genesisplusgx-expanded
 #
 ################################################################################
-# Version: Commits on Mar 04, 2026
-LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION = 721ee725482b1023d2855e7a053941fc864424a0
+# Version: Commits on Mar 06, 2026
+LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION = f48b063d17c5d8b79e912d8d336833e53f7d2c7a
 LIBRETRO_GENESISPLUSGX_EXPANDED_SITE = $(call github,RapidEdwin08,Genesis-Plus-GX-Expanded-Rom-Size,$(LIBRETRO_GENESISPLUSGX_EXPANDED_VERSION))
 LIBRETRO_GENESISPLUSGX_EXPANDED_LICENSE = Non-commercial
 LIBRETRO_GENESISPLUSGX_EXPANDED_EMULATOR_INFO = genesisplusgx-expanded.libretro.core.yml

@@ -40,18 +40,18 @@ mkdir -p "$ABL_DIR"
 # ---- GitHub Online Check Logic ----
 if [[ "${1:-}" == "--check-online" ]]; then
     echo "Checking GitHub for ABL updates..."
-    
-    # URL pointing to the raw files on GitHub 
+
+    # URL pointing to the raw files on GitHub
     GITHUB_BASE_URL="https://github.com/ROCKNIX/abl/raw/refs/heads/master"
     REMOTE_SHA_URL="${GITHUB_BASE_URL}/abl_signed-${HW_DEVICE}.elf.sha256"
     REMOTE_ELF_URL="${GITHUB_BASE_URL}/abl_signed-${HW_DEVICE}.elf"
 
     # Fetch remote SHA256 sum, suppress error if unreachable to allow local fallback
     REMOTE_SHA_CONTENT=$(curl -sL --fail "$REMOTE_SHA_URL" || true)
-    
+
     if [ -n "$REMOTE_SHA_CONTENT" ]; then
         REMOTE_HASH=$(echo "$REMOTE_SHA_CONTENT" | awk '{print $1}')
-        
+
         # Determine local hash
         LOCAL_HASH=""
         if [ -f "$SHA256SUM" ]; then
@@ -69,7 +69,7 @@ if [[ "${1:-}" == "--check-online" ]]; then
                     rm -f "${SHA256SUM}.tmp" "${ELF}.tmp"
                     exit 1
                 fi
-                
+
                 # Verify the downloaded file matches the remote hash
                 echo "Verifying downloaded file..."
                 DOWNLOADED_HASH=$(sha256sum "${ELF}.tmp" | awk '{print $1}')
@@ -78,7 +78,7 @@ if [[ "${1:-}" == "--check-online" ]]; then
                     rm -f "${SHA256SUM}.tmp" "${ELF}.tmp"
                     exit 1
                 fi
-                
+
                 # Apply new files
                 mv "${SHA256SUM}.tmp" "$SHA256SUM"
                 mv "${ELF}.tmp" "$ELF"
