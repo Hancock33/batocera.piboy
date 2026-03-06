@@ -11,7 +11,7 @@ LINDBERGH_LOADER_LICENSE_FILES = LICENSE.md
 LINDBERGH_LOADER_EMULATOR_INFO = lindbergh-loader.emulator.yml
 
 ifeq ($(BR2_x86_64),y)
-LINDBERGH_LOADER_DEPENDENCIES = wine-x86 dmidecode ossp
+LINDBERGH_LOADER_DEPENDENCIES += wine-x86 dmidecode ossp
 endif
 
 ifeq ($(BR2_i386),y)

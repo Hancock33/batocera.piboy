@@ -31,8 +31,7 @@ OPENJKDF2_DEPENDENCIES += sdl2 sdl2_mixer zlib
 
 OPENJKDF2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 OPENJKDF2_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++"
-OPENJKDF2_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -I$(STAGING_DIR)/usr/include/SDL2 \
-                                         -I$(STAGING_DIR)/usr/include/GameNetworkingSockets"
+OPENJKDF2_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -I$(STAGING_DIR)/usr/include/SDL2 -I$(STAGING_DIR)/usr/include/GameNetworkingSockets"
 OPENJKDF2_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr/bin"
 OPENJKDF2_CONF_OPTS += -DPLAT_LINUX_64=ON
 # Avoid building libraries set crosscompiling off, although we are...

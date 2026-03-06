@@ -9,5 +9,4 @@ config BR2_PACKAGE_LIBRETRO_CLOWNMDEMU
 	  https://github.com/Clownacy/clownmdemu-libretro
 
 comment "LIBRETRO_CLOWNMDEMU needs a toolchain w/ C++"
-    depends on !BR2_INSTALL_LIBSTDCPP
-
+	depends on !BR2_INSTALL_LIBSTDCPP

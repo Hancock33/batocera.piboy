@@ -29,7 +29,8 @@ config BR2_PACKAGE_LABWC
 	select BR2_PACKAGE_XKEYBOARD_CONFIG
 
 	help
-	  Labwc is a wlroots-based window-stacking compositor for wayland, inspired by openbox.
+	  Labwc is a wlroots-based window-stacking compositor for
+	  wayland, inspired by openbox.
 
 	  https://labwc.github.io/
 

@@ -3,10 +3,10 @@ config BR2_PACKAGE_SDL3
 	depends on BR2_PACKAGE_XORG7 || BR2_PACKAGE_WAYLAND
 	depends on !BR2_STATIC_LIBS
 	help
-	  Simple DirectMedia Layer 3 - Simple DirectMedia Layer is a
-	  cross-platform development library designed to provide low level
-	  access to audio, keyboard, mouse, joystick, and graphics
-	  hardware via OpenGL and Direct3D.
+	  Simple DirectMedia Layer 3 - Simple DirectMedia Layer
+	  is a cross-platform development library designed to
+	  provide low level access to audio, keyboard, mouse,
+	  joystick, and graphics hardware via OpenGL and Direct3D.
 
 	  http://www.libsdl.org/
 
@@ -49,10 +49,10 @@ comment "OpenGL ES support needs an OpenGL ES provider"
 endif
 
 config BR2_PACKAGE_SDL3_WAYLAND
-    bool "SDL3 Wayland support"
-    depends on BR2_PACKAGE_WAYLAND
-    select BR2_PACKAGE_WAYLAND_PROTOCOLS
-    select BR2_PACKAGE_LIBXKBCOMMON
+	bool "SDL3 Wayland support"
+	depends on BR2_PACKAGE_WAYLAND
+	select BR2_PACKAGE_WAYLAND_PROTOCOLS
+	select BR2_PACKAGE_LIBXKBCOMMON
 
 comment "SDL3 Wayland support needs wayland"
 	depends on !BR2_PACKAGE_WAYLAND

@@ -20,4 +20,3 @@ STALKER_CONF_OPTS += -DUSE_LTO=ON
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
-

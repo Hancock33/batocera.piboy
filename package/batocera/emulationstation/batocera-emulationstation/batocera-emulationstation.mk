@@ -177,11 +177,11 @@ endif
 
 ifeq ($(BR2_PACKAGE_PIPEWIRE),y)
 # H700 loses ES music with pipewire
-	ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H700),y)
-		BATOCERA_EMULATIONSTATION_PREFIX += SDL_AUDIODRIVER=alsa
-	else
-		BATOCERA_EMULATIONSTATION_PREFIX += SDL_AUDIODRIVER=pipewire
-	endif
+    ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H700),y)
+        BATOCERA_EMULATIONSTATION_PREFIX += SDL_AUDIODRIVER=alsa
+    else
+        BATOCERA_EMULATIONSTATION_PREFIX += SDL_AUDIODRIVER=pipewire
+    endif
 endif
 
 define BATOCERA_EMULATIONSTATION_XORG
@@ -196,19 +196,13 @@ define BATOCERA_EMULATIONSTATION_WAYLAND_SWAY
 endef
 
 define BATOCERA_EMULATIONSTATION_WAYLAND_LABWC
-    mkdir -p $(TARGET_DIR)/usr/share/labwc
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/04-labwc.sh \
-	    $(TARGET_DIR)/etc/profile.d/04-labwc.sh
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/rc.xml \
-	    $(TARGET_DIR)/usr/share/labwc/rc.xml
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/S14labwc \
-	    $(TARGET_DIR)/etc/init.d/S14labwc
-    $(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart \
-	    $(TARGET_DIR)/usr/share/labwc/autostart
-    $(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart_* \
-	    $(TARGET_DIR)/usr/share/labwc/
-    $(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/labwc-launch \
-	    $(TARGET_DIR)/usr/bin/labwc-launch
+	mkdir -p $(TARGET_DIR)/usr/share/labwc
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/04-labwc.sh $(TARGET_DIR)/etc/profile.d/04-labwc.sh
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/rc.xml $(TARGET_DIR)/usr/share/labwc/rc.xml
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/S14labwc $(TARGET_DIR)/etc/init.d/S14labwc
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart $(TARGET_DIR)/usr/share/labwc/autostart
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart_* $(TARGET_DIR)/usr/share/labwc/
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/labwc-launch $(TARGET_DIR)/usr/bin/labwc-launch
 endef
 
 define BATOCERA_EMULATIONSTATION_BOOT
