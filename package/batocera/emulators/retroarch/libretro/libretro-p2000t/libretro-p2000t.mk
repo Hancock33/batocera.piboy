@@ -16,7 +16,9 @@ endef
 
 define LIBRETRO_P2000T_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/src/libretro/m2000_libretro.so $(TARGET_DIR)/usr/lib/libretro/p2000t_libretro.so
+	$(INSTALL) -D $(@D)/src/libretro/info/m2000_libretro.info $(TARGET_DIR)/usr/share/libretro/info/p2000t_libretro.info
 endef
 
 $(eval $(generic-package))

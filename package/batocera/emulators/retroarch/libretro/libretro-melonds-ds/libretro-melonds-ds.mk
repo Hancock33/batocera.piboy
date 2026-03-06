@@ -21,8 +21,9 @@ LIBRETRO_MELONDS_DS_SHARED_LINKER_FLAGS += -flto=auto
 define LIBRETRO_MELONDS_DS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/buildroot-build/src/libretro/melondsds_libretro.so	$(TARGET_DIR)/usr/lib/libretro/melondsds_libretro.so
-	cp $(@D)/buildroot-build/melondsds_libretro.info						$(TARGET_DIR)/usr/share/libretro/info/melondsds_libretro.info
+	$(INSTALL) -D $(@D)/buildroot-build/melondsds_libretro.info $(TARGET_DIR)/usr/share/libretro/info/melondsds_libretro.info
 endef
 
 $(eval $(cmake-package))

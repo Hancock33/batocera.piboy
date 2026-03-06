@@ -16,7 +16,9 @@ endef
 
 define LIBRETRO_MU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/libretroBuildSystem/mu_libretro.so $(TARGET_DIR)/usr/lib/libretro/mu_libretro.so
+	$(INSTALL) -D $(@D)/libretroBuildSystem/mu_libretro.info $(TARGET_DIR)/usr/share/libretro/info/mu_libretro.info
 endef
 
 $(eval $(generic-package))
