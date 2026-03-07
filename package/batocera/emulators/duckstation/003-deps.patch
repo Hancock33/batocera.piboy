@@ -562,7 +562,7 @@ index 000000000..b389c6b3d
 +  zstd_STATIC_LIBRARY
 +)
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index f7a11b172..5d6fba78c 100644
+index b57926441..09cb8c1eb 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
 @@ -98,7 +98,7 @@ LOG_CHANNEL(System);
@@ -575,13 +575,13 @@ index f7a11b172..5d6fba78c 100644
  #define ENABLE_SOCKET_MULTIPLEXER 1
  #include "gdb_server.h"
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index 31dd5c399..e30a51e7b 100644
+index 36832cc15..160b5a3b5 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
 @@ -86,7 +86,7 @@ add_library(util
  target_precompile_headers(util PRIVATE "pch.h")
  target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
- target_link_libraries(util PUBLIC common simpleini imgui)
+ target_link_libraries(util PUBLIC common imgui)
 -target_link_libraries(util PRIVATE libchdr lzma libjpeg-turbo::jpeg PNG::PNG WebP::webp plutosvg::plutosvg ZLIB::ZLIB SoundTouch::SoundTouchDLL xxhash zstd::libzstd_shared reshadefx)
 +target_link_libraries(util PRIVATE libchdr lzma JPEG::JPEG PNG::PNG WebP::libwebp plutosvg::plutosvg ZLIB::ZLIB SoundTouch::SoundTouchDLL xxhash zstd::libzstd_shared reshadefx)
  
@@ -633,10 +633,10 @@ index 31dd5c399..e30a51e7b 100644
    endif()
  endfunction()
 diff --git a/src/util/gpu_device.cpp b/src/util/gpu_device.cpp
-index 303f10c51..dbe5c7239 100644
+index 2627b3ea9..2f7fa802b 100644
 --- a/src/util/gpu_device.cpp
 +++ b/src/util/gpu_device.cpp
-@@ -1365,6 +1365,13 @@ std::unique_ptr<GPUDevice> GPUDevice::CreateDeviceForAPI(RenderAPI api)
+@@ -1368,6 +1368,13 @@ std::unique_ptr<GPUDevice> GPUDevice::CreateDeviceForAPI(RenderAPI api)
    }
  }
  
@@ -650,7 +650,7 @@ index 303f10c51..dbe5c7239 100644
  namespace dyn_libs {
  static void CloseShaderc();
  static void CloseSpirvCross();
-@@ -1391,7 +1398,7 @@ bool dyn_libs::OpenShaderc(Error* error)
+@@ -1394,7 +1401,7 @@ bool dyn_libs::OpenShaderc(Error* error)
    if (s_shaderc_library.IsOpen())
      return true;
  

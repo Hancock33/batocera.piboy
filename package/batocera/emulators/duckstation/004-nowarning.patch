@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 5d6fba78c..d2d4c4b55 100644
+index 09cb8c1eb..ad5bd837b 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -5194,12 +5194,12 @@ void System::WarnAboutUnsafeSettings()
+@@ -5198,12 +5198,12 @@ void System::WarnAboutUnsafeSettings()
      if (g_settings.cpu_execution_mode == CPUExecutionMode::CachedInterpreter)
        append(TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
  
@@ -40,10 +40,10 @@ index 1f1c4d8a7..e8f7f6a70 100644
      // kick a game list refresh if we're not in batch mode
      if (!s_state.batch_mode)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index a9af2e654..e6a23706a 100644
+index ea1953acd..dfe463737 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
-@@ -3600,7 +3600,7 @@ int main(int argc, char* argv[])
+@@ -3637,7 +3637,7 @@ int main(int argc, char* argv[])
    QtHost::UpdateApplicationTheme();
  
    // Build warning.
@@ -52,7 +52,7 @@ index a9af2e654..e6a23706a 100644
  
    // Create core thread object, but don't start it yet. That way the main window can connect to it,
    // and ensures that no signals are lost. Then we create and connect the main window.
-@@ -3657,7 +3657,7 @@ int main(int argc, char* argv[])
+@@ -3694,7 +3694,7 @@ int main(int argc, char* argv[])
      QtHost::s_state.start_fullscreen_ui_fullscreen = false;
  
    // Always kick off update check. It'll take over if the user is booting a game fullscreen.
