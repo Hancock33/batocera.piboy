@@ -16,7 +16,7 @@ BATOCERA_INITRAMFS_LDFLAGS = $(TARGET_LDFLAGS)
 
 BATOCERA_INITRAMFS_KCONFIG_FILE = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/boot/batocera-initramfs/busybox.config
 
-BATOCERA_INITRAMFS_DIR = $(BINARIES_DIR)/initramfs
+INITRAMFS_DIR=$(BINARIES_DIR)/initramfs
 
 # Allows the build system to tweak CFLAGS
 BATOCERA_INITRAMFS_MAKE_ENV = \
@@ -25,10 +25,10 @@ BATOCERA_INITRAMFS_MAKE_ENV = \
 BATOCERA_INITRAMFS_MAKE_OPTS = \
 	CC="$(TARGET_CC)" \
 	ARCH=$(KERNEL_ARCH) \
-	PREFIX="$(BATOCERA_INITRAMFS_DIR)" \
+	PREFIX="$(INITRAMFS_DIR)" \
 	EXTRA_LDFLAGS="$(BATOCERA_INITRAMFS_LDFLAGS)" \
 	CROSS_COMPILE="$(TARGET_CROSS)" \
-	CONFIG_PREFIX="$(BATOCERA_INITRAMFS_DIR)" \
+	CONFIG_PREFIX="$(INITRAMFS_DIR)" \
 	SKIP_STRIP=n
 
 BATOCERA_INITRAMFS_KCONFIG_OPTS = $(BATOCERA_INITRAMFS_MAKE_OPTS)
@@ -49,17 +49,17 @@ BATOCERA_INITRAMFS_INITRDA=arm
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY)$(BR2_PACKAGE_BATOCERA_TARGET_A3GEN2)$(BR2_PACKAGE_BATOCERA_TARGET_S9GEN4),y)
-BATOCERA_INITRAMFS_COMPRESSION_TYPE_COMMAND=(cd $(BATOCERA_INITRAMFS_DIR) && find . | cpio -H newc -o | gzip -9 > $(BINARIES_DIR)/initrd.gz)
+BATOCERA_INITRAMFS_COMPRESSION_TYPE_COMMAND=(cd $(INITRAMFS_DIR) && find . | cpio -H newc -o | gzip -9 > $(BINARIES_DIR)/initrd.gz)
 else
 BATOCERA_INITRAMFS_DEPENDENCIES += host-lz4
 # -l is needed to make initramfs boot, this compresses using Legacy format (Linux kernel compression)
-BATOCERA_INITRAMFS_COMPRESSION_TYPE_COMMAND=(cd $(BATOCERA_INITRAMFS_DIR) && find . | cpio -H newc -o | $(HOST_DIR)/bin/lz4 -l > $(BINARIES_DIR)/initrd.lz4)
+BATOCERA_INITRAMFS_COMPRESSION_TYPE_COMMAND=(cd $(INITRAMFS_DIR) && find . | cpio -H newc -o | $(HOST_DIR)/bin/lz4 -l > $(BINARIES_DIR)/initrd.lz4)
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_JH7110),y)
 define BATOCERA_INITRAMFS_RISCV_EARLY_FIRMWARE
-	mkdir -p $(BATOCERA_INITRAMFS_DIR)
-	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/starfive/jh7110/initrd/* $(BATOCERA_INITRAMFS_DIR)/
+	mkdir -p $(INITRAMFS_DIR)
+	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/starfive/jh7110/initrd/* $(INITRAMFS_DIR)/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_RISCV_EARLY_FIRMWARE
 endif
@@ -67,11 +67,12 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SM8550),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_SM8550_EARLY_FIRMWARE
-	mkdir -p $(BATOCERA_INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
-	cp $(ALLLINUXFIRMWARES_DIR)/qcom/sm8550/*         $(BATOCERA_INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
-	cp $(ALLLINUXFIRMWARES_DIR)/qcom/a740_sqe.fw      $(BATOCERA_INITRAMFS_DIR)/lib/firmware/qcom/
-	cp $(ALLLINUXFIRMWARES_DIR)/qcom/gmu_gen70200.bin $(BATOCERA_INITRAMFS_DIR)/lib/firmware/qcom/
-	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/qualcomm/sm8550/fsoverlay/lib/firmware/qcom/* $(BATOCERA_INITRAMFS_DIR)/lib/firmware/qcom/
+    mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
+    cp $(ALLLINUXFIRMWARES_DIR)/qcom/sm8550/*         $(INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
+    cp $(ALLLINUXFIRMWARES_DIR)/qcom/a740_sqe.fw      $(INITRAMFS_DIR)/lib/firmware/qcom/
+    cp $(ALLLINUXFIRMWARES_DIR)/qcom/gmu_gen70200.bin $(INITRAMFS_DIR)/lib/firmware/qcom/
+    cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/qualcomm/sm8550/fsoverlay/lib/firmware/qcom/* \
+        $(INITRAMFS_DIR)/lib/firmware/qcom/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_SM8550_EARLY_FIRMWARE
 endif
@@ -79,29 +80,32 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H700),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_H700_EARLY_FIRMWARE
-	mkdir -p $(BATOCERA_INITRAMFS_DIR)/lib/firmware/rtw88
-	mkdir -p $(BATOCERA_INITRAMFS_DIR)/lib/firmware/panels
-	cp $(ALLLINUXFIRMWARES_DIR)/rtw88/rtw8821c_fw.bin $(BATOCERA_INITRAMFS_DIR)/lib/firmware/rtw88/
-	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/allwinner/h700/fsoverlay/lib/firmware/panels/* $(BATOCERA_INITRAMFS_DIR)/lib/firmware/panels
+    mkdir -p $(INITRAMFS_DIR)/lib/firmware/rtw88
+    mkdir -p $(INITRAMFS_DIR)/lib/firmware/panels
+    cp $(ALLLINUXFIRMWARES_DIR)/rtw88/rtw8821c_fw.bin $(INITRAMFS_DIR)/lib/firmware/rtw88/
+    cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/allwinner/h700/fsoverlay/lib/firmware/panels/* \
+        $(INITRAMFS_DIR)/lib/firmware/panels
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_H700_EARLY_FIRMWARE
 endif
 
 define BATOCERA_INITRAMFS_REGULATORY_FIRMWARE
-	mkdir -p $(BATOCERA_INITRAMFS_DIR)/lib/firmware
-	cp $(WIRELESS_REGDB_DIR)/regulatory.db $(BATOCERA_INITRAMFS_DIR)/lib/firmware/
-	cp $(WIRELESS_REGDB_DIR)/regulatory.db.p7s $(BATOCERA_INITRAMFS_DIR)/lib/firmware/
+    mkdir -p $(INITRAMFS_DIR)/lib/firmware
+    cp $(WIRELESS_REGDB_DIR)/regulatory.db \
+        $(INITRAMFS_DIR)/lib/firmware/
+    cp $(WIRELESS_REGDB_DIR)/regulatory.db.p7s \
+        $(INITRAMFS_DIR)/lib/firmware/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_REGULATORY_FIRMWARE
 
 define BATOCERA_INITRAMFS_INSTALL_TARGET_CMDS
-	mkdir -p $(BATOCERA_INITRAMFS_DIR)
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/boot/batocera-initramfs/init $(BATOCERA_INITRAMFS_DIR)/init
+	mkdir -p $(INITRAMFS_DIR)
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/boot/batocera-initramfs/init $(INITRAMFS_DIR)/init
 	$(BATOCERA_INITRAMFS_MAKE_ENV) $(MAKE) $(BATOCERA_INITRAMFS_MAKE_OPTS) -C $(@D) install
-	(cd $(BATOCERA_INITRAMFS_DIR) && find . | cpio -H newc -o > $(BINARIES_DIR)/initrd)
+	(cd $(INITRAMFS_DIR) && find . | cpio -H newc -o > $(BINARIES_DIR)/initrd)
 	(cd $(BINARIES_DIR) && $(HOST_DIR)/bin/mkimage -A $(BATOCERA_INITRAMFS_INITRDA) -O linux -T ramdisk -C none -a 0 -e 0 -n initrd -d ./initrd ./uInitrd)
-	(cd $(BATOCERA_INITRAMFS_DIR) && find . | cpio -H newc -o | $(HOST_DIR)/bin/lz4 -l > $(BINARIES_DIR)/initrd.lz4)
-	(cd $(BATOCERA_INITRAMFS_DIR) && find . | cpio -H newc -o | gzip -9 > $(BINARIES_DIR)/initrd.gz)
+	(cd $(INITRAMFS_DIR) && find . | cpio -H newc -o | $(HOST_DIR)/bin/lz4 -l > $(BINARIES_DIR)/initrd.lz4)
+	(cd $(INITRAMFS_DIR) && find . | cpio -H newc -o | gzip -9 > $(BINARIES_DIR)/initrd.gz)
 endef
 
 $(eval $(kconfig-package))
