@@ -67,12 +67,11 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SM8550),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_SM8550_EARLY_FIRMWARE
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
-    cp $(ALLLINUXFIRMWARES_DIR)/qcom/sm8550/*         $(INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
-    cp $(ALLLINUXFIRMWARES_DIR)/qcom/a740_sqe.fw      $(INITRAMFS_DIR)/lib/firmware/qcom/
-    cp $(ALLLINUXFIRMWARES_DIR)/qcom/gmu_gen70200.bin $(INITRAMFS_DIR)/lib/firmware/qcom/
-    cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/qualcomm/sm8550/fsoverlay/lib/firmware/qcom/* \
-        $(INITRAMFS_DIR)/lib/firmware/qcom/
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
+	cp $(ALLLINUXFIRMWARES_DIR)/qcom/sm8550/*         $(INITRAMFS_DIR)/lib/firmware/qcom/sm8550/
+	cp $(ALLLINUXFIRMWARES_DIR)/qcom/a740_sqe.fw      $(INITRAMFS_DIR)/lib/firmware/qcom/
+	cp $(ALLLINUXFIRMWARES_DIR)/qcom/gmu_gen70200.bin $(INITRAMFS_DIR)/lib/firmware/qcom/
+	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/qualcomm/sm8550/fsoverlay/lib/firmware/qcom/* $(INITRAMFS_DIR)/lib/firmware/qcom/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_SM8550_EARLY_FIRMWARE
 endif
@@ -80,21 +79,18 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H700),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_H700_EARLY_FIRMWARE
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware/rtw88
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware/panels
-    cp $(ALLLINUXFIRMWARES_DIR)/rtw88/rtw8821c_fw.bin $(INITRAMFS_DIR)/lib/firmware/rtw88/
-    cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/allwinner/h700/fsoverlay/lib/firmware/panels/* \
-        $(INITRAMFS_DIR)/lib/firmware/panels
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/rtw88
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/panels
+	cp $(ALLLINUXFIRMWARES_DIR)/rtw88/rtw8821c_fw.bin $(INITRAMFS_DIR)/lib/firmware/rtw88/
+	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/allwinner/h700/fsoverlay/lib/firmware/panels/* $(INITRAMFS_DIR)/lib/firmware/panels
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_H700_EARLY_FIRMWARE
 endif
 
 define BATOCERA_INITRAMFS_REGULATORY_FIRMWARE
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware
-    cp $(WIRELESS_REGDB_DIR)/regulatory.db \
-        $(INITRAMFS_DIR)/lib/firmware/
-    cp $(WIRELESS_REGDB_DIR)/regulatory.db.p7s \
-        $(INITRAMFS_DIR)/lib/firmware/
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware
+	cp $(WIRELESS_REGDB_DIR)/regulatory.db $(INITRAMFS_DIR)/lib/firmware/
+	cp $(WIRELESS_REGDB_DIR)/regulatory.db.p7s $(INITRAMFS_DIR)/lib/firmware/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_TARGET_HOOKS += BATOCERA_INITRAMFS_REGULATORY_FIRMWARE
 
