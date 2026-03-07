@@ -3,15 +3,18 @@
 # amiberry-lite
 #
 ################################################################################
-# Version: Commits on Nov 25, 2025
-AMIBERRY_LITE_VERSION = v5.9.1
+# Version: Commits on Feb 24, 2026
+AMIBERRY_LITE_VERSION = 644d003cfdfe53af7ab6b7cf74bd861d9aa8091e
 AMIBERRY_LITE_SITE = $(call github,BlitterStudio,amiberry-lite,$(AMIBERRY_LITE_VERSION))
 AMIBERRY_LITE_LICENSE = GPLv3
+AMIBERRY_LITE_SUPPORTS_IN_SOURCE_BUILD = NO
+
 AMIBERRY_LITE_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123
 AMIBERRY_LITE_DEPENDENCIES += portmidi sdl2 sdl2_image sdl2_ttf zlib
-AMIBERRY_LITE_SUPPORTS_IN_SOURCE_BUILD = NO
 AMIBERRY_LITE_INFO = amiberry.emulator.yml
 
+AMIBERRY_LITE_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
+AMIBERRY_LITE_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
 AMIBERRY_LITE_CONF_OPTS += -DWITH_LTO=ON
 
 define AMIBERRY_LITE_EVMAP

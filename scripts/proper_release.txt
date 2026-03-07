@@ -1,6 +1,4 @@
-﻿amiberry-lite.mk
-amiberry.mk
-ayaneo-platform.mk
+﻿ayaneo-platform.mk
 broadcom-bt-firmware.mk
 btop.mk
 cargs.mk
