@@ -11982,7 +11982,7 @@ index 000000000000..273578015999
 +	if (NInoCompressed(NTFS_I(inode)))
 +		return -EOPNOTSUPP;
 +
-+	if (vma_desc_test_flags(desc, VMA_WRITE_BIT)) {
++	if (desc->vm_flags & VM_WRITE) {
 +		struct inode *inode = file_inode(file);
 +		loff_t from, to;
 +		int err;
