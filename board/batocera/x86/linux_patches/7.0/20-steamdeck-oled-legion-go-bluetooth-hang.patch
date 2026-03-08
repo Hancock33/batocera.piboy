@@ -51,7 +51,7 @@ index cfdf75dc2847..9724ecda5f12 100644
  
  static const struct h5_device_data h5_data_rtl8822cs = {
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index 5b02e7c3f56d..1c1c8273c816 100644
+index bb9f002aa85e..359dd318abb0 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
 @@ -1877,12 +1877,13 @@ static int qca_power_on(struct hci_dev *hdev)
@@ -72,7 +72,7 @@ index 5b02e7c3f56d..1c1c8273c816 100644
  }
  
  static int qca_get_data_path_id(struct hci_dev *hdev, __u8 *data_path_id)
-@@ -2389,9 +2390,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2393,9 +2394,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  	if (!qcadev->oper_speed)
  		BT_DBG("UART will pick default operating speed");
  
@@ -82,7 +82,7 @@ index 5b02e7c3f56d..1c1c8273c816 100644
  	if (data)
  		qcadev->btsoc_type = data->soc_type;
  	else
-@@ -2472,7 +2470,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2476,7 +2474,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  
  		qcadev->sw_ctrl = devm_gpiod_get_optional(&serdev->dev, "swctrl",
  					       GPIOD_IN);
