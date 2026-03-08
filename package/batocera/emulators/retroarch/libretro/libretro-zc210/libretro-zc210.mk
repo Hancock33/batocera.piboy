@@ -20,12 +20,12 @@ endef
 
 define LIBRETRO_ZC210_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc210
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc210
 
 	$(INSTALL) -D $(@D)/zc210_libretro.so $(TARGET_DIR)/usr/lib/libretro/zc210_libretro.so
+	$(INSTALL) -D $(@D)/info/zc210_libretro.info $(TARGET_DIR)/usr/share/libretro/info/zc210_libretro.info
 	cp -avr       $(@D)/datfile/*         $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc210
-	cp -av        $(@D)/info/*.info       $(TARGET_DIR)/usr/share/libretro/info/
 endef
 
 $(eval $(generic-package))

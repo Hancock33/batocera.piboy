@@ -7321,7 +7321,7 @@ msgstr "ATIVAR CORREÇÕES DE TELA PLANA"
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "ENABLE WIN32"
-msgstr ""
+msgstr "ATIVAR WIN32"
 
 #. TRANSLATION: wine
 msgctxt "game_options"

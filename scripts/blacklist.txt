@@ -18,4 +18,3 @@ stuntcar.mk
 wine-custom.mk
 wine-proton.mk
 wine-x86.mk
-wxwidgets.mk

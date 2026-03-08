@@ -48,10 +48,19 @@ define LIBRETRO_SCUMMVM_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.info $(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
 endef
 
+define LIBRETRO_SCUMMVM_CLONE_AND_INIT
+	mkdir -p $(@D)/backends/platform/libretro/deps/$(1)
+	git -C $(@D)/backends/platform/libretro/deps/$(1) init
+	git -C $(@D)/backends/platform/libretro/deps/$(1) remote add origin https://github.com/libretro/$(1)
+	git -C $(@D)/backends/platform/libretro/deps/$(1) fetch --depth 1 origin $(2)
+	git -C $(@D)/backends/platform/libretro/deps/$(1) checkout FETCH_HEAD
+	git -C $(@D)/backends/platform/libretro/deps/$(1) submodule update --init --recursive --depth 1
+endef
+
+# Details from backends/platform/libretro/dependencies.mk
 define LIBRETRO_SCUMMVM_GIT_DL
-	mkdir -p $(@D)/backends/platform/libretro/deps
-	cd $(@D)/backends/platform/libretro/deps && git clone https://github.com/libretro/libretro-deps
-	cd $(@D)/backends/platform/libretro/deps && git clone https://github.com/libretro/libretro-common
+	$(call LIBRETRO_SCUMMVM_CLONE_AND_INIT,libretro-deps,7e6e34f0319f4c7448d72f0e949e76265ccf55a1)
+	$(call LIBRETRO_SCUMMVM_CLONE_AND_INIT,libretro-common,70ed90c42ddea828f53dd1b984c6443ddb39dbd6)
 endef
 
 LIBRETRO_SCUMMVM_POST_EXTRACT_HOOKS = LIBRETRO_SCUMMVM_GIT_DL

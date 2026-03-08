@@ -98,13 +98,13 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
 								$(@D)/radeon \
 								$(@D)/xe \
 								$(@D)/yamaha
-	# Prune other ARM SoC vendors if building a specific ARM target
-	ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
-		ALLLINUXFIRMWARES_REMOVE_DIRS += \
+    # Prune other ARM SoC vendors if building a specific ARM target
+    ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
+        ALLLINUXFIRMWARES_REMOVE_DIRS += \
 		$(@D)/rockchip $(@D)/amlogic $(@D)/meson $(@D)/sunxi \
 		$(@D)/nxp $(@D)/imx $(@D)/starfive $(@D)/powervr \
 		$(@D)/airoha $(@D)/amphion $(@D)/cadence $(@D)/ar3k
-	endif
+    endif
 endif
 
 # Remove Broadcom if RPi/External firmware is already handling it
@@ -158,7 +158,6 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 		rm -f $(TARGET_DIR)/lib/firmware/leia_*.fw; \
 	fi
 
-
 	# Some firmware are distributed as a symlink, for drivers to load them using a
 	# defined name other than the real one. Since 9cfefbd7fbda ("Remove duplicate
 	# symlinks") those symlink aren't distributed in linux-firmware but are created
@@ -191,8 +190,8 @@ endef
 
 # Realtek BT symlinks for RK3588 kernel compatibility
 define ALLLINUXFIRMWARES_LINK_RTL_BT
-    ln -sf /lib/firmware/rtl_bt/rtl8852bu_fw.bin $(TARGET_DIR)/lib/firmware/rtl8852bu_fw
-    ln -sf /lib/firmware/rtl_bt/rtl8852bu_config.bin $(TARGET_DIR)/lib/firmware/rtl8852bu_config
+	ln -sf /lib/firmware/rtl_bt/rtl8852bu_fw.bin $(TARGET_DIR)/lib/firmware/rtl8852bu_fw
+	ln -sf /lib/firmware/rtl_bt/rtl8852bu_config.bin $(TARGET_DIR)/lib/firmware/rtl8852bu_config
 endef
 
 # Apply hooks based on architecture

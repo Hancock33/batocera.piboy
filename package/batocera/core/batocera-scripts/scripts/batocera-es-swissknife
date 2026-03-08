@@ -107,7 +107,7 @@ case ${1,,} in
         ret=$?
         [[ $ret -eq 0 ]] && /etc/init.d/S31emulationstation resume
         [[ $ret -eq 10 ]] && shutdown -r now
-        [[ $ret -eq 11 ]] && shutdown -h now
+        [[ $ret -eq 11 ]] && shutdown -P -h now
     ;;
 
     --version|--arch|--update)

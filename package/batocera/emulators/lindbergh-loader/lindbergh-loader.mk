@@ -11,7 +11,7 @@ LINDBERGH_LOADER_LICENSE_FILES = LICENSE.md
 LINDBERGH_LOADER_EMULATOR_INFO = lindbergh-loader.emulator.yml
 
 ifeq ($(BR2_x86_64),y)
-LINDBERGH_LOADER_DEPENDENCIES = wine-x86 dmidecode ossp
+LINDBERGH_LOADER_DEPENDENCIES += wine-x86 dmidecode ossp
 endif
 
 ifeq ($(BR2_i386),y)
@@ -40,14 +40,19 @@ endef
 define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/extralibs
-	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/crosshairs
 	cp -fv $(@D)/build/* $(TARGET_DIR)/usr/bin/lindbergh/
 	#LD_LIBRARY_PATH=$(STAGING_DIR)/lib:$(STAGING_DIR)/usr/lib $(@D)/build/lindbergh --create config $(TARGET_DIR)/usr/bin/lindbergh/lindbergh.ini
 	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/*.ini $(TARGET_DIR)/usr/bin/lindbergh/
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/crosshairs/* $(TARGET_DIR)/usr/bin/lindbergh/crosshairs/
 	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so*     $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 endef
 endif
+
+define LINDBERGH_LOADER_CROSSHAIRS
+	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/crosshairs
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/crosshairs/* $(TARGET_DIR)/usr/bin/lindbergh/crosshairs/
+endef
+
+LINDBERGH_LOADER_POST_INSTALL_TARGET_HOOKS += LINDBERGH_LOADER_CROSSHAIRS
 
 $(eval $(generic-package))
 $(eval $(emulator-info-package))

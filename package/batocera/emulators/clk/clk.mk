@@ -14,7 +14,7 @@ CLK_EMULATOR_INFO = clk.emulator.yml
 CLK_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 
 define CLK_INSTALL_TARGET_CMDS
- 	$(INSTALL) -D $(@D)/clksignal $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D $(@D)/clksignal $(TARGET_DIR)/usr/bin/
 	# evmapy
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/clk/clk.keys \

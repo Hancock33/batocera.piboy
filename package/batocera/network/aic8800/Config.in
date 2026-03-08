@@ -15,11 +15,13 @@ config BR2_PACKAGE_AIC8800_SDIO
 	depends on BR2_LINUX_KERNEL
 	select BR2_PACKAGE_AIC8800
 	help
-	  Linux Driver for the aicsemi aic8800 WiFi / BT Adapter, SDIO driver.
+	  Linux Driver for the aicsemi aic8800 WiFi / BT Adapter,
+	  SDIO driver.
 
 config BR2_PACKAGE_AIC8800_USB
 	bool "aic8800usb"
 	depends on BR2_LINUX_KERNEL
 	select BR2_PACKAGE_AIC8800
 	help
-	  Linux Driver for the aicsemi aic8800 WiFi / BT Adapter, USB driver.
+	  Linux Driver for the aicsemi aic8800 WiFi / BT Adapter,
+	  USB driver.

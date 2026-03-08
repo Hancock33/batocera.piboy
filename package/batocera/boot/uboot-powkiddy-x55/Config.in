@@ -1,6 +1,7 @@
 config BR2_PACKAGE_UBOOT_POWKIDDY_X55
-    bool "uboot-powkiddy-x55"
-    help
-      U-Boot for the Powkiddy X55
+	bool "uboot-powkiddy-x55"
 
-      https://u-boot.org/
+	help
+	  U-Boot for the Powkiddy X55
+
+	  https://u-boot.org/

@@ -5,7 +5,6 @@
 ################################################################################
 # Version: Commits on Nov 21, 2025
 XROAR_VERSION = 1.10
-XROAR_SOURCE = xroar-${XROAR_VERSION}.tar.gz
 XROAR_SITE = https://www.6809.org.uk/xroar/dl
 XROAR_LICENSE = GPLv3
 XROAR_LICENSE_FILE = COPYING.GPL

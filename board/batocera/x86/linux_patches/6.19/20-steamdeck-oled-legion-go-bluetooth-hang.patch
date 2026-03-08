@@ -51,7 +51,7 @@ index 96e20a66ecd1..b678d2235a1a 100644
  
  static const struct h5_device_data h5_data_rtl8822cs = {
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index 888176b0faa9..908b02d4d002 100644
+index c0cc04995fc2..c70da1a63b6f 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
 @@ -228,7 +228,6 @@ struct qca_serdev {
@@ -62,7 +62,7 @@ index 888176b0faa9..908b02d4d002 100644
  	const char *firmware_name[2];
  };
  
-@@ -1842,12 +1841,13 @@ static int qca_power_on(struct hci_dev *hdev)
+@@ -1875,12 +1874,13 @@ static int qca_power_on(struct hci_dev *hdev)
  
  static void hci_coredump_qca(struct hci_dev *hdev)
  {
@@ -80,7 +80,7 @@ index 888176b0faa9..908b02d4d002 100644
  }
  
  static int qca_get_data_path_id(struct hci_dev *hdev, __u8 *data_path_id)
-@@ -1879,7 +1879,6 @@ static int qca_setup(struct hci_uart *hu)
+@@ -1912,7 +1912,6 @@ static int qca_setup(struct hci_uart *hu)
  	const char *rampatch_name = qca_get_rampatch_name(hu);
  	int ret;
  	struct qca_btsoc_version ver;
@@ -88,7 +88,7 @@ index 888176b0faa9..908b02d4d002 100644
  	const char *soc_name;
  
  	ret = qca_check_speeds(hu);
-@@ -1943,10 +1942,6 @@ static int qca_setup(struct hci_uart *hu)
+@@ -1976,10 +1975,6 @@ static int qca_setup(struct hci_uart *hu)
  	case QCA_WCN6750:
  	case QCA_WCN6855:
  	case QCA_WCN7850:
@@ -99,7 +99,7 @@ index 888176b0faa9..908b02d4d002 100644
  		hci_set_aosp_capable(hdev);
  
  		ret = qca_read_soc_version(hdev, &ver, soc_type);
-@@ -2352,9 +2347,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2389,9 +2384,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  	if (!qcadev->oper_speed)
  		BT_DBG("UART will pick default operating speed");
  
@@ -109,7 +109,7 @@ index 888176b0faa9..908b02d4d002 100644
  	if (data)
  		qcadev->btsoc_type = data->soc_type;
  	else
-@@ -2435,7 +2427,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2472,7 +2464,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  
  		qcadev->sw_ctrl = devm_gpiod_get_optional(&serdev->dev, "swctrl",
  					       GPIOD_IN);

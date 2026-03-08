@@ -1,5 +1,5 @@
 diff --git a/CREDITS b/CREDITS
-index d74c8b2b7ed3..65305ac376ef 100644
+index f7e480057630..04a57d164044 100644
 --- a/CREDITS
 +++ b/CREDITS
 @@ -71,11 +71,6 @@ D: dosfs, LILO, some fd features, ATM, various other hacks here and there
@@ -39,7 +39,7 @@ index f4873197587d..0d1f88185b73 100644
     ocfs2-online-filecheck
 diff --git a/Documentation/filesystems/ntfs.rst b/Documentation/filesystems/ntfs.rst
 new file mode 100644
-index 000000000000..94f368fb3b06
+index 000000000000..5c96b04a4d7a
 --- /dev/null
 +++ b/Documentation/filesystems/ntfs.rst
 @@ -0,0 +1,159 @@
@@ -84,7 +84,7 @@ index 000000000000..94f368fb3b06
 +
 +The NTFS driver supports the following mount options:
 +
-+======================= ===================================================
++======================= ====================================================
 +iocharset=name          Character set to use for converting between
 +                        the encoding is used for user visible filename and
 +                        16 bit Unicode characters.
@@ -201,12 +201,12 @@ index 000000000000..94f368fb3b06
 +discard=<BOOL>          Issue block device discard for clusters freed on
 +                        file deletion/truncation to inform underlying
 +                        storage.
-+======================= ==================================================
++======================= ====================================================
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 5c350fcf0ee9..2703fb520bfc 100644
+index b8d8a5c41597..26248a59db9a 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -18904,6 +18904,15 @@ W:	https://github.com/davejiang/linux/wiki
+@@ -18867,6 +18867,15 @@ W:	https://github.com/davejiang/linux/wiki
  T:	git https://github.com/davejiang/linux.git
  F:	drivers/ntb/hw/intel/
  
@@ -248,14 +248,15 @@ index cf4a745e9679..ae1b07f9c6a0 100644
  obj-$(CONFIG_EFS_FS)		+= efs/
 diff --git a/fs/ntfs/Kconfig b/fs/ntfs/Kconfig
 new file mode 100644
-index 000000000000..e5fd1378fbbf
+index 000000000000..6a6acde9ba91
 --- /dev/null
 +++ b/fs/ntfs/Kconfig
-@@ -0,0 +1,47 @@
+@@ -0,0 +1,48 @@
 +# SPDX-License-Identifier: GPL-2.0-only
 +config NTFS_FS
 +	tristate "NTFS file system support"
 +	select NLS
++	select FS_IOMAP
 +	help
 +	  NTFS is the file system of Microsoft Windows NT, 2000, XP and 2003.
 +	  This allows you to mount devices formatted with the ntfs file system.
@@ -317,7 +318,7 @@ index 000000000000..0ce4d9a9388a
 +ccflags-$(CONFIG_NTFS_DEBUG) += -DDEBUG
 diff --git a/fs/ntfs/aops.c b/fs/ntfs/aops.c
 new file mode 100644
-index 000000000000..01ed11f56890
+index 000000000000..78d1ce41958e
 --- /dev/null
 +++ b/fs/ntfs/aops.c
 @@ -0,0 +1,263 @@
@@ -419,7 +420,7 @@ index 000000000000..01ed11f56890
 +	unsigned int delta;
 +	unsigned char blocksize_bits;
 +
-+	ntfs_debug("Entering for mft_no 0x%lx, logical block 0x%llx.",
++	ntfs_debug("Entering for mft_no 0x%llx, logical block 0x%llx.",
 +			ni->mft_no, (unsigned long long)block);
 +	if (ni->type != AT_DATA || !NInoNonResident(ni) || NInoEncrypted(ni) ||
 +	    NInoMstProtected(ni)) {
@@ -467,12 +468,12 @@ index 000000000000..01ed11f56890
 +			goto hole;
 +		case LCN_ENOMEM:
 +			ntfs_error(vol->sb,
-+				"Not enough memory to complete mapping for inode 0x%lx. Returning 0.",
++				"Not enough memory to complete mapping for inode 0x%llx. Returning 0.",
 +				ni->mft_no);
 +			break;
 +		default:
 +			ntfs_error(vol->sb,
-+				"Failed to complete mapping for inode 0x%lx.  Run chkdsk. Returning 0.",
++				"Failed to complete mapping for inode 0x%llx.  Run chkdsk. Returning 0.",
 +				ni->mft_no);
 +			break;
 +		}
@@ -586,10 +587,10 @@ index 000000000000..01ed11f56890
 +};
 diff --git a/fs/ntfs/attrib.c b/fs/ntfs/attrib.c
 new file mode 100644
-index 000000000000..e8285264f619
+index 000000000000..48759f6a78c4
 --- /dev/null
 +++ b/fs/ntfs/attrib.c
-@@ -0,0 +1,5425 @@
+@@ -0,0 +1,5428 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS attribute operations.
@@ -962,7 +963,7 @@ index 000000000000..e8285264f619
 +	unsigned long flags;
 +	bool is_retry = false;
 +
-+	ntfs_debug("Entering for i_ino 0x%lx, vcn 0x%llx, %s_locked.",
++	ntfs_debug("Entering for i_ino 0x%llx, vcn 0x%llx, %s_locked.",
 +			ni->mft_no, (unsigned long long)vcn,
 +			write_locked ? "write" : "read");
 +	if (!ni->runlist.rl) {
@@ -1113,7 +1114,7 @@ index 000000000000..e8285264f619
 +	int err = 0;
 +	bool is_retry = false;
 +
-+	ntfs_debug("Entering for i_ino 0x%lx, vcn 0x%llx, with%s ctx.",
++	ntfs_debug("Entering for i_ino 0x%llx, vcn 0x%llx, with%s ctx.",
 +			ni->mft_no, (unsigned long long)vcn, ctx ? "" : "out");
 +	if (!ni->runlist.rl) {
 +		read_lock_irqsave(&ni->size_lock, flags);
@@ -1271,8 +1272,8 @@ index 000000000000..e8285264f619
 +			if (a->name_length && ((le16_to_cpu(a->name_offset) +
 +					       a->name_length * sizeof(__le16)) >
 +						le32_to_cpu(a->length))) {
-+				ntfs_error(vol->sb, "Corrupt attribute name in MFT record %lld\n",
-+					   (long long)ctx->ntfs_ino->mft_no);
++				ntfs_error(vol->sb, "Corrupt attribute name in MFT record %llu\n",
++					   ctx->ntfs_ino->mft_no);
 +				break;
 +			}
 +
@@ -1382,7 +1383,7 @@ index 000000000000..e8285264f619
 +	attr_vi = ntfs_attr_iget(VFS_I(base_ni), AT_ATTRIBUTE_LIST, AT_UNNAMED, 0);
 +	if (IS_ERR(attr_vi)) {
 +		ntfs_error(base_ni->vol->sb,
-+			   "Failed to open an inode for Attribute list, mft = %ld",
++			   "Failed to open an inode for Attribute list, mft = %llu",
 +			   base_ni->mft_no);
 +		return PTR_ERR(attr_vi);
 +	}
@@ -1390,7 +1391,7 @@ index 000000000000..e8285264f619
 +	if (ntfs_inode_attr_pread(attr_vi, 0, size, al_start) != size) {
 +		iput(attr_vi);
 +		ntfs_error(base_ni->vol->sb,
-+			   "Failed to read attribute list, mft = %ld",
++			   "Failed to read attribute list, mft = %llu",
 +			   base_ni->mft_no);
 +		return -EIO;
 +	}
@@ -1409,7 +1410,7 @@ index 000000000000..e8285264f619
 +			break;
 +	}
 +	if (al != al_start + size) {
-+		ntfs_error(base_ni->vol->sb, "Corrupt attribute list, mft = %ld",
++		ntfs_error(base_ni->vol->sb, "Corrupt attribute list, mft = %llu",
 +			   base_ni->mft_no);
 +		return -EIO;
 +	}
@@ -1482,7 +1483,7 @@ index 000000000000..e8285264f619
 +	int err = 0;
 +	static const char *es = " Unmount and run chkdsk.";
 +
-+	ntfs_debug("Entering for inode 0x%lx, type 0x%x.", ni->mft_no, type);
++	ntfs_debug("Entering for inode 0x%llx, type 0x%x.", ni->mft_no, type);
 +	if (!base_ni) {
 +		/* First call happens with the base mft record. */
 +		base_ni = ctx->base_ntfs_ino = ctx->ntfs_ino;
@@ -1682,7 +1683,7 @@ index 000000000000..e8285264f619
 +		if (MREF_LE(al_entry->mft_reference) == ni->mft_no) {
 +			if (MSEQNO_LE(al_entry->mft_reference) != ni->seq_no) {
 +				ntfs_error(vol->sb,
-+					"Found stale mft reference in attribute list of base inode 0x%lx.%s",
++					"Found stale mft reference in attribute list of base inode 0x%llx.%s",
 +					base_ni->mft_no, es);
 +				err = -EIO;
 +				break;
@@ -1704,7 +1705,7 @@ index 000000000000..e8285264f619
 +						al_entry->mft_reference), &ni);
 +				if (IS_ERR(ctx->mrec)) {
 +					ntfs_error(vol->sb,
-+							"Failed to map extent mft record 0x%lx of base inode 0x%lx.%s",
++							"Failed to map extent mft record 0x%lx of base inode 0x%llx.%s",
 +							MREF_LE(al_entry->mft_reference),
 +							base_ni->mft_no, es);
 +					err = PTR_ERR(ctx->mrec);
@@ -1793,7 +1794,7 @@ index 000000000000..e8285264f619
 +
 +	if (!err) {
 +		ntfs_error(vol->sb,
-+			"Base inode 0x%lx contains corrupt attribute list attribute.%s",
++			"Base inode 0x%llx contains corrupt attribute list attribute.%s",
 +			base_ni->mft_no, es);
 +		err = -EIO;
 +	}
@@ -2500,8 +2501,8 @@ index 000000000000..e8285264f619
 +			err2 = attr_size;
 +			attr_size = arec_size - mp_ofs;
 +			ntfs_error(vol->sb,
-+				"Failed to undo partial resident to non-resident attribute conversion.  Truncating inode 0x%lx, attribute type 0x%x from %i bytes to %i bytes to maintain metadata consistency.  THIS MEANS YOU ARE LOSING %i BYTES DATA FROM THIS %s.",
-+					vi->i_ino,
++				"Failed to undo partial resident to non-resident attribute conversion.  Truncating inode 0x%llx, attribute type 0x%x from %i bytes to %i bytes to maintain metadata consistency.  THIS MEANS YOU ARE LOSING %i BYTES DATA FROM THIS %s.",
++					ni->mft_no,
 +					(unsigned int)le32_to_cpu(ni->type),
 +					err2, attr_size, err2 - attr_size,
 +					((ni->type == AT_DATA) &&
@@ -2700,12 +2701,12 @@ index 000000000000..e8285264f619
 +	int err, offset;
 +	struct ntfs_inode *base_ni;
 +
++	if (!ni || (!name && name_len))
++		return -EINVAL;
++
 +	ntfs_debug("Entering for inode 0x%llx, attr 0x%x, flags 0x%x.\n",
 +			(long long) ni->mft_no, (unsigned int) le32_to_cpu(type),
 +			(unsigned int) le16_to_cpu(flags));
-+
-+	if (!ni || (!name && name_len))
-+		return -EINVAL;
 +
 +	err = ntfs_attr_can_be_resident(ni->vol, type);
 +	if (err) {
@@ -2821,13 +2822,13 @@ index 000000000000..e8285264f619
 +	struct ntfs_inode *base_ni;
 +	int err, offset;
 +
++	if (!ni || dataruns_size <= 0 || (!name && name_len))
++		return -EINVAL;
++
 +	ntfs_debug("Entering for inode 0x%llx, attr 0x%x, lowest_vcn %lld, dataruns_size %d, flags 0x%x.\n",
 +			(long long) ni->mft_no, (unsigned int) le32_to_cpu(type),
 +			(long long) lowest_vcn, dataruns_size,
 +			(unsigned int) le16_to_cpu(flags));
-+
-+	if (!ni || dataruns_size <= 0 || (!name && name_len))
-+		return -EINVAL;
 +
 +	err = ntfs_attr_can_be_non_resident(ni->vol, type);
 +	if (err) {
@@ -3253,6 +3254,7 @@ index 000000000000..e8285264f619
 +	/* Open new attribute and resize it. */
 +	attr_vi = ntfs_attr_iget(VFS_I(ni), type, name, name_len);
 +	if (IS_ERR(attr_vi)) {
++		err = PTR_ERR(attr_vi);
 +		ntfs_error(sb, "Failed to open just added attribute");
 +		goto rm_attr_err_out;
 +	}
@@ -4088,7 +4090,7 @@ index 000000000000..e8285264f619
 +		 * delete extent) and continue search.
 +		 */
 +		if (finished_build) {
-+			ntfs_debug("Mark attr 0x%x for delete in inode 0x%lx.\n",
++			ntfs_debug("Mark attr 0x%x for delete in inode 0x%llx.\n",
 +				(unsigned int)le32_to_cpu(a->type), ctx->ntfs_ino->mft_no);
 +			a->data.non_resident.highest_vcn = cpu_to_le64(NTFS_VCN_DELETE_MARK);
 +			mark_mft_record_dirty(ctx->ntfs_ino);
@@ -5319,7 +5321,7 @@ index 000000000000..e8285264f619
 +			CASE_SENSITIVE, vcn, NULL, 0, ctx);
 +	if (err) {
 +		ntfs_error(vol->sb,
-+			   "ntfs_attr_lookup failed, ntfs inode(mft_no : %ld) type : 0x%x, err : %d",
++			   "ntfs_attr_lookup failed, ntfs inode(mft_no : %llu) type : 0x%x, err : %d",
 +			   ni->mft_no, ni->type, err);
 +		goto out;
 +	}
@@ -5715,8 +5717,10 @@ index 000000000000..e8285264f619
 +
 +	down_write(&ni->runlist.lock);
 +	ret = ntfs_attr_map_whole_runlist(ni);
-+	if (ret)
++	if (ret) {
++		up_write(&ni->runlist.lock);
 +		return ret;
++	}
 +
 +	len = min(len, end_vcn - start_vcn);
 +	for (rl = ni->runlist.rl, dst_cnt = 0; rl && rl->length; rl++)
@@ -6631,7 +6635,7 @@ index 000000000000..67e65c88d681
 +}
 diff --git a/fs/ntfs/bitmap.c b/fs/ntfs/bitmap.c
 new file mode 100644
-index 000000000000..ed7770853fa8
+index 000000000000..656d802333e3
 --- /dev/null
 +++ b/fs/ntfs/bitmap.c
 @@ -0,0 +1,287 @@
@@ -6767,8 +6771,8 @@ index 000000000000..ed7770853fa8
 +	struct ntfs_inode *ni = NTFS_I(vi);
 +	struct ntfs_volume *vol = ni->vol;
 +
-+	ntfs_debug("Entering for i_ino 0x%lx, start_bit 0x%llx, count 0x%llx, value %u.%s",
-+			vi->i_ino, (unsigned long long)start_bit,
++	ntfs_debug("Entering for i_ino 0x%llx, start_bit 0x%llx, count 0x%llx, value %u.%s",
++			ni->mft_no, (unsigned long long)start_bit,
 +			(unsigned long long)cnt, (unsigned int)value,
 +			is_rollback ? " (rollback)" : "");
 +
@@ -7224,7 +7228,7 @@ index 000000000000..8ad1f04be675
 +#endif /* _LINUX_NTFS_COLLATE_H */
 diff --git a/fs/ntfs/compress.c b/fs/ntfs/compress.c
 new file mode 100644
-index 000000000000..e443451f4351
+index 000000000000..71a8d9c42674
 --- /dev/null
 +++ b/fs/ntfs/compress.c
 @@ -0,0 +1,1577 @@
@@ -8027,7 +8031,7 @@ index 000000000000..e443451f4351
 +		 */
 +		if (err) {
 +			ntfs_error(vol->sb,
-+				"ntfs_decompress() failed in inode 0x%lx with error code %i. Skipping this compression block.",
++				"ntfs_decompress() failed in inode 0x%llx with error code %i. Skipping this compression block.",
 +				ni->mft_no, -err);
 +			/* Release the unfinished pages. */
 +			for (; prev_cur_page < cur_page; prev_cur_page++) {
@@ -8053,7 +8057,7 @@ index 000000000000..e443451f4351
 +		page = pages[cur_page];
 +		if (page) {
 +			ntfs_error(vol->sb,
-+				"Still have pages left! Terminating them with extreme prejudice.  Inode 0x%lx, page index 0x%lx.",
++				"Still have pages left! Terminating them with extreme prejudice.  Inode 0x%llx, page index 0x%lx.",
 +				ni->mft_no, page->__folio_index);
 +			flush_dcache_page(page);
 +			kunmap_local(page_address(page));
@@ -9053,7 +9057,7 @@ index 000000000000..d8831d492d7d
 +#endif /* _LINUX_NTFS_DEBUG_H */
 diff --git a/fs/ntfs/dir.c b/fs/ntfs/dir.c
 new file mode 100644
-index 000000000000..ae7aa0adc836
+index 000000000000..8d417b4a0e80
 --- /dev/null
 +++ b/fs/ntfs/dir.c
 @@ -0,0 +1,1236 @@
@@ -9161,7 +9165,7 @@ index 000000000000..ae7aa0adc836
 +	if (unlikely(err)) {
 +		if (err == -ENOENT) {
 +			ntfs_error(sb,
-+				"Index root attribute missing in directory inode 0x%lx.",
++				"Index root attribute missing in directory inode 0x%llx.",
 +				dir_ni->mft_no);
 +			err = -EIO;
 +		}
@@ -9397,29 +9401,29 @@ index 000000000000..ae7aa0adc836
 +	/* Bounds checks. */
 +	if ((u8 *)ia < kaddr || (u8 *)ia > kaddr + PAGE_SIZE) {
 +		ntfs_error(sb,
-+			"Out of bounds check failed. Corrupt directory inode 0x%lx or driver bug.",
++			"Out of bounds check failed. Corrupt directory inode 0x%llx or driver bug.",
 +			dir_ni->mft_no);
 +		goto unm_err_out;
 +	}
 +	/* Catch multi sector transfer fixup errors. */
 +	if (unlikely(!ntfs_is_indx_record(ia->magic))) {
 +		ntfs_error(sb,
-+			"Directory index record with vcn 0x%llx is corrupt.  Corrupt inode 0x%lx.  Run chkdsk.",
-+			(unsigned long long)vcn, dir_ni->mft_no);
++			"Directory index record with vcn 0x%llx is corrupt.  Corrupt inode 0x%llx.  Run chkdsk.",
++			vcn, dir_ni->mft_no);
 +		goto unm_err_out;
 +	}
 +	if (le64_to_cpu(ia->index_block_vcn) != vcn) {
 +		ntfs_error(sb,
-+			"Actual VCN (0x%llx) of index buffer is different from expected VCN (0x%llx). Directory inode 0x%lx is corrupt or driver bug.",
-+			(unsigned long long)le64_to_cpu(ia->index_block_vcn),
-+			(unsigned long long)vcn, dir_ni->mft_no);
++			"Actual VCN (0x%llx) of index buffer is different from expected VCN (0x%llx). Directory inode 0x%llx is corrupt or driver bug.",
++			le64_to_cpu(ia->index_block_vcn),
++			vcn, dir_ni->mft_no);
 +		goto unm_err_out;
 +	}
 +	if (le32_to_cpu(ia->index.allocated_size) + 0x18 !=
 +			dir_ni->itype.index.block_size) {
 +		ntfs_error(sb,
-+			"Index buffer (VCN 0x%llx) of directory inode 0x%lx has a size (%u) differing from the directory specified size (%u). Directory inode is corrupt or driver bug.",
-+			(unsigned long long)vcn, dir_ni->mft_no,
++			"Index buffer (VCN 0x%llx) of directory inode 0x%llx has a size (%u) differing from the directory specified size (%u). Directory inode is corrupt or driver bug.",
++			vcn, dir_ni->mft_no,
 +			le32_to_cpu(ia->index.allocated_size) + 0x18,
 +			dir_ni->itype.index.block_size);
 +		goto unm_err_out;
@@ -9427,15 +9431,15 @@ index 000000000000..ae7aa0adc836
 +	index_end = (u8 *)ia + dir_ni->itype.index.block_size;
 +	if (index_end > kaddr + PAGE_SIZE) {
 +		ntfs_error(sb,
-+			"Index buffer (VCN 0x%llx) of directory inode 0x%lx crosses page boundary. Impossible! Cannot access! This is probably a bug in the driver.",
-+			(unsigned long long)vcn, dir_ni->mft_no);
++			"Index buffer (VCN 0x%llx) of directory inode 0x%llx crosses page boundary. Impossible! Cannot access! This is probably a bug in the driver.",
++			vcn, dir_ni->mft_no);
 +		goto unm_err_out;
 +	}
 +	index_end = (u8 *)&ia->index + le32_to_cpu(ia->index.index_length);
 +	if (index_end > (u8 *)ia + dir_ni->itype.index.block_size) {
 +		ntfs_error(sb,
-+			"Size of index buffer (VCN 0x%llx) of directory inode 0x%lx exceeds maximum size.",
-+			(unsigned long long)vcn, dir_ni->mft_no);
++			"Size of index buffer (VCN 0x%llx) of directory inode 0x%llx exceeds maximum size.",
++			vcn, dir_ni->mft_no);
 +		goto unm_err_out;
 +	}
 +	/* The first index entry. */
@@ -9452,7 +9456,7 @@ index 000000000000..ae7aa0adc836
 +		    (u8 *)ie + sizeof(struct index_entry_header) > index_end ||
 +		    (u8 *)ie + sizeof(struct index_entry_header) + le16_to_cpu(ie->key_length) >
 +				index_end || (u8 *)ie + le16_to_cpu(ie->length) > index_end) {
-+			ntfs_error(sb, "Index entry out of bounds in directory inode 0x%lx.",
++			ntfs_error(sb, "Index entry out of bounds in directory inode 0x%llx.",
 +					dir_ni->mft_no);
 +			goto unm_err_out;
 +		}
@@ -9605,7 +9609,7 @@ index 000000000000..ae7aa0adc836
 +	if (ie->flags & INDEX_ENTRY_NODE) {
 +		if ((ia->index.flags & NODE_MASK) == LEAF_NODE) {
 +			ntfs_error(sb,
-+				"Index entry with child node found in a leaf node in directory inode 0x%lx.",
++				"Index entry with child node found in a leaf node in directory inode 0x%llx.",
 +				dir_ni->mft_no);
 +			goto unm_err_out;
 +		}
@@ -9625,7 +9629,7 @@ index 000000000000..ae7aa0adc836
 +			kaddr = NULL;
 +			goto descend_into_child_node;
 +		}
-+		ntfs_error(sb, "Negative child node vcn in directory inode 0x%lx.",
++		ntfs_error(sb, "Negative child node vcn in directory inode 0x%llx.",
 +				dir_ni->mft_no);
 +		goto unm_err_out;
 +	}
@@ -9826,8 +9830,8 @@ index 000000000000..ae7aa0adc836
 +	struct rb_root ra_root = RB_ROOT;
 +	struct file_ra_state *ra;
 +
-+	ntfs_debug("Entering for inode 0x%lx, fpos 0x%llx.",
-+			vdir->i_ino, actor->pos);
++	ntfs_debug("Entering for inode 0x%llx, fpos 0x%llx.",
++			ndir->mft_no, actor->pos);
 +
 +	if (file->private_data) {
 +		private = file->private_data;
@@ -9922,7 +9926,7 @@ index 000000000000..ae7aa0adc836
 +	/* Find the index root attribute in the mft record. */
 +	if (ntfs_attr_lookup(AT_INDEX_ROOT, I30, 4, CASE_SENSITIVE, 0, NULL, 0,
 +				ctx)) {
-+		ntfs_error(sb, "Index root attribute missing in directory inode %ld",
++		ntfs_error(sb, "Index root attribute missing in directory inode %llu",
 +				ndir->mft_no);
 +		ntfs_attr_put_search_ctx(ctx);
 +		err = -ENOMEM;
@@ -10121,8 +10125,8 @@ index 000000000000..ae7aa0adc836
 +	ret = ntfs_attr_lookup(AT_INDEX_ROOT, I30, 4, CASE_SENSITIVE, 0, NULL,
 +				0, ctx);
 +	if (ret) {
-+		ntfs_error(ni->vol->sb, "Index root attribute missing in directory inode %lld",
-+				(unsigned long long)ni->mft_no);
++		ntfs_error(ni->vol->sb, "Index root attribute missing in directory inode %llu",
++				ni->mft_no);
 +		ntfs_attr_put_search_ctx(ctx);
 +		return ret;
 +	}
@@ -10207,7 +10211,7 @@ index 000000000000..ae7aa0adc836
 +	int err, ret;
 +	struct ntfs_attr na;
 +
-+	ntfs_debug("Entering for inode 0x%lx.", vi->i_ino);
++	ntfs_debug("Entering for inode 0x%llx.", ni->mft_no);
 +
 +	if (NVolShutdown(vol))
 +		return -EIO;
@@ -10274,8 +10278,8 @@ index 000000000000..ae7aa0adc836
 +		ntfs_debug("Done.");
 +	else
 +		ntfs_warning(vi->i_sb,
-+			"Failed to f%ssync inode 0x%lx.  Error %u.",
-+			datasync ? "data" : "", vi->i_ino, -ret);
++			"Failed to f%ssync inode 0x%llx.  Error %u.",
++			datasync ? "data" : "", ni->mft_no, -ret);
 +	inode_unlock(vi);
 +	return ret;
 +}
@@ -10333,10 +10337,10 @@ index 000000000000..a38c6b071678
 +#endif /* _LINUX_NTFS_FS_DIR_H */
 diff --git a/fs/ntfs/ea.c b/fs/ntfs/ea.c
 new file mode 100644
-index 000000000000..82ad9b61ec64
+index 000000000000..b2b0a9a043a9
 --- /dev/null
 +++ b/fs/ntfs/ea.c
-@@ -0,0 +1,942 @@
+@@ -0,0 +1,943 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Pocessing of EA's
@@ -11023,7 +11027,8 @@ index 000000000000..82ad9b61ec64
 +	a->flags = new_aflags;
 +	mark_mft_record_dirty(ctx->ntfs_ino);
 +err_out:
-+	ntfs_attr_put_search_ctx(ctx);
++	if (ctx)
++		ntfs_attr_put_search_ctx(ctx);
 +	unmap_mft_record(ni);
 +	return err;
 +}
@@ -11317,7 +11322,7 @@ index 000000000000..1f63bd55e057
 +#endif /* _LINUX_NTFS_EA_H */
 diff --git a/fs/ntfs/file.c b/fs/ntfs/file.c
 new file mode 100644
-index 000000000000..4b9126f9fe52
+index 000000000000..273578015999
 --- /dev/null
 +++ b/fs/ntfs/file.c
 @@ -0,0 +1,1161 @@
@@ -11486,7 +11491,7 @@ index 000000000000..4b9126f9fe52
 +	struct inode *parent_vi, *ia_vi;
 +	struct ntfs_attr_search_ctx *ctx;
 +
-+	ntfs_debug("Entering for inode 0x%lx.", vi->i_ino);
++	ntfs_debug("Entering for inode 0x%llx.", ni->mft_no);
 +
 +	if (NVolShutdown(vol))
 +		return -EIO;
@@ -11565,8 +11570,8 @@ index 000000000000..4b9126f9fe52
 +		ntfs_debug("Done.");
 +	else
 +		ntfs_warning(vi->i_sb,
-+				"Failed to f%ssync inode 0x%lx.  Error %u.",
-+				datasync ? "data" : "", vi->i_ino, -ret);
++				"Failed to f%ssync inode 0x%llx.  Error %u.",
++				datasync ? "data" : "", ni->mft_no, -ret);
 +	if (!ret)
 +		blkdev_issue_flush(vi->i_sb->s_bdev);
 +	return ret;
@@ -11977,7 +11982,7 @@ index 000000000000..4b9126f9fe52
 +	if (NInoCompressed(NTFS_I(inode)))
 +		return -EOPNOTSUPP;
 +
-+	if (desc->vm_flags & VM_WRITE) {
++	if (vma_desc_test_flags(desc, VMA_WRITE_BIT)) {
 +		struct inode *inode = file_inode(file);
 +		loff_t from, to;
 +		int err;
@@ -14724,10 +14729,10 @@ index 000000000000..e68d6fabaf9f
 +#endif /* _LINUX_NTFS_INDEX_H */
 diff --git a/fs/ntfs/inode.c b/fs/ntfs/inode.c
 new file mode 100644
-index 000000000000..7d4c33b3b7a2
+index 000000000000..43d7ecc14c15
 --- /dev/null
 +++ b/fs/ntfs/inode.c
-@@ -0,0 +1,3820 @@
+@@ -0,0 +1,3817 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel inode handling.
@@ -14819,7 +14824,7 @@ index 000000000000..7d4c33b3b7a2
 +	struct ntfs_attr *na = data;
 +	struct ntfs_inode *ni = NTFS_I(vi);
 +
-+	vi->i_ino = na->mft_no;
++	vi->i_ino = (unsigned long)na->mft_no;
 +
 +	if (na->type == AT_INDEX_ALLOCATION)
 +		NInoSetMstProtected(ni);
@@ -14879,7 +14884,7 @@ index 000000000000..7d4c33b3b7a2
 + * Return the struct inode on success. Check the return value with IS_ERR() and
 + * if true, the function failed and the error code is obtained from PTR_ERR().
 + */
-+struct inode *ntfs_iget(struct super_block *sb, unsigned long mft_no)
++struct inode *ntfs_iget(struct super_block *sb, u64 mft_no)
 +{
 +	struct inode *vi;
 +	int err;
@@ -15230,7 +15235,7 @@ index 000000000000..7d4c33b3b7a2
 +static struct lock_class_key extent_inode_mrec_lock_key;
 +
 +inline struct ntfs_inode *ntfs_new_extent_inode(struct super_block *sb,
-+		unsigned long mft_no)
++		u64 mft_no)
 +{
 +	struct ntfs_inode *ni = ntfs_alloc_extent_inode();
 +
@@ -15400,7 +15405,7 @@ index 000000000000..7d4c33b3b7a2
 +static int ntfs_read_locked_inode(struct inode *vi)
 +{
 +	struct ntfs_volume *vol = NTFS_SB(vi->i_sb);
-+	struct ntfs_inode *ni;
++	struct ntfs_inode *ni = NTFS_I(vi);
 +	struct mft_record *m;
 +	struct attr_record *a;
 +	struct standard_information *si;
@@ -15412,7 +15417,7 @@ index 000000000000..7d4c33b3b7a2
 +	dev_t dev = 0;
 +	bool vol_err = true;
 +
-+	ntfs_debug("Entering for i_ino 0x%lx.", vi->i_ino);
++	ntfs_debug("Entering for i_ino 0x%llx.", ni->mft_no);
 +
 +	if (uid_valid(vol->uid)) {
 +		vi->i_uid = vol->uid;
@@ -15434,7 +15439,6 @@ index 000000000000..7d4c33b3b7a2
 +	 */
 +	if (vi->i_ino != FILE_MFT)
 +		ntfs_init_big_inode(vi);
-+	ni = NTFS_I(vi);
 +
 +	m = map_mft_record(ni);
 +	if (IS_ERR(m)) {
@@ -15534,7 +15538,7 @@ index 000000000000..7d4c33b3b7a2
 +	} else {
 +		if (vi->i_ino == FILE_MFT)
 +			goto skip_attr_list_load;
-+		ntfs_debug("Attribute list found in inode 0x%lx.", vi->i_ino);
++		ntfs_debug("Attribute list found in inode 0x%llx.", ni->mft_no);
 +		NInoSetAttrList(ni);
 +		a = ctx->attr;
 +		if (a->flags & ATTR_COMPRESSION_MASK) {
@@ -15550,8 +15554,8 @@ index 000000000000..7d4c33b3b7a2
 +				goto unm_err_out;
 +			}
 +			ntfs_warning(vi->i_sb,
-+				"Resident attribute list attribute in inode 0x%lx is marked encrypted/sparse which is not true.  However, Windows allows this and chkdsk does not detect or correct it so we will just ignore the invalid flags and pretend they are not set.",
-+				vi->i_ino);
++				"Resident attribute list attribute in inode 0x%llx is marked encrypted/sparse which is not true.  However, Windows allows this and chkdsk does not detect or correct it so we will just ignore the invalid flags and pretend they are not set.",
++				ni->mft_no);
 +		}
 +		/* Now allocate memory for the attribute list. */
 +		ni->attr_list_size = (u32)ntfs_attr_size(a);
@@ -15955,8 +15959,8 @@ index 000000000000..7d4c33b3b7a2
 +err_out:
 +	if (err != -EOPNOTSUPP && err != -ENOMEM && vol_err == true) {
 +		ntfs_error(vol->sb,
-+			"Failed with error code %i.  Marking corrupt inode 0x%lx as bad.  Run chkdsk.",
-+			err, vi->i_ino);
++			"Failed with error code %i.  Marking corrupt inode 0x%llx as bad.  Run chkdsk.",
++			err, ni->mft_no);
 +		NVolSetErrors(vol);
 +	}
 +	return err;
@@ -15992,7 +15996,7 @@ index 000000000000..7d4c33b3b7a2
 +	struct ntfs_attr_search_ctx *ctx;
 +	int err = 0;
 +
-+	ntfs_debug("Entering for i_ino 0x%lx.", vi->i_ino);
++	ntfs_debug("Entering for i_ino 0x%llx.", ni->mft_no);
 +
 +	ntfs_init_big_inode(vi);
 +
@@ -16181,9 +16185,9 @@ index 000000000000..7d4c33b3b7a2
 +err_out:
 +	if (err != -ENOENT)
 +		ntfs_error(vol->sb,
-+			"Failed with error code %i while reading attribute inode (mft_no 0x%lx, type 0x%x, name_len %i).  Marking corrupt inode and base inode 0x%lx as bad.  Run chkdsk.",
-+			err, vi->i_ino, ni->type, ni->name_len,
-+			base_vi->i_ino);
++			"Failed with error code %i while reading attribute inode (mft_no 0x%llx, type 0x%x, name_len %i).  Marking corrupt inode and base inode 0x%llx as bad.  Run chkdsk.",
++			err, ni->mft_no, ni->type, ni->name_len,
++			base_ni->mft_no);
 +	if (err != -ENOENT && err != -ENOMEM)
 +		NVolSetErrors(vol);
 +	return err;
@@ -16234,7 +16238,7 @@ index 000000000000..7d4c33b3b7a2
 +	u8 *ir_end, *index_end;
 +	int err = 0;
 +
-+	ntfs_debug("Entering for i_ino 0x%lx.", vi->i_ino);
++	ntfs_debug("Entering for i_ino 0x%llx.", ni->mft_no);
 +	lockdep_assert_held(&base_ni->mrec_lock);
 +
 +	ntfs_init_big_inode(vi);
@@ -16439,8 +16443,8 @@ index 000000000000..7d4c33b3b7a2
 +		unmap_mft_record(base_ni);
 +err_out:
 +	ntfs_error(vi->i_sb,
-+		"Failed with error code %i while reading index inode (mft_no 0x%lx, name_len %i.",
-+		err, vi->i_ino, ni->name_len);
++		"Failed with error code %i while reading index inode (mft_no 0x%llx, name_len %i.",
++		err, ni->mft_no, ni->name_len);
 +	if (err != -EOPNOTSUPP && err != -ENOMEM)
 +		NVolSetErrors(vol);
 +	return err;
@@ -16974,7 +16978,7 @@ index 000000000000..7d4c33b3b7a2
 +
 +void ntfs_clear_extent_inode(struct ntfs_inode *ni)
 +{
-+	ntfs_debug("Entering for inode 0x%lx.", ni->mft_no);
++	ntfs_debug("Entering for inode 0x%llx.", ni->mft_no);
 +
 +	WARN_ON(NInoAttr(ni));
 +	WARN_ON(ni->nr_extents != -1);
@@ -17042,8 +17046,8 @@ index 000000000000..7d4c33b3b7a2
 +		ntfs_commit_inode(vi);
 +
 +		if (NInoDirty(ni)) {
-+			ntfs_debug("Failed to commit dirty inode 0x%lx.  Losing data!",
-+				   vi->i_ino);
++			ntfs_debug("Failed to commit dirty inode 0x%llx.  Losing data!",
++				   ni->mft_no);
 +			NInoClearAttrListDirty(ni);
 +			NInoClearDirty(ni);
 +		}
@@ -17230,8 +17234,8 @@ index 000000000000..7d4c33b3b7a2
 +	/* Update the creation times if they have changed. */
 +	nt = utc2ntfs(ni->i_crtime);
 +	if (si->creation_time != nt) {
-+		ntfs_debug("Updating creation time for inode 0x%lx: old = 0x%llx, new = 0x%llx",
-+				vi->i_ino, le64_to_cpu(si->creation_time),
++		ntfs_debug("Updating creation time for inode 0x%llx: old = 0x%llx, new = 0x%llx",
++				ni->mft_no, le64_to_cpu(si->creation_time),
 +				le64_to_cpu(nt));
 +		si->creation_time = nt;
 +		modified = true;
@@ -17240,8 +17244,8 @@ index 000000000000..7d4c33b3b7a2
 +	/* Update the access times if they have changed. */
 +	nt = utc2ntfs(inode_get_mtime(vi));
 +	if (si->last_data_change_time != nt) {
-+		ntfs_debug("Updating mtime for inode 0x%lx: old = 0x%llx, new = 0x%llx",
-+				vi->i_ino, le64_to_cpu(si->last_data_change_time),
++		ntfs_debug("Updating mtime for inode 0x%llx: old = 0x%llx, new = 0x%llx",
++				ni->mft_no, le64_to_cpu(si->last_data_change_time),
 +				le64_to_cpu(nt));
 +		si->last_data_change_time = nt;
 +		modified = true;
@@ -17249,16 +17253,16 @@ index 000000000000..7d4c33b3b7a2
 +
 +	nt = utc2ntfs(inode_get_ctime(vi));
 +	if (si->last_mft_change_time != nt) {
-+		ntfs_debug("Updating ctime for inode 0x%lx: old = 0x%llx, new = 0x%llx",
-+				vi->i_ino, le64_to_cpu(si->last_mft_change_time),
++		ntfs_debug("Updating ctime for inode 0x%llx: old = 0x%llx, new = 0x%llx",
++				ni->mft_no, le64_to_cpu(si->last_mft_change_time),
 +				le64_to_cpu(nt));
 +		si->last_mft_change_time = nt;
 +		modified = true;
 +	}
 +	nt = utc2ntfs(inode_get_atime(vi));
 +	if (si->last_access_time != nt) {
-+		ntfs_debug("Updating atime for inode 0x%lx: old = 0x%llx, new = 0x%llx",
-+				vi->i_ino,
++		ntfs_debug("Updating atime for inode 0x%llx: old = 0x%llx, new = 0x%llx",
++				ni->mft_no,
 +				le64_to_cpu(si->last_access_time),
 +				le64_to_cpu(nt));
 +		si->last_access_time = nt;
@@ -17310,7 +17314,7 @@ index 000000000000..7d4c33b3b7a2
 +	int err = 0;
 +	unsigned long flags;
 +
-+	ntfs_debug("Entering for inode %lld\n", (long long)ni->mft_no);
++	ntfs_debug("Entering for inode %llu\n", ni->mft_no);
 +
 +	ctx = ntfs_attr_get_search_ctx(ni, NULL);
 +	if (!ctx)
@@ -17353,8 +17357,8 @@ index 000000000000..7d4c33b3b7a2
 +
 +		ictx = ntfs_index_ctx_get(index_ni, I30, 4);
 +		if (!ictx) {
-+			ntfs_error(sb, "Failed to get index ctx, inode %lld",
-+					(long long)index_ni->mft_no);
++			ntfs_error(sb, "Failed to get index ctx, inode %llu",
++					index_ni->mft_no);
 +			iput(index_vi);
 +			mutex_unlock(&index_ni->mrec_lock);
 +			continue;
@@ -17362,8 +17366,8 @@ index 000000000000..7d4c33b3b7a2
 +
 +		err = ntfs_index_lookup(fn, sizeof(struct file_name_attr), ictx);
 +		if (err) {
-+			ntfs_debug("Index lookup failed, inode %lld",
-+					(long long)index_ni->mft_no);
++			ntfs_debug("Index lookup failed, inode %llu",
++					index_ni->mft_no);
 +			ntfs_index_ctx_put(ictx);
 +			iput(index_vi);
 +			mutex_unlock(&index_ni->mrec_lock);
@@ -17409,8 +17413,8 @@ index 000000000000..7d4c33b3b7a2
 +	}
 +	/* Check for real error occurred. */
 +	if (err != -ENOENT) {
-+		ntfs_error(sb, "Attribute lookup failed, err : %d, inode %lld", err,
-+				(long long)ni->mft_no);
++		ntfs_error(sb, "Attribute lookup failed, err : %d, inode %llu", err,
++				ni->mft_no);
 +	} else
 +		err = 0;
 +
@@ -17473,8 +17477,8 @@ index 000000000000..7d4c33b3b7a2
 +	int err = 0;
 +	bool need_iput = false;
 +
-+	ntfs_debug("Entering for %sinode 0x%lx.", NInoAttr(ni) ? "attr " : "",
-+			vi->i_ino);
++	ntfs_debug("Entering for %sinode 0x%llx.", NInoAttr(ni) ? "attr " : "",
++			ni->mft_no);
 +
 +	if (NVolShutdown(ni->vol))
 +		return -EIO;
@@ -17657,9 +17661,8 @@ index 000000000000..7d4c33b3b7a2
 +		return NULL;
 +
 +	sb = base_ni->vol->sb;
-+	ntfs_debug("Opening extent inode %lld (base mft record %lld).\n",
-+			(unsigned long long)mft_no,
-+			(unsigned long long)base_ni->mft_no);
++	ntfs_debug("Opening extent inode %llu (base mft record %llu).\n",
++			mft_no, base_ni->mft_no);
 +
 +	/* Is the extent inode already open and attached to the base inode? */
 +	if (base_ni->nr_extents > 0) {
@@ -17672,7 +17675,7 @@ index 000000000000..7d4c33b3b7a2
 +				continue;
 +			ni_mrec = map_mft_record(ni);
 +			if (IS_ERR(ni_mrec)) {
-+				ntfs_error(sb, "failed to map mft record for %lu",
++				ntfs_error(sb, "failed to map mft record for %llu",
 +						ni->mft_no);
 +				goto out;
 +			}
@@ -17680,8 +17683,8 @@ index 000000000000..7d4c33b3b7a2
 +			seq_no = MSEQNO_LE(mref);
 +			if (seq_no &&
 +			    seq_no != le16_to_cpu(ni_mrec->sequence_number)) {
-+				ntfs_error(sb, "Found stale extent mft reference mft=%lld",
-+						(long long)ni->mft_no);
++				ntfs_error(sb, "Found stale extent mft reference mft=%llu",
++						ni->mft_no);
 +				unmap_mft_record(ni);
 +				goto out;
 +			}
@@ -17741,7 +17744,7 @@ index 000000000000..7d4c33b3b7a2
 +	if (NInoAttr(ni))
 +		ni = ni->ext.base_ntfs_ino;
 +
-+	ntfs_debug("Entering for inode 0x%llx.\n", (long long) ni->mft_no);
++	ntfs_debug("Entering for inode 0x%llx.\n", ni->mft_no);
 +
 +	/* Inode haven't got attribute list, thus nothing to attach. */
 +	if (!NInoAttrList(ni))
@@ -17787,7 +17790,7 @@ index 000000000000..7d4c33b3b7a2
 +	if (!ni)
 +		return -EINVAL;
 +
-+	ntfs_debug("inode %llu\n", (unsigned long long) ni->mft_no);
++	ntfs_debug("inode %llu\n", ni->mft_no);
 +
 +	if (NInoAttrList(ni) || ni->nr_extents) {
 +		ntfs_error(ni->vol->sb, "Inode already has attribute list");
@@ -17852,8 +17855,8 @@ index 000000000000..7d4c33b3b7a2
 +
 +	/* Check for real error occurred. */
 +	if (err != -ENOENT) {
-+		ntfs_error(ni->vol->sb, "%s: Attribute lookup failed, inode %lld",
-+				__func__, (long long)ni->mft_no);
++		ntfs_error(ni->vol->sb, "%s: Attribute lookup failed, inode %llu",
++				__func__, ni->mft_no);
 +		goto put_err_out;
 +	}
 +
@@ -17974,7 +17977,7 @@ index 000000000000..7d4c33b3b7a2
 +	if (!ni)
 +		return 0;
 +
-+	ntfs_debug("Entering for inode %lld\n", (long long)ni->mft_no);
++	ntfs_debug("Entering for inode %llu\n", ni->mft_no);
 +
 +	/* Is this a base inode with mapped extent inodes? */
 +	/*
@@ -18012,8 +18015,8 @@ index 000000000000..7d4c33b3b7a2
 +	}
 +
 +	if (NInoDirty(ni))
-+		ntfs_error(ni->vol->sb, "Releasing dirty inode %lld!\n",
-+				(long long)ni->mft_no);
++		ntfs_error(ni->vol->sb, "Releasing dirty inode %llu!\n",
++				ni->mft_no);
 +	if (NInoAttrList(ni) && ni->attr_list)
 +		kvfree(ni->attr_list);
 +	ntfs_destroy_ext_inode(ni);
@@ -18031,8 +18034,8 @@ index 000000000000..7d4c33b3b7a2
 +	ntfs_attr_close(ni);
 +
 +	if (NInoDirty(ni))
-+		ntfs_error(ni->vol->sb, "Releasing dirty ext inode %lld!\n",
-+				(long long)ni->mft_no);
++		ntfs_error(ni->vol->sb, "Releasing dirty ext inode %llu!\n",
++				ni->mft_no);
 +	if (NInoAttrList(ni) && ni->attr_list)
 +		kvfree(ni->attr_list);
 +	kfree(ni->mrec);
@@ -18096,8 +18099,7 @@ index 000000000000..7d4c33b3b7a2
 +
 +	if (!ni || size < 0)
 +		return -EINVAL;
-+	ntfs_debug("Entering for inode %lld, size %d\n",
-+			(unsigned long long)ni->mft_no, size);
++	ntfs_debug("Entering for inode %llu, size %d\n", ni->mft_no, size);
 +
 +	sb = ni->vol->sb;
 +	ni_mrec = map_mft_record(ni);
@@ -18550,10 +18552,10 @@ index 000000000000..7d4c33b3b7a2
 +}
 diff --git a/fs/ntfs/inode.h b/fs/ntfs/inode.h
 new file mode 100644
-index 000000000000..5de9e9a76dfa
+index 000000000000..67942b97fac6
 --- /dev/null
 +++ b/fs/ntfs/inode.h
-@@ -0,0 +1,359 @@
+@@ -0,0 +1,358 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +/*
 + * Defines for inode structures NTFS Linux kernel driver.
@@ -18656,7 +18658,7 @@ index 000000000000..5de9e9a76dfa
 +	rwlock_t size_lock;
 +	unsigned long state;
 +	__le32 flags;
-+	unsigned long mft_no;
++	u64 mft_no;
 +	u16 seq_no;
 +	atomic_t count;
 +	struct ntfs_volume *vol;
@@ -18848,7 +18850,7 @@ index 000000000000..5de9e9a76dfa
 + * possible on all architectures.
 + */
 +struct ntfs_attr {
-+	unsigned long mft_no;
++	u64 mft_no;
 +	__le16 *name;
 +	u32 name_len;
 +	__le32 type;
@@ -18856,7 +18858,7 @@ index 000000000000..5de9e9a76dfa
 +};
 +
 +int ntfs_test_inode(struct inode *vi, void *data);
-+struct inode *ntfs_iget(struct super_block *sb, unsigned long mft_no);
++struct inode *ntfs_iget(struct super_block *sb, u64 mft_no);
 +struct inode *ntfs_attr_iget(struct inode *base_vi, __le32 type,
 +		__le16 *name, u32 name_len);
 +struct inode *ntfs_index_iget(struct inode *base_vi, __le16 *name,
@@ -18876,8 +18878,7 @@ index 000000000000..5de9e9a76dfa
 +	ni->mft_no = vi->i_ino;
 +}
 +
-+struct ntfs_inode *ntfs_new_extent_inode(struct super_block *sb,
-+		unsigned long mft_no);
++struct ntfs_inode *ntfs_new_extent_inode(struct super_block *sb, u64 mft_no);
 +void ntfs_clear_extent_inode(struct ntfs_inode *ni);
 +int ntfs_read_inode_mount(struct inode *vi);
 +int ntfs_show_options(struct seq_file *sf, struct dentry *root);
@@ -22172,7 +22173,7 @@ index 000000000000..d94f914e830f
 +#endif /* _LINUX_NTFS_LAYOUT_H */
 diff --git a/fs/ntfs/lcnalloc.c b/fs/ntfs/lcnalloc.c
 new file mode 100644
-index 000000000000..6f4df07e3726
+index 000000000000..237f13a11df3
 --- /dev/null
 +++ b/fs/ntfs/lcnalloc.c
 @@ -0,0 +1,1047 @@
@@ -23020,7 +23021,7 @@ index 000000000000..6f4df07e3726
 +	int err;
 +	unsigned int memalloc_flags;
 +
-+	ntfs_debug("Entering for i_ino 0x%lx, start_vcn 0x%llx, count 0x%llx.%s",
++	ntfs_debug("Entering for i_ino 0x%llx, start_vcn 0x%llx, count 0x%llx.%s",
 +			ni->mft_no, start_vcn, count,
 +			is_rollback ? " (rollback)" : "");
 +	vol = ni->vol;
@@ -24483,10 +24484,10 @@ index 000000000000..7068425735f1
 +#endif /* _LINUX_NTFS_MALLOC_H */
 diff --git a/fs/ntfs/mft.c b/fs/ntfs/mft.c
 new file mode 100644
-index 000000000000..56012477d3f0
+index 000000000000..48e64eaa7ec3
 --- /dev/null
 +++ b/fs/ntfs/mft.c
-@@ -0,0 +1,2922 @@
+@@ -0,0 +1,2924 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel mft record operations.
@@ -24515,14 +24516,14 @@ index 000000000000..56012477d3f0
 + * Returns 0 if the checks are successful. If not, return -EIO.
 + */
 +int ntfs_mft_record_check(const struct ntfs_volume *vol, struct mft_record *m,
-+		unsigned long mft_no)
++		u64 mft_no)
 +{
 +	struct attr_record *a;
 +	struct super_block *sb = vol->sb;
 +
 +	if (!ntfs_is_file_record(m->magic)) {
 +		ntfs_error(sb, "Record %llu has no FILE magic (0x%x)\n",
-+				(unsigned long long)mft_no, le32_to_cpu(*(__le32 *)m));
++				mft_no, le32_to_cpu(*(__le32 *)m));
 +		goto err_out;
 +	}
 +
@@ -24530,36 +24531,33 @@ index 000000000000..56012477d3f0
 +	    (vol->mft_record_size >> NTFS_BLOCK_SIZE_BITS) + 1 != le16_to_cpu(m->usa_count) ||
 +	    le16_to_cpu(m->usa_ofs) + le16_to_cpu(m->usa_count) * 2 > vol->mft_record_size) {
 +		ntfs_error(sb, "Record %llu has corrupt fix-up values fields\n",
-+				(unsigned long long)mft_no);
++				mft_no);
 +		goto err_out;
 +	}
 +
 +	if (le32_to_cpu(m->bytes_allocated) != vol->mft_record_size) {
 +		ntfs_error(sb, "Record %llu has corrupt allocation size (%u <> %u)\n",
-+				(unsigned long long)mft_no,
-+				vol->mft_record_size,
++				mft_no, vol->mft_record_size,
 +				le32_to_cpu(m->bytes_allocated));
 +		goto err_out;
 +	}
 +
 +	if (le32_to_cpu(m->bytes_in_use) > vol->mft_record_size) {
 +		ntfs_error(sb, "Record %llu has corrupt in-use size (%u > %u)\n",
-+				(unsigned long long)mft_no,
-+				le32_to_cpu(m->bytes_in_use),
++				mft_no, le32_to_cpu(m->bytes_in_use),
 +				vol->mft_record_size);
 +		goto err_out;
 +	}
 +
 +	if (le16_to_cpu(m->attrs_offset) & 7) {
 +		ntfs_error(sb, "Attributes badly aligned in record %llu\n",
-+				(unsigned long long)mft_no);
++				mft_no);
 +		goto err_out;
 +	}
 +
 +	a = (struct attr_record *)((char *)m + le16_to_cpu(m->attrs_offset));
 +	if ((char *)a < (char *)m || (char *)a > (char *)m + vol->mft_record_size) {
-+		ntfs_error(sb, "Record %llu is corrupt\n",
-+				(unsigned long long)mft_no);
++		ntfs_error(sb, "Record %llu is corrupt\n", mft_no);
 +		goto err_out;
 +	}
 +
@@ -24614,7 +24612,7 @@ index 000000000000..56012477d3f0
 +				vol->mft_record_size) {
 +			folio = ERR_PTR(-ENOENT);
 +			ntfs_error(vol->sb,
-+				"Attempt to read mft record 0x%lx, which is beyond the end of the mft. This is probably a bug in the ntfs driver.",
++				"Attempt to read mft record 0x%llx, which is beyond the end of the mft. This is probably a bug in the ntfs driver.",
 +				ni->mft_no);
 +			goto err_out;
 +		}
@@ -24681,7 +24679,7 @@ index 000000000000..56012477d3f0
 +	if (!ni)
 +		return ERR_PTR(-EINVAL);
 +
-+	ntfs_debug("Entering for mft_no 0x%lx.", ni->mft_no);
++	ntfs_debug("Entering for mft_no 0x%llx.", ni->mft_no);
 +
 +	/* Make sure the ntfs inode doesn't go away. */
 +	atomic_inc(&ni->count);
@@ -24719,7 +24717,7 @@ index 000000000000..56012477d3f0
 +	if (!ni)
 +		return;
 +
-+	ntfs_debug("Entering for mft_no 0x%lx.", ni->mft_no);
++	ntfs_debug("Entering for mft_no 0x%llx.", ni->mft_no);
 +
 +	folio = ni->folio;
 +	if (atomic_dec_return(&ni->count) > 1)
@@ -24747,11 +24745,11 @@ index 000000000000..56012477d3f0
 +	struct ntfs_inode *ni = NULL;
 +	struct ntfs_inode **extent_nis = NULL;
 +	int i;
-+	unsigned long mft_no = MREF(mref);
++	u64 mft_no = MREF(mref);
 +	u16 seq_no = MSEQNO(mref);
 +	bool destroy_ni = false;
 +
-+	ntfs_debug("Mapping extent mft record 0x%lx (base mft record 0x%lx).",
++	ntfs_debug("Mapping extent mft record 0x%llx (base mft record 0x%llx).",
 +			mft_no, base_ni->mft_no);
 +	/* Make sure the base ntfs inode doesn't go away. */
 +	atomic_inc(&base_ni->count);
@@ -24899,7 +24897,7 @@ index 000000000000..56012477d3f0
 +{
 +	struct ntfs_inode *base_ni;
 +
-+	ntfs_debug("Entering for inode 0x%lx.", ni->mft_no);
++	ntfs_debug("Entering for inode 0x%llx.", ni->mft_no);
 +	WARN_ON(NInoAttr(ni));
 +	/* Determine the base vfs inode and mark it dirty, too. */
 +	if (likely(ni->nr_extents >= 0))
@@ -24938,7 +24936,7 @@ index 000000000000..56012477d3f0
 + *
 + * NOTE:  We always perform synchronous i/o.
 + */
-+int ntfs_sync_mft_mirror(struct ntfs_volume *vol, const unsigned long mft_no,
++int ntfs_sync_mft_mirror(struct ntfs_volume *vol, const u64 mft_no,
 +		struct mft_record *m)
 +{
 +	u8 *kmirr = NULL;
@@ -24947,7 +24945,7 @@ index 000000000000..56012477d3f0
 +	int err = 0;
 +	struct bio *bio;
 +
-+	ntfs_debug("Entering for inode 0x%lx.", mft_no);
++	ntfs_debug("Entering for inode 0x%llx.", mft_no);
 +
 +	if (unlikely(!vol->mftmirr_ino)) {
 +		/* This could happen during umount... */
@@ -25000,7 +24998,7 @@ index 000000000000..56012477d3f0
 +	if (likely(!err)) {
 +		ntfs_debug("Done.");
 +	} else {
-+		ntfs_error(vol->sb, "I/O error while writing mft mirror record 0x%lx!", mft_no);
++		ntfs_error(vol->sb, "I/O error while writing mft mirror record 0x%llx!", mft_no);
 +err_out:
 +		ntfs_error(vol->sb,
 +			"Failed to synchronize $MFTMirr (error code %i).  Volume will be left marked dirty on umount.  Run chkdsk on the partition after umounting to correct this.",
@@ -25036,7 +25034,7 @@ index 000000000000..56012477d3f0
 +	struct bio *bio;
 +	unsigned int offset = 0, folio_size;
 +
-+	ntfs_debug("Entering for inode 0x%lx.", ni->mft_no);
++	ntfs_debug("Entering for inode 0x%llx.", ni->mft_no);
 +
 +	WARN_ON(NInoAttr(ni));
 +	WARN_ON(!folio_test_locked(folio));
@@ -25098,7 +25096,7 @@ index 000000000000..56012477d3f0
 +	if (unlikely(err)) {
 +		/* I/O error during writing.  This is really bad! */
 +		ntfs_error(vol->sb,
-+			"I/O error while writing mft record 0x%lx!  Marking base inode as bad.  You should unmount the volume and run chkdsk.",
++			"I/O error while writing mft record 0x%llx!  Marking base inode as bad.  You should unmount the volume and run chkdsk.",
 +			ni->mft_no);
 +		goto err_out;
 +	}
@@ -25223,7 +25221,7 @@ index 000000000000..56012477d3f0
 + * If we manage to obtain the lock we have exclusive access to the extent mft
 + * record. We set @locked_ni to the now locked ntfs inode and return 'true'.
 + */
-+bool ntfs_may_write_mft_record(struct ntfs_volume *vol, const unsigned long mft_no,
++static bool ntfs_may_write_mft_record(struct ntfs_volume *vol, const u64 mft_no,
 +		const struct mft_record *m, struct ntfs_inode **locked_ni,
 +		struct inode **ref_vi)
 +{
@@ -25234,7 +25232,7 @@ index 000000000000..56012477d3f0
 +	int i;
 +	struct ntfs_attr na = {0};
 +
-+	ntfs_debug("Entering for inode 0x%lx.", mft_no);
++	ntfs_debug("Entering for inode 0x%llx.", mft_no);
 +	/*
 +	 * Normally we do not return a locked inode so set @locked_ni to NULL.
 +	 */
@@ -25245,7 +25243,7 @@ index 000000000000..56012477d3f0
 +	 * Check if the inode corresponding to this mft record is in the VFS
 +	 * inode cache and obtain a reference to it if it is.
 +	 */
-+	ntfs_debug("Looking for inode 0x%lx in icache.", mft_no);
++	ntfs_debug("Looking for inode 0x%llx in icache.", mft_no);
 +	na.mft_no = mft_no;
 +	na.type = AT_UNUSED;
 +	/*
@@ -25267,28 +25265,28 @@ index 000000000000..56012477d3f0
 +			return false;
 +	}
 +	if (vi) {
-+		ntfs_debug("Base inode 0x%lx is in icache.", mft_no);
++		ntfs_debug("Base inode 0x%llx is in icache.", mft_no);
 +		/* The inode is in icache. */
 +		ni = NTFS_I(vi);
 +		/* Take a reference to the ntfs inode. */
 +		atomic_inc(&ni->count);
 +		/* If the inode is dirty, do not write this record. */
 +		if (NInoDirty(ni)) {
-+			ntfs_debug("Inode 0x%lx is dirty, do not write it.",
++			ntfs_debug("Inode 0x%llx is dirty, do not write it.",
 +					mft_no);
 +			atomic_dec(&ni->count);
 +			*ref_vi = vi;
 +			return false;
 +		}
-+		ntfs_debug("Inode 0x%lx is not dirty.", mft_no);
++		ntfs_debug("Inode 0x%llx is not dirty.", mft_no);
 +		/* The inode is not dirty, try to take the mft record lock. */
 +		if (unlikely(!mutex_trylock(&ni->mrec_lock))) {
-+			ntfs_debug("Mft record 0x%lx is already locked, do not write it.", mft_no);
++			ntfs_debug("Mft record 0x%llx is already locked, do not write it.", mft_no);
 +			atomic_dec(&ni->count);
 +			*ref_vi = vi;
 +			return false;
 +		}
-+		ntfs_debug("Managed to lock mft record 0x%lx, write it.",
++		ntfs_debug("Managed to lock mft record 0x%llx, write it.",
 +				mft_no);
 +		/*
 +		 * The write has to occur while we hold the mft record lock so
@@ -25297,17 +25295,17 @@ index 000000000000..56012477d3f0
 +		*locked_ni = ni;
 +		return true;
 +	}
-+	ntfs_debug("Inode 0x%lx is not in icache.", mft_no);
++	ntfs_debug("Inode 0x%llx is not in icache.", mft_no);
 +	/* The inode is not in icache. */
 +	/* Write the record if it is not a mft record (type "FILE"). */
 +	if (!ntfs_is_mft_record(m->magic)) {
-+		ntfs_debug("Mft record 0x%lx is not a FILE record, write it.",
++		ntfs_debug("Mft record 0x%llx is not a FILE record, write it.",
 +				mft_no);
 +		return true;
 +	}
 +	/* Write the mft record if it is a base inode. */
 +	if (!m->base_mft_record) {
-+		ntfs_debug("Mft record 0x%lx is a base record, write it.",
++		ntfs_debug("Mft record 0x%llx is a base record, write it.",
 +				mft_no);
 +		return true;
 +	}
@@ -25318,7 +25316,7 @@ index 000000000000..56012477d3f0
 +	 */
 +	na.mft_no = MREF_LE(m->base_mft_record);
 +	na.state = 0;
-+	ntfs_debug("Mft record 0x%lx is an extent record.  Looking for base inode 0x%lx in icache.",
++	ntfs_debug("Mft record 0x%llx is an extent record.  Looking for base inode 0x%llx in icache.",
 +			mft_no, na.mft_no);
 +	if (!na.mft_no) {
 +		/* Balance the below iput(). */
@@ -25332,7 +25330,7 @@ index 000000000000..56012477d3f0
 +
 +	if (!vi)
 +		return false;
-+	ntfs_debug("Base inode 0x%lx is in icache.", na.mft_no);
++	ntfs_debug("Base inode 0x%llx is in icache.", na.mft_no);
 +	/*
 +	 * The base inode is in icache.  Check if it has the extent inode
 +	 * corresponding to this extent mft record attached.
@@ -25346,7 +25344,7 @@ index 000000000000..56012477d3f0
 +		 */
 +		mutex_unlock(&ni->extent_lock);
 +		*ref_vi = vi;
-+		ntfs_debug("Base inode 0x%lx has no attached extent inodes, write the extent record.",
++		ntfs_debug("Base inode 0x%llx has no attached extent inodes, write the extent record.",
 +				na.mft_no);
 +		return true;
 +	}
@@ -25369,11 +25367,11 @@ index 000000000000..56012477d3f0
 +	if (!eni) {
 +		mutex_unlock(&ni->extent_lock);
 +		*ref_vi = vi;
-+		ntfs_debug("Extent inode 0x%lx is not attached to its base inode 0x%lx, write the extent record.",
++		ntfs_debug("Extent inode 0x%llx is not attached to its base inode 0x%llx, write the extent record.",
 +				mft_no, na.mft_no);
 +		return true;
 +	}
-+	ntfs_debug("Extent inode 0x%lx is attached to its base inode 0x%lx.",
++	ntfs_debug("Extent inode 0x%llx is attached to its base inode 0x%llx.",
 +			mft_no, na.mft_no);
 +	/* Take a reference to the extent ntfs inode. */
 +	atomic_inc(&eni->count);
@@ -25393,11 +25391,11 @@ index 000000000000..56012477d3f0
 +	if (unlikely(!mutex_trylock(&eni->mrec_lock))) {
 +		atomic_dec(&eni->count);
 +		*ref_vi = vi;
-+		ntfs_debug("Extent mft record 0x%lx is already locked, do not write it.",
++		ntfs_debug("Extent mft record 0x%llx is already locked, do not write it.",
 +				mft_no);
 +		return false;
 +	}
-+	ntfs_debug("Managed to lock extent mft record 0x%lx, write it.",
++	ntfs_debug("Managed to lock extent mft record 0x%llx, write it.",
 +			mft_no);
 +	/*
 +	 * The write has to occur while we hold the mft record lock so return
@@ -25430,7 +25428,7 @@ index 000000000000..56012477d3f0
 + *
 + * Locking: Caller must hold vol->mftbmp_lock for writing.
 + */
-+static int ntfs_mft_bitmap_find_and_alloc_free_rec_nolock(struct ntfs_volume *vol,
++static s64 ntfs_mft_bitmap_find_and_alloc_free_rec_nolock(struct ntfs_volume *vol,
 +		struct ntfs_inode *base_ni)
 +{
 +	s64 pass_end, ll, data_pos, pass_start, ofs, bit;
@@ -25931,7 +25929,7 @@ index 000000000000..56012477d3f0
 +	struct attr_record *a;
 +	int ret;
 +
-+	ntfs_debug("Extending mft bitmap initiailized (and data) size.");
++	ntfs_debug("Extending mft bitmap initialized (and data) size.");
 +	mft_ni = NTFS_I(vol->mft_ino);
 +	mftbmp_vi = vol->mftbmp_ino;
 +	mftbmp_ni = NTFS_I(mftbmp_vi);
@@ -27193,12 +27191,14 @@ index 000000000000..56012477d3f0
 +	struct ntfs_inode *ni = NTFS_I(vi);
 +	struct ntfs_volume *vol = ni->vol;
 +	u8 *kaddr;
-+	struct ntfs_inode *locked_nis[PAGE_SIZE / NTFS_BLOCK_SIZE];
++	struct ntfs_inode **locked_nis __free(kfree) = kmalloc_array(PAGE_SIZE / NTFS_BLOCK_SIZE,
++							sizeof(struct ntfs_inode *), GFP_NOFS);
 +	int nr_locked_nis = 0, err = 0, mft_ofs, prev_mft_ofs;
-+	struct inode *ref_inos[PAGE_SIZE / NTFS_BLOCK_SIZE];
++	struct inode **ref_inos __free(kfree) = kmalloc_array(PAGE_SIZE / NTFS_BLOCK_SIZE,
++							      sizeof(struct inode *), GFP_NOFS);
 +	int nr_ref_inos = 0;
 +	struct bio *bio = NULL;
-+	unsigned long mft_no;
++	u64 mft_no;
 +	struct ntfs_inode *tni;
 +	s64 lcn;
 +	s64 vcn = ntfs_pidx_to_cluster(vol, folio->index);
@@ -27207,8 +27207,11 @@ index 000000000000..56012477d3f0
 +	struct runlist_element *rl;
 +	loff_t i_size = i_size_read(vi);
 +
-+	ntfs_debug("Entering for inode 0x%lx, attribute type 0x%x, folio index 0x%lx.",
-+			vi->i_ino, ni->type, folio->index);
++	ntfs_debug("Entering for inode 0x%llx, attribute type 0x%x, folio index 0x%lx.",
++			ni->mft_no, ni->type, folio->index);
++
++	if (!locked_nis || !ref_inos)
++		return -ENOMEM;
 +
 +	/* We have to zero every time due to mmap-at-end-of-file. */
 +	if (folio->index >= (i_size >> folio_shift(folio)))
@@ -27359,7 +27362,7 @@ index 000000000000..56012477d3f0
 +		else
 +			base_tni = tni->ext.base_ntfs_ino;
 +		mutex_unlock(&tni->extent_lock);
-+		ntfs_debug("Unlocking %s inode 0x%lx.",
++		ntfs_debug("Unlocking %s inode 0x%llx.",
 +				tni == base_tni ? "base" : "extent",
 +				tni->mft_no);
 +		atomic_dec(&tni->count);
@@ -27411,10 +27414,10 @@ index 000000000000..56012477d3f0
 +}
 diff --git a/fs/ntfs/mft.h b/fs/ntfs/mft.h
 new file mode 100644
-index 000000000000..5201d5da73a4
+index 000000000000..75a51a98d0f6
 --- /dev/null
 +++ b/fs/ntfs/mft.h
-@@ -0,0 +1,94 @@
+@@ -0,0 +1,91 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +/*
 + * Defines for mft record handling in NTFS Linux kernel driver.
@@ -27459,7 +27462,7 @@ index 000000000000..5201d5da73a4
 +		__mark_mft_record_dirty(ni);
 +}
 +
-+int ntfs_sync_mft_mirror(struct ntfs_volume *vol, const unsigned long mft_no,
++int ntfs_sync_mft_mirror(struct ntfs_volume *vol, const u64 mft_no,
 +		struct mft_record *m);
 +int write_mft_record_nolock(struct ntfs_inode *ni, struct mft_record *m, int sync);
 +
@@ -27493,9 +27496,6 @@ index 000000000000..5201d5da73a4
 +	return err;
 +}
 +
-+bool ntfs_may_write_mft_record(struct ntfs_volume *vol,
-+		const unsigned long mft_no, const struct mft_record *m,
-+		struct ntfs_inode **locked_ni, struct inode **ref_vi);
 +int ntfs_mft_record_alloc(struct ntfs_volume *vol, const int mode,
 +		struct ntfs_inode **ni, struct ntfs_inode *base_ni,
 +		struct mft_record **ni_mrec);
@@ -27503,7 +27503,7 @@ index 000000000000..5201d5da73a4
 +int ntfs_mft_records_write(const struct ntfs_volume *vol, const u64 mref,
 +		const s64 count, struct mft_record *b);
 +int ntfs_mft_record_check(const struct ntfs_volume *vol, struct mft_record *m,
-+			  unsigned long mft_no);
++			  u64 mft_no);
 +int ntfs_mft_writepages(struct address_space *mapping,
 +		struct writeback_control *wbc);
 +void ntfs_mft_mark_dirty(struct folio *folio);
@@ -27711,10 +27711,10 @@ index 000000000000..7f9faad924ad
 +}
 diff --git a/fs/ntfs/namei.c b/fs/ntfs/namei.c
 new file mode 100644
-index 000000000000..a21eeaec57b4
+index 000000000000..62c3f5733dbe
 --- /dev/null
 +++ b/fs/ntfs/namei.c
-@@ -0,0 +1,1695 @@
+@@ -0,0 +1,1692 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel directory inode operations.
@@ -27895,8 +27895,8 @@ index 000000000000..a21eeaec57b4
 +	unsigned long dent_ino;
 +	int uname_len;
 +
-+	ntfs_debug("Looking up %pd in directory inode 0x%lx.",
-+			dent, dir_ino->i_ino);
++	ntfs_debug("Looking up %pd in directory inode 0x%llx.",
++			dent, NTFS_I(dir_ino)->mft_no);
 +	/* Convert the name of the dentry to Unicode. */
 +	uname_len = ntfs_nlstoucs(vol, dent->d_name.name, dent->d_name.len,
 +				  &uname, NTFS_MAX_NAME_LEN);
@@ -28225,7 +28225,7 @@ index 000000000000..a21eeaec57b4
 +	spin_unlock(&vi->i_lock);
 +
 +	/* Add the inode to the inode hash for the superblock. */
-+	vi->i_ino = ni->mft_no;
++	vi->i_ino = (unsigned long)ni->mft_no;
 +	inode_set_iversion(vi, 1);
 +	insert_inode_hash(vi);
 +
@@ -28238,7 +28238,7 @@ index 000000000000..a21eeaec57b4
 +
 +	dni_mrec = map_mft_record(dir_ni);
 +	if (IS_ERR(dni_mrec)) {
-+		ntfs_error(dir_ni->vol->sb, "failed to map mft record for file %ld.\n",
++		ntfs_error(dir_ni->vol->sb, "failed to map mft record for file 0x%llx.\n",
 +			   dir_ni->mft_no);
 +		err = -EIO;
 +		goto err_out;
@@ -28527,7 +28527,7 @@ index 000000000000..a21eeaec57b4
 +static int ntfs_test_inode_attr(struct inode *vi, void *data)
 +{
 +	struct ntfs_inode *ni = NTFS_I(vi);
-+	unsigned long mft_no = (unsigned long)data;
++	u64 mft_no = (u64)data;
 +
 +	if (ni->mft_no != mft_no)
 +		return 0;
@@ -28621,7 +28621,7 @@ index 000000000000..a21eeaec57b4
 +
 +		/* Ignore hard links from other directories */
 +		if (dir_ni->mft_no != MREF_LE(fn->parent_directory)) {
-+			ntfs_debug("MFT record numbers don't match (%lu != %lu)\n",
++			ntfs_debug("MFT record numbers don't match (%llu != %lu)\n",
 +					dir_ni->mft_no,
 +					MREF_LE(fn->parent_directory));
 +			continue;
@@ -28805,7 +28805,7 @@ index 000000000000..a21eeaec57b4
 +	}
 +
 +	d_instantiate_new(dentry, VFS_I(ni));
-+	return ERR_PTR(err);
++	return NULL;
 +}
 +
 +static int ntfs_rmdir(struct inode *dir, struct dentry *dentry)
@@ -28889,10 +28889,7 @@ index 000000000000..a21eeaec57b4
 +
 +	/* Create FILE_NAME attribute. */
 +	fn_len = sizeof(struct file_name_attr) + name_len * sizeof(__le16);
-+	if (name_len > NTFS_MAX_NAME_LEN) {
-+		err = -EIO;
-+		goto err_out;
-+	}
++
 +	fn = kzalloc(fn_len, GFP_NOFS);
 +	if (!fn) {
 +		err = -ENOMEM;
@@ -29083,7 +29080,7 @@ index 000000000000..a21eeaec57b4
 +	if (err) {
 +		int err2;
 +
-+		ntfs_error(sb, "Failed to delete old ntfs inode(%ld) in old dir, err : %d\n",
++		ntfs_error(sb, "Failed to delete old ntfs inode(%llu) in old dir, err : %d\n",
 +				old_ni->mft_no, err);
 +		err2 = ntfs_delete(old_ni, new_dir_ni, uname_new, new_name_len, false);
 +		if (err2)
@@ -29331,7 +29328,7 @@ index 000000000000..a21eeaec57b4
 +	unsigned long parent_ino;
 +	int err;
 +
-+	ntfs_debug("Entering for inode 0x%lx.", vi->i_ino);
++	ntfs_debug("Entering for inode 0x%llx.", ni->mft_no);
 +	/* Get the mft record of the inode belonging to the child dentry. */
 +	mrec = map_mft_record(ni);
 +	if (IS_ERR(mrec))
@@ -29350,8 +29347,8 @@ index 000000000000..a21eeaec57b4
 +		unmap_mft_record(ni);
 +		if (err == -ENOENT)
 +			ntfs_error(vi->i_sb,
-+				   "Inode 0x%lx does not have a file name attribute.  Run chkdsk.",
-+				   vi->i_ino);
++				   "Inode 0x%llx does not have a file name attribute.  Run chkdsk.",
++				   ni->mft_no);
 +		return ERR_PTR(err);
 +	}
 +	attr = ctx->attr;
@@ -32798,10 +32795,10 @@ index 000000000000..cc92e09fbf68
 +#endif /* _LINUX_NTFS_RUNLIST_H */
 diff --git a/fs/ntfs/super.c b/fs/ntfs/super.c
 new file mode 100644
-index 000000000000..3f559df4856b
+index 000000000000..39a5c3b81001
 --- /dev/null
 +++ b/fs/ntfs/super.c
-@@ -0,0 +1,2770 @@
+@@ -0,0 +1,2771 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel super block handling.
@@ -34141,7 +34138,7 @@ index 000000000000..3f559df4856b
 +				addr, size);
 +		kunmap_local(addr);
 +		folio_put(folio);
-+	};
++	}
 +	if (size == PAGE_SIZE) {
 +		size = i_size & ~PAGE_MASK;
 +		if (size)
@@ -35434,6 +35431,7 @@ index 000000000000..3f559df4856b
 +	.kill_sb                = kill_block_super,
 +	.fs_flags               = FS_REQUIRES_DEV | FS_ALLOW_IDMAP,
 +};
++MODULE_ALIAS_FS("ntfs");
 +
 +static int ntfs_workqueue_init(void)
 +{
@@ -35574,10 +35572,10 @@ index 000000000000..3f559df4856b
 +#endif
 diff --git a/fs/ntfs/sysctl.c b/fs/ntfs/sysctl.c
 new file mode 100644
-index 000000000000..aa4a821a117b
+index 000000000000..8c5c1b7cd483
 --- /dev/null
 +++ b/fs/ntfs/sysctl.c
-@@ -0,0 +1,55 @@
+@@ -0,0 +1,54 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Code for sysctl handling in NTFS Linux kernel driver.
@@ -35607,7 +35605,6 @@ index 000000000000..aa4a821a117b
 +		.mode		= 0644,			/* Mode, proc handler. */
 +		.proc_handler	= proc_dointvec
 +	},
-+	{}
 +};
 +
 +/* Storage for the sysctls header. */
@@ -35622,7 +35619,7 @@ index 000000000000..aa4a821a117b
 +int ntfs_sysctl(int add)
 +{
 +	if (add) {
-+		sysctls_root_table = register_sysctl("fs", ntfs_sysctls);
++		sysctls_root_table = register_sysctl("fs/ntfs", ntfs_sysctls);
 +		if (!sysctls_root_table)
 +			return -ENOMEM;
 +	} else {
@@ -36664,7 +36661,7 @@ index 4652a56ad105..d99ab086ef6f 100644
 -#endif
  // clang-format on
 diff --git a/fs/ntfs3/file.c b/fs/ntfs3/file.c
-index 7eecf1e01f74..bb8f5ed4b89f 100644
+index f53037e0ecb6..a45d19445141 100644
 --- a/fs/ntfs3/file.c
 +++ b/fs/ntfs3/file.c
 @@ -1569,15 +1569,4 @@ const struct file_operations ntfs_file_operations = {
@@ -36732,7 +36729,7 @@ index 6e65066ebcc1..d2009053c93a 100644
  							      &ntfs_aops;
  		init_rwsem(&ni->file.run_lock);
 diff --git a/fs/ntfs3/ntfs_fs.h b/fs/ntfs3/ntfs_fs.h
-index daf5a1f47275..56e608de4f70 100644
+index 921b526eb0f4..2a7971f27e67 100644
 --- a/fs/ntfs3/ntfs_fs.h
 +++ b/fs/ntfs3/ntfs_fs.h
 @@ -530,7 +530,6 @@ struct inode *dir_search_u(struct inode *dir, const struct cpu_str *uni,
@@ -36766,7 +36763,7 @@ index daf5a1f47275..56e608de4f70 100644
 -
  #endif /* _LINUX_NTFS3_NTFS_FS_H */
 diff --git a/fs/ntfs3/super.c b/fs/ntfs3/super.c
-index 174a7cb202a0..cf5c2c00f505 100644
+index 27411203082a..47c11547c972 100644
 --- a/fs/ntfs3/super.c
 +++ b/fs/ntfs3/super.c
 @@ -434,12 +434,6 @@ static int ntfs_fs_reconfigure(struct fs_context *fc)

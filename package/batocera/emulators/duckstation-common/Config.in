@@ -1,2 +1,2 @@
 config BR2_PACKAGE_DUCKSTATION_COMMON
-        bool "duckstation-common"
+	bool "duckstation-common"

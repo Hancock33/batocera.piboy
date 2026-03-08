@@ -21,6 +21,9 @@
 - Dolphin-Emu now supports Triforce. The older Dolphin-Triforce emulator has been removed as a result.
   Saves should be moved from /userdata/saves/dolphin-triforce to dolphin accordingly.
 - Removed Drastic emulator due to it's closed source nature and no longer compatible with the core OS.
+- SM8250 and SM8550 devices now have one image with the device selection in the bootloader
+  You must upgrade the Android Bootloader (ABL) before migrating to v43
+  See the wiki for further details - https://wiki.batocera.org/hardware:ayn
 ### Hardware
 - AIC8800 USB driver support for Raxda Boards
 - Anbernic RG28XX, RG34XX, RG35XX, RG40XX, RGCUBEXX device variant support
@@ -91,6 +94,7 @@
   to presetup them. This is mostly thought for startup files like dosbox.bat and autorun.cmd and for handling squashed archive files.
 - RPCS3 PS Move (light gun) mapping simplified. D-pad buttons are now PS Move face buttons. Check wiki for more info.
 ### Updated
+- Amiberry to 5th of March 2026 build
 - Azahar to 2124
 - BigPEmu to v121
 - Cemu to 22nd of January 2026 build
@@ -141,7 +145,7 @@
 - Pygame to 2.6.1
 - RClone to v1.72.1
 - RetroArch to 1.22.2
-- RPCS3 to v0.0.39
+- RPCS3 to v0.0.40
 - Ruffle to 31th of January 2026 nightly build
 - ScummVM to v2026.1.0
 - ShadPS4 Plus to SHAD_PS4_PLUS_0_12_0_A
@@ -166,10 +170,10 @@
 - Go language compiler to 1.25.5
 - GStreamer codecs to 1.26.6
 - Linux Firmware to 20251125
-- Linux Kernel to 6.18.9
+- Linux Kernel to 6.18.16
 - LabWC to 0.9.3
 - LLVM Project to 20.1.8
-- Mesa3D to 25.3.5
+- Mesa3D to 25.3.6
 - MPV to v0.41.0
 - Nvidia 580.xx legacy drivers to 580.126.09
 - Nvidia production drivers to 590.48.01

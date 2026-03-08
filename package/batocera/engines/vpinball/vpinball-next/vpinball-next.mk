@@ -3,21 +3,21 @@
 # vpinball-next
 #
 ################################################################################
-# Version: Commits on Mar 01, 2026
-VPINBALL_NEXT_VERSION = 96724fab6fd8c7b6f400fa3bcc231ee036e7d4f0
-VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
-VPINBALL_LICENSE = GPLv3+
-VPINBALL_LICENSE_FILES = LICENSE
-VPINBALL_DEPENDENCIES = ffmpeg libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil libdof  sdl3 sdl3_image sdl3_ttf
-VPINBALL_DEPENDENCIES += host-cmake
-VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
+# Version: Commits on Mar 08, 2026
+VPINBALL_NEXT_VERSION = 9ee23ec3ed8cb14ff081dfc677332bb6f1a4f529
+VPINBALL_NEXT_SITE = $(call github,vpinball,vpinball,$(VPINBALL_NEXT_VERSION))
+VPINBALL_NEXT_LICENSE = GPLv3+
+VPINBALL_NEXT_LICENSE_FILES = LICENSE
+VPINBALL_NEXT_DEPENDENCIES = ffmpeg libfreeimage libpinmame libaltsound libserialport libzedmd libserum libdmdutil libdof  sdl3 sdl3_image sdl3_ttf
+VPINBALL_NEXT_DEPENDENCIES += host-cmake
+VPINBALL_NEXT_SUPPORTS_IN_SOURCE_BUILD = NO
 
-VPINBALL_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)
-VPINBALL_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+VPINBALL_NEXT_CONF_OPTS += $(VPINBALL_NEXT_COMMON_CONF_OPTS)
+VPINBALL_NEXT_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
-define VPINBALL_CMAKE_HACKS
+define VPINBALL_NEXT_CMAKE_HACKS
 	# cp correct cmake file to builddir
-	cp $(@D)/make/$(VPINBALL_COMMON_CMAKE) $(@D)/CMakeLists.txt
+	cp $(@D)/make/$(VPINBALL_NEXT_COMMON_CMAKE) $(@D)/CMakeLists.txt
 	# update plugin CMakeLists - add staging paths
 	for f in $(@D)/make/CMakeLists_plugin_*.txt; do \
 		$(SED) 's:$${CMAKE_SOURCE_DIR}/third-party/include:$(STAGING_DIR)/usr/include\n	  $${CMAKE_SOURCE_DIR}/third-party/include:g' $$f; \
@@ -25,7 +25,7 @@ define VPINBALL_CMAKE_HACKS
 	done
 endef
 
-define VPINBALL_INSTALL_TARGET_CMDS
+define VPINBALL_NEXT_INSTALL_TARGET_CMDS
 	rm -rf   $(TARGET_DIR)/usr/bin/vpinball
 	mkdir -p $(TARGET_DIR)/usr/bin/vpinball
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/VPinballX_GL $(TARGET_DIR)/usr/bin/vpinball/VPinballX_GL
@@ -38,6 +38,6 @@ define VPINBALL_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/vpinball/vpinball/vpinball.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-VPINBALL_PRE_CONFIGURE_HOOKS += VPINBALL_CMAKE_HACKS
+VPINBALL_NEXT_PRE_CONFIGURE_HOOKS += VPINBALL_NEXT_CMAKE_HACKS
 
 $(eval $(cmake-package))

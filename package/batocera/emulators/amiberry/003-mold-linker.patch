@@ -1,0 +1,12 @@
+diff --git a/cmake/StandardProjectSettings.cmake b/cmake/StandardProjectSettings.cmake
+index 517894ce..0dfb4f7e 100644
+--- a/cmake/StandardProjectSettings.cmake
++++ b/cmake/StandardProjectSettings.cmake
+@@ -62,7 +62,6 @@ if(NOT CMAKE_SYSTEM_NAME MATCHES "Darwin")
+         # GNU ld-only flags (do not work on FreeBSD or Windows)
+         if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+             list(APPEND AMIBERRY_LINK_OPTIONS
+-                "-Wl,--sort-common=descending"
+                 "-Wl,--hash-style=gnu"
+             )
+         endif()

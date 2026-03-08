@@ -3,8 +3,8 @@
 # libretro-vba-m
 #
 ################################################################################
-# Version: Commits on Feb 26, 2026
-LIBRETRO_VBA_M_VERSION = 146cf91d43d1cc1e7616486e191a4e1780d94aa2
+# Version: Commits on Mar 07, 2026
+LIBRETRO_VBA_M_VERSION = 72acdfd3cb4d6198dfd2494e12ce80e74ce8cd16
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
 LIBRETRO_VBA_M_DEPENDENCIES += retroarch
 LIBRETRO_VBA_M_EMULATOR_INFO = vba-m.libretro.core.yml
@@ -16,7 +16,10 @@ define LIBRETRO_VBA_M_BUILD_CMDS
 endef
 
 define LIBRETRO_VBA_M_INSTALL_TARGET_CMDS
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/src/libretro/vbam_libretro.so $(TARGET_DIR)/usr/lib/libretro/vba-m_libretro.so
+	$(INSTALL) -D $(@D)/src/libretro/vbam_libretro.info $(TARGET_DIR)/usr/share/libretro/info/vba-m_libretro.info
 endef
 
 $(eval $(generic-package))

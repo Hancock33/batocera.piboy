@@ -1449,7 +1449,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 80807f97a667..2de7709dbd38 100644
+index 623e62fa82e1..d0f0e5b23ce3 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -158,6 +158,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -1462,7 +1462,7 @@ index 80807f97a667..2de7709dbd38 100644
  /**
   * DOC: overview
   *
-@@ -9939,7 +9942,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9949,7 +9952,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -1485,10 +1485,10 @@ index f120dd5c05c6..f4ad961db8aa 100644
   * MAX_PLANES - representative of the upper bound of planes that are supported by the HW
   */
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-index 18ff2c925e8e..543ac60e2602 100644
+index a0dd58d860e7..f1d66f3599c8 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-@@ -96,6 +96,8 @@
+@@ -97,6 +97,8 @@
  #define FN(reg_name, field_name) \
  	hws->shifts->field_name, hws->masks->field_name
  
@@ -1497,7 +1497,7 @@ index 18ff2c925e8e..543ac60e2602 100644
  struct dce110_hw_seq_reg_offsets {
  	uint32_t crtc;
  };
-@@ -3296,6 +3298,13 @@ void dce110_enable_dp_link_output(
+@@ -3308,6 +3310,13 @@ void dce110_enable_dp_link_output(
  			link->dc->res_pool->dp_clock_source;
  	const struct link_hwss *link_hwss = get_link_hwss(link, link_res);
  	unsigned int i;
@@ -1630,7 +1630,7 @@ index 3a218fb592ce..178adc19e670 100644
  		.matches = {
  		  DMI_EXACT_MATCH(DMI_SYS_VENDOR, "OrangePi"),
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index ecb3059c68fb..c721270c29ba 100644
+index 1e36dad6b8f6..477844b35ee5 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
 @@ -202,6 +202,15 @@ config HID_ASUS
@@ -1649,7 +1649,7 @@ index ecb3059c68fb..c721270c29ba 100644
  config HID_AUREAL
  	tristate "Aureal"
  	help
-@@ -622,6 +631,30 @@ config HID_LENOVO
+@@ -623,6 +632,30 @@ config HID_LENOVO
  	- ThinkPad Compact Bluetooth Keyboard with TrackPoint (supports Fn keys)
  	- ThinkPad Compact USB Keyboard with TrackPoint (supports Fn keys)
  
@@ -1680,7 +1680,7 @@ index ecb3059c68fb..c721270c29ba 100644
  config HID_LETSKETCH
  	tristate "Letsketch WP9620N tablets"
  	depends on USB_HID
-@@ -1430,6 +1463,10 @@ config HID_KUNIT_TEST
+@@ -1431,6 +1464,10 @@ config HID_KUNIT_TEST
  
  	  If in doubt, say "N".
  
@@ -1691,7 +1691,7 @@ index ecb3059c68fb..c721270c29ba 100644
  endmenu
  
  source "drivers/hid/bpf/Kconfig"
-@@ -1454,4 +1491,6 @@ source "drivers/hid/spi-hid/Kconfig"
+@@ -1455,4 +1492,6 @@ source "drivers/hid/spi-hid/Kconfig"
  
  source "drivers/hid/dockchannel-hid/Kconfig"
  
@@ -4482,7 +4482,7 @@ index b353fd819989..7734cc87494c 100644
  	return 0;
  }
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index adad71cc8bf0..4329c41274b5 100644
+index 9901686f58c8..fc7a2bad2809 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
 @@ -235,6 +235,7 @@
@@ -4493,7 +4493,7 @@ index adad71cc8bf0..4329c41274b5 100644
  #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY		0x1abe
  #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY_X		0x1b4c
  #define USB_DEVICE_ID_ASUSTEK_ROG_CLAYMORE_II_KEYBOARD	0x196b
-@@ -739,6 +740,10 @@
+@@ -743,6 +744,10 @@
  #define USB_DEVICE_ID_ITE8595		0x8595
  #define USB_DEVICE_ID_ITE_MEDION_E1239T	0xce50
  
@@ -4504,7 +4504,7 @@ index adad71cc8bf0..4329c41274b5 100644
  #define USB_VENDOR_ID_JABRA		0x0b0e
  #define USB_DEVICE_ID_JABRA_SPEAK_410	0x0412
  #define USB_DEVICE_ID_JABRA_SPEAK_510	0x0420
-@@ -857,7 +862,10 @@
+@@ -862,7 +867,10 @@
  #define USB_DEVICE_ID_LENOVO_PIXART_USB_MOUSE_602E	0x602e
  #define USB_DEVICE_ID_LENOVO_PIXART_USB_MOUSE_6093	0x6093
  #define USB_DEVICE_ID_LENOVO_LEGION_GO_DUAL_DINPUT	0x6184
@@ -4515,7 +4515,7 @@ index adad71cc8bf0..4329c41274b5 100644
  
  #define USB_VENDOR_ID_LETSKETCH		0x6161
  #define USB_DEVICE_ID_WP9620N		0x4d15
-@@ -1075,6 +1083,7 @@
+@@ -1080,6 +1088,7 @@
  #define USB_VENDOR_ID_NOVATEK		0x0603
  #define USB_DEVICE_ID_NOVATEK_PCT	0x0600
  #define USB_DEVICE_ID_NOVATEK_MOUSE	0x1602
@@ -4523,7 +4523,7 @@ index adad71cc8bf0..4329c41274b5 100644
  
  #define USB_VENDOR_ID_NTI               0x0757
  #define USB_DEVICE_ID_USB_SUN           0x0a00
-@@ -1533,6 +1542,10 @@
+@@ -1538,6 +1547,10 @@
  #define USB_VENDOR_ID_ZYTRONIC		0x14c8
  #define USB_DEVICE_ID_ZYTRONIC_ZXY100	0x0005
  
@@ -14425,10 +14425,10 @@ index 000000000000..a60fa7db9141
 +MODULE_DESCRIPTION("Steam Deck EC MFD core driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/net/wireless/ath/ath11k/mhi.c b/drivers/net/wireless/ath/ath11k/mhi.c
-index acd76e9392d3..c5dc776b2364 100644
+index d2c44f7f9b62..27640b7c1ae2 100644
 --- a/drivers/net/wireless/ath/ath11k/mhi.c
 +++ b/drivers/net/wireless/ath/ath11k/mhi.c
-@@ -460,12 +460,12 @@ void ath11k_mhi_stop(struct ath11k_pci *ab_pci, bool is_suspend)
+@@ -456,12 +456,12 @@ void ath11k_mhi_stop(struct ath11k_pci *ab_pci, bool is_suspend)
  	 * workaround, otherwise ath11k_core_resume() will timeout
  	 * during resume.
  	 */
@@ -14446,10 +14446,10 @@ index acd76e9392d3..c5dc776b2364 100644
  
  int ath11k_mhi_suspend(struct ath11k_pci *ab_pci)
 diff --git a/drivers/net/wireless/ath/ath12k/mhi.c b/drivers/net/wireless/ath/ath12k/mhi.c
-index 08f44baf182a..3af524ccf4a5 100644
+index 2dbdb95ae7be..111c8d68cbd7 100644
 --- a/drivers/net/wireless/ath/ath12k/mhi.c
 +++ b/drivers/net/wireless/ath/ath12k/mhi.c
-@@ -601,6 +601,12 @@ static int ath12k_mhi_set_state(struct ath12k_pci *ab_pci,
+@@ -597,6 +597,12 @@ static int ath12k_mhi_set_state(struct ath12k_pci *ab_pci,
  
  	ath12k_mhi_set_state_bit(ab_pci, mhi_state);
  
@@ -14462,7 +14462,7 @@ index 08f44baf182a..3af524ccf4a5 100644
  	return 0;
  
  out:
-@@ -635,12 +641,12 @@ void ath12k_mhi_stop(struct ath12k_pci *ab_pci, bool is_suspend)
+@@ -631,12 +637,12 @@ void ath12k_mhi_stop(struct ath12k_pci *ab_pci, bool is_suspend)
  	 * workaround, otherwise ath12k_core_resume() will timeout
  	 * during resume.
  	 */
@@ -17269,10 +17269,10 @@ index dd372b0123a6..6fd218a87785 100644
  	size_t rddm_size;
  	size_t sbl_size;
 diff --git a/sound/hda/codecs/realtek/alc269.c b/sound/hda/codecs/realtek/alc269.c
-index c1791b136620..ef2f41bb400c 100644
+index fdf688e20bf9..87482aa64c7e 100644
 --- a/sound/hda/codecs/realtek/alc269.c
 +++ b/sound/hda/codecs/realtek/alc269.c
-@@ -2555,6 +2555,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
+@@ -2789,6 +2789,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
  		alc_write_coef_idx(codec, 0x10, 0x0a20);
  }
  
@@ -17293,7 +17293,7 @@ index c1791b136620..ef2f41bb400c 100644
  static void alc294_fixup_gx502_hp(struct hda_codec *codec,
  					const struct hda_fixup *fix, int action)
  {
-@@ -3537,6 +3551,8 @@ enum {
+@@ -3771,6 +3785,8 @@ enum {
  	ALC269_FIXUP_DELL4_MIC_NO_PRESENCE,
  	ALC269_FIXUP_DELL4_MIC_NO_PRESENCE_QUIET,
  	ALC269_FIXUP_HEADSET_MODE,
@@ -17302,7 +17302,7 @@ index c1791b136620..ef2f41bb400c 100644
  	ALC269_FIXUP_HEADSET_MODE_NO_HP_MIC,
  	ALC269_FIXUP_ASPIRE_HEADSET_MIC,
  	ALC269_FIXUP_ASUS_X101_FUNC,
-@@ -3550,6 +3566,7 @@ enum {
+@@ -3784,6 +3800,7 @@ enum {
  	ALC269VB_FIXUP_ASUS_ZENBOOK,
  	ALC269VB_FIXUP_ASUS_ZENBOOK_UX31A,
  	ALC269VB_FIXUP_ASUS_MIC_NO_PRESENCE,
@@ -17310,8 +17310,8 @@ index c1791b136620..ef2f41bb400c 100644
  	ALC269_FIXUP_LIMIT_INT_MIC_BOOST_MUTE_LED,
  	ALC269VB_FIXUP_ORDISSIMO_EVE2,
  	ALC283_FIXUP_CHROME_BOOK,
-@@ -3818,6 +3835,30 @@ enum {
- 	ALC236_FIXUP_HP_MUTE_LED_MICMUTE_GPIO,
+@@ -4058,6 +4075,30 @@ enum {
+ 	ALC245_FIXUP_BASS_HP_DAC,
  };
  
 +/* A special fixup for AYN and AYANEO handhelds as both
@@ -17341,7 +17341,7 @@ index c1791b136620..ef2f41bb400c 100644
  /* A special fixup for Lenovo C940 and Yoga Duet 7;
   * both have the very same PCI SSID, and we need to apply different fixups
   * depending on the codec ID
-@@ -4302,6 +4343,13 @@ static const struct hda_fixup alc269_fixups[] = {
+@@ -4542,6 +4583,13 @@ static const struct hda_fixup alc269_fixups[] = {
  		.chained = true,
  		.chain_id = ALC269_FIXUP_HEADSET_MIC
  	},
@@ -17355,7 +17355,7 @@ index c1791b136620..ef2f41bb400c 100644
  	[ALC269_FIXUP_LIMIT_INT_MIC_BOOST_MUTE_LED] = {
  		.type = HDA_FIXUP_FUNC,
  		.v.func = alc269_fixup_limit_int_mic_boost,
-@@ -5107,6 +5155,14 @@ static const struct hda_fixup alc269_fixups[] = {
+@@ -5356,6 +5404,14 @@ static const struct hda_fixup alc269_fixups[] = {
  			{ 0x1b, 0x90170152 } /* use as internal speaker (back) */
  		}
  	},
@@ -17370,7 +17370,7 @@ index c1791b136620..ef2f41bb400c 100644
  	[ALC299_FIXUP_PREDATOR_SPK] = {
  		.type = HDA_FIXUP_PINS,
  		.v.pins = (const struct hda_pintbl[]) {
-@@ -7372,6 +7428,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
+@@ -7651,6 +7707,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x2782, 0x1701, "Infinix Y4 Max", ALC269VC_FIXUP_INFINIX_Y4_MAX),
  	SND_PCI_QUIRK(0x2782, 0x1705, "MEDION E15433", ALC269VC_FIXUP_INFINIX_Y4_MAX),
  	SND_PCI_QUIRK(0x2782, 0x1707, "Vaio VJFE-ADL", ALC298_FIXUP_SPK_VOLUME),
@@ -17379,7 +17379,7 @@ index c1791b136620..ef2f41bb400c 100644
  	SND_PCI_QUIRK(0x2782, 0x4900, "MEDION E15443", ALC233_FIXUP_MEDION_MTL_SPK),
  	SND_PCI_QUIRK(0x8086, 0x2074, "Intel NUC 8", ALC233_FIXUP_INTEL_NUC8_DMIC),
  	SND_PCI_QUIRK(0x8086, 0x2080, "Intel NUC 8 Rugged", ALC256_FIXUP_INTEL_NUC8_RUGGED),
-@@ -7498,6 +7556,7 @@ static const struct hda_model_fixup alc269_fixup_models[] = {
+@@ -7777,6 +7835,7 @@ static const struct hda_model_fixup alc269_fixup_models[] = {
  	{.id = ALC269VB_FIXUP_ASUS_ZENBOOK, .name = "asus-zenbook"},
  	{.id = ALC269VB_FIXUP_ASUS_ZENBOOK_UX31A, .name = "asus-zenbook-ux31a"},
  	{.id = ALC269VB_FIXUP_ORDISSIMO_EVE2, .name = "ordissimo"},

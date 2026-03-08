@@ -14,8 +14,7 @@ HOST_PYSDL3_NEEDS_HOST_PYTHON = python3
 
 PYSDL3_DEPENDENCIES = host-python-setuptools-scm
 
-PYSDL3_BIN_FOLDER = \
-    $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/sdl3/bin
+PYSDL3_BIN_FOLDER = $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/sdl3/bin
 
 define PYSDL3_CREATE_METADATA_JSON
 	mkdir -p $(PYSDL3_BIN_FOLDER)

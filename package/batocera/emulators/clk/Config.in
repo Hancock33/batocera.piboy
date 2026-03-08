@@ -1,7 +1,7 @@
 config BR2_PACKAGE_CLK
 	bool "clk"
-	select BR2_PACKAGE_SDL2
 	depends on BR2_PACKAGE_HAS_LIBGL
+	select BR2_PACKAGE_SDL2
 
 	help
 	  CLK is a latency-hating emulator of: the Acorn Electron and

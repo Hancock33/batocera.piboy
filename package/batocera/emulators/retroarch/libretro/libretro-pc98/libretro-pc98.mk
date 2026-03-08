@@ -3,8 +3,8 @@
 # libretro-pc98
 #
 ################################################################################
-# Version: Commits on Feb 07, 2026
-LIBRETRO_PC98_VERSION = 44c8a8c61640f2d5476af5224dbd88a36079f45d
+# Version: Commits on Mar 08, 2026
+LIBRETRO_PC98_VERSION = 36df8cd8b1397ec372d9a6f2f30d892b6f30e2b8
 LIBRETRO_PC98_SITE = $(call github,AZO234,NP2kai,$(LIBRETRO_PC98_VERSION))
 LIBRETRO_PC98_LICENSE = GPLv3
 LIBRETRO_PC98_DEPENDENCIES += retroarch

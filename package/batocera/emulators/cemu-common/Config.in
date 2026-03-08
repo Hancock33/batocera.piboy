@@ -1,2 +1,2 @@
 config BR2_PACKAGE_CEMU_COMMON
-        bool "cemu-common"
+	bool "cemu-common"

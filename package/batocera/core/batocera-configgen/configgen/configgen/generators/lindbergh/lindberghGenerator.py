@@ -88,10 +88,45 @@ class LindberghGenerator(Generator):
             "keys": { "exit": "KEY_ESC", "coin": "KEY_5" }
         }
 
+    @staticmethod
+    def resolve_real_rom_path(rom_dir: Path) -> Path:
+        try:
+            rom_dir_str = str(rom_dir)
+            with open("/proc/mounts", "r") as f:
+                for line in f:
+                    parts = line.split()
+                    if len(parts) < 3 or parts[2] != "fuse.mergerfs":
+                        continue
+                    mount_point = parts[1]
+                    if not rom_dir_str.startswith(mount_point + "/") and rom_dir_str != mount_point:
+                        continue
+                    branches_raw = parts[0]
+                    relative = rom_dir_str[len(mount_point):]
+                    _logger.debug("resolve_real_rom_path: mergerfs mount=%s source=%s relative=%s", mount_point, branches_raw, relative)
+                    for branch in branches_raw.split(":"):
+                        branch = branch.strip()
+                        if not branch:
+                            continue
+                        # Ensure absolute path
+                        if not branch.startswith("/"):
+                            branch = "/" + branch
+                        candidate = Path(branch.rstrip("/") + relative)
+                        _logger.debug("resolve_real_rom_path: trying candidate: %s", candidate)
+                        if candidate.is_dir():
+                            _logger.debug("resolve_real_rom_path: resolved %s -> %s", rom_dir, candidate)
+                            return candidate
+        except Exception as e:
+            _logger.debug("resolve_real_rom_path: failed, using original path: %s", e)
+        return rom_dir
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         romDir = rom.parent
         romName = rom.name
         _logger.debug("ROM path: %s", romDir)
+
+        # check for mergerfs path
+        romDir = self.resolve_real_rom_path(romDir)
+        _logger.debug("Effective ROM path is: %s", romDir)
 
         source_dir = Path("/usr/bin32/lindbergh")
 
@@ -1052,6 +1087,23 @@ class LindberghGenerator(Generator):
         if not LINDBERGH_CONTROLS_FILE.exists() or source_controls.stat().st_mtime > LINDBERGH_CONTROLS_FILE.stat().st_mtime:
             shutil.copy2(source_controls, LINDBERGH_CONTROLS_FILE)
             _logger.debug("Updated controls.ini")
+
+        ### Adjust controls.ini (SDL mode) ###
+        content = LINDBERGH_CONTROLS_FILE.read_text()
+
+        # Steering deadzone - lower for driving games, mandatory for ID4/5
+        steer_deadzone = "800" if "initiad" in romName.lower() else "1000"
+        content = re.sub(r'Steer_DeadZone\s*=\s*\d+', f'Steer_DeadZone = {steer_deadzone}', content)
+
+        # Test and Service buttons - same as evdev (dpad down / facebutton down)
+        if system.config.get_bool("lindbergh_test"):
+            content = re.sub(r'Test\s*=\s*.*', 'Test = KEY_T, GC0_BUTTON_A, JOY0_BUTTON_0', content)
+            content = re.sub(r'P1_Service\s*=\s*.*', 'P1_Service = KEY_S, GC0_BUTTON_DPDOWN, JOY0_HAT0_DOWN', content)
+        else:
+            content = re.sub(r'Test\s*=\s*.*', 'Test = KEY_T', content)
+            content = re.sub(r'P1_Service\s*=\s*.*', 'P1_Service = KEY_S, JOY0_BUTTON_10, GC0_BUTTON_BACK', content)
+
+        LINDBERGH_CONTROLS_FILE.write_text(content)
 
         # load and modify it if needed and save it
         conf = self.loadConf(LINDBERGH_CONFIG_FILE)

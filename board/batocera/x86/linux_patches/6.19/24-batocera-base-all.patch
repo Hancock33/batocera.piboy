@@ -311,7 +311,7 @@ index e08767323763..2f1439d6fe7e 100644
  M:	Felix Kuehling <Felix.Kuehling@amd.com>
  L:	amd-gfx@lists.freedesktop.org
 diff --git a/Makefile b/Makefile
-index f486050e0bee..acd713d2bd35 100644
+index 67f26d8b2934..4962a14dc45d 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -888,11 +888,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -960,7 +960,7 @@ index dbc99a47be45..e92b3f7c8cdd 100644
  
  #ifdef CONFIG_PROC_SYSCTL
 diff --git a/arch/x86/kvm/x86.c b/arch/x86/kvm/x86.c
-index 72d37c8930ad..5b4d44a6b702 100644
+index 8b12bf0774c7..bb96ed63d1e2 100644
 --- a/arch/x86/kvm/x86.c
 +++ b/arch/x86/kvm/x86.c
 @@ -11437,8 +11437,8 @@ static int vcpu_enter_guest(struct kvm_vcpu *vcpu)
@@ -3232,19 +3232,19 @@ index 931d0081169b..02ee4c4fa5b7 100644
  	sysfs_add_file_to_group(&pdev->dev.kobj,
  				&dev_attr_remapped_nvme.attr,
 diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index 80ccfa8fd982..0d5eae8295d4 100644
+index a41bb1e2a279..aad21f7831cc 100644
 --- a/drivers/bluetooth/btusb.c
 +++ b/drivers/bluetooth/btusb.c
-@@ -559,6 +559,8 @@ static const struct usb_device_id quirks_table[] = {
+@@ -563,6 +563,8 @@ static const struct usb_device_id quirks_table[] = {
  						     BTUSB_WIDEBAND_SPEECH },
- 	{ USB_DEVICE(0x13d3, 0x3592), .driver_info = BTUSB_REALTEK |
+ 	{ USB_DEVICE(0x13d3, 0x3612), .driver_info = BTUSB_REALTEK |
  						     BTUSB_WIDEBAND_SPEECH },
 +	{ USB_DEVICE(0x0489, 0xe112), .driver_info = BTUSB_REALTEK |
 +						     BTUSB_WIDEBAND_SPEECH },
  	{ USB_DEVICE(0x0489, 0xe122), .driver_info = BTUSB_REALTEK |
  						     BTUSB_WIDEBAND_SPEECH },
  
-@@ -669,6 +671,8 @@ static const struct usb_device_id quirks_table[] = {
+@@ -675,6 +677,8 @@ static const struct usb_device_id quirks_table[] = {
  						     BTUSB_WIDEBAND_SPEECH },
  
  	/* MediaTek MT7922 Bluetooth devices */
@@ -3299,10 +3299,10 @@ index b20a06abb65d..4dd9214873c1 100644
  extern int amdgpu_gart_size;
  extern int amdgpu_gtt_size;
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index d2c3885de711..8900e0dc8a61 100644
+index 09f9d82e572d..2abeb2b78e0e 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-@@ -5068,7 +5068,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
+@@ -5069,7 +5069,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
  	 * before ip_fini_early to prevent kfd locking refcount issues by calling
  	 * amdgpu_amdkfd_suspend()
  	 */
@@ -3311,7 +3311,7 @@ index d2c3885de711..8900e0dc8a61 100644
  		amdgpu_amdkfd_device_fini_sw(adev);
  
  	amdgpu_device_ip_fini_early(adev);
-@@ -5080,7 +5080,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
+@@ -5081,7 +5081,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
  
  	amdgpu_gart_dummy_page_fini(adev);
  
@@ -3374,7 +3374,7 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 7324e273f39e..80807f97a667 100644
+index df967721f7c0..623e62fa82e1 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -2069,6 +2069,9 @@ static int amdgpu_dm_init(struct amdgpu_device *adev)
@@ -3387,7 +3387,7 @@ index 7324e273f39e..80807f97a667 100644
  	adev->dm.dc->debug.visual_confirm = amdgpu_dc_visual_confirm;
  
  	/* TODO: Remove after DP2 receiver gets proper support of Cable ID feature */
-@@ -4931,7 +4934,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
+@@ -4941,7 +4944,7 @@ static int amdgpu_dm_mode_config_init(struct amdgpu_device *adev)
  		return r;
  	}
  
@@ -3396,7 +3396,7 @@ index 7324e273f39e..80807f97a667 100644
  	if (amdgpu_dm_create_color_properties(adev)) {
  		dc_state_release(state->context);
  		kfree(state);
-@@ -6778,6 +6781,11 @@ static void fill_stream_properties_from_drm_display_mode(
+@@ -6788,6 +6791,11 @@ static void fill_stream_properties_from_drm_display_mode(
  
  	stream->output_color_space = get_output_color_space(timing_out, connector_state);
  	stream->content_type = get_output_content_type(connector_state);
@@ -3408,7 +3408,7 @@ index 7324e273f39e..80807f97a667 100644
  }
  
  static void fill_audio_info(struct audio_info *audio_info,
-@@ -7236,6 +7244,7 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -7246,6 +7254,7 @@ create_stream_for_sink(struct drm_connector *connector,
  	struct drm_display_mode mode;
  	struct drm_display_mode saved_mode;
  	struct drm_display_mode *freesync_mode = NULL;
@@ -3416,7 +3416,7 @@ index 7324e273f39e..80807f97a667 100644
  	bool native_mode_found = false;
  	bool recalculate_timing = false;
  	bool scale = dm_state->scaling != RMX_OFF;
-@@ -7327,6 +7336,16 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -7337,6 +7346,16 @@ create_stream_for_sink(struct drm_connector *connector,
  		}
  	}
  
@@ -3433,7 +3433,7 @@ index 7324e273f39e..80807f97a667 100644
  	if (recalculate_timing)
  		drm_mode_set_crtcinfo(&saved_mode, 0);
  	else if (!dm_state || mode.flags & DRM_MODE_FLAG_INTERLACE)
-@@ -7374,7 +7393,7 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -7384,7 +7403,7 @@ create_stream_for_sink(struct drm_connector *connector,
  	update_stream_signal(stream, sink);
  
  	if (stream->signal == SIGNAL_TYPE_HDMI_TYPE_A)
@@ -3442,7 +3442,7 @@ index 7324e273f39e..80807f97a667 100644
  
  	if (stream->signal == SIGNAL_TYPE_DISPLAY_PORT ||
  	    stream->signal == SIGNAL_TYPE_DISPLAY_PORT_MST ||
-@@ -7833,6 +7852,8 @@ amdgpu_dm_connector_atomic_duplicate_state(struct drm_connector *connector)
+@@ -7843,6 +7862,8 @@ amdgpu_dm_connector_atomic_duplicate_state(struct drm_connector *connector)
  	__drm_atomic_helper_connector_duplicate_state(connector, &new_state->base);
  
  	new_state->freesync_capable = state->freesync_capable;
@@ -3451,7 +3451,7 @@ index 7324e273f39e..80807f97a667 100644
  	new_state->abm_level = state->abm_level;
  	new_state->scaling = state->scaling;
  	new_state->underscan_enable = state->underscan_enable;
-@@ -8948,6 +8969,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -8958,6 +8979,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->audio_inst = -1;
  	aconnector->pack_sdp_v1_3 = false;
  	aconnector->as_type = ADAPTIVE_SYNC_TYPE_NONE;
@@ -3459,7 +3459,7 @@ index 7324e273f39e..80807f97a667 100644
  	memset(&aconnector->vsdb_info, 0, sizeof(aconnector->vsdb_info));
  	mutex_init(&aconnector->hpd_lock);
  	mutex_init(&aconnector->handle_mst_msg_ready);
-@@ -9038,8 +9060,10 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -9048,8 +9070,10 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	    connector_type == DRM_MODE_CONNECTOR_eDP) {
  		drm_connector_attach_hdr_output_metadata_property(&aconnector->base);
  
@@ -3471,7 +3471,7 @@ index 7324e273f39e..80807f97a667 100644
  
  		if (adev->dm.hdcp_workqueue)
  			drm_connector_attach_content_protection_property(&aconnector->base, true);
-@@ -9143,6 +9167,10 @@ int amdgpu_dm_initialize_hdmi_connector(struct amdgpu_dm_connector *aconnector)
+@@ -9153,6 +9177,10 @@ int amdgpu_dm_initialize_hdmi_connector(struct amdgpu_dm_connector *aconnector)
  	struct drm_device *ddev = aconnector->base.dev;
  	struct device *hdmi_dev = ddev->dev;
  
@@ -3482,7 +3482,7 @@ index 7324e273f39e..80807f97a667 100644
  	if (amdgpu_dc_debug_mask & DC_DISABLE_HDMI_CEC) {
  		drm_info(ddev, "HDMI-CEC feature masked\n");
  		return -EINVAL;
-@@ -9610,7 +9638,11 @@ static void update_freesync_state_on_stream(
+@@ -9620,7 +9648,11 @@ static void update_freesync_state_on_stream(
  
  	aconn = (struct amdgpu_dm_connector *)new_stream->dm_stream_context;
  
@@ -3495,7 +3495,7 @@ index 7324e273f39e..80807f97a667 100644
  		pack_sdp_v1_3 = aconn->pack_sdp_v1_3;
  
  		if (aconn->vsdb_info.amd_vsdb_version == 1)
-@@ -10829,6 +10861,31 @@ static int amdgpu_dm_atomic_setup_commit(struct drm_atomic_state *state)
+@@ -10839,6 +10871,31 @@ static int amdgpu_dm_atomic_setup_commit(struct drm_atomic_state *state)
  	return 0;
  }
  
@@ -3527,7 +3527,7 @@ index 7324e273f39e..80807f97a667 100644
  /**
   * amdgpu_dm_atomic_commit_tail() - AMDgpu DM's commit tail implementation.
   * @state: The atomic state to commit
-@@ -10871,12 +10928,14 @@ static void amdgpu_dm_atomic_commit_tail(struct drm_atomic_state *state)
+@@ -10881,12 +10938,14 @@ static void amdgpu_dm_atomic_commit_tail(struct drm_atomic_state *state)
  	for_each_oldnew_connector_in_state(state, connector, old_con_state, new_con_state, i) {
  		struct dm_connector_state *dm_new_con_state = to_dm_connector_state(new_con_state);
  		struct dm_connector_state *dm_old_con_state = to_dm_connector_state(old_con_state);
@@ -3542,7 +3542,7 @@ index 7324e273f39e..80807f97a667 100644
  
  		memset(&stream_update, 0, sizeof(stream_update));
  
-@@ -10906,7 +10965,11 @@ static void amdgpu_dm_atomic_commit_tail(struct drm_atomic_state *state)
+@@ -10916,7 +10975,11 @@ static void amdgpu_dm_atomic_commit_tail(struct drm_atomic_state *state)
  		hdr_changed =
  			!drm_connector_atomic_hdr_metadata_equal(old_con_state, new_con_state);
  
@@ -3555,7 +3555,7 @@ index 7324e273f39e..80807f97a667 100644
  			continue;
  
  		stream_update.stream = dm_new_crtc_state->stream;
-@@ -10936,6 +10999,17 @@ static void amdgpu_dm_atomic_commit_tail(struct drm_atomic_state *state)
+@@ -10946,6 +11009,17 @@ static void amdgpu_dm_atomic_commit_tail(struct drm_atomic_state *state)
  			stream_update.hdr_static_metadata = &hdr_packet;
  		}
  
@@ -3573,7 +3573,7 @@ index 7324e273f39e..80807f97a667 100644
  		status = dc_stream_get_status(dm_new_crtc_state->stream);
  
  		if (WARN_ON(!status))
-@@ -11315,6 +11389,12 @@ static void get_freesync_config_for_crtc(
+@@ -11325,6 +11399,12 @@ static void get_freesync_config_for_crtc(
  		config.vsif_supported = true;
  		config.btr = true;
  
@@ -3586,7 +3586,7 @@ index 7324e273f39e..80807f97a667 100644
  		if (fs_vid_mode) {
  			config.state = VRR_STATE_ACTIVE_FIXED;
  			config.fixed_refresh_in_uhz = new_crtc_state->freesync_config.fixed_refresh_in_uhz;
-@@ -11326,6 +11406,7 @@ static void get_freesync_config_for_crtc(
+@@ -11336,6 +11416,7 @@ static void get_freesync_config_for_crtc(
  		}
  	} else {
  		config.state = VRR_STATE_UNSUPPORTED;
@@ -3594,7 +3594,7 @@ index 7324e273f39e..80807f97a667 100644
  	}
  out:
  	new_crtc_state->freesync_config = config;
-@@ -13117,8 +13198,8 @@ static void parse_edid_displayid_vrr(struct drm_connector *connector,
+@@ -13138,8 +13219,8 @@ static void parse_edid_displayid_vrr(struct drm_connector *connector,
  	}
  }
  
@@ -3605,7 +3605,7 @@ index 7324e273f39e..80807f97a667 100644
  {
  	u8 *edid_ext = NULL;
  	int i;
-@@ -13134,6 +13215,9 @@ static int parse_amd_vsdb(struct amdgpu_dm_connector *aconnector,
+@@ -13155,6 +13236,9 @@ static int parse_amd_vsdb(struct amdgpu_dm_connector *aconnector,
  			break;
  	}
  
@@ -3615,7 +3615,7 @@ index 7324e273f39e..80807f97a667 100644
  	while (j < EDID_LENGTH - sizeof(struct amd_vsdb_block)) {
  		struct amd_vsdb_block *amd_vsdb = (struct amd_vsdb_block *)&edid_ext[j];
  		unsigned int ieeeId = (amd_vsdb->ieee_id[2] << 16) | (amd_vsdb->ieee_id[1] << 8) | (amd_vsdb->ieee_id[0]);
-@@ -13152,13 +13236,13 @@ static int parse_amd_vsdb(struct amdgpu_dm_connector *aconnector,
+@@ -13173,13 +13257,13 @@ static int parse_amd_vsdb(struct amdgpu_dm_connector *aconnector,
  	return false;
  }
  
@@ -3631,7 +3631,7 @@ index 7324e273f39e..80807f97a667 100644
  
  	/*----- drm_find_cea_extension() -----*/
  	/* No EDID or EDID extensions */
-@@ -13179,9 +13263,99 @@ static int parse_hdmi_amd_vsdb(struct amdgpu_dm_connector *aconnector,
+@@ -13200,9 +13284,99 @@ static int parse_hdmi_amd_vsdb(struct amdgpu_dm_connector *aconnector,
  	if (edid_ext[0] != CEA_EXT)
  		return -ENODEV;
  
@@ -3733,7 +3733,7 @@ index 7324e273f39e..80807f97a667 100644
  }
  
  /**
-@@ -13198,16 +13372,20 @@ static int parse_hdmi_amd_vsdb(struct amdgpu_dm_connector *aconnector,
+@@ -13219,16 +13393,20 @@ static int parse_hdmi_amd_vsdb(struct amdgpu_dm_connector *aconnector,
  void amdgpu_dm_update_freesync_caps(struct drm_connector *connector,
  				    const struct drm_edid *drm_edid)
  {
@@ -3756,7 +3756,7 @@ index 7324e273f39e..80807f97a667 100644
  
  	if (!connector->state) {
  		drm_err(adev_to_drm(adev), "%s - Connector has no state", __func__);
-@@ -13235,68 +13413,77 @@ void amdgpu_dm_update_freesync_caps(struct drm_connector *connector,
+@@ -13256,68 +13434,77 @@ void amdgpu_dm_update_freesync_caps(struct drm_connector *connector,
  	if (!adev->dm.freesync_module || !dc_supports_vrr(sink->ctx->dce_version))
  		goto update;
  
@@ -3883,7 +3883,7 @@ index 7324e273f39e..80807f97a667 100644
  
  	if (connector->state && amdgpu_dm_connector->dc_link && !freesync_capable &&
  	    amdgpu_dm_connector->dc_link->replay_settings.config.replay_supported) {
-@@ -13305,8 +13492,15 @@ void amdgpu_dm_update_freesync_caps(struct drm_connector *connector,
+@@ -13326,8 +13513,15 @@ void amdgpu_dm_update_freesync_caps(struct drm_connector *connector,
  	}
  
  	if (connector->vrr_capable_property)
@@ -4044,7 +4044,7 @@ index e5e993d3ef74..6413f2a587d5 100644
  
  bool dm_helpers_is_fullscreen(struct dc_context *ctx, struct dc_stream_state *stream)
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
-index f0946e67aef9..287fd44edb9a 100644
+index 7474f1bc1d0b..ed0bb3ad6b29 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_plane.c
 @@ -1607,7 +1607,7 @@ static void amdgpu_dm_plane_drm_plane_destroy_state(struct drm_plane *plane,
@@ -4687,10 +4687,10 @@ index 65296a819e6a..3d37cbefe4b8 100644
  }
  
 diff --git a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-index f51fa265230b..82aec5c85d41 100644
+index 2a0e826d0317..3d9d48587050 100644
 --- a/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
 +++ b/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c
-@@ -2974,7 +2974,10 @@ int smu_get_power_limit(void *handle,
+@@ -2977,7 +2977,10 @@ int smu_get_power_limit(void *handle,
  			*limit = smu->max_power_limit;
  			break;
  		case SMU_PPT_LIMIT_MIN:
@@ -4702,7 +4702,7 @@ index f51fa265230b..82aec5c85d41 100644
  			break;
  		default:
  			return -EINVAL;
-@@ -2995,7 +2998,15 @@ static int smu_set_power_limit(void *handle, uint32_t limit_type, uint32_t limit
+@@ -2998,7 +3001,15 @@ static int smu_set_power_limit(void *handle, uint32_t limit_type, uint32_t limit
  	if (limit_type == SMU_DEFAULT_PPT_LIMIT) {
  		if (!limit)
  			limit = smu->current_power_limit;
@@ -5370,7 +5370,7 @@ index 44f4fcce526e..695eadc88eab 100644
  			    fb->base.width, fb->base.height,
  			    sizes->fb_width, sizes->fb_height);
 diff --git a/drivers/gpu/drm/i915/display/intel_quirks.c b/drivers/gpu/drm/i915/display/intel_quirks.c
-index d2e16b79d6be..85f26517771a 100644
+index 1abbdd426e58..6d7026352add 100644
 --- a/drivers/gpu/drm/i915/display/intel_quirks.c
 +++ b/drivers/gpu/drm/i915/display/intel_quirks.c
 @@ -66,6 +66,18 @@ static void quirk_increase_ddi_disabled_time(struct intel_display *display)
@@ -5395,7 +5395,7 @@ index d2e16b79d6be..85f26517771a 100644
 @@ -240,6 +252,9 @@ static struct intel_quirk intel_quirks[] = {
  
  	/* Dell XPS 13 7390 2-in-1 */
- 	{ 0x8a12, 0x1028, 0x08b0, quirk_edp_limit_rate_hbr2 },
+ 	{ 0x8a52, 0x1028, 0x08b0, quirk_edp_limit_rate_hbr2 },
 +
 +	/* Apple MacBookPro15,1 */
 +	{ 0x3e9b, 0x106b, 0x0176, quirk_ddi_a_force_4_lanes },
@@ -5466,7 +5466,7 @@ index 68e45a26e85f..7580172daade 100644
  	}
  
 diff --git a/drivers/hid/Kconfig b/drivers/hid/Kconfig
-index 920a64b66b25..ecb3059c68fb 100644
+index 6ff4a3ad34cb..1e36dad6b8f6 100644
 --- a/drivers/hid/Kconfig
 +++ b/drivers/hid/Kconfig
 @@ -140,7 +140,7 @@ config HID_APPLE
@@ -5478,7 +5478,7 @@ index 920a64b66b25..ecb3059c68fb 100644
  	help
  	Support for some Apple devices which less or more break
  	HID specification.
-@@ -727,11 +727,13 @@ config LOGIWHEELS_FF
+@@ -728,11 +728,13 @@ config LOGIWHEELS_FF
  
  config HID_MAGICMOUSE
  	tristate "Apple Magic Mouse/Trackpad multi-touch support"
@@ -5493,7 +5493,7 @@ index 920a64b66b25..ecb3059c68fb 100644
  
  config HID_MALTRON
  	tristate "Maltron L90 keyboard"
-@@ -1448,4 +1450,8 @@ endif # HID
+@@ -1449,4 +1451,8 @@ endif # HID
  
  source "drivers/hid/usbhid/Kconfig"
  
@@ -6771,7 +6771,7 @@ index 000000000000..a712a724ded3
 +MODULE_AUTHOR("Hector Martin <marcan@marcan.st>");
 +MODULE_LICENSE("Dual MIT/GPL");
 diff --git a/drivers/hid/hid-apple.c b/drivers/hid/hid-apple.c
-index 57da4f86a9fa..a95ef2ddeafe 100644
+index 233e367cce1d..7c424c111f19 100644
 --- a/drivers/hid/hid-apple.c
 +++ b/drivers/hid/hid-apple.c
 @@ -30,7 +30,7 @@
@@ -6783,7 +6783,7 @@ index 57da4f86a9fa..a95ef2ddeafe 100644
  #define APPLE_HAS_FN		BIT(2)
  /* BIT(3) reserved, was: APPLE_HIDDEV */
  #define APPLE_ISO_TILDE_QUIRK	BIT(4)
-@@ -518,6 +518,16 @@ static int hidinput_apple_event(struct hid_device *hid, struct input_dev *input,
+@@ -519,6 +519,16 @@ static int hidinput_apple_event(struct hid_device *hid, struct input_dev *input,
  				table = macbookair_fn_keys;
  			else if (hid->product < 0x21d || hid->product >= 0x300)
  				table = powerbook_fn_keys;
@@ -6800,7 +6800,7 @@ index 57da4f86a9fa..a95ef2ddeafe 100644
  			else
  				table = apple_fn_keys;
  		}
-@@ -938,6 +948,13 @@ static int apple_probe(struct hid_device *hdev,
+@@ -939,6 +949,13 @@ static int apple_probe(struct hid_device *hdev,
  	struct apple_sc *asc;
  	int ret;
  
@@ -6814,7 +6814,7 @@ index 57da4f86a9fa..a95ef2ddeafe 100644
  	asc = devm_kzalloc(&hdev->dev, sizeof(*asc), GFP_KERNEL);
  	if (asc == NULL) {
  		hid_err(hdev, "can't alloc apple descriptor\n");
-@@ -1160,27 +1177,31 @@ static const struct hid_device_id apple_devices[] = {
+@@ -1161,27 +1178,31 @@ static const struct hid_device_id apple_devices[] = {
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRING9_JIS),
  		.driver_data = APPLE_HAS_FN | APPLE_RDESC_JIS },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_WELLSPRINGT2_J140K),
@@ -6855,7 +6855,7 @@ index 57da4f86a9fa..a95ef2ddeafe 100644
  	{ HID_BLUETOOTH_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_ALU_WIRELESS_2009_ANSI),
  		.driver_data = APPLE_NUMLOCK_EMULATION | APPLE_HAS_FN },
  	{ HID_BLUETOOTH_DEVICE(USB_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_ALU_WIRELESS_2009_ISO),
-@@ -1216,6 +1237,10 @@ static const struct hid_device_id apple_devices[] = {
+@@ -1217,6 +1238,10 @@ static const struct hid_device_id apple_devices[] = {
  		.driver_data = APPLE_HAS_FN | APPLE_ISO_TILDE_QUIRK | APPLE_RDESC_BATTERY },
  	{ HID_BLUETOOTH_DEVICE(BT_VENDOR_ID_APPLE, USB_DEVICE_ID_APPLE_MAGIC_KEYBOARD_NUMPAD_2024),
  		.driver_data = APPLE_HAS_FN | APPLE_ISO_TILDE_QUIRK },
@@ -6896,7 +6896,7 @@ index a5b3a8ca2fcb..b353fd819989 100644
  		bus = "SOUNDWIRE";
  		break;
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 9c2bf584d9f6..adad71cc8bf0 100644
+index 85ab1ac51109..9901686f58c8 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
 @@ -93,6 +93,8 @@
@@ -6924,7 +6924,7 @@ index 9c2bf584d9f6..adad71cc8bf0 100644
  #define USB_VENDOR_ID_ASETEK			0x2433
  #define USB_DEVICE_ID_ASETEK_INVICTA		0xf300
 diff --git a/drivers/hid/hid-magicmouse.c b/drivers/hid/hid-magicmouse.c
-index 7d4a25c6de0e..4bf49d7cad0e 100644
+index 91f621ceb924..8d45862adfed 100644
 --- a/drivers/hid/hid-magicmouse.c
 +++ b/drivers/hid/hid-magicmouse.c
 @@ -60,8 +60,14 @@ MODULE_PARM_DESC(report_undeciphered, "Report undeciphered multi-touch state fie
@@ -7640,7 +7640,7 @@ index 7d4a25c6de0e..4bf49d7cad0e 100644
  	return 0;
  }
  
-@@ -748,6 +1343,10 @@ static int magicmouse_enable_multitouch(struct hid_device *hdev)
+@@ -753,6 +1348,10 @@ static int magicmouse_enable_multitouch(struct hid_device *hdev)
  	int feature_size;
  
  	switch (hdev->product) {
@@ -7651,7 +7651,7 @@ index 7d4a25c6de0e..4bf49d7cad0e 100644
  	case USB_DEVICE_ID_APPLE_MAGICTRACKPAD2:
  	case USB_DEVICE_ID_APPLE_MAGICTRACKPAD2_USBC:
  		switch (hdev->vendor) {
-@@ -755,11 +1354,23 @@ static int magicmouse_enable_multitouch(struct hid_device *hdev)
+@@ -760,11 +1359,23 @@ static int magicmouse_enable_multitouch(struct hid_device *hdev)
  			feature_size = sizeof(feature_mt_trackpad2_bt);
  			feature = feature_mt_trackpad2_bt;
  			break;
@@ -7676,7 +7676,7 @@ index 7d4a25c6de0e..4bf49d7cad0e 100644
  	case USB_DEVICE_ID_APPLE_MAGICMOUSE2:
  	case USB_DEVICE_ID_APPLE_MAGICMOUSE2_USBC:
  		feature_size = sizeof(feature_mt_mouse2);
-@@ -852,12 +1463,62 @@ static int magicmouse_probe(struct hid_device *hdev,
+@@ -857,12 +1468,62 @@ static int magicmouse_probe(struct hid_device *hdev,
  	struct hid_report *report;
  	int ret;
  
@@ -7739,7 +7739,7 @@ index 7d4a25c6de0e..4bf49d7cad0e 100644
  	msc->scroll_accel = SCROLL_ACCEL_DEFAULT;
  	msc->hdev = hdev;
  	INIT_DEFERRABLE_WORK(&msc->work, magicmouse_enable_mt_work);
-@@ -916,11 +1577,32 @@ static int magicmouse_probe(struct hid_device *hdev,
+@@ -921,11 +1582,32 @@ static int magicmouse_probe(struct hid_device *hdev,
  				TRACKPAD2_USB_REPORT_ID, 0);
  		}
  		break;
@@ -7776,7 +7776,7 @@ index 7d4a25c6de0e..4bf49d7cad0e 100644
  	}
  
  	if (!report) {
-@@ -930,22 +1612,14 @@ static int magicmouse_probe(struct hid_device *hdev,
+@@ -935,22 +1617,14 @@ static int magicmouse_probe(struct hid_device *hdev,
  	}
  	report->size = 6;
  
@@ -7807,7 +7807,7 @@ index 7d4a25c6de0e..4bf49d7cad0e 100644
  	}
  
  	return 0;
-@@ -1023,10 +1697,42 @@ static const struct hid_device_id magic_mice[] = {
+@@ -1028,10 +1702,42 @@ static const struct hid_device_id magic_mice[] = {
  		USB_DEVICE_ID_APPLE_MAGICTRACKPAD2_USBC), .driver_data = 0 },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_APPLE,
  		USB_DEVICE_ID_APPLE_MAGICTRACKPAD2_USBC), .driver_data = 0 },
@@ -7850,7 +7850,7 @@ index 7d4a25c6de0e..4bf49d7cad0e 100644
  static struct hid_driver magicmouse_driver = {
  	.name = "magicmouse",
  	.id_table = magic_mice,
-@@ -1037,6 +1743,10 @@ static struct hid_driver magicmouse_driver = {
+@@ -1042,6 +1748,10 @@ static struct hid_driver magicmouse_driver = {
  	.event = magicmouse_event,
  	.input_mapping = magicmouse_input_mapping,
  	.input_configured = magicmouse_input_configured,
@@ -19951,10 +19951,10 @@ index 000000000000..e105e6f5cc91
 +MODULE_AUTHOR("Daniel Drake <drake@endlessm.com>");
 +MODULE_LICENSE("GPL v2");
 diff --git a/drivers/pci/quirks.c b/drivers/pci/quirks.c
-index 6df78efd7f6d..51188737e440 100644
+index fd86f72f54ae..9beacc334d06 100644
 --- a/drivers/pci/quirks.c
 +++ b/drivers/pci/quirks.c
-@@ -3748,6 +3748,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
+@@ -3758,6 +3758,106 @@ static void quirk_no_bus_reset(struct pci_dev *dev)
  	dev->dev_flags |= PCI_DEV_FLAGS_NO_BUS_RESET;
  }
  
@@ -20059,9 +20059,9 @@ index 6df78efd7f6d..51188737e440 100644
 +	return -ENOTTY;
 +}
  /*
-  * Some NVIDIA GPU devices do not work with bus reset, SBR needs to be
-  * prevented for those affected devices.
-@@ -5195,6 +5295,7 @@ static const struct pci_dev_acs_enabled {
+  * After asserting Secondary Bus Reset to downstream devices via a GB10
+  * Root Port, the link may not retrain correctly.
+@@ -5227,6 +5327,7 @@ static const struct pci_dev_acs_enabled {
  	{ PCI_VENDOR_ID_ZHAOXIN, PCI_ANY_ID, pci_quirk_zhaoxin_pcie_ports_acs },
  	/* Wangxun nics */
  	{ PCI_VENDOR_ID_WANGXUN, PCI_ANY_ID, pci_quirk_wangxun_nic_acs },
@@ -28360,10 +28360,10 @@ index 29dd5b91dd7d..428464bb81b3 100644
  	if (vtime_accounting_enabled_this_cpu())
  		vtime_task_switch_generic(prev);
 diff --git a/include/net/inet_connection_sock.h b/include/net/inet_connection_sock.h
-index ecb362025c4e..9de884b7fe01 100644
+index 5cb3056d6ddc..cf20b1465d99 100644
 --- a/include/net/inet_connection_sock.h
 +++ b/include/net/inet_connection_sock.h
-@@ -137,8 +137,8 @@ struct inet_connection_sock {
+@@ -139,8 +139,8 @@ struct inet_connection_sock {
  	u32			  icsk_probes_tstamp;
  	u32			  icsk_user_timeout;
  
@@ -28375,7 +28375,7 @@ index ecb362025c4e..9de884b7fe01 100644
  
  #define ICSK_TIME_RETRANS	1	/* Retransmit timer */
 diff --git a/include/net/tcp.h b/include/net/tcp.h
-index e0a5cf2f7818..6a4a5f38c072 100644
+index 279ddb923e65..14617903ac19 100644
 --- a/include/net/tcp.h
 +++ b/include/net/tcp.h
 @@ -406,6 +406,8 @@ static inline void tcp_dec_quickack_mode(struct sock *sk)
@@ -28387,7 +28387,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  
  #define	TCP_ECN_DISABLED	0
  #define	TCP_ECN_MODE_PENDING	(TCP_ECN_MODE_RFC3168 | TCP_ECN_MODE_ACCECN)
-@@ -851,6 +853,15 @@ static inline unsigned long tcp_reqsk_timeout(struct request_sock *req)
+@@ -853,6 +855,15 @@ static inline unsigned long tcp_reqsk_timeout(struct request_sock *req)
  
  u32 tcp_delack_max(const struct sock *sk);
  
@@ -28403,7 +28403,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  /* Compute the actual rto_min value */
  static inline u32 tcp_rto_min(const struct sock *sk)
  {
-@@ -956,6 +967,11 @@ static inline u32 tcp_stamp_us_delta(u64 t1, u64 t0)
+@@ -958,6 +969,11 @@ static inline u32 tcp_stamp_us_delta(u64 t1, u64 t0)
  	return max_t(s64, t1 - t0, 0);
  }
  
@@ -28415,7 +28415,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  /* provide the departure time in us unit */
  static inline u64 tcp_skb_timestamp_us(const struct sk_buff *skb)
  {
-@@ -1066,9 +1082,14 @@ struct tcp_skb_cb {
+@@ -1068,9 +1084,14 @@ struct tcp_skb_cb {
  			/* pkts S/ACKed so far upon tx of skb, incl retrans: */
  			__u32 delivered;
  			/* start of send pipeline phase */
@@ -28432,7 +28432,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  		} tx;   /* only used for outgoing skbs */
  		union {
  			struct inet_skb_parm	h4;
-@@ -1181,6 +1202,7 @@ enum tcp_ca_event {
+@@ -1183,6 +1204,7 @@ enum tcp_ca_event {
  	CA_EVENT_LOSS,		/* loss timeout */
  	CA_EVENT_ECN_NO_CE,	/* ECT set, but not CE marked */
  	CA_EVENT_ECN_IS_CE,	/* received CE marked IP packet */
@@ -28440,7 +28440,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  };
  
  /* Information about inbound ACK, passed to cong_ops->in_ack_event() */
-@@ -1209,9 +1231,12 @@ enum tcp_ca_ack_event_flags {
+@@ -1211,9 +1233,12 @@ enum tcp_ca_ack_event_flags {
  #define TCP_CONG_ECT_1_NEGOTIATION	BIT(3)
  /* Cannot fallback to RFC3168 during AccECN negotiation */
  #define TCP_CONG_NO_FALLBACK_RFC3168	BIT(4)
@@ -28454,7 +28454,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  
  union tcp_cc_info;
  
-@@ -1231,10 +1256,13 @@ struct ack_sample {
+@@ -1233,10 +1258,13 @@ struct ack_sample {
   */
  struct rate_sample {
  	u64  prior_mstamp; /* starting timestamp for interval */
@@ -28469,7 +28469,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  	long interval_us;	/* time for tp->delivered to incr "delivered" */
  	u32 snd_interval_us;	/* snd interval for delivered packets */
  	u32 rcv_interval_us;	/* rcv interval for delivered packets */
-@@ -1245,7 +1273,9 @@ struct rate_sample {
+@@ -1247,7 +1275,9 @@ struct rate_sample {
  	u32  last_end_seq;	/* end_seq of most recently ACKed packet */
  	bool is_app_limited;	/* is sample from packet with bubble in pipe? */
  	bool is_retrans;	/* is sample from retransmission? */
@@ -28479,7 +28479,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  };
  
  struct tcp_congestion_ops {
-@@ -1269,8 +1299,11 @@ struct tcp_congestion_ops {
+@@ -1271,8 +1301,11 @@ struct tcp_congestion_ops {
  	/* hook for packet ack accounting (optional) */
  	void (*pkts_acked)(struct sock *sk, const struct ack_sample *sample);
  
@@ -28493,7 +28493,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  
  	/* call when packets are delivered to update cwnd and pacing rate,
  	 * after all the ca_state processing. (optional)
-@@ -1336,6 +1369,14 @@ static inline char *tcp_ca_get_name_by_key(u32 key, char *buffer)
+@@ -1338,6 +1371,14 @@ static inline char *tcp_ca_get_name_by_key(u32 key, char *buffer)
  }
  #endif
  
@@ -28508,7 +28508,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  static inline bool tcp_ca_needs_ecn(const struct sock *sk)
  {
  	const struct inet_connection_sock *icsk = inet_csk(sk);
-@@ -1376,6 +1417,7 @@ static inline void tcp_ca_event(struct sock *sk, const enum tcp_ca_event event)
+@@ -1378,6 +1419,7 @@ static inline void tcp_ca_event(struct sock *sk, const enum tcp_ca_event event)
  void tcp_set_ca_state(struct sock *sk, const u8 ca_state);
  
  /* From tcp_rate.c */
@@ -28516,7 +28516,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  void tcp_rate_skb_sent(struct sock *sk, struct sk_buff *skb);
  void tcp_rate_skb_delivered(struct sock *sk, struct sk_buff *skb,
  			    struct rate_sample *rs);
-@@ -1388,6 +1430,21 @@ static inline bool tcp_skb_sent_after(u64 t1, u64 t2, u32 seq1, u32 seq2)
+@@ -1390,6 +1432,21 @@ static inline bool tcp_skb_sent_after(u64 t1, u64 t2, u32 seq1, u32 seq2)
  	return t1 > t2 || (t1 == t2 && after(seq1, seq2));
  }
  
@@ -28538,7 +28538,7 @@ index e0a5cf2f7818..6a4a5f38c072 100644
  /* These functions determine how the current flow behaves in respect of SACK
   * handling. SACK is negotiated with the peer, and therefore it can vary
   * between different flows.
-@@ -2562,7 +2619,7 @@ struct tcp_plb_state {
+@@ -2564,7 +2621,7 @@ struct tcp_plb_state {
  	u8	consec_cong_rounds:5, /* consecutive congested rounds */
  		unused:3;
  	u32	pause_until; /* jiffies32 when PLB can resume rerouting */
@@ -29526,7 +29526,7 @@ index ccdeb0e84d39..57a9eb278221 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index cbf758e27aa2..f06dc43e1047 100644
+index 04e32adaeb1d..072c4729dd98 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -302,7 +302,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -29610,7 +29610,7 @@ index 97cae40c0209..6aa1e89172f8 100644
  
  static int __init init_vm_util_sysctls(void)
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 614ccf39fe3f..c2604dca2055 100644
+index 7724b1a1a8b5..8890a33c3d80 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -147,6 +147,15 @@ struct scan_control {
@@ -29653,7 +29653,7 @@ index 614ccf39fe3f..c2604dca2055 100644
  
  #ifdef CONFIG_MEMCG
  
-@@ -1135,6 +1157,10 @@ static unsigned int shrink_folio_list(struct list_head *folio_list,
+@@ -1145,6 +1167,10 @@ static unsigned int shrink_folio_list(struct list_head *folio_list,
  		if (!sc->may_unmap && folio_mapped(folio))
  			goto keep_locked;
  
@@ -29664,7 +29664,7 @@ index 614ccf39fe3f..c2604dca2055 100644
  		/*
  		 * The number of dirty pages determines if a node is marked
  		 * reclaim_congested. kswapd will stall and start writing
-@@ -2572,6 +2598,15 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
+@@ -2582,6 +2608,15 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
  		goto out;
  	}
  
@@ -29680,7 +29680,7 @@ index 614ccf39fe3f..c2604dca2055 100644
  	/*
  	 * If there is enough inactive page cache, we do not reclaim
  	 * anything from the anonymous working right now to make sure
-@@ -2630,6 +2665,14 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
+@@ -2640,6 +2675,14 @@ static void get_scan_count(struct lruvec *lruvec, struct scan_control *sc,
  			BUG();
  		}
  
@@ -29695,7 +29695,7 @@ index 614ccf39fe3f..c2604dca2055 100644
  		nr[lru] = scan;
  	}
  }
-@@ -2650,6 +2693,96 @@ static bool can_age_anon_pages(struct lruvec *lruvec,
+@@ -2660,6 +2703,96 @@ static bool can_age_anon_pages(struct lruvec *lruvec,
  			  lruvec_memcg(lruvec));
  }
  
@@ -29792,7 +29792,7 @@ index 614ccf39fe3f..c2604dca2055 100644
  #ifdef CONFIG_LRU_GEN
  
  #ifdef CONFIG_LRU_GEN_ENABLED
-@@ -4634,11 +4767,21 @@ static int get_tier_idx(struct lruvec *lruvec, int type)
+@@ -4644,11 +4777,21 @@ static int get_tier_idx(struct lruvec *lruvec, int type)
  	return tier - 1;
  }
  
@@ -29816,7 +29816,7 @@ index 614ccf39fe3f..c2604dca2055 100644
  		return LRU_GEN_FILE;
  
  	if (swappiness >= MAX_SWAPPINESS)
-@@ -4658,7 +4801,7 @@ static int isolate_folios(unsigned long nr_to_scan, struct lruvec *lruvec,
+@@ -4668,7 +4811,7 @@ static int isolate_folios(unsigned long nr_to_scan, struct lruvec *lruvec,
  			  int *type_scanned, struct list_head *list)
  {
  	int i;
@@ -29825,7 +29825,7 @@ index 614ccf39fe3f..c2604dca2055 100644
  
  	for_each_evictable_type(i, swappiness) {
  		int scanned;
-@@ -4904,6 +5047,12 @@ static int shrink_one(struct lruvec *lruvec, struct scan_control *sc)
+@@ -4914,6 +5057,12 @@ static int shrink_one(struct lruvec *lruvec, struct scan_control *sc)
  	struct mem_cgroup *memcg = lruvec_memcg(lruvec);
  	struct pglist_data *pgdat = lruvec_pgdat(lruvec);
  
@@ -29838,7 +29838,7 @@ index 614ccf39fe3f..c2604dca2055 100644
  	/* lru_gen_age_node() called mem_cgroup_calculate_protection() */
  	if (mem_cgroup_below_min(NULL, memcg))
  		return MEMCG_LRU_YOUNG;
-@@ -6058,6 +6207,8 @@ static void shrink_node(pg_data_t *pgdat, struct scan_control *sc)
+@@ -6068,6 +6217,8 @@ static void shrink_node(pg_data_t *pgdat, struct scan_control *sc)
  
  	prepare_scan_control(pgdat, sc);
  
@@ -32582,7 +32582,7 @@ index e9f6c77e0631..8e5e77a77e91 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 0d080a3e27d6..bdc0cdda875d 100644
+index aa4f5bf76559..af4c1dd91494 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -358,7 +358,7 @@ static void tcp_data_ecn_check(struct sock *sk, const struct sk_buff *skb)
@@ -32698,7 +32698,7 @@ index 0d080a3e27d6..bdc0cdda875d 100644
  	return 1;
  
  old_ack:
-@@ -5909,13 +5934,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
+@@ -5918,13 +5943,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
  
  	    /* More than one full frame received... */
  	if (((tp->rcv_nxt - tp->rcv_wup) > inet_csk(sk)->icsk_ack.rcv_mss &&
@@ -32716,7 +32716,7 @@ index 0d080a3e27d6..bdc0cdda875d 100644
  	    tcp_in_quickack_mode(sk) ||
  	    /* Protocol state mandates a one-time immediate ACK */
 diff --git a/net/ipv4/tcp_minisocks.c b/net/ipv4/tcp_minisocks.c
-index 9776c921d1bb..990df5f9e6c4 100644
+index 0742a41687ff..465316b9cd74 100644
 --- a/net/ipv4/tcp_minisocks.c
 +++ b/net/ipv4/tcp_minisocks.c
 @@ -498,6 +498,8 @@ void tcp_ca_openreq_child(struct sock *sk, const struct dst_entry *dst)
@@ -33070,10 +33070,10 @@ index 000000000000..382cebe1ee57
 +
 +.PHONY: $(PHONY)
 diff --git a/scripts/mod/modpost.c b/scripts/mod/modpost.c
-index 755b842f1f9b..7d9881a2243c 100644
+index 88ad227f87cd..e30ae69cde34 100644
 --- a/scripts/mod/modpost.c
 +++ b/scripts/mod/modpost.c
-@@ -1478,13 +1478,22 @@ static void extract_crcs_for_object(const char *object, struct module *mod)
+@@ -1482,13 +1482,22 @@ static void extract_crcs_for_object(const char *object, struct module *mod)
  	char cmd_file[PATH_MAX];
  	char *buf, *p;
  	const char *base;
@@ -33116,10 +33116,10 @@ index 452374d63c24..08f80d7c5df0 100644
  	mkdir -p "${builddir}"
  	cp System.map "${builddir}/System.map"
 diff --git a/sound/hda/codecs/realtek/alc269.c b/sound/hda/codecs/realtek/alc269.c
-index 15203c5855eb..c1791b136620 100644
+index 36053042ca77..fdf688e20bf9 100644
 --- a/sound/hda/codecs/realtek/alc269.c
 +++ b/sound/hda/codecs/realtek/alc269.c
-@@ -6321,6 +6321,7 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
+@@ -6591,6 +6591,7 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x1025, 0x079b, "Acer Aspire V5-573G", ALC282_FIXUP_ASPIRE_V5_PINS),
  	SND_PCI_QUIRK(0x1025, 0x080d, "Acer Aspire V5-122P", ALC269_FIXUP_ASPIRE_HEADSET_MIC),
  	SND_PCI_QUIRK(0x1025, 0x0840, "Acer Aspire E1", ALC269VB_FIXUP_ASPIRE_E1_COEF),

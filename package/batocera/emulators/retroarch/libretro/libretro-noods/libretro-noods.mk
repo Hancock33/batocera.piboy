@@ -17,7 +17,9 @@ endef
 
 define LIBRETRO_NOODS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/noods_libretro.so $(TARGET_DIR)/usr/lib/libretro/noods_libretro.so
+	$(INSTALL) -D $(@D)/noods_libretro.info $(TARGET_DIR)/usr/share/libretro/info/noods_libretro.info
 endef
 
 $(eval $(generic-package))

@@ -16,7 +16,9 @@ endef
 
 define LIBRETRO_JUMPNBUMP_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/jumpnbump_libretro.so $(TARGET_DIR)/usr/lib/libretro/jumpnbump_libretro.so
+	$(INSTALL) -D $(@D)/jumpnbump_libretro.info $(TARGET_DIR)/usr/share/libretro/info/jumpnbump_libretro.info
 endef
 
 $(eval $(generic-package))

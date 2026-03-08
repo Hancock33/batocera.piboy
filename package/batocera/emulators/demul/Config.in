@@ -5,6 +5,7 @@ config BR2_PACKAGE_DEMUL
 	select BR2_PACKAGE_XDOTOOL
 
 	help
-	  Demul is Sega's multi-system game console and automaton emulator.
+	  Demul is Sega's multi-system game console and
+	  automaton emulator.
 
 	  http://demul.emulation64.com

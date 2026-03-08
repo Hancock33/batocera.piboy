@@ -6,7 +6,7 @@ index 66221345c..cb50add28 100644
  #ifdef WIN32 // windows
  			return system("shutdown -s -t 0");
  #else // osx / linux
--			return system("shutdown -h now");
+-		return system("shutdown -P -h now");
 +			return system("shutdown -t1 now -h");
  #endif
  		}

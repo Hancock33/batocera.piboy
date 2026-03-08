@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 98fef0b7..95c2b2dc 100644
+index ef148409..2500c161 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4437,7 +4437,7 @@ void create_missing_amiberry_folders()
+@@ -4911,7 +4911,7 @@ void create_missing_amiberry_folders()
  #ifdef __MACH__
  		const std::string default_roms_path = app_directory + "/Resources/roms/";
  #else
@@ -11,22 +11,22 @@ index 98fef0b7..95c2b2dc 100644
  #endif
  		// copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
  		if (my_existsdir(default_roms_path.c_str()))
-@@ -4528,9 +4528,9 @@ static void init_amiberry_dirs(const bool portable_mode)
+@@ -5015,9 +5015,9 @@ static void init_amiberry_dirs(const bool portable_mode)
  #else
  	const std::string amiberry_dir = "amiberry";
  #endif
 -	current_dir = home_dir = get_home_directory(portable_mode);
 -	data_dir = get_data_directory(portable_mode);
 -	plugins_dir = get_plugins_directory(portable_mode);
-+    data_dir = "/usr/share/amiberry/data/";
-+    config_path = "/userdata/system/configs/amiberry/conf";
-+    plugins_dir = "/usr/share/amiberry/plugins/";
++	data_dir = "/usr/share/amiberry/data/";
++	config_path = "/userdata/system/configs/amiberry/conf";
++	plugins_dir = "/usr/share/amiberry/plugins/";
  
  #ifdef __MACH__
  	if constexpr (true)
-@@ -4606,26 +4606,26 @@ static void init_amiberry_dirs(const bool portable_mode)
- 	video_dir.append("/Videos/");
- 	themes_path.append("/Themes/");
+@@ -5140,20 +5140,20 @@ static void init_amiberry_dirs(const bool portable_mode)
+ 	shaders_path.append("\\Shaders\\");
+ 	bezels_path.append("\\Bezels\\");
  #else
 -	controllers_path.append("/controllers/");
 -	whdboot_path.append("/whdboot/");
@@ -52,10 +52,12 @@ index 98fef0b7..95c2b2dc 100644
  	nvram_dir.append("/nvram/");
  	video_dir.append("/videos/");
  	themes_path.append("/themes/");
+@@ -5161,7 +5161,7 @@ static void init_amiberry_dirs(const bool portable_mode)
+ 	bezels_path.append("/bezels/");
  #endif
  
 -	retroarch_file = config_path;
 +	retroarch_file = controllers_path;
- 	retroarch_file.append("/retroarch.cfg");
- 
- 	floppy_sounds_dir = data_dir;
+ #ifdef _WIN32
+ 	retroarch_file.append("\\retroarch.cfg");
+ #elif defined(__ANDROID__)

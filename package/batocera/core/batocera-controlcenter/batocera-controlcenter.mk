@@ -12,8 +12,7 @@ BATOCERA_CONTROLCENTER_INSTALL_STAGING = YES
 
 BATOCERA_CONTROLCENTER_DEPENDENCIES = python3 python-evdev
 
-BATOCERA_CONTROLCENTER_PATH = \
-    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-controlcenter
+BATOCERA_CONTROLCENTER_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-controlcenter
 
 define BATOCERA_CONTROLCENTER_BUILD_CMDS
 	# update translation files

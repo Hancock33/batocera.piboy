@@ -23,9 +23,9 @@ BGFX_CONF_OPTS += -DBGFX_CONFIG_MAX_FRAME_BUFFERS=256
 BGFX_CONF_OPTS += -DBGFX_WITH_WAYLAND=OFF
 
 define BGFX_PATCH_CMAKE
-    $(TAR) -xzf $(DL_DIR)/bgfx/$(BGFX_PATCH_SHA).tar.gz -C $(@D)
-    rm -rf $(@D)/bgfx
-    mv $(@D)/bgfx-$(BGFX_PATCH_SHA) $(@D)/bgfx
+	$(TAR) -xzf $(DL_DIR)/bgfx/$(BGFX_PATCH_SHA).tar.gz -C $(@D)
+	rm -rf $(@D)/bgfx
+	mv $(@D)/bgfx-$(BGFX_PATCH_SHA) $(@D)/bgfx
 endef
 
 BGFX_PRE_CONFIGURE_HOOKS += BGFX_PATCH_CMAKE

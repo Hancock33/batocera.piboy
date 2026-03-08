@@ -11,9 +11,9 @@ BATOCERA_DESKTOPAPPS_PKGDIR = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/cor
 
 # depend on yad if the device meets the criteria
 ifeq ($(BR2_PACKAGE_XORG7),y)
-ifeq ($(BR2_PACKAGE_LIBGTK2)$(BR2_PACKAGE_LIBGTK3_X11),y)
-BATOCERA_DESKTOPAPPS_DEPENDENCIES = yad
-endif
+    ifeq ($(BR2_PACKAGE_LIBGTK2)$(BR2_PACKAGE_LIBGTK3_X11),y)
+        BATOCERA_DESKTOPAPPS_DEPENDENCIES += yad
+    endif
 endif
 
 # Base files
@@ -22,7 +22,6 @@ BATOCERA_DESKTOPAPPS_APPS    = xterm.desktop
 BATOCERA_DESKTOPAPPS_ICONS   =
 BATOCERA_DESKTOPAPPS_TOOLBOX =
 BATOCERA_DESKTOPAPPS_ACTIONS =
-
 
 # only applications for platforms that can use yad
 ifeq ($(BR2_PACKAGE_YAD),y)
@@ -238,7 +237,6 @@ ifeq ($(BR2_PACKAGE_YAD),y)
     BATOCERA_DESKTOPAPPS_ACTIONS += dos.toolbox.extract.desktop
   endif
 endif
-
 
 define BATOCERA_DESKTOPAPPS_INSTALL_TARGET_CMDS
 	# scripts (Install as executable 0755)
