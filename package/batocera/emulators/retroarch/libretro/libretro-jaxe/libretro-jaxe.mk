@@ -20,7 +20,7 @@ define LIBRETRO_JAXE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/jaxe_libretro.so $(TARGET_DIR)/usr/lib/libretro/jaxe_libretro.so
-	$(INSTALL) -D $(@D)/jaxe_libretro.info $(TARGET_DIR)/usr/lib/libretro/jaxe_libretro.info
+	$(INSTALL) -D $(@D)/jaxe_libretro.info $(TARGET_DIR)/usr/share/libretro/info/jaxe_libretro.info
 endef
 
 $(eval $(generic-package))
