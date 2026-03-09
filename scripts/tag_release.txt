@@ -39,6 +39,7 @@ python-pyxel.mk
 rgbds.mk
 sdl12-compat.mk
 sdl3_image.mk
+sdl3_mixer.mk
 sdl3_ttf.mk
 sdl3.mk
 semver.mk

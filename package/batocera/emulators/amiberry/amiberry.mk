@@ -3,8 +3,8 @@
 # amiberry
 #
 ################################################################################
-# Version: Commits on Mar 08, 2026
-AMIBERRY_VERSION = 489ddb9ce94bdecc01408ed7f455fbde69e17aa6
+# Version: Commits on Mar 09, 2026
+AMIBERRY_VERSION = f27872bcce45330b9e365dfdcd188c8ec9ca89fa
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
