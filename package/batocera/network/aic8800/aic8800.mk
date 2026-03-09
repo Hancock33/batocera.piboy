@@ -44,11 +44,11 @@ define AIC8800_FIRMWARE_ETC_SDIO
 endef
 
 define AIC8800_FIRMWARE_ETC_USB
-	mkdir -p $(TARGET_DIR)/lib/firmware/aic8800_fw/USB
-	cp -f $(@D)/src/USB/driver_fw/fw/aic8800/* 	    $(TARGET_DIR)/lib/firmware/aic8800_fw/USB/
-	cp -f $(@D)/src/USB/driver_fw/fw/aic8800D80/*   $(TARGET_DIR)/lib/firmware/aic8800_fw/USB/
-	cp -f $(@D)/src/USB/driver_fw/fw/aic8800D80X2/* $(TARGET_DIR)/lib/firmware/aic8800_fw/USB/
-	cp -f $(@D)/src/USB/driver_fw/fw/aic8800DC/*    $(TARGET_DIR)/lib/firmware/aic8800_fw/USB/
+    mkdir -p $(TARGET_DIR)/lib/firmware/aic8800_fw/USB
+	cp -rf $(@D)/src/USB/driver_fw/fw/aic8800/      $(TARGET_DIR)/lib/firmware/aic8800_fw/USB/
+	cp -rf $(@D)/src/USB/driver_fw/fw/aic8800D80/   $(TARGET_DIR)/lib/firmware/aic8800_fw/USB/
+	cp -rf $(@D)/src/USB/driver_fw/fw/aic8800D80X2/ $(TARGET_DIR)/lib/firmware/aic8800_fw/USB/
+	cp -rf $(@D)/src/USB/driver_fw/fw/aic8800DC/    $(TARGET_DIR)/lib/firmware/aic8800_fw/USB/
 endef
 
 AIC8800_POST_PATCH_HOOKS = AIC8800_DEBIAN_PATCHES
