@@ -50,7 +50,7 @@ index fe14393676..8f256336db 100644
              path_up = path;
           else if (string_is_equal_noncase(basename_noext, "down"))
 diff --git a/configuration.c b/configuration.c
-index 1a9917de6e..5a2276772d 100644
+index 58c0437c16..c0728be6ca 100644
 --- a/configuration.c
 +++ b/configuration.c
 @@ -1614,6 +1614,7 @@ static struct config_array_setting *populate_settings_array(

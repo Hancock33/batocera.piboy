@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 263f4150b3..83f382855f 100644
+index ce942c9562..aeedefda8d 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -5263,12 +5263,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -5260,12 +5260,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index 263f4150b3..83f382855f 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -6938,11 +6959,32 @@ void input_config_parse_mouse_button(char *s,
+@@ -6935,11 +6956,32 @@ void input_config_parse_mouse_button(char *s,
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
