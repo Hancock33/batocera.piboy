@@ -3,8 +3,8 @@
 # tic80
 #
 ################################################################################
-# Version: Commits on Feb 21, 2026
-TIC80_VERSION = ae1195a9d0fbda243bf0ebd861d6876d072a979e
+# Version: Commits on Mar 12, 2026
+TIC80_VERSION = 5997f32499ddb237c9eb2648bb800bf2c6712b32
 TIC80_SITE = https://github.com/nesbox/TIC-80.git
 TIC80_SITE_METHOD=git
 TIC80_GIT_SUBMODULES=YES
