@@ -1,8 +1,8 @@
 diff --git a/Core/Util/PathUtil.cpp b/Core/Util/PathUtil.cpp
-index a82bc95fe6..6069e148b4 100644
+index 96be0eac06..99a894781a 100644
 --- a/Core/Util/PathUtil.cpp
 +++ b/Core/Util/PathUtil.cpp
-@@ -42,26 +42,21 @@ Path FindConfigFile(const Path &searchPath, std::string_view baseFilename, bool
+@@ -43,26 +43,21 @@ Path FindConfigFile(const Path &searchPath, std::string_view baseFilename, bool
  }
  
  Path GetSysDirectory(PSPDirectories directoryType) {
@@ -35,7 +35,7 @@ index a82bc95fe6..6069e148b4 100644
  	case DIRECTORY_SYSTEM:
  		return pspDirectory / "SYSTEM";
  	case DIRECTORY_PAUTH:
-@@ -71,9 +66,9 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -72,9 +67,9 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  	case DIRECTORY_DUMP:
  		return pspDirectory / "SYSTEM/DUMP";
  	case DIRECTORY_SAVESTATE:
@@ -47,7 +47,7 @@ index a82bc95fe6..6069e148b4 100644
  	case DIRECTORY_TEXTURES:
  		return pspDirectory / "TEXTURES";
  	case DIRECTORY_PLUGINS:
-@@ -82,22 +77,22 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -83,22 +78,22 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  		if (!g_Config.appCacheDirectory.empty()) {
  			return g_Config.appCacheDirectory;
  		}
@@ -88,10 +88,10 @@ index 290cf57ce1..82378bdb01 100644
  
  	size_t size;
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index 68065ef606..643f236597 100644
+index cf2b0974da..6dffb4552e 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -378,7 +378,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -367,7 +367,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -100,7 +100,7 @@ index 68065ef606..643f236597 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -483,7 +483,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -472,7 +472,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  

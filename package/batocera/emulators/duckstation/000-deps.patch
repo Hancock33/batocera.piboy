@@ -1,8 +1,8 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 6c8781e2d..b5d2738a1 100644
+index d1727c156..b5d2738a1 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
-@@ -1,41 +1,6 @@
+@@ -1,43 +1,6 @@
  # SPDX-FileCopyrightText: 2019-2026 Connor McLaughlin <stenzek@gmail.com>
  # SPDX-License-Identifier: CC-BY-NC-ND-4.0 + Packaging Restriction
  
@@ -30,6 +30,8 @@ index 6c8781e2d..b5d2738a1 100644
 -    set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/linux${DEPS_CROSS_PREFIX}-armhf")
 -  elseif(CPU_ARCH_ARM64)
 -    set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/linux${DEPS_CROSS_PREFIX}-arm64")
+-  elseif(CPU_ARCH_LOONGARCH64)
+-    set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/linux${DEPS_CROSS_PREFIX}-loongarch64")
 -  else()
 -    message(FATAL_ERROR "Unsupported architecture")
 -  endif()
@@ -44,7 +46,7 @@ index 6c8781e2d..b5d2738a1 100644
  # Enable threads everywhere.
  set(THREADS_PREFER_PTHREAD_FLAG ON)
  find_package(Threads REQUIRED)
-@@ -43,74 +8,79 @@ find_package(Threads REQUIRED)
+@@ -45,74 +8,79 @@ find_package(Threads REQUIRED)
  # pkg-config gets pulled transitively on some platforms.
  if(NOT WIN32 AND NOT APPLE)
    find_package(PkgConfig REQUIRED)
@@ -174,7 +176,7 @@ index 6c8781e2d..b5d2738a1 100644
    endif()
  endif()
  
-@@ -140,9 +110,6 @@ endif()
+@@ -142,9 +110,6 @@ endif()
  if(NOT WIN32)
    find_package(FFMPEG 8.0.1 COMPONENTS avcodec avformat avutil swresample swscale)
    if(NOT FFMPEG_FOUND)
