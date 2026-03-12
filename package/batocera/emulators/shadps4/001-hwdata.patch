@@ -1,0 +1,17 @@
+Submodule externals/hwinfo contains modified content
+diff --git a/externals/hwinfo/src/linux/disk.cpp b/externals/hwinfo/src/linux/disk.cpp
+index 59a9ba3..7ed01ae 100644
+--- a/externals/hwinfo/src/linux/disk.cpp
++++ b/externals/hwinfo/src/linux/disk.cpp
+@@ -14,6 +14,11 @@
+ #include <regex>
+ #include <vector>
+ 
++#include <iostream>
++#include <sstream>
++#include <string>
++using std::istringstream;
++
+ namespace {
+ 
+ // _____________________________________________________________________________________________________________________
