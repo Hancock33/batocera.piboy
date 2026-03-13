@@ -1901,7 +1901,7 @@ enterprise:
   extensions:           [128, bas, cas, cdt, com, dsk, dtf, img, tap, trn, tzx, zip]
   emulators:
     clk:
-      clk:              { requireAnyOf: [BR2_PACKAGE_CLK] incompatible_extensions: [128, cas, cdt, dsk, dtf, img, tap, trn, tzx,] }
+      clk:              { requireAnyOf: [BR2_PACKAGE_CLK], incompatible_extensions: [128, cas, cdt, dsk, dtf, img, tap, trn, tzx,] }
     libretro:
       ep128emu-core:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU_CORE] }
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
