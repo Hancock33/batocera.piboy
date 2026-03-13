@@ -78,6 +78,9 @@ amigademo:
 amstradcpc:
   emulator: libretro
   core:     cap32
+pcw:
+  emulator: libretro
+  core:     mame
 apfm1000:
   emulator: libretro
   core:     mame
@@ -145,6 +148,9 @@ bbcmicro:
 bbja:
   emulator: bbja
   core:     bbja
+beena:
+  emulator: libretro
+  core:     mame
 bermuda:
   emulator: bermuda
   core:     bermuda
@@ -253,6 +259,9 @@ craft:
 crvision:
   emulator: libretro
   core:     mame
+ctvboy:
+  emulator: libretro
+  core:     mame
 
 # D-L
 
@@ -281,6 +290,12 @@ doom3:
 dos:
   emulator: libretro
   core:     dosbox_pure
+dragon64:
+  emulator: libretro
+  core:     mame
+mc10:
+  emulator: libretro
+  core:     mame
 dreamcast:
   emulator: flycast
   core:     flycast
@@ -610,6 +625,21 @@ mugen:
 multivision:
   emulator: libretro
   core:     gearsystem
+mz2000:
+  emulator: libretro
+  core:     mame
+mz2500:
+  emulator: libretro
+  core:     mame
+mz700:
+  emulator: libretro
+  core:     mame
+mz800:
+  emulator: libretro
+  core:     mame
+mz80k:
+  emulator: libretro
+  core:     mame
 n64:
   emulator: mupen64plus
   core:     glide64mk2
@@ -826,6 +856,12 @@ p2000t:
 pv1000:
   emulator: libretro
   core:     mame
+pv2000:
+  emulator: libretro
+  core:     mame
+pc80:
+  emulator: libretro
+  core:     mame
 pygame:
   emulator: pygame
   core:     pygame
@@ -870,6 +906,11 @@ rott:
 rtcw:
   emulator: rtcw
   core:     rtcw
+rx78:
+  emulator: libretro
+  core:     mame
+  options:
+    sharemameart: 0
 samcoupe:
   emulator: samcoupe
   core:     samcoupe
@@ -890,6 +931,9 @@ saturn:
 scummvm:
   emulator: scummvm
   core:     scummvm
+sc3000:
+  emulator: libretro
+  core:     mame
 scv:
   emulator: libretro
   core:     emuscv
@@ -904,6 +948,9 @@ sega:
 sega32x:
   emulator: libretro
   core:     picodrive
+segaai:
+  emulator: libretro
+  core:     mame
 megacd:
   emulator: libretro
   core:     genesisplusgx
@@ -1021,6 +1068,11 @@ supervision:
 supracan:
   emulator: libretro
   core:     mame
+sv8000:
+  emulator: libretro
+  core:     mame
+  options:
+    sharemameart: 0
 switch:
   emulator: ryujinx
   core:     ryujinx
