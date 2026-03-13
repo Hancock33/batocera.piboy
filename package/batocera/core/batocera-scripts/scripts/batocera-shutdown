@@ -912,7 +912,7 @@ udevadm monitor --udev \
     --subsystem-match=drm \
     2>/dev/null | while IFS= read -t 60 -r _event_line; do
 
-    # If the flag is gone the main script has already resumed — exit cleanly.
+    # If the flag is gone the main script has already resumed - exit cleanly.
     if [ ! -f "\${PLUGGED_SCREEN_OFF_FLAG}" ]; then
         echo "INFO: [undock-monitor] Screen-off flag removed. Exiting."
         exit 0
@@ -934,7 +934,7 @@ udevadm monitor --udev \
             ELAPSED=\$(( NOW - UNDOCK_TIME ))
             if [ \${ELAPSED} -ge \${ESCALATION_DELAY} ]; then
                 # Check if a game is running. Interactive suspend is blocked mid-game,
-                # but automated escalation cannot be — the device is abandoned on battery.
+                # but automated escalation cannot be - the device is abandoned on battery.
                 # Force a clean shutdown instead to prevent silent battery drain.
                 HTTP_STATUS=\$(curl --connect-timeout 1 -s -o /dev/null \
                     -w "%{http_code}" "http://localhost:1234/runningGame")
@@ -1019,11 +1019,11 @@ if [ "${SUSPEND_MODE}" = "fake" ]; then
     # We only care about the button press event (1).
     if [ "${SETACTION}" = "1" ]; then
         if [ -f "${FAKE_SUSPEND_FLAG}" ]; then
-            # Currently in a full fake suspend — resume normally.
+            # Currently in a full fake suspend - resume normally.
             do_fake_resume
         elif [ -f "${PLUGGED_SCREEN_OFF_FLAG}" ]; then
             # Currently in plugged screen-off state (docked or mid-undock countdown)
-            # — restore internal screen and LEDs, cancel any undock monitor.
+            # - restore internal screen and LEDs, cancel any undock monitor.
             stop_undock_monitor
             do_plugged_screen_on
         else
