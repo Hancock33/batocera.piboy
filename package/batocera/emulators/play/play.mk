@@ -9,7 +9,7 @@ PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
-PLAY_DEPENDENCIES = ecm libevdev openal qt6base sqlite
+PLAY_DEPENDENCIES = ecm eudev libevdev openal qt6base sqlite
 PLAY_EMULATOR_INFO = play.emulator.yml
 
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
