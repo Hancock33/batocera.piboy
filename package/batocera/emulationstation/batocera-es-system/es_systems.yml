@@ -1810,12 +1810,15 @@ enterprise:
   manufacturer:         Enterprise Computers
   release:              1985
   hardware:             computer
-  extensions:           [128, bas, com, trn, zip]
+  extensions:           [128, bas, cas, cdt, com, dsk, dtf, img, tap, trn, tzx, zip]
   emulators:
-    libretro:
-      ep128emu:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU] }
     clk:
-      clk:              { requireAnyOf: [BR2_PACKAGE_CLK] }
+      clk:              { requireAnyOf: [BR2_PACKAGE_CLK] incompatible_extensions: [128, cas, cdt, dsk, dtf, img, tap, trn, tzx,] }
+    libretro:
+      ep128emu-core:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU_CORE] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en:           |
                         Requires BIOS files:
                         bios/Enterprise/basic21.bin
@@ -2124,11 +2127,11 @@ tic80:
     nesbox:
       tic80:            { requireAnyOf: [BR2_PACKAGE_TIC80] }
   comment_en:           |
-                        For more info: https://wiki.batocera.org/systems:tic-80
+                        For more info: https://wiki.batocera.org/systems:tic80
   comment_fr:           |
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:tic-80
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:tic80
   comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:tic-80
+                        Para mais informações: https://wiki.batocera.org/systems:tic80
 
 thextech:
   name:                 TheXTech
@@ -6860,6 +6863,34 @@ vgmplay:
   comment_br:           |
                         Listas de software recomendadas. O QSound pode consumir muita CPU.
                         Use o Gerenciador de Arquivos no menu MAME para mudar de faixa.
+
+tvc:
+  name:                 Videoton TVC
+  manufacturer:         Videoton
+  release:              1986
+  hardware:             computer
+  extensions:           [cas, tap, dsk, img, zip]
+  emulators:
+    libretro:
+      ep128emu-core:    { requireAnyOf: [BR2_PACKAGE_LIBRETRO_EP128EMU_CORE] }
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en:           |
+                        Requires BIOS files:
+                        bios/tvc22_sys.rom
+                        bios/tvc22_ext.rom
+                        bios/tvcfileio.rom
+                        Requires MAME BIOS file:
+                        bios/mame/tvc64.zip
+  comment_fr:           |
+                        Nécessite ces fichiers de BIOS:
+                        bios/tvc22_sys.rom
+                        bios/tvc22_ext.rom
+  comment_br:           |
+                        Requer arquivo de BIOS:
+                        bios/tvc22_sys.rom
+                        bios/tvc22_ext.rom
 
 crvision:
   name:                 CreatiVision

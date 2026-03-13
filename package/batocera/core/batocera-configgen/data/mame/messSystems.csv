@@ -27,6 +27,7 @@ dice;;;
 digiblst;digiblst;cart;
 dragon32;dragon32;cass;'cloadm\n'
 electron;electron64;cass;'*T.\nCH.""\n'
+enterprise;ep128;flop;
 ep128;ep128;cart;
 exl100;exl100;cart;
 fm7;fm7;flop1;
@@ -87,6 +88,7 @@ sys80;sys80;cass;'cloadm\n'
 ti99;ti99_4a;cart;
 tiger;;;
 tutor;tutor;cart;
+tvc;tvc64p;cass;'LOAD\n'
 tvc64;tvc64;quik;
 tvgames;;;
 uzebox;uzebox;cart;

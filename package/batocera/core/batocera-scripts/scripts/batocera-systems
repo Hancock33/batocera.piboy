@@ -497,6 +497,9 @@ systems = {
                                                 { "md5": "", "file": "bios/adam_prn.zip" },
                                                 { "md5": "3cdf2fe48ac4224b56f26c03f6c68982", "zippedFile": "printer.u2", "file": "bios/adam_prn.zip"}, ] },
 
+    # ---------- ColecoVision ---------- #
+    "colecovision": { "name": "ColecoVision", "biosFiles": [ { "md5": "2c66f5911e5b42b8ebe113403548eee7", "file": "bios/colecovision.rom" } ] },
+
      # ---------- BBC Micro ---------- #
     "bbc":   { "name": "BBC Micro", "biosFiles":  [ { "md5": "", "file": "bios/bbcb.zip"  },
                                                 { "md5": "521a197d3623682825f1042c1350feb4", "zippedFile": "basic1.rom", "file": "bios/bbcb.zip"},
@@ -536,7 +539,10 @@ systems = {
                                                 { "md5": "c196c145b3de630f85f625ca762e5504", "zippedFile": "bitstik2.rom", "file": "bios/bbc_bitstik2.zip"},
                                                 { "md5": "", "file": "bios/mame/samples/bbc.zip"  },
                                                 { "md5": "", "zippedFile": "motoroff.wav", "file": "bios/mame/samples/bbc.zip"},
-                                                { "md5": "", "zippedFile": "motoron.wav", "file": "bios/mame/samples/bbc.zip"} ] },
+                                                { "md5": "", "zippedFile": "motoron.wav", "file": "bios/mame/samples/bbc.zip"},
+                                                { "md5": "2cc67be4624df4dc66617742571a8e3d", "file": "bios/Acorn/basic2.rom"},
+                                                { "md5": "0a59a5ba15fe8557b5f7fee32bbd393a", "file": "bios/BBCMicro/os12.rom"},
+                                                { "md5": "f083f49d6fe66344c650d7e74249cb96", "file": "bios/BBCMicro/dfs-2.26.rom"} ] },
 
     # ---------- APF M-1000 ---------- #
     "apfm1000":   { "name": "APF M-1000", "biosFiles":  [ { "md5": "", "file": "bios/apfm1000.zip"  },
@@ -864,20 +870,49 @@ systems = {
                                                        { "md5": "c888b36bf0fc222c3585c3fabe556d21", "file": "bios/Oric/colour.rom" }] },
     # ---------- Enterprise ---------- #
     "enterprise": { "name": "Enterprise", "biosFiles": [{ "md5": "e972fe42b398c9ff1d93ff014786aec6", "file": "bios/Enterprise/basic21.bin" },
-                                                        { "md5": "f36f24cbb87745fbd2714e4df881db09", "file": "bios/Enterprise/exos21.bin" }] },
+                                                        { "md5": "f36f24cbb87745fbd2714e4df881db09", "file": "bios/Enterprise/exos21.bin" },
+                                                        { "md5": "f36f24cbb87745fbd2714e4df881db09", "file": "bios/exos21.rom" },
+                                                        { "md5": "e972fe42b398c9ff1d93ff014786aec6", "file": "bios/basic21.rom" },
+                                                        { "md5": "ddff70c014d1958dc75378b6c9aab6f8", "file": "bios/exdos13.rom" },
+                                                        { "md5": "5ad3baaad3b5156d6b60b34229a676fb", "file": "bios/exos20.rom" },
+                                                        { "md5": "8e18edce4a7acb2c33cc0ab18f988482", "file": "bios/basic20.rom" },
+                                                        { "md5": "a68ebcbc73a4d2178d755b7755bf18fe", "file": "bios/epfileio.rom" },
+                                                        { "md5": "55af78f877a21ca45eb2df68a74fcc60", "file": "bios/exos24uk.rom" },
+                                                        { "md5": "22167938f142c222f40992839aa21a06", "file": "bios/hun.rom" },
+                                                        { "md5": "6593dff00ab32a4b1fc084674ededf2b", "file": "bios/epdos16f.rom" },
+                                                        { "md5": "f91c4a507cc6895bdd9c43df4f021df3", "file": "bios/exdos14isdos10uk.rom" },
+                                                        { "md5": "6af0402906944fd134004b85097c8524", "file": "bios/brd.rom" },
+                                                        { "md5": "228540b6be83ae2acd7569c8ff0f91d0", "file": "bios/zt19uk.rom" },
+                                                        { "md5": "8c54285f541930cde766069942bad0f2", "file": "bios/tvc22_sys.rom" },
+                                                        { "md5": "5ce95a26ceed5bec73995d83568da9cf", "file": "bios/tvc22_ext.rom" },
+                                                        { "md5": "a2cf86ba8e7fc58b242137fe59036832", "file": "bios/tvcfileio.rom" },
+                                                        { "md5": "88dc7876d584f90e4106f91444ab23b7", "file": "bios/tvc_dos12d.rom" },
+                                                        { "md5": "a993f85b88ac4350cf4d41554e87fe4f", "file": "bios/cpc464.rom" },
+                                                        { "md5": "5a384a2310f472c7857888371c00ed66", "file": "bios/cpc664.rom" },
+                                                        { "md5": "b96280dc6c95a48857b4b8eb931533ae", "file": "bios/cpc6128.rom" },
+                                                        { "md5": "25629dfe870d097469c217b95fdc1c95", "file": "bios/cpc_amsdos.rom" },
+                                                        { "md5": "85fede415f4294cc777517d7eada482e", "file": "bios/zx128.rom" },
+                                                        { "md5": "4c42a2f075212361c3117015b107f",    "file": "bios/zx48.rom" },
+                                                        { "md5": "5ad3baaad3b5156d6b60b34229a676fb", "zippedFile": "9256ds-0038_enter05-23-a.u2", "file": "bios/ep64.zip" },
+                                                        { "md5": "f36f24cbb87745fbd2714e4df881db09", "zippedFile": "9256ds-0019_enter08-45-a.u2", "file": "bios/ep128.zip" },
+                                                        { "md5": "47258d03aec37bc24df5dbc5d50fc9f8", "zippedFile": "exdos13.rom", "file": "bios/ep64_exdos.zip" } ] },
     # ---------- Elektronika BK ---------- #
     # https://docs.libretro.com/library/bk/
-    "bk": { "name": "Elektronika BK", "biosFiles": [
-                    # BK-0011M
-                    { "md5": "fe4627d1e3a1535874085050733263e7", "file": "bios/bk/B11M_BOS.ROM"  },
-                    { "md5": "dc52f365d56fa1951f5d35b1101b9e3f", "file": "bios/bk/B11M_EXT.ROM"  },
-                    { "md5": "946f6f23ded03c0e26187f0b3ca75993", "file": "bios/bk/BAS11M_0.ROM"  },
-                    { "md5": "1e6637f32aa7d1de03510030cac40bcf", "file": "bios/bk/BAS11M_1.ROM"  },
-                    { "md5": "5015228eeeb238e65da8edcd1b6dfac7", "file": "bios/bk/DISK_327.ROM"  },
-                    # BK-0010
-                    { "md5": "3fa774326d75410a065659aea80252f0", "file": "bios/bk/BASIC10.ROM"   },
-                    { "md5": "5737f972e8638831ab71e9139abae052", "file": "bios/bk/FOCAL10.ROM"   },
-                    { "md5": "95f8c41c6abf7640e35a6a03cecebd01", "file": "bios/bk/MONIT10.ROM"   }] },
+    "bk": { "name": "Elektronika BK", "biosFiles": [ # BK-0011M
+                                                     { "md5": "fe4627d1e3a1535874085050733263e7", "file": "bios/bk/B11M_BOS.ROM"  },
+                                                     { "md5": "dc52f365d56fa1951f5d35b1101b9e3f", "file": "bios/bk/B11M_EXT.ROM"  },
+                                                     { "md5": "946f6f23ded03c0e26187f0b3ca75993", "file": "bios/bk/BAS11M_0.ROM"  },
+                                                     { "md5": "1e6637f32aa7d1de03510030cac40bcf", "file": "bios/bk/BAS11M_1.ROM"  },
+                                                     { "md5": "5015228eeeb238e65da8edcd1b6dfac7", "file": "bios/bk/DISK_327.ROM"  },
+                                                     # BK-0010
+                                                     { "md5": "3fa774326d75410a065659aea80252f0", "file": "bios/bk/BASIC10.ROM"   },
+                                                     { "md5": "5737f972e8638831ab71e9139abae052", "file": "bios/bk/FOCAL10.ROM"   },
+                                                     { "md5": "95f8c41c6abf7640e35a6a03cecebd01", "file": "bios/bk/MONIT10.ROM"   }] },
+    # ---------- Videoton TVC ---------- #
+    "tvc": { "name": "Videoton TVC", "biosFiles": [{ "md5": "8c54285f541930cde766069942bad0f2", "file": "bios/tvc22_sys.rom" },
+                                                   { "md5": "5ce95a26ceed5bec73995d83568da9cf", "file": "bios/tvc22_ext.rom" },
+                                                   { "md5": "a2cf86ba8e7fc58b242137fe59036832", "file": "bios/tvcfileio.rom" },
+                                                   { "md5": "88dc7876d584f90e4106f91444ab23b7", "file": "bios/tvc_dos12d.rom" } ] },
     # ---------- Triforce ---------- #
     "triforce": { "name": "Triforce", "biosFiles":  [ { "md5": "2ef01c0e93f7ee3a0a4b139aa14728b9", "file": "saves/dolphin-emu/Triforce/segaboot.gcm" }] },
 }

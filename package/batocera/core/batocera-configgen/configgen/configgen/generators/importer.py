@@ -159,6 +159,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
     'ymir': ('ymir.ymirGenerator', 'YmirGenerator'),
     'yquake2': ('yquake2.yquake2Generator', 'YQuake2Generator'),
+    'tic80': ('tic80.tic80Generator', 'tic80Generator'),
 }
 
 def get_generator(emulator: str) -> Generator:

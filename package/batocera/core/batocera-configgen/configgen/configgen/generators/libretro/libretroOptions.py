@@ -2495,6 +2495,56 @@ def _bennugd_options(
     else:
         coreSettings.save('force_frame_limiter', '"false"')
 
+# ColecoVision (GearColeco)
+def _gearcoleco_options(
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
+) -> None:
+    # Refresh Rate (requires restart)
+    _set_from_system(coreSettings, 'gearcoleco_timing', system, default='Auto')
+
+    # Aspect Ratio
+    _set_from_system(coreSettings, 'gearcoleco_aspect_ratio', system, default='1:1 PAR')
+
+    # Overscan
+    _set_from_system(coreSettings, 'gearcoleco_overscan', system, default='Disabled')
+
+    # Allow Up+Down / Left+Right
+    _set_from_system(coreSettings, 'gearcoleco_up_down_allowed', system, default='Disabled')
+
+    # No Sprite Limit
+    _set_from_system(coreSettings, 'gearcoleco_no_sprite_limit', system, default='Disabled')
+
+    # Spinner support
+    _set_from_system(coreSettings, 'gearcoleco_spinners', system, default='Disabled')
+
+    # Spinner Sensitivity
+    _set_from_system(coreSettings, 'gearcoleco_spinner_sensitivity', system, default='1')
+
+# Enterprise 128 (EP128EMU)
+def _ep128emu_core_options(
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
+) -> None:
+    # Main thread wait (ms)
+    _set_from_system(coreSettings, 'ep128emu_wait', system, default='0')
+    # High sound quality
+    _set_from_system(coreSettings, 'ep128emu_sdhq', system, default='1')
+    # Use accelerated SW framebuffer
+    _set_from_system(coreSettings, 'ep128emu_swfb', system, default='0')
+    # Enable resolution changes (requires restart)
+    _set_from_system(coreSettings, 'ep128emu_useh', system, default='1')
+    # Border lines to keep when zooming in
+    _set_from_system(coreSettings, 'ep128emu_brds', system, default='0')
+    # System ROM version (EP only)
+    _set_from_system(coreSettings, 'ep128emu_romv', system, default='Original')
+    # User 1 Zoom button
+    _set_from_system(coreSettings, 'ep128emu_zoom', system, default='R3')
+    # User 1 Info button
+    _set_from_system(coreSettings, 'ep128emu_info', system, default='L3')
+    # User 1 Autofire for button
+    _set_from_system(coreSettings, 'ep128emu_afbt', system, default='None')
+    # User 1 Autofire repeat delay
+    _set_from_system(coreSettings, 'ep128emu_afsp', system, default='1')
+
 _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, DeviceInfoMapping], None]] = {
     '81': _81_options,
     'atari800': _atari800_options,
@@ -2508,11 +2558,13 @@ _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, Devic
     'dice': _dice_options,
     'dolphin': _dolphin_options,
     'dosbox_pure': _dosbox_pure_options,
+    'ep128emu-core': _ep128emu_core_options,
     'fbneo': _fbneo_options,
     'fceumm': _fceumm_options,
     'flycast': _flycast_options,
     'fuse': _fuse_options,
     'gambatte': _gambatte_options,
+    'gearcoleco': _gearcoleco_options,
     'genesisplusgx': _genesisplusgx_options,
     'genesisplusgx-expanded': _genesisplusgx_options,
     'handy': _handy_options,
