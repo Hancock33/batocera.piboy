@@ -79,7 +79,7 @@ electron:
   comment_br:           |
                         Requer os arquivos electron.zip, electron64.zip, electron_plus1.zip, electron_plus3.zip da BIOS do MAME
                         Recomenda-se o uso do modo de lista de software (cassete).
-                         As fitas devem ser carregadas automaticamente, use o menu MAME para parar/reproduzir/rebobinar, se necessário.
+                        As fitas devem ser carregadas automaticamente, use o menu MAME para parar/reproduzir/rebobinar, se necessário.
 
 flash:
   name:                 Flash Player
@@ -235,6 +235,26 @@ macintosh:
                         lr-minivmac requer MacII.ROM e MacIIx.ROM.
                         Se inicializar a partir de um disco rígido, os disquetes podem não carregar na inicialização. Para obter melhores resultados, faça uma cópia de uma das unidades de inicialização, carregue os discos manualmente através do menu MAME e copie ou instale-os na imagem do disco rígido.
                         As imagens de disco só serão carregadas no Mac IIx e não são inicializáveis.
+
+ios:
+  name:                 IOS
+  manufacturer:         Apple
+  release:              2008
+  hardware:             handheld
+  extensions:           [ipa, app]
+  platform:             ios
+  path:                 touchhle
+  emulators:
+    touchhle:
+      touchhle:         { requireAnyOf: [BR2_PACKAGE_TOUCHHLE] }
+  comment_en:           |
+                        Place decrypted .ipa files or .app bundles here.
+                        touchHLE will also create touchHLE_options.txt, touchHLE_apps,
+                        and touchHLE_sandbox in this same directory on first launch.
+  comment_br:           |
+                        Coloque aqui arquivos .ipa descriptografados ou diretórios .app.
+                        O touchHLE também criará touchHLE_options.txt, touchHLE_apps
+                        e touchHLE_sandbox neste mesmo diretório na primeira execução.
 
 ### Arcade Section
 acclaim:
@@ -6713,7 +6733,7 @@ ps3:
   manufacturer:         Sony
   release:              2006
   hardware:             console
-  extensions:           [ios, ps3, psn, squashfs]
+  extensions:           [iso, ps3, psn, squashfs]
   emulators:
     rpcs3:
       rpcs3:            { requireAnyOf: [BR2_PACKAGE_RPCS3] }

@@ -143,6 +143,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'themehospital': ('themehospital.themehospitalGenerator', 'ThemehospitalGenerator'),
     'thextech': ('thextech.thextechGenerator', 'TheXTechGenerator'),
     'tic80': ('tic80.tic80Generator', 'tic80Generator'),
+    'touchhle': ('touchhle.touchhleGenerator', 'TouchHLEGenerator'),
     'tr1x': ('tr1x.tr1xGenerator', 'TR1XGenerator'),
     'tr2x': ('tr2x.tr2xGenerator', 'TR2XGenerator'),
     'tsugaru': ('tsugaru.tsugaruGenerator', 'TsugaruGenerator'),

@@ -480,6 +480,9 @@ ionfury:
   core:     ionfury
   options:
     powersave: '1'
+ios:
+  emulator: touchhle
+  core:     touchhle
 irem:
   emulator: libretro
   core:     mame078plus
