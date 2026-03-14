@@ -24,7 +24,6 @@ endif
 
 # Build as release with proper target and paths
 CANNONBALL_CONF_OPTS += -DTARGET=$(CANNONBALL_TARGET)
-CANNONBALL_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON
 
 define CANNONBALL_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/cmake/buildroot-build/cannonball $(TARGET_DIR)/usr/bin/
