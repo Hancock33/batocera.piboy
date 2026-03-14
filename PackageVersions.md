@@ -73,7 +73,7 @@ Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/b
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|24be8599cc89fcafba5a3389d51abb24d03991f5|Mar 13, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|ded9a448725ded9108808bcaa42ca86fa1324fa6|Feb 22, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|ba6382b112bccc1e2f7a2ee6b6903645f6bc3101|Mar 13, 2026
-Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|e922bad65ebe83ed1a0bd678e89d740643a43624|Mar 14, 2026
+Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|68f2f72de43d1d1dbea3430467a4d5c47dd7469d|Mar 14, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|0e512c7e0dc2823488bbb4c6d285e2bed357350a|Mar 09, 2026
 Emulators|[ares](http://github.com/ares-emulator/ares)|v147|Dec 18, 2025
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|100b00b3b569a24e8a27ed692c39d6961a12ae8c|Mar 13, 2026
@@ -147,9 +147,9 @@ Emulators|[libretro-freeintv](http://github.com/libretro/freeintv)|0e0e585033863
 Emulators|[libretro-freej2me](http://github.com/TASEmulators/freej2me-plus)|09cb30145683cddd370e8b351c6100c1c5f0e744|Feb 25, 2026
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|cad85b7b1b864c65734f71aa4a510b6f6536881c|Nov 24, 2024
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|d3c39fa18476ddce05027db3d29abba813fa74e2|Mar 13, 2026
-Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|49b1c5b623deeacca54d28c445930cbd22f017a2|Mar 11, 2026
-Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|2920148bb5bfbe7916ac1febd759d5f7ff0979a2|Mar 11, 2026
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|6f6d904f53128a592f14bf99642fa09e361ca9d0|Mar 10, 2026
+Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|5454b5d0f30cc213bb3f767ab24e6205ae90da7d|Mar 14, 2026
+Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|8777de52d5c34746e93cf7ae4f5028dff97245ce|Mar 14, 2026
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|034bf8cab66a685b430a53d6e90524976b3bd447|Mar 14, 2026
 Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genesis-Plus-GX-Expanded-Rom-Size)|3894667cbb77b7fa869fa5fd973c8821354e96a9|Mar 09, 2026
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|b7d314220d755537aebb7bc1750ac21f764365c4|Oct 21, 2024
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|c3df2d2b439c84d4ab4d2c58fb65101853485305|Feb 26, 2026
@@ -195,7 +195,7 @@ Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|07f1bc19704ef190ad94
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|3365b1774bc8680be9899968fe45b224ad2f11c1|Dec 03, 2025
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|a0709ec7dcd6de2fbebb43106bd757b649e3b7cf|Oct 21, 2024
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|19095803f1434eb980db6e4004187a4b786e20b6|May 10, 2025
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|0031bbc590b5ce49e9c7bfe6556981c9499d25d0|Mar 13, 2026
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|8b3d26d7b9857efe5d70a2324914710da049a45c|Mar 14, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|93c8e7a2074e4fd8410398e3d571c6d9afec1d84|Dec 13, 2025
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|acae250da8d98b8b9707cd499e2a0bf6d8500652|Oct 21, 2024
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|2b19f7ff0d17efca7e9791ad2c3c33509e038e8b|Mar 08, 2026
@@ -254,7 +254,7 @@ Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-vid
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|b75d0139fbc9f71b32eef1a43fbf45f83cf71a6e|Mar 14, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.182|Mar 13, 2026
 Emulators|[play](https://github.com/jpd002/Play-.git)|560781c201f8877d39a084d7e6ab583ffa25aa09|Mar 12, 2026
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0031bbc590b5ce49e9c7bfe6556981c9499d25d0|Mar 13, 2026
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|8b3d26d7b9857efe5d70a2324914710da049a45c|Mar 14, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|a7b711dfd74871e9985ba3b2fe2c15048a928aaf|Dec 01, 2025
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b0624a720abee8b3336f100d66c7498348dff171|Mar 13, 2026
