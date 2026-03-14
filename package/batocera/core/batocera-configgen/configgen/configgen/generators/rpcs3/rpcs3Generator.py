@@ -287,7 +287,7 @@ class Rpcs3Generator(Generator):
         )
 
     def _generateGunConfig(self):
-        # D-Pad mapping is face buttons of the PS Move â–³ =up âœ• =down â–¡ =left â—‹ =right
+        # D-Pad mapping is face buttons of the PS Move â-³ =up âo. =down â-¡ =left â-< =right
         gunMapping = {
             "T": 1,
             "Move": 2,
