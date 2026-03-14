@@ -89,5 +89,5 @@ class DosBoxStagingGenerator(Generator):
             "keys": { "exit": ["KEY_LEFTCTRL", "KEY_F9"] }
         }
 
-    def writesToRom(self) -> bool:
-        return True
+    def writesToRom(self, config) -> bool:
+        return config.get_bool('dosbox_staging_writes_to_rom')
