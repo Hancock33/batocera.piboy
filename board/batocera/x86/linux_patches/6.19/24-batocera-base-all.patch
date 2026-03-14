@@ -311,7 +311,7 @@ index e08767323763..2f1439d6fe7e 100644
  M:	Felix Kuehling <Felix.Kuehling@amd.com>
  L:	amd-gfx@lists.freedesktop.org
 diff --git a/Makefile b/Makefile
-index eb431129c7ab..ea0dbe18f7cf 100644
+index 372d19dae59b..2d49e981970b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -888,11 +888,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
