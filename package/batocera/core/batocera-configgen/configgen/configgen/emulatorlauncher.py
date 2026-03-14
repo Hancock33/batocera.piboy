@@ -39,7 +39,6 @@ from .utils.hotkeygen import set_hotkeygen_context
 from .utils.logger import setup_logging
 from .utils.squashfs import mount_squashfs
 from .utils.overlayfs import mount_overlayfs
-from .utils.evmapy import evmapy
 
 if TYPE_CHECKING:
     from collections.abc import Iterable
@@ -64,13 +63,6 @@ def main(args: argparse.Namespace, maxnbplayers: int) -> int:
     # squashfs roms if squashed
     if original_rom.suffix == ".squashfs":
         with mount_squashfs(original_rom) as squash_rom:
-            # Do we need a writable overlay for the read-only squash?
-            system = Emulator(args, original_rom)
-            generator = get_generator(system.config.emulator)
-            if generator.writesToRom():
-                rom_saves_dir = SAVES / original_rom.parent.name / original_rom.stem
-                with mount_overlayfs(squash_rom, rom_saves_dir) as overlay_rom:
-                    return start_rom(args, maxnbplayers, overlay_rom, original_rom)
             return start_rom(args, maxnbplayers, squash_rom, original_rom)
     else:
         return start_rom(args, maxnbplayers, original_rom, original_rom)
