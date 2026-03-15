@@ -65,6 +65,7 @@ custom_features:
 systems:
   - wiiware
   - gamecube
+  - triforce
   - name: wii
     custom_features:
       wii_widescreen:
