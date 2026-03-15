@@ -32,6 +32,8 @@ class TouchHLEGenerator(Generator):
             "name": "touchhle",
             "keys": {"exit": ["KEY_LEFTALT", "KEY_F4"]},
         }
+    readme_path = Path("/usr/share/touchhle/touchHLE_apps/README.txt")
+    readme_path.touch() 
 
     def executionDirectory(self, config, rom: Path) -> Path | None:
         return rom.parent
