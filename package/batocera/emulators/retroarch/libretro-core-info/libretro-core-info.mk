@@ -11,6 +11,8 @@ LIBRETRO_CORE_INFO_LICENSE = MIT
 define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mv $(@D)/bsnes_hd_beta_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/bsnes_hd_libretro.info
+	cp $(@D)/ep128emu_core_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/ep128emu_core_libretro.info
+	mv $(@D)/ep128emu_core_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/ep128emu-core_libretro.info
 	cp $(@D)/genesis_plus_gx_libretro.info		$(TARGET_DIR)/usr/share/libretro/genesisplusgx-expanded_libretro.info
 	mv $(@D)/genesis_plus_gx_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/genesisplusgx_libretro.info
 	mv $(@D)/genesis_plus_gx_wide_libretro.info $(TARGET_DIR)/usr/share/libretro/info/genesisplusgx-wide_libretro.info

@@ -3,8 +3,8 @@
 # supertux2
 #
 ################################################################################
-# Version: Commits on Mar 07, 2026
-SUPERTUX2_VERSION = d479f683097014d869f280215f3a98fdb63ae779
+# Version: Commits on Mar 15, 2026
+SUPERTUX2_VERSION = 6970d03397801427ab7ebe4740a5cdfc5da8d804
 SUPERTUX2_SITE = https://github.com/SuperTux/supertux.git
 SUPERTUX2_SITE_METHOD=git
 SUPERTUX2_GIT_SUBMODULES=YES
@@ -19,6 +19,7 @@ SUPERTUX2_EMULATOR_INFO = supertux2.emulator.yml
 SUPERTUX2_DEPENDENCIES = boost freetype host-pkgconf libcurl libogg libpng libvorbis openal physfs sdl2 sdl2_image zlib
 
 SUPERTUX2_CONF_OPTS +=-DBUILD_DOCUMENTATION=OFF
+SUPERTUX2_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF
 SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_BIN="bin"
 SUPERTUX2_CONF_OPTS +=-DINSTALL_SUBDIR_SHARE="share/supertux2"
 SUPERTUX2_CONF_OPTS +=-DSUPERTUX_PACKAGE_VERSION="v0.6.3-dev"

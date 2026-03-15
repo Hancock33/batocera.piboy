@@ -72,16 +72,19 @@
 - Sega Hikaru support (currently x86 systems only)
 - Added support for GUO HUA PS3 GamePad in the Bluez package's Sixaxis plugin (models VOYEE - HY-2208 and MiniThink - CECHZC2U)
 - Experimental Sinden light gun borders for RPCS3 and Wine
+- Steering wheel support for Triforce system
 ### Fixed
 - Not being able to exit emulator on first controller disconnection. i.e. Bluetooth disconnects.
 - Odin 2 variants wifi not working in some regions
 - Wifi country not being applied at boot
-- Light gun accuracy in MAME
+- Light gun overall accuracy (with shaders, sliders, bezels) in MAME standalone
 - Crosshairs for light guns in PCSX2
 - Massive MAME log (switchres verbose disabled by default)
 - PCSX2 light gun mapping (START can now be pressed on the light gun instead of controller)
 - PS4 and PSVita games not appearing in the "last played" auto collection
 - Sinden light gun's camera freezing after exiting Wine
+- Supermodel: offscreen reload not working on The Lost World: Jurassic Park (lostwsga)
+- MAME: broken light gun input in Jurassic Park (jpark), Operation Wolf 3 (opwolf3) and Police Trainer (policetr)
 ### Changed / Improved
 - Wifi country can now be chosen under the Network Setting option.
   This improves Wifi connectivity by aligning your device with regional regulations as well as 6GHz band support.
@@ -90,6 +93,7 @@
 - You can now choose to create a Win32 WINE bottle only via the option to run 32-bit Windows games.
 - DOSBox Staging's working directory is now set to the games' folder, allowing for local and relative (img)mount and conf file references.
 - DOSBox Staging will fallback to a C:\> prompt inside the games' folder if its missing dosbox.cfg/.conf/.bat files.
+- DOSBox Staging now stores DOS filesystem changes in /userdata/saves/dos/<game> for squashfs ROMs.
 - Systems like WINE and DOSBOX can now be prepared from PCManFM context menu. Right click on file items inside supported ones.
   to presetup them. This is mostly thought for startup files like dosbox.bat and autorun.cmd and for handling squashed archive files.
 - RPCS3 PS Move (light gun) mapping simplified. D-pad buttons are now PS Move face buttons. Check wiki for more info.
@@ -153,7 +157,7 @@
 - Sonic CD to 1.3.3
 - Sonic Mania to v1.1.1
 - Supermodel to 13th of November 2025 build
-- Syncthing to 2.0.12
+- Syncthing to 2.0.15
 - Taradino to 20251222
 - TheXTech to v1.3.7.2-1
 - TheForceEngine to v1.22.420

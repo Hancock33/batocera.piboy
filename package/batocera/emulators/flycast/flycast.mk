@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Mar 06, 2026
-FLYCAST_VERSION = adabc694e7ca8776e7a6ae83bd26647320acda73
+# Version: Commits on Mar 13, 2026
+FLYCAST_VERSION = b71fb72f0ad5273d6337fef1527cf2f09e41e569
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -15,6 +15,7 @@ FLYCAST_EMULATOR_INFO = flycast.emulator.yml
 FLYCAST_SUPPORTS_IN_SOURCE_BUILD = NO
 
 FLYCAST_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+FLYCAST_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF
 FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
 FLYCAST_CONF_OPTS += -DUSE_BREAKPAD=OFF
 FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON

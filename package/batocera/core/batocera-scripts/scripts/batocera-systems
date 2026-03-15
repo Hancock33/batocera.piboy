@@ -432,6 +432,16 @@ systems = {
                                                   { "md5": "", "file": "bios/mac701.chd", "emulator": "libretro", "core": "mame" },
                                                   { "md5": "", "file": "bios/mac755.chd", "emulator": "libretro", "core": "mame" } ] },
 
+    # ---------- Sega SC-3000 ---------- #
+    "sc3000": { "name": "Sega SC-3000", "biosFiles":  [ { "md5": "", "file": "bios/sc3000.zip"  },
+                                                { "md5": "a6a47eae38600e41cc67e887e36e70b7", "zippedFile": "sc3000.rom", "file": "bios/sc3000.zip"} ] },
+
+    # ---------- Sega AI Computer ---------- #
+    "segaai": { "name": "Sega AI Computer", "biosFiles":  [ { "md5": "", "file": "bios/segaai.zip" } ] },
+
+    # ---------- Sega Advanced Pico Beena ---------- #
+    "beena": { "name": "Advanced Pico Beena", "biosFiles":  [ { "md5": "", "file": "bios/beena.zip" } ] },
+
     # ---------- Tandy Color Conputer ---------- #
     "coco":   { "name": "Tandy Color Computer", "biosFiles":  [ { "md5": "", "file": "bios/coco.zip"  },
                                                 { "md5": "a74f3d95b395dad7cdca19d560eeea74", "zippedFile": "bas10.rom", "file": "bios/coco.zip"},
@@ -447,6 +457,20 @@ systems = {
                                                 { "md5": "4ae57e5a8e7494e5485446fefedb580b", "zippedFile": "coco3p.rom", "file": "bios/coco3p.zip"},
                                                 { "md5": "", "file": "bios/coco_fdc_v11.zip"  },
                                                 { "md5": "8cab28f4b7311b8df63c07bb3b59bfd5", "zippedFile": "disk11.rom", "file": "bios/coco_fdc_v11.zip"} ] },
+
+    # ---------- Dragon 64 ---------- #
+    "dragon64":   { "name": "Dragon 64", "biosFiles":  [ { "md5": "", "file": "bios/dragon64.zip"  },
+                                                { "md5": "", "zippedFile": "d64_1.rom", "file": "bios/dragon64.zip"},
+                                                { "md5": "", "zippedFile": "d64_2.rom", "file": "bios/dragon64.zip"},
+                                                { "md5": "", "zippedFile": "d64bas.rom", "file": "bios/dragon64.zip"},
+                                                { "md5": "", "file": "bios/dragon32.zip"  },
+                                                { "md5": "", "zippedFile": "d32.rom", "file": "bios/dragon32.zip"} ] },
+
+    # ---------- Tandy MC-10 ---------- #
+    "mc10":   { "name": "Tandy MC-10", "biosFiles":  [ { "md5": "", "file": "bios/mc10.zip"  },
+                                                { "md5": "", "zippedFile": "mc10.rom", "file": "bios/mc10.zip"},
+                                                { "md5": "", "file": "bios/alice.zip"  },
+                                                { "md5": "", "zippedFile": "alice.rom", "file": "bios/alice.zip"} ] },
 
     # ---------- Tomy Tutor ---------- #
     "tutor":   { "name": "Tomy Tutor", "biosFiles":  [ { "md5": "", "file": "bios/tutor.zip"  },
@@ -497,6 +521,9 @@ systems = {
                                                 { "md5": "", "file": "bios/adam_prn.zip" },
                                                 { "md5": "3cdf2fe48ac4224b56f26c03f6c68982", "zippedFile": "printer.u2", "file": "bios/adam_prn.zip"}, ] },
 
+    # ---------- ColecoVision ---------- #
+    "colecovision": { "name": "ColecoVision", "biosFiles": [ { "md5": "2c66f5911e5b42b8ebe113403548eee7", "file": "bios/colecovision.rom" } ] },
+
      # ---------- BBC Micro ---------- #
     "bbc":   { "name": "BBC Micro", "biosFiles":  [ { "md5": "", "file": "bios/bbcb.zip"  },
                                                 { "md5": "521a197d3623682825f1042c1350feb4", "zippedFile": "basic1.rom", "file": "bios/bbcb.zip"},
@@ -536,7 +563,17 @@ systems = {
                                                 { "md5": "c196c145b3de630f85f625ca762e5504", "zippedFile": "bitstik2.rom", "file": "bios/bbc_bitstik2.zip"},
                                                 { "md5": "", "file": "bios/mame/samples/bbc.zip"  },
                                                 { "md5": "", "zippedFile": "motoroff.wav", "file": "bios/mame/samples/bbc.zip"},
-                                                { "md5": "", "zippedFile": "motoron.wav", "file": "bios/mame/samples/bbc.zip"} ] },
+                                                { "md5": "", "zippedFile": "motoron.wav", "file": "bios/mame/samples/bbc.zip"},
+                                                { "md5": "2cc67be4624df4dc66617742571a8e3d", "file": "bios/Acorn/basic2.rom"},
+                                                { "md5": "0a59a5ba15fe8557b5f7fee32bbd393a", "file": "bios/BBCMicro/os12.rom"},
+                                                { "md5": "f083f49d6fe66344c650d7e74249cb96", "file": "bios/BBCMicro/dfs-2.26.rom"} ] },
+
+    # ---------- Amstrad PCW ---------- #
+    "pcw":   { "name": "Amstrad PCW", "biosFiles":  [ { "md5": "", "file": "bios/pcw8256.zip"  },
+                                                { "md5": "a846b928562ca8281bc279f41b475a06", "zippedFile": "40026.ic701", "file": "bios/pcw8256.zip"},
+                                                { "md5": "cefe4b0b7c701c1a80130e3390b007f5", "zippedFile": "40027.ic801", "file": "bios/pcw8256.zip"},
+                                                { "md5": "", "file": "bios/pcw9512.zip"  },
+                                                { "md5": "b664af93987d575b0248832832c61505", "zippedFile": "40103.ic109", "file": "bios/pcw9512.zip"} ] },
 
     # ---------- APF M-1000 ---------- #
     "apfm1000":   { "name": "APF M-1000", "biosFiles":  [ { "md5": "", "file": "bios/apfm1000.zip"  },
@@ -680,6 +717,37 @@ systems = {
                                                 { "md5": "bf69d9538192f65571dbed43dc4a99bb", "zippedFile": "lynx128-2.ic2", "file": "bios/lynx128k.zip"},
                                                 { "md5": "f9f54913cdedb22bb8f0c549ad121379", "zippedFile": "lynx128-3.ic3", "file": "bios/lynx128k.zip"} ] },
 
+    # ---------- Sharp MZ-80K ---------- #
+    "mz80k":   { "name": "Sharp MZ-80K", "biosFiles":  [ { "md5": "", "file": "bios/mz80k.zip"  },
+                                                { "md5": "", "zippedFile": "80kcg.rom", "file": "bios/mz80k.zip"},
+                                                { "md5": "", "zippedFile": "80kcgf.rom", "file": "bios/mz80k.zip"},
+                                                { "md5": "", "file": "bios/mz80kj.zip"  },
+                                                { "md5": "", "zippedFile": "sp1002.rom", "file": "bios/mz80kj.zip"},
+                                                { "md5": "", "zippedFile": "mz80kfdif.rom", "file": "bios/mz80kj.zip"} ] },
+
+    # ---------- Sharp MZ-700 ---------- #
+    "mz700":   { "name": "Sharp MZ-700", "biosFiles":  [ { "md5": "", "file": "bios/mz700.zip"  },
+                                                { "md5": "", "zippedFile": "1z-013a.rom", "file": "bios/mz700.zip"},
+                                                { "md5": "", "zippedFile": "mz700fon.int", "file": "bios/mz700.zip"} ] },
+
+    # ---------- Sharp MZ-800 ---------- #
+    "mz800":   { "name": "Sharp MZ-800", "biosFiles":  [ { "md5": "", "file": "bios/mz800.zip"  },
+                                                { "md5": "", "zippedFile": "mz800.rom", "file": "bios/mz800.zip"} ] },
+
+    # ---------- Sharp MZ-2000 ---------- #
+    "mz2000":   { "name": "Sharp MZ-2000", "biosFiles":  [ { "md5": "", "file": "bios/mz2000.zip"  },
+                                                { "md5": "", "zippedFile": "mz20ipl.bin", "file": "bios/mz2000.zip"},
+                                                { "md5": "", "zippedFile": "font.bin", "file": "bios/mz2000.zip"} ] },
+
+    # ---------- Sharp MZ-2500 ---------- #
+    "mz2500":   { "name": "Sharp MZ-2500", "biosFiles":  [ { "md5": "", "file": "bios/mz2500.zip"  },
+                                                { "md5": "", "zippedFile": "ipl.rom", "file": "bios/mz2500.zip"},
+                                                { "md5": "", "zippedFile": "cg.rom", "file": "bios/mz2500.zip"},
+                                                { "md5": "", "zippedFile": "kanji.rom", "file": "bios/mz2500.zip"},
+                                                { "md5": "", "zippedFile": "kanji2.rom", "file": "bios/mz2500.zip"},
+                                                { "md5": "", "zippedFile": "dict.rom", "file": "bios/mz2500.zip"},
+                                                { "md5": "", "zippedFile": "phone.rom", "file": "bios/mz2500.zip"} ] },
+
     # ---------- Video Game Music Player ---------- #
     "vgmplay":   { "name": "Video Game Music Player", "biosFiles":  [ { "md5": "", "file": "bios/qsound.zip"  },
                                                 { "md5": "108b113a596e800a02fece73f784eeb0", "zippedFile": "dl-1425.bin", "file": "bios/qsound.zip"},
@@ -719,6 +787,10 @@ systems = {
                                                 { "md5": "6878302c362321eeee7e40d285cf7d30", "zippedFile": "speech_eng_vsm2.bin", "file": "bios/socrates.zip"},
                                                 { "md5": "31c29c57e3d3e6788ba5817eaaa8b17a", "zippedFile": "speech_eng_vsm3.bin", "file": "bios/socrates.zip"} ] },
 
+    # ---------- Bandai RX-78 ---------- #
+    "rx78":   { "name": "Bandai RX-78", "biosFiles":  [ { "md5": "", "file": "bios/rx78.zip"  },
+                                                { "md5": "", "zippedFile": "ipl.rom", "file": "bios/rx78.zip"} ] },
+
     # ---------- Entex Aventure Vision ---------- #
     "advision":   { "name": "Entex Adventure Vision", "biosFiles":  [ { "md5": "", "file": "bios/advision.zip"  },
                                                 { "md5": "5729638bd856c475678467a353bd921c", "zippedFile": "b225__ins8048-11kdp_n.u5", "file": "bios/advision.zip"},
@@ -728,6 +800,12 @@ systems = {
     "gamate":   { "name": "Bitcorp Gamate", "biosFiles":  [ { "md5": "", "file": "bios/gamate.zip"  },
                                                 { "md5": "b411167df6dd563111729296f4c547f6", "zippedFile": "gamate_bios_bit.bin", "file": "bios/gamate.zip"},
                                                 { "md5": "ef67993a94503c4b7798b5901c7dda52", "zippedFile": "gamate_bios_umc.bin", "file": "bios/gamate.zip"} ] },
+
+    # ---------- Casio PV-2000 ---------- #
+    "pv2000":   { "name": "Casio PV-2000", "biosFiles":  [ { "md5": "", "file": "bios/pv2000.zip"  } ] },
+
+    # ---------- NEC PC-8001 ---------- #
+    "pc80":   { "name": "NEC PC-8001", "biosFiles":  [ { "md5": "", "file": "bios/pc8001mk2sr.zip"  } ] },
 
     # ---------- Phillips CD-i ---------- #
     "cdi":   { "name": "Phillips CD-i", "biosFiles":  [ { "md5": "", "file": "bios/cdimono1.zip"  },
@@ -864,20 +942,49 @@ systems = {
                                                        { "md5": "c888b36bf0fc222c3585c3fabe556d21", "file": "bios/Oric/colour.rom" }] },
     # ---------- Enterprise ---------- #
     "enterprise": { "name": "Enterprise", "biosFiles": [{ "md5": "e972fe42b398c9ff1d93ff014786aec6", "file": "bios/Enterprise/basic21.bin" },
-                                                        { "md5": "f36f24cbb87745fbd2714e4df881db09", "file": "bios/Enterprise/exos21.bin" }] },
+                                                        { "md5": "f36f24cbb87745fbd2714e4df881db09", "file": "bios/Enterprise/exos21.bin" },
+                                                        { "md5": "f36f24cbb87745fbd2714e4df881db09", "file": "bios/exos21.rom" },
+                                                        { "md5": "e972fe42b398c9ff1d93ff014786aec6", "file": "bios/basic21.rom" },
+                                                        { "md5": "ddff70c014d1958dc75378b6c9aab6f8", "file": "bios/exdos13.rom" },
+                                                        { "md5": "5ad3baaad3b5156d6b60b34229a676fb", "file": "bios/exos20.rom" },
+                                                        { "md5": "8e18edce4a7acb2c33cc0ab18f988482", "file": "bios/basic20.rom" },
+                                                        { "md5": "a68ebcbc73a4d2178d755b7755bf18fe", "file": "bios/epfileio.rom" },
+                                                        { "md5": "55af78f877a21ca45eb2df68a74fcc60", "file": "bios/exos24uk.rom" },
+                                                        { "md5": "22167938f142c222f40992839aa21a06", "file": "bios/hun.rom" },
+                                                        { "md5": "6593dff00ab32a4b1fc084674ededf2b", "file": "bios/epdos16f.rom" },
+                                                        { "md5": "f91c4a507cc6895bdd9c43df4f021df3", "file": "bios/exdos14isdos10uk.rom" },
+                                                        { "md5": "6af0402906944fd134004b85097c8524", "file": "bios/brd.rom" },
+                                                        { "md5": "228540b6be83ae2acd7569c8ff0f91d0", "file": "bios/zt19uk.rom" },
+                                                        { "md5": "8c54285f541930cde766069942bad0f2", "file": "bios/tvc22_sys.rom" },
+                                                        { "md5": "5ce95a26ceed5bec73995d83568da9cf", "file": "bios/tvc22_ext.rom" },
+                                                        { "md5": "a2cf86ba8e7fc58b242137fe59036832", "file": "bios/tvcfileio.rom" },
+                                                        { "md5": "88dc7876d584f90e4106f91444ab23b7", "file": "bios/tvc_dos12d.rom" },
+                                                        { "md5": "a993f85b88ac4350cf4d41554e87fe4f", "file": "bios/cpc464.rom" },
+                                                        { "md5": "5a384a2310f472c7857888371c00ed66", "file": "bios/cpc664.rom" },
+                                                        { "md5": "b96280dc6c95a48857b4b8eb931533ae", "file": "bios/cpc6128.rom" },
+                                                        { "md5": "25629dfe870d097469c217b95fdc1c95", "file": "bios/cpc_amsdos.rom" },
+                                                        { "md5": "85fede415f4294cc777517d7eada482e", "file": "bios/zx128.rom" },
+                                                        { "md5": "4c42a2f075212361c3117015b107f",    "file": "bios/zx48.rom" },
+                                                        { "md5": "5ad3baaad3b5156d6b60b34229a676fb", "zippedFile": "9256ds-0038_enter05-23-a.u2", "file": "bios/ep64.zip" },
+                                                        { "md5": "f36f24cbb87745fbd2714e4df881db09", "zippedFile": "9256ds-0019_enter08-45-a.u2", "file": "bios/ep128.zip" },
+                                                        { "md5": "47258d03aec37bc24df5dbc5d50fc9f8", "zippedFile": "exdos13.rom", "file": "bios/ep64_exdos.zip" } ] },
     # ---------- Elektronika BK ---------- #
     # https://docs.libretro.com/library/bk/
-    "bk": { "name": "Elektronika BK", "biosFiles": [
-                    # BK-0011M
-                    { "md5": "fe4627d1e3a1535874085050733263e7", "file": "bios/bk/B11M_BOS.ROM"  },
-                    { "md5": "dc52f365d56fa1951f5d35b1101b9e3f", "file": "bios/bk/B11M_EXT.ROM"  },
-                    { "md5": "946f6f23ded03c0e26187f0b3ca75993", "file": "bios/bk/BAS11M_0.ROM"  },
-                    { "md5": "1e6637f32aa7d1de03510030cac40bcf", "file": "bios/bk/BAS11M_1.ROM"  },
-                    { "md5": "5015228eeeb238e65da8edcd1b6dfac7", "file": "bios/bk/DISK_327.ROM"  },
-                    # BK-0010
-                    { "md5": "3fa774326d75410a065659aea80252f0", "file": "bios/bk/BASIC10.ROM"   },
-                    { "md5": "5737f972e8638831ab71e9139abae052", "file": "bios/bk/FOCAL10.ROM"   },
-                    { "md5": "95f8c41c6abf7640e35a6a03cecebd01", "file": "bios/bk/MONIT10.ROM"   }] },
+    "bk": { "name": "Elektronika BK", "biosFiles": [ # BK-0011M
+                                                     { "md5": "fe4627d1e3a1535874085050733263e7", "file": "bios/bk/B11M_BOS.ROM"  },
+                                                     { "md5": "dc52f365d56fa1951f5d35b1101b9e3f", "file": "bios/bk/B11M_EXT.ROM"  },
+                                                     { "md5": "946f6f23ded03c0e26187f0b3ca75993", "file": "bios/bk/BAS11M_0.ROM"  },
+                                                     { "md5": "1e6637f32aa7d1de03510030cac40bcf", "file": "bios/bk/BAS11M_1.ROM"  },
+                                                     { "md5": "5015228eeeb238e65da8edcd1b6dfac7", "file": "bios/bk/DISK_327.ROM"  },
+                                                     # BK-0010
+                                                     { "md5": "3fa774326d75410a065659aea80252f0", "file": "bios/bk/BASIC10.ROM"   },
+                                                     { "md5": "5737f972e8638831ab71e9139abae052", "file": "bios/bk/FOCAL10.ROM"   },
+                                                     { "md5": "95f8c41c6abf7640e35a6a03cecebd01", "file": "bios/bk/MONIT10.ROM"   }] },
+    # ---------- Videoton TVC ---------- #
+    "tvc": { "name": "Videoton TVC", "biosFiles": [{ "md5": "8c54285f541930cde766069942bad0f2", "file": "bios/tvc22_sys.rom" },
+                                                   { "md5": "5ce95a26ceed5bec73995d83568da9cf", "file": "bios/tvc22_ext.rom" },
+                                                   { "md5": "a2cf86ba8e7fc58b242137fe59036832", "file": "bios/tvcfileio.rom" },
+                                                   { "md5": "88dc7876d584f90e4106f91444ab23b7", "file": "bios/tvc_dos12d.rom" } ] },
     # ---------- Triforce ---------- #
     "triforce": { "name": "Triforce", "biosFiles":  [ { "md5": "2ef01c0e93f7ee3a0a4b139aa14728b9", "file": "saves/dolphin-emu/Triforce/segaboot.gcm" }] },
 }

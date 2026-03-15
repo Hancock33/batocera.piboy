@@ -1,5 +1,5 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 0795d1417..96ab5fba8 100644
+index a36ad7559..af0d969a2 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
 @@ -5204,12 +5204,12 @@ void System::WarnAboutUnsafeSettings()
@@ -17,32 +17,23 @@ index 0795d1417..96ab5fba8 100644
  
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
-diff --git a/src/duckstation-mini/mini_host.cpp b/src/duckstation-mini/mini_host.cpp
-index 4e395519c..163ade2db 100644
---- a/src/duckstation-mini/mini_host.cpp
-+++ b/src/duckstation-mini/mini_host.cpp
-@@ -179,7 +179,7 @@ bool MiniHost::EarlyProcessStartup()
-   }
- #endif
- 
--#if !__has_include("scmversion/tag.h")
-+#if __has_include("scmversion/tag.h")
-   //
-   // To those distributing their own builds or packages of DuckStation, and seeing this message:
-   //
-@@ -965,7 +965,7 @@ void MiniHost::CoreThreadEntryPoint()
-   // start the fullscreen UI and get it going
-   if (VideoThread::StartFullscreenUI(s_state.start_fullscreen_ui_fullscreen, &error))
-   {
--    WarnAboutInterface();
-+    //WarnAboutInterface();
- 
-     // kick a game list refresh if we're not in batch mode
-     if (!s_state.batch_mode)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index 8d75a715e..1732b9870 100644
+index 39a398e38..68d237c98 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
+@@ -268,9 +268,9 @@ bool QtHost::EarlyProcessStartup()
+   Error error;
+   if (!System::ProcessStartup(&error)) [[unlikely]]
+   {
+-    QMessageBox::critical(nullptr, QStringLiteral("Process Startup Failed"),
+-                          QString::fromStdString(error.GetDescription()));
+-    return false;
++    //QMessageBox::critical(nullptr, QStringLiteral("Process Startup Failed"),
++    //                      QString::fromStdString(error.GetDescription()));
++    //return false;
+   }
+ 
+   // allow us to override standard qt icons as well
 @@ -3649,7 +3649,7 @@ int main(int argc, char* argv[])
    QtHost::UpdateApplicationTheme();
  

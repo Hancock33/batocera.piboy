@@ -3,36 +3,22 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Mar 08, 2026
-DUCKSTATION_VERSION = 607cc7ea67bb5042abbd0ffd1629e1d72ad5720a
+# Version: Commits on Mar 14, 2026
+DUCKSTATION_VERSION = 28c34feeb63e552f3fbe2db4710f1409d425ba3e
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
-DUCKSTATION_DEPENDENCIES = boost cpuinfo ecm ffmpeg fmt libbacktrace libcurl libdrm libevdev libsoundtouch
-DUCKSTATION_DEPENDENCIES += noto-cjk-fonts plutosvg plutovg sdl3 stenzek-shaderc webp zstd
-DUCKSTATION_DEPENDENCIES += host-clang host-spirv-cross spirv-cross
+DUCKSTATION_DEPENDENCIES += boost cpuinfo ecm ffmpeg fmt host-clang host-spirv-cross
+DUCKSTATION_DEPENDENCIES += libbacktrace libcurl libdrm libevdev libsoundtouch noto-cjk-fonts
+DUCKSTATION_DEPENDENCIES += plutosvg plutovg qt6base qt6svg qt6tools sdl3 spirv-cross
+DUCKSTATION_DEPENDENCIES += stenzek-shaderc webp zstd
 DUCKSTATION_DEPENDENCIES += duckstation-common
 DUCKSTATION_EMULATOR_INFO = duckstation.duckstation.core.yml
 
-DUCKSTATION_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -flto"
-DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -flto"
-DUCKSTATION_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -flto"
-
 DUCKSTATION_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 DUCKSTATION_CONF_OPTS += -DENABLE_DISCORD_PRESENCE=OFF
-DUCKSTATION_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
-DUCKSTATION_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
+DUCKSTATION_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON
 DUCKSTATION_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/stenzek-shaderc
-
-ifeq ($(BR2_PACKAGE_BATOCERA_QT6),y)
-    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=ON -DBUILD_MINI_FRONTEND=ON
-    DUCKSTATION_DEPENDENCIES += qt6base qt6tools qt6svg
-    ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
-        DUCKSTATION_DEPENDENCIES += qt6wayland
-    endif
-else
-    DUCKSTATION_CONF_OPTS += -DBUILD_QT_FRONTEND=OFF -DBUILD_MINI_FRONTEND=ON
-endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
     DUCKSTATION_CONF_OPTS += -DENABLE_WAYLAND=ON

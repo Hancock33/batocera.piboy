@@ -11322,7 +11322,7 @@ index 000000000000..1f63bd55e057
 +#endif /* _LINUX_NTFS_EA_H */
 diff --git a/fs/ntfs/file.c b/fs/ntfs/file.c
 new file mode 100644
-index 000000000000..273578015999
+index 000000000000..5be3bb6f36ad
 --- /dev/null
 +++ b/fs/ntfs/file.c
 @@ -0,0 +1,1161 @@

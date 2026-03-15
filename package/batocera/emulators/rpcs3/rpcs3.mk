@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Mar 08, 2026
-RPCS3_VERSION = 41db06b53f906fbe2941552008ea8b468fa38482
+# Version: Commits on Mar 15, 2026
+RPCS3_VERSION = 433816148a30ed79e395f10810d47dd681787e98
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -17,7 +17,6 @@ RPCS3_EMULATOR_INFO = rpcs3.emulator.yml
 
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON
-RPCS3_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -flto"
 RPCS3_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 RPCS3_CONF_OPTS += -DLLVM_DIR=$(STAGING_DIR)/usr/lib/cmake/llvm/
 RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF

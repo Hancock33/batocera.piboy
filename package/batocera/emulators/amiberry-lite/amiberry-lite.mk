@@ -3,8 +3,8 @@
 # amiberry-lite
 #
 ################################################################################
-# Version: Commits on Feb 24, 2026
-AMIBERRY_LITE_VERSION = 644d003cfdfe53af7ab6b7cf74bd861d9aa8091e
+# Version: Commits on Mar 13, 2026
+AMIBERRY_LITE_VERSION = ba6382b112bccc1e2f7a2ee6b6903645f6bc3101
 AMIBERRY_LITE_SITE = $(call github,BlitterStudio,amiberry-lite,$(AMIBERRY_LITE_VERSION))
 AMIBERRY_LITE_LICENSE = GPLv3
 AMIBERRY_LITE_SUPPORTS_IN_SOURCE_BUILD = NO

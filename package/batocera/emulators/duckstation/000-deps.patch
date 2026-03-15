@@ -1,8 +1,8 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 6c8781e2d..b5d2738a1 100644
+index 390de8217..a1e89867d 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
-@@ -1,41 +1,6 @@
+@@ -1,43 +1,6 @@
  # SPDX-FileCopyrightText: 2019-2026 Connor McLaughlin <stenzek@gmail.com>
  # SPDX-License-Identifier: CC-BY-NC-ND-4.0 + Packaging Restriction
  
@@ -30,6 +30,8 @@ index 6c8781e2d..b5d2738a1 100644
 -    set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/linux${DEPS_CROSS_PREFIX}-armhf")
 -  elseif(CPU_ARCH_ARM64)
 -    set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/linux${DEPS_CROSS_PREFIX}-arm64")
+-  elseif(CPU_ARCH_LOONGARCH64)
+-    set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/linux${DEPS_CROSS_PREFIX}-loongarch64")
 -  else()
 -    message(FATAL_ERROR "Unsupported architecture")
 -  endif()
@@ -44,7 +46,7 @@ index 6c8781e2d..b5d2738a1 100644
  # Enable threads everywhere.
  set(THREADS_PREFER_PTHREAD_FLAG ON)
  find_package(Threads REQUIRED)
-@@ -43,74 +8,79 @@ find_package(Threads REQUIRED)
+@@ -45,73 +8,78 @@ find_package(Threads REQUIRED)
  # pkg-config gets pulled transitively on some platforms.
  if(NOT WIN32 AND NOT APPLE)
    find_package(PkgConfig REQUIRED)
@@ -112,7 +114,7 @@ index 6c8781e2d..b5d2738a1 100644
 +if(NOT APPLE AND NOT CPU_ARCH_ARM32 AND NOT CPU_ARCH_ARM64)
 +  find_package(ZLIB 1.3.1 REQUIRED)
 +endif()
- 
++
 +# Bundled dependencies.
 +find_package(zstd 1.5.7 REQUIRED)
 +find_package(WebP REQUIRED) # v1.4.0, spews an error on Linux because no pkg-config.
@@ -147,34 +149,32 @@ index 6c8781e2d..b5d2738a1 100644
 +set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ${FIND_ROOT_PATH_MODE_PACKAGE_BACKUP})
 +set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM ${FIND_ROOT_PATH_MODE_PROGRAM_BACKUP})
 +set(CMAKE_FIND_ROOT_PATH ${FIND_ROOT_PATH_BACKUP})
-+
-+# Qt has transitive dependencies on system libs, so do it afterwards.
- if(BUILD_QT_FRONTEND)
-   # All our builds include Qt, so this is not a problem.
-   set(QT_NO_PRIVATE_MODULE_WARNING ON)
  
--  # Should be prebuilt.
-   if(LINUX)
--    find_package(Qt6 6.10.2 REQUIRED
--                 NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
--                 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus)
-+    find_package(Qt6 6.10.2 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
-   else()
--    find_package(Qt6 6.10.2 REQUIRED
--                 NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
--                 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools)
-+    find_package(Qt6 6.10.2 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
-   endif()
+ # All our builds include Qt, so this is not a problem.
+ set(QT_NO_PRIVATE_MODULE_WARNING ON)
  
-   # Have to verify it down here, don't want users using unpatched Qt.
--  if(NOT Qt6_DIR MATCHES "^${DEPS_PATH}")
--    message(FATAL_ERROR "Using incorrect Qt library. Check your dependencies.")
-+  if(NOT Qt6_DIR MATCHES "^${CMAKE_PREFIX_PATH}")
-+    #message(FATAL_ERROR "Using incorrect Qt library. Check your dependencies.")
-   endif()
+ # Should be prebuilt.
+ if(LINUX)
+-find_package(Qt6 6.10.2 REQUIRED
+-                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
+-                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus)
++  find_package(Qt6 6.10.2 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
+ else()
+-find_package(Qt6 6.10.2 REQUIRED
+-                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
+-                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools)
++  find_package(Qt6 6.10.2 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
  endif()
  
-@@ -140,9 +110,6 @@ endif()
+ # Have to verify it down here, don't want users using unpatched Qt.
+-if(NOT Qt6_DIR MATCHES "^${DEPS_PATH}")
+-message(FATAL_ERROR "Using incorrect Qt library. Check your dependencies.")
++if(NOT Qt6_DIR MATCHES "^${CMAKE_PREFIX_PATH}")
++   #message(FATAL_ERROR "Using incorrect Qt library. Check your dependencies.")
+ endif()
+ 
+ # Libraries that are pulled in from host.
+@@ -140,9 +108,6 @@ endif()
  if(NOT WIN32)
    find_package(FFMPEG 8.0.1 COMPONENTS avcodec avformat avutil swresample swscale)
    if(NOT FFMPEG_FOUND)
@@ -218,7 +218,7 @@ index a36ad7559..0795d1417 100644
  #define ENABLE_SOCKET_MULTIPLEXER 1
  #include "gdb_server.h"
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index 36832cc15..f7335481c 100644
+index 0eead48d9..1e1c44eea 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
 @@ -86,7 +86,7 @@ add_library(util
@@ -231,7 +231,7 @@ index 36832cc15..f7335481c 100644
  if(ENABLE_X11)
    target_sources(util PRIVATE
 diff --git a/src/util/gpu_device.cpp b/src/util/gpu_device.cpp
-index 2627b3ea9..2f7fa802b 100644
+index b74148823..b5903e8a7 100644
 --- a/src/util/gpu_device.cpp
 +++ b/src/util/gpu_device.cpp
 @@ -1368,6 +1368,13 @@ std::unique_ptr<GPUDevice> GPUDevice::CreateDeviceForAPI(RenderAPI api)

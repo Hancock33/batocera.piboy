@@ -38,8 +38,8 @@ class Generator(metaclass=ABCMeta):
     def executionDirectory(self, config: SystemConfig, rom: Path) -> Path | None:
         return None
 
-    # Some systems expect to write into the ROM area, for example: DOS and Amiga.
-    def writesToRom(self) -> bool:
+    # Some systems expect to write into the ROM area, for example: DOS, Amiga, and Wine
+    def writesToRom(self, config: SystemConfig) -> bool:
         return False
 
     # mame or libretro have internal bezels, don't display the one of mangohud

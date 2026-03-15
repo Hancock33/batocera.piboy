@@ -1496,6 +1496,9 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     #                                                           BR2_PACKAGE_BATOCERA_TARGET_RK3568      || BR2_PACKAGE_BATOCERA_TARGET_RK3588   || BR2_PACKAGE_BATOCERA_TARGET_H616  || \
     #                                                           BR2_PACKAGE_BATOCERA_TARGET_SM8250      || BR2_PACKAGE_BATOCERA_TARGET_T527
 
+    # Apple IOS
+    select BR2_PACKAGE_TOUCHHLE                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
     help
         Emulators under development (Experimental)
 
@@ -1697,7 +1700,7 @@ config BR2_PACKAGE_BATOCERA_QT6
     select BR2_PACKAGE_QT6BASE_OPENGL_ES2                   if  BR2_PACKAGE_HAS_LIBGLES
    #select BR2_PACKAGE_QT6BASE_EGLFS                        if  (BR2_PACKAGE_HAS_LIBEGL && !BR2_PACKAGE_BATOCERA_TARGET_X86_ANY)
     select BR2_PACKAGE_QT6BASE_XCB                          if  BR2_PACKAGE_XORG7
-    select BR2_PACKAGE_QT6DECLARATIVE                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_QT6DECLARATIVE
     select BR2_PACKAGE_QT6MULTIMEDIA                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_QT6SHADERTOOLS                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_QT6SVG

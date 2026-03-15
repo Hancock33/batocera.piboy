@@ -12,20 +12,6 @@ WINE_CUSTOM_SELINUX_MODULES = wine
 WINE_CUSTOM_DEPENDENCIES = host-bison host-flex host-wine-custom
 WINE_CUSTOM_EMULATOR_INFO = wine-custom.wine.core.yml wine-custom.mugen.core.yml
 HOST_WINE_CUSTOM_DEPENDENCIES = host-bison host-flex
-WINE_CUSTOM_STAGING_VERSION = v$(subst wine-,,$(WINE_CUSTOM_VERSION))
-#HOST_WINE_CUSTOM_EXTRA_DOWNLOADS = https://github.com/wine-staging/wine-staging/archive/refs/tags/$(WINE_CUSTOM_STAGING_VERSION).tar.gz
-
-ifeq ($(BR_CMAKE_USE_CLANG),y)
-    HOST_WINE_CUSTOM_DEPENDENCIES += host-clang host-lld
-endif
-
-define WINE_CUSTOM_STAGING
-	# Use Staging Patches
-	tar -xf $(WINE_CUSTOM_DL_DIR)/$(WINE_CUSTOM_STAGING_VERSION).tar.gz -C $(@D)
-	cd $(@D); ./wine-staging-$(subst v,,$(WINE_CUSTOM_STAGING_VERSION))/staging/patchinstall.py --all
-endef
-#WINE_CUSTOM_PRE_PATCH_HOOKS += WINE_CUSTOM_STAGING
-#HOST_WINE_CUSTOM_PRE_PATCH_HOOKS += WINE_CUSTOM_STAGING
 
 define WINE_CUSTOM_AUTOGEN
 	# Create folder for install

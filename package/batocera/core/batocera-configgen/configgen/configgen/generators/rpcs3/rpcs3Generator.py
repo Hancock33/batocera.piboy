@@ -258,6 +258,8 @@ class Rpcs3Generator(Generator):
 
             if romName is None:
                 raise BatoceraException(f'No game ID found in {rom}')
+        elif romExt == ".iso":
+            romName = rom
         elif configure_emulator(rom):
             romName: Path | None = None
         else:
@@ -284,7 +286,7 @@ class Rpcs3Generator(Generator):
         )
 
     def _generateGunConfig(self):
-        # D-Pad mapping is face buttons of the PS Move △ =up ✕ =down □ =left ○ =right
+        # D-Pad mapping is face buttons of the PS Move buttons
         gunMapping = {
             "T": 1,
             "Move": 2,

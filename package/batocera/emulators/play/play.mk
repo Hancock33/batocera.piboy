@@ -3,13 +3,13 @@
 # play
 #
 ################################################################################
-# Version: Commits on Mar 02, 2026
-PLAY_VERSION = 7586f3a064b20f0b23325e460ab2122fb56aac80
+# Version: Commits on Mar 12, 2026
+PLAY_VERSION = 560781c201f8877d39a084d7e6ab583ffa25aa09
 PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES
 PLAY_LICENSE = BSD
-PLAY_DEPENDENCIES = ecm libevdev openal qt6base sqlite
+PLAY_DEPENDENCIES = ecm eudev libevdev openal qt6base sqlite
 PLAY_EMULATOR_INFO = play.emulator.yml
 
 PLAY_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF

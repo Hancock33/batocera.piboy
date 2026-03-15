@@ -3,10 +3,10 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Mar 05, 2026
-DOLPHIN_EMU_VERSION = 49d5299f1e41930d31cc83dc28c4c583589ff674
-DOLPHIN_EMU_VERSION_MAJOR = 2512
-DOLPHIN_EMU_VERSION_MINOR = 464
+# Version: Commits on Mar 15, 2026
+DOLPHIN_EMU_VERSION = 66db206e34fc55f55e3bb035751953dfd3976ca9
+DOLPHIN_EMU_VERSION_MAJOR = 2603
+DOLPHIN_EMU_VERSION_MINOR = 57
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
@@ -61,8 +61,8 @@ endef
 
 define DOLPHIN_EMU_INI
 	mkdir -p $(TARGET_DIR)/usr/share/dolphin-emu/sys/GameSettings
-	# copy extra triforce ini files
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/sys/GameSettings
+	# copy extra triforce ini files - force overwrite
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/sys/GameSettings
 	cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-emu dolphin-emu.desktopconfig
 endef
 

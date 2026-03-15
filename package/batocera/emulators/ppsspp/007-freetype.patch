@@ -1,5 +1,5 @@
 diff --git a/ext/CMakeLists.txt b/ext/CMakeLists.txt
-index 32e5c4ce92..27f77cd490 100644
+index 38017bf82f..2adb823923 100644
 --- a/ext/CMakeLists.txt
 +++ b/ext/CMakeLists.txt
 @@ -42,7 +42,7 @@ set(FT_REQUIRE_BZIP2 OFF CACHE BOOL "" FORCE)
@@ -8,6 +8,6 @@ index 32e5c4ce92..27f77cd490 100644
  set(FT_REQUIRE_BROTLI OFF CACHE BOOL "" FORCE)
 -if(NOT LIBRETRO)
 +if(ATLAS_TOOL)
-     add_subdirectory(freetype)
+     add_subdirectory(freetype freetype-build)
  endif()
  

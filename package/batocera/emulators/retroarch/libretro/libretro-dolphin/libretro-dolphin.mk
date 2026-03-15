@@ -3,8 +3,8 @@
 # libretro-dolphin
 #
 ################################################################################
-# Version: Commits on Feb 23, 2026
-LIBRETRO_DOLPHIN_VERSION = 1802842b4a6b2dfeef497e3346b3d536f1d9a152
+# Version: Commits on Mar 14, 2026
+LIBRETRO_DOLPHIN_VERSION = ab0db892052b0f11b741b177d712ce3b01ff5079
 LIBRETRO_DOLPHIN_SITE = https://github.com/libretro/dolphin.git
 LIBRETRO_DOLPHIN_SITE_METHOD = git
 LIBRETRO_DOLPHIN_GIT_SUBMODULES = YES
@@ -37,8 +37,9 @@ define LIBRETRO_DOLPHIN_INSTALL_TARGET_CMDS
 endef
 
 define LIBRETRO_DOLPHIN_SYS_FOLDER
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys/GameSettings
 	cp -r $(@D)/Data/Sys/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings
 endef
 
 LIBRETRO_DOLPHIN_POST_INSTALL_TARGET_HOOKS += LIBRETRO_DOLPHIN_SYS_FOLDER

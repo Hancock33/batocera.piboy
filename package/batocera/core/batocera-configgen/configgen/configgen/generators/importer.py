@@ -8,6 +8,14 @@ from ..exceptions import BatoceraException
 if TYPE_CHECKING:
     from .Generator import Generator
 
+_LEGACY_GENERATOR_MAP: Final[dict[str, dict[str, tuple[str, str]]]] = {
+    'duckstation': {
+        'duckstation-legacy': ('duckstation_legacy.duckstationLegacyGenerator', 'DuckstationLegacyGenerator'),
+    },
+    'supermodel': {
+        'supermodel-legacy': ('supermodel_legacy.supermodelLegacyGenerator', 'SupermodelLegacyGenerator'),
+    }
+}
 
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'abuse': ('abuse.abuseGenerator', 'AbuseGenerator'),
@@ -134,6 +142,8 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'theforceengine': ('theforceengine.theforceengineGenerator', 'TheForceEngineGenerator'),
     'themehospital': ('themehospital.themehospitalGenerator', 'ThemehospitalGenerator'),
     'thextech': ('thextech.thextechGenerator', 'TheXTechGenerator'),
+    'tic80': ('tic80.tic80Generator', 'tic80Generator'),
+    'touchhle': ('touchhle.touchhleGenerator', 'TouchHLEGenerator'),
     'tr1x': ('tr1x.tr1xGenerator', 'TR1XGenerator'),
     'tr2x': ('tr2x.tr2xGenerator', 'TR2XGenerator'),
     'tsugaru': ('tsugaru.tsugaruGenerator', 'TsugaruGenerator'),
@@ -161,8 +171,10 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'yquake2': ('yquake2.yquake2Generator', 'YQuake2Generator'),
 }
 
-def get_generator(emulator: str) -> Generator:
-    if emulator in _GENERATOR_MAP:
+def get_generator(emulator: str, core: str) -> Generator:
+    if (cores := _LEGACY_GENERATOR_MAP.get(emulator)) and core in cores:
+        module_path, cls_name = cores[core]
+    elif emulator in _GENERATOR_MAP:
         module_path, cls_name = _GENERATOR_MAP[emulator]
     else:
         module_path = f'{emulator}.{emulator}Generator'
