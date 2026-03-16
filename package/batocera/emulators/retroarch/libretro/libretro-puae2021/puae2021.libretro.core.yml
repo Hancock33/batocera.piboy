@@ -214,6 +214,61 @@ systems:
           Analog Joystick: 773
           Joystick: 261
           Keyboard: 259
+  - name: amigademo
+    custom_features:
+      puae_floppy_speed:
+        group: ADVANCED OPTIONS
+        prompt: FLOPPY TURBO SPEED
+        description: Removes loading but can add possible glitches/crashes.
+        choices:
+          'Off': 100
+          'On': 0
+      keyrah_mapping:
+        group: ADVANCED OPTIONS
+        prompt: 2P GAMEPAD MAPPING (KEYRAH)
+        description: Keypad to joyport mappings for 2 players.
+        choices:
+          'Off': disabled
+          'On': enabled
+      whdload:
+        group: ADVANCED OPTIONS
+        prompt: WHDLOAD LAUNCHER
+        description: Enable launching pre-installed WHDLoad installs.
+        choices:
+          'Off': disabled
+          'On': config
+      pad_options:
+        group: ADVANCED OPTIONS
+        prompt: JUMP ON B
+        description: Makes second fire button press up instead.
+        choices:
+          'Off': disabled
+          'On': jump
+      disable_joystick:
+        group: ADVANCED OPTIONS
+        prompt: DISABLE EMULATOR JOYSTICK
+        description: Passes all physical keyboard events for Pad2Key.
+        choices:
+          'Off': disabled
+          'On': enabled
+      controller1_puae:
+        prompt: CONTROLLER 1 TYPE
+        description: Select controller type for Amiga P1.
+        choices:
+          Retropad: 1
+          CD32 Pad: 517
+          Analog Joystick: 773
+          Joystick: 261
+          Keyboard: 259
+      controller2_puae:
+        prompt: CONTROLLER 2 TYPE
+        description: Select controller type for Amiga P2.
+        choices:
+          Retropad: 1
+          CD32 Pad: 517
+          Analog Joystick: 773
+          Joystick: 261
+          Keyboard: 259
   - name: amigacd32
     custom_features:
       puae_cd_startup_delayed_insert:
