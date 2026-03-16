@@ -1145,6 +1145,12 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     # Colour Computer (Tandy TRS-80)
     select BR2_PACKAGE_XROAR                                if  BR2_PACKAGE_HAS_LIBGL                      # Xroar requires OpenGL
 
+    # BK-0010/0011/Terak 8510a
+    select BR2_PACKAGE_LIBRETRO_BK_EMULATOR
+
+    # Enterprise 128
+    select BR2_PACKAGE_LIBRETRO_EP128EMU
+
     help
         Old computers
 
@@ -1410,10 +1416,8 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     #Extra libretro-cores
     select BR2_PACKAGE_LIBRETRO_2048
     select BR2_PACKAGE_LIBRETRO_BENNUGD                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Streets of Rage Remake
-    select BR2_PACKAGE_LIBRETRO_BK_EMULATOR
     select BR2_PACKAGE_LIBRETRO_BSNES_JG                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_CANNONBALL
-    select BR2_PACKAGE_LIBRETRO_EP128EMU                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_LIBRETRO_FREEJ2ME                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_OPENJDK                              if  BR2_PACKAGE_LIBRETRO_FREEJ2ME
     select BR2_PACKAGE_OPENJDK_X11                          if  BR2_PACKAGE_LIBRETRO_FREEJ2ME

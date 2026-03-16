@@ -12,14 +12,14 @@ astrocade;astrocde;cart;
 atom;atom;flop1;'\n*DOS\n*DIR\n*CAT\n*RUN"'
 bbcmicro;bbcb;flop1;
 beena;beena;cart;
-bk;bk001001;cass;
+bk;bk001001;cass;'LOAD\n'
 bml3;bml3;cass;
 camplynx;lynx128k;cass;'mload""'
 camplynx;lynx48k;cass;'mload""'
 cave;;;
 cave3rd;;;
 cdi;cdimono1;cdrm;
-cgenie;cgenie;cass;
+cgenie;cgenie;cass;'\n\nCLOAD\n'
 coco;coco3;cart;
 cpc464p;amstrad;flop1;
 crvision;crvision;cart;
@@ -99,6 +99,7 @@ svmu;svmu;quik;
 sys80;sys80;cass;'cloadm\n'
 ti99;ti99_4a;cart;
 tiger;;;
+trs80;trs80m3;quik;
 tutor;tutor;cart;
 tvc;tvc64p;cass;'LOAD\n'
 tvc64;tvc64;quik;
