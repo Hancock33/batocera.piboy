@@ -1,0 +1,13 @@
+diff --git a/meson.build b/meson.build
+index 5c3adc361..9529b8a85 100644
+--- a/meson.build
++++ b/meson.build
+@@ -567,7 +567,7 @@ if get_option('tests').allowed()
+   cdata.set('HAVE_GSTACK', gstack.found())
+ endif
+ 
+-subdir('po')
++#subdir('po')
+ subdir('spa')
+ subdir('src')
+ 
