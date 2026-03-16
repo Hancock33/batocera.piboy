@@ -126,6 +126,7 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.3|Mar 01, 2026
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|ecb8db1a5e71047dcebb7b8d15838d7a00ab0768|Mar 01, 2026
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|0860e0c9b1e74a77db92ef3e2a8c1393fbbd648c|Mar 01, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|f2d8d96382755e79b172bb3ba49e3aa926fdce0f|Mar 01, 2026
+Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|d2e7abb191bf41ffa1413100154590e0930aebfa|Feb 28, 2026
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|d6dec3dcf0922459801907950d966e5767c674de|Feb 28, 2026
 Emulators|[supermodel-es](http://github.com/DirtBagXon/model3emu-code-sinden)|155e4cbb944d3c04268fe5910bc836cfc249b6a6|Feb 28, 2026
 Emulators|[touchhle](https://github.com/touchHLE/touchHLE.git)|de5d312da3ddb718e43878f9476a22b2a250738e|Feb 28, 2026
@@ -492,7 +493,6 @@ Boot|[batocera-shim-signed-efi-helpers-ia32](https://ftp.debian.org/debian/pool/
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
 Audio|[wildmidi](http://github.com/Mindwerks/wildmidi)|wildmidi-0.4.6|Apr 11, 2024
 Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/8f/b4/8578b8e4c1e69faa8297cb1e1fd0c86de03bb7eeb3e7cb63157e1e72abfb)|0.55.4|Apr 10, 2024
-Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2ac9f4b2889ad1a|Mar 31, 2024
 Libraries|[python-lgpio](https://files.pythonhosted.org/packages/56/33/26ec2e8049eaa2f077bf23a12dc61ca559fbfa7bea0516bf263d657ae275)|0.2.2.0|Mar 29, 2024

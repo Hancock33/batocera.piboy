@@ -90,7 +90,7 @@ Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|28c34feeb63e552f3fbe2db4710f1409d425ba3e|Mar 14, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|f0a4ac7359b6de6d6f1926c795831de01d4119d5|Mar 15, 2026
-Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e67f84dc605ea30afc1ab6f4f43c0f855eec79a5|Apr 07, 2024
+Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|d2e7abb191bf41ffa1413100154590e0930aebfa|Feb 28, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|b71fb72f0ad5273d6337fef1527cf2f09e41e569|Mar 13, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v3.2.35|Sept 07, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|c1a40ae924d4356c19485ead4645becce7bac432|Mar 04, 2026
