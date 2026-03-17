@@ -1,8 +1,8 @@
 diff --git a/src/supertux/main.cpp b/src/supertux/main.cpp
-index a1ce2e2a2..47cf36a20 100644
+index e8200a1ee..1b00392df 100644
 --- a/src/supertux/main.cpp
 +++ b/src/supertux/main.cpp
-@@ -645,8 +645,8 @@ Main::launch_game(const CommandLineArguments& args)
+@@ -724,8 +724,8 @@ Main::launch_game(const CommandLineArguments& args)
      {
        m_screen_manager->push_screen(std::make_unique<TitleScreen>(*m_savegame, g_config->is_christmas()));
  
