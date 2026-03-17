@@ -39,7 +39,7 @@ endef
 define LIBRETRO_DOLPHIN_SYS_FOLDER
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys/GameSettings
 	cp -r $(@D)/Data/Sys/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini  $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys/GameSettings
 endef
 
 LIBRETRO_DOLPHIN_POST_INSTALL_TARGET_HOOKS += LIBRETRO_DOLPHIN_SYS_FOLDER
