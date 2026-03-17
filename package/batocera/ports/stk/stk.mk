@@ -3,9 +3,10 @@
 # stk
 #
 ################################################################################
-# Version: Commits on Mar 15, 2026
-STK_VERSION = 8067e13f5bd2d08ad9aadb506ae704df4698fb26
-STK_SITE = $(call github,supertuxkart,stk-code,$(STK_VERSION))
+# Version: Commits on Oct 20, 2025
+STK_VERSION = 1.5
+STK_SITE = https://github.com/supertuxkart/stk-code/releases/download/$(STK_VERSION)
+STK_SOURCE = SuperTuxKart-$(STK_VERSION)-src.tar.gz
 STK_EMULATOR_INFO = stk.emulator.yml
 STK_DEPENDENCIES = sdl2 sdl2_mixer shaderc
 STK_LICENSE = GPL-2.0
@@ -14,7 +15,6 @@ STK_SUPPORTS_IN_SOURCE_BUILD = NO
 STK_CONF_OPTS += -USE_GLES2=ON
 STK_CONF_OPTS += -DCHECK_ASSETS=OFF
 STK_CONF_OPTS += -DUSE_WIIUSE=OFF
-STK_CONF_OPTS += -DCMAKE_CXX_FLAGS="-DEGL_NO_X11"
 STK_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 STK_CONF_OPTS += -DBUILD_RECORDER=0
 
