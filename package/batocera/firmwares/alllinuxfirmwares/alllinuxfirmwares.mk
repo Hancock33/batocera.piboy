@@ -146,7 +146,6 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 		rm -f $(TARGET_DIR)/lib/firmware/a300_*.fw; \
 		rm -f $(TARGET_DIR)/lib/firmware/*.inp; \
 		rm -f $(TARGET_DIR)/lib/firmware/lt9611uxc_fw.bin; \
-		find $(TARGET_DIR)/lib/firmware/ti -maxdepth 1 -type f -delete; \
 	fi
 
 	# Logic for ARM SM8250: Prune other QCOM SoCs, keep only sm8250 folder
