@@ -3,8 +3,8 @@
 # cdoom
 #
 ################################################################################
-# Version: Commits on Jan 26, 2026
-CDOOM_VERSION = 270da42e013714aafb0cffbb10e6568a85c307a6
+# Version: Commits on Mar 16, 2026
+CDOOM_VERSION = 2f3ec9cb76354b438cd9ba77c9f27ded71010aba
 CDOOM_SITE = $(call github,dhewm,dhewm3-sdk,$(CDOOM_VERSION))
 CDOOM_BRANCH = cdoom
 CDOOM_LICENSE = GPLv3
