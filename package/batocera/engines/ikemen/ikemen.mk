@@ -3,8 +3,8 @@
 # ikemen
 #
 ################################################################################
-# Version: Commits on Mar 16, 2026
-IKEMEN_VERSION = 3a6286127d14167e14e14c4b1be9a50c13114b23
+# Version: Commits on Mar 17, 2026
+IKEMEN_VERSION = 22c724757a659c24277053ea22f89d05d6320de8
 IKEMEN_SITE = $(call github,ikemen-engine,Ikemen-GO,$(IKEMEN_VERSION))
 IKEMEN_LICENSE = MIT
 IKEMEN_DEPENDENCIES = libgtk3 mesa3d openal libglfw
@@ -19,7 +19,7 @@ HOST_GO_COMMON_ENV = GOFLAGS=-mod=mod \
 			 GOFLAGS="-modcacherw" \
 			 PATH=$(BR_PATH) \
 			 GOBIN= \
-			 CGO_ENABLED=$(HOST_GO_CGO_ENABLED) \
+			 CGO_ENABLED=0\
 			 GOEXPERIMENT=arenas
 
 define IKEMEN_BUILD_CMDS
