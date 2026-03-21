@@ -12,7 +12,7 @@ SHADPS4_EMULATOR_INFO = shadps4.emulator.yml
 
 SHADPS4_LICENSE = GPLv2
 SHADPS4_LICENSE_FILE = LICENSE
-SHADPS4_DEPENDENCIES += alsa-lib jack2 libedit libevdev openal openssl pulseaudio sdl3 udev
+SHADPS4_DEPENDENCIES += alsa-lib jack2 libedit libevdev openal openssl pulseaudio sdl3 sdl3_mixer udev
 SHADPS4_DEPENDENCIES += glslang vulkan-headers vulkan-loader vulkan-validationlayers
 
 SHADPS4_SUPPORTS_IN_SOURCE_BUILD = NO
