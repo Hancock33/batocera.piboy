@@ -1,5 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.05|Mar 21, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260321|Mar 21, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260321|Mar 21, 2026
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|09c3cbea05fbc3a70cdd39857b83bddd8948eabb|Mar 20, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|04a543290a9ef45dbbd7e3499939baebf35c760f|Mar 20, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|125c3ec70fd1b4fdcf61d52500e5afad72be17e5|Mar 20, 2026
@@ -10,8 +13,6 @@ Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-alpha4|Mar 20,
 Ports|[box64](http://github.com/ptitseb/box64)|e09ae017d4edc0800b6b3e824a711d0387e5ad47|Mar 20, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|75776e4b5bdd7ce159bfb8bdd92e38b82dc19558|Mar 20, 2026
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|2b4ea3c6c18caf60959efee1f2534c2122607716|Mar 20, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260320|Mar 20, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260320|Mar 20, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|bd8256473f1f67b297c703862a75b1fa8113f649|Mar 20, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|2310ad9bd98ca034ced4567fee31ca938fb3d697|Mar 20, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|8b5dea564b687dd07d91cea48615fab213d1e2c9|Mar 20, 2026
@@ -130,7 +131,6 @@ Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|8818c3a3914
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|6907cabccf9238e34c30cf57f6e6f20a58a817c8|Mar 08, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|36df8cd8b1397ec372d9a6f2f30d892b6f30e2b8|Mar 08, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|2b19f7ff0d17efca7e9791ad2c3c33509e038e8b|Mar 08, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.04|Mar 07, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.73.2|Mar 06, 2026
 Ports|[openlara](http://github.com/XProger/OpenLara)|a8c7d935254c272411f17a7a70ce4d50726b02af|Mar 06, 2026
 Emulators|[libretro-doublecherrygb](http://github.com/TimOelrichs/doublecherryGB-libretro)|2e7a8bd5442ad7b2cb98ea07dbb5000ac95193e9|Mar 06, 2026
