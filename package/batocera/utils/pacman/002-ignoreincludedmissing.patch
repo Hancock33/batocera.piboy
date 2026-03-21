@@ -1,8 +1,8 @@
 diff --git a/src/pacman/conf.c b/src/pacman/conf.c
-index 468a3e0..0b56895 100644
+index 56697cea..26074d22 100644
 --- a/src/pacman/conf.c
 +++ b/src/pacman/conf.c
-@@ -1004,12 +1004,15 @@ static int process_include(const char *value, void *data,
+@@ -1247,12 +1247,15 @@ static int process_include(const char *value, void *data,
  			break;
  		default:
  			for(gindex = 0; gindex < globbuf.gl_pathc; gindex++) {

@@ -1,8 +1,8 @@
 diff --git a/src/pacman/conf.c b/src/pacman/conf.c
-index 0b56895..4f60d4a 100644
+index 26074d22..11ebcf33 100644
 --- a/src/pacman/conf.c
 +++ b/src/pacman/conf.c
-@@ -754,6 +754,20 @@ static int register_repo(config_repo_t *repo)
+@@ -887,6 +887,20 @@ static int register_repo(config_repo_t *repo)
   * of our paths to live under the rootdir that was specified. Safe to call
   * multiple times (will only do anything the first time).
   */
@@ -23,7 +23,7 @@ index 0b56895..4f60d4a 100644
  static int setup_libalpm(void)
  {
  	int ret = 0;
-@@ -764,6 +778,8 @@ static int setup_libalpm(void)
+@@ -897,6 +911,8 @@ static int setup_libalpm(void)
  	pm_printf(ALPM_LOG_DEBUG, "setup_libalpm called\n");
  
  	/* initialize library */
@@ -31,4 +31,4 @@ index 0b56895..4f60d4a 100644
 +
  	handle = alpm_initialize(config->rootdir, config->dbpath, &err);
  	if(!handle) {
- 		pm_printf(ALPM_LOG_ERROR, _("failed to initialize alpm library\n(%s: %s)\n"),
+ 		pm_printf(ALPM_LOG_ERROR, _("failed to initialize alpm library:\n(root: %s, dbpath: %s)\n%s\n"),
