@@ -1,8 +1,8 @@
 diff --git a/src/input.c b/src/input.c
-index c791da6a..ff756a1d 100644
+index cd75450f..237c8940 100644
 --- a/src/input.c
 +++ b/src/input.c
-@@ -59,35 +59,19 @@ int input_state[INPUT_LAST];	// array of states (pressed/released) of all keys
+@@ -84,35 +84,19 @@ static int key_name_count = 0;
  
  int key_cmds[CMD_LAST][3] =  // array of mappings {key1,key2,key3 -> cmd}
    {
@@ -50,8 +50,8 @@ index c791da6a..ff756a1d 100644
 +    {SDLK_ESCAPE, SDLK_F15,  SDLK_F15 }  // CMD_BACK
    };
  
- const char *keystr[INPUT_LAST];
-@@ -315,35 +299,8 @@ int sgn (int x)
+ const char *cmd_strings[CMD_LAST] =
+@@ -277,35 +261,8 @@ int sgn (int x)
  
  void Init_Joy (void)
  {
