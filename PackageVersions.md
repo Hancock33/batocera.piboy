@@ -368,7 +368,6 @@ Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.1-Piers|Apr 1
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.1.2|Jan 28, 2026
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20260311|Mar 11, 2026
 Libraries|[cpp-ipc](http://github.com/mutouyun/cpp-ipc)|v1.4.1|Dec 12, 2025
-Libraries|[cxxopts](http://github.com/jarro2783/cxxopts)|v3.3.1|May 26, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.24.0|Feb 25, 2026
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|736578510a4a0e70ac2a57f2cbd1dacf0412c559|May 31, 2025
