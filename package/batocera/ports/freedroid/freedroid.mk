@@ -3,11 +3,11 @@
 # freedroid
 #
 ################################################################################
-# Version: Commits on Feb 21, 2026
-FREEDROID_VERSION = efd34bebb8024698742ab2685a8941e480c23ee0
+# Version: Commits on Mar 22, 2026
+FREEDROID_VERSION = 59f0aa53fc81ac320377d814d5d6f6f602065fb0
 FREEDROID_SITE = $(call github,ReinhardPrix,FreedroidClassic,$(FREEDROID_VERSION))
 FREEDROID_EMULATOR_INFO = freedroid.emulator.yml
-FREEDROID_DEPENDENCIES = sdl12-compat sdl_mixer sdl_image sdl_gfx jpeg
+FREEDROID_DEPENDENCIES = sdl2 sdl2_image
 FREEDROID_LICENSE = GPL-2.0
 
 FREEDROID_SUPPORTS_IN_SOURCE_BUILD = NO
