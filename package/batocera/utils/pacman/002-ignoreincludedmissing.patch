@@ -1,5 +1,5 @@
 diff --git a/src/pacman/conf.c b/src/pacman/conf.c
-index 468a3e0..0b56895 100644
+index f964283d..e00c001f 100644
 --- a/src/pacman/conf.c
 +++ b/src/pacman/conf.c
 @@ -1004,12 +1004,15 @@ static int process_include(const char *value, void *data,

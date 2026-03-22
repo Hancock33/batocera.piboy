@@ -311,10 +311,10 @@ index e08767323763..2f1439d6fe7e 100644
  M:	Felix Kuehling <Felix.Kuehling@amd.com>
  L:	amd-gfx@lists.freedesktop.org
 diff --git a/Makefile b/Makefile
-index 372d19dae59b..2d49e981970b 100644
+index 96640a9632ef..cb5ce5c18f3f 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -888,11 +888,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
+@@ -889,11 +889,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
  ifdef CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE
  KBUILD_CFLAGS += -O2
  KBUILD_RUSTFLAGS += -Copt-level=2
@@ -334,7 +334,7 @@ index 372d19dae59b..2d49e981970b 100644
  # Always set `debug-assertions` and `overflow-checks` because their default
  # depends on `opt-level` and `debug-assertions`, respectively.
  KBUILD_RUSTFLAGS += -Cdebug-assertions=$(if $(CONFIG_RUST_DEBUG_ASSERTIONS),y,n)
-@@ -1022,10 +1030,10 @@ export CC_FLAGS_SCS
+@@ -1023,10 +1031,10 @@ export CC_FLAGS_SCS
  endif
  
  ifdef CONFIG_LTO_CLANG
@@ -348,7 +348,7 @@ index 372d19dae59b..2d49e981970b 100644
  endif
  CC_FLAGS_LTO	+= -fvisibility=hidden
  
-@@ -1232,7 +1240,7 @@ export ARCH_DRIVERS	:= $(drivers-y) $(drivers-m)
+@@ -1233,7 +1241,7 @@ export ARCH_DRIVERS	:= $(drivers-y) $(drivers-m)
  KBUILD_VMLINUX_OBJS := built-in.a $(patsubst %/, %/lib.a, $(filter %/, $(libs-y)))
  KBUILD_VMLINUX_LIBS := $(filter-out %/, $(libs-y))
  
@@ -357,7 +357,7 @@ index 372d19dae59b..2d49e981970b 100644
  export KBUILD_LDS          := arch/$(SRCARCH)/kernel/vmlinux.lds
  
  ifdef CONFIG_TRIM_UNUSED_KSYMS
-@@ -1241,16 +1249,12 @@ ifdef CONFIG_TRIM_UNUSED_KSYMS
+@@ -1242,16 +1250,12 @@ ifdef CONFIG_TRIM_UNUSED_KSYMS
  KBUILD_MODULES := y
  endif
  
@@ -379,7 +379,7 @@ index 372d19dae59b..2d49e981970b 100644
  
  PHONY += vmlinux_o
  vmlinux_o: vmlinux.a $(KBUILD_VMLINUX_LIBS)
-@@ -1619,6 +1623,7 @@ endif # CONFIG_MODULES
+@@ -1620,6 +1624,7 @@ endif # CONFIG_MODULES
  CLEAN_FILES += vmlinux.symvers modules-only.symvers \
  	       modules.builtin modules.builtin.modinfo modules.nsdeps \
  	       modules.builtin.ranges vmlinux.o.map vmlinux.unstripped \
@@ -387,7 +387,7 @@ index 372d19dae59b..2d49e981970b 100644
  	       compile_commands.json rust/test \
  	       rust-project.json .vmlinux.objs .vmlinux.export.c \
                 .builtin-dtbs-list .builtin-dtb.S
-@@ -2072,7 +2077,7 @@ clean: $(clean-dirs)
+@@ -2073,7 +2078,7 @@ clean: $(clean-dirs)
  	$(call cmd,rmfiles)
  	@find . $(RCS_FIND_IGNORE) \
  		\( -name '*.[aios]' -o -name '*.rsi' -o -name '*.ko' -o -name '.*.cmd' \
@@ -3274,10 +3274,10 @@ index 2c5c228408bf..918e2bebfe78 100644
  	  This driver adds a CPUFreq driver which utilizes a fine grain
  	  processor performance frequency control range instead of legacy
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index ec8308629432..177b8cbd46c9 100644
+index 31df8d85816a..ef47342248ef 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -3914,6 +3914,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3916,6 +3916,8 @@ static int __init intel_pstate_setup(char *str)
  
  	if (!strcmp(str, "disable"))
  		no_load = 1;
@@ -3299,10 +3299,10 @@ index b20a06abb65d..4dd9214873c1 100644
  extern int amdgpu_gart_size;
  extern int amdgpu_gtt_size;
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index ad5a3235a75f..bd4fe7e790ce 100644
+index 051c12ab5968..1726f6262f33 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-@@ -5069,7 +5069,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
+@@ -5081,7 +5081,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
  	 * before ip_fini_early to prevent kfd locking refcount issues by calling
  	 * amdgpu_amdkfd_suspend()
  	 */
@@ -3311,7 +3311,7 @@ index ad5a3235a75f..bd4fe7e790ce 100644
  		amdgpu_amdkfd_device_fini_sw(adev);
  
  	amdgpu_device_ip_fini_early(adev);
-@@ -5081,7 +5081,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
+@@ -5093,7 +5093,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
  
  	amdgpu_gart_dummy_page_fini(adev);
  
@@ -27860,40 +27860,6 @@ index 000000000000..d1e80d8e8c2d
 +struct bce_vhci *bce_vhci_from_hcd(struct usb_hcd *hcd);
 +
 +#endif //BCE_VHCI_H
-diff --git a/drivers/usb/core/quirks.c b/drivers/usb/core/quirks.c
-index c4d85089d19b..f4c80063864f 100644
---- a/drivers/usb/core/quirks.c
-+++ b/drivers/usb/core/quirks.c
-@@ -377,6 +377,9 @@ static const struct usb_device_id usb_quirk_list[] = {
- 	/* SanDisk Extreme 55AE */
- 	{ USB_DEVICE(0x0781, 0x55ae), .driver_info = USB_QUIRK_NO_LPM },
- 
-+	/* Avermedia Live Gamer Ultra 2.1 (GC553G2) - BOS descriptor fetch hangs at SuperSpeed Plus */
-+	{ USB_DEVICE(0x07ca, 0x2553), .driver_info = USB_QUIRK_NO_BOS },
-+
- 	/* Realforce 87U Keyboard */
- 	{ USB_DEVICE(0x0853, 0x011b), .driver_info = USB_QUIRK_NO_LPM },
- 
-@@ -437,6 +440,9 @@ static const struct usb_device_id usb_quirk_list[] = {
- 	{ USB_DEVICE(0x0b05, 0x17e0), .driver_info =
- 			USB_QUIRK_IGNORE_REMOTE_WAKEUP },
- 
-+	/* ASUS TUF 4K PRO - BOS descriptor fetch hangs at SuperSpeed Plus */
-+	{ USB_DEVICE(0x0b05, 0x1ab9), .driver_info = USB_QUIRK_NO_BOS },
-+
- 	/* Realtek Semiconductor Corp. Mass Storage Device (Multicard Reader)*/
- 	{ USB_DEVICE(0x0bda, 0x0151), .driver_info = USB_QUIRK_CONFIG_INTF_STRINGS },
- 
-@@ -565,6 +571,9 @@ static const struct usb_device_id usb_quirk_list[] = {
- 
- 	{ USB_DEVICE(0x2386, 0x350e), .driver_info = USB_QUIRK_NO_LPM },
- 
-+	/* UGREEN 35871 - BOS descriptor fetch hangs at SuperSpeed Plus */
-+	{ USB_DEVICE(0x2b89, 0x5871), .driver_info = USB_QUIRK_NO_BOS },
-+
- 	/* APTIV AUTOMOTIVE HUB */
- 	{ USB_DEVICE(0x2c48, 0x0132), .driver_info =
- 			USB_QUIRK_SHORT_SET_ADDRESS_REQ_TIMEOUT },
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
 index 84810bbc6ebb..bb0aae3208c3 100644
 --- a/include/drm/drm_connector.h
@@ -28142,7 +28108,7 @@ index dce862cafbbd..5952d95a53e8 100644
  #define HID_REPORT_ID(rep) \
  	.report_type = (rep)
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index f0d5be9dc736..f25889adfa43 100644
+index 05dbfdb6dd1e..585c9f690cb2 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
 @@ -207,6 +207,14 @@ static inline void __mm_zero_struct_page(struct page *page)
@@ -28746,7 +28712,7 @@ index da326800c1c9..cf5267cac7bb 100644
  	help
  	  This option turns the kernel into a real-time kernel by replacing
 diff --git a/kernel/fork.c b/kernel/fork.c
-index b1f3915d5f8e..f779ad112643 100644
+index 5b45887435dc..ecf33c82df7f 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -123,6 +123,16 @@
@@ -28778,7 +28744,7 @@ index b1f3915d5f8e..f779ad112643 100644
  	/*
  	 * Force any signals received before this point to be delivered
  	 * before the fork happens.  Collect up signals sent to multiple
-@@ -3067,6 +3082,10 @@ static int check_unshare_flags(unsigned long unshare_flags)
+@@ -3066,6 +3081,10 @@ static int check_unshare_flags(unsigned long unshare_flags)
  		if (!current_is_single_threaded())
  			return -EINVAL;
  	}
@@ -28789,7 +28755,7 @@ index b1f3915d5f8e..f779ad112643 100644
  
  	return 0;
  }
-@@ -3297,6 +3316,15 @@ static const struct ctl_table fork_sysctl_table[] = {
+@@ -3296,6 +3315,15 @@ static const struct ctl_table fork_sysctl_table[] = {
  		.mode		= 0644,
  		.proc_handler	= sysctl_max_threads,
  	},
@@ -28858,7 +28824,7 @@ index 293bbd9ac3f4..2c1c9759e278 100644
  }
  
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index dbf4e32a063f..1a6b1bfdb497 100644
+index 011fe1b2ae91..06c9929e9d83 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -124,7 +124,6 @@ EXPORT_TRACEPOINT_SYMBOL_GPL(sched_exit_tp);
@@ -28881,7 +28847,7 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  /*
   * double_rq_lock - safely lock two runqueues
   */
-@@ -4873,7 +4867,7 @@ static inline void prepare_task(struct task_struct *next)
+@@ -4876,7 +4870,7 @@ static inline void prepare_task(struct task_struct *next)
  	WRITE_ONCE(next->on_cpu, 1);
  }
  
@@ -28890,7 +28856,7 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  {
  	/*
  	 * This must be the very last reference to @prev from this CPU. After
-@@ -4889,7 +4883,7 @@ static inline void finish_task(struct task_struct *prev)
+@@ -4892,7 +4886,7 @@ static inline void finish_task(struct task_struct *prev)
  	smp_store_release(&prev->on_cpu, 0);
  }
  
@@ -28899,7 +28865,7 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  {
  	void (*func)(struct rq *rq);
  	struct balance_callback *next;
-@@ -4924,7 +4918,7 @@ struct balance_callback balance_push_callback = {
+@@ -4927,7 +4921,7 @@ struct balance_callback balance_push_callback = {
  	.func = balance_push,
  };
  
@@ -28908,7 +28874,7 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  __splice_balance_callbacks(struct rq *rq, bool split)
  {
  	struct balance_callback *head = rq->balance_callback;
-@@ -4954,7 +4948,7 @@ struct balance_callback *splice_balance_callbacks(struct rq *rq)
+@@ -4957,7 +4951,7 @@ struct balance_callback *splice_balance_callbacks(struct rq *rq)
  	return __splice_balance_callbacks(rq, true);
  }
  
@@ -28917,7 +28883,7 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  {
  	if (rf)
  		rq_unpin_lock(rq, rf);
-@@ -4991,7 +4985,7 @@ prepare_lock_switch(struct rq *rq, struct task_struct *next, struct rq_flags *rf
+@@ -4994,7 +4988,7 @@ prepare_lock_switch(struct rq *rq, struct task_struct *next, struct rq_flags *rf
  #endif
  }
  
@@ -28926,7 +28892,7 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  {
  	/*
  	 * If we are tracking spinlock dependencies then we have to
-@@ -5023,7 +5017,7 @@ static inline void kmap_local_sched_out(void)
+@@ -5026,7 +5020,7 @@ static inline void kmap_local_sched_out(void)
  #endif
  }
  
@@ -28935,7 +28901,7 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  {
  #ifdef CONFIG_KMAP_LOCAL
  	if (unlikely(current->kmap_ctrl.idx))
-@@ -5076,7 +5070,7 @@ prepare_task_switch(struct rq *rq, struct task_struct *prev,
+@@ -5079,7 +5073,7 @@ prepare_task_switch(struct rq *rq, struct task_struct *prev,
   * past. 'prev == current' is still correct but we need to recalculate this_rq
   * because prev may have moved to another CPU.
   */
@@ -28944,7 +28910,7 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  	__releases(rq->lock)
  {
  	struct rq *rq = this_rq();
-@@ -8495,8 +8489,6 @@ void __init sched_init_smp(void)
+@@ -8498,8 +8492,6 @@ void __init sched_init_smp(void)
  {
  	sched_init_numa(NUMA_NO_NODE);
  
@@ -28954,10 +28920,10 @@ index dbf4e32a063f..1a6b1bfdb497 100644
  	 * There's no userspace yet to cause hotplug operations; hence all the
  	 * CPU masks are stable and all blatant races in the below code cannot
 diff --git a/kernel/sched/ext.c b/kernel/sched/ext.c
-index 0bb8fa927e9e..94d75bf0c119 100644
+index f7eeccbd893a..be8870ca206a 100644
 --- a/kernel/sched/ext.c
 +++ b/kernel/sched/ext.c
-@@ -3488,8 +3488,8 @@ static void destroy_dsq(struct scx_sched *sch, u64 dsq_id)
+@@ -3487,8 +3487,8 @@ static void destroy_dsq(struct scx_sched *sch, u64 dsq_id)
  	 * operations inside scheduler locks.
  	 */
  	dsq->id = SCX_DSQ_INVALID;
@@ -29470,7 +29436,7 @@ index 1e8f8eca318c..32326c48162b 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index d3beddd8cc30..8d12de6c50af 100644
+index e3992314df9a..f7cb08392424 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -63,7 +63,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -29526,7 +29492,7 @@ index ccdeb0e84d39..57a9eb278221 100644
  EXPORT_SYMBOL_GPL(dirty_writeback_interval);
  
 diff --git a/mm/page_alloc.c b/mm/page_alloc.c
-index 04e32adaeb1d..072c4729dd98 100644
+index 469ee8cb7b2e..312a0a77ecda 100644
 --- a/mm/page_alloc.c
 +++ b/mm/page_alloc.c
 @@ -302,7 +302,11 @@ const char * const migratetype_names[MIGRATE_TYPES] = {
@@ -29848,7 +29814,7 @@ index 7724b1a1a8b5..8890a33c3d80 100644
  
  	flush_reclaim_state(sc);
 diff --git a/net/ipv4/Kconfig b/net/ipv4/Kconfig
-index b71c22475c51..85d95a59708e 100644
+index df922f9f5289..0db06aca87ca 100644
 --- a/net/ipv4/Kconfig
 +++ b/net/ipv4/Kconfig
 @@ -669,15 +669,18 @@ config TCP_CONG_BBR
@@ -29902,10 +29868,10 @@ index e01492234b0b..27893b774e08 100644
  	.undo_cwnd = bpf_tcp_ca_undo_cwnd,
  	.sndbuf_expand = bpf_tcp_ca_sndbuf_expand,
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 699212cd6c22..3d83de11a21c 100644
+index 7fbaccf4c0ad..af918c00cc7f 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3471,6 +3471,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3472,6 +3472,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tp->rx_opt.dsack = 0;
  	tp->rx_opt.num_sacks = 0;
  	tp->rcv_ooopack = 0;
@@ -29913,7 +29879,7 @@ index 699212cd6c22..3d83de11a21c 100644
  
  
  	/* Clean up fastopen related fields */
-@@ -4251,6 +4252,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
+@@ -4252,6 +4253,8 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
  		info->tcpi_options |= TCPI_OPT_ECN;
  	if (tp->ecn_flags & TCP_ECN_SEEN)
  		info->tcpi_options |= TCPI_OPT_ECN_SEEN;

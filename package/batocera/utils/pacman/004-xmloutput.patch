@@ -1,7 +1,8 @@
-diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/conf.h pacman-5.2.2/src/pacman/conf.h
---- pacman-5.2.2-lbrpdx/src/pacman/conf.h	2020-06-22 01:33:22.000000000 -0700
-+++ pacman-5.2.2/src/pacman/conf.h	2024-01-24 15:40:39.640544556 -0800
-@@ -138,6 +138,8 @@
+diff --git a/src/pacman/conf.h b/src/pacman/conf.h
+index d954e637..4f84e7bd 100644
+--- a/src/pacman/conf.h
++++ b/src/pacman/conf.h
+@@ -138,6 +138,8 @@ typedef struct __config_t {
  	colstr_t colstr;
  
  	alpm_list_t *repos;
@@ -10,7 +11,7 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/conf.h pacman-5.2.2/src/
  } config_t;
  
  /* Operations */
-@@ -210,7 +212,8 @@
+@@ -210,7 +212,8 @@ enum {
  	OP_DOWNLOADONLY,
  	OP_REFRESH,
  	OP_ASSUMEINSTALLED,
@@ -20,9 +21,10 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/conf.h pacman-5.2.2/src/
  };
  
  /* clean method */
-diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/package.c pacman-5.2.2/src/pacman/package.c
---- pacman-5.2.2-lbrpdx/src/pacman/package.c	2020-06-22 01:33:22.000000000 -0700
-+++ pacman-5.2.2/src/pacman/package.c	2024-01-24 15:43:28.018839826 -0800
+diff --git a/src/pacman/package.c b/src/pacman/package.c
+index 256156bd..69809633 100644
+--- a/src/pacman/package.c
++++ b/src/pacman/package.c
 @@ -27,6 +27,9 @@
  #include <time.h>
  #include <wchar.h>
@@ -33,7 +35,7 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/package.c pacman-5.2.2/s
  #include <alpm.h>
  #include <alpm_list.h>
  
-@@ -522,12 +525,16 @@
+@@ -522,12 +525,16 @@ void print_groups(alpm_pkg_t *pkg)
  int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
  {
  	int freelist = 0;
@@ -52,7 +54,7 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/package.c pacman-5.2.2/s
  		db_local = alpm_get_localdb(config->handle);
  	}
  
-@@ -543,10 +550,93 @@
+@@ -543,10 +550,93 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
  		return 1;
  	}
  
@@ -75,8 +77,9 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/package.c pacman-5.2.2/s
  	cols = getcols();
  	for(i = searchlist; i; i = alpm_list_next(i)) {
  		alpm_pkg_t *pkg = i->data;
+-
 +		alpm_pkg_t *installed_pkg;
- 
++
 +		if(config->xml) {
 +		  alpm_list_t *lst;
 +		  alpm_list_t *k;
@@ -146,7 +149,7 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/package.c pacman-5.2.2/s
  		if(config->quiet) {
  			fputs(alpm_pkg_get_name(pkg), stdout);
  		} else {
-@@ -555,6 +645,7 @@
+@@ -555,6 +645,7 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
  					colstr->version, alpm_pkg_get_version(pkg), colstr->nocolor);
  
  			print_groups(pkg);
@@ -154,7 +157,7 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/package.c pacman-5.2.2/s
  			if(show_status) {
  				print_installed(db_local, pkg);
  			}
-@@ -564,6 +655,12 @@
+@@ -564,6 +655,12 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
  			indentprint(alpm_pkg_get_desc(pkg), 4, cols);
  		}
  		fputc('\n', stdout);
@@ -167,10 +170,11 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/package.c pacman-5.2.2/s
  	}
  
  	/* we only want to free if the list was a search list */
-diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/pacman.c pacman-5.2.2/src/pacman/pacman.c
---- pacman-5.2.2-lbrpdx/src/pacman/pacman.c	2020-06-22 01:33:22.000000000 -0700
-+++ pacman-5.2.2/src/pacman/pacman.c	2024-01-24 15:40:39.640544556 -0800
-@@ -222,6 +222,7 @@
+diff --git a/src/pacman/pacman.c b/src/pacman/pacman.c
+index d58c428a..19775af2 100644
+--- a/src/pacman/pacman.c
++++ b/src/pacman/pacman.c
+@@ -222,6 +222,7 @@ static void usage(int op, const char * const myname)
  		addlist(_("      --logfile <path> set an alternate log file\n"));
  		addlist(_("      --noconfirm      do not ask for any confirmation\n"));
  		addlist(_("      --confirm        always ask for confirmation\n"));
@@ -178,7 +182,7 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/pacman.c pacman-5.2.2/sr
  		addlist(_("      --disable-download-timeout\n"
  		          "                       use relaxed timeouts for download\n"));
  	}
-@@ -441,6 +442,9 @@
+@@ -441,6 +442,9 @@ static int parsearg_global(int opt)
  		case OP_CONFIRM:
  			config->noconfirm = 0;
  			break;
@@ -188,7 +192,7 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/pacman.c pacman-5.2.2/sr
  		case OP_DBPATH:
  		case 'b':
  			free(config->dbpath);
-@@ -921,6 +925,7 @@
+@@ -921,6 +925,7 @@ static int parseargs(int argc, char *argv[])
  		{"refresh",    no_argument,       0, OP_REFRESH},
  		{"noconfirm",  no_argument,       0, OP_NOCONFIRM},
  		{"confirm",    no_argument,       0, OP_CONFIRM},
@@ -196,10 +200,11 @@ diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/pacman.c pacman-5.2.2/sr
  		{"config",     required_argument, 0, OP_CONFIG},
  		{"ignore",     required_argument, 0, OP_IGNORE},
  		{"assume-installed",     required_argument, 0, OP_ASSUMEINSTALLED},
-diff '--color=auto' -uri pacman-5.2.2-lbrpdx/src/pacman/sync.c pacman-5.2.2/src/pacman/sync.c
---- pacman-5.2.2-lbrpdx/src/pacman/sync.c	2020-06-22 01:33:22.000000000 -0700
-+++ pacman-5.2.2/src/pacman/sync.c	2024-01-24 15:40:39.640544556 -0800
-@@ -309,11 +309,20 @@
+diff --git a/src/pacman/sync.c b/src/pacman/sync.c
+index 0473f4e2..8257313c 100644
+--- a/src/pacman/sync.c
++++ b/src/pacman/sync.c
+@@ -309,11 +309,20 @@ static int sync_search(alpm_list_t *syncs, alpm_list_t *targets)
  	alpm_list_t *i;
  	int found = 0;
  

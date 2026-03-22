@@ -1,5 +1,5 @@
 diff --git a/src/pacman/conf.c b/src/pacman/conf.c
-index 0b56895..4f60d4a 100644
+index e00c001f..e82ceb9f 100644
 --- a/src/pacman/conf.c
 +++ b/src/pacman/conf.c
 @@ -754,6 +754,20 @@ static int register_repo(config_repo_t *repo)

@@ -1,0 +1,11 @@
+features:
+  - padtokeyboard
+shared_features:
+  - rewind
+  - autosave
+systems:
+  - amiga1200
+  - amiga500
+  - amigacd32
+  - amigacdtv
+  - amigademo

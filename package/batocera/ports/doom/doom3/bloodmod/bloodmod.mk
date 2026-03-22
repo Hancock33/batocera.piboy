@@ -3,8 +3,8 @@
 # bloodmod
 #
 ################################################################################
-# Version: Commits on Jan 26, 2026
-BLOODMOD_VERSION = 757730e3b39d3d845dd0e398046db5523d609bb8
+# Version: Commits on Mar 16, 2026
+BLOODMOD_VERSION = 20171f9419807eca068193fc0c36926f2abe8573
 BLOODMOD_SITE = $(call github,dhewm,dhewm3-sdk,$(BLOODMOD_VERSION))
 BLOODMOD_BRANCH = bloodmod
 BLOODMOD_LICENSE = GPLv3

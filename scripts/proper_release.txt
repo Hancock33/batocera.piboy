@@ -46,6 +46,7 @@ ruffle.mk
 ryzenadj.mk
 sockpp.mk
 sound-open-firmware.mk
+stk.mk
 switchres.mk
 syncthing.mk
 touchegg.mk

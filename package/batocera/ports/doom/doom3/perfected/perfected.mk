@@ -3,8 +3,8 @@
 # perfected
 #
 ################################################################################
-# Version: Commits on Jan 26, 2026
-PERFECTED_VERSION = 74624368cb2bec65bd14949dc1dcd521caa9e020
+# Version: Commits on Mar 16, 2026
+PERFECTED_VERSION = 2af5c64bc9dcaf03872dd22bd99a24b9d25a49bb
 PERFECTED_SITE = $(call github,dhewm,dhewm3-sdk,$(PERFECTED_VERSION))
 PERFECTED_BRANCH = perfected
 PERFECTED_LICENSE = GPLv3

@@ -3,13 +3,13 @@
 # libretro-dolphin
 #
 ################################################################################
-# Version: Commits on Mar 14, 2026
-LIBRETRO_DOLPHIN_VERSION = ab0db892052b0f11b741b177d712ce3b01ff5079
+# Version: Commits on Mar 18, 2026
+LIBRETRO_DOLPHIN_VERSION = ae95d31ea8ee49c92fcfbda84a8c6c43fa0df2ad
 LIBRETRO_DOLPHIN_SITE = https://github.com/libretro/dolphin.git
 LIBRETRO_DOLPHIN_SITE_METHOD = git
 LIBRETRO_DOLPHIN_GIT_SUBMODULES = YES
 LIBRETRO_DOLPHIN_LICENSE = GPLv2
-LIBRETRO_DOLPHIN_DEPENDENCIES = bluez5_utils cpp-ipc fmt libevdev retroarch
+LIBRETRO_DOLPHIN_DEPENDENCIES = bluez5_utils cpp-ipc fmt libcurl libenet libevdev pugixml retroarch
 LIBRETRO_DOLPHIN_EMULATOR_INFO = dolphin.libretro.core.yml
 
 LIBRETRO_DOLPHIN_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
@@ -39,7 +39,7 @@ endef
 define LIBRETRO_DOLPHIN_SYS_FOLDER
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys/GameSettings
 	cp -r $(@D)/Data/Sys/* $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings
+	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini  $(TARGET_DIR)/usr/share/batocera/datainit/bios/dolphin-emu/Sys/GameSettings
 endef
 
 LIBRETRO_DOLPHIN_POST_INSTALL_TARGET_HOOKS += LIBRETRO_DOLPHIN_SYS_FOLDER

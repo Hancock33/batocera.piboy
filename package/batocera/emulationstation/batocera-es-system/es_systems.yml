@@ -1859,6 +1859,22 @@ dragon64:
   comment_br:           |
                         Requer o arquivo dragon64.zip da BIOS do MAME
 
+cgenie:
+  name:                 Colour Genie
+  manufacturer:         EACA
+  release:              1982
+  hardware:             computer
+  extensions:           [cas, wav, zip, 7z]
+  emulators:
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
+  comment_en:           |
+                        MAME requires BIOS file cgenie.zip
+  comment_br:           |
+                        Requer o arquivo cgenie.zip da BIOS do MAME
+
 ikemen:
   name:                 IKEMEN
   manufacturer:         Elecbyte

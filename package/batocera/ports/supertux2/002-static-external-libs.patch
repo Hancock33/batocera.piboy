@@ -1,13 +1,13 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 64336d4f2..2a5a86e2c 100644
+index a8bce0f91..44cb9df9d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -296,7 +296,7 @@ endif()
- if(MSVC)
+@@ -432,7 +432,7 @@ endif()
+ if(USE_STATIC_SIMPLESQUIRREL)
    target_link_libraries(supertux2 PUBLIC simplesquirrel_static)
  else()
 -  target_link_libraries(supertux2 PUBLIC simplesquirrel)
 +  target_link_libraries(supertux2 PUBLIC simplesquirrel_static)
  endif()
+ 
  target_link_libraries(supertux2 PUBLIC
-   tinygettext sexp SDL_SavePNG SDL2_ttf

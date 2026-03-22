@@ -1,5 +1,5 @@
 diff --git a/drivers/acpi/osl.c b/drivers/acpi/osl.c
-index 05393a7315fe..5ae1c62ca17c 100644
+index 2addb40961b6..afd39a5776e5 100644
 --- a/drivers/acpi/osl.c
 +++ b/drivers/acpi/osl.c
 @@ -1581,7 +1581,7 @@ void acpi_os_release_lock(acpi_spinlock lockp, acpi_cpu_flags not_used)

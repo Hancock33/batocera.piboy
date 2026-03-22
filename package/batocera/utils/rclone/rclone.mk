@@ -10,7 +10,7 @@ RCLONE_LICENSE = GPLv2
 RCLONE_DEPENDENCIES =
 
 define RCLONE_BUILD_CMDS
-	cd $(@D) && $(HOST_GO_TARGET_ENV) $(GO_BIN) build
+	cd $(@D) && $(HOST_GO_TARGET_ENV) CGO_ENABLED=0 $(GO_BIN) build -ldflags="-s -w"
 endef
 
 define RCLONE_INSTALL_TARGET_CMDS

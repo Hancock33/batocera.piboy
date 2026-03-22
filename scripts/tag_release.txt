@@ -48,6 +48,7 @@ sf_rpi_status.mk
 shaderc.mk
 shadps4.mk
 spirv-llvm-translator.mk
+supertux2.mk
 tomlplusplus.mk
 uthash.mk
 wine-custom.mk

@@ -3,8 +3,8 @@
 # kodi_resource_language_zh_cn
 #
 ################################################################################
-# Version: Commits on Feb 14, 2026
-KODI_RESOURCE_LANGUAGE_ZH_CN_VERSION = 11.0.94
+# Version: Commits on Mar 21, 2026
+KODI_RESOURCE_LANGUAGE_ZH_CN_VERSION = 11.0.95
 KODI_RESOURCE_LANGUAGE_ZH_CN_SOURCE = resource.language.zh_cn-$(KODI_RESOURCE_LANGUAGE_ZH_CN_VERSION).zip
 KODI_RESOURCE_LANGUAGE_ZH_CN_SITE = http://mirrors.kodi.tv/addons/piers/resource.language.zh_cn
 KODI_RESOURCE_LANGUAGE_ZH_CN_PLUGINNAME=resource.language.zh_cn

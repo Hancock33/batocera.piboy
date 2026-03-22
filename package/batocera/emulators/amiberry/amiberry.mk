@@ -3,14 +3,14 @@
 # amiberry
 #
 ################################################################################
-# Version: Commits on Mar 15, 2026
-AMIBERRY_VERSION = 3bcc20ba6ab9d959a33fb1d577cea886074c96e0
+# Version: Commits on Mar 22, 2026
+AMIBERRY_VERSION = d4bf844a597952272fa91142fb6f988cc3ec2006
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AMIBERRY_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123
-AMIBERRY_DEPENDENCIES += portmidi sdl2 sdl2_image sdl2_ttf zlib
+AMIBERRY_DEPENDENCIES += portmidi sdl3 sdl3_image sdl3_ttf zlib
 AMIBERRY_EMULATOR_INFO = amiberry.emulator.yml
 
 AMIBERRY_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
