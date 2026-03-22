@@ -1,8 +1,8 @@
 diff --git a/src/pacman/conf.h b/src/pacman/conf.h
-index dab28a25..63f3fdc1 100644
+index d954e637..4f84e7bd 100644
 --- a/src/pacman/conf.h
 +++ b/src/pacman/conf.h
-@@ -142,6 +142,8 @@ typedef struct __config_t {
+@@ -138,6 +138,8 @@ typedef struct __config_t {
  	colstr_t colstr;
  
  	alpm_list_t *repos;
@@ -11,18 +11,18 @@ index dab28a25..63f3fdc1 100644
  } config_t;
  
  /* Operations */
-@@ -217,7 +219,8 @@ enum {
- 	OP_DISABLEDLTIMEOUT,
- 	OP_DISABLESANDBOX,
- 	OP_DISABLESANDBOXFILESYSTEM,
--	OP_DISABLESANDBOXSYSCALLS
-+	OP_DISABLESANDBOXSYSCALLS,
+@@ -210,7 +212,8 @@ enum {
+ 	OP_DOWNLOADONLY,
+ 	OP_REFRESH,
+ 	OP_ASSUMEINSTALLED,
+-	OP_DISABLEDLTIMEOUT
++	OP_DISABLEDLTIMEOUT,
 +	OP_XML
  };
  
  /* clean method */
 diff --git a/src/pacman/package.c b/src/pacman/package.c
-index 6ac6c04e..5ed5661a 100644
+index 256156bd..69809633 100644
 --- a/src/pacman/package.c
 +++ b/src/pacman/package.c
 @@ -27,6 +27,9 @@
@@ -35,13 +35,13 @@ index 6ac6c04e..5ed5661a 100644
  #include <alpm.h>
  #include <alpm_list.h>
  
-@@ -538,12 +541,16 @@ void print_groups(alpm_pkg_t *pkg)
+@@ -522,12 +525,16 @@ void print_groups(alpm_pkg_t *pkg)
  int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
  {
  	int freelist = 0;
 -	alpm_db_t *db_local;
 +	alpm_db_t *db_local = NULL;
- 	alpm_list_t *i, *searchlist = NULL;
+ 	alpm_list_t *i, *searchlist;
  	unsigned short cols;
  	const colstr_t *colstr = &config->colstr;
 +	ENTRY item;
@@ -54,7 +54,7 @@ index 6ac6c04e..5ed5661a 100644
  		db_local = alpm_get_localdb(config->handle);
  	}
  
-@@ -561,10 +568,93 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
+@@ -543,10 +550,93 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
  		return 1;
  	}
  
@@ -149,7 +149,7 @@ index 6ac6c04e..5ed5661a 100644
  		if(config->quiet) {
  			fputs(alpm_pkg_get_name(pkg), stdout);
  		} else {
-@@ -573,6 +663,7 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
+@@ -555,6 +645,7 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
  					colstr->version, alpm_pkg_get_version(pkg), colstr->nocolor);
  
  			print_groups(pkg);
@@ -157,7 +157,7 @@ index 6ac6c04e..5ed5661a 100644
  			if(show_status) {
  				print_installed(db_local, pkg);
  			}
-@@ -582,6 +673,12 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
+@@ -564,6 +655,12 @@ int dump_pkg_search(alpm_db_t *db, alpm_list_t *targets, int show_status)
  			indentprint(alpm_pkg_get_desc(pkg), 4, cols);
  		}
  		fputc('\n', stdout);
@@ -171,18 +171,18 @@ index 6ac6c04e..5ed5661a 100644
  
  	/* we only want to free if the list was a search list */
 diff --git a/src/pacman/pacman.c b/src/pacman/pacman.c
-index 9cd40076..9f62d15b 100644
+index d58c428a..19775af2 100644
 --- a/src/pacman/pacman.c
 +++ b/src/pacman/pacman.c
-@@ -224,6 +224,7 @@ static void usage(int op, const char * const myname)
+@@ -222,6 +222,7 @@ static void usage(int op, const char * const myname)
  		addlist(_("      --logfile <path> set an alternate log file\n"));
  		addlist(_("      --noconfirm      do not ask for any confirmation\n"));
  		addlist(_("      --confirm        always ask for confirmation\n"));
 +		addlist(_("      --xml            xml output\n"));
  		addlist(_("      --disable-download-timeout\n"
  		          "                       use relaxed timeouts for download\n"));
- 		addlist(_("      --disable-sandbox\n"
-@@ -500,6 +501,9 @@ static int parsearg_global(int opt)
+ 	}
+@@ -441,6 +442,9 @@ static int parsearg_global(int opt)
  		case OP_CONFIRM:
  			config->noconfirm = 0;
  			break;
@@ -191,8 +191,8 @@ index 9cd40076..9f62d15b 100644
 +			break;
  		case OP_DBPATH:
  		case 'b':
- 			{
-@@ -1012,6 +1016,7 @@ static int parseargs(int argc, char *argv[])
+ 			free(config->dbpath);
+@@ -921,6 +925,7 @@ static int parseargs(int argc, char *argv[])
  		{"refresh",    no_argument,       0, OP_REFRESH},
  		{"noconfirm",  no_argument,       0, OP_NOCONFIRM},
  		{"confirm",    no_argument,       0, OP_CONFIRM},
@@ -201,28 +201,26 @@ index 9cd40076..9f62d15b 100644
  		{"ignore",     required_argument, 0, OP_IGNORE},
  		{"assume-installed",     required_argument, 0, OP_ASSUMEINSTALLED},
 diff --git a/src/pacman/sync.c b/src/pacman/sync.c
-index 5220b660..8575b661 100644
+index 0473f4e2..8257313c 100644
 --- a/src/pacman/sync.c
 +++ b/src/pacman/sync.c
-@@ -320,6 +320,11 @@ static int sync_search(alpm_list_t *syncs, alpm_list_t *targets)
+@@ -309,11 +309,20 @@ static int sync_search(alpm_list_t *syncs, alpm_list_t *targets)
  	alpm_list_t *i;
  	int found = 0;
  
-+	if(config->xml) {
-+		printf("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n");
-+		printf("<packages>\n");
-+	}
++	 if(config->xml) {
++	   printf("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n");
++	   printf("<packages>\n");
++	 }
 +
  	for(i = syncs; i; i = alpm_list_next(i)) {
  		alpm_db_t *db = i->data;
- 		int ret = dump_pkg_search(db, targets, 1);
-@@ -333,6 +338,10 @@ static int sync_search(alpm_list_t *syncs, alpm_list_t *targets)
- 		found += !ret;
+ 		found += !dump_pkg_search(db, targets, 1);
  	}
  
-+	if(config->xml) {
-+		printf("</packages>\n");
-+	}
++	 if(config->xml) {
++	   printf("</packages>\n");
++	 }
 +
  	return (found == 0);
  }

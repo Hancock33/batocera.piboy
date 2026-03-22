@@ -3,10 +3,10 @@
 # pacman
 #
 ################################################################################
-# Version: Commits on Nov 01, 2025
-PACMAN_VERSION = 7.1.0
-PACMAN_SITE = https://gitlab.archlinux.org/pacman/pacman/-/releases/v$(PACMAN_VERSION)/downloads
-PACMAN_SOURCE= pacman-$(PACMAN_VERSION).tar.xz
+# Version: Commits on Jun 26, 2020
+PACMAN_VERSION = v5.2.2
+PACMAN_SITE = https://gitlab.archlinux.org/pacman/pacman.git
+PACMAN_SITE_METHOD = git
 PACMAN_LICENSE = GPLv2
 PACMAN_DEPENDENCIES = glibc libarchive libcurl libgpgme openssl gnupg
 
