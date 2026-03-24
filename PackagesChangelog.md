@@ -19,9 +19,11 @@ Ports|[box64](http://github.com/ptitseb/box64)|518f065591510da254e25cb75e0d0d132
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|faa8458053a73c22f8047bf69a9c4f0ec187e7d7|Mar 24, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|bb65d8d32a0e21d88c48ca320355fbb3d89bc414|Mar 24, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|01daed27606d0d1ab4d3dbe53664429132535bab|Mar 24, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260324|Mar 24, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|5311e2e0daa9aa6e2b9153833277a04024dad91f|Mar 24, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|4eb45259fdaaf17c3ce2478b18f047401e7a5d83|Mar 24, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|595.58.03|Mar 24, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260324|Mar 24, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|992d8c74d75ce5d8f273fb265d60af4c503dd655|Mar 24, 2026
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|a1d758ecf5df9a42b47f2533c9b31c686c4e1bb6|Mar 24, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|0390d90986a220ab4103d2fc3662db2e1d0da65d|Mar 24, 2026
@@ -41,11 +43,9 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|0081ef3f2def55650338
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|9f9489b6d94756d1a95ca1a7de4b7fc0453f7293|Mar 23, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.73.3|Mar 23, 2026
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.5|Mar 23, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260323|Mar 23, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|7c3baed7e78f4b85c12df22089b2b97410edec15|Mar 23, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|82c5e3be066e6d60f47a51c74ab6425ad41e1982|Mar 23, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.142.9196-526|Mar 23, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260323|Mar 23, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|f99e66cc919c83f2c6569ee56eabb5d0144f388a|Mar 23, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|097f52fcdd4e4771e0f0eb165f01474521cc01dd|Mar 23, 2026
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|895810b516f5933ed8f2665628444d63496e5825|Mar 23, 2026
