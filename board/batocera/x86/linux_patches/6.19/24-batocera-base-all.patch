@@ -311,7 +311,7 @@ index e08767323763..2f1439d6fe7e 100644
  M:	Felix Kuehling <Felix.Kuehling@amd.com>
  L:	amd-gfx@lists.freedesktop.org
 diff --git a/Makefile b/Makefile
-index 96640a9632ef..cb5ce5c18f3f 100644
+index 1d3c0858833f..5fa4830680ed 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -889,11 +889,19 @@ KBUILD_CFLAGS	+= -fno-delete-null-pointer-checks
@@ -3298,28 +3298,6 @@ index b20a06abb65d..4dd9214873c1 100644
  extern int amdgpu_vis_vram_limit;
  extern int amdgpu_gart_size;
  extern int amdgpu_gtt_size;
-diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-index 051c12ab5968..1726f6262f33 100644
---- a/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-+++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c
-@@ -5081,7 +5081,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
- 	 * before ip_fini_early to prevent kfd locking refcount issues by calling
- 	 * amdgpu_amdkfd_suspend()
- 	 */
--	if (drm_dev_is_unplugged(adev_to_drm(adev)))
-+	if (pci_dev_is_disconnected(adev->pdev))
- 		amdgpu_amdkfd_device_fini_sw(adev);
- 
- 	amdgpu_device_ip_fini_early(adev);
-@@ -5093,7 +5093,7 @@ void amdgpu_device_fini_hw(struct amdgpu_device *adev)
- 
- 	amdgpu_gart_dummy_page_fini(adev);
- 
--	if (drm_dev_is_unplugged(adev_to_drm(adev)))
-+	if (pci_dev_is_disconnected(adev->pdev))
- 		amdgpu_device_unmap_mmio(adev);
- 
- }
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
 index 83567ade8429..d031318a81c0 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c
@@ -3374,7 +3352,7 @@ index abd3b6564373..46937e6fa78d 100644
 +
  endmenu
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index df967721f7c0..623e62fa82e1 100644
+index 2cb82b4e0472..3ed65aa38e58 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -2069,6 +2069,9 @@ static int amdgpu_dm_init(struct amdgpu_device *adev)
@@ -5321,7 +5299,7 @@ index 26df9dc5c969..274f06de0601 100644
  	/* extended blocks are not supported yet */
  	if (timing_size != 6)
 diff --git a/drivers/gpu/drm/drm_mode_config.c b/drivers/gpu/drm/drm_mode_config.c
-index d12db9b0bab8..231f54ba66f8 100644
+index 802bc4608abf..c2a7ec4941ef 100644
 --- a/drivers/gpu/drm/drm_mode_config.c
 +++ b/drivers/gpu/drm/drm_mode_config.c
 @@ -345,6 +345,12 @@ static int drm_mode_create_standard_properties(struct drm_device *dev)
@@ -11360,10 +11338,10 @@ index 90ff6be85cf4..15159c1cf6e1 100644
  }
  
 diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
-index 2ca990dfbb88..7c50e672dc84 100644
+index 3a0c0e4b42ff..535d6272ebad 100644
 --- a/drivers/iommu/iommu.c
 +++ b/drivers/iommu/iommu.c
-@@ -1218,6 +1218,11 @@ static int iommu_create_device_direct_mappings(struct iommu_domain *domain,
+@@ -1222,6 +1222,11 @@ static int iommu_create_device_direct_mappings(struct iommu_domain *domain,
  				ret = iommu_map(domain, addr - map_size,
  						addr - map_size, map_size,
  						entry->prot, GFP_KERNEL);
@@ -29436,7 +29414,7 @@ index 1e8f8eca318c..32326c48162b 100644
  static int __read_mostly sysctl_compact_memory;
  
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index e3992314df9a..f7cb08392424 100644
+index 359616847364..7e2fcdf99bec 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -63,7 +63,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
