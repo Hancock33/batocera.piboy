@@ -276,8 +276,8 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46036|Mar 25, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|99694acd967a47f462b73dd631bad7c9fde89fc0|Mar 14, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.134|Feb 21, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|b6ad99ee21695955a78082fda748bd7aaaf1cf97|Mar 25, 2026
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b6ad99ee21695955a78082fda748bd7aaaf1cf97|Mar 25, 2026
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|e0fcf29d4ba67dabe80283e471efd808173041e3|Mar 25, 2026
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|e0fcf29d4ba67dabe80283e471efd808173041e3|Mar 25, 2026
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2844-master|Feb 18, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024

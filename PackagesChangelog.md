@@ -9,8 +9,8 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|f0d77e86e34cde3813f7b1d
 Emulators|[hatari](http://github.com/hatari/hatari)|b092ed6392785d0d3d6c29cd8d2a65e73856e6de|Mar 25, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.216|Mar 25, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46036|Mar 25, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|b6ad99ee21695955a78082fda748bd7aaaf1cf97|Mar 25, 2026
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|b6ad99ee21695955a78082fda748bd7aaaf1cf97|Mar 25, 2026
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary-releases/releases)|e0fcf29d4ba67dabe80283e471efd808173041e3|Mar 25, 2026
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|e0fcf29d4ba67dabe80283e471efd808173041e3|Mar 25, 2026
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|5e9310410baa47cb7da5b068f399c9e4a34eedbc|Mar 25, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|0504cf3ba3eb31fd00ae8df4358b48d700ffcd16|Mar 25, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|e4270f1d28113bc547770326268c8e360ad5e77c|Mar 25, 2026
