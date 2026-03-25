@@ -8,7 +8,7 @@ from ..Generator import Generator
 class FreedroidGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        commandArray = ["freedroid"]
+        commandArray = ["freedroid", "-f"]
         return Command.Command(array=commandArray)
 
     def getHotkeysContext(self) -> HotkeysContext:
