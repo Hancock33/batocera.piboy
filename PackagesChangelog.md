@@ -29,6 +29,7 @@ Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|a1d758ecf5df9a42b47f253
 Ports|[trx](http://github.com/LostArtefacts/TRX)|0390d90986a220ab4103d2fc3662db2e1d0da65d|Mar 24, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|81fc511f0aad681957d74196fb75dfee99429568|Mar 24, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|07db1cd96e8e9f4e32d70130ae0b74ee49f017dc|Mar 24, 2026
+Emulators|[libretro-citra](https://github.com/azahar-emu/azahar)|d4e9daa73912a2412cc6fcb064ab6c70c7b4b0dc|Mar 24, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|8a11ed8e6e40142a19fa4bf609e5b03ee688c315|Mar 24, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|512a9963f6b58c9946d6c9bbe685c3c7ba93f2f3|Mar 24, 2026
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|e4a192652f6e2ae658a165ca4b7808b68ca64af1|Mar 24, 2026
@@ -205,7 +206,6 @@ Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64pl
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|38e21087416ab8630e934ca641403d6ff70c43d4|Feb 20, 2026
 Emulators|[batocera-bezel](http://github.com/hancock33/batocera-bezel)|26465e14e2b8d37d5d0d78e593b244fa95104710|Feb 20, 2026
 Emulators|[libretro-beetle-vb](http://github.com/libretro/beetle-vb-libretro)|65debc7c4c7b85e2fd988d2be53496c2cf0b5f44|Feb 19, 2026
-Emulators|[libretro-citra](https://github.com/warmenhoven/azahar.git)|3641efde5d261188d107c0c78665e009f0b3bf82|Feb 19, 2026
 Audio|[cubeb](http://github.com/mozilla/cubeb)|774182f2c1b6d5e0d8ce975f2ed9f58fab7f1da2|Feb 18, 2026
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2844-master|Feb 18, 2026
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e|Feb 18, 2026

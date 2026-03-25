@@ -124,7 +124,7 @@ Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|d0a61b2c67
 Emulators|[libretro-cannonball](http://github.com/libretro/cannonball)|5137a791d229a5b9c7c089cf1edcce4db3c57d64|Oct 21, 2024
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|895810b516f5933ed8f2665628444d63496e5825|Mar 23, 2026
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|467cd453e3b1761c5c3611746b35e709328a2ced|Feb 13, 2025
-Emulators|[libretro-citra](https://github.com/warmenhoven/azahar.git)|3641efde5d261188d107c0c78665e009f0b3bf82|Feb 19, 2026
+Emulators|[libretro-citra](https://github.com/azahar-emu/azahar)|d4e9daa73912a2412cc6fcb064ab6c70c7b4b0dc|Mar 24, 2026
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|3b278c900c278678763d96087f1d343a6aed6e58|Mar 21, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|bd81a0b73b50449c0862b65bd755d87860925f65|Feb 10, 2026
 Emulators|[libretro-craft](http://github.com/libretro/Craft)|675c5b2fc690d2e80f6099f46407bf23827c59d4|Oct 06, 2024
