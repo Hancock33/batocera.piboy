@@ -16,9 +16,11 @@ Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|0504cf3ba3eb31fd00ae8
 Ports|[box64](http://github.com/ptitseb/box64)|e4270f1d28113bc547770326268c8e360ad5e77c|Mar 25, 2026
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|5442b39a0a0fcad48b79c5c9988b2bcc47d33c4f|Mar 25, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|95c5073b31144bd647b8dc0606b3f8b462c7d5f6|Mar 25, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260325|Mar 25, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|93621f104dfe6a1690cf72f0f4fd074a0a86acce|Mar 25, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d3736140233ff19dbcb18ff6ae08c3fb9add6ab5|Mar 25, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|afbf69585d294cdaa5943ce8989aa3d00a9f5c6d|Mar 25, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260325|Mar 25, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d62c8dd3d08b68a480cb8e78b9d5a1ca29617aa2|Mar 25, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|0c873ed96b870a13f715191e44da8ea749a9d744|Mar 25, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|3650cd61064505c1cea75698b8b60a9b37de835d|Mar 25, 2026
@@ -40,7 +42,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|faa8458053a73c22f8047
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|bb65d8d32a0e21d88c48ca320355fbb3d89bc414|Mar 24, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.142.9197-527|Mar 24, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|595.58.03|Mar 24, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260324|Mar 24, 2026
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|a1d758ecf5df9a42b47f2533c9b31c686c4e1bb6|Mar 24, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|884a32a58af2d343c44063b334def0cf7fea4d37|Mar 24, 2026
 Emulators|[libretro-citra](https://github.com/azahar-emu/azahar.git)|d4e9daa73912a2412cc6fcb064ab6c70c7b4b0dc|Mar 24, 2026
@@ -425,7 +426,6 @@ Ports|[abuse](http://github.com/apancik/Abuse_2025)|5a43f974ad8d534ab5b7869eadda
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|3db64230d0dad297a85e5810ac552f35f6a8cddc|Dec 31, 2024
 Libraries|[pysdl2](http://github.com/py-sdl/py-sdl2)|0.9.17|Dec 30, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
