@@ -3,8 +3,8 @@
 # abuse
 #
 ################################################################################
-# Version: Commits on Jan 28, 2025
-ABUSE_VERSION = 5a43f974ad8d534ab5b7869eadda4eae69002050
+# Version: Commits on Mar 25, 2026
+ABUSE_VERSION = 48bc0d079116c6429989bcf88595ef20c5c1b80f
 ABUSE_SITE = $(call github,apancik,Abuse_2025,$(ABUSE_VERSION))
 ABUSE_EMULATOR_INFO = abuse.emulator.yml
 ABUSE_DEPENDENCIES = sdl2 sdl2_mixer
