@@ -3,8 +3,8 @@
 # hlsdk-xash3d-dmc
 #
 ################################################################################
-# Version: Commits on Aug 19, 2025
-HLSDK_XASH3D_DMC_VERSION = 1d06c2a54b61794745d107711305a4c7e04623a9
+# Version: Commits on Mar 26, 2026
+HLSDK_XASH3D_DMC_VERSION = a205490557c2ac1c317fd981d0c92bfc99b3b886
 HLSDK_XASH3D_DMC_BRANCH = dmc
 HLSDK_XASH3D_DMC_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_DMC_VERSION))
 HLSDK_XASH3D_DMC_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
