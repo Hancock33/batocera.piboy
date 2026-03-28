@@ -10,8 +10,10 @@ Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|9d6b2
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|e785be03c22bb50dbb4024612e74e80c53927dcf|Mar 28, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-03-28|Mar 28, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|de981366994ab742ef07340b872c7c7dafc2b9ef|Mar 28, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260328|Mar 28, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|31038fc9816783bd477fdaf857012ccbdc70ce27|Mar 28, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|36343240adee1d9d7cd1c5cc4dc8d63dadfcc9c9|Mar 28, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260328|Mar 28, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|3384d3bb6979c13e746a52bf7bce6c3f42a55cfa|Mar 28, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|17fd47fbce131c13289f878cd25b64a4cdb86e8b|Mar 28, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|2aaef15cdba65c05787a1c80364e59177546f433|Mar 28, 2026
@@ -31,10 +33,8 @@ Ports|[box64](http://github.com/ptitseb/box64)|54698875f0f5092c3c8aaf0fc0488c730
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|a5101ca9695b4b97ecd7e5a0af3a63cf6b0db111|Mar 27, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|18960575e6e76402abbb52e1130e839dfd57196e|Mar 27, 2026
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.5.1|Mar 27, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260327|Mar 27, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|119635b137b9432404b5acf299ed74cfa964d46f|Mar 27, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|c4b9814702862dbaaceb2cc2385d31b2b300fcf7|Mar 27, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260327|Mar 27, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|bf11ff56ff40a36c455ea60fefc291e1600125ac|Mar 27, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|fb90f073def33c198fbe2bc6dd418d01f5f9e5eb|Mar 27, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|d5b481ac9de38c0e023a34d9ba5a09f085454ed6|Mar 27, 2026
