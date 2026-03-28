@@ -3,8 +3,8 @@
 # box64
 #
 ################################################################################
-# Version: Commits on Mar 27, 2026
-BOX64_VERSION = 54698875f0f5092c3c8aaf0fc0488c7302af6891
+# Version: Commits on Mar 28, 2026
+BOX64_VERSION = 961484f463e8d2e4c61e4734988e18c680001e4e
 BOX64_SITE = $(call github,ptitseb,box64,$(BOX64_VERSION))
 BOX64_SUPPORTS_IN_SOURCE_BUILD = NO
 BOX64_LICENSE = MIT

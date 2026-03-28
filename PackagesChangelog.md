@@ -3,13 +3,14 @@
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|2aaef15cdba65c05787a1c80364e59177546f433|Mar 28, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|14965a5ec0fdd7d5a51317dc2fba88312f099765|Mar 28, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|459a6fcfef8ad54e2ce9b45be5ad43b4a7d00569|Mar 28, 2026
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|bd49a2b3210b74325941bc066d1ffd278b818bb5|Mar 28, 2026
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|2712dbd1c8b45f862035b92314910e2f3c5ec6ae|Mar 28, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ca0871a7c11d867156fac48429fe9e39251418db|Mar 28, 2026
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|9d6b27e2adca17e51f09571f77330116da507e7a|Mar 28, 2026
 Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|9d6b27e2adca17e51f09571f77330116da507e7a|Mar 28, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|e785be03c22bb50dbb4024612e74e80c53927dcf|Mar 28, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-03-28|Mar 28, 2026
-Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|de981366994ab742ef07340b872c7c7dafc2b9ef|Mar 28, 2026
+Ports|[box64](http://github.com/ptitseb/box64)|961484f463e8d2e4c61e4734988e18c680001e4e|Mar 28, 2026
+Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|4eba423399fb0ef95ea2e6c90e2ad13746ed8c0c|Mar 28, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260328|Mar 28, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|31038fc9816783bd477fdaf857012ccbdc70ce27|Mar 28, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|36343240adee1d9d7cd1c5cc4dc8d63dadfcc9c9|Mar 28, 2026
@@ -20,7 +21,7 @@ Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|2aa
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|28dcf61ee225a4643ebf9cd57cde24e9971ca672|Mar 28, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|ca0871a7c11d867156fac48429fe9e39251418db|Mar 28, 2026
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|5b9f9f6cbc2b3fb5973b15663d4ff819182d2842|Mar 28, 2026
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|f51a459d9f15d44795b5d5b1595381d4f26c6338|Mar 28, 2026
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|277bf6e25086cde57f5d8c9ce57ba4a94590c8ab|Mar 28, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|07f4bcb81a15e118c66085e53be9dae86d47b258|Mar 27, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|07f4bcb81a15e118c66085e53be9dae86d47b258|Mar 27, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|7e58ac5bcf412f358374f03a5c2895d798bd5a5e|Mar 27, 2026
@@ -29,7 +30,6 @@ Emulators|[hatari](http://github.com/hatari/hatari)|f4effd87649dadd0dfc4a67c4050
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.220|Mar 27, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|976cd1ce6640daf6d19a9618c40b100f89fe9434|Mar 27, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46037|Mar 27, 2026
-Ports|[box64](http://github.com/ptitseb/box64)|54698875f0f5092c3c8aaf0fc0488c7302af6891|Mar 27, 2026
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|a5101ca9695b4b97ecd7e5a0af3a63cf6b0db111|Mar 27, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|18960575e6e76402abbb52e1130e839dfd57196e|Mar 27, 2026
 Utils|[re2c](http://github.com/skvadrik/re2c)|4.5.1|Mar 27, 2026
