@@ -589,6 +589,6 @@ Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|
 Wine|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.05|Mar 21, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.0.0|Feb 07, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260312-proton-slr|Mar 12, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260324-proton-slr|Mar 24, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260328|Mar 28, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|b792287f5bec9086916aa9b81788e0ea38f02c24|Feb 21, 2026

@@ -65,6 +65,7 @@ Ports|[abuse](http://github.com/apancik/Abuse_2025)|48bc0d079116c6429989bcf88595
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|93621f104dfe6a1690cf72f0f4fd074a0a86acce|Mar 25, 2026
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|02a3345cc9b5cb38c529eabe6967b25a95501559|Mar 25, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|6648a9c225b67a5aa647a31e131fc47828293a03|Mar 24, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260324-proton-slr|Mar 24, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.142.9197-527|Mar 24, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|595.58.03|Mar 24, 2026
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|a1d758ecf5df9a42b47f2533c9b31c686c4e1bb6|Mar 24, 2026
@@ -148,7 +149,6 @@ Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|72d66a67a296b
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|d3c39fa18476ddce05027db3d29abba813fa74e2|Mar 13, 2026
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|6268322705bd9088fb09680e93c848f007cd626b|Mar 13, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|f133009adfac866c24d8259b6b4b24ce85abe330|Mar 12, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260312-proton-slr|Mar 12, 2026
 Controllers|[lightguns-games-precalibrations](http://github.com/batocera-linux/lightguns-games-precalibrations)|b2a36161d99ea81b2fdd454941b50927a4cc14eb|Mar 12, 2026
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|ca19403c95c15e6abc893999b0f3de035c3aea17|Mar 12, 2026
 Emulators|[libretro-jollycv](http://github.com/libretro/jollycv)|86f8e8607e0e36f596b911c59b04e48052953756|Mar 12, 2026
