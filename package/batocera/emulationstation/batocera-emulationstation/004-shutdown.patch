@@ -1,8 +1,8 @@
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 66221345c..cb50add28 100644
+index 0e313da3c..6cd2351bc 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
-@@ -197,7 +197,7 @@ namespace Utils
+@@ -199,7 +199,7 @@ namespace Utils
  #ifdef WIN32 // windows
  			return system("shutdown -s -t 0");
  #else // osx / linux
@@ -11,7 +11,7 @@ index 66221345c..cb50add28 100644
  #endif
  		}
  
-@@ -206,7 +206,7 @@ namespace Utils
+@@ -208,7 +208,7 @@ namespace Utils
  #ifdef WIN32 // windows
  			return system("shutdown -r -t 0");
  #else // osx / linux
