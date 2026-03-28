@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|bb4953d35326698802e1bcfcc66b8d0152a26781|Mar 28, 2026
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|7064788c84b0c1e60b056dfe110d2c1114d10b2c|Mar 28, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|87ee5be6feb7fa5b2f56ddba3c1c0495829573ab|Mar 28, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|39363cd43553952fad7e1fbb4e80dcd575556e04|Mar 28, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|14965a5ec0fdd7d5a51317dc2fba88312f099765|Mar 28, 2026
