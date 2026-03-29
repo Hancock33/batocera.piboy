@@ -3,8 +3,8 @@
 # sdl2-gamecontrollerdb
 #
 ################################################################################
-# Version: Commits on Mar 22, 2026
-SDL2_GAMECONTROLLERDB_VERSION = e3e437a14c4bddb7264da68b9b9b89435b370b33
+# Version: Commits on Mar 27, 2026
+SDL2_GAMECONTROLLERDB_VERSION = 119635b137b9432404b5acf299ed74cfa964d46f
 SDL2_GAMECONTROLLERDB_SITE = $(call github,mdqinc,SDL_GameControllerDB,$(SDL2_GAMECONTROLLERDB_VERSION))
 SDL2_GAMECONTROLLERDB_DEPENDENCIES = sdl2
 

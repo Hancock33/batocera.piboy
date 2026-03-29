@@ -1,8 +1,8 @@
 diff --git a/es-app/src/main.cpp b/es-app/src/main.cpp
-index 937d2c04f..0f0b7b5ec 100644
+index f0bde675a..5c65c540f 100644
 --- a/es-app/src/main.cpp
 +++ b/es-app/src/main.cpp
-@@ -749,8 +749,9 @@ int main(int argc, char* argv[])
+@@ -744,8 +744,9 @@ int main(int argc, char* argv[])
  					}
  				}				
  
@@ -46,10 +46,10 @@ index 469af25a8..7dafcd458 100644
  		return true;
  
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 12d57b7ef..66221345c 100644
+index 984857def..0e313da3c 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
-@@ -31,6 +31,8 @@ namespace Utils
+@@ -33,6 +33,8 @@ namespace Utils
  {
  	namespace Platform
  	{
@@ -58,7 +58,7 @@ index 12d57b7ef..66221345c 100644
  		ProcessStartInfo::ProcessStartInfo()
  		{
  			window = nullptr;
-@@ -229,6 +231,8 @@ namespace Utils
+@@ -231,6 +233,8 @@ namespace Utils
  				break;
  			}
  
@@ -68,7 +68,7 @@ index 12d57b7ef..66221345c 100644
  			quit->type = SDL_QUIT;
  			SDL_PushEvent(quit);
 diff --git a/es-core/src/utils/Platform.h b/es-core/src/utils/Platform.h
-index 56c841191..fb1a41135 100644
+index a48f2b493..1cd270d63 100644
 --- a/es-core/src/utils/Platform.h
 +++ b/es-core/src/utils/Platform.h
 @@ -17,6 +17,11 @@ namespace Utils

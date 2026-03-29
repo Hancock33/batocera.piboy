@@ -11,5 +11,5 @@ config BR2_PACKAGE_LIBRETRO_PANDA3DS
 
 	  https://github.com/wheremyfoodat/Panda3DS
 
-comment "LIBRETRO_CITRA needs a toolchain w/ C++"
+comment "LIBRETRO_PANDA3DS needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

@@ -580,6 +580,9 @@ midway:
 mitchell:
   emulator: libretro
   core:     mame078plus
+model1:
+  emulator: libretro
+  core:     mame
 model2:
   emulator: model2emu
   core:     model2emu

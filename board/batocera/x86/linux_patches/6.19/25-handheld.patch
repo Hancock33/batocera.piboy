@@ -1593,7 +1593,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 623e62fa82e1..d0f0e5b23ce3 100644
+index 3ed65aa38e58..78d24d91960d 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -158,6 +158,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -18372,7 +18372,7 @@ index 8ccec73dce45..978d73eb937a 100644
  
  	hci_cmd_sync_clear(hdev);
 diff --git a/net/bluetooth/hci_sync.c b/net/bluetooth/hci_sync.c
-index 80b601e344ae..0240ce738e4a 100644
+index 43b36581e336..3830269e4f5e 100644
 --- a/net/bluetooth/hci_sync.c
 +++ b/net/bluetooth/hci_sync.c
 @@ -2749,6 +2749,7 @@ static u8 hci_update_accept_list_sync(struct hci_dev *hdev)
@@ -18409,10 +18409,10 @@ index 80b601e344ae..0240ce738e4a 100644
  			/* Set state to BT_RUNNING so resume doesn't notify */
  			hdev->suspend_state = BT_RUNNING;
 diff --git a/net/bluetooth/mgmt.c b/net/bluetooth/mgmt.c
-index 0e46f9e08b10..df4689b26f26 100644
+index 2c63f49c3301..95da5822779c 100644
 --- a/net/bluetooth/mgmt.c
 +++ b/net/bluetooth/mgmt.c
-@@ -8100,7 +8100,7 @@ static int set_external_config(struct sock *sk, struct hci_dev *hdev,
+@@ -8097,7 +8097,7 @@ static int set_external_config(struct sock *sk, struct hci_dev *hdev,
  			hci_dev_set_flag(hdev, HCI_CONFIG);
  			hci_dev_set_flag(hdev, HCI_AUTO_OFF);
  
@@ -18421,7 +18421,7 @@ index 0e46f9e08b10..df4689b26f26 100644
  		} else {
  			set_bit(HCI_RAW, &hdev->flags);
  			mgmt_index_added(hdev);
-@@ -8156,7 +8156,7 @@ static int set_public_address(struct sock *sk, struct hci_dev *hdev,
+@@ -8153,7 +8153,7 @@ static int set_public_address(struct sock *sk, struct hci_dev *hdev,
  		hci_dev_set_flag(hdev, HCI_CONFIG);
  		hci_dev_set_flag(hdev, HCI_AUTO_OFF);
  

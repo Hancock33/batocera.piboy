@@ -9,7 +9,7 @@ LIBRETRO_DOLPHIN_SITE = https://github.com/libretro/dolphin.git
 LIBRETRO_DOLPHIN_SITE_METHOD = git
 LIBRETRO_DOLPHIN_GIT_SUBMODULES = YES
 LIBRETRO_DOLPHIN_LICENSE = GPLv2
-LIBRETRO_DOLPHIN_DEPENDENCIES = bluez5_utils cpp-ipc fmt libcurl libenet libevdev pugixml retroarch
+LIBRETRO_DOLPHIN_DEPENDENCIES = bluez5_utils cpp-ipc fmt libcurl libevdev pugixml retroarch
 LIBRETRO_DOLPHIN_EMULATOR_INFO = dolphin.libretro.core.yml
 
 LIBRETRO_DOLPHIN_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
