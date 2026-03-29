@@ -1,0 +1,12 @@
+config BR2_PACKAGE_LIBRETRO_SKYEMU
+	bool "libretro-panda3ds"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_SDL2
+
+	help
+	  Game Boy Advance, Game Boy, Game Boy Color, and DS Emulator
+
+	  https://github.com/skylersaleh/SkyEmu
+
+comment "LIBRETRO_SKYEMU needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

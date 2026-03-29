@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index a4f52d64..2ebdfcce 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -408,7 +408,7 @@ if(NOT RETRO_CORE_ONLY)
+   endif()
+ endif()
+ 
+-add_library(skyemu_libretro SHARED EXCLUDE_FROM_ALL src/libretro.c src/shared.c src/localization.c)
++add_library(skyemu_libretro SHARED src/libretro.c src/shared.c src/localization.c)
+ set_target_properties(skyemu_libretro PROPERTIES PREFIX "")
+ if (MACOS OR IOS)
+     find_library(FoundationLib CoreFoundation)

@@ -1,0 +1,11 @@
+features:
+  - cheevos
+  - padtokeyboard
+shared_features:
+  - autosave
+  - rewind
+systems:
+  - gb
+  - gba
+  - gbc
+  - nds
