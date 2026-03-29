@@ -1,0 +1,13 @@
+diff --git a/src/misc.c b/src/misc.c
+index ea3351df..8e8fed10 100644
+--- a/src/misc.c
++++ b/src/misc.c
+@@ -67,7 +67,7 @@ InitConfigDir (void)
+ 
+   ConfigDir[0] = '\0';
+ 
+-  pref_path = SDL_GetPrefPath ("freedroid", "freedroidClassic");
++  pref_path = "/userdata/system/configs/freedroidClassic";
+   if (pref_path == NULL)
+     {
+       DebugPrintf (0, "WARNING: SDL_GetPrefPath() failed: %s\n", SDL_GetError ());
