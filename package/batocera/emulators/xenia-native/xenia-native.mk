@@ -19,10 +19,11 @@ XENIA_NATIVE_CONF_OPTS += -DCMAKE_C_FLAGS="$(XENIA_NATIVE_TARGET_CFLAGS)"
 XENIA_NATIVE_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(XENIA_NATIVE_TARGET_CFLAGS)"
 
 define XENIA_NATIVE_CROSS_GITVER
-	echo #define XE_BUILD_BRANCH "master" >> $(@D)/build/version.h
-	echo #define XE_BUILD_COMMIT "$(XENIA_NATIVE_VERSION)" >> $(@D)/build/version.h
-	echo #define XE_BUILD_COMMIT_SHORT "$(shell echo $(XENIA_NATIVE_VERSION) | cut -c 1-7)" >> $(@D)/build/version.h
-	echo #define XE_BUILD_DATE __DATE__ >> $(@D)/build/version.h
+	echo '#define XE_BUILD_BRANCH "master"' >> $(@D)/buildroot-build/version.h
+	echo '#define XE_BUILD_COMMIT "$(XENIA_NATIVE_VERSION)"' >> $(@D)/buildroot-build/version.h
+	echo '#define XE_BUILD_COMMIT_SHORT "$(shell echo $(XENIA_NATIVE_VERSION) | cut -c 1-7)"' >> $(@D)/buildroot-build/version.h
+	echo '#define XE_BUILD_DATE __DATE__' >> $(@D)/buildroot-build/version.h
+	cat $(@D)/buildroot-build/version.h
 endef
 
 XENIA_NATIVE_POST_CONFIGURE_HOOKS = XENIA_NATIVE_CROSS_GITVER
