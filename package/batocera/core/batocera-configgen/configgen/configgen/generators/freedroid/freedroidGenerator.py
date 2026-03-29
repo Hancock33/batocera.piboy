@@ -9,7 +9,7 @@ from ...controller import generate_sdl_game_controller_config
 class FreedroidGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        commandArray = ["freedroid", "-f"]
+        commandArray = ["freedroid", "-w"]
 
         return Command.Command(
             array=commandArray,
