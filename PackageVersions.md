@@ -168,7 +168,7 @@ Emulators|[libretro-jumpnbump](http://github.com/libretro/jumpnbump-libretro)|4e
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|d0384bc33aad06bfa9cf5cd308c4bd7ae6cfc814|Mar 12, 2025
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|85c80181d26bb5c2147ebc76bfc48bce9f8d73a8|Oct 21, 2024
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|b84d0605e847e07657a44a1a11374a03a6e8a489|Jul 26, 2025
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0286|Feb 25, 2026
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0287|Mar 30, 2026
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|53453e57676ff31131441f08c0b734c9ad84e4f0|Mar 10, 2026
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|bac0256dc6a8736c5a228f57c562257e45fd49f3|Mar 03, 2026
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|7a3c11ff970cd36ca806961fae6db94b30dd5401|Oct 21, 2024
@@ -242,7 +242,7 @@ Emulators|[libretro-yabause](http://github.com/libretro/yabause)|65af22e96beb6d9
 Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426da40b074245fda097fd345fa7c9cdbf152a|Apr 26, 2022
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|88e1628382949dc543d42e4ec366de009e19598f|Feb 24, 2026
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0286|Feb 25, 2026
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0287|Mar 30, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|b01b420cbb983c35ccb26cc78414190c727bf8d4|Mar 14, 2026
 Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|5c58d3f69c8fdcc23b8d9dbd47685ab84bd0e08e|Mar 30, 2026
@@ -530,8 +530,8 @@ Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|cf19467f79a723a3180003d95
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|a070950e77031a8b5765017ab55a65d6eebb2600|Mar 28, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|02ff5c01246f7e988cc5c72c220bace6ef3801e3|Mar 28, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|05af571a8e6aaf93cbcb1a4114dc39caba1327b4|Mar 29, 2026
-Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|a7287615bf83e2986570c1b93acd661151b78549|Mar 29, 2026
-Sources|[mame-src](http://github.com/mamedev/mame)|mame0286|Feb 25, 2026
+Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|203a7ea086b575b4dfa5a98136dcf9f129667307|Mar 30, 2026
+Sources|[mame-src](http://github.com/mamedev/mame)|mame0287|Mar 30, 2026
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.2|Oct 21, 2025
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A

@@ -3,6 +3,7 @@
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|3df370470257f00984ca828d7e124926214ac808|Mar 30, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|e0fda9bb544fcbe6996044a3be929bdd55752fd4|Mar 30, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|5322bce4b86956e590ffb11faa058670f4488d70|Mar 30, 2026
+Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0287|Mar 30, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5c082f8a2aa5846afefea62cfd6e62cba4860925|Mar 30, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1c37f64a58583b2f80ad9bd12f928b49176b60fd|Mar 30, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|0f92954300220bd7e71797679014f902593cdd24|Mar 30, 2026
@@ -14,6 +15,8 @@ Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|dee11be98f062829644642c4b7
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|70c9b90a3d5252e963980add38fc61ae513b081a|Mar 30, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|f17dd19116a2ad506f742cdbc3dc3db51c1fb5cf|Mar 30, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|c2b9a28649120fd527a6863800f1b9f7560b58cf|Mar 30, 2026
+Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|203a7ea086b575b4dfa5a98136dcf9f129667307|Mar 30, 2026
+Sources|[mame-src](http://github.com/mamedev/mame)|mame0287|Mar 30, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|a771670775fc0da68d7aaff35fa08d8d3809e878|Mar 30, 2026
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|5c58d3f69c8fdcc23b8d9dbd47685ab84bd0e08e|Mar 30, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|53a08fceb71653000dd6640cac05eb390fba7885|Mar 30, 2026
@@ -31,6 +34,7 @@ Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|e1bbae3237c
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|cc92f7fbba4a8f024dd690a8cdb0227fc81bf226|Mar 30, 2026
 Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genesis-Plus-GX-Expanded-Rom-Size)|181e8f93440b11d26e305eb42198fdfae3c8d237|Mar 30, 2026
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|1c7902607c81185704f3e5f2aa646929e05ad456|Mar 30, 2026
+Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0287|Mar 30, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|5c082f8a2aa5846afefea62cfd6e62cba4860925|Mar 30, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|1b0e5e00f16a4ed44695e4cbe7aaaa445042d3e4|Mar 30, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|8fa12affff8c3776d6dcb67eeae41a83db700bfe|Mar 30, 2026
@@ -48,7 +52,6 @@ Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|904c6
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|b6407492c7b87822f7fac3440e2bfedd2d48ed11|Mar 29, 2026
 Libraries|[ngtcp2](https://github.com/ngtcp2/ngtcp2.git)|v1.22.0|Mar 29, 2026
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|969311274f6b39aac0b2d7de01856ea573ecf4bc|Mar 29, 2026
-Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|a7287615bf83e2986570c1b93acd661151b78549|Mar 29, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|c405f777f55a15c9f63e421296e087e5b3ea371b|Mar 29, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|05af571a8e6aaf93cbcb1a4114dc39caba1327b4|Mar 29, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|d9b472a05d68616d3e996ee3be4874544a77eab4|Mar 29, 2026
@@ -195,11 +198,8 @@ Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|9
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|a6e317475487075d0a3b04707ce24864ef49dbbc|Feb 27, 2026
 Controllers|[xpad-noone](http://github.com/forkymcforkface/xpad-noone)|7b5361475c719b03b9e0152e44cf7fca0b85af60|Feb 27, 2026
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.0|Feb 25, 2026
-Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0286|Feb 25, 2026
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.24.0|Feb 25, 2026
-Sources|[mame-src](http://github.com/mamedev/mame)|mame0286|Feb 25, 2026
 Emulators|[libretro-freej2me](http://github.com/TASEmulators/freej2me-plus)|09cb30145683cddd370e8b351c6100c1c5f0e744|Feb 25, 2026
-Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0286|Feb 25, 2026
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|88e1628382949dc543d42e4ec366de009e19598f|Feb 24, 2026
 Libraries|[liblgpio](http://github.com/joan2937/lg)|bcccd782eceedc5b278b3056ea81d5fbbb89c489|Feb 24, 2026
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.14|Feb 24, 2026
