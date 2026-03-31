@@ -3,8 +3,8 @@
 # libretro-craft
 #
 ################################################################################
-# Version: Commits on Oct 06, 2024
-LIBRETRO_CRAFT_VERSION = 675c5b2fc690d2e80f6099f46407bf23827c59d4
+# Version: Commits on Mar 31, 2026
+LIBRETRO_CRAFT_VERSION = 248745633b847481ca49b0507afee22ac4e8dfd6
 LIBRETRO_CRAFT_SITE = $(call github,libretro,Craft,$(LIBRETRO_CRAFT_VERSION))
 LIBRETRO_CRAFT_LICENSE = MIT
 LIBRETRO_CRAFT_LICENSE_FILES = LICENSE.md

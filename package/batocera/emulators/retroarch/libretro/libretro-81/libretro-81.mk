@@ -3,8 +3,8 @@
 # libretro-81
 #
 ################################################################################
-# Version: Commits on Oct 21, 2024
-LIBRETRO_81_VERSION = ffc99f27f092addc9ddd34dd0e3a3d4d1c053cbf
+# Version: Commits on Mar 31, 2026
+LIBRETRO_81_VERSION = f9e5fa3bef9a6d6e1e19a4b1c7e5922467b582a2
 LIBRETRO_81_SITE = $(call github,libretro,81-libretro,$(LIBRETRO_81_VERSION))
 LIBRETRO_81_LICENSE = GPLv3
 LIBRETRO_81_DEPENDENCIES += retroarch

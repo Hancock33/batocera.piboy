@@ -3,8 +3,8 @@
 # libretro-arduous
 #
 ################################################################################
-# Version: Commits on Jan 13, 2026
-LIBRETRO_ARDUOUS_VERSION = 882ea139758fef5e5d711324d138d812abd5c10c
+# Version: Commits on Mar 31, 2026
+LIBRETRO_ARDUOUS_VERSION = fba6f3e418218cf35a17cda8aac62133ff327f2c
 LIBRETRO_ARDUOUS_SITE = https://github.com/libretro/arduous.git
 LIBRETRO_ARDUOUS_SITE_METHOD=git
 LIBRETRO_ARDUOUS_GIT_SUBMODULES=YES

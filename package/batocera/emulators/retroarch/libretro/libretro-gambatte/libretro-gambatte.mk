@@ -3,8 +3,8 @@
 # libretro-gambatte
 #
 ################################################################################
-# Version: Commits on Mar 13, 2026
-LIBRETRO_GAMBATTE_VERSION = d3c39fa18476ddce05027db3d29abba813fa74e2
+# Version: Commits on Mar 31, 2026
+LIBRETRO_GAMBATTE_VERSION = 9669d1f9266684e60ac1c5ed9b438bd2a02a3b4d
 LIBRETRO_GAMBATTE_SITE = $(call github,libretro,gambatte-libretro,$(LIBRETRO_GAMBATTE_VERSION))
 LIBRETRO_GAMBATTE_LICENSE = GPLv2
 LIBRETRO_GAMBATTE_DEPENDENCIES += retroarch

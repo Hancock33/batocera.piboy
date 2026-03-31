@@ -3,8 +3,8 @@
 # libretro-watara
 #
 ################################################################################
-# Version: Commits on Sept 18, 2025
-LIBRETRO_WATARA_VERSION = ad87bc6068ef126e48339b440465fb0bf5a2794f
+# Version: Commits on Mar 31, 2026
+LIBRETRO_WATARA_VERSION = ea88aa8c1df764d28bc13822d161a045b3747efc
 LIBRETRO_WATARA_SITE = $(call github,libretro,potator,$(LIBRETRO_WATARA_VERSION))
 LIBRETRO_WATARA_LICENSE = GPLv2
 LIBRETRO_WATARA_DEPENDENCIES += retroarch

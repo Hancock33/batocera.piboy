@@ -3,8 +3,8 @@
 # libretro-amiberry
 #
 ################################################################################
-# Version: Commits on Mar 30, 2026
-LIBRETRO_AMIBERRY_VERSION = 3df370470257f00984ca828d7e124926214ac808
+# Version: Commits on Mar 31, 2026
+LIBRETRO_AMIBERRY_VERSION = 2bd9e3224d2f35137145586ebacc327355e7f8c7
 LIBRETRO_AMIBERRY_SITE = https://github.com/BlitterStudio/amiberry.git
 LIBRETRO_AMIBERRY_SITE_METHOD=git
 LIBRETRO_AMIBERRY_GIT_SUBMODULES=YES
