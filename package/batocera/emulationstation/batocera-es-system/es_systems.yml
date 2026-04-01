@@ -6345,7 +6345,6 @@ sc3000:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en:           |
-                        BIOS: sc3000.zip (sc3000.rom) in bios/mame/
                         SC-3000 cartridges are compatible with SG-1000.
                         Cassette tapes (.wav, .cas, .bit) are SC-3000 exclusive.
 
