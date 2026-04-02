@@ -98,7 +98,7 @@ index 000000000000..fbb73a64d082
 +
 +#endif /* _KERNEL_SCHED_BORE_H */
 diff --git a/init/Kconfig b/init/Kconfig
-index 6c8ba1a1a8b9..9e52e03b25ec 100644
+index df8e39d644d9..9a4213affba6 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -1450,6 +1450,23 @@ config CHECKPOINT_RESTORE
@@ -823,7 +823,7 @@ index 93f009e1076d..ed90b4f94293 100644
  	P(se.avg.runnable_sum);
  	P(se.avg.util_sum);
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 319c32e41610..21c2f61c03e0 100644
+index 307e293967ef..0d078e33dc81 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -58,6 +58,10 @@
@@ -1108,7 +1108,7 @@ index 319c32e41610..21c2f61c03e0 100644
  	if (dequeue_entities(rq, &p->se, flags) < 0)
  		return false;
  
-@@ -9167,16 +9230,25 @@ static void yield_task_fair(struct rq *rq)
+@@ -9246,16 +9309,25 @@ static void yield_task_fair(struct rq *rq)
  	/*
  	 * Are we the only task in the tree?
  	 */
@@ -1134,7 +1134,7 @@ index 319c32e41610..21c2f61c03e0 100644
  	/*
  	 * Tell update_rq_clock() that we've just updated,
  	 * so we don't do microscopic update in schedule()
-@@ -13605,6 +13677,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
+@@ -13684,6 +13756,9 @@ static void switched_to_fair(struct rq *rq, struct task_struct *p)
  	WARN_ON_ONCE(p->se.sched_delayed);
  
  	attach_task_cfs_rq(p);
@@ -1145,7 +1145,7 @@ index 319c32e41610..21c2f61c03e0 100644
  	set_task_max_allowed_capacity(p);
  
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index edc927bca99f..4c1a43864f1c 100644
+index 655250954d9a..64aeb2e0f8d1 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2165,7 +2165,11 @@ extern int group_balance_cpu(struct sched_group *sg);

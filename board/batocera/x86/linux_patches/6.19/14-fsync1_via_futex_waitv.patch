@@ -30,7 +30,7 @@ index 7e2744ec8933..87126e49fc30 100644
   * Support for robust futexes: the kernel cleans up held futexes at
   * thread exit time.
 diff --git a/kernel/futex/syscalls.c b/kernel/futex/syscalls.c
-index 880c9bf2f315..fb3b617b9ed8 100644
+index 99723189c8cf..829ede1a5b74 100644
 --- a/kernel/futex/syscalls.c
 +++ b/kernel/futex/syscalls.c
 @@ -166,6 +166,7 @@ static __always_inline bool futex_cmd_has_timeout(u32 cmd)
@@ -132,7 +132,7 @@ index 880c9bf2f315..fb3b617b9ed8 100644
  	return do_futex(uaddr, op, val, tp, uaddr2, (unsigned long)utime, val3);
  }
  
-@@ -512,6 +582,9 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
+@@ -520,6 +590,9 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  		tp = &t;
  	}
  
