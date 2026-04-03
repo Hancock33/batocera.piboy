@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 02, 2026
-VPINBALL_NEXT_VERSION = 3b9197b64114a2f42b1b6eb7b326e921354a992f
+VPINBALL_NEXT_VERSION = 66492cfd284296f206030f162c5ff31179e39d6e
 VPINBALL_NEXT_SITE = $(call github,vpinball,vpinball,$(VPINBALL_NEXT_VERSION))
 VPINBALL_NEXT_LICENSE = GPLv3+
 VPINBALL_NEXT_LICENSE_FILES = LICENSE
