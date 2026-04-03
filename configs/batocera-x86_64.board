@@ -13,11 +13,11 @@ BR2_TARGET_GENERIC_GETTY_BAUDRATE_115200=y
 BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/patches"
 BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/fsoverlay $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/fsoverlay"
 
-# Kernel 6.19
+# Kernel 7.0
 BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="https://github.com/CachyOS/linux/releases/download/cachyos-6.19.11-2/cachyos-6.19.11-2.tar.gz"
-BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/linux_patches/6.19"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="https://github.com/CachyOS/linux/releases/download/cachyos-7.0-rc6-1/cachyos-7.0-rc6-1.tar.gz"
+BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/linux_patches/7.0"
 BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/linux_x86_64-defconfig.config"
 BR2_LINUX_KERNEL_NEEDS_HOST_LIBELF=y

@@ -9,12 +9,14 @@ echo  ${STARTLINE}"Cleaning Batocera Linux Kernel                    "${ENDLINE}
 
 delkern="linux-custom*
 linux-6.*
+linux-7.*
 linux-headers*
+*-amd*
+*-nvidia*
 aic8800*
 ayaneo-platform*
 ayn-platform*
 batman-adv*
-*-nvidia*
 cryptodev-linux*
 dahdi-linux*
 db9_gpio_rpi*
@@ -29,6 +31,7 @@ guncon*
 guncon3*
 hid-nx*
 hid-t150*
+hid-tmff2*
 igh-ethercat*
 kernel-module-imx-gpu-viv*
 libargtable2*
@@ -37,11 +40,14 @@ lttng-modules*
 mali-driver*
 mdio-tools*
 new-lg4ff*
-nvidia-driver*
+nvidia-*
+nxp-mwifiex*
 openvmtools*
 owl-linux*
 r81*
+rocknix-joypad*
 rtl8*
+rtw88*
 ryzen*
 v4l2loopback*
 wilc-driver*
@@ -50,8 +56,7 @@ xone*
 xpadneo*
 xpad-noone*
 xr819-xradio*
-zfs*
-nvidia-*"
+zfs*"
 
 read -p "Delete RPI Kerenl? (y/n)" yn
 case $yn in
