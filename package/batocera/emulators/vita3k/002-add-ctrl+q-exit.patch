@@ -1,5 +1,5 @@
 diff --git a/vita3k/interface.cpp b/vita3k/interface.cpp
-index 232b42c5..61c23588 100644
+index c76b3788..b962cf59 100644
 --- a/vita3k/interface.cpp
 +++ b/vita3k/interface.cpp
 @@ -717,6 +717,20 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
@@ -21,16 +21,16 @@ index 232b42c5..61c23588 100644
 +            }
 +
              const auto get_sce_ctrl_btn_from_scancode = [&emuenv](const SDL_Scancode scancode) {
-                 if (scancode == emuenv.cfg.keyboard_button_up)
+                 if (scancode == emuenv.cfg.keyboard_button_up || scancode == emuenv.cfg.keyboard_button_up_alt)
                      return SCE_CTRL_UP;
 @@ -736,8 +750,8 @@ bool handle_events(EmuEnvState &emuenv, GuiState &gui) {
                      return SCE_CTRL_CIRCLE;
-                 else if (scancode == emuenv.cfg.keyboard_button_cross)
+                 else if (scancode == emuenv.cfg.keyboard_button_cross || scancode == emuenv.cfg.keyboard_button_cross_alt)
                      return SCE_CTRL_CROSS;
--                else if (scancode == emuenv.cfg.keyboard_button_psbutton)
+-                else if (scancode == emuenv.cfg.keyboard_button_psbutton || scancode == emuenv.cfg.keyboard_button_psbutton_alt)
 -                    return SCE_CTRL_PSBUTTON;
-+                //else if (scancode == emuenv.cfg.keyboard_button_psbutton)
-+                    //return SCE_CTRL_PSBUTTON;
++                //else if (scancode == emuenv.cfg.keyboard_button_psbutton || scancode == emuenv.cfg.keyboard_button_psbutton_alt)
++                //    return SCE_CTRL_PSBUTTON;
                  else
                      return static_cast<SceCtrlButtons>(0);
              };
