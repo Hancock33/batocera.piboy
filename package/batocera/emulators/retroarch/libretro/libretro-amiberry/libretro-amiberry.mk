@@ -23,6 +23,12 @@ endef
 define LIBRETRO_AMIBERRY_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libretro/amiberry_libretro.so $(TARGET_DIR)/usr/lib/libretro/amiberry_libretro.so
+
+	# copy run-time files
+	rm -rf $(TARGET_DIR)/usr/share/batocera/datainit/bios/whdboot
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/whdboot/save-data
+	cp -vr $(@D)/whdboot/{game,save}-data $(TARGET_DIR)/usr/share/batocera/datainit/bios/whdboot
+	unzip $(@D)/whdboot/boot-data.zip -d $(TARGET_DIR)/usr/share/batocera/datainit/bios/whdboot/save-data
 endef
 
 $(eval $(generic-package))

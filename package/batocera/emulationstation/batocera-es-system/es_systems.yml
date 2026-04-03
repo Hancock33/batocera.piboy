@@ -1600,9 +1600,10 @@ amiga1200:
       A1200:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
       A4000:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:amiga1200
   comment_fr:           |
@@ -1629,9 +1630,10 @@ amiga500:
       A500:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
       A500+:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:amiga500
   comment_fr:           |
@@ -1653,9 +1655,10 @@ amigacd32:
     amiberry:
       CD32:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
 
 amigacdtv:
   name:                 Amiga CDTV
@@ -1671,9 +1674,10 @@ amigacdtv:
     amiberry:
       CDTV:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
 
 amigademo:
   name:                 Amiga Demoscene
@@ -1698,9 +1702,10 @@ amigademo:
       A1200:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
       A4000:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
 
 c128:
   name:                 Commodore 128
