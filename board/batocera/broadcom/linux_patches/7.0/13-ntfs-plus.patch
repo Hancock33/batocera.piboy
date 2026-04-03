@@ -1,5 +1,5 @@
 diff --git a/CREDITS b/CREDITS
-index f7e480057630..04a57d164044 100644
+index 9091bac3d2da..df5281ac7d88 100644
 --- a/CREDITS
 +++ b/CREDITS
 @@ -71,11 +71,6 @@ D: dosfs, LILO, some fd features, ATM, various other hacks here and there
@@ -203,10 +203,10 @@ index 000000000000..5c96b04a4d7a
 +                        storage.
 +======================= ====================================================
 diff --git a/MAINTAINERS b/MAINTAINERS
-index b8d8a5c41597..26248a59db9a 100644
+index 831525651c61..22a3fdab6cd0 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -18867,6 +18867,15 @@ W:	https://github.com/davejiang/linux/wiki
+@@ -18896,6 +18896,15 @@ W:	https://github.com/davejiang/linux/wiki
  T:	git https://github.com/davejiang/linux.git
  F:	drivers/ntb/hw/intel/
  
@@ -587,10 +587,10 @@ index 000000000000..78d1ce41958e
 +};
 diff --git a/fs/ntfs/attrib.c b/fs/ntfs/attrib.c
 new file mode 100644
-index 000000000000..48759f6a78c4
+index 000000000000..1477dbd3af82
 --- /dev/null
 +++ b/fs/ntfs/attrib.c
-@@ -0,0 +1,5428 @@
+@@ -0,0 +1,5424 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS attribute operations.
@@ -2655,7 +2655,7 @@ index 000000000000..48759f6a78c4
 +
 +	/* Rigorous consistency checks. */
 +	if (!m || !pos || pos < (u8 *)m) {
-+		pr_err("%s: pos=%p  m=%p", __func__, pos, m);
++		pr_err("%s: pos=%p  m=%p\n", __func__, pos, m);
 +		return -EINVAL;
 +	}
 +
@@ -2833,16 +2833,16 @@ index 000000000000..48759f6a78c4
 +	err = ntfs_attr_can_be_non_resident(ni->vol, type);
 +	if (err) {
 +		if (err == -EPERM)
-+			pr_err("Attribute can't be non resident");
++			pr_err("Attribute can't be non resident\n");
 +		else
-+			pr_err("ntfs_attr_can_be_non_resident failed");
++			pr_err("ntfs_attr_can_be_non_resident failed\n");
 +		return err;
 +	}
 +
 +	/* Locate place where record should be. */
 +	ctx = ntfs_attr_get_search_ctx(ni, NULL);
 +	if (!ctx) {
-+		pr_err("%s: Failed to get search context", __func__);
++		pr_err("%s: Failed to get search context\n", __func__);
 +		return -ENOMEM;
 +	}
 +	/*
@@ -2853,11 +2853,11 @@ index 000000000000..48759f6a78c4
 +	err = ntfs_attr_find(type, name, name_len, CASE_SENSITIVE, NULL, 0, ctx);
 +	if (!err) {
 +		err = -EEXIST;
-+		pr_err("Attribute 0x%x already present", type);
++		pr_err("Attribute 0x%x already present\n", type);
 +		goto put_err_out;
 +	}
 +	if (err != -ENOENT) {
-+		pr_err("ntfs_attr_find failed");
++		pr_err("ntfs_attr_find failed\n");
 +		err = -EIO;
 +		goto put_err_out;
 +	}
@@ -2872,7 +2872,7 @@ index 000000000000..48759f6a78c4
 +		 sizeof(a->data.non_resident.compressed_size) : 0);
 +	err = ntfs_make_room_for_attr(ctx->mrec, (u8 *) ctx->attr, length);
 +	if (err) {
-+		pr_err("Failed to make room for attribute");
++		pr_err("Failed to make room for attribute\n");
 +		goto put_err_out;
 +	}
 +
@@ -2912,7 +2912,7 @@ index 000000000000..48759f6a78c4
 +	if (type != AT_ATTRIBUTE_LIST && NInoAttrList(base_ni)) {
 +		err = ntfs_attrlist_entry_add(ni, a);
 +		if (err) {
-+			pr_err("Failed add attr entry to attrlist");
++			pr_err("Failed add attr entry to attrlist\n");
 +			ntfs_attr_record_resize(m, a, 0);
 +			goto put_err_out;
 +		}
@@ -2927,7 +2927,7 @@ index 000000000000..48759f6a78c4
 +	err = ntfs_attr_lookup(type, name, name_len, CASE_SENSITIVE,
 +				lowest_vcn, NULL, 0, ctx);
 +	if (err) {
-+		pr_err("%s: attribute lookup failed", __func__);
++		pr_err("%s: attribute lookup failed\n", __func__);
 +		ntfs_attr_put_search_ctx(ctx);
 +		return err;
 +
@@ -3418,7 +3418,7 @@ index 000000000000..48759f6a78c4
 +	ctx = ntfs_attr_get_search_ctx(base_ni, NULL);
 +	if (!ctx) {
 +		err = -ENOMEM;
-+		pr_err("%s: Failed to get search context", __func__);
++		pr_err("%s: Failed to get search context\n", __func__);
 +		goto err_out;
 +	}
 +
@@ -5208,7 +5208,7 @@ index 000000000000..48759f6a78c4
 +	 * which is what Windows NT4 does, too.
 +	 */
 +	if (NInoEncrypted(ni)) {
-+		pr_err("Failed to truncate encrypted attribute");
++		pr_err("Failed to truncate encrypted attribute\n");
 +		return -EACCES;
 +	}
 +
@@ -5262,12 +5262,12 @@ index 000000000000..48759f6a78c4
 +	 * which is what Windows NT4 does, too.
 +	 */
 +	if (NInoEncrypted(ni)) {
-+		pr_err("Failed to truncate encrypted attribute");
++		pr_err("Failed to truncate encrypted attribute\n");
 +		return -EACCES;
 +	}
 +
 +	if (NInoCompressed(ni)) {
-+		pr_err("Failed to truncate compressed attribute");
++		pr_err("Failed to truncate compressed attribute\n");
 +		return -EOPNOTSUPP;
 +	}
 +
@@ -5534,23 +5534,19 @@ index 000000000000..48759f6a78c4
 +int ntfs_attr_remove(struct ntfs_inode *ni, const __le32 type, __le16 *name,
 +		u32 name_len)
 +{
-+	struct super_block *sb;
 +	int err;
 +	struct inode *attr_vi;
 +	struct ntfs_inode *attr_ni;
 +
 +	ntfs_debug("Entering\n");
 +
-+	sb = ni->vol->sb;
-+	if (!ni) {
-+		ntfs_error(sb, "NULL inode pointer\n");
++	if (!ni)
 +		return -EINVAL;
-+	}
 +
 +	attr_vi = ntfs_attr_iget(VFS_I(ni), type, name, name_len);
 +	if (IS_ERR(attr_vi)) {
 +		err = PTR_ERR(attr_vi);
-+		ntfs_error(sb, "Failed to open attribute 0x%02x of inode 0x%llx",
++		ntfs_error(ni->vol->sb, "Failed to open attribute 0x%02x of inode 0x%llx",
 +				type, (unsigned long long)ni->mft_no);
 +		return err;
 +	}
@@ -5558,7 +5554,7 @@ index 000000000000..48759f6a78c4
 +
 +	err = ntfs_attr_rm(attr_ni);
 +	if (err)
-+		ntfs_error(sb, "Failed to remove attribute 0x%02x of inode 0x%llx",
++		ntfs_error(ni->vol->sb, "Failed to remove attribute 0x%02x of inode 0x%llx",
 +				type, (unsigned long long)ni->mft_no);
 +	iput(attr_vi);
 +	return err;
@@ -9057,10 +9053,10 @@ index 000000000000..d8831d492d7d
 +#endif /* _LINUX_NTFS_DEBUG_H */
 diff --git a/fs/ntfs/dir.c b/fs/ntfs/dir.c
 new file mode 100644
-index 000000000000..8d417b4a0e80
+index 000000000000..bfa904d2ce66
 --- /dev/null
 +++ b/fs/ntfs/dir.c
-@@ -0,0 +1,1236 @@
+@@ -0,0 +1,1238 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel directory operations.
@@ -9656,7 +9652,7 @@ index 000000000000..8d417b4a0e80
 +		unmap_mft_record(dir_ni);
 +	kfree(name);
 +	*res = NULL;
-+	if (ia_vi && !IS_ERR(ia_vi))
++	if (!IS_ERR_OR_NULL(ia_vi))
 +		iput(ia_vi);
 +	return ERR_MREF(err);
 +dir_err_out:
@@ -10095,8 +10091,10 @@ index 000000000000..8d417b4a0e80
 +	}
 +
 +	if (err) {
-+		private->curr_pos = actor->pos;
-+		private->end_in_iterate = true;
++		if (private) {
++			private->curr_pos = actor->pos;
++			private->end_in_iterate = true;
++		}
 +		err = 0;
 +	}
 +	ntfs_index_ctx_put(ictx);
@@ -10337,10 +10335,10 @@ index 000000000000..a38c6b071678
 +#endif /* _LINUX_NTFS_FS_DIR_H */
 diff --git a/fs/ntfs/ea.c b/fs/ntfs/ea.c
 new file mode 100644
-index 000000000000..b2b0a9a043a9
+index 000000000000..ee99baf9c7d2
 --- /dev/null
 +++ b/fs/ntfs/ea.c
-@@ -0,0 +1,943 @@
+@@ -0,0 +1,954 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Pocessing of EA's
@@ -10389,10 +10387,11 @@ index 000000000000..b2b0a9a043a9
 +}
 +
 +static int ntfs_ea_lookup(char *ea_buf, s64 ea_buf_size, const char *name,
-+		int name_len, s64 *ea_offset, s64 *ea_size)
++			  int name_len, s64 *ea_offset, s64 *ea_size)
 +{
 +	const struct ea_attr *p_ea;
-+	s64 offset;
++	size_t actual_size;
++	loff_t offset, p_ea_size;
 +	unsigned int next;
 +
 +	if (ea_buf_size < sizeof(struct ea_attr))
@@ -10402,27 +10401,25 @@ index 000000000000..b2b0a9a043a9
 +	do {
 +		p_ea = (const struct ea_attr *)&ea_buf[offset];
 +		next = le32_to_cpu(p_ea->next_entry_offset);
++		p_ea_size = next ? next : (ea_buf_size - offset);
 +
-+		if (offset + next > ea_buf_size ||
-+		    ((1 + p_ea->ea_name_length) > (ea_buf_size - offset)))
++		if (p_ea_size < sizeof(struct ea_attr) ||
++		    offset + p_ea_size > ea_buf_size)
++			break;
++
++		if ((s64)p_ea->ea_name_length + 1 >
++		    p_ea_size - offsetof(struct ea_attr, ea_name))
++			break;
++
++		actual_size = ALIGN(struct_size(p_ea, ea_name, 1 + p_ea->ea_name_length +
++					le16_to_cpu(p_ea->ea_value_length)), 4);
++		if (actual_size > p_ea_size)
 +			break;
 +
 +		if (p_ea->ea_name_length == name_len &&
 +		    !memcmp(p_ea->ea_name, name, name_len)) {
 +			*ea_offset = offset;
-+			if (next)
-+				*ea_size = next;
-+			else {
-+				unsigned int ea_len = 1 + p_ea->ea_name_length +
-+						le16_to_cpu(p_ea->ea_value_length);
-+
-+				if ((ea_buf_size - offset) < ea_len)
-+					goto out;
-+
-+				*ea_size = ALIGN(struct_size(p_ea, ea_name,
-+							1 + p_ea->ea_name_length +
-+							le16_to_cpu(p_ea->ea_value_length)), 4);
-+			}
++			*ea_size = next ? next : actual_size;
 +
 +			if (ea_buf_size < *ea_offset + *ea_size)
 +				goto out;
@@ -10430,8 +10427,7 @@ index 000000000000..b2b0a9a043a9
 +			return 0;
 +		}
 +		offset += next;
-+	} while (next > 0 && offset < ea_buf_size &&
-+		 sizeof(struct ea_attr) < (ea_buf_size - offset));
++	} while (next > 0 && offset < ea_buf_size);
 +
 +out:
 +	return -ENOENT;
@@ -10478,6 +10474,11 @@ index 000000000000..b2b0a9a043a9
 +	ea_buf = ntfs_attr_readall(ni, AT_EA, NULL, 0, &all_ea_size);
 +	if (!ea_buf)
 +		return -ENODATA;
++
++	if (ea_info_qlen > all_ea_size) {
++		err = -EIO;
++		goto free_ea_buf;
++	}
 +
 +	err = ntfs_ea_lookup(ea_buf, ea_info_qlen, name, name_len, &ea_off,
 +			&ea_size);
@@ -10708,21 +10709,25 @@ index 000000000000..b2b0a9a043a9
 +				sizeof(v));
 +		if (err < 0)
 +			return err;
++		if (err != sizeof(v))
++			return -EIO;
 +		i_uid_write(inode, le32_to_cpu(v));
 +	}
 +
-+	if (!(flags & NTFS_VOL_UID)) {
++	if (!(flags & NTFS_VOL_GID)) {
 +		/* Load gid to lxgid EA */
 +		err = ntfs_get_ea(inode, "$LXGID", sizeof("$LXGID") - 1, &v,
 +				sizeof(v));
 +		if (err < 0)
 +			return err;
++		if (err != sizeof(v))
++			return -EIO;
 +		i_gid_write(inode, le32_to_cpu(v));
 +	}
 +
 +	/* Load mode to lxmod EA */
 +	err = ntfs_get_ea(inode, "$LXMOD", sizeof("$LXMOD") - 1, &v, sizeof(v));
-+	if (err > 0) {
++	if (err == sizeof(v)) {
 +		inode->i_mode = le32_to_cpu(v);
 +	} else {
 +		/* Everyone gets all permissions. */
@@ -10731,7 +10736,7 @@ index 000000000000..b2b0a9a043a9
 +
 +	/* Load mode to lxdev EA */
 +	err = ntfs_get_ea(inode, "$LXDEV", sizeof("$LXDEV") - 1, &v, sizeof(v));
-+	if (err > 0)
++	if (err == sizeof(v))
 +		*rdevp = le32_to_cpu(v);
 +	err = 0;
 +
@@ -10786,7 +10791,9 @@ index 000000000000..b2b0a9a043a9
 +	struct ntfs_inode *ni = NTFS_I(inode);
 +	const struct ea_attr *p_ea;
 +	s64 offset, ea_buf_size, ea_info_size;
-+	int next, err = 0, ea_size;
++	s64 ea_size;
++	u32 next;
++	int err = 0;
 +	u32 ea_info_qsize;
 +	char *ea_buf = NULL;
 +	ssize_t ret = 0;
@@ -10807,34 +10814,37 @@ index 000000000000..b2b0a9a043a9
 +	if (!ea_buf)
 +		goto out;
 +
-+	if (ea_info_qsize > ea_buf_size)
++	if (ea_info_qsize > ea_buf_size || ea_info_qsize == 0)
 +		goto out;
 +
-+	if (ea_buf_size < sizeof(struct ea_attr))
++	if (ea_info_qsize < sizeof(struct ea_attr)) {
++		err = -EIO;
 +		goto out;
++	}
 +
 +	offset = 0;
 +	do {
 +		p_ea = (const struct ea_attr *)&ea_buf[offset];
 +		next = le32_to_cpu(p_ea->next_entry_offset);
-+		if (next)
-+			ea_size = next;
-+		else
-+			ea_size = ALIGN(struct_size(p_ea, ea_name,
-+						1 + p_ea->ea_name_length +
-+						le16_to_cpu(p_ea->ea_value_length)),
-+					4);
-+		if (buffer) {
-+			if (offset + ea_size > ea_info_qsize)
-+				break;
++		ea_size = next ? next : (ea_info_qsize - offset);
 +
++		if (ea_size < sizeof(struct ea_attr) ||
++		    offset + ea_size > ea_info_qsize) {
++			err = -EIO;
++			goto out;
++		}
++
++		if ((int)p_ea->ea_name_length + 1 >
++			ea_size - offsetof(struct ea_attr, ea_name)) {
++			err = -EIO;
++			goto out;
++		}
++
++		if (buffer) {
 +			if (ret + p_ea->ea_name_length + 1 > size) {
 +				err = -ERANGE;
 +				goto out;
 +			}
-+
-+			if (p_ea->ea_name_length + 1 > (ea_info_qsize - offset))
-+				break;
 +
 +			memcpy(buffer + ret, p_ea->ea_name, p_ea->ea_name_length);
 +			buffer[ret + p_ea->ea_name_length] = 0;
@@ -10842,8 +10852,7 @@ index 000000000000..b2b0a9a043a9
 +
 +		ret += p_ea->ea_name_length + 1;
 +		offset += ea_size;
-+	} while (next > 0 && offset < ea_info_qsize &&
-+		 sizeof(struct ea_attr) < (ea_info_qsize - offset));
++	} while (next > 0 && offset < ea_info_qsize);
 +
 +out:
 +	mutex_unlock(&NTFS_I(inode)->mrec_lock);
@@ -10956,7 +10965,7 @@ index 000000000000..b2b0a9a043a9
 +		goto out;
 +
 +	if (a->data.non_resident.data_size) {
-+		pr_err("Can't change sparsed/compressed for non-empty file");
++		pr_err("Can't change sparsed/compressed for non-empty file\n");
 +		err = -EOPNOTSUPP;
 +		goto err_out;
 +	}
@@ -12489,7 +12498,7 @@ index 000000000000..273578015999
 +const struct inode_operations ntfs_empty_inode_ops = {};
 diff --git a/fs/ntfs/index.c b/fs/ntfs/index.c
 new file mode 100644
-index 000000000000..42251bdb6f5a
+index 000000000000..2080f3969137
 --- /dev/null
 +++ b/fs/ntfs/index.c
 @@ -0,0 +1,2117 @@
@@ -14502,43 +14511,43 @@ index 000000000000..42251bdb6f5a
 +static struct index_entry *ntfs_index_walk_up(struct index_entry *ie,
 +		struct ntfs_index_context *ictx)
 +{
-+	struct index_entry *entry;
++	struct index_entry *entry = ie;
 +	s64 vcn;
 +
-+	entry = ie;
-+	if (ictx->pindex > 0) {
-+		do {
-+			ictx->pindex--;
-+			if (!ictx->pindex) {
-+				/* we have reached the root */
-+				kfree(ictx->ib);
-+				ictx->ib = NULL;
-+				ictx->is_in_root = true;
-+				/* a new search context is to be allocated */
-+				if (ictx->actx)
-+					ntfs_attr_put_search_ctx(ictx->actx);
-+				ictx->ir = ntfs_ir_lookup(ictx->idx_ni, ictx->name,
-+						ictx->name_len, &ictx->actx);
-+				if (ictx->ir)
-+					entry = ntfs_ie_get_by_pos(&ictx->ir->index,
-+							ictx->parent_pos[ictx->pindex]);
-+				else
-+					entry = NULL;
-+			} else {
-+					/* up into non-root node */
-+				vcn = ictx->parent_vcn[ictx->pindex];
-+				if (!ntfs_ib_read(ictx, vcn, ictx->ib)) {
-+					entry = ntfs_ie_get_by_pos(&ictx->ib->index,
-+							ictx->parent_pos[ictx->pindex]);
-+				} else
-+					entry = NULL;
-+			}
-+		ictx->entry = entry;
-+		} while (entry && (ictx->pindex > 0) &&
-+				(entry->flags & INDEX_ENTRY_END));
-+	} else
-+		entry = NULL;
++	if (ictx->pindex <= 0)
++		return NULL;
 +
++	do {
++		ictx->pindex--;
++		if (!ictx->pindex) {
++			/* we have reached the root */
++			kfree(ictx->ib);
++			ictx->ib = NULL;
++			ictx->is_in_root = true;
++			/* a new search context is to be allocated */
++			if (ictx->actx)
++				ntfs_attr_put_search_ctx(ictx->actx);
++			ictx->ir = ntfs_ir_lookup(ictx->idx_ni, ictx->name,
++						  ictx->name_len, &ictx->actx);
++			if (ictx->ir)
++				entry = ntfs_ie_get_by_pos(
++					&ictx->ir->index,
++					ictx->parent_pos[ictx->pindex]);
++			else
++				entry = NULL;
++		} else {
++			/* up into non-root node */
++			vcn = ictx->parent_vcn[ictx->pindex];
++			if (!ntfs_ib_read(ictx, vcn, ictx->ib)) {
++				entry = ntfs_ie_get_by_pos(
++					&ictx->ib->index,
++					ictx->parent_pos[ictx->pindex]);
++			} else
++				entry = NULL;
++		}
++		ictx->entry = entry;
++	} while (entry && (ictx->pindex > 0) &&
++		 (entry->flags & INDEX_ENTRY_END));
 +	return entry;
 +}
 +
@@ -14729,10 +14738,10 @@ index 000000000000..e68d6fabaf9f
 +#endif /* _LINUX_NTFS_INDEX_H */
 diff --git a/fs/ntfs/inode.c b/fs/ntfs/inode.c
 new file mode 100644
-index 000000000000..43d7ecc14c15
+index 000000000000..314741a40369
 --- /dev/null
 +++ b/fs/ntfs/inode.c
-@@ -0,0 +1,3817 @@
+@@ -0,0 +1,3815 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * NTFS kernel inode handling.
@@ -15600,10 +15609,10 @@ index 000000000000..43d7ecc14c15
 +	}
 +skip_attr_list_load:
 +	err = ntfs_attr_lookup(AT_EA_INFORMATION, NULL, 0, 0, 0, NULL, 0, ctx);
-+	if (!err)
++	if (!err) {
 +		NInoSetHasEA(ni);
-+
-+	ntfs_ea_get_wsl_inode(vi, &dev, flags);
++		ntfs_ea_get_wsl_inode(vi, &dev, flags);
++	}
 +
 +	if (m->flags & MFT_RECORD_IS_DIRECTORY) {
 +		vi->i_mode |= S_IFDIR;
@@ -16496,7 +16505,7 @@ index 000000000000..43d7ecc14c15
 +		/* The attribute list cannot be sparse. */
 +		if (lcn < 0) {
 +			ntfs_error(sb, "ntfs_rl_vcn_to_lcn() failed. Cannot read attribute list.");
-+			goto err_out;
++			return -EIO;
 +		}
 +
 +		rl_byte_off = ntfs_cluster_to_bytes(vol, lcn);
@@ -16509,7 +16518,7 @@ index 000000000000..43d7ecc14c15
 +				   round_up(rl_byte_len, SECTOR_SIZE));
 +		if (err) {
 +			ntfs_error(sb, "Cannot read attribute list.");
-+			goto err_out;
++			return -EIO;
 +		}
 +
 +		if (al + rl_byte_len >= al_end) {
@@ -16527,11 +16536,6 @@ index 000000000000..43d7ecc14c15
 +	}
 +done:
 +	return err;
-+	/* Real overflow! */
-+	ntfs_error(sb, "Attribute list buffer overflow. Read attribute list is truncated.");
-+err_out:
-+	err = -EIO;
-+	goto done;
 +}
 +
 +/*
@@ -17985,8 +17989,10 @@ index 000000000000..43d7ecc14c15
 +	 * base inode before destroying it.
 +	 */
 +	base_ni = ni->ext.base_ntfs_ino;
++	tmp_nis = base_ni->ext.extent_ntfs_inos;
++	if (!tmp_nis)
++		goto out;
 +	for (i = 0; i < base_ni->nr_extents; ++i) {
-+		tmp_nis = base_ni->ext.extent_ntfs_inos;
 +		if (tmp_nis[i] != ni)
 +			continue;
 +		/* Found it. Disconnect. */
@@ -18014,6 +18020,7 @@ index 000000000000..43d7ecc14c15
 +		break;
 +	}
 +
++out:
 +	if (NInoDirty(ni))
 +		ntfs_error(ni->vol->sb, "Releasing dirty inode %llu!\n",
 +				ni->mft_no);
@@ -22173,10 +22180,10 @@ index 000000000000..d94f914e830f
 +#endif /* _LINUX_NTFS_LAYOUT_H */
 diff --git a/fs/ntfs/lcnalloc.c b/fs/ntfs/lcnalloc.c
 new file mode 100644
-index 000000000000..237f13a11df3
+index 000000000000..835a041023a2
 --- /dev/null
 +++ b/fs/ntfs/lcnalloc.c
-@@ -0,0 +1,1047 @@
+@@ -0,0 +1,1049 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Cluster (de)allocation code.
@@ -22900,7 +22907,7 @@ index 000000000000..237f13a11df3
 +		rl[rlpos].lcn = is_extension ? LCN_ENOENT : LCN_RL_NOT_MAPPED;
 +		rl[rlpos].length = 0;
 +	}
-+	if (likely(folio && !IS_ERR(folio))) {
++	if (!IS_ERR_OR_NULL(folio)) {
 +		if (need_writeback) {
 +			ntfs_debug("Marking page dirty.");
 +			folio_mark_dirty(folio);
@@ -22911,11 +22918,13 @@ index 000000000000..237f13a11df3
 +		folio_put(folio);
 +	}
 +	if (likely(!err)) {
++		if (!rl) {
++			err = -EIO;
++			goto out_restore;
++		}
 +		if (is_dealloc == true)
 +			ntfs_release_dirty_clusters(vol, rl->length);
 +		ntfs_debug("Done.");
-+		if (rl == NULL)
-+			err = -EIO;
 +		goto out_restore;
 +	}
 +	if (err != -ENOSPC)
@@ -24484,7 +24493,7 @@ index 000000000000..7068425735f1
 +#endif /* _LINUX_NTFS_MALLOC_H */
 diff --git a/fs/ntfs/mft.c b/fs/ntfs/mft.c
 new file mode 100644
-index 000000000000..48e64eaa7ec3
+index 000000000000..8de0a1e47c2e
 --- /dev/null
 +++ b/fs/ntfs/mft.c
 @@ -0,0 +1,2924 @@
@@ -26949,7 +26958,7 @@ index 000000000000..48e64eaa7ec3
 +			m->flags &= cpu_to_le16(
 +					~le16_to_cpu(MFT_RECORD_IN_USE));
 +			/* Make sure the mft record is written out to disk. */
-+			   ntfs_mft_mark_dirty(folio);
++			ntfs_mft_mark_dirty(folio);
 +			folio_unlock(folio);
 +			kunmap_local(m);
 +			folio_put(folio);
@@ -27711,7 +27720,7 @@ index 000000000000..7f9faad924ad
 +}
 diff --git a/fs/ntfs/namei.c b/fs/ntfs/namei.c
 new file mode 100644
-index 000000000000..62c3f5733dbe
+index 000000000000..ba42c566940a
 --- /dev/null
 +++ b/fs/ntfs/namei.c
 @@ -0,0 +1,1692 @@
@@ -28527,7 +28536,7 @@ index 000000000000..62c3f5733dbe
 +static int ntfs_test_inode_attr(struct inode *vi, void *data)
 +{
 +	struct ntfs_inode *ni = NTFS_I(vi);
-+	u64 mft_no = (u64)data;
++	u64 mft_no = (u64)(uintptr_t)data;
 +
 +	if (ni->mft_no != mft_no)
 +		return 0;
@@ -28707,7 +28716,7 @@ index 000000000000..62c3f5733dbe
 +		struct inode *attr_vi;
 +
 +		while ((attr_vi = ilookup5(sb, ni->mft_no, ntfs_test_inode_attr,
-+					   (void *)ni->mft_no)) != NULL) {
++					   (void *)(uintptr_t)ni->mft_no)) != NULL) {
 +			clear_nlink(attr_vi);
 +			iput(attr_vi);
 +		}
@@ -30620,7 +30629,7 @@ index 000000000000..28da40257f2a
 +#endif /* _LINUX_NTFS_REPARSE_H */
 diff --git a/fs/ntfs/runlist.c b/fs/ntfs/runlist.c
 new file mode 100644
-index 000000000000..c844845f627c
+index 000000000000..b213b4976d2b
 --- /dev/null
 +++ b/fs/ntfs/runlist.c
 @@ -0,0 +1,2066 @@
@@ -32224,7 +32233,7 @@ index 000000000000..c844845f627c
 +	for (rlc = rl; rlc->length; rlc++)
 +		if (rlc->lcn < 0) {
 +			if (rlc->lcn != LCN_HOLE && rlc->lcn != LCN_DELALLOC) {
-+				pr_err("%s: bad runlist", __func__);
++				pr_err("%s: bad runlist\n", __func__);
 +				return -EINVAL;
 +			}
 +			return 1;
@@ -32287,7 +32296,7 @@ index 000000000000..c844845f627c
 +{
 +	struct runlist_element *i_rl, *new_rl, *src_rl_origin = src_rl;
 +	struct runlist_element dst_rl_split;
-+	s64 start_vcn = src_rl[0].vcn;
++	s64 start_vcn;
 +	int new_1st_cnt, new_2nd_cnt, new_3rd_cnt, new_cnt;
 +
 +	if (!dst_rl || !src_rl || !new_rl_cnt)
@@ -36661,7 +36670,7 @@ index 4652a56ad105..d99ab086ef6f 100644
 -#endif
  // clang-format on
 diff --git a/fs/ntfs3/file.c b/fs/ntfs3/file.c
-index f53037e0ecb6..a45d19445141 100644
+index 7eecf1e01f74..bb8f5ed4b89f 100644
 --- a/fs/ntfs3/file.c
 +++ b/fs/ntfs3/file.c
 @@ -1569,15 +1569,4 @@ const struct file_operations ntfs_file_operations = {
@@ -36729,7 +36738,7 @@ index 6e65066ebcc1..d2009053c93a 100644
  							      &ntfs_aops;
  		init_rwsem(&ni->file.run_lock);
 diff --git a/fs/ntfs3/ntfs_fs.h b/fs/ntfs3/ntfs_fs.h
-index 921b526eb0f4..2a7971f27e67 100644
+index daf5a1f47275..56e608de4f70 100644
 --- a/fs/ntfs3/ntfs_fs.h
 +++ b/fs/ntfs3/ntfs_fs.h
 @@ -530,7 +530,6 @@ struct inode *dir_search_u(struct inode *dir, const struct cpu_str *uni,
@@ -36763,7 +36772,7 @@ index 921b526eb0f4..2a7971f27e67 100644
 -
  #endif /* _LINUX_NTFS3_NTFS_FS_H */
 diff --git a/fs/ntfs3/super.c b/fs/ntfs3/super.c
-index 27411203082a..47c11547c972 100644
+index 174a7cb202a0..cf5c2c00f505 100644
 --- a/fs/ntfs3/super.c
 +++ b/fs/ntfs3/super.c
 @@ -434,12 +434,6 @@ static int ntfs_fs_reconfigure(struct fs_context *fc)

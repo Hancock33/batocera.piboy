@@ -1,8 +1,8 @@
 diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
-index 74f820e89655..f0e469aafe6e 100644
+index 3b0626920193..1ead1366159b 100644
 --- a/drivers/bluetooth/btqca.c
 +++ b/drivers/bluetooth/btqca.c
-@@ -1017,15 +1017,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);
+@@ -1019,15 +1019,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);
  
  int qca_set_bdaddr(struct hci_dev *hdev, const bdaddr_t *bdaddr)
  {
