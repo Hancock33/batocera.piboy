@@ -1,4 +1,6 @@
-﻿ayaneo-platform.mk
+﻿amiberry-lite.mk
+amiberry.mk
+ayaneo-platform.mk
 broadcom-bt-firmware.mk
 btop.mk
 cargs.mk
@@ -20,6 +22,7 @@ kodi-pvr-freebox
 ledspicer.mk
 libfreeaptx.mk
 libgme.mk
+libretro-amiberry.mk
 libretro-mame.mk
 libretro-mgba.mk
 libxmp.mk
