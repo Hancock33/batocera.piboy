@@ -71,7 +71,7 @@ mz80k;mz80k;cass;'L\n'
 n501;n501;;
 neogeo64;;;
 oric1;oric1;cass;'cload\"\"\n'
-oricatmos;orica;cass;
+oricatmos;orica;cass;'\nCLOAD\"\"\n'
 p2000t;p2000t;cass;'cloadm\n'
 pc60;pc6001;cart1;
 pc80;pc8001mk2sr;flop1;
