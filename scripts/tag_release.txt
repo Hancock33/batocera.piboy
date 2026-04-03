@@ -21,6 +21,7 @@ labwc.mk
 libdate.mk
 libfyaml.mk
 liblc3.mk
+libretro-scummvm.mk
 libserum.mk
 libsfdo.mk
 libzedmd.mk
@@ -38,6 +39,7 @@ python-nfcpy.mk
 python-pyxel.mk
 rgbds.mk
 rocknix-abl.mk
+scummvm.mk
 sdl12-compat.mk
 sdl3_image.mk
 sdl3_mixer.mk
