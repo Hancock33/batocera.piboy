@@ -16,8 +16,6 @@ Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libr
 Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|446257a59a43fb6fa08572b87ba94a4c073dbae1|Apr 03, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|92c3dc2c85505a4b5236c3887442051a5c45feeb|Apr 03, 2026
 Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libretro)|ec991b15902fbd95d0c0b9cb1f4dc03c1abf0b9e|Apr 03, 2026
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|419b5eae5c36c595e8346521ad0058e18515871f|Apr 02, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|419b5eae5c36c595e8346521ad0058e18515871f|Apr 02, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|b400b33be1c4e4fb16c498f3af269533d96865e9|Apr 02, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|d1b7824443093345992026fdaeba50f76bd5d8c0|Apr 02, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|eade8be64a1ac1472c2e38d12ad2abbfc1c321ee|Apr 02, 2026
@@ -154,10 +152,12 @@ Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|3066887ff4cf9f89e62
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|2712dbd1c8b45f862035b92314910e2f3c5ec6ae|Mar 28, 2026
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|3e917d8e34be0f3d1e83fdbba8ea1591342a78cf|Mar 28, 2026
 Engines|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|f7dc33c87064e97f7f4e29457e312b9cceb24349|Mar 28, 2026
+Engines|[scummvm](http://github.com/scummvm/scummvm)|v2026.2.0|Mar 28, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|946411d597cc5bf0ed781999da18e27d0a57240e|Mar 28, 2026
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|6ae89905b1c915331589c7b12f07c0aa06de9ca7|Mar 28, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|ec6b50f686f532b6d3b4eb7312ba55c7cfd59572|Mar 28, 2026
 Emulators|[libretro-citra](https://github.com/azahar-emu/azahar.git)|3066887ff4cf9f89e626047d0f142ad231053cf1|Mar 28, 2026
+Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|v2026.2.0|Mar 28, 2026
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|9498be27f8cdde1244045ee7bd6f11922a8f7916|Mar 28, 2026
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|cf19467f79a723a3180003d956aa1867a5921bd3|Mar 28, 2026
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|a070950e77031a8b5765017ab55a65d6eebb2600|Mar 28, 2026
@@ -202,6 +202,8 @@ Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-alpha4|Mar 20,
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|2b4ea3c6c18caf60959efee1f2534c2122607716|Mar 20, 2026
 Utils|[switchres](http://github.com/antonioginer/switchres)|v2.2.2|Mar 19, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|ba43c5abff7fbbb831a4beb9be54447df1532f0c|Mar 19, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|b4e12c3d91c891614d8722a3048687311517058c|Mar 18, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|b4e12c3d91c891614d8722a3048687311517058c|Mar 18, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|cd186754ba0dcc1ea418d5557d59d7bf2ed628a3|Mar 18, 2026
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|ae95d31ea8ee49c92fcfbda84a8c6c43fa0df2ad|Mar 18, 2026
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|d8877e6282868d30e1c2d70c28ec1d1e2491d5b7|Mar 17, 2026
@@ -324,8 +326,6 @@ Libraries|[nghttp3](https://github.com/ngtcp2/nghttp3.git)|v1.15.0|Jan 20, 2026
 Controllers|[rocknix-joypad](http://github.com/ROCKNIX/rocknix-joypad)|7647fdb0fc89cd69b284903bf7707e861df5dc7e|Jan 20, 2026
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|f6bab5a7ba521ce440e45d1aeef6122674be6ee9|Jan 19, 2026
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|0e78f03409df27465fea480aacba9eebe9cd9fe0|Jan 18, 2026
-Engines|[scummvm](http://github.com/scummvm/scummvm)|f8d66eae4e6f7454196ded0ebb113c6a74842f5c|Jan 17, 2026
-Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|f8d66eae4e6f7454196ded0ebb113c6a74842f5c|Jan 17, 2026
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|510d36f901cbe883c56b155b53717e4efdeb6522|Jan 14, 2026
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.15.3|Jan 13, 2026
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|c8ef81c7d9aede9f67f6ed3d3426c90541f9f13e|Jan 13, 2026

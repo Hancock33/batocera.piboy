@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index ac3419a3e..50a7f2978 100644
+index 09993692b..106aeb18c 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,201 +9,287 @@ namespace PlatformIds
+@@ -9,200 +9,287 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -397,7 +397,6 @@ index ac3419a3e..50a7f2978 100644
 -		{ "astrocade",				ASTROCADE },
 -		{ "archimedes",				ARCHIMEDES },			
 -		{ "adam",					ADAM },
--		{ "bk",						ELEKTRONIKA_BK },
 -
 -		{ "fmtowns",				FMTOWNS },
 -		{ "cdi",					PHILIPS_CDI },			
@@ -435,7 +434,7 @@ index ac3419a3e..50a7f2978 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index c0151bbf7..d32d7ae1e 100644
+index 659c7600e..d32d7ae1e 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
 @@ -11,54 +11,173 @@ namespace PlatformIds
@@ -628,7 +627,7 @@ index c0151bbf7..d32d7ae1e 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_CHIHIRO,
-@@ -66,118 +185,82 @@ namespace PlatformIds
+@@ -66,117 +185,82 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -693,7 +692,6 @@ index c0151bbf7..d32d7ae1e 100644
 -
 -		// Misc systems
 -		CHANNELF,
--		ELEKTRONIKA_BK,
 -		ORICATMOS,
 -		THOMSON_TO_MO,
 -		SAMCOUPE,
@@ -916,10 +914,10 @@ index b1cd80a04..bdc54b912 100644
  	{ MSX, "27" },
  	{ NINTENDO_64, "4" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 9dce547c9..29f88fe46 100644
+index ca75a0ae0..29f88fe46 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -30,165 +30,239 @@ using namespace PlatformIds;
+@@ -30,164 +30,239 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1115,7 +1113,6 @@ index 9dce547c9..29f88fe46 100644
 -
 -	// Misc
 -	{ VIC20, 73 },
--	{ ELEKTRONIKA_BK, 93 },
 +	{ SEGA_SG1000, 109 },
 +	{ NINPOWER, 110 },
 +	{ AMIGA1200, 111 },
