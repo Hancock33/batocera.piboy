@@ -52,7 +52,7 @@ index 39dbc6d39a..4b42a5fc38 100644
    std::string m_gametdb_id;
    std::string m_title_name;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index bdae112865..53e4af9483 100644
+index cebcc748ec..b12f9595df 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
 @@ -777,10 +777,14 @@ void SaveScreenShot()
@@ -85,7 +85,7 @@ index 7dff8e13d5..14d8f2ee00 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index 98180a8736..2ebed25aed 100644
+index a234b4f919..777d0d7039 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
 @@ -301,11 +301,10 @@ static std::string SystemTimeAsDoubleToString(double time)
