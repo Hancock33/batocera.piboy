@@ -1,7 +1,4 @@
-# Odroid-Go Ultra default values
+# odroid-go ultra default values
 
-# default drm rotation
-display.rotate.DSI=3
-
-# Wayland LabWC
-display.rotate.DSI-1=1
+# default rotation
+display.rotate=3
