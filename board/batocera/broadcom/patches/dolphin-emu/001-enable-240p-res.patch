@@ -82,7 +82,7 @@ index 6277598d92..9cf5c1df6a 100644
      return;
    }
 diff --git a/Source/Core/VideoCommon/FramebufferManager.h b/Source/Core/VideoCommon/FramebufferManager.h
-index 7654698070..4de17b4f0b 100644
+index 9f10918ac2..bfb124e4d5 100644
 --- a/Source/Core/VideoCommon/FramebufferManager.h
 +++ b/Source/Core/VideoCommon/FramebufferManager.h
 @@ -74,7 +74,8 @@ public:
@@ -106,10 +106,10 @@ index 7654698070..4de17b4f0b 100644
  
    std::unique_ptr<AbstractTexture> m_efb_color_texture;
 diff --git a/Source/Core/VideoCommon/Present.cpp b/Source/Core/VideoCommon/Present.cpp
-index 6c5a1a4303..303cafa9c6 100644
+index 4374782464..fa2d7a0152 100644
 --- a/Source/Core/VideoCommon/Present.cpp
 +++ b/Source/Core/VideoCommon/Present.cpp
-@@ -86,7 +86,7 @@ static void TryToSnapToXFBSize(int& width, int& height, int xfb_width, int xfb_h
+@@ -79,7 +79,7 @@ static void TryToSnapToXFBSize(int& width, int& height, int xfb_width, int xfb_h
    // The reason why the threshold is 1 pixel (per internal resolution multiplier) is because of
    // minor inaccuracies of the VI aspect ratio (and because some resolutions are rounded
    // while other are floored).
@@ -119,10 +119,10 @@ index 6c5a1a4303..303cafa9c6 100644
    const unsigned int pixel_difference_height = std::abs(height - xfb_height);
    // We ignore this if there's an offset on both hor and ver size,
 diff --git a/Source/Core/VideoCommon/TextureCacheBase.cpp b/Source/Core/VideoCommon/TextureCacheBase.cpp
-index b1aac00672..57cd4f78b3 100644
+index 6fc13c5fba..7db3eaef4d 100644
 --- a/Source/Core/VideoCommon/TextureCacheBase.cpp
 +++ b/Source/Core/VideoCommon/TextureCacheBase.cpp
-@@ -1066,7 +1066,8 @@ SamplerState TextureCacheBase::GetSamplerState(u32 index, float custom_tex_scale
+@@ -1054,7 +1054,8 @@ SamplerState TextureCacheBase::GetSamplerState(u32 index, float custom_tex_scale
      // that have arbitrary contents, eg. are used for fog effects where the
      // distance they kick in at is important to preserve at any resolution.
      // Correct this with the upscaling factor of custom textures.
@@ -132,7 +132,7 @@ index b1aac00672..57cd4f78b3 100644
      state.tm0.lod_bias = std::clamp<s32>(state.tm0.lod_bias + lod_offset, -32768, 32767);
  
      // Anisotropic also pushes mips farther away so it cannot be used either
-@@ -2302,7 +2303,8 @@ void TextureCacheBase::CopyRenderTargetToTexture(
+@@ -2298,7 +2299,8 @@ void TextureCacheBase::CopyRenderTargetToTexture(
    //       complex down filtering to average all pixels and produce the correct result.
    const bool linear_filter =
        !is_depth_copy &&
@@ -142,11 +142,20 @@ index b1aac00672..57cd4f78b3 100644
  
    RcTcacheEntry entry;
    if (copy_to_vram)
+@@ -3116,7 +3118,7 @@ void TextureCacheBase::ApplyMaterialToCacheEntry(const VideoCommon::MaterialReso
+   uniforms.source_layer = 0;
+   uniforms.time = 0;
+   uniforms.graphics_api = static_cast<s32>(g_backend_info.api_type);
+-  uniforms.efb_scale = g_framebuffer_manager->GetEFBScale();
++  uniforms.efb_scale = g_framebuffer_manager->GetEFBScalef();
+ 
+   Common::UniqueBuffer<u8> uniform_buffer(custom_uniforms.size() + sizeof(uniforms));
+   std::memcpy(uniform_buffer.data(), &uniforms, sizeof(uniforms));
 diff --git a/Source/Core/VideoCommon/VideoConfig.cpp b/Source/Core/VideoCommon/VideoConfig.cpp
-index a15331569d..1c24dde51f 100644
+index d2cacd7276..30decaabea 100644
 --- a/Source/Core/VideoCommon/VideoConfig.cpp
 +++ b/Source/Core/VideoCommon/VideoConfig.cpp
-@@ -363,7 +363,7 @@ void CheckForConfigChanges()
+@@ -362,7 +362,7 @@ void CheckForConfigChanges()
    if (changed_bits == 0)
      return;
  
@@ -155,7 +164,7 @@ index a15331569d..1c24dde51f 100644
  
    // Framebuffer changed?
    if (changed_bits & (CONFIG_CHANGE_BIT_MULTISAMPLES | CONFIG_CHANGE_BIT_STEREO_MODE |
-@@ -372,7 +372,7 @@ void CheckForConfigChanges()
+@@ -371,7 +371,7 @@ void CheckForConfigChanges()
      g_framebuffer_manager->RecreateEFBFramebuffer(g_ActiveConfig.iEFBScale);
    }
  
