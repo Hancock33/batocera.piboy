@@ -1,0 +1,26 @@
+diff --git a/Source/Core/DiscIO/VolumeDisc.cpp b/Source/Core/DiscIO/VolumeDisc.cpp
+index e842540376..2ec71b9fe1 100644
+--- a/Source/Core/DiscIO/VolumeDisc.cpp
++++ b/Source/Core/DiscIO/VolumeDisc.cpp
+@@ -67,7 +67,7 @@ Country VolumeDisc::GetCountry(const Partition& partition) const
+   {
+     const BootID* boot_id = static_cast<const VolumeGC*>(this)->GetTriforceBootID();
+ 
+-    switch (boot_id->region_flags & 0x000000FF)
++    switch (boot_id->region_flags)
+     {
+     default:
+     case 0x02:  // JAPAN
+diff --git a/Source/Core/DiscIO/VolumeGC.cpp b/Source/Core/DiscIO/VolumeGC.cpp
+index acff07e292..5d3d372dcf 100644
+--- a/Source/Core/DiscIO/VolumeGC.cpp
++++ b/Source/Core/DiscIO/VolumeGC.cpp
+@@ -92,7 +92,7 @@ Region VolumeGC::GetRegion() const
+ {
+   if (m_is_triforce)
+   {
+-    switch (m_triforce_header.region_flags & 0x000000FF)
++    switch (m_triforce_header.region_flags)
+     {
+     default:
+     case 0x02:  // JAPAN

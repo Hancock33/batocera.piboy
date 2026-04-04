@@ -817,7 +817,7 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
     # Standalone Sega Model 3 emulator
     select BR2_PACKAGE_SUPERMODEL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_SUPERMODEL_ES                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  # Sinden Gun support
+   #select BR2_PACKAGE_LIBRETRO_SUPERMODEL                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_SUPERMODEL_LEGACY                    if  BR2_PACKAGE_BATOCERA_BCM27XX            || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
 
     # RetroArch MAME derivatives
