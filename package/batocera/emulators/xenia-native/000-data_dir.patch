@@ -1,0 +1,13 @@
+diff --git a/src/xenia/app/xenia_main.cc b/src/xenia/app/xenia_main.cc
+index a18ffd7cd..381080425 100644
+--- a/src/xenia/app/xenia_main.cc
++++ b/src/xenia/app/xenia_main.cc
+@@ -482,7 +482,7 @@ bool EmulatorApp::OnInitialize() {
+ #if XE_PLATFORM_ANDROID
+       // TODO(Triang3l): Point to the app's external storage "files" directory.
+ #else
+-      storage_root = storage_root / "Xenia";
++      storage_root = "/userdata/system/configs/xenia";
+ #endif
+     }
+   }
