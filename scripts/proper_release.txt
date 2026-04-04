@@ -38,6 +38,7 @@ pironman5.mk
 pysdl2.mk
 pysdl3.mk
 pywebview.mk
+rapidyaml.mk
 rclone.mk
 re2c.mk
 retrocrisis.mk

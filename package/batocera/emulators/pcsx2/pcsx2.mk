@@ -19,7 +19,7 @@ PCSX2_GIT_TAG_MID = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 2)
 PCSX2_GIT_TAG_LO = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 3)
 
 PCSX2_DEPENDENCIES += alsa-lib ecm fmt freetype kddocwidgets libaio libbacktrace libcurl libgtk3 libpcap
-PCSX2_DEPENDENCIES += libpng libsamplerate libsoundtouch plutosvg plutovg
+PCSX2_DEPENDENCIES += libpng libsamplerate libsoundtouch plutosvg plutovg rapidyaml
 PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools portaudio sdl3 shaderc webp xorgproto yaml-cpp zlib
 PCSX2_DEPENDENCIES += host-clang
 
