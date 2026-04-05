@@ -5,17 +5,12 @@ from os import path
 from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
-from ...utils import videoMode as videoMode
 
 class VcmiGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        gameResolution = videoMode.getCurrentResolution()
 
-        if os.path.isfile('/tmp/piboy'):
-            commandArray = ["vcmiclient", "--video-width", str(gameResolution["width"]), "--video-height", str(gameResolution["height"]), "--video-fullscreen", "true", "--video-realFullscreen", "false"]
-        else:
-            commandArray = ["vcmiclient", "--video-width", str(gameResolution["width"]), "--video-height", str(gameResolution["height"]), "--video-fullscreen", "false", "--video-realFullscreen", "false"]
+        commandArray = ["vcmiclient"]
 
         return Command.Command(
             array=commandArray,
