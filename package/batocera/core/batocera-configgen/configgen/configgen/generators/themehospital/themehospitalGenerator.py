@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 corsixthConfigPath = CONFIGS / "corsixth"
 corsixthConfigFile = corsixthConfigPath / "config.txt"
 corsixthSavesPath = SAVES / "corsixth"
-corsixthDataPath = "/userdata/roms/ports/themehospital"
+corsixthDataPath = Path("/userdata/roms/ports/themehospital")
 corsixthFontPath = Path("/usr/share/fonts/dejavu/DejaVuSans.ttf")
 
 _logger = logging.getLogger(__name__)

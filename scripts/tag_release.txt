@@ -8,6 +8,7 @@ batocera-settings.mk
 bgfx.mk
 cabextract.mk
 cbindgen.mk
+corsixth.mk
 cxxopts.mk
 drastic.mk
 ecm.mk
