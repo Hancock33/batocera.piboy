@@ -36,8 +36,8 @@ class AmiberryGenerator(Generator):
         return {
             "name": "amiberry",
             "keys": {
-                "exit": "KEY_F10",
-                "menu": "KEY_F12"
+                "exit": "KEY_F9",
+                "menu": "KEY_F8"
             }
         }
 
@@ -47,8 +47,8 @@ class AmiberryGenerator(Generator):
 
         retroconfig = UnixSettings(_RETROARCH_CUSTOM, separator=' ')
         amiberryconf = UnixSettings(_CONFIG, separator=' ')
-        amiberryconf.save('default_quit_key', 'F10')
-        amiberryconf.save('default_open_gui_key', 'F12')
+        amiberryconf.save('default_quit_key', 'F9')
+        amiberryconf.save('default_open_gui_key', 'F8')
         amiberryconf.save('saveimage_dir', _SAVES_DIR)
         amiberryconf.save('savestate_dir', _SAVES_DIR)
         amiberryconf.save('screenshot_dir', _SCREENSHOTS_DIR)

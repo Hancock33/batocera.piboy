@@ -32,7 +32,7 @@ class XemuGenerator(Generator):
         commandArray: list[str | Path] = [XEMU_BIN]
         commandArray.extend(["-config_path", XEMU_CONFIG])
 
-        environment={
+        environment = {
             "XDG_CONFIG_HOME": CONFIGS,
             "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
             "LC_NUMERIC": "C"
