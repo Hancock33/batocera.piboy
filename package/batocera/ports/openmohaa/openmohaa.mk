@@ -32,8 +32,9 @@ OPENMOHAA_CONF_OPTS += -DUSE_INTERNAL_LIBS=ON
 define OPENMOHAA_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/openmohaa
 	cp $(@D)/buildroot-build/Release/openmohaa $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/Release/cgame.so $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/Release/game.so  $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/cgame.so  $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/game.so   $(TARGET_DIR)/usr/bin/openmohaa/
+	cp $(@D)/buildroot-build/Release/renderer* $(TARGET_DIR)/usr/bin/openmohaa/
 endef
 
 define OPENMOHAA_EVMAPY
