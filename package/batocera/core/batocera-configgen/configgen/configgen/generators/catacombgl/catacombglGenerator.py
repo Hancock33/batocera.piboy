@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
@@ -45,11 +46,11 @@ class CatacombGLGenerator(Generator):
 
         # Define the paths to be added or adjusted in the ini file
         required_paths = {
-            "pathabyssv113": _CATACOMBGL_ROMS / "Abyss_sw13",
-            "pathabyssv124": _CATACOMBGL_ROMS / "Abyss",
-            "patharmageddonv102": _CATACOMBGL_ROMS / "Armageddon",
-            "pathapocalypsev101": _CATACOMBGL_ROMS / "Apocalypse",
-            "pathcatacomb3dv122": _CATACOMBGL_ROMS / "Cat3D",
+            "pathabyssv113": Path(_CATACOMBGL_ROMS) / "Abyss_sw13",
+            "pathabyssv124": Path(_CATACOMBGL_ROMS) / "Abyss",
+            "patharmageddonv102": Path(_CATACOMBGL_ROMS) / "Armageddon",
+            "pathapocalypsev101": Path(_CATACOMBGL_ROMS) / "Apocalypse",
+            "pathcatacomb3dv122": Path(_CATACOMBGL_ROMS) / "Cat3D",
             "screenmode": "fullscreen",
             "WindowedScreenWidth": str(gameResolution["width"]),
             "WindowedScreenHeight": str(gameResolution["height"])

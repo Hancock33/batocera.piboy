@@ -13,7 +13,6 @@ SDLPOP_EMULATOR_INFO = sdlpop.emulator.yml
 
 define SDLPOP_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/SDLPoP
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	mkdir -p $(TARGET_DIR)/usr/share/SDLPoP/cfg
 	$(INSTALL) -m 0755 $(@D)/prince -D $(TARGET_DIR)/usr/bin/SDLPoP
 	cp $(@D)/SDLPoP.ini $(TARGET_DIR)/usr/share/SDLPoP/cfg/SDLPoP.ini

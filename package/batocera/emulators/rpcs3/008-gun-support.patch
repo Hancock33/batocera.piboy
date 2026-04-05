@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/Cell/Modules/cellGem.cpp b/rpcs3/Emu/Cell/Modules/cellGem.cpp
-index 3c7b299af..afafa17a0 100644
+index f9f5ea410..6cda839bb 100644
 --- a/rpcs3/Emu/Cell/Modules/cellGem.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellGem.cpp
 @@ -189,6 +189,7 @@ using gun_thread = named_thread<gun_handler>;
@@ -26,7 +26,7 @@ index 3c7b299af..afafa17a0 100644
  	}
  };
  
-@@ -2355,6 +2362,26 @@ static void mouse_pos_to_gem_state(u32 mouse_no, gem_config::gem_controller& con
+@@ -2388,6 +2395,26 @@ static void mouse_pos_to_gem_state(u32 mouse_no, gem_config::gem_controller& con
  }
  
  #ifdef HAVE_LIBEVDEV
@@ -53,7 +53,7 @@ index 3c7b299af..afafa17a0 100644
  static bool gun_input_to_pad(u32 gem_no, be_t<u16>& digital_buttons, be_t<u16>& analog_t)
  {
  	digital_buttons = 0;
-@@ -2365,29 +2392,30 @@ static bool gun_input_to_pad(u32 gem_no, be_t<u16>& digital_buttons, be_t<u16>&
+@@ -2398,29 +2425,30 @@ static bool gun_input_to_pad(u32 gem_no, be_t<u16>& digital_buttons, be_t<u16>&
  
  	gun_thread& gun = g_fxo->get<gun_thread>();
  	std::scoped_lock lock(gun.handler.mutex);
@@ -141,7 +141,7 @@ index 9cfca88dd..19cee4576 100644
  extern cfg_mouse_gems g_cfg_gem_mouse;
 +extern cfg_gun_gems g_cfg_gem_gun;
 diff --git a/rpcs3/Emu/Io/pad_types.cpp b/rpcs3/Emu/Io/pad_types.cpp
-index ad3369a7a..0fbbe0263 100644
+index d5ef26f0d..06aa13f6b 100644
 --- a/rpcs3/Emu/Io/pad_types.cpp
 +++ b/rpcs3/Emu/Io/pad_types.cpp
 @@ -48,6 +48,17 @@ void fmt_class_string<pad_button>::format(std::string& out, u64 arg)
@@ -199,7 +199,7 @@ index ad3369a7a..0fbbe0263 100644
  	return 0;
  }
 diff --git a/rpcs3/Emu/Io/pad_types.h b/rpcs3/Emu/Io/pad_types.h
-index 5fd9c8973..4bc5ffe5d 100644
+index d2b1535a1..9314a97e2 100644
 --- a/rpcs3/Emu/Io/pad_types.h
 +++ b/rpcs3/Emu/Io/pad_types.h
 @@ -53,6 +53,19 @@ enum class pad_button : u8

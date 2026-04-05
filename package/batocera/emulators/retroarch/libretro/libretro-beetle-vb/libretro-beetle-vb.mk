@@ -3,8 +3,8 @@
 # libretro-beetle-vb
 #
 ################################################################################
-# Version: Commits on Feb 19, 2026
-LIBRETRO_BEETLE_VB_VERSION = 65debc7c4c7b85e2fd988d2be53496c2cf0b5f44
+# Version: Commits on Mar 31, 2026
+LIBRETRO_BEETLE_VB_VERSION = 734205c5ead87a89cd1d53fe086f8f8fe660cf1d
 LIBRETRO_BEETLE_VB_SITE = $(call github,libretro,beetle-vb-libretro,$(LIBRETRO_BEETLE_VB_VERSION))
 LIBRETRO_BEETLE_VB_LICENSE = GPLv2
 LIBRETRO_BEETLE_VB_DEPENDENCIES += retroarch

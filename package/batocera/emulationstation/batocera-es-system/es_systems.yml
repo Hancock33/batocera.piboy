@@ -1600,9 +1600,10 @@ amiga1200:
       A1200:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
       A4000:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:amiga1200
   comment_fr:           |
@@ -1629,9 +1630,10 @@ amiga500:
       A500:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
       A500+:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:amiga500
   comment_fr:           |
@@ -1653,9 +1655,10 @@ amigacd32:
     amiberry:
       CD32:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
 
 amigacdtv:
   name:                 Amiga CDTV
@@ -1671,9 +1674,10 @@ amigacdtv:
     amiberry:
       CDTV:             { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
 
 amigademo:
   name:                 Amiga Demoscene
@@ -1698,9 +1702,10 @@ amigademo:
       A1200:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
       A4000:            { requireAnyOf: [BR2_PACKAGE_AMIBERRY, BR2_PACKAGE_AMIBERRY_LITE], incompatible_extensions: [m3u] }
     libretro:
-      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE] }
+      amiberry:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AMIBERRY] }
+      puae:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE]     }
       puae2021:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PUAE2021] }
-      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM] }
+      uae4arm:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_UAE4ARM]  }
 
 c128:
   name:                 Commodore 128
@@ -1946,17 +1951,36 @@ enterprise:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en:           |
-                        Requires BIOS files:
-                        bios/Enterprise/basic21.bin
-                        bios/Enterprise/exos21.bin
-  comment_fr: |
-                        Nécessite ces fichiers de BIOS:
-                        bios/Enterprise/basic21.bin
-                        bios/Enterprise/exos21.bin
-  comment_br: |
-                        Requer arquivo de BIOS:
-                        bios/Enterprise/basic21.bin
-                        bios/Enterprise/exos21.bin
+                        Requires ep128emu BIOS files:
+                        bios/ep128emu/roms/exos21.rom (Expandible OS 2.1)
+                        bios/ep128emu/roms/basic21.rom (BASIC Interpreter v2.1)
+                        bios/ep128emu/roms/exdos13.rom (Disk Controller v1.3)
+                        bios/ep128emu/roms/epfileio.rom (Direct File I/O)
+                        Optional ep128emu BIOS files:
+                        bios/ep128emu/roms/exos20.rom (Enterprise 64 OS 2.0)
+                        bios/ep128emu/roms/basic20.rom (Enterprise 64 BASIC v2.0)
+                        bios/ep128emu/roms/exos24uk.rom (Expandible OS 2.4)
+                        bios/ep128emu/roms/hun.rom (Hungarian language extension)
+                        bios/ep128emu/roms/brd.rom (German language extension)
+                        bios/ep128emu/roms/epd19hft.rom (EP-DOS Hungarian)
+                        bios/ep128emu/roms/zt19uk.rom (ZozoTools extension)
+                        bios/ep128emu/roms/zt19hfnt.rom (ZozoTools Hungarian)
+                        Requires MAME BIOS file:
+                        bios/ep64.zip
+                        bios/ep128.zip
+                        bios/ep64_exdos.zip
+  comment_fr:           |
+                        Nécessite ces fichiers de BIOS ep128emu:
+                        bios/ep128emu/roms/exos21.rom
+                        bios/ep128emu/roms/basic21.rom
+                        bios/ep128emu/roms/exdos13.rom
+                        bios/ep128emu/roms/epfileio.rom
+  comment_br:           |
+                        Requer arquivo de BIOS ep128emu:
+                        bios/ep128emu/roms/exos21.rom
+                        bios/ep128emu/roms/basic21.rom
+                        bios/ep128emu/roms/exdos13.rom
+                        bios/ep128emu/roms/epfileio.rom
 
 advision:
   name:                 Adventure Vision
@@ -5983,6 +6007,8 @@ model3:
     supermodel:
       supermodel:        { requireAnyOf: [BR2_PACKAGE_SUPERMODEL] }
       supermodel-legacy: { requireAnyOf: [BR2_PACKAGE_SUPERMODEL_LEGACY] }
+    libretro:
+      supermodel:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPERMODEL] }
 
   comment_en:           |
                         ## SEGA MODEL 3 IMPORTANT INFO ##
@@ -6345,7 +6371,6 @@ sc3000:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en:           |
-                        BIOS: sc3000.zip (sc3000.rom) in bios/mame/
                         SC-3000 cartridges are compatible with SG-1000.
                         Cassette tapes (.wav, .cas, .bit) are SC-3000 exclusive.
 
@@ -7202,20 +7227,25 @@ tvc:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en:           |
-                        Requires BIOS files:
-                        bios/tvc22_sys.rom
-                        bios/tvc22_ext.rom
-                        bios/tvcfileio.rom
+                        Requires ep128emu BIOS files:
+                        bios/ep128emu/roms/tvc22_sys.rom (TVC system BIOS)
+                        bios/ep128emu/roms/tvc22_ext.rom (TVC extension BIOS)
+                        bios/ep128emu/roms/tvcfileio.rom (TVC Direct File I/O)
+                        bios/ep128emu/roms/tvc_dos12d.rom (TVC disk BIOS)
                         Requires MAME BIOS file:
                         bios/mame/tvc64.zip
   comment_fr:           |
-                        Nécessite ces fichiers de BIOS:
-                        bios/tvc22_sys.rom
-                        bios/tvc22_ext.rom
+                        Nécessite ces fichiers de BIOS ep128emu:
+                        bios/ep128emu/roms/tvc22_sys.rom
+                        bios/ep128emu/roms/tvc22_ext.rom
+                        bios/ep128emu/roms/tvcfileio.rom
+                        bios/ep128emu/roms/tvc_dos12d.rom
   comment_br:           |
-                        Requer arquivo de BIOS:
-                        bios/tvc22_sys.rom
-                        bios/tvc22_ext.rom
+                        Requer arquivo de BIOS ep128emu:
+                        bios/ep128emu/roms/tvc22_sys.rom
+                        bios/ep128emu/roms/tvc22_ext.rom
+                        bios/ep128emu/roms/tvcfileio.rom
+                        bios/ep128emu/roms/tvc_dos12d.rom
 
 crvision:
   name:                 CreatiVision

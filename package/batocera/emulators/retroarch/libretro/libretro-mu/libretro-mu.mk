@@ -3,8 +3,8 @@
 # libretro-mu
 #
 ################################################################################
-# Version: Commits on Aug 14, 2025
-LIBRETRO_MU_VERSION = d9766f139ece646703b5785097374a3a68dd07ad
+# Version: Commits on Mar 31, 2026
+LIBRETRO_MU_VERSION = 6594c8f3e27d9dba3fd6d4f5c8cb76b974f360c0
 LIBRETRO_MU_SITE = $(call github,libretro,Mu,$(LIBRETRO_MU_VERSION))
 LIBRETRO_MU_LICENSE = CCANC-3.0
 LIBRETRO_MU_EMULATOR_INFO = mu.libretro.core.yml

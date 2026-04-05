@@ -3,8 +3,8 @@
 # libretro-gpsp
 #
 ################################################################################
-# Version: Commits on Jan 26, 2026
-LIBRETRO_GPSP_VERSION = 602512d7c687acb84cd56265cbcf2d7b7c75fb37
+# Version: Commits on Mar 31, 2026
+LIBRETRO_GPSP_VERSION = 6373ff347a07ac17c50a00f20aa63d29c080abcf
 LIBRETRO_GPSP_SITE = $(call github,libretro,gpsp,$(LIBRETRO_GPSP_VERSION))
 LIBRETRO_GPSP_LICENSE = GPLv2
 LIBRETRO_GPSP_DEPENDENCIES += retroarch

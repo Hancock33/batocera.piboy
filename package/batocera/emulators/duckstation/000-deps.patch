@@ -88,7 +88,7 @@ index 7057c556a..c203b8396 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Shaderc")
 -find_package(spirv_cross_c_shared REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/spirv_cross_c_shared/cmake")
--find_package(SDL3 3.4.2 REQUIRED
+-find_package(SDL3 3.4.4 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/SDL3")
 -
 -# Verify dependency paths.
@@ -120,7 +120,7 @@ index 7057c556a..c203b8396 100644
 +find_package(WebP REQUIRED) # v1.4.0, spews an error on Linux because no pkg-config.
 +find_package(PNG 1.6.55 REQUIRED)
 +find_package(JPEG REQUIRED)
-+find_package(SDL3 3.4.0 REQUIRED)
++find_package(SDL3 3.4.4 REQUIRED)
 +find_package(Freetype 2.14.1 REQUIRED)
 +find_package(harfbuzz REQUIRED)
 +find_package(plutosvg 0.0.6 REQUIRED)

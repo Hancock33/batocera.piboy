@@ -3,8 +3,8 @@
 # libretro-amiberry
 #
 ################################################################################
-# Version: Commits on Mar 29, 2026
-LIBRETRO_AMIBERRY_VERSION = cd0bcb090ca93d780b0741ac921d8f71222f1936
+# Version: Commits on Apr 01, 2026
+LIBRETRO_AMIBERRY_VERSION = v8.1.4
 LIBRETRO_AMIBERRY_SITE = https://github.com/BlitterStudio/amiberry.git
 LIBRETRO_AMIBERRY_SITE_METHOD=git
 LIBRETRO_AMIBERRY_GIT_SUBMODULES=YES
@@ -23,6 +23,12 @@ endef
 define LIBRETRO_AMIBERRY_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libretro/amiberry_libretro.so $(TARGET_DIR)/usr/lib/libretro/amiberry_libretro.so
+
+	# copy run-time files
+	rm -rf $(TARGET_DIR)/usr/share/batocera/datainit/bios/whdboot
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/whdboot/save-data
+	cp -vr $(@D)/whdboot/{game,save}-data $(TARGET_DIR)/usr/share/batocera/datainit/bios/whdboot
+	unzip $(@D)/whdboot/boot-data.zip -d $(TARGET_DIR)/usr/share/batocera/datainit/bios/whdboot/save-data
 endef
 
 $(eval $(generic-package))

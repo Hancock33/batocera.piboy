@@ -35,11 +35,6 @@ class SupermodelGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray: list[str | Path] = ["supermodel", "-fullscreen", "-channels=2"]
 
-        if system.isOptSet("m3Emu") and system.config["m3Emu"] == "sinden":
-            commandArray = ["supermodel-sinden", "-fullscreen", "-channels=2"]
-        else:
-            commandArray = ["supermodel", "-fullscreen", "-channels=2"]
-
         # legacy3d
         if system.config.get("engine3D") == "new3d":
             commandArray.append("-new3d")

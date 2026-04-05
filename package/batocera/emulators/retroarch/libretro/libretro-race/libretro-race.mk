@@ -3,8 +3,8 @@
 # libretro-race
 #
 ################################################################################
-# Version: Commits on Oct 21, 2024
-LIBRETRO_RACE_VERSION = 171950ea64c96ead503340ed60fa7ba18f56325c
+# Version: Commits on Mar 31, 2026
+LIBRETRO_RACE_VERSION = b629dc887401a95b2f7799692496993c168de514
 LIBRETRO_RACE_SITE = $(call github,libretro,RACE,$(LIBRETRO_RACE_VERSION))
 LIBRETRO_RACE_LICENSE = GPL-2.0
 LIBRETRO_RACE_EMULATOR_INFO = race.libretro.core.yml

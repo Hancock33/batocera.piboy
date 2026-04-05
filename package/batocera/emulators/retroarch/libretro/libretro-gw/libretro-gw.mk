@@ -3,8 +3,8 @@
 # libretro-gw
 #
 ################################################################################
-# Version: Commits on Oct 21, 2024
-LIBRETRO_GW_VERSION = 435e5cfd4bf6aea03a84259e9b8dba3daf3ff5bd
+# Version: Commits on Mar 31, 2026
+LIBRETRO_GW_VERSION = f8750d0f37db5f1f779437710f2653e8b1651ded
 LIBRETRO_GW_SITE = $(call github,libretro,gw-libretro,$(LIBRETRO_GW_VERSION))
 LIBRETRO_GW_LICENSE = GPLv3
 LIBRETRO_GW_DEPENDENCIES += retroarch

@@ -1076,7 +1076,7 @@ index 73197b31926a..704bfdac5203 100644
  --------------------
  
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 2f1439d6fe7e..12999c82c8ab 100644
+index bf8da4d08c65..4747801c2f53 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -14338,6 +14338,17 @@ L:	platform-driver-x86@vger.kernel.org
@@ -1098,10 +1098,10 @@ index 2f1439d6fe7e..12999c82c8ab 100644
  M:	Hans de Goede <hansg@kernel.org>
  L:	linux-input@vger.kernel.org
 diff --git a/drivers/acpi/ec.c b/drivers/acpi/ec.c
-index 59b3d50ff01e..b94266ee55d3 100644
+index c981a53434ed..a7d44f6dbd6c 100644
 --- a/drivers/acpi/ec.c
 +++ b/drivers/acpi/ec.c
-@@ -2351,6 +2351,15 @@ static const struct dmi_system_id acpi_ec_no_wakeup[] = {
+@@ -2353,6 +2353,15 @@ static const struct dmi_system_id acpi_ec_no_wakeup[] = {
  			DMI_MATCH(DMI_PRODUCT_NAME, "83Q3"),
  		}
  	},
@@ -1593,7 +1593,7 @@ index a51f3414b65d..bc0f9759c5c5 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 3ed65aa38e58..78d24d91960d 100644
+index 14877ee9242b..a7729ecb14f5 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -158,6 +158,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -1606,7 +1606,7 @@ index 3ed65aa38e58..78d24d91960d 100644
  /**
   * DOC: overview
   *
-@@ -9949,7 +9952,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
+@@ -9950,7 +9953,7 @@ static void amdgpu_dm_commit_planes(struct drm_atomic_state *state,
  	int planes_count = 0, vpos, hpos;
  	unsigned long flags;
  	u32 target_vblank, last_flip_vblank;
@@ -4702,7 +4702,7 @@ index 000000000000..c83817589082
 +		.attrs = _fname##_turbo_attrs,                                    \
 +	}
 diff --git a/drivers/hid/hid-asus.c b/drivers/hid/hid-asus.c
-index 472bca54642b..96bbd8161f49 100644
+index b1ad4e9f20c8..e917cc7ead8a 100644
 --- a/drivers/hid/hid-asus.c
 +++ b/drivers/hid/hid-asus.c
 @@ -23,6 +23,7 @@
@@ -4828,7 +4828,7 @@ index b353fd819989..7734cc87494c 100644
  	return 0;
  }
 diff --git a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
-index 9901686f58c8..b9325192f2b3 100644
+index 4c69e6b2c35b..ec2f47d29b3c 100644
 --- a/drivers/hid/hid-ids.h
 +++ b/drivers/hid/hid-ids.h
 @@ -235,6 +235,7 @@
@@ -4839,7 +4839,7 @@ index 9901686f58c8..b9325192f2b3 100644
  #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY		0x1abe
  #define USB_DEVICE_ID_ASUSTEK_ROG_NKEY_ALLY_X		0x1b4c
  #define USB_DEVICE_ID_ASUSTEK_ROG_CLAYMORE_II_KEYBOARD	0x196b
-@@ -743,6 +744,10 @@
+@@ -744,6 +745,10 @@
  #define USB_DEVICE_ID_ITE8595		0x8595
  #define USB_DEVICE_ID_ITE_MEDION_E1239T	0xce50
  
@@ -4850,7 +4850,7 @@ index 9901686f58c8..b9325192f2b3 100644
  #define USB_VENDOR_ID_JABRA		0x0b0e
  #define USB_DEVICE_ID_JABRA_SPEAK_410	0x0412
  #define USB_DEVICE_ID_JABRA_SPEAK_510	0x0420
-@@ -862,7 +867,10 @@
+@@ -863,7 +868,10 @@
  #define USB_DEVICE_ID_LENOVO_PIXART_USB_MOUSE_602E	0x602e
  #define USB_DEVICE_ID_LENOVO_PIXART_USB_MOUSE_6093	0x6093
  #define USB_DEVICE_ID_LENOVO_LEGION_GO_DUAL_DINPUT	0x6184
@@ -4861,7 +4861,7 @@ index 9901686f58c8..b9325192f2b3 100644
  
  #define USB_VENDOR_ID_LETSKETCH		0x6161
  #define USB_DEVICE_ID_WP9620N		0x4d15
-@@ -1538,6 +1546,10 @@
+@@ -1539,6 +1547,10 @@
  #define USB_VENDOR_ID_ZYTRONIC		0x14c8
  #define USB_DEVICE_ID_ZYTRONIC_ZXY100	0x0005
  
@@ -14427,7 +14427,7 @@ index 000000000000..9d0a5471b181
 +MODULE_DESCRIPTION("Steam Deck EC sensors driver");
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
-index c02d4c383363..0bf839f88c0c 100644
+index 8fe6e51bfc54..ceb05c6fed6c 100644
 --- a/drivers/input/joystick/xpad.c
 +++ b/drivers/input/joystick/xpad.c
 @@ -361,7 +361,9 @@ static const struct xpad_device {
@@ -14440,7 +14440,7 @@ index c02d4c383363..0bf839f88c0c 100644
  	{ 0x20d6, 0x2001, "BDA Xbox Series X Wired Controller", 0, XTYPE_XBOXONE },
  	{ 0x20d6, 0x2009, "PowerA Enhanced Wired Controller for Xbox Series X|S", 0, XTYPE_XBOXONE },
  	{ 0x20d6, 0x2064, "PowerA Wired Controller for Xbox", MAP_SHARE_BUTTON, XTYPE_XBOXONE },
-@@ -563,7 +565,9 @@ static const struct usb_device_id xpad_table[] = {
+@@ -564,7 +566,9 @@ static const struct usb_device_id xpad_table[] = {
  	XPAD_XBOX360_VENDOR(0x1949),		/* Amazon controllers */
  	XPAD_XBOX360_VENDOR(0x1a86),		/* Nanjing Qinheng Microelectronics (WCH) */
  	XPAD_XBOX360_VENDOR(0x1bad),		/* Harmonix Rock Band guitar and drums */
@@ -18164,7 +18164,7 @@ index 1e9b7e85d99a..b9af334e306b 100644
  }
  
 diff --git a/include/linux/device.h b/include/linux/device.h
-index 0be95294b6e6..381463baed6d 100644
+index e65d564f01cd..d2e6d340f6e3 100644
 --- a/include/linux/device.h
 +++ b/include/linux/device.h
 @@ -189,6 +189,22 @@ ssize_t device_show_string(struct device *dev, struct device_attribute *attr,
@@ -18409,7 +18409,7 @@ index 43b36581e336..3830269e4f5e 100644
  			/* Set state to BT_RUNNING so resume doesn't notify */
  			hdev->suspend_state = BT_RUNNING;
 diff --git a/net/bluetooth/mgmt.c b/net/bluetooth/mgmt.c
-index 2c63f49c3301..95da5822779c 100644
+index f3da1bc38a55..78d773d2c0d7 100644
 --- a/net/bluetooth/mgmt.c
 +++ b/net/bluetooth/mgmt.c
 @@ -8097,7 +8097,7 @@ static int set_external_config(struct sock *sk, struct hci_dev *hdev,
@@ -18431,10 +18431,10 @@ index 2c63f49c3301..95da5822779c 100644
  
  unlock:
 diff --git a/sound/hda/codecs/realtek/alc269.c b/sound/hda/codecs/realtek/alc269.c
-index 4c49f1195e1b..0f4ad11a6cc5 100644
+index 0463ac20ff55..7359b6849a8a 100644
 --- a/sound/hda/codecs/realtek/alc269.c
 +++ b/sound/hda/codecs/realtek/alc269.c
-@@ -2807,6 +2807,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
+@@ -2833,6 +2833,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
  		alc_write_coef_idx(codec, 0x10, 0x0a20);
  }
  
@@ -18455,7 +18455,7 @@ index 4c49f1195e1b..0f4ad11a6cc5 100644
  static void alc294_fixup_gx502_hp(struct hda_codec *codec,
  					const struct hda_fixup *fix, int action)
  {
-@@ -3789,6 +3803,8 @@ enum {
+@@ -3815,6 +3829,8 @@ enum {
  	ALC269_FIXUP_DELL4_MIC_NO_PRESENCE,
  	ALC269_FIXUP_DELL4_MIC_NO_PRESENCE_QUIET,
  	ALC269_FIXUP_HEADSET_MODE,
@@ -18464,7 +18464,7 @@ index 4c49f1195e1b..0f4ad11a6cc5 100644
  	ALC269_FIXUP_HEADSET_MODE_NO_HP_MIC,
  	ALC269_FIXUP_ASPIRE_HEADSET_MIC,
  	ALC269_FIXUP_ASUS_X101_FUNC,
-@@ -3802,6 +3818,7 @@ enum {
+@@ -3828,6 +3844,7 @@ enum {
  	ALC269VB_FIXUP_ASUS_ZENBOOK,
  	ALC269VB_FIXUP_ASUS_ZENBOOK_UX31A,
  	ALC269VB_FIXUP_ASUS_MIC_NO_PRESENCE,
@@ -18472,7 +18472,7 @@ index 4c49f1195e1b..0f4ad11a6cc5 100644
  	ALC269_FIXUP_LIMIT_INT_MIC_BOOST_MUTE_LED,
  	ALC269VB_FIXUP_ORDISSIMO_EVE2,
  	ALC283_FIXUP_CHROME_BOOK,
-@@ -4078,6 +4095,30 @@ enum {
+@@ -4104,6 +4121,30 @@ enum {
  	ALC245_FIXUP_ACER_MICMUTE_LED,
  };
  
@@ -18503,7 +18503,7 @@ index 4c49f1195e1b..0f4ad11a6cc5 100644
  /* A special fixup for Lenovo C940 and Yoga Duet 7;
   * both have the very same PCI SSID, and we need to apply different fixups
   * depending on the codec ID
-@@ -4562,6 +4603,13 @@ static const struct hda_fixup alc269_fixups[] = {
+@@ -4588,6 +4629,13 @@ static const struct hda_fixup alc269_fixups[] = {
  		.chained = true,
  		.chain_id = ALC269_FIXUP_HEADSET_MIC
  	},
@@ -18517,7 +18517,7 @@ index 4c49f1195e1b..0f4ad11a6cc5 100644
  	[ALC269_FIXUP_LIMIT_INT_MIC_BOOST_MUTE_LED] = {
  		.type = HDA_FIXUP_FUNC,
  		.v.func = alc269_fixup_limit_int_mic_boost,
-@@ -5376,6 +5424,14 @@ static const struct hda_fixup alc269_fixups[] = {
+@@ -5402,6 +5450,14 @@ static const struct hda_fixup alc269_fixups[] = {
  			{ 0x1b, 0x90170152 } /* use as internal speaker (back) */
  		}
  	},
@@ -18532,7 +18532,7 @@ index 4c49f1195e1b..0f4ad11a6cc5 100644
  	[ALC299_FIXUP_PREDATOR_SPK] = {
  		.type = HDA_FIXUP_PINS,
  		.v.pins = (const struct hda_pintbl[]) {
-@@ -7684,6 +7740,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
+@@ -7714,6 +7770,8 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
  	SND_PCI_QUIRK(0x2782, 0x1701, "Infinix Y4 Max", ALC269VC_FIXUP_INFINIX_Y4_MAX),
  	SND_PCI_QUIRK(0x2782, 0x1705, "MEDION E15433", ALC269VC_FIXUP_INFINIX_Y4_MAX),
  	SND_PCI_QUIRK(0x2782, 0x1707, "Vaio VJFE-ADL", ALC298_FIXUP_SPK_VOLUME),
@@ -18541,7 +18541,7 @@ index 4c49f1195e1b..0f4ad11a6cc5 100644
  	SND_PCI_QUIRK(0x2782, 0x4900, "MEDION E15443", ALC233_FIXUP_MEDION_MTL_SPK),
  	SND_PCI_QUIRK(0x7017, 0x2014, "Star Labs StarFighter", ALC233_FIXUP_STARLABS_STARFIGHTER),
  	SND_PCI_QUIRK(0x8086, 0x2074, "Intel NUC 8", ALC233_FIXUP_INTEL_NUC8_DMIC),
-@@ -7812,6 +7870,7 @@ static const struct hda_model_fixup alc269_fixup_models[] = {
+@@ -7842,6 +7900,7 @@ static const struct hda_model_fixup alc269_fixup_models[] = {
  	{.id = ALC269VB_FIXUP_ASUS_ZENBOOK, .name = "asus-zenbook"},
  	{.id = ALC269VB_FIXUP_ASUS_ZENBOOK_UX31A, .name = "asus-zenbook-ux31a"},
  	{.id = ALC269VB_FIXUP_ORDISSIMO_EVE2, .name = "ordissimo"},

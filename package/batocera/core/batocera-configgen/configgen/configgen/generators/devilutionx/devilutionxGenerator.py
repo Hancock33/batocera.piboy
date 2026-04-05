@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import configparser
 from typing import TYPE_CHECKING
+import os
 import shutil
 
 from ... import Command
@@ -28,6 +29,7 @@ class DevilutionXGenerator(Generator):
 
         # copy latest devilutionx.mpq to rom dir
         shutil.copytree(mpq_src, mpq_dst, dirs_exist_ok=True)
+        os.remove(configFile)
 
         ## Configure
         config = configparser.ConfigParser()

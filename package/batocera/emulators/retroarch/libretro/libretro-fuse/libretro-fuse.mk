@@ -3,8 +3,8 @@
 # libretro-fuse
 #
 ################################################################################
-# Version: Commits on Nov 24, 2024
-LIBRETRO_FUSE_VERSION = cad85b7b1b864c65734f71aa4a510b6f6536881c
+# Version: Commits on Mar 31, 2026
+LIBRETRO_FUSE_VERSION = b5f44e3a20a0f189e8fb999cd5cde223a0f588a6
 LIBRETRO_FUSE_SITE = $(call github,libretro,fuse-libretro,$(LIBRETRO_FUSE_VERSION))
 LIBRETRO_FUSE_LICENSE = GPLv3
 LIBRETRO_FUSE_DEPENDENCIES += retroarch

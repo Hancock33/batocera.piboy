@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/drm_edid.c b/drivers/gpu/drm/drm_edid.c
-index ff432ac6b569..0440a104ee1d 100644
+index 68390e79668c..1d7127a70e2a 100644
 --- a/drivers/gpu/drm/drm_edid.c
 +++ b/drivers/gpu/drm/drm_edid.c
-@@ -2179,7 +2179,10 @@ drm_do_probe_ddc_edid(void *data, u8 *buf, unsigned int block, size_t len)
+@@ -2180,7 +2180,10 @@ drm_do_probe_ddc_edid(void *data, u8 *buf, unsigned int block, size_t len)
  		 * Avoid sending the segment addr to not upset non-compliant
  		 * DDC monitors.
  		 */

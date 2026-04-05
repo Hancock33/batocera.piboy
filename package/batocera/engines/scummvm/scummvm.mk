@@ -3,14 +3,19 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Jan 17, 2026
-SCUMMVM_VERSION = f8d66eae4e6f7454196ded0ebb113c6a74842f5c
+# Version: Commits on Mar 28, 2026
+SCUMMVM_VERSION = v2026.2.0
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
-SCUMMVM_BRANCH = branch-2026-1-0
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_EMULATOR_INFO = scummvm.emulator.yml
-SCUMMVM_DEPENDENCIES += faad2 flac fluidsynth freetype jpeg-turbo libmad libmpeg2
+SCUMMVM_DEPENDENCIES += faad2 flac fluidsynth freetype libmad libmpeg2
 SCUMMVM_DEPENDENCIES += libogg libpng libtheora libvorbis sdl2 zlib
+
+ifeq ($(BR2_PACKAGE_JPEG_TURBO),y)
+SCUMMVM_DEPENDENCIES += jpeg-turbo
+else
+SCUMMVM_DEPENDENCIES += jpeg
+endif
 
 SCUMMVM_ADDITIONAL_FLAGS += -I$(STAGING_DIR)/usr/include -lpthread -lm
 SCUMMVM_ADDITIONAL_FLAGS += -L$(STAGING_DIR)/usr/lib -lGLESv2 -lEGL

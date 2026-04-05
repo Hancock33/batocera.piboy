@@ -1,0 +1,12 @@
+config BR2_PACKAGE_LIBRETRO_SUPERMODEL
+	bool "libretro-supermodel"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  A modernized fork of the Sega Model 3,
+	  Supermodel Libretro core.
+
+	  http://www.libretro.com
+
+comment "LIBRETRO_SUPERMODEL needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

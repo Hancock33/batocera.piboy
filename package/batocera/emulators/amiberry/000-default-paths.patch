@@ -1,32 +1,25 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index ef148409..2500c161 100644
+index 7d565ead..a0de721b 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -4911,7 +4911,7 @@ void create_missing_amiberry_folders()
- #ifdef __MACH__
- 		const std::string default_roms_path = app_directory + "/Resources/roms/";
- #else
--		const std::string default_roms_path = AMIBERRY_DATADIR "/roms/";
-+		const std::string default_roms_path = "/userdata/bios/amiga";
- #endif
- 		// copy default kickstart files, if they exist in AMIBERRY_DATADIR/roms
- 		if (my_existsdir(default_roms_path.c_str()))
-@@ -5015,9 +5015,9 @@ static void init_amiberry_dirs(const bool portable_mode)
+@@ -7508,10 +7508,10 @@ static void init_amiberry_dirs(const bool portable_mode, const bool materialize_
  #else
  	const std::string amiberry_dir = "amiberry";
  #endif
+-	config_path = get_config_directory(portable_mode);
 -	current_dir = home_dir = get_home_directory(portable_mode);
 -	data_dir = get_data_directory(portable_mode);
 -	plugins_dir = get_plugins_directory(portable_mode);
-+	data_dir = "/usr/share/amiberry/data/";
 +	config_path = "/userdata/system/configs/amiberry/conf";
++	current_dir = "/userdata/system/configs/amiberry";
++	data_dir = "/usr/share/amiberry/data/";
 +	plugins_dir = "/usr/share/amiberry/plugins/";
+ 	const auto visual_content_root = home_dir;
  
  #ifdef __MACH__
- 	if constexpr (true)
-@@ -5140,20 +5140,20 @@ static void init_amiberry_dirs(const bool portable_mode)
- 	shaders_path.append("\\Shaders\\");
- 	bezels_path.append("\\Bezels\\");
+@@ -7623,27 +7623,27 @@ static void init_amiberry_dirs(const bool portable_mode, const bool materialize_
+ 	nvram_dir.append("\\Nvram\\");
+ 	video_dir.append("\\Videos\\");
  #else
 -	controllers_path.append("/controllers/");
 -	whdboot_path.append("/whdboot/");
@@ -51,10 +44,9 @@ index ef148409..2500c161 100644
 +	screenshot_dir = "/userdata/screenshots/";
  	nvram_dir.append("/nvram/");
  	video_dir.append("/videos/");
- 	themes_path.append("/themes/");
-@@ -5161,7 +5161,7 @@ static void init_amiberry_dirs(const bool portable_mode)
- 	bezels_path.append("/bezels/");
  #endif
+ 
+ 	apply_current_visual_asset_paths(get_visual_asset_paths_from_content_root(visual_content_root));
  
 -	retroarch_file = config_path;
 +	retroarch_file = controllers_path;

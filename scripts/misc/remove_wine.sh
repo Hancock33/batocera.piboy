@@ -8,7 +8,7 @@ clear
 echo -e ${STARTLINE}"Removing Batocera Packages                        "${ENDLINE}
 
 batowine=( $(find $HOME/batocera.se/package/batocera/wine -type f -name "*.mk" | sort -k3 -k1 ) )
-batowineextras=( $(find $HOME/batocera.se/package/batocera/wine/extras -type f -name "*.mk" | sort -k3 -k1 ) )
+#batowineextras=( $(find $HOME/batocera.se/package/batocera/wine/extras -type f -name "*.mk" | sort -k3 -k1 ) )
 
 # Variables
 BUILD_X86=0

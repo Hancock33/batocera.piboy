@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 434ad4eb..e5405e13 100644
+--- a/Makefile
++++ b/Makefile
+@@ -24,7 +24,7 @@ srcFiles=src/resources/defaultConfig.ini \
+ 	src/iniutils.go \
+ 	src/input.go \
+ 	src/input_sdl.go \
+-	src/lifebar.go \
++	src/fightscreen.go \
+ 	src/main.go \
+ 	src/motif.go \
+ 	src/music.go \

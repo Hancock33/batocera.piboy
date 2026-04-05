@@ -143,8 +143,6 @@ systems = {
                                                             { "md5": "854b9150240a198070150e4566ae1290", "file": "bios/bios_CD_U.bin"   },
                                                             { "md5": "278a9397d192149e84e820ac621a8edd", "file": "bios/bios_CD_J.bin"   } ] },
 
-    "segastv":   { "name": "S-TV", "biosFiles":  [ { "md5": "9992f2761b0f6e83b3e923451ab8057b", "file": "bios/stvbios.zip"  } ] },
-
     # https://docs.libretro.com/library/genesis_plus_gx/#bios
     "megadrive-msu":{ "name": "MSU-MD", "biosFiles":      [ { "md5": "e66fa1dc5820d254611fdcdba0662372", "file": "bios/bios_CD_E.bin"   },
                                                             { "md5": "854b9150240a198070150e4566ae1290", "file": "bios/bios_CD_U.bin"   },
@@ -299,6 +297,7 @@ systems = {
                                                             { "md5": "d527e3ed1bf9bd0661154c202a65c5bd", "zippedFile": "hd6437021.lsi302", "file": "bios/casloopy.zip" },
                                                             { "md5": "c0f1c899c9ca098663d046d60779711d", "zippedFile": "hn62434fa.lsi352", "file": "bios/casloopy.zip" } ] },
 
+    # ---------- Fairchild ChannelF ---------- #
     # https://github.com/libretro/FreeChaF/blob/master/README.md#bios
     "channelf":  { "name": "Fairchild ChannelF", "biosFiles": [   { "md5": "ac9804d4c0e9d07e33472e3726ed15c3", "file": "bios/sl31253.bin" },
                                                                    { "md5": "da98f4bb3242ab80d76629021bb27585", "file": "bios/sl31254.bin" },
@@ -346,16 +345,6 @@ systems = {
 
     # ---------- Super Cassette Vision ---------- #
     "scv":   { "name": "Super Cassette Vision", "biosFiles":  [ { "md5": "635a978fd40db9a18ee44eff449fc126", "file": "bios/upd7801g.s01"  } ] },
-
-    # ---------- Electronica BK ---------- #
-    "bk":       { "name": "BK", "biosFiles": [   { "md5": "fe4627d1e3a1535874085050733263e7", "file": "bios/bk/B11M_BOS.ROM" },
-                                                 { "md5": "dc52f365d56fa1951f5d35b1101b9e3f", "file": "bios/bk/B11M_EXT.ROM" },
-                                                 { "md5": "946f6f23ded03c0e26187f0b3ca75993", "file": "bios/bk/BAS11M_0.ROM" },
-                                                 { "md5": "1e6637f32aa7d1de03510030cac40bcf", "file": "bios/bk/BAS11M_1.ROM" },
-                                                 { "md5": "3fa774326d75410a065659aea80252f0", "file": "bios/bk/BASIC10.ROM"  },
-                                                 { "md5": "5015228eeeb238e65da8edcd1b6dfac7", "file": "bios/bk/DISK_327.ROM" },
-                                                 { "md5": "5737f972e8638831ab71e9139abae052", "file": "bios/bk/FOCAL10.ROM"  },
-                                                 { "md5": "95f8c41c6abf7640e35a6a03cecebd01", "file": "bios/bk/MONIT10.ROM"  } ] },
 
     # ---------- Palm MU ---------- #
     "mu":       { "name": "Palm OS", "biosFiles": [   { "md5": "83cb1d1c76e568b916dc2e7c0bf669f6", "file": "bios/palmos41-en-m515.rom" },
@@ -936,26 +925,26 @@ systems = {
                                                                  { "md5": "b17148254a5799684c7d783206504926", "file": "bios/GC/USA/IPL.bin" } ] },
 
     # ---------- Vircon32 ---------- #
-    "vircon32":   { "name": "Vircon32", "biosFiles":  [ { "md5": "1ad96946bce7bd0422b7d9340735b248", "file": "bios/StandardBios.v32" } ] },
+    "vircon32":   { "name": "Vircon32", "biosFiles":  [ { "md5": "73f04397cbb2dafcf2047b19a856153a", "file": "bios/StandardBios.v32" } ] },
 
     # ---------- Sega Titan Video ---------- #
-    "segastv": { "name": "Sega Titan Video", "biosFiles": [ { "md5": "", "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "a36acd9ac53b668bebbd98bd192c43e9", "zippedFile": "epr-17740.ic8",  "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "6193c4357b39916066d810bc0b2cb153", "zippedFile": "epr-17740a.ic8", "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "4c51a40cd3d0eec13c3b25c6b70ad632", "zippedFile": "epr-17741a.ic8", "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "858fc8d8ad62059ea912ec09e9a38111", "zippedFile": "epr-17742a.ic8", "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "4bee9b193799bd221a7482c7d7765295", "zippedFile": "epr-17951a.ic8", "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "249b67334cfae53810c1d1e3b93957a3", "zippedFile": "epr-17952a.ic8", "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "251f89478034d93abdf54d05b43c16c0", "zippedFile": "epr-17953a.ic8", "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "ba2cb634c15e59d7ea5552729306f2ef", "zippedFile": "epr-17954a.ic8", "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "b9574b29185fa9e16977d041dd21dabd", "zippedFile": "epr-18022.ic2",  "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "099c908e4af55d6602bb5fddbbc2d0b3", "zippedFile": "epr-19730.ic8",  "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "fa6117a16a7df94dcc6e9e12896c66f2", "zippedFile": "epr-19854.ic8",  "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "34175c7ad31acbe44f2baccc7ea065c7", "zippedFile": "epr-20091.ic8",  "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "202226db8648ef036b57bc64a4180c92", "zippedFile": "epr-23603.ic8",  "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "b52e39d0a0377c098b33957a1ad3ba88", "zippedFile": "stv110.bin",     "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "8e0a1096fc6593eeb508e1159bbdd70c", "zippedFile": "stv1061.bin",    "file": "roms/st-v/stvbios.zip" },
-                                                         { "md5": "a9ad871282e209b47adbdcb28241c02e", "zippedFile": "stvbios.nv",     "file": "roms/st-v/stvbios.zip" } ] },
+    "segastv": { "name": "Sega Titan Video", "biosFiles": [ { "md5": "", "file": "bios/stvbios.zip" },
+                                                         { "md5": "a36acd9ac53b668bebbd98bd192c43e9", "zippedFile": "epr-17740.ic8",  "file": "bios/stvbios.zip" },
+                                                         { "md5": "6193c4357b39916066d810bc0b2cb153", "zippedFile": "epr-17740a.ic8", "file": "bios/stvbios.zip" },
+                                                         { "md5": "4c51a40cd3d0eec13c3b25c6b70ad632", "zippedFile": "epr-17741a.ic8", "file": "bios/stvbios.zip" },
+                                                         { "md5": "858fc8d8ad62059ea912ec09e9a38111", "zippedFile": "epr-17742a.ic8", "file": "bios/stvbios.zip" },
+                                                         { "md5": "4bee9b193799bd221a7482c7d7765295", "zippedFile": "epr-17951a.ic8", "file": "bios/stvbios.zip" },
+                                                         { "md5": "249b67334cfae53810c1d1e3b93957a3", "zippedFile": "epr-17952a.ic8", "file": "bios/stvbios.zip" },
+                                                         { "md5": "251f89478034d93abdf54d05b43c16c0", "zippedFile": "epr-17953a.ic8", "file": "bios/stvbios.zip" },
+                                                         { "md5": "ba2cb634c15e59d7ea5552729306f2ef", "zippedFile": "epr-17954a.ic8", "file": "bios/stvbios.zip" },
+                                                         { "md5": "b9574b29185fa9e16977d041dd21dabd", "zippedFile": "epr-18022.ic2",  "file": "bios/stvbios.zip" },
+                                                         { "md5": "099c908e4af55d6602bb5fddbbc2d0b3", "zippedFile": "epr-19730.ic8",  "file": "bios/stvbios.zip" },
+                                                         { "md5": "fa6117a16a7df94dcc6e9e12896c66f2", "zippedFile": "epr-19854.ic8",  "file": "bios/stvbios.zip" },
+                                                         { "md5": "34175c7ad31acbe44f2baccc7ea065c7", "zippedFile": "epr-20091.ic8",  "file": "bios/stvbios.zip" },
+                                                         { "md5": "202226db8648ef036b57bc64a4180c92", "zippedFile": "epr-23603.ic8",  "file": "bios/stvbios.zip" },
+                                                         { "md5": "b52e39d0a0377c098b33957a1ad3ba88", "zippedFile": "stv110.bin",     "file": "bios/stvbios.zip" },
+                                                         { "md5": "8e0a1096fc6593eeb508e1159bbdd70c", "zippedFile": "stv1061.bin",    "file": "bios/stvbios.zip" },
+                                                         { "md5": "a9ad871282e209b47adbdcb28241c02e", "zippedFile": "stvbios.nv",     "file": "bios/stvbios.zip" } ] },
 
     # ---------- Sega Chihiro ---------- #
     "chihiro": { "name": "Sega Chihiro", "biosFiles": [{ "md5": "d49c52a4102f6df7bcf8d0617ac475ed", "file": "bios/mcpx_1.0.bin" },
@@ -992,18 +981,6 @@ systems = {
                                                         { "md5": "5ad3baaad3b5156d6b60b34229a676fb", "zippedFile": "9256ds-0038_enter05-23-a.u2", "file": "bios/ep64.zip" },
                                                         { "md5": "f36f24cbb87745fbd2714e4df881db09", "zippedFile": "9256ds-0019_enter08-45-a.u2", "file": "bios/ep128.zip" },
                                                         { "md5": "47258d03aec37bc24df5dbc5d50fc9f8", "zippedFile": "exdos13.rom", "file": "bios/ep64_exdos.zip" } ] },
-    # ---------- Elektronika BK ---------- #
-    # https://docs.libretro.com/library/bk/
-    "bk": { "name": "Elektronika BK", "biosFiles": [ # BK-0011M
-                                                     { "md5": "fe4627d1e3a1535874085050733263e7", "file": "bios/bk/B11M_BOS.ROM"  },
-                                                     { "md5": "dc52f365d56fa1951f5d35b1101b9e3f", "file": "bios/bk/B11M_EXT.ROM"  },
-                                                     { "md5": "946f6f23ded03c0e26187f0b3ca75993", "file": "bios/bk/BAS11M_0.ROM"  },
-                                                     { "md5": "1e6637f32aa7d1de03510030cac40bcf", "file": "bios/bk/BAS11M_1.ROM"  },
-                                                     { "md5": "5015228eeeb238e65da8edcd1b6dfac7", "file": "bios/bk/DISK_327.ROM"  },
-                                                     # BK-0010
-                                                     { "md5": "3fa774326d75410a065659aea80252f0", "file": "bios/bk/BASIC10.ROM"   },
-                                                     { "md5": "5737f972e8638831ab71e9139abae052", "file": "bios/bk/FOCAL10.ROM"   },
-                                                     { "md5": "95f8c41c6abf7640e35a6a03cecebd01", "file": "bios/bk/MONIT10.ROM"   }] },
     # ---------- Videoton TVC ---------- #
     "tvc": { "name": "Videoton TVC", "biosFiles": [{ "md5": "8c54285f541930cde766069942bad0f2", "file": "bios/tvc22_sys.rom" },
                                                    { "md5": "5ce95a26ceed5bec73995d83568da9cf", "file": "bios/tvc22_ext.rom" },
@@ -1018,7 +995,7 @@ systems = {
                                                    { "md5": "198182b80de1f1c54904870ae0639471", "zippedFile": "tvc22_d4.64k", "file": "bios/tvc64.zip", "emulator": "libretro", "core": "mame" },
                                                    { "md5": "5ce95a26ceed5bec73995d83568da9cf", "zippedFile": "tvc22_d7.64k", "file": "bios/tvc64.zip", "emulator": "libretro", "core": "mame" }] },
     # ---------- Triforce ---------- #
-    "triforce": { "name": "Triforce", "biosFiles":  [ { "md5": "2ef01c0e93f7ee3a0a4b139aa14728b9", "file": "saves/dolphin-emu/Triforce/segaboot.gcm" }] },
+    "triforce": { "name": "Triforce", "biosFiles":  [ { "md5": "2ef01c0e93f7ee3a0a4b139aa14728b9", "file": "bios/dolphin-emu/Triforce/segaboot.gcm" }] },
 
     # ---------- Elektronika BK ---------- #
     # https://docs.libretro.com/library/bk/

@@ -1,0 +1,22 @@
+diff --git a/third_party/fpattern/CMakeLists.txt b/third_party/fpattern/CMakeLists.txt
+index b7d1d22..a0663c8 100644
+--- a/third_party/fpattern/CMakeLists.txt
++++ b/third_party/fpattern/CMakeLists.txt
+@@ -5,7 +5,7 @@ project(fpattern
+     VERSION "1.0.0"
+ )
+ 
+-add_library(fpattern-static src/fpattern.c)
++add_library(fpattern-static STATIC src/fpattern.c)
+ add_library(fpattern::fpattern ALIAS fpattern-static)
+ 
+ if(NOT WIN32)
+@@ -18,7 +18,7 @@ target_include_directories(fpattern-static PUBLIC
+     "${CMAKE_CURRENT_SOURCE_DIR}/include"
+ )
+ 
+-add_library(fpattern-windows-static src/fpattern.c)
++add_library(fpattern-windows-static STATIC src/fpattern.c)
+ add_library(fpattern_windows::fpattern_windows ALIAS fpattern-windows-static)
+ 
+ target_compile_definitions(fpattern-windows-static PRIVATE
