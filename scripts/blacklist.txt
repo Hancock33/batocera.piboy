@@ -1,6 +1,4 @@
-﻿batocera-emulationstation.mk
-batocera-es-piboy.mk
-batocera-luajit.mk
+﻿batocera-luajit.mk
 firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
