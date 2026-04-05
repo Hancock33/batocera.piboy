@@ -46,9 +46,5 @@ endef
 
 YABASANSHIRO_PRE_CONFIGURE_HOOKS = YABASANSHIRO_GIT_HASH
 
-define YABASANSHIRO_POST_PROCESS
-	cp -av $(HOST_DIR)/$(GNU_TARGET_NAME)/lib64/libquadmath.so.0.0.0 $(TARGET_DIR)/usr/bin/yabasanshiro/libquadmath.so.0
-endef
-
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
