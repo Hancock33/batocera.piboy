@@ -5,7 +5,9 @@
 ################################################################################
 # Version: Commits on Apr 06, 2026
 LIBRETRO_DOUBLECHERRYGB_VERSION = 1baa5b2ae2c1ed99e33fb8b56ff3a876514d497f
-LIBRETRO_DOUBLECHERRYGB_SITE = $(call github,TimOelrichs,doublecherryGB-libretro,$(LIBRETRO_DOUBLECHERRYGB_VERSION))
+LIBRETRO_DOUBLECHERRYGB_SITE = https://github.com/TimOelrichs/doublecherryGB-libretro.git
+LIBRETRO_DOUBLECHERRYGB_SITE_METHOD=git
+LIBRETRO_DOUBLECHERRYGB_GIT_SUBMODULES=YES
 LIBRETRO_DOUBLECHERRYGB_LICENSE = GPLv2
 LIBRETRO_DOUBLECHERRYGB_EMULATOR_INFO = doublecherrygb.libretro.core.yml
 
