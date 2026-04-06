@@ -6,6 +6,9 @@ ares.mk
 batocera-onscreen-keyboard.mk
 batocera-settings.mk
 bgfx.mk
+box64.mk
+box86.mk
+bstone.mk
 cabextract.mk
 cbindgen.mk
 corsixth.mk
@@ -16,6 +19,7 @@ flatpak.mk
 freepats.mk
 fsuae.mk
 gtk-layer-shell.mk
+hcl.mk
 kddocwidgets.mk
 kodi-pvr-freebox.mk
 labwc.mk
@@ -50,9 +54,13 @@ semver.mk
 sf_rpi_status.mk
 shaderc.mk
 shadps4.mk
+sonic3-air.mk
 spirv-llvm-translator.mk
 supertux2.mk
+tekwar.mk
+theforceengine.mk
 tomlplusplus.mk
+trx.mk
 uthash.mk
 wine-custom.mk
 wine-mono.mk

@@ -33,6 +33,7 @@ mold.mk
 mono-bin.mk
 nblood.mk
 nv-codec-headers.mk
+openjazz.mk
 pcsx2.mk
 pironman5.mk
 pysdl2.mk
