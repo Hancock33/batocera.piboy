@@ -3,8 +3,8 @@
 # stuntcar
 #
 ################################################################################
-# Version: Commits on Dec 01, 2025
-STUNTCAR_VERSION = d2fa3ad31e456bd44736d98d00f99ab627ec7ebc
+# Version: Commits on Jan 19, 2026
+STUNTCAR_VERSION = 9f0f8e6e0aca08b715a0f9291ba21c3dc3cab39d
 STUNTCAR_SITE = $(call github,ptitSeb,stuntcarremake,$(STUNTCAR_VERSION))
 STUNTCAR_EMULATOR_INFO = stuntcar.emulator.yml
 STUNTCAR_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
