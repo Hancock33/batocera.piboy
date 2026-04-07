@@ -16,7 +16,9 @@ Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|92cc37560a5ff14a78a4150157c1fea9ba43a747|Apr 07, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|0e05fdc99b6d6c775b30308dae17bf4d63c49aee|Apr 07, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.16|Apr 07, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260407|Apr 07, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|8e567826c1455a7f2e6b8402792e5163325e56fb|Apr 07, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260407|Apr 07, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|73a79602fe7b103309d2dc43db32130a4c1bf0db|Apr 07, 2026
 Emulators|[libretro-doublecherrygb](https://github.com/TimOelrichs/doublecherryGB-libretro.git)|2ffc5178843feb071dfd5819022fdc81ad85bf69|Apr 07, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|ad03e10c16a70b289f29bb10112857961125b4e6|Apr 07, 2026
@@ -52,8 +54,6 @@ Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|1421a3a2da5d80809
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|b19874467f79ddec3534c40a66c0cd8abc63cd90|Apr 05, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|7f61c30e118a57c4a4aaf3423ae3805729ee6094|Apr 05, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|60bf6c113250f3ccfafda1227af2e94305666c62|Apr 05, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260405|Apr 05, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260405|Apr 05, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|8fbafaa2c9a434c86ed499dace71a497e1647021|Apr 05, 2026
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|4abfb8be233bec630f369379fb6c1d92d31f1c7d|Apr 05, 2026
 Emulators|[libretro-freej2me](http://github.com/TASEmulators/freej2me-plus)|92d7c911feb72f289a52837520e9b03954cb8a2c|Apr 05, 2026
