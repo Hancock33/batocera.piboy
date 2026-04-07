@@ -3,8 +3,8 @@
 # libretro-geolith
 #
 ################################################################################
-# Version: Commits on Apr 03, 2026
-LIBRETRO_GEOLITH_VERSION = fe6fdc78e932c85435b03916ed36de7ad3417cd6
+# Version: Commits on Apr 07, 2026
+LIBRETRO_GEOLITH_VERSION = 5b1792c865f1e4c3ba619d8cc11eb5271f005fa9
 LIBRETRO_GEOLITH_SITE = $(call github,libretro,geolith-libretro,$(LIBRETRO_GEOLITH_VERSION))
 LIBRETRO_GEOLITH_LICENSE = GPL-3.0
 LIBRETRO_GEOLITH_EMULATOR_INFO = geolith.libretro.core.yml
