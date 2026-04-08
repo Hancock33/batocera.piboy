@@ -32,12 +32,9 @@ SYNCTHING_TARGET_ENV = \
 	GOCACHE="$(HOST_GO_TARGET_CACHE)" \
 	GOMODCACHE="$(@D)" \
 	GOFLAGS="-modcacherw" \
-	CGO_ENABLED=0 \
-	GOOS=linux \
-	GOARCH=$(GOARCH)
 
 define SYNCTHING_BUILD_CMDS
-	cd $(@D) && $(SYNCTHING_TARGET_ENV) $(GO_BIN) run build.go build
+	cd $(@D) && $(SYNCTHING_TARGET_ENV) $(GO_BIN) run build.go -goos linux -goarch $(GOARCH) build
 endef
 
 define SYNCTHING_INSTALL_TARGET_CMDS
