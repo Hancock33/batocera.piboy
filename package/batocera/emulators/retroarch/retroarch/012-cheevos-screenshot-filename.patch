@@ -1,5 +1,5 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index 83ae381de7..a51206740c 100644
+index 9b9a74eed7..7504493d14 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
 @@ -452,9 +452,10 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
