@@ -3,8 +3,8 @@
 # libretro-yabause
 #
 ################################################################################
-# Version: Commits on Dec 20, 2025
-LIBRETRO_YABAUSE_VERSION = 65af22e96beb6d9b0b9a50a81a39c86a6d604c1c
+# Version: Commits on Apr 10, 2026
+LIBRETRO_YABAUSE_VERSION = 76faf7c601359bafc41785325d686644000a7ba9
 LIBRETRO_YABAUSE_SITE = $(call github,libretro,yabause,$(LIBRETRO_YABAUSE_VERSION))
 LIBRETRO_YABAUSE_LICENSE = GPL
 LIBRETRO_YABAUSE_EMULATOR_INFO = yabause.libretro.core.yml
