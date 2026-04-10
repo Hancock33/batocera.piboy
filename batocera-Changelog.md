@@ -100,9 +100,9 @@
 - RPCS3 PS Move (light gun) mapping simplified. D-pad buttons are now PS Move face buttons. Check wiki for more info.
 ### Updated
 - Amiberry to 5th of March 2026 build
-- Azahar to 2124
+- Azahar to 2125.0.1
 - BigPEmu to v121
-- Cemu to 22nd of January 2026 build
+- Cemu to 5th of April 2026 build
 - CLK to 2026-01-06
 - Dolphin-Emu to 2603a (Wii RetroAchievements)
 - DXX-Rebirth to May 25, 2025
