@@ -5866,8 +5866,6 @@ model2:
   extensions:           [zip]
   platform:             model2, arcade
   emulators:
-    model2emu:
-      model2emu:        { requireAnyOf: [BR2_PACKAGE_MODEL2EMU] }
     libretro:
       archs_include:    [x86_64, x86-64-v3]
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }

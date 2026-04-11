@@ -245,7 +245,6 @@ Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/lindbergh-loader)|88e1628382949dc543d42e4ec366de009e19598f|Feb 24, 2026
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0287|Mar 30, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|94f9bf534cdd1e8f89232607241aef6ca9f23882|Apr 10, 2026
-Emulators|[model2emu](https://github.com/batocera-linux/model2emu/raw/main)|57b5cff598e63ca688a9a58f3b341104e43c4b01|May 15, 2022
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|5c58d3f69c8fdcc23b8d9dbd47685ab84bd0e08e|Mar 30, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|53a08fceb71653000dd6640cac05eb390fba7885|Mar 30, 2026
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|c8ef81c7d9aede9f67f6ed3d3426c90541f9f13e|Jan 13, 2026

@@ -584,12 +584,10 @@ model1:
   emulator: libretro
   core:     mame
 model2:
-  emulator: model2emu
-  core:     model2emu
+  emulator: libretro
+  core:     mame
   options:
     powersave: '2'
-    videomode: max-1920x1080
-    hud_support: false
 model3:
   emulator: supermodel
   core:     supermodel
