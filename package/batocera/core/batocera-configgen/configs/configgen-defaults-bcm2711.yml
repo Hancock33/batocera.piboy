@@ -61,8 +61,8 @@ psp:
   options:
     frameskip: automatic
 psx:
-  options:
-    gfxbackend: vulkan
+  emulator: duckstation
+  core:     duckstation
 quake3:
   emulator: vkquake3
   core:     vkquake3
