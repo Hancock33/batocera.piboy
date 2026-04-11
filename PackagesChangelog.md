@@ -70,6 +70,7 @@ Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|e2337
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|010551cf356cdf14085cf8d377c81fc683015ee2|Apr 07, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|0e05fdc99b6d6c775b30308dae17bf4d63c49aee|Apr 07, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.0.16|Apr 07, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260407-proton-slr|Apr 07, 2026
 Emulators|[libretro-citra](https://github.com/azahar-emu/azahar.git)|b2faa299d5890a65ff979fcb379d2b20d0ca36fc|Apr 07, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|ad03e10c16a70b289f29bb10112857961125b4e6|Apr 07, 2026
 Audio|[cubeb](http://github.com/mozilla/cubeb)|626d7d9f906e9f3cfb70be9e58af0f5a5f399a74|Apr 06, 2026
@@ -210,7 +211,6 @@ Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.25.0|Mar 25, 2026
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/b5/ff/a6be4040131fcae271a6b10900093b48b9e5332726ed95bab28191455d2b)|9.0.4|Mar 25, 2026
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|48bc0d079116c6429989bcf88595ef20c5c1b80f|Mar 25, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.2|Mar 24, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260324-proton-slr|Mar 24, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.142.9197-527|Mar 24, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|595.58.03|Mar 24, 2026
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|a1d758ecf5df9a42b47f2533c9b31c686c4e1bb6|Mar 24, 2026
