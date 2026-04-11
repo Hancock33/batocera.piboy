@@ -3,8 +3,8 @@
 # syncthing
 #
 ################################################################################
-# Version: Commits on Mar 13, 2026
-SYNCTHING_VERSION = v2.0.16-rc.2
+# Version: Commits on Apr 07, 2026
+SYNCTHING_VERSION = v2.0.16
 SYNCTHING_SITE = $(call github,syncthing,syncthing,$(SYNCTHING_VERSION))
 SYNCTHING_LICENSE = MPLv2
 SYNCTHING_LICENSE_FILES = LICENSE
@@ -32,12 +32,9 @@ SYNCTHING_TARGET_ENV = \
 	GOCACHE="$(HOST_GO_TARGET_CACHE)" \
 	GOMODCACHE="$(@D)" \
 	GOFLAGS="-modcacherw" \
-	CGO_ENABLED=0 \
-	GOOS=linux \
-	GOARCH=$(GOARCH)
 
 define SYNCTHING_BUILD_CMDS
-	cd $(@D) && $(SYNCTHING_TARGET_ENV) $(GO_BIN) run build.go build
+	cd $(@D) && $(SYNCTHING_TARGET_ENV) $(GO_BIN) run build.go -goos linux -goarch $(GOARCH) build
 endef
 
 define SYNCTHING_INSTALL_TARGET_CMDS

@@ -3,8 +3,8 @@
 # xpadneo
 #
 ################################################################################
-# Version: Commits on Mar 25, 2026
-XPADNEO_VERSION = 93621f104dfe6a1690cf72f0f4fd074a0a86acce
+# Version: Commits on Apr 11, 2026
+XPADNEO_VERSION = 45f39820edc2c3fc5605bfe4daea471263678ed1
 XPADNEO_SITE = $(call github,atar-axis,xpadneo,$(XPADNEO_VERSION))
 XPADNEO_DEPENDENCIES = host-cabextract bluez5_utils
 XPADNEO_MODULE_SUBDIRS = hid-xpadneo/src

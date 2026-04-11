@@ -110,13 +110,6 @@ ifeq ($(BR2_PACKAGE_CEMU)$(BR2_PACKAGE_CEMU_ANDROID),y)
   BATOCERA_DESKTOPAPPS_ICONS   += cemu.png
 endif
 
-# model2emu
-ifeq ($(BR2_PACKAGE_MODEL2EMU),y)
-  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-model2emu
-  BATOCERA_DESKTOPAPPS_APPS    += model2emu-config.desktop
-  BATOCERA_DESKTOPAPPS_ICONS   += model2emu.png
-endif
-
 # flatpak
 ifeq ($(BR2_PACKAGE_BAUH),y)
   BATOCERA_DESKTOPAPPS_APPS    += flatpak-config.desktop

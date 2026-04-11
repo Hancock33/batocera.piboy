@@ -8,13 +8,11 @@ lib32bit.mk
 libaltsound.mk
 libdmdutil.mk
 libpinmame.mk
-model2emu.mk
 mt32emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
 python-pyxel.mk
-stuntcar.mk
 wine-custom.mk
 wine-proton.mk
 wine-x86.mk

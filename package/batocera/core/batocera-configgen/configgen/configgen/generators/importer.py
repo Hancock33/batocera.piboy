@@ -79,7 +79,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'lindbergh-loader': ('lindbergh.lindberghGenerator', 'LindberghGenerator'),
     'mame': ('mame.mameGenerator', 'MameGenerator'),
     'melonds': ('melonds.melondsGenerator', 'MelonDSGenerator'),
-    'model2emu': ('model2emu.model2emuGenerator', 'Model2EmuGenerator'),
     'moonlight': ('moonlight.moonlightGenerator', 'MoonlightGenerator'),
     'mugen': ('mugen.mugenGenerator', 'MugenGenerator'),
     'mupen64plus': ('mupen.mupenGenerator', 'MupenGenerator'),

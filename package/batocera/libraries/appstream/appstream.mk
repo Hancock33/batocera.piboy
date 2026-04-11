@@ -17,6 +17,7 @@ HOST_APPSTREAM_CONF_OPTS = -Dgir=false -Dstemming=false -Dsystemd=false -Dzstd-s
 HOST_APPSTREAM_CONF_OPTS += -Ddocs=false -Dapidocs=false -Dinstall-docs=false
 
 APPSTREAM_CONF_ENV = LD_LIBRARY_PATH=$(HOST_DIR)/lib:$(LD_LIBRARY_PATH) PATH=$(HOST_DIR)/bin:$(PATH)
+HOST_APPSTREAM_CONF_ENV = PKG_CONFIG_LIBDIR=$(HOST_DIR)/lib/pkgconfig:$(HOST_DIR)/share/pkgconfig:/lib/x86_64-linux-gnu/pkgconfig/
 
 $(eval $(meson-package))
 $(eval $(host-meson-package))

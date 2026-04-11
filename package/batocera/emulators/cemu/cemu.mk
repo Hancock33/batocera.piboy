@@ -3,8 +3,8 @@
 # cemu
 #
 ################################################################################
-# Version: Commits on Apr 04, 2026
-CEMU_VERSION = b9b46ecb65e2eb1c15793380048309df73d2084e
+# Version: Commits on Apr 10, 2026
+CEMU_VERSION = 391478b307a22f5e337cceb5a6eac5b71e8d7558
 CEMU_SITE = https://github.com/cemu-project/Cemu.git
 CEMU_LICENSE = GPLv2
 CEMU_SITE_METHOD=git
@@ -30,7 +30,6 @@ endif
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=ON
     CEMU_DEPENDENCIES += wayland wayland-protocols
-    CEMU_PRE_CONFIGURE_HOOKS = CEMU_WAYLAND_CMAKE
 else
     CEMU_CONF_OPTS += -DENABLE_WAYLAND=OFF
 endif
@@ -41,10 +40,6 @@ ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
 else
     CEMU_DEPENDENCIES += -DENABLE_VULKAN=OFF
 endif
-
-define CEMU_WAYLAND_CMAKE
-	$(SED) 's:$${WaylandProtocols_DATADIR}:$(STAGING_DIR)/usr/share/wayland-protocols:g' $(@D)/CMakeLists.txt
-endef
 
 define CEMU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/cemu/

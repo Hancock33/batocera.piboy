@@ -3,8 +3,8 @@
 # box86
 #
 ################################################################################
-# Version: Commits on Jan 07, 2026
-BOX86_VERSION = 0579f8b9c47d87d700724f4cce559b06cbd2b0f5
+# Version: Commits on Dec 06, 2024
+BOX86_VERSION = v0.3.8
 BOX86_SITE = $(call github,ptitseb,box86,$(BOX86_VERSION))
 BOX86_SUPPORTS_IN_SOURCE_BUILD = NO
 BOX86_LICENSE = MIT

@@ -1,8 +1,8 @@
 diff --git a/gfx/drivers_context/drm_ctx.c b/gfx/drivers_context/drm_ctx.c
-index 1eb48b449b..e590bdb9ec 100644
+index 56598b1990..e621f973b8 100644
 --- a/gfx/drivers_context/drm_ctx.c
 +++ b/gfx/drivers_context/drm_ctx.c
-@@ -803,6 +803,8 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
+@@ -841,6 +841,8 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
     settings_t *settings            = config_get_ptr();
     unsigned black_frame_insertion  = settings->uints.video_black_frame_insertion;
     float video_refresh_rate        = settings->floats.video_refresh_rate;
@@ -11,7 +11,7 @@ index 1eb48b449b..e590bdb9ec 100644
  
     if (!drm)
        return false;
-@@ -828,8 +830,17 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
+@@ -866,8 +868,17 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
     }
     if ((width == 0 && height == 0) || !fullscreen)
     {
@@ -31,7 +31,7 @@ index 1eb48b449b..e590bdb9ec 100644
     }
     else
     {
-@@ -841,34 +852,16 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
+@@ -879,34 +890,16 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
        }
        else
        {

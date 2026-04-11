@@ -3,8 +3,8 @@
 # hcl
 #
 ################################################################################
-# Version: Commits on Mar 14, 2026
-HCL_VERSION = 56efcf605f99f8bbe5ac4b2e0705aadfba3cb8ac
+# Version: Commits on Dec 18, 2025
+HCL_VERSION = v0.1.0
 HCL_SITE = $(call github,ptitSeb,hydracastlelabyrinth,$(HCL_VERSION))
 HCL_DEPENDENCIES = sdl2 sdl2_mixer
 HCL_LICENSE = GPL-2.0

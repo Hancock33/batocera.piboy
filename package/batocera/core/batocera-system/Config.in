@@ -98,12 +98,6 @@ config BR2_PACKAGE_BATOCERA_LIB32
 config BR2_PACKAGE_BATOCERA_BCM27XX
     bool "RPI4/5 shared apps / emulators / games / libraries "
 
-config BR2_REMOVE_SOURCE_AFTER_COMPILE
-    bool "remove src"
-
-config BR2_REMOVE_SOURCE_AFTER_COMPILE
-    bool "remove src"
-
 config BR_CMAKE_USE_CLANG
     bool "use clang for cmake builds"
 
@@ -811,9 +805,6 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
     # Demul emulator - multiple Sega arcade systems
     select BR2_PACKAGE_DEMUL                                if  BR2_PACKAGE_BATOCERA_WINE
-
-    # Standalone Sega Model 2 emulator
-    select BR2_PACKAGE_MODEL2EMU                            if  BR2_PACKAGE_BATOCERA_WINE
 
     # Standalone Sega Model 3 emulator
     select BR2_PACKAGE_SUPERMODEL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY

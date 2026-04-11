@@ -171,6 +171,7 @@ rm -rf "${TARGET_DIR}/usr/lib/python3.14/site-packages/numpy/_core/tests/example
 rm -rf "${TARGET_DIR}/usr/share/mc/examples" || exit 1
 rm -rf "${TARGET_DIR}/usr/share/examples" || exit 1
 rm -rf "${TARGET_DIR}/usr/share/vpl" || exit 1
+rm -rf "${TARGET_DIR}/usr/share/kde4" || exit 1
 find ${TARGET_DIR} -type f -name "CHANGELOG*" -exec rm {} \; || exit 1
 find ${TARGET_DIR} -type f -name "changelog.txt" -exec rm {} \; || exit 1
 find ${TARGET_DIR} -type f -name "README*" -exec rm {} \; || exit 1
