@@ -98,12 +98,6 @@ config BR2_PACKAGE_BATOCERA_LIB32
 config BR2_PACKAGE_BATOCERA_BCM27XX
     bool "RPI4/5 shared apps / emulators / games / libraries "
 
-config BR2_REMOVE_SOURCE_AFTER_COMPILE
-    bool "remove src"
-
-config BR2_REMOVE_SOURCE_AFTER_COMPILE
-    bool "remove src"
-
 config BR_CMAKE_USE_CLANG
     bool "use clang for cmake builds"
 
