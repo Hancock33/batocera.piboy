@@ -313,7 +313,7 @@ Engines|[thextech](https://github.com/TheXTech/TheXTech)|7d416d9b880560a6c45c52c
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|f133009adfac866c24d8259b6b4b24ce85abe330|Mar 12, 2026
 Engines|[vpinball-next](http://github.com/vpinball/vpinball)|ea1030c44652e1faa4518177bd080d098ca77eb3|Apr 11, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|afc7c38ffb1078076ec523c37b30055061c93ff1|Jul 23, 2024
-Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260309|Mar 09, 2026
+Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260410|Apr 10, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
 Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmwares)|e9c1d95f2d707ddd7bb0ef9e4711914de3cb60c2|May 10, 2024
 Firmwares|[firmware-armbian](https://github.com/armbian/firmware)|f065f271d492193a472a12103a0604ef4178a5c7|Feb 07, 2026

@@ -30,6 +30,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|5e7be496a2d0480aa
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ed41f982c1bfed65f43c7f5a56d155ea3b7f3adb|Apr 10, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|94f9bf534cdd1e8f89232607241aef6ca9f23882|Apr 10, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|5312a4e119477aa1e1629f943940e05be5189447|Apr 10, 2026
+Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260410|Apr 10, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|d74d6da1c20a300e5fec7827fe75b5d1b2a337ff|Apr 10, 2026
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|0d721a5327039d830aab3a5d4ce459f99eeb16f1|Apr 10, 2026
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-3|Apr 10, 2026
@@ -265,7 +266,6 @@ Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|ca1
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|f133009adfac866c24d8259b6b4b24ce85abe330|Mar 12, 2026
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20260311|Mar 11, 2026
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|8187920ed261c7024826f8204cc7bea45153a3da|Mar 10, 2026
-Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260309|Mar 09, 2026
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|release-3.2.0|Mar 09, 2026
 Network|[rtw88](http://github.com/lwfinger/rtw88)|d2258b4de21aeabf7ef85ec0cada1f3cff9bcbe0|Mar 09, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|2b19f7ff0d17efca7e9791ad2c3c33509e038e8b|Mar 08, 2026
