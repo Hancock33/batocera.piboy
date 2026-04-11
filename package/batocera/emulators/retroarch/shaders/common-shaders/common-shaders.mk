@@ -3,8 +3,8 @@
 # common-shaders
 #
 ################################################################################
-# Version: Commits on Apr 16, 2022
-COMMON_SHADERS_VERSION = 86cfa146a8dfddf6377ddb5dbcff552feae2e5bf
+# Version: Commits on Apr 10, 2026
+COMMON_SHADERS_VERSION = ba58d81561544ace09ed338f5c19a17d737c53a2
 COMMON_SHADERS_SITE = $(call github,libretro,common-shaders,$(COMMON_SHADERS_VERSION))
 COMMON_SHADERS_LICENSE = GPL
 
