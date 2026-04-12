@@ -1,0 +1,17 @@
+diff --git a/make/CMakeLists_gl-linux-x64.txt b/make/CMakeLists_gl-linux-x64.txt
+index ffc8c5066..d78801e22 100644
+--- a/make/CMakeLists_gl-linux-x64.txt
++++ b/make/CMakeLists_gl-linux-x64.txt
+@@ -42,9 +42,9 @@ add_executable(vpinball
+ target_include_directories(vpinball PUBLIC
+    ${CMAKE_SOURCE_DIR}/third-party/include
+    ${CMAKE_SOURCE_DIR}
+-   ${CMAKE_SOURCE_DIR}/third-party/include/libwinevbs/atl/include
+-   ${CMAKE_SOURCE_DIR}/third-party/include/libwinevbs/atlmfc/include
+-   ${CMAKE_SOURCE_DIR}/third-party/include/libwinevbs/wine/include
++   ${CMAKE_SOURCE_DIR}/third-party/include/libwinevbs/atl
++   ${CMAKE_SOURCE_DIR}/third-party/include/libwinevbs/atlmfc
++   ${CMAKE_SOURCE_DIR}/third-party/include/libwinevbs/wine
+    media
+    pin
+    src

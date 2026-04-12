@@ -3,12 +3,12 @@
 # libzedmd
 #
 ################################################################################
-# Version: Commits on Jan 08, 2026
-LIBZEDMD_VERSION = v0.10.1
+# Version: Commits on Apr 11, 2026
+LIBZEDMD_VERSION = 355e0915ca8ad7e090333c0c0c7ddd00b6b43e7a
 LIBZEDMD_SITE = $(call github,PPUC,libzedmd,$(LIBZEDMD_VERSION))
 LIBZEDMD_LICENSE = GPLv3
 LIBZEDMD_LICENSE_FILES = LICENSE
-LIBZEDMD_DEPENDENCIES = libframeutil libserialport sockpp
+LIBZEDMD_DEPENDENCIES = cargs libframeutil libserialport sockpp
 LIBZEDMD_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBZEDMD_INSTALL_STAGING = YES
 
