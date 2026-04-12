@@ -18,14 +18,6 @@ XENIA_NATIVE_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-implicit-function-declaration
 XENIA_NATIVE_CONF_OPTS += -DCMAKE_C_FLAGS="$(XENIA_NATIVE_TARGET_CFLAGS)"
 XENIA_NATIVE_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(XENIA_NATIVE_TARGET_CFLAGS)"
 
-define XENIA_NATIVE_CROSS_GITVER
-	echo '#define XE_BUILD_BRANCH "master"' >> $(@D)/buildroot-build/version.h
-	echo '#define XE_BUILD_COMMIT "$(XENIA_NATIVE_VERSION)"' >> $(@D)/buildroot-build/version.h
-	echo '#define XE_BUILD_COMMIT_SHORT "$(shell echo $(XENIA_NATIVE_VERSION) | cut -c 1-7)"' >> $(@D)/buildroot-build/version.h
-	echo '#define XE_BUILD_DATE __DATE__' >> $(@D)/buildroot-build/version.h
-	cat $(@D)/buildroot-build/version.h
-endef
-
 define XENIA_NATIVE_POST_PROCESS
 	# get the latest patches
 	mkdir -p $(TARGET_DIR)/usr/bin/xenia-canary/patches
@@ -42,8 +34,6 @@ define XENIA_NATIVE_POST_PROCESS
 	rm -rf $(@D)/temp
 endef
 
-
-XENIA_NATIVE_POST_CONFIGURE_HOOKS = XENIA_NATIVE_CROSS_GITVER
 XENIA_NATIVE_POST_INSTALL_TARGET_HOOKS += XENIA_NATIVE_POST_PROCESS
 
 define XENIA_NATIVE_INSTALL_TARGET_CMDS
