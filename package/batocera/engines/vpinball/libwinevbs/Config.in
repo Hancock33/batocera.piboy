@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBWINEVBS
+	bool "libwinevbs"
+	
+	help
+	  libwinevbs - cross-platform VBScript engine library.
+
+	  https://github.com/vpinball/libwinevbs

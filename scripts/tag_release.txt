@@ -1,4 +1,5 @@
 ﻿aic8800.mk
+alllinuxfirmwares.mk
 alsa-topology-conf.mk
 alsa-ucm-conf.mk
 appstream.mk
@@ -27,9 +28,7 @@ libdate.mk
 libfyaml.mk
 liblc3.mk
 libretro-scummvm.mk
-libserum.mk
 libsfdo.mk
-libzedmd.mk
 mt32emu.mk
 nghttp3.mk
 ngtcp2.mk

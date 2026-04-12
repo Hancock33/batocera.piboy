@@ -9,7 +9,8 @@
 
 ##### constants ################
 BATOCERA_BINARIES_DIR="${BINARIES_DIR}/batocera"
-GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
+GENIMAGE_TMP="/mnt/ramdisk/genimage.tmp"
+GENFINALIMAGE_TMP="/mnt/ramdisk/image"
 ################################
 
 ##### find images to build #####
@@ -63,18 +64,20 @@ do
     #### boot.tar.xz ###############
     echo "creating images/${BATOCERA_SUBTARGET}/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz"
     mkdir -p "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}" || exit 1
-    (cd "${BATOCERA_BINARIES_DIR}/boot" && tar -I "xz -T0 -v" -cf "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz" *) || exit 1
+    mkdir -p "${GENIMAGE_TMP}" || exit 1
+    (cd "${BATOCERA_BINARIES_DIR}/boot" && XZ_DEFAULTS="-7 -T 0 -v " tar -cJf "$GENIMAGE_TMP/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz" *) || exit 1
+    mv "$GENIMAGE_TMP/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz" "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/boot-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.tar.xz" || exit 1
+    rm -rf "${GENIMAGE_TMP}" || exit 1
 
     # rename the squashfs : the .update is the version that will be renamed at boot to replace the old version
-    mv "${BATOCERA_BINARIES_DIR}/boot/boot/batocera.update" "${BATOCERA_BINARIES_DIR}/boot/boot/batocera" || exit 1
+    mv "${BATOCERA_BINARIES_DIR}/boot/boot/batocera.update"     "${BATOCERA_BINARIES_DIR}/boot/boot/batocera"     || exit 1
     mv "${BATOCERA_BINARIES_DIR}/boot/boot/rufomaculata.update" "${BATOCERA_BINARIES_DIR}/boot/boot/rufomaculata" || exit 1
 
     # create *.img
-    if test "${IMGMODE}" = "multi"
-    then
-	BATOCERAIMG="${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/batocera-${BATOCERA_LOWER_TARGET}-${BATOCERA_SUBTARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.img"
+    if [ "${BATOCERA_LOWER_TARGET}" = "${BATOCERA_SUBTARGET}" ]; then
+        BATOCERAIMG="${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/batocera-${BATOCERA_SUBTARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.img.xz"
     else
-	BATOCERAIMG="${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/batocera-${BATOCERA_LOWER_TARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.img"
+        BATOCERAIMG="${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/batocera-${BATOCERA_LOWER_TARGET}-${BATOCERA_SUBTARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.img.xz"
     fi
     echo "creating images/${BATOCERA_SUBTARGET}/"$(basename "${BATOCERAIMG}")"..." >&2
     rm -rf "${GENIMAGE_TMP}" || exit 1
@@ -89,41 +92,44 @@ do
 	GENIMAGEBOOTFILE="${GENIMAGEDIR}/genimage-boot.cfg"
 	echo "installing syslinux" >&2
 	cat "${GENIMAGEBOOTFILE}" | sed -e s+'@files'+"${FILES}"+ | tr '@' '\n' > "${BATOCERA_BINARIES_DIR}/genimage-boot.cfg" || exit 1
-    genimage --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${BATOCERA_BINARIES_DIR}" --config="${BATOCERA_BINARIES_DIR}/genimage-boot.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
+    "${HOST_DIR}/bin/genimage" --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${BATOCERA_BINARIES_DIR}" --config="${BATOCERA_BINARIES_DIR}/genimage-boot.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
     "${HOST_DIR}/bin/syslinux" -i "${BATOCERA_BINARIES_DIR}/boot.vfat" -d "/boot/syslinux" || exit 1
     # remove genimage temp path as sometimes genimage v14 fails to start
-    rm -rf ${GENIMAGE_TMP}
-    mkdir ${GENIMAGE_TMP}
+    rm -rf ${GENIMAGE_TMP} || exit 1
+    rm -rf ${GENFINALIMAGE_TMP} || exit 1
+    mkdir -p ${GENIMAGE_TMP} || exit 1
+    mkdir -p ${GENFINALIMAGE_TMP} || exit 1
     fi
     ###
-    "${HOST_DIR}/bin/genimage" --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${BATOCERA_BINARIES_DIR}" --config="${BATOCERA_BINARIES_DIR}/genimage.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
+    "${HOST_DIR}/bin/genimage" --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${GENFINALIMAGE_TMP}" --config="${BATOCERA_BINARIES_DIR}/genimage.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
 
     rm -f "${BATOCERA_BINARIES_DIR}/boot.vfat" || exit 1
     rm -f "${BATOCERA_BINARIES_DIR}/userdata.ext4" || exit 1
-    mv "${BATOCERA_BINARIES_DIR}/batocera.img" "${BATOCERAIMG}" || exit 1
-    xz -T0 -v "${BATOCERAIMG}" || exit 1
+    xz -T0 -7 -v "${GENFINALIMAGE_TMP}/batocera.img" || exit 1
+    mv "${GENFINALIMAGE_TMP}/batocera.img.xz" "${BATOCERAIMG}" || exit 1
 
     # rename the boot to boot_arch
     mv "${BATOCERA_BINARIES_DIR}/boot" "${BOOTNAMEDDIR}" || exit 1
 
     # copy the version file needed for version check
     cp "${TARGET_DIR}/usr/share/batocera/batocera.version" "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}" || exit 1
+
+    rm -rf ${GENIMAGE_TMP} || exit 1
+    rm -rf ${GENFINALIMAGE_TMP} || exit 1
 done
 
 #### md5 and sha256 #######################
-#for FILE in "${BATOCERA_BINARIES_DIR}/images/"*"/boot-"*".tar.xz" "${BATOCERA_BINARIES_DIR}/images/"*"/batocera-"*".img.xz"
-#do
+for FILE in "${BATOCERA_BINARIES_DIR}/images/"*"/boot-"*".tar.xz" "${BATOCERA_BINARIES_DIR}/images/"*"/batocera-"*".img.xz"
+do
 #    echo "creating ${FILE}.md5"
 #    CKS=$(md5sum "${FILE}" | sed -e s+'^\([^ ]*\) .*$'+'\1'+)
 #    echo "${CKS}" > "${FILE}.md5"
 #    echo "${CKS}  $(basename "${FILE}")" >> "${BATOCERA_BINARIES_DIR}/MD5SUMS"
-#    echo "creating ${FILE}.sha256"
-#    CKS=$(sha256sum "${FILE}" | sed -e s+'^\([^ ]*\) .*$'+'\1'+)
-#    echo "${CKS}" > "${FILE}.sha256"
-#    echo "${CKS}  $(basename "${FILE}")" >> "${BATOCERA_BINARIES_DIR}/SHA256SUMS"
-#done
+    echo "creating ${FILE}.sha256"
+    CKS=$(sha256sum "${FILE}" | sed -e s+'^\([^ ]*\) .*$'+'\1'+)
+    echo "${CKS}" > "${FILE}.sha256"
+    echo "${CKS}  $(basename "${FILE}")" >> "${BATOCERA_BINARIES_DIR}/SHA256SUMS"
+done
 
 #### update the target dir with some information files
-#cp "${TARGET_DIR}/usr/share/batocera/batocera.version" "${BATOCERA_BINARIES_DIR}" || exit 1
-cp -av "${BATOCERA_BINARIES_DIR}"/images/* /mnt/smb || exit 1
-#"${BR2_EXTERNAL_BATOCERA_PATH}"/scripts/linux/systemsReport.sh "${PWD}" "${BATOCERA_BINARIES_DIR}" || exit 1
+rsync -ah --progress "${BATOCERA_BINARIES_DIR}"/images/ /mnt/smb || exit 1

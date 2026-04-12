@@ -186,7 +186,7 @@ sudo find ${TARGET_DIR} -type f -name ".files-list-staging.before" -exec rm {} \
 TARGET2_DIR=${TARGET_DIR}2
 echo "Generating target2 (${TARGET2_DIR})..."
 mkdir -p "${TARGET2_DIR}" || exit 1
-for XDIR in usr/bin/duckstation usr/bin/mame usr/bin/sonic3-air usr/lib/libretro usr/share/soundfonts
+for XDIR in usr/bin/duckstation usr/bin/mame usr/bin/sonic3-air usr/lib/libretro usr/share/cdogs usr/share/hurrican usr/share/scummvm usr/share/soundfonts
 do
     echo -n "${XDIR}..."
     if test -e "${TARGET_DIR}/${XDIR}"

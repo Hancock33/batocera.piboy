@@ -1,6 +1,14 @@
 {
     "actions_player1": [
         {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "exec",
+            "target": "killall -9 /usr/bin/vpinball/VPinballX_GL && reset"
+        },
+        {
       "trigger": ["start"],
       "type": "key",
       "target": [ "KEY_1" ],

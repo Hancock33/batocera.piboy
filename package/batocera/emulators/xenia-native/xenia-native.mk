@@ -3,8 +3,8 @@
 # xenia-native
 #
 ################################################################################
-# Version: Commits on Apr 11, 2026
-XENIA_NATIVE_VERSION = 65b74819aac85f188919b0a81902793585d0037a
+# Version: Commits on Apr 05, 2026
+XENIA_NATIVE_VERSION = 1da37db58496e3d02d5cc8dd2f96c5a8024507ef
 XENIA_NATIVE_SITE = https://github.com/xenia-canary/xenia-canary.git
 XENIA_NATIVE_LICENSE = BSD
 XENIA_NATIVE_LICENSE_FILE = LICENSE
@@ -17,14 +17,6 @@ XENIA_NATIVE_DEPENDENCIES = xserver_xorg-server alsa-lib fmt freetype libgtk3 li
 XENIA_NATIVE_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-int-conversion
 XENIA_NATIVE_CONF_OPTS += -DCMAKE_C_FLAGS="$(XENIA_NATIVE_TARGET_CFLAGS)"
 XENIA_NATIVE_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(XENIA_NATIVE_TARGET_CFLAGS)"
-
-define XENIA_NATIVE_CROSS_GITVER
-	echo '#define XE_BUILD_BRANCH "master"' >> $(@D)/buildroot-build/version.h
-	echo '#define XE_BUILD_COMMIT "$(XENIA_NATIVE_VERSION)"' >> $(@D)/buildroot-build/version.h
-	echo '#define XE_BUILD_COMMIT_SHORT "$(shell echo $(XENIA_NATIVE_VERSION) | cut -c 1-7)"' >> $(@D)/buildroot-build/version.h
-	echo '#define XE_BUILD_DATE __DATE__' >> $(@D)/buildroot-build/version.h
-	cat $(@D)/buildroot-build/version.h
-endef
 
 define XENIA_NATIVE_POST_PROCESS
 	# get the latest patches
@@ -42,8 +34,6 @@ define XENIA_NATIVE_POST_PROCESS
 	rm -rf $(@D)/temp
 endef
 
-
-XENIA_NATIVE_POST_CONFIGURE_HOOKS = XENIA_NATIVE_CROSS_GITVER
 XENIA_NATIVE_POST_INSTALL_TARGET_HOOKS += XENIA_NATIVE_POST_PROCESS
 
 define XENIA_NATIVE_INSTALL_TARGET_CMDS
