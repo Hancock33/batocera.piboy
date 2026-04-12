@@ -28,9 +28,7 @@ libdate.mk
 libfyaml.mk
 liblc3.mk
 libretro-scummvm.mk
-libserum.mk
 libsfdo.mk
-libzedmd.mk
 mt32emu.mk
 nghttp3.mk
 ngtcp2.mk
