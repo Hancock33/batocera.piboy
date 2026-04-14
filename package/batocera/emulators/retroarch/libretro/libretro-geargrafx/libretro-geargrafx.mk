@@ -3,8 +3,8 @@
 # libretro-geargrafx
 #
 ################################################################################
-# Version: Commits on Apr 12, 2026
-LIBRETRO_GEARGRAFX_VERSION = c3803c6b9f29d27932885d5cc86fe836c7c0ba4d
+# Version: Commits on Apr 14, 2026
+LIBRETRO_GEARGRAFX_VERSION = 7457f7b5ef2b0d1312dcb9f107e96ce33076ff8f
 LIBRETRO_GEARGRAFX_SITE = $(call github,drhelius,Geargrafx,$(LIBRETRO_GEARGRAFX_VERSION))
 LIBRETRO_GEARGRAFX_LICENSE = GPLv3
 LIBRETRO_GEARGRAFX_EMULATOR_INFO = geargrafx.libretro.core.yml

@@ -1,4 +1,4 @@
-hinclude batocera-board.common
+hhinclude batocera-board.common
 include batocera-toolchain.common
 
 # Target definition
@@ -19,7 +19,7 @@ BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scrip
 # Kernel 7.0
 BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,ca9d61567a1b59aedb91046741c4fe4e1e68677d)/ca9d61567a1b59aedb91046741c4fe4e1e68677d.tar.gz"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,e6f7e1c49c84197cde4d4a2d7a1578a78df73301)/e6f7e1c49c84197cde4d4a2d7a1578a78df73301.tar.gz"
 BR2_LINUX_KERNEL_DEFCONFIG="bcm2712"
 BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/7.0"
 BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux-defconfig-fragment.config"
