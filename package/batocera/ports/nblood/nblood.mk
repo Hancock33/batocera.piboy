@@ -3,8 +3,8 @@
 # nblood
 #
 ################################################################################
-# Version: Commits on Apr 13, 2026
-NBLOOD_VERSION = r14334
+# Version: Commits on Apr 14, 2026
+NBLOOD_VERSION = r14335
 NBLOOD_SITE = $(call github,NBlood,NBlood,$(NBLOOD_VERSION))
 NBLOOD_EMULATOR_INFO = nblood.emulator.yml
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
