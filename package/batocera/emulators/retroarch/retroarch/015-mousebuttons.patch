@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 1ade863ad7..17653e8d03 100644
+index efb298132c..effaef98f0 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -5390,12 +5390,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -5388,12 +5388,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index 1ade863ad7..17653e8d03 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -7526,11 +7547,32 @@ void input_config_parse_mouse_button(char *s,
+@@ -7553,11 +7574,32 @@ void input_config_parse_mouse_button(char *s,
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
@@ -170,7 +170,7 @@ index 5e3513e8ce..a6664afcb7 100644
              return mouse->wu;
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
 diff --git a/libretro-common/include/libretro.h b/libretro-common/include/libretro.h
-index 591af4a8cd..7721d6c62b 100644
+index c766814605..0798cc7627 100644
 --- a/libretro-common/include/libretro.h
 +++ b/libretro-common/include/libretro.h
 @@ -404,8 +404,15 @@ extern "C" {
@@ -192,7 +192,7 @@ index 591af4a8cd..7721d6c62b 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index 964c4a0cf1..c5f94e1f7c 100644
+index 1ca1194768..17bc4393b9 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
 @@ -1666,8 +1666,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(
