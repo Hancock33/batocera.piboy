@@ -1,5 +1,5 @@
 diff --git a/gfx/drivers_context/drm_ctx.c b/gfx/drivers_context/drm_ctx.c
-index 56598b1990..e621f973b8 100644
+index 2c0ad91c2a..f5dce801a6 100644
 --- a/gfx/drivers_context/drm_ctx.c
 +++ b/gfx/drivers_context/drm_ctx.c
 @@ -841,6 +841,8 @@ static bool gfx_ctx_drm_set_video_mode(void *data,
