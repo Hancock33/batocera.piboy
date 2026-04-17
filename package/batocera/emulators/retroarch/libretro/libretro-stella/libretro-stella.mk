@@ -3,8 +3,8 @@
 # libretro-stella
 #
 ################################################################################
-# Version: Commits on Apr 15, 2026
-LIBRETRO_STELLA_VERSION = 4483eb7539d02125b58dfc164963d78c7efd003f
+# Version: Commits on Apr 16, 2026
+LIBRETRO_STELLA_VERSION = 9d9c8723b7d42fc7da1fd8fd2fc92b6178cb8ebd
 LIBRETRO_STELLA_SITE = $(call github,stella-emu,stella,$(LIBRETRO_STELLA_VERSION))
 LIBRETRO_STELLA_LICENSE = GPLv2
 LIBRETRO_STELLA_DEPENDENCIES += retroarch
