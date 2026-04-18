@@ -3,8 +3,8 @@
 # libretro-puae
 #
 ################################################################################
-# Version: Commits on Apr 02, 2026
-LIBRETRO_PUAE_VERSION = 99145bf34993e21dac14973f784821d85729a91d
+# Version: Commits on Apr 18, 2026
+LIBRETRO_PUAE_VERSION = 1ad81ada92c272ac0bca5cca0880e56d8b722cda
 LIBRETRO_PUAE_SITE = $(call github,sonninnos,libretro-uae,$(LIBRETRO_PUAE_VERSION))
 LIBRETRO_PUAE__LICENSE = GPLv2
 LIBRETRO_PUAE_DEPENDENCIES += retroarch
