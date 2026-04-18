@@ -230,7 +230,7 @@ index 00000000000..18ec5886de8
 +    while ((len = read(m_fd, input_events, sizeof(input_events))) > 0) {
 +      len /= sizeof(*input_events);
 +      for (j = 0; j < len; j++) {
-+    	queue_events(&(input_events[j]), 1);
++    	queue_event(input_events[j]);
 +      }
 +    }
 +  }
