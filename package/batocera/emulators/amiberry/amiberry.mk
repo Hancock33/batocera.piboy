@@ -24,6 +24,21 @@ else
 AMIBERRY_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
+define AMIBERRY_INSTALL_TARGET_CMDS
+	# install binary
+	$(INSTALL) -D $(@D)/buildroot-build/amiberry $(TARGET_DIR)/usr/bin/amiberry
+
+	# Copy AROS (open source alternative BIOS)
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/amiga
+	cp -prn $(@D)/buildroot-build/roms/aros-ext.bin $(TARGET_DIR)/usr/share/batocera/datainit/bios/amiga/
+	cp -prn $(@D)/buildroot-build/roms/aros-rom.bin $(TARGET_DIR)/usr/share/batocera/datainit/bios/amiga/
+
+	# Copy data and whdboot folders
+	mkdir -p $(TARGET_DIR)/usr/share/amiberry
+	cp -pr $(@D)/buildroot-build/whdboot $(TARGET_DIR)/usr/share/amiberry/
+	cp -pr $(@D)/buildroot-build/data $(TARGET_DIR)/usr/share/amiberry/
+endef
+
 define AMIBERRY_EVMAP
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/amiberry/controllers/*.amiberry.keys $(TARGET_DIR)/usr/share/evmapy
