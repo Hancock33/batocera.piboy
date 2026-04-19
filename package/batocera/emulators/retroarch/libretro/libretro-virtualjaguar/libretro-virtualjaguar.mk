@@ -17,7 +17,7 @@ else ifeq ($(BR2_arm),y)
 else ifeq ($(BR2_x86_64),y)
     LIBRETRO_VIRTUALJAGUAR_SIMD = sse2
 else
-    LIBRETRO_VIRTUALJAGUAR_SIMD = scalar 
+    LIBRETRO_VIRTUALJAGUAR_SIMD = scalar
 endif
 
 define LIBRETRO_VIRTUALJAGUAR_BUILD_CMDS
