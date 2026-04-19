@@ -9,3 +9,5 @@ A optimised build for the [Steam Deck](https://www.steamdeck.com/en/) can also b
 **Note** the Steamdeck version is compiled with "-O2 **-march=x86-64-v3** -mtune=znver2" flags, it should work on other x86-64 processors circa **2015**.
 
 **All credits to the team at https://batocera.org/**
+
+Built with ❤️

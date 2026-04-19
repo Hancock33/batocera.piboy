@@ -9,7 +9,7 @@ BR2_TARGET_OPTIMIZATION="-march=prescott -mtune=generic"
 BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/patches"
 
 # Kernel 7.0
-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_6_19=y
+BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_7_0=y
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="https://github.com/CachyOS/linux/releases/download/cachyos-7.0.0-2/cachyos-7.0.0-2.tar.gz"

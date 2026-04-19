@@ -1,8 +1,8 @@
 diff --git a/retroarch.c b/retroarch.c
-index e563936819..6f59d41d69 100644
+index 06a9bc8409..a4f4c4ff0b 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -7228,6 +7228,36 @@ static bool retroarch_parse_input_and_config(
+@@ -7271,6 +7271,36 @@ static bool retroarch_parse_input_and_config(
        { NULL, 0, NULL, 0 }
     };
  
