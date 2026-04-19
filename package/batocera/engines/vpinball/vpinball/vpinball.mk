@@ -3,8 +3,8 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Apr 18, 2026
-VPINBALL_VERSION = dbd2a00aaf32cedaae441f00f3de5a59b2218bb4
+# Version: Commits on Apr 19, 2026
+VPINBALL_VERSION = 47486d513809263b0735618df9e9f2408d64f5a8
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
