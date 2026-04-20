@@ -3,8 +3,8 @@
 # libretro-minivmac
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_MINIVMAC_VERSION = ac7fdac318261e1e3464081bf300cc3db30c74af
+# Version: Commits on Apr 20, 2026
+LIBRETRO_MINIVMAC_VERSION = babdf7b53d361a7225858b68a8a64efe8b06f5e5
 LIBRETRO_MINIVMAC_SITE = https://github.com/libretro/libretro-minivmac
 LIBRETRO_MINIVMAC_LICENSE = GPLv2
 LIBRETRO_MINIVMAC_SITE_METHOD=git

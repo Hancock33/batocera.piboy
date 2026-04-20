@@ -3,8 +3,8 @@
 # libretro-mesen
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_MESEN_VERSION = 4df4d3681e89321cd4e571ee5cacfdef91842566
+# Version: Commits on Apr 20, 2026
+LIBRETRO_MESEN_VERSION = 0102910c39ad1a62bc3f784466f3f67ca9eae335
 LIBRETRO_MESEN_SITE = $(call github,libretro,Mesen,$(LIBRETRO_MESEN_VERSION))
 LIBRETRO_MESEN_LICENSE = GPL
 LIBRETRO_MESEN_DEPENDENCIES += retroarch

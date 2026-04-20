@@ -3,8 +3,8 @@
 # libretro-xmil
 #
 ################################################################################
-# Version: Commits on Oct 21, 2024
-LIBRETRO_XMIL_VERSION = 6a52dc21a5ff106137670bb600ab2ce3fcebeb1b
+# Version: Commits on Apr 20, 2026
+LIBRETRO_XMIL_VERSION = 3e7960a433c3bca820f8b8f5511a2b92bd666829
 LIBRETRO_XMIL_SITE =  $(call github,libretro,xmil-libretro,$(LIBRETRO_XMIL_VERSION))
 LIBRETRO_XMIL_LICENSE = BSD-3
 LIBRETRO_XMIL_DEPENDENCIES += retroarch

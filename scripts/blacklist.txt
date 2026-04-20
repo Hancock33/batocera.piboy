@@ -12,3 +12,4 @@ openbor7142.mk
 python-pyxel.mk
 wine-proton.mk
 wine-x86.mk
+ryujinx.mk
