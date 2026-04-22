@@ -2599,15 +2599,15 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "TỰ ĐỘNG NHẮM MỤC TIÊU"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO CROP"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "AUTO FRAMESKIP"
 msgstr "BỎ QUA KHUNG HÌNH TỰ ĐỘNG"
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "AUTO HEIGHT"
-msgstr "CHIỀU CAO TỰ ĐỘNG"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -2879,11 +2879,6 @@ msgstr "Người Afrika"
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "NMI Sau"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Aim"
-msgstr ""
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -3523,7 +3518,7 @@ msgctxt "keys_files"
 msgid "Automap"
 msgstr "Bản đồ tự động"
 
-#. TRANSLATION: amiberry, libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3, ...
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "Tự động"
@@ -3716,7 +3711,7 @@ msgctxt "game_options"
 msgid "BILINEAR FILTER"
 msgstr "BILINEAR FILTER"
 
-#. TRANSLATION: model2emu, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "BILINEAR FILTERING"
@@ -4860,6 +4855,11 @@ msgctxt "game_options"
 msgid "CRT SWITCHRES"
 msgstr "CRT SWITCHRES"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "CRT Shader."
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
@@ -5773,6 +5773,11 @@ msgctxt "game_options"
 msgid "Colour Genie Floppies (ROM required)"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Commodore 1084 monitor"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Compatible"
@@ -5964,11 +5969,6 @@ msgstr ""
 #. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Crouch Toggle"
 msgstr ""
 
 #. TRANSLATION: eden
@@ -7029,11 +7029,6 @@ msgctxt "game_options"
 msgid "ENABLE DEBUG"
 msgstr "CHO PHÉP GỠ LỖI"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
-msgstr "KÍCH HOẠT KHỬ RĂNG CƯA TOÀN MÀN HÌNH"
-
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
@@ -7048,16 +7043,6 @@ msgstr "BẬT GRAVIS ULTRASOUND"
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
 msgstr "BẬT HIDRAW"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MESH TRANSPARENCY"
-msgstr "ENABLE MESH TRANSPARENCY"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MIP-MAP"
-msgstr "BẬT BẢN ĐỒ MIP"
 
 #. TRANSLATION: cemu, mame, wine
 msgctxt "game_options"
@@ -7094,32 +7079,17 @@ msgctxt "game_options"
 msgid "ENABLE POLYGON SPLITTING"
 msgstr "BẬT TÁCH ĐA GIÁC"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE RAW INPUT"
-msgstr "ENABLE RAW INPUT"
-
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
 msgstr "BẬT SANDBOX MODE"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SCANLINES"
-msgstr "ENABLE SCANLINES"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SOFTWARE RENDERER"
-msgstr "ENABLE SOFTWARE RENDERER"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "CHO PHÉP KÉO DÀI THỜI GIAN"
 
-#. TRANSLATION: bstone, model2emu, play
+#. TRANSLATION: bstone, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "BẬT MÀN HÌNH RỘNG"
@@ -7382,11 +7352,6 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable X-Input mode for Xbox type controllers."
-msgstr "Bật chế độ X-Input cho bộ điều khiển loại Xbox."
-
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -7448,11 +7413,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr "Cho phép chơi miễn phí đối với các trò chơi được hỗ trợ."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable full-screen antialiasing in Direct3D."
-msgstr "Bật khử răng cưa toàn màn hình trong Direct3D."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7568,11 +7528,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable resolution changes (requires restart)."
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
-msgstr "Kích hoạt scanlines cho các rom hỗ trợ."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -7702,8 +7657,8 @@ msgstr "Bật để hiển thị xem màn hình mô phỏng có bị đóng hay 
 msgctxt "game_options"
 msgid "Enable to show whether your device's camera is active."
 msgstr ""
-"Cho phép hiển thị liệu máy ảnh của thiết bị của bạn có hoạt động hay không."
-"Bật để hiển thị xem camera của thiết bị của bạn có hoạt động hay không."
+"Cho phép hiển thị liệu máy ảnh của thiết bị của bạn có hoạt động hay "
+"không.Bật để hiển thị xem camera của thiết bị của bạn có hoạt động hay không."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -7740,7 +7695,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
 msgstr ""
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Bật hỗ trợ màn hình rộng."
@@ -7760,11 +7715,6 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Bật (Mặc định)"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enabled meshed polygons for translucency."
-msgstr "Kích hoạt đa giác có lưới để tạo độ mờ."
-
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
@@ -7775,38 +7725,16 @@ msgctxt "game_options"
 msgid "Enables Action Replay cheats."
 msgstr "Enables Action Replay cheats."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "Cho phép tạo bản đồ Automip Direct3D."
-
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Enables Dolby Pro Logic II for surround sound. May impact performance."
 msgstr ""
 "Bật Dolby Pro Logic II cho âm thanh vòm. Có thể ảnh hưởng đến hiệu suất."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
-"stretch artifacts."
-msgstr ""
-"Cho phép lọc song tuyến tính trên bản đồ ô. Có vẻ tốt, nhưng có thể gây ra "
-"một số hiện tượng kéo dài."
-
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables mipmap usage and trilinear filtering. Doesn't work with some games."
-msgstr ""
-"Cho phép sử dụng mipmap và lọc tam tuyến. Không hoạt động với một số trò "
-"chơi."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -8111,7 +8039,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Thoát trình giả lập"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Thoát khỏi trình giả lập"
@@ -8155,11 +8083,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Extreme"
 msgstr "Vô cùng"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FAKE GOURAUD"
-msgstr "FAKE GOURAUD"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -8205,11 +8128,6 @@ msgstr "FIFO Relaxed"
 msgctxt "game_options"
 msgid "FIGHT MUSIC"
 msgstr "NHẠC CHIẾN ĐẤU"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FILTER TILEMAPS"
-msgstr "FILTER TILEMAPS"
 
 #. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
@@ -8286,10 +8204,10 @@ msgctxt "game_options"
 msgid "FORCE LARGE ADDRESS"
 msgstr "FORCE LARGE ADDRESS"
 
-#. TRANSLATION: model2emu
+#. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "FORCE MANAGED"
-msgstr "FORCE MANAGED"
+msgid "FORCE NTSC"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8531,7 +8449,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Phần Lan (fi)"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Bắn"
@@ -8748,6 +8666,11 @@ msgctxt "game_options"
 msgid "Force Default DNS"
 msgstr "Bắt buộc DNS Mặc định"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Force NTSC instead PAL."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -8795,12 +8718,6 @@ msgid ""
 msgstr ""
 "Buộc trò chơi hiển thị ở tỷ lệ khung hình này. Không phải tất cả các hệ "
 "thống đều hỗ trợ tất cả các tỷ lệ."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Forces the DX driver to use Managed textures instead of Dynamic."
-msgstr ""
-"Buộc trình điều khiển DX sử dụng họa tiết được quản lý thay vì họa tiết động."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10266,6 +10183,11 @@ msgctxt "game_options"
 msgid "Install the image reader card to read idks image files (Mac IIx only)"
 msgstr "Lắp thẻ đọc ảnh để đọc file ảnh idks (chỉ dành cho Mac IIx)"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Integer"
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Integer Scale"
@@ -10557,7 +10479,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Tháng 7"
 
-#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10571,6 +10493,11 @@ msgstr "Tháng 6"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Justifier"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEEP ASPECT RATIO"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -10616,6 +10543,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Giữ tỷ lệ khung hình (Mặc định)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Keep original aspect ratio when stretching."
+msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -10676,11 +10608,6 @@ msgstr "Bàn phím 3 nút"
 msgctxt "game_options"
 msgid "Keypad to joyport mappings for 2 players."
 msgstr "Ánh xạ Keypad to Joyport cho 2 người chơi."
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Kick"
-msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -11061,6 +10988,11 @@ msgctxt "game_options"
 msgid "Lightrec Interpreter"
 msgstr "Trình biên dịch Lightrec"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Lightweight CRT effect"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Lime"
@@ -11127,7 +11059,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Cạnh màn hình dài có thể nhìn thấy (cm)"
 
-#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -11587,7 +11519,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Đặt thủ công chu kỳ mỗi giây. Sử dụng một cách thận trọng."
 
-#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11813,16 +11745,6 @@ msgstr "Menacer Light Gun"
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menu"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Down"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Up"
-msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
@@ -12056,12 +11978,12 @@ msgctxt "game_options"
 msgid "Mouse sensitivity for paddles. Core default (10)."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "Di chuyển về phía sau"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "Tiến về phía trước"
@@ -12493,7 +12415,7 @@ msgctxt "keys_files"
 msgid "Next Inventory Item"
 msgstr ""
 
-#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -12578,10 +12500,15 @@ msgctxt "game_options"
 msgid "None"
 msgstr "Không có"
 
-#. TRANSLATION: cgenius, libretro/ep128emu, libretro/mame, mame, pcsx2, ...
+#. TRANSLATION: amiberry, cgenius, libretro/ep128emu, libretro/mame, mame, ...
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Không (Mặc định)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "None (default)"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -12690,6 +12617,11 @@ msgctxt "game_options"
 msgid "OFF"
 msgstr "TẮT"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr "TẮT (Mặc định)"
+
 #. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
@@ -12699,6 +12631,11 @@ msgstr "NÚT NẠP ĐẠN NGOÀI MÀN HÌNH"
 msgctxt "game_options"
 msgid "ON"
 msgstr "BẬT"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "ON (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -12970,15 +12907,6 @@ msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr ""
 "Chỉ một số trò chơi có tính năng rung. Không tương thích với tất cả các bộ "
 "điều khiển."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Only some games support rumble. Requires X-Input mode and may not be "
-"compatible with all controllers."
-msgstr ""
-"Chỉ một số game hỗ trợ rung. Yêu cầu chế độ X-Input và có thể không tương "
-"thích với tất cả các bộ điều khiển."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -13259,6 +13187,11 @@ msgstr "PBA"
 msgctxt "game_options"
 msgid "PC MODEL"
 msgstr "MÔ HÌNH PC"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "PC monitor effect with lighter scanlines"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -14028,8 +13961,8 @@ msgstr "Không thể tải trước từ ES."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Presets which can improve performance without manually editing the VPinballX."
-"ini file to fine tune performance."
+"Presets which can improve performance without manually editing the "
+"VPinballX.ini file to fine tune performance."
 msgstr ""
 "Các cài đặt trước có thể cải thiện hiệu suất mà không cần chỉnh sửa thủ công "
 "tệp VPinballX.ini để tinh chỉnh hiệu suất."
@@ -14480,7 +14413,7 @@ msgctxt "game_options"
 msgid "RTV (Default)"
 msgstr "RTV (Mặc định)"
 
-#. TRANSLATION: cemu, dolphin, libretro/tyrquake, model2emu, openbor/openbor7530, ...
+#. TRANSLATION: cemu, dolphin, libretro/tyrquake, openbor/openbor7530, rpcs3, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "RUMBLE"
@@ -14514,12 +14447,6 @@ msgstr "Giá trị ngẫu nhiên"
 msgctxt "game_options"
 msgid "Raw"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-msgstr "Đọc chuột qua Rawinput, cho phép 2 chuột chơi game bắn súng 2 người."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -14840,8 +14767,9 @@ msgstr "Xoay màn hình bằng trình giả lập."
 msgctxt "game_options"
 msgid "Rotate the screen, useful for certain vertical gameplay homebrews."
 msgstr ""
-"Xoay màn hình, hữu ích cho một số trò chơi thẳng đứng nhất định homebrews."
-"Xoay màn hình, hữu ích cho một số homebrew chơi trò chơi dọc nhất định."
+"Xoay màn hình, hữu ích cho một số trò chơi thẳng đứng nhất định "
+"homebrews.Xoay màn hình, hữu ích cho một số homebrew chơi trò chơi dọc nhất "
+"định."
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -14878,7 +14806,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Rumble Pak (Tự động)"
 
-#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys, ...
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Chạy"
@@ -15138,6 +15066,11 @@ msgstr "ĐỘ NHẠY CẢM BIẾN (TILT)"
 #. TRANSLATION: demul
 msgctxt "game_options"
 msgid "SET GAELCO SCALING AMOUNT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SHADER"
 msgstr ""
 
 #. TRANSLATION: azahar
@@ -15655,11 +15588,6 @@ msgctxt "game_options"
 msgid "Scorpion 256K"
 msgstr "Scorpion 256K"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Screen Resolution (Default)"
-msgstr "Độ phân giải màn hình (Mặc định)"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
@@ -16030,8 +15958,9 @@ msgstr "Đặt tốc độ làm mới tối đa mong muốn khi tắt Vsync."
 msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr ""
-"Đặt độ phân giải của màn hình.Không ảnh hưởng đến độ phân giải kết xuất."
-"Thiết lập độ phân giải màn hình. Không ảnh hưởng đến độ phân giải kết xuất."
+"Đặt độ phân giải của màn hình.Không ảnh hưởng đến độ phân giải kết "
+"xuất.Thiết lập độ phân giải màn hình. Không ảnh hưởng đến độ phân giải kết "
+"xuất."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -16568,11 +16497,6 @@ msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Kết cấu mượt mà trên các đối tượng 3D xa dựa trên góc."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Smooth textures."
-msgstr "Họa tiết mịn."
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "Smooths out textures on 3D objects."
@@ -16946,12 +16870,12 @@ msgstr ""
 "cốt lõi hỗ trợ nó.Lưu trữ các trạng thái trước đây để tua lại trong thời "
 "gian thực, nếu lõi hỗ trợ."
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "Strafe Trái"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Strafe Phải"
@@ -17414,7 +17338,7 @@ msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
 msgstr ""
 
-#. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "TRILINEAR FILTERING"
@@ -17478,6 +17402,11 @@ msgstr "TT ETOS 512K"
 msgctxt "game_options"
 msgid "TV"
 msgstr "TV"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "TV CRT effect with heaver scanlines and curvature"
+msgstr ""
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
@@ -17602,11 +17531,6 @@ msgstr "Tandy Radio Shack Color Computer disk images"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Taunt"
 msgstr ""
 
 #. TRANSLATION: shadps4
@@ -17915,14 +17839,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
 msgstr "Coi cần analog bên phải làm cần điều khiển thứ hai."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
-"information (flat)."
-msgstr ""
-"Cố gắng đoán màu Per-vertex (gouraud) từ Model2 per-poly information (flat)."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -18502,11 +18418,6 @@ msgctxt "keys_files"
 msgid "Use"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Use / Open"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -18610,13 +18521,6 @@ msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr ""
 "Sử dụng cài đặt bộ điều khiển được thiết lập thủ công trong custom.ini."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Use if you're having graphical issues or GPU problems with this emulator."
-msgstr ""
-"Sử dụng nếu bạn đang gặp sự cố về đồ họa hoặc GPU với trình mô phỏng này."
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -19408,11 +19312,6 @@ msgctxt "game_options"
 msgid "X"
 msgstr ""
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "X-INPUT"
-msgstr "X-INPUT"
-
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "X2"
@@ -19846,12 +19745,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "chuyển đổi nhanh"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "tải nhanh"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "lưu nhanh"
@@ -19891,7 +19790,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "scanlines"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "chụp màn hình"
@@ -20088,6 +19987,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "9x Native (5760x4752)"
 
 #~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "CHIỀU CAO TỰ ĐỘNG"
+
+#~ msgctxt "game_options"
 #~ msgid "Add debug logging to help troubleshoot issues."
 #~ msgstr "Thêm ghi nhật ký gỡ lỗi để giúp khắc phục sự cố."
 
@@ -20201,6 +20104,42 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Hiển thị màn hình bộ điều khiển"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
+#~ msgstr "KÍCH HOẠT KHỬ RĂNG CƯA TOÀN MÀN HÌNH"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MESH TRANSPARENCY"
+#~ msgstr "ENABLE MESH TRANSPARENCY"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIP-MAP"
+#~ msgstr "BẬT BẢN ĐỒ MIP"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE RAW INPUT"
+#~ msgstr "ENABLE RAW INPUT"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SCANLINES"
+#~ msgstr "ENABLE SCANLINES"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SOFTWARE RENDERER"
+#~ msgstr "ENABLE SOFTWARE RENDERER"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable X-Input mode for Xbox type controllers."
+#~ msgstr "Bật chế độ X-Input cho bộ điều khiển loại Xbox."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable full-screen antialiasing in Direct3D."
+#~ msgstr "Bật khử răng cưa toàn màn hình trong Direct3D."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable scanlines for roms that support it."
+#~ msgstr "Kích hoạt scanlines cho các rom hỗ trợ."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable the IP address for OutRun 2 network play against another PC on the "
 #~ "same network."
@@ -20211,6 +20150,30 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Enable to emulate the card reader in Virtua Tenis 3."
 #~ msgstr "Kích hoạt tính năng mô phỏng đầu đọc thẻ trong Virtua Tenis 3."
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled meshed polygons for translucency."
+#~ msgstr "Kích hoạt đa giác có lưới để tạo độ mờ."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "Cho phép tạo bản đồ Automip Direct3D."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr ""
+#~ "Cho phép lọc song tuyến tính trên bản đồ ô. Có vẻ tốt, nhưng có thể gây "
+#~ "ra một số hiện tượng kéo dài."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables mipmap usage and trilinear filtering. Doesn't work with some "
+#~ "games."
+#~ msgstr ""
+#~ "Cho phép sử dụng mipmap và lọc tam tuyến. Không hoạt động với một số trò "
+#~ "chơi."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20258,6 +20221,18 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "keys_files"
 #~ msgid "Exit running Flatpak"
 #~ msgstr "Thoát chạy Flatpak"
+
+#~ msgctxt "game_options"
+#~ msgid "FAKE GOURAUD"
+#~ msgstr "FAKE GOURAUD"
+
+#~ msgctxt "game_options"
+#~ msgid "FILTER TILEMAPS"
+#~ msgstr "FILTER TILEMAPS"
+
+#~ msgctxt "game_options"
+#~ msgid "FORCE MANAGED"
+#~ msgstr "FORCE MANAGED"
 
 #~ msgctxt "game_options"
 #~ msgid "FRAME LIMIT"
@@ -20325,6 +20300,12 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Force Nearest"
 #~ msgstr "Force Nearest"
+
+#~ msgctxt "game_options"
+#~ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
+#~ msgstr ""
+#~ "Buộc trình điều khiển DX sử dụng họa tiết được quản lý thay vì họa tiết "
+#~ "động."
 
 #~ msgctxt "keys_files"
 #~ msgid "Forward Nudge"
@@ -20420,16 +20401,20 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Không phải tất cả các trò chơi đều hỗ trợ tất cả các ngôn ngữ."
 
 #~ msgctxt "game_options"
-#~ msgid "OFF (Default)"
-#~ msgstr "TẮT (Mặc định)"
-
-#~ msgctxt "game_options"
 #~ msgid "OUTPUT RESAMPLING"
 #~ msgstr "LẤY MẪU ĐẦU RA"
 
 #~ msgctxt "game_options"
 #~ msgid "Off will help some games, others will run too fast."
 #~ msgstr "Tắt sẽ giúp một số trò chơi, số khác sẽ chạy rất nhanh."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Only some games support rumble. Requires X-Input mode and may not be "
+#~ "compatible with all controllers."
+#~ msgstr ""
+#~ "Chỉ một số game hỗ trợ rung. Yêu cầu chế độ X-Input và có thể không tương "
+#~ "thích với tất cả các bộ điều khiển."
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -20486,6 +20471,12 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "keys_files"
 #~ msgid "Quits the current level"
 #~ msgstr "Thoát level hiện tại"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Đọc chuột qua Rawinput, cho phép 2 chuột chơi game bắn súng 2 người."
 
 #~ msgctxt "game_options"
 #~ msgid "Reduce stutter that happens when compiling shaders."
@@ -20552,6 +20543,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Lưu trạng thái 1"
+
+#~ msgctxt "game_options"
+#~ msgid "Screen Resolution (Default)"
+#~ msgstr "Độ phân giải màn hình (Mặc định)"
 
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
@@ -20634,6 +20629,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
+#~ msgid "Smooth textures."
+#~ msgstr "Họa tiết mịn."
+
+#~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
 #~ msgstr "Kéo dài đến hết cửa sổ"
 
@@ -20694,6 +20693,14 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Triangle"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
+#~ "information (flat)."
+#~ msgstr ""
+#~ "Cố gắng đoán màu Per-vertex (gouraud) từ Model2 per-poly information "
+#~ "(flat)."
+
+#~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "USE GZDOOM JOYSTICK CONFIGURATION"
 
@@ -20703,6 +20710,12 @@ msgstr "vàng/xanh da trời"
 #~ msgstr ""
 #~ "Sử dụng L2/R2 để Phanh/Tăng tốc và L1/R1 hoặc R-stick Lên/Xuống để Chuyển "
 #~ "lên/Xuống."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use if you're having graphical issues or GPU problems with this emulator."
+#~ msgstr ""
+#~ "Sử dụng nếu bạn đang gặp sự cố về đồ họa hoặc GPU với trình mô phỏng này."
 
 #~ msgctxt "game_options"
 #~ msgid "Use language and username from the NDS Firmware"
@@ -20723,6 +20736,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr ""
 #~ "When frameskip type is on automatic or manual, skip up to this many "
 #~ "frames consecutively."
+
+#~ msgctxt "game_options"
+#~ msgid "X-INPUT"
+#~ msgstr "X-INPUT"
 
 #~ msgctxt "keys_files"
 #~ msgid "exit game"

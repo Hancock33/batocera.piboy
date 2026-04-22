@@ -2603,15 +2603,15 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "自動瞄準"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO CROP"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "AUTO FRAMESKIP"
 msgstr "自動跳格"
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "AUTO HEIGHT"
-msgstr "自動高度"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -2872,11 +2872,6 @@ msgstr "Afrikaans"
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "After NMI"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Aim"
-msgstr ""
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -3506,7 +3501,7 @@ msgctxt "keys_files"
 msgid "Automap"
 msgstr "自動地圖"
 
-#. TRANSLATION: amiberry, libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3, ...
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "自動"
@@ -3696,7 +3691,7 @@ msgctxt "game_options"
 msgid "BILINEAR FILTER"
 msgstr "雙線性濾鏡"
 
-#. TRANSLATION: model2emu, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "雙線性濾鏡"
@@ -4833,6 +4828,11 @@ msgctxt "game_options"
 msgid "CRT SWITCHRES"
 msgstr "CRT解析度切換"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "CRT Shader."
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
@@ -5721,6 +5721,11 @@ msgctxt "game_options"
 msgid "Colour Genie Floppies (ROM required)"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Commodore 1084 monitor"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Compatible"
@@ -5903,11 +5908,6 @@ msgstr "支援的遊戲中的十字準線例如 ActionMax，Maddog II。"
 msgctxt "keys_files"
 msgid "Crouch"
 msgstr "蹲伏"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Crouch Toggle"
-msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -6950,11 +6950,6 @@ msgctxt "game_options"
 msgid "ENABLE DEBUG"
 msgstr "啟用除錯"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
-msgstr "啟用全螢幕抗鋸齒"
-
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
@@ -6969,16 +6964,6 @@ msgstr "啟用 GRAVIS ULTRASOUND"
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
 msgstr "啟用 HIDROW"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MESH TRANSPARENCY"
-msgstr "啟用網格透明度"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MIP-MAP"
-msgstr "啟用 MIP-MAP"
 
 #. TRANSLATION: cemu, mame, wine
 msgctxt "game_options"
@@ -7015,32 +7000,17 @@ msgctxt "game_options"
 msgid "ENABLE POLYGON SPLITTING"
 msgstr "啟用多邊形分割"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE RAW INPUT"
-msgstr "啟用原始輸入"
-
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
 msgstr "啟用沙盒模式"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SCANLINES"
-msgstr "啟用掃描線"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SOFTWARE RENDERER"
-msgstr "啟用軟體算繪"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "啟用時間拉伸"
 
-#. TRANSLATION: bstone, model2emu, play
+#. TRANSLATION: bstone, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "啟用寬螢幕"
@@ -7299,11 +7269,6 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable X-Input mode for Xbox type controllers."
-msgstr "為 Xbox 類型控制器啟用 X-Input 模式。"
-
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -7361,11 +7326,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr "為支援的遊戲啟用免費遊戲。"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable full-screen antialiasing in Direct3D."
-msgstr "在 Direct3D 中啟用全螢幕抗鋸齒。"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7471,11 +7431,6 @@ msgstr "啟用適當的四角算繪（適用於高階系統）。"
 msgctxt "game_options"
 msgid "Enable resolution changes (requires restart)."
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
-msgstr "啟用支援掃描線的 roms。"
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -7627,7 +7582,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
 msgstr "為遊戲算繪啟用寬螢幕支援。"
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "啟用寬螢幕支援。"
@@ -7647,11 +7602,6 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "啟用(預設)"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enabled meshed polygons for translucency."
-msgstr "為半透明啟用網格多邊形。"
-
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
@@ -7662,33 +7612,15 @@ msgctxt "game_options"
 msgid "Enables Action Replay cheats."
 msgstr "啟用動作回放作弊。"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "啟用Direct3D自動對映產生。"
-
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Enables Dolby Pro Logic II for surround sound. May impact performance."
 msgstr "為環繞聲啟用Dolby Pro Logic II。可能會影響效能。"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
-"stretch artifacts."
-msgstr "在tilemaps上啟用雙線性過濾。效果不錯但可能會導致一些拉伸偽影。"
-
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
 msgstr "允許從“cheats”目錄讀取作弊檔案。"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables mipmap usage and trilinear filtering. Doesn't work with some games."
-msgstr "啟用mipmap使用和三線性過濾。對某些遊戲不起作用。"
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -7972,7 +7904,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "退出模擬器"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "退出模擬器"
@@ -8009,18 +7941,13 @@ msgid ""
 "without a rom. By default, settings come from the VPinballX.ini "
 "configuration file."
 msgstr ""
-"額外的DMD(點陣顯示)視窗顯示不帶rom的表的分數。預設情況下，設定來自VPinballX."
-"ini配置檔案。"
+"額外的DMD(點陣顯示)視窗顯示不帶rom的表的分數。預設情況下，設定來自"
+"VPinballX.ini配置檔案。"
 
 #. TRANSLATION: eden
 msgctxt "game_options"
 msgid "Extreme"
 msgstr "極端的"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FAKE GOURAUD"
-msgstr "FAKE GOURAUD"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -8066,11 +7993,6 @@ msgstr "先進先出放鬆"
 msgctxt "game_options"
 msgid "FIGHT MUSIC"
 msgstr "戰鬥音樂"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FILTER TILEMAPS"
-msgstr "過濾平鋪地圖"
 
 #. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
@@ -8147,10 +8069,10 @@ msgctxt "game_options"
 msgid "FORCE LARGE ADDRESS"
 msgstr "強制 LARGE ADDRESS"
 
-#. TRANSLATION: model2emu
+#. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "FORCE MANAGED"
-msgstr "強制管理"
+msgid "FORCE NTSC"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8384,7 +8306,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Finnish (fi)"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "開火"
@@ -8597,6 +8519,11 @@ msgctxt "game_options"
 msgid "Force Default DNS"
 msgstr "強制預設DNS"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Force NTSC instead PAL."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -8640,11 +8567,6 @@ msgid ""
 "Force the game to render in this aspect ratio. Not all systems support all "
 "ratios."
 msgstr "強制遊戲以這個長寬比進行算繪。並非所有系統都支援所有長寬比。"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Forces the DX driver to use Managed textures instead of Dynamic."
-msgstr "強制DX驅動程式使用託管紋理，而不是動態紋理。"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10096,6 +10018,11 @@ msgctxt "game_options"
 msgid "Install the image reader card to read idks image files (Mac IIx only)"
 msgstr "安裝映像讀取卡以讀取 idks 映像檔（僅限 Mac IIx）"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Integer"
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Integer Scale"
@@ -10385,7 +10312,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "七月"
 
-#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "跳躍"
@@ -10399,6 +10326,11 @@ msgstr "六月"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Justifier"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEEP ASPECT RATIO"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -10444,6 +10376,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "保持長寬比(預設)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Keep original aspect ratio when stretching."
+msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -10504,11 +10441,6 @@ msgstr "鍵盤三鍵"
 msgctxt "game_options"
 msgid "Keypad to joyport mappings for 2 players."
 msgstr "鍵盤轉搖桿埠對應雙人遊玩。"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Kick"
-msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -10887,6 +10819,11 @@ msgctxt "game_options"
 msgid "Lightrec Interpreter"
 msgstr "Lightrec 解譯器"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Lightweight CRT effect"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Lime"
@@ -10950,7 +10887,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "螢幕可見邊長（公分）"
 
-#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr "看"
@@ -11402,7 +11339,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "手動設定每秒週期數。請謹慎使用。"
 
-#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr "映射"
@@ -11619,16 +11556,6 @@ msgstr "Menacer光槍"
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "選單"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Down"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Up"
-msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
@@ -11860,12 +11787,12 @@ msgctxt "game_options"
 msgid "Mouse sensitivity for paddles. Core default (10)."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "向後移動"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "向前移動"
@@ -12290,7 +12217,7 @@ msgctxt "keys_files"
 msgid "Next Inventory Item"
 msgstr "下一個庫存物品"
 
-#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr "下一個武器"
@@ -12375,10 +12302,15 @@ msgctxt "game_options"
 msgid "None"
 msgstr "無"
 
-#. TRANSLATION: cgenius, libretro/ep128emu, libretro/mame, mame, pcsx2, ...
+#. TRANSLATION: amiberry, cgenius, libretro/ep128emu, libretro/mame, mame, ...
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "無(預設)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "None (default)"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -12485,6 +12417,11 @@ msgctxt "game_options"
 msgid "OFF"
 msgstr "關閉"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr "關(預設)"
+
 #. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
@@ -12494,6 +12431,11 @@ msgstr "螢幕外重新裝填按鈕"
 msgctxt "game_options"
 msgid "ON"
 msgstr "開"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "ON (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -12755,13 +12697,6 @@ msgstr "僅以整數倍放大圖像。"
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr "只有部分遊戲具有震動功能。與所有控制器不相容。"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Only some games support rumble. Requires X-Input mode and may not be "
-"compatible with all controllers."
-msgstr "只有部分遊戲支援震動。需要X-Input模式並且可能與控制器不相容。"
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -13042,6 +12977,11 @@ msgstr "PBA"
 msgctxt "game_options"
 msgid "PC MODEL"
 msgstr "PC MODEL"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "PC monitor effect with lighter scanlines"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -13811,8 +13751,8 @@ msgstr "ES 無法進行預先載入。"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Presets which can improve performance without manually editing the VPinballX."
-"ini file to fine tune performance."
+"Presets which can improve performance without manually editing the "
+"VPinballX.ini file to fine tune performance."
 msgstr "預設可以提高效能，而無需手動編輯 VPinballX.ini 檔案來微調效能。"
 
 #. TRANSLATION: catacomb.keys
@@ -14257,7 +14197,7 @@ msgctxt "game_options"
 msgid "RTV (Default)"
 msgstr "RTV (預設)"
 
-#. TRANSLATION: cemu, dolphin, libretro/tyrquake, model2emu, openbor/openbor7530, ...
+#. TRANSLATION: cemu, dolphin, libretro/tyrquake, openbor/openbor7530, rpcs3, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "震動"
@@ -14291,12 +14231,6 @@ msgstr "隨機值"
 msgctxt "game_options"
 msgid "Raw"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-msgstr "透過 Rawinput 讀取滑鼠，允許 2 個滑鼠用於 2 人射擊遊戲。"
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -14648,7 +14582,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "震動包 (自動)"
 
-#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys, ...
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "執行"
@@ -14909,6 +14843,11 @@ msgstr "感測器靈敏度（傾斜）"
 #. TRANSLATION: demul
 msgctxt "game_options"
 msgid "SET GAELCO SCALING AMOUNT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SHADER"
 msgstr ""
 
 #. TRANSLATION: azahar
@@ -15425,11 +15364,6 @@ msgstr "Scanline Interpolation Filter (SAI)"
 msgctxt "game_options"
 msgid "Scorpion 256K"
 msgstr "Scorpion 256K"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Screen Resolution (Default)"
-msgstr "螢幕解析度（預設）"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -16322,11 +16256,6 @@ msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "基於角度的遠距離三維物體的平滑紋理。"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Smooth textures."
-msgstr "光滑的紋理。"
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "Smooths out textures on 3D objects."
@@ -16689,12 +16618,12 @@ msgctxt "game_options"
 msgid "Store past states to rewind to in realtime, if the core supports it."
 msgstr "如果核心支援的話，儲存過去的狀態以便實時倒回。"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "向左移動"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "向右移動"
@@ -17147,7 +17076,7 @@ msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
 msgstr ""
 
-#. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "三線濾波"
@@ -17211,6 +17140,11 @@ msgstr "TT ETOS 512k"
 msgctxt "game_options"
 msgid "TV"
 msgstr "電視"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "TV CRT effect with heaver scanlines and curvature"
+msgstr ""
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
@@ -17335,11 +17269,6 @@ msgstr "Tandy Radio Shack Color Computer 磁碟鏡像"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Taunt"
 msgstr ""
 
 #. TRANSLATION: shadps4
@@ -17638,13 +17567,6 @@ msgstr "翻譯"
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
 msgstr "將右邊的模擬搖桿視為第二個搖桿。"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
-"information (flat)."
-msgstr "嘗試從模型2的每多邊形資訊(平面)中猜測每頂點顏色(gouraud)。"
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -18221,11 +18143,6 @@ msgctxt "keys_files"
 msgid "Use"
 msgstr "使用"
 
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Use / Open"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -18321,12 +18238,6 @@ msgstr "使用替代解析度。有些遊戲需要。"
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr "使用custom.ini中手動定義的控制器設定。"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Use if you're having graphical issues or GPU problems with this emulator."
-msgstr "如果您在使用此模擬器時遇到圖形問題或GPU問題，請使用。"
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -19102,11 +19013,6 @@ msgctxt "game_options"
 msgid "X"
 msgstr "X"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "X-INPUT"
-msgstr "X-INPUT"
-
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "X2"
@@ -19539,12 +19445,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "快速切換"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "快速讀檔"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "快速存檔"
@@ -19584,7 +19490,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "掃瞄線"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "截圖"
@@ -19777,6 +19683,10 @@ msgstr "yellow/blue"
 #~ msgstr "自動瞄準"
 
 #~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "自動高度"
+
+#~ msgctxt "game_options"
 #~ msgid "AUTO SWITCH WEAPON"
 #~ msgstr "自動切換武器"
 
@@ -19937,6 +19847,34 @@ msgstr "yellow/blue"
 #~ msgstr "顯示控制器螢幕"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
+#~ msgstr "啟用全螢幕抗鋸齒"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MESH TRANSPARENCY"
+#~ msgstr "啟用網格透明度"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIP-MAP"
+#~ msgstr "啟用 MIP-MAP"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE RAW INPUT"
+#~ msgstr "啟用原始輸入"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SCANLINES"
+#~ msgstr "啟用掃描線"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SOFTWARE RENDERER"
+#~ msgstr "啟用軟體算繪"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable X-Input mode for Xbox type controllers."
+#~ msgstr "為 Xbox 類型控制器啟用 X-Input 模式。"
+
+#~ msgctxt "game_options"
 #~ msgid "Enable aiming crosshair."
 #~ msgstr "啟用瞄準十字準星。"
 
@@ -19947,6 +19885,10 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Enable full subtitles on cutscenes."
 #~ msgstr "在過場動畫上啟用完整字幕。"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable full-screen antialiasing in Direct3D."
+#~ msgstr "在 Direct3D 中啟用全螢幕抗鋸齒。"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable high dots per inch."
@@ -19961,6 +19903,10 @@ msgstr "yellow/blue"
 #~ msgstr "在覆疊地圖上啟用旋轉功能。"
 
 #~ msgctxt "game_options"
+#~ msgid "Enable scanlines for roms that support it."
+#~ msgstr "啟用支援掃描線的 roms。"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable the IP address for OutRun 2 network play against another PC on the "
 #~ "same network."
@@ -19969,6 +19915,26 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Enable to emulate the card reader in Virtua Tenis 3."
 #~ msgstr "啟用以模擬 Virtua Tenis 3 中的讀卡機。"
+
+#~ msgctxt "game_options"
+#~ msgid "Enabled meshed polygons for translucency."
+#~ msgstr "為半透明啟用網格多邊形。"
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "啟用Direct3D自動對映產生。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr "在tilemaps上啟用雙線性過濾。效果不錯但可能會導致一些拉伸偽影。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables mipmap usage and trilinear filtering. Doesn't work with some "
+#~ "games."
+#~ msgstr "啟用mipmap使用和三線性過濾。對某些遊戲不起作用。"
 
 #~ msgctxt "game_options"
 #~ msgid "Enforce perfect pixel scaling. Prevents uneven scaling and blurring."
@@ -19996,12 +19962,24 @@ msgstr "yellow/blue"
 #~ msgstr "使用SDL退出模擬器"
 
 #~ msgctxt "game_options"
+#~ msgid "FAKE GOURAUD"
+#~ msgstr "FAKE GOURAUD"
+
+#~ msgctxt "game_options"
 #~ msgid "FIELD OF VIEW"
 #~ msgstr "視野"
 
 #~ msgctxt "game_options"
+#~ msgid "FILTER TILEMAPS"
+#~ msgstr "過濾平鋪地圖"
+
+#~ msgctxt "game_options"
 #~ msgid "FIST CROSSHAIR"
 #~ msgstr "拳頭十字準星"
+
+#~ msgctxt "game_options"
+#~ msgid "FORCE MANAGED"
+#~ msgstr "強制管理"
 
 #~ msgctxt "game_options"
 #~ msgid "FOV VERTICAL"
@@ -20082,6 +20060,10 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Force Nearest"
 #~ msgstr "強制最近"
+
+#~ msgctxt "game_options"
+#~ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
+#~ msgstr "強制DX驅動程式使用託管紋理，而不是動態紋理。"
 
 #~ msgctxt "game_options"
 #~ msgid "GAMEPLAY"
@@ -20204,10 +20186,6 @@ msgstr "yellow/blue"
 #~ msgstr "無觸控螢幕（預設）"
 
 #~ msgctxt "game_options"
-#~ msgid "OFF (Default)"
-#~ msgstr "關(預設)"
-
-#~ msgctxt "game_options"
 #~ msgid "OUTPUT RESAMPLING"
 #~ msgstr "輸出重取樣"
 
@@ -20222,6 +20200,12 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Only A1"
 #~ msgstr "僅限A1"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Only some games support rumble. Requires X-Input mode and may not be "
+#~ "compatible with all controllers."
+#~ msgstr "只有部分遊戲支援震動。需要X-Input模式並且可能與控制器不相容。"
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -20246,6 +20230,11 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "RELOAD WEAPON"
 #~ msgstr "重新裝填武器"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr "透過 Rawinput 讀取滑鼠，允許 2 個滑鼠用於 2 人射擊遊戲。"
 
 #~ msgctxt "game_options"
 #~ msgid "Reduce stutter that happens when compiling shaders."
@@ -20304,6 +20293,10 @@ msgstr "yellow/blue"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "保存存檔1"
+
+#~ msgctxt "game_options"
+#~ msgid "Screen Resolution (Default)"
+#~ msgstr "螢幕解析度（預設）"
 
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
@@ -20398,6 +20391,10 @@ msgstr "yellow/blue"
 #~ msgstr "存檔位置-"
 
 #~ msgctxt "game_options"
+#~ msgid "Smooth textures."
+#~ msgstr "光滑的紋理。"
+
+#~ msgctxt "game_options"
 #~ msgid "Standard"
 #~ msgstr "標準"
 
@@ -20452,6 +20449,12 @@ msgstr "yellow/blue"
 #~ msgstr "三角形"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
+#~ "information (flat)."
+#~ msgstr "嘗試從模型2的每多邊形資訊(平面)中猜測每頂點顏色(gouraud)。"
+
+#~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "使用GZDOOM搖桿配置"
 
@@ -20467,6 +20470,11 @@ msgstr "yellow/blue"
 #~ msgid ""
 #~ "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 #~ msgstr "使用L2/R2控制剎車/加速，使用L1/R1或R-stick Up/Down控制升檔/降檔。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use if you're having graphical issues or GPU problems with this emulator."
+#~ msgstr "如果您在使用此模擬器時遇到圖形問題或GPU問題，請使用。"
 
 #~ msgctxt "game_options"
 #~ msgid "Use language and username from the NDS Firmware"
@@ -20497,6 +20505,10 @@ msgstr "yellow/blue"
 #~ "When frameskip type is on automatic or manual, skip up to this many "
 #~ "frames consecutively."
 #~ msgstr "當「跳幀型別」為「自動」或「手動」時，連續跳過這麼多幀。"
+
+#~ msgctxt "game_options"
+#~ msgid "X-INPUT"
+#~ msgstr "X-INPUT"
 
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
