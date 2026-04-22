@@ -1,20 +1,22 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d706c94c23cd645171822dd6d3305bb58035f4b3|Apr 22, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|d706c94c23cd645171822dd6d3305bb58035f4b3|Apr 22, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6d7bd1b721e3e49aa994402683a251e18cb8ccae|Apr 22, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6d7bd1b721e3e49aa994402683a251e18cb8ccae|Apr 22, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|6f6c1299e29fa6e1062ae283a035b4ef787cc397|Apr 22, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|993033eb1c3726870d4d14bf92fc942f48ed85d9|Apr 22, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|860acb4faf0b453912c451238b44f77e6a7a7fdf|Apr 22, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.282|Apr 22, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0ef16c2ef4e55c718511c04619f0123e4f90667e|Apr 22, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e26c80c12908c95301fc7088f778cd499a6fe1ef|Apr 22, 2026
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|5174c2f2e06879c36bd59e0702c46c9f6f806d43|Apr 22, 2026
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|5174c2f2e06879c36bd59e0702c46c9f6f806d43|Apr 22, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|bb7e6b5dfb777e33e19dbe92f4f10ca3fcf628e9|Apr 22, 2026
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|42db9f5f267bec470a1ee18ce3fb5bfc7ad66789|Apr 22, 2026
 Network|[rtl8852cu](http://github.com/morrownr/rtl8852cu-20251113)|045d2e5cf27bdef4d7ffa46722039971f80441a7|Apr 22, 2026
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|2b0f9adfd57793b263ac920016dfd7b783c6fedc|Apr 22, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|1026c79ac50332512157a2c719f7fea0196ed8ff|Apr 22, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|7aea3285948953fced55a2321a911c358a0c3cfd|Apr 22, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|5fbe019e32609eef980a4549b13d5bd36cd0e4fc|Apr 22, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|371f419886379fa6d0fb8328d09112e205980e25|Apr 22, 2026
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|a8a29e947dffea2925f79652513d4cfd5919cc22|Apr 22, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|6820bfde36a65b51e137473ecf4ba8910aa4fe20|Apr 22, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|ada54ed8b55b570fcf33f8dd23eaa281fc0671ea|Apr 22, 2026
@@ -175,8 +177,6 @@ Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|1e2becff70450e0dd52dbaef76
 Engines|[libvni](http://github.com/PPUC/libvni)|aec04d88f70c3ef642df9f68c4b41c9418fdf704|Apr 13, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|54cff77a149cef818b76f0ed0762cd255f29088b|Apr 13, 2026
 Emulators|[libretro-doublecherrygb](https://github.com/TimOelrichs/doublecherryGB-libretro.git)|33c09c13856a8d36c8922a1a1c319c0b1259100f|Apr 13, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|68d409ebbae1560a13cfb5db8d524de6096f7770|Apr 12, 2026
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|68d409ebbae1560a13cfb5db8d524de6096f7770|Apr 12, 2026
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|b749eadb4080f596ce90ef7b2be97d7c1213567f|Apr 12, 2026
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.15|Apr 12, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|cd17f64cff4eaff187a0702d17520ccb9a760fe3|Apr 11, 2026

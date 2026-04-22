@@ -69,8 +69,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|d8877e6282868d30e1c2d70c28ec1d1e2491d5b7|Mar 17, 2026
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases/)|v2.8.0|Dec 12, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d706c94c23cd645171822dd6d3305bb58035f4b3|Apr 22, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|d706c94c23cd645171822dd6d3305bb58035f4b3|Apr 22, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6d7bd1b721e3e49aa994402683a251e18cb8ccae|Apr 22, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6d7bd1b721e3e49aa994402683a251e18cb8ccae|Apr 22, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|7064788c84b0c1e60b056dfe110d2c1114d10b2c|Mar 28, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.2|Mar 24, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.1.5|Apr 14, 2026
@@ -259,7 +259,7 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|3091ea88ae9ed35495be475478
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0ef16c2ef4e55c718511c04619f0123e4f90667e|Apr 22, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|cd17f64cff4eaff187a0702d17520ccb9a760fe3|Apr 11, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|5fbe019e32609eef980a4549b13d5bd36cd0e4fc|Apr 22, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|371f419886379fa6d0fb8328d09112e205980e25|Apr 22, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260321|Mar 21, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e26c80c12908c95301fc7088f778cd499a6fe1ef|Apr 22, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.272|Apr 18, 2026
@@ -276,8 +276,8 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46083|Apr 19, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|9916d8655fdfdf9cc2ec40c6f3f4b142eeb31608|Apr 19, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.134|Feb 21, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|68d409ebbae1560a13cfb5db8d524de6096f7770|Apr 12, 2026
-Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|68d409ebbae1560a13cfb5db8d524de6096f7770|Apr 12, 2026
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|5174c2f2e06879c36bd59e0702c46c9f6f806d43|Apr 22, 2026
+Emulators|[xenia-native](https://github.com/xenia-canary/xenia-canary.git)|5174c2f2e06879c36bd59e0702c46c9f6f806d43|Apr 22, 2026
 Emulators|[xenia](https://github.com/xenia-project/release-builds-windows/releases)|v1.0.2844-master|Feb 18, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
