@@ -1,0 +1,24 @@
+diff --git a/src/shader_recompiler/frontend/maxwell/structured_control_flow.cpp b/src/shader_recompiler/frontend/maxwell/structured_control_flow.cpp
+index eaf1d88f2e..7a8ebdcd83 100644
+--- a/src/shader_recompiler/frontend/maxwell/structured_control_flow.cpp
++++ b/src/shader_recompiler/frontend/maxwell/structured_control_flow.cpp
+@@ -862,8 +862,8 @@ private:
+         Statement* merge_stmt{TryFindForwardBlock(stmt)};
+         if (!merge_stmt) {
+             // Create a merge block we can visit later
+-            merge_stmt = stmt_pool.Create(&dummy_flow_block, &parent);
+-            parent.children.insert(std::next(Tree::s_iterator_to(stmt)), *merge_stmt);
++            //merge_stmt = stmt_pool.Create(&dummy_flow_block, &parent);
++            //parent.children.insert(std::next(Tree::s_iterator_to(stmt)), *merge_stmt);
+         }
+         return block_pool.Create(inst_pool);
+     }
+@@ -979,7 +979,7 @@ private:
+     Environment& env;
+     IR::AbstractSyntaxList& syntax_list;
+     bool uses_demote_to_helper{};
+-    const Flow::Block dummy_flow_block;
++    //const Flow::Block dummy_flow_block;
+ };
+ } // Anonymous namespace
+ 
