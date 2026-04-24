@@ -4818,10 +4818,10 @@ index 000000000000..f67dd5a3a1bc
 +
 +#endif	/* __HID_ASUS_H */
 diff --git a/drivers/hid/hid-core.c b/drivers/hid/hid-core.c
-index b8f066bf944f..eacd98dd2d36 100644
+index 905d46f52fa0..2e6ab63bda29 100644
 --- a/drivers/hid/hid-core.c
 +++ b/drivers/hid/hid-core.c
-@@ -2897,6 +2897,11 @@ static int hid_uevent(const struct device *dev, struct kobj_uevent_env *env)
+@@ -2900,6 +2900,11 @@ static int hid_uevent(const struct device *dev, struct kobj_uevent_env *env)
  	if (add_uevent_var(env, "MODALIAS=hid:b%04Xg%04Xv%08Xp%08X",
  			   hdev->bus, hdev->group, hdev->vendor, hdev->product))
  		return -ENOMEM;
@@ -18679,10 +18679,10 @@ index 09f6c9a2c041..f42c07249af4 100644
  
  	card->dai_link = links;
 diff --git a/sound/soc/amd/acp/acp-mach.h b/sound/soc/amd/acp/acp-mach.h
-index f94c30c20f20..597b6074474c 100644
+index f94c30c20f20..edf5e479afd4 100644
 --- a/sound/soc/amd/acp/acp-mach.h
 +++ b/sound/soc/amd/acp/acp-mach.h
-@@ -26,11 +26,15 @@
+@@ -26,6 +26,10 @@
  
  #define acp_get_drvdata(card) ((struct acp_card_drvdata *)(card)->drvdata)
  
@@ -18693,12 +18693,6 @@ index f94c30c20f20..597b6074474c 100644
  enum be_id {
  	HEADSET_BE_ID = 0,
  	AMP_BE_ID,
--	DMIC_BE_ID,
- 	BT_BE_ID,
-+	DMIC_BE_ID,
- };
- 
- enum cpu_endpoints {
 diff --git a/sound/soc/amd/acp/acp-sof-mach.c b/sound/soc/amd/acp/acp-sof-mach.c
 index 6215e31ecedd..018e4f28a02b 100644
 --- a/sound/soc/amd/acp/acp-sof-mach.c
