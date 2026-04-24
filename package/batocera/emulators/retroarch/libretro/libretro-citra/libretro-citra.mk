@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 24, 2026
-LIBRETRO_CITRA_VERSION = 37b6c91de6be0e7e0b43909233139ddf8d42b760
+LIBRETRO_CITRA_VERSION = 91128d662504cc3028fc39ef68e4538fb5a6f65e
 LIBRETRO_CITRA_SITE = https://github.com/azahar-emu/azahar.git
 LIBRETRO_CITRA_SITE_METHOD=git
 LIBRETRO_CITRA_GIT_SUBMODULES=YES
