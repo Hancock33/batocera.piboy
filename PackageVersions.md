@@ -339,7 +339,7 @@ Gpu|[nvidia580-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|580.
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|57a1067a246c71fa6c9a355d1668884fda155dd5|Dec 23, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.1|Jan 22, 2026
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|N/A|N/A
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|b9ded926bd2ec460b8d60d5c9678808bf8cbdd9b|Apr 20, 2026
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|d72697bfc353b547efc58421ad54ac0345441bf4|Feb 22, 2026
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|cd5e8020b5feea8f9364c87290cda4f9180be01a|Apr 14, 2026
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|ed378de2244282362bc4a895e3ef7186c5ed8d83|Apr 20, 2026
@@ -446,7 +446,7 @@ Ports|[box64](http://github.com/ptitseb/box64)|v0.4.2|Apr 20, 2026
 Ports|[box86](http://github.com/ptitseb/box86)|v0.3.8|Dec 06, 2024
 Ports|[bstone](http://github.com/bibendovsky/bstone)|v1.3.3|Jan 25, 2026
 Ports|[cannonball](http://github.com/djyt/cannonball)|27493ebf62be3498dff93ed6a45e8e2db819bae1|Jan 30, 2022
-Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|2fca573faa8864fd0942d780e5e50cdc8f445aba|Apr 19, 2026
+Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|0e023423dbc055212cc8fd7b990f6d4a74d905b4|Apr 25, 2026
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|2b0f9adfd57793b263ac920016dfd7b783c6fedc|Apr 22, 2026
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|2f3ec9cb76354b438cd9ba77c9f27ded71010aba|Mar 16, 2026
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|b3e63f5f2efdceca326cfcb0e608afc406e4ff8f|Feb 15, 2026
@@ -456,7 +456,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|91048781178a30ff5c4358b7fa
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|69bb23ebc4299c6eb2f2f6d4c42aa66efc28e9de|Mar 16, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|54cb21603c84572d4a6d657aaf64b87062115071|Apr 21, 2026
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|ae43c289f480a9ad9ead85c6dccddb9cbde96e8e|Apr 05, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|dd712f9ad979a7c13fdbbec52e4b2e58f45aa64d|Apr 25, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|a5d3b3801ccf5ffb76280f505853e49d9ec9e90e|Apr 25, 2026
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|b749eadb4080f596ce90ef7b2be97d7c1213567f|Apr 12, 2026
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e|Feb 18, 2026

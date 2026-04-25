@@ -2,10 +2,11 @@
 -----|:-----:|:-----:|:-----:
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|a94854309b36980f302a502303a50aa356688bd4|Apr 25, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-04-25|Apr 25, 2026
+Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|0e023423dbc055212cc8fd7b990f6d4a74d905b4|Apr 25, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|2b078f48a9565f57deb80cc8d8b5000a9c6abe16|Apr 25, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|91ee6ae94d18e1b5525d85cdd8d9b2f05b608f86|Apr 25, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|6ff3332ea27cfc26c25cb5f20d58e03cf0cc026e|Apr 25, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|dd712f9ad979a7c13fdbbec52e4b2e58f45aa64d|Apr 25, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|a5d3b3801ccf5ffb76280f505853e49d9ec9e90e|Apr 25, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|a97efbb0646dd7766bd66fe9e93118206edec36a|Apr 25, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|af6c3876eca4804b9ef1be62e5f3f7aa91b3da9b|Apr 25, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|7e8198258a3327011c719bcdd4623909d6543b75|Apr 24, 2026
@@ -79,6 +80,7 @@ Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.5|Apr 20, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|v0.4.2|Apr 20, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|09fc885bd709a313f2287e522b8e5b57a7ff76f2|Apr 20, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|7a61d559bda5bac1e32bb346020866a93963082c|Apr 20, 2026
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|b9ded926bd2ec460b8d60d5c9678808bf8cbdd9b|Apr 20, 2026
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|ed378de2244282362bc4a895e3ef7186c5ed8d83|Apr 20, 2026
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|fa7094910d040baa5fd8b11dbf6a1a618330ecd9|Apr 20, 2026
 Emulators|[libretro-a5200](http://github.com/libretro/a5200)|e09b29dd159bbc1098648c12cd83514b3befe89b|Apr 20, 2026
@@ -136,7 +138,6 @@ Emulators|[libretro-yabause](http://github.com/libretro/yabause)|7cb15b8f9eea5a6
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46083|Apr 19, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|f98b95e99525d3980e187b5dc462d09211de9bf3|Apr 19, 2026
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|c4fd3da602a4c71616250eeadd32db62381b94a7|Apr 19, 2026
-Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|2fca573faa8864fd0942d780e5e50cdc8f445aba|Apr 19, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.73.5|Apr 19, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v1.7.1|Apr 19, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.143.9226-530|Apr 19, 2026
@@ -592,4 +593,3 @@ Emulators|[demul]()|demul_251220|N/A
 Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/)|$(PIPEWIRE_VERSION)|N/A
 Utils|[wlrctl](https://git.sr.ht/~brocellous/wlrctl/archive)|v0.2.2|N/A
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|N/A|N/A
