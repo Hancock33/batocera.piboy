@@ -1,17 +1,17 @@
 diff --git a/Sources/Shared/Core/Logger.h b/Sources/Shared/Core/Logger.h
-index d0ff4a07..3ce87b7b 100644
+index 9435c7ff..26074b39 100644
 --- a/Sources/Shared/Core/Logger.h
 +++ b/Sources/Shared/Core/Logger.h
-@@ -246,7 +246,7 @@ namespace Death { namespace Trace {
+@@ -242,7 +242,7 @@ namespace Death { namespace Trace {
+ 			std::uint64_t tsc;
  			__asm__ volatile("stck %0" : "=Q" (tsc) : : "cc");
  			return tsc;
- 		}
--#	elif (defined(_M_ARM) || defined(_M_ARM64) || defined(__PPC64__))
-+#	elif (defined(_M_ARM) || defined(_M_ARM64) || defined(__PPC64__) || defined(__riscv))
- 		DEATH_ALWAYS_INLINE std::uint64_t rdtsc() noexcept {
+-#	elif (defined(_M_ARM) || defined(_M_ARM64) || defined(__PPC__) || defined(__PPC64__))
++#	elif (defined(_M_ARM) || defined(_M_ARM64) || defined(__PPC__) || defined(__PPC64__) || defined(__riscv))
  			return static_cast<std::uint64_t>(std::chrono::system_clock::now().time_since_epoch().count());
- 		}
-@@ -1348,4 +1348,4 @@ namespace Death { namespace Trace {
+ #	else
+ 			return __rdtsc();
+@@ -1353,4 +1353,4 @@ namespace Death { namespace Trace {
  
  }}
  
