@@ -1,5 +1,17 @@
+diff --git a/src/art.cc b/src/art.cc
+index b6f8794..65d96ee 100644
+--- a/src/art.cc
++++ b/src/art.cc
+@@ -4,6 +4,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <limits.h>
+ 
+ #include "animation.h"
+ #include "content_config.h"
 diff --git a/src/character_editor.cc b/src/character_editor.cc
-index e0d373d..a44136d 100644
+index eca3b5c..0823569 100644
 --- a/src/character_editor.cc
 +++ b/src/character_editor.cc
 @@ -4,7 +4,7 @@
@@ -12,7 +24,7 @@ index e0d373d..a44136d 100644
  #include <vector>
  
 diff --git a/src/input.cc b/src/input.cc
-index 390a61c..b80d033 100644
+index 3da236f..191f0ac 100644
 --- a/src/input.cc
 +++ b/src/input.cc
 @@ -2,6 +2,7 @@
@@ -24,7 +36,7 @@ index 390a61c..b80d033 100644
  #include "audio_engine.h"
  #include "color.h"
 diff --git a/src/inventory.cc b/src/inventory.cc
-index 0d20aa2..ce74cc5 100644
+index f064e29..e2e8273 100644
 --- a/src/inventory.cc
 +++ b/src/inventory.cc
 @@ -3,7 +3,7 @@
@@ -34,8 +46,8 @@ index 0d20aa2..ce74cc5 100644
 -
 +#include <climits>
  #include <algorithm>
- 
- #include "actions.h"
+ #include <string>
+ #include <utility>
 diff --git a/src/platform/git_version.h.in b/src/platform/git_version.h.in
 index 99f8728..583d3c4 100644
 --- a/src/platform/git_version.h.in
@@ -49,7 +61,7 @@ index 99f8728..583d3c4 100644
  
  #define CI_BUILD @CI_BUILD@
 diff --git a/src/stat.cc b/src/stat.cc
-index aacdb91..118e360 100644
+index 9dd848a..8c098af 100644
 --- a/src/stat.cc
 +++ b/src/stat.cc
 @@ -1,9 +1,9 @@
