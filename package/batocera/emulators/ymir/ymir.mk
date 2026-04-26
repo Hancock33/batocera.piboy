@@ -16,7 +16,7 @@
 #
 ################################################################################
 # Version: Commits on Apr 26, 2026
-YMIR_VERSION = 54b8687a13f5e56eab484a2340a408000c149463
+YMIR_VERSION = 8a74e9bea42887633ed65ed323f0049b02d29b70
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD = git
 YMIR_GIT_SUBMODULES = ES

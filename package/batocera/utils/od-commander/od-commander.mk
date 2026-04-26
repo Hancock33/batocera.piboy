@@ -10,6 +10,8 @@ OD_COMMANDER_DEPENDENCIES = sdl2 sdl2_gfx sdl2_image sdl2_ttf dejavu nanum-font
 OD_COMMANDER_EMULATOR_INFO = odcommander.emulator.yml
 
 OD_COMMANDER_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+OD_COMMANDER_CONF_OPTS += -DCMDR_GAMEPAD_OPEN=ControllerButton::A
+OD_COMMANDER_CONF_OPTS += -DCMDR_GAMEPAD_PARENT=ControllerButton::B
 
 define OD_COMMANDER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin
