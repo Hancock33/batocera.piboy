@@ -1,0 +1,8 @@
+config BR2_PACKAGE_MINIZ
+	bool "miniz"
+
+	help
+	  Single C source file zlib-replacement library,
+	  originally from code.google.com/p/miniz
+
+	  https://github.com/richgel999/miniz
