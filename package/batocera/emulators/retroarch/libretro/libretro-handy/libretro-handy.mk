@@ -3,8 +3,8 @@
 # libretro-handy
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_HANDY_VERSION = ae216ac46e15b0f7af20d0d42042d7db1a28ec96
+# Version: Commits on Apr 20, 2026
+LIBRETRO_HANDY_VERSION = bc55d462f0b2d6b073ea93dc552ebd73cec60fd1
 LIBRETRO_HANDY_SITE = $(call github,libretro,libretro-handy,$(LIBRETRO_HANDY_VERSION))
 LIBRETRO_HANDY_LICENSE = Zlib
 LIBRETRO_HANDY_DEPENDENCIES += retroarch

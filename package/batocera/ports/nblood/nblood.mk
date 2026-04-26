@@ -3,9 +3,10 @@
 # nblood
 #
 ################################################################################
-# Version: Commits on Apr 16, 2026
-NBLOOD_VERSION = r14336
+# Version: Commits on Apr 25, 2026
+NBLOOD_VERSION = r14339
 NBLOOD_SITE = $(call github,NBlood,NBlood,$(NBLOOD_VERSION))
+NBLOOD_SOURCE = $(NBLOOD_VERSION).tar.gz
 NBLOOD_EMULATOR_INFO = nblood.emulator.yml
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
 NBLOOD_LICENSE = GPLv3

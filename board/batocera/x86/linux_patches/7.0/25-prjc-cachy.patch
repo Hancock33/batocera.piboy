@@ -131,6 +131,19 @@ index 000000000000..05c84eec0f31
 +spend most of their time blocked awaiting another user event. So they get the
 +priority boost from unblocking while background threads that do most of the
 +processing receive the priority penalty for using their entire timeslice.
+diff --git a/fs/f2fs/checkpoint.c b/fs/f2fs/checkpoint.c
+index 6dd39b7de11a..2147a500bdcf 100644
+--- a/fs/f2fs/checkpoint.c
++++ b/fs/f2fs/checkpoint.c
+@@ -28,7 +28,7 @@ static inline void get_lock_elapsed_time(struct f2fs_time_stat *ts)
+ {
+ 	ts->total_time = ktime_get();
+ #ifdef CONFIG_64BIT
+-	ts->running_time = current->se.sum_exec_runtime;
++	ts->running_time = tsk_seruntime(current);
+ #endif
+ #if defined(CONFIG_SCHED_INFO) && defined(CONFIG_SCHEDSTATS)
+ 	ts->runnable_time = current->sched_info.run_delay;
 diff --git a/fs/proc/base.c b/fs/proc/base.c
 index 4c863d17dfb4..38462e413fa2 100644
 --- a/fs/proc/base.c
@@ -428,7 +441,7 @@ index c10c871deaf9..8564d85b52bb 100644
  #else
  static inline void rebuild_sched_domains_energy(void)
 diff --git a/init/Kconfig b/init/Kconfig
-index 8de7c610d80c..f12a200695ac 100644
+index 8de7c610d80c..0c83c3a99c53 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -714,6 +714,7 @@ config TASK_IO_ACCOUNTING
@@ -483,6 +496,15 @@ index 8de7c610d80c..f12a200695ac 100644
  	help
  	  This option adds support for automatic NUMA aware memory/task placement.
  	  The mechanism is quite primitive and is based on migrating memory when
+@@ -1284,7 +1315,7 @@ config CPUSETS
+ 
+ config CPUSETS_V1
+ 	bool "Legacy cgroup v1 cpusets controller"
+-	depends on CPUSETS
++	depends on (CPUSETS && !SCHED_ALT)
+ 	default n
+ 	help
+ 	  Legacy cgroup v1 cpusets controller which has been deprecated by
 @@ -1452,6 +1483,7 @@ config CHECKPOINT_RESTORE
  
  config SCHED_AUTOGROUP
@@ -771,10 +793,10 @@ index b1f1a367034f..b7f5f9931da3 100644
  obj-y += build_utility.o
 diff --git a/kernel/sched/alt_core.c b/kernel/sched/alt_core.c
 new file mode 100644
-index 000000000000..1c9ae28995b5
+index 000000000000..768365bd2133
 --- /dev/null
 +++ b/kernel/sched/alt_core.c
-@@ -0,0 +1,7613 @@
+@@ -0,0 +1,7612 @@
 +/*
 + *  kernel/sched/alt_core.c
 + *
@@ -856,7 +878,7 @@ index 000000000000..1c9ae28995b5
 +__read_mostly int sysctl_resched_latency_warn_ms = 100;
 +__read_mostly int sysctl_resched_latency_warn_once = 1;
 +
-+#define ALT_SCHED_VERSION "v7.0-r0"
++#define ALT_SCHED_VERSION "v7.0-r2"
 +
 +#define STOP_PRIO		(MAX_RT_PRIO - 1)
 +
@@ -8154,7 +8176,6 @@ index 000000000000..1c9ae28995b5
 +	struct mm_struct *mm = t->mm;
 +	bool percpu;
 +
-+	WARN_ON_ONCE(!mm || t->mm_cid.cid != MM_CID_UNSET);
 +	if (!mm)
 +		return;
 +
@@ -10501,7 +10522,7 @@ index 15bf45b6f912..dcaf9c43ce39 100644
  void proc_sched_set_task(struct task_struct *p)
  {
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index 912b2a8464ab..742b115f60d5 100644
+index 282f28c698ff..7912cb5ac515 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -461,6 +461,7 @@ void cpu_startup_entry(enum cpuhp_state state)
@@ -10512,7 +10533,7 @@ index 912b2a8464ab..742b115f60d5 100644
  /*
   * idle-task scheduling class.
   */
-@@ -598,3 +599,4 @@ DEFINE_SCHED_CLASS(idle) = {
+@@ -601,3 +602,4 @@ DEFINE_SCHED_CLASS(idle) = {
  	.switching_to		= switching_to_idle,
  	.update_curr		= update_curr_idle,
  };
@@ -10736,10 +10757,10 @@ index f921302dc40f..2fade7dab9b0 100644
  
  #endif /* _KERNEL_SCHED_PELT_H */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index fd2760ee6479..b0af40684bf8 100644
+index fd2760ee6479..4112626065e9 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
-@@ -5,6 +5,10 @@
+@@ -5,6 +5,11 @@
  #ifndef _KERNEL_SCHED_SCHED_H
  #define _KERNEL_SCHED_SCHED_H
  
@@ -10747,10 +10768,11 @@ index fd2760ee6479..b0af40684bf8 100644
 +#include "alt_sched.h"
 +#else
 +
++#include <linux/prandom.h>
  #include <linux/sched/affinity.h>
  #include <linux/sched/autogroup.h>
  #include <linux/sched/cpufreq.h>
-@@ -4218,4 +4222,9 @@ DEFINE_CLASS_IS_UNCONDITIONAL(sched_change)
+@@ -4218,4 +4223,9 @@ DEFINE_CLASS_IS_UNCONDITIONAL(sched_change)
  
  #include "ext.h"
  

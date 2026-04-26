@@ -3,8 +3,8 @@
 # libretro-smsplus-gx
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_SMSPLUS_GX_VERSION = 41212ee3309fcf84ef0c04317a0916f0e1252c00
+# Version: Commits on Apr 20, 2026
+LIBRETRO_SMSPLUS_GX_VERSION = 6dc7119f6f8d7f6437320405ee3b0de5f227913f
 LIBRETRO_SMSPLUS_GX_SITE = $(call github,libretro,smsplus-gx,$(LIBRETRO_SMSPLUS_GX_VERSION))
 LIBRETRO_SMSPLUS_GX_LICENSE = Non-commercial
 LIBRETRO_SMSPLUS_GX_DEPENDENCIES += retroarch

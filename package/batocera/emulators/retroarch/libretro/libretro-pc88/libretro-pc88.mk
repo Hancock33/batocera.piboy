@@ -3,8 +3,8 @@
 # libretro-pc88
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_PC88_VERSION = ec3d357916a3ba77716d91724b6c6e619ae8f055
+# Version: Commits on Apr 20, 2026
+LIBRETRO_PC88_VERSION = 520e0a37ac0e9cf8b0536fe83fda3aacc9ba73bb
 LIBRETRO_PC88_SITE = $(call github,libretro,quasi88-libretro,$(LIBRETRO_PC88_VERSION))
 LIBRETRO_PC88_LICENSE = BSD 3-Clause
 LIBRETRO_PC88_DEPENDENCIES += retroarch

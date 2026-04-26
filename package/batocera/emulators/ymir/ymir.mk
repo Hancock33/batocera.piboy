@@ -15,8 +15,8 @@
 # ymir
 #
 ################################################################################
-# Version: Commits on Apr 18, 2026
-YMIR_VERSION = 77c228cea53e236b323e71e90784315139e72f59
+# Version: Commits on Apr 26, 2026
+YMIR_VERSION = 8a74e9bea42887633ed65ed323f0049b02d29b70
 YMIR_SITE = https://github.com/StrikerX3/Ymir
 YMIR_SITE_METHOD = git
 YMIR_GIT_SUBMODULES = ES
@@ -24,7 +24,7 @@ YMIR_LICENSE = GPLv2
 YMIR_LICENSE_FILE = LICENSE
 YMIR_EMULATOR_INFO = ymir.emulator.yml
 YMIR_DEPENDENCIES += catch2 cereal cxxopts fmt host-clang json-for-modern-cpp libcurl
-YMIR_DEPENDENCIES += libdate nghttp3 ngtcp2 openssl rtmidi sdl3 semver stb tomlplusplus
+YMIR_DEPENDENCIES += libdate miniz nghttp3 ngtcp2 openssl rtmidi sdl3 semver stb tomlplusplus
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 YMIR_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -lm"

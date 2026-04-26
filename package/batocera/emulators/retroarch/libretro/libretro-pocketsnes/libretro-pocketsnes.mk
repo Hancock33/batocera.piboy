@@ -3,8 +3,8 @@
 # libretro-pocketsnes
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_POCKETSNES_VERSION = 15826a2afc1474b30c310502b5dbe25c639be59d
+# Version: Commits on Apr 20, 2026
+LIBRETRO_POCKETSNES_VERSION = 39e0d8c6daf4b1b1302eeecfee8309570aeb6a82
 LIBRETRO_POCKETSNES_SITE = $(call github,libretro,snes9x2002,$(LIBRETRO_POCKETSNES_VERSION))
 LIBRETRO_POCKETSNES_LICENSE = Non-commercial
 LIBRETRO_POCKETSNES_DEPENDENCIES += retroarch

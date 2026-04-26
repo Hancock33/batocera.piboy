@@ -203,10 +203,10 @@ index 000000000000..5c96b04a4d7a
 +                        storage.
 +======================= ====================================================
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 831525651c61..22a3fdab6cd0 100644
+index cf022f0d7088..e176cd600c4a 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -18896,6 +18896,15 @@ W:	https://github.com/davejiang/linux/wiki
+@@ -18898,6 +18898,15 @@ W:	https://github.com/davejiang/linux/wiki
  T:	git https://github.com/davejiang/linux.git
  F:	drivers/ntb/hw/intel/
  

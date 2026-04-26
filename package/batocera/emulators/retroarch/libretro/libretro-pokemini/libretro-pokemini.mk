@@ -3,8 +3,8 @@
 # libretro-pokemini
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_POKEMINI_VERSION = 1e17b92c82e996e38327b690b59db6e68f56413b
+# Version: Commits on Apr 20, 2026
+LIBRETRO_POKEMINI_VERSION = bb009b1379ad15f1514f20ca7cbf710b4af42b3e
 LIBRETRO_POKEMINI_SITE = $(call github,libretro,PokeMini,$(LIBRETRO_POKEMINI_VERSION))
 LIBRETRO_POKEMINI_LICENSE = GPLv3
 LIBRETRO_POKEMINI_DEPENDENCIES += retroarch

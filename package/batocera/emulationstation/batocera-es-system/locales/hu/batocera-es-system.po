@@ -2600,15 +2600,15 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "AUTO CÉLZÁS"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO CROP"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "AUTO FRAMESKIP"
 msgstr "AUTO KÉPKOCKAKIHAGYÁS"
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "AUTO HEIGHT"
-msgstr "AUTOMATA MAGASSÁG"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -2882,11 +2882,6 @@ msgstr "Afrikai"
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "NMI után"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Aim"
-msgstr ""
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -3530,7 +3525,7 @@ msgctxt "keys_files"
 msgid "Automap"
 msgstr "Automatikus térkép"
 
-#. TRANSLATION: amiberry, libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3, ...
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "Automatikus"
@@ -3726,7 +3721,7 @@ msgctxt "game_options"
 msgid "BILINEAR FILTER"
 msgstr "BILINEÁRIS SZŰRŐ"
 
-#. TRANSLATION: model2emu, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "BILINEÁRIS SZŰRÉS"
@@ -4871,6 +4866,11 @@ msgctxt "game_options"
 msgid "CRT SWITCHRES"
 msgstr "CRT KAPCSOLÓK"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "CRT Shader."
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
@@ -5797,6 +5797,11 @@ msgctxt "game_options"
 msgid "Colour Genie Floppies (ROM required)"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Commodore 1084 monitor"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Compatible"
@@ -5989,11 +5994,6 @@ msgstr "Célkereszt a támogatott játékokban, pl. ActionMax, Maddog II."
 msgctxt "keys_files"
 msgid "Crouch"
 msgstr "Guggol"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Crouch Toggle"
-msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -7056,11 +7056,6 @@ msgctxt "game_options"
 msgid "ENABLE DEBUG"
 msgstr "DEBUG ENGEDÉLYEZÉSE"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
-msgstr "TELJES KÉPERNYŐS ÉLSIMÍTÁS ENGEDÉLYEZÉSE"
-
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
@@ -7075,16 +7070,6 @@ msgstr "A GRAVIS ULTRASOUND ENGEDÉLYEZÉSE"
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
 msgstr "HIDRAW ENGEDÉLYEZÉSE"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MESH TRANSPARENCY"
-msgstr "HÁLÓ ÁTLÁTSZÓSÁGÁNAK ENGEDÉLYEZÉSE"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MIP-MAP"
-msgstr "MIP-MAP ENGEDÉLYEZÉSE"
 
 #. TRANSLATION: cemu, mame, wine
 msgctxt "game_options"
@@ -7121,32 +7106,17 @@ msgctxt "game_options"
 msgid "ENABLE POLYGON SPLITTING"
 msgstr "POLIGON FELOSZTÁS ENGEDÉLYEZÉSE"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE RAW INPUT"
-msgstr "NYERS BEMENET ENGEDÉLYEZÉSE"
-
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
 msgstr "HOMOKOZÓ MÓD ENGDÉLYEZÉSE"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SCANLINES"
-msgstr "A SCANLINES ENGEDÉLYEZÉSE"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SOFTWARE RENDERER"
-msgstr "SZOFTVERES RENDERELŐ ENGEDÉLYEZÉSE"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "AZ IDŐNYÚJTÁS ENGEDÉLYEZÉSE"
 
-#. TRANSLATION: bstone, model2emu, play
+#. TRANSLATION: bstone, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "SZÉLESKÉPERNYŐ ENGEDÉLYEZÉSE"
@@ -7416,11 +7386,6 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable X-Input mode for Xbox type controllers."
-msgstr "X-bemeneti mód engedélyezése Xbox típusú vezérlőkhöz."
-
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -7486,11 +7451,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr "Engedélyezze az ingyenes játékot a támogatott játékokhoz."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable full-screen antialiasing in Direct3D."
-msgstr "Teljes képernyős élsimítás engedélyezése a Direct3D-ben."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7613,11 +7573,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable resolution changes (requires restart)."
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
-msgstr "Engedélyezze a scanline-okat az ezt támogató ROM-ok számára."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -7785,7 +7740,7 @@ msgid "Enable widescreen support for game rendering."
 msgstr ""
 "A szélesvásznú képernyő támogatásának engedélyezése a játék rendereléséhez."
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "A szélesvásznú támogatás engedélyezése."
@@ -7805,11 +7760,6 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Engedélyezve (alapértelmezett)"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enabled meshed polygons for translucency."
-msgstr "Engedélyezett hálós sokszögek az átlátszóság érdekében."
-
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
@@ -7820,11 +7770,6 @@ msgctxt "game_options"
 msgid "Enables Action Replay cheats."
 msgstr "Engedélyezi az Action Replay csalásokat."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "Lehetővé teszi a Direct3D Automip-térkép generálását."
-
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Enables Dolby Pro Logic II for surround sound. May impact performance."
@@ -7832,27 +7777,10 @@ msgstr ""
 "Engedélyezi a Dolby Pro Logic II-t a térhatású hangzáshoz. Befolyásolhatja a "
 "teljesítményt."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
-"stretch artifacts."
-msgstr ""
-"Lehetővé teszi a bilineáris szűrést a csempetérképeken. Jól néz ki, de "
-"nyúlási műtermékeket okozhat."
-
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
 msgstr "Engedélyezi a csalási fájlok olvasását a `cheats` könyvtárból."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables mipmap usage and trilinear filtering. Doesn't work with some games."
-msgstr ""
-"Lehetővé teszi a mipmap használatát és a trilineáris szűrést. Egyes "
-"játékokkal nem működik."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -8158,7 +8086,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Kilépés az emulátorból"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Kilépés az emulátorból"
@@ -8205,11 +8133,6 @@ msgctxt "game_options"
 msgid "Extreme"
 msgstr "Extrém"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FAKE GOURAUD"
-msgstr "HAMIS GOURAUD"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "FALSE"
@@ -8254,11 +8177,6 @@ msgstr "FIFO Laza"
 msgctxt "game_options"
 msgid "FIGHT MUSIC"
 msgstr "HARCZENE"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FILTER TILEMAPS"
-msgstr "CSEMPETÉRKÉPEK SZŰRÉSE"
 
 #. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
@@ -8335,10 +8253,10 @@ msgctxt "game_options"
 msgid "FORCE LARGE ADDRESS"
 msgstr "NAGY CÍM KÉNYSZERÍTÉSE"
 
-#. TRANSLATION: model2emu
+#. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "FORCE MANAGED"
-msgstr "ERŐKEZELÉS"
+msgid "FORCE NTSC"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8580,7 +8498,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Finn (fi)"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Tűz"
@@ -8797,6 +8715,11 @@ msgctxt "game_options"
 msgid "Force Default DNS"
 msgstr "Alapértelmezett DNS kényszerítése"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Force NTSC instead PAL."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -8845,13 +8768,6 @@ msgid ""
 msgstr ""
 "Kényszerítse a játékot, hogy ebben a képarányban jelenjen meg. Nem minden "
 "rendszer támogatja az összes arányt."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Forces the DX driver to use Managed textures instead of Dynamic."
-msgstr ""
-"Kényszeríti a DX-illesztőprogramot, hogy felügyelt textúrákat használjon a "
-"dinamikus helyett."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10336,6 +10252,11 @@ msgstr ""
 "Telepítse a képolvasó kártyát az idks képfájlok olvasásához (csak Mac IIx "
 "esetén)"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Integer"
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Integer Scale"
@@ -10629,7 +10550,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Július"
 
-#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "Ugrás"
@@ -10643,6 +10564,11 @@ msgstr "Június"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Igazoló"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEEP ASPECT RATIO"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -10688,6 +10614,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Tartsa meg az arányt (alapértelmezett)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Keep original aspect ratio when stretching."
+msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -10748,11 +10679,6 @@ msgstr "Keypad 3gomb"
 msgctxt "game_options"
 msgid "Keypad to joyport mappings for 2 players."
 msgstr "Billentyűzet-joyport leképezések 2 játékos számára."
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Kick"
-msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -11134,6 +11060,11 @@ msgctxt "game_options"
 msgid "Lightrec Interpreter"
 msgstr "Lightrec fordító"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Lightweight CRT effect"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Lime"
@@ -11200,7 +11131,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Hosszú látható képernyőszegély (cm)"
 
-#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr "Nézze"
@@ -11665,7 +11596,7 @@ msgid "Manually set cycles per second. Use with caution."
 msgstr ""
 "Manuálisan állítsa be a ciklusokat másodpercenként. Óvatosan használja."
 
-#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr "Térkép"
@@ -11891,16 +11822,6 @@ msgstr "Menacer Light Gun"
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menü"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Down"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Up"
-msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
@@ -12135,12 +12056,12 @@ msgctxt "game_options"
 msgid "Mouse sensitivity for paddles. Core default (10)."
 msgstr "Egér érzékenysége a lapátokhoz. Alapértelmezés (10)."
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "Mozgás hátrafelé"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "Mozgás előre"
@@ -12572,7 +12493,7 @@ msgctxt "keys_files"
 msgid "Next Inventory Item"
 msgstr "Következő készletelem"
 
-#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr "Következő fegyver"
@@ -12657,10 +12578,15 @@ msgctxt "game_options"
 msgid "None"
 msgstr "Egyik sem"
 
-#. TRANSLATION: cgenius, libretro/ep128emu, libretro/mame, mame, pcsx2, ...
+#. TRANSLATION: amiberry, cgenius, libretro/ep128emu, libretro/mame, mame, ...
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Nincs (alapértelmezett)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "None (default)"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -12767,6 +12693,11 @@ msgctxt "game_options"
 msgid "OFF"
 msgstr "KI"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr "KI (Alapértelmezett)"
+
 #. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
@@ -12776,6 +12707,11 @@ msgstr "KÉPERNYŐN KÍVÜLI ÚJRATÖLTÉS GOMB"
 msgctxt "game_options"
 msgid "ON"
 msgstr "BE"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "ON (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -13049,15 +12985,6 @@ msgstr "Csak egész számú többszörösökben növelje a képméretet."
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr "Csak néhány játékban van rezgés. Nem kompatibilis minden vezérlővel."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Only some games support rumble. Requires X-Input mode and may not be "
-"compatible with all controllers."
-msgstr ""
-"Csak néhány játék támogatja a rezgést. X-Input üzemmódot igényel, és nem "
-"biztos, hogy minden vezérlővel kompatibilis."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -13341,6 +13268,11 @@ msgstr "PBA"
 msgctxt "game_options"
 msgid "PC MODEL"
 msgstr "PC MODEL"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "PC monitor effect with lighter scanlines"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -14116,8 +14048,8 @@ msgstr "Az ES előtöltése lehetetlen."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Presets which can improve performance without manually editing the VPinballX."
-"ini file to fine tune performance."
+"Presets which can improve performance without manually editing the "
+"VPinballX.ini file to fine tune performance."
 msgstr ""
 "Előbeállítások, amelyek javíthatják a teljesítményt a VPinballX.ini fájl "
 "kézi szerkesztése nélkül a teljesítmény finomhangolásához."
@@ -14566,7 +14498,7 @@ msgctxt "game_options"
 msgid "RTV (Default)"
 msgstr "RTV (alapértelmezett)"
 
-#. TRANSLATION: cemu, dolphin, libretro/tyrquake, model2emu, openbor/openbor7530, ...
+#. TRANSLATION: cemu, dolphin, libretro/tyrquake, openbor/openbor7530, rpcs3, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "REZGŐ"
@@ -14600,14 +14532,6 @@ msgstr "Véletlen értékek"
 msgctxt "game_options"
 msgid "Raw"
 msgstr "Nyers"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-msgstr ""
-"Olvassa el az egeret a Rawinput segítségével, lehetővé téve 2 egér "
-"használatát 2 játékos lövöldözős játékokhoz."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -14969,7 +14893,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Rumble Pak (automatikus)"
 
-#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys, ...
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Futás"
@@ -15231,6 +15155,11 @@ msgstr "ÉRZÉKELŐ ÉRZÉKENYSÉGE (TILT)"
 #. TRANSLATION: demul
 msgctxt "game_options"
 msgid "SET GAELCO SCALING AMOUNT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SHADER"
 msgstr ""
 
 #. TRANSLATION: azahar
@@ -15747,11 +15676,6 @@ msgstr "Scanline Interpolation Filter (SAI)"
 msgctxt "game_options"
 msgid "Scorpion 256K"
 msgstr "Scorpion 256K"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Screen Resolution (Default)"
-msgstr "Képernyőfelbontás (alapértelmezett)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -16674,11 +16598,6 @@ msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Távoli 3D objektumok textúráinak simítása a szög alapján."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Smooth textures."
-msgstr "Sima textúrák."
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "Smooths out textures on 3D objects."
@@ -17051,12 +16970,12 @@ msgstr ""
 "Tárolja a múltbeli állapotokat a valós idejű visszatekeréshez, ha a mag "
 "támogatja."
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "Oldalazás balra"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Oldalazás jobbra"
@@ -17519,7 +17438,7 @@ msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
 msgstr "ÁTLÁTSZÓ HÁLÓK"
 
-#. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "TRILINEÁRIS SZŰRÉS"
@@ -17583,6 +17502,11 @@ msgstr "TT ETOS 512k"
 msgctxt "game_options"
 msgid "TV"
 msgstr "TV"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "TV CRT effect with heaver scanlines and curvature"
+msgstr ""
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
@@ -17708,11 +17632,6 @@ msgstr "Tandy Radio Shack Color Computer lemezkép"
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
 msgstr "Tano Dragon (NTSC)"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Taunt"
-msgstr ""
 
 #. TRANSLATION: shadps4
 msgctxt "game_options"
@@ -18030,15 +17949,6 @@ msgstr "Fordítás"
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
 msgstr "A jobb analóg kart második joystickként kezeli."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
-"information (flat)."
-msgstr ""
-"Megpróbálja kitalálni a csúcsonkénti színt (gouraud) a Model2 per-poli "
-"információiból (lapos)."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -18621,11 +18531,6 @@ msgctxt "keys_files"
 msgid "Use"
 msgstr "Használ"
 
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Use / Open"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -18737,13 +18642,6 @@ msgstr "Használjon alternatív felbontást. Néhány játéknak szüksége van 
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr "A custom.ini fájlban kézzel megadott vezérlőbeállítások használata."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Use if you're having graphical issues or GPU problems with this emulator."
-msgstr ""
-"Akkor használja, ha grafikus vagy GPU-problémái vannak ezzel az emulátorral."
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -19549,11 +19447,6 @@ msgctxt "game_options"
 msgid "X"
 msgstr "X"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "X-INPUT"
-msgstr "X-BEMENET"
-
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "X2"
@@ -19989,12 +19882,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "gyorsváltás"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "quickload"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "quicksave"
@@ -20034,7 +19927,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "scanlines"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "képernyőkép"
@@ -20313,6 +20206,10 @@ msgstr "sárga/kék"
 #~ msgstr "AUTOMATIKUS CÉLZÁS"
 
 #~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "AUTOMATA MAGASSÁG"
+
+#~ msgctxt "game_options"
 #~ msgid "AUTO SWITCH WEAPON"
 #~ msgstr "AUTOMATIKUS FEGYVERVÁLTÁS"
 
@@ -20563,8 +20460,32 @@ msgstr "sárga/kék"
 #~ msgstr "KERESZT ENGEDÉLYEZÉSE"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
+#~ msgstr "TELJES KÉPERNYŐS ÉLSIMÍTÁS ENGEDÉLYEZÉSE"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MESH TRANSPARENCY"
+#~ msgstr "HÁLÓ ÁTLÁTSZÓSÁGÁNAK ENGEDÉLYEZÉSE"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIP-MAP"
+#~ msgstr "MIP-MAP ENGEDÉLYEZÉSE"
+
+#~ msgctxt "game_options"
 #~ msgid "ENABLE MIPMAPPING"
 #~ msgstr "MIPMAPPING ENGEDÉLYEZÉSE"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE RAW INPUT"
+#~ msgstr "NYERS BEMENET ENGEDÉLYEZÉSE"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SCANLINES"
+#~ msgstr "A SCANLINES ENGEDÉLYEZÉSE"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SOFTWARE RENDERER"
+#~ msgstr "SZOFTVERES RENDERELŐ ENGEDÉLYEZÉSE"
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"
@@ -20573,6 +20494,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "ENABLE WINE DEVICES SERVICES"
 #~ msgstr "WINE ESZKÖZÖK SZOLGÁLTATÁSÁNAK ENGEDÉLYEZÉSE"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable X-Input mode for Xbox type controllers."
+#~ msgstr "X-bemeneti mód engedélyezése Xbox típusú vezérlőkhöz."
 
 #~ msgctxt "game_options"
 #~ msgid "Enable XIM support."
@@ -20591,6 +20516,10 @@ msgstr "sárga/kék"
 #~ msgstr "Teljes feliratok engedélyezése a jelenetekben."
 
 #~ msgctxt "game_options"
+#~ msgid "Enable full-screen antialiasing in Direct3D."
+#~ msgstr "Teljes képernyős élsimítás engedélyezése a Direct3D-ben."
+
+#~ msgctxt "game_options"
 #~ msgid "Enable high dots per inch."
 #~ msgstr "Magas képpont/hüvelyk arány engedélyezése."
 
@@ -20605,6 +20534,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Enable rotation on overlay map."
 #~ msgstr "Elforgatás engedélyezése az átfedő térképen."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable scanlines for roms that support it."
+#~ msgstr "Engedélyezze a scanline-okat az ezt támogató ROM-ok számára."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20623,8 +20556,32 @@ msgstr "sárga/kék"
 #~ msgstr "Engedélyezett felhasználói felület felszólítások (alapértelmezett)"
 
 #~ msgctxt "game_options"
+#~ msgid "Enabled meshed polygons for translucency."
+#~ msgstr "Engedélyezett hálós sokszögek az átlátszóság érdekében."
+
+#~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
 #~ msgstr "Az egérkurzor engedélyezése vagy letiltása. Hasznos a CG menüihez."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "Lehetővé teszi a Direct3D Automip-térkép generálását."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr ""
+#~ "Lehetővé teszi a bilineáris szűrést a csempetérképeken. Jól néz ki, de "
+#~ "nyúlási műtermékeket okozhat."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables mipmap usage and trilinear filtering. Doesn't work with some "
+#~ "games."
+#~ msgstr ""
+#~ "Lehetővé teszi a mipmap használatát és a trilineáris szűrést. Egyes "
+#~ "játékokkal nem működik."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20678,12 +20635,24 @@ msgstr "sárga/kék"
 #~ msgstr "Lépjen ki a Flatpak futásából"
 
 #~ msgctxt "game_options"
+#~ msgid "FAKE GOURAUD"
+#~ msgstr "HAMIS GOURAUD"
+
+#~ msgctxt "game_options"
 #~ msgid "FIELD OF VIEW"
 #~ msgstr "LÁTÓMEZŐ"
 
 #~ msgctxt "game_options"
+#~ msgid "FILTER TILEMAPS"
+#~ msgstr "CSEMPETÉRKÉPEK SZŰRÉSE"
+
+#~ msgctxt "game_options"
 #~ msgid "FIST CROSSHAIR"
 #~ msgstr "FIST CÉLKERESZT"
+
+#~ msgctxt "game_options"
+#~ msgid "FORCE MANAGED"
+#~ msgstr "ERŐKEZELÉS"
 
 #~ msgctxt "game_options"
 #~ msgid "FOV VERTICAL"
@@ -20781,6 +20750,12 @@ msgstr "sárga/kék"
 #~ msgid "Force Nvidia GPUs to always be reported as AMD GPUs."
 #~ msgstr ""
 #~ "Kényszerítse az Nvidia GPU-kat, hogy mindig AMD GPU-ként jelenjenek meg."
+
+#~ msgctxt "game_options"
+#~ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
+#~ msgstr ""
+#~ "Kényszeríti a DX-illesztőprogramot, hogy felügyelt textúrákat használjon "
+#~ "a dinamikus helyett."
 
 #~ msgctxt "keys_files"
 #~ msgid "Forward Nudge"
@@ -20978,10 +20953,6 @@ msgstr "sárga/kék"
 #~ msgstr "Nem minden játék támogatja az összes nyelvet."
 
 #~ msgctxt "game_options"
-#~ msgid "OFF (Default)"
-#~ msgstr "KI (Alapértelmezett)"
-
-#~ msgctxt "game_options"
 #~ msgid "OUTPUT RESAMPLING"
 #~ msgstr "KIMENET ÚJRAMINTAVÉTELEZÉS"
 
@@ -20996,6 +20967,14 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Off will help some games, others will run too fast."
 #~ msgstr "A kikapcsolás segít néhány játékon, mások túl gyorsan fognak futni."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Only some games support rumble. Requires X-Input mode and may not be "
+#~ "compatible with all controllers."
+#~ msgstr ""
+#~ "Csak néhány játék támogatja a rezgést. X-Input üzemmódot igényel, és nem "
+#~ "biztos, hogy minden vezérlővel kompatibilis."
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -21106,6 +21085,13 @@ msgstr "sárga/kék"
 #~ msgstr "FEGYVER ÚJRATÖLTÉSE"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Olvassa el az egeret a Rawinput segítségével, lehetővé téve 2 egér "
+#~ "használatát 2 játékos lövöldözős játékokhoz."
+
+#~ msgctxt "game_options"
 #~ msgid "Reduce stutter that happens when compiling shaders."
 #~ msgstr "Csökkentse az árnyékolók összeállítása során előforduló dadogást."
 
@@ -21190,6 +21176,10 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Állapot mentése Slot 1"
+
+#~ msgctxt "game_options"
+#~ msgid "Screen Resolution (Default)"
+#~ msgstr "Képernyőfelbontás (alapértelmezett)"
 
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
@@ -21314,6 +21304,10 @@ msgstr "sárga/kék"
 #~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
+#~ msgid "Smooth textures."
+#~ msgstr "Sima textúrák."
+
+#~ msgctxt "game_options"
 #~ msgid "Standard"
 #~ msgstr "Szabványos"
 
@@ -21402,6 +21396,14 @@ msgstr "sárga/kék"
 #~ msgstr "Háromszög"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
+#~ "information (flat)."
+#~ msgstr ""
+#~ "Megpróbálja kitalálni a csúcsonkénti színt (gouraud) a Model2 per-poli "
+#~ "információiból (lapos)."
+
+#~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "A GZDOOM JOYSTICK KONFIGURÁCIÓJÁNAK HASZNÁLATA"
 
@@ -21430,6 +21432,13 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Használja az L2/R2-t a fékezéshez/gyorsításhoz és az L1/R1-et vagy a jobb "
 #~ "gomba fel/le gombot a fel/le váltáshoz."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use if you're having graphical issues or GPU problems with this emulator."
+#~ msgstr ""
+#~ "Akkor használja, ha grafikus vagy GPU-problémái vannak ezzel az "
+#~ "emulátorral."
 
 #~ msgctxt "game_options"
 #~ msgid "Use language and username from the NDS Firmware"
@@ -21466,6 +21475,10 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Ha a képkockakihagyás típusa automatikus vagy kézi, ugorjon legfeljebb "
 #~ "ennyi képkockát egymás után."
+
+#~ msgctxt "game_options"
+#~ msgid "X-INPUT"
+#~ msgstr "X-BEMENET"
 
 #~ msgctxt "keys_files"
 #~ msgid "exit game"

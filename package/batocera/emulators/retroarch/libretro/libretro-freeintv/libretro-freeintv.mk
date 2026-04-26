@@ -3,8 +3,8 @@
 # libretro-freeintv
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_FREEINTV_VERSION = 9b66d2b3c3406659b2fdfaade7a80f3e62772815
+# Version: Commits on Apr 20, 2026
+LIBRETRO_FREEINTV_VERSION = 428915baf2bfc032fc03e645f4f8f9c6c3144979
 LIBRETRO_FREEINTV_SITE = $(call github,libretro,freeintv,$(LIBRETRO_FREEINTV_VERSION))
 LIBRETRO_FREEINTV_LICENSE = GPLv3
 LIBRETRO_FREEINTV_DEPENDENCIES += retroarch

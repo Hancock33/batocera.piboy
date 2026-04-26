@@ -3,8 +3,8 @@
 # libretro-virtualjaguar
 #
 ################################################################################
-# Version: Commits on Apr 16, 2026
-LIBRETRO_VIRTUALJAGUAR_VERSION = dd44259f8dca0ba87068eb2264367c01e131c263
+# Version: Commits on Apr 23, 2026
+LIBRETRO_VIRTUALJAGUAR_VERSION = 6ed88a067257bb686cee3741524a51a2281029d3
 LIBRETRO_VIRTUALJAGUAR_SITE = $(call github,libretro,virtualjaguar-libretro,$(LIBRETRO_VIRTUALJAGUAR_VERSION))
 LIBRETRO_VIRTUALJAGUAR_LICENSE = GPLv3
 LIBRETRO_VIRTUALJAGUAR_DEPENDENCIES += retroarch

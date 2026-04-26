@@ -2604,15 +2604,15 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO CROP"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "AUTO FRAMESKIP"
 msgstr "SALT DE QUADRES AUTOMÀTIC"
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "AUTO HEIGHT"
-msgstr "ALTURA AUTOMÀTICA"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -2874,11 +2874,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "Desprès de l’NMI"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Aim"
-msgstr ""
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -3508,7 +3503,7 @@ msgctxt "keys_files"
 msgid "Automap"
 msgstr ""
 
-#. TRANSLATION: amiberry, libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3, ...
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "Automàtic"
@@ -3700,7 +3695,7 @@ msgctxt "game_options"
 msgid "BILINEAR FILTER"
 msgstr ""
 
-#. TRANSLATION: model2emu, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "FILTRATGE BILINEAL"
@@ -4840,6 +4835,11 @@ msgctxt "game_options"
 msgid "CRT SWITCHRES"
 msgstr "CRT SWITCHRES"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "CRT Shader."
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
@@ -5744,6 +5744,11 @@ msgctxt "game_options"
 msgid "Colour Genie Floppies (ROM required)"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Commodore 1084 monitor"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Compatible"
@@ -5930,11 +5935,6 @@ msgstr ""
 #. TRANSLATION: mohaa.keys, omf2097.keys
 msgctxt "keys_files"
 msgid "Crouch"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Crouch Toggle"
 msgstr ""
 
 #. TRANSLATION: eden
@@ -6982,11 +6982,6 @@ msgctxt "game_options"
 msgid "ENABLE DEBUG"
 msgstr "HABILITAR DEPURACIÓ"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
-msgstr "HABILITAR ANTIALIÀSING DE PANTALLA COMPLETA"
-
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
@@ -7001,16 +6996,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MESH TRANSPARENCY"
-msgstr "HABILITAR TRANSPARÈNCIA DE MALLA"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MIP-MAP"
-msgstr "HABILITAR MIP-MAPPING"
 
 #. TRANSLATION: cemu, mame, wine
 msgctxt "game_options"
@@ -7047,32 +7032,17 @@ msgctxt "game_options"
 msgid "ENABLE POLYGON SPLITTING"
 msgstr "HABILITAR DIVISIÓ DE POLÍGONS"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE RAW INPUT"
-msgstr "HABILITAR ENTRADA SENSE PROCESSAR"
-
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SCANLINES"
-msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SOFTWARE RENDERER"
-msgstr "HABILITAR EL RENDERITZADOR PER PROGRAMARI"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "ACTIVAR ESTRETIR EL TEMPS"
 
-#. TRANSLATION: bstone, model2emu, play
+#. TRANSLATION: bstone, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr ""
@@ -7334,11 +7304,6 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable X-Input mode for Xbox type controllers."
-msgstr ""
-
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -7398,11 +7363,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable full-screen antialiasing in Direct3D."
-msgstr "Habilitar antialiàsing de pantalla completa a Direct3D."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7510,11 +7470,6 @@ msgstr ""
 #. TRANSLATION: libretro/ep128emu
 msgctxt "game_options"
 msgid "Enable resolution changes (requires restart)."
-msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
 msgstr ""
 
 #. TRANSLATION: mupen64plus
@@ -7674,7 +7629,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
 msgstr ""
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr ""
@@ -7694,11 +7649,6 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Habilitat (Per defecte)"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enabled meshed polygons for translucency."
-msgstr "Habilitats polígons mallats per translucència."
-
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
@@ -7709,37 +7659,15 @@ msgctxt "game_options"
 msgid "Enables Action Replay cheats."
 msgstr "Activa els trucs Action Replay."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "Habilita generació automàtica de mip-map a Direct3D."
-
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Enables Dolby Pro Logic II for surround sound. May impact performance."
 msgstr ""
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
-"stretch artifacts."
-msgstr ""
-"Habilita el filtratge bilineal als mapes de mosaic. Es veu bé, però pot "
-"causar alguns defectes d’estirament."
-
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables mipmap usage and trilinear filtering. Doesn't work with some games."
-msgstr ""
-"Habilita ús de mip-mapping i filtratge tri-linear. No funciona en alguns "
-"jocs."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -8040,7 +7968,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Sortir de l'emulador"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Sortir de l'emulador"
@@ -8080,11 +8008,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Extreme"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FAKE GOURAUD"
-msgstr "FAKE GOURAUD"
 
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
@@ -8130,11 +8053,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "FIGHT MUSIC"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FILTER TILEMAPS"
-msgstr "FILTRATGE DE TILEMAPS"
 
 #. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
@@ -8211,10 +8129,10 @@ msgctxt "game_options"
 msgid "FORCE LARGE ADDRESS"
 msgstr "FORÇAR ADRECES GRAN"
 
-#. TRANSLATION: model2emu
+#. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "FORCE MANAGED"
-msgstr "FORÇAR TEXTURES GESTIONADES"
+msgid "FORCE NTSC"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8446,7 +8364,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr ""
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr ""
@@ -8660,6 +8578,11 @@ msgctxt "game_options"
 msgid "Force Default DNS"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Force NTSC instead PAL."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -8705,12 +8628,6 @@ msgid ""
 msgstr ""
 "Força el joc a renderitzar en aquesta relació d’aspecte. No tots els "
 "sistemes suporten totes les relacions."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Forces the DX driver to use Managed textures instead of Dynamic."
-msgstr ""
-"Força el controlador DX a usar textures administrades enlloc de dinàmiques."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10169,6 +10086,11 @@ msgstr ""
 "Instal·la targeta lectora d’imatges per a llegir arxius d’imatge idks (només "
 "Mac IIx)"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Integer"
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Integer Scale"
@@ -10458,7 +10380,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr ""
 
-#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr ""
@@ -10471,6 +10393,11 @@ msgstr ""
 #. TRANSLATION: libretro/mednafen_psx
 msgctxt "game_options"
 msgid "Justifier"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEEP ASPECT RATIO"
 msgstr ""
 
 #. TRANSLATION: amiberry
@@ -10517,6 +10444,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Mantenir relació d’aspecte (Per defecte)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Keep original aspect ratio when stretching."
+msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -10577,11 +10509,6 @@ msgstr "Teclat 3 botons"
 msgctxt "game_options"
 msgid "Keypad to joyport mappings for 2 players."
 msgstr "Teclat a entrada de palanca per 2 jugadors."
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Kick"
-msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -10962,6 +10889,11 @@ msgctxt "game_options"
 msgid "Lightrec Interpreter"
 msgstr "Intèrpret Lightrec"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Lightweight CRT effect"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Lime"
@@ -11025,7 +10957,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr ""
 
-#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr ""
@@ -11483,7 +11415,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Estableix manualment els cicles per segon. Usar amb cautela."
 
-#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr ""
@@ -11699,16 +11631,6 @@ msgstr "Pistola de llum Menacer"
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Menú"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Down"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Up"
-msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
@@ -11942,12 +11864,12 @@ msgctxt "game_options"
 msgid "Mouse sensitivity for paddles. Core default (10)."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr ""
@@ -12372,7 +12294,7 @@ msgctxt "keys_files"
 msgid "Next Inventory Item"
 msgstr ""
 
-#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr ""
@@ -12457,10 +12379,15 @@ msgctxt "game_options"
 msgid "None"
 msgstr "Cap"
 
-#. TRANSLATION: cgenius, libretro/ep128emu, libretro/mame, mame, pcsx2, ...
+#. TRANSLATION: amiberry, cgenius, libretro/ep128emu, libretro/mame, mame, ...
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Cap (Per defecte)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "None (default)"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -12569,6 +12496,11 @@ msgctxt "game_options"
 msgid "OFF"
 msgstr "APAGAT"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr "Apagat (Per defecte)"
+
 #. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
@@ -12578,6 +12510,11 @@ msgstr "BOTÓ DE RECÀRREGA FORA DE PANTALLA"
 msgctxt "game_options"
 msgid "ON"
 msgstr "ENGEGAT"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "ON (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -12844,13 +12781,6 @@ msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr ""
 "Només alguns jocs implementen vibració. No compatible amb tots els "
 "comandaments."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Only some games support rumble. Requires X-Input mode and may not be "
-"compatible with all controllers."
-msgstr ""
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -13133,6 +13063,11 @@ msgstr "PBA"
 msgctxt "game_options"
 msgid "PC MODEL"
 msgstr "MODEL DE PC"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "PC monitor effect with lighter scanlines"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -13901,8 +13836,8 @@ msgstr "No és possible la pre-càrrega des de ES."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Presets which can improve performance without manually editing the VPinballX."
-"ini file to fine tune performance."
+"Presets which can improve performance without manually editing the "
+"VPinballX.ini file to fine tune performance."
 msgstr ""
 
 #. TRANSLATION: catacomb.keys
@@ -14349,7 +14284,7 @@ msgctxt "game_options"
 msgid "RTV (Default)"
 msgstr ""
 
-#. TRANSLATION: cemu, dolphin, libretro/tyrquake, model2emu, openbor/openbor7530, ...
+#. TRANSLATION: cemu, dolphin, libretro/tyrquake, openbor/openbor7530, rpcs3, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "VIBRACIÓ"
@@ -14383,14 +14318,6 @@ msgstr "Valors aleatoris"
 msgctxt "game_options"
 msgid "Raw"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-msgstr ""
-"Llegir ratolí mitjançant Rawinput, permetent 2 ratolins per a jocs de "
-"disparar de 2 jugadors."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -14744,7 +14671,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr ""
 
-#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys, ...
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr ""
@@ -15001,6 +14928,11 @@ msgstr "SENSIBILITAT DEL SENSOR (INCLINACIÓ)"
 #. TRANSLATION: demul
 msgctxt "game_options"
 msgid "SET GAELCO SCALING AMOUNT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SHADER"
 msgstr ""
 
 #. TRANSLATION: azahar
@@ -15517,11 +15449,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Scorpion 256K"
 msgstr "Scorpion 256K"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Screen Resolution (Default)"
-msgstr ""
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -16417,11 +16344,6 @@ msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Suavitzar textures a objectes 3D distants basant-se en l’angle."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Smooth textures."
-msgstr "Suavitzar textures."
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "Smooths out textures on 3D objects."
@@ -16786,12 +16708,12 @@ msgstr ""
 "Emmagatzema estats passats al rebobinar en temps real, si el nucli ho "
 "suporta."
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr ""
@@ -17249,7 +17171,7 @@ msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
 msgstr ""
 
-#. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "FILTRATGE TRILINEAL"
@@ -17312,6 +17234,11 @@ msgstr ""
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "TV"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "TV CRT effect with heaver scanlines and curvature"
 msgstr ""
 
 #. TRANSLATION: libretro/stella
@@ -17437,11 +17364,6 @@ msgstr "Imatges de disc Tandy Radio Shack Color Computer"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Taunt"
 msgstr ""
 
 #. TRANSLATION: shadps4
@@ -17742,15 +17664,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
 msgstr "Tracta la palanca analògica dreta com un segon comandament."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
-"information (flat)."
-msgstr ""
-"Intenta obtenir el color per-vèrtex (gouraud) a partir de la informació per "
-"polígon (pla) de Model2."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -18328,11 +18241,6 @@ msgctxt "keys_files"
 msgid "Use"
 msgstr ""
 
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Use / Open"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -18429,14 +18337,6 @@ msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr ""
 "Utilitza la configuració del comandament definits manualment a custom.ini."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Use if you're having graphical issues or GPU problems with this emulator."
-msgstr ""
-"Useu si s’experimenten defectes gràfics o problemes de GPU amb aquest "
-"emulador."
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -19215,11 +19115,6 @@ msgctxt "game_options"
 msgid "X"
 msgstr ""
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "X-INPUT"
-msgstr ""
-
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "X2"
@@ -19655,12 +19550,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "intercanvi ràpid"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "càrrega ràpida"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "desat ràpid"
@@ -19700,7 +19595,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr ""
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "captura"
@@ -19931,6 +19826,10 @@ msgstr "groc/blau"
 #~ msgctxt "game_options"
 #~ msgid "AUTO E-READER"
 #~ msgstr "E-READER AUTOMÀTIC"
+
+#~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "ALTURA AUTOMÀTICA"
 
 #~ msgctxt "game_options"
 #~ msgid "AUTOMATIC GAMEFIXES"
@@ -20260,8 +20159,28 @@ msgstr "groc/blau"
 #~ msgstr "HABILITA LA VISTA DUAL"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
+#~ msgstr "HABILITAR ANTIALIÀSING DE PANTALLA COMPLETA"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MESH TRANSPARENCY"
+#~ msgstr "HABILITAR TRANSPARÈNCIA DE MALLA"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIP-MAP"
+#~ msgstr "HABILITAR MIP-MAPPING"
+
+#~ msgctxt "game_options"
 #~ msgid "ENABLE OSD"
 #~ msgstr "HABILITAR SUPERPOSICIONS D’IMATGE (OSD)"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE RAW INPUT"
+#~ msgstr "HABILITAR ENTRADA SENSE PROCESSAR"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SOFTWARE RENDERER"
+#~ msgstr "HABILITAR EL RENDERITZADOR PER PROGRAMARI"
 
 #~ msgctxt "game_options"
 #~ msgid "ENHANCED RENDERING RESOLUTION (32-BIT ONLY)"
@@ -20300,6 +20219,10 @@ msgstr "groc/blau"
 #~ msgstr "Habilitar trucs per MelonDS."
 
 #~ msgctxt "game_options"
+#~ msgid "Enable full-screen antialiasing in Direct3D."
+#~ msgstr "Habilitar antialiàsing de pantalla completa a Direct3D."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable gamepad view for games that have interaction across two screens. "
 #~ "Use L1+R1 to switch screens."
@@ -20328,8 +20251,32 @@ msgstr "groc/blau"
 #~ msgstr "Habilitar les preguntes d'interfície d'usuari (Per defecte)"
 
 #~ msgctxt "game_options"
+#~ msgid "Enabled meshed polygons for translucency."
+#~ msgstr "Habilitats polígons mallats per translucència."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "Habilita generació automàtica de mip-map a Direct3D."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr ""
+#~ "Habilita el filtratge bilineal als mapes de mosaic. Es veu bé, però pot "
+#~ "causar alguns defectes d’estirament."
+
+#~ msgctxt "game_options"
 #~ msgid "Enables improved polygon splitting."
 #~ msgstr "Habilita divisió de polígons millorada."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables mipmap usage and trilinear filtering. Doesn't work with some "
+#~ "games."
+#~ msgstr ""
+#~ "Habilita ús de mip-mapping i filtratge tri-linear. No funciona en alguns "
+#~ "jocs."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20363,9 +20310,21 @@ msgstr "groc/blau"
 #~ msgstr "Sortir de l'emulador usant SDL"
 
 #~ msgctxt "game_options"
+#~ msgid "FAKE GOURAUD"
+#~ msgstr "FAKE GOURAUD"
+
+#~ msgctxt "game_options"
 #~ msgid "FFX videos fix (Fixes bad graphic overlays)"
 #~ msgstr ""
 #~ "Correcció de vídeos FFX (Corregeix superposicions gràfiques defectuoses)"
+
+#~ msgctxt "game_options"
+#~ msgid "FILTER TILEMAPS"
+#~ msgstr "FILTRATGE DE TILEMAPS"
+
+#~ msgctxt "game_options"
+#~ msgid "FORCE MANAGED"
+#~ msgstr "FORÇAR TEXTURES GESTIONADES"
 
 #~ msgctxt "game_options"
 #~ msgid "FORCE WINDOWS CE"
@@ -20430,6 +20389,12 @@ msgstr "groc/blau"
 #~ msgctxt "game_options"
 #~ msgid "Forces Dreamcast Windows CE mode on."
 #~ msgstr "Força el mode Windows CE de Dreamcast."
+
+#~ msgctxt "game_options"
+#~ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
+#~ msgstr ""
+#~ "Força el controlador DX a usar textures administrades enlloc de "
+#~ "dinàmiques."
 
 #~ msgctxt "game_options"
 #~ msgid "GBA (Internal)"
@@ -20613,10 +20578,6 @@ msgstr "groc/blau"
 #~ msgstr "No tots els jocs suporten tots els idiomes."
 
 #~ msgctxt "game_options"
-#~ msgid "OFF (Default)"
-#~ msgstr "Apagat (Per defecte)"
-
-#~ msgctxt "game_options"
 #~ msgid "OFF SCREEN RELOAD"
 #~ msgstr "APAGAR RECÀRREGA DE PANTALLA"
 
@@ -20707,6 +20668,13 @@ msgstr "groc/blau"
 #~ msgctxt "game_options"
 #~ msgid "RU"
 #~ msgstr "RU"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Llegir ratolí mitjançant Rawinput, permetent 2 ratolins per a jocs de "
+#~ "disparar de 2 jugadors."
 
 #~ msgctxt "game_options"
 #~ msgid "Recompiler (Fastest)"
@@ -20895,6 +20863,10 @@ msgstr "groc/blau"
 #~ msgstr "Suavitzar píxels."
 
 #~ msgctxt "game_options"
+#~ msgid "Smooth textures."
+#~ msgstr "Suavitzar textures."
+
+#~ msgctxt "game_options"
 #~ msgid "Speed up. Causes visual glitches on first load."
 #~ msgstr "Accelera. Causa defectes visuals a la primera càrrega."
 
@@ -21002,6 +20974,14 @@ msgstr "groc/blau"
 #~ msgstr "Pantalla tàctil"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
+#~ "information (flat)."
+#~ msgstr ""
+#~ "Intenta obtenir el color per-vèrtex (gouraud) a partir de la informació "
+#~ "per polígon (pla) de Model2."
+
+#~ msgctxt "game_options"
 #~ msgid "Triple Core"
 #~ msgstr "Triple Core"
 
@@ -21027,6 +21007,13 @@ msgstr "groc/blau"
 #~ msgctxt "game_options"
 #~ msgid "Use Physical Cores Only"
 #~ msgstr "Emprar només nuclis físics"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use if you're having graphical issues or GPU problems with this emulator."
+#~ msgstr ""
+#~ "Useu si s’experimenten defectes gràfics o problemes de GPU amb aquest "
+#~ "emulador."
 
 #~ msgctxt "game_options"
 #~ msgid "Use language and username from the NDS Firmware"

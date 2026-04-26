@@ -3,8 +3,8 @@
 # libretro-gong
 #
 ################################################################################
-# Version: Commits on Jun 28, 2024
-LIBRETRO_GONG_VERSION = 11d98233f9bba2dec60cae555b196684fd9d2aa5
+# Version: Commits on Apr 20, 2026
+LIBRETRO_GONG_VERSION = 490528f8c35b5f8b03281fc69289c84b8b57c846
 LIBRETRO_GONG_SITE = $(call github,libretro,gong,$(LIBRETRO_GONG_VERSION))
 LIBRETRO_GONG_LICENSE = GPLv3
 LIBRETRO_GONG_EMULATOR_INFO = gong.libretro.core.yml

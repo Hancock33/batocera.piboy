@@ -2600,15 +2600,15 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "ȚINTIRE AUTOMATĂ"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO CROP"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "AUTO FRAMESKIP"
 msgstr "OMITERE CADRE AUTOMATĂ"
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "AUTO HEIGHT"
-msgstr "ÎNĂLȚIME AUTOMATĂ"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -2879,11 +2879,6 @@ msgstr "Africană"
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "După NMI"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Aim"
-msgstr ""
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -3525,7 +3520,7 @@ msgctxt "keys_files"
 msgid "Automap"
 msgstr "Asociere automată"
 
-#. TRANSLATION: amiberry, libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3, ...
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "Automat"
@@ -3718,7 +3713,7 @@ msgctxt "game_options"
 msgid "BILINEAR FILTER"
 msgstr "FILTRU BILINEAR"
 
-#. TRANSLATION: model2emu, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "FILTRARE BILINEARĂ"
@@ -4864,6 +4859,11 @@ msgctxt "game_options"
 msgid "CRT SWITCHRES"
 msgstr "SWITCHRES CRT"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "CRT Shader."
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
@@ -5782,6 +5782,11 @@ msgctxt "game_options"
 msgid "Colour Genie Floppies (ROM required)"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Commodore 1084 monitor"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Compatible"
@@ -5974,11 +5979,6 @@ msgstr "Reticule în jocurile suportate e.g. ActionMax, Maddog II."
 msgctxt "keys_files"
 msgid "Crouch"
 msgstr "Ghemuire"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Crouch Toggle"
-msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -7041,11 +7041,6 @@ msgctxt "game_options"
 msgid "ENABLE DEBUG"
 msgstr "ACTIVEAZĂ DEPANARE"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
-msgstr "ACTIVEAZĂ ANTI-ALIASING PE ECRAN ÎNTREG"
-
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
@@ -7060,16 +7055,6 @@ msgstr "ACTIVEAZĂ GRAVIS ULTRASOUND"
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
 msgstr "ACTIVEAZĂ HIDRAW"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MESH TRANSPARENCY"
-msgstr "ACTIVEAZĂ TRANSPARENȚA PLASELOR"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MIP-MAP"
-msgstr "ACTIVEAZĂ MIP-MAP"
 
 #. TRANSLATION: cemu, mame, wine
 msgctxt "game_options"
@@ -7106,32 +7091,17 @@ msgctxt "game_options"
 msgid "ENABLE POLYGON SPLITTING"
 msgstr "ACTIVEAZĂ SEPARAREA POLIGOANELOR"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE RAW INPUT"
-msgstr "ACTIVEAZĂ RAW INPUT"
-
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
 msgstr "ACTIVEAZĂ MOD SANDBOX"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SCANLINES"
-msgstr "ACTIVEAZĂ LINII SCANARE"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SOFTWARE RENDERER"
-msgstr "ACTIVEAZĂ RENDERER SOFTWARE"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "ACTIVEAZĂ ÎNTINDEREA TIMPULUI"
 
-#. TRANSLATION: bstone, model2emu, play
+#. TRANSLATION: bstone, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "ACTIVEAZĂ ECRAN LAT"
@@ -7397,11 +7367,6 @@ msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable X-Input mode for Xbox type controllers."
-msgstr "Activează modul X-Input pentru controlerele de tip Xbox."
-
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "Enable accurate shader multiplication"
@@ -7468,11 +7433,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr "Activează joc liber pentru jocurile suportate."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable full-screen antialiasing in Direct3D."
-msgstr "Activează antialiasing pe ecran întreg în Direct3D."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7588,11 +7548,6 @@ msgstr "Activează redarea quad adecvată (pentru sistemele mai performante)."
 msgctxt "game_options"
 msgid "Enable resolution changes (requires restart)."
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
-msgstr "Activează liniile de scanare pentru ROM-uri care le suportă."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -7760,7 +7715,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
 msgstr "Activează suport pentru ecran lat pentru redarea jocului."
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Activează suportul pentru ecran lat."
@@ -7780,11 +7735,6 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Activează (Implicit)"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enabled meshed polygons for translucency."
-msgstr "Activează poligoanele tip plasă pentru translucență."
-
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
@@ -7796,11 +7746,6 @@ msgctxt "game_options"
 msgid "Enables Action Replay cheats."
 msgstr "Activează cheat-uri Action Replay."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "Activează generarea Automip-map Direct3D."
-
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Enables Dolby Pro Logic II for surround sound. May impact performance."
@@ -7808,27 +7753,10 @@ msgstr ""
 "Activează Dolby Pro Logic II pentru sunet surround. Poate avea un impact "
 "asupra performanței."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
-"stretch artifacts."
-msgstr ""
-"Activează filtrarea bilineară pe tilemap-uri. Arată bine, dar poate să "
-"cauzeze artefacte de întindere."
-
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
 msgstr "Permite ca fișierele de cheat-uri să fie citite din dosarul „cheats”."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables mipmap usage and trilinear filtering. Doesn't work with some games."
-msgstr ""
-"Activează folosirea mipmap-ului și filtrarea trilineară. Nu funcționează cu "
-"unele jocuri."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -8135,7 +8063,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Ieși din emulator"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Ieși din emulator"
@@ -8182,11 +8110,6 @@ msgctxt "game_options"
 msgid "Extreme"
 msgstr "Extrem"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FAKE GOURAUD"
-msgstr "GOURAUD FALS"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "FALSE"
@@ -8231,11 +8154,6 @@ msgstr "FIFO Relaxat"
 msgctxt "game_options"
 msgid "FIGHT MUSIC"
 msgstr "MUZICĂ DE ZBOR"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FILTER TILEMAPS"
-msgstr "FILTREAZĂ TILEMAP-URI"
 
 #. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
@@ -8312,10 +8230,10 @@ msgctxt "game_options"
 msgid "FORCE LARGE ADDRESS"
 msgstr "FORȚEAZĂ ADRESE MARI"
 
-#. TRANSLATION: model2emu
+#. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "FORCE MANAGED"
-msgstr "FORȚEAZĂ MANAGERIATE"
+msgid "FORCE NTSC"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8557,7 +8475,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Finlandeză (fi)"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Împușcă"
@@ -8776,6 +8694,11 @@ msgctxt "game_options"
 msgid "Force Default DNS"
 msgstr "Forțează DNS-ul implicit"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Force NTSC instead PAL."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -8823,12 +8746,6 @@ msgid ""
 msgstr ""
 "Forțează jocul să fie redat în acest raport de aspect. Nu toate sistemele "
 "suportă toate rapoartele."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Forces the DX driver to use Managed textures instead of Dynamic."
-msgstr ""
-"Forțează driver-ul DX să folosească texturi manageriate în loc de dinamice."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -10316,6 +10233,11 @@ msgstr ""
 "Instalează cardul cititor de imagini pentru a putea citi fișiere imagine "
 "idks (doar pentru Mac IIx)."
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Integer"
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Integer Scale"
@@ -10609,7 +10531,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Iulie"
 
-#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "Săritură"
@@ -10623,6 +10545,11 @@ msgstr "Iunie"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Justificator"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEEP ASPECT RATIO"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -10668,6 +10595,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Păstrează raportul de aspect (Implicit)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Keep original aspect ratio when stretching."
+msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -10729,11 +10661,6 @@ msgstr "Keypad 3 butoane"
 msgctxt "game_options"
 msgid "Keypad to joyport mappings for 2 players."
 msgstr "Asocieri Keypad la Joyport pentru 2 jucători."
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Kick"
-msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -11116,6 +11043,11 @@ msgctxt "game_options"
 msgid "Lightrec Interpreter"
 msgstr "Interpretor Lightrec"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Lightweight CRT effect"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Lime"
@@ -11181,7 +11113,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Marginea lungă vizibilă a ecranului (cm)"
 
-#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr "Privește"
@@ -11642,7 +11574,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Setează manual cicli pe secundă. Folosește cu atenție."
 
-#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr "Hartă"
@@ -11867,16 +11799,6 @@ msgstr "Pistol luminos Menacer"
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Meniu"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Down"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Up"
-msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
@@ -12112,12 +12034,12 @@ msgctxt "game_options"
 msgid "Mouse sensitivity for paddles. Core default (10)."
 msgstr ""
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "Mișcă înapoi"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "Mișcă înainte"
@@ -12549,7 +12471,7 @@ msgctxt "keys_files"
 msgid "Next Inventory Item"
 msgstr "Următorul element din inventar"
 
-#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr "Următoarea armă"
@@ -12634,10 +12556,15 @@ msgctxt "game_options"
 msgid "None"
 msgstr "Fără"
 
-#. TRANSLATION: cgenius, libretro/ep128emu, libretro/mame, mame, pcsx2, ...
+#. TRANSLATION: amiberry, cgenius, libretro/ep128emu, libretro/mame, mame, ...
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Niciunul (Implicit)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "None (default)"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -12744,6 +12671,11 @@ msgctxt "game_options"
 msgid "OFF"
 msgstr "OPRIT"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr "NU (Implicit)"
+
 #. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
@@ -12753,6 +12685,11 @@ msgstr "BUTON DE REÎNCĂRCARE ÎN AFARA ECRANULUI"
 msgctxt "game_options"
 msgid "ON"
 msgstr "DA"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "ON (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -13027,15 +12964,6 @@ msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr ""
 "Doar anumite jocuri suportă vibrații. Nu este compatibil cu toate "
 "controlerele."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Only some games support rumble. Requires X-Input mode and may not be "
-"compatible with all controllers."
-msgstr ""
-"Doar unele jocuri suportă vibrații. Necesită modul X-Input și poate să nu "
-"fie compatibil cu toate controlerele."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -13318,6 +13246,11 @@ msgstr "PBA"
 msgctxt "game_options"
 msgid "PC MODEL"
 msgstr "MODEL PC"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "PC monitor effect with lighter scanlines"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -14093,8 +14026,8 @@ msgstr "Preîncărcarea este imposibilă din ES."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Presets which can improve performance without manually editing the VPinballX."
-"ini file to fine tune performance."
+"Presets which can improve performance without manually editing the "
+"VPinballX.ini file to fine tune performance."
 msgstr ""
 "Grup de setări care îmbunătățesc performanța fără să editezi manual fișierul "
 "VPinballX.ini pentru a ajusta fin performanța."
@@ -14546,7 +14479,7 @@ msgctxt "game_options"
 msgid "RTV (Default)"
 msgstr "RTV (Implicit)"
 
-#. TRANSLATION: cemu, dolphin, libretro/tyrquake, model2emu, openbor/openbor7530, ...
+#. TRANSLATION: cemu, dolphin, libretro/tyrquake, openbor/openbor7530, rpcs3, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "VIBRAȚII"
@@ -14580,14 +14513,6 @@ msgstr "Valori aleatoare"
 msgctxt "game_options"
 msgid "Raw"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-msgstr ""
-"Citește mausul prin Rawinput, permițând 2 mausuri pentru jocurile cu "
-"împușcături cu 2 jucători."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -14948,7 +14873,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Pak vibrații (Automat)"
 
-#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys, ...
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Aleargă"
@@ -15209,6 +15134,11 @@ msgstr "SENSIBILITATE SENZOR (ÎNCLINARE)"
 #. TRANSLATION: demul
 msgctxt "game_options"
 msgid "SET GAELCO SCALING AMOUNT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SHADER"
 msgstr ""
 
 #. TRANSLATION: azahar
@@ -15725,11 +15655,6 @@ msgstr "Filtru de interpolare linii de scanare (SAI)"
 msgctxt "game_options"
 msgid "Scorpion 256K"
 msgstr "Scorpion 256K"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Screen Resolution (Default)"
-msgstr "Rezoluția ecranului (Implicit)"
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -16644,11 +16569,6 @@ msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Netezește texturile de pe obiectele 3D distante bazat pe unghi."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Smooth textures."
-msgstr "Netezește texturile."
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "Smooths out textures on 3D objects."
@@ -17025,12 +16945,12 @@ msgstr ""
 "Stochează stările trecute pentru a putea reveni în timp real, dacă este "
 "suportat de nucleu."
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "Bombardează la stânga"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Bombardează la dreapta"
@@ -17494,7 +17414,7 @@ msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
 msgstr "MESH-URI TRANSPARENTE"
 
-#. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "FILTRARE TRILINEARĂ"
@@ -17558,6 +17478,11 @@ msgstr "TT ETOS 512k"
 msgctxt "game_options"
 msgid "TV"
 msgstr "TV"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "TV CRT effect with heaver scanlines and curvature"
+msgstr ""
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
@@ -17682,11 +17607,6 @@ msgstr "Imagini de disc Tandy Radio Shack Color Computer"
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Taunt"
 msgstr ""
 
 #. TRANSLATION: shadps4
@@ -18005,15 +17925,6 @@ msgstr "Traducere"
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
 msgstr "Tratează maneta analogică dreaptă ca un al doilea joystick."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
-"information (flat)."
-msgstr ""
-"Încearcă să ghicească culoarea per vertex (gouraud) din informația per "
-"poligoane Model2 (plat)."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -18596,11 +18507,6 @@ msgctxt "keys_files"
 msgid "Use"
 msgstr "Folosește"
 
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Use / Open"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -18714,13 +18620,6 @@ msgstr "Folosește o rezoluție alternativă. Unele jocuri au nevoie de asta."
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr "Folosește setările controlerelor definite manual în custom.ini."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Use if you're having graphical issues or GPU problems with this emulator."
-msgstr ""
-"Folosește dacă ai probleme grafice sau legate de GPU cu acest emulator."
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -19525,11 +19424,6 @@ msgctxt "game_options"
 msgid "X"
 msgstr "X"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "X-INPUT"
-msgstr "X-INPUT"
-
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "X2"
@@ -19965,12 +19859,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "comutare rapidă"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "încărcare rapidă"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "salvare rapidă"
@@ -20010,7 +19904,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "linii scanare"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "captură de ecran"
@@ -20265,6 +20159,10 @@ msgstr "galben/albastru"
 #~ msgstr "ȚINTIRE AUTOMATĂ"
 
 #~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "ÎNĂLȚIME AUTOMATĂ"
+
+#~ msgctxt "game_options"
 #~ msgid "AUTO SWITCH WEAPON"
 #~ msgstr "COMUTĂ ARMA AUTOMAT"
 
@@ -20464,6 +20362,34 @@ msgstr "galben/albastru"
 #~ msgstr "Afișează ecranul controlerului"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
+#~ msgstr "ACTIVEAZĂ ANTI-ALIASING PE ECRAN ÎNTREG"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MESH TRANSPARENCY"
+#~ msgstr "ACTIVEAZĂ TRANSPARENȚA PLASELOR"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIP-MAP"
+#~ msgstr "ACTIVEAZĂ MIP-MAP"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE RAW INPUT"
+#~ msgstr "ACTIVEAZĂ RAW INPUT"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SCANLINES"
+#~ msgstr "ACTIVEAZĂ LINII SCANARE"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SOFTWARE RENDERER"
+#~ msgstr "ACTIVEAZĂ RENDERER SOFTWARE"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable X-Input mode for Xbox type controllers."
+#~ msgstr "Activează modul X-Input pentru controlerele de tip Xbox."
+
+#~ msgctxt "game_options"
 #~ msgid "Enable aiming crosshair."
 #~ msgstr "Activează reticul țintire."
 
@@ -20474,6 +20400,10 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "Enable full subtitles on cutscenes."
 #~ msgstr "Activează subtitrări complete în scene."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable full-screen antialiasing in Direct3D."
+#~ msgstr "Activează antialiasing pe ecran întreg în Direct3D."
 
 #~ msgctxt "game_options"
 #~ msgid "Enable high dots per inch."
@@ -20492,6 +20422,10 @@ msgstr "galben/albastru"
 #~ msgstr "Activează rotația pe harta din interfață."
 
 #~ msgctxt "game_options"
+#~ msgid "Enable scanlines for roms that support it."
+#~ msgstr "Activează liniile de scanare pentru ROM-uri care le suportă."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable the IP address for OutRun 2 network play against another PC on the "
 #~ "same network."
@@ -20508,9 +20442,33 @@ msgstr "galben/albastru"
 #~ msgstr "Activează întrebările în UI (Implicit)"
 
 #~ msgctxt "game_options"
+#~ msgid "Enabled meshed polygons for translucency."
+#~ msgstr "Activează poligoanele tip plasă pentru translucență."
+
+#~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
 #~ msgstr ""
 #~ "Activează sau dezactivează cursorul mausului. Util pentru meniurile CG."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "Activează generarea Automip-map Direct3D."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr ""
+#~ "Activează filtrarea bilineară pe tilemap-uri. Arată bine, dar poate să "
+#~ "cauzeze artefacte de întindere."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables mipmap usage and trilinear filtering. Doesn't work with some "
+#~ "games."
+#~ msgstr ""
+#~ "Activează folosirea mipmap-ului și filtrarea trilineară. Nu funcționează "
+#~ "cu unele jocuri."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20563,12 +20521,24 @@ msgstr "galben/albastru"
 #~ msgstr "Ieși rulând Flatpak"
 
 #~ msgctxt "game_options"
+#~ msgid "FAKE GOURAUD"
+#~ msgstr "GOURAUD FALS"
+
+#~ msgctxt "game_options"
 #~ msgid "FIELD OF VIEW"
 #~ msgstr "CÂMP VIZUAL"
 
 #~ msgctxt "game_options"
+#~ msgid "FILTER TILEMAPS"
+#~ msgstr "FILTREAZĂ TILEMAP-URI"
+
+#~ msgctxt "game_options"
 #~ msgid "FIST CROSSHAIR"
 #~ msgstr "RETICUL PUMN"
+
+#~ msgctxt "game_options"
+#~ msgid "FORCE MANAGED"
+#~ msgstr "FORȚEAZĂ MANAGERIATE"
 
 #~ msgctxt "game_options"
 #~ msgid "FOV VERTICAL"
@@ -20673,6 +20643,12 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "Force Nearest"
 #~ msgstr "Forțează cel mai apropiat"
+
+#~ msgctxt "game_options"
+#~ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
+#~ msgstr ""
+#~ "Forțează driver-ul DX să folosească texturi manageriate în loc de "
+#~ "dinamice."
 
 #~ msgctxt "keys_files"
 #~ msgid "Forward Nudge"
@@ -20864,16 +20840,20 @@ msgstr "galben/albastru"
 #~ msgstr "Nu toate jocurile suportă toate limbile."
 
 #~ msgctxt "game_options"
-#~ msgid "OFF (Default)"
-#~ msgstr "NU (Implicit)"
-
-#~ msgctxt "game_options"
 #~ msgid "OUTPUT RESAMPLING"
 #~ msgstr "REEȘANTIONARE IEȘIRE"
 
 #~ msgctxt "game_options"
 #~ msgid "Off will help some games, others will run too fast."
 #~ msgstr "Oprit va ajuta în anumite jocuri, altele vor rula prea repede."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Only some games support rumble. Requires X-Input mode and may not be "
+#~ "compatible with all controllers."
+#~ msgstr ""
+#~ "Doar unele jocuri suportă vibrații. Necesită modul X-Input și poate să nu "
+#~ "fie compatibil cu toate controlerele."
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -20968,6 +20948,13 @@ msgstr "galben/albastru"
 #~ msgstr "REÎNCARCĂ ARMA"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Citește mausul prin Rawinput, permițând 2 mausuri pentru jocurile cu "
+#~ "împușcături cu 2 jucători."
+
+#~ msgctxt "game_options"
 #~ msgid "Reduce stutter that happens when compiling shaders."
 #~ msgstr "Redu bâlbâielile care apar în timpul compilării shaderelor."
 
@@ -21048,6 +21035,10 @@ msgstr "galben/albastru"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Salvează starea în slotul 1"
+
+#~ msgctxt "game_options"
+#~ msgid "Screen Resolution (Default)"
+#~ msgstr "Rezoluția ecranului (Implicit)"
 
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
@@ -21167,6 +21158,10 @@ msgstr "galben/albastru"
 #~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
+#~ msgid "Smooth textures."
+#~ msgstr "Netezește texturile."
+
+#~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
 #~ msgstr "Întinde la fereastră"
 
@@ -21227,6 +21222,14 @@ msgstr "galben/albastru"
 #~ msgstr "Triunghi"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
+#~ "information (flat)."
+#~ msgstr ""
+#~ "Încearcă să ghicească culoarea per vertex (gouraud) din informația per "
+#~ "poligoane Model2 (plat)."
+
+#~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "FOLOSEȘTE CONFIGURAREA GZDOOM PENTRU JOYSTICK"
 
@@ -21260,6 +21263,12 @@ msgstr "galben/albastru"
 #~ "controlerele standard."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use if you're having graphical issues or GPU problems with this emulator."
+#~ msgstr ""
+#~ "Folosește dacă ai probleme grafice sau legate de GPU cu acest emulator."
+
+#~ msgctxt "game_options"
 #~ msgid "Use language and username from the NDS Firmware"
 #~ msgstr "Folosește limba și numele de utilizator din firmware-ul NDS"
 
@@ -21286,6 +21295,10 @@ msgstr "galben/albastru"
 #~ msgstr ""
 #~ "Când omiterea cadrelor este setată pe automat sau manual, omite până la "
 #~ "atâtea cadre consecutiv."
+
+#~ msgctxt "game_options"
+#~ msgid "X-INPUT"
+#~ msgstr "X-INPUT"
 
 #~ msgctxt "keys_files"
 #~ msgid "Zoon in"

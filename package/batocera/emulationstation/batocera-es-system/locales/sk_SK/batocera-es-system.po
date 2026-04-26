@@ -2605,15 +2605,15 @@ msgctxt "game_options"
 msgid "AUTO AIM"
 msgstr "Auto zameranie"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "AUTO CROP"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "AUTO FRAMESKIP"
 msgstr "Auto preskočenie snímok"
-
-#. TRANSLATION: amiberry
-msgctxt "game_options"
-msgid "AUTO HEIGHT"
-msgstr "Automatická výška"
 
 #. TRANSLATION: flycast
 msgctxt "game_options"
@@ -2882,11 +2882,6 @@ msgstr "Afrikánčina"
 msgctxt "game_options"
 msgid "After NMI"
 msgstr "Po NMI"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Aim"
-msgstr ""
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -3522,7 +3517,7 @@ msgctxt "keys_files"
 msgid "Automap"
 msgstr "Automapa"
 
-#. TRANSLATION: amiberry, libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3, ...
+#. TRANSLATION: libretro/parallel_n64, libretro/tyrquake, melonds, rpcs3
 msgctxt "game_options"
 msgid "Automatic"
 msgstr "Automaticky"
@@ -3715,7 +3710,7 @@ msgctxt "game_options"
 msgid "BILINEAR FILTER"
 msgstr "Bilineárny filter"
 
-#. TRANSLATION: model2emu, pcsx2
+#. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "BILINEAR FILTERING"
 msgstr "Bilineárne filtrovanie"
@@ -4860,6 +4855,11 @@ msgctxt "game_options"
 msgid "CRT SWITCHRES"
 msgstr "CRT prepínače"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "CRT Shader."
+msgstr ""
+
 #. TRANSLATION: supermodel
 msgctxt "game_options"
 msgid "CRT-like colour adaption. Requires New 3D engine."
@@ -5775,6 +5775,11 @@ msgctxt "game_options"
 msgid "Colour Genie Floppies (ROM required)"
 msgstr ""
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Commodore 1084 monitor"
+msgstr ""
+
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Compatible"
@@ -5966,11 +5971,6 @@ msgstr "Zameriavače v podporovaných hrách napr. ActionMax, Maddog II."
 msgctxt "keys_files"
 msgid "Crouch"
 msgstr "Krčenie"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Crouch Toggle"
-msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -7030,11 +7030,6 @@ msgctxt "game_options"
 msgid "ENABLE DEBUG"
 msgstr "Povoliť ladenie"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
-msgstr "Povoliť celoobrazovkový anti-aliasing"
-
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
@@ -7049,16 +7044,6 @@ msgstr "Povoliť Gravis Ultrasound"
 msgctxt "game_options"
 msgid "ENABLE HIDRAW"
 msgstr "POVOLIŤ HIDRAW"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MESH TRANSPARENCY"
-msgstr "Povoliť priehľadnosť mriežok"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE MIP-MAP"
-msgstr "Povoliť mip-map"
 
 #. TRANSLATION: cemu, mame, wine
 msgctxt "game_options"
@@ -7095,32 +7080,17 @@ msgctxt "game_options"
 msgid "ENABLE POLYGON SPLITTING"
 msgstr "Povoliť rozdelenie polygónov"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE RAW INPUT"
-msgstr "Povoliť čistý vstup"
-
 #. TRANSLATION: themehospital
 msgctxt "game_options"
 msgid "ENABLE SANDBOX MODE"
 msgstr "Povoliť režim pieskoviska"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SCANLINES"
-msgstr "Povoliť scan riadky"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "ENABLE SOFTWARE RENDERER"
-msgstr "Povoliť softvérový renderer"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "ENABLE TIME STRETCHING"
 msgstr "Povoliť rozťahovanie času"
 
-#. TRANSLATION: bstone, model2emu, play
+#. TRANSLATION: bstone, play
 msgctxt "game_options"
 msgid "ENABLE WIDESCREEN"
 msgstr "Povoliť širokouhlú obrazovku"
@@ -7336,8 +7306,8 @@ msgid ""
 "Enable Gamecube boot animation and BIOS access (requires IPL.bin BIOS in "
 "appropriate user directory)."
 msgstr ""
-"Povoliť animáciu zavádzania Gamecube a prístup k systému BIOS (vyžaduje IPL."
-"bin BIOS v príslušnom používateľskom adresári)."
+"Povoliť animáciu zavádzania Gamecube a prístup k systému BIOS (vyžaduje "
+"IPL.bin BIOS v príslušnom používateľskom adresári)."
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -7381,11 +7351,6 @@ msgstr "Povoľte filtrovanie/efekty ako na TV."
 msgctxt "game_options"
 msgid "Enable VSync"
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable X-Input mode for Xbox type controllers."
-msgstr "Povoliť režim X-vstup pre ovládače typu Xbox."
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -7446,11 +7411,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable free play for supported games."
 msgstr "Povoliť voľnú hru pre podporované hry."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable full-screen antialiasing in Direct3D."
-msgstr "Povoliť full-screen antialiasing v Direct3D."
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7567,11 +7527,6 @@ msgstr "Povoliť správne vykresľovanie štvorcov (pre systémy vyššej kateg�
 msgctxt "game_options"
 msgid "Enable resolution changes (requires restart)."
 msgstr ""
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enable scanlines for roms that support it."
-msgstr "Povoliť sken riadky pre romy, ktoré to podporujú."
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -7735,7 +7690,7 @@ msgctxt "game_options"
 msgid "Enable widescreen support for game rendering."
 msgstr "Povoliť podporu širokej obrazovky pre vykresľovanie hry."
 
-#. TRANSLATION: model2emu, play, theforceengine
+#. TRANSLATION: play, theforceengine
 msgctxt "game_options"
 msgid "Enable widescreen support."
 msgstr "Povoliť podporu širokej obrazovky."
@@ -7755,11 +7710,6 @@ msgctxt "game_options"
 msgid "Enabled (Default)"
 msgstr "Povolené (predvolené)"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enabled meshed polygons for translucency."
-msgstr "Pre priehľadnosť boli povolené sieťované polygóny."
-
 #. TRANSLATION: cgenius
 msgctxt "game_options"
 msgid "Enabled or disable the mouse cursor. Useful for CG's menus."
@@ -7770,39 +7720,17 @@ msgctxt "game_options"
 msgid "Enables Action Replay cheats."
 msgstr "Povolí cheaty Action Replay."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Enables Direct3D Automip-map generation."
-msgstr "Povolí generovanie Direct3D Automip-map."
-
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Enables Dolby Pro Logic II for surround sound. May impact performance."
 msgstr ""
-"Povolí Dolby Pro Logic II pre priestorový zvuk. Môže ovplyvniť výkon."
-"Umožňuje Dolby Pro Logic II pre priestorový zvuk. Môže ovplyvniť výkon."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables bilinear filtering on tilemaps. Looks good, but can cause some "
-"stretch artifacts."
-msgstr ""
-"Umožňuje bilineárne filtrovanie na mapách dlaždíc. Vyzerá dobre, ale môže "
-"spôsobiť natiahnutie."
+"Povolí Dolby Pro Logic II pre priestorový zvuk. Môže ovplyvniť "
+"výkon.Umožňuje Dolby Pro Logic II pre priestorový zvuk. Môže ovplyvniť výkon."
 
 #. TRANSLATION: libretro/pcsx2
 msgctxt "game_options"
 msgid "Enables cheats files to be read from the `cheats` directory."
 msgstr "Povolí čítanie súborov cheatov z adresára `cheats`."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Enables mipmap usage and trilinear filtering. Doesn't work with some games."
-msgstr ""
-"Umožňuje používanie mipmap a trilineárne filtrovanie. Nefunguje pri "
-"niektorých hrách."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -8107,7 +8035,7 @@ msgctxt "keys_files"
 msgid "Exit emulator"
 msgstr "Ukončiť emulátor"
 
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys, prboom.gzdoom.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Ukončiť emulátor"
@@ -8153,11 +8081,6 @@ msgctxt "game_options"
 msgid "Extreme"
 msgstr "Extrémne"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FAKE GOURAUD"
-msgstr "Falošné Gouraudovo"
-
 #. TRANSLATION: f2bgl
 msgctxt "game_options"
 msgid "FALSE"
@@ -8202,11 +8125,6 @@ msgstr "FIFO Relaxed"
 msgctxt "game_options"
 msgid "FIGHT MUSIC"
 msgstr "Bojová hudba"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "FILTER TILEMAPS"
-msgstr "Filtrovať mapy dlaždíc"
 
 #. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
@@ -8283,10 +8201,10 @@ msgctxt "game_options"
 msgid "FORCE LARGE ADDRESS"
 msgstr "Vynútiť veľkú adresu"
 
-#. TRANSLATION: model2emu
+#. TRANSLATION: amiberry
 msgctxt "game_options"
-msgid "FORCE MANAGED"
-msgstr "Vynútiť spravované"
+msgid "FORCE NTSC"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -8528,7 +8446,7 @@ msgctxt "game_options"
 msgid "Finnish (fi)"
 msgstr "Fínčina (fi)"
 
-#. TRANSLATION: omf2097.keys, prboom.gzdoom.keys, rott.keys
+#. TRANSLATION: omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Fire"
 msgstr "Spúšť"
@@ -8745,6 +8663,11 @@ msgctxt "game_options"
 msgid "Force Default DNS"
 msgstr "Vynútiť predvolené DNS"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Force NTSC instead PAL."
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -8792,11 +8715,6 @@ msgid ""
 msgstr ""
 "Vynútiť hru renderovať v tomto pomere strán. Nie všetky systémy podporujú "
 "všetky pomery."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Forces the DX driver to use Managed textures instead of Dynamic."
-msgstr "Prinúti ovládač DX používať riadené textúry namiesto dynamických."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -9887,8 +9805,9 @@ msgstr "Vyššie"
 msgctxt "game_options"
 msgid "Higher number for higher picture quality, but requires more bandwidth."
 msgstr ""
-"Vyššie číslo pre vyššiu kvalitu obrazu, ale vyžaduje väčšiu šírku pásma."
-"Vyššie číslo pre vyššiu kvalitu obrazu, ale vyžaduje väčšiu priepustnosť."
+"Vyššie číslo pre vyššiu kvalitu obrazu, ale vyžaduje väčšiu šírku "
+"pásma.Vyššie číslo pre vyššiu kvalitu obrazu, ale vyžaduje väčšiu "
+"priepustnosť."
 
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
@@ -10275,6 +10194,11 @@ msgstr ""
 "IIx)Nainštalovať kartu čítačky obrázkov, aby ste mohli čítať obrazové súbory "
 "idks (iba Mac IIx)"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Integer"
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Integer Scale"
@@ -10568,7 +10492,7 @@ msgctxt "game_options"
 msgid "July"
 msgstr "Júl"
 
-#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Jump"
 msgstr "Skok"
@@ -10582,6 +10506,11 @@ msgstr "Jún"
 msgctxt "game_options"
 msgid "Justifier"
 msgstr "Justifier"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "KEEP ASPECT RATIO"
+msgstr ""
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -10627,6 +10556,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Keep Aspect Ration (Default)"
 msgstr "Ponechať pomer strán (predvolené)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Keep original aspect ratio when stretching."
+msgstr ""
 
 #. TRANSLATION: libretro/fuse
 msgctxt "game_options"
@@ -10687,11 +10621,6 @@ msgstr "Číslicová klávesnica 3 tlačidlá"
 msgctxt "game_options"
 msgid "Keypad to joyport mappings for 2 players."
 msgstr "Mapovania keypadu na joyport pre 2 hráčov."
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Kick"
-msgstr ""
 
 #. TRANSLATION: libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -11074,6 +11003,11 @@ msgctxt "game_options"
 msgid "Lightrec Interpreter"
 msgstr "Lightrec Interpreter"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "Lightweight CRT effect"
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Lime"
@@ -11140,7 +11074,7 @@ msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
 msgstr "Dlhá viditeľná hrana obrazovky (cm)"
 
-#. TRANSLATION: mohaa.keys, prboom.gzdoom.keys
+#. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Look"
 msgstr "Pohľad"
@@ -11602,7 +11536,7 @@ msgctxt "game_options"
 msgid "Manually set cycles per second. Use with caution."
 msgstr "Ručne nastaviť cykly za sekundu. Používajte opatrne."
 
-#. TRANSLATION: openjk.keys, openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Map"
 msgstr "Mapa"
@@ -11826,16 +11760,6 @@ msgstr "Svetelná zbraň Menacer"
 msgctxt "keys_files"
 msgid "Menu"
 msgstr "Ponuka"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Down"
-msgstr ""
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Menu Up"
-msgstr ""
 
 #. TRANSLATION: mugen.keys, rott.keys
 msgctxt "keys_files"
@@ -12067,12 +11991,12 @@ msgctxt "game_options"
 msgid "Mouse sensitivity for paddles. Core default (10)."
 msgstr "Citlivosť myši pre paddle. Predvolená hodnota jadra (10)."
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Backward"
 msgstr "Pohyb vzad"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Move Forward"
 msgstr "Pohyb vpred"
@@ -12502,7 +12426,7 @@ msgctxt "keys_files"
 msgid "Next Inventory Item"
 msgstr "Ďalšia položka inventára"
 
-#. TRANSLATION: openjkdf2.keys, prboom.gzdoom.keys
+#. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
 msgid "Next Weapon"
 msgstr "Ďalšia zbraň"
@@ -12587,10 +12511,15 @@ msgctxt "game_options"
 msgid "None"
 msgstr "Žiadne"
 
-#. TRANSLATION: cgenius, libretro/ep128emu, libretro/mame, mame, pcsx2, ...
+#. TRANSLATION: amiberry, cgenius, libretro/ep128emu, libretro/mame, mame, ...
 msgctxt "game_options"
 msgid "None (Default)"
 msgstr "Žiadne (predvolené)"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "None (default)"
+msgstr ""
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -12699,6 +12628,11 @@ msgctxt "game_options"
 msgid "OFF"
 msgstr "Vypnuté"
 
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr "Vypnuté (predvolené)"
+
 #. TRANSLATION: libretro/flycast, libretro/mame, mame
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
@@ -12708,6 +12642,11 @@ msgstr "Tlačidlo na znovunačítanie mimo obrazovky"
 msgctxt "game_options"
 msgid "ON"
 msgstr "Zapnuté"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "ON (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -12865,8 +12804,9 @@ msgstr ""
 msgctxt "game_options"
 msgid "Older games skipped drawing every second line, this masks that."
 msgstr ""
-"Staršie hry preskočili kreslenie každého druhého riadku, toto to maskuje."
-"Staršie hry preskočili vykreslenie každého druhého riadku, čo to maskovalo."
+"Staršie hry preskočili kreslenie každého druhého riadku, toto to "
+"maskuje.Staršie hry preskočili vykreslenie každého druhého riadku, čo to "
+"maskovalo."
 
 #. TRANSLATION: libretro/mame
 msgctxt "game_options"
@@ -12982,17 +12922,9 @@ msgstr "Zväčšovať veľkosť obrazu iba v celočíselných násobkoch."
 msgctxt "game_options"
 msgid "Only some games feature rumble. Not compatible with all controllers."
 msgstr ""
-"Iba niektoré hry majú vibrácie. Nie je kompatibilné so všetkými ovládačmi."
-"Iba niektoré hry podporujú rachot. Nie je kompatibilné so všetkými ovládačmi."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Only some games support rumble. Requires X-Input mode and may not be "
-"compatible with all controllers."
-msgstr ""
-"Iba niektoré hry podporujú vibrácie. Vyžaduje režim X-Input a nemusí byť "
-"kompatibilné so všetkými ovládačmi."
+"Iba niektoré hry majú vibrácie. Nie je kompatibilné so všetkými "
+"ovládačmi.Iba niektoré hry podporujú rachot. Nie je kompatibilné so všetkými "
+"ovládačmi."
 
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
@@ -13273,6 +13205,11 @@ msgstr "PBA"
 msgctxt "game_options"
 msgid "PC MODEL"
 msgstr "Model PC"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "PC monitor effect with lighter scanlines"
+msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -14047,11 +13984,11 @@ msgstr "Prednačítanie je nemožné z ES."
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Presets which can improve performance without manually editing the VPinballX."
-"ini file to fine tune performance."
+"Presets which can improve performance without manually editing the "
+"VPinballX.ini file to fine tune performance."
 msgstr ""
-"Predvoľby, ktoré môžu zlepšiť výkon bez manuálnej úpravy súboru VPinballX."
-"ini na doladenie výkonu."
+"Predvoľby, ktoré môžu zlepšiť výkon bez manuálnej úpravy súboru "
+"VPinballX.ini na doladenie výkonu."
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
@@ -14497,7 +14434,7 @@ msgctxt "game_options"
 msgid "RTV (Default)"
 msgstr "RTV (predvolené)"
 
-#. TRANSLATION: cemu, dolphin, libretro/tyrquake, model2emu, openbor/openbor7530, ...
+#. TRANSLATION: cemu, dolphin, libretro/tyrquake, openbor/openbor7530, rpcs3, ...
 msgctxt "game_options"
 msgid "RUMBLE"
 msgstr "Rachot"
@@ -14531,12 +14468,6 @@ msgstr "Náhodné hodnoty"
 msgctxt "game_options"
 msgid "Raw"
 msgstr "Surové"
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
-msgstr "Čítať myš cez Rawinput, čo umožňuje 2 myšiam na strieľanie 2 hráčov."
 
 #. TRANSLATION: libretro/dolphin
 msgctxt "game_options"
@@ -14895,7 +14826,7 @@ msgctxt "game_options"
 msgid "Rumble Pak (Automatic)"
 msgstr "Rumble Pak (automatické)"
 
-#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, prboom.gzdoom.keys, rott.keys, ...
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, rott.keys
 msgctxt "keys_files"
 msgid "Run"
 msgstr "Beh"
@@ -15156,6 +15087,11 @@ msgstr "Citlivosť senzora (sklon)"
 #. TRANSLATION: demul
 msgctxt "game_options"
 msgid "SET GAELCO SCALING AMOUNT"
+msgstr ""
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "SHADER"
 msgstr ""
 
 #. TRANSLATION: azahar
@@ -15673,11 +15609,6 @@ msgctxt "game_options"
 msgid "Scorpion 256K"
 msgstr "Scorpion 256K"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Screen Resolution (Default)"
-msgstr "Rozlíšenie obrazovky (predvolené)"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
@@ -16043,9 +15974,9 @@ msgstr "Nastavte mŕtvu zónu analógových páčok joysticku."
 msgctxt "game_options"
 msgid "Set the desired maximum refresh rate when Vsync is off."
 msgstr ""
-"Nastaviť požadovanú maximálnu obnovovaciu frekvenciu keď je Vsync vypnutý."
-"Nastaviť požadovanú maximálnu obnovovaciu frekvenciu, keď je funkcia Vsync "
-"vypnutá."
+"Nastaviť požadovanú maximálnu obnovovaciu frekvenciu keď je Vsync "
+"vypnutý.Nastaviť požadovanú maximálnu obnovovaciu frekvenciu, keď je funkcia "
+"Vsync vypnutá."
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -16588,11 +16519,6 @@ msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Hladké textúry na vzdialených 3D objektoch na základe uhla."
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "Smooth textures."
-msgstr "Plynulé textúry."
-
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "Smooths out textures on 3D objects."
@@ -16960,15 +16886,16 @@ msgstr "Stereo zvukový výstup."
 msgctxt "game_options"
 msgid "Store past states to rewind to in realtime, if the core supports it."
 msgstr ""
-"Ukladať minulé stavy pre pretáčanie v reálnom čase, ak to jadro podporuje."
-"Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro podporuje."
+"Ukladať minulé stavy pre pretáčanie v reálnom čase, ak to jadro "
+"podporuje.Uložiť minulé stavy na pretočenie v reálnom čase, ak to jadro "
+"podporuje."
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Left"
 msgstr "Úkrok vľavo"
 
-#. TRANSLATION: catacomb.keys, prboom.gzdoom.keys
+#. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Strafe Right"
 msgstr "Úkrok vpravo"
@@ -17431,7 +17358,7 @@ msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
 msgstr "PRIEHĽADNÉ SIETE"
 
-#. TRANSLATION: libretro/pcsx2, model2emu, pcsx2
+#. TRANSLATION: libretro/pcsx2, pcsx2
 msgctxt "game_options"
 msgid "TRILINEAR FILTERING"
 msgstr "Trilineárne filtrovanie"
@@ -17495,6 +17422,11 @@ msgstr "TT ETOS 512k"
 msgctxt "game_options"
 msgid "TV"
 msgstr "TV"
+
+#. TRANSLATION: amiberry
+msgctxt "game_options"
+msgid "TV CRT effect with heaver scanlines and curvature"
+msgstr ""
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
@@ -17620,11 +17552,6 @@ msgstr "Tandy Radio Shack Color Computer obrazy disku"
 msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
 msgstr "Tano Dragon (NTSC)"
-
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Taunt"
-msgstr ""
 
 #. TRANSLATION: shadps4
 msgctxt "game_options"
@@ -17937,14 +17864,6 @@ msgstr "Preložiť"
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
 msgstr "Považuje pravú analógovú páčku za druhý joystick."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
-"information (flat)."
-msgstr ""
-"Pokúsi sa uhádnuť farbu na vrchol (gouraud) z informácií o modeli2 (flat)."
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -18526,11 +18445,6 @@ msgctxt "keys_files"
 msgid "Use"
 msgstr "Použiť"
 
-#. TRANSLATION: prboom.gzdoom.keys
-msgctxt "keys_files"
-msgid "Use / Open"
-msgstr ""
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -18632,12 +18546,6 @@ msgstr "Použiť alternatívne rozlíšenie. Niektoré hry to potrebujú."
 msgctxt "game_options"
 msgid "Use controller settings manually defined in custom.ini."
 msgstr "Použiť nastavenia ovládača ručne definované v custom.ini."
-
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid ""
-"Use if you're having graphical issues or GPU problems with this emulator."
-msgstr "Použite, ak máte s týmto emulátorom problémy s grafikou alebo GPU."
 
 #. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
@@ -19432,11 +19340,6 @@ msgctxt "game_options"
 msgid "X"
 msgstr "X"
 
-#. TRANSLATION: model2emu
-msgctxt "game_options"
-msgid "X-INPUT"
-msgstr "X-vstup"
-
 #. TRANSLATION: libretro/mupen64plus-next
 msgctxt "game_options"
 msgid "X2"
@@ -19871,12 +19774,12 @@ msgctxt "game_options"
 msgid "quick switch"
 msgstr "rýchly prepínač"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quickload"
 msgstr "rýchle načítanie"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "quicksave"
 msgstr "rýchle uloženie"
@@ -19916,7 +19819,7 @@ msgctxt "game_options"
 msgid "scanlines"
 msgstr "scan riadky"
 
-#. TRANSLATION: eduke32.keys, ionfury.keys, prboom.gzdoom.keys
+#. TRANSLATION: eduke32.keys, ionfury.keys
 msgctxt "keys_files"
 msgid "screenshot"
 msgstr "snímka obrazovky"
@@ -20203,6 +20106,10 @@ msgstr "žltá/modrá"
 #~ msgstr "AUTOMATICKÉ ZAMERIAVANIE"
 
 #~ msgctxt "game_options"
+#~ msgid "AUTO HEIGHT"
+#~ msgstr "Automatická výška"
+
+#~ msgctxt "game_options"
 #~ msgid "AUTO SWITCH WEAPON"
 #~ msgstr "AUTOMATICKÉ PREPÍNANIE ZBRANE"
 
@@ -20483,12 +20390,40 @@ msgstr "žltá/modrá"
 #~ msgstr "Povoliť nitkový kríž"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
+#~ msgstr "Povoliť celoobrazovkový anti-aliasing"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MESH TRANSPARENCY"
+#~ msgstr "Povoliť priehľadnosť mriežok"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE MIP-MAP"
+#~ msgstr "Povoliť mip-map"
+
+#~ msgctxt "game_options"
 #~ msgid "ENABLE MIPMAPPING"
 #~ msgstr "Povoliť mipmapping"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE RAW INPUT"
+#~ msgstr "Povoliť čistý vstup"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SCANLINES"
+#~ msgstr "Povoliť scan riadky"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE SOFTWARE RENDERER"
+#~ msgstr "Povoliť softvérový renderer"
+
+#~ msgctxt "game_options"
 #~ msgid "ENABLE TRUE COLOUR"
 #~ msgstr "Povoliť pravé farby"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable X-Input mode for Xbox type controllers."
+#~ msgstr "Povoliť režim X-vstup pre ovládače typu Xbox."
 
 #~ msgctxt "game_options"
 #~ msgid "Enable XIM support."
@@ -20505,6 +20440,10 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Enable full subtitles on cutscenes."
 #~ msgstr "Povoliť plné titulky v prestrihoch."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable full-screen antialiasing in Direct3D."
+#~ msgstr "Povoliť full-screen antialiasing v Direct3D."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20531,6 +20470,10 @@ msgstr "žltá/modrá"
 #~ msgstr "Povoliť rotáciu na prekrývajúcej mape."
 
 #~ msgctxt "game_options"
+#~ msgid "Enable scanlines for roms that support it."
+#~ msgstr "Povoliť sken riadky pre romy, ktoré to podporujú."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Enable the IP address for OutRun 2 network play against another PC on the "
 #~ "same network."
@@ -20547,8 +20490,32 @@ msgstr "žltá/modrá"
 #~ msgstr "Povoliť UI výzvy (predvolené)"
 
 #~ msgctxt "game_options"
+#~ msgid "Enabled meshed polygons for translucency."
+#~ msgstr "Pre priehľadnosť boli povolené sieťované polygóny."
+
+#~ msgctxt "game_options"
 #~ msgid "Enabled or disbale the mouse cursor. Useful for CG's menus."
 #~ msgstr "Povoliť alebo zakázať kurzor myši. Vhodné pre ponuku CG."
+
+#~ msgctxt "game_options"
+#~ msgid "Enables Direct3D Automip-map generation."
+#~ msgstr "Povolí generovanie Direct3D Automip-map."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables bilinear filtering on tilemaps. Looks good, but can cause some "
+#~ "stretch artifacts."
+#~ msgstr ""
+#~ "Umožňuje bilineárne filtrovanie na mapách dlaždíc. Vyzerá dobre, ale môže "
+#~ "spôsobiť natiahnutie."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enables mipmap usage and trilinear filtering. Doesn't work with some "
+#~ "games."
+#~ msgstr ""
+#~ "Umožňuje používanie mipmap a trilineárne filtrovanie. Nefunguje pri "
+#~ "niektorých hrách."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20600,12 +20567,24 @@ msgstr "žltá/modrá"
 #~ msgstr "Ukončiť bežiaci Flatpak"
 
 #~ msgctxt "game_options"
+#~ msgid "FAKE GOURAUD"
+#~ msgstr "Falošné Gouraudovo"
+
+#~ msgctxt "game_options"
 #~ msgid "FIELD OF VIEW"
 #~ msgstr "ZORNÉ POLE"
 
 #~ msgctxt "game_options"
+#~ msgid "FILTER TILEMAPS"
+#~ msgstr "Filtrovať mapy dlaždíc"
+
+#~ msgctxt "game_options"
 #~ msgid "FIST CROSSHAIR"
 #~ msgstr "ZAMERIAVAČ PÄSTÍ"
+
+#~ msgctxt "game_options"
+#~ msgid "FORCE MANAGED"
+#~ msgstr "Vynútiť spravované"
 
 #~ msgctxt "game_options"
 #~ msgid "FOV VERTICAL"
@@ -20695,6 +20674,10 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Force Nvidia GPUs to always be reported as AMD GPUs."
 #~ msgstr "Vynútiť, aby sa GPU Nvidia vždy hlásili ako GPU AMD."
+
+#~ msgctxt "game_options"
+#~ msgid "Forces the DX driver to use Managed textures instead of Dynamic."
+#~ msgstr "Prinúti ovládač DX používať riadené textúry namiesto dynamických."
 
 #~ msgctxt "game_options"
 #~ msgid "GAME DIFFICULATY"
@@ -20862,10 +20845,6 @@ msgstr "žltá/modrá"
 #~ msgstr "Nie všetky hry podporujú všetky jazyky."
 
 #~ msgctxt "game_options"
-#~ msgid "OFF (Default)"
-#~ msgstr "Vypnuté (predvolené)"
-
-#~ msgctxt "game_options"
 #~ msgid "OUTPUT RESAMPLING"
 #~ msgstr "VÝSTUPNÉ PREVZORKOVANIE"
 
@@ -20880,6 +20859,14 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Off will help some games, others will run too fast."
 #~ msgstr "Vypnutie pomôže niektorým hrám, ostatné budú bežať prirýchlo."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Only some games support rumble. Requires X-Input mode and may not be "
+#~ "compatible with all controllers."
+#~ msgstr ""
+#~ "Iba niektoré hry podporujú vibrácie. Vyžaduje režim X-Input a nemusí byť "
+#~ "kompatibilné so všetkými ovládačmi."
 
 #~ msgctxt "keys_files"
 #~ msgid "Open Dolphin-triforce's menu"
@@ -20978,6 +20965,12 @@ msgstr "žltá/modrá"
 #~ msgstr "PREBIŤ ZBRAŇ"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Read mouse through Rawinput, allowing 2 mice for 2 player shooting games."
+#~ msgstr ""
+#~ "Čítať myš cez Rawinput, čo umožňuje 2 myšiam na strieľanie 2 hráčov."
+
+#~ msgctxt "game_options"
 #~ msgid "Reduce stutter that happens when compiling shaders."
 #~ msgstr "Znížiť zasekávanie, ku ktorému dochádza pri kompilácii shaderov."
 
@@ -21049,6 +21042,10 @@ msgstr "žltá/modrá"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Uložiť slot stavu 1"
+
+#~ msgctxt "game_options"
+#~ msgid "Screen Resolution (Default)"
+#~ msgstr "Rozlíšenie obrazovky (predvolené)"
 
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
@@ -21176,6 +21173,10 @@ msgstr "žltá/modrá"
 #~ msgstr "Slot -"
 
 #~ msgctxt "game_options"
+#~ msgid "Smooth textures."
+#~ msgstr "Plynulé textúry."
+
+#~ msgctxt "game_options"
 #~ msgid "Standard"
 #~ msgstr "Štandardné"
 
@@ -21268,6 +21269,13 @@ msgstr "žltá/modrá"
 #~ msgstr "Trojuholník"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Tries to guess Per-vertex colour (gouraud) from the Model2 per-poly "
+#~ "information (flat)."
+#~ msgstr ""
+#~ "Pokúsi sa uhádnuť farbu na vrchol (gouraud) z informácií o modeli2 (flat)."
+
+#~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "Použiť nastavenie joysticku GZDoom"
 
@@ -21291,6 +21299,11 @@ msgstr "žltá/modrá"
 #~ "Use alternative input mappings. Only applies to Standard Controller type."
 #~ msgstr ""
 #~ "Použiť alternatívne vstupné mapovanie. Iba pre štandardný typ ovládača."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Use if you're having graphical issues or GPU problems with this emulator."
+#~ msgstr "Použite, ak máte s týmto emulátorom problémy s grafikou alebo GPU."
 
 #~ msgctxt "game_options"
 #~ msgid "Use language and username from the NDS Firmware"
@@ -21331,6 +21344,10 @@ msgstr "žltá/modrá"
 #~ msgstr ""
 #~ "Keď je typ preskakovania snímok zapnutý automaticky alebo manuálne, "
 #~ "preskočiť až na tento počet snímok za sebou."
+
+#~ msgctxt "game_options"
+#~ msgid "X-INPUT"
+#~ msgstr "X-vstup"
 
 #~ msgctxt "keys_files"
 #~ msgid "exit game"
