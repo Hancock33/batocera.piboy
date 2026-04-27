@@ -146,15 +146,25 @@ index e691a1cf3356..c07ab413a6cc 100644
  
  static void dce60_timing_generator_enable_advanced_request(
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-index 699a756bbc40..801b17f8145d 100644
+index 699a756bbc40..2cf77bfdd9bc 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-@@ -2950,6 +2950,9 @@ static void dce110_program_front_end_for_pipe(
+@@ -2950,6 +2950,19 @@ static void dce110_program_front_end_for_pipe(
  
  	pipe_ctx->plane_res.scl_data.lb_params.alpha_en = pipe_ctx->bottom_pipe != NULL;
  
 +	// We're enabling interleave manually after setting crtc registers so this flag has no effect
 +	pipe_ctx->plane_res.scl_data.lb_params.interleave_en = pipe_ctx->stream->timing.flags.INTERLACE? 1:0;
++
++	// Set (viewport.height + 1) * 2 for interlaced on DCE80
++	if (pipe_ctx->stream->timing.flags.INTERLACE &&
++			(dc->ctx->dce_version == DCE_VERSION_8_0 ||
++			dc->ctx->dce_version == DCE_VERSION_8_1 ||
++			dc->ctx->dce_version == DCE_VERSION_8_3))
++	{
++		pipe_ctx->plane_res.scl_data.viewport.height++;
++		pipe_ctx->plane_res.scl_data.viewport.height *= 2;
++	}
 +
  	program_scaler(dc, pipe_ctx);
  

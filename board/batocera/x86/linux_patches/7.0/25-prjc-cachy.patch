@@ -514,7 +514,7 @@ index 8de7c610d80c..0c83c3a99c53 100644
  	select CGROUP_SCHED
  	select FAIR_GROUP_SCHED
 diff --git a/init/init_task.c b/init/init_task.c
-index e6f73fe2a406..41561d2e03f3 100644
+index 5c838757fc10..3c9c41183b49 100644
 --- a/init/init_task.c
 +++ b/init/init_task.c
 @@ -102,9 +102,16 @@ struct task_struct init_task __aligned(L1_CACHE_BYTES) = {
@@ -10757,7 +10757,7 @@ index f921302dc40f..2fade7dab9b0 100644
  
  #endif /* _KERNEL_SCHED_PELT_H */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index fd2760ee6479..4112626065e9 100644
+index 19eb35b291ce..177bdb847ac4 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -5,6 +5,11 @@
@@ -10772,7 +10772,7 @@ index fd2760ee6479..4112626065e9 100644
  #include <linux/sched/affinity.h>
  #include <linux/sched/autogroup.h>
  #include <linux/sched/cpufreq.h>
-@@ -4218,4 +4223,9 @@ DEFINE_CLASS_IS_UNCONDITIONAL(sched_change)
+@@ -4216,4 +4221,9 @@ DEFINE_CLASS_IS_UNCONDITIONAL(sched_change)
  
  #include "ext.h"
  

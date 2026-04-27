@@ -3,8 +3,8 @@
 # vulkan-validationlayers
 #
 ################################################################################
-# Version: Commits on Apr 20, 2026
-VULKAN_VALIDATIONLAYERS_VERSION = ed378de2244282362bc4a895e3ef7186c5ed8d83
+# Version: Commits on Apr 27, 2026
+VULKAN_VALIDATIONLAYERS_VERSION = c0bc7cd716ef477d20c29f8877205a8f3befdfad
 VULKAN_VALIDATIONLAYERS_BRANCH = vulkan-tmp-1.4.349
 VULKAN_VALIDATIONLAYERS_SITE = https://github.com/KhronosGroup/Vulkan-ValidationLayers.git
 VULKAN_VALIDATIONLAYERS_SITE_METHOD = git

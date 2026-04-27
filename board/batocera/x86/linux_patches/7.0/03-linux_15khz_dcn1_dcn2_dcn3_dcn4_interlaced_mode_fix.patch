@@ -207,6 +207,18 @@ index ead92ad78a23..f8f46ef548ad 100644
  	SF(OTG0_OTG_CONTROL, OTG_MASTER_EN, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
+diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
+index fa62737b5b1b..f04a0ab08849 100644
+--- a/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
++++ b/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
+@@ -36,6 +36,7 @@
+ 	SF(OTG0_OTG_V_SYNC_A, OTG_V_SYNC_A_END, mask_sh),\
+ 	SF(OTG0_OTG_V_SYNC_A_CNTL, OTG_V_SYNC_A_POL, mask_sh),\
+ 	SF(OTG0_OTG_V_SYNC_A_CNTL, OTG_V_SYNC_MODE, mask_sh),\
++	SF(OTG0_OTG_INTERLACE_CONTROL, OTG_INTERLACE_ENABLE, mask_sh),\
+ 	SF(OTG0_OTG_CONTROL, OTG_MASTER_EN, mask_sh),\
+ 	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
+ 	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h b/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h
 index 91be493e0bb6..e0f074defd9f 100644
 --- a/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h
@@ -231,3 +243,15 @@ index 9c56ae76e0c7..1b6cfe29c436 100644
  	SRI_ARR(OTG_CONTROL, OTG, inst),\
  	SRI_ARR(OTG_STEREO_CONTROL, OTG, inst),\
  	SRI_ARR(OTG_3D_STRUCTURE_CONTROL, OTG, inst),\
+diff --git a/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h b/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
+index 08bec1755617..8a85fe3b5308 100644
+--- a/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
++++ b/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
+@@ -495,6 +495,7 @@ unsigned int dcn401_get_vstartup_for_pipe(struct pipe_ctx *pipe_ctx);
+ 	SRI_ARR(OTG_H_TIMING_CNTL, OTG, inst), SRI_ARR(OTG_V_TOTAL, OTG, inst),  \
+ 	SRI_ARR(OTG_V_BLANK_START_END, OTG, inst),                               \
+ 	SRI_ARR(OTG_V_SYNC_A, OTG, inst), SRI_ARR(OTG_V_SYNC_A_CNTL, OTG, inst), \
++	SRI_ARR(OTG_INTERLACE_CONTROL, OTG, inst),                               \
+ 	SRI_ARR(OTG_CONTROL, OTG, inst), SRI_ARR(OTG_STEREO_CONTROL, OTG, inst), \
+ 	SRI_ARR(OTG_3D_STRUCTURE_CONTROL, OTG, inst),                            \
+ 	SRI_ARR(OTG_STEREO_STATUS, OTG, inst),                                   \

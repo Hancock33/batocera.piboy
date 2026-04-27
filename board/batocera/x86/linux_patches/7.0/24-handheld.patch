@@ -1629,7 +1629,7 @@ index 7fcbfff29302..4987a1d4011b 100644
   * MAX_PLANES - representative of the upper bound of planes that are supported by the HW
   */
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-index 801b17f8145d..085fe3ebc39d 100644
+index 2cf77bfdd9bc..b54ba86674f7 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 @@ -97,6 +97,8 @@
@@ -1673,7 +1673,7 @@ index 801b17f8145d..085fe3ebc39d 100644
  	}
  
  	// Check seamless boot support
-@@ -3288,6 +3310,13 @@ void dce110_enable_dp_link_output(
+@@ -3298,6 +3320,13 @@ void dce110_enable_dp_link_output(
  			link->dc->res_pool->dp_clock_source;
  	const struct link_hwss *link_hwss = get_link_hwss(link, link_res);
  	unsigned int i;
