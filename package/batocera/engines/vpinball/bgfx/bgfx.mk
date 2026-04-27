@@ -3,8 +3,8 @@
 # bgfx
 #
 ################################################################################
-# Version: Commits on Apr 19, 2026
-BGFX_VERSION = v1.143.9226-530
+# Version: Commits on Apr 27, 2026
+BGFX_VERSION = v1.143.9241-532
 BGFX_SITE = https://github.com/bkaradzic/bgfx.cmake.git
 BGFX_SITE_METHOD = git
 BGFX_GIT_SUBMODULES=YES
