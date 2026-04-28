@@ -3,10 +3,10 @@
 # 7zip
 #
 ################################################################################
-# Version: Commits on Feb 12, 2026
-7ZIP_VERSION = 2601
-7ZIP_SOURCE = 7z$(7ZIP_VERSION)-src.tar.xz
-7ZIP_SITE = https://www.7-zip.org/a
+# Version: Commits on Apr 27, 2026
+7ZIP_VERSION = 26.01
+7ZIP_SOURCE = 7z$(subst .,,$(7ZIP_VERSION))-src.tar.xz
+7ZIP_SITE = $(call github,ip7z,7zip,$(7ZIP_VERSION))
 7ZIP_LICENSE = LGPL-2.1+ with unRAR restriction
 7ZIP_LICENSE_FILES = DOC/License.txt
 7ZIP_CPE_ID_VENDOR = 7-zip
