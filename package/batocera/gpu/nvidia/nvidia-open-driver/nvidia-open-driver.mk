@@ -3,8 +3,8 @@
 # nvidia-open-driver
 #
 ################################################################################
-# Version: Commits on Mar 24, 2026
-NVIDIA_OPEN_DRIVER_VERSION = 595.58.03
+# Version: Commits on Apr 28, 2026
+NVIDIA_OPEN_DRIVER_VERSION = 595.71.05
 NVIDIA_OPEN_DRIVER_SUFFIX = $(if $(BR2_x86_64),_64)
 NVIDIA_OPEN_DRIVER_SITE = https://us.download.nvidia.com/XFree86/Linux-x86$(NVIDIA_OPEN_DRIVER_SUFFIX)/$(NVIDIA_OPEN_DRIVER_VERSION)
 NVIDIA_OPEN_DRIVER_SOURCE = NVIDIA-Linux-x86$(NVIDIA_OPEN_DRIVER_SUFFIX)-$(NVIDIA_OPEN_DRIVER_VERSION).run
