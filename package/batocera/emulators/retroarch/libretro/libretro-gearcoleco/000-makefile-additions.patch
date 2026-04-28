@@ -1,8 +1,8 @@
 diff --git a/platforms/libretro/Makefile b/platforms/libretro/Makefile
-index 8818d65..2dd1eed 100644
+index c76ab53..59d89cc 100644
 --- a/platforms/libretro/Makefile
 +++ b/platforms/libretro/Makefile
-@@ -68,19 +68,49 @@ ifneq (,$(findstring unix,$(platform)))
+@@ -69,19 +69,49 @@ ifneq (,$(findstring unix,$(platform)))
  	LIBRETRO_INSTALL_DIR := libretro
  # Raspberry Pi
  ifneq (,$(findstring rpi,$(platform)))
@@ -57,7 +57,7 @@ index 8818d65..2dd1eed 100644
  	TARGET := $(TARGET_NAME)_libretro.so
  	fpic := -fPIC
  	SHARED := -shared -Wl,--version-script=link.T -Wl,--no-undefined
-@@ -97,8 +127,6 @@ else ifeq ($(platform), classic_armv7_a7)
+@@ -98,8 +128,6 @@ else ifeq ($(platform), classic_armv7_a7)
  	ASFLAGS += $(CFLAGS)
  	HAVE_NEON = 1
  	ARCH = arm
@@ -66,7 +66,7 @@ index 8818d65..2dd1eed 100644
  	ifeq ($(shell echo `$(CC) -dumpversion` "< 4.9" | bc -l), 1)
  		CFLAGS += -march=armv7-a
  	else
-@@ -108,6 +136,7 @@ else ifeq ($(platform), classic_armv7_a7)
+@@ -109,6 +137,7 @@ else ifeq ($(platform), classic_armv7_a7)
  			LDFLAGS += -static-libgcc -static-libstdc++
  		endif
  	endif
@@ -74,14 +74,14 @@ index 8818d65..2dd1eed 100644
  # Nintendo Switch (libtransistor)
  else ifeq ($(platform), switch)
  	TARGET := $(TARGET_NAME)_libretro_$(platform).a
-@@ -339,8 +368,8 @@ OBJECTS := $(SOURCES_C:.c=.o) $(SOURCES_CXX:.cpp=.o)
+@@ -343,8 +372,8 @@ OBJECTS := $(SOURCES_C:.c=.o) $(SOURCES_CXX:.cpp=.o)
+ INCLUDES += -I$(CORE_DIR) -I$(SOURCE_DIR)
+ INCLUDES += -I$(DEPS_DIR)/miniz
  
- INCLUDES += -I$(CORE_DIR)
+-CFLAGS   += -DGEARCOLECO_DISABLE_DISASSEMBLER -DGEARCOLECO_DISABLE_VGMRECORDER -Wall -fno-exceptions -D__LIBRETRO__ $(INCLUDES) $(fpic)
+-CXXFLAGS += -DGEARCOLECO_DISABLE_DISASSEMBLER -DGEARCOLECO_DISABLE_VGMRECORDER -Wall -fno-exceptions -D__LIBRETRO__ $(INCLUDES) $(fpic)
++CFLAGS   += -DGEARCOLECO_DISABLE_DISASSEMBLER -DGEARCOLECO_DISABLE_VGMRECORDER -Wall -fno-exceptions -D__LIBRETRO__ $(INCLUDES) -fPIC
++CXXFLAGS += -DGEARCOLECO_DISABLE_DISASSEMBLER -DGEARCOLECO_DISABLE_VGMRECORDER -Wall -fno-exceptions -D__LIBRETRO__ $(INCLUDES) -fPIC
  
--CFLAGS   += -DGEARCOLECO_DISABLE_DISASSEMBLER -DGEARCOLECO_DISABLE_VGMRECORDER -Wall -D__LIBRETRO__ $(INCLUDES) $(fpic)
--CXXFLAGS += -DGEARCOLECO_DISABLE_DISASSEMBLER -DGEARCOLECO_DISABLE_VGMRECORDER -Wall -D__LIBRETRO__ $(INCLUDES) $(fpic)
-+CFLAGS   += -DGEARCOLECO_DISABLE_DISASSEMBLER -DGEARCOLECO_DISABLE_VGMRECORDER -Wall -D__LIBRETRO__ $(INCLUDES) -fPIC
-+CXXFLAGS += -DGEARCOLECO_DISABLE_DISASSEMBLER -DGEARCOLECO_DISABLE_VGMRECORDER -Wall -D__LIBRETRO__ $(INCLUDES) -fPIC
+ $(DEPS_DIR)/%.o: CXXFLAGS += -w
  
- all: $(TARGET)
- 	@echo Build complete: $(TARGET_NAME) $(BUILD_CONFIG) - $(GIT_VERSION) - $(platform)
