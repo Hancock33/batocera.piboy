@@ -996,8 +996,8 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_EDUKE32                              if  BR2_PACKAGE_BATOCERA_GLES3                   # Duke3D / Shadow Warrior / Ion fury
 
     # GZDoom and Raze require both 64-bit arch (x86,arm,riscv,....) AND OpenGL or GLES 3.0
-    select BR2_PACKAGE_GZDOOM                               if BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
-    select BR2_PACKAGE_RAZE                                 if BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
+    select BR2_PACKAGE_GZDOOM                               if  BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
+    select BR2_PACKAGE_RAZE                                 if  BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
 
     # ZMusic: standalone library used by gzdoom and raze source ports
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
@@ -1688,7 +1688,7 @@ config BR2_PACKAGE_BATOCERA_QT6
     select BR2_PACKAGE_QT6BASE_PRINTSUPPORT
     select BR2_PACKAGE_QT6BASE_SQL
     select BR2_PACKAGE_QT6BASE_TEST
-    select BR2_PACKAGE_QT6BASE_VULKAN                       if BR2_PACKAGE_BATOCERA_VULKAN
+    select BR2_PACKAGE_QT6BASE_VULKAN                       if  BR2_PACKAGE_BATOCERA_VULKAN
     select BR2_PACKAGE_QT6BASE_WIDGETS
     select BR2_PACKAGE_QT6BASE_XML
     select BR2_PACKAGE_QT6BASE_OPENGL                       if  BR2_PACKAGE_HAS_LIBGL
@@ -1809,7 +1809,7 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     # broadcom bluetooth firware
-    select BR2_PACKAGE_BROADCOM_BT_FIRMWARE                 if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_BROADCOM_BT_FIRMWARE                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 config BR2_PACKAGE_BATOCERA_SDL2
     bool "BATOCERA SDL2"
