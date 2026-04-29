@@ -481,7 +481,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|a403db7c9df43b6d7ccf
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|0d91d1f2d40f38d21e7f41afc01369ee55649fb6|Dec 31, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|3721cf744f64e7ff6d9b42b9e4ef75dd48ec27ee|Apr 29, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260428|Apr 28, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260429|Apr 29, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14342|Apr 26, 2026
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|ce4a87810c71689f7eaeca7820749051b6e7b016|Apr 29, 2026
@@ -593,5 +593,5 @@ Wine|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.07|Apr 18, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.1.0|Apr 21, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-10.0-20260425-proton-slr|Apr 25, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260428|Apr 28, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260429|Apr 29, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|14b802e419aff260b9d630e71027d88855e224e7|Apr 10, 2026

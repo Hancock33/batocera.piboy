@@ -19,9 +19,11 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|3721cf744f64e7f
 Ports|[omf2097](http://github.com/omf2097/openomf)|ce4a87810c71689f7eaeca7820749051b6e7b016|Apr 29, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|efe437bb7311c38dcae2a4d16f226c10edc002c9|Apr 29, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|789882518d8397733451926951bd14214f5f06f3|Apr 29, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260429|Apr 29, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|9e5f5e77d0370fe53325a1ba358d21c05f36f2bf|Apr 29, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|b894479eebe3024dabe7e30d0c290259e0a2f3ec|Apr 29, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|f39b8ad7bd60518874fa53ce99d4f7c0f15120a3|Apr 29, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260429|Apr 29, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a601ce31a3aaa1d96706a81163a87f505b96ca46|Apr 29, 2026
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|70b3442ee5ec0a8100fdf6a7bde1f115428f5266|Apr 29, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|46f78d5976601fc95e90fd72d81d4d6c6b599b16|Apr 29, 2026
@@ -39,11 +41,9 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|d6b8870e253471dfddca
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|c3acf8c877d1a9c0109adf045ac415f1602f3d7b|Apr 28, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|ab0de6af57fbbbc47aed976425d0ed7b9d85e47a|Apr 28, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|a5543672d4e8d8f12359934a1fac069966d3cf4f|Apr 28, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260428|Apr 28, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|019548288a80e5b37475febe6bb446b28f290f2e|Apr 28, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|1b7037fa0c417d0c1e8f6bb8d1ce1cd2dbd7ec0e|Apr 28, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|595.71.05|Apr 28, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260428|Apr 28, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|f34e654ca01cfd55641d85112538b6487dd552ab|Apr 28, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|7d87d65a3fc5c4b5b6241c352d82102032d8a2e7|Apr 28, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|dbb34075bc5c72c18291547ff63d7b001ebb29ab|Apr 28, 2026
