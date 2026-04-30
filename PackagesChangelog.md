@@ -16,9 +16,11 @@ Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkin
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|288f66362339790aa46b8208c694bde3925ac42e|Apr 30, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|2f491fa6d594d2f7610069f022dc27d8b81f3ecc|Apr 30, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|23679e1a4d0a48f5f5f1b9c284f8ed8a5120f52a|Apr 30, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260430|Apr 30, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|caeecd546385703bdc3b2a14f1ca93552d235984|Apr 30, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|089438abaf409fc7ab5334b71740fe4c9a1a3172|Apr 30, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|8b8048fc7b3cdb84232dfa4e684d8ba526dfcfc5|Apr 30, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260430|Apr 30, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7fd4943c7fe5a4bd8e729d4c6d0f2d5cc9196799|Apr 30, 2026
 Emulators|[libretro-citra](https://github.com/azahar-emu/azahar.git)|f6ebfb2c6ff429083c6e58db8c0a2eda83b41213|Apr 30, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|91e44f1977cf247ae12b7f4860a53f35808faa26|Apr 30, 2026
@@ -38,9 +40,7 @@ Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|3721cf744f64e7ff6d9b42b9e4ef75dd48ec27ee|Apr 29, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|ce4a87810c71689f7eaeca7820749051b6e7b016|Apr 29, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|789882518d8397733451926951bd14214f5f06f3|Apr 29, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260429|Apr 29, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|9e5f5e77d0370fe53325a1ba358d21c05f36f2bf|Apr 29, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260429|Apr 29, 2026
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|70b3442ee5ec0a8100fdf6a7bde1f115428f5266|Apr 29, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|46f78d5976601fc95e90fd72d81d4d6c6b599b16|Apr 29, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|cb01f2f238700eed7ec1c859be1737a9fbcdcb7c|Apr 29, 2026
