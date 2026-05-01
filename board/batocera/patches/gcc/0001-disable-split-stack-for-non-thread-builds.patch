@@ -1,4 +1,4 @@
-From 4f67134e0b1404fef4ea72342be8fab4c37ca8c8 Mon Sep 17 00:00:00 2001
+From 7d5f59e035341430e20f47420535d0e987516e55 Mon Sep 17 00:00:00 2001
 From: Waldemar Brodkorb <wbx@openadk.org>
 Date: Mon, 25 Jul 2022 00:29:55 +0200
 Subject: [PATCH] disable split-stack for non-thread builds
@@ -22,5 +22,5 @@ index cc0366b4cd8..f3f97e86d60 100644
  LIB2ADD_ST += $(srcdir)/generic-morestack.c $(srcdir)/generic-morestack-thread.c
 +endif
 -- 
-2.34.3
+2.50.1
 
