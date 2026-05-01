@@ -16,9 +16,11 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|3aa6c122449fccc7e
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|continuous|May 01, 2026
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.7|May 01, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.74.0|May 01, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260501|May 01, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|09b66cab9bbfe6f678989419ca14b999e0811539|May 01, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|20c380930aef97d5ebada48777b6d6f77ca680a1|May 01, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|35f005375939fd200417b161e45f5e0436729af4|May 01, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260501|May 01, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a9743aafb8658c8dc8566f94bec2e25ce850edb0|May 01, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|17a18dcd6c3d0e289f344119fe2c2add8c0a50c5|May 01, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|b9b0ff57696448fc1360416358cd5e54c4c098cb|May 01, 2026
@@ -47,9 +49,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|288f66362339790aa46b8
 Ports|[omf2097](http://github.com/omf2097/openomf)|0be8980dc7855e0e9e165f04bfe60c857df97a80|Apr 30, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|23679e1a4d0a48f5f5f1b9c284f8ed8a5120f52a|Apr 30, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|c39f5977f667e4fea126a2d6d2ab5cb68efcda6a|Apr 30, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260430|Apr 30, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|089438abaf409fc7ab5334b71740fe4c9a1a3172|Apr 30, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260430|Apr 30, 2026
 Emulators|[libretro-citra](https://github.com/azahar-emu/azahar.git)|f6ebfb2c6ff429083c6e58db8c0a2eda83b41213|Apr 30, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|806cbc866c973caf442b4b6c6058f867b36bd1fb|Apr 30, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|8f746655d7f41f27e317c65afd6066fc9367cc98|Apr 30, 2026
