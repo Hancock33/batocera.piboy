@@ -17,7 +17,6 @@ XASH3D_FWGS_CONF_OPTS += --build-type=release
 XASH3D_FWGS_CONF_OPTS += --enable-packaging
 XASH3D_FWGS_CONF_OPTS += --sdl2=$(STAGING_DIR)/usr
 XASH3D_FWGS_CONF_OPTS += --disable-menu-changegame
-XASH3D_FWGS_CONF_ENV += CFLAGS="$(TARGET_CFLAGS) -fPIC -std=gnu17" CXXFLAGS="$(TARGET_CXXFLAGS) -fPIC"
 
 ifeq ($(BR2_ARCH_IS_64),y)
     XASH3D_FWGS_CONF_OPTS += --64bits
