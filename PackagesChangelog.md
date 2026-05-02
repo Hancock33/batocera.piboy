@@ -96,6 +96,7 @@ Network|[rtw88](http://github.com/lwfinger/rtw88)|4ef9d994294afc45ea824b7403261a
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a3e5fd54fad4e8993e82aa59c07bdaafcbc6ae47|Apr 27, 2026
 Utils|[7zip](http://github.com/ip7z/7zip)|26.01|Apr 27, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.143.9241-532|Apr 27, 2026
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|c0bc7cd716ef477d20c29f8877205a8f3befdfad|Apr 27, 2026
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|bed690f456bfa716ed21d410162c1c6e7c4e9c6c|Apr 27, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|1c2b7d787e6371c9ed078c5f2ab0e0065a1c6f50|Apr 26, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|50353ae3c170d5dbfb5ef7a3daf85e2248a2b9a2|Apr 26, 2026
@@ -202,6 +203,7 @@ Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|93cf4
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.2.1|Apr 15, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.1.5|Apr 14, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|a380b84e8b5a68e5516c476d8834d98dd72f87b1|Apr 14, 2026
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|cd5e8020b5feea8f9364c87290cda4f9180be01a|Apr 14, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.1.5|Apr 14, 2026
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|1d32cadb1150d47710a537b51622f58c76ae566e|Apr 14, 2026
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|87a1286dfaae69d3a0997ffbe66150aa4bca8505|Apr 14, 2026
@@ -354,7 +356,6 @@ Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|ba6b7bb1d50d7db
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|a78319991d62520bed4e873d3538657ad0ae2ca7|Feb 01, 2026
 Libraries|[wiringop-python](https://github.com/orangepi-xunlong/wiringOP-Python.git)|cde245b3183c3abe48194180b2d2203da08225ee|Jan 30, 2026
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.7.3|Jan 30, 2026
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.341.0|Jan 30, 2026
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.1.2|Jan 28, 2026
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12.2|Jan 27, 2026
 Ports|[bstone](http://github.com/bibendovsky/bstone)|v1.3.3|Jan 25, 2026
@@ -362,7 +363,6 @@ Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|e1b43
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|2f5fdb6ad601f99e6be411e235766e2425ca0613|Jan 25, 2026
 Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.9.1|Jan 24, 2026
 Emulators|[libretro-holani](http://github.com/LLeny/holani-retro)|19b974f77247a937369adf48280d2b34a5a66245|Jan 24, 2026
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.341.0|Jan 23, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|03d2483d5cded0bdef84bec24c9ddfdede324b5c|Jan 22, 2026
 Emulators|[libretro-skyemu](http://github.com/skylersaleh/SkyEmu)|46efbcbdb3b902373a09f4724e6d3b1a5acc4af3|Jan 22, 2026
 Libraries|[nghttp3](https://github.com/ngtcp2/nghttp3.git)|v1.15.0|Jan 20, 2026
