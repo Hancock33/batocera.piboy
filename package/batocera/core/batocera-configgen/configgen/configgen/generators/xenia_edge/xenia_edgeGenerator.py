@@ -91,12 +91,12 @@ class XeniaEdgeGenerator(Generator):
             'break_on_unimplemented_instructions': False
         }
 
-        # Content â€” XBLA license
+        # Content â?" XBLA license
         config['Content'] = {
             'license_mask': system.config.get_int('xenia_license', 1)
         }
 
-        # Display â€” always fullscreen, configurable internal resolution + post-processing
+        # Display â?" always fullscreen, configurable internal resolution + post-processing
         config['Display'] = {
             'fullscreen': True,
             'internal_display_resolution': system.config.get_int('xenia_resolution', 8),
@@ -116,7 +116,7 @@ class XeniaEdgeGenerator(Generator):
         elif 'apply_patches' not in config['General']:
             config['General']['apply_patches'] = False
 
-        # GPU â€” Vulkan only on Linux
+        # GPU â?" Vulkan only on Linux
         if 'GPU' not in config:
             config['GPU'] = {}
         config['GPU']['gpu'] = 'vulkan'
@@ -127,12 +127,12 @@ class XeniaEdgeGenerator(Generator):
         config['GPU']['texture_cache_memory_limit_soft'] = system.config.get_int('xenia_limit_soft', 384)
         config['GPU']['texture_cache_memory_limit_soft_lifetime'] = system.config.get_int('xenia_limit_soft_lifetime', 30)
 
-        # HID â€” SDL for gamepad support
+        # HID â?" SDL for gamepad support
         config['HID'] = {
             'hid': 'sdl'
         }
 
-        # Logging â€” reduce log spam
+        # Logging â?" reduce log spam
         config['Logging'] = {
             'log_level': 1
         }
@@ -142,7 +142,7 @@ class XeniaEdgeGenerator(Generator):
             'protect_zero': False
         }
 
-        # Storage â€” all paths in /userdata
+        # Storage â?" all paths in /userdata
         config['Storage'] = {
             'storage_root': str(xeniaConfig),
             'content_root': str(xeniaSaves),
@@ -162,7 +162,7 @@ class XeniaEdgeGenerator(Generator):
             'vulkan_sparse_shared_memory': False
         }
 
-        # XConfig â€” region / language (xenia-edge uses string names, not integers)
+        # XConfig â?" region / language (xenia-edge uses string names, not integers)
         config['XConfig'] = {
             'user_country':  system.config.get('xenia_country', 'United States'),
             'user_language': system.config.get('xenia_language', 'English')
@@ -200,4 +200,3 @@ class XeniaEdgeGenerator(Generator):
 
     def getMouseMode(self, config, rom):
         return True
-
