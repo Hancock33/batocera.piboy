@@ -3,8 +3,8 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Apr 27, 2026
-RYUJINX_VERSION = 1.3.279
+# Version: Commits on May 02, 2026
+RYUJINX_VERSION = 1.3.281
 RYUJINX_SOURCE = ryujinx-canary-$(RYUJINX_VERSION)-linux_x64.tar.gz
 RYUJINX_SITE = https://git.ryujinx.app/Ryubing/Canary/releases/download/$(RYUJINX_VERSION)
 RYUJINX_LICENSE = MIT
