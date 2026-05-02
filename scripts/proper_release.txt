@@ -24,6 +24,7 @@ ledspicer.mk
 libfreeaptx.mk
 libgme.mk
 libretro-amiberry.mk
+libretro-freej2me.mk
 libretro-mame.mk
 libretro-mgba.mk
 libxmp.mk
