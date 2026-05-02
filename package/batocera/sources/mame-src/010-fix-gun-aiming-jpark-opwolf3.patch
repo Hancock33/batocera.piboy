@@ -1,20 +1,8 @@
-From: Tovarichtch
-Date: Tue, 11 Mar 2026 23:26:00 -0400
-Subject: [PATCH] Fix gun aiming in jpark and opwolf3
-
-Fixes gun aiming in jpark and opwolf3 by converting screen coordinates
-to match what the real arcade cabinet hardware expects, based on FBNeo's
-proven scaling values and MAME's lghost implementation pattern.
----
- src/mame/sega/segas32.cpp   | 84 +++++++++++++++++++++++++++++++++++-
- src/mame/taito/slapshot.cpp | 22 ++++++++++--
- src/mame/taito/slapshot.h   |  8 ++++
- 3 files changed, 109 insertions(+), 5 deletions(-)
-
 diff --git a/src/mame/sega/segas32.cpp b/src/mame/sega/segas32.cpp
+index cb966b86f44..e21f1ae1e83 100644
 --- a/src/mame/sega/segas32.cpp
 +++ b/src/mame/sega/segas32.cpp
-@@ -2335,6 +2335,86 @@
+@@ -2337,6 +2337,86 @@ segas32_analog_state::segas32_analog_state(const machine_config &mconfig, device
  }
  
  
@@ -101,7 +89,7 @@ diff --git a/src/mame/sega/segas32.cpp b/src/mame/sega/segas32.cpp
  
  void segas32_trackball_state::system32_trackball_map(address_map &map)
  {
-@@ -2716,6 +2796,7 @@
+@@ -2718,6 +2798,7 @@ public:
  	void sega_system32_cd(machine_config &config);
  	void sega_system32_arf(machine_config &config);
  	void sega_system32_analog(machine_config &config);
@@ -109,7 +97,7 @@ diff --git a/src/mame/sega/segas32.cpp b/src/mame/sega/segas32.cpp
  	void sega_system32_4p(machine_config &config);
  
  	void init_titlef();
-@@ -2766,6 +2847,11 @@
+@@ -2768,6 +2849,11 @@ void segas32_new_state::sega_system32_analog(machine_config &config)
  	SEGA_S32_ANALOG_DEVICE(config, "mainpcb", 0);
  }
  
@@ -121,25 +109,26 @@ diff --git a/src/mame/sega/segas32.cpp b/src/mame/sega/segas32.cpp
  void segas32_new_state::sega_system32_track(machine_config &config)
  {
  	SEGA_S32_TRACKBALL_DEVICE(config, "mainpcb", 0);
-@@ -6030,10 +6116,10 @@
+@@ -6035,10 +6121,10 @@ GAME( 1992, ga2j,      ga2,      sega_system32_ga2,         ga2,      segas32_ne
  
- GAME( 1992, holo,      0,        sega_system32,             holo,     segas32_new_state, init_holo,     ORIENTATION_FLIP_Y, "Sega",   "Holosseum (US, Rev A)", MACHINE_IMPERFECT_GRAPHICS )
+ GAME( 1992, holo,      0,        sega_system32,             holo,     segas32_new_state, init_holo,     ORIENTATION_FLIP_Y, "Sega",   "Holosseum (US, Rev A)", 0 )
  
--GAME( 1993, jpark,     0,        sega_system32_analog,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (World, Rev A)", MACHINE_IMPERFECT_GRAPHICS )  /* Released in 02.1994 */
--GAME( 1993, jparkj,    jpark,    sega_system32_analog,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Rev A, Deluxe)", MACHINE_IMPERFECT_GRAPHICS )
--GAME( 1993, jparkja,   jpark,    sega_system32_analog,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Deluxe)", MACHINE_IMPERFECT_GRAPHICS )
--GAME( 1993, jparkjc,   jpark,    sega_system32_analog,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Rev A, Conversion)", MACHINE_IMPERFECT_GRAPHICS )
+-GAME( 1993, jpark,     0,        sega_system32_analog,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (World, Rev A)", 0 )  /* Released in 02.1994 */
+-GAME( 1993, jparkj,    jpark,    sega_system32_analog,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Rev A, Deluxe)", 0 )
+-GAME( 1993, jparkja,   jpark,    sega_system32_analog,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Deluxe)", 0 )
+-GAME( 1993, jparkjc,   jpark,    sega_system32_analog,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Rev A, Conversion)", 0 )
 +GAME( 1993, jpark,     0,        sega_system32_jpark,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (World, Rev A)", MACHINE_IMPERFECT_GRAPHICS )  /* Released in 02.1994 */
 +GAME( 1993, jparkj,    jpark,    sega_system32_jpark,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Rev A, Deluxe)", MACHINE_IMPERFECT_GRAPHICS )
 +GAME( 1993, jparkja,   jpark,    sega_system32_jpark,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Deluxe)", MACHINE_IMPERFECT_GRAPHICS )
 +GAME( 1993, jparkjc,   jpark,    sega_system32_jpark,      jpark,    segas32_new_state, init_jpark,    ROT0, "Sega",   "Jurassic Park (Japan, Rev A, Conversion)", MACHINE_IMPERFECT_GRAPHICS )
  
- GAME( 1992, kokoroj,   0,        sega_system32_cd,          kokoroj2, segas32_new_state, init_radr,     ROT0, "Sega",   "Soreike Kokology (Rev A)", MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND | MACHINE_NODEVICE_PRINTER) /* uses an Audio CD */
- GAME( 1992, kokoroja,  kokoroj,  sega_system32_cd,          kokoroj2, segas32_new_state, init_radr,     ROT0, "Sega",   "Soreike Kokology", MACHINE_IMPERFECT_GRAPHICS | MACHINE_IMPERFECT_SOUND | MACHINE_NODEVICE_PRINTER) /* uses an Audio CD */
+ GAME( 1992, kokoroj,   0,        sega_system32_cd,          kokoroj2, segas32_new_state, init_radr,     ROT0, "Sega",   "Soreike Kokology (Rev A)", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND | MACHINE_NODEVICE_PRINTER ) /* uses an Audio CD (undumped, incompatible with kokoroj2) */
+ GAME( 1992, kokoroja,  kokoroj,  sega_system32_cd,          kokoroj2, segas32_new_state, init_radr,     ROT0, "Sega",   "Soreike Kokology", MACHINE_NOT_WORKING | MACHINE_IMPERFECT_SOUND | MACHINE_NODEVICE_PRINTER ) /* uses an Audio CD (undumped, incompatible with kokoroj2) */
 diff --git a/src/mame/taito/slapshot.cpp b/src/mame/taito/slapshot.cpp
+index cf76af13282..d5f18751a2c 100644
 --- a/src/mame/taito/slapshot.cpp
 +++ b/src/mame/taito/slapshot.cpp
-@@ -349,16 +349,16 @@
+@@ -349,16 +349,16 @@ static INPUT_PORTS_START( opwolf3 )
  	PORT_SERVICE_NO_TOGGLE(0x10, IP_ACTIVE_LOW)
  
  	PORT_START("GUN1X")
@@ -160,7 +149,7 @@ diff --git a/src/mame/taito/slapshot.cpp b/src/mame/taito/slapshot.cpp
  INPUT_PORTS_END
  
  /***********************************************************
-@@ -453,6 +453,20 @@
+@@ -453,6 +453,20 @@ void slapshot_state::slapshot(machine_config &config)
  	m_tc0140syt->reset_callback().set_inputline("audiocpu", INPUT_LINE_RESET);
  }
  
@@ -181,7 +170,7 @@ diff --git a/src/mame/taito/slapshot.cpp b/src/mame/taito/slapshot.cpp
  void slapshot_state::opwolf3(machine_config &config)
  {
  	/* basic machine hardware */
-@@ -467,10 +481,10 @@
+@@ -467,10 +481,10 @@ void slapshot_state::opwolf3(machine_config &config)
  
  	adc0809_device &adc(ADC0809(config, "adc", 500000)); // unknown clock
  	adc.eoc_ff_callback().set_inputline("maincpu", 3);
@@ -197,9 +186,10 @@ diff --git a/src/mame/taito/slapshot.cpp b/src/mame/taito/slapshot.cpp
  	TC0640FIO(config, m_tc0640fio, 0);
  	m_tc0640fio->read_1_callback().set_ioport("COINS");
 diff --git a/src/mame/taito/slapshot.h b/src/mame/taito/slapshot.h
+index 012dc159cda..66d9bde26ac 100644
 --- a/src/mame/taito/slapshot.h
 +++ b/src/mame/taito/slapshot.h
-@@ -32,7 +32,9 @@
+@@ -32,7 +32,9 @@ public:
  		m_spriteext(*this,"spriteext"),
  		m_z80bank(*this,"z80bank"),
  		m_io_system(*this,"SYSTEM"),
@@ -210,7 +200,7 @@ diff --git a/src/mame/taito/slapshot.h b/src/mame/taito/slapshot.h
  	{ }
  
  	void opwolf3(machine_config &config);
-@@ -108,6 +110,13 @@
+@@ -108,6 +110,13 @@ private:
  
  	INTERRUPT_GEN_MEMBER(interrupt);
  
@@ -224,6 +214,3 @@ diff --git a/src/mame/taito/slapshot.h b/src/mame/taito/slapshot.h
  	void opwolf3_map(address_map &map) ATTR_COLD;
  	void slapshot_map(address_map &map) ATTR_COLD;
  	void sound_map(address_map &map) ATTR_COLD;
--- 
-2.48.1
-

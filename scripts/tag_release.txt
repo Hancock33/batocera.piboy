@@ -53,7 +53,6 @@ sdl3.mk
 semver.mk
 sf_rpi_status.mk
 shaderc.mk
-shadps4.mk
 sonic3-air.mk
 spirv-llvm-translator.mk
 supertux2.mk
