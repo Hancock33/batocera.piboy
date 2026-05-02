@@ -40,6 +40,7 @@ pcsx2.mk
 pironman5.mk
 pysdl2.mk
 pysdl3.mk
+python-glslang.mk
 pywebview.mk
 rapidyaml.mk
 rclone.mk
