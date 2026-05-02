@@ -1,4 +1,4 @@
-config BR2_PACKAGE_XENIA_NATIVE
+config BR2_PACKAGE_XENIA_EDGE
 	bool "xenia"
 	depends on BR2_x86_64
 	depends on BR2_PACKAGE_XORG7

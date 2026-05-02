@@ -1,0 +1,12 @@
+diff --git a/src/xenia/cpu/backend/assembler.h b/src/xenia/cpu/backend/assembler.h
+index 8cdf18fe7..eb864da8e 100644
+--- a/src/xenia/cpu/backend/assembler.h
++++ b/src/xenia/cpu/backend/assembler.h
+@@ -11,6 +11,7 @@
+ #define XENIA_CPU_BACKEND_ASSEMBLER_H_
+ 
+ #include <memory>
++#include <cstdint>
+ 
+ namespace xe {
+ namespace cpu {

@@ -165,6 +165,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'xemu': ('xemu.xemuGenerator', 'XemuGenerator'),
     'xenia': ('xenia.xeniaGenerator', 'XeniaGenerator'),
     'xenia-canary': ('xenia.xeniaGenerator', 'XeniaGenerator'),
+    'xenia-edge': ('xenia_edge.xenia_edgeGenerator', 'XeniaEdgeGenerator'),
     'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
     'ymir': ('ymir.ymirGenerator', 'YmirGenerator'),
     'yquake2': ('yquake2.yquake2Generator', 'YQuake2Generator'),
