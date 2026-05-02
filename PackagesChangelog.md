@@ -40,6 +40,9 @@ Utils|[rclone](http://github.com/rclone/rclone)|v1.74.0|May 01, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|20c380930aef97d5ebada48777b6d6f77ca680a1|May 01, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|cb356911bebefd434380b1da163e7dcba1cb2742|May 01, 2026
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.3.0|May 01, 2026
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|v1.4.350|May 01, 2026
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.350|May 01, 2026
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|v1.4.350|May 01, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|ed82f02debaf75718ebdb52e3f508468891757d0|May 01, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|fc356c88b367f2f2040193e7efbb515726515b20|May 01, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|9ba79648d6ec85e833aef719d7f359117498d89c|May 01, 2026
@@ -96,7 +99,6 @@ Network|[rtw88](http://github.com/lwfinger/rtw88)|4ef9d994294afc45ea824b7403261a
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|a3e5fd54fad4e8993e82aa59c07bdaafcbc6ae47|Apr 27, 2026
 Utils|[7zip](http://github.com/ip7z/7zip)|26.01|Apr 27, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.143.9241-532|Apr 27, 2026
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|c0bc7cd716ef477d20c29f8877205a8f3befdfad|Apr 27, 2026
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|bed690f456bfa716ed21d410162c1c6e7c4e9c6c|Apr 27, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|1c2b7d787e6371c9ed078c5f2ab0e0065a1c6f50|Apr 26, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|50353ae3c170d5dbfb5ef7a3daf85e2248a2b9a2|Apr 26, 2026
@@ -203,7 +205,6 @@ Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|93cf4
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.2.1|Apr 15, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.1.5|Apr 14, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|a380b84e8b5a68e5516c476d8834d98dd72f87b1|Apr 14, 2026
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|cd5e8020b5feea8f9364c87290cda4f9180be01a|Apr 14, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.1.5|Apr 14, 2026
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|1d32cadb1150d47710a537b51622f58c76ae566e|Apr 14, 2026
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|87a1286dfaae69d3a0997ffbe66150aa4bca8505|Apr 14, 2026
@@ -559,7 +560,6 @@ Boot|[uboot-ps5000](http://github.com/rk3128-cfw/caesar-u-boot)|e2c76fb6b0f89c53
 Boot|[uboot-ps7000](http://github.com/rk3128-cfw/caesar-u-boot)|e2c76fb6b0f89c5385273b3a83fbd2ce16903396|Sept 13, 2021
 Looks|[adwaita-icon-theme-light](http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/)|$(ADWAITA_ICON_THEME_LIGHT_VERSION_MAJOR).0|Sep 10, 2021
 Utils|[wii-u-gc-adapter](http://github.com/ToadKing/wii-u-gc-adapter)|fa098efa7f6b34f8cd82e2c249c81c629901976c|Sept 06, 2021
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|MoltenVK-1.1.5|Aug 30, 2021
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|af2dd23979453bcd1cad7c4086af5fb421a955c5|Mar 05, 2021

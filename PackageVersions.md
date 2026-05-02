@@ -339,10 +339,10 @@ Gpu|[nvidia580-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|580.
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|57a1067a246c71fa6c9a355d1668884fda155dd5|Dec 23, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.2|Apr 24, 2026
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|MoltenVK-1.1.5|Aug 30, 2021
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|v1.4.350|May 01, 2026
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|d72697bfc353b547efc58421ad54ac0345441bf4|Feb 22, 2026
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|cd5e8020b5feea8f9364c87290cda4f9180be01a|Apr 14, 2026
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|c0bc7cd716ef477d20c29f8877205a8f3befdfad|Apr 27, 2026
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.350|May 01, 2026
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|v1.4.350|May 01, 2026
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.5|Feb 09, 2026
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|9813128ddac097f8e11a92d64b33de7b70154989|Sept 16, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|de8d5ee595324eb33c3016675d3ec901a41726c1|Feb 04, 2026
