@@ -17,6 +17,7 @@ corsixth.mk
 cxxopts.mk
 drastic.mk
 ecm.mk
+fastfetch.mk
 flatpak.mk
 freepats.mk
 fsuae.mk
