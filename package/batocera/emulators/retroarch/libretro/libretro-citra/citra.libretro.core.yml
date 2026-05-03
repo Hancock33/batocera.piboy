@@ -4,4 +4,4 @@ shared_features:
   - autosave
   - rewind
 systems:
-  - citra
+  - 3ds

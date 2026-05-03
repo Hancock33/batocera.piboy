@@ -3,8 +3,8 @@
 # nblood
 #
 ################################################################################
-# Version: Commits on May 02, 2026
-NBLOOD_VERSION = r14343
+# Version: Commits on May 03, 2026
+NBLOOD_VERSION = r14345
 NBLOOD_SITE = $(call github,NBlood,NBlood,$(NBLOOD_VERSION))
 NBLOOD_SOURCE = $(NBLOOD_VERSION).tar.gz
 NBLOOD_EMULATOR_INFO = nblood.emulator.yml
