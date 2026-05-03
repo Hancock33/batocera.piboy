@@ -32,8 +32,8 @@ XENIA_EDGE_POST_INSTALL_TARGET_HOOKS += XENIA_EDGE_POST_PROCESS
 
 define XENIA_EDGE_POST_PROCESS
 	# get the latest patches
-	mkdir -p $(TARGET_DIR)/usr/bin/xenia-edge/patches
-	mkdir -p $(@D)/temp
+	rm -rf $(TARGET_DIR)/usr/bin/xenia-edge/patches && mkdir -p $(TARGET_DIR)/usr/bin/xenia-edge/patches
+	rm -rf $(@D)/temp && mkdir -p $(@D)/temp
 	( cd $(@D)/temp && git init && \
 	  git remote add origin https://github.com/xenia-canary/game-patches.git && \
 	  git config core.sparsecheckout true && \
