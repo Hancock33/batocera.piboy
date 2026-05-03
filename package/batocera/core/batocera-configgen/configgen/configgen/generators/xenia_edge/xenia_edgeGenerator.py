@@ -38,7 +38,6 @@ class XeniaEdgeGenerator(Generator):
         xeniaCache  = CACHE  / 'xenia_edge'
         xeniaSaves  = SAVES  / 'xbox360'
 
-        # Vulkan is mandatory for xenia-edge on Linux
         if vulkan.is_available():
             _logger.debug("Vulkan driver is available on the system.")
             vulkan_version = vulkan.get_version()
@@ -55,14 +54,12 @@ class XeniaEdgeGenerator(Generator):
         xeniaPatches = xeniaConfig / 'patches'
         mkdir_if_not_exists(xeniaPatches)
 
-        # squashfs
         if "squashfs" in str(rom):
             squashrom = str(rom) + str(rom).replace('/var/run/squashfs','') + '.xbox360'
             if Path.exists(squashrom):
                 rom = Path(squashrom)
                 _logger.debug('Found squashfs playlist %s:', rom)
-
-        # resolve .xbox360 playlists (same format as xenia-canary)
+-
         if rom.suffix == '.xbox360':
             _logger.debug('Found .xbox360 playlist: %s', rom)
             with rom.open() as f:
@@ -74,29 +71,24 @@ class XeniaEdgeGenerator(Generator):
             else:
                 _logger.error('Playlist target %s not found', xbla_path)
 
-        # Build TOML config
         toml_file = xeniaConfig / 'xenia-edge.config.toml'
         config: dict[str, dict[str, Any]] = {}
         if toml_file.is_file():
             with toml_file.open() as f:
                 config = toml.load(f)
 
-        # APU
         config['APU'] = {
             'apu': system.config.get('xenia_apu', 'alsa')
         }
 
-        # CPU
         config['CPU'] = {
             'break_on_unimplemented_instructions': False
         }
 
-        # Content â?" XBLA license
         config['Content'] = {
             'license_mask': system.config.get_int('xenia_license', 1)
         }
 
-        # Display â?" always fullscreen, configurable internal resolution + post-processing
         config['Display'] = {
             'fullscreen': True,
             'internal_display_resolution': system.config.get_int('xenia_resolution', 8),
@@ -106,17 +98,14 @@ class XeniaEdgeGenerator(Generator):
             'postprocess_ffx_fsr_sharpness_reduction': float(system.config.get('xenia_postprocess_ffx_fsr_sharpness_reduction', '0.2')),
         }
 
-        # General
         if 'General' not in config:
             config['General'] = {}
         config['General']['discord'] = False
-        # patches
         if system.config.get_bool('xenia_patches'):
             config['General']['apply_patches'] = True
         elif 'apply_patches' not in config['General']:
             config['General']['apply_patches'] = False
 
-        # GPU â?" Vulkan only on Linux
         if 'GPU' not in config:
             config['GPU'] = {}
         config['GPU']['gpu'] = 'vulkan'
@@ -127,22 +116,18 @@ class XeniaEdgeGenerator(Generator):
         config['GPU']['texture_cache_memory_limit_soft'] = system.config.get_int('xenia_limit_soft', 384)
         config['GPU']['texture_cache_memory_limit_soft_lifetime'] = system.config.get_int('xenia_limit_soft_lifetime', 30)
 
-        # HID â?" SDL for gamepad support
         config['HID'] = {
             'hid': 'sdl'
         }
 
-        # Logging â?" reduce log spam
         config['Logging'] = {
             'log_level': 1
         }
 
-        # Memory
         config['Memory'] = {
             'protect_zero': False
         }
 
-        # Storage â?" all paths in /userdata
         config['Storage'] = {
             'storage_root': str(xeniaConfig),
             'content_root': str(xeniaSaves),
@@ -151,18 +136,15 @@ class XeniaEdgeGenerator(Generator):
             'mount_cache':   system.config.get_bool('xenia_cache', True)
         }
 
-        # UI
         config['UI'] = {
             'headless': system.config.get_bool('xenia_headless'),
             'show_achievement_notification': system.config.get_bool('xenia_achievement')
         }
 
-        # Vulkan tuning
         config['Vulkan'] = {
             'vulkan_sparse_shared_memory': False
         }
 
-        # XConfig â?" region / language (xenia-edge uses string names, not integers)
         config['XConfig'] = {
             'user_country':  system.config.get('xenia_country', 'United States'),
             'user_language': system.config.get('xenia_language', 'English')
@@ -185,7 +167,6 @@ class XeniaEdgeGenerator(Generator):
             'SDL_JOYSTICK_HIDAPI': '0',
         }
 
-        # prefer discrete NVIDIA GPU when prime offload is set up
         if Path('/var/tmp/nvidia.prime').exists():
             import os
             for var in ('__NV_PRIME_RENDER_OFFLOAD', '__VK_LAYER_NV_optimus', '__GLX_VENDOR_LIBRARY_NAME'):
