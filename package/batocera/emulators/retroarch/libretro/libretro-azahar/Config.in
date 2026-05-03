@@ -1,0 +1,13 @@
+config BR2_PACKAGE_LIBRETRO_AZAHAR
+	bool "libretro-azahar"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_AZAHAR
+
+	help
+	  Azahar is a Citra fork and emulator for the Nintendo 3DS.
+
+	  https://github.com/azahar-emu/azahar
+
+
+comment "LIBRETRO_AZAHAR needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

@@ -109,7 +109,12 @@ class DolphinGenerator(Generator):
         dolphinSettings.set("Core", "FastDiscSpeed", str(system.config.get_bool("enable_fastdisc")))
 
         # Dual Core
-        dolphinSettings.set("Core", "CPUThread", str(system.config.get_bool("dual_core")))
+        if system.name == "triforce":
+            dolphinSettings.set("Core", "CPUThread", "True")
+            dolphinSettings.set("Core", "EnableCheats", "True")
+        else:
+            dolphinSettings.set("Core", "CPUThread", str(system.config.get_bool("dual_core")))
+            dolphinSettings.set("Core", "EnableCheats", "False")
 
         # Gpu Sync
         dolphinSettings.set("Core", "SyncGPU", str(system.config.get_bool("gpu_sync")))

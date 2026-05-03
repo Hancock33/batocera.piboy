@@ -64,6 +64,21 @@ msgctxt "game_options"
 msgid "0% (Default)"
 msgstr "0% (по умолчанию)"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "0.0 (Default)"
+msgstr ""
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "0.0 (Maximum sharpness)"
+msgstr ""
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "0.2 (Default)"
+msgstr ""
+
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "0.5x"
@@ -304,7 +319,7 @@ msgctxt "game_options"
 msgid "100%(native)"
 msgstr "100%(родное)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "1000 (Default)"
 msgstr "1000 (по умолчанию)"
@@ -434,7 +449,7 @@ msgctxt "game_options"
 msgid "120MB"
 msgstr "120MB"
 
-#. TRANSLATION: libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "120fps"
 msgstr "120fps"
@@ -459,7 +474,7 @@ msgctxt "game_options"
 msgid "1280 x 800"
 msgstr "1280 x 800"
 
-#. TRANSLATION: rpcs3, xenia-canary
+#. TRANSLATION: rpcs3, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "1280x720 (Default)"
 msgstr "1280x720 (по умолчанию)"
@@ -559,7 +574,7 @@ msgctxt "game_options"
 msgid "1440 x 900"
 msgstr "1440 x 900"
 
-#. TRANSLATION: libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "144fps"
 msgstr "144fps"
@@ -594,7 +609,7 @@ msgctxt "game_options"
 msgid "150Mhz (Overclock)"
 msgstr "150Mhz (Разгон)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "1536MB"
 msgstr "1536MB"
@@ -609,7 +624,7 @@ msgctxt "game_options"
 msgid "15fps"
 msgstr "15fps"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "15s"
 msgstr "15 сек"
@@ -669,7 +684,7 @@ msgctxt "game_options"
 msgid "16384kB"
 msgstr "16384kB"
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "165fps"
 msgstr "165fps"
@@ -879,6 +894,11 @@ msgctxt "game_options"
 msgid "2.0 (480p)"
 msgstr "2.0 (480p)"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "2.0 (Minimum sharpness)"
+msgstr ""
+
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
 msgid "2.0x (25.00Mhz)"
@@ -944,7 +964,7 @@ msgctxt "game_options"
 msgid "200p"
 msgstr "200p"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "2048MB"
 msgstr "2048MB"
@@ -999,7 +1019,7 @@ msgctxt "game_options"
 msgid "22nd"
 msgstr "22"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "2304MB"
 msgstr "2304MB"
@@ -1044,7 +1064,7 @@ msgctxt "game_options"
 msgid "24MB"
 msgstr "24MB"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "24MB (Default)"
 msgstr "24MB (по умолчанию)"
@@ -1274,7 +1294,7 @@ msgctxt "game_options"
 msgid "3032B"
 msgstr "3032B"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "3072MB"
 msgstr "3072MB"
@@ -1284,12 +1304,12 @@ msgctxt "game_options"
 msgid "30FPS"
 msgstr "30FPS"
 
-#. TRANSLATION: libretro/tyrquake
+#. TRANSLATION: libretro/tyrquake, xenia-edge
 msgctxt "game_options"
 msgid "30fps"
 msgstr "30fps"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "30s (Default)"
 msgstr "30 сек (Default)"
@@ -1364,12 +1384,12 @@ msgctxt "game_options"
 msgid "3840 x 2160"
 msgstr "3840 x 2160"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "3840MB"
 msgstr "3840MB"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "384MB (Default)"
 msgstr "384MB (по умолчанию)"
@@ -1504,7 +1524,7 @@ msgctxt "game_options"
 msgid "4032B"
 msgstr "4032B"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "4096MB"
 msgstr "4096MB"
@@ -1529,7 +1549,7 @@ msgctxt "game_options"
 msgid "42.56 MHz"
 msgstr "42.56 MHz"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "45s"
 msgstr "45 сек"
@@ -1564,7 +1584,7 @@ msgctxt "game_options"
 msgid "486_slow"
 msgstr "486_slow"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame, xenia, xenia-canary, ...
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame, xenia-canary, xenia-edge, ...
 msgctxt "game_options"
 msgid "48MB"
 msgstr "48MB"
@@ -1729,7 +1749,7 @@ msgctxt "game_options"
 msgid "50fps"
 msgstr "50fps"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "5120MB"
 msgstr "5120MB"
@@ -1854,7 +1874,7 @@ msgctxt "game_options"
 msgid "60FPS"
 msgstr "60FPS"
 
-#. TRANSLATION: libretro/tyrquake, xenia-canary
+#. TRANSLATION: libretro/tyrquake, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "60fps"
 msgstr "60fps"
@@ -1864,12 +1884,12 @@ msgctxt "game_options"
 msgid "60ms"
 msgstr "60ms"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "60s"
 msgstr "60 сек"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "6144MB"
 msgstr "6144MB"
@@ -1949,7 +1969,7 @@ msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "72MB"
 msgstr "72MB"
@@ -1969,12 +1989,12 @@ msgctxt "game_options"
 msgid "75fps"
 msgstr "75fps"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "768MB"
 msgstr "768MB"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "768MB (Default)"
 msgstr "768MB (по умолчанию)"
@@ -2164,7 +2184,7 @@ msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
 
-#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame, xenia, xenia-canary, ...
+#. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame, xenia-canary, xenia-edge, ...
 msgctxt "game_options"
 msgid "96MB"
 msgstr "96MB"
@@ -2347,6 +2367,11 @@ msgctxt "game_options"
 msgid "ALSA"
 msgstr "ALSA"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "ALSA (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "ALSAThread"
@@ -2412,7 +2437,7 @@ msgctxt "game_options"
 msgid "ANNOUNCE COURSE SWITCH"
 msgstr ""
 
-#. TRANSLATION: dolphin, rpcs3, rtcw
+#. TRANSLATION: dolphin, rpcs3, rtcw, xenia-edge
 msgctxt "game_options"
 msgid "ANTI-ALIASING"
 msgstr "СГЛАЖИВАНИЕ"
@@ -2536,6 +2561,11 @@ msgstr "ATARI SYSTEM"
 msgctxt "game_options"
 msgid "AUDIO"
 msgstr "АУДИО"
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "AUDIO BACKEND"
+msgstr ""
 
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
@@ -2783,6 +2813,13 @@ msgctxt "game_options"
 msgid "Add color to Game Boy games."
 msgstr "Добавляет цвета в игры Game Boy."
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Additional sharpness intensity when using CAS filter. Higher value = more "
+"sharpening (0.0 to 1.0)."
+msgstr ""
+
 #. TRANSLATION: libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid ""
@@ -2893,7 +2930,7 @@ msgctxt "keys_files"
 msgid "Aim up"
 msgstr "Aim вверх"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Albania"
 msgstr "Albania"
@@ -2903,7 +2940,7 @@ msgctxt "game_options"
 msgid "Albanian"
 msgstr "Албанский"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Algeria"
 msgstr "Algeria"
@@ -2933,7 +2970,7 @@ msgctxt "game_options"
 msgid "All Timers"
 msgstr "Все таймеры"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
 msgstr "Все возможные лицензии (не рекомендуется)"
@@ -2954,6 +2991,13 @@ msgid ""
 "Allow game that support different resolutions to be rendered in specific "
 "resolution."
 msgstr "Разрешить рендеринг игры, поддерживающей разные разрешения."
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Allow games that support different resolutions to be rendered in a specific "
+"resolution."
+msgstr ""
 
 #. TRANSLATION: libretro/gearcoleco
 msgctxt "game_options"
@@ -3184,7 +3228,7 @@ msgctxt "game_options"
 msgid "Anti-aliasing is a technique for smoothing out jagged edges."
 msgstr "Сглаживание - это техника для сглаживания неровных краев."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "Any"
 msgstr "Любой"
@@ -3341,7 +3385,7 @@ msgctxt "game_options"
 msgid "Archimedes 540"
 msgstr "Archimedes 540"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Argentina"
 msgstr "Argentina"
@@ -3351,7 +3395,7 @@ msgctxt "game_options"
 msgid "Arkanoid paddle"
 msgstr "Arkanoid paddle"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Armenia"
 msgstr "Armenia"
@@ -3444,17 +3488,24 @@ msgctxt "keys_files"
 msgid "Attack"
 msgstr "Атака"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Audio backend to use. ALSA is the native Linux audio system; SDL is a cross-"
+"platform fallback."
+msgstr ""
+
 #. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
 msgid "August"
 msgstr "Август"
 
-#. TRANSLATION: eden, ryujinx, xenia, xenia-canary
+#. TRANSLATION: eden, ryujinx, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Australia"
 msgstr "Австралия"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Austria"
 msgstr "Austria"
@@ -3568,7 +3619,7 @@ msgctxt "game_options"
 msgid "Avoids having to manually load side A every time."
 msgstr "Избегает необходимости вручную загружать сторону A каждый раз."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Azerbaijan"
 msgstr "Azerbaijan"
@@ -3858,7 +3909,7 @@ msgctxt "game_options"
 msgid "Badly adjusted"
 msgstr ""
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Bahrain"
 msgstr "Bahrain"
@@ -3942,17 +3993,17 @@ msgctxt "game_options"
 msgid "Before NMI"
 msgstr "До NMI"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Belarus"
 msgstr "Беларусь"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Belgium"
 msgstr "Belgium"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Belize"
 msgstr "Belize"
@@ -3972,7 +4023,7 @@ msgctxt "game_options"
 msgid "Bilinear"
 msgstr "Билинейный"
 
-#. TRANSLATION: cemu, rpcs3, supermodel
+#. TRANSLATION: cemu, rpcs3, supermodel, xenia-edge
 msgctxt "game_options"
 msgid "Bilinear (Default)"
 msgstr "Bilinear (по умолчанию)"
@@ -4099,7 +4150,7 @@ msgctxt "game_options"
 msgid "Bobba Fett Face Player Fix"
 msgstr "Исправление лица Бобба Фетта"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Bolivia"
 msgstr "Bolivia"
@@ -4159,7 +4210,7 @@ msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "Прыгающий ящик"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Brazil"
 msgstr "Brazil"
@@ -4189,7 +4240,7 @@ msgctxt "game_options"
 msgid "Brownish - Travel Wood"
 msgstr "Коричневатый - Travel Wood"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Brunei"
 msgstr "Brunei"
@@ -4207,7 +4258,7 @@ msgctxt "game_options"
 msgid "Buffered rendering"
 msgstr "Буферизованный рендеринг"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Bulgaria"
 msgstr "Bulgaria"
@@ -4374,6 +4425,16 @@ msgctxt "game_options"
 msgid "CARD READER"
 msgstr "КАРТРИДЕР"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "CAS - FidelityFX Sharpening"
+msgstr ""
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "CAS SHARPNESS"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "CD"
@@ -4474,7 +4535,7 @@ msgctxt "game_options"
 msgid "CHOOSE SOUND OUTPUT MODE"
 msgstr "ВЫБРАТЬ РЕЖИМ ВЫВОДА ЗВУКА"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "CLEAR MEMORY PAGE STATE"
 msgstr "CLEAR MEMORY PAGE STATE"
@@ -4529,7 +4590,7 @@ msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
 msgstr "СЛОЖНОСТЬ БОЯ"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
 msgstr "СТРАНА КОНСОЛИ"
@@ -5054,7 +5115,7 @@ msgctxt "game_options"
 msgid "Can smooth the image."
 msgstr "Может сгладить изображение."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Canada"
 msgstr "Canada"
@@ -5176,7 +5237,12 @@ msgctxt "game_options"
 msgid "Change the Gamecube system language."
 msgstr "Изменить язык системы Gamecube."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "Change the console's country from the default of the United States."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "Change the consoles country from the default of the United States."
 msgstr "Изменить страну консоли с установленной по умолчанию - США."
@@ -5249,12 +5315,12 @@ msgctxt "game_options"
 msgid "Charger plugged"
 msgstr ""
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Chile"
 msgstr "Chile"
 
-#. TRANSLATION: eden, ryujinx, xenia, xenia-canary
+#. TRANSLATION: eden, ryujinx, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "China"
 msgstr "Китай"
@@ -5476,7 +5542,12 @@ msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "Выберите тип фильтра текстур."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "Choose to display UI prompts or accept defaults automatically."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "Choose to display UI prompts or accept defaults."
 msgstr "Выбать отображение UI подсказок или принять значения по умолчанию."
@@ -5549,7 +5620,7 @@ msgctxt "game_options"
 msgid "Choose which graphics API library to use."
 msgstr "Выберите, какую API библиотеку использовать."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid ""
 "Choose which graphics API library to use. D3D12 may yield better results "
@@ -5731,7 +5802,7 @@ msgctxt "game_options"
 msgid "Coleco ColecoVision cartridges"
 msgstr "Coleco ColecoVision cartridges"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Colombia"
 msgstr "Colombia"
@@ -5905,7 +5976,7 @@ msgctxt "game_options"
 msgid "Core-powered video filter. Bisqwit filters are CPU heavy."
 msgstr "Видеофильтр на базе ядра. Фильтры Bisqwit нагружают процессор."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Costa Rica"
 msgstr "Costa Rica"
@@ -5920,7 +5991,7 @@ msgctxt "game_options"
 msgid "Creatronic Mega Duck cartridges"
 msgstr "Creatronic Mega Duck cartridges"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Croatia"
 msgstr "Croatia"
@@ -6032,17 +6103,17 @@ msgctxt "game_options"
 msgid "Czech (cz)"
 msgstr "Czech (cz)"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Czech Republic"
 msgstr "Czech Republic"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "D3D12 (Default)"
 msgstr "D3D12 (по умолчанию)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid ""
 "D3D12, read render-to-texture results on the CPU. Needed in some games, but "
@@ -6471,7 +6542,7 @@ msgctxt "game_options"
 msgid "Dendy is a popular Russian clone with unique characteristics."
 msgstr "Dendy - популярный российский клон с уникальными характеристиками."
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Denmark"
 msgstr "Denmark"
@@ -6681,6 +6752,11 @@ msgctxt "game_options"
 msgid "Display cutscene subtitles"
 msgstr ""
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "Display in-game achievement notifications."
+msgstr ""
+
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
 msgid "Display on screen information like savestate, config warning etc..."
@@ -6715,7 +6791,7 @@ msgctxt "game_options"
 msgid "Does not affect the on-screen keyboard."
 msgstr "Не влияет на экранную клавиатуру."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Dominican Republic"
 msgstr "Dominican Republic"
@@ -7163,7 +7239,7 @@ msgctxt "game_options"
 msgid "Easy"
 msgstr "Легко"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Ecuador"
 msgstr "Ecuador"
@@ -7178,7 +7254,7 @@ msgctxt "keys_files"
 msgid "Edit room"
 msgstr "Изменить комнату"
 
-#. TRANSLATION: eden, xenia, xenia-canary
+#. TRANSLATION: eden, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Egypt"
 msgstr "Egypt"
@@ -7188,7 +7264,7 @@ msgctxt "game_options"
 msgid "Eire"
 msgstr "Eire"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "El Salvador"
 msgstr "El Salvador"
@@ -7369,7 +7445,7 @@ msgstr ""
 "Включите автоматический пропуск кадров для повышения производительности на "
 "слабых системах."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid ""
 "Enable cache mount. Can improve performance and compatibility in some games."
@@ -7489,6 +7565,13 @@ msgstr "Включитть уведомления о событиях в кэш�
 msgctxt "game_options"
 msgid "Enable or Disable Intro movie (Enabled by default)."
 msgstr "Включение или отключение интро-ролика (по умолчанию включено)."
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Enable or disable Xenia game patches. These patches can fix graphics and "
+"compatibility problems."
+msgstr ""
 
 #. TRANSLATION: xenia-canary
 msgctxt "game_options"
@@ -7999,7 +8082,7 @@ msgctxt "game_options"
 msgid "Espanol"
 msgstr ""
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Estonia"
 msgstr "Estonia"
@@ -8274,6 +8357,16 @@ msgctxt "game_options"
 msgid "FREE PLAY"
 msgstr "СВОБОДНАЯ ИГРА"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "FSR - FidelityFX Super Resolution"
+msgstr ""
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "FSR SHARPNESS REDUCTION"
+msgstr ""
+
 #. TRANSLATION: mugen
 msgctxt "game_options"
 msgid "FSYNC"
@@ -8308,10 +8401,15 @@ msgstr ""
 "FULLSCREEN обеспечивает вид сверху вниз на игровое поле. Для использования в "
 "кабинете или в многооконном режиме на рабочем столе."
 
-#. TRANSLATION: eden, pcsx2, vita3k
+#. TRANSLATION: eden, pcsx2, vita3k, xenia-edge
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "FXAA Extreme"
+msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -8357,7 +8455,7 @@ msgctxt "game_options"
 msgid "Famicom (FDS)"
 msgstr "Famicom (FDS)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Faroe Islands"
@@ -8434,7 +8532,7 @@ msgctxt "game_options"
 msgid "Final image filtering."
 msgstr "Окончательная фильтрация изображений."
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Finland"
 msgstr "Finland"
@@ -8533,6 +8631,13 @@ msgid ""
 msgstr ""
 "Устранить разрывы экрана. В некоторых играх необходимо включить VSync в "
 "настройках игры."
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Fix screen tearing. With some games you need to turn VSync on in the game's "
+"options."
+msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -8730,7 +8835,7 @@ msgctxt "game_options"
 msgid "Francais"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "France"
 msgstr "France"
@@ -8905,7 +9010,7 @@ msgctxt "game_options"
 msgid "GAME OPTIONS"
 msgstr "ИГРОВЫЕ НАСТРОЙКИ"
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "GAME PATCHES"
 msgstr "ИГРОВЫЕ ПАТЧИ"
@@ -9327,7 +9432,7 @@ msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
 msgstr "Стиль Genesis/Megadrive"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Georgia"
 msgstr "Georgia"
@@ -9342,7 +9447,7 @@ msgctxt "game_options"
 msgid "German (de)"
 msgstr "Немецкий (de)"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Germany"
 msgstr "Germany"
@@ -9422,7 +9527,12 @@ msgctxt "game_options"
 msgid "Gray"
 msgstr "Серый"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "Great Britain"
+msgstr ""
+
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Greece"
 msgstr "Greece"
@@ -9492,7 +9602,7 @@ msgctxt "game_options"
 msgid "Grey - Microvision"
 msgstr "Серый - Microvision"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Guatemala"
 msgstr "Guatemala"
@@ -9502,7 +9612,7 @@ msgctxt "game_options"
 msgid "Gun Only"
 msgstr "Только пистолет"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "HARD TEXTURE CACHE MEMORY LIMIT"
 msgstr "ЖЕСТКИЙ ЛИМИТ ПАМЯТИ ТЕКСТУРНОГО КЭША"
@@ -9826,12 +9936,12 @@ msgctxt "keys_files"
 msgid "Hire staff"
 msgstr "Нанять персонал"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Honduras"
 msgstr "Honduras"
 
-#. TRANSLATION: eden, xenia, xenia-canary
+#. TRANSLATION: eden, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Hong Kong"
 msgstr "Hong Kong"
@@ -9875,7 +9985,7 @@ msgctxt "game_options"
 msgid "Hungarian (hg)"
 msgstr "Hungarian (hg)"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Hungary"
 msgstr "Hungary"
@@ -9975,7 +10085,7 @@ msgctxt "game_options"
 msgid "INTERNAL BASIC INTERPRETER"
 msgstr "ВНУТРЕННИЙ БАЗОВЫЙ ИНТЕРПРЕТАТОР"
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "INTERNAL DISPLAY RESOLUTION"
 msgstr "ВНУТРЕННЕЕ РАЗРЕШЕНИЕ ДИСПЛЕЯ"
@@ -10015,7 +10125,7 @@ msgctxt "game_options"
 msgid "IT"
 msgstr "IT"
 
-#. TRANSLATION: eden, libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: eden, libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Iceland"
 msgstr "Iceland"
@@ -10143,12 +10253,12 @@ msgctxt "game_options"
 msgid "Increases texture quality."
 msgstr "Повышает качество текстур."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "India"
 msgstr "India"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Indonesia"
 msgstr "Indonesia"
@@ -10260,17 +10370,17 @@ msgctxt "game_options"
 msgid "Invert the vertical joystick axis on flight games."
 msgstr "Инвертировать вертикальную ось джойстика в играх про полеты."
 
-#. TRANSLATION: eden, xenia, xenia-canary
+#. TRANSLATION: eden, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Iran"
 msgstr "Iran"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Iraq"
 msgstr "Iraq"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Ireland"
 msgstr "Ireland"
@@ -10280,7 +10390,7 @@ msgctxt "game_options"
 msgid "Irish"
 msgstr "Ирландский"
 
-#. TRANSLATION: eden, xenia, xenia-canary
+#. TRANSLATION: eden, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Israel"
 msgstr "Israel"
@@ -10300,7 +10410,7 @@ msgctxt "game_options"
 msgid "Italiano"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Italy"
 msgstr "Italy"
@@ -10375,7 +10485,7 @@ msgctxt "game_options"
 msgid "JUMP ON B"
 msgstr "ПРЫЖОК НА В"
 
-#. TRANSLATION: eden, xenia, xenia-canary
+#. TRANSLATION: eden, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Jamaica"
 msgstr "Jamaica"
@@ -10405,7 +10515,7 @@ msgctxt "game_options"
 msgid "Japanese [Shift-JIS]"
 msgstr "Japanese [Shift-JIS]"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Jordan"
 msgstr "Jordan"
@@ -10545,7 +10655,7 @@ msgctxt "game_options"
 msgid "Kaeru WFC (178.62.43.212)"
 msgstr "Kaeru WFC (178.62.43.212)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Kazakhstan"
 msgstr "Казахстан"
@@ -10570,7 +10680,7 @@ msgctxt "game_options"
 msgid "Kempston Joystick"
 msgstr "Kempston Joystick"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Kenya"
 msgstr "Kenya"
@@ -10654,7 +10764,7 @@ msgctxt "game_options"
 msgid "Konami Justifiers"
 msgstr "Konami Justifiers"
 
-#. TRANSLATION: eden, ryujinx
+#. TRANSLATION: eden, ryujinx, xenia-edge
 msgctxt "game_options"
 msgid "Korea"
 msgstr "Корея"
@@ -10664,7 +10774,7 @@ msgctxt "game_options"
 msgid "Korean"
 msgstr "Korean"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Kuwait"
 msgstr "Kuwait"
@@ -10674,7 +10784,7 @@ msgctxt "game_options"
 msgid "Kwajalein"
 msgstr "Kwajalein"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Kyrgyzstan"
 msgstr "Kyrgyzstan"
@@ -10880,7 +10990,7 @@ msgctxt "game_options"
 msgid "Latin American Spanish"
 msgstr "Латиноамериканский испанский"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Latvia"
 msgstr "Latvia"
@@ -10895,7 +11005,7 @@ msgctxt "keys_files"
 msgid "Lean right"
 msgstr "Наклониться вправо"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Lebanon"
 msgstr "Lebanon"
@@ -10940,12 +11050,12 @@ msgctxt "game_options"
 msgid "Legacy3D"
 msgstr "Legacy3D"
 
-#. TRANSLATION: eden, xenia, xenia-canary
+#. TRANSLATION: eden, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Libya"
 msgstr "Libya"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
@@ -11044,7 +11154,7 @@ msgctxt "game_options"
 msgid "Linear filtering"
 msgstr "Линейная фильтрация"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Lithuania"
 msgstr "Lithuania"
@@ -11128,7 +11238,7 @@ msgctxt "game_options"
 msgid "Lunar Ignore Brightness Color Fix"
 msgstr "Lunar - Игнорировать яркость, фикс цвета"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Luxembourg"
 msgstr "Luxembourg"
@@ -11273,7 +11383,7 @@ msgctxt "game_options"
 msgid "MODEL TYPE"
 msgstr "ТИП МОДЕЛИ"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "MOUNT CACHE"
 msgstr "MOUNT CACHE"
@@ -11418,10 +11528,15 @@ msgctxt "game_options"
 msgid "Mac SE (4Mb RAM, 2 LD Floppies/HDD)"
 msgstr "Mac SE (4Mb RAM, 2 LD Floppies/HDD)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Macau"
 msgstr "Macau"
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "Macedonia"
+msgstr ""
 
 #. TRANSLATION: xroar
 msgctxt "game_options"
@@ -11476,12 +11591,12 @@ msgctxt "game_options"
 msgid "Makes the dither pattern much less obvious at higher resolutions."
 msgstr "Делает паттерн дизеринга менее заметным при высоких разрешениях."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Malaysia"
 msgstr "Malaysia"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Maldives"
 msgstr "Maldives"
@@ -11530,6 +11645,13 @@ msgid ""
 msgstr ""
 "Вручную установите частоту кадров VSYNC в секунду. В идеале она должна "
 "соответствовать частоте обновления вашего монитора."
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Manually set a framerate cap. Set to 0 to disable. Should match your monitor "
+"refresh rate when VSync is enabled."
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -11621,7 +11743,7 @@ msgctxt "game_options"
 msgid "Maximum Blood"
 msgstr "Максимум крови"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid ""
 "Maximum host texture memory usage (in megabytes) above which old textures "
@@ -11631,7 +11753,7 @@ msgstr ""
 "превышении которого старые текстуры будут уничтожены. Устанавливается ниже "
 "жесткого предела."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid ""
 "Maximum host texture memory usage (in megabytes) above which textures will "
@@ -11804,7 +11926,7 @@ msgctxt "game_options"
 msgid "Merge"
 msgstr "Объединить"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Mexico"
 msgstr "Mexico"
@@ -11874,12 +11996,12 @@ msgctxt "game_options"
 msgid "Modern Fightstick Style"
 msgstr "Стиль Modern Fightstick"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Monaco"
 msgstr "Monaco"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Mongolia"
 msgstr "Mongolia"
@@ -11914,7 +12036,7 @@ msgctxt "game_options"
 msgid "More compatible"
 msgstr "Более совместимый"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Morocco"
 msgstr "Morocco"
@@ -12324,7 +12446,7 @@ msgctxt "game_options"
 msgid "Native (PS2)(Default)"
 msgstr "Родное (PS2) (по умолчанию)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "Native Vulkan"
 msgstr "Native Vulkan"
@@ -12398,7 +12520,7 @@ msgctxt "game_options"
 msgid "Nestopia (RGB)"
 msgstr "Nestopia (RGB)"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Netherlands"
 msgstr "Netherlands"
@@ -12413,7 +12535,7 @@ msgctxt "game_options"
 msgid "Never"
 msgstr "Никогда"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "New Zealand"
 msgstr "New Zealand"
@@ -12458,7 +12580,7 @@ msgctxt "keys_files"
 msgid "Next weapon"
 msgstr "Следующее оружие"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Nicaragua"
 msgstr "Nicaragua"
@@ -12498,10 +12620,15 @@ msgctxt "game_options"
 msgid "No Ubershaders"
 msgstr "Без убершейдеров"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "No licenses enabled"
 msgstr "Лицензии не включены"
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "No limit (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/fbneo
 msgctxt "game_options"
@@ -12548,17 +12675,17 @@ msgctxt "game_options"
 msgid "Normal (interpreter)"
 msgstr "Нормальный (интерпретатор)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "North Macedonia"
 msgstr "North Macedonia"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Norway"
 msgstr "Norway"
 
-#. TRANSLATION: etlegacy, xenia, xenia-canary
+#. TRANSLATION: etlegacy, xenia-canary
 msgctxt "game_options"
 msgid "Norwegian"
 msgstr "Norwegian"
@@ -12815,7 +12942,7 @@ msgctxt "game_options"
 msgid "Olivetti Prodest PC 128S disks (BBC Master Compact)"
 msgstr "Olivetti Prodest PC 128S disks (BBC Master Compact)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Oman"
 msgstr "Oman"
@@ -13508,12 +13635,12 @@ msgctxt "game_options"
 msgid "Paddles"
 msgstr "Paddles"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Pakistan"
 msgstr "Pakistan"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Panama"
 msgstr "Panama"
@@ -13533,7 +13660,7 @@ msgctxt "game_options"
 msgid "ParaLLEl-RDP"
 msgstr "ParaLLEl-RDP"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Paraguay"
 msgstr "Paraguay"
@@ -13548,7 +13675,14 @@ msgctxt "game_options"
 msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 msgstr "Parasite Eve 2/Vandal Hearts 1&2 - фикс"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Part of the host texture memory budget (in megabytes) reserved for render-to-"
+"texture targets."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid ""
 "Part of the host texture memory budget (in megabytes) that will be scaled by "
@@ -13698,12 +13832,12 @@ msgctxt "game_options"
 msgid "Performance"
 msgstr "Производительность"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Peru"
 msgstr "Peru"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Philippines"
 msgstr "Philippines"
@@ -13838,7 +13972,7 @@ msgctxt "game_options"
 msgid "Pointer"
 msgstr "Указатель"
 
-#. TRANSLATION: eden, libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: eden, libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Poland"
 msgstr "Poland"
@@ -13848,7 +13982,7 @@ msgctxt "game_options"
 msgid "Poland (pl)"
 msgstr "Poland (pl)"
 
-#. TRANSLATION: doom3, etlegacy, shadps4, xenia, xenia-canary, ...
+#. TRANSLATION: doom3, etlegacy, shadps4, xenia-canary, xenia-edge, ...
 msgctxt "game_options"
 msgid "Polish"
 msgstr "Polish"
@@ -13888,7 +14022,7 @@ msgctxt "game_options"
 msgid "Portrait"
 msgstr "Портрет"
 
-#. TRANSLATION: eden, libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: eden, libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Portugal"
 msgstr "Portugal"
@@ -13918,6 +14052,18 @@ msgctxt "game_options"
 msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
 msgstr ""
 "Положение сенсорной панели wii относительно дисаплея для настоящих wiimotes."
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "Post-processing anti-aliasing filter to smooth jagged edges."
+msgstr ""
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Post-processing filter applied after rendering. CAS adds sharpening only. "
+"FSR upscales from a lower resolution for better performance."
+msgstr ""
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -14065,7 +14211,7 @@ msgstr ""
 "существующие ошибки поворотных контроллеров, обнаруженные в аппаратном "
 "обеспечении."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Puerto Rico"
 msgstr "Puerto Rico"
@@ -14140,7 +14286,7 @@ msgctxt "game_options"
 msgid "QUAD RENDERING"
 msgstr "QUAD RENDERING"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "QUERY OCCLUSION"
 msgstr "QUERY OCCLUSION"
@@ -14150,7 +14296,7 @@ msgctxt "game_options"
 msgid "QUIT ON HOST"
 msgstr "ВЫЙТИ НА ХОСТЕ"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Qatar"
 msgstr "Qatar"
@@ -14215,7 +14361,7 @@ msgctxt "game_options"
 msgid "READ FRAMEBUFFER EVERY FRAME (GLIDE64MK2)"
 msgstr "ЧТЕНИЕ КАЖДОГО КАДРА ИЗ БУФЕРА (GLIDE64MK2)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "READBACK RESOLVE"
 msgstr "READBACK RESOLVE"
@@ -14285,10 +14431,15 @@ msgctxt "game_options"
 msgid "RENDER RESOLUTION (SCALING)"
 msgstr "РАЗРЕШЕНИЕ РЕНДЕРА (МАСШТАБИРОВАНИЕ)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "RENDER TARGET PATH"
 msgstr "RENDER TARGET PATH"
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "RENDER-TO-TEXTURE MEMORY BUDGET"
+msgstr ""
 
 #. TRANSLATION: rtcw, scummvm
 msgctxt "game_options"
@@ -14420,7 +14571,7 @@ msgctxt "game_options"
 msgid "ROTATION"
 msgstr ""
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "ROV"
 msgstr "ROV"
@@ -14430,7 +14581,7 @@ msgctxt "game_options"
 msgid "RSP PLUGIN"
 msgstr "RSP ПЛАГИН"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "RTV (Default)"
 msgstr "RTV (по умолчанию)"
@@ -14522,7 +14673,7 @@ msgctxt "game_options"
 msgid "Reduces wobbly polygons & warping textures."
 msgstr "Уменьшает шатание полигонов и деформацию текстур."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid ""
 "Refresh state of memory pages to enable gpu written data. (Use for 'Team "
@@ -14572,7 +14723,7 @@ msgctxt "game_options"
 msgid "Removes loading but can add possible glitches/crashes."
 msgstr "Убирает загрузку, но может добавить глюки/вылеты."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid ""
 "Render target emulation path to use on Direct3D 12. Try changing if you have "
@@ -14763,7 +14914,7 @@ msgctxt "game_options"
 msgid "Roller Controller"
 msgstr ""
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Romania"
 msgstr "Romania"
@@ -14867,7 +15018,7 @@ msgstr ""
 "\"Скиннинг\" выполняется на CPU вместо GPU - объединяет вызовы отрисовки и "
 "часто улучшает производительность."
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Russia"
 msgstr "Россия"
@@ -15042,6 +15193,11 @@ msgctxt "game_options"
 msgid "SCRIPT MODULES"
 msgstr "МОДУЛИ СКРИПТА"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "SDL"
+msgstr "SDL"
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "SDL CONFIG"
@@ -15127,7 +15283,7 @@ msgctxt "game_options"
 msgid "SHARE MAME ARTWORK"
 msgstr "ОБЩИЕ МАМЕ АРТЫ"
 
-#. TRANSLATION: xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "SHOW ACHIEVEMENT MESSAGES"
 msgstr "ПОКАЗЫВАТЬ СООБЩЕНИЯ О ДОСТИЖЕНИЯХ"
@@ -15282,12 +15438,12 @@ msgctxt "game_options"
 msgid "SNES Style"
 msgstr "Стиль SNES"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "SOFT TEXTURE CACHE MEMORY LIMIT"
 msgstr "SOFT TEXTURE CACHE MEMORY LIMIT"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "SOFT TEXTURE CACHE MEMORY TIMEOUT"
 msgstr "SOFT TEXTURE CACHE MEMORY TIMEOUT"
@@ -15552,7 +15708,7 @@ msgctxt "game_options"
 msgid "Saturn Pad"
 msgstr "Saturn Pad"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "Saudi Arabia"
@@ -15632,7 +15788,14 @@ msgctxt "keys_files"
 msgid "Secondary attack"
 msgstr "Дополнительная атака"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Seconds a texture should be unused before it is eligible for deletion when "
+"above the soft limit."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid ""
 "Seconds a texture should be unused to be considered old enough to be deleted "
@@ -16127,6 +16290,13 @@ msgctxt "game_options"
 msgid "Sharpen More"
 msgstr "Больше резкости"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid ""
+"Sharpness reduction when using FSR. Lower = sharper, higher = softer (0.0 to "
+"2.0). Default 0.2."
+msgstr ""
+
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
 msgid "Shoot"
@@ -16324,7 +16494,7 @@ msgctxt "game_options"
 msgid "Sinclair 2 controller set to AUTO."
 msgstr "Контроллер Sinclair 2 установлен на AUTO."
 
-#. TRANSLATION: eden, xenia, xenia-canary
+#. TRANSLATION: eden, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Singapore"
 msgstr "Singapore"
@@ -16451,12 +16621,12 @@ msgctxt "game_options"
 msgid "Slovak"
 msgstr "Словацкий"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Slovakia"
 msgstr "Slovakia"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Slovenia"
 msgstr "Slovenia"
@@ -16652,17 +16822,17 @@ msgstr ""
 "Звуковой генератор. MAME работает быстрее, а Nuked - точнее. В оригинальной "
 "модели использовался YM2612, а в более поздних ревизиях - YM3438."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "South Africa"
 msgstr "South Africa"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "South Korea"
 msgstr "South Korea"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Spain"
 msgstr "Spain"
@@ -17063,12 +17233,12 @@ msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Меняет положение экранов местами."
 
-#. TRANSLATION: libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Sweden"
 msgstr "Sweden"
 
-#. TRANSLATION: etlegacy, scummvm, shadps4, xenia, xenia-canary, ...
+#. TRANSLATION: etlegacy, scummvm, shadps4, xenia-canary
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "Swedish"
@@ -17098,7 +17268,7 @@ msgctxt "game_options"
 msgid "Switches the game to multiplayer mode."
 msgstr "Переключает игру в многопользовательский режим."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Switzerland"
 msgstr "Switzerland"
@@ -17121,7 +17291,7 @@ msgstr ""
 "Синхронизация сохранений GB2Player/GBC2Player с сохранениями из \"saves/gb\" "
 "или \"saves/gbc\"."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Syria"
 msgstr "Syria"
@@ -17236,7 +17406,7 @@ msgctxt "game_options"
 msgid "TEXTURE FILTERING MODE"
 msgstr "РЕЖИМ ФИЛЬТРАЦИИ ТЕКСТУР"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "TEXTURE MEMORY SCALE SIZE"
 msgstr "TEXTURE MEMORY SCALE SIZE"
@@ -17466,7 +17636,7 @@ msgctxt "game_options"
 msgid "TWB64 - Pack 2"
 msgstr "TWB64 - Pack 2"
 
-#. TRANSLATION: eden, ryujinx, xenia, xenia-canary
+#. TRANSLATION: eden, ryujinx, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Taiwan"
 msgstr "Тайвань"
@@ -17566,7 +17736,7 @@ msgctxt "game_options"
 msgid "Thai"
 msgstr "Thai"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Thailand"
 msgstr "Thailand"
@@ -17634,7 +17804,7 @@ msgctxt "game_options"
 msgid "The month of your birthay."
 msgstr "Месяц вашего рождения."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid ""
 "The sample count of every tile will be incremented on every EVENT_WRITE_ZPD "
@@ -17663,7 +17833,7 @@ msgctxt "game_options"
 msgid "This can be convenient if you're using laserdiscs."
 msgstr "Может быть удобно, если вы используете лазерные диски."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid ""
 "This option enables the ability to play Xbox Live Arcade games. May cause "
@@ -17889,7 +18059,12 @@ msgctxt "game_options"
 msgid "Trilinear (PS2)"
 msgstr "Трилинейная (PS2)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "Trinidad"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "Trinidad and Tobago"
 msgstr "Trinidad and Tobago"
@@ -17904,17 +18079,17 @@ msgctxt "game_options"
 msgid "True Colour"
 msgstr "True Colour"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Tunisia"
 msgstr "Tunisia"
 
-#. TRANSLATION: eden, libretro/dosbox_pure, xenia, xenia-canary
+#. TRANSLATION: eden, libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Turkey"
 msgstr "Turkey"
 
-#. TRANSLATION: easyrpg, etlegacy, shadps4, xenia, xenia-canary, ...
+#. TRANSLATION: easyrpg, etlegacy, shadps4, xenia-canary
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "Turkish"
@@ -17981,6 +18156,11 @@ msgctxt "game_options"
 msgid "Type of joystick connected to the game port."
 msgstr "Тип джойстика, подключенного к порту."
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "UAE"
+msgstr ""
+
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
 msgid "UBERSHADER LIGHTING OVERRIDE"
@@ -18021,7 +18201,7 @@ msgctxt "game_options"
 msgid "UI KEYS"
 msgstr "КНОПКИ ИНТЕРФЕЙСА"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "UI PROMPTS"
 msgstr "UI ПОДСКАЗКИ"
@@ -18040,6 +18220,11 @@ msgstr "АПСКЕЙЛ ФИЛЬТР"
 msgctxt "game_options"
 msgid "UPSCALE MODE"
 msgstr "РЕЖИМ АПСКЕЙЛА"
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "UPSCALING & SHARPENING"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -18316,7 +18501,7 @@ msgctxt "game_options"
 msgid "UTC-9"
 msgstr "UTC-9"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Ukraine"
 msgstr "Україна"
@@ -18336,20 +18521,25 @@ msgctxt "game_options"
 msgid "Undocked"
 msgstr "Вне дока"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "United Arab Emirates"
 msgstr "United Arab Emirates"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary
 msgctxt "game_options"
 msgid "United Kingdom"
 msgstr "United Kingdom"
 
-#. TRANSLATION: lindbergh-loader, xenia, xenia-canary
+#. TRANSLATION: lindbergh-loader, xenia-canary
 msgctxt "game_options"
 msgid "United States"
 msgstr "United States"
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "United States (Default)"
+msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -18445,7 +18635,7 @@ msgctxt "game_options"
 msgid "Upscale the rendering resolution to match the display size."
 msgstr ""
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Uruguay"
 msgstr "Uruguay"
@@ -18729,7 +18919,7 @@ msgctxt "game_options"
 msgid "Usually not much faster than single core mode."
 msgstr "Обычно не намного быстрее, чем одноядерный режим."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Uzbekistan"
 msgstr "Uzbekistan"
@@ -18909,6 +19099,11 @@ msgctxt "game_options"
 msgid "VSYNC FPS"
 msgstr "VSYNC FPS"
 
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "VSYNC FPS LIMIT"
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "VSync and Audio Resampling need to be enabled."
@@ -18934,7 +19129,7 @@ msgctxt "game_options"
 msgid "Vastly improves the speed of buffer maps."
 msgstr "Значительно улучшает скорость карт буфера."
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Venezuela"
 msgstr "Venezuela"
@@ -18979,7 +19174,7 @@ msgctxt "game_options"
 msgid "Videopac+ G7400 (France)"
 msgstr "Videopac+ G7400 (France)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Vietnam"
 msgstr "Vietnam"
@@ -19365,12 +19560,12 @@ msgctxt "game_options"
 msgid "X2"
 msgstr "X2"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "XBLA license enabled (Default)"
 msgstr "XBLA лицензия включена (по умолчанию)"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "XBOX LIVE ARCADE"
 msgstr "XBOX LIVE ARCADE"
@@ -19410,7 +19605,7 @@ msgctxt "game_options"
 msgid "Yellow"
 msgstr "Жёлтый"
 
-#. TRANSLATION: xenia, xenia-canary
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Yemen"
 msgstr "Yemen"
@@ -19439,6 +19634,11 @@ msgstr "МАСШТАБ (СКРЫТЬ РАМКИ)"
 msgctxt "game_options"
 msgid "ZOOM/CROP (HIDE BORDERS)"
 msgstr "МАСШТАБИРОВАНИЕ (СКРЫТИЕ РАМКИ)"
+
+#. TRANSLATION: xenia-edge
+msgctxt "game_options"
+msgid "Zimbabwe"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -21861,10 +22061,6 @@ msgstr "жёлтая/синяя"
 #~ msgstr ""
 #~ "Запустите игру в тестовом режиме, чтобы настроить некоторые параметры "
 #~ "игры."
-
-#~ msgctxt "game_options"
-#~ msgid "SDL"
-#~ msgstr "SDL"
 
 #~ msgctxt "game_options"
 #~ msgid "SDL TEXTUREACCESS STREAMING"

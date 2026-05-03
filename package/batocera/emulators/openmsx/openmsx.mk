@@ -3,8 +3,8 @@
 # openmsx
 #
 ################################################################################
-# Version: Commits on Apr 27, 2026
-OPENMSX_VERSION = 2394e5bbe27621bb5ba38bc4a9d81203212b9b09
+# Version: Commits on Apr 28, 2026
+OPENMSX_VERSION = cba3365aacc9adf769cd45ae42f36564bcf3dcba
 OPENMSX_SITE = $(call github,openMSX,openMSX,$(OPENMSX_VERSION))
 OPENMSX_LICENSE = GPLv2
 OPENMSX_DEPENDENCIES = freetype libogg libpng libtheora libvorbis sdl2 sdl2_ttf tcl zlib
@@ -51,7 +51,7 @@ endif
 define OPENMSX_TCL_CONFIG_FIXUP
 	rm -rf $(TARGET_DIR)/usr/share/openmsx
 	cp $(STAGING_DIR)/usr/lib/tclConfig.sh $(STAGING_DIR)/usr/lib/tclConfig.sh.bak
-	sed -i "s@TCL_LIB_SPEC='-L/usr/lib -ltcl8.6'@TCL_LIB_SPEC='-L$(STAGING_DIR)/usr/lib -ltcl8.6'@" $(STAGING_DIR)/usr/lib/tclConfig.sh
+	sed -i "s@TCL_LIB_SPEC='-L/usr/lib -ltcl9.0'@TCL_LIB_SPEC='-L$(STAGING_DIR)/usr/lib -ltcl9.0'@" $(STAGING_DIR)/usr/lib/tclConfig.sh
 	sed -i "s@TCL_INCLUDE_SPEC='-I/usr/include'@TCL_INCLUDE_SPEC='-I$(STAGING_DIR)/usr/include'@" $(STAGING_DIR)/usr/lib/tclConfig.sh
 endef
 

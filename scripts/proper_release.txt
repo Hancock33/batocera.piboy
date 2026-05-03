@@ -17,12 +17,14 @@ faudio.mk
 fdupes.mk
 fheroes2.mk
 gamecon_gpio_rpi.mk
+glslang.mk
 iir.mk
 kodi-pvr-freebox
 ledspicer.mk
 libfreeaptx.mk
 libgme.mk
 libretro-amiberry.mk
+libretro-freej2me.mk
 libretro-mame.mk
 libretro-mgba.mk
 libxmp.mk
@@ -39,6 +41,7 @@ pcsx2.mk
 pironman5.mk
 pysdl2.mk
 pysdl3.mk
+python-glslang.mk
 pywebview.mk
 rapidyaml.mk
 rclone.mk

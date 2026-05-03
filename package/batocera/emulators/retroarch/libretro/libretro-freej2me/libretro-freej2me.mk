@@ -3,11 +3,12 @@
 # libretro-freej2me
 #
 ################################################################################
-# Version: Commits on Apr 21, 2026
-LIBRETRO_FREEJ2ME_VERSION = f105dcdb33108e7a27be2d753a1c81afd7a9380e
+# Version: Commits on Dec 24, 2025
+LIBRETRO_FREEJ2ME_VERSION = 1.52
 LIBRETRO_FREEJ2ME_SITE = $(call github,TASEmulators,freej2me-plus,$(LIBRETRO_FREEJ2ME_VERSION))
 LIBRETRO_FREEJ2ME_LICENSE = GPL-3.0
 LIBRETRO_FREEJ2ME_EMULATOR_INFO = freej2me.libretro.core.yml
+LIBRETRO_FREEJ2ME_DEPENDENCIES = openjdk
 
 define LIBRETRO_FREEJ2ME_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) CFLAGS="" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/src/libretro/ -f Makefile platform="unix"

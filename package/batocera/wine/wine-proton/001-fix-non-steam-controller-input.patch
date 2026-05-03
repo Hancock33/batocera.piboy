@@ -1,71 +1,69 @@
 diff --git a/loader/wine.inf.in b/loader/wine.inf.in
-index d0a0ffd0774..ece6bb197a4 100644
+index 8437ee953dc..62a347dd7e1 100644
 --- a/loader/wine.inf.in
 +++ b/loader/wine.inf.in
-@@ -75,7 +75,8 @@ AddReg=\
-     Tapi,\
-     ThemeManager,\
-     VCRuntime.ntx86,\
--    LicenseInformation
-+    LicenseInformation,\
+@@ -76,7 +76,8 @@ AddReg=\
+     Services, \
+     SessionMgr,\
+     SteamClient,\
+-    ThemeManager
++    ThemeManager,\
 +    WineBatoOverrides
  
- [DefaultInstall.NT]
- RegisterDlls=RegisterDllsSection
-@@ -106,7 +107,8 @@ AddReg=\
-     VersionInfo,\
-     LicenseInformation,\
-     NVIDIANGX, \
--    ProtonOverrides
-+    ProtonOverrides, \
+ [DefaultInstall]
+ Needs=BaseInstall
+@@ -90,13 +91,15 @@ WineFakeDlls=FakeDllsWin32
+ AddReg=\
+     Packages,\
+     VCRuntime.ntx86,\
+-    VersionInfo
++    VersionInfo,\
++    WineBatoOverrides
+ 
+ [DefaultInstall.ntarm]
+ Needs=BaseInstall
+ WineFakeDlls=FakeDllsWin32
+ AddReg=\
+-    VersionInfo
++    VersionInfo,\
 +    WineBatoOverrides
  
  [DefaultInstall.ntamd64]
- RegisterDlls=RegisterDllsSection
-@@ -139,7 +141,8 @@ AddReg=\
-     LicenseInformation,\
-     NVIDIANGX, \
-     TTS, \
--    ProtonOverrides
-+    ProtonOverrides, \
+ Needs=BaseInstall
+@@ -106,7 +109,8 @@ AddReg=\
+     Packages.ntamd64,\
+     SteamClient64, \
+     VCRuntime.ntamd64,\
+-    VersionInfo
++    VersionInfo,\
 +    WineBatoOverrides
  
  [DefaultInstall.ntarm64]
+ Needs=BaseInstall
+@@ -117,7 +121,8 @@ AddReg=\
+     SteamClient64, \
+     VCRuntime.ntamd64,\
+     VCRuntime.ntarm64,\
+-    VersionInfo
++    VersionInfo,\
++    WineBatoOverrides
+ 
+ [BaseWow64Install]
  RegisterDlls=RegisterDllsSection
-@@ -172,7 +175,8 @@ AddReg=\
+@@ -130,7 +135,8 @@ AddReg=\
      LicenseInformation,\
-     NVIDIANGX, \
-     TTS, \
--    ProtonOverrides
-+    ProtonOverrides, \
+     MCI,\
+     Misc,\
+-    VersionInfo
++    VersionInfo,\
 +    WineBatoOverrides
  
  [Wow64Install.ntx86]
- RegisterDlls=RegisterDllsSection
-@@ -195,7 +199,8 @@ AddReg=\
-     VersionInfo,\
-     LicenseInformation,\
-     NVIDIANGX, \
--    ProtonOverrides
-+    ProtonOverrides, \
-+    WineBatoOverrides
- 
- [Wow64Install.ntarm]
- RegisterDlls=RegisterDllsSection
-@@ -212,7 +217,8 @@ AddReg=\
-     SteamClient64,\
-     Tapi,\
-     VersionInfo,\
--    LicenseInformation
-+    LicenseInformation, \
-+    WineBatoOverrides
- 
- [DefaultInstall.Services]
- AddService=BITS,0,BITSService
-@@ -3287,3 +3293,9 @@ HKLM,Software\Wow6432Node\lucasarts entertainment company llc\Star Wars: Episode
+ Needs=BaseWow64Install
+@@ -1753,3 +1759,9 @@ HKLM,Software\Khronos\OpenXR\1,"ActiveRuntime",,"C:\openxr\wineopenxr64.json"
  ;;Other app-specific overrides
- HKCU,Software\Wine\AppDefaults\Pentiment.exe\DllOverrides,"SpeechSynthesisWrapper",,"disabled"
- HKCU,Software\Wine\AppDefaults\Maine-Win64-Shipping.exe\DllOverrides,"SpeechSynthWrapper",0x2,"disabled"
+ HKCU,Software\Wine\AppDefaults\Pentiment.exe\DllOverrides,"SpeechSynthesisWrapper",4,
+ HKCU,Software\Wine\AppDefaults\Maine-Win64-Shipping.exe\DllOverrides,"SpeechSynthWrapper",4,
 +
 +[WineBatoOverrides]
 +HKLM,System\CurrentControlSet\Services\winebus,"DisableHidraw",0x10001,"1"

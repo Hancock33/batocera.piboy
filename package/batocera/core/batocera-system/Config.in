@@ -190,6 +190,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_EXFAT                                # exfat
     select BR2_PACKAGE_EXFAT_UTILS                          # exfat
     select BR2_PACKAGE_FAKE_HWCLOCK                         # Save/restore system clock on machines without working RTC hardware
+    select BR2_PACKAGE_FASTFETCH                            # Show version information
     select BR2_PACKAGE_FBDUMP                               # tool to capture snapshots from the Linux kernel framebuffer device and write them out as a PPM file
     select BR2_PACKAGE_FBGRAB                               # framebuffer screenshot program, capturing the linux framebuffer and converting it to a png-picture
     select BR2_PACKAGE_FBV                                  # very simple graphic file viewer for the framebuffer console, capable of displaying GIF, JPEG, PNG and BMP files using libungif, libjpeg and libpng
@@ -862,7 +863,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 
     # 3DS
     select BR2_PACKAGE_AZAHAR                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_LIBRETRO_CITRA                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_LIBRETRO_AZAHAR                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_PANDA3DS                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # PSP
@@ -996,8 +997,8 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_EDUKE32                              if  BR2_PACKAGE_BATOCERA_GLES3                   # Duke3D / Shadow Warrior / Ion fury
 
     # GZDoom and Raze require both 64-bit arch (x86,arm,riscv,....) AND OpenGL or GLES 3.0
-    select BR2_PACKAGE_GZDOOM                               if BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
-    select BR2_PACKAGE_RAZE                                 if BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
+    select BR2_PACKAGE_GZDOOM                               if  BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
+    select BR2_PACKAGE_RAZE                                 if  BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
 
     # ZMusic: standalone library used by gzdoom and raze source ports
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
@@ -1235,8 +1236,8 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_XEMU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Microsoft Xbox 360
-    select BR2_PACKAGE_XENIA                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && BR2_PACKAGE_BATOCERA_WINE_SYSTEMS
     select BR2_PACKAGE_XENIA_CANARY                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && BR2_PACKAGE_BATOCERA_WINE_SYSTEMS
+    select BR2_PACKAGE_XENIA_EDGE                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Sony PS2
     select BR2_PACKAGE_PCSX2                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1412,8 +1413,6 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_BSNES_JG                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_CANNONBALL
     select BR2_PACKAGE_LIBRETRO_FREEJ2ME                    if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
-    select BR2_PACKAGE_OPENJDK                              if  BR2_PACKAGE_LIBRETRO_FREEJ2ME
-    select BR2_PACKAGE_OPENJDK_X11                          if  BR2_PACKAGE_LIBRETRO_FREEJ2ME
     select BR2_PACKAGE_LIBRETRO_GONG
     select BR2_PACKAGE_LIBRETRO_JAXE
     select BR2_PACKAGE_LIBRETRO_JUMPNBUMP
@@ -1690,7 +1689,7 @@ config BR2_PACKAGE_BATOCERA_QT6
     select BR2_PACKAGE_QT6BASE_PRINTSUPPORT
     select BR2_PACKAGE_QT6BASE_SQL
     select BR2_PACKAGE_QT6BASE_TEST
-    select BR2_PACKAGE_QT6BASE_VULKAN                       if BR2_PACKAGE_BATOCERA_VULKAN
+    select BR2_PACKAGE_QT6BASE_VULKAN                       if  BR2_PACKAGE_BATOCERA_VULKAN
     select BR2_PACKAGE_QT6BASE_WIDGETS
     select BR2_PACKAGE_QT6BASE_XML
     select BR2_PACKAGE_QT6BASE_OPENGL                       if  BR2_PACKAGE_HAS_LIBGL
@@ -1811,7 +1810,7 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     # broadcom bluetooth firware
-    select BR2_PACKAGE_BROADCOM_BT_FIRMWARE                 if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_BROADCOM_BT_FIRMWARE                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 config BR2_PACKAGE_BATOCERA_SDL2
     bool "BATOCERA SDL2"

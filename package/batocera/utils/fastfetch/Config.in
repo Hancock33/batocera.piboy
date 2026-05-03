@@ -1,0 +1,8 @@
+config BR2_PACKAGE_FASTFETCH
+	bool "fastfetch"
+
+	help
+	  A maintained, feature-rich and performance oriented,
+	  neofetch like system information tool.
+
+	  https://github.com/fastfetch-cli/fastfetch.git

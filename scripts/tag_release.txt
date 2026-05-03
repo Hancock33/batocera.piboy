@@ -1,4 +1,5 @@
-﻿aic8800.mk
+﻿7zip.mk
+aic8800.mk
 alllinuxfirmwares.mk
 alsa-topology-conf.mk
 alsa-ucm-conf.mk
@@ -16,6 +17,7 @@ corsixth.mk
 cxxopts.mk
 drastic.mk
 ecm.mk
+fastfetch.mk
 flatpak.mk
 freepats.mk
 fsuae.mk
@@ -52,7 +54,6 @@ sdl3.mk
 semver.mk
 sf_rpi_status.mk
 shaderc.mk
-shadps4.mk
 sonic3-air.mk
 spirv-llvm-translator.mk
 supertux2.mk

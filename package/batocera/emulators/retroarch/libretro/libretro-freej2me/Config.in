@@ -1,6 +1,8 @@
 config BR2_PACKAGE_LIBRETRO_FREEJ2ME
 	bool "libretro-freej2me"
 	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_OPENJDK
+	select BR2_PACKAGE_OPENJDK_X11
 
 	help
 	  A free J2ME emulator.

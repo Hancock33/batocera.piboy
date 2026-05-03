@@ -48,8 +48,7 @@ class XeniaGenerator(Generator):
         xeniaConfig = CONFIGS / 'xenia'
         xeniaCache = CACHE / 'xenia'
         xeniaSaves = SAVES / 'xbox360'
-        emupath = wine_runner.bottle_dir / 'xenia'
-        canarypath = wine_runner.bottle_dir / 'xenia-canary'
+        emupath = wine_runner.bottle_dir / 'xenia-canary'
 
         core = system.config.core
 
@@ -81,26 +80,18 @@ class XeniaGenerator(Generator):
 
         # create dir & copy xenia exe to wine bottle as necessary
         if not emupath.exists():
-            shutil.copytree('/usr/bin/xenia', emupath)
-        if not canarypath.exists():
-            shutil.copytree('/usr/bin/xenia-canary', canarypath)
-        # check binary then copy updated xenia exe's as necessary
-        if not filecmp.cmp('/usr/bin/xenia/xenia.exe', emupath / 'xenia.exe'):
-            shutil.copytree('/usr/bin/xenia', emupath, dirs_exist_ok=True)
+            shutil.copytree('/usr/bin/xenia-canary', emupath)
         # xenia canary - copy patches directory also
-        if not filecmp.cmp('/usr/bin/xenia-canary/xenia_canary.exe', canarypath / 'xenia_canary.exe'):
-            shutil.copytree('/usr/bin/xenia-canary', canarypath, dirs_exist_ok=True)
-        if not (canarypath / 'patches').exists():
-            shutil.copytree('/usr/bin/xenia-canary', canarypath, dirs_exist_ok=True)
+        if not filecmp.cmp('/usr/bin/xenia-canary/xenia_canary.exe', emupath / 'xenia_canary.exe'):
+            shutil.copytree('/usr/bin/xenia-canary', emupath, dirs_exist_ok=True)
+        if not (emupath / 'patches').exists():
+            shutil.copytree('/usr/bin/xenia-canary', emupath, dirs_exist_ok=True)
         # update patches accordingly
-        self.sync_directories(Path('/usr/bin/xenia-canary'), canarypath)
+        self.sync_directories(Path('/usr/bin/xenia-canary'), emupath)
 
         # create portable txt file to try & stop file spam
         if not (emupath / 'portable.txt').exists():
             with (emupath / 'portable.txt').open('w'):
-                pass
-        if not (canarypath / 'portable.txt').exists():
-            with (canarypath / 'portable.txt').open('w'):
                 pass
 
         wine_runner.install_wine_trick('xeniadisclaimer')
@@ -157,12 +148,8 @@ class XeniaGenerator(Generator):
 
         # adjust the config toml file accordingly
         config: dict[str, dict[str, Any]] = {}
-        if core == 'xenia-canary':
-            toml_file = canarypath / 'xenia-canary.config.toml'
-            os.chdir(Path(canarypath))
-        else:
-            toml_file = emupath / 'xenia.config.toml'
-            os.chdir(Path(emupath))
+        toml_file = emupath / 'xenia-canary.config.toml'
+        os.chdir(Path(emupath))
         if toml_file.is_file():
             with toml_file.open() as f:
                 config: dict[str, dict[str, Any]] = toml.load(f)
@@ -280,7 +267,7 @@ class XeniaGenerator(Generator):
         rom_name = re.sub(r'\(.*?\)', '', rom_name)
         if system.config.get_bool('xenia_patches'):
             # pattern to search for matching .patch.toml files
-            matching_files = [file_path for file_path in (canarypath / 'patches').glob(f'*{rom_name}*.patch.toml') if re.search(rom_name, file_path.name, re.IGNORECASE)]
+            matching_files = [file_path for file_path in (emupath / 'patches').glob(f'*{rom_name}*.patch.toml') if re.search(rom_name, file_path.name, re.IGNORECASE)]
             if matching_files:
                 for file_path in matching_files:
                     _logger.debug('Enabling patches for: %s', file_path)
@@ -299,15 +286,9 @@ class XeniaGenerator(Generator):
 
         # now setup the command array for the emulator
         if configure_emulator(rom):
-            if core == 'xenia-canary':
-                commandArray = [wine_runner.wine, canarypath / 'xenia_canary.exe']
-            else:
-                commandArray = [wine_runner.wine, emupath / 'xenia.exe']
+            commandArray = [wine_runner.wine, emupath / 'xenia_canary.exe']
         else:
-            if core == 'xenia-canary':
-                commandArray = [wine_runner.wine, canarypath / 'xenia_canary.exe', f'z:{rom}']
-            else:
-                commandArray = [wine_runner.wine, emupath / 'xenia.exe', f'z:{rom}']
+            commandArray = [wine_runner.wine, emupath / 'xenia_canary.exe', f'z:{rom}']
 
         environment = wine_runner.get_environment()
         environment.update(

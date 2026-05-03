@@ -1,5 +1,5 @@
 diff --git a/sdl/Makefile.libretro b/sdl/Makefile.libretro
-index 59b502c..e149219 100755
+index 5e16460..f733b43 100644
 --- a/sdl/Makefile.libretro
 +++ b/sdl/Makefile.libretro
 @@ -13,12 +13,12 @@ GIT_HASH := $(NP2KAI_HASH)
@@ -30,8 +30,13 @@ index 59b502c..e149219 100755
  	# Pi2
  	else ifneq (,$(findstring rpi2,$(platform)))
  		CFLAGS += -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
-@@ -109,6 +109,23 @@ else ifneq (,$(findstring rpi,$(platform)))
+@@ -107,8 +107,28 @@ else ifneq (,$(findstring rpi,$(platform)))
+ 	# Pi4
+ 	else ifneq (,$(findstring rpi4,$(platform)))
  		CFLAGS += -mcpu=cortex-a72 -fdata-sections -ffunction-sections -Wl,--gc-sections -fmerge-all-constants
++	# Pi5
++	else ifneq (,$(findstring rpi5,$(platform)))
++		CFLAGS += -mcpu=cortex-a76 -mtune=cortex-a76 -fdata-sections -ffunction-sections -Wl,--gc-sections -fmerge-all-constants
  	endif
  
 +# ROCKPRO64

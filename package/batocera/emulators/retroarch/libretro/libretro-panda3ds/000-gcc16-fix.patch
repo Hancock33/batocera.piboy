@@ -1,0 +1,13 @@
+Submodule third_party/elfio contains modified content
+diff --git a/third_party/elfio/elfio/elfio.hpp b/third_party/elfio/elfio/elfio.hpp
+index 1329342..115d236 100644
+--- a/third_party/elfio/elfio/elfio.hpp
++++ b/third_party/elfio/elfio/elfio.hpp
+@@ -32,6 +32,7 @@ THE SOFTWARE.
+ #include <vector>
+ #include <deque>
+ #include <memory>
++#include <cstdint>
+ 
+ #include <elfio/elf_types.hpp>
+ #include <elfio/elfio_version.hpp>
