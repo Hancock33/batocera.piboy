@@ -1268,7 +1268,7 @@ xbox:
     powersave: '2'
 xbox360:
   emulator: xenia
-  core:     xenia
+  core:     xenia-edge
   options:
     powersave: '2'
     hud_support: false
