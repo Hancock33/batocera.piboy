@@ -39,7 +39,7 @@ define XENIA_EDGE_POST_PROCESS
 	  git config core.sparsecheckout true && \
 	  echo "patches/*.toml" >> .git/info/sparse-checkout && \
 	  git pull --depth=1 origin main && \
-	  mv -f patches/*.toml $(TARGET_DIR)/usr/bin/xenia-canary/patches \
+	  mv -f patches/*.toml $(TARGET_DIR)/usr/bin/xenia-edge/patches \
 	)
 
 	# Clean up the temporary directory
