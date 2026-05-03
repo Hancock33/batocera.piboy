@@ -84,7 +84,7 @@ Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkin
 Utils|[clevis](http://github.com/latchset/clevis)|23679e1a4d0a48f5f5f1b9c284f8ed8a5120f52a|Apr 30, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|c39f5977f667e4fea126a2d6d2ab5cb68efcda6a|Apr 30, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|089438abaf409fc7ab5334b71740fe4c9a1a3172|Apr 30, 2026
-Emulators|[libretro-citra](https://github.com/azahar-emu/azahar.git)|83eef0012e80336be811d90deef33e95586cffc5|Apr 30, 2026
+Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|83eef0012e80336be811d90deef33e95586cffc5|Apr 30, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|577cb692711ab522b4d1d04e3d6e2d7ba7b8c29d|Apr 29, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|577cb692711ab522b4d1d04e3d6e2d7ba7b8c29d|Apr 29, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|0b661488d750e855e892d03af7cc5bce48866be1|Apr 29, 2026

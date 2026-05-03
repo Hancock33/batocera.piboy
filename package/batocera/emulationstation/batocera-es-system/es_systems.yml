@@ -3170,7 +3170,7 @@ tg-cd:
     azahar:
       azahar:           { requireAnyOf: [BR2_PACKAGE_AZAHAR]            }
     libretro:
-      citra:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_CITRA]    }
+      azahar:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_AZAHAR]   }
       panda3ds:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PANDA3DS] }
 
 fds:
