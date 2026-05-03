@@ -59,7 +59,7 @@ class XeniaEdgeGenerator(Generator):
             if Path.exists(squashrom):
                 rom = Path(squashrom)
                 _logger.debug('Found squashfs playlist %s:', rom)
--
+
         if rom.suffix == '.xbox360':
             _logger.debug('Found .xbox360 playlist: %s', rom)
             with rom.open() as f:
