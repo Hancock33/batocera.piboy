@@ -9,8 +9,6 @@ from typing import TYPE_CHECKING, Final, cast
 
 import ffmpeg
 
-from ... import Command, controllersConfig
-from ... import batoceraFiles
 from ... import Command
 from ...batoceraPaths import CONFIGS, ROMS, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
@@ -20,6 +18,12 @@ if TYPE_CHECKING:
     from ...types import HotkeysContext
 
 _logger = logging.getLogger(__name__)
+
+_DATA_DIR: Final = CONFIGS / 'hypseus-singe'
+_CONFIG: Final = _DATA_DIR / 'hypinput.ini'
+_DAPHNE_ROM_DIR: Final = ROMS / 'daphne'
+_SINGE_ROM_DIR: Final = ROMS / 'singe'
+_SHARE_DIR: Final = Path("/usr/share/hypseus-singe")
 
 class HypseusSingeGenerator(Generator):
 
@@ -74,7 +78,7 @@ class HypseusSingeGenerator(Generator):
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         # copy input.ini file templates
-        hypseusConfigSource = "/usr/share/hypseus-singe/hypinput_gamepad.ini"
+        hypseusConfigSource = _SHARE_DIR / "hypinput_gamepad.ini"
 
         bezel_to_rom = {
             "ace": ["ace", "ace_a", "ace_a2", "ace91", "ace91_euro", "aceeuro"],
@@ -104,48 +108,41 @@ class HypseusSingeGenerator(Generator):
             "spacepirates": ["spacepirates", "spacepirates-hd", "space_pirates_hd"],
         }
 
-        def find_bezel(rom_name):
+        def find_bezel(rom_name: str) -> str | None:
             for bezel, rom_names in bezel_to_rom.items():
                 if rom_name in rom_names:
                     return bezel
             return None
 
-        if not os.path.isdir(batoceraFiles.hypseusDatadir):
-            os.mkdir(batoceraFiles.hypseusDatadir)
-        if not os.path.exists(batoceraFiles.hypseusConfig) or not filecmp.cmp(hypseusConfigSource, batoceraFiles.hypseusConfig):
-            shutil.copyfile(hypseusConfigSource, batoceraFiles.hypseusConfig)
+        mkdir_if_not_exists(_DATA_DIR)
+        if not _CONFIG.exists() or not filecmp.cmp(hypseusConfigSource, _CONFIG):
+            shutil.copyfile(hypseusConfigSource, _CONFIG)
 
         # create a custom ini
-        if not os.path.exists(batoceraFiles.hypseusDatadir + "/custom.ini"):
-            shutil.copyfile(batoceraFiles.hypseusConfig, batoceraFiles.hypseusDatadir + "/custom.ini")
+        if not (_DATA_DIR / "custom.ini").exists():
+            shutil.copyfile(_CONFIG, _DATA_DIR / "custom.ini")
 
         # copy required resources to userdata config folder as needed
         def copy_resources(source_dir, destination_dir):
             if not os.path.exists(destination_dir):
-                shutil.copytree(source_dir, destination_dir)
+                if os.path.exists(source_dir):
+                    shutil.copytree(source_dir, destination_dir)
             else:
-                for item in os.listdir(source_dir):
-                    source_item = os.path.join(source_dir, item)
-                    destination_item = os.path.join(destination_dir, item)
-                    if os.path.isfile(source_item):
-                        if not os.path.exists(destination_item) or os.path.getmtime(source_item) > os.path.getmtime(destination_item):
-                            shutil.copy2(source_item, destination_item)
-                    elif os.path.isdir(source_item):
-                        copy_resources(source_item, destination_item)
+                if os.path.exists(source_dir):
+                    for item in os.listdir(source_dir):
+                        source_item = os.path.join(source_dir, item)
+                        destination_item = os.path.join(destination_dir, item)
+                        if os.path.isfile(source_item):
+                            if not os.path.exists(destination_item) or os.path.getmtime(source_item) > os.path.getmtime(destination_item):
+                                shutil.copy2(source_item, destination_item)
+                        elif os.path.isdir(source_item):
+                            copy_resources(source_item, destination_item)
 
-        directories = [
-            {"source": "/usr/share/hypseus-singe/pics", "destination": batoceraFiles.hypseusDatadir + "/pics"},
-            {"source": "/usr/share/hypseus-singe/sound", "destination": batoceraFiles.hypseusDatadir + "/sound"},
-            {"source": "/usr/share/hypseus-singe/fonts", "destination": batoceraFiles.hypseusDatadir + "/fonts"},
-            {"source": "/usr/share/hypseus-singe/bezels", "destination": batoceraFiles.hypseusDatadir + "/bezels"}
-        ]
+        directories = ["pics", "sound", "fonts", "bezels"]
 
         # Copy/update directories
         for directory in directories:
-            try:
-                copy_resources(directory["source"], directory["destination"])
-            except:
-                _logger.info("Source directory not found: %s", directory["source"])
+            copy_resources(_SHARE_DIR / directory, _DATA_DIR / directory)
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
         romName = os.path.splitext(os.path.basename(rom))[0]
@@ -159,7 +156,7 @@ class HypseusSingeGenerator(Generator):
             bezelFile += ".png"
         else:
             bezelFile = romName.lower() + ".png"
-        bezelPath = batoceraFiles.hypseusDatadir + "/bezels/" + bezelFile
+        bezelPath = _DATA_DIR / "bezels" / bezelFile
 
         if (system.name == 'actionmax'):
             amDir = '/userdata/roms/actionmax/'
@@ -201,25 +198,24 @@ class HypseusSingeGenerator(Generator):
                                 "-fullscreen", "-gamepad", "-datadir", _DATA_DIR, "-singedir", _SINGE_ROM_DIR,
                                 "-romdir", _SINGE_ROM_DIR, "-homedir", _DATA_DIR]
             else:
-                commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
+                commandArray = ['/usr/bin/hypseus',
                                 "singe", "vldp", "-retropath", "-framefile", frameFile, "-script", singeFile,
-                                "-fullscreen", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir,
-                                "-romdir", batoceraFiles.singeRomdir, "-homedir", batoceraFiles.hypseusDatadir]
+                                "-fullscreen", "-gamepad", "-datadir", _DATA_DIR,
+                                "-romdir", _SINGE_ROM_DIR, "-homedir", _DATA_DIR]
         elif (system.name == 'actionmax') or (system.name == 'alg') :
-            commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
+            commandArray = ['/usr/bin/hypseus',
                             "singe", "vldp", "-framefile", frameFile, "-script", singeFile,
-                            "-fullscreen", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir, "-homedir", batoceraFiles.hypseusDatadir]
-
+                            "-fullscreen", "-gamepad", "-datadir", _DATA_DIR, "-homedir", _DATA_DIR]
         else:
-            commandArray = [batoceraFiles.batoceraBins[system.config['emulator']],
+            commandArray = ['/usr/bin/hypseus',
                             romName, "vldp", "-framefile", frameFile, "-fullscreen",
-                            "-fastboot", "-gamepad", "-datadir", batoceraFiles.hypseusDatadir,
-                            "-romdir", batoceraFiles.daphneRomdir, "-homedir", batoceraFiles.hypseusDatadir]
+                            "-fastboot", "-gamepad", "-datadir", _DATA_DIR,
+                            "-romdir", _DAPHNE_ROM_DIR, "-homedir", _DATA_DIR]
 
         # controller config file
         commandArray.extend([
             '-keymapfile',
-            system.config.get_bool('hypseus_joy', return_values=('custom.ini', batoceraFiles.hypseusConfigfile))
+            system.config.get_bool('hypseus_joy', return_values=('custom.ini', _CONFIG.name))
         ])
 
         # Default -fullscreen behaviour respects game aspect ratio
@@ -307,10 +303,7 @@ class HypseusSingeGenerator(Generator):
                     commandArray.extend(["-manymouse"]) # this is causing issues on some "non-gun" games
 
         # bezels
-        if not system.config.get_bool('hypseus_bezels', True):
-            bezelRequired = False
-
-        if bezelRequired:
+        if system.config.get_bool('hypseus_bezels', True):
             if not os.path.exists(bezelPath):
                 commandArray.extend(["-bezel", "default.png"])
             else:
