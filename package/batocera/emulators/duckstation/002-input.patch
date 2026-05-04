@@ -1,5 +1,5 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index ad2fc7588..3df0dd29f 100644
+index a47c020c9..47ce9f8b3 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
 @@ -2472,30 +2472,30 @@ u32 InputManager::GetPollableDeviceCount()
