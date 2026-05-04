@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on May 03, 2026
-DUCKSTATION_VERSION = 2f35493d22fc0168ef6985ee921993036c8c39de
+# Version: Commits on May 04, 2026
+DUCKSTATION_VERSION = e4c55ad0283ff26a76991a759d8db13d6969b9ec
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -45,16 +45,8 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansJP-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansJP-VariableFont_wght.ttf
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansKR-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansKR-VariableFont_wght.ttf
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansSC-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansSC-VariableFont_wght.ttf
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/fa-solid-900.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts
 endef
-
-ifeq ($(BR2_PACKAGE_BATOCERA_QT6),)
-define DUCKSTATION_EVMPAY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/psx.duckstation.keys $(TARGET_DIR)/usr/share/evmapy
-endef
-endif
-
-DUCKSTATION_POST_INSTALL_TARGET_HOOKS += DUCKSTATION_EVMPAY
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
