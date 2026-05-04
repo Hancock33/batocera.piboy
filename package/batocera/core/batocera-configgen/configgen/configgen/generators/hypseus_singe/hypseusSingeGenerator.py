@@ -165,6 +165,18 @@ class HypseusSingeGenerator(Generator):
             commandsFile = amDir + romName + ".commands"
             singeFile = amDir + romName + ".singe"
 
+        if (system.name == 'daphne'):
+            if os.path.exists(zipFile):
+                _NEWDAPHNE_ROM_DIR = str(Path(_DAPHNE_ROM_DIR))
+            else:
+                _NEWDAPHNE_ROM_DIR = str(Path(_DAPHNE_ROM_DIR)) + "/roms"
+
+        if (system.name == 'singe'):
+            if os.path.exists(zipFile):
+                _NEWSINGE_ROM_DIR = str(Path(_SINGE_ROM_DIR))
+            else:
+                _NEWSINGE_ROM_DIR = str(Path(_SINGE_ROM_DIR)) + "/roms"
+
         # get the first video file from frameFile to determine the resolution
         m2v_filename = str(Path(rom)) + "/" + self.find_m2v_from_txt(frameFile)
 
@@ -196,12 +208,12 @@ class HypseusSingeGenerator(Generator):
                 commandArray = ['/usr/bin/hypseus',
                                 "singe", "vldp", "-retropath", "-framefile", frameFile, "-zlua", zipFile,
                                 "-fullscreen", "-gamepad", "-datadir", _DATA_DIR, "-singedir", _SINGE_ROM_DIR,
-                                "-romdir", _SINGE_ROM_DIR, "-homedir", _DATA_DIR]
+                                "-romdir", _NEWSINGE_ROM_DIR, "-homedir", _DATA_DIR]
             else:
                 commandArray = ['/usr/bin/hypseus',
                                 "singe", "vldp", "-retropath", "-framefile", frameFile, "-script", singeFile,
                                 "-fullscreen", "-gamepad", "-datadir", _DATA_DIR,
-                                "-romdir", _SINGE_ROM_DIR, "-homedir", _DATA_DIR]
+                                "-romdir", _NEWSINGE_ROM_DIR, "-homedir", _DATA_DIR]
         elif (system.name == 'actionmax') or (system.name == 'alg') :
             commandArray = ['/usr/bin/hypseus',
                             "singe", "vldp", "-framefile", frameFile, "-script", singeFile,
@@ -210,7 +222,7 @@ class HypseusSingeGenerator(Generator):
             commandArray = ['/usr/bin/hypseus',
                             romName, "vldp", "-framefile", frameFile, "-fullscreen",
                             "-fastboot", "-gamepad", "-datadir", _DATA_DIR,
-                            "-romdir", _DAPHNE_ROM_DIR, "-homedir", _DATA_DIR]
+                            "-romdir", _NEWDAPHNE_ROM_DIR, "-homedir", _DATA_DIR]
 
         # controller config file
         commandArray.extend([
