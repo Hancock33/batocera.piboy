@@ -16,6 +16,7 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|3483ad394587f205f467a0d819b4353
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|e42d8021c1fddc51ede3216f89cc9cdc75e07dc5|May 05, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|14a5cc00a050b3d253d42ae0afa284c4a6fb129f|May 05, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.143.9248-539|May 05, 2026
+Engines|[libdof](http://github.com/jsm174/libdof)|c02135e90ce1acd13a5ab21a4878b1d1820bbe49|May 05, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|827c09d875a53f4a6ad6464d30448c51496ab6b9|May 05, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|882e55b8cb3a1b4c3b91d71a2c156a9b33f279b8|May 05, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|f7574b86e0eeece0e8c633b77dd9833840155dd9|May 05, 2026
@@ -83,6 +84,9 @@ Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|20c380930aef97d5ebada
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|cb356911bebefd434380b1da163e7dcba1cb2742|May 01, 2026
 Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|cf7f438d18ed1cc88b0558403f845be20c99f6c9|May 01, 2026
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.3.0|May 01, 2026
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|1a6169566c73d3da552748fc372fe2bbb856e46e|May 01, 2026
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.350|May 01, 2026
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|v1.4.350|May 01, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|9ba79648d6ec85e833aef719d7f359117498d89c|May 01, 2026
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|2439fbb82f242d8f53089e00165684147588a9a4|May 01, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|20c380930aef97d5ebada48777b6d6f77ca680a1|May 01, 2026
@@ -95,6 +99,7 @@ Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libr
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|d3b730795784bff3f97571446101c57c1c6ac9bc|Apr 30, 2026
 Emulators|[clk](https://github.com/TomHarte/CLK)|2026-04-30|Apr 30, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|a4d41faae34da170a19aad859e748af0aafa2e6d|Apr 30, 2026
+Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|1249dd937d06bbff58da60e8c69985a403be04ec|Apr 30, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|23679e1a4d0a48f5f5f1b9c284f8ed8a5120f52a|Apr 30, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|c39f5977f667e4fea126a2d6d2ab5cb68efcda6a|Apr 30, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|089438abaf409fc7ab5334b71740fe4c9a1a3172|Apr 30, 2026
@@ -352,7 +357,6 @@ Libraries|[miniz](http://github.com/richgel999/miniz)|3.1.1|Feb 03, 2026
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|ba6b7bb1d50d7db820ec03d9bbd66404fab5c543|Feb 03, 2026
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|a78319991d62520bed4e873d3538657ad0ae2ca7|Feb 01, 2026
 Libraries|[wiringop-python](https://github.com/orangepi-xunlong/wiringOP-Python.git)|cde245b3183c3abe48194180b2d2203da08225ee|Jan 30, 2026
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.341.0|Jan 30, 2026
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.1.2|Jan 28, 2026
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12.2|Jan 27, 2026
 Ports|[bstone](http://github.com/bibendovsky/bstone)|v1.3.3|Jan 25, 2026
@@ -360,9 +364,7 @@ Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|e1b43
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|2f5fdb6ad601f99e6be411e235766e2425ca0613|Jan 25, 2026
 Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.9.1|Jan 24, 2026
 Emulators|[libretro-holani](http://github.com/LLeny/holani-retro)|19b974f77247a937369adf48280d2b34a5a66245|Jan 24, 2026
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.341.0|Jan 23, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|03d2483d5cded0bdef84bec24c9ddfdede324b5c|Jan 22, 2026
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.341.0|Jan 22, 2026
 Emulators|[libretro-skyemu](http://github.com/skylersaleh/SkyEmu)|46efbcbdb3b902373a09f4724e6d3b1a5acc4af3|Jan 22, 2026
 Libraries|[nghttp3](https://github.com/ngtcp2/nghttp3.git)|v1.15.0|Jan 20, 2026
 Controllers|[rocknix-joypad](http://github.com/ROCKNIX/rocknix-joypad)|7647fdb0fc89cd69b284903bf7707e861df5dc7e|Jan 20, 2026
@@ -370,7 +372,6 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|9f0f8e6e0aca08b715a0f
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|f6bab5a7ba521ce440e45d1aeef6122674be6ee9|Jan 19, 2026
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|510d36f901cbe883c56b155b53717e4efdeb6522|Jan 14, 2026
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.15.3|Jan 13, 2026
-Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|v2026.01.09-2711|Jan 13, 2026
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|c8ef81c7d9aede9f67f6ed3d3426c90541f9f13e|Jan 13, 2026
 Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/f2/5e/59208c6dd05ebc6f46ce2023c4fc01ffe814a1967d21b35d312c7e6ffeae)|1.2.0|Jan 09, 2026
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|v0.69.2|Jan 05, 2026
@@ -593,4 +594,3 @@ Emulators|[demul]()|demul_251220|N/A
 Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/)|$(PIPEWIRE_VERSION)|N/A
 Utils|[wlrctl](https://git.sr.ht/~brocellous/wlrctl/archive)|v0.2.2|N/A
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A
-Engines|[libdof](http://github.com/jsm174/libdof)|c02135e90ce1acd13a5ab21a4878b1d1820bbe49|N/A

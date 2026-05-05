@@ -287,7 +287,7 @@ Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|20c380930aef97d5ebada
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|f414b5672dc8d1525070040dd1653529a1615b9c|May 04, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|a380b84e8b5a68e5516c476d8834d98dd72f87b1|Apr 14, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|019548288a80e5b37475febe6bb446b28f290f2e|Apr 28, 2026
-Engines|[libdof](http://github.com/jsm174/libdof)|c02135e90ce1acd13a5ab21a4878b1d1820bbe49|N/A
+Engines|[libdof](http://github.com/jsm174/libdof)|c02135e90ce1acd13a5ab21a4878b1d1820bbe49|May 05, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|03d2483d5cded0bdef84bec24c9ddfdede324b5c|Jan 22, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|cb356911bebefd434380b1da163e7dcba1cb2742|May 01, 2026
 Engines|[libpinmame](http://github.com/vbousquet/pinmame)|e03ed12b301f2a24cd141ca730f73dd155e785ce|Mar 15, 2026
@@ -320,7 +320,7 @@ Firmwares|[firmware-esp8089](http://github.com/jwrdegoede/esp8089)|38cb0c10d7075
 Firmwares|[firmware-orangepi](http://github.com/orangepi-xunlong/firmware)|db5e86200ae592c467c4cfa50ec0c66cbc40b158|Mar 10, 2025
 Firmwares|[firmware-radxa-rkwifibt](http://github.com/JeffyCN/mirrors)|e7a4fc70448ca2f66b3df50cabe527916b42bdad|Nov 22, 2018
 Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
-Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|v2026.01.09-2711|Jan 13, 2026
+Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|1249dd937d06bbff58da60e8c69985a403be04ec|Apr 30, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|ab0de6af57fbbbc47aed976425d0ed7b9d85e47a|Apr 28, 2026
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12.2|Jan 27, 2026
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|9e8037b0c344127993e7d66a17ff42228b0bb806|Feb 17, 2026
@@ -338,10 +338,10 @@ Gpu|[nvidia580-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|580.
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|57a1067a246c71fa6c9a355d1668884fda155dd5|Dec 23, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.2|Apr 24, 2026
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.341.0|Jan 22, 2026
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|1a6169566c73d3da552748fc372fe2bbb856e46e|May 01, 2026
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|d72697bfc353b547efc58421ad54ac0345441bf4|Feb 22, 2026
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.341.0|Jan 23, 2026
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.341.0|Jan 30, 2026
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|v1.4.350|May 01, 2026
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|v1.4.350|May 01, 2026
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.5|Feb 09, 2026
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|9813128ddac097f8e11a92d64b33de7b70154989|Sept 16, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|de8d5ee595324eb33c3016675d3ec901a41726c1|Feb 04, 2026
