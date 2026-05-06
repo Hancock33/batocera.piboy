@@ -3,8 +3,8 @@
 # flatpak
 #
 ################################################################################
-# Version: Commits on Apr 10, 2026
-FLATPAK_VERSION = 1.17.6
+# Version: Commits on May 05, 2026
+FLATPAK_VERSION = 1.17.7
 FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
 FLATPAK_EMULATOR_INFO = flatpak.emulator.yml
