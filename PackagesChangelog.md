@@ -13,7 +13,9 @@ Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-alpha6|May 07,
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|ab2a09610d5acd962158515439b785b0fb7c160f|May 07, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|149ccd81c302386df4a2661fa939534c5e1f9e64|May 07, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|11b8c4ecac4f249cf8b856389bd722cb421df787|May 07, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260507|May 07, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0cccde22ff372337945be086424a13405d2d28e8|May 07, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260507|May 07, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d9d30b777bba780c1ad92d69e5c4206517a1ae60|May 07, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|36307bb386121cdc46ca79750c3fd7f6e1f40628|May 07, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|b5407250902330062dae4514514748ab8d96dd4a|May 07, 2026
@@ -74,8 +76,6 @@ Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|0920dec3082d2
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|bc431ae75ea355c118be69c2ac3e52dc381131e7|May 03, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|5e155cafb5033c4c552879ec540221c3e4a0d2da|May 03, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14345|May 03, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260503|May 03, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260503|May 03, 2026
 Emulators|[libretro-desmume](http://github.com/libretro/desmume)|a55c393de8ecf19df8111f65b8e12d08b9616520|May 03, 2026
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.05.02-osfree|May 02, 2026
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1f2e7d388cbc73287191a6b2b2464f1f8f74818c|May 02, 2026
