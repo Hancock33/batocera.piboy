@@ -165,7 +165,7 @@ class LindberghGenerator(Generator):
         environment={
                 # Libraries
                 "LD_LIBRARY_PATH": f"/lib32:{source_dir}/extralibs:/lib:/usr/lib:{source_dir}:{romDir}",
-                "LD_PRELOAD": f"{source_dir}/lindbergh.so",
+                "LD_PRELOAD": f"{source_dir}/linuxloader.so",
                 # Graphics
                 "GST_PLUGIN_SYSTEM_PATH_1_0": "/lib32/gstreamer-1.0:/usr/lib/gstreamer-1.0",
                 "GST_REGISTRY_1_0": "/userdata/system/.cache/gstreamer-1.0/registry..bin:/userdata/system/.cache/gstreamer-1.0/registry.x86_64.bin",
@@ -182,7 +182,7 @@ class LindberghGenerator(Generator):
         # Run command - Use -c * -o for ini files and -g for the game folder
         config_file = "/userdata/system/configs/lindbergh/lindbergh.ini"
         controller_file = "/userdata/system/configs/lindbergh/controls.ini"
-        commandArray: list[str | Path] = [str(source_dir / "lindbergh"), "-c", config_file, "-o", controller_file, "-g", str(romDir)]
+        commandArray: list[str | Path] = [str(source_dir / "linuxloader"), "-c", config_file, "-o", controller_file, "-g", str(romDir)]
 
         if system.config.get_bool("lindbergh_zink"):
             commandArray.append("--zink")
