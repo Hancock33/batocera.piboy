@@ -27,9 +27,9 @@ define LINDBERGH_LOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 	cp -fv $(@D)/linuxloader* $(TARGET_DIR)/usr/bin/lindbergh/
 	cp -fv $(@D)/lib*.so* $(TARGET_DIR)/usr/bin/lindbergh/
-	LD_LIBRARY_PATH=$(STAGING_DIR)/lib:$(STAGING_DIR)/usr/lib $(@D)/build/lindbergh --create config $(TARGET_DIR)/usr/bin/lindbergh/linuxloader.ini
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/controls.ini $(TARGET_DIR)/usr/bin/lindbergh/
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so*     $(TARGET_DIR)/usr/bin/lindbergh/extralibs
+	#LD_LIBRARY_PATH=$(STAGING_DIR)/lib:$(STAGING_DIR)/usr/lib $(@D)/linuxloader --create config $(TARGET_DIR)/usr/bin/lindbergh/linuxloader.ini
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/*.ini      $(TARGET_DIR)/usr/bin/lindbergh/
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lindbergh-loader/lib*.so*   $(TARGET_DIR)/usr/bin/lindbergh/extralibs
 endef
 endif
 
