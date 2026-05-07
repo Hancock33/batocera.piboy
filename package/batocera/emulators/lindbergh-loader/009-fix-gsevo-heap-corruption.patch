@@ -1,6 +1,8 @@
+diff --git a/src/lindbergh/patch.c b/src/lindbergh/patch.c
+index 5b021ae..339e6dc 100644
 --- a/src/lindbergh/patch.c
 +++ b/src/lindbergh/patch.c
-@@ -430,7 +430,7 @@
+@@ -430,7 +430,7 @@ int initPatch()
              detourFunction(0x081818a8, amDipswExit);
              detourFunction(0x0818191d, amDipswGetData);
              detourFunction(0x08181994, stubRetZero);

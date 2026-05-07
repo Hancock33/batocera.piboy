@@ -18,4 +18,8 @@ endif
 
 FAUDIO_CONF_OPTS += -DGSTREAMER=ON
 
+ifeq ($(BR2_i386),y)
+FAUDIO_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+endif
+
 $(eval $(cmake-package))

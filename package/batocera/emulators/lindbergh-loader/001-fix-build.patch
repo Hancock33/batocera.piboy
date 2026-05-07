@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index 5e598e0410..b422cd4894 100644
+index da45e31..fdaac1a 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -21,7 +21,7 @@ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/jvs.c src/lindbergh/jvs.h src
+@@ -25,7 +25,7 @@ lindbergh: src/lindbergh/lindbergh.c src/lindbergh/iniParser.c src/lindbergh/sdl
  
  libxdiff.a: $(XDIFF_OBJS)
  	mkdir -p $(BUILD)
@@ -10,8 +10,8 @@ index 5e598e0410..b422cd4894 100644
 +	$(AR) rcs src/libxdiff/libxdiff.a $(XDIFF_OBJS)
  
  src/libxdiff/xdiff/%.o: src/libxdiff/xdiff/%.c
- 	$(CC) -DHAVE_CONFIG_H -fPIC -c $< -o $@
-@@ -35,7 +35,7 @@ lindbergh.so: $(OBJS)
+ 	$(CC) -m32 -DHAVE_CONFIG_H -fPIC -c $< -o $@
+@@ -38,7 +38,7 @@ lindbergh.so: $(OBJS)
  	$(CC) $(CFLAGS) -c $< -o $@
  
  libsegaapi.so: src/libsegaapi/libsegaapi.o

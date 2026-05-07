@@ -1,8 +1,8 @@
 diff --git a/src/lindbergh/evdevInput.c b/src/lindbergh/evdevInput.c
-index 4dfa26d..4cffb30 100644
+index 554cfe6..a06dc56 100644
 --- a/src/lindbergh/evdevInput.c
 +++ b/src/lindbergh/evdevInput.c
-@@ -938,11 +938,16 @@ static ControllerStatus listControllers(Controllers *controllers)
+@@ -1073,11 +1073,16 @@ ControllerStatus loadEvdevControllers(Controllers *controllers)
  
          if (test_bit(EV_ABS, bit[0]))
          {
@@ -19,10 +19,10 @@ index 4dfa26d..4cffb30 100644
 +                    }
 +
                      controllers->controller[i].enabled = 1;
-                     ControllerInput *controllerInput =
-                         &controllers->controller[i].inputs[controllers->controller[i].inputCount++];
+                     ControllerInput *controllerInput = &controllers->controller[i].inputs[controllers->controller[i].inputCount++];
+                     controllerInput->evType = EV_ABS;
 diff --git a/src/lindbergh/evdevInput.h b/src/lindbergh/evdevInput.h
-index bd80be6..17d408c 100644
+index ab47b42..81f4f64 100644
 --- a/src/lindbergh/evdevInput.h
 +++ b/src/lindbergh/evdevInput.h
 @@ -4,7 +4,7 @@
