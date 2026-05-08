@@ -3,8 +3,8 @@
 # mergerfs
 #
 ################################################################################
-# Version: Commits on Nov 19, 2025
-MERGERFS_VERSION = 2.41.1
+# Version: Commits on May 08, 2026
+MERGERFS_VERSION = 2.42.0
 MERGERFS_SITE = $(call github,trapexit,mergerfs,$(MERGERFS_VERSION))
 MERGERFS_LICENSE = MIT
 MERGERFS_DEPENDENCIES = host-pkgconf
