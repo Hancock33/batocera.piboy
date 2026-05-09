@@ -19,6 +19,6 @@ vulkan-sdk.mk
 vulkan-tools.mk
 vulkan-utility-libraries.mk
 vulkan-validationlayers.mk
-xenia-edge.mk
 wine-proton.mk
 wine-x86.mk
+xenia-edge.mk
