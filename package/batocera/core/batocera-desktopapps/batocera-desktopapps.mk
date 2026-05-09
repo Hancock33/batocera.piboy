@@ -201,6 +201,11 @@ ifeq ($(BR2_PACKAGE_YAD),y)
   BATOCERA_DESKTOPAPPS_TOOLBOX += multidisc.toolbox
   BATOCERA_DESKTOPAPPS_ACTIONS += multidisc.toolbox.m3ufromdir.desktop
 
+  # rpcs3
+  # psn launchers for rpcs3 installed psn titles
+  BATOCERA_DESKTOPAPPS_TOOLBOX += psnlauncher.toolbox
+  BATOCERA_DESKTOPAPPS_ACTIONS += psnlauncher.toolbox.psnfromdir.desktop
+
   # wine
   ifeq ($(BR2_PACKAGE_BATOCERA_WINE),y)
     BATOCERA_DESKTOPAPPS_TOOLBOX += wine.toolbox

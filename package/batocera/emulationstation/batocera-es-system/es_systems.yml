@@ -160,14 +160,14 @@ apple2:
   manufacturer:         Apple
   release:              1977
   hardware:             computer
-  extensions:           [2mg, 7z, chd, dfi, do, dsk, edd, hdv, mfi, nib, po, rti, wav, woz, zip]
+  extensions:           [2mg, do, dsk, nib, po]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
     gsplus:
-      gsplus:           { requireAnyOf: [BR2_PACKAGE_GSPLUS], incompatible_extensions: [mfi, dfi, rti, edd, woz, wav, zip, 7z, chd, hdv, 2mg] }
+      gsplus:           { requireAnyOf: [BR2_PACKAGE_GSPLUS] }
   comment_en:           |
                         If your game does not start using LR-Mame. Ensure you choose the right floppy type for the rom extension.
                         i.e. some extensions require you to choose the 3 1/2 inch floppy drive (Drive 3).
@@ -391,7 +391,7 @@ centurye:
 chihiro:
   name:                 Sega Chihiro
   manufacturer:         Arcade
-  release:              2003
+  release:              2002
   hardware:             console
   extensions:           [iso]
   platform:             chihiro
@@ -676,6 +676,24 @@ gaelco:
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
 
+gong:
+  name:                 Pong
+  manufacturer:         Arcade
+  release:              1972
+  hardware:             arcade
+  extensions:           [game]
+  platform:             arcade
+  path:                 /usr/share/emulationstation/ports/gong
+  emulators:
+    libretro:
+      gong:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GONG] }
+  comment_en:           |
+                        This system is a standalone libretro game. No rom required.
+  comment_fr:           |
+                        Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
+  comment_br:           |
+                        Este sistema é um jogo do libretro idependente. Não requer rom.
+
 gottlieb:
   name:                 Gottlieb
   manufacturer:         Arcade
@@ -882,6 +900,10 @@ namco2x6:
   emulators:
     play:
       play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
                         The Play! emulator provides `work in progress` support for Namco 246 & 256 systems.
                         Currently you will need a high performance system to be able to emulate supported games.
@@ -1905,9 +1927,9 @@ mugen:
       wine-custom:     { requireAnyOf: [BR2_PACKAGE_WINE_CUSTOM] }
 
 bk:
-  name:                 BK
-  manufacturer:         Electronica
-  release:              1984
+  name:                 BK0010-01
+  manufacturer:         Elektronika
+  release:              1985
   hardware:             computer
   extensions:           [7z, bin, bkd, dsk, img, zip]
   emulators:
@@ -3606,7 +3628,7 @@ wiiu:
 wiiware:
   name:                 WiiWare
   manufacturer:         Nintendo
-  release:              2006
+  release:              2008
   hardware:             console
   extensions:           [wad]
   emulators:
@@ -4208,25 +4230,6 @@ freedroid:
   emulators:
     freedroid:
       freedroid:        { requireAnyOf: [BR2_PACKAGE_FREEDROID] }
-
-gong:
-  name:                 Pong
-  manufacturer:         Ports
-  release:              1972
-  hardware:             console
-  extensions:           [game]
-  platform:             pc
-  group:                ports
-  path:                 /usr/share/emulationstation/ports/gong
-  emulators:
-    libretro:
-      gong:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GONG] }
-  comment_en:           |
-                        This system is a standalone libretro game. No rom required.
-  comment_fr:           |
-                        Ce système est le premier jeu de libretro autonome. Aucune rom n'est requise.
-  comment_br:           |
-                        Este sistema é um jogo do libretro idependente. Não requer rom.
 
 hcl:
   name:                 Hydra Castle Labyrinth
@@ -5576,8 +5579,8 @@ bigfish:
       wine-custom:     { requireAnyOf: [BR2_PACKAGE_WINE_CUSTOM] }
 
 popcap:
-  name:                 Popcap
-  manufacturer:         Popcap
+  name:                 PopCap
+  manufacturer:         PopCap
   release:              2000
   hardware:             computer
   extensions:           [exe, pc, squashfs, wine, wsquashfs, wtgz]

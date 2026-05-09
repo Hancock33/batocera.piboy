@@ -216,7 +216,6 @@ class AmiberryGenerator(Generator):
             # memory
             commandArray.append("-F 8")
 
-
             # fix sound buffer and frequency
             commandArray.append("-s")
             commandArray.append("sound_max_buff=4096")

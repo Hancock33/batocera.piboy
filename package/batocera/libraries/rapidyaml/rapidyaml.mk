@@ -3,8 +3,8 @@
 # rapidyaml
 #
 ################################################################################
-# Version: Commits on Mar 26, 2026
-RAPIDYAML_VERSION = v0.11.1
+# Version: Commits on May 07, 2026
+RAPIDYAML_VERSION = v0.12.1
 RAPIDYAML_SITE = https://github.com/biojppm/rapidyaml/releases/download/$(RAPIDYAML_VERSION)
 RAPIDYAML_SOURCE = rapidyaml-$(subst v,,$(RAPIDYAML_VERSION))-src.tgz
 RAPIDYAML_LICENSE = GPL-2

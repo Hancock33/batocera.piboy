@@ -3,8 +3,8 @@
 # libretro-noods
 #
 ################################################################################
-# Version: Commits on May 04, 2026
-LIBRETRO_NOODS_VERSION = af1b7f7271c201baeaf9a9eecaa12f8e4dd9b6d8
+# Version: Commits on May 05, 2026
+LIBRETRO_NOODS_VERSION = 626628ca270e41528c20ebbedb69408eca326834
 LIBRETRO_NOODS_SITE = $(call github,jonian,libretro-noods,$(LIBRETRO_NOODS_VERSION))
 LIBRETRO_NOODS_LICENSE = GPL-3.0
 LIBRETRO_NOODS_EMULATOR_INFO = noods.libretro.core.yml
