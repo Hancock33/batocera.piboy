@@ -900,6 +900,10 @@ namco2x6:
   emulators:
     play:
       play:             { requireAnyOf: [BR2_PACKAGE_PLAY] }
+    libretro:
+      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+    mame:
+      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en: |
                         The Play! emulator provides `work in progress` support for Namco 246 & 256 systems.
                         Currently you will need a high performance system to be able to emulate supported games.
