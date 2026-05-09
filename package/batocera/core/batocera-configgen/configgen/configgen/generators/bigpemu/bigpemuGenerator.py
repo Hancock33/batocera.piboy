@@ -254,7 +254,6 @@ class BigPEmuGenerator(Generator):
                 pass
             # Delete the config file to update controllers
             # As it doesn't like to be updated
-            # ¯\_(�f")_/¯
             bigPemuConfig.unlink()
 
         config: dict[str, Any] = {}
