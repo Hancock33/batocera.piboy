@@ -160,14 +160,14 @@ apple2:
   manufacturer:         Apple
   release:              1977
   hardware:             computer
-  extensions:           [2mg, 7z, chd, dfi, do, dsk, edd, hdv, mfi, nib, po, rti, wav, woz, zip]
+  extensions:           [2mg, do, dsk, nib, po]
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
     gsplus:
-      gsplus:           { requireAnyOf: [BR2_PACKAGE_GSPLUS], incompatible_extensions: [mfi, dfi, rti, edd, woz, wav, zip, 7z, chd, hdv, 2mg] }
+      gsplus:           { requireAnyOf: [BR2_PACKAGE_GSPLUS] }
   comment_en:           |
                         If your game does not start using LR-Mame. Ensure you choose the right floppy type for the rom extension.
                         i.e. some extensions require you to choose the 3 1/2 inch floppy drive (Drive 3).
