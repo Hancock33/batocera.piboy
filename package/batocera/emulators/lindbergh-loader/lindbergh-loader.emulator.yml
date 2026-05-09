@@ -55,10 +55,10 @@ custom_features:
       120 fps: "120"
   lindbergh_controller:
     prompt: CONTROLLER MODE
-    description: Choose the controller configuration. EVDEV for a wide range of controllers, lightguns and steering wheels. SDL2 for gamepads only.
+    description: Choose the controller configuration. EVDEV for a wide range of controllers, lightguns and steering wheels. SDL for gamepads only.
     choices:
-      SDL2: 1
-      EVDEV (Default): 2
+      SDL (Default): 1
+      EVDEV: 2
   lindbergh_ffb:
     prompt: FORCE FEEDBACK
     description: Enable force feedback (rumble) for supported games.

@@ -71,7 +71,7 @@ class LindberghGenerator(Generator):
         "ANALOGUE_DEADZONE_5":       True, "ANALOGUE_DEADZONE_6":       True, "ANALOGUE_DEADZONE_7":       True, "ANALOGUE_DEADZONE_8":       True,
         "EMULATE_HW210_CARDREADER":  True, "CARDFILE_01":               True, "CARDFILE_02":               True, "CPU_FREQ_GHZ":              True,
         "OR2_IPADDRESS":             True, "PLAYER_1_COIN":             True, "BOOST_RENDER_RES":          True, "HIDE_CURSOR":               True,
-        "EMULATE_ID_CARD READER":    True, "EMULATE_TOUCHSCREEN":       True, "ID_CARDFILE_AUTOLOAD":      True, "ID_CARDFOLDER":             True,
+        "EMULATE_ID_CARD_READER":    True, "EMULATE_TOUCHSCREEN":       True, "ID_CARDFILE_AUTOLOAD":      True, "ID_CARDFOLDER":             True,
         "DISABLE_BUILTIN_FONT":      True, "DISABLE_BUILTIN_LOGOS":     True, "CUSTOM_CURSOR_ENABLED":     True, "CUSTOM_CURSOR":             True,
         "CUSTOM_CURSOR_WIDTH":       True, "CUSTOM_CURSOR_HEIGHT":      True, "TOUCH_CURSOR":              True, "TOUCH_CURSOR_WIDTH":        True,
         "TOUCH_CURSOR_HEIGHT":       True, "PRIMEVAL_HUNT_TEST_SCREEN_SINGLE": True, "RAMBO_GUNS_SWITCH":  True, "ID5_CHINESE_LANGUAGE":      True,
@@ -180,7 +180,7 @@ class LindberghGenerator(Generator):
             }
 
         # Run command - Use -c * -o for ini files and -g for the game folder
-        config_file = "/userdata/system/configs/lindbergh/lindbergh.ini"
+        config_file = "/userdata/system/configs/lindbergh/linuxloader.ini"
         controller_file = "/userdata/system/configs/lindbergh/controls.ini"
         commandArray: list[str | Path] = [str(source_dir / "linuxloader"), "-c", config_file, "-o", controller_file, "-g", str(romDir)]
 
@@ -354,11 +354,11 @@ class LindberghGenerator(Generator):
             self.setConf(conf, "EMULATE_HW210_CARDREADER", "false")
 
         if "initiad" in romName.lower() and system.config.get_bool("lindbergh_card", True):
-            self.setConf(conf, "EMULATE_ID_CARD READER", "true")
+            self.setConf(conf, "EMULATE_ID_CARD_READER", "true")
             self.setConf(conf, "ID_CARDFILE_AUTOLOAD", "true")
             self.setConf(conf, "ID_CARDFOLDER", f'"{self.LINDBERGH_SAVES}"')
         else:
-            self.setConf(conf, "EMULATE_ID_CARD READER", "false")
+            self.setConf(conf, "EMULATE_ID_CARD_READER", "false")
 
         # Rambo switch
         if "rambo" in romName.lower():
@@ -431,10 +431,10 @@ class LindberghGenerator(Generator):
         /,
     ) -> None:
         # 1: SDL, 2: EVDEV
-        if system.config.get("lindbergh_controller") == "1":
+        if system.config.get("lindbergh_controller") == "2":
             input_mode = 1
         else:
-            input_mode = 2
+            input_mode = 1
 
 
         shortRomName = Path(romName.lower()).stem
@@ -1029,10 +1029,10 @@ class LindberghGenerator(Generator):
             destCg = Path(romDir) / "libCg.so"
             destCgGL = Path(romDir) / "libCgGL.so"
             if not destCg.exists():
-                shutil.copy2("{source_dir}/extralibs/libCg.so.harley", destCg)
+                shutil.copy2("/usr/bin32/lindbergh/extralibs/libCg.so.harley", destCg)
                 _logger.debug("Copied: %s", destCg)
             if not destCgGL.exists():
-                shutil.copy2("{source_dir}/extralibs/libCgGL.so.harley", destCgGL)
+                shutil.copy2("/usr/bin32/lindbergh/extralibs/libCgGL.so.harley", destCgGL)
                 _logger.debug("Copied: %s", destCgGL)
 
         # fixes shadows and textures, the bundled libs are known-bad.
@@ -1040,8 +1040,8 @@ class LindberghGenerator(Generator):
         if any(keyword in romName.lower() for keyword in ("initiad", "letsgoju", "tennis")):
             destCg = Path(romDir) / "libCg.so"
             destCgGL = Path(romDir) / "libCgGL.so"
-            srcCg   = Path("{source_dir}/extralibs/libCg.so.other")
-            srcCgGL = Path("{source_dir}/extralibs/libCgGL.so.other")
+            srcCg   = Path("/usr/bin32/lindbergh/extralibs/libCg.so.other")
+            srcCgGL = Path("/usr/bin32/lindbergh/extralibs/libCgGL.so.other")
             if not destCg.exists() or not filecmp.cmp(srcCg, destCg, shallow=False):
                 shutil.copy2(srcCg, destCg)
                 _logger.debug("Overwriting bad lib: %s", destCg)
@@ -1072,15 +1072,15 @@ class LindberghGenerator(Generator):
         romName: str,
         /,
     ) -> None:
-        LINDBERGH_CONFIG_FILE = Path("/userdata/system/configs/lindbergh/lindbergh.ini")
+        LINDBERGH_CONFIG_FILE = Path("/userdata/system/configs/lindbergh/linuxloader.ini")
         LINDBERGH_CONTROLS_FILE = Path("/userdata/system/configs/lindbergh/controls.ini")
         mkdir_if_not_exists(LINDBERGH_CONFIG_FILE.parent)
 
-        # get an initial version if no version is here - Sync lindbergh.ini
-        source_file = source_dir / "lindbergh.ini"
+        # get an initial version if no version is here - Sync linuxloader.ini
+        source_file = source_dir / "linuxloader.ini"
         if not LINDBERGH_CONFIG_FILE.exists() or source_file.stat().st_mtime > LINDBERGH_CONFIG_FILE.stat().st_mtime:
             shutil.copy2(source_file, LINDBERGH_CONFIG_FILE)
-            _logger.debug("Updated lindbergh.ini")
+            _logger.debug("Updated linuxloader.ini")
 
         # Sync controls.ini
         source_controls = source_dir / "controls.ini"
