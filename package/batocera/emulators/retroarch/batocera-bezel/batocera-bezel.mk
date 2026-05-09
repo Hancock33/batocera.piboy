@@ -3,9 +3,9 @@
 # batocera-bezel
 #
 ################################################################################
-# Version: Commits on Feb 20, 2026
-BATOCERA_BEZEL_VERSION = 26465e14e2b8d37d5d0d78e593b244fa95104710
-BATOCERA_BEZEL_SITE = $(call github,hancock33,batocera-bezel,$(BATOCERA_BEZEL_VERSION))
+# Version: Commits on Feb 18, 2026
+BATOCERA_BEZEL_VERSION = 77a3239f3f0682fcf9e6050f07b40677395e5db7
+BATOCERA_BEZEL_SITE = $(call github,batocera-linux,batocera-bezel,$(BATOCERA_BEZEL_VERSION))
 
 define BATOCERA_BEZEL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/decorations
