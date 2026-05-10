@@ -845,9 +845,8 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     # NDS
     select BR2_PACKAGE_LIBRETRO_DESMUME                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
-   #select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
-    select BR2_PACKAGE_LIBRETRO_MELONDS_DS                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
-
+    select BR2_PACKAGE_LIBRETRO_MELONDS                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+   #select BR2_PACKAGE_LIBRETRO_MELONDS_DS                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_DRASTIC                              if  BR2_PACKAGE_BATOCERA_RPI_MESA3D         || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X       || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      || \
@@ -860,7 +859,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_T527
 
-    select BR2_PACKAGE_MELONDS                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_MELONDS                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # 3DS
     select BR2_PACKAGE_AZAHAR                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1419,7 +1418,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_JUMPNBUMP
     select BR2_PACKAGE_LIBRETRO_MOJOZORK                    # Z-Machine
     select BR2_PACKAGE_LIBRETRO_MU
-    select BR2_PACKAGE_LIBRETRO_NOODS                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_NOODS                       if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_P2000T                      # Philips P2000
     select BR2_PACKAGE_LIBRETRO_QUICKNES
     select BR2_PACKAGE_LIBRETRO_RACE                        # Neo Geo Pocket
