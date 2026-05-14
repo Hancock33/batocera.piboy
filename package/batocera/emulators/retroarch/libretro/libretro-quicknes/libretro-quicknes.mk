@@ -3,8 +3,8 @@
 # libretro-quicknes
 #
 ################################################################################
-# Version: Commits on Apr 20, 2026
-LIBRETRO_QUICKNES_VERSION = 7848e1ac22b1c69d056ae4cb57710651ff1dd169
+# Version: Commits on May 11, 2026
+LIBRETRO_QUICKNES_VERSION = a0ec494c417f365c578f3dacadb04383e4a99ade
 LIBRETRO_QUICKNES_SITE = $(call github,libretro,QuickNES_Core,$(LIBRETRO_QUICKNES_VERSION))
 LIBRETRO_QUICKNES_LICENSE = GPL
 LIBRETRO_QUICKNES_EMULATOR_INFO = quicknes.libretro.core.yml

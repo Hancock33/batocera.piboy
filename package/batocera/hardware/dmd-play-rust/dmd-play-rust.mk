@@ -3,8 +3,8 @@
 # dmd-play-rust
 #
 ################################################################################
-# Version: Commits on Oct 04, 2025
-DMD_PLAY_RUST_VERSION = 912cd34b1d1895d7913eb60fc653f6c6f60d4f2c
+# Version: Commits on May 13, 2026
+DMD_PLAY_RUST_VERSION = 55c0f931aa89a4545902991e81904f3e7a3b5455
 DMD_PLAY_RUST_SITE =  $(call github,batocera-linux,dmd-play-rust,$(DMD_PLAY_RUST_VERSION))
 
 define DMD_PLAY_RUST_DMD_PLAY_SYMLINK
