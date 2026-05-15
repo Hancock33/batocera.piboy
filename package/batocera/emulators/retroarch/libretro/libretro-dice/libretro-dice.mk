@@ -3,8 +3,8 @@
 # libretro-dice
 #
 ################################################################################
-# Version: Commits on May 08, 2026
-LIBRETRO_DICE_VERSION = 9e348796528a590ee88a88c126955c0901a21210
+# Version: Commits on May 15, 2026
+LIBRETRO_DICE_VERSION = 1c493d6f89b0c42c7de3e9a84cfdaa52f59c3cc7
 LIBRETRO_DICE_SITE = $(call github,mittonk,dice-libretro,$(LIBRETRO_DICE_VERSION))
 LIBRETRO_DICE_LICENSE = GPLv3
 LIBRETRO_DICE_DEPENDENCIES += retroarch
