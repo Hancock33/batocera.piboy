@@ -18,7 +18,7 @@ index 54331ef7c..0e7a20a16 100644
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index 9d029ed0e..0bccced8c 100644
+index bb393715d..63f63c561 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
 @@ -258,9 +258,9 @@ bool QtHost::EarlyProcessStartup()
@@ -34,7 +34,7 @@ index 9d029ed0e..0bccced8c 100644
    }
  
    // allow us to override standard qt icons as well
-@@ -3641,7 +3641,7 @@ int main(int argc, char* argv[])
+@@ -3626,7 +3626,7 @@ int main(int argc, char* argv[])
    QtHost::UpdateApplicationTheme();
  
    // Build warning.
@@ -43,7 +43,7 @@ index 9d029ed0e..0bccced8c 100644
  
    // Setting/folder migrations.
    QtHost::ApplyMigrations();
-@@ -3701,7 +3701,7 @@ int main(int argc, char* argv[])
+@@ -3686,7 +3686,7 @@ int main(int argc, char* argv[])
      QtHost::s_state.start_fullscreen_ui_fullscreen = false;
  
    // Always kick off update check. It'll take over if the user is booting a game fullscreen.

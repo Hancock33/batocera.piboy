@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 09875391f..c213fcc5c 100644
+index 71d1cb041..84e59870b 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -1,43 +1,6 @@
@@ -66,7 +66,7 @@ index 09875391f..c213fcc5c 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/zstd")
 -find_package(WebP 1.6.0 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/WebP/cmake")
--find_package(PNG 1.6.56 REQUIRED
+-find_package(PNG 1.6.58 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/PNG")
 -find_package(libjpeg-turbo 3.1.4.1 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/libjpeg-turbo")
@@ -118,7 +118,7 @@ index 09875391f..c213fcc5c 100644
 +# Bundled dependencies.
 +find_package(zstd 1.5.7 REQUIRED)
 +find_package(WebP REQUIRED) # v1.4.0, spews an error on Linux because no pkg-config.
-+find_package(PNG 1.6.55 REQUIRED)
++find_package(PNG 1.6.58 REQUIRED)
 +find_package(JPEG REQUIRED)
 +find_package(SDL3 3.4.4 REQUIRED)
 +find_package(Freetype 2.14.1 REQUIRED)
@@ -155,15 +155,15 @@ index 09875391f..c213fcc5c 100644
  
  # Should be prebuilt.
  if(LINUX)
--  find_package(Qt6 6.11.0 REQUIRED
+-  find_package(Qt6 6.11.1 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
 -                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus)
-+  find_package(Qt6 6.11.0 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
++  find_package(Qt6 6.11.1 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
  else()
--  find_package(Qt6 6.11.0 REQUIRED
+-  find_package(Qt6 6.11.1 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
 -                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools)
-+  find_package(Qt6 6.11.0 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
++  find_package(Qt6 6.11.1 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
  endif()
  
  # Have to verify it down here, don't want users using unpatched Qt.
