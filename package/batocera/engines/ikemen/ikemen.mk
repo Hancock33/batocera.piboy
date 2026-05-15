@@ -7,7 +7,7 @@
 IKEMEN_VERSION = 1d4a5d09991f35661db9049b78e068b7262da11a
 IKEMEN_SITE = $(call github,ikemen-engine,Ikemen-GO,$(IKEMEN_VERSION))
 IKEMEN_LICENSE = MIT
-IKEMEN_DEPENDENCIES = libgtk3 mesa3d openal libglfw
+IKEMEN_DEPENDENCIES = libgtk3 mesa3d openal libglfw libxmp
 IKEMEN_EMULATOR_INFO = ikemen.emulator.yml
 
 HOST_GO_COMMON_ENV = GOFLAGS=-mod=mod \
