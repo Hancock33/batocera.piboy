@@ -1,11 +1,11 @@
 diff --git a/Makefile b/Makefile
-index 9cf9b6c516..c4927c31f6 100644
+index 387ec3a3..937e5eed 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -177,6 +177,16 @@ ifneq (,$(findstring unix,$(platform)))
+@@ -171,6 +171,16 @@ ifneq (,$(findstring unix,$(platform)))
+          HAVE_NEON = 0
           HAVE_OPENGL = 0
           GLES = 0
-          GL_LIB :=
 +      # Raspberry pi 5 in 64bit mode with VULKAN
 +      else ifneq (,$(findstring rpi5_64,$(platform)))
 +         CPUFLAGS += -DNO_ASM -DARM -DARM_ASM -DDONT_WANT_ARM_OPTIMIZATIONS -DARM_FIX -DCLASSIC -DARM64
