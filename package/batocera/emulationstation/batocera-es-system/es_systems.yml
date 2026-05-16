@@ -1144,8 +1144,8 @@ triforce:
   manufacturer:         Arcade
   release:              2003
   hardware:             arcade
-  extensions:           [ciso, dol, elf, gcm, gcz, iso, m3u, wbfs]
-  platform:             arcade
+  extensions:           [iso, rvz]
+  platform:             triforce, arcade
   emulators:
     dolphin_triforce:
       dolphin_triforce: { requireAnyOf: [BR2_PACKAGE_DOLPHIN_EMU]       }
