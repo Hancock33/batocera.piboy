@@ -11,13 +11,6 @@ SRB2_DEPENDENCIES = libgme libopenmpt sdl2 sdl2_mixer
 SRB2_LICENSE = GPL-2.0
 SRB2_SUPPORTS_IN_SOURCE_BUILD = NO
 
-define SRB2_ASSETS
-	mkdir -p $(@D)/assets/installer
-	cp -avr /home/lee/srb2-assets/* $(@D)/assets/installer
-endef
-
-SRB2_POST_EXTRACT_HOOKS += SRB2_ASSETS
-
 SRB2_CONF_OPTS += -DSRB2_SDL2_EXE_NAME=srb2
 SRB2_CONF_OPTS += -DSRB2_CONFIG_ENABLE_TESTS=FALSE
 
