@@ -1,20 +1,21 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.09|May 16, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260516|May 16, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260516|May 16, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|9310bf479936d473464b85b2e8d528de959a6453|May 15, 2026
 Emulators|[play](https://github.com/jpd002/Play-.git)|22ca0a9bec411670b7dd56e3ee8bd47486e9f7d6|May 15, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.293|May 15, 2026
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|4fae53f791627d620f7dec979ae58ecd580affab|May 15, 2026
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|4ff771b936bc91642b63d2ab7a9c5232082a015e|May 15, 2026
-Emulators|[vita3k](https://github.com/vita3k/vita3k)|81e551db234a42e5273d63f295cbb3a83cc7e3bc|May 15, 2026
+Emulators|[vita3k](https://github.com/vita3k/vita3k)|c8efb164354e7c60de4f75409c94f5ddefaae5aa|May 15, 2026
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|c2674b19d2221a14023df7f16376c3a524b6f059|May 15, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|1d4a5d09991f35661db9049b78e068b7262da11a|May 15, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|8fe279c91b33bdec3d573a26de9d6a6e8dc09c59|May 15, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-05-15|May 15, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14347|May 15, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260515|May 15, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|09fb3778fae6610e5328bf59690e7875468f26d5|May 15, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|4f79d4760fc96e34fd8f8930e9b2fab740893e5a|May 15, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260515|May 15, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ef6dbb40bda6145b0886c62d17992e980c40e123|May 15, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|516554b704c884b1a03c5697f613c9c71ca8ad82|May 15, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|bc67610e449d3d62105ebc22e1c57e52fbbb9ce8|May 15, 2026
@@ -142,7 +143,6 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.0
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1f2e7d388cbc73287191a6b2b2464f1f8f74818c|May 02, 2026
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.4.8|May 02, 2026
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|a8be9df57be4eba987260decee3555afaef6fe40|May 02, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.08|May 02, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.6|May 02, 2026
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|90ff0aa0c21bbd603f127cb576c38d4bbf177fba|May 02, 2026
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.05|May 01, 2026

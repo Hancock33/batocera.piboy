@@ -273,7 +273,7 @@ Emulators|[supermodel](http://github.com/trzy/Supermodel)|9c9e7b7fb6acde65763148
 Emulators|[touchhle](https://github.com/touchHLE/touchHLE.git)|debbd4fb70ac5a3805a5645d674b64db63690355|May 01, 2026
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|4ff771b936bc91642b63d2ab7a9c5232082a015e|May 15, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46108|May 12, 2026
-Emulators|[vita3k](https://github.com/vita3k/vita3k)|81e551db234a42e5273d63f295cbb3a83cc7e3bc|May 15, 2026
+Emulators|[vita3k](https://github.com/vita3k/vita3k)|c8efb164354e7c60de4f75409c94f5ddefaae5aa|May 15, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.134|Feb 21, 2026
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|c2674b19d2221a14023df7f16376c3a524b6f059|May 15, 2026
@@ -480,7 +480,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|a403db7c9df43b6d7ccf
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|0d91d1f2d40f38d21e7f41afc01369ee55649fb6|Dec 31, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|0c1a5c665ed8994eb500f21b8b5c7d5104f5f95b|May 12, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260515|May 15, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260516|May 16, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14347|May 15, 2026
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|65188cc7860a8d82a0a969c000b57d44fc3ffffc|May 14, 2026
@@ -590,8 +590,8 @@ Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v2.7.1|Aug 30, 2025
 Wine|[rtkit](http://github.com/heftig/RTKIT)|c295fa849f52b487be6433e69e08b46251950399|Apr 05, 2020
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.0.1|May 06, 2026
 Wine|[vkd3d](https://source.winehq.org/git/vkd3d.git)|vkd3d-1.13|Aug 29, 2024
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.08|May 02, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.09|May 16, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.1.0|Apr 21, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260506-proton-slr|May 06, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260515|May 15, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260516|May 16, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|14b802e419aff260b9d630e71027d88855e224e7|Apr 10, 2026
