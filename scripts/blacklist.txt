@@ -20,4 +20,3 @@ vulkan-utility-libraries.mk
 vulkan-validationlayers.mk
 wine-proton.mk
 wine-x86.mk
-xenia-edge.mk
