@@ -83,8 +83,8 @@ class NanoboyadvanceGenerator(Generator):
             encoding='utf-8',
         )
 
-        # NanoBoyAdvance supports archives natively via unarr (zip, 7z, tar, rar1).
-        # Pass the path as-is — no extraction needed.
+        # NanoBoyAdvance supports archives natively via unrar (zip, 7z, tar, rar1).
+        # Pass the path as-is, no extraction needed.
         return Command.Command(
             array=['/usr/bin/NanoBoyAdvance', rom],
             env={

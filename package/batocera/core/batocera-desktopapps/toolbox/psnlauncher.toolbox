@@ -55,12 +55,12 @@ def fetch(url, timeout=30):
         with urllib.request.urlopen(req, timeout=timeout) as response:
             return response.read()
     except Exception as exc:
-        print(f"[fetch error] {url} — {exc}")
+        print(f"[fetch error] {url} - {exc}")
         return None
 
 
 def load_nps_tsv(url):
-    print(f"[nps] Downloading {url} …")
+    print(f"[nps] Downloading {url} ...")
     data = fetch(url)
     if not data:
         print("[nps] Download failed.")
@@ -124,7 +124,7 @@ def create_psn_launchers(game_dir, out_dir, database):
             print(f"[created] {target}")
             created += 1
         except Exception as exc:
-            print(f"[error] {target} — {exc}")
+            print(f"[error] {target} - {exc}")
 
     print("\n--- Summary ---")
     print(f"Created        : {created}")

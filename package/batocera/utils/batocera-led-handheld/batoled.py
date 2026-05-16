@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PWM + RGB + Multi-LED unified LED driver 
+PWM + RGB + Multi-LED unified LED driver
 Written for Batocera - @lbrpdx
 Updated for kernel module updates - @dmanlfc
 Updated for multi-led platform - @dmanlfc
@@ -103,7 +103,7 @@ class multiled(object):
         # Get brightness from config
         b_conf = batoconf("led.brightness")
         if b_conf is None: b_conf = 255
-        
+
         if rgb == "ESCOLOR":
             r, g, b = batoconf_color()
         elif rgb == "RAINBOW":
@@ -114,7 +114,7 @@ class multiled(object):
             return
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):
