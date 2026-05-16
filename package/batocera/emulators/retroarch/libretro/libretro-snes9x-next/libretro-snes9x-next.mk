@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 15, 2026
-LIBRETRO_SNES9X_NEXT_VERSION = 0313d9a70f17548dbb8d437f6ed359c872bc5349
+LIBRETRO_SNES9X_NEXT_VERSION = bc82e8281ddbbd487875866f5db27cdb9838d319
 LIBRETRO_SNES9X_NEXT_SITE = $(call github,libretro,snes9x2010,$(LIBRETRO_SNES9X_NEXT_VERSION))
 LIBRETRO_SNES9X_NEXT_LICENSE = Non-commercial
 LIBRETRO_SNES9X_NEXT_DEPENDENCIES += retroarch
