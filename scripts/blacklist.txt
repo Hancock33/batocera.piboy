@@ -9,7 +9,6 @@ mt32emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
-python-pyxel.mk
 spirv-cross.mk
 spirv-headers.mk
 spirv-tools.mk
