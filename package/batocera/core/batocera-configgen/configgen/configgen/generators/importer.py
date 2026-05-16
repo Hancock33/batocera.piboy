@@ -97,6 +97,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'openmsx': ('openmsx.openmsxGenerator', 'OpenmsxGenerator'),
     'opentyrian': ('opentyrian.opentyrianGenerator', 'OpentyrianGenerator'),
     'pcexhumed': ('pcexhumed.pcexhumedGenerator', 'PcexhumedGenerator'),
+    'nanoboyadvance': ('nanoboyadvance.nanoboyadvanceGenerator', 'NanoboyadvanceGenerator'),
     'pcsx2': ('pcsx2.pcsx2Generator', 'Pcsx2Generator'),
     'play': ('play.playGenerator', 'PlayGenerator'),
     'ppsspp': ('ppsspp.ppssppGenerator', 'PPSSPPGenerator'),

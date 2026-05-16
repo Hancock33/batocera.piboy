@@ -3293,13 +3293,15 @@ gba:
   manufacturer:         Nintendo
   release:              2001
   hardware:             portable
-  extensions:           [7z, gba, zip]
+  extensions:           [7z, gba, rar, tar, zip]
   emulators:
     libretro:
-      gpsp:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GPSP]   }
-      mgba:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA]   }
-      skyemu:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SKYEMU] }
-      vba-m:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M]  }
+      gpsp:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GPSP], incompatible_extensions: [rar, tar] }
+      mgba:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MGBA], incompatible_extensions: [rar, tar] }
+      skyemu:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SKYEMU], incompatible_extensions: [rar, tar] }
+      vba-m:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_VBA_M], incompatible_extensions: [rar, tar] }
+    nanoboyadvance:
+      nanoboyadvance:   { requireAnyOf: [BR2_PACKAGE_NANOBOYADVANCE] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:gba
   comment_fr:           |
