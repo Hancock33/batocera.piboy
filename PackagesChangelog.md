@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260517|May 17, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260517|May 17, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|c27fd72f66f4d183c38eae107e1a264e0b2ab85a|May 16, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|c27fd72f66f4d183c38eae107e1a264e0b2ab85a|May 16, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|dec8351fa9f185487295fab092b88c572e1aaa14|May 16, 2026
@@ -23,9 +25,7 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|e11d383aabe3f9f
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14348|May 16, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|d749b1fcdbbdec0482406508ff38f8d74729eb83|May 16, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.09|May 16, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260516|May 16, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ff2ba6796af599b308f844e94c961545d866e0d4|May 16, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260516|May 16, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d6a9d0761d68dc8b14eb325221b3a45b84d59836|May 16, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|e50e5ca60bc39a7733a0b154fe14f5198f03f220|May 16, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|d305292340eb3babb00d85ff2e4c28985f9e0583|May 16, 2026
