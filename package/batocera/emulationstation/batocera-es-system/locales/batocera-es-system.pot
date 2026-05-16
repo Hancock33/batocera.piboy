@@ -650,7 +650,7 @@ msgctxt "game_options"
 msgid "OFF"
 msgstr ""
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, libretro/melonds
 msgctxt "game_options"
 msgid "ON"
 msgstr ""
@@ -675,7 +675,7 @@ msgctxt "game_options"
 msgid "KEEP ASPECT RATIO"
 msgstr ""
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, libretro/melonds
 msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr ""
@@ -803,7 +803,7 @@ msgid ""
 "Hotkey+R2."
 msgstr ""
 
-#. TRANSLATION: azahar, libretro/desmume, melonds
+#. TRANSLATION: azahar, libretro/desmume, libretro/melonds, melonds
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr ""
@@ -905,7 +905,7 @@ msgctxt "game_options"
 msgid "GRAPHICS API"
 msgstr ""
 
-#. TRANSLATION: awgl, azahar, duckstation, libretro/melondsds, melonds, ...
+#. TRANSLATION: awgl, azahar, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr ""
@@ -1280,12 +1280,12 @@ msgctxt "game_options"
 msgid "Current language"
 msgstr ""
 
-#. TRANSLATION: cemu, doom3, eden, etlegacy, flycast, ...
+#. TRANSLATION: cemu, dolphin, doom3, eden, etlegacy, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr ""
 
-#. TRANSLATION: awgl, cemu, doom3, eden, etlegacy, ...
+#. TRANSLATION: awgl, cemu, dolphin, doom3, eden, ...
 msgctxt "game_options"
 msgid "English"
 msgstr ""
@@ -1315,7 +1315,7 @@ msgctxt "game_options"
 msgid "Chinese"
 msgstr ""
 
-#. TRANSLATION: cemu, doom3, easyrpg, eden, etlegacy, ...
+#. TRANSLATION: cemu, dolphin, doom3, easyrpg, eden, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr ""
@@ -1425,7 +1425,7 @@ msgctxt "game_options"
 msgid "DOWNSCALE FILTER"
 msgstr ""
 
-#. TRANSLATION: cemu, rpcs3, supermodel, xenia-edge
+#. TRANSLATION: cemu, rpcs3, supermodel, xenia-canary, xenia-edge, ...
 msgctxt "game_options"
 msgid "Bilinear (Default)"
 msgstr ""
@@ -1923,6 +1923,26 @@ msgstr ""
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "English/Japanese"
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Change the Wii system language."
+msgstr ""
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "WII LANGUAGE"
+msgstr ""
+
+#. TRANSLATION: dolphin, eden, libretro/dolphin, play, ryujinx, ...
+msgctxt "game_options"
+msgid "Simplified Chinese"
+msgstr ""
+
+#. TRANSLATION: dolphin, eden, libretro/dolphin, play, ryujinx, ...
+msgctxt "game_options"
+msgid "Traditional Chinese"
 msgstr ""
 
 #. TRANSLATION: dolphin, libretro/dolphin
@@ -2739,7 +2759,7 @@ msgctxt "game_options"
 msgid "ANTI-ALIASING METHOD"
 msgstr ""
 
-#. TRANSLATION: eden, pcsx2, vita3k, xenia-edge
+#. TRANSLATION: eden, pcsx2, vita3k, xenia-canary, xenia-edge, ...
 msgctxt "game_options"
 msgid "FXAA"
 msgstr ""
@@ -2844,16 +2864,6 @@ msgstr ""
 #. TRANSLATION: eden, ryujinx
 msgctxt "game_options"
 msgid "Latin American Spanish"
-msgstr ""
-
-#. TRANSLATION: eden, libretro/dolphin, play, ryujinx, shadps4, ...
-msgctxt "game_options"
-msgid "Simplified Chinese"
-msgstr ""
-
-#. TRANSLATION: eden, libretro/dolphin, play, ryujinx, shadps4, ...
-msgctxt "game_options"
-msgid "Traditional Chinese"
 msgstr ""
 
 #. TRANSLATION: eden, ryujinx
@@ -3216,12 +3226,12 @@ msgctxt "game_options"
 msgid "PLAYER 1 CROSSHAIR COLOR"
 msgstr ""
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/melondsds, libretro/pcsx_rearmed
+#. TRANSLATION: flycast, libretro/flycast, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Red"
 msgstr ""
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/melondsds, libretro/pcsx_rearmed
+#. TRANSLATION: flycast, libretro/flycast, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Blue"
 msgstr ""
@@ -3829,7 +3839,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL2 for gamepads only."
+"lightguns and steering wheels. SDL for gamepads only."
 msgstr ""
 
 #. TRANSLATION: lindbergh-loader
@@ -3837,14 +3847,14 @@ msgctxt "game_options"
 msgid "CONTROLLER MODE"
 msgstr ""
 
-#. TRANSLATION: libretro, lindbergh-loader
+#. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
-msgid "SDL2"
+msgid "SDL (Default)"
 msgstr ""
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
-msgid "EVDEV (Default)"
+msgid "EVDEV"
 msgstr ""
 
 #. TRANSLATION: lindbergh-loader
@@ -5651,12 +5661,12 @@ msgctxt "game_options"
 msgid "Use language and username from the NDS Firmware."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
 msgstr ""
 
-#. TRANSLATION: melonds
+#. TRANSLATION: libretro/melonds, melonds
 msgctxt "game_options"
 msgid "USE FIRMWARE SETTINGS"
 msgstr ""
@@ -5671,254 +5681,254 @@ msgctxt "game_options"
 msgid "off"
 msgstr ""
 
-#. TRANSLATION: melonds
+#. TRANSLATION: libretro/melonds, melonds
 msgctxt "game_options"
 msgid ""
 "Select language will be used if 'Use Firmware Settings' is disabled or if "
 "firmware file was not found."
 msgstr ""
 
-#. TRANSLATION: fallout1-ce, fallout2-ce, libretro/cap32, libretro/yabasanshiro, melonds, ...
+#. TRANSLATION: fallout1-ce, fallout2-ce, libretro/cap32, libretro/melonds, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "The month of your birthay."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "BIRTH MONTH"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "January"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "February"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "March"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "April"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "May"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "June"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "July"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "August"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "September"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "October"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "November"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "December"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Don't Override"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "BIRTH DAY"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "1st"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "2nd"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "3rd"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "4th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "5th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "6th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "7th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "8th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "9th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "10th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "11th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "12th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "13th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "14th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "15th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "16th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "17th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "18th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "19th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "20th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "21st"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "22nd"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "23rd"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "24th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "25th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "26th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "27th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "28th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "29th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "30th"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "31st"
 msgstr ""
@@ -6050,7 +6060,7 @@ msgctxt "game_options"
 msgid "CONSOLE TYPE"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "DS"
 msgstr ""
@@ -6527,6 +6537,11 @@ msgstr ""
 
 #. TRANSLATION: pcsx2
 msgctxt "game_options"
+msgid "10:7 (1.43:1 - custom)"
+msgstr ""
+
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
 msgid "Adjusts Full Motion Video movies aspect ratio."
 msgstr ""
 
@@ -6737,7 +6752,7 @@ msgctxt "game_options"
 msgid "Control the texture filtering of the emulation."
 msgstr ""
 
-#. TRANSLATION: f2bgl, libretro/melondsds, libretro/parallel_n64, libretro/pcsx2, libretro/swanstation, ...
+#. TRANSLATION: f2bgl, libretro/parallel_n64, libretro/pcsx2, libretro/swanstation, pcsx2, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr ""
@@ -7256,7 +7271,7 @@ msgctxt "game_options"
 msgid "TEXTURE DEPOSTERIZE"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, ppsspp
+#. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Linear"
 msgstr ""
@@ -7468,7 +7483,7 @@ msgctxt "game_options"
 msgid "Use an alternate resolution. Some games need this."
 msgstr ""
 
-#. TRANSLATION: libretro/atari800, libretro/melondsds
+#. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr ""
@@ -7800,34 +7815,158 @@ msgctxt "game_options"
 msgid "Enhancement. Remove the four sprites per line limit."
 msgstr ""
 
-#. TRANSLATION: libretro/bsnes, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Apply a video filter to mimic various NTSC TV signals."
 msgstr ""
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "VIDEO FILTERS"
 msgstr ""
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "NTSC (RF)"
 msgstr ""
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "NTSC (RGB)"
 msgstr ""
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "NTSC (S-Video)"
 msgstr ""
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "NTSC (Composite)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Select the SGB BIOS. Requires SGB1.sfc or SGB2.sfc in the bios folder."
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
+msgctxt "game_options"
+msgid "SUPER GAME BOY BIOS"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd, libretro/mesen-s
+msgctxt "game_options"
+msgid "Super Game Boy"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Super Game Boy 2"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid ""
+"Scale Mode 7 graphics at a higher resolution. Higher values require more GPU "
+"power."
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "HD MODE 7 SCALE"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "240p (1x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "480p (2x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "720p (3x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "960p (4x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "1200p (5x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "1440p (6x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "1680p (7x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "1920p (8x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "2160p (9x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "2400p (10x)"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid ""
+"Supersample Mode 7 before scaling for smoother edges. Higher values require "
+"more GPU power."
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "HD MODE 7 SUPERSAMPLING"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Extend the horizontal field of view for widescreen displays."
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "HD MODE 7 WIDESCREEN"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Only for Mode 7 scenes"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Enable for all scenes"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "Hide the Super Game Boy decorative border."
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "HIDE SGB BORDER"
 msgstr ""
 
 #. TRANSLATION: libretro/cap32
@@ -7900,37 +8039,37 @@ msgctxt "game_options"
 msgid "TEXTURE SMOOTHING"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr ""
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "top/bottom"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "bottom/top"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "left/right"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "right/left"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "top only"
 msgstr ""
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "bottom only"
 msgstr ""
@@ -9153,7 +9292,7 @@ msgctxt "game_options"
 msgid "Gamepad Using Left Analog Stick"
 msgstr ""
 
-#. TRANSLATION: libretro/flycast, libretro/genesisplusgx-expanded, libretro/np2kai
+#. TRANSLATION: libretro/flycast, libretro/genesisplusgx-expanded, libretro/melonds, libretro/np2kai
 msgctxt "game_options"
 msgid "Mouse"
 msgstr ""
@@ -10377,402 +10516,74 @@ msgctxt "game_options"
 msgid "Simultaneous"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "NDS VERSION"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "DSi (Experiemental)"
+msgid "DS (Default)"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid ""
-"Software mode is faster and more accurate, while OpenGL mode supports "
-"scaling 3D graphics."
+msgid "DSi"
 msgstr ""
 
-#. TRANSLATION: awgl, bermuda, f2bgl, libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "VIDEO SETTINGS"
+msgid "Disable to access the system's settings, like time and language."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "RENDERER MODE"
+msgid "SKIP DS SYSTEM MENU"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "OpenGL (Overwrites Libretro API settings)"
+msgid "Use language and username from the NDS Firmware"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "Degree in which 3D graphics are scaled up. OpenGL renderer only."
+msgid "hybrid top ratio 2"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "1x native (256 x 192)"
+msgid "hybrid top ratio 3"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "2x native (512 x 384)"
+msgid "hybrid bottom ratio 2"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "3x native (768 x 576)"
+msgid "hybrid bottom ratio 3"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "4x native (1024 x 768)"
+msgid "Select the input type to navigate the touch screen"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "5x native (1280 x 960)"
+msgid "TOUCH SCREEN MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "6x native (1536 x 1152)"
+msgid "Touch Screen"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "7x native (1792 x 1344)"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "8x native (2048 x 1536)"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Enable this if your game's 3D modles are not rendered correctly. OpenGL "
-"renderer only."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "IMPROVED POLYGON SPLITTING"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Affects how the emulated screens are scaled. OpenGL renderer only."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SCREEN FILTERING"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Determines how the cursor should apprear on the botton screen."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SCREEN SETTINGS"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "CURSOR MODE"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds, openjk
-msgctxt "game_options"
-msgid "Never"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "While Touching"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Until Timeout"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Always"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Cursor timeout in seconds when using Cursor Mode - Until Timeout."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "CURSOR TIMEOUT"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "1 second"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "2 seconds"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "3 seconds"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "5 seconds"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "10 seconds"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "15 seconds"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "20 seconds"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "30 seconds"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "60 seconds"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Determine how the console's touch screen in emulated."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "TOUCH MODE"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
-msgctxt "game_options"
-msgid "Joystick"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Pointer"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Use this to play online with custom servers that reimplement the "
-"discontinued Nintendo Wi-Fi."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "DNS OVERRIDE"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Kaeru WFC (178.62.43.212)"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "AltWFC (172.104.88.237)"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Wiimmfi (95.217.77.181)"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Force Default DNS"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Overrides the language mode of the emulated console."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Use Host"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "The theme colour of the emulated console."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "FAVOURITE COLOUR"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Gray"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Brown"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Light Pink"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Orange"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Yellow"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Lime"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Light Green"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Dark Green"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Turquoise"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Light Blue"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Dark Blue"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Dark Purple"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Light Purple"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Dark Pink"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Enable to display an on-screen message if trying to use unsupported features."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "WARN ABOUT UNSUPPORTED FEATURES"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Enable to display if your BIOS haas known problems."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "WARN ABOUT BIOS PROBLEMS"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Enable to show which screen layout with the configured sequence is active."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SHOW SCREEN LAYOUT"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Enable to show whether your device's microphone is active."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SHOW HOST MICROPHONE STATE"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Enable to show whether your device's camera is active."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SHOW HOST CAMERA STATE"
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Enable to show whether the emulated screens are closed."
-msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SHOW LID STATE"
+msgid "Right Stick"
 msgstr ""
 
 #. TRANSLATION: libretro/mesen
@@ -10999,9 +10810,14 @@ msgctxt "game_options"
 msgid "Game Boy Color"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/mesen-s, libretro/snes9x_next
 msgctxt "game_options"
-msgid "Super Game Boy"
+msgid "Enhancement. Reduces slowdown in mode 7 games."
+msgstr ""
+
+#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
+msgctxt "game_options"
+msgid "SUPER FX OVERCLOCK"
 msgstr ""
 
 #. TRANSLATION: libretro/mesen-s
@@ -11014,29 +10830,9 @@ msgctxt "game_options"
 msgid "SUPER GAME BOY 2"
 msgstr ""
 
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x_next
-msgctxt "game_options"
-msgid "Enhancement. Reduces slowdown in mode 7 games."
-msgstr ""
-
-#. TRANSLATION: libretro/mesen-s, libretro/snes9x, libretro/snes9x_next
-msgctxt "game_options"
-msgid "SUPER FX OVERCLOCK"
-msgstr ""
-
 #. TRANSLATION: libretro/mgba
 msgctxt "game_options"
 msgid "Requires BIOS file to be present."
-msgstr ""
-
-#. TRANSLATION: libretro/mgba, libretro/vba-m
-msgctxt "game_options"
-msgid "Only for Super Game Boy enhanced games."
-msgstr ""
-
-#. TRANSLATION: libretro/mgba, libretro/vba-m
-msgctxt "game_options"
-msgid "SUPER GB BORDERS"
 msgstr ""
 
 #. TRANSLATION: libretro/mgba
@@ -11047,6 +10843,16 @@ msgstr ""
 #. TRANSLATION: libretro/mgba, libretro/vba-m
 msgctxt "game_options"
 msgid "SOLAR SENSOR LEVEL"
+msgstr ""
+
+#. TRANSLATION: libretro/mgba
+msgctxt "game_options"
+msgid "Show the Super Game Boy decorative border."
+msgstr ""
+
+#. TRANSLATION: libretro/mgba
+msgctxt "game_options"
+msgid "SUPER GB BORDERS"
 msgstr ""
 
 #. TRANSLATION: libretro/mrboom
@@ -12461,6 +12267,11 @@ msgctxt "game_options"
 msgid "Analog Joystick"
 msgstr ""
 
+#. TRANSLATION: libretro/puae, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, ...
+msgctxt "game_options"
+msgid "Joystick"
+msgstr ""
+
 #. TRANSLATION: libretro/puae
 msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
@@ -13837,6 +13648,11 @@ msgstr ""
 
 #. TRANSLATION: libretro
 msgctxt "game_options"
+msgid "SDL2"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
 msgid "Pulse (Default)"
 msgstr ""
 
@@ -15171,6 +14987,11 @@ msgid ""
 "resolution."
 msgstr ""
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "DISPLAY OPTIONS"
+msgstr ""
+
 #. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "INTERNAL DISPLAY RESOLUTION"
@@ -15846,6 +15667,65 @@ msgctxt "game_options"
 msgid "MOUNT CACHE"
 msgstr ""
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Upscaling and sharpening filter. CAS = AMD FidelityFX Contrast Adaptive "
+"Sharpening, FSR = AMD FidelityFX Super Resolution 1.0."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "POST-PROCESSING SCALING AND SHARPENING"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "CAS"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "FSR"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "Post-processing anti-aliasing filter."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "POST-PROCESSING ANTI-ALIASING"
+msgstr ""
+
+#. TRANSLATION: xenia-canary, xenia-edge
+msgctxt "game_options"
+msgid "FXAA Extreme"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Additional sharpness for AMD FidelityFX CAS, from 0 to 1. Higher is sharper."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "CAS ADDITIONAL SHARPNESS"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Sharpness reduction for AMD FidelityFX FSR 1.0, in stops. Lower is sharper."
+msgstr ""
+
+#. TRANSLATION: xenia-canary, xenia-edge
+msgctxt "game_options"
+msgid "FSR SHARPNESS REDUCTION"
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid ""
@@ -15882,11 +15762,6 @@ msgstr ""
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
-msgid "FXAA Extreme"
-msgstr ""
-
-#. TRANSLATION: xenia-edge
-msgctxt "game_options"
 msgid ""
 "Additional sharpness intensity when using CAS filter. Higher value = more "
 "sharpening (0.0 to 1.0)."
@@ -15907,11 +15782,6 @@ msgctxt "game_options"
 msgid ""
 "Sharpness reduction when using FSR. Lower = sharper, higher = softer (0.0 to "
 "2.0). Default 0.2."
-msgstr ""
-
-#. TRANSLATION: xenia-edge
-msgctxt "game_options"
-msgid "FSR SHARPNESS REDUCTION"
 msgstr ""
 
 #. TRANSLATION: xenia-edge
@@ -17140,6 +17010,11 @@ msgctxt "game_options"
 msgid "Select rendering mode."
 msgstr ""
 
+#. TRANSLATION: awgl, bermuda, f2bgl
+msgctxt "game_options"
+msgid "VIDEO SETTINGS"
+msgstr ""
+
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "GAME RENDERING"
@@ -17749,6 +17624,11 @@ msgstr ""
 #. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "SLOW MOTION DEATH"
+msgstr ""
+
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "Never"
 msgstr ""
 
 #. TRANSLATION: openjk
@@ -18613,114 +18493,14 @@ msgctxt "game_options"
 msgid "FSYNC"
 msgstr ""
 
-#. TRANSLATION: vpinball.keys
+#. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
-msgid "Start game"
+msgid "Move forward / up"
 msgstr ""
 
-#. TRANSLATION: vpinball.keys
+#. TRANSLATION: omf2097.keys
 msgctxt "keys_files"
-msgid "Insert coin"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Nudge up"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Nudge left"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Nudge right"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Pull plunger"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Lockbar Fire Button"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Buy extraball for a credit"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Left flipper"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Right flipper"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Left magnasave"
-msgstr ""
-
-#. TRANSLATION: vpinball.keys
-msgctxt "keys_files"
-msgid "Right magnasave"
-msgstr ""
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Open door"
-msgstr ""
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Toggle weapon"
-msgstr ""
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Drop weapon"
-msgstr ""
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Aim up"
-msgstr ""
-
-#. TRANSLATION: rott.keys
-msgctxt "keys_files"
-msgid "Aim down"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
-msgctxt "keys_files"
-msgid "Strafe left"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
-msgctxt "keys_files"
-msgid "Strafe right"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, rott.keys
-msgctxt "keys_files"
-msgid "Run"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys, rott.keys
-msgctxt "keys_files"
-msgid "Fire"
-msgstr ""
-
-#. TRANSLATION: mugen.keys, rott.keys
-msgctxt "keys_files"
-msgid "Menu back"
+msgid "Move back / down"
 msgstr ""
 
 #. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
@@ -18743,9 +18523,89 @@ msgctxt "keys_files"
 msgid "Move backward"
 msgstr ""
 
-#. TRANSLATION: rott.keys
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
 msgctxt "keys_files"
-msgid "Toggle run"
+msgid "Strafe left"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, omf2097.keys, openjkdf2.keys, rott.keys
+msgctxt "keys_files"
+msgid "Strafe right"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Look up"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Look down"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Previous item"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Next item"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Use item"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Jump"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys
+msgctxt "keys_files"
+msgid "Next weapon"
+msgstr ""
+
+#. TRANSLATION: mohaa.keys, omf2097.keys
+msgctxt "keys_files"
+msgid "Crouch"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, catacomb.keys, omf2097.keys, rott.keys
+msgctxt "keys_files"
+msgid "Run"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys, rott.keys
+msgctxt "keys_files"
+msgid "Fire"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Inventory"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Help computer"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Back / Menu"
+msgstr ""
+
+#. TRANSLATION: omf2097.keys
+msgctxt "keys_files"
+msgid "Drop item"
+msgstr ""
+
+#. TRANSLATION: rtcw.keys, theforceengine.keys
+msgctxt "keys_files"
+msgid "Skip cutscene"
 msgstr ""
 
 #. TRANSLATION: mohaa.keys
@@ -18788,11 +18648,6 @@ msgctxt "keys_files"
 msgid "Toggle menu"
 msgstr ""
 
-#. TRANSLATION: mohaa.keys, omf2097.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Jump"
-msgstr ""
-
 #. TRANSLATION: bstone.keys, mohaa.keys, openjk.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Use"
@@ -18823,11 +18678,6 @@ msgctxt "keys_files"
 msgid "Speed"
 msgstr ""
 
-#. TRANSLATION: mohaa.keys, omf2097.keys
-msgctxt "keys_files"
-msgid "Crouch"
-msgstr ""
-
 #. TRANSLATION: mohaa.keys
 msgctxt "keys_files"
 msgid "Toggle item"
@@ -18836,106 +18686,6 @@ msgstr ""
 #. TRANSLATION: bstone.keys, mohaa.keys, openjkdf2.keys
 msgctxt "keys_files"
 msgid "Previous weapon"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, mohaa.keys, omf2097.keys
-msgctxt "keys_files"
-msgid "Next weapon"
-msgstr ""
-
-#. TRANSLATION: openjkdf2.keys
-msgctxt "keys_files"
-msgid "Fast"
-msgstr ""
-
-#. TRANSLATION: openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Pitch Up"
-msgstr ""
-
-#. TRANSLATION: openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Pitch Down"
-msgstr ""
-
-#. TRANSLATION: openjkdf2.keys
-msgctxt "keys_files"
-msgid "Fire 1"
-msgstr ""
-
-#. TRANSLATION: openjkdf2.keys
-msgctxt "keys_files"
-msgid "Fire 2"
-msgstr ""
-
-#. TRANSLATION: openjkdf2.keys
-msgctxt "keys_files"
-msgid "Duck"
-msgstr ""
-
-#. TRANSLATION: openjkdf2.keys
-msgctxt "keys_files"
-msgid "Previous Weapon"
-msgstr ""
-
-#. TRANSLATION: openjkdf2.keys
-msgctxt "keys_files"
-msgid "Next Weapon"
-msgstr ""
-
-#. TRANSLATION: openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Previous Inventory Item"
-msgstr ""
-
-#. TRANSLATION: openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Next Inventory Item"
-msgstr ""
-
-#. TRANSLATION: openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Next Force Power"
-msgstr ""
-
-#. TRANSLATION: openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Previous Force Power"
-msgstr ""
-
-#. TRANSLATION: openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Use Force Power"
-msgstr ""
-
-#. TRANSLATION: openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Map"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Zoom out"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Zoom in"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
-msgctxt "keys_files"
-msgid "Menu back / exit"
-msgstr ""
-
-#. TRANSLATION: openjkdf2.keys
-msgctxt "keys_files"
-msgid "Field Light"
-msgstr ""
-
-#. TRANSLATION: openjkdf2.keys
-msgctxt "keys_files"
-msgid "Use Inventory Item"
 msgstr ""
 
 #. TRANSLATION: corsixth.keys
@@ -19058,116 +18808,6 @@ msgctxt "keys_files"
 msgid "Manage Staff"
 msgstr ""
 
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Move forward / up"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Move back / down"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Look up"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Look down"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Previous item"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Next item"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Use item"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Inventory"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Help computer"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Back / Menu"
-msgstr ""
-
-#. TRANSLATION: omf2097.keys
-msgctxt "keys_files"
-msgid "Drop item"
-msgstr ""
-
-#. TRANSLATION: rtcw.keys, theforceengine.keys
-msgctxt "keys_files"
-msgid "Skip cutscene"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Walk forward"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Backpedal"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Run/Walk"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Up/Jump"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Turn left"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Turn right"
-msgstr ""
-
-#. TRANSLATION: bstone.keys, openjk.keys
-msgctxt "keys_files"
-msgid "Attack"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Alt. Attack"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "Down/Crouch"
-msgstr ""
-
-#. TRANSLATION: openjk.keys
-msgctxt "keys_files"
-msgid "3rd Person"
-msgstr ""
-
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu enter"
@@ -19183,6 +18823,11 @@ msgctxt "keys_files"
 msgid "Menu down"
 msgstr ""
 
+#. TRANSLATION: bstone.keys, openjk.keys
+msgctxt "keys_files"
+msgid "Attack"
+msgstr ""
+
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Menu left"
@@ -19196,6 +18841,21 @@ msgstr ""
 #. TRANSLATION: bstone.keys
 msgctxt "keys_files"
 msgid "Stats"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Zoom out"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Zoom in"
+msgstr ""
+
+#. TRANSLATION: bstone.keys, openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Menu back / exit"
 msgstr ""
 
 #. TRANSLATION: bstone.keys
@@ -19373,6 +19033,301 @@ msgctxt "keys_files"
 msgid "smart missile"
 msgstr ""
 
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fast"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Up"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Pitch Down"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 1"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Fire 2"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Duck"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Weapon"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Weapon"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Next Force Power"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Previous Force Power"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Force Power"
+msgstr ""
+
+#. TRANSLATION: openjk.keys, openjkdf2.keys
+msgctxt "keys_files"
+msgid "Map"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Field Light"
+msgstr ""
+
+#. TRANSLATION: openjkdf2.keys
+msgctxt "keys_files"
+msgid "Use Inventory Item"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Walk forward"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Backpedal"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Run/Walk"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Up/Jump"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Turn left"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Turn right"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Alt. Attack"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "Down/Crouch"
+msgstr ""
+
+#. TRANSLATION: openjk.keys
+msgctxt "keys_files"
+msgid "3rd Person"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Open door"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle weapon"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Drop weapon"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim up"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Aim down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys, rott.keys
+msgctxt "keys_files"
+msgid "Menu back"
+msgstr ""
+
+#. TRANSLATION: rott.keys
+msgctxt "keys_files"
+msgid "Toggle run"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Up"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Analog Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Up"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Down"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Left"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Right"
+msgstr ""
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button X"
+msgstr ""
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button Y"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button Z"
+msgstr ""
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button A"
+msgstr ""
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button B"
+msgstr ""
+
+#. TRANSLATION: mugen.keys
+msgctxt "keys_files"
+msgid "Button C"
+msgstr ""
+
+#. TRANSLATION: mugen.keys, nds.drastic.keys
+msgctxt "keys_files"
+msgid "Button Start"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Start game"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Insert coin"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge up"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge left"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Nudge right"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Pull plunger"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Lockbar Fire Button"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Buy extraball for a credit"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Left flipper"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Right flipper"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Left magnasave"
+msgstr ""
+
+#. TRANSLATION: vpinball.keys
+msgctxt "keys_files"
+msgid "Right magnasave"
+msgstr ""
+
 #. TRANSLATION: hotkeys.keys, naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Exit emulator"
@@ -19446,6 +19401,21 @@ msgstr ""
 #. TRANSLATION: hotkeys.keys
 msgctxt "keys_files"
 msgid "Hide bezels"
+msgstr ""
+
+#. TRANSLATION: naomigd.flycast.keys
+msgctxt "keys_files"
+msgid "Hide the bezel"
+msgstr ""
+
+#. TRANSLATION: 3ds.azahar.keys
+msgctxt "keys_files"
+msgid "Move Stylet Pointer"
+msgstr ""
+
+#. TRANSLATION: 3ds.azahar.keys
+msgctxt "keys_files"
+msgid "Mouse Click"
 msgstr ""
 
 #. TRANSLATION: cave3rd.demul.keys, gaelco.demul.keys, hikaru.demul.keys
@@ -19563,31 +19533,6 @@ msgctxt "keys_files"
 msgid "Virtual Keyboard"
 msgstr ""
 
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Move Stylet Pointer"
-msgstr ""
-
-#. TRANSLATION: 3ds.azahar.keys
-msgctxt "keys_files"
-msgid "Mouse Click"
-msgstr ""
-
-#. TRANSLATION: naomigd.flycast.keys
-msgctxt "keys_files"
-msgid "Hide the bezel"
-msgstr ""
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
-msgctxt "keys_files"
-msgid "Emulator configuration"
-msgstr ""
-
-#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
-msgctxt "keys_files"
-msgid "Exit the emulator"
-msgstr ""
-
 #. TRANSLATION: nds.drastic.keys
 msgctxt "keys_files"
 msgid "Joy2Pad Up"
@@ -19628,31 +19573,6 @@ msgctxt "keys_files"
 msgid "Hat Right"
 msgstr ""
 
-#. TRANSLATION: mugen.keys, nds.drastic.keys
-msgctxt "keys_files"
-msgid "Button A"
-msgstr ""
-
-#. TRANSLATION: mugen.keys, nds.drastic.keys
-msgctxt "keys_files"
-msgid "Button B"
-msgstr ""
-
-#. TRANSLATION: mugen.keys, nds.drastic.keys
-msgctxt "keys_files"
-msgid "Button X"
-msgstr ""
-
-#. TRANSLATION: mugen.keys, nds.drastic.keys
-msgctxt "keys_files"
-msgid "Button Y"
-msgstr ""
-
-#. TRANSLATION: mugen.keys, nds.drastic.keys
-msgctxt "keys_files"
-msgid "Button Start"
-msgstr ""
-
 #. TRANSLATION: nds.drastic.keys
 msgctxt "keys_files"
 msgid "Button Select"
@@ -19688,52 +19608,12 @@ msgctxt "keys_files"
 msgid "TouchScreen"
 msgstr ""
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
-msgid "Analog Up"
+msgid "Emulator configuration"
 msgstr ""
 
-#. TRANSLATION: mugen.keys
+#. TRANSLATION: amiga1200.amiberry.keys, amiga500.amiberry.keys, amigacd32.amiberry.keys
 msgctxt "keys_files"
-msgid "Analog Down"
-msgstr ""
-
-#. TRANSLATION: mugen.keys
-msgctxt "keys_files"
-msgid "Analog Left"
-msgstr ""
-
-#. TRANSLATION: mugen.keys
-msgctxt "keys_files"
-msgid "Analog Right"
-msgstr ""
-
-#. TRANSLATION: mugen.keys
-msgctxt "keys_files"
-msgid "Up"
-msgstr ""
-
-#. TRANSLATION: mugen.keys
-msgctxt "keys_files"
-msgid "Down"
-msgstr ""
-
-#. TRANSLATION: mugen.keys
-msgctxt "keys_files"
-msgid "Left"
-msgstr ""
-
-#. TRANSLATION: mugen.keys
-msgctxt "keys_files"
-msgid "Right"
-msgstr ""
-
-#. TRANSLATION: mugen.keys
-msgctxt "keys_files"
-msgid "Button Z"
-msgstr ""
-
-#. TRANSLATION: mugen.keys
-msgctxt "keys_files"
-msgid "Button C"
+msgid "Exit the emulator"
 msgstr ""

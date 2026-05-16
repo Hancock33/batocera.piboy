@@ -137,11 +137,6 @@ msgctxt "game_options"
 msgid "1 MHz (Underclock)"
 msgstr "1 MHz (Underclock)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "1 second"
-msgstr "1 segundo"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "1 thread"
@@ -297,11 +292,6 @@ msgctxt "game_options"
 msgid "10 MHz (Default)"
 msgstr "10 MHz (Defecto)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "10 seconds"
-msgstr "10 segundos"
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "100 fps"
@@ -372,6 +362,11 @@ msgctxt "game_options"
 msgid "1040 STE ETOS 256k"
 msgstr "1040 STE ETOS 256k"
 
+#. TRANSLATION: pcsx2
+msgctxt "game_options"
+msgid "10:7 (1.43:1 - custom)"
+msgstr ""
+
 #. TRANSLATION: libretro/px68k
 msgctxt "game_options"
 msgid "10MB"
@@ -397,7 +392,7 @@ msgctxt "game_options"
 msgid "10ms"
 msgstr "10ms"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "10th"
 msgstr "10"
@@ -417,7 +412,7 @@ msgctxt "game_options"
 msgid "11MB"
 msgstr "11MB"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "11th"
 msgstr "11"
@@ -436,6 +431,11 @@ msgstr "12 MHz"
 msgctxt "game_options"
 msgid "120 fps"
 msgstr "120 fps"
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "1200p (5x)"
+msgstr ""
 
 #. TRANSLATION: moonlight
 msgctxt "game_options"
@@ -507,7 +507,7 @@ msgctxt "game_options"
 msgid "12MB"
 msgstr "12MB"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "12th"
 msgstr "12"
@@ -532,7 +532,7 @@ msgctxt "game_options"
 msgid "13MB (Recommended)"
 msgstr "13MB (Recomendado)"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "13th"
 msgstr "13"
@@ -572,12 +572,17 @@ msgctxt "game_options"
 msgid "1440 x 900"
 msgstr "1440 x 900"
 
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "1440p (6x)"
+msgstr ""
+
 #. TRANSLATION: libretro/tyrquake, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "144fps"
 msgstr "144fps"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "14th"
 msgstr "14"
@@ -591,11 +596,6 @@ msgstr "Nativo x14 (~6272p)"
 msgctxt "game_options"
 msgid "15 MHz"
 msgstr "15 MHz"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "15 seconds"
-msgstr "15 segundos"
 
 #. TRANSLATION: libretro/mupen64plus-next, libretro/parallel_n64
 msgctxt "game_options"
@@ -627,7 +627,7 @@ msgctxt "game_options"
 msgid "15s"
 msgstr "15s"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "15th"
 msgstr "15"
@@ -692,6 +692,11 @@ msgctxt "game_options"
 msgid "1680 x 1050"
 msgstr "1680 x 1050"
 
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "1680p (7x)"
+msgstr ""
+
 #. TRANSLATION: libretro/gearcoleco
 msgctxt "game_options"
 msgid "16:10 DAR"
@@ -727,7 +732,7 @@ msgctxt "game_options"
 msgid "16Mhz"
 msgstr "16Mhz"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "16th"
 msgstr "16"
@@ -752,7 +757,7 @@ msgctxt "game_options"
 msgid "16x SSAA"
 msgstr "16x SSAA"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "17th"
 msgstr "17"
@@ -767,7 +772,7 @@ msgctxt "game_options"
 msgid "180ms"
 msgstr "180ms"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "18th"
 msgstr "18"
@@ -787,7 +792,12 @@ msgctxt "game_options"
 msgid "1920 x 1200"
 msgstr "1920 x 1200"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "1920p (8x)"
+msgstr ""
+
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "19th"
 msgstr "19"
@@ -817,7 +827,7 @@ msgctxt "game_options"
 msgid "1X"
 msgstr "X1"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "1st"
 msgstr "1"
@@ -847,11 +857,6 @@ msgctxt "game_options"
 msgid "1x Native (PS2)"
 msgstr "Nativo x1 (PS2)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "1x native (256 x 192)"
-msgstr "Nativo x1 (256 x 192)"
-
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "1x native (320x240)"
@@ -876,11 +881,6 @@ msgstr "2 MB"
 msgctxt "game_options"
 msgid "2 MHz (Underclock)"
 msgstr "2 MHz (Underclock)"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "2 seconds"
-msgstr "2 segundos"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -937,11 +937,6 @@ msgctxt "game_options"
 msgid "20 MHz"
 msgstr "20 MHz"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "20 seconds"
-msgstr "20 segundos"
-
 #. TRANSLATION: doom3
 msgctxt "game_options"
 msgid "200% (Maximum)"
@@ -992,12 +987,17 @@ msgctxt "game_options"
 msgid "20ms"
 msgstr "20ms"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "20th"
 msgstr "20"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "2160p (9x)"
+msgstr ""
+
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "21st"
 msgstr "21"
@@ -1012,7 +1012,7 @@ msgctxt "game_options"
 msgid "224MB"
 msgstr "224MB"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "22nd"
 msgstr "22"
@@ -1032,7 +1032,7 @@ msgctxt "game_options"
 msgid "232 NTSC"
 msgstr "232 NTSC"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "23rd"
 msgstr "23"
@@ -1052,10 +1052,20 @@ msgctxt "game_options"
 msgid "240 fps"
 msgstr "240 fps"
 
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "2400p (10x)"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "240ms"
 msgstr "240ms"
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "240p (1x)"
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -1067,7 +1077,7 @@ msgctxt "game_options"
 msgid "24MB (Default)"
 msgstr "24MB (Defecto)"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "24th"
 msgstr "24"
@@ -1102,7 +1112,7 @@ msgctxt "game_options"
 msgid "25fps"
 msgstr "25fps"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "25th"
 msgstr "25"
@@ -1112,7 +1122,7 @@ msgctxt "game_options"
 msgid "26K for old games and 86K for newer games."
 msgstr "26K para juegos antiguos y 86K para juegos recientes."
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "26th"
 msgstr "26"
@@ -1122,7 +1132,7 @@ msgctxt "game_options"
 msgid "270 degrees"
 msgstr "270 grados"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "27th"
 msgstr "27"
@@ -1142,12 +1152,12 @@ msgctxt "game_options"
 msgid "286, 6MHz (1320 cps)"
 msgstr "286, 6MHz (1320 cps)"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "28th"
 msgstr "28"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "29th"
 msgstr "29"
@@ -1172,7 +1182,7 @@ msgctxt "game_options"
 msgid "2X"
 msgstr "X2"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "2nd"
 msgstr "2"
@@ -1222,11 +1232,6 @@ msgctxt "game_options"
 msgid "2x SSAA"
 msgstr "2x SSAA"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "2x native (512 x 384)"
-msgstr "Nativo x2 (512 x 384)"
-
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "2x-Postrender"
@@ -1257,11 +1262,6 @@ msgctxt "game_options"
 msgid "3 point"
 msgstr "3 puntos"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "3 seconds"
-msgstr "3 segundos"
-
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "3 threads"
@@ -1281,11 +1281,6 @@ msgstr "30 MHz"
 msgctxt "game_options"
 msgid "30 fps"
 msgstr "30 fps"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "30 seconds"
-msgstr "30 segundos"
 
 #. TRANSLATION: libretro/vice_xpet
 msgctxt "game_options"
@@ -1312,12 +1307,12 @@ msgctxt "game_options"
 msgid "30s (Default)"
 msgstr "30s (Defecto)"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "30th"
 msgstr "30"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "31st"
 msgstr "32"
@@ -1442,7 +1437,7 @@ msgctxt "game_options"
 msgid "3MB"
 msgstr "3MB"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "3rd"
 msgstr "3"
@@ -1461,11 +1456,6 @@ msgstr "x3 (2160p/3240p)"
 msgctxt "game_options"
 msgid "3x Native (~1080p)"
 msgstr "Nativo x3 (~1080p)"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "3x native (768 x 576)"
-msgstr "Nativo x3 (768 x 576)"
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -1557,6 +1547,11 @@ msgctxt "game_options"
 msgid "480p"
 msgstr "480p"
 
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "480p (2x)"
+msgstr ""
+
 #. TRANSLATION: libretro/ppsspp
 msgctxt "game_options"
 msgid "480x272 (Default)"
@@ -1632,7 +1627,7 @@ msgctxt "game_options"
 msgid "4k"
 msgstr "4k"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "4th"
 msgstr "4"
@@ -1666,11 +1661,6 @@ msgstr "Nativo x4 (~1440p/2K)"
 msgctxt "game_options"
 msgid "4x SSAA"
 msgstr "4x SSAA"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "4x native (1024 x 768)"
-msgstr "Nativo x4 (1024 x 768)"
 
 #. TRANSLATION: cgenius, x16emu
 msgctxt "game_options"
@@ -1711,11 +1701,6 @@ msgstr "5 Pro Controller"
 msgctxt "game_options"
 msgid "5 Sideway Wiimote"
 msgstr "5 Sideway Wiimote"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "5 seconds"
-msgstr "5 segundos"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -1817,7 +1802,7 @@ msgctxt "game_options"
 msgid "5Mbps (good for 720p)"
 msgstr "5Mbps (óptimo para 720p)"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "5th"
 msgstr "5"
@@ -1837,11 +1822,6 @@ msgctxt "game_options"
 msgid "5x Native (~1800p/3K)"
 msgstr "Nativo x5 (~1800p/3K)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "5x native (1280 x 960)"
-msgstr "Nativo x5 (1280 x 960)"
-
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "6 Frames"
@@ -1856,11 +1836,6 @@ msgstr "6 hilos"
 msgctxt "game_options"
 msgid "60 fps (Default)"
 msgstr "60 fps (Defecto)"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "60 seconds"
-msgstr "60 segundos"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -1927,7 +1902,7 @@ msgctxt "game_options"
 msgid "6MB"
 msgstr "6MB"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "6th"
 msgstr "6"
@@ -1952,11 +1927,6 @@ msgctxt "game_options"
 msgid "6x Native (~2160p/4K)"
 msgstr "Nativo x6 (~2160p/4K)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "6x native (1536 x 1152)"
-msgstr "Nativo x6 (1536 x 1152)"
-
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
 msgid "7 Frames"
@@ -1966,6 +1936,11 @@ msgstr "7 Fotogramas"
 msgctxt "game_options"
 msgid "720p"
 msgstr "720p"
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "720p (3x)"
+msgstr ""
 
 #. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
@@ -2007,7 +1982,7 @@ msgctxt "game_options"
 msgid "7MB"
 msgstr "7MB"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "7th"
 msgstr "7"
@@ -2026,11 +2001,6 @@ msgstr "Nativo x7 (~2520p)"
 msgctxt "game_options"
 msgid "7x Native (~2530p)"
 msgstr "Nativo x7 (~2530p)"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "7x native (1792 x 1344)"
-msgstr "Nativo x7 (1792 x 1344)"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -2107,7 +2077,7 @@ msgctxt "game_options"
 msgid "8k"
 msgstr "8k"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "8th"
 msgstr "8"
@@ -2147,11 +2117,6 @@ msgctxt "game_options"
 msgid "8x SSAA"
 msgstr "8x SSAA"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "8x native (2048 x 1536)"
-msgstr "Nativo x8 (2048 x 1536)"
-
 #. TRANSLATION: libretro/snes9x_next
 msgctxt "game_options"
 msgid "9 MHz (Underclock)"
@@ -2182,6 +2147,11 @@ msgctxt "game_options"
 msgid "960p"
 msgstr "960p"
 
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "960p (4x)"
+msgstr ""
+
 #. TRANSLATION: libretro/dosbox_pure, libretro/mame, mame, xenia-canary, xenia-edge, ...
 msgctxt "game_options"
 msgid "96MB"
@@ -2192,7 +2162,7 @@ msgctxt "game_options"
 msgid "9MB"
 msgstr "9MB"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "9th"
 msgstr "9"
@@ -2812,6 +2782,12 @@ msgctxt "game_options"
 msgid "Add color to Game Boy games."
 msgstr "Añade color a los juegos de Game Boy."
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Additional sharpness for AMD FidelityFX CAS, from 0 to 1. Higher is sharper."
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid ""
@@ -2894,13 +2870,6 @@ msgstr "AdvMame"
 msgctxt "game_options"
 msgid "Affects efficiency/stability."
 msgstr "Afecta a la eficiencia/estabilidad."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Affects how the emulated screens are scaled. OpenGL renderer only."
-msgstr ""
-"Afecta la forma en que se escalan las pantallas emuladas. Solo renderizador "
-"OpenGL."
 
 #. TRANSLATION: vpinball
 msgctxt "game_options"
@@ -3067,11 +3036,6 @@ msgctxt "keys_files"
 msgid "Alt. Attack"
 msgstr "Ataque alternativo"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "AltWFC (172.104.88.237)"
-msgstr "AltWFC (172.104.88.237)"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
@@ -3083,11 +3047,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Alternative sounds for the table (needs additional files)."
 msgstr "Sonidos alternativos para la mesa (necesita archivos adicionales)."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Always"
-msgstr "Siempre"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -3324,7 +3283,7 @@ msgctxt "game_options"
 msgid "Apply a post-processing effect."
 msgstr "Aplicar un efecto de posprocesamiento."
 
-#. TRANSLATION: libretro/bsnes, libretro/snes9x, libretro/snes9x_next
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd, libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
 msgid "Apply a video filter to mimic various NTSC TV signals."
 msgstr "Aplica un filtro de vídeo para imitar varias señales de TV NTSC."
@@ -3344,7 +3303,7 @@ msgctxt "game_options"
 msgid "Approximate XFloat"
 msgstr "XFloat aproximado"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "April"
 msgstr "Abril"
@@ -3409,7 +3368,7 @@ msgctxt "game_options"
 msgid "Armenia"
 msgstr "Armenia"
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "Arrange the dual screen layout."
 msgstr "Organiza la distribución de la pantalla dual."
@@ -3504,7 +3463,7 @@ msgid ""
 "platform fallback."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "August"
 msgstr "Agosto"
@@ -3794,12 +3753,12 @@ msgctxt "game_options"
 msgid "BIOS Language"
 msgstr "Idioma de BIOS"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "BIRTH DAY"
 msgstr "DÍA DE NACIMIENTO"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "BIRTH MONTH"
 msgstr "MES DE NACIMIENTO"
@@ -4035,7 +3994,7 @@ msgctxt "game_options"
 msgid "Bilinear"
 msgstr "Bilineal"
 
-#. TRANSLATION: cemu, rpcs3, supermodel, xenia-edge
+#. TRANSLATION: cemu, rpcs3, supermodel, xenia-canary, xenia-edge, ...
 msgctxt "game_options"
 msgid "Bilinear (Default)"
 msgstr "Bilineal (Defecto)"
@@ -4110,7 +4069,7 @@ msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr "Bloqueado filtrado"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/melondsds, libretro/pcsx_rearmed
+#. TRANSLATION: flycast, libretro/flycast, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Blue"
 msgstr "Azul"
@@ -4244,11 +4203,6 @@ msgstr "Inglés Británico"
 msgctxt "game_options"
 msgid "British English (uk)"
 msgstr "Inglés Británico (uk)"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Brown"
-msgstr "Marrón"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -4440,9 +4394,19 @@ msgctxt "game_options"
 msgid "CARD READER"
 msgstr "LECTOR DE TARJETAS"
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "CAS"
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "CAS - FidelityFX Sharpening"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "CAS ADDITIONAL SHARPNESS"
 msgstr ""
 
 #. TRANSLATION: xenia-edge
@@ -4961,16 +4925,6 @@ msgctxt "game_options"
 msgid "CURSOR"
 msgstr "CURSOR"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "CURSOR MODE"
-msgstr "MODO DE CURSOR"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "CURSOR TIMEOUT"
-msgstr "TIEMPO DE ESPERA DEL CURSOR"
-
 #. TRANSLATION: openmohaa
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -5261,6 +5215,11 @@ msgctxt "game_options"
 msgid "Change the Gamecube system language."
 msgstr "Cambia el idioma del sistema de Gamecube."
 
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "Change the Wii system language."
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "Change the console's country from the default of the United States."
@@ -5490,7 +5449,7 @@ msgstr "Elige la dificultad del combate."
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL2 for gamepads only."
+"lightguns and steering wheels. SDL for gamepads only."
 msgstr ""
 
 #. TRANSLATION: openjk
@@ -6094,13 +6053,6 @@ msgctxt "game_options"
 msgid "Cursor Joystick"
 msgstr "Cursor Joystick"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Cursor timeout in seconds when using Cursor Mode - Until Timeout."
-msgstr ""
-"Tiempo de espera del cursor en segundos al usar el modo cursor - Hasta que "
-"se agote el tiempo."
-
 #. TRANSLATION: libretro/gambatte, libretro/mesen, libretro/stella, shared
 msgctxt "game_options"
 msgid "Custom"
@@ -6306,6 +6258,11 @@ msgctxt "game_options"
 msgid "DISPLAY BACKGLASS GRILL"
 msgstr "MOSTRAR PARRILLA DEL BACKGLASS"
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "DISPLAY OPTIONS"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "DISPLAY PHYSICAL SETUP"
@@ -6340,11 +6297,6 @@ msgstr "TAMAÑO DMD"
 msgctxt "game_options"
 msgid "DMD window ratio"
 msgstr "Relación de ventana DMD"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "DNS OVERRIDE"
-msgstr "ANULACIÓN DE DNS"
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -6386,10 +6338,15 @@ msgctxt "game_options"
 msgid "DRAW CROSSHAIR"
 msgstr "DIBUJAR PUNTO DE MIRA"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "DS"
 msgstr "DS"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "DS (Default)"
+msgstr "DS (Defecto)"
 
 #. TRANSLATION: libretro/panda3ds
 msgctxt "game_options"
@@ -6401,10 +6358,10 @@ msgctxt "game_options"
 msgid "DSP emulation"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "DSi (Experiemental)"
-msgstr "DSi (Experiemental)"
+msgid "DSi"
+msgstr "DSi"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
@@ -6476,30 +6433,10 @@ msgctxt "game_options"
 msgid "Danish (dk)"
 msgstr "Danés"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Dark Blue"
-msgstr "Azul oscuro"
-
 #. TRANSLATION: libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Dark Forces Flat Tex Triangles Fix"
 msgstr "Dark Forces Flat Tex Triangles Fix"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Dark Green"
-msgstr "Verde oscuro"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Dark Pink"
-msgstr "Rosa oscuro"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Dark Purple"
-msgstr "Morado oscuro"
 
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
@@ -6511,7 +6448,7 @@ msgctxt "game_options"
 msgid "De-Interlaced"
 msgstr "Desentrelazado"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "December"
 msgstr "Diciembre"
@@ -6555,11 +6492,6 @@ msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
 msgstr "Define la resolución y una nueva ventana dedicada."
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Degree in which 3D graphics are scaled up. OpenGL renderer only."
-msgstr "Grado en el que se amplían los gráficos 3D. Solo renderizador OpenGL."
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "Delay freeing some memory."
@@ -6593,16 +6525,6 @@ msgid ""
 msgstr ""
 "Dirección de destino y puerto al que reenviar paquetes. Deje esto vacío si "
 "desea introducirlo manualmente en el archivo de configuración xemu.toml."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Determine how the console's touch screen in emulated."
-msgstr "Determina cómo se emula la pantalla táctil de la consola."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Determines how the cursor should apprear on the botton screen."
-msgstr "Determina cómo debe aparecer el cursor en la pantalla inferior."
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -6707,6 +6629,12 @@ msgid "Disable support for memory write watches in ntdll."
 msgstr ""
 "Deshabilita la compatibilidad con vigilancia de escritura de memoria en "
 "ntdll."
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Disable to access the system's settings, like time and language."
+msgstr ""
+"Desactivar para acceder a los ajustes del sistema, como la hora y el idioma."
 
 #. TRANSLATION: bigpemu, bstone, dosbox_staging, duckstation, eden, ...
 msgctxt "game_options"
@@ -6832,7 +6760,7 @@ msgctxt "game_options"
 msgid "Dominican Republic"
 msgstr "República Dominicana"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Don't Override"
 msgstr "No anular"
@@ -7251,8 +7179,8 @@ msgstr "ESYNC"
 
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
-msgid "EVDEV (Default)"
-msgstr "EVDEV (Defecto)"
+msgid "EVDEV"
+msgstr ""
 
 #. TRANSLATION: tr1x, tr2x
 msgctxt "game_options"
@@ -7525,6 +7453,11 @@ msgctxt "game_options"
 msgid "Enable for Doom to run at its correct resolution."
 msgstr "Habilita para que Doom se ejecute con su resolución correcta."
 
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Enable for all scenes"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Enable for more fluidity, disable if screen tearing."
@@ -7742,15 +7675,6 @@ msgstr ""
 "Habilita el motor 3D heredado o nuevo (elija heredado para GPUs más "
 "antiguas)."
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Enable this if your game's 3D modles are not rendered correctly. OpenGL "
-"renderer only."
-msgstr ""
-"Habilítalo si los modelos 3D de tu juego no se representan correctamente. "
-"Solo renderizador OpenGL."
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid ""
@@ -7766,19 +7690,6 @@ msgid ""
 "Enable this to limit the FPS in games that are uncapped, such as OutRun 2."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Enable to display an on-screen message if trying to use unsupported features."
-msgstr ""
-"Habilitar para mostrar un mensaje en pantalla si se intenta usar funciones "
-"no compatibles."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Enable to display if your BIOS haas known problems."
-msgstr "Habilitar para mostrar si su BIOS tiene problemas conocidos."
-
 #. TRANSLATION: lindbergh-loader
 msgctxt "game_options"
 msgid "Enable to emulate the card reader in Virtua Tennis 3, ID4/5 or R-Tuned."
@@ -7788,29 +7699,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable to improve bluriness."
 msgstr "Habilitar para mejorar la borrosidad."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Enable to show whether the emulated screens are closed."
-msgstr "Habilitar para mostrar si las pantallas emuladas están cerradas."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Enable to show whether your device's camera is active."
-msgstr "Habilitar para mostrar si la cámara de su dispositivo está activa."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Enable to show whether your device's microphone is active."
-msgstr "Habilitar para mostrar si el micrófono de su dispositivo está activo."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Enable to show which screen layout with the configured sequence is active."
-msgstr ""
-"Habilitar para mostrar qué diseño de pantalla con la secuencia configurada "
-"está activo."
 
 #. TRANSLATION: sonicmania
 msgctxt "game_options"
@@ -7914,12 +7802,12 @@ msgctxt "game_options"
 msgid "Enabling will smooth out the image."
 msgstr "Habilitarlo suavizará la imagen."
 
-#. TRANSLATION: awgl, cemu, doom3, eden, etlegacy, ...
+#. TRANSLATION: awgl, cemu, dolphin, doom3, eden, ...
 msgctxt "game_options"
 msgid "English"
 msgstr "Inglés"
 
-#. TRANSLATION: fallout1-ce, fallout2-ce, libretro/cap32, libretro/yabasanshiro, melonds, ...
+#. TRANSLATION: fallout1-ce, fallout2-ce, libretro/cap32, libretro/melonds, libretro/yabasanshiro, ...
 msgctxt "game_options"
 msgid "English (Default)"
 msgstr "Inglés (Defecto)"
@@ -8196,6 +8084,11 @@ msgctxt "game_options"
 msgid "Extend the game screen area, similar to the Master System."
 msgstr "Extiende el área de la pantalla de juego, similar a la Master System."
 
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Extend the horizontal field of view for widescreen displays."
+msgstr ""
+
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "External"
@@ -8248,11 +8141,6 @@ msgctxt "game_options"
 msgid "FAST DISK TRANSFER RATE"
 msgstr "TASA DE TRANSFERENCIA DE DISCO RÁPIDA"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "FAVOURITE COLOUR"
-msgstr "COLOR FAVORITO"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "FIDELITY FX SUPER RESOLUTION"
@@ -8273,7 +8161,7 @@ msgctxt "game_options"
 msgid "FIGHT MUSIC"
 msgstr "MÚSICA DE LUCHA"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "FIRMWARE SETTINGS"
 msgstr "AJUSTES DE FIRMWARE"
@@ -8418,12 +8306,17 @@ msgctxt "game_options"
 msgid "FREE PLAY"
 msgstr "JUGAR GRATIS"
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "FSR"
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "FSR - FidelityFX Super Resolution"
 msgstr ""
 
-#. TRANSLATION: xenia-edge
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "FSR SHARPNESS REDUCTION"
 msgstr ""
@@ -8462,12 +8355,12 @@ msgstr ""
 "PANTALLA COMPLETA te ofrece una vista desde arriba hacia abajo del campo de "
 "juego. Para uso en gabinete o multiventana en el escritorio."
 
-#. TRANSLATION: eden, pcsx2, vita3k, xenia-edge
+#. TRANSLATION: eden, pcsx2, vita3k, xenia-canary, xenia-edge, ...
 msgctxt "game_options"
 msgid "FXAA"
 msgstr "FXAA"
 
-#. TRANSLATION: xenia-edge
+#. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "FXAA Extreme"
 msgstr ""
@@ -8554,7 +8447,7 @@ msgstr ""
 "mejorada con opción de inclinación desactivada, funcionalidad de cielo/fondo "
 "personalizado, y otros varios ajustes y opciones."
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "February"
 msgstr "Febrero"
@@ -8828,11 +8721,6 @@ msgstr "Forzar 32bit"
 msgctxt "game_options"
 msgid "Force 4:3"
 msgstr "Forzar 4:3"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Force Default DNS"
-msgstr "Forzar DNS predeterminado"
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -9586,11 +9474,6 @@ msgctxt "game_options"
 msgid "Gravis GamePad (D-pad + 4 Btns)"
 msgstr "Gravis GamePad (D-pad + 4 botones)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Gray"
-msgstr "Gris"
-
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "Great Britain"
@@ -9691,6 +9574,21 @@ msgctxt "game_options"
 msgid "HARDWARE TESSELLATION"
 msgstr "TESELACIÓN POR HARDWARE"
 
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "HD MODE 7 SCALE"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "HD MODE 7 SUPERSAMPLING"
+msgstr ""
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid "HD MODE 7 WIDESCREEN"
+msgstr ""
+
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
 msgid "HD TEXTURES"
@@ -9725,6 +9623,11 @@ msgstr "HI-RES ARTIFACTING"
 msgctxt "game_options"
 msgid "HIDE NVIDIA GPU"
 msgstr "OCULTAR GPU NVIDIA"
+
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "HIDE SGB BORDER"
+msgstr ""
 
 #. TRANSLATION: cannonball
 msgctxt "game_options"
@@ -9925,6 +9828,11 @@ msgctxt "keys_files"
 msgid "Hide bezels"
 msgstr "Ocultar biseles"
 
+#. TRANSLATION: libretro/bsnes
+msgctxt "game_options"
+msgid "Hide the Super Game Boy decorative border."
+msgstr ""
+
 #. TRANSLATION: naomigd.flycast.keys
 msgctxt "keys_files"
 msgid "Hide the bezel"
@@ -10116,11 +10024,6 @@ msgctxt "game_options"
 msgid "IMPROVED MESH"
 msgstr "MALLA MEJORADA"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "IMPROVED POLYGON SPLITTING"
-msgstr "DIVISIÓN DE POLÍGONOS MEJORADA"
-
 #. TRANSLATION: libretro/mame078plus
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
@@ -10156,7 +10059,7 @@ msgctxt "game_options"
 msgid "INTERNAL DISPLAY RESOLUTION"
 msgstr "RESOLUCIÓN DE PANTALLA INTERNA"
 
-#. TRANSLATION: libretro/atari800, libretro/melondsds
+#. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "INTERNAL RESOLUTION"
 msgstr "RESOLUCIÓN INTERNA"
@@ -10560,7 +10463,7 @@ msgctxt "game_options"
 msgid "Jamaica"
 msgstr "Jamaica"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "January"
 msgstr "Enero"
@@ -10575,7 +10478,7 @@ msgctxt "game_options"
 msgid "Japan (Default)"
 msgstr "Japón (Defecto)"
 
-#. TRANSLATION: cemu, doom3, eden, etlegacy, flycast, ...
+#. TRANSLATION: cemu, dolphin, doom3, eden, etlegacy, ...
 msgctxt "game_options"
 msgid "Japanese"
 msgstr "Japonés"
@@ -10665,12 +10568,12 @@ msgctxt "game_options"
 msgid "Joypad sensitivity for paddles. Core default  (3)."
 msgstr "Sensibilidad del joystick para las palancas. Valor predeterminado (3)."
 
-#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
+#. TRANSLATION: libretro/puae, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xpet, ...
 msgctxt "game_options"
 msgid "Joystick"
 msgstr "Joystick"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "July"
 msgstr "Julio"
@@ -10680,7 +10583,7 @@ msgctxt "keys_files"
 msgid "Jump"
 msgstr "Saltar"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "June"
 msgstr "Junio"
@@ -10719,11 +10622,6 @@ msgstr "SOPORTE DE TECLADO"
 msgctxt "game_options"
 msgid "KEYBOARD TRANSPARENCY"
 msgstr "TRANSPARENCIA DE TECLADO"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Kaeru WFC (178.62.43.212)"
-msgstr "Kaeru WFC (178.62.43.212)"
 
 #. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
@@ -10839,7 +10737,7 @@ msgctxt "game_options"
 msgid "Korea"
 msgstr "Corea"
 
-#. TRANSLATION: cemu, doom3, easyrpg, eden, etlegacy, ...
+#. TRANSLATION: cemu, dolphin, doom3, easyrpg, eden, ...
 msgctxt "game_options"
 msgid "Korean"
 msgstr "Coreano"
@@ -11135,16 +11033,6 @@ msgctxt "game_options"
 msgid "Light (load times)"
 msgstr "Ligero (tiempos de carga)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Light Blue"
-msgstr "Azul claro"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Light Green"
-msgstr "Verde claro"
-
 #. TRANSLATION: libretro/flycast
 msgctxt "game_options"
 msgid "Light Gun"
@@ -11154,16 +11042,6 @@ msgstr "Pistola Light Gun"
 msgctxt "game_options"
 msgid "Light Phaser"
 msgstr "Light Phaser"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Light Pink"
-msgstr "Rosa claro"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Light Purple"
-msgstr "Morado claro"
 
 #. TRANSLATION: libretro/genesisplusgx-expanded, libretro/snes9x
 msgctxt "game_options"
@@ -11190,11 +11068,6 @@ msgctxt "game_options"
 msgid "Lightweight CRT effect"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Lime"
-msgstr "Lima"
-
 #. TRANSLATION: openbor/openbor7530
 msgctxt "game_options"
 msgid "Limit FPS to reduce high CPU usage."
@@ -11209,7 +11082,7 @@ msgstr ""
 "Limitar a 1 o 2 puede solucionar los cortes de audio en algunos juegos para "
 "CPU menos potentes. Déjalo en automático si produce ralentización."
 
-#. TRANSLATION: libretro/melondsds, ppsspp
+#. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "Linear"
 msgstr "Lineal"
@@ -11745,7 +11618,7 @@ msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
 msgstr "Configura tu mando como un Wiimote emulado."
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "March"
 msgstr "Marzo"
@@ -11839,7 +11712,7 @@ msgctxt "game_options"
 msgid "Maximum wheel rotation from left to right (in degrees)"
 msgstr "Rotación máxima del volante de izquierda a derecha (en grados)"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "May"
 msgstr "Mayo"
@@ -12129,7 +12002,7 @@ msgctxt "game_options"
 msgid "Mount a floppy for user data, creates if needed"
 msgstr "Monta un disquete para los datos de usuario, crealo si es necesario"
 
-#. TRANSLATION: libretro/flycast, libretro/genesisplusgx-expanded, libretro/np2kai
+#. TRANSLATION: libretro/flycast, libretro/genesisplusgx-expanded, libretro/melonds, libretro/np2kai
 msgctxt "game_options"
 msgid "Mouse"
 msgstr "Ratón"
@@ -12295,7 +12168,7 @@ msgctxt "game_options"
 msgid "NATIVE DEPTH INTERPOLATION"
 msgstr "INTERPOLACIÓN DE PROFUNDIDAD NATIVA"
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
 msgid "NDS VERSION"
 msgstr "VERSIÓN DE NDS"
@@ -12365,7 +12238,7 @@ msgctxt "game_options"
 msgid "NTSC (60 Hz)"
 msgstr ""
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "NTSC (Composite)"
 msgstr "NTSC (Compuesto)"
@@ -12380,17 +12253,17 @@ msgctxt "game_options"
 msgid "NTSC (NES)"
 msgstr "NTSC (NES)"
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "NTSC (RF)"
 msgstr "NTSC (RF)"
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "NTSC (RGB)"
 msgstr "NTSC (RGB)"
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "NTSC (S-Video)"
 msgstr "NTSC (S-Video)"
@@ -12537,7 +12410,7 @@ msgctxt "game_options"
 msgid "NeGcon (Rumble)"
 msgstr "NeGcon (Vibración)"
 
-#. TRANSLATION: f2bgl, libretro/melondsds, libretro/parallel_n64, libretro/pcsx2, libretro/swanstation, ...
+#. TRANSLATION: f2bgl, libretro/parallel_n64, libretro/pcsx2, libretro/swanstation, pcsx2, ...
 msgctxt "game_options"
 msgid "Nearest"
 msgstr "Más cercano"
@@ -12601,7 +12474,7 @@ msgctxt "game_options"
 msgid "Netherlands (nl)"
 msgstr "Neerlandés (nl)"
 
-#. TRANSLATION: libretro/melondsds, openjk
+#. TRANSLATION: openjk
 msgctxt "game_options"
 msgid "Never"
 msgstr "Nunca"
@@ -12793,7 +12666,7 @@ msgctxt "game_options"
 msgid "Nothing can kill Rick, may break the game."
 msgstr "Nada puede matar a Rick. Se puede arruinar el juego."
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "November"
 msgstr "Noviembre"
@@ -12833,7 +12706,7 @@ msgctxt "game_options"
 msgid "OFF"
 msgstr "OFF"
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, libretro/melonds
 msgctxt "game_options"
 msgid "OFF (Default)"
 msgstr "OFF (Defecto)"
@@ -12843,7 +12716,7 @@ msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "BOTÓN DE RECARGA FUERA DE PANTALLA"
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, libretro/melonds
 msgctxt "game_options"
 msgid "ON"
 msgstr "ON"
@@ -12852,11 +12725,6 @@ msgstr "ON"
 msgctxt "game_options"
 msgid "ON (Default)"
 msgstr ""
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
-msgstr "MOSTRAR EN PANTALLA Y NOTIFICACIONES"
 
 #. TRANSLATION: play
 msgctxt "game_options"
@@ -12938,7 +12806,7 @@ msgctxt "keys_files"
 msgid "Objective"
 msgstr "Objetivo"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "October"
 msgstr "Octubre"
@@ -13106,10 +12974,10 @@ msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
 msgstr ""
 "Solo se aplica cuando se usa Parallel-RDP como el complemento RDP elegido."
 
-#. TRANSLATION: libretro/mgba, libretro/vba-m
+#. TRANSLATION: libretro/bsnes_hd
 msgctxt "game_options"
-msgid "Only for Super Game Boy enhanced games."
-msgstr "Solo para juegos mejorados de Super Game Boy."
+msgid "Only for Mode 7 scenes"
+msgstr ""
 
 #. TRANSLATION: libretro/vba-m
 msgctxt "game_options"
@@ -13180,11 +13048,6 @@ msgctxt "game_options"
 msgid "OpenGL (Default)"
 msgstr "OpenGL (Defecto)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "OpenGL (Overwrites Libretro API settings)"
-msgstr "OpenGL (sobrescribe los ajustes de la API de Libretro)"
-
 #. TRANSLATION: raze
 msgctxt "game_options"
 msgid "OpenGL (x86 only)"
@@ -13209,11 +13072,6 @@ msgstr "OpenGLES (Defecto)"
 msgctxt "game_options"
 msgid "Optimized (auto)"
 msgstr "Optimizado (auto)"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Orange"
-msgstr "Naranja"
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -13260,11 +13118,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
 msgstr "Overclock la CPU de SNES (Gradius 3, Super R-Type)."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Overrides the language mode of the emulated console."
-msgstr "Anula el modo de idioma de la consola emulada."
 
 #. TRANSLATION: supermodel
 msgctxt "game_options"
@@ -13615,6 +13468,16 @@ msgstr "PLUS4 NTSC"
 msgctxt "game_options"
 msgid "PLUS4 PAL"
 msgstr "PLUS4 PAL"
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "POST-PROCESSING ANTI-ALIASING"
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "POST-PROCESSING SCALING AND SHARPENING"
+msgstr ""
 
 #. TRANSLATION: shared
 msgctxt "game_options"
@@ -14048,11 +13911,6 @@ msgctxt "game_options"
 msgid "Point3x"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Pointer"
-msgstr "Puntero"
-
 #. TRANSLATION: eden, libretro/dosbox_pure, xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Poland"
@@ -14138,6 +13996,11 @@ msgstr ""
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "Post-processing anti-aliasing filter to smooth jagged edges."
+msgstr ""
+
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid "Post-processing anti-aliasing filter."
 msgstr ""
 
 #. TRANSLATION: xenia-edge
@@ -14527,11 +14390,6 @@ msgctxt "game_options"
 msgid "RENDERER"
 msgstr "RENDERIZADOR"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "RENDERER MODE"
-msgstr "MODO DE RENDERIZADOR"
-
 #. TRANSLATION: dolphin, duckstation, eden, pcsx2, ppsspp, ...
 msgctxt "game_options"
 msgid "RENDERING"
@@ -14717,7 +14575,7 @@ msgctxt "game_options"
 msgid "Recompiler (Fastest)(Default)"
 msgstr "Recompilador (Más rápido)(Defecto)"
 
-#. TRANSLATION: flycast, libretro/flycast, libretro/melondsds, libretro/pcsx_rearmed
+#. TRANSLATION: flycast, libretro/flycast, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "Red"
 msgstr "Rojo"
@@ -14961,6 +14819,11 @@ msgctxt "keys_files"
 msgid "Right"
 msgstr "Derecho"
 
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Right Stick"
+msgstr "Stick derecho del mando"
+
 #. TRANSLATION: vpinball.keys
 msgctxt "keys_files"
 msgid "Right flipper"
@@ -15196,11 +15059,6 @@ msgctxt "game_options"
 msgid "SCREEN FILTER"
 msgstr "FILTRO DE PANTALLA"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SCREEN FILTERING"
-msgstr "FILTRADO DE PANTALLA"
-
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "SCREEN HEIGHT"
@@ -15211,7 +15069,7 @@ msgctxt "game_options"
 msgid "SCREEN INCLINATION"
 msgstr "INCLINACIÓN DE PANTALLA"
 
-#. TRANSLATION: azahar, libretro/desmume, melonds
+#. TRANSLATION: azahar, libretro/desmume, libretro/melonds, melonds
 msgctxt "game_options"
 msgid "SCREEN LAYOUT"
 msgstr "DISTRIBUCIÓN DE PANTALLA"
@@ -15246,11 +15104,6 @@ msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "ROTACIÓN DE PANTALLA"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SCREEN SETTINGS"
-msgstr "AJUSTES DE PANTALLA"
-
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "SCREEN SIZE"
@@ -15281,6 +15134,11 @@ msgctxt "game_options"
 msgid "SDL"
 msgstr ""
 
+#. TRANSLATION: lindbergh-loader
+msgctxt "game_options"
+msgid "SDL (Default)"
+msgstr ""
+
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "SDL CONFIG"
@@ -15291,7 +15149,7 @@ msgctxt "game_options"
 msgid "SDL TEXTURE ACCESS STREAMING"
 msgstr "TRANSMISIÓN DE ACCESO A TEXTURA SDL"
 
-#. TRANSLATION: libretro, lindbergh-loader
+#. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "SDL2"
 msgstr "SDL2"
@@ -15381,21 +15239,6 @@ msgctxt "game_options"
 msgid "SHOW CHEATS MENU"
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SHOW HOST CAMERA STATE"
-msgstr "MOSTRAR ESTADO DE LA CÁMARA"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SHOW HOST MICROPHONE STATE"
-msgstr "MOSTRAR ESTADO DEL MICRÓFONO"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SHOW LID STATE"
-msgstr "MOSTRAR ESTADO DE LA TAPA"
-
 #. TRANSLATION: dolphin, libretro/fbneo, libretro/fceumm, libretro/genesisplusgx-expanded, libretro/mame078plus, ...
 msgctxt "game_options"
 msgid "SHOW LIGHT GUN CROSSHAIRS"
@@ -15410,11 +15253,6 @@ msgstr "MOSTRAR MENSAJES EN PANTALLA"
 msgctxt "game_options"
 msgid "SHOW POINTER"
 msgstr "MOSTRAR PUNTERO"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "SHOW SCREEN LAYOUT"
-msgstr "MOSTRAR DISEÑO DE PANTALLA"
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -15445,6 +15283,11 @@ msgstr "OMITIR EFECTOS DE BÚFER"
 msgctxt "game_options"
 msgid "SKIP CUTSCENES"
 msgstr "SALTAR CINEMÁTICAS"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "SKIP DS SYSTEM MENU"
+msgstr "SALTAR MENÚ DEL SISTEMA DS"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -15706,7 +15549,12 @@ msgctxt "game_options"
 msgid "SUPER GAME BOY 2"
 msgstr "SUPER GAME BOY 2"
 
-#. TRANSLATION: libretro/mgba, libretro/vba-m
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
+msgctxt "game_options"
+msgid "SUPER GAME BOY BIOS"
+msgstr ""
+
+#. TRANSLATION: libretro/mgba
 msgctxt "game_options"
 msgid "SUPER GB BORDERS"
 msgstr "BORDES SUPER GB"
@@ -15805,6 +15653,13 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Save state"
 msgstr "Guardar estado"
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid ""
+"Scale Mode 7 graphics at a higher resolution. Higher values require more GPU "
+"power."
+msgstr ""
 
 #. TRANSLATION: xemu
 msgctxt "game_options"
@@ -15957,7 +15812,7 @@ msgstr ""
 "Selecciona cuánta memoria gráfica está asignada para la GPU, puede necesitar "
 "modificaciones para algunos juegos o sistemas."
 
-#. TRANSLATION: melonds
+#. TRANSLATION: libretro/melonds, melonds
 msgctxt "game_options"
 msgid ""
 "Select language will be used if 'Use Firmware Settings' is disabled or if "
@@ -16018,6 +15873,11 @@ msgstr ""
 "Selecciona el archivo .SF2 SoundFont, archivo .ROM, o interfaz utilizada "
 "para la salida MIDI."
 
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Select the SGB BIOS. Requires SGB1.sfc or SGB2.sfc in the bios folder."
+msgstr ""
+
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Select the TV standard for video output."
@@ -16045,6 +15905,11 @@ msgctxt "game_options"
 msgid ""
 "Select the emulated hardware architecture machine type and architecture."
 msgstr "Selecciona el tipo de máquina y la arquitectura de hardware emulado."
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Select the input type to navigate the touch screen"
+msgstr "Selecciona tipo de entrada para navegar por la pantalla táctil"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -16152,7 +16017,7 @@ msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Ventanas separadas"
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "September"
 msgstr "Septiembre"
@@ -16377,6 +16242,12 @@ msgctxt "game_options"
 msgid "Sharpen More"
 msgstr "Más nítido"
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Sharpness reduction for AMD FidelityFX FSR 1.0, in stops. Lower is sharper."
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid ""
@@ -16448,6 +16319,11 @@ msgstr "Muestra información contextual sobre el juego."
 msgctxt "game_options"
 msgid "Show on screen display messages (memory card saves..)."
 msgstr "Muestra mensajes en pantalla (guardados en tarjeta de memoria, ..)."
+
+#. TRANSLATION: libretro/mgba
+msgctxt "game_options"
+msgid "Show the Super Game Boy decorative border."
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -16541,7 +16417,7 @@ msgctxt "game_options"
 msgid "Simple 2x"
 msgstr "Simple 2x"
 
-#. TRANSLATION: eden, libretro/dolphin, play, ryujinx, shadps4, ...
+#. TRANSLATION: dolphin, eden, libretro/dolphin, play, ryujinx, ...
 msgctxt "game_options"
 msgid "Simplified Chinese"
 msgstr "Chino Simplificado"
@@ -16815,19 +16691,10 @@ msgctxt "game_options"
 msgid "Soften the hash sound effect from some games."
 msgstr "Suaviza el efecto de sonido hash en algunos juegos."
 
-#. TRANSLATION: awgl, azahar, duckstation, libretro/melondsds, melonds, ...
+#. TRANSLATION: awgl, azahar, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
 msgid "Software"
 msgstr "Software"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Software mode is faster and more accurate, while OpenGL mode supports "
-"scaling 3D graphics."
-msgstr ""
-"El modo software es más rápido y preciso, mientras que el modo OpenGL admite "
-"el escalado de gráficos 3D."
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
@@ -17260,10 +17127,15 @@ msgctxt "game_options"
 msgid "Super Famicom (8 Buttons)"
 msgstr "Super Nintendo (8 Botones)"
 
-#. TRANSLATION: libretro/mesen-s
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd, libretro/mesen-s
 msgctxt "game_options"
 msgid "Super Game Boy"
 msgstr "Super Game Boy"
+
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
+msgctxt "game_options"
+msgid "Super Game Boy 2"
+msgstr ""
 
 #. TRANSLATION: libretro/snes9x, libretro/snes9x_next
 msgctxt "game_options"
@@ -17294,6 +17166,13 @@ msgstr "SuperEagle"
 msgctxt "game_options"
 msgid "SuperSAI"
 msgstr "SuperSAI"
+
+#. TRANSLATION: libretro/bsnes_hd
+msgctxt "game_options"
+msgid ""
+"Supersample Mode 7 before scaling for smoother edges. Higher values require "
+"more GPU power."
+msgstr ""
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -17617,10 +17496,10 @@ msgctxt "game_options"
 msgid "TOS languages."
 msgstr "Idiomas TOS."
 
-#. TRANSLATION: libretro/melondsds
+#. TRANSLATION: libretro/melonds
 msgctxt "game_options"
-msgid "TOUCH MODE"
-msgstr "MODO TÁCTIL"
+msgid "TOUCH SCREEN MODE"
+msgstr "MODO PANTALLA TÁCTIL"
 
 #. TRANSLATION: libretro/xrick
 msgctxt "game_options"
@@ -17861,7 +17740,7 @@ msgstr ""
 "Área alrededor de la posición neutral del joystick sin respuesta. Puede "
 "ayudar a reducir movimientos no deseados."
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
 msgstr "El día del mes de tu cumpleaños."
@@ -17897,7 +17776,7 @@ msgctxt "game_options"
 msgid "The language to translate into."
 msgstr "Idioma al que traducir."
 
-#. TRANSLATION: libretro/melondsds, melonds
+#. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "The month of your birthay."
 msgstr "El mes de tu cumpleaños."
@@ -17911,11 +17790,6 @@ msgstr ""
 "El recuento de muestras de cada bloque se incrementará en cada "
 "EVENT_WRITE_ZPD por este número. Establecerlo en 0 significa que todo se "
 "informa como ocluido."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "The theme colour of the emulated console."
-msgstr "El tema de color de la consola emulada."
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -18116,6 +17990,11 @@ msgctxt "game_options"
 msgid "Top-Right Position, Small"
 msgstr "Posición en la esquina superior derecha, Pequeña"
 
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Touch Screen"
+msgstr "Pantalla táctil"
+
 #. TRANSLATION: nds.drastic.keys
 msgctxt "keys_files"
 msgid "TouchScreen"
@@ -18131,7 +18010,7 @@ msgctxt "game_options"
 msgid "Trackball (Atari CX-22)"
 msgstr "Trackball (Atari CX-22)"
 
-#. TRANSLATION: eden, libretro/dolphin, play, ryujinx, shadps4, ...
+#. TRANSLATION: dolphin, eden, libretro/dolphin, play, ryujinx, ...
 msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Chino Tradicional"
@@ -18220,11 +18099,6 @@ msgstr "Girar a la izquierda"
 msgctxt "keys_files"
 msgid "Turn right"
 msgstr "Girar a la derecha"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Turquoise"
-msgstr "Turquesa"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -18358,7 +18232,7 @@ msgctxt "game_options"
 msgid "USE DSP AUDIO"
 msgstr "USAR AUDIO DSP"
 
-#. TRANSLATION: melonds
+#. TRANSLATION: libretro/melonds, melonds
 msgctxt "game_options"
 msgid "USE FIRMWARE SETTINGS"
 msgstr "USAR AJUSTES DE FIRMWARE"
@@ -18678,11 +18552,6 @@ msgctxt "game_options"
 msgid "Unscaled (Default)"
 msgstr "Sin escalar (Defecto)"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Until Timeout"
-msgstr "Hasta que se agote el tiempo de espera"
-
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Up"
@@ -18739,6 +18608,13 @@ msgctxt "game_options"
 msgid "Upscale the rendering resolution to match the display size."
 msgstr ""
 
+#. TRANSLATION: xenia-canary
+msgctxt "game_options"
+msgid ""
+"Upscaling and sharpening filter. CAS = AMD FidelityFX Contrast Adaptive "
+"Sharpening, FSR = AMD FidelityFX Super Resolution 1.0."
+msgstr ""
+
 #. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
 msgid "Uruguay"
@@ -18768,11 +18644,6 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Use Force Power"
 msgstr "Usar el poder de la fuerza"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Use Host"
-msgstr "Usar Host"
 
 #. TRANSLATION: openjkdf2.keys
 msgctxt "keys_files"
@@ -18867,6 +18738,11 @@ msgctxt "keys_files"
 msgid "Use item"
 msgstr "Usar objeto"
 
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "Use language and username from the NDS Firmware"
+msgstr "Usar el idioma y el nombre de usuario del firmware NDS"
+
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Use language and username from the NDS Firmware."
@@ -18930,15 +18806,6 @@ msgid ""
 msgstr ""
 "Utiliza el puntero del ratón del sistema como paddle controller 1. No le "
 "permite elegir un ratón específico si tiene varios."
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid ""
-"Use this to play online with custom servers that reimplement the "
-"discontinued Nintendo Wi-Fi."
-msgstr ""
-"Úselo para jugar online con servidores personalizados que vuelvan a "
-"implementar el descontinuado Nintendo Wi-Fi."
 
 #. TRANSLATION: libretro/scummvm
 msgctxt "game_options"
@@ -19103,7 +18970,7 @@ msgctxt "game_options"
 msgid "VIDEO FILTER"
 msgstr "FILTRO DE VÍDEO"
 
-#. TRANSLATION: libretro/bsnes
+#. TRANSLATION: libretro/bsnes, libretro/bsnes_hd
 msgctxt "game_options"
 msgid "VIDEO FILTERS"
 msgstr "FILTROS DE VÍDEO"
@@ -19128,7 +18995,7 @@ msgctxt "game_options"
 msgid "VIDEO RESOLUTION"
 msgstr "RESOLUCIÓN DE VÍDEO"
 
-#. TRANSLATION: awgl, bermuda, f2bgl, libretro/melondsds
+#. TRANSLATION: awgl, bermuda, f2bgl
 msgctxt "game_options"
 msgid "VIDEO SETTINGS"
 msgstr "AJUSTES DE VÍDEO"
@@ -19348,16 +19215,6 @@ msgctxt "game_options"
 msgid "WAN"
 msgstr "WAN"
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "WARN ABOUT BIOS PROBLEMS"
-msgstr "ADVERTENCIA SOBRE PROBLEMAS DE BIOS"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "WARN ABOUT UNSUPPORTED FEATURES"
-msgstr "ADVERTENCIA SOBRE FUNCIONES NO COMPATIBLES"
-
 #. TRANSLATION: wine
 msgctxt "game_options"
 msgid "WAYLAND DRIVER MODE"
@@ -19432,6 +19289,11 @@ msgstr "HACK PANTALLA ANCHA (GLITCHY)"
 msgctxt "game_options"
 msgid "WII CONTROLLERS"
 msgstr "CONTROLADORES WII"
+
+#. TRANSLATION: dolphin
+msgctxt "game_options"
+msgid "WII LANGUAGE"
+msgstr ""
 
 #. TRANSLATION: dolphin, libretro/dolphin
 msgctxt "game_options"
@@ -19541,11 +19403,6 @@ msgstr ""
 "Cuando el backglass está activado, muestra la pequeña parte adicional con "
 "las puntuaciones."
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "While Touching"
-msgstr "Mientras se toca"
-
 #. TRANSLATION: flycast, libretro/flycast, libretro/pcsx_rearmed
 msgctxt "game_options"
 msgid "White"
@@ -19608,11 +19465,6 @@ msgstr "WiiMote + Nunchuk"
 msgctxt "game_options"
 msgid "WiiMote Sideways"
 msgstr "WiiMote Sideways"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Wiimmfi (95.217.77.181)"
-msgstr "Wiimmfi (95.217.77.181)"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -19712,11 +19564,6 @@ msgstr "SÍ"
 msgctxt "game_options"
 msgid "YUV v3 (Firebrand)"
 msgstr "YUV v3 (Firebrand)"
-
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "Yellow"
-msgstr "Amarillo"
 
 #. TRANSLATION: xenia-canary, xenia-edge
 msgctxt "game_options"
@@ -19865,12 +19712,12 @@ msgctxt "game_options"
 msgid "blue sea"
 msgstr "mar azul"
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "bottom only"
 msgstr "solo abajo"
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "bottom/top"
 msgstr "abajo/arriba"
@@ -19979,6 +19826,26 @@ msgctxt "game_options"
 msgid "hot desert"
 msgstr "desierto cálido"
 
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "hybrid bottom ratio 2"
+msgstr "hybrid bottom ratio 2"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "hybrid bottom ratio 3"
+msgstr "hybrid bottom ratio 3"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "hybrid top ratio 2"
+msgstr "hybrid top ratio 2"
+
+#. TRANSLATION: libretro/melonds
+msgctxt "game_options"
+msgid "hybrid top ratio 3"
+msgstr "hybrid top ratio 3"
+
 #. TRANSLATION: libretro/desmume
 msgctxt "game_options"
 msgid "hybrid/bottom"
@@ -20004,7 +19871,7 @@ msgctxt "keys_files"
 msgid "laser"
 msgstr "láser"
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "left/right"
 msgstr "izquierda/derecha"
@@ -20139,7 +20006,7 @@ msgctxt "game_options"
 msgid "red/electric cyan"
 msgstr "rojo/cian eléctrico"
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "right/left"
 msgstr "derecha/izquierda"
@@ -20184,12 +20051,12 @@ msgctxt "game_options"
 msgid "standard"
 msgstr "estándar"
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "top only"
 msgstr "slo arriba"
 
-#. TRANSLATION: libretro/desmume
+#. TRANSLATION: libretro/desmume, libretro/melonds
 msgctxt "game_options"
 msgid "top/bottom"
 msgstr "arriba/abajo"
@@ -20269,8 +20136,16 @@ msgid "yellow/blue"
 msgstr "amarillo/azul"
 
 #~ msgctxt "game_options"
+#~ msgid "1 second"
+#~ msgstr "1 segundo"
+
+#~ msgctxt "game_options"
 #~ msgid "1.5x 720p (960x792)"
 #~ msgstr "1.5x 720p (960x792)"
+
+#~ msgctxt "game_options"
+#~ msgid "10 seconds"
+#~ msgstr "10 segundos"
 
 #~ msgctxt "game_options"
 #~ msgid "10x Native (6400x5280)"
@@ -20289,6 +20164,10 @@ msgstr "amarillo/azul"
 #~ msgstr "12x Nativo (7680x6336) para 8K"
 
 #~ msgctxt "game_options"
+#~ msgid "15 seconds"
+#~ msgstr "15 segundos"
+
+#~ msgctxt "game_options"
 #~ msgid "16x (CSAA)"
 #~ msgstr "16x (CSAA)"
 
@@ -20301,8 +20180,20 @@ msgstr "amarillo/azul"
 #~ msgstr "16xQ (CSAA)"
 
 #~ msgctxt "game_options"
+#~ msgid "1x native (256 x 192)"
+#~ msgstr "Nativo x1 (256 x 192)"
+
+#~ msgctxt "game_options"
+#~ msgid "2 seconds"
+#~ msgstr "2 segundos"
+
+#~ msgctxt "game_options"
 #~ msgid "2.5x 1080p (1600x1320)"
 #~ msgstr "2.5x 1080p (1600x1320)"
+
+#~ msgctxt "game_options"
+#~ msgid "20 seconds"
+#~ msgstr "20 segundos"
 
 #~ msgctxt "game_options"
 #~ msgid "240fps"
@@ -20325,8 +20216,24 @@ msgstr "amarillo/azul"
 #~ msgstr "Nativo x2 (1280x1056) para 720p"
 
 #~ msgctxt "game_options"
+#~ msgid "2x native (512 x 384)"
+#~ msgstr "Nativo x2 (512 x 384)"
+
+#~ msgctxt "game_options"
+#~ msgid "3 seconds"
+#~ msgstr "3 segundos"
+
+#~ msgctxt "game_options"
+#~ msgid "30 seconds"
+#~ msgstr "30 segundos"
+
+#~ msgctxt "game_options"
 #~ msgid "3x Native (1920x1584) for 1080p"
 #~ msgstr "Nativo x3 (1920x1584) para 1080p"
+
+#~ msgctxt "game_options"
+#~ msgid "3x native (768 x 576)"
+#~ msgstr "Nativo x3 (768 x 576)"
 
 #~ msgctxt "game_options"
 #~ msgid "4x (SSAA)"
@@ -20341,6 +20248,14 @@ msgstr "amarillo/azul"
 #~ msgstr "Nativo x4 (2560x2112) para 1440p"
 
 #~ msgctxt "game_options"
+#~ msgid "4x native (1024 x 768)"
+#~ msgstr "Nativo x4 (1024 x 768)"
+
+#~ msgctxt "game_options"
+#~ msgid "5 seconds"
+#~ msgstr "5 segundos"
+
+#~ msgctxt "game_options"
 #~ msgid "512 KB"
 #~ msgstr "512 KB"
 
@@ -20349,12 +20264,24 @@ msgstr "amarillo/azul"
 #~ msgstr "Nativo x5 (3200x2640)"
 
 #~ msgctxt "game_options"
+#~ msgid "5x native (1280 x 960)"
+#~ msgstr "Nativo x5 (1280 x 960)"
+
+#~ msgctxt "game_options"
+#~ msgid "60 seconds"
+#~ msgstr "60 segundos"
+
+#~ msgctxt "game_options"
 #~ msgid "60fps (Default)"
 #~ msgstr "60fps (Defecto)"
 
 #~ msgctxt "game_options"
 #~ msgid "6x Native (3840x3168) for 4K"
 #~ msgstr "Nativo x6 (3840x3168) para 4K"
+
+#~ msgctxt "game_options"
+#~ msgid "6x native (1536 x 1152)"
+#~ msgstr "Nativo x6 (1536 x 1152)"
 
 #~ msgctxt "game_options"
 #~ msgid "70fps"
@@ -20369,6 +20296,10 @@ msgstr "amarillo/azul"
 #~ msgstr "Nativo x7 (4480x3696)"
 
 #~ msgctxt "game_options"
+#~ msgid "7x native (1792 x 1344)"
+#~ msgstr "Nativo x7 (1792 x 1344)"
+
+#~ msgctxt "game_options"
 #~ msgid "8x (CSAA)"
 #~ msgstr "8x (CSAA)"
 
@@ -20379,6 +20310,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "8x Native (5120x4224) for 5K"
 #~ msgstr "Nativo x8 (5120x4224) para 5K"
+
+#~ msgctxt "game_options"
+#~ msgid "8x native (2048 x 1536)"
+#~ msgstr "Nativo x8 (2048 x 1536)"
 
 #~ msgctxt "game_options"
 #~ msgid "8xQ (CSAA)"
@@ -20421,6 +20356,12 @@ msgstr "amarillo/azul"
 #~ msgstr "Añade el registro de depuración para ayudar a solucionar problemas."
 
 #~ msgctxt "game_options"
+#~ msgid "Affects how the emulated screens are scaled. OpenGL renderer only."
+#~ msgstr ""
+#~ "Afecta la forma en que se escalan las pantallas emuladas. Solo "
+#~ "renderizador OpenGL."
+
+#~ msgctxt "game_options"
 #~ msgid "Affects how the game output is scaled to the resolution."
 #~ msgstr "Afecta cómo se escala la salida del juego a la resolución."
 
@@ -20439,6 +20380,14 @@ msgstr "amarillo/azul"
 #~ msgstr ""
 #~ "Permite reducir la calidad visual de estas curvas para un mayor "
 #~ "rendimiento."
+
+#~ msgctxt "game_options"
+#~ msgid "AltWFC (172.104.88.237)"
+#~ msgstr "AltWFC (172.104.88.237)"
+
+#~ msgctxt "game_options"
+#~ msgid "Always"
+#~ msgstr "Siempre"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Stick"
@@ -20469,6 +20418,10 @@ msgstr "amarillo/azul"
 #~ msgstr "Abrir menú"
 
 #~ msgctxt "game_options"
+#~ msgid "Brown"
+#~ msgstr "Marrón"
+
+#~ msgctxt "game_options"
 #~ msgid "CONTROLLER CONFIGURATION"
 #~ msgstr "CONFIGURACIÓN DEL MANDO"
 
@@ -20483,6 +20436,14 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "CROSSHAIR SIZE"
 #~ msgstr "TAMAÑO DE PUNTO DE MIRA"
+
+#~ msgctxt "game_options"
+#~ msgid "CURSOR MODE"
+#~ msgstr "MODO DE CURSOR"
+
+#~ msgctxt "game_options"
+#~ msgid "CURSOR TIMEOUT"
+#~ msgstr "TIEMPO DE ESPERA DEL CURSOR"
 
 #~ msgctxt "game_options"
 #~ msgid "CUTSCENE SUBTITLES"
@@ -20568,6 +20529,12 @@ msgstr "amarillo/azul"
 #~ msgstr "Continuar/Pausar emulación"
 
 #~ msgctxt "game_options"
+#~ msgid "Cursor timeout in seconds when using Cursor Mode - Until Timeout."
+#~ msgstr ""
+#~ "Tiempo de espera del cursor en segundos al usar el modo cursor - Hasta "
+#~ "que se agote el tiempo."
+
+#~ msgctxt "game_options"
 #~ msgid "DIFFICULTY"
 #~ msgstr "DIFICULTAD"
 
@@ -20576,12 +20543,41 @@ msgstr "amarillo/azul"
 #~ msgstr "DESACTIVAR MENSAJES EN PANTALLA"
 
 #~ msgctxt "game_options"
-#~ msgid "DS (Default)"
-#~ msgstr "DS (Defecto)"
+#~ msgid "DNS OVERRIDE"
+#~ msgstr "ANULACIÓN DE DNS"
 
 #~ msgctxt "game_options"
-#~ msgid "DSi"
-#~ msgstr "DSi"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (Experiemental)"
+
+#~ msgctxt "game_options"
+#~ msgid "Dark Blue"
+#~ msgstr "Azul oscuro"
+
+#~ msgctxt "game_options"
+#~ msgid "Dark Green"
+#~ msgstr "Verde oscuro"
+
+#~ msgctxt "game_options"
+#~ msgid "Dark Pink"
+#~ msgstr "Rosa oscuro"
+
+#~ msgctxt "game_options"
+#~ msgid "Dark Purple"
+#~ msgstr "Morado oscuro"
+
+#~ msgctxt "game_options"
+#~ msgid "Degree in which 3D graphics are scaled up. OpenGL renderer only."
+#~ msgstr ""
+#~ "Grado en el que se amplían los gráficos 3D. Solo renderizador OpenGL."
+
+#~ msgctxt "game_options"
+#~ msgid "Determine how the console's touch screen in emulated."
+#~ msgstr "Determina cómo se emula la pantalla táctil de la consola."
+
+#~ msgctxt "game_options"
+#~ msgid "Determines how the cursor should apprear on the botton screen."
+#~ msgstr "Determina cómo debe aparecer el cursor en la pantalla inferior."
 
 #~ msgctxt "game_options"
 #~ msgid "Disable UI prompts"
@@ -20590,12 +20586,6 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Disable mission start confirmation."
 #~ msgstr "Deshabilita la confirmación de inicio de misión."
-
-#~ msgctxt "game_options"
-#~ msgid "Disable to access the system's settings, like time and language."
-#~ msgstr ""
-#~ "Desactivar para acceder a los ajustes del sistema, como la hora y el "
-#~ "idioma."
 
 #~ msgctxt "game_options"
 #~ msgid "Disable weapon waggle."
@@ -20632,6 +20622,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "ENABLE SOFTWARE RENDERER"
 #~ msgstr "ACTIVAR RENDERIZADO POR SOFTWARE"
+
+#~ msgctxt "game_options"
+#~ msgid "EVDEV (Default)"
+#~ msgstr "EVDEV (Defecto)"
 
 #~ msgctxt "game_options"
 #~ msgid "Enable X-Input mode for Xbox type controllers."
@@ -20679,8 +20673,48 @@ msgstr "amarillo/azul"
 #~ "misma red."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable this if your game's 3D modles are not rendered correctly. OpenGL "
+#~ "renderer only."
+#~ msgstr ""
+#~ "Habilítalo si los modelos 3D de tu juego no se representan correctamente. "
+#~ "Solo renderizador OpenGL."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable to display an on-screen message if trying to use unsupported "
+#~ "features."
+#~ msgstr ""
+#~ "Habilitar para mostrar un mensaje en pantalla si se intenta usar "
+#~ "funciones no compatibles."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable to display if your BIOS haas known problems."
+#~ msgstr "Habilitar para mostrar si su BIOS tiene problemas conocidos."
+
+#~ msgctxt "game_options"
 #~ msgid "Enable to emulate the card reader in Virtua Tenis 3."
 #~ msgstr "Habilitar para emular el lector de tarjetas en Virtua Tenis 3."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable to show whether the emulated screens are closed."
+#~ msgstr "Habilitar para mostrar si las pantallas emuladas están cerradas."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable to show whether your device's camera is active."
+#~ msgstr "Habilitar para mostrar si la cámara de su dispositivo está activa."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable to show whether your device's microphone is active."
+#~ msgstr ""
+#~ "Habilitar para mostrar si el micrófono de su dispositivo está activo."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable to show which screen layout with the configured sequence is active."
+#~ msgstr ""
+#~ "Habilitar para mostrar qué diseño de pantalla con la secuencia "
+#~ "configurada está activo."
 
 #~ msgctxt "game_options"
 #~ msgid "Enabled UI prompts (Default)"
@@ -20777,6 +20811,10 @@ msgstr "amarillo/azul"
 #~ msgstr "FAKE GOURAUD"
 
 #~ msgctxt "game_options"
+#~ msgid "FAVOURITE COLOUR"
+#~ msgstr "COLOR FAVORITO"
+
+#~ msgctxt "game_options"
 #~ msgid "FIELD OF VIEW"
 #~ msgstr "CAMPO DE VISIÓN"
 
@@ -20857,6 +20895,10 @@ msgstr "amarillo/azul"
 #~ "Útil para dispositivos/juegos de pantalla única."
 
 #~ msgctxt "game_options"
+#~ msgid "Force Default DNS"
+#~ msgstr "Forzar DNS predeterminado"
+
+#~ msgctxt "game_options"
 #~ msgid "Force Linear"
 #~ msgstr "Forzar lineal"
 
@@ -20910,6 +20952,10 @@ msgstr "amarillo/azul"
 #~ msgstr "Filtros gráficos on/off"
 
 #~ msgctxt "game_options"
+#~ msgid "Gray"
+#~ msgstr "Gris"
+
+#~ msgctxt "game_options"
 #~ msgid "HIDE LIGHT GUN CROSSHAIRS"
 #~ msgstr "OCULTAR PUNTO DE MIRA DE ARMA LIGHT GUN"
 
@@ -20961,6 +21007,10 @@ msgstr "amarillo/azul"
 #~ msgstr "ESCALADO DE IMÁGENES"
 
 #~ msgctxt "game_options"
+#~ msgid "IMPROVED POLYGON SPLITTING"
+#~ msgstr "DIVISIÓN DE POLÍGONOS MEJORADA"
+
+#~ msgctxt "game_options"
 #~ msgid "INTEGER SCALE"
 #~ msgstr "ESCALADO DE ENTEROS"
 
@@ -20985,6 +21035,10 @@ msgstr "amarillo/azul"
 #~ msgstr "MANTENER PANTALLA PRINCIPAL EN PARTE SUPERIOR"
 
 #~ msgctxt "game_options"
+#~ msgid "Kaeru WFC (178.62.43.212)"
+#~ msgstr "Kaeru WFC (178.62.43.212)"
+
+#~ msgctxt "game_options"
 #~ msgid "LIGHTSABER CAMERA"
 #~ msgstr "CÁMARA DE SABLE DE LUZ"
 
@@ -21003,6 +21057,26 @@ msgstr "amarillo/azul"
 #~ msgctxt "keys_files"
 #~ msgid "Left Nudge"
 #~ msgstr "Empujon izquierdo"
+
+#~ msgctxt "game_options"
+#~ msgid "Light Blue"
+#~ msgstr "Azul claro"
+
+#~ msgctxt "game_options"
+#~ msgid "Light Green"
+#~ msgstr "Verde claro"
+
+#~ msgctxt "game_options"
+#~ msgid "Light Pink"
+#~ msgstr "Rosa claro"
+
+#~ msgctxt "game_options"
+#~ msgid "Light Purple"
+#~ msgstr "Morado claro"
+
+#~ msgctxt "game_options"
+#~ msgid "Lime"
+#~ msgstr "Lima"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State"
@@ -21061,6 +21135,10 @@ msgstr "amarillo/azul"
 #~ msgstr "No todos los juegos soportan todos los idiomas."
 
 #~ msgctxt "game_options"
+#~ msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
+#~ msgstr "MOSTRAR EN PANTALLA Y NOTIFICACIONES"
+
+#~ msgctxt "game_options"
 #~ msgid "OUTPUT RESAMPLING"
 #~ msgstr "RESULTADO DE MUESTREO"
 
@@ -21073,6 +21151,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Only A1"
 #~ msgstr "Solo A1"
+
+#~ msgctxt "game_options"
+#~ msgid "Only for Super Game Boy enhanced games."
+#~ msgstr "Solo para juegos mejorados de Super Game Boy."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -21099,6 +21181,18 @@ msgstr "amarillo/azul"
 #~ msgstr "Abrir menú guardar"
 
 #~ msgctxt "game_options"
+#~ msgid "OpenGL (Overwrites Libretro API settings)"
+#~ msgstr "OpenGL (sobrescribe los ajustes de la API de Libretro)"
+
+#~ msgctxt "game_options"
+#~ msgid "Orange"
+#~ msgstr "Naranja"
+
+#~ msgctxt "game_options"
+#~ msgid "Overrides the language mode of the emulated console."
+#~ msgstr "Anula el modo de idioma de la consola emulada."
+
+#~ msgctxt "game_options"
 #~ msgid "PERFORMANCE HACKS (needs review)"
 #~ msgstr "TRUCOS DE RENDIMIENTO (necesita revisión)"
 
@@ -21113,6 +21207,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "keys_files"
 #~ msgid "Plunger"
 #~ msgstr "Émbolo"
+
+#~ msgctxt "game_options"
+#~ msgid "Pointer"
+#~ msgstr "Puntero"
 
 #~ msgctxt "keys_files"
 #~ msgid "Press N for Novice"
@@ -21149,6 +21247,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "RELOAD WEAPON"
 #~ msgstr "RECARGAR ARMA"
+
+#~ msgctxt "game_options"
+#~ msgid "RENDERER MODE"
+#~ msgstr "MODO DE RENDERIZADOR"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -21202,18 +21304,34 @@ msgstr "amarillo/azul"
 #~ msgstr "Empujon a la derecha"
 
 #~ msgctxt "game_options"
-#~ msgid "Right Stick"
-#~ msgstr "Stick derecho del mando"
-
-#~ msgctxt "game_options"
 #~ msgid "Run the game in test mode to configure certain game options."
 #~ msgstr ""
 #~ "Ejecuta el juego en modo de prueba para configurar ciertas opciones del "
 #~ "juego."
 
 #~ msgctxt "game_options"
-#~ msgid "SKIP DS SYSTEM MENU"
-#~ msgstr "SALTAR MENÚ DEL SISTEMA DS"
+#~ msgid "SCREEN FILTERING"
+#~ msgstr "FILTRADO DE PANTALLA"
+
+#~ msgctxt "game_options"
+#~ msgid "SCREEN SETTINGS"
+#~ msgstr "AJUSTES DE PANTALLA"
+
+#~ msgctxt "game_options"
+#~ msgid "SHOW HOST CAMERA STATE"
+#~ msgstr "MOSTRAR ESTADO DE LA CÁMARA"
+
+#~ msgctxt "game_options"
+#~ msgid "SHOW HOST MICROPHONE STATE"
+#~ msgstr "MOSTRAR ESTADO DEL MICRÓFONO"
+
+#~ msgctxt "game_options"
+#~ msgid "SHOW LID STATE"
+#~ msgstr "MOSTRAR ESTADO DE LA TAPA"
+
+#~ msgctxt "game_options"
+#~ msgid "SHOW SCREEN LAYOUT"
+#~ msgstr "MOSTRAR DISEÑO DE PANTALLA"
 
 #~ msgctxt "game_options"
 #~ msgid "SSAA Multiplier"
@@ -21246,10 +21364,6 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
 #~ msgstr "Selecciona modo teclado, joystick o mando"
-
-#~ msgctxt "game_options"
-#~ msgid "Select the input type to navigate the touch screen"
-#~ msgstr "Selecciona tipo de entrada para navegar por la pantalla táctil"
 
 #~ msgctxt "keys_files"
 #~ msgid "Service menu"
@@ -21370,6 +21484,14 @@ msgstr "amarillo/azul"
 #~ msgstr "Suaviza texturas."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Software mode is faster and more accurate, while OpenGL mode supports "
+#~ "scaling 3D graphics."
+#~ msgstr ""
+#~ "El modo software es más rápido y preciso, mientras que el modo OpenGL "
+#~ "admite el escalado de gráficos 3D."
+
+#~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
 #~ msgstr "Ajustar a ventana"
 
@@ -21402,12 +21524,16 @@ msgstr "amarillo/azul"
 #~ msgstr "3D MEJORADO"
 
 #~ msgctxt "game_options"
-#~ msgid "TOUCH SCREEN MODE"
-#~ msgstr "MODO PANTALLA TÁCTIL"
+#~ msgid "TOUCH MODE"
+#~ msgstr "MODO TÁCTIL"
 
 #~ msgctxt "keys_files"
 #~ msgid "Take a screenshot"
 #~ msgstr "Tomar una captura de pantalla"
+
+#~ msgctxt "game_options"
+#~ msgid "The theme colour of the emulated console."
+#~ msgstr "El tema de color de la consola emulada."
 
 #~ msgctxt "game_options"
 #~ msgid "The upscaling method used when enabled."
@@ -21422,10 +21548,6 @@ msgstr "amarillo/azul"
 #~ msgstr "Cambiar límite de velocidad"
 
 #~ msgctxt "game_options"
-#~ msgid "Touch Screen"
-#~ msgstr "Pantalla táctil"
-
-#~ msgctxt "game_options"
 #~ msgid "Triangle"
 #~ msgstr "Triángulo"
 
@@ -21438,8 +21560,16 @@ msgstr "amarillo/azul"
 #~ "información per-poly del Model2 (plano)."
 
 #~ msgctxt "game_options"
+#~ msgid "Turquoise"
+#~ msgstr "Turquesa"
+
+#~ msgctxt "game_options"
 #~ msgid "USE GZDOOM JOYSTICK CONFIGURATION"
 #~ msgstr "USAR CONFIGURACIÓN DE JOYSTICK GZDOOM"
+
+#~ msgctxt "game_options"
+#~ msgid "Until Timeout"
+#~ msgstr "Hasta que se agote el tiempo de espera"
 
 #~ msgctxt "game_options"
 #~ msgid "Upscale rendering resolution to display size."
@@ -21448,6 +21578,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "Use 1:1 aspect."
 #~ msgstr "Usar aspecto 1:1."
+
+#~ msgctxt "game_options"
+#~ msgid "Use Host"
+#~ msgstr "Usar Host"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -21470,12 +21604,24 @@ msgstr "amarillo/azul"
 #~ "Úselo si tiene problemas gráficos o problemas de GPU con este emulador."
 
 #~ msgctxt "game_options"
-#~ msgid "Use language and username from the NDS Firmware"
-#~ msgstr "Usar el idioma y el nombre de usuario del firmware NDS"
+#~ msgid ""
+#~ "Use this to play online with custom servers that reimplement the "
+#~ "discontinued Nintendo Wi-Fi."
+#~ msgstr ""
+#~ "Úselo para jugar online con servidores personalizados que vuelvan a "
+#~ "implementar el descontinuado Nintendo Wi-Fi."
 
 #~ msgctxt "game_options"
 #~ msgid "VSYNC INTERVAL"
 #~ msgstr "INTERVALO VSYNC"
+
+#~ msgctxt "game_options"
+#~ msgid "WARN ABOUT BIOS PROBLEMS"
+#~ msgstr "ADVERTENCIA SOBRE PROBLEMAS DE BIOS"
+
+#~ msgctxt "game_options"
+#~ msgid "WARN ABOUT UNSUPPORTED FEATURES"
+#~ msgstr "ADVERTENCIA SOBRE FUNCIONES NO COMPATIBLES"
 
 #~ msgctxt "game_options"
 #~ msgid "WEAPON PICKUP"
@@ -21504,8 +21650,20 @@ msgstr "amarillo/azul"
 #~ "hasta este número de fotogramas de forma consecutiva."
 
 #~ msgctxt "game_options"
+#~ msgid "While Touching"
+#~ msgstr "Mientras se toca"
+
+#~ msgctxt "game_options"
+#~ msgid "Wiimmfi (95.217.77.181)"
+#~ msgstr "Wiimmfi (95.217.77.181)"
+
+#~ msgctxt "game_options"
 #~ msgid "X-INPUT"
 #~ msgstr "X-INPUT"
+
+#~ msgctxt "game_options"
+#~ msgid "Yellow"
+#~ msgstr "Amarillo"
 
 #~ msgctxt "keys_files"
 #~ msgid "exit game"
@@ -21514,22 +21672,6 @@ msgstr "amarillo/azul"
 #~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "externo (fps variable)"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid bottom ratio 2"
-#~ msgstr "hybrid bottom ratio 2"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid bottom ratio 3"
-#~ msgstr "hybrid bottom ratio 3"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid top ratio 2"
-#~ msgstr "hybrid top ratio 2"
-
-#~ msgctxt "game_options"
-#~ msgid "hybrid top ratio 3"
-#~ msgstr "hybrid top ratio 3"
 
 #~ msgctxt "game_options"
 #~ msgid "internal (fixed 60fps)"
