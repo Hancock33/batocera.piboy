@@ -3,8 +3,8 @@
 # ryzenadj
 #
 ################################################################################
-# Version: Commits on May 28, 2025
-RYZENADJ_VERSION = v0.17.0
+# Version: Commits on May 13, 2026
+RYZENADJ_VERSION = v0.19.0
 RYZENADJ_SITE = $(call github,FlyGoat,RyzenAdj,$(RYZENADJ_VERSION))
 RYZENADJ_LICENSE = GPLv2
 RYZENADJ_DEPENDENCIES = pciutils libpciaccess

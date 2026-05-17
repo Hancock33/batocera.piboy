@@ -3,16 +3,18 @@
 # python-pyxel
 #
 ################################################################################
-# Version: Commits on Aug 28, 2025
-PYTHON_PYXEL_VERSION = v2.4.10
+# Version: Commits on May 03, 2026
+PYTHON_PYXEL_VERSION = v2.9.5
 PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = maturin
 PYTHON_PYXEL_LICENSE = MIT
-PYTHON_PYXEL_CARGO_MANIFEST_PATH = rust/Cargo.toml
+PYTHON_PYXEL_CARGO_MANIFEST_PATH = crates/pyxel-extension/Cargo.toml
 PYTHON_PYXEL_EMULATOR_INFO = pyxel.emulator.yml
 PYTHON_PYXEL_DEPENDENCIES = host-rust-bin sdl2 evmapy
 
 PYTHON_PYXEL_SUBDIR = python
+
+PYTHON_PYXEL_ENV += BINDGEN_EXTRA_CLANG_ARGS="--sysroot=$(STAGING_DIR) -I$(STAGING_DIR)/usr/include -I$(STAGING_DIR)/usr/include/SDL2" LIBRARY_PATH="$(STAGING_DIR)/usr/lib"
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     PYXEL_CARGO_TARGET=x86_64-unknown-linux-gnu

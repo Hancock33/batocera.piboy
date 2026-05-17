@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Mar 15, 2026
-LIBPINMAME_VERSION = e03ed12b301f2a24cd141ca730f73dd155e785ce
+LIBPINMAME_VERSION = 8b143198c4f07645db39a4cb4cf7f332702673d0
 LIBPINMAME_SITE = $(call github,vbousquet,pinmame,$(LIBPINMAME_VERSION))
 LIBPINMAME_BRANCH = plugin_state
 LIBPINMAME_LICENSE = BSD-3-Clause

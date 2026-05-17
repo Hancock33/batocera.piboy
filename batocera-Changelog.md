@@ -1,3 +1,52 @@
+# 2026/xx/xx - batocera.linux 44 - xxxx
+### Special Notes
+- ShadPS4 has moved from the no longer maintained ShadPS4 Plus to standard ShadPS4
+### Hardware
+- Mangmi Air X initial support
+
+### Added
+- NanoBoyAdvance as an alternative GBA emulator
+### Fixed
+
+### Changed / Improved
+- Raspberry Pi4 now uses LabWC
+- Raspberry Pi4 now uses the latest Mesa3D drivers
+- Removed Libretro-Puae2021
+### Updated
+- CDogs to 2.4.0
+- ECWolf to Feb 23, 2026 build
+- Libretro-Arduous to April 21st, 2026 build
+- Libretro-Hatari to April 21st, 2026 build
+- Libretro-HatariB to February 14th, 2026 build
+- Libretro-PC88 to April 21st, 2026 build
+- Libretro-PC98 to May 9th, 2026 build
+- Libretro-PCSX to May 15th, 2026 build
+- Libretro-PD777 to May 16th, 2026 build
+- Libretro-Picodrive to April 2nd, 2026 build
+- Libretro-Prboom to May 4th, 2026 build
+- Libretro-PS2 to May 14th, 2026 build
+- Libretro-PUAE to May 12th, 2026 build
+- Libretro-PX68k to April 21st, 2026 build
+- Libretro-ScummVM to May 5th, 2026 build
+- Libretro-SuperBrosWar to December 12th, 2025 build
+- Libretro-VitaQuake2 to April 10th, 2026 build
+- Mupen64Plus-Core to March 30th, 2026 build
+- OpenMSX to Release 21
+- OpenJK to May 13th, 2026 build
+- PCSX2 to May 17th, 2026 build
+- PPSSPP to v1.20.4
+- Python Pyxel to May 9th, 2026 build
+- ShadPS4 to v.0.15.0
+- Tsugaru to v20251206
+- VKQuake to 1.34.1
+### System
+- Buildroot to 2026.05.x with supporting package & toolchain updates
+- FAudio to 26.05
+- LabWC to 0.9.7
+- Mesa3D to 26.1.0
+- Nvidia Open Production driver to 595.71.05
+- Nvidia 580 Legacy driver to 580.159.03
+
 # 2026/05/08 - batocera.linux 43 - Glasswing
 ### Special Notes
 - x86_64 Handhelds with AMD and Intel graphics will be supported on the preferred x86_64-v3 image using Wayland and the LabWC compositor.

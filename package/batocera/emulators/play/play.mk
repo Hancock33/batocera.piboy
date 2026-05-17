@@ -3,8 +3,8 @@
 # play
 #
 ################################################################################
-# Version: Commits on Apr 08, 2026
-PLAY_VERSION = 691ef210ebb9b0b907f8f5820e4fc5765fc306bf
+# Version: Commits on May 16, 2026
+PLAY_VERSION = e62ea293ba347dc1fd9d387458d8262bc122053f
 PLAY_SITE = https://github.com/jpd002/Play-.git
 PLAY_SITE_METHOD = git
 PLAY_GIT_SUBMODULES = YES

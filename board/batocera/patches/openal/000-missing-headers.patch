@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c925aa870..22debcc96 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1692,7 +1692,7 @@ foreach(obj ${OPENAL_SRCS} ${OPENAL_HDRS} ${ALC_SRCS} ${ALC_HDRS} ${CORE_SRCS} $
+ endforeach()
+ 
+ set(TARGET_PUBLIC_HEADERS include/AL/al.h include/AL/alc.h include/AL/alext.h include/AL/efx.h
+-    include/AL/efx-presets.h)
++    include/AL/efx-presets.h include/AL/efx-creative.h)
+ 
+ # Build main library
+ if(LIBTYPE STREQUAL "STATIC")

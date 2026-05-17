@@ -3,8 +3,8 @@
 # libretro-desmume
 #
 ################################################################################
-# Version: Commits on May 03, 2026
-LIBRETRO_DESMUME_VERSION = a55c393de8ecf19df8111f65b8e12d08b9616520
+# Version: Commits on May 16, 2026
+LIBRETRO_DESMUME_VERSION = ae0f7f51f96d9b5741b47b425505a4a4224b91fa
 LIBRETRO_DESMUME_SITE = $(call github,libretro,desmume,$(LIBRETRO_DESMUME_VERSION))
 LIBRETRO_DESMUME_LICENSE = GPLv2
 

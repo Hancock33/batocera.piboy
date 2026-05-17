@@ -30,4 +30,4 @@ if [ ! -d "$dlcPath" ]; then
     fi
 fi
 
-/usr/bin/shadps4/shadPS4QtLauncher
+/usr/bin/shadPS4QtLauncher

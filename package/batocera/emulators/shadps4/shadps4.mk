@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on May 09, 2026
-SHADPS4_VERSION = c79abb6df407136020a37b6eaab14868fdc511ec
+# Version: Commits on May 17, 2026
+SHADPS4_VERSION = e9cbc02c01f482336970ff049a39021bff8450d6
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
@@ -22,11 +22,6 @@ SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 SHADPS4_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 SHADPS4_CONF_OPTS += -DENABLE_UPDATER=OFF
 SHADPS4_CONF_OPTS += -DVMA_ENABLE_INSTALL=ON
-
-define SHADPS4_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/shadps4
-	$(INSTALL) -m 0755 $(@D)/buildroot-build/shadps4 $(TARGET_DIR)/usr/bin/shadps4/
-endef
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))

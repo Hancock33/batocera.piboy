@@ -9,10 +9,10 @@ mt32emu.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
-python-pyxel.mk
 spirv-cross.mk
 spirv-headers.mk
 spirv-tools.mk
+vita3k.mk
 vulkan-headers.mk
 vulkan-loader.mk
 vulkan-sdk.mk
@@ -21,4 +21,3 @@ vulkan-utility-libraries.mk
 vulkan-validationlayers.mk
 wine-proton.mk
 wine-x86.mk
-xenia-edge.mk

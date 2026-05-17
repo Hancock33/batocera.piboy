@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index e8eb343ea4..e9c8b5f0c3 100644
+index 937e5eed..61a2583b 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -64,6 +64,8 @@ else ifneq (,$(findstring rockpro64,$(platform)))
+@@ -66,6 +66,8 @@ else ifneq (,$(findstring rockpro64,$(platform)))
     override platform += unix
  else ifneq (,$(findstring rk3588,$(platform)))
     override platform += unix
@@ -11,7 +11,7 @@ index e8eb343ea4..e9c8b5f0c3 100644
  else ifneq (,$(findstring n2,$(platform)))
     override platform += unix
     else ifneq (,$(findstring h5,$(platform)))
-@@ -233,6 +235,16 @@ ifneq (,$(findstring unix,$(platform)))
+@@ -227,6 +229,16 @@ ifneq (,$(findstring unix,$(platform)))
        WITH_DYNAREC=aarch64
        CPUFLAGS += -D__NEON_OPT -march=armv8-a+crc -mcpu=cortex-a53 -mtune=cortex-a53
     endif
