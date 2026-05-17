@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on May 13, 2026
-DUCKSTATION_VERSION = 7b6316189162f2b27e73a9d0dc22e13a9c391d69
+# Version: Commits on May 17, 2026
+DUCKSTATION_VERSION = dc5c5b7c3f7a2157b8b277e7f422bcb97084144f
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
