@@ -1,0 +1,16 @@
+diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
+index a830054..16c6ebd 100644
+--- a/Core/SaveState.cpp
++++ b/Core/SaveState.cpp
+@@ -333,6 +333,11 @@ int g_screenshotFailures;
+ 	}
+
+ 	std::string GetGamePrefix(const ParamSFOData &paramSFO) {
++		// batocera - use ROM filename as save state prefix for consistency with the rest of the system
++		const Path &gameFile = PSP_CoreParameter().fileToStart;
++		if (!gameFile.empty()) {
++			return gameFile.WithReplacedExtension("").GetFilename();
++		}
+ 		return GenerateFullDiscId(paramSFO);
+ 	}
+
