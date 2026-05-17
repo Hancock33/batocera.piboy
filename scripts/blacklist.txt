@@ -12,6 +12,7 @@ openbor7142.mk
 spirv-cross.mk
 spirv-headers.mk
 spirv-tools.mk
+vita3k.mk
 vulkan-headers.mk
 vulkan-loader.mk
 vulkan-sdk.mk
