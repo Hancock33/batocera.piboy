@@ -18,10 +18,4 @@ SHADPS4_QTLAUNCHER_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 SHADPS4_QTLAUNCHER_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 SHADPS4_QTLAUNCHER_CONF_OPTS += -DENABLE_UPDATER=OFF
 
-define SHADPS4_QTLAUNCHER_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/shadps4
-	$(INSTALL) -m 0755 $(@D)/buildroot-build/shadPS4QtLauncher $(TARGET_DIR)/usr/bin/shadps4/
-	cp -pr $(@D)/buildroot-build/translations $(TARGET_DIR)/usr/bin/shadps4/
-endef
-
 $(eval $(cmake-package))
