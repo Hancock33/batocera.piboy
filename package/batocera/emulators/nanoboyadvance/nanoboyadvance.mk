@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on May 10, 2026
 NANOBOYADVANCE_VERSION = v1.8.3
-NANOBOYADVANCE_SITE = $(call github,nba-emu,NanoBoyAdvance,$(NANOBOYADVANCE_VERSION))
+NANOBOYADVANCE_SITE = https://github.com/nba-emu/NanoBoyAdvance.git
 NANOBOYADVANCE_SITE_METHOD = git
 NANOBOYADVANCE_LICENSE = GPL-3.0
 NANOBOYADVANCE_LICENSE_FILE = LICENSE
