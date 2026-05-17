@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on May 17, 2026
-LIBRETRO_BEETLE_SATURN_VERSION = 28e3a9b2f72489da0629e5ff01bcfdd76caf0f6b
+LIBRETRO_BEETLE_SATURN_VERSION = 2365033ad747b47ab19e4d40803027ae68aa56ef
 LIBRETRO_BEETLE_SATURN_SITE = $(call github,libretro,beetle-saturn-libretro,$(LIBRETRO_BEETLE_SATURN_VERSION))
 LIBRETRO_BEETLE_SATURN_LICENSE = GPLv2
 LIBRETRO_BEETLE_SATURN_DEPENDENCIES += retroarch
