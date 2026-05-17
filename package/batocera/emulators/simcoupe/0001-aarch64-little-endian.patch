@@ -1,5 +1,5 @@
 diff --git a/Base/SimCoupe.h b/Base/SimCoupe.h
-index 55f824c..152d989 100644
+index 32efcca..5be9d7f 100644
 --- a/Base/SimCoupe.h
 +++ b/Base/SimCoupe.h
 @@ -28,7 +28,7 @@
