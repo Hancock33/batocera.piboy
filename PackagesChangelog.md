@@ -4,12 +4,14 @@ Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/b
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|49bdba454de814e3b8cdbfb1a8908c0417d3200a|May 17, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|dc5c5b7c3f7a2157b8b277e7f422bcb97084144f|May 17, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|5aba461cb3dd9979633c0554e6be6b835c3710c9|May 17, 2026
+Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|c851d65266db262918df279fa3d67a2170782fb4|May 17, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.351|May 17, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4fb74aa5a90c8eaededa5ad6883683e6a4271ef0|May 17, 2026
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|d545d9271177f3d8c2f6f9694772bea085590aab|May 17, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|4b1b62f733329ecd4f9543262c7b08589eb01572|May 17, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-05-17|May 17, 2026
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|41015f69b10ecf8047400236e757818d97302ef9|May 17, 2026
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|d7a45aca641df7bc973da7514581c2a96103f091|May 17, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|527acc4abd0271142d06f1c38f424ce4c8777139|May 17, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260517|May 17, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|de3fc0a4049168f0794a9536a8a4ff10d7448422|May 17, 2026
@@ -19,7 +21,7 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|e2f3a4a88f9277a967789
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|28e3a9b2f72489da0629e5ff01bcfdd76caf0f6b|May 17, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|b11c80a50da4dbc802c288872e41de12a1bb2453|May 17, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|f0802fe64854173091bec4a133b41349cd69718d|May 17, 2026
-Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|a93ee1451fc268bf7667cdc1d6775a2f2f55f66d|May 17, 2026
+Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|c6f03016d47faa4bb7da64c55b48931c95ffaf41|May 17, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|8cc37c8c2303713ac575ae71ef0171e7e72a176d|May 17, 2026
 Emulators|[libretro-geolith](http://github.com/libretro/geolith-libretro)|49c6c8a4647e31749d9103378e2a55453193f6b5|May 17, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|fd13e2b622d220bbc862254ce59dd3944b391625|May 17, 2026
@@ -99,10 +101,8 @@ Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|d6decfa351b575e2936af
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|8cdfadf266a784cd1849f7fef8adae2912240b18|May 12, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|d998eee5dbf653d3cdeeeedecccaa3cfea859701|May 12, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|df0f0185cf9889c682b47f71003c3eda4217119e|May 12, 2026
-Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|889e26e9490c828b039387e8a2ef04079b86801d|May 11, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|061dfd3abd1155aa068738deec8feac3fe7806e1|May 11, 2026
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|release-3.2.2|May 11, 2026
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|45e8741617dc983fc7b8d45629bbbd299d92cc33|May 11, 2026
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|1851228de23b47cb74fbc8ea589a1c7c5e02ea98|May 11, 2026
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|3a5222c97456e8df90983eb546f4d866b0feb848|May 11, 2026
 Emulators|[libretro-quicknes](http://github.com/libretro/QuickNES_Core)|a0ec494c417f365c578f3dacadb04383e4a99ade|May 11, 2026

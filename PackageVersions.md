@@ -149,7 +149,7 @@ Emulators|[libretro-freej2me](http://github.com/TASEmulators/freej2me-plus)|1.52
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|bce196fb774835fe65b3e5b821887a4ccf657167|Apr 20, 2026
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|3262c2aa4adae8dba4f6d51cdd931c15cb11569f|May 15, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|f0802fe64854173091bec4a133b41349cd69718d|May 17, 2026
-Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|a93ee1451fc268bf7667cdc1d6775a2f2f55f66d|May 17, 2026
+Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|c6f03016d47faa4bb7da64c55b48931c95ffaf41|May 17, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|8cc37c8c2303713ac575ae71ef0171e7e72a176d|May 17, 2026
 Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genesis-Plus-GX-Expanded-Rom-Size)|181e8f93440b11d26e305eb42198fdfae3c8d237|Mar 30, 2026
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|487330ae488858a8f9c247c3add2c42f779b11b7|Apr 20, 2026
@@ -244,7 +244,7 @@ Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426d
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[lindbergh-loader](http://github.com/lindbergh-loader/linuxloader)|35c7273a5e081f065ca4e41f71e0eb920470c8eb|May 14, 2026
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0287|Mar 30, 2026
-Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|889e26e9490c828b039387e8a2ef04079b86801d|May 11, 2026
+Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|c851d65266db262918df279fa3d67a2170782fb4|May 17, 2026
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|5c58d3f69c8fdcc23b8d9dbd47685ab84bd0e08e|Mar 30, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|53a08fceb71653000dd6640cac05eb390fba7885|Mar 30, 2026
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|c8ef81c7d9aede9f67f6ed3d3426c90541f9f13e|Jan 13, 2026
@@ -463,7 +463,7 @@ Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|b749eadb4080f596c
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e|Feb 18, 2026
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|ba6b7bb1d50d7db820ec03d9bbd66404fab5c543|Feb 03, 2026
 Ports|[eldoom](http://github.com/dhewm/dhewm3-sdk)|c8ff0c0fa83a1ae0210b8e07adff8ef2107c08c8|Mar 16, 2026
-Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|45e8741617dc983fc7b8d45629bbbd299d92cc33|May 11, 2026
+Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|d7a45aca641df7bc973da7514581c2a96103f091|May 17, 2026
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|0a7834f81b357a6e6494d9eacb01e6fca172618c|May 16, 2026
