@@ -204,6 +204,22 @@ index 09c47c197..39f3efddc 100644
  )
  
  include(FindPackageHandleStandardArgs)
+diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
+index ca5e678af..8d0847916 100644
+--- a/src/core/CMakeLists.txt
++++ b/src/core/CMakeLists.txt
+@@ -214,7 +214,8 @@ function(add_core_resources target)
+   add_util_resources(${target})
+ 
+   add_resources(${target} "resources" ${CMAKE_SOURCE_DIR}/data/resources)
+-
+-  # Copy dynamically-loaded libraries into the bundle.
+-  bundle_libraries(${target} DiscordRPC::discord-rpc)
++    if(ENABLE_DISCORD_PRESENCE)
++      # Copy dynamically-loaded libraries into the bundle.
++      bundle_libraries(${target} DiscordRPC::discord-rpc)
++    endif()
+ endfunction()
 diff --git a/src/core/discord_presence.h b/src/core/discord_presence.h
 index 9d14234b7..e099ba504 100644
 --- a/src/core/discord_presence.h
@@ -218,7 +234,7 @@ index 9d14234b7..e099ba504 100644
  
  #ifdef ENABLE_DISCORD_PRESENCE
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index e82131a19..cc8d903a2 100644
+index e82131a19..6ae43ac02 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
 @@ -90,7 +90,7 @@ add_library(util
@@ -226,25 +242,20 @@ index e82131a19..cc8d903a2 100644
  target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
  target_link_libraries(util PUBLIC common imgui)
 -target_link_libraries(util PRIVATE libchdr lzma libjpeg-turbo::jpeg PNG::png_shared WebP::webp
-+target_link_libraries(util PRIVATE libchdr lzma JPEG::JPEG PNG::png_shared WebP::webp
++target_link_libraries(util PRIVATE libchdr lzma JPEG::JPEG PNG::PNG WebP::webp 
                                     plutosvg::plutosvg ZLIB::ZLIB SoundTouch::SoundTouchDLL xxhash
                                     zstd::libzstd_shared reshadefx)
  
-@@ -193,7 +193,7 @@ if(ENABLE_VULKAN)
- endif()
- 
- # shaderc/spirv-cross is loaded dynamically to reduce module loads on startup.
--get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_shared INTERFACE_INCLUDE_DIRECTORIES)
-+get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_ds INTERFACE_INCLUDE_DIRECTORIES)
- get_target_property(SPIRV_CROSS_INCLUDE_DIR spirv-cross-c-shared INTERFACE_INCLUDE_DIRECTORIES)
- target_include_directories(util PUBLIC ${SHADERC_INCLUDE_DIR} ${SPIRV_CROSS_INCLUDE_DIR})
- 
-@@ -315,7 +315,7 @@ function(add_util_resources target)
-   endif()
- 
-   # Copy dynamically-loaded libraries (harfbuzz/shaderc/spirv-cross) into the bundle.
--  bundle_libraries(${target} spirv-cross-c-shared Shaderc::shaderc_shared)
-+  bundle_libraries(${target} spirv-cross-c-shared Shaderc::shaderc_ds)
-   if(APPLE)
-     bundle_libraries(${target} harfbuzz::harfbuzz)
-   endif()
+diff --git a/src/util/gpu_device.cpp b/src/util/gpu_device.cpp
+index 4ed396ca0..5b4ecf418 100644
+--- a/src/util/gpu_device.cpp
++++ b/src/util/gpu_device.cpp
+@@ -1396,7 +1396,7 @@ bool DynShaderc::Open(Error* error)
+   std::call_once(s_locals.shaderc_init_flag, [&error]() {
+     Error lerror;
+     DynamicLibrary lib;
+-    if (!lib.Open(DynamicLibrary::GetBundledLibraryPath("shaderc_shared").c_str(), error))
++    if (!lib.Open(DynamicLibrary::GetBundledLibraryPath("shaderc_ds").c_str(), error))
+     {
+       ERROR_LOG("Failed to load shaderc: {}", (error ? error : &lerror)->GetDescription());
+       Error::AddPrefix(error, "Failed to load shaderc: ");
