@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/Cell/Modules/cellGem.cpp b/rpcs3/Emu/Cell/Modules/cellGem.cpp
-index f9f5ea410..6cda839bb 100644
+index 24d0ef60d..ddfd52ac2 100644
 --- a/rpcs3/Emu/Cell/Modules/cellGem.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellGem.cpp
 @@ -189,6 +189,7 @@ using gun_thread = named_thread<gun_handler>;
@@ -199,7 +199,7 @@ index d5ef26f0d..06aa13f6b 100644
  	return 0;
  }
 diff --git a/rpcs3/Emu/Io/pad_types.h b/rpcs3/Emu/Io/pad_types.h
-index d2b1535a1..9314a97e2 100644
+index 238e03ff1..39d61c886 100644
 --- a/rpcs3/Emu/Io/pad_types.h
 +++ b/rpcs3/Emu/Io/pad_types.h
 @@ -53,6 +53,19 @@ enum class pad_button : u8

@@ -1,5 +1,5 @@
 diff --git a/src/util/imgui_manager.cpp b/src/util/imgui_manager.cpp
-index f4311732b..6ec181442 100644
+index 07e073cfd..56eea7ddf 100644
 --- a/src/util/imgui_manager.cpp
 +++ b/src/util/imgui_manager.cpp
 @@ -192,7 +192,7 @@ static constexpr const std::array FIXED_FONT_FILENAMES = {

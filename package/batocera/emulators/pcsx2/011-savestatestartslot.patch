@@ -1,8 +1,8 @@
 diff --git a/pcsx2-qt/QtHost.cpp b/pcsx2-qt/QtHost.cpp
-index af74c1ec2..a0582ab97 100644
+index fbf7f0a34..63eec32e9 100644
 --- a/pcsx2-qt/QtHost.cpp
 +++ b/pcsx2-qt/QtHost.cpp
-@@ -2174,6 +2174,11 @@ bool QtHost::ParseCommandLineOptions(const QStringList& args, std::shared_ptr<VM
+@@ -2192,6 +2192,11 @@ bool QtHost::ParseCommandLineOptions(const QStringList& args, std::shared_ptr<VM
  				AutoBoot(autoboot)->save_state = (++it)->toStdString();
  				continue;
  			}
@@ -15,10 +15,10 @@ index af74c1ec2..a0582ab97 100644
  			{
  				AutoBoot(autoboot)->elf_override = (++it)->toStdString();
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 34ca3bac8..e5885ea3e 100644
+index 68015a4c8..1b10a4285 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -1588,6 +1588,12 @@ VMBootResult VMManager::Initialize(const VMBootParameters& boot_params, Error* e
+@@ -1632,6 +1632,12 @@ VMBootResult VMManager::Initialize(const VMBootParameters& boot_params, Error* e
  
  	SetEmuThreadAffinities();
  
@@ -32,7 +32,7 @@ index 34ca3bac8..e5885ea3e 100644
  	if (!GSDumpReplayer::IsReplayingDump() && !state_to_load.empty())
  	{
 diff --git a/pcsx2/VMManager.h b/pcsx2/VMManager.h
-index 0beaeae0c..f73ec598d 100644
+index ca98b2bc8..01b4d074a 100644
 --- a/pcsx2/VMManager.h
 +++ b/pcsx2/VMManager.h
 @@ -33,6 +33,7 @@ struct VMBootParameters

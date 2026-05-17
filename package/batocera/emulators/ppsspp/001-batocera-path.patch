@@ -1,5 +1,5 @@
 diff --git a/Core/Util/PathUtil.cpp b/Core/Util/PathUtil.cpp
-index 96be0ea..38b19a9 100644
+index 96be0eac06..38b19a9744 100644
 --- a/Core/Util/PathUtil.cpp
 +++ b/Core/Util/PathUtil.cpp
 @@ -43,38 +43,33 @@ Path FindConfigFile(const Path &searchPath, std::string_view baseFilename, bool
@@ -79,7 +79,7 @@ index 96be0ea..38b19a9 100644
  }
  
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index 290cf57..82378bd 100644
+index 290cf57ce1..82378bdb01 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -24,7 +24,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
@@ -92,7 +92,7 @@ index 290cf57..82378bd 100644
  
  	size_t size;
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index 4a26924..69373dd 100644
+index 4a26924960..69373dd17b 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
 @@ -367,7 +367,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch

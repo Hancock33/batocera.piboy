@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 71d1cb041..84e59870b 100644
+index 52c3831b9..7d70157d9 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -1,43 +1,6 @@
@@ -176,7 +176,7 @@ index 71d1cb041..84e59870b 100644
  # Libraries that are pulled in from host.
 @@ -140,9 +108,6 @@ endif()
  if(NOT WIN32)
-   find_package(FFMPEG 8.1.0 COMPONENTS avcodec avformat avutil swresample swscale)
+   find_package(FFMPEG 8.1.1 COMPONENTS avcodec avformat avutil swresample swscale)
    if(NOT FFMPEG_FOUND)
 -    message(WARNING "FFmpeg not found, using bundled headers.")
 +    message(FATAL_ERROR "FFmpeg not found.")
@@ -218,42 +218,33 @@ index 9d14234b7..e099ba504 100644
  
  #ifdef ENABLE_DISCORD_PRESENCE
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index d06043fd8..e4c5c2138 100644
+index e82131a19..cc8d903a2 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
 @@ -90,7 +90,7 @@ add_library(util
  target_precompile_headers(util PRIVATE "pch.h")
  target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
  target_link_libraries(util PUBLIC common imgui)
--target_link_libraries(util PRIVATE libchdr lzma libjpeg-turbo::jpeg PNG::PNG WebP::webp plutosvg::plutosvg ZLIB::ZLIB SoundTouch::SoundTouchDLL xxhash zstd::libzstd_shared reshadefx)
-+target_link_libraries(util PRIVATE libchdr lzma JPEG::JPEG PNG::PNG WebP::webp plutosvg::plutosvg ZLIB::ZLIB SoundTouch::SoundTouchDLL xxhash zstd::libzstd_shared reshadefx)
+-target_link_libraries(util PRIVATE libchdr lzma libjpeg-turbo::jpeg PNG::png_shared WebP::webp
++target_link_libraries(util PRIVATE libchdr lzma JPEG::JPEG PNG::png_shared WebP::webp
+                                    plutosvg::plutosvg ZLIB::ZLIB SoundTouch::SoundTouchDLL xxhash
+                                    zstd::libzstd_shared reshadefx)
  
- if(ENABLE_X11)
-   target_sources(util PRIVATE
-diff --git a/src/util/gpu_device.cpp b/src/util/gpu_device.cpp
-index 7332a77a2..eea2c9a06 100644
---- a/src/util/gpu_device.cpp
-+++ b/src/util/gpu_device.cpp
-@@ -1368,6 +1368,13 @@ std::unique_ptr<GPUDevice> GPUDevice::CreateDeviceForAPI(RenderAPI api)
-   }
- }
+@@ -193,7 +193,7 @@ if(ENABLE_VULKAN)
+ endif()
  
-+#ifndef _WIN32
-+// Use a duckstation-suffixed shaderc name to avoid conflicts and loading another shaderc, e.g. from the Vulkan SDK.
-+#define SHADERC_LIB_NAME "shaderc_ds"
-+#else
-+#define SHADERC_LIB_NAME "shaderc_shared"
-+#endif
-+
- namespace dyn_libs {
- static void CloseShaderc();
- static void CloseSpirvCross();
-@@ -1394,7 +1401,7 @@ bool dyn_libs::OpenShaderc(Error* error)
-   if (s_shaderc_library.IsOpen())
-     return true;
+ # shaderc/spirv-cross is loaded dynamically to reduce module loads on startup.
+-get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_shared INTERFACE_INCLUDE_DIRECTORIES)
++get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_ds INTERFACE_INCLUDE_DIRECTORIES)
+ get_target_property(SPIRV_CROSS_INCLUDE_DIR spirv-cross-c-shared INTERFACE_INCLUDE_DIRECTORIES)
+ target_include_directories(util PUBLIC ${SHADERC_INCLUDE_DIR} ${SPIRV_CROSS_INCLUDE_DIR})
  
--  const std::string libname = DynamicLibrary::GetVersionedFilename("shaderc_shared");
-+  const std::string libname = DynamicLibrary::GetVersionedFilename(SHADERC_LIB_NAME);
-   if (!s_shaderc_library.Open(libname.c_str(), error))
-   {
-     Error::AddPrefix(error, "Failed to load shaderc: ");
+@@ -315,7 +315,7 @@ function(add_util_resources target)
+   endif()
+ 
+   # Copy dynamically-loaded libraries (harfbuzz/shaderc/spirv-cross) into the bundle.
+-  bundle_libraries(${target} spirv-cross-c-shared Shaderc::shaderc_shared)
++  bundle_libraries(${target} spirv-cross-c-shared Shaderc::shaderc_ds)
+   if(APPLE)
+     bundle_libraries(${target} harfbuzz::harfbuzz)
+   endif()
