@@ -18,9 +18,6 @@ if grep -qE "^[ ]*nvidia-driver[ ]*=[ ]*true[ ]*$" /boot/batocera-boot.conf; the
 elif grep -qE "^[ ]*nvidia-driver[ ]*=[ ]*(legacy|legacy580)[ ]*$" /boot/batocera-boot.conf; then
     echo "Manually set to legacy 580 driver" >> $log
     batocera-nvidia legacy580
-elif grep -qE "^[ ]*nvidia-driver[ ]*=[ ]*(legacy|legacy470)[ ]*$" /boot/batocera-boot.conf; then
-    echo "Manually set to legacy 470 driver" >> $log
-    batocera-nvidia legacy470
 elif grep -qE "^[ ]*nvidia-driver[ ]*=[ ]*false[ ]*$" /boot/batocera-boot.conf; then
     echo "Manually set to nouveau driver" >> $log
     batocera-nvidia nouveau
