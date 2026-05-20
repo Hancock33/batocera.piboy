@@ -3,8 +3,8 @@
 # d7vk
 #
 ################################################################################
-# Version: Commits on May 06, 2026
-D7VK_VERSION = v1.9
+# Version: Commits on May 19, 2026
+D7VK_VERSION = v1.10
 D7VK_SOURCE = d7vk-$(D7VK_VERSION).zip
 D7VK_SITE = https://github.com/WinterSnowfall/d7vk/releases/download/$(D7VK_VERSION)
 D7VK_LICENSE = zlib/libpng

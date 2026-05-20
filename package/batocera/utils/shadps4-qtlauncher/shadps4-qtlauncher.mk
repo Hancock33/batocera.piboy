@@ -3,8 +3,8 @@
 # shadps4-qtlauncher
 #
 ################################################################################
-# Version: Commits on May 19, 2026
-SHADPS4_QTLAUNCHER_VERSION = 9f322c5f54792867fb37120d8e349004cb91a127
+# Version: Commits on May 20, 2026
+SHADPS4_QTLAUNCHER_VERSION = 790d5ad23b132d657f701f8cdd4715c6807a80d0
 SHADPS4_QTLAUNCHER_SITE = https://github.com/shadps4-emu/shadps4-qtlauncher.git
 SHADPS4_QTLAUNCHER_SITE_METHOD=git
 SHADPS4_QTLAUNCHER_GIT_SUBMODULES=YES

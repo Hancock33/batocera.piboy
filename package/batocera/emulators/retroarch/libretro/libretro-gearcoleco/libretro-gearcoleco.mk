@@ -3,8 +3,8 @@
 # libretro-gearcoleco
 #
 ################################################################################
-# Version: Commits on May 19, 2026
-LIBRETRO_GEARCOLECO_VERSION = 8b49dac3fb97266f3c4b7c8f601f7f18ecaa2a2b
+# Version: Commits on May 20, 2026
+LIBRETRO_GEARCOLECO_VERSION = e1a991d096e215736c0b4abc4768563b9e9f9cf7
 LIBRETRO_GEARCOLECO_SITE = $(call github,drhelius,Gearcoleco,$(LIBRETRO_GEARCOLECO_VERSION))
 LIBRETRO_GEARCOLECO_LICENSE = GPLv3
 LIBRETRO_GEARCOLECO_DEPENDENCIES = retroarch
