@@ -32,7 +32,7 @@ define DRASTIC_INSTALL_TARGET_CMDS
 	cp -avr $(@D)/target/drastic/* $(TARGET_DIR)/usr/share/drastic
 
 	# evmap config
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/drastic/nds.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/drastic/nds.drastic.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))
