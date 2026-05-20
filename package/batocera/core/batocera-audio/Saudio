@@ -6,7 +6,8 @@
 . /etc/profile.d/xdg.sh
 . /etc/profile.d/dbus.sh
 
-TAG="S06audio"
+info_output=$(batocera-info | grep "Model:" | awk -F": " '{print $2}' | head -n 1)
+TAG="S20audio"
 export XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-/var/run}
 
 log() {
@@ -70,6 +71,9 @@ case "$1" in
     start)
         alsactl init 2>&1 | logger -t "$TAG" -p "user.info"
         start_pipewire
+        if [ $info_output = "Galileo" ]; then
+            amixer -c 1 sset 'Right DAI Sel Mux' Right > /dev/null 2>&1
+        fi
     ;;
     stop)
         stop_pipewire
