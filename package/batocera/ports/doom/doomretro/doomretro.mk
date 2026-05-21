@@ -3,8 +3,8 @@
 # doomretro
 #
 ################################################################################
-# Version: Commits on May 20, 2026
-DOOMRETRO_VERSION = 894c676d9f3a9319e792d8337f0a186abd030375
+# Version: Commits on May 21, 2026
+DOOMRETRO_VERSION = bbc19261e86109dc01c26273437b97021089ea49
 DOOMRETRO_SITE = $(call github,bradharding,doomretro,$(DOOMRETRO_VERSION))
 DOOMRETRO_EMULATOR_INFO = doomretro.emulator.yml
 DOOMRETRO_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer
