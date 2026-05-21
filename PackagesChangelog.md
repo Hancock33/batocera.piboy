@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|9c7b0a395db460524dad26c7b57f266e4acd5242|May 21, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|57f1dc97e0e94024f3f931ec03dfd4a18811e670|May 21, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|889545e1ee17ef5e0a88faf18861f47a0e9e7523|May 21, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|3b776e65b710646dae43a6168625312fd07cf59a|May 21, 2026
@@ -10,6 +11,16 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|b113ac6b9c2752d543eb
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-05-21|May 21, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|4dec6508e097fe9ee0450bdd9db0ff8fc5a8bed8|May 21, 2026
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|ca130307c7be827175131dbd12f8af678f2983f7|May 21, 2026
+Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.107|May 21, 2026
+Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/piers/resource.language.el_gr)|11.0.81|May 21, 2026
+Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/piers/resource.language.es_es)|11.0.104|May 21, 2026
+Kodi|[kodi_resource_language_eu_es](http://mirrors.kodi.tv/addons/piers/resource.language.eu_es)|11.0.78|May 21, 2026
+Kodi|[kodi_resource_language_fr_fr](http://mirrors.kodi.tv/addons/piers/resource.language.fr_fr)|11.0.107|May 21, 2026
+Kodi|[kodi_resource_language_it_it](http://mirrors.kodi.tv/addons/piers/resource.language.it_it)|11.0.106|May 21, 2026
+Kodi|[kodi_resource_language_pt_br](http://mirrors.kodi.tv/addons/piers/resource.language.pt_br)|11.0.104|May 21, 2026
+Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/piers/resource.language.sv_se)|11.0.101|May 21, 2026
+Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/piers/resource.language.tr_tr)|11.0.94|May 21, 2026
+Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/piers/resource.language.zh_cn)|11.0.100|May 21, 2026
 Network|[rtw88](http://github.com/lwfinger/rtw88)|a56bcd26e770257612a0803249cbd4095fc6feca|May 21, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|04689419a8d610c9f960164bc4da04f2a23da57b|May 21, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|cb8ba97359810dfe0fb696644306d0def0e4b227|May 21, 2026
@@ -88,16 +99,6 @@ Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|9cba31ec2592a437d7a3
 Emulators|[play](https://github.com/jpd002/Play-.git)|e62ea293ba347dc1fd9d387458d8262bc122053f|May 16, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|7b7f7e760c4c30b800ea1a5fd71aa763c0d4f75f|May 16, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|459dcd7b2c0c58acb9aa296062742ba213ce2ff2|May 16, 2026
-Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.106|May 16, 2026
-Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/piers/resource.language.el_gr)|11.0.80|May 16, 2026
-Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/piers/resource.language.es_es)|11.0.103|May 16, 2026
-Kodi|[kodi_resource_language_eu_es](http://mirrors.kodi.tv/addons/piers/resource.language.eu_es)|11.0.77|May 16, 2026
-Kodi|[kodi_resource_language_fr_fr](http://mirrors.kodi.tv/addons/piers/resource.language.fr_fr)|11.0.106|May 16, 2026
-Kodi|[kodi_resource_language_it_it](http://mirrors.kodi.tv/addons/piers/resource.language.it_it)|11.0.105|May 16, 2026
-Kodi|[kodi_resource_language_pt_br](http://mirrors.kodi.tv/addons/piers/resource.language.pt_br)|11.0.103|May 16, 2026
-Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/piers/resource.language.sv_se)|11.0.100|May 16, 2026
-Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/piers/resource.language.tr_tr)|11.0.93|May 16, 2026
-Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/piers/resource.language.zh_cn)|11.0.99|May 16, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|d749b1fcdbbdec0482406508ff38f8d74729eb83|May 16, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.09|May 16, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|82cbe149648969fa55d60b955d455f15fd125b1d|May 16, 2026
@@ -167,7 +168,6 @@ Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|42fa8a98ab19bd
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|9b79d496f0e3afcdf43bc5f97f59834114447b63|May 04, 2026
 Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.350.0|May 04, 2026
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|9b79d496f0e3afcdf43bc5f97f59834114447b63|May 04, 2026
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|bc431ae75ea355c118be69c2ac3e52dc381131e7|May 03, 2026
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v2.9.5|May 03, 2026
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.05.02-osfree|May 02, 2026
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1f2e7d388cbc73287191a6b2b2464f1f8f74818c|May 02, 2026
