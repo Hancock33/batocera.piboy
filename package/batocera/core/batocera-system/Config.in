@@ -318,7 +318,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
     select BR2_PACKAGE_KEYBOARDTOPADS
     select BR2_PACKAGE_NSO_N64                              if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_7         # nintendo switch joycon daemon (requires hid-nx or hid-nintendo in kernel 6.7 or later)
-    select BR2_PACKAGE_ROCKNIX_JOYPAD                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
+    select BR2_PACKAGE_ROCKNIX_JOYPAD                       if BR2_PACKAGE_BATOCERA_TARGET_RK3326       || BR2_PACKAGE_BATOCERA_TARGET_RK3568
 
     select BR2_PACKAGE_UPOWER                               # required by some cemuhook servers
 
@@ -345,7 +345,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_DOCKERPI_POWERBOARD                  if  BR2_PACKAGE_BATOCERA_TARGET_BCM2837
 
     select BR2_PACKAGE_WM8960_AUDIO_HAT                     if  BR2_PACKAGE_BATOCERA_TARGET_BCM2836     || BR2_PACKAGE_BATOCERA_TARGET_BCM2837  || \
-	                                                            BR2_PACKAGE_BATOCERA_TARGET_BCM2711     || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711     || BR2_PACKAGE_BATOCERA_TARGET_BCM2712
     # swap
     select BR2_PACKAGE_SWAPIT                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3128      || BR2_PACKAGE_BATOCERA_TARGET_RK3326   || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2836     || BR2_PACKAGE_BATOCERA_TARGET_BCM2837
