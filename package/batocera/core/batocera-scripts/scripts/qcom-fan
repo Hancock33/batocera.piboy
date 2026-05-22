@@ -96,7 +96,7 @@ def temp_check():
     if len(tmpconfig) > 0:
         fanconfig = tmpconfig
     prevblock = 0
-    fan_find = glob.glob("/sys/class/hwmon/hwmon*/pwm1")[0] 
+    fan_find = glob.glob("/sys/class/hwmon/hwmon*/pwm1")[0]
     if not fan_find:
         print ("Error: no fan control found.")
         exit
@@ -128,7 +128,7 @@ if len(sys.argv)>1:
     elif str(sys.argv[1]) == "stop":
         try:
             # force fan stop
-            fan_find = glob.glob("/sys/class/hwmon/hwmon*/pwm1")[0] 
+            fan_find = glob.glob("/sys/class/hwmon/hwmon*/pwm1")[0]
             with open(fan_find, "w") as fan_file:
                 fan_file.write("0")
         except Exception as e:

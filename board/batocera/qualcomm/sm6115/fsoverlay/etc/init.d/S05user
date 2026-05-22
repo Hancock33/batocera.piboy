@@ -17,7 +17,7 @@ kmsg() {
 
 _do_start() {
     udevadm settle
-    kmsg "=== S05user start invoked ==="    
+    kmsg "=== S05user start invoked ==="
     log_msg "=== Starting Qualcomm Stack ==="
     #echo 45056 > /proc/sys/vm/min_free_kbytes
 
