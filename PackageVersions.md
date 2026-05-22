@@ -90,7 +90,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|dc5c5b7c3f7a2157b8b277e7f422bcb97084144f|May 17, 2026
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|46cfd9b6f3de00cc0b3b7e5f3369a66f66f7d115|May 21, 2026
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|9b18d0b1113fb2b73acc539d2e4dfae85e511cd4|May 22, 2026
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|d2e7abb191bf41ffa1413100154590e0930aebfa|Feb 28, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|f3047b2ef12d9e77a661826d663a46beffdc927f|May 20, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v3.2.35|Sept 07, 2025
@@ -150,7 +150,7 @@ Emulators|[libretro-freej2me](http://github.com/TASEmulators/freej2me-plus)|1.52
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|bce196fb774835fe65b3e5b821887a4ccf657167|Apr 20, 2026
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|3262c2aa4adae8dba4f6d51cdd931c15cb11569f|May 15, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|4edd179124ab27157f3acd1893f0eb2bee87ed1e|May 20, 2026
-Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|46002a4d92f72aa4dca82ea85f5ee94cb0c33fce|May 21, 2026
+Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|15e31680428046281b4457d126f503d8ab8e2f8f|May 22, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|803ff97c8fc6820941a0bbad7c1e8af1bab3b465|May 20, 2026
 Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genesis-Plus-GX-Expanded-Rom-Size)|181e8f93440b11d26e305eb42198fdfae3c8d237|Mar 30, 2026
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|487330ae488858a8f9c247c3add2c42f779b11b7|Apr 20, 2026
@@ -170,7 +170,7 @@ Emulators|[libretro-kronos](http://github.com/FCare/kronos)|1d32cadb1150d47710a5
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|35adc1a215e975be964b2ef4b652117acd7beba1|Mar 31, 2026
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|6d724ad3d52ba5e476502c256e91185f76047c1e|Apr 11, 2026
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0287|Mar 30, 2026
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|30f9b3fad906830db5dd653b04081b44c63895fa|May 20, 2026
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|45f7a7f89f60aa1da6e6a136bbc1d1adeea8af91|May 22, 2026
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|bac0256dc6a8736c5a228f57c562257e45fd49f3|Mar 03, 2026
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|634e51477364edc39aaccd3bebf8bcab5776148c|Apr 20, 2026
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|0102910c39ad1a62bc3f784466f3f67ca9eae335|Apr 20, 2026
@@ -214,7 +214,7 @@ Emulators|[libretro-skyemu](http://github.com/skylersaleh/SkyEmu)|46efbcbdb3b902
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|6dc7119f6f8d7f6437320405ee3b0de5f227913f|Apr 20, 2026
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|bc82e8281ddbbd487875866f5db27cdb9838d319|May 15, 2026
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|185488cd83aaf274752a742c94d45561cbecb7af|Apr 20, 2026
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|cb312bdae0e66c2dbb56ae82e932de1f788f8c71|May 22, 2026
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|7cb8757b44e563e67cdd4a59be19aab7e2b139ee|May 22, 2026
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|2b93c0d7dff5b8f6c4e60e049d66849923fa8bba|Apr 20, 2026
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|ae824f626ad80c8b7ee848698b3d1dcebe9a5ccb|Dec 12, 2025
 Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libretro-superflappybirds)|4b798ecc6948017ca79aad1ea20fe57e680228c8|Apr 13, 2023
@@ -282,7 +282,7 @@ Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|93f30afe881dbb328fc715a984931abaf2bbb2b3|May 21, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
-Emulators|[ymir](https://github.com/StrikerX3/Ymir)|d501c3f0e6c4bad5f80aec9e5f69a7aabc519097|May 19, 2026
+Emulators|[ymir](https://github.com/StrikerX3/Ymir)|9f3425a1cd8f70e731179b0ca3fca04b0489d28c|May 22, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.143.9257-544|May 21, 2026
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|9a8e2ff633527412fdc7d6f29606e59d39488c32|May 20, 2026
@@ -413,7 +413,7 @@ Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/8f/b4/8578b8e4
 Libraries|[python-smbus3](https://files.pythonhosted.org/packages/75/39/4b7fe2b7cfb42a39e5bb4ef2970a3befc0febbf2b5b8ef85fac04ca6dcb3)|0.5.5|Jun 29, 2024
 Libraries|[python-sysv-ipc](https://files.pythonhosted.org/packages/f2/5e/59208c6dd05ebc6f46ce2023c4fc01ffe814a1967d21b35d312c7e6ffeae)|1.2.0|Jan 09, 2026
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.2.1|Apr 15, 2026
-Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.12.1|May 07, 2026
+Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.13.0|May 22, 2026
 Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.4.4|May 01, 2026
 Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|release-3.2.2|May 11, 2026
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
