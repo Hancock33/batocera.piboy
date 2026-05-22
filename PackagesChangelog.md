@@ -65,6 +65,7 @@ Emulators|[ymir](https://github.com/StrikerX3/Ymir)|d501c3f0e6c4bad5f80aec9e5f69
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260519|May 19, 2026
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|cbb289755467bd430d2f310f3bbb3e343a8073d6|May 19, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v1.10|May 19, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260519-proton-slr|May 19, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|26e269414737333d838d283ddd4427098559a00d|May 19, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|c4abbf53de924abd54cea033dd5883ef9605e892|May 19, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|074bd8b2b37227253a932f19fd601eb95376b093|May 19, 2026
@@ -152,7 +153,6 @@ Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|276979efa4f
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-alpha6|May 07, 2026
 Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.12.1|May 07, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|11b8c4ecac4f249cf8b856389bd722cb421df787|May 07, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260507-proton-slr|May 07, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|cef2de6123cccbf0393ed6071ffd6e4a8d092145|May 07, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|31bf5407d9922becab9e8d8c78aa1197ce500724|May 06, 2026
 Emulators|[supermodel](http://github.com/trzy/Supermodel)|9c9e7b7fb6acde65763148176ef3374d5ee573f2|May 06, 2026
