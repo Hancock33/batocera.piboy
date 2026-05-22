@@ -85,6 +85,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-vulkan                        $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-wifi                          $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-xtract                        $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/battery_led_status                     $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/bluetooth/batocera-bluetooth           $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/bluetooth/batocera-bluetooth-agent     $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/bluetooth/bluezutils.py                $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/ # any variable ?
