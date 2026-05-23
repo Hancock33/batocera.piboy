@@ -1,21 +1,13 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 52c3831b9..7d70157d9 100644
+index 46baaa190..fd99f5d80 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
-@@ -1,43 +1,6 @@
- # SPDX-FileCopyrightText: 2019-2026 Connor McLaughlin <stenzek@gmail.com>
- # SPDX-License-Identifier: CC-BY-NC-ND-4.0 + Packaging Restriction
+@@ -4,35 +4,6 @@
+ # NOTE: In addition to the terms of CC-BY-NC-ND-4.0, you may not use this file to create
+ # packages or build recipes without explicit permission from the copyright holder.
  
 -# Get prebuilt dependencies for the current platform and architecture.
--if(WIN32)
--  if (CPU_ARCH_X64)
--    set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/windows-x64")
--  elseif(CPU_ARCH_ARM64)
--    set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/windows-arm64")
--  else()
--    message(FATAL_ERROR "Unsupported architecture")
--  endif()
--elseif(APPLE)
+-if(APPLE)
 -  set(DEPS_PATH "${CMAKE_SOURCE_DIR}/dep/prebuilt/macos-universal")
 -elseif(LINUX)
 -  if(CMAKE_CROSSCOMPILING)
@@ -46,9 +38,9 @@ index 52c3831b9..7d70157d9 100644
  # Enable threads everywhere.
  set(THREADS_PREFER_PTHREAD_FLAG ON)
  find_package(Threads REQUIRED)
-@@ -45,73 +8,78 @@ find_package(Threads REQUIRED)
+@@ -40,67 +11,80 @@ find_package(Threads REQUIRED)
  # pkg-config gets pulled transitively on some platforms.
- if(NOT WIN32 AND NOT APPLE)
+ if(NOT APPLE)
    find_package(PkgConfig REQUIRED)
 -  find_package(Libbacktrace REQUIRED)
  endif()
@@ -61,7 +53,7 @@ index 52c3831b9..7d70157d9 100644
 -               NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/ZLIB")
  endif()
  
- # Enforce use of bundled dependencies to avoid conflicts with system libraries.
+-# Enforce use of bundled dependencies to avoid conflicts with system libraries.
 -find_package(zstd 1.5.7 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/zstd")
 -find_package(WebP 1.6.0 REQUIRED
@@ -90,15 +82,6 @@ index 52c3831b9..7d70157d9 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/spirv_cross_c_shared/cmake")
 -find_package(SDL3 3.4.4 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/SDL3")
--
--# Verify dependency paths.
--foreach(dep zstd WebP PNG libjpeg-turbo freetype harfbuzz plutosvg cpuinfo
--            DiscordRPC SoundTouch libzip Shaderc spirv_cross_c_shared SDL3)
--  if((${dep}_LIBRARY AND NOT "${${dep}_LIBRARY}" MATCHES "^${DEPS_PATH}") OR
--     (${dep}_DIR AND NOT "${${dep}_DIR}" MATCHES "^${DEPS_PATH}"))
--    message(FATAL_ERROR "Using incorrect ${dep} library. Check your dependencies.")
--  endif()
--endforeach()
 +set(FIND_ROOT_PATH_BACKUP ${CMAKE_FIND_ROOT_PATH})
 +set(FIND_ROOT_PATH_MODE_INCLUDE_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_INCLUDE})
 +set(FIND_ROOT_PATH_MODE_LIBRARY_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_LIBRARY})
@@ -152,8 +135,6 @@ index 52c3831b9..7d70157d9 100644
  
  # All our builds include Qt, so this is not a problem.
  set(QT_NO_PRIVATE_MODULE_WARNING ON)
- 
- # Should be prebuilt.
  if(LINUX)
 -  find_package(Qt6 6.11.1 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
@@ -166,25 +147,24 @@ index 52c3831b9..7d70157d9 100644
 +  find_package(Qt6 6.11.1 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
  endif()
  
- # Have to verify it down here, don't want users using unpatched Qt.
--if(NOT Qt6_DIR MATCHES "^${DEPS_PATH}")
--message(FATAL_ERROR "Using incorrect Qt library. Check your dependencies.")
-+if(NOT Qt6_DIR MATCHES "^${CMAKE_PREFIX_PATH}")
-+   #message(FATAL_ERROR "Using incorrect Qt library. Check your dependencies.")
- endif()
+ # Verify dependency paths.
+-foreach(dep zstd WebP PNG libjpeg-turbo freetype harfbuzz plutosvg cpuinfo
+-            DiscordRPC SoundTouch libzip Shaderc spirv_cross_c_shared SDL3 Qt6)
+-  if((${dep}_LIBRARY AND NOT "${${dep}_LIBRARY}" MATCHES "^${DEPS_PATH}") OR
+-     (${dep}_DIR AND NOT "${${dep}_DIR}" MATCHES "^${DEPS_PATH}"))
+-    message(FATAL_ERROR "Using incorrect ${dep} library. Check your dependencies.")
+-  endif()
+-endforeach()
++#foreach(dep zstd WebP PNG libjpeg-turbo freetype harfbuzz plutosvg cpuinfo
++#            DiscordRPC SoundTouch libzip Shaderc spirv_cross_c_shared SDL3 Qt6)
++#  if((${dep}_LIBRARY AND NOT "${${dep}_LIBRARY}" MATCHES "^${DEPS_PATH}") OR
++#     (${dep}_DIR AND NOT "${${dep}_DIR}" MATCHES "^${DEPS_PATH}"))
++#    message(FATAL_ERROR "Using incorrect ${dep} library. Check your dependencies.")
++#  endif()
++#endforeach()
  
  # Libraries that are pulled in from host.
-@@ -140,9 +108,6 @@ endif()
- if(NOT WIN32)
-   find_package(FFMPEG 8.1.1 COMPONENTS avcodec avformat avutil swresample swscale)
-   if(NOT FFMPEG_FOUND)
--    message(WARNING "FFmpeg not found, using bundled headers.")
-+    message(FATAL_ERROR "FFmpeg not found.")
-   endif()
- endif()
--if(NOT FFMPEG_FOUND)
--  set(FFMPEG_INCLUDE_DIRS "${CMAKE_SOURCE_DIR}/dep/ffmpeg/include")
--endif()
+ find_package(CURL REQUIRED)
 diff --git a/CMakeModules/FindLibbacktrace.cmake b/CMakeModules/FindLibbacktrace.cmake
 index 09c47c197..39f3efddc 100644
 --- a/CMakeModules/FindLibbacktrace.cmake
@@ -205,10 +185,10 @@ index 09c47c197..39f3efddc 100644
  
  include(FindPackageHandleStandardArgs)
 diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
-index ca5e678af..8d0847916 100644
+index 7124c2de8..ed7d01f81 100644
 --- a/src/core/CMakeLists.txt
 +++ b/src/core/CMakeLists.txt
-@@ -214,7 +214,8 @@ function(add_core_resources target)
+@@ -220,7 +220,8 @@ function(add_core_resources target)
    add_util_resources(${target})
  
    add_resources(${target} "resources" ${CMAKE_SOURCE_DIR}/data/resources)
@@ -234,10 +214,10 @@ index 9d14234b7..e099ba504 100644
  
  #ifdef ENABLE_DISCORD_PRESENCE
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index e82131a19..6ae43ac02 100644
+index 8ecac0340..258228ea6 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -90,7 +90,7 @@ add_library(util
+@@ -96,7 +96,7 @@ add_library(util
  target_precompile_headers(util PRIVATE "pch.h")
  target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
  target_link_libraries(util PUBLIC common imgui)
