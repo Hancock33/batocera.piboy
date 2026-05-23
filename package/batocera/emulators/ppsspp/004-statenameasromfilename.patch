@@ -1,8 +1,8 @@
 diff --git a/Core/SaveState.cpp b/Core/SaveState.cpp
-index a8300543d9..16c6ebd736 100644
+index cdc7843f5d..bde3b47270 100644
 --- a/Core/SaveState.cpp
 +++ b/Core/SaveState.cpp
-@@ -333,6 +333,11 @@ int g_screenshotFailures;
+@@ -330,6 +330,11 @@ int g_screenshotFailures;
  	}
  
  	std::string GetGamePrefix(const ParamSFOData &paramSFO) {

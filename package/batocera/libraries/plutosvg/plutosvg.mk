@@ -3,8 +3,8 @@
 # plutosvg
 #
 ################################################################################
-# Version: Commits on May 15, 2025
-PLUTOSVG_VERSION = v0.0.7
+# Version: Commits on May 18, 2026
+PLUTOSVG_VERSION = v0.0.8
 PLUTOSVG_SITE = https://github.com/sammycage/plutosvg.git
 PLUTOSVG_SITE_METHOD=git
 PLUTOSVG_GIT_SUBMODULES=YES

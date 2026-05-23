@@ -26,7 +26,7 @@ apply_audioconfig() {
         log "err" "Cannot connect to PipeWire."
         return 1
     fi
-    
+
     CURRENT_SINKS=$(pactl list sinks short | awk '{print $2}' | xargs)
     log "info" "Current available sinks: $CURRENT_SINKS"
 
@@ -53,7 +53,7 @@ apply_audioconfig() {
     # Set Volume
     log "info" "Applying volume: ${VOLUME}"
     batocera-audio setSystemVolume "${VOLUME}" >/dev/null 2>&1
-    
+
     return ${EXITCODE}
 }
 
@@ -63,7 +63,7 @@ try_apply_audioconfig() {
 	VOLUME=$3
     N=10
     log "info" "Starting background retry loop..."
-    
+
     while test "${N}" -gt 0; do
         if apply_audioconfig "${DEVICE}" "${PROFILE}" "${VOLUME}"; then
             log "info" "Audio configuration applied successfully."
@@ -80,7 +80,7 @@ start_audioconfig() {
     DEVICE=$(/usr/bin/batocera-settings-get-master audio.device)
     PROFILE=$(/usr/bin/batocera-settings-get-master audio.profile)
     VOLUME=$(/usr/bin/batocera-settings-get-master audio.volume)
-    
+
     test -z "${DEVICE}"  && DEVICE=auto
     test -z "${PROFILE}" && PROFILE=auto
     test -z "${VOLUME}"  && VOLUME=80

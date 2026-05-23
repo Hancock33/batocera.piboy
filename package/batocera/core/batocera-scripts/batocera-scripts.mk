@@ -46,6 +46,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cpucores                      $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-config                        $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cores                         $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cpu-temp                      $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-encode                        $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-es-swissknife                 $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-es-thebezelproject            $(TARGET_DIR)/usr/bin/
@@ -55,7 +56,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-ikemen                        $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-info                          $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-install                       $(TARGET_DIR)/usr/bin/
-	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-keyboard                         $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-keyboard                      $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-kodi                          $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-kodilauncher                  $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-model                         $(TARGET_DIR)/usr/bin/
@@ -84,6 +85,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-vulkan                        $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-wifi                          $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-xtract                        $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/battery_led_status                     $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/bluetooth/batocera-bluetooth           $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/bluetooth/batocera-bluetooth-agent     $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/bluetooth/bluezutils.py                $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/ # any variable ?

@@ -49,7 +49,7 @@ define BATOCERA_ES_SYSTEM_BUILD_PO_FILES
 	# translations
 	mkdir -p $(2)
 	(echo "$(1)/es_external_translations.h"; echo "$(1)/es_keys_translations.h") | \
-		xgettext --language=C --add-comments=TRANSLATION -f - -o \
+		xgettext --language=C --add-comments=TRANSLATORS -f - -o \
 		$(2)/batocera-es-system.pot --no-location --keyword=_
 
 	# remove the pot creation date always changing

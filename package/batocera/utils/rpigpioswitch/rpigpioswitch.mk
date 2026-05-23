@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-RPIGPIOSWITCH_VERSION = 3.3
+RPIGPIOSWITCH_VERSION = 3.4
 RPIGPIOSWITCH_SOURCE =
 
 RPIGPIOSWITCH_SRC = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/rpigpioswitch

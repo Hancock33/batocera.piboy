@@ -6,7 +6,8 @@
 . /etc/profile.d/xdg.sh
 . /etc/profile.d/dbus.sh
 
-TAG="S06audio"
+info_output=$(batocera-info | grep "Model:" | awk -F": " '{print $2}' | head -n 1)
+TAG="S20audio"
 export XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-/var/run}
 
 log() {
@@ -31,7 +32,7 @@ start_pipewire() {
     # Wait loop for real hardware discovery
     N=0
     MAX_RETRIES=50
-    
+
     while [ $N -lt $MAX_RETRIES ]; do
         # Check through audio init stack
         if [ ! -S "$XDG_RUNTIME_DIR/pipewire-0" ]; then
@@ -39,7 +40,7 @@ start_pipewire() {
         elif ! pactl info >/dev/null 2>&1; then
             REASON="Pulse bridge initializing..."
         elif ! sinks=$(pactl list sinks short 2>/dev/null) || ! echo "$sinks" | grep -qE "alsa_output|pci|usb"; then
-            REASON="Hardware discovery in progress (Sinks found: $(echo $sinks | awk '{print $2}' | xargs || echo 'none'))"       
+            REASON="Hardware discovery in progress (Sinks found: $(echo $sinks | awk '{print $2}' | xargs || echo 'none'))"
         else
             log "info" "Hardware sinks discovered: $(echo "$sinks" | grep -E 'alsa|pci|usb' | awk '{print $2}' | xargs)"
             echo "OK"
@@ -70,6 +71,9 @@ case "$1" in
     start)
         alsactl init 2>&1 | logger -t "$TAG" -p "user.info"
         start_pipewire
+        if [ $info_output = "Galileo" ]; then
+            amixer -c 1 sset 'Right DAI Sel Mux' Right > /dev/null 2>&1
+        fi
     ;;
     stop)
         stop_pipewire

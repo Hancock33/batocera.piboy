@@ -3,8 +3,8 @@
 # gamenetworkingsockets
 #
 ################################################################################
-# Version: Commits on May 14, 2026
-GAMENETWORKINGSOCKETS_VERSION = f4787850e351de6d57a2bde81dbc5b921ac2e031
+# Version: Commits on May 23, 2026
+GAMENETWORKINGSOCKETS_VERSION = b88a52c2065824d5425ecbba07881e57e16c0c16
 GAMENETWORKINGSOCKETS_SITE = https://github.com/ValveSoftware/GameNetworkingSockets
 GAMENETWORKINGSOCKETS_SITE_METHOD = git
 GAMENETWORKINGSOCKETS_GIT_SUBMODULES = YES

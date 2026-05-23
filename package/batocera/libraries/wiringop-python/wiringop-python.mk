@@ -27,6 +27,10 @@ WIRINGOP_PYTHON_LICENSE_FILES = LICENSE.txt
 
 WIRINGOP_PYTHON_DEPENDENCIES = host-swig libxcrypt
 
+# Add the flag to ignore implicit function declaration errors
+WIRINGOP_PYTHON_ENV = \
+	CFLAGS="$(TARGET_CFLAGS) -Wno-error=implicit-function-declaration"
+
 define WIRINGOP_PYTHON_BINDINGS
 	cd $(@D) ; \
 	$(HOST_DIR)/bin/python3 generate-bindings.py > $(@D)/bindings.i
