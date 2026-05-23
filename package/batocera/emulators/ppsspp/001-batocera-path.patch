@@ -92,10 +92,10 @@ index 290cf57ce1..82378bdb01 100644
  
  	size_t size;
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index 4a26924960..69373dd17b 100644
+index ab3b410d3d..c0ee369ed9 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -367,7 +367,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -368,7 +368,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -104,7 +104,7 @@ index 4a26924960..69373dd17b 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #endif
  
-@@ -479,7 +479,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -480,7 +480,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
  	else // Just in case
  		config = "./config";
  
