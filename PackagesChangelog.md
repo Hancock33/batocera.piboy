@@ -9,7 +9,9 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|0d736d49d66b1774b862465
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|e5c406d809a6f5a177ecf3699f0ebd3a32f3ddc0|May 24, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|8cc001768cf3bfde32791cb060884638a5a1a35d|May 24, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-05-24|May 24, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260524|May 24, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|15d8d5d0c2a42b4271a3cf292ca1e7aca6502db2|May 24, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260524|May 24, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|59aae11170450c2829861ccc0e1ffe9a29c48169|May 24, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|ad8526c4cfba63ec0aa69b14fc08a6b667417b09|May 24, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|a54c885c1bf6f359314a092e82ed2574665ec821|May 24, 2026
@@ -49,10 +51,8 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|9c7eb94e64b4d99
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|a9af6dba7094359aea3803aff3e88c8040d5f8c3|May 22, 2026
 Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.13.0|May 22, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|v0.4.3-2|May 22, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260522|May 22, 2026
 Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|b9d3e72182c704a96c662bdc08192f436b0e2b76|May 22, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|bd65c64fe04b41f2ecfdb00ecdc6aef1eaf05706|May 22, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260522|May 22, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|b4de121a733a57ce825a7fd7543206ca96af8a18|May 22, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|bb304918f8d9f1d2c1e80ccabfa86806ef70bcfa|May 22, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|6a9a99f78e398e5d679773d9cf97e415e9526dc0|May 22, 2026
