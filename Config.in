@@ -39,7 +39,6 @@ menu "System"
   endmenu
 
   menu "GPU"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/batocera-amd/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/gl4es/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/gtk-layer-shell/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/nvidia/batocera-nvidia/Config.in"
