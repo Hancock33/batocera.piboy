@@ -19,7 +19,7 @@ new file mode 100644
 index 0000000..6e432c1
 --- /dev/null
 +++ b/ucm2/Odin/HiFi.conf
-@@ -0,0 +1,82 @@
+@@ -0,0 +1,81 @@
 +SectionVerb {
 +
 +	EnableSequence [
@@ -67,8 +67,8 @@ index 0000000..6e432c1
 +	EnableSequence [
 +		cset "name='COMP7 Switch' 1"
 +		cset "name='COMP8 Switch' 1"
-+		cset "name='RX7 Digital Volume' 80"
-+		cset "name='RX8 Digital Volume' 80"
++		cset "name='RX7 Digital Volume' 100"
++		cset "name='RX8 Digital Volume' 100"
 +		cset "name='SpkrLeft COMP Switch' 1"
 +		cset "name='SpkrLeft BOOST Switch' 1"
 +		cset "name='SpkrLeft DAC Switch' 1"
@@ -99,7 +99,6 @@ index 0000000..6e432c1
 +	Value {
 +		PlaybackPriority 100
 +		PlaybackPCM "hw:${CardId},0"
-+		PlaybackVolume "RX1 Digital Volume"
 +	}
 +}
 diff --git a/ucm2/Odin/Odin.conf b/ucm2/Odin/Odin.conf
@@ -130,6 +129,13 @@ index 0000000..1a8d968
 @@ -0,0 +1 @@
 +../../Odin/Odin.conf
 \ No newline at end of file
+diff --git a/ucm2/conf.d/sdm845/ayn-AYNOdin-.conf b/ucm2/conf.d/sdm845/ayn-AYNOdin-.conf
+new file mode 120000
+index 0000000..1a8d968
+--- /dev/null
++++ b/ucm2/conf.d/sdm845/ayn-AYNOdin-.conf
+@@ -0,0 +1 @@
++../../Odin/Odin.conf
+\ No newline at end of file
 -- 
 2.34.1
-
