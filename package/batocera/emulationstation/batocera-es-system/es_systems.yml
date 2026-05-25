@@ -4971,20 +4971,21 @@ themehospital:
                         If you want to listen to non-Theme-Hospital music or use an remastered version of original soundtracks, create a folder MP3 inside '/userdata/roms/corsixth/' and add your MP3 files.
                         If you want to change the names of songs ingame, into MP3 folder make a file called names.txt and write the file name on one row, followed by the desired ingame name on the next row.
 
-traider1:
+traider:
   name:                 Tomb Raider
   manufacturer:         Ports
   release:              1996
   hardware:             port
-  extensions:           [croft]
+  extensions:           [trx1, trx2, trx3]
+  theme:                traider1
   platform:             pc
   group:                ports
-  path:                 /userdata/roms/ports/traider1
+  path:                 /userdata/roms/ports/traider
   emulators:
     openlara:
       openlara:         { requireAnyOf: [BR2_PACKAGE_OPENLARA] }
-    tr1x:
-      tr1x:             { requireAnyOf: [BR2_PACKAGE_TRX] }
+    trx:
+      trx:             { requireAnyOf: [BR2_PACKAGE_TRX] }
   comment_en:           |
                         The origianl Tomb Raider files should go in this rom folder from your previous Windows installation.
                         You can safetly remove .exe & .dll files which are not necessary for TR1X to run the game.
@@ -4992,37 +4993,6 @@ traider1:
                         Then create a launcher file with a .croft extension.
                         i.e. Tomb Raider.croft
                         This will allow EmulationStation (ES) to launch the game etc.
-
-                        On first launch (provided you have internet) we will download the music files so don't be alarmed if slow.
-                        Subsequent launches will be faster.
-
-                        To choose the Unfinished expansion pack, enable the associated ES option.
-                        We will download the `Unfinished Expansion pack` if necessary so again the first launch may be slow.
-
-                        For more info: https://wiki.batocera.org/systems:traider1
-  comment_fr:           |
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:traider1
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:traider1
-
-traider2:
-  name:                 Tomb Raider 2
-  manufacturer:         Ports
-  release:              1997
-  hardware:             Port
-  extensions:           [croft]
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/traider2
-  emulators:
-    tr2x:
-      tr2x:             { requireAnyOf: [BR2_PACKAGE_TRX] }
-  comment_en:           |
-                        For more info: https://wiki.batocera.org/systems:traider2
-  comment_fr:           |
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:traider2
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:traider2
 
 twentyfourtyeight:
   name:                 '2048'

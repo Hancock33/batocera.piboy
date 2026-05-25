@@ -25,6 +25,9 @@ scummvm:
   options:
     decorations: none
     hud_support: none
+traider:
+  emulator: openlara
+  core:     openlara
 quake3:
   emulator: vkquake3
   core:     vkquake3
