@@ -13,12 +13,12 @@ shared_features:
 features:
   - padtokeyboard
 custom_features:
-  tr1x-expansion:
+  trx-expansion:
     prompt: EXPANSION PACK
     description: Run the Unfinished expansion pack.
     choices:
       Off (Default): 0
       'On': 1
 systems:
-  - traider2
+  - traider
 

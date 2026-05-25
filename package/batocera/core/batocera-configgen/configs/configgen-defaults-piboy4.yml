@@ -70,6 +70,9 @@ saturn:
 sgb:
   emulator: libretro
   core:     mgba
+traider:
+  emulator: openlara
+  core:     openlara
 gamecube:
   emulator: libretro
   core:     dolphin

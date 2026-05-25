@@ -1,13 +1,8 @@
 diff --git a/src/platform/sdl2/main.cpp b/src/platform/sdl2/main.cpp
-index ce56353..c64d5a7 100644
+index 7ba7b7f..bf8897e 100644
 --- a/src/platform/sdl2/main.cpp
 +++ b/src/platform/sdl2/main.cpp
-@@ -551,11 +551,12 @@ int main(int argc, char **argv) {
- 
-     SDL_ShowCursor(SDL_DISABLE);
- 
-+    strcpy(contentDir,  "/userdata/roms/ports/traider1/");
-+
+@@ -579,8 +579,7 @@ int main(int argc, char **argv) {
      const char *home;
      if (!(home = getenv("HOME")))
          home = getpwuid(getuid())->pw_dir;

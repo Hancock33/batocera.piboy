@@ -768,7 +768,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
 
     # Tomb Raider 1/2
-    select BR2_PACKAGE_TRX                                  if  BR2_PACKAGE_XORG7
+    select BR2_PACKAGE_TRX                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Quake 3
     select BR2_PACKAGE_VKQUAKE3                             if  BR2_PACKAGE_BATOCERA_VULKAN
@@ -1148,7 +1148,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_NUKEM2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Duke Nukem II
     select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                     # One Must Fall 2097
     select BR2_PACKAGE_OPENCLAW                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Captain Claw
-    select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Tomb Raider
+    select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_BCM27XX                                               # Tomb Raider
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Prototype (R-Type Clone)
     select BR2_PACKAGE_UQM                                                                                                                 # Ur-Quan Masters
     select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Raptor Call of the Shadows

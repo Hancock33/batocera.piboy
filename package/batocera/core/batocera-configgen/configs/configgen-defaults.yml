@@ -1128,12 +1128,9 @@ tic80:
 toaplan:
   emulator: libretro
   core:     mame078plus
-traider1:
-  emulator: tr1x
-  core:     tr1x
-traider2:
-  emulator: tr2x
-  core:     tr2x
+traider:
+  emulator: trx
+  core:     trx
 triforce:
   emulator: dolphin
   core:     dolphin
