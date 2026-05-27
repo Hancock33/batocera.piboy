@@ -3,8 +3,8 @@
 # xenia-canary
 #
 ################################################################################
-# Version: Commits on Apr 11, 2026
-XENIA_CANARY_VERSION = 7a5cb96c2eb39b1e1655b7734a17582da8edf37d
+# Version: Commits on May 26, 2026
+XENIA_CANARY_VERSION = 29311ddcdd79c0de0817cb74c31e4f80565bbc24
 XENIA_CANARY_SOURCE = xenia_canary_windows.zip
 XENIA_CANARY_SITE = https://github.com/xenia-canary/xenia-canary/releases/download/"$(shell echo $(XENIA_CANARY_VERSION) | cut -c 1-7)"
 XENIA_CANARY_LICENSE = BSD
