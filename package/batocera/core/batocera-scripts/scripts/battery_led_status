@@ -103,7 +103,7 @@ while true; do
       : # UPPER is already correct from get_upper_state; no override needed unlike Charging/Full
     ;;
     *)
-      # Unknown state — fall back to green
+      # Unknown state - fall back to green
       UPPER="green"
     ;;
   esac

@@ -111,24 +111,24 @@ class cubexxled(object):
             # Enable GPIO power to the LED MCU
             with open(self.gpio_path, 'w') as f:
                 f.write('1')
-            
+
             # Construct the fixed-length 51-byte packet
             payload = bytearray()
             payload.append(1)                 # LED_MODE
             payload.append(int(brightness))   # BRIGHTNESS
-            
+
             # 8 LEDs for the Right Ring
             for _ in range(8):
                 payload.extend([int(r), int(g), int(b)])
-                
+
             # 8 LEDs for the Left Ring
             for _ in range(8):
                 payload.extend([int(r), int(g), int(b)])
-                
+
             # Generate the 8-bit checksum
             checksum = sum(payload) & 0xFF
             payload.append(checksum)
-            
+
             # Write out payload
             with open(self.serial_dev, 'wb') as f:
                 f.write(payload)
@@ -167,7 +167,7 @@ class cubexxled(object):
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
             self.current_color = rgb
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):
@@ -273,7 +273,7 @@ class odinmono(object):
 
         if rgb == "ESCOLOR":
             b_conf = batoconf("led.brightness")
-            if b_conf is None: 
+            if b_conf is None:
                 b_conf = 1
             self._write_hardware(b_conf)
         elif rgb in ["RAINBOW", "PULSE"]:
@@ -382,9 +382,9 @@ class dual_multiled(object):
 
         # Fetch system brightness configuration
         b_conf = batoconf("led.brightness")
-        if b_conf is None: 
+        if b_conf is None:
             b_conf = 255
-        
+
         if rgb == "ESCOLOR":
             r, g, b = batoconf_color()
         elif rgb == "RAINBOW":
@@ -395,7 +395,7 @@ class dual_multiled(object):
             return
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):

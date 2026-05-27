@@ -96,9 +96,9 @@ def temp_check():
     if len(tmpconfig) > 0:
         fanconfig = tmpconfig
     prevblock = -1
-    
+
     try:
-        fan_find = glob.glob("/sys/class/hwmon/hwmon*/pwm1")[0] 
+        fan_find = glob.glob("/sys/class/hwmon/hwmon*/pwm1")[0]
         # Attempt to set pwm1_enable to 1 (manual mode) so speed writes work
         enable_path = fan_find + "_enable"
         if os.path.exists(enable_path):
@@ -141,7 +141,7 @@ if len(sys.argv)>1:
     elif str(sys.argv[1]) == "stop":
         try:
             # Force fan stop and restore auto control if supported
-            fan_find = glob.glob("/sys/class/hwmon/hwmon*/pwm1")[0] 
+            fan_find = glob.glob("/sys/class/hwmon/hwmon*/pwm1")[0]
             with open(fan_find, "w") as fan_file:
                 fan_file.write("0")
             enable_path = fan_find + "_enable"
