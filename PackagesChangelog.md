@@ -411,7 +411,6 @@ Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.4.0|Oct 31, 20
 Emulators|[libretro-yabasanshiro](http://github.com/KMFDManic/Phaenon-Xtreme)|04d978d010e614c66c00d7ebff93fe444f51032e|Oct 29, 2025
 Libraries|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/packages/65/a2/40a3440aed2375371507af668570b68523ee01db9c25c47ce5a05883170e)|1.12.3|Oct 27, 2025
 Controllers|[joycond](http://github.com/DanielOgorchock/joycond)|0df025ac5dc284b1f31172b6b252321ba788c4de|Oct 26, 2025
-Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.2|Oct 21, 2025
 Controllers|[dolphinCrosshairsPack](http://github.com/ProfgLX/Dolphin-Lightguns-Accuracy-Inis)|e5a6dce4b6e12b0659381d56dfabe2d478dd25b1|Oct 21, 2025
 Ports|[stk](https://github.com/supertuxkart/stk-code/releases)|1.5|Oct 20, 2025
 Utils|[wf-recorder](http://github.com/ammen99/wf-recorder)|v0.6.0|Oct 17, 2025

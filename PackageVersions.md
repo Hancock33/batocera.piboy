@@ -496,7 +496,6 @@ Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|61b4163756527dfa32116
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|a434d0c530109f8f5226432c969b630fec871691|May 25, 2026
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0287|Mar 30, 2026
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
-Utils-host|[cbindgen](http://github.com/mozilla/cbindgen)|v0.29.2|Oct 21, 2025
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.1|Jan 01, 2026
 Utils-host|[xa](https://www.floodgap.com/retrotech/xa/dists)|2.4.1|Mar 05, 2024
