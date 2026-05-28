@@ -52,5 +52,11 @@ endef
 
 RPCS3_PRE_PATCH_HOOKS += RPCS3_VER_STRING
 
+define RPCS3_INSTALL_RPCS3_EXIT
+	$(INSTALL) -D -m 0755 $(RPCS3_PKGDIR)/rpcs3-exit $(TARGET_DIR)/usr/bin/rpcs3-exit
+endef
+
+RPCS3_POST_INSTALL_TARGET_HOOKS += RPCS3_INSTALL_RPCS3_EXIT
+
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
