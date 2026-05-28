@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Dec 05, 2025
-UBOOT_RK3326_VERSION = 2492a3e467e332e2350d987234ce6123700b3392
+UBOOT_RK3326_VERSION = 611716febddb824a7203d0d3b5d399608a54ccf6
 UBOOT_RK3326_SITE = https://github.com/ROCKNIX/hardkernel-uboot
 UBOOT_RK3326_SITE_METHOD = git
 UBOOT_RK3326_LICENSE = GPL-2.0+
@@ -29,7 +29,8 @@ UBOOT_RK3326_MAKE_OPTS = \
 	HOSTLDFLAGS="$(HOST_LDFLAGS)"
 
 define UBOOT_RK3326_CONFIGURE_CMDS
-	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3326_MAKE_OPTS) odroidgoa_defconfig
+	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3326_MAKE_OPTS) \
+		odroidgoa_defconfig
 endef
 
 define UBOOT_RK3326_BUILD_CMDS

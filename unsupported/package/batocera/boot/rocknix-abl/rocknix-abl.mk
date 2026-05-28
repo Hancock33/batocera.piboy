@@ -6,6 +6,7 @@
 # Version: Commits on Mar 16, 2026
 ROCKNIX_ABL_VERSION = v1.1
 ROCKNIX_ABL_SITE = $(call github,ROCKNIX,abl,$(ROCKNIX_ABL_VERSION))
+
 ROCKNIX_ABL_DEPENDENCIES = pv
 
 # Handle sm8650 in future

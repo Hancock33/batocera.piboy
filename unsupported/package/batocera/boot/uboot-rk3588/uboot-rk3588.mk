@@ -23,7 +23,8 @@ UBOOT_RK3588_DEPENDENCIES = host-pkgconf host-openssl host-bison host-flex \
 # Extract the full rkbin repository
 define UBOOT_RK3588_EXTRACT_RKBIN
 	mkdir -p $(@D)/rkbin
-	$(TAR) -xf $(UBOOT_RK3588_DL_DIR)/rkbin-$(UBOOT_RK3588_RKBIN_COMMIT).tar.gz -C $(@D)/rkbin --strip-components=1
+	$(TAR) -xf $(UBOOT_RK3588_DL_DIR)/rkbin-$(UBOOT_RK3588_RKBIN_COMMIT).tar.gz \
+		-C $(@D)/rkbin --strip-components=1
 endef
 UBOOT_RK3588_POST_EXTRACT_HOOKS += UBOOT_RK3588_EXTRACT_RKBIN
 

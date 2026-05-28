@@ -36,7 +36,8 @@ UBOOT_RADXA_ZERO_3_MAKE_OPTS = \
 	ROCKCHIP_TPL=$(@D)/rkbin/bin/rk35/rk3566_ddr_1056MHz_v1.23.bin
 
 define UBOOT_RADXA_ZERO_3_CONFIGURE_CMDS
-	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RADXA_ZERO_3_MAKE_OPTS) radxa-zero-3-rk3566_defconfig
+	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RADXA_ZERO_3_MAKE_OPTS) \
+		radxa-zero-3-rk3566_defconfig
 endef
 
 define UBOOT_RADXA_ZERO_3_BUILD_CMDS
@@ -45,7 +46,8 @@ endef
 
 define UBOOT_RADXA_ZERO_3_INSTALL_IMAGES_CMDS
 	mkdir -p $(BINARIES_DIR)/uboot-radxa-zero-3
-	$(INSTALL) -D -m 0644 $(@D)/u-boot-rockchip.bin $(BINARIES_DIR)/uboot-radxa-zero-3/u-boot-rockchip.bin
+	$(INSTALL) -D -m 0644 $(@D)/u-boot-rockchip.bin \
+		$(BINARIES_DIR)/uboot-radxa-zero-3/u-boot-rockchip.bin
 endef
 
 $(eval $(generic-package))
