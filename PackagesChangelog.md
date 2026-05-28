@@ -100,6 +100,7 @@ Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/piers/resource
 Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/piers/resource.language.tr_tr)|11.0.94|May 21, 2026
 Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/piers/resource.language.zh_cn)|11.0.100|May 21, 2026
 Network|[rtw88](http://github.com/lwfinger/rtw88)|a56bcd26e770257612a0803249cbd4095fc6feca|May 21, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260521-proton-slr|May 21, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.143.9257-544|May 21, 2026
 Ports|[openlara](http://github.com/XProger/OpenLara)|5d56c97dcdee21462eecf116509120de9193ab4e|May 21, 2026
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|dab7b3fd66669bc2f5e7c54d45c0a7716b1364a1|May 21, 2026
@@ -109,7 +110,6 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3058a71d72fb9f20254b56420c
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|f8aff9cbd0ab3ee92679f039298d57b55f9d790e|May 20, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|0b8f1e77619534e665216a969434f65eac24a18c|May 20, 2026
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.4|May 20, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260520-proton-slr|May 20, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|9a8e2ff633527412fdc7d6f29606e59d39488c32|May 20, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|666e6c023696d4a45a67dd9ba879dbff7b0f69f3|May 20, 2026
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|b76f27959a32e18aa04c619273152178fd0cf03b|May 20, 2026
