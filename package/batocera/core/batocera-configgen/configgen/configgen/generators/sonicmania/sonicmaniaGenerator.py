@@ -2,10 +2,11 @@ import os
 import shutil
 import configparser
 
+from batocera_common.configparser import CaseSensitiveConfigParser
+
 from ... import Command
 from ...batoceraPaths import ROMS
 from ...controller import generate_sdl_game_controller_config
-from ...utils.configparser import CaseSensitiveConfigParser
 from ..Generator import Generator
 
 class SonicManiaGenerator(Generator):

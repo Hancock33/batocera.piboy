@@ -34,3 +34,4 @@ batocera-mok.key
 /messages.mo
 typescript
 .ruff_cache
+.coverage
