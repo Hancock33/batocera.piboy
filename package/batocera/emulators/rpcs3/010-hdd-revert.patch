@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/System.cpp b/rpcs3/Emu/System.cpp
-index 2b7cd75dd..77c6c6ad2 100644
+index c5b663e74..5e652af95 100644
 --- a/rpcs3/Emu/System.cpp
 +++ b/rpcs3/Emu/System.cpp
 @@ -1436,14 +1436,14 @@ game_boot_result Emulator::Load(const std::string& title_id, bool is_disc_patch,

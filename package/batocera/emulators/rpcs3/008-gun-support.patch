@@ -1,8 +1,8 @@
 diff --git a/rpcs3/Emu/Cell/Modules/cellGem.cpp b/rpcs3/Emu/Cell/Modules/cellGem.cpp
-index 24d0ef60d..ddfd52ac2 100644
+index 277dac40c..64afa9c65 100644
 --- a/rpcs3/Emu/Cell/Modules/cellGem.cpp
 +++ b/rpcs3/Emu/Cell/Modules/cellGem.cpp
-@@ -189,6 +189,7 @@ using gun_thread = named_thread<gun_handler>;
+@@ -156,6 +156,7 @@ using gun_thread = named_thread<gun_handler>;
  cfg_gems g_cfg_gem_real;
  cfg_fake_gems g_cfg_gem_fake;
  cfg_mouse_gems g_cfg_gem_mouse;
@@ -10,7 +10,7 @@ index 24d0ef60d..ddfd52ac2 100644
  
  struct gem_config_data
  {
-@@ -626,9 +627,15 @@ public:
+@@ -595,9 +596,15 @@ public:
  			cellGem.notice("Could not load mouse gem config. Using defaults.");
  		}
  
@@ -26,7 +26,7 @@ index 24d0ef60d..ddfd52ac2 100644
  	}
  };
  
-@@ -2388,6 +2395,26 @@ static void mouse_pos_to_gem_state(u32 mouse_no, gem_config::gem_controller& con
+@@ -2655,6 +2662,26 @@ static void mouse_pos_to_gem_state(u32 mouse_no, gem_config::gem_controller& con
  }
  
  #ifdef HAVE_LIBEVDEV
@@ -53,7 +53,7 @@ index 24d0ef60d..ddfd52ac2 100644
  static bool gun_input_to_pad(u32 gem_no, be_t<u16>& digital_buttons, be_t<u16>& analog_t)
  {
  	digital_buttons = 0;
-@@ -2398,29 +2425,30 @@ static bool gun_input_to_pad(u32 gem_no, be_t<u16>& digital_buttons, be_t<u16>&
+@@ -2665,29 +2692,30 @@ static bool gun_input_to_pad(u32 gem_no, be_t<u16>& digital_buttons, be_t<u16>&
  
  	gun_thread& gun = g_fxo->get<gun_thread>();
  	std::scoped_lock lock(gun.handler.mutex);
@@ -110,10 +110,10 @@ index a428964f9..8ed4c6381 100644
  		udev_enumerate_scan_devices(enumerate);
  		udev_list_entry* devs = udev_enumerate_get_list_entry(enumerate);
 diff --git a/rpcs3/Emu/Io/gem_config.h b/rpcs3/Emu/Io/gem_config.h
-index 9cfca88dd..19cee4576 100644
+index a87e98593..4886e915e 100644
 --- a/rpcs3/Emu/Io/gem_config.h
 +++ b/rpcs3/Emu/Io/gem_config.h
-@@ -98,6 +98,26 @@ struct cfg_gems final : public emulated_pads_config<cfg_gem, 4>
+@@ -208,6 +208,26 @@ struct cfg_gems final : public emulated_pads_config<cfg_gem, 4>
  	cfg_gems() : emulated_pads_config<cfg_gem, 4>("gem_real") {};
  };
  
