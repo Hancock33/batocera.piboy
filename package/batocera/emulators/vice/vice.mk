@@ -3,8 +3,8 @@
 # vice
 #
 ################################################################################
-# Version: Commits on May 28, 2026
-VICE_VERSION = r46126
+# Version: Commits on May 29, 2026
+VICE_VERSION = r46127
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
 VICE_SUBDIR  = vice
