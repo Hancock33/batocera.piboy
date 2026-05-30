@@ -3,8 +3,8 @@
 # uboot-rk3588
 #
 ################################################################################
-# Version: Commits on Oct 06, 2025
-UBOOT_RK3588_VERSION = 2025.10
+# Version: Commits on Apr 06, 2026
+UBOOT_RK3588_VERSION = 2026.04
 UBOOT_RK3588_SITE = https://ftp.denx.de/pub/u-boot
 UBOOT_RK3588_SOURCE = u-boot-$(UBOOT_RK3588_VERSION).tar.bz2
 UBOOT_RK3588_LICENSE = GPL-2.0+
