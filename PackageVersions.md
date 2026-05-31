@@ -200,7 +200,7 @@ Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|bb009b1379ad1
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|736dfc458e63dacb64a08079d5088f4f65a2ab0a|May 29, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|648223372e24773821a2041e0c39728f723badf4|May 20, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|3f465db9c82fc6764cd90c53fc66eb630e0b3710|Apr 20, 2026
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|4a4b228fec8b560f81b8e949730549de4a6fff4f|May 30, 2026
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|56a57aafdca386b279184f05f64d98258d34ae3e|May 30, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|6ec6c73f4e399a0d9b28740cfad9cdf8cab7dfd7|May 29, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|7f4b0325b5895784c104f28f03fab9ee9da61d9e|May 29, 2026
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|45dfd4005434d1199b01fb74a5371ec9bc513164|Apr 20, 2026
@@ -263,7 +263,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|cd17f64cff4eaff187a0702d17520ccb9a760fe3|Apr 11, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|05c5852a70eb4550d0e52343b89dca16ea47106b|May 30, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260321|Mar 21, 2026
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b9d027a76c8dae877cf814808703b1c02d2ae0c1|May 14, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|8c82ce8bed7498f17d2a4e85b239e28593b9c3c7|May 14, 2025
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.306|May 27, 2026
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|4ce43a6a88b46570c7432c7e48e64c879030bd8b|May 29, 2026
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|0e8a69f3096fe00a00a29bd2303db6a7358021ad|May 25, 2026
@@ -279,7 +279,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|cb1f592c8a6cba8c84ceeaab43b
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.135|May 18, 2026
 Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|29311ddcdd79c0de0817cb74c31e4f80565bbc24|May 26, 2026
-Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|b9888085695017fc35da85abeeac0fa76252caaf|May 10, 2026
+Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|95b75cf03894c42d57af66b4abc97dd16bdda735|May 30, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|932b26316b30e27a7de7a21b1f58a5d3ab7dff7b|May 30, 2026

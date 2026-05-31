@@ -4,6 +4,7 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|e8938f06347e4837c
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|ff7bbaea7db5a9a9528c1ef087d3a49a18931b52|May 30, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.372|May 30, 2026
 Emulators|[touchhle](https://github.com/touchHLE/touchHLE.git)|56d10faf01b59512f9885e5d9e335ab09dbae892|May 30, 2026
+Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|95b75cf03894c42d57af66b4abc97dd16bdda735|May 30, 2026
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|932b26316b30e27a7de7a21b1f58a5d3ab7dff7b|May 30, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|64ec28498210cd8ccb583ab6db53692c0f44685b|May 30, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-05-30|May 30, 2026
@@ -20,7 +21,7 @@ Engines|[vpinball](http://github.com/vpinball/vpinball)|2aeab647cea09bf68f00b0c4
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260530|May 30, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|14248463652cc4d396694b87ecacec0af0f74b00|May 30, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|202460d2c19215811ee203b2924f318bd24de138|May 30, 2026
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|4a4b228fec8b560f81b8e949730549de4a6fff4f|May 30, 2026
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|56a57aafdca386b279184f05f64d98258d34ae3e|May 30, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|2ee9824051c4d6c1bec26b66d84f682f8a9bbd28|May 30, 2026
 Emulators|[libretro-yabause](http://github.com/libretro/yabause)|8926b0c6c347f8c5c755911ddb0ac695420ffbf8|May 30, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8a0eea1c64726c753f87432884e1374f0fea5239|May 29, 2026
@@ -164,7 +165,6 @@ Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|release-3.2.2|Ma
 Emulators|[libretro-quicknes](http://github.com/libretro/QuickNES_Core)|a0ec494c417f365c578f3dacadb04383e4a99ade|May 11, 2026
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|bf816b096f1dca55ea805337d7c9e78d6b98d839|May 11, 2026
 Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3|May 10, 2026
-Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|b9888085695017fc35da85abeeac0fa76252caaf|May 10, 2026
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.350.0|May 10, 2026
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|5eeaa4ce4546497b3b87c537a5c194d71c3b44f5|May 10, 2026
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|d142b0bbe0fe64866a962b65f6a8effe72929f87|May 10, 2026
@@ -452,7 +452,7 @@ Utils|[wsdd](http://github.com/christgau/wsdd)|v0.9|Jun 01, 2025
 Libraries|[libdate](http://github.com/HowardHinnant/date)|v3.0.4|May 28, 2025
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|2092db19f7b40854e0427a1b2e39eda9f8d0c3cd|May 28, 2025
 Utils|[touchegg](http://github.com/JoseExposito/touchegg)|2.0.18|May 24, 2025
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b9d027a76c8dae877cf814808703b1c02d2ae0c1|May 14, 2025
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|8c82ce8bed7498f17d2a4e85b239e28593b9c3c7|May 14, 2025
 Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.1-Piers|Apr 18, 2025
 Libraries|[sdl3_ttf](https://github.com/libsdl-org/SDL_ttf)|release-3.2.2|Mar 31, 2025
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.4.0|Mar 30, 2025

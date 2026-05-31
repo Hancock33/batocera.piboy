@@ -3,8 +3,8 @@
 # libretro-brimir
 #
 ################################################################################
-# Version: Commits on May 26, 2026
-LIBRETRO_BRIMIR_VERSION = 65568fc3e62ce9a425f1a39c2b9450f70c0da5d6
+# Version: Commits on May 30, 2026
+LIBRETRO_BRIMIR_VERSION = bfc5428274ac6e58c8114a068407d7cd68c002f8
 LIBRETRO_BRIMIR_SITE = https://github.com/coredds/brimir.git
 LIBRETRO_BRIMIR_SITE_METHOD = git
 LIBRETRO_BRIMIR_GIT_SUBMODULES = yes
