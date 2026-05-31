@@ -11,6 +11,7 @@ BATOCERA_SYSTEM_VERSION = $(BATOCERA_SYSTEM_ID_VERSION)$(BATOCERA_SYSTEM_RELEASE
 BATOCERA_SYSTEM_DATE_TIME = $(shell date "+%d/%m/%Y %H:%M")
 BATOCERA_SYSTEM_DATE = $(shell date "+%d/%m/%y")
 BATOCERA_SYSTEM_DEPENDENCIES = tzdata
+BATOCERA_SYSTEM_INSTALL_IMAGES = YES
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2837),y)
     BATOCERA_SYSTEM_ARCH=bcm2837
@@ -133,10 +134,14 @@ endef
 
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
 define BATOCERA_SYSTEM_INSTALL_WAYLAND
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/wayland.sh \
-	    $(TARGET_DIR)/etc/profile.d/wayland.sh
+	cp $(BATOCERA_SYSTEM_PKGDIR)/wayland.sh $(TARGET_DIR)/etc/profile.d/wayland.sh
 endef
 BATOCERA_SYSTEM_POST_INSTALL_TARGET_HOOKS += BATOCERA_SYSTEM_INSTALL_WAYLAND
 endif
+
+define BATOCERA_SYSTEM_INSTALL_IMAGES_CMDS
+	# batocera-boot.conf
+	$(INSTALL) -D -m 0644 $(BATOCERA_SYSTEM_PKGDIR)/batocera-boot.conf $(BINARIES_DIR)/batocera-boot.conf
+endef
 
 $(eval $(generic-package))

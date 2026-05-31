@@ -3,8 +3,8 @@
 # kodi_resource_language_sv_se
 #
 ################################################################################
-# Version: Commits on May 21, 2026
-KODI_RESOURCE_LANGUAGE_SV_SE_VERSION = 11.0.101
+# Version: Commits on May 30, 2026
+KODI_RESOURCE_LANGUAGE_SV_SE_VERSION = 11.0.102
 KODI_RESOURCE_LANGUAGE_SV_SE_SOURCE = resource.language.sv_se-$(KODI_RESOURCE_LANGUAGE_SV_SE_VERSION).zip
 KODI_RESOURCE_LANGUAGE_SV_SE_SITE = http://mirrors.kodi.tv/addons/piers/resource.language.sv_se
 KODI_RESOURCE_LANGUAGE_SV_SE_PLUGINNAME=resource.language.sv_se

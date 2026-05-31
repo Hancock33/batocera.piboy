@@ -1,0 +1,14 @@
+diff --git a/common_drivers/drivers/armisp-g12b/Makefile b/common_drivers/drivers/armisp-g12b/Makefile
+index caa4482..a07a3cf 100644
+--- a/common_drivers/drivers/armisp-g12b/Makefile
++++ b/common_drivers/drivers/armisp-g12b/Makefile
+@@ -1 +1 @@
+-obj-y +=  subdev/sensor/ subdev/iq/ subdev/lens/ v4l2_dev/
++obj-y += 
+diff --git a/common_drivers/drivers/armisp/Makefile b/common_drivers/drivers/armisp/Makefile
+index caa4482..a07a3cf 100644
+--- a/common_drivers/drivers/armisp/Makefile
++++ b/common_drivers/drivers/armisp/Makefile
+@@ -1 +1 @@
+-obj-y +=  subdev/sensor/ subdev/iq/ subdev/lens/ v4l2_dev/
++obj-y += 

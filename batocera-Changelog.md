@@ -3,9 +3,14 @@
 - ShadPS4 has moved from the no longer maintained ShadPS4 Plus to standard ShadPS4
 ### Hardware
 - Anbernic RG-DS initial support
+- Anbernic RG Vita Pro initial support
+- Anbernic RG40xx-H-v2-panel variant support
+- Anbernic RG40xx-V-v2-panel variant support
 - AYN Odin initial support
 - Mangmi Air X initial support
+- Odroid M2 initial support
 ### Added
+- Anbernic RGCubeXX device LED controller support
 - NanoBoyAdvance as an alternative GBA emulator
 - ES Setting for toggle fast forward
 - Dolphin GameCube Controller type BattlerGC Pro (x-input mode with analog+digital triggers)
@@ -16,7 +21,11 @@
 - New CPU temp helper script - batocera-cpu-temp
 - Raspberry Pi4 now uses LabWC
 - Raspberry Pi4 now uses the latest Mesa3D drivers
+- Khadas VIM4 now uses LabWC
+- Migrated Khadas VIM4 GPU driver to Panfrost with the latest Mesa3D stack
 - Removed Libretro-Puae2021
+- Rockcip RK3588 devices moved to the mainline linux kernel:
+  CoolPi 4B, FriendlyElec CM3588 NAS, GameForce ACE, IndieDroid Nova, Khadas Edge2, Orange Pi 5, Orange Pi 5 Plus, Orange Pi 5B, QuartzPro64, ROCK 5A, ROCK 5B, ROCK 5B Plus, ROCK 5C
 ### Updated
 - CDogs to 2.4.0
 - CLK to 2026-04-30
@@ -49,16 +58,21 @@
 - Tsugaru to v20251206
 - VKQuake to 1.34.1
 ### System
+- Allwinner H700 device kernel updated to 7.0.10
 - Buildroot to 2026.05.x with supporting package & toolchain updates
 - FAudio to 26.05
+- Khadas VIM4 kernel updated to vendor 5.15.y
 - LabWC to 0.9.7
 - Linux Firmware to 20260519
 - Mesa3D to 26.1.0
 - Nvidia Open Production driver to 595.71.05
 - Nvidia 580 Legacy driver to 580.159.03
-- X86_64 / Zen3 kernel update to 7.0.9
+- Qualcomm SM8550 device kernel updated to 7.0.10
+- Rockchip RK3568 device kernel updated to 7.0.10
+- Rockchip RK3588 mainline device kernel updated to 7.0.10
+- X86_64 / Zen3 kernel updated to 7.0.10
 
-# 2026/05/xx - batocera.linux 43.1
+# 2026/05/30 - batocera.linux 43.1
 ### Fixed
 - EmultationStation for missing systems / collections disappearing
 - LR-Dolphin options broken
@@ -70,6 +84,7 @@
 - theXtech missing assets
 - Extensions for Dolphin with Triforce
 - CUDA support for the Nvida 580.x driver for WINE and Lindbergh Loader support
+- rpcs3 game exit (sometimes was blocked)
 
 # 2026/05/08 - batocera.linux 43 - Glasswing
 ### Special Notes

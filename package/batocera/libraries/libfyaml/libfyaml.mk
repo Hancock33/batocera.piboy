@@ -3,8 +3,8 @@
 # libfyaml
 #
 ################################################################################
-# Version: Commits on May 07, 2026
-LIBFYAML_VERSION = v1.0.0-alpha6
+# Version: Commits on May 28, 2026
+LIBFYAML_VERSION = v1.0.0-alpha7
 LIBFYAML_SITE = $(call github,pantoniou,libfyaml,$(LIBFYAML_VERSION))
 LIBFYAML_INSTALL_STAGING = YES
 

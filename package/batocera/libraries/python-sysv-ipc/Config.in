@@ -1,7 +1,0 @@
-config BR2_PACKAGE_PYTHON_SYSV_IPC
-	bool "python-sysv-ipc"
-
-	help
-	  System V IPC primitives for Python
-
-	  https://pypi.org/project/sysv-ipc

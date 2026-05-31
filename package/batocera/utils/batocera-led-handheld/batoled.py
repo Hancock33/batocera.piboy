@@ -4,21 +4,35 @@ PWM + RGB + Multi-LED unified LED driver
 Written for Batocera - @lbrpdx
 Updated for kernel module updates - @dmanlfc
 Updated for multi-led platform - @dmanlfc
+Updated for dual_multiled platform - @dmanlfc
+Updated for AYN Odin (odin_mono) platform - @dmanlfc
+Updated for Anbernic RG CubeXX - @dmanlfc
+Updated for Anbernic RG Vita Pro - @dmanlfc
 """
+import glob
 import os
 import time
-import glob
+
+from batocera_common.paths import BATOCERA_CONF
 
 DEBUG = 0            # set to 1 for debugging
 EFFECT_STEP = 60     # how many colors in the effect
 EFFECT_DURATION = 2  # how many seconds
 PULSE_DURATION  = 1  # how many seconds
-BATOCONFFILE = '/userdata/system/batocera.conf'
 DEFAULT_ES_COLOR = '255 0 165'
 
 ####################
 # Is your handheld supported by this library?
 def batocera_model():
+    # Anbernic RG Vita Pro check
+    if glob.glob('/sys/class/leds/*::joystick-left'):
+        return "rg_vita_pro"
+    # Anbernic RG CubeXX check
+    if os.path.exists('/proc/device-tree/compatible'):
+        with open('/proc/device-tree/compatible', 'r') as f:
+            comp = f.read()
+            if 'rgcubexx' in comp:
+                return "cubexx"
     # Odin 1 Monochrome GPIO layout
     if os.path.exists('/sys/class/leds/left_joystick/brightness'):
         return "odin_mono"
@@ -50,13 +64,13 @@ def batocera_model():
             m = f.readline().strip()
             if m == 'htr3212-pwm':
                 return("pwm")
-    return("Unsupported")
+    return "Unsupported"
 
 
 ####################
 # Get a value from batocera.conf
 def batoconf(key):
-    with open(BATOCONFFILE) as f:
+    with open(BATOCERA_CONF) as f:
         for line in f:
             if not line.startswith(key+"="):
                 continue
@@ -79,6 +93,337 @@ def batoconf_color():
     if DEBUG:
         print (f"batocera.conf said led.colour = {r} {g} {b}")
     return [ r, g, b ]
+
+
+####################
+# Anbernic RG Vita Pro LED Controller
+class rgvitaproled(object):
+    def __init__(self):
+        left_glob = glob.glob('/sys/class/leds/*::joystick-left')
+        right_glob = glob.glob('/sys/class/leds/*::joystick-right')
+        
+        self.left_path = left_glob[0] if left_glob else None
+        self.right_path = right_glob[0] if right_glob else None
+        
+        self.sysfs_path = None
+        if self.left_path:
+            try:
+                # Equivalent to readlink -f on the left joystick device path
+                self.sysfs_path = os.path.realpath(os.path.join(self.left_path, 'device'))
+            except Exception:
+                pass
+                
+        self.max_val = 255
+        self.current_color = "000000"
+        self._init_hardware()
+
+    def _init_hardware(self):
+        if self.sysfs_path:
+            try:
+                # Enable the MCU switch
+                with open(os.path.join(self.sysfs_path, 'led_switch'), 'w') as f:
+                    f.write('1')
+            except Exception:
+                pass
+
+    def _write_hardware(self, brightness, r, g, b):
+        if self.sysfs_path:
+            try:
+                # Force mode 5 (custom/static RGB mode)
+                with open(os.path.join(self.sysfs_path, 'led_mode'), 'w') as f:
+                    f.write('5')
+            except Exception:
+                pass
+
+        # Write parameters to both left and right joystick rings
+        for path in [self.left_path, self.right_path]:
+            if path:
+                try:
+                    with open(os.path.join(path, 'brightness'), 'w') as f:
+                        f.write(str(brightness))
+                except Exception:
+                    pass
+                try:
+                    with open(os.path.join(path, 'multi_intensity'), 'w') as f:
+                        f.write(f"{r} {g} {b}")
+                except Exception:
+                    pass
+
+    def set_color(self, rgb):
+        if rgb in ["OFF", "000000"]:
+            self.turn_off()
+            return
+
+        b_conf = batoconf("led.brightness")
+        if b_conf is None:
+            b_conf = 255
+        else:
+            try:
+                pct = float(b_conf)
+                if pct <= 100:
+                    b_conf = int((pct / 100.0) * 255)
+                else:
+                    b_conf = int(pct)
+            except ValueError:
+                b_conf = 255
+
+        if rgb == "ESCOLOR":
+            r, g, b = batoconf_color()
+            self.current_color = f"{dec_to_hex(r)}{dec_to_hex(g)}{dec_to_hex(b)}"
+        elif rgb == "RAINBOW":
+            self.rainbow_effect()
+            return
+        elif rgb == "PULSE":
+            self.pulse_effect()
+            return
+        else:
+            r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
+            self.current_color = rgb
+        
+        self._write_hardware(b_conf, r, g, b)
+
+    def set_color_dec(self, rgb_str):
+        try:
+            r, g, b = [int(x) for x in rgb_str.split()]
+            b_conf = batoconf("led.brightness") or 255
+            try:
+                pct = float(b_conf)
+                if pct <= 100:
+                    b_conf = int((pct / 100.0) * 255)
+                else:
+                    b_conf = int(pct)
+            except ValueError:
+                b_conf = 255
+            self.current_color = f"{dec_to_hex(r)}{dec_to_hex(g)}{dec_to_hex(b)}"
+            self._write_hardware(b_conf, r, g, b)
+        except Exception:
+            pass
+
+    def get_color(self) -> str:
+        if self.left_path:
+            try:
+                with open(os.path.join(self.left_path, 'multi_intensity'), 'r') as f:
+                    rgb = f.readline().strip()
+                    r, g, b = rgb.split()
+                    return f"{dec_to_hex(r)}{dec_to_hex(g)}{dec_to_hex(b)}"
+            except Exception:
+                pass
+        return self.current_color
+
+    def get_color_dec(self) -> str:
+        if self.left_path:
+            try:
+                with open(os.path.join(self.left_path, 'multi_intensity'), 'r') as f:
+                    return f.readline().strip()
+            except Exception:
+                pass
+        r = hex_to_dec(self.current_color[0:2])
+        g = hex_to_dec(self.current_color[2:4])
+        b = hex_to_dec(self.current_color[4:6])
+        return f"{r} {g} {b}"
+
+    def rainbow_effect(self):
+        # Maps "RAINBOW" to Hardware Mode 3 (rainbowfade) with speed 5
+        if self.sysfs_path:
+            try:
+                with open(os.path.join(self.sysfs_path, 'led_switch'), 'w') as f:
+                    f.write('1')
+                with open(os.path.join(self.sysfs_path, 'led_mode'), 'w') as f:
+                    f.write('3')
+                with open(os.path.join(self.sysfs_path, 'led_speed'), 'w') as f:
+                    f.write('5')
+            except Exception:
+                pass
+
+    def pulse_effect(self):
+        # Maps "PULSE" to Hardware Mode 2 (breathing/pulse)
+        if self.sysfs_path:
+            try:
+                with open(os.path.join(self.sysfs_path, 'led_switch'), 'w') as f:
+                    f.write('1')
+                with open(os.path.join(self.sysfs_path, 'led_mode'), 'w') as f:
+                    f.write('2')
+            except Exception:
+                pass
+
+    def turn_off(self):
+        self.current_color = "000000"
+        if self.sysfs_path:
+            try:
+                with open(os.path.join(self.sysfs_path, 'led_switch'), 'w') as f:
+                    f.write('0')
+            except Exception:
+                pass
+        for path in [self.left_path, self.right_path]:
+            if path:
+                try:
+                    with open(os.path.join(path, 'brightness'), 'w') as f:
+                        f.write('0')
+                except Exception:
+                    pass
+
+    def set_brightness(self, b):
+        self.set_color("ESCOLOR")
+
+    def set_brightness_conf(self):
+        self.set_color("ESCOLOR")
+
+    def get_brightness(self):
+        if self.left_path:
+            try:
+                with open(os.path.join(self.left_path, 'brightness'), 'r') as f:
+                    b = f.readline().strip()
+                return (b, "255")
+            except Exception:
+                pass
+        b_conf = batoconf("led.brightness") or "100"
+        return (str(b_conf), "100")
+
+
+####################
+# Anbernic RG CubeXX LED Controller
+class cubexxled(object):
+    def __init__(self):
+        self.serial_dev = '/dev/ttyS2'
+        self.gpio_path = '/sys/class/leds/rgb:kbd_backlight/brightness'
+        self.max_val = 255
+        self.current_color = "000000"
+        self._init_hardware()
+
+    def _init_hardware(self):
+        try:
+            # Configure serial parameters
+            os.system(f'stty -F {self.serial_dev} 115200 -opost -isig -icanon -echo')
+        except Exception:
+            pass
+
+    def _write_hardware(self, brightness, r, g, b):
+        try:
+            # Enable GPIO power to the LED MCU
+            with open(self.gpio_path, 'w') as f:
+                f.write('1')
+
+            # Construct the fixed-length 51-byte packet
+            payload = bytearray()
+            payload.append(1)                 # LED_MODE
+            payload.append(int(brightness))   # BRIGHTNESS
+
+            # 8 LEDs for the Right Ring
+            for _ in range(8):
+                payload.extend([int(r), int(g), int(b)])
+
+            # 8 LEDs for the Left Ring
+            for _ in range(8):
+                payload.extend([int(r), int(g), int(b)])
+
+            # Generate the 8-bit checksum
+            checksum = sum(payload) & 0xFF
+            payload.append(checksum)
+
+            # Write out payload
+            with open(self.serial_dev, 'wb') as f:
+                f.write(payload)
+        except Exception as e:
+            if DEBUG:
+                print(f"Error writing to CubeXX hardware: {e}")
+
+    def set_color(self, rgb):
+        if rgb in ["OFF", "000000"]:
+            self.turn_off()
+            return
+
+        b_conf = batoconf("led.brightness")
+        if b_conf is None:
+            b_conf = 255
+        else:
+            # Handle config values scaling correctly (percentage to absolute 255 value)
+            try:
+                pct = float(b_conf)
+                if pct <= 100:
+                    b_conf = int((pct / 100.0) * 255)
+                else:
+                    b_conf = int(pct)
+            except ValueError:
+                b_conf = 255
+
+        if rgb == "ESCOLOR":
+            r, g, b = batoconf_color()
+            self.current_color = f"{dec_to_hex(r)}{dec_to_hex(g)}{dec_to_hex(b)}"
+        elif rgb == "RAINBOW":
+            self.rainbow_effect()
+            return
+        elif rgb == "PULSE":
+            self.pulse_effect()
+            return
+        else:
+            r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
+            self.current_color = rgb
+
+        self._write_hardware(b_conf, r, g, b)
+
+    def set_color_dec(self, rgb_str):
+        try:
+            r, g, b = [int(x) for x in rgb_str.split()]
+            b_conf = batoconf("led.brightness") or 255
+            try:
+                pct = float(b_conf)
+                if pct <= 100:
+                    b_conf = int((pct / 100.0) * 255)
+                else:
+                    b_conf = int(pct)
+            except ValueError:
+                b_conf = 255
+            self.current_color = f"{dec_to_hex(r)}{dec_to_hex(g)}{dec_to_hex(b)}"
+            self._write_hardware(b_conf, r, g, b)
+        except Exception:
+            pass
+
+    def get_color(self) -> str:
+        return self.current_color
+
+    def get_color_dec(self) -> str:
+        r = hex_to_dec(self.current_color[0:2])
+        g = hex_to_dec(self.current_color[2:4])
+        b = hex_to_dec(self.current_color[4:6])
+        return f"{r} {g} {b}"
+
+    def rainbow_effect(self):
+        prev = self.get_color()
+        for i in range(0, EFFECT_STEP):
+            o = getRainbowRGB(float(i/EFFECT_STEP))
+            self.set_color(o)
+            time.sleep(EFFECT_DURATION/EFFECT_STEP)
+        self.set_color(prev)
+
+    def pulse_effect(self):
+        prev = self.get_color()
+        for i in range(0, EFFECT_STEP):
+            o = getPulseRGB(i, EFFECT_STEP, prev)
+            self.set_color(o)
+            time.sleep(PULSE_DURATION/EFFECT_STEP)
+        self.set_color(prev)
+
+    def turn_off(self):
+        self.current_color = "000000"
+        # Zero out RGB color registry
+        self._write_hardware(0, 0, 0, 0)
+        # Power down the MCU
+        try:
+            with open(self.gpio_path, 'w') as f:
+                f.write('0')
+        except Exception:
+            pass
+
+    def set_brightness(self, b):
+        self.set_color("ESCOLOR")
+
+    def set_brightness_conf(self):
+        self.set_color("ESCOLOR")
+
+    def get_brightness(self):
+        b_conf = batoconf("led.brightness") or "100"
+        return (str(b_conf), "100")
+
 
 ####################
 # AYN Odin 1 Monochrome (Blue-only GPIO LEDs, Binary On/Off)
@@ -119,10 +464,10 @@ class odinmono(object):
 
         if rgb == "ESCOLOR":
             b_conf = batoconf("led.brightness")
-            if b_conf is None: 
+            if b_conf is None:
                 b_conf = 1
             self._write_hardware(b_conf)
-        elif rgb == "RAINBOW" or rgb == "PULSE":
+        elif rgb in ["RAINBOW", "PULSE"]:
             self.pulse_effect()
         else:
             r = hex_to_dec(rgb[0:2])
@@ -228,9 +573,9 @@ class dual_multiled(object):
 
         # Fetch system brightness configuration
         b_conf = batoconf("led.brightness")
-        if b_conf is None: 
+        if b_conf is None:
             b_conf = 255
-        
+
         if rgb == "ESCOLOR":
             r, g, b = batoconf_color()
         elif rgb == "RAINBOW":
@@ -241,7 +586,7 @@ class dual_multiled(object):
             return
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):
@@ -971,6 +1316,10 @@ class led(object):
             return dual_multiled()
         elif m == "odin_mono":
             return odinmono()
+        elif m == "cubexx":
+            return cubexxled()
+        elif m == "rg_vita_pro":
+            return rgvitaproled()
         else:
             print(m)
 

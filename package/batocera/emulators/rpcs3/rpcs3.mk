@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on May 24, 2026
-RPCS3_VERSION = dd81c92a02b28ecc2a38ba8af358bb1b9220486d
+# Version: Commits on May 31, 2026
+RPCS3_VERSION = 7b540cdb20fe3225b26251d0400300d0ebbd4dc7
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -51,6 +51,12 @@ define RPCS3_VER_STRING
 endef
 
 RPCS3_PRE_PATCH_HOOKS += RPCS3_VER_STRING
+
+define RPCS3_INSTALL_RPCS3_EXIT
+	$(INSTALL) -D -m 0755 $(RPCS3_PKGDIR)/rpcs3-exit $(TARGET_DIR)/usr/bin/rpcs3-exit
+endef
+
+RPCS3_POST_INSTALL_TARGET_HOOKS += RPCS3_INSTALL_RPCS3_EXIT
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
