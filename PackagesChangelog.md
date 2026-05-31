@@ -15,8 +15,10 @@ Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkin
 Libraries|[nghttp3](https://github.com/ngtcp2/nghttp3.git)|v1.16.0|May 31, 2026
 Libraries|[ngtcp2](https://github.com/ngtcp2/ngtcp2.git)|v1.23.0|May 31, 2026
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|a4d0506867e835949799aeeb821e1cf605a061e1|May 31, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260531|May 31, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|b9c0ca1f0444a687a218c93d1c4d3ffa8680311f|May 31, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|84330eafc6f925f89451078f6d0ea9bf3a1b739b|May 31, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260531|May 31, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|0269015b9b4ff953e2ddef7b1f6ff3ed859d1de5|May 31, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|cd509780a6860e1604c25a719f1b3b323b44bcbd|May 31, 2026
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|63ca11c1f0bf0631f5b5172b29610c98520ba8ad|May 31, 2026
@@ -47,13 +49,11 @@ Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/piers/resource
 Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/piers/resource.language.zh_cn)|11.0.101|May 30, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|8565fbc29b57b656c041d6d7976afb77710d6d5a|May 30, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.10|May 30, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260530|May 30, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|f8b241d098e74c668001bb0aba8129b40afe7d03|May 30, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|05c5852a70eb4550d0e52343b89dca16ea47106b|May 30, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|ce2006fad0b7a099c0a89786381f8d954fbf79d5|May 30, 2026
 Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|2e16a8fab249934c96f28c7610b3cfd4e6023bcc|May 30, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|f805245e246f3e552f8f75f5e7e81e42a92e094c|May 30, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260530|May 30, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|a60d0d142df405a7e80c63cf1d82b293196f4701|May 30, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|4867bb2e2b8904965d9ca4f887e690f5714ab8e2|May 30, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|202460d2c19215811ee203b2924f318bd24de138|May 30, 2026
