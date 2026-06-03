@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260603|Jun 03, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260603|Jun 03, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|591e721dc07aefbb8671966480e878a215a223f3|Jun 02, 2026
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.06.02-osfree|Jun 02, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|e23bc84bb9fe4655d111cb5f72c02b2e5160e655|Jun 02, 2026
@@ -62,8 +64,6 @@ Libraries|[nghttp3](https://github.com/ngtcp2/nghttp3.git)|v1.16.0|May 31, 2026
 Libraries|[ngtcp2](https://github.com/ngtcp2/ngtcp2.git)|v1.23.0|May 31, 2026
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.4.10|May 31, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|2a2d7fb3d1273252442e4580a5ea2c6fbe6141f2|May 31, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260531|May 31, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260531|May 31, 2026
 Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|63ca11c1f0bf0631f5b5172b29610c98520ba8ad|May 31, 2026
 Ports|[hlsdk-xash3d-dmc](http://github.com/FWGS/hlsdk-portable)|dcf71d4349241b5929dbbd0dc9ba27f598f6e0c7|May 31, 2026
 Ports|[hlsdk-xash3d-opfor](http://github.com/FWGS/hlsdk-portable)|ef32d9ca874adfb4cb1b26f441cbf23e9e9b744e|May 31, 2026
