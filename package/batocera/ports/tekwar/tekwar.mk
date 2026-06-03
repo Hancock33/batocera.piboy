@@ -3,8 +3,8 @@
 # tekwar
 #
 ################################################################################
-# Version: Commits on Dec 27, 2025
-TEKWAR_VERSION = 20251227
+# Version: Commits on Jun 01, 2026
+TEKWAR_VERSION = 20260603
 TEKWAR_SITE = https://github.com/jonof/jftekwar.git
 TEKWAR_EMULATOR_INFO = etekwar.emulator.yml
 TEKWAR_DEPENDENCIES = sdl2 sdl2_image
