@@ -3,8 +3,8 @@
 # ruffle
 #
 ################################################################################
-# Version: Commits on Jun 03, 2026
-RUFFLE_VERSION = nightly-2026-06-03
+# Version: Commits on Jun 04, 2026
+RUFFLE_VERSION = nightly-2026-06-04
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
 RUFFLE_EMULATOR_INFO = ruffle.emulator.yml
