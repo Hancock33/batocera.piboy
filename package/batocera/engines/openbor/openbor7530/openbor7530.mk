@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 04, 2026
-OPENBOR7530_VERSION = 771121c8b4caf53d4a867219b23ee4dd77bff126
+OPENBOR7530_VERSION = fc09ce55148651f64bd1e18a9f83080cc3bd5312
 OPENBOR7530_SITE = $(call github,DCurrent,openbor,$(OPENBOR7530_VERSION))
 OPENBOR7530_LICENSE = BSD
 OPENBOR7530_LICENSE_FILE = LICENSE

@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 04, 2026
-RTL8852CU_VERSION = f2271089e94d1302f1d9cedfb5cf3dfe1761449f
+RTL8852CU_VERSION = 1530c38e5b1be6d1e96a31cf4f3602a9c23f2465
 RTL8852CU_SITE = $(call github,morrownr,rtl8852cu-20251113,$(RTL8852CU_VERSION))
 RTL8852CU_LICENSE = GPL-2.0
 RTL8852CU_LICENSE_FILES = LICENSE
