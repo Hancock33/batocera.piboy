@@ -3,8 +3,8 @@
 # libretro-opera
 #
 ################################################################################
-# Version: Commits on Jun 03, 2026
-LIBRETRO_OPERA_VERSION = d8cf80d6d2962716efd841e48731a5085f711ff8
+# Version: Commits on Jun 04, 2026
+LIBRETRO_OPERA_VERSION = e0950e2980eb3e1463eb2d7cabda0f81869af85c
 LIBRETRO_OPERA_SITE = $(call github,libretro,opera-libretro,$(LIBRETRO_OPERA_VERSION))
 LIBRETRO_OPERA_LICENSE = LGPL/Non-commercial
 LIBRETRO_OPERA_DEPENDENCIES += retroarch
