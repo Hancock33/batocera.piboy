@@ -14,8 +14,10 @@ Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|17f0894e19d1553e4176276c759915dab44
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|858225c41dc72aa5f9e00ae64d4df9a15816867b|Jun 06, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|99a762b649d34b46afbcc338cee981fc964e9d67|Jun 06, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|1f1be67e643451431a63df7bbf914d3371b27883|Jun 06, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260606|Jun 06, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|2eabb42cb8255367d6f6043661eb8ccc77f49639|Jun 06, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|bdba046fa6766380bc2457532f38e589df769aaf|Jun 06, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260606|Jun 06, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|26a99671a5135b74596bc59a4a3b66fd7e08b697|Jun 06, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|05b949bbd301d89d0ef1a62ae2989645b874d291|Jun 06, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|1b6857751e9d90ae60e4216796afb9fdc03a3460|Jun 06, 2026
@@ -55,8 +57,6 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|114e49b9088cda0
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|8903f297141461854ad421bdf90846ad030bdcc7|Jun 04, 2026
 Network|[rtl8852cu](http://github.com/morrownr/rtl8852cu-20251113)|1530c38e5b1be6d1e96a31cf4f3602a9c23f2465|Jun 04, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|f57cd3051a456b125013c782b46a9cdd3c75a5e0|Jun 04, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260604|Jun 04, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260604|Jun 04, 2026
 Emulators|[libretro-a5200](http://github.com/libretro/a5200)|23c1ea482afb08656ec507e9ce98ed242a20bdfa|Jun 04, 2026
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|af987aaa88284a3184413810eb0dd11b070a20de|Jun 04, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|298f913aeb781908c7f6a568a2ede3940a98738d|Jun 04, 2026
