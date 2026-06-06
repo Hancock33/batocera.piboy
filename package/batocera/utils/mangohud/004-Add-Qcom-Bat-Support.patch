@@ -1,5 +1,5 @@
 diff --git a/src/battery.cpp b/src/battery.cpp
-index e5d311b..d82f3ba 100644
+index 1612bff..49d861d 100644
 --- a/src/battery.cpp
 +++ b/src/battery.cpp
 @@ -13,7 +13,7 @@ void BatteryStats::numBattery() {

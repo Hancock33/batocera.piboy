@@ -31,6 +31,7 @@ libfyaml.mk
 liblc3.mk
 libretro-scummvm.mk
 libsfdo.mk
+mangohud.mk
 mt32emu.mk
 nghttp3.mk
 ngtcp2.mk

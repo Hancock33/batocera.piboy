@@ -1,5 +1,5 @@
 diff --git a/README.md b/README.md
-index 680d347..5c1f00b 100644
+index 660dc9d..b4d3c61 100644
 --- a/README.md
 +++ b/README.md
 @@ -337,6 +337,7 @@ Parameters that are enabled by default have to be explicitly disabled. These (cu
@@ -20,10 +20,10 @@ index 680d347..5c1f00b 100644
  | `log_duration`                     | Set amount of time the logging will run for (in seconds)                              |
  | `log_interval`                     | Change the default log interval in milliseconds. Default is `0`                       |
 diff --git a/data/MangoHud.conf b/data/MangoHud.conf
-index d7d9a9b..95072c9 100644
+index 276c697..ffb02d3 100644
 --- a/data/MangoHud.conf
 +++ b/data/MangoHud.conf
-@@ -224,6 +224,13 @@ frame_timing
+@@ -237,6 +237,13 @@ frame_timing
  ### Display output of Bash command in next column
  # exec=
  
@@ -38,7 +38,7 @@ index d7d9a9b..95072c9 100644
  # media_player
  ## for example spotify
 diff --git a/meson.build b/meson.build
-index 1146a26..becd754 100644
+index 294a8ab..9c0aed7 100644
 --- a/meson.build
 +++ b/meson.build
 @@ -170,6 +170,7 @@ else
@@ -49,7 +49,7 @@ index 1146a26..becd754 100644
  # Commented code can be used if mangohud start using latest SDK Vulkan-Headers
  # Allowing user to build mangohud using system Vulkan-Headers
  # if not dependency('VulkanHeaders').found()
-@@ -192,7 +193,11 @@ vk_enum_to_str = custom_target(
+@@ -195,7 +196,11 @@ vk_enum_to_str = custom_target(
      '--out-d', '@OUTPUT2@',
      '--beta', 'false'
    ],
@@ -133,7 +133,7 @@ index 08111f1..3504db9 100644
  
      SPDLOG_DEBUG("glsl_version: {}", glsl_version);
 diff --git a/src/gl/inject_egl.cpp b/src/gl/inject_egl.cpp
-index 6de08e7..7aad40c 100644
+index 619b5fd..94676d9 100644
 --- a/src/gl/inject_egl.cpp
 +++ b/src/gl/inject_egl.cpp
 @@ -6,6 +6,7 @@
@@ -145,7 +145,7 @@ index 6de08e7..7aad40c 100644
  #include "mesa/util/macros.h"
  #include "mesa/util/os_time.h"
 diff --git a/src/hud_elements.cpp b/src/hud_elements.cpp
-index 3cac5af..94c4f0e 100644
+index 8083591..8da1a36 100644
 --- a/src/hud_elements.cpp
 +++ b/src/hud_elements.cpp
 @@ -27,6 +27,7 @@
@@ -253,7 +253,7 @@ index 3cac5af..94c4f0e 100644
  void HudElements::custom_text(){
      ImguiNextColumnFirstItem();
      ImGui::PushFont(HUDElements.sw_stats->font_secondary);
-@@ -1991,6 +2068,8 @@ void HudElements::sort_elements(const std::pair<std::string, std::string>& optio
+@@ -1993,6 +2070,8 @@ void HudElements::sort_elements(const std::pair<std::string, std::string>& optio
          {"winesync", {winesync}},
          {"present_mode", {present_mode}},
          {"network", {network}},
@@ -263,10 +263,10 @@ index 3cac5af..94c4f0e 100644
          {"fex_stats", {fex_stats}},
          {"ftrace", {ftrace}},
 diff --git a/src/hud_elements.h b/src/hud_elements.h
-index 70deb51..bfd9954 100644
+index 405e0ba..98646c4 100644
 --- a/src/hud_elements.h
 +++ b/src/hud_elements.h
-@@ -19,8 +19,27 @@ struct Function {
+@@ -20,8 +20,27 @@ struct Function {
      std::string value;
  };
  
@@ -294,7 +294,7 @@ index 70deb51..bfd9954 100644
          struct swapchain_stats *sw_stats;
          std::shared_ptr<overlay_params> params;
          struct exec_entry {
-@@ -94,6 +113,8 @@ class HudElements{
+@@ -95,6 +114,8 @@ class HudElements{
          static void show_fps_limit();
          static void custom_text_center();
          static void custom_text();
@@ -384,7 +384,7 @@ index 0000000..c12ca07
 +
 +bool GL_LoadTextureFromFile(const char* filename, GLuint* out_texture, int* out_width, int* out_height, int maxwidth);
 diff --git a/src/meson.build b/src/meson.build
-index e500c0c..18c8faf 100644
+index 9534a18..cf2a5cd 100644
 --- a/src/meson.build
 +++ b/src/meson.build
 @@ -109,6 +109,7 @@ if is_unixy
@@ -419,7 +419,7 @@ index e500c0c..18c8faf 100644
      ],
    gnu_symbol_visibility : 'hidden',
    dependencies : [
-@@ -216,6 +220,7 @@ mangohud_static_lib = static_library(
+@@ -217,6 +221,7 @@ mangohud_static_lib = static_library(
    install_dir : libdir_mangohud,
    install : false
  )
@@ -439,10 +439,10 @@ index dc6bb00..313a888 100644
 +    fColor = In.Color * texture(sTexture, In.UV.st);
  }
 diff --git a/src/overlay.h b/src/overlay.h
-index cad97c2..442623a 100644
+index a5993aa..403a828 100644
 --- a/src/overlay.h
 +++ b/src/overlay.h
-@@ -173,6 +173,7 @@ extern void control_client_check(int control, int& control_client, const std::st
+@@ -169,6 +169,7 @@ extern void control_client_check(int control, int& control_client, const std::st
  extern void process_control_socket(int& control_client, overlay_params &params);
  extern void control_send(int control_client, const char *cmd, unsigned cmdlen, const char *param, unsigned paramlen);
  extern int global_control_client;
@@ -451,10 +451,10 @@ index cad97c2..442623a 100644
  void render_mpris_metadata(const overlay_params& params, mutexed_metadata& meta, uint64_t frame_timing);
  #endif
 diff --git a/src/overlay_params.cpp b/src/overlay_params.cpp
-index ab7e37d..3232af7 100644
+index b10a0ce..0d1471f 100644
 --- a/src/overlay_params.cpp
 +++ b/src/overlay_params.cpp
-@@ -601,6 +601,9 @@ parse_ftrace(const char *str) {
+@@ -634,6 +634,9 @@ parse_ftrace(const char *str) {
  #define parse_blacklist(s) parse_str_tokenize(s)
  #define parse_custom_text_center(s) parse_str(s)
  #define parse_custom_text(s) parse_str(s)
@@ -464,7 +464,7 @@ index ab7e37d..3232af7 100644
  #define parse_fps_value(s) parse_load_value(s)
  #define parse_fps_color(s) parse_load_color(s)
  #define parse_battery_color(s) parse_color(s)
-@@ -898,6 +901,7 @@ static void set_param_defaults(struct overlay_params *params){
+@@ -931,6 +934,7 @@ static void set_param_defaults(struct overlay_params *params){
     params->table_columns = 3;
     params->text_outline_color = 0x000000;
     params->text_outline_thickness = 1.5;
@@ -473,10 +473,10 @@ index ab7e37d..3232af7 100644
  
  static std::string verify_pci_dev(std::string pci_dev) {
 diff --git a/src/overlay_params.h b/src/overlay_params.h
-index e1c2b40..c60fa4e 100644
+index 0ff802c..ef6c027 100644
 --- a/src/overlay_params.h
 +++ b/src/overlay_params.h
-@@ -85,6 +85,9 @@ struct Tracepoint;
+@@ -87,6 +87,9 @@ struct Tracepoint;
     OVERLAY_PARAM_BOOL(fps_color_change)              \
     OVERLAY_PARAM_BOOL(custom_text_center)            \
     OVERLAY_PARAM_BOOL(custom_text)                   \
@@ -486,7 +486,7 @@ index e1c2b40..c60fa4e 100644
     OVERLAY_PARAM_BOOL(exec)                          \
     OVERLAY_PARAM_BOOL(vkbasalt)                      \
     OVERLAY_PARAM_BOOL(gamemode)                      \
-@@ -345,6 +348,9 @@ struct overlay_params {
+@@ -350,6 +353,9 @@ struct overlay_params {
     uint32_t font_glyph_ranges;
     std::string custom_text_center;
     std::string custom_text;
@@ -18863,10 +18863,10 @@ index 0000000..f48c509
 +------------------------------------------------------------------------------
 +*/
 diff --git a/src/vulkan.cpp b/src/vulkan.cpp
-index ffadf25..91a7666 100644
+index 7030d29..0918caa 100644
 --- a/src/vulkan.cpp
 +++ b/src/vulkan.cpp
-@@ -63,6 +63,11 @@
+@@ -65,6 +65,11 @@
  #include "imgui_utils.h"
  #include "fps_limiter.h"
  
@@ -18878,7 +18878,7 @@ index ffadf25..91a7666 100644
  using namespace std;
  
  float offset_x, offset_y, hudSpacing;
-@@ -75,6 +80,22 @@ namespace MangoHud { namespace GL {
+@@ -77,6 +82,22 @@ namespace MangoHud { namespace GL {
  }}
  #endif
  
@@ -18901,7 +18901,7 @@ index ffadf25..91a7666 100644
  /* Mapped from VkInstace/VkPhysicalDevice */
  struct instance_data {
     struct vk_instance_dispatch_table vtable;
-@@ -172,12 +193,17 @@ struct swapchain_data {
+@@ -174,12 +195,17 @@ struct swapchain_data {
     std::vector<overlay_draw *> draws; /* vector of struct overlay_draw */
  
     bool font_uploaded;
@@ -18922,7 +18922,7 @@ index ffadf25..91a7666 100644
     struct imgui_contexts imgui_contexts;
  
     ImFontAtlas* font_atlas;
-@@ -228,6 +254,7 @@ static void unmap_object(uint64_t obj)
+@@ -245,6 +271,7 @@ vk_find_next_struct(void **chain, VkStructureType type) {
  /**/
  
  static void shutdown_swapchain_font(struct swapchain_data*);
@@ -18930,7 +18930,7 @@ index ffadf25..91a7666 100644
  
  static VkLayerInstanceCreateInfo *get_instance_chain_info(const VkInstanceCreateInfo *pCreateInfo,
                                                            VkLayerFunction func)
-@@ -643,12 +670,13 @@ static void create_image(struct swapchain_data *data,
+@@ -660,12 +687,13 @@ static void create_image(struct swapchain_data *data,
                          uint32_t width,
                          uint32_t height,
                          VkFormat format,
@@ -18947,7 +18947,7 @@ index ffadf25..91a7666 100644
     VkImageCreateInfo image_info = {};
     image_info.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;
     image_info.imageType = VK_IMAGE_TYPE_2D;
-@@ -664,10 +692,10 @@ static void create_image(struct swapchain_data *data,
+@@ -681,10 +709,10 @@ static void create_image(struct swapchain_data *data,
     image_info.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
     image_info.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
     VK_CHECK(device_data->vtable.CreateImage(device_data->device, &image_info,
@@ -18960,7 +18960,7 @@ index ffadf25..91a7666 100644
     VkMemoryAllocateInfo image_alloc_info = {};
     image_alloc_info.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
     image_alloc_info.allocationSize = font_image_req.size;
-@@ -675,33 +703,31 @@ static void create_image(struct swapchain_data *data,
+@@ -692,33 +720,31 @@ static void create_image(struct swapchain_data *data,
                                                       VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,
                                                       font_image_req.memoryTypeBits);
     VK_CHECK(device_data->vtable.AllocateMemory(device_data->device, &image_alloc_info,
@@ -19001,7 +19001,7 @@ index ffadf25..91a7666 100644
  {
     struct device_data *device_data = data->device;
  
-@@ -716,10 +742,71 @@ static VkDescriptorSet create_image_with_desc(struct swapchain_data *data,
+@@ -733,10 +759,71 @@ static VkDescriptorSet create_image_with_desc(struct swapchain_data *data,
                                                         &alloc_info,
                                                         &descriptor_set));
  
@@ -19074,7 +19074,7 @@ index ffadf25..91a7666 100644
  static void check_fonts(struct swapchain_data* data)
  {
     struct device_data *device_data = data->device;
-@@ -733,16 +820,16 @@ static void check_fonts(struct swapchain_data* data)
+@@ -750,16 +837,16 @@ static void check_fonts(struct swapchain_data* data)
        create_fonts(data->font_atlas, instance_data->params, data->sw_stats.font_small, data->sw_stats.font_text, data->sw_stats.font_secondary);
        unsigned char* pixels;
        int width, height;
@@ -19094,7 +19094,7 @@ index ffadf25..91a7666 100644
  
        data->font_atlas->SetTexID((ImTextureID)desc_set);
        data->font_uploaded = false;
-@@ -764,9 +851,38 @@ static void ensure_swapchain_fonts(struct swapchain_data *data,
+@@ -781,9 +868,38 @@ static void ensure_swapchain_fonts(struct swapchain_data *data,
     data->font_uploaded = true;
     unsigned char* pixels;
     int width, height;
@@ -19136,7 +19136,7 @@ index ffadf25..91a7666 100644
  }
  
  static void CreateOrResizeBuffer(struct device_data *data,
-@@ -842,6 +958,36 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -859,6 +975,36 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
  
     ensure_swapchain_fonts(data, draw->command_buffer);
  
@@ -19173,7 +19173,7 @@ index ffadf25..91a7666 100644
     /* Bounce the image to display back to color attachment layout for
      * rendering on top of it.
      */
-@@ -918,7 +1064,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -935,7 +1081,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
     /* Bind pipeline and descriptor sets */
     device_data->vtable.CmdBindPipeline(draw->command_buffer, VK_PIPELINE_BIND_POINT_GRAPHICS, data->pipeline);
  
@@ -19182,7 +19182,7 @@ index ffadf25..91a7666 100644
     VkDescriptorSet desc_set[1] = {
        //data->descriptor_set
        reinterpret_cast<VkDescriptorSet>(data->font_atlas->TexID)
-@@ -981,7 +1127,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
+@@ -998,7 +1144,7 @@ static struct overlay_draw *render_swapchain_display(struct swapchain_data *data
           scissor.extent.width = (uint32_t)(pcmd->ClipRect.z - pcmd->ClipRect.x);
           scissor.extent.height = (uint32_t)(pcmd->ClipRect.w - pcmd->ClipRect.y + 1); // FIXME: Why +1 here?
           device_data->vtable.CmdSetScissor(draw->command_buffer, 0, 1, &scissor);
@@ -19191,7 +19191,7 @@ index ffadf25..91a7666 100644
           VkDescriptorSet desc_set[1] = { (VkDescriptorSet)pcmd->TextureId };
           device_data->vtable.CmdBindDescriptorSets(draw->command_buffer, VK_PIPELINE_BIND_POINT_GRAPHICS,
                                                     data->pipeline_layout, 0, 1, desc_set, 0, NULL);
-@@ -1118,12 +1264,13 @@ static void setup_swapchain_data_pipeline(struct swapchain_data *data)
+@@ -1135,12 +1281,13 @@ static void setup_swapchain_data_pipeline(struct swapchain_data *data)
     /* Descriptor pool */
     VkDescriptorPoolSize sampler_pool_size = {};
     sampler_pool_size.type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
@@ -19207,7 +19207,7 @@ index ffadf25..91a7666 100644
     VK_CHECK(device_data->vtable.CreateDescriptorPool(device_data->device,
                                                       &desc_pool_info,
                                                       NULL, &data->descriptor_pool));
-@@ -1467,18 +1614,37 @@ static void setup_swapchain_data(struct swapchain_data *data,
+@@ -1484,18 +1631,37 @@ static void setup_swapchain_data(struct swapchain_data *data,
     make_imgui_contexts_current(saved_imgui_contexts);
  }
  
@@ -19250,7 +19250,7 @@ index ffadf25..91a7666 100644
  static void shutdown_swapchain_data(struct swapchain_data *data)
  {
     struct device_data *device_data = data->device;
-@@ -1501,6 +1667,9 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
+@@ -1518,6 +1684,9 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
        device_data->vtable.DestroyFramebuffer(device_data->device, data->framebuffers[i], NULL);
     }
  
@@ -19260,7 +19260,7 @@ index ffadf25..91a7666 100644
     device_data->vtable.DestroyRenderPass(device_data->device, data->render_pass, NULL);
  
     device_data->vtable.DestroyCommandPool(device_data->device, data->command_pool, NULL);
-@@ -1514,7 +1683,6 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
+@@ -1531,7 +1700,6 @@ static void shutdown_swapchain_data(struct swapchain_data *data)
                                                    data->descriptor_layout, NULL);
  
     device_data->vtable.DestroySampler(device_data->device, data->font_sampler, NULL);
