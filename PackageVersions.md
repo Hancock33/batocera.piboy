@@ -76,7 +76,7 @@ Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|9c7b0a395db460524dad26c7b57f266e4acd5242|May 21, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.2|Mar 24, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.1.6|May 09, 2026
-Emulators|[applewin](https://github.com/audetto/AppleWin.git)|39d7589f1144070ff70e5e204ae92b61913927cc|May 25, 2026
+Emulators|[applewin](https://github.com/audetto/AppleWin.git)|2ebaf01ebd7d84ea0bc6ac2bb8884c8fe068d325|Jun 06, 2026
 Emulators|[ares](http://github.com/ares-emulator/ares)|v148|May 28, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|379649dbceaffc414311fb308d8427461683e640|Jun 05, 2026
 Emulators|[batocera-bezel](http://github.com/batocera-linux/batocera-bezel)|77a3239f3f0682fcf9e6050f07b40677395e5db7|Feb 18, 2026
@@ -190,7 +190,7 @@ Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|e03d3be88f79
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|e0950e2980eb3e1463eb2d7cabda0f81869af85c|Jun 04, 2026
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|60e12fe9ee07f024b5a0d569ddf6ad8efbffcd4b|Mar 31, 2026
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|944b9892f991c3aacb15436c91511543f8e665bf|Feb 24, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|b86280db7f1d17536612e0b1cc9c2ec8e0cb0548|Jun 06, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|05b949bbd301d89d0ef1a62ae2989645b874d291|Jun 06, 2026
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|520e0a37ac0e9cf8b0536fe83fda3aacc9ba73bb|Apr 20, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|eebb95c060f82df45a5615be676c3fa4b7bb7ae0|May 09, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|c88070df8e0e84106ecc4b6394860a413a7bc046|Apr 19, 2026
@@ -198,8 +198,8 @@ Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|57bf25430c94239964e3
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|f0d4a0118a9733a1f10bce5a4ac772c474f9300d|Apr 02, 2026
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|39e0d8c6daf4b1b1302eeecfee8309570aeb6a82|Apr 20, 2026
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|bb009b1379ad15f1514f20ca7cbf710b4af42b3e|Apr 20, 2026
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|ecc35b904a24a570201e4b6cf3f12473a97ed3ec|Jun 05, 2026
-Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|037ccde3b11d0511fda38b489f43bf02f486cb6c|Jun 06, 2026
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|1b6857751e9d90ae60e4216796afb9fdc03a3460|Jun 06, 2026
+Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|37775c45f4a50a95b3019f596814e1fb1a20d10a|Jun 06, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|363b6dfbd3e240762e022c2b4897b4fe55722be3|Jun 04, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|65e8afb9e9ca0a3f3af32d9b35d7d8537cd3cbc1|Jun 01, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|2b0ed42fe565fb997a0627aaa8f44e0948b527f8|Jun 03, 2026
@@ -259,7 +259,7 @@ Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|8d8c45e445b6d5112ba69f6c96f939a926689b56|Jun 06, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.393|Jun 04, 2026
 Emulators|[play](https://github.com/jpd002/Play-.git)|3a904f67694ce6ce8f88fd97ebaf30240bd87dce|Jun 05, 2026
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|ecc35b904a24a570201e4b6cf3f12473a97ed3ec|Jun 05, 2026
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|1b6857751e9d90ae60e4216796afb9fdc03a3460|Jun 06, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|cd17f64cff4eaff187a0702d17520ccb9a760fe3|Apr 11, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|bdba046fa6766380bc2457532f38e589df769aaf|Jun 06, 2026
@@ -314,7 +314,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1f2e7d388cbc73287191a6b2b2464f1f8f74818c|May 02, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|45caae27ce6069772894713ebb0bbc5145628d3d|Dec 18, 2025
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|9b79d496f0e3afcdf43bc5f97f59834114447b63|May 04, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|4c302cfdffacc4accb37f19d136b805aa470267c|Jun 05, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|3f8361f05573c079a72772c38c912cc9fbb73d03|Jun 03, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260519|May 19, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p4|Oct 10, 2022
@@ -558,7 +558,7 @@ Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|c3bb98945be0c6cb4ef54e9bb
 Utils|[l3afpad](http://github.com/stevenhoneyman/l3afpad)|16f22222116b78b7f6a6fd83289937cdaabed624|Feb 14, 2022
 Utils|[labwc](http://github.com/labwc/labwc)|0.20.0|May 25, 2026
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.7.4.1|May 06, 2026
-Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|92ed51ff2f1b824d65823a811eed2620dc78f956|Jun 05, 2026
+Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|v0.8.4|May 27, 2026
 Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.42.0|May 08, 2026
 Utils|[ntfs-plus](http://github.com/ntfsprogs-plus/ntfsprogs-plus)|1.0.0|Oct 16, 2025
 Utils|[od-commander](http://github.com/jwty/tv-commander)|1ca465f7cd5e080d13a8906fdfc45eb543ea255c|Mar 24, 2026
