@@ -90,7 +90,7 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|fc88
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.06.02-osfree|Jun 02, 2026
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/liberodark/drastic/releases)|1.1|Feb 26, 2021
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|0b700d1b812d2e6bad6de477980700a8eae83415|Jun 06, 2026
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|c660f85320ef78d1cdab9b660e25b7f0f5146eb8|Jun 06, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|5ba3ae32dc040ac813c93512b0d90a22c4ec278a|Jun 06, 2026
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|d2e7abb191bf41ffa1413100154590e0930aebfa|Feb 28, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|751295151eed3cae619b14bcee49bb07f4fdb59c|Jun 05, 2026
@@ -190,7 +190,7 @@ Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|e03d3be88f79
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|e0950e2980eb3e1463eb2d7cabda0f81869af85c|Jun 04, 2026
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|60e12fe9ee07f024b5a0d569ddf6ad8efbffcd4b|Mar 31, 2026
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|944b9892f991c3aacb15436c91511543f8e665bf|Feb 24, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|bec8bd830566f2d9fcc04d68291c2fe85f67f99d|Jun 06, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|b86280db7f1d17536612e0b1cc9c2ec8e0cb0548|Jun 06, 2026
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|520e0a37ac0e9cf8b0536fe83fda3aacc9ba73bb|Apr 20, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|eebb95c060f82df45a5615be676c3fa4b7bb7ae0|May 09, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|c88070df8e0e84106ecc4b6394860a413a7bc046|Apr 19, 2026
@@ -199,7 +199,7 @@ Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|f0d4a0
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|39e0d8c6daf4b1b1302eeecfee8309570aeb6a82|Apr 20, 2026
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|bb009b1379ad15f1514f20ca7cbf710b4af42b3e|Apr 20, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|ecc35b904a24a570201e4b6cf3f12473a97ed3ec|Jun 05, 2026
-Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|6767e41d275c52a9309680966f8d759f437f5c5d|Jun 06, 2026
+Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|037ccde3b11d0511fda38b489f43bf02f486cb6c|Jun 06, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|363b6dfbd3e240762e022c2b4897b4fe55722be3|Jun 04, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|65e8afb9e9ca0a3f3af32d9b35d7d8537cd3cbc1|Jun 01, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|2b0ed42fe565fb997a0627aaa8f44e0948b527f8|Jun 03, 2026
@@ -279,7 +279,7 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46128|May 30, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|cb1f592c8a6cba8c84ceeaab43bdef286aface14|May 13, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.135|May 18, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|99fd19d02598e45121a665053c56fa46b2e06f09|Jun 05, 2026
+Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|49c700b9c56b5f5cde8f80de066a9aab10613afe|Jun 04, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|07021f019cf55105bc26c0474e0b0835808353e2|Jun 03, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
@@ -328,7 +328,7 @@ Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|114e49b9088cda026b35e5d44f7248ddedc309b2|Jun 04, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|8903f297141461854ad421bdf90846ad030bdcc7|Jun 04, 2026
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2025.12.2|Jan 27, 2026
-Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|e6bb082b495820b308d34b9e1338bc87bfa8e2fa|May 23, 2026
+Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|17f0894e19d1553e4176276c759915dab44c08e2|Jun 06, 2026
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.3.0|May 01, 2026
 Gpu|[gtk-layer-shell](http://github.com/wmww/gtk-layer-shell)|v0.10.1|Apr 04, 2026
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|ad4c28932c3d07c75fc41dd4a3333f9013a25e7f|Jun 11, 2021
@@ -370,7 +370,7 @@ Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/piers/resource
 Kodi|[kodi-audiodecoder-openmpt](http://github.com/xbmc/audiodecoder.openmpt)|22.0.3-Piers|Feb 23, 2025
 Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.1-Piers|Apr 18, 2025
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.1.2|Jan 28, 2026
-Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20250826|Sept 14, 2025
+Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20260415|Apr 15, 2026
 Libraries|[cpp-ipc](http://github.com/mutouyun/cpp-ipc)|v1.4.1|Dec 12, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.27.0-rc1|Jun 02, 2026
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
@@ -534,7 +534,7 @@ Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|821d7a535fcfaff24f3a1d754
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|87965549b1415d0dbc8436df7f156666d6c30fb9|Jun 04, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|659a8b8df67ab4534e10669548be437adbe9dae5|Jun 04, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|8c8c3117a00d896b473b4c24d4af1f226ff0ddcb|Jun 05, 2026
-Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|26ab6dcc5d0d5e3c5f84cd2610dfbb10dc6aaf0a|May 29, 2026
+Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|1f1be67e643451431a63df7bbf914d3371b27883|Jun 06, 2026
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0288|May 28, 2026
 Utils-host|[aml-dtbtools](http://github.com/Wilhansen/aml-dtbtools)|b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d|Jul 31, 2017
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A
