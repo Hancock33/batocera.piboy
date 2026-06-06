@@ -1,8 +1,8 @@
 diff --git a/Source/Core/Core/Config/GraphicsSettings.cpp b/Source/Core/Core/Config/GraphicsSettings.cpp
-index b401df3da9..562a5e5e57 100644
+index fb7f6a872b..e26696037a 100644
 --- a/Source/Core/Core/Config/GraphicsSettings.cpp
 +++ b/Source/Core/Core/Config/GraphicsSettings.cpp
-@@ -101,7 +101,7 @@ const Info<bool> GFX_SHADER_CACHE{{System::GFX, "Settings", "ShaderCache"}, true
+@@ -108,7 +108,7 @@ const Info<bool> GFX_SHADER_CACHE{{System::GFX, "Settings", "ShaderCache"}, true
  const Info<bool> GFX_WAIT_FOR_SHADERS_BEFORE_STARTING{
      {System::GFX, "Settings", "WaitForShadersBeforeStarting"}, false};
  const Info<ShaderCompilationMode> GFX_SHADER_COMPILATION_MODE{
@@ -11,7 +11,7 @@ index b401df3da9..562a5e5e57 100644
  const Info<int> GFX_SHADER_COMPILER_THREADS{{System::GFX, "Settings", "ShaderCompilerThreads"}, 1};
  const Info<int> GFX_SHADER_PRECOMPILER_THREADS{
      {System::GFX, "Settings", "ShaderPrecompilerThreads"}, -1};
-@@ -182,11 +182,11 @@ const Info<float> GFX_STEREO_DEPTH_PERCENTAGE{{System::GFX, "Stereoscopy", "Ster
+@@ -189,11 +189,11 @@ const Info<float> GFX_STEREO_DEPTH_PERCENTAGE{{System::GFX, "Stereoscopy", "Ster
  
  // Graphics.Hacks
  
@@ -26,7 +26,7 @@ index b401df3da9..562a5e5e57 100644
  const Info<bool> GFX_HACK_SKIP_EFB_COPY_TO_RAM{{System::GFX, "Hacks", "EFBToTextureEnable"}, true};
  const Info<bool> GFX_HACK_SKIP_XFB_COPY_TO_RAM{{System::GFX, "Hacks", "XFBToTextureEnable"}, true};
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index ba54a3e9ec..3e36076ec1 100644
+index f0cc8511b7..c8d7f35fd2 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
 @@ -60,7 +60,7 @@ const Info<bool> MAIN_SMOOTH_EARLY_PRESENTATION{{System::Main, "Core", "SmoothEa

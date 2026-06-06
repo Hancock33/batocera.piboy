@@ -1,8 +1,8 @@
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 345e83c692..700491b211 100644
+index f49699020d..f89a0684bc 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -1289,8 +1289,16 @@ void MainWindow::ShowRenderWidget()
+@@ -1290,8 +1290,16 @@ void MainWindow::ShowRenderWidget()
      // Otherwise, just show it.
      m_rendering_to_main = false;
  

@@ -1,5 +1,5 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index f0cd4b935c..73fbf3c040 100644
+index d09955e603..dbee82ca4c 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
 @@ -348,6 +348,8 @@ const Info<std::string> MAIN_SKYLANDERS_PATH{{System::Main, "General", "Skylande
@@ -12,7 +12,7 @@ index f0cd4b935c..73fbf3c040 100644
  {
    return Config::Info<std::string>{{Config::System::Main, "General", fmt::format("ISOPath{}", idx)},
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 109d64c36e..9b0567de82 100644
+index 5ae26e66a4..c87001c7eb 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
 @@ -218,6 +218,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
@@ -22,13 +22,13 @@ index 109d64c36e..9b0567de82 100644
 +extern const Info<bool> MAIN_AUTO_INCREMENT_SLOT_COUNT;
 +
  std::vector<std::string> GetIsoPaths();
- void SetIsoPaths(const std::vector<std::string>& paths);
+ void SetIsoPaths(std::span<const std::string> paths);
  
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 700491b211..90ae5b8a34 100644
+index f89a0684bc..159f6912cf 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -1548,6 +1548,10 @@ void MainWindow::StateLoadSlot()
+@@ -1549,6 +1549,10 @@ void MainWindow::StateLoadSlot()
  
  void MainWindow::StateSaveSlot()
  {

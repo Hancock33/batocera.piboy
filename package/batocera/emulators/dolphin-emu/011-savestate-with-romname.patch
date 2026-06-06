@@ -85,7 +85,7 @@ index 7dff8e13d5..14d8f2ee00 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index a234b4f919..777d0d7039 100644
+index 5724240ffd..c36c3eacd6 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
 @@ -301,11 +301,10 @@ static std::string SystemTimeAsDoubleToString(double time)

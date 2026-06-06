@@ -1,8 +1,8 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index a34f080602..f0cd4b935c 100644
+index c16f9f7a65..d09955e603 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
-@@ -747,7 +747,7 @@ const char* GetDirectoryForRegion(DiscIO::Region region, RegionDirectoryStyle st
+@@ -762,7 +762,7 @@ const char* GetDirectoryForRegion(DiscIO::Region region, RegionDirectoryStyle st
  std::string GetBootROMPath(const std::string& region_directory)
  {
    const std::string path =

@@ -1,5 +1,5 @@
 diff --git a/Source/Core/InputCommon/ControllerInterface/ControllerInterface.h b/Source/Core/InputCommon/ControllerInterface/ControllerInterface.h
-index 05a3a99a05..9390d02d73 100644
+index 8f7f4baf40..601bdbbe8b 100644
 --- a/Source/Core/InputCommon/ControllerInterface/ControllerInterface.h
 +++ b/Source/Core/InputCommon/ControllerInterface/ControllerInterface.h
 @@ -35,9 +35,9 @@

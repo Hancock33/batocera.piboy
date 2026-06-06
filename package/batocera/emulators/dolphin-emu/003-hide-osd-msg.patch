@@ -1,8 +1,8 @@
 diff --git a/Source/Core/VideoBackends/OGL/OGLConfig.cpp b/Source/Core/VideoBackends/OGL/OGLConfig.cpp
-index 1cc404339c..12dbaecc90 100644
+index ce1b7a5b78..5499a67377 100644
 --- a/Source/Core/VideoBackends/OGL/OGLConfig.cpp
 +++ b/Source/Core/VideoBackends/OGL/OGLConfig.cpp
-@@ -721,9 +721,9 @@ bool PopulateConfig(GLContext* m_main_gl_context)
+@@ -720,9 +720,9 @@ bool PopulateConfig(GLContext* m_main_gl_context)
    g_Config.VerifyValidity();
    UpdateActiveConfig();
  
