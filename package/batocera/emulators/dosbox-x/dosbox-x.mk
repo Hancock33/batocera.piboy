@@ -3,8 +3,8 @@
 # dosbox-x
 #
 ################################################################################
-# Version: Commits on May 02, 2026
-DOSBOX_X_VERSION = dosbox-x-v2026.05.02-osfree
+# Version: Commits on Jun 02, 2026
+DOSBOX_X_VERSION = dosbox-x-v2026.06.02-osfree
 DOSBOX_X_SITE = $(call github,joncampbell123,dosbox-x,$(DOSBOX_X_VERSION))
 DOSBOX_X_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis linux-headers
 DOSBOX_X_LICENSE = GPLv2

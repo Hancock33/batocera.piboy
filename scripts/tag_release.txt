@@ -31,6 +31,7 @@ libfyaml.mk
 liblc3.mk
 libretro-scummvm.mk
 libsfdo.mk
+mangohud.mk
 mt32emu.mk
 nghttp3.mk
 ngtcp2.mk
@@ -55,6 +56,7 @@ sdl3.mk
 semver.mk
 sf_rpi_status.mk
 shaderc.mk
+shadps4.mk
 sonic3-air.mk
 spirv-llvm-translator.mk
 supertux2.mk

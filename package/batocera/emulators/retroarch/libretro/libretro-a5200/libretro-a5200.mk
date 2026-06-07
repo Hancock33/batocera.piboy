@@ -3,8 +3,8 @@
 # libretro-a5200
 #
 ################################################################################
-# Version: Commits on Apr 20, 2026
-LIBRETRO_A5200_VERSION = e09b29dd159bbc1098648c12cd83514b3befe89b
+# Version: Commits on Jun 04, 2026
+LIBRETRO_A5200_VERSION = 23c1ea482afb08656ec507e9ce98ed242a20bdfa
 LIBRETRO_A5200_SITE = $(call github,libretro,a5200,$(LIBRETRO_A5200_VERSION))
 LIBRETRO_A5200_LICENSE = GPLv2
 LIBRETRO_A5200_DEPENDENCIES += retroarch

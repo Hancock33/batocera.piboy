@@ -3,8 +3,8 @@
 # sdl3
 #
 ################################################################################
-# Version: Commits on May 02, 2026
-SDL3_VERSION = release-3.4.8
+# Version: Commits on May 31, 2026
+SDL3_VERSION = release-3.4.10
 SDL3_SITE = $(call github,libsdl-org,SDL,$(SDL3_VERSION))
 SDL3_LICENSE = Zlib
 SDL3_LICENSE_FILES = LICENSE.txt
@@ -66,8 +66,8 @@ else
 SDL3_CONF_OPTS += -DSDL_LIBUDEV=OFF
 endif
 
-ifeq ($(BR2_PACKAGE_VULKAN_HEADERS)$(BR2_PACKAGE_VULKAN_LOADER),yy)
-SDL3_DEPENDENCIES += vulkan-headers vulkan-loader
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+SDL3_DEPENDENCIES += mesa3d vulkan-loader
 SDL3_CONF_OPTS += -DSDL_VULKAN=ON
 SDL3_CONF_OPTS += -DSDL_RENDER_VULKAN=ON
 else

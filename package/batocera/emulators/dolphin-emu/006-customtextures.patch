@@ -1,5 +1,5 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index ba54a3e9ec..a34f080602 100644
+index c8d7f35fd2..c16f9f7a65 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
 @@ -332,6 +332,7 @@ bool ShouldUseDPL2Decoder()
@@ -11,7 +11,7 @@ index ba54a3e9ec..a34f080602 100644
  const Info<std::string> MAIN_WII_SD_CARD_IMAGE_PATH{{System::Main, "General", "WiiSDCardPath"}, ""};
  const Info<std::string> MAIN_WII_SD_CARD_SYNC_FOLDER_PATH{
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 1117df7255..109d64c36e 100644
+index 16cae73e15..5ae26e66a4 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
 @@ -206,6 +206,7 @@ extern const Info<bool> MAIN_TIME_TRACKING;

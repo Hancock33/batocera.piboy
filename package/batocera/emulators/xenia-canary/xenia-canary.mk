@@ -3,8 +3,8 @@
 # xenia-canary
 #
 ################################################################################
-# Version: Commits on May 01, 2026
-XENIA_CANARY_VERSION = fbd620c22b44638b66a70bba80d6f30d55a10924
+# Version: Commits on Jun 04, 2026
+XENIA_CANARY_VERSION = 49c700b9c56b5f5cde8f80de066a9aab10613afe
 XENIA_CANARY_SOURCE = xenia_canary_windows.zip
 XENIA_CANARY_SITE = https://github.com/xenia-canary/xenia-canary/releases/download/"$(shell echo $(XENIA_CANARY_VERSION) | cut -c 1-7)"
 XENIA_CANARY_LICENSE = BSD
@@ -39,8 +39,8 @@ endef
 
 XENIA_CANARY_POST_INSTALL_TARGET_HOOKS += XENIA_CANARY_POST_PROCESS
 
-# When rebuilding, if an existing version is cached a new version will not be downloaded as the filenames is the same.
-# Delete existing version before building
+# If a version is already cached, rebuilding wont fetch a new one because the filename doesnt change.
+# Delete the existing cached version before starting the build.
 define XENIA_CANARY_REMOVE_SOURCE
 	rm -rf $(DL_DIR)/$(XENIA_CANARY_DL_SUBDIR)/$(XENIA_CANARY_SOURCE)
 endef

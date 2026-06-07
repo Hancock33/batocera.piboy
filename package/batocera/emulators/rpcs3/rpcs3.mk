@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on May 31, 2026
-RPCS3_VERSION = 7b540cdb20fe3225b26251d0400300d0ebbd4dc7
+# Version: Commits on May 28, 2026
+RPCS3_VERSION = 2d1be0918044c2bd906403dfb310ae8054d13d44
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -41,6 +41,7 @@ RPCS3_CONF_OPTS += -DUSE_SYSTEM_ZLIB=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_ZSTD=ON
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+    RPCS3_DEPENDENCIES += vulkan-headers vulkan-loader
     RPCS3_CONF_OPTS += -DUSE_VULKAN=ON
 else
     RPCS3_CONF_OPTS += -DUSE_VULKAN=OFF

@@ -1,40 +1,40 @@
 diff --git a/CorsixTH/Lua/config_finder.lua b/CorsixTH/Lua/config_finder.lua
-index f2ceea83..ffc3e78e 100644
+index 2a0eb4d1..d2e701d0 100644
 --- a/CorsixTH/Lua/config_finder.lua
 +++ b/CorsixTH/Lua/config_finder.lua
-@@ -127,7 +127,7 @@ local config_defaults = {
-   audio_frequency = 22050,
-   audio_channels = 2,
-   audio_buffer_size = 2048,
--  theme_hospital_install = [[X:\ThemeHospital\hospital]],
-+  theme_hospital_install = [[/userdata/roms/ports/themehospital]],
-   debug = false,
-   track_fps = false,
-   zoom_speed = 80,
-@@ -422,7 +422,7 @@ unicode_font = nil -- [[X:\ThemeHospital\font.ttc]]
+@@ -164,7 +164,7 @@ local function new_config_defaults()
+     midi_api = nil,
+     midi_port = nil,
+     midi_sysex_master_volume = false,
+-    theme_hospital_install = [[X:\ThemeHospital\hospital]],
++    theme_hospital_install = [[/userdata/roms/ports/themehospital]],
+     debug = false,
+     track_fps = false,
+     zoom_speed = 80,
+@@ -558,7 +558,7 @@ param(config_values, 'unicode_font', '[[X:\\ThemeHospital\\font.ttc]]') .. [=[
  -- uncomment the following line, and point it to a directory which exists and
  -- is more suitable.
- --
--savegames = nil -- [[X:\ThemeHospital\Saves]]
-+savegames = nil -- [[/userdata/saves/themehospital]]
+ --]=] .. '\n' ..
+-param(config_values, 'savegames', '[[X:\\ThemeHospital\\Saves]]') .. [=[
++param(config_values, 'savegames', '[[/userdata/saves/themehospital]]') .. [=[
  
  -------------------------------------------------------------------------------
  -- Levels and Campaigns. By default, the "Levels" and "Campaigns" directory next to
-@@ -455,7 +455,7 @@ new_graphics_folder = nil -- [[X:\ThemeHospital\Graphics]]
+@@ -593,7 +593,7 @@ param(config_values, 'new_graphics_folder', '[[X:\\ThemeHospital\\Graphics]]') .
  -- uncomment the following line, and point it to a directory which exists and
  -- is more suitable.
- --
--screenshots = nil -- [[X:\ThemeHospital\Screenshots]]
-+screenshots = nil -- [[/userdata/screenshots]]
+ --]=] .. '\n' ..
+-param(config_values, 'screenshots', '[[X:\\ThemeHospital\\Screenshots]]') .. [=[
++param(config_values, 'screenshots', '[[/userdata/screenshots]]') .. [=[
  
  -------------------------------------------------------------------------------
  -- If you want to listen to non-Theme-Hospital music, then follow these steps:
-@@ -466,7 +466,7 @@ screenshots = nil -- [[X:\ThemeHospital\Screenshots]]
+@@ -604,7 +604,7 @@ param(config_values, 'screenshots', '[[X:\\ThemeHospital\\Screenshots]]') .. [=[
  --     "names.txt" and write the file name on one row, followed by the desired
  --     ingame name on the next row.
- --
--audio_music = nil -- [[X:\ThemeHospital\Music]]
-+audio_music = nil -- [[/userdata/music]]
+ --]=] .. '\n' ..
+-param(config_values, 'audio_music', '[[X:\\ThemeHospital\\Music]]') .. [=[
++param(config_values, 'audio_music', '[[/userdata/music]]') .. [=[
  
  -------------------------------------------------------------------------------
  -- SoundFont: CorsixTH uses the FluidR3 SoundFont by default for playing MIDI music.
