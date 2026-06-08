@@ -3,8 +3,8 @@
 # fitz
 #
 ################################################################################
-# Version: Commits on Mar 16, 2026
-FITZ_VERSION = 9dc1b4c6651c6ffcc3902091d50999255fc0cdcb
+# Version: Commits on Jun 07, 2026
+FITZ_VERSION = 81ca7a947a3a4996094be25a3be2f3a25a62c34b
 FITZ_SITE = $(call github,dhewm,dhewm3-sdk,$(FITZ_VERSION))
 FITZ_BRANCH = fitz
 FITZ_LICENSE = GPLv3

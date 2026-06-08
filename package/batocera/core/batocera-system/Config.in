@@ -445,6 +445,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 	# torrent client
 	select BR2_PACKAGE_TRANSMISSION
 	select BR2_PACKAGE_TRANSMISSION_DAEMON
+	select BR2_PACKAGE_TRANSMISSION_GTK                     if  BR2_PACKAGE_LIBGTK3
 
     # odin wifi baseband dependencies
     select BR2_PACKAGE_PD_MAPPER                            if  BR2_PACKAGE_BATOCERA_TARGET_ODIN

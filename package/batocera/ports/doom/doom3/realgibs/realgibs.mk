@@ -3,8 +3,8 @@
 # realgibs
 #
 ################################################################################
-# Version: Commits on Mar 16, 2026
-REALGIBS_VERSION = c835ab3c563875cbfd9df920cf104963e85ab582
+# Version: Commits on Jun 07, 2026
+REALGIBS_VERSION = 83e0a5b96cba2fa36a22b8930245e482d4c36902
 REALGIBS_SITE = $(call github,dhewm,dhewm3-sdk,$(REALGIBS_VERSION))
 REALGIBS_BRANCH = realgibs
 REALGIBS_LICENSE = GPLv3
