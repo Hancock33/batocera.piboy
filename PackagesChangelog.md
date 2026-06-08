@@ -1,10 +1,10 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d4917ed63e6a5b275893f6609c8402362b39d8cc|Jun 08, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8511b8f39ca6adb7976dc46bb90ee10ef9ece04d|Jun 08, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8511b8f39ca6adb7976dc46bb90ee10ef9ece04d|Jun 08, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|bae38e56c2c96d7cb93b2e1b4536235f01679737|Jun 08, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|c1adcb5a40e5b06902a7545974078dc6fa033f07|Jun 08, 2026
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|058fcd9426cd97685b5b2856cb01b2b51c4214ca|Jun 08, 2026
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|d95920841fb919ad59a04fa8e42fe09204bd26b3|Jun 08, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|2360466cc446b721c5964fde6d56f786caf55cb1|Jun 08, 2026
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|96129a722c1fbc0a1f6f43e84a331dde58f33619|Jun 08, 2026
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.136|Jun 08, 2026
@@ -17,17 +17,17 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|2fd5e8bdd19d
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|66c31baf99fc944eba62d531d76286c32f1a8038|Jun 08, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|0499a01224c056cb915e9fcc1bac37aedbf2253c|Jun 08, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|a62ea2023b8b4ce1aafce51a4dd870a81156685b|Jun 08, 2026
-Engines|[openbor7530](http://github.com/DCurrent/openbor)|fa1c2204eda6c6b10fbdcc130e30a31e7e80b028|Jun 08, 2026
+Engines|[openbor7530](http://github.com/DCurrent/openbor)|d2e8e664721514b0d8f14f0d7c830b57a088efc6|Jun 08, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|54e23faafd83403630969c7cf8f4fd0cf2b9d3df|Jun 08, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|abd7b5ccdddc0cff76daf67c701eac5e68fa5795|Jun 08, 2026
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|a9dabfa1367f041a42ed5828664d97ebd447e7ce|Jun 08, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|f91bb05e38ffb9e2bc1fa0ec4ed9a9bb7958c3b9|Jun 08, 2026
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|f183f9862b832ea729df39280e7a23e59db4a004|Jun 08, 2026
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|72fa9a33c18ba25cc95857143724c7f155a15bca|Jun 08, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|5eff821c0f995b9699fa773edb8c25550d7a2273|Jun 08, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|559f46c9f404ef95ee1f7d2dab9ce927a90595f5|Jun 08, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|2360466cc446b721c5964fde6d56f786caf55cb1|Jun 08, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|bb8877720ceca72f2c3d031ef58e84562e73223a|Jun 08, 2026
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|792a59bbd41620735fb1dd56ca55b5011c95e866|Jun 08, 2026
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|bff25c92f62e4f70643f02fea0e6bfb3dc81bba6|Jun 08, 2026
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|455b88e8dff2be822f08eb498f51b383e851fa38|Jun 08, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|b6f0ca44bdb922dd5dee96c4d8284d0d12672f9b|Jun 07, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|10a173b5536fc75cd93f8a3868349dad963542ef|Jun 07, 2026

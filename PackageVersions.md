@@ -71,7 +71,7 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|d8877e6282868d30e1c2d70c28ec1d1e2491d5b7|Mar 17, 2026
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases/)|v2.8.0|Dec 12, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d4917ed63e6a5b275893f6609c8402362b39d8cc|Jun 08, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|8511b8f39ca6adb7976dc46bb90ee10ef9ece04d|Jun 08, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|8511b8f39ca6adb7976dc46bb90ee10ef9ece04d|Jun 08, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|9c7b0a395db460524dad26c7b57f266e4acd5242|May 21, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.2|Mar 24, 2026
@@ -190,7 +190,7 @@ Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|e03d3be88f79
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|72fa9a33c18ba25cc95857143724c7f155a15bca|Jun 08, 2026
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|60e12fe9ee07f024b5a0d569ddf6ad8efbffcd4b|Mar 31, 2026
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|944b9892f991c3aacb15436c91511543f8e665bf|Feb 24, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|5eff821c0f995b9699fa773edb8c25550d7a2273|Jun 08, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|559f46c9f404ef95ee1f7d2dab9ce927a90595f5|Jun 08, 2026
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|520e0a37ac0e9cf8b0536fe83fda3aacc9ba73bb|Apr 20, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|eebb95c060f82df45a5615be676c3fa4b7bb7ae0|May 09, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|c88070df8e0e84106ecc4b6394860a413a7bc046|Apr 19, 2026
@@ -215,7 +215,7 @@ Emulators|[libretro-skyemu](http://github.com/skylersaleh/SkyEmu)|46efbcbdb3b902
 Emulators|[libretro-smsplus-gx](http://github.com/libretro/smsplus-gx)|6dc7119f6f8d7f6437320405ee3b0de5f227913f|Apr 20, 2026
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|bc82e8281ddbbd487875866f5db27cdb9838d319|May 15, 2026
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|185488cd83aaf274752a742c94d45561cbecb7af|Apr 20, 2026
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|792a59bbd41620735fb1dd56ca55b5011c95e866|Jun 08, 2026
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|bff25c92f62e4f70643f02fea0e6bfb3dc81bba6|Jun 08, 2026
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|2b93c0d7dff5b8f6c4e60e049d66849923fa8bba|Apr 20, 2026
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|ae824f626ad80c8b7ee848698b3d1dcebe9a5ccb|Dec 12, 2025
 Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libretro-superflappybirds)|4b798ecc6948017ca79aad1ea20fe57e680228c8|Apr 13, 2023
@@ -256,7 +256,7 @@ Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|d7253a71f57561077016d8ed7028c09e6d360302|Mar 30, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|e4927d9f375a4f40f076c0d9ea63c0c119653fec|Mar 30, 2026
 Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3|May 10, 2026
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|058fcd9426cd97685b5b2856cb01b2b51c4214ca|Jun 08, 2026
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|d95920841fb919ad59a04fa8e42fe09204bd26b3|Jun 08, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.403|Jun 07, 2026
 Emulators|[play](https://github.com/jpd002/Play-.git)|3a904f67694ce6ce8f88fd97ebaf30240bd87dce|Jun 05, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|2360466cc446b721c5964fde6d56f786caf55cb1|Jun 08, 2026
@@ -305,7 +305,7 @@ Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|02004ba
 Engines|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d59842e87e75f415dfb4322ead93|Jan 14, 2021
 Engines|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Engines|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
-Engines|[openbor7530](http://github.com/DCurrent/openbor)|fa1c2204eda6c6b10fbdcc130e30a31e7e80b028|Jun 08, 2026
+Engines|[openbor7530](http://github.com/DCurrent/openbor)|d2e8e664721514b0d8f14f0d7c830b57a088efc6|Jun 08, 2026
 Engines|[python-pygame2](http://github.com/pygame/pygame)|85fda3f719d437cf27106afae8c890e6b88ba5f5|Oct 05, 2025
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v2.9.5|May 03, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-06-07|Jun 07, 2026
