@@ -3,8 +3,8 @@
 # libretro-hatari
 #
 ################################################################################
-# Version: Commits on Apr 20, 2026
-LIBRETRO_HATARI_VERSION = 6aa7c7079b3186025ebc6bad4b4251aa359a3947
+# Version: Commits on Jun 09, 2026
+LIBRETRO_HATARI_VERSION = 0b38ea2da918ee1712aabbd003b34aa4e8e9752d
 LIBRETRO_HATARI_SITE = $(call github,libretro,hatari,$(LIBRETRO_HATARI_VERSION))
 LIBRETRO_HATARI_DEPENDENCIES = libcapsimage zlib retroarch
 LIBRETRO_HATARI_EMULATOR_INFO = hatari.libretro.core.yml
