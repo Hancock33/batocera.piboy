@@ -3,36 +3,34 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on May 13, 2026
-VITA3K_VERSION = cb1f592c8a6cba8c84ceeaab43bdef286aface14
+# Version: Commits on Jun 09, 2026
+VITA3K_VERSION = 7c567c18043bc83282b1d834dc027dae13e5a296
 VITA3K_SITE = https://github.com/vita3k/vita3k
-VITA3K_SITE_METHOD=git
-VITA3K_GIT_SUBMODULES=YES
+VITA3K_SITE_METHOD = git
+VITA3K_GIT_SUBMODULES = YES
 VITA3K_LICENSE = GPLv3
-VITA3K_DEPENDENCIES = boost fmt libcurl libgtk3 libogg libvorbis python-ruamel-yaml
-VITA3K_DEPENDENCIES += sdl3 zlib
+VITA3K_DEPENDENCIES += boost host-clang host-ninja libcurl libogg libvorbis pipewire python-ruamel-yaml 
+VITA3K_DEPENDENCIES += qt6base qt6multimedia qt6svg qt6tools sdl3 sdl3_image sdl3_ttf zlib
+VITA3K_EXTRACT_DEPENDENCIES = host-libcurl
 VITA3K_EMULATOR_INFO = vita3k.emulator.yml
 
 VITA3K_SUPPORTS_IN_SOURCE_BUILD = NO
 
-VITA3K_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-VITA3K_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
-VITA3K_CONF_OPTS += -DBUILD_EXTERNAL=OFF
 VITA3K_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+VITA3K_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-no-pie -lm -lstdc++"
+VITA3K_CONF_OPTS += -DSDL_HIDAPI=OFF
 VITA3K_CONF_OPTS += -DUSE_DISCORD_RICH_PRESENCE=OFF
-VITA3K_CONF_OPTS += -DUSE_VITA3K_UPDATE=OFF
+VITA3K_CONF_OPTS += -DVITA3K_FORCE_SYSTEM_BOOST=ON
+
+ifeq ($(BR2_PACKAGE_WAYLAND),y)
+    VITA3K_DEPENDENCIES += wayland
+endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64),y)
     VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=ON
 else
     VITA3K_CONF_OPTS += -DXXH_X86DISPATCH_ALLOW_AVX=OFF
 endif
-
-define VITA3K_GET_SUBMODULE
-	mkdir -p $(@D)/external
-	cd $(@D)/external && git clone https://github.com/Vita3K/nativefiledialog-cmake
-endef
-VITA3K_POST_EXTRACT_HOOKS = VITA3K_GET_SUBMODULE
 
 define VITA3K_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/vita3k/
