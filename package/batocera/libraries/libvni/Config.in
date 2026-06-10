@@ -1,6 +1,0 @@
-config BR2_PACKAGE_LIBVNI
-    bool "libvni"
-    help
-      Cross platform dynamic library code for VNI file format.
-
-      https://github.com/PPUC/libvni
