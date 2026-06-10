@@ -1,6 +1,0 @@
-config BR2_PACKAGE_LIBFRAMEUTIL
-    bool "libframeutil"
-    help
-      ZeDMD frame util library.
-      
-      https://github.com/PPUC/libframeutil
