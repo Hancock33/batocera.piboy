@@ -1,8 +1,8 @@
 diff --git a/vita3k/gui-qt/src/main_window.cpp b/vita3k/gui-qt/src/main_window.cpp
-index 9b0c431..8ddd8da 100644
+index f5ad9e70..dbc92917 100644
 --- a/vita3k/gui-qt/src/main_window.cpp
 +++ b/vita3k/gui-qt/src/main_window.cpp
-@@ -1033,8 +1033,8 @@ std::optional<AppLaunchRequest> MainWindow::boot_game_once(const AppLaunchReques
+@@ -1018,8 +1018,8 @@ std::optional<AppLaunchRequest> MainWindow::boot_game_once(const AppLaunchReques
      auto *ime_filter = new ImeKeyboardFilter(emuenv, m_game_window);
      m_game_window->installEventFilter(ime_filter);
  
