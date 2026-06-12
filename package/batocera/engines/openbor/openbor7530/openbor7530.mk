@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 11, 2026
-OPENBOR7530_VERSION = 5087eded837666cf459514d4ef8740161899430a
+OPENBOR7530_VERSION = d2e8e664721514b0d8f14f0d7c830b57a088efc6
 OPENBOR7530_SITE = $(call github,DCurrent,openbor,$(OPENBOR7530_VERSION))
 OPENBOR7530_LICENSE = BSD
 OPENBOR7530_LICENSE_FILE = LICENSE
@@ -30,13 +30,14 @@ define OPENBOR7530_PRE_CONFIGURE_VERSION
 endef
 
 define OPENBOR7530_BUILD_CMDS
+	$(SED) "s|-DAMD64|-DAMD64  -Wno-error=implicit-function-declaration -Wno-error=unused-variable -Wno-error=unused-label|g" $(@D)/engine/Makefile
 	cd $(@D)/engine && chmod +x $(@D)/engine/version.sh && $(@D)/engine/version.sh
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" STRIP="" SDKPATH=$(STAGING_DIR) \
 		-C $(@D)/engine -f Makefile $(OPENBOR7530_EXTRAOPTS) VERBOSE=1
 endef
 
 define OPENBOR7530_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/engine/OpenBOR $(TARGET_DIR)/usr/bin/OpenBOR7530
+	$(INSTALL) -D $(@D)/engine/OpenBOR.elf $(TARGET_DIR)/usr/bin/OpenBOR7530
 endef
 
 OPENBOR7530_PRE_CONFIGURE_HOOKS += OPENBOR7530_PRE_CONFIGURE_VERSION
