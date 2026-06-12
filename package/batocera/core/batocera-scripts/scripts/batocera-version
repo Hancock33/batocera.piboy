@@ -15,7 +15,7 @@ FIND_EXT=$(find -L /userdata/system -maxdepth 1 -name "extension_*.tar.gz" -prin
 FIND_OVERLAY=
 test -e "/boot/boot/overlay" && FIND_OVERLAY=1
 
-# rather used to check autoconvertion and if users added annother custom.sh 
+# rather used to check autoconvertion and if users added annother custom.sh
 FIND_CUSTOMSH=
 test -e "/userdata/system/services/custom_service" && FIND_CUSTOMSH=false
 test -e "/userdata/system/custom.sh"               && FIND_CUSTOMSH=true

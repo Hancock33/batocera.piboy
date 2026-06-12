@@ -1019,7 +1019,7 @@ init_wine() {
     else
         WINE64="${WINE}"
     fi
-    
+
     WINESERVER="${DIR}/${WINE_VERSION}/bin/wineserver"
     MSIEXEC="${DIR}/${WINE_VERSION}/bin/msiexec"
     WINETRICKS="${DIR}/winetricks"

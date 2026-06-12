@@ -101,10 +101,10 @@ class rgvitaproled(object):
     def __init__(self):
         left_glob = glob.glob('/sys/class/leds/*::joystick-left')
         right_glob = glob.glob('/sys/class/leds/*::joystick-right')
-        
+
         self.left_path = left_glob[0] if left_glob else None
         self.right_path = right_glob[0] if right_glob else None
-        
+
         self.sysfs_path = None
         if self.left_path:
             try:
@@ -112,7 +112,7 @@ class rgvitaproled(object):
                 self.sysfs_path = os.path.realpath(os.path.join(self.left_path, 'device'))
             except Exception:
                 pass
-                
+
         self.max_val = 255
         self.current_color = "000000"
         self._init_hardware()
@@ -179,7 +179,7 @@ class rgvitaproled(object):
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
             self.current_color = rgb
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):

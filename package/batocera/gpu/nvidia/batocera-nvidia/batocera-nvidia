@@ -72,7 +72,7 @@ MODE=$1
 
 if [ "${MODE}" = "auto" ]; then
     DETECTED_MODE=$(guess_mode 2>> "$log")
-    
+
     # If no card is detected or the card is unsupported, revert to Nouveau
     if [ "${DETECTED_MODE}" = "none" ] || [ "${DETECTED_MODE}" = "unsupported" ]; then
         echo "Failing back to the OpenSource Mesa Nouveau driver (Reason: ${DETECTED_MODE})" >> "$log"
