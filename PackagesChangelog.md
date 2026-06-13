@@ -14,9 +14,12 @@ Engines|[thextech](https://github.com/TheXTech/TheXTech)|b043061f41e013eb7a71a21
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|639cc7a1bc232cec9d45876fcd43b3fb77cc5434|Jun 13, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|75bbbd59f848a1071fefef47aac849653281588f|Jun 13, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.2-rc.2|Jun 13, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.11|Jun 13, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260613|Jun 13, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|acb928a77c0a1fe58de7a48ebf019c3889dbea28|Jun 13, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4c2c1776cfb324a8cd6350a2e570bc0f834d204b|Jun 13, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.145.9288-546|Jun 13, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260613|Jun 13, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|680445068186f8d0ece3669f6de515d410df765f|Jun 13, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|4f1344f36a7d96c96ed858485fef78dce1f10334|Jun 13, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.8|Jun 13, 2026
@@ -40,11 +43,9 @@ Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|b8cfbdc5b6ea2f4f22faf
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14355|Jun 12, 2026
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|02bc22e8d6104d744825fa0e448b340a5a46b62a|Jun 12, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.2.0|Jun 12, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260612|Jun 12, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|998d5b08b5b33bdf3a63b2ef8f2ac4ccc664e2f6|Jun 12, 2026
 Engines|[openbor7530](http://github.com/DCurrent/openbor)|8a36651101b2051392845fa6b5bcd3a5ccb59702|Jun 12, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|9bc12b5ee20462cf22828fcbdbef0a4c02f9e56c|Jun 12, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260612|Jun 12, 2026
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|583377095747b67d5746096a39280d3264b41786|Jun 12, 2026
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|b9c93a6caf67a458fb4b66540ac78813d9902f5c|Jun 12, 2026
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|5bd5627ca36c74691803d9327c89e3985afeef90|Jun 12, 2026
@@ -174,7 +175,6 @@ Kodi|[kodi_resource_language_pt_br](http://mirrors.kodi.tv/addons/piers/resource
 Kodi|[kodi_resource_language_sv_se](http://mirrors.kodi.tv/addons/piers/resource.language.sv_se)|11.0.102|May 30, 2026
 Kodi|[kodi_resource_language_tr_tr](http://mirrors.kodi.tv/addons/piers/resource.language.tr_tr)|11.0.95|May 30, 2026
 Kodi|[kodi_resource_language_zh_cn](http://mirrors.kodi.tv/addons/piers/resource.language.zh_cn)|11.0.101|May 30, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.10|May 30, 2026
 Emulators|[libretro-yabause](http://github.com/libretro/yabause)|8926b0c6c347f8c5c755911ddb0ac695420ffbf8|May 30, 2026
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0288|May 29, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|9be3a5addeb3023396299efd588627e39345f451|May 29, 2026
