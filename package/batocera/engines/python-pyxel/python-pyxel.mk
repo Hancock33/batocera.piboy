@@ -8,7 +8,7 @@ PYTHON_PYXEL_VERSION = v2.9.6
 PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = maturin
 PYTHON_PYXEL_LICENSE = MIT
-PYTHON_PYXEL_CARGO_MANIFEST_PATH = crates/pyxel-extension/Cargo.toml
+PYTHON_PYXEL_CARGO_MANIFEST_PATH = crates/pyxel-core/Cargo.toml
 PYTHON_PYXEL_EMULATOR_INFO = pyxel.emulator.yml
 PYTHON_PYXEL_DEPENDENCIES = host-rust-bin sdl2 evmapy
 
@@ -26,6 +26,11 @@ endif
 
 PYTHON_PYXEL_ENV = CARGO_HOME=$(@D) TARGET=$(PYXEL_CARGO_TARGET)
 
+define PYTHON_PYXEL_MISSING
+	mkdir -p $(@D)/python/pyxel
+	touch $(@D)/python/pyxel/README.md
+endef
+
 define PYTHON_PYXEL_REMOVE_PREVIOUS
 	rm -rf $(TARGET_DIR)/usr/bin/pyxel
 endef
@@ -38,6 +43,7 @@ define PYTHON_PYXEL_SAMPLE_AND_KEYS
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/python-pyxel/pyxel.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 
+PYTHON_PYXEL_PRE_CONFIGURE_HOOKS += PYTHON_PYXEL_MISSING
 PYTHON_PYXEL_PRE_INSTALL_TARGET_HOOKS += PYTHON_PYXEL_REMOVE_PREVIOUS
 PYTHON_PYXEL_POST_INSTALL_TARGET_HOOKS += PYTHON_PYXEL_SAMPLE_AND_KEYS
 
