@@ -190,7 +190,7 @@ Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|e03d3be88f79
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|665a922fc7c17a70f31963fe843851187f96b185|Jun 13, 2026
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|60e12fe9ee07f024b5a0d569ddf6ad8efbffcd4b|Mar 31, 2026
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|944b9892f991c3aacb15436c91511543f8e665bf|Feb 24, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|2d5b135f73d1b1a3ed6ff38e2977964ea540c763|Jun 13, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f96e45076fbf08dc5a53185ba85db7e130e169b9|Jun 13, 2026
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|520e0a37ac0e9cf8b0536fe83fda3aacc9ba73bb|Apr 20, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|46da68f21fb7452e7050cbe5dcfe80cae856e4f2|Jun 12, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|d26eaee5c8fb47c1832b8bf32c1358d625da8a02|Jun 13, 2026

@@ -27,7 +27,7 @@ Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|11807c3411f6cd469850c
 Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.8|Jun 13, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|c3bbd6f69a93510bdde28308dd7f50a683c1fb6b|Jun 13, 2026
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|665a922fc7c17a70f31963fe843851187f96b185|Jun 13, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|2d5b135f73d1b1a3ed6ff38e2977964ea540c763|Jun 13, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f96e45076fbf08dc5a53185ba85db7e130e169b9|Jun 13, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|d26eaee5c8fb47c1832b8bf32c1358d625da8a02|Jun 13, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|72fdcb25d96039cbda314ec08728ee8f782b10a6|Jun 13, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|995662e43951e73b904362f972be11f365eca7d7|Jun 13, 2026
