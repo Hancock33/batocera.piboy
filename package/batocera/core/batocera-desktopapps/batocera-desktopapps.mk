@@ -190,6 +190,13 @@ ifeq ($(BR2_PACKAGE_MOONLIGHT_QT),y)
   BATOCERA_DESKTOPAPPS_ICONS   += moonlight-qt.png
 endif
 
+# transmission-qt
+ifeq ($(BR2_PACKAGE_TRANSMISSION),y)
+  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-transmission-qt
+  BATOCERA_DESKTOPAPPS_APPS    += transmission-qt-config.desktop
+  BATOCERA_DESKTOPAPPS_ICONS   += transmission-qt.png
+endif
+
 ## Context Menu Actions
 
 # only actions for platforms that can use yad
