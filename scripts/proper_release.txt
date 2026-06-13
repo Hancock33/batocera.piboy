@@ -4,6 +4,7 @@ ayaneo-platform.mk
 broadcom-bt-firmware.mk
 btop.mk
 cargs.mk
+cdogs.mk
 chromebook-ucm-conf.mk
 clk.mk
 cpp-ipc.mk
