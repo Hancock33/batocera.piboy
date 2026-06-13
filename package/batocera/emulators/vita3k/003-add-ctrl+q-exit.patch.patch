@@ -1,5 +1,5 @@
 diff --git a/vita3k/gui-qt/src/main_window.cpp b/vita3k/gui-qt/src/main_window.cpp
-index dbc92917..8ddd8da5 100644
+index 764d633c..e0d296c2 100644
 --- a/vita3k/gui-qt/src/main_window.cpp
 +++ b/vita3k/gui-qt/src/main_window.cpp
 @@ -94,6 +94,7 @@
