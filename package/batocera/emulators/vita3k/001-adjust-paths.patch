@@ -11,7 +11,7 @@ index fc74fa5f..22f564d7 100644
 -        auto sdl_vita_fs_path = SDL_GetPrefPath(org_name, app_name);
 -        auto vita_fs_path = fs_utils::utf8_to_path(sdl_vita_fs_path);
 -        SDL_free(sdl_vita_fs_path);
-+        auto pref_path = "/userdata/saves/psvita/";
++        auto vita_fs_path = "/userdata/saves/psvita/";
  
  #if defined(__APPLE__)
          // Store other data in the user-wide path. Otherwise we may end up dumping
@@ -26,7 +26,7 @@ index fc74fa5f..22f564d7 100644
  
          // These default to being in shared path
 -        root_paths.set_vita_fs_path(root_paths.get_shared_path() / app_name / "");
-+        root_paths.set_pref_path(root_paths.get_shared_path() / "");
++        root_paths.set_vita_fs_path(root_paths.get_shared_path() / "");
          root_paths.set_patch_path(root_paths.get_shared_path() / "patch" / "");
  #endif
      }
