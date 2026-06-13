@@ -13,6 +13,7 @@ box86.mk
 bstone.mk
 cabextract.mk
 cbindgen.mk
+cdogs.mk
 corsixth.mk
 cxxopts.mk
 drastic.mk
