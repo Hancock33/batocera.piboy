@@ -3,8 +3,8 @@
 # libretro-prboom
 #
 ################################################################################
-# Version: Commits on Jun 13, 2026
-LIBRETRO_PRBOOM_VERSION = 995662e43951e73b904362f972be11f365eca7d7
+# Version: Commits on Jun 14, 2026
+LIBRETRO_PRBOOM_VERSION = 84cd28bd2d58bbfc8a2e48997862fefcac132c6e
 LIBRETRO_PRBOOM_SITE = $(call github,libretro,libretro-prboom,$(LIBRETRO_PRBOOM_VERSION))
 LIBRETRO_PRBOOM_LICENSE = GPLv2
 LIBRETRO_PRBOOM_DEPENDENCIES += retroarch
