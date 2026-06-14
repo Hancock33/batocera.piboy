@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 54331ef7c..0e7a20a16 100644
+index a057fa5e8..8fb48e3a6 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -4928,12 +4928,12 @@ void System::WarnAboutUnsafeSettings()
+@@ -4929,12 +4929,12 @@ void System::WarnAboutUnsafeSettings()
      if (g_settings.cpu_execution_mode == CPUExecutionMode::CachedInterpreter)
        append(TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
  
@@ -18,10 +18,10 @@ index 54331ef7c..0e7a20a16 100644
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index bb393715d..63f63c561 100644
+index 8dc9aaf5c..964f47a7c 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
-@@ -258,9 +258,9 @@ bool QtHost::EarlyProcessStartup()
+@@ -267,9 +267,9 @@ bool QtHost::EarlyProcessStartup()
    Error error;
    if (!Core::ProcessStartup(&error)) [[unlikely]]
    {
@@ -34,7 +34,7 @@ index bb393715d..63f63c561 100644
    }
  
    // allow us to override standard qt icons as well
-@@ -3626,7 +3626,7 @@ int main(int argc, char* argv[])
+@@ -3679,7 +3679,7 @@ int main(int argc, char* argv[])
    QtHost::UpdateApplicationTheme();
  
    // Build warning.
@@ -43,7 +43,7 @@ index bb393715d..63f63c561 100644
  
    // Setting/folder migrations.
    QtHost::ApplyMigrations();
-@@ -3686,7 +3686,7 @@ int main(int argc, char* argv[])
+@@ -3739,7 +3739,7 @@ int main(int argc, char* argv[])
      QtHost::s_state.start_fullscreen_ui_fullscreen = false;
  
    // Always kick off update check. It'll take over if the user is booting a game fullscreen.
