@@ -3,8 +3,8 @@
 # omf2097
 #
 ################################################################################
-# Version: Commits on Jun 05, 2026
-OMF2097_VERSION = c3d4b3fae327ce086eb8ffa3985bd0b04de22a5c
+# Version: Commits on Jun 11, 2026
+OMF2097_VERSION = fda29f2c81db718d0d6479aa9d2a729ccb3818e9
 OMF2097_SITE = $(call github,omf2097,openomf,$(OMF2097_VERSION))
 OMF2097_EMULATOR_INFO = omf2097.emulator.yml
 OMF2097_DEPENDENCIES = enet host-omf2097 libconfuse libminiupnpc sdl2 sdl2_mixer

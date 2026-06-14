@@ -442,6 +442,10 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # required for different emulators, i suggest to enable it always to not have different behaviour depending on boards
     select BR2_GCC_ENABLE_OPENMP
 
+    # torrent client
+    select BR2_PACKAGE_TRANSMISSION
+    select BR2_PACKAGE_TRANSMISSION_DAEMON
+
     # odin wifi baseband dependencies
     select BR2_PACKAGE_PD_MAPPER                            if  BR2_PACKAGE_BATOCERA_TARGET_ODIN
     select BR2_PACKAGE_QRTR                                 if  BR2_PACKAGE_BATOCERA_TARGET_ODIN

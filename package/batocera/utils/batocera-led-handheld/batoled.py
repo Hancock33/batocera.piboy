@@ -101,10 +101,10 @@ class rgvitaproled(object):
     def __init__(self):
         left_glob = glob.glob('/sys/class/leds/*::joystick-left')
         right_glob = glob.glob('/sys/class/leds/*::joystick-right')
-        
+
         self.left_path = left_glob[0] if left_glob else None
         self.right_path = right_glob[0] if right_glob else None
-        
+
         self.sysfs_path = None
         if self.left_path:
             try:
@@ -112,7 +112,7 @@ class rgvitaproled(object):
                 self.sysfs_path = os.path.realpath(os.path.join(self.left_path, 'device'))
             except Exception:
                 pass
-                
+
         self.max_val = 255
         self.current_color = "000000"
         self._init_hardware()
@@ -179,7 +179,7 @@ class rgvitaproled(object):
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
             self.current_color = rgb
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):
@@ -556,7 +556,7 @@ class dual_multiled(object):
 
     def _write_hardware(self, brightness, r, g, b):
         # Driver expects "Blue Green Red" format
-        color_str = f"{b} {g} {r}"
+        color_str = f"{r} {g} {b}"
         for p in self.all_paths:
             try:
                 with open(p + 'brightness', 'w') as f:
@@ -602,8 +602,7 @@ class dual_multiled(object):
             return "000000"
         try:
             with open(self.all_paths[0] + 'multi_intensity', 'r') as f:
-                # Read hardware values (B G R) and convert back to R G B hex
-                b, g, r = f.readline().strip().split()
+                r, g, b = f.readline().strip().split()
                 return f"{dec_to_hex(r)}{dec_to_hex(g)}{dec_to_hex(b)}"
         except Exception:
             return "000000"
@@ -613,7 +612,7 @@ class dual_multiled(object):
             return "0 0 0"
         try:
             with open(self.all_paths[0] + 'multi_intensity', 'r') as f:
-                b, g, r = f.readline().strip().split()
+                r, g, b = f.readline().strip().split()
                 return f"{r} {g} {b}"
         except Exception:
             return "0 0 0"
@@ -663,7 +662,7 @@ class multiled(object):
 
     def _write_hardware(self, brightness, r, g, b):
         # Based on user shell script: multi_intensity expects "Blue Green Red"
-        color_str = f"{b} {g} {r}"
+        color_str = f"{r} {g} {b}"
         for p in self.paths:
             try:
                 with open(p + 'brightness', 'w') as f:
@@ -706,8 +705,7 @@ class multiled(object):
     def get_color(self):
         try:
             with open(self.paths[0] + 'multi_intensity', 'r') as f:
-                # Driver stores B G R
-                b, g, r = f.readline().strip().split()
+                r, g, b = f.readline().strip().split()
                 return f"{dec_to_hex(r)}{dec_to_hex(g)}{dec_to_hex(b)}"
         except:
             return "000000"

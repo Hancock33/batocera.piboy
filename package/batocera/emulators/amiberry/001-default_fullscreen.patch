@@ -1,8 +1,8 @@
 diff --git a/src/include/options.h b/src/include/options.h
-index 5ceb5265..e1046b14 100644
+index ccf22c3a..ed615420 100644
 --- a/src/include/options.h
 +++ b/src/include/options.h
-@@ -1332,7 +1332,7 @@ struct amiberry_options
+@@ -1385,7 +1385,7 @@ struct amiberry_options
  	bool default_auto_crop = false;
  	int default_width = 720;
  	int default_height = 568;
@@ -10,4 +10,4 @@ index 5ceb5265..e1046b14 100644
 +	int default_fullscreen_mode = 1;
  	int default_stereo_separation = 7;
  	int default_sound_buffer = 3072;
- 	bool default_sound_pull = false;
+ 	int default_sound_frequency = 44100;

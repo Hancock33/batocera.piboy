@@ -6,7 +6,7 @@ then
 fi
 
 # Define the directory paths
-configPath="/userdata/system/configs/shadps4"
+configPath="/userdata/system/configs/shadPS4"
 dlcPath="/userdata/roms/ps4/DLC"
 
 # Check if the directory exists, and create it if it doesn't
@@ -30,4 +30,14 @@ if [ ! -d "$dlcPath" ]; then
     fi
 fi
 
-/usr/bin/shadPS4QtLauncher
+if [[ -x /usr/bin/shadPS4QtLauncher ]]; then
+    echo "Starting shadPS4QtLauncher..."
+    USER=root \
+    QT_PLUGIN_PATH=/usr/lib/qt6/plugins \
+    QT_QPA_PLATFORM=xcb \
+    QT_XCB_NO_XI2=1 \
+    /usr/bin/shadPS4QtLauncher
+else
+    echo "System not found."
+    exit 1
+fi

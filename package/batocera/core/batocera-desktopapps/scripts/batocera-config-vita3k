@@ -8,9 +8,19 @@ else
 fi
 
 # set the environment variables
-XDG_CONFIG_HOME=$CFGDIR \
-XDG_CACHE_HOME=/userdata/system/cache \
-XDG_DATA_HOME=/userdata/saves \
-XDG_DATA_DIRS=/userdata/saves \
-# now run the emulator
-/usr/bin/vita3k/Vita3K
+export XDG_CONFIG_HOME="/userdata/system/configs"
+export XDG_CACHE_HOME="/userdata/system/cache"
+export XDG_DATA_HOME="/userdata/saves"
+
+# Now run the emulator
+if [[ -x /usr/bin/vita3k/Vita3K ]]; then
+    echo "Starting Vita3K..."
+    USER=root \
+    QT_PLUGIN_PATH=/usr/lib/qt6/plugins \
+    QT_QPA_PLATFORM=xcb \
+    QT_XCB_NO_XI2=1 \
+    /usr/bin/vita3k/Vita3K
+else
+    echo "System not found."
+    exit 1
+fi

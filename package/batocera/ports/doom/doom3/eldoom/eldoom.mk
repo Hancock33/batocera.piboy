@@ -3,8 +3,8 @@
 # eldoom
 #
 ################################################################################
-# Version: Commits on Mar 16, 2026
-ELDOOM_VERSION = c8ff0c0fa83a1ae0210b8e07adff8ef2107c08c8
+# Version: Commits on Jun 07, 2026
+ELDOOM_VERSION = e6461952e6d2dc882ad06d365ec78c7c0eebcce4
 ELDOOM_SITE = $(call github,dhewm,dhewm3-sdk,$(ELDOOM_VERSION))
 ELDOOM_BRANCH = eldoom
 ELDOOM_LICENSE = GPLv3

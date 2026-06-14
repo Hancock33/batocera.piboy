@@ -3,9 +3,10 @@
 # rtkit
 #
 ################################################################################
-# Version: Commits on Apr 05, 2020
-RTKIT_VERSION = c295fa849f52b487be6433e69e08b46251950399
-RTKIT_SITE = $(call github,heftig,RTKIT,$(RTKIT_VERSION))
+# Version: Commits on Dec 11, 2025
+RTKIT_VERSION = v0.14
+RTKIT_SOURCE = rtkit-$(RTKIT_VERSION).tar.gz
+RTKIT_SITE = https://gitlab.freedesktop.org/pipewire/rtkit/-/archive/$(RTKIT_VERSION)
 RTKIT_DEPENDENCIES = dbus libcap polkit
 
 define RTKIT_USERS

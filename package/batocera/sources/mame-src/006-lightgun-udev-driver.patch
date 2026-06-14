@@ -1,20 +1,35 @@
+From 99a68290a7491aa45990a91e0ad315d695f18e60 Mon Sep 17 00:00:00 2001
+From: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
+Date: Thu, 27 Apr 2023 17:38:55 +0000
+Subject: [PATCH] udev for lightguns
+
+Signed-off-by: Nicolas Adenis-Lamarre <nicolas.adenis.lamarre@gmail.com>
+---
+ scripts/src/main.lua                  |   1 +
+ scripts/src/osd/modules.lua           |   1 +
+ src/mame/misc/policetr.cpp            |  24 +-
+ src/osd/modules/input/input_udev.cpp  | 401 ++++++++++++++++++++++++++
+ src/osd/modules/lib/osdobj_common.cpp |   1 +
+ 5 files changed, 416 insertions(+), 12 deletions(-)
+ create mode 100644 src/osd/modules/input/input_udev.cpp
+
 diff --git a/scripts/src/main.lua b/scripts/src/main.lua
-index 3d6b6dbf472..48db2dcdeeb 100644
+index 32d5b7c..13e9f73 100644
 --- a/scripts/src/main.lua
 +++ b/scripts/src/main.lua
-@@ -180,6 +180,7 @@ end
+@@ -166,6 +166,7 @@ end
+ 	links {
  		ext_lib("zlib"),
- 		ext_lib("zstd"),
  		ext_lib("flac"),
 +		ext_lib("udev"),
  		ext_lib("utf8proc"),
  	}
  if (STANDALONE~=true) then
 diff --git a/scripts/src/osd/modules.lua b/scripts/src/osd/modules.lua
-index fddf73b4046..2cb14a4eda6 100644
+index 4bbd42b..b7fa7ef 100644
 --- a/scripts/src/osd/modules.lua
 +++ b/scripts/src/osd/modules.lua
-@@ -93,6 +93,7 @@ function osdmodulesbuild()
+@@ -94,6 +94,7 @@ function osdmodulesbuild()
  		MAME_DIR .. "src/osd/modules/input/input_rawinput.cpp",
  		MAME_DIR .. "src/osd/modules/input/input_sdl.cpp",
  		MAME_DIR .. "src/osd/modules/input/input_sdl3.cpp",
@@ -23,7 +38,7 @@ index fddf73b4046..2cb14a4eda6 100644
  		MAME_DIR .. "src/osd/modules/input/input_wincommon.h",
  		MAME_DIR .. "src/osd/modules/input/input_windows.cpp",
 diff --git a/src/mame/misc/policetr.cpp b/src/mame/misc/policetr.cpp
-index 68b66dda0f0..66f669d7c07 100644
+index 1111111..2222222 100644
 --- a/src/mame/misc/policetr.cpp
 +++ b/src/mame/misc/policetr.cpp
 @@ -356,16 +356,16 @@ static INPUT_PORTS_START( policetr )
@@ -68,7 +83,7 @@ index 68b66dda0f0..66f669d7c07 100644
  INPUT_PORTS_END
  
  
-@@ -401,16 +401,16 @@ static INPUT_PORTS_START( sshoot11 )
+@@ -401,16 +401,16 @@ static INPUT_PORTS_START( sshooter )
  	PORT_DIPUNUSED_DIPLOC( 0x00100000, 0x00100000, "SW1:5" )
  
  	PORT_MODIFY("GUNX1")                /* fake analog X */
@@ -91,10 +106,10 @@ index 68b66dda0f0..66f669d7c07 100644
  
 diff --git a/src/osd/modules/input/input_udev.cpp b/src/osd/modules/input/input_udev.cpp
 new file mode 100644
-index 00000000000..18ec5886de8
+index 0000000..ad7a63c
 --- /dev/null
 +++ b/src/osd/modules/input/input_udev.cpp
-@@ -0,0 +1,401 @@
+@@ -0,0 +1,402 @@
 +#if !defined(SDLMAME_WIN32)
 +
 +// MAME headers
@@ -113,6 +128,7 @@ index 00000000000..18ec5886de8
 +#include <fcntl.h>
 +#include <unistd.h>
 +#include <linux/input.h>
++#include <span>
 +
 +namespace {
 +
@@ -230,7 +246,7 @@ index 00000000000..18ec5886de8
 +    while ((len = read(m_fd, input_events, sizeof(input_events))) > 0) {
 +      len /= sizeof(*input_events);
 +      for (j = 0; j < len; j++) {
-+    	queue_event(input_events[j]);
++    	queue_events(std::span(&(input_events[j]), 1));
 +      }
 +    }
 +  }
@@ -497,14 +513,16 @@ index 00000000000..18ec5886de8
 +
 +MODULE_DEFINITION(LIGHTGUN_UDEV, udev_lightgun_module)
 diff --git a/src/osd/modules/lib/osdobj_common.cpp b/src/osd/modules/lib/osdobj_common.cpp
-index 0096edaeb7c..27d24b3a5ed 100644
+index d2fb751..1e785d1 100644
 --- a/src/osd/modules/lib/osdobj_common.cpp
 +++ b/src/osd/modules/lib/osdobj_common.cpp
-@@ -319,6 +319,7 @@ void osd_common_t::register_options()
- 	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_SDL);
- #endif
+@@ -348,6 +348,7 @@ void osd_common_t::register_options()
+ 	REGISTER_MODULE(m_mod_man, MOUSE_NONE);
+ 
  	REGISTER_MODULE(m_mod_man, LIGHTGUN_X11);
 +	REGISTER_MODULE(m_mod_man, LIGHTGUN_UDEV);
  	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_RAWINPUT);
  	REGISTER_MODULE(m_mod_man, LIGHTGUNINPUT_WIN32);
  	REGISTER_MODULE(m_mod_man, LIGHTGUN_NONE);
+-- 
+2.34.1

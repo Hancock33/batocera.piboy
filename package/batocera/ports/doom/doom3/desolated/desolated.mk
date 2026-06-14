@@ -3,8 +3,8 @@
 # desolated
 #
 ################################################################################
-# Version: Commits on Mar 16, 2026
-DESOLATED_VERSION = 69bb23ebc4299c6eb2f2f6d4c42aa66efc28e9de
+# Version: Commits on Jun 07, 2026
+DESOLATED_VERSION = e5501815ca7181b52432c4620dcd48ed2fa62402
 DESOLATED_SITE = $(call github,dhewm,dhewm3-sdk,$(DESOLATED_VERSION))
 DESOLATED_BRANCH = desolated
 DESOLATED_LICENSE = GPLv3

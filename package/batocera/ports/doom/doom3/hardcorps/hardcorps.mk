@@ -3,8 +3,8 @@
 # hardcorps
 #
 ################################################################################
-# Version: Commits on Mar 16, 2026
-HARDCORPS_VERSION = 375a1d275ae9438781fe64f0d717a5443472ea73
+# Version: Commits on Jun 07, 2026
+HARDCORPS_VERSION = b767e8cf42428e9aa32817cc4456f5bfe8ed8262
 HARDCORPS_SITE = $(call github,dhewm,dhewm3-sdk,$(HARDCORPS_VERSION))
 HARDCORPS_BRANCH = hardcorps
 HARDCORPS_LICENSE = GPLv3

@@ -3,8 +3,8 @@
 # grimm
 #
 ################################################################################
-# Version: Commits on Mar 16, 2026
-GRIMM_VERSION = 3bfac7aea5a9c39afeb83d97500d7f757f6bebc1
+# Version: Commits on Jun 07, 2026
+GRIMM_VERSION = 34cb764c9e618c3073ed645ac71666559334bb17
 GRIMM_SITE = $(call github,dhewm,dhewm3-sdk,$(GRIMM_VERSION))
 GRIMM_BRANCH = grimm
 GRIMM_LICENSE = GPLv3

@@ -3,8 +3,8 @@
 # cdogs
 #
 ################################################################################
-# Version: Commits on Jun 03, 2026
-CDOGS_VERSION = 0cd7c123b0665119bda936a520235c043981b29d
+# Version: Commits on Jan 26, 2026
+CDOGS_VERSION = 2.4.0
 CDOGS_SITE = $(call github,cxong,cdogs-sdl,$(CDOGS_VERSION))
 CDOGS_DEPENDENCIES = sdl2 sdl2_image sdl2_mixer enet
 CDOGS_LICENSE = GPL-2.0
@@ -27,6 +27,7 @@ CDOGS_CONF_OPTS += -DBUILD_TESTING=OFF
 define CDOGS_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/src/cdogs-sdl $(TARGET_DIR)/usr/bin/cdogs
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/cdogs
+	rm -rf $(TARGET_DIR)/usr/share/cdogs
 	mkdir -p $(TARGET_DIR)/usr/share/cdogs
 	cp -pa $(@D)/data	  $(TARGET_DIR)/usr/share/cdogs
 	cp -pa $(@D)/dogfights $(TARGET_DIR)/usr/share/cdogs

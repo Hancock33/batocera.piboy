@@ -29,7 +29,7 @@ index 530eed5b8..cb45921c2 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 4f74adcae..6fa9334aa 100644
+index 54021f65a..ca5328683 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -88,8 +88,15 @@
@@ -59,7 +59,7 @@ index 4f74adcae..6fa9334aa 100644
 +				addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
 +			#else
 +				addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
-+			#endif	
++			#endif
 +			addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
  	}
  	else
@@ -99,14 +99,16 @@ index 4f74adcae..6fa9334aa 100644
  			if (updatesType.empty() || updatesType != BETA_NAME)
  				updatesType = "stable";
  
-@@ -1224,6 +1239,7 @@ void GuiMenu::openUpdatesSettings()
- 				mWindow->pushGui(new GuiUpdate(mWindow));
- 			}
- 		});
+@@ -1235,8 +1250,8 @@ void GuiMenu::openUpdatesSettings()
+ 						     _("NO"), nullptr));
+ 		    });
+ 		  }
 +#endif
  	}
- 
+-
  	mWindow->pushGui(updateGui);
+ }
+ 
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
 index 5cb780ebf..c91f1d0ea 100644
 --- a/es-core/src/utils/Platform.cpp
@@ -142,20 +144,20 @@ index 5cb780ebf..c91f1d0ea 100644
  				std::string chargerRootPath;
  
 -				auto files = Utils::FileSystem::getDirContent("/sys/class/power_supply");
-+	        #if PIBOY
-+		        auto files = Utils::FileSystem::getDirContent("/sys/kernel");
-+	        #else
-+         		auto files = Utils::FileSystem::getDirContent("/sys/class/power_supply");
-+	        #endif
++				#if PIBOY
++					auto files = Utils::FileSystem::getDirContent("/sys/kernel");
++				#else
++					auto files = Utils::FileSystem::getDirContent("/sys/class/power_supply");
++				#endif
  				for (auto file : files)
  				{
-+    		#if PIBOY
-+    			if (Utils::String::toLower(file).find("/xpi_gamecon") != std::string::npos)
-+    			{
-+    				batteryRootPath = file;
-+    				break;
-+    			}
-+    		#else
++			#if PIBOY
++				if (Utils::String::toLower(file).find("/xpi_gamecon") != std::string::npos)
++				{
++					batteryRootPath = file;
++					break;
++				}
++			#else
  					if ((Utils::String::toLower(file).find("/bat") != std::string::npos) && (batteryRootPath.empty()))
  						batteryRootPath = file;
  
@@ -164,8 +166,8 @@ index 5cb780ebf..c91f1d0ea 100644
  					if ((Utils::String::toLower(file).find("charger") != std::string::npos) && (chargerRootPath.empty()))
  						chargerRootPath = file;
 -				}
-+		    #endif
-+		    }
++			#endif
++			}
  
  				// If there's no battery device, look for discrete charger and fuel gauge
  				if (batteryRootPath.empty())
@@ -175,14 +177,14 @@ index 5cb780ebf..c91f1d0ea 100644
  				{
 -					batteryStatusPath = batteryRootPath + "/status";
 -					batteryCapacityPath = batteryRootPath + "/capacity";
-+    		    #if PIBOY
-+    			    batteryStatusPath = batteryRootPath + "/amps";
-+    			    batteryCapacityPath = batteryRootPath + "/percent";
-+    		    #else
-+     			    batteryStatusPath = batteryRootPath + "/status";
-+     			    batteryCapacityPath = batteryRootPath + "/capacity";
++				#if PIBOY
++					batteryStatusPath = batteryRootPath + "/amps";
++					batteryCapacityPath = batteryRootPath + "/percent";
++				#else
++					batteryStatusPath = batteryRootPath + "/status";
++					batteryCapacityPath = batteryRootPath + "/capacity";
  					batteryCurrentPath = batteryRootPath + "/current_avg";
-+    		    #endif
++				#endif
  				}
  			}
  
@@ -190,33 +192,33 @@ index 5cb780ebf..c91f1d0ea 100644
  			else
  			{
  				ret.hasBattery = true;
-+    		#if PIBOY
-+        	 	std::string battlvl;
-+        	 	std::string battsts;
-+        	 	std::ifstream rfile;
++			#if PIBOY
++				std::string battlvl;
++				std::string battsts;
++				std::ifstream rfile;
 +
-+        	 	// Battery Charging
-+        	 	rfile.open(batteryStatusPath);
++				// Battery Charging
++				rfile.open(batteryStatusPath);
 +					if (std::getline(rfile, battsts)) LOG(LogDebug) << "Batt Charging: " + battsts;
 +					int output = Utils::String::toInteger(battsts);
-+	       	 	rfile.close();
++				rfile.close();
 +
-+        	 	if (output < 0)
-+				    ret.isCharging = false;
++				if (output < 0)
++					ret.isCharging = false;
 +				else
-+				    ret.isCharging = true;
++					ret.isCharging = true;
 +
-+        	 	// Battery Level
-+        	 	rfile.open(batteryCapacityPath);
++				// Battery Level
++				rfile.open(batteryCapacityPath);
 +					if (std::getline(rfile, battlvl)) LOG(LogDebug) << "Batt Lvl: " + battlvl;
 +					int intBattLvl = Utils::String::toInteger(battlvl);
-+        	 	rfile.close();
-+        	 	ret.level = intBattLvl;
-+    		#else
++				rfile.close();
++				ret.level = intBattLvl;
++			#else
  				std::string chargerStatus;
  				chargerStatus = Utils::String::replace(Utils::FileSystem::readAllText(batteryStatusPath), "\n", "");
  				ret.isCharging = ((chargerStatus != "Not charging") && (chargerStatus != "Discharging"));
-+    		#endif
++			#endif
  
  				if (batteryCurrentPath.length() > 1 && Utils::FileSystem::exists(batteryCurrentPath))
  				{

@@ -3,8 +3,8 @@
 # libretro-tyrquake
 #
 ################################################################################
-# Version: Commits on Jun 01, 2026
-LIBRETRO_TYRQUAKE_VERSION = af6aa6a03b4488b91fa4b46632d92738474d4674
+# Version: Commits on Jun 14, 2026
+LIBRETRO_TYRQUAKE_VERSION = 5e10328faf30161923fa0f918792fbeb7772ef5b
 LIBRETRO_TYRQUAKE_SITE = $(call github,libretro,tyrquake,$(LIBRETRO_TYRQUAKE_VERSION))
 LIBRETRO_TYRQUAKE_LICENSE = GPLv2
 LIBRETRO_TYRQUAKE_DEPENDENCIES += retroarch

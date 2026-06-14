@@ -43,10 +43,10 @@ index 4cfaf7e202..10f5971c0e 100644
        return true;
     }
 diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
-index 5c5e75ed09..3f014b9fbd 100644
+index 52ecbce2c0..523f1524e4 100644
 --- a/frontend/drivers/platform_unix.c
 +++ b/frontend/drivers/platform_unix.c
-@@ -1889,7 +1889,7 @@ static void frontend_unix_get_env(int *argc,
+@@ -1951,7 +1951,7 @@ static void frontend_unix_get_env(int *argc,
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
@@ -55,7 +55,7 @@ index 5c5e75ed09..3f014b9fbd 100644
     }
     else
        strlcpy(base_path, "retroarch", sizeof(base_path));
-@@ -2493,7 +2493,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
+@@ -2568,7 +2568,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
@@ -80,10 +80,10 @@ index bbdc9ac076..42992c59d4 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index a4f4c4ff0b..d86c1377e0 100644
+index da87864e7a..e0bb2d3b2a 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -6784,7 +6784,7 @@ static void retroarch_print_help(const char *arg0)
+@@ -6847,7 +6847,7 @@ static void retroarch_print_help(const char *arg0)
           "                                 "
           "  $XDG_CONFIG_HOME/retroarch/retroarch.cfg,\n"
           "                                 "
