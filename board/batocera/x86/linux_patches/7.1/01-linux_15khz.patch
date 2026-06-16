@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/Makefile b/drivers/gpu/drm/Makefile
-index ec2c5ff82382..2d753ee11149 100644
+index e97faabcd783..426fdfa9db40 100644
 --- a/drivers/gpu/drm/Makefile
 +++ b/drivers/gpu/drm/Makefile
 @@ -56,6 +56,7 @@ drm-y := \
@@ -257,7 +257,7 @@ index 000000000000..84aa5106c8fa
 +struct drm_display_mode *drm_mode_low_dotclock_res(struct drm_device *dev,
 +				int hsize, int vsize, bool interlace);
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 09b12c30df69..ca88ab0f85eb 100644
+index d4dc8cb45bce..0abcb51a3ab9 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -461,25 +461,31 @@ static int __drm_helper_update_and_validate(struct drm_connector *connector,
@@ -324,10 +324,10 @@ index 09b12c30df69..ca88ab0f85eb 100644
  
  		/*
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index 8fb431cc79a8..ad99d030db61 100644
+index 11391b90c333..273125899c4d 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
-@@ -1806,6 +1806,13 @@ struct drm_cmdline_mode {
+@@ -1866,6 +1866,13 @@ struct drm_cmdline_mode {
  	 */
  	bool interlace;
  

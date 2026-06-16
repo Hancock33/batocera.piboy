@@ -12,7 +12,7 @@ index 72e07b44e858..8a44fcec3e1c 100644
  		if (adjust_flags & CRTC_INTERLACE_HALVE_V) {
  			p->crtc_vdisplay /= 2;
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index ca88ab0f85eb..1c7b4c81a383 100644
+index 0abcb51a3ab9..7c74989f95ce 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -164,6 +164,9 @@ static int drm_helper_probe_add_cmdline_mode(struct drm_connector *connector)

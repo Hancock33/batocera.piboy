@@ -1,8 +1,8 @@
 diff --git a/drivers/bluetooth/btqca.c b/drivers/bluetooth/btqca.c
-index 3b0626920193..1ead1366159b 100644
+index dda76365726f..6e0eb1592171 100644
 --- a/drivers/bluetooth/btqca.c
 +++ b/drivers/bluetooth/btqca.c
-@@ -1019,15 +1019,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);
+@@ -1020,15 +1020,11 @@ EXPORT_SYMBOL_GPL(qca_uart_setup);
  
  int qca_set_bdaddr(struct hci_dev *hdev, const bdaddr_t *bdaddr)
  {
@@ -21,7 +21,7 @@ index 3b0626920193..1ead1366159b 100644
  		err = PTR_ERR(skb);
  		bt_dev_err(hdev, "QCA Change address cmd failed (%d)", err);
 diff --git a/drivers/bluetooth/hci_h5.c b/drivers/bluetooth/hci_h5.c
-index cfdf75dc2847..9724ecda5f12 100644
+index d35383718212..aea99cc27c1f 100644
 --- a/drivers/bluetooth/hci_h5.c
 +++ b/drivers/bluetooth/hci_h5.c
 @@ -116,7 +116,6 @@ struct h5_vnd {
@@ -32,7 +32,7 @@ index cfdf75dc2847..9724ecda5f12 100644
  };
  
  struct h5_device_data {
-@@ -897,8 +896,7 @@ static int h5_serdev_probe(struct serdev_device *serdev)
+@@ -900,8 +899,7 @@ static int h5_serdev_probe(struct serdev_device *serdev)
  	if (IS_ERR(h5->device_wake_gpio))
  		return PTR_ERR(h5->device_wake_gpio);
  
@@ -42,7 +42,7 @@ index cfdf75dc2847..9724ecda5f12 100644
  }
  
  static void h5_serdev_remove(struct serdev_device *serdev)
-@@ -1105,7 +1103,6 @@ static struct h5_vnd rtl_vnd = {
+@@ -1108,7 +1106,6 @@ static struct h5_vnd rtl_vnd = {
  	.suspend	= h5_btrtl_suspend,
  	.resume		= h5_btrtl_resume,
  	.acpi_gpio_map	= acpi_btrtl_gpios,
@@ -51,10 +51,10 @@ index cfdf75dc2847..9724ecda5f12 100644
  
  static const struct h5_device_data h5_data_rtl8822cs = {
 diff --git a/drivers/bluetooth/hci_qca.c b/drivers/bluetooth/hci_qca.c
-index bb9f002aa85e..359dd318abb0 100644
+index 34500137df2c..c4802efd7c86 100644
 --- a/drivers/bluetooth/hci_qca.c
 +++ b/drivers/bluetooth/hci_qca.c
-@@ -1877,12 +1877,13 @@ static int qca_power_on(struct hci_dev *hdev)
+@@ -1879,12 +1879,13 @@ static int qca_power_on(struct hci_dev *hdev)
  
  static void hci_coredump_qca(struct hci_dev *hdev)
  {
@@ -72,7 +72,7 @@ index bb9f002aa85e..359dd318abb0 100644
  }
  
  static int qca_get_data_path_id(struct hci_dev *hdev, __u8 *data_path_id)
-@@ -2393,9 +2394,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2405,9 +2406,6 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  	if (!qcadev->oper_speed)
  		BT_DBG("UART will pick default operating speed");
  
@@ -82,7 +82,7 @@ index bb9f002aa85e..359dd318abb0 100644
  	if (data)
  		qcadev->btsoc_type = data->soc_type;
  	else
-@@ -2476,7 +2474,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
+@@ -2489,7 +2487,7 @@ static int qca_serdev_probe(struct serdev_device *serdev)
  
  		qcadev->sw_ctrl = devm_gpiod_get_optional(&serdev->dev, "swctrl",
  					       GPIOD_IN);

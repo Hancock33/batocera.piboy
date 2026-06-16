@@ -1,8 +1,8 @@
 diff --git a/drivers/acpi/osl.c b/drivers/acpi/osl.c
-index 62b9c83d4f20..eac11f01e9e6 100644
+index ed2162a97bd2..128e4921f5bd 100644
 --- a/drivers/acpi/osl.c
 +++ b/drivers/acpi/osl.c
-@@ -1581,7 +1581,7 @@ void acpi_os_release_lock(acpi_spinlock lockp, acpi_cpu_flags not_used)
+@@ -1598,7 +1598,7 @@ void acpi_os_release_lock(acpi_spinlock lockp, acpi_cpu_flags not_used)
  acpi_status
  acpi_os_create_cache(char *name, u16 size, u16 depth, acpi_cache_t **cache)
  {

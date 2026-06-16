@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-index 11851ab87599..4978d83410c6 100644
+index 738c9f1c5207..266d2ba3bc56 100644
 --- a/drivers/gpu/drm/drm_connector.c
 +++ b/drivers/gpu/drm/drm_connector.c
 @@ -278,6 +278,7 @@ static int drm_connector_init_only(struct drm_device *dev,
@@ -23,10 +23,10 @@ index 11851ab87599..4978d83410c6 100644
  		drm_mode_remove(connector, mode);
  
 diff --git a/drivers/gpu/drm/drm_ioctl.c b/drivers/gpu/drm/drm_ioctl.c
-index ff193155129e..1cebd4790c52 100644
+index e2df4becce62..efb036926a2e 100644
 --- a/drivers/gpu/drm/drm_ioctl.c
 +++ b/drivers/gpu/drm/drm_ioctl.c
-@@ -679,8 +679,8 @@ static const struct drm_ioctl_desc drm_ioctls[] = {
+@@ -680,8 +680,8 @@ static const struct drm_ioctl_desc drm_ioctls[] = {
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_SETGAMMA, drm_mode_gamma_set_ioctl, DRM_MASTER),
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETENCODER, drm_mode_getencoder, 0),
  	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETCONNECTOR, drm_mode_getconnector, 0),
@@ -281,7 +281,7 @@ index 8a44fcec3e1c..097998cebfca 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 1c7b4c81a383..f597bab6e0e8 100644
+index 7c74989f95ce..1cae57d27630 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -386,6 +386,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
@@ -344,10 +344,10 @@ index 1c7b4c81a383..f597bab6e0e8 100644
  
  	list_for_each_entry(mode, &connector->modes, head) {
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index ad99d030db61..d33a717a124c 100644
+index 273125899c4d..4ece77c206a4 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
-@@ -2127,6 +2127,14 @@ struct drm_connector {
+@@ -2187,6 +2187,14 @@ struct drm_connector {
  	 */
  	struct list_head probed_modes;
  
