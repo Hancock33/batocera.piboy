@@ -1,19 +1,15 @@
 diff --git a/src/common/fs/path_util.cpp b/src/common/fs/path_util.cpp
-index 9b57fda295..c418f48060 100644
+index 3844cca06b..9e9f1b08fe 100644
 --- a/src/common/fs/path_util.cpp
 +++ b/src/common/fs/path_util.cpp
-@@ -149,22 +149,22 @@ public:
-         LEGACY_PATH(Suyu, SUYU)
+@@ -150,25 +150,25 @@ public:
  #undef LEGACY_PATH
  #endif
+         // data
 -        GenerateEdenPath(EdenPath::EdenDir, eden_path);
 -        GenerateEdenPath(EdenPath::AmiiboDir, eden_path / AMIIBO_DIR);
--        GenerateEdenPath(EdenPath::CacheDir, eden_path_cache);
--        GenerateEdenPath(EdenPath::ConfigDir, eden_path_config);
 +        GenerateEdenPath(EdenPath::EdenDir, "/userdata/saves/switch/yuzu");
 +        GenerateEdenPath(EdenPath::AmiiboDir, "/userdata/bios/switch/amiibo");
-+        GenerateEdenPath(EdenPath::CacheDir, "/userdata/system/cache/yuzu");
-+        GenerateEdenPath(EdenPath::ConfigDir, "/userdata/system/configs/yuzu");
          GenerateEdenPath(EdenPath::CrashDumpsDir, eden_path / CRASH_DUMPS_DIR);
 -        GenerateEdenPath(EdenPath::DumpDir, eden_path / DUMP_DIR);
 -        GenerateEdenPath(EdenPath::KeysDir, eden_path / KEYS_DIR);
@@ -29,12 +25,19 @@ index 9b57fda295..c418f48060 100644
          GenerateEdenPath(EdenPath::SaveDir, eden_path / NAND_DIR);
 -        GenerateEdenPath(EdenPath::ScreenshotsDir, eden_path / SCREENSHOTS_DIR);
 -        GenerateEdenPath(EdenPath::SDMCDir, eden_path / SDMC_DIR);
--        GenerateEdenPath(EdenPath::ShaderDir, eden_path / SHADER_DIR);
 -        GenerateEdenPath(EdenPath::TASDir, eden_path / TAS_DIR);
 +        GenerateEdenPath(EdenPath::ScreenshotsDir, "/userdata/screenshots/switch");
 +        GenerateEdenPath(EdenPath::SDMCDir, "/userdata/bios/switch/sdmc");
-+        GenerateEdenPath(EdenPath::ShaderDir, "/userdata/saves/switch/yuzu/shaders");
 +        GenerateEdenPath(EdenPath::TASDir, "/userdata/saves/switch/yuzu/tas");
          GenerateEdenPath(EdenPath::IconsDir, eden_path / ICONS_DIR);
- 
+         // config
+-        GenerateEdenPath(EdenPath::ConfigDir, eden_path_config);
++        GenerateEdenPath(EdenPath::ConfigDir, "/userdata/system/configs/yuzu");
+         // cache
+-        GenerateEdenPath(EdenPath::CacheDir, eden_path_cache);
+-        GenerateEdenPath(EdenPath::ShaderDir, eden_path_cache / SHADER_DIR);
++        GenerateEdenPath(EdenPath::CacheDir, "/userdata/system/cache/yuzu");
++        GenerateEdenPath(EdenPath::ShaderDir, "/userdata/saves/switch/yuzu/shaders");
  #ifdef _WIN32
+         GenerateLegacyPath(EmuPath::RyujinxDir, GetAppDataRoamingDirectory() / RYUJINX_DIR);
+ #else
