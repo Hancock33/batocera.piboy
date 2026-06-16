@@ -10613,11 +10613,10 @@ index 912b2a8464ab..3848a9c06f18 100644
  
  	/*
  	 * Since we fell out of the loop above, we know TIF_NEED_RESCHED must
-@@ -461,6 +461,8 @@ void cpu_startup_entry(enum cpuhp_state state)
+@@ -461,6 +461,7 @@ void cpu_startup_entry(enum cpuhp_state state)
  		do_idle();
  }
  
-+#ifndef CONFIG_SCHED_ALT
 +#ifndef CONFIG_SCHED_ALT
  /*
   * idle-task scheduling class.
