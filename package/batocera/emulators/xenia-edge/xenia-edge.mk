@@ -27,7 +27,12 @@ define XENIA_EDGE_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/bin/Linux/xenia_edge $(TARGET_DIR)/usr/bin/xenia-edge/xenia_edge
 endef
 
+XENIA_EDGE_POST_EXTRACT_HOOKS += XENIA_EDGE_SLANGC
 XENIA_EDGE_POST_INSTALL_TARGET_HOOKS += XENIA_EDGE_POST_PROCESS
+
+define XENIA_EDGE_SLANGC
+	cd $(@D) && ./xenia-build.py slang
+endef
 
 define XENIA_EDGE_POST_PROCESS
 	# get the latest patches
