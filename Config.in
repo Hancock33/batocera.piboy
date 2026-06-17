@@ -52,12 +52,6 @@ menu "System"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-utility-libraries/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/gpu/vulkan/vulkan-validationlayers/Config.in"
   endmenu
-
-  menu "Network"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8852au/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtl8852cu/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/network/rtw88/Config.in"
-  endmenu
 endmenu
 
 menu "Audio"
