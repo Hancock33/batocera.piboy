@@ -1,0 +1,13 @@
+diff --git a/src/nba/src/hw/ppu/sprite.cc b/src/nba/src/hw/ppu/sprite.cc
+index 20def0f..c155cc1 100644
+--- a/src/nba/src/hw/ppu/sprite.cc
++++ b/src/nba/src/hw/ppu/sprite.cc
+@@ -29,7 +29,7 @@ void PPU::InitSprite() {
+   // @todo: in unlocked H-blank mode VRAM fetch appears to stop at cycle 960?
+   sprite.latch_cycle_limit = mmio.dispcnt.hblank_oam_access ? 964U : 1232U;
+ 
+-  std::memset(sprite.buffer_wr, 0, sizeof(Sprite::Pixel) * 240);
++  memset(sprite.buffer_wr, 0, sizeof(Sprite::Pixel) * 240);
+ }
+ 
+ void PPU::DrawSprite() {
