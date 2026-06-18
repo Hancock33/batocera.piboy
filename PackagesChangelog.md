@@ -1,7 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|683556d923962845fca409c8f633e459734a3541|Jun 17, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|683556d923962845fca409c8f633e459734a3541|Jun 17, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|74856dff26a9631628b6e7105152f13294043032|Jun 17, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|74856dff26a9631628b6e7105152f13294043032|Jun 17, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|fbeb53c25fa9aba20cd2c3654b2c404b65ab2e6b|Jun 17, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|079a4af651f8a8e33c788c6e9b4a3545ebedb4d3|Jun 17, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|ed3450199b7fc2f4b97c9a4de0a569d19f1cc725|Jun 17, 2026
@@ -590,6 +590,8 @@ Boot|[uboot-rk356x](https://ftp.denx.de/pub/u-boot)|2026.04|N/A
 Boot|[uboot-rk3576](https://ftp.denx.de/pub/u-boot)|2026.04|N/A
 Emulators|[demul]()|demul_251220|N/A
 Firmwares|[firmware-khadas-vim4](https://dl.khadas.com/repos/vim4/pool/main/l/linux-board-package-noble-vim4)|1.7.3|N/A
+Leds|[keros-leds](\)|2f66450cad94ff435dc2ce5185ff16f9ca31f5d2|N/A
 Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/)|$(PIPEWIRE_VERSION)|N/A
+Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A
 Utils|[wlrctl](https://git.sr.ht/~brocellous/wlrctl/archive)|v0.2.2|N/A
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A
