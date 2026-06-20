@@ -1,7 +1,7 @@
-diff --git a/src/nba/src/hw/ppu/sprite.cc b/src/nba/src/hw/ppu/sprite.cc
+diff --git a/src/nba/src/hw/ppu/sprite.cpp b/src/nba/src/hw/ppu/sprite.cpp
 index 20def0f..c155cc1 100644
---- a/src/nba/src/hw/ppu/sprite.cc
-+++ b/src/nba/src/hw/ppu/sprite.cc
+--- a/src/nba/src/hw/ppu/sprite.cpp
++++ b/src/nba/src/hw/ppu/sprite.cpp
 @@ -29,7 +29,7 @@ void PPU::InitSprite() {
    // @todo: in unlocked H-blank mode VRAM fetch appears to stop at cycle 960?
    sprite.latch_cycle_limit = mmio.dispcnt.hblank_oam_access ? 964U : 1232U;
