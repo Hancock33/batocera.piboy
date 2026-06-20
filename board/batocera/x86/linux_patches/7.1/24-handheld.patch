@@ -548,7 +548,7 @@ index a1d05df0ac99..dc4f3a8d0d35 100644
  	snprintf(bl_name, sizeof(bl_name),
  		 "amdgpu_bl%d", dev->primary->index);
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index adefb6b94b54..a03681389faf 100644
+index c66250f5dd8d..e7cb5244f19e 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -157,6 +157,9 @@ MODULE_FIRMWARE(FIRMWARE_DCN_401_DMUB);
@@ -571,7 +571,7 @@ index adefb6b94b54..a03681389faf 100644
  	bool pflip_present = false;
  	bool dirty_rects_changed = false;
 diff --git a/drivers/gpu/drm/amd/display/dc/dc.h b/drivers/gpu/drm/amd/display/dc/dc.h
-index cacf4f091700..601cc255feeb 100644
+index 23f2fce2a6a7..27b93870053d 100644
 --- a/drivers/gpu/drm/amd/display/dc/dc.h
 +++ b/drivers/gpu/drm/amd/display/dc/dc.h
 @@ -68,7 +68,7 @@ struct dcn_dccg_reg_state;
@@ -14864,7 +14864,7 @@ index f4aa814a0397..90dd007dd59c 100644
  
  unlock:
 diff --git a/sound/hda/codecs/realtek/alc269.c b/sound/hda/codecs/realtek/alc269.c
-index a33bce6bb8d9..0a6c0acc36e2 100644
+index 943394cbec25..b5c351ce6065 100644
 --- a/sound/hda/codecs/realtek/alc269.c
 +++ b/sound/hda/codecs/realtek/alc269.c
 @@ -2841,6 +2841,20 @@ static void alc294_gx502_toggle_output(struct hda_codec *codec,
@@ -15028,10 +15028,10 @@ index 000000000000..d32f319a5b01
 +
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx.c b/sound/soc/codecs/aw87xxx/aw87xxx.c
 new file mode 100644
-index 000000000000..3d732400e449
+index 000000000000..18b29f609219
 --- /dev/null
 +++ b/sound/soc/codecs/aw87xxx/aw87xxx.c
-@@ -0,0 +1,1601 @@
+@@ -0,0 +1,1600 @@
 +/*
 + * aw87xxx.c  aw87xxx pa module
 + *
@@ -15050,7 +15050,6 @@ index 000000000000..3d732400e449
 +#include <sound/pcm.h>
 +#include <sound/pcm_params.h>
 +#include <linux/gpio.h>
-+#include <linux/of_gpio.h>
 +#include <linux/gpio/consumer.h>
 +#include <linux/interrupt.h>
 +#include <linux/delay.h>
@@ -18532,10 +18531,10 @@ index 000000000000..ebe0c77f5674
 +#endif
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx_bin_parse.c b/sound/soc/codecs/aw87xxx/aw87xxx_bin_parse.c
 new file mode 100644
-index 000000000000..7eab9efde147
+index 000000000000..967662628399
 --- /dev/null
 +++ b/sound/soc/codecs/aw87xxx/aw87xxx_bin_parse.c
-@@ -0,0 +1,515 @@
+@@ -0,0 +1,514 @@
 +/*
 +* aw87xxx_bin_parse.c
 +*
@@ -18550,7 +18549,6 @@ index 000000000000..7eab9efde147
 +#include <linux/module.h>
 +#include <linux/kernel.h>
 +#include <linux/i2c.h>
-+#include <linux/of_gpio.h>
 +#include <linux/delay.h>
 +#include <linux/device.h>
 +#include <linux/firmware.h>
@@ -19132,10 +19130,10 @@ index 000000000000..a99c2409e613
 +#endif
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx_device.c b/sound/soc/codecs/aw87xxx/aw87xxx_device.c
 new file mode 100644
-index 000000000000..a4c9ad7d96dc
+index 000000000000..35a0f9114718
 --- /dev/null
 +++ b/sound/soc/codecs/aw87xxx/aw87xxx_device.c
-@@ -0,0 +1,977 @@
+@@ -0,0 +1,975 @@
 +/*
 + * aw87xxx_device.c  aw87xxx pa module
 + *
@@ -19152,7 +19150,6 @@ index 000000000000..a4c9ad7d96dc
 +
 +#include <linux/i2c.h>
 +#include <linux/gpio.h>
-+#include <linux/of_gpio.h>
 +#include <linux/interrupt.h>
 +#include <linux/delay.h>
 +#include <linux/kernel.h>
@@ -20112,7 +20109,6 @@ index 000000000000..a4c9ad7d96dc
 +	return ret;
 +}
 +
-+
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx_device.h b/sound/soc/codecs/aw87xxx/aw87xxx_device.h
 new file mode 100644
 index 000000000000..7c85f80a958e
@@ -20741,10 +20737,10 @@ index 000000000000..b3bde38a23c6
 +#endif
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx_monitor.c b/sound/soc/codecs/aw87xxx/aw87xxx_monitor.c
 new file mode 100644
-index 000000000000..f580506b2786
+index 000000000000..7d8dadd008dc
 --- /dev/null
 +++ b/sound/soc/codecs/aw87xxx/aw87xxx_monitor.c
-@@ -0,0 +1,1208 @@
+@@ -0,0 +1,1206 @@
 +/*
 + * aw87xxx_monitor.c
 + *
@@ -20770,7 +20766,6 @@ index 000000000000..f580506b2786
 +#include <linux/hrtimer.h>
 +#include <linux/i2c.h>
 +#include <linux/gpio.h>
-+#include <linux/of_gpio.h>
 +#include <linux/interrupt.h>
 +#include <linux/irq.h>
 +#include <linux/firmware.h>
@@ -21952,7 +21947,6 @@ index 000000000000..f580506b2786
 +				&aw_monitor_control_group);
 +	}
 +}
-+
 diff --git a/sound/soc/codecs/aw87xxx/aw87xxx_monitor.h b/sound/soc/codecs/aw87xxx/aw87xxx_monitor.h
 new file mode 100644
 index 000000000000..daf9f2bfa09f

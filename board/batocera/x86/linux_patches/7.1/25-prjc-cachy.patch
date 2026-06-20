@@ -10584,7 +10584,7 @@ index 74c1617cf652..5b38a3ba7009 100644
  void proc_sched_set_task(struct task_struct *p)
  {
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index 912b2a8464ab..3848a9c06f18 100644
+index 912b2a8464ab..fdfd74be83bf 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -297,10 +297,10 @@ static void do_idle(void)
@@ -10621,7 +10621,7 @@ index 912b2a8464ab..3848a9c06f18 100644
  /*
   * idle-task scheduling class.
   */
-@@ -598,3 +600,4 @@ DEFINE_SCHED_CLASS(idle) = {
+@@ -598,3 +599,4 @@ DEFINE_SCHED_CLASS(idle) = {
  	.switching_to		= switching_to_idle,
  	.update_curr		= update_curr_idle,
  };
