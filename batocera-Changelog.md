@@ -15,7 +15,9 @@
 - ES Setting for toggle fast forward
 - Dolphin GameCube Controller type BattlerGC Pro (x-input mode with analog+digital triggers)
 - ES setting to determnine mitigations On|Off(Default On)
+- ES setting to choose controller LED mode (Rainbow, Pulse Chroma)
 - box64 userland x86_64 emulator for aarch64
+- Legion Go / Go 2 LED controller support
 ### Fixed
 
 ### Changed / Improved
@@ -65,6 +67,7 @@
 - Tsugaru to v20251206
 - Vita3k to 10th of June build
 - VKQuake to 1.34.1
+- Winetricks to 20260125
 ### System
 - Allwinner H700 device kernel updated to 7.0.11
 - ALSA UCM configuration to v1.2.16
