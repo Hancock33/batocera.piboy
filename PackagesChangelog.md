@@ -1,20 +1,22 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|c0a8d9dac89f45d57994ed737496d4b92d27d8f0|Jun 21, 2026
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|a64851a1f7f7a2fb3d4d3dd83ee78c45f994c3e5|Jun 21, 2026
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|5268f43b045b5ef8cba04231db6d3ea86933883e|Jun 21, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|2a23fac07aac90adcb157dcac0641bf08c36e933|Jun 21, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|266239a9e763d70f65d07dc83a0270cfb20fc314|Jun 21, 2026
-Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|5f8f670ef0c1b51910a7047b6845c2d66ec61207|Jun 21, 2026
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2de4d0d3642a5cc9df569c318e32bffa1e51f5a5|Jun 21, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|e6200740c0a3753d6ff0cadd40fcad6d182f72ce|Jun 21, 2026
+Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|cd260dcf2cd10643092906af9c177d9ea44ecb2c|Jun 21, 2026
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|3366ad06d0489be0593d03ce85daf9ef81c830e0|Jun 21, 2026
+Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|b68dcbb160282903022e897e96a14c39c10a89ce|Jun 21, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|10246c1d06290f2d7102421e9b65543ab1a1a799|Jun 21, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|12c4db9351df5d297e543dc9fa8fbe909a123c60|Jun 21, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|de5ea2b0f660878aa4bd141ad263dd45385258c9|Jun 21, 2026
+Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|6b73e1c8d26342cdc64b321afb1b4c17a5bf0cb0|Jun 21, 2026
 Boot|[rocknix-abl](http://github.com/ROCKNIX/abl)|v1.1.2|Jun 20, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|7351f65717caf046cebcb4b14c48c166e15a6edf|Jun 20, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|7351f65717caf046cebcb4b14c48c166e15a6edf|Jun 20, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|a426df48234f0e59cb64684a35a389cda56087ce|Jun 20, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|7b97ec4594b682d19fb3ce921c37297112d9cb87|Jun 20, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|d3f0ad7ea09384a0d2df1118dbb82c054b5f1986|Jun 20, 2026
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|e751cd020e1434dfed374d1258a0e300e18ae8ca|Jun 20, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.423|Jun 20, 2026
 Emulators|[touchhle](https://github.com/touchHLE/touchHLE.git)|c6f73adf03c880773b160a1333cda51b6099c31a|Jun 20, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46150|Jun 20, 2026
@@ -129,7 +131,6 @@ Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|f72bf616117a84028
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|901a8ddaf425fa8ee6c35fd3e757afb0878d66fc|Jun 09, 2026
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|aedc27e367b65f002afb5098684f39eb6124079c|Jun 09, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|1bc817e16959b5cade42b1398ee0ff7582b5c402|Jun 09, 2026
-Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|e0b71ac33027da96f61a75c9fb851b938be36bf1|Jun 09, 2026
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.136|Jun 08, 2026
 Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.15.2|Jun 08, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|v0.4.3-3|Jun 08, 2026
@@ -325,7 +326,6 @@ Gpu|[gtk-layer-shell](http://github.com/wmww/gtk-layer-shell)|v0.10.1|Apr 04, 20
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|58f5ca357c7bea7c29436252bd03f6f3ef28e643|Apr 04, 2026
 Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)|bc9a5e6a28758824a90de193f04b32d58b23e3f3|Apr 04, 2026
 Emulators|[libretro-theodore](http://github.com/Zlika/theodore)|121ae2513d3ee29f0aaf765a64dc086d57e7a4c7|Apr 03, 2026
-Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|d42832db588d9898b64e72cce355020990a04ea5|Apr 02, 2026
 Emulators|[libretro-jaxe](https://github.com/kurtjd/jaxe.git)|581befc5d7273abc20ea1b137744f414aa70592c|Apr 02, 2026
 Emulators|[libretro-jollycv](http://github.com/libretro/jollycv)|9ceb88e4370b2e04a597b03a9ffe4551c899d6c2|Apr 02, 2026
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|f9211077f46160b9f6680a835fa42e0211b1d98b|Apr 02, 2026
