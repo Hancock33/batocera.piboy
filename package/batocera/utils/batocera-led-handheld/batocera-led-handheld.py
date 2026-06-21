@@ -57,9 +57,9 @@ def check_support():
     model = batoled.batocera_model()
     if model in ["pwm", "rgbaddr", "legiongos", "legiongo", "multiled", "dual_multiled", "odin_mono", "cubexx", "rg_vita_pro", "r36ultra"]:
         for path in [
-            "/sys/class/power_supply/BAT0", 
-            "/sys/class/power_supply/BAT1", 
-            "/sys/class/power_supply/qcom-battery", 
+            "/sys/class/power_supply/BAT0",
+            "/sys/class/power_supply/BAT1",
+            "/sys/class/power_supply/qcom-battery",
             "/sys/class/power_supply/battery"
         ]:
             if os.path.exists(path):
@@ -146,7 +146,7 @@ def led_check(led):
                 if (ch == "Discharging") and (bt == "100"):
                     bt = '99'
                 block = read_color(bt, ledconfig)
-                
+
                 # Resolve the color block or transition mode dynamically
                 target_action = block
                 if block == "ESCOLOR":
@@ -170,7 +170,7 @@ def led_check(led):
                             led.set_color(target_action)
                             last_state = target_action
                     except Exception as e:
-                        print (f"Error: {e}") 
+                        print (f"Error: {e}")
 
                 if is_software_effect:
                     time.sleep(0.1)

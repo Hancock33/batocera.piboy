@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PWM + RGB + Multi-LED unified LED driver 
+PWM + RGB + Multi-LED unified LED driver
 Written for Batocera - @lbrpdx
 Updated for kernel module updates - @dmanlfc
 Updated for multi-led platform - @dmanlfc
@@ -113,10 +113,10 @@ class rgvitaproled(object):
     def __init__(self):
         left_glob = glob.glob('/sys/class/leds/*::joystick-left')
         right_glob = glob.glob('/sys/class/leds/*::joystick-right')
-        
+
         self.left_path = left_glob[0] if left_glob else None
         self.right_path = right_glob[0] if right_glob else None
-        
+
         self.sysfs_path = None
         if self.left_path:
             try:
@@ -124,7 +124,7 @@ class rgvitaproled(object):
                 self.sysfs_path = os.path.realpath(os.path.join(self.left_path, 'device'))
             except Exception:
                 pass
-                
+
         self.max_val = 255
         self.current_color = "000000"
         self._init_hardware()
@@ -194,7 +194,7 @@ class rgvitaproled(object):
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
             self.current_color = rgb
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):
@@ -344,24 +344,24 @@ class cubexxled(object):
             # Enable GPIO power to the LED MCU
             with open(self.gpio_path, 'w') as f:
                 f.write('1')
-            
+
             # Construct the fixed-length 51-byte packet
             payload = bytearray()
             payload.append(mode)              # LED_MODE: Configurable
             payload.append(int(brightness))   # BRIGHTNESS
-            
+
             # 8 LEDs for the Right Ring
             for _ in range(8):
                 payload.extend([int(r), int(g), int(b)])
-                
+
             # 8 LEDs for the Left Ring
             for _ in range(8):
                 payload.extend([int(r), int(g), int(b)])
-                
+
             # Generate the 8-bit checksum
             checksum = sum(payload) & 0xFF
             payload.append(checksum)
-            
+
             # Write out payload
             with open(self.serial_dev, 'wb') as f:
                 f.write(payload)
@@ -403,7 +403,7 @@ class cubexxled(object):
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
             self.current_color = rgb
-        
+
         self._write_hardware(1, b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):
@@ -510,7 +510,7 @@ class odinmono(object):
 
         if rgb == "ESCOLOR":
             b_conf = batoconf("led.brightness")
-            if b_conf is None: 
+            if b_conf is None:
                 b_conf = 1
             self._write_hardware(b_conf)
         elif rgb in ["RAINBOW", "PULSE", "CHROMA"]:
@@ -600,13 +600,13 @@ class dual_multiled(object):
         # Scan for both left (l1-l3) and right (r1-r3) paths
         self.left_paths = sorted(glob.glob('/sys/class/leds/rgb:l*/'))
         self.right_paths = sorted(glob.glob('/sys/class/leds/rgb:r*/'))
-        
+
         # Fallback to absolute paths if symlinks are not populated
         if not self.left_paths:
             self.left_paths = glob.glob('/sys/devices/platform/multi-ledl*/leds/rgb:l*/')
         if not self.right_paths:
             self.right_paths = glob.glob('/sys/devices/platform/multi-ledr*/leds/rgb:r*/')
-            
+
         self.all_paths = self.left_paths + self.right_paths
         self.max_val = 255
 
@@ -629,9 +629,9 @@ class dual_multiled(object):
 
         # Fetch system brightness configuration
         b_conf = batoconf("led.brightness")
-        if b_conf is None: 
+        if b_conf is None:
             b_conf = 255
-        
+
         if rgb == "ESCOLOR":
             r, g, b = batoconf_color()
         elif rgb == "RAINBOW":
@@ -645,7 +645,7 @@ class dual_multiled(object):
             return
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):
@@ -714,9 +714,9 @@ class dual_multiled(object):
                         f.write(f"{r} {g} {b}")
                 except Exception:
                     pass
-            
+
             time.sleep(EFFECT_DURATION/EFFECT_STEP)
-            
+
         if batoconf("led.mode") != "rainbow":
             self.set_color("ESCOLOR")
 
@@ -737,7 +737,7 @@ class dual_multiled(object):
             r, g, b = hex_to_dec(o[0:2]), hex_to_dec(o[2:4]), hex_to_dec(o[4:6])
             self._write_hardware(b_conf, r, g, b)
             time.sleep((EFFECT_DURATION * 2) / EFFECT_STEP)
-            
+
         if batoconf("led.mode") != "chroma":
             self.set_color("ESCOLOR")
 
@@ -748,7 +748,7 @@ class dual_multiled(object):
             o = getPulseRGB(i, EFFECT_STEP, base_hex)
             self.set_color(o)
             time.sleep(PULSE_DURATION/EFFECT_STEP)
-            
+
         if batoconf("led.mode") != "pulse":
             self.set_color("ESCOLOR")
 
@@ -778,13 +778,13 @@ class multiled(object):
         # Scan for both left (l1-l9) and right (r1-r9) paths inside standard sysfs location
         self.left_paths = sorted(glob.glob('/sys/class/leds/rgb:l*/'))
         self.right_paths = sorted(glob.glob('/sys/class/leds/rgb:r*/'))
-        
+
         # Fallback to absolute paths if symlinks are not populated
         if not self.left_paths:
             self.left_paths = sorted(glob.glob('/sys/devices/platform/multi-led-*/leds/rgb:l*/'))
         if not self.right_paths:
             self.right_paths = sorted(glob.glob('/sys/devices/platform/multi-led-*/leds/rgb:r*/'))
-            
+
         self.all_paths = self.left_paths + self.right_paths
         self.max_val = 255
 
@@ -806,9 +806,9 @@ class multiled(object):
 
         # Get brightness from config
         b_conf = batoconf("led.brightness")
-        if b_conf is None: 
+        if b_conf is None:
             b_conf = 255
-        
+
         if rgb == "ESCOLOR":
             r, g, b = batoconf_color()
         elif rgb == "RAINBOW":
@@ -822,7 +822,7 @@ class multiled(object):
             return
         else:
             r, g, b = hex_to_dec(rgb[0:2]), hex_to_dec(rgb[2:4]), hex_to_dec(rgb[4:6])
-        
+
         self._write_hardware(b_conf, r, g, b)
 
     def set_color_dec(self, rgb_str):
@@ -887,9 +887,9 @@ class multiled(object):
                         f.write(f"{r} {g} {b}")
                 except Exception:
                     pass
-            
+
             time.sleep(EFFECT_DURATION/EFFECT_STEP)
-            
+
         if batoconf("led.mode") != "rainbow":
             self.set_color("ESCOLOR")
 
@@ -909,9 +909,9 @@ class multiled(object):
             o = getRainbowRGB(float(i/EFFECT_STEP))
             r, g, b = hex_to_dec(o[0:2]), hex_to_dec(o[2:4]), hex_to_dec(o[4:6])
             self._write_hardware(b_conf, r, g, b)
-            
+
             time.sleep((EFFECT_DURATION * 2) / EFFECT_STEP)
-            
+
         if batoconf("led.mode") != "chroma":
             self.set_color("ESCOLOR")
 
@@ -957,7 +957,7 @@ class legiongo_family_led(object):
             print(f"Warning: could not confirm Legion Go ({prefix}) mode=custom after retries")
         if not self._write_verified(self.enabled_file, 'true'):
             print(f"Warning: could not confirm Legion Go ({prefix}) enabled=true after retries")
-        
+
         # Default the hardware delay speed to 100 (slowest possible transition)
         if not self._write_verified(self.speed_file, '100'):
             print(f"Warning: could not confirm Legion Go ({prefix}) speed=100 after retries")
@@ -1114,11 +1114,11 @@ class legiongo_family_led(object):
     def set_brightness_conf (self):
         conf = batoconf("led.brightness")
         if conf is None:
-            conf = 100 
+            conf = 100
         try:
             with open(self.max_brightness, 'r') as m:
                 max_v = int(m.readline().strip())
-            
+
             percentage = max(0, min(100, float(conf)))
             scaled_value = int((percentage / 100.0) * max_v)
             self.set_brightness(scaled_value)
@@ -1275,7 +1275,7 @@ class r36ultraled():
 class rgbled(object):
     def __init__(self):
         self.bpath = None
-        
+
         # Use glob to find newer joystick ring LEDs dynamically
         found_paths = glob.glob('/sys/class/leds/*:rgb:joystick_rings/')
         if found_paths:
@@ -1373,7 +1373,7 @@ class rgbled(object):
         try:
             with open(self.max_brightness, 'r') as m:
                 max_v = int(m.readline().strip())
-            
+
             percentage = max(0, min(100, float(conf)))
             scaled_value = int((percentage / 100.0) * max_v)
             self.set_brightness(scaled_value)
@@ -1462,7 +1462,7 @@ class pwmled(object):
         elif rgb == "OFF":
             self.turn_off()
             return
-        
+
         factor = self._get_factor()
         if rgb == "ESCOLOR":
             r_raw, g_raw, b_raw = batoconf_color()
@@ -1504,7 +1504,7 @@ class pwmled(object):
         if len(int_list) != 3:
             print (f'Argument expects three ints for R G B, not {rgb}')
             return (1)
-        
+
         factor = self._get_factor()
         r = str(int((int_list[0]/255.0) * factor * self.period))
         g = str(int((int_list[1]/255.0) * factor * self.period))
@@ -1573,7 +1573,7 @@ class rgbledaddr(object):
         self.all_r = sorted(glob.glob('/sys/class/leds/[lr]:r?/brightness'))
         self.all_g = sorted(glob.glob('/sys/class/leds/[lr]:g?/brightness'))
         self.all_b = sorted(glob.glob('/sys/class/leds/[lr]:b?/brightness'))
-        
+
         # Determine hardware max brightness (usually 255)
         self.max_val = self._get_hw_max()
 
@@ -1585,11 +1585,11 @@ class rgbledaddr(object):
                 with open(max_path, 'r') as f:
                     return int(f.readline().strip())
             except: pass
-        return 255 
+        return 255
 
     def _get_factor(self):
         val = batoconf("led.brightness")
-        if val is None: 
+        if val is None:
             return 1.0
         try:
             # Strictly treat as percentage (0 to 100)
@@ -1601,12 +1601,12 @@ class rgbledaddr(object):
 
     def _write_scaled(self, r, g, b):
         factor = self._get_factor()
-        
+
         # Math: (Color_Input / 255) * User_Brightness_Percent * Hardware_Max_Limit
         rs = str(int((r / 255.0) * factor * self.max_val))
         gs = str(int((g / 255.0) * factor * self.max_val))
         bs = str(int((b / 255.0) * factor * self.max_val))
-        
+
         # Batch write to all color-specific sysfs paths
         for path in self.all_r:
             try:
@@ -1669,19 +1669,19 @@ class rgbledaddr(object):
     def rainbow_effect(self):
         factor = self._get_factor()
         num_segments = 4
-        
+
         # Create a chasing color wheel using quadrant phase-shifting (Rainbow)
         for i in range(0, EFFECT_STEP):
             for j in range(1, num_segments + 1):
                 val = (float(i) / EFFECT_STEP + float(j - 1) / num_segments) % 1.0
                 o = getRainbowRGB(val)
                 r, g, b = hex_to_dec(o[0:2]), hex_to_dec(o[2:4]), hex_to_dec(o[4:6])
-                
+
                 # Scale with brightness factor and max hardware value
                 rs = str(int((r / 255.0) * factor * self.max_val))
                 gs = str(int((g / 255.0) * factor * self.max_val))
                 bs = str(int((b / 255.0) * factor * self.max_val))
-                
+
                 # Direct write to both rings
                 for side in ['l', 'r']:
                     try:
@@ -1691,7 +1691,7 @@ class rgbledaddr(object):
                     except:
                         pass
             time.sleep(EFFECT_DURATION / EFFECT_STEP)
-            
+
         if batoconf("led.mode") != "rainbow":
             self.set_color("ESCOLOR")
 
@@ -1701,9 +1701,9 @@ class rgbledaddr(object):
             o_hex = getRainbowRGB(float(i/EFFECT_STEP))
             r, g, b = hex_to_dec(o_hex[0:2]), hex_to_dec(o_hex[2:4]), hex_to_dec(o_hex[4:6])
             self._write_scaled(r, g, b)
-            
+
             time.sleep((EFFECT_DURATION * 3) / EFFECT_STEP)
-            
+
         if batoconf("led.mode") != "chroma":
             self.set_color("ESCOLOR")
 
@@ -1716,7 +1716,7 @@ class rgbledaddr(object):
                 coeff = float(1 - 2*i/EFFECT_STEP)
             else:
                 coeff = float((i - EFFECT_STEP/2) / (EFFECT_STEP/2))
-            
+
             # Apply pulse coefficient AND brightness factor via _write_scaled
             self._write_scaled(int(int(r_base)*coeff), int(int(g_base)*coeff), int(int(b_base)*coeff))
             time.sleep(PULSE_DURATION/EFFECT_STEP)
