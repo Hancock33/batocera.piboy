@@ -29,6 +29,10 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86),y)
 XEMU_DEPENDENCIES += vulkan-headers vulkan-loader
 endif
 
+ifeq ($(BR2_x86_x86_64_v3),y)
+XEMU_CONF_OPTS += --x86-version=3
+endif
+
 define XEMU_CONFIGURE_CMDS
 	cd $(@D) && $(TARGET_CONFIGURE_OPTS) SSL_CERT_DIR=/etc/ssl/certs ./configure $(XEMU_CONF_OPTS)
 endef
