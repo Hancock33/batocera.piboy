@@ -20,6 +20,7 @@ Ports|[doomretro](http://github.com/bradharding/doomretro)|f677dccf76ed447fdc2de
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|a53b1c8315c203a7780164fe79b25e8940febaf2|Jun 23, 2026
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|1726f6aa5def7a2ff96fbeaf2133ebffe04a4f9a|Jun 23, 2026
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|f87bc875bd68262211e2e01ffbaf3662626a3e4f|Jun 23, 2026
+Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|59ab660649d933f40cf281656ba949eb4c835d73|Jun 23, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|6818fd14a7ea71fda14cb62e969ef3b0c0b42de7|Jun 23, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|a95f1be885a963359c96cd23fc656219872460b9|Jun 23, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|014acb1357fdbdcd9aeb663b9474ff3646011a7c|Jun 23, 2026
@@ -594,4 +595,3 @@ Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipe
 Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A
 Utils|[wlrctl](https://git.sr.ht/~brocellous/wlrctl/archive)|v0.2.2|N/A
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A
-Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|59ab660649d933f40cf281656ba949eb4c835d73|N/A

@@ -142,7 +142,7 @@ Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|b68dcbb1
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|814991a2571ad3970e386cef48f3b148aa1c27b9|Jun 13, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|845a1fd30f895ab69669f03c97eb5cfbf0f8d97a|Jun 22, 2026
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|f87bc875bd68262211e2e01ffbaf3662626a3e4f|Jun 23, 2026
-Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|59ab660649d933f40cf281656ba949eb4c835d73|N/A
+Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|59ab660649d933f40cf281656ba949eb4c835d73|Jun 23, 2026
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|f013e213458e06d9df718e4bc4b09d46f88aa899|Jun 04, 2026
 Emulators|[libretro-freechaf](https://github.com/libretro/FreeChaF.git)|cdb8ad6fcecb276761b193650f5ce9ae8b878067|Jun 28, 2024
 Emulators|[libretro-freeintv](http://github.com/libretro/freeintv)|428915baf2bfc032fc03e645f4f8f9c6c3144979|Apr 20, 2026
