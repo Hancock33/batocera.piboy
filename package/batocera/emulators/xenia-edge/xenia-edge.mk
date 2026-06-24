@@ -11,7 +11,8 @@ XENIA_EDGE_GIT_SUBMODULES = YES
 XENIA_EDGE_LICENSE = BSD
 XENIA_EDGE_LICENSE_FILE = LICENSE
 XENIA_EDGE_EMULATOR_INFO = xenia-edge.emulator.yml
-XENIA_EDGE_DEPENDENCIES = alsa-lib lz4 python-toml qt6base qt6declarative sdl2 vulkan-headers vulkan-loader
+XENIA_EDGE_DEPENDENCIES += alsa-lib ffmpeg fmt glslang host-clang host-ninja imgui libcurl
+XENIA_EDGE_DEPENDENCIES += libgtk3 lz4 python-toml sdl3 vulkan-headers vulkan-loader
 
 XENIA_EDGE_CFLAGS = $(TARGET_CFLAGS) -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-int-conversion
 XENIA_EDGE_CONF_OPTS += -DCMAKE_C_FLAGS="$(XENIA_EDGE_CFLAGS)"
@@ -19,10 +20,9 @@ XENIA_EDGE_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(XENIA_EDGE_CFLAGS)"
 XENIA_EDGE_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF
 XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_TESTS=OFF
 XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_MISC=OFF
-XENIA_EDGE_CONF_ENV += QT_DIR=$(STAGING_DIR)/usr
+XENIA_EDGE_CONF_OPTS += -DXENIA_USE_SYSTEM_SDL3=ON
 
 define XENIA_EDGE_INSTALL_TARGET_CMDS
-	$(TARGET_STRIP) $(@D)/bin/Linux/xenia_edge
 	mkdir -p $(TARGET_DIR)/usr/bin/xenia-edge
 	$(INSTALL) -m 0755 -D $(@D)/bin/Linux/xenia_edge $(TARGET_DIR)/usr/bin/xenia-edge/xenia_edge
 endef
