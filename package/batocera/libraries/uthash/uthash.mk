@@ -15,8 +15,8 @@
 # uthash
 #
 ################################################################################
-# Version: Commits on Feb 23, 2021
-UTHASH_VERSION = v2.3.0
+# Version: Commits on Jun 11, 2026
+UTHASH_VERSION = v2.4.0
 UTHASH_SITE = $(call github,troydhanson,uthash,$(UTHASH_VERSION))
 UTHASH_LICENSE = Custom
 UTHASH_LICENSE_FILE = LICENSE
