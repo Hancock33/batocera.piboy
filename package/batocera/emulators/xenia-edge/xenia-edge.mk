@@ -15,6 +15,7 @@ XENIA_EDGE_DEPENDENCIES += alsa-lib ffmpeg fmt glslang imgui libcurl
 XENIA_EDGE_DEPENDENCIES += libgtk3 lz4 python-toml sdl3 vulkan-headers vulkan-loader
 XENIA_EDGE_DEPENDENCIES += host-clang host-glslang host-ninja host-shader-slang
 
+XENIA_EDGE_CONF_ENV += SLANGC_PATH=$(HOST_DIR)/bin/slangc
 XENIA_EDGE_CFLAGS = $(TARGET_CFLAGS) -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-int-conversion
 XENIA_EDGE_CONF_OPTS += -DCMAKE_C_FLAGS="$(XENIA_EDGE_CFLAGS)"
 XENIA_EDGE_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(XENIA_EDGE_CFLAGS)"
@@ -22,7 +23,7 @@ XENIA_EDGE_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF
 XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_TESTS=OFF
 XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_MISC=OFF
 XENIA_EDGE_CONF_OPTS += -DXENIA_USE_SYSTEM_SDL3=ON
-XENIA_EDGE_CONF_OPTS += -DXENIA_HOST_SHADER_CC=$(BUILD_DIR)/xenia-edge-$(XENIA_EDGE_VERSION)/host_tools/xenia-shader-cc
+XENIA_EDGE_CONF_OPTS += -DXENIA_HOST_SHADER_CC=$(@D)/host_tools/xenia-shader-cc
 
 # xenia-shader-cc is a build-time host tool (GLSL/XeSL -> SPIR-V -> embedded
 # .h). We cross-compile x86_64 on an aarch64 host, so letting the project's
