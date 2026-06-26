@@ -13,8 +13,10 @@ Engines|[thextech](https://github.com/TheXTech/TheXTech)|2f29bfc62b90a11222c94ce
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-6|Jun 26, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.2-rc.4|Jun 26, 2026
 Utils-host|[shader-slang](https://github.com/shader-slang/slang.git)|1a0c2a6d1110969d2d0fc4d24971fb5d69811327|Jun 26, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260626|Jun 26, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|513c72e34569e0f471dde7aa26eecb23946c3ef7|Jun 26, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|e90c183e8ecb2cd9d75e928719b3d97c045ddbec|Jun 26, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260626|Jun 26, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|84e6af90c9d4aff5cfbd4908c933b1a71ab13c2e|Jun 26, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|3aad7f321a8847822b57081dfb5baea0c5dd7788|Jun 26, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|e505afd9161e9c8ca1a41a94e457fda77fb8fc3a|Jun 26, 2026
@@ -63,7 +65,6 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|f1d56fc1f263499ae0aba7c52
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|044da72008b8ba13caf7b0f820526ce16e955fb3|Jun 23, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|95acc82d89e6ce34cf54cda429d794d52eba3459|Jun 23, 2026
 Ports|[openjazz](http://github.com/AlisterT/openjazz)|d03a51899de8e7d7b72b08b7e79158439afb467e|Jun 23, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260623|Jun 23, 2026
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|2faed1c7e62c5f292948e7cd2398c184970cf794|Jun 23, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|818ce777492e104dae5458c4ea9da25a79178447|Jun 23, 2026
 Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-input-sdl)|842c39e89749aa3a8d02202b2afddd20b29cdfdb|Jun 23, 2026
@@ -72,7 +73,6 @@ Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|b07cb0bc8f29d6ee43efdf0a4d5a1b878ba98393|Jun 23, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|038882dd2e7cb660fd7512c0745032f17edd0bfa|Jun 23, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.146.9317-553|Jun 23, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260623|Jun 23, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|6d11ca54728b0c9e0a4bf3da743d56c7d29abb4e|Jun 23, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|014acb1357fdbdcd9aeb663b9474ff3646011a7c|Jun 23, 2026
 Emulators|[play](https://github.com/jpd002/Play-.git)|1e4f393f3c52581cdec7867ddadc47f6b4d20cec|Jun 22, 2026
