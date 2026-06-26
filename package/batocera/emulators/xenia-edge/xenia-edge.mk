@@ -11,7 +11,7 @@ XENIA_EDGE_GIT_SUBMODULES = YES
 XENIA_EDGE_LICENSE = BSD
 XENIA_EDGE_LICENSE_FILE = LICENSE
 XENIA_EDGE_EMULATOR_INFO = xenia-edge.emulator.yml
-XENIA_EDGE_DEPENDENCIES += alsa-lib ffmpeg fmt glslang imgui libcurl
+XENIA_EDGE_DEPENDENCIES += alsa-lib ffmpeg fmt glslang libcurl
 XENIA_EDGE_DEPENDENCIES += libgtk3 lz4 python-toml sdl3 vulkan-headers vulkan-loader
 XENIA_EDGE_DEPENDENCIES += host-clang host-glslang host-ninja host-shader-slang
 
