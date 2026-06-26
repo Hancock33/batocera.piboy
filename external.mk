@@ -5,9 +5,9 @@
 export BATOCERA_RUFOMACULATA_DIRS := \
 	usr/lib/libretro \
 	usr/wine \
-	usr/share/cdogs \ 
-	usr/share/hurrican \ 
-	usr/share/scummvm \ 
+	usr/share/cdogs \
+	usr/share/hurrican \
+	usr/share/scummvm \
 	usr/share/soundfonts \
 	usr/share/wine \
 	usr/bin/mame \
