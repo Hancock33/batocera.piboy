@@ -5,12 +5,14 @@
 export BATOCERA_RUFOMACULATA_DIRS := \
 	usr/lib/libretro \
 	usr/wine \
+	usr/share/cdogs \ 
+	usr/share/hurrican \ 
+	usr/share/scummvm \ 
+	usr/share/soundfonts \
 	usr/share/wine \
-	usr/share/lr-mame \
 	usr/bin/mame \
 	usr/bin/sonic3-air \
-	usr/pcsx2 \
-	usr/xenia
+	usr/bin/pcsx2
 
 # This variable needs to be here so that `-e ...` is the very last argument
 # appended to it
