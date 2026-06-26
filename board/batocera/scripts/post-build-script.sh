@@ -182,29 +182,12 @@ sudo find ${TARGET_DIR} -type f -name ".files-list-staging.before" -exec rm {} \
 
 ## split target dir in 2 cause of the 4GB image size limit
 # in initrd, the 2 targets will be mounted as one
-TARGET2_DIR=${TARGET_DIR}2
-echo "Generating target2 (${TARGET2_DIR})..."
-mkdir -p "${TARGET2_DIR}" || exit 1
-for XDIR in usr/bin/duckstation usr/bin/mame usr/bin/sonic3-air usr/lib/libretro usr/share/cdogs usr/share/hurrican usr/share/scummvm usr/share/soundfonts
-do
-    echo -n "${XDIR}..."
-    if test -e "${TARGET_DIR}/${XDIR}"
-    then
-	mkdir -p "${TARGET2_DIR}/${XDIR}" || exit 1
-	rsync -a "${TARGET_DIR}/${XDIR}/" "${TARGET2_DIR}/${XDIR}/" || exit 1
-	rm -rf "${TARGET_DIR}/${XDIR}/" || exit 1
-	echo "OK."
-    elif test -d "${TARGET2_DIR}/${XDIR}"
-    then
-    echo "Already in target2. Continuing..."
-    else
-	echo "${TARGET_DIR}/${XDIR} not found. Skipping."
-    fi
-done
 
 # generate the image 2
 echo "Generating ${BINARIES_DIR}/rufomaculata..."
-"${HOST_DIR}/bin/mksquashfs" "${TARGET2_DIR}" "${BINARIES_DIR}/rufomaculata" -noappend -b 128K -comp zstd || exit 1
+set -o pipefail
+tar -C "${TARGET_DIR}" --ignore-failed-read -c ${BATOCERA_RUFOMACULATA_DIRS} \
+    | "${HOST_DIR}/bin/mksquashfs" - "${BINARIES_DIR}/rufomaculata" -tar -noappend -b 128K -comp zstd || exit 1
 
 # With PARALLEL_BUILD it is difficult to control which of two
 # conflicting files from different packages will be the one ending up
