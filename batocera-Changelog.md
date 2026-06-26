@@ -23,7 +23,12 @@
 - Xenia-Edge for x864_64 and select aarch64 devices
 ### Fixed
 - BCC menu not showing on SM8250 devices (i.e. Retroid Pocket 5)
+- Cannonball coin is now the Select button
+- Cannonball fullscreen on Wayland
+- Commander Genius fullscreen in Wayland
 - Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
+- Pygame fullscreen with Wayland
+- X16emu fullscreen with Wayland
 ### Changed / Improved
 - BigPEmu added to capable aarch64 devices
 - Cemu added to capable aarch64 devices
@@ -45,6 +50,7 @@
 - Cemu to June 23rd, 2026 build
 - CDogs to 2.4.0
 - CLK to 2026-04-30
+- CorsixTH to v0.69.2
 - Dolphin-Emu to 2606
 - ECWolf to Feb 23, 2026 build
 - Groovy MAME to 0.288
@@ -77,10 +83,12 @@
 - RPCS3 to v.0.0.41
 - ShadPS4 to v.0.16.0
 - Solarus to 2.0.4
+- Supermodel to v0.3a-20260528
 - Tsugaru to v20251206
 - Vita3k to 10th of June build
 - VKQuake to 1.34.1
 - Winetricks to 20260125
+- X16emu to r49
 - Xemu to v0.8.136
 ### System
 - Allwinner H700 device kernel updated to 7.0.11

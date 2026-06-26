@@ -193,6 +193,8 @@ catacomb:
 cannonball:
   emulator: cannonball
   core:     cannonball
+  options:
+    bezel: none
 cave:
   emulator: libretro
   core:     mame078plus
