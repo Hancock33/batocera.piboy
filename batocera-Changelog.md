@@ -29,6 +29,7 @@
 - Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
 - Pygame fullscreen with Wayland
 - Raze analog controls and improved controller bindings
+- Sonic Mania controllers
 - Taradino blank screen with Wayland
 - X16emu fullscreen with Wayland
 ### Changed / Improved
@@ -78,6 +79,7 @@
 - Libretro-ScummVM to May 5th, 2026 build
 - Libretro-SuperBrosWar to December 12th, 2025 build
 - Libretro-VitaQuake2 to April 10th, 2026 build
+- Moonlight-QT to Jun 26, 2026 build
 - Mupen64Plus-Core to March 30th, 2026 build
 - OpenMSX to Release 21
 - OpenJK to May 13th, 2026 build

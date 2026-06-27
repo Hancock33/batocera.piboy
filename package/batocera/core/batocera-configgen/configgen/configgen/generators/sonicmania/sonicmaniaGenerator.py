@@ -6,7 +6,7 @@ from batocera_common.configparser import CaseSensitiveConfigParser
 
 from ... import Command
 from ...batoceraPaths import ROMS
-from ...controller import generate_sdl_game_controller_config
+from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
 from ..Generator import Generator
 
 class SonicManiaGenerator(Generator):
@@ -74,6 +74,8 @@ class SonicManiaGenerator(Generator):
         # Save the ini file
         with open( rom_directory + '/Settings.ini', 'w') as configfile:
             config.write(configfile)
+        
+        write_sdl_controller_db(playersControllers, rom_directory / "gamecontrollerdb.txt")
 
         # Now run
         os.chdir(rom_directory)
