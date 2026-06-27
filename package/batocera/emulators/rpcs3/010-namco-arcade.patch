@@ -19,7 +19,7 @@ Combined patch on top of RPCS3 v0.0.41:
   the game writes it, since Batocera exits skip the device destructor.
 ---
 diff --git a/rpcs3/Emu/Cell/lv2/sys_fs.cpp b/rpcs3/Emu/Cell/lv2/sys_fs.cpp
-index 79bd852..3f3a038 100644
+index 79bd85206..3f3a03830 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_fs.cpp
 +++ b/rpcs3/Emu/Cell/lv2/sys_fs.cpp
 @@ -13,6 +13,7 @@
@@ -50,7 +50,7 @@ index 79bd852..3f3a038 100644
  	{
  		// This syscall can be used by games and VSH to test the presence of dev_usb000 ~ dev_usb127
 diff --git a/rpcs3/Emu/Cell/lv2/sys_usbd.cpp b/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
-index b84e345..6401c89 100644
+index b84e3457c..6401c89ec 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
 +++ b/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
 @@ -126,6 +126,7 @@ public:
@@ -131,7 +131,7 @@ index b84e345..6401c89 100644
  
  	if (const auto iterator = predefined_ldds.find(product); iterator != predefined_ldds.end())
 diff --git a/rpcs3/Emu/Cell/lv2/sys_usbd.h b/rpcs3/Emu/Cell/lv2/sys_usbd.h
-index 01a7891..58c54cd 100644
+index 01a7891bb..58c54cd8a 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_usbd.h
 +++ b/rpcs3/Emu/Cell/lv2/sys_usbd.h
 @@ -91,3 +91,4 @@ error_code sys_usbd_unregister_extra_ldd(ppu_thread& ppu, u32 handle, vm::cptr<c
@@ -140,7 +140,7 @@ index 01a7891..58c54cd 100644
  void handle_hotplug_event(bool connected, bool source_is_libusb);
 +bool is_usb_ldd_registered(std::string_view product);
 diff --git a/rpcs3/Emu/Io/evdev_gun_handler.cpp b/rpcs3/Emu/Io/evdev_gun_handler.cpp
-index 8ed4c63..fcb13d0 100644
+index 8ed4c6381..fcb13d0af 100644
 --- a/rpcs3/Emu/Io/evdev_gun_handler.cpp
 +++ b/rpcs3/Emu/Io/evdev_gun_handler.cpp
 @@ -13,6 +13,8 @@
@@ -335,7 +335,7 @@ index 8ed4c63..fcb13d0 100644
  	m_is_init = true;
  	return true;
 diff --git a/rpcs3/Emu/Io/evdev_gun_handler.h b/rpcs3/Emu/Io/evdev_gun_handler.h
-index 342fff4..d8c3cfc 100644
+index 342fff40d..d8c3cfc22 100644
 --- a/rpcs3/Emu/Io/evdev_gun_handler.h
 +++ b/rpcs3/Emu/Io/evdev_gun_handler.h
 @@ -2,6 +2,8 @@
@@ -378,7 +378,7 @@ index 342fff4..d8c3cfc 100644
  
  	std::vector<evdev_gun> m_devices;
 diff --git a/rpcs3/Emu/Io/usio.cpp b/rpcs3/Emu/Io/usio.cpp
-index f707ae8..ddc7fdb 100644
+index f707ae8e6..ddc7fdbd0 100644
 --- a/rpcs3/Emu/Io/usio.cpp
 +++ b/rpcs3/Emu/Io/usio.cpp
 @@ -5,9 +5,81 @@
@@ -1043,7 +1043,7 @@ index f707ae8..ddc7fdb 100644
  	{
  	case 0x01:
 diff --git a/rpcs3/Emu/Io/usio.h b/rpcs3/Emu/Io/usio.h
-index d88032e..da59a6b 100644
+index d88032ed5..da59a6b3a 100644
 --- a/rpcs3/Emu/Io/usio.h
 +++ b/rpcs3/Emu/Io/usio.h
 @@ -20,6 +20,7 @@ private:
