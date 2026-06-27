@@ -1,5 +1,68 @@
+From 3746c92651b673204418a369faf04fd7d28fbb2d Mon Sep 17 00:00:00 2001
+From: Piotr Gorski <lucjan.lucjanov@gmail.com>
+Date: Mon, 15 Jun 2026 10:04:59 +0200
+Subject: [PATCH] prjc-cachy
+
+Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
+---
+ Documentation/admin-guide/sysctl/kernel.rst |    9 +
+ Documentation/scheduler/sched-BMQ.txt       |  110 +
+ fs/f2fs/checkpoint.c                        |    2 +-
+ fs/proc/base.c                              |    2 +-
+ include/linux/rseq_entry.h                  |    3 +
+ include/linux/sched.h                       |   76 +
+ include/linux/sched/deadline.h              |   20 +
+ include/linux/sched/prio.h                  |   22 +
+ include/linux/sched/rt.h                    |    2 +
+ include/linux/sched/topology.h              |    3 +-
+ init/Kconfig                                |   36 +-
+ init/init_task.c                            |   20 +
+ kernel/Kconfig.preempt                      |    4 +-
+ kernel/cgroup/cpuset.c                      |   14 +-
+ kernel/delayacct.c                          |    2 +-
+ kernel/exit.c                               |    6 +-
+ kernel/locking/rtmutex.c                    |   16 +-
+ kernel/locking/ww_mutex.h                   |    2 +
+ kernel/sched/Makefile                       |    5 +
+ kernel/sched/alt_core.c                     | 7655 +++++++++++++++++++
+ kernel/sched/alt_core.h                     |  197 +
+ kernel/sched/alt_debug.c                    |   32 +
+ kernel/sched/alt_sched.h                    | 1066 +++
+ kernel/sched/alt_topology.c                 |  287 +
+ kernel/sched/alt_topology.h                 |  113 +
+ kernel/sched/bmq.h                          |  104 +
+ kernel/sched/build_policy.c                 |    8 +-
+ kernel/sched/build_utility.c                |   10 +-
+ kernel/sched/cpufreq_schedutil.c            |   12 +-
+ kernel/sched/cputime.c                      |   10 +-
+ kernel/sched/debug.c                        |   20 +
+ kernel/sched/idle.c                         |   11 +-
+ kernel/sched/pds.h                          |  139 +
+ kernel/sched/pelt.c                         |    6 +-
+ kernel/sched/pelt.h                         |    6 +-
+ kernel/sched/sched.h                        |    9 +
+ kernel/sched/stats.c                        |    4 +
+ kernel/sched/stats.h                        |    2 +
+ kernel/sched/syscalls.c                     |  170 +-
+ kernel/sched/topology.c                     |   33 +
+ kernel/sysctl.c                             |   15 +
+ kernel/time/posix-cpu-timers.c              |   10 +-
+ kernel/trace/trace_osnoise.c                |    4 +
+ kernel/trace/trace_selftest.c               |    5 +
+ kernel/workqueue.c                          |   15 +
+ 45 files changed, 10257 insertions(+), 40 deletions(-)
+ create mode 100644 Documentation/scheduler/sched-BMQ.txt
+ create mode 100644 kernel/sched/alt_core.c
+ create mode 100644 kernel/sched/alt_core.h
+ create mode 100644 kernel/sched/alt_debug.c
+ create mode 100644 kernel/sched/alt_sched.h
+ create mode 100644 kernel/sched/alt_topology.c
+ create mode 100644 kernel/sched/alt_topology.h
+ create mode 100644 kernel/sched/bmq.h
+ create mode 100644 kernel/sched/pds.h
+
 diff --git a/Documentation/admin-guide/sysctl/kernel.rst b/Documentation/admin-guide/sysctl/kernel.rst
-index c6994e55d141..cf28e5f29109 100644
+index c6994e55d..cf28e5f29 100644
 --- a/Documentation/admin-guide/sysctl/kernel.rst
 +++ b/Documentation/admin-guide/sysctl/kernel.rst
 @@ -1734,3 +1734,12 @@ is 10 seconds.
@@ -17,7 +80,7 @@ index c6994e55d141..cf28e5f29109 100644
 +  1 - Requeue task. (default)
 diff --git a/Documentation/scheduler/sched-BMQ.txt b/Documentation/scheduler/sched-BMQ.txt
 new file mode 100644
-index 000000000000..05c84eec0f31
+index 000000000..05c84eec0
 --- /dev/null
 +++ b/Documentation/scheduler/sched-BMQ.txt
 @@ -0,0 +1,110 @@
@@ -132,7 +195,7 @@ index 000000000000..05c84eec0f31
 +priority boost from unblocking while background threads that do most of the
 +processing receive the priority penalty for using their entire timeslice.
 diff --git a/fs/f2fs/checkpoint.c b/fs/f2fs/checkpoint.c
-index c00a6b6ebcbd..0fa976ca0ef2 100644
+index c00a6b6eb..0fa976ca0 100644
 --- a/fs/f2fs/checkpoint.c
 +++ b/fs/f2fs/checkpoint.c
 @@ -28,7 +28,7 @@ static inline void get_lock_elapsed_time(struct f2fs_time_stat *ts)
@@ -145,7 +208,7 @@ index c00a6b6ebcbd..0fa976ca0ef2 100644
  #if defined(CONFIG_SCHED_INFO) && defined(CONFIG_SCHEDSTATS)
  	ts->runnable_time = current->sched_info.run_delay;
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index d9acfa89c894..61a7726c5d04 100644
+index d9acfa89c..61a7726c5 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -515,7 +515,7 @@ static int proc_pid_schedstat(struct seq_file *m, struct pid_namespace *ns,
@@ -158,7 +221,7 @@ index d9acfa89c894..61a7726c5d04 100644
  		   task->sched_info.pcount);
  
 diff --git a/include/linux/rseq_entry.h b/include/linux/rseq_entry.h
-index ed9da6e41a2a..4ad444d63acb 100644
+index ed9da6e41..4ad444d63 100644
 --- a/include/linux/rseq_entry.h
 +++ b/include/linux/rseq_entry.h
 @@ -729,7 +729,10 @@ static __always_inline void rseq_syscall_exit_to_user_mode(void)
@@ -173,7 +236,7 @@ index ed9da6e41a2a..4ad444d63acb 100644
  	}
  }
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index f9c0b4724091..f2c048eb1550 100644
+index f9c0b4724..f2c048eb1 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -847,7 +847,9 @@ struct task_struct {
@@ -341,7 +404,7 @@ index f9c0b4724091..f2c048eb1550 100644
  #else /* !COMPILE_OFFSETS */
  static inline void __migrate_disable(void) { }
 diff --git a/include/linux/sched/deadline.h b/include/linux/sched/deadline.h
-index 273538200a44..12b41502a6d4 100644
+index 273538200..12b41502a 100644
 --- a/include/linux/sched/deadline.h
 +++ b/include/linux/sched/deadline.h
 @@ -2,6 +2,25 @@
@@ -378,7 +441,7 @@ index 273538200a44..12b41502a6d4 100644
  
  #endif /* _LINUX_SCHED_DEADLINE_H */
 diff --git a/include/linux/sched/prio.h b/include/linux/sched/prio.h
-index 6ab43b4f72f9..ef1cff556c5e 100644
+index 6ab43b4f7..ef1cff556 100644
 --- a/include/linux/sched/prio.h
 +++ b/include/linux/sched/prio.h
 @@ -19,6 +19,28 @@
@@ -411,7 +474,7 @@ index 6ab43b4f72f9..ef1cff556c5e 100644
   * Convert user-nice values [ -20 ... 0 ... 19 ]
   * to static priority [ MAX_RT_PRIO..MAX_PRIO-1 ],
 diff --git a/include/linux/sched/rt.h b/include/linux/sched/rt.h
-index 4e3338103654..6dfef878fe3b 100644
+index 4e3338103..6dfef878f 100644
 --- a/include/linux/sched/rt.h
 +++ b/include/linux/sched/rt.h
 @@ -45,8 +45,10 @@ static inline bool rt_or_dl_task_policy(struct task_struct *tsk)
@@ -426,7 +489,7 @@ index 4e3338103654..6dfef878fe3b 100644
  }
  
 diff --git a/include/linux/sched/topology.h b/include/linux/sched/topology.h
-index 35c9c37a04c8..89c67556b958 100644
+index 35c9c37a0..89c67556b 100644
 --- a/include/linux/sched/topology.h
 +++ b/include/linux/sched/topology.h
 @@ -248,7 +248,8 @@ extern void sched_update_asym_prefer_cpu(int cpu, int old_prio, int new_prio);
@@ -440,7 +503,7 @@ index 35c9c37a04c8..89c67556b958 100644
  #else
  static inline void rebuild_sched_domains_energy(void)
 diff --git a/init/Kconfig b/init/Kconfig
-index c8f3cccd8e21..ef6afce82fdf 100644
+index c8f3cccd8..ef6afce82 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -723,6 +723,7 @@ config TASK_IO_ACCOUNTING
@@ -522,7 +585,7 @@ index c8f3cccd8e21..ef6afce82fdf 100644
  	help
  	  Idle CPU selector using cached bitmasks inspired by the scx_cake BPF
 diff --git a/init/init_task.c b/init/init_task.c
-index b5f48ebdc2b6..ce0de7476031 100644
+index b5f48ebdc..ce0de7476 100644
 --- a/init/init_task.c
 +++ b/init/init_task.c
 @@ -102,9 +102,16 @@ struct task_struct init_task __aligned(L1_CACHE_BYTES) = {
@@ -574,7 +637,7 @@ index b5f48ebdc2b6..ce0de7476031 100644
  	.sched_task_group = &root_task_group,
  #endif
 diff --git a/kernel/Kconfig.preempt b/kernel/Kconfig.preempt
-index 2471a502c52a..67aaddc46d56 100644
+index 2471a502c..67aaddc46 100644
 --- a/kernel/Kconfig.preempt
 +++ b/kernel/Kconfig.preempt
 @@ -150,7 +150,7 @@ config PREEMPT_DYNAMIC
@@ -596,7 +659,7 @@ index 2471a502c52a..67aaddc46d56 100644
  	help
  	  This option enables a new scheduler class sched_ext (SCX), which
 diff --git a/kernel/cgroup/cpuset.c b/kernel/cgroup/cpuset.c
-index c9e14fda3d6f..02a6a1557357 100644
+index c9e14fda3..02a6a1557 100644
 --- a/kernel/cgroup/cpuset.c
 +++ b/kernel/cgroup/cpuset.c
 @@ -767,7 +767,7 @@ static int validate_change(struct cpuset *cur, struct cpuset *trial)
@@ -673,7 +736,7 @@ index c9e14fda3d6f..02a6a1557357 100644
  	mutex_unlock(&cpuset_mutex);
  }
 diff --git a/kernel/delayacct.c b/kernel/delayacct.c
-index 2e55c493c98b..5c2262a241bc 100644
+index 2e55c493c..5c2262a24 100644
 --- a/kernel/delayacct.c
 +++ b/kernel/delayacct.c
 @@ -170,7 +170,7 @@ int delayacct_add_tsk(struct taskstats *d, struct task_struct *tsk)
@@ -686,7 +749,7 @@ index 2e55c493c98b..5c2262a241bc 100644
  	d->cpu_count += t1;
  
 diff --git a/kernel/exit.c b/kernel/exit.c
-index f50d73c272d6..a62d6f4d244e 100644
+index f50d73c27..a62d6f4d2 100644
 --- a/kernel/exit.c
 +++ b/kernel/exit.c
 @@ -207,7 +207,7 @@ static void __exit_signal(struct release_task_post *post, struct task_struct *ts
@@ -710,7 +773,7 @@ index f50d73c272d6..a62d6f4d244e 100644
  	release_thread(p);
  	/*
 diff --git a/kernel/locking/rtmutex.c b/kernel/locking/rtmutex.c
-index daeeeef973e2..b7bb3cdec566 100644
+index daeeeef97..b7bb3cdec 100644
 --- a/kernel/locking/rtmutex.c
 +++ b/kernel/locking/rtmutex.c
 @@ -372,7 +372,7 @@ waiter_update_prio(struct rt_mutex_waiter *waiter, struct task_struct *task)
@@ -779,7 +842,7 @@ index daeeeef973e2..b7bb3cdec566 100644
  
  static inline bool rt_mutex_steal(struct rt_mutex_waiter *waiter,
 diff --git a/kernel/locking/ww_mutex.h b/kernel/locking/ww_mutex.h
-index 6c12452097e1..330fa4ac213b 100644
+index 6c1245209..330fa4ac2 100644
 --- a/kernel/locking/ww_mutex.h
 +++ b/kernel/locking/ww_mutex.h
 @@ -282,6 +282,7 @@ __ww_ctx_less(struct ww_acquire_ctx *a, struct ww_acquire_ctx *b)
@@ -799,7 +862,7 @@ index 6c12452097e1..330fa4ac213b 100644
  		/* equal prio */
  	}
 diff --git a/kernel/sched/Makefile b/kernel/sched/Makefile
-index b1f1a367034f..b7f5f9931da3 100644
+index b1f1a3670..b7f5f9931 100644
 --- a/kernel/sched/Makefile
 +++ b/kernel/sched/Makefile
 @@ -36,7 +36,12 @@ endif
@@ -817,7 +880,7 @@ index b1f1a367034f..b7f5f9931da3 100644
  obj-y += build_utility.o
 diff --git a/kernel/sched/alt_core.c b/kernel/sched/alt_core.c
 new file mode 100644
-index 000000000000..1f124a173b24
+index 000000000..1f124a173
 --- /dev/null
 +++ b/kernel/sched/alt_core.c
 @@ -0,0 +1,7655 @@
@@ -8478,7 +8541,7 @@ index 000000000000..1f124a173b24
 +}
 diff --git a/kernel/sched/alt_core.h b/kernel/sched/alt_core.h
 new file mode 100644
-index 000000000000..0c25b45904b6
+index 000000000..0c25b4590
 --- /dev/null
 +++ b/kernel/sched/alt_core.h
 @@ -0,0 +1,197 @@
@@ -8681,7 +8744,7 @@ index 000000000000..0c25b45904b6
 +#endif /* _KERNEL_SCHED_ALT_CORE_H */
 diff --git a/kernel/sched/alt_debug.c b/kernel/sched/alt_debug.c
 new file mode 100644
-index 000000000000..1dbd7eb6a434
+index 000000000..1dbd7eb6a
 --- /dev/null
 +++ b/kernel/sched/alt_debug.c
 @@ -0,0 +1,32 @@
@@ -8719,7 +8782,7 @@ index 000000000000..1dbd7eb6a434
 +{}
 diff --git a/kernel/sched/alt_sched.h b/kernel/sched/alt_sched.h
 new file mode 100644
-index 000000000000..5ef7eb661ad9
+index 000000000..5ef7eb661
 --- /dev/null
 +++ b/kernel/sched/alt_sched.h
 @@ -0,0 +1,1066 @@
@@ -9791,7 +9854,7 @@ index 000000000000..5ef7eb661ad9
 +#endif /* _KERNEL_SCHED_ALT_SCHED_H */
 diff --git a/kernel/sched/alt_topology.c b/kernel/sched/alt_topology.c
 new file mode 100644
-index 000000000000..cf5921e8268b
+index 000000000..cf5921e82
 --- /dev/null
 +++ b/kernel/sched/alt_topology.c
 @@ -0,0 +1,287 @@
@@ -10084,7 +10147,7 @@ index 000000000000..cf5921e8268b
 +}
 diff --git a/kernel/sched/alt_topology.h b/kernel/sched/alt_topology.h
 new file mode 100644
-index 000000000000..14591a303ea5
+index 000000000..14591a303
 --- /dev/null
 +++ b/kernel/sched/alt_topology.h
 @@ -0,0 +1,113 @@
@@ -10203,7 +10266,7 @@ index 000000000000..14591a303ea5
 +#endif /* _KERNEL_SCHED_ALT_TOPOLOGY_H */
 diff --git a/kernel/sched/bmq.h b/kernel/sched/bmq.h
 new file mode 100644
-index 000000000000..44698be03294
+index 000000000..44698be03
 --- /dev/null
 +++ b/kernel/sched/bmq.h
 @@ -0,0 +1,104 @@
@@ -10312,7 +10375,7 @@ index 000000000000..44698be03294
 +
 +#endif /* _KERNEL_SCHED_BMQ_H */
 diff --git a/kernel/sched/build_policy.c b/kernel/sched/build_policy.c
-index 755883faf751..f50aae196a0f 100644
+index 755883faf..f50aae196 100644
 --- a/kernel/sched/build_policy.c
 +++ b/kernel/sched/build_policy.c
 @@ -49,13 +49,17 @@
@@ -10336,7 +10399,7 @@ index 755883faf751..f50aae196a0f 100644
  #ifdef CONFIG_SCHED_CLASS_EXT
  # include "ext_internal.h"
 diff --git a/kernel/sched/build_utility.c b/kernel/sched/build_utility.c
-index e2cf3b08d4e9..a64bf71a6c69 100644
+index e2cf3b08d..a64bf71a6 100644
 --- a/kernel/sched/build_utility.c
 +++ b/kernel/sched/build_utility.c
 @@ -56,6 +56,10 @@
@@ -10371,7 +10434,7 @@ index e2cf3b08d4e9..a64bf71a6c69 100644
  #include "topology.c"
  
 diff --git a/kernel/sched/cpufreq_schedutil.c b/kernel/sched/cpufreq_schedutil.c
-index ae9fd211cec1..1a3ecefdbbd6 100644
+index ae9fd211c..1a3ecefdb 100644
 --- a/kernel/sched/cpufreq_schedutil.c
 +++ b/kernel/sched/cpufreq_schedutil.c
 @@ -225,6 +225,7 @@ unsigned long sugov_effective_cpu_perf(int cpu, unsigned long actual,
@@ -10430,7 +10493,7 @@ index ae9fd211cec1..1a3ecefdbbd6 100644
  		kthread_stop(thread);
  		pr_warn("%s: failed to set SCHED_DEADLINE\n", __func__);
 diff --git a/kernel/sched/cputime.c b/kernel/sched/cputime.c
-index fbf31db0d2f3..701cdf6deebc 100644
+index fbf31db0d..701cdf6de 100644
 --- a/kernel/sched/cputime.c
 +++ b/kernel/sched/cputime.c
 @@ -128,7 +128,7 @@ void account_user_time(struct task_struct *p, u64 cputime)
@@ -10479,7 +10542,7 @@ index fbf31db0d2f3..701cdf6deebc 100644
  
  	if (task_cputime(p, &cputime.utime, &cputime.stime))
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 74c1617cf652..5b38a3ba7009 100644
+index 74c1617cf..5b38a3ba7 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
 @@ -11,6 +11,7 @@
@@ -10584,7 +10647,7 @@ index 74c1617cf652..5b38a3ba7009 100644
  void proc_sched_set_task(struct task_struct *p)
  {
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index 912b2a8464ab..fdfd74be83bf 100644
+index 912b2a846..3848a9c06 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -297,10 +297,10 @@ static void do_idle(void)
@@ -10613,22 +10676,23 @@ index 912b2a8464ab..fdfd74be83bf 100644
  
  	/*
  	 * Since we fell out of the loop above, we know TIF_NEED_RESCHED must
-@@ -461,6 +461,7 @@ void cpu_startup_entry(enum cpuhp_state state)
+@@ -461,6 +461,8 @@ void cpu_startup_entry(enum cpuhp_state state)
  		do_idle();
  }
  
 +#ifndef CONFIG_SCHED_ALT
++#ifndef CONFIG_SCHED_ALT
  /*
   * idle-task scheduling class.
   */
-@@ -598,3 +599,4 @@ DEFINE_SCHED_CLASS(idle) = {
+@@ -598,3 +600,4 @@ DEFINE_SCHED_CLASS(idle) = {
  	.switching_to		= switching_to_idle,
  	.update_curr		= update_curr_idle,
  };
 +#endif
 diff --git a/kernel/sched/pds.h b/kernel/sched/pds.h
 new file mode 100644
-index 000000000000..fe3099071eb7
+index 000000000..fe3099071
 --- /dev/null
 +++ b/kernel/sched/pds.h
 @@ -0,0 +1,139 @@
@@ -10772,7 +10836,7 @@ index 000000000000..fe3099071eb7
 +
 +#endif /* _KERNEL_SCHED_PDS_H */
 diff --git a/kernel/sched/pelt.c b/kernel/sched/pelt.c
-index 897790889ba3..376f039d27ad 100644
+index 897790889..376f039d2 100644
 --- a/kernel/sched/pelt.c
 +++ b/kernel/sched/pelt.c
 @@ -267,6 +267,7 @@ ___update_load_avg(struct sched_avg *sa, unsigned long load)
@@ -10808,7 +10872,7 @@ index 897790889ba3..376f039d27ad 100644
  }
 +#endif /* !CONFIG_SCHED_ALT */
 diff --git a/kernel/sched/pelt.h b/kernel/sched/pelt.h
-index f921302dc40f..2fade7dab9b0 100644
+index f921302dc..2fade7dab 100644
 --- a/kernel/sched/pelt.h
 +++ b/kernel/sched/pelt.h
 @@ -5,14 +5,16 @@
@@ -10845,7 +10909,7 @@ index f921302dc40f..2fade7dab9b0 100644
  
  #endif /* _KERNEL_SCHED_PELT_H */
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index a4eb46e121e4..4bd19581d6df 100644
+index a4eb46e12..4bd19581d 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -5,6 +5,10 @@
@@ -10870,7 +10934,7 @@ index a4eb46e121e4..4bd19581d6df 100644
 +#endif /* !CONFIG_SCHED_ALT */
  #endif /* _KERNEL_SCHED_SCHED_H */
 diff --git a/kernel/sched/stats.c b/kernel/sched/stats.c
-index d1c9429a4ac5..cc3764073dd3 100644
+index d1c9429a4..cc3764073 100644
 --- a/kernel/sched/stats.c
 +++ b/kernel/sched/stats.c
 @@ -115,8 +115,10 @@ static int show_schedstat(struct seq_file *seq, void *v)
@@ -10901,7 +10965,7 @@ index d1c9429a4ac5..cc3764073dd3 100644
  	return 0;
  }
 diff --git a/kernel/sched/stats.h b/kernel/sched/stats.h
-index a612cf253c87..1018d72ffce3 100644
+index a612cf253..1018d72ff 100644
 --- a/kernel/sched/stats.h
 +++ b/kernel/sched/stats.h
 @@ -89,6 +89,7 @@ static inline void rq_sched_info_depart  (struct rq *rq, unsigned long long delt
@@ -10921,7 +10985,7 @@ index a612cf253c87..1018d72ffce3 100644
  #ifdef CONFIG_PSI
  void psi_task_change(struct task_struct *task, int clear, int set);
 diff --git a/kernel/sched/syscalls.c b/kernel/sched/syscalls.c
-index b215b0ead9a6..1e736f2b0a77 100644
+index b215b0ead..1e736f2b0 100644
 --- a/kernel/sched/syscalls.c
 +++ b/kernel/sched/syscalls.c
 @@ -16,6 +16,14 @@
@@ -11389,11 +11453,11 @@ index b215b0ead9a6..1e736f2b0a77 100644
 +
 +	if (!sched_yield_type)
 +		return;
-+
-+	rq = this_rq_lock_irq(&rf);
-+
-+	schedstat_inc(rq->yld_count);
  
+ 	rq = this_rq_lock_irq(&rf);
+ 
++	schedstat_inc(rq->yld_count);
++
 +	p = current;
 +	if (rt_task(p)) {
 +		if (task_on_rq_queued(p))
@@ -11404,8 +11468,8 @@ index b215b0ead9a6..1e736f2b0a77 100644
 +			requeue_task(p, rq);
 +	}
 +#else /* !CONFIG_SCHED_ALT */
- 	rq = this_rq_lock_irq(&rf);
- 
++	rq = this_rq_lock_irq(&rf);
++
  	schedstat_inc(rq->yld_count);
  	rq->donor->sched_class->yield_task(rq);
 +#endif /* !CONFIG_SCHED_ALT */
@@ -11483,7 +11547,7 @@ index b215b0ead9a6..1e736f2b0a77 100644
  }
  
 diff --git a/kernel/sched/topology.c b/kernel/sched/topology.c
-index e4e84f92cd4d..79b44c2394d1 100644
+index e4e84f92c..79b44c239 100644
 --- a/kernel/sched/topology.c
 +++ b/kernel/sched/topology.c
 @@ -3,6 +3,7 @@
@@ -11554,7 +11618,7 @@ index e4e84f92cd4d..79b44c2394d1 100644
 +{}
 +#endif
 diff --git a/kernel/sysctl.c b/kernel/sysctl.c
-index c9efb17cc255..efe0de04782c 100644
+index c9efb17cc..efe0de047 100644
 --- a/kernel/sysctl.c
 +++ b/kernel/sysctl.c
 @@ -35,6 +35,10 @@ EXPORT_SYMBOL_GPL(sysctl_long_vals);
@@ -11587,7 +11651,7 @@ index c9efb17cc255..efe0de04782c 100644
  	{
  		.procname	= "ignore-unaligned-usertrap",
 diff --git a/kernel/time/posix-cpu-timers.c b/kernel/time/posix-cpu-timers.c
-index 0de2bb7cbec0..36ba69ac1397 100644
+index 0de2bb7cb..36ba69ac1 100644
 --- a/kernel/time/posix-cpu-timers.c
 +++ b/kernel/time/posix-cpu-timers.c
 @@ -223,7 +223,7 @@ static void task_sample_cputime(struct task_struct *p, u64 *samples)
@@ -11647,7 +11711,7 @@ index 0de2bb7cbec0..36ba69ac1397 100644
  	return false;
  }
 diff --git a/kernel/trace/trace_osnoise.c b/kernel/trace/trace_osnoise.c
-index 75678053b21c..268e4238198b 100644
+index 75678053b..268e42381 100644
 --- a/kernel/trace/trace_osnoise.c
 +++ b/kernel/trace/trace_osnoise.c
 @@ -1662,6 +1662,9 @@ static void osnoise_sleep(bool skip_period)
@@ -11669,7 +11733,7 @@ index 75678053b21c..268e4238198b 100644
  
  /*
 diff --git a/kernel/trace/trace_selftest.c b/kernel/trace/trace_selftest.c
-index 929c84075315..0cba8b03617e 100644
+index 929c84075..0cba8b036 100644
 --- a/kernel/trace/trace_selftest.c
 +++ b/kernel/trace/trace_selftest.c
 @@ -1423,10 +1423,15 @@ static int trace_wakeup_test_thread(void *data)
@@ -11689,7 +11753,7 @@ index 929c84075315..0cba8b03617e 100644
  	struct wakeup_test_data *x = data;
  
 diff --git a/kernel/workqueue.c b/kernel/workqueue.c
-index 33b721a9af02..2aeb5b69733e 100644
+index 33b721a9a..2aeb5b697 100644
 --- a/kernel/workqueue.c
 +++ b/kernel/workqueue.c
 @@ -1281,6 +1281,7 @@ static bool kick_pool(struct worker_pool *pool)
@@ -11745,3 +11809,6 @@ index 33b721a9af02..2aeb5b69733e 100644
  	worker->current_start = jiffies;
  	work_data = *work_data_bits(work);
  	worker->current_color = get_work_color(work_data);
+-- 
+2.54.0
+
