@@ -60,7 +60,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_SDL2),y)
-    RETROARCH_CONF_OPTS += --enable-sdl2
+    RETROARCH_CONF_OPTS += --enable-sdl2 --disable-sdl3
     RETROARCH_DEPENDENCIES += sdl2
 else
     RETROARCH_CONF_OPTS += --disable-sdl2 --disable-sdl
