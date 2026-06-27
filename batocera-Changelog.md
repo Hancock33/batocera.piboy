@@ -28,6 +28,7 @@
 - Commander Genius fullscreen in Wayland
 - Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
 - Pygame fullscreen with Wayland
+- Raze analog controls and improved controller bindings
 - X16emu fullscreen with Wayland
 ### Changed / Improved
 - BigPEmu added to capable aarch64 devices
@@ -65,7 +66,7 @@
 - Libretro-PCSX to May 15th, 2026 build
 - Libretro-PD777 to May 16th, 2026 build
 - Libretro-Picodrive to April 2nd, 2026 build
-- Libretro-Play to 0.75
+- Libretro-Play to 0.76
 - Libretro-Prboom to May 4th, 2026 build
 - Libretro-ppsspp to 1.20.4
 - Libretro-PS2 to May 14th, 2026 build
@@ -78,6 +79,7 @@
 - OpenMSX to Release 21
 - OpenJK to May 13th, 2026 build
 - PCSX2 to May 17th, 2026 build
+- Play to 0.76
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
 - RPCS3 to v.0.0.41

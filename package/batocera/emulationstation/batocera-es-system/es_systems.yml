@@ -918,6 +918,16 @@ namco2x6:
 
                         For more info: https://wiki.batocera.org/systems:namco2x6
 
+namco3xx:
+  name:                 Namco 3xx
+  manufacturer:         Namco
+  release:              2007
+  hardware:             arcade
+  extensions:           [squashfs]
+  emulators:
+    rpcs3:
+      rpcs3:            { requireAnyOf: [BR2_PACKAGE_RPCS3] }
+
 nichibutsu:
   name:                 Nichibutsu
   manufacturer:         Arcade
