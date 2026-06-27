@@ -1,29 +1,5 @@
-diff --git a/Common.mak b/Common.mak
-index cba2c8484..38fd460bb 100644
---- a/Common.mak
-+++ b/Common.mak
-@@ -903,7 +903,7 @@ endif
- 
- ifeq ($(RENDERTYPE),SDL)
-     ifeq ($(SDL_TARGET),2)
--        SDLCONFIG := sdl2-config
-+        SDLCONFIG := sdl2
-         SDLNAME := SDL2
-     else ifeq ($(SDL_TARGET),1)
-         SDLCONFIG := sdl-config
-@@ -951,8 +951,8 @@ ifeq ($(RENDERTYPE),SDL)
-             SDLCONFIG_CFLAGS := $(strip $(subst -Dmain=SDL_main,,$(shell $(SDLCONFIG) --cflags)))
-             SDLCONFIG_LIBS := $(strip $(subst -mwindows,,$(shell $(SDLCONFIG) --libs)))
- 
--            COMPILERFLAGS += $(SDLCONFIG_CFLAGS)
--            LIBS += $(SDLCONFIG_LIBS)
-+            COMPILERFLAGS += `pkg-config sdl2 --cflags`
-+            LIBS += `pkg-config sdl2 --libs`
-         else
-             ifeq ($(SDL_TARGET),1)
-                 COMPILERFLAGS += -D_GNU_SOURCE=1
 diff --git a/source/imgui/src/imgui_impl_sdl2.cpp b/source/imgui/src/imgui_impl_sdl2.cpp
-index 4fb9c4d99..263ce718c 100644
+index 4fb9c4d..ca81c53 100644
 --- a/source/imgui/src/imgui_impl_sdl2.cpp
 +++ b/source/imgui/src/imgui_impl_sdl2.cpp
 @@ -114,8 +114,8 @@
