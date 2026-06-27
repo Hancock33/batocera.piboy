@@ -20,6 +20,15 @@ msgstr ""
 msgid "5 sec"
 msgstr ""
 
+msgid "10 sec"
+msgstr ""
+
+msgid "2 sec"
+msgstr ""
+
+msgid "5 sec"
+msgstr ""
+
 msgid "AC"
 msgstr "Corriente alterna"
 

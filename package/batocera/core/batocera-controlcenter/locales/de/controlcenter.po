@@ -78,6 +78,9 @@ msgstr "Héich Leeschtung"
 msgid "Immediately (with Control Center)"
 msgstr ""
 
+msgid "Immediately (with Control Center)"
+msgstr ""
+
 msgid "Kill it!"
 msgstr "Ofschléissen!"
 
@@ -146,6 +149,9 @@ msgstr "Opléisung:"
 
 msgid "Saver"
 msgstr "Spuermodus"
+
+msgid "Screenshot"
+msgstr ""
 
 msgid "Screenshot"
 msgstr ""
