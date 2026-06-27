@@ -11,7 +11,6 @@ BR2_TARGET_OPTIMIZATION="-march=armv8-a+crc+simd -mcpu=cortex-a72 -mtune=cortex-
 BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/piboy4/patches"
 
 # Kernel 7.1
-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_7_1=y
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,bf3f89a214bd01a765c732b4cea8f1bfa350aae9)/bf3f89a214bd01a765c732b4cea8f1bfa350aae9.tar.gz"
