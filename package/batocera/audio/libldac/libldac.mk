@@ -3,8 +3,8 @@
 # libldac
 #
 ################################################################################
-# Version: Commits on Jun 24, 2026
-LIBLDAC_VERSION = 385dc306a0d490b2ff569769d71350b1e0fc6acb
+# Version: Commits on Jun 27, 2026
+LIBLDAC_VERSION = 6579bd585a618f2e1612b3c1650d2b7fcfb1d43f
 LIBLDAC_SITE = https://github.com/EHfive/ldacBT.git
 LIBLDAC_SITE_METHOD = git
 LIBLDAC_GIT_SUBMODULES = YES
