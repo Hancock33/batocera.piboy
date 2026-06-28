@@ -27,6 +27,8 @@
 - Cannonball fullscreen on Wayland
 - Commander Genius fullscreen in Wayland
 - Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
+- Libretro-Hatarib not starting due to a compiled symbol issue
+- Mupen64 not starting fullscreen with Wayland
 - Pygame fullscreen with Wayland
 - Raze analog controls and improved controller bindings
 - Simcoupe not starting fullscreen
@@ -44,6 +46,7 @@
 - Migrated Khadas VIM4 GPU driver to Panfrost with the latest Mesa3D stack
 - PCSX2 variant for capable aarch64 devices
 - Removed Libretro-Puae2021
+- Removed the buggy Libretro-A5200 core. We will use the compatible Libretro-Atari800 core instead
 - Rockcip RK3588 devices moved to the mainline linux kernel:
   CoolPi 4B, FriendlyElec CM3588 NAS, GameForce ACE, IndieDroid Nova, Khadas Edge2, Orange Pi 5, Orange Pi 5 Plus, Orange Pi 5B, QuartzPro64, ROCK 5A, ROCK 5B, ROCK 5B Plus, ROCK 5C
 - The Force Engine to capable aarch64 devices
@@ -124,7 +127,7 @@
 - Vulkan stack to 1.4.350
 - WINE Mono to 11.1.0
 - WINE Proton to proton-exp-11.0
-- WINE TKG to 11.10
+- WINE TKG to 11.11
 - Wlroots to 0.20.1
 - X86_64 / Zen3 kernel updated to 7.1.2
 

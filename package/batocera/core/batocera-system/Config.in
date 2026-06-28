@@ -1085,7 +1085,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_PUAE2021                    if !BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && !BR2_PACKAGE_BATOCERA_TARGET_H3
     select BR2_PACKAGE_LIBRETRO_UAE4ARM                     if  BR2_arm || BR2_aarch64
 
-    # Atari 800 computers
+    # Atari 5200 & Atari 800 computers
     select BR2_PACKAGE_LIBRETRO_ATARI800                    # ALL
 
     # Sinclair ZX Spectrum
@@ -1302,9 +1302,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     # Atari 2600
     select BR2_PACKAGE_LIBRETRO_STELLA                      # ALL
-
-    # Atari 5200
-    select BR2_PACKAGE_LIBRETRO_A5200                       # ALL
 
     # NEC PC-Engine / TurboGrafx / SuperGrafx range
     select BR2_PACKAGE_LIBRETRO_BEETLE_PCE                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
