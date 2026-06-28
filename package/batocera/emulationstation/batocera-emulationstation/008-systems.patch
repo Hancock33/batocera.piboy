@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index ac3419a3e..50a7f2978 100644
+index 3d851e106..f07604e0d 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,201 +9,287 @@ namespace PlatformIds
+@@ -9,202 +9,288 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -64,6 +64,7 @@ index ac3419a3e..50a7f2978 100644
 +		{ "coleco",					COLECO },
  		{ "colecovision",			COLECOVISION },
 +		{ "comad",					COMAD },
++		{ "c16",					COMMODORE_16 },
  		{ "c64",					COMMODORE_64 },
 +		{ "cpet",					COMMODORE_PET },
 +		{ "coregrafx",				COREGRAFX },
@@ -377,7 +378,7 @@ index ac3419a3e..50a7f2978 100644
 +		{ "crvision",				VTECH_CREATIVISION },
  		{ "watara",					WATARA_SUPERVISION },
 -		{ "supervision",			WATARA_SUPERVISION },
--
+ 
 -		{ "model3",					MODEL3 },
 -			
 -		{ "imageviewer",			IMAGEVIEWER },
@@ -388,6 +389,7 @@ index ac3419a3e..50a7f2978 100644
 -		{ "pet",					COMMODORE_PET },
 -		{ "cpet",					COMMODORE_PET },
 -		{ "cplus4",					COMMODORE_PLUS4 },
+-		{ "c16",					COMMODORE_16 },
 -		{ "atom",					ACORN_ATOM },
 -		{ "bbcmicro",				ACORN_BBC_MICRO },
 -		{ "bbc",					ACORN_BBC_MICRO },
@@ -414,7 +416,7 @@ index ac3419a3e..50a7f2978 100644
 -		{ "arduboy",				ARDUBOY },
 -						
 -		{ "snes-msu1",				SUPER_NINTENDO_MSU1 },
- 
+-
 -		{ "gamate",					GAMATE },
 -		{ "gmaster",				HARTUNG_GAME_MASTER },
 -		{ "megaduck",				CREATONIC_MEGA_DUCK },
@@ -435,10 +437,10 @@ index ac3419a3e..50a7f2978 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index c0151bbf7..d32d7ae1e 100644
+index 15db99f8a..d45175687 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,54 +11,173 @@ namespace PlatformIds
+@@ -11,54 +11,174 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -497,6 +499,7 @@ index c0151bbf7..d32d7ae1e 100644
 +		COLECO,
  		COLECOVISION,
 +		COMAD,
++		COMMODORE_16,
  		COMMODORE_64,
 +		COMMODORE_PET,
 +		COREGRAFX,
@@ -628,7 +631,7 @@ index c0151bbf7..d32d7ae1e 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_CHIHIRO,
-@@ -66,118 +185,82 @@ namespace PlatformIds
+@@ -66,119 +186,82 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -720,6 +723,7 @@ index c0151bbf7..d32d7ae1e 100644
 -		EASYRPG,
 -		COMMODORE_PET,
 -		COMMODORE_PLUS4,
+-		COMMODORE_16,
 -		ACORN_ATOM,
 -		ACORN_BBC_MICRO,
 -		ACORN_ELECTRON,		
@@ -916,10 +920,10 @@ index b1cd80a04..bdc54b912 100644
  	{ MSX, "27" },
  	{ NINTENDO_64, "4" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 9dce547c9..29f88fe46 100644
+index 910a78528..90e7808f2 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -30,165 +30,239 @@ using namespace PlatformIds;
+@@ -30,166 +30,240 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1078,6 +1082,7 @@ index 9dce547c9..29f88fe46 100644
 +	{ FUJITSU_FM7, 97 },
 +	{ CASLOOPY, 98 },
 +	{ COMMODORE_PLUS4, 99 },
++	{ COMMODORE_16, 99 },
 +	{ FUNTECH_SUPER_A_CAN, 100 },
 +	{ GP32, 101 },
 +	{ VECTREX, 102 },
@@ -1243,6 +1248,7 @@ index 9dce547c9..29f88fe46 100644
 +	{ POCKCHALV2, 237 },
  	{ COMMODORE_PET, 240 },
 -	{ COMMODORE_PLUS4, 99 },
+-	{ COMMODORE_16, 99 },
 -	{ ACORN_ATOM, 36 },
 -	{ NOKIA_NGAGE, 30 },
 -	{ ACORN_BBC_MICRO, 37 },
