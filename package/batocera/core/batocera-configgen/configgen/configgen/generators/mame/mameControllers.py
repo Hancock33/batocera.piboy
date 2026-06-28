@@ -247,7 +247,11 @@ def generatePadsConfig(cfgPath: Path, playersControllers: Controllers, sysName: 
         for mapping in mappings_use:
             if mappings_use[mapping] in pad.inputs:
                 if mapping in [ 'START', 'COIN' ]:
+                    # Generate the standard arcade mapping (e.g. START1, COIN1)
                     xml_input.appendChild(generateSpecialPortElementPlayer(pad, config, 'standard', nplayer, pad.index, mapping, mappings_use[mapping], pad.inputs[mappings_use[mapping]], False, "", "", gunmappings, mousemappings, multiMouse, pedalkey))
+                    # Generate the console/MESS mapping (e.g. P1_START, P1_SELECT)
+                    console_type = f"P{nplayer}_START" if mapping == "START" else f"P{nplayer}_SELECT"
+                    xml_input.appendChild(generateSpecialPortElementPlayer(pad, config, 'standard', nplayer, pad.index, mapping, mappings_use[mapping], pad.inputs[mappings_use[mapping]], False, "", "", gunmappings, mousemappings, multiMouse, pedalkey, port_type=console_type))
                 else:
                     xml_input.appendChild(generatePortElement(pad, config, nplayer, pad.index, mapping, mappings_use[mapping], pad.inputs[mappings_use[mapping]], False, altButtons, gunmappings, isWheel, mousemappings, multiMouse, pedalkey))
             else:
@@ -274,19 +278,50 @@ def generatePadsConfig(cfgPath: Path, playersControllers: Controllers, sysName: 
             for controlDef in messControlDict[useControls]:
                 thisControl = messControlDict[useControls][controlDef]
                 if nplayer == thisControl['player'] and xml_input_alt is not None and config_alt is not None:
-                    if thisControl['type'] == 'special':
-                        xml_input_alt.appendChild(generateSpecialPortElement(pad, config_alt, thisControl['tag'], nplayer, pad.index, thisControl['key'], thisControl['mapping'], \
-                            pad.inputs[mappings_use[thisControl['useMapping']]], thisControl['reversed'], thisControl['mask'], thisControl['default'], pedalkey))
-                    elif thisControl['type'] == 'main':
-                        xml_input.appendChild(generateSpecialPortElement(pad, config_alt, thisControl['tag'], nplayer, pad.index, thisControl['key'], thisControl['mapping'], \
-                            pad.inputs[mappings_use[thisControl['useMapping']]], thisControl['reversed'], thisControl['mask'], thisControl['default'], pedalkey))
+                    
+                    # Resolve input key and reversed flag inline safely
+                    if thisControl['type'] in ['special', 'main', 'combo']:
+                        key_to_use = mappings_use.get(thisControl['useMapping'])
+                        reversed_flag = thisControl['reversed']
+                        if key_to_use is not None:
+                            if key_to_use not in pad.inputs:
+                                rmapping = reverseMapping(key_to_use)
+                                if rmapping in pad.inputs:
+                                    key_to_use = rmapping
+                                    reversed_flag = True
+                            
+                            if key_to_use in pad.inputs:
+                                if thisControl['type'] == 'special':
+                                    xml_input_alt.appendChild(generateSpecialPortElement(pad, config_alt, thisControl['tag'], nplayer, pad.index, thisControl['key'], thisControl['mapping'], \
+                                        pad.inputs[key_to_use], reversed_flag, thisControl['mask'], thisControl['default'], pedalkey))
+                                elif thisControl['type'] == 'main':
+                                    xml_input.appendChild(generateSpecialPortElement(pad, config_alt, thisControl['tag'], nplayer, pad.index, thisControl['key'], thisControl['mapping'], \
+                                        pad.inputs[key_to_use], reversed_flag, thisControl['mask'], thisControl['default'], pedalkey))
+                                elif thisControl['type'] == 'combo':
+                                    xml_input_alt.appendChild(generateComboPortElement(pad, config_alt, thisControl['tag'], pad.index, thisControl['key'], thisControl['kbMapping'], thisControl['mapping'], \
+                                        pad.inputs[key_to_use], reversed_flag, thisControl['mask'], thisControl['default']))
+
                     elif thisControl['type'] == 'analog':
-                        xml_input_alt.appendChild(generateAnalogPortElement(pad, config_alt, thisControl['tag'], nplayer, pad.index, thisControl['key'], mappings_use[thisControl['incMapping']], \
-                            mappings_use[thisControl['decMapping']], pad.inputs[mappings_use[thisControl['useMapping1']]], pad.inputs[mappings_use[thisControl['useMapping2']]], thisControl['reversed'], \
-                            thisControl['mask'], thisControl['default'], thisControl['delta'], thisControl['axis']))
-                    elif thisControl['type'] == 'combo':
-                        xml_input_alt.appendChild(generateComboPortElement(pad, config_alt, thisControl['tag'], pad.index, thisControl['key'], thisControl['kbMapping'], thisControl['mapping'], \
-                            pad.inputs[mappings_use[thisControl['useMapping']]], thisControl['reversed'], thisControl['mask'], thisControl['default']))
+                        key_to_use1 = mappings_use.get(thisControl['useMapping1'])
+                        key_to_use2 = mappings_use.get(thisControl['useMapping2'])
+                        reversed_flag = thisControl['reversed']
+                        
+                        if key_to_use1 is not None and key_to_use2 is not None:
+                            if key_to_use1 not in pad.inputs:
+                                rmapping1 = reverseMapping(key_to_use1)
+                                if rmapping1 in pad.inputs:
+                                    key_to_use1 = rmapping1
+                                    reversed_flag = True
+                            if key_to_use2 not in pad.inputs:
+                                rmapping2 = reverseMapping(key_to_use2)
+                                if rmapping2 in pad.inputs:
+                                    key_to_use2 = rmapping2
+                                    reversed_flag = True
+                                    
+                            if key_to_use1 in pad.inputs and key_to_use2 in pad.inputs:
+                                xml_input_alt.appendChild(generateAnalogPortElement(pad, config_alt, thisControl['tag'], nplayer, pad.index, thisControl['key'], mappings_use[thisControl['incMapping']], \
+                                    mappings_use[thisControl['decMapping']], pad.inputs[key_to_use1], pad.inputs[key_to_use2], reversed_flag, \
+                                    thisControl['mask'], thisControl['default'], thisControl['delta'], thisControl['axis']))
 
     # in case there are more guns than pads, configure them
     if useGuns and len(guns) > len(playersControllers):
@@ -376,11 +411,16 @@ def generateGunPortElement(config: minidom.Document, nplayer: int, mapping: str,
     xml_newseq.appendChild(value)
     return xml_port
 
-def generateSpecialPortElementPlayer(pad: Controller, config: minidom.Document, tag: str, nplayer: int, padindex: int, mapping: str, key: str, input: Input, reversed: bool, mask: str, default: str, gunmappings: Mapping[str, str], mousemappings: Mapping[str, str], multiMouse: bool, pedalkey: str | None):
+def generateSpecialPortElementPlayer(pad: Controller, config: minidom.Document, tag: str, nplayer: int, padindex: int, mapping: str, key: str, input: Input, reversed: bool, mask: str, default: str, gunmappings: Mapping[str, str], mousemappings: Mapping[str, str], multiMouse: bool, pedalkey: str | None, port_type: str | None = None):
     # Special button input (ie mouse button to gamepad)
     xml_port = config.createElement("port")
     xml_port.setAttribute("tag", tag)
-    xml_port.setAttribute("type", mapping+str(nplayer))
+    
+    # Use the custom port type if provided, otherwise default to START1/COIN1 style
+    if port_type is None:
+        port_type = mapping+str(nplayer)
+    xml_port.setAttribute("type", port_type)
+    
     xml_port.setAttribute("mask", mask)
     xml_port.setAttribute("defvalue", default)
     xml_newseq = config.createElement("newseq")
