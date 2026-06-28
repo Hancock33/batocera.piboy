@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Jun 14, 2026
-RETROARCH_VERSION = 2669eaad7b4318c415028e3d2feaf9d7f092885e
+# Version: Commits on Jun 28, 2026
+RETROARCH_VERSION = 18077460b1dadeab702d45a0a7501f52997c9365
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -60,7 +60,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_SDL2),y)
-    RETROARCH_CONF_OPTS += --enable-sdl2
+    RETROARCH_CONF_OPTS += --enable-sdl2 --disable-sdl3
     RETROARCH_DEPENDENCIES += sdl2
 else
     RETROARCH_CONF_OPTS += --disable-sdl2 --disable-sdl

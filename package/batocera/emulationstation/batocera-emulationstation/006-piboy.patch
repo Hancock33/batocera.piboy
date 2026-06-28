@@ -29,7 +29,7 @@ index 530eed5b8..cb45921c2 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 54021f65a..ca5328683 100644
+index f82f545ad..bc88859d9 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -88,8 +88,15 @@
@@ -64,7 +64,7 @@ index 54021f65a..ca5328683 100644
  	}
  	else
  	{
-@@ -1135,7 +1145,11 @@ void GuiMenu::openDeveloperSettings()
+@@ -1148,7 +1158,11 @@ void GuiMenu::openDeveloperSettings()
  
  void GuiMenu::openUpdatesSettings()
  {
@@ -77,7 +77,7 @@ index 54021f65a..ca5328683 100644
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -1176,6 +1190,7 @@ void GuiMenu::openUpdatesSettings()
+@@ -1189,6 +1203,7 @@ void GuiMenu::openUpdatesSettings()
  
  	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
  	{
@@ -85,7 +85,7 @@ index 54021f65a..ca5328683 100644
  		updateGui->addGroup(_("SOFTWARE UPDATES"));
  
  		// Enable updates
-@@ -1191,11 +1206,11 @@ void GuiMenu::openUpdatesSettings()
+@@ -1204,11 +1219,11 @@ void GuiMenu::openUpdatesSettings()
  
  		std::string updatesType = SystemConf::getInstance()->get("updates.type");
  
@@ -99,7 +99,7 @@ index 54021f65a..ca5328683 100644
  			if (updatesType.empty() || updatesType != BETA_NAME)
  				updatesType = "stable";
  
-@@ -1235,8 +1250,8 @@ void GuiMenu::openUpdatesSettings()
+@@ -1248,8 +1263,8 @@ void GuiMenu::openUpdatesSettings()
  						     _("NO"), nullptr));
  		    });
  		  }
@@ -110,7 +110,7 @@ index 54021f65a..ca5328683 100644
  }
  
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 5cb780ebf..c91f1d0ea 100644
+index e32dd5b9b..d8eddc46c 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -25,6 +25,7 @@
@@ -175,14 +175,12 @@ index 5cb780ebf..c91f1d0ea 100644
  				}
  				else
  				{
--					batteryStatusPath = batteryRootPath + "/status";
--					batteryCapacityPath = batteryRootPath + "/capacity";
 +				#if PIBOY
 +					batteryStatusPath = batteryRootPath + "/amps";
 +					batteryCapacityPath = batteryRootPath + "/percent";
 +				#else
-+					batteryStatusPath = batteryRootPath + "/status";
-+					batteryCapacityPath = batteryRootPath + "/capacity";
+ 					batteryStatusPath = batteryRootPath + "/status";
+ 					batteryCapacityPath = batteryRootPath + "/capacity";
  					batteryCurrentPath = batteryRootPath + "/current_avg";
 +				#endif
  				}

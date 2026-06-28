@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Input/pad_thread.cpp b/rpcs3/Input/pad_thread.cpp
-index 6bb45e105..add7d4a17 100644
+index 6d9e4e939..118979b5b 100644
 --- a/rpcs3/Input/pad_thread.cpp
 +++ b/rpcs3/Input/pad_thread.cpp
 @@ -673,20 +673,20 @@ void pad_thread::operator()()

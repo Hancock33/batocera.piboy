@@ -22,25 +22,25 @@ custom_features:
     description: LLVM is fastest, use the Interpreter settings if there are issues.
     choices:
       LLVM Recompiler: Recompiler (LLVM)
-      Dynamic Interpreter: Interpreter (dynamic)
       Static Interpreter: Interpreter (static)
   rpcs3_spudecoder:
     submenu: CPU
     prompt: SPU DECODER
-    description: If game crashes, try ASMJIT. If still crashing, try Fast Interpreter.
+    description: If game crashes, try ASMJIT. If still crashing, try Interpreter settings.
     choices:
       LLVM Recompiler: Recompiler (LLVM)
       ASMJIT Recompiler: Recompiler (ASMJIT)
-      Fast Interpreter: Interpreter (fast)
-      Precise Interpreter: Interpreter (precise)
+      Dynamic Interpreter: Interpreter (dynamic)
+      Static Interpreter: Interpreter (static)
   rpcs3_spuxfloataccuracy:
     submenu: CPU
     prompt: SPU XFloat Accuracy
     description: Can fix bugs in some games. Only relevant for dynamic or LLVM SPU decoder.
     choices:
-      Accurate XFloat: accurate
-      Approximate XFloat: approximate
-      Relaxed XFloat: relaxed
+      Accurate XFloat: Accurate
+      Approximate XFloat: Approximate
+      Relaxed XFloat: Relaxed
+      Inaccurate XFloat: Inaccurate
   rpcs3_sputhreads:
     submenu: CPU
     prompt: PREFERRED SPU THREADS
@@ -103,7 +103,7 @@ custom_features:
     prompt: ADDITIONAL FRAMELIMIT
     description: Most games already have an internal framelimit. Minor performance cost.
     choices:
-      Off (faster, unstable): false
+      Off (faster, unstable): Off
       "20": 20
       "25": 25
       "30": 30
@@ -162,6 +162,12 @@ custom_features:
       3840x2160: 250
       4480x2520: 275
       5120x2880: 300
+  rpcs3_resolution_scale_threshold:
+    submenu: VIDEO
+    prompt: RENDER RESOLUTION SCALE THRESHOLD
+    description: "Only framebuffers greater than this size will be upscaled. May fix problems with missing graphics. (Default: 16)"
+    preset: sliderauto
+    preset_parameters: 1 1024 1
   rpcs3_scaling:
     submenu: RENDER
     prompt: OUTPUT SCALING
@@ -169,15 +175,15 @@ custom_features:
     choices:
       Nearest: Nearest
       Bilinear (Default): Bilinear
-      FidelityFX Super Resolution: FidelityFX Super Resolution
+      FidelityFX Super Resolution: FidelityFX Super Resolution 1
   rpcs3_shadermode:
     submenu: RENDER
     prompt: SHADER MODE
     description: Only Async (skip draw) avoids freezing while compiling shaders.
     choices:
-      Legacy (single threaded): Shader Recompiler
-      Async (multi threaded)(Default): Async Shader Recompiler
-      Async with Shader Interpreter: Async with Shader Interpreter
+      Legacy Recompiler (single-threaded): Shader Recompiler
+      Async Recompiler (multi-threaded)(Default): Async Shader Recompiler
+      Async Recompiler with Shader Interpreter: Async with Shader Interpreter
       Shader Interpreter only: Shader Interpreter only
   rpcs3_num_compilers:
     submenu: RENDER
@@ -207,6 +213,13 @@ custom_features:
     choices:
       Off (Default): false
       'On': true
+  rpcs3_read_colorbuffers:
+    submenu: RENDER
+    prompt: READ COLOR BUFFERS
+    description: Initializes render target memory using vm memory. Some games need this to fix broken graphics.
+    choices:
+      Off (Default): false
+      'On': true
   rpcs3_write_depth_buffers:
     submenu: RENDER
     prompt: WRITE DEPTH BUFFERS
@@ -226,8 +239,9 @@ custom_features:
     prompt: VSYNC
     description: Can fix screen tearing on unorthodox displays (most LCDs don't need this).
     choices:
-      Off (Default): false
-      'On': true
+      Disabled: Disabled
+      Adaptive: Adaptive
+      Full: Full
   rpcs3_stretchdisplay:
     submenu: VIDEO
     prompt: STRETCH TO DISPLAY AREA
@@ -256,6 +270,13 @@ custom_features:
     choices:
       Off (Default): false
       On (Vulkan Only): true
+  rpcs3_force_cpu_blit_emulation:
+    submenu: RENDER
+    prompt: FORCE CPU BLIT EMULATION
+    description: Forces emulation of all blit and image manipulation operations on the CPU. Can fix some graphical issues at the cost of performance.
+    choices:
+      Off (Default): false
+      'On': true
   rpcs3_audio_format:
     submenu: AUDIO
     prompt: AUDIO FORMAT
@@ -264,6 +285,8 @@ custom_features:
       Stereo: Stereo
       Surround 5.1: Surround 5.1
       Surround 7.1: Surround 7.1
+      Manual: Manual
+      Automatic: Automatic
   rpcs3_audio_16bit:
     submenu: AUDIO
     prompt: CONVERT TO 16-BIT
@@ -431,3 +454,4 @@ custom_features:
     preset: switchon
 systems:
   - ps3
+  - namco3xx

@@ -30,12 +30,15 @@ libdate.mk
 libfyaml.mk
 liblc3.mk
 libretro-scummvm.mk
+libserum.mk
 libsfdo.mk
+libzedmd.mk
 mangohud.mk
 mt32emu.mk
 nghttp3.mk
 ngtcp2.mk
 ntfs-plus.mk
+openbor7530.mk
 ossp.mk
 pigpio-rpi.mk
 plutosvg.mk

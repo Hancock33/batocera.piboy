@@ -15,8 +15,8 @@
 # openjkdf2
 #
 ################################################################################
-# Version: Commits on Jun 12, 2026
-OPENJKDF2_VERSION = 02bc22e8d6104d744825fa0e448b340a5a46b62a
+# Version: Commits on Jun 28, 2026
+OPENJKDF2_VERSION = 4227acd7f96c7607c4c17232f3f587f702e21406
 OPENJKDF2_SITE = https://github.com/shinyquagsire23/OpenJKDF2.git
 OPENJKDF2_SITE_METHOD = git
 OPENJKDF2_GIT_SUBMODULES = YES
@@ -25,9 +25,9 @@ OPENJKDF2_LICENSE = GPLv2 & MIT
 OPENJKDF2_LICENSE_FILE = LICENSE.txt
 OPENJKDF2_EMULATOR_INFO = openjkdf2.emulator.yml
 
-OPENJKDF2_DEPENDENCIES += gamenetworkingsockets host-python-cog libcurl libfreeglut
-OPENJKDF2_DEPENDENCIES += libglew libgtk3 libpng openal physfs protobuf python3
-OPENJKDF2_DEPENDENCIES += sdl2 sdl2_mixer zlib
+OPENJKDF2_DEPENDENCIES += gamenetworkingsockets host-clang host-python-cog libcurl
+OPENJKDF2_DEPENDENCIES += libfreeglut libglew libgtk3 libpng openal physfs protobuf
+OPENJKDF2_DEPENDENCIES += python3 sdl2 sdl2_mixer zlib
 
 OPENJKDF2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 OPENJKDF2_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++"

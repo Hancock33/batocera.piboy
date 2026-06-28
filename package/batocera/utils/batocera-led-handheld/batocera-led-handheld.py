@@ -3,7 +3,7 @@
 """
 LED Service Daemon for handheld devices
 Show battery level and retroachievements through LED controllers
-Written for Batocera - @lbrpdx
+Written for Batocera - @lbrpdx & @dmanlfc
 
 In order to configure your own color mapping
 edit a file /userdata/system/configs/leds.conf with:
@@ -20,7 +20,7 @@ default is:
   100=009900
 
 100 is when a charger is plugged in
-You can use PULSE, RAINBOW and OFF as rgb_color for special effects.
+You can use PULSE, RAINBOW, CHROMA and OFF as rgb_color for special effects.
 
 ESCOLOR is the default one set with sliders in EmulationStation
 
@@ -55,7 +55,7 @@ BLOCK_FILE='/var/run/led-handheld-block'
 
 def check_support():
     model = batoled.batocera_model()
-    if model in ["pwm", "rgbaddr", "legiongos", "multiled", "dual_multiled", "odin_mono", "cubexx", "rg_vita_pro"]:
+    if model in ["pwm", "rgbaddr", "legiongos", "legiongo", "multiled", "dual_multiled", "odin_mono", "cubexx", "rg_vita_pro", "r36ultra"]:
         for path in [
             "/sys/class/power_supply/BAT0",
             "/sys/class/power_supply/BAT1",
@@ -125,7 +125,7 @@ def led_check(led):
         ledconfig = tmpconfig
     if (DEBUG):
         print(ledconfig)
-    prevblock = 0
+    last_state = None
     while True:
         try:
             if batoled.batoconf("led.enabled") == "0":
@@ -146,15 +146,36 @@ def led_check(led):
                 if (ch == "Discharging") and (bt == "100"):
                     bt = '99'
                 block = read_color(bt, ledconfig)
-                prevblock = block
-                try:
-                    if DEBUG:
-                        print(f"Set color to {block} for {bt}%")
-                    if color_changes_allowed():
-                        led.set_color(block)
-                except Exception as e:
-                    print (f"Error: {e}")
-                time.sleep(CHECK_INTERVAL)
+
+                # Resolve the color block or transition mode dynamically
+                target_action = block
+                if block == "ESCOLOR":
+                    mode = batoled.batoconf("led.mode") or "static"
+                    if mode == "rainbow":
+                        target_action = "RAINBOW"
+                    elif mode == "chroma":
+                        target_action = "CHROMA"
+                    elif mode == "pulse":
+                        target_action = "PULSE"
+
+                # Check if this is a software-driven effect that requires continuous looping
+                is_software_effect = target_action in ["RAINBOW", "CHROMA", "PULSE"] and batoled.batocera_model() in ["pwm", "rgb", "rgbaddr", "multiled", "dual_multiled", "odin_mono"]
+
+                # Only write to the hardware if the state has changed, or if it is a software effect that needs looping
+                if target_action != last_state or is_software_effect:
+                    try:
+                        if DEBUG:
+                            print(f"Set color to {target_action} for {bt}%")
+                        if color_changes_allowed():
+                            led.set_color(target_action)
+                            last_state = target_action
+                    except Exception as e:
+                        print (f"Error: {e}")
+
+                if is_software_effect:
+                    time.sleep(0.1)
+                else:
+                    time.sleep(CHECK_INTERVAL)
         except Exception as e:
             print(f"Error reading battery status: {e}")
             time.sleep(CHECK_INTERVAL)
@@ -184,7 +205,7 @@ def color_changes_allowed():
 PATH = check_support()
 if PATH is None:
     exit()
-if len(sys.argv)>1:
+if len(sys.argv) > 1:
     led = batoled.led()
     if sys.argv[1] == "start":
         try:
@@ -194,29 +215,28 @@ if len(sys.argv)>1:
         except Exception as e:
             print (f"Could not launch daemon: {e}")
             t.stop()
-    elif sys.argv[1] == "stop" or sys.argv[1] == "off":
+    elif sys.argv[1] in ["stop", "off"]:
         led.turn_off()
-    elif sys.argv[1] == "retroachievement" or sys.argv[1] == "rainbow":
+    elif sys.argv[1] in ["retroachievement", "rainbow"]:
         if color_changes_allowed():
             led.rainbow_effect()
+    elif sys.argv[1] == "chroma":
+        if color_changes_allowed():
+            led.chroma_effect()
     elif sys.argv[1] == "pulse":
         if color_changes_allowed():
             led.pulse_effect()
-    elif sys.argv[1] == "set_color" and sys.argv[2] != None:
+    elif sys.argv[1] == "set_color" and len(sys.argv) > 2:
         if color_changes_allowed():
             led.set_color(sys.argv[2])
     elif sys.argv[1] == "get_color":
         print(led.get_color())
-    elif sys.argv[1] == "set_color_dec" and sys.argv[2] != None:
+    elif sys.argv[1] == "set_color_dec" and len(sys.argv) > 2:
         if color_changes_allowed():
-            rgb = ""
-            for p in (sys.argv[2:]):
-                rgb += str(p) + ' '
+            rgb = " ".join(sys.argv[2:]) + " "
             led.set_color_dec(rgb)
-    elif sys.argv[1] == "set_color_force_dec" and sys.argv[2] != None:
-        rgb = ""
-        for p in (sys.argv[2:]):
-            rgb += str(p) + ' '
+    elif sys.argv[1] == "set_color_force_dec" and len(sys.argv) > 2:
+        rgb = " ".join(sys.argv[2:]) + " "
         led.set_color_dec(rgb)
     elif sys.argv[1] == "get_color_dec":
         print(led.get_color_dec())
@@ -224,7 +244,7 @@ if len(sys.argv)>1:
         block_color_changes(True)
     elif sys.argv[1] == "unblock_color_changes":
         block_color_changes(False)
-    elif sys.argv[1] == "set_brightness" and sys.argv[2] != None:
+    elif sys.argv[1] == "set_brightness" and len(sys.argv) > 2:
         led.set_brightness(sys.argv[2])
     elif sys.argv[1] == "get_brightness":
         (b, m) = led.get_brightness()

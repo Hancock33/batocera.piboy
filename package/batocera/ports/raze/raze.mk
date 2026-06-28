@@ -64,9 +64,6 @@ define RAZE_INSTALL
 	mv $(TARGET_DIR)/usr/bin/raze $(TARGET_DIR)/usr/share/raze/raze
 	mkdir -p $(TARGET_DIR)/usr/share/raze/soundfonts
 	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/soundfonts/raze.sf2 $(TARGET_DIR)/usr/share/raze/soundfonts/raze.sf2
-
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/raze/raze.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 RAZE_POST_INSTALL_TARGET_HOOKS += RAZE_INSTALL
 

@@ -207,11 +207,12 @@ class Vita3kGenerator(Generator):
         # using the -w & -f options prevents Vita3k from re-writing & prompting the user in GUI
         # we want to avoid that so roms load straight away
         if (vitaSaves / 'ux0' / 'app' / smplromname).is_dir():
-            commandArray = ["/usr/bin/vita3k/Vita3K", "-w", "-f", "-c", vitaConfigFile, "-r", smplromname]
+            commandArray = ["/usr/bin/vita3k/Vita3K", "-F", "-w", "-f", "-c", vitaConfigFile, "-r", smplromname]
         else:
             # Game not installed yet, let's open the menu
-            commandArray = ["/usr/bin/vita3k/Vita3K", "-w", "-f", "-c", vitaConfigFile, rom]
+            commandArray = ["/usr/bin/vita3k/Vita3K", "-F", "-w", "-f", "-c", vitaConfigFile, rom]
 
+        # use x11 for now to avoid crashes on certain games
         return Command.Command(
             array=commandArray,
             env={
@@ -219,7 +220,9 @@ class Vita3kGenerator(Generator):
                 "SDL_JOYSTICK_HIDAPI": "0",
                 "XDG_CONFIG_HOME": CONFIGS,
                 "XDG_DATA_HOME": SAVES,
-                "XDG_CACHE_HOME": CACHE
+                "XDG_CACHE_HOME": CACHE,
+                "QT_QPA_PLATFORM": "xcb",
+                "SDL_VIDEODRIVER": "x11"
             }
         )
 

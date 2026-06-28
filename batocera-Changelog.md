@@ -7,6 +7,7 @@
 - Anbernic RG40xx-H-v2-panel variant support
 - Anbernic RG40xx-V-v2-panel variant support
 - AYN Odin initial support
+- AYN Odin 3 initial support
 - Mangmi Air X initial support
 - Odroid M2 initial support
 ### Added
@@ -15,23 +16,55 @@
 - ES Setting for toggle fast forward
 - Dolphin GameCube Controller type BattlerGC Pro (x-input mode with analog+digital triggers)
 - ES setting to determnine mitigations On|Off(Default On)
+- ES setting to choose controller LED mode (Rainbow, Pulse Chroma)
+- Box64 userland x86_64 emulator for aarch64
+- Legion Go / Go 2 LED controller support
+- Libretro-Azahar
+- Xenia-Edge for x864_64 and select aarch64 devices
 ### Fixed
-
+- BCC menu not showing on SM8250 devices (i.e. Retroid Pocket 5)
+- Cannonball coin is now the Select button
+- Cannonball fullscreen on Wayland
+- Commander Genius fullscreen in Wayland
+- Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
+- Libretro-Hatarib not starting due to a compiled symbol issue
+- Mupen64 not starting fullscreen with Wayland
+- Pygame fullscreen with Wayland
+- Raze analog controls and improved controller bindings
+- Simcoupe not starting fullscreen
+- Sonic Mania controllers
+- Taradino blank screen with Wayland
+- Vice not going fullscreen with C128
+- X16emu fullscreen with Wayland
 ### Changed / Improved
+- BigPEmu added to capable aarch64 devices
+- Cemu added to capable aarch64 devices
 - New CPU temp helper script - batocera-cpu-temp
 - Raspberry Pi4 now uses LabWC
 - Raspberry Pi4 now uses the latest Mesa3D drivers
 - Khadas VIM4 now uses LabWC
 - Migrated Khadas VIM4 GPU driver to Panfrost with the latest Mesa3D stack
+- PCSX2 variant for capable aarch64 devices
 - Removed Libretro-Puae2021
+- Removed the buggy Libretro-A5200 core. We will use the compatible Libretro-Atari800 core instead
 - Rockcip RK3588 devices moved to the mainline linux kernel:
   CoolPi 4B, FriendlyElec CM3588 NAS, GameForce ACE, IndieDroid Nova, Khadas Edge2, Orange Pi 5, Orange Pi 5 Plus, Orange Pi 5B, QuartzPro64, ROCK 5A, ROCK 5B, ROCK 5B Plus, ROCK 5C
+- The Force Engine to capable aarch64 devices
+- Vita3k added for capable aarch64 devices
 ### Updated
+- Azahar to 2125.1.2
+- BigPEmu to 1.221
+- Box64 0.4.2
+- Cemu to June 23rd, 2026 build
 - CDogs to 2.4.0
 - CLK to 2026-04-30
+- CorsixTH to v0.69.2
+- Dolphin-Emu to 2606
 - ECWolf to Feb 23, 2026 build
+- EDuke32 / Fury to Feb 03, 2026 build
 - Groovy MAME to 0.288
-- Ledspicer to 0.7.4.1
+- IOQuake3 to Mar 9, 2026
+- Ledspicer to 0.7.6
 - Libretro-Arduous to April 21st, 2026 build
 - Libretro-EasyRPG to 0.8.1.1
 - Libretro-Hatari to April 21st, 2026 build
@@ -42,7 +75,7 @@
 - Libretro-PCSX to May 15th, 2026 build
 - Libretro-PD777 to May 16th, 2026 build
 - Libretro-Picodrive to April 2nd, 2026 build
-- Libretro-Play to 0.75
+- Libretro-Play to 0.76
 - Libretro-Prboom to May 4th, 2026 build
 - Libretro-ppsspp to 1.20.4
 - Libretro-PS2 to May 14th, 2026 build
@@ -51,18 +84,25 @@
 - Libretro-ScummVM to May 5th, 2026 build
 - Libretro-SuperBrosWar to December 12th, 2025 build
 - Libretro-VitaQuake2 to April 10th, 2026 build
+- Moonlight-QT to Jun 26, 2026 build
 - Mupen64Plus-Core to March 30th, 2026 build
 - OpenMSX to Release 21
 - OpenJK to May 13th, 2026 build
 - PCSX2 to May 17th, 2026 build
+- Play to 0.76
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
 - RPCS3 to v.0.0.41
 - ShadPS4 to v.0.16.0
 - Solarus to 2.0.4
+- Supermodel to v0.3a-20260528
 - Tsugaru to v20251206
 - Vita3k to 10th of June build
 - VKQuake to 1.34.1
+- VKQuake3 to 1.36
+- Winetricks to 20260125
+- X16emu to r49
+- Xemu to v0.8.136
 ### System
 - Allwinner H700 device kernel updated to 7.0.11
 - ALSA UCM configuration to v1.2.16
@@ -73,11 +113,12 @@
 - LabWC to 0.20.0
 - Linux Firmware to 20260519
 - Mesa3D to 26.1.2
-- Nvidia Open Production driver to 595.71.05
-- Nvidia 580 Legacy driver to 580.159.03
+- Nvidia Open Production driver to 595.84
+- Nvidia 580 Legacy driver to 580.173.02
 - QT to 6.11.1
 - Qualcomm SM6115 device kernel updated to 7.0.11
 - Qualcomm SM8550 device kernel updated to 7.0.11
+- Qualcomm SM8750 device kernel updated to 7.1.2
 - Rockchip RK3568 device kernel updated to 7.0.11
 - Rockchip RK3588 mainline device kernel updated to 7.0.11
 - SwitchRes to 2.2.2
@@ -86,9 +127,9 @@
 - Vulkan stack to 1.4.350
 - WINE Mono to 11.1.0
 - WINE Proton to proton-exp-11.0
-- WINE TKG to 11.10
+- WINE TKG to 11.11
 - Wlroots to 0.20.1
-- X86_64 / Zen3 kernel updated to 7.0.11
+- X86_64 / Zen3 kernel updated to 7.1.2
 
 # 2026/05/30 - batocera.linux 43.1
 ### Fixed

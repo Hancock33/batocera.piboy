@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Input/evdev_joystick_handler.cpp b/rpcs3/Input/evdev_joystick_handler.cpp
-index a8a957502..5b967c4bd 100644
+index 5bb03c585..ab1a7f53d 100644
 --- a/rpcs3/Input/evdev_joystick_handler.cpp
 +++ b/rpcs3/Input/evdev_joystick_handler.cpp
 @@ -760,7 +760,7 @@ std::vector<pad_list_entry> evdev_joystick_handler::list_devices()

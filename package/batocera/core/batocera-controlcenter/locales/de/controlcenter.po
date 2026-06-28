@@ -3,26 +3,35 @@ msgstr ""
 "Project-Id-Version: controlcenter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-02 21:32+0000\n"
-"PO-Revision-Date: 2026-04-09 23:26+0000\n"
+"PO-Revision-Date: 2026-02-21 10:46+0000\n"
 "Last-Translator: \n"
-"Language-Team: Letzeburgesch; Luxembourgish\n"
-"Language: lb\n"
+"Language-Team: French\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Loco-Source-Locale: lb_LU\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Loco-Source-Locale: de_DE\n"
 "X-Loco-Parser: loco_parse_po\n"
 "X-Generator: Loco https://localise.biz/\n"
+
+msgid "10 sec"
+msgstr ""
+
+msgid "2 sec"
+msgstr ""
+
+msgid "5 sec"
+msgstr ""
 
 msgid "AC"
 msgstr "AC"
 
 msgid "Audio Source"
-msgstr "Audioquell"
+msgstr "Audioquelle"
 
 msgid "Balanced"
-msgstr "Ausgläichen"
+msgstr "Ausgeglichen"
 
 msgid "Batocera"
 msgstr "Batocera"
@@ -31,70 +40,73 @@ msgid "Battery"
 msgstr "Akku"
 
 msgid "Bright +"
-msgstr "Hellegkeet +"
+msgstr "Helligkeit +"
 
 msgid "Bright -"
-msgstr "Hellegkeet -"
+msgstr "Helligkeit -"
 
 msgid "CPU:"
 msgstr "CPU:"
 
 msgid "Cancel"
-msgstr "Ofbriechen"
+msgstr "Abbrechen"
 
 msgid "Close"
-msgstr "Zoumaachen"
+msgstr "Schließen"
 
 msgid "Confirm"
-msgstr "Bestätegen"
+msgstr "Bestätigen"
 
 msgid "Default"
 msgstr "Standard"
 
 msgid "Free data storage:"
-msgstr "Fräie Späicherplaz:"
+msgstr "Freier Speicherplatz:"
 
 msgid "Game"
-msgstr "Spill"
+msgstr "Spiel"
 
 msgid "Gun"
-msgstr "Pistoul"
+msgstr "Pistole"
 
 msgid "High (60fps)"
-msgstr "Héich (60fps)"
+msgstr "Hoch (60fps)"
 
 msgid "High Perf"
-msgstr "Héich Leeschtung"
+msgstr "Hohe Leistung"
+
+msgid "Immediately (with Control Center)"
+msgstr ""
 
 msgid "Kill it!"
-msgstr "Ofschléissen!"
+msgstr "Beenden!"
 
 msgid "Low (30fps)"
-msgstr "Niddreg (30fps)"
+msgstr "Niedrig (30fps)"
 
 msgid "Manual"
 msgstr "Handbuch"
 
 msgid "Map"
-msgstr "Kaart"
+msgstr "Karte"
 
 msgid "Microphone"
 msgstr "Mikrofon"
 
 msgid "Mid (30fps)"
-msgstr "Mëttel (30fps)"
+msgstr "Mittel (30fps)"
 
 msgid "Mute Sound"
-msgstr "Toun stumm schalten"
+msgstr "Ton stummschalten"
 
 msgid "Network IP address:"
-msgstr "Netzwierk-IP-Adress:"
+msgstr "Netzwerk-IP-Adresse:"
 
 msgid "Next"
-msgstr "Weider"
+msgstr "Weiter"
 
 msgid "No Audio"
-msgstr "Keen Audio"
+msgstr "Kein Audio"
 
 msgid "OFF"
 msgstr "AUS"
@@ -106,40 +118,43 @@ msgid "Plane Mode"
 msgstr "Flugmodus"
 
 msgid "Power Mode"
-msgstr "Stroummodus"
+msgstr "Strom-Modus"
 
 msgid "Previous"
-msgstr "Zréck"
+msgstr "Zurück"
 
 msgid "Quality"
-msgstr "Qualitéit"
+msgstr "Qualität"
 
 msgid "Quick Access"
-msgstr "Schnellzougrëff"
+msgstr "Schnellzugriff"
 
 msgid "Quit game"
-msgstr "Spill verloossen"
+msgstr "Spiel beenden"
 
 msgid "Record"
-msgstr "Ophuelen"
+msgstr "Aufnehmen"
 
 msgid "Record All Screens"
-msgstr "All Bildschiermen ophuelen"
+msgstr "Alle Bildschirme aufnehmen"
 
 msgid "Recording in progress"
-msgstr "Opnam leeft"
+msgstr "Aufnahme läuft"
 
 msgid "Resolution:"
-msgstr "Opléisung:"
+msgstr "Auflösung:"
 
 msgid "Saver"
-msgstr "Spuermodus"
+msgstr "Sparmodus"
+
+msgid "Screenshot"
+msgstr ""
 
 msgid "Select"
-msgstr "Auswielen"
+msgstr "Auswählen"
 
 msgid "Stuck emulator?"
-msgstr "Emulator hänkt?"
+msgstr "Emulator hängt?"
 
 msgid "System"
 msgstr "System"
@@ -147,14 +162,17 @@ msgstr "System"
 msgid "System (Default)"
 msgstr "System (Standard)"
 
+msgid "Take screenshot"
+msgstr ""
+
 msgid "Temp:"
 msgstr "Temp:"
 
 msgid "Toggle"
-msgstr "Ëmschalten"
+msgstr "Umschalten"
 
 msgid "Touch keyboard"
-msgstr "Bildschiermtastatur"
+msgstr "Bildschirmtastatur"
 
 msgid "Ultra (60fps)"
 msgstr "Ultra (60fps)"

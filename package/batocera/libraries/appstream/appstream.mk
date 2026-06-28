@@ -3,12 +3,12 @@
 # appstream
 #
 ################################################################################
-# Version: Commits on Jan 28, 2026
-APPSTREAM_VERSION = v1.1.2
+# Version: Commits on Jun 18, 2026
+APPSTREAM_VERSION = v1.1.3
 APPSTREAM_SITE = $(call github,ximion,appstream,$(APPSTREAM_VERSION))
 APPSTREAM_INSTALL_STAGING = YES
 
-APPSTREAM_DEPENDENCIES = bash-completion libcurl libfyaml libxmlb host-appstream
+APPSTREAM_DEPENDENCIES = bash-completion blake3 libcurl libfyaml libxmlb host-appstream
 HOST_APPSTREAM_DEPENDENCIES = host-bash-completion host-brotli host-libcurl host-libidn2 host-libfyaml host-libxmlb
 
 APPSTREAM_CONF_OPTS = -Dgir=true -Dstemming=false -Dsystemd=false -Dzstd-support=true -Dvapi=true -Dcompose=true

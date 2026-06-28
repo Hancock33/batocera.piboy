@@ -3,9 +3,9 @@
 # xenia-canary
 #
 ################################################################################
-# Version: Commits on Jun 11, 2026
-XENIA_CANARY_VERSION = 30ac9d7be69bf7d9e9cc5d92d126cc62c58b8f48
-XENIA_CANARY_SOURCE = xenia_canary_windows.zip
+# Version: Commits on Jun 28, 2026
+XENIA_CANARY_VERSION = 8b948d503f5f7c96f95b6c7016bb2ce165b1f9f6
+XENIA_CANARY_SOURCE = xenia_canary_windows.7z
 XENIA_CANARY_SITE = https://github.com/xenia-canary/xenia-canary/releases/download/"$(shell echo $(XENIA_CANARY_VERSION) | cut -c 1-7)"
 XENIA_CANARY_LICENSE = BSD
 XENIA_CANARY_LICENSE_FILE = LICENSE
@@ -13,7 +13,7 @@ XENIA_CANARY_EMULATOR_INFO = xenia-canary.emulator.yml
 XENIA_CANARY_DEPENDENCIES = python-toml
 
 define XENIA_CANARY_EXTRACT_CMDS
-	mkdir -p $(@D) && cd $(@D) && $(UNZIP) -d $(@D) $(DL_DIR)/$(XENIA_CANARY_DL_SUBDIR)/$(XENIA_CANARY_SOURCE)
+	mkdir -p $(@D) && cd $(@D) && 7za x $(DL_DIR)/$(XENIA_CANARY_DL_SUBDIR)/$(XENIA_CANARY_SOURCE) -o$(@D)
 endef
 
 define XENIA_CANARY_INSTALL_TARGET_CMDS

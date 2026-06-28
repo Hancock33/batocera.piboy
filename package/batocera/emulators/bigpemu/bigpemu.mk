@@ -3,8 +3,8 @@
 # bigpemu
 #
 ################################################################################
-# Version: Commits on Dec 22, 2025
-BIGPEMU_VERSION = v121
+# Version: Commits on May 10, 2026
+BIGPEMU_VERSION = v1221
 BIGPEMU_SOURCE = BigPEmu_$(BIGPEMU_ARCH)_$(BIGPEMU_VERSION).tar.gz
 BIGPEMU_SITE = https://www.richwhitehouse.com/jaguar/builds
 BIGPEMU_EMULATOR_INFO = bigpemu.emulator.yml

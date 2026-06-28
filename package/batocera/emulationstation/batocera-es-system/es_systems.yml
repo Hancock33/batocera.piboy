@@ -918,6 +918,16 @@ namco2x6:
 
                         For more info: https://wiki.batocera.org/systems:namco2x6
 
+namco3xx:
+  name:                 Namco 3xx
+  manufacturer:         Namco
+  release:              2007
+  hardware:             arcade
+  extensions:           [squashfs]
+  emulators:
+    rpcs3:
+      rpcs3:            { requireAnyOf: [BR2_PACKAGE_RPCS3] }
+
 nichibutsu:
   name:                 Nichibutsu
   manufacturer:         Arcade
@@ -1211,7 +1221,6 @@ atari5200:
   emulators:
     libretro:
       atari800:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ATARI800] }
-      a5200:            { requireAnyOf: [BR2_PACKAGE_LIBRETRO_A5200]    }
 
 atari7800:
   name:                 Atari 7800
@@ -6825,7 +6834,11 @@ ps4:
 
                         Example: /userdata/roms/ps4/CUSA03173/Bloodborne.ps4
 
-                        This .ps4 file acts as a launcher entry and allows the game to appear correctly in the frontend.
+                        Alternatively you can rename the extracted folder to be your .ps4 extension.
+                        Example: /userdata/roms/ps4/Bloodborne.ps4
+
+                        This .ps4 extension acts as a launcher entry and allows the game to appear correctly in the frontend.
+                        The games eboot.bin launcher file should be in the root of the directory called .ps4 or alongside the .ps4 file.
 
                         For more info: https://wiki.batocera.org/systems:ps4
   comment_fr:           |

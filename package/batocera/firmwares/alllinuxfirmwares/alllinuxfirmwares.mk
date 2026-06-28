@@ -3,8 +3,8 @@
 # alllinuxfirmwares
 #
 ################################################################################
-# Version: Commits on May 19, 2026
-ALLLINUXFIRMWARES_VERSION = 20260519
+# Version: Commits on Jun 22, 2026
+ALLLINUXFIRMWARES_VERSION = 20260622
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://www.kernel.org/pub/linux/kernel/firmware
 
@@ -112,8 +112,9 @@ ifeq ($(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
 endif
 
-# Remove qualcomm firmware if not buidling Qualcomm Board
-ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_ODIN)$(BR2_PACKAGE_BATOCERA_TARGET_QCS6490)$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)$(BR2_PACKAGE_BATOCERA_TARGET_SM8550),y)
+# Remove snadragon SoC folder if not a Qualcomm board
+# Preserves ath10k/11k/12k wifi separately
+ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_SDM845)$(BR2_PACKAGE_BATOCERA_TARGET_QCS6490)$(BR2_PACKAGE_BATOCERA_TARGET_SM6115)$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)$(BR2_PACKAGE_BATOCERA_TARGET_SM8550)$(BR2_PACKAGE_BATOCERA_TARGET_SM8750),y)
     ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/qcom
 endif
 

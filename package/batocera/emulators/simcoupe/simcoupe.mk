@@ -3,8 +3,8 @@
 # simcoupe
 #
 ################################################################################
-# Version: Commits on May 25, 2026
-SIMCOUPE_VERSION = 0e8a69f3096fe00a00a29bd2303db6a7358021ad
+# Version: Commits on Jun 16, 2026
+SIMCOUPE_VERSION = a38fc8be4955381b01dfe2939ac13879190ba170
 SIMCOUPE_SITE = $(call github,simonowen,simcoupe,$(SIMCOUPE_VERSION))
 SIMCOUPE_DEPENDENCIES = sdl2
 SIMCOUPE_EMULATOR_INFO = samcoupe.emulator.yml

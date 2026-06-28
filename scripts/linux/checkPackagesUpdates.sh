@@ -11,7 +11,6 @@ PACKAGES_RETROARCH="retroarch
                     slang-shaders"
 
 PACKAGES_LIBRETRO="libretro-81
-                   libretro-a5200
                    libretro-arduous
                    libretro-atari800
                    libretro-beetle-lynx
@@ -305,7 +304,8 @@ PACKAGES_CONTROLLERS="aelightgun
                       xpadneo
                       xpad-noone"
 
-PACKAGES_UTILS="btop
+PACKAGES_UTILS="box64
+                btop
                 mangohud
                 moonlight-embedded
                 moonlight-qt

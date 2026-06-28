@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Jun 14, 2026
-RPCS3_VERSION = 41a7cd29f8fb3f7c5e95f0aac7c8d89ac175c403
+# Version: Commits on Jun 28, 2026
+RPCS3_VERSION = cffd02bb3583aab3ae718b0435bcf80735c9badc
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -58,6 +58,13 @@ define RPCS3_INSTALL_RPCS3_EXIT
 endef
 
 RPCS3_POST_INSTALL_TARGET_HOOKS += RPCS3_INSTALL_RPCS3_EXIT
+
+define RPCS3_INSTALL_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -D -m 0644 $(RPCS3_PKGDIR)/*.keys $(TARGET_DIR)/usr/share/evmapy/
+endef
+
+RPCS3_POST_INSTALL_TARGET_HOOKS += RPCS3_INSTALL_EVMAPY
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))

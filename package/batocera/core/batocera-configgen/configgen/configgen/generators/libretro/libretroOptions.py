@@ -1205,6 +1205,35 @@ def _melondsds_options(
     _set_from_system(coreSettings, 'melonds_show_lid_state', system, 'melondsds_show_lid', default='disabled')
 
 
+# Nintendo 3DS (Azahar)
+def _azahar_options(
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
+) -> None:
+    # 3DS System Model
+    _set_from_system(coreSettings, 'citra_is_new_3ds', system, '3ds_system_model', default='New 3DS')
+
+    # 3DS System Region
+    _set_from_system(coreSettings, 'citra_region_value', system, '3ds_system_region', default='Auto')
+
+    # 3DS System Language
+    _set_from_system(coreSettings, 'citra_language_value', system, '3ds_system_language', default='English')
+
+    # 3DS Internal Resolution
+    _set_from_system(coreSettings, 'citra_resolution_factor', system, '3ds_internal_resolution', default='1')
+
+    # 3DS Texture Filter
+    _set_from_system(coreSettings, 'citra_texture_filter', system, '3ds_texture_filter', default='none')
+
+    # 3DS Screen Layout
+    _set_from_system(coreSettings, 'citra_layout_option', system, '3ds_screen_layout', default='default')
+
+    # 3DS Prominent Screen
+    _set_from_system(coreSettings, 'citra_swap_screen', system, '3ds_prominent_screen', default='Top')
+
+    # 3DS Large Screen Proportion
+    _set_from_system(coreSettings, 'citra_large_screen_proportion', system, '3ds_large_screen_proportion', default='4.00')
+
+
 # Nintendo Gameboy (Dual Screen) / GB Color (Dual Screen)
 def _tgbdual_options(
     coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
@@ -2547,6 +2576,7 @@ def _ep128emu_core_options(
 _option_functions: dict[str, Callable[[UnixSettings, Emulator, Path, Guns, DeviceInfoMapping], None]] = {
     '81': _81_options,
     'atari800': _atari800_options,
+    'azahar': _azahar_options,
     'beetle-saturn': _beetle_saturn_options,
     'bennugd': _bennugd_options,
     'bk': _bk_options,

@@ -3,13 +3,13 @@
 # ppsspp
 #
 ################################################################################
-# Version: Commits on Jun 14, 2026
-PPSSPP_VERSION = 14dc5a51560628581c023235e9d35ec28fb14b6a
+# Version: Commits on Jun 28, 2026
+PPSSPP_VERSION = 3b319699318731d6d1900ba4b65e2c8c47774631
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
 PPSSPP_LICENSE = GPLv2
-PPSSPP_DEPENDENCIES = sdl2 sdl2_ttf libzip
+PPSSPP_DEPENDENCIES = sdl3 sdl3_ttf libzip
 
 $(eval $(call register,ppsspp.emulator.yml))
 $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.ppsspp.emulator.yml))
@@ -30,7 +30,7 @@ PPSSPP_CONF_OPTS += -DMOBILE_DEVICE=OFF
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=OFF
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_FREETYPE=ON
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_LIBZIP=ON
-PPSSPP_CONF_OPTS += -DUSE_SYSTEM_LIBSDL2=ON
+PPSSPP_CONF_OPTS += -DUSE_SYSTEM_LIBSDL3=ON
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_LIBPNG=ON
 PPSSPP_CONF_OPTS += -DUSE_SYSTEM_ZSTD=ON
 PPSSPP_CONF_OPTS += -DENABLE_CTEST=OFF

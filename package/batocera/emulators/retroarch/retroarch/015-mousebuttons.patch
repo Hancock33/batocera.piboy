@@ -192,7 +192,7 @@ index b0948cdeb8..ba40002e19 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index b3dccf08c9..d06cffcb43 100644
+index 94bee97df5..946dce37f4 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
 @@ -1676,8 +1676,15 @@ static bool menu_input_key_bind_poll_find_trigger_pad(

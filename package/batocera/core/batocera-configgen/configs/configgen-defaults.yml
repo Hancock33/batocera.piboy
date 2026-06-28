@@ -112,7 +112,7 @@ atari2600:
   core:     stella
 atari5200:
   emulator: libretro
-  core:     a5200
+  core:     atari800
 atari7800:
   emulator: libretro
   core:     prosystem
@@ -193,6 +193,8 @@ catacomb:
 cannonball:
   emulator: cannonball
   core:     cannonball
+  options:
+    bezel: none
 cave:
   emulator: libretro
   core:     mame078plus
@@ -1264,7 +1266,7 @@ xbox:
   options:
     powersave: '2'
 xbox360:
-  emulator: xenia
+  emulator: xenia-edge
   core:     xenia-edge
   options:
     powersave: '2'

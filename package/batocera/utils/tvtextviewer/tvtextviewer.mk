@@ -3,8 +3,8 @@
 # tvtextviewer
 #
 ################################################################################
-# Version: Commits on Nov 29, 2023
-TVTEXTVIEWER_VERSION = d3cc00a5009ece2d1df6cfc571709d0c5752bade
+# Version: Commits on Jun 28, 2026
+TVTEXTVIEWER_VERSION = 2e961201e2d5fa73be8b5f82977038f3fd22dbba
 TVTEXTVIEWER_SITE = https://github.com/lethal-guitar/TvTextViewer.git
 TVTEXTVIEWER_SITE_METHOD=git
 TVTEXTVIEWER_GIT_SUBMODULES=YES
