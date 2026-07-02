@@ -12,15 +12,14 @@ LIBRETRO_GP32EMU_DEPENDENCIES += retroarch
 LIBRETRO_GP32EMU_EMULATOR_INFO = gp32emu.libretro.core.yml
 
 define LIBRETRO_GP32EMU_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CC="$(TARGET_CC)" -C $(@D)/ \
-	    -f Makefile.libretro CFLAGS="$(TARGET_CFLAGS) -std=c11 -O3 -fPIC"
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) CC="$(TARGET_CC)" -C $(@D)/ -f Makefile.libretro \
+	CFLAGS="$(TARGET_CFLAGS) -std=c11 -O3 -fPIC"
 endef
 
 define LIBRETRO_GP32EMU_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/gp32emu_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/gp32emu_libretro.so
-	$(INSTALL) -D -m 0644 $(@D)/gp32emu_libretro.info \
-		$(TARGET_DIR)/usr/share/libretro/info/gp32emu_libretro.info
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro  $(TARGET_DIR)/usr/share/libretro/info
+	$(INSTALL) -D $(@D)/gp32emu_libretro.so $(TARGET_DIR)/usr/lib/libretro/gp32emu_libretro.so
+	$(INSTALL) -D -m 0644 $(@D)/gp32emu_libretro.info $(TARGET_DIR)/usr/share/libretro/info/gp32emu_libretro.info
 endef
 
 $(eval $(generic-package))
