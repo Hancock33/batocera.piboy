@@ -46,7 +46,6 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cpucores                      $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-config                        $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cores                         $(TARGET_DIR)/usr/bin/
-	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cpu-temp                      $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-encode                        $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-es-swissknife                 $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-es-thebezelproject            $(TARGET_DIR)/usr/bin/
@@ -79,6 +78,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-switch-screen-checker-delayed $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-sync                          $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-systems                       $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-temp                          $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-timezone                      $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-upgrade                       $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-version                       $(TARGET_DIR)/usr/bin/
