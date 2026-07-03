@@ -3,8 +3,8 @@
 # libretro-parallel-n64
 #
 ################################################################################
-# Version: Commits on Jul 02, 2026
-LIBRETRO_PARALLEL_N64_VERSION = c0eb9cc824b137a9ba6436d961207594bc12c77f
+# Version: Commits on Jul 03, 2026
+LIBRETRO_PARALLEL_N64_VERSION = 303408b5f9cdc2e891f3fed77a8a8eb570884ebd
 LIBRETRO_PARALLEL_N64_SITE = $(call github,libretro,parallel-n64,$(LIBRETRO_PARALLEL_N64_VERSION))
 LIBRETRO_PARALLEL_N64_LICENSE = GPLv2
 LIBRETRO_PARALLEL_N64_DEPENDENCIES += retroarch
