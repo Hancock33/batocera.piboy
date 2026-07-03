@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 9c91b7290..40fd3f737 100644
+index dedb35e7a..40fd3f737 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -4,35 +4,6 @@
@@ -66,7 +66,7 @@ index 9c91b7290..40fd3f737 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/freetype")
 -find_package(harfbuzz REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/harfbuzz")
--find_package(SQLite3 3.53.1 REQUIRED
+-find_package(SQLite3 3.53.3 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/SQLite3")
 -find_package(plutosvg 0.0.7 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/plutosvg")
@@ -82,7 +82,7 @@ index 9c91b7290..40fd3f737 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Shaderc")
 -find_package(spirv_cross_c_shared REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/spirv_cross_c_shared/cmake")
--find_package(SDL3 3.4.4 REQUIRED
+-find_package(SDL3 3.4.12 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/SDL3")
 +set(FIND_ROOT_PATH_BACKUP ${CMAKE_FIND_ROOT_PATH})
 +set(FIND_ROOT_PATH_MODE_INCLUDE_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_INCLUDE})
@@ -102,13 +102,13 @@ index 9c91b7290..40fd3f737 100644
 +
 +# Bundled dependencies.
 +find_package(zstd 1.5.7 REQUIRED)
-+find_package(WebP REQUIRED) # v1.4.0, spews an error on Linux because no pkg-config.
++find_package(WebP 1.6.0 REQUIRED)
 +find_package(PNG 1.6.58 REQUIRED)
 +find_package(JPEG REQUIRED)
-+find_package(SDL3 3.4.4 REQUIRED)
++find_package(SDL3 3.4.12 REQUIRED)
 +find_package(Freetype 2.14.1 REQUIRED)
 +find_package(harfbuzz REQUIRED)
-+find_package(SQLite3 3.53.1 REQUIRED)
++find_package(SQLite3 3.53.3 REQUIRED)
 +find_package(plutosvg 0.0.6 REQUIRED)
 +find_package(cpuinfo REQUIRED)
 +#find_package(DiscordRPC 3.4.0 REQUIRED)
@@ -188,10 +188,10 @@ index 09c47c197..39f3efddc 100644
  
  include(FindPackageHandleStandardArgs)
 diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
-index fc724bfcd..a4593e259 100644
+index 05a3bbb93..c17d9b042 100644
 --- a/src/core/CMakeLists.txt
 +++ b/src/core/CMakeLists.txt
-@@ -220,7 +220,8 @@ function(add_core_resources target)
+@@ -221,7 +221,8 @@ function(add_core_resources target)
    add_util_resources(${target})
  
    add_resources(${target} "resources" ${CMAKE_SOURCE_DIR}/data/resources)
@@ -217,19 +217,19 @@ index 9d14234b7..e099ba504 100644
  
  #ifdef ENABLE_DISCORD_PRESENCE
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index 05ccd3448..36189e6d0 100644
+index 2106b5db9..2f71ecd75 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -99,7 +99,7 @@ add_library(util
+@@ -101,7 +101,7 @@ add_library(util
  target_precompile_headers(util PRIVATE "pch.h")
  target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
  target_link_libraries(util PUBLIC common imgui)
 -target_link_libraries(util PRIVATE libchdr lzma libjpeg-turbo::jpeg PNG::png_shared WebP::webp
 +target_link_libraries(util PRIVATE libchdr lzma JPEG::JPEG PNG::PNG WebP::webp 
                                     plutosvg::plutosvg ZLIB::ZLIB SoundTouch::SoundTouchDLL xxhash
-                                    zstd::libzstd_shared reshadefx)
+                                    libzip::zip zstd::libzstd_shared reshadefx)
  
-@@ -273,7 +273,7 @@ function(add_util_resources target)
+@@ -275,7 +275,7 @@ function(add_util_resources target)
    endif()
  
    # Copy dynamically-loaded libraries (harfbuzz/shaderc/spirv-cross) into the bundle.
