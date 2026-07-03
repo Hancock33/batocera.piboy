@@ -663,6 +663,11 @@ namco2x6:
   core:     play
   options:
     powersave: '1'
+namco3xx:
+  emulator: rpcs3
+  core:     rpcs3
+  options:
+    hud_support: false
 naomi:
   emulator: flycast
   core:     flycast
