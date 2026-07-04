@@ -1,10 +1,10 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 657f3fc..5456dbb 100644
+index 5c6d0e9..70334d9 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -50,7 +50,6 @@ string(CONCAT TARGET_ARCH TARGET_ ${TARGET_ARCH})
+@@ -53,7 +53,6 @@ string(TOUPPER ${CMAKE_TARGET_ARCHITECTURES} TARGET_ARCH)
+ string(CONCAT TARGET_ARCH TARGET_ ${TARGET_ARCH})
  
- include(BuildSupport)
  include(GNUInstallDirs)
 -include(GetGitRevisionDescription)
  include(InstallRequiredSystemLibraries)

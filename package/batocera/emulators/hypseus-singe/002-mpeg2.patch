@@ -1,17 +1,17 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 5456dbb..9841c5d 100644
+index 70334d9..a0db29d 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -60,7 +60,7 @@ use_cxx11( )
- PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
- PKG_SEARCH_MODULE(SDL2_TTF REQUIRED SDL2_ttf)
- PKG_SEARCH_MODULE(SDL2_MIXER REQUIRED SDL2_mixer)
+@@ -60,7 +60,7 @@ include(BuildLibMPEG2)
+ 
+ set (CMAKE_CXX_STANDARD 11)
+ 
 -build_libmpeg2( )
 +PKG_SEARCH_MODULE(MPEG2 REQUIRED libmpeg2)
  
  message(STATUS "Target: ${CMAKE_SYSTEM_NAME} ${CMAKE_TARGET_ARCHITECTURES}")
  
-@@ -99,7 +99,6 @@ add_subdirectory(timer)
+@@ -124,7 +124,6 @@ add_subdirectory(timer)
  add_subdirectory(video)
  add_subdirectory(vldp)
  
@@ -20,12 +20,12 @@ index 5456dbb..9841c5d 100644
  add_dependencies( game vldp )
  add_dependencies( sound vldp )
 diff --git a/src/vldp/vldp.h b/src/vldp/vldp.h
-index 438f1a1..a1498c5 100644
+index fe78b32..ed54424 100644
 --- a/src/vldp/vldp.h
 +++ b/src/vldp/vldp.h
 @@ -35,6 +35,8 @@ extern "C" {
  // But CMake does the right thing here 
- #include <SDL.h> // only used for threading
+ #include <SDL3/SDL.h> // only used for threading
  
 +#include <mpeg2dec/mpeg2.h>
 +
