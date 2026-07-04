@@ -82,7 +82,7 @@ class VPinballGenerator(Generator):
 
         # set the config path to be sure
         commandArray = [
-            "/usr/bin/vpinball/VPinballX_BGFX",
+            "/usr/bin/vpinball/VPinballX_GL",
             "-PrefPath", vpinballConfigPath,
             "-Ini", vpinballConfigFile,
             "-Play", rom
