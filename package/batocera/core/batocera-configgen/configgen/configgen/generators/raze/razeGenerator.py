@@ -23,7 +23,7 @@ class RazeGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "raze",
-            "keys": { 
+            "keys": {
                 "exit": ["KEY_LEFTALT", "KEY_F4"],
                 "save_state": "KEY_F6",
                 "restore_state": "KEY_F9",

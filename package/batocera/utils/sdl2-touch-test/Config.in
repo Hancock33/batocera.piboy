@@ -6,5 +6,5 @@ config BR2_PACKAGE_SDL2_TOUCH_TEST
     help
       Small little SDL2 graphics utility to test touch accuracy.
       Great to help troubleshoot multiple touchscreen devices.
-      
+
       https://github.com/batocera-linux/batocera.linux

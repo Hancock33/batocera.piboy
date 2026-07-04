@@ -21,7 +21,7 @@ class DrasticGenerator(Generator):
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "drastic",
-            "keys": { 
+            "keys": {
                 "exit": "KEY_ESC",
                 "save_state": "KEY_F5",
                 "restore_state": "KEY_F7",
@@ -227,7 +227,7 @@ class DrasticGenerator(Generator):
             mappings_b["controls_b[CONTROL_INDEX_R]"] = get_btn_or_hat_val("r2")
             # Start and Select
             mappings_b["controls_b[CONTROL_INDEX_START]"] = get_btn_or_hat_val("start")
-            mappings_b["controls_b[CONTROL_INDEX_SELECT]"] = get_btn_or_hat_val("select")          
+            mappings_b["controls_b[CONTROL_INDEX_SELECT]"] = get_btn_or_hat_val("select")
             # Hotkeys: Swap Screen (pageup/L1), Fast Forward (pagedown/R1)
             mappings_b["controls_b[CONTROL_INDEX_SWAP_SCREENS]"] = get_btn_or_hat_val("pageup")
             mappings_b["controls_b[CONTROL_INDEX_FAST_FORWARD]"] = get_btn_or_hat_val("pagedown")
@@ -237,7 +237,7 @@ class DrasticGenerator(Generator):
                 y_inp = inputs["joystick1up"]
                 x_axis_id = int(x_inp.id)
                 y_axis_id = int(y_inp.id)
-                
+
                 mappings_b["controls_b[CONTROL_INDEX_TOUCH_CURSOR_LEFT]"] = str(1216 + x_axis_id)
                 mappings_b["controls_b[CONTROL_INDEX_TOUCH_CURSOR_RIGHT]"] = str(1152 + x_axis_id)
                 mappings_b["controls_b[CONTROL_INDEX_TOUCH_CURSOR_UP]"] = str(1216 + y_axis_id)

@@ -179,10 +179,10 @@ def configPadsIni(system: Emulator, rom: Path, guns: Guns) -> None:
     if m3_outputs == "net":
         outputs_lf = "true" if system.config.get_bool("m3_outputs_lf") else "false"
         targetConfig.set("Global", "OutputsWithLF", outputs_lf)
-        
+
         tcp_port = system.config.get("m3_outputs_tcp", "0")
         targetConfig.set("Global", "OutputsTCPPort", tcp_port)
-        
+
         udp_port = system.config.get("m3_outputs_udp", "0")
         targetConfig.set("Global", "OutputsUDPBroadcastPort", udp_port)
     else:

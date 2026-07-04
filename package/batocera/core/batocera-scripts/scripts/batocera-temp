@@ -124,7 +124,7 @@ case "$TARGET_MODE" in
                 [ -f "$p/temp" ] || continue
                 IFS= read -r v < "$p/temp" 2>/dev/null || continue
                 case "$v" in ''|*[!0-9-]*) continue ;; esac
-                
+
                 # power_supply/temp is stored in tenths of a degree (e.g. 275 = 27.5C)
                 c=$(( v / 10 ))
                 if [ "$c" -gt 0 ] && [ "$c" -lt 130 ]; then

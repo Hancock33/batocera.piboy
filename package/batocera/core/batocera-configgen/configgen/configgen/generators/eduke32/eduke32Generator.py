@@ -22,7 +22,7 @@ class Eduke32Generator(Generator):
     def getHotkeysContext(self):
         return {
             "name": "eduke32",
-            "keys": { 
+            "keys": {
                 "exit": "killall -9 eduke32; killall -9 fury",
                 "menu": "KEY_ESC",
                 "pause": "KEY_ESC",

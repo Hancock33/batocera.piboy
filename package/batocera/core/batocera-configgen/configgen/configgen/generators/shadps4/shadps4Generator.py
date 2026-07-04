@@ -247,7 +247,7 @@ class shadPS4Generator(Generator):
                 eboot_path = rom / "eboot.bin"
             else:
                 eboot_path = rom.parent / "eboot.bin"
-            
+
             commandArray: list[str | Path] = [
                 "/usr/bin/shadps4",
                 "--game",

@@ -98,7 +98,7 @@ start() {
 				/<action name="FocusOutput">/,+1 s#<output>.*</output>#<output>'"${PRIMARY_OUT}"'</output>#;
 			}' "${RC_XML_PATH}"
 		fi
-		
+
 		# --- Check for touchscreen and configure it ---
 		TOUCHSCREEN_LIST=$(libinput list-devices | awk -v RS= '/Capabilities:.*touch/ {if (match($0, /Device:[[:space:]]+([^\n]+)/, m)) {print m[1]}}')
 		if [ -n "${TOUCHSCREEN_LIST}" ]; then
