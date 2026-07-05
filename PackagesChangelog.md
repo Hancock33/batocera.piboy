@@ -56,6 +56,7 @@ Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance
 Audio|[cubeb](http://github.com/mozilla/cubeb)|a665efba31740bd477cf2001a5cb289a63e85336|Jul 02, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|4c65780f11511b20c2e0288a287faace16516d38|Jul 02, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|d4b9737196aecad0eebbfe903b1e8b8796bef9bd|Jul 02, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260702-proton-slr|Jul 02, 2026
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|65dd07d56d0ad1c0d79b37d19426560e296fc9cb|Jul 02, 2026
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|29d9d104338f46bc2e65438fb207bcf54f701e92|Jul 02, 2026
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|a792206d235ce5c0587fb3dcac8b63adaf08e927|Jul 02, 2026
@@ -137,7 +138,6 @@ Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-vid
 Gpu|[nvidia580-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|580.173.02|Jun 23, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260622|Jun 22, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|a30e7c7b227d9a5e6dbedc1d343077be7ad92959|Jun 22, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260622-proton-slr|Jun 22, 2026
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|b30a3eb38f9af283f18dbd3c7755653efc52c094|Jun 22, 2026
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|e1ff42e16cd4a04737edece1d27cd44dfd577f80|Jun 21, 2026
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|b68dcbb160282903022e897e96a14c39c10a89ce|Jun 21, 2026
