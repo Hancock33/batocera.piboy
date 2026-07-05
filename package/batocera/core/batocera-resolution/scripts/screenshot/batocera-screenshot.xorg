@@ -14,7 +14,7 @@ while [ $# -gt 0 ]; do
     --timer)
         shift
         if [ -z "$1" ]; then
-            echo "Error: --timer requires an argument (0–60 seconds)." >&2
+            echo "Error: --timer requires an argument (0-60 seconds)." >&2
             exit 1
         fi
         TIMER="$1"

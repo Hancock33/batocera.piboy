@@ -3,8 +3,8 @@
 # miniz
 #
 ################################################################################
-# Version: Commits on Feb 03, 2026
-MINIZ_VERSION = 3.1.1
+# Version: Commits on Jul 01, 2026
+MINIZ_VERSION = 3.1.2
 MINIZ_SITE = $(call github,richgel999,miniz,$(MINIZ_VERSION))
 MINIZ_LICENSE = GPL-2
 MINIZ_SUPPORTS_IN_SOURCE_BUILD = NO

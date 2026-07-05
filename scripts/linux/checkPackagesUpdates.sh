@@ -187,8 +187,7 @@ PACKAGES_EMULATORS="amiberry
                     vpinball
                     x16emu
                     xemu
-                    xenia
-                    xenia-canary"
+                    xenia-edge"
 
 PACKAGES_PORTS="abuse
                 abuse-data

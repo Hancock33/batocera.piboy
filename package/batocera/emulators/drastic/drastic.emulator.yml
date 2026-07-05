@@ -44,13 +44,6 @@ custom_features:
     choices:
       'Off': 0
       'On': 1
-  drastic_scaling:
-    group: ADVANCED OPTIONS
-    prompt: IMAGE SCALING
-    description: Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image scaling.
-    choices:
-      Bilinear: bilinear
-      Nearest-neighbor: nearest
   drastic_fix2d:
     group: ADVANCED OPTIONS
     prompt: KEEP MAIN SCREEN ON TOP
@@ -65,6 +58,26 @@ custom_features:
       Vertical: 0
       Horizontal: 1
       Single: 3
+  drastic_shader:
+    prompt: SCREEN SHADER
+    description: Select a custom video shader filter.
+    choices:
+      'None': 'none'
+      'Sharp Bilinear': 'sharp-bilinear'
+      'Sharp Shimmerless': 'sharp-shimmerless'
+      'Quilez': 'quilez'
+      'Scanlines': 'scanlines'
+      'LCD 3x': 'lcd3x'
+  drastic_mic_threshold:
+    prompt: MICROPHONE SENSITIVITY
+    description: Enable physical mic blowing. Higher sensitivity triggers more easily.
+    choices:
+      'Off': '0.0'
+      'Very High (0.02)': '0.02'
+      'High (0.05)': '0.05'
+      'Medium (0.10)': '0.10'
+      'Low (0.15)': '0.15'
+      'Very Low (0.20)': '0.20'
 systems:
   - name: nds
     exclude_extensions:

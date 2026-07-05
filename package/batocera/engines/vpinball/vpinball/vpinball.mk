@@ -3,8 +3,8 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Jun 21, 2026
-VPINBALL_VERSION = e5e11761c48d5a6c13261de6ddc0ea739373decc
+# Version: Commits on Jul 03, 2026
+VPINBALL_VERSION = 8811b7a1ff103fce770a75cb906f5433a60cad96
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
@@ -15,19 +15,11 @@ VPINBALL_EMULATOR_INFO = vpinball.emulator.yml
 
 VPINBALL_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)
 VPINBALL_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-
-define VPINBALL_CMAKE_HACKS
-	# cp correct cmake file to builddir
-	cp $(@D)/make/$(VPINBALL_COMMON_CMAKE) $(@D)/CMakeLists.txt
-    # add staging paths for system libs (keep third-party for local bgfx)
-    $(SED) 's:$${CMAKE_SOURCE_DIR}/third-party/include/:$(STAGING_DIR)/usr/include/:g' $(@D)/CMakeLists.txt
-    $(SED) 's:$${CMAKE_SOURCE_DIR}/third-party/runtime-libs/$(VPINBALL_COMMON_SRC):$(STAGING_DIR)/usr/lib:g' $(@D)/CMakeLists.txt
-    # update plugin CMakeLists - add staging paths
-    for f in $(@D)/make/CMakeLists_plugin_*.txt; do \
-        $(SED) 's:$${CMAKE_SOURCE_DIR}/third-party/include:$(STAGING_DIR)/usr/include\n      $${CMAKE_SOURCE_DIR}/third-party/include:g' $$f; \
-        $(SED) 's:$${CMAKE_SOURCE_DIR}/third-party/runtime-libs/$${PluginPlatform}-$${PluginArch}:$(STAGING_DIR)/usr/lib\n      $${CMAKE_SOURCE_DIR}/third-party/runtime-libs/$${PluginPlatform}-$${PluginArch}:g' $$f; \
-    done
-endef
+VPINBALL_CONF_OPTS += -DPLATFORM=linux
+VPINBALL_CONF_OPTS += -DRENDERER=GL
+VPINBALL_CONF_OPTS += -DSYSTEM_LIBS_INCLUDE_DIR=$(STAGING_DIR)/usr/include
+VPINBALL_CONF_OPTS += -DSYSTEM_LIBS_LIB_DIR=$(STAGING_DIR)/usr/lib
+VPINBALL_CONF_OPTS += -DUSE_SYSTEM_LIBS=ON
 
 define VPINBALL_INSTALL_TARGET_CMDS
 	rm -rf   $(TARGET_DIR)/usr/bin/vpinball

@@ -3,8 +3,8 @@
 # xenia-edge
 #
 ################################################################################
-# Version: Commits on Jun 28, 2026
-XENIA_EDGE_VERSION = d2724c303313dcdac779971e4f3d2a15089d919b
+# Version: Commits on Jul 05, 2026
+XENIA_EDGE_VERSION = 9eeac883bf27c090b31b5b8ffc00d4ea8358e450
 XENIA_EDGE_SITE = https://github.com/has207/xenia-edge.git
 XENIA_EDGE_SITE_METHOD = git
 XENIA_EDGE_GIT_SUBMODULES = YES
@@ -12,7 +12,7 @@ XENIA_EDGE_LICENSE = BSD
 XENIA_EDGE_LICENSE_FILE = LICENSE
 XENIA_EDGE_EMULATOR_INFO = xenia-edge.emulator.yml
 XENIA_EDGE_DEPENDENCIES += alsa-lib ffmpeg fmt glslang libcurl
-XENIA_EDGE_DEPENDENCIES += libgtk3 lz4 python-toml sdl3 vulkan-headers vulkan-loader
+XENIA_EDGE_DEPENDENCIES += libgtk3 lz4 python-toml sdl3 vulkan-headers vulkan-loader wxwidgets
 XENIA_EDGE_DEPENDENCIES += host-clang host-glslang host-ninja host-shader-slang
 
 XENIA_EDGE_CONF_ENV += SLANGC_PATH=$(HOST_DIR)/bin/slangc
@@ -23,6 +23,7 @@ XENIA_EDGE_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF
 XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_TESTS=OFF
 XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_MISC=OFF
 XENIA_EDGE_CONF_OPTS += -DXENIA_USE_SYSTEM_SDL3=ON
+XENIA_EDGE_CONF_OPTS += -DXENIA_USE_SYSTEM_WXWIDGETS=ON
 XENIA_EDGE_CONF_OPTS += -DXENIA_HOST_SHADER_CC=$(@D)/host_tools/xenia-shader-cc
 
 # xenia-shader-cc is a build-time host tool (GLSL/XeSL -> SPIR-V -> embedded

@@ -1,8 +1,8 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index a47c020c9..47ce9f8b3 100644
+index 0094ee1ec..2da904095 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
-@@ -2472,30 +2472,30 @@ u32 InputManager::GetPollableDeviceCount()
+@@ -2477,30 +2477,30 @@ u32 InputManager::GetPollableDeviceCount()
  
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {

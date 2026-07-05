@@ -74,7 +74,7 @@ class SonicManiaGenerator(Generator):
         # Save the ini file
         with open( rom_directory + '/Settings.ini', 'w') as configfile:
             config.write(configfile)
-        
+
         write_sdl_controller_db(playersControllers, rom_directory / "gamecontrollerdb.txt")
 
         # Now run

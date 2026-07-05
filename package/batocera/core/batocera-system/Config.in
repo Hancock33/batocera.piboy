@@ -339,6 +339,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_DMD_PLAY_RUST                        if  BR2_PACKAGE_VPINBALL
     select BR2_PACKAGE_LIBDMDUTIL                           if  BR2_PACKAGE_VPINBALL
    #select BR2_PACKAGE_BATOCERA_BACKGLASS                   if  (BR2_PACKAGE_XSERVER_XORG_SERVER || BR2_PACKAGE_BATOCERA_WAYLAND) && !BR2_PACKAGE_BATOCERA_TARGET_JH7110
+    select BR2_PACKAGE_SDL2_TOUCH_TEST                      # ALL
 
     # Hats
     select BR2_PACKAGE_DOCKERPI_POWERBOARD                  if  BR2_PACKAGE_BATOCERA_TARGET_BCM2837
@@ -903,6 +904,10 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
     # MegaDuck
     select BR2_PACKAGE_LIBRETRO_SAMEDUCK                    # ALL
 
+    # GamePark GP32
+    select BR2_PACKAGE_LIBRETRO_GP32EMU                     # ALL
+
+
     help
         Handheld cores/emulators
 
@@ -1005,7 +1010,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_ZMUSIC                               if  BR2_PACKAGE_GZDOOM || BR2_PACKAGE_RAZE
 
     # Tomb Raider 1/2
-    select BR2_PACKAGE_TRX                                  if  BR2_PACKAGE_XORG7
+    select BR2_PACKAGE_TRX                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Quake 3
     select BR2_PACKAGE_VKQUAKE3                             if  BR2_PACKAGE_BATOCERA_VULKAN             && !BR2_PACKAGE_BATOCERA_TARGET_JH7110
@@ -1237,7 +1242,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     select BR2_PACKAGE_XEMU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Microsoft Xbox 360
-    select BR2_PACKAGE_XENIA_CANARY                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  && BR2_PACKAGE_BATOCERA_WINE_SYSTEMS
     select BR2_PACKAGE_XENIA_EDGE                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Sony PS2
@@ -1456,7 +1460,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_NUKEM2                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Duke Nukem II
     select BR2_PACKAGE_OMF2097                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY                                     # One Must Fall 2097
     select BR2_PACKAGE_OPENCLAW                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Captain Claw
-    select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Tomb Raider
+    select BR2_PACKAGE_OPENLARA                             if  BR2_PACKAGE_BATOCERA_BCM27XX                                               # Tomb Raider
     select BR2_PACKAGE_PROTOTYPE                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Prototype (R-Type Clone)
     select BR2_PACKAGE_UQM                                                                                                                 # Ur-Quan Masters
     select BR2_PACKAGE_RAPTORCOTS                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Raptor Call of the Shadows
@@ -1715,7 +1719,6 @@ config BR2_PACKAGE_BATOCERA_RPI_MESA3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_V3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_ZINK
     select BR2_PACKAGE_MESA3D_DEMOS                         if  BR2_PACKAGE_XWAYLAND || (BR2_PACKAGE_BATOCERA_SBC_XORG && !BR2_PACKAGE_BATOCERA_LIB32)  # glxinfo etc
-    select BR2_PACKAGE_MESA3D_PATENTED_VIDEO_CODECS
 
 config BR2_PACKAGE_BATOCERA_LIMA_MESA3D
     bool "batocera.linux driver mesa LIMA"
@@ -1991,14 +1994,18 @@ config BR2_PACKAGE_BATOCERA_GPU_X86
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_VIRGL          if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_ZINK           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     #batocera- possible other platforms
 
-    select BR2_PACKAGE_MESA3D_PATENTED_VIDEO_CODECS
-
     # utils
     select BR2_PACKAGE_LIBVA_INTEL_DRIVER                   if  BR2_PACKAGE_XORG7                      &&  BR2_PACKAGE_MESA3D_DRI_DRIVER
     select BR2_PACKAGE_LIBVA_UTILS                          if  BR2_PACKAGE_XORG7                      &&  BR2_PACKAGE_MESA3D_DRI_DRIVER
 
+    # vaapi acceleration drivers
+    select BR2_PACKAGE_MESA3D_GALLIUM_VA                    if  BR2_PACKAGE_MESA3D_GALLIUM_VA_SUPPORTED_DRIVER && (!BR2_PACKAGE_MESA3D_OPENGL_GLX || BR2_PACKAGE_LIBGLVND)
+
 config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
     bool "batocera.linux video codecs"
+
+    # Mesa3D video codecs
+    select BR2_PACKAGE_MESA3D_PATENTED_VIDEO_CODECS         if  BR2_PACKAGE_MESA3D_GALLIUM_VA          || BR2_PACKAGE_MESA3D_VULKAN_DRIVER
 
     # Video 4 Linux
     select BR2_PACKAGE_LIBV4L

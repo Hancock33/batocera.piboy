@@ -291,9 +291,11 @@ ACTION_PRECHECK=$1
 case "${ACTION_PRECHECK}" in
     "getDisplayComp")
         echo "labwc"
+        exit 0
         ;;
     "getDisplayMode")
         echo "wayland"
+        exit 0
         ;;
 esac
 
@@ -479,7 +481,7 @@ case "${ACTION}" in
                 # The variable is already empty, which is what we want.
             fi
             
-            sed -i -e '/<windowRule.*title="backglass"/,/\/windowRule>/ { /<action name="MoveToOutput">/ {
+            sed -i -e '/<windowRule.*identifier="batocera-backglass-window"/,/\/windowRule>/ { /<action name="MoveToOutput">/ {
                 n
                 s#\s*<output>.*</output>#        <output>'"${BACKGLASS_OUT}"'</output>#
             } }' "${RC_XML}"
@@ -561,7 +563,7 @@ case "${ACTION}" in
             if [ -z "$target" ]; then continue; fi
 
             if echo "${ALL_OUTPUTS}" | grep -wq "${target}"; then
-                CMD_ARGS_VAR="${CMD_ARGS_VAR} --output ${target} --on"
+                CMD_ARGS_VAR="${CMD_ARGS_VAR} --output ${target} --on --preferred"
                 _log "setOutput: Queuing ON for ${target}"
             else
                 _log "setOutput: Warning: Desired output '${target}' not found. Skipping."
@@ -741,24 +743,33 @@ case "${ACTION}" in
         "${WLR_RANDR}" --output "${PSCREEN}" --transform "${WLR_TRANSFORM}"
 
         # --- Check for touchscreen ---
-        TOUCHSCREEN=$(libinput list-devices | awk -v RS= '/Capabilities:.*touch/ {if (match($0, /Device:[[:space:]]+([^\n]+)/, m)) {print m[1]; exit}}')
-        if [ -n "${TOUCHSCREEN}" ]; then
-            CONFIG_FILE="${HOME}/.config/labwc/rc.xml"
-
-            if [ ! -f "$CONFIG_FILE" ]; then
-                _log "Touchscreen found, but rc.xml not present at: $CONFIG_FILE"
-                exit 1
-            fi
-
-            _log "Ensuring touch device configuration is correct..."
-
-            # Update the main <touch> tag with the correct deviceName and mapToOutput.
-            sed -i \
-                "/<touch / s|deviceName=\"[^\"]*\"|deviceName=\"${TOUCHSCREEN}\"|; s|mapToOutput=\"[^\"]*\"|mapToOutput=\"${PSCREEN}\"|" \
-                "${CONFIG_FILE}"
+        TOUCHSCREEN_LIST=$(libinput list-devices | awk -v RS= '/Capabilities:.*touch/ {if (match($0, /Device:[[:space:]]+([^\n]+)/, m)) {print m[1]}}')
+        if [ -n "${TOUCHSCREEN_LIST}" ]; then
+            NUM_TOUCH=$(echo "${TOUCHSCREEN_LIST}" | grep -v '^$' | wc -l)
         else
-            _log "No touchscreen found; skipped touchscreen configuration."
+            NUM_TOUCH=0
         fi
+
+        CONFIG_FILE="${HOME}/.config/labwc/rc.xml"
+
+        # Always strip any existing <touch> line to keep a clean slate
+        sed -i '/<touch /d' "${CONFIG_FILE}"
+
+        if [ "${NUM_TOUCH}" -eq 1 ] && [ -n "${PSCREEN}" ]; then
+            TOUCHSCREEN="${TOUCHSCREEN_LIST}"
+            _log "One touchscreen '${TOUCHSCREEN}' found. Ensuring touch device configuration is correct..."
+            sed -i "s|^\([[:space:]]*\)</core>|\1</core>\n\1<touch deviceName=\"${TOUCHSCREEN}\" mapToOutput=\"${PSCREEN}\" mouseEmulation=\"no\"/>|" "${CONFIG_FILE}"
+        else
+            if [ "${NUM_TOUCH}" -eq 0 ]; then
+                _log "No touchscreen found; skipped touchscreen configuration."
+            elif [ "${NUM_TOUCH}" -gt 1 ]; then
+                _log "Multiple touchscreens detected (${NUM_TOUCH}). Skipping individual touch mapping."
+                _log "Use sdl2-touch-test to get the calibration for your touch panels."
+            elif [ -z "${PSCREEN}" ]; then
+                _log "No primary screen (PSCREEN) set. Skipping touchscreen configuration."
+            fi
+        fi
+
         _reconfigure_labwc
         ;;
 

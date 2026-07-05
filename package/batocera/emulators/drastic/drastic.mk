@@ -4,35 +4,24 @@
 #
 ################################################################################
 # Version: Commits on Feb 26, 2021
-DRASTIC_VERSION = 1.1
+DRASTIC_VERSION = r2.5.2.2
 DRASTIC_SOURCE = drastic.tar.gz
-DRASTIC_SITE = https://github.com/liberodark/drastic/releases/download/$(DRASTIC_VERSION)
+DRASTIC_SITE = https://github.com/dmanlfc/drastic/raw/refs/heads/main
+DRASTIC_DEPENDENCIES = sdl2
+
 DRASTIC_EMULATOR_INFO = drastic.emulator.yml
 
-define DRASTIC_EXTRACT_CMDS
-	mkdir -p $(@D)/target && cd $(@D)/target && tar xf $(DL_DIR)/$(DRASTIC_DL_SUBDIR)/$(DRASTIC_SOURCE)
+define DRASTIC_BUILD_CMDS
+	$(TARGET_CC) $(TARGET_CFLAGS) $(TARGET_LDFLAGS) -shared -fPIC -o $(@D)/libdrastouch.so $(DRASTIC_PKGDIR)/libdrastouch.c -ldl
 endef
 
-ifeq ($(BR2_arm),y)
-    DRASTIC_BINARYFILE=drastic_xu4
-else ifeq ($(BR2_aarch64),y)
-    ifeq ($(BR2_PACKAGE_MESA3D),y)
-        DRASTIC_BINARYFILE=drastic_n2
-    else
-        DRASTIC_BINARYFILE=drastic_oga
-    endif
-endif
-
 define DRASTIC_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/
-	mkdir -p $(TARGET_DIR)/usr/share/drastic
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-
-	install -m 0755 $(@D)/target/$(DRASTIC_BINARYFILE) $(TARGET_DIR)/usr/bin/drastic
-	cp -avr $(@D)/target/drastic/* $(TARGET_DIR)/usr/share/drastic
-
-	# evmap config
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/drastic/nds.drastic.keys $(TARGET_DIR)/usr/share/evmapy
+	rm -rf $(TARGET_DIR)/usr/share/drastic
+	mkdir -p $(TARGET_DIR)/usr/lib $(TARGET_DIR)/usr/share/drastic/microphone
+	cp -pr $(@D)/drastic_aarch64/* $(TARGET_DIR)/usr/share/drastic
+	cp -f $(@D)/libdrastouch.so  $(TARGET_DIR)/usr/lib/
+	chmod +x $(TARGET_DIR)/usr/share/drastic/drastic
+	cp -f $(DRASTIC_PKGDIR)/microphone.wav $(TARGET_DIR)/usr/share/drastic/microphone/
 endef
 
 $(eval $(generic-package))

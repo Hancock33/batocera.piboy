@@ -3,8 +3,8 @@
 # sdl3
 #
 ################################################################################
-# Version: Commits on May 31, 2026
-SDL3_VERSION = release-3.4.10
+# Version: Commits on Jul 01, 2026
+SDL3_VERSION = release-3.4.12
 SDL3_SITE = $(call github,libsdl-org,SDL,$(SDL3_VERSION))
 SDL3_LICENSE = Zlib
 SDL3_LICENSE_FILES = LICENSE.txt

@@ -9,109 +9,295 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
-from ...batoceraPaths import CONFIGS
+from ...batoceraPaths import CONFIGS, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
 
-
 class DrasticGenerator(Generator):
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "drastic",
-            "keys": { "exit": "KEY_ESC", "save_state": "KEY_F5", "restore_state": "KEY_F7", "menu": "KEY_F1", "fastforward": "KEY_TAB", "swap_screen": "KEY_F2" }
+            "keys": {
+                "exit": "KEY_ESC",
+                "save_state": "KEY_F5",
+                "restore_state": "KEY_F7",
+                "menu": "KEY_F1",
+                "fastforward": "KEY_TAB",
+                "swap_screen": "KEY_F2"
+            }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         drastic_root = CONFIGS / "drastic"
         drastic_bin = drastic_root / "drastic"
-        drastic_conf_dir = drastic_root / "config"
         drastic_conf = drastic_root / "config" / "drastic.cfg"
 
-        if not drastic_root.exists():
-            shutil.copytree("/usr/share/drastic", drastic_root)
+        mkdir_if_not_exists(drastic_root)
+        mkdir_if_not_exists(drastic_conf.parent)
 
-        if not drastic_bin.exists() or not filecmp.cmp("/usr/bin/drastic", drastic_bin):
-            shutil.copyfile("/usr/bin/drastic", drastic_bin)
+        if not drastic_bin.exists():
+            shutil.copytree("/usr/share/drastic", drastic_root, dirs_exist_ok=True)
             drastic_bin.chmod(0o0775)
 
-        if not drastic_conf_dir.exists():
-            os.mkdir(drastic_conf_dir)
+        # Base template defaults
+        config_dict = {
+            "show_frame_counter": "0",
+            "enable_sound": "1",
+            "compress_savestates": "1",
+            "savestate_snapshot": "1",
+            "firmware.username": "Batocera",
+            "firmware.language": str(getDrasticLangFromEnvironment()),
+            "firmware.favorite_color": "11",
+            "firmware.birthday_month": "11",
+            "firmware.birthday_day": "25",
+            "enable_cheats": "1",
+            "rtc_system_time": "1",
+            "use_rtc_custom_time": "0",
+            "rtc_custom_time": "0",
+            "frameskip_type": "0",
+            "frameskip_value": "1",
+            "safe_frameskip": "1",
+            "disable_edge_marking": "1",
+            "fix_main_2d_screen": "0",
+            "hires_3d": "0",
+            "threaded_3d": "0",
+            "screen_orientation": "0",  # default to vertical (0)
+            "screen_scaling": "0",
+            "screen_swap": "0"
+        }
 
-        # Settings, Language and ConfirmPowerOff
-        f = drastic_conf.open("w", encoding="ascii")
+        # Base Slot A default mappings (Keyboard/System)
+        controls_a_defaults = {
+            "controls_a[CONTROL_INDEX_UP]": "338",
+            "controls_a[CONTROL_INDEX_DOWN]": "337",
+            "controls_a[CONTROL_INDEX_LEFT]": "336",
+            "controls_a[CONTROL_INDEX_RIGHT]": "335",
+            "controls_a[CONTROL_INDEX_A]": "32",
+            "controls_a[CONTROL_INDEX_B]": "480",
+            "controls_a[CONTROL_INDEX_X]": "122",
+            "controls_a[CONTROL_INDEX_Y]": "120",
+            "controls_a[CONTROL_INDEX_L]": "481",
+            "controls_a[CONTROL_INDEX_R]": "99",
+            "controls_a[CONTROL_INDEX_START]": "13",
+            "controls_a[CONTROL_INDEX_SELECT]": "485",
+            "controls_a[CONTROL_INDEX_HINGE]": "104",
+            "controls_a[CONTROL_INDEX_TOUCH_CURSOR_UP]": "65535",
+            "controls_a[CONTROL_INDEX_TOUCH_CURSOR_DOWN]": "65535",
+            "controls_a[CONTROL_INDEX_TOUCH_CURSOR_LEFT]": "65535",
+            "controls_a[CONTROL_INDEX_TOUCH_CURSOR_RIGHT]": "65535",
+            "controls_a[CONTROL_INDEX_TOUCH_CURSOR_PRESS]": "65535",
+            "controls_a[CONTROL_INDEX_MENU]": "109",
+            "controls_a[CONTROL_INDEX_SAVE_STATE]": "318",
+            "controls_a[CONTROL_INDEX_LOAD_STATE]": "320",
+            "controls_a[CONTROL_INDEX_FAST_FORWARD]": "8",
+            "controls_a[CONTROL_INDEX_SWAP_SCREENS]": "115",
+            "controls_a[CONTROL_INDEX_SWAP_ORIENTATION_A]": "97",
+            "controls_a[CONTROL_INDEX_SWAP_ORIENTATION_B]": "100",
+            "controls_a[CONTROL_INDEX_LOAD_GAME]": "65535",
+            "controls_a[CONTROL_INDEX_QUIT]": "65535",
+            "controls_a[CONTROL_INDEX_FAKE_MICROPHONE]": "65535",
+            "controls_a[CONTROL_INDEX_UI_UP]": "338",
+            "controls_a[CONTROL_INDEX_UI_DOWN]": "337",
+            "controls_a[CONTROL_INDEX_UI_LEFT]": "336",
+            "controls_a[CONTROL_INDEX_UI_RIGHT]": "335",
+            "controls_a[CONTROL_INDEX_UI_SELECT]": "13",
+            "controls_a[CONTROL_INDEX_UI_BACK]": "8",
+            "controls_a[CONTROL_INDEX_UI_EXIT]": "27",
+            "controls_a[CONTROL_INDEX_UI_PAGE_UP]": "331",
+            "controls_a[CONTROL_INDEX_UI_PAGE_DOWN]": "334",
+            "controls_a[CONTROL_INDEX_UI_SWITCH]": "481"
+        }
+        config_dict.update(controls_a_defaults)
 
-        #Getting Values from ES
-        # if system.config.get("drastic_scaling") == 'nearest':
-            # subprocess.run(f"xxd {drastic_bin} > drastic.txt", shell=True)
-            # if subprocess.run("grep -q '6c69 6e65 6172' drastic.txt", shell=True).returncode == 0:
-                # Swap to nearest neighbor
-                # subprocess.run("sed -i 's/6c69 6e65 6172/3000 0000 0000/g' drastic.txt", shell=True)
-                # subprocess.run(f"xxd -r drastic.txt > {drastic_bin}", shell=True)
-                # Path("drastic.txt").unlink()
-        # else:
-            # subprocess.run(f"xxd {drastic_bin} > drastic.txt", shell=True)
-            # if subprocess.run("grep -q '3000 0000 0000' drastic.txt", shell=True).returncode == 0:
-                # Swap to bilinear
-                # subprocess.run("sed -i 's/3000 0000 0000/6c69 6e65 6172/g' drastic.txt", shell=True)
-                # subprocess.run(f"xxd -r drastic.txt > {drastic_bin}", shell=True)
-                # Path("drastic.txt").unlink()
+        # Merge existing cfg file contents if it exists to preserve user values
+        if drastic_conf.exists():
+            try:
+                with drastic_conf.open("r", encoding="ascii", errors="ignore") as conf_file:
+                    for line in conf_file:
+                        line = line.strip()
+                        if not line or line.startswith("#"):
+                            continue
+                        if "=" in line:
+                            k, v = line.split("=", 1)
+                            config_dict[k.strip()] = v.strip()
+            except Exception:
+                pass
 
-        esvaluedrastichires = system.config.get_int("drastic_hires", 0)
-        esvaluedrasticthreaded = system.config.get_int("drastic_threaded", 0)
-        esvaluedrasticfix2d = system.config.get_int("drastic_fix2d", 0)
-        esvaluedrasticscreenorientation = system.config.get_int("drastic_screen_orientation", 0)
+        # Safe parsing for screen orientation configuration
+        drastic_orient = system.config.get("drastic_screen_orientation", "0")
+        if not drastic_orient or drastic_orient == "auto" or drastic_orient == "none":
+            esvaluedrasticscreenorientation = "0"
+        else:
+            try:
+                esvaluedrasticscreenorientation = str(int(drastic_orient))
+            except ValueError:
+                esvaluedrasticscreenorientation = "0"
 
-        # Default to none as auto seems to be bugged (just reduces framerate by half, even when the system is otherwise capable of running at 60fps, even the rpi3 can do this).
-        esvaluedrasticframeskiptype = system.config.get_int("drastic_frameskip_type", 0)
-        esvaluedrasticframeskipvalue = system.config.get_int("drastic_frameskip_value", 1)
+        # Enforce Front-End menu settings
+        config_dict["frameskip_type"] = str(system.config.get_int("drastic_frameskip_type", 0))
+        config_dict["frameskip_value"] = str(system.config.get_int("drastic_frameskip_value", 1))
+        config_dict["fix_main_2d_screen"] = str(system.config.get_int("drastic_fix2d", 0))
+        config_dict["hires_3d"] = str(system.config.get_int("drastic_hires", 0))
+        config_dict["threaded_3d"] = str(system.config.get_int("drastic_threaded", 0))
+        config_dict["screen_orientation"] = esvaluedrasticscreenorientation
 
-        textList = [                             # 0,1,2,3 ...
-        "enable_sound"                 + " = 1",
-        "compress_savestates"          + " = 1",
-        "savestate_snapshot"           + " = 1",
-        "firmware.username"            + " = Batocera",
-        "firmware.language"            + f" = {getDrasticLangFromEnvironment()}",
-        "firmware.favorite_color"      + " = 11",
-        "firmware.birthday_month"      + " = 11",
-        "firmware.birthday_day"        + " = 25",
-        "enable_cheats"                + " = 1",
-        "rtc_system_time"              + " = 1",
-        "use_rtc_custom_time"          + " = 0",
-        "rtc_custom_time"              + " = 0",
-        "frameskip_type"               + f" = {esvaluedrasticframeskiptype}",      #None/Manual/Auto
-        "frameskip_value"              + f" = {esvaluedrasticframeskipvalue}",     #1-9
-        "safe_frameskip"               + " = 1",                                        #Needed for automatic frameskipping to actually work.
-        "disable_edge_marking"         + " = 1",                                        #will prevent edge marking. It draws outlines around some 3D models to give a cel-shaded effect. Since DraStic doesn't emulate anti-aliasing, it'll cause edges to look harsher than they may on a real DS.
-        "fix_main_2d_screen"           + f" = {esvaluedrasticfix2d}",              #Top Screen will always be the Action Screen (for 2d games like Sonic)
-        "hires_3d"                     + f" = {esvaluedrastichires}",              #High Resolution 3D Rendering
-        "threaded_3d"                  + f" = {esvaluedrasticthreaded}",           #MultiThreaded 3D Rendering - Improves perf in 3D - can cause glitch.
-        "screen_orientation"           + f" = {esvaluedrasticscreenorientation}",  #Vertical/Horizontal/OneScreen
-        "screen_scaling"               + " = 0",                                        #No Scaling/Stretch Aspect/1x2x/2x1x/TvSplit
-        "screen_swap "                 + " = 0"
-        ]
+        # Generate Slot B controller mappings
+        mappings_b = {
+            "controls_b[CONTROL_INDEX_UP]": "65535",
+            "controls_b[CONTROL_INDEX_DOWN]": "65535",
+            "controls_b[CONTROL_INDEX_LEFT]": "65535",
+            "controls_b[CONTROL_INDEX_RIGHT]": "65535",
+            "controls_b[CONTROL_INDEX_A]": "65535",
+            "controls_b[CONTROL_INDEX_B]": "65535",
+            "controls_b[CONTROL_INDEX_X]": "65535",
+            "controls_b[CONTROL_INDEX_Y]": "65535",
+            "controls_b[CONTROL_INDEX_L]": "65535",
+            "controls_b[CONTROL_INDEX_R]": "65535",
+            "controls_b[CONTROL_INDEX_START]": "65535",
+            "controls_b[CONTROL_INDEX_SELECT]": "65535",
+            "controls_b[CONTROL_INDEX_HINGE]": "65535",
+            "controls_b[CONTROL_INDEX_TOUCH_CURSOR_UP]": "65535",
+            "controls_b[CONTROL_INDEX_TOUCH_CURSOR_DOWN]": "65535",
+            "controls_b[CONTROL_INDEX_TOUCH_CURSOR_LEFT]": "65535",
+            "controls_b[CONTROL_INDEX_TOUCH_CURSOR_RIGHT]": "65535",
+            "controls_b[CONTROL_INDEX_TOUCH_CURSOR_PRESS]": "65535",
+            "controls_b[CONTROL_INDEX_MENU]": "65535",
+            "controls_b[CONTROL_INDEX_SAVE_STATE]": "65535",
+            "controls_b[CONTROL_INDEX_LOAD_STATE]": "65535",
+            "controls_b[CONTROL_INDEX_FAST_FORWARD]": "65535",
+            "controls_b[CONTROL_INDEX_SWAP_SCREENS]": "65535",
+            "controls_b[CONTROL_INDEX_SWAP_ORIENTATION_A]": "65535",
+            "controls_b[CONTROL_INDEX_SWAP_ORIENTATION_B]": "65535",
+            "controls_b[CONTROL_INDEX_LOAD_GAME]": "65535",
+            "controls_b[CONTROL_INDEX_QUIT]": "65535",
+            "controls_b[CONTROL_INDEX_FAKE_MICROPHONE]": "65535",
+            "controls_b[CONTROL_INDEX_UI_UP]": "65535",
+            "controls_b[CONTROL_INDEX_UI_DOWN]": "65535",
+            "controls_b[CONTROL_INDEX_UI_LEFT]": "65535",
+            "controls_b[CONTROL_INDEX_UI_RIGHT]": "65535",
+            "controls_b[CONTROL_INDEX_UI_SELECT]": "65535",
+            "controls_b[CONTROL_INDEX_UI_BACK]": "65535",
+            "controls_b[CONTROL_INDEX_UI_EXIT]": "65535",
+            "controls_b[CONTROL_INDEX_UI_PAGE_UP]": "65535",
+            "controls_b[CONTROL_INDEX_UI_PAGE_DOWN]": "65535",
+            "controls_b[CONTROL_INDEX_UI_SWITCH]": "65535"
+        }
 
-        # Write the cfg file
-        for line in textList:
-            f.write(line)
-            f.write("\n")
-        f.close()
+        # Extract Player 1's controller config safely
+        controller = None
+        if isinstance(playersControllers, dict):
+            if "1" in playersControllers:
+                controller = playersControllers["1"]
+            elif playersControllers:
+                controller = playersControllers[sorted(playersControllers.keys())[0]]
+        elif isinstance(playersControllers, list) and playersControllers:
+            controller = playersControllers[0]
 
-        #Configuring Pad in the cfg
-        configurePads(drastic_conf)
+        if controller:
+            inputs = controller.inputs
+
+            def get_btn_or_hat_val(input_name: str) -> str:
+                if input_name not in inputs:
+                    return "65535"
+                inp = inputs[input_name]
+                if inp.type == "button":
+                    return str(1024 + int(inp.id))
+                elif inp.type == "hat":
+                    hat_masks = {"up": 1, "right": 2, "down": 4, "left": 8}
+                    return str(1088 + hat_masks.get(inp.name, 0))
+                return "65535"
+
+            # D-pad Directions
+            mappings_b["controls_b[CONTROL_INDEX_UP]"] = get_btn_or_hat_val("up")
+            mappings_b["controls_b[CONTROL_INDEX_DOWN]"] = get_btn_or_hat_val("down")
+            mappings_b["controls_b[CONTROL_INDEX_LEFT]"] = get_btn_or_hat_val("left")
+            mappings_b["controls_b[CONTROL_INDEX_RIGHT]"] = get_btn_or_hat_val("right")
+            # Face Buttons
+            mappings_b["controls_b[CONTROL_INDEX_A]"] = get_btn_or_hat_val("a")
+            mappings_b["controls_b[CONTROL_INDEX_B]"] = get_btn_or_hat_val("b")
+            mappings_b["controls_b[CONTROL_INDEX_X]"] = get_btn_or_hat_val("x")
+            mappings_b["controls_b[CONTROL_INDEX_Y]"] = get_btn_or_hat_val("y")
+            # Shoulder/Trigger mappings (L2 / R2)
+            mappings_b["controls_b[CONTROL_INDEX_L]"] = get_btn_or_hat_val("l2")
+            mappings_b["controls_b[CONTROL_INDEX_R]"] = get_btn_or_hat_val("r2")
+            # Start and Select
+            mappings_b["controls_b[CONTROL_INDEX_START]"] = get_btn_or_hat_val("start")
+            mappings_b["controls_b[CONTROL_INDEX_SELECT]"] = get_btn_or_hat_val("select")
+            # Hotkeys: Swap Screen (pageup/L1), Fast Forward (pagedown/R1)
+            mappings_b["controls_b[CONTROL_INDEX_SWAP_SCREENS]"] = get_btn_or_hat_val("pageup")
+            mappings_b["controls_b[CONTROL_INDEX_FAST_FORWARD]"] = get_btn_or_hat_val("pagedown")
+            # Stylus Tracking (Always Left Analog Stick)
+            if "joystick1left" in inputs and "joystick1up" in inputs:
+                x_inp = inputs["joystick1left"]
+                y_inp = inputs["joystick1up"]
+                x_axis_id = int(x_inp.id)
+                y_axis_id = int(y_inp.id)
+
+                mappings_b["controls_b[CONTROL_INDEX_TOUCH_CURSOR_LEFT]"] = str(1216 + x_axis_id)
+                mappings_b["controls_b[CONTROL_INDEX_TOUCH_CURSOR_RIGHT]"] = str(1152 + x_axis_id)
+                mappings_b["controls_b[CONTROL_INDEX_TOUCH_CURSOR_UP]"] = str(1216 + y_axis_id)
+                mappings_b["controls_b[CONTROL_INDEX_TOUCH_CURSOR_DOWN]"] = str(1152 + y_axis_id)
+            # Stylus press mapped to L3 (Left Stick)
+            mappings_b["controls_b[CONTROL_INDEX_TOUCH_CURSOR_PRESS]"] = get_btn_or_hat_val("l3")
+            # Menu mapped to R3 (Right Stick). If not some fallbacks
+            menu_val = get_btn_or_hat_val("r3")
+            if menu_val == "65535":
+                menu_val = get_btn_or_hat_val("hotkey")
+            if menu_val == "65535":
+                menu_val = get_btn_or_hat_val("select")
+            mappings_b["controls_b[CONTROL_INDEX_MENU]"] = menu_val
+            # UI Navigation Mirror mappings
+            mappings_b["controls_b[CONTROL_INDEX_UI_UP]"] = mappings_b["controls_b[CONTROL_INDEX_UP]"]
+            mappings_b["controls_b[CONTROL_INDEX_UI_DOWN]"] = mappings_b["controls_b[CONTROL_INDEX_DOWN]"]
+            mappings_b["controls_b[CONTROL_INDEX_UI_LEFT]"] = mappings_b["controls_b[CONTROL_INDEX_LEFT]"]
+            mappings_b["controls_b[CONTROL_INDEX_UI_RIGHT]"] = mappings_b["controls_b[CONTROL_INDEX_RIGHT]"]
+            mappings_b["controls_b[CONTROL_INDEX_UI_SELECT]"] = mappings_b["controls_b[CONTROL_INDEX_A]"]
+            mappings_b["controls_b[CONTROL_INDEX_UI_BACK]"] = mappings_b["controls_b[CONTROL_INDEX_X]"]
+            mappings_b["controls_b[CONTROL_INDEX_UI_EXIT]"] = mappings_b["controls_b[CONTROL_INDEX_B]"]
+            mappings_b["controls_b[CONTROL_INDEX_UI_PAGE_UP]"] = get_btn_or_hat_val("pagedown")  # R1 to page down
+            mappings_b["controls_b[CONTROL_INDEX_UI_PAGE_DOWN]"] = get_btn_or_hat_val("pageup")  # L1 to page up
+            mappings_b["controls_b[CONTROL_INDEX_UI_SWITCH]"] = mappings_b["controls_b[CONTROL_INDEX_Y]"]
+
+        # Overwrite/merge calculations into config dictionary
+        config_dict.update(mappings_b)
+
+        # Write final key-value pairs back to config file
+        with drastic_conf.open("w", encoding="ascii") as f:
+            for k, v in config_dict.items():
+                f.write(f"{k} = {v}\n")
 
         os.chdir(drastic_root)
         commandArray = [drastic_bin, rom]
-        #subprocess.Popen(commandArray, cwd=drastic_root) # Launched two times if activated
+
+        # Base environment setup
+        cmd_env = {
+            'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
+            'LD_PRELOAD': '/usr/lib/libdrastouch.so',
+            'SDL_TOUCH_MOUSE_EVENTS': '0',
+        }
+
+        # Apply screen shader if configured and not set to None/none
+        drastic_shader = system.config.get("drastic_shader", "none")
+        if drastic_shader and drastic_shader != "none":
+            cmd_env['DSHOOK_SHADER'] = drastic_shader
+
+        # Apply microphone threshold if configured and enabled
+        drastic_mic = system.config.get("drastic_mic_threshold", "0.0")
+        try:
+            if float(drastic_mic) > 0.0:
+                cmd_env['DSHOOK_MIC_THRESH'] = drastic_mic
+        except (ValueError, TypeError):
+            pass
+
         return Command.Command(
             array=commandArray,
-            env={
-                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
-            })
+            env=cmd_env
+        )
 
 # Language auto-setting
 def getDrasticLangFromEnvironment():
@@ -120,93 +306,3 @@ def getDrasticLangFromEnvironment():
     if lang in availableLanguages:
         return availableLanguages[lang]
     return availableLanguages["en_US"]
-
-def configurePads(drastic_conf: Path):
-    keyboardpart =''.join((
-    "controls_a[CONTROL_INDEX_UP]                           = 338          # Arrow Up        \n",
-    "controls_a[CONTROL_INDEX_DOWN]                         = 337          # Arrow Down      \n",
-    "controls_a[CONTROL_INDEX_LEFT]                         = 336          # Arrow Left      \n",
-    "controls_a[CONTROL_INDEX_RIGHT]                        = 335          # Arrow Right     \n",
-    "controls_a[CONTROL_INDEX_A]                            = 101          # E               \n",
-    "controls_a[CONTROL_INDEX_B]                            = 114          # R               \n",
-    "controls_a[CONTROL_INDEX_X]                            = 100          # D               \n",
-    "controls_a[CONTROL_INDEX_Y]                            = 102          # F               \n",
-    "controls_a[CONTROL_INDEX_L]                            = 99           # C               \n",
-    "controls_a[CONTROL_INDEX_R]                            = 118          # V               \n",
-    "controls_a[CONTROL_INDEX_START]                        = 13           # Return          \n",
-    "controls_a[CONTROL_INDEX_SELECT]                       = 32           # Space           \n",
-    "controls_a[CONTROL_INDEX_HINGE]                        = 104          # H               \n",
-    "controls_a[CONTROL_INDEX_TOUCH_CURSOR_UP]              = 65535        # PAD2KEY MOUSE   \n",
-    "controls_a[CONTROL_INDEX_TOUCH_CURSOR_DOWN]            = 65535        # PAD2KEY MOUSE   \n",
-    "controls_a[CONTROL_INDEX_TOUCH_CURSOR_LEFT]            = 65535        # PAD2KEY MOUSE   \n",
-    "controls_a[CONTROL_INDEX_TOUCH_CURSOR_RIGHT]           = 65535        # PAD2KEY MOUSE   \n",
-    "controls_a[CONTROL_INDEX_TOUCH_CURSOR_PRESS]           = 360          # Left Click      \n",
-    "controls_a[CONTROL_INDEX_MENU]                         = 314          # F1              \n",
-    "controls_a[CONTROL_INDEX_SAVE_STATE]                   = 318          # F5              \n",
-    "controls_a[CONTROL_INDEX_LOAD_STATE]                   = 320          # F7              \n",
-    "controls_a[CONTROL_INDEX_FAST_FORWARD]                 = 9            # Tab             \n",
-    "controls_a[CONTROL_INDEX_SWAP_SCREENS]                 = 315          # F2              \n",
-    "controls_a[CONTROL_INDEX_SWAP_ORIENTATION_A]           = 316          # F3              \n",
-    "controls_a[CONTROL_INDEX_SWAP_ORIENTATION_B]           = 317          # F4              \n",
-    "controls_a[CONTROL_INDEX_LOAD_GAME]                    = 65535        # DISABLED        \n",
-    "controls_a[CONTROL_INDEX_QUIT]                         = 325          # F12             \n",
-    "controls_a[CONTROL_INDEX_FAKE_MICROPHONE]              = 121          # Y               \n",
-    #"controls_a[CONTROL_INDEX_UI_UP]                       = 105          # I               \n",  Let Drastic Choose Default
-    #"controls_a[CONTROL_INDEX_UI_DOWN]                     = 107          # K               \n",  Let Drastic Choose Default
-    #"controls_a[CONTROL_INDEX_UI_LEFT]                     = 106          # J               \n",  Let Drastic Choose Default
-    #"controls_a[CONTROL_INDEX_UI_RIGHT]                    = 108          # L               \n",  Let Drastic Choose Default
-    #"controls_a[CONTROL_INDEX_UI_SELECT]                   = 13           # Return          \n",  Let Drastic Choose Default
-    #"controls_a[CONTROL_INDEX_UI_BACK]                     = 8            # BackSpace       \n",  Let Drastic Choose Default
-    #"controls_a[CONTROL_INDEX_UI_EXIT]                     = 27           # Escape          \n",  Let Drastic Choose Default
-    "controls_a[CONTROL_INDEX_UI_PAGE_UP]                   = 331          # PageUp          \n",
-    "controls_a[CONTROL_INDEX_UI_PAGE_DOWN]                 = 334          # PageDown        \n",
-    "controls_a[CONTROL_INDEX_UI_SWITCH]                    = 117          # U                 "))
-
-    padpart =''.join((
-    "controls_b[CONTROL_INDEX_UP]                           = 65535   \n",
-    "controls_b[CONTROL_INDEX_DOWN]                         = 65535   \n",
-    "controls_b[CONTROL_INDEX_LEFT]                         = 65535   \n",
-    "controls_b[CONTROL_INDEX_RIGHT]                        = 65535   \n",
-    "controls_b[CONTROL_INDEX_A]                            = 65535   \n",
-    "controls_b[CONTROL_INDEX_B]                            = 65535   \n",
-    "controls_b[CONTROL_INDEX_X]                            = 65535   \n",
-    "controls_b[CONTROL_INDEX_Y]                            = 65535   \n",
-    "controls_b[CONTROL_INDEX_L]                            = 65535   \n",
-    "controls_b[CONTROL_INDEX_R]                            = 65535   \n",
-    "controls_b[CONTROL_INDEX_START]                        = 65535   \n",
-    "controls_b[CONTROL_INDEX_SELECT]                       = 65535   \n",
-    "controls_b[CONTROL_INDEX_HINGE]                        = 65535   \n",
-    "controls_b[CONTROL_INDEX_TOUCH_CURSOR_UP]              = 65535   \n",
-    "controls_b[CONTROL_INDEX_TOUCH_CURSOR_DOWN]            = 65535   \n",
-    "controls_b[CONTROL_INDEX_TOUCH_CURSOR_LEFT]            = 65535   \n",
-    "controls_b[CONTROL_INDEX_TOUCH_CURSOR_RIGHT]           = 65535   \n",
-    "controls_b[CONTROL_INDEX_TOUCH_CURSOR_PRESS]           = 65535   \n",
-    "controls_b[CONTROL_INDEX_MENU]                         = 65535   \n",
-    "controls_b[CONTROL_INDEX_SAVE_STATE]                   = 65535   \n",
-    "controls_b[CONTROL_INDEX_LOAD_STATE]                   = 65535   \n",
-    "controls_b[CONTROL_INDEX_FAST_FORWARD]                 = 65535   \n",
-    "controls_b[CONTROL_INDEX_SWAP_SCREENS]                 = 65535   \n",
-    "controls_b[CONTROL_INDEX_SWAP_ORIENTATION_A]           = 65535   \n",
-    "controls_b[CONTROL_INDEX_SWAP_ORIENTATION_B]           = 65535   \n",
-    "controls_b[CONTROL_INDEX_LOAD_GAME]                    = 65535   \n",
-    "controls_b[CONTROL_INDEX_QUIT]                         = 65535   \n",
-    "controls_b[CONTROL_INDEX_FAKE_MICROPHONE]              = 65535   \n",
-    #"controls_b[CONTROL_INDEX_UI_UP]                       = 65535   \n", Let Drastic Generate for Pad
-    #"controls_b[CONTROL_INDEX_UI_DOWN]                     = 65535   \n", Let Drastic Generate for Pad
-    #"controls_b[CONTROL_INDEX_UI_LEFT]                     = 65535   \n", Let Drastic Generate for Pad
-    #"controls_b[CONTROL_INDEX_UI_RIGHT]                    = 65535   \n", Let Drastic Generate for Pad
-    #"controls_b[CONTROL_INDEX_UI_SELECT]                   = 65535   \n", Let Drastic Generate for Pad
-    #"controls_b[CONTROL_INDEX_UI_BACK]                     = 65535   \n", Let Drastic Generate for Pad
-    #"controls_b[CONTROL_INDEX_UI_EXIT]                     = 65535   \n", Let Drastic Generate for Pad
-    "controls_b[CONTROL_INDEX_UI_PAGE_UP]                   = 65535   \n",
-    "controls_b[CONTROL_INDEX_UI_PAGE_DOWN]                 = 65535   \n",
-    "controls_b[CONTROL_INDEX_UI_SWITCH]                    = 65535     "))
-
-    with drastic_conf.open("a", encoding="ascii") as f:
-        f.write(keyboardpart)
-        f.write("\n")
-        f.write("\n")
-        f.write(padpart)
-
-#    def executionDirectory(self, config, rom):
-#        return os.path.dirname(drastic_root)

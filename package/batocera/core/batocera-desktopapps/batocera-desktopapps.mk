@@ -143,13 +143,6 @@ ifeq ($(BR2_PACKAGE_MELONDS),y)
   BATOCERA_DESKTOPAPPS_ICONS   += melonds.png
 endif
 
-# xenia-canary
-ifeq ($(BR2_PACKAGE_XENIA_CANARY),y)
-  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-xenia-canary
-  BATOCERA_DESKTOPAPPS_APPS    += xenia-canary-config.desktop
-  BATOCERA_DESKTOPAPPS_ICONS   += xenia-canary.png
-endif
-
 # xenia-edge
 ifeq ($(BR2_PACKAGE_XENIA_EDGE),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-xenia-edge

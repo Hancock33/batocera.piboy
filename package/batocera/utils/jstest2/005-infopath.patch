@@ -1,9 +1,9 @@
 diff --git a/src/sdl2-jstest.c b/src/sdl2-jstest.c
-index 721b991..8db1c2c 100644
+index 48982c5..2c97a52 100644
 --- a/src/sdl2-jstest.c
 +++ b/src/sdl2-jstest.c
-@@ -154,6 +154,26 @@ static void list_joysticks(void)
-   }
+@@ -158,6 +158,26 @@ static void list_joysticks(void)
+     }
  }
  
 +void infopath()
@@ -28,24 +28,24 @@ index 721b991..8db1c2c 100644
 +
  static void test_joystick(int joy_idx)
  {
-   SDL_Joystick* joy = SDL_JoystickOpen(joy_idx);
-@@ -625,7 +645,7 @@ int main(int argc, char** argv)
-   SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
+     SDL_Joystick* joy = SDL_JoystickOpen(joy_idx);
+@@ -702,7 +722,7 @@ int main(int argc, char** argv)
+     SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
  
-   // FIXME: We don't need video, but without it SDL will fail to work in SDL_WaitEvent()
--  if(SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER | SDL_INIT_HAPTIC) < 0)
-+  if(SDL_Init(SDL_INIT_JOYSTICK) < 0)
-   {
-     fprintf(stderr, "Unable to init SDL: %s\n", SDL_GetError());
-     exit(1);
-@@ -661,6 +681,10 @@ int main(int argc, char** argv)
+     // FIXME: We don't need video, but without it SDL will fail to work in SDL_WaitEvent()
+-    if (SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER | SDL_INIT_HAPTIC) < 0)
++    if(SDL_Init(SDL_INIT_JOYSTICK) < 0)
      {
-       list_joysticks();
-     }
-+    else if (argc == 2 && (strcmp(argv[1], "--infopath") == 0))
-+      {
-+	infopath();
-+      }
-     else if (argc == 3 && (strcmp(argv[1], "--gamecontroller") == 0 ||
-                            strcmp(argv[1], "-g") == 0))
-     {
+         fprintf(stderr, "Unable to init SDL: %s\n", SDL_GetError());
+         exit(1);
+@@ -739,6 +759,10 @@ int main(int argc, char** argv)
+         {
+             list_joysticks();
+         }
++        else if (argc == 2 && (strcmp(argv[1], "--infopath") == 0))
++        {
++            infopath();
++        }
+         else if (argc == 3 && (strcmp(argv[1], "--gamecontroller") == 0 ||
+             strcmp(argv[1], "-g") == 0))
+         {

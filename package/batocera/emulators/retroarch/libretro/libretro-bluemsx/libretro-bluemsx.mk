@@ -3,8 +3,8 @@
 # libretro-bluemsx
 #
 ################################################################################
-# Version: Commits on Jun 26, 2026
-LIBRETRO_BLUEMSX_VERSION = 4f74bf22d2730d989502943784f217aed8cea5c1
+# Version: Commits on Jul 04, 2026
+LIBRETRO_BLUEMSX_VERSION = fe7173f801fd2d6c3564ebe816797a44524e4bbf
 LIBRETRO_BLUEMSX_SITE = $(call github,libretro,blueMSX-libretro,$(LIBRETRO_BLUEMSX_VERSION))
 LIBRETRO_BLUEMSX_LICENSE = GPLv2
 LIBRETRO_BLUEMSX_DEPENDENCIES += retroarch

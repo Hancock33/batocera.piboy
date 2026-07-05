@@ -2142,6 +2142,7 @@ gp32:
   emulators:
     libretro:
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
+      gp32emu:          { requireAnyOf: [BR2_PACKAGE_LIBRETRO_GP32EMU] }
     mame:
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
   comment_en:           |
@@ -2950,8 +2951,6 @@ xbox360:
   hardware:             console
   extensions:           [iso, squashfs, xbox360, xex, zar]
   emulators:
-    xenia-canary:
-      xenia-canary:     { requireAnyOf: [BR2_PACKAGE_XENIA_CANARY] }
     xenia-edge:
       xenia-edge:       { requireAnyOf: [BR2_PACKAGE_XENIA_EDGE] }
   comment_en:           |

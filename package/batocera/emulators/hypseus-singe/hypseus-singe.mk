@@ -3,20 +3,17 @@
 # hypseus-singe
 #
 ################################################################################
-# Version: Commits on May 01, 2026
-HYPSEUS_SINGE_VERSION = dac37bcac963407ae719f04b178f80353a4bbc12
+# Version: Commits on Jul 04, 2026
+HYPSEUS_SINGE_VERSION = 9741a223216830403c5a59670657130a0a0e0f65
 HYPSEUS_SINGE_SITE = $(call github,DirtBagXon,hypseus-singe,$(HYPSEUS_SINGE_VERSION))
 HYPSEUS_SINGE_LICENSE = GPLv3
 
 HYPSEUS_SINGE_DEPENDENCIES += libmpeg2 libogg libvorbis libzip
-HYPSEUS_SINGE_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer sdl2_ttf zlib
+HYPSEUS_SINGE_DEPENDENCIES += sdl3 sdl3_image sdl3_mixer sdl3_ttf zlib
 HYPSEUS_SINGE_SUPPORTS_IN_SOURCE_BUILD = NO
 HYPSEUS_SINGE_SUBDIR = src
 
-HYPSEUS_SINGE_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-implicit-function-declaration -Wno-int-conversion
 HYPSEUS_SINGE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-HYPSEUS_SINGE_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
-HYPSEUS_SINGE_CONF_OPTS += -DCMAKE_C_FLAGS="$(HYPSEUS_SINGE_TARGET_CFLAGS)"
 HYPSEUS_SINGE_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF
 
 $(eval $(call register,hypseus-singe.emulator.yml))
