@@ -1,8 +1,10 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|7dde4794b91dedfc981e9ccab454816ead3b2af1|Jul 05, 2026
+Emulators|[flycast](https://github.com/flyinghead/flycast.git)|1607eb5715e92296b181981d3ae87a29fccd75ab|Jul 05, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46169|Jul 05, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|9eeac883bf27c090b31b5b8ffc00d4ea8358e450|Jul 05, 2026
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|16c438cf53b7be3c43f7b9aaa9e966831e7470b7|Jul 05, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|0c8970364c5db84a6804861fbc7575fedadfa7c4|Jul 05, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-07-05|Jul 05, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|7413e6e492fa3004a583cd0f64db68aeeb1225ee|Jul 05, 2026
@@ -10,7 +12,8 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|16d080e3485e7437d900bf7ca5d7c1e0272beeca|Jul 05, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260705|Jul 05, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|515509ab9ffc4646e2e2642da423d05ee0870056|Jul 05, 2026
-Ports|[vkquake](http://github.com/Novum/vkQuake)|d91558b701637cbe4570f18d8fd9325e0d212892|Jul 05, 2026
+Ports|[vkquake](http://github.com/Novum/vkQuake)|c1ffc3d4732f7792b62579d937873cf2456de17f|Jul 05, 2026
+Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|1607eb5715e92296b181981d3ae87a29fccd75ab|Jul 05, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f46ace52129eb55f271f2d3d68581e9796e243ab|Jul 05, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|a113a573b3ed96a2a4dfc5c98e3d55ad7451bb0e|Jul 05, 2026
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.1|Jul 04, 2026
@@ -21,7 +24,6 @@ Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|9741a22321
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.451|Jul 04, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.330|Jul 04, 2026
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|e84e1dd9b5237fe08cbe2938015a4260a1dc87cf|Jul 04, 2026
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|e3e4ecbc313cf5e8f3c74561d619cba8bb9ef128|Jul 04, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|24199e916d5b270a0d2bcfd953eaeaef042918c0|Jul 04, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14356|Jul 04, 2026
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|f85068799a4dbe1b194d615c670745beb477f652|Jul 04, 2026
@@ -35,7 +37,6 @@ Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|935dc0f9af35f
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|a4ef2efb4c8f938d5403a40117a2351bc9c35493|Jul 04, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|b3fca19231ffc69de61b977f29b6ced7e9367f7b|Jul 04, 2026
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.07.02|Jul 03, 2026
-Emulators|[flycast](https://github.com/flyinghead/flycast.git)|4bc3fde130b1508fc72ee898d5b45767a6dde3b0|Jul 03, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|8ecc13f50032064958078b80bf27d6487408f283|Jul 03, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|56c694d88bbf82270e8b472fe63abd60f3f8e0a9|Jul 03, 2026
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|c1aa979043f5bf65b788ca9fb481e7f21a5738ed|Jul 03, 2026
@@ -48,7 +49,6 @@ Engines|[vpinball](http://github.com/vpinball/vpinball)|8811b7a1ff103fce770a75cb
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|744a9ffb6120e7531c153aa468f34adb3fab9057|Jul 03, 2026
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|357d146df922eb65499a77d030663223793c6295|Jul 03, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|c7b89b7aabdce0673a07c4dcd21c817541043417|Jul 03, 2026
-Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|4bc3fde130b1508fc72ee898d5b45767a6dde3b0|Jul 03, 2026
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|dfc165599f3f1068c40a0b7ad6fe5f161283d483|Jul 03, 2026
 Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|1ef29f7388db1e45cb8e74a0bee717f8fd4e73bd|Jul 03, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|56c694d88bbf82270e8b472fe63abd60f3f8e0a9|Jul 03, 2026

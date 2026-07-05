@@ -92,7 +92,7 @@ Emulators|[drastic](https://github.com/dmanlfc/drastic/raw/refs/heads/main)|r2.5
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|7dde4794b91dedfc981e9ccab454816ead3b2af1|Jul 05, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|4c65780f11511b20c2e0288a287faace16516d38|Jul 02, 2026
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|d2e7abb191bf41ffa1413100154590e0930aebfa|Feb 28, 2026
-Emulators|[flycast](https://github.com/flyinghead/flycast.git)|4bc3fde130b1508fc72ee898d5b45767a6dde3b0|Jul 03, 2026
+Emulators|[flycast](https://github.com/flyinghead/flycast.git)|1607eb5715e92296b181981d3ae87a29fccd75ab|Jul 05, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v3.2.35|Sept 07, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|2b2c5ee3fd8e1a3884e20ed424fd9bfbc51cbb3d|Jun 03, 2026
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
@@ -141,7 +141,7 @@ Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|b68dcbb1
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|814991a2571ad3970e386cef48f3b148aa1c27b9|Jun 13, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|c7b89b7aabdce0673a07c4dcd21c817541043417|Jul 03, 2026
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|6e00afac498903586330492cdd81354a6c4c0d4c|Jun 30, 2026
-Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|4bc3fde130b1508fc72ee898d5b45767a6dde3b0|Jul 03, 2026
+Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|1607eb5715e92296b181981d3ae87a29fccd75ab|Jul 05, 2026
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|f013e213458e06d9df718e4bc4b09d46f88aa899|Jun 04, 2026
 Emulators|[libretro-freechaf](https://github.com/libretro/FreeChaF.git)|cdb8ad6fcecb276761b193650f5ce9ae8b878067|Jun 28, 2024
 Emulators|[libretro-freeintv](http://github.com/libretro/freeintv)|428915baf2bfc032fc03e645f4f8f9c6c3144979|Apr 20, 2026
@@ -285,7 +285,7 @@ Emulators|[ymir](https://github.com/StrikerX3/Ymir)|e84e1dd9b5237fe08cbe2938015a
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.147.9339-555|Jul 01, 2026
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|a4ef2efb4c8f938d5403a40117a2351bc9c35493|Jul 04, 2026
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|e3e4ecbc313cf5e8f3c74561d619cba8bb9ef128|Jul 04, 2026
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|16c438cf53b7be3c43f7b9aaa9e966831e7470b7|Jul 05, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|f4b790a19ae45a9f93ae0051df6933800c7a6446|Jun 10, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|734a0bddc05f72bd560966a1b74b982c2191d976|Jun 13, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|50af22e1909132993c5106cc64a6834710212da0|May 09, 2026
@@ -522,7 +522,7 @@ Ports|[theforceengine](http://github.com/luciusDXL/TheForceEngine)|v1.22.420|Sep
 Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.8.1|Jun 15, 2026
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.4|May 20, 2026
-Ports|[vkquake](http://github.com/Novum/vkQuake)|d91558b701637cbe4570f18d8fd9325e0d212892|Jul 05, 2026
+Ports|[vkquake](http://github.com/Novum/vkQuake)|c1ffc3d4732f7792b62579d937873cf2456de17f|Jul 05, 2026
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|5bf9c012024884234df0f63c615daec0c740def7|Jan 04, 2025
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|650bd625eb725446279c6176804b554e2e1c98f3|Jun 14, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|9f2b8954e9a787dd74271186fe2930e14e2d2e8e|Jun 30, 2026
