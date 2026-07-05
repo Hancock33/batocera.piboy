@@ -1,8 +1,8 @@
 diff --git a/scripts/toolchain.lua b/scripts/toolchain.lua
-index a8e58d287b3..c0d00675705 100644
+index ed200e58ba9..8d4348f8be8 100644
 --- a/scripts/toolchain.lua
 +++ b/scripts/toolchain.lua
-@@ -614,6 +614,11 @@ function toolchain(_buildDir, _subDir)
+@@ -580,6 +580,11 @@ function toolchain(_buildDir, _subDir)
  	configuration { "osx*", "arm64", "Debug" }
  		targetdir (_buildDir .. "osx_clang" .. "/bin/x64/Debug")
  
