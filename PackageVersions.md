@@ -278,7 +278,6 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46169|Jul 05, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|24a401f9480633c96cd7480eae397950e603c1f9|Jul 03, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.136|Jun 08, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|573cce0fe2724cbdcab38a22153009275c26672e|Jun 28, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|9eeac883bf27c090b31b5b8ffc00d4ea8358e450|Jul 05, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024

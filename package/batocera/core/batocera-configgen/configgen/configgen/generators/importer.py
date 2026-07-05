@@ -163,8 +163,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'xash3d_fwgs': ('xash3d_fwgs.xash3dFwgsGenerator', 'Xash3dFwgsGenerator'),
     'xboxcloud': ('xboxcloud.xboxcloudGenerator', 'XboxcloudGenerator'),
     'xemu': ('xemu.xemuGenerator', 'XemuGenerator'),
-    'xenia': ('xenia.xeniaGenerator', 'XeniaGenerator'),
-    'xenia-canary': ('xenia.xeniaGenerator', 'XeniaGenerator'),
     'xenia-edge': ('xenia_edge.xenia_edgeGenerator', 'XeniaEdgeGenerator'),
     'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
     'ymir': ('ymir.ymirGenerator', 'YmirGenerator'),

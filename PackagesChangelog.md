@@ -92,7 +92,6 @@ Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|69e86ebe89f14c3f5f75b
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|b03969a333f38de21f866c2a10da4300d170364d|Jun 29, 2026
 Emulators|[libretro-race](http://github.com/libretro/RACE)|c7810dd7f172827bfa2004813bc000b13786636b|Jun 29, 2026
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|f901022198dacf125d43331c6540492441ab415b|Jun 29, 2026
-Emulators|[xenia-canary](https://github.com/xenia-canary/xenia-canary/releases)|573cce0fe2724cbdcab38a22153009275c26672e|Jun 28, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|4652d2468bcf03c869e557c8872e4d9c8cc082e9|Jun 28, 2026
 Libraries|[ngtcp2](https://github.com/ngtcp2/ngtcp2.git)|v1.24.0|Jun 28, 2026
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|v0.70.0-rc2|Jun 28, 2026
