@@ -3,8 +3,8 @@
 # eka2l1
 #
 ################################################################################
-# Version: Commits on Feb 28, 2026
-EKA2L1_VERSION = d2e7abb191bf41ffa1413100154590e0930aebfa
+# Version: Commits on Jul 06, 2026
+EKA2L1_VERSION = 3ea88dcd982b39a4bfb841d47dbcaecbd99536e7
 EKA2L1_SITE = https://github.com/AveyondFly/EKA2L1.git
 EKA2L1_SITE_METHOD=git
 EKA2L1_GIT_SUBMODULES=YES
