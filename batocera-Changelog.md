@@ -65,8 +65,10 @@
 - Dolphin-Emu to 2606
 - ECWolf to Feb 23, 2026 build
 - EDuke32 / Fury to Feb 03, 2026 build
+- ETLegacy to v2.84.0
 - Groovy MAME to 0.288
 - IOQuake3 to Mar 9, 2026
+- Jazz2 to 3.6.0
 - Ledspicer to 0.7.6
 - Libretro-Arduous to April 21st, 2026 build
 - Libretro-EasyRPG to 0.8.1.1
@@ -78,7 +80,7 @@
 - Libretro-PCSX to May 15th, 2026 build
 - Libretro-PD777 to May 16th, 2026 build
 - Libretro-Picodrive to April 2nd, 2026 build
-- Libretro-Play to 0.76
+- Libretro-Play to 0.77
 - Libretro-Prboom to May 4th, 2026 build
 - Libretro-ppsspp to 1.20.4
 - Libretro-PS2 to May 14th, 2026 build
@@ -92,7 +94,7 @@
 - OpenMSX to Release 21
 - OpenJK to May 13th, 2026 build
 - PCSX2 to May 17th, 2026 build
-- Play to 0.76
+- Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
 - RPCS3 to v.0.0.41
@@ -110,6 +112,7 @@
 - Allwinner H700 device kernel updated to 7.0.11
 - ALSA UCM configuration to v1.2.16
 - Buildroot to 2026.05.x with supporting package & toolchain updates
+- DXVK to 3.0.1 
 - DXVK-NVAPI to v0.9.2
 - FAudio to 26.05
 - Khadas VIM4 kernel updated to vendor 5.15.y
@@ -130,7 +133,7 @@
 - Vulkan stack to 1.4.350
 - WINE Mono to 11.1.0
 - WINE Proton to proton-exp-11.0
-- WINE TKG to 11.11
+- WINE TKG to 11.12
 - Wlroots to 0.20.1
 - X86_64 / Zen3 kernel updated to 7.1.2
 
