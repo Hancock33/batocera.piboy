@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 06, 2026
-HYPSEUS_SINGE_VERSION = 64fedf29eefb0b084ff8d40cb95ebf37a6427ee8
+HYPSEUS_SINGE_VERSION = f649c41f085dffb44f99eca89755cf4c67acdc5a
 HYPSEUS_SINGE_SITE = $(call github,DirtBagXon,hypseus-singe,$(HYPSEUS_SINGE_VERSION))
 HYPSEUS_SINGE_LICENSE = GPLv3
 
