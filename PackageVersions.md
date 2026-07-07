@@ -65,7 +65,7 @@ Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727
 Controllers|[xpad-noone](http://github.com/forkymcforkface/xpad-noone)|a52e32cf182435d608e66bef9a6c89ebac891999|Jun 05, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|d35d54933644b921e6ddfae1a4ab65f25c4acc81|Jul 06, 2026
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|793eeab156280f5a8ceb89af7761b75c4103223b|May 31, 2026
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|a30915ae0ccb1592697ebc6f83c09b6309c6385e|Jul 07, 2026
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|448f87fc0ec9825df13c1e0d4721b741aa5c32aa|Feb 12, 2026
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|d8877e6282868d30e1c2d70c28ec1d1e2491d5b7|Mar 17, 2026
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
@@ -336,7 +336,7 @@ Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09fe
 Gpu|[mali-mp400-gbm](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Gpu|[mali-mp400-wayland](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n13.0.19.0|Jan 30, 2025
-Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.43.02|May 26, 2026
+Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.43.03|Jul 07, 2026
 Gpu|[nvidia580-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|580.173.02|Jun 23, 2026
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|57a1067a246c71fa6c9a355d1668884fda155dd5|Dec 23, 2025
@@ -481,7 +481,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|079f2387eb59e4a04564
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|0d91d1f2d40f38d21e7f41afc01369ee55649fb6|Dec 31, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|677e9cc540c5a594029e1bc68ed7a71b52f06e77|Jun 27, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260705|Jul 05, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260707|Jul 07, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14356|Jul 04, 2026
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|e389b0b5f96c9eda5f2894cacd19202952cdc8a3|Jul 05, 2026
@@ -594,5 +594,5 @@ Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.12|Jun 30, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.2.0|Jun 12, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260702-proton-slr|Jul 02, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260705|Jul 05, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260707|Jul 07, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|08304e81f9ac9a83c552a6bd78689040d174bf95|Apr 09, 2026

@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|a30915ae0ccb1592697ebc6f83c09b6309c6385e|Jul 07, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|58c37d43c3038439eebd26e739bcca291292fb96|Jul 07, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|58c37d43c3038439eebd26e739bcca291292fb96|Jul 07, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|1643d8766f9071e1c5ffe7599ba3a19f19845992|Jul 07, 2026
@@ -12,9 +13,12 @@ Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|6db1c1e725582e3c6f76
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-07-07|Jul 07, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|29030f81b137f6ea5365b3d71f2b588490832f5b|Jul 07, 2026
 Utils-host|[shader-slang](https://github.com/shader-slang/slang.git)|1bd105ceedc5d84ad21c84292116e37ee4cae95c|Jul 07, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260707|Jul 07, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|6dca4c15370ac3e2171ce7b31426695f8f39b460|Jul 07, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|4447853b74fb8c1d9f608582c9fe182a671ba4b4|Jul 07, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|dafe17a8b26f5a92d1e2f64c0460ed26635769f3|Jul 07, 2026
+Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.43.03|Jul 07, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260707|Jul 07, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a33027ae3eaf605b3567836d5a0540409fe2a565|Jul 07, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|d7bc71b648260580b1eb753a57eb194f3a1d177a|Jul 07, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|672f21302d09bd15d276927d830a1831923e25a8|Jul 07, 2026
@@ -58,8 +62,6 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|e389b0b5f96c9eda5f2894cacd192
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|e985fe9b0a17cced87f6ceeb223778fcb94382d8|Jul 05, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v1.12|Jul 05, 2026
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.0.1|Jul 05, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260705|Jul 05, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260705|Jul 05, 2026
 Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|d137f0cacff196fb44a2783ecbc6e8ddb3e57cfc|Jul 05, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|a113a573b3ed96a2a4dfc5c98e3d55ad7451bb0e|Jul 05, 2026
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.1|Jul 04, 2026
@@ -230,7 +232,6 @@ Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|3a1b
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.16.0|Jun 01, 2026
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|20260603|Jun 01, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.11.0|Jun 01, 2026
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|793eeab156280f5a8ceb89af7761b75c4103223b|May 31, 2026
 Kodi|[kodi_resource_language_de_de](http://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.108|May 30, 2026
 Kodi|[kodi_resource_language_el_gr](http://mirrors.kodi.tv/addons/piers/resource.language.el_gr)|11.0.82|May 30, 2026
 Kodi|[kodi_resource_language_es_es](http://mirrors.kodi.tv/addons/piers/resource.language.es_es)|11.0.105|May 30, 2026
@@ -250,7 +251,6 @@ Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-alpha7|May 28,
 Sources|[mame-src](http://github.com/mamedev/mame)|mame0288|May 28, 2026
 Ports|[bstone](http://github.com/bibendovsky/bstone)|v1.3.4|May 27, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|v0.8.4|May 27, 2026
-Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.43.02|May 26, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|9c7b0a395db460524dad26c7b57f266e4acd5242|May 21, 2026
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.4|May 20, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|666e6c023696d4a45a67dd9ba879dbff7b0f69f3|May 20, 2026
