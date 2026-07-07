@@ -12,14 +12,14 @@ SONIC3_AIR_EMULATOR_INFO = sonic3-air.emulator.yml
 # CMakeLists.txt in subfolder
 SONIC3_AIR_SUBDIR = Oxygen/sonic3air/build/_cmake
 
-SONIC3_AIR_DEPENDENCIES += alsa-lib libcurl libglu mesa3d pulseaudio
+SONIC3_AIR_DEPENDENCIES += alsa-lib libcurl libglu mesa3d pulseaudio sdl2
 SONIC3_AIR_DEPENDENCIES += xlib_libXcomposite xlib_libXxf86vm
 
 SONIC3_AIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 SONIC3_AIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+SONIC3_AIR_CONF_OPTS += -DUSE_SYSTEM_SDL=ON
 SONIC3_AIR_CONF_OPTS += -DUSE_DISCORD=OFF
-SONIC3_AIR_CONF_OPTS += -DSDL_PIPEWIRE=OFF -DSDL_PIPEWIRE_SHARED=OFF
 
 define SONIC3_AIR_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/sonic3-air
