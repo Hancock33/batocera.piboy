@@ -1,7 +1,5 @@
 config BR2_PACKAGE_BATOCERA_TORRENT
-    bool "batocera-torrent"
+	bool "batocera-torrent"
 
-    select BR2_PACKAGE_TRANSMISSION
-    select BR2_PACKAGE_TRANSMISSION_DAEMON
-
-
+	select BR2_PACKAGE_TRANSMISSION
+	select BR2_PACKAGE_TRANSMISSION_DAEMON

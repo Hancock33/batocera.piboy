@@ -383,7 +383,7 @@ def main() -> None:
     # CASCADE PROTECTION: Check if deletion plan size is large
     if len(final_packages) > 30:
         print('\n' + yellow('========================================================'))
-        print(yellow('⚠️  WARNING: LARGE DEPENDENCY CASCADE DETECTED'))
+        print(yellow('WARNING: LARGE DEPENDENCY CASCADE DETECTED'))
         print(yellow('========================================================'))
         print(f'A total of {bold(len(final_packages))} active packages will be reset and rebuilt.')
         print('This is usually triggered by modifications to low-level/core system libraries (such as mesa3d or udev).')

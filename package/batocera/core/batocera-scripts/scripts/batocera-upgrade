@@ -320,22 +320,22 @@ do_update() {
             local BIN_SIZE=$(wc -c < "${SPI_BIN}")
             echo "SPI flash size: ${SPI_BYTES} bytes" >> "${SPI_LOG}"
             echo "SPI binary size: ${BIN_SIZE} bytes" >> "${SPI_LOG}"
-            
+
             if test -n "${SPI_SIZE}" && test "${BIN_SIZE}" -lt "${SPI_BYTES}"; then
                 # Calculate human-readable sizes (MB with up to 1 decimal place, removing trailing .0)
                 local SPI_MB=$(awk "BEGIN {printf \"%.1f\", ${SPI_BYTES} / 1024 / 1024}" | sed 's/\.0$//')
                 local BIN_MB=$(awk "BEGIN {printf \"%.1f\", ${BIN_SIZE} / 1024 / 1024}" | sed 's/\.0$//')
 
                 echo "Size check passed, proceeding with flash..." >> "${SPI_LOG}"
-                
+
                 upgmsg "Erasing SPI flash (${SPI_MB}MB)..." 0.5
                 dd if=/dev/zero of=${SPI_DEV} bs=4096 2>>"${SPI_LOG}"
                 echo "Erase complete" >> "${SPI_LOG}"
-                
+
                 upgmsg "Writing SPI binary (${BIN_MB}MB)..." 0.5
                 dd if=${SPI_BIN} of=${SPI_DEV} bs=4096 conv=sync 2>>"${SPI_LOG}"
                 echo "Write complete" >> "${SPI_LOG}"
-                
+
                 sync
                 echo "Sync complete, removing binary..." >> "${SPI_LOG}"
                 rm -f "${SPI_BIN}"

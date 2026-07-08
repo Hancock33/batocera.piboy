@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|a30915ae0ccb1592697ebc6f83c09b6309c6385e|Jul 07, 2026
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|be57fbcbdd4be4a83e4761f96f172ab08836aba2|Jul 07, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|58c37d43c3038439eebd26e739bcca291292fb96|Jul 07, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|58c37d43c3038439eebd26e739bcca291292fb96|Jul 07, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|1643d8766f9071e1c5ffe7599ba3a19f19845992|Jul 07, 2026

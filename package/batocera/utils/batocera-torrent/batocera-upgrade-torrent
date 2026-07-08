@@ -6,7 +6,7 @@ check_space() {
     BLOCKS_FREE=$(stat -f -c %f "${G_BASE_DIR}")
     BLOCK_SIZE=$(stat -f -c %S "${G_BASE_DIR}")
     FREE_GB=$((BLOCKS_FREE * BLOCK_SIZE / 1024 / 1024 / 1024))
-    
+
     if test "${FREE_GB}" -ge "${MIN_SPACE_GB}"
     then
 	return 0
@@ -80,7 +80,7 @@ add_from_http() {
 	echo "version not found" >&2
 	return 1
     fi
-    
+
     TORRENT_FILE="boot-${G_BOARD}-${MASTER_VERSION}.tar.xz.torrent"
     TARGET_FILE="boot-${G_BOARD}-${MASTER_VERSION}.tar.xz"
 
@@ -147,7 +147,7 @@ add_from_torrent() {
 	echo "Unable to download last stable version for ${G_BOARD} as a torrent" >&2
 	return 1
     fi
-    
+
     # transmission seems to note automatically start the torrent from input, or just at boot, so explicitly add it
     if transmission-remote -a "${G_BASE_DIR}/tmp/boot.tar.xz.torrent.tmp" >/dev/null
     then
@@ -175,7 +175,7 @@ board_status() {
 	echo "MISSING"
 	return 0
     fi
-    
+
     VFILE=$(cat "${TFILE}")
     BFILE=$(basename "${TFILE}")
     XZFILE="boot-${BFILE}-${VFILE}.tar.xz"
@@ -286,7 +286,7 @@ is_file_ready_for_update() {
     INSTALLED_MASTER_VERSION=$(installed_master_version)
     LOCAL_MASTER_VERSION=$(local_master_version)
     SBOARD=$(board_status "${G_BOARD}")
-    
+
     # batocera is already on the last stable version
     if test "${INSTALLED_MASTER_VERSION}" = "${LOCAL_MASTER_VERSION}"
     then
@@ -448,7 +448,7 @@ is_torrent() {
     then
 	return 1
     fi
-    
+
     TORRENT_FILE="boot-${G_BOARD}-${MASTER_VERSION}.tar.xz.torrent"
     TARGET_FILE="boot-${G_BOARD}-${MASTER_VERSION}.tar.xz"
 

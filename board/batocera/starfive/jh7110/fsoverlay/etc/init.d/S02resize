@@ -66,22 +66,22 @@ then
     PARTTYPE=$(blkid "${PART}" | sed -e s+'^.* TYPE="\([^"]*\)\".*'+'\1'+)
     test "${PARTTYPE}" != "ext4" && exit 0
     echo "Partition type = ${PARTTYPE}" >> $log
-    
+
     # remove the trigger
     mount -o remount,rw /boot && sed -i -e s+'^[ ]*autoresize'+'#autoresize'+ "${BOOTCONF}" && mount -o remount,ro /boot
 
-    # textoutput "Message" "percentage" "command call" 
+    # textoutput "Message" "percentage" "command call"
     for i in 1 3 5 7 9 11; do
     case $i in
-        1) 
+        1)
            # move backup GPT data structures to the end of the disk
            echo "Step $i: Moving 2nd GPT table to the end of the disk" >> "$log"
            textoutput $i 10 "sgdisk -e ${DISK}";;
-        3) 
+        3)
            # resize the partition
            echo "Step $i: Resizing the partition to 100%" >> "$log"
            textoutput $i 50 "parted -s -m -f ${DISK} resizepart 4 100%";;
-        
+
         5)
            # update the kernel
            echo "Step $i: Updating the kernel" >> "$log"
@@ -94,14 +94,14 @@ then
 	           textoutput $i 70 "e2fsck -f -p ${PART}"
            fi
            ;;
-        9) 
+        9)
            if test "${PARTTYPE}" = "ext4"
            then
                echo "Step $i: Expanding ext4 the file system" >> "$log"
                textoutput $i 80 "resize2fs ${PART}"
            fi
            ;;
-        11) 
+        11)
            # finally disk sync
            echo "Step $i: Final sync" >> "$log"
            textoutput $i 90 "sync";;
