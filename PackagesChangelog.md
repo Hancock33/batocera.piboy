@@ -12,7 +12,9 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|9c19d212a63259c74
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|2e30e5154cb64f220c08a7c68b6c4f666fafc34c|Jul 10, 2026
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.66.0|Jul 10, 2026
 Utils-host|[shader-slang](https://github.com/shader-slang/slang.git)|4676e878e54a5aa9364ae25b9ec63dc7f34a39a9|Jul 10, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260710|Jul 10, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9a58f2631f51760f112481bf6b83050c43652a1a|Jul 10, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260710|Jul 10, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|0ab078546223b08862bcad66134638c57823d6c1|Jul 10, 2026
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|3f036fd69a0f0948d32a9a7cd97af3e0dd7ec434|Jul 10, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|38e6e79024d9ff3bc05fda850c0a927832337916|Jul 10, 2026
@@ -56,11 +58,9 @@ Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|700ca262f44fda57ba260283c3
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46176|Jul 07, 2026
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.3|Jul 07, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|29030f81b137f6ea5365b3d71f2b588490832f5b|Jul 07, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260707|Jul 07, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|6dca4c15370ac3e2171ce7b31426695f8f39b460|Jul 07, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|dafe17a8b26f5a92d1e2f64c0460ed26635769f3|Jul 07, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.43.03|Jul 07, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260707|Jul 07, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|672f21302d09bd15d276927d830a1831923e25a8|Jul 07, 2026
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|287ab2dba6bc30332e56995e7f5e7e561d92591b|Jul 07, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|dafe17a8b26f5a92d1e2f64c0460ed26635769f3|Jul 07, 2026
