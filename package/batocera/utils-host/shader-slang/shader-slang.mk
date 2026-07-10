@@ -3,8 +3,8 @@
 # shader-slang
 #
 ################################################################################
-# Version: Commits on Jul 09, 2026
-SHADER_SLANG_VERSION = a97110a435c2947f2e9c3e22a769b776ccf3fc89
+# Version: Commits on Jul 10, 2026
+SHADER_SLANG_VERSION = 4676e878e54a5aa9364ae25b9ec63dc7f34a39a9
 HOST_SHADER_SLANG_SITE = https://github.com/shader-slang/slang.git
 HOST_SHADER_SLANG_SITE_METHOD = git
 HOST_SHADER_SLANG_GIT_SUBMODULES = YES

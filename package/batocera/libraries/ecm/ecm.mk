@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jun 26, 2026
-ECM_VERSION = v6.28.0-rc1
+ECM_VERSION = v6.28.0
 ECM_SITE =  $(call github,KDE,extra-cmake-modules,$(ECM_VERSION))
 ECM_INSTALL_STAGING = YES
 ECM_INSTALL_TARGET = NO
