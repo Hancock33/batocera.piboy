@@ -1,14 +1,14 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|8b258c5f329a4d1227c69e9a0e0dd0974b0b2d09|Jul 10, 2026
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|38e6e79024d9ff3bc05fda850c0a927832337916|Jul 10, 2026
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|98c321ef4683f76ab61de89ed5d914cab53c23fc|Jul 10, 2026
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|9975eeb63ba141c1db6f487baf01110b0f41effd|Jul 10, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|2b9938d48a4e93dbcdec0661d1ea3328a7e88751|Jul 10, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|2880f88d88b40f2c9f2e49a9f259e478b9e78518|Jul 10, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|a27d35463ef9d78553313b568e96f98097be7c11|Jul 10, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.462|Jul 10, 2026
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|069d2039891b64749d9ad31a26507658368d4997|Jul 10, 2026
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|46b986ec7988d4032f6746560eff7be32919815d|Jul 10, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.334|Jul 10, 2026
-Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|9c19d212a63259c746855ca568ed0e9bfbee2635|Jul 10, 2026
+Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|ef0085dccaf04f0c7befd801104e558a4bbd1349|Jul 10, 2026
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|2e30e5154cb64f220c08a7c68b6c4f666fafc34c|Jul 10, 2026
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.66.0|Jul 10, 2026
 Utils-host|[shader-slang](https://github.com/shader-slang/slang.git)|4676e878e54a5aa9364ae25b9ec63dc7f34a39a9|Jul 10, 2026
@@ -17,11 +17,12 @@ Emulators|[retroarch](http://github.com/libretro/RetroArch)|9a58f2631f51760f1124
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260710|Jul 10, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|0ab078546223b08862bcad66134638c57823d6c1|Jul 10, 2026
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|3f036fd69a0f0948d32a9a7cd97af3e0dd7ec434|Jul 10, 2026
-Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|38e6e79024d9ff3bc05fda850c0a927832337916|Jul 10, 2026
+Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|9975eeb63ba141c1db6f487baf01110b0f41effd|Jul 10, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|0bc6c86928343ca4202c5b6ef33fa4387c47fc12|Jul 10, 2026
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|cd8412ab356ea727b0caef1010bc77af3f557e9f|Jul 10, 2026
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|c95a315186aa963b095240d9cb34ea9da474ae8a|Jul 10, 2026
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|069d2039891b64749d9ad31a26507658368d4997|Jul 10, 2026
+Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|98ce0601ed7b3d9dc556a553ba408debc32fbc83|Jul 10, 2026
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|46b986ec7988d4032f6746560eff7be32919815d|Jul 10, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|4c518532b15818aa32f89268c832ccb2c4867bcd|Jul 10, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|68544f4cef6ff211807a90ddd146c074d439e1b7|Jul 10, 2026
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|213a12ce93d66b105a113debd9396306066a7cfc|Jul 10, 2026
@@ -99,7 +100,6 @@ Ports|[openjazz](http://github.com/AlisterT/openjazz)|12366786fcbaab80793f37904d
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|b8eae565aefa8f1723eb0a64be94de309525d204|Jul 03, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|8811b7a1ff103fce770a75cb906f5433a60cad96|Jul 03, 2026
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|dfc165599f3f1068c40a0b7ad6fe5f161283d483|Jul 03, 2026
-Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|1ef29f7388db1e45cb8e74a0bee717f8fd4e73bd|Jul 03, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260702-proton-slr|Jul 02, 2026
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|29d9d104338f46bc2e65438fb207bcf54f701e92|Jul 02, 2026
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.07|Jul 01, 2026
