@@ -54,6 +54,7 @@
   CoolPi 4B, FriendlyElec CM3588 NAS, GameForce ACE, IndieDroid Nova, Khadas Edge2, Orange Pi 5
   Orange Pi 5 Plus, Orange Pi 5B, QuartzPro64, ROCK 5A, ROCK 5B, ROCK 5B Plus, ROCK 5C
 - The Force Engine to capable aarch64 devices
+- TR1X & TR2X have merged into the unified TRX which also now supports Tomb Raider 3.
 - Vita3k added for capable aarch64 devices
 ### Updated
 - Azahar to 2125.1.2
@@ -90,6 +91,7 @@
 - Libretro-ScummVM to May 5th, 2026 build
 - Libretro-SuperBrosWar to December 12th, 2025 build
 - Libretro-VitaQuake2 to April 10th, 2026 build
+- Lightspark to 0.9.0
 - Moonlight-QT to Jun 26, 2026 build
 - Mupen64Plus-Core to March 30th, 2026 build
 - OpenMSX to Release 21
@@ -118,11 +120,12 @@
 - DXVK to 3.0.1
 - DXVK-NVAPI to v0.9.2
 - FAudio to 26.05
+- FFMPEG to 8.1.2
 - Khadas VIM4 kernel updated to vendor 5.15.y
 - LabWC to 0.20.0
-- Linux Firmware to 20260519
+- Linux Firmware to 20260622
 - Mesa3D to 26.1.2
-- Nvidia Open Production driver to 595.84
+- Nvidia Open Production driver to 610.43.03
 - Nvidia 580 Legacy driver to 580.173.02
 - QT to 6.11.1
 - Qualcomm SM6115 device kernel updated to 7.0.11

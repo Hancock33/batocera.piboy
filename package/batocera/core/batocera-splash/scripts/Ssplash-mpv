@@ -70,10 +70,10 @@ do_videostart ()
 
     soundDisabled=$(batocera-settings-get splash.screen.sound)
     if [[ $? -eq 0 ]]; then
-	if test "${soundDisabled}" = 0
-	then
+    if test "${soundDisabled}" = 0
+    then
             mpv_audio=--no-audio
-	fi
+    fi
     fi
 
     ## current drm output ##
@@ -82,11 +82,11 @@ do_videostart ()
     video_rotation=$(batocera-settings-get-master "display.rotate.${effectiveDrmOutput}")
     if test -z "${video_rotation}"
     then
-	video_rotation=$(batocera-settings-get-master display.rotate)
+    video_rotation=$(batocera-settings-get-master display.rotate)
     fi
     if [[ $? -eq 0 ]]; then
         video_rotation=$(do_angels_conversion $video_rotation)
-	# --vf-add=sub : rotation of subtitles
+    # --vf-add=sub : rotation of subtitles
         [[ $? -eq 0 ]] && mpv_video="--video-rotate=${video_rotation} --vf-add=sub"
     fi
 
@@ -111,10 +111,10 @@ do_videostart ()
 
     video_subtitle=$(batocera-settings-get splash.screen.subtitle)
     if [[ $? -eq 0 ]]; then
-	if test "${video_subtitle}" = 0
-	then
+    if test "${video_subtitle}" = 0
+    then
            mpv_video="${mpv_video} --no-sub-auto"
-	fi
+    fi
     fi
 
     # determine the output display to use for MPV
@@ -174,10 +174,18 @@ do_videostart ()
         sleep "${splash_delay}"
     fi
 
+    # Render OSD and subtitles directly from memory to bypass slow, early boot fontconfig scans
+    local mpv_fast_fonts=(
+        "--sub-font-provider=none"
+        "--osd-font-provider=none"
+        "--sub-fonts-dir=/usr/share/fonts/dejavu/"
+        "--sub-font=DejaVu Sans"
+    )
+
     if [ -n "$drm_connector" ] && [ -n "$card_path" ]; then
-        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-mode=$drm_mode --drm-connector=$drm_connector --drm-device=$card_path --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
+        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --no-config %PLAYER_OPTIONS% "${mpv_fast_fonts[@]}" --drm-mode=$drm_mode --drm-connector=$drm_connector --drm-device=$card_path --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
     else
-        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-mode=$drm_mode --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
+        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --no-config %PLAYER_OPTIONS% "${mpv_fast_fonts[@]}" --drm-mode=$drm_mode --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
     fi
 }
 
@@ -188,8 +196,8 @@ case "$1" in
         then
             do_start
             echo "OK"
-	else
-	    echo "SKIPPED"
+    else
+        echo "SKIPPED"
         fi
         ;;
     stop)
