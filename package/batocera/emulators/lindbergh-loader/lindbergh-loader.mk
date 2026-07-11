@@ -3,8 +3,8 @@
 # lindbergh-loader
 #
 ################################################################################
-# Version: Commits on Jul 10, 2026
-LINDBERGH_LOADER_VERSION = a94c30b9750b81db6728a833728da8c126c3f59c
+# Version: Commits on Jul 11, 2026
+LINDBERGH_LOADER_VERSION = c0e0bdc0ac4823a1c94f000944842bb0404101f0
 LINDBERGH_LOADER_SITE = $(call github,lindbergh-loader,linuxloader,$(LINDBERGH_LOADER_VERSION))
 LINDBERGH_LOADER_LICENSE = ShareAlike 4.0 International
 LINDBERGH_LOADER_LICENSE_FILES = LICENSE.md
