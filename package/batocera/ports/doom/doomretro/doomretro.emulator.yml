@@ -13,10 +13,4 @@ shared_features:
   - bezel.tattoo_file
   - bezel.resize_tattoo
 systems:
-<<<<<<<< HEAD:package/batocera/ports/doom/doomretro/doomretro.emulator.yml
   - prboom
-========
-  - traider1
-  - traider2
-  - traider3
->>>>>>>> upstream/master:package/batocera/ports/trx/trx.emulator.yml
