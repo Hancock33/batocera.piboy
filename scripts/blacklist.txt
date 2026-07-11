@@ -18,6 +18,7 @@ libvni.mk
 libwinevbs.mk
 libzedmd.mk
 mt32emu.mk
+mupen64plus-gliden64.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
