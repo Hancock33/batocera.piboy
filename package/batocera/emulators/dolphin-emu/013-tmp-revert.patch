@@ -1,0 +1,149 @@
+diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
+index 1b50796e34..cebcc748ec 100644
+--- a/Source/Core/Core/Core.cpp
++++ b/Source/Core/Core/Core.cpp
+@@ -863,9 +863,6 @@ void Callback_FramePresented(const PresentInfo& present_info)
+       present_info.actual_present_time - present_info.intended_present_time;
+   perf_metrics.SetLatestFramePresentationOffset(presentation_offset);
+ 
+-  perf_metrics.SetLatestFrameBufferSize(present_info.frame_buffer_width,
+-                                        present_info.frame_buffer_height);
+-
+   if (present_info.reason == PresentInfo::PresentReason::VideoInterfaceDuplicate)
+     return;
+ 
+diff --git a/Source/Core/VideoCommon/PerformanceMetrics.cpp b/Source/Core/VideoCommon/PerformanceMetrics.cpp
+index 98efa64108..1cda2cbc9a 100644
+--- a/Source/Core/VideoCommon/PerformanceMetrics.cpp
++++ b/Source/Core/VideoCommon/PerformanceMetrics.cpp
+@@ -11,6 +11,7 @@
+ #include "Common/HookableEvent.h"
+ #include "Core/Config/GraphicsSettings.h"
+ #include "Core/Core.h"
++#include "VideoCommon/FramebufferManager.h"
+ #include "VideoCommon/VideoConfig.h"
+ 
+ PerformanceMetrics::PerformanceMetrics()
+@@ -88,6 +89,20 @@ double PerformanceMetrics::GetFPS() const
+   return m_fps_counter.GetHzAvg();
+ }
+ 
++u32 PerformanceMetrics::GetEFBWidth() const
++{
++  if (g_framebuffer_manager)
++    return g_framebuffer_manager->GetEFBWidth();
++  return 0;
++}
++
++u32 PerformanceMetrics::GetEFBHeight() const
++{
++  if (g_framebuffer_manager)
++    return g_framebuffer_manager->GetEFBHeight();
++  return 0;
++}
++
+ double PerformanceMetrics::GetVPS() const
+ {
+   return m_vps_counter.GetHzAvg();
+@@ -108,11 +123,6 @@ void PerformanceMetrics::SetLatestFramePresentationOffset(DT offset)
+   m_frame_presentation_offset.store(offset, std::memory_order_relaxed);
+ }
+ 
+-void PerformanceMetrics::SetLatestFrameBufferSize(u32 width, u32 height)
+-{
+-  m_frame_buffer_size.store(FrameBufferSize{width, height}, std::memory_order_relaxed);
+-}
+-
+ void PerformanceMetrics::DrawImGuiStats(const float backbuffer_scale)
+ {
+   m_vps_counter.UpdateStats();
+@@ -129,6 +139,8 @@ void PerformanceMetrics::DrawImGuiStats(const float backbuffer_scale)
+   const double fps = GetFPS();
+   const double vps = GetVPS();
+   const double speed = GetSpeed();
++  const u32 width = GetEFBWidth();
++  const u32 height = GetEFBHeight();
+ 
+   static ImVec2 last_display_size(-1.0f, -1.0f);
+ 
+@@ -365,8 +377,7 @@ void PerformanceMetrics::DrawImGuiStats(const float backbuffer_scale)
+ 
+       clamp_window_position();
+ 
+-      const FrameBufferSize size = m_frame_buffer_size.load(std::memory_order_relaxed);
+-      ImGui::TextColored(ImVec4(r, g, b, 1.0f), "XFB res: %ux%u", size.width, size.height);
++      ImGui::TextColored(ImVec4(r, g, b, 1.0f), "Res: %ux%u", width, height);
+     }
+     ImGui::End();
+   }
+diff --git a/Source/Core/VideoCommon/PerformanceMetrics.h b/Source/Core/VideoCommon/PerformanceMetrics.h
+index b24c6f6659..538360a05b 100644
+--- a/Source/Core/VideoCommon/PerformanceMetrics.h
++++ b/Source/Core/VideoCommon/PerformanceMetrics.h
+@@ -41,20 +41,15 @@ public:
+   double GetVPS() const;
+   double GetSpeed() const;
+   double GetMaxSpeed() const;
++  u32 GetEFBWidth() const;
++  u32 GetEFBHeight() const;
+   // Call from any thread.
+   void SetLatestFramePresentationOffset(DT offset);
+-  void SetLatestFrameBufferSize(u32 width, u32 height);
+ 
+   // ImGui Functions
+   void DrawImGuiStats(const float backbuffer_scale);
+ 
+ private:
+-  struct FrameBufferSize
+-  {
+-    u32 width = 0;
+-    u32 height = 0;
+-  };
+-
+   PerformanceTracker m_fps_counter{"render_times.txt"};
+   PerformanceTracker m_vps_counter{"vblank_times.txt"};
+ 
+@@ -64,7 +59,6 @@ private:
+   std::atomic<double> m_max_speed{};
+ 
+   std::atomic<DT> m_frame_presentation_offset{};
+-  std::atomic<FrameBufferSize> m_frame_buffer_size{};
+ 
+   struct PerfSample
+   {
+diff --git a/Source/Core/VideoCommon/Present.cpp b/Source/Core/VideoCommon/Present.cpp
+index 41d05f3652..f74b9a8fa4 100644
+--- a/Source/Core/VideoCommon/Present.cpp
++++ b/Source/Core/VideoCommon/Present.cpp
+@@ -174,8 +174,6 @@ void Presenter::ViSwap(u32 xfb_addr, u32 fb_width, u32 fb_stride, u32 fb_height,
+       .present_count = m_present_count++,
+       .emulated_timestamp = ticks,
+       .intended_present_time = presentation_time,
+-      .frame_buffer_width = fb_width,
+-      .frame_buffer_height = fb_height,
+   };
+ 
+   if (is_duplicate)
+@@ -239,8 +237,6 @@ void Presenter::ImmediateSwap(u32 xfb_addr, u32 fb_width, u32 fb_stride, u32 fb_
+       .emulated_timestamp = ticks,
+       .intended_present_time = m_next_swap_estimated_time,
+       .reason = PresentInfo::PresentReason::Immediate,
+-      .frame_buffer_width = fb_width,
+-      .frame_buffer_height = fb_height,
+   };
+ 
+   auto& video_events = GetVideoEvents();
+diff --git a/Source/Core/VideoCommon/VideoEvents.h b/Source/Core/VideoCommon/VideoEvents.h
+index f037dc266d..f07ac631e4 100644
+--- a/Source/Core/VideoCommon/VideoEvents.h
++++ b/Source/Core/VideoCommon/VideoEvents.h
+@@ -61,9 +61,6 @@ struct PresentInfo
+   // Where the presentation of the frame was triggered from
+   PresentReason reason = PresentReason::Immediate;
+ 
+-  u32 frame_buffer_width;
+-  u32 frame_buffer_height;
+-
+   std::vector<std::string_view> xfb_copy_hashes;
+ };
+ 
