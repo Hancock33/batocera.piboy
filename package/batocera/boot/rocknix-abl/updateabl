@@ -63,7 +63,7 @@ if [[ "${1:-}" == "--check-online" ]]; then
 
         if [ "$REMOTE_HASH" != "$LOCAL_HASH" ]; then
             echo "A newer or different ABL bootloader is available online!"
-            
+
             local proceed_download=0
             if [ "$NON_INTERACTIVE" -eq 1 ]; then
                 proceed_download=1

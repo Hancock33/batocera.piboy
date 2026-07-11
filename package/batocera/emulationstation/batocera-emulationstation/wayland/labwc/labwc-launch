@@ -28,7 +28,7 @@ mkdir -p /var/log
 _get_card_details() {
     local card_node="$1"
     local sys_card="/sys/class/drm/${card_node}"
-    
+
     local driver_name="unknown"
     if [ -L "${sys_card}/device/driver" ]; then
         driver_name=$(basename "$(readlink -f "${sys_card}/device/driver")")
@@ -42,7 +42,7 @@ _get_card_details() {
         vendor_id=$(cat "${sys_card}/device/vendor" | sed 's/^0x//')
         local dev_id
         dev_id=$(cat "${sys_card}/device/device" | sed 's/^0x//')
-        
+
         local vendor_name="Unknown"
         case "${vendor_id}" in
             "10de") vendor_name="NVIDIA" ;;
@@ -92,7 +92,7 @@ if [ -n "$PRIME_PCI_ID" ]; then
 
     # If a primary card was found, build a multi-GPU device string with detailed logs
     if [ -n "$PRIMARY_CARD" ]; then
-        
+
         WLR_DRM_DEVICES_VAL="/dev/dri/$PRIMARY_CARD"
 
         echo "Configuring multi-GPU setup:" >> "$LOG_FILE"
@@ -126,7 +126,7 @@ if [ -n "$PRIME_PCI_ID" ]; then
             if [ "$CARD_NAME" != "$PRIMARY_CARD" ]; then
                 if [ -L "$card/device" ]; then
                     WLR_DRM_DEVICES_VAL="${WLR_DRM_DEVICES_VAL}:/dev/dri/$CARD_NAME"
-                    
+
                     # Get and print auxiliary card details
                     SEC_DETAILS=$(_get_card_details "$CARD_NAME")
                     sec_type=$(echo "$SEC_DETAILS" | cut -d'|' -f1)
@@ -157,7 +157,7 @@ else
     for card in /sys/class/drm/card*; do
         [ -e "$card" ] || continue
         CARD_NAME=$(basename "$card")
-        
+
         # Skip sub-devices/connectors containing a hyphen (like card1-HDMI-A-1)
         if echo "$CARD_NAME" | grep -q '-'; then
             continue

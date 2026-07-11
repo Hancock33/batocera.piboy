@@ -161,7 +161,7 @@ V_CPUMAXNB=$(grep -c '^processor' /proc/cpuinfo 2>/dev/null)
 V_CPUNB=$(awk '/^physical id/{pkg=$NF} /^core id/{print pkg, $NF}' \
     /proc/cpuinfo 2>/dev/null | sort -u | wc -l)
 
-# big.LITTLE — e.g. both clusters report 0-3, so we use (cluster_id, core_id).
+# big.LITTLE - e.g. both clusters report 0-3, so we use (cluster_id, core_id).
 if [ "${V_CPUNB}" -eq 0 ] 2>/dev/null; then
     V_CPUNB=$(for cpu in /sys/devices/system/cpu/cpu[0-9]*; do
         cluster=$(cat "${cpu}/topology/physical_package_id" 2>/dev/null || \
@@ -328,7 +328,7 @@ if [ "${FULL_DISPLAY}" -ne 0 ]; then
             [ -f "${ev}/device/name" ] && name=$(cat "${ev}/device/name" 2>/dev/null)
             touch_names+=("${name}")
             touch_nodes+=("$(basename "${ev}")")
-            
+
             is_mt="No"
             if [ -f "${ev}/device/capabilities/abs" ]; then
                 abs_hex=$(cat "${ev}/device/capabilities/abs" 2>/dev/null | tr -d ' ')
@@ -389,7 +389,7 @@ if [ "${NUM_OUTPUTS}" -le 1 ]; then
     DISPLAYRATE=$(get_displayrate "$(batocera-resolution currentMode 2>/dev/null)")
     echo "Display Resolution: ${DISPLAYRES}"
     echo "Display Refresh Rate: ${DISPLAYRATE}Hz"
-    
+
     # Interleave matching touchscreen output (singular layout if only 1 screen detected)
     if [ "${FULL_DISPLAY}" -ne 0 ]; then
         if [ "${NUM_TOUCH}" -eq 1 ]; then
@@ -441,7 +441,7 @@ else
         echo "Display Output ${i}: ${output}"
         echo "Display Resolution ${i}: ${DISPLAYRES}"
         echo "Display Refresh Rate ${i}: ${DISPLAYRATE}Hz"
-        
+
         # Interleave matching touchscreen output for index i
         if [ "${FULL_DISPLAY}" -ne 0 ]; then
             t_idx=$(( i - 1 ))
@@ -462,10 +462,10 @@ else
                 fi
             fi
         fi
-        
+
         i=$(( i + 1 ))
     done
-    
+
     # Catch-all loop for extra touchscreens if touch count exceeds display count
     if [ "${FULL_DISPLAY}" -ne 0 ]; then
         while [ "${i}" -le "${NUM_TOUCH}" ]; do
@@ -493,7 +493,7 @@ fi
 # OpenGL / Vulkan  (--full only)
 # ---------------------------------------------------------------------------
 if [[ "${FULL_DISPLAY}" != 0 ]]; then
-    # OpenGL – x86/x86_64 only via glxinfo
+    # OpenGL - x86/x86_64 only via glxinfo
     if test "${V_BOARD}" = "x86" -o "${V_BOARD}" = "x86_64"; then
         V_OPENGLVERSION=$(DISPLAY=$(getLocalXDisplay) glxinfo 2>/dev/null | \
             awk '/^OpenGL core profile version string:/{sub(/^OpenGL core profile version string:[ ]*/,""); print; exit}')
@@ -507,7 +507,7 @@ if [[ "${FULL_DISPLAY}" != 0 ]]; then
     # Vulkan
     if [ "$(batocera-vulkan hasVulkan 2>/dev/null)" = "true" ]; then
         echo "Vulkan Supported: Yes"
-        
+
         if [ "$(batocera-vulkan hasDiscrete 2>/dev/null)" = "true" ]; then
             echo "Vulkan Uses Discrete GPU: Yes"
         else
@@ -538,7 +538,7 @@ echo "Data Partition Available Space: $(df -h "${INTERNALDEVICE}" 2>/dev/null | 
     awk 'NR==2 {print $4}')"
 
 # ---------------------------------------------------------------------------
-# Network – IP address (IPv4 then IPv6 fallback)
+# Network - IP address (IPv4 then IPv6 fallback)
 # ---------------------------------------------------------------------------
 PREFSRC=$(ip -j route get 1.1.1.1 2>/dev/null | jq -r '.[].prefsrc // empty')
 if [ -z "$PREFSRC" ]; then
