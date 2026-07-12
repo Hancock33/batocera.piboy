@@ -3,10 +3,10 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Jul 09, 2026
-DOLPHIN_EMU_VERSION = 6de526c684ee6dd8b6fc3447dae858ae480ccbb5
+# Version: Commits on Jul 11, 2026
+DOLPHIN_EMU_VERSION = fc9fd6952a62c4fe48acc00333ce360cb47b57c7
 DOLPHIN_EMU_VERSION_MAJOR = 2606
-DOLPHIN_EMU_VERSION_MINOR = 136
+DOLPHIN_EMU_VERSION_MINOR = 143
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
 DOLPHIN_EMU_LICENSE = GPLv2+
