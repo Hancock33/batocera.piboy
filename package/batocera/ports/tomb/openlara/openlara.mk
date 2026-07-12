@@ -3,8 +3,8 @@
 # openlara
 #
 ################################################################################
-# Version: Commits on May 21, 2026
-OPENLARA_VERSION = 5d56c97dcdee21462eecf116509120de9193ab4e
+# Version: Commits on Jul 08, 2026
+OPENLARA_VERSION = 8c40d43834d6d9ce9f174fc3c52b4ccc6502c6ea
 OPENLARA_SITE = $(call github,XProger,OpenLara,$(OPENLARA_VERSION))
 OPENLARA_EMULATOR_INFO = openlara.emulator.yml
 OPENLARA_DEPENDENCIES = openal sdl2 zlib

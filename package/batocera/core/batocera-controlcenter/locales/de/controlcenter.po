@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: controlcenter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-02 21:32+0000\n"
-"PO-Revision-Date: 2026-07-01 12:23+0000\n"
+"PO-Revision-Date: 2026-07-09 11:48+0000\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr\n"
@@ -44,6 +44,9 @@ msgstr "Helligkeit +"
 
 msgid "Bright -"
 msgstr "Helligkeit -"
+
+msgid "CPU Temp:"
+msgstr "CPU-Temp.:"
 
 msgid "CPU:"
 msgstr "CPU:"
@@ -164,9 +167,6 @@ msgstr "System (Standard)"
 
 msgid "Take screenshot"
 msgstr "Screenshot aufnehmen"
-
-msgid "Temp:"
-msgstr "Temp:"
 
 msgid "Toggle"
 msgstr "Umschalten"

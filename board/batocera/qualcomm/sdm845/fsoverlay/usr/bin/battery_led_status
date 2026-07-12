@@ -100,7 +100,7 @@ while true; do
   BRI=$(get_brightness)
 
   if [ "${ONLINE}" = "1" ]; then
-    # Charging — always green, no blinking
+    # Charging - always green, no blinking
     STATE="green"
   fi
 

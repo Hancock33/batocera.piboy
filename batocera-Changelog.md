@@ -18,6 +18,7 @@
 - Dolphin GameCube Controller type BattlerGC Pro (x-input mode with analog+digital triggers)
 - ES setting to determnine mitigations On|Off(Default On)
 - ES setting to choose controller LED mode (Rainbow, Pulse Chroma)
+- ES can now display Unicode for ID3 tags of songs played
 - Box64 userland x86_64 emulator for aarch64
 - Legion Go / Go 2 LED controller support
 - Libretro-Azahar
@@ -49,10 +50,11 @@
 - PCSX2 variant for capable aarch64 devices
 - Removed Libretro-Puae2021
 - Removed the buggy Libretro-A5200 core. We will use the compatible Libretro-Atari800 core instead
-- Rockcip RK3588 devices moved to the mainline linux kernel:
+- Rockchip RK3588 devices moved to the mainline linux kernel:
   CoolPi 4B, FriendlyElec CM3588 NAS, GameForce ACE, IndieDroid Nova, Khadas Edge2, Orange Pi 5
   Orange Pi 5 Plus, Orange Pi 5B, QuartzPro64, ROCK 5A, ROCK 5B, ROCK 5B Plus, ROCK 5C
 - The Force Engine to capable aarch64 devices
+- TR1X & TR2X have merged into the unified TRX which also now supports Tomb Raider 3.
 - Vita3k added for capable aarch64 devices
 ### Updated
 - Azahar to 2125.1.2
@@ -65,8 +67,10 @@
 - Dolphin-Emu to 2606
 - ECWolf to Feb 23, 2026 build
 - EDuke32 / Fury to Feb 03, 2026 build
+- ETLegacy to v2.84.0
 - Groovy MAME to 0.288
 - IOQuake3 to Mar 9, 2026
+- Jazz2 to 3.6.0
 - Ledspicer to 0.7.6
 - Libretro-Arduous to April 21st, 2026 build
 - Libretro-EasyRPG to 0.8.1.1
@@ -78,7 +82,7 @@
 - Libretro-PCSX to May 15th, 2026 build
 - Libretro-PD777 to May 16th, 2026 build
 - Libretro-Picodrive to April 2nd, 2026 build
-- Libretro-Play to 0.76
+- Libretro-Play to 0.77
 - Libretro-Prboom to May 4th, 2026 build
 - Libretro-ppsspp to 1.20.4
 - Libretro-PS2 to May 14th, 2026 build
@@ -87,17 +91,20 @@
 - Libretro-ScummVM to May 5th, 2026 build
 - Libretro-SuperBrosWar to December 12th, 2025 build
 - Libretro-VitaQuake2 to April 10th, 2026 build
+- Lightspark to 0.9.0
 - Moonlight-QT to Jun 26, 2026 build
 - Mupen64Plus-Core to March 30th, 2026 build
 - OpenMSX to Release 21
 - OpenJK to May 13th, 2026 build
+- OpenJKDF2 to v0.9.9
 - PCSX2 to May 17th, 2026 build
-- Play to 0.76
+- Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
 - RPCS3 to v.0.0.41
 - ShadPS4 to v.0.16.0
 - Solarus to 2.0.4
+- Sonic3-Air to v26.03.28.0
 - Supermodel to v0.3a-20260528
 - Tsugaru to v20251206
 - Vita3k to 10th of June build
@@ -110,29 +117,33 @@
 - Allwinner H700 device kernel updated to 7.0.11
 - ALSA UCM configuration to v1.2.16
 - Buildroot to 2026.05.x with supporting package & toolchain updates
+- DXVK to 3.0.1
 - DXVK-NVAPI to v0.9.2
 - FAudio to 26.05
+- FFMPEG to 8.1.2
 - Khadas VIM4 kernel updated to vendor 5.15.y
 - LabWC to 0.20.0
-- Linux Firmware to 20260519
-- Mesa3D to 26.1.2
-- Nvidia Open Production driver to 595.84
+- Linux Firmware to 20260622
+- Mesa3D to 26.1.4
+- Nvidia Open Production driver to 610.43.03
 - Nvidia 580 Legacy driver to 580.173.02
 - QT to 6.11.1
 - Qualcomm SM6115 device kernel updated to 7.0.11
 - Qualcomm SM8550 device kernel updated to 7.0.11
-- Qualcomm SM8750 device kernel updated to 7.1.2
+- Qualcomm SM8750 device kernel updated to 7.1.3
+- Raspberry Pi device kernel updated to 6.18.37
 - Rockchip RK3568 device kernel updated to 7.0.11
-- Rockchip RK3588 mainline device kernel updated to 7.0.11
+- Rockchip RK3588 mainline device kernel updated to 7.1.3
+- Rocknix ABL to 1.1.4 (SM8x50 devices)
 - SwitchRes to 2.2.2
 - RTKit to v0.14
 - VKD3D Proton to 3.0.1
 - Vulkan stack to 1.4.350
 - WINE Mono to 11.1.0
 - WINE Proton to proton-exp-11.0
-- WINE TKG to 11.11
+- WINE TKG to 11.12
 - Wlroots to 0.20.1
-- X86_64 / Zen3 kernel updated to 7.1.2
+- X86_64 / Zen3 kernel updated to 7.1.3
 
 # 2026/05/30 - batocera.linux 43.1
 ### Fixed

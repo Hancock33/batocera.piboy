@@ -12,58 +12,108 @@ if test -z "${DISPLAY}"; then
     export DISPLAY=$(getLocalXDisplay)
 fi
 
+# ---------------------------------------------------------------------------
+# CPU: online CPUs only
+# ---------------------------------------------------------------------------
 getCpu() {
     test -e "${1}/cpufreq/scaling_max_freq" || return 0
-
     if test -e "${1}/online"; then
-        OL=$(cat "${CPU}/online")
+        OL=$(cat "${1}/online")
         test "${OL}" = 1 || return 0
     fi
-    cat "${CPU}/cpufreq/scaling_max_freq"
+    cat "${1}/cpufreq/scaling_max_freq"
 }
 
-# Detect battery
+# ---------------------------------------------------------------------------
+# GPU: Multi-layered name discovery (PC & ARM support)
+# ---------------------------------------------------------------------------
+get_gpu_name() {
+    local name=""
+
+    # Try Batocera's Vulkan helper (most accurate for modern PC/ARM)
+    if [ "$(batocera-vulkan hasVulkan 2>/dev/null)" = "true" ]; then
+        if [ "$(batocera-vulkan hasDiscrete 2>/dev/null)" = "true" ]; then
+            name=$(batocera-vulkan discreteName 2>/dev/null | tr -d '\n')
+        else
+            name=$(batocera-vulkan defaultName 2>/dev/null | tr -d '\n')
+        fi
+    fi
+
+    # Fallback to glxinfo (requires active display)
+    if [ -z "$name" ] && command -v glxinfo >/dev/null 2>&1; then
+        name=$(DISPLAY=$(getLocalXDisplay) glxinfo 2>/dev/null | awk -F': ' '/OpenGL renderer string:/{print $2}')
+    fi
+
+    # Fallback to lspci (x86 systems)
+    if [ -z "$name" ] && command -v lspci >/dev/null 2>&1; then
+        name=$(lspci 2>/dev/null | grep -iE "vga|3d|display" | head -n1 | cut -d':' -f3- | sed 's/^ //')
+    fi
+
+    # Fallback to common ARM platform paths (Qualcomm Snapdragon/Adreno)
+    if [ -z "$name" ]; then
+        if [ -f /sys/class/kgsl/kgsl-3d0/gpu_model ]; then
+            name=$(cat /sys/class/kgsl/kgsl-3d0/gpu_model 2>/dev/null)
+        elif [ -f /sys/devices/platform/soc/soc:gpu/gpu_model ]; then
+            name=$(cat /sys/devices/platform/soc/soc:gpu/gpu_model 2>/dev/null)
+        fi
+    fi
+
+    echo "$name"
+}
+
+# ---------------------------------------------------------------------------
+# Convert Celsius to Fahrenheit and format
+# ---------------------------------------------------------------------------
+format_temp() {
+    local c="$1"
+    echo "${c}°C ($(( (c * 9) / 5 + 32 ))°F)"
+}
+
+# ---------------------------------------------------------------------------
+# Battery capacity
+# ---------------------------------------------------------------------------
 BATTERY_DIR=$(ls -d /sys/class/power_supply/*{BAT,bat}* 2>/dev/null | head -1)
-BATT=$(cat ${BATTERY_DIR}/uevent 2>/dev/null | grep -E "^POWER_SUPPLY_CAPACITY=" | sed -e s+'^POWER_SUPPLY_CAPACITY='++ | sort -rn | head -1)
+BATT=$(awk -F= '/^POWER_SUPPLY_CAPACITY=/{print $2; exit}' "${BATTERY_DIR}/uevent" 2>/dev/null)
 
 if [ -z "${BATT}" ]; then
     BATTERY_DIR=$(ls -d /sys/class/power_supply/*{FUEL,fuel}* 2>/dev/null | head -1)
-    NOW=$(cat ${BATTERY_DIR}/uevent 2>/dev/null | grep -E "^POWER_SUPPLY_CHARGE_NOW=" | sed -e s+'^POWER_SUPPLY_CHARGE_NOW='++ | sort -rn | head -1)
-    MAX=$(cat ${BATTERY_DIR}/uevent 2>/dev/null | grep -E "^POWER_SUPPLY_CHARGE_FULL=" | sed -e s+'^POWER_SUPPLY_CHARGE_FULL='++ | sort -rn | head -1)
+    NOW=$(awk -F= '/^POWER_SUPPLY_CHARGE_NOW=/{print $2; exit}' "${BATTERY_DIR}/uevent" 2>/dev/null)
+    MAX=$(awk -F= '/^POWER_SUPPLY_CHARGE_FULL=/{print $2; exit}' "${BATTERY_DIR}/uevent" 2>/dev/null)
     if [ -n "$NOW" ] && [ -n "$MAX" ] && [ "$MAX" -ne 0 ]; then
-        BATT=$((200 * $NOW / $MAX % 2 + 100 * $NOW / $MAX))
+        BATT=$(( (100 * NOW + MAX / 2) / MAX ))   # rounded integer division
     fi
 fi
 
+# ---------------------------------------------------------------------------
+# Battery time-remaining
+# ---------------------------------------------------------------------------
 if [ -n "${BATTERY_DIR}" ]; then
     BATTREMAINING=""
-    TIME_TO_EMPTY=$(cat ${BATTERY_DIR}/uevent 2>/dev/null | grep -E "^POWER_SUPPLY_TIME_TO_EMPTY_NOW=" | sed -e 's/^POWER_SUPPLY_TIME_TO_EMPTY_NOW=//')
+    TIME_TO_EMPTY=$(awk -F= '/^POWER_SUPPLY_TIME_TO_EMPTY_NOW=/{print $2; exit}' \
+        "${BATTERY_DIR}/uevent" 2>/dev/null)
 
     if [ -n "${TIME_TO_EMPTY}" ] && [ "${TIME_TO_EMPTY}" -gt 0 ]; then
-        BATTREMAINING_HOURS=$(expr ${TIME_TO_EMPTY} / 3600)
-        BATTREMAINING_MINS=$(expr ${TIME_TO_EMPTY} % 3600 / 60)
-        [ ${BATTREMAINING_MINS} -lt 10 ] && BATTREMAINING_MINS=0${BATTREMAINING_MINS}
+        BATTREMAINING_HOURS=$(( TIME_TO_EMPTY / 3600 ))
+        BATTREMAINING_MINS=$(( TIME_TO_EMPTY % 3600 / 60 ))
+        printf -v BATTREMAINING_MINS "%02d" "${BATTREMAINING_MINS}"
         BATTREMAINING=" (${BATTREMAINING_HOURS}:${BATTREMAINING_MINS})"
     else
-        BATTREMAINING_CURRENT=$(cat ${BATTERY_DIR}/current_now 2>/dev/null)
-        BATTREMAINING_CHARGE=$(cat ${BATTERY_DIR}/charge_now 2>/dev/null)
-        if [ -n "${BATTREMAINING_CURRENT}" ] && [ -n "${BATTREMAINING_CHARGE}" ]; then
-            if [ "${BATTREMAINING_CURRENT}" -gt 0 ]; then
-                TIME_TO_EMPTY=$(expr ${BATTREMAINING_CHARGE} \* 3600 / ${BATTREMAINING_CURRENT})
-                BATTREMAINING_HOURS=$(expr ${TIME_TO_EMPTY} / 3600)
-                BATTREMAINING_MINS=$(expr ${TIME_TO_EMPTY} % 3600 / 60)
-                [ ${BATTREMAINING_MINS} -lt 10 ] && BATTREMAINING_MINS=0${BATTREMAINING_MINS}
-                BATTREMAINING=" (${BATTREMAINING_HOURS}:${BATTREMAINING_MINS})"
-            fi
+        BATTREMAINING_CURRENT=$(cat "${BATTERY_DIR}/current_now" 2>/dev/null)
+        BATTREMAINING_CHARGE=$(cat "${BATTERY_DIR}/charge_now" 2>/dev/null)
+        if [ -n "${BATTREMAINING_CURRENT}" ] && [ -n "${BATTREMAINING_CHARGE}" ] \
+           && [ "${BATTREMAINING_CURRENT}" -gt 0 ]; then
+            TIME_TO_EMPTY=$(( BATTREMAINING_CHARGE * 3600 / BATTREMAINING_CURRENT ))
+            BATTREMAINING_HOURS=$(( TIME_TO_EMPTY / 3600 ))
+            BATTREMAINING_MINS=$(( TIME_TO_EMPTY % 3600 / 60 ))
+            printf -v BATTREMAINING_MINS "%02d" "${BATTREMAINING_MINS}"
+            BATTREMAINING=" (${BATTREMAINING_HOURS}:${BATTREMAINING_MINS})"
         fi
     fi
 fi
 
-TEMPE=$(cat /sys/devices/virtual/thermal/thermal_zone*/temp /sys/class/hwmon/hwmon*/temp*_input 2>/dev/null | sort -rn | head -1 | sed -e s+"[0-9][0-9][0-9]$"++)
-V_CPUNB=$(LANG=C getconf -a | grep _NPROCESSORS_ONLN | awk '{print $2}')
-V_CPUMAXNB=$(LANG=C getconf -a | grep _NPROCESSORS_CONF | awk '{print $2}')
-
-### short version (for osd)
+# ---------------------------------------------------------------------------
+# Short mode (for OSD)
+# ---------------------------------------------------------------------------
 if test "$1" = "--short"; then
     DT=$(date +%H:%M)
     if test -n "${BATT}"; then
@@ -71,44 +121,60 @@ if test "$1" = "--short"; then
     else
         echo "${DT}"
     fi
-    if test -n "${TEMPE}"; then
-        echo "Temperature: ${TEMPE}°C"
-    fi
-        echo "CPU Cores: ${V_CPUNB}/${V_CPUMAXNB}"
-    echo "CPU Usage: "$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]"%"
     exit 0
 fi
-###
 
-V_BOARD=$(cat /boot/boot/batocera.board)
-V_CPUNB=$(LC_ALL=C getconf -a | grep _NPROCESSORS_ONLN | awk '{print $2}')
-V_CPUMAXNB=$(LC_ALL=C getconf -a | grep _NPROCESSORS_CONF | awk '{print $2}')
-V_CPUMODEL1=$(grep -E $'^model name\t:' /proc/cpuinfo | head -1 | sed -e s+'^model name\t: '++)
+# ---------------------------------------------------------------------------
+# Board / system basics
+# ---------------------------------------------------------------------------
+V_BOARD=$(cat /boot/boot/batocera.board 2>/dev/null)
 V_SYSTEM=$(uname -rs)
-# min freq : minimum freq among the max cpus ; consider only online cpus
-V_CPUMINFREQ=$(for CPU in /sys/devices/system/cpu/cpu*; do getCpu "${CPU}"; done | sort -n  | head -1)
-V_CPUMAXFREQ=$(for CPU in /sys/devices/system/cpu/cpu*; do getCpu "${CPU}"; done | sort -rn | head -1)
-let V_CPUMINFREQ=${V_CPUMINFREQ}/1000
-let V_CPUMAXFREQ=${V_CPUMAXFREQ}/1000
+V_ARCH=$(uname -m)
 
-V_BOARD_MODEL=$(batocera-model)
+V_BOARD_MODEL=$(batocera-model 2>/dev/null)
 if test -n "${V_BOARD_MODEL}"; then
     echo "Model: ${V_BOARD_MODEL}"
 fi
 
 echo "System: ${V_SYSTEM}"
-V_ARCH=$(uname -m)
 echo "Architecture: ${V_ARCH}"
 if [ "$V_BOARD" != "$V_ARCH" ]; then
     echo "Board: ${V_BOARD}"
 fi
 
+# RPi revision
 if echo "${V_BOARD}" | grep -qE "^rpi[0-9]$"; then
-    REVISION=$(grep -E $'^Revision\t:' /proc/cpuinfo | head -1 | sed -e s+'^Revision\t: '++)
+    REVISION=$(awk -F': ' '/^Revision/{print $2; exit}' /proc/cpuinfo 2>/dev/null)
     test -n "${REVISION}" && echo "Revision: ${REVISION}"
 fi
 
-[[ -z ${V_CPUMODEL1} ]] || echo "CPU Model: ${V_CPUMODEL1}"
+# ---------------------------------------------------------------------------
+# CPU model
+# ---------------------------------------------------------------------------
+V_CPUMODEL1=$(awk -F': ' '/^(model name|Model name|cpu model)/{print $2; exit}' \
+    /proc/cpuinfo 2>/dev/null)
+[[ -z "${V_CPUMODEL1}" ]] || echo "CPU Model: ${V_CPUMODEL1}"
+
+V_CPUMAXNB=$(grep -c '^processor' /proc/cpuinfo 2>/dev/null)
+
+# Count unique physical cores via (physical id, core id) pairs from /proc/cpuinfo
+V_CPUNB=$(awk '/^physical id/{pkg=$NF} /^core id/{print pkg, $NF}' \
+    /proc/cpuinfo 2>/dev/null | sort -u | wc -l)
+
+# big.LITTLE - e.g. both clusters report 0-3, so we use (cluster_id, core_id).
+if [ "${V_CPUNB}" -eq 0 ] 2>/dev/null; then
+    V_CPUNB=$(for cpu in /sys/devices/system/cpu/cpu[0-9]*; do
+        cluster=$(cat "${cpu}/topology/physical_package_id" 2>/dev/null || \
+                  cat "${cpu}/topology/cluster_id" 2>/dev/null || echo 0)
+        core=$(cat "${cpu}/topology/core_id" 2>/dev/null || echo "")
+        [ -n "$core" ] && echo "${cluster}:${core}"
+    done | sort -u | wc -l)
+fi
+
+# Last resort: treat logical == physical
+if [ "${V_CPUNB}" -eq 0 ] 2>/dev/null; then
+    V_CPUNB="${V_CPUMAXNB}"
+fi
 
 if test "${V_CPUMAXNB}" = "${V_CPUNB}"; then
     echo "CPU Cores: ${V_CPUNB}"
@@ -116,22 +182,96 @@ else
     echo "CPU Cores: ${V_CPUNB} / CPU Threads: ${V_CPUMAXNB}"
 fi
 
-if test "${V_CPUMINFREQ}" != "${V_CPUMAXFREQ}"; then
-    echo "CPU Frequency: ${V_CPUMINFREQ}/${V_CPUMAXFREQ} MHz"
+
+declare -A RAW_FREQ_COUNT
+declare -A RAW_FREQ_CAP
+
+for CPU in /sys/devices/system/cpu/cpu[0-9]*; do
+    F=$(getCpu "${CPU}")
+    [ -z "$F" ] && continue
+    CAP=$(cat "${CPU}/cpu_capacity" 2>/dev/null || echo "")
+    RAW_FREQ_COUNT["$F"]=$(( ${RAW_FREQ_COUNT["$F"]:-0} + 1 ))
+    [ -n "$CAP" ] && RAW_FREQ_CAP["$F"]="$CAP"
+done
+
+# Check if cpu_capacity has distinct values (ARM big.LITTLE)
+declare -A CAP_SEEN
+for F in "${!RAW_FREQ_CAP[@]}"; do CAP_SEEN["${RAW_FREQ_CAP[$F]}"]=1; done
+NUM_CAP_TYPES=${#CAP_SEEN[@]}
+
+declare -A CLUSTER_FREQ
+declare -A CLUSTER_COUNT
+
+if [ "${NUM_CAP_TYPES}" -gt 1 ]; then
+    for F in "${!RAW_FREQ_COUNT[@]}"; do
+        CAP="${RAW_FREQ_CAP[$F]}"
+        CLUSTER_COUNT["$CAP"]=$(( ${CLUSTER_COUNT["$CAP"]:-0} + ${RAW_FREQ_COUNT[$F]} ))
+        PREV=${CLUSTER_FREQ["$CAP"]:-0}
+        [ "$F" -gt "$PREV" ] && CLUSTER_FREQ["$CAP"]="$F"
+    done
 else
+    # x86 / generic: merge freq buckets within 15% of the cluster base freq
+    SORTED_FREQS=$(printf '%s\n' "${!RAW_FREQ_COUNT[@]}" | sort -n)
+    CLUSTER_BASE=""
+    CLUSTER_MAX=""
+    CLUSTER_SZ=0
+    CIDX=0
+
+    while IFS= read -r F; do
+        if [ -z "$CLUSTER_BASE" ]; then
+            CLUSTER_BASE="$F"; CLUSTER_MAX="$F"
+            CLUSTER_SZ="${RAW_FREQ_COUNT[$F]}"; CIDX=1
+        else
+            THRESHOLD=$(( CLUSTER_BASE + CLUSTER_BASE * 15 / 100 ))
+            if [ "$F" -le "$THRESHOLD" ]; then
+                CLUSTER_SZ=$(( CLUSTER_SZ + ${RAW_FREQ_COUNT[$F]} ))
+                [ "$F" -gt "$CLUSTER_MAX" ] && CLUSTER_MAX="$F"
+            else
+                CLUSTER_FREQ["c${CIDX}"]="$CLUSTER_MAX"
+                CLUSTER_COUNT["c${CIDX}"]="$CLUSTER_SZ"
+                CIDX=$(( CIDX + 1 ))
+                CLUSTER_BASE="$F"; CLUSTER_MAX="$F"
+                CLUSTER_SZ="${RAW_FREQ_COUNT[$F]}"
+            fi
+        fi
+    done <<< "$SORTED_FREQS"
+    [ -n "$CLUSTER_BASE" ] && CLUSTER_FREQ["c${CIDX}"]="$CLUSTER_MAX" && CLUSTER_COUNT["c${CIDX}"]="$CLUSTER_SZ"
+fi
+
+NUM_CLUSTERS=${#CLUSTER_COUNT[@]}
+
+if [ "${NUM_CLUSTERS}" -gt 1 ]; then
+    CLUSTER_IDX=1
+    for CAP in $(for k in "${!CLUSTER_FREQ[@]}"; do
+                     echo "${CLUSTER_FREQ[$k]} $k"
+                 done | sort -n | awk '{print $2}'); do
+        FREQ_MHZ=$(( CLUSTER_FREQ[$CAP] / 1000 ))
+        COUNT=${CLUSTER_COUNT[$CAP]}
+        echo "CPU Cluster ${CLUSTER_IDX}: ${COUNT} core(s) @ max ${FREQ_MHZ} MHz"
+        CLUSTER_IDX=$(( CLUSTER_IDX + 1 ))
+    done
+elif [ "${NUM_CLUSTERS}" -eq 1 ]; then
+    ONLY_CAP="${!CLUSTER_FREQ[@]}"
+    V_CPUMAXFREQ=$(( CLUSTER_FREQ[$ONLY_CAP] / 1000 ))
     echo "CPU Max Frequency: ${V_CPUMAXFREQ} MHz"
 fi
 
-declare -a check_cpu_features=("avx2" "sse4_1")
+
+# ---------------------------------------------------------------------------
+# CPU feature flags
+# ---------------------------------------------------------------------------
+declare -a check_cpu_features=("avx2" "sse4_1" "neon" "asimd" "sve" "sve2" "vfpv4")
 declare -a cpu_features=()
+CPU_FLAGS_LINE=$(grep -m1 -E '^(flags|Features)\s*:' /proc/cpuinfo 2>/dev/null | \
+                 sed 's/^[^:]*: //')
 for feature in "${check_cpu_features[@]}"; do
-    if grep -q " ${feature}" /proc/cpuinfo; then
+    if echo " ${CPU_FLAGS_LINE} " | grep -qw "${feature}"; then
         cpu_features+=("${feature}")
     fi
 done
 
 if [ "${#cpu_features[@]}" -gt 0 ]; then
-    echo "CPU Features: ${cpu_features[@]}"
+    echo "CPU Features: ${cpu_features[*]}"
 fi
 
 if test "${V_BOARD}" = "x86_64"
@@ -144,162 +284,345 @@ then
     fi
 fi
 
-# TDP
-CPU_TDP=$(/usr/bin/batocera-settings-get system.cpu.tdp)
-if ! [ -z "$CPU_TDP" ]; then
-    MAX_TDP=$(/usr/bin/ryzenadj -i | awk '/PPT LIMIT FAST/ {printf "%.0f\n", $6}')
-    echo "Ryzen Mobile TDP: ${MAX_TDP}W"
+# ---------------------------------------------------------------------------
+# TDP (Ryzen Mobile)
+# ---------------------------------------------------------------------------
+CPU_TDP=$(/usr/bin/batocera-settings-get system.cpu.tdp 2>/dev/null)
+if [ -n "$CPU_TDP" ]; then
+    MAX_TDP=$(/usr/bin/ryzenadj -i 2>/dev/null | \
+              awk '/PPT LIMIT FAST/ {printf "%.0f\n", $6}')
+    [ -n "$MAX_TDP" ] && echo "Ryzen Mobile TDP: ${MAX_TDP}W"
 fi
 
-# temperature
-# Unit: millidegree Celsius
-TEMPE=$(cat /sys/devices/virtual/thermal/thermal_zone*/temp /sys/class/hwmon/hwmon*/temp*_input 2>/dev/null | sort -rn | head -1 | sed -e s+"[0-9][0-9][0-9]$"++)
-if test -n "${TEMPE}"; then
-    echo "Temperature: ${TEMPE}°C"
+# ---------------------------------------------------------------------------
+# Temperature
+# ---------------------------------------------------------------------------
+CPU_TEMP=$(batocera-temp --cpu 2>/dev/null)
+if [ -n "${CPU_TEMP}" ] && [ "${CPU_TEMP}" != "0" ]; then
+    echo "CPU Temperature: $(format_temp "${CPU_TEMP}")"
 fi
 
-MEM_TOTAL_KB=$(head /proc/meminfo | grep -E "^MemTotal:" | sed -e s+"^MemTotal:[ ]*\([0-9]*\) kB$"+"\\1"+)
-MEM_AVAILABLE_KB=$(head /proc/meminfo | grep -E "^MemAvailable:" | sed -e s+"^MemAvailable:[ ]*\([0-9]*\) kB$"+"\\1"+)
-MEM_TOTAL_MB=$(expr "${MEM_TOTAL_KB}" / 1024)
-MEM_AVAILABLE_MB=$(expr "${MEM_AVAILABLE_KB}" / 1024)
+# ---------------------------------------------------------------------------
+# Memory
+# ---------------------------------------------------------------------------
+MEM_TOTAL_KB=$(grep -E "^MemTotal:" /proc/meminfo | awk '{print $2}')
+MEM_AVAILABLE_KB=$(grep -E "^MemAvailable:" /proc/meminfo | awk '{print $2}')
+MEM_TOTAL_MB=$(( MEM_TOTAL_KB / 1024 ))
+MEM_AVAILABLE_MB=$(( MEM_AVAILABLE_KB / 1024 ))
 echo "Available Memory: ${MEM_AVAILABLE_MB}/${MEM_TOTAL_MB} MB"
 
-# Get and display DISPLAY SERVER
+# ---------------------------------------------------------------------------
+# Pre-detect Touchscreens (Only for --full mode)
+# ---------------------------------------------------------------------------
+touch_names=()
+touch_mt=()
+touch_nodes=()
+NUM_TOUCH=0
+
+if [ "${FULL_DISPLAY}" -ne 0 ]; then
+    for ev in /sys/class/input/event*; do
+        [ -e "$ev" ] || continue
+        # Verify if classified as a touchscreen by udev
+        if udevadm info -q property "$ev" 2>/dev/null | grep -q "ID_INPUT_TOUCHSCREEN=1"; then
+            name="Unknown Touchscreen"
+            [ -f "${ev}/device/name" ] && name=$(cat "${ev}/device/name" 2>/dev/null)
+            touch_names+=("${name}")
+            touch_nodes+=("$(basename "${ev}")")
+
+            is_mt="No"
+            if [ -f "${ev}/device/capabilities/abs" ]; then
+                abs_hex=$(cat "${ev}/device/capabilities/abs" 2>/dev/null | tr -d ' ')
+                if [ -n "${abs_hex}" ]; then
+                    # Bit 47 corresponds to ABS_MT_SLOT (0x800000000000 in hex)
+                    if (( (0x${abs_hex} & 0x800000000000) != 0 )) 2>/dev/null; then
+                        is_mt="Yes"
+                    fi
+                fi
+            fi
+            touch_mt+=("${is_mt}")
+        fi
+    done
+    NUM_TOUCH=${#touch_names[@]}
+fi
+
+# ---------------------------------------------------------------------------
+# GPU Info (--full only, bypassed if temp is 0)
+# ---------------------------------------------------------------------------
+if [ "${FULL_DISPLAY}" -ne 0 ]; then
+    GPU_TEMP=$(batocera-temp --gpu 2>/dev/null)
+    if [ -n "${GPU_TEMP}" ] && [ "${GPU_TEMP}" != "0" ]; then
+        GPU_NAME=$(get_gpu_name)
+        if [ -n "${GPU_NAME}" ]; then
+            echo "GPU Name: ${GPU_NAME}"
+        fi
+        echo "GPU Temperature: $(format_temp "${GPU_TEMP}")"
+    fi
+fi
+
+# ---------------------------------------------------------------------------
+# Display server / compositor / outputs
+# ---------------------------------------------------------------------------
 DISPLAY_SERVER=$(batocera-resolution getDisplayMode 2>/dev/null)
-if [ -n "$DISPLAY_SERVER" ]; then
-    echo "Display Server: ${DISPLAY_SERVER}"
-fi
+[ -n "$DISPLAY_SERVER" ] && echo "Display Server: ${DISPLAY_SERVER}"
 
-# Get and display DISPLAY COMPOSITOR
 DISPLAY_COMPOSITOR=$(batocera-resolution getDisplayComp 2>/dev/null)
-if [ -n "$DISPLAY_COMPOSITOR" ]; then
-    echo "Display Compositor: ${DISPLAY_COMPOSITOR}"
-fi
+[ -n "$DISPLAY_COMPOSITOR" ] && echo "Display Compositor: ${DISPLAY_COMPOSITOR}"
 
-# Current Resolution and Refresh Rate for single or multiple displays
-OUTPUTS=$(batocera-resolution listOutputs)
+OUTPUTS=$(batocera-resolution listOutputs 2>/dev/null)
 set -- ${OUTPUTS}
 NUM_OUTPUTS=$#
 
+get_displayrate() {
+    local mode="$1"
+    if [ -n "$WAYLAND_DISPLAY" ]; then
+        echo "${mode}" | awk -F'[x.]' '{printf "%.3f", $3 / 1000}'
+    elif test -f /var/run/drmMode; then
+        echo "${mode}" | awk -F'\\.' '{print $4}'
+    else
+        echo "${mode}" | awk -F'\\.' '{print $2"."$3}'
+    fi
+}
+
 if [ "${NUM_OUTPUTS}" -le 1 ]; then
     echo "Display Output: ${OUTPUTS}"
-    DISPLAYRES=$(batocera-resolution currentResolution)
-    if [ ! -z "$WAYLAND_DISPLAY" ]; then # wayland
-        DISPLAYRATE=$(batocera-resolution currentMode | awk -F'[x.]' '{printf "%.3f", $3 / 1000}')
-    elif test -f /var/run/drmMode; then  # drm
-        DISPLAYRATE=$(batocera-resolution currentMode | awk -F'\\.' '{print $4}')
-    else # xorg
-        DISPLAYRATE=$(batocera-resolution currentMode | awk -F'\\.' '{print $2"."$3}')
-    fi
+    DISPLAYRES=$(batocera-resolution currentResolution 2>/dev/null)
+    DISPLAYRATE=$(get_displayrate "$(batocera-resolution currentMode 2>/dev/null)")
     echo "Display Resolution: ${DISPLAYRES}"
     echo "Display Refresh Rate: ${DISPLAYRATE}Hz"
+
+    # Interleave matching touchscreen output (singular layout if only 1 screen detected)
+    if [ "${FULL_DISPLAY}" -ne 0 ]; then
+        if [ "${NUM_TOUCH}" -eq 1 ]; then
+            echo "Touchscreen: ${touch_names[0]}"
+            if [ "${touch_mt[0]}" = "Yes" ]; then
+                pts=""
+                if command -v python3 >/dev/null 2>&1; then
+                    pts=$(python3 -c "import os, fcntl, struct; fd=os.open('/dev/input/${touch_nodes[0]}', os.O_RDONLY); buf=bytearray(24); fcntl.ioctl(fd, 0x8018456f, buf); print(struct.unpack('i'*6, buf)[2]+1)" 2>/dev/null)
+                fi
+                if [ -n "${pts}" ]; then
+                    echo "Touchscreen Multi-touch: Yes (${pts} touch points)"
+                else
+                    echo "Touchscreen Multi-touch: Yes"
+                fi
+            else
+                echo "Touchscreen Multi-touch: No"
+            fi
+        elif [ "${NUM_TOUCH}" -gt 1 ]; then
+            idx=1
+            for i in "${!touch_names[@]}"; do
+                echo "Touchscreen Output ${idx}: ${touch_names[$i]}"
+                if [ "${touch_mt[$i]}" = "Yes" ]; then
+                    pts=""
+                    if command -v python3 >/dev/null 2>&1; then
+                        pts=$(python3 -c "import os, fcntl, struct; fd=os.open('/dev/input/${touch_nodes[$i]}', os.O_RDONLY); buf=bytearray(24); fcntl.ioctl(fd, 0x8018456f, buf); print(struct.unpack('i'*6, buf)[2]+1)" 2>/dev/null)
+                    fi
+                    if [ -n "${pts}" ]; then
+                        echo "Touchscreen Multi-touch ${idx}: Yes (${pts} touch points)"
+                    else
+                        echo "Touchscreen Multi-touch ${idx}: Yes"
+                    fi
+                else
+                    echo "Touchscreen Multi-touch ${idx}: No"
+                fi
+                idx=$(( idx + 1 ))
+            done
+        fi
+    fi
 else
     i=1
     for output in ${OUTPUTS}; do
+        CURRENT_MODE=$(batocera-resolution --screen "${output}" currentMode 2>/dev/null)
+        # Skip disabled/disconnected outputs
+        case "${CURRENT_MODE}" in
+            "unknown.0"|"unknown"|"") continue ;;
+        esac
+        DISPLAYRES=$(batocera-resolution --screen "${output}" currentResolution 2>/dev/null)
+        DISPLAYRATE=$(get_displayrate "${CURRENT_MODE}")
         echo "Display Output ${i}: ${output}"
-        DISPLAYRES=$(batocera-resolution --screen "${output}" currentResolution)
-        CURRENT_MODE=$(batocera-resolution --screen "${output}" currentMode)
-        if [ ! -z "$WAYLAND_DISPLAY" ]; then # wayland
-            DISPLAYRATE=$(echo "${CURRENT_MODE}" | awk -F'[x.]' '{printf "%.3f", $3 / 1000}')
-        elif test -f /var/run/drmMode; then  # drm
-            DISPLAYRATE=$(echo "${CURRENT_MODE}" | awk -F'\\.' '{print $4}')
-        else # xorg
-            DISPLAYRATE=$(echo "${CURRENT_MODE}" | awk -F'\\.' '{print $2"."$3}')
-        fi
         echo "Display Resolution ${i}: ${DISPLAYRES}"
         echo "Display Refresh Rate ${i}: ${DISPLAYRATE}Hz"
-        i=$((i + 1))
+
+        # Interleave matching touchscreen output for index i
+        if [ "${FULL_DISPLAY}" -ne 0 ]; then
+            t_idx=$(( i - 1 ))
+            if [ -n "${touch_names[$t_idx]}" ]; then
+                echo "Touchscreen Output ${i}: ${touch_names[$t_idx]}"
+                if [ "${touch_mt[$t_idx]}" = "Yes" ]; then
+                    pts=""
+                    if command -v python3 >/dev/null 2>&1; then
+                        pts=$(python3 -c "import os, fcntl, struct; fd=os.open('/dev/input/${touch_nodes[$t_idx]}', os.O_RDONLY); buf=bytearray(24); fcntl.ioctl(fd, 0x8018456f, buf); print(struct.unpack('i'*6, buf)[2]+1)" 2>/dev/null)
+                    fi
+                    if [ -n "${pts}" ]; then
+                        echo "Touchscreen Multi-touch ${i}: Yes (${pts} touch points)"
+                    else
+                        echo "Touchscreen Multi-touch ${i}: Yes"
+                    fi
+                else
+                    echo "Touchscreen Multi-touch ${i}: No"
+                fi
+            fi
+        fi
+
+        i=$(( i + 1 ))
     done
+
+    # Catch-all loop for extra touchscreens if touch count exceeds display count
+    if [ "${FULL_DISPLAY}" -ne 0 ]; then
+        while [ "${i}" -le "${NUM_TOUCH}" ]; do
+            t_idx=$(( i - 1 ))
+            echo "Touchscreen Output ${i}: ${touch_names[$t_idx]}"
+            if [ "${touch_mt[$t_idx]}" = "Yes" ]; then
+                pts=""
+                if command -v python3 >/dev/null 2>&1; then
+                    pts=$(python3 -c "import os, fcntl, struct; fd=os.open('/dev/input/${touch_nodes[$t_idx]}', os.O_RDONLY); buf=bytearray(24); fcntl.ioctl(fd, 0x8018456f, buf); print(struct.unpack('i'*6, buf)[2]+1)" 2>/dev/null)
+                fi
+                if [ -n "${pts}" ]; then
+                    echo "Touchscreen Multi-touch ${i}: Yes (${pts} touch points)"
+                else
+                    echo "Touchscreen Multi-touch ${i}: Yes"
+                fi
+            else
+                echo "Touchscreen Multi-touch ${i}: No"
+            fi
+            i=$(( i + 1 ))
+        done
+    fi
 fi
 
+# ---------------------------------------------------------------------------
+# OpenGL / Vulkan  (--full only)
+# ---------------------------------------------------------------------------
 if [[ "${FULL_DISPLAY}" != 0 ]]; then
-	# OPENGL
-	if test "${V_BOARD}" = "x86" -o "${V_BOARD}" = "x86_64"; then
-	    V_OPENGLVERSION=$(DISPLAY=$(getLocalXDisplay) glxinfo 2>/dev/null | grep -E '^OpenGL core profile version string:' | sed -e s+'^OpenGL core profile version string:[ ]*'++)
-	    if test -z "${V_OPENGLVERSION}"; then
-            V_OPENGLVERSION=$(DISPLAY=$(getLocalXDisplay) glxinfo 2>/dev/null | grep -E '^OpenGL version string:' | sed -e s+'^OpenGL version string:[ ]*'++)
-	    fi
-	    echo "OpenGL Driver Version: ${V_OPENGLVERSION}"
-	fi
+    # OpenGL - x86/x86_64 only via glxinfo
+    if test "${V_BOARD}" = "x86" -o "${V_BOARD}" = "x86_64"; then
+        V_OPENGLVERSION=$(DISPLAY=$(getLocalXDisplay) glxinfo 2>/dev/null | \
+            awk '/^OpenGL core profile version string:/{sub(/^OpenGL core profile version string:[ ]*/,""); print; exit}')
+        if test -z "${V_OPENGLVERSION}"; then
+            V_OPENGLVERSION=$(DISPLAY=$(getLocalXDisplay) glxinfo 2>/dev/null | \
+                awk '/^OpenGL version string:/{sub(/^OpenGL version string:[ ]*/,""); print; exit}')
+        fi
+        echo "OpenGL Driver Version: ${V_OPENGLVERSION}"
+    fi
 
-	# VULKAN
-    if [ "$(batocera-vulkan hasVulkan)" = "true" ]; then
-        if [ "$(batocera-vulkan hasDiscrete)" = "true" ]; then
-            echo "Vulkan Driver Name: $(batocera-vulkan discreteName | tr -d '\n')"
-            discreteIndex=$(batocera-vulkan discreteIndex)
-            apiVersion=$(vulkaninfo | grep -A8 "GPU$discreteIndex" | awk '/apiVersion/ {print $3}')
-            echo "Vulkan Driver Version: $apiVersion"
+    # Vulkan
+    if [ "$(batocera-vulkan hasVulkan 2>/dev/null)" = "true" ]; then
+        echo "Vulkan Supported: Yes"
+
+        if [ "$(batocera-vulkan hasDiscrete 2>/dev/null)" = "true" ]; then
+            echo "Vulkan Uses Discrete GPU: Yes"
         else
-            echo "Vulkan Driver Name: $(batocera-vulkan listDevices | tr -d '\n')"
-            apiVersion=$(vulkaninfo | grep -A8 "GPU0" | awk '/apiVersion/ {print $3}')
-            echo "Vulkan Driver Version: $apiVersion"
+            echo "Vulkan Uses Discrete GPU: No"
+        fi
+
+        apiVersion=$(batocera-vulkan vulkanVersion 2>/dev/null)
+        if [ -n "${apiVersion}" ] && [ "${apiVersion}" != "No Vulkan driver found!" ]; then
+            # Format and clean up raw hex/integer indicators if present (e.g. 0x401066 (1.1.102))
+            if [[ "${apiVersion}" =~ \((.+)\) ]]; then
+                apiVersion="${BASH_REMATCH[1]}"
+            fi
+            echo "Vulkan Driver Version: ${apiVersion}"
+        fi
+    else
+        echo "Vulkan Supported: No"
+    fi
+fi
+
+# ---------------------------------------------------------------------------
+# Storage / userdata
+# ---------------------------------------------------------------------------
+INTERNALDEVICE=$(batocera-part "share" 2>/dev/null)
+INTERNALDEVICETYPE=$(blkid "${INTERNALDEVICE}" 2>/dev/null | \
+    sed -nE 's/.*\bTYPE="([^"]*)".*/\1/p')
+echo "Data Partition Format: ${INTERNALDEVICETYPE}"
+echo "Data Partition Available Space: $(df -h "${INTERNALDEVICE}" 2>/dev/null | \
+    awk 'NR==2 {print $4}')"
+
+# ---------------------------------------------------------------------------
+# Network - IP address (IPv4 then IPv6 fallback)
+# ---------------------------------------------------------------------------
+PREFSRC=$(ip -j route get 1.1.1.1 2>/dev/null | jq -r '.[].prefsrc // empty')
+if [ -z "$PREFSRC" ]; then
+    PREFSRC=$(ip -j route get 1:: 2>/dev/null | jq -r '.[].prefsrc // empty')
+fi
+[ -n "$PREFSRC" ] && echo "Network IP Address: $PREFSRC"
+
+# ---------------------------------------------------------------------------
+# MAC address (--full only)
+# ---------------------------------------------------------------------------
+if [[ "${FULL_DISPLAY}" != 0 ]]; then
+    IFACE=$(ip -j route get 1.1.1.1 2>/dev/null | jq -r '.[].dev // empty')
+    if [ -n "${IFACE}" ]; then
+        MACADDR=$(cat "/sys/class/net/${IFACE}/address" 2>/dev/null | tr ':' '-')
+        [ -n "${MACADDR}" ] && echo "Corresponding MAC Address: ${MACADDR}"
+    fi
+fi
+
+# ---------------------------------------------------------------------------
+# Boot / UEFI / Secure Boot (--full only)
+# ---------------------------------------------------------------------------
+if [[ "${FULL_DISPLAY}" != 0 ]]; then
+    if [ -d /sys/firmware/efi ]; then
+        echo "UEFI Boot: Yes"
+        if [ -x /usr/bin/mokutil ]; then
+            echo "Secure Boot: $(mokutil --sb-state 2>&1 | \
+                sed 's/^SecureBoot validation is//' | paste -sd ';')"
+        fi
+    else
+        echo "UEFI Boot: No"
+    fi
+fi
+
+# ---------------------------------------------------------------------------
+# Battery level
+# ---------------------------------------------------------------------------
+if test -n "${BATT}"; then
+    echo "Battery: ${BATT}%${BATTREMAINING}"
+fi
+
+# ---------------------------------------------------------------------------
+# Battery health - iterate all BAT* devices, handle energy_full and charge_full
+# ---------------------------------------------------------------------------
+for BAT_PATH in /sys/class/power_supply/BAT* /sys/class/power_supply/bat*; do
+    [ -e "${BAT_PATH}" ] || continue
+    BAT_NAME=$(basename "${BAT_PATH}")
+
+    # Prefer energy (uWh), fall back to charge (uAh) - ratio is the same either way
+    if [ -e "${BAT_PATH}/energy_full_design" ] && [ -e "${BAT_PATH}/energy_full" ]; then
+        FULL_DESIGN=$(cat "${BAT_PATH}/energy_full_design" 2>/dev/null)
+        FULL_NOW=$(cat "${BAT_PATH}/energy_full" 2>/dev/null)
+    elif [ -e "${BAT_PATH}/charge_full_design" ] && [ -e "${BAT_PATH}/charge_full" ]; then
+        FULL_DESIGN=$(cat "${BAT_PATH}/charge_full_design" 2>/dev/null)
+        FULL_NOW=$(cat "${BAT_PATH}/charge_full" 2>/dev/null)
+    else
+        continue
+    fi
+
+    if [ -n "${FULL_DESIGN}" ] && [ "${FULL_DESIGN}" -gt 0 ] 2>/dev/null; then
+        battery_health=$(awk -v cur="${FULL_NOW}" -v des="${FULL_DESIGN}" \
+            'BEGIN { h = cur/des*100; if(h>100) h=100; printf "%.0f", h }')
+        BAT_COUNT=$(ls -d /sys/class/power_supply/{BAT,bat}* 2>/dev/null | wc -l)
+        if [ "${BAT_COUNT}" -gt 1 ]; then
+            echo "Battery Health (${BAT_NAME}): ${battery_health}%"
+        else
+            echo "Battery Health: ${battery_health}%"
         fi
     fi
-fi
+done
 
-# userdata type
-INTERNALDEVICE=$(batocera-part "share")
-INTERNALDEVICETYPE=$(blkid "${INTERNALDEVICE}" | sed -e s+'^.* TYPE="\([^"]*\)\".*'+'\1'+)
-echo "Data Partition Format: ${INTERNALDEVICETYPE}"
-echo "Data Partition Available Space: $(df -h ${INTERNALDEVICE} | awk '/\/userdata$/ {print $4}')"
-
-PREFSRC=$(ip -j route get 1.1.1.1 2>/dev/null | jq -r '.[].prefsrc')
-if [ -n "$PREFSRC" ]; then
-    echo "Network IP Address: $PREFSRC"
-else
-    PREFSRC=$(ip -j route get 1:: 2>/dev/null | jq -r '.[].prefsrc')
-    if [ -n "$PREFSRC" ]; then
-        echo "Network IP Address: $PREFSRC"
+# ---------------------------------------------------------------------------
+# Battery Temperature (--full only, bypassed if 0)
+# ---------------------------------------------------------------------------
+if [ "${FULL_DISPLAY}" -ne 0 ]; then
+    BATT_TEMP=$(batocera-temp --battery 2>/dev/null)
+    if [ -n "${BATT_TEMP}" ] && [ "${BATT_TEMP}" != "0" ]; then
+        echo "Battery Temperature: $(format_temp "${BATT_TEMP}")"
     fi
 fi
 
-if [[ "${FULL_DISPLAY}" != 0 ]]; then
-	MACADDR=$(ip a | grep -b1 "$PREFSRC" | awk '/link\/ether/ {print $3}' | sed 's/:/-/g')
-	if [ -n "$MACADDR" ]; then
-		echo "Corresponding MAC Address: $MACADDR"
-	fi
-fi
-
-# Boot information
-if [[ "${FULL_DISPLAY}" != 0 ]]; then
-	if [ -d /sys/firmware/efi ]; then
-		echo "UEFI Boot: Yes"
-		if [ -x /usr/bin/mokutil ]; then
-			echo "Secure Boot: $(mokutil --sb-state 2>&1 | sed 's/^SecureBoot validation is//' | paste -sd ';')"
-		fi
-	else
-		echo "UEFI Boot: No"
-	fi
-fi
-
-# battery
-if test -n "${BATT}"; then
-    echo "Battery: ${BATT}%"
-fi
-
-# battery health
-design_energy_file="/sys/class/power_supply/BAT0/energy_full_design"
-current_energy_file="/sys/class/power_supply/BAT0/energy_full"
-
-if [ -e "$design_energy_file" ]; then
-    design_energy=$(cat "$design_energy_file")
-    current_energy=$(cat "$current_energy_file")
-
-    battery_health=$(awk "BEGIN {
-        health = ($current_energy / $design_energy) * 100;
-        if (health > 100)
-            health = 100;
-        printf \"%.0f\", health
-    }")
-
-    if [ ! -z "$battery_health" ]; then
-        echo "Battery Health: $battery_health%"
-    fi
-fi
-
-# PAD Battery
-for PADBAT in /sys/class/power_supply/*/device/uevent
-do
+# ---------------------------------------------------------------------------
+# PAD / controller battery levels
+# ---------------------------------------------------------------------------
+for PADBAT in /sys/class/power_supply/*/device/uevent; do
     if test -e "${PADBAT}"; then
         # HID devices only
         PADNAME=$(sed -nE 's/^HID_NAME=(.*)/\1/p' "${PADBAT}")
@@ -309,7 +632,7 @@ do
             # parent of parent / uevent
             BATTUEVENT=$(dirname "${PADBAT}")
             BATTUEVENT=$(dirname "${BATTUEVENT}")/uevent
-            BATT="$(batocera-padsinfo "${BATTUEVENT}")"
+            BATT="$(batocera-padsinfo "${BATTUEVENT}" 2>/dev/null)"
             echo "${PADNAME}: ${BATT}%"
         fi
     fi

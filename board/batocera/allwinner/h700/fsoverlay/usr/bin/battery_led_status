@@ -95,7 +95,7 @@ while true; do
   STATE=$(get_state "${CAP}")
 
   if [ "${ONLINE}" = "1" ]; then
-    # Charging — slow blinking green
+    # Charging - slow blinking green
     STATE="blink_green"
   fi
 

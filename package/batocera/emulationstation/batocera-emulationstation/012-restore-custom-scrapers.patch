@@ -1,0 +1,2856 @@
+diff --git a/es-app/CMakeLists.txt b/es-app/CMakeLists.txt
+index caaf9c641..6acb1bc59 100644
+--- a/es-app/CMakeLists.txt
++++ b/es-app/CMakeLists.txt
+@@ -112,6 +112,12 @@ set(ES_HEADERS
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/ArcadeDBJSONScraper.h
+ 	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/HfsDBScraper.h
+ 	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/IGDBScraper.h
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/HowLongToBeatScraper.h
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/ProtonDBScraper.h
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/PCGamingWikiScraper.h
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/LocalLauncherMetadataScraper.h
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/MixedScraper.h
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/SteamGridDBScraper.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/ScreenScraper.h    
+ 
+     # Views
+@@ -217,6 +223,12 @@ set(ES_SOURCES
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/ArcadeDBJSONScraper.cpp
+ 	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/HfsDBScraper.cpp
+ 	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/IGDBScraper.cpp
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/HowLongToBeatScraper.cpp
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/ProtonDBScraper.cpp
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/PCGamingWikiScraper.cpp
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/LocalLauncherMetadataScraper.cpp
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/MixedScraper.cpp
++	${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/SteamGridDBScraper.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/scrapers/ScreenScraper.cpp	
+ 
+     # Views
+diff --git a/es-app/src/FileData.cpp b/es-app/src/FileData.cpp
+index f9842f6fe..5955401f5 100644
+--- a/es-app/src/FileData.cpp
++++ b/es-app/src/FileData.cpp
+@@ -37,6 +37,99 @@
+ 
+ using namespace Utils::Platform;
+ 
++static std::string formatSeconds(const std::string& value)
++{
++	auto seconds = atol(value.c_str());
++	if (seconds <= 0)
++		return "";
++
++	return Utils::Time::secondsToString(seconds);
++}
++
++static std::string formatHltbProgress(FileData* file)
++{
++	if (file == nullptr)
++		return "";
++
++	auto played = atol(file->getMetadata(MetaDataId::GameTime).c_str());
++	auto target = atol(file->getMetadata(MetaDataId::HltbMainTime).c_str());
++	if (target <= 0)
++		target = atol(file->getMetadata(MetaDataId::HltbExtraTime).c_str());
++	if (target <= 0 || played <= 0)
++		return "";
++
++	long percent = (played * 100 + target / 2) / target;
++	if (percent > 999)
++		percent = 999;
++
++	return formatSeconds(file->getMetadata(MetaDataId::GameTime)) + " / " + Utils::Time::secondsToString(target) + " (" + std::to_string(percent) + "%)";
++}
++
++static std::string formatHltbSummary(FileData* file)
++{
++	if (file == nullptr)
++		return "";
++
++	std::vector<std::string> parts;
++	auto main = formatSeconds(file->getMetadata(MetaDataId::HltbMainTime));
++	auto extra = formatSeconds(file->getMetadata(MetaDataId::HltbExtraTime));
++	auto completionist = formatSeconds(file->getMetadata(MetaDataId::HltbCompletionistTime));
++
++	if (!main.empty())
++		parts.push_back(_("Main") + " " + main);
++	if (!extra.empty())
++		parts.push_back(_("Extra") + " " + extra);
++	if (!completionist.empty())
++		parts.push_back(_("100%") + " " + completionist);
++
++	return Utils::String::join(parts, " / ");
++}
++
++static std::string formatProtonDBSummary(FileData* file)
++{
++	if (file == nullptr)
++		return "";
++
++	auto tier = file->getMetadata(MetaDataId::ProtonDBTier);
++	if (tier.empty())
++		return "";
++
++	auto confidence = file->getMetadata(MetaDataId::ProtonDBConfidence);
++	auto total = file->getMetadata(MetaDataId::ProtonDBTotal);
++	auto summary = Utils::String::proper(tier);
++
++	if (!confidence.empty())
++		summary += " / " + confidence;
++	if (!total.empty() && Utils::String::toInteger(total) > 0)
++		summary += " (" + total + ")";
++
++	return summary;
++}
++
++static std::string formatLauncherSummary(FileData* file)
++{
++	if (file == nullptr)
++		return "";
++
++	auto store = file->getMetadata(MetaDataId::LauncherStore);
++	auto source = file->getMetadata(MetaDataId::LauncherSource);
++	auto runner = file->getMetadata(MetaDataId::LauncherRunner);
++	auto id = file->getMetadata(MetaDataId::LauncherId);
++
++	std::string summary;
++	if (!store.empty())
++		summary = store;
++	else
++		summary = source;
++
++	if (!runner.empty())
++		summary += summary.empty() ? runner : " / " + runner;
++	if (!id.empty())
++		summary += summary.empty() ? id : " (" + id + ")";
++
++	return summary;
++}
++
+ static std::map<std::string, std::function<BindableProperty(FileData*)>> properties =
+ {
+ 	{ "name",				[](FileData* file) { return file->getName(); } },
+@@ -57,6 +150,21 @@ static std::map<std::string, std::function<BindableProperty(FileData*)>> propert
+ 	{ "cheevos",			[](FileData* file) { return file->hasCheevos(); } },
+ 	{ "genre",			    [](FileData* file) { return file->getGenre(); } },
+ 	{ "hasKeyboardMapping", [](FileData* file) { return file->hasKeyboardMapping(); } },	
++	{ "gameTime",			[](FileData* file) { return formatSeconds(file->getMetadata(MetaDataId::GameTime)); } },
++	{ "hltbMain",			[](FileData* file) { return formatSeconds(file->getMetadata(MetaDataId::HltbMainTime)); } },
++	{ "hltbExtra",			[](FileData* file) { return formatSeconds(file->getMetadata(MetaDataId::HltbExtraTime)); } },
++	{ "hltbCompletionist",	[](FileData* file) { return formatSeconds(file->getMetadata(MetaDataId::HltbCompletionistTime)); } },
++	{ "hltbAllStyles",		[](FileData* file) { return formatSeconds(file->getMetadata(MetaDataId::HltbAllStylesTime)); } },
++	{ "hltbSummary",		[](FileData* file) { return formatHltbSummary(file); } },
++	{ "hltbProgress",		[](FileData* file) { return formatHltbProgress(file); } },
++	{ "steamAppId",			[](FileData* file) { return file->getMetadata(MetaDataId::SteamAppId); } },
++	{ "protondbTier",		[](FileData* file) { return file->getMetadata(MetaDataId::ProtonDBTier); } },
++	{ "protondbSummary",	[](FileData* file) { return formatProtonDBSummary(file); } },
++	{ "pcgamingwikiPage",	[](FileData* file) { return file->getMetadata(MetaDataId::PCGamingWikiPage); } },
++	{ "pcgamingwikiUrl",	[](FileData* file) { return file->getMetadata(MetaDataId::PCGamingWikiUrl); } },
++	{ "launcherSummary",	[](FileData* file) { return formatLauncherSummary(file); } },
++	{ "launcherStore",		[](FileData* file) { return file->getMetadata(MetaDataId::LauncherStore); } },
++	{ "launcherInstallPath", [](FileData* file) { return file->getMetadata(MetaDataId::LauncherInstallPath); } },
+ 	{ "systemName",			[](FileData* file) { return file->getSourceFileData()->getSystem()->getFullName(); } },
+ 	{ "fullName",			[](FileData* file) { return GameNameFormatter(file->getSystem()).getDisplayName(file); } },
+ 	{ "fullNameNoFavorite",	[](FileData* file) { return GameNameFormatter(file->getSystem()).getDisplayName(file, false, false); } },
+diff --git a/es-app/src/MetaData.cpp b/es-app/src/MetaData.cpp
+index 8c5de352a..36e7a3a27 100644
+--- a/es-app/src/MetaData.cpp
++++ b/es-app/src/MetaData.cpp
+@@ -22,7 +22,12 @@ static std::map<std::string, int> KnowScrapersIds =
+ 	{ "ScreenScraper", 0 },
+ 	{ "TheGamesDB", 1 },
+ 	{ "HfsDB", 2 },
+-	{ "ArcadeDB", 3 }
++	{ "ArcadeDB", 3 },
++	{ "SteamGridDB", 4 },
++	{ "HowLongToBeat", 5 },
++	{ "ProtonDB", 6 },
++	{ "PCGamingWiki", 7 },
++	{ "LocalLaunchers", 8 }
+ };
+ 
+ void MetaDataList::initMetadata()
+@@ -89,6 +94,36 @@ void MetaDataList::initMetadata()
+ 		{ Md5,              "md5",		   MD_STRING,              "",                 true,       _("Md5"),                  _("Md5 checksum"),			false },
+ 
+ 		{ GameTime,         "gametime",    MD_INT,                 "0",                true,       _("Game time"),            _("how long the game has been played in total (seconds)"), false },
++		{ HltbId,           "hltbid",      MD_INT,                 "",                 false,      _("HowLongToBeat ID"),     _("HowLongToBeat game ID"), false },
++		{ HltbMainTime,     "hltbmain",    MD_INT,                 "0",                false,      _("HLTB main story"),      _("HowLongToBeat main story time (seconds)"), false },
++		{ HltbExtraTime,    "hltbextra",   MD_INT,                 "0",                false,      _("HLTB main + extra"),    _("HowLongToBeat main plus extra time (seconds)"), false },
++		{ HltbCompletionistTime, "hltbcompletionist", MD_INT,      "0",                false,      _("HLTB completionist"),   _("HowLongToBeat completionist time (seconds)"), false },
++		{ HltbAllStylesTime, "hltballstyles", MD_INT,              "0",                false,      _("HLTB all styles"),      _("HowLongToBeat all styles time (seconds)"), false },
++		{ HltbUrl,          "hltburl",     MD_STRING,              "",                 false,      _("HowLongToBeat URL"),    _("HowLongToBeat game page"), false },
++		{ SteamAppId,       "steamappid",  MD_INT,                 "",                 false,      _("Steam AppID"),          _("Steam application ID"), false },
++		{ ProtonDBTier,     "protondbtier", MD_STRING,             "",                 false,      _("ProtonDB tier"),        _("ProtonDB compatibility tier"), false },
++		{ ProtonDBConfidence, "protondbconfidence", MD_STRING,     "",                 false,      _("ProtonDB confidence"),  _("ProtonDB confidence"), false },
++		{ ProtonDBScore,    "protondbscore", MD_FLOAT,             "",                 false,      _("ProtonDB score"),       _("ProtonDB score"), false },
++		{ ProtonDBTotal,    "protondbtotal", MD_INT,               "",                 false,      _("ProtonDB reports"),     _("ProtonDB report count"), false },
++		{ ProtonDBTrendingTier, "protondbtrending", MD_STRING,     "",                 false,      _("ProtonDB trending"),    _("ProtonDB trending tier"), false },
++		{ ProtonDBUrl,      "protondburl", MD_STRING,              "",                 false,      _("ProtonDB URL"),         _("ProtonDB game page"), false },
++		{ PCGamingWikiPage, "pcgwpage",    MD_STRING,              "",                 false,      _("PCGamingWiki page"),    _("PCGamingWiki page"), false },
++		{ PCGamingWikiPageId, "pcgwpageid", MD_INT,                "",                 false,      _("PCGamingWiki page ID"), _("PCGamingWiki page ID"), false },
++		{ PCGamingWikiUrl,  "pcgwurl",     MD_STRING,              "",                 false,      _("PCGamingWiki URL"),     _("PCGamingWiki game page"), false },
++		{ PCGamingWikiDevelopers, "pcgwdevelopers", MD_STRING,     "",                 false,      _("PCGamingWiki developers"), _("PCGamingWiki developers"), false },
++		{ PCGamingWikiPublishers, "pcgwpublishers", MD_STRING,     "",                 false,      _("PCGamingWiki publishers"), _("PCGamingWiki publishers"), false },
++		{ LauncherSource,   "launchersource", MD_STRING,           "",                 false,      _("Launcher source"),      _("external launcher source"), false },
++		{ LauncherStore,    "launcherstore", MD_STRING,            "",                 false,      _("Launcher store"),       _("external launcher store"), false },
++		{ LauncherId,       "launcherid",  MD_STRING,              "",                 false,      _("Launcher ID"),          _("external launcher game ID"), false },
++		{ LauncherInstallPath, "launcherinstallpath", MD_STRING,    "",                 false,      _("Launcher install path"), _("external launcher install path"), false },
++		{ LauncherExecutable, "launcherexecutable", MD_STRING,     "",                 false,      _("Launcher executable"),  _("external launcher executable"), false },
++		{ LauncherRunner,   "launcherrunner", MD_STRING,           "",                 false,      _("Launcher runner"),      _("external launcher runner"), false },
++		{ LauncherWinePrefix, "launcherwineprefix", MD_STRING,     "",                 false,      _("Launcher Wine prefix"), _("external launcher Wine prefix"), false },
++		{ LauncherWineVersion, "launcherwineversion", MD_STRING,   "",                 false,      _("Launcher Wine version"), _("external launcher Wine version"), false },
++		{ LauncherStoreUrl, "launcherstoreurl", MD_STRING,         "",                 false,      _("Launcher store URL"),   _("external launcher store URL"), false },
++		{ LauncherCloudSave, "launchercloudsave", MD_STRING,       "",                 false,      _("Launcher cloud save"),  _("external launcher cloud save path"), false },
++		{ EpicNamespace,    "epicnamespace", MD_STRING,            "",                 false,      _("Epic namespace"),       _("Epic namespace"), false },
++		{ GogId,            "gogid",       MD_STRING,              "",                 false,      _("GOG ID"),               _("GOG game ID"), false },
+ 
+ 		{ Language,         "lang",        MD_STRING,              "",                 false,      _("Languages"),            _("this game's languages"),				false },
+ 		{ Region,           "region",      MD_STRING,              "",                 false,      _("Region"),               _("this game's region"),					false },
+@@ -533,6 +568,33 @@ void MetaDataList::importScrappedMetadata(const MetaDataList& source)
+ 		if (mdd.id == MetaDataId::Favorite || mdd.id == MetaDataId::Hidden || mdd.id == MetaDataId::Emulator || mdd.id == MetaDataId::Core)
+ 			continue;
+ 
++		if (mdd.id == MetaDataId::SteamAppId || mdd.id == MetaDataId::HltbId || mdd.id == MetaDataId::HltbMainTime || mdd.id == MetaDataId::HltbExtraTime ||
++			mdd.id == MetaDataId::HltbCompletionistTime || mdd.id == MetaDataId::HltbAllStylesTime)
++		{
++			if (Utils::String::toInteger(source.get(mdd.id)) <= 0)
++				continue;
++		}
++
++		if (mdd.id == MetaDataId::HltbUrl && source.get(mdd.id).empty())
++			continue;
++
++		if ((mdd.id == MetaDataId::ProtonDBTier || mdd.id == MetaDataId::ProtonDBConfidence || mdd.id == MetaDataId::ProtonDBScore ||
++			mdd.id == MetaDataId::ProtonDBTotal || mdd.id == MetaDataId::ProtonDBTrendingTier || mdd.id == MetaDataId::ProtonDBUrl) &&
++			source.get(mdd.id).empty())
++			continue;
++
++		if ((mdd.id == MetaDataId::PCGamingWikiPage || mdd.id == MetaDataId::PCGamingWikiPageId || mdd.id == MetaDataId::PCGamingWikiUrl ||
++			mdd.id == MetaDataId::PCGamingWikiDevelopers || mdd.id == MetaDataId::PCGamingWikiPublishers) &&
++			source.get(mdd.id).empty())
++			continue;
++
++		if ((mdd.id == MetaDataId::LauncherSource || mdd.id == MetaDataId::LauncherStore || mdd.id == MetaDataId::LauncherId ||
++			mdd.id == MetaDataId::LauncherInstallPath || mdd.id == MetaDataId::LauncherExecutable || mdd.id == MetaDataId::LauncherRunner ||
++			mdd.id == MetaDataId::LauncherWinePrefix || mdd.id == MetaDataId::LauncherWineVersion || mdd.id == MetaDataId::LauncherStoreUrl ||
++			mdd.id == MetaDataId::LauncherCloudSave || mdd.id == MetaDataId::EpicNamespace || mdd.id == MetaDataId::GogId) &&
++			source.get(mdd.id).empty())
++			continue;
++
+ 		if (mdd.id == MetaDataId::Image && (source.get(mdd.id).empty() || (type & MetaDataImportType::Types::IMAGE) != MetaDataImportType::Types::IMAGE))
+ 			continue;		
+ 
+diff --git a/es-app/src/MetaData.h b/es-app/src/MetaData.h
+index 056f827c9..1200f8260 100644
+--- a/es-app/src/MetaData.h
++++ b/es-app/src/MetaData.h
+@@ -78,6 +78,36 @@ enum MetaDataId
+ 	Bezel = 41,
+ 	Tags = 42,
+ 	MultiDisk = 43,
++	HltbId = 44,
++	HltbMainTime = 45,
++	HltbExtraTime = 46,
++	HltbCompletionistTime = 47,
++	HltbAllStylesTime = 48,
++	HltbUrl = 49,
++	SteamAppId = 50,
++	ProtonDBTier = 51,
++	ProtonDBConfidence = 52,
++	ProtonDBScore = 53,
++	ProtonDBTotal = 54,
++	ProtonDBTrendingTier = 55,
++	ProtonDBUrl = 56,
++	PCGamingWikiPage = 57,
++	PCGamingWikiPageId = 58,
++	PCGamingWikiUrl = 59,
++	PCGamingWikiDevelopers = 60,
++	PCGamingWikiPublishers = 61,
++	LauncherSource = 62,
++	LauncherStore = 63,
++	LauncherId = 64,
++	LauncherInstallPath = 65,
++	LauncherExecutable = 66,
++	LauncherRunner = 67,
++	LauncherWinePrefix = 68,
++	LauncherWineVersion = 69,
++	LauncherStoreUrl = 70,
++	LauncherCloudSave = 71,
++	EpicNamespace = 72,
++	GogId = 73,
+ 
+ 	// Important : Control value
+ 	MetaDataIdCount
+diff --git a/es-app/src/components/ScraperSearchComponent.cpp b/es-app/src/components/ScraperSearchComponent.cpp
+index 280412b66..89640e4f3 100644
+--- a/es-app/src/components/ScraperSearchComponent.cpp
++++ b/es-app/src/components/ScraperSearchComponent.cpp
+@@ -18,6 +18,14 @@
+ #include "components/MultiLineMenuEntry.h"
+ #include <thread>
+ 
++namespace
++{
++	std::string getScraperResultDisplayName(const ScraperSearchResult& result)
++	{
++		return result.displayName.empty() ? result.mdl.get(MetaDataId::Name) : result.displayName;
++	}
++}
++
+ ScraperSearchComponent::ScraperSearchComponent(Window* window) : GuiComponent(window),
+ 	mGrid(window, Vector2i(5, 5)), mBusyAnim(window)
+ {
+@@ -286,6 +294,9 @@ void ScraperSearchComponent::search(const ScraperSearchParams& params)
+ 
+ 	for (auto scraperName : Scraper::getScraperList())
+ 	{
++		if (scraperName == "Mixed")
++			continue;
++
+ 		auto scraper = Scraper::getScraper(scraperName);
+ 		if (scraper == nullptr || !scraper->isSupportedPlatform(params.system))
+ 			continue;
+@@ -438,7 +449,7 @@ void ScraperSearchComponent::onSearchDone(bool isReallyFinished)
+ 					icons += _U(" \uF07E");
+ 
+ 				row.elements.clear();
+-				row.addElement(std::make_shared<TextComponent>(mWindow, result.mdl.get(MetaDataId::Name) + " " + icons, font, color), true);					
++				row.addElement(std::make_shared<TextComponent>(mWindow, getScraperResultDisplayName(result) + " " + icons, font, color), true);
+ 				row.makeAcceptInputHandler([this, result] { returnResult(result); });
+ 
+ 				mResultList->addRow(row, false, true, std::to_string(i));
+@@ -500,7 +511,7 @@ void ScraperSearchComponent::updateInfoPane()
+ 	if (i != -1 && (int)allResults.size() > i)
+ 	{
+ 		ScraperSearchResult& res = allResults.at(i).second;
+-		mResultName->setText(res.mdl.get(MetaDataId::Name));
++		mResultName->setText(getScraperResultDisplayName(res));
+ 		mResultDesc->setText(res.mdl.get(MetaDataId::Desc));
+ 
+ 		mResultThumbnail->setImage("");
+diff --git a/es-app/src/guis/GuiScraperStart.cpp b/es-app/src/guis/GuiScraperStart.cpp
+index 1a5d63f04..10722d834 100644
+--- a/es-app/src/guis/GuiScraperStart.cpp
++++ b/es-app/src/guis/GuiScraperStart.cpp
+@@ -81,8 +81,9 @@ void GuiScraperStart::loadScrapPage()
+ 
+ 	// Media Filter
+ 	mFilters = std::make_shared< OptionListComponent<FilterFunc> >(mWindow, _("GAMES TO SCRAPE FOR"), false);
+-	mFilters->add(_("ALL"), [](FileData*) -> bool { return true; }, false);
+-	mFilters->add(_("GAMES MISSING ANY MEDIA"), [this, scraper](FileData* g) -> bool { mOverwriteMedias = false; return scraper->hasMissingMedia(g); }, true);
++	bool metadataOnlyScraper = scraper->getSupportedMedias().empty();
++	mFilters->add(_("ALL"), [](FileData*) -> bool { return true; }, metadataOnlyScraper);
++	mFilters->add(_("GAMES MISSING ANY MEDIA"), [this, scraper](FileData* g) -> bool { mOverwriteMedias = false; return scraper->hasMissingMedia(g); }, !metadataOnlyScraper);
+ 	mFilters->add(_("GAMES MISSING ALL MEDIA"), [this, scraper](FileData* g) -> bool { mOverwriteMedias = true; return !scraper->hasAnyMedia(g); }, false);
+ 	addWithLabel(_("GAMES TO SCRAPE FOR"), mFilters);
+ 
+@@ -275,6 +276,18 @@ void GuiScraperStart::loadSettingsPage()
+ 	addSwitch(_("OVERWRITE DESCRIPTIONS"), "ScrapeDescription", true);
+ 	addSwitch(_("OVERWRITE MEDIAS"), "ScrapeOverWrite", true);
+ 
++	if (scraper == "Mixed")
++	{
++		if (Settings::getInstance()->getString("MixedScraperMetadataPriority").empty())
++			Settings::getInstance()->setString("MixedScraperMetadataPriority", "LocalLaunchers;ScreenScraper;HfsDB;IGDB;HowLongToBeat;ProtonDB;PCGamingWiki;ArcadeDB;TheGamesDB");
++		if (Settings::getInstance()->getString("MixedScraperMediaPriority").empty())
++			Settings::getInstance()->setString("MixedScraperMediaPriority", "SteamGridDB;ScreenScraper;HfsDB;ArcadeDB;IGDB;TheGamesDB");
++
++		addGroup(_("MIXED SCRAPER PRIORITY"));
++		addInputTextConfigRow(_("METADATA PRIORITY"), "MixedScraperMetadataPriority", false, true);
++		addInputTextConfigRow(_("MEDIA PRIORITY"), "MixedScraperMediaPriority", false, true);
++	}
++
+ 	addGroup(_("SCRAPE FOR"));
+ 
+ 	if (scrap->isMediaSupported(Scraper::ScraperMediaSource::ShortTitle))
+@@ -347,6 +360,10 @@ void GuiScraperStart::loadAccountsPage()
+ 	addGroup(_("IGDB"));
+ 	addInputTextConfigRow(_("CLIENT ID"), "IGDBClientID", false, true);
+ 	addInputTextConfigRow(_("CLIENT SECRET"), "IGDBSecret", true, true);
++
++	addGroup(_("STEAMGRIDDB"));
++	addInputTextConfigRow(_("API KEY"), "steamgriddb.api_key", true);
++	addWithDescription(_("API KEY FILE"), _("Optional fallback: put the SteamGridDB API key in /userdata/system/configs/emulationstation/steamgriddb.key."), nullptr);
+ }
+ 
+ void GuiScraperStart::pressedStart()
+diff --git a/es-app/src/scrapers/HowLongToBeatScraper.cpp b/es-app/src/scrapers/HowLongToBeatScraper.cpp
+new file mode 100644
+index 000000000..3e99d9d29
+--- /dev/null
++++ b/es-app/src/scrapers/HowLongToBeatScraper.cpp
+@@ -0,0 +1,279 @@
++#include "scrapers/HowLongToBeatScraper.h"
++
++#include "FileData.h"
++#include "Log.h"
++#include "SystemData.h"
++#include "utils/FileSystemUtil.h"
++#include "utils/StringUtil.h"
++
++#include <chrono>
++#include <memory>
++#include <rapidjson/document.h>
++#include <rapidjson/error/en.h>
++#include <rapidjson/stringbuffer.h>
++#include <rapidjson/writer.h>
++
++using namespace rapidjson;
++
++namespace
++{
++	const std::string HLTB_BASE_URL = "https://howlongtobeat.com";
++
++	std::string getCleanGameName(const ScraperSearchParams& params)
++	{
++		auto cleanName = params.nameOverride;
++		if (cleanName.empty())
++			cleanName = Utils::String::removeParenthesis(Utils::FileSystem::getStem(params.game->getPath()));
++
++		return Utils::String::trim(cleanName);
++	}
++
++	std::string getTimestamp()
++	{
++		auto now = std::chrono::system_clock::now().time_since_epoch();
++		return std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(now).count());
++	}
++
++	HttpReqOptions getBaseOptions()
++	{
++		HttpReqOptions options;
++		options.userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36";
++		options.customHeaders.push_back("Accept: application/json");
++		options.customHeaders.push_back("Referer: " + HLTB_BASE_URL + "/");
++		return options;
++	}
++
++	int getIntMember(const Value& value, const char* key)
++	{
++		if (!value.IsObject() || !value.HasMember(key))
++			return 0;
++
++		const Value& member = value[key];
++		if (member.IsInt())
++			return member.GetInt();
++		if (member.IsString())
++			return Utils::String::toInteger(member.GetString());
++
++		return 0;
++	}
++
++	std::string getStringMember(const Value& value, const char* key)
++	{
++		if (!value.IsObject() || !value.HasMember(key) || !value[key].IsString())
++			return "";
++
++		return value[key].GetString();
++	}
++}
++
++void HowLongToBeatScraper::generateRequests(const ScraperSearchParams& params,
++	std::queue<std::unique_ptr<ScraperRequest>>& requests,
++	std::vector<ScraperSearchResult>& results)
++{
++	auto cleanName = getCleanGameName(params);
++	if (cleanName.empty())
++		return;
++
++	requests.push(std::unique_ptr<ScraperRequest>(new HowLongToBeatRequest(results, params.game, cleanName)));
++}
++
++bool HowLongToBeatScraper::isSupportedPlatform(SystemData* system)
++{
++	return system != nullptr;
++}
++
++const std::set<Scraper::ScraperMediaSource>& HowLongToBeatScraper::getSupportedMedias()
++{
++	static std::set<ScraperMediaSource> mdds = {};
++	return mdds;
++}
++
++HowLongToBeatRequest::HowLongToBeatRequest(std::vector<ScraperSearchResult>& resultsWrite, FileData* game, const std::string& searchName)
++	: ScraperRequest(resultsWrite),
++	mGame(game),
++	mSearchName(searchName),
++	mStage(Stage::Init)
++{
++	setStatus(ASYNC_IN_PROGRESS);
++	startInit();
++}
++
++void HowLongToBeatRequest::startInit()
++{
++	auto options = getBaseOptions();
++	mRequest.reset(new HttpReq(HLTB_BASE_URL + "/api/bleed/init?t=" + getTimestamp(), &options));
++}
++
++void HowLongToBeatRequest::startSearch()
++{
++	auto options = getBaseOptions();
++	options.customHeaders.push_back("Content-Type: application/json");
++	options.customHeaders.push_back("Origin: " + HLTB_BASE_URL);
++	options.customHeaders.push_back("x-auth-token: " + mToken);
++	options.customHeaders.push_back("x-hp-key: " + mHpKey);
++	options.customHeaders.push_back("x-hp-val: " + mHpVal);
++	options.dataToPost = buildSearchBody();
++	mStage = Stage::Search;
++	mRequest.reset(new HttpReq(HLTB_BASE_URL + "/api/bleed", &options));
++}
++
++void HowLongToBeatRequest::update()
++{
++	if (!mRequest)
++	{
++		setStatus(ASYNC_DONE);
++		return;
++	}
++
++	auto status = mRequest->status();
++	if (status == HttpReq::REQ_IN_PROGRESS)
++		return;
++
++	if (status != HttpReq::REQ_SUCCESS)
++	{
++		LOG(LogWarning) << "HowLongToBeatRequest - HTTP request failed: " << status << " " << mRequest->getErrorMsg();
++		setStatus(ASYNC_DONE);
++		return;
++	}
++
++	auto response = mRequest->getContent();
++	if (mStage == Stage::Init)
++	{
++		if (!processInit(response))
++		{
++			setStatus(ASYNC_DONE);
++			return;
++		}
++
++		startSearch();
++		return;
++	}
++
++	processSearch(response);
++	setStatus(ASYNC_DONE);
++}
++
++bool HowLongToBeatRequest::processInit(const std::string& response)
++{
++	Document doc;
++	doc.Parse(response.c_str());
++	if (doc.HasParseError())
++	{
++		LOG(LogWarning) << "HowLongToBeatRequest - Error parsing init JSON: " << GetParseError_En(doc.GetParseError());
++		return false;
++	}
++
++	mToken = getStringMember(doc, "token");
++	mHpKey = getStringMember(doc, "hpKey");
++	mHpVal = getStringMember(doc, "hpVal");
++
++	return !mToken.empty() && !mHpKey.empty() && !mHpVal.empty();
++}
++
++std::string HowLongToBeatRequest::buildSearchBody() const
++{
++	StringBuffer buffer;
++	Writer<StringBuffer> writer(buffer);
++
++	writer.StartObject();
++	writer.Key("searchType"); writer.String("games");
++	writer.Key("searchTerms");
++	writer.StartArray();
++	for (auto term : Utils::String::split(mSearchName, ' ', true))
++		writer.String(term.c_str());
++	writer.EndArray();
++	writer.Key("searchPage"); writer.Int(1);
++	writer.Key("size"); writer.Int(8);
++	writer.Key("searchOptions");
++	writer.StartObject();
++	writer.Key("games");
++	writer.StartObject();
++	writer.Key("userId"); writer.Int(0);
++	writer.Key("platform"); writer.String("");
++	writer.Key("sortCategory"); writer.String("popular");
++	writer.Key("rangeCategory"); writer.String("main");
++	writer.Key("rangeTime");
++	writer.StartObject();
++	writer.Key("min"); writer.Int(0);
++	writer.Key("max"); writer.Int(0);
++	writer.EndObject();
++	writer.Key("gameplay");
++	writer.StartObject();
++	writer.Key("perspective"); writer.String("");
++	writer.Key("flow"); writer.String("");
++	writer.Key("genre"); writer.String("");
++	writer.Key("difficulty"); writer.String("");
++	writer.EndObject();
++	writer.Key("rangeYear");
++	writer.StartObject();
++	writer.Key("min"); writer.String("");
++	writer.Key("max"); writer.String("");
++	writer.EndObject();
++	writer.Key("modifier"); writer.String("");
++	writer.EndObject();
++	writer.Key("users");
++	writer.StartObject();
++	writer.Key("sortCategory"); writer.String("postcount");
++	writer.EndObject();
++	writer.Key("lists");
++	writer.StartObject();
++	writer.Key("sortCategory"); writer.String("follows");
++	writer.EndObject();
++	writer.Key("filter"); writer.String("");
++	writer.Key("sort"); writer.Int(0);
++	writer.Key("randomizer"); writer.Int(0);
++	writer.EndObject();
++	writer.Key("useCache"); writer.Bool(true);
++	writer.Key(mHpKey.c_str()); writer.String(mHpVal.c_str());
++	writer.EndObject();
++
++	return buffer.GetString();
++}
++
++void HowLongToBeatRequest::processSearch(const std::string& response)
++{
++	Document doc;
++	doc.Parse(response.c_str());
++	if (doc.HasParseError())
++	{
++		LOG(LogWarning) << "HowLongToBeatRequest - Error parsing search JSON: " << GetParseError_En(doc.GetParseError());
++		return;
++	}
++
++	if (!doc.HasMember("data") || !doc["data"].IsArray())
++		return;
++
++	const Value& data = doc["data"];
++	for (SizeType i = 0; i < data.Size(); i++)
++	{
++		const Value& game = data[i];
++		auto id = getIntMember(game, "game_id");
++		auto name = getStringMember(game, "game_name");
++		if (id <= 0 || name.empty())
++			continue;
++
++		ScraperSearchResult result("HowLongToBeat");
++		if (mGame != nullptr)
++			result.mdl = mGame->getMetadata();
++
++		result.mdl.set(MetaDataId::Name, name);
++		result.mdl.set(MetaDataId::HltbId, std::to_string(id));
++		result.mdl.set(MetaDataId::HltbUrl, HLTB_BASE_URL + "/game/" + std::to_string(id));
++
++		auto mainTime = getIntMember(game, "comp_main");
++		auto extraTime = getIntMember(game, "comp_plus");
++		auto completionistTime = getIntMember(game, "comp_100");
++		auto allStylesTime = getIntMember(game, "comp_all");
++
++		if (mainTime > 0)
++			result.mdl.set(MetaDataId::HltbMainTime, std::to_string(mainTime));
++		if (extraTime > 0)
++			result.mdl.set(MetaDataId::HltbExtraTime, std::to_string(extraTime));
++		if (completionistTime > 0)
++			result.mdl.set(MetaDataId::HltbCompletionistTime, std::to_string(completionistTime));
++		if (allStylesTime > 0)
++			result.mdl.set(MetaDataId::HltbAllStylesTime, std::to_string(allStylesTime));
++
++		mResults.push_back(result);
++	}
++}
+diff --git a/es-app/src/scrapers/HowLongToBeatScraper.h b/es-app/src/scrapers/HowLongToBeatScraper.h
+new file mode 100644
+index 000000000..b71304fe2
+--- /dev/null
++++ b/es-app/src/scrapers/HowLongToBeatScraper.h
+@@ -0,0 +1,49 @@
++#pragma once
++
++#ifndef ES_APP_SCRAPERS_HOW_LONG_TO_BEAT_SCRAPER_H
++#define ES_APP_SCRAPERS_HOW_LONG_TO_BEAT_SCRAPER_H
++
++#include "scrapers/Scraper.h"
++
++class HowLongToBeatScraper : public Scraper
++{
++public:
++	void generateRequests(const ScraperSearchParams& params,
++		std::queue<std::unique_ptr<ScraperRequest>>& requests,
++		std::vector<ScraperSearchResult>& results) override;
++
++	bool isSupportedPlatform(SystemData* system) override;
++
++	const std::set<ScraperMediaSource>& getSupportedMedias() override;
++};
++
++class HowLongToBeatRequest : public ScraperRequest
++{
++public:
++	HowLongToBeatRequest(std::vector<ScraperSearchResult>& resultsWrite, FileData* game, const std::string& searchName);
++
++	void update() override;
++
++private:
++	enum class Stage
++	{
++		Init,
++		Search
++	};
++
++	void startInit();
++	void startSearch();
++	bool processInit(const std::string& response);
++	void processSearch(const std::string& response);
++	std::string buildSearchBody() const;
++
++	FileData* mGame;
++	std::string mSearchName;
++	std::string mToken;
++	std::string mHpKey;
++	std::string mHpVal;
++	Stage mStage;
++	std::unique_ptr<HttpReq> mRequest;
++};
++
++#endif // ES_APP_SCRAPERS_HOW_LONG_TO_BEAT_SCRAPER_H
+diff --git a/es-app/src/scrapers/LocalLauncherMetadataScraper.cpp b/es-app/src/scrapers/LocalLauncherMetadataScraper.cpp
+new file mode 100644
+index 000000000..aec9560a0
+--- /dev/null
++++ b/es-app/src/scrapers/LocalLauncherMetadataScraper.cpp
+@@ -0,0 +1,398 @@
++#include "scrapers/LocalLauncherMetadataScraper.h"
++
++#include "FileData.h"
++#include "Paths.h"
++#include "SystemData.h"
++#include "utils/FileSystemUtil.h"
++#include "utils/StringUtil.h"
++
++#include <algorithm>
++#include <cctype>
++#include <map>
++#include <rapidjson/document.h>
++
++using namespace rapidjson;
++
++namespace
++{
++	struct LauncherEntry
++	{
++		std::string source;
++		std::string store;
++		std::string id;
++		std::string title;
++		std::string description;
++		std::string developer;
++		std::string publisher;
++		std::string installPath;
++		std::string executable;
++		std::string runner;
++		std::string winePrefix;
++		std::string wineVersion;
++		std::string storeUrl;
++		std::string cloudSave;
++		std::string epicNamespace;
++		std::string gogId;
++		std::vector<std::string> aliases;
++	};
++
++	std::string normalizeName(const std::string& value)
++	{
++		auto lower = Utils::String::toLower(value);
++		std::string normalized;
++		for (auto c : lower)
++			if (std::isalnum(static_cast<unsigned char>(c)))
++				normalized += c;
++
++		return normalized;
++	}
++
++	std::string getStringMember(const Value& value, const char* key)
++	{
++		if (!value.IsObject() || !value.HasMember(key))
++			return "";
++
++		const Value& member = value[key];
++		if (member.IsString())
++			return member.GetString();
++		if (member.IsInt64())
++			return std::to_string(member.GetInt64());
++		if (member.IsUint64())
++			return std::to_string(member.GetUint64());
++		if (member.IsBool())
++			return member.GetBool() ? "true" : "false";
++
++		return "";
++	}
++
++	std::string getNestedString(const Value& value, const char* key1, const char* key2)
++	{
++		if (!value.IsObject() || !value.HasMember(key1) || !value[key1].IsObject())
++			return "";
++
++		return getStringMember(value[key1], key2);
++	}
++
++	bool readJson(const std::string& path, Document& doc)
++	{
++		if (!Utils::FileSystem::isRegularFile(path))
++			return false;
++
++		auto content = Utils::FileSystem::readAllText(path);
++		if (content.empty())
++			return false;
++
++		doc.Parse(content.c_str());
++		return !doc.HasParseError();
++	}
++
++	void addAlias(LauncherEntry& entry, const std::string& alias)
++	{
++		auto trimmed = Utils::String::trim(alias);
++		if (!trimmed.empty())
++			entry.aliases.push_back(trimmed);
++	}
++
++	void applyHeroicGameConfig(const std::string& base, LauncherEntry& entry)
++	{
++		if (entry.id.empty())
++			return;
++
++		Document doc;
++		auto path = Utils::FileSystem::combine(Utils::FileSystem::combine(base, "GamesConfig"), entry.id + ".json");
++		if (!readJson(path, doc) || !doc.IsObject())
++			return;
++
++		const Value* config = nullptr;
++		if (doc.HasMember(entry.id.c_str()) && doc[entry.id.c_str()].IsObject())
++			config = &doc[entry.id.c_str()];
++		else
++		{
++			for (auto it = doc.MemberBegin(); it != doc.MemberEnd(); ++it)
++			{
++				if (it->value.IsObject())
++				{
++					config = &it->value;
++					break;
++				}
++			}
++		}
++
++		if (config == nullptr)
++			return;
++
++		if (entry.winePrefix.empty())
++			entry.winePrefix = getStringMember(*config, "winePrefix");
++		if (entry.wineVersion.empty() && config->HasMember("wineVersion") && (*config)["wineVersion"].IsObject())
++			entry.wineVersion = getStringMember((*config)["wineVersion"], "name");
++	}
++
++	void addHeroicLibraryEntry(std::vector<LauncherEntry>& entries, const std::string& base, const Value& value, const std::string& fallbackStore)
++	{
++		if (!value.IsObject())
++			return;
++
++		LauncherEntry entry;
++		entry.source = "Heroic";
++		entry.runner = getStringMember(value, "runner");
++		entry.store = fallbackStore;
++		if (entry.store.empty())
++			entry.store = entry.runner == "gog" ? "GOG" : "Epic";
++
++		entry.id = getStringMember(value, "app_name");
++		entry.title = getStringMember(value, "title");
++		entry.developer = getStringMember(value, "developer");
++		entry.publisher = getStringMember(value, "publisher");
++		entry.description = getNestedString(value, "extra", "description");
++		if (entry.description.empty() && value.HasMember("extra") && value["extra"].IsObject())
++			entry.description = getNestedString(value["extra"], "about", "description");
++
++		entry.storeUrl = getStringMember(value, "store_url");
++		if (entry.storeUrl.empty() && value.HasMember("extra") && value["extra"].IsObject())
++			entry.storeUrl = getStringMember(value["extra"], "storeUrl");
++
++		if (value.HasMember("install") && value["install"].IsObject())
++		{
++			entry.installPath = getStringMember(value["install"], "install_path");
++			entry.executable = getStringMember(value["install"], "executable");
++		}
++
++		entry.cloudSave = getStringMember(value, "save_folder");
++		if (entry.cloudSave.empty())
++			entry.cloudSave = getStringMember(value, "save_path");
++		entry.epicNamespace = getStringMember(value, "namespace");
++		if (entry.store == "GOG")
++			entry.gogId = entry.id;
++
++		addAlias(entry, entry.title);
++		addAlias(entry, entry.id);
++		addAlias(entry, getStringMember(value, "folder_name"));
++
++		applyHeroicGameConfig(base, entry);
++		if (!entry.title.empty() || !entry.id.empty())
++			entries.push_back(entry);
++	}
++
++	void addHeroicInstalledEntry(std::vector<LauncherEntry>& entries, const std::string& base, const std::string& key, const Value& value)
++	{
++		if (!value.IsObject())
++			return;
++
++		LauncherEntry entry;
++		entry.source = "Heroic";
++		entry.store = "Epic";
++		entry.runner = "legendary";
++		entry.id = key;
++		entry.title = getStringMember(value, "title");
++		entry.installPath = getStringMember(value, "install_path");
++		entry.executable = getStringMember(value, "executable");
++		entry.cloudSave = getStringMember(value, "save_path");
++		addAlias(entry, entry.title);
++		addAlias(entry, entry.id);
++		applyHeroicGameConfig(base, entry);
++		if (!entry.title.empty() || !entry.id.empty())
++			entries.push_back(entry);
++	}
++
++	void loadHeroicBase(std::vector<LauncherEntry>& entries, const std::string& base)
++	{
++		if (!Utils::FileSystem::isDirectory(base))
++			return;
++
++		for (auto item : { std::make_pair("store_cache/legendary_library.json", "Epic"), std::make_pair("store_cache/gog_library.json", "GOG") })
++		{
++			Document doc;
++			auto path = Utils::FileSystem::combine(base, item.first);
++			if (!readJson(path, doc) || !doc.IsObject() || !doc.HasMember("library") || !doc["library"].IsArray())
++				continue;
++
++			const Value& library = doc["library"];
++			for (SizeType i = 0; i < library.Size(); i++)
++				addHeroicLibraryEntry(entries, base, library[i], item.second);
++		}
++
++		Document installed;
++		auto installedPath = Utils::FileSystem::combine(base, "legendaryConfig/legendary/installed.json");
++		if (readJson(installedPath, installed) && installed.IsObject())
++		{
++			for (auto it = installed.MemberBegin(); it != installed.MemberEnd(); ++it)
++				addHeroicInstalledEntry(entries, base, it->name.GetString(), it->value);
++		}
++	}
++
++	std::map<std::string, std::string> readSimpleYaml(const std::string& path)
++	{
++		std::map<std::string, std::string> values;
++		for (auto line : Utils::FileSystem::readAllLines(path))
++		{
++			line = Utils::String::trim(line);
++			if (line.empty() || line[0] == '#')
++				continue;
++
++			auto pos = line.find(':');
++			if (pos == std::string::npos)
++				continue;
++
++			auto key = Utils::String::trim(line.substr(0, pos));
++			auto value = Utils::String::trim(line.substr(pos + 1));
++			if (value.size() >= 2 && ((value.front() == '"' && value.back() == '"') || (value.front() == '\'' && value.back() == '\'')))
++				value = value.substr(1, value.size() - 2);
++
++			if (!key.empty() && !value.empty())
++				values[key] = value;
++		}
++
++		return values;
++	}
++
++	void loadLutrisDir(std::vector<LauncherEntry>& entries, const std::string& dir)
++	{
++		if (!Utils::FileSystem::isDirectory(dir))
++			return;
++
++		for (auto path : Utils::FileSystem::getDirContent(dir, true))
++		{
++			auto extension = Utils::String::toLower(Utils::FileSystem::getExtension(path));
++			if (extension != ".yml" && extension != ".yaml")
++				continue;
++
++			auto data = readSimpleYaml(path);
++			LauncherEntry entry;
++			entry.source = "Lutris";
++			entry.store = "Lutris";
++			entry.title = data["name"];
++			entry.id = data["slug"].empty() ? data["game_slug"] : data["slug"];
++			entry.runner = data["runner"];
++			entry.installPath = data["directory"].empty() ? data["path"] : data["directory"];
++			addAlias(entry, entry.title);
++			addAlias(entry, entry.id);
++
++			if (!entry.title.empty() || !entry.id.empty())
++				entries.push_back(entry);
++		}
++	}
++
++	std::vector<LauncherEntry> loadEntries()
++	{
++		std::vector<LauncherEntry> entries;
++		auto home = Paths::getHomePath();
++
++		loadHeroicBase(entries, Utils::FileSystem::combine(home, ".config/heroic"));
++		loadHeroicBase(entries, Utils::FileSystem::combine(home, ".var/app/com.heroicgameslauncher.hgl/config/heroic"));
++		loadLutrisDir(entries, Utils::FileSystem::combine(home, ".local/share/lutris/games"));
++		loadLutrisDir(entries, Utils::FileSystem::combine(home, ".config/lutris/games"));
++
++		return entries;
++	}
++
++	bool matchesEntry(FileData* game, const std::string& searchName, const LauncherEntry& entry)
++	{
++		auto normalizedSearch = normalizeName(searchName);
++		auto normalizedPath = normalizeName(Utils::FileSystem::getStem(game->getPath()));
++		auto path = game->getPath();
++
++		std::vector<std::string> candidates = entry.aliases;
++		if (!entry.title.empty())
++			candidates.push_back(entry.title);
++		if (!entry.id.empty())
++			candidates.push_back(entry.id);
++
++		for (auto alias : candidates)
++		{
++			auto normalizedAlias = normalizeName(alias);
++			if (normalizedAlias.empty())
++				continue;
++
++			if (normalizedAlias == normalizedSearch || normalizedAlias == normalizedPath)
++				return true;
++		}
++
++		if (!entry.installPath.empty() && path.find(entry.installPath) != std::string::npos)
++			return true;
++		if (!entry.executable.empty() && path.find(entry.executable) != std::string::npos)
++			return true;
++
++		auto launcherId = game->getMetadata(MetaDataId::LauncherId);
++		if (!launcherId.empty() && launcherId == entry.id)
++			return true;
++
++		auto epicNamespace = game->getMetadata(MetaDataId::EpicNamespace);
++		if (!epicNamespace.empty() && epicNamespace == entry.epicNamespace)
++			return true;
++
++		auto gogId = game->getMetadata(MetaDataId::GogId);
++		if (!gogId.empty() && gogId == entry.gogId)
++			return true;
++
++		return false;
++	}
++
++	void addResult(std::vector<ScraperSearchResult>& results, FileData* game, const LauncherEntry& entry)
++	{
++		ScraperSearchResult result("LocalLaunchers");
++		if (game != nullptr)
++			result.mdl = game->getMetadata();
++
++		if (!entry.title.empty())
++			result.mdl.set(MetaDataId::Name, entry.title);
++		if (!entry.description.empty())
++			result.mdl.set(MetaDataId::Desc, entry.description);
++		if (!entry.developer.empty())
++			result.mdl.set(MetaDataId::Developer, entry.developer);
++		if (!entry.publisher.empty())
++			result.mdl.set(MetaDataId::Publisher, entry.publisher);
++
++		result.mdl.set(MetaDataId::LauncherSource, entry.source);
++		result.mdl.set(MetaDataId::LauncherStore, entry.store);
++		result.mdl.set(MetaDataId::LauncherId, entry.id);
++		result.mdl.set(MetaDataId::LauncherInstallPath, entry.installPath);
++		result.mdl.set(MetaDataId::LauncherExecutable, entry.executable);
++		result.mdl.set(MetaDataId::LauncherRunner, entry.runner);
++		result.mdl.set(MetaDataId::LauncherWinePrefix, entry.winePrefix);
++		result.mdl.set(MetaDataId::LauncherWineVersion, entry.wineVersion);
++		result.mdl.set(MetaDataId::LauncherStoreUrl, entry.storeUrl);
++		result.mdl.set(MetaDataId::LauncherCloudSave, entry.cloudSave);
++		result.mdl.set(MetaDataId::EpicNamespace, entry.epicNamespace);
++		result.mdl.set(MetaDataId::GogId, entry.gogId);
++
++		results.push_back(result);
++	}
++}
++
++void LocalLauncherMetadataScraper::generateRequests(const ScraperSearchParams& params,
++	std::queue<std::unique_ptr<ScraperRequest>>& requests,
++	std::vector<ScraperSearchResult>& results)
++{
++	auto cleanName = params.nameOverride;
++	if (cleanName.empty())
++		cleanName = Utils::String::removeParenthesis(Utils::FileSystem::getStem(params.game->getPath()));
++
++	requests.push(std::unique_ptr<ScraperRequest>(new LocalLauncherMetadataRequest(results, params.game, Utils::String::trim(cleanName))));
++}
++
++bool LocalLauncherMetadataScraper::isSupportedPlatform(SystemData* system)
++{
++	return system != nullptr;
++}
++
++const std::set<Scraper::ScraperMediaSource>& LocalLauncherMetadataScraper::getSupportedMedias()
++{
++	static std::set<ScraperMediaSource> mdds = {};
++	return mdds;
++}
++
++LocalLauncherMetadataRequest::LocalLauncherMetadataRequest(std::vector<ScraperSearchResult>& resultsWrite, FileData* game, const std::string& searchName)
++	: ScraperRequest(resultsWrite)
++{
++	static const std::vector<LauncherEntry> entries = loadEntries();
++
++	for (auto entry : entries)
++		if (matchesEntry(game, searchName, entry))
++			addResult(mResults, game, entry);
++
++	setStatus(ASYNC_DONE);
++}
++
++void LocalLauncherMetadataRequest::update()
++{
++}
+diff --git a/es-app/src/scrapers/LocalLauncherMetadataScraper.h b/es-app/src/scrapers/LocalLauncherMetadataScraper.h
+new file mode 100644
+index 000000000..50535c816
+--- /dev/null
++++ b/es-app/src/scrapers/LocalLauncherMetadataScraper.h
+@@ -0,0 +1,28 @@
++#pragma once
++
++#ifndef ES_APP_SCRAPERS_LOCAL_LAUNCHER_METADATA_SCRAPER_H
++#define ES_APP_SCRAPERS_LOCAL_LAUNCHER_METADATA_SCRAPER_H
++
++#include "scrapers/Scraper.h"
++
++class LocalLauncherMetadataScraper : public Scraper
++{
++public:
++	void generateRequests(const ScraperSearchParams& params,
++		std::queue<std::unique_ptr<ScraperRequest>>& requests,
++		std::vector<ScraperSearchResult>& results) override;
++
++	bool isSupportedPlatform(SystemData* system) override;
++
++	const std::set<ScraperMediaSource>& getSupportedMedias() override;
++};
++
++class LocalLauncherMetadataRequest : public ScraperRequest
++{
++public:
++	LocalLauncherMetadataRequest(std::vector<ScraperSearchResult>& resultsWrite, FileData* game, const std::string& searchName);
++
++	void update() override;
++};
++
++#endif // ES_APP_SCRAPERS_LOCAL_LAUNCHER_METADATA_SCRAPER_H
+diff --git a/es-app/src/scrapers/MixedScraper.cpp b/es-app/src/scrapers/MixedScraper.cpp
+new file mode 100644
+index 000000000..beffad518
+--- /dev/null
++++ b/es-app/src/scrapers/MixedScraper.cpp
+@@ -0,0 +1,328 @@
++#include "scrapers/MixedScraper.h"
++
++#include "FileData.h"
++#include "Log.h"
++#include "Settings.h"
++#include "SystemData.h"
++#include "utils/StringUtil.h"
++
++#include <algorithm>
++#include <vector>
++
++namespace
++{
++	const std::string DEFAULT_METADATA_PRIORITY = "LocalLaunchers;ScreenScraper;HfsDB;IGDB;HowLongToBeat;ProtonDB;PCGamingWiki;ArcadeDB;TheGamesDB";
++	const std::string DEFAULT_MEDIA_PRIORITY = "SteamGridDB;ScreenScraper;HfsDB;ArcadeDB;IGDB;TheGamesDB";
++
++	std::vector<std::string> getPriorityList(const std::string& settingName, const std::string& defaultValue)
++	{
++		auto value = Settings::getInstance()->getString(settingName);
++		if (value.empty())
++			value = defaultValue;
++
++		std::vector<std::string> result;
++		for (auto item : Utils::String::split(value, ';', true))
++		{
++			item = Utils::String::trim(item);
++			if (item.empty() || item == "Mixed")
++				continue;
++			if (std::find(result.cbegin(), result.cend(), item) == result.cend())
++				result.push_back(item);
++		}
++
++		return result;
++	}
++
++	std::vector<std::string> combineOrder(const std::vector<std::string>& metadataOrder, const std::vector<std::string>& mediaOrder)
++	{
++		std::vector<std::string> result;
++		for (auto order : { metadataOrder, mediaOrder })
++			for (auto item : order)
++				if (std::find(result.cbegin(), result.cend(), item) == result.cend())
++					result.push_back(item);
++
++		return result;
++	}
++
++	bool isMediaMetadata(MetaDataId id)
++	{
++		return id == MetaDataId::Image || id == MetaDataId::Thumbnail || id == MetaDataId::Marquee ||
++			id == MetaDataId::Video || id == MetaDataId::FanArt || id == MetaDataId::TitleShot ||
++			id == MetaDataId::Manual || id == MetaDataId::Magazine || id == MetaDataId::Map ||
++			id == MetaDataId::Bezel || id == MetaDataId::Cartridge || id == MetaDataId::BoxArt ||
++			id == MetaDataId::Wheel || id == MetaDataId::Mix || id == MetaDataId::BoxBack;
++	}
++
++	bool isHltbMetadata(MetaDataId id)
++	{
++		return id == MetaDataId::HltbId || id == MetaDataId::HltbMainTime || id == MetaDataId::HltbExtraTime ||
++			id == MetaDataId::HltbCompletionistTime || id == MetaDataId::HltbAllStylesTime || id == MetaDataId::HltbUrl;
++	}
++
++	bool isProtonDBMetadata(MetaDataId id)
++	{
++		return id == MetaDataId::SteamAppId || id == MetaDataId::ProtonDBTier || id == MetaDataId::ProtonDBConfidence ||
++			id == MetaDataId::ProtonDBScore || id == MetaDataId::ProtonDBTotal || id == MetaDataId::ProtonDBTrendingTier ||
++			id == MetaDataId::ProtonDBUrl;
++	}
++
++	bool isPCGamingWikiMetadata(MetaDataId id)
++	{
++		return id == MetaDataId::PCGamingWikiPage || id == MetaDataId::PCGamingWikiPageId || id == MetaDataId::PCGamingWikiUrl ||
++			id == MetaDataId::PCGamingWikiDevelopers || id == MetaDataId::PCGamingWikiPublishers;
++	}
++
++	bool isLauncherMetadata(MetaDataId id)
++	{
++		return id == MetaDataId::LauncherSource || id == MetaDataId::LauncherStore || id == MetaDataId::LauncherId ||
++			id == MetaDataId::LauncherInstallPath || id == MetaDataId::LauncherExecutable || id == MetaDataId::LauncherRunner ||
++			id == MetaDataId::LauncherWinePrefix || id == MetaDataId::LauncherWineVersion || id == MetaDataId::LauncherStoreUrl ||
++			id == MetaDataId::LauncherCloudSave || id == MetaDataId::EpicNamespace || id == MetaDataId::GogId;
++	}
++
++	bool isStandardMetadata(MetaDataId id)
++	{
++		return id == MetaDataId::Name || id == MetaDataId::Desc || id == MetaDataId::Genre ||
++			id == MetaDataId::Rating || id == MetaDataId::ReleaseDate || id == MetaDataId::Developer ||
++			id == MetaDataId::Publisher || id == MetaDataId::Family || id == MetaDataId::ArcadeSystemName ||
++			id == MetaDataId::Players || id == MetaDataId::Language || id == MetaDataId::Region ||
++			id == MetaDataId::ScraperId;
++	}
++
++	bool shouldMergeMetadata(const std::string& scraperName, MetaDataId id)
++	{
++		if (scraperName == "HowLongToBeat")
++			return isHltbMetadata(id);
++		if (scraperName == "ProtonDB")
++			return isProtonDBMetadata(id);
++		if (scraperName == "PCGamingWiki")
++			return isPCGamingWikiMetadata(id);
++		if (scraperName == "LocalLaunchers")
++			return isLauncherMetadata(id) || id == MetaDataId::Name || id == MetaDataId::Desc || id == MetaDataId::Developer || id == MetaDataId::Publisher;
++		if (scraperName == "SteamGridDB")
++			return false;
++
++		return isStandardMetadata(id);
++	}
++
++	bool hasUsableValue(MetaDataId id, const std::string& value)
++	{
++		if (value.empty() || value == "not-a-date-time")
++			return false;
++
++		if (id == MetaDataId::Rating)
++			return Utils::String::toFloat(value) > 0;
++
++		if (id == MetaDataId::HltbId || id == MetaDataId::HltbMainTime || id == MetaDataId::HltbExtraTime ||
++			id == MetaDataId::HltbCompletionistTime || id == MetaDataId::HltbAllStylesTime || id == MetaDataId::SteamAppId ||
++			id == MetaDataId::ProtonDBTotal)
++			return Utils::String::toInteger(value) > 0;
++
++		return value != "0";
++	}
++
++	std::string getPCGamingWikiDescription(const MetaDataList& metadata)
++	{
++		auto page = metadata.get(MetaDataId::PCGamingWikiPage);
++		if (page.empty())
++			return "";
++
++		std::vector<std::string> lines;
++		lines.push_back("PCGamingWiki: " + page);
++
++		auto developers = metadata.get(MetaDataId::PCGamingWikiDevelopers);
++		if (!developers.empty())
++			lines.push_back("Developers: " + developers);
++
++		auto publishers = metadata.get(MetaDataId::PCGamingWikiPublishers);
++		if (!publishers.empty())
++			lines.push_back("Publishers: " + publishers);
++
++		auto url = metadata.get(MetaDataId::PCGamingWikiUrl);
++		if (!url.empty())
++			lines.push_back("URL: " + url);
++
++		return Utils::String::join(lines, "\n");
++	}
++
++	std::string appendPCGamingWikiDescription(const std::string& description, const std::string& pcgwDescription)
++	{
++		if (pcgwDescription.empty() || description.find(pcgwDescription) != std::string::npos)
++			return description;
++
++		auto trimmed = Utils::String::trim(description);
++		if (trimmed.empty())
++			return pcgwDescription;
++
++		return trimmed + "\n\n" + pcgwDescription;
++	}
++}
++
++void MixedScraper::generateRequests(const ScraperSearchParams& params,
++	std::queue<std::unique_ptr<ScraperRequest>>& requests,
++	std::vector<ScraperSearchResult>& results)
++{
++	requests.push(std::unique_ptr<ScraperRequest>(new MixedScraperRequest(results, params)));
++}
++
++bool MixedScraper::isSupportedPlatform(SystemData* system)
++{
++	return system != nullptr;
++}
++
++const std::set<Scraper::ScraperMediaSource>& MixedScraper::getSupportedMedias()
++{
++	static std::set<ScraperMediaSource> mdds =
++	{
++		ScraperMediaSource::Screenshot,
++		ScraperMediaSource::Box2d,
++		ScraperMediaSource::Box3d,
++		ScraperMediaSource::Mix,
++		ScraperMediaSource::Marquee,
++		ScraperMediaSource::Wheel,
++		ScraperMediaSource::TitleShot,
++		ScraperMediaSource::Video,
++		ScraperMediaSource::FanArt,
++		ScraperMediaSource::Manual,
++		ScraperMediaSource::Map,
++		ScraperMediaSource::BoxBack,
++		ScraperMediaSource::Bezel_16_9
++	};
++
++	return mdds;
++}
++
++MixedScraperRequest::MixedScraperRequest(std::vector<ScraperSearchResult>& resultsWrite, const ScraperSearchParams& params)
++	: ScraperRequest(resultsWrite),
++	mParams(params),
++	mMerged("Mixed")
++{
++	mMetadataOrder = getPriorityList("MixedScraperMetadataPriority", DEFAULT_METADATA_PRIORITY);
++	mMediaOrder = getPriorityList("MixedScraperMediaPriority", DEFAULT_MEDIA_PRIORITY);
++	mCombinedOrder = combineOrder(mMetadataOrder, mMediaOrder);
++	mIndex = 0;
++	mChanged = false;
++
++	if (mParams.game != nullptr)
++		mMerged.mdl = mParams.game->getMetadata();
++
++	setStatus(ASYNC_IN_PROGRESS);
++	startNext();
++}
++
++void MixedScraperRequest::startNext()
++{
++	mCurrent.reset();
++
++	while (mIndex < mCombinedOrder.size())
++	{
++		auto scraperName = mCombinedOrder[mIndex++];
++		auto scraper = Scraper::getScraper(scraperName);
++		if (scraper == nullptr || !scraper->isSupportedPlatform(mParams.system))
++			continue;
++
++		try
++		{
++			mCurrent = scraper->search(mParams);
++		}
++		catch (std::exception& e)
++		{
++			LOG(LogWarning) << "MixedScraper skipped " << scraperName << ": " << e.what();
++			mCurrent.reset();
++			continue;
++		}
++
++		return;
++	}
++
++	finish();
++}
++
++void MixedScraperRequest::update()
++{
++	if (!mCurrent)
++		return;
++
++	mCurrent->update();
++	if (mCurrent->status() == ASYNC_IN_PROGRESS)
++		return;
++
++	auto scraperName = mCombinedOrder[mIndex - 1];
++	if (mCurrent->status() == ASYNC_DONE)
++	{
++		auto results = mCurrent->getResults();
++		if (!results.empty())
++			mChildResults[scraperName] = results[0];
++	}
++	else
++		LOG(LogWarning) << "MixedScraper child failed " << scraperName << ": " << mCurrent->getStatusString();
++
++	startNext();
++}
++
++void MixedScraperRequest::mergeMetadata(const std::string& scraperName, const ScraperSearchResult& result)
++{
++	for (auto mdd : MetaDataList::getMDD())
++	{
++		if (isMediaMetadata(mdd.id) || !shouldMergeMetadata(scraperName, mdd.id))
++			continue;
++
++		auto value = result.mdl.get(mdd.id);
++		if (!hasUsableValue(mdd.id, value))
++			continue;
++
++		if (mFilledMetadata.find(mdd.id) != mFilledMetadata.cend())
++			continue;
++
++		mMerged.mdl.set(mdd.id, value);
++		mFilledMetadata.insert(mdd.id);
++		mChanged = true;
++	}
++}
++
++void MixedScraperRequest::mergeMedia(const ScraperSearchResult& result)
++{
++	for (auto url : result.urls)
++	{
++		if (url.second.url.empty() || mFilledMedia.find(url.first) != mFilledMedia.cend())
++			continue;
++
++		mMerged.urls[url.first] = url.second;
++		mFilledMedia.insert(url.first);
++		mChanged = true;
++	}
++}
++
++void MixedScraperRequest::finish()
++{
++	for (auto scraperName : mMetadataOrder)
++	{
++		auto it = mChildResults.find(scraperName);
++		if (it != mChildResults.cend())
++			mergeMetadata(scraperName, it->second);
++	}
++
++	auto pcgwIt = mChildResults.find("PCGamingWiki");
++	if (pcgwIt != mChildResults.cend())
++	{
++		auto pcgwDescription = getPCGamingWikiDescription(pcgwIt->second.mdl);
++		auto mergedDescription = appendPCGamingWikiDescription(mMerged.mdl.get(MetaDataId::Desc), pcgwDescription);
++		if (mergedDescription != mMerged.mdl.get(MetaDataId::Desc))
++		{
++			mMerged.mdl.set(MetaDataId::Desc, mergedDescription);
++			mChanged = true;
++		}
++	}
++
++	for (auto scraperName : mMediaOrder)
++	{
++		auto it = mChildResults.find(scraperName);
++		if (it != mChildResults.cend())
++			mergeMedia(it->second);
++	}
++
++	if (mChanged)
++		mResults.push_back(mMerged);
++
++	setStatus(ASYNC_DONE);
++}
+diff --git a/es-app/src/scrapers/MixedScraper.h b/es-app/src/scrapers/MixedScraper.h
+new file mode 100644
+index 000000000..a255a0055
+--- /dev/null
++++ b/es-app/src/scrapers/MixedScraper.h
+@@ -0,0 +1,46 @@
++#pragma once
++
++#ifndef ES_APP_SCRAPERS_MIXED_SCRAPER_H
++#define ES_APP_SCRAPERS_MIXED_SCRAPER_H
++
++#include "scrapers/Scraper.h"
++
++class MixedScraper : public Scraper
++{
++public:
++	void generateRequests(const ScraperSearchParams& params,
++		std::queue<std::unique_ptr<ScraperRequest>>& requests,
++		std::vector<ScraperSearchResult>& results) override;
++
++	bool isSupportedPlatform(SystemData* system) override;
++
++	const std::set<ScraperMediaSource>& getSupportedMedias() override;
++};
++
++class MixedScraperRequest : public ScraperRequest
++{
++public:
++	MixedScraperRequest(std::vector<ScraperSearchResult>& resultsWrite, const ScraperSearchParams& params);
++
++	void update() override;
++
++private:
++	void startNext();
++	void finish();
++	void mergeMetadata(const std::string& scraperName, const ScraperSearchResult& result);
++	void mergeMedia(const ScraperSearchResult& result);
++
++	ScraperSearchParams mParams;
++	std::vector<std::string> mCombinedOrder;
++	std::vector<std::string> mMetadataOrder;
++	std::vector<std::string> mMediaOrder;
++	std::map<std::string, ScraperSearchResult> mChildResults;
++	std::set<MetaDataId> mFilledMetadata;
++	std::set<MetaDataId> mFilledMedia;
++	std::unique_ptr<ScraperSearchHandle> mCurrent;
++	ScraperSearchResult mMerged;
++	unsigned int mIndex;
++	bool mChanged;
++};
++
++#endif // ES_APP_SCRAPERS_MIXED_SCRAPER_H
+diff --git a/es-app/src/scrapers/PCGamingWikiScraper.cpp b/es-app/src/scrapers/PCGamingWikiScraper.cpp
+new file mode 100644
+index 000000000..a6b070958
+--- /dev/null
++++ b/es-app/src/scrapers/PCGamingWikiScraper.cpp
+@@ -0,0 +1,247 @@
++#include "scrapers/PCGamingWikiScraper.h"
++
++#include "FileData.h"
++#include "Log.h"
++#include "SystemData.h"
++#include "utils/FileSystemUtil.h"
++#include "utils/StringUtil.h"
++
++#include <algorithm>
++#include <cctype>
++#include <fstream>
++#include <rapidjson/document.h>
++#include <rapidjson/error/en.h>
++#include <vector>
++
++using namespace rapidjson;
++
++namespace
++{
++	const std::string PCGW_API_URL = "https://www.pcgamingwiki.com/w/api.php";
++	const std::string PCGW_PAGE_URL = "https://www.pcgamingwiki.com/wiki/";
++
++	bool isDigits(const std::string& value)
++	{
++		return !value.empty() && std::all_of(value.cbegin(), value.cend(), [](char c) {
++			return std::isdigit(static_cast<unsigned char>(c));
++		});
++	}
++
++	std::string getSteamAppIdFromFile(FileData* game)
++	{
++		if (game == nullptr || Utils::String::toLower(Utils::FileSystem::getExtension(game->getPath())) != ".steam")
++			return "";
++
++		std::ifstream input(game->getPath());
++		if (!input.is_open())
++			return "";
++
++		std::string line;
++		while (std::getline(input, line))
++		{
++			line = Utils::String::trim(line);
++			if (!Utils::String::startsWith(line, "appid="))
++				continue;
++
++			auto appId = Utils::String::trim(line.substr(6));
++			if (isDigits(appId))
++				return appId;
++		}
++
++		return "";
++	}
++
++	std::string getSteamAppId(FileData* game)
++	{
++		if (game == nullptr)
++			return "";
++
++		auto appId = game->getMetadata(MetaDataId::SteamAppId);
++		if (isDigits(appId))
++			return appId;
++
++		return getSteamAppIdFromFile(game);
++	}
++
++	std::string getCleanGameName(const ScraperSearchParams& params)
++	{
++		auto cleanName = params.nameOverride;
++		if (cleanName.empty())
++			cleanName = Utils::String::removeParenthesis(Utils::FileSystem::getStem(params.game->getPath()));
++
++		return Utils::String::trim(cleanName);
++	}
++
++	std::string pageUrl(const std::string& page)
++	{
++		return PCGW_PAGE_URL + HttpReq::urlEncode(Utils::String::replace(page, " ", "_"));
++	}
++
++	std::string cleanCompanyList(const std::string& value)
++	{
++		auto cleaned = Utils::String::replace(value, "Company:", "");
++		cleaned = Utils::String::replace(cleaned, ",", ", ");
++		cleaned = Utils::String::replace(cleaned, ",  ", ", ");
++		return Utils::String::trim(cleaned);
++	}
++
++	std::string getPCGamingWikiDescription(const std::string& page, const std::string& url, const std::string& developers, const std::string& publishers)
++	{
++		if (page.empty())
++			return "";
++
++		std::vector<std::string> lines;
++		lines.push_back("PCGamingWiki: " + page);
++		if (!developers.empty())
++			lines.push_back("Developers: " + developers);
++		if (!publishers.empty())
++			lines.push_back("Publishers: " + publishers);
++		if (!url.empty())
++			lines.push_back("URL: " + url);
++
++		return Utils::String::join(lines, "\n");
++	}
++
++	std::string appendPCGamingWikiDescription(const std::string& description, const std::string& pcgwDescription)
++	{
++		if (pcgwDescription.empty() || description.find(pcgwDescription) != std::string::npos)
++			return description;
++
++		auto trimmed = Utils::String::trim(description);
++		if (trimmed.empty())
++			return pcgwDescription;
++
++		return trimmed + "\n\n" + pcgwDescription;
++	}
++
++	std::string cargoQueryForSteamAppId(const std::string& appId)
++	{
++		auto where = "Infobox_game.Steam_AppID HOLDS \"" + appId + "\"";
++		return PCGW_API_URL + "?action=cargoquery&tables=Infobox_game"
++			+ "&fields=Infobox_game._pageName=Page,Infobox_game._pageID=PageID,Infobox_game.Steam_AppID,Infobox_game.Developers,Infobox_game.Publishers"
++			+ "&where=" + HttpReq::urlEncode(where)
++			+ "&format=json";
++	}
++
++	std::string searchQueryForName(const std::string& name)
++	{
++		return PCGW_API_URL + "?action=query&list=search&srlimit=5&format=json&srsearch=" + HttpReq::urlEncode(name);
++	}
++
++	std::string getStringMember(const Value& value, const char* key)
++	{
++		if (!value.IsObject() || !value.HasMember(key) || !value[key].IsString())
++			return "";
++
++		return value[key].GetString();
++	}
++}
++
++void PCGamingWikiScraper::generateRequests(const ScraperSearchParams& params,
++	std::queue<std::unique_ptr<ScraperRequest>>& requests,
++	std::vector<ScraperSearchResult>& results)
++{
++	auto appId = getSteamAppId(params.game);
++	if (!appId.empty())
++	{
++		requests.push(std::unique_ptr<ScraperRequest>(new PCGamingWikiRequest(results, params.game, cargoQueryForSteamAppId(appId), PCGamingWikiRequest::SteamAppId)));
++		return;
++	}
++
++	auto cleanName = getCleanGameName(params);
++	if (cleanName.empty())
++		return;
++
++	requests.push(std::unique_ptr<ScraperRequest>(new PCGamingWikiRequest(results, params.game, searchQueryForName(cleanName), PCGamingWikiRequest::NameSearch)));
++}
++
++bool PCGamingWikiScraper::isSupportedPlatform(SystemData* system)
++{
++	return system != nullptr;
++}
++
++const std::set<Scraper::ScraperMediaSource>& PCGamingWikiScraper::getSupportedMedias()
++{
++	static std::set<ScraperMediaSource> mdds = {};
++	return mdds;
++}
++
++void PCGamingWikiRequest::addResult(std::vector<ScraperSearchResult>& results, const std::string& page, const std::string& pageId, const std::string& developers, const std::string& publishers)
++{
++	if (page.empty())
++		return;
++
++	ScraperSearchResult result("PCGamingWiki");
++	if (mGame != nullptr)
++		result.mdl = mGame->getMetadata();
++
++	result.mdl.set(MetaDataId::Name, page);
++	result.mdl.set(MetaDataId::PCGamingWikiPage, page);
++	auto url = pageUrl(page);
++	result.mdl.set(MetaDataId::PCGamingWikiUrl, url);
++
++	if (!pageId.empty())
++		result.mdl.set(MetaDataId::PCGamingWikiPageId, pageId);
++
++	auto cleanedDevelopers = cleanCompanyList(developers);
++	auto cleanedPublishers = cleanCompanyList(publishers);
++	if (!cleanedDevelopers.empty())
++		result.mdl.set(MetaDataId::PCGamingWikiDevelopers, cleanedDevelopers);
++	if (!cleanedPublishers.empty())
++		result.mdl.set(MetaDataId::PCGamingWikiPublishers, cleanedPublishers);
++
++	auto pcgwDescription = getPCGamingWikiDescription(page, url, cleanedDevelopers, cleanedPublishers);
++	result.mdl.set(MetaDataId::Desc, appendPCGamingWikiDescription(result.mdl.get(MetaDataId::Desc), pcgwDescription));
++
++	results.push_back(result);
++}
++
++bool PCGamingWikiRequest::process(const std::string& response, std::vector<ScraperSearchResult>& results)
++{
++	Document doc;
++	doc.Parse(response.c_str());
++
++	if (doc.HasParseError())
++	{
++		LOG(LogWarning) << "PCGamingWikiRequest - Error parsing JSON: " << GetParseError_En(doc.GetParseError());
++		return true;
++	}
++
++	if (mLookupMode == SteamAppId)
++	{
++		if (!doc.HasMember("cargoquery") || !doc["cargoquery"].IsArray())
++			return true;
++
++		const Value& data = doc["cargoquery"];
++		for (SizeType i = 0; i < data.Size(); i++)
++		{
++			if (!data[i].IsObject() || !data[i].HasMember("title") || !data[i]["title"].IsObject())
++				continue;
++
++			const Value& title = data[i]["title"];
++			addResult(results,
++				getStringMember(title, "Page"),
++				getStringMember(title, "PageID"),
++				getStringMember(title, "Developers"),
++				getStringMember(title, "Publishers"));
++		}
++
++		return true;
++	}
++
++	if (!doc.HasMember("query") || !doc["query"].IsObject() || !doc["query"].HasMember("search") || !doc["query"]["search"].IsArray())
++		return true;
++
++	const Value& data = doc["query"]["search"];
++	for (SizeType i = 0; i < data.Size(); i++)
++	{
++		const Value& item = data[i];
++		addResult(results,
++			getStringMember(item, "title"),
++			item.HasMember("pageid") && item["pageid"].IsInt() ? std::to_string(item["pageid"].GetInt()) : "",
++			"",
++			"");
++	}
++
++	return true;
++}
+diff --git a/es-app/src/scrapers/PCGamingWikiScraper.h b/es-app/src/scrapers/PCGamingWikiScraper.h
+new file mode 100644
+index 000000000..f62bde9af
+--- /dev/null
++++ b/es-app/src/scrapers/PCGamingWikiScraper.h
+@@ -0,0 +1,49 @@
++#pragma once
++
++#ifndef ES_APP_SCRAPERS_PC_GAMING_WIKI_SCRAPER_H
++#define ES_APP_SCRAPERS_PC_GAMING_WIKI_SCRAPER_H
++
++#include "scrapers/Scraper.h"
++
++class PCGamingWikiScraper : public Scraper
++{
++public:
++	void generateRequests(const ScraperSearchParams& params,
++		std::queue<std::unique_ptr<ScraperRequest>>& requests,
++		std::vector<ScraperSearchResult>& results) override;
++
++	bool isSupportedPlatform(SystemData* system) override;
++
++	const std::set<ScraperMediaSource>& getSupportedMedias() override;
++};
++
++class PCGamingWikiRequest : public ScraperHttpRequest
++{
++public:
++	enum LookupMode
++	{
++		SteamAppId,
++		NameSearch
++	};
++
++	PCGamingWikiRequest(std::vector<ScraperSearchResult>& resultsWrite,
++		FileData* game,
++		const std::string& url,
++		LookupMode lookupMode)
++		: ScraperHttpRequest(resultsWrite, url)
++	{
++		mGame = game;
++		mLookupMode = lookupMode;
++	}
++
++protected:
++	bool process(const std::string& response, std::vector<ScraperSearchResult>& results) override;
++
++private:
++	void addResult(std::vector<ScraperSearchResult>& results, const std::string& page, const std::string& pageId, const std::string& developers, const std::string& publishers);
++
++	FileData* mGame;
++	LookupMode mLookupMode;
++};
++
++#endif // ES_APP_SCRAPERS_PC_GAMING_WIKI_SCRAPER_H
+diff --git a/es-app/src/scrapers/ProtonDBScraper.cpp b/es-app/src/scrapers/ProtonDBScraper.cpp
+new file mode 100644
+index 000000000..091ea609d
+--- /dev/null
++++ b/es-app/src/scrapers/ProtonDBScraper.cpp
+@@ -0,0 +1,137 @@
++#include "scrapers/ProtonDBScraper.h"
++
++#include "FileData.h"
++#include "Log.h"
++#include "SystemData.h"
++#include "utils/FileSystemUtil.h"
++#include "utils/StringUtil.h"
++
++#include <algorithm>
++#include <cctype>
++#include <fstream>
++#include <rapidjson/document.h>
++#include <rapidjson/error/en.h>
++
++using namespace rapidjson;
++
++namespace
++{
++	const std::string PROTONDB_SUMMARY_URL = "https://www.protondb.com/api/v1/reports/summaries/";
++	const std::string PROTONDB_APP_URL = "https://www.protondb.com/app/";
++
++	bool isDigits(const std::string& value)
++	{
++		return !value.empty() && std::all_of(value.cbegin(), value.cend(), [](char c) {
++			return std::isdigit(static_cast<unsigned char>(c));
++		});
++	}
++
++	std::string getSteamAppIdFromFile(FileData* game)
++	{
++		if (game == nullptr || Utils::String::toLower(Utils::FileSystem::getExtension(game->getPath())) != ".steam")
++			return "";
++
++		std::ifstream input(game->getPath());
++		if (!input.is_open())
++			return "";
++
++		std::string line;
++		while (std::getline(input, line))
++		{
++			line = Utils::String::trim(line);
++			if (!Utils::String::startsWith(line, "appid="))
++				continue;
++
++			auto appId = Utils::String::trim(line.substr(6));
++			if (isDigits(appId))
++				return appId;
++		}
++
++		return "";
++	}
++
++	std::string getSteamAppId(FileData* game)
++	{
++		if (game == nullptr)
++			return "";
++
++		auto appId = game->getMetadata(MetaDataId::SteamAppId);
++		if (isDigits(appId))
++			return appId;
++
++		return getSteamAppIdFromFile(game);
++	}
++
++	std::string getStringMember(const Value& value, const char* key)
++	{
++		if (!value.IsObject() || !value.HasMember(key) || !value[key].IsString())
++			return "";
++
++		return value[key].GetString();
++	}
++}
++
++void ProtonDBScraper::generateRequests(const ScraperSearchParams& params,
++	std::queue<std::unique_ptr<ScraperRequest>>& requests,
++	std::vector<ScraperSearchResult>& results)
++{
++	auto appId = getSteamAppId(params.game);
++	if (appId.empty())
++		return;
++
++	requests.push(std::unique_ptr<ScraperRequest>(new ProtonDBRequest(results, params.game, appId, PROTONDB_SUMMARY_URL + appId + ".json")));
++}
++
++bool ProtonDBScraper::isSupportedPlatform(SystemData* system)
++{
++	return system != nullptr;
++}
++
++const std::set<Scraper::ScraperMediaSource>& ProtonDBScraper::getSupportedMedias()
++{
++	static std::set<ScraperMediaSource> mdds = {};
++	return mdds;
++}
++
++bool ProtonDBRequest::process(const std::string& response, std::vector<ScraperSearchResult>& results)
++{
++	Document doc;
++	doc.Parse(response.c_str());
++
++	if (doc.HasParseError())
++	{
++		LOG(LogWarning) << "ProtonDBRequest - Error parsing JSON: " << GetParseError_En(doc.GetParseError());
++		return true;
++	}
++
++	auto tier = getStringMember(doc, "tier");
++	auto confidence = getStringMember(doc, "confidence");
++	auto trendingTier = getStringMember(doc, "trendingTier");
++
++	if (tier.empty() && confidence.empty() && trendingTier.empty())
++		return true;
++
++	ScraperSearchResult result("ProtonDB");
++	if (mGame != nullptr)
++		result.mdl = mGame->getMetadata();
++
++	if (mGame != nullptr)
++		result.mdl.set(MetaDataId::Name, mGame->getName());
++
++	result.mdl.set(MetaDataId::SteamAppId, mAppId);
++	result.mdl.set(MetaDataId::ProtonDBUrl, PROTONDB_APP_URL + mAppId);
++
++	if (!tier.empty())
++		result.mdl.set(MetaDataId::ProtonDBTier, tier);
++	if (!confidence.empty())
++		result.mdl.set(MetaDataId::ProtonDBConfidence, confidence);
++	if (!trendingTier.empty())
++		result.mdl.set(MetaDataId::ProtonDBTrendingTier, trendingTier);
++	if (doc.HasMember("score") && doc["score"].IsNumber())
++		result.mdl.set(MetaDataId::ProtonDBScore, std::to_string(doc["score"].GetDouble()));
++	if (doc.HasMember("total") && doc["total"].IsInt())
++		result.mdl.set(MetaDataId::ProtonDBTotal, std::to_string(doc["total"].GetInt()));
++
++	results.push_back(result);
++	return true;
++}
+diff --git a/es-app/src/scrapers/ProtonDBScraper.h b/es-app/src/scrapers/ProtonDBScraper.h
+new file mode 100644
+index 000000000..50980f569
+--- /dev/null
++++ b/es-app/src/scrapers/ProtonDBScraper.h
+@@ -0,0 +1,41 @@
++#pragma once
++
++#ifndef ES_APP_SCRAPERS_PROTON_DB_SCRAPER_H
++#define ES_APP_SCRAPERS_PROTON_DB_SCRAPER_H
++
++#include "scrapers/Scraper.h"
++
++class ProtonDBScraper : public Scraper
++{
++public:
++	void generateRequests(const ScraperSearchParams& params,
++		std::queue<std::unique_ptr<ScraperRequest>>& requests,
++		std::vector<ScraperSearchResult>& results) override;
++
++	bool isSupportedPlatform(SystemData* system) override;
++
++	const std::set<ScraperMediaSource>& getSupportedMedias() override;
++};
++
++class ProtonDBRequest : public ScraperHttpRequest
++{
++public:
++	ProtonDBRequest(std::vector<ScraperSearchResult>& resultsWrite,
++		FileData* game,
++		const std::string& appId,
++		const std::string& url)
++		: ScraperHttpRequest(resultsWrite, url)
++	{
++		mGame = game;
++		mAppId = appId;
++	}
++
++protected:
++	bool process(const std::string& response, std::vector<ScraperSearchResult>& results) override;
++
++private:
++	FileData* mGame;
++	std::string mAppId;
++};
++
++#endif // ES_APP_SCRAPERS_PROTON_DB_SCRAPER_H
+diff --git a/es-app/src/scrapers/Scraper.cpp b/es-app/src/scrapers/Scraper.cpp
+index 5691f112d..92f18ca0d 100644
+--- a/es-app/src/scrapers/Scraper.cpp
++++ b/es-app/src/scrapers/Scraper.cpp
+@@ -4,6 +4,12 @@
+ #include "ArcadeDBJSONScraper.h"
+ #include "GamesDBJSONScraper.h"
+ #include "ScreenScraper.h"
++#include "SteamGridDBScraper.h"
++#include "HowLongToBeatScraper.h"
++#include "ProtonDBScraper.h"
++#include "PCGamingWikiScraper.h"
++#include "LocalLauncherMetadataScraper.h"
++#include "MixedScraper.h"
+ #include "Log.h"
+ #include "Settings.h"
+ #include "SystemData.h"
+@@ -20,8 +26,15 @@
+ #define OVERQUOTA_RETRY_DELAY 15000
+ #define OVERQUOTA_RETRY_COUNT 5
+ 
++static bool isInternalScraper(const std::string& scraper)
++{
++	return scraper == "LocalLaunchers";
++}
++
+ std::vector<std::pair<std::string, Scraper*>> Scraper::scrapers
+ {
++	{ "Mixed", new MixedScraper() },
++
+ #ifdef SCREENSCRAPER_DEV_LOGIN
+ 	{ "ScreenScraper", new ScreenScraperScraper() },
+ #endif
+@@ -35,6 +48,11 @@ std::vector<std::pair<std::string, Scraper*>> Scraper::scrapers
+ #endif
+ 
+ 	{ "IGDB", new IGDBScraper() },
++	{ "HowLongToBeat", new HowLongToBeatScraper() },
++	{ "ProtonDB", new ProtonDBScraper() },
++	{ "PCGamingWiki", new PCGamingWikiScraper() },
++	{ "LocalLaunchers", new LocalLauncherMetadataScraper() },
++	{ "SteamGridDB", new SteamGridDBScraper() },
+ 	{ "ArcadeDB", new ArcadeDBScraper() }
+ };
+ 
+@@ -66,12 +84,25 @@ std::string Scraper::getScraperNameFromIndex(int index)
+ 
+ Scraper* Scraper::getScraper(const std::string name)
+ {	
+-	auto scraper = name;
+-	if(scraper.empty())
+-		scraper = Settings::getInstance()->getString("Scraper");
+-	
++	if(!name.empty())
++	{
++		for (auto scrap : Scraper::scrapers)
++			if (scrap.first == name)
++				return scrap.second;
++
++		return nullptr;
++	}
++
++	auto scraper = Settings::getInstance()->getString("Scraper");
++	if (!scraper.empty() && !isInternalScraper(scraper))
++	{
++		for (auto scrap : Scraper::scrapers)
++			if (scrap.first == scraper)
++				return scrap.second;
++	}
++
+ 	for (auto scrap : Scraper::scrapers)
+-		if (scrap.first == scraper)
++		if (!isInternalScraper(scrap.first))
+ 			return scrap.second;
+ 
+ 	return nullptr;
+@@ -194,11 +225,16 @@ std::unique_ptr<ScraperSearchHandle> Scraper::search(const ScraperSearchParams&
+ 	return handle;
+ }
+ 
+-std::vector<std::string> Scraper::getScraperList()
++std::vector<std::string> Scraper::getScraperList(bool includeInternal)
+ {
+ 	std::vector<std::string> list;
+ 	for(auto& it : Scraper::scrapers)
++	{
++		if (!includeInternal && isInternalScraper(it.first))
++			continue;
++
+ 		list.push_back(it.first);
++	}
+ 
+ 	return list;
+ }
+diff --git a/es-app/src/scrapers/Scraper.h b/es-app/src/scrapers/Scraper.h
+index b08a8ab23..26a4014c1 100644
+--- a/es-app/src/scrapers/Scraper.h
++++ b/es-app/src/scrapers/Scraper.h
+@@ -56,6 +56,7 @@ struct ScraperSearchResult
+ 	MetaDataList	mdl;
+ 	std::string		p2k;
+ 	std::string		scraper;
++	std::string		displayName;
+ 
+ 	std::map<MetaDataId, ScraperSearchItem> urls;
+ 
+@@ -254,7 +255,7 @@ public:
+ 	static int getScraperIndex(const std::string& name);
+ 	static std::string getScraperNameFromIndex(int index);
+ 
+-	static std::vector<std::string> getScraperList();
++	static std::vector<std::string> getScraperList(bool includeInternal = false);
+ 	static bool isValidConfiguredScraper();
+ 
+ 	//About the same as "~/.emulationstation/downloaded_images/[system_name]/[game_name].[url's extension]".
+diff --git a/es-app/src/scrapers/SteamGridDBScraper.cpp b/es-app/src/scrapers/SteamGridDBScraper.cpp
+new file mode 100644
+index 000000000..187d8bc55
+--- /dev/null
++++ b/es-app/src/scrapers/SteamGridDBScraper.cpp
+@@ -0,0 +1,363 @@
++#include "scrapers/SteamGridDBScraper.h"
++
++#include "FileData.h"
++#include "Log.h"
++#include "Paths.h"
++#include "Settings.h"
++#include "SystemConf.h"
++#include "SystemData.h"
++#include "utils/FileSystemUtil.h"
++#include "utils/StringUtil.h"
++
++#include <algorithm>
++#include <cctype>
++#include <fstream>
++#include <rapidjson/document.h>
++#include <rapidjson/error/en.h>
++#include <stdexcept>
++#include <vector>
++
++using namespace rapidjson;
++
++namespace
++{
++	const std::string STEAMGRIDDB_API_URL_BASE = "https://www.steamgriddb.com/api/v2";
++	const std::string STEAMGRIDDB_API_KEY_FILE_NAME = "steamgriddb.key";
++	const int STEAMGRIDDB_AUTO_ASSET_LIMIT = 1;
++	const int STEAMGRIDDB_MANUAL_ASSET_LIMIT = 6;
++
++	std::vector<std::string> getSteamGridDBApiKeyFilePaths()
++	{
++		std::vector<std::string> paths;
++		paths.push_back(Utils::FileSystem::combine(Paths::getUserEmulationStationPath(), STEAMGRIDDB_API_KEY_FILE_NAME));
++		paths.push_back("/userdata/system/" + STEAMGRIDDB_API_KEY_FILE_NAME);
++		return paths;
++	}
++
++	std::string unwrapSteamGridDBApiKey(std::string key)
++	{
++		key = Utils::String::trim(key);
++		if (key.size() >= 2 && ((key.front() == '"' && key.back() == '"') || (key.front() == '\'' && key.back() == '\'')))
++			key = Utils::String::trim(key.substr(1, key.size() - 2));
++
++		return key;
++	}
++
++	std::string extractSteamGridDBApiKey(const std::string& contents)
++	{
++		for (auto line : Utils::String::splitAny(contents, "\r\n", true))
++		{
++			line = Utils::String::trim(line);
++			if (line.empty() || Utils::String::startsWith(line, "#") || Utils::String::startsWith(line, ";"))
++				continue;
++
++			auto equalPos = line.find('=');
++			if (equalPos != std::string::npos)
++			{
++				auto key = Utils::String::trim(line.substr(0, equalPos));
++				if (key == "steamgriddb.api_key" || key == "api_key" || key == "key")
++					line = line.substr(equalPos + 1);
++				else
++					continue;
++			}
++
++			line = unwrapSteamGridDBApiKey(line);
++			if (!line.empty())
++				return line;
++		}
++
++		return "";
++	}
++
++	std::string getSteamGridDBApiKey()
++	{
++		auto apiKey = unwrapSteamGridDBApiKey(SystemConf::getInstance()->get("steamgriddb.api_key"));
++		if (!apiKey.empty())
++			return apiKey;
++
++		for (auto path : getSteamGridDBApiKeyFilePaths())
++		{
++			if (!Utils::FileSystem::exists(path))
++				continue;
++
++			apiKey = extractSteamGridDBApiKey(Utils::FileSystem::readAllText(path));
++			if (!apiKey.empty())
++				return apiKey;
++		}
++
++		return "";
++	}
++
++	HttpReqOptions getSteamGridDBOptions()
++	{
++		HttpReqOptions options;
++		options.customHeaders.push_back("Accept: application/json");
++		options.customHeaders.push_back("Authorization: Bearer " + getSteamGridDBApiKey());
++		return options;
++	}
++
++	std::string getSteamAppId(FileData* game)
++	{
++		if (game == nullptr || Utils::FileSystem::getExtension(game->getPath()) != ".steam")
++			return "";
++
++		std::ifstream input(game->getPath());
++		if (!input.is_open())
++			return "";
++
++		std::string line;
++		while (std::getline(input, line))
++		{
++			line = Utils::String::trim(line);
++			if (!Utils::String::startsWith(line, "appid="))
++				continue;
++
++			auto appid = Utils::String::trim(line.substr(6));
++			if (!appid.empty() && std::all_of(appid.cbegin(), appid.cend(), [](char c) { return std::isdigit(static_cast<unsigned char>(c)); }))
++				return appid;
++		}
++
++		return "";
++	}
++
++	std::string getCleanGameName(const ScraperSearchParams& params)
++	{
++		auto cleanName = params.nameOverride;
++		if (cleanName.empty())
++			cleanName = Utils::String::removeParenthesis(Utils::FileSystem::getStem(params.game->getPath()));
++
++		return cleanName;
++	}
++
++	std::string getAssetLimitQuery(bool manualScrape)
++	{
++		return std::to_string(manualScrape ? STEAMGRIDDB_MANUAL_ASSET_LIMIT : STEAMGRIDDB_AUTO_ASSET_LIMIT);
++	}
++
++	std::string addGridFilters(const std::string& url, bool manualScrape)
++	{
++		return url + "?dimensions=600x900,342x482,660x930"
++			+ "&types=static"
++			+ "&mimes=image%2Fpng,image%2Fjpeg"
++			+ "&nsfw=false"
++			+ "&humor=false"
++			+ "&epilepsy=false"
++			+ "&limit=" + getAssetLimitQuery(manualScrape);
++	}
++
++	std::string addHeroFilters(const std::string& url, bool manualScrape)
++	{
++		return url + "?types=static"
++			+ "&mimes=image%2Fpng,image%2Fjpeg"
++			+ "&nsfw=false"
++			+ "&humor=false"
++			+ "&epilepsy=false"
++			+ "&limit=" + getAssetLimitQuery(manualScrape);
++	}
++
++	std::string addLogoFilters(const std::string& url, bool manualScrape)
++	{
++		return url + "?types=static"
++			+ "&mimes=image%2Fpng"
++			+ "&nsfw=false"
++			+ "&humor=false"
++			+ "&epilepsy=false"
++			+ "&limit=" + getAssetLimitQuery(manualScrape);
++	}
++
++	std::string selectAsset(const std::vector<std::string>& assets, size_t index)
++	{
++		if (assets.empty())
++			return "";
++
++		if (index < assets.size())
++			return assets[index];
++
++		return assets.front();
++	}
++}
++
++void SteamGridDBScraper::generateRequests(const ScraperSearchParams& params,
++	std::queue<std::unique_ptr<ScraperRequest>>& requests,
++	std::vector<ScraperSearchResult>& results)
++{
++	if (getSteamGridDBApiKey().empty())
++	{
++		if (!params.isManualScrape)
++			throw std::runtime_error("INVALID CREDENTIALS");
++
++		return;
++	}
++
++	auto options = getSteamGridDBOptions();
++	auto appid = getSteamAppId(params.game);
++
++	if (!appid.empty())
++	{
++		auto path = STEAMGRIDDB_API_URL_BASE + "/games/steam/" + HttpReq::urlEncode(appid);
++		requests.push(std::unique_ptr<ScraperRequest>(new SteamGridDBRequest(results, path, &options, SteamGridDBRequest::SteamAppId, params.isManualScrape)));
++		return;
++	}
++
++	auto cleanName = getCleanGameName(params);
++	if (cleanName.empty())
++		return;
++
++	auto path = STEAMGRIDDB_API_URL_BASE + "/search/autocomplete/" + HttpReq::urlEncode(cleanName);
++	requests.push(std::unique_ptr<ScraperRequest>(new SteamGridDBRequest(results, path, &options, SteamGridDBRequest::SearchByName, params.isManualScrape)));
++}
++
++bool SteamGridDBScraper::isSupportedPlatform(SystemData* system)
++{
++	return system != nullptr;
++}
++
++const std::set<Scraper::ScraperMediaSource>& SteamGridDBScraper::getSupportedMedias()
++{
++	static std::set<ScraperMediaSource> mdds =
++	{
++		ScraperMediaSource::Box2d,
++		ScraperMediaSource::FanArt,
++		ScraperMediaSource::Marquee,
++		ScraperMediaSource::Wheel
++	};
++
++	return mdds;
++}
++
++std::vector<SteamGridDBRequest::Game> SteamGridDBRequest::parseGames(const std::string& response)
++{
++	std::vector<Game> games;
++	Document doc;
++	doc.Parse(response.c_str());
++
++	if (doc.HasParseError())
++	{
++		LOG(LogWarning) << "SteamGridDBRequest - Error parsing JSON: " << GetParseError_En(doc.GetParseError());
++		return games;
++	}
++
++	if (!doc.HasMember("success") || !doc["success"].IsBool() || !doc["success"].GetBool() || !doc.HasMember("data"))
++		return games;
++
++	auto addGame = [&games](const Value& game)
++	{
++		if (!game.IsObject() || !game.HasMember("id") || !game["id"].IsInt() || !game.HasMember("name") || !game["name"].IsString())
++			return;
++
++		Game item;
++		item.id = game["id"].GetInt();
++		item.name = game["name"].GetString();
++		games.push_back(item);
++	};
++
++	const Value& data = doc["data"];
++	if (mLookupMode == SteamAppId && data.IsObject())
++		addGame(data);
++	else if (data.IsArray())
++	{
++		for (SizeType i = 0; i < data.Size() && i < 8; i++)
++			addGame(data[i]);
++	}
++
++	return games;
++}
++
++void SteamGridDBRequest::preProcess(const std::string& response)
++{
++	mGames = parseGames(response);
++
++	for (auto game : mGames)
++	{
++		auto id = std::to_string(game.id);
++		mDependencyQueue.push({ "grid:" + id, addGridFilters(STEAMGRIDDB_API_URL_BASE + "/grids/game/" + id, mIsManualScrape) });
++		mDependencyQueue.push({ "hero:" + id, addHeroFilters(STEAMGRIDDB_API_URL_BASE + "/heroes/game/" + id, mIsManualScrape) });
++		mDependencyQueue.push({ "logo:" + id, addLogoFilters(STEAMGRIDDB_API_URL_BASE + "/logos/game/" + id, mIsManualScrape) });
++	}
++}
++
++std::vector<std::string> SteamGridDBRequest::getAssetUrls(const std::string& dependencyId)
++{
++	std::vector<std::string> urls;
++	auto response = getDependencyResponse(dependencyId);
++	if (response.empty())
++		return urls;
++
++	Document doc;
++	doc.Parse(response.c_str());
++
++	if (doc.HasParseError() || !doc.HasMember("success") || !doc["success"].IsBool() || !doc["success"].GetBool() || !doc.HasMember("data") || !doc["data"].IsArray())
++		return urls;
++
++	const Value& data = doc["data"];
++	for (SizeType i = 0; i < data.Size(); i++)
++	{
++		if (!data[i].IsObject() || !data[i].HasMember("url") || !data[i]["url"].IsString())
++			continue;
++
++		urls.push_back(data[i]["url"].GetString());
++	}
++
++	return urls;
++}
++
++bool SteamGridDBRequest::process(const std::string& response, std::vector<ScraperSearchResult>& results)
++{
++	if (mGames.empty())
++		mGames = parseGames(response);
++
++	for (auto game : mGames)
++	{
++		auto id = std::to_string(game.id);
++		auto grids = getAssetUrls("grid:" + id);
++		auto heroes = getAssetUrls("hero:" + id);
++		auto logos = getAssetUrls("logo:" + id);
++
++		size_t variantCount = mIsManualScrape ? std::max({ grids.size(), heroes.size(), logos.size(), static_cast<size_t>(1) }) : 1;
++		for (size_t i = 0; i < variantCount; i++)
++		{
++			auto grid = selectAsset(grids, i);
++			auto hero = selectAsset(heroes, i);
++			auto logo = selectAsset(logos, i);
++
++			if (grid.empty() && hero.empty() && logo.empty())
++				continue;
++
++			ScraperSearchResult result("SteamGridDB");
++			result.mdl.set(MetaDataId::Name, game.name);
++			if (mIsManualScrape && variantCount > 1)
++				result.displayName = game.name + " [SteamGridDB art " + std::to_string(i + 1) + "/" + std::to_string(variantCount) + "]";
++
++			auto imageSource = Settings::getInstance()->getString("ScrapperImageSrc");
++			if (!imageSource.empty())
++			{
++				if (imageSource == "fanart" && !hero.empty())
++					result.urls[MetaDataId::Image] = ScraperSearchItem(hero);
++				else if (!grid.empty())
++					result.urls[MetaDataId::Image] = ScraperSearchItem(grid);
++			}
++
++			if (!Settings::getInstance()->getString("ScrapperThumbSrc").empty() && !grid.empty())
++				result.urls[MetaDataId::Thumbnail] = ScraperSearchItem(grid);
++
++			if (Settings::getInstance()->getBool("ScrapeFanart") && !hero.empty())
++				result.urls[MetaDataId::FanArt] = ScraperSearchItem(hero);
++
++			auto logoSource = Settings::getInstance()->getString("ScrapperLogoSrc");
++			if (!logoSource.empty())
++			{
++				if (logoSource == "marquee" && !hero.empty())
++					result.urls[MetaDataId::Marquee] = ScraperSearchItem(hero);
++				else if (!logo.empty())
++					result.urls[MetaDataId::Marquee] = ScraperSearchItem(logo);
++				else if (!hero.empty())
++					result.urls[MetaDataId::Marquee] = ScraperSearchItem(hero);
++			}
++
++			if (result.hasMedia())
++				results.push_back(result);
++		}
++	}
++
++	return true;
++}
+diff --git a/es-app/src/scrapers/SteamGridDBScraper.h b/es-app/src/scrapers/SteamGridDBScraper.h
+new file mode 100644
+index 000000000..edc52075d
+--- /dev/null
++++ b/es-app/src/scrapers/SteamGridDBScraper.h
+@@ -0,0 +1,61 @@
++#pragma once
++
++#ifndef ES_APP_SCRAPERS_STEAM_GRID_DB_SCRAPER_H
++#define ES_APP_SCRAPERS_STEAM_GRID_DB_SCRAPER_H
++
++#include "scrapers/Scraper.h"
++
++class SteamGridDBScraper : public Scraper
++{
++public:
++	void generateRequests(const ScraperSearchParams& params,
++		std::queue<std::unique_ptr<ScraperRequest>>& requests,
++		std::vector<ScraperSearchResult>& results) override;
++
++	bool isSupportedPlatform(SystemData* system) override;
++
++	const std::set<ScraperMediaSource>& getSupportedMedias() override;
++};
++
++class SteamGridDBRequest : public ScraperHttpRequest
++{
++public:
++	enum LookupMode
++	{
++		SearchByName,
++		SteamAppId
++	};
++
++	SteamGridDBRequest(std::vector<ScraperSearchResult>& resultsWrite,
++		const std::string& url,
++		HttpReqOptions* options,
++		LookupMode lookupMode,
++		bool isManualScrape)
++		: ScraperHttpRequest(resultsWrite, url, options)
++	{
++		mLookupMode = lookupMode;
++		mIsManualScrape = isManualScrape;
++	}
++
++	virtual bool retryOn249() { return !mIsManualScrape; }
++
++protected:
++	void preProcess(const std::string& response) override;
++	bool process(const std::string& response, std::vector<ScraperSearchResult>& results) override;
++
++private:
++	struct Game
++	{
++		int id = 0;
++		std::string name;
++	};
++
++	std::vector<Game> parseGames(const std::string& response);
++	std::vector<std::string> getAssetUrls(const std::string& dependencyId);
++
++	LookupMode mLookupMode;
++	bool mIsManualScrape;
++	std::vector<Game> mGames;
++};
++
++#endif // ES_APP_SCRAPERS_STEAM_GRID_DB_SCRAPER_H
+diff --git a/es-app/src/views/gamelist/DetailedContainer.cpp b/es-app/src/views/gamelist/DetailedContainer.cpp
+index 93ca387b9..035048011 100644
+--- a/es-app/src/views/gamelist/DetailedContainer.cpp
++++ b/es-app/src/views/gamelist/DetailedContainer.cpp
+@@ -19,6 +19,79 @@
+ #endif
+ #include "components/VideoVlcComponent.h"
+ 
++static std::string secondsToDisplay(const std::string& value)
++{
++	auto seconds = atol(value.c_str());
++	if (seconds <= 0)
++		return "";
++
++	return Utils::Time::secondsToString(seconds);
++}
++
++static std::string getHltbProgress(FileData* file)
++{
++	if (file == nullptr)
++		return "";
++
++	auto played = atol(file->getMetadata(MetaDataId::GameTime).c_str());
++	auto target = atol(file->getMetadata(MetaDataId::HltbMainTime).c_str());
++	if (target <= 0)
++		target = atol(file->getMetadata(MetaDataId::HltbExtraTime).c_str());
++	if (played <= 0 || target <= 0)
++		return "";
++
++	long percent = (played * 100 + target / 2) / target;
++	if (percent > 999)
++		percent = 999;
++
++	return secondsToDisplay(file->getMetadata(MetaDataId::GameTime)) + " / " + Utils::Time::secondsToString(target) + " (" + std::to_string(percent) + "%)";
++}
++
++static std::string getProtonDBSummary(FileData* file)
++{
++	if (file == nullptr)
++		return "";
++
++	auto tier = file->getMetadata(MetaDataId::ProtonDBTier);
++	if (tier.empty())
++		return "";
++
++	auto summary = Utils::String::proper(tier);
++	auto confidence = file->getMetadata(MetaDataId::ProtonDBConfidence);
++	auto total = file->getMetadata(MetaDataId::ProtonDBTotal);
++
++	if (!confidence.empty())
++		summary += " / " + confidence;
++	if (!total.empty() && Utils::String::toInteger(total) > 0)
++		summary += " (" + total + ")";
++
++	return summary;
++}
++
++static std::string getLauncherSummary(FileData* file)
++{
++	if (file == nullptr)
++		return "";
++
++	auto store = file->getMetadata(MetaDataId::LauncherStore);
++	auto source = file->getMetadata(MetaDataId::LauncherSource);
++	auto runner = file->getMetadata(MetaDataId::LauncherRunner);
++	auto id = file->getMetadata(MetaDataId::LauncherId);
++
++	std::string summary;
++	if (!store.empty())
++		summary = store;
++	else
++		summary = source;
++
++	if (!runner.empty())
++		summary += summary.empty() ? runner : " / " + runner;
++	if (!id.empty())
++		summary += summary.empty() ? id : " (" + id + ")";
++
++	return summary;
++}
++
+ DetailedContainer::DetailedContainer(ISimpleGameListView* parent, GuiComponent* list, Window* window, DetailedContainerType viewType) :
+ 	mParent(parent), mList(list), mWindow(window), mViewType(viewType),
+ 	mDescription(window),
+@@ -38,10 +111,14 @@ DetailedContainer::DetailedContainer(ISimpleGameListView* parent, GuiComponent*
+ 
+ 	mLblRating(window), mLblReleaseDate(window), mLblDeveloper(window), mLblPublisher(window),
+ 	mLblGenre(window), mLblPlayers(window), mLblLastPlayed(window), mLblPlayCount(window), mLblGameTime(window), mLblFavorite(window),
++	mLblHltbMain(window), mLblHltbExtra(window), mLblHltbCompletionist(window), mLblHltbProgress(window),
++	mLblProtonDB(window), mLblPCGamingWiki(window), mLblLauncher(window),
+ 
+ 	mRating(window), mReleaseDate(window), mDeveloper(window), mPublisher(window),
+ 	mGenre(window), mPlayers(window), mLastPlayed(window), mPlayCount(window),
+-	mName(window), mGameTime(window), mTextFavorite(window), mIsPerGameExtrasPathBinding(false)
++	mName(window), mGameTime(window), mTextFavorite(window),
++	mHltbMain(window), mHltbExtra(window), mHltbCompletionist(window), mHltbProgress(window),
++	mProtonDB(window), mPCGamingWiki(window), mLauncher(window), mIsPerGameExtrasPathBinding(false)
+ {
+ 	std::vector<MdImage> mdl = 
+ 	{ 
+@@ -85,9 +162,23 @@ DetailedContainer::DetailedContainer(ISimpleGameListView* parent, GuiComponent*
+ 		mLblPlayers.setVisible(false);
+ 		mLblLastPlayed.setVisible(false);
+ 		mLblPlayCount.setVisible(false);
++		mLblHltbMain.setVisible(false);
++		mLblHltbExtra.setVisible(false);
++		mLblHltbCompletionist.setVisible(false);
++		mLblHltbProgress.setVisible(false);
++		mLblProtonDB.setVisible(false);
++		mLblPCGamingWiki.setVisible(false);
++		mLblLauncher.setVisible(false);
+ 		mName.setVisible(false);
+ 		mPlayCount.setVisible(false);
+ 		mLastPlayed.setVisible(false);
++		mHltbMain.setVisible(false);
++		mHltbExtra.setVisible(false);
++		mHltbCompletionist.setVisible(false);
++		mHltbProgress.setVisible(false);
++		mProtonDB.setVisible(false);
++		mPCGamingWiki.setVisible(false);
++		mLauncher.setVisible(false);
+ 		mPlayers.setVisible(false);
+ 		mGenre.setVisible(false);
+ 		mPublisher.setVisible(false);
+@@ -100,6 +191,20 @@ DetailedContainer::DetailedContainer(ISimpleGameListView* parent, GuiComponent*
+ 	// metadata labels + values
+ 	mLblGameTime.setVisible(false);
+ 	mGameTime.setVisible(false);
++	mLblHltbMain.setVisible(false);
++	mHltbMain.setVisible(false);
++	mLblHltbExtra.setVisible(false);
++	mHltbExtra.setVisible(false);
++	mLblHltbCompletionist.setVisible(false);
++	mHltbCompletionist.setVisible(false);
++	mLblHltbProgress.setVisible(false);
++	mHltbProgress.setVisible(false);
++	mLblProtonDB.setVisible(false);
++	mProtonDB.setVisible(false);
++	mLblPCGamingWiki.setVisible(false);
++	mPCGamingWiki.setVisible(false);
++	mLblLauncher.setVisible(false);
++	mLauncher.setVisible(false);
+ 	mLblFavorite.setVisible(false);
+ 	mTextFavorite.setVisible(false);
+ 
+@@ -135,6 +240,27 @@ DetailedContainer::DetailedContainer(ISimpleGameListView* parent, GuiComponent*
+ 	mLblGameTime.setText(_("Game time") + ": ");
+ 	addChild(&mLblGameTime);
+ 	addChild(&mGameTime);
++	mLblHltbMain.setText(_("HLTB main") + ": ");
++	addChild(&mLblHltbMain);
++	addChild(&mHltbMain);
++	mLblHltbExtra.setText(_("HLTB extra") + ": ");
++	addChild(&mLblHltbExtra);
++	addChild(&mHltbExtra);
++	mLblHltbCompletionist.setText(_("HLTB 100%") + ": ");
++	addChild(&mLblHltbCompletionist);
++	addChild(&mHltbCompletionist);
++	mLblHltbProgress.setText(_("HLTB progress") + ": ");
++	addChild(&mLblHltbProgress);
++	addChild(&mHltbProgress);
++	mLblProtonDB.setText(_("ProtonDB") + ": ");
++	addChild(&mLblProtonDB);
++	addChild(&mProtonDB);
++	mLblPCGamingWiki.setText(_("PCGamingWiki") + ": ");
++	addChild(&mLblPCGamingWiki);
++	addChild(&mPCGamingWiki);
++	mLblLauncher.setText(_("Launcher") + ": ");
++	addChild(&mLblLauncher);
++	addChild(&mLauncher);
+ 	mLblFavorite.setText(_("Favorite") + ": ");
+ 	addChild(&mLblFavorite);
+ 	addChild(&mTextFavorite);
+@@ -269,11 +395,26 @@ std::vector<MdComponent> DetailedContainer::getMetaComponents()
+ 		{ "datetime", "md_lastplayed",  &mLastPlayed,   "md_lbl_lastplayed",  &mLblLastPlayed },
+ 		{ "text",     "md_playcount",   &mPlayCount,    "md_lbl_playcount",   &mLblPlayCount },
+ 		{ "text",     "md_gametime",    &mGameTime,     "md_lbl_gametime",    &mLblGameTime },
++		{ "text",     "md_hltbmain",    &mHltbMain,     "md_lbl_hltbmain",    &mLblHltbMain },
++		{ "text",     "md_hltbextra",   &mHltbExtra,    "md_lbl_hltbextra",   &mLblHltbExtra },
++		{ "text",     "md_hltbcompletionist", &mHltbCompletionist, "md_lbl_hltbcompletionist", &mLblHltbCompletionist },
++		{ "text",     "md_hltbprogress", &mHltbProgress, "md_lbl_hltbprogress", &mLblHltbProgress },
++		{ "text",     "md_protondb",    &mProtonDB,     "md_lbl_protondb",    &mLblProtonDB },
++		{ "text",     "md_pcgamingwiki", &mPCGamingWiki, "md_lbl_pcgamingwiki", &mLblPCGamingWiki },
++		{ "text",     "md_launcher",    &mLauncher,     "md_lbl_launcher",    &mLblLauncher },
+ 		{ "text",     "md_favorite",    &mTextFavorite, "md_lbl_favorite",    &mLblFavorite }
+ 	};
+ 	return mdl;	
+ }
+ 
++void DetailedContainer::setOptionalMetadataRowVisible(TextComponent* label, GuiComponent* component, bool visible)
++{
++	if (label != nullptr)
++		label->setVisible(visible);
++	if (component != nullptr)
++		component->setVisible(visible);
++}
++
+ 
+ void DetailedContainer::createImageComponent(ImageComponent** pImage, bool forceLoad, bool allowFading)
+ {
+@@ -719,6 +860,16 @@ void DetailedContainer::updateDetailsForFolder(FolderData* folder)
+ 	mLastPlayed.setValue("");
+ 	mPlayCount.setValue("");
+ 	mGameTime.setValue("");
++	mHltbMain.setValue("");
++	mHltbExtra.setValue("");
++	mHltbCompletionist.setValue("");
++	mHltbProgress.setValue("");
++	mProtonDB.setValue("");
++	mPCGamingWiki.setValue("");
++	mLauncher.setValue("");
++	setOptionalMetadataRowVisible(&mLblHltbMain, &mHltbMain, false);
++	setOptionalMetadataRowVisible(&mLblHltbCompletionist, &mHltbCompletionist, false);
++	setOptionalMetadataRowVisible(&mLblProtonDB, &mProtonDB, false);
+ }
+ 
+ void DetailedContainer::resetThemedExtras()
+@@ -1043,6 +1194,22 @@ void DetailedContainer::updateControls(FileData* file, bool isClearing, int move
+ 			mLastPlayed.setValue(file->getMetadata(MetaDataId::LastPlayed));
+ 			mPlayCount.setValue(file->getMetadata(MetaDataId::PlayCount));
+ 			mGameTime.setValue(Utils::Time::secondsToString(atol(file->getMetadata(MetaDataId::GameTime).c_str())));
++			auto hltbMain = secondsToDisplay(file->getMetadata(MetaDataId::HltbMainTime));
++			auto hltbExtra = secondsToDisplay(file->getMetadata(MetaDataId::HltbExtraTime));
++			auto hltbCompletionist = secondsToDisplay(file->getMetadata(MetaDataId::HltbCompletionistTime));
++			auto hltbProgress = getHltbProgress(file);
++			auto protonDBSummary = getProtonDBSummary(file);
++
++			mHltbMain.setValue(hltbMain);
++			mHltbExtra.setValue(hltbExtra);
++			mHltbCompletionist.setValue(hltbCompletionist);
++			mHltbProgress.setValue(hltbProgress);
++			mProtonDB.setValue(protonDBSummary);
++			mPCGamingWiki.setValue(file->getMetadata(MetaDataId::PCGamingWikiPage));
++			mLauncher.setValue(getLauncherSummary(file));
++			setOptionalMetadataRowVisible(&mLblHltbMain, &mHltbMain, !hltbMain.empty());
++			setOptionalMetadataRowVisible(&mLblHltbCompletionist, &mHltbCompletionist, !hltbCompletionist.empty());
++			setOptionalMetadataRowVisible(&mLblProtonDB, &mProtonDB, !protonDBSummary.empty());
+ 		}
+ 		else if (file->getType() == FOLDER)
+ 			updateDetailsForFolder((FolderData*)file);
+diff --git a/es-app/src/views/gamelist/DetailedContainer.h b/es-app/src/views/gamelist/DetailedContainer.h
+index 742faf266..ba76a8b8a 100644
+--- a/es-app/src/views/gamelist/DetailedContainer.h
++++ b/es-app/src/views/gamelist/DetailedContainer.h
+@@ -58,6 +58,7 @@ public:
+ protected:
+ 	void	initMDLabels();
+ 	void	initMDValues();
++	void	setOptionalMetadataRowVisible(TextComponent* label, GuiComponent* component, bool visible);
+ 
+ 	std::vector<GuiComponent*>  getComponents();
+ 	std::vector<MdComponent>  getMetaComponents();
+@@ -139,7 +140,11 @@ protected:
+ 	ImageComponent* mNotSpinnerGame;
+ 
+ 	TextComponent mLblRating, mLblReleaseDate, mLblDeveloper, mLblPublisher, mLblGenre, mLblPlayers, mLblLastPlayed, mLblPlayCount, mLblGameTime, mLblFavorite;
++	TextComponent mLblHltbMain, mLblHltbExtra, mLblHltbCompletionist, mLblHltbProgress;
++	TextComponent mLblProtonDB, mLblPCGamingWiki, mLblLauncher;
+ 	TextComponent mDeveloper, mPublisher, mGenre, mPlayers, mPlayCount, mName, mGameTime, mTextFavorite;
++	TextComponent mHltbMain, mHltbExtra, mHltbCompletionist, mHltbProgress;
++	TextComponent mProtonDB, mPCGamingWiki, mLauncher;
+ 
+ 	RatingComponent mRating;
+ 	DateTimeComponent mReleaseDate, mLastPlayed;

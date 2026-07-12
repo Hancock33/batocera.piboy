@@ -54,6 +54,7 @@ rpi-firmware.mk
 rtmidi.mk
 ruffle.mk
 ryzenadj.mk
+shader-slang.mk
 sockpp.mk
 sound-open-firmware.mk
 stk.mk

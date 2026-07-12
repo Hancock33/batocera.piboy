@@ -25,11 +25,11 @@ do_start() {
 
     TARGET_PSYS_MAX=0
     CPU_PL2_FILE="${CPU_PACKAGE_PATH}/constraint_1_power_limit_uw"
-    
+
     if [ -f "$CPU_PL2_FILE" ]; then
         READ_CPU_PL2=$(cat "$CPU_PL2_FILE" 2>/dev/null)
-        CAT_EXIT_STATUS=$? 
-        
+        CAT_EXIT_STATUS=$?
+
         if [ "$CAT_EXIT_STATUS" -ne 0 ]; then
             log_action "Error: failed to read CPU PL2 from ${CPU_PL2_FILE}. Exit status: $CAT_EXIT_STATUS."
             exit 0
@@ -55,7 +55,7 @@ do_start() {
 
     for i in 0 1; do
         LIMIT_FILE="${PSYS_RAPL_PATH}/constraint_${i}_power_limit_uw"
-        
+
         if [ -f "$LIMIT_FILE" ]; then
             CURRENT_LIMIT=$(cat "$LIMIT_FILE" 2>/dev/null)
 
