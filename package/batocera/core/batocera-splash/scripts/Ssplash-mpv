@@ -183,9 +183,9 @@ do_videostart ()
     )
 
     if [ -n "$drm_connector" ] && [ -n "$card_path" ]; then
-        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --no-config %PLAYER_OPTIONS% "${mpv_fast_fonts[@]}" --drm-mode=$drm_mode --drm-connector=$drm_connector --drm-device=$card_path --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
+        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-mode=$drm_mode --drm-connector=$drm_connector --drm-device=$card_path --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
     else
-        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --no-config %PLAYER_OPTIONS% "${mpv_fast_fonts[@]}" --drm-mode=$drm_mode --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
+        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-mode=$drm_mode --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
     fi
 }
 
