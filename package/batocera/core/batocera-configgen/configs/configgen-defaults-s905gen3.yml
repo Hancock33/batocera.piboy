@@ -1,3 +1,6 @@
+model2:
+  emulator: libretro
+  core:     mame
 nds:
   emulator: drastic
   core:     drastic

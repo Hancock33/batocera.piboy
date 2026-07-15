@@ -14,6 +14,9 @@ flash:
 fmtowns:
   emulator: libretro
   core:     mame
+model2:
+  emulator: libretro
+  core:     mame
 model3:
   emulator: supermodel
   core:     supermodel-legacy
@@ -51,3 +54,5 @@ wiiware:
   core:     dolphin
   options:
     videomode: max-480x240
+    decorations: none
+    hud_support: none

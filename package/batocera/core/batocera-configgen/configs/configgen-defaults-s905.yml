@@ -6,6 +6,9 @@ default:
     retroarch.audio_driver: alsathread
     retroarch.audio_out_rate: 44100
 
+nds:
+  emulator: drastic
+  core:     drastic
 amiga500:
   emulator: amiberry
   core:     A500
@@ -39,9 +42,12 @@ pet:
 cplus4:
   emulator: vice
   core:     xplus4
-fmtowns:
-  emulator: libretro
-  core:     mame
 flash:
   emulator: lightspark
   core:     lightspark
+fmtowns:
+  emulator: libretro
+  core:     mame
+model2:
+  emulator: libretro
+  core:     mame

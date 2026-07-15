@@ -4,6 +4,9 @@ default:
     videomode: max-1280x720
     hud_support: true
 
+nds:
+  emulator: drastic
+  core:     drastic
 amiga500:
   emulator: libretro
   core:     uae4arm
@@ -17,6 +20,9 @@ amigacdtv:
   emulator: libretro
   core:     uae4arm
 fmtowns:
+  emulator: libretro
+  core:     mame
+model2:
   emulator: libretro
   core:     mame
 n64:
