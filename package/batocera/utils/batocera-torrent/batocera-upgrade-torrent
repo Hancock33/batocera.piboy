@@ -209,7 +209,7 @@ board_status() {
 
 do_status() {
     SBOARD=$1
-    
+
     find "${G_BASE_DIR}/batocera/versions" -type f |
 	while read TFILE
 	do

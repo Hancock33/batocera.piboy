@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Jul 12, 2026
-DEVILUTIONX_VERSION = 7a75c9e66aa71fccc312bdebc63cc5a5a171bfa2
+# Version: Commits on Jul 16, 2026
+DEVILUTIONX_VERSION = 159b023a4cbc7a1e053ca9d672c0067f9b335f88
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_EMULATOR_INFO = devilutionx.emulator.yml
