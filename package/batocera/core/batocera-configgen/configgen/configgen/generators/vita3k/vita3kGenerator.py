@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import configparser
 import logging
 import shutil
 from typing import TYPE_CHECKING, Any, cast
@@ -8,11 +7,13 @@ from typing import TYPE_CHECKING, Any, cast
 import ruamel.yaml
 import ruamel.yaml.util
 
+from batocera_common.configparser import CaseSensitiveConfigParser
+
 from ... import Command
 from ...batoceraPaths import CACHE, CONFIGS, SAVES, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
-from ..Generator import Generator
 from ...utils import vulkan
+from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
@@ -37,8 +38,8 @@ def has_opengl_4_4_support() -> bool:
         return False
 
     try:
-        import subprocess
         import re
+        import subprocess
         # Query OpenGL version using glxinfo
         res = subprocess.run(["glxinfo", "-B"], capture_output=True, text=True, timeout=2)
         if res.returncode == 0:
@@ -79,8 +80,7 @@ class Vita3kGenerator(Generator):
         mkdir_if_not_exists(vitaGuiConfigs)
 
         # Handle CurrentSettings.ini
-        iniConfig = configparser.ConfigParser()
-        iniConfig.optionxform = str  # Preserve the exact casing of keys
+        iniConfig = CaseSensitiveConfigParser()
 
         if vitaIniFile.is_file():
             iniConfig.read(vitaIniFile)

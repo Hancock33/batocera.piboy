@@ -715,7 +715,8 @@ class Rpcs3Generator(Generator):
             array=commandArray,
             env={
                 "XDG_CONFIG_HOME": CONFIGS,
-                "XDG_CACHE_HOME": CACHE
+                "XDG_CACHE_HOME": CACHE,
+                "LC_ALL": "C"
             }
         )
 
