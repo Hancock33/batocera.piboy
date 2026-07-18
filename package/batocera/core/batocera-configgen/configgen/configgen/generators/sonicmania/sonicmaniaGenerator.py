@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import shutil
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -12,7 +13,7 @@ if TYPE_CHECKING:
 
 class SonicManiaGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "sonic_mania",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ENTER", "pause": "KEY_ENTER" }

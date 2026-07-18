@@ -18,7 +18,7 @@ _IORTCW_CONFIG_FILE: Final = Path("/userdata/roms/ports/rtcw/wolfconfig.cfg")
 
 class RtcwGenerator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "iortcw",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC", "pause": "KEY_ESC", "save_state": "KEY_F5", "restore_state": "KEY_F9" }

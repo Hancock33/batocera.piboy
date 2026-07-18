@@ -19,7 +19,7 @@ class Srb2Generator(Generator):
                 'SDL_MOUSE_RELATIVE_SPEED_SCALE': '2.0'
             })
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "srb2",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

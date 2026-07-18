@@ -36,7 +36,7 @@ class StkGenerator(Generator):
             }
         )
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "supertuxkart",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

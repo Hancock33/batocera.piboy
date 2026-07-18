@@ -49,7 +49,7 @@ class HurricanGenerator(Generator):
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "hurrican",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

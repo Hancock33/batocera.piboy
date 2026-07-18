@@ -19,7 +19,7 @@ class SpacecadetpinballGenerator(Generator):
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "SpaceCadetPinball",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

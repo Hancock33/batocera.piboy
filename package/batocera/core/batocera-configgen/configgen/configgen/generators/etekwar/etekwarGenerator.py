@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import pathlib
-
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -59,7 +58,7 @@ class EtekwarGenerator(Generator):
 
         return Command.Command(array=commandArray)
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "etekwar",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 class Eduke32Generator(Generator):
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "eduke32",
             "keys": {

@@ -26,7 +26,7 @@ class SorrGenerator(Generator):
             'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
         })
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "sorr",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

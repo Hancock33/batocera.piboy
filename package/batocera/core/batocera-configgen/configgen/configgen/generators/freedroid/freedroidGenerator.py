@@ -21,7 +21,7 @@ class FreedroidGenerator(Generator):
             }
         )
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "freedroid",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
