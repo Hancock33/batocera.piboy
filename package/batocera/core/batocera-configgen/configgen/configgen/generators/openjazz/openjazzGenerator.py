@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from typing import IO, TYPE_CHECKING, Final, Self
 
 from ... import Command
-from ...batoceraPaths import CACHE, CONFIGS, ROMS, SAVES, mkdir_if_not_exists
+from ...batoceraPaths import CACHE, CONFIGS, SAVES, mkdir_if_not_exists
 from ...controller import Controller, generate_sdl_game_controller_config
 from ..Generator import Generator
 

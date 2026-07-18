@@ -1,11 +1,16 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
 import shlex
+
+from typing import TYPE_CHECKING
 
 from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+import pathlib
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class DoomretroGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
@@ -14,7 +19,7 @@ class DoomretroGenerator(Generator):
         pwad = ''
 
         if ".uwad" in rom.name:
-            f=open(rom)
+            f=pathlib.Path(rom).open()
             content=f.readlines()
             for line in content:
                 if 'IWAD=/' in line:

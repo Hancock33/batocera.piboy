@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import configparser
 import glob
 from typing import TYPE_CHECKING
 

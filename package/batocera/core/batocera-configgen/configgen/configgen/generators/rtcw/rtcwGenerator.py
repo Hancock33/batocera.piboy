@@ -1,15 +1,21 @@
-import os
-import shutil
-from os import path
+from __future__ import annotations
 
-from ... import Command
-from ...batoceraPaths import CONFIGS, SAVES
+import shutil
+
+from typing import TYPE_CHECKING, Final
+
+from ...Command import Command
 from ...controller import generate_sdl_game_controller_config
-from ...utils import videoMode as videoMode
 from ..Generator import Generator
+from pathlib import Path
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 rtcw_src = "/usr/bin/rtcw/main"
 rtcw_dst = "/userdata/roms/ports/rtcw/main"
+_IORTCW_CONFIG: Final = "/userdata/roms/ports/rtcw"
+_IORTCW_CONFIG_FILE: Final = Path("/userdata/roms/ports/rtcw/wolfconfig.cfg")
 
 class RtcwGenerator(Generator):
 
@@ -23,8 +29,6 @@ class RtcwGenerator(Generator):
 
         shutil.copytree(rtcw_src, rtcw_dst, dirs_exist_ok=True)
 
-        # Config file path
-        config_file_path = "/userdata/roms/ports/rtcw/main/wolfconfig.cfg"
 
         # Define the options to add or modify
         options_to_set = {
@@ -79,8 +83,8 @@ class RtcwGenerator(Generator):
         options_to_set["seta cl_language"] = system.config.get("iortcw_language", "0")
 
         # Check if the file exists
-        if os.path.isfile(config_file_path):
-            with open(config_file_path, 'r') as config_file:
+        if _IORTCW_CONFIG_FILE.is_file():
+            with _IORTCW_CONFIG_FILE.open('r') as config_file:
                 lines = config_file.readlines()
 
             # Loop through the options and update the lines
@@ -94,19 +98,19 @@ class RtcwGenerator(Generator):
                             lines[i] = f"{key} \"{value}\"\n"
 
             # Write the modified content back to the file
-            with open(config_file_path, 'w') as config_file:
+            with _IORTCW_CONFIG_FILE.open('w') as config_file:
                 config_file.writelines(lines)
         else:
             # File doesn't exist, create it and add the options
-            with open(config_file_path, 'w') as config_file:
+            with _IORTCW_CONFIG_FILE.open('w') as config_file:
                 for key, value in options_to_set.items():
                     config_file.write(f"{key} \"{value}\"\n")
 
         # Single Player for now
         commandArray = ["/usr/bin/rtcw/iowolfsp"]
 
-        # iortcw looks for roms in home + /rtcw
-        return Command.Command(
+        # iortcw looks for roms in home + /iortcw
+        return Command(
             array=commandArray,
             env={
                 "XDG_DATA_HOME": "/userdata/roms/ports",

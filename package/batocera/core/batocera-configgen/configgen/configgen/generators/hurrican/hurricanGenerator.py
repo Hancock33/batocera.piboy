@@ -5,14 +5,11 @@ import os
 from typing import TYPE_CHECKING
 
 from ... import Command
-from ...batoceraPaths import ROMS
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
-
-_logger = logging.getLogger(__name__)
 
 class HurricanGenerator(Generator):
 
@@ -20,9 +17,8 @@ class HurricanGenerator(Generator):
         commandArray = ["hurrican", "--pathsave", "/userdata/saves/hurrican/"]
         os.chdir(os.path.dirname(os.path.abspath(rom)))
 
-        if system.isOptSet("hurrican_crt"):
-            if system.config['hurrican_crt'] == '1':
-                commandArray.append("--crt")
+        if system.isOptSet("hurrican_crt") and system.config['hurrican_crt'] == '1':
+            commandArray.append("--crt")
 
         if system.isOptSet("hurrican_custlevel"):
             if system.config['hurrican_custlevel'] == 'ChJees':
@@ -53,7 +49,7 @@ class HurricanGenerator(Generator):
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
-    def getHotkeysContext(self) -> HotkeysContext:
+    def getHotkeysContext(self):
         return {
             "name": "hurrican",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

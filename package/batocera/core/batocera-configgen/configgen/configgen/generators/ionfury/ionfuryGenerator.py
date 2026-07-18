@@ -1,16 +1,12 @@
 from __future__ import annotations
 
-from pathlib import Path
+import os
+
 from typing import TYPE_CHECKING
 
-from batocera_common.configparser import CaseSensitiveRawConfigParser
-
 from ... import Command
-from ...batoceraPaths import CONFIGS, SAVES, SCREENSHOTS, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
-from ...utils.buildargs import parse_args
 from ..Generator import Generator
-import os
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
@@ -26,22 +22,12 @@ class IonfuryGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["ionfury", "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", rom]
 
-        if system.isOptSet("nologo") == False:
+        if not system.isOptSet("nologo"):
             commandArray.extend(["-nologo"])
 
-        os.chdir(os.path.dirname(os.path.abspath(rom)))
-
-        if os.path.isfile('/tmp/piboy') and not os.path.isfile('/tmp/piboy_xrs'):
-            os.system('piboy_keys ionfury.keys')
-            return Command.Command(
-                array=commandArray,
-                env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-                'SDL_MOUSE_RELATIVE_SPEED_SCALE': '2.0'
-            })
-        else:
-            return Command.Command(
-                array=commandArray,
-                env={
+        return Command.Command(
+            array=commandArray,
+            env={
+                'SDL_JOYSTICK_HIDAPI': '0', \
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })

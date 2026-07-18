@@ -1,14 +1,16 @@
 from __future__ import annotations
 
-import filecmp
 import shutil
-
-from typing import TYPE_CHECKING
 from pathlib import Path
 
-from ... import Command, controllersConfig
+from typing import TYPE_CHECKING
+
+from ... import Command
 from ...batoceraPaths import mkdir_if_not_exists
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class Omf2097Generator(Generator):
 

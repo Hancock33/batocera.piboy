@@ -35,7 +35,7 @@ class HypseusSingeGenerator(Generator):
 
     @staticmethod
     def find_m2v_from_txt(txt_file):
-        with open(txt_file, 'r') as file:
+        with Path(txt_file).open('r') as file:
             for line in file:
                 parts = line.strip().split()
                 if parts:
@@ -46,12 +46,12 @@ class HypseusSingeGenerator(Generator):
 
     @staticmethod
     def find_file(start_path, filename):
-        if os.path.exists(os.path.join(start_path, filename)):
+        if Path(os.path.join(start_path, filename)).exists():
             return os.path.join(start_path, filename)
 
         for root, _, files in os.walk(start_path):
             if filename in files:
-                _logger.debug("Found m2v file in path - %s", full_path)
+                _logger.debug("Found m2v file in path - %s", start_path)
                 return os.path.join(root, filename)
 
         return None
@@ -124,18 +124,18 @@ class HypseusSingeGenerator(Generator):
 
         # copy required resources to userdata config folder as needed
         def copy_resources(source_dir, destination_dir):
-            if not os.path.exists(destination_dir):
-                if os.path.exists(source_dir):
+            if not Path(destination_dir).exists():
+                if Path(source_dir).exists():
                     shutil.copytree(source_dir, destination_dir)
             else:
-                if os.path.exists(source_dir):
+                if Path(source_dir).exists():
                     for item in os.listdir(source_dir):
                         source_item = os.path.join(source_dir, item)
                         destination_item = os.path.join(destination_dir, item)
-                        if os.path.isfile(source_item):
-                            if not os.path.exists(destination_item) or os.path.getmtime(source_item) > os.path.getmtime(destination_item):
+                        if Path(source_item).is_file():
+                            if not Path(destination_item).exists() or Path(source_item).stat().st_mtime > Path(destination_item).stat().st_mtime:
                                 shutil.copy2(source_item, destination_item)
-                        elif os.path.isdir(source_item):
+                        elif Path(source_item).is_dir():
                             copy_resources(source_item, destination_item)
 
         directories = ["pics", "sound", "fonts", "bezels"]
@@ -166,13 +166,13 @@ class HypseusSingeGenerator(Generator):
             singeFile = amDir + romName + ".singe"
 
         if (system.name == 'daphne'):
-            if os.path.exists(zipFile):
+            if Path(zipFile).exists():
                 _NEWDAPHNE_ROM_DIR = str(Path(_DAPHNE_ROM_DIR))
             else:
                 _NEWDAPHNE_ROM_DIR = str(Path(_DAPHNE_ROM_DIR)) + "/roms"
 
         if (system.name == 'singe'):
-            if os.path.exists(zipFile):
+            if Path(zipFile).exists():
                 _NEWSINGE_ROM_DIR = str(Path(_SINGE_ROM_DIR))
             else:
                 _NEWSINGE_ROM_DIR = str(Path(_SINGE_ROM_DIR)) + "/roms"
@@ -192,7 +192,7 @@ class HypseusSingeGenerator(Generator):
             video_path = m2v_filename
 
         # check the path exists
-        if not os.path.exists(video_path):
+        if not Path(video_path).exists():
             _logger.debug("Could not find m2v file in path - %s", video_path)
             video_path = self.find_file(rom, cast('str', m2v_filename))
 
@@ -316,7 +316,7 @@ class HypseusSingeGenerator(Generator):
 
         # bezels
         if system.config.get_bool('hypseus_bezels', True):
-            if not os.path.exists(bezelPath):
+            if not Path(bezelPath).exists():
                 commandArray.extend(["-bezel", "default.png"])
             else:
                 commandArray.extend(["-bezel", bezelFile])
@@ -348,8 +348,8 @@ class HypseusSingeGenerator(Generator):
             commandArray.append("-texturestream")
 
         # The folder may have a file with the game name and .commands with extra arguments to run the game.
-        if os.path.isfile(commandsFile):
-            commandArray.extend(open(commandsFile,'r').read().split())
+        if Path(commandsFile).is_file():
+           commandArray.extend(Path(commandsFile).read().split())
 
         # We now use SDL controller config
         return Command.Command(

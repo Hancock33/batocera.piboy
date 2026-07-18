@@ -2403,7 +2403,7 @@ def _hatarib_options(
 
 # SAMEBOY
 def _sameboy_options(
-    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: GunMapping, wheels: DeviceInfoMapping, /,
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
 ) -> None:
     if (system.name == 'gb'):
         coreSettings.save('sameboy_model', '"Auto"')
@@ -2429,7 +2429,7 @@ def _sameboy_options(
 
 # NEOGEOMVS
 def _neogeomvs_options(
-    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: GunMapping, wheels: DeviceInfoMapping, /,
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
 ) -> None:
     #System Type
     if system.isOptSet('geolith_system'):
@@ -2458,25 +2458,25 @@ def _neogeomvs_options(
 
 # Panda3ds
 def _panda3ds_options(
-    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: GunMapping, wheels: DeviceInfoMapping, /,
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
 ) -> None:
     # USE SHADER JIT
-    if system.isOptSet('panda3ds_use_shader_jit') == False:
+    if not system.isOptSet('panda3ds_use_shader_jit'):
         coreSettings.save('panda3ds_use_shader_jit', '"disabled"')
     else:
         coreSettings.save('panda3ds_use_shader_jit', '"enabled"')
     # ACCURATE SHADER MUL
-    if system.isOptSet('panda3ds_accurate_shader_mul') == True:
+    if system.isOptSet('panda3ds_accurate_shader_mul'):
         coreSettings.save('panda3ds_accurate_shader_mul', '"enabled"')
     else:
         coreSettings.save('panda3ds_accurate_shader_mul', '"disabled"')
     # USE UBERSHADER
-    if system.isOptSet('panda3ds_use_ubershader') == True:
+    if system.isOptSet('panda3ds_use_ubershader'):
         coreSettings.save('panda3ds_use_ubershader', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_ubershader', '"disabled"')
     # USE VSYNC
-    if system.isOptSet('panda3ds_use_vsync') == True:
+    if system.isOptSet('panda3ds_use_vsync'):
         coreSettings.save('panda3ds_use_vsync', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_vsync', '"disabled"')
@@ -2489,24 +2489,24 @@ def _panda3ds_options(
     coreSettings.save('panda3ds_use_audio', '"enabled"')
     coreSettings.save('panda3ds_mute_audio', '"disabled"')
     # USE VIRTUAL SD
-    if system.isOptSet('panda3ds_use_virtual_sd') == False:
+    if not system.isOptSet('panda3ds_use_virtual_sd'):
         coreSettings.save('panda3ds_use_virtual_sd', '"disabled"')
     else:
         coreSettings.save('panda3ds_use_virtual_sd', '"enabled"')
     # WRITE PROTECT VIRTUAL SD
-    if system.isOptSet('panda3ds_write_protect_virtual_sd') == True:
+    if system.isOptSet('panda3ds_write_protect_virtual_sd'):
         coreSettings.save('panda3ds_write_protect_virtual_sd', '"enabled"')
     else:
         coreSettings.save('panda3ds_write_protect_virtual_sd', '"disabled"')
     # BATTERY LEVEL
     coreSettings.save('panda3ds_battery_level', '"' + str(int(float(system.config["panda3ds_battery_level"]))) +'"')
     # USE CHARGER
-    if system.isOptSet('panda3ds_use_charger') == True:
+    if system.isOptSet('panda3ds_use_charger'):
         coreSettings.save('panda3ds_use_charger', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_charger', '"disabled"')
        # UBERSHADER LIGHTING OVERRIDE
-    if system.isOptSet('panda3ds_ubershader_lighting_override') == True:
+    if system.isOptSet('panda3ds_ubershader_lighting_override'):
         coreSettings.save('panda3ds_ubershader_lighting_override', '"enabled"')
     else:
         coreSettings.save('panda3ds_ubershader_lighting_override', '"disabled"')
@@ -2515,10 +2515,10 @@ def _panda3ds_options(
 
 # BENNUGS
 def _bennugd_options(
-    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: GunMapping, wheels: DeviceInfoMapping, /,
+    coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
 ) -> None:
     # FRAME LIMITER
-    if system.isOptSet("bennugd_force_frame_limiter") == False:
+    if not system.isOptSet("bennugd_force_frame_limiter"):
         coreSettings.save('force_frame_limiter', '"true"')
     else:
         coreSettings.save('force_frame_limiter', '"false"')

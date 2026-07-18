@@ -1,11 +1,15 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
 import os
+
+from typing import TYPE_CHECKING
 
 from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class F2bglGenerator(Generator):
 
@@ -13,13 +17,11 @@ class F2bglGenerator(Generator):
         os.chdir("/userdata/roms/ports/f2bgl")
         commandArray = ["f2bgl", "--fullscreen", "--datapath=/userdata/roms/ports/f2bgl", "--savepath=/userdata/saves/f2bgl"]
 
-        if system.isOptSet('f2b_fog'):
-            if system.config['f2b_fog'] == '0':
-                commandArray.extend(['--no-fog'])
+        if system.isOptSet('f2b_fog') and system.config['f2b_fog'] == '0':
+            commandArray.extend(['--no-fog'])
 
-        if system.isOptSet('f2b_gouraud'):
-            if system.config['f2b_gouraud'] == '0':
-                commandArray.extend(['--no-gouraud'])
+        if system.isOptSet('f2b_gouraud') and system.config['f2b_gouraud'] == '0':
+            commandArray.extend(['--no-gouraud'])
 
         if system.isOptSet('f2b_filter'):
             strf2b_filter = '--texturefilter=' + system.config['f2b_filter']
@@ -47,7 +49,7 @@ class F2bglGenerator(Generator):
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
-    def getHotkeysContext(self) -> HotkeysContext:
+    def getHotkeysContext(self):
         return {
             "name": "f2bgl",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

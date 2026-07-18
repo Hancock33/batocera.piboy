@@ -5,7 +5,6 @@ import os
 from typing import TYPE_CHECKING
 
 from ... import Command
-from ...batoceraPaths import ROMS
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
@@ -24,7 +23,6 @@ class HclGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         try:
-            os.chdir("/usr/share/hcl/data/map")
             os.chdir("/usr/share/hcl")
         except Exception:
             _logger.error("ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.")

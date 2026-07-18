@@ -1,10 +1,10 @@
-
 from __future__ import annotations
 
 import configparser
-from typing import TYPE_CHECKING
 import os
 import shutil
+
+from typing import TYPE_CHECKING
 
 from ... import Command
 from ...batoceraPaths import CONFIGS, SAVES
@@ -13,6 +13,7 @@ from ..Generator import Generator
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
+    
 
 mpq_src = "/usr/share/diasurgical/devilutionx"
 mpq_dst = "/userdata/roms/ports/devilutionx"
@@ -29,7 +30,8 @@ class DevilutionXGenerator(Generator):
 
         # copy latest devilutionx.mpq to rom dir
         shutil.copytree(mpq_src, mpq_dst, dirs_exist_ok=True)
-        os.remove(configFile)
+        if configFile.exists():
+            os.remove(configFile)
 
         ## Configure
         config = configparser.ConfigParser()

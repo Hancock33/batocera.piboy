@@ -1,13 +1,14 @@
 from __future__ import annotations
 
 import json
+import os
+
 from typing import TYPE_CHECKING
 
 from ... import Command
 from ...batoceraPaths import ensure_parents_and_open
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
-import os
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
@@ -172,7 +173,7 @@ Joymapping =[
 
 class IkemenGenerator(Generator):
 
-    def getHotkeysContext(self) -> HotkeysContext:
+    def getHotkeysContext(self):
         return {
             "name": "ikemen",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ESC" }
