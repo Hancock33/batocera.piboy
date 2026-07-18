@@ -197,7 +197,7 @@ fi
 
 echo "Deleting Android userdata partition #$UD_NUM..."
 parted -s "$DEVICE" rm "$UD_NUM"
-echo "Creating Android userdata partition #$UD_NUM (${UD_START_MB}MiB–${NEW_UD_END_MB}MiB)..."
+echo "Creating Android userdata partition #$UD_NUM (${UD_START_MB}MiB-${NEW_UD_END_MB}MiB)..."
 parted -a optimal -s "$DEVICE" \
   mkpart primary ext4 "${UD_START_MB}MiB" "${NEW_UD_END_MB}MiB"
 parted -s "$DEVICE" name "$UD_NUM" userdata
@@ -209,7 +209,7 @@ dd if=/dev/zero of="${UD_PART_DEV}" bs=1M count=8 &>/dev/null
 # 6) Create BATOCERA partition (fixed 8 GiB)
 BT_START_MB=$NEW_UD_END_MB
 BT_END_MB=$(( BT_START_MB + 8192 ))  # 8 GiB
-echo "Creating BATOCERA partition #$BT_NUM (${BT_START_MB}MiB–${BT_END_MB}MiB)..."
+echo "Creating BATOCERA partition #$BT_NUM (${BT_START_MB}MiB-${BT_END_MB}MiB)..."
 parted -a optimal -s "$DEVICE" \
   mkpart primary fat32 "${BT_START_MB}MiB" "${BT_END_MB}MiB"
 parted -s "$DEVICE" name "$BT_NUM" BATOCERA

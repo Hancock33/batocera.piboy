@@ -50,7 +50,7 @@ mkdir -p "$ABL_DIR"
 # ---- GitHub Online Check Logic ----
 if [[ "${1:-}" == "--check-online" ]]; then
     echo "Checking GitHub for ABL updates..."
-    
+
     # Try fetching the latest release tag from the GitHub API
     LATEST_TAG=""
     if LATEST_RELEASE_JSON=$(curl -sL --fail --max-time 10 "https://api.github.com/repos/ROCKNIX/abl/releases/latest" 2>/dev/null); then
@@ -77,7 +77,7 @@ if [[ "${1:-}" == "--check-online" ]]; then
         # If files don't exist, or local version doesn't match the online release
         if [ ! -f "$ELF" ] || [ ! -f "$SHA256SUM" ] || [ "$LATEST_TAG" != "$LOCAL_VERSION" ]; then
             echo "A newer ABL bootloader ($LATEST_TAG) is available online!"
-            
+
             proceed_download=0
             if [ "$NON_INTERACTIVE" -eq 1 ]; then
                 proceed_download=1
@@ -91,7 +91,7 @@ if [[ "${1:-}" == "--check-online" ]]; then
 
             if [ "$proceed_download" -eq 1 ]; then
                 echo "Downloading ABL release ${LATEST_TAG}..."
-                
+
                 TMP_DIR=$(mktemp -d)
                 TAR_TMP="${TMP_DIR}/rocknix-abl.tar.gz"
                 TAR_URL="https://github.com/ROCKNIX/abl/releases/download/${LATEST_TAG}/rocknix-abl-${LATEST_TAG}.tar.gz"
@@ -101,7 +101,7 @@ if [[ "${1:-}" == "--check-online" ]]; then
                     rm -rf "$TMP_DIR"
                     exit 1
                 fi
-                
+
                 echo "Extracting archive..."
                 if ! tar -xzf "$TAR_TMP" -C "$TMP_DIR"; then
                     echo "Error: Failed to extract tarball. Aborting update."
@@ -131,7 +131,7 @@ if [[ "${1:-}" == "--check-online" ]]; then
                 mv "$FOUND_ELF" "$ELF"
                 mv "$FOUND_SHA" "$SHA256SUM"
                 echo "$LATEST_TAG" > "${ABL_DIR}/version"
-                
+
                 # Cleanup temp directory
                 rm -rf "$TMP_DIR"
                 echo "Download complete and verified."
@@ -234,7 +234,7 @@ if [ "$NON_INTERACTIVE" -ne 1 ]; then
     cat << EOF
 ------------------------------------------------------------
 Disclaimer
-Flashing a custom ABL carries inherent risk and may result 
+Flashing a custom ABL carries inherent risk and may result
 in an unbootable device if used incorrectly.
 
 - You are responsible for any damage caused

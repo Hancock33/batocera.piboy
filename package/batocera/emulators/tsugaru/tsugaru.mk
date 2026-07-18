@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 17, 2026
-TSUGARU_VERSION = 84366ce2329ad94020ea33141eab0edc03e03059
+TSUGARU_VERSION = fb48b0af5fdd0401ca9e571017f3d75ba4c9b46a
 TSUGARU_SITE = $(call github,captainys,TOWNSEMU,$(TSUGARU_VERSION))
 TSUGARU_LICENSE = GPLv2
 TSUGARU_SUPPORTS_IN_SOURCE_BUILD = NO
