@@ -3,8 +3,8 @@
 # libretro-kronos
 #
 ################################################################################
-# Version: Commits on Apr 14, 2026
-LIBRETRO_KRONOS_VERSION = 1d32cadb1150d47710a537b51622f58c76ae566e
+# Version: Commits on Jul 18, 2026
+LIBRETRO_KRONOS_VERSION = d451a55253e2e75bcef704ec8ade2085d298212c
 LIBRETRO_KRONOS_SITE = $(call github,FCare,kronos,$(LIBRETRO_KRONOS_VERSION))
 LIBRETRO_KRONOS_LICENSE = BSD-3-Clause
 LIBRETRO_KRONOS_DEPENDENCIES += mesa3d
