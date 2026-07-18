@@ -53,6 +53,7 @@
 - Rockchip RK3588 devices moved to the mainline linux kernel:
   CoolPi 4B, FriendlyElec CM3588 NAS, GameForce ACE, IndieDroid Nova, Khadas Edge2, Orange Pi 5
   Orange Pi 5 Plus, Orange Pi 5B, QuartzPro64, ROCK 5A, ROCK 5B, ROCK 5B Plus, ROCK 5C
+- Select Qualcomm handheld devices can now install batcoera on the internal drive alongside Android (batocera-install-internal)
 - The Force Engine to capable aarch64 devices
 - TR1X & TR2X have merged into the unified TRX which also now supports Tomb Raider 3.
 - Vita3k added for capable aarch64 devices
@@ -122,7 +123,7 @@
 - FAudio to 26.05
 - FFMPEG to 8.1.2
 - Khadas VIM4 kernel updated to vendor 5.15.y
-- LabWC to 0.20.0
+- LabWC to 0.20.1
 - Linux Firmware to 20260622
 - Mesa3D to 26.1.4
 - Nvidia Open Production driver to 610.43.03
@@ -142,7 +143,7 @@
 - WINE Mono to 11.1.0
 - WINE Proton to proton-exp-11.0
 - WINE TKG to 11.12
-- Wlroots to 0.20.1
+- Wlroots to 0.20.2
 - X86_64 / Zen3 kernel updated to 7.1.3
 
 # 2026/05/30 - batocera.linux 43.1
