@@ -21,7 +21,7 @@ import toml
 
 from ... import Command
 from ...batoceraPaths import CONFIGS, SCREENSHOTS, mkdir_if_not_exists
-from ...controller import write_sdl_controller_db
+from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
 from ..Generator import Generator
 
 if TYPE_CHECKING:

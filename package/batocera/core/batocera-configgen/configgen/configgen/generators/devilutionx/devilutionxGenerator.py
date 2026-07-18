@@ -3,7 +3,6 @@ from __future__ import annotations
 import configparser
 import os
 import shutil
-
 from typing import TYPE_CHECKING
 
 from ... import Command

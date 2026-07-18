@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import os
 import shutil
-
 from typing import TYPE_CHECKING
 
 from ... import Command
