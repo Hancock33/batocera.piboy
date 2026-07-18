@@ -147,8 +147,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'trx': ('trx.trxGenerator', 'TRXGenerator'),
     'tsugaru': ('tsugaru.tsugaruGenerator', 'TsugaruGenerator'),
     'uqm': ('uqm.uqmGenerator', 'UqmGenerator'),
-    'vanillara': ('vanillara.vanillaraGenerator', 'VanillaraGenerator'),
-    'vanillatd': ('vanillatd.vanillatdGenerator', 'VanillatdGenerator'),
     'vcmi': ('vcmi.vcmiGenerator', 'VcmiGenerator'),
     'vice': ('vice.viceGenerator', 'ViceGenerator'),
     'vita3k': ('vita3k.vita3kGenerator', 'Vita3kGenerator'),

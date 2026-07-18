@@ -1,9 +1,15 @@
+from __future__ import annotations
+
 import os
 
+from typing import TYPE_CHECKING
+
 from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class WitchavenGenerator(Generator):
 
@@ -14,6 +20,12 @@ class WitchavenGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-                'SDL_MOUSE_RELATIVE_SPEED_SCALE': '3.0'
+                'SDL_JOYSTICK_HIDAPI': '0', \
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "witchaven",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

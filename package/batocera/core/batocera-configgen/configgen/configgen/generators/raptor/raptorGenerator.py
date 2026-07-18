@@ -12,7 +12,7 @@ import pathlib
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
-  
+
 class RaptorGenerator(Generator):
     if not pathlib.Path('/userdata/system/configs/raptor').exists():
         pathlib.Path('/userdata/system/configs/raptor').mkdir(parents=True)

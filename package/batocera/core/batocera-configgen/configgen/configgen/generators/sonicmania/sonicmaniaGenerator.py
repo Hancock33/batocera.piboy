@@ -1,13 +1,15 @@
-import os
-import shutil
-import configparser
+from __future__ import annotations
 
-from batocera_common.configparser import CaseSensitiveConfigParser
+import os
+
+from typing import TYPE_CHECKING
 
 from ... import Command
-from ...batoceraPaths import ROMS
-from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class SonicManiaGenerator(Generator):
 

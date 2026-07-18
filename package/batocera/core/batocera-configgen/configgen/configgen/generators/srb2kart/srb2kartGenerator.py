@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
-import os
 
-from ... import Command, controllersConfig
+from ... import Command
+from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class Srb2kartGenerator(Generator):
 
@@ -14,7 +17,8 @@ class Srb2kartGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SRB2WADDIR': '/userdata/roms/ports/srb2kart'
+                'SRB2WADDIR': '/userdata/roms/ports/srb2kart',
+                'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
 
     def getHotkeysContext(self):
