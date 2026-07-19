@@ -5649,10 +5649,6 @@ hikaru:
   extensions:           [7z, zip]
   platform:             hikaru, arcade
   emulators:
-    libretro:
-      mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
-    mame:
-      mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
     demul:
       demul: { requireAnyOf: [BR2_PACKAGE_DEMUL] }
   comment_en:           |
