@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import os
+import pathlib
 import shutil
 from typing import TYPE_CHECKING
 
@@ -19,11 +19,11 @@ class StkGenerator(Generator):
         config_root = '/userdata/system/.config/supertuxkart'
         config_dst = '/userdata/system/.config/supertuxkart/config-0.10'
 
-        if not os.path.exists(config_root):
-            os.mkdir(config_root)
+        if not pathlib.Path(config_root).exists():
+            pathlib.Path(config_root).mkdir()
 
-        if not os.path.exists(config_dst):
-            os.mkdir(config_dst)
+        if not pathlib.Path(config_dst).exists():
+            pathlib.Path(config_dst).mkdir()
             shutil.copytree(config_src, config_dst, dirs_exist_ok=True)
 
         commandArray = ['supertuxkart', '--render-driver=vulkan', '-f']

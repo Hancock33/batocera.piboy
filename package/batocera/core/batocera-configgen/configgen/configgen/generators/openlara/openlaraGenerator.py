@@ -3,12 +3,12 @@ from __future__ import annotations
 import os
 import shutil
 from pathlib import Path
-from typing import TYPE_CHECKING
 
 from ... import Command
 from ...batoceraPaths import mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
 
 class OpenlaraGenerator(Generator):
 
@@ -22,8 +22,8 @@ class OpenlaraGenerator(Generator):
 
         # Copy files & folders if they don't exist
         destination_file = Path(str(openlaraRomPath) + '/OpenLara')
-        if os.path.exists(destination_file):
-            os.remove(destination_file)
+        if Path(destination_file).exists():
+            Path(destination_file).unlink()
             shutil.copy(openlaraSourcePath, destination_file)
         else:
             shutil.copy(openlaraSourcePath, destination_file)

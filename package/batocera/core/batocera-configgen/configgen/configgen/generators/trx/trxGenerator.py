@@ -30,8 +30,8 @@ class TRXGenerator(Generator):
 
         # Copy files & folders if they don't exist
         destination_file = Path(str(trxRomPath) + '/TRX')
-        if os.path.exists(destination_file):
-            os.remove(destination_file)
+        if Path(destination_file).exists():
+            Path(destination_file).unlink()
             shutil.copy(trxSourcePath, destination_file)
         else:
             shutil.copy(trxSourcePath, destination_file)

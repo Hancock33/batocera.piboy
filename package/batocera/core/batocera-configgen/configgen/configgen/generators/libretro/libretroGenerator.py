@@ -20,7 +20,7 @@ from ...batoceraPaths import (
     USER_SHADERS,
     mkdir_if_not_exists,
 )
-from ...exceptions import BatoceraException, MissingCore
+from ...exceptions import BatoceraException
 from ...settings.unixSettings import UnixSettings
 from ...utils import videoMode as videoMode
 from ..Generator import Generator

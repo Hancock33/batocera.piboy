@@ -363,7 +363,7 @@ def filter_built_packages(packages: Iterable[str], output_dir: Path, /) -> set[s
 
     for pkg in packages:
         pkg_norm = pkg.replace('_', '-').lower()
-        
+
         # Check per-package directories
         matched_per_package = False
         for d in per_package_subdirs:
@@ -588,7 +588,7 @@ def main() -> None:
         print(f'A total of {bold(len(final_packages))} active packages will be reset and rebuilt.')
         print('This is usually triggered by modifications to low-level/core system libraries (such as mesa3d or udev).')
         print('--------------------------------------------------------')
-        
+
         try:
             # Force prompt flush before requesting raw input
             print(

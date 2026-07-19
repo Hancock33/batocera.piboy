@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import configparser
-import os
+import pathlib
 import shutil
 from typing import TYPE_CHECKING
 
@@ -29,7 +29,7 @@ class DevilutionXGenerator(Generator):
         # copy latest devilutionx.mpq to rom dir
         shutil.copytree(mpq_src, mpq_dst, dirs_exist_ok=True)
         if configFile.exists():
-            os.remove(configFile)
+            pathlib.Path(configFile).unlink()
 
         ## Configure
         config = configparser.ConfigParser()

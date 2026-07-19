@@ -30,9 +30,8 @@ class F2bglGenerator(Generator):
             strf2b_scaler = '--texturescaler=' + system.config['f2b_scaler']
             commandArray.extend([strf2b_scaler])
 
-        if system.isOptSet('f2b_sub'):
-            if system.config['f2b_sub'] == '1':
-                commandArray.extend(['--subtitles'])
+        if system.isOptSet('f2b_sub') and system.config['f2b_sub'] == '1':
+            commandArray.extend(['--subtitles'])
 
         if system.isOptSet('f2b_lang'):
             strf2b_lang = '--language=' + system.config['f2b_lang'] + ' --voice=' + system.config['f2b_lang']

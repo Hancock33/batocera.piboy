@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import pathlib
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -28,7 +29,7 @@ class Eduke32Generator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         rtsfile = rom.name.replace('.GRP', '.RTS').replace('.grp', '.rts').replace('.EDUKE', '.RTS').replace('.eduke', '.rts')
         if (rom.name.lower()).endswith('eduke'):
-            edukegroup=open(rom).readline().rstrip()
+            edukegroup=pathlib.Path(rom).open().readline().rstrip()
             edukerom=rom.name.replace('.eduke', '.GRP').replace('.EDUKE', '.GRP')
 
             commandArray = ["eduke32", edukerom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", edukegroup, "-rts", rtsfile]

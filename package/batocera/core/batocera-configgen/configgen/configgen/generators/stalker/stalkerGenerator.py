@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
 import logging
 import os
 from pathlib import Path
@@ -16,8 +15,8 @@ class StalkerGenerator(Generator):
 
         commandArray = ["xr_3da"]
         romExt = os.path.splitext(rom)[1]
-        _logger.debug(f"rom path: %s", Path(rom))
-        _logger.debug(f"rom file extension: %s", romExt.lower())
+        _logger.debug("rom path: %s", Path(rom))
+        _logger.debug("rom file extension: %s", romExt.lower())
 
         # Skip Intro
         if system.isOptSet('stalker_intro') and system.getOptBoolean('stalker_intro'):

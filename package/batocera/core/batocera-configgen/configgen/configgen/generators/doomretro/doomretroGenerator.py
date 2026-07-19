@@ -1,13 +1,12 @@
 from __future__ import annotations
 
+import pathlib
 import shlex
-
 from typing import TYPE_CHECKING
 
 from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
-import pathlib
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext

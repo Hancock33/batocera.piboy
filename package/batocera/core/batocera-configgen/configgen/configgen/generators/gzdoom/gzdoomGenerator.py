@@ -3,13 +3,13 @@ from __future__ import annotations
 import collections
 import re
 import shlex
+from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
 from ...batoceraPaths import BATOCERA_SHARE_DIR, CONFIGS, LOGS, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
-from pathlib import Path
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext
@@ -245,7 +245,7 @@ class GzdoomGenerator(Generator):
 
         rom_extension = rom.suffix.lower()
         if rom_extension == ".gzdoom":
-            with open(rom) as f:
+            with Path(rom).open() as f:
                 iwad_command = f.read().strip()
             args = shlex.split(iwad_command)
         elif  rom_extension == ".uwad":

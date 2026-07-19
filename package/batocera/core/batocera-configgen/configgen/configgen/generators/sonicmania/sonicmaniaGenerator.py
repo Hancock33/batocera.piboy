@@ -2,10 +2,13 @@ from __future__ import annotations
 
 import os
 import shutil
+from pathlib import Path
 from typing import TYPE_CHECKING
 
+from batocera_common.configparser import CaseSensitiveConfigParser
+
 from ... import Command
-from ...controller import generate_sdl_game_controller_config
+from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
 from ..Generator import Generator
 
 if TYPE_CHECKING:
@@ -15,19 +18,17 @@ class SonicManiaGenerator(Generator):
 
     def getHotkeysContext(self) -> HotkeysContext:
         return {
-            "name": "sonic_mania",
+            "name": "sonicmania",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"], "menu": "KEY_ENTER", "pause": "KEY_ENTER" }
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
-        source_file = '/usr/bin/sonicmania'
-        rom_directory = '/userdata/roms/ports/sonicmania'
-        destination_file = rom_directory + '/sonicmania'
-        if os.path.exists(destination_file):
-            os.remove(destination_file)
-            shutil.copy(source_file, destination_file)
-        else:
+        source_file = Path('/usr/bin/sonicmania')
+        rom_directory = Path('/userdata/roms/ports/sonicmania')
+        destination_file = Path(str(rom_directory) + '/sonicmania')
+
+        if not destination_file.exists():
             shutil.copy(source_file, destination_file)
 
         ## Configuration
@@ -42,8 +43,8 @@ class SonicManiaGenerator(Generator):
         selected_language = system.config.get('smania_language', '0')
 
         ## Create the Settings.ini file
-        config = configparser.ConfigParser()
-        config.optionxform = str
+        config = CaseSensitiveConfigParser()
+
         # Game
         config['Game'] = {
             'devMenu': 'y',
@@ -74,7 +75,7 @@ class SonicManiaGenerator(Generator):
             'sfxVolume': '1.000000'
         }
         # Save the ini file
-        with open( rom_directory + '/Settings.ini', 'w') as configfile:
+        with (rom_directory / 'Settings.ini').open('w') as configfile:
             config.write(configfile)
 
         write_sdl_controller_db(playersControllers, rom_directory / "gamecontrollerdb.txt")

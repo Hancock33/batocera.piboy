@@ -1,10 +1,9 @@
-import os
-import shutil
-from os import path
+from __future__ import annotations
 
 from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
 
 class VcmiGenerator(Generator):
 
