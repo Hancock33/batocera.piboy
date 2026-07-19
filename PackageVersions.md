@@ -261,7 +261,7 @@ Emulators|[play](https://github.com/jpd002/Play-.git)|50aedca2639521bc498ace0b2b
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|35a2bcf3dff34fee1c200afa015a0088221eca70|Jul 19, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|a12a7be0898de32ab3eefb891e6778ff5130e5fb|Jun 27, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|b11534b7509a60c653d0515260142db58d161a27|Jul 19, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|v1.22.2|Nov 20, 2025
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260321|Mar 21, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|a7d90852dd02efcceb539968667201dbc9799cb0|Jul 18, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.338|Jul 17, 2026
@@ -436,6 +436,7 @@ Network|[qrtr](http://github.com/linux-msm/qrtr)|0428c6541d230cdd253bfa76cef8334
 Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|b30a3eb38f9af283f18dbd3c7755653efc52c094|Jun 22, 2026
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|b6bb92d40cfffe28621abcf7bfaa6d99beea46cb|May 18, 2026
+Network|[uwe5622](http://github.com/EvilOlaf/uwe5622)|6088bdbaa9b31b355c807878450d21348eb4a8e3|Jul 8, 2026
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|48bc0d079116c6429989bcf88595ef20c5c1b80f|Mar 25, 2026
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|4cd8346e1c51dbba48434ccd301d73794f16e086|Jul 18, 2026
 Ports|[avp](http://github.com/atsb/NakedAVP)|5e5b615bcb14af32bf492106ea352dbff9642c1c|Feb 15, 2026
@@ -456,7 +457,7 @@ Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|b6a499a246496429091b91495792d48
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|9342a53e63e2b281735241f4bff67bcd7612a7b5|Jun 07, 2026
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|e5501815ca7181b52432c4620dcd48ed2fa62402|Jun 07, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|4f6ad78fc37104e062d4aec81ad04d6080eddbad|Jul 12, 2026
-Ports|[dhewm3](http://github.com/dhewm/dhewm3)|455b88e8dff2be822f08eb498f51b383e851fa38|Jun 08, 2026
+Ports|[dhewm3](http://github.com/dhewm/dhewm3)|1.5.5|Jun 08, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a593cc2c23c684e75dbc3b28f6b57fbbe5d9528d|Jul 19, 2026
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|e1ff42e16cd4a04737edece1d27cd44dfd577f80|Jun 21, 2026

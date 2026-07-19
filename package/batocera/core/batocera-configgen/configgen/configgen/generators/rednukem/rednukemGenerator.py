@@ -13,6 +13,12 @@ if TYPE_CHECKING:
 
 class RednukemGenerator(Generator):
 
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "rednukem",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_Q"] }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["rednukem", "-j", str(Path(rom.resolve().parent)), "-g", rom]
         os.chdir(Path(rom.resolve().parent))
@@ -20,12 +26,6 @@ class RednukemGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_JOYSTICK_HIDAPI': '0', \
+                'SDL_JOYSTICK_HIDAPI': '0',
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
-
-    def getHotkeysContext(self) -> HotkeysContext:
-        return {
-            "name": "rednukem",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_Q"] }
-        }

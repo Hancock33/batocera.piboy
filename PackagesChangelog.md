@@ -6,7 +6,6 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|35a2bcf3dff34fee1c200
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|70419d43ba72d84424ea9cc9bc0f6dc1ff55c765|Jul 19, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-07-19|Jul 19, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|dfe7eeb3a8bac2368786e4b72d7931fabbcc82aa|Jul 19, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|b11534b7509a60c653d0515260142db58d161a27|Jul 19, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a593cc2c23c684e75dbc3b28f6b57fbbe5d9528d|Jul 19, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|009855c193c951da7068af0cb2cc14817375efbc|Jul 19, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|63796c5d2d40010b5a495c748b74f5f8cd7d8b4d|Jul 19, 2026
@@ -103,6 +102,7 @@ Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|3acca9f5e211edb601000
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|b0d7484f3f8bf7d89810bf6113f8ae81e3fc7cc0|Jul 09, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|5edd399260b5081f9c1c96fc7f369b920d6732d1|Jul 08, 2026
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-alpha8|Jul 08, 2026
+Network|[uwe5622](http://github.com/EvilOlaf/uwe5622)|6088bdbaa9b31b355c807878450d21348eb4a8e3|Jul 8, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.74.4|Jul 08, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.2|Jul 08, 2026
 Network|[qrtr](http://github.com/linux-msm/qrtr)|0428c6541d230cdd253bfa76cef83341e1c2d178|Jul 08, 2026
@@ -215,7 +215,7 @@ Emulators|[libretro-gp32emu](http://github.com/gameblabla/gp32emu)|9ca3a72fac79e
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|v0.8.136|Jun 08, 2026
 Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.15.2|Jun 08, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|v0.4.3-3|Jun 08, 2026
-Ports|[dhewm3](http://github.com/dhewm/dhewm3)|455b88e8dff2be822f08eb498f51b383e851fa38|Jun 08, 2026
+Ports|[dhewm3](http://github.com/dhewm/dhewm3)|1.5.5|Jun 08, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|10a173b5536fc75cd93f8a3868349dad963542ef|Jun 07, 2026
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.18.0|Jun 07, 2026
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|935d6fc060eb82172dac29e880fe9b877fbdb640|Jun 07, 2026
@@ -421,6 +421,7 @@ Emulators|[libretro-bsnes-hd](http://github.com/DerKoun/bsnes-hd)|fc26b25ea236f0
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.8|Dec 02, 2025
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|ebd7efe1ee902e70c5943b65a2bf44b9a3c31eb8|Nov 23, 2025
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|v1.22.2|Nov 20, 2025
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|76fe82f5eb318fdeb30ba9fb27093a9a10bc3821|Nov 19, 2025
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.8|Nov 13, 2025

@@ -8,9 +8,21 @@ from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from ...types import HotkeysContext
+
 _logger = logging.getLogger(__name__)
 
 class StalkerGenerator(Generator):
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "xr_3da",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
         commandArray = ["xr_3da"]
@@ -34,9 +46,3 @@ class StalkerGenerator(Generator):
             env={
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
-
-    def getHotkeysContext(self) -> HotkeysContext:
-        return {
-            "name": "xr_3da",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
-        }

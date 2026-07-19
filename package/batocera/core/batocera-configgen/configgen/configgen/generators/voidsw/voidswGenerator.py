@@ -13,6 +13,12 @@ if TYPE_CHECKING:
 
 class VoidswGenerator(Generator):
 
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "viodsw",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
+
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         addon = "-addon0"
         if  "WD" in rom.name:
@@ -27,12 +33,6 @@ class VoidswGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_JOYSTICK_HIDAPI': '0', \
+                'SDL_JOYSTICK_HIDAPI': '0',
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
-
-    def getHotkeysContext(self) -> HotkeysContext:
-        return {
-            "name": "viodsw",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
-        }

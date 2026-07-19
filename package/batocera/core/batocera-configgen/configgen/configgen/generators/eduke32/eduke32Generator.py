@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import pathlib
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -28,12 +28,12 @@ class Eduke32Generator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         rtsfile = rom.name.replace('.GRP', '.RTS').replace('.grp', '.rts').replace('.EDUKE', '.RTS').replace('.eduke', '.rts')
         if (rom.name.lower()).endswith('eduke'):
-            edukegroup=pathlib.Path(rom).open().readline().rstrip()
+            edukegroup=Path(rom).open().readline().rstrip()
             edukerom=rom.name.replace('.eduke', '.GRP').replace('.EDUKE', '.GRP')
 
-            commandArray = ["eduke32", edukerom, "-game_dir", pathlib.Path(pathlib.Path(rom).resolve()).parent, "-g", edukegroup, "-rts", rtsfile]
+            commandArray = ["eduke32", edukerom, "-game_dir", Path(Path(rom).resolve()).parent, "-g", edukegroup, "-rts", rtsfile]
         else:
-            commandArray = ["eduke32", rom, "-game_dir", pathlib.Path(pathlib.Path(rom).resolve()).parent, "-rts", rtsfile]
+            commandArray = ["eduke32", rom, "-game_dir", Path(Path(rom).resolve()).parent, "-rts", rtsfile]
 
         if not system.isOptSet("nologo"):
             commandArray.extend(["-nologo"])
@@ -41,6 +41,6 @@ class Eduke32Generator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                'SDL_JOYSTICK_HIDAPI': '0', \
+                'SDL_JOYSTICK_HIDAPI': '0',
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })

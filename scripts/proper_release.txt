@@ -10,6 +10,7 @@ clk.mk
 cpp-ipc.mk
 d7vk.mk
 db9_gpio_rpi.mk
+dhewm3.mk
 dosbox-x.mk
 dxvk-nvapi.mk
 dxvk.mk

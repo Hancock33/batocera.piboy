@@ -9,8 +9,16 @@ from ...batoceraPaths import mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class OpenlaraGenerator(Generator):
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "openlara",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
@@ -37,9 +45,3 @@ class OpenlaraGenerator(Generator):
             env={
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
             })
-
-    def getHotkeysContext(self) -> HotkeysContext:
-        return {
-            "name": "openlara",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
-        }
