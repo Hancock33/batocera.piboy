@@ -39,62 +39,62 @@ class AwglGenerator(Generator):
             commandArray.append("--datapath=/userdata/roms/ports/awgl/Win31")
 
         # Rendering mode
-        if system.config("awgl_render"):
-            if system.config['awgl_render'] == 'original':
+        if system.config.get("awgl_render"):
+            if system.config.get['awgl_render'] == 'original':
                 commandArray.append("--render=original")
-            elif system.config['awgl_render'] == 'software':
+            elif system.config.get['awgl_render'] == 'software':
                 commandArray.append("--render=software")
-            elif system.config['awgl_render'] == 'gl':
+            elif system.config.get['awgl_render'] == 'gl':
                 commandArray.append("--render=gl")
         else:
             commandArray.append("--render=original")
 
         # Screen mode
-        if system.config("awgl_fullscreen"):
-            if system.config['awgl_fullscreen'] == 'stretched':
+        if system.config.get("awgl_fullscreen"):
+            if system.config.get['awgl_fullscreen'] == 'stretched':
                 commandArray.append("--fullscreen")
-            elif system.config['awgl_fullscreen'] == 'wide':
+            elif system.config.get['awgl_fullscreen'] == 'wide':
                 commandArray.append("--fullscreen-ar")
         else:
             commandArray.append("--fullscreen")
 
         # Audio mode
-        if system.config("awgl_audio"):
-            if system.config['awgl_audio'] == 'original':
+        if system.config.get("awgl_audio"):
+            if system.config.get['awgl_audio'] == 'original':
                 commandArray.append("--audio=original")
-            elif system.config['awgl_audio'] == 'remastered':
+            elif system.config.get['awgl_audio'] == 'remastered':
                 commandArray.append("--audio=remastered")
         else:
             commandArray.append("--audio=original")
 
         # Language
-        if system.config("awgl_language"):
-            if system.config['awgl_language'] == 'us':
+        if system.config.get("awgl_language"):
+            if system.config.get['awgl_language'] == 'us':
                 commandArray.append("--language=us")
-            elif system.config['awgl_language'] == 'fr':
+            elif system.config.get['awgl_language'] == 'fr':
                 commandArray.append("--language=fr")
-            elif system.config['awgl_language'] == 'de':
+            elif system.config.get['awgl_language'] == 'de':
                 commandArray.append("--language=de")
-            elif system.config['awgl_language'] == 'es':
+            elif system.config.get['awgl_language'] == 'es':
                 commandArray.append("--language=es")
-            elif system.config['awgl_language'] == 'it':
+            elif system.config.get['awgl_language'] == 'it':
                 commandArray.append("--language=it")
         else:
             commandArray.append("--language=us")
 
         # Game difficulty
-        if system.config("awgl_difficulty"):
-            if system.config['awgl_difficulty'] == 'easy':
+        if system.config.get("awgl_difficulty"):
+            if system.config.get['awgl_difficulty'] == 'easy':
                 commandArray.append("--difficulty=easy")
-            elif system.config['awgl_difficulty'] == 'normal':
+            elif system.config.get['awgl_difficulty'] == 'normal':
                 commandArray.append("--difficulty=normal")
-            elif system.config['awgl_difficulty'] == 'hard':
+            elif system.config.get['awgl_difficulty'] == 'hard':
                 commandArray.append("--difficulty=hard")
         else:
             commandArray.append("--difficulty=easy")
 
         # EGA screen mode for DOS
-        if system.config("awgl_egados") and system.config['awgl_egados'] == 'enabled':
+        if system.config.get("awgl_egados") and system.config['awgl_egados'] == 'enabled':
             commandArray.append("--ega-palette")
 
         return Command.Command(

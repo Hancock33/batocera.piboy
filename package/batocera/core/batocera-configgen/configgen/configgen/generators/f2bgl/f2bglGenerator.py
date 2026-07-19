@@ -22,22 +22,22 @@ class F2bglGenerator(Generator):
         if system.config.get_bool('f2b_gouraud'):
             commandArray.extend(['--no-gouraud'])
 
-        if system.config('f2b_filter'):
+        if system.config.get('f2b_filter'):
             strf2b_filter = '--texturefilter=' + system.config['f2b_filter']
             commandArray.extend([strf2b_filter])
 
-        if system.config('f2b_scaler'):
+        if system.config.get('f2b_scaler'):
             strf2b_scaler = '--texturescaler=' + system.config['f2b_scaler']
             commandArray.extend([strf2b_scaler])
 
         if system.config.get_bool('f2b_sub'):
             commandArray.extend(['--subtitles'])
 
-        if system.config('f2b_lang'):
+        if system.config.get('f2b_lang'):
             strf2b_lang = '--language=' + system.config['f2b_lang'] + ' --voice=' + system.config['f2b_lang']
             commandArray.extend([strf2b_lang])
 
-        if system.config('f2b_level'):
+        if system.config.get('f2b_level'):
             strf2b_level = '--level=' + system.config['f2b_level']
             commandArray.extend([strf2b_level])
 
