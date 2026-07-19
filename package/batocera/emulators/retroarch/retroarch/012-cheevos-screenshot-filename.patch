@@ -1,11 +1,11 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index 2a1cabdd1d..907d35b3e2 100644
+index fd4aabbbac..94461eb373 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
-@@ -469,9 +469,10 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
-       if (shotname)
+@@ -351,9 +351,10 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
        {
           const char *path_directory_screenshot = settings->paths.directory_screenshot;
+          video_driver_state_t* video_st = video_state_get_ptr();;
 -         snprintf(shotname, shotname_len, "%s/%s-cheevo-%u",
 +         snprintf(shotname, shotname_len, "%s/%s - %s (%u)",
              path_directory_screenshot,

@@ -1,8 +1,8 @@
 diff --git a/gfx/drivers_context/wayland_ctx.c b/gfx/drivers_context/wayland_ctx.c
-index df18a93ab3..4c0d8044b9 100644
+index ea95ad80e0..2bc3514e2b 100644
 --- a/gfx/drivers_context/wayland_ctx.c
 +++ b/gfx/drivers_context/wayland_ctx.c
-@@ -448,6 +448,10 @@ static void gfx_ctx_wl_input_driver(void *data,
+@@ -411,6 +411,10 @@ static void gfx_ctx_wl_input_driver(void *data,
        const char *joypad_name,
        input_driver_t **input, void **input_data)
  {
