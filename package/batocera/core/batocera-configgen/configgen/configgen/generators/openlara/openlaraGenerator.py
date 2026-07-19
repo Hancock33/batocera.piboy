@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import shutil
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from ... import Command
 from ...batoceraPaths import mkdir_if_not_exists

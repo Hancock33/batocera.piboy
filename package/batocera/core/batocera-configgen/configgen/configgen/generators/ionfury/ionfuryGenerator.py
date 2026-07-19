@@ -21,7 +21,7 @@ class IonfuryGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["ionfury", "-game_dir", pathlib.Path(pathlib.Path(rom).resolve()).parent, "-g", rom]
 
-        if not system.isOptSet("nologo"):
+        if system.config.get_bool("nologo")
             commandArray.extend(["-nologo"])
 
         return Command.Command(

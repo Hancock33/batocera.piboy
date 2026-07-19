@@ -39,7 +39,7 @@ class AwglGenerator(Generator):
             commandArray.append("--datapath=/userdata/roms/ports/awgl/Win31")
 
         # Rendering mode
-        if system.isOptSet("awgl_render"):
+        if system.config("awgl_render"):
             if system.config['awgl_render'] == 'original':
                 commandArray.append("--render=original")
             elif system.config['awgl_render'] == 'software':
@@ -50,7 +50,7 @@ class AwglGenerator(Generator):
             commandArray.append("--render=original")
 
         # Screen mode
-        if system.isOptSet("awgl_fullscreen"):
+        if system.config("awgl_fullscreen"):
             if system.config['awgl_fullscreen'] == 'stretched':
                 commandArray.append("--fullscreen")
             elif system.config['awgl_fullscreen'] == 'wide':
@@ -59,7 +59,7 @@ class AwglGenerator(Generator):
             commandArray.append("--fullscreen")
 
         # Audio mode
-        if system.isOptSet("awgl_audio"):
+        if system.config("awgl_audio"):
             if system.config['awgl_audio'] == 'original':
                 commandArray.append("--audio=original")
             elif system.config['awgl_audio'] == 'remastered':
@@ -68,7 +68,7 @@ class AwglGenerator(Generator):
             commandArray.append("--audio=original")
 
         # Language
-        if system.isOptSet("awgl_language"):
+        if system.config("awgl_language"):
             if system.config['awgl_language'] == 'us':
                 commandArray.append("--language=us")
             elif system.config['awgl_language'] == 'fr':
@@ -83,7 +83,7 @@ class AwglGenerator(Generator):
             commandArray.append("--language=us")
 
         # Game difficulty
-        if system.isOptSet("awgl_difficulty"):
+        if system.config("awgl_difficulty"):
             if system.config['awgl_difficulty'] == 'easy':
                 commandArray.append("--difficulty=easy")
             elif system.config['awgl_difficulty'] == 'normal':
@@ -94,7 +94,7 @@ class AwglGenerator(Generator):
             commandArray.append("--difficulty=easy")
 
         # EGA screen mode for DOS
-        if system.isOptSet("awgl_egados") and system.config['awgl_egados'] == 'enabled':
+        if system.config("awgl_egados") and system.config['awgl_egados'] == 'enabled':
             commandArray.append("--ega-palette")
 
         return Command.Command(

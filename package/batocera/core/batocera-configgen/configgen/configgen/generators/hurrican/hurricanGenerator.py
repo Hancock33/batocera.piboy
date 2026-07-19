@@ -17,10 +17,10 @@ class HurricanGenerator(Generator):
         commandArray = ["hurrican", "--pathsave", "/userdata/saves/hurrican/"]
         os.chdir(pathlib.Path(pathlib.Path(rom).resolve()).parent)
 
-        if system.isOptSet("hurrican_crt") and system.config['hurrican_crt'] == '1':
+        if system.config.get_bool("hurrican_crt"):
             commandArray.append("--crt")
 
-        if system.isOptSet("hurrican_custlevel"):
+        if system.config("hurrican_custlevel"):
             if system.config['hurrican_custlevel'] == 'ChJees':
                 commandArray.append("--custom")
                 commandArray.append("ChJees")

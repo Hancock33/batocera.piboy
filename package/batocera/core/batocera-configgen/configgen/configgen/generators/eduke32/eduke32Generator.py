@@ -35,7 +35,7 @@ class Eduke32Generator(Generator):
         else:
             commandArray = ["eduke32", rom, "-game_dir", Path(Path(rom).resolve()).parent, "-rts", rtsfile]
 
-        if not system.isOptSet("nologo"):
+        if system.config.get_bool("nologo")
             commandArray.extend(["-nologo"])
 
         return Command.Command(
