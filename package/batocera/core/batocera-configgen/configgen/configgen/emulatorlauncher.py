@@ -732,7 +732,7 @@ def launch() -> None:
 
         _logger.debug("Exiting configgen with status %s", exitcode)
 
-        if not endSystem != "settings":
+        if endSystem != "settings":
             shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
             shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
 

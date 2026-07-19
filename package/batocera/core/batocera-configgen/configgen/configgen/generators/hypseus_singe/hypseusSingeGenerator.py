@@ -145,7 +145,7 @@ class HypseusSingeGenerator(Generator):
             copy_resources(_SHARE_DIR / directory, _DATA_DIR / directory)
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
-        romName = os.path.splitext(os.path.basename(rom))[0]
+        romName = os.path.splitext(Path(rom).name)[0]
         zipFile = str(Path(rom)) + "/" + romName + ".zip"
         frameFile = str(Path(rom)) + "/" + romName + ".txt"
         commandsFile = str(Path(rom)) + "/" + romName + ".commands"
@@ -231,13 +231,11 @@ class HypseusSingeGenerator(Generator):
         ])
 
         # Default -fullscreen behaviour respects game aspect ratio
-        bezelRequired = False
         xratio = None
         # stretch
         match system.config.get('hypseus_ratio'):
             case 'stretch':
                 commandArray.extend(["-x", str(gameResolution["width"]), "-y", str(gameResolution["height"])])
-                bezelRequired = False
                 if abs(gameResolution["width"] / gameResolution["height"] - 4/3) < 0.01:
                     xratio = 4/3
             case 'force_ratio':
@@ -245,7 +243,6 @@ class HypseusSingeGenerator(Generator):
                 commandArray.extend(["-x", str(gameResolution["width"]), "-y", str(gameResolution["height"])])
                 commandArray.extend(["-force_aspect_ratio"])
                 xratio = 4/3
-                bezelRequired = True
             case _:
                 # original
                 if video_resolution and video_resolution[0]:
@@ -254,15 +251,13 @@ class HypseusSingeGenerator(Generator):
                     commandArray.extend(["-x", str(new_width), "-y", str(gameResolution["height"])])
                     # check if 4:3 for bezels
                     if abs(new_width / gameResolution["height"] - 4/3) < 0.01:
-                        bezelRequired = True
                         xratio = 4/3
                     # unique xratio formula for fast draw game (video is 3:4)
                     # e.g.: (16/9) / (3/4) = 64/27 = ~2.37
                     elif "fastdraw" in romName.lower():
-                        bezelRequired = True
                         xratio = (video_resolution[1] * gameResolution["width"]) / (video_resolution[0] * gameResolution["height"])
                     else:
-                        bezelRequired = False
+                        pass
                 else:
                     _logger.debug("Video resolution not found - using stretch")
                     commandArray.extend(["-x", str(gameResolution["width"]), "-y", str(gameResolution["height"])])
@@ -271,7 +266,7 @@ class HypseusSingeGenerator(Generator):
 
         # Don't set bezel if screeen resolution is not conducive to needing them (i.e. CRT)
         if gameResolution["width"] / gameResolution["height"] < 1.51:
-            bezelRequired = False
+            pass
 
         # Backend - Default OpenGL
         commandArray.append("-vulkan" if system.config.get("hypseus_api") == 'Vulkan' else "-opengl")

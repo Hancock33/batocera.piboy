@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import os
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -39,7 +38,7 @@ class YabasanshiroGenerator(Generator):
         }
 
         mkdir_if_not_exists(yabConfigPath)
-        rom_file = os.path.basename(rom)
+        rom_file = Path(rom).name
         config_file = f"{yabConfigPath}/{rom_file}.config"
         ctrl_config_file = f"{yabConfigPath}/keymapv2.json"
 

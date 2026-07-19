@@ -21,7 +21,7 @@ class OpenclawGenerator(Generator):
         shutil.copytree(clawzip_src, claw_dst, dirs_exist_ok=True)
 
         # dont want to overwrite these file is exist
-        if (Path(claw_dst + '/SAVES.XML').exists() == False):
+        if (not Path(claw_dst + '/SAVES.XML').exists()):
             shutil.copytree(claw_src, claw_dst, dirs_exist_ok=True)
 
         return Command.Command(

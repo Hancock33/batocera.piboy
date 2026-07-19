@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import os
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -19,7 +19,8 @@ class NbloodGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        commandArray = ["nblood", "-j=" + os.path.dirname(os.path.abspath(rom))]
+
+        commandArray = ["nblood", "-j=" + str(Path(rom.resolve().parent))]
 
         return Command.Command(
             array=commandArray,

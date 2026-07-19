@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -13,8 +14,8 @@ if TYPE_CHECKING:
 class PcexhumedGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        commandArray = ["pcexhumed", "-j", os.path.dirname(os.path.abspath(rom))]
-        os.chdir(os.path.dirname(os.path.abspath(rom)))
+        commandArray = ["pcexhumed", "-j", str(Path(rom.resolve().parent))]
+        os.chdir(Path(rom.resolve().parent))
 
         return Command.Command(
             array=commandArray,

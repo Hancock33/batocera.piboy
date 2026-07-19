@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import pathlib
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -14,7 +15,7 @@ class HurricanGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["hurrican", "--pathsave", "/userdata/saves/hurrican/"]
-        os.chdir(os.path.dirname(os.path.abspath(rom)))
+        os.chdir(pathlib.Path(pathlib.Path(rom).resolve()).parent)
 
         if system.isOptSet("hurrican_crt") and system.config['hurrican_crt'] == '1':
             commandArray.append("--crt")

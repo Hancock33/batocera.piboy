@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 import pathlib
 from typing import TYPE_CHECKING
 
@@ -32,9 +31,9 @@ class Eduke32Generator(Generator):
             edukegroup=pathlib.Path(rom).open().readline().rstrip()
             edukerom=rom.name.replace('.eduke', '.GRP').replace('.EDUKE', '.GRP')
 
-            commandArray = ["eduke32", edukerom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", edukegroup, "-rts", rtsfile]
+            commandArray = ["eduke32", edukerom, "-game_dir", pathlib.Path(pathlib.Path(rom).resolve()).parent, "-g", edukegroup, "-rts", rtsfile]
         else:
-            commandArray = ["eduke32", rom, "-game_dir", os.path.dirname(os.path.abspath(rom)), "-rts", rtsfile]
+            commandArray = ["eduke32", rom, "-game_dir", pathlib.Path(pathlib.Path(rom).resolve()).parent, "-rts", rtsfile]
 
         if not system.isOptSet("nologo"):
             commandArray.extend(["-nologo"])

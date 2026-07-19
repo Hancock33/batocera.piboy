@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -20,8 +21,8 @@ class VoidswGenerator(Generator):
         if  "TD" in rom.name:
             addon = "-addon2"
 
-        commandArray = ["voidsw", addon, "-j", os.path.dirname(os.path.abspath(rom))]
-        os.chdir(os.path.dirname(os.path.abspath(rom)))
+        commandArray = ["voidsw", addon, "-j", str(Path(rom.resolve().parent))]
+        os.chdir(Path(rom.resolve().parent))
 
         return Command.Command(
             array=commandArray,

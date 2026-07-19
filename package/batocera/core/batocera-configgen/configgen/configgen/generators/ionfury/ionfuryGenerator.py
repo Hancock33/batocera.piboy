@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import os
+import pathlib
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -19,7 +19,7 @@ class IonfuryGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        commandArray = ["ionfury", "-game_dir", os.path.dirname(os.path.abspath(rom)), "-g", rom]
+        commandArray = ["ionfury", "-game_dir", pathlib.Path(pathlib.Path(rom).resolve()).parent, "-g", rom]
 
         if not system.isOptSet("nologo"):
             commandArray.extend(["-nologo"])

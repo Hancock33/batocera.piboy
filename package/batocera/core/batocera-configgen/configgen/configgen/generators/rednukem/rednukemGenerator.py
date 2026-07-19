@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -13,8 +14,8 @@ if TYPE_CHECKING:
 class RednukemGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        commandArray = ["rednukem", "-j", os.path.dirname(os.path.abspath(rom)), "-g", rom]
-        os.chdir(os.path.dirname(os.path.abspath(rom)))
+        commandArray = ["rednukem", "-j", str(Path(rom.resolve().parent)), "-g", rom]
+        os.chdir(Path(rom.resolve().parent))
 
         return Command.Command(
             array=commandArray,

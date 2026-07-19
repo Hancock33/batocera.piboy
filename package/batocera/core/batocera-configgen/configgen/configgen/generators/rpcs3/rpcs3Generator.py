@@ -668,7 +668,7 @@ class Rpcs3Generator(Generator):
 
         # determine the rom name
         romExt = os.path.splitext(rom)[1]
-        romConfig = os.path.splitext(rom)[0]
+        os.path.splitext(rom)[0]
         if romExt == ".psn":
             romName: Path | None = None
 
