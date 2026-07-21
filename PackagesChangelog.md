@@ -17,6 +17,8 @@ Network|[uwe5622](http://github.com/EvilOlaf/uwe5622)|2513b940009c81b3c2a9f7eb81
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|94a7e7207c6a3f9ca24c8de44c89791f5595315d|Jul 21, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|df8c16ab8f884a40faee3ddefcfc9ef113e24aeb|Jul 21, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.3-rc.1|Jul 21, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260721|Jul 21, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260721|Jul 21, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|74c55e05b0fa7f8494f21c55c54fc536fd8206d7|Jul 21, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|e2cfde3014eff7f422f5f217b6c24972a9036704|Jul 21, 2026
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|0495733a599da36279a3f74093e984296f28abf4|Jul 21, 2026
@@ -72,8 +74,6 @@ Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|4cd8346e1c51dbba
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|109e2d7974efa84390d6b7b2dbf6ea09709fcb60|Jul 18, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|5141d0d185b32f368ef44b10969cb59f774a3966|Jul 18, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v2.0|Jul 18, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260718|Jul 18, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260718|Jul 18, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|75134fca82eab4e1a86dca0aaa4a188cefff5469|Jul 18, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|9e6510023545007e235117753329946cbc5f311a|Jul 18, 2026
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|2f31e9ca38785ad4c2bd9e1d91829eda14a92954|Jul 18, 2026
