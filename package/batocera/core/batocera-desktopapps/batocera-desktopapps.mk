@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-BATOCERA_DESKTOPAPPS_VERSION = 1.2
+BATOCERA_DESKTOPAPPS_VERSION = 1.3
 BATOCERA_DESKTOPAPPS_SOURCE =
 
 BATOCERA_DESKTOPAPPS_PKGDIR = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-desktopapps
@@ -32,6 +32,9 @@ ifeq ($(BR2_PACKAGE_YAD),y)
 
   # file-roller integration for pcmanfm - open/list archives
   BATOCERA_DESKTOPAPPS_APPS    += file-roller-mimics.desktop
+
+  # enable zenity scripts, yad is a fork of this
+  BATOCERA_DESKTOPAPPS_SCRIPTS += zenity
 endif
 
 ## System depended applets
@@ -45,6 +48,13 @@ ifeq ($(BR2_PACKAGE_PCSX2),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-pcsx2
   BATOCERA_DESKTOPAPPS_APPS    += pcsx2-config.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += pcsx2.png
+endif
+
+# pcsx2x6
+ifeq ($(BR2_PACKAGE_PCSX2X6),y)
+  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-pcsx2x6
+  BATOCERA_DESKTOPAPPS_APPS    += pcsx2x6-config.desktop
+  BATOCERA_DESKTOPAPPS_ICONS   += pcsx2x6.png
 endif
 
 # dolphin
@@ -155,13 +165,6 @@ ifeq ($(BR2_PACKAGE_VITA3K),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-vita3k
   BATOCERA_DESKTOPAPPS_APPS    += vita3k-config.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += vita3k.png
-endif
-
-# play!
-ifeq ($(BR2_PACKAGE_PLAY),y)
-  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-play
-  BATOCERA_DESKTOPAPPS_APPS    += play-config.desktop
-  BATOCERA_DESKTOPAPPS_ICONS   += play.png
 endif
 
 # Xbox Streaming
