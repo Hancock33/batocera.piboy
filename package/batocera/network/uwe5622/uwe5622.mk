@@ -3,8 +3,8 @@
 # uwe5622
 #
 ################################################################################
-# Version: Commits on Jul 8, 2026
-UWE5622_VERSION = 6088bdbaa9b31b355c807878450d21348eb4a8e3
+# Version: Commits on Jul 21, 2026
+UWE5622_VERSION = 2513b940009c81b3c2a9f7eb8121105680bdc95d
 UWE5622_SITE = $(call github,EvilOlaf,uwe5622,$(UWE5622_VERSION))
 
 UWE5622_MODULE_MAKE_OPTS = \

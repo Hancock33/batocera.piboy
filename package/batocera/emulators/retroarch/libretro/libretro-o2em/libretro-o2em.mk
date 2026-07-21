@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Version: Commits on Nov 3, 2021
-# Version: Commits on Apr 20, 2026
-LIBRETRO_O2EM_VERSION = e03d3be88f79fe940b933e53f1515d97313f6c59
+# Version: Commits on Jul 21, 2026
+LIBRETRO_O2EM_VERSION = 69bc3429c878929463a7d6fa7630b596dcbcb372
 LIBRETRO_O2EM_SITE = $(call github,libretro,libretro-o2em,$(LIBRETRO_O2EM_VERSION))
 LIBRETRO_O2EM_LICENSE = Artistic License
 LIBRETRO_O2EM_DEPENDENCIES += retroarch
