@@ -3,7 +3,6 @@
 # libretro-o2em
 #
 ################################################################################
-# Version: Commits on Nov 3, 2021
 # Version: Commits on Jul 21, 2026
 LIBRETRO_O2EM_VERSION = 679d6fec04963f6e70a7ec217e3d0ebb1fe472fc
 LIBRETRO_O2EM_SITE = $(call github,libretro,libretro-o2em,$(LIBRETRO_O2EM_VERSION))
