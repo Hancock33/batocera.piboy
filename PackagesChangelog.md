@@ -9,6 +9,7 @@ Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.16.0|Jul
 Network|[uwe5622](http://github.com/EvilOlaf/uwe5622)|7bfaaf46ea6834a964672b91b4bf7fd9f0a834e7|Jul 22, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|v0.4.3-4|Jul 22, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|15aff6d40aecd704c051aa69132d982eaa39e3b0|Jul 22, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|26918f30093514f79639e368a64c5d615ee71374|Jul 22, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|db87c60e99b2789a2b21faad929859b552b91914|Jul 22, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|36592d4e3629817afe7d31bb1feef4a14ea2955f|Jul 22, 2026
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|0672af0e29a89aead01b09230f27198da435162e|Jul 22, 2026
@@ -423,7 +424,6 @@ Emulators|[libretro-bsnes-hd](http://github.com/DerKoun/bsnes-hd)|fc26b25ea236f0
 Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.8|Dec 02, 2025
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|ebd7efe1ee902e70c5943b65a2bf44b9a3c31eb8|Nov 23, 2025
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|v1.22.2|Nov 20, 2025
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Ports|[raze](http://github.com/ZDoom/Raze)|76fe82f5eb318fdeb30ba9fb27093a9a10bc3821|Nov 19, 2025
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.8|Nov 13, 2025

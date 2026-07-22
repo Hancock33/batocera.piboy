@@ -261,7 +261,7 @@ Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|6c2339b64
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|23d4c27f1c63465193bf4f4fb8e19011ff9f40dc|Jul 21, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1133-g03c2ae9|Aug 19, 2024
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|0959892093bdf85d96206993685a7450b26a1732|Jul 21, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|v1.22.2|Nov 20, 2025
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|26918f30093514f79639e368a64c5d615ee71374|Jul 22, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260321|Mar 21, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|8604f1c5d83fbd256e3e29fdccee4ead805c2689|Jul 21, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.338|Jul 17, 2026
