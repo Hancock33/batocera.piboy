@@ -3,8 +3,8 @@
 # libretro-supafaust
 #
 ################################################################################
-# Version: Commits on Apr 20, 2026
-LIBRETRO_SUPAFAUST_VERSION = 2b93c0d7dff5b8f6c4e60e049d66849923fa8bba
+# Version: Commits on Jul 22, 2026
+LIBRETRO_SUPAFAUST_VERSION = d6187e5337e6c2646d003db3ab1936727ca75301
 LIBRETRO_SUPAFAUST_SITE = $(call github,libretro,supafaust,$(LIBRETRO_SUPAFAUST_VERSION))
 LIBRETRO_SUPAFAUST_LICENSE = GPL
 LIBRETRO_SUPAFAUST_EMULATOR_INFO = supafaust.libretro.core.yml

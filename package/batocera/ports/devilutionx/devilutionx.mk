@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Jul 18, 2026
-DEVILUTIONX_VERSION = 5141d0d185b32f368ef44b10969cb59f774a3966
+# Version: Commits on Jul 13, 2026
+DEVILUTIONX_VERSION = ac2d7fc731bc37bc3547eddd2d4c395c868c439f
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_EMULATOR_INFO = devilutionx.emulator.yml
@@ -26,7 +26,6 @@ define DEVILUTIONX_INSTALL_TARGET_ASSETS
 	mkdir -p $(TARGET_DIR)/usr/bin/diablo
 	mv $(TARGET_DIR)/usr/bin/devilutionx	$(TARGET_DIR)/usr/bin/diablo
 	cp -a $(@D)/buildroot-build/assets		$(TARGET_DIR)/usr/bin/diablo
-	cp -a $(@D)/buildroot-build/_deps/sheenbidi-build/libSheenBidi.so* $(TARGET_DIR)/usr/lib
 endef
 
 DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_ASSETS
