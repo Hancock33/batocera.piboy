@@ -131,6 +131,7 @@
 - DXVK-NVAPI to v0.9.2
 - FAudio to 26.05
 - FFMPEG to 8.1.2
+- GStreamer codecs to 1.28.5
 - Khadas VIM4 kernel updated to vendor 5.15.y
 - LabWC to 0.20.1
 - Linux Firmware to 20260622
@@ -150,8 +151,8 @@
 - VKD3D Proton to 3.0.1
 - Vulkan stack to 1.4.350
 - WINE Mono to 11.1.0
-- WINE Proton to proton-exp-11.0
-- WINE TKG to 11.12
+- WINE Proton to proton-11.0-1
+- WINE TKG to 11.13
 - Wlroots to 0.20.2
 - X86_64 / Zen3 kernel updated to 7.1.4
 
