@@ -33,7 +33,7 @@ if TYPE_CHECKING:
 
 _logger = logging.getLogger(__name__)
 
-_PCSX2X6_BIN_DIR: Final = Path("/usr/pcsx2x6/bin")
+_PCSX2X6_BIN_DIR: Final = Path("/usr/bin/pcsx2x6")
 _PCSX2X6_RESOURCES_DIR: Final = _PCSX2X6_BIN_DIR / "resources"
 _PCSX2X6_CONFIG: Final = CONFIGS / "PCSX2x6"
 _PCSX2X6_BIOS: Final = BIOS / "namco2x6"
@@ -79,8 +79,8 @@ class Pcsx2x6Generator(Generator):
         dbfile = _PCSX2X6_CONFIG / "game_controller_db.txt"
         write_sdl_controller_db(playersControllers, dbfile)
 
-        commandArray = ["/usr/pcsx2x6/bin/pcsx2x6-qt"] if configure_emulator(rom) else \
-              ["/usr/pcsx2x6/bin/pcsx2x6-qt", "-nogui", rom]
+        commandArray = ["/usr/bin/pcsx2x6/pcsx2x6-qt"] if configure_emulator(rom) else \
+              ["/usr/bin/pcsx2x6/pcsx2x6-qt", "-nogui", rom]
 
         with Path("/proc/cpuinfo").open() as cpuinfo:
             if not re.search(r'^flags\s*:.*\ssse4_1\W', cpuinfo.read(), re.MULTILINE):
