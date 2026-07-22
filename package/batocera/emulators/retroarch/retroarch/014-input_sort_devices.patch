@@ -1,8 +1,8 @@
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index e12b536b0a..d5b391abf3 100644
+index 098b0258c5..5e3513e8ce 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
-@@ -4013,6 +4013,65 @@ static float udev_get_sensor_input(void *data, unsigned port, unsigned id)
+@@ -4017,6 +4017,65 @@ static float udev_get_sensor_input(void *data, unsigned port, unsigned id)
     return 0.0f;
  }
  
@@ -68,7 +68,7 @@ index e12b536b0a..d5b391abf3 100644
  static bool open_devices(udev_input_t *udev,
        enum udev_input_dev_type type, device_handle_cb cb)
  {
-@@ -4021,6 +4080,11 @@ static bool open_devices(udev_input_t *udev,
+@@ -4025,6 +4084,11 @@ static bool open_devices(udev_input_t *udev,
     struct udev_list_entry     *devs = NULL;
     struct udev_list_entry     *item = NULL;
     struct udev_enumerate *enumerate = udev_enumerate_new(udev->udev);
@@ -80,7 +80,7 @@ index e12b536b0a..d5b391abf3 100644
  
     RARCH_DBG("[udev] Adding devices of type %u -> \"%s\".\n", type, type_str);
     if (!enumerate)
-@@ -4033,8 +4097,27 @@ static bool open_devices(udev_input_t *udev,
+@@ -4037,8 +4101,27 @@ static bool open_devices(udev_input_t *udev,
  
     for (item = devs; item; item = udev_list_entry_get_next(item))
     {

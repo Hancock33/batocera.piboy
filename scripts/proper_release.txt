@@ -48,7 +48,6 @@ pywebview.mk
 rapidyaml.mk
 rclone.mk
 re2c.mk
-retroarch.mk
 retrocrisis.mk
 rockchip-mpp.mk
 rockpro64-blobs.mk
