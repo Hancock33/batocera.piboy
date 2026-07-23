@@ -3,8 +3,8 @@
 # touchhle
 #
 ################################################################################
-# Version: Commits on Jul 15, 2026
-TOUCHHLE_VERSION = d9a27f27c344d3c7b0c867550703b7287e4b3117
+# Version: Commits on Jul 23, 2026
+TOUCHHLE_VERSION = da6b281520966575c222234ba078c373f622830b
 TOUCHHLE_SITE = https://github.com/touchHLE/touchHLE.git
 TOUCHHLE_SITE_METHOD = git
 TOUCHHLE_GIT_SUBMODULES = YES

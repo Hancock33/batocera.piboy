@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 22, 2026
-PCSX2X6_VERSION = 6c2339b647be62b1e26adf9a0ee0a291d0e4df67
+PCSX2X6_VERSION = 88d490bb1371dda3176078c6d3b3f6527ef545af
 PCSX2X6_SITE = https://github.com/PS2Homebrew-arcade/pcsx2x6.git
 PCSX2X6_SITE_METHOD = git
 PCSX2X6_GIT_SUBMODULES = YES

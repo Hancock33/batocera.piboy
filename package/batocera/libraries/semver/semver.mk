@@ -3,8 +3,8 @@
 # semver
 #
 ################################################################################
-# Version: Commits on Mar 29, 2025
-SEMVER_VERSION = v1.0.0-rc
+# Version: Commits on Jul 23, 2026
+SEMVER_VERSION = v1.0.0
 SEMVER_SITE =  $(call github,Neargye,semver,$(SEMVER_VERSION))
 SEMVER_LICENSE = MIT license
 SEMVER_LICENSE_FILES = LICENSE
