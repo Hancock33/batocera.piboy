@@ -1,5 +1,7 @@
---- pcsx2-v2.4.0/pcsx2/BuildVersion.cpp	2025-06-29 12:47:12.000000000 -0700
-+++ pcsx2-v2.4.0-lbrpdx/pcsx2/BuildVersion.cpp	2025-10-03 08:39:48.770869570 -0700
+diff --git a/pcsx2/BuildVersion.cpp b/pcsx2/BuildVersion.cpp
+index 6e7e36c15..8d9fb80d4 100644
+--- a/pcsx2/BuildVersion.cpp
++++ b/pcsx2/BuildVersion.cpp
 @@ -5,12 +5,12 @@
  
  namespace BuildVersion
