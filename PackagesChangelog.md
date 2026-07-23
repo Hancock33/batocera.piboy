@@ -15,8 +15,10 @@ Libraries|[semver](http://github.com/Neargye/semver)|v1.0.0|Jul 23, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|7a784b4504977caf1c44acf668f02cacd2153632|Jul 23, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|6375604af8a2c5826401c56d2444172183d4ca5d|Jul 23, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|ddcc7bd5ea7dd6673ab56743adb67abd71b45976|Jul 23, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260723|Jul 23, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|fa9c1fb9df83bdabb9f699eadac66adc9759b14d|Jul 23, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|fc3a4a2450d6b5d2beca94c0044f7f37c6f59cbb|Jul 23, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260723|Jul 23, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ca397c7fb9b016048ce12ccd5563f8f434d1089a|Jul 23, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|b16919e4fcff261d50147127768718c3c6cdaf61|Jul 23, 2026
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|9ecaed864ce4c96b9db8c1cc03ebae6e26d2311f|Jul 23, 2026
@@ -53,9 +55,7 @@ Emulators|[ymir](https://github.com/StrikerX3/Ymir)|bfa0a0a171b28a9791ef1fdc3e0e
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|b14733d2698cda35dca6d55246bf76691126c20a|Jul 21, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|7565778bb51484422d268a553ac024a0f9f40928|Jul 21, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.3-rc.1|Jul 21, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260721|Jul 21, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|0959892093bdf85d96206993685a7450b26a1732|Jul 21, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260721|Jul 21, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|c711b0ab324d2ec116292b0db7c04a5733b8e559|Jul 21, 2026
 Emulators|[libretro-cannonball](http://github.com/libretro/cannonball)|65cb1f5f227db45abcd9d2006efe7687a0d9cb72|Jul 21, 2026
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|5b6e751f4abf368509146cd143c949c1946ac1ae|Jul 21, 2026
