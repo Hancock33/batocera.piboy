@@ -32,6 +32,12 @@ define AIC8800_DEBIAN_PATCHES
 	$(APPLY_PATCHES) $(@D) $(dir $(@D)/debian/patches/series)
 endef
 
+# Fix line ending issues
+define AIC8800_CONVERT_LINE_ENDINGS
+	find $(@D) -type f \( -name "*.c" -o -name "*.h" -o -name "*.patch" \) -exec sed -i 's/\r$$//' {} +
+endef
+AIC8800_POST_EXTRACT_HOOKS += AIC8800_CONVERT_LINE_ENDINGS
+
 # Rock 5c uses aic8800D80 & CoolPi 4b uses aic8800
 define AIC8800_FIRMWARE_ETC_SDIO
 	mkdir -p $(TARGET_DIR)/lib/firmware/aic8800_fw/SDIO
