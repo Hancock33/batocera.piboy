@@ -10,7 +10,7 @@ image="/usr/share/batocera/splash/boot-logo.png"
 
 do_start ()
 {
-    # wait 20s to create buffer fb0 on fail exit 
+    # wait 20s to create buffer fb0 on fail exit
     if ! [ -e /dev/fb0 ]; then
         inotifywait -t 20 -e create --include '/fb0' /dev || {
           echo "Error: Framebuffer device /dev/fb0 not found." >> $LOG_FILE;

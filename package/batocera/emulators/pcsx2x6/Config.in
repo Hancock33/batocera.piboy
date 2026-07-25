@@ -30,5 +30,5 @@ config BR2_PACKAGE_PCSX2X6
 
 	help
 	  PCSX2X6 is a fork of PCSX2 to emulate NAMCO System246 and System256 arcade units.
-	  
+
 	  https://github.com/PS2Homebrew-arcade/pcsx2x6
