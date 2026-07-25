@@ -129,11 +129,11 @@
 ### System
 - Allwinner H616 device kernel updated to 7.1.4
 - Allwinner H700 device kernel updated to 7.0.11
-- ALSA UCM configuration to v1.2.16
+- ALSA UCM configuration to v1.2.16.1
 - Buildroot to 2026.05.x with supporting package & toolchain updates
-- DXVK to 3.0.1
+- DXVK to 3.0.2
 - DXVK-NVAPI to v0.9.2
-- FAudio to 26.05
+- FAudio to 26.07
 - FFMPEG to 8.1.2
 - GStreamer codecs to 1.28.5
 - Khadas VIM4 kernel updated to vendor 5.15.y
@@ -150,6 +150,7 @@
 - Rockchip RK3568 device kernel updated to 7.0.11
 - Rockchip RK3588 mainline device kernel updated to 7.1.4
 - Rocknix ABL to 1.1.4 (SM8x50 devices)
+- Sound Open Firmware to 2025.12.2
 - SwitchRes to 2.2.2
 - RTKit to v0.14
 - VKD3D Proton to 3.0.1
