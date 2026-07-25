@@ -10,14 +10,13 @@ image="/usr/share/batocera/splash/boot-logo.png"
 
 do_start ()
 {
-    # on some sytems, fb0 is not immediatly loaded, so, keep a chance by waiting a bit
-    # are we sure all boards have fb0 ?!
-    N=0
-    while ! test -e /dev/fb0 -o $N -gt 80
-    do
-        sleep 0.1
-        N=$((N+1))
-    done
+    # wait 20s to create buffer fb0 on fail exit 
+    if ! [ -e /dev/fb0 ]; then
+        inotifywait -t 20 -e create --include '/fb0' /dev || {
+          echo "Error: Framebuffer device /dev/fb0 not found." >> $LOG_FILE;
+          exit 1;
+          }
+    fi
 
     # V_BOARD_MODEL detection from batocera-model
     V_BOARD_MODEL=$(batocera-model)
