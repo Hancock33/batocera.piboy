@@ -23,6 +23,7 @@ noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
 sockpp.mk
+shader-slang.mk
 spirv-cross.mk
 spirv-headers.mk
 spirv-tools.mk
