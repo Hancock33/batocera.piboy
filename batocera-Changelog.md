@@ -69,7 +69,7 @@
 - Box64 0.4.2
 - Cemu to June 23rd, 2026 build
 - CDogs to 2.4.0
-- CLK to 2026-04-30
+- CLK to 2026-07-23
 - CorsixTH to v0.69.2
 - Dhewm3 & Mods to 1.5.5
 - Dolphin-Emu to 2606
@@ -110,11 +110,13 @@
 - Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
+- Redream to 1.5.0-1155-g0056e35
 - RPCS3 to v.0.0.41
 - ShadPS4 to v.0.16.0
 - Solarus to 2.0.4
 - Sonic3-Air to v26.03.28.0
 - Supermodel to v0.3a-20260528
+- TheXTech to v1.3.7.3-1
 - TRX to 1.9.2
 - Tsugaru to v20251206
 - Vita3k to 10th of June build
