@@ -1,8 +1,8 @@
 diff --git a/apps/ymir-sdl3/CMakeLists.txt b/apps/ymir-sdl3/CMakeLists.txt
-index faaac6b1..90379b8d 100644
+index 4a1f8c10..4ae7ed99 100644
 --- a/apps/ymir-sdl3/CMakeLists.txt
 +++ b/apps/ymir-sdl3/CMakeLists.txt
-@@ -411,7 +411,7 @@ find_package(OpenSSL CONFIG REQUIRED)
+@@ -431,7 +431,7 @@ find_package(OpenSSL CONFIG REQUIRED)
  find_package(CURL REQUIRED)
  find_package(rtmidi CONFIG REQUIRED)
  find_package(SDL3 CONFIG REQUIRED)
@@ -11,7 +11,7 @@ index faaac6b1..90379b8d 100644
  find_package(tomlplusplus CONFIG REQUIRED)
  
  target_include_directories(ymir-sdl3
-@@ -433,7 +433,7 @@ target_link_libraries(ymir-sdl3 PRIVATE
+@@ -453,7 +453,7 @@ target_link_libraries(ymir-sdl3 PRIVATE
      cereal::cereal
      lz4::lz4
      RtMidi::rtmidi

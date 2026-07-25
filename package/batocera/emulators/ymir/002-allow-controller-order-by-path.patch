@@ -1,101 +1,5 @@
-diff --git a/apps/ymir-sdl3/src/app/app.hpp b/apps/ymir-sdl3/src/app/app.hpp
-index a19720cd81..73f9342aa2 100644
---- a/apps/ymir-sdl3/src/app/app.hpp
-+++ b/apps/ymir-sdl3/src/app/app.hpp
-@@ -27,6 +27,7 @@
- 
- #include <SDL3/SDL_dialog.h>
- #include <SDL3/SDL_properties.h>
-+#include <SDL3/SDL_gamepad.h>
- 
- #include <imgui.h>
- 
-@@ -35,12 +36,70 @@
- #include <set>
- #include <string_view>
- #include <thread>
-+#include <unordered_map>
- #include <unordered_set>
- #include <utility>
- #include <vector>
- 
- namespace app {
- 
-+struct PlayerIndexMap {
-+    int GetPlayerIndex(SDL_JoystickID id) const {
-+        if (m_playerIndices.contains(id)) {
-+            return m_playerIndices.at(id);
-+        } else {
-+            return -1;
-+        }
-+    }
-+
-+    int GetOrAssignPlayerIndex(SDL_JoystickID id) {
-+        if (m_playerIndices.contains(id)) {
-+            return m_playerIndices.at(id);
-+        }
-+        return AssignPlayerIndex(id);
-+    }
-+
-+    int AssignPlayerIndex(SDL_JoystickID id) {
-+        if (m_playerIndices.contains(id)) {
-+            return m_playerIndices.at(id);
-+        }
-+        // Find the lowest available index starting from 0 to avoid slot collisions
-+        int index = 0;
-+        while (true) {
-+            bool inUse = false;
-+            for (const auto& [_, val] : m_playerIndices) {
-+                if (val == index) {
-+                    inUse = true;
-+                    break;
-+                }
-+            }
-+            if (!inUse) {
-+                break;
-+            }
-+            index++;
-+        }
-+        m_playerIndices[id] = index;
-+        return index;
-+    }
-+
-+    void ForceMapping(SDL_JoystickID id, int index) {
-+        m_playerIndices[id] = index;
-+    }
-+
-+    int ReleasePlayerIndex(SDL_JoystickID id) {
-+        int index = GetPlayerIndex(id);
-+        m_playerIndices.erase(id);
-+        return index;
-+    }
-+
-+    bool Contains(SDL_JoystickID id) const {
-+        return m_playerIndices.contains(id);
-+    }
-+
-+private:
-+    std::unordered_map<SDL_JoystickID, int> m_playerIndices{};
-+};
-+
- class App {
- public:
-     App();
-@@ -81,6 +140,12 @@ private:
- 
-     // Rewind bar
-     std::chrono::steady_clock::time_point m_rewindBarFadeTimeBase;
-+
-+    // Gamepad static mapping members
-+    std::unordered_map<SDL_JoystickID, SDL_Gamepad *> m_gamepads{};
-+    PlayerIndexMap m_gamepadPlayerIndices{};
-+
-+    void MapConfiguredGamepads();
- };
- 
- } // namespace app
 diff --git a/apps/ymir-sdl3/src/app/app.cpp b/apps/ymir-sdl3/src/app/app.cpp
-index d8249b3885..51d9a46877 100644
+index 47b356d2..7dba212d 100644
 --- a/apps/ymir-sdl3/src/app/app.cpp
 +++ b/apps/ymir-sdl3/src/app/app.cpp
 @@ -1182,53 +1182,10 @@ void App::RunEmulator() {
@@ -215,7 +119,7 @@ index d8249b3885..51d9a46877 100644
                  inputContext.ProcessPrimitive(
                      playerIndex, input::SDL3ToGamepadButton((SDL_GamepadButton)evt.gbutton.button), evt.gbutton.down);
                  break;
-@@ -3341,4 +3304,42 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
+@@ -3337,4 +3300,42 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
      app->m_context.EnqueueEvent(events::emu::ReceiveMidiInput(delta, std::move(*msg)));
  }
  
@@ -258,20 +162,104 @@ index d8249b3885..51d9a46877 100644
 +}
 +
  } // namespace app
-diff --git a/apps/ymir-sdl3/src/app/settings.hpp b/apps/ymir-sdl3/src/app/settings.hpp
-index 854567324b..0f9924486e 100644
---- a/apps/ymir-sdl3/src/app/settings.hpp
-+++ b/apps/ymir-sdl3/src/app/settings.hpp
-@@ -272,6 +272,7 @@ struct Settings {
-     struct Input {
-         struct Port {
-             util::Observable<ymir::peripheral::PeripheralType> type;
-+            std::filesystem::path devicePath;
+diff --git a/apps/ymir-sdl3/src/app/app.hpp b/apps/ymir-sdl3/src/app/app.hpp
+index edab0f91..48a3173b 100644
+--- a/apps/ymir-sdl3/src/app/app.hpp
++++ b/apps/ymir-sdl3/src/app/app.hpp
+@@ -27,6 +27,7 @@
  
-             struct ControlPad {
-                 struct Binds {
+ #include <SDL3/SDL_dialog.h>
+ #include <SDL3/SDL_properties.h>
++#include <SDL3/SDL_gamepad.h>
+ 
+ #include <imgui.h>
+ 
+@@ -35,12 +36,70 @@
+ #include <set>
+ #include <string_view>
+ #include <thread>
++#include <unordered_map>
+ #include <unordered_set>
+ #include <utility>
+ #include <vector>
+ 
+ namespace app {
+ 
++struct PlayerIndexMap {
++    int GetPlayerIndex(SDL_JoystickID id) const {
++        if (m_playerIndices.contains(id)) {
++            return m_playerIndices.at(id);
++        } else {
++            return -1;
++        }
++    }
++
++    int GetOrAssignPlayerIndex(SDL_JoystickID id) {
++        if (m_playerIndices.contains(id)) {
++            return m_playerIndices.at(id);
++        }
++        return AssignPlayerIndex(id);
++    }
++
++    int AssignPlayerIndex(SDL_JoystickID id) {
++        if (m_playerIndices.contains(id)) {
++            return m_playerIndices.at(id);
++        }
++        // Find the lowest available index starting from 0 to avoid slot collisions
++        int index = 0;
++        while (true) {
++            bool inUse = false;
++            for (const auto& [_, val] : m_playerIndices) {
++                if (val == index) {
++                    inUse = true;
++                    break;
++                }
++            }
++            if (!inUse) {
++                break;
++            }
++            index++;
++        }
++        m_playerIndices[id] = index;
++        return index;
++    }
++
++    void ForceMapping(SDL_JoystickID id, int index) {
++        m_playerIndices[id] = index;
++    }
++
++    int ReleasePlayerIndex(SDL_JoystickID id) {
++        int index = GetPlayerIndex(id);
++        m_playerIndices.erase(id);
++        return index;
++    }
++
++    bool Contains(SDL_JoystickID id) const {
++        return m_playerIndices.contains(id);
++    }
++
++private:
++    std::unordered_map<SDL_JoystickID, int> m_playerIndices{};
++};
++
+ class App {
+ public:
+     App();
+@@ -81,6 +140,12 @@ private:
+ 
+     // Rewind bar
+     std::chrono::steady_clock::time_point m_rewindBarFadeTimeBase;
++
++    // Gamepad static mapping members
++    std::unordered_map<SDL_JoystickID, SDL_Gamepad *> m_gamepads{};
++    PlayerIndexMap m_gamepadPlayerIndices{};
++
++    void MapConfiguredGamepads();
+ };
+ 
+ } // namespace app
 diff --git a/apps/ymir-sdl3/src/app/settings.cpp b/apps/ymir-sdl3/src/app/settings.cpp
-index ed327c0579..c0e0221c98 100644
+index b09a17e2..94012aa8 100644
 --- a/apps/ymir-sdl3/src/app/settings.cpp
 +++ b/apps/ymir-sdl3/src/app/settings.cpp
 @@ -1339,6 +1339,7 @@ SettingsLoadResult Settings::Load(const std::filesystem::path &path) {
@@ -282,3 +270,15 @@ index ed327c0579..c0e0221c98 100644
  
                  auto parseControlPadBinds = [&](auto &tblBinds) {
                      Parse(tblBinds, "A", portSettings.controlPad.binds.a);
+diff --git a/apps/ymir-sdl3/src/app/settings.hpp b/apps/ymir-sdl3/src/app/settings.hpp
+index 68fb9a51..137cab1e 100644
+--- a/apps/ymir-sdl3/src/app/settings.hpp
++++ b/apps/ymir-sdl3/src/app/settings.hpp
+@@ -291,6 +291,7 @@ struct Settings {
+     struct Input {
+         struct Port {
+             util::Observable<ymir::peripheral::PeripheralType> type;
++            std::filesystem::path devicePath;
+ 
+             struct ControlPad {
+                 struct Binds {
