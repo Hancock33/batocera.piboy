@@ -1,11 +1,13 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|eee3daa5a6651e787683b6e78733bcd882bc3635|Jul 25, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|eee3daa5a6651e787683b6e78733bcd882bc3635|Jul 25, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|707d3c7a732634ad8d522bd27e52b075f54ac4f3|Jul 25, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|a233ec1fb7f46181e77e6d2a52446ad6f0a7c54f|Jul 25, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-07-25|Jul 25, 2026
 Network|[uwe5622](http://github.com/EvilOlaf/uwe5622)|3eae88b765c2844d0f64ef25bbed4911e86387e5|Jul 25, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|dd211294647de8df3650e1887f861cc46747ae69|Jul 25, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.14'|Jul 25, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.14|Jul 25, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260725|Jul 25, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|7ca764f939587d912885b26ecc710a46212c549d|Jul 25, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260725|Jul 25, 2026
@@ -39,8 +41,6 @@ Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|f94c3104aa1803
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|39819865868231319f185b741466b9bb2203620d|Jul 24, 2026
 Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|d71299d75cc53097dc8bd4989c6d6f2acebd1eba|Jul 24, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|a6e4d691efeaf577ca2c557c92eb6737ab2c12be|Jul 24, 2026
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|dd80f38bb6e6d5beaa8485b89faf69511de73500|Jul 23, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|dd80f38bb6e6d5beaa8485b89faf69511de73500|Jul 23, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|b8f2cf4b431df7c1669ec926a5ea8b9fc146f310|Jul 23, 2026
 Emulators|[clk](https://github.com/TomHarte/CLK)|2026-07-23|Jul 23, 2026
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|cda87965fe0a031d027b2253c6715d37cca6b56a|Jul 23, 2026
