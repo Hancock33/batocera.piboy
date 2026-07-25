@@ -84,7 +84,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_ZLIB),y)
-    RETROARCH_CONF_OPTS += --disable-builtinzlib --enable-zlib
+    RETROARCH_CONF_OPTS += --enable-zlib
     RETROARCH_DEPENDENCIES += zlib
 else
     RETROARCH_CONF_OPTS += --disable-zlib
