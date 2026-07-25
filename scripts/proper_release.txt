@@ -61,6 +61,7 @@ sound-open-firmware.mk
 stk.mk
 switchres.mk
 syncthing.mk
+thextech.mk
 touchegg.mk
 unclutter.mk
 vcmi.mk
