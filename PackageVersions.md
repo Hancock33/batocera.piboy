@@ -60,7 +60,7 @@ Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 
 Controllers|[uinput-joystick](http://github.com/shantigilbert/uinput_joystick)|bea7d56f4947b547db2b827640bc9966fe770f84|Feb 11, 2022
 Controllers|[umtool](http://github.com/katie-snow/Ultimarc-linux)|20b8c56a3e6f94034b8529eddd777306f5b6152b|Jun 13, 2022
 Controllers|[xarcade2jstick](http://github.com/petrockblog/xarcade2jstick)|7b579e9e9554e6d997978d069ddeb566ff381007|Apr 10, 2023
-Controllers|[xone](http://github.com/dlundqvist/xone)|f2aa9fe01103d7600553b505b298ff0bd47ff280|Mar 13, 2026
+Controllers|[xone](http://github.com/dlundqvist/xone)|v0.5.8|Mar 13, 2026
 Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727d9b2f867871|Apr 24, 2022
 Controllers|[xpad-noone](http://github.com/forkymcforkface/xpad-noone)|a52e32cf182435d608e66bef9a6c89ebac891999|Jun 05, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|3acca9f5e211edb601000bb64767b78b2468f787|Jul 09, 2026
@@ -89,8 +89,8 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|fc88
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.07.02|Jul 03, 2026
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/dmanlfc/drastic/raw/refs/heads/main)|r2.5.2.2|Feb 26, 2021
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|a233ec1fb7f46181e77e6d2a52446ad6f0a7c54f|Jul 25, 2026
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|dc1486485b71e90e7132032e436eb9c4e84b9e32|Jul 25, 2026
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|56fa9dc61304723318fa1c7e8162633bd7bf5140|Jul 26, 2026
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|39763e7321fa17486f1b466a1777f8aa4a91949f|Jul 26, 2026
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|3ea88dcd982b39a4bfb841d47dbcaecbd99536e7|Jul 06, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|4126f1464fbc77c6bcec9cad00c32017ecabb799|Jul 20, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v3.2.35|Sept 07, 2025
@@ -198,7 +198,7 @@ Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|78a662
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|5bd8bd6d449be8a2ef7909e1aeb2bd8c9c0da8cb|Jun 25, 2026
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|bb009b1379ad15f1514f20ca7cbf710b4af42b3e|Apr 20, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|c42e41c034415bfd3a34ea3644fd970c72386a2b|Jul 25, 2026
-Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|a5b8d2ad8bfb3f02254400eb938d5f645b936e8d|Jul 25, 2026
+Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|fdcca4dcc9fc9eaec35ae2f454faa7a3a96aa4d7|Jul 26, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|363b6dfbd3e240762e022c2b4897b4fe55722be3|Jun 04, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|43129ad5ccbde21b022dd3b3fad1862f72a109bf|Jul 20, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|232ec89b068f104caa20853ea058529c36157b82|Jul 19, 2026
@@ -261,7 +261,7 @@ Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|6b2367715
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c42e41c034415bfd3a34ea3644fd970c72386a2b|Jul 25, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1155-g0056e35|Jul 21, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|0959892093bdf85d96206993685a7450b26a1732|Jul 21, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|1cd0526771134ae2b9bc2da998a3ad8f78696b3e|Jul 26, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|241dc76e8155f1191d0b54e32fcaf727dd331aa9|Jul 26, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260321|Mar 21, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|7a90d09cfe3c31bf95c3cb63c6301c5c0824c531|Jul 23, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.338|Jul 17, 2026
@@ -379,6 +379,7 @@ Libraries|[iir](http://github.com/berndporr/iir1)|1.10.0|Jul 06, 2025
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.4.1|Jul 20, 2026
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
 Libraries|[libdate](http://github.com/HowardHinnant/date)|v3.0.4|May 28, 2025
+Libraries|[libdovi](http://github.com/quietvoid/dovi_tool)|2.3.3|Jul 12, 2026
 Libraries|[libfreeimage](http://downloads.sourceforge.net/freeimage)|3.18.0|Jul 31, 2018
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-alpha8|Jul 08, 2026
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.5|Apr 20, 2026
@@ -458,7 +459,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|9342a53e63e2b281735241f4bf
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|e5501815ca7181b52432c4620dcd48ed2fa62402|Jun 07, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|ee6988802a922f72add5548a33f4c14601e5c8a1|Jul 25, 2026
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|1.5.5|Jun 08, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|3d4dd9fe1314d31178cb03ccd34ad85fca50d5f8|Jul 26, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|2e83c26215a570f1c7c234252e7e71bd54d52b5a|Jul 26, 2026
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|e1ff42e16cd4a04737edece1d27cd44dfd577f80|Jun 21, 2026
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e|Feb 18, 2026
@@ -467,7 +468,7 @@ Ports|[eldoom](http://github.com/dhewm/dhewm3-sdk)|e6461952e6d2dc882ad06d365ec78
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|7a784b4504977caf1c44acf668f02cacd2153632|Jul 23, 2026
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
-Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|21a98bebb1d5ac08bdaad1c964be8585b20b3612|Jul 25, 2026
+Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|ca89abad6c8d40f863dd16a62745468569cf0b14|Jul 26, 2026
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.17|Jun 30, 2026
 Ports|[fitz](http://github.com/dhewm/dhewm3-sdk)|81ca7a947a3a4996094be25a3be2f3a25a62c34b|Jun 07, 2026
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|58f5ca357c7bea7c29436252bd03f6f3ef28e643|Apr 04, 2026
@@ -526,7 +527,7 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.4|May 20, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|6135f9c014973722481c1f1cb52d16b0aea66a37|Jul 25, 2026
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|2824da6240599c46a091d788f34f6cb8fe0fb4bd|Jul 24, 2026
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|650bd625eb725446279c6176804b554e2e1c98f3|Jun 14, 2026
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|b4495238d9a4d37d6499577c5b0720ab5fce831e|Jul 25, 2026
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e6913c9ce242848ee6d458930cdfcb15a7a5bfb4|Jul 25, 2026
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.4.2|Jun 05, 2026
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|f40f35697f177ac7726807898e9d7df32e2d0e3e|Jun 20, 2026
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|6b73e1c8d26342cdc64b321afb1b4c17a5bf0cb0|Jun 21, 2026

@@ -3,7 +3,7 @@
 # libdovi
 #
 ################################################################################
-
+# Version: Commits on Jul 12, 2026
 LIBDOVI_VERSION = 2.3.3
 LIBDOVI_SITE = $(call github,quietvoid,dovi_tool,$(LIBDOVI_VERSION))
 LIBDOVI_LICENSE = MIT license

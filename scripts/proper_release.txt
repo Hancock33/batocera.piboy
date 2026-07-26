@@ -23,6 +23,7 @@ glslang.mk
 iir.mk
 kodi-pvr-freebox
 ledspicer.mk
+libdovi.mk
 libfreeaptx.mk
 libgme.mk
 libretro-amiberry.mk
