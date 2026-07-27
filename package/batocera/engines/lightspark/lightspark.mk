@@ -3,8 +3,8 @@
 # lightspark
 #
 ################################################################################
-# Version: Commits on Jul 21, 2026
-LIGHTSPARK_VERSION = 7565778bb51484422d268a553ac024a0f9f40928
+# Version: Commits on Jul 26, 2026
+LIGHTSPARK_VERSION = 7ba395b007aa1327b8a060077ff565e3aa85853f
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = cairo ffmpeg freetype jpeg libcurl libpng pango pcre2 rtmpdump sdl2
@@ -26,7 +26,7 @@ ifeq ($(LIGHTSPARK_ARCH), "arm")
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
-    LIGHTSPARK_CONF_OPTS += -DENABLE_GLES3=ON
+    LIGHTSPARK_CONF_OPTS += -DENABLE_GLES2=ON
     LIGHTSPARK_DEPENDENCIES += libgles
 else ifeq ($(BR2_PACKAGE_BATOCERA_GLES2),y)
     LIGHTSPARK_CONF_OPTS += -DENABLE_GLES2=ON
