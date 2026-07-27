@@ -122,18 +122,18 @@ index 10fb38835f..66aab29ce1 100644
              g_drm_resources->connectors[i]);
  
 diff --git a/gfx/drivers/drm_gfx.c b/gfx/drivers/drm_gfx.c
-index bd8ddbf62e..281d3daebe 100644
+index 6ee32d0333..fbd3332203 100644
 --- a/gfx/drivers/drm_gfx.c
 +++ b/gfx/drivers/drm_gfx.c
-@@ -643,6 +643,7 @@ static bool init_drm(void)
- {
+@@ -651,6 +651,7 @@ static bool init_drm(void)
     uint i;
     drmModeConnector *connector;
+    struct modeset_buf buf;
 +   int drmConn = 0;
  
     drm.fd = open("/dev/dri/card0", O_RDWR);
  
-@@ -676,9 +677,25 @@ static bool init_drm(void)
+@@ -684,9 +685,25 @@ static bool init_drm(void)
        return false;
     }
  
@@ -160,10 +160,10 @@ index bd8ddbf62e..281d3daebe 100644
        /* It's connected, let's use it. */
        if (connector->connection == DRM_MODE_CONNECTED)
 diff --git a/gfx/drivers/oga_gfx.c b/gfx/drivers/oga_gfx.c
-index 93f90ba161..841cf89d50 100644
+index 060ce75430..f069a7860d 100644
 --- a/gfx/drivers/oga_gfx.c
 +++ b/gfx/drivers/oga_gfx.c
-@@ -108,6 +108,7 @@ static bool oga_create_display(oga_video_t* vid)
+@@ -107,6 +107,7 @@ static bool oga_create_display(oga_video_t* vid)
     drmModeModeInfo *mode;
     drmModeEncoder *encoder;
     drmModeRes *resources;
@@ -171,7 +171,7 @@ index 93f90ba161..841cf89d50 100644
  
     vid->fd = open("/dev/dri/card0", O_RDWR);
     if (vid->fd < 0)
-@@ -123,8 +124,24 @@ static bool oga_create_display(oga_video_t* vid)
+@@ -122,8 +123,24 @@ static bool oga_create_display(oga_video_t* vid)
        goto err_01;
     }
  
