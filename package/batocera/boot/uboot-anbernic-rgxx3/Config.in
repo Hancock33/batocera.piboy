@@ -1,8 +1,0 @@
-config BR2_PACKAGE_UBOOT_ANBERNIC_RGXX3
-	bool "U-Boot for Anbernic RG353 / RG503 family"
-	select BR2_PACKAGE_HOST_DTC
-
-	help
-	  U-Boot for the Anbernic RGxx3 devices & Powkiddy clones.
-
-	  https://u-boot.org/
