@@ -1235,7 +1235,7 @@ atari5200:
   manufacturer:         Atari
   release:              1982
   hardware:             console
-  extensions:           [7z, a52, atr, atx, bin, car, cas, cdm, m3u, rom, xex, xfd, zip]
+  extensions:           [a52, atr, atx, bin, car, cas, cdm, m3u, rom, xex, xfd, zip]
   emulators:
     libretro:
       atari800:         { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ATARI800] }
