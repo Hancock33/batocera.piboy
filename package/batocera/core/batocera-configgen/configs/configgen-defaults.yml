@@ -1100,6 +1100,9 @@ systemsp:
 taito:
   emulator: libretro
   core:     mame078plus
+tamagotchi:
+  emulator: libretro
+  core:     tamalibretro
 technos:
   emulator: libretro
   core:     mame078plus
