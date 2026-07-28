@@ -40,6 +40,7 @@ Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|546cb72
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-07-27|Jul 27, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b4dfc8d26522cc1623f9f99035f8e70ff7a05e79|Jul 27, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260727|Jul 27, 2026
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.357.0|Jul 27, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260727|Jul 27, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|1b2fc1dedaa73305e7ec669855ba0a37494b5c76|Jul 27, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|9f14c48787918a183e266df17c36bbf80092368e|Jul 27, 2026
@@ -113,6 +114,7 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|4126f1464fbc77c6b
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.4.1|Jul 20, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|a45fecc64ac260599e5b497628fa011c7fb909c6|Jul 20, 2026
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.2+hotfix|Jul 20, 2026
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.357.0|Jul 20, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|4126f1464fbc77c6bcec9cad00c32017ecabb799|Jul 20, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|0fece7d9514e2224530cd252489c8928d49eebca|Jul 20, 2026
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|5430a4a53b89fa5827c97b84ada29d23317245bc|Jul 20, 2026
@@ -170,6 +172,7 @@ Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|6dc
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.43.03|Jul 07, 2026
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|3ea88dcd982b39a4bfb841d47dbcaecbd99536e7|Jul 06, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|4aba09c98f1e5028b82765be1647677b08d35942|Jul 06, 2026
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.357.0|Jul 06, 2026
 Emulators|[libretro-quicknes](http://github.com/libretro/QuickNES_Core)|26bb785c9deddb66a17717b21bb4e328f03ade32|Jul 06, 2026
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|4aba09c98f1e5028b82765be1647677b08d35942|Jul 06, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|2045a52d89363005476e670e45df048655edccf7|Jul 05, 2026
@@ -310,20 +313,17 @@ Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|9dc
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|bf816b096f1dca55ea805337d7c9e78d6b98d839|May 11, 2026
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v1221|May 10, 2026
 Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3|May 10, 2026
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.350.1|May 10, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|50af22e1909132993c5106cc64a6834710212da0|May 09, 2026
 Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.42.0|May 08, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|4a1123220e6dce73c87cc584494df2ac82cb6f4c|May 08, 2026
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|276979efa4f862d1f84afeff5a2e794de4744024|May 08, 2026
 Libraries|[pysdl3](http://github.com/Aermoss/PySDL3)|v0.9.11b1|May 06, 2026
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.0.1|May 06, 2026
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|vulkan-sdk-1.4.350.1|May 04, 2026
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|1f2e7d388cbc73287191a6b2b2464f1f8f74818c|May 02, 2026
 Libraries|[sdl3_image](https://github.com/libsdl-org/SDL_image)|release-3.4.4|May 01, 2026
 Utils|[btop](http://github.com/aristocratos/btop)|v1.4.7|May 01, 2026
 Audio|[zmusic](http://github.com/ZDoom/ZMusic)|d3b730795784bff3f97571446101c57c1c6ac9bc|Apr 30, 2026
 Boot|[uboot-odroid-goa](https://github.com/hardkernel/u-boot.git)|7d5876d36f4120034f1902b12d6799b147bec884|Apr 30, 2026
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.350.1|Apr 30, 2026
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|fc881ed0b1fe4d1d159f60a7b0b1b370fb56a037|Apr 29, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Audio|[cubeb](http://github.com/mozilla/cubeb)|ef47ae581df7c2f76058d554b3edde17f9ee7cba|Apr 23, 2026
