@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
-import os
 import json
+from pathlib import Path
+from typing import TYPE_CHECKING
 
-from ...batoceraPaths import CONFIGS, mkdir_if_not_exists
 from ... import Command
+from ...batoceraPaths import CONFIGS, mkdir_if_not_exists
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
@@ -38,14 +38,14 @@ class YabasanshiroGenerator(Generator):
         }
 
         mkdir_if_not_exists(yabConfigPath)
-        rom_file = os.path.basename(rom)
+        rom_file = Path(rom).name
         config_file = f"{yabConfigPath}/{rom_file}.config"
         ctrl_config_file = f"{yabConfigPath}/keymapv2.json"
 
         # Check if the configuration file exists
-        if os.path.exists(config_file):
+        if Path(config_file).exists():
             # Load the configuration file
-            with open(config_file, 'r') as f:
+            with Path(config_file).open() as f:
                 config = json.load(f)
 
         else:
@@ -57,7 +57,7 @@ class YabasanshiroGenerator(Generator):
                 "Rotate screen resolution": 0,
                 "Use compute shader": False
             }
-            with open(config_file, 'w') as f:
+            with Path(config_file).open('w') as f:
                 json.dump(config, f, indent=2)
 
         # Modify the config file
@@ -77,7 +77,7 @@ class YabasanshiroGenerator(Generator):
             config["Use compute shader"] = False
 
         # Write the modified configuration file back to disk
-        with open(config_file, 'w') as f:
+        with Path(config_file).open('w') as f:
             json.dump(config, f, indent=2)
 
         # Configure the first two controllers
@@ -125,7 +125,7 @@ class YabasanshiroGenerator(Generator):
                 nplayer += 1
 
         # Write the final controller json file
-        with open(ctrl_config_file, 'w') as f:
+        with Path(ctrl_config_file).open('w') as f:
             json.dump(data, f, indent=2)
 
         commandArray = ["/usr/bin/yabasanshiro/yabasanshiro", "-i", rom]

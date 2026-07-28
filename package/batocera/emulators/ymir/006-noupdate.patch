@@ -1,0 +1,26 @@
+diff --git a/apps/ymir-sdl3/src/app/services/update_checker_service.cpp b/apps/ymir-sdl3/src/app/services/update_checker_service.cpp
+index f602d52c..a0a27e5f 100644
+--- a/apps/ymir-sdl3/src/app/services/update_checker_service.cpp
++++ b/apps/ymir-sdl3/src/app/services/update_checker_service.cpp
+@@ -131,17 +131,17 @@ void UpdateCheckerService::ThreadLoop(SharedContext &context, Settings &settings
+                 // Stable release couldn't be retrieved or isn't newer than the current version.
+                 // Check if nightly is an update.
+                 if (!context.targetUpdate) {
+-                    if (semver::detail::compare_parsed(nightlyResult.updateInfo.version, currVersion,
++                    /*if (semver::detail::compare_parsed(nightlyResult.updateInfo.version, currVersion,
+                                                        semver::version_compare_option::exclude_prerelease) > 0) {
+                         return true;
+-                    }
++                    }*/
+ 
+                     if constexpr (ymir::version::is_nightly_build) {
+                         // Current version is a nightly build
+-                        if (semver::detail::compare_parsed(nightlyResult.updateInfo.version, currVersion,
++                        /*if (semver::detail::compare_parsed(nightlyResult.updateInfo.version, currVersion,
+                                                            semver::version_compare_option::exclude_prerelease) < 0) {
+                             return false;
+-                        }
++                        }*/
+ 
+                         // Nightly versions match; compare build timestamps
+ #ifdef Ymir_BUILD_TIMESTAMP

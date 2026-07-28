@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
-import os
 
-from ... import Command, controllersConfig
+from ... import Command
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class SpacecadetpinballGenerator(Generator):
 
@@ -17,7 +19,7 @@ class SpacecadetpinballGenerator(Generator):
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0'
             })
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "SpaceCadetPinball",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

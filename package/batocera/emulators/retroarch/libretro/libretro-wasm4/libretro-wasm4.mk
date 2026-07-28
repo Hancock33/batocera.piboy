@@ -3,8 +3,8 @@
 # libretro-wasm4
 #
 ################################################################################
-# Version: Commits on Jul 09, 2026
-LIBRETRO_WASM4_VERSION = b0d7484f3f8bf7d89810bf6113f8ae81e3fc7cc0
+# Version: Commits on Jul 28, 2026
+LIBRETRO_WASM4_VERSION = 71f4b34401168072f34b8a7e4b19751ed13632ed
 LIBRETRO_WASM4_SITE = https://github.com/aduros/wasm4
 LIBRETRO_WASM4_SITE_METHOD = git
 LIBRETRO_WASM4_GIT_SUBMODULES = yes
@@ -13,12 +13,6 @@ LIBRETRO_WASM4_SUBDIR = runtimes/native
 LIBRETRO_WASM4_LICENSE = ISC
 LIBRETRO_WASM4_DEPENDENCIES += retroarch
 LIBRETRO_WASM4_EMULATOR_INFO = wasm4.libretro.core.yml
-
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-    LIBRETRO_WASM4_DEPENDENCIES += libglvnd
-    LIBRETRO_WASM4_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-    LIBRETRO_WASM4_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
-endif
 
 define LIBRETRO_WASM4_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro

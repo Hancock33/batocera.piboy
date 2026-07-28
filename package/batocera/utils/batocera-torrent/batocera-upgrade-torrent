@@ -49,6 +49,8 @@ do_help() {
     echo "    clean batocera torrent used to share updates/installs" >&2
     echo "    warning: it will remove the downloaded files too" >&2
     echo "batocera-upgrade-torrent --status" >&2
+    echo "    status of download of the current board" >&2
+    echo "batocera-upgrade-torrent --status-all" >&2
     echo "    status of downloads" >&2
     echo "batocera-upgrade-torrent --update" >&2
     echo "    update local information from batocera web servers (check if a new version is available)" >&2
@@ -86,7 +88,7 @@ add_from_http() {
 
     if check_if_torrent_already_exists "${TORRENT_FILE}"
     then
-	echo "torrent ${TORRENT_FILE} is already present. Use --clean first to remove existing torrent files." >&2
+	echo "torrent ${TORRENT_FILE} is already present. Use --clean first to remove existing files." >&2
 	return 1
     fi
 
@@ -95,12 +97,14 @@ add_from_http() {
     then
 	echo "File ${G_BASE_DIR}/output/${TARGET_FILE} already exists" >&2
     else
+	mkdir -p "${G_BASE_DIR}/tmp" || return 1
 	if ! wget "${G_UPDATEURL}/${G_BOARD}/stable/last/boot.tar.xz" --show-progress -qO "${G_BASE_DIR}/tmp/boot.tar.xz.tmp"
 	then
 	    echo "Unable to download last stable version for ${G_BOARD} as a boot.tar.xz" >&2
 	    return 1
 	fi
 	# rename it to the version name in output
+	mkdir -p "${G_BASE_DIR}/output" || return 1
 	if ! mv "${G_BASE_DIR}/tmp/boot.tar.xz.tmp" "${G_BASE_DIR}/output/${TARGET_FILE}"
 	then
 	    return 1
@@ -137,11 +141,12 @@ add_from_torrent() {
 
     if check_if_torrent_already_exists "${TORRENT_FILE}"
     then
-	echo "torrent ${TORRENT_FILE} is already present. Use --clean first to remove existing torrent files." >&2
+	echo "torrent ${TORRENT_FILE} is already present. Use --clean first to remove existing files." >&2
 	return 1
     fi
 
     # get the torrent file
+    mkdir -p "${G_BASE_DIR}/tmp" || return 1
     if ! wget "${G_UPDATEURL}/${G_BOARD}/stable/last/${TORRENT_FILE}" -qO "${G_BASE_DIR}/tmp/boot.tar.xz.torrent.tmp"
     then
 	echo "Unable to download last stable version for ${G_BOARD} as a torrent" >&2
@@ -203,20 +208,25 @@ board_status() {
 }
 
 do_status() {
+    SBOARD=$1
+
     find "${G_BASE_DIR}/batocera/versions" -type f |
 	while read TFILE
 	do
 	    BFILE=$(basename "${TFILE}")
-	    VFILE=$(cat "${TFILE}")
-	    TFILE="boot-${BFILE}-${VFILE}.tar.xz"
-	    IMG=$(transmission-remote -j -l | jq -r ".result.torrents[] | select(.name == \"${TFILE}\")")
-	    if test -n "${IMG}" # in case the image was removed
-	    then
-		TSIZE=$(echo "${IMG}" | jq -r ".size_when_done")
-		LSIZE=$(echo "${IMG}" | jq -r ".left_until_done")
-		TDONE=$(expr "${TSIZE}" - "${LSIZE}")
-		PDONE=$(expr "${TDONE}" '*' 100 / "${TSIZE}")
-		printf "%35s %3s%%\n" "${TFILE}" "${PDONE}"
+	    if test -z "${SBOARD}" -o "${BFILE}" == "${SBOARD}"
+	       then
+		   VFILE=$(cat "${TFILE}")
+		   TFILE="boot-${BFILE}-${VFILE}.tar.xz"
+		   IMG=$(transmission-remote -j -l | jq -r ".result.torrents[] | select(.name == \"${TFILE}\")")
+		   if test -n "${IMG}" # in case the image was removed
+		   then
+		       TSIZE=$(echo "${IMG}" | jq -r ".size_when_done")
+		       LSIZE=$(echo "${IMG}" | jq -r ".left_until_done")
+		       TDONE=$(expr "${TSIZE}" - "${LSIZE}")
+		       PDONE=$(expr "${TDONE}" '*' 100 / "${TSIZE}")
+		       printf "%35s %3s%%\n" "${TFILE}" "${PDONE}"
+		   fi
 	    fi
 	done
 }
@@ -274,6 +284,7 @@ check_www() {
     fi
 
     # "${G_BASE_DIR}/batocera/versions" contains the last known web versions
+    mkdir -p "${G_BASE_DIR}/batocera/versions" || return 1
     if ! echo "${WEB_MASTER_VERSION}" > "${G_BASE_DIR}/batocera/versions/${G_BOARD}"
     then
 	return 1
@@ -505,8 +516,11 @@ case "${ACTION}" in
     "--clean")
 	do_clean "$(local_master_version)" "${G_BOARD}" || exit 1
 	;;
-    "--status")
+    "--status-all")
 	do_status
+	;;
+    "--status")
+	do_status "${G_BOARD}"
 	;;
     "--update")
 	check_www 1 || exit 1

@@ -307,7 +307,7 @@ index 3d851e106..f07604e0d 100644
 +		{ "arduous",				ARDUBOY },
 +		{ "astrocde",				ASTROCADE },
 +		{ "jaguar",					ATARI_JAGUAR },
-+		{ "xegs",					ATARI_XE },
++		{ "xegs",					ATARI_800 },
 +		{ "cannonball",				CANNONBALL },
 +		{ "cavestory",				CAVESTORY },
 +		{ "pet",					COMMODORE_PET },
@@ -942,7 +942,7 @@ index 910a78528..90e7808f2 100644
 -	{ ATARI_JAGUAR_CD, 171 },
 -	{ ATARI_LYNX, 28 },
 -	{ ATARI_ST, 42},
--	// missing Atari XE ?
+-	{ ATARI_XE, 43},
 -	{ BBC_MICRO, 37 },
 -	{ COLECOVISION, 48 },
 -	{ COMMODORE_64, 66 },

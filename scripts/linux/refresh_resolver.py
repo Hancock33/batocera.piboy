@@ -66,8 +66,12 @@ def parse_mk_dependencies(
     provides_map: dict[str, list[str]] = {}
     kernel_modules: list[str] = []
 
-    # Matches $(eval $(kernel-module))
-    kernel_module_regex = re.compile(r'\$\(\s*eval\s*\$\(\s*kernel-module\s*\)\s*\)')
+    # Match packages using the kernel-module infrastructure or directly
+    # referencing Buildroot's Linux source/version variables.
+    kernel_module_regex = re.compile(
+        r'\$\(\s*eval\s+\$\(\s*kernel-module\s*\)\s*\)'
+        r'|\$\(\s*LINUX_(?:DIR|VERSION(?:_[A-Z0-9_]+)?)\s*\)'
+    )
 
     for pkg_name, path in all_mk_files.items():
         try:
@@ -135,55 +139,211 @@ def parse_mk_dependencies(
     return dependencies, provides_map, kernel_modules
 
 
-def find_package_for_file(changed_file_path: Path, all_mk_files: Mapping[str, Path], /) -> str | None:
+def find_package_for_file(changed_file_path: Path, package_dirs: Mapping[Path, str], /) -> str | None:
     """Maps a changed file path back to its parent package using a strict subdirectory descendant check."""
     changed_path = changed_file_path.resolve()
 
-    best_pkg: str | None = None
-    best_prefix_len = -1
+    if (pkg_name := package_dirs.get(changed_path)) is not None:
+        return pkg_name
 
-    for pkg_name, mk_path in all_mk_files.items():
-        pkg_dir = mk_path.parent.resolve()
-        try:
-            # Verify if the modified file path sits within this package directory
-            changed_path.relative_to(pkg_dir)
-            prefix_len = len(pkg_dir.parts)
-            # Prefer the most specific/deepest folder match
-            if prefix_len > best_prefix_len:
-                best_prefix_len = prefix_len
-                best_pkg = pkg_name
-        except ValueError:
-            continue
+    # Parents are ordered from nearest to farthest, preserving the previous
+    # most-specific package-directory match without scanning every package.
+    for parent in changed_path.parents:
+        if (pkg_name := package_dirs.get(parent)) is not None:
+            return pkg_name
 
-    return best_pkg
+    return None
 
 
-def get_changed_files(git_root: Path, days: int, /) -> Iterator[Path]:
+def get_changed_files(git_root: Path, since: str, /) -> Iterator[Path]:
+    """Retrieves both committed files and any uncommitted staged/unstaged/untracked files."""
+    changed_files: set[str] = set()
+
+    # Committed files from the last time period
     try:
         out = subprocess.check_output(
-            ['git', '-C', git_root, 'log', f'--since={days} days ago', '--name-only', '--format=%n'],
+            ['git', '-C', str(git_root), 'log', f'--since={since}', '--name-only', '--format=%n'],
             stderr=subprocess.DEVNULL,
             universal_newlines=True,
         )
-        yield from (git_root / stripped for line in out.splitlines() if (stripped := line.strip()))
-    except subprocess.CalledProcessError:
+        changed_files.update(line.strip() for line in out.splitlines() if line.strip())
+    except Exception:
         pass
 
+    # Uncommitted modifications (both staged and unstaged)
+    try:
+        out = subprocess.check_output(
+            ['git', '-C', str(git_root), 'diff', 'HEAD', '--name-only'],
+            stderr=subprocess.DEVNULL,
+            universal_newlines=True,
+        )
+        changed_files.update(line.strip() for line in out.splitlines() if line.strip())
+    except Exception:
+        pass
 
-def get_git_modified_packages(project_dir: Path, days: int, all_mk_files: Mapping[str, Path], /) -> set[str]:
+    # Untracked files
+    try:
+        out = subprocess.check_output(
+            ['git', '-C', str(git_root), 'ls-files', '--others', '--exclude-standard'],
+            stderr=subprocess.DEVNULL,
+            universal_newlines=True,
+        )
+        changed_files.update(line.strip() for line in out.splitlines() if line.strip())
+    except Exception:
+        pass
+
+    for file_rel in sorted(changed_files):
+        yield git_root / file_rel
+
+
+def map_config_option_to_package(option: str, config_to_pkg: Mapping[str, str], /) -> str | None:
+    """Maps a Buildroot Kconfig option (e.g. BR2_LINUX_KERNEL_... or BR2_PACKAGE_SDL2) to its package name."""
+    # Core Buildroot subsystems
+    if 'LINUX_KERNEL' in option or option == 'BR2_LINUX_KERNEL':
+        return 'linux'
+    if 'UBOOT' in option or option == 'BR2_TARGET_UBOOT':
+        return 'uboot'
+
+    # Package options (including host packages)
+    if option.startswith('BR2_PACKAGE_'):
+        content = option[len('BR2_PACKAGE_'):]
+        is_host = False
+        if content.startswith('HOST_'):
+            content = content[len('HOST_'):]
+            is_host = True
+
+        # Sort keys descending by length to match the most specific package first
+        for pkg_upper in sorted(config_to_pkg.keys(), key=len, reverse=True):
+            if content == pkg_upper or content.startswith(pkg_upper + '_'):
+                return f"host-{config_to_pkg[pkg_upper]}" if is_host else config_to_pkg[pkg_upper]
+
+    return None
+
+
+def get_changed_configs_in_file(git_root: Path, file_path: Path, since: str, /) -> set[str]:
+    """Extracts changed Buildroot config options from committed logs and uncommitted diffs."""
+    changed_options: set[str] = set()
+    try:
+        rel_path = file_path.resolve().relative_to(git_root.resolve())
+        config_key_pattern = re.compile(r'^[+-](?![+-])\s*(?:#\s*)?(BR2_[A-Z0-9_]+)')
+
+        # Fetch from committed logs
+        out_log = subprocess.check_output(
+            ['git', '-C', str(git_root), 'log', '-p', f'--since={since}', '--', str(rel_path)],
+            stderr=subprocess.DEVNULL,
+            universal_newlines=True,
+        )
+        for line in out_log.splitlines():
+            if match := config_key_pattern.match(line):
+                changed_options.add(match.group(1))
+
+        # Fetch from uncommitted (staged + unstaged) edits
+        out_diff = subprocess.check_output(
+            ['git', '-C', str(git_root), 'diff', 'HEAD', '--', str(rel_path)],
+            stderr=subprocess.DEVNULL,
+            universal_newlines=True,
+        )
+        for line in out_diff.splitlines():
+            if match := config_key_pattern.match(line):
+                changed_options.add(match.group(1))
+    except Exception:
+        pass
+    return changed_options
+
+
+def find_package_for_board_or_config(
+    changed_file: Path,
+    git_root: Path,
+    all_mk_files: Mapping[str, Path],
+    config_to_pkg: Mapping[str, str],
+    since: str,
+    /,
+) -> set[str]:
+    """Maps config-level and board-level file modifications back to their respective Buildroot packages."""
+    resolved_packages: set[str] = set()
+    changed_path = changed_file.resolve()
+
+    # Check if the file is inside the 'configs' directory (e.g. batocera-*.board)
+    configs_dir = (git_root / 'configs').resolve()
+    try:
+        changed_path.relative_to(configs_dir)
+        is_config_file = True
+    except ValueError:
+        is_config_file = False
+
+    if is_config_file:
+        changed_configs = get_changed_configs_in_file(git_root, changed_file, since)
+        for opt in changed_configs:
+            if mapped_pkg := map_config_option_to_package(opt, config_to_pkg):
+                resolved_packages.add(mapped_pkg)
+        return resolved_packages
+
+    # Check if the file is inside the 'board' directory (e.g. custom configs or patches)
+    board_dir = (git_root / 'board').resolve()
+    try:
+        changed_path.relative_to(board_dir)
+        is_board_file = True
+    except ValueError:
+        is_board_file = False
+
+    if is_board_file:
+        path_str = changed_path.as_posix()
+
+        # Map package-specific patches under board/ (e.g. board/batocera/amlogic/patches/linux/0001-patch.patch)
+        patches_match = re.search(r'/patches/([^/]+)/', path_str)
+        if patches_match:
+            pkg_name = patches_match.group(1)
+            if pkg_name in all_mk_files:
+                resolved_packages.add(pkg_name)
+            return resolved_packages
+
+        file_name_lower = changed_file.name.lower()
+
+        # Map Linux kernel config files (e.g. linux.config, linux-meson64.config)
+        if 'linux' in file_name_lower and ('config' in file_name_lower or file_name_lower.endswith('.config')):
+            resolved_packages.add('linux')
+            return resolved_packages
+
+        # Map bootloader config files (e.g. u-boot.config, uboot-board.config)
+        if ('u-boot' in file_name_lower or 'uboot' in file_name_lower) and ('config' in file_name_lower or file_name_lower.endswith('.config')):
+            resolved_packages.add('uboot')
+            return resolved_packages
+
+    return resolved_packages
+
+
+def get_git_modified_packages(project_dir: Path, since: str, all_mk_files: Mapping[str, Path], /) -> set[str]:
     modified_pkgs: set[str] = set()
 
+    package_dirs: dict[Path, str] = {}
+
+    # Pre-build uppercase to lowercase package map for config-to-package translation
+    config_to_pkg: dict[str, str] = {}
+    for pkg_name, mk_path in all_mk_files.items():
+        # Preserve the first package for directories containing multiple .mk files,
+        # matching find_package_for_file's previous equal-depth behavior.
+        package_dirs.setdefault(mk_path.parent.resolve(), pkg_name)
+        pkg_upper = pkg_name.upper().replace('-', '_')
+        config_to_pkg[pkg_upper] = pkg_name
+
+    def process_repo(git_root: Path) -> None:
+        for changed_file in get_changed_files(git_root, since):
+            # Try matching standard packages first
+            if pkg := find_package_for_file(changed_file, package_dirs):
+                modified_pkgs.add(pkg)
+                continue
+
+            # Check configuration or board directory mappings
+            extra_pkgs = find_package_for_board_or_config(changed_file, git_root, all_mk_files, config_to_pkg, since)
+            modified_pkgs.update(extra_pkgs)
+
     # Check main repository
-    for changed_file in get_changed_files(project_dir, days):
-        if pkg := find_package_for_file(changed_file, all_mk_files):
-            modified_pkgs.add(pkg)
+    process_repo(project_dir)
 
     # Check Buildroot submodule
     buildroot_dir = project_dir / 'buildroot'
     if buildroot_dir.is_dir():
-        for changed_file in get_changed_files(buildroot_dir, days):
-            if pkg := find_package_for_file(changed_file, all_mk_files):
-                modified_pkgs.add(pkg)
+        process_repo(buildroot_dir)
 
     return modified_pkgs
 
@@ -203,11 +363,22 @@ def filter_built_packages(packages: Iterable[str], output_dir: Path, /) -> set[s
         per_package_subdirs = {d.name for d in per_package_dir.iterdir() if d.is_dir()}
 
     for pkg in packages:
-        if pkg in per_package_subdirs:
-            built_pkgs.add(pkg)
+        pkg_norm = pkg.replace('_', '-').lower()
+
+        # Check per-package directories
+        matched_per_package = False
+        for d in per_package_subdirs:
+            if d.replace('_', '-').lower() == pkg_norm:
+                built_pkgs.add(pkg)
+                matched_per_package = True
+                break
+        if matched_per_package:
             continue
+
+        # Check build subdirectories (lenient matching on hyphens vs underscores)
         for d in build_subdirs:
-            if d == pkg or d.startswith(pkg + '-'):
+            d_norm = d.replace('_', '-').lower()
+            if d_norm == pkg_norm or d_norm.startswith(pkg_norm + '-'):
                 built_pkgs.add(pkg)
                 break
 
@@ -221,19 +392,29 @@ def collect_paths_to_delete(packages: Collection[str], output_dir: Path, /) -> l
     paths_to_delete: list[Path] = []
 
     if per_package_dir.is_dir():
+        try:
+            p_subdirs = [d for d in per_package_dir.iterdir() if d.is_dir()]
+        except Exception:
+            p_subdirs = []
+
         for pkg in packages:
-            p_path = per_package_dir / pkg
-            if p_path.is_dir():
-                paths_to_delete.append(p_path)
+            pkg_norm = pkg.replace('_', '-').lower()
+            for d in p_subdirs:
+                if d.name.replace('_', '-').lower() == pkg_norm:
+                    paths_to_delete.append(d)
 
     if build_dir.is_dir():
         try:
-            subdirs = [d for d in build_dir.iterdir() if d.is_dir()]
+            b_subdirs = [d for d in build_dir.iterdir() if d.is_dir()]
         except Exception:
-            subdirs = []
+            b_subdirs = []
 
         for pkg in packages:
-            paths_to_delete.extend(d for d in subdirs if d.name == pkg or d.name.startswith(pkg + '-'))
+            pkg_norm = pkg.replace('_', '-').lower()
+            for d in b_subdirs:
+                d_norm = d.name.replace('_', '-').lower()
+                if d_norm == pkg_norm or d_norm.startswith(pkg_norm + '-'):
+                    paths_to_delete.append(d)
 
     return sorted(set(paths_to_delete))
 
@@ -269,10 +450,16 @@ def get_reason_chain(pkg: str, reasons: Mapping[str, str], /) -> str:
 
 
 def main() -> None:
+    # Force immediate unbuffered line outputs to prevent logs hanging in pipe/Makefile subprocesses
+    try:
+        sys.stdout.reconfigure(line_buffering=True)
+    except Exception:
+        pass
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--project-dir', type=Path, required=True)
     parser.add_argument('--output-dir', type=Path, required=True)
-    parser.add_argument('--days', type=int, default=1)
+    parser.add_argument('--since', type=str, default='1 days ago')
     parser.add_argument('--mandatory', default='')
     args = parser.parse_args()
 
@@ -285,9 +472,12 @@ def main() -> None:
 
     print('\n>>> Parsing dependencies and building reverse dependency graph...')
     dependencies, provides_map, kernel_modules = parse_mk_dependencies(all_mk_files)
+    print(f'    Parsed {len(dependencies)} package dependencies.')
+    print(f'    Detected {len(kernel_modules)} kernel-related modules:')
+    print(f'      {", ".join(sorted(kernel_modules))}')
 
-    print(f'\n>>> Detecting packages modified in git over the last {args.days} days...')
-    modified = get_git_modified_packages(project_dir, args.days, all_mk_files)
+    print(f'\n>>> Detecting packages modified in git since {args.since}...')
+    modified = get_git_modified_packages(project_dir, args.since, all_mk_files)
     if modified:
         for m in sorted(modified):
             print(f'      - {m}')
@@ -312,6 +502,16 @@ def main() -> None:
     for pkg in mandatory:
         if pkg not in reasons:
             reasons[pkg] = 'mandatory'
+
+    # If 'linux', 'linux-headers', or 'host-linux-headers' is in the seed packages, promote all
+    # detected kernel modules to core seed packages. This guarantees they are evaluated and rebuilt
+    if any(k in seed_packages for k in ('linux', 'linux-headers', 'host-linux-headers')):
+        print('\n>>> Kernel-related changes detected. Elevating modules to core seed packages:')
+        for km in sorted(kernel_modules):
+            print(f'      - {km}')
+            if km not in reasons:
+                reasons[km] = 'kernel-module'
+        seed_packages.update(kernel_modules)
 
     # Provider/Virtual package expansion
     provider_expansion: set[str] = set()
@@ -358,16 +558,10 @@ def main() -> None:
             queue.append(pkg)
             reasons[pkg] = parent
 
-            # HOOK: If 'linux' or 'linux-headers' is pulled in at any point,
-            # we also pull in all out-of-tree kernel modules.
-            if pkg in ('linux', 'linux-headers'):
+            # Fallback hook: If 'linux', 'linux-headers', or 'host-linux-headers' is pulled in at any point:
+            if pkg in ('linux', 'linux-headers', 'host-linux-headers'):
                 for km in kernel_modules:
                     add_to_reset(km, 'kernel-module')
-
-    # Trigger kernel module hook immediately if linux starts in the seed set
-    if 'linux' in to_reset or 'linux-headers' in to_reset:
-        for km in kernel_modules:
-            add_to_reset(km, 'kernel-module')
 
     while queue:
         current = queue.pop(0)
@@ -380,6 +574,13 @@ def main() -> None:
         print('\nNo active build outputs found on disk matching the affected packages. Nothing to reset.')
         sys.exit(0)
 
+    # Active kernel module tracking diagnostic output
+    active_modules = [pkg for pkg in final_packages if pkg in kernel_modules]
+    if active_modules:
+        print(f'\n>>> Found {len(active_modules)} active (previously built) kernel modules to reset:')
+        for am in sorted(active_modules):
+            print(f'      - {am}')
+
     # CASCADE PROTECTION: Check if deletion plan size is large
     if len(final_packages) > 30:
         print('\n' + yellow('========================================================'))
@@ -388,21 +589,22 @@ def main() -> None:
         print(f'A total of {bold(len(final_packages))} active packages will be reset and rebuilt.')
         print('This is usually triggered by modifications to low-level/core system libraries (such as mesa3d or udev).')
         print('--------------------------------------------------------')
+
         try:
-            response = (
-                input(
-                    'Would you like to perform a '
-                    + bold('Shallow Refresh')
-                    + ' instead?\n(Only resets modified seeds, skipping recursive dependents) [y/N]: '
-                )
-                .strip()
-                .lower()
+            # Force prompt flush before requesting raw input
+            print(
+                'Would you like to perform a '
+                + bold('Shallow Refresh')
+                + ' instead?\n(Only resets modified seeds, skipping recursive dependents) [y/N]: ',
+                end='',
+                flush=True
             )
+            response = input().strip().lower()
             if response in ('y', 'yes'):
-                print('\n>>> Downgrading to Shallow Refresh...')
+                print('\n>>> Downgrading to Shallow Refresh...', flush=True)
                 to_reset = seed_packages
                 final_packages = filter_built_packages(to_reset, output_dir)
-        except KeyboardInterrupt, EOFError:
+        except (KeyboardInterrupt, EOFError):
             print('\n\nRefresh aborted.')
             sys.exit(1)
 
@@ -423,7 +625,9 @@ def main() -> None:
         pkg_key = path.name
         # Match built package format (e.g. 'sdl3-3.4.2' -> 'sdl3')
         for pkg in final_packages:
-            if pkg_key == pkg or pkg_key.startswith(pkg + '-'):
+            pkg_norm = pkg.replace('_', '-').lower()
+            pkg_key_norm = pkg_key.replace('_', '-').lower()
+            if pkg_key_norm == pkg_norm or pkg_key_norm.startswith(pkg_norm + '-'):
                 pkg_key = pkg
                 break
 
@@ -433,11 +637,13 @@ def main() -> None:
         print('--------------------------------------------------------')
 
     try:
-        response = input('Do you want to proceed with this refresh? [y/N]: ').strip().lower()
+        # Force prompt flush before requesting raw input
+        print('Do you want to proceed with this refresh? [y/N]: ', end='', flush=True)
+        response = input().strip().lower()
         if response not in ('y', 'yes'):
             print('\nRefresh aborted by user.')
             sys.exit(1)
-    except KeyboardInterrupt, EOFError:
+    except (KeyboardInterrupt, EOFError):
         print('\n\nRefresh aborted.')
         sys.exit(1)
 

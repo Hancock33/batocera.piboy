@@ -1,30 +1,31 @@
-import os
-import shutil
-from os import path
+from __future__ import annotations
+
+import pathlib
+from typing import TYPE_CHECKING
 
 from ... import Command
-from ... import batoceraFiles
-from ... import controllersConfig
 from ...utils import videoMode as videoMode
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class EtekwarGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         gameResolution = videoMode.getCurrentResolution()
         commandArray = ["etekwar"]
-        os.chdir(os.path.dirname(os.path.abspath(rom)))
 
         # ini file
         config_dir = '/userdata/system/configs/tekwar'
-        if not os.path.exists(config_dir):
-            os.mkdir(config_dir)
+        if not pathlib.Path(config_dir).exists():
+            pathlib.Path(config_dir).mkdir()
 
         iniFile = config_dir + '/tekwar.ini'
-        if os.path.exists(iniFile):
-            os.remove(iniFile)          # Force removing tekwar.ini
+        if pathlib.Path(iniFile).exists():
+            pathlib.Path(iniFile).unlink()          # Force removing tekwar.ini
 
-        f = open(iniFile, "a", encoding="ascii")
+        f = pathlib.Path(iniFile).open("a", encoding="ascii")
         f.write('fullscreen = 1\n')
         f.write('xdim = ' + str(gameResolution["width"]) + '\n')
         f.write('ydim = ' + str(gameResolution["height"]) + '\n')
@@ -56,7 +57,7 @@ class EtekwarGenerator(Generator):
 
         return Command.Command(array=commandArray)
 
-    def getHotkeysContext(self):
+    def getHotkeysContext(self) -> HotkeysContext:
         return {
             "name": "etekwar",
             "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }

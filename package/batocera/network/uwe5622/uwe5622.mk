@@ -1,0 +1,31 @@
+################################################################################
+#
+# uwe5622
+#
+################################################################################
+# Version: Commits on Jul 28, 2026
+UWE5622_VERSION = 2c8ae63a4bb92aab42ca38f45a62d89ad61a195a
+UWE5622_SITE = $(call github,EvilOlaf,uwe5622,$(UWE5622_VERSION))
+
+UWE5622_MODULE_MAKE_OPTS = \
+    CONFIG_WLAN_UWE5622=m \
+    CONFIG_TTY_OVERY_SDIO=m
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H616),y)
+UWE5622_MODULE_MAKE_OPTS += CONFIG_AW_WIFI_DEVICE_UWE5622=y
+UWE5622_MODULE_MAKE_OPTS += CONFIG_AW_BIND_VERIFY=y
+UWE5622_MODULE_MAKE_OPTS += KCFLAGS="-DCONFIG_AW_WIFI_DEVICE_UWE5622 -DCONFIG_AW_BIND_VERIFY -Wno-error"
+endif
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3399),y)
+UWE5622_MODULE_MAKE_OPTS += CONFIG_RK_WIFI_DEVICE_UWE5622=y
+UWE5622_MODULE_MAKE_OPTS += KCFLAGS="-DCONFIG_RK_WIFI_DEVICE_UWE5622 -Wno-error"
+endif
+
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3568),y)
+UWE5622_MODULE_MAKE_OPTS += CONFIG_RK_WIFI_DEVICE_UWE5622=y
+UWE5622_MODULE_MAKE_OPTS += KCFLAGS="-DCONFIG_RK_WIFI_DEVICE_UWE5622 -Wno-error"
+endif
+
+$(eval $(kernel-module))
+$(eval $(generic-package))

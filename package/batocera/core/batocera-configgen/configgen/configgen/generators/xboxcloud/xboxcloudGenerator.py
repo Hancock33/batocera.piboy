@@ -1,6 +1,13 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class XboxcloudGenerator(Generator):
 
@@ -12,3 +19,9 @@ class XboxcloudGenerator(Generator):
             env={
               'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers)
         })
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "greenlight",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }

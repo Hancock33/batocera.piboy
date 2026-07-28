@@ -6,6 +6,9 @@ from ... import Command
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
 class Nukem2Generator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):

@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
-from ...batoceraPaths import CACHE, CONFIGS, ROMS, SAVES, mkdir_if_not_exists
+from ...batoceraPaths import CACHE, CONFIGS, SAVES
 from ...controller import Controller, generate_sdl_game_controller_config
 from ...utils import currentPlatform, esSettings
 from ..Generator import Generator

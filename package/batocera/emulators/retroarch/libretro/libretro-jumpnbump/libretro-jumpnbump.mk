@@ -3,8 +3,8 @@
 # libretro-jumpnbump
 #
 ################################################################################
-# Version: Commits on Apr 20, 2026
-LIBRETRO_JUMPNBUMP_VERSION = 25efe413d2159177e54323fb0b9d34966ca019c9
+# Version: Commits on Jul 27, 2026
+LIBRETRO_JUMPNBUMP_VERSION = 2cc840155ce4bf42b2e9e0ef3854b32d534e607e
 LIBRETRO_JUMPNBUMP_SITE = $(call github,libretro,jumpnbump-libretro,$(LIBRETRO_JUMPNBUMP_VERSION))
 LIBRETRO_JUMPNBUMP_LICENSE = GPL-2.0
 LIBRETRO_JUMPNBUMP_EMULATOR_INFO = jumpnbump.libretro.core.yml

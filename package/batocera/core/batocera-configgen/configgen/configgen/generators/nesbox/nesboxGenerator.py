@@ -1,14 +1,12 @@
 from __future__ import annotations
-import os
-from typing import TYPE_CHECKING, Final
+
+from typing import TYPE_CHECKING
+
 from ... import Command
-from ...batoceraPaths import BIOS, HOME, ROMS, SCREENSHOTS, ensure_parents_and_open
 from ...controller import generate_sdl_game_controller_config
-from ...exceptions import BatoceraException
 from ..Generator import Generator
 
 if TYPE_CHECKING:
-    from pathlib import Path
     from ...types import HotkeysContext
 
 class NesboxGenerator(Generator):
@@ -36,4 +34,3 @@ class NesboxGenerator(Generator):
 
     def getInGameRatio(self, config, gameResolution, rom):
         return 16/9
-

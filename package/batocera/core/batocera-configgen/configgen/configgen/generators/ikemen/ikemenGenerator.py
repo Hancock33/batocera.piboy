@@ -1,13 +1,13 @@
 from __future__ import annotations
 
 import json
+import os
 from typing import TYPE_CHECKING
 
 from ... import Command
 from ...batoceraPaths import ensure_parents_and_open
 from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
-import os
 
 if TYPE_CHECKING:
     from ...types import HotkeysContext

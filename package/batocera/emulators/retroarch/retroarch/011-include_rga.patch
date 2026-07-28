@@ -1,12 +1,11 @@
 diff --git a/gfx/drivers/oga_gfx.c b/gfx/drivers/oga_gfx.c
-index 841cf89d50..eaabf2b2c7 100644
+index 060ce75430..842e40f904 100644
 --- a/gfx/drivers/oga_gfx.c
 +++ b/gfx/drivers/oga_gfx.c
-@@ -21,7 +21,7 @@
+@@ -21,6 +21,7 @@
  
  #include <fcntl.h>
  #include <rga/RgaApi.h>
--#include <rga/RockchipRgaMacro.h>
 +#include <rga/drmrga.h>
  #include <xf86drm.h>
  #include <xf86drmMode.h>

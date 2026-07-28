@@ -1,10 +1,9 @@
-
 from __future__ import annotations
 
 import configparser
-from typing import TYPE_CHECKING
-import os
+import pathlib
 import shutil
+from typing import TYPE_CHECKING
 
 from ... import Command
 from ...batoceraPaths import CONFIGS, SAVES
@@ -29,7 +28,8 @@ class DevilutionXGenerator(Generator):
 
         # copy latest devilutionx.mpq to rom dir
         shutil.copytree(mpq_src, mpq_dst, dirs_exist_ok=True)
-        os.remove(configFile)
+        if configFile.exists():
+            pathlib.Path(configFile).unlink()
 
         ## Configure
         config = configparser.ConfigParser()

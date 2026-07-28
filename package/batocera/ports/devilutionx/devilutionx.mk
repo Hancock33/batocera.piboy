@@ -3,33 +3,29 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Jul 12, 2026
-DEVILUTIONX_VERSION = 7a75c9e66aa71fccc312bdebc63cc5a5a171bfa2
+# Version: Commits on Jul 27, 2026
+DEVILUTIONX_VERSION = b4dfc8d26522cc1623f9f99035f8e70ff7a05e79
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_EMULATOR_INFO = devilutionx.emulator.yml
-DEVILUTIONX_DEPENDENCIES = bzip2 fmt libpng libsodium lpeg lua lua-lpeg-patterns luafilesystem luasec luasocket sdl2 sdl2_image
+DEVILUTIONX_DEPENDENCIES += bzip2 fmt libpng libsodium lpeg lua lua-lpeg-patterns luafilesystem luasec luasocket
+DEVILUTIONX_DEPENDENCIES += sdl3 sdl3_image sdl3_mixer
 DEVILUTIONX_SUPPORTS_IN_SOURCE_BUILD = NO
 
 # Prefill the player name when creating a new character, in case the device does
 # not have a keyboard.
+DEVILUTIONX_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 DEVILUTIONX_CONF_OPTS += -DBUILD_TESTING=OFF
-DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
-DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
 DEVILUTIONX_CONF_OPTS += -DCPACK=ON
-
-define DEVILUTIONX_FIX_SDL2MAIN
-	sed -i -e s+"SDL2::SDL2main"+"-lSDL2main"+ $(@D)/CMakeLists.txt
-	sed -i -e s+"SDL2::SDL2_image"+"-lSDL2_image"+ $(@D)/Source/CMakeLists.txt
-endef
-
-DEVILUTIONX_PRE_CONFIGURE_HOOKS += DEVILUTIONX_FIX_SDL2MAIN
+DEVILUTIONX_CONF_OPTS += -DDEVILUTIONX_SYSTEM_SDL3=ON
+DEVILUTIONX_CONF_OPTS += -DPREFILL_PLAYER_NAME=ON
+DEVILUTIONX_CONF_OPTS += -DUSE_LD_MOLD=ON
+DEVILUTIONX_CONF_OPTS += -DUSE_SDL3=ON
 
 define DEVILUTIONX_INSTALL_TARGET_ASSETS
 	mkdir -p $(TARGET_DIR)/usr/bin/diablo
 	mv $(TARGET_DIR)/usr/bin/devilutionx	$(TARGET_DIR)/usr/bin/diablo
 	cp -a $(@D)/buildroot-build/assets		$(TARGET_DIR)/usr/bin/diablo
-	cp -a $(@D)/buildroot-build/_deps/sheenbidi-build/libSheenBidi.so* $(TARGET_DIR)/usr/lib
 endef
 
 DEVILUTIONX_POST_INSTALL_TARGET_HOOKS = DEVILUTIONX_INSTALL_TARGET_ASSETS

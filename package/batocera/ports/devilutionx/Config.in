@@ -8,8 +8,9 @@ config BR2_PACKAGE_DEVILUTIONX
 	select BR2_PACKAGE_LUA_LPEG_PATTERNS
 	select BR2_PACKAGE_LUAFILESYSTEM
 	select BR2_PACKAGE_LUASEC
-	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_SDL2_IMAGE
+	select BR2_PACKAGE_SDL3
+	select BR2_PACKAGE_SDL3_IMAGE
+	select BR2_PACKAGE_SDL3_MIXER
 
 	help
 	  A Diablo 1 port for modern operating systems.

@@ -3,6 +3,7 @@ from __future__ import annotations
 import collections
 import re
 import shlex
+from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
@@ -11,8 +12,6 @@ from ...controller import generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
-    from pathlib import Path
-
     from ...types import HotkeysContext
 
 _CONFIG_DIR: Final = CONFIGS / "gzdoom"
@@ -246,11 +245,11 @@ class GzdoomGenerator(Generator):
 
         rom_extension = rom.suffix.lower()
         if rom_extension == ".gzdoom":
-            with open(rom, "r") as f:
+            with Path(rom).open() as f:
                 iwad_command = f.read().strip()
             args = shlex.split(iwad_command)
         elif  rom_extension == ".uwad":
-            f=open(rom)
+            f=Path.open(rom)
             content=f.readlines()
             for line in content:
                 if 'IWAD=/' in line:

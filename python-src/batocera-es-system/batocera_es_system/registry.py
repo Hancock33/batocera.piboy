@@ -715,7 +715,21 @@ class Registry:
         return chain([self.shared_defs, self.global_defs], self.emulator_defs.values())
 
     @classmethod
-    def load_files(cls, files: Iterable[StrPath], /) -> Self:
+    def load_files(
+        cls,
+        files: Iterable[StrPath],
+        /,
+        *,
+        missing: list[Path] | None = None,
+        buildroot_mapping: tuple[Path, Path] | None = None,
+    ) -> Self:
+        """
+        Load a registry from the given emulator-info files.
+
+        If `missing` is given, any referenced file that doesn't exist on disk is
+        skipped and appended to `missing` instead of raising. If `missing` is
+        None (the default), a missing file raises FileNotFoundError as before.
+        """
         emulators: dict[str, EmulatorInfo] = {}
         cores: dict[str, dict[str, CoreInfo]] = defaultdict(dict)
         extensions: dict[str, list[Path]] = defaultdict(list)
@@ -723,6 +737,14 @@ class Registry:
 
         for file in files:
             file = Path(file)
+
+            if buildroot_mapping is not None:
+                file = buildroot_mapping[0] / file.relative_to(buildroot_mapping[1])
+
+            if missing is not None and not file.exists():
+                missing.append(file)
+                continue
+
             file_info = get_file_info(file)
 
             if not file_info['is_extension']:
@@ -749,9 +771,18 @@ class Registry:
         return cls(_emulators=emulators, _cores=cores)
 
     @classmethod
-    def load_path_file(cls, path_file: StrPath, /) -> Self:
+    def load_path_file(
+        cls,
+        path_file: StrPath,
+        /,
+        *,
+        missing: list[Path] | None = None,
+        buildroot_mapping: tuple[Path, Path] | None = None,
+    ) -> Self:
         path_file = Path(path_file)
-        return cls.load_files(path_file.read_text().strip().split())
+        return cls.load_files(
+            path_file.read_text().strip().split(), missing=missing, buildroot_mapping=buildroot_mapping
+        )
 
     @staticmethod
     def register_files(dest: Path, files: list[Path], /) -> None:

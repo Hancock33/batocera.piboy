@@ -3,8 +3,8 @@
 # libretro-dinothawr
 #
 ################################################################################
-# Version: Commits on Jun 29, 2026
-LIBRETRO_DINOTHAWR_VERSION = e608bc507d4e76940be4af3d74b5fecb2dfa26a6
+# Version: Commits on Jul 27, 2026
+LIBRETRO_DINOTHAWR_VERSION = dde9179cf743838927d67ce3a11ea5904a189d47
 LIBRETRO_DINOTHAWR_SITE = $(call github,libretro,Dinothawr,$(LIBRETRO_DINOTHAWR_VERSION))
 LIBRETRO_DINOTHAWR_LICENSE = Custom
 LIBRETRO_DINOTHAWR_LICENSE_FILES = LICENSE

@@ -1,11 +1,8 @@
 from __future__ import annotations
 
-import filecmp
 import os
 import shutil
-import subprocess
 from os import environ
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -192,7 +189,7 @@ class DrasticGenerator(Generator):
         controller = None
         if isinstance(playersControllers, dict):
             if "1" in playersControllers:
-                controller = playersControllers["1"]
+                controller = playersControllers["1"]  # pyright: ignore[reportArgumentType, reportCallIssue]
             elif playersControllers:
                 controller = playersControllers[sorted(playersControllers.keys())[0]]
         elif isinstance(playersControllers, list) and playersControllers:
@@ -207,7 +204,7 @@ class DrasticGenerator(Generator):
                 inp = inputs[input_name]
                 if inp.type == "button":
                     return str(1024 + int(inp.id))
-                elif inp.type == "hat":
+                if inp.type == "hat":
                     hat_masks = {"up": 1, "right": 2, "down": 4, "left": 8}
                     return str(1088 + hat_masks.get(inp.name, 0))
                 return "65535"

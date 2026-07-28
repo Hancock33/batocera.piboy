@@ -1,0 +1,26 @@
+diff --git a/pcsx2/CDVD/CDVD.cpp b/pcsx2/CDVD/CDVD.cpp
+index aa21baea9..8272ba48a 100644
+--- a/pcsx2/CDVD/CDVD.cpp
++++ b/pcsx2/CDVD/CDVD.cpp
+@@ -6,7 +6,7 @@
+ #include "CDVD/CDVD_internal.h"
+ #include "CDVD/IsoReader.h"
+ #include "CDVD/IsoFileFormats.h"
+-#include "GS.h"
++#include "../GS.h" // for gsVideoMode
+ #include "SIO/Sio.h"
+ #include "Elfheader.h"
+ #include "ps2/BiosTools.h"
+diff --git a/pcsx2/DebugTools/DebugInterface.cpp b/pcsx2/DebugTools/DebugInterface.cpp
+index a64b9b348..fae7c6cf1 100644
+--- a/pcsx2/DebugTools/DebugInterface.cpp
++++ b/pcsx2/DebugTools/DebugInterface.cpp
+@@ -7,7 +7,7 @@
+ #include "R5900OpcodeTables.h"
+ #include "Debug.h"
+ #include "VU.h"
+-#include "GS.h" // Required for gsNonMirroredRead()
++#include "../GS.h" // Required for gsNonMirroredRead()
+ #include "Counters.h"
+ 
+ #include "Host.h"

@@ -1,6 +1,7 @@
-# 2026/xx/xx - batocera.linux 44 - xxxx
+# 2026/xx/xx - batocera.linux 44 - Malachite
 ### Special Notes
 - ShadPS4 has moved from the no longer maintained ShadPS4 Plus to standard ShadPS4
+- The Play! emulator (and Libretro variant) has been removed in favor of PCSX2x6 for Namco2x6 systems as well as removed as a PS2 emulator.
 ### Hardware
 - Anbernic RG-DS initial support
 - Anbernic RG Vita Pro initial support
@@ -10,7 +11,9 @@
 - AYN Odin 3 initial support
 - Mangmi Air X initial support
 - Odroid M2 initial support
+- Retroid Pocket Nova initial support
 ### Added
+- Anbernic H700 device hardware acceleration support
 - Anbernic RGCubeXX device LED controller support
 - Drastic back for Aarch64 devices
 - NanoBoyAdvance as an alternative GBA emulator
@@ -22,6 +25,7 @@
 - Box64 userland x86_64 emulator for aarch64
 - Legion Go / Go 2 LED controller support
 - Libretro-Azahar
+- PCSX2x6 emulator for Namco2x6 systems (see the _info.txt file for rom details)
 - Xenia-Edge for x864_64 and select aarch64 devices
 ### Fixed
 - BCC menu not showing on SM8250 devices (i.e. Retroid Pocket 5)
@@ -41,6 +45,7 @@
 ### Changed / Improved
 - AYN Thor, AYN button now opens Batocera Control Center
 - BigPEmu added to capable aarch64 devices
+- Boot logo and video now scales better to the primary screen being rendered on
 - Cemu added to capable aarch64 devices
 - New CPU, GPU & Battery temp helper script - batocera-temp
 - Raspberry Pi4 now uses LabWC
@@ -53,8 +58,11 @@
 - Rockchip RK3588 devices moved to the mainline linux kernel:
   CoolPi 4B, FriendlyElec CM3588 NAS, GameForce ACE, IndieDroid Nova, Khadas Edge2, Orange Pi 5
   Orange Pi 5 Plus, Orange Pi 5B, QuartzPro64, ROCK 5A, ROCK 5B, ROCK 5B Plus, ROCK 5C
+- Select Qualcomm handheld devices can now install batcoera on the internal drive alongside Android (batocera-install-internal)
 - The Force Engine to capable aarch64 devices
-- TR1X & TR2X have merged into the unified TRX which also now supports Tomb Raider 3.
+- TR1X & TR2X have merged into the unified TRX which also now supports Tomb Raider 3
+  As a result your roms in the traider1 & traider2 folders should be moved to the new combined traider folder
+  Ensure you read the info text file in the traider folder
 - Vita3k added for capable aarch64 devices
 ### Updated
 - Azahar to 2125.1.2
@@ -62,8 +70,9 @@
 - Box64 0.4.2
 - Cemu to June 23rd, 2026 build
 - CDogs to 2.4.0
-- CLK to 2026-04-30
+- CLK to 2026-07-23
 - CorsixTH to v0.69.2
+- Dhewm3 & Mods to 1.5.5
 - Dolphin-Emu to 2606
 - ECWolf to Feb 23, 2026 build
 - EDuke32 / Fury to Feb 03, 2026 build
@@ -73,6 +82,7 @@
 - Jazz2 to 3.6.0
 - Ledspicer to 0.7.6
 - Libretro-Arduous to April 21st, 2026 build
+- Libretro-Atari800 to July 15th, 2026 build
 - Libretro-EasyRPG to 0.8.1.1
 - Libretro-Hatari to April 21st, 2026 build
 - Libretro-HatariB to February 14th, 2026 build
@@ -101,11 +111,14 @@
 - Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
+- Redream to 1.5.0-1155-g0056e35
 - RPCS3 to v.0.0.41
 - ShadPS4 to v.0.16.0
 - Solarus to 2.0.4
 - Sonic3-Air to v26.03.28.0
 - Supermodel to v0.3a-20260528
+- TheXTech to v1.3.7.3-1
+- TRX to 1.9.2
 - Tsugaru to v20251206
 - Vita3k to 10th of June build
 - VKQuake to 1.34.1
@@ -113,37 +126,42 @@
 - Winetricks to 20260125
 - X16emu to r49
 - Xemu to v0.8.136
+- Ymir to v0.3.3
 ### System
-- Allwinner H700 device kernel updated to 7.0.11
-- ALSA UCM configuration to v1.2.16
+- Allwinner H616 device kernel updated to 7.1.5
+- Allwinner H700 device kernel updated to 7.0.14
+- ALSA UCM configuration to v1.2.16.1
 - Buildroot to 2026.05.x with supporting package & toolchain updates
-- DXVK to 3.0.1
+- DXVK to 3.0.2
 - DXVK-NVAPI to v0.9.2
-- FAudio to 26.05
+- FAudio to 26.07
 - FFMPEG to 8.1.2
+- GStreamer codecs to 1.28.5
 - Khadas VIM4 kernel updated to vendor 5.15.y
-- LabWC to 0.20.0
+- LabWC to 0.20.1
 - Linux Firmware to 20260622
-- Mesa3D to 26.1.4
+- Mesa3D to 26.1.5
 - Nvidia Open Production driver to 610.43.03
 - Nvidia 580 Legacy driver to 580.173.02
 - QT to 6.11.1
-- Qualcomm SM6115 device kernel updated to 7.0.11
-- Qualcomm SM8550 device kernel updated to 7.0.11
-- Qualcomm SM8750 device kernel updated to 7.1.3
+- Qualcomm SM6115 device kernel updated to 7.0.14
+- Qualcomm SM8550 device kernel updated to 7.0.14
+- Qualcomm SM8750 device kernel updated to 7.1.5
 - Raspberry Pi device kernel updated to 6.18.37
-- Rockchip RK3568 device kernel updated to 7.0.11
-- Rockchip RK3588 mainline device kernel updated to 7.1.3
-- Rocknix ABL to 1.1.4 (SM8x50 devices)
+- Rockchip RK3568 device kernel updated to 7.0.14
+- Rockchip RK3588 mainline device kernel updated to 7.1.5
+- Rocknix ABL to 1.1.6 (SM6115 & SM8x50 devices)
+- Sound Open Firmware to 2025.12.2
 - SwitchRes to 2.2.2
 - RTKit to v0.14
 - VKD3D Proton to 3.0.1
 - Vulkan stack to 1.4.350
 - WINE Mono to 11.1.0
-- WINE Proton to proton-exp-11.0
-- WINE TKG to 11.12
-- Wlroots to 0.20.1
-- X86_64 / Zen3 kernel updated to 7.1.3
+- WINE Proton to proton-11.0-1
+- WINE TKG to 11.13
+- Wlroots to 0.20.2
+- X86_64 / Zen3 kernel updated to 7.1.5
+- Xone to v0.5.8
 
 # 2026/05/30 - batocera.linux 43.1
 ### Fixed

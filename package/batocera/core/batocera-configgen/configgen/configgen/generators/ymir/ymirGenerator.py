@@ -21,7 +21,7 @@ import toml
 
 from ... import Command
 from ...batoceraPaths import CONFIGS, SCREENSHOTS, mkdir_if_not_exists
-from ...controller import write_sdl_controller_db
+from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
 from ..Generator import Generator
 
 if TYPE_CHECKING:
@@ -164,7 +164,7 @@ class YmirGenerator(Generator):
         if not config:
             _logger.info("Creating default ymir config at %s", toml_file)
             config = {
-                "ConfigVersion": 4,
+                "ConfigVersion": 4,  # pyright: ignore[reportAssignmentType]
                 "Cartridge": {
                     "AutoLoadGameCarts": True,
                     "Type": "None"

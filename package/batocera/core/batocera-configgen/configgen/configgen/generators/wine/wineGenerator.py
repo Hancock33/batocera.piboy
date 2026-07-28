@@ -1,9 +1,9 @@
 from __future__ import annotations
 
+import glob
 import logging
 import os
 import subprocess
-import glob
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -29,16 +29,16 @@ class WineGenerator(Generator):
         if system.name == "windows_installers":
             commandArray = ["batocera-wine", "windows", "install", rom]
             return Command.Command(array=commandArray)
-        elif system.name == "windows" or system.name == "popcap" or system.name == "bigfish":
+        if system.name == "windows" or system.name == "popcap" or system.name == "bigfish":
             romExt = os.path.splitext(rom)[1]
-            _logger.debug(f"rom path: %s", Path(rom))
-            _logger.debug(f"rom file extension: %s", romExt)
+            _logger.debug("rom path: %s", Path(rom))
+            _logger.debug("rom file extension: %s", romExt)
             if romExt == ".wsquashfs":
                 commandArray = ["batocera-wine", "windows", "play", rom]
             elif "squashfs" in str(rom) and romExt == "":
                 romsInDir = glob.glob(glob.escape(rom) + '/*.wineexe')
                 rom = romsInDir[0].replace('.wineexe','.exe')
-                _logger.debug(f"wine squashfs rom: %s", rom)
+                _logger.debug("wine squashfs rom: %s", rom)
                 commandArray = ["batocera-wine", "windows", "play", rom]
             else:
                 commandArray = ["batocera-wine", "windows", "play", rom]

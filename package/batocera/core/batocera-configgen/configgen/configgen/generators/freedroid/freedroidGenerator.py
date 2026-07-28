@@ -2,9 +2,12 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from ... import Command, controllersConfig
-from ..Generator import Generator
+from ... import Command
 from ...controller import generate_sdl_game_controller_config
+from ..Generator import Generator
+
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
 
 class FreedroidGenerator(Generator):
 

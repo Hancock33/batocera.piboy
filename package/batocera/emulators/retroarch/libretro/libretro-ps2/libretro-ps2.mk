@@ -3,8 +3,8 @@
 # libretro-ps2
 #
 ################################################################################
-# Version: Commits on Jun 29, 2026
-LIBRETRO_PS2_VERSION = b03969a333f38de21f866c2a10da4300d170364d
+# Version: Commits on Jul 26, 2026
+LIBRETRO_PS2_VERSION = 8d14ef94c95b194fbfe0d7d82054a32ab21368fe
 LIBRETRO_PS2_SITE = https://github.com/libretro/ps2.git
 LIBRETRO_PS2_SITE_METHOD = git
 LIBRETRO_PS2_GIT_SUBMODULES = YES
@@ -14,22 +14,9 @@ LIBRETRO_PS2_EMULATOR_INFO = pcsx2.libretro.core.yml
 LIBRETRO_PS2_SUPPORTS_IN_SOURCE_BUILD = NO
 
 LIBRETRO_PS2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-LIBRETRO_PS2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
-LIBRETRO_PS2_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
-LIBRETRO_PS2_CONF_OPTS += -DLTO_PCSX2_CORE=OFF
-LIBRETRO_PS2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
-
-ifeq ($(BR2_PACKAGE_XORG7),y)
-    LIBRETRO_PS2_CONF_OPTS += -DX11_API=ON
-else
-    LIBRETRO_PS2_CONF_OPTS += -DX11_API=OFF
-endif
-
-ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
-    LIBRETRO_PS2_CONF_OPTS += -DWAYLAND_API=ON
-else
-    LIBRETRO_PS2_CONF_OPTS += -DWAYLAND_API=OFF
-endif
+LIBRETRO_PS2_CONF_OPTS += -DLIBRETRO=ON
+LIBRETRO_PS2_CONF_OPTS += -DBUILD_REGRESS=OFF
+LIBRETRO_PS2_CONF_OPTS += -DBUILD_TOOLS=OFF
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
     LIBRETRO_PS2_CONF_OPTS += -DUSE_OPENGL=ON
@@ -46,7 +33,7 @@ endif
 define LIBRETRO_PS2_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/pcsx2/resources
-	$(INSTALL) -D $(@D)/buildroot-build/bin/pcsx2_libretro.so	$(TARGET_DIR)/usr/lib/libretro/ps2_libretro.so
+	$(INSTALL) -D $(@D)/buildroot-build/bin/pcsx2_libretro.so	$(TARGET_DIR)/usr/lib/libretro/pcsx2_libretro.so
 	cp -f $(@D)/bin/resources/GameIndex.yaml					$(TARGET_DIR)/usr/share/batocera/datainit/bios/pcsx2/resources
 endef
 

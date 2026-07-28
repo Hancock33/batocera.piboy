@@ -1,12 +1,20 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
-import os
 
-from ... import Command, controllersConfig
+from ... import Command
 from ..Generator import Generator
 
+if TYPE_CHECKING:
+    from ...types import HotkeysContext
+
 class Srb2Generator(Generator):
+
+    def getHotkeysContext(self) -> HotkeysContext:
+        return {
+            "name": "srb2",
+            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
+        }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["srb2", rom]
@@ -18,9 +26,3 @@ class Srb2Generator(Generator):
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0',
                 'SDL_MOUSE_RELATIVE_SPEED_SCALE': '2.0'
             })
-
-    def getHotkeysContext(self):
-        return {
-            "name": "srb2",
-            "keys": { "exit": ["KEY_LEFTALT", "KEY_F4"] }
-        }

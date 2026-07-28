@@ -3,8 +3,8 @@
 # libretro-jollycv
 #
 ################################################################################
-# Version: Commits on Apr 02, 2026
-LIBRETRO_JOLLYCV_VERSION = 9ceb88e4370b2e04a597b03a9ffe4551c899d6c2
+# Version: Commits on Jul 27, 2026
+LIBRETRO_JOLLYCV_VERSION = eb14292005d51e2bef954cb75145981037ee9988
 LIBRETRO_JOLLYCV_SITE = $(call github,libretro,jollycv,$(LIBRETRO_JOLLYCV_VERSION))
 LIBRETRO_JOLLYCV_LICENSE = GPL-3.0
 LIBRETRO_JOLLYCV_DEPENDENCIES = retroarch

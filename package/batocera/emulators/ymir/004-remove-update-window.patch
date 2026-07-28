@@ -1,8 +1,8 @@
 diff --git a/apps/ymir-sdl3/src/app/app.cpp b/apps/ymir-sdl3/src/app/app.cpp
-index 79805a4e..11c2d01c 100644
+index 7dba212d..7b03f571 100644
 --- a/apps/ymir-sdl3/src/app/app.cpp
 +++ b/apps/ymir-sdl3/src/app/app.cpp
-@@ -524,7 +524,7 @@ void App::RunEmulator() {
+@@ -512,7 +512,7 @@ void App::RunEmulator() {
          const auto onboardedPath = updatesPath / ".onboarded";
          const bool onboarded = std::filesystem::is_regular_file(onboardedPath);
          if (!onboarded) {

@@ -3,8 +3,8 @@
 # libretro-fceumm
 #
 ################################################################################
-# Version: Commits on Jul 06, 2026
-LIBRETRO_FCEUMM_VERSION = 0d610d9a6401697157f693a5407adf450a0e52fb
+# Version: Commits on Jul 24, 2026
+LIBRETRO_FCEUMM_VERSION = 76f68314ce4213703174108f461c431001dcc204
 LIBRETRO_FCEUMM_SITE = $(call github,libretro,libretro-fceumm,$(LIBRETRO_FCEUMM_VERSION))
 LIBRETRO_FCEUMM_LICENSE = GPLv2
 LIBRETRO_FCEUMM_DEPENDENCIES += retroarch

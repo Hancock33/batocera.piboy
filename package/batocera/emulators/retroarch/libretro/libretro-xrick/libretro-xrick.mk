@@ -3,8 +3,8 @@
 # libretro-xrick
 #
 ################################################################################
-# Version: Commits on Apr 20, 2026
-LIBRETRO_XRICK_VERSION = 9fcdd91d1835a2bb66f87af9a3986b6f19aa2390
+# Version: Commits on Jul 28, 2026
+LIBRETRO_XRICK_VERSION = fcfde3623a04b4e986548e06d46630fcd0bd1e18
 LIBRETRO_XRICK_SITE = $(call github,libretro,xrick-libretro,$(LIBRETRO_XRICK_VERSION))
 LIBRETRO_XRICK_LICENSE = GPL-3.0
 LIBRETRO_XRICK_DEPENDENCIES += retroarch

@@ -13,8 +13,6 @@ from ...utils import vulkan
 from ..Generator import Generator
 
 if TYPE_CHECKING:
-    from pathlib import Path
-
     from ...controller import Controllers
     from ...Emulator import Emulator
     from ...input import InputMapping

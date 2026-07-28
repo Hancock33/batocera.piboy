@@ -668,7 +668,7 @@ class Rpcs3Generator(Generator):
 
         # determine the rom name
         romExt = os.path.splitext(rom)[1]
-        romConfig = os.path.splitext(rom)[0]
+        os.path.splitext(rom)[0]
         if romExt == ".psn":
             romName: Path | None = None
 
@@ -715,7 +715,8 @@ class Rpcs3Generator(Generator):
             array=commandArray,
             env={
                 "XDG_CONFIG_HOME": CONFIGS,
-                "XDG_CACHE_HOME": CACHE
+                "XDG_CACHE_HOME": CACHE,
+                "LC_ALL": "C"
             }
         )
 

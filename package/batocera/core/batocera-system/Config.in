@@ -825,6 +825,9 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     # DICE for machines without a CPU
     select BR2_PACKAGE_LIBRETRO_DICE
 
+    # Namco System246 and System256
+    select BR2_PACKAGE_PCSX2X6                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
     help
         Arcade cores/emulators
 
@@ -1246,7 +1249,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Sony PS2
     select BR2_PACKAGE_PCSX2                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_PS2                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    select BR2_PACKAGE_PLAY                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Sony PS3
     select BR2_PACKAGE_RPCS3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -2010,6 +2012,7 @@ config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
     select BR2_PACKAGE_LIBV4L
     # GStreamer
     select BR2_PACKAGE_GSTREAMER1
+    select BR2_PACKAGE_ORC
     # Base
     select BR2_PACKAGE_GST1_PLUGINS_BASE
 

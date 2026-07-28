@@ -659,8 +659,8 @@ namco22:
   emulator: libretro
   core:     mame
 namco2x6:
-  emulator: play
-  core:     play
+  emulator: pcsx2x6
+  core:     pcsx2x6
   options:
     powersave: '1'
 namco3xx:
@@ -1100,6 +1100,9 @@ systemsp:
 taito:
   emulator: libretro
   core:     mame078plus
+tamagotchi:
+  emulator: libretro
+  core:     tamalibretro
 technos:
   emulator: libretro
   core:     mame078plus

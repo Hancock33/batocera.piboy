@@ -1,0 +1,17 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5b8ccf06..ef8d3f6b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -412,8 +412,10 @@ if(NOT TRANSLATIONS_ONLY)
+     add_subdirectory(src/libretro)
+ endif()
+ 
+-add_subdirectory(src/wx)
+-add_subdirectory(po/wxvbam)
++if(NOT ENABLE_LIBRETRO)
++    add_subdirectory(src/wx)
++    add_subdirectory(po/wxvbam)
++endif()
+ 
+ set(CPACK_GENERATOR "ZIP")
+ set(CPACK_SOURCE_GENERATOR "TGZ")

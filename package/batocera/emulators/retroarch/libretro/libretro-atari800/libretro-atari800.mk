@@ -3,8 +3,8 @@
 # libretro-atari800
 #
 ################################################################################
-# Version: Commits on Jul 10, 2026
-LIBRETRO_ATARI800_VERSION = 3f036fd69a0f0948d32a9a7cd97af3e0dd7ec434
+# Version: Commits on Jul 14, 2026
+LIBRETRO_ATARI800_VERSION = 9d3bcf283502512052e21c6f1453fbdf7aa3122b
 LIBRETRO_ATARI800_SITE = $(call github,libretro,libretro-atari800,$(LIBRETRO_ATARI800_VERSION))
 LIBRETRO_ATARI800_LICENSE = GPL
 LIBRETRO_ATARI800_DEPENDENCIES += retroarch

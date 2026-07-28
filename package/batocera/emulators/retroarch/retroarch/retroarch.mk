@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Jul 12, 2026
-RETROARCH_VERSION = 483b1d125583cc57563cd641b5785ad83a162278
+# Version: Commits on Jul 28, 2026
+RETROARCH_VERSION = 5df1ff3e4b9c92cf2cdbff2a852059e4b682602d
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -84,7 +84,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_ZLIB),y)
-    RETROARCH_CONF_OPTS += --disable-builtinzlib --enable-zlib
+    RETROARCH_CONF_OPTS += --enable-zlib
     RETROARCH_DEPENDENCIES += zlib
 else
     RETROARCH_CONF_OPTS += --disable-zlib

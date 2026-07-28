@@ -10,6 +10,7 @@ clk.mk
 cpp-ipc.mk
 d7vk.mk
 db9_gpio_rpi.mk
+dhewm3.mk
 dosbox-x.mk
 dxvk-nvapi.mk
 dxvk.mk
@@ -22,6 +23,7 @@ glslang.mk
 iir.mk
 kodi-pvr-freebox
 ledspicer.mk
+libdovi.mk
 libfreeaptx.mk
 libgme.mk
 libretro-amiberry.mk
@@ -60,6 +62,7 @@ sound-open-firmware.mk
 stk.mk
 switchres.mk
 syncthing.mk
+thextech.mk
 touchegg.mk
 unclutter.mk
 vcmi.mk

@@ -3,24 +3,20 @@
 # libretro-vba-m
 #
 ################################################################################
-# Version: Commits on Jul 12, 2026
-LIBRETRO_VBA_M_VERSION = 725c63876593ba010a5e76d639f0e96bfc48a0cf
+# Version: Commits on Jul 28, 2026
+LIBRETRO_VBA_M_VERSION = aead41eb2e6145907c9496835a42100920f26d12
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
 LIBRETRO_VBA_M_DEPENDENCIES += retroarch
 LIBRETRO_VBA_M_EMULATOR_INFO = vba-m.libretro.core.yml
 
-define LIBRETRO_VBA_M_BUILD_CMDS
-	$(SED) "s|\-O[23fast]|$(TARGET_OPTIMIZATION)|g" $(@D)/src/libretro/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/src/libretro -f Makefile platform="unix" \
-		CURRENT_COMMIT="-$(shell echo $(LIBRETRO_VBA_M_VERSION) | cut -c 1-7)"
-endef
+LIBRETRO_VBA_M_CONF_OPTS += -DENABLE_LIBRETRO=ON
 
 define LIBRETRO_VBA_M_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
-	$(INSTALL) -D $(@D)/src/libretro/vbam_libretro.so $(TARGET_DIR)/usr/lib/libretro/vba-m_libretro.so
+	$(INSTALL) -D $(@D)/vbam_libretro.so $(TARGET_DIR)/usr/lib/libretro/vba-m_libretro.so
 	$(INSTALL) -D $(@D)/src/libretro/vbam_libretro.info $(TARGET_DIR)/usr/share/libretro/info/vba-m_libretro.info
 endef
 
-$(eval $(generic-package))
+$(eval $(cmake-package))
 $(eval $(emulator-info-package))

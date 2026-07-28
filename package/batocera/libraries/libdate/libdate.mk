@@ -3,8 +3,8 @@
 # libdate
 #
 ################################################################################
-# Version: Commits on May 28, 2025
-LIBDATE_VERSION = v3.0.4
+# Version: Commits on Jul 23, 2026
+LIBDATE_VERSION = v3.0.5
 LIBDATE_SITE =  $(call github,HowardHinnant,date,$(LIBDATE_VERSION))
 LIBDATE_LICENSE = MIT license
 LIBDATE_LICENSE_FILES = LICENSE.txt

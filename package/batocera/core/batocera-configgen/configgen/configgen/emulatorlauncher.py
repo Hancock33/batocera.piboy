@@ -146,8 +146,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 try:
                     res = subprocess.run(
                         ["/usr/bin/batocera-resolution", "listOutputs"],
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE,
+                        capture_output=True,
                         text=True,
                         timeout=3
                     )
@@ -198,7 +197,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
                 callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
 
-                f=open('/usr/share/batocera/batocera.arch')
+                f=Path('/usr/share/batocera/batocera.arch').open()
                 arch=f.readline().strip('\n')
                 if 'x86_64' in arch:
                     if system.isOptSet("powersave"):
@@ -733,7 +732,7 @@ def launch() -> None:
 
         _logger.debug("Exiting configgen with status %s", exitcode)
 
-        if not endSystem == "settings":
+        if endSystem != "settings":
             shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
             shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
 
