@@ -109,7 +109,10 @@ class ScummVMGenerator(Generator):
         )
 
         # Determine SDL Video Driver
-        sdl_videodriver = "wayland" if "WAYLAND_DISPLAY" in os.environ else "x11"
+        if os.environ.get("WAYLAND_DISPLAY"):
+            sdl_videodriver = "wayland"
+        else:
+            sdl_videodriver = "x11"
 
         return Command.Command(
             array=commandArray,
