@@ -5,8 +5,6 @@ import shutil
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from batocera_common.configparser import CaseSensitiveConfigParser
-
 from ... import Command
 from ...controller import generate_sdl_game_controller_config, write_sdl_controller_db
 from ..Generator import Generator
@@ -28,7 +26,10 @@ class SonicNexusGenerator(Generator):
         rom_directory = Path('/userdata/roms/ports/sonicnexus')
         destination_file = Path(str(rom_directory) + '/sonicnexus')
 
-        if not destination_file.exists():
+        if destination_file.exists():
+            os.remove(destination_file)
+            shutil.copy(source_file, destination_file)
+        else:
             shutil.copy(source_file, destination_file)
 
         ## Configuration
@@ -39,52 +40,11 @@ class SonicNexusGenerator(Generator):
         else:
             selected_vsync = 'y'
 
-        ## Create the Settings.ini file
-        config = CaseSensitiveConfigParser()
-
-        # Dev
-        config['Dev'] = {
-            'DevMenu': 'true',
-            'EngineDebugMode': 'false',
-            'StartingCategory': '255',
-            'StartingScene': '255',
-            'FastForwardSpeed': '8',
-            'DataFile': 'Data.bin'
-        }
-        # Video
-        config['Window'] = {
-            'FullScreen': 'true',
-            'Borderless': 'true',
-            'EnhancedScaling': 'false',
-            'vsync': selected_vsync,
-            'WindowScale': '2',
-            'ScreenWidth': '320',
-            'RefreshRate': '60',
-            'ColourMode': '1'
-        }
-        # Audio
-        config['Audio'] = {
-            'BGMVolume': '1.000000',
-            'SFXVolume': '1.000000'
-        }
-
-        # Save the ini file
-        with (rom_directory / 'settings.ini').open('w') as configfile:
-            config.write(configfile)
-
         write_sdl_controller_db(playersControllers, rom_directory / "gamecontrollerdb.txt")
 
         # Now run
         os.chdir(rom_directory)
         commandArray = [destination_file]
-
-        return Command.Command(
-            array=commandArray,
-            env={
-                "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
-                "SDL_JOYSTICK_HIDAPI": "0"
-            }
-        )
 
         return Command.Command(
             array=commandArray,
