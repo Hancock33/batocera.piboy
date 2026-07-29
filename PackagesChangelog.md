@@ -15,8 +15,8 @@ Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|cf4fab3294fd6ede340ecf2cb
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260729|Jul 29, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|556283a6689ab5502ceec86f4e83e8b8d796bbd8|Jul 29, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|85d7cc321f9ad49dcb08db92ae0fafac39d5f1c6|Jul 29, 2026
-Engines|[libpinmame](http://github.com/vbousquet/pinmame)|1f84e1232892b439737f930b56aacfc01084e71d|Jul 29, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|5fb68c455f08adacd9a64477b1ca0801c6a4a09f|Jul 29, 2026
+Engines|[libpinmame](http://github.com/vbousquet/pinmame)|a03966fe1b105ab4866b30b584a925157a2e46be|Jul 29, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|04197c0efaf99472864d804650082af310d9ce5f|Jul 29, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260729|Jul 29, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|406ebf93545408af6b855fa7df310cbf47ac146e|Jul 29, 2026
 Emulators|[libretro-beetle-vb](http://github.com/libretro/beetle-vb-libretro)|3f53a40bf8aa18777514fd4b220960427e312a3f|Jul 29, 2026
