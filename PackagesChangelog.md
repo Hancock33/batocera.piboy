@@ -15,6 +15,8 @@ Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|cf4fab3294fd6ede340ecf2cb
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260729|Jul 29, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|556283a6689ab5502ceec86f4e83e8b8d796bbd8|Jul 29, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|85d7cc321f9ad49dcb08db92ae0fafac39d5f1c6|Jul 29, 2026
+Engines|[libpinmame](http://github.com/vbousquet/pinmame)|1f84e1232892b439737f930b56aacfc01084e71d|Jul 29, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|5fb68c455f08adacd9a64477b1ca0801c6a4a09f|Jul 29, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260729|Jul 29, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|406ebf93545408af6b855fa7df310cbf47ac146e|Jul 29, 2026
 Emulators|[libretro-beetle-vb](http://github.com/libretro/beetle-vb-libretro)|3f53a40bf8aa18777514fd4b220960427e312a3f|Jul 29, 2026
@@ -40,7 +42,6 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|08af920bb6402cb
 Network|[uwe5622](http://github.com/EvilOlaf/uwe5622)|2c8ae63a4bb92aab42ca38f45a62d89ad61a195a|Jul 28, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.3-rc.2|Jul 28, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|cbd57ed77fe8bce6cf2b425127f58220a412bcb6|Jul 28, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|bcc3d42c164073bdd614610fc9c72786c3461a31|Jul 28, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|fc1532733e208625aa51e3b20d0f1b74b3929bde|Jul 28, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|95422e1ff5141e4f08628ca4f66384095e7ea333|Jul 28, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|9a2baf0fcbda66df3a6e2f008730f0b993f782eb|Jul 28, 2026
@@ -65,7 +66,6 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46192|Jul 27, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|546cb72e32e5ac04bbc7e0b3a254176e5696685a|Jul 27, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|12ac746950849ea51256d73b3daa9d9359a4c9cf|Jul 27, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|b4dfc8d26522cc1623f9f99035f8e70ff7a05e79|Jul 27, 2026
-Engines|[libpinmame](http://github.com/vbousquet/pinmame)|b077e7c97027e33b24da8d4a11fb160415347039|Jul 27, 2026
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|vulkan-sdk-1.4.357.0|Jul 27, 2026
 Emulators|[libretro-dinothawr](http://github.com/libretro/Dinothawr)|dde9179cf743838927d67ce3a11ea5904a189d47|Jul 27, 2026
 Emulators|[libretro-jollycv](http://github.com/libretro/jollycv)|eb14292005d51e2bef954cb75145981037ee9988|Jul 27, 2026
