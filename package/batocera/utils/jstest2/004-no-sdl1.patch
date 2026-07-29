@@ -1,13 +1,13 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 70da068..8e55eb1 100644
+index 993c73e..eee4ae2 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -19,7 +19,7 @@ project(sdl-jstest)
+@@ -9,7 +9,7 @@ project(sdl-jstest)
  
  option(WARNINGS "Switch on extra warnings" OFF)
  option(WERROR "Turn warnings into errors" OFF)
--option(BUILD_SDL_JSTEST "Build sdl-jstest" ON)
-+option(BUILD_SDL_JSTEST "Build sdl-jstest" OFF)
+-option(BUILD_SDL_JSTEST "Build sdl1-jstest" ON)
++option(BUILD_SDL_JSTEST "Build sdl1-jstest" OFF)
  option(BUILD_SDL2_JSTEST "Build sdl2-jstest" ON)
+ option(BUILD_SDL3_JSTEST "Build sdl3-jstest" ON)
  
- include(GNUInstallDirs)
