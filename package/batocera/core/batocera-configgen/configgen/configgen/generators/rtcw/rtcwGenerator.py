@@ -13,8 +13,9 @@ if TYPE_CHECKING:
 
 rtcw_src = "/usr/bin/rtcw/main"
 rtcw_dst = "/userdata/roms/ports/rtcw/main"
-_IORTCW_CONFIG: Final = "/userdata/roms/ports/rtcw"
-_IORTCW_CONFIG_FILE: Final = Path("/userdata/roms/ports/rtcw/wolfconfig.cfg")
+_IORTCW_CONFIG: Final = Path("/userdata/roms/ports/rtcw")
+_IORTCW_CONFIG_FILE: Final = _IORTCW_CONFIG / "main" / "wolfconfig.cfg"
+
 
 class RtcwGenerator(Generator):
 
@@ -25,10 +26,7 @@ class RtcwGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-
         shutil.copytree(rtcw_src, rtcw_dst, dirs_exist_ok=True)
-
-
         # Define the options to add or modify
         options_to_set = {
             "seta r_mode": "-1",
@@ -113,7 +111,8 @@ class RtcwGenerator(Generator):
             array=commandArray,
             env={
                 "XDG_DATA_HOME": "/userdata/roms/ports",
-                "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers)
+                "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
+                "SDL_JOYSTICK_HIDAPI": "0"
             }
         )
 
