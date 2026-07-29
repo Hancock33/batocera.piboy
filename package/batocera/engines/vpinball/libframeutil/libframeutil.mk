@@ -3,8 +3,8 @@
 # libframeutil
 #
 ################################################################################
-# Version: Commits on Jun 10, 2026
-LIBFRAMEUTIL_VERSION = 28f2bae0dabcbd5c599e6f62211f009e078c1f96
+# Version: Commits on Jul 22, 2026
+LIBFRAMEUTIL_VERSION = 6bd462a3fcae77ee481c8b1cc863bd54cc40456f
 LIBFRAMEUTIL_SITE = $(call github,ppuc,libframeutil,$(LIBFRAMEUTIL_VERSION))
 LIBFRAMEUTIL_LICENSE = GPLv3
 LIBFRAMEUTIL_LICENSE_FILES = LICENSE

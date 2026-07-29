@@ -3,8 +3,8 @@
 # libretro-gearcoleco
 #
 ################################################################################
-# Version: Commits on Jul 28, 2026
-LIBRETRO_GEARCOLECO_VERSION = d2c795f5aca23f5e9dcdc6383f920aa1a8dfa7cc
+# Version: Commits on Jul 29, 2026
+LIBRETRO_GEARCOLECO_VERSION = 2d745208e858cd69a409f92b5ccfee20c38e7e65
 LIBRETRO_GEARCOLECO_SITE = $(call github,drhelius,Gearcoleco,$(LIBRETRO_GEARCOLECO_VERSION))
 LIBRETRO_GEARCOLECO_LICENSE = GPLv3
 LIBRETRO_GEARCOLECO_EMULATOR_INFO = gearcoleco.libretro.core.yml

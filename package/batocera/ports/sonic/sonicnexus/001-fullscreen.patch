@@ -1,0 +1,34 @@
+diff --git a/RSDKv2/Userdata.cpp b/RSDKv2/Userdata.cpp
+index 7443782..5591a28 100644
+--- a/RSDKv2/Userdata.cpp
++++ b/RSDKv2/Userdata.cpp
+@@ -39,8 +39,8 @@ void InitUserdata()
+         Engine.startList_Game  = Engine.startList;
+         Engine.startStage_Game = Engine.startStage;
+ 
+-        ini.SetBool("Window", "FullScreen", Engine.startFullScreen = DEFAULT_FULLSCREEN);
+-        ini.SetBool("Window", "Borderless", Engine.borderless = false);
++        ini.SetBool("Window", "FullScreen", Engine.startFullScreen = true);
++        ini.SetBool("Window", "Borderless", Engine.borderless = true);
+         ini.SetBool("Window", "VSync", Engine.vsync = false);
+         ini.SetBool("Window", "EnhancedScaling", Engine.enhancedScaling = true);
+         ini.SetInteger("Window", "WindowScale", Engine.windowScale = 2);
+@@ -119,9 +119,9 @@ void InitUserdata()
+             StrCopy(Engine.dataFile, "Data.bin");
+ 
+         if (!ini.GetBool("Window", "FullScreen", &Engine.startFullScreen))
+-            Engine.startFullScreen = DEFAULT_FULLSCREEN;
++            Engine.startFullScreen = true;
+         if (!ini.GetBool("Window", "Borderless", &Engine.borderless))
+-            Engine.borderless = false;
++            Engine.borderless = true;
+         if (!ini.GetBool("Window", "VSync", &Engine.vsync))
+             Engine.vsync = false;
+         if (!ini.GetBool("Window", "EnhancedScaling", &Engine.enhancedScaling))
+@@ -329,4 +329,4 @@ void WriteSettings() {
+     ini.SetInteger("Controller 1", "Start", inputDevice[INPUT_START].contMappings);
+ 
+     ini.Write(BASE_PATH"settings.ini");
+-}
+\ No newline at end of file
++}
