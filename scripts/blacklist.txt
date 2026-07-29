@@ -1,6 +1,7 @@
 ﻿batocera-luajit.mk
 bgfx.mk
 cargs.mk
+corsixth.mk
 firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
