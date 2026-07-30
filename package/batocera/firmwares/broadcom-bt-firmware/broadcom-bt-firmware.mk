@@ -3,8 +3,8 @@
 # broadcom-bt-firmware
 #
 ################################################################################
-# Version: Commits on Oct 10, 2022
-BROADCOM_BT_FIRMWARE_VERSION = v12.0.1.1105_p4
+# Version: Commits on Jul 29, 2026
+BROADCOM_BT_FIRMWARE_VERSION = v12.0.1.1105_p5
 BROADCOM_BT_FIRMWARE_SITE = https://github.com/winterheart/broadcom-bt-firmware.git
 BROADCOM_BT_FIRMWARE_SITE_METHOD=git
 BROADCOM_BT_FIRMWARE_LICENSE = MIT, Broadcom
