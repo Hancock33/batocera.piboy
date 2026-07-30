@@ -584,8 +584,8 @@ namco:
   emulator: libretro
   core:     mame078plus
 namco2x6:
-  emulator: play
-  core:     play
+  emulator: pcsx2x6
+  core:     pcsx2x6
   options:
     powersave: '1'
 naomi:
