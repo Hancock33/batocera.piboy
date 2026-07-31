@@ -3,8 +3,8 @@
 # libretro-mame
 #
 ################################################################################
-# Version: Commits on May 29, 2026
-LIBRETRO_MAME_VERSION = mame0288
+# Version: Commits on Jul 31, 2026
+LIBRETRO_MAME_VERSION = mame0289
 LIBRETRO_MAME_SITE = https://github.com/Hancock33/batocera-mame-builds/releases/download/$(LIBRETRO_MAME_VERSION)
 LIBRETRO_MAME_LICENSE = MAME
 LIBRETRO_MAME_SOURCE = libretro-mame-$(MAME_CROSS_ARCH)-$(subst mame,,$(LIBRETRO_MAME_VERSION)).tar.xz
