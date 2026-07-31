@@ -1,13 +1,13 @@
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index 94a6f481ba..e7992e2f19 100644
+index c036acd31a..1525e52234 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
-@@ -141,7 +141,7 @@ InputKeyCode SDLJoystick::getKeycodeForButton(SDL_GameControllerButton button) {
- 	case SDL_CONTROLLER_BUTTON_BACK:
+@@ -145,7 +145,7 @@ InputKeyCode SDLJoystick::getKeycodeForButton(SDL_GamepadButton button) {
+ 	case SDL_GAMEPAD_BUTTON_BACK:
  		return NKCODE_BUTTON_9; // select button
- 	case SDL_CONTROLLER_BUTTON_GUIDE:
+ 	case SDL_GAMEPAD_BUTTON_GUIDE:
 -		return NKCODE_BACK; // pause menu
 +		return NKCODE_UNKNOWN; // pause menu
- 	case SDL_CONTROLLER_BUTTON_LEFTSTICK:
+ 	case SDL_GAMEPAD_BUTTON_LEFT_STICK:
  		return NKCODE_BUTTON_THUMBL;
- 	case SDL_CONTROLLER_BUTTON_RIGHTSTICK:
+ 	case SDL_GAMEPAD_BUTTON_RIGHT_STICK:

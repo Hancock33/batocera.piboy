@@ -1,8 +1,8 @@
 diff --git a/Core/Util/PathUtil.cpp b/Core/Util/PathUtil.cpp
-index 96be0eac06..38b19a9744 100644
+index a5cb1a20d8..febf914106 100644
 --- a/Core/Util/PathUtil.cpp
 +++ b/Core/Util/PathUtil.cpp
-@@ -43,38 +43,33 @@ Path FindConfigFile(const Path &searchPath, std::string_view baseFilename, bool
+@@ -57,38 +57,33 @@ Path FindConfigFile(const Path &searchPath, std::string_view baseFilename, bool
  }
  
  Path GetSysDirectory(PSPDirectories directoryType) {
@@ -51,7 +51,7 @@ index 96be0eac06..38b19a9744 100644
  	case DIRECTORY_TEXTURES:
  		return pspDirectory / "TEXTURES";
  	case DIRECTORY_PLUGINS:
-@@ -83,22 +78,21 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -97,22 +92,21 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  		if (!g_Config.appCacheDirectory.empty()) {
  			return g_Config.appCacheDirectory;
  		}
@@ -79,11 +79,11 @@ index 96be0eac06..38b19a9744 100644
  }
  
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index 290cf57ce1..82378bdb01 100644
+index d681c0cad0..c036acd31a 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -24,7 +24,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
- 		SDL_Init(SDL_INIT_JOYSTICK | SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER);
+ 		SDL_Init(SDL_INIT_JOYSTICK | SDL_INIT_VIDEO | SDL_INIT_GAMEPAD);
  	}
  
 -	const char *dbPath = "gamecontrollerdb.txt";
@@ -92,19 +92,19 @@ index 290cf57ce1..82378bdb01 100644
  
  	size_t size;
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index ab3b410d3d..c0ee369ed9 100644
+index 3ccdba5b7f..5416460c97 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -368,7 +368,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+@@ -428,7 +428,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
 -	g_VFS.Register("", new DirectoryReader(Path("/usr/share/ppsspp/assets")));
 +	g_VFS.Register("", new DirectoryReader(Path("/usr/share/ppsspp/PPSSPP")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
- #endif
- 
-@@ -480,7 +480,7 @@ void NativeInit(int argc, const char *argv[], const char *savegame_dir, const ch
+ #elif defined(_WIN32) && !PPSSPP_PLATFORM(UWP)
+ 	const Path &exePath = File::GetExeDirectory();
+@@ -546,7 +546,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
  	else // Just in case
  		config = "./config";
  
