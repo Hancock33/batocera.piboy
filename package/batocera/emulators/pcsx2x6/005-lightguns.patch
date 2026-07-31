@@ -22,7 +22,7 @@ index 7fb5b1200..8c2fd84d3 100644
  }
  
 diff --git a/pcsx2/USB/usb-lightgun/guncon2.cpp b/pcsx2/USB/usb-lightgun/guncon2.cpp
-index 214050194..5ec15890e 100644
+index f77556c48..ab264e0b9 100644
 --- a/pcsx2/USB/usb-lightgun/guncon2.cpp
 +++ b/pcsx2/USB/usb-lightgun/guncon2.cpp
 @@ -20,6 +20,12 @@

@@ -1,8 +1,8 @@
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 3f5f2f071..087d6e7cf 100644
+index 2f7bd801b..6a47f9583 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -3597,14 +3597,14 @@ void VMManager::WarnAboutUnsafeSettings()
+@@ -3620,14 +3620,14 @@ void VMManager::WarnAboutUnsafeSettings()
  				TRANSLATE_SV("VMManager", "Integer scaling is enabled. This may shrink the image."));
  		}
  		static bool render_change_warn = false;

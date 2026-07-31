@@ -1,8 +1,8 @@
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 1ed221f43..68015a4c8 100644
+index 529850c5f..a9ef18693 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -1954,6 +1954,9 @@ void VMManager::DoSaveState(const char* filename, s32 slot_for_message, bool zip
+@@ -1956,6 +1956,9 @@ void VMManager::DoSaveState(const char* filename, s32 slot_for_message, bool zip
  			std::move(elist), std::move(screenshot), filename, slot_for_message, std::move(error_callback));
  	}
  

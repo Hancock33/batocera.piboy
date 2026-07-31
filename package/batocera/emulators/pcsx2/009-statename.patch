@@ -1,8 +1,8 @@
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 47dc0a6e3..1ed221f43 100644
+index 23c8b44ae..529850c5f 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -1850,20 +1850,15 @@ bool SaveStateBase::vmFreeze()
+@@ -1852,20 +1852,15 @@ bool SaveStateBase::vmFreeze()
  
  std::string VMManager::GetSaveStateFileName(const char* game_serial, u32 game_crc, s32 slot, bool backup)
  {

@@ -1,0 +1,13 @@
+diff --git a/pcsx2/Patch.cpp b/pcsx2/Patch.cpp
+index 05be98333..3e80eaf02 100644
+--- a/pcsx2/Patch.cpp
++++ b/pcsx2/Patch.cpp
+@@ -291,7 +291,7 @@ bool Patch::OpenPatchesZip()
+ 	if (s_patches_zip)
+ 		return true;
+ 
+-	const std::string filename = Path::Combine(EmuFolders::Resources, PATCHES_ZIP_NAME);
++	const std::string filename = Path::Combine(EmuFolders::Bios, PATCHES_ZIP_NAME);
+ 
+ 	zip_error ze = {};
+ 	zip_source_t* zs = zip_source_file_create(filename.c_str(), 0, 0, &ze);

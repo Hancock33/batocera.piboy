@@ -41,6 +41,7 @@ nanoboyadvance.mk
 nblood.mk
 nv-codec-headers.mk
 pcsx2.mk
+pcsx2x6.mk
 pironman5.mk
 pysdl2.mk
 pysdl3.mk

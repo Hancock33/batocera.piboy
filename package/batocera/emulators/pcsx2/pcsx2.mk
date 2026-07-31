@@ -76,7 +76,7 @@ endef
 
 define PCSX2_PATCHES
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
-	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/bin/pcsx2/resources/patches.zip
+	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2/patches.zip
 endef
 
 define PCSX2_CROSSHAIRS

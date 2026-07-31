@@ -15,10 +15,10 @@ index 7386e92ae..810d78ac0 100644
  			{
  				AutoBoot(autoboot)->elf_override = (++it)->toStdString();
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 6bff15b56..997d8eb5a 100644
+index 0438814c3..1461a51d8 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -1839,6 +1839,12 @@ VMBootResult VMManager::Initialize(const VMBootParameters& boot_params, Error* e
+@@ -1862,6 +1862,12 @@ VMBootResult VMManager::Initialize(const VMBootParameters& boot_params, Error* e
  
  	SetEmuThreadAffinities();
  
