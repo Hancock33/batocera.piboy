@@ -1,5 +1,5 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index c16f9f7a65..d09955e603 100644
+index 4ae0963b86..35df464c79 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
 @@ -762,7 +762,7 @@ const char* GetDirectoryForRegion(DiscIO::Region region, RegionDirectoryStyle st
