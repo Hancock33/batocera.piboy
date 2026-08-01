@@ -96,8 +96,7 @@ wifi_enable() {
     done
     echo "*** Wifi Hardware detected. ***" > /dev/kmsg
     # Delay to allow for firmware to settle
-    sleep 1
-    rfkill unblock all
+    sleep 3
 
     # If wifi interface is available then apply the country code if set by the user
     settingsCountry="$(/usr/bin/batocera-settings-get -f "$BATOCONF" wifi.country | tr -d '[:space:]')"
