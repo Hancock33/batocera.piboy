@@ -3,8 +3,8 @@
 # libretro-core-info
 #
 ################################################################################
-# Version: Commits on Jun 28, 2026
-LIBRETRO_CORE_INFO_VERSION = beb3b8bb8175f27a295bcbce922dc846f5c6362f
+# Version: Commits on Aug 01, 2026
+LIBRETRO_CORE_INFO_VERSION = f105af2925f70f2d72a8676d04a5f2282c1d01ba
 LIBRETRO_CORE_INFO_SITE = $(call github,libretro,libretro-core-info,$(LIBRETRO_CORE_INFO_VERSION))
 LIBRETRO_CORE_INFO_LICENSE = MIT
 
