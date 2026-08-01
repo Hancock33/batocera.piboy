@@ -41,6 +41,7 @@ ntfs-plus.mk
 openbor7530.mk
 openmohaa.mk
 ossp.mk
+picom.mk
 pigpio-rpi.mk
 plutosvg.mk
 plutovg.mk

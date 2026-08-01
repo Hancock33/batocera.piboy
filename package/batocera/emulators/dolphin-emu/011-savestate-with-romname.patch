@@ -15,11 +15,11 @@ index 85444ef0b6..cb7b6a3827 100644
    auto& movie = system.GetMovie();
    if (movie.IsPlayingInput() && movie.IsConfigSaved())
 diff --git a/Source/Core/Core/ConfigManager.cpp b/Source/Core/Core/ConfigManager.cpp
-index 8404cfff07..de630817c1 100644
+index 32f74a030f..122176c2d4 100644
 --- a/Source/Core/Core/ConfigManager.cpp
 +++ b/Source/Core/Core/ConfigManager.cpp
-@@ -202,6 +202,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
-   SetRunningGameMetadata(game_id, "", 0, 0, DiscIO::Region::Unknown);
+@@ -231,6 +231,10 @@ void SConfig::SetRunningGameMetadata(const std::string& game_id)
+   SetRunningGameMetadata(game_id, "", 0, 0, DiscIO::Region::Unknown, 0);
  }
  
 +void SConfig::SetBaseSaveState(const std::string& base_save_state) {
@@ -27,13 +27,13 @@ index 8404cfff07..de630817c1 100644
 +}
 +
  void SConfig::SetRunningGameMetadata(const std::string& game_id, const std::string& gametdb_id,
-                                      u64 title_id, u16 revision, DiscIO::Region region)
- {
+                                      u64 title_id, u16 revision, DiscIO::Region region,
+                                      u32 simulated_memory_size)
 diff --git a/Source/Core/Core/ConfigManager.h b/Source/Core/Core/ConfigManager.h
-index 39dbc6d39a..4b42a5fc38 100644
+index 039dcffd7a..b7947390cc 100644
 --- a/Source/Core/Core/ConfigManager.h
 +++ b/Source/Core/Core/ConfigManager.h
-@@ -58,6 +58,9 @@ struct SConfig
+@@ -59,6 +59,9 @@ struct SConfig
  
    // TODO: remove this as soon as the ticket view hack in IOS/ES/Views is dropped.
    bool m_disc_booted_from_game_list = false;
@@ -43,16 +43,16 @@ index 39dbc6d39a..4b42a5fc38 100644
  
    const std::string GetGameID() const;
    const std::string GetGameTDBID() const;
-@@ -124,6 +127,7 @@ private:
+@@ -139,6 +142,7 @@ private:
    static SConfig* m_Instance;
    mutable std::recursive_mutex m_metadata_lock;
  
 +  std::string m_base_save_state;
    std::string m_game_id;
+   std::string m_game_id_elf_dol;
    std::string m_gametdb_id;
-   std::string m_title_name;
 diff --git a/Source/Core/Core/Core.cpp b/Source/Core/Core/Core.cpp
-index cebcc748ec..b12f9595df 100644
+index 1b50796e34..a4e4bf119e 100644
 --- a/Source/Core/Core/Core.cpp
 +++ b/Source/Core/Core/Core.cpp
 @@ -777,10 +777,14 @@ void SaveScreenShot()
@@ -85,14 +85,14 @@ index 7dff8e13d5..14d8f2ee00 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index 5724240ffd..c36c3eacd6 100644
+index 2dcd2cae2b..d5fb2367bf 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
-@@ -301,11 +301,10 @@ static std::string SystemTimeAsDoubleToString(double time)
+@@ -303,11 +303,10 @@ static std::string SystemTimeAsDoubleToString(double time)
    return fmt::format(std::locale{""}, "{:%x %X}", *local_time);
  }
  
--static std::string MakeStateFilename(int number)
+-static std::string MakeStateFilename(u32 number)
 -{
 -  return fmt::format("{}{}.s{:02d}", File::GetUserPath(D_STATESAVES_IDX),
 -                     SConfig::GetInstance().GetGameID(), number);
@@ -104,16 +104,16 @@ index 5724240ffd..c36c3eacd6 100644
  
  static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
  {
-@@ -313,7 +312,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
+@@ -315,7 +314,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
    StateHeader header;
-   for (int i = 1; i <= int(NUM_STATES); ++i)
+   for (u32 i = 1; i <= NUM_STATES; ++i)
    {
 -    std::string filename = MakeStateFilename(i);
 +    std::string filename = MakeStateFilename(true, i);
      if (!File::Exists(filename) || !ReadHeader(filename, header))
        continue;
  
-@@ -609,7 +608,7 @@ std::string GetInfoStringOfSlot(int slot, bool translate)
+@@ -612,7 +611,7 @@ std::string GetInfoStringOfSlot(u32 slot, bool translate)
  {
    std::lock_guard lk{s_state_saves_in_progress};
  
@@ -122,7 +122,7 @@ index 5724240ffd..c36c3eacd6 100644
    if (!File::Exists(filename))
      return translate ? Common::GetStringT("Empty") : "Empty";
  
-@@ -625,7 +624,7 @@ u64 GetUnixTimeOfSlot(int slot)
+@@ -628,7 +627,7 @@ u64 GetUnixTimeOfSlot(u32 slot)
    std::lock_guard lk{s_state_saves_in_progress};
  
    State::StateHeader header;
@@ -131,7 +131,7 @@ index 5724240ffd..c36c3eacd6 100644
      return 0;
  
    constexpr u64 MS_PER_SEC = 1000;
-@@ -899,14 +898,46 @@ void Shutdown()
+@@ -902,14 +901,46 @@ void Shutdown()
    s_flush_unsaved_data_hook.reset();
  }
  
@@ -165,7 +165,7 @@ index 5724240ffd..c36c3eacd6 100644
 +  return fmt::format("{}.s{:02d}", basesavestate, number);
 +}
 +
- void Save(Core::System& system, int slot)
+ void Save(Core::System& system, u32 slot)
  {
 -  SaveAs(system, MakeStateFilename(slot));
 +  std::string savePath = MakeStateFilename(false, slot);
@@ -173,14 +173,14 @@ index 5724240ffd..c36c3eacd6 100644
 +  Core::SaveScreenShotWithPath(MakeStateFilename_partdirectory(slot), PathToFileName(savePath));
  }
  
- void Load(Core::System& system, int slot)
+ void Load(Core::System& system, u32 slot)
  {
 -  LoadAs(system, MakeStateFilename(slot));
 +  LoadAs(system, MakeStateFilename(true, slot));
  }
  
  void LoadLastSaved(Core::System& system, int i)
-@@ -926,7 +957,7 @@ void LoadLastSaved(Core::System& system, int i)
+@@ -929,7 +960,7 @@ void LoadLastSaved(Core::System& system, int i)
      }
  
      std::ranges::stable_sort(used_slots, std::ranges::greater{}, &SlotWithTimestamp::timestamp);
@@ -189,7 +189,7 @@ index 5724240ffd..c36c3eacd6 100644
    });
  }
  
-@@ -945,7 +976,7 @@ void SaveFirstSaved(Core::System& system)
+@@ -948,7 +979,7 @@ void SaveFirstSaved(Core::System& system)
        slot = used_slots.front().slot;
      }
  

@@ -1,8 +1,8 @@
 diff --git a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-index 92c8180d24..cb3a8144a0 100644
+index 4604ef5cad..bbb84862d9 100644
 --- a/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
 +++ b/Source/Core/InputCommon/ControllerInterface/evdev/evdev.cpp
-@@ -23,6 +23,8 @@
+@@ -25,6 +25,8 @@
  #include "Common/Thread.h"
  #include "Common/WorkQueueThread.h"
  #include "InputCommon/ControllerInterface/ControllerInterface.h"
@@ -11,7 +11,7 @@ index 92c8180d24..cb3a8144a0 100644
  
  namespace ciface::evdev
  {
-@@ -98,15 +100,7 @@ protected:
+@@ -100,15 +102,7 @@ protected:
    {
      if (const char* code_name = libevdev_event_code_get_name(EV_KEY, m_code))
      {
@@ -28,7 +28,7 @@ index 92c8180d24..cb3a8144a0 100644
      }
      else
      {
-@@ -157,9 +151,30 @@ public:
+@@ -159,9 +153,30 @@ public:
    ControlState GetState() const final override
    {
      int value = 0;
@@ -60,7 +60,7 @@ index 92c8180d24..cb3a8144a0 100644
    }
  
  protected:
-@@ -560,7 +575,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -562,7 +577,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
      m_name = potential_new_name;
  
    const bool is_motion_device = libevdev_has_property(dev, INPUT_PROP_ACCELEROMETER);
@@ -68,7 +68,7 @@ index 92c8180d24..cb3a8144a0 100644
  
    // If a device has BTN_JOYSTICK it probably uses event codes counting up from 0x120
    // which have very useless and wrong names.
-@@ -573,21 +587,7 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -575,21 +589,7 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
    {
      if (libevdev_has_event_code(dev, EV_KEY, key))
      {
@@ -91,7 +91,7 @@ index 92c8180d24..cb3a8144a0 100644
        ++num_buttons;
      }
    }
-@@ -623,24 +623,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
+@@ -625,24 +625,6 @@ bool evdevDevice::AddNode(std::string devnode, int fd, libevdev* dev)
      return true;
    }
  

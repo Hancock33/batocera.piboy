@@ -23,6 +23,9 @@ ln -sf "/usr/share/emulationstation/themes"         "${TARGET_DIR}/etc/emulation
 mkdir -p "${TARGET_DIR}/usr/share/batocera/datainit/cheats" || exit 1
 ln -sf "/userdata/cheats" "${TARGET_DIR}/usr/share/batocera/datainit/cheats/custom" || exit 1
 
+# make sure service scripts are executable
+chmod 775 ${TARGET_DIR}/etc/init.d/*
+
 # we don't want the kodi startup script
 rm -f "${TARGET_DIR}/etc/init.d/S50kodi" || exit 1
 

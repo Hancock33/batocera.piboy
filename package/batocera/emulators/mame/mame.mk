@@ -3,8 +3,8 @@
 # mame
 #
 ################################################################################
-# Version: Commits on May 29, 2026
-MAME_VERSION = mame0288
+# Version: Commits on Jul 31, 2026
+MAME_VERSION = mame0289
 MAME_SITE = https://github.com/Hancock33/batocera-mame-builds/releases/download/$(MAME_VERSION)
 MAME_LICENSE = MAME
 MAME_DEPENDENCIES += expat flac fontconfig glm jpeg libpng lua pulseaudio

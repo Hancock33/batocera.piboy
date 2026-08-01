@@ -1,5 +1,5 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index c8d7f35fd2..c16f9f7a65 100644
+index f0cc8511b7..4ae0963b86 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
 @@ -332,6 +332,7 @@ bool ShouldUseDPL2Decoder()

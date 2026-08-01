@@ -106,7 +106,7 @@ index 9f10918ac2..bfb124e4d5 100644
  
    std::unique_ptr<AbstractTexture> m_efb_color_texture;
 diff --git a/Source/Core/VideoCommon/Present.cpp b/Source/Core/VideoCommon/Present.cpp
-index 7c62730667..8a36be3358 100644
+index 41d05f3652..e19041b259 100644
 --- a/Source/Core/VideoCommon/Present.cpp
 +++ b/Source/Core/VideoCommon/Present.cpp
 @@ -79,7 +79,7 @@ static void TryToSnapToXFBSize(int& width, int& height, int xfb_width, int xfb_h
@@ -118,7 +118,7 @@ index 7c62730667..8a36be3358 100644
    const unsigned int pixel_difference_width = std::abs(width - xfb_width);
    const unsigned int pixel_difference_height = std::abs(height - xfb_height);
    // We ignore this if there's an offset on both hor and ver size,
-@@ -434,7 +434,7 @@ MathUtil::Rectangle<int> Presenter::GetCustomCrop(const MathUtil::Rectangle<int>
+@@ -438,7 +438,7 @@ MathUtil::Rectangle<int> Presenter::GetCustomCrop(const MathUtil::Rectangle<int>
  
    const int uncropped_source_width = rect.GetWidth();
    const int uncropped_source_height = rect.GetHeight();
@@ -161,7 +161,7 @@ index bbcd1140b4..ada3fe6421 100644
    Common::UniqueBuffer<u8> uniform_buffer(custom_uniforms.size() + sizeof(uniforms));
    std::memcpy(uniform_buffer.data(), &uniforms, sizeof(uniforms));
 diff --git a/Source/Core/VideoCommon/VideoConfig.cpp b/Source/Core/VideoCommon/VideoConfig.cpp
-index 448f447741..802fe6ce33 100644
+index c56f32c00c..c4759f8f05 100644
 --- a/Source/Core/VideoCommon/VideoConfig.cpp
 +++ b/Source/Core/VideoCommon/VideoConfig.cpp
 @@ -368,7 +368,7 @@ void CheckForConfigChanges()

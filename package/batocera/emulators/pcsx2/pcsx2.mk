@@ -3,9 +3,9 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Jul 28, 2026
-PCSX2_VERSION = v2.7.505
-PCSX2_HASH = 053b42d36cb586aa2872745a6a1958ef070191b4
+# Version: Commits on Jul 31, 2026
+PCSX2_VERSION = v2.7.511
+PCSX2_HASH = 779d5c4339cd83004bc561cdb28bd5bf75b0f371
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -76,7 +76,7 @@ endef
 
 define PCSX2_PATCHES
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
-	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/bin/pcsx2/resources/patches.zip
+	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2/patches.zip
 endef
 
 define PCSX2_CROSSHAIRS

@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Jun 01, 2026
-SHADPS4_VERSION = v.0.16.0
+# Version: Commits on Jul 30, 2026
+SHADPS4_VERSION = v.0.17.0
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
@@ -18,9 +18,10 @@ SHADPS4_DEPENDENCIES += pugixml pulseaudio sdl3 udev vulkan-headers vulkan-valid
 SHADPS4_SUPPORTS_IN_SOURCE_BUILD = NO
 
 SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-SHADPS4_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++"
+SHADPS4_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++ -lprotobuf"
 SHADPS4_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 SHADPS4_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
+SHADPS4_CONF_OPTS += -DENABLE_SYSTEM_LIBRARIES=ON
 SHADPS4_CONF_OPTS += -DENABLE_UPDATER=OFF
 SHADPS4_CONF_OPTS += -DVMA_ENABLE_INSTALL=ON
 
@@ -30,8 +31,10 @@ SHADPS4_CONF_OPTS += -DVMA_ENABLE_INSTALL=ON
 # the binary, we tell CMake to use that executable via -DDear_ImGui_FontEmbed_EXECUTABLE
 # which is added in 0001-imgui-renderer-allow-prebuilt-fontembed.patch.
 define SHADPS4_BUILD_HOST_FONTEMBED
-	$(HOSTCXX) -O2 -o $(@D)/host-dear-imgui-fontembed \
-		$(@D)/externals/dear_imgui/misc/fonts/binary_to_compressed_c.cpp
+	sed -i "s|protobuf::protoc|$(HOST_DIR)/bin/protoc|" $(@D)/CMakeLists.txt
+	sed -i "s|libprotobuf|protobuf|" $(@D)/CMakeLists.txt
+	sed -i "s|add_subdirectory(protobuf EXCLUDE_FROM_ALL)|#add_subdirectory(protobuf EXCLUDE_FROM_ALL)|" $(@D)/externals/CMakeLists.txt
+	$(HOSTCXX) -O2 -o $(@D)/host-dear-imgui-fontembed $(@D)/externals/dear_imgui/misc/fonts/binary_to_compressed_c.cpp
 endef
 SHADPS4_PRE_CONFIGURE_HOOKS += SHADPS4_BUILD_HOST_FONTEMBED
 

@@ -1,47 +1,36 @@
 diff --git a/Makefile b/Makefile
-index b19178b..dab5958 100644
+index 84b7e02..57bbd52 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -62,6 +62,31 @@ ifneq (,$(findstring unix,$(platform)))
+@@ -64,6 +64,31 @@ ifneq (,$(findstring unix,$(platform)))
     LIBS += -lpthread
     HAVE_CDROM := 1
     USE_LTO := 1
 +
 +# Raspberry Pi
 +else ifneq (,$(findstring rpi,$(platform)))
-+	EXT ?= so
++   EXT ?= so
 +   TARGET := $(TARGET_NAME)_libretro.$(EXT)
 +   fpic := -fPIC
 +   SHARED := -shared -Wl,--version-script=$(CORE_DIR)/link.T -Wl,--no-undefined
 +   LIBS += -lpthread
 +
-+	ifneq (,$(findstring rpi1,$(platform)))
-+    	CFLAGS += -marm -mcpu=arm1176jzf-s -mfloat-abi=hard
-+	else ifneq (,$(findstring rpi2,$(platform)))
-+    	CFLAGS += -marm -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
-+	else ifneq (,$(findstring rpi3,$(platform)))
-+		ifneq (,$(findstring rpi3_64,$(platform)))
-+           CFLAGS += -mcpu=cortex-a53 -mtune=cortex-a53
-+		else
-+			CFLAGS += -marm -mcpu=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
-+		endif
-+	else ifneq (,$(findstring rpi4,$(platform)))
++   ifneq (,$(findstring rpi1,$(platform)))
++      CFLAGS += -marm -mcpu=arm1176jzf-s -mfloat-abi=hard
++   else ifneq (,$(findstring rpi2,$(platform)))
++      CFLAGS += -marm -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
++   else ifneq (,$(findstring rpi3,$(platform)))
++      ifneq (,$(findstring rpi3_64,$(platform)))
++         CFLAGS += -mcpu=cortex-a53 -mtune=cortex-a53
++      else
++         CFLAGS += -marm -mcpu=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
++      endif
++   else ifneq (,$(findstring rpi4,$(platform)))
 +         CFLAGS += -mcpu=cortex-a72 -mtune=cortex-a72
-+	else ifneq (,$(findstring rpi5,$(platform)))
-+         CFLAGS += -mcpu=cortex-a76 -mtune=cortex-a76
-+	endif
++   else ifneq (,$(findstring rpi5,$(platform)))
++      CFLAGS += -mcpu=cortex-a76 -mtune=cortex-a76
++   endif
 +
  else ifeq ($(platform), linux-portable)
     TARGET := $(TARGET_NAME)_libretro.$(EXT)
     fpic := -fPIC -nostdlib
-@@ -245,8 +270,8 @@ ifeq ($(HAVE_CDROM), 1)
- endif
- 
- ifeq ($(USE_LTO), 1)
--   CFLAGS += -flto -fuse-linker-plugin
--   CXXFLAGS += -flto -fuse-linker-plugin
-+   CFLAGS += -flto=auto -fuse-linker-plugin
-+   CXXFLAGS += -flto=auto -fuse-linker-plugin
- endif
- 
- GIT_VERSION := " $(shell git rev-parse --short HEAD || echo unknown)"

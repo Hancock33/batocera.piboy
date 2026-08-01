@@ -4,24 +4,23 @@
 #
 ################################################################################
 # Version: Commits on Jul 25, 2026
-PCSX2X6_VERSION = 6b236771541b577b7eb0be8a61fe28ffd4e3d876
+PCSX2X6_VERSION = v0.2.20
 PCSX2X6_SITE = https://github.com/PS2Homebrew-arcade/pcsx2x6.git
 PCSX2X6_SITE_METHOD = git
 PCSX2X6_GIT_SUBMODULES = YES
 PCSX2X6_LICENSE = GPLv3
 PCSX2X6_LICENSE_FILE = COPYING.GPLv3
+PCSX2X6_SUPPORTS_IN_SOURCE_BUILD = NO
 PCSX2X6_EMULATOR_INFO = pcsx2x6.emulator.yml
 
-PCSX2X6_SUPPORTS_IN_SOURCE_BUILD = NO
+PCSX2X6_GIT_TAG_HI = $(shell echo $(subst v,,$(PCSX2X6_VERSION)) | cut -d '.' -f 1)
+PCSX2X6_GIT_TAG_MID = $(shell echo $(subst v,,$(PCSX2X6_VERSION)) | cut -d '.' -f 2)
+PCSX2X6_GIT_TAG_LO = $(shell echo $(subst v,,$(PCSX2X6_VERSION)) | cut -d '.' -f 3)
 
 PCSX2X6_DEPENDENCIES += alsa-lib ecm fmt freetype kddocwidgets libaio libbacktrace libcurl libgtk3 libpcap
 PCSX2X6_DEPENDENCIES += libpng libsamplerate libsoundtouch plutosvg plutovg rapidyaml
 PCSX2X6_DEPENDENCIES += qt6base qt6svg qt6tools portaudio sdl3 shaderc webp xorgproto yaml-cpp zlib
 PCSX2X6_DEPENDENCIES += host-clang
-
-ifeq ($(BR2_aarch64),y)
-PCSX2X6_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -Wno-c++11-narrowing -Wno-narrowing"
-endif
 
 PCSX2X6_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 PCSX2X6_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
@@ -30,8 +29,7 @@ PCSX2X6_CONF_OPTS += -DLTO_PCSX2_CORE=OFF
 PCSX2X6_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
 
 # The following flag is misleading and *needed* ON to avoid doing -march=native
-PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
-
+PCSX2X6_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
 
 # below may not be needed for newer versions
 define PCSX2X6_FIX_WHOLE_ARCHIVE
@@ -74,17 +72,27 @@ endef
 # Download and copy PCSX2X6 patches.zip to BIOS folder
 define PCSX2X6_PATCHES
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/namco2x6
-	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/share/batocera/datainit/bios/namco2x6/patches.zip
+	curl -L https://github.com/PS2Homebrew-arcade/pcsx2x6_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/share/batocera/datainit/bios/namco2x6/patches.zip
 endef
-
-PCSX2X6_POST_INSTALL_TARGET_HOOKS += PCSX2X6_PATCHES
 
 define PCSX2X6_CROSSHAIRS
 	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2x6/resources/crosshairs
 	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2x6/crosshairs/ $(TARGET_DIR)/usr/bin/pcsx2x6/resources/
 endef
 
+define PCSX2X6_RETROACHIEVEMENTS
+	sed -i "s|GIT_TAGGED_COMMIT|1|" $(@D)/pcsx2/BuildVersion.cpp
+	sed -i "s|GIT_TAG_HI|$(PCSX2X6_GIT_TAG_HI)|" $(@D)/pcsx2/BuildVersion.cpp
+	sed -i "s|GIT_TAG_MID|$(PCSX2X6_GIT_TAG_MID)|" $(@D)/pcsx2/BuildVersion.cpp
+	sed -i "s|GIT_TAG_LO|$(PCSX2X6_GIT_TAG_LO)|" $(@D)/pcsx2/BuildVersion.cpp
+	sed -i 's|GIT_TAG|"$(PCSX2X6_VERSION)"|' $(@D)/pcsx2/BuildVersion.cpp
+	sed -i 's|GIT_REV|"$(PCSX2X6_VERSION)"|' $(@D)/pcsx2/BuildVersion.cpp
+	sed -i 's|GIT_HASH|"$(PCSX2X6_HASH)"|' $(@D)/pcsx2/BuildVersion.cpp
+endef
+
+PCSX2X6_POST_INSTALL_TARGET_HOOKS += PCSX2X6_PATCHES
 PCSX2X6_POST_INSTALL_TARGET_HOOKS += PCSX2X6_CROSSHAIRS
+PCSX2X6_PRE_PATCH_HOOKS += PCSX2X6_RETROACHIEVEMENTS
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))

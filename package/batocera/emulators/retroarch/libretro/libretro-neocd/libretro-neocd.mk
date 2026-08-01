@@ -3,8 +3,8 @@
 # libretro-neocd
 #
 ################################################################################
-# Version: Commits on Apr 20, 2026
-LIBRETRO_NEOCD_VERSION = 9e9ad181bed60f84f9cff02c03617b41e8a31cfe
+# Version: Commits on Aug 01, 2026
+LIBRETRO_NEOCD_VERSION = 193887bad4f2e2fc52800dba1cf564bcfb68157d
 LIBRETRO_NEOCD_SITE = $(call github,libretro,neocd_libretro,$(LIBRETRO_NEOCD_VERSION))
 LIBRETRO_NEOCD_LICENSE = GPLv3
 LIBRETRO_NEOCD_DEPENDENCIES = retroarch
@@ -30,9 +30,7 @@ endef
 
 define LIBRETRO_NEOCD_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/neocd_libretro.so $(TARGET_DIR)/usr/lib/libretro/neocd_libretro.so
-	$(INSTALL) -D $(@D)/retroarch/libneocd_libretro.info $(TARGET_DIR)/usr/share/libretro/info/neocd_libretro.info
 endef
 
 $(eval $(generic-package))

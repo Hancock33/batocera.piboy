@@ -11,7 +11,7 @@ index 8f9994fda..aadb74fd6 100644
  		UseSystemLocaleFormat : 1, // presents OS time format instead of yyyy-MM-dd HH:mm:ss for manual RTC
  
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index b1ecbcc78..03c6f3670 100644
+index cb532a1a3..fa8a76251 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
 @@ -1976,6 +1976,7 @@ Pcsx2Config::Pcsx2Config()
@@ -31,10 +31,10 @@ index b1ecbcc78..03c6f3670 100644
  	SettingsWrapBitBool(BackupSavestate);
  
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index 997d8eb5a..3f5f2f071 100644
+index 1461a51d8..2f7bd801b 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -2352,6 +2352,12 @@ void VMManager::SaveState(
+@@ -2375,6 +2375,12 @@ void VMManager::SaveState(
  
  void VMManager::SaveStateToSlot(s32 slot, bool zip_on_thread, std::function<void(const std::string&)> error_callback)
  {
