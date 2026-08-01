@@ -3,13 +3,13 @@
 # picom
 #
 ################################################################################
-
-PICOM_VERSION = v12.5
+# Version: Commits on Feb 07, 2026
+PICOM_VERSION = v13
 PICOM_SITE = $(call github,yshui,picom,$(PICOM_VERSION))
 PICOM_LICENSE = MPL-2.0 AND MIT
 PICOM_LICENSE_FILES = LICENSE.spdx
 
-PICOM_DEPENDENCIES += libconfig libev libxcb pixman uthash xcb-util 
+PICOM_DEPENDENCIES += libconfig libev libxcb pixman uthash xcb-util
 PICOM_DEPENDENCIES += xcb-util-image xcb-util-renderutil xlib_libXcomposite
 PICOM_DEPENDENCIES += xlib_libXdamage xlib_libXext xlib_libXfixes
 PICOM_DEPENDENCIES += xlib_libXpresent xlib_libXrandr xlib_libXrender xorgproto
