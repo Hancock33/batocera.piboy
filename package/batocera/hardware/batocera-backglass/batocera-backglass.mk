@@ -11,7 +11,7 @@ BATOCERA_BACKGLASS_SOURCE =
 BATOCERA_BACKGLASS_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf libcurl openssl
 
 BACKGLASS_PATH = \
-    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/screens/batocera-backglass
+    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/batocera-backglass
 
 define BATOCERA_BACKGLASS_BUILD_CMDS
 	$(TARGET_CXX) $(TARGET_CXXFLAGS) $(TARGET_LDFLAGS) \
@@ -26,7 +26,7 @@ define BATOCERA_BACKGLASS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BACKGLASS_PATH)/batocera-backglass.sh $(TARGET_DIR)/usr/bin/batocera-backglass
 
 	# Install the compiled native backglass execution window binary
-	install -m 0755 $(@D)/batocera-backglass-window (TARGET_DIR)/usr/bin/batocera-backglass-window
+	install -m 0755 $(@D)/batocera-backglass-window $(TARGET_DIR)/usr/bin/batocera-backglass-window
 
 	# Install hook wrappers
 	mkdir -p $(TARGET_DIR)/usr/share/batocera-backglass/scripts
