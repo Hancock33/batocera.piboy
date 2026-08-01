@@ -21,7 +21,7 @@ class OpenclawGenerator(Generator):
 
         os.chdir(claw_dst)
         commandArray = ["/usr/bin/openclaw"]
-        
+
         shutil.copytree(clawzip_src, claw_dst, dirs_exist_ok=True)
 
         # dont want to overwrite these file is exist

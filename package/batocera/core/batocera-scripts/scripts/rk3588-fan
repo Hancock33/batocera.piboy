@@ -13,7 +13,7 @@ DEBUG = 0
 CHECK_INTERVAL = 10
 
 # Hardware PWM defaults (can be overridden in fan.conf)
-MIN_PWM = 60  
+MIN_PWM = 60
 MAX_PWM = 255
 
 config_file = '/userdata/system/configs/fan.conf'
@@ -48,7 +48,7 @@ def load_config(fname):
                 tmppair = tmpline.split("=")
                 if len(tmppair) != 2:
                     continue
-                
+
                 # Check for hardware override keys
                 key = tmppair[0].lower().strip()
                 val_str = tmppair[1].strip()
@@ -64,7 +64,7 @@ def load_config(fname):
                     except ValueError:
                         pass
                     continue
-                
+
                 # Parse temperature thresholds
                 try:
                     tempval = float(tmppair[0])
@@ -122,7 +122,7 @@ def temp_check():
     tmpconfig = load_config(config_file)
     if len(tmpconfig) > 0:
         fanconfig = tmpconfig
-    
+
     fan_path = find_pwm_path()
     if not fan_path:
         print("Error: Could not dynamically locate 'pwmfan' hwmon node.", file=sys.stderr)
@@ -146,7 +146,7 @@ def temp_check():
     while True:
         val = get_cpu_temp()
         target_pct = get_fanspeed(val, fanconfig)
-        
+
         # Scale percentage (0-100) to our physical PWM range (MIN_PWM to MAX_PWM)
         if target_pct == 0:
             pwm_val = 0

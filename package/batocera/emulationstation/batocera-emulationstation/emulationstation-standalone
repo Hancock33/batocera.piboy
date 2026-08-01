@@ -389,7 +389,7 @@ while [ -e "${REBOOT_FLAG}" ]; do
         if [ -n "${settings_output2}" ]; then
             THEME="$(batocera-settings-get backglass.theme)"
             echo "Standalone: Launching backglass natively on display '${settings_output2}'" >> $log
-            
+
             # Directly target the physical display output using the output name
             batocera-backglass enable "${settings_output2}" "${THEME}"
         fi
