@@ -696,6 +696,7 @@ endmenu
 
 menu "Utils Host"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils-host/python-mkbootimg/Config.in.host"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/picom/Config.in"
 endmenu
 
 menu "WINE"
