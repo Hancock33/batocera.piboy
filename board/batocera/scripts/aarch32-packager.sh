@@ -5,7 +5,7 @@ DEST_DIR=/tmp/batocera-rpi4-32bit-libs-$CURRENTDATE
 mkdir -p $DEST_DIR/etc
 mkdir -p $DEST_DIR/usr/bin32
 cp -a ${TARGET_DIR}/etc/{binfmt.d,box86.box86rc}         $DEST_DIR/etc
-cp -a ${TARGET_DIR}/usr/bin/{sorr,box86,gmloader}        $DEST_DIR/usr/bin32
+cp -a ${TARGET_DIR}/usr/bin/{box86,gmloader}        $DEST_DIR/usr/bin32
 cp -a ${TARGET_DIR}/usr/lib                              $DEST_DIR/usr/lib32
 cp -a ${TARGET_DIR}/lib/*                                $DEST_DIR/usr/lib32
 ln -sf libblkid.so.1                                     $DEST_DIR/usr/lib32/libblkid.so

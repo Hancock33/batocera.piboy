@@ -7,7 +7,7 @@
 LIB32BIT_VERSION = 20260731
 LIB32BIT_SOURCE = batocera-rpi4-32bit-libs-$(LIB32BIT_VERSION).tar.xz
 LIB32BIT_SITE = https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(LIB32BIT_VERSION)
-LIB32BIT_EMULATOR_INFO = droidports.emulator.yml sorr.emulator.yml
+LIB32BIT_EMULATOR_INFO = droidports.emulator.yml
 
 define LIB32BIT_EXTRACT_CMDS
 	mkdir -p $(TARGET_DIR)/{etc,lib,usr}
@@ -25,7 +25,6 @@ endif
 define LIB32BIT_INSTALL_TARGET_CMDS
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy/piboy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/32bit/lib32bit/sorr.keys       $(TARGET_DIR)/usr/share/evmapy/sorr.keys
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/32bit/lib32bit/droidports.keys $(TARGET_DIR)/usr/share/evmapy/droidports.keys
 endef
 
