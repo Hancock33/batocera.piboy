@@ -3,8 +3,8 @@
 # libretro-neocd
 #
 ################################################################################
-# Version: Commits on Aug 01, 2026
-LIBRETRO_NEOCD_VERSION = 193887bad4f2e2fc52800dba1cf564bcfb68157d
+# Version: Commits on Aug 02, 2026
+LIBRETRO_NEOCD_VERSION = 5f11e84c434206c3bcc78331676578774046f9ef
 LIBRETRO_NEOCD_SITE = $(call github,libretro,neocd_libretro,$(LIBRETRO_NEOCD_VERSION))
 LIBRETRO_NEOCD_LICENSE = GPLv3
 LIBRETRO_NEOCD_DEPENDENCIES = retroarch
