@@ -128,7 +128,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'soniccd': ('sonicretro.sonicretroGenerator', 'SonicRetroGenerator'),
     'sonicmania': ('sonicmania.sonicmaniaGenerator', 'SonicManiaGenerator'),
     'sonicnexus': ('sonicnexus.sonicnexusGenerator', 'SonicNexusGenerator'),
-    'sorr': ('sorr.sorrGenerator', 'SorrGenerator'),
     'spacecadetpinball': ('spacecadetpinball.spacecadetpinballGenerator', 'SpacecadetpinballGenerator'),
     'srb2': ('srb2.srb2Generator', 'Srb2Generator'),
     'srb2kart': ('srb2kart.srb2kartGenerator', 'Srb2kartGenerator'),

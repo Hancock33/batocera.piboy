@@ -538,7 +538,6 @@ menu "Ports"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/32bit/box86/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/32bit/droidports/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/32bit/lib32bit/Config.in"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/32bit/sorr/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/abuse/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/alephone/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/avp/Config.in"
@@ -664,6 +663,7 @@ menu "Utils"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/od-commander/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/pacman/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/picade/Config.in"
+  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/picom/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/pigpio-rpi/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/pm-utils/Config.in"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/python-ndeflib/Config.in"
@@ -696,7 +696,6 @@ endmenu
 
 menu "Utils Host"
   source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils-host/python-mkbootimg/Config.in.host"
-  source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/utils/picom/Config.in"
 endmenu
 
 menu "WINE"

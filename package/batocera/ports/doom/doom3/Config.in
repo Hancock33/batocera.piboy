@@ -6,6 +6,7 @@ config BR2_PACKAGE_DOOM3
 	select BR2_PACKAGE_D3LE
 	select BR2_PACKAGE_DENTONMOD
 	select BR2_PACKAGE_DESOLATED
+	select BR2_PACKAGE_EOC
 	select BR2_PACKAGE_ELDOOM
 	select BR2_PACKAGE_FITZ
 	select BR2_PACKAGE_GRIMM
@@ -27,6 +28,7 @@ source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/dentonmod/
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/desolated/Config.in"
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/dhewm3/Config.in"
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/eldoom/Config.in"
+source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/eoc/Config.in"
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/fitz/Config.in"
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/grimm/Config.in"
 source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/ports/doom/doom3/hardcorps/Config.in"
