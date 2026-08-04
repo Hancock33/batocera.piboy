@@ -3,8 +3,8 @@
 # libretro-blastem
 #
 ################################################################################
-# Version: Commits on Aug 02, 2026
-LIBRETRO_BLASTEM_VERSION = facfe869670e34bfd161e9d60cba4ee98b3dc607
+# Version: Commits on Aug 03, 2026
+LIBRETRO_BLASTEM_VERSION = 6775750cd33cf7ab5604b9297fb49800883e03b9
 LIBRETRO_BLASTEM_SITE = $(call github,libretro,blastem,$(LIBRETRO_BLASTEM_VERSION))
 LIBRETRO_BLASTEM_LICENSE = GPLv3
 LIBRETRO_BLASTEM_DEPENDENCIES += retroarch
