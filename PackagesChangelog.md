@@ -8,9 +8,11 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|aff9a4a9c886
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|fc8fe334ff01945a3a57513444581c4b2eba74a7|Aug 06, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|c24d80d7da59ef79bc9f40f0c3600d0cece463bb|Aug 06, 2026
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.67.0|Aug 06, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260806|Aug 06, 2026
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.28.0|Aug 06, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.28.0|Aug 06, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|79f5ef5d7f87c973503a35e7ea93e973295dd330|Aug 06, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260806|Aug 06, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ce77a9852b98a6184b59cfe1f9d33e7ea18e2772|Aug 06, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|fd06651488c4e7522ce37056b17c279b8149ef5b|Aug 06, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|3ec62d112d500968d008e2c4c0376c85da6fb939|Aug 06, 2026
@@ -59,12 +61,10 @@ Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|8ecfa27759919586e33f67
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|80075ce556a9d5c2c8fbe27f70625fb539d3bbba|Aug 03, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|d51ab60193b7baa56b2f6ec55f9a7789f99f6ee9|Aug 03, 2026
 Libraries|[sdl3](http://github.com/libsdl-org/SDL)|release-3.4.14|Aug 03, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260803|Aug 03, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|212f3466c9f276ff7cade5a5ead78d3a151343ac|Aug 03, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.57.04|Aug 03, 2026
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.5.0|Aug 03, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260803|Aug 03, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|212f3466c9f276ff7cade5a5ead78d3a151343ac|Aug 03, 2026
 Ports|[box64](http://github.com/ptitseb/box64)|v0.4.4|Aug 02, 2026
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|f5a68634244c8719645626ef714387b268a5ae32|Aug 02, 2026
