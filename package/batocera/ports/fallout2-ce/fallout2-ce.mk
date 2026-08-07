@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Aug 07, 2026
-FALLOUT2_CE_VERSION = 8b1efef985bb349e0a6f7de3381d2cc71787f759
+FALLOUT2_CE_VERSION = f7367f4515178fdb59afbec39cb7a0c35558a09b
 FALLOUT2_CE_SITE = $(call github,fallout2-ce,fallout2-ce,$(FALLOUT2_CE_VERSION))
 FALLOUT2_CE_DEPENDENCIES = sdl2
 FALLOUT2_CE_EMULATOR_INFO = fallout2-ce.emulator.yml
