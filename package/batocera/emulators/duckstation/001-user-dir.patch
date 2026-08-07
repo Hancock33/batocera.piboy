@@ -1,5 +1,5 @@
 diff --git a/src/core/settings.cpp b/src/core/settings.cpp
-index fae4bf08c..ffb2472ba 100644
+index 9e346650a..4bc3d9965 100644
 --- a/src/core/settings.cpp
 +++ b/src/core/settings.cpp
 @@ -2858,20 +2858,20 @@ std::string EmuFolders::LoadPathFromSettings(const SettingsInterface& si, const
