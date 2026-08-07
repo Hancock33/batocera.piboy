@@ -1,5 +1,5 @@
 diff --git a/Common/GPU/Vulkan/VulkanLoader.cpp b/Common/GPU/Vulkan/VulkanLoader.cpp
-index cb1f03b528..026cdf184e 100644
+index 9c6bde6be8..8096b84095 100644
 --- a/Common/GPU/Vulkan/VulkanLoader.cpp
 +++ b/Common/GPU/Vulkan/VulkanLoader.cpp
 @@ -263,8 +263,9 @@ typedef void *VulkanLibraryHandle;
@@ -11,6 +11,6 @@ index cb1f03b528..026cdf184e 100644
 +// Batocera - set to true to avoid long load times
 +bool g_vulkanAvailabilityChecked = true;
 +bool g_vulkanMayBeAvailable = true;
+ static std::string g_nativeLibDir;
  
  static PFN_vkVoidFunction LoadInstanceFunc(VkInstance instance, const char *name) {
- 	PFN_vkVoidFunction funcPtr = vkGetInstanceProcAddr(instance, name);
