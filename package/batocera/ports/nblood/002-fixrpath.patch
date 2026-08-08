@@ -1,5 +1,5 @@
 diff --git a/Common.mak b/Common.mak
-index d0e5834b3..cd1b781b7 100644
+index cf5fca5e5..a5829debc 100644
 --- a/Common.mak
 +++ b/Common.mak
 @@ -542,9 +542,6 @@ else ifeq ($(PLATFORM),WII)
