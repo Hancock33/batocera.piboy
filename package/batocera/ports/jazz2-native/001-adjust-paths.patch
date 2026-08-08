@@ -1,8 +1,8 @@
 diff --git a/Sources/Jazz2/ContentResolver.cpp b/Sources/Jazz2/ContentResolver.cpp
-index 6acd4fa0..afcf2d32 100644
+index 23a94ce2..d1e2d5a1 100644
 --- a/Sources/Jazz2/ContentResolver.cpp
 +++ b/Sources/Jazz2/ContentResolver.cpp
-@@ -236,17 +236,16 @@ namespace Jazz2
+@@ -304,17 +304,16 @@ namespace Jazz2
  			auto localStorage = fs::GetLocalStorage();
  			if (!localStorage.empty()) {
  				// Use "$XDG_DATA_HOME/Jazz² Resurrection/" if exists (for backward compatibility), otherwise "$XDG_DATA_HOME/{NCINE_LINUX_PACKAGE}/"
@@ -24,10 +24,10 @@ index 6acd4fa0..afcf2d32 100644
  				!fs::FindPathCaseInsensitive(fs::CombinePath(_sourcePath, "AnimsSw.j2a"_s))) {
  				auto systemWideSource = NCINE_INSTALL_PREFIX "/share/" NCINE_LINUX_PACKAGE "/Source/";
 diff --git a/Sources/Shared/IO/FileSystem.cpp b/Sources/Shared/IO/FileSystem.cpp
-index b2a8b14c..6cfbb3d2 100644
+index 02ea8c8d..f3d436cc 100644
 --- a/Sources/Shared/IO/FileSystem.cpp
 +++ b/Sources/Shared/IO/FileSystem.cpp
-@@ -1374,7 +1374,7 @@ namespace Death { namespace IO {
+@@ -1488,7 +1488,7 @@ namespace Death { namespace IO {
  #elif defined(DEATH_TARGET_UNIX) || defined(DEATH_TARGET_EMSCRIPTEN) || defined(DEATH_TARGET_VITA)
  		StringView config = ::getenv("XDG_CONFIG_HOME");
  		if (IsAbsolutePath(config)) {
