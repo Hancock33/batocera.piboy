@@ -12,10 +12,9 @@ SHADPS4_EMULATOR_INFO = shadps4.emulator.yml
 
 SHADPS4_LICENSE = GPLv2
 SHADPS4_LICENSE_FILE = LICENSE
-SHADPS4_DEPENDENCIES += alsa-lib boost ffmpeg fmt glslang jack2 libedit libevdev openal openssl
-SHADPS4_DEPENDENCIES += pugixml pulseaudio sdl3 udev vulkan-headers vulkan-validationlayers
-
 SHADPS4_SUPPORTS_IN_SOURCE_BUILD = NO
+SHADPS4_DEPENDENCIES += alsa-lib boost ffmpeg fmt freetype glslang jack2 libedit libevdev libminiupnpc
+SHADPS4_DEPENDENCIES += openal openssl pugixml pulseaudio sdl3 udev vulkan-headers vulkan-validationlayers
 
 SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 SHADPS4_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++ -lprotobuf"

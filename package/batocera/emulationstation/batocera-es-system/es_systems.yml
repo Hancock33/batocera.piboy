@@ -6826,7 +6826,7 @@ ps4:
   manufacturer:         Sony
   release:              2013
   hardware:             console
-  extensions:           [ps4]
+  extensions:           [ps4, zar]
   emulators:
     shadps4:
       shadps4:          { requireAnyOf: [BR2_PACKAGE_SHADPS4] }
