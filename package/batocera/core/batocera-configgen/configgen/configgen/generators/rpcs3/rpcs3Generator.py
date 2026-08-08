@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-import os
 import re
 import shutil
 import struct
@@ -38,6 +37,7 @@ if TYPE_CHECKING:
 
 _logger = logging.getLogger(__name__)
 
+is_psn_squashfs = False
 
 # USB device tuning for the arcade PS3 titles (System 357/369, Taiko, ...) shipped as a
 # PSN squashfs. These all share the SCEEXE000 title-id, so they cannot be told apart by
@@ -667,9 +667,8 @@ class Rpcs3Generator(Generator):
         shutil.copytree('/usr/share/rpcs3/Icons/', icon_target, dirs_exist_ok=True, copy_function=shutil.copy2)
 
         # determine the rom name
-        romExt = os.path.splitext(rom)[1]
-        os.path.splitext(rom)[0]
-        if romExt == ".psn":
+
+        if rom.suffix == ".psn":
             romName: Path | None = None
 
             with rom.open() as fp:
@@ -697,7 +696,7 @@ class Rpcs3Generator(Generator):
         elif configure_emulator(rom):
             romName: Path | None = None
         else:
-            romName = rom  + "/PS3_GAME/USRDIR/EBOOT.BIN"
+            romName = rom / "PS3_GAME" / "USRDIR" / "EBOOT.BIN"
 
         if romName:
             commandArray: list[Path | str] = [RPCS3_BIN, romName]
@@ -721,7 +720,10 @@ class Rpcs3Generator(Generator):
         )
 
     def writesToRom(self, config) -> bool:
-        return True
+        if is_psn_squashfs:
+            return True
+        else:
+            return False
 
     def _generateGunConfig(self):
         # D-Pad mapping is face buttons of the PS Move buttons

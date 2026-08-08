@@ -51,16 +51,9 @@ def mount_squashfs(rom: Path, /) -> Generator[Path]:
     try:
         # if the squashfs contains a single file with the same name, take it as the rom file
         rom_single = mount_point / rom.stem
-        rom_ps = mount_point / "PS3_GAME"
         if len(list(mount_point.iterdir())) == 1 and rom_single.exists():
             _logger.debug("squashfs: single rom %s", rom_single)
-            yield str(rom_single)
-        elif len(list(mount_point.iterdir())) == 1 and rom_ps.exists():
-            _logger.debug("squashfs: ps3 rom %s", rom_ps)
-            yield str(mount_point)
-        elif "/bigfish/" in str(rom) or "/popcap/" in str(rom) or "/windows/" in str(rom):
-            _logger.debug("squashfs: windows rom %s", mount_point)
-            yield str(mount_point)
+            yield rom_single
         else:
             try:
                 rom_linked = (mount_point / ".ROM").resolve(strict=True)
