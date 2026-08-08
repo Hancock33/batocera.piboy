@@ -139,6 +139,13 @@ ifeq ($(BR2_PACKAGE_CITRON),y)
   BATOCERA_DESKTOPAPPS_ICONS   += eden.png
 endif
 
+# ryujinx
+ifeq ($(BR2_PACKAGE_RYUJINX),y)
+  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-ryujinx
+  BATOCERA_DESKTOPAPPS_APPS    += ryujinx-config.desktop
+  BATOCERA_DESKTOPAPPS_ICONS   += ryujinx.png
+endif
+
 # demul
 ifeq ($(BR2_PACKAGE_DEMUL),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-demul
