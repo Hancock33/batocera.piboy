@@ -58,7 +58,7 @@
 - Removed Libretro-Puae2021
 - Removed the buggy Libretro-A5200 core. We will use the compatible Libretro-Atari800 core instead
 - Rockchip RK3588 devices moved to the mainline linux kernel:
-  CoolPi 4B, FriendlyElec CM3588 NAS, GameForce ACE, IndieDroid Nova, Khadas Edge2, Orange Pi 5
+  CoolPi 4B, FriendlyElec CM3588 NAS, IndieDroid Nova, Khadas Edge2, Orange Pi 5
   Orange Pi 5 Plus, Orange Pi 5B, QuartzPro64, ROCK 5A, ROCK 5B, ROCK 5B Plus, ROCK 5C
 - Select Qualcomm handheld devices can now install batcoera on the internal drive alongside Android (batocera-install-internal)
 - The Force Engine to capable aarch64 devices
@@ -70,7 +70,7 @@
 - Azahar to 2125.1.2
 - BigPEmu to 1.221
 - Box64 0.4.2
-- Cemu to June 23rd, 2026 build
+- Cemu to August 7th, 2026 build
 - CDogs to 2.4.0
 - CLK to 2026-07-23
 - CorsixTH to v0.69.2
@@ -144,8 +144,8 @@
 - Linux Firmware to 20260622
 - Mesa3D to 26.1.6
 - MangoHud to v0.8.4
-- Nvidia Open Production driver to 610.43.03
-- Nvidia 580 Legacy driver to 580.173.02
+- Nvidia Open Production driver to 610.57.04
+- Nvidia 580 Legacy driver to 580.178.04
 - QT to 6.11.1
 - Qualcomm SM6115 device kernel updated to 7.0.14
 - Qualcomm SM8550 device kernel updated to 7.0.14
