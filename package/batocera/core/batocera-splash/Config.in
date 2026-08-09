@@ -37,12 +37,12 @@ endchoice
 
 # SPLASH VIDEO GROUPS
 
-# These blocks group target boards based on their performance class and 
-# decoding capabilities. They tell the makefile which pre-compiled video file 
+# These blocks group target boards based on their performance class and
+# decoding capabilities. They tell the makefile which pre-compiled video file
 # format (720p, 1080p, or HEVC) is optimal to install.
 
 # 720p H264 Profile:
-# Group for legacy, low-power, or older SBC targets that perform smoothest 
+# Group for legacy, low-power, or older SBC targets that perform smoothest
 # when rendering a lighter 720p @ 30 FPS video profile.
 if BR2_PACKAGE_BATOCERA_TARGET_BCM2835 || \
    BR2_PACKAGE_BATOCERA_TARGET_BCM2836 || \
@@ -56,7 +56,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_VIDEO_720P30
 endif
 
 # 1080p H264 Profile:
-# Group for mid-range single board computers (SBCs) capable of stably 
+# Group for mid-range single board computers (SBCs) capable of stably
 # decoding full-HD 1080p @ 30 FPS video using the H264 codec.
 if BR2_PACKAGE_BATOCERA_TARGET_BCM2837 || \
    BR2_PACKAGE_BATOCERA_TARGET_BCM2711 || \
@@ -81,7 +81,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_VIDEO_HEVC_1080P60
 	default y
 endif
 
-# A target-specific fallback designed specifically for H3-based devices 
+# A target-specific fallback designed specifically for H3-based devices
 # (e.g., Capcom Home Arcade), enabling custom Capcom themed assets during boot.
 if BR2_PACKAGE_BATOCERA_TARGET_H3
 config BR2_PACKAGE_BATOCERA_SPLASH_VIDEO_CAPCOM
@@ -91,12 +91,12 @@ endif
 
 # MPV PLAYER OPTIONS GROUPS
 
-# These groups manage driver-specific configurations passed directly to MPV. 
-# They ensure that MPV matches the precise video-out (vo) and hardware 
+# These groups manage driver-specific configurations passed directly to MPV.
+# They ensure that MPV matches the precise video-out (vo) and hardware
 # decoding (hwdec) paths required by individual target kernels.
 
 # Mainline Rockchip Profile:
-# Modern Rockchip devices running mainline Linux kernels which utilize the 
+# Modern Rockchip devices running mainline Linux kernels which utilize the
 # stateless V4L2 request API (using '--hwdec=v4l2request').
 if BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
    BR2_PACKAGE_BATOCERA_TARGET_RK3568          || \
@@ -107,7 +107,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_MPV_RK_MAINLINE
 endif
 
 # Raspberry Pi Profile:
-# Broadcom SoC devices utilizing the custom GPU/DRM copy interface 
+# Broadcom SoC devices utilizing the custom GPU/DRM copy interface
 # (using '--hwdec=drm-copy').
 if BR2_PACKAGE_BATOCERA_RPI_ANY
 config BR2_PACKAGE_BATOCERA_SPLASH_MPV_RPI
@@ -116,7 +116,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_MPV_RPI
 endif
 
 # Amlogic Profile:
-# Amlogic architectures using custom ffmpeg and DRM decoding patches 
+# Amlogic architectures using custom ffmpeg and DRM decoding patches
 # (using '--hwdec=drm').
 if BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY
 config BR2_PACKAGE_BATOCERA_SPLASH_MPV_AMLOGIC
@@ -125,7 +125,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_MPV_AMLOGIC
 endif
 
 # Snapdragon Profile:
-# High-end Qualcomm Snapdragon mobile systems requiring specific v4l2m2m-copy 
+# High-end Qualcomm Snapdragon mobile systems requiring specific v4l2m2m-copy
 # hardware decoding rules.
 if BR2_PACKAGE_BATOCERA_TARGET_SM8250 || \
    BR2_PACKAGE_BATOCERA_TARGET_SM8550 || \
@@ -136,7 +136,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_MPV_SM8x50
 endif
 
 # Allwinner Profile (H6, H616, H700):
-# Allwinner chips requiring stateless decoding over the Panfrost GPU/DRM stack 
+# Allwinner chips requiring stateless decoding over the Panfrost GPU/DRM stack
 # (using '--hwdec=v4l2request-copy').
 if BR2_PACKAGE_BATOCERA_TARGET_H6    || \
    BR2_PACKAGE_BATOCERA_TARGET_H616  || \
@@ -147,7 +147,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_MPV_ALLWINNER
 endif
 
 # Internal Defaults:
-# Specific target chips that perform best with completely unassigned parameters, 
+# Specific target chips that perform best with completely unassigned parameters,
 # allowing MPV to resolve hardware decoding using its built-in internal logic.
 if BR2_PACKAGE_BATOCERA_TARGET_RK3399 || \
    BR2_PACKAGE_BATOCERA_TARGET_T527
@@ -157,7 +157,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_MPV_INTERNAL_DEFAULTS
 endif
 
 # A3GEN2 Override:
-# Amlogic vendor kernel builds running Panfrost that require a fallback 
+# Amlogic vendor kernel builds running Panfrost that require a fallback
 # to SDL video output (using '--vo=sdl').
 if BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
 config BR2_PACKAGE_BATOCERA_SPLASH_MPV_A3GEN2

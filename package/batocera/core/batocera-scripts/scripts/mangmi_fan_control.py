@@ -22,7 +22,7 @@ except Exception as e:
     exit(1)
 
 # PWM Configuration (15ms total cycle period for quiet switching)
-PERIOD = 0.015  
+PERIOD = 0.015
 
 # Hysteresis Temperature Thresholds (Celsius)
 TEMP_ON_QUIET = 50.0    # Turn Quiet Mode ON when reaching 50°C

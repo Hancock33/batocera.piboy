@@ -79,7 +79,7 @@ ifeq ($(BATOCERA_SPLASH_MEDIA),video)
         BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash-h264-1080p30.mp4
     else ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_VIDEO_HEVC_1080P60),y)
         BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash-hevc-1080p60.mp4
-    else 
+    else
         BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash-hevc-1080p60-8bit.mp4
     endif
 endif
