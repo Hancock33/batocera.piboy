@@ -3,8 +3,8 @@
 # redream
 #
 ################################################################################
-# Version: Commits on Jul 21, 2026
-REDREAM_VERSION = 1.5.0-1155-g0056e35
+# Version: Commits on Aug 08, 2026
+REDREAM_VERSION = 1.5.0-1235-g506c3f1
 REDREAM_SITE = https://redream.io/download
 REDREAM_EMULATOR_INFO = redream.emulator.yml
 
