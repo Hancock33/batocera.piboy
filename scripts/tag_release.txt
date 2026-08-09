@@ -33,6 +33,8 @@ libretro-scummvm.mk
 libserum.mk
 libsfdo.mk
 libzedmd.mk
+logi-wheel.mk
+logitech-trueforce.mk
 mangohud.mk
 mt32emu.mk
 nghttp3.mk

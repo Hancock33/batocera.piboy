@@ -3,25 +3,30 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Aug 02, 2026
-RPCS3_VERSION = a0bebfa5ca2f310c648e882b0a79af6b0ebb66d0
+# Version: Commits on Aug 09, 2026
+RPCS3_VERSION = 6d42df0ffc3b6786066e26c559c7de93f1303ec4
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
-RPCS3_DEPENDENCIES += alsa-lib cubeb ffmpeg flatbuffers libcurl libevdev libglew libglu libpng
-RPCS3_DEPENDENCIES += libusb libxml2 llvm mesa3d ncurses openal opencv4 pugixml rtmidi rtmpdump sdl3 wolfssl
+RPCS3_DEPENDENCIES += alsa-lib cubeb faudio ffmpeg flatbuffers
+RPCS3_DEPENDENCIES += libcurl libevdev libglew libglu libpng libusb libxml2
+RPCS3_DEPENDENCIES += llvm mesa3d ncurses openal opencv4 pugixml rtmidi rtmpdump sdl3 wolfssl
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 RPCS3_EMULATOR_INFO = rpcs3.emulator.yml
 
+RPCS3_CONF_OPTS += -DBUILD_LLVM=OFF
+RPCS3_CONF_OPTS += -DBUILD_RPCS3_TESTS=OFF
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON
 RPCS3_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 RPCS3_CONF_OPTS += -DLLVM_DIR=$(STAGING_DIR)/usr/lib/cmake/llvm/
-RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
 RPCS3_CONF_OPTS += -DOpenGL_GL_PREFERENCE=LEGACY
+RPCS3_CONF_OPTS += -DRUN_RPCS3_TESTS=OFF
+RPCS3_CONF_OPTS += -DSTATIC_LINK_LLVM=OFF
 RPCS3_CONF_OPTS += -DUSE_DISCORD_RPC=OFF
+RPCS3_CONF_OPTS += -DUSE_FAUDIO=ON
 RPCS3_CONF_OPTS += -DUSE_LIBEVDEV=ON
 RPCS3_CONF_OPTS += -DUSE_LTO=OFF
 RPCS3_CONF_OPTS += -DUSE_NATIVE_INSTRUCTIONS=OFF

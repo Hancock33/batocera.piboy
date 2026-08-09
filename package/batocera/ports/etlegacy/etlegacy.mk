@@ -3,8 +3,8 @@
 # etlegacy
 #
 ################################################################################
-# Version: Commits on Jul 23, 2026
-ETLEGACY_VERSION = 7a784b4504977caf1c44acf668f02cacd2153632
+# Version: Commits on Aug 09, 2026
+ETLEGACY_VERSION = 6d85ce2ce74dfb6be5f8722c329faf23283f061c
 ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES
@@ -28,6 +28,7 @@ ETLEGACY_CONF_OPTS += -DENABLE_MULTI_BUILD=OFF
 # use bundled libraries?
 ETLEGACY_CONF_OPTS += -DBUNDLED_LIBS=ON
 ETLEGACY_CONF_OPTS += -DBUNDLED_LIBS_DEFAULT=OFF
+ETLEGACY_CONF_OPTS += -DBUNDLED_LUA=ON
 ETLEGACY_CONF_OPTS += -DBUNDLED_CJSON=ON
 ETLEGACY_CONF_OPTS += -DBUNDLED_MINIZIP=ON
 # client features

@@ -315,6 +315,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_T527           && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_ODIN           # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
+    select BR2_PACKAGE_LOGITECH_TRUEFORCE                   if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_1         # Logitech RS50 & G PRO direct drive wheels (force feedback + TrueForce)
+    select BR2_PACKAGE_LOGI_WHEEL                           if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_1 && BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS # terminal settings app for the wheels above
     select BR2_PACKAGE_KEYBOARDTOPADS
     select BR2_PACKAGE_NSO_N64                              if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_7         # nintendo switch joycon daemon (requires hid-nx or hid-nintendo in kernel 6.7 or later)
     select BR2_PACKAGE_ROCKNIX_JOYPAD                       if BR2_PACKAGE_BATOCERA_TARGET_RK3326       || BR2_PACKAGE_BATOCERA_TARGET_RK3568

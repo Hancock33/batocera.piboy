@@ -1,7 +1,11 @@
 config BR2_PACKAGE_HOTKEYGEN
 	bool "hotkeygen"
-
 	select BR2_PACKAGE_PYTHON3
 	select BR2_PACKAGE_PYTHON_BATOCERA_COMMON
 	select BR2_PACKAGE_PYTHON_EVDEV
 	select BR2_PACKAGE_PYTHON_PYUDEV
+
+	help
+	  hotkeygen is a background utility that listens for specific
+	  input events (KEY_ or BTN_) from connected controllers, keyboards,
+	  or arcade encoders and maps them to global hotkey actions. No newline at end of file

@@ -12,5 +12,6 @@ PYTHON_LGPIO_LICENSE = Unlicense
 PYTHON_LGPIO_LICENSE_FILES = LICENSE
 
 PYTHON_LGPIO_DEPENDENCIES = liblgpio host-swig
+PYTHON_LGPIO_ENV = CFLAGS="$(TARGET_CFLAGS) -Wno-implicit-function-declaration -Wno-int-conversion"
 
 $(eval $(python-package))

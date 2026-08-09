@@ -1,0 +1,15 @@
+diff --git a/3rdParty/sol2/CMakeLists.txt b/3rdParty/sol2/CMakeLists.txt
+index 4775fdc26..966fce637 100644
+--- a/3rdParty/sol2/CMakeLists.txt
++++ b/3rdParty/sol2/CMakeLists.txt
+@@ -16,8 +16,8 @@ FetchContent_Declare_ExcludeFromAll(sol2
+     # https://github.com/ThePhD/sol2/pull/1716
+     # https://github.com/ThePhD/sol2/pull/1674
+     # https://github.com/ThePhD/sol2/pull/1722
+-    URL https://github.com/diasurgical/sol2/archive/832ac772c2cd3d9620d447e9e77897f7b5e806e3.tar.gz
+-    URL_HASH MD5=06c9c0f3242ee803f50e8fd210fdfe4e
++    URL https://github.com/halx99/sol2/archive/16a9fabb7ae525d644d3343f15b1de39c8865ecd.tar.gz
++    URL_HASH MD5=bb8ec3f59c645f0097322125e87a9621
+ )
+ FetchContent_MakeAvailable_ExcludeFromAll(sol2)
+ 
