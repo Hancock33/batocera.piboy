@@ -49,7 +49,7 @@ model2:
   core:     mame
 model3:
   emulator: supermodel
-  core:     supermodel-legacy
+  core:     supermodel
   options:
     videomode: max-720x576
     decorations: none
