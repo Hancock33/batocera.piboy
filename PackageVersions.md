@@ -284,7 +284,7 @@ Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|212f3466c9f276ff7cade
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|8836668a6967a1152cabdcc12bf0f51bfbcf4c36|Aug 10, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|eb21d202a6f1a19ee960d79ec3f4fc90f91b93c7|Jul 06, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|3485e2e0e1e9252148914cd613510ccad7bb56b5|Aug 04, 2026
-Engines|[libdof](http://github.com/jsm174/libdof)|74ac62df50a3b9beb9a9d7cba556cd1b5f2d4e7b|Jul 06, 2026
+Engines|[libdof](http://github.com/jsm174/libdof)|eef645d9f5df618290962946c9e3e8ed30886639|Jul 07, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|6bd462a3fcae77ee481c8b1cc863bd54cc40456f|Jul 22, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libpinmame](http://github.com/vbousquet/pinmame)|c5e82cad15f8a2a021cbdbd5419a38c5cd4d459d|Aug 02, 2026
@@ -308,7 +308,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|bc2707d1fba2ec1e6529857f87202a20998bff13|Aug 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.3.7.3-1|Jun 22, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|4aba09c98f1e5028b82765be1647677b08d35942|Jul 06, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|a7d916c4d3acc948ff753ef9beb59d72f48d72e7|Aug 05, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|9d7446764a614c5c80bda46557d46bd652cf563e|Aug 12, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260810|Aug 10, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026

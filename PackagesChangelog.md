@@ -15,6 +15,7 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|70b5eaa1f09eafd97
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260812|Aug 12, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|42f28e22d20761e7004e8db91c4ad86402fdf600|Aug 12, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|68d0ab74f316efc7faf098ecd9ee2327d4bc4c0c|Aug 12, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|9d7446764a614c5c80bda46557d46bd652cf563e|Aug 12, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260812|Aug 12, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|aed6ed45cb92dea877da04c62e34b6704a13fad6|Aug 12, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|9482324f08b86968f7bccda35c30d33d92336c62|Aug 12, 2026
@@ -100,7 +101,6 @@ Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|2fe66280ac26502
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|e707b3a6b638f4de31ee3e13a64284bd9abfa98e|Aug 05, 2026
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-8|Aug 05, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.3|Aug 05, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|a7d916c4d3acc948ff753ef9beb59d72f48d72e7|Aug 05, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.3.0|Aug 05, 2026
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|636a8dd6340bce7073168ddefd29841fc5e2d213|Aug 05, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|3485e2e0e1e9252148914cd613510ccad7bb56b5|Aug 04, 2026
@@ -222,10 +222,10 @@ Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.3|Jul 07, 202
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|29030f81b137f6ea5365b3d71f2b588490832f5b|Jul 07, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|1c9e927587918ef009503b39a504ef2a5d02c4fb|Jul 07, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|6dca4c15370ac3e2171ce7b31426695f8f39b460|Jul 07, 2026
+Engines|[libdof](http://github.com/jsm174/libdof)|eef645d9f5df618290962946c9e3e8ed30886639|Jul 07, 2026
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|3ea88dcd982b39a4bfb841d47dbcaecbd99536e7|Jul 06, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|4aba09c98f1e5028b82765be1647677b08d35942|Jul 06, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|eb21d202a6f1a19ee960d79ec3f4fc90f91b93c7|Jul 06, 2026
-Engines|[libdof](http://github.com/jsm174/libdof)|74ac62df50a3b9beb9a9d7cba556cd1b5f2d4e7b|Jul 06, 2026
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|vulkan-sdk-1.4.357.0|Jul 06, 2026
 Emulators|[libretro-quicknes](http://github.com/libretro/QuickNES_Core)|26bb785c9deddb66a17717b21bb4e328f03ade32|Jul 06, 2026
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|4aba09c98f1e5028b82765be1647677b08d35942|Jul 06, 2026
