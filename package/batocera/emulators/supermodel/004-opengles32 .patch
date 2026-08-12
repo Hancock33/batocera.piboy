@@ -1,12 +1,14 @@
-From 216f79726f07dcf2cb8444f9f6a51e2c299eeb6b Mon Sep 17 00:00:00 2001
+From da1b9f52ce7825dd9c55425281b1d67fd13944b7 Mon Sep 17 00:00:00 2001
 From: Daniel Martin <dnmard@amazon.com>
 Date: Sun, 9 Aug 2026 23:53:41 +1000
 Subject: [PATCH] Adds OpenGL ES 3.2 & Wayland support - This improves
  compatibility across Linux platforms - Allows lower-end Arm devices to use
  Supermodel - Avoids using restricted OpenGL drivers and XWayland - Fix
- initial rendering, especially when set to Fullscreen.
+ initial rendering, especially when set to Fullscreen. - Add Render Scale
+ option for lower-end devices with the New3D engine only
 
 ---
+ Docs/README.txt                         |  38 ++
  Makefiles/Makefile.UNIX                 |  33 +-
  Makefiles/Rules.inc                     |  51 ++-
  README.md                               |  39 +++
@@ -16,16 +18,16 @@ Subject: [PATCH] Adds OpenGL ES 3.2 & Wayland support - This improves
  Src/Graphics/Legacy3D/Legacy3D.h        |   2 +-
  Src/Graphics/New3D/GLSLShader.cpp       |  46 ++-
  Src/Graphics/New3D/GLSLShader.h         |   2 +-
- Src/Graphics/New3D/New3D.cpp            |  43 ++-
- Src/Graphics/New3D/New3D.h              |   3 +-
- Src/Graphics/New3D/R3DFrameBuffers.cpp  | 102 +++++-
- Src/Graphics/New3D/R3DFrameBuffers.h    |  20 +-
+ Src/Graphics/New3D/New3D.cpp            | 147 +++++++-
+ Src/Graphics/New3D/New3D.h              |  10 +-
+ Src/Graphics/New3D/R3DFrameBuffers.cpp  | 324 ++++++++++++++++-
+ Src/Graphics/New3D/R3DFrameBuffers.h    |  31 +-
  Src/Graphics/New3D/R3DScrollFog.cpp     |  26 +-
  Src/Graphics/New3D/R3DScrollFog.h       |   6 +-
  Src/Graphics/New3D/R3DShader.cpp        |  51 ++-
  Src/Graphics/New3D/R3DShader.h          |   5 +-
  Src/Graphics/New3D/R3DShaderCommon.h    |  28 +-
- Src/Graphics/New3D/R3DShaderQuads.h     |  74 ++++-
+ Src/Graphics/New3D/R3DShaderQuads.h     |  74 +++-
  Src/Graphics/New3D/R3DShaderTriangles.h |  10 +
  Src/Graphics/New3D/TextureBank.h        |   2 +-
  Src/Graphics/New3D/VBO.h                |   2 +-
@@ -35,14 +37,78 @@ Subject: [PATCH] Adds OpenGL ES 3.2 & Wayland support - This improves
  Src/Graphics/Shader.h                   |   2 +-
  Src/Graphics/SuperAA.cpp                |  19 +-
  Src/Graphics/SuperAA.h                  |   3 +-
- Src/OSD/SDL/Crosshair.cpp               |  36 ++-
+ Src/OSD/DefaultConfigFile.h             |   1 +
+ Src/OSD/SDL/Crosshair.cpp               |  36 +-
  Src/OSD/SDL/Gui.cpp                     |  27 +-
- Src/OSD/SDL/Main.cpp                    | 414 +++++++++++++++++++++---
+ Src/OSD/SDL/Main.cpp                    | 442 +++++++++++++++++++++---
  Src/Pkgs/imgui/imgui_impl_opengl3.cpp   |  78 +++--
- 32 files changed, 1056 insertions(+), 168 deletions(-)
+ 34 files changed, 1448 insertions(+), 187 deletions(-)
  create mode 100644 Src/Graphics/GL.h
  create mode 100644 Src/Graphics/GLSL.h
 
+diff --git a/Docs/README.txt b/Docs/README.txt
+index 4859f1ac..105851fc 100644
+--- a/Docs/README.txt
++++ b/Docs/README.txt
+@@ -276,6 +276,15 @@ try:
+ 
+     supermodel game.zip -res=1920,1080 -fullscreen
+ 
++Rendering resolution is controlled independently with '-render-scale'.
++The default value of 0 renders at the output surface resolution.
++Values 1 through 8 select scales based on the origianl Model 3 resolution.
++In standard aspect mode, these produce targets from 496x384 through 3968x3072.
++In wide-screen mode, the target height remains 384 times the selected scale while its
++width follows the output aspect ratio; for example, scale 3 at 16:9 renders at 2048x1152.
++The result is then scaled to the output surface resolution.
++This setting does not affect the 2D layers or Supersampling multiplying with '-ss'.
++
+ Video settings may also be specified globally or on a per-game basis in the
+ configuration file, described elsewhere in this manual.
+ 
+@@ -1234,6 +1243,19 @@ not.  All options are case sensitive.
+ 
+     ----------------
+ 
++    Option:         -render-scale=<n>
++
++    Description:    Sets the New3D rendering resolution.  Valid values are 0
++                    through 8 and the default is 0, which renders at the
++                    output-surface resolution.  Positive values select fixed
++                    integer scales based on a height of 384 pixels.  Standard
++                    aspect mode uses a width of 496 pixels per scale; wide-
++                    screen mode derives the width from the output aspect ratio.
++                    This setting works with the New3D rendering engine and is
++                    independent of supersampling.
++
++    ----------------
++
+     Option:         -crtcolors=<mode>
+ 
+     Description:    Emulates other regional TV standards of the time.
+@@ -1423,6 +1445,22 @@ All settings are case sensitive.
+ 
+     ----------------
+ 
++    Name:           RenderScale
++
++    Argument:       Integer.
++
++    Description:    Controls the New3D rendering resolution.  The default is 0
++                    and valid values are 0 through 8.  A value of 0 uses the
++                    output-surface resolution.  Positive values select fixed
++                    integer scales based on a height of 384 pixels.  Standard
++                    aspect mode uses a width of 496 pixels per scale; wide-
++                    screen mode derives the width from the output aspect ratio.
++                    This setting works with the New3D rendering engine and is
++                    independent of Supersampling.
++                    Equivalent to the '-render-scale' command line option.
++
++    ----------------
++
+     Name:           FragmentShader
+                     VertexShader
+ 
 diff --git a/Makefiles/Makefile.UNIX b/Makefiles/Makefile.UNIX
 index 8a0ca4b2..844569fa 100644
 --- a/Makefiles/Makefile.UNIX
@@ -447,21 +513,47 @@ index 182b5a79..e987015c 100644
  #include <cstring>
  
 diff --git a/Src/Graphics/New3D/New3D.cpp b/Src/Graphics/New3D/New3D.cpp
-index 7db69c6b..48acbceb 100644
+index 7db69c6b..146d975f 100644
 --- a/Src/Graphics/New3D/New3D.cpp
 +++ b/Src/Graphics/New3D/New3D.cpp
-@@ -62,7 +62,8 @@ CNew3D::CNew3D(const Util::Config::Node &config, const std::string& gameName) :
+@@ -28,6 +28,7 @@
+ #include <unordered_map>
+ #include "R3DFloat.h"
+ #include "Util/BitCast.h"
++#include "OSD/Logger.h"
+ 
+ #define MAX_RAM_VERTS 300000
+ #define MAX_ROM_VERTS 1500000
+@@ -54,7 +55,12 @@ CNew3D::CNew3D(const Util::Config::Node &config, const std::string& gameName) :
+ 	m_yRes(0),
+ 	m_totalXRes(0),
+ 	m_totalYRes(0),
+-	m_wideScreen(false),
++	m_wideScreen(config["WideScreen"].ValueAs<bool>()),
++	m_renderScale(config["RenderScale"].ValueAs<int>()),
++	m_outputXOffs(0),
++	m_outputYOffs(0),
++	m_outputXRes(0),
++	m_outputYRes(0),
+ 	m_matrixBasePtr(nullptr),
+ 	m_LODBlendTable(nullptr),
+ 	m_prev{{}},
+@@ -62,7 +68,9 @@ CNew3D::CNew3D(const Util::Config::Node &config, const std::string& gameName) :
  	m_vao(0),
  	m_r3dShader(config),
  	m_r3dScrollFog(),
 -	m_aaTarget(0)
++	m_r3dFrameBuffers(m_renderScale > 0),
 +	m_aaTarget(0),
 +	m_ready(false)
  {
  	m_sunClamp		= true;
  	m_numPolyVerts	= 3;
-@@ -76,8 +77,11 @@ CNew3D::CNew3D(const Util::Config::Node &config, const std::string& gameName) :
- 	m_wideScreen = config["WideScreen"].ValueAs<bool>();
+@@ -73,11 +81,13 @@ CNew3D::CNew3D(const Util::Config::Node &config, const std::string& gameName) :
+ 		m_primType		= GL_LINES_ADJACENCY;
+ 	}
+ 
+-	m_wideScreen = config["WideScreen"].ValueAs<bool>();
  	m_noWhiteFlash = config["NoWhiteFlash"].ValueAs<bool>();
  
 -	m_r3dShader.LoadShader();
@@ -473,7 +565,7 @@ index 7db69c6b..48acbceb 100644
  
  	// setup up our vertex buffer memory
  
-@@ -152,6 +156,10 @@ void CNew3D::SetStepping(int stepping)
+@@ -152,20 +162,80 @@ void CNew3D::SetStepping(int stepping)
  
  Result CNew3D::Init(unsigned xOffset, unsigned yOffset, unsigned xRes, unsigned yRes, unsigned totalXResParam, unsigned totalYResParam, unsigned aaTarget)
  {
@@ -482,9 +574,89 @@ index 7db69c6b..48acbceb 100644
 +	}
 +
  	// Resolution and offset within physical display area
- 	m_xRatio	= xRes * (float)(1.0 / 496.0);
- 	m_yRatio	= yRes * (float)(1.0 / 384.0);
-@@ -386,6 +394,11 @@ bool CNew3D::RenderScene(int priority, bool renderOverlay, Layer layer)
+-	m_xRatio	= xRes * (float)(1.0 / 496.0);
+-	m_yRatio	= yRes * (float)(1.0 / 384.0);
+-	m_xOffs		= xOffset;
+-	m_yOffs		= yOffset;
+-	m_xRes		= xRes;
+-	m_yRes		= yRes;
+-	m_totalXRes	= totalXResParam;
+-	m_totalYRes = totalYResParam;
+-	m_aaTarget	= aaTarget;
++	if (m_wideScreen) {
++		m_outputXOffs = 0;
++		m_outputYOffs = 0;
++		m_outputXRes = totalXResParam;
++		m_outputYRes = totalYResParam;
++	}
++	else {
++		m_outputXOffs = xOffset;
++		m_outputYOffs = yOffset;
++		m_outputXRes = xRes;
++		m_outputYRes = yRes;
++	}
++
++	if (m_renderScale > 0) {
++		const unsigned scale = static_cast<unsigned>(m_renderScale);
++		m_xRes = 496u * scale;
++		m_yRes = 384u * scale;
++		m_totalYRes = m_yRes;
++
++		if (m_wideScreen && m_outputYRes > 0) {
++			const unsigned long long scaledWidth =
++				static_cast<unsigned long long>(m_yRes) * m_outputXRes;
++			m_totalXRes = static_cast<unsigned>((scaledWidth + m_outputYRes / 2u) / m_outputYRes);
++		}
++		else {
++			m_totalXRes = m_xRes;
++		}
++
++		m_xOffs = m_totalXRes > m_xRes ? (m_totalXRes - m_xRes) / 2u : 0u;
++		m_yOffs = 0;
++	}
++	else {
++		m_xOffs = xOffset;
++		m_yOffs = yOffset;
++		m_xRes = xRes;
++		m_yRes = yRes;
++		m_totalXRes = totalXResParam;
++		m_totalYRes = totalYResParam;
++	}
++	m_xRatio = m_xRes * (float)(1.0 / 496.0);
++	m_yRatio = m_yRes * (float)(1.0 / 384.0);
++	m_aaTarget = aaTarget;
++
++	GLint maxTextureSize = 0;
++	GLint maxRenderbufferSize = 0;
++	GLint maxViewportDimensions[2] = { 0, 0 };
++	glGetIntegerv(GL_MAX_TEXTURE_SIZE, &maxTextureSize);
++	glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, &maxRenderbufferSize);
++	glGetIntegerv(GL_MAX_VIEWPORT_DIMS, maxViewportDimensions);
++	const bool renderTargetExceedsLimits =
++		m_totalXRes > static_cast<unsigned>(maxTextureSize) ||
++		m_totalYRes > static_cast<unsigned>(maxTextureSize) ||
++		m_totalXRes > static_cast<unsigned>(maxRenderbufferSize) ||
++		m_totalYRes > static_cast<unsigned>(maxRenderbufferSize) ||
++		m_totalXRes > static_cast<unsigned>(maxViewportDimensions[0]) ||
++		m_totalYRes > static_cast<unsigned>(maxViewportDimensions[1]);
++	const bool outputViewportExceedsLimits = m_renderScale > 0 &&
++		(m_outputXRes > static_cast<unsigned>(maxViewportDimensions[0]) ||
++		 m_outputYRes > static_cast<unsigned>(maxViewportDimensions[1]));
++	if (renderTargetExceedsLimits || outputViewportExceedsLimits) {
++		ErrorLog("New3D dimensions exceed the OpenGL limits: render target %ux%u, output viewport %ux%u; maximum texture %d, renderbuffer %d, viewport %dx%d.",
++			m_totalXRes, m_totalYRes, m_outputXRes, m_outputYRes,
++			maxTextureSize, maxRenderbufferSize, maxViewportDimensions[0], maxViewportDimensions[1]);
++		return Result::FAIL;
++	}
+ 
+ 	m_r3dFrameBuffers.DestroyFBO();		// remove any old ones if created
+ 
+-	return m_r3dFrameBuffers.CreateFBO(totalXResParam, totalYResParam);
++	return m_r3dFrameBuffers.CreateFBO(m_totalXRes, m_totalYRes);
+ }
+ 
+ void CNew3D::UploadTextures(unsigned level, unsigned x, unsigned y, unsigned width, unsigned height)
+@@ -386,6 +456,11 @@ bool CNew3D::RenderScene(int priority, bool renderOverlay, Layer layer)
  					m_r3dShader.SetModelStates(&m);
  					matrixLoaded = true;		// do this here to stop loading matrices we don't need. Ie when rendering non transparent etc
  				}
@@ -496,11 +668,15 @@ index 7db69c6b..48acbceb 100644
  				
  				m_r3dShader.SetMeshUniforms(&mesh);
  				glDrawArrays(m_primType, mesh.vboOffset, mesh.vertexCount);
-@@ -498,8 +511,15 @@ void CNew3D::RenderFrame(void)
+@@ -498,8 +573,19 @@ void CNew3D::RenderFrame(void)
  		}
  	}
  
 -	m_r3dFrameBuffers.SetFBO(Layer::colour);		// colour will draw to all 3 buffers. For regular opaque pixels the transparent layers will be essentially masked
++	const bool restoreScissor = m_renderScale > 0 && glIsEnabled(GL_SCISSOR_TEST);
++	if (restoreScissor) {
++		glDisable(GL_SCISSOR_TEST);
++	}
 +	m_r3dFrameBuffers.SetFBO(Layer::colour);		// colour will draw to all buffers. For regular opaque pixels the transparent layers will be essentially masked
 +#ifdef SUPERMODEL_GLES
 +	const GLfloat clearColour[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
@@ -513,7 +689,7 @@ index 7db69c6b..48acbceb 100644
  
  	DrawAmbientFog();
  	DrawScrollFog();								// fog layer if applicable must be drawn here
-@@ -516,8 +536,17 @@ void CNew3D::RenderFrame(void)
+@@ -516,8 +602,17 @@ void CNew3D::RenderFrame(void)
  
  			m_r3dFrameBuffers.SetFBO(Layer::colour);
  
@@ -531,7 +707,41 @@ index 7db69c6b..48acbceb 100644
  
  			m_r3dShader.DiscardAlpha(true);
  			m_r3dShader.SetLayer(Layer::colour);
-@@ -1716,11 +1745,19 @@ bool CNew3D::ProcessLos(int priority)
+@@ -547,13 +642,21 @@ void CNew3D::RenderFrame(void)
+ 		}
+ 	}
+ 
++	if (restoreScissor) {
++		glEnable(GL_SCISSOR_TEST);
++	}
+ 	m_r3dFrameBuffers.SetFBO(Layer::none);
+ 
+ 	if (m_aaTarget) {
+ 		glBindFramebuffer(GL_FRAMEBUFFER, m_aaTarget);			// if we have an AA target draw to it instead of the default back buffer
+ 	}
+ 
+-	m_r3dFrameBuffers.Draw();
++	if (m_renderScale > 0) {
++		m_r3dFrameBuffers.DrawScaled(m_outputXOffs, m_outputYOffs, m_outputXRes, m_outputYRes);
++	}
++	else {
++		m_r3dFrameBuffers.Draw();
++	}
+ 
+ 	if (m_aaTarget) {
+ 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+@@ -1705,6 +1808,10 @@ void CNew3D::TranslateLosPosition(int inX, int inY, int& outX, int& outY) const
+ 
+ 	outX = m_xOffs + int(inX * m_xRatio);
+ 	outY = m_yOffs + int(inY * m_yRatio);
++	if (m_renderScale > 0) {
++		outX = std::clamp(outX, 0, static_cast<int>(m_totalXRes) - 1);
++		outY = std::clamp(outY, 0, static_cast<int>(m_totalYRes) - 1);
++	}
+ }
+ 
+ bool CNew3D::ProcessLos(int priority)
+@@ -1716,11 +1823,19 @@ bool CNew3D::ProcessLos(int priority)
  				int losX, losY;
  				TranslateLosPosition(n.viewport.losPosX, n.viewport.losPosY, losX, losY);
  
@@ -552,7 +762,7 @@ index 7db69c6b..48acbceb 100644
  				// apply our mask to stencil, because layered poly attributes use the lower bits
  				stencilVal &= 0x80;
 diff --git a/Src/Graphics/New3D/New3D.h b/Src/Graphics/New3D/New3D.h
-index e0758384..678e02e4 100644
+index e0758384..752a7f69 100644
 --- a/Src/Graphics/New3D/New3D.h
 +++ b/Src/Graphics/New3D/New3D.h
 @@ -30,7 +30,7 @@
@@ -564,7 +774,22 @@ index e0758384..678e02e4 100644
  #include "Types.h"
  #include "Graphics/IRender3D.h"
  #include "Model.h"
-@@ -294,6 +294,7 @@ class CNew3D final : public IRender3D
+@@ -258,9 +258,12 @@ class CNew3D final : public IRender3D
+ 	// Resolution and scaling factors (to support resolutions higher than 496x384) and offsets
+ 	float		m_xRatio, m_yRatio;
+ 	unsigned	m_xOffs, m_yOffs;
+-	unsigned	m_xRes, m_yRes;           // resolution of Model 3's 496x384 display area within the window
+-	unsigned 	m_totalXRes, m_totalYRes; // total OpenGL window resolution
++	unsigned	m_xRes, m_yRes;			// Model 3 display area within the New3D render target
++	unsigned  	m_totalXRes, m_totalYRes;	// complete New3D render-target resolution
+ 	bool		m_wideScreen;
++	int			m_renderScale;
++	unsigned	m_outputXOffs, m_outputYOffs;
++	unsigned	m_outputXRes, m_outputYRes;	// destination area within the output surface
+ 
+ 	// Real3D Base Matrix Pointer
+ 	const float	*m_matrixBasePtr;
+@@ -294,6 +297,7 @@ class CNew3D final : public IRender3D
  	R3DScrollFog m_r3dScrollFog;
  	R3DFrameBuffers m_r3dFrameBuffers;
  	GLuint m_aaTarget;						// optional, maybe zero
@@ -573,16 +798,64 @@ index e0758384..678e02e4 100644
  	struct
  	{
 diff --git a/Src/Graphics/New3D/R3DFrameBuffers.cpp b/Src/Graphics/New3D/R3DFrameBuffers.cpp
-index 927a6d42..f0789430 100644
+index 927a6d42..90ffba14 100644
 --- a/Src/Graphics/New3D/R3DFrameBuffers.cpp
 +++ b/Src/Graphics/New3D/R3DFrameBuffers.cpp
-@@ -1,4 +1,5 @@
+@@ -1,8 +1,52 @@
  #include "R3DFrameBuffers.h"
++#include "OSD/Logger.h"
 +#include <cstring>
++
++#ifdef SUPERMODEL_GLES
++namespace {
++
++const char *GetFramebufferStatusName(GLenum status)
++{
++	switch (status) {
++	case GL_FRAMEBUFFER_COMPLETE: return "complete";
++	case GL_FRAMEBUFFER_UNDEFINED: return "undefined";
++	case GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT: return "incomplete attachment";
++	case GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: return "missing attachment";
++	case GL_FRAMEBUFFER_UNSUPPORTED: return "unsupported";
++	case GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: return "incomplete multisample";
++	default: return "unknown";
++	}
++}
++
++const char *GetGLErrorName(GLenum error)
++{
++	switch (error) {
++	case GL_NO_ERROR: return "no error";
++	case GL_INVALID_ENUM: return "invalid enum";
++	case GL_INVALID_VALUE: return "invalid value";
++	case GL_INVALID_OPERATION: return "invalid operation";
++	case GL_INVALID_FRAMEBUFFER_OPERATION: return "invalid framebuffer operation";
++	case GL_OUT_OF_MEMORY: return "out of memory";
++	default: return "unknown";
++	}
++}
++
++void LogFramebufferSetupError(const char *name, GLenum status, GLenum error, int width, int height)
++{
++	if (status == GL_FRAMEBUFFER_COMPLETE && error == GL_NO_ERROR) {
++		return;
++	}
++	ErrorLog("New3D %s framebuffer setup failed: status=0x%04X (%s), GL error=0x%04X (%s), size=%dx%d.",
++		name, static_cast<unsigned>(status), GetFramebufferStatusName(status),
++		static_cast<unsigned>(error), GetGLErrorName(error), width, height);
++}
++
++} // anonymous namespace
++#endif
  
  namespace New3D {
  
-@@ -11,15 +12,26 @@ R3DFrameBuffers::R3DFrameBuffers()
+-R3DFrameBuffers::R3DFrameBuffers()
++R3DFrameBuffers::R3DFrameBuffers(bool scaledShadersRequested)
+ {
+ 	m_frameBufferID = 0;
+ 	m_renderBufferID = 0;
+@@ -11,15 +55,28 @@ R3DFrameBuffers::R3DFrameBuffers()
  	m_width = 0;
  	m_height = 0;
  	m_vao = 0;
@@ -605,14 +878,25 @@ index 927a6d42..f0789430 100644
 +
 +	const bool transShaderReady = AllocShaderTrans();
 +	const bool baseShaderReady = AllocShaderBase();
-+	m_shaderReady = transShaderReady && baseShaderReady;
++	const bool scaledTransShaderReady = !scaledShadersRequested || AllocShaderTransScaled();
++	const bool scaledBaseShaderReady = !scaledShadersRequested || AllocShaderBaseScaled();
++	m_shaderReady = transShaderReady && baseShaderReady && scaledTransShaderReady && scaledBaseShaderReady;
 +	if (!m_shaderReady) {
 +		return;
 +	}
  
  	glGenVertexArrays(1, &m_vao);
  	glBindVertexArray(m_vao);
-@@ -41,6 +53,10 @@ R3DFrameBuffers::~R3DFrameBuffers()
+@@ -32,6 +89,8 @@ R3DFrameBuffers::~R3DFrameBuffers()
+ 	DestroyFBO();
+ 	m_shaderTrans.UnloadShaders();
+ 	m_shaderBase.UnloadShaders();
++	m_shaderTransScaled.UnloadShaders();
++	m_shaderBaseScaled.UnloadShaders();
+ 
+ 	if (m_vao) {
+ 		glDeleteVertexArrays(1, &m_vao);
+@@ -41,6 +100,10 @@ R3DFrameBuffers::~R3DFrameBuffers()
  
  Result R3DFrameBuffers::CreateFBO(int width, int height)
  {
@@ -623,7 +907,7 @@ index 927a6d42..f0789430 100644
  	m_width = width;
  	m_height = height;
  
-@@ -55,6 +71,14 @@ Result R3DFrameBuffers::CreateFBO(int width, int height)
+@@ -55,6 +118,14 @@ Result R3DFrameBuffers::CreateFBO(int width, int height)
  	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_texIDs[0], 0);
  	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, m_texIDs[1], 0);
  	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, m_texIDs[2], 0);
@@ -638,7 +922,37 @@ index 927a6d42..f0789430 100644
  
  	// depth/stencil attachment
  	glGenRenderbuffers(1, &m_renderBufferID);
-@@ -121,6 +145,12 @@ void R3DFrameBuffers::DestroyFBO()
+@@ -64,6 +135,10 @@ Result R3DFrameBuffers::CreateFBO(int width, int height)
+ 
+ 	// check setup was successful
+ 	auto fboStatus = glCheckFramebufferStatus(GL_FRAMEBUFFER);
++#ifdef SUPERMODEL_GLES
++	const GLenum glError = glGetError();
++	LogFramebufferSetupError("primary", fboStatus, glError, width, height);
++#endif
+ 
+ 	glBindFramebuffer(GL_FRAMEBUFFER, 0);	//created R3DFrameBuffers now disable it
+ 
+@@ -80,10 +155,17 @@ Result R3DFrameBuffers::CreateFBODepthCopy(int width, int height)
+ 	glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH32F_STENCIL8, width, height);
+ 	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, m_renderBufferIDCopy);
+ 
+-	glBindFramebuffer(GL_FRAMEBUFFER, 0);
++	const GLenum noDrawBuffer = GL_NONE;
++	glDrawBuffers(1, &noDrawBuffer);
++	glReadBuffer(GL_NONE);
+ 
+ 	// check setup was successful
+ 	auto fboStatus = glCheckFramebufferStatus(GL_FRAMEBUFFER);
++#ifdef SUPERMODEL_GLES
++	const GLenum glError = glGetError();
++	LogFramebufferSetupError("depth-copy", fboStatus, glError, width, height);
++#endif
++	glBindFramebuffer(GL_FRAMEBUFFER, 0);
+ 
+ 	return (fboStatus == GL_FRAMEBUFFER_COMPLETE) ? Result::OKAY : Result::FAIL;
+ }
+@@ -121,6 +203,12 @@ void R3DFrameBuffers::DestroyFBO()
  			i = 0;
  		}
  	}
@@ -651,7 +965,7 @@ index 927a6d42..f0789430 100644
  
  	m_frameBufferID = 0;
  	m_renderBufferID = 0;
-@@ -128,6 +158,10 @@ void R3DFrameBuffers::DestroyFBO()
+@@ -128,6 +216,10 @@ void R3DFrameBuffers::DestroyFBO()
  	m_renderBufferIDCopy = 0;
  	m_width = 0;
  	m_height = 0;
@@ -662,7 +976,7 @@ index 927a6d42..f0789430 100644
  }
  
  GLuint R3DFrameBuffers::CreateTexture(int width, int height)
-@@ -159,7 +193,11 @@ void R3DFrameBuffers::SetFBO(Layer layer)
+@@ -159,7 +251,11 @@ void R3DFrameBuffers::SetFBO(Layer layer)
  	case Layer::colour:
  	{
  		glBindFramebuffer(GL_FRAMEBUFFER, m_frameBufferID);
@@ -674,7 +988,7 @@ index 927a6d42..f0789430 100644
  		glDrawBuffers((GLsizei)std::size(buffers), buffers);
  		break;
  	}
-@@ -180,7 +218,12 @@ void R3DFrameBuffers::SetFBO(Layer layer)
+@@ -180,7 +276,12 @@ void R3DFrameBuffers::SetFBO(Layer layer)
  	case Layer::none:
  	{
  		glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -687,7 +1001,7 @@ index 927a6d42..f0789430 100644
  		break;
  	}
  	default:
-@@ -189,10 +232,49 @@ void R3DFrameBuffers::SetFBO(Layer layer)
+@@ -189,10 +290,49 @@ void R3DFrameBuffers::SetFBO(Layer layer)
  	}
  	}
  
@@ -738,7 +1052,7 @@ index 927a6d42..f0789430 100644
  {
  	static const char *vertexShader = R"glsl(
  
-@@ -228,11 +310,14 @@ void R3DFrameBuffers::AllocShaderBase()
+@@ -228,11 +368,14 @@ void R3DFrameBuffers::AllocShaderBase()
  
  	)glsl";
  
@@ -755,7 +1069,7 @@ index 927a6d42..f0789430 100644
  {
  	static const char *vertexShader = R"glsl(
  
-@@ -281,10 +366,13 @@ void R3DFrameBuffers::AllocShaderTrans()
+@@ -281,10 +424,127 @@ void R3DFrameBuffers::AllocShaderTrans()
  
  	)glsl";
  
@@ -767,11 +1081,176 @@ index 927a6d42..f0789430 100644
  	m_shaderTrans.uniformLoc[0] = m_shaderTrans.GetUniformLocation("tex1");
  	m_shaderTrans.uniformLoc[1] = m_shaderTrans.GetUniformLocation("tex2");
 +	return true;
++}
++
++bool R3DFrameBuffers::AllocShaderBaseScaled()
++{
++	static const char *vertexShader = R"glsl(
++
++	#version 410 core
++
++	out vec2 texCoord;
++
++	void main(void)
++	{
++		const vec4 vertices[] = vec4[](vec4(-1.0, -1.0, 0.0, 1.0),
++										vec4(-1.0,  1.0, 0.0, 1.0),
++										vec4( 1.0, -1.0, 0.0, 1.0),
++										vec4( 1.0,  1.0, 0.0, 1.0));
++		const vec2 texCoords[] = vec2[](vec2(0.0, 0.0),
++										 vec2(0.0, 1.0),
++										 vec2(1.0, 0.0),
++										 vec2(1.0, 1.0));
++
++		gl_Position = vertices[gl_VertexID % 4];
++		texCoord = texCoords[gl_VertexID % 4];
++	}
++
++	)glsl";
++
++	static const char *fragmentShader = R"glsl(
++
++	#version 410 core
++
++	in vec2 texCoord;
++	uniform sampler2D tex1;
++	uniform ivec2 sourceSize;
++	out vec4 fragColor;
++
++	void main()
++	{
++		ivec2 tc = clamp(ivec2(texCoord * vec2(sourceSize)), ivec2(0), sourceSize - ivec2(1));
++		fragColor = texelFetch(tex1, tc, 0);
++	}
++
++	)glsl";
++
++	if (!m_shaderBaseScaled.LoadShaders(vertexShader, fragmentShader)) {
++		return false;
++	}
++	m_shaderBaseScaled.uniformLoc[0] = m_shaderBaseScaled.GetUniformLocation("tex1");
++	m_shaderBaseScaled.uniformLoc[1] = m_shaderBaseScaled.GetUniformLocation("sourceSize");
++	return true;
++}
++
++bool R3DFrameBuffers::AllocShaderTransScaled()
++{
++	static const char *vertexShader = R"glsl(
++
++	#version 410 core
++
++	out vec2 texCoord;
++
++	void main(void)
++	{
++		const vec4 vertices[] = vec4[](vec4(-1.0, -1.0, 0.0, 1.0),
++										vec4(-1.0,  1.0, 0.0, 1.0),
++										vec4( 1.0, -1.0, 0.0, 1.0),
++										vec4( 1.0,  1.0, 0.0, 1.0));
++		const vec2 texCoords[] = vec2[](vec2(0.0, 0.0),
++										 vec2(0.0, 1.0),
++										 vec2(1.0, 0.0),
++										 vec2(1.0, 1.0));
++
++		gl_Position = vertices[gl_VertexID % 4];
++		texCoord = texCoords[gl_VertexID % 4];
++	}
++
++	)glsl";
++
++	static const char *fragmentShader = R"glsl(
++
++	#version 410 core
++
++	in vec2 texCoord;
++	uniform sampler2D tex1;
++	uniform sampler2D tex2;
++	uniform ivec2 sourceSize;
++	out vec4 fragColor;
++
++	void main()
++	{
++		ivec2 tc = clamp(ivec2(texCoord * vec2(sourceSize)), ivec2(0), sourceSize - ivec2(1));
++		vec4 colTrans1 = texelFetch(tex1, tc, 0);
++		vec4 colTrans2 = texelFetch(tex2, tc, 0);
++
++		if (colTrans1.a * colTrans2.a > 0.0) {
++			vec3 mixCol = mix(colTrans1.rgb, colTrans2.rgb, (colTrans2.a + (1.0 - colTrans1.a)) / 2.0);
++			fragColor = vec4(mixCol, 1.0);
++		}
++		else if (colTrans1.a > 0.0) {
++			fragColor = colTrans1;
++		}
++		else {
++			fragColor = colTrans2;
++		}
++	}
++
++	)glsl";
++
++	if (!m_shaderTransScaled.LoadShaders(vertexShader, fragmentShader)) {
++		return false;
++	}
++	m_shaderTransScaled.uniformLoc[0] = m_shaderTransScaled.GetUniformLocation("tex1");
++	m_shaderTransScaled.uniformLoc[1] = m_shaderTransScaled.GetUniformLocation("tex2");
++	m_shaderTransScaled.uniformLoc[2] = m_shaderTransScaled.GetUniformLocation("sourceSize");
++	return true;
  }
  
  void R3DFrameBuffers::Draw()
+@@ -331,4 +591,50 @@ void R3DFrameBuffers::DrawAlphaLayer()
+ 	m_shaderTrans.DisableShader();
+ }
+ 
++void R3DFrameBuffers::DrawScaled(int x, int y, int width, int height)
++{
++	glViewport(x, y, width, height);
++	glDisable(GL_DEPTH_TEST);
++	glDisable(GL_CULL_FACE);
++	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
++	glEnable(GL_BLEND);
++
++	for (int i = 0; i < (int)std::size(m_texIDs); i++) {
++		glActiveTexture(GL_TEXTURE0 + i);
++		glBindTexture(GL_TEXTURE_2D, m_texIDs[i]);
++	}
++
++	glActiveTexture(GL_TEXTURE0);
++	glBindVertexArray(m_vao);
++
++	DrawBaseLayerScaled();
++	DrawAlphaLayerScaled();
++
++	glDisable(GL_BLEND);
++	glBindVertexArray(0);
++}
++
++void R3DFrameBuffers::DrawBaseLayerScaled()
++{
++	m_shaderBaseScaled.EnableShader();
++	glUniform1i(m_shaderBaseScaled.uniformLoc[0], 0);
++	glUniform2i(m_shaderBaseScaled.uniformLoc[1], m_width, m_height);
++
++	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
++
++	m_shaderBaseScaled.DisableShader();
++}
++
++void R3DFrameBuffers::DrawAlphaLayerScaled()
++{
++	m_shaderTransScaled.EnableShader();
++	glUniform1i(m_shaderTransScaled.uniformLoc[0], 1);
++	glUniform1i(m_shaderTransScaled.uniformLoc[1], 2);
++	glUniform2i(m_shaderTransScaled.uniformLoc[2], m_width, m_height);
++
++	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
++
++	m_shaderTransScaled.DisableShader();
++}
++
+ }
 diff --git a/Src/Graphics/New3D/R3DFrameBuffers.h b/Src/Graphics/New3D/R3DFrameBuffers.h
-index 6f3e9bcc..d67f9d46 100644
+index 6f3e9bcc..d4789fc2 100644
 --- a/Src/Graphics/New3D/R3DFrameBuffers.h
 +++ b/Src/Graphics/New3D/R3DFrameBuffers.h
 @@ -1,7 +1,7 @@
@@ -783,7 +1262,18 @@ index 6f3e9bcc..d67f9d46 100644
  #include "GLSLShader.h"
  #include "Model.h"
  
-@@ -18,17 +18,23 @@ class R3DFrameBuffers {
+@@ -10,41 +10,62 @@ namespace New3D {
+ class R3DFrameBuffers {
+ 
+ public:
+-	R3DFrameBuffers();
++	explicit R3DFrameBuffers(bool scaledShadersRequested = false);
+ 	~R3DFrameBuffers();
+ 
+ 	void	Draw();					// draw and composite the transparent layers
+-	
++	void	DrawScaled(int x, int y, int width, int height);
++
  	Result	CreateFBO(int width, int height);
  	void	DestroyFBO();
  
@@ -806,10 +1296,14 @@ index 6f3e9bcc..d67f9d46 100644
 -	void	AllocShaderBase();
 +	bool	AllocShaderTrans();
 +	bool	AllocShaderBase();
++	bool	AllocShaderTransScaled();
++	bool	AllocShaderBaseScaled();
  
  	void	DrawBaseLayer();
  	void	DrawAlphaLayer();
-@@ -36,9 +42,17 @@ class R3DFrameBuffers {
++	void	DrawBaseLayerScaled();
++	void	DrawAlphaLayerScaled();
+ 
  	GLuint m_frameBufferID;
  	GLuint m_renderBufferID;
  	GLuint m_texIDs[3];
@@ -827,6 +1321,14 @@ index 6f3e9bcc..d67f9d46 100644
  	int m_width;
  	int m_height;
  
+ 	// shaders
+ 	GLSLShader m_shaderBase;
+ 	GLSLShader m_shaderTrans;
++	GLSLShader m_shaderBaseScaled;
++	GLSLShader m_shaderTransScaled;
+ 
+ 	// vao
+ 	GLuint m_vao;	// this really needed if we don't actually use vertex attribs?
 diff --git a/Src/Graphics/New3D/R3DScrollFog.cpp b/Src/Graphics/New3D/R3DScrollFog.cpp
 index 99a26df1..09b1fd60 100644
 --- a/Src/Graphics/New3D/R3DScrollFog.cpp
@@ -1532,6 +2034,18 @@ index 8b69e459..72cf7bbd 100644
  	GLuint m_vao;
  	int m_width;
  	int m_height;
+diff --git a/Src/OSD/DefaultConfigFile.h b/Src/OSD/DefaultConfigFile.h
+index 6202eb9d..bb42074a 100644
+--- a/Src/OSD/DefaultConfigFile.h
++++ b/Src/OSD/DefaultConfigFile.h
+@@ -70,6 +70,7 @@
+     "Stretch = false\n"
+     "WideBackground = false\n"
+     "Supersampling = 1\n"
++    "RenderScale = 0\n"
+     "; CRT-like color adaption: 0=none, 1=ARI/D93 (recommended for all JP developed games),\n"
+     "; 2=PVM_20M2U/D93, 3=BT601_525/D93, 4=BT601_525/D65 (recommended for all US developed games)\n"
+     "; 5=BT601_625/D65 (recommended for all EUR/AUS developed games)\n"
 diff --git a/Src/OSD/SDL/Crosshair.cpp b/Src/OSD/SDL/Crosshair.cpp
 index 20f98858..bbf6205a 100644
 --- a/Src/OSD/SDL/Crosshair.cpp
@@ -1665,10 +2179,10 @@ index b3705baa..734d9fc8 100644
      std::string xmlFile = config["GameXMLFile"].ValueAs<std::string>();
      GameLoader loader(xmlFile);
 diff --git a/Src/OSD/SDL/Main.cpp b/Src/OSD/SDL/Main.cpp
-index 77072d09..c2978b3f 100644
+index 77072d09..b0e06661 100644
 --- a/Src/OSD/SDL/Main.cpp
 +++ b/Src/OSD/SDL/Main.cpp
-@@ -67,12 +67,13 @@
+@@ -67,12 +67,14 @@
  #include <new>
  #include <cmath>
  #include <cstdio>
@@ -1676,6 +2190,7 @@ index 77072d09..c2978b3f 100644
  #include <cstring>
  #include <cstdarg>
  #include <memory>
++#include <stdexcept>
  #include <vector>
  #include <algorithm>
 -#include <GL/glew.h>
@@ -1683,7 +2198,7 @@ index 77072d09..c2978b3f 100644
  
  #ifdef SUPERMODEL_WIN32
  #include "DirectInputSystem.h"
-@@ -89,7 +90,7 @@
+@@ -89,7 +91,7 @@
  #include "SDLInputSystem.h"
  #include "SDLIncludes.h"
  #include "Debugger/SupermodelDebugger.h"
@@ -1692,7 +2207,7 @@ index 77072d09..c2978b3f 100644
  #include "Graphics/Legacy3D/Legacy3D.h"
  #endif
  #include "Graphics/New3D/New3D.h"
-@@ -126,6 +127,7 @@ static Util::Config::Node s_runtime_config("Global");
+@@ -126,6 +128,7 @@ static Util::Config::Node s_runtime_config("Global");
  ******************************************************************************/
  
  SDL_Window *s_window = nullptr;
@@ -1700,7 +2215,7 @@ index 77072d09..c2978b3f 100644
  
  /*
   * Position and size of rectangular region within OpenGL display to render to.
-@@ -178,7 +180,11 @@ static Result SetGLGeometry(unsigned *xOffsetPtr, unsigned *yOffsetPtr, unsigned
+@@ -178,7 +181,11 @@ static Result SetGLGeometry(unsigned *xOffsetPtr, unsigned *yOffsetPtr, unsigned
    // OpenGL initialization
    glViewport(0,0,*xResPtr,*yResPtr);
    glClearColor(0.0,0.0,0.0,0.0);
@@ -1712,7 +2227,7 @@ index 77072d09..c2978b3f 100644
    glDepthFunc(GL_LESS);
    glEnable(GL_DEPTH_TEST);
    glDisable(GL_CULL_FACE);
-@@ -215,12 +221,78 @@ static Result SetGLGeometry(unsigned *xOffsetPtr, unsigned *yOffsetPtr, unsigned
+@@ -215,12 +222,78 @@ static Result SetGLGeometry(unsigned *xOffsetPtr, unsigned *yOffsetPtr, unsigned
  //     printf("OGLDebug:: 0x%X: %s\n", id, message);
  // }
  
@@ -1792,7 +2307,7 @@ index 77072d09..c2978b3f 100644
      float refreshRateHz = std::abs(s_runtime_config["RefreshRate"].ValueAs<float>());
  
      if (refreshRateHz > 57.f && refreshRateHz < 58.f) {
-@@ -240,7 +312,7 @@ static void SetFullScreenRefreshRate()
+@@ -240,7 +313,7 @@ static void SetFullScreenRefreshRate()
                  return;
              }
  
@@ -1801,14 +2316,14 @@ index 77072d09..c2978b3f 100644
                  if (mode.refresh_rate == 57 || mode.refresh_rate == 58) {       // nvidia is fairly flexible in what refresh rate windows will show, so we can match either 57 or 58,
                      int result = SDL_SetWindowDisplayMode(s_window, &mode);     // both are totally non standard frequencies and shouldn't be set incorrectly
                      if (result == 0) {
-@@ -265,9 +337,96 @@ static void SetFullScreenRefreshRate()
+@@ -265,9 +338,96 @@ static void SetFullScreenRefreshRate()
   * NOTE: keepAspectRatio should always be true. It has not yet been tested with
   * the wide screen hack.
   */
 -static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::string &caption, bool focusWindow, unsigned *xOffsetPtr, unsigned *yOffsetPtr, unsigned *xResPtr, unsigned *yResPtr, unsigned *totalXResPtr, unsigned *totalYResPtr, bool keepAspectRatio, bool fullScreen)
 +#ifdef SUPERMODEL_GLES
 +static Result ValidateGLESContext(bool quadRendering)
-+{
+ {
 +  GLint majorVersion = 0;
 +  GLint minorVersion = 0;
 +  GLint maxDrawBuffers = 0;
@@ -1890,7 +2405,7 @@ index 77072d09..c2978b3f 100644
 +#endif
 +
 +static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::string &caption, int windowXPosition, int windowYPosition, bool borderless, unsigned *xOffsetPtr, unsigned *yOffsetPtr, unsigned *xResPtr, unsigned *yResPtr, unsigned *totalXResPtr, unsigned *totalYResPtr, bool keepAspectRatio, bool fullScreen)
- {
++{
 +#ifndef SUPERMODEL_GLES
    GLenum err;
 +#else
@@ -1899,7 +2414,7 @@ index 77072d09..c2978b3f 100644
  
    // Call only once per program session (this is because of issues with
    // DirectInput when the window is destroyed and a new one created). Use
-@@ -278,8 +437,8 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
+@@ -278,8 +438,8 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
    }
  
    // Initialize video subsystem
@@ -1910,7 +2425,7 @@ index 77072d09..c2978b3f 100644
  
    // Important GL attributes
    SDL_GL_SetAttribute(SDL_GL_RED_SIZE,8);
-@@ -297,6 +456,11 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
+@@ -297,6 +457,11 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
    }
    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER,1);
  
@@ -1922,7 +2437,7 @@ index 77072d09..c2978b3f 100644
    if (coreContext) {
        SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
  
-@@ -309,25 +473,57 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
+@@ -309,25 +474,57 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
            SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
        }
    }
@@ -1984,7 +2499,7 @@ index 77072d09..c2978b3f 100644
      return Result::FAIL;
    }
  
-@@ -337,20 +533,38 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
+@@ -337,20 +534,38 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
    // Set the context as the current window context
    SDL_GL_MakeCurrent(s_window, context);
  
@@ -2026,7 +2541,7 @@ index 77072d09..c2978b3f 100644
    if (profile & GL_CONTEXT_CORE_PROFILE_BIT) {
        printf("(core profile)");
    }
-@@ -358,9 +572,22 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
+@@ -358,9 +573,22 @@ static Result CreateGLScreen(bool coreContext, bool quadRendering, const std::st
    if (profile & GL_CONTEXT_COMPATIBILITY_PROFILE_BIT) {
        printf("(compatibility profile)");
    }
@@ -2049,7 +2564,7 @@ index 77072d09..c2978b3f 100644
    //glDebugMessageCallback(DebugCallback, NULL);
    //glDebugMessageControl(GL_DONT_CARE,GL_DONT_CARE,GL_DONT_CARE, 0, 0, GL_TRUE);
    //glEnable(GL_DEBUG_OUTPUT);
-@@ -379,8 +606,11 @@ static void DestroyGLScreen()
+@@ -379,8 +607,11 @@ static void DestroyGLScreen()
  
  static Result ResizeGLScreen(unsigned *xOffsetPtr, unsigned *yOffsetPtr, unsigned *xResPtr, unsigned *yResPtr, unsigned *totalXResPtr, unsigned *totalYResPtr, bool keepAspectRatio, bool fullScreen)
  {
@@ -2062,7 +2577,7 @@ index 77072d09..c2978b3f 100644
    {
      ErrorLog("Unable to enter %s mode: %s\n", fullScreen ? "fullscreen" : "windowed", SDL_GetError());
      return Result::FAIL;
-@@ -400,7 +630,7 @@ static void PrintGLInfo(bool createScreen, bool infoLog, bool printExtensions)
+@@ -400,7 +631,7 @@ static void PrintGLInfo(bool createScreen, bool infoLog, bool printExtensions)
    unsigned xOffset, yOffset, xRes=496, yRes=384, totalXRes, totalYRes;
    if (createScreen)
    {
@@ -2071,7 +2586,7 @@ index 77072d09..c2978b3f 100644
      {
        ErrorLog("Unable to query OpenGL.\n");
        return;
-@@ -431,14 +661,30 @@ static void PrintGLInfo(bool createScreen, bool infoLog, bool printExtensions)
+@@ -431,14 +662,30 @@ static void PrintGLInfo(bool createScreen, bool infoLog, bool printExtensions)
    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &value);
    if (infoLog)  InfoLog("  Maximum Vertex Attributes: %d", value);
    else           printf("  Maximum Vertex Attributes: %d\n", value);
@@ -2102,7 +2617,7 @@ index 77072d09..c2978b3f 100644
      str = glGetString(GL_EXTENSIONS);
      char *strLocal = (char *) malloc((strlen((char *) str)+1)*sizeof(char));
      if (NULL == strLocal)
-@@ -459,6 +705,7 @@ static void PrintGLInfo(bool createScreen, bool infoLog, bool printExtensions)
+@@ -459,6 +706,7 @@ static void PrintGLInfo(bool createScreen, bool infoLog, bool printExtensions)
        }
      }
      free(strLocal);
@@ -2110,7 +2625,7 @@ index 77072d09..c2978b3f 100644
    }
    if (infoLog)  InfoLog("");
    else      printf("\n");
-@@ -631,7 +878,11 @@ static void TestPolygonHeaderBits(IEmulator *Emu)
+@@ -631,7 +879,11 @@ static void TestPolygonHeaderBits(IEmulator *Emu)
  
    GLint readBuffer;
    glGetIntegerv(GL_READ_BUFFER, &readBuffer);
@@ -2122,7 +2637,7 @@ index 77072d09..c2978b3f 100644
  
    // Render separate image for each unknown bit
    s_runtime_config.Set("Debug/ForceFlushModels", true);
-@@ -861,6 +1112,15 @@ void EndFrameVideo()
+@@ -861,6 +1113,15 @@ void EndFrameVideo()
  
    // Swap the buffers
    SDL_GL_SwapWindow(s_window);
@@ -2138,7 +2653,7 @@ index 77072d09..c2978b3f 100644
  }
  
  
-@@ -945,30 +1205,12 @@ int Supermodel(const Game &game, ROMSet *rom_set, IEmulator *Model3, CInputs *In
+@@ -945,30 +1206,12 @@ int Supermodel(const Game &game, ROMSet *rom_set, IEmulator *Model3, CInputs *In
    // Load NVRAM
    LoadNVRAM(Model3);
  
@@ -2171,7 +2686,7 @@ index 77072d09..c2978b3f 100644
  
    // Info log GL information
    PrintGLInfo(false, true, false);
-@@ -1002,17 +1244,24 @@ int Supermodel(const Game &game, ROMSet *rom_set, IEmulator *Model3, CInputs *In
+@@ -1002,17 +1245,24 @@ int Supermodel(const Game &game, ROMSet *rom_set, IEmulator *Model3, CInputs *In
  
    // Initialize the renderers
    SuperAA* superAA = new SuperAA(aaValue, CRTcolors);
@@ -2204,7 +2719,7 @@ index 77072d09..c2978b3f 100644
    if (Result::OKAY != Render2D->Init(xOffset*aaValue, yOffset*aaValue, xRes*aaValue, yRes*aaValue, totalXRes*aaValue, totalYRes*aaValue, superAA->GetTargetID(), upscaleMode))
      goto QuitError;
    if (Result::OKAY != Render3D->Init(xOffset*aaValue, yOffset*aaValue, xRes*aaValue, yRes*aaValue, totalXRes*aaValue, totalYRes*aaValue, superAA->GetTargetID()))
-@@ -1037,6 +1286,9 @@ int Supermodel(const Game &game, ROMSet *rom_set, IEmulator *Model3, CInputs *In
+@@ -1037,6 +1287,9 @@ int Supermodel(const Game &game, ROMSet *rom_set, IEmulator *Model3, CInputs *In
    }
  #endif // SUPERMODEL_DEBUGGER
  
@@ -2214,7 +2729,7 @@ index 77072d09..c2978b3f 100644
    // Emulate!
    fpsFramesElapsed = 0;
    prevFPSTicks = SDL_GetPerformanceCounter();
-@@ -1156,7 +1408,11 @@ int Supermodel(const Game &game, ROMSet *rom_set, IEmulator *Model3, CInputs *In
+@@ -1156,7 +1409,11 @@ int Supermodel(const Game &game, ROMSet *rom_set, IEmulator *Model3, CInputs *In
          goto QuitError;
  
        // Recreate renderers and attach to the emulator
@@ -2227,7 +2742,7 @@ index 77072d09..c2978b3f 100644
        Render2D = new CRender2D(s_runtime_config);
  
        if (Result::OKAY != Render2D->Init(xOffset * aaValue, yOffset * aaValue, xRes * aaValue, yRes * aaValue, totalXRes * aaValue, totalYRes * aaValue, superAA->GetTargetID(), upscaleMode))
-@@ -1510,7 +1766,7 @@ Util::Config::Node DefaultConfig()
+@@ -1510,7 +1767,7 @@ Util::Config::Node DefaultConfig()
    config.Set("MultiThreaded", true,"Core");
    config.Set("GPUMultiThreaded", true, "Core");
    // 2D and 3D graphics engines
@@ -2236,7 +2751,23 @@ index 77072d09..c2978b3f 100644
    config.Set("MultiTexture", false, "Legacy3D");
    config.Set<std::string>("VertexShader", "", "Legacy3D", "", "");
    config.Set<std::string>("FragmentShader", "", "Legacy3D", "", "");
-@@ -1872,13 +2128,15 @@ static void Help(void)
+@@ -1543,6 +1800,7 @@ Util::Config::Node DefaultConfig()
+   config.Set("FullScreen", false, "Video");
+   config.Set("BorderlessWindow", false, "Video");
+   config.Set("Supersampling", 1, "Video", 1, 8);
++  config.Set("RenderScale", 0, "Video", 0, 8);
+   config.Set("CRTcolors", int(0), "Video", 0, 0, { 0,1,2,3,4,5 });      // these might be more user friendly as strings
+   config.Set("UpscaleMode", 2, "Video", 0, 0, { 0,1,2,3 });             // to do make strings
+   config.Set("WideScreen", false, "Video");
+@@ -1850,6 +2108,7 @@ static void Help(void)
+   puts("Video Options:");
+   puts("  -res=<x>,<y>            Resolution [Default: 496,384]");
+   puts("  -ss=<n>                 Supersampling (range 1-8)");
++  puts("  -render-scale=<n>       New3D resolution scale: 0=output, 1-8=fixed scale");
+   puts("  -window-pos=<x>,<y>     Window position [Default: centered]");
+   puts("  -window                 Windowed mode [Default]");
+   puts("  -borderless             Windowed mode with no border");
+@@ -1872,13 +2131,15 @@ static void Help(void)
    puts("  -new3d                  New 3D engine by Ian Curtis [Default]");
  #endif
    puts("  -quad-rendering         Enable proper quad rendering");
@@ -2254,7 +2785,7 @@ index 77072d09..c2978b3f 100644
    puts("  -vert-shader=<file>     Load Real3D vertex shader for 3D rendering (legacy");
    puts("                          engine)");
    puts("  -frag-shader=<file>     Load Real3D fragment shader for 3D rendering (legacy");
-@@ -1992,7 +2250,7 @@ static ParsedCommandLine ParseCommandLine(int argc, char **argv)
+@@ -1992,7 +2253,7 @@ static ParsedCommandLine ParseCommandLine(int argc, char **argv)
      { "-no-stretch",          { "Stretch",          false } },
      { "-wide-bg",             { "WideBackground",   true } },
      { "-no-wide-bg",          { "WideBackground",   false } },
@@ -2263,7 +2794,39 @@ index 77072d09..c2978b3f 100644
      { "-no-multi-texture",    { "MultiTexture",     false } },
      { "-multi-texture",       { "MultiTexture",     true } },
  #endif
-@@ -2342,6 +2600,14 @@ int main(int argc, char **argv)
+@@ -2143,6 +2404,31 @@ static ParsedCommandLine ParseCommandLine(int argc, char **argv)
+               }
+           }
+       }
++      else if (arg == "-render-scale" || arg.find("-render-scale=") == 0)
++      {
++          std::vector<std::string> parts = Util::Format(arg).Split('=');
++          if (parts.size() != 2)
++          {
++              ErrorLog("'-render-scale' requires an integer from 0 to 8 (e.g., '-render-scale=1').");
++              cmd_line.error = true;
++          }
++          else
++          {
++              try
++              {
++                  size_t parsed = 0;
++                  int val = std::stoi(parts[1], &parsed);
++                  if (parsed != parts[1].size() || val < 0 || val > 8)
++                      throw std::out_of_range("RenderScale");
++                  cmd_line.config.Set("RenderScale", val);
++              }
++              catch (...)
++              {
++                  ErrorLog("'-render-scale' requires an integer from 0 to 8 (e.g., '-render-scale=1').");
++                  cmd_line.error = true;
++              }
++          }
++      }
+       else if (arg == "-crtcolors" || arg.find("-crtcolors=") == 0) {
+ 
+           std::vector<std::string> parts = Util::Format(arg).Split('=');
+@@ -2342,6 +2628,14 @@ int main(int argc, char **argv)
    }
    LogConfig(s_runtime_config);
  
@@ -2278,7 +2841,7 @@ index 77072d09..c2978b3f 100644
    // Initialize SDL (individual subsystems get initialized later)
    if (SDL_Init(0) != 0)
    {
-@@ -2366,10 +2632,30 @@ int main(int argc, char **argv)
+@@ -2366,10 +2660,30 @@ int main(int argc, char **argv)
    aaValue = s_runtime_config["Supersampling"].ValueAs<int>();
    CRTcolors = (CRTcolor)s_runtime_config["CRTcolors"].ValueAs<int>();
  
@@ -2311,7 +2874,7 @@ index 77072d09..c2978b3f 100644
    {
      exitCode = 1;
      goto Exit;
-@@ -2420,6 +2706,14 @@ int main(int argc, char **argv)
+@@ -2420,6 +2734,14 @@ int main(int argc, char **argv)
      goto Exit;
    }
  
@@ -2326,7 +2889,7 @@ index 77072d09..c2978b3f 100644
    // NOTE: fileConfig is passed so that the global section is used for input settings
    // and because this function may write out a new config file, which must preserve
    // all sections. We don't want to pollute the output with built-in defaults.
-@@ -2435,6 +2729,24 @@ int main(int argc, char **argv)
+@@ -2435,6 +2757,24 @@ int main(int argc, char **argv)
      InputSystem->PrintSettings();
    }
  

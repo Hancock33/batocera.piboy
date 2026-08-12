@@ -5,7 +5,7 @@
 ################################################################################
 # Keep the version aligned to buildroot ffmpeg
 # Version: Commits on Apr 23, 2026
-FFMPEG_ROCKCHIP_VERSION = d81b392aef213cdd48e2fbf87b9d226b17239393
+FFMPEG_ROCKCHIP_VERSION = a63922000b871c4704fe3391930fc73dfd030677
 FFMPEG_ROCKCHIP_BRANCH = 7.1
 FFMPEG_ROCKCHIP_SITE = https://github.com/nyanmisaka/ffmpeg-rockchip.git
 FFMPEG_ROCKCHIP_SITE_METHOD = git
