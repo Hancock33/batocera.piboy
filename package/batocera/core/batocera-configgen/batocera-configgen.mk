@@ -17,7 +17,8 @@ BATOCERA_CONFIGGEN_DEPENDENCIES = \
 	python-pillow \
 	python-requests \
 	python-qrcode \
-	pysdl2
+	pysdl2 \
+	batocera-bezel-overlay
 
 BATOCERA_CONFIGGEN_INSTALL_STAGING = YES
 BATOCERA_CONFIGGEN_OVERRIDE_SRCDIR=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-configgen/configgen
