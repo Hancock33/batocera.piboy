@@ -1,23 +1,26 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|e70fd85a8f10766f5b7341cda5e6988e1d78ae08|Aug 13, 2026
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.520|Aug 13, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|defea54cd213fed7ae8b959f7336ece8ea683de3|Aug 13, 2026
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|c285c2fb410b30d5f030344087e5759a13b0e486|Aug 13, 2026
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|2dc6cf014c194ef4d1f847065ae7f0d041a5e55b|Aug 13, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46207|Aug 13, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|c38a672db37f20a066cdb5b365e243e67971a72d|Aug 13, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-08-13|Aug 13, 2026
+Hardware|[dmd-play-rust](http://github.com/batocera-linux/dmd-play-rust)|08fb0019955d2ca995327897480227a0154e95d5|Aug 13, 2026
+Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-beta1|Aug 13, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|108ffb4319126bc1548acbaa833966fbc2d926cc|Aug 13, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|e21b80cff2f144577f671a966a3c912a7133c088|Aug 13, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|b8cba705fb19cb8c747f8367814db47374094f81|Aug 13, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|eea592a000f578cb37b04705efb6b7282e86ec2d|Aug 13, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|8cc733625d7e9e19ead776fefbd04af9ddd651f1|Aug 13, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|2131e2b9f2639c2f33db8137d729eb63119223a5|Aug 13, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|22caca4900667b13def149f5d33967f34ae0171c|Aug 13, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|e70fd85a8f10766f5b7341cda5e6988e1d78ae08|Aug 13, 2026
-Emulators|[libretro-blastem](http://github.com/libretro/blastem)|399a0f20f47fa468e04c80abdf096ebb4a13a878|Aug 13, 2026
+Emulators|[libretro-blastem](http://github.com/libretro/blastem)|aeb16cd0750fc23ab5e804efeb96f9b207985c41|Aug 13, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|1d9be7ecf8d5628b1997cfcbe52cb8c9196caefb|Aug 13, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|3f5ef4bd10714bdac64f99da0cc278854cc13378|Aug 13, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|ca2f388dfa6d47da0c909ea131d012d30223a058|Aug 13, 2026
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|5bbb84086c548a0ee0738f0b38966d7d4a5ff946|Aug 13, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|e19e89a8811baa183f47134b3b091cc1b67dc4df|Aug 13, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|abe41d5e0ce9dde5d8e1dd13b5a858081ce01486|Aug 13, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|defea54cd213fed7ae8b959f7336ece8ea683de3|Aug 13, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|a5b4d0a4d1cf143b7b252499860b15c68894ed44|Aug 13, 2026
 Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libretro)|385c4d458538fd473c4bc8dc8dab4778897e8ac6|Aug 13, 2026
@@ -70,7 +73,6 @@ Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.19.0|Aug 10, 2026
 Ports|[gzdoom](http://github.com/ZDoom/gzdoom)|c26ce2e6ca2a0c770f140cb25dde0d30073ca8f7|Aug 10, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|2fcb2628fbfd529806e75f3559a9d82758c8a5cc|Aug 10, 2026
 Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|18048861e097185d6f82f469a176fc3d711f572b|Aug 10, 2026
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.7.519|Aug 09, 2026
 Libraries|[semver](http://github.com/Neargye/semver)|v1.0.1|Aug 09, 2026
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|3a3b7cc61e0eb2aa064265f1b7d317f984cf8453|Aug 09, 2026
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|a531f57e423c82a50828604878f13ed63f098dbe|Aug 09, 2026
@@ -214,7 +216,6 @@ Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|1df938b3bf
 Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|1b3ffa25fe33b868699c22375660c2b198bd20f2|Jul 10, 2026
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|213a12ce93d66b105a113debd9396306066a7cfc|Jul 10, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|3acca9f5e211edb601000bb64767b78b2468f787|Jul 09, 2026
-Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-alpha8|Jul 08, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.6.1|Jul 08, 2026
 Network|[qrtr](http://github.com/linux-msm/qrtr)|0428c6541d230cdd253bfa76cef83341e1c2d178|Jul 08, 2026
 Boot|[uboot-rk3588](https://ftp.denx.de/pub/u-boot)|2026.07|Jul 07, 2026
@@ -329,7 +330,6 @@ Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|b6bb92d40cfffe28621ab
 Emulators|[libretro-desmume](http://github.com/libretro/desmume)|ae0f7f51f96d9b5741b47b425505a4a4224b91fa|May 16, 2026
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|cd3c5f5c73cae02738b3b37e887a4b67579ef74c|May 15, 2026
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.38.0|May 13, 2026
-Hardware|[dmd-play-rust](http://github.com/batocera-linux/dmd-play-rust)|303d59002689d8fc4c5a4d58d4f3e832886f2531|May 13, 2026
 Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.19.0|May 13, 2026
 Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.9.2|May 12, 2026
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|9dc699428420d752af9767bdb13f585ee0881bc0|May 12, 2026
