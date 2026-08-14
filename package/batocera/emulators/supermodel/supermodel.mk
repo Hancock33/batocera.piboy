@@ -3,9 +3,10 @@
 # supermodel
 #
 ################################################################################
-# Version: Commits on Jul 26, 2026
-SUPERMODEL_VERSION = 24d2ffcfc7f14229337f05f4920fe26b56633d9d
-SUPERMODEL_SITE = $(call github,trzy,Supermodel,$(SUPERMODEL_VERSION))
+# Version: Commits on Aug 09, 2026
+SUPERMODEL_VERSION = da1b9f52ce7825dd9c55425281b1d67fd13944b7
+SUPERMODEL_SITE = $(call github,dmanlfc,Supermodel,$(SUPERMODEL_VERSION))
+SUPERMODEL_BRANCH = add-gl-es-support
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
 SUPERMODEL_EMULATOR_INFO = supermodel.emulator.yml
@@ -35,7 +36,7 @@ define SUPERMODEL_BUILD_CMDS
 	$(SED) "s|CXX = g++|CXX = $(TARGET_CXX)|g" $(@D)/Makefile
 	$(SED) "s|LD = gcc|LD = $(TARGET_CC)|g" $(@D)/Makefile
 	$(SED) "s|sdl2-config|$(STAGING_DIR)/usr/bin/sdl2-config|g" $(@D)/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) -j2 -C $(@D) -f Makefile $(SUPERMODEL_CONF_OPTS)
+	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D) -f Makefile $(SUPERMODEL_CONF_OPTS)
 endef
 
 define SUPERMODEL_INSTALL_TARGET_CMDS
