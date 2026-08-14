@@ -17,9 +17,8 @@ XEMU_EXTRA_DOWNLOADS = https://github.com/xemu-project/xemu-dashboard/releases/d
 
 XEMU_CONF_ENV += PATH="/$(BR2_ARCH)/host/$(BR2_ARCH)-buildroot-linux-gnu/sysroot/usr/bin:$$PATH"
 
+XEMU_CONF_OPTS += --extra-cflags="-DXBOX=1 -Wno-error=redundant-decls $(TARGET_CFLAGS)"
 XEMU_CONF_OPTS += --target-list=i386-softmmu
-XEMU_CONF_OPTS += --cross-prefix="$(STAGING_DIR)"
-XEMU_CONF_OPTS += --extra-cflags="-DXBOX=1"
 XEMU_CONF_OPTS += --disable-werror
 XEMU_CONF_OPTS += --enable-lto
 XEMU_CONF_OPTS += --enable-pixman
@@ -99,7 +98,7 @@ define XEMU_GET_SUBMODULES
 	# glslang
 	mkdir -p $(@D)/subprojects/glslang
 	curl -L -o glslang.tar.gz \
-		https://github.com/KhronosGroup/glslang/archive/refs/tags/16.3.0.tar.gz
+		https://github.com/KhronosGroup/glslang/archive/refs/tags/16.5.0.tar.gz
 	$(TAR) -xzf glslang.tar.gz --strip-components=1 -C $(@D)/subprojects/glslang
 	rm glslang.tar.gz
 
@@ -152,14 +151,14 @@ define XEMU_GET_SUBMODULES
 	# volk
 	mkdir -p $(@D)/subprojects/volk
 	curl -L -o volk.tar.gz \
-		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
+		https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
 	$(TAR) -xzf volk.tar.gz --strip-components=1 -C $(@D)/subprojects/volk
 	rm volk.tar.gz
 
 	# SPIRV-Reflect
 	mkdir -p $(@D)/subprojects/SPIRV-Reflect
 	curl -L -o SPIRV-Reflect.tar.gz \
-		https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
+		https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
 	$(TAR) -xzf SPIRV-Reflect.tar.gz --strip-components=1 -C $(@D)/subprojects/SPIRV-Reflect
 	rm SPIRV-Reflect.tar.gz
 
@@ -171,8 +170,8 @@ define XEMU_GET_SUBMODULES
 	rm VulkanMemoryAllocator.tar.gz
 endef
 
-XEMU_PRE_CONFIGURE_HOOKS = XEMU_VERSION_DETAILS
-XEMU_PRE_CONFIGURE_HOOKS += XEMU_GET_SUBMODULES
+XEMU_PRE_PATCH_HOOKS = XEMU_VERSION_DETAILS
+XEMU_PRE_PATCH_HOOKS += XEMU_GET_SUBMODULES
 
 $(eval $(autotools-package))
 $(eval $(emulator-info-package))
