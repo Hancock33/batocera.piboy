@@ -1,5 +1,5 @@
 diff --git a/sdl/Makefile.common b/sdl/Makefile.common
-index aefbe13..211cd57 100644
+index 0376278..35a5dc5 100644
 --- a/sdl/Makefile.common
 +++ b/sdl/Makefile.common
 @@ -135,7 +135,7 @@ SOURCES_CXX := $(wildcard $(NP2_PATH)/sound/fmgen/*.cpp) \
@@ -11,10 +11,3 @@ index aefbe13..211cd57 100644
  # -DSUPPORT_NVL_IMAGES
  
  NP21DEFINE := -DCPUCORE_IA32 -DIA32_PAGING_EACHSIZE -DIA32_REBOOT_ON_PANIC -DSUPPORT_CRT31KHZ -DSUPPORT_PC9801_119 -DSUPPORT_PC9821 -DSUPPORT_IDEIO -DSUPPORT_LARGE_MEMORY -DSUPPORT_FPU_DOSBOX2_COMPATIBLE -DSUPPORT_PEGC -DSUPPORT_VGA_MODEX -DSUPPORT_GAMEPORT -DSUPPORT_IDEIO_48BIT -DSUPPORT_FPU_SOFTFLOAT3 -DSUPPORT_PCI -DUSE_FPU -DUSE_MMX -DUSE_3DNOW -DUSE_SSE -DUSE_SSE2 -DUSE_SSE3 -DUSE_SSSE3 -DUSE_SSE4_1 -DUSE_SSE4_2 -DUSE_SSE4A -DUSE_TSC -DUSE_FASTPAGING -DUSE_VME -DIA32_PAGING_EACHSIZE -DSUPPORT_MEMDBG32
-@@ -161,4 +161,4 @@ ifeq ($(SUPPORT_ASYNC_CPU), 1)
- endif
- 
- COMMON_C_FLAGS := -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-incompatible-function-pointer-types -Wno-int-conversion -fno-sized-deallocation
-- 
-\ No newline at end of file
-+ 
