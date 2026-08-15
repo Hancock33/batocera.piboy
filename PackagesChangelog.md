@@ -23,9 +23,11 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|22c58d3d91483dff7
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14383|Aug 15, 2026
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.5|Aug 15, 2026
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|d2983668300dd2a598e5a7dc40e71ce0678cc270|Aug 15, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260815|Aug 15, 2026
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.35.2|Aug 15, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.35.2|Aug 15, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|034a4202d490165479c99b421fcdbe742e593e4c|Aug 15, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260815|Aug 15, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4980e6c8f6720b8025b5c1499ab5ed17c5ebc33e|Aug 15, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|1b43315009323163fd75d19042e8f9b833a3b5aa|Aug 15, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|v26.08.15.0-test|Aug 15, 2026
@@ -49,8 +51,6 @@ Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|6be9fe50b2d38be5cd105
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|d0d5e9d45c00080806062dfcadac028bc199880e|Aug 14, 2026
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.67.1|Aug 14, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v2.1|Aug 14, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260814|Aug 14, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260814|Aug 14, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|02c71c95fdfe90bc445bc5be8147abf7b72af3ef|Aug 14, 2026
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|fbb12ccb7824991e216873c5ac69a4f6957bc402|Aug 14, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|5aa091fde632fb332c8d8c34e280d62dc951954c|Aug 14, 2026
