@@ -83,7 +83,6 @@ wine-custom.mk
 wine-mono.mk
 x86-64-level.mk
 xbox-xcloud-client.mk
-xemu.mk
 xone.mk
 xxd.mk
 ymir.mk

@@ -3,8 +3,8 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Jun 08, 2026
-XEMU_VERSION = v0.8.136
+# Version: Commits on Aug 10, 2026
+XEMU_VERSION = 8a1e10f0c2312bf507d5e70ff01914845cffc7a0
 XEMU_SITE = https://github.com/xemu-project/xemu.git
 XEMU_SITE_METHOD = git
 XEMU_GIT_SUBMODULES = YES
@@ -165,7 +165,7 @@ define XEMU_GET_SUBMODULES
 	# VulkanMemoryAllocator
 	mkdir -p $(@D)/subprojects/VulkanMemoryAllocator
 	curl -L -o VulkanMemoryAllocator.tar.gz \
-		https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/refs/tags/v3.3.0.tar.gz
+		https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/refs/tags/v3.4.0.tar.gz
 	$(TAR) -xzf VulkanMemoryAllocator.tar.gz --strip-components=1 -C $(@D)/subprojects/VulkanMemoryAllocator
 	rm VulkanMemoryAllocator.tar.gz
 endef
