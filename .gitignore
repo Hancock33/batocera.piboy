@@ -31,7 +31,6 @@ package/batocera/emulationstation/batocera-emulationstation/keys.txt
 *.po~
 batocera-mok.key
 .venv*
-/messages.mo
 typescript
 .ruff_cache
 .coverage
