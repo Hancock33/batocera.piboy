@@ -1,5 +1,5 @@
 diff --git a/Core/Util/PathUtil.cpp b/Core/Util/PathUtil.cpp
-index 97404e9f1c..77b46a4078 100644
+index 564e8c354f..0e54020f71 100644
 --- a/Core/Util/PathUtil.cpp
 +++ b/Core/Util/PathUtil.cpp
 @@ -63,38 +63,33 @@ Path FindConfigFile(const Path &searchPath, std::string_view baseFilename, bool
@@ -79,7 +79,7 @@ index 97404e9f1c..77b46a4078 100644
  }
  
 diff --git a/SDL/SDLJoystick.cpp b/SDL/SDLJoystick.cpp
-index d681c0cad0..c036acd31a 100644
+index 6c8dad665a..2b14bd6b05 100644
 --- a/SDL/SDLJoystick.cpp
 +++ b/SDL/SDLJoystick.cpp
 @@ -24,7 +24,7 @@ SDLJoystick::SDLJoystick(bool init_SDL ) : registeredAsEventHandler(false) {
@@ -88,14 +88,23 @@ index d681c0cad0..c036acd31a 100644
  
 -	const char *dbPath = "gamecontrollerdb.txt";
 +	const char *dbPath = "/userdata/system/configs/ppsspp/gamecontrollerdb.txt";
- 	INFO_LOG(Log::System, "loading control pad mappings from %s:", dbPath);
- 
  	size_t size;
+ 	u8 *mappingData = g_VFS.ReadFile(dbPath, &size);
+ 	if (mappingData) {
+@@ -144,7 +144,7 @@ InputKeyCode SDLJoystick::getKeycodeForButton(SDL_GamepadButton button) {
+ 	case SDL_GAMEPAD_BUTTON_BACK:
+ 		return NKCODE_BUTTON_9; // select button
+ 	case SDL_GAMEPAD_BUTTON_GUIDE:
+-		return NKCODE_BACK; // pause menu
++		return NKCODE_BACK;gamecontrollerdb // pause menu
+ 	case SDL_GAMEPAD_BUTTON_LEFT_STICK:
+ 		return NKCODE_BUTTON_THUMBL;
+ 	case SDL_GAMEPAD_BUTTON_RIGHT_STICK:
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index 7860c7691f..99944cfae2 100644
+index e715adbb2d..a0d30596d6 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
-@@ -571,7 +571,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
+@@ -550,7 +550,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
  	g_VFS.Register("", new DirectoryReader(File::GetExeDirectory()));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/ppsspp/assets")));
  	g_VFS.Register("", new DirectoryReader(Path("/usr/local/share/games/ppsspp/assets")));
@@ -104,7 +113,7 @@ index 7860c7691f..99944cfae2 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #elif defined(_WIN32) && !PPSSPP_PLATFORM(UWP)
  	const Path &exePath = File::GetExeDirectory();
-@@ -689,7 +689,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
+@@ -668,7 +668,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
  	else // Just in case
  		config = "./config";
  

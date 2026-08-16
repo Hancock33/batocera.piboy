@@ -22,10 +22,4 @@ endef
 
 LIBPINMAME_PRE_CONFIGURE_HOOKS += LIBPINMAME_RENAME_CMAKE
 
-define LIBPINMAME_STAGING_INCLUDES
-	mkdir -p $(STAGING_DIR)/usr/include/pinmame
-	cp $(@D)/src/libpinmame/PinMAMEPlugin.h $(STAGING_DIR)/usr/include/pinmame
-	cp $(@D)/src/libpinmame/libpinmame.h    $(STAGING_DIR)/usr/include/pinmame
-endef
-LIBPINMAME_POST_INSTALL_TARGET_HOOKS += LIBPINMAME_STAGING_INCLUDES
 $(eval $(cmake-package))

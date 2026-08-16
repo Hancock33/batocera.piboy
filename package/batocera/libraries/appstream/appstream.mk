@@ -3,8 +3,8 @@
 # appstream
 #
 ################################################################################
-# Version: Commits on Jul 24, 2026
-APPSTREAM_VERSION = v1.1.5
+# Version: Commits on Aug 12, 2026
+APPSTREAM_VERSION = v1.1.6
 APPSTREAM_SITE = $(call github,ximion,appstream,$(APPSTREAM_VERSION))
 APPSTREAM_INSTALL_STAGING = YES
 

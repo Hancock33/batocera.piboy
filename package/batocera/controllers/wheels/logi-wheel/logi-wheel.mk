@@ -3,8 +3,8 @@
 # logi-wheel
 #
 ################################################################################
-# Version: Commits on Aug 08, 2026
-LOGI_WHEEL_VERSION = v0.31.0
+# Version: Commits on Aug 16, 2026
+LOGI_WHEEL_VERSION = v0.35.3
 LOGI_WHEEL_SITE = $(call github,mescon,logitech-trueforce-linux-driver,$(LOGI_WHEEL_VERSION))
 LOGI_WHEEL_LICENSE = GPL-2.0, GPL-3.0+ (logi-wheel-gui), LGPL-2.1+ (libtrueforce)
 LOGI_WHEEL_LICENSE_FILES = COPYING userspace/libtrueforce/COPYING

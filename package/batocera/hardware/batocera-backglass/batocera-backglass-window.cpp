@@ -485,14 +485,46 @@ void renderDescriptionText(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rec
     SDL_RenderSetClipRect(renderer, NULL);
 }
 
+SDL_Texture* IMG_LoadTexture_at_resolution(SDL_Renderer* renderer, const std::string& path, int width, int height) {
+  SDL_RWops* rwops = SDL_RWFromFile(path.c_str(), "rb");
+  if(rwops) {
+    if(IMG_isSVG(rwops)) {
+      SDL_Texture* tex = NULL;
+      SDL_Surface* surface = IMG_LoadSizedSVG_RW(rwops, width, height);
+      if (surface) {
+	tex = SDL_CreateTextureFromSurface(renderer, surface);
+	SDL_FreeSurface(surface);
+      }
+      SDL_RWclose(rwops);
+      return tex;
+    } else {
+      SDL_RWclose(rwops);
+      return IMG_LoadTexture(renderer, path.c_str());
+    }
+  } else {
+    return NULL;
+  }
+}
+
 int main(int argc, char* argv[]) {
     std::string target_display_name = "";
     std::string theme_path = "";
 
+    int win_x = 0;
+    int win_y = 0;
+    int win_width  = 800;
+    int win_height = 600;
+
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];
-        if (arg == "--output" && i + 1 < argc) {
-            target_display_name = argv[++i];
+        if (arg == "-x" && i + 1 < argc) {
+	  win_x = atoi(argv[++i]);
+	} else if (arg == "-y" && i + 1 < argc) {
+	  win_y = atoi(argv[++i]);
+	} else if (arg == "--width" && i + 1 < argc) {
+	  win_width = atoi(argv[++i]);
+	} else if (arg == "--height" && i + 1 < argc) {
+	  win_height = atoi(argv[++i]);
         } else if (arg == "--www" && i + 1 < argc) {
             theme_path = argv[++i];
         }
@@ -555,57 +587,15 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    int win_x = 0;
-    int win_y = 0;
-    int win_w = 800;
-    int win_h = 600;
-
-    if (!target_display_name.empty()) {
-        int num_displays = SDL_GetNumVideoDisplays();
-        int matched_index = -1;
-
-        std::string s_target = target_display_name;
-        std::transform(s_target.begin(), s_target.end(), s_target.begin(), ::tolower);
-
-        for (int i = 0; i < num_displays; ++i) {
-            const char* name = SDL_GetDisplayName(i);
-            if (name) {
-                std::string s_name(name);
-                std::transform(s_name.begin(), s_name.end(), s_name.begin(), ::tolower);
-                if (s_name.find(s_target) != std::string::npos || s_target.find(s_name) != std::string::npos) {
-                    matched_index = i;
-                    break;
-                }
-            }
-        }
-
-        if (matched_index != -1) {
-            SDL_Rect bounds;
-            if (SDL_GetDisplayBounds(matched_index, &bounds) == 0) {
-                win_x = bounds.x;
-                win_y = bounds.y;
-                win_w = bounds.w;
-                win_h = bounds.h;
-            }
-        }
-    } else {
-        SDL_Rect bounds;
-        if (SDL_GetDisplayBounds(0, &bounds) == 0) {
-            win_x = bounds.x;
-            win_y = bounds.y;
-            win_w = bounds.w;
-            win_h = bounds.h;
-        }
-    }
-
-    SDL_Window* window = SDL_CreateWindow("backglass", win_x, win_y, win_w, win_h, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS);
+    SDL_SetHint(SDL_HINT_X11_WINDOW_TYPE, "_NET_WM_WINDOW_TYPE_DESKTOP"); // put the windows as much possible in the background
+    SDL_Window* window = SDL_CreateWindow("backglass", win_x, win_y, win_width, win_height, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS);
     if (!window) return 1;
 
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if (!renderer) return 1;
 
-    int header_font_size = std::max(24, (int)(win_h * 0.10f));
-    int desc_font_size   = std::max(16, (int)(win_h * 0.04f));
+    int header_font_size = std::max(24, (int)(win_height * 0.10f));
+    int desc_font_size   = std::max(16, (int)(win_height * 0.04f));
 
     TTF_Font* font_header = nullptr;
     TTF_Font* font_desc = nullptr;
@@ -689,11 +679,11 @@ int main(int argc, char* argv[]) {
             SDL_GetWindowSize(window, &winW, &winH);
             SDL_Color whiteColor = {255, 255, 255, 255};
 
-            if (!sys_logo_path.empty()) tex_sys_logo = IMG_LoadTexture(renderer, sys_logo_path.c_str());
-            if (!game_thumbnail_path.empty()) tex_game_thumbnail = IMG_LoadTexture(renderer, game_thumbnail_path.c_str());
-            if (!game_fanart_path.empty()) tex_game_fanart = IMG_LoadTexture(renderer, game_fanart_path.c_str());
-            if (!game_image_path.empty()) tex_game_image = IMG_LoadTexture(renderer, game_image_path.c_str());
-            if (!game_marquee_path.empty()) tex_game_marquee = IMG_LoadTexture(renderer, game_marquee_path.c_str());
+            if (!sys_logo_path.empty()) tex_sys_logo = IMG_LoadTexture_at_resolution(renderer, sys_logo_path, winW, winH);
+            if (!game_thumbnail_path.empty()) tex_game_thumbnail = IMG_LoadTexture_at_resolution(renderer, game_thumbnail_path, winW, winH);
+            if (!game_fanart_path.empty()) tex_game_fanart = IMG_LoadTexture_at_resolution(renderer, game_fanart_path, winW, winH);
+            if (!game_image_path.empty()) tex_game_image = IMG_LoadTexture_at_resolution(renderer, game_image_path, winW, winH);
+            if (!game_marquee_path.empty()) tex_game_marquee = IMG_LoadTexture_at_resolution(renderer, game_marquee_path, winW, winH);
 
             if (!sys_fullname.empty()) tex_sys_fullname = createTextTexture(renderer, font_header, sys_fullname, whiteColor, (int)(winW * 0.9f));
             if (!game_name.empty()) tex_game_name = createTextTexture(renderer, font_header, game_name, whiteColor, (int)(winW * 0.9f));

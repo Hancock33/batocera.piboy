@@ -5999,7 +5999,6 @@ model3:
   emulators:
     supermodel:
       supermodel:        { requireAnyOf: [BR2_PACKAGE_SUPERMODEL] }
-      supermodel-legacy: { requireAnyOf: [BR2_PACKAGE_SUPERMODEL_LEGACY] }
     libretro:
       supermodel:        { requireAnyOf: [BR2_PACKAGE_LIBRETRO_SUPERMODEL] }
 

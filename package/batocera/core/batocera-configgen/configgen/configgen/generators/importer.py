@@ -11,9 +11,6 @@ if TYPE_CHECKING:
 _LEGACY_GENERATOR_MAP: Final[dict[str, dict[str, tuple[str, str]]]] = {
     'duckstation': {
         'duckstation-legacy': ('duckstation_legacy.duckstationLegacyGenerator', 'DuckstationLegacyGenerator'),
-    },
-    'supermodel': {
-        'supermodel-legacy': ('supermodel_legacy.supermodelLegacyGenerator', 'SupermodelLegacyGenerator'),
     }
 }
 
