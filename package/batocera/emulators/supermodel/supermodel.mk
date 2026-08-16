@@ -3,10 +3,10 @@
 # supermodel
 #
 ################################################################################
-# Version: Commits on Aug 09, 2026
-SUPERMODEL_VERSION = da1b9f52ce7825dd9c55425281b1d67fd13944b7
+# Version: Commits on Aug 16, 2026
+SUPERMODEL_VERSION = f16a4d3571930a911e145b36590bb0cc2b9a88e7
 SUPERMODEL_SITE = $(call github,dmanlfc,Supermodel,$(SUPERMODEL_VERSION))
-SUPERMODEL_BRANCH = add-gl-es-support
+SUPERMODEL_BRANCH = add-vulkan-support
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
 SUPERMODEL_EMULATOR_INFO = supermodel.emulator.yml
@@ -26,6 +26,11 @@ endif
 ifeq ($(BR2_PACKAGE_WAYLAND),y)
 SUPERMODEL_DEPENDENCIES += wayland
 SUPERMODEL_CONF_OPTS += WAYLAND=1
+endif
+
+ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+SUPERMODEL_DEPENDENCIES += vulkan-headers vulkan-loader
+SUPERMODEL_CONF_OPTS += VULKAN=1
 endif
 
 define SUPERMODEL_BUILD_CMDS
