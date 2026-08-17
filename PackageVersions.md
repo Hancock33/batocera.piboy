@@ -215,7 +215,7 @@ Emulators|[libretro-stella](http://github.com/stella-emu/stella)|9bbd209f4a9505b
 Emulators|[libretro-supafaust](http://github.com/libretro/supafaust)|d6187e5337e6c2646d003db3ab1936727ca75301|Jul 22, 2026
 Emulators|[libretro-superbroswar](https://github.com/libretro/superbroswar-libretro.git)|f43233e75573a9e0067793c5fce957a1ebc6b1ae|Jul 27, 2026
 Emulators|[libretro-superflappybirds](http://github.com/IgniparousTempest/libretro-superflappybirds)|c7dfa3508b0a33ba574b0b40334f66b9cf8cc478|Jun 12, 2026
-Emulators|[libretro-supermodel](http://github.com/sgiannop/Libretro-Supermodel)|a708263e52f3772f4572e82e332be6b3fac32a00|N/A
+Emulators|[libretro-supermodel](http://github.com/libretro/Libretro-Supermodel)|a708263e52f3772f4572e82e332be6b3fac32a00|Aug 16, 2026
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|7f69c199ed88d5723f71dd3a6e9c1b7a45b535a6|Aug 11, 2026
 Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)|ea8dd612eaab375a04f976149dc693cb5d208b27|Jul 27, 2026
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|bf816b096f1dca55ea805337d7c9e78d6b98d839|May 11, 2026

@@ -46,6 +46,7 @@ Emulators|[libretro-mu](http://github.com/SquirrelJME/Mu)|f9d34a0006440aef8dca0d
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|efe99c1b0dec26f7f956a3c61d42778640fb6071|Aug 16, 2026
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|890b5d445538fe790aa3add3d5702c80f551e0ae|Aug 16, 2026
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|7db129b1ecdccb38cb4d7184bcbed39beed79656|Aug 16, 2026
+Emulators|[libretro-supermodel](http://github.com/libretro/Libretro-Supermodel)|a708263e52f3772f4572e82e332be6b3fac32a00|Aug 16, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|1d5a9f038a4757fc85c7720ef440b957531c85e8|Aug 16, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|42ccaee47caaf37c55d018840da26adfce2b274c|Aug 15, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46214|Aug 15, 2026
@@ -590,4 +591,3 @@ Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipe
 Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A
 Utils|[wlrctl](https://git.sr.ht/~brocellous/wlrctl/archive)|v0.2.2|N/A
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A
-Emulators|[libretro-supermodel](http://github.com/sgiannop/Libretro-Supermodel)|a708263e52f3772f4572e82e332be6b3fac32a00|N/A
