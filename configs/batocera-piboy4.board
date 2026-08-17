@@ -16,12 +16,12 @@ BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2
 BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/fsoverlay $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/piboy4/fsoverlay"
 BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/post-image-script-piboy4.sh"
 
-# Kernel 7.1
+# Kernel 7.2
 BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_TARBALL=y
-BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,db6416f1b6285aca5374ce23ed3b2fb07bf7529e)/db6416f1b6285aca5374ce23ed3b2fb07bf7529e.tar.gz"
+BR2_LINUX_KERNEL_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,48599d5d6403fd9680b2f5582a7b7b17a0c9d018)/48599d5d6403fd9680b2f5582a7b7b17a0c9d018.tar.gz"
 BR2_LINUX_KERNEL_DEFCONFIG="bcm2712"
-BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/7.1"
+BR2_LINUX_KERNEL_PATCH="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/7.2"
 BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux-defconfig-fragment.config"
 BR2_LINUX_KERNEL_NEEDS_HOST_OPENSSL=y
 
