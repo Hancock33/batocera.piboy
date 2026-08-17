@@ -176,7 +176,7 @@ Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|0.10.5|Mar 09, 2025
 Emulators|[libretro-minivmac](https://github.com/libretro/libretro-minivmac)|babdf7b53d361a7225858b68a8a64efe8b06f5e5|Apr 20, 2026
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|f94c3104aa18036d9ed5f0243814483f82e486cb|Jul 24, 2026
 Emulators|[libretro-mrboom](https://github.com/Javanaise/mrboom-libretro.git)|96f89550a3518dffe2e7561c971119a39d90de97|Jan 15, 2025
-Emulators|[libretro-mu](http://github.com/libretro/Mu)|f9d34a0006440aef8dca0db2a0d896438fcab2cb|N/A
+Emulators|[libretro-mu](http://github.com/SquirrelJME/Mu)|f9d34a0006440aef8dca0db2a0d896438fcab2cb|Aug 16, 2026
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|f275caf4b2bfa1e6d1c51636746ea793f3d80320|May 25, 2026
 Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|331cb2c4aa3d8490ec83dacf7c3650f13d7c3bf5|Aug 04, 2026
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|fc21888478ab372e894d3443f70fd1454e934748|Aug 11, 2026

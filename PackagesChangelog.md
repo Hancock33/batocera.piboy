@@ -42,6 +42,7 @@ Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.10.1|Aug 16, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|af9108e36129c644a2c796770c42700dedfb5fc0|Aug 16, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|0332bb983c8f8a3e9b61cb79ade30f97a5032535|Aug 16, 2026
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|8bccf8089f3d6036a518e3fbc75f147fb2ab40a7|Aug 16, 2026
+Emulators|[libretro-mu](http://github.com/SquirrelJME/Mu)|f9d34a0006440aef8dca0db2a0d896438fcab2cb|Aug 16, 2026
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|efe99c1b0dec26f7f956a3c61d42778640fb6071|Aug 16, 2026
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|890b5d445538fe790aa3add3d5702c80f551e0ae|Aug 16, 2026
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|7db129b1ecdccb38cb4d7184bcbed39beed79656|Aug 16, 2026
@@ -589,5 +590,4 @@ Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipe
 Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A
 Utils|[wlrctl](https://git.sr.ht/~brocellous/wlrctl/archive)|v0.2.2|N/A
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/main/mkbootimg.py?format)|N/A|N/A
-Emulators|[libretro-mu](http://github.com/libretro/Mu)|f9d34a0006440aef8dca0db2a0d896438fcab2cb|N/A
 Emulators|[libretro-supermodel](http://github.com/sgiannop/Libretro-Supermodel)|a708263e52f3772f4572e82e332be6b3fac32a00|N/A

@@ -3,9 +3,9 @@
 # libretro-mu
 #
 ################################################################################
-NULL-NULL
+# Version: Commits on Aug 16, 2026
 LIBRETRO_MU_VERSION = f9d34a0006440aef8dca0db2a0d896438fcab2cb
-LIBRETRO_MU_SITE = $(call github,libretro,Mu,$(LIBRETRO_MU_VERSION))
+LIBRETRO_MU_SITE = $(call github,SquirrelJME,Mu,$(LIBRETRO_MU_VERSION))
 LIBRETRO_MU_LICENSE = CCANC-3.0
 LIBRETRO_MU_EMULATOR_INFO = mu.libretro.core.yml
 
