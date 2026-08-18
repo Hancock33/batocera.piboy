@@ -15,10 +15,12 @@ Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-08-18|Aug 18, 
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|842800056e3eec923e33f50897d6e6a464c398a5|Aug 18, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|f784fc0f6c58b2ad157016b6b409ec9451049a93|Aug 18, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|a30486c3e0a17460c44cf1caf15559c6f3331e57|Aug 18, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260818|Aug 18, 2026
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|c6157ea211dbebbac5ac6abad1aba74c86cde759|Aug 18, 2026
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.38.0|Aug 18, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.38.0|Aug 18, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|86d1bf83640285297193cefe18932901815685ef|Aug 18, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260818|Aug 18, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|4762df1bbabc55c45a218c227d0e024ffe0cae2d|Aug 18, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|e0caae2fe9839de38fabbf2fb906d62d8c851405|Aug 18, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|ed2239e6138501c03a80bae95f4988c717cb2a64|Aug 18, 2026
@@ -69,8 +71,6 @@ Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|e1c168e06c332a98f343
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14383|Aug 15, 2026
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.5|Aug 15, 2026
 Utils|[ryzen-smu](http://github.com/amkillam/ryzen_smu)|d2983668300dd2a598e5a7dc40e71ce0678cc270|Aug 15, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260815|Aug 15, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260815|Aug 15, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|v26.08.15.0-test|Aug 15, 2026
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|cd721790a0aa0e0772810949abcf5bd699c15371|Aug 15, 2026
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|6224157a615b18507bc0b117a3398c7a324cd3e5|Aug 15, 2026
