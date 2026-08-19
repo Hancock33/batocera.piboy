@@ -3,8 +3,8 @@
 # cubeb
 #
 ################################################################################
-# Version: Commits on Aug 11, 2026
-CUBEB_VERSION = f0bd97db8cd33dc3e5a1d27b689eed2e3434b65c
+# Version: Commits on Aug 18, 2026
+CUBEB_VERSION = bce39b6bd1ce1c057edb93c65c75ec9cc774343e
 CUBEB_SITE = $(call github,mozilla,cubeb,$(CUBEB_VERSION))
 
 CUBEB_LICENSE = Mozilla
