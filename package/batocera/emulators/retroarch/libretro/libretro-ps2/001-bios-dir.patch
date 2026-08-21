@@ -1,8 +1,8 @@
 diff --git a/libretro/main.cpp b/libretro/main.cpp
-index a785aa767..ebfd5093d 100644
+index 4309598a5..8702b856f 100644
 --- a/libretro/main.cpp
 +++ b/libretro/main.cpp
-@@ -1520,7 +1520,7 @@ void retro_init(void)
+@@ -2139,7 +2139,7 @@ void retro_init(void)
  		environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &system_base);
  
  		FileSystem::FindResultsArray results;
@@ -12,10 +12,10 @@ index a785aa767..ebfd5093d 100644
  			u32 version, region;
  			static constexpr u32 MIN_BIOS_SIZE = 4 * _1mb;
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index a5e87e6e6d..e25b15203d 100644
+index baee676f6..904bbd896 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -1029,7 +1029,7 @@ void Pcsx2Config::CopyRuntimeConfig(Pcsx2Config& cfg)
+@@ -1076,7 +1076,7 @@ void Pcsx2Config::CopyRuntimeConfig(Pcsx2Config& cfg)
  
  void EmuFolders::SetDefaults(SettingsInterface& si)
  {
