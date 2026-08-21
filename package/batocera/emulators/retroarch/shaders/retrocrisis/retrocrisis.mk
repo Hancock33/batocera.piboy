@@ -7,7 +7,7 @@
 RETROCRISIS_VERSION = 20260820
 RETROCRISIS_DATE = $(shell date -d '$(RETROCRISIS_VERSION)' +'%Y.%m.%d')
 RETROCRISIS_SITE = https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases/download/$(subst .,,$(RETROCRISIS_VERSION))
-RETROCRISIS_SOURCE = Retro.Crisis.GDV-NTSC.$(RETROCRISIS_DATE).zip
+RETROCRISIS_SOURCE = Retro.Crisis.GDV-NTSC.$(RETROCRISIS_DATE).zip.zip
 RETROCRISIS_LICENSE = GPL-3.0
 
 define RETROCRISIS_EXTRACT_CMDS
@@ -18,7 +18,8 @@ endef
 define RETROCRISIS_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/share/batocera/shaders/retrocrisis
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/shaders
-	cp -ar $(@D)/shaders/shaders_slang/retro* $(TARGET_DIR)/usr/share/batocera/shaders/retrocrisis
+	#cp -ar $(@D)/shaders/shaders_slang/retro* $(TARGET_DIR)/usr/share/batocera/shaders/retrocrisis
+	cp -ar $(@D)/retro* $(TARGET_DIR)/usr/share/batocera/shaders/retrocrisis
 endef
 
 $(eval $(generic-package))
