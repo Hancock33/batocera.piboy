@@ -68,7 +68,7 @@
   Ensure you read the info text file in the traider folder
 - Vita3k added for capable aarch64 devices
 ### Updated
-- Azahar to 2125.1.2
+- Azahar to 2126.0
 - BigPEmu to 1.221
 - Box64 0.4.2
 - Cemu to August 7th, 2026 build
@@ -116,7 +116,7 @@
 - Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
-- Redream to 1.5.0-1235-g506c3f1
+- Redream to 1.5.0-1239
 - RPCS3 to v.0.0.42
 - ScummVM to v2026.3.0
 - ShadPS4 to v.0.17.0
@@ -124,7 +124,7 @@
 - Sonic3-Air to v26.03.28.0
 - Supermodel to v0.3a-20260726-git-b7d8acd
 - TheXTech to v1.3.7.3-1
-- TRX to 1.9.2
+- TRX to 1.10.2
 - Tsugaru to v20251206
 - Vita3k to 10th of June build
 - VKQuake to 1.34.1
@@ -167,7 +167,7 @@
 - WINE Proton to proton-11.0-1
 - WINE TKG to 11.13
 - Wlroots to 0.20.2
-- X86_64 / Zen3 kernel updated to 7.1.5
+- X86_64 / Zen3 kernel updated to 7.1.9
 - Xone to v0.5.8
 
 # 2026/05/30 - batocera.linux 43.1
