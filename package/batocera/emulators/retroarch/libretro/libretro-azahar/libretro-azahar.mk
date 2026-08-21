@@ -3,8 +3,8 @@
 # libretro-azahar
 #
 ################################################################################
-# Version: Commits on Aug 20, 2026
-LIBRETRO_AZAHAR_VERSION = c0d923ba22219c84def266532fa0758e0ce3bf40
+# Version: Commits on Aug 21, 2026
+LIBRETRO_AZAHAR_VERSION = a2d16d46fd1e255215122dcaeec317e94f1ad9b8
 LIBRETRO_AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
 LIBRETRO_AZAHAR_SOURCE = azahar-$(LIBRETRO_AZAHAR_VERSION)-git4.tar.gz
 LIBRETRO_AZAHAR_SITE_METHOD=git
