@@ -414,7 +414,7 @@ def parse_sfo(data):
 # ------------------------------------------------------------------
 
 # region inferred from the 3rd letter of the game ID
-# (NP[U]B…=US, NP[E]B…=EU, NP[J]B…=JP, BL[U]S…=US, BL[E]S…=EU, …)
+# (NP[U]B...=US, NP[E]B...=EU, NP[J]B...=JP, BL[U]S...=US, BL[E]S...=EU, ...)
 REGION_BY_GAMEID = {"U": "US", "E": "EU", "J": "JP", "H": "ASIA",
                     "K": "ASIA", "A": "ASIA", "I": "INT", "C": "CN"}
 
@@ -549,7 +549,7 @@ def fetch(url, timeout=60):
         with urllib.request.urlopen(req, timeout=timeout) as response:
             return response.read()
     except Exception as exc:
-        print(f"[fetch error] {url} — {exc}")
+        print(f"[fetch error] {url} - {exc}")
         return None
 
 
@@ -559,7 +559,7 @@ def load_nps_tsv(url, database):
     First entry per title_id wins (PS3_GAMES is loaded before PS3_DLCS so the
     base-game name/region takes precedence over DLC rows).
     """
-    print(f"[nps] downloading {url} …")
+    print(f"[nps] downloading {url} ...")
     data = fetch(url)
     if not data:
         print(f"[nps] download failed: {url}")
@@ -603,8 +603,8 @@ def safe_filename(name):
     return name
 
 
-# trailing trial/demo marker, e.g. "… - Trial", "… (Trial)", "… [Demo]"
-_TRIAL_SUFFIX = re.compile(r'\s*[-–:(\[]?\s*(?:trial|demo)\s*[)\]]?\s*$', re.IGNORECASE)
+# trailing trial/demo marker, e.g. "... - Trial", "... (Trial)", "... [Demo]"
+_TRIAL_SUFFIX = re.compile(r'\s*[--:(\[]?\s*(?:trial|demo)\s*[)\]]?\s*$', re.IGNORECASE)
 
 def strip_trial(name):
     """Drop a trailing Trial/Demo marker (the game is unlocked by a license)."""
@@ -740,7 +740,7 @@ def process_group(game_id, pkg_paths, rap_paths, edat_paths, root_dir, database,
         try:
             # unpack the existing image so new PKG content is merged into it
             if merging:
-                print(f"[merge] unpacking existing {out_name} …")
+                print(f"[merge] unpacking existing {out_name} ...")
                 unsquashfs(out_path, tmp)
             _install_dir, consumed_raps, consumed_edats = build_dev_hdd0(
                 pkg_paths, dev_hdd0, rap_paths, edat_paths, game_id)
@@ -818,7 +818,7 @@ def main():
     load_nps_tsv(PS3_GAMES_URL, database)
     load_nps_tsv(PS3_DLCS_URL, database)
     if not database:
-        print("[warn] NPS databases unavailable — names will use GAMEID only.")
+        print("[warn] NPS databases unavailable - names will use GAMEID only.")
 
     print("-" * 60)
 

@@ -1244,7 +1244,7 @@ class PkgReader:
                 break
 
     def _read_inode_data(self, inode: Inode) -> bytes:
-        """Read a (small) inode's contents fully — used for directory blocks."""
+        """Read a (small) inode's contents fully - used for directory blocks."""
         chunks = []
         for j in range(inode.blocks):
             chunks.append(self._read_pfsc_block(inode.loc + j))
@@ -1904,7 +1904,7 @@ def safe_filename(name: str) -> str:
 
 
 def region_from_content_id(content_id: str) -> str:
-    """PS4 content ids start with UP/EP/JP/HP…, one letter per region."""
+    """PS4 content ids start with UP/EP/JP/HP..., one letter per region."""
     if content_id:
         return REGION_BY_CONTENT_ID.get(content_id[0].upper(), "")
     return ""
