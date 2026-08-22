@@ -16,6 +16,7 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|d810eed8dba766525
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|98ee22509e357e7e1da355422112fd58ad56e921|Aug 22, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|6161e17e99af820d8cd72da99f712abb6e623bd8|Aug 22, 2026
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|22e8354465312b64ed002c1eec92da0bede74ae3|Aug 22, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.16|Aug 22, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260822|Aug 22, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f9edaf34e2979b4b7966ff261500953bdae5af8f|Aug 22, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260822|Aug 22, 2026
@@ -140,7 +141,6 @@ Emulators|[libretro-wasm4](https://github.com/aduros/wasm4)|18048861e097185d6f82
 Libraries|[semver](http://github.com/Neargye/semver)|v1.0.1|Aug 09, 2026
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|3a3b7cc61e0eb2aa064265f1b7d317f984cf8453|Aug 09, 2026
 Utils|[x86-64-level](http://github.com/HenrikBengtsson/x86-64-level)|0.3.0|Aug 09, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.15|Aug 09, 2026
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|b1bebb8c854455f942250c8ce6b4fae1004e5da2|Aug 08, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|496939b602703951277263c7b3e60a9ae36879c1|Aug 08, 2026
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|bc2707d1fba2ec1e6529857f87202a20998bff13|Aug 08, 2026

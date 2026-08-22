@@ -588,7 +588,7 @@ Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.9.2|May 12, 
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.0.2|Jul 17, 2026
 Wine|[rtkit](https://gitlab.freedesktop.org/pipewire/rtkit/-/archive/)|v0.14|Dec 11, 2025
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.0.1|May 06, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.15|Aug 09, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.16|Aug 22, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260713-proton-slr|Jul 13, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260822|Aug 22, 2026
