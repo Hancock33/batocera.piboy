@@ -203,19 +203,18 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 f=Path('/usr/share/batocera/batocera.arch').open()
                 arch=f.readline().strip('\n')
                 if 'x86_64' in arch:
-                    if system.isOptSet("powersave"):
-                        if system.config['powersave'] == '0':
-                                subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                                _logger.debug("CPU power config set to maximum power saving")
-                        elif system.config['powersave'] == '1':
-                                subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
-                                _logger.debug("CPU power config set to medium power saving")
-                        elif system.config['powersave'] == '2':
-                                subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
-                                _logger.debug("CPU power config set to no power saving")
-                    else:
+                    if system.config.get('powersave') == '0':
                         subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
                         _logger.debug("CPU power config set to maximum power saving")
+                    elif system.config.get('powersave') == '1':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
+                        _logger.debug("CPU power config set to medium power saving")
+                    elif system.config.get('powersave') == '2':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
+                        _logger.debug("CPU power config set to no power saving")
+                else:
+                    subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+                    _logger.debug("CPU power config set to maximum power saving")
 
                 # run the emulator
                 _evmapy_instance = evmapy(systemName, system.config.emulator, effectiveCore, original_rom, player_controllers, guns)
