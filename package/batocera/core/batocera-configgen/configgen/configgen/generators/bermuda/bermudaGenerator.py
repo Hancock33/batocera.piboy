@@ -14,7 +14,7 @@ class BermudaGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["bermuda", "--datapath=/userdata/roms/ports/bermuda", "--musicpath=/userdata/roms/ports/bermuda/MUSIC", "--savepath=/userdata/saves/bermuda", "--fullscreen"]
 
-        if system.isOptSet("bermuda_aspect") and system.config['bermuda_aspect'] == '1':
+        if system.config.get("bermuda_aspect"):
             commandArray.append("--widescreen=16:9")
 
         return Command.Command(

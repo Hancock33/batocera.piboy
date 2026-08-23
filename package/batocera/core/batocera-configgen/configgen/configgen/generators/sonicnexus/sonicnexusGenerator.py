@@ -25,12 +25,7 @@ class SonicNexusGenerator(Generator):
         source_file = Path('/usr/bin/sonicnexus')
         rom_directory = Path('/userdata/roms/ports/sonicnexus')
         destination_file = Path(str(rom_directory) + '/sonicnexus')
-
-        if destination_file.exists():
-            os.remove(destination_file)
-            shutil.copy(source_file, destination_file)
-        else:
-            shutil.copy(source_file, destination_file)
+        shutil.copyfile(source_file, destination_file)
 
         ## Configuration
 

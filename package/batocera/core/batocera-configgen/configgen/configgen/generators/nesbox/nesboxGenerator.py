@@ -24,7 +24,7 @@ class NesboxGenerator(Generator):
         if (rombase.lower() == "surf" or rombase.lower() == "console"):
             commandArray.extend(["--cmd=surf"])
         else:
-            commandArray.extend([rom])
+            commandArray.extend([str(rom)])
 
         return Command.Command(
             array=commandArray,

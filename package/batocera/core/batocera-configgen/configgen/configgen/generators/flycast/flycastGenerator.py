@@ -88,25 +88,6 @@ class FlycastGenerator(Generator):
         # set video resolution
         Config.set("window", "width", str(gameResolution["width"]))
         Config.set("window", "height", str(gameResolution["height"]))
-        # set broadcast mode
-        Config.set("config", "Dreamcast.Cable", "2")
-
-        if system.isOptSet("flycast_broadcast"):
-            Config.set("config", "Dreamcast.Broadcast", str(system.config["flycast_broadcast"]))
-        else:
-            Config.set("config", "Dreamcast.Broadcast", "4")
-        # frameskip
-        if system.isOptSet("flycast_frameskip"):
-            Config.set("config", "ta.skip", str(system.config["flycast_frameskip"]))
-        else:
-            Config.set("config", "ta.skip", "0")
-
-        # auto frame skiping
-        if system.isOptSet("flycast_autoframeskip"):
-            Config.set("config", "pvr.AutoSkipFrame", str(system.config["flycast_autoframeskip"]))
-        else:
-            Config.set("config", "pvr.AutoSkipFrame", "1")
-
         # set render resolution - default 480 (Native)
         Config.set("config", "rend.Resolution", system.config.get_str("flycast_render_resolution", "480"))
         # wide screen mode - default off
@@ -136,21 +117,6 @@ class FlycastGenerator(Generator):
             if sorting == "3":
                 # per pixel
                 Config.set("config", "pvr.rend", "3")
-
-        # Alpha Sorting
-        if system.isOptSet('flycast_alpha_sorting'):
-            if system.config['flycast_alpha_sorting'] == 'off':
-                Config.set("config", "rend.PerStripSorting", "yes")
-            elif system.config['flycast_alpha_sorting'] == 'on':
-                Config.set("config", "rend.PerStripSorting", "no")
-        else:
-            Config.set("config", "rend.PerStripSorting", "yes")
-
-        # HLE Bios
-        if system.isOptSet("flycast_hle"):
-            Config.set("config", "UseReios", str(system.config["flycast_hle"]))
-        else:
-            Config.set("config", "UseReios", "yes")
 
         # anisotropic filtering
         Config.set("config", "rend.AnisotropicFiltering", system.config.get_str("flycast_anisotropic", "1"))
