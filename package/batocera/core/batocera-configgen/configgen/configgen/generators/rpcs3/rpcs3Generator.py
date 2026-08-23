@@ -758,9 +758,7 @@ class Rpcs3Generator(Generator):
         )
 
     def writesToRom(self, config) -> bool:
-        if is_psn_squashfs:
-            return True
-        return False
+        return bool(is_psn_squashfs)
 
     def _generateGunConfig(self):
         # D-Pad mapping is face buttons of the PS Move buttons
