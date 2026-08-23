@@ -30,7 +30,7 @@ class SonicNexusGenerator(Generator):
         ## Configuration
 
         # VSync
-        if system.isOptSet('snexus_vsync'):
+        if system.config.get('snexus_vsync'):
             selected_vsync = system.config['snexus_vsync']
         else:
             selected_vsync = 'y'

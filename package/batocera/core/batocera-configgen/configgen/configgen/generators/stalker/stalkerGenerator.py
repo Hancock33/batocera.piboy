@@ -28,7 +28,7 @@ class StalkerGenerator(Generator):
         _logger.debug("rom file extension: %s", rom.suffix)
 
         # Skip Intro
-        if system.isOptSet('stalker_intro') and system.getOptBoolean('stalker_intro'):
+        if system.config.get('stalker_intro'):
             commandArray.extend(['-nointro'])
 
         # Call of Clear Sky
