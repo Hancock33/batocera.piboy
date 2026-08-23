@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import codecs
 import os
+from pathlib import Path
 from shlex import split
 from typing import TYPE_CHECKING
 
@@ -39,7 +39,7 @@ class ECWolfGenerator(Generator):
 
         # Create config file if not there
         if not ecwolfConfigFile.is_file():
-            with codecs.open(str(ecwolfConfigFile), "x") as f:
+            with Path(ecwolfConfigFile).open("x", encoding="utf-8") as f:
                 f.write('Vid_FullScreen = 1;\n')
                 f.write('Vid_Aspect = 0;\n')
                 f.write('Vid_Vsync = 1;\n')
@@ -49,17 +49,17 @@ class ECWolfGenerator(Generator):
         if ecwolfConfigFile.is_file():
             #We ignore some options in default config with py-dictonary...
             IgnoreConfigKeys = {"FullScreenWidth", "FullScreenHeight", "JoystickEnabled"}
-            with codecs.open(str(ecwolfConfigFile), "r") as f:
+            with Path(ecwolfConfigFile).open(encoding="utf-8") as f:
                 lines = list(f)
 
             # ... write all the non ignored keys back to config file ...
-            with codecs.open(str(ecwolfConfigFile), "w") as f:
+            with Path(ecwolfConfigFile).open("w", encoding="utf-8") as f:
                 for line in lines:
                     if not IgnoreConfigKeys.intersection(line.split()):
                         f.write(line)
 
             # ... and append the ignored keys with default values now ;)
-            with codecs.open(str(ecwolfConfigFile), "a") as f:
+            with Path(ecwolfConfigFile).open("a", encoding="utf-8") as f:
                 f.write('JoystickEnabled = 1;\n')
                 f.write(f'FullScreenWidth = {gameResolution["width"]};\n')
                 f.write(f'FullScreenHeight = {gameResolution["height"]};\n')
@@ -85,7 +85,7 @@ class ECWolfGenerator(Generator):
             if (fextension).endswith('ecwolf'):
                 ecwolfArray += ["--file", rom.name]
             elif fextension == ".ecwolf":
-                with codecs.open(str(rom),"r") as f:
+                with Path(rom).open(encoding="utf-8") as f:
                     ecwolfArray += split(f)
 
                 # If 1. parameter isn't an argument then assume it's a path
