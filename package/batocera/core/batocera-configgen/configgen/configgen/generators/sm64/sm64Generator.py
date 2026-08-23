@@ -16,33 +16,31 @@ jp_dir = '/userdata/saves/sm64/jp'
 us_dir = '/userdata/saves/sm64/us'
 
 class Sm64Generator(Generator):
-
-    if not pathlib.Path(eu_dir).exists():
-        pathlib.Path(eu_dir).mkdir()
-
-    if not pathlib.Path(jp_dir).exists():
-        pathlib.Path(jp_dir).mkdir()
-
-    if not pathlib.Path(us_dir).exists():
-        pathlib.Path(us_dir).mkdir()
-
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+        commandArray = ["sm64.eu", "--gamedir", "./", '--savepath', eu_dir]
+
         if str(rom).lower().endswith('.e64'):
-            os.chdir(rom)
-            commandArray = ["sm64.eu", "--gamedir", "./", '--savepath', eu_dir]
+            if not pathlib.Path(eu_dir).exists():
+                pathlib.Path(eu_dir).mkdir()
+        
         if str(rom).lower().endswith('.j64'):
-            os.chdir(rom)
+            if not pathlib.Path(jp_dir).exists():
+                pathlib.Path(jp_dir).mkdir()
             commandArray = ["sm64.jp", "--gamedir", "./", '--savepath', jp_dir]
+
         if str(rom).lower().endswith('.u64'):
-            os.chdir(rom)
+            if not pathlib.Path(us_dir).exists():
+                pathlib.Path(us_dir).mkdir()
             commandArray = ["sm64.us", "--gamedir", "./", '--savepath', us_dir]
 
+        os.chdir(rom)
+
         # Skip Intro
-        if system.isOptSet('nointro') and system.getOptBoolean('nointro'):
+        if system.config.get_bool('nointro'):
             commandArray.extend(['--skip-intro'])
 
         # Cheat Menu
-        if system.isOptSet('cheatsmenu') and system.getOptBoolean('cheatsmenu'):
+        if system.config.get_bool('cheatsmenu'):
             commandArray.extend(['--cheats'])
 
         return Command.Command(

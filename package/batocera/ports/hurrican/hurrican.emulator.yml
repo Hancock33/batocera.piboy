@@ -6,5 +6,25 @@ shared_features:
   - videomode
   - hud
   - hud_corner
+custom_features:
+  hurrican_crt:
+    prompt:  
+    description: Simulate CRT effects for a retro look.
+    choices:
+      "On": enabled
+      "Off": disabled
+  hurrican_custlevel:
+    prompt:      CUSTOM LEVELS
+    description: Play custom user level.
+    choices:
+      "Original":       Original
+      "ChJees":         ChJees
+      "Genocide":       Genocide
+      "Second Empire":  Second_Empire
+      "Secret Planet":  SecretPlanet
+      "Valentine":      Valentine
+      "Volcano Temple": Volcano_Temple
+      "Walkers World":  Walkers_World
+
 systems:
   - hurrican

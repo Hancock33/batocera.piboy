@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 import shutil
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -36,23 +35,22 @@ class TRXGenerator(Generator):
         else:
             shutil.copy(trxSourcePath, destination_file)
 
-        commandArray = [trxRomPath / "TRX"]
+        commandArray = [trxRomPath / "TRX", "--mod"]
 
-        romExt = os.path.splitext(rom)[1]
         if system.config.get_bool("trx-expansion"):
-            if romExt == ".trx1":
-                commandArray.extend(["--mod", "tr1-ub"])
-            if romExt == ".trx2":
-                commandArray.extend(["--mod", "tr2-gm"])
-            if romExt == ".trx3":
-                commandArray.extend(["--mod", "tr3-la"])
+            if rom.suffix == ".trx1":
+                commandArray.extend(["tr1-ub"])
+            if rom.suffix == ".trx2":
+                commandArray.extend(["tr2-gm"])
+            if rom.suffix == ".trx3":
+                commandArray.extend(["tr3-la"])
         else:
-            if romExt == ".trx1":
-                commandArray.extend(["--mod", "tr1"])
-            if romExt == ".trx2":
-                commandArray.extend(["--mod", "tr2"])
-            if romExt == ".trx3":
-                commandArray.extend(["--mod", "tr3"])
+            if rom.suffix == ".trx1":
+                commandArray.extend(["tr1"])
+            if rom.suffix == ".trx2":
+                commandArray.extend(["tr2"])
+            if rom.suffix == ".trx3":
+                commandArray.extend(["tr3"])
 
         return Command.Command(
             array=commandArray,
