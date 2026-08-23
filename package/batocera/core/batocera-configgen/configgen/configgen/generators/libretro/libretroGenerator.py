@@ -34,6 +34,7 @@ from .libretroPaths import (
 
 if TYPE_CHECKING:
     from pathlib import Path
+
     from ...Emulator import Emulator
     from ...types import HotkeysContext
 
