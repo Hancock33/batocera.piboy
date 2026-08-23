@@ -58,6 +58,7 @@ _player_controllers_lock = threading.Lock()
 _active_player_controllers = []
 # Global reference to the evmapy configurator instance
 _evmapy_instance = None
+arch = None
 
 def main(args: argparse.Namespace, maxnbplayers: int) -> int:
     original_rom = args.rom
