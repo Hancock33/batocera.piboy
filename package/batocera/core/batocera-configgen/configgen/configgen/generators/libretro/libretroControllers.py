@@ -52,8 +52,8 @@ def writeControllersConfig(
 
     # See if FF is toggle or hold
     ff_action = 'toggle_fast_forward' if (
-        system.isOptSet('toggle_fast_forward')
-        and system.getOptBoolean('toggle_fast_forward')
+        system.config.get('toggle_fast_forward')
+        and system.config.get('toggle_fast_forward')
     ) else 'hold_fast_forward'
 
     retroconfig.save(f'input_{ff_action}',        '"f12"')

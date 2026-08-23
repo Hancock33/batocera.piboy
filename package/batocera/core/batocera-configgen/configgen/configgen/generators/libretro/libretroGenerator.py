@@ -5,6 +5,7 @@ import itertools
 import logging
 import os
 import shutil
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -33,8 +34,6 @@ from .libretroPaths import (
 )
 
 if TYPE_CHECKING:
-    from pathlib import Path
-
     from ...Emulator import Emulator
     from ...types import HotkeysContext
 
@@ -58,6 +57,7 @@ class LibretroGenerator(Generator):
     # Main entry of the module
     # Configure retroarch and return a command
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+        rom_path = None
         # Fix for the removed MESS/MAMEVirtual cores
         if system.config.core in [ 'mess', 'mamevirtual' ]:
             system.config['core'] = 'mame'
@@ -343,13 +343,10 @@ class LibretroGenerator(Generator):
                 romsInDir = glob.glob(glob.escape(str(rom)) + '/*.scummvm')
                 rom_path = romsInDir[0].replace('.scummvm','')
             else:
-                rom_path = rom_path.parent / rom_path.name
-                if rom_path.stat().st_size == 0:
+                rom = rom.parent / rom.name
+                if rom.stat().st_size == 0:
                     # File is empty, run game directly
-                    rom_path = rom_path.with_suffix('')
-
-        if system.name == '3ds' and "squashfs" in str(rom) and rom.is_dir():
-            rom = next(rom.glob('*.3ds'))
+                    rom = rom.with_suffix('')
 
         if system.name == 'n64' and "squashfs" in str(rom) and rom.is_dir():
                 rom = next(rom.glob('*.*'))

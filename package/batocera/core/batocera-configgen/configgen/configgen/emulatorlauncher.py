@@ -73,6 +73,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
     global _active_player_controllers, _evmapy_instance
     global endSystem
     endSystem = args.system
+    arch = None
 
     player_controllers = Controller.load_for_players(maxnbplayers, args)
 
@@ -199,7 +200,6 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
                 callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
 
-                arch = None
                 f=Path('/usr/share/batocera/batocera.arch').open()
                 arch=f.readline().strip('\n')
                 if 'x86_64' in arch:
@@ -348,7 +348,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, rom])
 
             finally:
-                if 'x86_64' in arch:
+                if arch == 'x86_64':
                     subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
 
                 # always restore the resolution

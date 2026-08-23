@@ -183,19 +183,19 @@ class DemulGenerator(Generator):
         GpuConfig.set("main", "UseFullscreen", "1")
 
         # Aspect Ratio
-        if system.isOptSet("demulRatio"):
+        if system.config.get("demulRatio"):
             GpuConfig.set("main", "aspect", format(system.config["demulRatio"]))
         else:
             GpuConfig.set("main", "aspect", "1")
 
         # VSync
-        if system.isOptSet("demulVSync"):
+        if system.config.get("demulVSync"):
             GpuConfig.set("main", "Vsync", format(system.config["demulVSync"]))
         else:
             GpuConfig.set("main", "Vsync", "0")
 
         # Scaling
-        if system.isOptSet("demulScaling"):
+        if system.config.get("demulScaling"):
             GpuConfig.set("main", "scaling", format(system.config["demulScaling"]))
         else:
             GpuConfig.set("main", "scaling", "1")
