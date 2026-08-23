@@ -318,8 +318,8 @@ msgid "100fps"
 msgstr "100帧"
 
 msgctxt "game_options"
-msgid "100ms (Default)"
-msgstr "100毫秒（默认）"
+msgid "100ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1024 x 768"
@@ -370,10 +370,6 @@ msgid "10fps"
 msgstr "10帧"
 
 msgctxt "game_options"
-msgid "10ms"
-msgstr "10毫秒"
-
-msgctxt "game_options"
 msgid "10th"
 msgstr "10号"
 
@@ -402,6 +398,10 @@ msgid "12 MHz"
 msgstr "12 MHz"
 
 msgctxt "game_options"
+msgid "120 FPS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "120 Hz"
 msgstr ""
 
@@ -426,8 +426,8 @@ msgid "120fps"
 msgstr "120帧"
 
 msgctxt "game_options"
-msgid "120ms"
-msgstr "120毫秒"
+msgid "125% (Overclock)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1280 x 1024"
@@ -440,6 +440,10 @@ msgstr "1280 x 720"
 msgctxt "game_options"
 msgid "1280 x 800"
 msgstr "1280 x 800"
+
+msgctxt "game_options"
+msgid "1280x720 (100% Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1280x720 (Default)"
@@ -510,10 +514,6 @@ msgid "14.18 MHz (A1200 speed)"
 msgstr "14.18 MHz（A1200速度）"
 
 msgctxt "game_options"
-msgid "140ms"
-msgstr "140毫秒"
-
-msgctxt "game_options"
 msgid "144 fps"
 msgstr "144帧"
 
@@ -550,8 +550,16 @@ msgid "15% (Default)"
 msgstr "15%（默认）"
 
 msgctxt "game_options"
+msgid "150% (Overclock)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "150Mhz (Overclock)"
 msgstr "150Mhz（超频）"
+
+msgctxt "game_options"
+msgid "150ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1536MB"
@@ -602,12 +610,12 @@ msgid "1600 x 900"
 msgstr "1600 x 900"
 
 msgctxt "game_options"
-msgid "160fps"
-msgstr "160帧"
+msgid "1600x900 (125%)"
+msgstr ""
 
 msgctxt "game_options"
-msgid "160ms"
-msgstr "160毫秒"
+msgid "160fps"
+msgstr "160帧"
 
 msgctxt "game_options"
 msgid "16384kB"
@@ -631,10 +639,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "16:9 (Default)"
-msgstr "16:9（默认）"
-
-msgctxt "game_options"
-msgid "16:9 (default)"
 msgstr "16:9（默认）"
 
 msgctxt "game_options"
@@ -678,10 +682,6 @@ msgid "180 degrees"
 msgstr "180度"
 
 msgctxt "game_options"
-msgid "180ms"
-msgstr "180毫秒"
-
-msgctxt "game_options"
 msgid "18th"
 msgstr "18号"
 
@@ -699,6 +699,11 @@ msgstr "1920 x 1200"
 
 msgctxt "game_options"
 msgid "1920p (8x)"
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid "1920x1080 (150% - 1080p)"
 msgstr ""
 
 msgctxt "game_options"
@@ -906,8 +911,8 @@ msgid "21st"
 msgstr "21号"
 
 msgctxt "game_options"
-msgid "220ms"
-msgstr "220毫秒"
+msgid "2240x1260 (175%)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "224MB"
@@ -950,10 +955,6 @@ msgid "2400p (10x)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "240ms"
-msgstr "240毫秒"
-
-msgctxt "game_options"
 msgid "240p (1x)"
 msgstr ""
 
@@ -976,6 +977,11 @@ msgstr "2560 x 1440"
 msgctxt "game_options"
 msgid "2560 x 1600"
 msgstr "2560 x 1600"
+
+#, c-format
+msgctxt "game_options"
+msgid "2560x1440 (200% - 1440p)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "256MB (Default)"
@@ -1230,6 +1236,10 @@ msgid "320 x 200"
 msgstr "320 x 200"
 
 msgctxt "game_options"
+msgid "3200x1800 (225%)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "32K RAM EXPANSION"
 msgstr "32K 扩展内存"
 
@@ -1254,6 +1264,10 @@ msgid "33Mhz (Overclock)"
 msgstr "33Mhz（超频）"
 
 msgctxt "game_options"
+msgid "34ms (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "35.46 MHz"
 msgstr "35.46 MHz"
 
@@ -1264,6 +1278,10 @@ msgstr "3840 x 2160"
 msgctxt "game_options"
 msgid "3840MB"
 msgstr "3840MB"
+
+msgctxt "game_options"
+msgid "3840x2160 (300% - 4K)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "384MB (Default)"
@@ -1432,10 +1450,6 @@ msgstr "4096kB"
 msgctxt "game_options"
 msgid "40fps"
 msgstr "40帧"
-
-msgctxt "game_options"
-msgid "40ms"
-msgstr "40毫秒"
 
 msgctxt "game_options"
 msgid "42.56 MHz"
@@ -1618,8 +1632,16 @@ msgid "50 (Default)"
 msgstr "50（默认）"
 
 msgctxt "game_options"
+msgid "50 FPS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "50 fps"
 msgstr "50帧"
+
+msgctxt "game_options"
+msgid "50% (Underclock)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "50Hz"
@@ -1632,6 +1654,10 @@ msgstr "50Mbps（可用的最高质量）"
 msgctxt "game_options"
 msgid "50fps"
 msgstr "50帧"
+
+msgctxt "game_options"
+msgid "50ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "5120MB"
@@ -1680,6 +1706,10 @@ msgstr "56.75 MHz"
 msgctxt "game_options"
 msgid "576+KB"
 msgstr "576+KB"
+
+msgctxt "game_options"
+msgid "59.94 FPS"
+msgstr ""
 
 msgctxt "game_options"
 msgid "5MB"
@@ -1734,6 +1764,10 @@ msgid "6.75x (6480x3672)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "60 FPS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "60 FPS (Smooth)"
 msgstr ""
 
@@ -1766,10 +1800,6 @@ msgid "60fps"
 msgstr "60帧"
 
 msgctxt "game_options"
-msgid "60ms"
-msgstr "60毫秒"
-
-msgctxt "game_options"
 msgid "60s"
 msgstr "60秒"
 
@@ -1784,6 +1814,10 @@ msgstr "64 MHz（超频）"
 msgctxt "game_options"
 msgid "640 x 480"
 msgstr "640 x 480"
+
+msgctxt "game_options"
+msgid "640x360 (50%)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "64KB"
@@ -1866,8 +1900,16 @@ msgid "75% (Default)"
 msgstr "75%（默认）"
 
 msgctxt "game_options"
+msgid "75% (Underclock)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "75fps"
 msgstr "75帧"
+
+msgctxt "game_options"
+msgid "75ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "768MB"
@@ -1946,10 +1988,6 @@ msgid "8086/8088, 4.77MHz (315 cps)"
 msgstr "8086/8088，4.77MHz（315 cps）"
 
 msgctxt "game_options"
-msgid "80ms"
-msgstr "80毫秒"
-
-msgctxt "game_options"
 msgid "8192kB"
 msgstr "8192kB"
 
@@ -2023,6 +2061,10 @@ msgstr "960p"
 
 msgctxt "game_options"
 msgid "960p (4x)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "960x540 (75%)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2113,10 +2155,6 @@ msgstr "激活输入设备修复"
 msgctxt "game_options"
 msgid "ADD USER DISK"
 msgstr "增加用户磁盘"
-
-msgctxt "game_options"
-msgid "ADDITIONAL FRAMELIMIT"
-msgstr "附加帧限制"
 
 msgctxt "game_options"
 msgid "ADHOC PORT OFFSET"
@@ -2223,10 +2261,6 @@ msgid "ANALOG JOYSTICK DEADZONE"
 msgstr "模拟操纵杆死区"
 
 msgctxt "game_options"
-msgid "ANISOTROPIC FILTER"
-msgstr "各向异性过滤"
-
-msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "各向异性过滤"
 
@@ -2299,6 +2333,10 @@ msgid "ASPECT RATIO"
 msgstr "纵横比"
 
 msgctxt "game_options"
+msgid "ASYNC PRESENTATION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ASYNC SHADER COMPILATION"
 msgstr ""
 
@@ -2312,6 +2350,10 @@ msgstr "异步着色器编译（仅限Vulkan）"
 
 msgctxt "game_options"
 msgid "ASYNCHRONOUS PIPELINE COMPILATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ASYNCHRONOUS QUEUE SCHEDULER"
 msgstr ""
 
 msgctxt "game_options"
@@ -2359,10 +2401,6 @@ msgid "AUDIO BUFFER (SAMPLES)"
 msgstr "音频缓冲区（样本）"
 
 msgctxt "game_options"
-msgid "AUDIO BUFFER DURATION"
-msgstr "音频缓冲持续时间"
-
-msgctxt "game_options"
 msgid "AUDIO CHANNELS"
 msgstr "音频通道"
 
@@ -2393,6 +2431,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "AUDIO SYNC"
 msgstr "音频同步"
+
+msgctxt "game_options"
+msgid "AUDIO TIME STRETCHING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
@@ -2467,8 +2509,8 @@ msgid "Accuracy"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Accurate XFloat"
-msgstr "精确 XFloat"
+msgid "Accurate"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Acorn Analogue Joysticks"
@@ -2755,10 +2797,6 @@ msgid "Allow pressing up+down or left+right simultaneously."
 msgstr ""
 
 msgctxt "game_options"
-msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
-msgstr "允许Alt+Tab键进入RPCS3的菜单。用于手动更换光盘。"
-
-msgctxt "game_options"
 msgid "Allows loading protected games without subchannel information."
 msgstr "允许在没有子频道信息的情况下加载受保护的游戏。"
 
@@ -2924,6 +2962,10 @@ msgid "Angrylion (Most Compatible)"
 msgstr "Angrylion（更好的兼容性）"
 
 msgctxt "game_options"
+msgid "Anime4K"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anime4K Ultrafast"
 msgstr ""
 
@@ -3010,12 +3052,18 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Approximate (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Approximate (Fast)"
 msgstr "近似（快速）"
 
 msgctxt "game_options"
-msgid "Approximate XFloat"
-msgstr "近似 XFloat"
+msgid ""
+"Approximate or Relaxed can significantly improve performance on bandwidth-"
+"constrained GPUs."
+msgstr ""
 
 msgctxt "game_options"
 msgid "April"
@@ -3134,11 +3182,11 @@ msgid "Async"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Async Recompiler (multi-threaded)(Default)"
+msgid "Async Shader Recompiler"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Async Recompiler with Shader Interpreter"
+msgid "Async with Shader Interpreter (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -3165,6 +3213,10 @@ msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "Atari XE Game System 卡带"
 
+msgctxt "game_options"
+msgid "Atomic (Default)"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Attack"
 msgstr "攻击"
@@ -3173,6 +3225,12 @@ msgctxt "game_options"
 msgid ""
 "Audio backend to use. ALSA is the native Linux audio system; SDL is a cross-"
 "platform fallback."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Audio buffer size in milliseconds. Lower values reduce latency; higher "
+"values prevent underruns."
 msgstr ""
 
 msgctxt "game_options"
@@ -3772,6 +3830,10 @@ msgid "Bottom only"
 msgstr "仅底部"
 
 msgctxt "game_options"
+msgid "Bottom/Top"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "弹跳盒子"
 
@@ -3804,9 +3866,8 @@ msgid "Brunei"
 msgstr "文莱"
 
 msgctxt "game_options"
-msgid ""
-"Buffer fill level (in percentage) below which time stretching will start."
-msgstr "缓冲区填充级别（百分比），低于该级别将开始时间拉伸。"
+msgid "Buffer threshold percentage below which time stretching activates."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Buffered rendering"
@@ -4239,6 +4300,14 @@ msgid "CPU CLOCK"
 msgstr "CPU时钟"
 
 msgctxt "game_options"
+msgid "CPU CLOCK PERCENTAGE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CPU CLOCKS SCALE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr "CPU兼容性"
 
@@ -4397,6 +4466,10 @@ msgid "CUSTOM IMAGE"
 msgstr "自定义图像"
 
 msgctxt "game_options"
+msgid "CUSTOM LEVELS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CUSTOM MAME CONFIG"
 msgstr "自定义MAME配置"
 
@@ -4429,6 +4502,10 @@ msgid "CYBERMORPH"
 msgstr "赛博形态"
 
 msgctxt "game_options"
+msgid "Cache compiled shaders to storage to eliminate future stutter."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Cached Interpreter"
 msgstr "缓存解释器"
 
@@ -4457,18 +4534,14 @@ msgid "Can change the language of some games."
 msgstr "可以更改某些游戏的语言。"
 
 msgctxt "game_options"
-msgid ""
-"Can fix bugs in some games. Only relevant for dynamic or LLVM SPU decoder."
-msgstr "可以修复某些游戏中的错误。仅与动态或LLVM SPU解码器相关。"
-
-msgctxt "game_options"
 msgid "Can fix drifting joysticks in games."
 msgstr "可以修复在游戏中有漂移问题的摇杆。"
 
 msgctxt "game_options"
 msgid ""
-"Can fix screen tearing on unorthodox displays (most LCDs don't need this)."
-msgstr "可以修复非传统显示屏上的屏幕撕裂（大多数液晶显示器不需要此功能）。"
+"Can fix physics and gameplay bugs in some titles. Only relevant for dynamic "
+"or LLVM SPU decoder."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Can fix slowdown. Only works on some drivers."
@@ -4477,10 +4550,6 @@ msgstr "可以修复减速。仅适用于某些驱动程序。"
 msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
 msgstr "可以提高帧率和响应性。"
-
-msgctxt "game_options"
-msgid "Can improve performance at the expense of graphics accuracy."
-msgstr "可以以牺牲图形准确性为代价来提高性能。"
 
 msgctxt "game_options"
 msgid ""
@@ -4494,10 +4563,6 @@ msgstr "可以提高CPU压力较大的游戏的性能。"
 msgctxt "game_options"
 msgid "Can prevent audio skips on button presses when using run-ahead."
 msgstr "使用快进模式时，可以防止按下按钮时跳过音频。"
-
-msgctxt "game_options"
-msgid "Can reduce crackle and stutter but increases audio latency."
-msgstr "可以减少裂纹和卡顿，但增加音频延迟。"
 
 msgctxt "game_options"
 msgid "Can sharpen images in lower resolutions."
@@ -4514,6 +4579,10 @@ msgstr "加拿大"
 msgctxt "game_options"
 msgid "Canadian French"
 msgstr "加拿大法语"
+
+msgctxt "game_options"
+msgid "Cap maximum framerate to prevent physics acceleration or stutter."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
@@ -4592,6 +4661,10 @@ msgid "Center Right"
 msgstr "中间偏右"
 
 msgctxt "game_options"
+msgid "ChJees"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Change behaviour when emulating GB games. Auto uses SGB for GB and GBC for "
 "GBC."
@@ -4655,9 +4728,9 @@ msgstr "更改插入虚拟GameCube端口的内容。"
 
 msgctxt "game_options"
 msgid ""
-"Changes the sleep period accuracy. Some games need this set to improve "
-"performance."
-msgstr "更改睡眠时间的准确性. 有些游戏需要这套来提高性能."
+"Changes sleep timer accuracy. Some games require Usleep or All Timers for "
+"proper speed."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -4742,10 +4815,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose mipmapping type."
 msgstr "选择贴图层级类型。"
-
-msgctxt "game_options"
-msgid "Choose number of audio channels."
-msgstr "选择音频通道的数量。"
 
 msgctxt "game_options"
 msgid "Choose second feature pack for the controller."
@@ -4959,6 +5028,10 @@ msgid ""
 msgstr "选择要使用的图形API库。Vulkan可能不适用于所有硬件。"
 
 msgctxt "game_options"
+msgid "Choose which graphics backend to use. Vulkan is heavily recommended."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Choose which graphics renderer to use."
 msgstr "选择要使用的图形渲染器。"
 
@@ -5139,16 +5212,14 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Compile shaders in background threads to avoid stuttering."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Compile shaders on next launch of game (one time). Reduces micro-freezes. "
 "Vulkan only."
 msgstr "在下次启动游戏时编译着色器(仅一次). 减少微冻结. 仅适用于Vulkan."
-
-msgctxt "game_options"
-msgid ""
-"Compile shaders using background threads to avoid shader compilation "
-"stutter. May cause graphical glitches."
-msgstr "使用后台线程编译着色器以避免着色器编译造成的卡顿，可能会导致图形故障。"
 
 msgctxt "game_options"
 msgid "Complex"
@@ -5191,6 +5262,10 @@ msgid "Console AES World"
 msgstr "Console AES 世界街机板"
 
 msgctxt "game_options"
+msgid "Contrast-adaptive sharpening intensity percentage when using FSR."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Control Pad (Standard)"
 msgstr ""
 
@@ -5201,6 +5276,12 @@ msgstr "控制模拟的纹理过滤。"
 msgctxt "game_options"
 msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "控制模拟器中纹理的三线性过滤。"
+
+msgctxt "game_options"
+msgid ""
+"Controls command buffer fetching accuracy. Fast yields higher FPS on lower-"
+"tier hardware."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
@@ -5218,9 +5299,9 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Controls precision of generated shaders. Low quality can improved "
-"performance."
-msgstr "控制生成的着色器精度。低质量可以提高性能。"
+"Controls shader math precision. Low or Auto can improve performance on "
+"mobile/ARM GPUs."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -5231,6 +5312,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
 msgstr "将DirectX 8/9/10/11/12调用转换为Vulkan。"
+
+msgctxt "game_options"
+msgid ""
+"Converts audio samples to 16-bit integers. Use if your audio driver does not "
+"support 32-bit float output."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Copy to texture"
@@ -5415,6 +5502,10 @@ msgstr "去隔行扫描"
 msgctxt "game_options"
 msgid "DEINTERLACING"
 msgstr "去隔行扫描"
+
+msgctxt "game_options"
+msgid "DESIRED AUDIO BUFFER DURATION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DESKTOP"
@@ -5838,6 +5929,10 @@ msgid "Disable"
 msgstr "禁用"
 
 msgctxt "game_options"
+msgid "Disable Queries"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Disable all input processing (view-only mode)."
 msgstr "禁用所有输入处理（仅查看模式）"
 
@@ -5897,9 +5992,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Disables the vertex cache. Might resolve missing or flickering graphics "
-"output but degrade performance."
-msgstr "禁用顶点缓存。可能会解决丢失或闪烁的图形输出，但会降低性能。"
+"Disables the vertex cache. May fix flickering geometry at lower performance."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Discard"
@@ -5930,6 +6024,10 @@ msgid "Disk Image"
 msgstr "磁盘镜像"
 
 msgctxt "game_options"
+msgid "Display Rate"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Display Resolution"
 msgstr ""
 
@@ -5944,10 +6042,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Display on screen information like savestate, config warning, etc."
 msgstr ""
-
-msgctxt "game_options"
-msgid "Distorts the output to fill the display fully Overrides aspect ratio."
-msgstr "扭曲输出以充分填充显示屏覆盖纵横比。"
 
 msgctxt "game_options"
 msgid "Docked (Default)"
@@ -6086,12 +6180,6 @@ msgstr "躲避"
 
 msgctxt "game_options"
 msgid ""
-"Duration of audio buffer in milliseconds. Higher numbers may cause audio "
-"latency."
-msgstr "音频缓冲区的持续时间，以毫秒计。较高的数字可能会导致音频延迟。"
-
-msgctxt "game_options"
-msgid ""
 "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
 "libretro cores."
 msgstr "在游戏过程中，按热键+R1可翻译屏幕上的文本。仅适用于libretro核心。"
@@ -6119,6 +6207,15 @@ msgstr "动态（快速）"
 msgctxt "game_options"
 msgid "Dynamic Interpreter"
 msgstr "动态解释器"
+
+msgctxt "game_options"
+msgid ""
+"Dynamically stretches audio when framerate drops to prevent harsh audio pops."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Dynamically timestretch audio to prevent crackling on frame drops."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Dynarec (Fastest)"
@@ -6195,14 +6292,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
 msgstr "启用AI翻译服务"
-
-msgctxt "game_options"
-msgid "ENABLE ASYNC PRESENTATION"
-msgstr ""
-
-msgctxt "game_options"
-msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr "启用异步着色器编译"
 
 msgctxt "game_options"
 msgid "ENABLE AUDIO BUFFERING"
@@ -6393,6 +6482,11 @@ msgid "Emulate NTSC quirks to show more colors in hi-res mode."
 msgstr "模拟NTSC的一些怪异行为，从而实现在高分辨率模式下显示更多颜色。"
 
 msgctxt "game_options"
+msgid ""
+"Emulate New 3DS processor speed and additional controls (C-stick, ZL/ZR)."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr "模拟WiiMote横持。该模式下可以用L2模拟摇晃，用右摇杆模拟Nunchuk。"
 
@@ -6418,6 +6512,10 @@ msgstr "用鼠标模拟Wiimote指针。"
 
 msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Emulated audio channel output mode."
 msgstr ""
 
 msgctxt "game_options"
@@ -6930,6 +7028,10 @@ msgid "English/Japanese"
 msgstr "英文/日文"
 
 msgctxt "game_options"
+msgid "Enhance low-resolution textures using scaling algorithms."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhanced"
 msgstr ""
 
@@ -7301,6 +7403,10 @@ msgid "FRAME DUPING (SPEED UP)"
 msgstr "帧重复（加速）"
 
 msgctxt "game_options"
+msgid "FRAME LIMIT"
+msgstr "帧限制"
+
+msgctxt "game_options"
 msgid "FRAME RATE"
 msgstr "帧速率"
 
@@ -7346,6 +7452,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "FSR - FidelityFX Super Resolution"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FSR SHARPENING INTENSITY"
 msgstr ""
 
 msgctxt "game_options"
@@ -7436,6 +7546,10 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "法罗群岛"
 
+msgctxt "game_options"
+msgid "Fast"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Fast"
 msgstr "快速"
@@ -7491,10 +7605,6 @@ msgstr "仅填充屏幕而不考虑长宽比，不适用于整数放大。"
 msgctxt "game_options"
 msgid "Fills the screen."
 msgstr "填满屏幕."
-
-msgctxt "game_options"
-msgid "Final image filtering."
-msgstr "最终图像过滤。"
 
 msgctxt "game_options"
 msgid "Finland"
@@ -7588,6 +7698,16 @@ msgstr "修复了多个控制器检测可能出现的错误。"
 msgctxt "game_options"
 msgid "Fixes flickering."
 msgstr "修复闪烁."
+
+msgctxt "game_options"
+msgid "Fixes missing effects/lighting at a performance cost."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Fixes rendering glitches in games like Luigi's Mansion and Pokemon, but "
+"costs performance."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -7758,9 +7878,11 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Forces emulation of all blit and image manipulation operations on the CPU. "
-"Can fix some graphical issues at the cost of performance."
+msgid "Forces all image copy/blit operations on the CPU."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Forces strict adherence to the PS3 RSX hardware specifications."
 msgstr ""
 
 msgctxt "game_options"
@@ -8178,6 +8300,10 @@ msgid "GPU SYNC"
 msgstr "GPU 同步"
 
 msgctxt "game_options"
+msgid "GPU command queue scheduling policy for Vulkan."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
 "to ensure particles render correctly."
@@ -8323,6 +8449,10 @@ msgstr "通用键盘绑定"
 msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
 msgstr "Genesis/Megadrive风格"
+
+msgctxt "game_options"
+msgid "Genocide"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Georgia"
@@ -8649,9 +8779,9 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Helps reduce CPU power consumption by throttling the CPU when not needed. "
-"Useful for handhelds."
-msgstr "在不需要的时候通过设置CPU性能墙来帮助降低CPU功耗，适用于移动设备。"
+"Helps reduce CPU power consumption by throttling idle threads. Recommended "
+"for handhelds."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -8707,10 +8837,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "High (99)"
 msgstr ""
-
-msgctxt "game_options"
-msgid "High (Default)"
-msgstr "高（默认）"
 
 msgctxt "game_options"
 msgid "High 720p"
@@ -8927,13 +9053,12 @@ msgid "Iceland"
 msgstr "冰岛"
 
 msgctxt "game_options"
-msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
-msgstr "如果游戏以30hz运行, PPSSPP将向显示器推送60帧."
+msgid "If a game crashes, try ASMJIT or Interpreter settings."
+msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"If game crashes, try ASMJIT. If still crashing, try Interpreter settings."
-msgstr ""
+msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
+msgstr "如果游戏以30hz运行, PPSSPP将向显示器推送60帧."
 
 msgctxt "game_options"
 msgid "If nothing is specified, will use ZTranslate by default."
@@ -8964,6 +9089,10 @@ msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr "改进了子画面缩放和渲染，不影响画面。"
+
+msgctxt "game_options"
+msgid "Improves clarity of distant angled textures."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
@@ -9000,7 +9129,7 @@ msgid ""
 msgstr "在某些游戏中可以解决严重的速度减慢问题, 但也可能导致图形问题."
 
 msgctxt "game_options"
-msgid "Inaccurate XFloat"
+msgid "Inaccurate"
 msgstr ""
 
 msgctxt "game_options"
@@ -9039,9 +9168,7 @@ msgid "Indonesian"
 msgstr "印度尼西亚"
 
 msgctxt "game_options"
-msgid ""
-"Initializes render target memory using vm memory. Some games need this to "
-"fix broken graphics."
+msgid "Infinite"
 msgstr ""
 
 msgctxt "game_options"
@@ -9083,6 +9210,10 @@ msgstr "整数缩放"
 msgctxt "game_options"
 msgid "Interlaced"
 msgstr "隔行扫描"
+
+msgctxt "game_options"
+msgid "Internal resolution scale relative to 720p base."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -9593,12 +9724,13 @@ msgid "LLE"
 msgstr "低级仿真层"
 
 msgctxt "game_options"
-msgid "LLVM Recompiler"
-msgstr "LLVM重组器"
+msgid "LLVM Recompiler (Default)"
+msgstr ""
 
 msgctxt "game_options"
-msgid "LLVM is fastest, use the Interpreter settings if there are issues."
-msgstr "LLVM是最快的，如果有问题，请使用解释器设置。"
+msgid ""
+"LLVM is fastest; use the Interpreter setting if there are stability issues."
+msgstr ""
 
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
@@ -9693,7 +9825,7 @@ msgid "Legacy Evdev"
 msgstr "传统Evdev"
 
 msgctxt "game_options"
-msgid "Legacy Recompiler (single-threaded)"
+msgid "Legacy Single Threaded"
 msgstr ""
 
 msgctxt "game_options"
@@ -9766,11 +9898,9 @@ msgstr "限制FPS以减少高CPU使用率。"
 
 msgctxt "game_options"
 msgid ""
-"Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. "
-"Leave on automatic if slowdown occurs."
+"Limiting to 1 or 2 threads can fix audio stuttering on lower core count "
+"CPUs. Leave on Auto (0) if slowdown occurs."
 msgstr ""
-"限制为1或2可能会修复某些游戏中较弱CPU上的音频卡顿问题。如果出现减速，则保持自"
-"动。"
 
 msgctxt "game_options"
 msgid "Linear"
@@ -10313,6 +10443,10 @@ msgid "Maximum"
 msgstr "最大"
 
 msgctxt "game_options"
+msgid "Maximum (150)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Maximum (175)"
 msgstr ""
 
@@ -10360,11 +10494,6 @@ msgstr "五月"
 
 msgctxt "game_options"
 msgid ""
-"May fix missing graphics and broken lighting at the cost of performance."
-msgstr "可能会以牺牲性能为代价修复丢失的图形和损坏的照明。"
-
-msgctxt "game_options"
-msgid ""
 "May fix missing or incorrect graphics in some games at a small performance "
 "cost."
 msgstr ""
@@ -10376,9 +10505,9 @@ msgstr "可能无法在所有硬件上正常工作。如果支持Hybrid的话，
 
 msgctxt "game_options"
 msgid ""
-"May provide performance gain on CPUs with low core/thread count at the "
-"expense of possible broken timings."
-msgstr "在核心/线程较少的CPU上可能会提供性能增益，但可能会以破坏时序为代价。"
+"May provide performance gains on CPUs with low core counts at the expense of "
+"possible broken timings."
+msgstr ""
 
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
@@ -10430,9 +10559,9 @@ msgstr "Mega STE ETOS 256k"
 
 msgctxt "game_options"
 msgid ""
-"Mega and Giga modes may improve performance. Use the Safe mode for maximum "
-"compatibility."
-msgstr "Mega和Giga模式可以提高性能，使用安全模式以实现最大兼容性。"
+"Mega and Giga modes may improve performance on powerful CPUs. Use Safe for "
+"maximum compatibility."
+msgstr ""
 
 msgctxt "game_options"
 msgid "MegaSD"
@@ -10497,6 +10626,10 @@ msgid "Merge"
 msgstr "合并"
 
 msgctxt "game_options"
+msgid "Method used to compile graphics shaders."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Mexico"
 msgstr "墨西哥"
 
@@ -10511,6 +10644,10 @@ msgstr "最小"
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "最小"
+
+msgctxt "game_options"
+msgid "Minimum (50)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Mirrored"
@@ -10545,8 +10682,8 @@ msgid "Model of emulated Apple II."
 msgstr "模拟Apple II的机型。"
 
 msgctxt "game_options"
-msgid "Moderate"
-msgstr "中等"
+msgid "Moderate (100)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
@@ -10587,10 +10724,6 @@ msgstr "兼容性更好"
 msgctxt "game_options"
 msgid "Morocco"
 msgstr "摩洛哥"
-
-msgctxt "game_options"
-msgid "Most games already have an internal framelimit. Minor performance cost."
-msgstr "大多数游戏已经有了内部帧限制。性能成本较小。"
 
 msgctxt "game_options"
 msgid "Most games use port 2, some use port 1."
@@ -10707,6 +10840,16 @@ msgstr "从南到西, 从西到北等, 仅限标准控制器类型."
 msgctxt "game_options"
 msgid "Much faster than interpreter (but may have issues)."
 msgstr "比解释器快得多（但可能有问题）"
+
+msgctxt "game_options"
+msgid "Multi-threaded"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Multi-threaded pad handler processes inputs on a dedicated worker thread to "
+"reduce input lag."
+msgstr ""
 
 msgctxt "game_options"
 msgid "N64"
@@ -10871,10 +11014,6 @@ msgstr "NTSC50"
 msgctxt "game_options"
 msgid "NTSYNC"
 msgstr "NT同步"
-
-msgctxt "game_options"
-msgid "NUMBER OF SHADER COMPILER THREADS"
-msgstr "着色器编译器线程数"
 
 msgctxt "game_options"
 msgid ""
@@ -11188,6 +11327,12 @@ msgid "Null"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Number of threads dedicated to compiling shaders in the background. 0 uses "
+"automatic detection."
+msgstr ""
+
+msgctxt "game_options"
 msgid "OCCLUSION QUERY MODE"
 msgstr ""
 
@@ -11252,8 +11397,8 @@ msgid "OSD PERFORMANCE POSITION"
 msgstr "OSD性能位置"
 
 msgctxt "game_options"
-msgid "OUTPUT SCALING"
-msgstr "输出比例"
+msgid "OUTPUT SCALING MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "OUTPUTS TCP PORT"
@@ -11300,6 +11445,10 @@ msgid "Off"
 msgstr "关闭"
 
 msgctxt "game_options"
+msgid "Off (0%)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Off (1x)"
 msgstr ""
 
@@ -11318,10 +11467,6 @@ msgstr "关闭（有噪音）"
 msgctxt "game_options"
 msgid "Off (None)"
 msgstr "关闭（无）"
-
-msgctxt "game_options"
-msgid "Off (faster, unstable)"
-msgstr "关闭（快速，不稳定）"
 
 msgctxt "game_options"
 msgid "Off at Start"
@@ -11346,9 +11491,9 @@ msgstr "通过模拟控制器和鼠标外观功能来改善控制."
 
 msgctxt "game_options"
 msgid ""
-"Offloads some RSX operations to a secondary thread. Improves performance in "
-"high-core processors."
-msgstr "将一些RSX操作转移到辅助线程中。可以提高在高核心处理器上的性能。"
+"Offloads RSX draw commands to a secondary thread. Improves performance on "
+"CPUs with 6+ threads."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Older games skipped drawing every second line, this masks that."
@@ -11407,16 +11552,8 @@ msgid "On with rewind support"
 msgstr "与倒带支持一并开启"
 
 msgctxt "game_options"
-msgid "Only Async (skip draw) avoids freezing while compiling shaders."
-msgstr "只有异步（跳过绘制）可以在编译着色器时避免冻结。"
-
-msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "仅过扫描区域"
-
-msgctxt "game_options"
-msgid "Only applicable when either Async Shader mode is set."
-msgstr "仅在设置了“异步着色器”模式时适用。"
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -11431,9 +11568,7 @@ msgid "Only for games that employed it (for Boktai)"
 msgstr "仅适用于使用它的游戏（适用于Boktai）"
 
 msgctxt "game_options"
-msgid ""
-"Only framebuffers greater than this size will be upscaled. May fix problems "
-"with missing graphics. (Default: 16)"
+msgid "Only framebuffers greater than this dimension will be upscaled."
 msgstr ""
 
 msgctxt "game_options"
@@ -11505,6 +11640,10 @@ msgid "OpenGLES (Default)"
 msgstr "OpenGLES（默认）"
 
 msgctxt "game_options"
+msgid "Operating System (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Optimized (auto)"
 msgstr "优化（自动）"
 
@@ -11515,6 +11654,10 @@ msgstr "橙色"
 msgctxt "game_options"
 msgid "Orange - Hokage Orange"
 msgstr "橙色-Hokage橙色"
+
+msgctxt "game_options"
+msgid "Ordered & Atomic"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Original"
@@ -11545,6 +11688,10 @@ msgid "Output rotation independent of xrandr or framebuffer settings."
 msgstr "输出旋转独立于xrandr或帧缓冲区设置。"
 
 msgctxt "game_options"
+msgid "Overclock emulated 3DS CPU to improve framerates or run 60 FPS mods."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
 msgstr "超频SNES的CPU（宇宙巡航3，Super R-Type）。"
 
@@ -11563,6 +11710,10 @@ msgstr "仅玩家1"
 msgctxt "game_options"
 msgid "P2 only"
 msgstr "仅玩家2"
+
+msgctxt "game_options"
+msgid "PAD HANDLER MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PADDLE ANALOG ABSOLUTE"
@@ -11897,12 +12048,20 @@ msgid "PS1 Digital Controller"
 msgstr "PS1数字控制器"
 
 msgctxt "game_options"
+msgid "PS3"
+msgstr ""
+
+msgctxt "game_options"
 msgid "PS3 CONTROLLER"
 msgstr "PS3控制器"
 
 msgctxt "game_options"
-msgid "PS3's internal ratio setting. Some games only support 16/9."
-msgstr "PS3的内部比例设置。有些游戏只支持16/9。"
+msgid "PS3 Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "PS3 internal aspect ratio setting."
+msgstr ""
 
 msgctxt "game_options"
 msgid "PS4 PRO MODE"
@@ -12083,12 +12242,6 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Perform presentation on separate threads. Improves performance when using "
-"Vulkan in most applications. Adds ~1 frame of input lag."
-msgstr ""
-
-msgctxt "game_options"
 msgid "Performance"
 msgstr "性能"
 
@@ -12143,6 +12296,10 @@ msgstr "播放（默认）"
 msgctxt "game_options"
 msgid "Play a coin drop sound effect when an insert coin button is pressed"
 msgstr "按下投币按钮时播放硬币掉落音效"
+
+msgctxt "game_options"
+msgid "Play custom user level."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Play this game on several screens (if available)"
@@ -12321,8 +12478,8 @@ msgid "Power Saver"
 msgstr "节能优化"
 
 msgctxt "game_options"
-msgid "Precise (Slowest)(Default)"
-msgstr "精确（最慢）（默认）"
+msgid "Precise (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Prefer \"Before NMI\", change to After NMI only if needed by the game."
@@ -12335,10 +12492,6 @@ msgstr "预加载"
 msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "预加载需要更多的RAM。"
-
-msgctxt "game_options"
-msgid "Preloading is impossible from ES."
-msgstr "无法从ES进行预加载。"
 
 msgctxt "game_options"
 msgid ""
@@ -12543,6 +12696,10 @@ msgid "READ COLOR BUFFERS"
 msgstr ""
 
 msgctxt "game_options"
+msgid "READ DEPTH BUFFERS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "READ FRAMEBUFFER EVERY FRAME (GLIDE64MK2)"
 msgstr "读取每个帧的帧缓冲区（GLIDE64MK2）"
 
@@ -12607,10 +12764,6 @@ msgid "RENDER RESOLUTION (SCALING)"
 msgstr "渲染分辨率（缩放）"
 
 msgctxt "game_options"
-msgid "RENDER RESOLUTION SCALE THRESHOLD"
-msgstr ""
-
-msgctxt "game_options"
 msgid "RENDER SCALE"
 msgstr ""
 
@@ -12657,6 +12810,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "RESOLUTION MULTIPLIER"
 msgstr "分辨率倍增器"
+
+msgctxt "game_options"
+msgid "RESOLUTION SCALE THRESHOLD"
+msgstr ""
 
 msgctxt "game_options"
 msgid "REWIND"
@@ -12735,8 +12892,20 @@ msgid "ROTATION"
 msgstr "旋转"
 
 msgctxt "game_options"
+msgid "RPCS3 Alternative Scheduler"
+msgstr ""
+
+msgctxt "game_options"
+msgid "RPCS3 Scheduler"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RSP PLUGIN"
 msgstr "RSP插件"
+
+msgctxt "game_options"
+msgid "RSX FIFO FETCH ACCURACY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "RUMBLE"
@@ -12767,6 +12936,14 @@ msgid "Raw"
 msgstr "Raw"
 
 msgctxt "game_options"
+msgid "Reads color buffer memory into CPU space. Required by some titles."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Reads depth buffer values into CPU memory."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Real Wiimote"
 msgstr "WiiMote实体设备"
 
@@ -12787,20 +12964,12 @@ msgid "Reduce load time at the cost of accuracy."
 msgstr "以准确性为代价，减少加载时间。"
 
 msgctxt "game_options"
-msgid ""
-"Reduce stutter that happens when compiling shaders. Requires hardware shader "
-"to be enabled."
+msgid "Reduces audio crackle and stutter."
 msgstr ""
 
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the preceived color depth."
 msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Reduces crackle and stutter further, but may cause a very noticeable "
-"reduction in audio quality on slower CPUs."
-msgstr "进一步减少了噼啪声和卡顿，但在较慢的CPU上可能会导致音频质量显著降低。"
 
 msgctxt "game_options"
 msgid "Reduces wobbly polygons & warping textures."
@@ -12811,12 +12980,12 @@ msgid "Regular Bilnear"
 msgstr "常规双线性"
 
 msgctxt "game_options"
-msgid "Relaxed (Fastest)"
-msgstr "轻松（最快）"
+msgid "Relaxed"
+msgstr ""
 
 msgctxt "game_options"
-msgid "Relaxed XFloat"
-msgstr "低精度 XFloat"
+msgid "Relaxed (Fastest)"
+msgstr "轻松（最快）"
 
 msgctxt "game_options"
 msgid "Relay Brasileiro (Sao Paulo Brazil)"
@@ -13313,16 +13482,20 @@ msgid "SHADER CACHE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SHADER COMPILATION MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SHADER COMPILER THREADS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SHADER JIT"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SHADER MODE"
-msgstr "着色器模式"
-
-msgctxt "game_options"
-msgid "SHADER QUALITY"
-msgstr "着色器质量"
+msgid "SHADER PRECISION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SHADER SET"
@@ -13573,8 +13746,8 @@ msgid "SPU LOOP DETECTION"
 msgstr "SPU循环检测"
 
 msgctxt "game_options"
-msgid "SPU XFloat Accuracy"
-msgstr "SPU XFloat 精度"
+msgid "SPU XFLOAT ACCURACY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SSAA Multiplier"
@@ -13802,6 +13975,10 @@ msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
 msgstr "搜索自定义配置的操纵杆配置文件。"
 
+msgctxt "game_options"
+msgid "Second Empire"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Secondary attack"
 msgstr "次要攻击"
@@ -13810,6 +13987,10 @@ msgctxt "game_options"
 msgid ""
 "Seconds a texture should be unused before it is eligible for deletion when "
 "above the soft limit."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Secret Planet"
 msgstr ""
 
 msgctxt "game_options"
@@ -13831,6 +14012,12 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Select"
 msgstr "选择"
+
+msgctxt "game_options"
+msgid ""
+"Select CPU scheduler mode. RPCS3 Alternative Scheduler can improve frame "
+"pacing on ARM big.LITTLE architectures."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Select a boot disk or hard drive if needed"
@@ -13957,6 +14144,12 @@ msgid ""
 msgstr "选择模拟的硬件架构和机器类型."
 
 msgctxt "game_options"
+msgid ""
+"Select the graphics rendering backend (requires New3D engine). Vulkan can "
+"provide improved performance and lower CPU overhead on supported GPUs."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Select the input type to navigate the touch screen"
 msgstr "选择用以操作触摸屏的输入类型"
 
@@ -14055,6 +14248,11 @@ msgstr "使用鼠标控制拨杆键时的灵敏度​."
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "单独窗口"
+
+msgctxt "game_options"
+msgid ""
+"Separate display presentation from emulation threads (best with Vulkan)."
+msgstr ""
 
 msgctxt "game_options"
 msgid "September"
@@ -14446,6 +14644,10 @@ msgid "Simplified Chinese"
 msgstr "简体中文"
 
 msgctxt "game_options"
+msgid "Simulate CRT effects for a retro look."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Simulate LCD color inaccuracy."
 msgstr "模拟LCD颜色不准确。"
 
@@ -14503,6 +14705,10 @@ msgstr "单个"
 
 msgctxt "game_options"
 msgid "Single Screen Only"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Single-threaded (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -14672,6 +14878,10 @@ msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "基于角度平滑远处3D对象上的纹理。"
 
 msgctxt "game_options"
+msgid "Smooths jagged geometry edges."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Smooths out textures on 3D objects."
 msgstr "平滑3D对象上的纹理。"
 
@@ -14710,12 +14920,6 @@ msgid ""
 "Software mode is faster and more accurate, while OpenGL mode supports "
 "scaling 3D graphics."
 msgstr "软件模式更快更准确，而OpenGL模式支持缩放3D图形。"
-
-msgctxt "game_options"
-msgid ""
-"Some applications requires this to be enabled for the hardware shader to "
-"render properly. However this would reduce performance in most applications."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Some games accept input from port 2 instead of port 1."
@@ -14942,6 +15146,10 @@ msgid "Start game"
 msgstr "开始游戏"
 
 msgctxt "game_options"
+msgid "Starts RPCS3 with the main Qt GUI active."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Static Interpreter"
 msgstr "静态解释器"
 
@@ -14991,21 +15199,14 @@ msgstr "攻击右边"
 
 msgctxt "game_options"
 msgid ""
-"Straict API specification. Can resolve rare cases of missing graphics and "
-"flickering."
-msgstr "严格的API规范。可以解决图形丢失和闪烁的罕见情况。"
-
-msgctxt "game_options"
-msgid ""
-"Stream texture to GPU in parrallel. Can improve performance on more powerful "
-"GPU's that have spare headroom."
-msgstr ""
-"并行将纹理流传输到GPU。 这可以提高在具有剩余空间的更强大的GPU上的性能。"
-
-msgctxt "game_options"
-msgid ""
 "Streaming Optimal Playable Settings, overrides other settings if enabled."
 msgstr "流媒体最佳播放设置，如果启用，将覆盖其他设置。"
+
+msgctxt "game_options"
+msgid ""
+"Streams textures to the GPU concurrently. Can improve framerate consistency "
+"on Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Stretch"
@@ -15014,6 +15215,10 @@ msgstr "拉伸"
 msgctxt "game_options"
 msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr "将游戏扩展到全屏，但可能会扭曲纵横比"
+
+msgctxt "game_options"
+msgid "Stretch image output to fill the window/screen."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -15180,6 +15385,14 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Synchronize frame presentation with monitor refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synchronize framerate with display refresh rate."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Syria"
 msgstr "叙利亚"
 
@@ -15322,6 +15535,10 @@ msgstr "高级纹理等级"
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING TYPE"
 msgstr "纹理放大类型"
+
+msgctxt "game_options"
+msgid "THREAD SCHEDULER MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "THREADED 3D"
@@ -15568,10 +15785,6 @@ msgstr "泰语"
 msgctxt "game_options"
 msgid "Thailand"
 msgstr "泰国"
-
-msgctxt "game_options"
-msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
-msgstr "New 3DS有更快的处理器、ZL/ZR按钮和一个C摇杆。"
 
 msgctxt "game_options"
 msgid ""
@@ -16172,6 +16385,12 @@ msgid "Uncapped"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Underclocking CPU target speed can achieve full-speed gameplay on low-power "
+"or ARM systems."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Undocked"
 msgstr "未连接"
 
@@ -16254,6 +16473,10 @@ msgid "Upscale the rendering resolution to match the display size."
 msgstr ""
 
 msgctxt "game_options"
+msgid "Upscaling filter applied when displaying the render buffer."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Upscaling filter used for 2D UI layers and backgrounds. Requires New 3D "
 "engine."
@@ -16270,14 +16493,6 @@ msgstr "乌拉圭"
 msgctxt "keys_files"
 msgid "Use"
 msgstr "使用"
-
-msgctxt "game_options"
-msgid ""
-"Use 16 bit audio samples for audio drivers that don't support 32bit. Only "
-"use if you get no audio."
-msgstr ""
-"对于不支持32位音频的音频驱动程序，可以使用16位音频样本。 只有在没有音频输出的"
-"情况下才应该使用此选项。"
 
 msgctxt "game_options"
 msgid "Use 1:1 aspect."
@@ -16298,6 +16513,10 @@ msgstr "跟随主机"
 msgctxt "keys_files"
 msgid "Use Inventory Item"
 msgstr "使用物品"
+
+msgctxt "game_options"
+msgid "Use JIT compiler for shader emulation."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Use MAME software lists to identify ROM"
@@ -16384,12 +16603,6 @@ msgid ""
 "Use preemptive frames instead of run-ahead. Only runs ahead when controller "
 "state changes."
 msgstr "使用抢占帧机制代替提前运行帧数机制，该机制只有在控制器状态改变时生效."
-
-msgctxt "game_options"
-msgid ""
-"Use the JIT engine instead of the interpreter for software shader emulation. "
-"Enable this for better performance."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Use the original fonts instead of the built in font."
@@ -16632,6 +16845,10 @@ msgid "VSYNC FPS LIMIT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "VSYNC MODE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "VSync"
 msgstr ""
 
@@ -16646,6 +16863,10 @@ msgstr "VTech V.Smile Motion 卡带"
 msgctxt "game_options"
 msgid "VTech V.Smile cartridges"
 msgstr "VTech V.Smile 卡带"
+
+msgctxt "game_options"
+msgid "Valentine"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Value to use for the emulated solar sensor (Boktai)."
@@ -16718,6 +16939,10 @@ msgstr "虚拟"
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
 msgstr "虚拟键盘"
+
+msgctxt "game_options"
+msgid "Volcano Temple"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
@@ -16875,6 +17100,10 @@ msgctxt "keys_files"
 msgid "Walk forward"
 msgstr "向前走"
 
+msgctxt "game_options"
+msgid "Walkers World"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Weapon drop"
 msgstr "武器掉落"
@@ -17007,9 +17236,9 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Writes depth buffer values to VM memory. Some games need this to fix broken "
-"graphics."
-msgstr "将深度缓冲区值写入VM内存. 有些游戏需要这个来修复损坏的图形."
+"Writes depth buffer values to VM memory. Fixes occlusion issues in some "
+"games."
+msgstr ""
 
 msgctxt "game_options"
 msgid "X"
@@ -17525,8 +17754,16 @@ msgstr "黄色/蓝色"
 #~ msgstr "1000（默认）"
 
 #~ msgctxt "game_options"
+#~ msgid "100ms (Default)"
+#~ msgstr "100毫秒（默认）"
+
+#~ msgctxt "game_options"
 #~ msgid "105% (Use caution"
 #~ msgstr "105%（小心）"
+
+#~ msgctxt "game_options"
+#~ msgid "10ms"
+#~ msgstr "10毫秒"
 
 #~ msgctxt "game_options"
 #~ msgid "10x Native (6400x5280)"
@@ -17553,6 +17790,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "120%（你疯了吗？）"
 
 #~ msgctxt "game_options"
+#~ msgid "120ms"
+#~ msgstr "120毫秒"
+
+#~ msgctxt "game_options"
 #~ msgid "125% (Yes, you're crazy)"
 #~ msgstr "125%（是的，你疯了）"
 
@@ -17563,6 +17804,18 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "130% (Nope, you're just insane!)"
 #~ msgstr "130%（你完全疯了！）"
+
+#~ msgctxt "game_options"
+#~ msgid "140ms"
+#~ msgstr "140毫秒"
+
+#~ msgctxt "game_options"
+#~ msgid "160ms"
+#~ msgstr "160毫秒"
+
+#~ msgctxt "game_options"
+#~ msgid "16:9 (default)"
+#~ msgstr "16:9（默认）"
 
 #~ msgctxt "game_options"
 #~ msgid "16x (CSAA)"
@@ -17581,6 +17834,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "16xQ（CSAA抗锯齿）"
 
 #~ msgctxt "game_options"
+#~ msgid "180ms"
+#~ msgstr "180毫秒"
+
+#~ msgctxt "game_options"
 #~ msgid "1x (~480)"
 #~ msgstr "1x（~480）"
 
@@ -17589,8 +17846,16 @@ msgstr "黄色/蓝色"
 #~ msgstr "2.5x 1080p（1600x1320）"
 
 #~ msgctxt "game_options"
+#~ msgid "220ms"
+#~ msgstr "220毫秒"
+
+#~ msgctxt "game_options"
 #~ msgid "240fps"
 #~ msgstr "240帧"
+
+#~ msgctxt "game_options"
+#~ msgid "240ms"
+#~ msgstr "240毫秒"
 
 #~ msgctxt "game_options"
 #~ msgid "244fps"
@@ -17615,6 +17880,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "3x Native (1920x1584) for 1080p"
 #~ msgstr "3倍原生 (1920x1584) for 1080p"
+
+#~ msgctxt "game_options"
+#~ msgid "40ms"
+#~ msgstr "40毫秒"
 
 #~ msgctxt "game_options"
 #~ msgid "4x (SSAA)"
@@ -17645,6 +17914,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "60帧（默认）"
 
 #~ msgctxt "game_options"
+#~ msgid "60ms"
+#~ msgstr "60毫秒"
+
+#~ msgctxt "game_options"
 #~ msgid "6x Native (3840x3168) for 4K"
 #~ msgstr "6倍原生 (3840x3168) for 4K"
 
@@ -17659,6 +17932,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "7x Native (4480x3696)"
 #~ msgstr "7倍原生 (4480x3696)"
+
+#~ msgctxt "game_options"
+#~ msgid "80ms"
+#~ msgstr "80毫秒"
 
 #~ msgctxt "game_options"
 #~ msgid "8x (CSAA)"
@@ -17701,6 +17978,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "加速度计"
 
 #~ msgctxt "game_options"
+#~ msgid "ADDITIONAL FRAMELIMIT"
+#~ msgstr "附加帧限制"
+
+#~ msgctxt "game_options"
 #~ msgid "ALT INPUT MAPPING"
 #~ msgstr "ALT输入映射"
 
@@ -17717,12 +17998,24 @@ msgstr "黄色/蓝色"
 #~ msgstr "AMD FidelityFX（仅Vulkan）"
 
 #~ msgctxt "game_options"
+#~ msgid "ANISOTROPIC FILTER"
+#~ msgstr "各向异性过滤"
+
+#~ msgctxt "game_options"
 #~ msgid "ASCI"
 #~ msgstr "ASCI"
 
 #~ msgctxt "game_options"
+#~ msgid "AUDIO BUFFER DURATION"
+#~ msgstr "音频缓冲持续时间"
+
+#~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "自动高度"
+
+#~ msgctxt "game_options"
+#~ msgid "Accurate XFloat"
+#~ msgstr "精确 XFloat"
 
 #~ msgctxt "game_options"
 #~ msgid "Add debug logging to help troubleshoot issues."
@@ -17771,6 +18064,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "允许wine访问原始输入输出端口 (usb, parallel, ...)"
 
 #~ msgctxt "game_options"
+#~ msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
+#~ msgstr "允许Alt+Tab键进入RPCS3的菜单。用于手动更换光盘。"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Allows reducing the visual quality of these curves for higher "
 #~ "performance.."
@@ -17795,6 +18092,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Any"
 #~ msgstr "任何"
+
+#~ msgctxt "game_options"
+#~ msgid "Approximate XFloat"
+#~ msgstr "近似 XFloat"
 
 #~ msgctxt "game_options"
 #~ msgid "Area Sampling"
@@ -17827,6 +18128,11 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Bring up menu"
 #~ msgstr "调出菜单"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Buffer fill level (in percentage) below which time stretching will start."
+#~ msgstr "缓冲区填充级别（百分比），低于该级别将开始时间拉伸。"
 
 #~ msgctxt "keys_files"
 #~ msgid "Button L"
@@ -17869,8 +18175,26 @@ msgstr "黄色/蓝色"
 #~ msgstr "类似CRT的色彩适应, 需要新的3D引擎."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Can fix bugs in some games. Only relevant for dynamic or LLVM SPU decoder."
+#~ msgstr "可以修复某些游戏中的错误。仅与动态或LLVM SPU解码器相关。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Can fix screen tearing on unorthodox displays (most LCDs don't need this)."
+#~ msgstr "可以修复非传统显示屏上的屏幕撕裂（大多数液晶显示器不需要此功能）。"
+
+#~ msgctxt "game_options"
 #~ msgid "Can improve frame rate and responsiveness."
 #~ msgstr "可以提高帧率和响应性。"
+
+#~ msgctxt "game_options"
+#~ msgid "Can improve performance at the expense of graphics accuracy."
+#~ msgstr "可以以牺牲图形准确性为代价来提高性能。"
+
+#~ msgctxt "game_options"
+#~ msgid "Can reduce crackle and stutter but increases audio latency."
+#~ msgstr "可以减少裂纹和卡顿，但增加音频延迟。"
 
 #~ msgctxt "game_options"
 #~ msgid "Center (Default)"
@@ -17887,6 +18211,16 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Change the speed of the emulated PowerPC chip (fixes some issues)."
 #~ msgstr "更改模拟PowerPC芯片的速度（能修复一些问题）。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Changes the sleep period accuracy. Some games need this set to improve "
+#~ "performance."
+#~ msgstr "更改睡眠时间的准确性. 有些游戏需要这套来提高性能."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose number of audio channels."
+#~ msgstr "选择音频通道的数量。"
 
 #~ msgctxt "game_options"
 #~ msgid "Choose the Dreamcast console language."
@@ -17953,6 +18287,13 @@ msgstr "黄色/蓝色"
 #~ "Compile shaders on next launch of game (one time). Reduces micro-freezes."
 #~ msgstr "在下次启动游戏时编译着色器（仅限一次）。可以减少细微卡顿。"
 
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Compile shaders using background threads to avoid shader compilation "
+#~ "stutter. May cause graphical glitches."
+#~ msgstr ""
+#~ "使用后台线程编译着色器以避免着色器编译造成的卡顿，可能会导致图形故障。"
+
 #~ msgctxt "keys_files"
 #~ msgid "Configuration menu"
 #~ msgstr "配置菜单"
@@ -17964,6 +18305,12 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Continue/Pause emulation"
 #~ msgstr "继续/暂停模拟器"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Controls precision of generated shaders. Low quality can improved "
+#~ "performance."
+#~ msgstr "控制生成的着色器精度。低质量可以提高性能。"
 
 #~ msgctxt "keys_files"
 #~ msgid "Cycle next"
@@ -18002,6 +18349,12 @@ msgstr "黄色/蓝色"
 #~ msgstr "禁用UI提示"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Disables the vertex cache. Might resolve missing or flickering graphics "
+#~ "output but degrade performance."
+#~ msgstr "禁用顶点缓存。可能会解决丢失或闪烁的图形输出，但会降低性能。"
+
+#~ msgctxt "game_options"
 #~ msgid "Disbaled (Default)"
 #~ msgstr "禁用（默认）"
 
@@ -18020,6 +18373,21 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Disposition B"
 #~ msgstr "布置B"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Distorts the output to fill the display fully Overrides aspect ratio."
+#~ msgstr "扭曲输出以充分填充显示屏覆盖纵横比。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Duration of audio buffer in milliseconds. Higher numbers may cause audio "
+#~ "latency."
+#~ msgstr "音频缓冲区的持续时间，以毫秒计。较高的数字可能会导致音频延迟。"
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE ASYNC SHADER COMPILATION"
+#~ msgstr "启用异步着色器编译"
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE BILINEAR FILTER"
@@ -18237,10 +18605,6 @@ msgstr "黄色/蓝色"
 #~ msgstr "强制管理"
 
 #~ msgctxt "game_options"
-#~ msgid "FRAME LIMIT"
-#~ msgstr "帧限制"
-
-#~ msgctxt "game_options"
 #~ msgid "FRAMERATE"
 #~ msgstr "帧速率"
 
@@ -18267,6 +18631,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Fill Screen"
 #~ msgstr "填充屏幕"
+
+#~ msgctxt "game_options"
+#~ msgid "Final image filtering."
+#~ msgstr "最终图像过滤。"
 
 #~ msgctxt "game_options"
 #~ msgid "Fit Screen"
@@ -18375,6 +18743,12 @@ msgstr "黄色/蓝色"
 #~ msgstr "有助于将国际日语版本强制转换为英语, 解锁更多欧洲语言等."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Helps reduce CPU power consumption by throttling the CPU when not needed. "
+#~ "Useful for handhelds."
+#~ msgstr "在不需要的时候通过设置CPU性能墙来帮助降低CPU功耗，适用于移动设备。"
+
+#~ msgctxt "game_options"
 #~ msgid "Helps some games to launch when disabled. May affect performance."
 #~ msgstr "在禁用时有助于某些游戏的启动. 可能会影响性能."
 
@@ -18389,6 +18763,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
 #~ msgstr "在支持的游戏中隐藏十字光标，例如ActionMax。"
+
+#~ msgctxt "game_options"
+#~ msgid "High (Default)"
+#~ msgstr "高（默认）"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18455,6 +18833,14 @@ msgstr "黄色/蓝色"
 #~ msgid "LINEAR FILTERING"
 #~ msgstr "线性滤波"
 
+#~ msgctxt "game_options"
+#~ msgid "LLVM Recompiler"
+#~ msgstr "LLVM重组器"
+
+#~ msgctxt "game_options"
+#~ msgid "LLVM is fastest, use the Interpreter settings if there are issues."
+#~ msgstr "LLVM是最快的，如果有问题，请使用解释器设置。"
+
 #~ msgctxt "keys_files"
 #~ msgid "Left Flipper"
 #~ msgstr "左翻转器"
@@ -18474,6 +18860,14 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Legacy (single threaded)"
 #~ msgstr "传统（单线程）"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. "
+#~ "Leave on automatic if slowdown occurs."
+#~ msgstr ""
+#~ "限制为1或2可能会修复某些游戏中较弱CPU上的音频卡顿问题。如果出现减速，则保"
+#~ "持自动。"
 
 #~ msgctxt "keys_files"
 #~ msgid "Load State"
@@ -18505,9 +18899,27 @@ msgstr "黄色/蓝色"
 #~ "monitor refresh rate."
 #~ msgstr "手动设置每秒VSYNC帧数。 理想情况下这应该与您的显示器刷新率相匹配。"
 
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "May fix missing graphics and broken lighting at the cost of performance."
+#~ msgstr "可能会以牺牲性能为代价修复丢失的图形和损坏的照明。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "May provide performance gain on CPUs with low core/thread count at the "
+#~ "expense of possible broken timings."
+#~ msgstr ""
+#~ "在核心/线程较少的CPU上可能会提供性能增益，但可能会以破坏时序为代价。"
+
 #~ msgctxt "keys_files"
 #~ msgid "Mech Tilt"
 #~ msgstr "机械倾斜"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Mega and Giga modes may improve performance. Use the Safe mode for "
+#~ "maximum compatibility."
+#~ msgstr "Mega和Giga模式可以提高性能，使用安全模式以实现最大兼容性。"
 
 #~ msgctxt "keys_files"
 #~ msgid "Menu N"
@@ -18525,6 +18937,15 @@ msgstr "黄色/蓝色"
 #~ msgid "Microphone"
 #~ msgstr "麦克风"
 
+#~ msgctxt "game_options"
+#~ msgid "Moderate"
+#~ msgstr "中等"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Most games already have an internal framelimit. Minor performance cost."
+#~ msgstr "大多数游戏已经有了内部帧限制。性能成本较小。"
+
 #~ msgctxt "keys_files"
 #~ msgid "Move Backward"
 #~ msgstr "向后移动"
@@ -18540,6 +18961,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "N64 (Limited Hotkeys)"
 #~ msgstr "N64（有限热键）"
+
+#~ msgctxt "game_options"
+#~ msgid "NUMBER OF SHADER COMPILER THREADS"
+#~ msgstr "着色器编译器线程数"
 
 #~ msgctxt "game_options"
 #~ msgid "Native (640x528)"
@@ -18578,12 +19003,26 @@ msgstr "黄色/蓝色"
 #~ msgstr "输出重采样"
 
 #~ msgctxt "game_options"
+#~ msgid "OUTPUT SCALING"
+#~ msgstr "输出比例"
+
+#~ msgctxt "game_options"
 #~ msgid "Off (default)"
 #~ msgstr "关闭（默认）"
 
 #~ msgctxt "game_options"
+#~ msgid "Off (faster, unstable)"
+#~ msgstr "关闭（快速，不稳定）"
+
+#~ msgctxt "game_options"
 #~ msgid "Off will help some games, others will run too fast."
 #~ msgstr "关闭将有助于某些游戏，而其他游戏则会跑得太快。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Offloads some RSX operations to a secondary thread. Improves performance "
+#~ "in high-core processors."
+#~ msgstr "将一些RSX操作转移到辅助线程中。可以提高在高核心处理器上的性能。"
 
 #~ msgctxt "game_options"
 #~ msgid "On screen 3 if available"
@@ -18592,6 +19031,14 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Only A1"
 #~ msgstr "只有A1"
+
+#~ msgctxt "game_options"
+#~ msgid "Only Async (skip draw) avoids freezing while compiling shaders."
+#~ msgstr "只有异步（跳过绘制）可以在编译着色器时避免冻结。"
+
+#~ msgctxt "game_options"
+#~ msgid "Only applicable when either Async Shader mode is set."
+#~ msgstr "仅在设置了“异步着色器”模式时适用。"
 
 #~ msgctxt "game_options"
 #~ msgid "Only applicable when using OpenGL."
@@ -18680,6 +19127,10 @@ msgstr "黄色/蓝色"
 #~ msgstr "PS3 控制器7"
 
 #~ msgctxt "game_options"
+#~ msgid "PS3's internal ratio setting. Some games only support 16/9."
+#~ msgstr "PS3的内部比例设置。有些游戏只支持16/9。"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Part of the host texture memory budget (in megabytes) that will be scaled "
 #~ "by the current drawing resolution scale."
@@ -18718,8 +19169,16 @@ msgstr "黄色/蓝色"
 #~ msgstr "撞针杆"
 
 #~ msgctxt "game_options"
+#~ msgid "Precise (Slowest)(Default)"
+#~ msgstr "精确（最慢）（默认）"
+
+#~ msgctxt "game_options"
 #~ msgid "Precise Interpreter"
 #~ msgstr "精确解释器"
+
+#~ msgctxt "game_options"
+#~ msgid "Preloading is impossible from ES."
+#~ msgstr "无法从ES进行预加载。"
 
 #~ msgctxt "keys_files"
 #~ msgid "Press N for Novice"
@@ -18789,11 +19248,22 @@ msgstr "黄色/蓝色"
 
 #~ msgctxt "game_options"
 #~ msgid ""
+#~ "Reduces crackle and stutter further, but may cause a very noticeable "
+#~ "reduction in audio quality on slower CPUs."
+#~ msgstr ""
+#~ "进一步减少了噼啪声和卡顿，但在较慢的CPU上可能会导致音频质量显著降低。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
 #~ "Refresh state of memory pages to enable gpu written data. (Use for 'Team "
 #~ "Ninja' Games to fix missing character models)."
 #~ msgstr ""
 #~ "刷新内存页面状态以启用gpu写入数据。（用于“Team Ninja”游戏以修复缺失的角色"
 #~ "模型）。"
+
+#~ msgctxt "game_options"
+#~ msgid "Relaxed XFloat"
+#~ msgstr "低精度 XFloat"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18854,6 +19324,18 @@ msgstr "黄色/蓝色"
 #~ msgstr ""
 #~ "启动器可以简化运行Windows游戏的兼容性。如果选择自定义，你必须将启动器放"
 #~ "在 /userdata/system/wine/custom 目录下。"
+
+#~ msgctxt "game_options"
+#~ msgid "SHADER MODE"
+#~ msgstr "着色器模式"
+
+#~ msgctxt "game_options"
+#~ msgid "SHADER QUALITY"
+#~ msgstr "着色器质量"
+
+#~ msgctxt "game_options"
+#~ msgid "SPU XFloat Accuracy"
+#~ msgstr "SPU XFloat 精度"
 
 #~ msgctxt "game_options"
 #~ msgid "SSAA"
@@ -18982,6 +19464,19 @@ msgstr "黄色/蓝色"
 #~ msgstr "向右闪避"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Straict API specification. Can resolve rare cases of missing graphics and "
+#~ "flickering."
+#~ msgstr "严格的API规范。可以解决图形丢失和闪烁的罕见情况。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's that have spare headroom."
+#~ msgstr ""
+#~ "并行将纹理流传输到GPU。 这可以提高在具有剩余空间的更强大的GPU上的性能。"
+
+#~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
 #~ msgstr "拉伸到窗口"
 
@@ -19022,6 +19517,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Take a screenshot"
 #~ msgstr "截屏"
+
+#~ msgctxt "game_options"
+#~ msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
+#~ msgstr "New 3DS有更快的处理器、ZL/ZR按钮和一个C摇杆。"
 
 #~ msgctxt "game_options"
 #~ msgid "The image will be softer which could help with aliasing."
@@ -19138,6 +19637,14 @@ msgstr "黄色/蓝色"
 
 #~ msgctxt "game_options"
 #~ msgid ""
+#~ "Use 16 bit audio samples for audio drivers that don't support 32bit. Only "
+#~ "use if you get no audio."
+#~ msgstr ""
+#~ "对于不支持32位音频的音频驱动程序，可以使用16位音频样本。 只有在没有音频输"
+#~ "出的情况下才应该使用此选项。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
 #~ "Use L2/R2 for Accel/Brake and L1/R1 or R-stick Up/Down for Shift Up/Down."
 #~ msgstr "使用L2/R2进行加速/制动，使用L1/R1或右摇杆上/下进行升档/降档."
 
@@ -19202,6 +19709,12 @@ msgstr "黄色/蓝色"
 #~ "When the Backglass is activated, display the small additional part with "
 #~ "the scores."
 #~ msgstr "当背景玻璃激活，显示带有分数的小附加部分。"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Writes depth buffer values to VM memory. Some games need this to fix "
+#~ "broken graphics."
+#~ msgstr "将深度缓冲区值写入VM内存. 有些游戏需要这个来修复损坏的图形."
 
 #~ msgctxt "game_options"
 #~ msgid "X-INPUT"
