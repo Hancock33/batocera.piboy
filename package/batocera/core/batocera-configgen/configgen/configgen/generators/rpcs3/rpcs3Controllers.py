@@ -1,15 +1,13 @@
 from __future__ import annotations
 
-import codecs
 import logging
+from pathlib import Path
 from typing import TYPE_CHECKING, Final, TypedDict
 
 from ...batoceraPaths import mkdir_if_not_exists
 from .rpcs3Paths import RPCS3_CONFIG_DIR
 
 if TYPE_CHECKING:
-    from pathlib import Path
-
     from ...controller import Controllers
     from ...Emulator import Emulator
 
@@ -316,7 +314,7 @@ def generateControllerConfig(system: Emulator, controllers: Controllers, rom: Pa
     # Lightgun arcade titles are driven through the keyboard (two players on one keyboard).
     if keyboard:
         configFileName = _RPCS3_INPUT_DIR / "Default.yml"
-        with codecs.open(str(configFileName), "w", encoding="utf_8_sig") as f:
+        with Path(configFileName).open("w", encoding="utf-8-sig") as f:
             f.write(_ARCADE_KEYBOARD_CONFIG)
         return
 
@@ -370,7 +368,7 @@ def generateControllerConfig(system: Emulator, controllers: Controllers, rom: Pa
     controller_counts = {}
 
     configFileName = _RPCS3_INPUT_DIR / "Default.yml"
-    with codecs.open(str(configFileName), "w", encoding="utf_8_sig") as f:
+    with Path(configFileName).open("w", encoding="utf-8-sig") as f:
         for nplayer, pad in enumerate(controllers[:7], start=1):
             _logger.debug("Controller #%s - %s", nplayer, pad.guid)
             # check for DualShock / DualSense
