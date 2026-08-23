@@ -58,7 +58,6 @@ _player_controllers_lock = threading.Lock()
 _active_player_controllers = []
 # Global reference to the evmapy configurator instance
 _evmapy_instance = None
-arch = None
 
 def main(args: argparse.Namespace, maxnbplayers: int) -> int:
     original_rom = args.rom
@@ -200,6 +199,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
                 callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
 
+                arch = None
                 f=Path('/usr/share/batocera/batocera.arch').open()
                 arch=f.readline().strip('\n')
                 if 'x86_64' in arch:
