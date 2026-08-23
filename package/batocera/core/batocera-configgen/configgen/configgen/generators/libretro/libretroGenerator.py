@@ -5,7 +5,6 @@ import itertools
 import logging
 import os
 import shutil
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -34,6 +33,7 @@ from .libretroPaths import (
 )
 
 if TYPE_CHECKING:
+    from pathlib import Path
     from ...Emulator import Emulator
     from ...types import HotkeysContext
 
