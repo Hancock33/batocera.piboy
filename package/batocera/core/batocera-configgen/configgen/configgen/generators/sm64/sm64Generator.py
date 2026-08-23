@@ -19,9 +19,8 @@ class Sm64Generator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         commandArray = ["sm64.eu", "--gamedir", "./", '--savepath', eu_dir]
 
-        if str(rom).lower().endswith('.e64'):
-            if not pathlib.Path(eu_dir).exists():
-                pathlib.Path(eu_dir).mkdir()
+        if str(rom).lower().endswith('.e64') and not pathlib.Path(eu_dir).exists():
+            pathlib.Path(eu_dir).mkdir()
 
         if str(rom).lower().endswith('.j64'):
             if not pathlib.Path(jp_dir).exists():
