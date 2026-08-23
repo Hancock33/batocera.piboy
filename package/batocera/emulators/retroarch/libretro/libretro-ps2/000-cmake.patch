@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index 7c189247b..10d81e4ea 100644
+index f3dee7e90..9d36750da 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -583,7 +583,7 @@ include Makefile.common
+@@ -589,7 +589,7 @@ include Makefile.common
  # isa_native -- byte-identical to the historical single-ISA core build.
  #
  # Declared before first use below.
@@ -12,10 +12,10 @@ index 7c189247b..10d81e4ea 100644
  # ---------------------------------------------------------------------------
  # Multi-ISA tier flags. Defined here, before the object generation below
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index 038b06058..5d9df6e9d 100644
+index de0da9e74..0313ed02d 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
-@@ -89,7 +89,7 @@ mark_as_advanced(CMAKE_C_FLAGS_DEVEL CMAKE_CXX_FLAGS_DEVEL CMAKE_LINKER_FLAGS_DE
+@@ -88,7 +88,7 @@ mark_as_advanced(CMAKE_C_FLAGS_DEVEL CMAKE_CXX_FLAGS_DEVEL CMAKE_LINKER_FLAGS_DE
  # sse4 tier remains the fallback on CPUs without AVX/AVX2, so this preserves
  # support for SSE4-or-earlier hosts. Defaulted ON to match the Makefile's
  # ENABLE_MULTI_ISA=1 default; set OFF for a single-ISA build.
