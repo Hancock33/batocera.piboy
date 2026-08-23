@@ -40,9 +40,6 @@ class AzaharGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
         AzaharGenerator.writeAZAHARConfig(CONFIGS / "azahar-emu" / "qt-config.ini", system, playersControllers)
 
-        if "squashfs" in str(rom):
-            rom = next(rom.glob("*"), None)
-
         commandArray = ['/usr/bin/azahar', rom]
 
         return Command.Command(array=commandArray, env={
