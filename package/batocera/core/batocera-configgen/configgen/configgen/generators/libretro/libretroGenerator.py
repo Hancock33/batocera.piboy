@@ -5,7 +5,6 @@ import itertools
 import logging
 import os
 import shutil
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -34,6 +33,8 @@ from .libretroPaths import (
 )
 
 if TYPE_CHECKING:
+    from pathlib import Path
+
     from ...Emulator import Emulator
     from ...types import HotkeysContext
 
@@ -57,7 +58,6 @@ class LibretroGenerator(Generator):
     # Main entry of the module
     # Configure retroarch and return a command
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        rom_path = None
         # Fix for the removed MESS/MAMEVirtual cores
         if system.config.core in [ 'mess', 'mamevirtual' ]:
             system.config['core'] = 'mame'
@@ -341,7 +341,7 @@ class LibretroGenerator(Generator):
         if system.name == 'scummvm':
             if "squashfs" in str(rom):
                 romsInDir = glob.glob(glob.escape(str(rom)) + '/*.scummvm')
-                rom_path = romsInDir[0].replace('.scummvm','')
+                romsInDir[0].replace('.scummvm','')
             else:
                 rom = rom.parent / rom.name
                 if rom.stat().st_size == 0:
