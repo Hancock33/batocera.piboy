@@ -132,8 +132,8 @@ class LibretroGenerator(Generator):
         # for each core, a file /usr/lib/<core>.info must exit, otherwise, info such as rewinding/netplay will not work
         # to do a global check : cd /usr/lib/libretro && for i in *.so; do INF=$(echo $i | sed -e s+/usr/lib/libretro+/usr/share/libretro/info+ -e s+\.so+.info+); test -e "$INF" || echo $i; done
         infoFile = RETROARCH_SHARE / "info" / f"{system.config.core}_libretro.info"
-        #if not infoFile.exists():
-        #    raise MissingCore
+        if not infoFile.exists():
+            _logger.debug("libretro info file missing")
 
         # The command to run
         dontAppendROM = False
