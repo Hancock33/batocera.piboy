@@ -137,7 +137,7 @@ Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|0cccd9a85d7ffa33
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|6af5d03de220e6effcd0ffcd99e0fb8e8c77cc9e|Jul 22, 2026
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|814991a2571ad3970e386cef48f3b148aa1c27b9|Jun 13, 2026
-Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|512ed03606386e04f48d111c33c6e91271c97f42|Aug 23, 2026
+Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|0c708e01eb52467a06ea8e7bd881dae2564ca06d|Aug 23, 2026
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|236ccdfc911e84c60fea6b9d0699c2d440a8de14|Aug 22, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|c3763d8fc4208dd6f8f0bc456383543b8406a8a0|Aug 23, 2026
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|f013e213458e06d9df718e4bc4b09d46f88aa899|Jun 04, 2026
@@ -518,7 +518,7 @@ Ports|[theforceengine](http://github.com/TheForceEngine/TheForceEngine)|v1.22.42
 Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.10.2|Aug 20, 2026
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|d6583f2250e6046de0bcd20e18ba78e8620fb638|Apr 05, 2024
 Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.5|Aug 15, 2026
-Ports|[vkquake](http://github.com/Novum/vkQuake)|8bb1a7556564f2837445c2d43c5855917c8f2436|Aug 23, 2026
+Ports|[vkquake](http://github.com/Novum/vkQuake)|3e38b6e3f29f14f1374c78d7ec7d9230ab4329e4|Aug 23, 2026
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|6763f207229f97cffabb6fc2da72017a794b139b|Aug 04, 2026
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|650bd625eb725446279c6176804b554e2e1c98f3|Jun 14, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2f24dfe8f096c646115fe93a7dc43e1e03904990|Aug 23, 2026

@@ -18,7 +18,7 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|5f737d8fff969c90d
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|bbfb0e0262deabc6349d6a8a8f774a8f87922b27|Aug 23, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|04664ce7cfdff07064454a620546f24e4d147bf1|Aug 23, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|f5238e61af44cfcd7db8565e41af5648067b5d63|Aug 23, 2026
-Ports|[vkquake](http://github.com/Novum/vkQuake)|8bb1a7556564f2837445c2d43c5855917c8f2436|Aug 23, 2026
+Ports|[vkquake](http://github.com/Novum/vkQuake)|3e38b6e3f29f14f1374c78d7ec7d9230ab4329e4|Aug 23, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|2f24dfe8f096c646115fe93a7dc43e1e03904990|Aug 23, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|1dbd6231910ce272f346019dd866286bb1b9a53d|Aug 23, 2026
 Emulators|[libretro-beetle-pcfx](http://github.com/libretro/beetle-pcfx-libretro)|0580dee757adfdb9bf8b9c24693dde5f3d0a78a1|Aug 23, 2026
@@ -28,7 +28,7 @@ Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|d063610205eb8
 Emulators|[libretro-desmume](http://github.com/libretro/desmume)|8f6b32cb9a5e310bd38520e7087ce7fa14765f15|Aug 23, 2026
 Emulators|[libretro-dinothawr](http://github.com/libretro/Dinothawr)|601063d47dabfc1504356d42aa3acf11e172bfd9|Aug 23, 2026
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|841bacadb5d5c3f9acba0dc652d306ecd77a7bbf|Aug 23, 2026
-Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|512ed03606386e04f48d111c33c6e91271c97f42|Aug 23, 2026
+Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|0c708e01eb52467a06ea8e7bd881dae2564ca06d|Aug 23, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|c3763d8fc4208dd6f8f0bc456383543b8406a8a0|Aug 23, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|fec195ca2583088f4c8e1d376f7e318db76c792c|Aug 23, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|c6e51427f0a8eac211c74b67494fe24b31713571|Aug 23, 2026
