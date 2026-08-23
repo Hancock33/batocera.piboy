@@ -339,7 +339,7 @@ class LibretroGenerator(Generator):
 
         if system.name == 'scummvm':
             if "squashfs" in str(rom):
-                romsInDir = glob.glob(glob.escape(rom) + '/*.scummvm')
+                romsInDir = glob.glob(glob.escape(str(rom)) + '/*.scummvm')
                 rom_path = romsInDir[0].replace('.scummvm','')
             else:
                 rom_path = rom_path.parent / rom_path.name

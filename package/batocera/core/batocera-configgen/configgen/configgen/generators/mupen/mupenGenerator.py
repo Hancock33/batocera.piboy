@@ -54,7 +54,7 @@ class MupenGenerator(Generator):
             commandArray.extend(["--cheats", cheats])
 
         if "squashfs" in str(rom):
-            romsInDir = glob.glob(glob.escape(rom) + '/*')
+            romsInDir = glob.glob(glob.escape(str(rom)) + '/*')
             rom = romsInDir[0]
 
         commandArray.append(rom)
