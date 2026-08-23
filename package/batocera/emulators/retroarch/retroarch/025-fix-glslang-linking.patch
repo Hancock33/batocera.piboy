@@ -1,8 +1,8 @@
 diff --git a/Makefile.common b/Makefile.common
-index 1e683dda69..0ca508328f 100644
+index 9dd053a91b..ef392683d0 100644
 --- a/Makefile.common
 +++ b/Makefile.common
-@@ -1923,10 +1923,6 @@ else ifeq ($(HAVE_GLSLANG),1)
+@@ -1945,10 +1945,6 @@ else ifeq ($(HAVE_GLSLANG),1)
  
     # The order of these libs are somewhat specific
     LIBS += $(GLSLANG_LIBS) \
@@ -14,10 +14,10 @@ index 1e683dda69..0ca508328f 100644
             $(GLSLANG_SPIRV_TOOLS_OPT_LIBS) \
             $(GLSLANG_SPIRV_TOOLS_LIBS)
 diff --git a/qb/config.libs.sh b/qb/config.libs.sh
-index 2c942bc8e0..50323d8142 100644
+index e6dc295493..b97be2a142 100644
 --- a/qb/config.libs.sh
 +++ b/qb/config.libs.sh
-@@ -817,11 +817,6 @@ if [ "$HAVE_GLSLANG" != no ]; then
+@@ -824,11 +824,6 @@ if [ "$HAVE_GLSLANG" != no ]; then
        glslang/SPIRV/GlslangToSpv.h
  
     check_lib cxx GLSLANG -lglslang '' '-lSPIRV'
