@@ -202,7 +202,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 arch = None
                 f=Path('/usr/share/batocera/batocera.arch').open()
                 arch=f.readline().strip('\n')
-                if str('x86_64') in arch:
+                if 'x86_64' in arch:
                     if system.isOptSet("powersave"):
                         if system.config['powersave'] == '0':
                                 subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
@@ -349,7 +349,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, rom])
 
             finally:
-                if str('x86_64') in arch:
+                if 'x86_64' in arch:
                     subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
 
                 # always restore the resolution
