@@ -32,10 +32,10 @@ class StalkerGenerator(Generator):
             commandArray.extend(['-nointro'])
 
         # Call of Clear Sky
-        if romExt.lower() == ".cs":
+        if rom.suffix == ".cs":
             commandArray.extend(['-cs'])
 
-        if romExt.lower() == ".soc":
+        if rom.suffix == ".soc":
             commandArray.extend(['-soc'])
 
         return Command.Command(
