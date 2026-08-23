@@ -18,7 +18,7 @@ class NesboxGenerator(Generator):
         }
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
-        commandArray: = ["tic80"]
+        commandArray = ["tic80"]
         rombase = rom.stem
 
         if (rombase.lower() == "surf" or rombase.lower() == "console"):
