@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import glob
 import logging
 import os
 import subprocess
@@ -35,7 +34,7 @@ class WineGenerator(Generator):
             if rom.suffix == ".wsquashfs":
                 commandArray = ["batocera-wine", "windows", "play", rom]
             elif "squashfs" in str(rom) and rom.suffix == "":
-                romsInDir = glob.glob(glob.escape(str(rom)) + '/*.wineexe')
+                romsInDir = [str(p) for p in Path(rom).glob("*.wineexe")]
                 rom = romsInDir[0].replace('.wineexe','.exe')
                 _logger.debug("wine squashfs rom: %s", rom)
                 commandArray = ["batocera-wine", "windows", "play", rom]

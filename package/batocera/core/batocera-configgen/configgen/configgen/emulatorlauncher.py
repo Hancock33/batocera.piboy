@@ -200,9 +200,8 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
                 callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
 
-                f=Path('/usr/share/batocera/batocera.arch').open()
-                arch=f.readline().strip('\n')
-                if 'x86_64' in arch:
+                arch = Path('/usr/share/batocera/batocera.arch').read_text().splitlines()[0]
+                if arch == 'x86_64':
                     if system.config.get('powersave') == '0':
                         subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
                         _logger.debug("CPU power config set to maximum power saving")

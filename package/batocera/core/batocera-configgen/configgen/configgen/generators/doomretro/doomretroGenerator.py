@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import pathlib
 import shlex
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -14,18 +14,17 @@ if TYPE_CHECKING:
 class DoomretroGenerator(Generator):
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
-        iwad = ''
-        pwad = ''
+        iwad = ""
+        pwad = ""
 
         if ".uwad" in rom.name:
-            f=pathlib.Path(rom).open()
-            content=f.readlines()
-            for line in content:
-                if 'IWAD=/' in line:
-                    iwad += line.replace('IWAD=', '').replace('\n', ' ')
-                elif 'PWAD=/' in line:
-                    pwad += line.replace('PWAD=', '').replace('\n', ' ')
-            iwad_command = '-iwad ' + iwad + ' #-file ' + pwad
+            for line in Path(rom).read_text().splitlines():
+                if "IWAD=/" in line:
+                    iwad += line.replace("IWAD=", "") + " "
+                elif "PWAD=/" in line:
+                    pwad += line.replace("PWAD=", "") + " "
+
+            iwad_command = f"-iwad {iwad} #-file {pwad}"
             args = shlex.split(iwad_command)
         else:
             iwad_command = '-iwad ' + rom.name
