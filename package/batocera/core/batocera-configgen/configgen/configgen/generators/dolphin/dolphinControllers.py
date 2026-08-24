@@ -3,6 +3,7 @@ from __future__ import annotations
 import codecs
 import logging
 import re
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from batocera_common.configparser import CaseSensitiveConfigParser
@@ -12,7 +13,6 @@ from .dolphinPaths import DOLPHIN_CONFIG
 
 if TYPE_CHECKING:
     from collections.abc import Mapping
-    from pathlib import Path
 
     from ...controller import Controller, Controllers
     from ...Emulator import Emulator
@@ -337,7 +337,7 @@ def removeControllerConfig_gamecube() -> None:
 
 def generateControllerConfig_realwiimotes(filename: str, anyDefKey: str) -> None:
     configFileName = DOLPHIN_CONFIG / filename
-    with open(Path(configFileName), "w", encoding="utf-8-sig") as f:
+    with Path(configFileName).open("w", encoding="utf-8-sig") as f:
         nplayer = 1
         while nplayer <= 4:
             f.write(f"[{anyDefKey}{nplayer}]\n")
@@ -349,7 +349,7 @@ def generateControllerConfig_realwiimotes(filename: str, anyDefKey: str) -> None
 def generateControllerConfig_guns(filename: str, anyDefKey: str, metadata: Mapping[str, str], guns: Guns) -> None:
     configFileName = DOLPHIN_CONFIG / filename
 
-    with open(Path(configFileName), "w", encoding="utf-8-sig") as f:
+    with Path(configFileName).open("w", encoding="utf-8-sig") as f:
         # In case of two pads having the same name, dolphin wants a number to handle this
         double_pads: dict[str, int] = {}
 
