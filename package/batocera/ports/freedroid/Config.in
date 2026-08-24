@@ -2,8 +2,10 @@ config BR2_PACKAGE_FREEDROID
 	bool "freedroid"
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_LIBJPEG
-	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_SDL2_IMAGE
+	select BR2_PACKAGE_SDL3
+	select BR2_PACKAGE_SDL3_IMAGE
+	select BR2_PACKAGE_SDL3_MIXER
+	select BR2_PACKAGE_SDL3_TTF
 
 	help
 	  The original Freedroid, a free & open-source clone
