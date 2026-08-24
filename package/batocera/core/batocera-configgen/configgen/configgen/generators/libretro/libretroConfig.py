@@ -301,7 +301,7 @@ def createLibretroConfig(
 
     ## fMSX
     if system.name == 'fmsx':
-        if system.isOptSet('controller1_fmsx'):
+        if system.config.get('controller1_fmsx'):
             retroarchConfig['input_libretro_device_p1'] = system.config['controller1_fmsx']
         else:
             retroarchConfig['input_libretro_device_p1'] = '1'

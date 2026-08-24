@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import codecs
+from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from ... import Command
@@ -9,7 +9,6 @@ from ...controller import Controller, generate_sdl_game_controller_config
 from ..Generator import Generator
 
 if TYPE_CHECKING:
-    from pathlib import Path
 
     from ...controller import Controllers
     from ...Emulator import Emulator
@@ -77,7 +76,7 @@ class SolarusGenerator(Generator):
                 keymapping["right"] = f"{joystick}right"
 
         mkdir_if_not_exists(_CONFIG_DIR)
-        with codecs.open(str(_CONFIG_DIR / "pads.ini"), "w", encoding="ascii") as f:
+        with Path(Path(_CONFIG_DIR) / "pads.ini").open("w", encoding="ascii") as f:
             if pad := Controller.find_player_number(playersControllers, 1):
                 for key in keymapping:
                     if keymapping[key] in pad.inputs:

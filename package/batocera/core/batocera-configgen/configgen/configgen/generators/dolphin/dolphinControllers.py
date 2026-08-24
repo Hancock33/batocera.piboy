@@ -337,7 +337,7 @@ def removeControllerConfig_gamecube() -> None:
 
 def generateControllerConfig_realwiimotes(filename: str, anyDefKey: str) -> None:
     configFileName = DOLPHIN_CONFIG / filename
-    with codecs.open(str(configFileName), "w", encoding="utf_8_sig") as f:
+    with open(Path(configFileName), "w", encoding="utf-8-sig") as f:
         nplayer = 1
         while nplayer <= 4:
             f.write(f"[{anyDefKey}{nplayer}]\n")
@@ -349,7 +349,7 @@ def generateControllerConfig_realwiimotes(filename: str, anyDefKey: str) -> None
 def generateControllerConfig_guns(filename: str, anyDefKey: str, metadata: Mapping[str, str], guns: Guns) -> None:
     configFileName = DOLPHIN_CONFIG / filename
 
-    with codecs.open(str(configFileName), "w", encoding="utf_8_sig") as f:
+    with open(Path(configFileName), "w", encoding="utf-8-sig") as f:
         # In case of two pads having the same name, dolphin wants a number to handle this
         double_pads: dict[str, int] = {}
 

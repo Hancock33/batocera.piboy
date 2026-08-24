@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import codecs
 import csv
 import logging
 import os
@@ -763,13 +762,13 @@ def generateMAMEPadConfig(
     #mameXml = open(configFile, "w")
     # TODO: python 3 - workawround to encode files in utf-8
     if overwriteMAME:
-        with codecs.open(str(configFile), "w", "utf-8") as mameXml:
+        with Path(configFile).open("w", encoding="utf-8") as mameXml:
             dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
             mameXml.write(dom_string)
 
     # Write alt config (if used, custom config is turned off or file doesn't exist yet)
     if messSysName in specialControlList and overwriteSystem and config_alt is not None and configFile_alt is not None:
-        with codecs.open(str(configFile_alt), "w", "utf-8") as mameXml_alt:
+        with Path(configFile_alt).open("w", encoding="utf-8") as mameXml_alt:
             dom_string_alt = os.linesep.join([s for s in config_alt.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minicom adds them...
             mameXml_alt.write(dom_string_alt)
 
