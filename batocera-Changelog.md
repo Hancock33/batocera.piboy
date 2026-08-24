@@ -71,20 +71,23 @@
 ### Updated
 - Azahar to 2126.0
 - BigPEmu to 1.221
+- Blake Stone to v1.3.4
 - Box64 0.4.2
 - Cemu to August 7th, 2026 build
 - CDogs to 2.4.0
 - CLK to 2026-07-23
-- CorsixTH to v0.69.2
+- Commander Genius to v3.6.3
+- CorsixTH to v0.70.0
+- DevilutionX to 1.5.5
 - Dhewm3 & Mods to 1.5.5
 - Dolphin-Emu to 2606
 - ECWolf to Feb 23, 2026 build
 - EDuke32 / Fury to Feb 03, 2026 build
-- ETLegacy to v2.84.0
+- ETLegacy to v2.85.0
 - Flycast to v2.7
 - Groovy MAME to 0.289
 - IOQuake3 to Mar 9, 2026
-- Jazz2 to 3.6.0
+- Jazz2 to 3.8.0
 - Ledspicer to 0.7.6
 - Libretro-Arduous to April 21st, 2026 build
 - Libretro-Atari800 to July 15th, 2026 build
@@ -130,7 +133,7 @@
 - TRX to 1.10.2
 - Tsugaru to v20251206
 - Vita3k to 10th of June build
-- VKQuake to 1.34.1
+- VKQuake to 1.35.0
 - VKQuake3 to 1.36
 - Winetricks to 20260125
 - X16emu to r49
@@ -143,7 +146,7 @@
 - Buildroot to 2026.05.x with supporting package & toolchain updates
 - DXVK to 3.0.2
 - DXVK-NVAPI to v0.9.2
-- FAudio to 26.07
+- FAudio to 26.08
 - FFMPEG to 8.1.2
 - GStreamer codecs to 1.28.5
 - Khadas VIM4 kernel updated to vendor 5.15.y
@@ -161,6 +164,8 @@
 - Rockchip RK3568 device kernel updated to 7.0.14
 - Rockchip RK3588 mainline device kernel updated to 7.1.5
 - Rocknix ABL to 1.1.6 (SM6115 & SM8x50 devices)
+- RyzenAdj to v0.19.0
+- SDL3 to 3.4.14
 - Sound Open Firmware to 2025.12.2
 - SwitchRes to 2.2.2
 - RTKit to v0.14
@@ -168,7 +173,7 @@
 - Vulkan stack to 1.4.350
 - WINE Mono to 11.1.0
 - WINE Proton to proton-11.0-1
-- WINE TKG to 11.13
+- WINE TKG to 11.16
 - Wlroots to 0.20.2
 - X86_64 / Zen3 kernel updated to 7.1.9
 - Xone to v0.5.8
