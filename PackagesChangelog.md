@@ -15,8 +15,10 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|19ecca12afe10ec0e
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a7b9988712f7f202f5985aefa7111cbf6e31b2e0|Aug 24, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14386|Aug 24, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.4-rc.2|Aug 24, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260824|Aug 24, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|011d93ff6ef3fd5851d6e865654a84cc2bae57c5|Aug 24, 2026
 Network|[qrtr](http://github.com/linux-msm/qrtr)|27d2c9dfb4e8653ac314ebe2b7980fed2f4bac2e|Aug 24, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260824|Aug 24, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|56b4b601f4a82a1d839bf7915d6f6aeeff2535d1|Aug 24, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|3b0d1f1534ffec9c5d8872e5475beca74e2b43f7|Aug 24, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|083febb386aa78bbe3f96804ae38739602de526e|Aug 24, 2026
@@ -70,8 +72,6 @@ Engines|[lightspark](http://github.com/lightspark/lightspark)|7e1c21d33d96164761
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|6161e17e99af820d8cd72da99f712abb6e623bd8|Aug 22, 2026
 Utils|[evsieve](http://github.com/KarsMulder/evsieve)|22e8354465312b64ed002c1eec92da0bede74ae3|Aug 22, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.16|Aug 22, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260822|Aug 22, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260822|Aug 22, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|e98451aa1711889b5aa45397f91a00149d60cbc9|Aug 22, 2026
 Emulators|[libretro-beetle-vb](http://github.com/libretro/beetle-vb-libretro)|83ed42608601fb7b01d41e4f8fb2007a37b8c84e|Aug 22, 2026
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|236ccdfc911e84c60fea6b9d0699c2d440a8de14|Aug 22, 2026
