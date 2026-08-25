@@ -388,8 +388,6 @@ Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.14.0
 Libraries|[nghttp3](https://github.com/ngtcp2/nghttp3.git)|v1.18.0|Jul 26, 2026
 Libraries|[ngtcp2](https://github.com/ngtcp2/ngtcp2.git)|v1.25.0|Jul 26, 2026
 Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/)|$(PIPEWIRE_VERSION)|N/A
-Libraries|[plutosvg](https://github.com/sammycage/plutosvg.git)|v0.0.8|May 18, 2026
-Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.3.3|May 18, 2026
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|dc0c9e368b07f1a83ef41c32a625a0efbccd591a|Jul 03, 2025
 Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|6f9e40eaf742e8ca985b069fc0db9b0c885dacec|Jul 03, 2025
 Libraries|[pysdl2](http://github.com/py-sdl/py-sdl2)|0.9.17|Dec 30, 2024
@@ -413,7 +411,6 @@ Libraries|[python-pyftdi](https://files.pythonhosted.org/packages/8f/b4/8578b8e4
 Libraries|[python-smbus3](https://files.pythonhosted.org/packages/75/39/4b7fe2b7cfb42a39e5bb4ef2970a3befc0febbf2b5b8ef85fac04ca6dcb3)|0.5.5|Jun 29, 2024
 Libraries|[pywebview](http://github.com/r0x0r/pywebview)|6.2.1|Apr 15, 2026
 Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.16.0|Jul 22, 2026
-Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|release-3.2.4|Jun 03, 2026
 Libraries|[semver](http://github.com/Neargye/semver)|v1.0.1|Aug 09, 2026
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|1.1.8|Feb 06, 2026
 Libraries|[tomlplusplus](http://github.com/marzer/tomlplusplus)|v3.4.0|Oct 13, 2023
@@ -478,7 +475,7 @@ Ports|[hlsdk-xash3d](http://github.com/FWGS/hlsdk-portable)|079f2387eb59e4a04564
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|0d91d1f2d40f38d21e7f41afc01369ee55649fb6|Dec 31, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a7b9988712f7f202f5985aefa7111cbf6e31b2e0|Aug 24, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260824|Aug 24, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260825|Aug 25, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14386|Aug 24, 2026
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|f05996f9b3ad3b3ea5bb818e49e7977636746343|May 26, 2024
 Ports|[omf2097](http://github.com/omf2097/openomf)|50cd25e3cd4992906c13fd1945ca8d31750bcf8b|Aug 16, 2026
@@ -591,5 +588,5 @@ Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.16|Aug 22, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260713-proton-slr|Jul 13, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260824|Aug 24, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260825|Aug 25, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|5a59ea07513b24093bd90fad943ecf9543cf05bc|Aug 07, 2026

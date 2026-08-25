@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260825|Aug 25, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260825|Aug 25, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|4819ad7c5c336ae00bc0c450982f135c07f4797c|Aug 24, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|083febb386aa78bbe3f96804ae38739602de526e|Aug 24, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|fe899efd1279711579a29007d7af80a4f40629ab|Aug 24, 2026
@@ -15,10 +17,8 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|19ecca12afe10ec0e
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|a7b9988712f7f202f5985aefa7111cbf6e31b2e0|Aug 24, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14386|Aug 24, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.4-rc.2|Aug 24, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260824|Aug 24, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|011d93ff6ef3fd5851d6e865654a84cc2bae57c5|Aug 24, 2026
 Network|[qrtr](http://github.com/linux-msm/qrtr)|27d2c9dfb4e8653ac314ebe2b7980fed2f4bac2e|Aug 24, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260824|Aug 24, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|56b4b601f4a82a1d839bf7915d6f6aeeff2535d1|Aug 24, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|3b0d1f1534ffec9c5d8872e5475beca74e2b43f7|Aug 24, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|083febb386aa78bbe3f96804ae38739602de526e|Aug 24, 2026
@@ -323,7 +323,6 @@ Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2
 Controllers|[xpad-noone](http://github.com/forkymcforkface/xpad-noone)|a52e32cf182435d608e66bef9a6c89ebac891999|Jun 05, 2026
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|f013e213458e06d9df718e4bc4b09d46f88aa899|Jun 04, 2026
 Emulators|[libretro-watara](http://github.com/libretro/potator)|227c5f6f3ce74d32e9002ce24c1420288559a860|Jun 04, 2026
-Libraries|[sdl3_mixer](https://github.com/libsdl-org/SDL_mixer)|release-3.2.4|Jun 03, 2026
 Emulators|[libretro-vircon32](http://github.com/vircon32/vircon32-libretro)|3a1b4ae3fb75c1216fab9cc8715e9a122c461a3a|Jun 02, 2026
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|20260603|Jun 01, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.11.0|Jun 01, 2026
@@ -339,8 +338,6 @@ Ports|[bstone](http://github.com/bibendovsky/bstone)|v1.3.4|May 27, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|v0.8.4|May 27, 2026
 Emulators|[libretro-mupen64plus-next](http://github.com/libretro/mupen64plus-libretro-nx)|f275caf4b2bfa1e6d1c51636746ea793f3d80320|May 25, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|9c7b0a395db460524dad26c7b57f266e4acd5242|May 21, 2026
-Libraries|[plutosvg](https://github.com/sammycage/plutosvg.git)|v0.0.8|May 18, 2026
-Libraries|[plutovg](http://github.com/sammycage/plutovg)|v1.3.3|May 18, 2026
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|b6bb92d40cfffe28621abcf7bfaa6d99beea46cb|May 18, 2026
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|cd3c5f5c73cae02738b3b37e887a4b67579ef74c|May 15, 2026
 Boot|[batocera-initramfs](http://www.busybox.net/downloads)|1.38.0|May 13, 2026
