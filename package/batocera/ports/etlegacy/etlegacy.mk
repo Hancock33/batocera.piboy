@@ -54,7 +54,7 @@ endif
 
 define ETLEGACY_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/etlegacy
-	cp $(@D)/buildroot-build/legacy/legacy_2.8*-dirty.pk3 $(TARGET_DIR)/usr/share/etlegacy
+	cp $(@D)/buildroot-build/legacy/legacy_*-dirty.pk3 $(TARGET_DIR)/usr/share/etlegacy
 	cp $(@D)/buildroot-build/etl $(TARGET_DIR)/usr/bin/etl
 endef
 
