@@ -1,0 +1,13 @@
+diff --git a/libretro/libretro-common/vfs/vfs_implementation.c b/libretro/libretro-common/vfs/vfs_implementation.c
+index fe46d869f..63baa13e8 100644
+--- a/libretro/libretro-common/vfs/vfs_implementation.c
++++ b/libretro/libretro-common/vfs/vfs_implementation.c
+@@ -1316,7 +1316,7 @@ int retro_vfs_file_punch_hole_impl(libretro_vfs_implementation_file *stream,
+       retro_vfs_file_punch_hole_discard_buffer(stream);
+       return 0;
+    }
+-#elif defined(__linux__) && defined(FALLOC_FL_PUNCH_HOLE)
++#elif defined(__linux__) && defined(FALLOC_FL_PUNCH_HOLE2)
+    {
+       int fd = stream->fd;
+ 
