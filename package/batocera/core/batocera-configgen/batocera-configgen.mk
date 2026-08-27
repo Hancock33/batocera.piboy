@@ -44,10 +44,6 @@ define BATOCERA_CONFIGGEN_CONFIGS
 	# evmapy default hotkeys file
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BATOCERA_CONFIGGEN_PKGDIR)/hotkeys.keys $(TARGET_DIR)/usr/share/evmapy/hotkeys.keys
-
-	@if [ "$(BATOCERA_CONFIGGEN_SYSTEM)" = "piboy4" ]; then \
-	cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-bcm2711.yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml && \
-	cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-piboy4.yml  $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml ; fi
 endef
 
 define BATOCERA_CONFIGGEN_ES_HOOKS
@@ -64,12 +60,21 @@ define BATOCERA_CONFIGGEN_SCRIPTS
 	install -D -m 0755 $(BATOCERA_CONFIGGEN_PKGDIR)/scripts/batocera-joysticks-hotkeys.py $(TARGET_DIR)/usr/bin/batocera-joysticks-hotkeys
 endef
 
+define BATOCERA_CONFIG_PYBOY_INSTALL
+	cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-bcm2711.yml $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-arch.yml
+	cp $(BATOCERA_CONFIGGEN_PKGDIR)/configs/configgen-defaults-piboy4.yml  $(TARGET_DIR)/usr/share/batocera/configgen/configgen-defaults-piboy4.yml
+endef
+
 BATOCERA_CONFIGGEN_POST_INSTALL_TARGET_HOOKS = BATOCERA_CONFIGGEN_CONFIGS
 BATOCERA_CONFIGGEN_POST_INSTALL_TARGET_HOOKS += BATOCERA_CONFIGGEN_ES_HOOKS
 BATOCERA_CONFIGGEN_POST_INSTALL_TARGET_HOOKS += BATOCERA_CONFIGGEN_SCRIPTS
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     BATOCERA_CONFIGGEN_POST_INSTALL_TARGET_HOOKS += BATOCERA_CONFIGGEN_X86_HOOKS
+endif
+
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
+    BATOCERA_CONFIGGEN_POST_INSTALL_TARGET_HOOKS += BATOCERA_CONFIG_PYBOY_INSTALL
 endif
 
 $(eval $(python-package))

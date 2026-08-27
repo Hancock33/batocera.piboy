@@ -13,12 +13,6 @@ BATOCERA_SYSTEM_DATE = $(shell date "+%d/%m/%y")
 BATOCERA_SYSTEM_DEPENDENCIES = tzdata
 BATOCERA_SYSTEM_INSTALL_IMAGES = YES
 
-ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
-BATOCERA_SYSTEM_PYBOY_INSTALL=y
-else
-BATOCERA_SYSTEM_PYBOY_INSTALL=n
-endif
-
 ifneq (,$(findstring dev,$(BATOCERA_SYSTEM_RELEASE_TYPE)))
     BATOCERA_SYSTEM_BUILD_ID = "-$(shell cd $(BR2_EXTERNAL_BATOCERA_PATH) && git rev-parse --short HEAD)"
 else
@@ -37,7 +31,6 @@ define BATOCERA_SYSTEM_INSTALL_TARGET_CMDS
 
 	# batocera-boot.conf
 	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/batocera-boot.conf $(BINARIES_DIR)/batocera-boot.conf
-	@if [ "$(BATOCERA_SYSTEM_PYBOY_INSTALL)" = "y" ]; then install -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/batocera-boot.piboy $(BINARIES_DIR)/batocera-boot.conf ; fi
 
 	# sysconfigs (default batocera.conf for boards)
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/sysconfigs
@@ -70,5 +63,13 @@ define BATOCERA_SYSTEM_INSTALL_IMAGES_CMDS
 	# batocera-boot.conf
 	$(INSTALL) -D -m 0644 $(BATOCERA_SYSTEM_PKGDIR)/batocera-boot.conf $(BINARIES_DIR)/batocera-boot.conf
 endef
+
+define BATOCERA_SYSTEM_PYBOY_INSTALL
+	install -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-system/batocera-boot.piboy $(BINARIES_DIR)/batocera-boot.conf
+endef
+
+ifeq ($(BR2_PACKAGE_XPI_GAMECON_RPI),y)
+    BATOCERA_SYSTEM_POST_INSTALL_TARGET_HOOKS += BATOCERA_SYSTEM_PYBOY_INSTALL
+endif
 
 $(eval $(generic-package))
