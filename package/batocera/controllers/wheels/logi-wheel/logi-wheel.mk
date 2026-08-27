@@ -50,7 +50,7 @@ endef
 
 # the Slint desktop app, launched from the desktop mode as
 # logi-wheel-config (see batocera-desktopapps)
-ifeq ($(BR2_PACKAGE_LOGI_WHEEL_GUI),y)
+ifeq ($(BR2_x86_64),y)
 LOGI_WHEEL_DEPENDENCIES += fontconfig libxkbcommon xlib_libX11
 LOGI_WHEEL_CARGO_BUILD_OPTS += -p logi-wheel-gui
 
