@@ -3,10 +3,11 @@
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|f18017eebcb4a72a1eca639c0a690bba97e59918|Aug 28, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|119291dc77fbe8e4a23eaafa8420c1c8577d1b59|Aug 28, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|fe130746790ebd45862753b0265e36931d234b63|Aug 28, 2026
-Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|c8ac9258f0f58904d38bf6ed14ed6b928024e3c7|Aug 28, 2026
-Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|3fd4e6a6645ecbfcf54cc732624187d41e626971|Aug 28, 2026
+Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|182cd532572de00bc7fe7a05248b5dd560d5c742|Aug 28, 2026
+Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|768c7ffa763b1d07e81f4feda283e7ba1d11ce74|Aug 28, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-08-28|Aug 28, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|ead1ea3ddeff08b4100937619ec8594b8fa28198|Aug 28, 2026
+Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v2.2|Aug 28, 2026
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.1|Aug 28, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260828|Aug 28, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b0c976e384da0babca93de8807217550b1e5ba2e|Aug 28, 2026
@@ -16,11 +17,12 @@ Engines|[vpinball](http://github.com/vpinball/vpinball)|d9496f9421c07b649d9aab94
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260828|Aug 28, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|888f697867127dfa91a3bfbb1da665ea30bc2679|Aug 28, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|2f623abd033257b969370b73d9da982dcb0c3fdd|Aug 28, 2026
+Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|35eac92491df7e4ce47a36c73dc92eb28207b0b3|Aug 28, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|bb253c899ffd50790a549635604c36ff4dc5c81a|Aug 28, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|fe130746790ebd45862753b0265e36931d234b63|Aug 28, 2026
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|03709f8471a1d635ab0f08c53db5963fd8a983fd|Aug 28, 2026
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|6c964554c0ed2ceeb5e834f65a4e926e989caca6|Aug 28, 2026
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|5b9b6e17168248dfc90b4042fcf6ac254dbd4df9|Aug 28, 2026
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|90c3e545d104fee1896de705efdc39cf2fe9c477|Aug 28, 2026
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|70e665fe72140d7221678bab5ed45ef479245541|Aug 28, 2026
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|2acf41f88cca73174de3f4cda1e834c08a48a804|Aug 28, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|7508bc2b077f0671bd2ba998f9c6e24fd1f09ed8|Aug 27, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|7508bc2b077f0671bd2ba998f9c6e24fd1f09ed8|Aug 27, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|8b66c849252ba6672ec61d4619b5c51589cdf0d9|Aug 27, 2026
@@ -52,7 +54,6 @@ Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.38.5|Aug 26, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.38.5|Aug 26, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|4b1d8a6b9fddf9843a2999135af159de9bf2eec5|Aug 26, 2026
-Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|95a0ba95ebab642a938fbbcde1dc751a539e150b|Aug 26, 2026
 Emulators|[libretro-dinothawr](http://github.com/libretro/Dinothawr)|2319912ca9e5bad86ce582eed6610560f0426db3|Aug 26, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|4b1d8a6b9fddf9843a2999135af159de9bf2eec5|Aug 26, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|f9f5417b14e12894653382084a78aacb27ea7f12|Aug 26, 2026
@@ -141,7 +142,6 @@ Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|cd72
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|6224157a615b18507bc0b117a3398c7a324cd3e5|Aug 15, 2026
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|11f63848a592644722ea1240b4b96785db9b009f|Aug 15, 2026
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.67.1|Aug 14, 2026
-Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v2.1|Aug 14, 2026
 Hardware|[dmd-play-rust](http://github.com/batocera-linux/dmd-play-rust)|08fb0019955d2ca995327897480227a0154e95d5|Aug 13, 2026
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-beta1|Aug 13, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
