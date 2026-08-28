@@ -382,7 +382,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO
 
-    select BR2_PACKAGE_AIC8800_USB                          if  BR2_PACKAGE_BATOCERA_TARGET_QCS6490
+    select BR2_PACKAGE_AIC8800_USB                          if  BR2_PACKAGE_BATOCERA_TARGET_QCS6490     || BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # gpu drivers
     select BR2_PACKAGE_BATOCERA_GPU_X86                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY

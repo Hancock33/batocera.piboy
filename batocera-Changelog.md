@@ -98,6 +98,7 @@
 - Libretro-Hatari to April 21st, 2026 build
 - Libretro-HatariB to February 14th, 2026 build
 - Libretro-MAME to 0.289
+- Libretro-Opera to August 21st, 2026 build
 - Libretro-PC88 to April 21st, 2026 build
 - Libretro-PC98 to May 9th, 2026 build
 - Libretro-PCSX to May 15th, 2026 build
@@ -138,6 +139,7 @@
 - Winetricks to 20260125
 - X16emu to r49
 - Xemu to v0.8.136
+- Xenia Edge to 28th of August build
 - Ymir to v0.3.3
 ### System
 - Allwinner H616 device kernel updated to 7.1.5
