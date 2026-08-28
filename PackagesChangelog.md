@@ -10,6 +10,8 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|ead1ea3ddeff08b41
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260828|Aug 28, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b0c976e384da0babca93de8807217550b1e5ba2e|Aug 28, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|34c069f44f419b708c5362f96c54f959bc182dbe|Aug 28, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|99d8c322b314c1ec168b2efcb862bb061df8a08c|Aug 28, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|d9496f9421c07b649d9aab94cf8e933cb02f798f|Aug 28, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260828|Aug 28, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|888f697867127dfa91a3bfbb1da665ea30bc2679|Aug 28, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|2f623abd033257b969370b73d9da982dcb0c3fdd|Aug 28, 2026
@@ -29,6 +31,7 @@ Emulators|[supermodel](http://github.com/dmanlfc/Supermodel)|39beed2b6f8eeb20810
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|ee0c2673252d6879e78a5de6b560e2d2b125e2b8|Aug 27, 2026
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|d73326b62199c6dd952ef512947710e1333a49d3|Aug 27, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|c92607e0a2ff9fdbc9703d547a26cb16ba1069d9|Aug 27, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.157.9447-569|Aug 27, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|1b948e29a6e3e412df2e1814615d71fb8040bce5|Aug 27, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|4ccae73a74d7d34c3bc1c902a33f0fd5bfcf2449|Aug 27, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|1442d14a69093780389104dcb7369aa3685945cf|Aug 27, 2026
@@ -121,7 +124,6 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1239-ge06df78|Aug 18, 202
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.18.0|Aug 18, 2026
 Emulators|[libretro-theodore](https://github.com/Zlika/theodore.git)|4d469ce0f71ee046ceb78cdbf8e9f18364aaa918|Aug 17, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|50cd25e3cd4992906c13fd1945ca8d31750bcf8b|Aug 16, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|292018604d32a65a08a1bebd394860f3bfd2cb29|Aug 16, 2026
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|a99e16ad15f4f824c1b9f96a61b3f8576ab648e2|Aug 16, 2026
 Emulators|[libretro-mu](http://github.com/SquirrelJME/Mu)|f9d34a0006440aef8dca0db2a0d896438fcab2cb|Aug 16, 2026
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|890b5d445538fe790aa3add3d5702c80f551e0ae|Aug 16, 2026
@@ -181,11 +183,9 @@ Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861
 Engines|[libvni](http://github.com/PPUC/libvni)|eb910403834184e1d098bcc310054ac17a00b53d|Aug 03, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.57.04|Aug 03, 2026
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.5.0|Aug 03, 2026
-Engines|[libpinmame](http://github.com/vbousquet/pinmame)|c5e82cad15f8a2a021cbdbd5419a38c5cd4d459d|Aug 02, 2026
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.08|Aug 01, 2026
 Boot|[rocknix-abl](http://github.com/ROCKNIX/abl)|v1.1.8|Aug 01, 2026
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.3|Aug 01, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.153.9398-566|Aug 01, 2026
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|c8c242db75a559246d6d51017e6dd4ecd75d6a9f|Aug 01, 2026
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0289|Jul 31, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.75.0|Jul 31, 2026

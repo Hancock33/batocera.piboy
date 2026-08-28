@@ -279,7 +279,7 @@ Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|c8ac9258f0f5890
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|v0.3.3|Jun 22, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.153.9398-566|Aug 01, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.157.9447-569|Aug 27, 2026
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|4b1d8a6b9fddf9843a2999135af159de9bf2eec5|Aug 26, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|3fd4e6a6645ecbfcf54cc732624187d41e626971|Aug 28, 2026
@@ -288,7 +288,7 @@ Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|3485e2e0e1e925214891
 Engines|[libdof](http://github.com/jsm174/libdof)|eef645d9f5df618290962946c9e3e8ed30886639|Jul 07, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|ef52fb829c34f1c4a24cac7503eb3154b06317ed|Aug 20, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
-Engines|[libpinmame](http://github.com/vbousquet/pinmame)|c5e82cad15f8a2a021cbdbd5419a38c5cd4d459d|Aug 02, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|99d8c322b314c1ec168b2efcb862bb061df8a08c|Aug 28, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|4a1123220e6dce73c87cc584494df2ac82cb6f4c|May 08, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.6.1|Jul 08, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|eb910403834184e1d098bcc310054ac17a00b53d|Aug 03, 2026
@@ -309,7 +309,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|bc2707d1fba2ec1e6529857f87202a20998bff13|Aug 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.3.7.3-1|Jun 22, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|4aba09c98f1e5028b82765be1647677b08d35942|Jul 06, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|292018604d32a65a08a1bebd394860f3bfd2cb29|Aug 16, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|d9496f9421c07b649d9aab94cf8e933cb02f798f|Aug 28, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260810|Aug 10, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
