@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-steam.c b/drivers/hid/hid-steam.c
-index 197126d6e0810..4ff25dab70ea5 100644
+index 197126d6e081..4ff25dab70ea 100644
 --- a/drivers/hid/hid-steam.c
 +++ b/drivers/hid/hid-steam.c
 @@ -772,8 +772,8 @@ static int steam_input_register(struct steam_device *steam)

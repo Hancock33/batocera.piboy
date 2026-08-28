@@ -1,8 +1,8 @@
 diff --git a/drivers/hid/hid-input.c b/drivers/hid/hid-input.c
-index 3487600cadb42..dc7b8169cf612 100644
+index d05cf790bbf6..862e2f5b7348 100644
 --- a/drivers/hid/hid-input.c
 +++ b/drivers/hid/hid-input.c
-@@ -393,6 +393,8 @@ static const struct hid_device_id hid_battery_quirks[] = {
+@@ -396,6 +396,8 @@ static const struct hid_device_id hid_battery_quirks[] = {
  	  HID_BATTERY_QUIRK_AVOID_QUERY },
  	{ HID_USB_DEVICE(USB_VENDOR_ID_UGEE, USB_DEVICE_ID_UGEE_XPPEN_TABLET_DECO_PRO_SW),
  	  HID_BATTERY_QUIRK_AVOID_QUERY },

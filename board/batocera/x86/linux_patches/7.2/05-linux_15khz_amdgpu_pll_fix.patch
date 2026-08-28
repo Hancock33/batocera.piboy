@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
-index 675aa138ea112..8cd81887f13e6 100644
+index 675aa138ea11..8cd81887f13e 100644
 --- a/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
 +++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_pll.c
 @@ -89,9 +89,9 @@ static void amdgpu_pll_get_fb_ref_div(struct amdgpu_device *adev, unsigned int n

@@ -1,5 +1,5 @@
 diff --git a/drivers/input/joystick/xpad.c b/drivers/input/joystick/xpad.c
-index 2da0b7f1722aa..5b263395113d7 100644
+index 2da0b7f1722a..5b263395113d 100644
 --- a/drivers/input/joystick/xpad.c
 +++ b/drivers/input/joystick/xpad.c
 @@ -50,6 +50,7 @@

@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 00de201cc5240..947b25dd62a1a 100644
+index 00de201cc524..947b25dd62a1 100644
 --- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 +++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
 @@ -7035,6 +7035,8 @@ static void fill_stream_properties_from_drm_display_mode(
@@ -40,7 +40,7 @@ index 00de201cc5240..947b25dd62a1a 100644
  	aconnector->base.stereo_allowed = false;
  	aconnector->base.dpms = DRM_MODE_DPMS_OFF;
 diff --git a/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calc_auto.c b/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calc_auto.c
-index 5c00ef4239680..041d0d33b2da7 100644
+index 5c00ef423968..041d0d33b2da 100644
 --- a/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calc_auto.c
 +++ b/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calc_auto.c
 @@ -58,7 +58,8 @@ void scaler_settings_calculation(struct dcn_bw_internal_vars *v)
@@ -54,7 +54,7 @@ index 5c00ef4239680..041d0d33b2da7 100644
  		if (v->underscan_output[k] == 1.0f) {
  			v->h_ratio[k] = v->h_ratio[k] * v->under_scan_factor;
 diff --git a/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calcs.c b/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calcs.c
-index dcca23d53261e..a84e92cd17082 100644
+index dcca23d53261..a84e92cd1708 100644
 --- a/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calcs.c
 +++ b/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calcs.c
 @@ -446,6 +446,7 @@ static void pipe_ctx_to_e2e_pipe_params (
@@ -75,7 +75,7 @@ index dcca23d53261e..a84e92cd17082 100644
  		v->htotal[input_idx] = (float)pipe->stream->timing.h_total;
  		v->vtotal[input_idx] = (float)pipe->stream->timing.v_total;
 diff --git a/drivers/gpu/drm/amd/display/dc/dml/display_mode_vba.c b/drivers/gpu/drm/amd/display/dc/dml/display_mode_vba.c
-index c42884dc16b2b..a868651c8a8ba 100644
+index c42884dc16b2..a868651c8a8b 100644
 --- a/drivers/gpu/drm/amd/display/dc/dml/display_mode_vba.c
 +++ b/drivers/gpu/drm/amd/display/dc/dml/display_mode_vba.c
 @@ -592,9 +592,11 @@ static void fetch_pipe_params(struct display_mode_lib *mode_lib)
@@ -93,7 +93,7 @@ index c42884dc16b2b..a868651c8a8ba 100644
  		mode_lib->vba.htaps[mode_lib->vba.NumberOfActivePlanes] = taps->htaps;
  		mode_lib->vba.vtaps[mode_lib->vba.NumberOfActivePlanes] = taps->vtaps;
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
-index 7112b71af9770..b1ae7472ede78 100644
+index 7112b71af977..b1ae7472ede7 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
 @@ -3020,6 +3020,9 @@ static void update_scaler(struct pipe_ctx *pipe_ctx)
@@ -107,7 +107,7 @@ index 7112b71af9770..b1ae7472ede78 100644
  			pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  }
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-index e6a8206f8ce0a..8bbb6c488547e 100644
+index e6a8206f8ce0..8bbb6c488547 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 @@ -1774,6 +1774,9 @@ void dcn20_update_dchubp_dpp(
@@ -121,7 +121,7 @@ index e6a8206f8ce0a..8bbb6c488547e 100644
  				pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  	}
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c b/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
-index e6426ccee2d88..a13998fa0e95e 100644
+index e6426ccee2d8..a13998fa0e95 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
 @@ -614,10 +614,6 @@ bool optc1_validate_timing(
@@ -136,7 +136,7 @@ index e6426ccee2d88..a13998fa0e95e 100644
  	 * (Currently will never fail, in order to fail needs display which
  	 * needs more than 8192 horizontal and
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn30/dcn30_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn30/dcn30_optc.h
-index 16c5610b49acc..e23c20322fc3e 100644
+index 16c5610b49ac..e23c20322fc3 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn30/dcn30_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn30/dcn30_optc.h
 @@ -51,6 +51,7 @@
@@ -156,7 +156,7 @@ index 16c5610b49acc..e23c20322fc3e 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
-index 98f7d2e299c5a..aac2d65bc76db 100644
+index 98f7d2e299c5..aac2d65bc76d 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
 @@ -47,6 +47,7 @@
@@ -176,7 +176,7 @@ index 98f7d2e299c5a..aac2d65bc76db 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
-index 6bfdee3fcf5f7..bcf2b8f22925c 100644
+index 6bfdee3fcf5f..bcf2b8f22925 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
 @@ -48,6 +48,7 @@
@@ -196,7 +196,7 @@ index 6bfdee3fcf5f7..bcf2b8f22925c 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
-index ead92ad78a234..f8f46ef548ad3 100644
+index ead92ad78a23..f8f46ef548ad 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
 @@ -57,6 +57,7 @@
@@ -208,7 +208,7 @@ index ead92ad78a234..f8f46ef548ad3 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
-index fa62737b5b1bd..f04a0ab08849f 100644
+index fa62737b5b1b..f04a0ab08849 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
 @@ -36,6 +36,7 @@
@@ -220,7 +220,7 @@ index fa62737b5b1bd..f04a0ab08849f 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h b/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h
-index 68e7140f1505d..c63dff9de756b 100644
+index 68e7140f1505..c63dff9de756 100644
 --- a/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h
 +++ b/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h
 @@ -1022,6 +1022,7 @@ unsigned int dcn32_get_max_hw_cursor_size(const struct dc *dc,
@@ -232,7 +232,7 @@ index 68e7140f1505d..c63dff9de756b 100644
        SRI_ARR(OTG_3D_STRUCTURE_CONTROL, OTG, inst),                            \
        SRI_ARR(OTG_STEREO_STATUS, OTG, inst),                                   \
 diff --git a/drivers/gpu/drm/amd/display/dc/resource/dcn35/dcn35_resource.h b/drivers/gpu/drm/amd/display/dc/resource/dcn35/dcn35_resource.h
-index 6c2c61c711b97..2811c0b600bd7 100644
+index 6c2c61c711b9..2811c0b600bd 100644
 --- a/drivers/gpu/drm/amd/display/dc/resource/dcn35/dcn35_resource.h
 +++ b/drivers/gpu/drm/amd/display/dc/resource/dcn35/dcn35_resource.h
 @@ -234,6 +234,7 @@ struct resource_pool *dcn35_create_resource_pool(
@@ -244,7 +244,7 @@ index 6c2c61c711b97..2811c0b600bd7 100644
  	SRI_ARR(OTG_STEREO_CONTROL, OTG, inst),\
  	SRI_ARR(OTG_3D_STRUCTURE_CONTROL, OTG, inst),\
 diff --git a/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h b/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
-index 47f82b8182627..a6acdda26eaa1 100644
+index 47f82b818262..a6acdda26eaa 100644
 --- a/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
 +++ b/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
 @@ -498,6 +498,7 @@ int dcn401_get_power_profile(const struct dc_state *context);

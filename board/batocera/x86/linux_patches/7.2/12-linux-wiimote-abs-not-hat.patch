@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-wiimote-modules.c b/drivers/hid/hid-wiimote-modules.c
-index dccb78bb3afd6..ecc8adb712bb3 100644
+index dccb78bb3afd..ecc8adb712bb 100644
 --- a/drivers/hid/hid-wiimote-modules.c
 +++ b/drivers/hid/hid-wiimote-modules.c
 @@ -1244,12 +1244,16 @@ static int wiimod_classic_probe(const struct wiimod_ops *ops,

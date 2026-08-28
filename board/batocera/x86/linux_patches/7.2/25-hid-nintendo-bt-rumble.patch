@@ -1,5 +1,5 @@
 diff --git a/drivers/hid/hid-nintendo.c b/drivers/hid/hid-nintendo.c
-index e7302ec01ff1f..b931d69cd5b19 100644
+index f3c8a4a36400..b1df78f337bb 100644
 --- a/drivers/hid/hid-nintendo.c
 +++ b/drivers/hid/hid-nintendo.c
 @@ -609,6 +609,8 @@ struct joycon_ctlr {

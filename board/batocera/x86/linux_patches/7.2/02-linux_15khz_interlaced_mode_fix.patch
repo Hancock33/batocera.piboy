@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_modes.c b/drivers/gpu/drm/drm_modes.c
-index 72e07b44e8584..8a44fcec3e1cc 100644
+index 72e07b44e858..8a44fcec3e1c 100644
 --- a/drivers/gpu/drm/drm_modes.c
 +++ b/drivers/gpu/drm/drm_modes.c
 @@ -1362,6 +1362,8 @@ void drm_mode_set_crtcinfo(struct drm_display_mode *p, int adjust_flags)
@@ -12,7 +12,7 @@ index 72e07b44e8584..8a44fcec3e1cc 100644
  		if (adjust_flags & CRTC_INTERLACE_HALVE_V) {
  			p->crtc_vdisplay /= 2;
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 0abcb51a3ab9c..7c74989f95ced 100644
+index 0abcb51a3ab9..7c74989f95ce 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -164,6 +164,9 @@ static int drm_helper_probe_add_cmdline_mode(struct drm_connector *connector)
@@ -26,7 +26,7 @@ index 0abcb51a3ab9c..7c74989f95ced 100644
  		mode->type |= DRM_MODE_TYPE_USERDEF;
  		return 0;
 diff --git a/drivers/gpu/drm/drm_vblank.c b/drivers/gpu/drm/drm_vblank.c
-index f90fb2d13e423..6ee88d24d31a1 100644
+index f90fb2d13e42..6ee88d24d31a 100644
 --- a/drivers/gpu/drm/drm_vblank.c
 +++ b/drivers/gpu/drm/drm_vblank.c
 @@ -313,6 +313,7 @@ static void drm_update_vblank_count(struct drm_device *dev, unsigned int pipe,

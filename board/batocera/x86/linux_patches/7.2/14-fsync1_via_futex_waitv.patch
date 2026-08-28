@@ -1,5 +1,5 @@
 diff --git a/include/uapi/linux/futex.h b/include/uapi/linux/futex.h
-index 10a36c551675b..ed852c1870fab 100644
+index 10a36c551675..ed852c1870fa 100644
 --- a/include/uapi/linux/futex.h
 +++ b/include/uapi/linux/futex.h
 @@ -22,6 +22,7 @@
@@ -30,7 +30,7 @@ index 10a36c551675b..ed852c1870fab 100644
   * Support for robust futexes: the kernel cleans up held futexes at
   * thread exit time.
 diff --git a/kernel/futex/syscalls.c b/kernel/futex/syscalls.c
-index 2fa19d9d008de..5a70205c483cf 100644
+index 2fa19d9d008d..5a70205c483c 100644
 --- a/kernel/futex/syscalls.c
 +++ b/kernel/futex/syscalls.c
 @@ -169,6 +169,7 @@ static __always_inline bool futex_cmd_has_timeout(u32 cmd)

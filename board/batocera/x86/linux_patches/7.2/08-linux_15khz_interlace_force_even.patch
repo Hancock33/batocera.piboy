@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/amd/display/dc/dio/dcn10/dcn10_stream_encoder.c b/drivers/gpu/drm/amd/display/dc/dio/dcn10/dcn10_stream_encoder.c
-index d913f065ecca1..14a9023150cdc 100644
+index d913f065ecca..14a9023150cd 100644
 --- a/drivers/gpu/drm/amd/display/dc/dio/dcn10/dcn10_stream_encoder.c
 +++ b/drivers/gpu/drm/amd/display/dc/dio/dcn10/dcn10_stream_encoder.c
 @@ -264,6 +264,10 @@ void enc1_stream_encoder_dp_set_stream_attribute(
@@ -14,7 +14,7 @@ index d913f065ecca1..14a9023150cdc 100644
  		hw_crtc_timing.v_total /= 2;
  		hw_crtc_timing.v_border_top /= 2;
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
-index b1ae7472ede78..ffda38ead02e0 100644
+index b1ae7472ede7..ffda38ead02e 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
 @@ -3973,6 +3973,10 @@ static void apply_front_porch_workaround(
@@ -29,7 +29,7 @@ index b1ae7472ede78..ffda38ead02e0 100644
  		if (timing->v_front_porch < 1)
  			timing->v_front_porch = 1;
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c b/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
-index a13998fa0e95e..471266ebd9031 100644
+index a13998fa0e95..471266ebd903 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
 @@ -54,6 +54,10 @@ static void apply_front_porch_workaround(struct dc_crtc_timing *timing)
