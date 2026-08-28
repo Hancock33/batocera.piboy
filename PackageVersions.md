@@ -583,7 +583,7 @@ Utils|[xwiimote](http://github.com/xwiimote/xwiimote)|4df713d9037d814cc0c64197f6
 Utils|[xxd](http://github.com/ckormanyos/xxd)|v1.2|Aug 06, 2024
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v2.1|Aug 14, 2026
 Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.9.2|May 12, 2026
-Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.0.2|Jul 17, 2026
+Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.1|Aug 28, 2026
 Wine|[rtkit](https://gitlab.freedesktop.org/pipewire/rtkit/-/archive/)|v0.14|Dec 11, 2025
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.0.1|May 06, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.16|Aug 22, 2026

@@ -7,6 +7,7 @@ Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|c8ac9258f0f5890
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|3fd4e6a6645ecbfcf54cc732624187d41e626971|Aug 28, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-08-28|Aug 28, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|ead1ea3ddeff08b4100937619ec8594b8fa28198|Aug 28, 2026
+Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.1|Aug 28, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260828|Aug 28, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|b0c976e384da0babca93de8807217550b1e5ba2e|Aug 28, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|34c069f44f419b708c5362f96c54f959bc182dbe|Aug 28, 2026
@@ -239,7 +240,6 @@ Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|322ec
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|66b5d2634cd0a79030562811e6e05f5532f800ba|Jul 19, 2026
 Libraries|[asio](http://github.com/chriskohlhoff/asio)|8806a6803cde7054c3049d3666d3ec36786568c5|Jul 18, 2026
 Emulators|[libretro-kronos](http://github.com/FCare/kronos)|d451a55253e2e75bcef704ec8ade2085d298212c|Jul 18, 2026
-Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.0.2|Jul 17, 2026
 Utils-host|[shader-slang](https://github.com/shader-slang/slang.git)|v2026.12.0.1|Jul 16, 2026
 Emulators|[libretro-holani](http://github.com/LLeny/holani-retro)|b95c00958e1e6ed8c383edc81b32b9119f13924b|Jul 16, 2026
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.3|Jul 15, 2026
