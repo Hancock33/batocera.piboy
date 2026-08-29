@@ -14,7 +14,7 @@ ifeq ($(BR2_x86_64),y)
 LINUXLOADER_DEPENDENCIES += wine-x86 dmidecode ossp
 define LINUXLOADER_CROSSHAIRS
 	mkdir -p $(TARGET_DIR)/usr/bin32/linuxloader/crosshairs
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/linuxloader/crosshairs/* $(TARGET_DIR)/usr/bin/linuxloader/crosshairs/
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/linuxloader/crosshairs/* $(TARGET_DIR)/usr/bin32/linuxloader/crosshairs/
 endef
 
 LINUXLOADER_POST_INSTALL_TARGET_HOOKS += LINUXLOADER_CROSSHAIRS
