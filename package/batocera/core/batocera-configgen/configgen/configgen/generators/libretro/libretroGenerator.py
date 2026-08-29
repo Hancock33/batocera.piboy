@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-import glob
 import itertools
 import logging
 import os
 import shutil
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -33,7 +33,6 @@ from .libretroPaths import (
 )
 
 if TYPE_CHECKING:
-    from pathlib import Path
 
     from ...Emulator import Emulator
     from ...types import HotkeysContext
@@ -339,9 +338,9 @@ class LibretroGenerator(Generator):
                 rom = next(rom.glob('*.md'))
 
         if system.name == 'scummvm':
-            if "squashfs" in str(rom):
-                romsInDir = glob.glob(glob.escape(str(rom)) + '/*.scummvm')
-                romsInDir[0].replace('.scummvm','')
+            if "squashfs" in (str(rom) or ""):
+                romsInDir = list(Path(rom or "").glob("*.scummvm"))
+                romsInDir = romsInDir[0].stem
             else:
                 rom = rom.parent / rom.name
                 if rom.stat().st_size == 0:

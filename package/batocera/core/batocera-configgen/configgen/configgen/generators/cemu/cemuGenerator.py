@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-import codecs
 import logging
 import os
 import subprocess
 from os import environ
+from pathlib import Path
 from typing import TYPE_CHECKING, cast
 from xml.dom import minidom
 
@@ -17,7 +17,6 @@ from . import cemuControllers
 from .cemuPaths import CEMU_BIOS, CEMU_CONFIG, CEMU_CONTROLLER_PROFILES, CEMU_ROMDIR, CEMU_SAVES
 
 if TYPE_CHECKING:
-    from pathlib import Path
 
     from ...Emulator import Emulator
     from ...types import HotkeysContext
@@ -238,7 +237,7 @@ class CemuGenerator(Generator):
             _logger.debug("*** use config audio device ***")
 
         # Save the config file
-        with codecs.open(str(configFile), "w", "utf-8") as xml:
+        with Path(configFile).open("w", encoding="utf-8-sig") as xml:
             dom_string = os.linesep.join([s for s in config.toprettyxml().splitlines() if s.strip()]) # remove ugly empty lines while minidom adds them...
             xml.write(dom_string)
 
