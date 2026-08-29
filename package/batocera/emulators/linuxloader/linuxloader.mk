@@ -1,57 +1,34 @@
-#
-# This file is part of the batocera distribution (https://batocera.org).
-# Copyright (c) 2025+.
-#
-# This program is free software: you can redistribute it and/or modify  
-# it under the terms of the GNU General Public License as published by  
-# the Free Software Foundation, version 3.
-#
-# You should have received a copy of the GNU General Public License 
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-# YOU MUST KEEP THIS HEADER AS IT IS
-#
 ################################################################################
 #
 # linuxloader
 #
 ################################################################################
-
-LINUXLOADER_VERSION = v3.0.10
+# Version: Commits on Jul 11, 2026
+LINUXLOADER_VERSION = 92ee8134bc5ccc857adc234d5bd5817630828f2e
 LINUXLOADER_SITE = $(call github,lindbergh-loader,linuxloader,$(LINUXLOADER_VERSION))
 LINUXLOADER_LICENSE = CC-BY-SA-4.0
 LINUXLOADER_LICENSE_FILES = LICENSE.md
 LINUXLOADER_EMULATOR_INFO = linuxloader.emulator.yml
 
 ifeq ($(BR2_x86_64),y)
-LINUXLOADER_DEPENDENCIES = wine-x86 dmidecode ossp
+LINUXLOADER_DEPENDENCIES += wine-x86 dmidecode ossp
+define LINUXLOADER_CROSSHAIRS
+	mkdir -p $(TARGET_DIR)/usr/bin32/linuxloader/crosshairs
+	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/linuxloader/crosshairs/* $(TARGET_DIR)/usr/bin/linuxloader/crosshairs/
+endef
 
-# On x86_64, Batocera runs linuxloader via wine/multilib
-define LINUXLOADER_CONFIGURE_CMDS
-	:
-endef
-define LINUXLOADER_BUILD_CMDS
-	:
-endef
-define LINUXLOADER_INSTALL_TARGET_CMDS
-	:
-endef
+LINUXLOADER_POST_INSTALL_TARGET_HOOKS += LINUXLOADER_CROSSHAIRS
+
+$(eval $(generic-package))
 endif
 
 ifeq ($(BR2_i386),y)
-LINUXLOADER_DEPENDENCIES += alsa-lib alsa-plugins alsa-utils faudio libfreeglut
-LINUXLOADER_DEPENDENCIES += libglu pcsc-lite libbsd libglew sdl3 sdl3_image sdl3_ttf
-LINUXLOADER_DEPENDENCIES += ncurses openal pipewire udev vulkan-loader zlib expat
-LINUXLOADER_DEPENDENCIES += xlib_libX11 xlib_libXcursor xlib_libXrandr xlib_libXext 
-LINUXLOADER_DEPENDENCIES += xlib_libXi xlib_libXmu xlib_libXScrnSaver
+LINUXLOADER_DEPENDENCIES += alsa-lib alsa-plugins alsa-utils faudio libfreeglut pcsc-lite
+LINUXLOADER_DEPENDENCIES += libglew sdl3 sdl3_image sdl3_ttf ncurses openal pipewire xlib_libX11 libbsd
+LINUXLOADER_DEPENDENCIES += xlib_libXcursor xlib_libXext xlib_libXi xlib_libXmu xlib_libXScrnSaver
+LINUXLOADER_IN_SOURCE_BUILD = NO
 
-define LINUXLOADER_FIX_CMAKELISTS
-	# Allow dynamic linking of FAudio instead of forcing static
-	$(SED) 's/-Wl,-Bstatic -lFAudio -Wl,-Bdynamic/-lFAudio/g' $(@D)/CMakeLists.txt
-	# Prevent fopen / fopen64 duplicate symbol collision in filesystemShared.c
-	$(SED) 's/-D_GNU_SOURCE/-D_GNU_SOURCE -U_FILE_OFFSET_BITS -D_FILE_OFFSET_BITS=32/g' $(@D)/CMakeLists.txt
-endef
-LINUXLOADER_POST_PATCH_HOOKS += LINUXLOADER_FIX_CMAKELISTS
+LINUXLOADER_CONF_OPTS += -DCMAKE_C_FLAGS=-std=gnu17
 
 define LINUXLOADER_INSTALL_TARGET_CMDS
     mkdir -p $(TARGET_DIR)/usr/bin/linuxloader/extralibs
@@ -80,14 +57,8 @@ define LINUXLOADER_INSTALL_TARGET_CMDS
     cp -fv $(LINUXLOADER_PKGDIR)/*.ini $(TARGET_DIR)/usr/bin/linuxloader/
     cp -fav $(LINUXLOADER_PKGDIR)/lib*.so* $(TARGET_DIR)/usr/bin/linuxloader/extralibs/
 endef
-endif
-
-define LINUXLOADER_CROSSHAIRS
-    mkdir -p $(TARGET_DIR)/usr/bin/linuxloader/crosshairs
-    cp -fav $(LINUXLOADER_PKGDIR)/crosshairs/* $(TARGET_DIR)/usr/bin/linuxloader/crosshairs/
-endef
-
-LINUXLOADER_POST_INSTALL_TARGET_HOOKS += LINUXLOADER_CROSSHAIRS
 
 $(eval $(cmake-package))
+endif
+
 $(eval $(emulator-info-package))

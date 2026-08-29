@@ -1,10 +1,10 @@
 from __future__ import annotations
 
+import codecs
 import logging
 import os
 import subprocess
 from os import environ
-from pathlib import Path
 from typing import TYPE_CHECKING, cast
 from xml.dom import minidom
 
@@ -17,6 +17,7 @@ from . import cemuControllers
 from .cemuPaths import CEMU_BIOS, CEMU_CONFIG, CEMU_CONTROLLER_PROFILES, CEMU_ROMDIR, CEMU_SAVES
 
 if TYPE_CHECKING:
+    from pathlib import Path
 
     from ...Emulator import Emulator
     from ...types import HotkeysContext

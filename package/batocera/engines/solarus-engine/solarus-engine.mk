@@ -3,8 +3,8 @@
 # solarus-engine
 #
 ################################################################################
-# Version: Commits on Aug 08, 2026
-SOLARUS_ENGINE_VERSION = bc2707d1fba2ec1e6529857f87202a20998bff13
+# Version: Commits on Aug 22, 2026
+SOLARUS_ENGINE_VERSION = v2.1.3
 SOLARUS_ENGINE_SITE = $(call gitlab,solarus-games,solarus,$(SOLARUS_ENGINE_VERSION))
 SOLARUS_ENGINE_LICENSE = GPL-3.0 (code), CC-BY-SA-4.0 (Solarus logos and icons), CC-BY-SA-3.0 (GUI icons)
 SOLARUS_ENGINE_EMULATOR_INFO = solarus.emulator.yml
