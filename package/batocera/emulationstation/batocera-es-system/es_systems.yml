@@ -5734,8 +5734,8 @@ lindbergh:
   extensions:           [game]
   platform:             arcade
   emulators:
-    lindbergh-loader:
-      lindbergh-loader: { requireAnyOf: [BR2_PACKAGE_LINDBERGH_LOADER] }
+    linuxloader:
+      linuxloader:      { requireAnyOf: [BR2_PACKAGE_LINUXLOADER] }
 
   comment_en:           |
                         Sega Lindbergh requires good knowledge of rom dumps.

@@ -6,6 +6,7 @@ config BR2_PACKAGE_LINDBERGH_LOADER
 	select BR2_PACKAGE_ALSA_LIB
 	select BR2_PACKAGE_ALSA_PLUGINS
 	select BR2_PACKAGE_ALSA_UTILS
+	select BR2_PACKAGE_BATOCERA_SDL3
 	select BR2_PACKAGE_DMIDECODE                 if BR2_x86_64
 	select BR2_PACKAGE_FAUDIO
 	select BR2_PACKAGE_LIBBSD
@@ -18,7 +19,9 @@ config BR2_PACKAGE_LINDBERGH_LOADER
 	select BR2_PACKAGE_PCSC_LITE
 	select BR2_PACKAGE_PIPEWIRE
 	select BR2_PACKAGE_PYTHON3_XZ                if BR2_x86_64
-	select BR2_PACKAGE_BATOCERA_SDL3
+	select BR2_PACKAGE_SDL3
+	select BR2_PACKAGE_SDL3_IMAGE
+	select BR2_PACKAGE_SDL3_TTF
 	select BR2_PACKAGE_UTIL_LINUX_LIBUUID
 	select BR2_PACKAGE_XCB_PROTO
 	select BR2_PACKAGE_XCB_UTIL
@@ -43,6 +46,3 @@ config BR2_PACKAGE_LINDBERGH_LOADER
 	  A SEGA Lindbergh Emulator for Linux.
 
 	  https://github.com/lindbergh-loader/lindbergh-loader
-
-comment "lindbergh-loader depends on X.org and needs an OpenGL backend"
-	depends on !BR2_PACKAGE_XORG7 || !BR2_PACKAGE_HAS_LIBGL

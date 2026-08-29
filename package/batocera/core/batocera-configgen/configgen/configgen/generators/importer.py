@@ -73,7 +73,7 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'lexaloffle': ('lexaloffle.lexaloffleGenerator', 'LexaloffleGenerator'),
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),
     'lightspark': ('lightspark.lightsparkGenerator', 'LightsparkGenerator'),
-    'lindbergh-loader': ('lindbergh.lindberghGenerator', 'LindberghGenerator'),
+    'linuxloader': ('linuxloader.linuxloaderGenerator', 'LinuxLoaderGenerator'),
     'mame': ('mame.mameGenerator', 'MameGenerator'),
     'melonds': ('melonds.melondsGenerator', 'MelonDSGenerator'),
     'moonlight': ('moonlight.moonlightGenerator', 'MoonlightGenerator'),
