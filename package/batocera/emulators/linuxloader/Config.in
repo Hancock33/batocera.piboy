@@ -1,5 +1,5 @@
-config BR2_PACKAGE_LINDBERGH_LOADER
-	bool "lindbergh-loader"
+config BR2_PACKAGE_LINUXLOADER
+	bool "linuxloader"
 	depends on BR2_PACKAGE_HAS_LIBGL
 	depends on BR2_PACKAGE_LIBBSD_ARCH_SUPPORTS
 	depends on BR2_PACKAGE_XORG7
