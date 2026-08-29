@@ -8,7 +8,7 @@ APPSTREAM_VERSION = v1.2.0
 APPSTREAM_SITE = $(call github,ximion,appstream,$(APPSTREAM_VERSION))
 APPSTREAM_INSTALL_STAGING = YES
 
-APPSTREAM_DEPENDENCIES = bash-completion blake3 libcurl libfyaml libxmlb host-appstream
+APPSTREAM_DEPENDENCIES = bash-completion blake3 libcurl libfyaml libvips libxmlb host-appstream
 HOST_APPSTREAM_DEPENDENCIES = host-bash-completion host-brotli host-libcurl host-libidn2 host-libfyaml host-libxmlb
 
 APPSTREAM_CONF_OPTS = -Dgir=true -Dstemming=false -Dsystemd=false -Dzstd-support=true -Dvapi=true -Dcompose=true
