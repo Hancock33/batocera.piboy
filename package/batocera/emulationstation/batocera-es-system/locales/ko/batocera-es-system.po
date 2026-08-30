@@ -428,6 +428,10 @@ msgid "125% (Overclock)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "128 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1280 x 1024"
 msgstr "1280 x 1024"
 
@@ -586,6 +590,10 @@ msgstr "15배 실기 (~6720p)"
 msgctxt "game_options"
 msgid "16 Frame"
 msgstr "16 프레임"
+
+msgctxt "game_options"
+msgid "16 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "16 MHz"
@@ -969,6 +977,10 @@ msgid "24th"
 msgstr "24일"
 
 msgctxt "game_options"
+msgid "256 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2560 x 1440"
 msgstr "2560 x 1440"
 
@@ -1216,6 +1228,10 @@ msgstr "30일"
 msgctxt "game_options"
 msgid "31st"
 msgstr "31일"
+
+msgctxt "game_options"
+msgid "32 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "32 MHz"
@@ -1488,6 +1504,10 @@ msgstr "486_slow"
 msgctxt "game_options"
 msgid "48MB"
 msgstr "48MB"
+
+msgctxt "game_options"
+msgid "49.66 MHz (50MHz accelerator)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4:3 (Default)"
@@ -1804,6 +1824,10 @@ msgstr "60s"
 msgctxt "game_options"
 msgid "6144MB"
 msgstr "6144MB"
+
+msgctxt "game_options"
+msgid "64 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "64 MHz (Overclock)"
@@ -2508,6 +2532,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Accurate"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Accurate cpu and blitter timings."
 msgstr ""
 
 msgctxt "game_options"
@@ -3646,8 +3674,8 @@ msgid "Batocera Control Center"
 msgstr "바토세라 제어 센터"
 
 msgctxt "game_options"
-msgid "Batocera sets first audio device (Default)"
-msgstr "바토세라 첫 오디오 장치 설정 (기본)"
+msgid "Batocera sets first audio device"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Battery percentage"
@@ -4352,6 +4380,10 @@ msgid "CPU FEATURE"
 msgstr "CPU 기능"
 
 msgctxt "game_options"
+msgid "CPU MODEL"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU SPEED"
 msgstr "CPU 속도"
 
@@ -4514,6 +4546,10 @@ msgstr "CXD4 (LLE 폴백)"
 msgctxt "game_options"
 msgid "CYBERMORPH"
 msgstr "사이버모프"
+
+msgctxt "game_options"
+msgid "CYCLE EXACT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Cache compiled shaders to storage to eliminate future stutter."
@@ -4913,7 +4949,7 @@ msgstr "전투 난이도를 선택하세요."
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL for gamepads only."
+"lightguns and steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 msgctxt "game_options"
@@ -5289,6 +5325,12 @@ msgid "Config"
 msgstr "구성"
 
 msgctxt "game_options"
+msgid ""
+"Configure emulated controller layout. Choose Wiimote configurations for "
+"games requiring motion/shake."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Console AES Japan"
 msgstr "콘솔 AES 일본"
 
@@ -5324,6 +5366,12 @@ msgstr "5/6 버튼 게임 및 기타 고유한 컨트롤을위한 컨트롤"
 
 msgctxt "game_options"
 msgid "Controls how the adhoc server relay is used."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Controls how the game scales to fit your display when the screen aspect "
+"ratio doesn't match the game."
 msgstr ""
 
 msgctxt "game_options"
@@ -6455,8 +6503,8 @@ msgid "ESYNC"
 msgstr "ESYNC"
 
 msgctxt "game_options"
-msgid "EVDEV"
-msgstr ""
+msgid "EVDEV (Default)"
+msgstr "EVDEV (기본)"
 
 msgctxt "game_options"
 msgid "EXPANSION PACK"
@@ -6800,8 +6848,9 @@ msgstr ""
 "한 마우스 입력 활성화"
 
 msgctxt "game_options"
-msgid "Enable mouse input to simulate touchscreen."
-msgstr "터치스크린을 시뮬레이션하려면 마우스 입력을 활성화하세요."
+msgid ""
+"Enable mouse or touchpad input to simulate the Wii U GamePad touchscreen."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enable notifications of cache, controller events etc."
@@ -7323,6 +7372,10 @@ msgid "External Host"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Extra memory over the 8MB default fastram. Need a 32bit cpu >= 68020."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Extreme"
 msgstr "익스트림"
 
@@ -7563,6 +7616,10 @@ msgid "FULL SINGLE SCREEN"
 msgstr "전체 단일 화면"
 
 msgctxt "game_options"
+msgid "FULL SYNC AT GX2DRAWDONE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FULLSCREEN"
 msgstr "전체화면"
 
@@ -7572,6 +7629,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "FULLSCREEN MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FULLSCREEN SCALING"
 msgstr ""
 
 msgctxt "game_options"
@@ -7892,10 +7953,8 @@ msgstr "강제 32비트"
 msgctxt "game_options"
 msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
-"screen devices/games."
+"screen devices/games. Can cause issues with intro videos."
 msgstr ""
-"3D 지오메트리가 항상 상단 화면에 렌더링되도록 강제합니다. 단일 화면 장치/게임"
-"에 유용합니다."
 
 msgctxt "game_options"
 msgid "Force 4:3"
@@ -8849,8 +8908,8 @@ msgid "Hartung Game Master cartridges"
 msgstr "하르퉁 게임 마스터 카트리지"
 
 msgctxt "game_options"
-msgid "Have Batocera set the first audio output device."
-msgstr "바토세라에서 첫 번째 오디오 출력 장치를 설정합니다."
+msgid "Have Batocera automatically set the primary audio output device."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hebrew"
@@ -8903,10 +8962,6 @@ msgstr "허큘리스"
 msgctxt "game_options"
 msgid "Hermite"
 msgstr "에르미트"
-
-msgctxt "game_options"
-msgid "Hermite (Default)"
-msgstr "에르미트 (기본)"
 
 msgctxt "game_options"
 msgid "Hide"
@@ -9193,6 +9248,12 @@ msgstr "정확도는 약간 떨어지지만 속도는 향상됩니다."
 
 msgctxt "game_options"
 msgid ""
+"Improves accuracy and fixes game-specific glitches at the cost of some "
+"performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr ""
@@ -9253,6 +9314,10 @@ msgstr ""
 "VR 및 3D TV를 위한 VR 헤드 트래킹 및 입체 렌더링, 마우스 지원(마우스 룩)이 포"
 "함되고, 향상된 아날로그 컨트롤러 지원을 위해 아날로그 입력을 트래커 각도로 변"
 "환하는 옵션이 있는 새로운 헤드 트래커 입력 장치 유형이 도입되었습니다."
+
+msgctxt "game_options"
+msgid "Increase cpu frequency."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Increase emulator performance, at the cost of accuracy/stability."
@@ -9599,8 +9664,8 @@ msgid "Keep (default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Keep Aspect Ration (Default)"
-msgstr "화면비 유지 (기본)"
+msgid "Keep Aspect Ratio"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Keep original aspect ratio when stretching."
@@ -9756,6 +9821,10 @@ msgstr "레이지 텍스처 캐싱"
 
 msgctxt "game_options"
 msgid "LCD 1x"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LCD 1x NDS Color"
 msgstr ""
 
 msgctxt "game_options"
@@ -11832,6 +11901,10 @@ msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
 msgstr "SNES CPU (그라디우스 3, 슈퍼 R 타입)를 오버 클럭합니다."
 
 msgctxt "game_options"
+msgid "Override the CPU that comes with the selected Amiga model."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Overrides the language mode of the emulated console."
 msgstr "에뮬레이션된 콘솔의 언어 모드를 재정의합니다."
 
@@ -12684,10 +12757,6 @@ msgid "Primary attack"
 msgstr "1차 공격"
 
 msgctxt "game_options"
-msgid "Pro Controller required for games that require shake motions."
-msgstr "흔들림 동작이 필요한 게임에 필요한 프로 컨트롤러입니다."
-
-msgctxt "game_options"
 msgid "Produces a clean LCD effect."
 msgstr "깨끗한 LCD 효과를 생성합니다."
 
@@ -13074,6 +13143,10 @@ msgstr "무작위 값"
 msgctxt "game_options"
 msgid "Raw"
 msgstr "원시"
+
+msgctxt "game_options"
+msgid "Read CD images faster than the real drive."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Reads color buffer memory into CPU space. Required by some titles."
@@ -13572,10 +13645,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SDL"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SDL (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -15338,10 +15407,6 @@ msgid "Stereo (2)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stereo (Default)"
-msgstr "스테레오 (기본)"
-
-msgctxt "game_options"
 msgid "Stereo sound output."
 msgstr "스트레오 사운드 출력입니다."
 
@@ -15384,6 +15449,10 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Stretch the viewport to fill your display, ignoring the native aspect ratio."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Stretch to Fill"
 msgstr ""
 
 msgctxt "game_options"
@@ -15549,6 +15618,11 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Synchronize frame presentation with monitor refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Synchronize frame rate with monitor refresh rate to eliminate screen tearing."
 msgstr ""
 
 msgctxt "game_options"
@@ -15764,6 +15838,10 @@ msgid "TOUCH SCREEN MODE"
 msgstr "터치 스크린 모드"
 
 msgctxt "game_options"
+msgid "TOUCHSCREEN EMULATION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TRAFFIC DENSITY"
 msgstr ""
 
@@ -15822,6 +15900,10 @@ msgstr "TT 오토"
 msgctxt "game_options"
 msgid "TT ETOS 512k"
 msgstr "TT ETOS 512k"
+
+msgctxt "game_options"
+msgid "TURBO CD SPEED"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TURBO MODE"
@@ -17510,6 +17592,10 @@ msgid "ZOOM/CROP (HIDE BORDERS)"
 msgstr "확대/축소/자르기 (테두리 숨기기)"
 
 msgctxt "game_options"
+msgid "ZORRO III FAST RAM"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "게임이 핸들에 반응하지 않는 영역 (°)"
 
@@ -18206,6 +18292,10 @@ msgstr "노란색/파란색"
 #~ msgstr "셰이더 해석기를 사용한 비동기"
 
 #~ msgctxt "game_options"
+#~ msgid "Batocera sets first audio device (Default)"
+#~ msgstr "바토세라 첫 오디오 장치 설정 (기본)"
+
+#~ msgctxt "game_options"
 #~ msgid "Bicubic: B-Spine"
 #~ msgstr "고등차수: B-Spine"
 
@@ -18484,10 +18574,6 @@ msgstr "노란색/파란색"
 #~ msgstr "WINE 장치 서비스 활성화"
 
 #~ msgctxt "game_options"
-#~ msgid "EVDEV (Default)"
-#~ msgstr "EVDEV (기본)"
-
-#~ msgctxt "game_options"
 #~ msgid "EXPERT SETTINGS"
 #~ msgstr "전문가 설정"
 
@@ -18498,6 +18584,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Enable full-screen antialiasing in Direct3D."
 #~ msgstr "다이렉트3D에서 전체 화면 안티에일리어싱을 활성화합니다."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable mouse input to simulate touchscreen."
+#~ msgstr "터치스크린을 시뮬레이션하려면 마우스 입력을 활성화하세요."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18639,6 +18729,14 @@ msgstr "노란색/파란색"
 #~ "기 위해 100%%보다 큰 값을 사용하는 것이 좋은 경우가 있습니다."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Force 3D geometry to always render on the top screen. Useful for single-"
+#~ "screen devices/games."
+#~ msgstr ""
+#~ "3D 지오메트리가 항상 상단 화면에 렌더링되도록 강제합니다. 단일 화면 장치/"
+#~ "게임에 유용합니다."
+
+#~ msgctxt "game_options"
 #~ msgid "Force Linear"
 #~ msgstr "강제 선형"
 
@@ -18691,6 +18789,10 @@ msgstr "노란색/파란색"
 #~ msgstr "햇 위쪽"
 
 #~ msgctxt "game_options"
+#~ msgid "Have Batocera set the first audio output device."
+#~ msgstr "바토세라에서 첫 번째 오디오 출력 장치를 설정합니다."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Helps forcing an international Japenese version to English. Unlocking "
 #~ "more European languages etc."
@@ -18711,6 +18813,10 @@ msgstr "노란색/파란색"
 #~ msgstr ""
 #~ "비활성화된 상태에서도 일부 게임을 실행하는 데 도움이 됩니다. 하지만 성능"
 #~ "에 영향을 미칠 수 있습니다."
+
+#~ msgctxt "game_options"
+#~ msgid "Hermite (Default)"
+#~ msgstr "에르미트 (기본)"
 
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
@@ -18790,6 +18896,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Joystick (Analog, 2 Buttons)"
 #~ msgstr "조이스틱 (아날로그, 2 버튼)"
+
+#~ msgctxt "game_options"
+#~ msgid "Keep Aspect Ration (Default)"
+#~ msgstr "화면비 유지 (기본)"
 
 #~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
@@ -19029,6 +19139,10 @@ msgstr "노란색/파란색"
 #~ msgstr "ES에서는 사전 로드가 불가능합니다."
 
 #~ msgctxt "game_options"
+#~ msgid "Pro Controller required for games that require shake motions."
+#~ msgstr "흔들림 동작이 필요한 게임에 필요한 프로 컨트롤러입니다."
+
+#~ msgctxt "game_options"
 #~ msgid "QUERY OCCLUSION"
 #~ msgstr "쿼리 폐색"
 
@@ -19205,6 +19319,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "South Korea"
 #~ msgstr "대한민국"
+
+#~ msgctxt "game_options"
+#~ msgid "Stereo (Default)"
+#~ msgstr "스테레오 (기본)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Strafe Left"

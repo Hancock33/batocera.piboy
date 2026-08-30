@@ -527,11 +527,63 @@ msgid "Integer"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Fix flickering in a static screen like Workbench."
+msgid "Override the CPU that comes with the selected Amiga model."
 msgstr ""
 
 msgctxt "game_options"
-msgid "REMOVE INTERLACE ARTIFACTS"
+msgid "CPU MODEL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Increase cpu frequency."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CPU CLOCK"
+msgstr ""
+
+msgctxt "game_options"
+msgid " 3.54 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid " 7.09 MHz (A500 speed)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "14.18 MHz (A1200 speed)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "28.37 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid "35.46 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid "42.56 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid "49.66 MHz (50MHz accelerator)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "56.75 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Accurate cpu and blitter timings."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CYCLE EXACT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ON (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -539,7 +591,59 @@ msgid "OFF"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Extra memory over the 8MB default fastram. Need a 32bit cpu >= 68020."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ZORRO III FAST RAM"
+msgstr ""
+
+msgctxt "game_options"
+msgid "8 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "16 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "32 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "64 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "128 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "256 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Read CD images faster than the real drive."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TURBO CD SPEED"
+msgstr ""
+
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ON"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fix flickering in a static screen like Workbench."
+msgstr ""
+
+msgctxt "game_options"
+msgid "REMOVE INTERLACE ARTIFACTS"
 msgstr ""
 
 msgctxt "game_options"
@@ -559,19 +663,11 @@ msgid "KEEP ASPECT RATIO"
 msgstr ""
 
 msgctxt "game_options"
-msgid "OFF (Default)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Force NTSC instead PAL."
 msgstr ""
 
 msgctxt "game_options"
 msgid "FORCE NTSC"
-msgstr ""
-
-msgctxt "game_options"
-msgid "ON (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -1032,15 +1128,21 @@ msgid "OpenGL"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Vulkan (Default)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Speed up shader compilation."
 msgstr ""
 
 msgctxt "game_options"
 msgid "ASYNC SHADER COMPILE (VULKAN ONLY)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Improves accuracy and fixes game-specific glitches at the cost of some "
+"performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FULL SYNC AT GX2DRAWDONE"
 msgstr ""
 
 msgctxt "game_options"
@@ -1052,7 +1154,9 @@ msgid "RUMBLE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Pro Controller required for games that require shake motions."
+msgid ""
+"Configure emulated controller layout. Choose Wiimote configurations for "
+"games requiring motion/shake."
 msgstr ""
 
 msgctxt "game_options"
@@ -1148,7 +1252,7 @@ msgid "AUDIO CHANNELS"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stereo (Default)"
+msgid "Stereo"
 msgstr ""
 
 msgctxt "game_options"
@@ -1156,7 +1260,7 @@ msgid "Surround"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Have Batocera set the first audio output device."
+msgid "Have Batocera automatically set the primary audio output device."
 msgstr ""
 
 msgctxt "game_options"
@@ -1168,7 +1272,12 @@ msgid "Set in Config - choose if no audio output"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Batocera sets first audio device (Default)"
+msgid "Batocera sets first audio device"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Synchronize frame rate with monitor refresh rate to eliminate screen tearing."
 msgstr ""
 
 msgctxt "game_options"
@@ -1188,7 +1297,7 @@ msgid "UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Hermite (Default)"
+msgid "Hermite"
 msgstr ""
 
 msgctxt "game_options"
@@ -1204,31 +1313,30 @@ msgid "DOWNSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Bilinear (Default)"
+msgid ""
+"Controls how the game scales to fit your display when the screen aspect "
+"ratio doesn't match the game."
 msgstr ""
 
 msgctxt "game_options"
-msgid "Hermite"
+msgid "FULLSCREEN SCALING"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Keep Aspect Ration (Default)"
+msgid "Keep Aspect Ratio"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stretch"
+msgid "Stretch to Fill"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enable mouse input to simulate touchscreen."
+msgid ""
+"Enable mouse or touchpad input to simulate the Wii U GamePad touchscreen."
 msgstr ""
 
 msgctxt "game_options"
-msgid "ENABLE MOUSE"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Disabled (Default)"
+msgid "TOUCHSCREEN EMULATION"
 msgstr ""
 
 msgctxt "game_options"
@@ -1255,6 +1363,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Stretch"
 msgstr ""
 
 msgctxt "game_options"
@@ -1830,7 +1942,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
-"screen devices/games."
+"screen devices/games. Can cause issues with intro videos."
 msgstr ""
 
 msgctxt "game_options"
@@ -1882,6 +1994,10 @@ msgid "LCD 3x"
 msgstr ""
 
 msgctxt "game_options"
+msgid "LCD 1x NDS Color"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enable physical mic blowing. Higher sensitivity triggers more easily."
 msgstr ""
 
@@ -1927,6 +2043,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SYNC TO HOST REFRESH RATE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Disabled (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2445,10 +2565,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Mono"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Stereo"
 msgstr ""
 
 msgctxt "game_options"
@@ -3268,7 +3384,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL for gamepads only."
+"lightguns and steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 msgctxt "game_options"
@@ -3276,11 +3392,11 @@ msgid "CONTROLLER MODE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SDL (Default)"
+msgid "SDL2"
 msgstr ""
 
 msgctxt "game_options"
-msgid "EVDEV"
+msgid "EVDEV (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -4592,6 +4708,10 @@ msgctxt "game_options"
 msgid ""
 "Enable mouse input for trackballs, spinners, lightguns (if no gun "
 "connected), and similar controls"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ENABLE MOUSE"
 msgstr ""
 
 msgctxt "game_options"
@@ -7949,10 +8069,6 @@ msgid "Can fix slowdown. Only works on some drivers."
 msgstr ""
 
 msgctxt "game_options"
-msgid "CPU CLOCK"
-msgstr ""
-
-msgctxt "game_options"
 msgid "No skipping"
 msgstr ""
 
@@ -8739,10 +8855,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "4 MB"
-msgstr ""
-
-msgctxt "game_options"
-msgid "8 MB"
 msgstr ""
 
 msgctxt "game_options"
@@ -10639,34 +10751,6 @@ msgid "Default by model"
 msgstr ""
 
 msgctxt "game_options"
-msgid " 3.54 MHz"
-msgstr ""
-
-msgctxt "game_options"
-msgid " 7.09 MHz (A500 speed)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "14.18 MHz (A1200 speed)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "28.37 MHz"
-msgstr ""
-
-msgctxt "game_options"
-msgid "35.46 MHz"
-msgstr ""
-
-msgctxt "game_options"
-msgid "42.56 MHz"
-msgstr ""
-
-msgctxt "game_options"
-msgid "56.75 MHz"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Ignored with 'Cycle-exact'."
 msgstr ""
 
@@ -11898,10 +11982,6 @@ msgid "TinyALSA"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SDL2"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Pulse (Default)"
 msgstr ""
 
@@ -12163,6 +12243,10 @@ msgid "RENDER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Vulkan (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Cap maximum framerate to prevent physics acceleration or stutter."
 msgstr ""
 
@@ -12310,6 +12394,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "OUTPUT SCALING MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bilinear (Default)"
 msgstr ""
 
 msgctxt "game_options"

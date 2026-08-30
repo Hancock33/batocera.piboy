@@ -427,6 +427,10 @@ msgid "125% (Overclock)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "128 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1280 x 1024"
 msgstr ""
 
@@ -584,6 +588,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "16 Frame"
+msgstr ""
+
+msgctxt "game_options"
+msgid "16 MB"
 msgstr ""
 
 msgctxt "game_options"
@@ -968,6 +976,10 @@ msgid "24th"
 msgstr ""
 
 msgctxt "game_options"
+msgid "256 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2560 x 1440"
 msgstr ""
 
@@ -1214,6 +1226,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "31st"
+msgstr ""
+
+msgctxt "game_options"
+msgid "32 MB"
 msgstr ""
 
 msgctxt "game_options"
@@ -1486,6 +1502,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "48MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "49.66 MHz (50MHz accelerator)"
 msgstr ""
 
 msgctxt "game_options"
@@ -1802,6 +1822,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "6144MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "64 MB"
 msgstr ""
 
 msgctxt "game_options"
@@ -2507,6 +2531,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Accurate"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Accurate cpu and blitter timings."
 msgstr ""
 
 msgctxt "game_options"
@@ -3627,7 +3655,7 @@ msgid "Batocera Control Center"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Batocera sets first audio device (Default)"
+msgid "Batocera sets first audio device"
 msgstr ""
 
 msgctxt "game_options"
@@ -4333,6 +4361,10 @@ msgid "CPU FEATURE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CPU MODEL"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU SPEED"
 msgstr ""
 
@@ -4492,6 +4524,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "CYBERMORPH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CYCLE EXACT"
 msgstr ""
 
 msgctxt "game_options"
@@ -4878,7 +4914,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL for gamepads only."
+"lightguns and steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 msgctxt "game_options"
@@ -5246,6 +5282,12 @@ msgid "Config"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Configure emulated controller layout. Choose Wiimote configurations for "
+"games requiring motion/shake."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Console AES Japan"
 msgstr ""
 
@@ -5281,6 +5323,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Controls how the adhoc server relay is used."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Controls how the game scales to fit your display when the screen aspect "
+"ratio doesn't match the game."
 msgstr ""
 
 msgctxt "game_options"
@@ -6398,7 +6446,7 @@ msgid "ESYNC"
 msgstr ""
 
 msgctxt "game_options"
-msgid "EVDEV"
+msgid "EVDEV (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -6724,7 +6772,8 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enable mouse input to simulate touchscreen."
+msgid ""
+"Enable mouse or touchpad input to simulate the Wii U GamePad touchscreen."
 msgstr ""
 
 msgctxt "game_options"
@@ -7222,6 +7271,10 @@ msgid "External Host"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Extra memory over the 8MB default fastram. Need a 32bit cpu >= 68020."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Extreme"
 msgstr ""
 
@@ -7462,6 +7515,10 @@ msgid "FULL SINGLE SCREEN"
 msgstr ""
 
 msgctxt "game_options"
+msgid "FULL SYNC AT GX2DRAWDONE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FULLSCREEN"
 msgstr ""
 
@@ -7471,6 +7528,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "FULLSCREEN MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FULLSCREEN SCALING"
 msgstr ""
 
 msgctxt "game_options"
@@ -7775,7 +7836,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
-"screen devices/games."
+"screen devices/games. Can cause issues with intro videos."
 msgstr ""
 
 msgctxt "game_options"
@@ -8721,7 +8782,7 @@ msgid "Hartung Game Master cartridges"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Have Batocera set the first audio output device."
+msgid "Have Batocera automatically set the primary audio output device."
 msgstr ""
 
 msgctxt "game_options"
@@ -8770,10 +8831,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Hermite"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Hermite (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -9060,6 +9117,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Improves accuracy and fixes game-specific glitches at the cost of some "
+"performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr ""
@@ -9112,6 +9175,10 @@ msgid ""
 "along with mouse support (Mouse Look), and introduces a new Head Tracker "
 "input device type with options to convert analog inputs to tracker angles "
 "for enhanced analog controller support."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Increase cpu frequency."
 msgstr ""
 
 msgctxt "game_options"
@@ -9453,7 +9520,7 @@ msgid "Keep (default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Keep Aspect Ration (Default)"
+msgid "Keep Aspect Ratio"
 msgstr ""
 
 msgctxt "game_options"
@@ -9608,6 +9675,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "LCD 1x"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LCD 1x NDS Color"
 msgstr ""
 
 msgctxt "game_options"
@@ -11658,6 +11729,10 @@ msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
 msgstr ""
 
 msgctxt "game_options"
+msgid "Override the CPU that comes with the selected Amiga model."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Overrides the language mode of the emulated console."
 msgstr ""
 
@@ -12508,10 +12583,6 @@ msgid "Primary attack"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Pro Controller required for games that require shake motions."
-msgstr ""
-
-msgctxt "game_options"
 msgid "Produces a clean LCD effect."
 msgstr ""
 
@@ -12895,6 +12966,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Raw"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Read CD images faster than the real drive."
 msgstr ""
 
 msgctxt "game_options"
@@ -13385,10 +13460,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SDL"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SDL (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -15126,10 +15197,6 @@ msgid "Stereo (2)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stereo (Default)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Stereo sound output."
 msgstr ""
 
@@ -15171,6 +15238,10 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Stretch the viewport to fill your display, ignoring the native aspect ratio."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Stretch to Fill"
 msgstr ""
 
 msgctxt "game_options"
@@ -15334,6 +15405,11 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Synchronize frame presentation with monitor refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Synchronize frame rate with monitor refresh rate to eliminate screen tearing."
 msgstr ""
 
 msgctxt "game_options"
@@ -15549,6 +15625,10 @@ msgid "TOUCH SCREEN MODE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "TOUCHSCREEN EMULATION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TRAFFIC DENSITY"
 msgstr ""
 
@@ -15606,6 +15686,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "TT ETOS 512k"
+msgstr ""
+
+msgctxt "game_options"
+msgid "TURBO CD SPEED"
 msgstr ""
 
 msgctxt "game_options"
@@ -17252,6 +17336,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ZOOM/CROP (HIDE BORDERS)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ZORRO III FAST RAM"
 msgstr ""
 
 msgctxt "game_options"
