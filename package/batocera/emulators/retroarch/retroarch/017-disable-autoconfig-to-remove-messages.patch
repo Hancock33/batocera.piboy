@@ -1,5 +1,5 @@
 diff --git a/tasks/task_autodetect.c b/tasks/task_autodetect.c
-index 89d88a6f76..a624e23f0c 100644
+index da7edbf0d4..f7a8ac8daa 100644
 --- a/tasks/task_autodetect.c
 +++ b/tasks/task_autodetect.c
 @@ -1302,6 +1302,8 @@ static void input_autoconfigure_connect_handler(retro_task_t *task)

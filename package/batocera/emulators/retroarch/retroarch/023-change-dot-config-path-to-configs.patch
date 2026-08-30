@@ -43,24 +43,24 @@ index f6badc1f1d..6d2358fa95 100644
        return true;
     }
 diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
-index 6106c26863..3e78a97776 100644
+index be7639f32e..095e146ca8 100644
 --- a/frontend/drivers/platform_unix.c
 +++ b/frontend/drivers/platform_unix.c
-@@ -2868,7 +2868,7 @@ static void frontend_unix_get_env(int *argc,
+@@ -2896,7 +2896,7 @@ static void frontend_unix_get_env(int *argc,
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
--      strlcpy(base_path + _len, "/.config/retroarch", sizeof(base_path) - _len);
-+      strlcpy(base_path + _len, "/configs/retroarch", sizeof(base_path) - _len);
+-      strlcpy_lit(base_path + _len, "/.config/retroarch", sizeof(base_path) - _len);
++      strlcpy_lit(base_path + _len, "/config/retroarch", sizeof(base_path) - _len);
     }
     else
-       strlcpy(base_path, "retroarch", sizeof(base_path));
-@@ -3546,7 +3546,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
+       strlcpy_lit(base_path, "retroarch", sizeof(base_path));
+@@ -3583,7 +3583,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
--      strlcpy(base_path + _len, "/.config/retroarch", sizeof(base_path) - _len);
-+      strlcpy(base_path + _len, "/configs/retroarch", sizeof(base_path) - _len);
+-      strlcpy_lit(base_path + _len, "/.config/retroarch", sizeof(base_path) - _len);
++      strlcpy_lit(base_path + _len, "/config/retroarch", sizeof(base_path) - _len);
     }
  #endif
  
@@ -80,10 +80,10 @@ index bbdc9ac076..42992c59d4 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index b82061db05..38888d2aa4 100644
+index 9b2aae7a00..2189400e13 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -7185,7 +7185,7 @@ static void retroarch_print_help(const char *arg0)
+@@ -7141,7 +7141,7 @@ static void retroarch_print_help(const char *arg0)
           "                                 "
           "  $XDG_CONFIG_HOME/retroarch/retroarch.cfg,\n"
           "                                 "
