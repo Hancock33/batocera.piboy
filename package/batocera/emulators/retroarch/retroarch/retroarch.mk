@@ -182,6 +182,7 @@ define RETROARCH_INSTALL_STAGING_CMDS
 endef
 
 define RETROARCH_LIBRETRO_FFMPEG_INSTALL
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-error=implicit-function-declaration|g" $(@D)/cores/libretro-ffmpeg/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/cores/libretro-ffmpeg
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/cores/libretro-ffmpeg/ffmpeg_libretro.so $(TARGET_DIR)/usr/lib/libretro/ffmpeg_libretro.so
