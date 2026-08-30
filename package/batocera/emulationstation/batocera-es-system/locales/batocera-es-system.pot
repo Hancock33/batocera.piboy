@@ -527,11 +527,63 @@ msgid "Integer"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Fix flickering in a static screen like Workbench."
+msgid "Override the CPU that comes with the selected Amiga model."
 msgstr ""
 
 msgctxt "game_options"
-msgid "REMOVE INTERLACE ARTIFACTS"
+msgid "CPU MODEL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Increase cpu frequency."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CPU CLOCK"
+msgstr ""
+
+msgctxt "game_options"
+msgid " 3.54 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid " 7.09 MHz (A500 speed)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "14.18 MHz (A1200 speed)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "28.37 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid "35.46 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid "42.56 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid "49.66 MHz (50MHz accelerator)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "56.75 MHz"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Accurate cpu and blitter timings."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CYCLE EXACT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ON (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -539,7 +591,59 @@ msgid "OFF"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Extra memory over the 8MB default fastram. Need a 32bit cpu >= 68020."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ZORRO III FAST RAM"
+msgstr ""
+
+msgctxt "game_options"
+msgid "8 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "16 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "32 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "64 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "128 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "256 MB"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Read CD images faster than the real drive."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TURBO CD SPEED"
+msgstr ""
+
+msgctxt "game_options"
+msgid "OFF (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ON"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fix flickering in a static screen like Workbench."
+msgstr ""
+
+msgctxt "game_options"
+msgid "REMOVE INTERLACE ARTIFACTS"
 msgstr ""
 
 msgctxt "game_options"
@@ -559,19 +663,11 @@ msgid "KEEP ASPECT RATIO"
 msgstr ""
 
 msgctxt "game_options"
-msgid "OFF (Default)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Force NTSC instead PAL."
 msgstr ""
 
 msgctxt "game_options"
 msgid "FORCE NTSC"
-msgstr ""
-
-msgctxt "game_options"
-msgid "ON (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -666,6 +762,10 @@ msgid "SCREEN LAYOUT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Bottom/Top"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Top Only"
 msgstr ""
 
@@ -728,7 +828,31 @@ msgid "RENDERING RESOLUTION"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Fix screen tearing. CPU heavy."
+msgid "Enhance low-resolution textures using scaling algorithms."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Anime4K"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bicubic"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ScaleForce"
+msgstr ""
+
+msgctxt "game_options"
+msgid "xBRZ"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synchronize framerate with display refresh rate."
 msgstr ""
 
 msgctxt "game_options"
@@ -771,8 +895,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Some applications requires this to be enabled for the hardware shader to "
-"render properly. However this would reduce performance in most applications."
+"Fixes rendering glitches in games like Luigi's Mansion and Pokemon, but "
+"costs performance."
 msgstr ""
 
 msgctxt "game_options"
@@ -780,9 +904,7 @@ msgid "ACCURATE MULTIPLICATION"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Use the JIT engine instead of the interpreter for software shader emulation. "
-"Enable this for better performance."
+msgid "Use JIT compiler for shader emulation."
 msgstr ""
 
 msgctxt "game_options"
@@ -790,29 +912,24 @@ msgid "SHADER JIT"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Compile shaders using background threads to avoid shader compilation "
-"stutter. May cause graphical glitches."
+msgid "Compile shaders in background threads to avoid stuttering."
 msgstr ""
 
 msgctxt "game_options"
-msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Perform presentation on separate threads. Improves performance when using "
-"Vulkan in most applications. Adds ~1 frame of input lag."
-msgstr ""
-
-msgctxt "game_options"
-msgid "ENABLE ASYNC PRESENTATION"
+msgid "ASYNC SHADER COMPILATION"
 msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Reduce stutter that happens when compiling shaders. Requires hardware shader "
-"to be enabled."
+"Separate display presentation from emulation threads (best with Vulkan)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ASYNC PRESENTATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cache compiled shaders to storage to eliminate future stutter."
 msgstr ""
 
 msgctxt "game_options"
@@ -820,7 +937,7 @@ msgid "DISK SHADER CACHE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Preloading is impossible from ES."
+msgid "On (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -832,7 +949,32 @@ msgid "Preload"
 msgstr ""
 
 msgctxt "game_options"
-msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
+msgid "Dynamically timestretch audio to prevent crackling on frame drops."
+msgstr ""
+
+msgctxt "game_options"
+msgid "AUDIO"
+msgstr ""
+
+msgctxt "game_options"
+msgid "AUDIO TIME STRETCHING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Overclock emulated 3DS CPU to improve framerates or run 60 FPS mods."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CPU CLOCK PERCENTAGE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "100% (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Emulate New 3DS processor speed and additional controls (C-stick, ZL/ZR)."
 msgstr ""
 
 msgctxt "game_options"
@@ -986,10 +1128,6 @@ msgid "OpenGL"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Vulkan (Default)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Speed up shader compilation."
 msgstr ""
 
@@ -998,7 +1136,13 @@ msgid "ASYNC SHADER COMPILE (VULKAN ONLY)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "On (Default)"
+msgid ""
+"Improves accuracy and fixes game-specific glitches at the cost of some "
+"performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FULL SYNC AT GX2DRAWDONE"
 msgstr ""
 
 msgctxt "game_options"
@@ -1010,7 +1154,9 @@ msgid "RUMBLE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Pro Controller required for games that require shake motions."
+msgid ""
+"Configure emulated controller layout. Choose Wiimote configurations for "
+"games requiring motion/shake."
 msgstr ""
 
 msgctxt "game_options"
@@ -1106,7 +1252,7 @@ msgid "AUDIO CHANNELS"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stereo (Default)"
+msgid "Stereo"
 msgstr ""
 
 msgctxt "game_options"
@@ -1114,7 +1260,7 @@ msgid "Surround"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Have Batocera set the first audio output device."
+msgid "Have Batocera automatically set the primary audio output device."
 msgstr ""
 
 msgctxt "game_options"
@@ -1126,7 +1272,12 @@ msgid "Set in Config - choose if no audio output"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Batocera sets first audio device (Default)"
+msgid "Batocera sets first audio device"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Synchronize frame rate with monitor refresh rate to eliminate screen tearing."
 msgstr ""
 
 msgctxt "game_options"
@@ -1146,11 +1297,7 @@ msgid "UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Bicubic"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Hermite (Default)"
+msgid "Hermite"
 msgstr ""
 
 msgctxt "game_options"
@@ -1166,31 +1313,30 @@ msgid "DOWNSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Bilinear (Default)"
+msgid ""
+"Controls how the game scales to fit your display when the screen aspect "
+"ratio doesn't match the game."
 msgstr ""
 
 msgctxt "game_options"
-msgid "Hermite"
+msgid "FULLSCREEN SCALING"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Keep Aspect Ration (Default)"
+msgid "Keep Aspect Ratio"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stretch"
+msgid "Stretch to Fill"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enable mouse input to simulate touchscreen."
+msgid ""
+"Enable mouse or touchpad input to simulate the Wii U GamePad touchscreen."
 msgstr ""
 
 msgctxt "game_options"
-msgid "ENABLE MOUSE"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Disabled (Default)"
+msgid "TOUCHSCREEN EMULATION"
 msgstr ""
 
 msgctxt "game_options"
@@ -1217,6 +1363,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ENABLE GAMEPAD VIEW"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Stretch"
 msgstr ""
 
 msgctxt "game_options"
@@ -1249,6 +1399,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Stretch to window"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fix screen tearing. CPU heavy."
 msgstr ""
 
 msgctxt "game_options"
@@ -1527,10 +1681,6 @@ msgid "Enables Dolby Pro Logic II for surround sound. May impact performance."
 msgstr ""
 
 msgctxt "game_options"
-msgid "AUDIO"
-msgstr ""
-
-msgctxt "game_options"
 msgid "DOLBY PRO LOGIC II"
 msgstr ""
 
@@ -1792,7 +1942,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
-"screen devices/games."
+"screen devices/games. Can cause issues with intro videos."
 msgstr ""
 
 msgctxt "game_options"
@@ -1844,6 +1994,10 @@ msgid "LCD 3x"
 msgstr ""
 
 msgctxt "game_options"
+msgid "LCD 1x NDS Color"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enable physical mic blowing. Higher sensitivity triggers more easily."
 msgstr ""
 
@@ -1889,6 +2043,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SYNC TO HOST REFRESH RATE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Disabled (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2384,10 +2542,6 @@ msgid "Gaussian"
 msgstr ""
 
 msgctxt "game_options"
-msgid "ScaleForce"
-msgstr ""
-
-msgctxt "game_options"
 msgid "AMD FidelityFX Super Resolution"
 msgstr ""
 
@@ -2411,10 +2565,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Mono"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Stereo"
 msgstr ""
 
 msgctxt "game_options"
@@ -3234,7 +3384,7 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL for gamepads only."
+"lightguns and steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 msgctxt "game_options"
@@ -3242,11 +3392,11 @@ msgid "CONTROLLER MODE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SDL (Default)"
+msgid "SDL2"
 msgstr ""
 
 msgctxt "game_options"
-msgid "EVDEV"
+msgid "EVDEV (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -4561,6 +4711,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "ENABLE MOUSE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Colour Genie Cassettes"
 msgstr ""
 
@@ -5272,10 +5426,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp"
-msgstr ""
-
-msgctxt "game_options"
-msgid "xBRZ"
 msgstr ""
 
 msgctxt "game_options"
@@ -6524,10 +6674,6 @@ msgctxt "game_options"
 msgid ""
 "Apply texture filtering to enhance visual quality. Some filters may "
 "significantly impact performance."
-msgstr ""
-
-msgctxt "game_options"
-msgid "TEXTURE FILTER"
 msgstr ""
 
 msgctxt "game_options"
@@ -7923,10 +8069,6 @@ msgid "Can fix slowdown. Only works on some drivers."
 msgstr ""
 
 msgctxt "game_options"
-msgid "CPU CLOCK"
-msgstr ""
-
-msgctxt "game_options"
 msgid "No skipping"
 msgstr ""
 
@@ -8713,10 +8855,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "4 MB"
-msgstr ""
-
-msgctxt "game_options"
-msgid "8 MB"
 msgstr ""
 
 msgctxt "game_options"
@@ -9828,10 +9966,6 @@ msgid "JOYSTICK SENSITIVITY"
 msgstr ""
 
 msgctxt "game_options"
-msgid "100% (Default)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Full speed can break some games."
 msgstr ""
 
@@ -10614,34 +10748,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Default by model"
-msgstr ""
-
-msgctxt "game_options"
-msgid " 3.54 MHz"
-msgstr ""
-
-msgctxt "game_options"
-msgid " 7.09 MHz (A500 speed)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "14.18 MHz (A1200 speed)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "28.37 MHz"
-msgstr ""
-
-msgctxt "game_options"
-msgid "35.46 MHz"
-msgstr ""
-
-msgctxt "game_options"
-msgid "42.56 MHz"
-msgstr ""
-
-msgctxt "game_options"
-msgid "56.75 MHz"
 msgstr ""
 
 msgctxt "game_options"
@@ -11876,10 +11982,6 @@ msgid "TinyALSA"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SDL2"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Pulse (Default)"
 msgstr ""
 
@@ -11908,7 +12010,8 @@ msgid "CONTROLLER TO LIGHT GUN"
 msgstr ""
 
 msgctxt "game_options"
-msgid "LLVM is fastest, use the Interpreter settings if there are issues."
+msgid ""
+"LLVM is fastest; use the Interpreter setting if there are stability issues."
 msgstr ""
 
 msgctxt "game_options"
@@ -11920,7 +12023,7 @@ msgid "PPU DECODER"
 msgstr ""
 
 msgctxt "game_options"
-msgid "LLVM Recompiler"
+msgid "LLVM Recompiler (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -11928,8 +12031,7 @@ msgid "Static Interpreter"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"If game crashes, try ASMJIT. If still crashing, try Interpreter settings."
+msgid "If a game crashes, try ASMJIT or Interpreter settings."
 msgstr ""
 
 msgctxt "game_options"
@@ -11946,33 +12048,34 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Can fix bugs in some games. Only relevant for dynamic or LLVM SPU decoder."
+"Can fix physics and gameplay bugs in some titles. Only relevant for dynamic "
+"or LLVM SPU decoder."
 msgstr ""
 
 msgctxt "game_options"
-msgid "SPU XFloat Accuracy"
+msgid "SPU XFLOAT ACCURACY"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Accurate XFloat"
+msgid "Approximate (Default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Approximate XFloat"
+msgid "Accurate"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Relaxed XFloat"
+msgid "Relaxed"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Inaccurate XFloat"
+msgid "Inaccurate"
 msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. "
-"Leave on automatic if slowdown occurs."
+"Limiting to 1 or 2 threads can fix audio stuttering on lower core count "
+"CPUs. Leave on Auto (0) if slowdown occurs."
 msgstr ""
 
 msgctxt "game_options"
@@ -12005,8 +12108,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"May provide performance gain on CPUs with low core/thread count at the "
-"expense of possible broken timings."
+"May provide performance gains on CPUs with low core counts at the expense of "
+"possible broken timings."
 msgstr ""
 
 msgctxt "game_options"
@@ -12015,8 +12118,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Mega and Giga modes may improve performance. Use the Safe mode for maximum "
-"compatibility."
+"Mega and Giga modes may improve performance on powerful CPUs. Use Safe for "
+"maximum compatibility."
 msgstr ""
 
 msgctxt "game_options"
@@ -12037,8 +12140,56 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Helps reduce CPU power consumption by throttling the CPU when not needed. "
-"Useful for handhelds."
+"Select CPU scheduler mode. RPCS3 Alternative Scheduler can improve frame "
+"pacing on ARM big.LITTLE architectures."
+msgstr ""
+
+msgctxt "game_options"
+msgid "THREAD SCHEDULER MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Operating System (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "RPCS3 Alternative Scheduler"
+msgstr ""
+
+msgctxt "game_options"
+msgid "RPCS3 Scheduler"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Underclocking CPU target speed can achieve full-speed gameplay on low-power "
+"or ARM systems."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CPU CLOCKS SCALE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "50% (Underclock)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "75% (Underclock)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "125% (Overclock)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "150% (Overclock)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Helps reduce CPU power consumption by throttling idle threads. Recommended "
+"for handhelds."
 msgstr ""
 
 msgctxt "game_options"
@@ -12046,13 +12197,21 @@ msgid "MAX POWER SAVING CPU-PREEMPTIONS"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Moderate"
+msgid "Minimum (50)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Moderate (100)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Maximum (150)"
 msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Changes the sleep period accuracy. Some games need this set to improve "
-"performance."
+"Changes sleep timer accuracy. Some games require Usleep or All Timers for "
+"proper speed."
 msgstr ""
 
 msgctxt "game_options"
@@ -12072,11 +12231,11 @@ msgid "All Timers"
 msgstr ""
 
 msgctxt "game_options"
-msgid "PS3's internal ratio setting. Some games only support 16/9."
+msgid "PS3 internal aspect ratio setting."
 msgstr ""
 
 msgctxt "game_options"
-msgid "16:9 (default)"
+msgid "Choose which graphics backend to use. Vulkan is heavily recommended."
 msgstr ""
 
 msgctxt "game_options"
@@ -12084,23 +12243,61 @@ msgid "RENDER"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Most games already have an internal framelimit. Minor performance cost."
+msgid "Vulkan (Default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "ADDITIONAL FRAMELIMIT"
+msgid "Cap maximum framerate to prevent physics acceleration or stutter."
 msgstr ""
 
 msgctxt "game_options"
-msgid "Off (faster, unstable)"
+msgid "FRAME LIMIT"
 msgstr ""
 
 msgctxt "game_options"
-msgid "ANISOTROPIC FILTER"
+msgid "30 FPS"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Can improve performance at the expense of graphics accuracy."
+msgid "50 FPS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "59.94 FPS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 FPS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "120 FPS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Display Rate"
+msgstr ""
+
+msgctxt "game_options"
+msgid "PS3 Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Infinite"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Improves clarity of distant angled textures."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Smooths jagged geometry edges."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Approximate or Relaxed can significantly improve performance on bandwidth-"
+"constrained GPUs."
 msgstr ""
 
 msgctxt "game_options"
@@ -12108,7 +12305,7 @@ msgid "ZCULL ACCURACY"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Precise (Slowest)(Default)"
+msgid "Precise (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -12120,13 +12317,17 @@ msgid "Relaxed (Fastest)"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Controls precision of generated shaders. Low quality can improved "
-"performance."
+msgid "Disable Queries"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SHADER QUALITY"
+msgid ""
+"Controls shader math precision. Low or Auto can improve performance on "
+"mobile/ARM GPUs."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SHADER PRECISION"
 msgstr ""
 
 msgctxt "game_options"
@@ -12134,11 +12335,7 @@ msgid "Ultra"
 msgstr ""
 
 msgctxt "game_options"
-msgid "High (Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Choose your preferred render resolution."
+msgid "Internal resolution scale relative to 720p base."
 msgstr ""
 
 msgctxt "game_options"
@@ -12146,25 +12343,61 @@ msgid "RENDER RESOLUTION (SCALING)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "1280x720 (Default)"
+msgid "640x360 (50%)"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Only framebuffers greater than this size will be upscaled. May fix problems "
-"with missing graphics. (Default: 16)"
+msgid "960x540 (75%)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "RENDER RESOLUTION SCALE THRESHOLD"
+msgid "1280x720 (100% Default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Final image filtering."
+msgid "1600x900 (125%)"
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid "1920x1080 (150% - 1080p)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "OUTPUT SCALING"
+msgid "2240x1260 (175%)"
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid "2560x1440 (200% - 1440p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "3200x1800 (225%)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "3840x2160 (300% - 4K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Only framebuffers greater than this dimension will be upscaled."
+msgstr ""
+
+msgctxt "game_options"
+msgid "RESOLUTION SCALE THRESHOLD"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Upscaling filter applied when displaying the render buffer."
+msgstr ""
+
+msgctxt "game_options"
+msgid "OUTPUT SCALING MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bilinear (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -12172,23 +12405,31 @@ msgid "FidelityFX Super Resolution"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Only Async (skip draw) avoids freezing while compiling shaders."
+msgid "Contrast-adaptive sharpening intensity percentage when using FSR."
 msgstr ""
 
 msgctxt "game_options"
-msgid "SHADER MODE"
+msgid "FSR SHARPENING INTENSITY"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Legacy Recompiler (single-threaded)"
+msgid "Method used to compile graphics shaders."
 msgstr ""
 
 msgctxt "game_options"
-msgid "Async Recompiler (multi-threaded)(Default)"
+msgid "SHADER COMPILATION MODE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Async Recompiler with Shader Interpreter"
+msgid "Async with Shader Interpreter (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Async Shader Recompiler"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Legacy Single Threaded"
 msgstr ""
 
 msgctxt "game_options"
@@ -12196,16 +12437,17 @@ msgid "Shader Interpreter only"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Only applicable when either Async Shader mode is set."
-msgstr ""
-
-msgctxt "game_options"
-msgid "NUMBER OF SHADER COMPILER THREADS"
-msgstr ""
-
-msgctxt "game_options"
 msgid ""
-"May fix missing graphics and broken lighting at the cost of performance."
+"Number of threads dedicated to compiling shaders in the background. 0 uses "
+"automatic detection."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SHADER COMPILER THREADS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fixes missing effects/lighting at a performance cost."
 msgstr ""
 
 msgctxt "game_options"
@@ -12213,9 +12455,7 @@ msgid "WRITE COLOR BUFFERS"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Initializes render target memory using vm memory. Some games need this to "
-"fix broken graphics."
+msgid "Reads color buffer memory into CPU space. Required by some titles."
 msgstr ""
 
 msgctxt "game_options"
@@ -12224,8 +12464,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Writes depth buffer values to VM memory. Some games need this to fix broken "
-"graphics."
+"Writes depth buffer values to VM memory. Fixes occlusion issues in some "
+"games."
 msgstr ""
 
 msgctxt "game_options"
@@ -12233,9 +12473,15 @@ msgid "WRITE DEPTH BUFFERS"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Straict API specification. Can resolve rare cases of missing graphics and "
-"flickering."
+msgid "Reads depth buffer values into CPU memory."
+msgstr ""
+
+msgctxt "game_options"
+msgid "READ DEPTH BUFFERS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Forces strict adherence to the PS3 RSX hardware specifications."
 msgstr ""
 
 msgctxt "game_options"
@@ -12243,8 +12489,11 @@ msgid "STRICT RENDERING MODE"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Can fix screen tearing on unorthodox displays (most LCDs don't need this)."
+msgid "Synchronize frame presentation with monitor refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid "VSYNC MODE"
 msgstr ""
 
 msgctxt "game_options"
@@ -12252,7 +12501,7 @@ msgid "Adaptive"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Distorts the output to fill the display fully Overrides aspect ratio."
+msgid "Stretch image output to fill the window/screen."
 msgstr ""
 
 msgctxt "game_options"
@@ -12261,8 +12510,7 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Disables the vertex cache. Might resolve missing or flickering graphics "
-"output but degrade performance."
+"Disables the vertex cache. May fix flickering geometry at lower performance."
 msgstr ""
 
 msgctxt "game_options"
@@ -12271,8 +12519,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Offloads some RSX operations to a secondary thread. Improves performance in "
-"high-core processors."
+"Offloads RSX draw commands to a secondary thread. Improves performance on "
+"CPUs with 6+ threads."
 msgstr ""
 
 msgctxt "game_options"
@@ -12281,8 +12529,34 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Stream texture to GPU in parrallel. Can improve performance on more powerful "
-"GPU's that have spare headroom."
+"Controls command buffer fetching accuracy. Fast yields higher FPS on lower-"
+"tier hardware."
+msgstr ""
+
+msgctxt "game_options"
+msgid "RSX FIFO FETCH ACCURACY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Atomic (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fast"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Ordered & Atomic"
+msgstr ""
+
+msgctxt "game_options"
+msgid "PS3"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Streams textures to the GPU concurrently. Can improve framerate consistency "
+"on Vulkan."
 msgstr ""
 
 msgctxt "game_options"
@@ -12294,9 +12568,15 @@ msgid "On (Vulkan Only)"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Forces emulation of all blit and image manipulation operations on the CPU. "
-"Can fix some graphical issues at the cost of performance."
+msgid "GPU command queue scheduling policy for Vulkan."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ASYNCHRONOUS QUEUE SCHEDULER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Forces all image copy/blit operations on the CPU."
 msgstr ""
 
 msgctxt "game_options"
@@ -12304,7 +12584,7 @@ msgid "FORCE CPU BLIT EMULATION"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Choose number of audio channels."
+msgid "Emulated audio channel output mode."
 msgstr ""
 
 msgctxt "game_options"
@@ -12321,8 +12601,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Use 16 bit audio samples for audio drivers that don't support 32bit. Only "
-"use if you get no audio."
+"Converts audio samples to 16-bit integers. Use if your audio driver does not "
+"support 32-bit float output."
 msgstr ""
 
 msgctxt "game_options"
@@ -12330,7 +12610,7 @@ msgid "CONVERT TO 16-BIT"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Can reduce crackle and stutter but increases audio latency."
+msgid "Reduces audio crackle and stutter."
 msgstr ""
 
 msgctxt "game_options"
@@ -12339,16 +12619,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Duration of audio buffer in milliseconds. Higher numbers may cause audio "
-"latency."
+"Audio buffer size in milliseconds. Lower values reduce latency; higher "
+"values prevent underruns."
 msgstr ""
 
 msgctxt "game_options"
-msgid "AUDIO BUFFER DURATION"
-msgstr ""
-
-msgctxt "game_options"
-msgid "10ms"
+msgid "DESIRED AUDIO BUFFER DURATION"
 msgstr ""
 
 msgctxt "game_options"
@@ -12356,35 +12632,23 @@ msgid "20ms"
 msgstr ""
 
 msgctxt "game_options"
-msgid "40ms"
+msgid "34ms (Default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "60ms"
+msgid "50ms"
 msgstr ""
 
 msgctxt "game_options"
-msgid "80ms"
+msgid "75ms"
 msgstr ""
 
 msgctxt "game_options"
-msgid "100ms (Default)"
+msgid "100ms"
 msgstr ""
 
 msgctxt "game_options"
-msgid "120ms"
-msgstr ""
-
-msgctxt "game_options"
-msgid "140ms"
-msgstr ""
-
-msgctxt "game_options"
-msgid "160ms"
-msgstr ""
-
-msgctxt "game_options"
-msgid "180ms"
+msgid "150ms"
 msgstr ""
 
 msgctxt "game_options"
@@ -12392,17 +12656,8 @@ msgid "200ms"
 msgstr ""
 
 msgctxt "game_options"
-msgid "220ms"
-msgstr ""
-
-msgctxt "game_options"
-msgid "240ms"
-msgstr ""
-
-msgctxt "game_options"
 msgid ""
-"Reduces crackle and stutter further, but may cause a very noticeable "
-"reduction in audio quality on slower CPUs."
+"Dynamically stretches audio when framerate drops to prevent harsh audio pops."
 msgstr ""
 
 msgctxt "game_options"
@@ -12410,8 +12665,7 @@ msgid "ENABLE TIME STRETCHING"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Buffer fill level (in percentage) below which time stretching will start."
+msgid "Buffer threshold percentage below which time stretching activates."
 msgstr ""
 
 msgctxt "game_options"
@@ -12419,11 +12673,33 @@ msgid "TIME STRETCHING THRESHOLD"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Off (0%)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "75% (Default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
+msgid ""
+"Multi-threaded pad handler processes inputs on a dedicated worker thread to "
+"reduce input lag."
+msgstr ""
+
+msgctxt "game_options"
+msgid "PAD HANDLER MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Single-threaded (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Multi-threaded"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Starts RPCS3 with the main Qt GUI active."
 msgstr ""
 
 msgctxt "game_options"
@@ -12809,6 +13085,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "New3D"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Select the graphics rendering backend (requires New3D engine). Vulkan can "
+"provide improved performance and lower CPU overhead on supported GPUs."
 msgstr ""
 
 msgctxt "game_options"
@@ -13499,10 +13781,6 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "ASYNC SHADER COMPILATION"
-msgstr ""
-
-msgctxt "game_options"
 msgid ""
 "Changing this mimics the original Xbox 360 system dashboard resolution. This "
 "is not guaranteed to work with all games."
@@ -13510,6 +13788,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "INTERNAL DISPLAY RESOLUTION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x720 (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -15087,10 +15369,6 @@ msgid "FRAME RATE (FPS)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "30 FPS"
-msgstr ""
-
-msgctxt "game_options"
 msgid "30/60 FPS (Original Game)"
 msgstr ""
 
@@ -15220,6 +15498,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "best"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose your preferred render resolution."
 msgstr ""
 
 msgctxt "game_options"
@@ -15510,6 +15792,46 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Maximum Blood"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Simulate CRT effects for a retro look."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Play custom user level."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CUSTOM LEVELS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ChJees"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Genocide"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Second Empire"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Secret Planet"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Valentine"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Volcano Temple"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Walkers World"
 msgstr ""
 
 msgctxt "game_options"

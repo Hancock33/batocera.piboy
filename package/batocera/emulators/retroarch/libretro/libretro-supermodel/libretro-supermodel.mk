@@ -3,9 +3,9 @@
 # libretro-supermodel
 #
 ################################################################################
-# Version: Commits on Aug 16, 2026
-LIBRETRO_SUPERMODEL_VERSION = cf06cf28eb8748d832ddee68836b390dd0fd72c0
-LIBRETRO_SUPERMODEL_SITE = $(call github,sgiannop,Libretro-Supermodel,$(LIBRETRO_SUPERMODEL_VERSION))
+# Version: Commits on Aug 22, 2026
+LIBRETRO_SUPERMODEL_VERSION = 9f0a51daf6cef6ec2a304538f18c6dbb4c4b9da2
+LIBRETRO_SUPERMODEL_SITE = $(call github,libretro,Libretro-Supermodel,$(LIBRETRO_SUPERMODEL_VERSION))
 LIBRETRO_SUPERMODEL_LICENSE = GPL-3.0
 LIBRETRO_SUPERMODEL_DEPENDENCIES += retroarch
 LIBRETRO_SUPERMODEL_EMULATOR_INFO = supermodel.libretro.core.yml

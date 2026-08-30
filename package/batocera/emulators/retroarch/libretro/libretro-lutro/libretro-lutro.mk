@@ -3,8 +3,8 @@
 # libretro-lutro
 #
 ################################################################################
-# Version: Commits on Jul 11, 2026
-LIBRETRO_LUTRO_VERSION = 1df938b3bf37b8d1eb6cdd07ec915c4f569a7551
+# Version: Commits on Aug 15, 2026
+LIBRETRO_LUTRO_VERSION = 6224157a615b18507bc0b117a3398c7a324cd3e5
 LIBRETRO_LUTRO_SITE = $(call github,libretro,libretro-lutro,$(LIBRETRO_LUTRO_VERSION))
 LIBRETRO_LUTRO_LICENSE = MIT
 LIBRETRO_LUTRO_DEPENDENCIES += retroarch

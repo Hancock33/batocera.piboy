@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import glob
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from batocera_common.configparser import CaseSensitiveConfigParser
@@ -12,7 +12,6 @@ from . import mupenConfig, mupenControllers
 from .mupenPaths import MUPEN_CONFIG_DIR, MUPEN_CUSTOM
 
 if TYPE_CHECKING:
-    from pathlib import Path
 
     from ...types import HotkeysContext
 
@@ -54,7 +53,7 @@ class MupenGenerator(Generator):
             commandArray.extend(["--cheats", cheats])
 
         if "squashfs" in str(rom):
-            romsInDir = glob.glob(glob.escape(rom) + '/*')
+            romsInDir = [str(p) for p in Path(rom).glob("*")]
             rom = romsInDir[0]
 
         commandArray.append(rom)

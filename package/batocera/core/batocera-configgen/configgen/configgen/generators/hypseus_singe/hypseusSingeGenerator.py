@@ -46,13 +46,14 @@ class HypseusSingeGenerator(Generator):
 
     @staticmethod
     def find_file(start_path, filename):
-        if Path(os.path.join(start_path, filename)).exists():
-            return os.path.join(start_path, filename)
+        p = Path(start_path) / filename
+        if p.exists():
+            return p
 
         for root, _, files in os.walk(start_path):
             if filename in files:
                 _logger.debug("Found m2v file in path - %s", start_path)
-                return os.path.join(root, filename)
+                return Path(root) / filename
 
         return None
 
@@ -77,6 +78,8 @@ class HypseusSingeGenerator(Generator):
 
     # Main entry of the module
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
+        _NEWDAPHNE_ROM_DIR = None
+        _NEWSINGE_ROM_DIR = None
         # copy input.ini file templates
         hypseusConfigSource = _SHARE_DIR / "hypinput_gamepad.ini"
 
@@ -124,19 +127,26 @@ class HypseusSingeGenerator(Generator):
 
         # copy required resources to userdata config folder as needed
         def copy_resources(source_dir, destination_dir):
-            if not Path(destination_dir).exists():
-                if Path(source_dir).exists():
-                    shutil.copytree(source_dir, destination_dir)
-            else:
-                if Path(source_dir).exists():
-                    for item in os.listdir(source_dir):
-                        source_item = os.path.join(source_dir, item)
-                        destination_item = os.path.join(destination_dir, item)
-                        if Path(source_item).is_file():
-                            if not Path(destination_item).exists() or Path(source_item).stat().st_mtime > Path(destination_item).stat().st_mtime:
-                                shutil.copy2(source_item, destination_item)
-                        elif Path(source_item).is_dir():
-                            copy_resources(source_item, destination_item)
+            src = Path(source_dir)
+            dst = Path(destination_dir)
+
+            if not dst.exists():
+                if src.exists():
+                    shutil.copytree(src, dst)
+                return
+
+            if src.exists():
+                for item in src.iterdir():
+                    source_item = item
+                    destination_item = dst / item.name
+
+                    if source_item.is_file():
+                        if (not destination_item.exists() or
+                            source_item.stat().st_mtime > destination_item.stat().st_mtime):
+                            shutil.copy2(source_item, destination_item)
+
+                    elif source_item.is_dir():
+                        copy_resources(source_item, destination_item)
 
         directories = ["pics", "sound", "fonts", "bezels"]
 
@@ -145,7 +155,7 @@ class HypseusSingeGenerator(Generator):
             copy_resources(_SHARE_DIR / directory, _DATA_DIR / directory)
 
         # extension used .daphne and the file to start the game is in the folder .daphne with the extension .txt
-        romName = os.path.splitext(Path(rom).name)[0]
+        romName = Path(rom).stem
         zipFile = str(Path(rom)) + "/" + romName + ".zip"
         frameFile = str(Path(rom)) + "/" + romName + ".txt"
         commandsFile = str(Path(rom)) + "/" + romName + ".commands"
@@ -178,7 +188,7 @@ class HypseusSingeGenerator(Generator):
                 _NEWSINGE_ROM_DIR = str(Path(_SINGE_ROM_DIR)) + "/roms"
 
         # get the first video file from frameFile to determine the resolution
-        m2v_filename = str(Path(rom)) + "/" + self.find_m2v_from_txt(frameFile)
+        m2v_filename = f"{Path(rom)}/{self.find_m2v_from_txt(frameFile) or ''}"
 
         if m2v_filename:
             _logger.debug("First .m2v file found: %s", m2v_filename)
@@ -200,10 +210,11 @@ class HypseusSingeGenerator(Generator):
 
         video_resolution: tuple[int, int] | None = None
         if video_path is not None:
-            video_resolution = self.get_resolution(video_path)
+            video_resolution = self.get_resolution(Path(video_path))
             _logger.debug("Resolution: %s", video_resolution)
 
         if system.name == "singe":
+            zipFile = Path(zipFile)
             if zipFile.exists():
                 commandArray = ['/usr/bin/hypseus',
                                 "singe", "vldp", "-retropath", "-framefile", frameFile, "-zlua", zipFile,
@@ -344,11 +355,11 @@ class HypseusSingeGenerator(Generator):
 
         # The folder may have a file with the game name and .commands with extra arguments to run the game.
         if Path(commandsFile).is_file():
-           commandArray.extend(Path(commandsFile).read().split())
+           commandArray.extend(Path(commandsFile).read_text().split())
 
         # We now use SDL controller config
         return Command.Command(
-            array=commandArray,
+            array = [x for x in (commandArray or []) if x is not None],
             env={
                 'SDL_GAMECONTROLLERCONFIG': generate_sdl_game_controller_config(playersControllers),
                 'SDL_JOYSTICK_HIDAPI': '0',

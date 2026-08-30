@@ -3,8 +3,8 @@
 # flycast
 #
 ################################################################################
-# Version: Commits on Aug 14, 2026
-FLYCAST_VERSION = 5aa091fde632fb332c8d8c34e280d62dc951954c
+# Version: Commits on Aug 30, 2026
+FLYCAST_VERSION = e2722869ffb6f404d2056a12653aa67e4210d61d
 FLYCAST_SITE = https://github.com/flyinghead/flycast.git
 FLYCAST_SITE_METHOD=git
 FLYCAST_GIT_SUBMODULES=YES
@@ -19,6 +19,12 @@ FLYCAST_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF
 FLYCAST_CONF_OPTS += -DLIBRETRO=OFF
 FLYCAST_CONF_OPTS += -DUSE_BREAKPAD=OFF
 FLYCAST_CONF_OPTS += -DUSE_HOST_SDL=ON
+
+# Get version details
+FLYCAST_GIT_TAG = $(shell $(BR2_GIT) -C $(FLYCAST_DL_DIR)/git describe --tags --always | tr -d '\n')
+FLYCAST_GIT_HASH = $(shell $(BR2_GIT) -C $(FLYCAST_DL_DIR)/git rev-parse --short HEAD | tr -d '\n')
+FLYCAST_CONF_OPTS += -DGIT_VERSION=$(FLYCAST_GIT_TAG)
+FLYCAST_CONF_OPTS += -DGIT_HASH=$(FLYCAST_GIT_HASH)
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
     FLYCAST_CONF_OPTS += -DUSE_OPENGL=ON

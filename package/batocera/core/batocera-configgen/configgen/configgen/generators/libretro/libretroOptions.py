@@ -2408,7 +2408,7 @@ def _sameboy_options(
     if (system.name == 'gb'):
         coreSettings.save('sameboy_model', '"Auto"')
         # Palette color
-        if system.isOptSet('sameboy_gb_palette'):
+        if system.config.get('sameboy_gb_palette'):
             coreSettings.save('sameboy_mono_palette', system.config['sameboy_gb_palette'])
         else:
             coreSettings.save('sameboy_mono_palette', '"lime"')
@@ -2416,13 +2416,13 @@ def _sameboy_options(
     if (system.name == 'gbc'):
         coreSettings.save('sameboy_model', '"Auto"')
         # Color correction mode
-        if system.isOptSet('sameboy_gbc_color'):
+        if system.config.get('sameboy_gbc_color'):
             coreSettings.save('sameboy_color_correction_mode', system.config['sameboy_gbc_color'])
         else:
             coreSettings.save('sameboy_color_correction_mode', '"off"')
     # SGB
     if (system.name == 'sgb'):
-        if system.isOptSet('sameboy_sgb_model'):
+        if system.config.get('sameboy_sgb_model'):
             coreSettings.save('sameboy_model', '"' + system.config['sameboy_sgb_model'] + '"')
         else:
             coreSettings.save('sameboy_model', '"Super Game Boy"')
@@ -2432,56 +2432,54 @@ def _neogeomvs_options(
     coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
 ) -> None:
     #System Type
-    if system.isOptSet('geolith_system'):
-        if system.config['geolith_system'] == "AES":
-            coreSettings.save('geolith_system_type', '"aes"')
-        elif system.config['geolith_system'] == 'MVS':
-            coreSettings.save('geolith_system_type', '"mvs"')
-        elif system.config['geolith_system'] == 'Universe BIOS':
-            coreSettings.save('geolith_system_type', '"uni"')
-        else:
-            coreSettings.save('geolith_system_type', '"mvs"')
+    if system.config.get('geolith_system') == "AES":
+        coreSettings.save('geolith_system_type', '"aes"')
+    elif system.config.get('geolith_system') == 'MVS':
+        coreSettings.save('geolith_system_type', '"mvs"')
+    elif system.config.get('geolith_system') == 'Universe BIOS':
+        coreSettings.save('geolith_system_type', '"uni"')
+    else:
+        coreSettings.save('geolith_system_type', '"mvs"')
     #Region
-    if system.isOptSet('geolith_region'):
-        if system.config['geolith_region'] == "USA":
-            coreSettings.save('geolith_region', '"us"')
-        elif system.config['geolith_region'] == 'Japan':
-            coreSettings.save('geolith_region', '"jp"')
-        elif system.config['geolith_region'] == 'Asia':
-            coreSettings.save('geolith_region', '"as"')
-        elif system.config['geolith_region'] == 'Europe':
-            coreSettings.save('geolith_region', '"eu"')
-        else:
-            coreSettings.save('geolith_region', '"us"')
+    if system.config.get('geolith_region') == "USA":
+        coreSettings.save('geolith_region', '"us"')
+    elif system.config.get('geolith_region') == 'Japan':
+        coreSettings.save('geolith_region', '"jp"')
+    elif system.config.get('geolith_region') == 'Asia':
+        coreSettings.save('geolith_region', '"as"')
+    elif system.config.get('geolith_region') == 'Europe':
+        coreSettings.save('geolith_region', '"eu"')
+    else:
+        coreSettings.save('geolith_region', '"us"')
 
-        coreSettings.save('geolith_freeplay', '"on"')
+    coreSettings.save('geolith_freeplay', '"on"')
 
 # Panda3ds
 def _panda3ds_options(
     coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
 ) -> None:
     # USE SHADER JIT
-    if not system.isOptSet('panda3ds_use_shader_jit'):
+    if not system.config.get('panda3ds_use_shader_jit'):
         coreSettings.save('panda3ds_use_shader_jit', '"disabled"')
     else:
         coreSettings.save('panda3ds_use_shader_jit', '"enabled"')
     # ACCURATE SHADER MUL
-    if system.isOptSet('panda3ds_accurate_shader_mul'):
+    if system.config.get('panda3ds_accurate_shader_mul'):
         coreSettings.save('panda3ds_accurate_shader_mul', '"enabled"')
     else:
         coreSettings.save('panda3ds_accurate_shader_mul', '"disabled"')
     # USE UBERSHADER
-    if system.isOptSet('panda3ds_use_ubershader'):
+    if system.config.get('panda3ds_use_ubershader'):
         coreSettings.save('panda3ds_use_ubershader', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_ubershader', '"disabled"')
     # USE VSYNC
-    if system.isOptSet('panda3ds_use_vsync'):
+    if system.config.get('panda3ds_use_vsync'):
         coreSettings.save('panda3ds_use_vsync', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_vsync', '"disabled"')
     # DSP EMULATION
-    if system.isOptSet('panda3ds_dsp_emulation'):
+    if system.config.get('panda3ds_dsp_emulation'):
         coreSettings.save('panda3ds_dsp_emulation', '"' + system.config["panda3ds_dsp_emulation"] + '"')
     else:
         coreSettings.save('panda3ds_dsp_emulation', '"HLE"')
@@ -2489,24 +2487,24 @@ def _panda3ds_options(
     coreSettings.save('panda3ds_use_audio', '"enabled"')
     coreSettings.save('panda3ds_mute_audio', '"disabled"')
     # USE VIRTUAL SD
-    if not system.isOptSet('panda3ds_use_virtual_sd'):
+    if not system.config.get('panda3ds_use_virtual_sd'):
         coreSettings.save('panda3ds_use_virtual_sd', '"disabled"')
     else:
         coreSettings.save('panda3ds_use_virtual_sd', '"enabled"')
     # WRITE PROTECT VIRTUAL SD
-    if system.isOptSet('panda3ds_write_protect_virtual_sd'):
+    if system.config.get('panda3ds_write_protect_virtual_sd'):
         coreSettings.save('panda3ds_write_protect_virtual_sd', '"enabled"')
     else:
         coreSettings.save('panda3ds_write_protect_virtual_sd', '"disabled"')
     # BATTERY LEVEL
     coreSettings.save('panda3ds_battery_level', '"' + str(int(float(system.config["panda3ds_battery_level"]))) +'"')
     # USE CHARGER
-    if system.isOptSet('panda3ds_use_charger'):
+    if system.config.get('panda3ds_use_charger'):
         coreSettings.save('panda3ds_use_charger', '"enabled"')
     else:
         coreSettings.save('panda3ds_use_charger', '"disabled"')
-       # UBERSHADER LIGHTING OVERRIDE
-    if system.isOptSet('panda3ds_ubershader_lighting_override'):
+    # UBERSHADER LIGHTING OVERRIDE
+    if system.config.get('panda3ds_ubershader_lighting_override'):
         coreSettings.save('panda3ds_ubershader_lighting_override', '"enabled"')
     else:
         coreSettings.save('panda3ds_ubershader_lighting_override', '"disabled"')
@@ -2518,7 +2516,7 @@ def _bennugd_options(
     coreSettings: UnixSettings, system: Emulator, rom: Path, guns: Guns, wheels: DeviceInfoMapping, /,
 ) -> None:
     # FRAME LIMITER
-    if not system.isOptSet("bennugd_force_frame_limiter"):
+    if not system.config.get('bennugd_force_frame_limiter'):
         coreSettings.save('force_frame_limiter', '"true"')
     else:
         coreSettings.save('force_frame_limiter', '"false"')

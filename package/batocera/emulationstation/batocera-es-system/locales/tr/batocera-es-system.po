@@ -320,8 +320,8 @@ msgid "100fps"
 msgstr "100fps"
 
 msgctxt "game_options"
-msgid "100ms (Default)"
-msgstr "100ms (Varsayılan)"
+msgid "100ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1024 x 768"
@@ -372,10 +372,6 @@ msgid "10fps"
 msgstr "10fps"
 
 msgctxt "game_options"
-msgid "10ms"
-msgstr "10ms"
-
-msgctxt "game_options"
 msgid "10th"
 msgstr "10."
 
@@ -404,6 +400,10 @@ msgid "12 MHz"
 msgstr "12 MHz"
 
 msgctxt "game_options"
+msgid "120 FPS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "120 Hz"
 msgstr ""
 
@@ -428,8 +428,12 @@ msgid "120fps"
 msgstr "120fps"
 
 msgctxt "game_options"
-msgid "120ms"
-msgstr "120ms"
+msgid "125% (Overclock)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "128 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1280 x 1024"
@@ -442,6 +446,10 @@ msgstr "1280 x 720"
 msgctxt "game_options"
 msgid "1280 x 800"
 msgstr "1280 x 800"
+
+msgctxt "game_options"
+msgid "1280x720 (100% Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1280x720 (Default)"
@@ -512,10 +520,6 @@ msgid "14.18 MHz (A1200 speed)"
 msgstr "14.18 MHz (A1200 hızı)"
 
 msgctxt "game_options"
-msgid "140ms"
-msgstr "140ms"
-
-msgctxt "game_options"
 msgid "144 fps"
 msgstr "144 fps"
 
@@ -552,8 +556,16 @@ msgid "15% (Default)"
 msgstr "15% (Varsayılan)"
 
 msgctxt "game_options"
+msgid "150% (Overclock)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "150Mhz (Overclock)"
 msgstr "150Mhz (Hız Aşımı)"
+
+msgctxt "game_options"
+msgid "150ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1536MB"
@@ -584,6 +596,10 @@ msgid "16 Frame"
 msgstr "16 Kare"
 
 msgctxt "game_options"
+msgid "16 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "16 MHz"
 msgstr "16 MHz"
 
@@ -604,12 +620,12 @@ msgid "1600 x 900"
 msgstr "1600 x 900"
 
 msgctxt "game_options"
-msgid "160fps"
-msgstr "160fps"
+msgid "1600x900 (125%)"
+msgstr ""
 
 msgctxt "game_options"
-msgid "160ms"
-msgstr "160ms"
+msgid "160fps"
+msgstr "160fps"
 
 msgctxt "game_options"
 msgid "16384kB"
@@ -634,10 +650,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "16:9 (Default)"
 msgstr "16:9 (Varsayılan)"
-
-msgctxt "game_options"
-msgid "16:9 (default)"
-msgstr "16:9 (varsayılan)"
 
 msgctxt "game_options"
 msgid "16:9 DAR"
@@ -680,10 +692,6 @@ msgid "180 degrees"
 msgstr "180 derece"
 
 msgctxt "game_options"
-msgid "180ms"
-msgstr "180ms"
-
-msgctxt "game_options"
 msgid "18th"
 msgstr "18."
 
@@ -701,6 +709,11 @@ msgstr "1920 x 1200"
 
 msgctxt "game_options"
 msgid "1920p (8x)"
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid "1920x1080 (150% - 1080p)"
 msgstr ""
 
 msgctxt "game_options"
@@ -908,8 +921,8 @@ msgid "21st"
 msgstr "21."
 
 msgctxt "game_options"
-msgid "220ms"
-msgstr "220ms"
+msgid "2240x1260 (175%)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "224MB"
@@ -952,10 +965,6 @@ msgid "2400p (10x)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "240ms"
-msgstr "240ms"
-
-msgctxt "game_options"
 msgid "240p (1x)"
 msgstr ""
 
@@ -972,12 +981,21 @@ msgid "24th"
 msgstr "24."
 
 msgctxt "game_options"
+msgid "256 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2560 x 1440"
 msgstr "2560 x 1440"
 
 msgctxt "game_options"
 msgid "2560 x 1600"
 msgstr "2560 x 1600"
+
+#, c-format
+msgctxt "game_options"
+msgid "2560x1440 (200% - 1440p)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "256MB (Default)"
@@ -1216,6 +1234,10 @@ msgid "31st"
 msgstr "31."
 
 msgctxt "game_options"
+msgid "32 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "32 MHz"
 msgstr "32 MHz"
 
@@ -1230,6 +1252,10 @@ msgstr "32-bit"
 msgctxt "game_options"
 msgid "320 x 200"
 msgstr "320 x 200"
+
+msgctxt "game_options"
+msgid "3200x1800 (225%)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "32K RAM EXPANSION"
@@ -1256,6 +1282,10 @@ msgid "33Mhz (Overclock)"
 msgstr "33Mhz (Hız Aşımı)"
 
 msgctxt "game_options"
+msgid "34ms (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "35.46 MHz"
 msgstr "35.46 MHz"
 
@@ -1266,6 +1296,10 @@ msgstr "3840 x 2160"
 msgctxt "game_options"
 msgid "3840MB"
 msgstr "3840MB"
+
+msgctxt "game_options"
+msgid "3840x2160 (300% - 4K)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "384MB (Default)"
@@ -1436,10 +1470,6 @@ msgid "40fps"
 msgstr "40fps"
 
 msgctxt "game_options"
-msgid "40ms"
-msgstr "40ms"
-
-msgctxt "game_options"
 msgid "42.56 MHz"
 msgstr "42.56 MHz"
 
@@ -1478,6 +1508,10 @@ msgstr "486_yavaş"
 msgctxt "game_options"
 msgid "48MB"
 msgstr "48MB"
+
+msgctxt "game_options"
+msgid "49.66 MHz (50MHz accelerator)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4:3 (Default)"
@@ -1620,8 +1654,16 @@ msgid "50 (Default)"
 msgstr "50 (Varsayılan)"
 
 msgctxt "game_options"
+msgid "50 FPS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "50 fps"
 msgstr "50 fps"
+
+msgctxt "game_options"
+msgid "50% (Underclock)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "50Hz"
@@ -1634,6 +1676,10 @@ msgstr "50 Mbps (mevcut en yüksek kalite)"
 msgctxt "game_options"
 msgid "50fps"
 msgstr "50fps"
+
+msgctxt "game_options"
+msgid "50ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "5120MB"
@@ -1682,6 +1728,10 @@ msgstr "56.75 MHz"
 msgctxt "game_options"
 msgid "576+KB"
 msgstr "576+KB"
+
+msgctxt "game_options"
+msgid "59.94 FPS"
+msgstr ""
 
 msgctxt "game_options"
 msgid "5MB"
@@ -1736,6 +1786,10 @@ msgid "6.75x (6480x3672)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "60 FPS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "60 FPS (Smooth)"
 msgstr ""
 
@@ -1768,10 +1822,6 @@ msgid "60fps"
 msgstr "60fps"
 
 msgctxt "game_options"
-msgid "60ms"
-msgstr "60ms"
-
-msgctxt "game_options"
 msgid "60s"
 msgstr "60s"
 
@@ -1780,12 +1830,20 @@ msgid "6144MB"
 msgstr "6144MB"
 
 msgctxt "game_options"
+msgid "64 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "64 MHz (Overclock)"
 msgstr "64 MHz (Hız Aşımı)"
 
 msgctxt "game_options"
 msgid "640 x 480"
 msgstr "640 x 480"
+
+msgctxt "game_options"
+msgid "640x360 (50%)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "64KB"
@@ -1868,8 +1926,16 @@ msgid "75% (Default)"
 msgstr "75% (Varsayılan)"
 
 msgctxt "game_options"
+msgid "75% (Underclock)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "75fps"
 msgstr "75fps"
+
+msgctxt "game_options"
+msgid "75ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "768MB"
@@ -1948,10 +2014,6 @@ msgid "8086/8088, 4.77MHz (315 cps)"
 msgstr "8086/8088, 4.77MHz (315 cps)"
 
 msgctxt "game_options"
-msgid "80ms"
-msgstr "80ms"
-
-msgctxt "game_options"
 msgid "8192kB"
 msgstr "8192kB"
 
@@ -2025,6 +2087,10 @@ msgstr "960p"
 
 msgctxt "game_options"
 msgid "960p (4x)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "960x540 (75%)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2115,10 +2181,6 @@ msgstr "AKTİF GİRİŞ CİHAZLARINI DÜZELT"
 msgctxt "game_options"
 msgid "ADD USER DISK"
 msgstr "KULLANICI DİSKİ EKLE"
-
-msgctxt "game_options"
-msgid "ADDITIONAL FRAMELIMIT"
-msgstr "EK KARE ATLAMA LİMİTİ"
 
 msgctxt "game_options"
 msgid "ADHOC PORT OFFSET"
@@ -2225,10 +2287,6 @@ msgid "ANALOG JOYSTICK DEADZONE"
 msgstr "ANALOG JOYSTICK ÖLÜ BÖLGE"
 
 msgctxt "game_options"
-msgid "ANISOTROPIC FILTER"
-msgstr "ANİZOTROPİK FİLTRE"
-
-msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "ANİZOTROPİK FİLTRELEME"
 
@@ -2301,6 +2359,10 @@ msgid "ASPECT RATIO"
 msgstr "EN BOY ORANI"
 
 msgctxt "game_options"
+msgid "ASYNC PRESENTATION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ASYNC SHADER COMPILATION"
 msgstr ""
 
@@ -2314,6 +2376,10 @@ msgstr "EŞ ZAMANSIZ GÖLGELENDİRİCİ DERLE (SADECE VULKAN)"
 
 msgctxt "game_options"
 msgid "ASYNCHRONOUS PIPELINE COMPILATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ASYNCHRONOUS QUEUE SCHEDULER"
 msgstr ""
 
 msgctxt "game_options"
@@ -2361,10 +2427,6 @@ msgid "AUDIO BUFFER (SAMPLES)"
 msgstr "SES ARABELLEĞİ (ÖRNEKLER)"
 
 msgctxt "game_options"
-msgid "AUDIO BUFFER DURATION"
-msgstr "SES ARABELLEK SÜRESİ"
-
-msgctxt "game_options"
 msgid "AUDIO CHANNELS"
 msgstr "SES KANALLARI"
 
@@ -2395,6 +2457,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "AUDIO SYNC"
 msgstr "SES EŞİTLEMESİ"
+
+msgctxt "game_options"
+msgid "AUDIO TIME STRETCHING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "AUDIO VOLUME GAIN"
@@ -2469,8 +2535,12 @@ msgid "Accuracy"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Accurate XFloat"
-msgstr "Accurate XFloat"
+msgid "Accurate"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Accurate cpu and blitter timings."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Acorn Analogue Joysticks"
@@ -2762,12 +2832,6 @@ msgid "Allow pressing up+down or left+right simultaneously."
 msgstr ""
 
 msgctxt "game_options"
-msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
-msgstr ""
-"Alt+Tab RPCS3 menüsüne girmenize izin verir. El ile disk değiştirme için "
-"kullanışlıdır."
-
-msgctxt "game_options"
 msgid "Allows loading protected games without subchannel information."
 msgstr "Alt kanal bilgisi olmadan korumalı oyunların yüklenmesine izin ver."
 
@@ -2936,6 +3000,10 @@ msgid "Angrylion (Most Compatible)"
 msgstr "Angrylion (En Uyumlu)"
 
 msgctxt "game_options"
+msgid "Anime4K"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anime4K Ultrafast"
 msgstr ""
 
@@ -3027,12 +3095,18 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Approximate (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Approximate (Fast)"
 msgstr "Yaklaşık (Hızlı)"
 
 msgctxt "game_options"
-msgid "Approximate XFloat"
-msgstr "Yaklaşık XFloat"
+msgid ""
+"Approximate or Relaxed can significantly improve performance on bandwidth-"
+"constrained GPUs."
+msgstr ""
 
 msgctxt "game_options"
 msgid "April"
@@ -3153,11 +3227,11 @@ msgid "Async"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Async Recompiler (multi-threaded)(Default)"
+msgid "Async Shader Recompiler"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Async Recompiler with Shader Interpreter"
+msgid "Async with Shader Interpreter (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -3184,6 +3258,10 @@ msgctxt "game_options"
 msgid "Atari XE Game System cartridges"
 msgstr "Atari XE Game System kartuşları"
 
+msgctxt "game_options"
+msgid "Atomic (Default)"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Attack"
 msgstr "Saldırı"
@@ -3192,6 +3270,12 @@ msgctxt "game_options"
 msgid ""
 "Audio backend to use. ALSA is the native Linux audio system; SDL is a cross-"
 "platform fallback."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Audio buffer size in milliseconds. Lower values reduce latency; higher "
+"values prevent underruns."
 msgstr ""
 
 msgctxt "game_options"
@@ -3601,8 +3685,8 @@ msgid "Batocera Control Center"
 msgstr "Batocera Kontrol Merkezi"
 
 msgctxt "game_options"
-msgid "Batocera sets first audio device (Default)"
-msgstr "Batocera ilk ses cihazını ayarlar (Varsayılan)"
+msgid "Batocera sets first audio device"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Battery percentage"
@@ -3799,6 +3883,10 @@ msgid "Bottom only"
 msgstr "Sadece alt"
 
 msgctxt "game_options"
+msgid "Bottom/Top"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "Zıplayan Kutu"
 
@@ -3831,10 +3919,8 @@ msgid "Brunei"
 msgstr "Brunei"
 
 msgctxt "game_options"
-msgid ""
-"Buffer fill level (in percentage) below which time stretching will start."
+msgid "Buffer threshold percentage below which time stretching activates."
 msgstr ""
-"Altında zaman uzatmanın başlayacağı tampon doldurma düzeyi (yüzde cinsinden)."
 
 msgctxt "game_options"
 msgid "Buffered rendering"
@@ -4267,6 +4353,14 @@ msgid "CPU CLOCK"
 msgstr "CPU SAATİ"
 
 msgctxt "game_options"
+msgid "CPU CLOCK PERCENTAGE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CPU CLOCKS SCALE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU COMPATIBILITY"
 msgstr "CPU UYUMLULUĞU"
 
@@ -4297,6 +4391,10 @@ msgstr "CPU YÜRÜTME MODU"
 msgctxt "game_options"
 msgid "CPU FEATURE"
 msgstr "CPU ÖZELLİĞİ"
+
+msgctxt "game_options"
+msgid "CPU MODEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CPU SPEED"
@@ -4427,6 +4525,10 @@ msgid "CUSTOM IMAGE"
 msgstr "ÖZEL RESİM"
 
 msgctxt "game_options"
+msgid "CUSTOM LEVELS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CUSTOM MAME CONFIG"
 msgstr "ÖZEL MAME AYARI"
 
@@ -4459,6 +4561,14 @@ msgid "CYBERMORPH"
 msgstr "SİBERDÖNÜŞÜM"
 
 msgctxt "game_options"
+msgid "CYCLE EXACT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cache compiled shaders to storage to eliminate future stutter."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Cached Interpreter"
 msgstr "Önbellek Yorumcusu"
 
@@ -4487,22 +4597,14 @@ msgid "Can change the language of some games."
 msgstr "Bazı oyunların dilini değiştirebilir."
 
 msgctxt "game_options"
-msgid ""
-"Can fix bugs in some games. Only relevant for dynamic or LLVM SPU decoder."
-msgstr ""
-"Bazı oyunlarda hataları düzeltebilir. Yalnızca dinamik veya LLVM SPU kod "
-"çözücü için geçerlidir."
-
-msgctxt "game_options"
 msgid "Can fix drifting joysticks in games."
 msgstr "Oyunlarda sürüklenen joystickleri düzeltebilir."
 
 msgctxt "game_options"
 msgid ""
-"Can fix screen tearing on unorthodox displays (most LCDs don't need this)."
+"Can fix physics and gameplay bugs in some titles. Only relevant for dynamic "
+"or LLVM SPU decoder."
 msgstr ""
-"Alışılmışın dışındaki ekranlarda, ekran yırtılmasını düzeltebilir (çoğu LCD "
-"ile buna ihtiyaç yoktur)."
 
 msgctxt "game_options"
 msgid "Can fix slowdown. Only works on some drivers."
@@ -4511,10 +4613,6 @@ msgstr "Yavaşlamayı düzeltebilir. Sadece bazı sürücülerde çalışır."
 msgctxt "game_options"
 msgid "Can improve frame rates and responsiveness."
 msgstr "Kare hızlarını ve yanıt verme hızını iyileştirebilir."
-
-msgctxt "game_options"
-msgid "Can improve performance at the expense of graphics accuracy."
-msgstr "Grafik doğruluğu pahasına performansı artırabilir."
 
 msgctxt "game_options"
 msgid ""
@@ -4534,10 +4632,6 @@ msgstr ""
 "önleyebilir."
 
 msgctxt "game_options"
-msgid "Can reduce crackle and stutter but increases audio latency."
-msgstr "Çatırtı ve teklemeyi azaltabilir ancak ses gecikmesini artırır."
-
-msgctxt "game_options"
 msgid "Can sharpen images in lower resolutions."
 msgstr "Daha düşük çözünürlüklerdeki görüntüleri keskinleştirebilir."
 
@@ -4552,6 +4646,10 @@ msgstr "Kanada"
 msgctxt "game_options"
 msgid "Canadian French"
 msgstr "Kanada Fransızcası"
+
+msgctxt "game_options"
+msgid "Cap maximum framerate to prevent physics acceleration or stutter."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Capcom VS games Expand Screen Width"
@@ -4630,6 +4728,10 @@ msgid "Center Right"
 msgstr "Sağ Orta"
 
 msgctxt "game_options"
+msgid "ChJees"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Change behaviour when emulating GB games. Auto uses SGB for GB and GBC for "
 "GBC."
@@ -4697,11 +4799,9 @@ msgstr "Sanal GameCube bağlantı noktalarına takılanları değiştir."
 
 msgctxt "game_options"
 msgid ""
-"Changes the sleep period accuracy. Some games need this set to improve "
-"performance."
+"Changes sleep timer accuracy. Some games require Usleep or All Timers for "
+"proper speed."
 msgstr ""
-"Uyku periyodu doğruluğunu değiştirir. Bazı oyunların performansı "
-"iyileştirmek için bu ayara ihtiyacı vardır."
 
 msgctxt "game_options"
 msgid ""
@@ -4790,10 +4890,6 @@ msgid "Choose mipmapping type."
 msgstr "Eşleme türünü seçin."
 
 msgctxt "game_options"
-msgid "Choose number of audio channels."
-msgstr "Ses kanalı sayısını seçin."
-
-msgctxt "game_options"
 msgid "Choose second feature pack for the controller."
 msgstr "Kontrolcü için ikinci özellik paketini seçin."
 
@@ -4866,7 +4962,7 @@ msgstr "Dövüş zorluğunu seçin."
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL for gamepads only."
+"lightguns and steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 msgctxt "game_options"
@@ -5014,6 +5110,10 @@ msgid ""
 msgstr ""
 "Hangi grafik API kitaplığının kullanılacağını seç. Vulkan tüm donanımlarda "
 "çalışmayabilir."
+
+msgctxt "game_options"
+msgid "Choose which graphics backend to use. Vulkan is heavily recommended."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Choose which graphics renderer to use."
@@ -5196,21 +5296,16 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Compile shaders in background threads to avoid stuttering."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Compile shaders on next launch of game (one time). Reduces micro-freezes. "
 "Vulkan only."
 msgstr ""
 "Gölgelendiricileri oyunun bir sonraki başlatılışında derle (bir kez). Mikro "
 "donmaları azaltır. Yalnızca Vulkan."
-
-msgctxt "game_options"
-msgid ""
-"Compile shaders using background threads to avoid shader compilation "
-"stutter. May cause graphical glitches."
-msgstr ""
-"Gölgelendirici derlemesinde takılmayı önlemek için gölgelendiricileri arka "
-"plan iş parçacıklarını kullanarak derleyin. Grafiksel hatalara neden "
-"olabilir."
 
 msgctxt "game_options"
 msgid "Complex"
@@ -5245,12 +5340,22 @@ msgid "Config"
 msgstr "Yapılandırma"
 
 msgctxt "game_options"
+msgid ""
+"Configure emulated controller layout. Choose Wiimote configurations for "
+"games requiring motion/shake."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Console AES Japan"
 msgstr "Konsol AES Japon"
 
 msgctxt "game_options"
 msgid "Console AES World"
 msgstr "Konsol AES Dünya"
+
+msgctxt "game_options"
+msgid "Contrast-adaptive sharpening intensity percentage when using FSR."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Control Pad (Standard)"
@@ -5265,11 +5370,23 @@ msgid "Control the texture's trilinear filtering of the emulation."
 msgstr "Emülasyonun dokudaki üç doğrusal filtrelemesini kontrol edin."
 
 msgctxt "game_options"
+msgid ""
+"Controls command buffer fetching accuracy. Fast yields higher FPS on lower-"
+"tier hardware."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Controls for 5/6 button games and other unique controls"
 msgstr "5/6 tuşlu oyunlar ve diğer benzersiz kontroller için ayarlar"
 
 msgctxt "game_options"
 msgid "Controls how the adhoc server relay is used."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Controls how the game scales to fit your display when the screen aspect "
+"ratio doesn't match the game."
 msgstr ""
 
 msgctxt "game_options"
@@ -5280,11 +5397,9 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Controls precision of generated shaders. Low quality can improved "
-"performance."
+"Controls shader math precision. Low or Auto can improve performance on "
+"mobile/ARM GPUs."
 msgstr ""
-"Oluşturulan gölgelendiricilerin hassasiyetini kontrol eder. Düşük kalite "
-"performansı artırabilir."
 
 msgctxt "game_options"
 msgid ""
@@ -5295,6 +5410,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Converts DirectX 8/9/10/11/12 calls to Vulkan."
 msgstr "DirectX 8/9/10/11/12 çağrılarını Vulkan'a dönüştürür."
+
+msgctxt "game_options"
+msgid ""
+"Converts audio samples to 16-bit integers. Use if your audio driver does not "
+"support 32-bit float output."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Copy to texture"
@@ -5485,6 +5606,10 @@ msgstr "TARAMASIZLAŞTIR"
 msgctxt "game_options"
 msgid "DEINTERLACING"
 msgstr "TARAMASIZLAŞTIRMA"
+
+msgctxt "game_options"
+msgid "DESIRED AUDIO BUFFER DURATION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DESKTOP"
@@ -5909,6 +6034,10 @@ msgid "Disable"
 msgstr "Devre dışı bırak"
 
 msgctxt "game_options"
+msgid "Disable Queries"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Disable all input processing (view-only mode)."
 msgstr "Tüm giriş işlemlerini devre dışı bırakın (salt görüntüleme modu)."
 
@@ -5970,11 +6099,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Disables the vertex cache. Might resolve missing or flickering graphics "
-"output but degrade performance."
+"Disables the vertex cache. May fix flickering geometry at lower performance."
 msgstr ""
-"Köşe önbelleğini devre dışı bırakır. Eksik veya titreyen grafik çıktısını "
-"çözebilir ancak performansı düşürebilir."
 
 msgctxt "game_options"
 msgid "Discard"
@@ -6005,6 +6131,10 @@ msgid "Disk Image"
 msgstr "Disk Kalıbı"
 
 msgctxt "game_options"
+msgid "Display Rate"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Display Resolution"
 msgstr ""
 
@@ -6019,12 +6149,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Display on screen information like savestate, config warning, etc."
 msgstr ""
-
-msgctxt "game_options"
-msgid "Distorts the output to fill the display fully Overrides aspect ratio."
-msgstr ""
-"Ekranı tamamen dolduracak şekilde çıktıyı deforme eder En boy oranını "
-"geçersiz kılar."
 
 msgctxt "game_options"
 msgid "Docked (Default)"
@@ -6167,14 +6291,6 @@ msgstr "Ördek"
 
 msgctxt "game_options"
 msgid ""
-"Duration of audio buffer in milliseconds. Higher numbers may cause audio "
-"latency."
-msgstr ""
-"Milisaniye cinsinden ses arabelleğinin süresi. Daha yüksek sayılar ses "
-"gecikmesine neden olabilir."
-
-msgctxt "game_options"
-msgid ""
 "During gameplay, press Hotkey + R1 to translate on-screen text. Only on "
 "libretro cores."
 msgstr ""
@@ -6204,6 +6320,15 @@ msgstr "Dinamik (hızlı)"
 msgctxt "game_options"
 msgid "Dynamic Interpreter"
 msgstr "Dinamik Yorumlayıcı"
+
+msgctxt "game_options"
+msgid ""
+"Dynamically stretches audio when framerate drops to prevent harsh audio pops."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Dynamically timestretch audio to prevent crackling on frame drops."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Dynarec (Fastest)"
@@ -6280,14 +6405,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ENABLE AI TRANSLATION SERVICE"
 msgstr "YAPAY ZEKA ÇEVİRİ HİZMETİNİ ETKİNLEŞTİR"
-
-msgctxt "game_options"
-msgid "ENABLE ASYNC PRESENTATION"
-msgstr ""
-
-msgctxt "game_options"
-msgid "ENABLE ASYNC SHADER COMPILATION"
-msgstr "EŞ ZAMANSIZ GÖLGELENDİRİCİ DERLEMEYİ ETKİNLEŞTİR"
 
 msgctxt "game_options"
 msgid "ENABLE AUDIO BUFFERING"
@@ -6406,8 +6523,8 @@ msgid "ESYNC"
 msgstr "ESYNC"
 
 msgctxt "game_options"
-msgid "EVDEV"
-msgstr ""
+msgid "EVDEV (Default)"
+msgstr "EVDEV (Varsayılan)"
 
 msgctxt "game_options"
 msgid "EXPANSION PACK"
@@ -6480,6 +6597,11 @@ msgstr ""
 "taklit edin."
 
 msgctxt "game_options"
+msgid ""
+"Emulate New 3DS processor speed and additional controls (C-stick, ZL/ZR)."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick."
 msgstr "Shake için L2 ve Nunchuk R-Stick'i Wiimote Sideway ile taklit et."
 
@@ -6505,6 +6627,10 @@ msgstr "Wiimote işaretçisini bir fare ile taklit et."
 
 msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Emulated audio channel output mode."
 msgstr ""
 
 msgctxt "game_options"
@@ -6747,8 +6873,9 @@ msgstr ""
 "fare girişini etkinleştir"
 
 msgctxt "game_options"
-msgid "Enable mouse input to simulate touchscreen."
-msgstr "Dokunmatik ekranı simüle etmek için fare girişini etkinleştir."
+msgid ""
+"Enable mouse or touchpad input to simulate the Wii U GamePad touchscreen."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enable notifications of cache, controller events etc."
@@ -7068,6 +7195,10 @@ msgid "English/Japanese"
 msgstr "İngilizce/Japonca"
 
 msgctxt "game_options"
+msgid "Enhance low-resolution textures using scaling algorithms."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhanced"
 msgstr ""
 
@@ -7291,6 +7422,10 @@ msgid "External Host"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Extra memory over the 8MB default fastram. Need a 32bit cpu >= 68020."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Extreme"
 msgstr "Aşırı"
 
@@ -7455,6 +7590,10 @@ msgid "FRAME DUPING (SPEED UP)"
 msgstr "KARELERİ ÇOĞALT (HIZLANDIR)"
 
 msgctxt "game_options"
+msgid "FRAME LIMIT"
+msgstr "KARE SINIRI"
+
+msgctxt "game_options"
 msgid "FRAME RATE"
 msgstr "KARE HIZI"
 
@@ -7503,6 +7642,10 @@ msgid "FSR - FidelityFX Super Resolution"
 msgstr ""
 
 msgctxt "game_options"
+msgid "FSR SHARPENING INTENSITY"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FSR SHARPNESS REDUCTION"
 msgstr ""
 
@@ -7523,6 +7666,10 @@ msgid "FULL SINGLE SCREEN"
 msgstr "TAM TEK EKRAN"
 
 msgctxt "game_options"
+msgid "FULL SYNC AT GX2DRAWDONE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FULLSCREEN"
 msgstr "TAM EKRAN"
 
@@ -7532,6 +7679,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "FULLSCREEN MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FULLSCREEN SCALING"
 msgstr ""
 
 msgctxt "game_options"
@@ -7594,6 +7745,10 @@ msgctxt "game_options"
 msgid "Faroe Islands"
 msgstr "Faroe Adaları"
 
+msgctxt "game_options"
+msgid "Fast"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Fast"
 msgstr "Hızlı"
@@ -7653,10 +7808,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fills the screen."
 msgstr "Ekranı doldurur."
-
-msgctxt "game_options"
-msgid "Final image filtering."
-msgstr "Son görüntü filtreleme."
 
 msgctxt "game_options"
 msgid "Finland"
@@ -7756,6 +7907,16 @@ msgid "Fixes flickering."
 msgstr "Titremeyi düzeltir."
 
 msgctxt "game_options"
+msgid "Fixes missing effects/lighting at a performance cost."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Fixes rendering glitches in games like Luigi's Mansion and Pokemon, but "
+"costs performance."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Fixes specific shadows and textures in the Virtua Tennis 3 and Virtua "
 "Fighter 5 franchises for non-Nvidia GPUs. May require the FPS limiter."
@@ -7844,10 +8005,8 @@ msgstr "32bit zorla"
 msgctxt "game_options"
 msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
-"screen devices/games."
+"screen devices/games. Can cause issues with intro videos."
 msgstr ""
-"3D geometriyi her zaman üst ekranda işlemeye zorla. Tek ekranlı cihazlar/"
-"oyunlar için kullanışlıdır."
 
 msgctxt "game_options"
 msgid "Force 4:3"
@@ -7929,9 +8088,11 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Forces emulation of all blit and image manipulation operations on the CPU. "
-"Can fix some graphical issues at the cost of performance."
+msgid "Forces all image copy/blit operations on the CPU."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Forces strict adherence to the PS3 RSX hardware specifications."
 msgstr ""
 
 msgctxt "game_options"
@@ -8350,6 +8511,10 @@ msgid "GPU SYNC"
 msgstr "GPU SYNC"
 
 msgctxt "game_options"
+msgid "GPU command queue scheduling policy for Vulkan."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "GPU emulation accuracy. Most games render fine with Normal. High is required "
 "to ensure particles render correctly."
@@ -8497,6 +8662,10 @@ msgstr "Genel Klavye Bağları"
 msgctxt "game_options"
 msgid "Genesis/Megadrive Style"
 msgstr "Genesis/Megadrive Tarzı"
+
+msgctxt "game_options"
+msgid "Genocide"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Georgia"
@@ -8790,8 +8959,8 @@ msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master kartuşları"
 
 msgctxt "game_options"
-msgid "Have Batocera set the first audio output device."
-msgstr "Batocera'nın ilk ses çıkış cihazını ayarlamasını sağla."
+msgid "Have Batocera automatically set the primary audio output device."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hebrew"
@@ -8825,11 +8994,9 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Helps reduce CPU power consumption by throttling the CPU when not needed. "
-"Useful for handhelds."
+"Helps reduce CPU power consumption by throttling idle threads. Recommended "
+"for handhelds."
 msgstr ""
-"Gerekmediğinde CPU kısıtlayarak CPU güç tüketimini azaltmaya yardımcı olur. "
-"El bilgisayarları için kullanışlıdır."
 
 msgctxt "game_options"
 msgid ""
@@ -8846,10 +9013,6 @@ msgstr "Hercules"
 msgctxt "game_options"
 msgid "Hermite"
 msgstr "Hermite"
-
-msgctxt "game_options"
-msgid "Hermite (Default)"
-msgstr "Hermite (Varsayılan)"
 
 msgctxt "game_options"
 msgid "Hide"
@@ -8886,10 +9049,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "High (99)"
 msgstr ""
-
-msgctxt "game_options"
-msgid "High (Default)"
-msgstr "Yüksek (Varsayılan)"
 
 msgctxt "game_options"
 msgid "High 720p"
@@ -9109,13 +9268,12 @@ msgid "Iceland"
 msgstr "İzlanda"
 
 msgctxt "game_options"
-msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
-msgstr "Bir oyun 30hz ile çalışıyorsa, PPSSPP monitöre 60 kare gönderecektir."
+msgid "If a game crashes, try ASMJIT or Interpreter settings."
+msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"If game crashes, try ASMJIT. If still crashing, try Interpreter settings."
-msgstr ""
+msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
+msgstr "Bir oyun 30hz ile çalışıyorsa, PPSSPP monitöre 60 kare gönderecektir."
 
 msgctxt "game_options"
 msgid "If nothing is specified, will use ZTranslate by default."
@@ -9143,11 +9301,21 @@ msgstr "Doğruluktan küçük bir ödün vererek hızınızı artırın."
 
 msgctxt "game_options"
 msgid ""
+"Improves accuracy and fixes game-specific glitches at the cost of some "
+"performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr ""
 "Hem hareketli grafik ölçeklendirmeyi hem de yol işlemeyi iyileştirir. Araba "
 "hareketli grafiklerini etkilemez."
+
+msgctxt "game_options"
+msgid "Improves clarity of distant angled textures."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Improves clarity of distant textures when mip-mapping is enabled."
@@ -9187,7 +9355,7 @@ msgstr ""
 "grafiksel sorunlara da yol açabilir."
 
 msgctxt "game_options"
-msgid "Inaccurate XFloat"
+msgid "Inaccurate"
 msgstr ""
 
 msgctxt "game_options"
@@ -9201,6 +9369,10 @@ msgstr ""
 "yanı sıra fare desteği (Fare Görünümü) içerir ve gelişmiş analog denetleyici "
 "desteği için analog girişleri izleyici açılarına dönüştürme seçeneklerine "
 "sahip yeni bir Head Tracker giriş cihazı türü sunar."
+
+msgctxt "game_options"
+msgid "Increase cpu frequency."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Increase emulator performance, at the cost of accuracy/stability."
@@ -9227,9 +9399,7 @@ msgid "Indonesian"
 msgstr "Endonezce"
 
 msgctxt "game_options"
-msgid ""
-"Initializes render target memory using vm memory. Some games need this to "
-"fix broken graphics."
+msgid "Infinite"
 msgstr ""
 
 msgctxt "game_options"
@@ -9277,6 +9447,10 @@ msgstr "Tamsayı Ölçeği"
 msgctxt "game_options"
 msgid "Interlaced"
 msgstr "Tam Taramalı"
+
+msgctxt "game_options"
+msgid "Internal resolution scale relative to 720p base."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Interpreter (Slowest)"
@@ -9547,8 +9721,8 @@ msgid "Keep (default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Keep Aspect Ration (Default)"
-msgstr "En Boy Oranını Koru (Varsayılan)"
+msgid "Keep Aspect Ratio"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Keep original aspect ratio when stretching."
@@ -9707,6 +9881,10 @@ msgid "LCD 1x"
 msgstr ""
 
 msgctxt "game_options"
+msgid "LCD 1x NDS Color"
+msgstr ""
+
+msgctxt "game_options"
 msgid "LCD 3x"
 msgstr ""
 
@@ -9791,12 +9969,13 @@ msgid "LLE"
 msgstr "LLE"
 
 msgctxt "game_options"
-msgid "LLVM Recompiler"
-msgstr "LLVM Yeniden Derleyici"
+msgid "LLVM Recompiler (Default)"
+msgstr ""
 
 msgctxt "game_options"
-msgid "LLVM is fastest, use the Interpreter settings if there are issues."
-msgstr "LLVM en hızlıdır, sorun varsa Yorumlayıcı ayarlarını kullan."
+msgid ""
+"LLVM is fastest; use the Interpreter setting if there are stability issues."
+msgstr ""
 
 msgctxt "game_options"
 msgid "LOAD CUSTOM TEXTURES"
@@ -9891,7 +10070,7 @@ msgid "Legacy Evdev"
 msgstr "Eski EvDev"
 
 msgctxt "game_options"
-msgid "Legacy Recompiler (single-threaded)"
+msgid "Legacy Single Threaded"
 msgstr ""
 
 msgctxt "game_options"
@@ -9964,11 +10143,9 @@ msgstr "Yüksek CPU kullanımını azaltmak için FPS sınırlayın."
 
 msgctxt "game_options"
 msgid ""
-"Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. "
-"Leave on automatic if slowdown occurs."
+"Limiting to 1 or 2 threads can fix audio stuttering on lower core count "
+"CPUs. Leave on Auto (0) if slowdown occurs."
 msgstr ""
-"1 veya 2 ile sınırlandırmak bazı oyunlarda daha zayıf işlemcilerde ses "
-"takılmalarını düzeltebilir. Yavaşlama olursa otomatikte bırak."
 
 msgctxt "game_options"
 msgid "Linear"
@@ -10520,6 +10697,10 @@ msgid "Maximum"
 msgstr "EN YÜKSEK"
 
 msgctxt "game_options"
+msgid "Maximum (150)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Maximum (175)"
 msgstr ""
 
@@ -10569,13 +10750,6 @@ msgstr "Mayıs"
 
 msgctxt "game_options"
 msgid ""
-"May fix missing graphics and broken lighting at the cost of performance."
-msgstr ""
-"Performanstan ödün vererek eksik grafikleri ve bozuk aydınlatmayı "
-"düzeltebilir."
-
-msgctxt "game_options"
-msgid ""
 "May fix missing or incorrect graphics in some games at a small performance "
 "cost."
 msgstr ""
@@ -10589,11 +10763,9 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"May provide performance gain on CPUs with low core/thread count at the "
-"expense of possible broken timings."
+"May provide performance gains on CPUs with low core counts at the expense of "
+"possible broken timings."
 msgstr ""
-"Olası bozuk zamanlamalar pahasına düşük çekirdek/iş parçacığı sayısına sahip "
-"CPU'larda performans artışı sağlayabilir."
 
 msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
@@ -10645,11 +10817,9 @@ msgstr "Mega STE ETOS 256k"
 
 msgctxt "game_options"
 msgid ""
-"Mega and Giga modes may improve performance. Use the Safe mode for maximum "
-"compatibility."
+"Mega and Giga modes may improve performance on powerful CPUs. Use Safe for "
+"maximum compatibility."
 msgstr ""
-"Mega ve Giga modları performansı artırabilir. En yüksek uyumluluk için "
-"Güvenli modu kullanın."
 
 msgctxt "game_options"
 msgid "MegaSD"
@@ -10714,6 +10884,10 @@ msgid "Merge"
 msgstr "Birleştir"
 
 msgctxt "game_options"
+msgid "Method used to compile graphics shaders."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Mexico"
 msgstr "Meksika"
 
@@ -10729,6 +10903,10 @@ msgstr "Düşük"
 msgctxt "game_options"
 msgid "Minimum"
 msgstr "EN DÜŞÜK"
+
+msgctxt "game_options"
+msgid "Minimum (50)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Mirrored"
@@ -10763,8 +10941,8 @@ msgid "Model of emulated Apple II."
 msgstr "Taklit edilmiş Apple II modeli."
 
 msgctxt "game_options"
-msgid "Moderate"
-msgstr "Denetleme"
+msgid "Moderate (100)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Modern Fightstick Style"
@@ -10805,11 +10983,6 @@ msgstr "Daha uyumlu"
 msgctxt "game_options"
 msgid "Morocco"
 msgstr "Fas"
-
-msgctxt "game_options"
-msgid "Most games already have an internal framelimit. Minor performance cost."
-msgstr ""
-"Çoğu oyunun zaten dahili bir kare limiti vardır. Küçük performans maliyeti."
 
 msgctxt "game_options"
 msgid "Most games use port 2, some use port 1."
@@ -10928,6 +11101,16 @@ msgstr ""
 msgctxt "game_options"
 msgid "Much faster than interpreter (but may have issues)."
 msgstr "Yorumcudan çok daha hızlı (ancak sorunları olabilir)."
+
+msgctxt "game_options"
+msgid "Multi-threaded"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Multi-threaded pad handler processes inputs on a dedicated worker thread to "
+"reduce input lag."
+msgstr ""
 
 msgctxt "game_options"
 msgid "N64"
@@ -11092,10 +11275,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "NTSYNC"
 msgstr "NTSYNC"
-
-msgctxt "game_options"
-msgid "NUMBER OF SHADER COMPILER THREADS"
-msgstr "GÖLGELENDİRİCİ DERLEYİCİ İŞ PARÇACIĞI"
 
 msgctxt "game_options"
 msgid ""
@@ -11412,6 +11591,12 @@ msgid "Null"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Number of threads dedicated to compiling shaders in the background. 0 uses "
+"automatic detection."
+msgstr ""
+
+msgctxt "game_options"
 msgid "OCCLUSION QUERY MODE"
 msgstr ""
 
@@ -11476,8 +11661,8 @@ msgid "OSD PERFORMANCE POSITION"
 msgstr "OSD PERFORMANS POZİSYONU"
 
 msgctxt "game_options"
-msgid "OUTPUT SCALING"
-msgstr "ÇIKTI ÖLÇEKLENDİRMESİ"
+msgid "OUTPUT SCALING MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "OUTPUTS TCP PORT"
@@ -11524,6 +11709,10 @@ msgid "Off"
 msgstr "Kapalı"
 
 msgctxt "game_options"
+msgid "Off (0%)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Off (1x)"
 msgstr ""
 
@@ -11542,10 +11731,6 @@ msgstr "Kapalı (Gürültülü)"
 msgctxt "game_options"
 msgid "Off (None)"
 msgstr "Kapalı (Yok)"
-
-msgctxt "game_options"
-msgid "Off (faster, unstable)"
-msgstr "Kapalı(hızlı, kararsız)"
 
 msgctxt "game_options"
 msgid "Off at Start"
@@ -11573,11 +11758,9 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Offloads some RSX operations to a secondary thread. Improves performance in "
-"high-core processors."
+"Offloads RSX draw commands to a secondary thread. Improves performance on "
+"CPUs with 6+ threads."
 msgstr ""
-"Bazı RSX işlemlerini ikincil bir iş parçacığına aktarır. Yüksek çekirdekli "
-"işlemcilerde performansı artırır."
 
 msgctxt "game_options"
 msgid "Older games skipped drawing every second line, this masks that."
@@ -11636,19 +11819,8 @@ msgid "On with rewind support"
 msgstr "Geri sarma desteği ile açık"
 
 msgctxt "game_options"
-msgid "Only Async (skip draw) avoids freezing while compiling shaders."
-msgstr ""
-"Sadece Eş Zamansız (çizmeyi atla), gölgelendiricileri derlerken donmayı "
-"önler."
-
-msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "Sadece Aşırı Tarama Alanı"
-
-msgctxt "game_options"
-msgid "Only applicable when either Async Shader mode is set."
-msgstr ""
-"Sadece Eş Zamansız Gölgelendirici modlarından biri ayarlandığında geçerlidir."
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -11664,9 +11836,7 @@ msgid "Only for games that employed it (for Boktai)"
 msgstr "Sadece onu kullanan oyunlar için (Boktai için)"
 
 msgctxt "game_options"
-msgid ""
-"Only framebuffers greater than this size will be upscaled. May fix problems "
-"with missing graphics. (Default: 16)"
+msgid "Only framebuffers greater than this dimension will be upscaled."
 msgstr ""
 
 msgctxt "game_options"
@@ -11742,6 +11912,10 @@ msgid "OpenGLES (Default)"
 msgstr "OpenGLES (Varsayılan)"
 
 msgctxt "game_options"
+msgid "Operating System (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Optimized (auto)"
 msgstr "İyileştirilmiş (otomatik)"
 
@@ -11752,6 +11926,10 @@ msgstr "Turuncu"
 msgctxt "game_options"
 msgid "Orange - Hokage Orange"
 msgstr "Portakal Rengi - Hokage Portakalı"
+
+msgctxt "game_options"
+msgid "Ordered & Atomic"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Original"
@@ -11782,8 +11960,16 @@ msgid "Output rotation independent of xrandr or framebuffer settings."
 msgstr "Xrandr veya çerçeve tamponu ayarlarından bağımsız çıkış döndürme."
 
 msgctxt "game_options"
+msgid "Overclock emulated 3DS CPU to improve framerates or run 60 FPS mods."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
 msgstr "SNES işlemcisi hız aşımı (Gradius 3, Super R-Type)."
+
+msgctxt "game_options"
+msgid "Override the CPU that comes with the selected Amiga model."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Overrides the language mode of the emulated console."
@@ -11800,6 +11986,10 @@ msgstr "Sadece P1"
 msgctxt "game_options"
 msgid "P2 only"
 msgstr "Sadece P2"
+
+msgctxt "game_options"
+msgid "PAD HANDLER MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PADDLE ANALOG ABSOLUTE"
@@ -12134,12 +12324,20 @@ msgid "PS1 Digital Controller"
 msgstr "PS1 Dijital Kontrolcü"
 
 msgctxt "game_options"
+msgid "PS3"
+msgstr ""
+
+msgctxt "game_options"
 msgid "PS3 CONTROLLER"
 msgstr "PS3 KONTOLCÜSÜ"
 
 msgctxt "game_options"
-msgid "PS3's internal ratio setting. Some games only support 16/9."
-msgstr "PS3 dahili oran ayarı. Bazı oyunlar yalnızca 16/9 destekler."
+msgid "PS3 Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "PS3 internal aspect ratio setting."
+msgstr ""
 
 msgctxt "game_options"
 msgid "PS4 PRO MODE"
@@ -12320,12 +12518,6 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Perform presentation on separate threads. Improves performance when using "
-"Vulkan in most applications. Adds ~1 frame of input lag."
-msgstr ""
-
-msgctxt "game_options"
 msgid "Performance"
 msgstr "Performans"
 
@@ -12380,6 +12572,10 @@ msgstr "Oynat (Varsayılan)"
 msgctxt "game_options"
 msgid "Play a coin drop sound effect when an insert coin button is pressed"
 msgstr "Jeton ekleme tuşuna basıldığında jeton düşürme ses efekti çal"
+
+msgctxt "game_options"
+msgid "Play custom user level."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Play this game on several screens (if available)"
@@ -12558,8 +12754,8 @@ msgid "Power Saver"
 msgstr "Güç Tasarrufu"
 
 msgctxt "game_options"
-msgid "Precise (Slowest)(Default)"
-msgstr "Hassas (En yavaş)(Varsayılan)"
+msgid "Precise (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Prefer \"Before NMI\", change to After NMI only if needed by the game."
@@ -12574,10 +12770,6 @@ msgstr "Önyükleme"
 msgctxt "game_options"
 msgid "Preload requires more RAM."
 msgstr "Önyükleme daha fazla RAM gerektirir."
-
-msgctxt "game_options"
-msgid "Preloading is impossible from ES."
-msgstr "ES üstünden ön yükleme yapılamaz."
 
 msgctxt "game_options"
 msgid ""
@@ -12632,10 +12824,6 @@ msgstr "Önceki silah"
 msgctxt "keys_files"
 msgid "Primary attack"
 msgstr "Birincil saldırı"
-
-msgctxt "game_options"
-msgid "Pro Controller required for games that require shake motions."
-msgstr "Sallama hareketi gerektiren oyunlar için Pro Controller gereklidir."
 
 msgctxt "game_options"
 msgid "Produces a clean LCD effect."
@@ -12787,6 +12975,10 @@ msgid "READ COLOR BUFFERS"
 msgstr ""
 
 msgctxt "game_options"
+msgid "READ DEPTH BUFFERS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "READ FRAMEBUFFER EVERY FRAME (GLIDE64MK2)"
 msgstr "HER KAREDE KARE ARABELLEĞİNİ OKU (GLIDE64MK2)"
 
@@ -12851,10 +13043,6 @@ msgid "RENDER RESOLUTION (SCALING)"
 msgstr "İŞLEME ÇÖZÜNÜRLÜĞÜ (ÖLÇEK)"
 
 msgctxt "game_options"
-msgid "RENDER RESOLUTION SCALE THRESHOLD"
-msgstr ""
-
-msgctxt "game_options"
 msgid "RENDER SCALE"
 msgstr ""
 
@@ -12901,6 +13089,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "RESOLUTION MULTIPLIER"
 msgstr "ÇÖZÜNÜRLÜK ÇARPANI"
+
+msgctxt "game_options"
+msgid "RESOLUTION SCALE THRESHOLD"
+msgstr ""
 
 msgctxt "game_options"
 msgid "REWIND"
@@ -12979,8 +13171,20 @@ msgid "ROTATION"
 msgstr "DÖNDÜR"
 
 msgctxt "game_options"
+msgid "RPCS3 Alternative Scheduler"
+msgstr ""
+
+msgctxt "game_options"
+msgid "RPCS3 Scheduler"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RSP PLUGIN"
 msgstr "RSP EKLENTİSİ"
+
+msgctxt "game_options"
+msgid "RSX FIFO FETCH ACCURACY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "RUMBLE"
@@ -13011,6 +13215,18 @@ msgid "Raw"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Read CD images faster than the real drive."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Reads color buffer memory into CPU space. Required by some titles."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Reads depth buffer values into CPU memory."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Real Wiimote"
 msgstr "Gerçek Wiimote"
 
@@ -13031,22 +13247,12 @@ msgid "Reduce load time at the cost of accuracy."
 msgstr "Doğruluk karşılığında yükleme süresini azalt."
 
 msgctxt "game_options"
-msgid ""
-"Reduce stutter that happens when compiling shaders. Requires hardware shader "
-"to be enabled."
+msgid "Reduces audio crackle and stutter."
 msgstr ""
 
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the preceived color depth."
 msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Reduces crackle and stutter further, but may cause a very noticeable "
-"reduction in audio quality on slower CPUs."
-msgstr ""
-"Çatırtı ve teklemeyi daha da azaltır, ancak daha yavaş işlemcilerde ses "
-"kalitesinde çok belirgin bir düşüşe neden olabilir."
 
 msgctxt "game_options"
 msgid "Reduces wobbly polygons & warping textures."
@@ -13057,12 +13263,12 @@ msgid "Regular Bilnear"
 msgstr "Normal Bilinear"
 
 msgctxt "game_options"
-msgid "Relaxed (Fastest)"
-msgstr "Rahat (En Hızlı)"
+msgid "Relaxed"
+msgstr ""
 
 msgctxt "game_options"
-msgid "Relaxed XFloat"
-msgstr "Rahat XFloat"
+msgid "Relaxed (Fastest)"
+msgstr "Rahat (En Hızlı)"
 
 msgctxt "game_options"
 msgid "Relay Brasileiro (Sao Paulo Brazil)"
@@ -13515,10 +13721,6 @@ msgid "SDL"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SDL (Default)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "SDL CONFIG"
 msgstr "SDL YAPILANDIR"
 
@@ -13567,16 +13769,20 @@ msgid "SHADER CACHE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SHADER COMPILATION MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SHADER COMPILER THREADS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SHADER JIT"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SHADER MODE"
-msgstr "GÖLGELENDİRİCİ MODU"
-
-msgctxt "game_options"
-msgid "SHADER QUALITY"
-msgstr "GÖLGELENDİRİCİ KALİTESİ"
+msgid "SHADER PRECISION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SHADER SET"
@@ -13827,8 +14033,8 @@ msgid "SPU LOOP DETECTION"
 msgstr "SPU DÖNGÜ TESPİTİ"
 
 msgctxt "game_options"
-msgid "SPU XFloat Accuracy"
-msgstr "SPU XFloat Doğruluğu"
+msgid "SPU XFLOAT ACCURACY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SSAA Multiplier"
@@ -14056,6 +14262,10 @@ msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
 msgstr "Özel yapılandırılmış joystick profillerini ara."
 
+msgctxt "game_options"
+msgid "Second Empire"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Secondary attack"
 msgstr "İkincil saldırı"
@@ -14064,6 +14274,10 @@ msgctxt "game_options"
 msgid ""
 "Seconds a texture should be unused before it is eligible for deletion when "
 "above the soft limit."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Secret Planet"
 msgstr ""
 
 msgctxt "game_options"
@@ -14085,6 +14299,12 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Select"
 msgstr "Seç"
+
+msgctxt "game_options"
+msgid ""
+"Select CPU scheduler mode. RPCS3 Alternative Scheduler can improve frame "
+"pacing on ARM big.LITTLE architectures."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Select a boot disk or hard drive if needed"
@@ -14216,6 +14436,12 @@ msgid ""
 msgstr "Taklit edilecek donanım mimarisi makine tipini ve mimarisini seçin."
 
 msgctxt "game_options"
+msgid ""
+"Select the graphics rendering backend (requires New3D engine). Vulkan can "
+"provide improved performance and lower CPU overhead on supported GPUs."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Select the input type to navigate the touch screen"
 msgstr "Dokunmatik ekranda gezinmek için giriş türünü seç"
 
@@ -14314,6 +14540,11 @@ msgstr "Pedal olarak fare kullanıldığında hassasiyet."
 msgctxt "game_options"
 msgid "Separate Windows"
 msgstr "Ayrı Pencere"
+
+msgctxt "game_options"
+msgid ""
+"Separate display presentation from emulation threads (best with Vulkan)."
+msgstr ""
 
 msgctxt "game_options"
 msgid "September"
@@ -14707,6 +14938,10 @@ msgid "Simplified Chinese"
 msgstr "Basitleştirilmiş Çince"
 
 msgctxt "game_options"
+msgid "Simulate CRT effects for a retro look."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Simulate LCD color inaccuracy."
 msgstr "LCD renk yanlışlığını simüle edin."
 
@@ -14764,6 +14999,10 @@ msgstr "Tek"
 
 msgctxt "game_options"
 msgid "Single Screen Only"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Single-threaded (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -14938,6 +15177,10 @@ msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Açıya göre uzaktaki 3D nesnelerde pürüzsüz dokular."
 
 msgctxt "game_options"
+msgid "Smooths jagged geometry edges."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Smooths out textures on 3D objects."
 msgstr "3D nesnelerdeki dokuları pürüzsüzleştirir."
 
@@ -14980,12 +15223,6 @@ msgid ""
 msgstr ""
 "Yazılım modu daha hızlı ve daha doğrudur, OpenGL modu ise 3D grafiklerin "
 "ölçeklendirilmesini destekler."
-
-msgctxt "game_options"
-msgid ""
-"Some applications requires this to be enabled for the hardware shader to "
-"render properly. However this would reduce performance in most applications."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Some games accept input from port 2 instead of port 1."
@@ -15216,6 +15453,10 @@ msgid "Start game"
 msgstr "Oyunu başlat"
 
 msgctxt "game_options"
+msgid "Starts RPCS3 with the main Qt GUI active."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Static Interpreter"
 msgstr "Statik Yorumlayıcı"
 
@@ -15244,10 +15485,6 @@ msgid "Stereo (2)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stereo (Default)"
-msgstr "Stereo (Varsayılan)"
-
-msgctxt "game_options"
 msgid "Stereo sound output."
 msgstr ""
 
@@ -15267,26 +15504,16 @@ msgstr "Sağa saldırı"
 
 msgctxt "game_options"
 msgid ""
-"Straict API specification. Can resolve rare cases of missing graphics and "
-"flickering."
-msgstr ""
-"Kesin API spesifikasyonu. Nadir görülen eksik grafik ve titreme durumlarını "
-"çözebilir."
-
-msgctxt "game_options"
-msgid ""
-"Stream texture to GPU in parrallel. Can improve performance on more powerful "
-"GPU's that have spare headroom."
-msgstr ""
-"Dokuyu paralel olarak GPU üstüne aktarın. Daha fazla boş alana sahip daha "
-"güçlü GPU üstünde performansı artırabilir."
-
-msgctxt "game_options"
-msgid ""
 "Streaming Optimal Playable Settings, overrides other settings if enabled."
 msgstr ""
 "Akış İçin En İyi Oynanabilir Ayarlar, etkinleştirildiğinde diğer ayarları "
 "geçersiz kılar."
+
+msgctxt "game_options"
+msgid ""
+"Streams textures to the GPU concurrently. Can improve framerate consistency "
+"on Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Stretch"
@@ -15297,8 +15524,16 @@ msgid "Stretch games to full-screen, but may distort the aspect ratio"
 msgstr "Oyunları tam ekrana uzatın, bu en boy oranını bozabilir"
 
 msgctxt "game_options"
+msgid "Stretch image output to fill the window/screen."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Stretch the viewport to fill your display, ignoring the native aspect ratio."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Stretch to Fill"
 msgstr ""
 
 msgctxt "game_options"
@@ -15465,6 +15700,19 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Synchronize frame presentation with monitor refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Synchronize frame rate with monitor refresh rate to eliminate screen tearing."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synchronize framerate with display refresh rate."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Syria"
 msgstr "Suriye"
 
@@ -15609,6 +15857,10 @@ msgid "TEXTURE UPSCALING TYPE"
 msgstr "DOKU YÜKSELTME TÜRÜ"
 
 msgctxt "game_options"
+msgid "THREAD SCHEDULER MODE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "THREADED 3D"
 msgstr "İŞ PARÇACIKLI 3D"
 
@@ -15670,6 +15922,10 @@ msgid "TOUCH SCREEN MODE"
 msgstr "DOKUNMATİK EKRAN MODU"
 
 msgctxt "game_options"
+msgid "TOUCHSCREEN EMULATION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TRAFFIC DENSITY"
 msgstr ""
 
@@ -15728,6 +15984,10 @@ msgstr "TT AUTO"
 msgctxt "game_options"
 msgid "TT ETOS 512k"
 msgstr "TT ETOS 512k"
+
+msgctxt "game_options"
+msgid "TURBO CD SPEED"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TURBO MODE"
@@ -15854,10 +16114,6 @@ msgstr "Tayca"
 msgctxt "game_options"
 msgid "Thailand"
 msgstr "Tayland"
-
-msgctxt "game_options"
-msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
-msgstr "Yeni 3DS'de daha hızlı bir işlemci, ZL/ZR tuşları ve C çubuğu bulunur."
 
 msgctxt "game_options"
 msgid ""
@@ -16469,6 +16725,12 @@ msgid "Uncapped"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Underclocking CPU target speed can achieve full-speed gameplay on low-power "
+"or ARM systems."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Undocked"
 msgstr "Bağlantıdan çıkarıldı"
 
@@ -16553,6 +16815,10 @@ msgid "Upscale the rendering resolution to match the display size."
 msgstr ""
 
 msgctxt "game_options"
+msgid "Upscaling filter applied when displaying the render buffer."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Upscaling filter used for 2D UI layers and backgrounds. Requires New 3D "
 "engine."
@@ -16569,14 +16835,6 @@ msgstr "Uruguay"
 msgctxt "keys_files"
 msgid "Use"
 msgstr "Kullan"
-
-msgctxt "game_options"
-msgid ""
-"Use 16 bit audio samples for audio drivers that don't support 32bit. Only "
-"use if you get no audio."
-msgstr ""
-"32 bit desteklemeyen ses sürücüleri için 16 bit ses örnekleri kullanın. "
-"Yalnızca ses alamıyorsanız kullanın."
 
 msgctxt "game_options"
 msgid "Use 1:1 aspect."
@@ -16598,6 +16856,10 @@ msgstr "Ana Bilgisayarı Kullan"
 msgctxt "keys_files"
 msgid "Use Inventory Item"
 msgstr "Envanter Öğesini Kullan"
+
+msgctxt "game_options"
+msgid "Use JIT compiler for shader emulation."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Use MAME software lists to identify ROM"
@@ -16696,12 +16958,6 @@ msgid ""
 msgstr ""
 "Önden giden kareler yerine, önleyici kareler kullan. Kontrolcü durumu "
 "değiştiğinde önden giden kare çalışır."
-
-msgctxt "game_options"
-msgid ""
-"Use the JIT engine instead of the interpreter for software shader emulation. "
-"Enable this for better performance."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Use the original fonts instead of the built in font."
@@ -16955,6 +17211,10 @@ msgid "VSYNC FPS LIMIT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "VSYNC MODE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "VSync"
 msgstr ""
 
@@ -16969,6 +17229,10 @@ msgstr "VTech V.Smile Motion kartuşları"
 msgctxt "game_options"
 msgid "VTech V.Smile cartridges"
 msgstr "VTech V.Smile kartuşları"
+
+msgctxt "game_options"
+msgid "Valentine"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Value to use for the emulated solar sensor (Boktai)."
@@ -17041,6 +17305,10 @@ msgstr "Sanal"
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
 msgstr "Sanal Klavye"
+
+msgctxt "game_options"
+msgid "Volcano Temple"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Voltmace Delta 3b Twin Joysticks"
@@ -17198,6 +17466,10 @@ msgctxt "keys_files"
 msgid "Walk forward"
 msgstr "İleri yürü"
 
+msgctxt "game_options"
+msgid "Walkers World"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Weapon drop"
 msgstr "Silahı bırak"
@@ -17338,11 +17610,9 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Writes depth buffer values to VM memory. Some games need this to fix broken "
-"graphics."
+"Writes depth buffer values to VM memory. Fixes occlusion issues in some "
+"games."
 msgstr ""
-"Derinlik arabellek değerlerini VM belleğine yazar. Bazı oyunların bozuk "
-"grafikleri düzeltmek için buna ihtiyacı vardır."
 
 msgctxt "game_options"
 msgid "X"
@@ -17415,6 +17685,10 @@ msgstr "YAKINLAŞ (KENARLARI GİZLE)"
 msgctxt "game_options"
 msgid "ZOOM/CROP (HIDE BORDERS)"
 msgstr "YAKINLAŞTIR/KIRP (KENARLARI GİZLE)"
+
+msgctxt "game_options"
+msgid "ZORRO III FAST RAM"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
@@ -17859,6 +18133,14 @@ msgstr "sarı/mavi"
 #~ msgstr "1000 (Varsayılan)"
 
 #~ msgctxt "game_options"
+#~ msgid "100ms (Default)"
+#~ msgstr "100ms (Varsayılan)"
+
+#~ msgctxt "game_options"
+#~ msgid "10ms"
+#~ msgstr "10ms"
+
+#~ msgctxt "game_options"
 #~ msgid "10x Native (6400x5280)"
 #~ msgstr "10x Doğal (6400x5280)"
 
@@ -17867,8 +18149,24 @@ msgstr "sarı/mavi"
 #~ msgstr "11x Doğal (7040x5808)"
 
 #~ msgctxt "game_options"
+#~ msgid "120ms"
+#~ msgstr "120ms"
+
+#~ msgctxt "game_options"
 #~ msgid "12x Native (7680x6336) for 8K"
 #~ msgstr "12x Doğal (7680x6336) 8K"
+
+#~ msgctxt "game_options"
+#~ msgid "140ms"
+#~ msgstr "140ms"
+
+#~ msgctxt "game_options"
+#~ msgid "160ms"
+#~ msgstr "160ms"
+
+#~ msgctxt "game_options"
+#~ msgid "16:9 (default)"
+#~ msgstr "16:9 (varsayılan)"
 
 #~ msgctxt "game_options"
 #~ msgid "16x (~7680p / 16k)"
@@ -17879,8 +18177,20 @@ msgstr "sarı/mavi"
 #~ msgstr "16x Anizotropik"
 
 #~ msgctxt "game_options"
+#~ msgid "180ms"
+#~ msgstr "180ms"
+
+#~ msgctxt "game_options"
 #~ msgid "1x (~480)"
 #~ msgstr "1x (~480)"
+
+#~ msgctxt "game_options"
+#~ msgid "220ms"
+#~ msgstr "220ms"
+
+#~ msgctxt "game_options"
+#~ msgid "240ms"
+#~ msgstr "240ms"
 
 #~ msgctxt "game_options"
 #~ msgid "2x (~960)"
@@ -17899,6 +18209,10 @@ msgstr "sarı/mavi"
 #~ msgstr "3x Doğal (1920x1584) 1080p"
 
 #~ msgctxt "game_options"
+#~ msgid "40ms"
+#~ msgstr "40ms"
+
+#~ msgctxt "game_options"
 #~ msgid "4x (~1920p)"
 #~ msgstr "4x (~1920p)"
 
@@ -17915,12 +18229,20 @@ msgstr "sarı/mavi"
 #~ msgstr "5x Doğal (3200x2640)"
 
 #~ msgctxt "game_options"
+#~ msgid "60ms"
+#~ msgstr "60ms"
+
+#~ msgctxt "game_options"
 #~ msgid "6x Native (3840x3168) for 4K"
 #~ msgstr "6x Doğal (3840x3168) 4K"
 
 #~ msgctxt "game_options"
 #~ msgid "7x Native (4480x3696)"
 #~ msgstr "7x Doğal (4480x3696)"
+
+#~ msgctxt "game_options"
+#~ msgid "80ms"
+#~ msgstr "80ms"
 
 #~ msgctxt "game_options"
 #~ msgid "8x (~4320p / 8k)"
@@ -17951,6 +18273,10 @@ msgstr "sarı/mavi"
 #~ msgstr "İVMEÖLÇER"
 
 #~ msgctxt "game_options"
+#~ msgid "ADDITIONAL FRAMELIMIT"
+#~ msgstr "EK KARE ATLAMA LİMİTİ"
+
+#~ msgctxt "game_options"
 #~ msgid "ALTCOLOR"
 #~ msgstr "ALTCOLOR"
 
@@ -17959,8 +18285,20 @@ msgstr "sarı/mavi"
 #~ msgstr "ALTERNATİF SES"
 
 #~ msgctxt "game_options"
+#~ msgid "ANISOTROPIC FILTER"
+#~ msgstr "ANİZOTROPİK FİLTRE"
+
+#~ msgctxt "game_options"
+#~ msgid "AUDIO BUFFER DURATION"
+#~ msgstr "SES ARABELLEK SÜRESİ"
+
+#~ msgctxt "game_options"
 #~ msgid "AUTO HEIGHT"
 #~ msgstr "OTOMATİK YÜKSEKLİK"
+
+#~ msgctxt "game_options"
+#~ msgid "Accurate XFloat"
+#~ msgstr "Accurate XFloat"
 
 #~ msgctxt "game_options"
 #~ msgid "Add debug logging to help troubleshoot issues."
@@ -17996,6 +18334,12 @@ msgstr "sarı/mavi"
 #~ "işlenmesine izin verin."
 
 #~ msgctxt "game_options"
+#~ msgid "Allows Alt+Tab to RPCS3's menu. Useful for manual disc-swapping."
+#~ msgstr ""
+#~ "Alt+Tab RPCS3 menüsüne girmenize izin verir. El ile disk değiştirme için "
+#~ "kullanışlıdır."
+
+#~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "Alternatif Renkli Nokta Matris Ekranı (ek dosya gerektirir)."
 
@@ -18018,6 +18362,10 @@ msgstr "sarı/mavi"
 #~ msgstr "Herhangi"
 
 #~ msgctxt "game_options"
+#~ msgid "Approximate XFloat"
+#~ msgstr "Yaklaşık XFloat"
+
+#~ msgctxt "game_options"
 #~ msgid "Area Sampling"
 #~ msgstr "Alan Örneklemesi"
 
@@ -18030,6 +18378,10 @@ msgstr "sarı/mavi"
 #~ msgstr "Eş Zamansız Gölgelendirici Yorumlayıcı"
 
 #~ msgctxt "game_options"
+#~ msgid "Batocera sets first audio device (Default)"
+#~ msgstr "Batocera ilk ses cihazını ayarlar (Varsayılan)"
+
+#~ msgctxt "game_options"
 #~ msgid "Bicubic: B-Spine"
 #~ msgstr "Bicubic: B-Spine"
 
@@ -18040,6 +18392,13 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Bicubic: Mitchell-Netravali"
 #~ msgstr "Bikübik: Mitchell-Netravali"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Buffer fill level (in percentage) below which time stretching will start."
+#~ msgstr ""
+#~ "Altında zaman uzatmanın başlayacağı tampon doldurma düzeyi (yüzde "
+#~ "cinsinden)."
 
 #~ msgctxt "keys_files"
 #~ msgid "Button L"
@@ -18078,6 +18437,28 @@ msgstr "sarı/mavi"
 #~ msgstr "CRT gibi renk uyumu. Yeni 3D motoru gerektirir."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Can fix bugs in some games. Only relevant for dynamic or LLVM SPU decoder."
+#~ msgstr ""
+#~ "Bazı oyunlarda hataları düzeltebilir. Yalnızca dinamik veya LLVM SPU kod "
+#~ "çözücü için geçerlidir."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Can fix screen tearing on unorthodox displays (most LCDs don't need this)."
+#~ msgstr ""
+#~ "Alışılmışın dışındaki ekranlarda, ekran yırtılmasını düzeltebilir (çoğu "
+#~ "LCD ile buna ihtiyaç yoktur)."
+
+#~ msgctxt "game_options"
+#~ msgid "Can improve performance at the expense of graphics accuracy."
+#~ msgstr "Grafik doğruluğu pahasına performansı artırabilir."
+
+#~ msgctxt "game_options"
+#~ msgid "Can reduce crackle and stutter but increases audio latency."
+#~ msgstr "Çatırtı ve teklemeyi azaltabilir ancak ses gecikmesini artırır."
+
+#~ msgctxt "game_options"
 #~ msgid "Change the consoles country from the default of the United States."
 #~ msgstr ""
 #~ "Konsolun ülke ayarını varsayılan olan Amerika Birleşik Devletleri olarak "
@@ -18088,6 +18469,18 @@ msgstr "sarı/mavi"
 #~ msgstr ""
 #~ "Taklit edilmiş PowerPC yongasının hızını değiştir (bazı sorunları "
 #~ "giderir)."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Changes the sleep period accuracy. Some games need this set to improve "
+#~ "performance."
+#~ msgstr ""
+#~ "Uyku periyodu doğruluğunu değiştirir. Bazı oyunların performansı "
+#~ "iyileştirmek için bu ayara ihtiyacı vardır."
+
+#~ msgctxt "game_options"
+#~ msgid "Choose number of audio channels."
+#~ msgstr "Ses kanalı sayısını seçin."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18148,8 +18541,25 @@ msgstr "sarı/mavi"
 #~ msgstr "Tercih ettiğiniz en boy oranını seçin."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Compile shaders using background threads to avoid shader compilation "
+#~ "stutter. May cause graphical glitches."
+#~ msgstr ""
+#~ "Gölgelendirici derlemesinde takılmayı önlemek için gölgelendiricileri "
+#~ "arka plan iş parçacıklarını kullanarak derleyin. Grafiksel hatalara neden "
+#~ "olabilir."
+
+#~ msgctxt "game_options"
 #~ msgid "Configuring controllers in GZDoom can cause problems."
 #~ msgstr "GZDoom kontrolcüleri yapılandırmak sorunlara neden olabilir."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Controls precision of generated shaders. Low quality can improved "
+#~ "performance."
+#~ msgstr ""
+#~ "Oluşturulan gölgelendiricilerin hassasiyetini kontrol eder. Düşük kalite "
+#~ "performansı artırabilir."
 
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
@@ -18177,6 +18587,14 @@ msgstr "sarı/mavi"
 #~ msgstr "ARKA CAM IZGARA EKRANI"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Disables the vertex cache. Might resolve missing or flickering graphics "
+#~ "output but degrade performance."
+#~ msgstr ""
+#~ "Köşe önbelleğini devre dışı bırakır. Eksik veya titreyen grafik çıktısını "
+#~ "çözebilir ancak performansı düşürebilir."
+
+#~ msgctxt "game_options"
 #~ msgid "Display on screen information like savestate, config warning etc..."
 #~ msgstr ""
 #~ "Ekranda durum kaydı, yapılandırma uyarısı vb. gibi bilgileri göster..."
@@ -18188,6 +18606,25 @@ msgstr "sarı/mavi"
 #~ msgctxt "keys_files"
 #~ msgid "Disposition B"
 #~ msgstr "Mevki B"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Distorts the output to fill the display fully Overrides aspect ratio."
+#~ msgstr ""
+#~ "Ekranı tamamen dolduracak şekilde çıktıyı deforme eder En boy oranını "
+#~ "geçersiz kılar."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Duration of audio buffer in milliseconds. Higher numbers may cause audio "
+#~ "latency."
+#~ msgstr ""
+#~ "Milisaniye cinsinden ses arabelleğinin süresi. Daha yüksek sayılar ses "
+#~ "gecikmesine neden olabilir."
+
+#~ msgctxt "game_options"
+#~ msgid "ENABLE ASYNC SHADER COMPILATION"
+#~ msgstr "EŞ ZAMANSIZ GÖLGELENDİRİCİ DERLEMEYİ ETKİNLEŞTİR"
 
 #~ msgctxt "game_options"
 #~ msgid "ENABLE FULL-SCREEN ANTI-ALIASING"
@@ -18214,10 +18651,6 @@ msgstr "sarı/mavi"
 #~ msgstr "YAZILIMSAL İŞLEMEYİ ETKİNLEŞTİR"
 
 #~ msgctxt "game_options"
-#~ msgid "EVDEV (Default)"
-#~ msgstr "EVDEV (Varsayılan)"
-
-#~ msgctxt "game_options"
 #~ msgid "EXPERT SETTINGS"
 #~ msgstr "UZMAN AYARLARI"
 
@@ -18228,6 +18661,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Enable full-screen antialiasing in Direct3D."
 #~ msgstr "Direct3D'de tam ekran kenar yumuşatmayı aç."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable mouse input to simulate touchscreen."
+#~ msgstr "Dokunmatik ekranı simüle etmek için fare girişini etkinleştir."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18328,16 +18765,16 @@ msgstr "sarı/mavi"
 #~ msgstr "KUVVET YÖNETİMİ"
 
 #~ msgctxt "game_options"
-#~ msgid "FRAME LIMIT"
-#~ msgstr "KARE SINIRI"
-
-#~ msgctxt "game_options"
 #~ msgid "Fast Interpreter"
 #~ msgstr "Hızlı yorumlayıcı"
 
 #~ msgctxt "game_options"
 #~ msgid "Fill Screen"
 #~ msgstr "Ekranı Doldur"
+
+#~ msgctxt "game_options"
+#~ msgid "Final image filtering."
+#~ msgstr "Son görüntü filtreleme."
 
 #~ msgctxt "game_options"
 #~ msgid "Fit Screen"
@@ -18362,6 +18799,14 @@ msgstr "sarı/mavi"
 #~ "Bir oyun kolu ile sürüş oyunları oynamak için bazen %%100'den daha büyük "
 #~ "bir değer kullanmak iyi bir fikir olabilir, böylece direksiyonun kontrol "
 #~ "çubuğu üzerinde daha az hassas olması sağlanır."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Force 3D geometry to always render on the top screen. Useful for single-"
+#~ "screen devices/games."
+#~ msgstr ""
+#~ "3D geometriyi her zaman üst ekranda işlemeye zorla. Tek ekranlı cihazlar/"
+#~ "oyunlar için kullanışlıdır."
 
 #~ msgctxt "game_options"
 #~ msgid "Force Linear"
@@ -18412,10 +18857,30 @@ msgstr "sarı/mavi"
 #~ msgstr "Şapka Yukarı"
 
 #~ msgctxt "game_options"
+#~ msgid "Have Batocera set the first audio output device."
+#~ msgstr "Batocera'nın ilk ses çıkış cihazını ayarlamasını sağla."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Helps reduce CPU power consumption by throttling the CPU when not needed. "
+#~ "Useful for handhelds."
+#~ msgstr ""
+#~ "Gerekmediğinde CPU kısıtlayarak CPU güç tüketimini azaltmaya yardımcı "
+#~ "olur. El bilgisayarları için kullanışlıdır."
+
+#~ msgctxt "game_options"
 #~ msgid "Helps some games to launch when disabled. May affect performance."
 #~ msgstr ""
 #~ "Bazı oyunların devre dışı bırakıldığında başlatılmasına yardımcı olur. "
 #~ "Performansı etkileyebilir."
+
+#~ msgctxt "game_options"
+#~ msgid "Hermite (Default)"
+#~ msgstr "Hermite (Varsayılan)"
+
+#~ msgctxt "game_options"
+#~ msgid "High (Default)"
+#~ msgstr "Yüksek (Varsayılan)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18464,12 +18929,32 @@ msgstr "sarı/mavi"
 #~ msgstr "Joystick (Analog, 2 Tuş)"
 
 #~ msgctxt "game_options"
+#~ msgid "Keep Aspect Ration (Default)"
+#~ msgstr "En Boy Oranını Koru (Varsayılan)"
+
+#~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
 #~ msgstr "DOĞRUSAL FİLTRELEME"
 
 #~ msgctxt "game_options"
+#~ msgid "LLVM Recompiler"
+#~ msgstr "LLVM Yeniden Derleyici"
+
+#~ msgctxt "game_options"
+#~ msgid "LLVM is fastest, use the Interpreter settings if there are issues."
+#~ msgstr "LLVM en hızlıdır, sorun varsa Yorumlayıcı ayarlarını kullan."
+
+#~ msgctxt "game_options"
 #~ msgid "Legacy (single threaded)"
 #~ msgstr "Eski (tek iş parçacıklı)"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Limiting to 1 or 2 may fix audio stuttering on weaker CPUs in some games. "
+#~ "Leave on automatic if slowdown occurs."
+#~ msgstr ""
+#~ "1 veya 2 ile sınırlandırmak bazı oyunlarda daha zayıf işlemcilerde ses "
+#~ "takılmalarını düzeltebilir. Yavaşlama olursa otomatikte bırak."
 
 #~ msgctxt "game_options"
 #~ msgid "MODERN PEDAL CONTROLS"
@@ -18483,9 +18968,43 @@ msgstr "sarı/mavi"
 #~ "VSYNC karelerini saniye cinsinden el ile ayarlayın. En doğrusu, "
 #~ "monitörünüzün yenileme hızıyla eşleşmelidir."
 
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "May fix missing graphics and broken lighting at the cost of performance."
+#~ msgstr ""
+#~ "Performanstan ödün vererek eksik grafikleri ve bozuk aydınlatmayı "
+#~ "düzeltebilir."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "May provide performance gain on CPUs with low core/thread count at the "
+#~ "expense of possible broken timings."
+#~ msgstr ""
+#~ "Olası bozuk zamanlamalar pahasına düşük çekirdek/iş parçacığı sayısına "
+#~ "sahip CPU'larda performans artışı sağlayabilir."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Mega and Giga modes may improve performance. Use the Safe mode for "
+#~ "maximum compatibility."
+#~ msgstr ""
+#~ "Mega ve Giga modları performansı artırabilir. En yüksek uyumluluk için "
+#~ "Güvenli modu kullanın."
+
 #~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Mikrofon"
+
+#~ msgctxt "game_options"
+#~ msgid "Moderate"
+#~ msgstr "Denetleme"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Most games already have an internal framelimit. Minor performance cost."
+#~ msgstr ""
+#~ "Çoğu oyunun zaten dahili bir kare limiti vardır. Küçük performans "
+#~ "maliyeti."
 
 #~ msgctxt "keys_files"
 #~ msgid "Move Backward"
@@ -18498,6 +19017,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "keys_files"
 #~ msgid "Move Forward, Can be use to press W"
 #~ msgstr "İleri Git, W tuşuna basmak için kullanılabilir"
+
+#~ msgctxt "game_options"
+#~ msgid "NUMBER OF SHADER COMPILER THREADS"
+#~ msgstr "GÖLGELENDİRİCİ DERLEYİCİ İŞ PARÇACIĞI"
 
 #~ msgctxt "game_options"
 #~ msgid "Native (640x528)"
@@ -18528,13 +19051,41 @@ msgstr "sarı/mavi"
 #~ msgstr "ÇIKTI YENİDEN ÖRNEKLEMESİ"
 
 #~ msgctxt "game_options"
+#~ msgid "OUTPUT SCALING"
+#~ msgstr "ÇIKTI ÖLÇEKLENDİRMESİ"
+
+#~ msgctxt "game_options"
+#~ msgid "Off (faster, unstable)"
+#~ msgstr "Kapalı(hızlı, kararsız)"
+
+#~ msgctxt "game_options"
 #~ msgid "Off will help some games, others will run too fast."
 #~ msgstr ""
 #~ "Kapalı olması bazı oyunlara yardımcı olur, diğerleri çok hızlı çalışır."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Offloads some RSX operations to a secondary thread. Improves performance "
+#~ "in high-core processors."
+#~ msgstr ""
+#~ "Bazı RSX işlemlerini ikincil bir iş parçacığına aktarır. Yüksek "
+#~ "çekirdekli işlemcilerde performansı artırır."
+
+#~ msgctxt "game_options"
 #~ msgid "On screen 3 if available"
 #~ msgstr "Varsa 3. Ekranda"
+
+#~ msgctxt "game_options"
+#~ msgid "Only Async (skip draw) avoids freezing while compiling shaders."
+#~ msgstr ""
+#~ "Sadece Eş Zamansız (çizmeyi atla), gölgelendiricileri derlerken donmayı "
+#~ "önler."
+
+#~ msgctxt "game_options"
+#~ msgid "Only applicable when either Async Shader mode is set."
+#~ msgstr ""
+#~ "Sadece Eş Zamansız Gölgelendirici modlarından biri ayarlandığında "
+#~ "geçerlidir."
 
 #~ msgctxt "game_options"
 #~ msgid "Only applicable when using OpenGL."
@@ -18577,6 +19128,10 @@ msgstr "sarı/mavi"
 #~ msgstr "SUNUM MODU"
 
 #~ msgctxt "game_options"
+#~ msgid "PS3's internal ratio setting. Some games only support 16/9."
+#~ msgstr "PS3 dahili oran ayarı. Bazı oyunlar yalnızca 16/9 destekler."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Part of the host texture memory budget (in megabytes) that will be scaled "
 #~ "by the current drawing resolution scale."
@@ -18594,8 +19149,20 @@ msgstr "sarı/mavi"
 #~ "Wiki'ye başvurun."
 
 #~ msgctxt "game_options"
+#~ msgid "Precise (Slowest)(Default)"
+#~ msgstr "Hassas (En yavaş)(Varsayılan)"
+
+#~ msgctxt "game_options"
 #~ msgid "Precise Interpreter"
 #~ msgstr "Hassas Yorumlayıcı"
+
+#~ msgctxt "game_options"
+#~ msgid "Preloading is impossible from ES."
+#~ msgstr "ES üstünden ön yükleme yapılamaz."
+
+#~ msgctxt "game_options"
+#~ msgid "Pro Controller required for games that require shake motions."
+#~ msgstr "Sallama hareketi gerektiren oyunlar için Pro Controller gereklidir."
 
 #~ msgctxt "game_options"
 #~ msgid "QUERY OCCLUSION"
@@ -18637,12 +19204,24 @@ msgstr "sarı/mavi"
 
 #~ msgctxt "game_options"
 #~ msgid ""
+#~ "Reduces crackle and stutter further, but may cause a very noticeable "
+#~ "reduction in audio quality on slower CPUs."
+#~ msgstr ""
+#~ "Çatırtı ve teklemeyi daha da azaltır, ancak daha yavaş işlemcilerde ses "
+#~ "kalitesinde çok belirgin bir düşüşe neden olabilir."
+
+#~ msgctxt "game_options"
+#~ msgid ""
 #~ "Refresh state of memory pages to enable gpu written data. (Use for 'Team "
 #~ "Ninja' Games to fix missing character models)."
 #~ msgstr ""
 #~ "GPU yazılı verilerini etkinleştirmek için bellek sayfalarının durumunu "
 #~ "yenileyin. (Eksik karakter modellerini düzeltmek için 'Team Ninja' "
 #~ "Oyunlarında kullanın)."
+
+#~ msgctxt "game_options"
+#~ msgid "Relaxed XFloat"
+#~ msgstr "Rahat XFloat"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18669,6 +19248,18 @@ msgstr "sarı/mavi"
 #~ msgstr ""
 #~ "Belirli oyun seçeneklerini yapılandırmak için oyunu test modunda "
 #~ "çalıştırın."
+
+#~ msgctxt "game_options"
+#~ msgid "SHADER MODE"
+#~ msgstr "GÖLGELENDİRİCİ MODU"
+
+#~ msgctxt "game_options"
+#~ msgid "SHADER QUALITY"
+#~ msgstr "GÖLGELENDİRİCİ KALİTESİ"
+
+#~ msgctxt "game_options"
+#~ msgid "SPU XFloat Accuracy"
+#~ msgstr "SPU XFloat Doğruluğu"
 
 #~ msgctxt "game_options"
 #~ msgid "STEERING SENSITIVITY"
@@ -18743,6 +19334,10 @@ msgstr "sarı/mavi"
 #~ msgid "South Korea"
 #~ msgstr "Güney Kore"
 
+#~ msgctxt "game_options"
+#~ msgid "Stereo (Default)"
+#~ msgstr "Stereo (Varsayılan)"
+
 #~ msgctxt "keys_files"
 #~ msgid "Strafe Left"
 #~ msgstr "Sola Saldırı"
@@ -18750,6 +19345,22 @@ msgstr "sarı/mavi"
 #~ msgctxt "keys_files"
 #~ msgid "Strafe Right"
 #~ msgstr "Sağa Saldırı"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Straict API specification. Can resolve rare cases of missing graphics and "
+#~ "flickering."
+#~ msgstr ""
+#~ "Kesin API spesifikasyonu. Nadir görülen eksik grafik ve titreme "
+#~ "durumlarını çözebilir."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Stream texture to GPU in parrallel. Can improve performance on more "
+#~ "powerful GPU's that have spare headroom."
+#~ msgstr ""
+#~ "Dokuyu paralel olarak GPU üstüne aktarın. Daha fazla boş alana sahip daha "
+#~ "güçlü GPU üstünde performansı artırabilir."
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
@@ -18778,6 +19389,11 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "TRUE COLOUR RENDERING"
 #~ msgstr "GERÇEK RENK İLE İŞLE"
+
+#~ msgctxt "game_options"
+#~ msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
+#~ msgstr ""
+#~ "Yeni 3DS'de daha hızlı bir işlemci, ZL/ZR tuşları ve C çubuğu bulunur."
 
 #~ msgctxt "game_options"
 #~ msgid "The image will be softer which could help with aliasing."
@@ -18868,6 +19484,14 @@ msgstr "sarı/mavi"
 
 #~ msgctxt "game_options"
 #~ msgid ""
+#~ "Use 16 bit audio samples for audio drivers that don't support 32bit. Only "
+#~ "use if you get no audio."
+#~ msgstr ""
+#~ "32 bit desteklemeyen ses sürücüleri için 16 bit ses örnekleri kullanın. "
+#~ "Yalnızca ses alamıyorsanız kullanın."
+
+#~ msgctxt "game_options"
+#~ msgid ""
 #~ "Use L2/R2 for Brake/Accel and L1/R1 or R-stick Up/Down for Shift Up/Down."
 #~ msgstr ""
 #~ "Fren/Hızlanma için L2/R2, Vites Yükseltme/Küçültme için L1/R1 veya R "
@@ -18911,6 +19535,14 @@ msgstr "sarı/mavi"
 #~ msgstr ""
 #~ "Arka cam etkinleştirildiğinde, puanların bulunduğu küçük ek kısmı "
 #~ "görüntüleyin."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Writes depth buffer values to VM memory. Some games need this to fix "
+#~ "broken graphics."
+#~ msgstr ""
+#~ "Derinlik arabellek değerlerini VM belleğine yazar. Bazı oyunların bozuk "
+#~ "grafikleri düzeltmek için buna ihtiyacı vardır."
 
 #~ msgctxt "game_options"
 #~ msgid "X-INPUT"

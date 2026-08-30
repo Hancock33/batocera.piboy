@@ -29,7 +29,7 @@ index caaf9c641..6acb1bc59 100644
  
      # Views
 diff --git a/es-app/src/FileData.cpp b/es-app/src/FileData.cpp
-index f9842f6fe..5955401f5 100644
+index d9144b95f..1f46e601c 100644
 --- a/es-app/src/FileData.cpp
 +++ b/es-app/src/FileData.cpp
 @@ -37,6 +37,99 @@
@@ -155,7 +155,7 @@ index f9842f6fe..5955401f5 100644
  	{ "fullName",			[](FileData* file) { return GameNameFormatter(file->getSystem()).getDisplayName(file); } },
  	{ "fullNameNoFavorite",	[](FileData* file) { return GameNameFormatter(file->getSystem()).getDisplayName(file, false, false); } },
 diff --git a/es-app/src/MetaData.cpp b/es-app/src/MetaData.cpp
-index 8c5de352a..36e7a3a27 100644
+index 67c06e654..1b0cdca71 100644
 --- a/es-app/src/MetaData.cpp
 +++ b/es-app/src/MetaData.cpp
 @@ -22,7 +22,12 @@ static std::map<std::string, int> KnowScrapersIds =
@@ -332,7 +332,7 @@ index 280412b66..89640e4f3 100644
  
  		mResultThumbnail->setImage("");
 diff --git a/es-app/src/guis/GuiScraperStart.cpp b/es-app/src/guis/GuiScraperStart.cpp
-index 1a5d63f04..10722d834 100644
+index 2979c1d3a..66c13d48e 100644
 --- a/es-app/src/guis/GuiScraperStart.cpp
 +++ b/es-app/src/guis/GuiScraperStart.cpp
 @@ -81,8 +81,9 @@ void GuiScraperStart::loadScrapPage()
@@ -2591,7 +2591,7 @@ index 000000000..edc52075d
 +
 +#endif // ES_APP_SCRAPERS_STEAM_GRID_DB_SCRAPER_H
 diff --git a/es-app/src/views/gamelist/DetailedContainer.cpp b/es-app/src/views/gamelist/DetailedContainer.cpp
-index 93ca387b9..035048011 100644
+index c7d8ce5ff..0b8086d0d 100644
 --- a/es-app/src/views/gamelist/DetailedContainer.cpp
 +++ b/es-app/src/views/gamelist/DetailedContainer.cpp
 @@ -19,6 +19,79 @@

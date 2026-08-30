@@ -7,6 +7,7 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
 #include <mutex>
@@ -14,6 +15,20 @@
 #include <algorithm>
 #include <regex>
 #include <cmath>
+
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
+
+struct AnimFrame {
+    SDL_Texture* texture;
+    int delayMS;
+};
+
+struct Anim {
+  std::vector<AnimFrame> frames;
+  int currentFrame;
+  int lastUpdateTick;
+};
 
 enum DisplayMode { MODE_SYSTEM, MODE_GAME };
 
@@ -140,7 +155,7 @@ std::string getJsonValue(const std::string& json, const std::string& key) {
 
 std::string resolveAsset(const std::string& system, const std::string& path, const std::string& prop, const std::string& es_val) {
     std::string shortname = gameShortName(path);
-    std::vector<std::string> extensions = {"png", "jpg", "gif"};
+    std::vector<std::string> extensions = {"gif", "png", "jpg"};
     for (const auto& ext : extensions) {
         std::string local_path = "/userdata/system/backglass/systems/" + system + "/games/" + prop + "/" + shortname + "." + ext;
         if (FILE* f = fopen(local_path.c_str(), "r")) {
@@ -179,7 +194,7 @@ std::string resolveAsset(const std::string& system, const std::string& path, con
 }
 
 std::string resolveSystemLogo(const std::string& system, const std::string& es_val) {
-    std::vector<std::string> extensions = {"png", "jpg", "gif"};
+    std::vector<std::string> extensions = {"gif", "png", "jpg"};
     for (const auto& ext : extensions) {
         std::string local_path = "/userdata/system/backglass/systems/" + system + "/logo." + ext;
         if (FILE* f = fopen(local_path.c_str(), "r")) {
@@ -384,6 +399,58 @@ void serverThreadFunc(int port) {
 
 // NATIVE GRAPHICS HELPERS
 
+void LoadAnimatedGIF(std::vector<AnimFrame>& frames, SDL_Renderer* renderer, const std::string& path) {
+    std::ifstream file(path, std::ios::binary | std::ios::ate);
+    if (!file.is_open()) return;
+
+    std::streamsize size = file.tellg();
+    file.seekg(0, std::ios::beg);
+
+    std::vector<char> buffer(size);
+    if (!file.read(buffer.data(), size)) return;
+
+    int x, y, comp;
+    int* delays = nullptr;
+    int num_frames = 0;
+
+    unsigned char* data = stbi_load_gif_from_memory(
+        reinterpret_cast<unsigned char*>(buffer.data()),
+        static_cast<int>(size),
+        &delays,
+        &x, &y, &num_frames, &comp, 4 // 4 channels (RGBA)
+    );
+
+    if (!data) return;
+
+    size_t frameSize = x * y * 4;
+    for (int i = 0; i < num_frames; ++i) {
+        unsigned char* framePixelData = data + (i * frameSize);
+
+        SDL_Surface* surface = SDL_CreateRGBSurfaceWithFormatFrom(
+            framePixelData,
+            x, y,
+            32,
+            x * 4,
+            SDL_PIXELFORMAT_ABGR8888
+        );
+
+        if (surface) {
+            SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+            SDL_FreeSurface(surface);
+
+            if (texture) {
+                int delay = (delays && delays[i] > 0) ? delays[i] : 100; // 100ms is not specified
+                frames.push_back({texture, delay});
+            }
+        }
+    }
+
+    STBI_FREE(data);
+    if (delays) {
+        STBI_FREE(delays);
+    }
+}
+
 void renderImage(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect boundary, const std::string& objectFit, float innerScale = 1.0f) {
     if (!texture) return;
 
@@ -422,7 +489,43 @@ void renderImage(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect boundary
     SDL_RenderCopy(renderer, texture, NULL, &dstrect);
 }
 
-SDL_Texture* createTextTexture(SDL_Renderer* renderer, TTF_Font* font, const std::string& text, SDL_Color color, int wrapWidth) {
+static std::vector<Uint32> utf8ToCodepoints(const std::string& s) {
+    std::vector<Uint32> out;
+    size_t i = 0;
+    while (i < s.size()) {
+        unsigned char c = (unsigned char)s[i];
+        Uint32 cp = 0;
+        int extra = 0;
+        if ((c & 0x80) == 0x00)      { cp = c;        extra = 0; }
+        else if ((c & 0xE0) == 0xC0) { cp = c & 0x1F; extra = 1; }
+        else if ((c & 0xF0) == 0xE0) { cp = c & 0x0F; extra = 2; }
+        else if ((c & 0xF8) == 0xF0) { cp = c & 0x07; extra = 3; }
+        else { i++; continue; }
+        if (i + extra >= s.size()) break;
+        bool valid = true;
+        for (int k = 1; k <= extra; k++) {
+            unsigned char cc = (unsigned char)s[i + k];
+            if ((cc & 0xC0) != 0x80) { valid = false; break; }
+            cp = (cp << 6) | (cc & 0x3F);
+        }
+        if (valid) out.push_back(cp);
+        i += extra + 1;
+    }
+    return out;
+}
+
+static TTF_Font* pickFontForText(TTF_Font* primary, TTF_Font* fallback, const std::string& text) {
+    if (!fallback) return primary;
+    if (!primary) return fallback;
+    for (Uint32 cp : utf8ToCodepoints(text)) {
+        if (cp < 0x20) continue;
+        if (!TTF_GlyphIsProvided32(primary, cp)) return fallback;
+    }
+    return primary;
+}
+
+SDL_Texture* createTextTexture(SDL_Renderer* renderer, TTF_Font* font, const std::string& text, SDL_Color color, int wrapWidth, TTF_Font* fallbackFont = nullptr) {
+    font = pickFontForText(font, fallbackFont, text);
     if (!font || text.empty()) return nullptr;
     SDL_Surface* surface = TTF_RenderUTF8_Blended_Wrapped(font, text.c_str(), color, wrapWidth);
     if (!surface) return nullptr;
@@ -506,6 +609,63 @@ SDL_Texture* IMG_LoadTexture_at_resolution(SDL_Renderer* renderer, const std::st
   }
 }
 
+void IMG_LoadAnimTexture_at_resolution(std::vector<AnimFrame> & anim, SDL_Renderer* renderer, const std::string& path, int width, int height) {
+  SDL_RWops* rwops = SDL_RWFromFile(path.c_str(), "rb");
+  if(rwops) {
+    if(IMG_isSVG(rwops)) {
+      SDL_Texture* tex = NULL;
+      SDL_Surface* surface = IMG_LoadSizedSVG_RW(rwops, width, height);
+      if (surface) {
+	tex = SDL_CreateTextureFromSurface(renderer, surface);
+	if(tex) {
+	  AnimFrame af;
+	  af.texture = tex;
+	  af.delayMS = 0;
+	  anim.push_back(af);
+	}
+	SDL_FreeSurface(surface);
+      }
+      SDL_RWclose(rwops);
+    } else if(IMG_isGIF(rwops)) {
+      LoadAnimatedGIF(anim, renderer, path);
+    } else {
+      SDL_RWclose(rwops);
+
+      SDL_Texture* tex = NULL;
+      tex = IMG_LoadTexture(renderer, path.c_str());
+      if(tex) {
+	AnimFrame af;
+	af.texture = tex;
+	af.delayMS = 0;
+	anim.push_back(af);
+      }
+    }
+  }
+}
+
+void free_AnimFrames(Anim& anim) {
+  for(const auto& frame : anim.frames) {
+    SDL_DestroyTexture(frame.texture);
+  }
+  anim.frames.clear();
+}
+
+void initAnim(Anim& anim, Uint32 ticks) {
+  anim.currentFrame = 0;
+  anim.lastUpdateTick = ticks;
+}
+
+void updateAnim(Anim& anim, Uint32 ticks) {
+  if(anim.frames[anim.currentFrame].delayMS <= 0) return; // can't forward
+  if(anim.frames.size() == 1)                     return; // can't forward
+
+  while(anim.lastUpdateTick + anim.frames[anim.currentFrame].delayMS < ticks) {
+    anim.lastUpdateTick += anim.frames[anim.currentFrame].delayMS;
+    anim.currentFrame++;
+    if(anim.currentFrame >= anim.frames.size()) anim.currentFrame = 0; // reset to the beginning
+  }
+}
+
 int main(int argc, char* argv[]) {
     std::string target_display_name = "";
     std::string theme_path = "";
@@ -517,7 +677,7 @@ int main(int argc, char* argv[]) {
 
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];
-        if (arg == "-x" && i + 1 < argc) {
+	if (arg == "-x" && i + 1 < argc) {
 	  win_x = atoi(argv[++i]);
 	} else if (arg == "-y" && i + 1 < argc) {
 	  win_y = atoi(argv[++i]);
@@ -587,8 +747,13 @@ int main(int argc, char* argv[]) {
         }
     }
 
+#if HAVE_XORG == 1
     SDL_SetHint(SDL_HINT_X11_WINDOW_TYPE, "_NET_WM_WINDOW_TYPE_DESKTOP"); // put the windows as much possible in the background
     SDL_Window* window = SDL_CreateWindow("backglass", win_x, win_y, win_width, win_height, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS);
+# else
+    // no size to make full screen according to the screen set
+    SDL_Window* window = SDL_CreateWindow("backglass", 0, 0, 0, 0, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS | SDL_WINDOW_FULLSCREEN_DESKTOP);
+#endif
     if (!window) return 1;
 
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
@@ -604,6 +769,15 @@ int main(int argc, char* argv[]) {
     }
     if (!font_path_desc.empty()) {
         font_desc = TTF_OpenFont(font_path_desc.c_str(), desc_font_size);
+    }
+
+    const char* FALLBACK_FONT_PATH = "/usr/share/fonts/truetype/noto/NotoSansKR-VF.ttf";
+    TTF_Font* font_header_fallback = nullptr;
+    TTF_Font* font_desc_fallback = nullptr;
+    if (FILE* f = fopen(FALLBACK_FONT_PATH, "r")) {
+        fclose(f);
+        font_header_fallback = TTF_OpenFont(FALLBACK_FONT_PATH, header_font_size);
+        font_desc_fallback = TTF_OpenFont(FALLBACK_FONT_PATH, desc_font_size);
     }
 
     restoreActiveState();
@@ -624,11 +798,11 @@ int main(int argc, char* argv[]) {
     std::string game_image_path = "";
     std::string game_marquee_path = "";
 
-    SDL_Texture* tex_sys_logo = nullptr;
-    SDL_Texture* tex_game_thumbnail = nullptr;
-    SDL_Texture* tex_game_fanart = nullptr;
-    SDL_Texture* tex_game_image = nullptr;
-    SDL_Texture* tex_game_marquee = nullptr;
+    Anim tex_sys_logo;
+    Anim tex_game_thumbnail;
+    Anim tex_game_fanart;
+    Anim tex_game_image;
+    Anim tex_game_marquee;
 
     SDL_Texture* tex_sys_fullname = nullptr;
     SDL_Texture* tex_game_name = nullptr;
@@ -666,11 +840,11 @@ int main(int argc, char* argv[]) {
             // Re-sync delta timer dynamically on game switch
             start_time = SDL_GetTicks();
 
-            if (tex_sys_logo) { SDL_DestroyTexture(tex_sys_logo); tex_sys_logo = nullptr; }
-            if (tex_game_thumbnail) { SDL_DestroyTexture(tex_game_thumbnail); tex_game_thumbnail = nullptr; }
-            if (tex_game_fanart) { SDL_DestroyTexture(tex_game_fanart); tex_game_fanart = nullptr; }
-            if (tex_game_image) { SDL_DestroyTexture(tex_game_image); tex_game_image = nullptr; }
-            if (tex_game_marquee) { SDL_DestroyTexture(tex_game_marquee); tex_game_marquee = nullptr; }
+            free_AnimFrames(tex_sys_logo);
+            free_AnimFrames(tex_game_thumbnail);
+            free_AnimFrames(tex_game_fanart);
+            free_AnimFrames(tex_game_image);
+	    free_AnimFrames(tex_game_marquee);
             if (tex_sys_fullname) { SDL_DestroyTexture(tex_sys_fullname); tex_sys_fullname = nullptr; }
             if (tex_game_name) { SDL_DestroyTexture(tex_game_name); tex_game_name = nullptr; }
             if (tex_game_desc) { SDL_DestroyTexture(tex_game_desc); tex_game_desc = nullptr; }
@@ -679,17 +853,32 @@ int main(int argc, char* argv[]) {
             SDL_GetWindowSize(window, &winW, &winH);
             SDL_Color whiteColor = {255, 255, 255, 255};
 
-            if (!sys_logo_path.empty()) tex_sys_logo = IMG_LoadTexture_at_resolution(renderer, sys_logo_path, winW, winH);
-            if (!game_thumbnail_path.empty()) tex_game_thumbnail = IMG_LoadTexture_at_resolution(renderer, game_thumbnail_path, winW, winH);
-            if (!game_fanart_path.empty()) tex_game_fanart = IMG_LoadTexture_at_resolution(renderer, game_fanart_path, winW, winH);
-            if (!game_image_path.empty()) tex_game_image = IMG_LoadTexture_at_resolution(renderer, game_image_path, winW, winH);
-            if (!game_marquee_path.empty()) tex_game_marquee = IMG_LoadTexture_at_resolution(renderer, game_marquee_path, winW, winH);
+            if (!sys_logo_path.empty()) {
+	      IMG_LoadAnimTexture_at_resolution(tex_sys_logo.frames, renderer, sys_logo_path, winW, winH);
+	      initAnim(tex_sys_logo, SDL_GetTicks());
+	    }
+            if (!game_thumbnail_path.empty()) {
+	      IMG_LoadAnimTexture_at_resolution(tex_game_thumbnail.frames, renderer, game_thumbnail_path, winW, winH);
+	      initAnim(tex_game_thumbnail, SDL_GetTicks());
+	    }
+            if (!game_fanart_path.empty()) {
+	      IMG_LoadAnimTexture_at_resolution(tex_game_fanart.frames, renderer, game_fanart_path, winW, winH);
+	      initAnim(tex_game_fanart, SDL_GetTicks());
+	    }
+            if (!game_image_path.empty()) {
+	      IMG_LoadAnimTexture_at_resolution(tex_game_image.frames, renderer, game_image_path, winW, winH);
+	      initAnim(tex_game_image, SDL_GetTicks());
+	    }
+            if (!game_marquee_path.empty()) {
+	      IMG_LoadAnimTexture_at_resolution(tex_game_marquee.frames, renderer, game_marquee_path, winW, winH);
+	      initAnim(tex_game_marquee, SDL_GetTicks());
+	    }
 
-            if (!sys_fullname.empty()) tex_sys_fullname = createTextTexture(renderer, font_header, sys_fullname, whiteColor, (int)(winW * 0.9f));
-            if (!game_name.empty()) tex_game_name = createTextTexture(renderer, font_header, game_name, whiteColor, (int)(winW * 0.9f));
+            if (!sys_fullname.empty()) tex_sys_fullname = createTextTexture(renderer, font_header, sys_fullname, whiteColor, (int)(winW * 0.9f), font_header_fallback);
+            if (!game_name.empty()) tex_game_name = createTextTexture(renderer, font_header, game_name, whiteColor, (int)(winW * 0.9f), font_header_fallback);
             
             int desc_wrap_width = (winW >= winH) ? (int)(winW * 0.4f * 0.90f) : (int)(winW * 0.80f);
-            if (!game_desc.empty()) tex_game_desc = createTextTexture(renderer, font_desc, game_desc, whiteColor, desc_wrap_width);
+            if (!game_desc.empty()) tex_game_desc = createTextTexture(renderer, font_desc, game_desc, whiteColor, desc_wrap_width, font_desc_fallback);
         }
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
@@ -697,14 +886,16 @@ int main(int argc, char* argv[]) {
 
         int winW, winH;
         SDL_GetWindowSize(window, &winW, &winH);
-        
+
+	Uint64 ticks = SDL_GetTicks();
         // Calculate the absolute elapsed seconds cleanly using the GPU timer offset
-        float elapsed_seconds = (float)(SDL_GetTicks() - start_time) / 1000.0f;
+        float elapsed_seconds = (float)(ticks - start_time) / 1000.0f;
 
         if (current_mode == MODE_SYSTEM) {
-            if (tex_sys_logo) {
+            if (!tex_sys_logo.frames.empty()) {
                 SDL_Rect boundary = {0, 0, winW, winH};
-                renderImage(renderer, tex_sys_logo, boundary, "contain", 0.95f);
+		updateAnim(tex_sys_logo, ticks);
+                renderImage(renderer, tex_sys_logo.frames[tex_sys_logo.currentFrame].texture, boundary, "contain", 0.95f);
             } else if (tex_sys_fullname) {
                 SDL_Rect boundary = {0, 0, winW, winH};
                 renderHeaderText(renderer, tex_sys_fullname, boundary);
@@ -712,36 +903,40 @@ int main(int argc, char* argv[]) {
         } 
         else {
             if (g_current_theme == "backglass-boxart") {
-                if (tex_game_thumbnail) {
+                if (!tex_game_thumbnail.frames.empty()) {
                     SDL_Rect boundary = {0, 0, winW, winH};
-                    renderImage(renderer, tex_game_thumbnail, boundary, "contain");
+		    updateAnim(tex_game_thumbnail, ticks);
+                    renderImage(renderer, tex_game_thumbnail.frames[tex_game_thumbnail.currentFrame].texture, boundary, "contain");
                 } else if (tex_game_name) {
                     SDL_Rect boundary = {0, 0, winW, (int)(winH * 0.25f)};
                     renderHeaderText(renderer, tex_game_name, boundary);
                 }
             } 
             else if (g_current_theme == "backglass-fanart") {
-                if (tex_game_fanart) {
+                if (!tex_game_fanart.frames.empty()) {
                     SDL_Rect boundary = {0, 0, winW, winH};
-                    renderImage(renderer, tex_game_fanart, boundary, "fill");
+		    updateAnim(tex_game_fanart, ticks);
+                    renderImage(renderer, tex_game_fanart.frames[tex_game_fanart.currentFrame].texture, boundary, "fill");
                 } else if (tex_game_name) {
                     SDL_Rect boundary = {0, 0, winW, (int)(winH * 0.25f)};
                     renderHeaderText(renderer, tex_game_name, boundary);
                 }
             } 
             else if (g_current_theme == "backglass-image") {
-                if (tex_game_image) {
+                if (!tex_game_image.frames.empty()) {
                     SDL_Rect boundary = {0, 0, winW, winH};
-                    renderImage(renderer, tex_game_image, boundary, "contain");
+		    updateAnim(tex_game_image, ticks);
+                    renderImage(renderer, tex_game_image.frames[tex_game_image.currentFrame].texture, boundary, "contain");
                 } else if (tex_game_name) {
                     SDL_Rect boundary = {0, 0, winW, (int)(winH * 0.25f)};
                     renderHeaderText(renderer, tex_game_name, boundary);
                 }
             } 
             else if (g_current_theme == "backglass-marquee") {
-                if (tex_game_marquee) {
+	      if (!tex_game_marquee.frames.empty()) {
                     SDL_Rect boundary = {0, 0, winW, winH};
-                    renderImage(renderer, tex_game_marquee, boundary, "contain");
+		    updateAnim(tex_game_marquee, ticks);
+                    renderImage(renderer, tex_game_marquee.frames[tex_game_marquee.currentFrame].texture, boundary, "contain");
                 } else if (tex_game_name) {
                     SDL_Rect boundary = {0, 0, winW, (int)(winH * 0.25f)};
                     renderHeaderText(renderer, tex_game_name, boundary);
@@ -749,16 +944,18 @@ int main(int argc, char* argv[]) {
             } 
             else {
                 SDL_Rect topRect = {0, 0, winW, (int)(winH * 0.25f)};
-                if (tex_game_marquee) {
-                    renderImage(renderer, tex_game_marquee, topRect, "contain");
+                if (!tex_game_marquee.frames.empty()) {
+		  updateAnim(tex_game_marquee, ticks);
+		  renderImage(renderer, tex_game_marquee.frames[tex_game_marquee.currentFrame].texture, topRect, "contain");
                 } else if (tex_game_name) {
                     renderHeaderText(renderer, tex_game_name, topRect);
                 }
 
                 if (winW >= winH) {
                     SDL_Rect imgRect = {0, (int)(winH * 0.25f), (int)(winW * 0.6f), (int)(winH * 0.75f)};
-                    if (tex_game_image) {
-                        renderImage(renderer, tex_game_image, imgRect, "contain", 0.95f);
+                    if (!tex_game_image.frames.empty()) {
+		      updateAnim(tex_game_image, ticks);
+                        renderImage(renderer, tex_game_image.frames[tex_game_image.currentFrame].texture, imgRect, "contain", 0.95f);
                     }
 
                     if (tex_game_desc) {
@@ -775,8 +972,9 @@ int main(int argc, char* argv[]) {
                 } 
                 else {
                     SDL_Rect imgRect = {0, (int)(winH * 0.25f), winW, (int)(winH * 0.55f)};
-                    if (tex_game_image) {
-                        renderImage(renderer, tex_game_image, imgRect, "contain", 0.95f);
+                    if (!tex_game_image.frames.empty()) {
+		        updateAnim(tex_game_image, ticks);
+                        renderImage(renderer, tex_game_image.frames[tex_game_image.currentFrame].texture, imgRect, "contain", 0.95f);
                     }
 
                     if (tex_game_desc) {
@@ -798,11 +996,11 @@ int main(int argc, char* argv[]) {
         SDL_Delay(16);
     }
 
-    if (tex_sys_logo) SDL_DestroyTexture(tex_sys_logo);
-    if (tex_game_thumbnail) SDL_DestroyTexture(tex_game_thumbnail);
-    if (tex_game_fanart) SDL_DestroyTexture(tex_game_fanart);
-    if (tex_game_image) SDL_DestroyTexture(tex_game_image);
-    if (tex_game_marquee) SDL_DestroyTexture(tex_game_marquee);
+    free_AnimFrames(tex_sys_logo);
+    free_AnimFrames(tex_game_thumbnail);
+    free_AnimFrames(tex_game_fanart);
+    free_AnimFrames(tex_game_image);
+    free_AnimFrames(tex_game_marquee);
     if (tex_sys_fullname) SDL_DestroyTexture(tex_sys_fullname);
     if (tex_game_name) SDL_DestroyTexture(tex_game_name);
     if (tex_game_desc) SDL_DestroyTexture(tex_game_desc);

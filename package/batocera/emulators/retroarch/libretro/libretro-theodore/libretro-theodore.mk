@@ -3,9 +3,11 @@
 # libretro-theodore
 #
 ################################################################################
-# Version: Commits on Aug 11, 2026
-LIBRETRO_THEODORE_VERSION = d0dacb41af5016ef47b1e0c759ac7f76990e11d1
-LIBRETRO_THEODORE_SITE = $(call github,Zlika,theodore,$(LIBRETRO_THEODORE_VERSION))
+# Version: Commits on Aug 17, 2026
+LIBRETRO_THEODORE_VERSION = 4d469ce0f71ee046ceb78cdbf8e9f18364aaa918
+LIBRETRO_THEODORE_SITE = https://github.com/Zlika/theodore.git
+LIBRETRO_THEODORE_SITE_METHOD = git
+LIBRETRO_THEODORE_GIT_SUBMODULES = YES
 LIBRETRO_THEODORE_LICENSE = GPLv3
 LIBRETRO_THEODORE_DEPENDENCIES += retroarch
 LIBRETRO_THEODORE_EMULATOR_INFO = theodore.libretro.core.yml

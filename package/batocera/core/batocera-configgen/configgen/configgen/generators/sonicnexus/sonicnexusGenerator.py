@@ -25,20 +25,7 @@ class SonicNexusGenerator(Generator):
         source_file = Path('/usr/bin/sonicnexus')
         rom_directory = Path('/userdata/roms/ports/sonicnexus')
         destination_file = Path(str(rom_directory) + '/sonicnexus')
-
-        if destination_file.exists():
-            os.remove(destination_file)
-            shutil.copy(source_file, destination_file)
-        else:
-            shutil.copy(source_file, destination_file)
-
-        ## Configuration
-
-        # VSync
-        if system.isOptSet('snexus_vsync'):
-            selected_vsync = system.config['snexus_vsync']
-        else:
-            selected_vsync = 'y'
+        shutil.copyfile(source_file, destination_file)
 
         write_sdl_controller_db(playersControllers, rom_directory / "gamecontrollerdb.txt")
 

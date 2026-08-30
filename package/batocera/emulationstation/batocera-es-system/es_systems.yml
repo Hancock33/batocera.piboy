@@ -3211,7 +3211,7 @@ tg-cd:
   manufacturer:         Nintendo
   release:              2011
   hardware:             portable
-  extensions:           [3ds, app, axf, cci, cia, cxi, elf, squashfs, zcci, zcia, zcxi]
+  extensions:           [3ds, app, axf, cci, cia, cxi, elf, zcci, zcia, zcxi]
   emulators:
     azahar:
       azahar:           { requireAnyOf: [BR2_PACKAGE_AZAHAR]            }
@@ -5734,8 +5734,8 @@ lindbergh:
   extensions:           [game]
   platform:             arcade
   emulators:
-    lindbergh-loader:
-      lindbergh-loader: { requireAnyOf: [BR2_PACKAGE_LINDBERGH_LOADER] }
+    linuxloader:
+      linuxloader:      { requireAnyOf: [BR2_PACKAGE_LINUXLOADER] }
 
   comment_en:           |
                         Sega Lindbergh requires good knowledge of rom dumps.

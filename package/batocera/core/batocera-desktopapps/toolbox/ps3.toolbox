@@ -54,9 +54,9 @@ USER_AGENT = (
 )
 
 
-# ──────────────────────────────────────────────────────────────────
-# AES backend (target uses pycryptodomex → Cryptodome; dev may have Crypto)
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
+# AES backend (target uses pycryptodomex > Cryptodome; dev may have Crypto)
+# ------------------------------------------------------------------
 
 def _import_aes():
     try:
@@ -67,16 +67,16 @@ def _import_aes():
         return AES
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # PS3 PKG extractor (ported from rpcs3/Crypto/unpkg.cpp)
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 class PS3PKGExtractor:
     """Pure-Python PS3 PKG extractor.
 
     Cipher selection matches rpcs3/Crypto/unpkg.cpp decrypt():
-      pkg_type == PKG_RELEASE_TYPE_DEBUG   (0x0000) → SHA1 stream cipher
-      pkg_type == PKG_RELEASE_TYPE_RELEASE (0x8000) → AES-128-CTR
+      pkg_type == PKG_RELEASE_TYPE_DEBUG   (0x0000) > SHA1 stream cipher
+      pkg_type == PKG_RELEASE_TYPE_RELEASE (0x8000) > AES-128-CTR
     Keys from rpcs3/Crypto/key_vault.h; layouts from rpcs3/Crypto/unpkg.h.
     """
 
@@ -109,7 +109,7 @@ class PS3PKGExtractor:
         self._parse_header()
         self._parse_metadata()
 
-    # ── Header parsing ──────────────────────────────────────────────
+    # -- Header parsing ----------------------------------------------
 
     def _parse_header(self):
         with open(self.pkg_path, "rb") as f:
@@ -151,7 +151,7 @@ class PS3PKGExtractor:
                 elif pid == 0xA and psize > 8:
                     self.install_dir = data[8:].rstrip(b"\x00").decode("utf-8", errors="replace")
 
-    # ── Debug cipher ─────────────────────────────────────────────────
+    # -- Debug cipher -------------------------------------------------
 
     def _decrypt_debug(self, rel_off, size):
         if size == 0:
@@ -179,7 +179,7 @@ class PS3PKGExtractor:
 
         return bytes(buf[lead : lead + size])
 
-    # ── Retail AES-CTR cipher ─────────────────────────────────────────
+    # -- Retail AES-CTR cipher -----------------------------------------
 
     def _decrypt_aes(self, rel_off, size):
         if size == 0:
@@ -213,7 +213,7 @@ class PS3PKGExtractor:
         finally:
             self._dec_key = saved
 
-    # ── Entry-table parsing ──────────────────────────────────────────
+    # -- Entry-table parsing ------------------------------------------
 
     def _entry_table_key(self):
         if self.pkg_platform == self.PKG_PLATFORM_PSP:
@@ -260,7 +260,7 @@ class PS3PKGExtractor:
             ))
         return entries
 
-    # ── Key resolution (retail only) ─────────────────────────────────
+    # -- Key resolution (retail only) ---------------------------------
 
     def _resolve_retail_key(self):
         if self.pkg_platform == self.PKG_PLATFORM_PSP:
@@ -279,7 +279,7 @@ class PS3PKGExtractor:
             "PKG decryption failed with both PKG_AES_KEY and PKG_AES_KEY_IDU."
         )
 
-    # ── Public extraction API ────────────────────────────────────────
+    # -- Public extraction API ----------------------------------------
 
     def extract(self, output_dir):
         os.makedirs(output_dir, exist_ok=True)
@@ -367,9 +367,9 @@ class PS3PKGExtractor:
         return None
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # PARAM.SFO parser
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 # data_fmt values from the PS3 SFO format
 SFO_FMT_INT32 = 0x0404
@@ -409,12 +409,12 @@ def parse_sfo(data):
     return result
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # Content-ID / title-ID helpers
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 # region inferred from the 3rd letter of the game ID
-# (NP[U]B…=US, NP[E]B…=EU, NP[J]B…=JP, BL[U]S…=US, BL[E]S…=EU, …)
+# (NP[U]B...=US, NP[E]B...=EU, NP[J]B...=JP, BL[U]S...=US, BL[E]S...=EU, ...)
 REGION_BY_GAMEID = {"U": "US", "E": "EU", "J": "JP", "H": "ASIA",
                     "K": "ASIA", "A": "ASIA", "I": "INT", "C": "CN"}
 
@@ -426,7 +426,7 @@ def region_from_game_id(game_id):
 def title_id_from_content_id(content_id):
     """Parse the game ID from a PS3 content ID.
 
-    Format: XX####-TITLEID_##-UNIQUEID  →  TITLEID  (e.g. BLES01718)
+    Format: XX####-TITLEID_##-UNIQUEID  >  TITLEID  (e.g. BLES01718)
     Base game and its DLC share the same TITLEID, which is how we group them.
     """
     parts = content_id.split("-")
@@ -440,9 +440,9 @@ def content_id_from_rap(rap_path):
     return os.path.splitext(os.path.basename(rap_path))[0]
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # dev_hdd0 layout builder
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 # extraction order within a group: base game (GAME_EXEC) first so DLC/data
 # packages are laid on top of it (matching PS3 install order).
@@ -468,11 +468,11 @@ def build_dev_hdd0(pkg_paths, hdd0_root, rap_paths, edat_paths=(), game_id=""):
     """Extract a group of PKGs into an RPCS3 dev_hdd0 tree.
 
     Install paths mirror rpcs3/Crypto/unpkg.cpp set_install_path():
-      GAME_EXEC / GAME_DATA (and default) → dev_hdd0/game/<install_dir>/
-      LICENSE (0x0B)                       → dev_hdd0/home/00000001/exdata/
-      THEME   (0x09)                       → dev_hdd0/theme/<install_dir>/
+      GAME_EXEC / GAME_DATA (and default) > dev_hdd0/game/<install_dir>/
+      LICENSE (0x0B)                       > dev_hdd0/home/00000001/exdata/
+      THEME   (0x09)                       > dev_hdd0/theme/<install_dir>/
 
-    rap_paths maps content_id → rap file path; matching .rap files are copied
+    rap_paths maps content_id > rap file path; matching .rap files are copied
     into dev_hdd0/home/00000001/exdata/.  Any .edat in edat_paths whose filename
     references game_id is copied there too (license that unlocks the game).
 
@@ -519,9 +519,9 @@ def build_dev_hdd0(pkg_paths, hdd0_root, rap_paths, edat_paths=(), game_id=""):
     return install_dir or "UNKNOWN", consumed_raps, consumed_edats
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # Squashfs creation
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 def create_squashfs(source_dir, output_image, compression="zstd"):
     """Pack source_dir into output_image with mksquashfs."""
@@ -539,9 +539,9 @@ def unsquashfs(image, dest_dir):
     subprocess.run(["unsquashfs", "-f", "-d", dest_dir, image], check=True)
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # NoPayStation TSV database
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 def fetch(url, timeout=60):
     try:
@@ -549,17 +549,17 @@ def fetch(url, timeout=60):
         with urllib.request.urlopen(req, timeout=timeout) as response:
             return response.read()
     except Exception as exc:
-        print(f"[fetch error] {url} — {exc}")
+        print(f"[fetch error] {url} - {exc}")
         return None
 
 
 def load_nps_tsv(url, database):
-    """Merge one NoPayStation TSV into database: title_id → (name, region).
+    """Merge one NoPayStation TSV into database: title_id > (name, region).
 
     First entry per title_id wins (PS3_GAMES is loaded before PS3_DLCS so the
     base-game name/region takes precedence over DLC rows).
     """
-    print(f"[nps] downloading {url} …")
+    print(f"[nps] downloading {url} ...")
     data = fetch(url)
     if not data:
         print(f"[nps] download failed: {url}")
@@ -579,9 +579,9 @@ def load_nps_tsv(url, database):
     return database
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # Filename helpers
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 # version token from a PKG filename: prefer an explicit "v1.1"/"V2.0" marker,
 # otherwise a bare dotted number like "1.10".
@@ -603,8 +603,8 @@ def safe_filename(name):
     return name
 
 
-# trailing trial/demo marker, e.g. "… - Trial", "… (Trial)", "… [Demo]"
-_TRIAL_SUFFIX = re.compile(r'\s*[-–:(\[]?\s*(?:trial|demo)\s*[)\]]?\s*$', re.IGNORECASE)
+# trailing trial/demo marker, e.g. "... - Trial", "... (Trial)", "... [Demo]"
+_TRIAL_SUFFIX = re.compile(r'\s*[--:(\[]?\s*(?:trial|demo)\s*[)\]]?\s*$', re.IGNORECASE)
 
 def strip_trial(name):
     """Drop a trailing Trial/Demo marker (the game is unlocked by a license)."""
@@ -668,16 +668,16 @@ def resolve_name(game_id, pkg_paths, database):
     return None, None, None
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # Scanner / driver
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 def scan_groups(root_dir):
     """Group .pkg files (top level of root_dir) by game ID.
 
     Returns (groups, rap_paths, edat_paths):
-      groups     : game_id → list of .pkg paths
-      rap_paths  : content_id → .rap path
+      groups     : game_id > list of .pkg paths
+      rap_paths  : content_id > .rap path
       edat_paths : list of .edat paths
     """
     groups = defaultdict(list)
@@ -714,7 +714,7 @@ def process_group(game_id, pkg_paths, rap_paths, edat_paths, root_dir, database,
     ordered = order_pkgs(pkg_paths)
     version = version_from_filename(ordered[0]) if ordered else ""
 
-    # an unlocked game (we ship its license) is no longer a trial → drop marker
+    # an unlocked game (we ship its license) is no longer a trial > drop marker
     unlocked = group_has_license(game_id, pkg_paths, rap_paths, edat_paths)
     if unlocked and name:
         name = strip_trial(name)
@@ -727,10 +727,10 @@ def process_group(game_id, pkg_paths, rap_paths, edat_paths, root_dir, database,
     elif source is None:
         print(f"[unknown] {game_id}: not in NPS database and no PARAM.SFO title")
     if unlocked:
-        print(f"[license] {game_id}: license present → unlocked (Trial/Demo dropped)")
+        print(f"[license] {game_id}: license present > unlocked (Trial/Demo dropped)")
 
     merging = os.path.exists(out_path)
-    print(f"\n=== {game_id} → {out_name}{' (merge)' if merging else ''} ===")
+    print(f"\n=== {game_id} > {out_name}{' (merge)' if merging else ''} ===")
     for p in ordered:
         print(f"    pkg {os.path.basename(p)}")
 
@@ -740,7 +740,7 @@ def process_group(game_id, pkg_paths, rap_paths, edat_paths, root_dir, database,
         try:
             # unpack the existing image so new PKG content is merged into it
             if merging:
-                print(f"[merge] unpacking existing {out_name} …")
+                print(f"[merge] unpacking existing {out_name} ...")
                 unsquashfs(out_path, tmp)
             _install_dir, consumed_raps, consumed_edats = build_dev_hdd0(
                 pkg_paths, dev_hdd0, rap_paths, edat_paths, game_id)
@@ -818,7 +818,7 @@ def main():
     load_nps_tsv(PS3_GAMES_URL, database)
     load_nps_tsv(PS3_DLCS_URL, database)
     if not database:
-        print("[warn] NPS databases unavailable — names will use GAMEID only.")
+        print("[warn] NPS databases unavailable - names will use GAMEID only.")
 
     print("-" * 60)
 

@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index d8f994597..f0e652baa 100644
+index f9f720de7..d18a08572 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -286,8 +286,8 @@ if (CMAKE_BUILD_TYPE MATCHES Debug)
+@@ -314,8 +314,8 @@ if (CMAKE_BUILD_TYPE MATCHES Debug)
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wno-attributes -O0") #support C++17 for std::, optimize
      set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -O0")
  else()

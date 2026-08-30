@@ -1,5 +1,5 @@
 diff --git a/Core/Util/PathUtil.cpp b/Core/Util/PathUtil.cpp
-index 564e8c354f..0e54020f71 100644
+index 7a0b8eacfc..caae87b426 100644
 --- a/Core/Util/PathUtil.cpp
 +++ b/Core/Util/PathUtil.cpp
 @@ -63,38 +63,33 @@ Path FindConfigFile(const Path &searchPath, std::string_view baseFilename, bool
@@ -51,7 +51,7 @@ index 564e8c354f..0e54020f71 100644
  	case DIRECTORY_TEXTURES:
  		return pspDirectory / "TEXTURES";
  	case DIRECTORY_PLUGINS:
-@@ -103,22 +98,21 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+@@ -103,11 +98,11 @@ Path GetSysDirectory(PSPDirectories directoryType) {
  		if (!g_Config.appCacheDirectory.empty()) {
  			return g_Config.appCacheDirectory;
  		}
@@ -65,7 +65,8 @@ index 564e8c354f..0e54020f71 100644
  	case DIRECTORY_CUSTOM_SHADERS:
  		return pspDirectory / "shaders";
  	case DIRECTORY_CUSTOM_THEMES:
- 		return pspDirectory / "themes";
+@@ -116,11 +111,10 @@ Path GetSysDirectory(PSPDirectories directoryType) {
+ 		return pspDirectory / "NAND";
  
  	case DIRECTORY_MEMSTICK_ROOT:
 -		return g_Config.memStickDirectory;
@@ -101,7 +102,7 @@ index 6c8dad665a..2b14bd6b05 100644
  		return NKCODE_BUTTON_THUMBL;
  	case SDL_GAMEPAD_BUTTON_RIGHT_STICK:
 diff --git a/UI/NativeApp.cpp b/UI/NativeApp.cpp
-index e715adbb2d..a0d30596d6 100644
+index add9481018..4836111909 100644
 --- a/UI/NativeApp.cpp
 +++ b/UI/NativeApp.cpp
 @@ -550,7 +550,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
@@ -113,12 +114,12 @@ index e715adbb2d..a0d30596d6 100644
  	g_VFS.Register("", new DirectoryReader(Path("/usr/share/games/ppsspp/assets")));
  #elif defined(_WIN32) && !PPSSPP_PLATFORM(UWP)
  	const Path &exePath = File::GetExeDirectory();
-@@ -668,7 +668,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
+@@ -660,7 +660,7 @@ void NativeInit(int argc, const char *argv[], const CommandLineOptions &cmdLineO
  	else // Just in case
  		config = "./config";
  
 -	g_Config.memStickDirectory = Path(config) / "ppsspp";
 +	g_Config.memStickDirectory = Path("/userdata/saves/psp/");
- 	g_Config.flash0Directory = File::GetExeDirectory() / "assets/flash0";
  	if (getenv("HOME") != nullptr) {
  		g_Config.defaultCurrentDirectory = Path(getenv("HOME"));
+ 	} else {

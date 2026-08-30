@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import codecs
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -9,7 +9,6 @@ from ...controller import Controller
 from ..Generator import Generator
 
 if TYPE_CHECKING:
-    from pathlib import Path
 
     from ...controller import Controllers
     from ...types import HotkeysContext
@@ -82,7 +81,7 @@ class EasyRPGGenerator(Generator):
             "button_debug_through": None
         }
 
-        with codecs.open(str(configdir / "config.ini"), "w", encoding="ascii") as f:
+        with Path(Path(configdir) / "config.ini").open("w", encoding="ascii") as f:
             f.write("[Joypad]\n")
             if pad := Controller.find_player_number(playersControllers, 1):
                 f.write(f"number={pad.index}\n" )

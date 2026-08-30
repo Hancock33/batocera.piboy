@@ -1,8 +1,8 @@
 diff --git a/tasks/task_autodetect.c b/tasks/task_autodetect.c
-index fdedbcc76d..c8f40915db 100644
+index da7edbf0d4..f7a8ac8daa 100644
 --- a/tasks/task_autodetect.c
 +++ b/tasks/task_autodetect.c
-@@ -910,6 +910,8 @@ static void input_autoconfigure_connect_handler(retro_task_t *task)
+@@ -1302,6 +1302,8 @@ static void input_autoconfigure_connect_handler(retro_task_t *task)
        task_set_flags(task, RETRO_TASK_FLG_FINISHED, true);
        return;
     }
@@ -11,7 +11,7 @@ index fdedbcc76d..c8f40915db 100644
  
     /* Annoyingly, we have to scan all the autoconfig
      * files (and in-built configs) in a single shot
-@@ -1046,6 +1048,7 @@ static void input_autoconfigure_connect_handler(retro_task_t *task)
+@@ -1438,6 +1440,7 @@ static void input_autoconfigure_connect_handler(retro_task_t *task)
        RARCH_LOG("[Autoconf] %s.\n", task_title);
     }
  

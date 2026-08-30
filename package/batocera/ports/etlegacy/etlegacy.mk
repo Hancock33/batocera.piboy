@@ -3,8 +3,8 @@
 # etlegacy
 #
 ################################################################################
-# Version: Commits on Aug 15, 2026
-ETLEGACY_VERSION = 70b9a71c4618d78553b4925e7609306159f9dab2
+# Version: Commits on Aug 24, 2026
+ETLEGACY_VERSION = 631d0c936ee935e3c2ddb1ffc8278c5cdbe94319
 ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES
@@ -54,7 +54,7 @@ endif
 
 define ETLEGACY_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/etlegacy
-	cp $(@D)/buildroot-build/legacy/legacy_2.8*-dirty.pk3 $(TARGET_DIR)/usr/share/etlegacy
+	cp $(@D)/buildroot-build/legacy/legacy_*-dirty.pk3 $(TARGET_DIR)/usr/share/etlegacy
 	cp $(@D)/buildroot-build/etl $(TARGET_DIR)/usr/bin/etl
 endef
 

@@ -73,6 +73,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
     global _active_player_controllers, _evmapy_instance
     global endSystem
     endSystem = args.system
+    arch = None
 
     player_controllers = Controller.load_for_players(maxnbplayers, args)
 
@@ -199,22 +200,20 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
                 callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
 
-                f=Path('/usr/share/batocera/batocera.arch').open()
-                arch=f.readline().strip('\n')
-                if 'x86_64' in arch:
-                    if system.isOptSet("powersave"):
-                        if system.config['powersave'] == '0':
-                                subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                                _logger.debug("CPU power config set to maximum power saving")
-                        elif system.config['powersave'] == '1':
-                                subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
-                                _logger.debug("CPU power config set to medium power saving")
-                        elif system.config['powersave'] == '2':
-                                subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
-                                _logger.debug("CPU power config set to no power saving")
-                    else:
+                arch = Path('/usr/share/batocera/batocera.arch').read_text().splitlines()[0]
+                if arch == 'x86_64':
+                    if system.config.get('powersave') == '0':
                         subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
                         _logger.debug("CPU power config set to maximum power saving")
+                    elif system.config.get('powersave') == '1':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
+                        _logger.debug("CPU power config set to medium power saving")
+                    elif system.config.get('powersave') == '2':
+                        subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
+                        _logger.debug("CPU power config set to no power saving")
+                else:
+                    subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
+                    _logger.debug("CPU power config set to maximum power saving")
 
                 # run the emulator
                 _evmapy_instance = evmapy(systemName, system.config.emulator, effectiveCore, original_rom, player_controllers, guns)
@@ -348,7 +347,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, rom])
 
             finally:
-                if 'x86_64' in arch:
+                if arch == 'x86_64':
                     subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
 
                 # always restore the resolution

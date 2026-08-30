@@ -3,8 +3,8 @@
 # libretro-ps2
 #
 ################################################################################
-# Version: Commits on Aug 12, 2026
-LIBRETRO_PS2_VERSION = 2f0f57a5102974a255865648d4c611a944b2e575
+# Version: Commits on Aug 29, 2026
+LIBRETRO_PS2_VERSION = 2dac3458788179b299d597863f500b26aaddb50d
 LIBRETRO_PS2_SITE = https://github.com/libretro/ps2.git
 LIBRETRO_PS2_SITE_METHOD = git
 LIBRETRO_PS2_GIT_SUBMODULES = YES
@@ -12,6 +12,8 @@ LIBRETRO_PS2_LICENSE = GPLv2
 LIBRETRO_PS2_DEPENDENCIES = libaio xz host-xxd retroarch
 LIBRETRO_PS2_EMULATOR_INFO = pcsx2.libretro.core.yml
 LIBRETRO_PS2_SUPPORTS_IN_SOURCE_BUILD = NO
+
+LIBRETRO_PS2_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -Wno-error=implicit-function-declaration"
 
 LIBRETRO_PS2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_PS2_CONF_OPTS += -DLIBRETRO=ON

@@ -1,8 +1,8 @@
 diff --git a/cmake/BuildParameters.cmake b/cmake/BuildParameters.cmake
-index a653adf8a..06ca8410d 100644
+index de0da9e74..053fc52f2 100644
 --- a/cmake/BuildParameters.cmake
 +++ b/cmake/BuildParameters.cmake
-@@ -102,7 +102,7 @@ if(${PCSX2_TARGET_ARCHITECTURES} MATCHES "x86_64")
+@@ -112,7 +112,7 @@ if(${PCSX2_TARGET_ARCHITECTURES} MATCHES "x86_64")
  		else()
  			# Can't use march=native on Apple Silicon.
  			if(NOT APPLE OR "${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64")

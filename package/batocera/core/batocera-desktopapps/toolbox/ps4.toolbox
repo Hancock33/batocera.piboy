@@ -51,9 +51,9 @@ ROMS_PS4 = "/userdata/roms/ps4"
 DLC_DIRNAME = "DLC"
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # AES backend (OpenSSL through ctypes: AES-128-CBC and AES-128-XTS)
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 def _load_library(names):
     for name in names:
@@ -154,9 +154,9 @@ class _XtsDecryptor:
         return b"".join(parts)
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # zstd backend (stdlib on python 3.14, otherwise libzstd through ctypes)
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 class _LibZstd:
     """ZSTD_compress/ZSTD_decompress from libzstd, for pythons without _zstd."""
@@ -250,9 +250,9 @@ def _zstd_decompress(data: bytes, size: int) -> bytes:
     return _LibZstd.get().decompress(data, size)
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # RSA keysets and PKG entry names (from shadPS4 src/core/crypto/keys.h)
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 
 # PkgDerivedKey3Keyset (validated: n == p*q and d*e == 1 mod lcm(p-1,q-1))
@@ -880,9 +880,9 @@ PKG_ENTRY_NAMES = {
 }
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # PS4 PKG reader (ported from shadPS4 pkg.cpp / crypto.cpp)
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 
 PKG_MAGIC = 0x7F434E54
@@ -1244,7 +1244,7 @@ class PkgReader:
                 break
 
     def _read_inode_data(self, inode: Inode) -> bytes:
-        """Read a (small) inode's contents fully — used for directory blocks."""
+        """Read a (small) inode's contents fully - used for directory blocks."""
         chunks = []
         for j in range(inode.blocks):
             chunks.append(self._read_pfsc_block(inode.loc + j))
@@ -1401,9 +1401,9 @@ class PkgReader:
         )
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # ZArchive writer (Exzap's .zar format, as vendored by shadPS4)
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 
 BLOCK_SIZE = 64 * 1024
@@ -1787,9 +1787,9 @@ class ZArchiveWriter:
         self._sha = None  # the footer bytes themselves are not hashed
         self._output(self._pack_footer(digest, total_size))
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # ZArchive reader (only what merging into an existing archive needs)
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 class ZArchiveReader:
     """Reads back a ``.zar`` so its files can be streamed into a new one."""
@@ -1885,9 +1885,9 @@ class ZArchiveReader:
             offset += step
             size -= step
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # Filename helpers
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 _ILLEGAL_MAP = {ord(c): "" for c in '<>:"/\\|?*'}
 _ILLEGAL_MAP.update({c: " " for c in list(range(0x20)) + [0x7F]})
@@ -1904,7 +1904,7 @@ def safe_filename(name: str) -> str:
 
 
 def region_from_content_id(content_id: str) -> str:
-    """PS4 content ids start with UP/EP/JP/HP…, one letter per region."""
+    """PS4 content ids start with UP/EP/JP/HP..., one letter per region."""
     if content_id:
         return REGION_BY_CONTENT_ID.get(content_id[0].upper(), "")
     return ""
@@ -1978,9 +1978,9 @@ class Progress:
         sys.stdout.flush()
 
 
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 # Packages
-# ──────────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
 
 ENTITLEMENT_LABEL_OFFSET = 20
 
@@ -2125,7 +2125,7 @@ def process_group(title_id: str, sources: List[PkgSource], root_dir: str,
         title_id, named.info.title, region_from_content_id(named.info.content_id), version)
     out_path = os.path.join(root_dir, out_name)
 
-    print(f"\n=== {title_id} → {out_name if app_sources else os.path.basename(existing or out_name)} ===")
+    print(f"\n=== {title_id} > {out_name if app_sources else os.path.basename(existing or out_name)} ===")
     for source in sources:
         print(f"    pkg {os.path.basename(source.path)} ({source.describe()})")
     if existing:

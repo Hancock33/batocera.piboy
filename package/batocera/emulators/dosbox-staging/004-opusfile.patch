@@ -1,0 +1,13 @@
+diff --git a/meson.build b/meson.build
+index 1c3f5e6be..2396911fd 100644
+--- a/meson.build
++++ b/meson.build
+@@ -537,7 +537,7 @@ libiir_dep = dependency(
+ 
+ opus_dep = dependency(
+     'opusfile',
+-    version: ['>= 0.8', '< 1'],
++    version: ['>= 0'],
+     static: ('opusfile' in static_libs_list or prefers_static_libs),
+     include_type: 'system',
+ )

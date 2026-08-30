@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Aug 16, 2026
-RETROARCH_VERSION = a804af1265a9a1d440c8ef71e80c7cc7e2dc6a3a
+# Version: Commits on Aug 30, 2026
+RETROARCH_VERSION = e424afdf9b2541733e00e77fc8ccd451a7c8bef7
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
@@ -182,6 +182,7 @@ define RETROARCH_INSTALL_STAGING_CMDS
 endef
 
 define RETROARCH_LIBRETRO_FFMPEG_INSTALL
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-error=implicit-function-declaration|g" $(@D)/cores/libretro-ffmpeg/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/cores/libretro-ffmpeg
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/cores/libretro-ffmpeg/ffmpeg_libretro.so $(TARGET_DIR)/usr/lib/libretro/ffmpeg_libretro.so
@@ -193,12 +194,13 @@ $(eval $(emulator-info-package))
 
 # DEFINITION OF LIBRETRO PLATFORM
 LIBRETRO_PLATFORM = unix
+
 ifeq ($(BR2_arm),y)
     LIBRETRO_PLATFORM += armv7
-endif
-ifeq ($(BR2_aarch64),y)
+else ifeq ($(BR2_arm64),y)
     LIBRETRO_PLATFORM += arm64
 endif
+
 ifeq ($(BR2_ARM_CPU_HAS_NEON),y)
     LIBRETRO_PLATFORM += neon
 endif

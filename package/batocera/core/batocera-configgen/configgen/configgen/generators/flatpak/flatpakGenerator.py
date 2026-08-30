@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import os
+import subprocess
 from typing import TYPE_CHECKING
 
 from ... import Command
@@ -19,8 +19,8 @@ class FlatpakGenerator(Generator):
             romId = str.strip(f.read())
 
         # bad hack in a first time to get audio for user batocera
-        os.system('chown -R root:audio /var/run/pulse')
-        os.system('chmod -R g+rwX /var/run/pulse')
+        subprocess.run(["chown", "-R", "root:audio", "/var/run/pulse"], check=True)
+        subprocess.run(["chmod", "-R", "g+rwX", "/var/run/pulse"], check=True)
 
         # the directory monitor must exist and all the dirs must be owned by batocera
         commandArray = ["/usr/bin/flatpak", "run", "-v", romId]
@@ -38,3 +38,6 @@ class FlatpakGenerator(Generator):
             "name": "flatpak",
             "keys": { "exit": "flatpak kill $(flatpak ps --columns=application | head -n 1)" }
         }
+
+    def getInGameRatio(self, config, gameResolution, rom):
+        return 16 / 9

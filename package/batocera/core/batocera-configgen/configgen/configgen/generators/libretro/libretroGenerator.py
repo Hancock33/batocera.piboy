@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import glob
 import itertools
 import logging
 import os
@@ -34,6 +33,7 @@ from .libretroPaths import (
 )
 
 if TYPE_CHECKING:
+
     from ...Emulator import Emulator
     from ...types import HotkeysContext
 
@@ -132,8 +132,8 @@ class LibretroGenerator(Generator):
         # for each core, a file /usr/lib/<core>.info must exit, otherwise, info such as rewinding/netplay will not work
         # to do a global check : cd /usr/lib/libretro && for i in *.so; do INF=$(echo $i | sed -e s+/usr/lib/libretro+/usr/share/libretro/info+ -e s+\.so+.info+); test -e "$INF" || echo $i; done
         infoFile = RETROARCH_SHARE / "info" / f"{system.config.core}_libretro.info"
-        #if not infoFile.exists():
-        #    raise MissingCore
+        if not infoFile.exists():
+            _logger.debug("libretro info file missing")
 
         # The command to run
         dontAppendROM = False
@@ -338,17 +338,14 @@ class LibretroGenerator(Generator):
                 rom = next(rom.glob('*.md'))
 
         if system.name == 'scummvm':
-            if "squashfs" in str(rom):
-                romsInDir = glob.glob(glob.escape(rom) + '/*.scummvm')
-                rom_path = romsInDir[0].replace('.scummvm','')
+            if "squashfs" in (str(rom) or ""):
+                romsInDir = list(Path(rom or "").glob("*.scummvm"))
+                romsInDir = romsInDir[0].stem
             else:
-                rom_path = rom_path.parent / rom_path.name
-                if rom_path.stat().st_size == 0:
+                rom = rom.parent / rom.name
+                if rom.stat().st_size == 0:
                     # File is empty, run game directly
-                    rom_path = rom_path.with_suffix('')
-
-        if system.name == '3ds' and "squashfs" in str(rom) and rom.is_dir():
-            rom = next(rom.glob('*.3ds'))
+                    rom = rom.with_suffix('')
 
         if system.name == 'n64' and "squashfs" in str(rom) and rom.is_dir():
                 rom = next(rom.glob('*.*'))

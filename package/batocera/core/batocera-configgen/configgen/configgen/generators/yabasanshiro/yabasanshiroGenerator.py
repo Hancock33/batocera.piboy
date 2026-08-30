@@ -61,17 +61,17 @@ class YabasanshiroGenerator(Generator):
                 json.dump(config, f, indent=2)
 
         # Modify the config file
-        if system.isOptSet("yaba_aspect"):
+        if system.config.get("yaba_aspect"):
             config["Aspect rate"] = int(system.config["yaba_aspect"])
         else:
             config["Aspect rate"] = 0
-        if system.isOptSet("yaba_resolution"):
+        if system.config.get("yaba_resolution"):
             config["Resolution"] = int(system.config["yaba_resolution"])
         else:
             config["Resolution"] = 3
         config["Rotate screen"] = False
         config["Rotate screen resolution"] = 0
-        if system.isOptSet("yaba_shader"):
+        if system.config.get("yaba_shader"):
             config["Use compute shader"] = system.config["yaba_shader"]
         else:
             config["Use compute shader"] = False
@@ -89,7 +89,7 @@ class YabasanshiroGenerator(Generator):
                     data[ctrl_id] = {}
 
                 player_index = int(pad.index + 1)
-                if system.isOptSet("yaba_player" + str(player_index)):
+                if system.config.get("yaba_player" + str(player_index)):
                     pad_mode = int(system.config["yaba_player" + str(player_index)])
                 else:
                     pad_mode = 0

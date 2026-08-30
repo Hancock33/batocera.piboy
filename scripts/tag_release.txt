@@ -68,7 +68,6 @@ spirv-cross.mk
 spirv-headers.mk
 spirv-llvm-translator.mk
 spirv-tools.mk
-supertux2.mk
 tekwar.mk
 theforceengine.mk
 tomlplusplus.mk

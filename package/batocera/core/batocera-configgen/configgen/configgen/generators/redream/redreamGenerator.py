@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import codecs
 import filecmp
 from pathlib import Path
 from shutil import copyfile
@@ -36,7 +35,7 @@ class RedreamGenerator(Generator):
             redream_exec.chmod(0o0775)
 
         configFileName = redreamConfig / "redream.cfg"
-        with codecs.open(str(configFileName), "w") as f:
+        with Path(configFileName).open("w", encoding="utf-8") as f:
             # set the roms path
             f.write(f"gamedir={redreamRoms}\n")
             # force fullscreen

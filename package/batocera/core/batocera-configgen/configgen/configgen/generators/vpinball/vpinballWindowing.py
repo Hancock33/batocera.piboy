@@ -32,9 +32,8 @@ def configureWindowing(vpinballSettings: CaseSensitiveConfigParser, system: Emul
 
     # determine playField and backglass screens numbers
     reverse_playfield_and_backglass = False
-    if system.isOptSet("vpinball_inverseplayfieldandbackglass"):
-        if system.getOptBoolean("vpinball_inverseplayfieldandbackglass"):
-            reverse_playfield_and_backglass = True
+    if system.config.get("vpinball_inverseplayfieldandbackglass"):
+        reverse_playfield_and_backglass = True
     else:
         # auto : if the screen 2 is vertical while the first screen is not, inverse
         if len(screens) >= 2 and screens[0]["width"] > screens[0]["height"] and screens[1]["width"] < screens[1]["height"]:
@@ -49,11 +48,11 @@ def configureWindowing(vpinballSettings: CaseSensitiveConfigParser, system: Emul
     dmdsize = getDMDWindowSize(system, gameResolution)
 
     # Playfield
-    if not (system.isOptSet("vpinball_playfield") and system.config["vpinball_playfield"] == "manual"):
+    if system.config.get("vpinball_playfield") == "manual":
         configurePlayfield(vpinballSettings, screens, playFieldScreen)
 
     # playfiled mode
-    if system.isOptSet("vpinball_playfieldmode"):
+    if system.config.get("vpinball_playfieldmode"):
         vpinballSettings.set("Player", "BGSet", system.config["vpinball_playfieldmode"])
     else:
         if screens[playFieldScreen]["width"] < screens[playFieldScreen]["height"]:
@@ -67,7 +66,7 @@ def configureWindowing(vpinballSettings: CaseSensitiveConfigParser, system: Emul
 
 def getBackglassConfiguration(system: Emulator, screens: list[ScreenInfo]):
     val = ""
-    if system.isOptSet("vpinball_backglass"):
+    if system.config.get("vpinball_backglass"):
         val = system.config["vpinball_backglass"]
     if val == "":
         if len(screens) > 1:
@@ -86,7 +85,7 @@ def configurePlayfield(vpinballSettings: CaseSensitiveConfigParser, screens: lis
     vpinballSettings.set("Player", "PlayfieldHeight",  str(screens[playFieldScreen]["height"]))
 
 def getDMDWindowSize(system: Emulator, gameResolution: Resolution):
-    if not system.isOptSet("vpinball_dmdsize"):
+    if not system.config.get("vpinball_dmdsize"):
         return [1024, 256] # like 128x32
     if system.config["vpinball_dmdsize"] == "128x16":
         return [1024, 128]

@@ -82,7 +82,7 @@ index aef374d46..ac2f33736 100644
  					if (Utils::FileSystem::copyFile(fileName, mNewSlotFile))
  						mNewSlotCheckSum = ApiSystem::getInstance()->getMD5(fileName, false);
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index b95fb951c..4fdb39950 100644
+index ab962d7ca..54677c855 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -2945,7 +2945,6 @@ void GuiMenu::openGamesSettings()

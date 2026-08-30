@@ -3,8 +3,8 @@
 # rk3128-blobs
 #
 ################################################################################
-# Version: Commits on Dec 29, 2025
-RK3128_BLOBS_VERSION = ecb4fcbe954edf38b3ae037d5de6d9f5bccf81f4
+# Version: Commits on Jun 26, 2026
+RK3128_BLOBS_VERSION = 3e288fe814e059dd06833495f845cab04ac20a5c
 RK3128_BLOBS_SITE = https://github.com/rockchip-linux/rkbin.git
 RK3128_BLOBS_SITE_METHOD = git
 RK3128_BLOBS_INSTALL_IMAGES = YES

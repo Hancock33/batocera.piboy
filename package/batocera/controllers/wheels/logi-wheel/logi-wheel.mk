@@ -3,8 +3,8 @@
 # logi-wheel
 #
 ################################################################################
-# Version: Commits on Aug 16, 2026
-LOGI_WHEEL_VERSION = v0.35.3
+# Version: Commits on Aug 26, 2026
+LOGI_WHEEL_VERSION = v0.38.5
 LOGI_WHEEL_SITE = $(call github,mescon,logitech-trueforce-linux-driver,$(LOGI_WHEEL_VERSION))
 LOGI_WHEEL_LICENSE = GPL-2.0, GPL-3.0+ (logi-wheel-gui), LGPL-2.1+ (libtrueforce)
 LOGI_WHEEL_LICENSE_FILES = COPYING userspace/libtrueforce/COPYING
@@ -50,7 +50,7 @@ endef
 
 # the Slint desktop app, launched from the desktop mode as
 # logi-wheel-config (see batocera-desktopapps)
-ifeq ($(BR2_PACKAGE_LOGI_WHEEL_GUI),y)
+ifeq ($(BR2_x86_64),y)
 LOGI_WHEEL_DEPENDENCIES += fontconfig libxkbcommon xlib_libX11
 LOGI_WHEEL_CARGO_BUILD_OPTS += -p logi-wheel-gui
 

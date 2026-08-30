@@ -253,18 +253,18 @@ index 000000000..76d495e0a
 +
 +#endif
 diff --git a/core/sdl/sdl.cpp b/core/sdl/sdl.cpp
-index ac8cd79c5..98a17f4b1 100644
+index 6b099a49e..fe03df06f 100644
 --- a/core/sdl/sdl.cpp
 +++ b/core/sdl/sdl.cpp
-@@ -21,6 +21,7 @@
- #include "hw/naomi/card_reader.h"
+@@ -23,6 +23,7 @@
+ #include "hw/naomi/multiboard.h"
  #if !defined(_WIN32) && !defined(__APPLE__) && !defined(__SWITCH__)
  #include "linux-dist/icon.h"
 +#include "evdev_lightgun.h"
  #endif
  #ifdef _WIN32
  #include "windows/rawinput.h"
-@@ -277,6 +278,9 @@ void input_sdl_init()
+@@ -288,6 +289,9 @@ void input_sdl_init()
  #elif defined(_WIN32)
  	SDL_GameControllerAddMapping("0300000009120000072f000000000000,OrangeFox86 DreamPicoPort,a:b0,b:b1,x:b3,y:b4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,dpdown:h0.4,leftx:a0,lefty:a1,lefttrigger:a2,rightx:a3,righty:a4,righttrigger:a5,start:b11");
  #endif
@@ -274,13 +274,13 @@ index ac8cd79c5..98a17f4b1 100644
  }
  
  void input_sdl_quit()
-@@ -290,6 +294,9 @@ void input_sdl_quit()
- 	sdl_mice.clear();
- 	GamepadDevice::Unregister(sdl_keyboard);
- 	sdl_keyboard.reset();
+@@ -296,6 +300,9 @@ void input_sdl_quit()
+ 	EventManager::unlisten(Event::Pause, emuEventCallback);
+ 	EventManager::unlisten(Event::Resume, emuEventCallback);
+ 	SDLGamepad::closeAllGamepads();
 +#if !defined(_WIN32) && !defined(__APPLE__) && !defined(__SWITCH__)
 +	EvdevLightgun::term();
 +#endif
- 	SDL_QuitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_HAPTIC);
- }
- 
+ 	for (auto [id, mouse] : sdl_mice)
+ 		GamepadDevice::Unregister(mouse);
+ 	sdl_mice.clear();

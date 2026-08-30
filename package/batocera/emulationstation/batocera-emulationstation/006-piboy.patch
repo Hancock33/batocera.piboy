@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 7a91f7e16..d8f994597 100644
+index 1e46d6485..f9f720de7 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -9,6 +9,8 @@ option(BCM "BCM host" OFF)
+@@ -20,6 +20,8 @@ option(BCM "BCM host" OFF)
  
  option(BATOCERA "Set to ON to enable BATOCERA specific code" OFF)
  option(RETROBAT "Set to ON to enable RETROBAT specific code" OFF)
@@ -11,7 +11,7 @@ index 7a91f7e16..d8f994597 100644
  
  option(ENABLE_FILEMANAGER "Set to ON to enable f1 shortcut for filesystem" OFF)
  option(DISABLE_KODI "Set to ON to disable kodi in menu" OFF)
-@@ -101,6 +103,16 @@ if(RETROBAT)
+@@ -112,6 +114,16 @@ if(RETROBAT)
    add_definitions(-DRETROBAT)
  endif()
  
@@ -29,7 +29,7 @@ index 7a91f7e16..d8f994597 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index c6e64adfc..429a77258 100644
+index f5ccd37eb..82763fbd8 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -88,8 +88,15 @@
@@ -108,7 +108,7 @@ index c6e64adfc..429a77258 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index e32dd5b9b..d8eddc46c 100644
+index dee132ea3..0b0d7e073 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -25,6 +25,7 @@

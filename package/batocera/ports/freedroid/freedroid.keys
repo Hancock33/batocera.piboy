@@ -41,11 +41,6 @@
             "target": "KEY_SPACE"
         },
         {
-            "trigger": "x",
-            "type": "key",
-            "target": "KEY_LEFTCTRL"
-        },
-        {
             "trigger": "joystick1up",
             "type": "key",
             "target": "KEY_UP"
@@ -64,6 +59,11 @@
             "trigger": "joystick1right",
             "type": "key",
             "target": "KEY_RIGHT"
+        },
+        {
+            "trigger": "y",
+            "type": "key",
+            "target": "KEY_LEFTCTRL"
         }
     ]
 }

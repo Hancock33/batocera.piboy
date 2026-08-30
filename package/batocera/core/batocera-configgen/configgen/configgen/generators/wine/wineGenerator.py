@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import glob
 import logging
 import os
 import subprocess
@@ -30,13 +29,12 @@ class WineGenerator(Generator):
             commandArray = ["batocera-wine", "windows", "install", rom]
             return Command.Command(array=commandArray)
         if system.name == "windows" or system.name == "popcap" or system.name == "bigfish":
-            romExt = os.path.splitext(rom)[1]
             _logger.debug("rom path: %s", Path(rom))
-            _logger.debug("rom file extension: %s", romExt)
-            if romExt == ".wsquashfs":
+            _logger.debug("rom file extension: %s", rom.suffix)
+            if rom.suffix == ".wsquashfs":
                 commandArray = ["batocera-wine", "windows", "play", rom]
-            elif "squashfs" in str(rom) and romExt == "":
-                romsInDir = glob.glob(glob.escape(rom) + '/*.wineexe')
+            elif "squashfs" in str(rom) and rom.suffix == "":
+                romsInDir = [str(p) for p in Path(rom).glob("*.wineexe")]
                 rom = romsInDir[0].replace('.wineexe','.exe')
                 _logger.debug("wine squashfs rom: %s", rom)
                 commandArray = ["batocera-wine", "windows", "play", rom]
@@ -82,3 +80,6 @@ class WineGenerator(Generator):
 
     def getMouseMode(self, config, rom):
         return config.get_bool('force_mouse')
+
+    def getInGameRatio(self, config, gameResolution, rom):
+        return 16 / 9

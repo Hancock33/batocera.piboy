@@ -1,8 +1,8 @@
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 3d851e106..f07604e0d 100644
+index 7471ddbf5..8220c0009 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
-@@ -9,202 +9,288 @@ namespace PlatformIds
+@@ -9,203 +9,289 @@ namespace PlatformIds
  	static std::map<std::string, PlatformId> Platforms =
  	{
  		{ "unknown",				PLATFORM_UNKNOWN },
@@ -107,6 +107,7 @@ index 3d851e106..f07604e0d 100644
 +		{ "incredibletech",			INCREDIBLETECH },
  		{ "intellivision",			INTELLIVISION },
 +		{ "irem",					IREM },
++		{ "j2me",					J2ME },
 +		{ "jaleco",					JALECO },
 +		{ "jupace",					JUPACE },
 +		{ "kaneko",					KANEKO },
@@ -367,6 +368,7 @@ index 3d851e106..f07604e0d 100644
 -		{ "pico8",					PICO8 },
 -		{ "sgb",					SUPER_GAME_BOY },
 -		{ "vc4000",					VC4000 },
+-		{ "j2me",					J2ME },
 -
 +		{ "tutor",					TOMY_TUTOR },
 +		{ "pcengine",				TURBOGRAFX_16 },
@@ -437,10 +439,10 @@ index 3d851e106..f07604e0d 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 15db99f8a..d45175687 100644
+index 009315fe0..17c945813 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
-@@ -11,54 +11,174 @@ namespace PlatformIds
+@@ -11,54 +11,175 @@ namespace PlatformIds
  	{
  		PLATFORM_UNKNOWN = 0,
  
@@ -542,6 +544,7 @@ index 15db99f8a..d45175687 100644
 +		INCREDIBLETECH,
  		INTELLIVISION,
 +		IREM,
++		J2ME,
 +		JALECO,
 +		JUPACE,
 +		KANEKO,
@@ -631,7 +634,7 @@ index 15db99f8a..d45175687 100644
  		SEGA_32X,
  		SEGA_CD,
  		SEGA_CHIHIRO,
-@@ -66,119 +186,82 @@ namespace PlatformIds
+@@ -66,120 +187,82 @@ namespace PlatformIds
  		SEGA_GAME_GEAR,
  		SEGA_GENESIS,
  		SEGA_MASTER_SYSTEM,
@@ -693,6 +696,7 @@ index 15db99f8a..d45175687 100644
 -		VISUALPINBALL,
 -		FUTUREPINBALL,
 -		PIONEER_LASERACTIVE,
+-		J2ME,
 -
 -		// Misc systems
 -		CHANNELF,
@@ -920,10 +924,10 @@ index b1cd80a04..bdc54b912 100644
  	{ MSX, "27" },
  	{ NINTENDO_64, "4" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index 910a78528..90e7808f2 100644
+index ed86d82f4..6a1707682 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
-@@ -30,166 +30,240 @@ using namespace PlatformIds;
+@@ -30,166 +30,241 @@ using namespace PlatformIds;
  	https://www.screenscraper.fr/api/systemesListe.php?devid=xxx&devpassword=yyy&softname=zzz&output=XML
  **/
  const std::map<PlatformId, unsigned short> screenscraper_platformid_map{
@@ -1115,7 +1119,7 @@ index 910a78528..90e7808f2 100644
 -	// Windows
 -	{ VISUALPINBALL, 198 },
 -	{ FUTUREPINBALL, 199 },
--	
+-	{ J2ME, 302 },
 -	{ TEKNOPARROT, 269 }, // Screenscraper now has Teknoparrot platform
 -
 -	// Misc
@@ -1286,7 +1290,8 @@ index 910a78528..90e7808f2 100644
 +	{ GAMATE, 266 },
 +	{ VIRCON32, 272 },
 +	{ VC4000, 281 },
-+	{ CASSETTE_VISION, 300 }
++	{ CASSETTE_VISION, 300 },
++	{ J2ME, 302 },
  };
  
  const std::set<Scraper::ScraperMediaSource>& ScreenScraperScraper::getSupportedMedias()
