@@ -1,0 +1,46 @@
+diff --git a/src/input.c b/src/input.c
+index 53a916aa..5d52c858 100644
+--- a/src/input.c
++++ b/src/input.c
+@@ -91,19 +91,19 @@ int key_cmds[CMD_LAST][3] =  // array of mappings {key1,key2,key3 -> cmd}
+     {SDLK_ESCAPE, JOY_BUTTON4,    0 },	        // CMD_MENU,
+     {SDLK_ESCAPE, JOY_BUTTON2,   MOUSE_BUTTON2 }// CMD_BACK
+ #else
+-    {SDLK_UP, 	  JOY_UP, 	'w' },		// CMD_UP
+-    {SDLK_DOWN,	  JOY_DOWN, 	's' },		// CMD_DOWN
+-    {SDLK_LEFT,   JOY_LEFT, 	'a' },		// CMD_LEFT
+-    {SDLK_RIGHT,  JOY_RIGHT, 	'd' },		// CMD_RIGHT
+-    {SDLK_SPACE,  JOY_BUTTON1,   MOUSE_BUTTON1 },// CMD_FIRE
+-    {SDLK_RETURN, SDLK_RSHIFT, 	'e' }, 		// CMD_ACTIVATE
+-    {SDLK_SPACE,  JOY_BUTTON2,   MOUSE_BUTTON2 },// CMD_TAKEOVER
+-    {'q', 	  0, 		 0  }, 	        // CMD_QUIT,
+-    {SDLK_PAUSE,  'p',           0  },	        // CMD_PAUSE,
+-    {SDLK_F12,    0,             0  }, 	        // CMD_SCREENSHOT
+-    {'f',         0,             0  },		// CMD_FULLSCREEN,
+-    {SDLK_ESCAPE, JOY_BUTTON4,   0  },		// CMD_MENU,
+-    {SDLK_ESCAPE, JOY_BUTTON2,   MOUSE_BUTTON2 }// CMD_BACK
++    {SDLK_UP, 	  0, 	0 },    // CMD_UP
++    {SDLK_DOWN,	  0, 	0 },    // CMD_DOWN
++    {SDLK_LEFT,   0, 	0 },    // CMD_LEFT
++    {SDLK_RIGHT,  0, 	0 },    // CMD_RIGHT
++    {SDLK_SPACE,  0, 	0 },    // CMD_FIRE
++    {SDLK_LSHIFT, 0, 	0 },    // CMD_ACTIVATE
++    {SDLK_LCTRL,  0, 	0 },    // CMD_TAKEOVER
++    {'q', 	      0, 	0 },    // CMD_QUIT,
++    {SDLK_PAUSE,  0, 	0 },    // CMD_PAUSE,
++    {SDLK_F12,    0, 	0 },    // CMD_SCREENSHOT
++    {'f',         0, 	0 },    // CMD_FULLSCREEN,
++    {SDLK_RETURN, 0, 	0 },    // CMD_MENU,
++    {SDLK_ESCAPE, 0, 	0 },    // CMD_BACK
+ #endif
+   };
+ 
+@@ -241,6 +241,8 @@ init_keystr (void)
+   set_key_name(SDLK_RETURN, "Return");
+   set_key_name(SDLK_SPACE, "Space");
+   set_key_name(SDLK_ESCAPE, "Esc");
++  set_key_name(SDLK_LSHIFT, "X");
++  set_key_name(SDLK_LCTRL, "A");
+ #endif
+ 
+   set_key_name(MOUSE_BUTTON1, "Mouse1");
