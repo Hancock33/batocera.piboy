@@ -68,8 +68,8 @@ Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-control
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|d8877e6282868d30e1c2d70c28ec1d1e2491d5b7|Mar 17, 2026
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.5|May 22, 2021
 Database|[influxdb](https://dl.influxdata.com/influxdb/releases/)|v2.8.0|Dec 12, 2025
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d048eacc032a1b7745e2a9f28b396efc521c5528|Aug 29, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|d048eacc032a1b7745e2a9f28b396efc521c5528|Aug 29, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6c005266b17c2959243c4e2889b5e3aa23dc9993|Aug 30, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6c005266b17c2959243c4e2889b5e3aa23dc9993|Aug 30, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|9c7b0a395db460524dad26c7b57f266e4acd5242|May 21, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.2|Mar 24, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.3.0|Aug 05, 2026
@@ -88,7 +88,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.0
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/dmanlfc/drastic/raw/refs/heads/main)|r2.5.2.2|Feb 26, 2021
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|9287950af26337a72b5636add010354a089a0fc1|Aug 29, 2026
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|ccf3de02cf83906c8da3d77ab66df051d5cb242f|Aug 30, 2026
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|e5b656e3725dc3718e31a4d6d91649801dcdd40b|Aug 30, 2026
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|3ea88dcd982b39a4bfb841d47dbcaecbd99536e7|Jul 06, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|180e670605aa521763bb146cccb59d477193447a|Jul 23, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v3.2.35|Sept 07, 2025
@@ -275,7 +275,7 @@ Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46223|Aug 29, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|496939b602703951277263c7b3e60a9ae36879c1|Aug 08, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|d73326b62199c6dd952ef512947710e1333a49d3|Aug 27, 2026
-Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|d5845a494105d8b2dbef9bbeb48d9d0ece32c3a2|Aug 29, 2026
+Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|6a67369f8529e1a147591a46f806fdfae9a78b52|Aug 30, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.10|Nov 21, 2025
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Emulators|[ymir](https://github.com/StrikerX3/Ymir)|v0.3.3|Jun 22, 2026

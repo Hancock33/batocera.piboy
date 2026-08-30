@@ -1,7 +1,10 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|6c005266b17c2959243c4e2889b5e3aa23dc9993|Aug 30, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|6c005266b17c2959243c4e2889b5e3aa23dc9993|Aug 30, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|1fd7f3521895f285aa9382af8e7e464991437225|Aug 30, 2026
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|ccf3de02cf83906c8da3d77ab66df051d5cb242f|Aug 30, 2026
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|e5b656e3725dc3718e31a4d6d91649801dcdd40b|Aug 30, 2026
+Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|6a67369f8529e1a147591a46f806fdfae9a78b52|Aug 30, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-08-30|Aug 30, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|31e38ccefd9e3a23919cef77e0ae7be7a1f619bf|Aug 30, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|2bcbbc59db22421cf4d983edd11109e4f43fe120|Aug 30, 2026
@@ -11,14 +14,11 @@ Ports|[vkquake](http://github.com/Novum/vkQuake)|af1b6866fbba9cb43e94b8eb9285fb5
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|ac4907dcd13bd88dfe10ad9b7ae17700681cf684|Aug 30, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|e6d2256feee9d5583e5e94041af629cb03aa9ae8|Aug 30, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|cd292f18b32a2887d1648d14f6d4abe29dd08e43|Aug 30, 2026
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|d048eacc032a1b7745e2a9f28b396efc521c5528|Aug 29, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|d048eacc032a1b7745e2a9f28b396efc521c5528|Aug 29, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|d495cfe427358d6b1f185a60bc2b3a8c7c5e8107|Aug 29, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|9287950af26337a72b5636add010354a089a0fc1|Aug 29, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|271a27cbd5385018abd01c85bfed0b2ff0e0db78|Aug 29, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|e67441487517c74a979e7a3a18e197489836e79d|Aug 29, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46223|Aug 29, 2026
-Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|d5845a494105d8b2dbef9bbeb48d9d0ece32c3a2|Aug 29, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|86dc128f4b40309ed191a8f6649a4811c1d80e2a|Aug 29, 2026
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.2.0|Aug 29, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|afee24e6ccea87f51318b03d775d9ef3f20284ed|Aug 29, 2026
