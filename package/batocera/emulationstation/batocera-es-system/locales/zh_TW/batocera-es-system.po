@@ -430,6 +430,10 @@ msgid "125% (Overclock)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "128 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1280 x 1024"
 msgstr "1280 x 1024"
 
@@ -588,6 +592,10 @@ msgstr "15x 原生解析度 (~6720p)"
 msgctxt "game_options"
 msgid "16 Frame"
 msgstr "16 畫格"
+
+msgctxt "game_options"
+msgid "16 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "16 MHz"
@@ -971,6 +979,10 @@ msgid "24th"
 msgstr "24th"
 
 msgctxt "game_options"
+msgid "256 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2560 x 1440"
 msgstr "2560 x 1440"
 
@@ -1218,6 +1230,10 @@ msgstr "30th"
 msgctxt "game_options"
 msgid "31st"
 msgstr "31st"
+
+msgctxt "game_options"
+msgid "32 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "32 MHz"
@@ -1490,6 +1506,10 @@ msgstr "486_慢速"
 msgctxt "game_options"
 msgid "48MB"
 msgstr "48MB"
+
+msgctxt "game_options"
+msgid "49.66 MHz (50MHz accelerator)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4:3 (Default)"
@@ -1806,6 +1826,10 @@ msgstr "60秒"
 msgctxt "game_options"
 msgid "6144MB"
 msgstr "6144MB"
+
+msgctxt "game_options"
+msgid "64 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "64 MHz (Overclock)"
@@ -2510,6 +2534,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Accurate"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Accurate cpu and blitter timings."
 msgstr ""
 
 msgctxt "game_options"
@@ -3634,8 +3662,8 @@ msgid "Batocera Control Center"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Batocera sets first audio device (Default)"
-msgstr "Batocera 設定第一個聲音裝置 (預設)"
+msgid "Batocera sets first audio device"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Battery percentage"
@@ -4340,6 +4368,10 @@ msgid "CPU FEATURE"
 msgstr "CPU 特性"
 
 msgctxt "game_options"
+msgid "CPU MODEL"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU SPEED"
 msgstr "CPU 速度"
 
@@ -4500,6 +4532,10 @@ msgstr "CXD4 (LLE Fallback)"
 msgctxt "game_options"
 msgid "CYBERMORPH"
 msgstr "機械變形"
+
+msgctxt "game_options"
+msgid "CYCLE EXACT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Cache compiled shaders to storage to eliminate future stutter."
@@ -4885,7 +4921,7 @@ msgstr "選擇戰鬥難度。"
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL for gamepads only."
+"lightguns and steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 msgctxt "game_options"
@@ -5254,6 +5290,12 @@ msgid "Config"
 msgstr "配置"
 
 msgctxt "game_options"
+msgid ""
+"Configure emulated controller layout. Choose Wiimote configurations for "
+"games requiring motion/shake."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Console AES Japan"
 msgstr "Console AES Japan"
 
@@ -5289,6 +5331,12 @@ msgstr "5/6鍵遊戲的控制和其他特殊的控制"
 
 msgctxt "game_options"
 msgid "Controls how the adhoc server relay is used."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Controls how the game scales to fit your display when the screen aspect "
+"ratio doesn't match the game."
 msgstr ""
 
 msgctxt "game_options"
@@ -6410,8 +6458,8 @@ msgid "ESYNC"
 msgstr "ESYNC"
 
 msgctxt "game_options"
-msgid "EVDEV"
-msgstr ""
+msgid "EVDEV (Default)"
+msgstr "EVDEV (預設)"
 
 msgctxt "game_options"
 msgid "EXPANSION PACK"
@@ -6741,8 +6789,9 @@ msgid ""
 msgstr "為軌跡球、旋轉器、光槍（如果未連接）和類似控制啟用滑鼠輸入"
 
 msgctxt "game_options"
-msgid "Enable mouse input to simulate touchscreen."
-msgstr "啟用滑鼠輸入來模擬觸控螢幕。"
+msgid ""
+"Enable mouse or touchpad input to simulate the Wii U GamePad touchscreen."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enable notifications of cache, controller events etc."
@@ -7241,6 +7290,10 @@ msgid "External Host"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Extra memory over the 8MB default fastram. Need a 32bit cpu >= 68020."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Extreme"
 msgstr "極端的"
 
@@ -7481,6 +7534,10 @@ msgid "FULL SINGLE SCREEN"
 msgstr "全單螢幕"
 
 msgctxt "game_options"
+msgid "FULL SYNC AT GX2DRAWDONE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FULLSCREEN"
 msgstr "全螢幕"
 
@@ -7490,6 +7547,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "FULLSCREEN MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FULLSCREEN SCALING"
 msgstr ""
 
 msgctxt "game_options"
@@ -7800,8 +7861,8 @@ msgstr "強制 32位元"
 msgctxt "game_options"
 msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
-"screen devices/games."
-msgstr "強制3D幾何圖形總是呈現在頂部螢幕上。對單螢幕裝置/遊戲有用。"
+"screen devices/games. Can cause issues with intro videos."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Force 4:3"
@@ -8749,8 +8810,8 @@ msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master 卡匣"
 
 msgctxt "game_options"
-msgid "Have Batocera set the first audio output device."
-msgstr "讓 Batocera 設定第一個音訊輸出裝置。"
+msgid "Have Batocera automatically set the primary audio output device."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hebrew"
@@ -8798,10 +8859,6 @@ msgstr "單色顯示卡"
 
 msgctxt "game_options"
 msgid "Hermite"
-msgstr "Hermite"
-
-msgctxt "game_options"
-msgid "Hermite (Default)"
 msgstr "Hermite"
 
 msgctxt "game_options"
@@ -9088,6 +9145,12 @@ msgstr "提高速度，但會稍微降低準確度。"
 
 msgctxt "game_options"
 msgid ""
+"Improves accuracy and fixes game-specific glitches at the cost of some "
+"performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr "改進了精靈縮放和道路算繪。不影響汽車精靈。"
@@ -9144,6 +9207,10 @@ msgstr ""
 "包括 VR 頭部追蹤和適用於 VR 和 3D 電視的立體算繪，以及滑鼠支援（滑鼠外觀），"
 "並引入了新的頭部追蹤器輸入裝置類型，可選擇將類比輸入轉換為追蹤器角度，以增強"
 "類比控制器支援。"
+
+msgctxt "game_options"
+msgid "Increase cpu frequency."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Increase emulator performance, at the cost of accuracy/stability."
@@ -9485,8 +9552,8 @@ msgid "Keep (default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Keep Aspect Ration (Default)"
-msgstr "保持長寬比(預設)"
+msgid "Keep Aspect Ratio"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Keep original aspect ratio when stretching."
@@ -9640,6 +9707,10 @@ msgstr "延遲貼圖快取"
 
 msgctxt "game_options"
 msgid "LCD 1x"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LCD 1x NDS Color"
 msgstr ""
 
 msgctxt "game_options"
@@ -11695,6 +11766,10 @@ msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
 msgstr "超頻 SNES CPU（Gradius 3、Super R-Type）。"
 
 msgctxt "game_options"
+msgid "Override the CPU that comes with the selected Amiga model."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Overrides the language mode of the emulated console."
 msgstr "覆寫模擬主機的語言模式。"
 
@@ -12545,10 +12620,6 @@ msgid "Primary attack"
 msgstr "主要攻擊"
 
 msgctxt "game_options"
-msgid "Pro Controller required for games that require shake motions."
-msgstr "需要搖晃動作的遊戲需要 Pro Controller。"
-
-msgctxt "game_options"
 msgid "Produces a clean LCD effect."
 msgstr "產生清晰的 LCD 效果。"
 
@@ -12932,6 +13003,10 @@ msgstr "隨機值"
 
 msgctxt "game_options"
 msgid "Raw"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Read CD images faster than the real drive."
 msgstr ""
 
 msgctxt "game_options"
@@ -13427,10 +13502,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SDL"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SDL (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -15170,10 +15241,6 @@ msgid "Stereo (2)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stereo (Default)"
-msgstr "立體聲(預設)"
-
-msgctxt "game_options"
 msgid "Stereo sound output."
 msgstr ""
 
@@ -15215,6 +15282,10 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Stretch the viewport to fill your display, ignoring the native aspect ratio."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Stretch to Fill"
 msgstr ""
 
 msgctxt "game_options"
@@ -15378,6 +15449,11 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Synchronize frame presentation with monitor refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Synchronize frame rate with monitor refresh rate to eliminate screen tearing."
 msgstr ""
 
 msgctxt "game_options"
@@ -15593,6 +15669,10 @@ msgid "TOUCH SCREEN MODE"
 msgstr "觸控式螢幕模式"
 
 msgctxt "game_options"
+msgid "TOUCHSCREEN EMULATION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TRAFFIC DENSITY"
 msgstr ""
 
@@ -15651,6 +15731,10 @@ msgstr "TT AUTO"
 msgctxt "game_options"
 msgid "TT ETOS 512k"
 msgstr "TT ETOS 512k"
+
+msgctxt "game_options"
+msgid "TURBO CD SPEED"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TURBO MODE"
@@ -17300,6 +17384,10 @@ msgid "ZOOM/CROP (HIDE BORDERS)"
 msgstr "縮放/裁切(隱藏邊框)"
 
 msgctxt "game_options"
+msgid "ZORRO III FAST RAM"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "遊戲對方向盤沒有反應的區域（以度為單位）"
 
@@ -17984,6 +18072,10 @@ msgstr "yellow/blue"
 #~ msgstr "非同步著色編譯器"
 
 #~ msgctxt "game_options"
+#~ msgid "Batocera sets first audio device (Default)"
+#~ msgstr "Batocera 設定第一個聲音裝置 (預設)"
+
+#~ msgctxt "game_options"
 #~ msgid "Bicubic: B-Spine"
 #~ msgstr "Bicubic: B-Spine"
 
@@ -18236,10 +18328,6 @@ msgstr "yellow/blue"
 #~ msgstr "啟用軟體算繪"
 
 #~ msgctxt "game_options"
-#~ msgid "EVDEV (Default)"
-#~ msgstr "EVDEV (預設)"
-
-#~ msgctxt "game_options"
 #~ msgid "EXPERT SETTINGS"
 #~ msgstr "專家設定"
 
@@ -18250,6 +18338,10 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Enable full-screen antialiasing in Direct3D."
 #~ msgstr "在 Direct3D 中啟用全螢幕抗鋸齒。"
+
+#~ msgctxt "game_options"
+#~ msgid "Enable mouse input to simulate touchscreen."
+#~ msgstr "啟用滑鼠輸入來模擬觸控螢幕。"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -18401,6 +18493,12 @@ msgstr "yellow/blue"
 #~ "桿上駕駛時會有較低靈敏度。"
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Force 3D geometry to always render on the top screen. Useful for single-"
+#~ "screen devices/games."
+#~ msgstr "強制3D幾何圖形總是呈現在頂部螢幕上。對單螢幕裝置/遊戲有用。"
+
+#~ msgctxt "game_options"
 #~ msgid "Force Linear"
 #~ msgstr "強制線性"
 
@@ -18453,10 +18551,18 @@ msgstr "yellow/blue"
 #~ msgstr "HAT 上"
 
 #~ msgctxt "game_options"
+#~ msgid "Have Batocera set the first audio output device."
+#~ msgstr "讓 Batocera 設定第一個音訊輸出裝置。"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Helps reduce CPU power consumption by throttling the CPU when not needed. "
 #~ "Useful for handhelds."
 #~ msgstr "透過在不需要時限制 CPU 來幫助降低功耗。適用於手持裝置。"
+
+#~ msgctxt "game_options"
+#~ msgid "Hermite (Default)"
+#~ msgstr "Hermite"
 
 #~ msgctxt "game_options"
 #~ msgid "High (Default)"
@@ -18512,6 +18618,10 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Joystick (Analog, 2 Buttons)"
 #~ msgstr "搖桿(類比，雙鍵)"
+
+#~ msgctxt "game_options"
+#~ msgid "Keep Aspect Ration (Default)"
+#~ msgstr "保持長寬比(預設)"
 
 #~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
@@ -18750,6 +18860,10 @@ msgstr "yellow/blue"
 #~ msgstr "ES 無法進行預先載入。"
 
 #~ msgctxt "game_options"
+#~ msgid "Pro Controller required for games that require shake motions."
+#~ msgstr "需要搖晃動作的遊戲需要 Pro Controller。"
+
+#~ msgctxt "game_options"
 #~ msgid "QUERY OCCLUSION"
 #~ msgstr "查詢阻塞"
 
@@ -18932,6 +19046,10 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "South Korea"
 #~ msgstr "South Korea"
+
+#~ msgctxt "game_options"
+#~ msgid "Stereo (Default)"
+#~ msgstr "立體聲(預設)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Strafe Left"

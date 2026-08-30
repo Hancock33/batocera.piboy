@@ -426,6 +426,10 @@ msgid "125% (Overclock)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "128 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1280 x 1024"
 msgstr "1280 x 1024"
 
@@ -584,6 +588,10 @@ msgstr "15x Native (~6720p)"
 msgctxt "game_options"
 msgid "16 Frame"
 msgstr "16 Képkocka"
+
+msgctxt "game_options"
+msgid "16 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "16 MHz"
@@ -967,6 +975,10 @@ msgid "24th"
 msgstr "24."
 
 msgctxt "game_options"
+msgid "256 MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2560 x 1440"
 msgstr "2560 x 1440"
 
@@ -1214,6 +1226,10 @@ msgstr "30."
 msgctxt "game_options"
 msgid "31st"
 msgstr "31."
+
+msgctxt "game_options"
+msgid "32 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "32 MHz"
@@ -1486,6 +1502,10 @@ msgstr "486_lassú"
 msgctxt "game_options"
 msgid "48MB"
 msgstr "48MB"
+
+msgctxt "game_options"
+msgid "49.66 MHz (50MHz accelerator)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4:3 (Default)"
@@ -1802,6 +1822,10 @@ msgstr "60 másodperc"
 msgctxt "game_options"
 msgid "6144MB"
 msgstr "6144MB"
+
+msgctxt "game_options"
+msgid "64 MB"
+msgstr ""
 
 msgctxt "game_options"
 msgid "64 MHz (Overclock)"
@@ -2506,6 +2530,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Accurate"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Accurate cpu and blitter timings."
 msgstr ""
 
 msgctxt "game_options"
@@ -3657,8 +3685,8 @@ msgid "Batocera Control Center"
 msgstr "Batocera Irányítóközpont"
 
 msgctxt "game_options"
-msgid "Batocera sets first audio device (Default)"
-msgstr "Batocera beállítja az első audio eszközt (alapértelmezett)"
+msgid "Batocera sets first audio device"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Battery percentage"
@@ -4367,6 +4395,10 @@ msgid "CPU FEATURE"
 msgstr "CPU FUNKCIÓ"
 
 msgctxt "game_options"
+msgid "CPU MODEL"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU SPEED"
 msgstr "CPU SEBESSÉG"
 
@@ -4529,6 +4561,10 @@ msgstr "CXD4 (LLE Fallback)"
 msgctxt "game_options"
 msgid "CYBERMORPH"
 msgstr "CYBERMORPH"
+
+msgctxt "game_options"
+msgid "CYCLE EXACT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Cache compiled shaders to storage to eliminate future stutter."
@@ -4932,7 +4968,7 @@ msgstr "Válassza ki a harci nehézséget."
 msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
-"lightguns and steering wheels. SDL for gamepads only."
+"lightguns and steering wheels. SDL2 for gamepads only."
 msgstr ""
 
 msgctxt "game_options"
@@ -5312,6 +5348,12 @@ msgid "Config"
 msgstr "Beállítás"
 
 msgctxt "game_options"
+msgid ""
+"Configure emulated controller layout. Choose Wiimote configurations for "
+"games requiring motion/shake."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Console AES Japan"
 msgstr "Console AES Japan"
 
@@ -5347,6 +5389,12 @@ msgstr "Vezérlők 5/6 gombos játékokhoz és egyéb egyedi vezérlőkhöz"
 
 msgctxt "game_options"
 msgid "Controls how the adhoc server relay is used."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Controls how the game scales to fit your display when the screen aspect "
+"ratio doesn't match the game."
 msgstr ""
 
 msgctxt "game_options"
@@ -6483,8 +6531,8 @@ msgid "ESYNC"
 msgstr "ESYNC"
 
 msgctxt "game_options"
-msgid "EVDEV"
-msgstr ""
+msgid "EVDEV (Default)"
+msgstr "EVDEV (alapértelmezett)"
 
 msgctxt "game_options"
 msgid "EXPANSION PACK"
@@ -6839,8 +6887,9 @@ msgstr ""
 "(ha nincs pisztoly csatlakoztatva) és hasonló vezérlőkhöz"
 
 msgctxt "game_options"
-msgid "Enable mouse input to simulate touchscreen."
-msgstr "Az érintőképernyő szimulálásához engedélyezze az egérbevitelt."
+msgid ""
+"Enable mouse or touchpad input to simulate the Wii U GamePad touchscreen."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enable notifications of cache, controller events etc."
@@ -7385,6 +7434,10 @@ msgid "External Host"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Extra memory over the 8MB default fastram. Need a 32bit cpu >= 68020."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Extreme"
 msgstr "Extrém"
 
@@ -7625,6 +7678,10 @@ msgid "FULL SINGLE SCREEN"
 msgstr "TELJES EGYETLEN KÉPERNYŐ"
 
 msgctxt "game_options"
+msgid "FULL SYNC AT GX2DRAWDONE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FULLSCREEN"
 msgstr "TELJES KÉPERNYŐ"
 
@@ -7634,6 +7691,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "FULLSCREEN MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FULLSCREEN SCALING"
 msgstr ""
 
 msgctxt "game_options"
@@ -7956,10 +8017,8 @@ msgstr "32 bites erőltetés"
 msgctxt "game_options"
 msgid ""
 "Force 3D geometry to always render on the top screen. Useful for single-"
-"screen devices/games."
+"screen devices/games. Can cause issues with intro videos."
 msgstr ""
-"Kényszerítse a 3D geometriát, hogy mindig a felső képernyőn jelenjen meg. "
-"Hasznos egyképernyős eszközökhöz/játékokhoz."
 
 msgctxt "game_options"
 msgid "Force 4:3"
@@ -8915,8 +8974,8 @@ msgid "Hartung Game Master cartridges"
 msgstr "Hartung Game Master kazetták"
 
 msgctxt "game_options"
-msgid "Have Batocera set the first audio output device."
-msgstr "A Batocera állítsa be az első hangkimeneti eszközt."
+msgid "Have Batocera automatically set the primary audio output device."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hebrew"
@@ -8969,10 +9028,6 @@ msgstr "Hercules"
 msgctxt "game_options"
 msgid "Hermite"
 msgstr "Hermite"
-
-msgctxt "game_options"
-msgid "Hermite (Default)"
-msgstr "Hermite (alapértelmezett)"
 
 msgctxt "game_options"
 msgid "Hide"
@@ -9263,6 +9318,12 @@ msgstr "A sebesség javítása a pontosság kisebb mértékű csökkenése árá
 
 msgctxt "game_options"
 msgid ""
+"Improves accuracy and fixes game-specific glitches at the cost of some "
+"performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Improves both sprite scaling and road rendering. Does not affect the car "
 "sprite."
 msgstr ""
@@ -9327,6 +9388,10 @@ msgstr ""
 "Tracker bemeneti eszköztípust kínál, olyan lehetőséggel, amely az analóg "
 "bemeneteket nyomkövetési szögekké alakítja a továbbfejlesztett analóg "
 "kontroller támogatás érdekében."
+
+msgctxt "game_options"
+msgid "Increase cpu frequency."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Increase emulator performance, at the cost of accuracy/stability."
@@ -9679,8 +9744,8 @@ msgid "Keep (default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Keep Aspect Ration (Default)"
-msgstr "Tartsa meg az arányt (alapértelmezett)"
+msgid "Keep Aspect Ratio"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Keep original aspect ratio when stretching."
@@ -9836,6 +9901,10 @@ msgstr "LUSTA TEXTÚRA GYORSÍTÓTÁROLÁSA"
 
 msgctxt "game_options"
 msgid "LCD 1x"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LCD 1x NDS Color"
 msgstr ""
 
 msgctxt "game_options"
@@ -11927,6 +11996,10 @@ msgid "Overclock the SNES CPU (Gradius 3, Super R-Type)."
 msgstr "Túlhajtja az SNES CPU-t (Gradius 3, Super R-Type)."
 
 msgctxt "game_options"
+msgid "Override the CPU that comes with the selected Amiga model."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Overrides the language mode of the emulated console."
 msgstr "Felülbírálja az emulált konzol nyelvi módját."
 
@@ -12784,10 +12857,6 @@ msgid "Primary attack"
 msgstr "Elsődleges támadás"
 
 msgctxt "game_options"
-msgid "Pro Controller required for games that require shake motions."
-msgstr "Pro Controller szükséges a rázó mozdulatokat igénylő játékokhoz."
-
-msgctxt "game_options"
 msgid "Produces a clean LCD effect."
 msgstr "Tiszta LCD hatást produkál."
 
@@ -13174,6 +13243,10 @@ msgstr "Véletlen értékek"
 msgctxt "game_options"
 msgid "Raw"
 msgstr "Nyers"
+
+msgctxt "game_options"
+msgid "Read CD images faster than the real drive."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Reads color buffer memory into CPU space. Required by some titles."
@@ -13677,10 +13750,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SDL"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SDL (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -15457,10 +15526,6 @@ msgid "Stereo (2)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Stereo (Default)"
-msgstr "Sztereó (alapértelmezett)"
-
-msgctxt "game_options"
 msgid "Stereo sound output."
 msgstr "Sztereó hangkimenet."
 
@@ -15506,6 +15571,10 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Stretch the viewport to fill your display, ignoring the native aspect ratio."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Stretch to Fill"
 msgstr ""
 
 msgctxt "game_options"
@@ -15673,6 +15742,11 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Synchronize frame presentation with monitor refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Synchronize frame rate with monitor refresh rate to eliminate screen tearing."
 msgstr ""
 
 msgctxt "game_options"
@@ -15888,6 +15962,10 @@ msgid "TOUCH SCREEN MODE"
 msgstr "ÉRINTŐKÉPERNYŐ MÓD"
 
 msgctxt "game_options"
+msgid "TOUCHSCREEN EMULATION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TRAFFIC DENSITY"
 msgstr ""
 
@@ -15946,6 +16024,10 @@ msgstr "TT AUTO"
 msgctxt "game_options"
 msgid "TT ETOS 512k"
 msgstr "TT ETOS 512k"
+
+msgctxt "game_options"
+msgid "TURBO CD SPEED"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TURBO MODE"
@@ -17657,6 +17739,10 @@ msgid "ZOOM/CROP (HIDE BORDERS)"
 msgstr "NAGYÍTÁS/VÁGÁS (SZEGÉREK ELREJTÉSE)"
 
 msgctxt "game_options"
+msgid "ZORRO III FAST RAM"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Zone for which the game doesn't react to the wheel (in degrees)"
 msgstr "Zóna, ahol a játék nem reagál a kerékre (fokban)"
 
@@ -18453,6 +18539,10 @@ msgstr "sárga/kék"
 #~ msgstr "Aszinkron a Shader Interpreterrel"
 
 #~ msgctxt "game_options"
+#~ msgid "Batocera sets first audio device (Default)"
+#~ msgstr "Batocera beállítja az első audio eszközt (alapértelmezett)"
+
+#~ msgctxt "game_options"
 #~ msgid "Bicubic: B-Spine"
 #~ msgstr "Bikubikus: B-spine"
 
@@ -18820,10 +18910,6 @@ msgstr "sárga/kék"
 #~ msgstr "WINE ESZKÖZÖK SZOLGÁLTATÁSÁNAK ENGEDÉLYEZÉSE"
 
 #~ msgctxt "game_options"
-#~ msgid "EVDEV (Default)"
-#~ msgstr "EVDEV (alapértelmezett)"
-
-#~ msgctxt "game_options"
 #~ msgid "EXPERT SETTINGS"
 #~ msgstr "SZAKÉRTŐI BEÁLLÍTÁSOK"
 
@@ -18838,6 +18924,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Enable full-screen antialiasing in Direct3D."
 #~ msgstr "Teljes képernyős élsimítás engedélyezése a Direct3D-ben."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable mouse input to simulate touchscreen."
+#~ msgstr "Az érintőképernyő szimulálásához engedélyezze az egérbevitelt."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19049,6 +19139,14 @@ msgstr "sárga/kék"
 #~ "legyen a hüvelykujjra."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Force 3D geometry to always render on the top screen. Useful for single-"
+#~ "screen devices/games."
+#~ msgstr ""
+#~ "Kényszerítse a 3D geometriát, hogy mindig a felső képernyőn jelenjen meg. "
+#~ "Hasznos egyképernyős eszközökhöz/játékokhoz."
+
+#~ msgctxt "game_options"
 #~ msgid "Force Linear"
 #~ msgstr "Erőltetett lineáris"
 
@@ -19116,6 +19214,10 @@ msgstr "sárga/kék"
 #~ msgstr "Hat Fel"
 
 #~ msgctxt "game_options"
+#~ msgid "Have Batocera set the first audio output device."
+#~ msgstr "A Batocera állítsa be az első hangkimeneti eszközt."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Helps reduce CPU power consumption by throttling the CPU when not needed. "
 #~ "Useful for handhelds."
@@ -19128,6 +19230,10 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Letiltva segít egyes játékok elindításában. Befolyásolhatja a "
 #~ "teljesítményt."
+
+#~ msgctxt "game_options"
+#~ msgid "Hermite (Default)"
+#~ msgstr "Hermite (alapértelmezett)"
 
 #~ msgctxt "game_options"
 #~ msgid "Hidden"
@@ -19216,6 +19322,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Joystick (Analog, 2 Buttons)"
 #~ msgstr "Joystick (Analog, 2 gombos)"
+
+#~ msgctxt "game_options"
+#~ msgid "Keep Aspect Ration (Default)"
+#~ msgstr "Tartsa meg az arányt (alapértelmezett)"
 
 #~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
@@ -19570,6 +19680,10 @@ msgstr "sárga/kék"
 #~ msgstr "Az ES előtöltése lehetetlen."
 
 #~ msgctxt "game_options"
+#~ msgid "Pro Controller required for games that require shake motions."
+#~ msgstr "Pro Controller szükséges a rázó mozdulatokat igénylő játékokhoz."
+
+#~ msgctxt "game_options"
 #~ msgid "QUERY OCCLUSION"
 #~ msgstr "LEKÉRDEZÉS ELZÁRÓDÁS"
 
@@ -19846,6 +19960,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "South Korea"
 #~ msgstr "Dél-Korea"
+
+#~ msgctxt "game_options"
+#~ msgid "Stereo (Default)"
+#~ msgstr "Sztereó (alapértelmezett)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Strafe Left"
