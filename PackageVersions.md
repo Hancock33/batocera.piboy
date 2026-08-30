@@ -52,7 +52,7 @@ Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-lin
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|2092db19f7b40854e0427a1b2e39eda9f8d0c3cd|May 28, 2025
 Controllers|[qtsixa-shanwan](http://github.com/batocera-linux/qtsixa)|f01193703070a0d0f5db582bb0a6fe8c21ebf517|May 01, 2016
 Controllers|[qtsixa](http://github.com/batocera-linux/qtsixa)|eec727030f341cf543a56bd9aeb821ea901bca64|May 01, 2016
-Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|6370d132fa1eafb78c6479d05f8e5dcf056308bc|Aug 29, 2026
+Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|af76f5b56a180aabf3553a8b2b1c0bb7022a3274|Aug 30, 2026
 Controllers|[sinden-guns-libs](http://github.com/batocera-linux/batocera-sinden-bundles)|a18005ab0ce07d0d18f8575ba21162c58fbd2520|Sept 18, 2023
 Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 2024
 Controllers|[uinput-joystick](http://github.com/shantigilbert/uinput_joystick)|bea7d56f4947b547db2b827640bc9966fe770f84|Feb 11, 2022
@@ -87,7 +87,7 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|fc88
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.08.02-osfree|Aug 03, 2026
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/dmanlfc/drastic/raw/refs/heads/main)|r2.5.2.2|Feb 26, 2021
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|9287950af26337a72b5636add010354a089a0fc1|Aug 29, 2026
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|b0f7c5c1624d133d7c9e519d3b6f5ebb04b80c58|Aug 30, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|e5b656e3725dc3718e31a4d6d91649801dcdd40b|Aug 30, 2026
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|3ea88dcd982b39a4bfb841d47dbcaecbd99536e7|Jul 06, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|e2722869ffb6f404d2056a12653aa67e4210d61d|Aug 30, 2026
@@ -253,15 +253,15 @@ Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|b07cb0bc8f29d6ee43efdf0a4d5a1b878ba98393|Jun 23, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|038882dd2e7cb660fd7512c0745032f17edd0bfa|Jun 23, 2026
 Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3|May 10, 2026
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|3e2c2e9c876f940eaf4c4db4491be49a170f3dd1|Aug 30, 2026
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|5b0327eaf1aecc2c24d9bce2bb3f5efaf91b0d31|Aug 30, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.8.0|Aug 28, 2026
 Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|Aug 18, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|e4a0f649fa5864c5d8b5b503e34670c52739c0cb|Aug 30, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1239-ge06df78|Aug 18, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|73106363e14e34c08a5854b4cfbc29f184e3b783|Aug 13, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|8ff9a43ba3155f3236186bee7c079f421c591a92|Aug 30, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|e424afdf9b2541733e00e77fc8ccd451a7c8bef7|Aug 30, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260820|Aug 20, 2026
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|da5d5e50276d33e9d6b301a5b2ebebd0bca8558d|Aug 30, 2026
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|3ef20ebb0113a3f1af312c523ff275c8e2d325ad|Aug 30, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.351|Aug 26, 2026
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.18.0|Aug 18, 2026
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|a38fc8be4955381b01dfe2939ac13879190ba170|Jun 16, 2026
@@ -294,7 +294,7 @@ Engines|[libserum](http://github.com/PPUC/libserum)|v2.6.1|Jul 08, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|eb910403834184e1d098bcc310054ac17a00b53d|Aug 03, 2026
 Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|bcc790e58d394b282c327feca2a7c921ca022e8d|Jul 19, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.11.0|Jun 01, 2026
-Engines|[lightspark](http://github.com/lightspark/lightspark)|7e1c21d33d96164761a09189697c37f54a3a88f3|Aug 22, 2026
+Engines|[lightspark](http://github.com/lightspark/lightspark)|f21c4255f587945131244868826ec7ecec321d34|Aug 29, 2026
 Engines|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|f32e415aea6797d261d6b470dcf8bf18727341c2|Jun 06, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|1da6ff434c7a4afa206d3215a5559ccc4c9df3c5|Aug 26, 2026
 Engines|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d59842e87e75f415dfb4322ead93|Jan 14, 2021
