@@ -13,9 +13,14 @@ case "${ACTION}" in
 		LC_ALL=C aplay -l | grep -E '^card [0-9]*:' | sed -e s+'^card \([0-9]*\): \(.*\), device \([0-9]*\): [^\[]* \[\([^]]*\)].*$'+'\1,\3 \4 \2'+
 	;;
 
-	"get")
+	"get")	
 		batocera-settings -command load -key audio.device
-	;;
+		;;
+
+	"get-active")
+	        # hum, how to get the current active (not the one from the configuration)
+		batocera-settings -command load -key audio.device
+	;;	
 
 	"set")
 		MODE=$2
