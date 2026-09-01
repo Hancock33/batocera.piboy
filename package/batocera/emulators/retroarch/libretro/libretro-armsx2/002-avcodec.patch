@@ -1,15 +1,15 @@
-From caaa4c0f30c3dc6ed5e782cf10fd47d1deff2dbe Mon Sep 17 00:00:00 2001
+From 122d0424e74ea7d39649d06bcd13388062628cdc Mon Sep 17 00:00:00 2001
 From: KamFretoZ <14798312+kamfretoz@users.noreply.github.com>
 Date: Sat, 8 Aug 2026 18:52:32 +0700
-Subject: [PATCH 3/4] GSCapture: Depcreate `pix_fmts` with
+Subject: [PATCH] GSCapture: Switch the use of `pix_fmts` with
  `avcodec_get_supported_config()`
 
 ---
- pcsx2/GS/GSCapture.cpp | 41 +++++++++++++++++++++++++++--------------
- 1 file changed, 27 insertions(+), 14 deletions(-)
+ pcsx2/GS/GSCapture.cpp | 43 ++++++++++++++++++++++++++++--------------
+ 1 file changed, 29 insertions(+), 14 deletions(-)
 
 diff --git a/pcsx2/GS/GSCapture.cpp b/pcsx2/GS/GSCapture.cpp
-index 827a4a75bcb69..d0b5f8e57355c 100644
+index 827a4a75bcb69..d143f9e8db377 100644
 --- a/pcsx2/GS/GSCapture.cpp
 +++ b/pcsx2/GS/GSCapture.cpp
 @@ -67,6 +67,7 @@ extern "C" {
@@ -42,7 +42,7 @@ index 827a4a75bcb69..d0b5f8e57355c 100644
  					break;
  				}
  			}
-@@ -686,18 +689,26 @@ bool GSCapture::BeginCapture(float fps, GSVector2i recommendedResolution, float
+@@ -686,18 +689,28 @@ bool GSCapture::BeginCapture(float fps, GSVector2i recommendedResolution, float
  #endif
  
  		bool supports_format = false;
@@ -64,7 +64,9 @@ index 827a4a75bcb69..d0b5f8e57355c 100644
  			}
  		}
 +		else
++		{
 +			supports_format = true;
++		}
 +
  		if (!supports_format)
  		{
@@ -74,7 +76,7 @@ index 827a4a75bcb69..d0b5f8e57355c 100644
  			s_swr_context = wrap_swr_alloc();
  			if (!s_swr_context)
  			{
-@@ -1532,16 +1543,18 @@ GSCapture::FormatList GSCapture::GetVideoFormatList(const char* codec)
+@@ -1532,16 +1545,18 @@ GSCapture::FormatList GSCapture::GetVideoFormatList(const char* codec)
  		return ret;
  	}
  
@@ -97,4 +99,3 @@ index 827a4a75bcb69..d0b5f8e57355c 100644
  	}
  
  	return ret;
-

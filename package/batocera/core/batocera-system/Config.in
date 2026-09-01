@@ -1330,6 +1330,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Sony PS2
     select BR2_PACKAGE_PCSX2                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_PS2                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+	select BR2_PACKAGE_LIBRETRO_ARMSX2                      if  BR2_PACKAGE_BATOCERA_BCM27XX
 
     # Sony PS3
     select BR2_PACKAGE_RPCS3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY

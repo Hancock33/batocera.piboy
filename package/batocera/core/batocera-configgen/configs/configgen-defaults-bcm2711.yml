@@ -60,6 +60,9 @@ nds:
 pet:
   emulator: libretro
   core:     vice_xpet
+ps2:
+  emulator: libretro
+  core:     armsx2
 psp:
   options:
     frameskip: automatic

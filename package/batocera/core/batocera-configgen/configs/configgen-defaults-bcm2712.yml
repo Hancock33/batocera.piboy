@@ -22,6 +22,9 @@ model3:
   core:     supermodel
   options:
     videomode: max-1920x1080
+ps2:
+  emulator: libretro
+  core:     armsx2
 saturn:
   emulator: libretro
   core:     yabausesa

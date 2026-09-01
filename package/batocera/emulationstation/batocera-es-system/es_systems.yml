@@ -6783,6 +6783,7 @@ ps2:
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2], incompatible_extensions: [m3u] }
     libretro:
       ps2:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PS2], incompatible_extensions: [m3u] }
+      armsx2:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ARMSX2], incompatible_extensions: [m3u] }
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:ps2
   comment_fr:           |

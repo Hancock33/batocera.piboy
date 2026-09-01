@@ -73,7 +73,7 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
     global _active_player_controllers, _evmapy_instance
     global endSystem
     endSystem = args.system
-    arch = None
+    arch = Path('/usr/share/batocera/batocera.arch').read_text().splitlines()[0]
 
     player_controllers = Controller.load_for_players(maxnbplayers, args)
 
@@ -200,7 +200,6 @@ def start_rom(args: argparse.Namespace, maxnbplayers: int, rom: Path, original_r
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
                 callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
 
-                arch = Path('/usr/share/batocera/batocera.arch').read_text().splitlines()[0]
                 if arch == 'x86_64':
                     if system.config.get('powersave') == '0':
                         subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
