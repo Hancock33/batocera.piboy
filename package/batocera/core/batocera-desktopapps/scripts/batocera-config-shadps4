@@ -30,14 +30,4 @@ if [ ! -d "$dlcPath" ]; then
     fi
 fi
 
-if [[ -x /usr/bin/shadPS4QtLauncher ]]; then
-    echo "Starting shadPS4QtLauncher..."
-    USER=root \
-    QT_PLUGIN_PATH=/usr/lib/qt6/plugins \
-    QT_QPA_PLATFORM=xcb \
-    QT_XCB_NO_XI2=1 \
-    /usr/bin/shadPS4QtLauncher
-else
-    echo "System not found."
-    exit 1
-fi
+batocera-launch -system ps4 -rom config -emulator shadps4
