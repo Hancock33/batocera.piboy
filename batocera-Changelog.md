@@ -71,12 +71,14 @@
 - Vita3k added for capable aarch64 devices
 - PCEngine / PCEngineCD: added Libretro-Beetle-PCE (not "Fast") for capable aarch64 devices
 ### Updated
+- Amiberry to v8.3.0
+- AppleWin to Aug 29, 2026 build
 - Azahar to 2126.0
 - BigPEmu to 1.221
 - Blake Stone to v1.3.4
 - Box64 0.4.4
 - CatacombGL to Jun 20, 2026 build
-- Cemu to August 7th, 2026 build
+- Cemu to Aug 22, 2026 build
 - CDogs to 2.4.0
 - CLK to 2026-07-23
 - Commander Genius to v3.6.3

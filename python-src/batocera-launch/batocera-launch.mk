@@ -18,11 +18,13 @@ BATOCERA_LAUNCH_INSTALL_STAGING = YES
 BATOCERA_LAUNCH_LOCAL_PYTHON_EXCLUSIONS = \
 	$(addprefix batocera_launch/emulators/, \
 		$(if $(BR2_PACKAGE_ABUSE),,abuse.py) \
+		$(if $(BR2_PACKAGE_AMIBERRY),,amiberry.py) \
 		$(if $(BR2_PACKAGE_APPLEWIN),,applewin.py) \
 		$(if $(BR2_PACKAGE_AZAHAR),,azahar.py) \
 		$(if $(BR2_PACKAGE_BSTONE),,bstone.py) \
 		$(if $(BR2_PACKAGE_CANNONBALL),,cannonball.py) \
 		$(if $(BR2_PACKAGE_CATACOMBGL),,catacombgl.py) \
+		$(if $(BR2_PACKAGE_CEMU),,cemu.py) \
 		$(if $(BR2_PACKAGE_CLK),,clk.py) \
 		$(if $(BR2_PACKAGE_CORSIXTH),,corsixth.py) \
 		$(if $(BR2_PACKAGE_DEVILUTIONX),,devilutionx.py) \
