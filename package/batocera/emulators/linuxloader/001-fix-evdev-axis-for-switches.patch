@@ -1,28 +1,8 @@
-diff --git a/src/loader/input/evdevInput.h b/src/loader/input/evdevInput.h
-index 91cf798..ce3bdd8 100644
---- a/src/loader/input/evdevInput.h
-+++ b/src/loader/input/evdevInput.h
-@@ -5,7 +5,7 @@
- 
- #define SIZE 300
- #define CONTROLLER_THREAD_MAX 256
--#define MAX_INPUTS 512
-+#define MAX_INPUTS 768 // KEY_MAX : some events have this
- 
- typedef struct
- {
-@@ -114,4 +114,4 @@ typedef struct
- ControllerStatus initEvdevControllers(Controllers *controllers);
- ControllerStatus stopEvdevControllers(Controllers *controllers);
- ControllerStatus loadEvdevControllers(Controllers *controllers);
--#endif
-\ No newline at end of file
-+#endif
 diff --git a/src/loader/input/evdevInput.c b/src/loader/input/evdevInput.c
-index fbacca3..4fb3b65 100644
+index ed0807d..2e3e1ba 100644
 --- a/src/loader/input/evdevInput.c
 +++ b/src/loader/input/evdevInput.c
-@@ -1080,11 +1080,17 @@ ControllerStatus loadEvdevControllers(Controllers *controllers)
+@@ -1078,11 +1078,17 @@ ControllerStatus loadEvdevControllers(Controllers *controllers)
  
          if (test_bit(EV_ABS, bit[0]))
          {
@@ -42,7 +22,7 @@ index fbacca3..4fb3b65 100644
                      controllers->controller[i].enabled = 1;
                      ControllerInput *controllerInput = &controllers->controller[i].inputs[controllers->controller[i].inputCount++];
                      controllerInput->evType = EV_ABS;
-@@ -1422,38 +1428,57 @@ void *controllerThread(void *_args)
+@@ -1413,38 +1419,57 @@ void *controllerThread(void *_args)
                          }
                      }
  
@@ -121,10 +101,30 @@ index fbacca3..4fb3b65 100644
                              }
                          }
                      }
-@@ -1875,4 +1900,4 @@ ControllerStatus initEvdevControllers(Controllers *controllers)
+@@ -1859,4 +1884,4 @@ ControllerStatus initEvdevControllers(Controllers *controllers)
  #endif
      return CONTROLLER_STATUS_SUCCESS;
  }
+-#endif
+\ No newline at end of file
++#endif
+diff --git a/src/loader/input/evdevInput.h b/src/loader/input/evdevInput.h
+index 91cf798..ce3bdd8 100644
+--- a/src/loader/input/evdevInput.h
++++ b/src/loader/input/evdevInput.h
+@@ -5,7 +5,7 @@
+ 
+ #define SIZE 300
+ #define CONTROLLER_THREAD_MAX 256
+-#define MAX_INPUTS 512
++#define MAX_INPUTS 768 // KEY_MAX : some events have this
+ 
+ typedef struct
+ {
+@@ -114,4 +114,4 @@ typedef struct
+ ControllerStatus initEvdevControllers(Controllers *controllers);
+ ControllerStatus stopEvdevControllers(Controllers *controllers);
+ ControllerStatus loadEvdevControllers(Controllers *controllers);
 -#endif
 \ No newline at end of file
 +#endif
