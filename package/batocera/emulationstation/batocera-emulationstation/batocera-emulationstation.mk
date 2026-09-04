@@ -4,12 +4,12 @@
 #
 ################################################################################
 # Version: Commits on Sept 04, 2026
-BATOCERA_EMULATIONSTATION_VERSION = bb1a4b7cc372e5d228a4eef3d3fa33bd1405ac29
+BATOCERA_EMULATIONSTATION_VERSION = bc22355d2797b90ed96d43584c4d9981a68e1fb1
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
 BATOCERA_EMULATIONSTATION_LICENSE = MIT, Apache-2.0
-BATOCERA_EMULATIONSTATION_DEPENDENCIES = alsa-lib batocera-es-system freetype libcurl libfreeimage pugixml rapidjson sdl2 sdl2_mixer vlc
+BATOCERA_EMULATIONSTATION_DEPENDENCIES = alsa-lib batocera-es-system freetype libcurl libfreeimage libfribidi pugixml rapidjson sdl2 sdl2_mixer vlc
 BATOCERA_EMULATIONSTATION_DEPENDENCIES += host-gettext
 BATOCERA_EMULATIONSTATION_INSTALL_IMAGES = YES
 
