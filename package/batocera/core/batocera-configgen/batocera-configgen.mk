@@ -12,8 +12,8 @@ BATOCERA_CONFIGGEN_DEPENDENCIES = \
 	batocera-launch \
 	python-toml \
 	python-evdev \
+	python-configobj \
 	python-pyudev \
-	python3-configobj \
 	ffmpeg-python \
 	python-pillow \
 	python-requests \
