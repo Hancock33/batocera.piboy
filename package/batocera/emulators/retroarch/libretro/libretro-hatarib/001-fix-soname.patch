@@ -1,8 +1,8 @@
 diff --git a/hatari/src/floppy_ipf.c b/hatari/src/floppy_ipf.c
-index 412ba690f3..ce14e3c0d3 100644
+index 77de160..5155c6e 100644
 --- a/hatari/src/floppy_ipf.c
 +++ b/hatari/src/floppy_ipf.c
-@@ -322,7 +322,7 @@ static bool capsValid = false;
+@@ -327,7 +327,7 @@ static bool core_ipf_ready(void);
  #ifdef WIN32
  #define CAPS_SONAME "capsimg.dll"
  #else

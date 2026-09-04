@@ -1,26 +1,13 @@
-diff --git a/doc/release-notes.txt b/doc/release-notes.txt
-index 127329be..885c8dc6 100644
---- a/doc/release-notes.txt
-+++ b/doc/release-notes.txt
-@@ -979,7 +979,7 @@ Emulator:
-  Version 1.0.0 (2008-03-17):
-  ---------------------------
- 
--- The user's configuration files are now located in the directory ~/.hatari/
-+- The user's configuration files are now located in the directory ~//
-   instead of the $HOME directory itself.
- - Improved VDI resolution mode (resolution can now be change in small steps).
- - The 'Frame Skip 8' option can now be correctly selected, too.
 diff --git a/src/paths.c b/src/paths.c
-index 90e740a8..b95ae79c 100644
+index bd71f555b..d0fde0210 100644
 --- a/src/paths.c
 +++ b/src/paths.c
-@@ -37,7 +37,7 @@ const char Paths_fileid[] = "Hatari paths.c : " __DATE__ " " __TIME__;
- #if defined(WIIU) || defined(VITA) || defined(__PS3__)
- 	#define HATARI_HOME_DIR "hatari"
+@@ -30,7 +30,7 @@ extern const char *retro_save_directory;
+ #elif defined(WIN32)
+ 	#define HATARI_HOME_DIR "AppData\\Local\\Hatari"
  #else
--	#define HATARI_HOME_DIR ".hatari"
+-	#define HATARI_HOME_DIR ".config/hatari"
 +	#define HATARI_HOME_DIR "configs/hatari"
  #endif
- #endif
  
+ static char *sWorkingDir;     /* Working directory */
