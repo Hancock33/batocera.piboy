@@ -9,6 +9,7 @@ BATOCERA_LAUNCH_DEPENDENCIES = \
 	python-batocera-common \
 	python-uvloop \
 	python-evdev \
+	python-aiohttp \
 	python-pyudev \
 	python-toml \
 	python-pillow \
