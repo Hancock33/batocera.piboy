@@ -3671,10 +3671,6 @@ msgstr ""
 "Tipul de filtrare de bază pentru ecranul Jaguar când randarea se face la "
 "rezoluția nativă."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Centru de control Batocera"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5565,6 +5561,10 @@ msgid "Czech Republic"
 msgstr "Republica Cehă"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "PLUGIN DATE"
 
@@ -7252,6 +7252,18 @@ msgstr ""
 "Îmbunătățire. Funcționează doar cu un raport 16/9 și ramele dezactivate."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Îmbunătățire. Reduce încetinirea în jocurile mod 7."
 
@@ -8918,6 +8930,10 @@ msgid "HQ MODE"
 msgstr "MOD HQ"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -9016,10 +9032,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Ascunde"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "Ascunde marginile"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9211,6 +9223,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INTERFAȚĂ DE INTRARE"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10857,10 +10873,6 @@ msgid "Menacer Light Gun"
 msgstr "Pistol luminos Menacer"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Meniu"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Meniu înapoi"
 
@@ -11441,16 +11453,8 @@ msgid "Next Weapon"
 msgstr "Următoarea armă"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "Discul următor"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "Următorul element"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "Următorul slot"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12830,10 +12834,6 @@ msgid "Previous item"
 msgstr "Elementul anterior"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Slotul anterior"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Arma anterioară"
 
@@ -13408,10 +13408,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Restaurează silueta BLENDMODE pe sprite-uri Singe."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Restaurează starea"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "Wii VC restaurat"
@@ -13435,10 +13431,6 @@ msgstr "Retropad (Implicit)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Rewind"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13625,6 +13617,10 @@ msgstr "FACTOR SCALARE"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "DITHERING SCALAT"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14206,10 +14202,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "Salvează starea"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14267,10 +14259,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Înclinare ecran (grade)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Captură de ecran"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15656,10 +15644,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "Interschimbă ecranele"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Interschimbă poziția ecranelor."
@@ -16300,10 +16284,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Cartelă Tomy Tutor & Pyuuta"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "Comută amplasare ecrane"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "Deasupra"
@@ -16380,9 +16360,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Chineză tradițională"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Traducere"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18483,6 +18463,10 @@ msgstr "galben/albastru"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "Asincron cu interpretor shader"
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Centru de control Batocera"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "Batocera alege primul dispozitiv audio (Implicit)"
@@ -19130,6 +19114,10 @@ msgstr "galben/albastru"
 #~ msgid "Hermite (Default)"
 #~ msgstr "Hermite (Implicit)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "Ascunde marginile"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 #~ msgstr ""
@@ -19300,6 +19288,10 @@ msgstr "galben/albastru"
 #~ "pentru compatibilitate maximă."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Meniu"
+
+#~ msgctxt "keys_files"
 #~ msgid "Menu N"
 #~ msgstr "Meniu N"
 
@@ -19361,6 +19353,14 @@ msgstr "galben/albastru"
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "Următorul disc (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "Discul următor"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "Următorul slot"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -19542,6 +19542,10 @@ msgstr "galben/albastru"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "Preîncărcarea este imposibilă din ES."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Slotul anterior"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr ""
@@ -19672,6 +19676,14 @@ msgstr "galben/albastru"
 #~ msgstr "Repornește jocul"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Restaurează starea"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Rewind"
+
+#~ msgctxt "keys_files"
 #~ msgid "Right Flipper"
 #~ msgstr "Aripa dreaptă"
 
@@ -19713,9 +19725,17 @@ msgstr "galben/albastru"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Salvează starea în slotul 1"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "Salvează starea"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Rezoluția ecranului (Implicit)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Captură de ecran"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19864,6 +19884,10 @@ msgstr "galben/albastru"
 #~ msgstr "Comută ecranele"
 
 #~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "Interschimbă ecranele"
+
+#~ msgctxt "keys_files"
 #~ msgid "Swap screens"
 #~ msgstr "Comută ecrane"
 
@@ -19934,8 +19958,16 @@ msgstr "galben/albastru"
 #~ msgstr "Comută limită de viteză"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "Comută amplasare ecrane"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "Ecran tactil"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Traducere"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

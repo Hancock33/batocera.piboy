@@ -3660,10 +3660,6 @@ msgid ""
 "display."
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5532,6 +5528,10 @@ msgid "Czech Republic"
 msgstr "Republik Ceko"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "PLUGIN DATA"
 
@@ -7175,6 +7175,18 @@ msgstr ""
 "Meningkatkan. Hanya berfungsi dengan rasio 16/9 dan bezel dinonaktifkan."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Meningkatkan. Mengurangi perlambatan dalam mode 7 games."
 
@@ -8811,6 +8823,10 @@ msgid "HQ MODE"
 msgstr "MODE HQ"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8904,10 +8920,6 @@ msgstr "Hermite"
 
 msgctxt "game_options"
 msgid "Hide"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Hide bezels"
 msgstr ""
 
 msgctxt "game_options"
@@ -9100,6 +9112,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INPUT (MASUKAN) ANTARMUKA"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10719,10 +10735,6 @@ msgid "Menacer Light Gun"
 msgstr "Pistol Ringan Menacer"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
 
@@ -11295,15 +11307,7 @@ msgid "Next Weapon"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Next slot"
 msgstr ""
 
 msgctxt "keys_files"
@@ -12670,10 +12674,6 @@ msgid "Previous item"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr ""
 
@@ -13243,10 +13243,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Pulihkan Mode Blend garis luar dalam Singe Sprites"
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr ""
@@ -13269,10 +13265,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
 msgstr ""
 
 msgctxt "game_options"
@@ -13455,6 +13447,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SCALED DITHERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SCALER"
 msgstr ""
 
 msgctxt "game_options"
@@ -14037,10 +14033,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14097,10 +14089,6 @@ msgstr "Scorpion 256K"
 
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Screenshot"
 msgstr ""
 
 msgctxt "game_options"
@@ -15454,10 +15442,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Tukar posisi tampilan ganda"
@@ -16084,10 +16068,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Katrid - Tomy Tutor & Pyuuta"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Top"
 msgstr ""
@@ -16164,8 +16144,8 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Cina Tradisional"
 
-msgctxt "keys_files"
-msgid "Translate"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
 msgstr ""
 
 msgctxt "game_options"

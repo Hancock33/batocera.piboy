@@ -3690,10 +3690,6 @@ msgstr ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Centre de Control Batocera"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5586,6 +5582,10 @@ msgid "Czech Republic"
 msgstr "República Txeca"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "MÒDUL D’EXTENSIÓ DE DADES"
 
@@ -7261,6 +7261,18 @@ msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "Millora. Només funciona amb relació 16:9 i motllures deshabilitades."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Millora. Redueix l’alentiment en jocs mode 7."
 
@@ -8923,6 +8935,10 @@ msgid "HQ MODE"
 msgstr "MODE HQ"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -9021,10 +9037,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Amagar"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "Amagar motllures"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9212,6 +9224,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INTERFÍCIE D’ENTRADA"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10851,10 +10867,6 @@ msgid "Menacer Light Gun"
 msgstr "Pistola de llum Menacer"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Menú"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Menú enrera"
 
@@ -11436,16 +11448,8 @@ msgid "Next Weapon"
 msgstr "Arme Següent"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "Disc següent"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "Element següent"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "Ranura següent"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12825,10 +12829,6 @@ msgid "Previous item"
 msgstr "Element anterior"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Ranura anterior"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Arma anterior"
 
@@ -13403,10 +13403,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Restaura el mode homogeni per al contorn d’imatges a Singe."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Restablir estat"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "Wii VC restaurada"
@@ -13430,10 +13426,6 @@ msgstr "Comandament Retro (Per defecte)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Rebobinar"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13622,6 +13614,10 @@ msgstr "FACTOR D’ESCALA"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "DITHERING ESCALAT"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14203,10 +14199,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "Desar estat"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14264,10 +14256,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Inclinació de pantalla (graus)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Captura de pantalla"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15651,10 +15639,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "Intercanviar pantalla"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Intercanvia la posició de les pantalles duals."
@@ -16292,10 +16276,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Cartutx Tomy Tutor & Pyuuta"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "Alternar disposició de pantalla"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "A dalt"
@@ -16372,9 +16352,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Xinès tradicional"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Traduïr"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18558,6 +18538,10 @@ msgstr "groc/blau"
 #~ "Usar trucs de maquinari com apropiat. Referir-se a pcsx2-config per a "
 #~ "trucs individuals."
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Centre de Control Batocera"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "Primer dispositiu d’àudio (Per defecte)"
@@ -19414,6 +19398,10 @@ msgstr "groc/blau"
 #~ msgid "Hermite (Default)"
 #~ msgstr "Hermite (Per defecte)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "Amagar motllures"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
 #~ msgstr "Amagar el punt de mira als jocs suportats p. ex. ActionMax."
@@ -19627,6 +19615,10 @@ msgstr "groc/blau"
 #~ "a màxima compatibilitat."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Menú"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Micròfon"
 
@@ -19680,6 +19672,14 @@ msgstr "groc/blau"
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "Disc següent (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "Disc següent"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "Ranura següent"
 
 #~ msgctxt "game_options"
 #~ msgid "No Limitation"
@@ -19867,6 +19867,10 @@ msgstr "groc/blau"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "No és possible la pre-càrrega des de ES."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Ranura anterior"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr ""
@@ -19992,6 +19996,14 @@ msgstr "groc/blau"
 #~ msgid "Restart Game"
 #~ msgstr "Reiniciar joc"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Restablir estat"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Rebobinar"
+
 #~ msgctxt "game_options"
 #~ msgid "Rotate"
 #~ msgstr "Girar"
@@ -20045,9 +20057,17 @@ msgstr "groc/blau"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Desar ranura d'estat 1"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "Desar estat"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Resolució de pantalla (Per defecte)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Captura de pantalla"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20270,6 +20290,10 @@ msgstr "groc/blau"
 #~ msgid "Swap Screens"
 #~ msgstr "Intercanviar pantalles"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "Intercanviar pantalla"
+
 #~ msgctxt "game_options"
 #~ msgid "Swap the Nintendo DS Displays."
 #~ msgstr "Intercanviar les pantalles de la Nintendo DS."
@@ -20367,8 +20391,16 @@ msgstr "groc/blau"
 #~ msgstr "Alternar límit de velocitat"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "Alternar disposició de pantalla"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "Pantalla tàctil"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Traduïr"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

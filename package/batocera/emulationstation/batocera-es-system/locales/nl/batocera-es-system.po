@@ -3680,10 +3680,6 @@ msgstr ""
 "Basisfiltertype voor het Jaguar-display bij renderen naar het "
 "oorspronkelijke display."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Batocera Controle Centrum"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5574,6 +5570,10 @@ msgid "Czech Republic"
 msgstr "Tsjechische Republiek"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATA PLUGIN"
 
@@ -7258,6 +7258,18 @@ msgstr ""
 "uitgeschakeld."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Verbetering. Vermindert vertraging in mode 7-spellen."
 
@@ -8926,6 +8938,10 @@ msgid "HQ MODE"
 msgstr "HQ MODUS"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -9024,10 +9040,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Verbergen"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "Verberg randen"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9223,6 +9235,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INVOER INTERFACE"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10859,10 +10875,6 @@ msgid "Menacer Light Gun"
 msgstr "Menacer Light Gun"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Menu"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Menu terug"
 
@@ -11443,16 +11455,8 @@ msgid "Next Weapon"
 msgstr "Volgende Wapen"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "Volgende schijf"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "Volgend item"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "Volgend slot"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12831,10 +12835,6 @@ msgid "Previous item"
 msgstr "Vorig item"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Vorig slot"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Vorige wapen"
 
@@ -13407,10 +13407,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Herstel BLENDMODUS uitlijning op Singe sprites."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Staat herstellen"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "Herstelde Wii VC"
@@ -13434,10 +13430,6 @@ msgstr "Retropad (Standaard)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Terugspoelen"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13626,6 +13618,10 @@ msgstr "SCHAAL FACTOR"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "GESCHAALDE DITHERING"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14207,10 +14203,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "Staat opslaan"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14268,10 +14260,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Schermhelling (graden)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Screenshot"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15660,10 +15648,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "Wissel scherm"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Verwissel de positie van de dual displays."
@@ -16303,10 +16287,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta cartridge"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "Schermindeling wisselen"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "Boven"
@@ -16383,9 +16363,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Traditioneel Chinees"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Vertaal"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18413,6 +18393,10 @@ msgstr "geel/blauw"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "Async met Shader Interpreter"
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Batocera Controle Centrum"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "Batocera stelt eerste audioapparaat in (Standaard)"
@@ -18900,6 +18884,10 @@ msgstr "geel/blauw"
 #~ msgid "Hermite (Default)"
 #~ msgstr "Hermite (Standaard)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "Verberg randen"
+
 #~ msgctxt "game_options"
 #~ msgid "High (Default)"
 #~ msgstr "Hoog (Standaard)"
@@ -19019,6 +19007,10 @@ msgstr "geel/blauw"
 #~ "modus voor maximale compatibiliteit."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Microfoon"
 
@@ -19060,6 +19052,14 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Nearest-neighbor"
 #~ msgstr "Dichtstbijzijnde"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "Volgende schijf"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "Volgend slot"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -19187,6 +19187,10 @@ msgstr "geel/blauw"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "Voorladen is onmogelijk vanuit ES."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Vorig slot"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr ""
@@ -19265,6 +19269,14 @@ msgstr "geel/blauw"
 #~ "Reserveer een niet-deadzone in het midden van het wiel om rechtdoor te "
 #~ "gaan (in graden)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Staat herstellen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Terugspoelen"
+
 #~ msgctxt "game_options"
 #~ msgid "Run the game in test mode to configure certain game options."
 #~ msgstr ""
@@ -19282,9 +19294,17 @@ msgstr "geel/blauw"
 #~ msgid "SPU XFloat Accuracy"
 #~ msgstr "SPU XFloat Nauwkeurigheid"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "Staat opslaan"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Scherm Resolutie (Standaard)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Screenshot"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19387,6 +19407,10 @@ msgstr "geel/blauw"
 #~ msgid "Strong"
 #~ msgstr "Sterk"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "Wissel scherm"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
@@ -19439,8 +19463,16 @@ msgstr "geel/blauw"
 #~ "toewijzing gebruikt."
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "Schermindeling wisselen"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "Touch Screen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Vertaal"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

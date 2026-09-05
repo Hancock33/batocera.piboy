@@ -3680,10 +3680,6 @@ msgstr ""
 "Alapvető szűrőtípus a Jaguar kijelzőhöz a natív képernyőre történő "
 "rendereléskor."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Batocera Irányítóközpont"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5580,6 +5576,10 @@ msgid "Czech Republic"
 msgstr "Cseh Köztársaság"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATA PLUGIN"
 
@@ -7270,6 +7270,18 @@ msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "Továbbá. Csak 16/9-es aránnyal és letiltott keretekkel működik."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Fejlesztés. Csökkenti a lassulást a 7-es módú (MODE7) játékokban."
 
@@ -8934,6 +8946,10 @@ msgid "HQ MODE"
 msgstr "HQ MÓD"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -9032,10 +9048,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Elrejt"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "Keretek elrejtése"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9224,6 +9236,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "BEMENETI FELÜLET"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10873,10 +10889,6 @@ msgid "Menacer Light Gun"
 msgstr "Menacer Light Gun"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Menü"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Vissza menü"
 
@@ -11457,16 +11469,8 @@ msgid "Next Weapon"
 msgstr "Következő fegyver"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "Következő lemez"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "Következő elem"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "Következő hely"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12845,10 +12849,6 @@ msgid "Previous item"
 msgstr "Előző elem"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Előző hely"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Előző fegyver"
 
@@ -13423,10 +13423,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "BLENDMODE körvonal visszaállítása a Singe sprite-okon."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Állapot helyreállítása"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "Felújított Wii VC"
@@ -13450,10 +13446,6 @@ msgstr "Retropad (alapértelmezett)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Visszatekerés"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13643,6 +13635,10 @@ msgstr "SKÁLA TÉNYEZŐ"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "SKÁLÁZOTT DITHERING"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14224,10 +14220,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "Állapot mentése"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14285,10 +14277,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Képernyő dőlésszöge (fok)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Pillanatkép"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15675,10 +15663,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "Képernyőcsere"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Cserélje fel a kettős kijelző pozícióját."
@@ -16318,10 +16302,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta kazetta"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "Képernyő elrendezésének váltása"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "Felső"
@@ -16398,9 +16378,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Hagyományos kínai"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Fordítás"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18538,6 +18518,10 @@ msgstr "sárga/kék"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "Aszinkron a Shader Interpreterrel"
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Batocera Irányítóközpont"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "Batocera beállítja az első audio eszközt (alapértelmezett)"
@@ -19239,6 +19223,10 @@ msgstr "sárga/kék"
 #~ msgid "Hidden"
 #~ msgstr "Rejtett"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "Keretek elrejtése"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 #~ msgstr ""
@@ -19421,6 +19409,10 @@ msgstr "sárga/kék"
 #~ "módot a maximális kompatibilitás érdekében."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Menü"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Mikrofon"
 
@@ -19473,6 +19465,14 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "Következő lemez (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "Következő lemez"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "Következő hely"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -19679,6 +19679,10 @@ msgstr "sárga/kék"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "Az ES előtöltése lehetetlen."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Előző hely"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr "Pro Controller szükséges a rázó mozdulatokat igénylő játékokhoz."
@@ -19805,6 +19809,14 @@ msgstr "sárga/kék"
 #~ msgstr "Játék újrakezdése"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Állapot helyreállítása"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Visszatekerés"
+
+#~ msgctxt "keys_files"
 #~ msgid "Right Flipper"
 #~ msgstr "Jobb kar"
 
@@ -19850,9 +19862,17 @@ msgstr "sárga/kék"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Állapot mentése Slot 1"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "Állapot mentése"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Képernyőfelbontás (alapértelmezett)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Pillanatkép"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20022,6 +20042,10 @@ msgstr "sárga/kék"
 #~ msgstr "Képernyők cseréje"
 
 #~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "Képernyőcsere"
+
+#~ msgctxt "keys_files"
 #~ msgid "Swap screens"
 #~ msgstr "Képernyők cseréje"
 
@@ -20102,8 +20126,16 @@ msgstr "sárga/kék"
 #~ msgstr "Sebességkorlátozás kapcsolása"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "Képernyő elrendezésének váltása"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "Érintőképernyő"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Fordítás"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

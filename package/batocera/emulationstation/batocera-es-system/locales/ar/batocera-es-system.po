@@ -3695,10 +3695,6 @@ msgid ""
 "display."
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5565,6 +5561,10 @@ msgid "Czech Republic"
 msgstr "الجمهورية التشيكية"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr ""
 
@@ -7183,6 +7183,18 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "التحسين، يعمل فقظ مع تحجيم ٩/١٦ و الحواف غير مفعلة."
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
@@ -8816,6 +8828,10 @@ msgid "HQ MODE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr ""
 
@@ -8909,10 +8925,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Hide"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Hide bezels"
 msgstr ""
 
 msgctxt "game_options"
@@ -9102,6 +9114,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "واجهة الإدخال"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10706,10 +10722,6 @@ msgid "Menacer Light Gun"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "القائمة"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
 
@@ -11281,15 +11293,7 @@ msgid "Next Weapon"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Next slot"
 msgstr ""
 
 msgctxt "keys_files"
@@ -12654,10 +12658,6 @@ msgid "Previous item"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr ""
 
@@ -13224,10 +13224,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr ""
@@ -13251,10 +13247,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "الترجيع"
 
 #, fuzzy
 msgctxt "game_options"
@@ -13438,6 +13430,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SCALED DITHERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SCALER"
 msgstr ""
 
 msgctxt "game_options"
@@ -14024,10 +14020,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14085,10 +14077,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "لقطة شاشة"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15438,10 +15426,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "محيطي ٧.١"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr ""
@@ -16063,10 +16047,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta خرطوشة"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "تبديل تخطيط الشاشة"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "الأعلى"
@@ -16143,9 +16123,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "الصينية التقليدية"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "ترجمة"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18016,6 +17996,10 @@ msgstr "أصفر/أزرق"
 #~ msgstr "حافظ على التحجيم (افتراضي)"
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "القائمة"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "اللاقط الصوتي"
 
@@ -18027,6 +18011,14 @@ msgstr "أصفر/أزرق"
 #~ msgid "PS3's internal ratio setting. Some games only support 16/9."
 #~ msgstr ""
 #~ "اعدادات التحجيم الداخلية لبلايستيشن ٣، بعض الألعاب لا تدعم غير ٩/١٦."
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "الترجيع"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "لقطة شاشة"
 
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
@@ -18045,8 +18037,16 @@ msgstr "أصفر/أزرق"
 #~ msgstr ".لون موضوع وحدة التحكم المحاكاة"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "تبديل تخطيط الشاشة"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "شاشة اللمس"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "ترجمة"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

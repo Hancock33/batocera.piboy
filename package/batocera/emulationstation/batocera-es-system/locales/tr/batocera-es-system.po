@@ -3680,10 +3680,6 @@ msgstr ""
 "Jaguar ekranının yerel ekrana dönüştürülmesi sırasında kullanılan Temel "
 "Filtreleme türü."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Batocera Kontrol Merkezi"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5572,6 +5568,10 @@ msgid "Czech Republic"
 msgstr "Çekya"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "VERİ EKLENTİSİ"
 
@@ -7261,6 +7261,18 @@ msgstr ""
 "çalışır."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "İyileştirme. Mod 7 oyunlarında yavaşlamayı azaltır."
 
@@ -8919,6 +8931,10 @@ msgid "HQ MODE"
 msgstr "HQ MODU"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -9017,10 +9033,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Gizle"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "Çerçeveleri gizle"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9210,6 +9222,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "GİRİŞ ARAYÜZÜ"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10848,10 +10864,6 @@ msgid "Menacer Light Gun"
 msgstr "Tehditkar Silah"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Menü"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Menü geri"
 
@@ -11431,16 +11443,8 @@ msgid "Next Weapon"
 msgstr "Sonraki Silah"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "Sonraki disk"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "Sonraki envanter"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "Sonraki yuva"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12814,10 +12818,6 @@ msgid "Previous item"
 msgstr "Önceki öğe"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Önceki yuva"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Önceki silah"
 
@@ -13392,10 +13392,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "KARIŞTIRMAMODU taslağını Tekli bağımsız görüntüleri geri yükle."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Durumu geri yükle"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr ""
@@ -13419,10 +13415,6 @@ msgstr "Retropad (Varsayılan)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Geri sar"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13611,6 +13603,10 @@ msgstr "ÖLÇEK ETKENİ"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "ÖLÇEKLENMİŞ RENK GEÇİŞİ"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14192,10 +14188,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "Durumu kaydet"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14253,10 +14245,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Ekran eğimi (derece)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Ekran görüntüsü"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15634,10 +15622,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "Ekranı değiştir"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "İkili ekranın konumunu değiştirin."
@@ -16274,10 +16258,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta kartuşu"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "Ekran düzenini değiştir"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "Üst"
@@ -16354,9 +16334,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Geleneksel Çince"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Çeviri"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18377,6 +18357,10 @@ msgstr "sarı/mavi"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "Eş Zamansız Gölgelendirici Yorumlayıcı"
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Batocera Kontrol Merkezi"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "Batocera ilk ses cihazını ayarlar (Varsayılan)"
@@ -18878,6 +18862,10 @@ msgstr "sarı/mavi"
 #~ msgid "Hermite (Default)"
 #~ msgstr "Hermite (Varsayılan)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "Çerçeveleri gizle"
+
 #~ msgctxt "game_options"
 #~ msgid "High (Default)"
 #~ msgstr "Yüksek (Varsayılan)"
@@ -18992,6 +18980,10 @@ msgstr "sarı/mavi"
 #~ "Güvenli modu kullanın."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Menü"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Mikrofon"
 
@@ -19033,6 +19025,14 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Nearest-neighbor"
 #~ msgstr "En yakın nokta"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "Sonraki disk"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "Sonraki yuva"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -19160,6 +19160,10 @@ msgstr "sarı/mavi"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "ES üstünden ön yükleme yapılamaz."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Önceki yuva"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr "Sallama hareketi gerektiren oyunlar için Pro Controller gereklidir."
@@ -19243,6 +19247,14 @@ msgstr "sarı/mavi"
 #~ msgid "Reset"
 #~ msgstr "Sıfırla"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Durumu geri yükle"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Geri sar"
+
 #~ msgctxt "game_options"
 #~ msgid "Run the game in test mode to configure certain game options."
 #~ msgstr ""
@@ -19265,9 +19277,17 @@ msgstr "sarı/mavi"
 #~ msgid "STEERING SENSITIVITY"
 #~ msgstr "YÖNLENDİRME HASSASİYETİ"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "Durumu kaydet"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Ekran Çözünürlüğü (Varsayılan)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Ekran görüntüsü"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19370,6 +19390,10 @@ msgstr "sarı/mavi"
 #~ msgid "Strong"
 #~ msgstr "Güçlü"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "Ekranı değiştir"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
@@ -19421,8 +19445,16 @@ msgstr "sarı/mavi"
 #~ msgstr "Varsayılan pad2key eşlemesini kullanmıyorsanız, buna gerek yoktur."
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "Ekran düzenini değiştir"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "DokunmatikEkran"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Çeviri"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

@@ -6567,6 +6567,97 @@ msgid "WRX HIGH RESOLUTION"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Skip the bios boot logo, may cause default language issues."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SYSTEM"
+msgstr ""
+
+msgctxt "game_options"
+msgid "BIOS FAST BOOT"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"A small number of games will have compatibility problems with this enabled."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FAST CD/DVD ACCESS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enables cheats files to be read from the `cheats` directory."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Helps forcing an international Japanese version to English. Unlocking more "
+"European languages etc."
+msgstr ""
+
+msgctxt "game_options"
+msgid "LANGUAGE UNLOCK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1x Native (PS2)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "5x Native (~1800p/3K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "7x Native (~2530p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "9x Native (~3240p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "10x Native (~3600p/6K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "11x Native (~3960p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "12x Native (~4320p/8K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "13x Native (~5824p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "14x Native (~6272p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "15x Native (~6720p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "16x Native (~7168p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Unscaled"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Basic"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Maximum"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ATARI SYSTEM"
 msgstr ""
 
@@ -7962,10 +8053,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Select the system ROM version (Enterprise only)."
-msgstr ""
-
-msgctxt "game_options"
-msgid "SYSTEM"
 msgstr ""
 
 msgctxt "game_options"
@@ -10593,93 +10680,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Keyboard + Mouse"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Skip the bios boot logo, may cause default language issues."
-msgstr ""
-
-msgctxt "game_options"
-msgid "BIOS FAST BOOT"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"A small number of games will have compatibility problems with this enabled."
-msgstr ""
-
-msgctxt "game_options"
-msgid "FAST CD/DVD ACCESS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Enables cheats files to be read from the `cheats` directory."
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Helps forcing an international Japanese version to English. Unlocking more "
-"European languages etc."
-msgstr ""
-
-msgctxt "game_options"
-msgid "LANGUAGE UNLOCK"
-msgstr ""
-
-msgctxt "game_options"
-msgid "1x Native (PS2)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "5x Native (~1800p/3K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "7x Native (~2530p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "9x Native (~3240p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "10x Native (~3600p/6K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "11x Native (~3960p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "12x Native (~4320p/8K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "13x Native (~5824p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "14x Native (~6272p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "15x Native (~6720p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "16x Native (~7168p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Unscaled"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Basic"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Maximum"
 msgstr ""
 
 msgctxt "game_options"
@@ -15899,6 +15899,30 @@ msgid "3840 x 2160"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "16-bit"
 msgstr ""
 
@@ -16760,6 +16784,14 @@ msgid "DXVK HUD"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
+
+msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Improves frame rate and responsiveness."
 msgstr ""
 
@@ -17569,62 +17601,6 @@ msgid "Exit emulator"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Menu"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Save state"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Previous slot"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Fast forward"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Next disk"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Translate"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Hide the bezel"
 msgstr ""
 
@@ -17674,6 +17650,10 @@ msgstr ""
 
 msgctxt "keys_files"
 msgid "GBA R"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "Fast forward"
 msgstr ""
 
 msgctxt "keys_files"

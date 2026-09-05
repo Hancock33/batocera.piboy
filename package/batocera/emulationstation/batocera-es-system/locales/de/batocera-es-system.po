@@ -3653,10 +3653,6 @@ msgstr ""
 "Grondsätzleche Filtertyp fir d'Jaguar-Display beim Renderen op dem nativen "
 "Display."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Batocera Control Center"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5511,6 +5507,10 @@ msgid "Czech Republic"
 msgstr ""
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr ""
 
@@ -7123,6 +7123,18 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
 msgstr ""
 
 msgctxt "game_options"
@@ -8756,6 +8768,10 @@ msgid "HQ MODE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr ""
 
@@ -8850,10 +8866,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Hide"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Hide bezels"
 msgstr ""
 
 msgctxt "game_options"
@@ -9041,6 +9053,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
 msgstr ""
 
 msgctxt "game_options"
@@ -10646,10 +10662,6 @@ msgid "Menacer Light Gun"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr ""
 
@@ -11221,15 +11233,7 @@ msgid "Next Weapon"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Next slot"
 msgstr ""
 
 msgctxt "keys_files"
@@ -12594,10 +12598,6 @@ msgid "Previous item"
 msgstr "Virege Géigestand"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Virege Slot"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Vireg Waff"
 
@@ -13168,10 +13168,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "D'BLENDMODE-Ëmrisslinn op Singe-Sprites restauréieren."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Savestate lueden"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "Restauréiert Wii VC"
@@ -13194,10 +13190,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
 msgstr ""
 
 msgctxt "game_options"
@@ -13380,6 +13372,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SCALED DITHERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SCALER"
 msgstr ""
 
 msgctxt "game_options"
@@ -13962,10 +13958,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14022,10 +14014,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Screenshot"
 msgstr ""
 
 msgctxt "game_options"
@@ -15370,10 +15358,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr ""
@@ -15995,10 +15979,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Top"
 msgstr ""
@@ -16075,9 +16055,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Chinesesch (Traditionell)"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Iwwersetzen"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -17805,6 +17785,10 @@ msgctxt "game_options"
 msgid "yellow/blue"
 msgstr ""
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Batocera Control Center"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Duration of audio buffer in milliseconds. Higher numbers may cause audio "
@@ -17857,6 +17841,10 @@ msgstr ""
 #~ msgid "Precise (Slowest)(Default)"
 #~ msgstr "Präzis (Am Laasamsten)(Standard)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Virege Slot"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr ""
@@ -17881,6 +17869,10 @@ msgstr ""
 #~ msgstr ""
 #~ "Reservéierte Beräich bannent der Toudzon fir riets erausfueren (a Grad)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Savestate lueden"
+
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
 #~ msgstr "Tastatur, Joystick oder Gamepad-Modus auswielen"
@@ -17888,6 +17880,10 @@ msgstr ""
 #~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "Touchscreen"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Iwwersetzen"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

@@ -3669,10 +3669,6 @@ msgstr ""
 "원본 디스플레이로 렌더링할 때 재규어 디스플레이에 대한 기본 필터링 유형입니"
 "다."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "바토세라 제어 센터"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5553,6 +5549,10 @@ msgid "Czech Republic"
 msgstr "체코"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "데이터 플러그인"
 
@@ -7215,6 +7215,18 @@ msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "향상. 16/9 비율과 베젤이 비활성화된 경우에만 작동합니다."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "향상. 모드 7 게임의 속도 저하를 줄입니다."
 
@@ -8868,6 +8880,10 @@ msgid "HQ MODE"
 msgstr "고품질 모드"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8966,10 +8982,6 @@ msgstr "에르미트"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "숨기기"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "베젤 숨기기"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9156,6 +9168,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "입력 인터페이스"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10785,10 +10801,6 @@ msgid "Menacer Light Gun"
 msgstr "메나서 라이트 건"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "메뉴"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "메뉴 뒤로가기"
 
@@ -11368,16 +11380,8 @@ msgid "Next Weapon"
 msgstr "다음 무기"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "다음 디스크"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "다음 아이템"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "다음 슬ㄹ"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12745,10 +12749,6 @@ msgid "Previous item"
 msgstr "이전 아이템"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "이전 슬ㄹ"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "이전 무기"
 
@@ -13321,10 +13321,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "싱글 스프라이트에서 블렌드모드 윤곽선을 복원합니다."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "상태 복원"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "복원된 Wii VC"
@@ -13348,10 +13344,6 @@ msgstr "레트로패드 (기본)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "되감기"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13538,6 +13530,10 @@ msgstr "스케일 팩터"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "스케일 디더링"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14119,10 +14115,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "상태 저장"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14180,10 +14172,6 @@ msgstr "스콜피온 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "화면 기울기 (°)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "스크린샷"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15552,10 +15540,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "서라운드 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "화면 스왑"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "듀얼 디스플레이의 위치를 바꿉니다."
@@ -16188,10 +16172,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "토미 튜터 & 퓨타 카트리지"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "화면 레이아웃 전환"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "상단"
@@ -16268,9 +16248,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "중국어 번체"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "번역"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18291,6 +18271,10 @@ msgstr "노란색/파란색"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "셰이더 해석기를 사용한 비동기"
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "바토세라 제어 센터"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "바토세라 첫 오디오 장치 설정 (기본)"
@@ -18818,6 +18802,10 @@ msgstr "노란색/파란색"
 #~ msgid "Hermite (Default)"
 #~ msgstr "에르미트 (기본)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "베젤 숨기기"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 #~ msgstr "지원되는 게임(예: 액션맥스, 매드독 II)에서 조준선을 숨깁니다."
@@ -18959,6 +18947,10 @@ msgstr "노란색/파란색"
 #~ "드를 사용하세요."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "메뉴"
+
+#~ msgctxt "keys_files"
 #~ msgid "Menu N"
 #~ msgstr "메뉴 N"
 
@@ -19011,6 +19003,14 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Nearest-neighbor"
 #~ msgstr "최근접 이웃"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "다음 디스크"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "다음 슬ㄹ"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -19138,6 +19138,10 @@ msgstr "노란색/파란색"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "ES에서는 사전 로드가 불가능합니다."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "이전 슬ㄹ"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr "흔들림 동작이 필요한 게임에 필요한 프로 컨트롤러입니다."
@@ -19216,6 +19220,14 @@ msgstr "노란색/파란색"
 #~ msgid "Reset"
 #~ msgstr "재설정"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "상태 복원"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "되감기"
+
 #~ msgctxt "game_options"
 #~ msgid "Run the game in test mode to configure certain game options."
 #~ msgstr "특정 게임 옵션을 구성하려면 테스트 모드에서 게임을 실행하세요."
@@ -19236,9 +19248,17 @@ msgstr "노란색/파란색"
 #~ msgid "STEERING SENSITIVITY"
 #~ msgstr "조향 민감도"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "상태 저장"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "화면 해상도 (기본)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "스크린샷"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19355,6 +19375,10 @@ msgstr "노란색/파란색"
 #~ msgid "Strong"
 #~ msgstr "강함"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "화면 스왑"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
@@ -19409,8 +19433,16 @@ msgstr "노란색/파란색"
 #~ "다."
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "화면 레이아웃 전환"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "터치스크린"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "번역"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

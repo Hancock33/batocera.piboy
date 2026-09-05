@@ -3657,10 +3657,6 @@ msgid ""
 "display."
 msgstr "算繪到本機顯示時 JAGUAR 顯示的基本濾鏡類型。"
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5516,6 +5512,10 @@ msgid "Czech Republic"
 msgstr "Czech Republic"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "資料插件"
 
@@ -7134,6 +7134,18 @@ msgstr "增強。提高算繪解析度。使3D物件更清晰。"
 msgctxt "game_options"
 msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "增強。僅適用於16/9的比例和禁用邊框的情況。"
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
@@ -8770,6 +8782,10 @@ msgid "HQ MODE"
 msgstr "HQ 模式"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8864,10 +8880,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "隱藏"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "隱藏邊框"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9054,6 +9066,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "輸入介面"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10663,10 +10679,6 @@ msgid "Menacer Light Gun"
 msgstr "Menacer光槍"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "選單"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "選單返回"
 
@@ -11238,16 +11250,8 @@ msgid "Next Weapon"
 msgstr "下一個武器"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "下一個磁碟"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "下一個物品"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "下一個插槽"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12608,10 +12612,6 @@ msgid "Previous item"
 msgstr "先前的物品"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "先前的插槽"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "先前的武器"
 
@@ -13178,10 +13178,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "恢復單一精靈上的 BLENDMODE 輪廓。"
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "回復先前狀態"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr ""
@@ -13205,10 +13201,6 @@ msgstr "Retropad (預設)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "倒帶"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13395,6 +13387,10 @@ msgstr "縮放因素"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "縮放抖動"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -13976,10 +13972,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "儲存狀態"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14037,10 +14029,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "螢幕傾斜度（度）"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "載圖"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15384,10 +15372,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "環繞 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "交換螢幕"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "交換雙顯示器的位置。"
@@ -16009,10 +15993,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta 卡匣"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "單一螢幕佈局"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "頂端"
@@ -16089,9 +16069,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "正體中文"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "翻譯"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18564,6 +18544,10 @@ msgstr "yellow/blue"
 #~ msgid "Hermite (Default)"
 #~ msgstr "Hermite"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "隱藏邊框"
+
 #~ msgctxt "game_options"
 #~ msgid "High (Default)"
 #~ msgstr "高 (預設)"
@@ -18683,6 +18667,10 @@ msgstr "yellow/blue"
 #~ msgstr "兆和千兆模式可能會提高效能。使用安全模式以獲得最大相容性。"
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "選單"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "麥克風"
 
@@ -18726,6 +18714,14 @@ msgstr "yellow/blue"
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "下一個光碟(m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "下一個磁碟"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "下一個插槽"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -18859,6 +18855,10 @@ msgstr "yellow/blue"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "ES 無法進行預先載入。"
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "先前的插槽"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr "需要搖晃動作的遊戲需要 Pro Controller。"
@@ -18945,6 +18945,14 @@ msgstr "yellow/blue"
 #~ msgid "Restart Game"
 #~ msgstr "重啟遊戲"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "回復先前狀態"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "倒帶"
+
 #~ msgctxt "game_options"
 #~ msgid "Run the game in test mode to configure certain game options."
 #~ msgstr "以測試模式運行遊戲以配置某些遊戲選項。"
@@ -18973,9 +18981,17 @@ msgstr "yellow/blue"
 #~ msgid "Save State Slot 1"
 #~ msgstr "保存存檔1"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "儲存狀態"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "螢幕解析度（預設）"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "載圖"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19087,6 +19103,10 @@ msgstr "yellow/blue"
 #~ msgid "Swap Screens"
 #~ msgstr "對換螢幕"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "交換螢幕"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
@@ -19145,8 +19165,16 @@ msgstr "yellow/blue"
 #~ msgstr "切換速度限制"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "單一螢幕佈局"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "觸控螢幕"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "翻譯"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

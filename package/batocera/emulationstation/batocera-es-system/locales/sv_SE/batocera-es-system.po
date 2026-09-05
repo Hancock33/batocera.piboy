@@ -3674,10 +3674,6 @@ msgstr ""
 "Grundläggande filtreringstyp för jaguarskärmen vid rendering till den "
 "ursprungliga skärmen."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Batocera kontrollcenter"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5566,6 +5562,10 @@ msgid "Czech Republic"
 msgstr "Tjeckien"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATAINSTICKSMODUL"
 
@@ -7231,6 +7231,18 @@ msgstr ""
 "Förbättring. Fungerar endast med ett 16/9-förhållande och inaktiverade ramar."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Förbättring. Minskar avmattningen i mode 7-spel."
 
@@ -8889,6 +8901,10 @@ msgid "HQ MODE"
 msgstr "HQ-LÄGE"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8987,10 +9003,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Dölj"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "Dölj ramar"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9179,6 +9191,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INMATNINGSGRÄNSSNITT"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10820,10 +10836,6 @@ msgid "Menacer Light Gun"
 msgstr "Menacer ljuspistol"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Meny"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Meny tillbaka"
 
@@ -11402,16 +11414,8 @@ msgid "Next Weapon"
 msgstr "Nästa vapen"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "Nästa disk"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "Nästa objekt"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "Nästa plats"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12783,10 +12787,6 @@ msgid "Previous item"
 msgstr "Föregående objekt"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Föregående plats"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Föregående vapen"
 
@@ -13360,10 +13360,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Återställ BLANDNINGSLÄGE-konturen på Singe-sprites."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Återställ tillstånd"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "Återställd Wii VC"
@@ -13387,10 +13383,6 @@ msgstr "Retropad (standard)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Spola tillbaka"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13577,6 +13569,10 @@ msgstr "SKALNINGSFAKTOR"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "SKALAD DITHERING"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14158,10 +14154,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "Spara tillstånd"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14219,10 +14211,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Skärmens lutning (grad)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Skärmbild"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15601,10 +15589,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "Byt skärm"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Byt position på de dubbla skärmarna."
@@ -16242,10 +16226,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta-kassett"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "Växla skärmlayout"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "Överst"
@@ -16322,9 +16302,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Traditionell kinesiska"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Översätt"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18356,6 +18336,10 @@ msgstr "gul/blå"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "Asynkron med Shader-tolkning"
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Batocera kontrollcenter"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "Batocera ställer in den första ljudenheten (Standard)"
@@ -18889,6 +18873,10 @@ msgstr "gul/blå"
 #~ msgid "Hermite (Default)"
 #~ msgstr "Hermite (standard)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "Dölj ramar"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 #~ msgstr "Dölj hårkorset i spel som stöds, t.ex. ActionMax, Maddog II."
@@ -19023,6 +19011,10 @@ msgstr "gul/blå"
 #~ "maximal kompatibilitet."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Meny"
+
+#~ msgctxt "keys_files"
 #~ msgid "Menu N"
 #~ msgstr "Meny N"
 
@@ -19075,6 +19067,14 @@ msgstr "gul/blå"
 #~ msgctxt "game_options"
 #~ msgid "Nearest-neighbor"
 #~ msgstr "Närmsta granne"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "Nästa disk"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "Nästa plats"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -19203,6 +19203,10 @@ msgstr "gul/blå"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "Förinläsning är omöjlig från ES."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Föregående plats"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr "Pro Controller krävs för spel som kräver skakrörelser."
@@ -19289,6 +19293,14 @@ msgstr "gul/blå"
 #~ msgid "Restart Game"
 #~ msgstr "Omstarta Spel"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Återställ tillstånd"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Spola tillbaka"
+
 #~ msgctxt "game_options"
 #~ msgid "Run the game in test mode to configure certain game options."
 #~ msgstr "Kör spelet i testläge för att konfigurera vissa spelalternativ."
@@ -19309,9 +19321,17 @@ msgstr "gul/blå"
 #~ msgid "STEERING SENSITIVITY"
 #~ msgstr "STYRNINGENS KÄNSLIGHET"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "Spara tillstånd"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Skärmupplösning (standard)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Skärmbild"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19423,6 +19443,10 @@ msgstr "gul/blå"
 #~ msgid "Strong"
 #~ msgstr "Stark"
 
+#~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "Byt skärm"
+
 #~ msgctxt "game_options"
 #~ msgid ""
 #~ "Switches between smooth (Bilinear) and sharp (Nearest Neighbor) image "
@@ -19477,8 +19501,16 @@ msgstr "gul/blå"
 #~ "standardmappningen pad2key."
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "Växla skärmlayout"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "Pekskärm"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Översätt"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

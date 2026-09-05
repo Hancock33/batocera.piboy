@@ -3673,10 +3673,6 @@ msgstr ""
 "Базовый тип фильтрации для дисплея Jaguar при рендеринге на собственном "
 "дисплее."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5559,6 +5555,10 @@ msgid "Czech Republic"
 msgstr "Czech Republic"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATA ПЛАГИН"
 
@@ -7225,6 +7225,18 @@ msgstr ""
 "Улучшение. Работает только с соотношением сторон 16/9 и отключёнными рамками."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Улучшение. Уменьшает замедление в играх с mode 7."
 
@@ -8887,6 +8899,10 @@ msgid "HQ MODE"
 msgstr "HQ РЕЖИМ"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8983,10 +8999,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Скрыть"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "Скрыть рамки (bezels)"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9176,6 +9188,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "ИНТЕРФЕЙС ВВОДА"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10816,10 +10832,6 @@ msgid "Menacer Light Gun"
 msgstr "Menacer Light Gun"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Меню"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Menu back"
 
@@ -11398,16 +11410,8 @@ msgid "Next Weapon"
 msgstr "Следующее оружие"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "Следующий диск"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "Следующий предмет"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "Следующий слот"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12781,10 +12785,6 @@ msgid "Previous item"
 msgstr "Предыдущий предмет"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Предыдущий слот"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Предыдущее оружие"
 
@@ -13359,10 +13359,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Восстанавливает контур РЕЖИМА СМЕШИВАНИЯ на одиночных спрайтах."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Восстановить состояние"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr ""
@@ -13386,10 +13382,6 @@ msgstr "Retropad (по умолчанию)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Перемотка"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13577,6 +13569,10 @@ msgstr "ФАКТОР МАСШТАБИРОВАНИЯ"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "ДИЗЕРИНГ МАСШТАБ"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14158,10 +14154,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "Сохранить состояние"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14219,10 +14211,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Наклон экрана (градус)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Скриншот"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15604,10 +15592,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "Переключить экран"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Меняет положение экранов местами."
@@ -16244,10 +16228,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta cartridge"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "Переключить расположение экрана"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "Вверху"
@@ -16324,9 +16304,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Традиционный китайский"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Перевод"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -19672,6 +19652,10 @@ msgstr "жёлтая/синяя"
 #~ msgid "Hidden"
 #~ msgstr "Скрыть"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "Скрыть рамки (bezels)"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax, Maddog II."
 #~ msgstr ""
@@ -19991,6 +19975,10 @@ msgstr "жёлтая/синяя"
 #~ "режим для максимальной совместимости."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Меню"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Микрофон"
 
@@ -20080,6 +20068,14 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "Следующий диск (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "Следующий диск"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "Следующий слот"
 
 #~ msgctxt "game_options"
 #~ msgid "No Limitation"
@@ -20328,6 +20324,10 @@ msgstr "жёлтая/синяя"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "Предзагрузка невозможна из ES."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Предыдущий слот"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr "Для игр, требующих встряхивания, требуется Pro Controller."
@@ -20506,6 +20506,14 @@ msgstr "жёлтая/синяя"
 #~ msgstr "Перезапустить игру"
 
 #~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Восстановить состояние"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Перемотка"
+
+#~ msgctxt "keys_files"
 #~ msgid "Right Flipper"
 #~ msgstr "Right Flipper"
 
@@ -20587,6 +20595,10 @@ msgstr "жёлтая/синяя"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Сохранение в Слот 1"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "Сохранить состояние"
+
 #~ msgctxt "game_options"
 #~ msgid "Scale"
 #~ msgstr "Масштаб"
@@ -20594,6 +20606,10 @@ msgstr "жёлтая/синяя"
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Разрешение экрана (по умолчанию)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Скриншот"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20821,6 +20837,10 @@ msgstr "жёлтая/синяя"
 #~ msgstr "Поменять экраны"
 
 #~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "Переключить экран"
+
+#~ msgctxt "keys_files"
 #~ msgid "Swap screens"
 #~ msgstr "Смена экранов"
 
@@ -20937,8 +20957,16 @@ msgstr "жёлтая/синяя"
 #~ msgstr "Переключить ограничение скорости"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "Переключить расположение экрана"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "Сенсорный экран"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Перевод"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

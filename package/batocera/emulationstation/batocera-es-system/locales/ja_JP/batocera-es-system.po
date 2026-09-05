@@ -3667,10 +3667,6 @@ msgstr ""
 "画面に表示するときのジャガー ディスプレイの基本フィルタリング タイプを選択し"
 "ます"
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Batocera コントロールセンター"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5551,6 +5547,10 @@ msgid "Czech Republic"
 msgstr "チェコ共和国"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "データ プラグイン"
 
@@ -7218,6 +7218,18 @@ msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "強化：16/9の比率で、ベゼルが無効になっている場合にのみ機能します"
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "強化：モード7ゲームの速度低下を減らします"
 
@@ -8875,6 +8887,10 @@ msgid "HQ MODE"
 msgstr "HQ モード"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8973,10 +8989,6 @@ msgstr "エルミート"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "非表示"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "ベゼルを隠す"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9166,6 +9178,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "入力(使用する)インターフェース"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10791,10 +10807,6 @@ msgid "Menacer Light Gun"
 msgstr "Menacer ライトガン(ガンコン)"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "メニュー"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "メニューに戻る"
 
@@ -11371,16 +11383,8 @@ msgid "Next Weapon"
 msgstr "次の武器"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "次のディスク"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "次のアイテム"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "次のスロット"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12746,10 +12750,6 @@ msgid "Previous item"
 msgstr "前のアイテム"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "前のスロット"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "前の武器"
 
@@ -13318,10 +13318,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "ブレンドモードのアウトラインを復元します"
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "ステートを復元"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "復元済Wii VC"
@@ -13345,10 +13341,6 @@ msgstr "レトロパッド（標準）"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "巻き戻し"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13536,6 +13528,10 @@ msgstr "スケールファクター"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "スケーリングされたディザリング"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14117,10 +14113,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "ステートセーブ"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14178,10 +14170,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "画面の傾き（度）"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "スクリーンショット"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15551,10 +15539,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "7.1ch サラウンド"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "画面を入れ替える"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "デュアルディスプレイの位置を入れ替えます"
@@ -16187,10 +16171,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "トミー ぴゅう太(Tutor) カートリッジ"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "画面レイアウトの切り替え"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "上"
@@ -16267,9 +16247,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "繁体字中国語"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "翻訳"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18790,6 +18770,10 @@ msgstr "黄/青"
 #~ msgid "Basic"
 #~ msgstr "基本"
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Batocera コントロールセンター"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "Batocera で最初の音声デバイスに設定 (標準)"
@@ -20449,6 +20433,10 @@ msgstr "黄/青"
 #~ msgid "Hidden"
 #~ msgstr "ゲームリストに表示しない"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "ベゼルを隠す"
+
 #~ msgctxt "game_options"
 #~ msgid "High (Default)"
 #~ msgstr "高 (標準)"
@@ -21078,6 +21066,10 @@ msgstr "黄/青"
 #~ "メガ モードとギガ モードによりが向上する可能性があります。\n"
 #~ "互換性を最大限に高めるには、セーフ モードを使用してください"
 
+#~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "メニュー"
+
 #~ msgid "Merge games from this drive now?"
 #~ msgstr "今すぐこのドライブからゲームをマージ(結合)しますか?"
 
@@ -21301,6 +21293,14 @@ msgstr "黄/青"
 #~ msgstr ""
 #~ "ゲーム リストが更新されると、新しいドライブ コンテンツが利用できるようにな"
 #~ "ります..."
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "次のディスク"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "次のスロット"
 
 #~ msgid "No"
 #~ msgstr "不可"
@@ -21675,6 +21675,10 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "ESからの事前読込みは不可能です"
+
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "前のスロット"
 
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
@@ -22068,8 +22072,16 @@ msgstr "黄/青"
 #~ msgid "Restoration complete"
 #~ msgstr "復旧完了"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "ステートを復元"
+
 #~ msgid "Restoring Internal Games..."
 #~ msgstr "内部ゲームを復元..."
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "巻き戻し"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -22643,12 +22655,20 @@ msgstr "黄/青"
 #~ msgid "SYSTEMS INCLUDED"
 #~ msgstr "スクレイプするシステム"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "ステートセーブ"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "画面解像度 (標準)"
 
 #~ msgid "Screenscraper Game ID"
 #~ msgstr "スクリーンスクレイパー ゲームID"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "スクリーンショット"
 
 #~ msgid "Searching"
 #~ msgstr "検索中"
@@ -22826,6 +22846,10 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Strong"
 #~ msgstr "強"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "画面を入れ替える"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -23028,8 +23052,16 @@ msgstr "黄/青"
 #~ msgstr "タイトルショット"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "画面レイアウトの切り替え"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "タッチスクリーン"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "翻訳"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

@@ -3670,10 +3670,6 @@ msgstr ""
 "Základný typ filtrovania pre displej jaguar pri vykresľovaní na natívny "
 "displej."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr "Batocera Control Center"
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5559,6 +5555,10 @@ msgid "Czech Republic"
 msgstr "Česká republika"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "Dátový plugin"
 
@@ -7225,6 +7225,18 @@ msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "Rozšírenie. Funguje iba s pomerom strán 16/9 a deaktivovanými rámami."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Rozšírenie. Zníži spomalenie v hrách režimu 7."
 
@@ -8889,6 +8901,10 @@ msgid "HQ MODE"
 msgstr "Režim HQ"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8987,10 +9003,6 @@ msgstr "Hermit"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Skryť"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "Skryť rámčeky"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9183,6 +9195,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "Vstupné rozhranie"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10822,10 +10838,6 @@ msgid "Menacer Light Gun"
 msgstr "Svetelná zbraň Menacer"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Ponuka"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Ponuka späť"
 
@@ -11402,16 +11414,8 @@ msgid "Next Weapon"
 msgstr "Ďalšia zbraň"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "Ďalší disk"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "Ďalšia položka"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "Ďalší slot"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -12791,10 +12795,6 @@ msgid "Previous item"
 msgstr "Predchádzajúca položka"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "Predchádzajúci slot"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "Predchádzajúca zbraň"
 
@@ -13366,10 +13366,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Obnoviť obrys BLENDMODE na spritoch Singe."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "Obnoviť stav"
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr "Obnovené Wii VC"
@@ -13393,10 +13389,6 @@ msgstr "Retropad (predvolené)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Pretočiť"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13585,6 +13577,10 @@ msgstr "Faktor mierky"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "Škálovaný rozklad"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14166,10 +14162,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "Uložiť stav"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14227,10 +14219,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Naklonenie obrazovky (stupne)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Snímka obrazovky"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15605,10 +15593,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "Prepnúť obrazovku"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Vymení polohu duálnych obrazoviek."
@@ -16246,10 +16230,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta kartridž"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "Prepnúť rozloženie obrazovky"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "Vrch"
@@ -16326,9 +16306,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Tradičná čínština"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "Preložiť"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -18448,6 +18428,10 @@ msgstr "žltá/modrá"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "Asynchrónne s interpreterom shadera"
 
+#~ msgctxt "keys_files"
+#~ msgid "Batocera Control Center"
+#~ msgstr "Batocera Control Center"
+
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
 #~ msgstr "Batocera nastaví prvé zvukové zariadenie (predvolené)"
@@ -19170,6 +19154,10 @@ msgstr "žltá/modrá"
 #~ msgid "Hermite (Default)"
 #~ msgstr "Pustovník (predvolené)"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "Skryť rámčeky"
+
 #~ msgctxt "game_options"
 #~ msgid "Hide crosshairs in supported games e.g. ActionMax."
 #~ msgstr "Skryť zameriavací kríž v podporovaných hrách, napr. ActionMax."
@@ -19323,6 +19311,10 @@ msgstr "žltá/modrá"
 #~ "použite núdzový režim."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Ponuka"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Mikrofón"
 
@@ -19374,6 +19366,14 @@ msgstr "žltá/modrá"
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "Ďalší disk (m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "Ďalší disk"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "Ďalší slot"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -19569,6 +19569,10 @@ msgstr "žltá/modrá"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "Prednačítanie je nemožné z ES."
 
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "Predchádzajúci slot"
+
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
 #~ msgstr "Profesionálny ovládač je potrebný pre hry, ktoré vyžadujú pohyby."
@@ -19691,6 +19695,14 @@ msgstr "žltá/modrá"
 #~ msgid "Restart Game"
 #~ msgstr "Reštartovať hru"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "Obnoviť stav"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Pretočiť"
+
 #~ msgctxt "game_options"
 #~ msgid "Run the game in test mode to configure certain game options."
 #~ msgstr ""
@@ -19725,9 +19737,17 @@ msgstr "žltá/modrá"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Uložiť slot stavu 1"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "Uložiť stav"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Rozlíšenie obrazovky (predvolené)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Snímka obrazovky"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19900,6 +19920,10 @@ msgstr "žltá/modrá"
 #~ msgstr "Vymeniť obrazovky"
 
 #~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "Prepnúť obrazovku"
+
+#~ msgctxt "keys_files"
 #~ msgid "Swap screens"
 #~ msgstr "Vymeniť obrazovky"
 
@@ -19981,8 +20005,16 @@ msgstr "žltá/modrá"
 #~ msgstr "Prepnúť obmedzenie rýchlosti"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "Prepnúť rozloženie obrazovky"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "Dotyková obrazovka"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "Preložiť"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

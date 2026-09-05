@@ -3668,10 +3668,6 @@ msgstr ""
 "Grunnleggende filtreringstype for jaguar-skjermen ved gjengivelse til den "
 "opprinnelige skjermen."
 
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
 msgstr ""
@@ -5550,6 +5546,10 @@ msgid "Czech Republic"
 msgstr "Tsjekkia"
 
 msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DATA PLUGIN"
 msgstr "DATA PLUGIN"
 
@@ -7212,6 +7212,18 @@ msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "Forbedring. Fungerer bare med et 16/9-forhold og deaktiverte rammer."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "Forbedring. Reduserer tregheten i spill i modus 7."
 
@@ -8872,6 +8884,10 @@ msgid "HQ MODE"
 msgstr "HQ-MODUS"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8966,10 +8982,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "Skjul"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr ""
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -9157,6 +9169,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "INPUT INTERFACE"
 msgstr "INNGANGSGRENSESNITT"
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTEGER SCALING"
@@ -10790,10 +10806,6 @@ msgid "Menacer Light Gun"
 msgstr "Menacer Light Gun"
 
 msgctxt "keys_files"
-msgid "Menu"
-msgstr "Meny"
-
-msgctxt "keys_files"
 msgid "Menu back"
 msgstr "Meny tilbake"
 
@@ -11370,15 +11382,7 @@ msgid "Next Weapon"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Next item"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Next slot"
 msgstr ""
 
 msgctxt "keys_files"
@@ -12750,10 +12754,6 @@ msgid "Previous item"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr ""
 
@@ -13326,10 +13326,6 @@ msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "Gjenopprett BLENDMODE-kontur på enkelte sprites."
 
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Restored Wii VC"
 msgstr ""
@@ -13353,10 +13349,6 @@ msgstr "Retropad (standard)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "Tilbakespoling"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13542,6 +13534,10 @@ msgstr "SKALA-FAKTOR"
 msgctxt "game_options"
 msgid "SCALED DITHERING"
 msgstr "SKALERT DITHERING"
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCALER MODE"
@@ -14123,10 +14119,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -14184,10 +14176,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Skjermhelling (grader)"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "Skjermbilde"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -15562,10 +15550,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "Surround 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "Bytt posisjon på de to skjermene."
@@ -16198,10 +16182,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta-patronen"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr ""
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "Topp"
@@ -16278,8 +16258,8 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "Tradisjonell kinesisk"
 
-msgctxt "keys_files"
-msgid "Translate"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
 msgstr ""
 
 msgctxt "game_options"
@@ -19167,6 +19147,10 @@ msgstr "gul/blå"
 #~ "kompatibilitet."
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "Meny"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Mikrofon"
 
@@ -19540,6 +19524,10 @@ msgstr "gul/blå"
 #~ msgstr "Start spillet på nytt"
 
 #~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "Tilbakespoling"
+
+#~ msgctxt "keys_files"
 #~ msgid "Right Flipper"
 #~ msgstr "Høyre Flipper"
 
@@ -19586,6 +19574,10 @@ msgstr "gul/blå"
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "Skjermoppløsning (standard)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "Skjermbilde"
 
 #~ msgctxt "game_options"
 #~ msgid ""
