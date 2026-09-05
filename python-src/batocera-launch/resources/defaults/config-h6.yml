@@ -24,7 +24,7 @@ systemsp:
   core:     flycast
 cdi:
   emulator: libretro
-  core:     same_cdi
+  core:     mame
 oricatmos:
   emulator: libretro
   core:     mame

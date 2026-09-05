@@ -9,13 +9,13 @@ flash:
   core:     lightspark
 atomiswave:
   emulator: libretro
-  core:     flycastvl
+  core:     flycast
 dreamcast:
   emulator: libretro
-  core:     flycastvl
+  core:     flycast
 naomi:
   emulator: libretro
-  core:     flycastvl
+  core:     flycast
 model2:
   emulator: libretro
   core:     mame

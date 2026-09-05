@@ -42,10 +42,13 @@ pet:
 cplus4:
   emulator: vice
   core:     xplus4
+fmtowns:
+  emulator: libretro
+  core:     mame
 flash:
   emulator: lightspark
   core:     lightspark
-fmtowns:
+cdi:
   emulator: libretro
   core:     mame
 model2:

@@ -27,7 +27,7 @@ kodi:
     hud_support: false # doesn't play nice with vulkan mangohud
 cdi:
   emulator: libretro
-  core:     same_cdi
+  core:     mame
 model2:
   emulator: libretro
   core:     mame

@@ -12,19 +12,6 @@ dreamcast:
     retroarch.video_hard_sync: 1
     # setting to fix Flycast performances on xu4
     reicast_synchronous_rendering: disabled
-flash:
-  emulator: lightspark
-  core:     lightspark
-fmtowns:
-  emulator: libretro
-  core:     mame
-model2:
-  emulator: libretro
-  core:     mame
-n64:
-  options:
-    # hud breaking mupen64
-    hud_support: none
 psx:
   options:
     gpu_software: true
@@ -32,3 +19,17 @@ psx:
     # settings to fix sound issue only on Odroid XU4
     retroarch.audio_latency:   128
     retroarch.video_hard_sync: 1
+fmtowns:
+  emulator: libretro
+  core:     mame
+n64:
+  options:
+    # hud breaking mupen64
+    hud_support: none
+flash:
+  emulator: lightspark
+  core:     lightspark
+
+model2:
+  emulator: libretro
+  core:     mame

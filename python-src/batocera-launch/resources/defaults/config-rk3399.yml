@@ -1,12 +1,15 @@
-flash:
-  emulator: lightspark
-  core:     lightspark
 fmtowns:
   emulator: libretro
   core:     mame
 nds:
   emulator: drastic
   core:     drastic
+flash:
+  emulator: lightspark
+  core:     lightspark
+cdi:
+  emulator: libretro
+  core:     mame
 model2:
   emulator: libretro
   core:     mame

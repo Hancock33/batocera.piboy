@@ -1,24 +1,25 @@
-flash:
-  emulator: lightspark
-  core:     lightspark
-fmtowns:
-  emulator: libretro
-  core:     mame
 gamecube:
   emulator: libretro
   core:     dolphin
-model2:
-  emulator: libretro
-  core:     mame
 nds:
   emulator: drastic
   core:     drastic
+wii:
+  emulator: libretro
+  core:     dolphin
+fmtowns:
+  emulator: libretro
+  core:     mame
 psx:
   options:
     hud_support: false # duckstation doesn't like it on n2+
 ps2:
   emulator: libretro
   core:     play
-wii:
+flash:
+  emulator: lightspark
+  core:     lightspark
+
+model2:
   emulator: libretro
-  core:     dolphin
+  core:     mame

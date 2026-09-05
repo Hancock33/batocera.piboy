@@ -14,29 +14,15 @@ flash:
 fmtowns:
   emulator: libretro
   core:     mame
-model2:
-  emulator: libretro
-  core:     mame
 model3:
   emulator: supermodel
   core:     supermodel
-  options:
-    videomode: max-1920x1080
-ps2:
-  emulator: libretro
-  core:     armsx2
-saturn:
-  emulator: libretro
-  core:     yabausesa
 scummvm:
   emulator: scummvm
   core:     scummvm
   options:
     decorations: none
     hud_support: none
-traider:
-  emulator: openlara
-  core:     openlara
 quake3:
   emulator: vkquake3
   core:     vkquake3
@@ -45,17 +31,19 @@ quake3:
     decorations: none
     hud_support: none
 gamecube:
-  emulator: libretro
+  emulator: dolphin
   core:     dolphin
 wii:
-  emulator: libretro
+  emulator: dolphin
   core:     dolphin
   options:
     gfxbackend: Vulkan
-wiiware:
-  emulator: libretro
-  core:     dolphin
+saturn:
+  emulator: ymir
+  core:     ymir
   options:
-    videomode: max-480x240
     decorations: none
     hud_support: none
+model2:
+  emulator: libretro
+  core:     mame
