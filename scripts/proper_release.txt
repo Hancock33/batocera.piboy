@@ -15,6 +15,7 @@ dosbox-x.mk
 dxvk-nvapi.mk
 dxvk.mk
 element14-pi-desktop.mk
+fastfetch.mk
 faudio.mk
 fdupes.mk
 fheroes2.mk
