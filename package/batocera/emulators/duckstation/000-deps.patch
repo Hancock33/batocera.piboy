@@ -82,7 +82,7 @@ index 128da4770..7f2e72087 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Shaderc")
 -find_package(spirv_cross_c_shared REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/spirv_cross_c_shared/cmake")
--find_package(SDL3 3.4.14 REQUIRED
+-find_package(SDL3 3.4.16 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/SDL3")
 +set(FIND_ROOT_PATH_BACKUP ${CMAKE_FIND_ROOT_PATH})
 +set(FIND_ROOT_PATH_MODE_INCLUDE_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_INCLUDE})
@@ -105,7 +105,7 @@ index 128da4770..7f2e72087 100644
 +find_package(WebP 1.6.0 REQUIRED)
 +find_package(PNG 1.6.58 REQUIRED)
 +find_package(JPEG REQUIRED)
-+find_package(SDL3 3.4.14 REQUIRED)
++find_package(SDL3 3.4.16 REQUIRED)
 +find_package(Freetype 2.14.1 REQUIRED)
 +find_package(harfbuzz REQUIRED)
 +find_package(SQLite3 3.53.4 REQUIRED)
@@ -139,15 +139,15 @@ index 128da4770..7f2e72087 100644
  # All our builds include Qt, so this is not a problem.
  set(QT_NO_PRIVATE_MODULE_WARNING ON)
  if(LINUX)
--  find_package(Qt6 6.11.1 REQUIRED
+-  find_package(Qt6 6.11.2 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
 -                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus)
-+  find_package(Qt6 6.11.1 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
++  find_package(Qt6 6.11.2 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
  else()
--  find_package(Qt6 6.11.1 REQUIRED
+-  find_package(Qt6 6.11.2 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
 -                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools)
-+  find_package(Qt6 6.11.1 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
++  find_package(Qt6 6.11.2 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
  endif()
  
  # Verify dependency paths.
