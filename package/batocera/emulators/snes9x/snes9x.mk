@@ -3,8 +3,8 @@
 # snes9x
 #
 ################################################################################
-# Version: Commits on Sept 03, 2026
-SNES9X_VERSION = 4217d1a9b63436f1e6a553765dacb72ee4c596fb
+# Version: Commits on Sept 04, 2026
+SNES9X_VERSION = 7a8878f1306f65594c30b7d86dee41d972c2e495
 SNES9X_SITE = https://github.com/snes9xgit/snes9x.git
 SNES9X_SITE_METHOD = git
 SNES9X_GIT_SUBMODULES = YES

@@ -3,8 +3,8 @@
 # libretro-armsx2
 #
 ################################################################################
-# Version: Commits on Sept 04, 2026
-LIBRETRO_ARMSX2_VERSION = aa2a43fffc951d65807600edfc2ff85250677714
+# Version: Commits on Sept 05, 2026
+LIBRETRO_ARMSX2_VERSION = 6e884f11f486bca258efd2470ac09ad4c36a5a4b
 LIBRETRO_ARMSX2_SITE = https://github.com/ARMSX2/ARMSX2.git
 LIBRETRO_ARMSX2_SITE_METHOD = git
 LIBRETRO_ARMSX2_GIT_SUBMODULES = YES
