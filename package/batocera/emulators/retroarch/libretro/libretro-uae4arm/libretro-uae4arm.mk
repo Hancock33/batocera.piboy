@@ -3,8 +3,8 @@
 # libretro-uae4arm
 #
 ################################################################################
-# Version: Commits on May 08, 2026
-LIBRETRO_UAE4ARM_VERSION = 276979efa4f862d1f84afeff5a2e794de4744024
+# Version: Commits on May 31, 2026
+LIBRETRO_UAE4ARM_VERSION = 3a6580df1b4e946ea9f930d21eb3420cabbd07c2
 LIBRETRO_UAE4ARM_SITE = $(call github,chips-fr,uae4arm-rpi,$(LIBRETRO_UAE4ARM_VERSION))
 LIBRETRO_UAE4ARM_LICENSE = GPLv2
 LIBRETRO_UAE4ARM_DEPENDENCIES = flac mpg123 retroarch zlib
