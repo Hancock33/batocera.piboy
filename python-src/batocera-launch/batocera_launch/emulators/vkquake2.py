@@ -7,6 +7,7 @@ from typing import Final
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import BatoceraException, Command, Emulator, HotkeysContext
 
+_ROM_DIR: Final = Path('/userdata/roms/ports/quake2')
 _SOURCE_DIR: Final = Path('/usr/bin/vkquake2')
 
 
@@ -33,9 +34,12 @@ class VKQuake2(Emulator):
         if not _SOURCE_DIR.exists():
             raise BatoceraException(f'Source directory {_SOURCE_DIR} does not exist.')
 
-        shutil.copytree(_SOURCE_DIR, self.roms_dir, dirs_exist_ok=True, copy_function=shutil.copy2)
+        shutil.copytree(_SOURCE_DIR, _ROM_DIR, dirs_exist_ok=True, copy_function=shutil.copy2)
 
-        args: list[str | Path] = [self.roms_dir / 'quake2']
+        # Change to the rom directory before running
+        os.chdir(_ROM_DIR + '/quake2')
+
+        args: list[str | Path] = [_ROM_DIR / 'quake2']
         rom_name = self.rom.name.lower()
 
         if 'zero' in rom_name:
