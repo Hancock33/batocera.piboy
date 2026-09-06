@@ -61,6 +61,11 @@ asyncio_mode = "auto"
 [tool.coverage.run]
 omit = ["**/python-src/*/tests/**"]
 
+[tool.coverage.report]
+exclude_also = [
+    "^if\\s+__name__\\s*==\\s*['\"]__main__['\"]:",
+]
+
 [tool.pyright]
 include = [
     "python-src",
@@ -153,6 +158,7 @@ ignore = ["SIM105", "SIM108", "E501", "RUF051"]
 extra-standard-library = ["typing_extensions", "_typeshed"]
 known-first-party = [
     "batocera_common",
+    "batocera_labwc",
     "batocera_launch",
     "configgen",
     "batocera_es_system"

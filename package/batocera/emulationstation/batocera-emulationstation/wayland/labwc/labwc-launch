@@ -100,7 +100,7 @@ if [ -n "$PRIME_PCI_ID" ]; then
                  /sys/class/drm/card*-LVDS*/status \
                  /sys/class/drm/card*-DSI*/status; do
         if [ -f "$panel" ] && grep -q "^connected" "$panel" 2>/dev/null; then
-            HAS_INTERNAL_CARD=$(basename "$panel" | cut -d'-' -f1)
+            HAS_INTERNAL_CARD=$(basename "$(dirname "$panel")" | cut -d'-' -f1)
             break
         fi
     done

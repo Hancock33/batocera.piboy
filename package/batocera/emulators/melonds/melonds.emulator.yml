@@ -198,3 +198,16 @@ custom_features:
       DSi (experiemental): 1
 systems:
   - nds
+
+labwc:
+  window_rules:
+    - identifier: net.kuribo64.melonDS
+      title: "*w1*"
+      actions:
+        - name: MoveToOutput
+          output: primary
+    - identifier: net.kuribo64.melonDS
+      title: "*w2*"
+      actions:
+        - name: MoveToOutput
+          output: secondary|primary

@@ -142,3 +142,16 @@ custom_features:
       'On': 1
 systems:
   - 3ds
+
+labwc:
+  window_rules:
+    - identifier: azahar
+      actions:
+        - name: MoveToOutput
+          output: primary
+    - identifier: azahar
+      title: "*Secondary Window*"
+      actions:
+        - name: MoveToOutput
+          output: secondary|primary
+        - name: ToggleFullscreen

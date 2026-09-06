@@ -177,3 +177,16 @@ custom_features:
       100%: "100"
 systems:
   - vpinball
+
+labwc:
+  window_rules:
+    - identifier: VPinballX_BGFX
+      title: Visual Pinball Player
+      actions:
+        - name: MoveToOutput
+          output: primary|secondary
+    - identifier: VPinballX_BGFX
+      title: Visual Pinball Backglass
+      actions:
+        - name: MoveToOutput
+          output: secondary|primary
