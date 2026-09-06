@@ -95,7 +95,7 @@ class Dhewm3(Emulator):
         _update_config_file(config_base_file, options_to_set)
         _update_config_file(config_file, options_to_set)
 
-        args: list[str | Path] = ['/usr/bin/dhewm3', '+set', 'fs_basepath', self.roms_dir]
+        args: list[str | Path] = ['/usr/bin/dhewm3', '+set', 'fs_basepath', '/userdata/roms/ports/doom3']
 
         if directory in _D3XP_MODS:
             args.extend(['+set', 'fs_game_base', 'd3xp'])

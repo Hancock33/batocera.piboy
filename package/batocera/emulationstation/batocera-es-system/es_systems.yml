@@ -4741,8 +4741,8 @@ rott:
   group:                ports
   path:                 /userdata/roms/ports/rott
   emulators:
-    rott:
-      rott:             { requireAnyOf: [BR2_PACKAGE_ROTT] }
+    taradino:
+      taradino:         { requireAnyOf: [BR2_PACKAGE_ROTT] }
   comment_en:           |
                         Place your commercial version of Rise of the Triad installation files in here.
                         You should include DARKWAR.WAD, DARKWAR.RTL, DARKWAR.RTC & REMOTE1.RTS as a minimum.
@@ -4766,8 +4766,8 @@ rtcw:
   group:                ports
   path:                 /userdata/roms/ports/rtcw
   emulators:
-    rtcw:
-      rtcw:             { requireAnyOf: [BR2_PACKAGE_RTCW] }
+    iortcw:
+      iortcw:           { requireAnyOf: [BR2_PACKAGE_RTCW] }
 
 sdlpop:
   name:                 Prince of Persia
@@ -4980,13 +4980,14 @@ themehospital:
   manufacturer:         Ports
   release:              1997
   hardware:             port
+  theme:                themehospital
   extensions:           [game]
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/themehospital
   emulators:
-    themehospital:
-      themehospital:    { requireAnyOf: [BR2_PACKAGE_CORSIXTH] }
+    corsixth:
+      corsixth:         { requireAnyOf: [BR2_PACKAGE_CORSIXTH] }
   comment_en:           |
                         Theme Hospital engine written in LUA.
                         Grab a copy of your game or get it on GoG.
@@ -5240,8 +5241,8 @@ doom3:
   group:                doom
   path:                 /userdata/roms/ports/doom3
   emulators:
-    doom3:
-      doom3:            { requireAnyOf: [BR2_PACKAGE_DOOM3] }
+    dhewm3:
+      dhewm3:           { requireAnyOf: [BR2_PACKAGE_DOOM3] }
   comment_en:           |
                         Add your Doom 3 (and if you have the Resurrection of Evil mod) pk4 files here like so:
 

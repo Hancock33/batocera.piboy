@@ -15,7 +15,6 @@ _LEGACY_GENERATOR_MAP: Final[dict[str, dict[str, tuple[str, str]]]] = {
 }
 
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
-    'abuse': ('abuse.abuseGenerator', 'AbuseGenerator'),
     'alephone': ('alephone.alephoneGenerator', 'AlephoneGenerator'),
     'amiberry': ('amiberry.amiberryGenerator', 'AmiberryGenerator'),
     'applewin': ('applewin.applewinGenerator', 'AppleWinGenerator'),
@@ -26,16 +25,9 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'bermuda': ('bermuda.bermudaGenerator', 'BermudaGenerator'),
     'bigpemu': ('bigpemu.bigpemuGenerator', 'BigPEmuGenerator'),
     'blues': ('blues.bluesGenerator', 'BluesGenerator'),
-    'bstone': ('bstone.bstoneGenerator', 'BstoneGenerator'),
-    'cannonball': ('cannonball.cannonballGenerator', 'CannonballGenerator'),
-    'catacombgl': ('catacombgl.catacombglGenerator', 'CatacombGLGenerator'),
     'cdogs': ('cdogs.cdogsGenerator', 'CdogsGenerator'),
-    'cemu': ('cemu.cemuGenerator', 'CemuGenerator'),
-    'cgenius': ('cgenius.cgeniusGenerator', 'CGeniusGenerator'),
     'clk': ('clk.clkGenerator', 'ClkGenerator'),
-    'devilutionx': ('devilutionx.devilutionxGenerator', 'DevilutionXGenerator'),
     'dolphin': ('dolphin.dolphinGenerator', 'DolphinGenerator'),
-    'doom3': ('doom3.doom3Generator', 'Doom3Generator'),
     'doomretro': ('doomretro.doomretroGenerator', 'DoomretroGenerator'),
     'dosbox': ('dosbox.dosboxGenerator', 'DosBoxGenerator'),
     'dosbox_staging': ('dosboxstaging.dosboxstagingGenerator', 'DosBoxStagingGenerator'),
@@ -136,7 +128,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'supermodel': ('supermodel.supermodelGenerator', 'SupermodelGenerator'),
     'supertux2': ('supertux2.supertux2Generator', 'Supertux2Generator'),
     'theforceengine': ('theforceengine.theforceengineGenerator', 'TheForceEngineGenerator'),
-    'themehospital': ('themehospital.themehospitalGenerator', 'ThemehospitalGenerator'),
     'thextech': ('thextech.thextechGenerator', 'TheXTechGenerator'),
     'tic80': ('tic80.tic80Generator', 'tic80Generator'),
     'touchhle': ('touchhle.touchhleGenerator', 'TouchHLEGenerator'),

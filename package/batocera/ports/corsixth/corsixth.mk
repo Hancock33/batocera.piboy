@@ -10,12 +10,15 @@ CORSIXTH_DEPENDENCIES = ffmpeg libcurl lpeg lua luafilesystem lua-lpeg-patterns 
 CORSIXTH_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer
 CORSIXTH_LICENSE = GPL-2.0
 CORSIXTH_SUPPORTS_IN_SOURCE_BUILD = NO
-CORSIXTH_EMULATOR_INFO = themehospital.emulator.yml
+CORSIXTH_EMULATOR_INFO = corsixth.emulator.yml
 
 CORSIXTH_CONF_OPTS += -DWITH_LUAJIT=OFF
 CORSIXTH_CONF_OPTS += -DWITH_UPDATE_CHECK=OFF
 
 define CORSIXTH_INSTALL_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/corsix-th
+	ln -sf /usr/lib/lua/lfs.so $(TARGET_DIR)/usr/share/corsix-th
+	ln -sf /usr/lib/lua/lpeg.so $(TARGET_DIR)/usr/share/corsix-th
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/corsixth/corsixth.keys $(TARGET_DIR)/usr/share/evmapy

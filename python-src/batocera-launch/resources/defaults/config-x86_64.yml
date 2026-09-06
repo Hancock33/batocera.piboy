@@ -259,8 +259,8 @@ dinothawr:
   emulator: libretro
   core:     dinothawr
 doom3:
-  emulator: doom3
-  core:     doom3
+  emulator: dhewm3
+  core:     dhewm3
   options:
     powersave: '1'
 dos:
@@ -793,6 +793,11 @@ pygame:
 pyxel:
   emulator: pyxel
   core:     pyxel
+quake2:
+  emulator: yquake2
+  core:     yquake2
+  options:
+    powersave: '1'
 quake3:
   emulator: vkquake3
   core:     vkquake3
@@ -815,11 +820,11 @@ reminiscence:
   emulator: libretro
   core:     reminiscence
 rott:
-  emulator: rott
-  core:     rott
+  emulator: taradino
+  core:     taradino
 rtcw:
-  emulator: rtcw
-  core:     rtcw
+  emulator: iortcw
+  core:     iortcw
 samcoupe:
   emulator: samcoupe
   core:     samcoupe
@@ -997,8 +1002,8 @@ tg-cd:
   emulator: libretro
   core:     pce_fast
 themehospital:
-  emulator: themehospital
-  core:     themehospital
+  emulator: corsixth
+  core:     corsixth
 theforceengine:
   emulator: theforceengine
   core:     theforceengine
@@ -1166,11 +1171,6 @@ xegs:
 xrick:
   emulator: libretro
   core:     xrick
-yquake2:
-  emulator: yquake2
-  core:     yquake2
-  options:
-    powersave: '1'
 zc210:
   emulator: libretro
   core:     zc210

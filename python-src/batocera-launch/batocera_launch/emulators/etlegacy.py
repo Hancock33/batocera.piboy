@@ -8,7 +8,7 @@ from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import CONFIGS, ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
-_LEGACY_DIR: Final = ROMS / 'etlegacy' / 'legacy'
+_LEGACY_DIR: Final = ROMS / 'ports' / 'etlegacy' / 'legacy'
 _LEGACY_FILE: Final = 'legacy_2.85-dirty.pk3'
 _LEGACY_SOURCE: Final = Path('/usr/share/etlegacy') / _LEGACY_FILE
 _LEGACY_DEST: Final = _LEGACY_DIR / _LEGACY_FILE

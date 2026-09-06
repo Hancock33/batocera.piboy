@@ -8,7 +8,7 @@ shared_features:
   - hud_corner
 custom_features:
   hurrican_crt:
-    prompt:  
+    prompt:      CRT EFFECT
     description: Simulate CRT effects for a retro look.
     choices:
       "On": enabled

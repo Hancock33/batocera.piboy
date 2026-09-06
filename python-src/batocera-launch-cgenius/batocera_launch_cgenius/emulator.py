@@ -11,7 +11,7 @@ from batocera_launch import Command, Emulator, HotkeysContext
 
 _CONFIG_DIR: Final = CONFIGS / 'cgenius'
 _CONFIG_FILE: Final = _CONFIG_DIR / 'cgenius.cfg'
-_ROM_DIR: Final = ROMS / 'cgenius'
+_ROM_DIR: Final = ROMS / 'ports' / 'cgenius'
 
 _CONTROLLER_MAPPING: Final = {
     'a': 'Fire',

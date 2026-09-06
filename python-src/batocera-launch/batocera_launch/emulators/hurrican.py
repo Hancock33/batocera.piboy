@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
@@ -12,7 +13,7 @@ if TYPE_CHECKING:
 
 _logger = logging.getLogger(__name__)
 
-_ROM_DIR: Final = ROMS / 'hurrican'
+_ROM_DIR: Final = Path(str('/userdata/roms/ports/hurrican'))
 
 
 @cached_dataclass
@@ -34,4 +35,33 @@ class Hurrican(Emulator):
         if not (_ROM_DIR / 'data' / 'levels').is_dir():
             _logger.error('ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.')
 
-        return Command(['hurrican'])
+        args: list[str | Path] = ['hurrican']
+
+        if self.config.get_bool('hurrican_crt'):
+            args.append("--crt")
+
+        if self.config.get('hurrican_custlevel') == 'ChJees':
+            args.append("--custom")
+            args.append("ChJees")
+        elif self.config.get('hurrican_custlevel') == 'Genocide':
+            args.append("--custom")
+            args.append("Genocide")
+        elif self.config.get('hurrican_custlevel') == 'Second_Empire':
+            args.append("--custom")
+            args.append("--Second_Empire")
+        elif self.config.get('hurrican_custlevel') == 'SecretPlanet':
+            args.append("--custom")
+            args.append("SecretPlanet")
+        elif self.config.get('hurrican_custlevel') == 'Valentine':
+            args.append("--custom")
+            args.append("valentine")
+        elif self.config.get('hurrican_custlevel') == 'Volcano_Temple':
+            args.append("--custom")
+            args.append("Volcano_Temple")
+        elif self.config.get('hurrican_custlevel') == 'Walkers_World':
+            args.append("--custom")
+            args.append("Walkers_World")
+
+        return Command(
+            args,
+        )

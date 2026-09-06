@@ -9,7 +9,7 @@ from batocera_launch import BatoceraException, Command, Emulator, HotkeysContext
 
 _logger = logging.getLogger(__name__)
 
-_ROM_DIR: Final = ROMS / 'cdogs'
+_ROM_DIR: Final = ROMS / 'ports' / 'cdogs'
 _ASSET_DIR_NAMES: Final = [
     'music/briefing',
     'music/end',
@@ -222,13 +222,4 @@ class CDogs(Emulator):
         }
 
     async def configure(self) -> Command:
-        for assetdir in _ASSET_DIR_NAMES:
-            if not (_ROM_DIR / assetdir).is_dir():
-                _logger.error(
-                    'ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.'
-                )
-                raise BatoceraException(
-                    'Game assets not installed. You can get them from the Batocera Content Downloader.'
-                )
-
         return Command(['cdogs'])

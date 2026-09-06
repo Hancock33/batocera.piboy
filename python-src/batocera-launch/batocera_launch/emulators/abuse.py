@@ -6,8 +6,6 @@ from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
-_ABUSE_DATA: Final = ROMS / 'abuse' / 'abuse_data'
-
 
 @cached_dataclass
 class Abuse(Emulator):
@@ -21,4 +19,11 @@ class Abuse(Emulator):
         }
 
     async def configure(self) -> Command:
-        return Command(['abuse', '-datadir', _ABUSE_DATA])
+        return Command(
+            ['/usr/bin/abuse'],
+            env={
+                'ABUSE_PATH': '/userdata/roms/ports/abuse',
+                'ABUSE_SAVE_PATH': '/userdata/saves/abuse',
+                'SDL_JOYSTICK_HIDAPI': '0',
+            },
+        )

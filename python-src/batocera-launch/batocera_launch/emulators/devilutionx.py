@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import configparser
+import shutil
 from typing import TYPE_CHECKING, Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
@@ -10,8 +11,9 @@ from batocera_launch import Command, Emulator, HotkeysContext
 if TYPE_CHECKING:
     from pathlib import Path
 
-_DATA_DIR: Final = ROMS / 'devilutionx'
-
+_DATA_DIR: Final = ROMS / 'ports' / 'devilutionx'
+mpq_src = "/usr/share/diasurgical/devilutionx"
+mpq_dst = "/userdata/roms/ports/devilutionx"
 
 @cached_dataclass
 class DevilutionX(Emulator):
@@ -35,10 +37,13 @@ class DevilutionX(Emulator):
         return 16 / 9 if self.config.get_bool('devilutionx_stretch') else 4 / 3
 
     async def configure(self) -> Command:
+        # copy latest devilutionx.mpq to rom dir
+        shutil.copytree(mpq_src, mpq_dst, dirs_exist_ok=True)
+
         self.config_dir.mkdir(parents=True, exist_ok=True)
         self.saves_dir.mkdir(parents=True, exist_ok=True)
 
-        config = configparser.ConfigParser()
+        config = configparser.ConfigParser(strict=False)
         config_file = self.config_dir / 'diablo.ini'
 
         if config_file.exists():
@@ -53,7 +58,7 @@ class DevilutionX(Emulator):
             config.write(file)
 
         args: list[str | Path] = [
-            'devilutionx',
+            '/usr/bin/diablo/devilutionx',
             '--data-dir',
             _DATA_DIR,
             '--config-dir',
