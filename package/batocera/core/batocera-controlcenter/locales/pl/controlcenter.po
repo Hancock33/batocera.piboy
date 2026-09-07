@@ -26,10 +26,10 @@ msgid "AC"
 msgstr "AC"
 
 msgid "Audio Output"
-msgstr ""
+msgstr "Wyjście dźwięku"
 
 msgid "Audio Profile"
-msgstr ""
+msgstr "Profil dźwięku"
 
 msgid "Audio Source"
 msgstr "Źródło dźwięku"
