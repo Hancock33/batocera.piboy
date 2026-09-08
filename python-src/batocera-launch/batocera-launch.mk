@@ -144,7 +144,6 @@ endif
 BATOCERA_LAUNCH_POST_INSTALL_STAGING_HOOKS += BATOCERA_LAUNCH_INSTALL_STAGING_DEFAULT_OPTIONS
 
 define BATOCERA_LAUNCH_INSTALL_PYBOY
-	cp $(@D)/resources/defaults/config-bcm2711.yml $(TARGET_DIR)/usr/share/batocera/launch/defaults/config.yml
 	cp $(@D)/resources/defaults/config-piboy4.yml  $(TARGET_DIR)/usr/share/batocera/launch/defaults/config-arch.yml
 endef
 
