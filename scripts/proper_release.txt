@@ -1,5 +1,6 @@
 ﻿amiberry-lite.mk
 amiberry.mk
+armsx2.mk 
 ayaneo-platform.mk
 broadcom-bt-firmware.mk
 btop.mk
