@@ -30,6 +30,7 @@ libdovi.mk
 libfreeaptx.mk
 libgme.mk
 libretro-amiberry.mk
+libretro-armsx2.mk
 libretro-freej2me.mk
 libretro-mame.mk
 libxmp.mk
