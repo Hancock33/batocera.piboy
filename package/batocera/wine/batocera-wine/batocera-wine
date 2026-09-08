@@ -761,8 +761,11 @@ createOrUpdatePrefix() {
     fi
 
 
-    if [[ -f "${INF}" ]] && [[ "$(cat "${WINEPREFIX}/.update-timestamp" 2>/dev/null)" != "$(stat -c %Y "${INF}")" ]]; then
-        echo "${FUNCNAME[0]}: runner changed, updating the prefix"
+    local STAMP="$(cat "${WINEPREFIX}/.update-timestamp" 2>/dev/null)"
+    local INF_TS="$(stat -c %Y "${INF}" 2>/dev/null)"
+
+    if [[ -f "${INF}" ]] && [[ "${STAMP}" != "${INF_TS}" ]]; then
+        echo "${FUNCNAME[0]}: runner changed (${STAMP:-none} != ${INF_TS}), updating the prefix"
         # our links are all recreated below
         find "${WINEPREFIX}/drive_c/windows/system32" "${WINEPREFIX}/drive_c/windows/syswow64" \
             -maxdepth 1 -type l -delete 2>/dev/null
@@ -774,6 +777,9 @@ createOrUpdatePrefix() {
 
         WINEPREFIX="${WINEPREFIX}" WINEDLLOVERRIDES="${OVERRIDES}" ${CMD_PREFIX} "${WINE}" wineboot -u
         waitWineServer 0 "${WINEPREFIX}"
+
+        # wine writes it only when it updates by itself, else we update every launch
+        echo "${INF_TS}" > "${WINEPREFIX}/.update-timestamp"
     fi
 
     return 0

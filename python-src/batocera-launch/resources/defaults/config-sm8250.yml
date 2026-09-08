@@ -23,10 +23,8 @@ psp:
   emulator: libretro
   core: ppsspp
 ps2:
-  emulator: pcsx2
-  core:     pcsx2
-  options:
-    fullboot: true
+  emulator: armsx2
+  core:     armsx2
 tvgames:
   emulator: mame
   core:     mame
@@ -130,5 +128,5 @@ oricatmos:
   emulator: clk
   core:     clk
 model2:
-  emulator: libretro
-  core:     mame
+  emulator: sm2-emu
+  core:     sm2-emu

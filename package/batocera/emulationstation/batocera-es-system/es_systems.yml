@@ -5862,133 +5862,14 @@ model2:
   extensions:           [zip]
   platform:             model2, arcade
   emulators:
+    sm2-emu:
+      sm2-emu:          { requireAnyOf: [BR2_PACKAGE_SM2_EMU] }
     libretro:
       archs_include:    [x86_64, x86-64-v3]
       mame:             { requireAnyOf: [BR2_PACKAGE_LIBRETRO_MAME] }
     mame:
       archs_include:    [x86_64, x86-64-v3]
       mame:             { requireAnyOf: [BR2_PACKAGE_MAME] }
-
-  comment_en:           |
-                        ---------------------------------
-                        ## SEGA MODEL 2 IMPORTANT INFO ##
-                        ---------------------------------
-
-                        You need to run a ROM at least once AND be connected to the internet.
-                        This creates the directory structure & installs the associated Windows DirectX libraries for Wine.
-
-                        Note: It may take some time before the game starts with the first use, this is NORMAL!
-                        *** Please be patient as it can take up to 10 minutes depending on your internet connection speed ***
-
-                        ------------------------
-                        Controller configuration
-                        ------------------------
-
-                        Note: A keyboard & mouse is required in addition to your controller(s).
-
-                        A set on input files is provided however you may want to map your controls per game ROM you intend to run.
-                        We recommend you do this using the Emulation Station 'F1' menu option and then choose the model2 config app.
-                        *** The ROM must be loaded before you can configure the controls. ***
-
-                        Press Esc on your keyboard to go back to 'windowed' mode to then set the controller options if the app goes fullscreen.
-                        Once the controls are set, they're saved for future use in Batocera through the normal menu options.
-
-                        ------------
-                        Service Menu
-                        ------------
-
-                        Note: Keyboard required.
-
-                        Appropriate NVDATA files have been provided to ensure all games should work straight away.
-                        If you receive the error 'Network Board Not Present' when starting a game.
-                        Go to the Service Menu using F2 and then use F1 to navigate to 'Games System' & press F2.
-                        Under 'Games System', choose 'Link ID' using F1 & then use F2 to change this option to 'Single'.
-                        Use F1 to navigate to 'Exit', hit F2 again.
-                        Do this one more time to exit the Service Menu.
-
-                        The Service Menu configuration will be saved and the error will not occur again in future usage.
-
-                        -----------------
-                        Batocera Upgrades
-                        -----------------
-
-                        In some instances when you upgrade Batocera to a new version, when trying to run the Sega Model 2 emulator it may crash.
-                        When you look at your /userdata/system/logs/es_launch_stderr.log file you may see a Wine mismatch error.
-                        This is due to the wine bottle being out of date and not aligning to the version installed with the latest Batocera.
-                        If you do, you should backup your /userdata/saves/model2/model2emu/CFG & userdata/saves/model2/model2emu/NVDATA folders.
-                        When browsing using the network share you won't see the userdata directory, browse to saves.
-                        Backing these folders up will retain your high scores, rom & controller configurations.
-
-                        It's recommended to remove your /userdata/saves/model2/ directory via ssh only!
-                        When logged in via ssh:
-                        cd /userdata/saves
-                        rm -rf model2
-
-                        Once done, re-launch a game when connected to the internet & it will re-create the wine bottle for you.
-                        Afterwards you can restore your CFG & NVDATA directories.
-
-                        *** Enjoy the Sega Model 2 emulator running under Linux !!! ***
-  comment_br:           |
-                        ----------------------------------
-                        ## SEGA MODEL 2 INFORMAÇÕES IMPORTANTES ##
-                        ----------------------------------
-
-                        Agora você pode jogar jogos da Sega Model 2 usando o Demul & Wine.
-                        Roms devem ser armazenados apropriadamente no diretório cave3rd .
-
-                        O desempenho depende do hardware do sistema x86_64.
-                        Se você tiver falhas de áudio e música lenta, seu sistema não tem desempenho suficiente para executar este emulador.
-
-                        -----------
-                        Primeiro acesso
-                        -----------
-
-                        Você precisa executar uma ROM pelo menos uma vez E estar conectado à internet.
-                        Isso cria a estrutura de diretórios e instala as bibliotecas Windows DirectX associadas para Wine.
-
-                        Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
-                        *** Por favor, seja paciente, pois pode levar até 10 minutos, dependendo da velocidade da sua conexão com a internet ***
-
-                        -----------
-                        Configuração dos Controles
-                        -----------
-
-                        Nota: Um teclado e um mouse são necessários além do(s) seu(s) controle(s).
-
-                        Um conjunto de arquivos de entrada é fornecido, no entanto, você pode mapear seus controles para cada um dos jogos que pretende executar.
-                        Recomendamos que você faça isso usando a opção de menu 'F1' do Emulation Station e, em seguida, escolha o aplicativo de configuração model2.
-                        *** A ROM deve ser carregada antes que você possa configurar os controles. ***
-
-                        Pressione Esc no teclado para voltar ao modo 'janela' para definir as opções do controle se o aplicativo for de tela cheia.
-                        Uma vez que os controles são definidos, eles são salvos para uso futuro no Batocera através das opções normais do menu.
-
-                        ------------
-                        Menu de serviço
-                        ------------
-
-                        Nota: Necessário teclado.
-                        Você pode acessar o Menu de Serviço usando o F4 e depois usar o F2 para navegar e o F4 para selecionar.
-
-                        -----------------
-                        Atualizações do Batocera
-                        -----------------
-
-                        Em alguns casos, quando você atualiza o Batocera para uma nova versão, ao tentar executar o emulador Sega Model 2, ele pode travar.
-                        Verificando o seu arquivo /userdata/system/logs/es_launch_stderr.log você pode ver um erro de incompatibilidade do Wine (Wine mismatch error).
-                        Isso ocorre porque o Wine está desatualizada e não está alinhada com a versão instalada com o Batocera mais recente.
-                        Se for o caso, você deve fazer backup de suas pastas /userdata/saves/model2/model2emu/CFG & userdata/saves/model2/model2emu/NVDATA.
-                        Ao navegar usando o compartilhamento de rede, você não verá o diretório userdata, navegue até a pasta de saves.
-                        O backup dessas pastas manterá suas pontuações, configurações de rom e controles.
-
-                        É recomendado remover seu diretório /userdata/saves/model2/ somente via ssh!
-                        Quando logado via ssh execute:
-                        cd /userdata/saves
-                        rm -rf modelo2
-
-                        Uma vez feito isto, inicie um jogo estando conectado à Internet e ele recriará a os arquivos wine para você.
-                        Depois, você pode restaurar seus diretórios CFG e NVDATA.
-
-                        *** Desfrute dos jogos Sega Model 2 no Linux! ***
 
 model3:
   name:                 Model 3
@@ -6782,6 +6663,8 @@ ps2:
   emulators:
     pcsx2:
       pcsx2:            { requireAnyOf: [BR2_PACKAGE_PCSX2], incompatible_extensions: [m3u] }
+    armsx2:
+      armsx2:           { requireAnyOf: [BR2_PACKAGE_ARMSX2], incompatible_extensions: [m3u] }
     libretro:
       ps2:              { requireAnyOf: [BR2_PACKAGE_LIBRETRO_PS2], incompatible_extensions: [m3u] }
       armsx2:           { requireAnyOf: [BR2_PACKAGE_LIBRETRO_ARMSX2], incompatible_extensions: [m3u] }
