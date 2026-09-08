@@ -22,7 +22,6 @@ freepats.mk
 fsuae.mk
 gtk-layer-shell.mk
 hcl.mk
-imgui.mk
 kddocwidgets.mk
 kodi-pvr-freebox.mk
 labwc.mk

@@ -3,13 +3,12 @@
 # imgui
 #
 ################################################################################
-# Version: Commits on Jul 25, 2026
-IMGUI_VERSION = v1.92.9
+# Version: Commits on Jul 31, 2026
+IMGUI_VERSION = v1.92.9b
 IMGUI_SITE = $(call github,ocornut,imgui,$(IMGUI_VERSION))
 IMGUI_INSTALL_STAGING = YES
 
-IMGUI_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release
-HOST_IMGUI_CONF_OPTS = -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$(STAGING_DIR)/usr
+HOST_IMGUI_CONF_OPTS = -DCMAKE_INSTALL_PREFIX=$(STAGING_DIR)/usr
 
 ifeq ($(BR2_PACKAGE_SDL3),y)
     IMGUI_DEPENDENCIES += sdl3
@@ -58,10 +57,8 @@ ifeq ($(BR2_PACKAGE_VULKAN_LOADER),y)
 endif
 
 define IMGUI_COPY_CMAKE_FILES
-    cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/imgui/CMakeLists.txt \
-	  $(@D)/
-    cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/imgui/imgui-config.cmake.in \
-	  $(@D)/
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/imgui/CMakeLists.txt  $(@D)/
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/imgui/imgui-config.cmake.in $(@D)/
 endef
 
 IMGUI_PRE_CONFIGURE_HOOKS += IMGUI_COPY_CMAKE_FILES
