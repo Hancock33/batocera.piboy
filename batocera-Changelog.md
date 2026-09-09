@@ -93,7 +93,8 @@
 - CorsixTH to v0.70.1
 - DevilutionX to 1.5.5
 - Dhewm3 & Mods to 1.5.5
-- Dolphin-Emu to 2606
+- Dolphin-Emu to 2609
+- DOSBox-X to 2026.08.02
 - DXX-Rebirth to Aug 23, 2026 build
 - ECWolf to Feb 23, 2026 build
 - EDuke32 / Fury to Aug 07, 2026 build
@@ -220,7 +221,8 @@
 - Libretro-Yabasanshiro to August 23rd, 2026 build
 - Lightspark to 0.9.0
 - LinuxLoader to v3.0.10
-- Moonlight-QT to Jun 26, 2026 build
+- Moonlight-Embedded to Jun 5, 2026 build
+- Moonlight-QT to Sep 8, 2026 build
 - Mupen64Plus-Core to March 30th, 2026 build
 - OpenJazz to Mar 01, 2026 build
 - OpenMSX to Release 21
@@ -230,18 +232,20 @@
 - Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
-- Redream to 1.5.0-1239
-- RPCS3 to v.0.0.42
+- Redream to 1.5.0-1240
+- RPCS3 to Sep 7th, 2026 build
+- Ruffle to 30th of August 2026 nightly build
 - ScummVM to v2026.3.0
-- ShadPS4 to v.0.17.0
+- ShadPS4 to v.0.18.0
+- SimCoupe to v1.2.17
 - Solarus to 2.1.3
 - Sonic3-Air to v26.03.28.0
 - Supermodel to v0.3a-20260726-git-b7d8acd
 - TheXTech to v1.3.7.3-1
 - TRX to 1.10.2
-- Tsugaru to v20251206
+- Tsugaru to v20260522
 - Ur-Quan Masters to Aug 21, 2026 build
-- Vita3k to 10th of June build
+- Vita3k to Sep 8, 2026 build
 - VKQuake to 1.36.0
 - vkQuake2 to Aug 5, 2026 build
 - VKQuake3 to 1.36
@@ -251,7 +255,8 @@
 - Xemu to v0.8.136
 - Xenia to v1.0.2844
 - Xenia Canary to August 29th, 2026 build
-- Xenia Edge to 28th of August build
+- Xenia Edge to 9th of September build
+- XRoar to v1.12.1
 - Ymir to v0.3.3
 ### System
 - Allwinner H616 device kernel updated to 7.1.5

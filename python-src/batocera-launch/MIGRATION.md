@@ -264,37 +264,20 @@ Large multi-module generators (dolphin, pcsx2, libretro, mame, linuxloader, …)
 should become packages; smaller single-module ones should be inlined unless
 they pull unusual dependencies.
 
-- [ ] `bigpemu`
 - [ ] `citron`
-- [ ] `demul`
-- [ ] `dolphin`
 - [ ] `duckstation`
 - [ ] `duckstation_legacy` (emulator `duckstation`, core `duckstation-legacy`)
-- [ ] `fsuae`
-- [ ] `gzdoom`
 - [ ] `hypseus_singe` (`hypseus-singe`)
 - [ ] `libretro`
 - [ ] `linuxloader`
 - [ ] `mame`
-- [ ] `melonds`
-- [ ] `moonlight`
-- [ ] `mugen`
 - [ ] `mupen` (`mupen64plus`)
-- [ ] `openbor`
-- [ ] `openmsx`
 - [ ] `pcsx2`
 - [ ] `pcsx2x6`
-- [ ] `play`
 - [ ] `ppsspp`
-- [ ] `shadps4`
 - [ ] `supermodel`
 - [ ] `vice`
-- [ ] `vita3k`
 - [ ] `vpinball`
-- [ ] `wine`
-- [ ] `xemu`
-- [ ] `xenia` (`xenia-canary`)
-- [ ] `xenia_edge` (`xenia-edge`)
 - [ ] `ymir`
 
 ## Reference files
