@@ -9,7 +9,7 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|c5f6f1ca5eaf16ff84aee79
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.36|Sept 09, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|304eef9b1654450a22a3e3c02f0af78115e4a37d|Sept 09, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|ceb1ab07186de305af85616c342c14796ba2e334|Sept 09, 2026
-Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|8b3a468c5b51387093811cb16b076e6fd9289d66|Sept 09, 2026
+Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|d840b61ce5d8aaaf0a99c8fb9bcdfd153a534cd6|Sept 09, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|046543d738b7e1dfbb3d12d5a6cce2b25e5f21b4|Sept 09, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|6b7a00ac9d0a24474ca5d42f9f0a149067a39b67|Sept 09, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|14c26d8c7de8fd9cbde67dac8b47601faad46c6c|Sept 09, 2026
@@ -17,6 +17,7 @@ Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-09-09|Sept 09,
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|ac5aedee0a6845221079a6110d8909e88a52950f|Sept 09, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260909|Sept 09, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|81478f2aa2abb942cfacb2109cbc25a4bd3b46ca|Sept 09, 2026
+Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|615.71.09|Sept 09, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260909|Sept 09, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|b6954bba01f278ac4b54f618fcad43928696ba9a|Sept 09, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|d65f80602f9e86f78164dda571725bd7d78a3135|Sept 09, 2026
@@ -227,7 +228,6 @@ Emulators|[libretro-cannonball](http://github.com/libretro/cannonball)|0d83575d9
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|27426f00aa68f9f358c86919e8a40985326fa05b|Aug 04, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|eb910403834184e1d098bcc310054ac17a00b53d|Aug 03, 2026
-Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.57.04|Aug 03, 2026
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.5.0|Aug 03, 2026
 Boot|[rocknix-abl](http://github.com/ROCKNIX/abl)|v1.1.8|Aug 01, 2026
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.3|Aug 01, 2026

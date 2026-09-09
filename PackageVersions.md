@@ -268,7 +268,7 @@ Emulators|[ryujinx](https://git.ryujinx.app/Ryubing/Canary/releases)|1.3.351|Aug
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.18.0|Aug 18, 2026
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|1f966036543991c05022ce4f95cfbfbb0014b187|Aug 30, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|b61e1ee4fc9e2119ec933461a0bfad024dd2950a|Sept 09, 2026
-Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|8b3a468c5b51387093811cb16b076e6fd9289d66|Sept 09, 2026
+Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|d840b61ce5d8aaaf0a99c8fb9bcdfd153a534cd6|Sept 09, 2026
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|7a8878f1306f65594c30b7d86dee41d972c2e495|Sept 04, 2026
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|5a0a498d592f7019b406ad605c73a2575a6a8d10|Sept 04, 2026
 Emulators|[supermodel](http://github.com/dmanlfc/Supermodel)|39beed2b6f8eeb2081093ad205580c743e53d4ec|Aug 27, 2026
@@ -336,7 +336,7 @@ Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09fe
 Gpu|[mali-mp400-gbm](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Gpu|[mali-mp400-wayland](http://github.com/caesar-github/libmali)|b35e1b288bdac91a7d401edd04c71ec9fa573040|Feb 24, 2022
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n13.1.15.0|Jul 14, 2026
-Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|610.57.04|Aug 03, 2026
+Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|615.71.09|Sept 09, 2026
 Gpu|[nvidia580-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|580.178.04|Jun 23, 2026
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.0.11|Sept 10, 2025
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|57a1067a246c71fa6c9a355d1668884fda155dd5|Dec 23, 2025
