@@ -3,8 +3,8 @@
 # hlsdk-xash3d-dmc
 #
 ################################################################################
-# Version: Commits on Jul 22, 2026
-HLSDK_XASH3D_DMC_VERSION = b6ef36f40c0d01ca2eccd948649012a31ca75a61
+# Version: Commits on Sept 09, 2026
+HLSDK_XASH3D_DMC_VERSION = 53ec328b0b0b8216cce537cd08b698ce504409ff
 HLSDK_XASH3D_DMC_BRANCH = dmc
 HLSDK_XASH3D_DMC_SITE = https://github.com/FWGS/hlsdk-portable.git
 HLSDK_XASH3D_DMC_SITE_METHOD=git

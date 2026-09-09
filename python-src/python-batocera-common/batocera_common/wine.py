@@ -19,8 +19,8 @@ WINE_BASE: Final = Path('/usr/wine')
 _WINETRICKS: Final = WINE_BASE / 'winetricks'
 _WINE_BOTTLES: Final = HOME / 'wine-bottles'
 
-type RunnerNames = Literal['wine-tkg', 'wine-proton']
-_DEFAULT_WINE_RUNNER: Final[RunnerNames] = 'wine-tkg'
+type RunnerNames = Literal['wine-custom', 'wine-proton']
+_DEFAULT_WINE_RUNNER: Final[RunnerNames] = 'wine-custom'
 
 
 @dataclass
