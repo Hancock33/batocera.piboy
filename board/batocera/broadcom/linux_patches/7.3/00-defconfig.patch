@@ -1,5 +1,5 @@
 diff --git a/arch/Kconfig b/arch/Kconfig
-index e86880045158..e437131b176e 100644
+index 45c657772362..6dfd9f721dc1 100644
 --- a/arch/Kconfig
 +++ b/arch/Kconfig
 @@ -14,7 +14,7 @@ config ARCH_CONFIGURES_CPU_MITIGATIONS
@@ -12,10 +12,10 @@ index e86880045158..e437131b176e 100644
  
  #
 diff --git a/kernel/cpu.c b/kernel/cpu.c
-index bc4f7a9ba64e..fa6546bf7781 100644
+index b3c8553d7bd6..5b588c05764a 100644
 --- a/kernel/cpu.c
 +++ b/kernel/cpu.c
-@@ -3336,7 +3336,7 @@ EXPORT_SYMBOL_GPL(cpu_mitigations_auto_nosmt);
+@@ -3332,7 +3332,7 @@ EXPORT_SYMBOL_GPL(cpu_mitigations_auto_nosmt);
  #else
  static int __init mitigations_parse_cmdline(char *arg)
  {

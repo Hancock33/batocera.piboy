@@ -1,8 +1,8 @@
 diff --git a/drivers/hid/hid-input.c b/drivers/hid/hid-input.c
-index dc7b8169cf61..7b25a264c144 100644
+index 4c1c9dff6e25..7eb99aab35b7 100644
 --- a/drivers/hid/hid-input.c
 +++ b/drivers/hid/hid-input.c
-@@ -1617,8 +1617,10 @@ void hidinput_hid_event(struct hid_device *hid, struct hid_field *field, struct
+@@ -1629,8 +1629,10 @@ void hidinput_hid_event(struct hid_device *hid, struct hid_field *field, struct
  		if (field->flags & HID_MAIN_ITEM_NULL_STATE &&
  		    (value < field->logical_minimum ||
  		     value > field->logical_maximum)) {
