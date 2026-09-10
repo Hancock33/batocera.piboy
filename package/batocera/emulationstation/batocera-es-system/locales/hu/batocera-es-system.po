@@ -330,6 +330,10 @@ msgid "1024kB"
 msgstr "1024kB"
 
 msgctxt "game_options"
+msgid "1024x768 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1040 STE 1.06"
 msgstr "1040 STE 1.06"
 
@@ -442,12 +446,28 @@ msgid "1280 x 800"
 msgstr "1280 x 800"
 
 msgctxt "game_options"
+msgid "1280x1024 (5:4)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1280x720 (100% Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x720 (16:9)"
 msgstr ""
 
 msgctxt "game_options"
 msgid "1280x720 (Default)"
 msgstr "1280x720 (alapértelmezett)"
+
+msgctxt "game_options"
+msgid "1280x800 (16:10)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x960 (4:3)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1280x960 (Default)"
@@ -490,6 +510,10 @@ msgid "1366 x 768"
 msgstr "1366 x 768"
 
 msgctxt "game_options"
+msgid "1366x768 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "13MB (Recommended)"
 msgstr "13MB (ajánlott)"
 
@@ -523,6 +547,10 @@ msgstr "1440 x 900"
 
 msgctxt "game_options"
 msgid "1440p (6x)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1440x900 (16:10)"
 msgstr ""
 
 msgctxt "game_options"
@@ -614,7 +642,15 @@ msgid "1600 x 900"
 msgstr "1600 x 900"
 
 msgctxt "game_options"
+msgid "1600x1200 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1600x900 (125%)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1600x900 (16:9)"
 msgstr ""
 
 msgctxt "game_options"
@@ -635,6 +671,10 @@ msgstr "1680 x 1050"
 
 msgctxt "game_options"
 msgid "1680p (7x)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1680x1050 (16:10)"
 msgstr ""
 
 msgctxt "game_options"
@@ -708,6 +748,18 @@ msgstr ""
 #, c-format
 msgctxt "game_options"
 msgid "1920x1080 (150% - 1080p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1080 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1200 (16:10)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1440 (4:3)"
 msgstr ""
 
 msgctxt "game_options"
@@ -985,6 +1037,10 @@ msgstr "2560 x 1440"
 msgctxt "game_options"
 msgid "2560 x 1600"
 msgstr "2560 x 1600"
+
+msgctxt "game_options"
+msgid "2560x1440 (16:9)"
+msgstr ""
 
 #, c-format
 msgctxt "game_options"
@@ -1290,6 +1346,10 @@ msgstr "3840 x 2160"
 msgctxt "game_options"
 msgid "3840MB"
 msgstr "3840MB"
+
+msgctxt "game_options"
+msgid "3840x2160 (16:9)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "3840x2160 (300% - 4K)"
@@ -1840,6 +1900,10 @@ msgid "640x360 (50%)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "640x480 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "64KB"
 msgstr "64KB"
 
@@ -2002,6 +2066,10 @@ msgstr "800 x 600"
 msgctxt "game_options"
 msgid "800p"
 msgstr "800p"
+
+msgctxt "game_options"
+msgid "800x600 (4:3)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "8086/8088, 4.77MHz (315 cps)"
@@ -4455,6 +4523,10 @@ msgid "CRT COLOR EMULATION"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT EFFECT"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT GHOSTING EFFECT"
 
@@ -5023,6 +5095,12 @@ msgstr "Válassza ki a rendszerüzenetek képernyőn való megjelenésének hely
 msgctxt "game_options"
 msgid "Choose the preferred violence level."
 msgstr "Válassza ki a kívánt erőszak szintet."
+
+msgctxt "game_options"
+msgid ""
+"Choose the rendering backend. Software is the current best option for Arm "
+"systems."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
@@ -7858,6 +7936,10 @@ msgid "Fire 2"
 msgstr "Tűz 2"
 
 msgctxt "game_options"
+msgid "Fire the gun's recoil motor on each shot, for guns that have one."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
 msgstr "Igazítás 4:3 képarányhoz"
 
@@ -8300,6 +8382,10 @@ msgid "GAME RENDERING & SHADERS"
 msgstr "JÁTÉK RENDERELÉS ÉS ÁRNYÉKOLÓK"
 
 msgctxt "game_options"
+msgid "GAME RESOLUTION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GAME TRANSLATION"
 msgstr ""
 
@@ -8340,12 +8426,24 @@ msgid "GAMECUBE PORT 4 TYPE"
 msgstr "GAMECUBE PORT 4 TYPE"
 
 msgctxt "game_options"
+msgid "GAMEPAD"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GAMEPAD AUTOMATIC MAPPING"
 msgstr "GAMEPAD AUTOMATIKUS TÉRKÉPEZÉS"
 
 msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
 msgstr "GAMEPAD KURSZOR SEBESSÉGE"
+
+msgctxt "game_options"
+msgid "GAMEPAD RUMBLE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GAMEPAD RUMBLE STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "GAMEPLAY"
@@ -8594,6 +8692,14 @@ msgstr "GSPLUS BIOS FÁJLNÉV"
 msgctxt "game_options"
 msgid "GT Force"
 msgstr "GT Force"
+
+msgctxt "game_options"
+msgid "GUN RECOIL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GUN RECOIL STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Gakken Compact Vision TV Boy cartridges"
@@ -9254,6 +9360,10 @@ msgid "INTEGER UPSCALING"
 msgstr "EGÉSZ SZÁMOS FELSKÁLÁZÁS"
 
 msgctxt "game_options"
+msgid "INTERFACE SCALE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "INTERLACING PATCHES"
 msgstr "INTERLACING PATCHES"
 
@@ -9486,6 +9596,10 @@ msgstr "Egész szám skála"
 msgctxt "game_options"
 msgid "Interlaced"
 msgstr "Váltott soros"
+
+msgctxt "game_options"
+msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Internal resolution scale relative to 720p base."
@@ -10123,6 +10237,10 @@ msgstr "Líbia"
 msgctxt "game_options"
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
+
+msgctxt "game_options"
+msgid "Light"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Light (load times)"
@@ -10826,6 +10944,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Medium (60)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Medium (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -13420,6 +13542,12 @@ msgid "Resolution multipliers to smooth vectors"
 msgstr "Felbontási szorzók a vektorok simítására"
 
 msgctxt "game_options"
+msgid ""
+"Resolution used by the game. Defaults to the current screen resolution. "
+"Values below 640 x 480 are raised by the game."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "BLENDMODE körvonal visszaállítása a Singe sprite-okon."
 
@@ -14232,6 +14360,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Scale input sensitivity while using weapon zoom."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Scale the user interface for higher resolution displays. Values too large "
+"for the screen resolution are reduced by the game."
 msgstr ""
 
 msgctxt "game_options"
@@ -15594,6 +15728,10 @@ msgid "Strict (Most accurate)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Strong"
+msgstr "Erős"
+
+msgctxt "game_options"
 msgid "Super Action Controller"
 msgstr ""
 
@@ -15725,6 +15863,11 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Sync to the display refresh to prevent tearing. Disable for VRR displays."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Synchronize frame presentation with monitor refresh rate."
 msgstr ""
 
@@ -15735,6 +15878,14 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Synchronize framerate with display refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synthesised centring resistance on wheels that support it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synthesised road/engine vibration while driving."
 msgstr ""
 
 msgctxt "game_options"
@@ -16179,6 +16330,12 @@ msgctxt "game_options"
 msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr ""
 "A végső kimeneti kép, amely nem kapcsolódik a Wii emulált NAND beállításához."
+
+msgctxt "game_options"
+msgid ""
+"The game's jolts plus a buzz rising with steering, on a regular gamepad. "
+"Driving games only."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -17417,8 +17574,20 @@ msgid "WHDLOAD LAUNCHER"
 msgstr "WHDLOAD INDÍTÓ"
 
 msgctxt "game_options"
+msgid "WHEEL"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL DEADZONE"
 msgstr "KERÉK HOLTZÓNA"
+
+msgctxt "game_options"
+msgid "WHEEL FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL FORCE FEEDBACK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL MIDZONE"
@@ -17429,8 +17598,16 @@ msgid "WHEEL MODEL"
 msgstr "KORMÁNY MODELL"
 
 msgctxt "game_options"
+msgid "WHEEL ROAD RUMBLE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL ROTATION"
 msgstr "KERÉKFORGÁS"
+
+msgctxt "game_options"
+msgid "WHEEL RUMBLE STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
@@ -20028,10 +20205,6 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
 #~ msgstr "Nyújtsa ki az ablakra"
-
-#~ msgctxt "game_options"
-#~ msgid "Strong"
-#~ msgstr "Erős"
 
 #~ msgctxt "keys_files"
 #~ msgid "Swap Screen"
