@@ -1,0 +1,24 @@
+--- a/src/video/video.cpp
++++ b/src/video/video.cpp
+@@ -2732,10 +2732,6 @@
+     if (VIDEO_HAS(SCANLINES))
+         draw_scanlines(g_scanline_shunt);
+ 
+-    if (g_game->get_outline_border())
+-        draw_border(g_game->get_outline_border(),
+-            g_game->get_outline_border_color());
+-
+     SDL_SetRenderTarget(g_renderer, NULL);
+     SDL_RenderClear(g_renderer);
+ 
+@@ -2755,6 +2751,10 @@
+ 
+     if (VIDEO_HAS(BEZEL_TOGGLE)) vid_render_bezels();
+ 
++    if (g_game->get_outline_border())
++        draw_border(g_game->get_outline_border(),
++            g_game->get_outline_border_color());
++
+     if (VIDEO_HAS(TAKE_SCREENSHOT))
+     {
+         VIDEO_CLEAR(TAKE_SCREENSHOT);

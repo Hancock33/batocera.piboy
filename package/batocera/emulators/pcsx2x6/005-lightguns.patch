@@ -220,7 +220,7 @@ index f77556c48..ab264e0b9 100644
  	{
 -		return has_relative_binds ? (InputManager::MAX_POINTER_DEVICES + port) : EffectivePointerIndex();
 +		if (udev_fd != -1) return port;
-+		return has_relative_binds ? (InputManager::MAX_POINTER_DEVICES + port) : port;
++		return has_relative_binds ? (InputManager::MAX_POINTER_DEVICES + port) : EffectivePointerIndex();
  	}
  
  	void GunCon2State::UpdateSoftwarePointerPosition()

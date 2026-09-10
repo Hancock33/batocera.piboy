@@ -103,6 +103,7 @@
 - Groovy MAME to 0.289
 - Hurrican to Apr 5, 2026 build
 - Hydra Castle Labyrinth to Aug 11, 2026 build
+- Hypseus Singe to 3.0.2
 - IOQuake3 to Jul 16, 2026
 - Jazz2 to 3.8.0
 - Ledspicer to 0.7.6
@@ -223,12 +224,13 @@
 - LinuxLoader to v3.0.10
 - Moonlight-Embedded to Jun 5, 2026 build
 - Moonlight-QT to Sep 8, 2026 build
-- Mupen64Plus-Core to March 30th, 2026 build
+- Mupen64Plus core to Sep 5th, 2026 build; audio-sdl, input-sdl, rsp-hle, ui-console, video-glide64mk2 & video-rice plugins to Jun 23rd, 2026 build
 - OpenJazz to Mar 01, 2026 build
 - OpenMSX to Release 21
 - OpenJK to Jul 11th, 2026 build
 - OpenJKDF2 to v0.9.9
-- PCSX2 to 2.8.0
+- PCSX2 to 2.8.2
+- PCSX2x6 to v0.2.22
 - Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
@@ -245,6 +247,7 @@
 - TRX to 1.10.2
 - Tsugaru to v20260522
 - Ur-Quan Masters to Aug 21, 2026 build
+- Visual Pinball to Sep 9, 2026 build
 - Vita3k to Sep 8, 2026 build
 - VKQuake to 1.36.0
 - vkQuake2 to Aug 5, 2026 build
