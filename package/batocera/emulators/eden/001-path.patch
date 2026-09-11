@@ -23,6 +23,8 @@ index 9adf210ab7..3f52e55d4a 100644
 -        GenerateEdenPath(EdenPath::NANDDir, eden_path / NAND_DIR);
 +        GenerateEdenPath(EdenPath::NANDDir, "/userdata/bios/switch/nand");
          GenerateEdenPath(EdenPath::PlayTimeDir, eden_path / PLAY_TIME_DIR);
+         GenerateEdenPath(EdenPath::PostPresetDir, eden_path / POST_PRESET_DIR);
+         GenerateEdenPath(EdenPath::PostShaderDir, eden_path / POST_SHADER_DIR);
          GenerateEdenPath(EdenPath::SaveDir, eden_path / NAND_DIR);
 -        GenerateEdenPath(EdenPath::ScreenshotsDir, eden_path / SCREENSHOTS_DIR);
 -        GenerateEdenPath(EdenPath::SDMCDir, eden_path / SDMC_DIR);
@@ -40,5 +42,3 @@ index 9adf210ab7..3f52e55d4a 100644
 +        GenerateEdenPath(EdenPath::CacheDir, "/userdata/system/cache/yuzu");
 +        GenerateEdenPath(EdenPath::ShaderDir, "/userdata/saves/switch/yuzu/shaders");
  #ifdef _WIN32
-         GenerateLegacyPath(EmuPath::RyujinxDir, GetAppDataRoamingDirectory() / RYUJINX_DIR);
- #else
