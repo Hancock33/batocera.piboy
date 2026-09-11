@@ -3,8 +3,8 @@
 # libretro-hatarib
 #
 ################################################################################
-# Version: Commits on Sept 09, 2026
-LIBRETRO_HATARIB_VERSION = bb5bf182f6f1af4d30a4fe40bccd1c461d91dfd7
+# Version: Commits on Sept 10, 2026
+LIBRETRO_HATARIB_VERSION = 698955761a674e9c0991e489835c7d3e9a74321c
 LIBRETRO_HATARIB_SITE = https://github.com/bbbradsmith/hatariB
 LIBRETRO_HATARIB_SITE_METHOD = git
 LIBRETRO_HATARIB_LICENSE = GPLv2
