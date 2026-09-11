@@ -139,7 +139,7 @@ systems = {
 
     "atomiswave":   { "name": "Atomiswave", "biosFiles":  [ { "md5": "85254fbe320ca82a768ec2c26bb08def", "file": "bios/dc/awbios.zip"  } ] },
 
-    "segacd":       { "name": "Sega CD", "biosFiles":     [ { "md5": "e66fa1dc5820d254611fdcdba0662372", "file": "bios/bios_CD_E.bin"   },
+    "megacd":       { "name": "Sega CD", "biosFiles":     [ { "md5": "e66fa1dc5820d254611fdcdba0662372", "file": "bios/bios_CD_E.bin"   },
                                                             { "md5": "854b9150240a198070150e4566ae1290", "file": "bios/bios_CD_U.bin"   },
                                                             { "md5": "278a9397d192149e84e820ac621a8edd", "file": "bios/bios_CD_J.bin"   } ] },
 
