@@ -3,8 +3,8 @@
 # yquake2-rogue
 #
 ################################################################################
-# Version: Commits on Sept 06, 2026
-YQUAKE2_ROGUE_VERSION = da619df3a8028422483b6ae6ee2eae5f6f188f8f
+# Version: Commits on Sept 11, 2026
+YQUAKE2_ROGUE_VERSION = 2cad9c05f0de153599b9eab7a9d5ef40452b1718
 YQUAKE2_ROGUE_SITE = $(call github,yquake2,rogue,$(YQUAKE2_ROGUE_VERSION))
 YQUAKE2_ROGUE_LICENSE = GPLv2
 YQUAKE2_ROGUE_LICENSE_FILES = LICENSE

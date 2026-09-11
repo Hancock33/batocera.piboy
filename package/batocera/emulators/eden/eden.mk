@@ -3,8 +3,8 @@
 # eden
 #
 ################################################################################
-# Version: Commits on Sept 10, 2026
-EDEN_VERSION = f3af5d0c252feba0df73bedddcd8a40f71ebc0fa
+# Version: Commits on Sept 11, 2026
+EDEN_VERSION = c95ad020fb529d47f9c3106a53553bec955c1586
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD=git
 EDEN_GIT_SUBMODULES=YES
@@ -24,6 +24,7 @@ EDEN_CONF_OPTS += -DENABLE_SDL2=ON
 EDEN_CONF_OPTS += -DENABLE_WEB_SERVICE=ON
 EDEN_CONF_OPTS += -DLINUX=ON
 EDEN_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
+EDEN_CONF_OPTS += -DUSE_FASTER_LINKER=ON
 EDEN_CONF_OPTS += -DUSE_SANITIZERS=OFF
 EDEN_CONF_OPTS += -DYUZU_CMD=OFF
 EDEN_CONF_OPTS += -DYUZU_ROOM=ON

@@ -62,6 +62,7 @@ semver.mk
 sf_rpi_status.mk
 shaderc.mk
 shadps4.mk
+sm2-emu.mk
 sonic3-air.mk
 spirv-cross.mk
 spirv-headers.mk

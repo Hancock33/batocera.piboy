@@ -3,8 +3,8 @@
 # libxmp
 #
 ################################################################################
-# Version: Commits on Jul 26, 2026
-LIBXMP_VERSION = libxmp-4.7.2
+# Version: Commits on Sept 11, 2026
+LIBXMP_VERSION = libxmp-4.7.3
 LIBXMP_SOURCE = enet-$(LIBXMP_VERSION).tar.gz
 LIBXMP_SITE = $(call github,libxmp,libxmp,$(LIBXMP_VERSION))
 LIBXMP_INSTALL_STAGING = YES
