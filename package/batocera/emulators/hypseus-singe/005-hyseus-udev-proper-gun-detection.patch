@@ -1,6 +1,8 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 9e0abb9..09ba481 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -111,6 +111,7 @@
+@@ -93,6 +93,7 @@ find_package(SDL3_ttf CONFIG REQUIRED)
  find_package(SDL3_image CONFIG REQUIRED)
  find_package(SDL3_mixer CONFIG REQUIRED)
  find_package(Vorbis REQUIRED)
@@ -8,7 +10,7 @@
  
  message(STATUS "SDL3 version: ${SDL3_VERSION}")
  message(STATUS "SDL3_ttf version: ${SDL3_ttf_VERSION}")
-@@ -147,7 +148,7 @@
+@@ -128,7 +129,7 @@ add_dependencies( game vldp )
  add_dependencies( sound vldp )
  
  add_executable( hypseus hypseus.cpp globals.h )
@@ -17,7 +19,29 @@
  
  if(ASAN)
      target_link_options(hypseus PRIVATE -fsanitize=address -fno-omit-frame-pointer -g)
-
+diff --git a/src/cmake/modules/FindUdev.cmake b/src/cmake/modules/FindUdev.cmake
+new file mode 100644
+index 0000000..161027f
+--- /dev/null
++++ b/src/cmake/modules/FindUdev.cmake
+@@ -0,0 +1,15 @@
++
++if(UDEV_INCLUDE_DIR)
++  # Already in cache, be silent
++  set(UDEV_FIND_QUIETLY TRUE)
++endif(UDEV_INCLUDE_DIR)
++
++find_path(UDEV_INCLUDE_DIR libudev.h)
++
++find_library(UDEV_LIBRARY NAMES udev)
++
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(Udev DEFAULT_MSG
++                                  UDEV_LIBRARY UDEV_INCLUDE_DIR)
++
++mark_as_advanced(UDEV_LIBRARY UDEV_INCLUDE_DIR)
+diff --git a/src/manymouse/linux_evdev.c b/src/manymouse/linux_evdev.c
+index 92280f1..cff9fda 100644
 --- a/src/manymouse/linux_evdev.c
 +++ b/src/manymouse/linux_evdev.c
 @@ -25,6 +25,66 @@
@@ -87,7 +111,7 @@
  /* linux allows 16 evdev nodes currently. */
  #define MAX_MICE 16
  typedef struct
-@@ -222,21 +282,7 @@
+@@ -222,21 +282,7 @@ static int init_mouse(const char *fname, int fd)
  /* Return a file descriptor if this is really a mouse, -1 otherwise. */
  static int open_if_mouse(const char *fname)
  {
@@ -109,7 +133,7 @@
  
      if ((fd = open(fname, O_RDONLY | O_NONBLOCK)) == -1)
          return 0;
-@@ -267,25 +313,99 @@
+@@ -267,25 +313,99 @@ static int linux_evdev_init(const unsigned char filter)
      DIR *dirp;
      struct dirent *dent;
      int i;
@@ -200,15 +224,15 @@
 +       * and create a udev_device object (dev) representing it. */
 +      struct udev_device *dev = udev_device_new_from_syspath(m_udev, name);
 +      const char *devnode     = udev_device_get_devnode(dev);
-+
+ 
+-    } /* while */
 +      if (devnode) {
 +	if (open_if_mouse(devnode))
 +	  available_mice++;
 +	udev_device_unref(dev);
 +      }
 +    }
- 
--    } /* while */
++
 +    if(enumerate != NULL) {
 +      udev_enumerate_unref(enumerate);
 +    }
@@ -221,21 +245,3 @@
  
      /* Sort devices based on eventfile number (from first to most recently registered) */
      if (available_mice)
---- /dev/null	2026-09-05 04:03:50.042439576 +1000
-+++ b/src/cmake/modules/FindUdev.cmake
-@@ -0,0 +1,15 @@
-+
-+if(UDEV_INCLUDE_DIR)
-+  # Already in cache, be silent
-+  set(UDEV_FIND_QUIETLY TRUE)
-+endif(UDEV_INCLUDE_DIR)
-+
-+find_path(UDEV_INCLUDE_DIR libudev.h)
-+
-+find_library(UDEV_LIBRARY NAMES udev)
-+
-+include(FindPackageHandleStandardArgs)
-+find_package_handle_standard_args(Udev DEFAULT_MSG
-+                                  UDEV_LIBRARY UDEV_INCLUDE_DIR)
-+
-+mark_as_advanced(UDEV_LIBRARY UDEV_INCLUDE_DIR)

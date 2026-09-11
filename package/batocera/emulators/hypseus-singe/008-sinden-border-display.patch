@@ -1,6 +1,8 @@
+diff --git a/src/video/video.cpp b/src/video/video.cpp
+index c72d094..9bd7af0 100644
 --- a/src/video/video.cpp
 +++ b/src/video/video.cpp
-@@ -2464,6 +2464,10 @@
+@@ -2464,6 +2464,10 @@ static void draw_border(int s, int c)
  {
      SDL_FRect tb, lb, rb, bb;
      unsigned char r = 0xff, g = 0xff, b = 0xff;
@@ -11,7 +13,7 @@
  
      switch(c)
      {
-@@ -2483,13 +2487,29 @@
+@@ -2483,13 +2487,29 @@ static void draw_border(int s, int c)
  
      SDL_SetRenderDrawColor(g_renderer, r, g, b, SDL_ALPHA_OPAQUE);
  

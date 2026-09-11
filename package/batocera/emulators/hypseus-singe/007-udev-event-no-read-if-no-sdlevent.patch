@@ -1,6 +1,8 @@
+diff --git a/src/io/input.cpp b/src/io/input.cpp
+index f61d9ce..ed65132 100644
 --- a/src/io/input.cpp
 +++ b/src/io/input.cpp
-@@ -1187,6 +1187,9 @@
+@@ -1187,6 +1187,9 @@ void SDL_check_input()
          process_event(&event);
      }
  
@@ -10,7 +12,7 @@
      // added by JFA for -idleexit
      if (get_idleexit() > 0 && elapsed_ms_time(idle_timer) > get_idleexit())
          set_quitflag();
-@@ -1228,6 +1231,8 @@
+@@ -1228,6 +1231,8 @@ void process_event(SDL_Event *event)
  {
      unsigned int i = 0;
  
@@ -19,7 +21,7 @@
      // by RDG2010
      // make things easier to read...
      SDL_Keycode keyPressed = event->key.key;
-@@ -1469,6 +1474,8 @@
+@@ -1469,6 +1474,8 @@ void process_event(SDL_Event *event)
          break;
      }
  
@@ -28,7 +30,7 @@
      if (g_game->get_mouse_enabled())
      {
          if (g_mouse_mode == MANY_MOUSE)
-@@ -1478,6 +1485,7 @@
+@@ -1478,6 +1485,7 @@ void process_event(SDL_Event *event)
          }
          else
          {
@@ -36,7 +38,7 @@
              switch (event->type)
              {
                  case SDL_EVENT_MOUSE_BUTTON_DOWN:
-@@ -1561,6 +1569,7 @@
+@@ -1561,6 +1569,7 @@ void process_event(SDL_Event *event)
                      break;
                  }
              }
