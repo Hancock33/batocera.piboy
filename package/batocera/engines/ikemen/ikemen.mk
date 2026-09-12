@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 11, 2026
-IKEMEN_VERSION = 5a57cedeab6b7b5429b8a91449d7ccf74f3a3fb4
+IKEMEN_VERSION = v1.0.0
 IKEMEN_SITE = $(call github,ikemen-engine,Ikemen-GO,$(IKEMEN_VERSION))
 IKEMEN_LICENSE = MIT
 IKEMEN_DEPENDENCIES = libgtk3 mesa3d openal libglfw libxmp
@@ -20,7 +20,8 @@ HOST_GO_COMMON_ENV = GOFLAGS=-mod=mod \
 			 PATH=$(BR_PATH) \
 			 GOBIN= \
 			 CGO_ENABLED=0\
-			 GOEXPERIMENT=arenas
+			 GOEXPERIMENT=arenas \
+			 BUILD_FFMPEG=no
 
 define IKEMEN_BUILD_CMDS
 	$(HOST_GO_TARGET_ENV) $(MAKE) -C $(@D) -f Makefile Ikemen_GO_Linux
