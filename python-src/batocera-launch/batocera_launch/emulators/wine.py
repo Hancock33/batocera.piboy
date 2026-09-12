@@ -28,6 +28,16 @@ class Wine(Emulator):
         if self.system == 'windows_installers':
             return Command(['batocera-wine', 'windows', 'install', self.rom])
 
+        if self.system == "windows" or self.system == "popcap" or self.system == "bigfish":
+            if self.rom.suffix == ".wsquashfs":
+                return Command(['batocera-wine', 'windows', 'play', self.rom])
+            elif "squashfs" in str(self.rom) and self.rom.suffix == "":
+                romsInDir = [str(p) for p in Path(self.rom).glob("*.wineexe")]
+                rom = romsInDir[0].replace('.wineexe','.exe')
+                return Command(['batocera-wine', 'windows', 'install', rom])
+            else:
+                return Command(['batocera-wine', 'windows', 'install', self.rom])
+                
         if self.system != 'windows':
             raise BatoceraException(f'Invalid system: {self.system}')
 
