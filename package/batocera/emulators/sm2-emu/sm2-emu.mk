@@ -33,5 +33,12 @@ else
 SM2_EMU_CONF_OPTS += -DSM2_BUILD_VULKAN=OFF
 endif
 
+define SM2_EMU_INSTALL_NVRAM
+	mkdir -p $(TARGET_DIR)/usr/share/sm2-emu/nvram
+	$(TAR) -xJf $(SM2_EMU_PKGDIR)/nvram.tar.xz -C $(TARGET_DIR)/usr/share/sm2-emu/nvram
+endef
+
+SM2_EMU_POST_INSTALL_TARGET_HOOKS += SM2_EMU_INSTALL_NVRAM
+
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
