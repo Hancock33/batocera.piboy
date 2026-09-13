@@ -3,8 +3,8 @@
 # hlsdk-xash3d-zombiex
 #
 ################################################################################
-# Version: Commits on Sept 10, 2026
-HLSDK_XASH3D_ZOMBIEX_VERSION = 00a3cc196185e092004745e54c1906ab64a48c63
+# Version: Commits on Sept 13, 2026
+HLSDK_XASH3D_ZOMBIEX_VERSION = 2eaae4f8a526395562b79f67541aeb7d1e8d972c
 HLSDK_XASH3D_ZOMBIEX_BRANCH = zombie-x
 HLSDK_XASH3D_ZOMBIEX_SITE = https://github.com/FWGS/hlsdk-portable.git
 HLSDK_XASH3D_ZOMBIEX_SITE_METHOD=git

@@ -5,6 +5,7 @@ alsa-topology-conf.mk
 alsa-ucm-conf.mk
 appstream.mk
 ares.mk
+asio.mk
 batocera-onscreen-keyboard.mk
 batocera-settings.mk
 bgfx.mk
@@ -15,6 +16,7 @@ cabextract.mk
 cbindgen.mk
 corsixth.mk
 cxxopts.mk
+dosbox-staging.mk
 drastic.mk
 ecm.mk
 flatpak.mk
