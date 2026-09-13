@@ -3,8 +3,8 @@
 # logitech-trueforce
 #
 ################################################################################
-# Version: Commits on Sept 10, 2026
-LOGITECH_TRUEFORCE_VERSION = v0.40.3
+# Version: Commits on Sept 12, 2026
+LOGITECH_TRUEFORCE_VERSION = v0.41.0
 LOGITECH_TRUEFORCE_SITE = $(call github,mescon,logitech-trueforce-linux-driver,$(LOGITECH_TRUEFORCE_VERSION))
 LOGITECH_TRUEFORCE_LICENSE = GPL-2.0, GPL-2.0+ (mainline/dd-lg4ff.c)
 LOGITECH_TRUEFORCE_LICENSE_FILES = COPYING

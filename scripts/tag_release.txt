@@ -29,6 +29,7 @@ labwc.mk
 libdate.mk
 libfyaml.mk
 liblc3.mk
+libldac.mk
 libretro-scummvm.mk
 libserum.mk
 libsfdo.mk
