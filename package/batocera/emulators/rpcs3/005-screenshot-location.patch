@@ -1,12 +1,13 @@
 diff --git a/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp b/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
-index d99ce3560..9ce76d932 100644
+index f611fc524..926a5d0cb 100644
 --- a/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
 +++ b/rpcs3/rpcs3qt/screenshot_manager_dialog.cpp
-@@ -110,7 +110,7 @@ void screenshot_manager_dialog::reload()
+@@ -110,7 +110,8 @@ void screenshot_manager_dialog::reload()
  	const sort_filter s_filter = static_cast<sort_filter>(m_combo_sort_filter->currentData().toInt());
  	const QString game_filter = m_combo_game_filter->currentData().toString();
  
 -	const std::string screenshot_path_rpcs3 = fs::get_config_dir() + "screenshots/";
++	// const std::string screenshot_path_rpcs3 = fs::get_config_dir() + "screenshots/";
 +	const std::string screenshot_path_rpcs3 = "/userdata/screenshots/";
  	const std::string screenshot_path_cell  = rpcs3::utils::get_hdd0_dir() + "/photo/";
  

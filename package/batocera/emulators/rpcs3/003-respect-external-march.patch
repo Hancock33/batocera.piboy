@@ -1,6 +1,8 @@
+diff --git a/buildfiles/cmake/ConfigureCompiler.cmake b/buildfiles/cmake/ConfigureCompiler.cmake
+index ea8cd3200..5c4c7e41b 100644
 --- a/buildfiles/cmake/ConfigureCompiler.cmake
 +++ b/buildfiles/cmake/ConfigureCompiler.cmake
-@@ -36,7 +36,7 @@
+@@ -36,7 +36,7 @@ else()
  		# Note that compared to the rest of the 8.x family, 8.1 is very restrictive and we'll have to bump the requirement in future to get anything meaningful.
  		if (APPLE)
  			add_compile_options(-march=armv8.4-a)
