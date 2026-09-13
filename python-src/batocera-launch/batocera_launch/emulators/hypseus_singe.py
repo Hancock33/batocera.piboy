@@ -203,7 +203,7 @@ class HypseusSinge(Emulator):
             video_resolution = _get_resolution(video_path)
             _logger.debug('Resolution: %s', video_resolution)
 
-        if self.system == 'singe':
+        if self.system == 'singe' or self.system == 'actionmax' or self.system == 'alg':
             if zip_file.exists():
                 args: list[str | Path] = [
                     'hypseus',
