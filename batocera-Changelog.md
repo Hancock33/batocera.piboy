@@ -80,7 +80,7 @@
 ### Updated
 - Amiberry to v8.3.0
 - AppleWin to Aug 29, 2026 build
-- Azahar to 2126.0
+- Azahar to 2126.1
 - BigPEmu to 1.221
 - Blake Stone to v1.3.4
 - Box64 0.4.4
@@ -93,7 +93,8 @@
 - DevilutionX to 1.5.5
 - Dhewm3 & Mods to 1.5.5
 - Dolphin-Emu to 2609
-- DOSBox-X to 2026.08.02
+- DOSBox Staging to v0.83.0
+- DOSBox-X to 2026.08.31
 - DXX-Rebirth to Aug 23, 2026 build
 - ECWolf to Feb 23, 2026 build
 - EDuke32 / Fury to Aug 07, 2026 build
@@ -235,14 +236,15 @@
 - Python Pyxel to May 9th, 2026 build
 - Redream to 1.5.0-1240
 - RPCS3 to Sep 7th, 2026 build
-- Ruffle to 30th of August 2026 nightly build
+- Ruffle to 12th of September 2026 nightly build
 - ScummVM to v2026.3.0
 - ShadPS4 to v.0.18.0
 - SimCoupe to v1.2.17
-- Solarus to 2.1.3
+- Solarus to 2.1.4
 - Sonic3-Air to v26.03.28.0
 - Supermodel to v0.3a-20260726-git-b7d8acd
 - TheXTech to v1.3.7.3-1
+- TIC-80 to v1.2.0
 - TRX to 1.10.2
 - Tsugaru to v20260522
 - Ur-Quan Masters to Aug 21, 2026 build

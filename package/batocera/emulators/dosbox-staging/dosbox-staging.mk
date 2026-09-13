@@ -3,11 +3,10 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Apr 29, 2026
-DOSBOX_STAGING_VERSION = fc881ed0b1fe4d1d159f60a7b0b1b370fb56a037
-DOSBOX_STAGING_BRANCH = release/0.82.x
+# Version: Commits on Aug 26, 2026
+DOSBOX_STAGING_VERSION = v0.83.0
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
-DOSBOX_STAGING_DEPENDENCIES = iir libpng libogg libvorbis mt32emu opus opusfile
+DOSBOX_STAGING_DEPENDENCIES = asio iir libpng libogg libvorbis mt32emu opus opusfile
 DOSBOX_STAGING_DEPENDENCIES += sdl2 sdl2_image speexdsp zlib
 DOSBOX_STAGING_LICENSE = GPLv2
 DOSBOX_STAGING_EMULATOR_INFO = dosbox_staging.emulator.yml
@@ -15,11 +14,11 @@ DOSBOX_STAGING_EMULATOR_INFO = dosbox_staging.emulator.yml
 DOSBOX_STAGING_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
 
 DOSBOX_STAGING_CONF_OPTS = \
+
 	-Dasm=false \
 	-Dautovec_info=false \
 	-Dnarrowing_warnings=false \
 	-Dtime_trace=false \
-	-Dtracy=false \
 	-Dunit_tests=disabled \
 	-Duse_mt32emu=true
 

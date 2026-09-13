@@ -4,12 +4,12 @@
 #
 ################################################################################
 # Version: Commits on Jul 18, 2026
-ASIO_VERSION = 8806a6803cde7054c3049d3666d3ec36786568c5
+ASIO_VERSION = asio-1-38-2
 ASIO_SITE = $(call github,chriskohlhoff,asio,$(ASIO_VERSION))
-ASIO_LICENSE = GPL-3.0+
-ASIO_LICENSE_FILES = COPYING
-ASIO_DEPENDENCIES = ncurses
+ASIO_LICENSE = BSL-1.0
+ASIO_LICENSE_FILES = LICENSE_1_0.txt
 ASIO_AUTORECONF = YES
 ASIO_INSTALL_STAGING = YES
+ASIO_INSTALL_TARGET = NO
 
 $(eval $(autotools-package))
