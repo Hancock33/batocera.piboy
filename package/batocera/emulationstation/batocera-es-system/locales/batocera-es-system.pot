@@ -13084,6 +13084,68 @@ msgid "RENDER SCALE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
+
+msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
+
+msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Sync to the display refresh to prevent tearing. Disable for VRR displays."
 msgstr ""
@@ -13156,6 +13218,30 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "GAMEPAD RUMBLE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CURVATURE"
 msgstr ""
 
 msgctxt "game_options"
@@ -15329,6 +15415,14 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SOUND VOLUME"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
 msgstr ""
 
 msgctxt "game_options"

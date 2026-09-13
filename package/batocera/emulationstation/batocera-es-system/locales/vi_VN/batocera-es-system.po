@@ -1108,6 +1108,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
@@ -1392,6 +1396,10 @@ msgid "3D ENGINE"
 msgstr "3D ENGINE"
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1610,6 +1618,10 @@ msgstr "4"
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -2325,6 +2337,10 @@ msgid "ALSAThread"
 msgstr "ALSAThread"
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr "ÂM THANH THAY THẾ"
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
@@ -2351,6 +2367,10 @@ msgstr "ANALOG JOYSTICK DEADZONE"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "LỌC ANISOTROPIC"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2941,6 +2961,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr "AltWFC (172.104.88.237)"
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr "Âm thanh thay thế cho bảng (cần thêm file)."
+
+msgctxt "game_options"
 msgid "Always"
 msgstr "Luôn luôn"
 
@@ -3069,8 +3093,18 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr "Anisotropic filtering"
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
@@ -4516,6 +4550,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "HIỆU ỨNG CRT GHOSTING"
 
@@ -4558,6 +4596,10 @@ msgstr "CHẾ ĐỘ CON TRỎ"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "THỜI GIAN HIỆN CON TRỎ"
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -5494,6 +5536,10 @@ msgstr "Bộ lọc video chạy bằng lõi. Bộ lọc Bisqwit gây nặng CPU.
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6611,6 +6657,12 @@ msgstr "Ecuador"
 msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr "Edge (sharper filet)"
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Edit room"
@@ -7770,6 +7822,10 @@ msgstr ""
 "SMAA cung cấp chất lượng tốt nhất."
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8559,6 +8615,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (Nhanh nhất)"
 
@@ -9218,6 +9278,10 @@ msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
 msgstr ""
 "Máy Mac mô phỏng sẽ cài đặt bao nhiêu RAM (chỉ dành cho Mac IIx & Mac LC 3)"
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -10393,6 +10457,10 @@ msgstr "LẤY MẪU HỌA TIẾT THỦ CÔNG"
 
 msgctxt "game_options"
 msgid "MAP ROTATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -11907,6 +11975,12 @@ msgstr "Bật với hỗ trợ tua lại"
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "Only Overscan Area"
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -13701,6 +13775,10 @@ msgid "SCALING MODE"
 msgstr "SCALING MODE"
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "SCANLINES"
 
@@ -14309,6 +14387,10 @@ msgid "Scale4x"
 msgstr "Scale4x"
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
 
@@ -14825,6 +14907,10 @@ msgstr "Sắc 2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "Sharp Bilinear"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15472,6 +15558,10 @@ msgstr "Tăng tốc độ trò chơi"
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17613,6 +17703,10 @@ msgid ""
 msgstr "Khi chạy trên 100%, hãy điều chỉnh nhiệt độ thay vì giảm khung hình."
 
 msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
 msgid "While Touching"
 msgstr "Khi chạm"
 
@@ -18383,10 +18477,6 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "ALTCOLOR"
 
 #~ msgctxt "game_options"
-#~ msgid "ALTERNATIVE SOUND"
-#~ msgstr "ÂM THANH THAY THẾ"
-
-#~ msgctxt "game_options"
 #~ msgid "ANISOTROPIC FILTER"
 #~ msgstr "ANISOTROPIC FILTER"
 
@@ -18448,10 +18538,6 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "Hiển thị ma trận điểm màu thay thế (cần thêm tệp)."
-
-#~ msgctxt "game_options"
-#~ msgid "Alternative sounds for the table (needs additional files)."
-#~ msgstr "Âm thanh thay thế cho bảng (cần thêm file)."
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Stick"

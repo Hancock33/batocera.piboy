@@ -1110,6 +1110,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
@@ -1394,6 +1398,10 @@ msgid "3D ENGINE"
 msgstr "3D 엔진"
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1612,6 +1620,10 @@ msgstr "4일"
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4배 (2880p/4320p)"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -2327,6 +2339,10 @@ msgid "ALSAThread"
 msgstr "고급 리눅스 사운드 아키텍처 스레드"
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr "대체 사운드"
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD 애슬론, 1.2GHz (1000000 cps)"
 
@@ -2353,6 +2369,10 @@ msgstr "아날로그 조이스틱 데드존"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "비등방성 필터링"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2940,6 +2960,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr "AltWFC (172.104.88.237)"
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr "테이블에 대한 대체 사운드(추가 파일 필요)."
+
+msgctxt "game_options"
 msgid "Always"
 msgstr "항상"
 
@@ -3068,8 +3092,18 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr "비등방성 필터링"
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
@@ -4512,6 +4546,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT 고스팅 효과"
 
@@ -4554,6 +4592,10 @@ msgstr "커서 모드"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "커서 시간 초과"
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -5494,6 +5536,10 @@ msgstr "코어 기반 비디오 필터입니다. Bisqwit 필터는 CPU를 많이
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6607,6 +6653,12 @@ msgstr "에콰도르"
 msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr "가장자리 (선명한 필레)"
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Edit room"
@@ -7750,6 +7802,10 @@ msgstr ""
 "을 제공합니다."
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8537,6 +8593,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "글라이드N64 (가장 빠름)"
 
@@ -9198,6 +9258,10 @@ msgctxt "game_options"
 msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
 msgstr "에뮬레이트된 맥에 설치된 램 용량 (맥 IIx 및 맥 LC 3만 해당)"
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -10374,6 +10438,10 @@ msgstr "수동 텍스처 샘플링"
 msgctxt "game_options"
 msgid "MAP ROTATION"
 msgstr "지도 회전"
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -11884,6 +11952,12 @@ msgstr "되감기 지원으로 켜기"
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "오버스캔 영역만"
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -13676,6 +13750,10 @@ msgid "SCALING MODE"
 msgstr "스케일링 모드"
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "스캔라인"
 
@@ -14284,6 +14362,10 @@ msgid "Scale4x"
 msgstr "스케일4배"
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "스케일포스"
 
@@ -14797,6 +14879,10 @@ msgstr "선명함 2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "선명한 이중선형"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15442,6 +15528,10 @@ msgstr "게임 속도를 높입니다"
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17581,6 +17671,10 @@ msgid ""
 msgstr "100%가 아닌 경우 프레임을 떨어뜨리는 대신 온도를 조정합니다."
 
 msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
 msgid "While Touching"
 msgstr "만지는 동안"
 
@@ -18347,10 +18441,6 @@ msgstr "노란색/파란색"
 #~ msgstr "ALTCOLOR"
 
 #~ msgctxt "game_options"
-#~ msgid "ALTERNATIVE SOUND"
-#~ msgstr "대체 사운드"
-
-#~ msgctxt "game_options"
 #~ msgid "ANISOTROPIC FILTER"
 #~ msgstr "비등방성 필터"
 
@@ -18415,10 +18505,6 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "대체 컬러 도트 매트릭스 디스플레이(추가 파일 필요)."
-
-#~ msgctxt "game_options"
-#~ msgid "Alternative sounds for the table (needs additional files)."
-#~ msgstr "테이블에 대한 대체 사운드(추가 파일 필요)."
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Stick"

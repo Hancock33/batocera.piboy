@@ -1112,6 +1112,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
@@ -1396,6 +1400,10 @@ msgid "3D ENGINE"
 msgstr "3D 引擎"
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1614,6 +1622,10 @@ msgstr "4号"
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x（2880p/4320p）"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -2329,6 +2341,10 @@ msgid "ALSAThread"
 msgstr "ALSAThread"
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr "替代声音"
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD速龙，1.2GHz（1000000 cps）"
 
@@ -2355,6 +2371,10 @@ msgstr "模拟操纵杆死区"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "各向异性过滤"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2938,6 +2958,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr "AltWFC（172.104.88.237）"
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr "针对游戏桌的替代音效（需要额外的文件）。"
+
+msgctxt "game_options"
 msgid "Always"
 msgstr "总是"
 
@@ -3066,8 +3090,18 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr "各向异性过滤"
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
@@ -4498,6 +4532,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT重影效应"
 
@@ -4540,6 +4578,10 @@ msgstr "光标模式"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "光标超时"
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -5459,6 +5501,10 @@ msgstr "核心驱动的视频滤镜。Bisqwit滤镜会占用大量CPU。"
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6563,6 +6609,12 @@ msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr "Edge（更锐利的圆角）"
 
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Edit room"
 msgstr "编辑房间"
@@ -7662,6 +7714,10 @@ msgid ""
 msgstr "FXAA具有较低的性能影响, 在低分辨率时表现不佳. SMAA提供最佳质量."
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8439,6 +8495,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64（最快）"
 
@@ -9094,6 +9154,10 @@ msgctxt "game_options"
 msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
 msgstr "模拟Mac将安装多少RAM（仅限Mac IIx和Mac LC 3）"
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -10254,6 +10318,10 @@ msgstr "手动纹理采样"
 msgctxt "game_options"
 msgid "MAP ROTATION"
 msgstr "地图旋转"
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -11751,6 +11819,12 @@ msgstr "与倒带支持一并开启"
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "仅过扫描区域"
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -13533,6 +13607,10 @@ msgid "SCALING MODE"
 msgstr "缩放模式"
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "扫描线"
 
@@ -14141,6 +14219,10 @@ msgid "Scale4x"
 msgstr "Scale4x"
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
 
@@ -14647,6 +14729,10 @@ msgstr "Sharp 2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "锐利双线性"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15284,6 +15370,10 @@ msgstr "加快游戏速度"
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17387,6 +17477,10 @@ msgid ""
 msgstr "当运行在非100％的速度时，会调整速度而非丢帧。"
 
 msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
 msgid "While Touching"
 msgstr "触摸时"
 
@@ -18235,10 +18329,6 @@ msgstr "黄色/蓝色"
 #~ msgstr "备用颜色"
 
 #~ msgctxt "game_options"
-#~ msgid "ALTERNATIVE SOUND"
-#~ msgstr "替代声音"
-
-#~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"
 #~ msgstr "AMD FidelityFX（仅Vulkan）"
 
@@ -18321,10 +18411,6 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "可选彩色点阵显示器（需要额外文件）。"
-
-#~ msgctxt "game_options"
-#~ msgid "Alternative sounds for the table (needs additional files)."
-#~ msgstr "针对游戏桌的替代音效（需要额外的文件）。"
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Stick"

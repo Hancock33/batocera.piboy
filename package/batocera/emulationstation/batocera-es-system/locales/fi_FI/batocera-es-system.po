@@ -1113,6 +1113,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr ""
 
@@ -1397,6 +1401,10 @@ msgid "3D ENGINE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1614,6 +1622,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "4x (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2330,6 +2342,10 @@ msgid "ALSAThread"
 msgstr ""
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr ""
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr ""
 
@@ -2355,6 +2371,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
 msgstr ""
 
 msgctxt "game_options"
@@ -2937,6 +2957,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Always"
 msgstr ""
 
@@ -3065,7 +3089,17 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
 msgstr ""
 
 msgctxt "game_options"
@@ -4495,6 +4529,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr ""
 
@@ -4536,6 +4574,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CURVATURE"
 msgstr ""
 
 msgctxt "game_options"
@@ -5457,6 +5499,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6558,6 +6604,12 @@ msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr ""
 
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Edit room"
 msgstr ""
@@ -7655,6 +7707,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8426,6 +8482,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr ""
 
@@ -9079,6 +9139,10 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
 msgstr ""
 
 msgctxt "game_options"
@@ -10236,6 +10300,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "MAP ROTATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -11726,6 +11794,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Only Overscan Area"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
 msgstr ""
 
 msgctxt "game_options"
@@ -13507,6 +13581,10 @@ msgid "SCALING MODE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr ""
 
@@ -14115,6 +14193,10 @@ msgid "Scale4x"
 msgstr ""
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr ""
 
@@ -14618,6 +14700,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp Bilinear"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -15252,6 +15338,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17351,6 +17441,10 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "When running outside of 100%, adjusts the temp instead of dropping frames."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
 msgstr ""
 
 msgctxt "game_options"

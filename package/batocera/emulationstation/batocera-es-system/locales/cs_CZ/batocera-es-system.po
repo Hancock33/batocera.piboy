@@ -1108,6 +1108,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
@@ -1392,6 +1396,10 @@ msgid "3D ENGINE"
 msgstr "3D ENGINE"
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1610,6 +1618,10 @@ msgstr "4."
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -2325,6 +2337,10 @@ msgid "ALSAThread"
 msgstr "Vlákno ALSA"
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr "Alternativní zvuk"
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
@@ -2351,6 +2367,10 @@ msgstr "MRTVÁ ZÓNA ANALOG. JOSTICKU"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "ANIZOTROPNÍ FILTROVÁNÍ"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2938,6 +2958,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr "AltWFC (172.104.88.237)"
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr "Alternativní zvuky pro tabulku (vyžaduje další soubory)."
+
+msgctxt "game_options"
 msgid "Always"
 msgstr "Vždy"
 
@@ -3066,8 +3090,18 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr "Anizotropní filtrování"
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
@@ -4508,6 +4542,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "EFEKT DUCHŮ CRT"
 
@@ -4550,6 +4588,10 @@ msgstr "Režim kurzoru"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "Časový limit kurzoru"
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -5487,6 +5529,10 @@ msgstr "Video filtr poháněný jádrem. Filtry Bisqwit jsou náročné na CPU."
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6604,6 +6650,12 @@ msgstr "Ekvádor"
 msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr "Hrana (Ostřejší filet)"
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Edit room"
@@ -7755,6 +7807,10 @@ msgstr ""
 "nejlepší kvalitu."
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8545,6 +8601,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (Rychlejší)"
 
@@ -9206,6 +9266,10 @@ msgid ""
 msgstr ""
 "Kolik paměti RAM bude na emulovaný Mac nainstalováno (pouze Mac IIx a Mac LC "
 "3)"
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -10379,6 +10443,10 @@ msgstr "RUČNÍ VZORKOVÁNÍ TEXTUR"
 
 msgctxt "game_options"
 msgid "MAP ROTATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -11893,6 +11961,12 @@ msgstr "Zapnout s podporou přetáčení"
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "Pouze Oblast Overscan"
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -13687,6 +13761,10 @@ msgid "SCALING MODE"
 msgstr "REŽIM SCALING"
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "SKENOVACÍ LINIE"
 
@@ -14295,6 +14373,10 @@ msgid "Scale4x"
 msgstr "Měřítko4x"
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
 
@@ -14814,6 +14896,10 @@ msgstr "Ostrý 2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "Ostré Bilineární"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15455,6 +15541,10 @@ msgstr "Zrychluje hru"
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17597,6 +17687,10 @@ msgid ""
 msgstr "Při spuštění mimo 100 % upraví teplotu namísto snižování snímků."
 
 msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
 msgid "While Touching"
 msgstr "Při dotyku"
 
@@ -18611,10 +18705,6 @@ msgstr "žlutá/modrá"
 #~ msgstr "ALTCOLOR"
 
 #~ msgctxt "game_options"
-#~ msgid "ALTERNATIVE SOUND"
-#~ msgstr "Alternativní zvuk"
-
-#~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"
 #~ msgstr "AMD FidelityFX (pouze Vulkan)"
 
@@ -18718,10 +18808,6 @@ msgstr "žlutá/modrá"
 #~ msgctxt "keys_files"
 #~ msgid "Alternative exit the emulator for guns"
 #~ msgstr "Alternativní ukončení emulátoru pro zbraně"
-
-#~ msgctxt "game_options"
-#~ msgid "Alternative sounds for the table (needs additional files)."
-#~ msgstr "Alternativní zvuky pro tabulku (vyžaduje další soubory)."
 
 #~ msgctxt "game_options"
 #~ msgid "Always have 6 bullets, 6 dynamite, 6 lives."

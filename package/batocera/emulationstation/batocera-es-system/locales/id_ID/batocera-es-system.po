@@ -1114,6 +1114,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
@@ -1398,6 +1402,10 @@ msgid "3D ENGINE"
 msgstr "MESIN - 3D"
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1616,6 +1624,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -2331,6 +2343,10 @@ msgid "ALSAThread"
 msgstr ""
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr ""
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
@@ -2357,6 +2373,10 @@ msgstr "ZONA-MATI ANALOG JOYSTICK"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "PENYARINGAN ANISTROPIC"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2940,6 +2960,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Always"
 msgstr ""
 
@@ -3068,7 +3092,17 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
 msgstr ""
 
 msgctxt "game_options"
@@ -4501,6 +4535,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "EFEK GHOSTING (MENGHANTUI) CRT"
 
@@ -4542,6 +4580,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CURVATURE"
 msgstr ""
 
 msgctxt "game_options"
@@ -5471,6 +5513,10 @@ msgstr "Core-powered Penyaring Video. Penyaring Bisqwit adalah Berat CPU"
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6582,6 +6628,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Edge (sharper filet)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
 msgstr ""
 
 msgctxt "keys_files"
@@ -7711,6 +7763,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8481,6 +8537,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (Sangat Cepat)"
 
@@ -9142,6 +9202,10 @@ msgid ""
 msgstr ""
 "Berapa banyak emulasi RAM  Mac yang sudah terpasang (hanya Mac IIx & Mac LC "
 "3)"
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -10308,6 +10372,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "MAP ROTATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -11808,6 +11876,12 @@ msgstr "Aktif dengan dukungan putar ulang"
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "Hanya Area Overscan"
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -13594,6 +13668,10 @@ msgid "SCALING MODE"
 msgstr "MODE SKALA"
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "SCANLINE"
 
@@ -14202,6 +14280,10 @@ msgid "Scale4x"
 msgstr ""
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
 
@@ -14708,6 +14790,10 @@ msgstr "Tajam 2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "Bilinear Tajam"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15342,6 +15428,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17452,6 +17542,10 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "When running outside of 100%, adjusts the temp instead of dropping frames."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
 msgstr ""
 
 msgctxt "game_options"

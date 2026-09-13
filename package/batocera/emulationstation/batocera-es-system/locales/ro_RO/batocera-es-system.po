@@ -1107,6 +1107,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
@@ -1391,6 +1395,10 @@ msgid "3D ENGINE"
 msgstr "MOTOR 3D"
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1609,6 +1617,10 @@ msgstr "4"
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -2324,6 +2336,10 @@ msgid "ALSAThread"
 msgstr "ALSAThread"
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr "SUNETE ADIȚIONALE"
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
@@ -2350,6 +2366,10 @@ msgstr "ZONA MOARTĂ A MANETELOR ANALOGICE"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTRARE ANISOTROPICĂ"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2940,6 +2960,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr "AltWFC (172.104.88.237)"
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr "Sunete alternative pentru masă (necesită fișiere adiționale)."
+
+msgctxt "game_options"
 msgid "Always"
 msgstr "Mereu"
 
@@ -3068,8 +3092,18 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr "Filtrare anisotropică"
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
@@ -4517,6 +4551,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "EFECT PERSISTENȚĂ CRT"
 
@@ -4559,6 +4597,10 @@ msgstr "MOD CURSOR"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "TIMEOUT CURSOR"
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -5503,6 +5545,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6621,6 +6667,12 @@ msgstr "Ecuador"
 msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr "Muchie (filtru de claritate)"
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Edit room"
@@ -7794,6 +7846,10 @@ msgstr ""
 "SMAA oferă cea mai bună calitate."
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8586,6 +8642,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (Cel mai rapid)"
 
@@ -9253,6 +9313,10 @@ msgctxt "game_options"
 msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
 msgstr "Cât de mult RAM va avea Mac-ul emulat (doar Mac IIx și Mac LC 3)"
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -10443,6 +10507,10 @@ msgstr "EȘANTIONARE MANUALĂ A TEXTURILOR"
 msgctxt "game_options"
 msgid "MAP ROTATION"
 msgstr "ROTAȚIE HARTĂ"
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -11960,6 +12028,12 @@ msgstr "Activat cu suport de rewind"
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "Doar aria de overscan"
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -13763,6 +13837,10 @@ msgid "SCALING MODE"
 msgstr "MOD SCALARE"
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "LINII DE SCANARE"
 
@@ -14371,6 +14449,10 @@ msgid "Scale4x"
 msgstr "Scalare 4x"
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
 
@@ -14889,6 +14971,10 @@ msgstr "Clar 2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "Clar bilinear"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15541,6 +15627,10 @@ msgstr "Crește viteza jocului"
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17710,6 +17800,10 @@ msgstr ""
 "se omită cadrele."
 
 msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
 msgid "While Touching"
 msgstr "În timp ce se atinge"
 
@@ -18536,10 +18630,6 @@ msgstr "galben/albastru"
 #~ msgstr "CULOARE ALTERNATIVĂ"
 
 #~ msgctxt "game_options"
-#~ msgid "ALTERNATIVE SOUND"
-#~ msgstr "SUNETE ADIȚIONALE"
-
-#~ msgctxt "game_options"
 #~ msgid "ANISOTROPIC FILTER"
 #~ msgstr "FILTRARE ANISOTROPICĂ"
 
@@ -18606,10 +18696,6 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "Ecran matricial de culoare alternativă (necesită fișier adițional)."
-
-#~ msgctxt "game_options"
-#~ msgid "Alternative sounds for the table (needs additional files)."
-#~ msgstr "Sunete alternative pentru masă (necesită fișiere adiționale)."
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Stick"

@@ -1108,6 +1108,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
@@ -1392,6 +1396,10 @@ msgid "3D ENGINE"
 msgstr "3D エンジン"
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1610,6 +1618,10 @@ msgstr "4"
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -2325,6 +2337,10 @@ msgid "ALSAThread"
 msgstr "ALSAThread"
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr "代替音"
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
@@ -2351,6 +2367,10 @@ msgstr "アナログスティック遊び幅"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "異方性フィルタリング"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2940,6 +2960,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr "AltWFC (172.104.88.237)"
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr "テーブルの代替音を使用します(追加ファイルが必要)"
+
+msgctxt "game_options"
 msgid "Always"
 msgstr "常に"
 
@@ -3068,8 +3092,18 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr "異方性フィルタリング"
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
@@ -4514,6 +4548,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT ゴーストエフェクト"
 
@@ -4556,6 +4594,10 @@ msgstr "カーソルモード"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "カーソルタイムアウト"
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr "曲率(CURVATURE)"
 
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -5492,6 +5534,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6602,6 +6648,12 @@ msgstr "エクアドル"
 msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr "エッジ（よりシャープなフィレ）"
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Edit room"
@@ -7753,6 +7805,10 @@ msgstr ""
 "品質を提供します"
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8544,6 +8600,10 @@ msgid "GLCore"
 msgstr "GL コア"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (最速)"
 
@@ -9208,6 +9268,10 @@ msgctxt "game_options"
 msgid ""
 "How much RAM the emulated Mac will have installed (Mac IIx & Mac LC 3 only)"
 msgstr "エミュレートされたMacのRAM容量（MacIIxおよびMacLC 3のみ）"
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -10383,6 +10447,10 @@ msgstr "手動テクスチャサンプリング"
 msgctxt "game_options"
 msgid "MAP ROTATION"
 msgstr "マップの回転"
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -11886,6 +11954,12 @@ msgstr "両方使用(巻き戻しも使用)"
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "オーバースキャンエリアのみ"
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -13674,6 +13748,10 @@ msgid "SCALING MODE"
 msgstr "スケーリングモード"
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "スキャンライン"
 
@@ -14282,6 +14360,10 @@ msgid "Scale4x"
 msgstr "スケール4x"
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "スケールを固定"
 
@@ -14796,6 +14878,10 @@ msgstr "シャープ 2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "シャープバイリニア"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15438,6 +15524,10 @@ msgstr "ゲームの速度アップ"
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17580,6 +17670,10 @@ msgid ""
 msgstr "100% 以外で動作している場合、フレームを落とさずに音質を調整します"
 
 msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
 msgid "While Touching"
 msgstr "タッチしたとき"
 
@@ -18540,10 +18634,6 @@ msgstr "黄/青"
 #~ msgid "ALTCOLOR"
 #~ msgstr "アルトカラー"
 
-#~ msgctxt "game_options"
-#~ msgid "ALTERNATIVE SOUND"
-#~ msgstr "代替音"
-
 #~ msgid "ALWAYS"
 #~ msgstr "常に"
 
@@ -18741,10 +18831,6 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "代替カラードットマトリックス表示 (追加ファイルが必要)"
-
-#~ msgctxt "game_options"
-#~ msgid "Alternative sounds for the table (needs additional files)."
-#~ msgstr "テーブルの代替音を使用します(追加ファイルが必要)"
 
 #~ msgid "Always"
 #~ msgstr "常に"
@@ -19221,10 +19307,6 @@ msgstr "黄/青"
 #, c-format
 #~ msgid "CURRENTLY IN DOWNLOAD QUEUE"
 #~ msgstr "現在ダウンロードキューにあります"
-
-#~ msgctxt "game_options"
-#~ msgid "CURVATURE"
-#~ msgstr "曲率(CURVATURE)"
 
 #~ msgid "CUSTOM"
 #~ msgstr "カスタム"

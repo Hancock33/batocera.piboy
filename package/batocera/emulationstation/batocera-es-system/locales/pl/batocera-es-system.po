@@ -1114,6 +1114,10 @@ msgid "2D LAYER UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2M"
 msgstr "2M"
 
@@ -1398,6 +1402,10 @@ msgid "3D ENGINE"
 msgstr "SILNIK 3D"
 
 msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
 msgstr ""
 
@@ -1616,6 +1624,10 @@ msgstr "4"
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -2331,6 +2343,10 @@ msgid "ALSAThread"
 msgstr "ALSAThread"
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr "DŹWIĘK ALTERNATYWNY"
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 c/s)"
 
@@ -2357,6 +2373,10 @@ msgstr "DEADZONE JOYSTICKA ANALOGOWEGO"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "FILTROWANIE ANIZOTROPOWE"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2949,6 +2969,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr "AltWFC (172.104.88.237)"
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr "Alternatywne dźwięki dla stołu (wymaga dodatkowych plików)."
+
+msgctxt "game_options"
 msgid "Always"
 msgstr "Zawsze"
 
@@ -3077,8 +3101,18 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr "Filtrowanie anizotropowe"
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
@@ -4526,6 +4560,10 @@ msgid "CRT EFFECT"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "EFEKT SMUŻENIA CRT"
 
@@ -4568,6 +4606,10 @@ msgstr "TRYB KURSORA"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "LIMIT CZASU KURSORA"
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -5516,6 +5558,10 @@ msgstr "Emulowany filtr wideo. Filtry Bisqwit obciążają procesor."
 
 msgctxt "game_options"
 msgid "Cosine (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
 msgstr ""
 
 msgctxt "game_options"
@@ -6634,6 +6680,12 @@ msgstr "Ekwador"
 msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr "Edge (filtr wyostrzający)"
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Edit room"
@@ -7800,6 +7852,10 @@ msgstr ""
 "oferuje najlepszą jakość."
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -8593,6 +8649,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (najszybsza)"
 
@@ -9263,6 +9323,10 @@ msgid ""
 msgstr ""
 "Ile pamięci RAM będzie miał emulowany Mac zainstalowane (tylko Mac IIx i Mac "
 "LC 3)"
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -10449,6 +10513,10 @@ msgstr "RĘCZNE PRÓBKOWANIE TEKSTUR"
 msgctxt "game_options"
 msgid "MAP ROTATION"
 msgstr "OBRÓT MAPY"
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -11968,6 +12036,12 @@ msgstr "Włączone z obsługą przewijania"
 msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr "Tylko obszar Overscan"
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
@@ -13768,6 +13842,10 @@ msgid "SCALING MODE"
 msgstr "TRYB SKALOWANIA"
 
 msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCANLINES"
 msgstr "SCANLINES"
 
@@ -14376,6 +14454,10 @@ msgid "Scale4x"
 msgstr "Skala4x"
 
 msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ScaleForce"
 msgstr "ScaleForce"
 
@@ -14894,6 +14976,10 @@ msgstr "Wyostrzanie 2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "Ostre dwuliniowe"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15541,6 +15627,10 @@ msgstr "Przyśpiesza grę"
 
 msgctxt "game_options"
 msgid "Sprawl Relay (Brazil)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
 msgstr ""
 
 msgctxt "game_options"
@@ -17702,6 +17792,10 @@ msgstr ""
 "Podczas pracy poza 100% dostosowuje temperaturę zamiast opuszczać klatki."
 
 msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
 msgid "While Touching"
 msgstr "Podczas dotyku"
 
@@ -18728,10 +18822,6 @@ msgstr "żółty/niebieski"
 #~ msgstr "ALTCOLOR"
 
 #~ msgctxt "game_options"
-#~ msgid "ALTERNATIVE SOUND"
-#~ msgstr "DŹWIĘK ALTERNATYWNY"
-
-#~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"
 #~ msgstr "AMD FidelityFX (tylko Vulkan)"
 
@@ -18850,10 +18940,6 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "Alternative Coloured Dot Matrix Display (wymaga dodatkowego pliku)."
-
-#~ msgctxt "game_options"
-#~ msgid "Alternative sounds for the table (needs additional files)."
-#~ msgstr "Alternatywne dźwięki dla stołu (wymaga dodatkowych plików)."
 
 #~ msgctxt "game_options"
 #~ msgid "Always have 6 bullets, 6 dynamite, 6 lives."
