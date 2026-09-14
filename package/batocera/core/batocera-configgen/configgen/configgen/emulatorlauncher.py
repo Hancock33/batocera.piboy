@@ -8,7 +8,6 @@ import ctypes
 import json
 import logging
 import os
-import shutil
 import signal
 import subprocess
 import threading
@@ -204,21 +203,6 @@ def start_rom(args: Arguments, profiler: Profiler, rom: Path, original_rom: Path
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
                 callExternalScripts(USER_SCRIPTS, "gameStart", [systemName, system.config.emulator, effectiveCore, rom])
 
-                arch = Path('/usr/share/batocera/batocera.arch').read_text().splitlines()[0]
-                if arch == 'x86_64':
-                    if system.config.get('powersave') == '0':
-                        subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                        _logger.debug("CPU power config set to maximum power saving")
-                    elif system.config.get('powersave') == '1':
-                        subprocess.call(['/usr/bin/batocera-cpucores', 'mid'])
-                        _logger.debug("CPU power config set to medium power saving")
-                    elif system.config.get('powersave') == '2':
-                        subprocess.call(['/usr/bin/batocera-cpucores', 'max'])
-                        _logger.debug("CPU power config set to no power saving")
-                else:
-                    subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-                    _logger.debug("CPU power config set to maximum power saving")
-
                 # run the emulator
                 _evmapy_instance = evmapy(systemName, system.config.emulator, effectiveCore, original_rom, player_controllers, guns)
                 with (
@@ -351,9 +335,6 @@ def start_rom(args: Arguments, profiler: Profiler, rom: Path, original_rom: Path
                 callExternalScripts(SYSTEM_SCRIPTS, "gameStop", [systemName, system.config.emulator, effectiveCore, rom])
 
             finally:
-                if arch == 'x86_64':
-                    subprocess.call(['/usr/bin/batocera-cpucores', 'min'])
-
                 # always restore the resolution
                 if resolutionChanged:
                     try:
@@ -784,12 +765,8 @@ def runCommand(command: Command) -> int:
     finally:
         for thread in threads:
             thread.join()
-            if endSystem != "settings":
-                shutil.copy('/userdata/system/logs/es_launch_stderr.log', '/tmp')
-                shutil.copy('/userdata/system/logs/es_launch_stdout.log', '/tmp')
 
-if __name__ == '__main__':
-    launch()
+    return exitcode
 
 # Local Variables:
 # tab-width:4
