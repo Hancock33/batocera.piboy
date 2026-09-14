@@ -3458,7 +3458,7 @@ raze:
   platform:             pc
   group:                ports
   comment_en:           |
-                        Raze is a source port, powered by GZDoom tech, for playing classic Build Engine games like Duke Nukem 3D.
+                        Raze is a source port, powered by gzdoom tech, for playing classic Build Engine games like Duke Nukem 3D.
                         Each game must be organized in the raze directory properly and have a .raze file created for it.
                         The Build Engine uses a file override system similar to Doom and WAD files. Each game requires different files and
                         some are optional for things like movies and music. Batocera uses text files with the .raze extension that contain a
@@ -4025,7 +4025,7 @@ prboom:
   manufacturer:         Ports (Doom)
   release:
   hardware:             port
-  extensions:           [gzdoom, iwad, pwad, uwad, wad]
+  extensions:           [uzdoom, iwad, pwad, uwad, wad]
   platform:             pc
   group:                doom
   path:                 /userdata/roms/ports/doom
