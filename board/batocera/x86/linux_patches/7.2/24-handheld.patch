@@ -176,9 +176,9 @@ index f5e0eb299610..4e6d73fe8551 100644
 --- a/drivers/acpi/battery.c
 +++ b/drivers/acpi/battery.c
 @@ -15,6 +15,7 @@
- #include <linux/jiffies.h>
  #include <linux/kernel.h>
  #include <linux/list.h>
+ #include <linux/lockdep.h>
 +#include <linux/math64.h>
  #include <linux/module.h>
  #include <linux/mutex.h>
@@ -214,16 +214,16 @@ index f5e0eb299610..4e6d73fe8551 100644
  static int acpi_battery_is_charged(struct acpi_battery *battery)
  {
 @@ -204,6 +214,10 @@ static int acpi_battery_get_property(struct power_supply *psy,
- 	if (acpi_battery_present(battery)) {
- 		/* run battery update only if it is present */
- 		acpi_battery_get_state(battery);
-+		if (test_bit(ACPI_BATTERY_QUIRK_DERIVE_RATE, &battery->flags)) {
-+			acpi_battery_derive_rate(battery);
-+			battery->rate_now = battery->derived_rate;
-+		}
- 	} else if (psp != POWER_SUPPLY_PROP_PRESENT)
- 		return -ENODEV;
+ 
+ 	mutex_lock(&battery->property_lock);
+ 
++	if (test_bit(ACPI_BATTERY_QUIRK_DERIVE_RATE, &battery->flags)) {
++		acpi_battery_derive_rate(battery);
++		battery->rate_now = battery->derived_rate;
++	}
+ 
  	switch (psp) {
+ 	case POWER_SUPPLY_PROP_STATUS:
 @@ -930,6 +944,67 @@ static void find_battery(const struct dmi_header *dm, void *private)
  	}
  }
