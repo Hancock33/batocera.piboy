@@ -1,8 +1,7 @@
-config BR2_PACKAGE_GZDOOM
-	bool "gzdoom"
-	depends on BR2_INSTALL_LIBSTDCPP
+config BR2_PACKAGE_UZDOOM
+	bool "uzdoom"
+	select BR2_PACKAGE_HOST_UZDOOM
 	select BR2_PACKAGE_LIBGL
-	select BR2_PACKAGE_LIBJPEG
 	select BR2_PACKAGE_LIBVPX
 	select BR2_PACKAGE_OPENAL
 	select BR2_PACKAGE_SDL2
@@ -11,8 +10,10 @@ config BR2_PACKAGE_GZDOOM
 	select BR2_PACKAGE_WEBP
 	select BR2_PACKAGE_WEBP_DEMUX
 	select BR2_PACKAGE_WEBP_MUX
+	select BR2_PACKAGE_ZMUSIC
 
 	help
-	  GZDoom is a 3D-accelerated Doom source port based on ZDoom.
+	  UZDoom is a continuation of ZDoom and GZDoom,
+	  a 3D-accelerated Doom source port.
 
-	  https://zdoom.org
+	  https://github.com/UZDoom/UZDoom
