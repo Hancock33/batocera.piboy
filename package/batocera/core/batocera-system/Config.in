@@ -828,7 +828,7 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_LUTRO                       if !BR2_PACKAGE_BATOCERA_TARGET_H3
 
     # PyGAME
-   #select BR2_PACKAGE_BATOCERA_PYGAME                      if !BR2_PACKAGE_BATOCERA_TARGET_H3
+    select BR2_PACKAGE_BATOCERA_PYGAME                      if !BR2_PACKAGE_BATOCERA_TARGET_H3
 
     # RPG engine : Solarus
     select BR2_PACKAGE_SOLARUS_ENGINE                       # ALL

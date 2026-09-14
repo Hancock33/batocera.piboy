@@ -3,8 +3,8 @@
 # xenia-edge
 #
 ################################################################################
-# Version: Commits on Sept 13, 2026
-XENIA_EDGE_VERSION = a33ee3117a36d0869b844f72fbdeda9a0c567ee3
+# Version: Commits on Sept 14, 2026
+XENIA_EDGE_VERSION = 1d46d61d30ff5bb77e8d47ad82bfa9d6833649d7
 XENIA_EDGE_SITE = https://github.com/has207/xenia-edge.git
 XENIA_EDGE_SITE_METHOD = git
 XENIA_EDGE_GIT_SUBMODULES = YES
