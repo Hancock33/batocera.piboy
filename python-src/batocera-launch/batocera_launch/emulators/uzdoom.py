@@ -246,8 +246,8 @@ class UZDoom(Emulator):
 
         # Add sound and music paths (system paths first, for precedence)
         sound_paths = [
-            'Path=/usr/share/games/uzdoom/soundfonts',
-            'Path=/usr/share/games/uzdoom/fm_banks',
+            'Path=/usr/share/uzdoom/soundfonts',
+            'Path=/usr/share/uzdoom/fm_banks',
             f'Path={sound_fonts_dir}',
             f'Path={fm_banks_dir}',
         ]
@@ -307,9 +307,9 @@ class UZDoom(Emulator):
         self._create_script_file(script_file, api_config)
         self._update_ini_file(ini_file, sound_fonts_dir, fm_banks_dir)
 
-        args: list[str | Path] = ['uzdoom']
+        args: list[str | Path] = ['/usr/share/uzdoom/uzdoom']
 
-        if self.rom.suffix == '.uzdoom':
+        if self.rom.suffix == '.uzdoom' or self.rom.suffix == '.uwad':
             args.extend(shlex.split(self.rom.read_text()))
         else:
             args.extend(['-iwad', self.rom.name])
