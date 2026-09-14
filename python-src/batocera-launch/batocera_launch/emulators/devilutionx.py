@@ -12,8 +12,9 @@ if TYPE_CHECKING:
     from pathlib import Path
 
 _DATA_DIR: Final = ROMS / 'ports' / 'devilutionx'
-mpq_src = "/usr/share/diasurgical/devilutionx"
-mpq_dst = "/userdata/roms/ports/devilutionx"
+mpq_src = '/usr/share/diasurgical/devilutionx'
+mpq_dst = '/userdata/roms/ports/devilutionx'
+
 
 @cached_dataclass
 class DevilutionX(Emulator):

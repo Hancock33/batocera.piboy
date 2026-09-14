@@ -2,18 +2,14 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
-from typing import TYPE_CHECKING, Final
+from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
-
-if TYPE_CHECKING:
-    from pathlib import Path
 
 _logger = logging.getLogger(__name__)
 
-_ROM_DIR: Final = Path(str('/usr/share/hcl'))
+_ROM_DIR: Final = Path('/usr/share/hcl')
 
 
 @cached_dataclass

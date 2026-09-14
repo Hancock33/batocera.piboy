@@ -1,9 +1,6 @@
 from __future__ import annotations
 
-from typing import Final
-
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
 

@@ -94,6 +94,17 @@ class BStone(Emulator):
                 version_flags.add(version_flag)
 
         return Command(
-            ['/usr/bin/bstone', '--profile_dir', self.config_dir, '--data_dir', rom_dir, *version_flags, "--vid_width", str(self.resolution.width), "--vid_height", str(self.resolution.height)],
+            [
+                '/usr/bin/bstone',
+                '--profile_dir',
+                self.config_dir,
+                '--data_dir',
+                rom_dir,
+                *version_flags,
+                '--vid_width',
+                str(self.resolution.width),
+                '--vid_height',
+                str(self.resolution.height),
+            ],
             env={'SDL_JOYSTICK_HIDAPI': '0'},
         )
