@@ -15,12 +15,6 @@ _LEGACY_GENERATOR_MAP: Final[dict[str, dict[str, tuple[str, str]]]] = {
 }
 
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
-    'alephone': ('alephone.alephoneGenerator', 'AlephoneGenerator'),
-    'avp': ('avp.avpGenerator', 'AvpGenerator'),
-    'awgl': ('awgl.awglGenerator', 'AwglGenerator'),
-    'bbja': ('bbja.bbjaGenerator', 'BbjaGenerator'),
-    'bermuda': ('bermuda.bermudaGenerator', 'BermudaGenerator'),
-    'blues': ('blues.bluesGenerator', 'BluesGenerator'),
     'doomretro': ('doomretro.doomretroGenerator', 'DoomretroGenerator'),
     'droidports': ('droidports.droidportsGenerator', 'DroidportsGenerator'),
     'duckstation': ('duckstation.duckstationGenerator', 'DuckstationGenerator'),
@@ -60,7 +54,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'openmohaa': ('openmohaa.openmohaaGenerator', 'OpenMOHAAGenerator'),
     'opentyrian': ('opentyrian.opentyrianGenerator', 'OpentyrianGenerator'),
     'pcexhumed': ('pcexhumed.pcexhumedGenerator', 'PcexhumedGenerator'),
-    'pre2': ('pre2.pre2Generator', 'Pre2Generator'),
     'prototype': ('prototype.prototypeGenerator', 'PrototypeGenerator'),
     'pygame': ('pygame.pygameGenerator', 'PygameGenerator'),
     'pyxel': ('pyxel.pyxelGenerator', 'PyxelGenerator'),
