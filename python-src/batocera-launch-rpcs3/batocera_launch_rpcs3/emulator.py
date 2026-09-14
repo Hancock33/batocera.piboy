@@ -535,10 +535,7 @@ class RPCS3(Emulator):
 
     @property
     def needs_overlayfs(self) -> bool:
-        if psn_rom_squashfs:
-            return True
-        # else:
-            return False
+        return bool(psn_rom_squashfs)
 
     @property
     def closest_screen_ratio(self) -> str:
@@ -563,6 +560,7 @@ class RPCS3(Emulator):
         # squashfs and (via writesToRom=True) created a writable overlayfs, so rom is
         # /var/run/overlays/<stem> mirroring the dev_hdd0 layout.
         psn_rom_squashfs = self.rom.is_dir() and str(self.rom).startswith('/var/run/') and self.rom_game_dir.is_dir()
+        _logger.debug("PSN game packed as a squashfs '%s'", psn_rom_squashfs)
         return self.rom.is_dir() and str(self.rom).startswith('/var/run/') and self.rom_game_dir.is_dir()
 
     @cached_property
