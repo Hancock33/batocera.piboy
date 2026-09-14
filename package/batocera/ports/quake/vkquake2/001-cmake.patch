@@ -1,0 +1,336 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 1020763..8a23e83 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -205,3 +205,331 @@ set_target_properties(baseq2_game PROPERTIES
+     OUTPUT_NAME "game${GAME_ARCH}"
+     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/baseq2"
+ )
++# ── ctf game shared library ────────────────────────────────────────────────
++add_library(ctf_game SHARED
++    ctf/g_ai.c
++    ctf/g_chase.c
++    ctf/g_cmds.c
++    ctf/g_combat.c
++    ctf/g_ctf.c
++    ctf/g_func.c
++    ctf/g_items.c
++    ctf/g_main.c
++    ctf/g_misc.c
++    ctf/g_monster.c
++    ctf/g_phys.c
++    ctf/g_save.c
++    ctf/g_spawn.c
++    ctf/g_svcmds.c
++    ctf/g_target.c
++    ctf/g_trigger.c
++    ctf/g_utils.c
++    ctf/g_weapon.c
++    ctf/m_move.c
++    ctf/p_client.c
++    ctf/p_hud.c
++    ctf/p_menu.c
++    ctf/p_trail.c
++    ctf/p_view.c
++    ctf/p_weapon.c
++    ctf/q_shared.c
++)
++
++target_include_directories(ctf_game PRIVATE ${CMAKE_SOURCE_DIR})
++target_compile_options(ctf_game PRIVATE -fPIC -std=c99)
++set_target_properties(ctf_game PROPERTIES
++    PREFIX ""
++    OUTPUT_NAME "game${GAME_ARCH}"
++    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/ctf"
++)
++# ── rogue game shared library ────────────────────────────────────────────────
++add_library(rogue_game SHARED
++    rogue/dm_ball.c
++    rogue/dm_tag.c
++    rogue/g_ai.c
++    rogue/g_chase.c
++    rogue/g_cmds.c
++    rogue/g_combat.c
++    rogue/g_func.c
++    rogue/g_items.c
++    rogue/g_main.c
++    rogue/g_misc.c
++    rogue/g_monster.c
++    rogue/g_newai.c
++    rogue/g_newdm.c
++    rogue/g_newfnc.c
++    rogue/g_newtarg.c
++    rogue/g_newtrig.c
++    rogue/g_newweap.c
++    rogue/g_phys.c
++    rogue/g_save.c
++    rogue/g_spawn.c
++    rogue/g_sphere.c
++    rogue/g_svcmds.c
++    rogue/g_target.c
++    rogue/g_trigger.c
++    rogue/g_turret.c
++    rogue/g_utils.c
++    rogue/g_weapon.c
++    rogue/m_actor.c
++    rogue/m_berserk.c
++    rogue/m_boss2.c
++    rogue/m_boss3.c
++    rogue/m_boss31.c
++    rogue/m_boss32.c
++    rogue/m_brain.c
++    rogue/m_carrier.c
++    rogue/m_chick.c
++    rogue/m_flash.c
++    rogue/m_flipper.c
++    rogue/m_float.c
++    rogue/m_flyer.c
++    rogue/m_gladiator.c
++    rogue/m_gunner.c
++    rogue/m_hover.c
++    rogue/m_infantry.c
++    rogue/m_insane.c
++    rogue/m_medic.c
++    rogue/m_move.c
++    rogue/m_mutant.c
++    rogue/m_parasite.c
++    rogue/m_soldier.c
++    rogue/m_stalker.c
++    rogue/m_supertank.c
++    rogue/m_tank.c
++    rogue/m_turret.c
++    rogue/m_widow.c
++    rogue/m_widow2.c
++    rogue/p_client.c
++    rogue/p_hud.c
++    rogue/p_trail.c
++    rogue/p_view.c
++    rogue/p_weapon.c
++    rogue/q_shared.c
++)
++
++target_include_directories(rogue_game PRIVATE ${CMAKE_SOURCE_DIR})
++target_compile_options(rogue_game PRIVATE -fPIC -std=c99)
++set_target_properties(rogue_game PROPERTIES
++    PREFIX ""
++    OUTPUT_NAME "game${GAME_ARCH}"
++    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/rogue"
++)
++# ── smd game shared library ────────────────────────────────────────────────
++add_library(smd_game SHARED
++    smd/g_ai.c
++    smd/g_camera.c
++    smd/g_chase.c
++    smd/g_cmds.c
++    smd/g_combat.c
++    smd/g_crane.c
++    smd/g_fog.c
++    smd/g_func.c
++    smd/g_items.c
++    smd/g_jetpack.c
++    smd/g_lights.c
++    smd/g_lock.c
++    smd/g_main.c
++    smd/g_misc.c
++    smd/g_model.c
++    smd/g_monster.c
++    smd/g_mtrain.c
++    smd/g_newai.c
++    smd/g_patchplayermodels.c
++    smd/g_pendulum.c
++    smd/g_phys.c
++    smd/g_reflect.c
++    smd/g_save.c
++    smd/g_sound.c
++    smd/g_spawn.c
++    smd/g_svcmds.c
++    smd/g_target.c
++    smd/g_thing.c
++    smd/g_tracktrain.c
++    smd/g_trigger.c
++    smd/g_turret.c
++    smd/g_utils.c
++    smd/g_vehicle.c
++    smd/g_weapon.c
++    smd/km_cvar.c
++    smd/m_actor_weap.c
++    smd/m_actor.c
++    smd/m_berserk.c
++    smd/m_boss2.c
++    smd/m_boss3.c
++    smd/m_boss31.c
++    smd/m_boss32.c
++    smd/m_brain.c
++    smd/m_chick.c
++    smd/m_flash.c
++    smd/m_flipper.c
++    smd/m_float.c
++    smd/m_flyer.c
++    smd/m_gladiator.c
++    smd/m_gunner.c
++    smd/m_hover.c
++    smd/m_infantry.c
++    smd/m_insane.c
++    smd/m_medic.c
++    smd/m_move.c
++    smd/m_mutant.c
++    smd/m_parasite.c
++    smd/m_sentrybot.c
++    smd/m_soldier.c
++    smd/m_supertank.c
++    smd/m_tank.c
++    smd/p_chase.c
++    smd/p_client.c
++    smd/p_hud.c
++    smd/p_menu.c
++    smd/p_text.c
++    smd/p_trail.c
++    smd/p_view.c
++    smd/p_weapon.c
++    smd/q_shared.c
++)
++
++target_include_directories(smd_game PRIVATE ${CMAKE_SOURCE_DIR})
++target_compile_options(smd_game PRIVATE -fPIC -std=c99)
++set_target_properties(smd_game PROPERTIES
++    PREFIX ""
++    OUTPUT_NAME "game${GAME_ARCH}"
++    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/smd"
++)
++# ── xatrix game shared library ────────────────────────────────────────────────
++add_library(xatrix_game SHARED
++    xatrix/g_ai.c
++    xatrix/g_cmds.c
++    xatrix/g_chase.c
++    xatrix/g_combat.c
++    xatrix/g_func.c
++    xatrix/g_items.c
++    xatrix/g_main.c
++    xatrix/g_misc.c
++    xatrix/g_monster.c
++    xatrix/g_phys.c
++    xatrix/g_save.c
++    xatrix/g_spawn.c
++    xatrix/g_svcmds.c
++    xatrix/g_target.c
++    xatrix/g_trigger.c
++    xatrix/g_turret.c
++    xatrix/g_utils.c
++    xatrix/g_weapon.c
++    xatrix/m_actor.c
++    xatrix/m_berserk.c
++    xatrix/m_boss2.c
++    xatrix/m_boss3.c
++    xatrix/m_boss31.c
++    xatrix/m_boss32.c
++    xatrix/m_boss5.c
++    xatrix/m_brain.c
++    xatrix/m_chick.c
++    xatrix/m_fixbot.c
++    xatrix/m_flash.c
++    xatrix/m_flipper.c
++    xatrix/m_float.c
++    xatrix/m_flyer.c
++    xatrix/m_gekk.c
++    xatrix/m_gladb.c
++    xatrix/m_gladiator.c
++    xatrix/m_gunner.c
++    xatrix/m_hover.c
++    xatrix/m_infantry.c
++    xatrix/m_insane.c
++    xatrix/m_medic.c
++    xatrix/m_move.c
++    xatrix/m_mutant.c
++    xatrix/m_parasite.c
++    xatrix/m_soldier.c
++    xatrix/m_supertank.c
++    xatrix/m_tank.c
++    xatrix/p_client.c
++    xatrix/p_hud.c
++    xatrix/p_trail.c
++    xatrix/p_view.c
++    xatrix/p_weapon.c
++    xatrix/q_shared.c
++)
++
++target_include_directories(xatrix_game PRIVATE ${CMAKE_SOURCE_DIR})
++target_compile_options(xatrix_game PRIVATE -fPIC -std=c99)
++set_target_properties(xatrix_game PROPERTIES
++    PREFIX ""
++    OUTPUT_NAME "game${GAME_ARCH}"
++    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/xatrix"
++)
++# ── zaero game shared library ────────────────────────────────────────────────
++add_library(zaero_game SHARED
++    zaero/g_ai.c
++    zaero/g_cmds.c
++    zaero/g_combat.c
++    zaero/g_func.c
++    zaero/g_items.c
++    zaero/g_main.c
++    zaero/g_misc.c
++    zaero/g_monster.c
++    zaero/g_phys.c
++    zaero/g_save.c
++    zaero/g_spawn.c
++    zaero/g_svcmds.c
++    zaero/g_target.c
++    zaero/g_trigger.c
++    zaero/g_turret.c
++    zaero/g_utils.c
++    zaero/g_weapon.c
++    zaero/m_actor.c
++    zaero/m_berserk.c
++    zaero/m_boss2.c
++    zaero/m_boss3.c
++    zaero/m_boss31.c
++    zaero/m_boss32.c
++    zaero/m_brain.c
++    zaero/m_chick.c
++    zaero/m_flash.c
++    zaero/m_flipper.c
++    zaero/m_float.c
++    zaero/m_flyer.c
++    zaero/m_gladiator.c
++    zaero/m_gunner.c
++    zaero/m_hover.c
++    zaero/m_infantry.c
++    zaero/m_insane.c
++    zaero/m_medic.c
++    zaero/m_move.c
++    zaero/m_mutant.c
++    zaero/m_parasite.c
++    zaero/m_soldier.c
++    zaero/m_supertank.c
++    zaero/m_tank.c
++    zaero/p_client.c
++    zaero/p_hud.c
++    zaero/p_trail.c
++    zaero/p_view.c
++    zaero/p_weapon.c
++    zaero/q_shared.c
++    zaero/z_acannon.c
++    zaero/z_ai.c
++    zaero/z_anim.c
++    zaero/z_boss.c
++    zaero/z_camera.c
++    zaero/z_debug.c
++    zaero/z_frames.c
++    zaero/z_handler.c
++    zaero/z_hound.c
++    zaero/z_item.c
++    zaero/z_list.c
++    zaero/z_mtest.c
++    zaero/z_sentien.c
++    zaero/z_spawn.c
++    zaero/z_trigger.c
++    zaero/z_weapon.c
++)
++
++target_include_directories(zaero_game PRIVATE ${CMAKE_SOURCE_DIR})
++target_compile_options(zaero_game PRIVATE -fPIC -std=c99)
++set_target_properties(zaero_game PROPERTIES
++    PREFIX ""
++    OUTPUT_NAME "game${GAME_ARCH}"
++    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/zaero"
++)

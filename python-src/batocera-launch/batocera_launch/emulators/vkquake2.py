@@ -25,7 +25,7 @@ class VKQuake2(Emulator):
 
     @property
     def execution_path(self) -> Path | None:
-        return self.roms_dir
+        return _ROM_DIR
 
     @cached_property
     def in_game_ratio(self) -> float:
@@ -38,9 +38,9 @@ class VKQuake2(Emulator):
         shutil.copytree(_SOURCE_DIR, _ROM_DIR, dirs_exist_ok=True, copy_function=shutil.copy2)
 
         # Change to the rom directory before running
-        os.chdir(_ROM_DIR + '/quake2')
+        os.chdir(_ROM_DIR)
 
-        args: list[str | Path] = [_ROM_DIR / 'quake2']
+        args: list[str | Path] = ['/usr/bin/vkquake2/quake2']
         rom_name = self.rom.name.lower()
 
         if 'zero' in rom_name:

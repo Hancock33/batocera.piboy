@@ -77,6 +77,7 @@ theforceengine.mk
 tomlplusplus.mk
 trx.mk
 uthash.mk
+vkquake2.mk
 vulkan-headers.mk
 vulkan-sdk.mk
 vulkan-tools.mk
