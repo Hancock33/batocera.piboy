@@ -98,7 +98,7 @@ define XEMU_GET_SUBMODULES
 	# glslang
 	mkdir -p $(@D)/subprojects/glslang
 	curl -L -o glslang.tar.gz \
-		https://github.com/KhronosGroup/glslang/archive/refs/tags/16.5.0.tar.gz
+		https://github.com/KhronosGroup/glslang/archive/refs/tags/16.6.0.tar.gz
 	$(TAR) -xzf glslang.tar.gz --strip-components=1 -C $(@D)/subprojects/glslang
 	rm glslang.tar.gz
 
