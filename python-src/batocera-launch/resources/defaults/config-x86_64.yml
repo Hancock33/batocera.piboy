@@ -577,9 +577,13 @@ multivision:
 n64:
   emulator: mupen64plus
   core:     glide64mk2
+  options:
+    videomode: max-1920x1080
 n64dd:
   emulator: mupen64plus
   core:     glide64mk2
+  options:
+    videomode: max-1920x1080
 namco:
   emulator: libretro
   core:     mame078plus
