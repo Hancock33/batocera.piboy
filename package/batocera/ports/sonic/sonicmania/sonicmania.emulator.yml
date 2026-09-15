@@ -38,5 +38,6 @@ custom_features:
       Traditional Chinese: "8"
 file_extensions:
   - sman
+  - som
 systems:
   - sonicmania

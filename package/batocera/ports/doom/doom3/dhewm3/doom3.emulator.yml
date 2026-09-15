@@ -38,6 +38,10 @@ custom_features:
       Japanese: japanese
       Chinese: chinese
 file_extensions:
+  - base
+  - boom3
   - d3
+  - d3xp
+  - demo
 systems:
   - doom3

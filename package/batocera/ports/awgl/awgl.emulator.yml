@@ -58,5 +58,7 @@ custom_features:
     choices:
       "On": enabled
       "Off": disabled
+file_extensions:
+  - game
 systems:
   - awgl

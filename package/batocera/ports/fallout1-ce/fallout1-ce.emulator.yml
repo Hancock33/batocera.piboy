@@ -51,5 +51,6 @@ custom_features:
       Spanish: spanish
 file_extensions:
   - f1ce
+  - game
 systems:
   - fallout1-ce

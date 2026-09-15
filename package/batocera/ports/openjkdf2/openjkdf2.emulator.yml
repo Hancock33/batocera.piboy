@@ -238,6 +238,7 @@ custom_features:
       Disabled: false
       Enabled: true
 file_extensions:
+  - game
   - jedi
 systems:
   - jkdf2

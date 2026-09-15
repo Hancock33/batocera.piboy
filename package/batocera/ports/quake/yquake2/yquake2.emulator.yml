@@ -5,6 +5,9 @@ shared_features:
   - tdp
   - videomode
 file_extensions:
+  - 7zip
+  - game
   - quake2
+  - zip
 systems:
   - quake2

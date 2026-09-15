@@ -170,6 +170,7 @@ custom_features:
       In Cinematics: 2
       All voiceovers: 1
 file_extensions:
+  - game
   - jedi
 systems:
   - jknight

@@ -13,6 +13,7 @@ shared_features:
   - bezel.tattoo_file
   - bezel.resize_tattoo
 file_extensions:
+  - game
   - quake2
 systems:
   - quake2

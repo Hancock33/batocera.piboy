@@ -29,6 +29,7 @@ custom_features:
       256MB (Default): "256"
       512MB: "512"
 file_extensions:
+  - game
   - quake3
 systems:
   - quake3

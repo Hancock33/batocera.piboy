@@ -14,5 +14,8 @@ shared_features:
   - bezel.resize_tattoo
 file_extensions:
   - croft
+  - trx1
+  - trx2
+  - trx3
 systems:
   - traider

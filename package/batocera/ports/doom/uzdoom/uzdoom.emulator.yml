@@ -34,6 +34,7 @@ file_extensions:
   - wad
   - iwad
   - pwad
+  - gzdoom
   - uzdoom
 systems:
   - prboom

@@ -53,5 +53,6 @@ custom_features:
       Enabled: "true"
 file_extensions:
   - cgenius
+  - zip
 systems:
   - cgenius

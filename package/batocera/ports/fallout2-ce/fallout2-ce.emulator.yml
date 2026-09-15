@@ -51,5 +51,6 @@ custom_features:
       Spanish: spanish
 file_extensions:
   - f2ce
+  - game
 systems:
   - fallout2-ce

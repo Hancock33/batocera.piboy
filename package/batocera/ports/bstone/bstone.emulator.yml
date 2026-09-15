@@ -33,5 +33,6 @@ custom_features:
       Enabled: 1
 file_extensions:
   - bstone
+  - game
 systems:
   - bstone
