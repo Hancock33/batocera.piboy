@@ -1,4 +1,15 @@
 archimedes:
+  name:                 Archimedes
+  manufacturer:         Acorn Computers
+  release:              1987
+  hardware:             computer
+  comment_en:           |
+                        Requires MAME BIOS files aa310.zip and archimedes_keyboard.zip
+                        Using software list mode is recommended.
+                        Double-click the floppy drive in the lower left to open the contents, double-click the app/game to run it.
+  comment_br:           |
+                        Requer os arquivos aa310.zip and archimedes_keyboard.zip da BIOS do MAME
+                        Recomenda-se o uso do modo de lista de software.
                         Clique duas vezes na unidade de disquete no canto inferior esquerdo para abrir o conteúdo, clique duas vezes no aplicativo/jogo para executá-lo.
 
 atom:
@@ -37,12 +48,10 @@ electron:
                         Requires MAME BIOS files electron.zip, electron64.zip, electron_plus1.zip, electron_plus3.zip
                         Using software list mode (cassette) is recommended.
                         Tapes should auto-load, use the MAME menu to stop/play/rewind if needed.
-                        Using software list mode is recommended.
   comment_br:           |
                         Requer os arquivos electron.zip, electron64.zip, electron_plus1.zip, electron_plus3.zip da BIOS do MAME
                         Recomenda-se o uso do modo de lista de software (cassete).
                         As fitas devem ser carregadas automaticamente, use o menu MAME para parar/reproduzir/rebobinar, se necessário.
-                        Recomenda-se o uso do modo de lista de software.
 
 flash:
   name:                 Flash Player
@@ -918,7 +927,6 @@ camplynx:
                         Using software list mode is recommended.
   comment_br:           |
                         Requer os arquivo de BIOS MAME lynx128k.zip, lynx96k.zip, lynx48k.zip
-                        Requer os arquivos aa310.zip and archimedes_keyboard.zip da BIOS do MAME
                         Também pacote de samples bbc.zip em bios/mame/samples
 
 pv1000:
@@ -1240,7 +1248,6 @@ bk:
 arcadia:
   name:                 Arcadia 2001
   manufacturer:         Emerson
-  name:                 Archimedes
   release:              1982
   hardware:             console
 
@@ -1321,7 +1328,6 @@ piboy:
   group:                piboy
   path:                 /userdata/roms/piboy
   command:              "/bin/sh %ROM%"
-  comment_br:           |
   force:                True
 
 channelf:
@@ -2069,7 +2075,6 @@ moonlight:
   manufacturer:         Misc. System
   release:
   hardware:             system
-  manufacturer:         Acorn Computers
   comment_en:           |
                         For more info: https://wiki.batocera.org/systems:moonlight
   comment_fr:           |
@@ -2085,7 +2090,6 @@ pc60:
   comment_en:           |
                         Requires MAME BIOS files (depending on model):
                         bios/pc6001.zip (PC-6001)
-                        Requires MAME BIOS files aa310.zip and archimedes_keyboard.zip
                         bios/pc6001mk2.zip (PC-6001mkII)
                         bios/pc6001mk2sr.zip (PC-6001mkIISR)
 
@@ -3755,7 +3759,6 @@ prboom:
                         Put your soundtrack in the directory ./game-musics
 
                         DON'T ERASE "prboom.wad".
-                        Double-click the floppy drive in the lower left to open the contents, double-click the app/game to run it.
   comment_fr:           |
                         Placez ici vos jeux DOOM 1 et 2 (et les mods associés).
                         Placez vos soundtracks dans le répertoire ./game-musics
@@ -3952,7 +3955,6 @@ quake3:
                         Pour plus d'informations : https://wiki.batocera.org/systems:ioquake3
   comment_br: |
                         O Quake III é otimizado para ser jogado com mouse e teclado, mas aqui também é pré-configurado para ser jogado com um gamepad.
-  comment_en:           |
 
                         Para a configuração básica você deve ter as pastas "baseq3" e "missionpack" no diretório "/userdata/roms/quake3".
 
@@ -4740,7 +4742,6 @@ neogeomvs:
   manufacturer:         SNK
   release:              1990
   hardware:             arcade
-  hardware:             computer
   platform:             neogeo, arcade
 
 ngp:
@@ -5086,7 +5087,6 @@ tvc:
   manufacturer:         Videoton
   release:              1986
   hardware:             computer
-  release:              1987
   comment_en:           |
                         Requires ep128emu BIOS files:
                         bios/ep128emu/roms/tvc22_sys.rom (TVC system BIOS)
