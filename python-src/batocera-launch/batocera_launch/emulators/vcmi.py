@@ -19,6 +19,6 @@ class Vcmi(Emulator):
         return Command(
             ['vcmiclient'],
             env={
-                'LD_LIBRARY_PATH': f'{environment["LD_LIBRARY_PATH"]}:/usr/lib/vcmi:/usr/lib/vcmi/AI',
+                'LD_LIBRARY_PATH': '/libL:/usr/lib:/usr/lib/vcmi:/usr/lib/vcmi/AI',
             },
         )

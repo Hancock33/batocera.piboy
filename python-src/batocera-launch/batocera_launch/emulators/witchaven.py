@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 import os
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
