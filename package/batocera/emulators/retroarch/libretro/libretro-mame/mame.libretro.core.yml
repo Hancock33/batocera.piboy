@@ -80,27 +80,27 @@ custom_features:
     description: Use the same art paths as standalone MAME - not recommended if using decorations or shaders.
     choices:
       On (Default): 1
-      "Off": 0
+      'Off': 0
   artworkcrop:
     group: ADVANCED OPTIONS
     prompt: CROP ARTWORK
     description: Crop MAME artwork to maximize the game screen and only fill unused space.
     choices:
       On (Default): 1
-      "Off": 0
+      'Off': 0
   customcfg:
     group: ADVANCED OPTIONS
     prompt: CUSTOM CONFIG
     description: Use a custom MAME config, do not overwrite config on launch.
     choices:
-      "On": 1
+      'On': 1
       Off (Default): 0
   offscreenreload:
     group: LIGHT GUN
     prompt: OFF-SCREEN RELOAD BUTTON
     description: Set gun button 2 to reload.
     choices:
-      "On": 1
+      'On': 1
       Off (Default): 0
 file_extensions:
   - bin
@@ -162,8 +162,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: advision
     custom_features:
       softList:
@@ -178,8 +178,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: apfm1000
     custom_features:
       softList:
@@ -194,8 +194,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: apple2
     file_extensions:
       - nib
@@ -261,8 +261,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: apple2gs
     file_extensions:
       - 2mg
@@ -304,8 +304,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: arcadia
     custom_features:
       softList:
@@ -320,8 +320,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: archimedes
     file_extensions:
       - mfi
@@ -386,9 +386,9 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
-  - name: astrocde
+          'On': 1
+          'Off': 0
+  - name: astrocade
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -402,8 +402,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: atom
     file_extensions:
       add:
@@ -458,8 +458,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: pcw
     file_extensions:
       - mfi
@@ -604,8 +604,8 @@ systems:
         prompt: CUSTOM CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: camplynx
     file_extensions:
       - wav
@@ -641,9 +641,10 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: cdi
+    disabled: true
     file_extensions:
       - chd
       - cue
@@ -665,8 +666,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: coco
     file_extensions:
       - wav
@@ -833,8 +834,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: ctvboy
     custom_features:
       softList:
@@ -916,8 +917,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: fm7
     file_extensions:
       - wav
@@ -971,8 +972,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: fmtowns
     file_extensions:
       add:
@@ -1017,7 +1018,7 @@ systems:
         description: Insert a disk into the floppy drive, a blank will be used if one doesn't exist
         choices:
           Off (Default): 0
-          "On": 1
+          'On': 1
       softList:
         group: ADVANCED OPTIONS
         prompt: SOFTWARE LIST
@@ -1049,8 +1050,8 @@ systems:
         prompt: CUSTOM CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: gamate
     custom_features:
       softList:
@@ -1065,8 +1066,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: gamecom
     file_extensions:
       add:
@@ -1084,8 +1085,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: gamepock
     custom_features:
       softList:
@@ -1100,8 +1101,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: gmaster
     custom_features:
       softList:
@@ -1116,8 +1117,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: gp32
     file_extensions:
       - smc
@@ -1136,8 +1137,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: laser310
     file_extensions:
       - vz
@@ -1180,8 +1181,8 @@ systems:
         prompt: CUSTOM CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: mz2000
     file_extensions:
       - mzf
@@ -1472,8 +1473,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: megaduck
     custom_features:
       softList:
@@ -1488,8 +1489,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: pdp1
     file_extensions:
       - zip
@@ -1517,8 +1518,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: sc3000
     file_extensions:
       add:
@@ -1634,8 +1635,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: socrates
     custom_features:
       softList:
@@ -1657,8 +1658,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: rx78
     custom_features:
       softList:
@@ -1706,8 +1707,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: ti99
     file_extensions:
       - rpk
@@ -1756,8 +1757,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: tutor
     file_extensions:
       add:
@@ -1789,8 +1790,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: vectrex
     disabled: true
     file_extensions:
@@ -1810,8 +1811,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: vgmplay
     file_extensions:
       - vgm
@@ -1831,8 +1832,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: vsmile
     file_extensions:
       add:
@@ -1852,8 +1853,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - name: xegs
     file_extensions:
       add:
@@ -2186,8 +2187,8 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
+          'On': 1
+          'Off': 0
   - acclaim
   - alphadenshi
   - amcoe
