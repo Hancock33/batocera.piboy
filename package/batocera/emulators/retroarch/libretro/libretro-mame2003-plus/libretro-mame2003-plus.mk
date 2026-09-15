@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 15, 2026
-LIBRETRO_MAME2003_PLUS_VERSION = 6e6f19aa43c7bf058197837b0469f0094b3cf4b3
+LIBRETRO_MAME2003_PLUS_VERSION = e059bb0fe83f5552cd7600041e44f9492126f523
 LIBRETRO_MAME2003_PLUS_SITE = $(call github,libretro,mame2003-plus-libretro,$(LIBRETRO_MAME2003_PLUS_VERSION))
 LIBRETRO_MAME2003_PLUS_LICENSE = MAME
 LIBRETRO_MAME2003_PLUS_DEPENDENCIES += retroarch
