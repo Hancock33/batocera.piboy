@@ -13,7 +13,7 @@ systems:
       - iso
       - img
       - chd
-  - name: tg16
+  - name: supergrafx
     file_extensions:
       - pce
       - sgx

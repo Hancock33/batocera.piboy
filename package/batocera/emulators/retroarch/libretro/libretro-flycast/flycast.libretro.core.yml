@@ -254,11 +254,8 @@ systems:
     file_extensions:
       - zip
       - 7z
-   - name: naomi2gd
+  - name: naomi2gd
     file_extensions:
       - zip
       - 7z
-  - name: systemsp
-    file_extensions:
-      - zip
-      - 7z
+  - systemsp

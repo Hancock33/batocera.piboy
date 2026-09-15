@@ -1,8 +1,20 @@
 systems:
-  - windows
-  - windows_installers
-  - bigfish
-  - popcap
+  - name: bigfish
+    file_extensions:
+      - pc
+      - exe
+      - squashfs
+      - wine
+      - wsquashfs
+      - wtgz
+  - name: popcap
+    file_extensions:
+      - pc
+      - exe
+      - squashfs
+      - wine
+      - wsquashfs
+      - wtgz
   - name: windows
     file_extensions:
       - pc
