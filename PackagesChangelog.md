@@ -23,6 +23,8 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|b20b27ebf9e5b099a978e86dba609111dc98c837|Sept 15, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|f0a7b9f391b0e9bc14962b114f7da1ba553060be|Sept 15, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d7d75f4000bb748f664465ef949ef261e3ed1698|Sept 15, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|07fbe90d50f64c72336cbf5c766b234fd8d089e9|Sept 15, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|f182308291542079791ce278949090093f2a3d8e|Sept 15, 2026
 Network|[qrtr](http://github.com/linux-msm/qrtr)|29e36ae164389580a0f8ea7a7fdb728140ae978d|Sept 15, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260915|Sept 15, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a9844689a76d23ac855407087d7d675863039ab8|Sept 15, 2026
@@ -52,6 +54,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|a4908b06cd4095e150926
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|9cc77a769ca0deb82c664dce733c1fd1173b6235|Sept 14, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14388|Sept 14, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|6988ca6b3e41703a4925488d2fd8a15709e20e80|Sept 14, 2026
+Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|8f9c0b44a492af3c7dd58b90a5a25d9b6de9d06a|Sept 14, 2026
 Ports|[uzdoom](https://github.com/UZDoom/UZDoom.git)|af8d16a679f2fe6b122000a133aad800aa0c9ec4|Sept 14, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|723ad63cd38afdbebc8d8aa472917441ab667f6c|Sept 14, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|164fd78ca55285d5e6cdcb954de725ecebe60a6e|Sept 14, 2026
@@ -67,6 +70,7 @@ Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|9611279be550ee262f30b7b0d11f92a0d5fc08f5|Sept 13, 2026
 Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.7|Sept 13, 2026
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|8dd825412ea110bc8632b571e4f7e4bfe9bdb4f6|Sept 13, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.161.9495-578|Sept 13, 2026
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|11844c4eb60ce4abfb751d99035e7855c60aef1f|Sept 13, 2026
 Ports|[hlsdk-xash3d-dmc](https://github.com/FWGS/hlsdk-portable.git)|913c221d513ae4a32d9f3ea448c81f00628a25af|Sept 13, 2026
 Ports|[hlsdk-xash3d-opfor](https://github.com/FWGS/hlsdk-portable.git)|fe33d6e942be30588aa6f65749d8cb086126b4b7|Sept 13, 2026
@@ -86,9 +90,6 @@ Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.3|Sept 11, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|v1.0.0|Sept 11, 2026
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|d508d2c2cc35242dacd176bef401f27302bdc44a|Sept 11, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|5a12daa568d19344f9b6e9286ef5929833b25c7c|Sept 11, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.160.9488-576|Sept 11, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|fd4e4414e0bff30cf18b66b5bf51a22efee00d2c|Sept 11, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|bf0ea793fc8cfbca3ad38e27b007e7c51e74e90e|Sept 11, 2026
 Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.6.0|Sept 11, 2026
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.4|Sept 11, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|eed8075ece35c74ef6c7a5ad2e1bee0b62557508|Sept 11, 2026
@@ -103,7 +104,6 @@ Libraries|[libdovi](http://github.com/quietvoid/dovi_tool)|2.3.4|Sept 10, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|924311f3f0f1990d718def5596128cddd511d5ee|Sept 10, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|711ab21dcf9ad33d8db8339dfd3b1548bcc34cdb|Sept 10, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|924311f3f0f1990d718def5596128cddd511d5ee|Sept 10, 2026
-Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|f8d55d7356c766902d72d8aa988fb1ccef57f750|Sept 09, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a3147e6de90635d|Sept 09, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|615.71.09|Sept 09, 2026
 Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|a974ad62ed3c4405d9f88ae185c78e1d97a2ec4d|Sept 09, 2026
