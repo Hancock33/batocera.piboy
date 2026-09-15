@@ -17,7 +17,7 @@ _logger = logging.getLogger(__name__)
 
 _STRING_LENGTH: Final = 32  # Max character length for `characterName`
 _CONTROLS: Final = 19  # Number of control settings
-_ROM_DIR: Final = ROMS / 'openjazz'
+_ROM_DIR: Final = ROMS / 'ports' / 'openjazz'
 
 _BUTTON_SLOTS: Final = {
     'a': 4,  # Jump
@@ -343,7 +343,7 @@ class OpenJazz(Emulator):
         cfg.save()
 
         return Command(
-            ['OpenJazz'],
+            ['OpenJazz', self.rom.parent],
             env={
                 'XDG_CONFIG_HOME': CONFIGS,
                 'XDG_CACHE_HOME': CACHE,

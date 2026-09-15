@@ -12,10 +12,12 @@ from batocera_launch import Command, Emulator, HotkeysContext
 _logger = logging.getLogger(__name__)
 
 _VALID_MODS: Final = {
+    'trx1',
     'tr1',
     'tr1-ub',
     'tr1-demo-pc',
     'tr1-level',
+    'tr2',
     'tr2',
     'tr2-gm',
     'tr2-level',
@@ -41,7 +43,7 @@ class TRX(Emulator):
         return 16 / 9 if self.resolution.width / self.resolution.height > ((16.0 / 9.0) - 0.1) else 4 / 3
 
     async def configure(self) -> Command:
-        rom_dir = self.roms_dir
+        rom_dir = self.rom.parent
         source_path = Path('/usr/bin/trx')
 
         # Copy shared package configurations/shaders etc
@@ -71,6 +73,22 @@ class TRX(Emulator):
 
         # Detect mod from the launcher file's parent folder
         mod = self.rom.parent.name if self.rom.parent.name in _VALID_MODS else 'tr1'
+
+        
+        if self.config.get_bool('trx-expansion'):
+            if self.rom.suffix == '.trx1':
+                mod = 'tr1-ub'
+            if self.rom.suffix == '.trx2':
+                mod = 'tr2-gm'
+            if self.rom.suffix == '.trx3':
+                mod = 'tr3-la'
+        else:
+            if self.rom.suffix == '.trx1':
+                mod = 'tr1'
+            if self.rom.suffix == '.trx2':
+                mod = 'tr2'
+            if self.rom.suffix == '.trx3':
+                mod = 'tr3'
 
         # Each engine (TR1/TR2/TR3) keeps its own settings file, named TR<N>X.json5
         engine_version = mod[2] if len(mod) > 2 and mod[2].isdigit() else '1'

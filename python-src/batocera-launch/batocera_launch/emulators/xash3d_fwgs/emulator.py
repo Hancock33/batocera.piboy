@@ -98,14 +98,14 @@ class Xash3dFwgs(Emulator):
         return Command(
             args,
             env={
-                'XASH3D_BASEDIR': self.rom_data_dir,
+                'XASH3D_BASEDIR': self.rom.parent,
                 'XASH3D_EXTRAS_PAK1': '/usr/share/xash3d/valve/extras.pk3',
                 'LD_LIBRARY_PATH': '/usr/lib/xash3d',
             },
         )
 
     def _get_server_lib_basename_from_liblist_gam(self) -> str | None:
-        path = self.rom_data_dir / 'liblist.gam'
+        path = self.rom.parent / 'liblist.gam'
         if not path.exists():
             return None
 
@@ -116,18 +116,18 @@ class Xash3dFwgs(Emulator):
         return None
 
     def _maybe_init_config(self) -> None:
-        user_config = self.rom_data_dir / 'userconfig.cfg'
+        user_config = self.rom.parent / 'userconfig.cfg'
         if not user_config.exists():
             user_config.write_text('exec gamepad.cfg\nexec custom.cfg\n')
 
-        gamepad_config = self.rom_data_dir / 'gamepad.cfg'
+        gamepad_config = self.rom.parent / 'gamepad.cfg'
         if not gamepad_config.exists():
             with resources.as_file(resources.files().joinpath('gamepad.cfg')) as gamepad_cfg:
                 shutil.copy(gamepad_cfg, gamepad_config)
 
         config_dir = self.config_dir / self.rom.stem
         custom_config = config_dir / 'custom.cfg'
-        custom_rom_config = self.rom_data_dir / 'custom.cfg'
+        custom_rom_config = self.rom.parent / 'custom.cfg'
         if not custom_config.exists():
             config_dir.mkdir(parents=True, exist_ok=True)
             custom_config.write_text('\n')
@@ -135,7 +135,7 @@ class Xash3dFwgs(Emulator):
             custom_rom_config.symlink_to(custom_config)
 
     def _maybe_init_save_dir(self) -> None:
-        rom_save_dir = self.rom_data_dir / 'save'
+        rom_save_dir = self.rom.parent / 'save'
         if not rom_save_dir.exists():
             save_dir = self.saves_dir / self.rom.stem
             save_dir.mkdir(parents=True, exist_ok=True)

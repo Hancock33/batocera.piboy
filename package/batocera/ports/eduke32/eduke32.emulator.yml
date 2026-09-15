@@ -21,7 +21,10 @@ systems:
   - name: eduke32
     file_extensions:
       - eduke32
-  - name: fury
+      - eduke
+      - grp
+      - ssi
+  - name: ionfury
     file_extensions:
       - grp
   - name: pcexhumed

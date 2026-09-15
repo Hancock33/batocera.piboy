@@ -161,7 +161,7 @@ class Raze(Emulator):
                     if stripped.startswith('gl_es='):
                         line = _gl_es_line(raze_api, architecture, line)
                     elif stripped.startswith('vid_preferbackend='):
-                        line = f'vid_preferbackend={raze_api or "2"}\n'
+                        line = f'vid_preferbackend={raze_api or "1"}\n'
                     elif stripped.startswith('use_joystick='):
                         line = 'use_joystick=true\n'
 
@@ -179,7 +179,7 @@ class Raze(Emulator):
                             '*** Architecture is not intel (%s); gl_es=true ***',
                             architecture,
                         )
-                out.write(f'vid_preferbackend={raze_api or "2"}\n')
+                out.write(f'vid_preferbackend={raze_api or "1"}\n')
                 out.write('use_joystick=true\n')
 
         script_file.write_text(
@@ -193,7 +193,7 @@ class Raze(Emulator):
             )
         )
 
-        args: list[str | Path] = ['raze', *parse_build_engine_args(self.rom)]
+        args: list[str | Path] = ['/usr/share/raze/raze', *parse_build_engine_args(self.rom)]
         args.extend(
             [
                 '-exec',

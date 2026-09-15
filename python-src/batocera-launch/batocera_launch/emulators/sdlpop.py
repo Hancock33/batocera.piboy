@@ -8,7 +8,7 @@ from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import SCREENSHOTS
 from batocera_launch import Command, Controller, Emulator, HotkeysContext
 
-_SYSTEM_DIR: Final = Path('/usr/share/sdlpop')
+_SYSTEM_DIR: Final = Path('/usr/share/SDLPoP')
 _SCREENSHOTS_DIR: Final = SCREENSHOTS / 'sdlpop'
 
 

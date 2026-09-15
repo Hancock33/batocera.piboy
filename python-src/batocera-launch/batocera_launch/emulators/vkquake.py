@@ -25,12 +25,11 @@ class VKQuake(Emulator):
         return 16 / 9 if self.resolution.width / self.resolution.height > ((16.0 / 9.0) - 0.1) else 4 / 3
 
     async def configure(self) -> Command:
-        args: list[str | Path] = ['/usr/bin/vkquake', '-basedir', self.roms_dir]
-        rom_name = self.rom.name.lower()
+        args: list[str | Path] = ['/usr/bin/vkquake', '-basedir', '/userdata/roms/ports/quake1']
 
-        if 'scourge' in rom_name:
+        if 'scourge' in self.rom.name.lower():
             args.append('-hipnotic')
-        if 'dissolution' in rom_name:
+        if 'dissolution' in self.rom.name.lower():
             args.append('-rogue')
 
         return Command(args, env={'SDL_JOYSTICK_HIDAPI': '0'})

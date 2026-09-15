@@ -132,4 +132,9 @@ class YQuake2(Emulator):
         elif 'zaero' in rom_name:
             args.extend(['+set', 'game', 'zaero'])
 
+        if "rtx" in self.rom.name.lower():
+            args.extend(['-datadir', '/userdata/roms/ports/quake2/rtx'])
+        else:
+            args.extend(['-datadir', '/userdata/roms/ports/quake2'])
+
         return Command(args, env={'SDL_JOYSTICK_HIDAPI': '0'})

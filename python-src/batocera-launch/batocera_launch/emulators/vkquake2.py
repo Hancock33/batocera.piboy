@@ -40,16 +40,16 @@ class VKQuake2(Emulator):
         # Change to the rom directory before running
         os.chdir(_ROM_DIR)
 
-        args: list[str | Path] = ['/usr/bin/vkquake2/quake2']
-        rom_name = self.rom.name.lower()
+        args: list[str | Path] = ['/userdata/roms/ports/quake2/quake2', '-datadir', '/userdata/roms/ports/quake2']
 
-        if 'zero' in rom_name:
+        if 'zero' in self.rom.name.lower():
             args.extend(['+set', 'game', 'rogue'])
-        if 'reckoning' in rom_name:
+        if 'reckoning' in self.rom.name.lower():
             args.extend(['+set', 'game', 'xatrix'])
-        if 'zaero' in rom_name:
+        if 'zaero' in self.rom.name.lower():
             args.extend(['+set', 'game', 'zaero'])
-        if 'destruction' in rom_name:
+        if 'destruction' in self.rom.name.lower():
             args.extend(['+set', 'game', 'smd'])
+
 
         return Command(args, env={'SDL_JOYSTICK_HIDAPI': '0'})

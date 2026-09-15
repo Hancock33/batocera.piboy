@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 from batocera_common.configparser import CaseSensitiveConfigParser
@@ -13,17 +12,20 @@ from batocera_launch import (
     parse_build_engine_args,
 )
 
+if TYPE_CHECKING:
+    from pathlib import Path
+
 
 @cached_dataclass
-class EDuke32(Emulator):
+class Ionfury(Emulator):
     needs_sdl_game_controller_config = True
 
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
         return {
-            'name': 'eduke32',
+            'name': 'ionfury',
             'keys': {
-                'exit': 'killall -9 eduke32',
+                'exit': 'killall -9 fury',
                 'menu': 'KEY_ESC',
                 'pause': 'KEY_ESC',
                 'save_state': 'KEY_F6',
@@ -41,17 +43,7 @@ class EDuke32(Emulator):
         return SAVES / self.core
 
     async def configure(self) -> Command:
-
-        args: list[str | Path] = ['eduke32']
-
-        rtsfile = self.rom.name.replace('.GRP', '.RTS').replace('.grp', '.rts').replace('.EDUKE', '.RTS').replace('.eduke', '.rts')
-        if (self.rom.name.lower()).endswith('eduke'):
-            edukegroup = Path(self.rom).read_text().splitlines()[0]
-            edukerom = str(self.rom)
-            edukerom = edukerom.replace('.eduke', '.GRP').replace('.EDUKE', '.GRP')
-            args.extend([edukerom, '-game_dir', self.rom.parent, '-g', edukegroup, '-rts', rtsfile])
-        else:
-            args.extend([self.rom, '-game_dir', self.rom.parent, '-rts', rtsfile])
+        args: list[str | Path] = ['ionfury',  '-game_dir', self.rom.parent, "-g", self.rom.stem]
 
         if self.config.get_bool('nologo'):
             args.append('-nologo')

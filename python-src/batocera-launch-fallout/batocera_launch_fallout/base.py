@@ -35,7 +35,7 @@ class FalloutBase(Emulator):
 
     @property
     def execution_path(self) -> Path:
-        return self.roms_dir
+        return self.rom.parent
 
     @cached_property
     def config_file_path(self) -> Path:
@@ -43,7 +43,7 @@ class FalloutBase(Emulator):
 
     @cached_property
     def src_config_file_path(self) -> Path:
-        return self.roms_dir / self.CONFIG_FILE_NAME
+        return self.rom.parent / self.CONFIG_FILE_NAME
 
     @cached_property
     def ini_file_path(self) -> Path:
@@ -51,7 +51,7 @@ class FalloutBase(Emulator):
 
     @cached_property
     def src_ini_file_path(self) -> Path:
-        return self.roms_dir / self.INI_FILE_NAME
+        return self.rom.parent / self.INI_FILE_NAME
 
     @property
     def needs_mouse(self) -> bool:
@@ -66,7 +66,7 @@ class FalloutBase(Emulator):
     async def configure(self) -> Command:
         self.config_dir.mkdir(parents=True, exist_ok=True)
 
-        ROM_BIN_FILE = self.roms_dir / self.EXE_NAME
+        ROM_BIN_FILE = self.rom.parent / self.EXE_NAME
         SRC_BIN_FILE = Path('/usr/bin') / self.EXE_NAME
 
         # Copy latest binary to the rom directory

@@ -15,5 +15,13 @@ TRX_DEPENDENCIES = ffmpeg libglew pcre2 sdl2 uthash
 
 TRX_CONF_OPTS = -Dstaticdeps=false
 
+define TRX_INSTALL_TARGET_CMDS
+	rm -rf $(TARGET_DIR)/usr/bin/trx
+	rm -rf $(TARGET_DIR)/usr/bin/TRX
+	mkdir -p $(TARGET_DIR)/usr/bin/trx
+	cp -f $(@D)/src/buildroot-build/TRX $(TARGET_DIR)/usr/bin/trx/
+	cp -rf $(@D)/data/trx/ship/* $(TARGET_DIR)/usr/bin/trx/
+endef
+
 $(eval $(meson-package))
 $(eval $(emulator-info-package))

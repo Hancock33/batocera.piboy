@@ -18,12 +18,12 @@ class Uqm(Emulator):
     async def configure(self) -> Command:
         (self.saves_dir / 'teams').mkdir(parents=True, exist_ok=True)
         (self.saves_dir / 'save').mkdir(parents=True, exist_ok=True)
-        (self.roms_dir / 'version').touch(exist_ok=True)
+        (self.rom.parent / 'version').touch(exist_ok=True)
 
         return Command(
             [
                 'urquan',
-                f'--contentdir={self.roms_dir}',
+                f'--contentdir={self.rom.parent}',
                 f'--configdir={self.saves_dir}',
             ]
         )
