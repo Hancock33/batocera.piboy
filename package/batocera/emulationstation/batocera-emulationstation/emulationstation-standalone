@@ -111,7 +111,7 @@ while [ -e "${REBOOT_FLAG}" ]; do
 	echo "Standalone: query file force found..." >> "$log"
 	DO_QUERY_FILE="$query_file_force"
     fi
-    
+
     if [ -n "${DO_QUERY_FILE}" ]; then
         echo "Standalone: Found screen checker query file. Reading outputs." >> "$log"
         # Read all lines from the query file into an array
