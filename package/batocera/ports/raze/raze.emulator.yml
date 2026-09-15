@@ -18,8 +18,8 @@ custom_features:
     description: Choose which graphics API library to use.
     choices:
       OpenGL (x86 only): 0
-      Vulkan: 1
-      OpenGLES (Default): 2
+      Vulkan (Default): 1
+      OpenGLES: 2
   nologo:
     prompt: SKIP INTRO VIDEOS
     choices:
