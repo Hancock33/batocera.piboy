@@ -1,10 +1,12 @@
 from __future__ import annotations
 
-from pathlib import Path
-from typing import Final
+from typing import TYPE_CHECKING
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 @cached_dataclass
@@ -19,7 +21,7 @@ class Alephone(Emulator):
         }
 
     async def configure(self) -> Command:
-        args: list[str | Path] = ['alephone']
+        args: list[str | Path] = ['/usr/bin/alephone']
 
         if 'marathon2' in self.rom.stem:
             args.append('/userdata/roms/ports/alephone/marathon2')

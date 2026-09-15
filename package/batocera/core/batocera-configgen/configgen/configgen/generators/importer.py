@@ -15,7 +15,6 @@ _LEGACY_GENERATOR_MAP: Final[dict[str, dict[str, tuple[str, str]]]] = {
 }
 
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
-    'doomretro': ('doomretro.doomretroGenerator', 'DoomretroGenerator'),
     'droidports': ('droidports.droidportsGenerator', 'DroidportsGenerator'),
     'duckstation': ('duckstation.duckstationGenerator', 'DuckstationGenerator'),
     'dxx-rebirth': ('dxx_rebirth.dxx_rebirthGenerator', 'DXX_RebirthGenerator'),
@@ -43,7 +42,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'mame': ('mame.mameGenerator', 'MameGenerator'),
     'nblood': ('nblood.nbloodGenerator', 'NbloodGenerator'),
     'nesbox': ('nesbox.nesboxGenerator', 'NesboxGenerator'),
-    'nukem2': ('nukem2.nukem2Generator', 'Nukem2Generator'),
     'odcommander': ('odcommander.odcommanderGenerator', 'OdcommanderGenerator'),
     'omf2097': ('omf2097.omf2097Generator', 'Omf2097Generator'),
     'openclaw': ('openclaw.openclawGenerator', 'OpenclawGenerator'),
@@ -53,13 +51,11 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'openlara': ('openlara.openlaraGenerator', 'OpenlaraGenerator'),
     'openmohaa': ('openmohaa.openmohaaGenerator', 'OpenMOHAAGenerator'),
     'opentyrian': ('opentyrian.opentyrianGenerator', 'OpentyrianGenerator'),
-    'pcexhumed': ('pcexhumed.pcexhumedGenerator', 'PcexhumedGenerator'),
     'prototype': ('prototype.prototypeGenerator', 'PrototypeGenerator'),
     'pygame': ('pygame.pygameGenerator', 'PygameGenerator'),
     'pyxel': ('pyxel.pyxelGenerator', 'PyxelGenerator'),
     'raptor': ('raptor.raptorGenerator', 'RaptorGenerator'),
     'raze': ('raze.razeGenerator', 'RazeGenerator'),
-    'rednukem': ('rednukem.rednukemGenerator', 'RednukemGenerator'),
     'rott': ('rott.rottGenerator', 'RottGenerator'),
     'rtcw': ('rtcw.rtcwGenerator', 'RtcwGenerator'),
     'ryujinx': ('ryujinx.ryujinxGenerator', 'RyujinxGenerator'),
@@ -88,8 +84,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'vcmi': ('vcmi.vcmiGenerator', 'VcmiGenerator'),
     'vkquake2': ('vkquake2.vkquake2Generator', 'VKQuake2Generator'),
     'vkquake': ('vkquake.vkquakeGenerator', 'VKQuakeGenerator'),
-    'voidsw': ('voidsw.voidswGenerator', 'VoidswGenerator'),
-    'wine': ('wine.wineGenerator', 'WineGenerator'),
     'witchaven': ('witchaven.witchavenGenerator', 'WitchavenGenerator'),
     'xash3d_fwgs': ('xash3d_fwgs.xash3dFwgsGenerator', 'Xash3dFwgsGenerator'),
     'xboxcloud': ('xboxcloud.xboxcloudGenerator', 'XboxcloudGenerator'),
