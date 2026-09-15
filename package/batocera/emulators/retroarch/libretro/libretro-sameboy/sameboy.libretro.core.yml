@@ -4,7 +4,15 @@ features:
 shared_features:
   - autosave
   - rewind
+file_extensions:
+  - zip
+  - 7z
 systems:
-  - gb
-  - gbc
-  - sgb
+  - name: gb
+    file_extensions:
+      add:
+        - gb
+  - name: gbc
+    file_extensions:
+      add:
+        - gbc

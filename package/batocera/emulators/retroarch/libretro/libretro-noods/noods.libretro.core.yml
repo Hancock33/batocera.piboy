@@ -1,2 +1,5 @@
+file_extensions:
+  - nds
+  - zip
 systems:
   - nds

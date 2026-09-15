@@ -100,5 +100,16 @@ custom_features:
       High: High
       Full: Full
       Maximum: Maximum
+file_extensions:
+  - iso
+  - mdf
+  - nrg
+  - bin
+  - img
+  - dump
+  - gz
+  - cso
+  - chd
+  - zso
 systems:
   - name: ps2

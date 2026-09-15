@@ -70,6 +70,14 @@ custom_features:
     description: Light threshold for forcing shadergen
     preset: slider
     preset_parameters: 1 8 1 8
+file_extensions:
+  - 3ds
+  - 3dsx
+  - elf
+  - axf
+  - cci
+  - cxi
+  - app
 systems:
   - 3ds
 

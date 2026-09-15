@@ -194,5 +194,8 @@ custom_features:
       W-SU: 43
       WET: 44
       Zulu: 45
+file_extensions:
+  - nsp
+  - xci
 systems:
   - switch

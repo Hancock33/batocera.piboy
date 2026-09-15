@@ -1,2 +1,5 @@
+file_extensions:
+  - ecwolf
+  - pk3
 systems:
   - ecwolf

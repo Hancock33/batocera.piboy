@@ -1,2 +1,8 @@
+file_extensions:
+  - smc
+  - sfc
+  - swc
+  - fig
+  - bs
 systems:
   - snes

@@ -1,5 +1,36 @@
 systems:
-  - pcengine
-  - supergrafx
-  - tg16
-  - tg-cd
+  - name: pcengine
+    file_extensions:
+      - pce
+      - bin
+      - zip
+      - 7z
+  - name: pcenginecd
+    file_extensions:
+      - pce
+      - cue
+      - ccd
+      - iso
+      - img
+      - chd
+  - name: tg16
+    file_extensions:
+      - pce
+      - sgx
+      - bin
+      - zip
+      - 7z
+  - name: tg16
+    file_extensions:
+      - pce
+      - bin
+      - zip
+      - 7z
+  - name: tg-cd
+    file_extensions:
+      - pce
+      - cue
+      - ccd
+      - iso
+      - img
+      - chd

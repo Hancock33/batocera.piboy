@@ -1,2 +1,6 @@
+file_extensions:
+  - 7z
+  - chd
+  - zip
 systems:
   - model3

@@ -1,2 +1,31 @@
+file_extensions:
+  - 3g2
+  - 3gp
+  - asf
+  - avi
+  - divx
+  - f4f
+  - f4v
+  - flac
+  - flv
+  - m2p
+  - m2ts
+  - m4a
+  - mkv
+  - mov
+  - mp3
+  - mp4
+  - mpeg
+  - mpg
+  - mxf
+  - ogg
+  - ogm
+  - ps
+  - ts
+  - vob
+  - wav
+  - webm
+  - wma
+  - wmv
 systems:
   - kodi
