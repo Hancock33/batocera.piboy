@@ -102,8 +102,30 @@ custom_features:
     choices:
       "On": 1
       Off (Default): 0
+file_extensions:
+  - bin
+  - zip
+  - 7z
 systems:
   - name: adam
+    file_extensions:
+      add:
+        - wav
+        - ddp
+        - mfi
+        - dfi
+        - hfe
+        - mfm
+        - td0
+        - imd
+        - d77
+        - d88
+        - 1dd
+        - cqm
+        - cqi
+        - dsk
+        - rom
+        - col
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -175,6 +197,22 @@ systems:
           "On": 1
           "Off": 0
   - name: apple2
+    file_extensions:
+      - nib
+      - do
+      - po
+      - dsk
+      - mfi
+      - dfi
+      - rti
+      - edd
+      - woz
+      - wav
+      - zip
+      - 7z
+      - chd
+      - hdv
+      - 2mg
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -226,6 +264,12 @@ systems:
           "On": 1
           "Off": 0
   - name: apple2gs
+    file_extensions:
+      - 2mg
+      - do
+      - nib
+      - po
+      - dsk
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -279,6 +323,38 @@ systems:
           "On": 1
           "Off": 0
   - name: archimedes
+    file_extensions:
+      - mfi
+      - dfi
+      - hfe
+      - mfm
+      - td0
+      - imd
+      - d77
+      - d88
+      - 1dd
+      - cqm
+      - cqi
+      - dsk
+      - ima
+      - img
+      - ufi
+      - '360'
+      - ipf
+      - adf
+      - apd
+      - jfd
+      - ads
+      - adm
+      - adl
+      - ssd
+      - bbc
+      - dsd
+      - st
+      - msa
+      - chd
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -329,6 +405,27 @@ systems:
           "On": 1
           "Off": 0
   - name: atom
+    file_extensions:
+      add:
+        - wav
+        - tap
+        - csw
+        - uef
+        - mfi
+        - dfi
+        - hfe
+        - mfm
+        - td0
+        - imd
+        - d77
+        - d88
+        - 1dd
+        - cqm
+        - cqi
+        - dsk
+        - 40t
+        - atm
+        - rom
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -364,6 +461,21 @@ systems:
           "On": 1
           "Off": 0
   - name: pcw
+    file_extensions:
+      - mfi
+      - dfi
+      - mfm
+      - td0
+      - imd
+      - 86f
+      - d77
+      - d88
+      - 1dd
+      - cqm
+      - cqi
+      - dsk
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -402,6 +514,35 @@ systems:
           'On': 1
           'Off': 0
   - name: bbcmicro
+    file_extensions:
+      add:
+        - mfi
+        - dfi
+        - hfe
+        - mfm
+        - td0
+        - imd
+        - d77
+        - d88
+        - 1dd
+        - cqm
+        - cqi
+        - dsk
+        - ima
+        - img
+        - ufi
+        - '360'
+        - ipf
+        - ssd
+        - bbc
+        - dsd
+        - adf
+        - ads
+        - adm
+        - adl
+        - fsd
+        - wav
+        - tap
     custom_features:
       sticktype:
         group: ADVANCED OPTIONS
@@ -466,6 +607,12 @@ systems:
           "On": 1
           "Off": 0
   - name: camplynx
+    file_extensions:
+      - wav
+      - tap
+      - ldf
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -497,6 +644,14 @@ systems:
           "On": 1
           "Off": 0
   - name: cdi
+    file_extensions:
+      - chd
+      - cue
+      - toc
+      - nrg
+      - gdi
+      - iso
+      - cdr
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -513,6 +668,14 @@ systems:
           "On": 1
           "Off": 0
   - name: coco
+    file_extensions:
+      - wav
+      - cas
+      - dsk
+      - ccc
+      - rom
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -555,6 +718,14 @@ systems:
           'On': 1
           'Off': 0
   - name: dragon64
+    file_extensions:
+      add:
+        - wav
+        - cas
+        - dsk
+        - dmk
+        - ccc
+        - rom
     features:
       - padtokeyboard
     custom_features:
@@ -598,6 +769,11 @@ systems:
           'On': 1
           'Off': 0
   - name: mc10
+    file_extensions:
+      add:
+        - wav
+        - cas
+        - rom
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -634,6 +810,9 @@ systems:
           "On": 1
           "Off": 0
   - name: crvision
+    file_extensions:
+      add:
+        - rom
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -673,6 +852,32 @@ systems:
           'On': 1
           'Off': 0
   - name: electron
+    file_extensions:
+      add:
+        - wav
+        - csw
+        - uef
+        - mfi
+        - dfi
+        - hfe
+        - mfm
+        - td0
+        - imd
+        - d77
+        - d88
+        - 1dd
+        - cqm
+        - cqi
+        - dsk
+        - ssd
+        - bbc
+        - img
+        - dsd
+        - adf
+        - ads
+        - adm
+        - adl
+        - rom
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -714,6 +919,23 @@ systems:
           "On": 1
           "Off": 0
   - name: fm7
+    file_extensions:
+      - wav
+      - t77
+      - mfi
+      - dfi
+      - hfe
+      - mfm
+      - td0
+      - imd
+      - d77
+      - d88
+      - 1dd
+      - cqm
+      - cqi
+      - dsk
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -752,9 +974,27 @@ systems:
           "On": 1
           "Off": 0
   - name: fmtowns
-    exclude_extensions:
-      - xdf
-      - m3u
+    file_extensions:
+      add:
+        - cue
+        - d88
+        - d77
+        - iso
+        - chd
+        - toc
+        - nrg
+        - gdi
+        - cdr
+        - mfi
+        - dfi
+        - hfe
+        - mfm
+        - td0
+        - imd
+        - 1dd
+        - cqm
+        - cqi
+        - dsk
     custom_features:
       altmodel:
         group: ADVANCED OPTIONS
@@ -828,6 +1068,9 @@ systems:
           "On": 1
           "Off": 0
   - name: gamecom
+    file_extensions:
+      add:
+        - tgc
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -876,6 +1119,10 @@ systems:
           "On": 1
           "Off": 0
   - name: gp32
+    file_extensions:
+      - smc
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -892,6 +1139,12 @@ systems:
           "On": 1
           "Off": 0
   - name: laser310
+    file_extensions:
+      - vz
+      - wav
+      - cas
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -930,6 +1183,15 @@ systems:
           "On": 1
           "Off": 0
   - name: mz2000
+    file_extensions:
+      - mzf
+      - mzt
+      - m12
+      - wav
+      - d88
+      - dsk
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -961,6 +1223,21 @@ systems:
           'On': 1
           'Off': 0
   - name: mz2500
+    file_extensions:
+      - d88
+      - dsk
+      - mfi
+      - dfi
+      - hfe
+      - mfm
+      - td0
+      - imd
+      - d77
+      - 1dd
+      - cqm
+      - cqi
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -991,6 +1268,13 @@ systems:
           'On': 1
           'Off': 0
   - name: mz700
+    file_extensions:
+      - mzf
+      - mzt
+      - m12
+      - wav
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1014,6 +1298,13 @@ systems:
           'On': 1
           'Off': 0
   - name: mz800
+    file_extensions:
+      - mzf
+      - mzt
+      - m12
+      - wav
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1037,6 +1328,13 @@ systems:
           'On': 1
           'Off': 0
   - name: mz80k
+    file_extensions:
+      - mzf
+      - mzt
+      - m12
+      - wav
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1060,6 +1358,39 @@ systems:
           'On': 1
           'Off': 0
   - name: macintosh
+    file_extensions:
+      - dsk
+      - zip
+      - 7z
+      - mfi
+      - dfi
+      - hfe
+      - mfm
+      - td0
+      - imd
+      - d77
+      - d88
+      - 1dd
+      - cqm
+      - cqi
+      - ima
+      - img
+      - ufi
+      - ipf
+      - dc42
+      - woz
+      - 2mg
+      - '360'
+      - chd
+      - cue
+      - toc
+      - nrg
+      - gdi
+      - iso
+      - cdr
+      - hd
+      - hdv
+      - hdi
     features:
       - padtokeyboard
     custom_features:
@@ -1160,6 +1491,12 @@ systems:
           "On": 1
           "Off": 0
   - name: pdp1
+    file_extensions:
+      - zip
+      - 7z
+      - tap
+      - rim
+      - drm
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1183,6 +1520,12 @@ systems:
           "On": 1
           "Off": 0
   - name: sc3000
+    file_extensions:
+      add:
+        - sg
+        - wav
+        - cas
+        - bit
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1220,6 +1563,11 @@ systems:
           'On': 1
           'Off': 0
   - name: segaai
+    file_extensions:
+      add:
+        - wav
+        - flac
+        - cas
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1361,6 +1709,11 @@ systems:
           "On": 1
           "Off": 0
   - name: ti99
+    file_extensions:
+      - rpk
+      - wav
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1406,6 +1759,9 @@ systems:
           "On": 1
           "Off": 0
   - name: tutor
+    file_extensions:
+      add:
+        - wav
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1437,6 +1793,10 @@ systems:
           "Off": 0
   - name: vectrex
     disabled: true
+    file_extensions:
+      add:
+        - gam
+        - vec
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1453,6 +1813,11 @@ systems:
           "On": 1
           "Off": 0
   - name: vgmplay
+    file_extensions:
+      - vgm
+      - vgz
+      - zip
+      - 7z
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1469,6 +1834,10 @@ systems:
           "On": 1
           "Off": 0
   - name: vsmile
+    file_extensions:
+      add:
+        - u1
+        - u3
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1486,6 +1855,13 @@ systems:
           "On": 1
           "Off": 0
   - name: xegs
+    file_extensions:
+      add:
+        - atr
+        - dsk
+        - xfd
+        - rom
+        - car
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1517,21 +1893,79 @@ systems:
         prompt: CUSTOM GAME CONFIG
         description: Enable per-game custom configuration via MAME menu.
         choices:
-          "On": 1
-          "Off": 0
-  - gameandwatch
-  - lcdgames
-  - loopy
-  - mame
-  - namco22
-  - neogeo
-  - oricatmos
-  - samcoupe
-  - tvgames
-  - uzebox
-  - vc4000
-  - vis
+          'On': 1
+          'Off': 0
+  - name: gameandwatch
+    file_extensions:
+      - mgw
+      - zip
+      - 7z
+  - name: lcdgames
+    file_extensions:
+      - mgw
+      - zip
+      - 7z
+  - name: loopy
+    file_extensions:
+      add:
+        - ic1
+  - name: mame
+    file_extensions:
+      - zip
+      - 7z
+  - name: namco22
+    file_extensions:
+      - zip
+      - 7z
+  - name: neogeo
+    file_extensions:
+      - 7z
+      - zip
+  - name: oricatmos
+    file_extensions:
+      - tap
+      - dsk
+      - zip
+  - name: samcoupe
+    file_extensions:
+      - cpm
+      - dsk
+      - sad
+      - mgt
+      - sdf
+      - td0
+      - sbt
+      - zip
+  - name: tvgames
+    file_extensions:
+      - zip
+      - 7z
+  - name: uzebox
+    file_extensions:
+      - uze
+      - bin
+      - zip
+  - name: vc4000
+    file_extensions:
+      add:
+        - rom
+        - pgm
+        - tvc
+  - name: vis
+    file_extensions:
+      - chd
+      - cue
+      - toc
+      - nrg
+      - gdi
+      - iso
+      - cdr
   - name: cgenie
+    file_extensions:
+      - cas
+      - wav
+      - zip
+      - 7z
     features:
       - padtokeyboard
     custom_features:
@@ -1564,8 +1998,28 @@ systems:
         choices:
           'On': 1
           'Off': 0
-  - enterprise
+  - name: enterprise
+    file_extensions:
+      - bas
+      - com
+      - zip
+      - img
+      - dsk
+      - tap
+      - dtf
+      - trn
+      - '128'
+      - cas
+      - cdt
+      - tzx
   - name: pc80
+    file_extensions:
+      add:
+        - d77
+        - d88
+        - 1dd
+        - dsk
+        - n80
     features:
       - padtokeyboard
     custom_features:
@@ -1586,6 +2040,9 @@ systems:
           'On': 1
           'Off': 0
   - name: pv2000
+    file_extensions:
+      add:
+        - cas
     custom_features:
       softList:
         group: ADVANCED OPTIONS
@@ -1602,6 +2059,15 @@ systems:
           'On': 1
           'Off': 0
   - name: trs80
+    file_extensions:
+      - cmd
+      - cas
+      - dsk
+      - dmk
+      - bas
+      - wav
+      - zip
+      - 7z
     features:
       - padtokeyboard
     custom_features:
@@ -1646,9 +2112,39 @@ systems:
         choices:
           'On': 1
           'Off': 0
-  - tvc
-  - bk
+  - name: tvc
+    file_extensions:
+      - cas
+      - tap
+      - dsk
+      - img
+      - zip
+  - name: bk
+    file_extensions:
+      add:
+        - img
+        - dsk
+        - bkd
   - name: pc60
+    file_extensions:
+      add:
+        - cas
+        - p6
+        - d77
+        - d88
+        - dsk
+        - 1dd
+        - mfi
+        - dfi
+        - mfm
+        - td0
+        - imd
+        - cqm
+        - cqi
+        - xdf
+        - hdm
+        - 2hd
+        - fdi
     features:
       - padtokeyboard
     custom_features:
@@ -1743,4 +2239,3 @@ systems:
   - toaplan
   - universal
   - visco
-  - vpinball

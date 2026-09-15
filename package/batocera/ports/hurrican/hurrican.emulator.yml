@@ -25,6 +25,7 @@ custom_features:
       "Valentine":      Valentine
       "Volcano Temple": Volcano_Temple
       "Walkers World":  Walkers_World
-
+file_extensions:
+  - game
 systems:
   - hurrican

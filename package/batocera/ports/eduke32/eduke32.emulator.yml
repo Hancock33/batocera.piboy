@@ -23,3 +23,18 @@ systems:
   - pcexhumed
   - rednukem
   - voidsw
+  - name: eduke32
+    file_extensions:
+      - eduke32
+  - name: fury
+    file_extensions:
+      - grp
+  - name: pcexhumed
+    file_extensions:
+      - mov
+  - name: rednukem
+    file_extensions:
+      - grp
+  - name: voidsw
+    file_extensions:
+      - grp

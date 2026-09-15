@@ -3,3 +3,24 @@ systems:
   - gaelco
   - model1
   - model2
+  - model3
+  - name: cave3rd
+    file_extensions: &arcade
+      remove:
+        - bin
+  - name: gaelco
+    file_extensions:
+      values: *arcade
+  - name: model1
+    file_extensions:
+      values: *arcade
+      remove:
+        - 7z
+  - name: model2
+    file_extensions:
+      values: *arcade
+      remove:
+        - 7z
+  - name: model3
+    file_extensions:
+      - zip

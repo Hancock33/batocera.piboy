@@ -3,3 +3,16 @@ systems:
   - windows_installers
   - bigfish
   - popcap
+  - name: windows
+    file_extensions:
+      - pc
+      - exe
+      - squashfs
+      - wine
+      - wsquashfs
+      - wtgz
+  - name: windows_installers
+    file_extensions:
+      - exe
+      - iso
+      - msi
