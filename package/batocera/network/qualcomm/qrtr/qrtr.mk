@@ -3,8 +3,8 @@
 # qrtr
 #
 ################################################################################
-# Version: Commits on Aug 24, 2026
-QRTR_VERSION = 27d2c9dfb4e8653ac314ebe2b7980fed2f4bac2e
+# Version: Commits on Sept 15, 2026
+QRTR_VERSION = 29e36ae164389580a0f8ea7a7fdb728140ae978d
 QRTR_SITE = $(call github,linux-msm,qrtr,$(QRTR_VERSION))
 QRTR_LICENSE = BSD-3-Clause license
 QRTR_LICENSE_FILE = LICENSE
