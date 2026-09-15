@@ -21,7 +21,7 @@ index 10c496eaea2c..ed53b26f6f93 100644
  		err = PTR_ERR(skb);
  		bt_dev_err(hdev, "QCA Change address cmd failed (%d)", err);
 diff --git a/drivers/bluetooth/hci_h5.c b/drivers/bluetooth/hci_h5.c
-index 93cdde981840..529bf2354648 100644
+index a5e7e9b0ea74..1482b2f2c377 100644
 --- a/drivers/bluetooth/hci_h5.c
 +++ b/drivers/bluetooth/hci_h5.c
 @@ -115,7 +115,6 @@ struct h5_vnd {
@@ -42,7 +42,7 @@ index 93cdde981840..529bf2354648 100644
  }
  
  static void h5_serdev_remove(struct serdev_device *serdev)
-@@ -1108,7 +1106,6 @@ static struct h5_vnd rtl_vnd = {
+@@ -1110,7 +1108,6 @@ static struct h5_vnd rtl_vnd = {
  	.suspend	= h5_btrtl_suspend,
  	.resume		= h5_btrtl_resume,
  	.acpi_gpio_map	= acpi_btrtl_gpios,
@@ -92,7 +92,7 @@ index 1222f97800f4..c0fd22f81da8 100644
  		     data->soc_type == QCA_WCN6855 ||
  		     data->soc_type == QCA_WCN7850)) {
 diff --git a/drivers/bluetooth/hci_serdev.c b/drivers/bluetooth/hci_serdev.c
-index 593d9cefbbf9..65cf98416f45 100644
+index d2eaf2f12aa2..b458acb97f92 100644
 --- a/drivers/bluetooth/hci_serdev.c
 +++ b/drivers/bluetooth/hci_serdev.c
 @@ -300,9 +300,8 @@ static const struct serdev_device_ops hci_serdev_client_ops = {
