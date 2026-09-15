@@ -1,16 +1,13 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import TYPE_CHECKING
 
-from batocera_common.configparser import CaseSensitiveConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import CONFIGS, SAVES, SCREENSHOTS
+from batocera_common.paths import CONFIGS, SAVES
 from batocera_launch import (
     Command,
     Emulator,
     HotkeysContext,
-    parse_build_engine_args,
 )
 
 
@@ -44,7 +41,12 @@ class EDuke32(Emulator):
 
         args: list[str | Path] = ['eduke32']
 
-        rtsfile = self.rom.name.replace('.GRP', '.RTS').replace('.grp', '.rts').replace('.EDUKE', '.RTS').replace('.eduke', '.rts')
+        rtsfile = (
+            self.rom.name.replace('.GRP', '.RTS')
+            .replace('.grp', '.rts')
+            .replace('.EDUKE', '.RTS')
+            .replace('.eduke', '.rts')
+        )
         if (self.rom.name.lower()).endswith('eduke'):
             edukegroup = Path(self.rom).read_text().splitlines()[0]
             edukerom = str(self.rom)

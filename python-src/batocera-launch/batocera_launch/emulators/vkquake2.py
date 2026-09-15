@@ -51,5 +51,4 @@ class VKQuake2(Emulator):
         if 'destruction' in self.rom.name.lower():
             args.extend(['+set', 'game', 'smd'])
 
-
         return Command(args, env={'SDL_JOYSTICK_HIDAPI': '0'})

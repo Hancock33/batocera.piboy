@@ -2,14 +2,12 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from batocera_common.configparser import CaseSensitiveConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import CONFIGS, SAVES, SCREENSHOTS
+from batocera_common.paths import CONFIGS, SAVES
 from batocera_launch import (
     Command,
     Emulator,
     HotkeysContext,
-    parse_build_engine_args,
 )
 
 if TYPE_CHECKING:
@@ -43,7 +41,7 @@ class Ionfury(Emulator):
         return SAVES / self.core
 
     async def configure(self) -> Command:
-        args: list[str | Path] = ['ionfury',  '-game_dir', self.rom.parent, "-g", self.rom.stem]
+        args: list[str | Path] = ['ionfury', '-game_dir', self.rom.parent, '-g', self.rom.stem]
 
         if self.config.get_bool('nologo'):
             args.append('-nologo')

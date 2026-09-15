@@ -18,7 +18,6 @@ _VALID_MODS: Final = {
     'tr1-demo-pc',
     'tr1-level',
     'tr2',
-    'tr2',
     'tr2-gm',
     'tr2-level',
     'tr3',
@@ -74,7 +73,6 @@ class TRX(Emulator):
         # Detect mod from the launcher file's parent folder
         mod = self.rom.parent.name if self.rom.parent.name in _VALID_MODS else 'tr1'
 
-        
         if self.config.get_bool('trx-expansion'):
             if self.rom.suffix == '.trx1':
                 mod = 'tr1-ub'
