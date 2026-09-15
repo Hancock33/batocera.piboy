@@ -10,6 +10,7 @@ from batocera_launch import Command, Emulator, HotkeysContext
 if TYPE_CHECKING:
     from pathlib import Path
 
+
 @cached_dataclass
 class Doomretro(Emulator):
     needs_sdl_game_controller_config = True
