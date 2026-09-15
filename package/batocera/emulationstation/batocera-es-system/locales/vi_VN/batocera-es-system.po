@@ -12065,8 +12065,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL với Shader"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGles (Mặc định)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19412,6 +19412,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "keys_files"
 #~ msgid "Open Save Menu"
 #~ msgstr "Mở Menu Lưu"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGles (Mặc định)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

@@ -11907,8 +11907,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL带着色器"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES（默认）"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19446,6 +19446,10 @@ msgstr "黄色/蓝色"
 #~ msgctxt "keys_files"
 #~ msgid "Open Save Menu"
 #~ msgstr "打开保存菜单"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES（默认）"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

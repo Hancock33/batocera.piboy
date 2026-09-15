@@ -12041,8 +12041,8 @@ msgid "OpenGL with Shaders"
 msgstr "셰이더를 사용한 OpenGL"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (기본t)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19348,6 +19348,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "keys_files"
 #~ msgid "Open Menu"
 #~ msgstr "메뉴 열기"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (기본t)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

@@ -11951,7 +11951,7 @@ msgid "OpenGL with Shaders"
 msgstr ""
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
+msgid "OpenGLES"
 msgstr ""
 
 msgctxt "game_options"

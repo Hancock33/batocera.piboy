@@ -12082,8 +12082,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL so shadermi"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (predvolené)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19730,6 +19730,10 @@ msgstr "žltá/modrá"
 #~ msgctxt "keys_files"
 #~ msgid "Open Menu"
 #~ msgstr "Otvoriť menu"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (predvolené)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

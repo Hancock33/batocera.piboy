@@ -12014,8 +12014,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL Shader-ekin"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (Defektuz)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19100,6 +19100,10 @@ msgstr "horia/urdina"
 #~ msgctxt "keys_files"
 #~ msgid "Open DuckStation Quick Menu"
 #~ msgstr "Ireki Duckstation Menu azkarra"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Defektuz)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

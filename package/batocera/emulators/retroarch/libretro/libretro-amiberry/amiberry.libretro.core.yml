@@ -38,4 +38,5 @@ systems:
       values: *amigacd32
       add:
         - m3u
-  -amigademo
+  - amigademo
+

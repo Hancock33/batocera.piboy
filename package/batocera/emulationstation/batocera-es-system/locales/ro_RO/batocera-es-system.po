@@ -12119,8 +12119,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL cu shadere"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (Implicit)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19714,6 +19714,10 @@ msgstr "galben/albastru"
 #~ msgctxt "keys_files"
 #~ msgid "Open Save Menu"
 #~ msgstr "Deschide meniul de salvare"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Implicit)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

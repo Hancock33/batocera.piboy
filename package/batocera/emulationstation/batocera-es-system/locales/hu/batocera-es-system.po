@@ -12135,8 +12135,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL with Shaders"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (Alap)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19835,6 +19835,10 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "Open Save Menu"
 #~ msgstr "Mentés menü megnyitása"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Alap)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

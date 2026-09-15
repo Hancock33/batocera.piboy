@@ -12115,8 +12115,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL amb Shaders"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (Per defecte)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -20053,6 +20053,10 @@ msgstr "groc/blau"
 #~ msgctxt "keys_files"
 #~ msgid "Open DuckStation Quick Menu"
 #~ msgstr "Obrir menú ràpid de DuckStation"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Per defecte)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

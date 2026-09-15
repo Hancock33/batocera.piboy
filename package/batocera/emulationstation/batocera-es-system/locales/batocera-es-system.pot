@@ -15834,6 +15834,14 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "SKIP INTRO VIDEOS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Classic (Default)"
 msgstr ""
 
@@ -15847,14 +15855,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "4x MULTISAMPLING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SKIP INTRO VIDEOS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Show (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -16718,7 +16718,7 @@ msgid "OpenGL (x86 only)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
+msgid "OpenGLES"
 msgstr ""
 
 msgctxt "game_options"

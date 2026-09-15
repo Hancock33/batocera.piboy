@@ -12042,8 +12042,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL と シェーダー"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (標準)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -21710,6 +21710,10 @@ msgstr "黄/青"
 
 #~ msgid "OpenGL Driver Version"
 #~ msgstr "OpenGLドライババージョン"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (標準)"
 
 #~ msgid ""
 #~ "Optimizes battery life with extra power-saving measures during system "

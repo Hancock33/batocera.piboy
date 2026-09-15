@@ -12146,8 +12146,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL con Shaders (sombreadores)"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (Defecto)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19740,6 +19740,10 @@ msgstr "amarillo/azul"
 #~ msgctxt "keys_files"
 #~ msgid "Open Save Menu"
 #~ msgstr "Abrir menú guardar"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Defecto)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

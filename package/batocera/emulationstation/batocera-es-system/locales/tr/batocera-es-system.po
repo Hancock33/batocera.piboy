@@ -12108,8 +12108,8 @@ msgid "OpenGL with Shaders"
 msgstr "Gölgelendiricili OpenGL"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (Varsayılan)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -19369,6 +19369,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "keys_files"
 #~ msgid "Open Menu"
 #~ msgstr "Menüyü Aç"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Varsayılan)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"

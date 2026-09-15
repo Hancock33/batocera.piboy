@@ -12128,8 +12128,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL z shaderami"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (domyślnie)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -20766,6 +20766,10 @@ msgstr "żółty/niebieski"
 #~ msgctxt "keys_files"
 #~ msgid "Open Save Menu"
 #~ msgstr "Otwarcie menu zapisywania"
+
+#~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (domyślnie)"
 
 #~ msgctxt "game_options"
 #~ msgid "Original Size"
