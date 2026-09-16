@@ -629,10 +629,10 @@ dxvk_install() {
     if [[ "${D7VK}" = 1 ]]; then
         if SRC=$(find_runner_dll_dir d7vk i386-windows); then
             rsync -a "${SRC}/ddraw.dll" "${DDRAW_DIR}/ddraw.dll" || return 1
-        elif [[ -e "/userdata/system/wine/dxvk/x32/ddraw.dll" ]]; then
-            rsync -a "/userdata/system/wine/dxvk/x32/ddraw.dll" "${DDRAW_DIR}/ddraw.dll" || return 1
+        elif [[ -e "/userdata/system/wine/d7vk/x32/ddraw.dll" ]]; then
+            rsync -a "/userdata/system/wine/d7vk/x32/ddraw.dll" "${DDRAW_DIR}/ddraw.dll" || return 1
         else
-            rsync -a "/usr/wine/dxvk/x32/ddraw.dll" "${DDRAW_DIR}/ddraw.dll" || return 1
+            rsync -a "/usr/wine/d7vk/x32/ddraw.dll" "${DDRAW_DIR}/ddraw.dll" || return 1
         fi
         rsync -a "${WINE_LIB32_DIR}/i386-windows/ddraw.dll" "${DDRAW_DIR}/ddraw_.dll" || return 1
         export WINEDLLOVERRIDES="${WINEDLLOVERRIDES};ddraw=n,b"
