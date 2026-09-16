@@ -19,10 +19,10 @@ Combined patch on top of RPCS3 v0.0.41:
   the game writes it, since Batocera exits skip the device destructor.
 ---
 diff --git a/rpcs3/Emu/Cell/lv2/sys_fs.cpp b/rpcs3/Emu/Cell/lv2/sys_fs.cpp
-index 79bd85206..3f3a03830 100644
+index daa9a1653..aa78d6932 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_fs.cpp
 +++ b/rpcs3/Emu/Cell/lv2/sys_fs.cpp
-@@ -13,6 +13,7 @@
+@@ -12,6 +12,7 @@
  #include "Emu/IdManager.h"
  #include "Emu/system_utils.hpp"
  #include "Emu/Cell/lv2/sys_process.h"
@@ -30,7 +30,7 @@ index 79bd85206..3f3a03830 100644
  
  #include <span>
  #include <shared_mutex>
-@@ -1650,6 +1651,18 @@ error_code sys_fs_stat(ppu_thread& ppu, vm::cptr<char> path, vm::ptr<CellFsStat>
+@@ -1751,6 +1752,18 @@ error_code sys_fs_stat(ppu_thread& ppu, vm::cptr<char> path, vm::ptr<CellFsStat>
  		return CELL_OK;
  	}
  
@@ -50,7 +50,7 @@ index 79bd85206..3f3a03830 100644
  	{
  		// This syscall can be used by games and VSH to test the presence of dev_usb000 ~ dev_usb127
 diff --git a/rpcs3/Emu/Cell/lv2/sys_usbd.cpp b/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
-index b84e3457c..6401c89ec 100644
+index 373fd020a..de9304489 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
 +++ b/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
 @@ -126,6 +126,7 @@ public:
@@ -61,7 +61,7 @@ index b84e3457c..6401c89ec 100644
  
  	// Pipe functions
  	u32 open_pipe(u32 device_handle, u8 endpoint);
-@@ -778,6 +779,7 @@ void usb_handler_thread::transfer_complete(struct libusb_transfer* transfer)
+@@ -796,6 +797,7 @@ void usb_handler_thread::transfer_complete(struct libusb_transfer* transfer)
  
  bool usb_handler_thread::add_ldd(std::string_view product, u16 id_vendor, u16 id_product_min, u16 id_product_max)
  {
@@ -69,7 +69,7 @@ index b84e3457c..6401c89ec 100644
  	if (ldds.try_emplace(std::string(product), UsbLdd{id_vendor, id_product_min, id_product_max}).second)
  	{
  		for (const auto& dev : usb_devices)
-@@ -787,8 +789,13 @@ bool usb_handler_thread::add_ldd(std::string_view product, u16 id_vendor, u16 id
+@@ -805,8 +807,13 @@ bool usb_handler_thread::add_ldd(std::string_view product, u16 id_vendor, u16 id
  
  			if (dev->device._device.idVendor == id_vendor && dev->device._device.idProduct >= id_product_min && dev->device._device.idProduct <= id_product_max)
  			{
@@ -83,7 +83,7 @@ index b84e3457c..6401c89ec 100644
  		}
  
  		return true;
-@@ -819,6 +826,11 @@ bool usb_handler_thread::remove_ldd(std::string_view product)
+@@ -837,6 +844,11 @@ bool usb_handler_thread::remove_ldd(std::string_view product)
  	return false;
  }
  
@@ -95,16 +95,7 @@ index b84e3457c..6401c89ec 100644
  u32 usb_handler_thread::open_pipe(u32 device_handle, u8 endpoint)
  {
  	open_pipes.emplace(pipe_counter, UsbPipe{handled_devices[device_handle].second, endpoint});
-@@ -950,7 +962,7 @@ void usb_handler_thread::connect_usb_device(std::shared_ptr<usb_device> dev, boo
- {
- 	if (update_usb_devices)
- 		usb_devices.push_back(dev);
--
-+	sys_usbd.notice("Connecting USB device(VID=0x%04x, PID=0x%04x)", dev->device._device.idVendor, dev->device._device.idProduct);
- 	for (const auto& [name, ldd] : ldds)
- 	{
- 		if (dev->device._device.idVendor == ldd.id_vendor && dev->device._device.idProduct >= ldd.id_product_min && dev->device._device.idProduct <= ldd.id_product_max)
-@@ -1116,6 +1128,16 @@ void handle_hotplug_event(bool connected, bool source_is_libusb)
+@@ -1167,6 +1179,16 @@ void handle_hotplug_event(bool connected, bool source_is_libusb)
  	}
  }
  
@@ -121,7 +112,7 @@ index b84e3457c..6401c89ec 100644
  error_code sys_usbd_initialize(ppu_thread& ppu, vm::ptr<u32> handle)
  {
  	ppu.state += cpu_flag::wait;
-@@ -1292,7 +1314,7 @@ error_code sys_usbd_register_ldd(ppu_thread& ppu, u32 handle, vm::cptr<char> s_p
+@@ -1343,7 +1365,7 @@ error_code sys_usbd_register_ldd(ppu_thread& ppu, u32 handle, vm::cptr<char> s_p
  	{
  		{"cellUsbPspcm", {0x054C, 0x01CB, 0x01CB}},
  		{"guncon3", {0x0B9A, 0x0800, 0x0800}},
@@ -131,12 +122,12 @@ index b84e3457c..6401c89ec 100644
  
  	if (const auto iterator = predefined_ldds.find(product); iterator != predefined_ldds.end())
 diff --git a/rpcs3/Emu/Cell/lv2/sys_usbd.h b/rpcs3/Emu/Cell/lv2/sys_usbd.h
-index 01a7891bb..58c54cd8a 100644
+index 970395a66..a13be26d6 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_usbd.h
 +++ b/rpcs3/Emu/Cell/lv2/sys_usbd.h
-@@ -91,3 +91,4 @@ error_code sys_usbd_unregister_extra_ldd(ppu_thread& ppu, u32 handle, vm::cptr<c
- void connect_usb_controller(u8 index, input::product_type);
+@@ -94,3 +94,4 @@ void connect_usb_controller(u8 index, input::product_type);
  void reconnect_usb(u32 assigned_number);
+ void set_usb_device_attached(usb_device* dev, bool attached);
  void handle_hotplug_event(bool connected, bool source_is_libusb);
 +bool is_usb_ldd_registered(std::string_view product);
 diff --git a/rpcs3/Emu/Io/evdev_gun_handler.cpp b/rpcs3/Emu/Io/evdev_gun_handler.cpp

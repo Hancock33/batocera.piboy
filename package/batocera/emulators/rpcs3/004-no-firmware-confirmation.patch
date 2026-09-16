@@ -1,8 +1,8 @@
 diff --git a/rpcs3/rpcs3qt/main_window.cpp b/rpcs3/rpcs3qt/main_window.cpp
-index 4a1b33610..f9c1baa49 100644
+index fec2627e0..62069138f 100644
 --- a/rpcs3/rpcs3qt/main_window.cpp
 +++ b/rpcs3/rpcs3qt/main_window.cpp
-@@ -1397,12 +1397,12 @@ void main_window::InstallPup(main_window* mw, QString file_path)
+@@ -1414,12 +1414,12 @@ void main_window::InstallPup(main_window* mw, QString file_path)
  	}
  	else if (mw)
  	{

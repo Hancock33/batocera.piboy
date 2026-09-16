@@ -1,5 +1,5 @@
 diff --git a/rpcs3/Emu/savestate_utils.cpp b/rpcs3/Emu/savestate_utils.cpp
-index d3c7640ba..ea515157f 100644
+index 753037b3b..baf937972 100644
 --- a/rpcs3/Emu/savestate_utils.cpp
 +++ b/rpcs3/Emu/savestate_utils.cpp
 @@ -290,12 +290,12 @@ std::string get_savestate_file(std::string_view title_id, std::string_view boot_
