@@ -11,13 +11,13 @@ class Spacecadetpinball(Emulator):
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
         return {
-            'name': 'spacecadetpinball',
+            'name': 'SpaceCadetPinball',
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
     async def configure(self) -> Command:
         return Command(
-            ['spacecadetpinball', '--fullscreen'],
+            ['SpaceCadetPinball', '--fullscreen'],
             env={
                 'SDL_JOYSTICK_HIDAPI': '0',
             },
