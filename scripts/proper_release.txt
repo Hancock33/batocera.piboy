@@ -64,6 +64,7 @@ ryzenadj.mk
 shader-slang.mk
 sockpp.mk
 sound-open-firmware.mk
+srb2.mk
 stk.mk
 switchres.mk
 syncthing.mk
