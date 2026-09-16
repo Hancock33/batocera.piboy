@@ -74,7 +74,6 @@ file_extensions:
   - m3u
   - json
 systems:
-  - wiiware
   - gamecube
   - triforce
   - name: wii
@@ -132,3 +131,7 @@ systems:
           WiiMote + Classic Controller Pro: 1281
           Real Wiimote: 1536
           GameCube Controller: 1281
+  - name: wiiware
+    file_extensions:
+      add:
+        - wad

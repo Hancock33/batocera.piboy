@@ -324,7 +324,10 @@ cores:
         description: Show on screen display messages (memory card saves..).
         preset: switchauto
     systems:
-      - wiiware
+      - name: wiiware
+        file_extensions:
+        add:
+            - wad
       - name: gamecube
         file_extensions: &gamecube
           add:
