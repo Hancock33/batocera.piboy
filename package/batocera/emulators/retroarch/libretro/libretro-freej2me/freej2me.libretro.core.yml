@@ -1,2 +1,4 @@
+file_extensions:
+  - jar
 systems:
   - j2me

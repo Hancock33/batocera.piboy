@@ -1,18 +1,20 @@
 from __future__ import annotations
 
-import csv
 import logging
 import re
 import subprocess
 import sys
 import time
 from pathlib import Path
-from typing import TYPE_CHECKING, Final
+from typing import TYPE_CHECKING, Final, Literal
 
-from ..batoceraPaths import DEFAULTS_DIR
+from batocera_launch import get_decoration_id
+
 from ..exceptions import BatoceraException
 
 if TYPE_CHECKING:
+    from collections.abc import Sequence
+
     from ..config import SystemConfig
     from ..types import Resolution, ScreenInfo
 
@@ -64,6 +66,7 @@ def getScreensInfos(config: SystemConfig) -> list[ScreenInfo]:
     vo1 = getCurrentOutput()
     resolution1 = getCurrentResolution()
     res.append({
+        "name": vo1,
         "width": resolution1["width"],
         "height": resolution1["height"],
         "x": 0,
@@ -85,6 +88,7 @@ def getScreensInfos(config: SystemConfig) -> list[ScreenInfo]:
         try:
             resolution2 = getCurrentResolution(vo2)
             res.append({
+                "name": vo2,
                 "width": resolution2["width"],
                 "height": resolution2["height"],
                 "x": resolution1["width"],
@@ -107,6 +111,7 @@ def getScreensInfos(config: SystemConfig) -> list[ScreenInfo]:
         try:
             resolution3 = getCurrentResolution(vo3)
             res.append({
+                "name": vo3,
                 "width": resolution3["width"],
                 "height": resolution3["height"],
                 # if resolution2 can't be determined, place screen3 where screen2 would be
@@ -212,24 +217,27 @@ def getAltDecoration(systemName: str, rom: str | Path, emulator: str) -> str:
     if emulator not in [ 'mame', 'retroarch' ]:
         return "standalone"
 
-    if systemName not in [ 'lynx', 'wswan', 'wswanc', 'mame', 'fbneo', 'naomi', 'atomiswave', 'nds', '3ds', 'vectrex', 'dice' ]:
-        return "0"
+    return get_decoration_id(systemName, Path(rom).stem)
 
-    # Look for external file, exit if not set up
-    specialFile = DEFAULTS_DIR / 'data' / 'special' / f'{systemName}.csv'
-    if not specialFile.exists():
-        return "0"
+def findScreen(screens: Sequence[ScreenInfo], output: Literal['primary', 'secondary'], /) -> ScreenInfo | None:
+    if output == 'secondary':
+        return screens[1] if len(screens) > 1 else None
 
-    romCompare = Path(rom).stem.casefold()
+    return screens[0]
 
-    # Load the file, read it in
-    # Each file will be a csv with each row being the standard (ie No-Intro) filename, angle of rotation (90 or 270)
-    # Case indifferent, rom file name and filenames in list will be folded
-    openFile = specialFile.open('r')
-    with openFile:
-        specialList = csv.reader(openFile, delimiter=';')
-        for row in specialList:
-            if row[0].casefold() == romCompare:
-                return str(row[1])
+def configureWindows(rule_set: str, primary: ScreenInfo | None, secondary: ScreenInfo | None, /) -> None:
+    params = [
+        'batocera-resolution',
+        'configureWindow',
+        '--primary',
+        '' if primary is None else primary['name'],
+        '--secondary',
+        '' if secondary is None else secondary['name'],
+        rule_set
+    ]
+    _logger.info('configuring window %s', params)
 
-    return "0"
+    try:
+        subprocess.run(params, check=True)
+    except Exception:
+        _logger.exception('Failed to configure windows')

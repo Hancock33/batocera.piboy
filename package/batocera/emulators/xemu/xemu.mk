@@ -3,8 +3,8 @@
 # xemu
 #
 ################################################################################
-# Version: Commits on Aug 27, 2026
-XEMU_VERSION = d73326b62199c6dd952ef512947710e1333a49d3
+# Version: Commits on Sept 14, 2026
+XEMU_VERSION = f9b14039e5bb56ae2d8f028e31e7cc19f13f7e12
 XEMU_SITE = https://github.com/xemu-project/xemu.git
 XEMU_SITE_METHOD = git
 XEMU_GIT_SUBMODULES = YES
@@ -98,7 +98,7 @@ define XEMU_GET_SUBMODULES
 	# glslang
 	mkdir -p $(@D)/subprojects/glslang
 	curl -L -o glslang.tar.gz \
-		https://github.com/KhronosGroup/glslang/archive/refs/tags/16.5.0.tar.gz
+		https://github.com/KhronosGroup/glslang/archive/refs/tags/16.6.0.tar.gz
 	$(TAR) -xzf glslang.tar.gz --strip-components=1 -C $(@D)/subprojects/glslang
 	rm glslang.tar.gz
 

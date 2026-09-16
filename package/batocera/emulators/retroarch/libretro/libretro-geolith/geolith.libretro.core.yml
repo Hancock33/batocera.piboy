@@ -23,5 +23,7 @@ custom_features:
       "Japan": Japan
       "Asia": Asia
       "Europe": Europe
+file_extensions:
+  - neo
 systems:
   - neogeomvs

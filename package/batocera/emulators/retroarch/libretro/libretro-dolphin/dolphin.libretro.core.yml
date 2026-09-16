@@ -62,11 +62,24 @@ custom_features:
     choices:
       Disabled: disabled
       Enabled: enabled
+file_extensions:
+  - gcm
+  - iso
+  - gcz
+  - ciso
+  - wbfs
+  - rvz
+  - elf
+  - dol
+  - m3u
+  - json
 systems:
-  - wiiware
   - gamecube
   - triforce
   - name: wii
+    file_extensions:
+      add:
+        - wad
     custom_features:
       wii_widescreen:
         prompt: WII TV MODE
@@ -118,3 +131,7 @@ systems:
           WiiMote + Classic Controller Pro: 1281
           Real Wiimote: 1536
           GameCube Controller: 1281
+  - name: wiiware
+    file_extensions:
+      add:
+        - wad

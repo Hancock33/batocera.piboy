@@ -49,6 +49,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 
 	install -m 0644 $(BATOCERA_SCRIPTS_CP_PATH)/rules/80-switch-screen.rules                   $(TARGET_DIR)/etc/udev/rules.d
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-amd-tdp                       $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-architecture-compatibility    $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-autologin                     $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-brightness                    $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cpucores                      $(TARGET_DIR)/usr/bin/

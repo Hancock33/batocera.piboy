@@ -1,7 +1,6 @@
 ﻿batocera-luajit.mk
 bgfx.mk
 cargs.mk
-corsixth.mk
 firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
@@ -19,13 +18,11 @@ libvni.mk
 libwinevbs.mk
 libzedmd.mk
 mt32emu.mk
-mupen64plus-gliden64.mk
 noto-cjk-fonts.mk
 openbor6412.mk
 openbor7142.mk
 shader-slang.mk
 sockpp.mk
 vpinball.mk
-vulkan-loader.mk
 wine-proton.mk
 wine-x86.mk

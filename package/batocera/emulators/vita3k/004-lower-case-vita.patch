@@ -1,5 +1,3 @@
-diff --git a/vita3k/CMakeLists.txt b/vita3k/CMakeLists.txt
-index 8808485a..83dcf8ef 100644
 --- a/vita3k/CMakeLists.txt
 +++ b/vita3k/CMakeLists.txt
 @@ -1,5 +1,5 @@

@@ -11,3 +11,15 @@ custom_features:
     choices:
       "On": 1
       "Off": 0
+file_extensions:
+  - cgb
+  - dmg
+  - gb
+  - gbc
+  - sgb
+systems:
+  - gb
+  - gbc
+  - sgb
+  - gb2players
+  - gbc2players

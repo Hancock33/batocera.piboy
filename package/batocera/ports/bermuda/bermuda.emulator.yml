@@ -20,5 +20,7 @@ custom_features:
     choices:
       "4:3 (Default)": 0
       "16:9": 1
+file_extensions:
+  - game
 systems:
   - bermuda

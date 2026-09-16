@@ -153,6 +153,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BASH                                 # bash shell, used as the interactive shell
     select BR2_PACKAGE_BATOCERA_BATTERY_CHECKER
     select BR2_PACKAGE_BATOCERA_CONFIGGEN                   # emulation station external command launcher
+    select BR2_PACKAGE_BATOCERA_LAUNCH                      # new emulation station external command launcher
     select BR2_PACKAGE_BATOCERA_CONTROLCENTER               if  BR2_PACKAGE_BATOCERA_XWAYLAND || BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_BATOCERA_EMULATIONSTATION            # emulationstation
     select BR2_PACKAGE_BATOCERA_ES_SYSTEM                   # emulationstation es_systems.cfg generator + default roms
@@ -827,7 +828,7 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_LUTRO                       if !BR2_PACKAGE_BATOCERA_TARGET_H3
 
     # PyGAME
-   #select BR2_PACKAGE_BATOCERA_PYGAME                      if !BR2_PACKAGE_BATOCERA_TARGET_H3
+    select BR2_PACKAGE_BATOCERA_PYGAME                      if !BR2_PACKAGE_BATOCERA_TARGET_H3
 
     # RPG engine : Solarus
     select BR2_PACKAGE_SOLARUS_ENGINE                       # ALL
@@ -890,6 +891,9 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
     # Demul emulator - multiple Sega arcade systems
     select BR2_PACKAGE_DEMUL                                if  BR2_PACKAGE_BATOCERA_WINE
+
+    # Standalone Sega Model 2 emulator
+    select BR2_PACKAGE_SM2_EMU                              if  BR2_PACKAGE_BATOCERA_VULKAN
 
     # Standalone Sega Model 3 emulator
     select BR2_PACKAGE_SUPERMODEL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_GLES3
@@ -1085,8 +1089,8 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # EDuke32 requires OpenGL or GLES 3.0
     select BR2_PACKAGE_EDUKE32                              if  BR2_PACKAGE_BATOCERA_GLES3                   # Duke3D / Shadow Warrior / Ion fury
 
-    # GZDoom and Raze require both 64-bit arch (x86,arm,riscv,....) AND OpenGL or GLES 3.0
-    select BR2_PACKAGE_GZDOOM                               if  BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
+    # UZDoom and Raze require both 64-bit arch (x86,arm,riscv,....) AND OpenGL or GLES 3.0
+    select BR2_PACKAGE_UZDOOM                               if  BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
     select BR2_PACKAGE_RAZE                                 if  BR2_ARCH_IS_64 && BR2_PACKAGE_BATOCERA_GLES3
 
     # ZMusic: standalone library used by gzdoom and raze source ports
@@ -1186,9 +1190,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     # Atari ST/TT/Falcon
     select BR2_PACKAGE_HATARI
     select BR2_PACKAGE_LIBRETRO_HATARI                      # ALL
-    select BR2_PACKAGE_LIBRETRO_HATARIB                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2711     || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_BCM2712
+    select BR2_PACKAGE_LIBRETRO_HATARIB                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # MSX range
     select BR2_PACKAGE_LIBRETRO_BLUEMSX                     # ALL
@@ -1330,9 +1332,14 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Sony PS2
     select BR2_PACKAGE_PCSX2                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_LIBRETRO_PS2                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+    select BR2_PACKAGE_LIBRETRO_ARMSX2                      if  BR2_PACKAGE_BATOCERA_BCM27XX
+
+    select BR2_PACKAGE_ARMSX2                               if  BR2_PACKAGE_BATOCERA_TARGET_SM6115      || BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550      || BR2_PACKAGE_BATOCERA_TARGET_SM8750
 
     # Sony PS3
     select BR2_PACKAGE_RPCS3                                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
 
     # Wii U
     select BR2_PACKAGE_CEMU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1608,6 +1615,7 @@ config BR2_PACKAGE_BATOCERA_KODI
     bool "batocera.linux Kodi packages selection"
     default n
     select BR2_PACKAGE_KODI                                 # kodi
+    select BR2_PACKAGE_BATOCERA_LAUNCH_KODI
     select BR2_PACKAGE_PYTHON_PYOPENSSL                     # used by some kodi plugins
     select BR2_PACKAGE_X264                                 # decoder
     select BR2_PACKAGE_X265                                 # decoder
@@ -2091,14 +2099,22 @@ config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
 
     # Video 4 Linux
     select BR2_PACKAGE_LIBV4L
+
     # GStreamer
     select BR2_PACKAGE_GSTREAMER1
     select BR2_PACKAGE_ORC
+
     # Base
     select BR2_PACKAGE_GST1_PLUGINS_BASE
-
     select BR2_PACKAGE_GST1_PLUGINS_BASE_PLUGIN_ENCODING
     select BR2_PACKAGE_GST1_PLUGINS_BASE_PLUGIN_VIDEOCONVERTSCALE
+    select BR2_PACKAGE_GST1_PLUGINS_BASE_LIB_OPENGL         if  BR2_PACKAGE_HAS_LIBGL || BR2_PACKAGE_HAS_LIBGLES
+    select BR2_PACKAGE_GST1_PLUGINS_BASE_LIB_OPENGL_GLES2   if  BR2_PACKAGE_HAS_LIBGLES
+    select BR2_PACKAGE_GST1_PLUGINS_BASE_LIB_OPENGL_EGL     if  BR2_PACKAGE_HAS_LIBEGL
+    select BR2_PACKAGE_GST1_PLUGINS_BASE_LIB_OPENGL_GLX     if  BR2_PACKAGE_XSERVER_XORG_SERVER_MODULAR
+    select BR2_PACKAGE_GST1_PLUGINS_BASE_LIB_OPENGL_X11     if  BR2_PACKAGE_XORG7
+    select BR2_PACKAGE_GST1_PLUGINS_BASE_LIB_OPENGL_WAYLAND if  BR2_PACKAGE_WAYLAND
+
     # Good
     select BR2_PACKAGE_GST1_PLUGINS_GOOD
     select BR2_PACKAGE_GST1_PLUGINS_GOOD_PLUGIN_V4L2

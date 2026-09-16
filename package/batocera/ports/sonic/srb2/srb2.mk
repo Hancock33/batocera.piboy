@@ -3,8 +3,8 @@
 # srb2
 #
 ################################################################################
-# Version: Commits on Jul 29, 2025
-SRB2_VERSION = 639b58c6d718452ef343a0bc927d043bed9e40d6
+# Version: Commits on Jan 26, 2025
+SRB2_VERSION = SRB2_release_2.2.15
 SRB2_SITE = $(call github,STJr,SRB2,$(SRB2_VERSION))
 SRB2_EMULATOR_INFO = srb2.emulator.yml
 SRB2_DEPENDENCIES = libgme libopenmpt sdl2 sdl2_mixer

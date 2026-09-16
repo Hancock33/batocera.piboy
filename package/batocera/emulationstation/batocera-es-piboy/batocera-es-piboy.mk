@@ -3,13 +3,13 @@
 # batocera-es-piboy
 #
 ################################################################################
-# Version: Commits on Aug 30, 2026
-BATOCERA_ES_PIBOY_VERSION = 6c005266b17c2959243c4e2889b5e3aa23dc9993
+# Version: Commits on Sept 13, 2026
+BATOCERA_ES_PIBOY_VERSION = 1750dded8c0fdff70630026f756a69fcad0bb995
 BATOCERA_ES_PIBOY_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_ES_PIBOY_SITE_METHOD = git
 BATOCERA_ES_PIBOY_GIT_SUBMODULES = YES
 BATOCERA_ES_PIBOY_LICENSE = MIT
-BATOCERA_ES_PIBOY_DEPENDENCIES = alsa-lib batocera-es-system freetype libcurl libfreeimage pugixml rapidjson sdl2 sdl2_mixer vlc
+BATOCERA_ES_PIBOY_DEPENDENCIES = alsa-lib batocera-es-system freetype libcurl libfreeimage libfribidi pugixml rapidjson sdl2 sdl2_mixer vlc
 BATOCERA_ES_PIBOY_DEPENDENCIES += host-gettext
 
 # use gcc to build

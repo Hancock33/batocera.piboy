@@ -3,8 +3,8 @@
 # libretro-mgba
 #
 ################################################################################
-# Version: Commits on Aug 27, 2026
-LIBRETRO_MGBA_VERSION = c65e8a3d4666b0ea68a01578232452f31b185332
+# Version: Commits on Sept 14, 2026
+LIBRETRO_MGBA_VERSION = a1020b0e72e90d56d4779efcdf776aa9c1450fe1
 LIBRETRO_MGBA_SITE = $(call github,mgba-emu,mgba,$(LIBRETRO_MGBA_VERSION))
 LIBRETRO_MGBA_LICENSE = MPLv2.0
 LIBRETRO_MGBA_DEPENDENCIES = libzip libpng zlib retroarch

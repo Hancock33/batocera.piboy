@@ -3,8 +3,8 @@
 # dxvk
 #
 ################################################################################
-# Version: Commits on Aug 28, 2026
-DXVK_VERSION = v3.1
+# Version: Commits on Sept 15, 2026
+DXVK_VERSION = v3.1.1
 DXVK_SOURCE = dxvk-$(subst v,,$(DXVK_VERSION)).tar.gz
 DXVK_SITE = https://github.com/doitsujin/dxvk/releases/download/$(DXVK_VERSION)
 DXVK_LICENSE = zlib/libpng

@@ -1,2 +1,6 @@
+file_extensions:
+  - b
+  - bin
+  - rom
 systems:
   - tamagotchi

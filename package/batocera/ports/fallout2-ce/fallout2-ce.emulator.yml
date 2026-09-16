@@ -49,5 +49,8 @@ custom_features:
       German: german
       Italian: italian
       Spanish: spanish
+file_extensions:
+  - f2ce
+  - game
 systems:
   - fallout2-ce

@@ -140,5 +140,30 @@ custom_features:
     choices:
       'Off': 0
       'On': 1
+file_extensions:
+  - 3ds
+  - cci
+  - cxi
+  - cia
+  - axf
+  - elf
+  - app
+  - squashfs
+  - zcci
+  - zcia
+  - zcxi
 systems:
   - 3ds
+
+labwc:
+  window_rules:
+    - identifier: azahar
+      actions:
+        - name: MoveToOutput
+          output: primary
+    - identifier: azahar
+      title: "*Secondary Window*"
+      actions:
+        - name: MoveToOutput
+          output: secondary|primary
+        - name: ToggleFullscreen

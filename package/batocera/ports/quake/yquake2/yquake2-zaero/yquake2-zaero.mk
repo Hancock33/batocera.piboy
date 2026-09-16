@@ -3,8 +3,8 @@
 # yquake2-zaero
 #
 ################################################################################
-# Version: Commits on Aug 30, 2026
-YQUAKE2_ZAERO_VERSION = 211ae545c2daca3923cdfc77dc4a134a24ba7919
+# Version: Commits on Sept 15, 2026
+YQUAKE2_ZAERO_VERSION = f78d7e07f97a11094115ce51c52c591df4e5514a
 YQUAKE2_ZAERO_SITE = $(call github,yquake2,zaero,$(YQUAKE2_ZAERO_VERSION))
 YQUAKE2_ZAERO_LICENSE = Quake II SDK LICENSE
 YQUAKE2_ZAERO_LICENSE_FILES = LICENSE

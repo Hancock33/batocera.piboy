@@ -1,0 +1,38 @@
+diff --git a/drivers/hid/hid-steam.c b/drivers/hid/hid-steam.c
+index 80d2eabc930e..5f0956aae4ff 100644
+--- a/drivers/hid/hid-steam.c
++++ b/drivers/hid/hid-steam.c
+@@ -1113,7 +1113,10 @@ static int steam_register(struct steam_device *steam)
+ 
+ 		hid_info(steam->hdev, "Steam Controller '%s' connected",
+ 				steam->serial_no);
+-
++				
++		/* start in gamepad mode */
++		steam->gamepad_mode = true;
++		steam_set_lizard_mode(steam, false);
+ 		/* ignore battery errors, we can live without it */
+ 		if (steam->quirks & STEAM_QUIRK_WIRELESS)
+ 			steam_battery_register(steam);
+@@ -1852,15 +1855,16 @@ static const struct steam_axis_mapping steam_deck_imu_mappings[] = {
+ static void steam_do_deck_input_event(struct steam_device *steam,
+ 		struct input_dev *input, u8 *data)
+ {
+-	bool start_pressed;
++	bool start_pressed, start_pressed2;
+ 	bool lpad_touched, rpad_touched;
+ 
+-	start_pressed = data[9] & BIT(6);
+-
+-	if (!start_pressed && steam->did_mode_switch) {
++	start_pressed = data[9] & BIT(5);
++	start_pressed2 = data[14] & BIT(2);
++	
++	if (!start_pressed && !start_pressed2 && steam->did_mode_switch) {
+ 		steam->did_mode_switch = false;
+ 		cancel_delayed_work(&steam->mode_switch);
+-	} else if (!steam->client_opened && start_pressed && !steam->did_mode_switch) {
++	} else if (!steam->client_opened && start_pressed && start_pressed2 && !steam->did_mode_switch) {
+ 		hid_dbg(steam->hdev, "%s: doing mode switch\n", __func__);
+ 		steam->did_mode_switch = true;
+ 		schedule_delayed_work(&steam->mode_switch, 45 * HZ / 100);

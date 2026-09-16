@@ -1,8 +1,8 @@
 diff --git a/input/drivers_joypad/udev_joypad.c b/input/drivers_joypad/udev_joypad.c
-index f2ff0760b8..82686a3d0e 100644
+index baa246eed2..3a9d57ef82 100644
 --- a/input/drivers_joypad/udev_joypad.c
 +++ b/input/drivers_joypad/udev_joypad.c
-@@ -513,21 +513,12 @@ static int udev_add_pad(struct udev_device *dev, unsigned p, int fd, const char
+@@ -517,21 +517,12 @@ static int udev_add_pad(struct udev_device *dev, unsigned p, int fd, const char
     /* Go through all possible keycodes, check if they are used,
      * and map them to button/axes/hat indices.
      */

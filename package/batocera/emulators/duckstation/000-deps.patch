@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 128da4770..7f2e72087 100644
+index 12e075ba2..89ab49730 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -4,35 +4,6 @@
@@ -82,7 +82,7 @@ index 128da4770..7f2e72087 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Shaderc")
 -find_package(spirv_cross_c_shared REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/spirv_cross_c_shared/cmake")
--find_package(SDL3 3.4.14 REQUIRED
+-find_package(SDL3 3.4.16 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/SDL3")
 +set(FIND_ROOT_PATH_BACKUP ${CMAKE_FIND_ROOT_PATH})
 +set(FIND_ROOT_PATH_MODE_INCLUDE_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_INCLUDE})
@@ -105,7 +105,7 @@ index 128da4770..7f2e72087 100644
 +find_package(WebP 1.6.0 REQUIRED)
 +find_package(PNG 1.6.58 REQUIRED)
 +find_package(JPEG REQUIRED)
-+find_package(SDL3 3.4.14 REQUIRED)
++find_package(SDL3 3.4.16 REQUIRED)
 +find_package(Freetype 2.14.1 REQUIRED)
 +find_package(harfbuzz REQUIRED)
 +find_package(SQLite3 3.53.4 REQUIRED)
@@ -139,15 +139,15 @@ index 128da4770..7f2e72087 100644
  # All our builds include Qt, so this is not a problem.
  set(QT_NO_PRIVATE_MODULE_WARNING ON)
  if(LINUX)
--  find_package(Qt6 6.11.1 REQUIRED
+-  find_package(Qt6 6.11.2 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
 -                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus)
-+  find_package(Qt6 6.11.1 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
++  find_package(Qt6 6.11.2 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
  else()
--  find_package(Qt6 6.11.1 REQUIRED
+-  find_package(Qt6 6.11.2 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
 -                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools)
-+  find_package(Qt6 6.11.1 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
++  find_package(Qt6 6.11.2 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
  endif()
  
  # Verify dependency paths.
@@ -187,21 +187,54 @@ index 09c47c197..39f3efddc 100644
  )
  
  include(FindPackageHandleStandardArgs)
+diff --git a/dep/imgui/CMakeLists.txt b/dep/imgui/CMakeLists.txt
+index 66e5c5fc5..6d0a66a4b 100644
+--- a/dep/imgui/CMakeLists.txt
++++ b/dep/imgui/CMakeLists.txt
+@@ -19,12 +19,14 @@ set(SRCS
+ )
+ 
+ add_library(imgui ${SRCS})
+-get_target_property(FREETYPE_INCLUDE_DIRS freetype INTERFACE_INCLUDE_DIRECTORIES)
++get_target_property(FREETYPE_INCLUDE_DIRS Freetype::Freetype INTERFACE_INCLUDE_DIRECTORIES)
+ get_target_property(PLUTOSVG_INCLUDE_DIRS plutosvg::plutosvg INTERFACE_INCLUDE_DIRECTORIES)
++get_target_property(PLUTOVG_INCLUDE_DIRS plutovg::plutovg INTERFACE_INCLUDE_DIRECTORIES)
+ target_include_directories(imgui PRIVATE
+   "${CMAKE_CURRENT_SOURCE_DIR}/include"
+   "${CMAKE_CURRENT_SOURCE_DIR}/src"
+   "${FREETYPE_INCLUDE_DIRS}"
+   "${PLUTOSVG_INCLUDE_DIRS}"
++  "${PLUTOVG_INCLUDE_DIRS}"
+ )
+ target_include_directories(imgui INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+diff --git a/dep/imgui/include/dyn_plutosvg.h b/dep/imgui/include/dyn_plutosvg.h
+index 753354fa4..1e416ab9f 100644
+--- a/dep/imgui/include/dyn_plutosvg.h
++++ b/dep/imgui/include/dyn_plutosvg.h
+@@ -3,7 +3,7 @@
+ 
+ #pragma once
+ 
+-#include <plutosvg.h>
++#include <plutosvg/plutosvg.h>
+ 
+ class Error;
+ 
 diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
-index 05a3bbb93..c17d9b042 100644
+index 52f5c5d6d..ad65ee73e 100644
 --- a/src/core/CMakeLists.txt
 +++ b/src/core/CMakeLists.txt
-@@ -221,7 +221,8 @@ function(add_core_resources target)
+@@ -224,7 +224,8 @@ function(add_core_resources target)
    add_util_resources(${target})
  
    add_resources(${target} "resources" ${CMAKE_SOURCE_DIR}/data/resources)
 -
 -  # Copy dynamically-loaded libraries into the bundle.
--  bundle_libraries(${target} DiscordRPC::discord-rpc)
-+    if(ENABLE_DISCORD_PRESENCE)
-+      # Copy dynamically-loaded libraries into the bundle.
-+      bundle_libraries(${target} DiscordRPC::discord-rpc)
-+    endif()
+-  add_runtime_libraries(${target} DiscordRPC::discord-rpc)
++  if(ENABLE_DISCORD_PRESENCE)
++    # Copy dynamically-loaded libraries into the bundle.
++    add_runtime_libraries(${target} DiscordRPC::discord-rpc)
++  endif()
  endfunction()
 diff --git a/src/core/discord_presence.h b/src/core/discord_presence.h
 index 9d14234b7..e099ba504 100644
@@ -217,37 +250,37 @@ index 9d14234b7..e099ba504 100644
  
  #ifdef ENABLE_DISCORD_PRESENCE
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index 2106b5db9..2f71ecd75 100644
+index 4173ad709..920af7ac2 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -101,7 +101,7 @@ add_library(util
+@@ -106,8 +106,8 @@ add_library(util
+ 
  target_precompile_headers(util PRIVATE "pch.h")
  target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
- target_link_libraries(util PUBLIC common imgui)
--target_link_libraries(util PRIVATE libchdr lzma libjpeg-turbo::jpeg PNG::png_shared WebP::webp
-+target_link_libraries(util PRIVATE libchdr lzma JPEG::JPEG PNG::PNG WebP::webp 
-                                    plutosvg::plutosvg ZLIB::ZLIB SoundTouch::SoundTouchDLL xxhash
-                                    libzip::zip zstd::libzstd_shared reshadefx)
+-get_target_property(JPEG_INCLUDE_DIRS libjpeg-turbo::jpeg INTERFACE_INCLUDE_DIRECTORIES)
+-get_target_property(PNG_INCLUDE_DIRS PNG::png_shared INTERFACE_INCLUDE_DIRECTORIES)
++get_target_property(JPEG_INCLUDE_DIRS JPEG::JPEG INTERFACE_INCLUDE_DIRECTORIES)
++get_target_property(PNG_INCLUDE_DIRS PNG::PNG INTERFACE_INCLUDE_DIRECTORIES)
+ get_target_property(WEBP_INCLUDE_DIRS WebP::webp INTERFACE_INCLUDE_DIRECTORIES)
+ get_target_property(LIBZIP_INCLUDE_DIRS libzip::zip INTERFACE_INCLUDE_DIRECTORIES)
+ target_include_directories(util PRIVATE ${JPEG_INCLUDE_DIRS} ${PNG_INCLUDE_DIRS} ${WEBP_INCLUDE_DIRS} ${LIBZIP_INCLUDE_DIRS})
+@@ -206,7 +206,7 @@ if(ENABLE_VULKAN)
+ endif()
  
-@@ -275,7 +275,7 @@ function(add_util_resources target)
+ # shaderc/spirv-cross is loaded dynamically to reduce module loads on startup.
+-get_target_property(FREETYPE_INCLUDE_DIRS freetype INTERFACE_INCLUDE_DIRECTORIES)
++get_target_property(FREETYPE_INCLUDE_DIRS Freetype::Freetype INTERFACE_INCLUDE_DIRECTORIES)
+ get_target_property(PLUTOSVG_INCLUDE_DIRS plutosvg::plutosvg INTERFACE_INCLUDE_DIRECTORIES)
+ get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_shared INTERFACE_INCLUDE_DIRECTORIES)
+ get_target_property(SPIRV_CROSS_INCLUDE_DIR spirv-cross-c-shared INTERFACE_INCLUDE_DIRECTORIES)
+@@ -294,7 +294,7 @@ function(add_util_resources target)
    endif()
  
-   # Copy dynamically-loaded libraries (harfbuzz/shaderc/spirv-cross) into the bundle.
--  bundle_libraries(${target} spirv-cross-c-shared Shaderc::shaderc_shared SQLite3::sqlite3-shared)
-+  bundle_libraries(${target} spirv-cross-c-shared Shaderc::shaderc_shared)
-   if(APPLE)
-     bundle_libraries(${target} harfbuzz::harfbuzz)
-   endif()
-diff --git a/src/util/gpu_device.cpp b/src/util/gpu_device.cpp
-index 4ed396ca0..5b4ecf418 100644
---- a/src/util/gpu_device.cpp
-+++ b/src/util/gpu_device.cpp
-@@ -1396,7 +1396,7 @@ bool DynShaderc::Open(Error* error)
-   std::call_once(s_locals.shaderc_init_flag, [&error]() {
-     Error lerror;
-     DynamicLibrary lib;
--    if (!lib.Open(DynamicLibrary::GetBundledLibraryPath("shaderc_shared").c_str(), error))
-+    if (!lib.Open(DynamicLibrary::GetBundledLibraryPath("shaderc_ds").c_str(), error))
-     {
-       ERROR_LOG("Failed to load shaderc: {}", (error ? error : &lerror)->GetDescription());
-       Error::AddPrefix(error, "Failed to load shaderc: ");
+   # Copy dynamically-loaded libraries into the bundle.
+-  add_runtime_libraries(${target} spirv-cross-c-shared Shaderc::shaderc_shared SQLite3::sqlite3-shared SDL3::SDL3
+-                        freetype harfbuzz::harfbuzz plutosvg::plutosvg libjpeg-turbo::jpeg PNG::png_shared libzip::zip
+-                        WebP::webp WebP::sharpyuv WebP::webpdecoder WebP::webpdemux WebP::libwebpmux)
++  #add_runtime_libraries(${target} spirv-cross-c-shared Shaderc::shaderc_shared SQLite3::sqlite3-shared SDL3::SDL3
++  #                      freetype harfbuzz::harfbuzz plutosvg::plutosvg libjpeg-turbo::jpeg PNG::png_shared libzip::zip
++  #                      WebP::webp WebP::sharpyuv WebP::webpdecoder WebP::webpdemux WebP::libwebpmux)
+ endfunction()

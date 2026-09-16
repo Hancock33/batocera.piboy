@@ -6,8 +6,8 @@ config BR2_PACKAGE_D7VK
 	depends on BR2_PACKAGE_SPIRV_HEADERS
 
 	help
-	  Vulkan-based implementation of D3D7 for Linux / Wine,
-	  spun off from DXVK.
+	  D7VK is a Vulkan-based translation layer for DirectDraw and
+	  Direct3D up to 7, a DXVK fork, for runners not shipping it.
 
 	  https://github.com/WinterSnowfall/d7vk
 

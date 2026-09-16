@@ -3,8 +3,8 @@
 # lib32bit
 #
 ################################################################################
-# Version: Commits on Aug 29, 2026
-LIB32BIT_VERSION = 20260829
+# Version: Commits on Sept 16, 2026
+LIB32BIT_VERSION = 20260916
 LIB32BIT_SOURCE = batocera-rpi4-32bit-libs-$(LIB32BIT_VERSION).tar.xz
 LIB32BIT_SITE = https://github.com/Hancock33/batocera-32bit-libs/releases/download/$(LIB32BIT_VERSION)
 LIB32BIT_EMULATOR_INFO = droidports.emulator.yml

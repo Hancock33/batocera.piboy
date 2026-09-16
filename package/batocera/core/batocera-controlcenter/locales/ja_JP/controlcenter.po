@@ -24,6 +24,12 @@ msgstr "5 秒"
 msgid "AC"
 msgstr "AC"
 
+msgid "Audio Output"
+msgstr ""
+
+msgid "Audio Profile"
+msgstr ""
+
 msgid "Audio Source"
 msgstr "音声ソース"
 
@@ -114,6 +120,9 @@ msgstr "無効"
 msgid "ON"
 msgstr "有効"
 
+msgid "Outputs"
+msgstr ""
+
 msgid "Plane Mode"
 msgstr "機内モード"
 
@@ -173,6 +182,9 @@ msgstr "タッチキーボード"
 
 msgid "Ultra (60fps)"
 msgstr "ウルトラ (60fps)"
+
+msgid "Video Output"
+msgstr ""
 
 msgid "Vol +"
 msgstr "音量 +"

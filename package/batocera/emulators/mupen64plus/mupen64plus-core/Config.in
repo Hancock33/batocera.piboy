@@ -5,6 +5,7 @@ config BR2_PACKAGE_MUPEN64PLUS_CORE
 	depends on BR2_PACKAGE_DEJAVU
 	depends on BR2_PACKAGE_FREETYPE
 	depends on BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_BATOCERA_LAUNCH_MUPEN64PLUS
 
 	help
 	  Core module of the Mupen64Plus project

@@ -5,7 +5,7 @@ DEST_DIR=/tmp/batocera-rpi4-32bit-libs-$CURRENTDATE
 mkdir -p $DEST_DIR/etc
 mkdir -p $DEST_DIR/usr/bin32
 cp -a ${TARGET_DIR}/etc/{binfmt.d,box86.box86rc}         $DEST_DIR/etc
-cp -a ${TARGET_DIR}/usr/bin/{box86,gmloader}        $DEST_DIR/usr/bin32
+cp -a ${TARGET_DIR}/usr/bin/{box86,gmloader}             $DEST_DIR/usr/bin32
 cp -a ${TARGET_DIR}/usr/lib                              $DEST_DIR/usr/lib32
 cp -a ${TARGET_DIR}/lib/*                                $DEST_DIR/usr/lib32
 ln -sf libblkid.so.1                                     $DEST_DIR/usr/lib32/libblkid.so
@@ -14,6 +14,7 @@ ln -sf /usr/lib32/pulseaudio/libpulsecommon-17.0.so      $DEST_DIR/usr/lib32/lib
 
 rm -rf $DEST_DIR/usr/lib32/firmware
 rm -rf $DEST_DIR/usr/lib32/{gconv,gio,glslang,python3.*,terminfo,udev,xorg}
+rm -rf $DEST_DIR/usr/lib32/{depmod.d,modprobe.d}
 
 find $DEST_DIR -type f -name "*.a" -exec rm {} \;
 

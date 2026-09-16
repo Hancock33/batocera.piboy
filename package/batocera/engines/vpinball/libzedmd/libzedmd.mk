@@ -17,6 +17,7 @@ LIBZEDMD_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)
 define LIBZEDMD_POST_PROCESS
 	mkdir -p $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 755 $(@D)/buildroot-build/zedmd-client $(TARGET_DIR)/usr/bin/zedmd-client
+	$(INSTALL) -m 755 $(@D)/buildroot-build/zedmd-test   $(TARGET_DIR)/usr/bin/zedmd-test
 endef
 
 LIBZEDMD_POST_INSTALL_TARGET_HOOKS += LIBZEDMD_POST_PROCESS

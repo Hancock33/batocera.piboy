@@ -4,8 +4,23 @@ features:
 shared_features:
   - autosave
   - rewind
+file_extensions:
+  - zip
+  - 7z
 systems:
-  - gb
-  - gba
-  - gbc
-  - nds
+  - name: gb
+    file_extensions:
+      add:
+        - gb
+  - name: gba
+    file_extensions:
+      add:
+        - gbx
+  - name: gbc
+    file_extensions:
+      add:
+        - gbx
+  - name: nds
+    file_extensions:
+      add:
+        - nds

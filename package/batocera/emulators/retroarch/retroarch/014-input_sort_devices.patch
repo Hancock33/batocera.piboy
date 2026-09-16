@@ -1,5 +1,5 @@
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 36189d24e6..ec02668441 100644
+index 1763c9fadf..69d885ab14 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -4017,6 +4017,65 @@ static float udev_get_sensor_input(void *data, unsigned port, unsigned id)
@@ -65,10 +65,10 @@ index 36189d24e6..ec02668441 100644
 +   return event_strcmp_events(aa->devnode, bb->devnode);
 +}
 +
- static bool open_devices(udev_input_t *udev,
-       enum udev_input_dev_type type, device_handle_cb cb)
- {
-@@ -4025,6 +4084,11 @@ static bool open_devices(udev_input_t *udev,
+ /* @denied counts the nodes that exist but rejected the open with
+  * EACCES, so the caller can tell a machine with no such devices apart
+  * from one where the user lacks read access to them. */
+@@ -4029,6 +4088,11 @@ static bool open_devices(udev_input_t *udev,
     struct udev_list_entry     *devs = NULL;
     struct udev_list_entry     *item = NULL;
     struct udev_enumerate *enumerate = udev_enumerate_new(udev->udev);
@@ -80,7 +80,7 @@ index 36189d24e6..ec02668441 100644
  
     RARCH_DBG("[udev] Adding devices of type %u -> \"%s\".\n", type, type_str);
     if (!enumerate)
-@@ -4037,8 +4101,27 @@ static bool open_devices(udev_input_t *udev,
+@@ -4041,8 +4105,27 @@ static bool open_devices(udev_input_t *udev,
  
     for (item = devs; item; item = udev_list_entry_get_next(item))
     {

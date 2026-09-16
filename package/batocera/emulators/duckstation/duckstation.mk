@@ -3,8 +3,8 @@
 # duckstation
 #
 ################################################################################
-# Version: Commits on Aug 30, 2026
-DUCKSTATION_VERSION = b0f7c5c1624d133d7c9e519d3b6f5ebb04b80c58
+# Version: Commits on Sept 15, 2026
+DUCKSTATION_VERSION = 63d72ac15647c854bbcc8bf38a669f574d309148
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
 DUCKSTATION_LICENSE = GPLv2
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -47,6 +47,13 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansSC-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansSC-VariableFont_wght.ttf
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/fa-solid-900.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts
 endef
+
+
+define DUCKSTATION_HEADERS
+	cp -av $(STAGING_DIR)/usr/include/plutovg/plutovg.h  $(STAGING_DIR)/usr/include/plutosvg
+endef
+
+DUCKSTATION_PRE_PATCH_HOOKS += DUCKSTATION_HEADERS
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))

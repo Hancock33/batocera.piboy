@@ -3,8 +3,8 @@
 # batocera-luajit
 #
 ################################################################################
-# Version: Commits on Jul 24, 2026
-BATOCERA_LUAJIT_VERSION = v2.1-20260724
+# Version: Commits on Sept 14, 2026
+BATOCERA_LUAJIT_VERSION = v2.1-20260914
 BATOCERA_LUAJIT_SITE = $(call github,openresty,luajit2,$(BATOCERA_LUAJIT_VERSION))
 BATOCERA_LUAJIT_LICENSE = MIT
 BATOCERA_LUAJIT_LICENSE_FILES = COPYRIGHT
@@ -27,7 +27,18 @@ ifeq ($(BR2_ARCH_IS_64),y)
 BATOCERA_LUAJIT_HOST_CC = $(HOSTCC)
 # There is no LUAJIT_ENABLE_GC64 option.
 else
+# On aarch64 hosts, there is no -m32 equivalent. Instead, use Buildroot's own
+# cross-compiler to build the host tools (minilua, buildvm) as static arm32
+# binaries, which run natively via the kernel's 32-bit compat mode (CONFIG_COMPAT).
+ifeq ($(HOSTARCH),aarch64)
+BATOCERA_LUAJIT_HOST_CC = $(TARGET_CC) -static
+BATOCERA_LUAJIT_HOST_CFLAGS = $(TARGET_CFLAGS)
+BATOCERA_LUAJIT_HOST_LDFLAGS = $(TARGET_LDFLAGS)
+else
 BATOCERA_LUAJIT_HOST_CC = $(HOSTCC) -m32
+BATOCERA_LUAJIT_HOST_CFLAGS = $(HOST_CFLAGS)
+BATOCERA_LUAJIT_HOST_LDFLAGS = $(HOST_LDFLAGS)
+endif
 BATOCERA_LUAJIT_XCFLAGS += -DLUAJIT_DISABLE_GC64
 endif
 
@@ -43,8 +54,8 @@ define BATOCERA_LUAJIT_BUILD_CMDS
 		TARGET_CFLAGS="$(TARGET_CFLAGS)" \
 		TARGET_LDFLAGS="$(TARGET_LDFLAGS)" \
 		HOST_CC="$(BATOCERA_LUAJIT_HOST_CC)" \
-		HOST_CFLAGS="$(HOST_CFLAGS)" \
-		HOST_LDFLAGS="$(HOST_LDFLAGS)" \
+		HOST_CFLAGS="$(BATOCERA_LUAJIT_HOST_CFLAGS)" \
+		HOST_LDFLAGS="$(BATOCERA_LUAJIT_HOST_LDFLAGS)" \
 		BUILDMODE=dynamic \
 		XCFLAGS="$(BATOCERA_LUAJIT_XCFLAGS)" \
 		-C $(@D) amalg

@@ -3,63 +3,25 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Apr 29, 2026
-DOSBOX_STAGING_VERSION = fc881ed0b1fe4d1d159f60a7b0b1b370fb56a037
-DOSBOX_STAGING_BRANCH = release/0.82.x
+# Version: Commits on Aug 26, 2026
+DOSBOX_STAGING_VERSION = v0.83.0
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
-DOSBOX_STAGING_DEPENDENCIES = iir libpng libogg libvorbis mt32emu opus opusfile
-DOSBOX_STAGING_DEPENDENCIES += sdl2 sdl2_image speexdsp zlib
+DOSBOX_STAGING_DEPENDENCIES = alsa-lib asio fluidsynth iir libogg libpng libvorbis mt32emu
+DOSBOX_STAGING_DEPENDENCIES += opus opusfile sdl2 sdl2_image slirp speexdsp zlib
+DOSBOX_STAGING_CMAKE_BACKEND = make
 DOSBOX_STAGING_LICENSE = GPLv2
 DOSBOX_STAGING_EMULATOR_INFO = dosbox_staging.emulator.yml
 
-DOSBOX_STAGING_CONF_ENV += SSL_CERT_DIR=/etc/ssl/certs
+DOSBOX_STAGING_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+DOSBOX_STAGING_CONF_OPTS += -DUSE_SYSTEM_LIBS=ON
+DOSBOX_STAGING_CONF_OPTS += -DIS_PRESET_USED=ON
+DOSBOX_STAGING_CONF_OPTS += -DOPT_TESTS=OFF
 
-DOSBOX_STAGING_CONF_OPTS = \
-	-Dasm=false \
-	-Dautovec_info=false \
-	-Dnarrowing_warnings=false \
-	-Dtime_trace=false \
-	-Dtracy=false \
-	-Dunit_tests=disabled \
-	-Duse_mt32emu=true
-
-ifeq ($(BR2_PACKAGE_SDL2_NET),y)
-DOSBOX_STAGING_CONF_OPTS += -Duse_sdl2_net=true
-DOSBOX_STAGING_DEPENDENCIES += sdl2_net
-else
-DOSBOX_STAGING_CONF_OPTS += -Duse_sdl2_net=false
-endif
-
-ifeq ($(BR2_PACKAGE_FLUIDSYNTH),y)
-DOSBOX_STAGING_CONF_OPTS += -Duse_fluidsynth=true
-DOSBOX_STAGING_DEPENDENCIES += fluidsynth
-else
-DOSBOX_STAGING_CONF_OPTS += -Duse_fluidsynth=false
-endif
-
-ifeq ($(BR2_PACKAGE_SLIRP),y)
-DOSBOX_STAGING_CONF_OPTS += -Duse_slirp=true
-DOSBOX_STAGING_DEPENDENCIES += slirp
-else
-DOSBOX_STAGING_CONF_OPTS += -Duse_slirp=false
-endif
-
-ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
-DOSBOX_STAGING_CONF_OPTS += -Duse_alsa=true
-DOSBOX_STAGING_DEPENDENCIES += alsa-lib
-else
-DOSBOX_STAGING_CONF_OPTS += -Duse_alsa=false
-endif
-
-ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-DOSBOX_STAGING_CONF_OPTS += -Duse_opengl=false
-endif
-
-define DOSBOX_STAGING_ORIGINAL
-	mv $(TARGET_DIR)/usr/bin/dosbox $(TARGET_DIR)/usr/bin/dosbox-staging
+define DOSBOX_STAGING_INSTALL_TARGET_CMDS
+	$(INSTALL) -D -m 0755 $(@D)/dosbox-staging $(TARGET_DIR)/usr/bin/dosbox-staging
+	mkdir -p $(TARGET_DIR)/usr/share/dosbox-staging
+	rsync -a --exclude='meson.build' --exclude='.git*' $(@D)/resources/ $(TARGET_DIR)/usr/share/dosbox-staging/
 endef
 
-DOSBOX_STAGING_POST_INSTALL_TARGET_HOOKS = DOSBOX_STAGING_ORIGINAL
-
-$(eval $(meson-package))
+$(eval $(cmake-package))
 $(eval $(emulator-info-package))

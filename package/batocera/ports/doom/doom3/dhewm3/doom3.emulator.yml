@@ -37,5 +37,11 @@ custom_features:
       Korean: korean
       Japanese: japanese
       Chinese: chinese
+file_extensions:
+  - base
+  - boom3
+  - d3
+  - d3xp
+  - demo
 systems:
   - doom3

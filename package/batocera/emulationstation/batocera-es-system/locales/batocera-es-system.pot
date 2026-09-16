@@ -752,6 +752,612 @@ msgid "KEYBOARD TRANSPARENCY"
 msgstr ""
 
 msgctxt "game_options"
+msgid "RENDERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "scanlines"
+msgstr ""
+
+msgctxt "game_options"
+msgid "diagonal filter"
+msgstr ""
+
+msgctxt "game_options"
+msgid "triangular filter"
+msgstr ""
+
+msgctxt "game_options"
+msgid "wave filter"
+msgstr ""
+
+msgctxt "game_options"
+msgid "lottes crt"
+msgstr ""
+
+msgctxt "game_options"
+msgid "4xrgss"
+msgstr ""
+
+msgctxt "game_options"
+msgid "nxagss"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Display on screen information like savestate, config warning, etc."
+msgstr ""
+
+msgctxt "game_options"
+msgid "DISPLAY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "OSD MESSAGES"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enabled (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Disabled"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose the on-screen position for system messages."
+msgstr ""
+
+msgctxt "game_options"
+msgid "OSD MESSAGES POSITION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Top Left"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Top Center (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Top Right"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Center Left"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Center"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Center Right"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bottom Left"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bottom Center"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bottom Right"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "OSD PERFORMANCE POSITION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Top Center"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fit to Window / Fullscreen"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Standard (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Widescreen (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "10:7 (1.43:1 - custom)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Adjusts Full Motion Video movies aspect ratio."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FMV ASPECT RATIO"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Crops a small number of pixels from the screen edges to hide visual "
+"artifacts."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CROP OVERSCAN"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FMV movie deinterlacing."
+msgstr ""
+
+msgctxt "game_options"
+msgid "DEINTERLACING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Weave (Top Field First)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Weave (Bottom Field First)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bob (Top Field First)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bob (Bottom Field First)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Blend (Top Field First)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Blend (Bottom Field First)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Adaptive (Top Field First)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Adaptive (Bottom Field First)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Smooths the overall picture as it is displayed on the screen. Corrects "
+"positioning between pixels."
+msgstr ""
+
+msgctxt "game_options"
+msgid "BILINEAR FILTERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bilinear (Smooth)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bilinear (Sharp)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ENABLE WIDESCREEN PATCHES"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enabled"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enable to improve bluriness."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ANTI-BLUR"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fix screen tearing. CPU heavy."
+msgstr ""
+
+msgctxt "game_options"
+msgid "VSYNC"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enable No-interlacing Patches."
+msgstr ""
+
+msgctxt "game_options"
+msgid "INTERLACING PATCHES"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Can sharpen images in lower resolutions."
+msgstr ""
+
+msgctxt "game_options"
+msgid "INTEGER SCALING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose which graphics API library to use."
+msgstr ""
+
+msgctxt "game_options"
+msgid "GRAPHICS API"
+msgstr ""
+
+msgctxt "game_options"
+msgid "OpenGL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Software"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Vulkan"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
+msgstr ""
+
+msgctxt "game_options"
+msgid "RENDERING RESOLUTION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Native (PS2)(Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1.25x Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1.5x Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1.75x Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "2x Native (~720p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "2.25x Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "2.5x Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "2.75x Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "3x Native (~1080p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "3.5x Native"
+msgstr ""
+
+msgctxt "game_options"
+msgid "4x Native (~1440p/2K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "5x Native (~1620p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "6x Native (~2160p/4K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "7x Native (~2520p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "8x Native (~2880p/5K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose mipmapping type."
+msgstr ""
+
+msgctxt "game_options"
+msgid "MIPMAPPING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Basic (generated Mipmaps)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Full (PS2 Mipmaps)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Control the texture filtering of the emulation."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TEXTURE FILTERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Nearest"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bilinear (Forced)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bilinear (PS2)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Bilinear (Forced excluding sprite)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Control the texture's trilinear filtering of the emulation."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TRILINEAR FILTERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off (None)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Trilinear (PS2)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Trilinear (Forced)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Improves clarity of distant textures."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ANISOTROPIC FILTERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Reduces banding between colors and improves the preceived color depth."
+msgstr ""
+
+msgctxt "game_options"
+msgid "DITHERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Unscaled (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Scaled"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Force 32bit"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"The higher the setting, the more blending is emulated in the shader "
+"accurately, and the higher the speed penalty will be."
+msgstr ""
+
+msgctxt "game_options"
+msgid "BLENDING ACCURACY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Minimum"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Basic (Recommended)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Medium"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Full (Slow)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Maximum (Very Slow)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Uploads entire textures at once instead of small pieces. Improves "
+"performance in most games."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TEXTURE PRELOADING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Partial"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Full (Hash Cache)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Some games have issues when the animation is shown, others require it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SHOW BIOS BOOTLOGO"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Skip (safer)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Show (specific games)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Applies the FXAA anti-aliasing algorithm to improve the visual quality of "
+"games."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FXAA"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Automatically loads and applies cheats on game start."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CHEATS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Allows up to 8 controllers in supported games."
+msgstr ""
+
+msgctxt "game_options"
+msgid "MULTITAP"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Maximum 2 Players (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Maximum 4 Players"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Maximum 8 Players"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Runs VU1 emulation on a separate thread to improve performance on multi-core "
+"CPUs. May cause issues in some games."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SPEEDHACKS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MULTI-THREADED VU1"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Adjusts the emulated PS2 CPU speed. Lower or higher values may improve "
+"performance or game speed, but may cause issues."
+msgstr ""
+
+msgctxt "game_options"
+msgid "EE CYCLE RATE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "100%(Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Allows user replaceable textures."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TEXTURE REPLACEMENTS"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Necessary for some guns to replace fog textures as a workaround in Time "
+"Crisis - Crisis Zone."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TIME CRISIS FOG HACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Playstation 2 wheel type"
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL MODEL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Driving Force"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Driving Force Pro"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GT Force"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Virtual"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SHOW LIGHT GUN CROSSHAIRS"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Arrange the dual screen layout. Separate windows can be changed with "
 "Hotkey+R2."
@@ -815,16 +1421,7 @@ msgid "4 (Default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"Enhancement. Increase the rendering resolution. Makes 3D objects clearer."
-msgstr ""
-
-msgctxt "game_options"
 msgid "GRAPHICS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "RENDERING RESOLUTION"
 msgstr ""
 
 msgctxt "game_options"
@@ -856,27 +1453,7 @@ msgid "Synchronize framerate with display refresh rate."
 msgstr ""
 
 msgctxt "game_options"
-msgid "VSYNC"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Choose which graphics API library to use."
-msgstr ""
-
-msgctxt "game_options"
-msgid "GRAPHICS API"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Software"
-msgstr ""
-
-msgctxt "game_options"
 msgid "OpenGL (Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Vulkan"
 msgstr ""
 
 msgctxt "game_options"
@@ -887,10 +1464,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "HARDWARE SHADER"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Off (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -983,14 +1556,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Fix screen tearing."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Disabled"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Enabled"
 msgstr ""
 
 msgctxt "game_options"
@@ -1121,10 +1686,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "DOOM"
-msgstr ""
-
-msgctxt "game_options"
-msgid "OpenGL"
 msgstr ""
 
 msgctxt "game_options"
@@ -1382,10 +1943,6 @@ msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr ""
 
 msgctxt "game_options"
-msgid "DISPLAY"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Automatic ratio"
 msgstr ""
 
@@ -1399,14 +1956,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Stretch to window"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Fix screen tearing. CPU heavy."
-msgstr ""
-
-msgctxt "game_options"
-msgid "RENDERING"
 msgstr ""
 
 msgctxt "game_options"
@@ -1454,14 +2003,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "PRE-CACHE SHADERS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Improves clarity of distant textures."
-msgstr ""
-
-msgctxt "game_options"
-msgid "ANISOTROPIC FILTERING"
 msgstr ""
 
 msgctxt "game_options"
@@ -1693,10 +2234,6 @@ msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
-msgstr ""
-
-msgctxt "game_options"
 msgid "WIDESCREEN HACK (GLITCHY)"
 msgstr ""
 
@@ -1821,10 +2358,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "MOUSE AS WIIMOTE POINTER"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SHOW LIGHT GUN CROSSHAIRS"
 msgstr ""
 
 msgctxt "game_options"
@@ -2078,10 +2611,6 @@ msgid "Zooms in to hide black borders. Borders are different per game."
 msgstr ""
 
 msgctxt "game_options"
-msgid "CROP OVERSCAN"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Only Overscan Area"
 msgstr ""
 
@@ -2128,10 +2657,6 @@ msgid "Enhancement. Smooth/upscale textures on 3D objects."
 msgstr ""
 
 msgctxt "game_options"
-msgid "TEXTURE FILTERING"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Nearest-Neighbor"
 msgstr ""
 
@@ -2169,10 +2694,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SCALED DITHERING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Enabled (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2302,10 +2823,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Skipping it can break some games."
-msgstr ""
-
-msgctxt "game_options"
-msgid "SHOW BIOS BOOTLOGO"
 msgstr ""
 
 msgctxt "game_options"
@@ -2523,10 +3040,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ANTI-ALIASING METHOD"
-msgstr ""
-
-msgctxt "game_options"
-msgid "FXAA"
 msgstr ""
 
 msgctxt "game_options"
@@ -5149,10 +5662,6 @@ msgid "Bottom only"
 msgstr ""
 
 msgctxt "game_options"
-msgid "INTEGER SCALING"
-msgstr ""
-
-msgctxt "game_options"
 msgid ""
 "Enable MelonDS to display over two screens. Some related screen options will "
 "be ignored."
@@ -5208,10 +5717,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Very High"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Medium"
 msgstr ""
 
 msgctxt "game_options"
@@ -5300,10 +5805,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Pass custom cheats argument directly to mupen64plus using --cheats."
-msgstr ""
-
-msgctxt "game_options"
-msgid "CHEATS"
 msgstr ""
 
 msgctxt "game_options"
@@ -5569,507 +6070,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Hard Disk Image"
-msgstr ""
-
-msgctxt "game_options"
-msgid "scanlines"
-msgstr ""
-
-msgctxt "game_options"
-msgid "diagonal filter"
-msgstr ""
-
-msgctxt "game_options"
-msgid "triangular filter"
-msgstr ""
-
-msgctxt "game_options"
-msgid "wave filter"
-msgstr ""
-
-msgctxt "game_options"
-msgid "lottes crt"
-msgstr ""
-
-msgctxt "game_options"
-msgid "4xrgss"
-msgstr ""
-
-msgctxt "game_options"
-msgid "nxagss"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Display on screen information like savestate, config warning, etc."
-msgstr ""
-
-msgctxt "game_options"
-msgid "OSD MESSAGES"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Choose the on-screen position for system messages."
-msgstr ""
-
-msgctxt "game_options"
-msgid "OSD MESSAGES POSITION"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Top Left"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Top Center (Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Top Right"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Center Left"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Center"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Center Right"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bottom Left"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bottom Center"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bottom Right"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Choose the on-screen position for performance metrics (FPS, CPU usage, etc.)."
-msgstr ""
-
-msgctxt "game_options"
-msgid "OSD PERFORMANCE POSITION"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Top Center"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Fit to Window / Fullscreen"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Standard (4:3)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Widescreen (16:9)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "10:7 (1.43:1 - custom)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Adjusts Full Motion Video movies aspect ratio."
-msgstr ""
-
-msgctxt "game_options"
-msgid "FMV ASPECT RATIO"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Crops a small number of pixels from the screen edges to hide visual "
-"artifacts."
-msgstr ""
-
-msgctxt "game_options"
-msgid "FMV movie deinterlacing."
-msgstr ""
-
-msgctxt "game_options"
-msgid "DEINTERLACING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Weave (Top Field First)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Weave (Bottom Field First)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bob (Top Field First)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bob (Bottom Field First)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Blend (Top Field First)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Blend (Bottom Field First)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Adaptive (Top Field First)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Adaptive (Bottom Field First)"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Smooths the overall picture as it is displayed on the screen. Corrects "
-"positioning between pixels."
-msgstr ""
-
-msgctxt "game_options"
-msgid "BILINEAR FILTERING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bilinear (Smooth)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bilinear (Sharp)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "ENABLE WIDESCREEN PATCHES"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Enable to improve bluriness."
-msgstr ""
-
-msgctxt "game_options"
-msgid "ANTI-BLUR"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Enable No-interlacing Patches."
-msgstr ""
-
-msgctxt "game_options"
-msgid "INTERLACING PATCHES"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Can sharpen images in lower resolutions."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Native (PS2)(Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "1.25x Native"
-msgstr ""
-
-msgctxt "game_options"
-msgid "1.5x Native"
-msgstr ""
-
-msgctxt "game_options"
-msgid "1.75x Native"
-msgstr ""
-
-msgctxt "game_options"
-msgid "2x Native (~720p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "2.25x Native"
-msgstr ""
-
-msgctxt "game_options"
-msgid "2.5x Native"
-msgstr ""
-
-msgctxt "game_options"
-msgid "2.75x Native"
-msgstr ""
-
-msgctxt "game_options"
-msgid "3x Native (~1080p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "3.5x Native"
-msgstr ""
-
-msgctxt "game_options"
-msgid "4x Native (~1440p/2K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "5x Native (~1620p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "6x Native (~2160p/4K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "7x Native (~2520p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "8x Native (~2880p/5K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Choose mipmapping type."
-msgstr ""
-
-msgctxt "game_options"
-msgid "MIPMAPPING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Basic (generated Mipmaps)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Full (PS2 Mipmaps)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Control the texture filtering of the emulation."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Nearest"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bilinear (Forced)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bilinear (PS2)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Bilinear (Forced excluding sprite)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Control the texture's trilinear filtering of the emulation."
-msgstr ""
-
-msgctxt "game_options"
-msgid "TRILINEAR FILTERING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Off (None)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Trilinear (PS2)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Trilinear (Forced)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Reduces banding between colors and improves the preceived color depth."
-msgstr ""
-
-msgctxt "game_options"
-msgid "DITHERING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Unscaled (Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Scaled"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Force 32bit"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"The higher the setting, the more blending is emulated in the shader "
-"accurately, and the higher the speed penalty will be."
-msgstr ""
-
-msgctxt "game_options"
-msgid "BLENDING ACCURACY"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Minimum"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Basic (Recommended)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Full (Slow)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Maximum (Very Slow)"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Uploads entire textures at once instead of small pieces. Improves "
-"performance in most games."
-msgstr ""
-
-msgctxt "game_options"
-msgid "TEXTURE PRELOADING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Partial"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Full (Hash Cache)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Some games have issues when the animation is shown, others require it."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Skip (safer)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Show (specific games)"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Applies the FXAA anti-aliasing algorithm to improve the visual quality of "
-"games."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Automatically loads and applies cheats on game start."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Allows up to 8 controllers in supported games."
-msgstr ""
-
-msgctxt "game_options"
-msgid "MULTITAP"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Maximum 2 Players (Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Maximum 4 Players"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Maximum 8 Players"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Runs VU1 emulation on a separate thread to improve performance on multi-core "
-"CPUs. May cause issues in some games."
-msgstr ""
-
-msgctxt "game_options"
-msgid "SPEEDHACKS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "MULTI-THREADED VU1"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Adjusts the emulated PS2 CPU speed. Lower or higher values may improve "
-"performance or game speed, but may cause issues."
-msgstr ""
-
-msgctxt "game_options"
-msgid "EE CYCLE RATE"
-msgstr ""
-
-msgctxt "game_options"
-msgid "100%(Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Allows user replaceable textures."
-msgstr ""
-
-msgctxt "game_options"
-msgid "TEXTURE REPLACEMENTS"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Necessary for some guns to replace fog textures as a workaround in Time "
-"Crisis - Crisis Zone."
-msgstr ""
-
-msgctxt "game_options"
-msgid "TIME CRISIS FOG HACK"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Playstation 2 wheel type"
-msgstr ""
-
-msgctxt "game_options"
-msgid "WHEEL MODEL"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Driving Force"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Driving Force Pro"
-msgstr ""
-
-msgctxt "game_options"
-msgid "GT Force"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Virtual"
 msgstr ""
 
 msgctxt "game_options"
@@ -6564,6 +6564,97 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "WRX HIGH RESOLUTION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Skip the bios boot logo, may cause default language issues."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SYSTEM"
+msgstr ""
+
+msgctxt "game_options"
+msgid "BIOS FAST BOOT"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"A small number of games will have compatibility problems with this enabled."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FAST CD/DVD ACCESS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enables cheats files to be read from the `cheats` directory."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Helps forcing an international Japanese version to English. Unlocking more "
+"European languages etc."
+msgstr ""
+
+msgctxt "game_options"
+msgid "LANGUAGE UNLOCK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1x Native (PS2)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "5x Native (~1800p/3K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "7x Native (~2530p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "9x Native (~3240p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "10x Native (~3600p/6K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "11x Native (~3960p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "12x Native (~4320p/8K)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "13x Native (~5824p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "14x Native (~6272p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "15x Native (~6720p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "16x Native (~7168p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Unscaled"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Basic"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Maximum"
 msgstr ""
 
 msgctxt "game_options"
@@ -7962,10 +8053,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Select the system ROM version (Enterprise only)."
-msgstr ""
-
-msgctxt "game_options"
-msgid "SYSTEM"
 msgstr ""
 
 msgctxt "game_options"
@@ -10596,93 +10683,6 @@ msgid "Keyboard + Mouse"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Skip the bios boot logo, may cause default language issues."
-msgstr ""
-
-msgctxt "game_options"
-msgid "BIOS FAST BOOT"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"A small number of games will have compatibility problems with this enabled."
-msgstr ""
-
-msgctxt "game_options"
-msgid "FAST CD/DVD ACCESS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Enables cheats files to be read from the `cheats` directory."
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Helps forcing an international Japanese version to English. Unlocking more "
-"European languages etc."
-msgstr ""
-
-msgctxt "game_options"
-msgid "LANGUAGE UNLOCK"
-msgstr ""
-
-msgctxt "game_options"
-msgid "1x Native (PS2)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "5x Native (~1800p/3K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "7x Native (~2530p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "9x Native (~3240p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "10x Native (~3600p/6K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "11x Native (~3960p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "12x Native (~4320p/8K)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "13x Native (~5824p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "14x Native (~6272p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "15x Native (~6720p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "16x Native (~7168p)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Unscaled"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Basic"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Maximum"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Force a specific model and prevent tags detection."
 msgstr ""
 
@@ -13071,6 +13071,181 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Choose the rendering backend. Software is the current best option for Arm "
+"systems."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
+msgstr ""
+
+msgctxt "game_options"
+msgid "RENDER SCALE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Square Pixel"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
+
+msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
+
+msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Sync to the display refresh to prevent tearing. Disable for VRR displays."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fire the gun's recoil motor on each shot, for guns that have one."
+msgstr ""
+
+msgctxt "game_options"
+msgid "GUN RECOIL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GUN RECOIL STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Light"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Medium (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Strong"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synthesised centring resistance on wheels that support it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL FORCE FEEDBACK STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synthesised road/engine vibration while driving."
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL ROAD RUMBLE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL RUMBLE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"The game's jolts plus a buzz rising with steering, on a regular gamepad. "
+"Driving games only."
+msgstr ""
+
+msgctxt "game_options"
+msgid "GAMEPAD"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GAMEPAD RUMBLE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GAMEPAD RUMBLE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Enable the legacy or the new 3D engine. Choose Legacy on x86 for older GPUs. "
 "(Not supported on ARM/GLES systems)."
 msgstr ""
@@ -13121,10 +13296,6 @@ msgctxt "game_options"
 msgid ""
 "Controls the New3D rendering resolution (1x scale = 496x384). Default is 0 "
 "(Set Resolution) on x86_64 and 1 on ARM. Requires New3D engine."
-msgstr ""
-
-msgctxt "game_options"
-msgid "RENDER SCALE"
 msgstr ""
 
 msgctxt "game_options"
@@ -15247,6 +15418,14 @@ msgid "SOUND VOLUME"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Select game difficulty."
 msgstr ""
 
@@ -15531,6 +15710,94 @@ msgid "ENABLE SANDBOX MODE"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Resolution used by the game. Defaults to the current screen resolution. "
+"Values below 640 x 480 are raised by the game."
+msgstr ""
+
+msgctxt "game_options"
+msgid "GAME RESOLUTION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "640x480 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "800x600 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1024x768 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x960 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1600x1200 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1440 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x1024 (5:4)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x720 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1366x768 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1600x900 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1080 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "2560x1440 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "3840x2160 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x800 (16:10)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1440x900 (16:10)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1680x1050 (16:10)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1200 (16:10)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Scale the user interface for higher resolution displays. Values too large "
+"for the screen resolution are reduced by the game."
+msgstr ""
+
+msgctxt "game_options"
+msgid "INTERFACE SCALE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enable or Disable Intro movie (Enabled by default)."
 msgstr ""
 
@@ -15567,6 +15834,14 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "SKIP INTRO VIDEOS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Show (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Classic (Default)"
 msgstr ""
 
@@ -15580,14 +15855,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "4x MULTISAMPLING"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SKIP INTRO VIDEOS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Show (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -15799,6 +16066,10 @@ msgid "Simulate CRT effects for a retro look."
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT EFFECT"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Play custom user level."
 msgstr ""
 
@@ -15896,6 +16167,30 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "3840 x 2160"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
 msgstr ""
 
 msgctxt "game_options"
@@ -16423,7 +16718,7 @@ msgid "OpenGL (x86 only)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
+msgid "OpenGLES"
 msgstr ""
 
 msgctxt "game_options"
@@ -16757,6 +17052,14 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "DXVK HUD"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
+
+msgctxt "game_options"
+msgid "D7VK"
 msgstr ""
 
 msgctxt "game_options"
@@ -17569,62 +17872,6 @@ msgid "Exit emulator"
 msgstr ""
 
 msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Menu"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Save state"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Previous slot"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Fast forward"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Next disk"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Translate"
-msgstr ""
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr ""
-
-msgctxt "keys_files"
 msgid "Hide the bezel"
 msgstr ""
 
@@ -17674,6 +17921,10 @@ msgstr ""
 
 msgctxt "keys_files"
 msgid "GBA R"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "Fast forward"
 msgstr ""
 
 msgctxt "keys_files"

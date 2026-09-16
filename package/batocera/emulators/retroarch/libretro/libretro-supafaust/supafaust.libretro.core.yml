@@ -5,5 +5,16 @@ features:
 shared_features:
   - autosave
   - rewind
+file_extensions:
+  - 7z
+  - bsx
+  - dx2
+  - fig
+  - gd3
+  - gd7
+  - sfc
+  - smc
+  - swc
+  - zip
 systems:
   - snes

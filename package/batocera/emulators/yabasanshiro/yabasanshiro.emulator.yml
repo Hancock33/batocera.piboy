@@ -50,5 +50,9 @@ custom_features:
     choices:
       "Digital": 0
       "Analog":  1
+file_extensions:
+  - chd
+  - cue
+  - iso
 systems:
   - name: saturn

@@ -1,5 +1,5 @@
 diff --git a/cores/libretro-ffmpeg/Makefile.common b/cores/libretro-ffmpeg/Makefile.common
-index 3abad1d89f..ee51474811 100644
+index 47517670f4..bb93403178 100644
 --- a/cores/libretro-ffmpeg/Makefile.common
 +++ b/cores/libretro-ffmpeg/Makefile.common
 @@ -154,7 +154,7 @@ GL_SOURCE += $(LIBRETRO_COMM_DIR)/glsym/rglgen.c

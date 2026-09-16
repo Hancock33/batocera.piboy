@@ -3,10 +3,12 @@
 # hlsdk-xash3d-zombiex
 #
 ################################################################################
-# Version: Commits on Aug 25, 2026
-HLSDK_XASH3D_ZOMBIEX_VERSION = 4e92fe89254e62bb0676c6193a8773371e89531d
+# Version: Commits on Sept 13, 2026
+HLSDK_XASH3D_ZOMBIEX_VERSION = 2eaae4f8a526395562b79f67541aeb7d1e8d972c
 HLSDK_XASH3D_ZOMBIEX_BRANCH = zombie-x
-HLSDK_XASH3D_ZOMBIEX_SITE = $(call github,FWGS,hlsdk-portable,$(HLSDK_XASH3D_ZOMBIEX_VERSION))
+HLSDK_XASH3D_ZOMBIEX_SITE = https://github.com/FWGS/hlsdk-portable.git
+HLSDK_XASH3D_ZOMBIEX_SITE_METHOD=git
+HLSDK_XASH3D_ZOMBIEX_GIT_SUBMODULES=YES
 HLSDK_XASH3D_ZOMBIEX_DEPENDENCIES = sdl2 sdl2_mixer sdl2_image sdl2_ttf libsodium
 HLSDK_XASH3D_ZOMBIEX_LICENSE = Half Life 1 SDK LICENSE
 HLSDK_XASH3D_ZOMBIEX_LICENSE_FILES = LICENSE

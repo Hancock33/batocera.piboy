@@ -8,7 +8,7 @@ shared_features:
   - hud_corner
 custom_features:
   hurrican_crt:
-    prompt:  
+    prompt:      CRT EFFECT
     description: Simulate CRT effects for a retro look.
     choices:
       "On": enabled
@@ -25,6 +25,7 @@ custom_features:
       "Valentine":      Valentine
       "Volcano Temple": Volcano_Temple
       "Walkers World":  Walkers_World
-
+file_extensions:
+  - game
 systems:
   - hurrican

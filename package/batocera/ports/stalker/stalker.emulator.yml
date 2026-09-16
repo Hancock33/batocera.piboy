@@ -18,5 +18,9 @@ custom_features:
     choices:
       "Skip": 1
       "Show (Default)": 0
+file_extensions:
+  - cop
+  - cs
+  - soc
 systems:
   - stalker

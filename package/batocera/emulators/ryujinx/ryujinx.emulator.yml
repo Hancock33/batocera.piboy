@@ -107,5 +107,8 @@ custom_features:
       UTC+10: 10
       UTC+11: 11
       UTC+12: 12
+file_extensions:
+  - nsp
+  - xci
 systems:
   - switch

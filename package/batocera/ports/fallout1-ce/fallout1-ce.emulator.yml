@@ -49,5 +49,8 @@ custom_features:
       German: german
       Italian: italian
       Spanish: spanish
+file_extensions:
+  - f1ce
+  - game
 systems:
   - fallout1-ce

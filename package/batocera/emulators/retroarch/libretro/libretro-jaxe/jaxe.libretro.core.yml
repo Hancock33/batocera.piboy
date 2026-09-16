@@ -1,2 +1,6 @@
+file_extensions:
+  - ch8
+  - sc8
+  - xo8
 systems:
   - jaxe

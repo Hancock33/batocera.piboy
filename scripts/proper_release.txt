@@ -1,5 +1,6 @@
 ﻿amiberry-lite.mk
 amiberry.mk
+armsx2.mk
 ayaneo-platform.mk
 broadcom-bt-firmware.mk
 btop.mk
@@ -15,18 +16,21 @@ dosbox-x.mk
 dxvk-nvapi.mk
 dxvk.mk
 element14-pi-desktop.mk
+fastfetch.mk
 faudio.mk
 fdupes.mk
 fheroes2.mk
 gamecon_gpio_rpi.mk
 glslang.mk
 iir.mk
+imgui.mk
 kodi-pvr-freebox
 ledspicer.mk
 libdovi.mk
 libfreeaptx.mk
 libgme.mk
 libretro-amiberry.mk
+libretro-armsx2.mk
 libretro-freej2me.mk
 libretro-mame.mk
 libxmp.mk
@@ -60,6 +64,7 @@ ryzenadj.mk
 shader-slang.mk
 sockpp.mk
 sound-open-firmware.mk
+srb2.mk
 stk.mk
 switchres.mk
 syncthing.mk

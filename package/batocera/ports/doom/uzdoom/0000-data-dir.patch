@@ -1,0 +1,135 @@
+diff --git a/bin/windows/vpx/src/backtrace.c b/bin/windows/vpx/src/backtrace.c
+index 4bbe88bbe9..921072ad6b 100644
+--- a/bin/windows/vpx/src/backtrace.c
++++ b/bin/windows/vpx/src/backtrace.c
+@@ -531,7 +531,7 @@ exception_filter(LPEXCEPTION_POINTERS info)
+         }
+     }
+ 
+-    logfd = open(crashlogfilename, O_APPEND | O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
++    logfd = open("/userdata/system/logs/uzdoom.crash.log", O_APPEND | O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
+ 
+     if (logfd) {
+         time_t curtime;
+diff --git a/src/common/platform/posix/sdl/i_main.cpp b/src/common/platform/posix/sdl/i_main.cpp
+index 08f8a6667c..10c581502f 100644
+--- a/src/common/platform/posix/sdl/i_main.cpp
++++ b/src/common/platform/posix/sdl/i_main.cpp
+@@ -216,23 +216,7 @@ int main (int argc, char **argv)
+ 
+ 	Args = new FArgs(argc, argv);
+ 
+-#ifdef PROGDIR
+-	progdir = PROGDIR;
+-#else
+-	char program[PATH_MAX];
+-	if (realpath (argv[0], program) == NULL)
+-		strcpy (program, argv[0]);
+-	char *slash = strrchr (program, '/');
+-	if (slash != NULL)
+-	{
+-		*(slash + 1) = '\0';
+-		progdir = program;
+-	}
+-	else
+-	{
+-		progdir = "./";
+-	}
+-#endif
++    progdir = "/usr/share/uzdoom/";
+ 
+ 	I_StartupJoysticks();
+ 
+diff --git a/src/common/platform/posix/unix/i_specialpaths.cpp b/src/common/platform/posix/unix/i_specialpaths.cpp
+index 20ee214623..8fe732f76a 100644
+--- a/src/common/platform/posix/unix/i_specialpaths.cpp
++++ b/src/common/platform/posix/unix/i_specialpaths.cpp
+@@ -59,52 +59,16 @@ DEFGETPATH(Config, "XDG_CONFIG_HOME", "$HOME/config/settings");
+ DEFGETPATH(Cache, "XDG_CACHE_HOME", "$HOME/config/cache");
+ DEFGETPATH(Data, "XDG_DATA_HOME", "$HOME/config/non-packaged/data");
+ #else
+-DEFGETPATH(Config, "XDG_CONFIG_HOME", "$HOME/.config");
+-DEFGETPATH(Cache, "XDG_CACHE_HOME", "$HOME/.cache");
+-DEFGETPATH(Data, "XDG_DATA_HOME", "$HOME/.local/share");
+-DEFGETPATH(Pictures, "XDG_PICTURES_DIR", "$HOME/Pictures");
++DEFGETPATH(Config, "XDG_CONFIG_HOME", "/userdata/system/config/uzdoom");
++DEFGETPATH(Cache, "XDG_CACHE_HOME", "/userdata/system/cache/uzdoom");
++DEFGETPATH(Data, "XDG_DATA_HOME", "/userdata/saves/uzdoom");
++DEFGETPATH(Pictures, "XDG_PICTURES_DIR", "/userdata/screenshots/");
+ #endif
+ #undef DEFGETPATH
+ 
+ FString GetUserFile (const char *file)
+ {
+-	struct stat info;
+-
+-	FString path = FStringf("%s/" GAMENAMELOWERCASE "/", GetConfigPath());
+-	path = NicePath(path.GetChars());
+-
+-	if (stat (path.GetChars(), &info) == -1)
+-	{
+-		struct stat extrainfo;
+-
+-		// Sanity check for $HOME/.config
+-		FString configPath = NicePath(GetConfigPath());
+-		if (stat (configPath.GetChars(), &extrainfo) == -1)
+-		{
+-			if (mkdir (configPath.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
+-			{
+-				I_FatalError ("Failed to create %s directory:\n%s", GetConfigPath(), strerror(errno));
+-			}
+-		}
+-		else if (!S_ISDIR(extrainfo.st_mode))
+-		{
+-			I_FatalError ("%s must be a directory", GetConfigPath());
+-		}
+-
+-		if (mkdir (path.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
+-		{
+-			I_FatalError ("Failed to create %s directory:\n%s", path.GetChars(), strerror (errno));
+-		}
+-	}
+-	else
+-	{
+-		if (!S_ISDIR(info.st_mode))
+-		{
+-			I_FatalError ("%s must be a directory", path.GetChars());
+-		}
+-	}
+-	path += file;
+-	return path;
++	return FString("/userdata/saves/uzdoom/") + file;
+ }
+ 
+ //===========================================================================
+@@ -158,7 +122,7 @@ FString M_GetCachePath(bool create, FString ns)
+ 
+ FString M_GetAutoexecPath()
+ {
+-	return GetUserFile("autoexec.cfg");
++	return FString("/userdata/system/configs/uzdoom/autoexec.cfg");
+ }
+ 
+ //===========================================================================
+@@ -173,7 +137,7 @@ FString M_GetAutoexecPath()
+ 
+ FString M_GetConfigPath(bool for_reading)
+ {
+-	return GetUserFile(GAMENAMELOWERCASE ".ini");
++	return FString("/userdata/system/configs/uzdoom/uzdoom.ini");
+ }
+ 
+ //===========================================================================
+diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
+index 456511f203..05bc3ec484 100644
+--- a/src/gameconfigfile.cpp
++++ b/src/gameconfigfile.cpp
+@@ -139,7 +139,7 @@ static void CollectDefaultSearchPaths()
+ 	static FString GameDirs[] = {
+ 		"/games/" GAMENAMELOWERCASE,
+ 		"/games/doom",
+-		"/doom"
++		"/uzdoom"
+ 	};
+ 
+ 	DefaultSearchPaths.Push("$PROGDIR");

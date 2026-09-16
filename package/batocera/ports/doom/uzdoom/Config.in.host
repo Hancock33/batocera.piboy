@@ -1,0 +1,7 @@
+config BR2_PACKAGE_HOST_UZDOOM
+	bool "host uzdoom tools"
+	select BR2_PACKAGE_HOST_BZIP2
+	select BR2_PACKAGE_HOST_ZLIB
+
+	help
+	  This package is required for building uzdoom.

@@ -1,2 +1,7 @@
+file_extensions:
+  - 7z
+  - cas
+  - p2000t
+  - zip
 systems:
   - p2000t

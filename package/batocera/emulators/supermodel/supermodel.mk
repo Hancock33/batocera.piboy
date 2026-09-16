@@ -3,10 +3,10 @@
 # supermodel
 #
 ################################################################################
-# Version: Commits on Aug 27, 2026
-SUPERMODEL_VERSION = 39beed2b6f8eeb2081093ad205580c743e53d4ec
+# Version: Commits on Sept 14, 2026
+SUPERMODEL_VERSION = 29f5fa9b6c2b9ed769013689c6b89f18eaad4507
 SUPERMODEL_SITE = $(call github,dmanlfc,Supermodel,$(SUPERMODEL_VERSION))
-SUPERMODEL_BRANCH = readme-update
+SUPERMODEL_BRANCH = steering-wheels
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
 SUPERMODEL_EMULATOR_INFO = supermodel.emulator.yml

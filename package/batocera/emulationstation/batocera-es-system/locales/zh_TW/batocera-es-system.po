@@ -334,6 +334,10 @@ msgid "1024kB"
 msgstr "1024kB"
 
 msgctxt "game_options"
+msgid "1024x768 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1040 STE 1.06"
 msgstr "1040 STE 1.06"
 
@@ -446,12 +450,28 @@ msgid "1280 x 800"
 msgstr "1280 x 800"
 
 msgctxt "game_options"
+msgid "1280x1024 (5:4)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1280x720 (100% Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x720 (16:9)"
 msgstr ""
 
 msgctxt "game_options"
 msgid "1280x720 (Default)"
 msgstr "1280x720 (預設)"
+
+msgctxt "game_options"
+msgid "1280x800 (16:10)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1280x960 (4:3)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1280x960 (Default)"
@@ -494,6 +514,10 @@ msgid "1366 x 768"
 msgstr "1366 x 768"
 
 msgctxt "game_options"
+msgid "1366x768 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "13MB (Recommended)"
 msgstr "13MB (推薦)"
 
@@ -527,6 +551,10 @@ msgstr "1440 x 900"
 
 msgctxt "game_options"
 msgid "1440p (6x)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1440x900 (16:10)"
 msgstr ""
 
 msgctxt "game_options"
@@ -618,7 +646,15 @@ msgid "1600 x 900"
 msgstr "1600 x 900"
 
 msgctxt "game_options"
+msgid "1600x1200 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1600x900 (125%)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1600x900 (16:9)"
 msgstr ""
 
 msgctxt "game_options"
@@ -639,6 +675,10 @@ msgstr "1680 x 1050"
 
 msgctxt "game_options"
 msgid "1680p (7x)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1680x1050 (16:10)"
 msgstr ""
 
 msgctxt "game_options"
@@ -712,6 +752,18 @@ msgstr ""
 #, c-format
 msgctxt "game_options"
 msgid "1920x1080 (150% - 1080p)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1080 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1200 (16:10)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1920x1440 (4:3)"
 msgstr ""
 
 msgctxt "game_options"
@@ -990,6 +1042,10 @@ msgctxt "game_options"
 msgid "2560 x 1600"
 msgstr "2560 x 1600"
 
+msgctxt "game_options"
+msgid "2560x1440 (16:9)"
+msgstr ""
+
 #, c-format
 msgctxt "game_options"
 msgid "2560x1440 (200% - 1440p)"
@@ -1053,6 +1109,10 @@ msgstr "29th"
 
 msgctxt "game_options"
 msgid "2D LAYER UPSCALE FILTER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "2D UPSCALE FILTER"
 msgstr ""
 
 msgctxt "game_options"
@@ -1296,6 +1356,10 @@ msgid "3840MB"
 msgstr "3840MB"
 
 msgctxt "game_options"
+msgid "3840x2160 (16:9)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "3840x2160 (300% - 4K)"
 msgstr ""
 
@@ -1334,6 +1398,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "3D ENGINE"
 msgstr "3D 引擎"
+
+msgctxt "game_options"
+msgid "3D TEXTURE FILTER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "3DS SYSTEM LANGUAGE"
@@ -1554,6 +1622,10 @@ msgstr "4th"
 msgctxt "game_options"
 msgid "4x (2880p/4320p)"
 msgstr "4x (2880p/4320p)"
+
+msgctxt "game_options"
+msgid "4x (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "4x MSAA"
@@ -1844,6 +1916,10 @@ msgid "640x360 (50%)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "640x480 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "64KB"
 msgstr "64KB"
 
@@ -2006,6 +2082,10 @@ msgstr "800 x 600"
 msgctxt "game_options"
 msgid "800p"
 msgstr "800p"
+
+msgctxt "game_options"
+msgid "800x600 (4:3)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "8086/8088, 4.77MHz (315 cps)"
@@ -2261,6 +2341,10 @@ msgid "ALSAThread"
 msgstr "ALSAThread"
 
 msgctxt "game_options"
+msgid "ALTERNATIVE SOUND"
+msgstr "替代聲音"
+
+msgctxt "game_options"
 msgid "AMD Athlon, 1.2GHz (1000000 cps)"
 msgstr "AMD Athlon, 1.2GHz (1000000 cps)"
 
@@ -2287,6 +2371,10 @@ msgstr "類比搖桿死區"
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
 msgstr "非均向性過濾"
+
+msgctxt "game_options"
+msgid "ANISOTROPIC LEVEL"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ANISTROPIC FILTER"
@@ -2869,6 +2957,10 @@ msgid "AltWFC (172.104.88.237)"
 msgstr "AltWFC (172.104.88.237)"
 
 msgctxt "game_options"
+msgid "Alternative sounds for the table (needs additional files)."
+msgstr "Alternative sounds for the table (需額外檔案)."
+
+msgctxt "game_options"
 msgid "Always"
 msgstr "總是"
 
@@ -2997,8 +3089,18 @@ msgid "Anime4K Ultrafast"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Anisotropic"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Anisotropic filtering"
 msgstr "非均向性過濾"
+
+msgctxt "game_options"
+msgid ""
+"Anisotropic sharpens obliquely-viewed surfaces. OpenGL/Vulkan only, falls "
+"back to Faithful where unsupported."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Apple (2x 2-button Analog)"
@@ -3656,10 +3758,6 @@ msgid ""
 "Basic Filtering type for the jaguar display when rendering to the native "
 "display."
 msgstr "算繪到本機顯示時 JAGUAR 顯示的基本濾鏡類型。"
-
-msgctxt "keys_files"
-msgid "Batocera Control Center"
-msgstr ""
 
 msgctxt "game_options"
 msgid "Batocera sets first audio device"
@@ -4430,6 +4528,14 @@ msgid "CRT COLOR EMULATION"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT EFFECT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT FILTER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT重影效果"
 
@@ -4472,6 +4578,10 @@ msgstr "游標模式"
 msgctxt "game_options"
 msgid "CURSOR TIMEOUT"
 msgstr "游標逾時"
+
+msgctxt "game_options"
+msgid "CURVATURE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CURVE DETAIL"
@@ -4980,6 +5090,12 @@ msgid "Choose the preferred violence level."
 msgstr "選擇偏好的暴力程度。"
 
 msgctxt "game_options"
+msgid ""
+"Choose the rendering backend. Software is the current best option for Arm "
+"systems."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Choose the scaling mode for the game screen."
 msgstr "選擇遊戲畫面的縮放模式。"
 
@@ -5388,6 +5504,10 @@ msgid "Cosine (Default)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Cosmetic scanline/mask/glow/curvature filter over the finished frame."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Costa Rica"
 msgstr "Costa Rica"
 
@@ -5514,6 +5634,10 @@ msgstr "Czech (cz)"
 msgctxt "game_options"
 msgid "Czech Republic"
 msgstr "Czech Republic"
+
+msgctxt "game_options"
+msgid "D7VK"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DATA PLUGIN"
@@ -6485,6 +6609,12 @@ msgctxt "game_options"
 msgid "Edge (sharper filet)"
 msgstr "邊緣（更銳利）"
 
+msgctxt "game_options"
+msgid ""
+"Edge-directed pixel-art filters over the 2D tilemap layers. OpenGL/Vulkan "
+"only, falls back to Faithful where unsupported."
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Edit room"
 msgstr "編輯室"
@@ -7136,6 +7266,18 @@ msgid "Enhancement. Only works with a 16/9 ratio and bezels disabled."
 msgstr "增強。僅適用於16/9的比例和禁用邊框的情況。"
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-art scaling filter applied to the low-resolution game "
+"image before it's stretched to fill the render resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Pixel-doubles the game image by this integer factor before "
+"applying the scaler, as long as it still fits the render resolution."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Reduces slowdown in mode 7 games."
 msgstr "增強。降低模式7遊戲的速度。"
 
@@ -7574,6 +7716,10 @@ msgid ""
 msgstr "FXAA對效能的影響較低，解析度較低時會出錯。SMAA提供最好的質量。"
 
 msgctxt "game_options"
+msgid "Faithful (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Fake (Safe, lowest cost)"
 msgstr ""
 
@@ -7692,6 +7838,10 @@ msgstr "開火1"
 msgctxt "keys_files"
 msgid "Fire 2"
 msgstr "開火2"
+
+msgctxt "game_options"
+msgid "Fire the gun's recoil motor on each shot, for guns that have one."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
@@ -8127,6 +8277,10 @@ msgid "GAME RENDERING & SHADERS"
 msgstr "遊戲算繪與著色器"
 
 msgctxt "game_options"
+msgid "GAME RESOLUTION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GAME TRANSLATION"
 msgstr ""
 
@@ -8167,12 +8321,24 @@ msgid "GAMECUBE PORT 4 TYPE"
 msgstr "GAMECUBE PORT 4 類型"
 
 msgctxt "game_options"
+msgid "GAMEPAD"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GAMEPAD AUTOMATIC MAPPING"
 msgstr "遊戲手柄自動對映"
 
 msgctxt "game_options"
 msgid "GAMEPAD CURSOR SPEED"
 msgstr "遊戲手柄游標速度"
+
+msgctxt "game_options"
+msgid "GAMEPAD RUMBLE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GAMEPAD RUMBLE STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "GAMEPLAY"
@@ -8331,6 +8497,10 @@ msgid "GLCore"
 msgstr "GLCore"
 
 msgctxt "game_options"
+msgid "GLOW STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64(最快)"
 
@@ -8420,6 +8590,14 @@ msgstr "GSPLUS BIOS 檔名"
 msgctxt "game_options"
 msgid "GT Force"
 msgstr "GT Force"
+
+msgctxt "game_options"
+msgid "GUN RECOIL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "GUN RECOIL STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Gakken Compact Vision TV Boy cartridges"
@@ -8770,6 +8948,10 @@ msgid "HQ MODE"
 msgstr "HQ 模式"
 
 msgctxt "game_options"
+msgid "HQX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HST"
 msgstr "HST"
 
@@ -8864,10 +9046,6 @@ msgstr "Hermite"
 msgctxt "game_options"
 msgid "Hide"
 msgstr "隱藏"
-
-msgctxt "keys_files"
-msgid "Hide bezels"
-msgstr "隱藏邊框"
 
 msgctxt "game_options"
 msgid "Hide the Super Game Boy decorative border."
@@ -8980,6 +9158,10 @@ msgid ""
 msgstr "模擬 Mac 將安裝多少 RAM（僅限 Mac IIx 和 Mac LC 3）"
 
 msgctxt "game_options"
+msgid "How the finished frame is magnified to the window."
+msgstr ""
+
+msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
 msgstr "視窗空間如何在螢幕之間分配。"
 
@@ -9056,6 +9238,10 @@ msgid "INPUT INTERFACE"
 msgstr "輸入介面"
 
 msgctxt "game_options"
+msgid "INTEGER SCALE FACTOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "INTEGER SCALING"
 msgstr "整數縮放"
 
@@ -9066,6 +9252,10 @@ msgstr "整數縮放(顯示完美畫素)"
 msgctxt "game_options"
 msgid "INTEGER UPSCALING"
 msgstr "整數向上縮放"
+
+msgctxt "game_options"
+msgid "INTERFACE SCALE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INTERLACING PATCHES"
@@ -9279,6 +9469,10 @@ msgstr "整數縮放"
 
 msgctxt "game_options"
 msgid "Interlaced"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
 msgstr ""
 
 msgctxt "game_options"
@@ -9915,6 +10109,10 @@ msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
 msgctxt "game_options"
+msgid "Light"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Light (load times)"
 msgstr "Light (load times)"
 
@@ -10123,6 +10321,10 @@ msgstr "手動紋理採樣"
 msgctxt "game_options"
 msgid "MAP ROTATION"
 msgstr "地圖旋轉"
+
+msgctxt "game_options"
+msgid "MASK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "MAX (as many as possible)"
@@ -10603,6 +10805,10 @@ msgid "Medium (60)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Medium (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Mega"
 msgstr "Mega"
 
@@ -10661,10 +10867,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Menacer Light Gun"
 msgstr "Menacer光槍"
-
-msgctxt "keys_files"
-msgid "Menu"
-msgstr "選單"
 
 msgctxt "keys_files"
 msgid "Menu back"
@@ -11238,16 +11440,8 @@ msgid "Next Weapon"
 msgstr "下一個武器"
 
 msgctxt "keys_files"
-msgid "Next disk"
-msgstr "下一個磁碟"
-
-msgctxt "keys_files"
 msgid "Next item"
 msgstr "下一個物品"
-
-msgctxt "keys_files"
-msgid "Next slot"
-msgstr "下一個插槽"
 
 msgctxt "keys_files"
 msgid "Next weapon"
@@ -11626,6 +11820,12 @@ msgid "Only Overscan Area"
 msgstr "僅限過掃描區域"
 
 msgctxt "game_options"
+msgid ""
+"Only applies when 3D texture filter is set to Anisotropic. Clamped to the "
+"GPU's max."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
 msgstr "僅適用於使用 Parallel-RDP 作為所選 RDP 插件的情況。"
 
@@ -11706,8 +11906,8 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL with Shaders"
 
 msgctxt "game_options"
-msgid "OpenGLES (Default)"
-msgstr "OpenGLES (Default)"
+msgid "OpenGLES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Operating System (Default)"
@@ -12608,10 +12808,6 @@ msgid "Previous item"
 msgstr "先前的物品"
 
 msgctxt "keys_files"
-msgid "Previous slot"
-msgstr "先前的插槽"
-
-msgctxt "keys_files"
 msgid "Previous weapon"
 msgstr "先前的武器"
 
@@ -13175,12 +13371,14 @@ msgid "Resolution multipliers to smooth vectors"
 msgstr "平滑向量的分辨率乘數"
 
 msgctxt "game_options"
+msgid ""
+"Resolution used by the game. Defaults to the current screen resolution. "
+"Values below 640 x 480 are raised by the game."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr "恢復單一精靈上的 BLENDMODE 輪廓。"
-
-msgctxt "keys_files"
-msgid "Restore state"
-msgstr "回復先前狀態"
 
 msgctxt "game_options"
 msgid "Restored Wii VC"
@@ -13205,10 +13403,6 @@ msgstr "Retropad (預設)"
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
 msgstr ""
-
-msgctxt "keys_files"
-msgid "Rewind"
-msgstr "倒帶"
 
 msgctxt "game_options"
 msgid "Rewind can be CPU heavy."
@@ -13397,6 +13591,10 @@ msgid "SCALED DITHERING"
 msgstr "縮放抖動"
 
 msgctxt "game_options"
+msgid "SCALER"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SCALER MODE"
 msgstr "縮放模式"
 
@@ -13407,6 +13605,10 @@ msgstr "縮放方法"
 msgctxt "game_options"
 msgid "SCALING MODE"
 msgstr "縮放模式"
+
+msgctxt "game_options"
+msgid "SCANLINE STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SCANLINES"
@@ -13976,10 +14178,6 @@ msgctxt "game_options"
 msgid "Save Difference Per Content"
 msgstr ""
 
-msgctxt "keys_files"
-msgid "Save state"
-msgstr "儲存狀態"
-
 msgctxt "game_options"
 msgid "Saya Akan Lawan! (Indonesia)"
 msgstr ""
@@ -13992,6 +14190,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Scale input sensitivity while using weapon zoom."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Scale the user interface for higher resolution displays. Values too large "
+"for the screen resolution are reduced by the game."
 msgstr ""
 
 msgctxt "game_options"
@@ -14013,6 +14217,10 @@ msgstr "縮放3x"
 msgctxt "game_options"
 msgid "Scale4x"
 msgstr "縮放4x"
+
+msgctxt "game_options"
+msgid "ScaleFX"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ScaleForce"
@@ -14037,10 +14245,6 @@ msgstr "Scorpion 256K"
 msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "螢幕傾斜度（度）"
-
-msgctxt "keys_files"
-msgid "Screenshot"
-msgstr "載圖"
 
 msgctxt "game_options"
 msgid "Search for custom configured joystick profiles."
@@ -14523,6 +14727,10 @@ msgstr "銳化2"
 msgctxt "game_options"
 msgid "Sharp Bilinear"
 msgstr "雙線性銳化"
+
+msgctxt "game_options"
+msgid "Sharp Bilinear (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Sharp MZ-2000 cassettes"
@@ -15157,6 +15365,10 @@ msgid "Sprawl Relay (Brazil)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Square Pixel"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Square Pixels"
 msgstr "方形畫素"
 
@@ -15317,6 +15529,10 @@ msgid "Strict (Most accurate)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Strong"
+msgstr "強烈的"
+
+msgctxt "game_options"
 msgid "Super Action Controller"
 msgstr ""
 
@@ -15384,10 +15600,6 @@ msgctxt "game_options"
 msgid "Surround 7.1"
 msgstr "環繞 7.1"
 
-msgctxt "keys_files"
-msgid "Swap screen"
-msgstr "交換螢幕"
-
 msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "交換雙顯示器的位置。"
@@ -15448,6 +15660,11 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Sync to the display refresh to prevent tearing. Disable for VRR displays."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Synchronize frame presentation with monitor refresh rate."
 msgstr ""
 
@@ -15458,6 +15675,14 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Synchronize framerate with display refresh rate."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synthesised centring resistance on wheels that support it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Synthesised road/engine vibration while driving."
 msgstr ""
 
 msgctxt "game_options"
@@ -15900,6 +16125,12 @@ msgstr "最終的輸出影像，與Wii的模擬NAND設定無關。"
 
 msgctxt "game_options"
 msgid ""
+"The game's jolts plus a buzz rising with steering, on a regular gamepad. "
+"Driving games only."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "The higher the setting, the more blending is emulated in the shader "
 "accurately, and the higher the speed penalty will be."
 msgstr "設定越高，著色器中模擬的混合越精確，速度損失也就越大。"
@@ -16009,10 +16240,6 @@ msgctxt "game_options"
 msgid "Tomy Tutor & Pyuuta cartridge"
 msgstr "Tomy Tutor & Pyuuta 卡匣"
 
-msgctxt "keys_files"
-msgid "Toogle screen layout"
-msgstr "單一螢幕佈局"
-
 msgctxt "game_options"
 msgid "Top"
 msgstr "頂端"
@@ -16089,9 +16316,9 @@ msgctxt "game_options"
 msgid "Traditional Chinese"
 msgstr "正體中文"
 
-msgctxt "keys_files"
-msgid "Translate"
-msgstr "翻譯"
+msgctxt "game_options"
+msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -17092,8 +17319,20 @@ msgid "WHDLOAD LAUNCHER"
 msgstr "WHDLOAD啟動器"
 
 msgctxt "game_options"
+msgid "WHEEL"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL DEADZONE"
 msgstr "方向盤死區"
+
+msgctxt "game_options"
+msgid "WHEEL FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL FORCE FEEDBACK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL MIDZONE"
@@ -17104,8 +17343,16 @@ msgid "WHEEL MODEL"
 msgstr "方向盤模型"
 
 msgctxt "game_options"
+msgid "WHEEL ROAD RUMBLE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL ROTATION"
 msgstr "方向盤旋轉"
+
+msgctxt "game_options"
+msgid "WHEEL RUMBLE STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
@@ -17215,6 +17462,10 @@ msgctxt "game_options"
 msgid ""
 "When running outside of 100%, adjusts the temp instead of dropping frames."
 msgstr "當在100%之外執行時，會調整溫度而不是丟幀。"
+
+msgctxt "game_options"
+msgid "Which rectangle the frame is fit into."
+msgstr ""
 
 msgctxt "game_options"
 msgid "While Touching"
@@ -17978,10 +18229,6 @@ msgstr "yellow/blue"
 #~ msgstr "替代顏色"
 
 #~ msgctxt "game_options"
-#~ msgid "ALTERNATIVE SOUND"
-#~ msgstr "替代聲音"
-
-#~ msgctxt "game_options"
 #~ msgid "ANISOTROPIC FILTER"
 #~ msgstr "非均向性過濾器"
 
@@ -18034,10 +18281,6 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "Alternative Coloured Dot Matrix Display (需額外檔案)."
-
-#~ msgctxt "game_options"
-#~ msgid "Alternative sounds for the table (needs additional files)."
-#~ msgstr "Alternative sounds for the table (需額外檔案)."
 
 #~ msgctxt "game_options"
 #~ msgid "Analog Stick"
@@ -18564,6 +18807,10 @@ msgstr "yellow/blue"
 #~ msgid "Hermite (Default)"
 #~ msgstr "Hermite"
 
+#~ msgctxt "keys_files"
+#~ msgid "Hide bezels"
+#~ msgstr "隱藏邊框"
+
 #~ msgctxt "game_options"
 #~ msgid "High (Default)"
 #~ msgstr "高 (預設)"
@@ -18683,6 +18930,10 @@ msgstr "yellow/blue"
 #~ msgstr "兆和千兆模式可能會提高效能。使用安全模式以獲得最大相容性。"
 
 #~ msgctxt "keys_files"
+#~ msgid "Menu"
+#~ msgstr "選單"
+
+#~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "麥克風"
 
@@ -18726,6 +18977,14 @@ msgstr "yellow/blue"
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
 #~ msgstr "下一個光碟(m3u)"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next disk"
+#~ msgstr "下一個磁碟"
+
+#~ msgctxt "keys_files"
+#~ msgid "Next slot"
+#~ msgstr "下一個插槽"
 
 #~ msgctxt "game_options"
 #~ msgid "No touch screen (Default)"
@@ -18808,6 +19067,10 @@ msgstr "yellow/blue"
 #~ msgstr "開啟選單"
 
 #~ msgctxt "game_options"
+#~ msgid "OpenGLES (Default)"
+#~ msgstr "OpenGLES (Default)"
+
+#~ msgctxt "game_options"
 #~ msgid "Original Size"
 #~ msgstr "原來的尺寸"
 
@@ -18858,6 +19121,10 @@ msgstr "yellow/blue"
 #~ msgctxt "game_options"
 #~ msgid "Preloading is impossible from ES."
 #~ msgstr "ES 無法進行預先載入。"
+
+#~ msgctxt "keys_files"
+#~ msgid "Previous slot"
+#~ msgstr "先前的插槽"
 
 #~ msgctxt "game_options"
 #~ msgid "Pro Controller required for games that require shake motions."
@@ -18945,6 +19212,14 @@ msgstr "yellow/blue"
 #~ msgid "Restart Game"
 #~ msgstr "重啟遊戲"
 
+#~ msgctxt "keys_files"
+#~ msgid "Restore state"
+#~ msgstr "回復先前狀態"
+
+#~ msgctxt "keys_files"
+#~ msgid "Rewind"
+#~ msgstr "倒帶"
+
 #~ msgctxt "game_options"
 #~ msgid "Run the game in test mode to configure certain game options."
 #~ msgstr "以測試模式運行遊戲以配置某些遊戲選項。"
@@ -18973,9 +19248,17 @@ msgstr "yellow/blue"
 #~ msgid "Save State Slot 1"
 #~ msgstr "保存存檔1"
 
+#~ msgctxt "keys_files"
+#~ msgid "Save state"
+#~ msgstr "儲存狀態"
+
 #~ msgctxt "game_options"
 #~ msgid "Screen Resolution (Default)"
 #~ msgstr "螢幕解析度（預設）"
+
+#~ msgctxt "keys_files"
+#~ msgid "Screenshot"
+#~ msgstr "載圖"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19075,10 +19358,6 @@ msgstr "yellow/blue"
 #~ msgid "Stretch to Window"
 #~ msgstr "拉伸到視窗"
 
-#~ msgctxt "game_options"
-#~ msgid "Strong"
-#~ msgstr "強烈的"
-
 #~ msgctxt "keys_files"
 #~ msgid "Swap Screen"
 #~ msgstr "對換螢幕"
@@ -19086,6 +19365,10 @@ msgstr "yellow/blue"
 #~ msgctxt "keys_files"
 #~ msgid "Swap Screens"
 #~ msgstr "對換螢幕"
+
+#~ msgctxt "keys_files"
+#~ msgid "Swap screen"
+#~ msgstr "交換螢幕"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19145,8 +19428,16 @@ msgstr "yellow/blue"
 #~ msgstr "切換速度限制"
 
 #~ msgctxt "keys_files"
+#~ msgid "Toogle screen layout"
+#~ msgstr "單一螢幕佈局"
+
+#~ msgctxt "keys_files"
 #~ msgid "TouchScreen"
 #~ msgstr "觸控螢幕"
+
+#~ msgctxt "keys_files"
+#~ msgid "Translate"
+#~ msgstr "翻譯"
 
 #~ msgctxt "game_options"
 #~ msgid "Triangle"

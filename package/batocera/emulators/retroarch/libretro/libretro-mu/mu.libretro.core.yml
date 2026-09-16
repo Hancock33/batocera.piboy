@@ -1,2 +1,8 @@
+file_extensions:
+  - prc
+  - pqa
+  - img
+  - pdb
+  - zip
 systems:
   - mu

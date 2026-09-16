@@ -26,6 +26,7 @@ sed -i s@/usr/lib/@/lib32/@g                                        $DEST_DIR/us
 
 rm -rf $DEST_DIR/usr/lib32/{avahi,gconv,glslang,graphene-1.0,icu,libfm,locale,bluez,gio}
 rm -rf $DEST_DIR/usr/lib32/{pcmanfm,python3.*,terminfo,udev,xorg,X11}
+rm -rf $DEST_DIR/usr/lib32/{depmod.d,modprobe.d}
 rm -rf $DEST_DIR/usr/lib32/firmware
 rm -rf $DEST_DIR/usr/wine/wine-custom/bin
 rm -rf $DEST_DIR/usr/wine/wine-custom/include

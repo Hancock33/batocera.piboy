@@ -1,2 +1,11 @@
+file_extensions:
+  - bin
+  - ccd
+  - chd
+  - cue
+  - iso
+  - m3u
+  - mds
+  - zip
 systems:
   - saturn

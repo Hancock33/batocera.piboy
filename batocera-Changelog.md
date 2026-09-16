@@ -1,6 +1,8 @@
 # 2026/xx/xx - batocera.linux 44 - Malachite
 ### Special Notes
+- GZDoom has been replaced by UZDoom, a continuation of ZDoom and GZDoom - existing gzdoom ROM folders, .gzdoom mod files, and configs need to be renamed to uzdoom
 - ShadPS4 has moved from the no longer maintained ShadPS4 Plus to standard ShadPS4
+- SM2-Emu replaces Model2Emu which ran through WINE bringing Model 2 emualtion to more systems
 - The Play! emulator (and Libretro variant) has been removed in favor of PCSX2x6 for Namco2x6 systems as well as removed as a PS2 emulator.
 ### Hardware
 - Anbernic RG-DS initial support
@@ -17,17 +19,23 @@
 ### Added
 - Anbernic H700 device hardware acceleration support
 - Anbernic RGCubeXX device LED controller support
+- Armsx2 for SM8250, SM8550 and SM8750
+- BCC: audio devices can now be switch from the bcc menu (while playing games for example)
+- Box64 userland x86_64 emulator for aarch64
 - Drastic back for Aarch64 devices
-- NanoBoyAdvance as an alternative GBA emulator
 - ES Setting for toggle fast forward
 - Dolphin GameCube Controller type BattlerGC Pro (x-input mode with analog+digital triggers)
 - ES setting to determnine mitigations On|Off(Default On)
 - ES setting to choose controller LED mode (Rainbow, Pulse Chroma)
 - ES can now display Unicode for ID3 tags of songs played
-- Box64 userland x86_64 emulator for aarch64
+- ES now supports correctly Arabic and Hebrew glyph rendering
 - Legion Go / Go 2 LED controller support
 - Libretro-Azahar
+- NanoBoyAdvance as an alternative GBA emulator
 - PCSX2x6 emulator for Namco2x6 systems (see the _info.txt file for rom details)
+- SM2-Emu emulator for Model 2 games
+- Upgrades : migration from x86_64 to x86-64-v3 is now possible from the menu for eligible software.
+- Upgrades : upgrades to stable releases is now possible via torrent, directly from the menu.
 - Xenia-Edge for x864_64 and select aarch64 devices
 ### Fixed
 - BCC menu not showing on SM8250 devices (i.e. Retroid Pocket 5)
@@ -45,6 +53,7 @@
 - Taradino blank screen with Wayland
 - Vice not going fullscreen with C128
 - X16emu fullscreen with Wayland
+- VPinball now support multiscreens correctly on wayland
 ### Changed / Improved
 - AYN Thor, AYN button now opens Batocera Control Center
 - BigPEmu added to capable aarch64 devices
@@ -57,7 +66,6 @@
 - Lindbergh Loader has transtioned to LinuxLoader for Lindbergh roms
 - MangoHud now scales the size based on the screen resolution
 - Migrated Khadas VIM4 GPU driver to Panfrost with the latest Mesa3D stack
-- PCSX2 variant for capable aarch64 devices
 - Removed Libretro-Puae2021
 - Removed the buggy Libretro-A5200 core. We will use the compatible Libretro-Atari800 core instead
 - Rockchip RK3588 devices moved to the mainline linux kernel:
@@ -71,19 +79,23 @@
 - Vita3k added for capable aarch64 devices
 - PCEngine / PCEngineCD: added Libretro-Beetle-PCE (not "Fast") for capable aarch64 devices
 ### Updated
-- Azahar to 2126.0
+- Amiberry to v8.3.0
+- AppleWin to Aug 29, 2026 build
+- Azahar to 2126.1
 - BigPEmu to 1.221
 - Blake Stone to v1.3.4
-- Box64 0.4.2
+- Box64 0.4.4
 - CatacombGL to Jun 20, 2026 build
-- Cemu to August 7th, 2026 build
+- Cemu to Aug 22, 2026 build
 - CDogs to 2.4.0
 - CLK to 2026-07-23
 - Commander Genius to v3.6.3
 - CorsixTH to v0.70.1
 - DevilutionX to 1.5.5
 - Dhewm3 & Mods to 1.5.5
-- Dolphin-Emu to 2606
+- Dolphin-Emu to 2609
+- DOSBox Staging to v0.83.0
+- DOSBox-X to 2026.08.31
 - DXX-Rebirth to Aug 23, 2026 build
 - ECWolf to Feb 23, 2026 build
 - EDuke32 / Fury to Aug 07, 2026 build
@@ -92,6 +104,7 @@
 - Groovy MAME to 0.289
 - Hurrican to Apr 5, 2026 build
 - Hydra Castle Labyrinth to Aug 11, 2026 build
+- Hypseus Singe to 3.0.2
 - IOQuake3 to Jul 16, 2026
 - Jazz2 to 3.8.0
 - Ledspicer to 0.7.6
@@ -210,28 +223,34 @@
 - Libretro-Yabasanshiro to August 23rd, 2026 build
 - Lightspark to 0.9.0
 - LinuxLoader to v3.0.10
-- Moonlight-QT to Jun 26, 2026 build
-- Mupen64Plus-Core to March 30th, 2026 build
+- Moonlight-Embedded to Jun 5, 2026 build
+- Moonlight-QT to Sep 8, 2026 build
+- Mupen64Plus core to Sep 5th, 2026 build; audio-sdl, input-sdl, rsp-hle, ui-console, video-glide64mk2 & video-rice plugins to Jun 23rd, 2026 build
 - OpenJazz to Mar 01, 2026 build
 - OpenMSX to Release 21
 - OpenJK to Jul 11th, 2026 build
 - OpenJKDF2 to v0.9.9
-- PCSX2 to 2.8.0
+- PCSX2 to 2.8.2
+- PCSX2x6 to v0.2.22
 - Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to May 9th, 2026 build
-- Redream to 1.5.0-1239
-- RPCS3 to v.0.0.42
+- Redream to 1.5.0-1240
+- RPCS3 to Sep 7th, 2026 build
+- Ruffle to 12th of September 2026 nightly build
 - ScummVM to v2026.3.0
-- ShadPS4 to v.0.17.0
-- Solarus to 2.1.3
+- ShadPS4 to v.0.18.0
+- SimCoupe to v1.2.17
+- Solarus to 2.1.4
 - Sonic3-Air to v26.03.28.0
 - Supermodel to v0.3a-20260726-git-b7d8acd
 - TheXTech to v1.3.7.3-1
+- TIC-80 to v1.2.0
 - TRX to 1.10.2
-- Tsugaru to v20251206
+- Tsugaru to v20260522
 - Ur-Quan Masters to Aug 21, 2026 build
-- Vita3k to 10th of June build
+- Visual Pinball to Sep 9, 2026 build
+- Vita3k to Sep 8, 2026 build
 - VKQuake to 1.36.0
 - vkQuake2 to Aug 5, 2026 build
 - VKQuake3 to 1.36
@@ -241,7 +260,8 @@
 - Xemu to v0.8.136
 - Xenia to v1.0.2844
 - Xenia Canary to August 29th, 2026 build
-- Xenia Edge to 28th of August build
+- Xenia Edge to 9th of September build
+- XRoar to v1.12.1
 - Ymir to v0.3.3
 ### System
 - Allwinner H616 device kernel updated to 7.1.5
@@ -258,7 +278,7 @@
 - Linux Firmware to 20260810
 - Mesa3D to 26.2.1
 - MangoHud to v0.8.4
-- Nvidia Open Production driver to 610.57.04
+- Nvidia Open Production driver to 615.71.09
 - Nvidia 580 Legacy driver to 580.178.04
 - QT to 6.11.1
 - Qualcomm SM6115 device kernel updated to 7.0.14

@@ -1,3 +1,16 @@
+shared_features:
+  - autosave
+file_extensions:
+  - zip
+  - 7z
 systems:
-  - ngp
-  - ngpc
+  - name: ngp
+    file_extensions:
+      add:
+        - ngp
+  - name: ngpc
+    file_extensions:
+      add:
+        - ngc
+        - ngpc
+        - npc

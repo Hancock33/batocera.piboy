@@ -21,7 +21,7 @@ index d38a8ee565..33d3e9c8c8 100644
  If RetroArch creates a new default config file, it will attempt to load the skeleton config file /etc/retroarch.cfg and use that as a basis.
  This allows distributions to set up default paths for libretro cores, and similar things.
 diff --git a/file_path_special.c b/file_path_special.c
-index f6badc1f1d..6d2358fa95 100644
+index fbb65ba694..f3002fe3a2 100644
 --- a/file_path_special.c
 +++ b/file_path_special.c
 @@ -158,7 +158,7 @@ bool fill_pathname_application_data(char *s, size_t len)
@@ -43,10 +43,10 @@ index f6badc1f1d..6d2358fa95 100644
        return true;
     }
 diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
-index be7639f32e..095e146ca8 100644
+index c700a8694e..6c597cfab1 100644
 --- a/frontend/drivers/platform_unix.c
 +++ b/frontend/drivers/platform_unix.c
-@@ -2896,7 +2896,7 @@ static void frontend_unix_get_env(int *argc,
+@@ -2990,7 +2990,7 @@ static void frontend_unix_get_env(int *argc,
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
@@ -55,7 +55,7 @@ index be7639f32e..095e146ca8 100644
     }
     else
        strlcpy_lit(base_path, "retroarch", sizeof(base_path));
-@@ -3583,7 +3583,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
+@@ -3677,7 +3677,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
@@ -80,10 +80,10 @@ index bbdc9ac076..42992c59d4 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index 9b2aae7a00..2189400e13 100644
+index c27cc44c39..8bf3d02f54 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -7141,7 +7141,7 @@ static void retroarch_print_help(const char *arg0)
+@@ -7204,7 +7204,7 @@ static void retroarch_print_help(const char *arg0)
           "                                 "
           "  $XDG_CONFIG_HOME/retroarch/retroarch.cfg,\n"
           "                                 "

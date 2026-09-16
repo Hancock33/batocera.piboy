@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index af8c29531..a52f05a57 100644
+index 2bdabb084..745eaa1cb 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -4951,12 +4951,12 @@ void System::WarnAboutUnsafeSettings()
+@@ -5102,12 +5102,12 @@ void System::WarnAboutUnsafeSettings()
      if (g_settings.cpu_execution_mode == CPUExecutionMode::CachedInterpreter)
        append(TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
  
@@ -18,10 +18,10 @@ index af8c29531..a52f05a57 100644
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index 1aff85c8a..b37a3eb7c 100644
+index 11124dee3..5719537f8 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
-@@ -268,9 +268,9 @@ bool QtHost::EarlyProcessStartup()
+@@ -271,9 +271,9 @@ bool QtHost::EarlyProcessStartup()
    Error error;
    if (!Core::ProcessStartup(&error)) [[unlikely]]
    {
@@ -34,8 +34,17 @@ index 1aff85c8a..b37a3eb7c 100644
    }
  
    // allow us to override standard qt icons as well
-@@ -3712,7 +3712,7 @@ int main(int argc, char* argv[])
+@@ -3647,7 +3647,7 @@ int main(int argc, char* argv[])
+   // Set theme before creating any windows.
    UpdateApplicationTheme();
+ 
+-#ifdef __linux__
++#ifdef __notlinux__
+   // Overriding LD_LIBRARY_PATH breaks a bunch of shit, since it'll use out-of-date system libraries.
+   WarnAboutLDLibraryPath();
+ 
+@@ -3656,7 +3656,7 @@ int main(int argc, char* argv[])
+ #endif
  
    // Build warning.
 -  AutoUpdaterDialog::warnAboutUnofficialBuild();
@@ -43,7 +52,7 @@ index 1aff85c8a..b37a3eb7c 100644
  
    // Setting/folder migrations.
    ApplyMigrations();
-@@ -3772,7 +3772,7 @@ int main(int argc, char* argv[])
+@@ -3713,7 +3713,7 @@ int main(int argc, char* argv[])
      s_state.start_fullscreen_ui_fullscreen = false;
  
    // Always kick off update check. It'll take over if the user is booting a game fullscreen.

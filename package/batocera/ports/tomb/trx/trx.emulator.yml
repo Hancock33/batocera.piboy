@@ -19,6 +19,10 @@ custom_features:
     choices:
       Off (Default): 0
       'On': 1
+file_extensions:
+  - croft
+  - trx1
+  - trx2
+  - trx3
 systems:
   - traider
-

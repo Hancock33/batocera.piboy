@@ -1,2 +1,7 @@
+file_extensions:
+  - dat
+  - z1
+  - z3
+  - zip
 systems:
   - zmachine

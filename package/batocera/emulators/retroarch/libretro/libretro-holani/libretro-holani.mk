@@ -3,8 +3,8 @@
 # libretro-holani
 #
 ################################################################################
-# Version: Commits on Jul 16, 2026
-LIBRETRO_HOLANI_VERSION = b95c00958e1e6ed8c383edc81b32b9119f13924b
+# Version: Commits on Sept 06, 2026
+LIBRETRO_HOLANI_VERSION = d8a92727ec36898e9d5c51182462912fcf9052f1
 LIBRETRO_HOLANI_SITE = $(call github,LLeny,holani-retro,$(LIBRETRO_HOLANI_VERSION))
 LIBRETRO_HOLANI_LICENSE = GPLv3
 LIBRETRO_HOLANI_DEPENDENCIES = host-rustc host-rust-bin host-clang retroarch
