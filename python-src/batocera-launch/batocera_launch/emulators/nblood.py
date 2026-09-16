@@ -5,7 +5,7 @@ from batocera_launch import Command, Emulator, HotkeysContext
 
 
 @cached_dataclass
-class Nlood(Emulator):
+class Nblood(Emulator):
     needs_sdl_game_controller_config = True
 
     @cached_property
@@ -17,7 +17,7 @@ class Nlood(Emulator):
 
     async def configure(self) -> Command:
         return Command(
-            ['nblood', '-j=' + self.rom.parent],
+            ['nblood', '-j=' + str(self.rom.parent)],
             env={
                 'SDL_JOYSTICK_HIDAPI': '0',
             },
