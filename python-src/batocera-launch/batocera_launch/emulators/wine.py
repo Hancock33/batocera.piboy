@@ -9,6 +9,8 @@ from batocera_launch import BatoceraException, Command, Emulator, HotkeysContext
 
 @cached_dataclass
 class Wine(Emulator):
+    needs_sdl_game_controller_config = True
+
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
         return {
