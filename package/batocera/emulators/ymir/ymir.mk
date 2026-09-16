@@ -17,9 +17,9 @@
 ################################################################################
 # Version: Commits on Jun 22, 2026
 YMIR_VERSION = v0.3.3
-YMIR_SITE = https://github.com/StrikerX3/Ymir
+YMIR_SITE = https://github.com/ymir-emu/Ymir
 YMIR_SITE_METHOD = git
-YMIR_GIT_SUBMODULES = ES
+YMIR_GIT_SUBMODULES = YES
 YMIR_LICENSE = GPLv2
 YMIR_LICENSE_FILE = LICENSE
 YMIR_EMULATOR_INFO = ymir.emulator.yml

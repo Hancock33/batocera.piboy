@@ -2,22 +2,24 @@
 -----|:-----:|:-----:|:-----:
 Audio|[cubeb](http://github.com/mozilla/cubeb)|e13d9c8855d42bebcd52e69f296404ff437dcdf5|Sept 16, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20260916|Sept 16, 2026
-Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|8b6204bbfaa8cf2eb049c8b50b24049920eb718e|Sept 16, 2026
+Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|c2237de04d8c08cb5ad0ba3fb98e5a9640203257|Sept 16, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|ac35358b3ffed74aaac56b0e99b09e81bb60d2e1|Sept 16, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.54|Sept 16, 2026
 Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.8|Sept 16, 2026
-Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|04b3b63d9369d564659248635463ae6d39b79031|Sept 16, 2026
+Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|5e9eae601b16757e49eeb83ab0f4d2945809f401|Sept 16, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-09-16|Sept 16, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|f98470a154efac65b60f1475089429c76dabc460|Sept 16, 2026
+Ports|[avp](http://github.com/atsb/NakedAVP)|5c2bc01cb70e101a6f1f3a761410fbecf90b8a68|Sept 16, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|8b8fff0e41eed194830be1e7aba8572aa03ef88e|Sept 16, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|42e6641258603a6605d8d9a16cdc44b4d86fb8b7|Sept 16, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|5a74858ab2f7a50cebb5a6330895bc38899531c0|Sept 16, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|b403b3ac78ba9468d496055e9fc93e28bb7ca38c|Sept 16, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|6107ebdc78a87f0cac5a828753c3d8ac3a3b652c|Sept 16, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|3c64e02f7dc02028647158b15c14a914d6539a26|Sept 16, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|5a6cc68e108ffb14a497a8179085bc387c97f046|Sept 16, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20260916|Sept 16, 2026
-Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|8b6204bbfaa8cf2eb049c8b50b24049920eb718e|Sept 16, 2026
+Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|c2237de04d8c08cb5ad0ba3fb98e5a9640203257|Sept 16, 2026
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|e395e3fd98aace93c6c1cf8feea80fc7d73fe07d|Sept 16, 2026
+Emulators|[libretro-stella](http://github.com/stella-emu/stella)|86f5ca800d8386fda5f475741dcb8df581d06d1f|Sept 16, 2026
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|f98470a154efac65b60f1475089429c76dabc460|Sept 16, 2026
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|1bf3eb49bf3aa3268861f5883077db7e2a369149|Sept 16, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|637d7bb446be52c606900bb65a13dcf3c1a3fa10|Sept 16, 2026
@@ -48,7 +50,6 @@ Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libr
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|d20300de2d32e5b8e8b0a0f15b1e1a889583d248|Sept 15, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|a9da049460e3e7db52fc122012b4d4cd05f5dde5|Sept 15, 2026
 Emulators|[libretro-snes9x-next](http://github.com/libretro/snes9x2010)|f81b6945ce11b1c4c4fcc081fb780ba8b94de3b5|Sept 15, 2026
-Emulators|[libretro-stella](http://github.com/stella-emu/stella)|986445f9f319d08db580fc7736245f1f6017cb9a|Sept 15, 2026
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|6a9ac36df35fb57da70f9268e3bac8ad07cf8dca|Sept 15, 2026
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|4ef7e671acd217b9cb670b54c1fc42e3da9a2345|Sept 15, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|f78d7e07f97a11094115ce51c52c591df4e5514a|Sept 15, 2026
@@ -315,7 +316,7 @@ Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hl
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|c8ac4862a019d7885b24927d9b4db5dd3e42a528|Jun 23, 2026
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|b07cb0bc8f29d6ee43efdf0a4d5a1b878ba98393|Jun 23, 2026
 Gpu|[nvidia580-legacy-driver](http://download.nvidia.com/XFree86/Linux-x86)|580.178.04|Jun 23, 2026
-Emulators|[ymir](https://github.com/StrikerX3/Ymir)|v0.3.3|Jun 22, 2026
+Emulators|[ymir](https://github.com/ymir-emu/Ymir)|v0.3.3|Jun 22, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.3.7.3-1|Jun 22, 2026
 Network|[rmtfs](http://github.com/linux-msm/rmtfs)|b30a3eb38f9af283f18dbd3c7755653efc52c094|Jun 22, 2026
 Engines|[scummvm](http://github.com/scummvm/scummvm)|v2026.3.0|Jun 20, 2026
@@ -414,7 +415,6 @@ Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|aad5aca01af139c0b0
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e|Feb 18, 2026
 Emulators|[batocera-bezel](http://github.com/batocera-linux/batocera-bezel)|77a3239f3f0682fcf9e6050f07b40677395e5db7|Feb 18, 2026
 Looks|[lightgun-controllers-art](http://github.com/batocera-linux/lightgun-controllers-art)|04dd1e9554ac45ce3e2afadc32d9bc2cb1203233|Feb 16, 2026
-Ports|[avp](http://github.com/atsb/NakedAVP)|5e5b615bcb14af32bf492106ea352dbff9642c1c|Feb 15, 2026
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|448f87fc0ec9825df13c1e0d4721b741aa5c32aa|Feb 12, 2026
 Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|879a88badc15725f52074de1c4de23cfd8906a32|Feb 12, 2026
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.5|Feb 09, 2026
