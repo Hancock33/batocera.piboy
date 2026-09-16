@@ -1,0 +1,26 @@
+diff --git a/arch/Kconfig b/arch/Kconfig
+index 45c657772362..6dfd9f721dc1 100644
+--- a/arch/Kconfig
++++ b/arch/Kconfig
+@@ -14,7 +14,7 @@ config ARCH_CONFIGURES_CPU_MITIGATIONS
+ 
+ if !ARCH_CONFIGURES_CPU_MITIGATIONS
+ config CPU_MITIGATIONS
+-	def_bool y
++	def_bool n
+ endif
+ 
+ #
+diff --git a/kernel/cpu.c b/kernel/cpu.c
+index b3c8553d7bd6..5b588c05764a 100644
+--- a/kernel/cpu.c
++++ b/kernel/cpu.c
+@@ -3332,7 +3332,7 @@ EXPORT_SYMBOL_GPL(cpu_mitigations_auto_nosmt);
+ #else
+ static int __init mitigations_parse_cmdline(char *arg)
+ {
+-	pr_crit("Kernel compiled without mitigations, ignoring 'mitigations'; system may still be vulnerable\n");
++	//pr_crit("Kernel compiled without mitigations, ignoring 'mitigations'; system may still be vulnerable\n");
+ 	return 0;
+ }
+ #endif
