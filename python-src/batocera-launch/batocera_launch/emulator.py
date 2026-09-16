@@ -707,6 +707,14 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
         # SDL VSync is a big deal on OGA and RPi4
         os.environ.update({'SDL_RENDER_VSYNC': self.config.get_bool('sdlvsync', True, return_values=('1', '0'))})
 
+        if os.environ.get("WAYLAND_DISPLAY"):
+            os.environ.update({'QT_QPA_PLATFORM': 'wayland'})
+        else:
+            os.environ.update({'QT_QPA_PLATFORM': 'xcb'})
+
+        os.environ.update({'QT_XCB_NO_XI2': '1'})
+        os.environ.update({'QT_PLUGIN_PATH': '/usr/lib/qt6/plugins'})
+
         async with (
             script_caller(('gameStart', 'gameStop'), self.system, self.name, self.core, self.rom),
             EvmapyManager(self) as evmapy_manager,

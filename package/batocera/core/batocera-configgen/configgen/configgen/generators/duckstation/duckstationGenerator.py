@@ -444,7 +444,7 @@ class DuckstationGenerator(Generator):
         return Command.Command(
             array=commandArray,
             env={
-                "LD_LIBRARY_PATH": "/usr/stenzek-shaderc/lib:/usr/lib",
+                "LD_LIBRARY_PATH": "/usr/lib/stenzek-shaderc:/lib:/usr/lib",
                 "XDG_CONFIG_HOME": CONFIGS,
                 "SDL_GAMECONTROLLERCONFIG": generate_sdl_game_controller_config(playersControllers),
                 "SDL_JOYSTICK_HIDAPI": "0"

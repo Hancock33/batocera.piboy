@@ -25,8 +25,10 @@ endef
 STENZEK_SHADERC_PRE_CONFIGURE_HOOKS += STENZEK_SHADERC_THIRDPARTY
 
 define STENZEK_SHADERC_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib
-	$(INSTALL) -D $(@D)/buildroot-build/libshaderc/libshaderc_ds.* $(TARGET_DIR)/usr/lib
+	rm -rf   $(TARGET_DIR)/usr/lib/stenzek-shaderc
+	mkdir -p $(TARGET_DIR)/usr/lib/stenzek-shaderc
+	$(INSTALL) -D $(@D)/buildroot-build/libshaderc/libshaderc_ds.* $(TARGET_DIR)/usr/lib/stenzek-shaderc/libshaderc_shared.so
+	ln -sf /usr/lib/libsqlite3.so $(TARGET_DIR)/usr/lib/stenzek-shaderc/libsqlite3.so.3
 endef
 
 $(eval $(cmake-package))
