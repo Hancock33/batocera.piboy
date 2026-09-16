@@ -7,6 +7,7 @@ Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-09-16|Sept 16,
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|d89987b486c1a1cea6588489739170357c712b67|Sept 16, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|5a74858ab2f7a50cebb5a6330895bc38899531c0|Sept 16, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3bb7529134a7e1197f675d46c1422fbe6b1e66db|Sept 16, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|3c64e02f7dc02028647158b15c14a914d6539a26|Sept 16, 2026
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|e395e3fd98aace93c6c1cf8feea80fc7d73fe07d|Sept 16, 2026
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|1bf3eb49bf3aa3268861f5883077db7e2a369149|Sept 16, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20260915|Sept 15, 2026
@@ -28,7 +29,6 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|b20b27ebf9e5b099a978e86dba609111dc98c837|Sept 15, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|f0a7b9f391b0e9bc14962b114f7da1ba553060be|Sept 15, 2026
 Engines|[libpinmame](http://github.com/vpinball/pinmame)|07fbe90d50f64c72336cbf5c766b234fd8d089e9|Sept 15, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|f182308291542079791ce278949090093f2a3d8e|Sept 15, 2026
 Network|[qrtr](http://github.com/linux-msm/qrtr)|29e36ae164389580a0f8ea7a7fdb728140ae978d|Sept 15, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260915|Sept 15, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|a9844689a76d23ac855407087d7d675863039ab8|Sept 15, 2026
