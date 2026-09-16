@@ -11,13 +11,13 @@ class Droidports(Emulator):
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
         return {
-            'name': 'droidports',
+            'name': 'gmloader',
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
     async def configure(self) -> Command:
         return Command(
-            ['droidports', self.rom],
+            ['/usr/bin32/gmloader', self.rom],
             env={
                 'LD_LIBRARY_PATH': '/usr/lib32:/usr/lib32/alsa-lib:/usr/lib/spa-0.2/support',
                 'LIBGL_DRIVERS_PATH': '/usr/lib32/dri',
