@@ -644,7 +644,6 @@ systems:
           'On': 1
           'Off': 0
   - name: cdi
-    disabled: true
     file_extensions:
       - chd
       - cue
@@ -1793,7 +1792,6 @@ systems:
           'On': 1
           'Off': 0
   - name: vectrex
-    disabled: true
     file_extensions:
       add:
         - gam
