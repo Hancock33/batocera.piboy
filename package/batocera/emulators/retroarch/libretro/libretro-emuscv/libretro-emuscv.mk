@@ -3,9 +3,9 @@
 # libretro-emuscv
 #
 ################################################################################
-# Version: Commits on Oct 18, 2022
-LIBRETRO_EMUSCV_VERSION = dfce10df090ce3f5eb23bdbee289702ec1478246
-LIBRETRO_EMUSCV_SITE = $(call gitlab,MaaaX-EmuSCV,libretro-emuscv,$(LIBRETRO_EMUSCV_VERSION))
+# Version: Commits on Aug 12, 2026
+LIBRETRO_EMUSCV_VERSION = 769ad162db63884222949f2add2a4b56a6499b25
+LIBRETRO_EMUSCV_SITE = $(call gitlab,MaaaX-EPOCH84,libretro-emuscv,$(LIBRETRO_EMUSCV_VERSION))
 LIBRETRO_EMUSCV_LICENSE = GPLv2
 LIBRETRO_EMUSCV_DEPENDENCIES = sdl2 retroarch
 LIBRETRO_EMUSCV_EMULATOR_INFO = emuscv.libretro.core.yml
