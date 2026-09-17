@@ -229,6 +229,7 @@ Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-beta1|Aug 13, 
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|73106363e14e34c08a5854b4cfbc29f184e3b783|Aug 13, 2026
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v2.9.9|Aug 12, 2026
+Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EPOCH84/libretro-emuscv)|769ad162db63884222949f2add2a4b56a6499b25|Aug 12, 2026
 Emulators|[libretro-freeintv](http://github.com/libretro/freeintv)|ef3e0fe322bec62a7f916c0bb0834c08c348d0b4|Aug 11, 2026
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|5aaa1d26565c834a6f1999026260e559f54aacf1|Aug 11, 2026
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.19.0|Aug 10, 2026
@@ -534,7 +535,6 @@ Utils|[cabextract](http://github.com/kyz/libmspack)|v1.11|Feb 24, 2023
 Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|309268f7a34ca0bba0ab94a0b09feb0191c77fb8|Nov 21, 2022
-Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
 Ports|[openclaw](http://github.com/pjasicek/OpenClaw)|5ee5740ca98377c76b13b50c84f610b0066a4717|Jul 13, 2022
