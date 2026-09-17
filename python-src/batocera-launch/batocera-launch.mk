@@ -73,7 +73,7 @@ BATOCERA_LAUNCH_LOCAL_PYTHON_EXCLUSIONS = \
 		$(if $(BR2_PACKAGE_SHADPS4),,shadps4.py) \
 		$(if $(BR2_PACKAGE_SOLARUS_ENGINE),,solarus.py) \
 		$(if $(BR2_PACKAGE_SONIC3_AIR),,sonic3_air.py) \
-		$(if $(BR2_PACKAGE_SONIC_MANIA),,sonicmania.py) \
+		$(if $(BR2_PACKAGE_SONICMANIA),,sonicmania.py) \
 		$(if $(BR2_PACKAGE_SONIC2013)$(BR2_PACKAGE_SONICCD),,sonicretro.py) \
 		$(if $(BR2_PACKAGE_BATOCERA_STEAM),,steam.py) \
 		$(if $(BR2_PACKAGE_STELLA),,stella.py) \
