@@ -136,7 +136,7 @@ Emulators|[libretro-dosbox-pure](http://github.com/schellingb/dosbox-pure)|73e03
 Emulators|[libretro-doublecherrygb](https://github.com/TimOelrichs/doublecherryGB-libretro.git)|c0f70ce6b0897c468817d64e4905f2e517986f1f|Sept 15, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|924311f3f0f1990d718def5596128cddd511d5ee|Sept 10, 2026
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|0cccd9a85d7ffa33fb695691a8a5db246606518c|Aug 20, 2026
-Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EmuSCV/libretro-emuscv)|dfce10df090ce3f5eb23bdbee289702ec1478246|Oct 18, 2022
+Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EPOCH84/libretro-emuscv)|769ad162db63884222949f2add2a4b56a6499b25|Aug 12, 2026
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|6af5d03de220e6effcd0ffcd99e0fb8e8c77cc9e|Jul 22, 2026
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|814991a2571ad3970e386cef48f3b148aa1c27b9|Jun 13, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|de6fa2efc2d1453781c4b08e67d64cdae72c8461|Sept 17, 2026
