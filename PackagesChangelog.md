@@ -232,6 +232,7 @@ Engines|[python-pyxel](http://github.com/kitao/pyxel)|v2.9.9|Aug 12, 2026
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EPOCH84/libretro-emuscv)|769ad162db63884222949f2add2a4b56a6499b25|Aug 12, 2026
 Emulators|[libretro-freeintv](http://github.com/libretro/freeintv)|ef3e0fe322bec62a7f916c0bb0834c08c348d0b4|Aug 11, 2026
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|5aaa1d26565c834a6f1999026260e559f54aacf1|Aug 11, 2026
+Emulators|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|18e870c6cf0f0abc89ac3a3af2d0ae6c8afc86e0|Aug 10, 2026
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.19.0|Aug 10, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|f3890f670867b5ffbc3938726db45c0f7d16c8ba|Aug 10, 2026
 Libraries|[semver](http://github.com/Neargye/semver)|v1.0.1|Aug 09, 2026

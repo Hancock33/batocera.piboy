@@ -93,6 +93,7 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|0ce29be60874b24890ab923
 Emulators|[eka2l1](https://github.com/AveyondFly/EKA2L1.git)|3ea88dcd982b39a4bfb841d47dbcaecbd99536e7|Jul 06, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|215a5af1650c49b57fa12430d723fddb34b009cc|Sept 15, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v3.2.35|Sept 07, 2025
+Emulators|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|18e870c6cf0f0abc89ac3a3af2d0ae6c8afc86e0|Aug 10, 2026
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|1bf3eb49bf3aa3268861f5883077db7e2a369149|Sept 16, 2026
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
 Emulators|[hatari](http://github.com/hatari/hatari)|1343fd34dafead8136fe22e8daaf61900afb3fa9|Sept 15, 2026

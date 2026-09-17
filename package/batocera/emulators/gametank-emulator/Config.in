@@ -2,6 +2,7 @@ config BR2_PACKAGE_GAMETANK_EMULATOR
 	bool "gametank-emulator"
 	depends on BR2_PACKAGE_SDL2
 	depends on BR2_INSTALL_LIBSTDCPP
+
 	help
 	  Emulator for the GameTank, an 8-bit homebrew game console
 	  built around the 6502.
