@@ -1,28 +1,34 @@
 from __future__ import annotations
 
+import os
+from pathlib import Path
+from typing import Final
+
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import CONFIGS
 from batocera_launch import Command, Emulator, HotkeysContext
 
 
 @cached_dataclass
-class Taradino(Emulator):
+class Serioussam(Emulator):
     needs_sdl_game_controller_config = True
 
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
         return {
-            'name': 'taradino',
+            'name': 'serioussam',
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
     async def configure(self) -> Command:
+
+        if "/samtfe/" in str(self.rom).lower():
+            data_dir = "/usr/share/game_assets/samtfe/Bin"
+        else:
+            data_dir = "/usr/share/game_assets/samtse/Bin"
+
+        os.chdir(data_dir)
+
         return Command(
-            ['taradino'],
-            env={
-                'XDG_DATA_HOME': CONFIGS,
-                'XDG_DATA_DIRS': '/userdata/roms/ports/rott',
-                'SDL_JOYSTICK_HIDAPI': '0',
-                'SDL_VIDEODRIVER': 'x11',
-            },
+            [f'{data_dir}/serioussam'],
+            env={'LD_LIBRARY_PATH': f'/usr/lib:/lib:{data_dir}'},
         )

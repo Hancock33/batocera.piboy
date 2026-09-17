@@ -3,7 +3,6 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
 if TYPE_CHECKING:
@@ -17,7 +16,7 @@ class IORTCW(Emulator):
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
         return {
-            'name': 'iortcw',
+            'name': 'rtcw',
             'keys': {
                 'exit': ['KEY_LEFTALT', 'KEY_F4'],
                 'menu': 'KEY_ESC',
@@ -33,7 +32,7 @@ class IORTCW(Emulator):
 
     @cached_property
     def config_file(self) -> Path:
-        return self.roms_dir / 'main' / 'wolfconfig.cfg'
+        return self.rom.parent / 'main' / 'wolfconfig.cfg'
 
     async def configure(self) -> Command:
         self.config_file.parent.mkdir(parents=True, exist_ok=True)
@@ -83,8 +82,8 @@ class IORTCW(Emulator):
 
         # iortcw looks for roms in home + /iortcw
         return Command(
-            ['/usr/bin/iortcw/iowolfsp'],
-            env={'XDG_DATA_HOME': ROMS},
+            ['/usr/bin/rtcw/iowolfsp'],
+            env={'XDG_DATA_HOME': self.rom.parent},
         )
 
     def _update_config_file(self, options_to_set: dict[str, str], /) -> None:
