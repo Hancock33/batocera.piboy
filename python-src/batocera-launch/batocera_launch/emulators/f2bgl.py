@@ -27,7 +27,12 @@ class F2bgl(Emulator):
 
     async def configure(self) -> Command:
         os.chdir(_ROM_DIR)
-        args: list[str | Path] = ['f2bgl', '--fullscreen', '--datapath=/userdata/roms/ports/f2bgl', '--savepath=/userdata/saves/f2bgl']
+        args: list[str | Path] = [
+            'f2bgl',
+            '--fullscreen',
+            '--datapath=/userdata/roms/ports/f2bgl',
+            '--savepath=/userdata/saves/f2bgl',
+        ]
 
         if self.config.get_bool('f2b_fog'):
             args.append('--no-fog')
@@ -36,19 +41,19 @@ class F2bgl(Emulator):
             args.append('--no-gouraud')
 
         if self.config.get('f2b_filter'):
-            args.append('--texturefilter=' + system.config['f2b_filter'])
+            args.append('--texturefilter=' + self.config['f2b_filter'])
 
         if self.config.get('f2b_scaler'):
-            args.append('--texturescaler=' + system.config['f2b_scaler'])
- 
+            args.append('--texturescaler=' + self.config['f2b_scaler'])
+
         if self.config.get_bool('f2b_sub'):
             args.append('--subtitles')
 
         if self.config.get('f2b_lang'):
-            args.extend(['--language=' + system.config['f2b_lang'] + ' --voice=' + system.config['f2b_lang']])
+            args.extend(['--language=' + self.config['f2b_lang'] + ' --voice=' + self.config['f2b_lang']])
 
         if self.config.get('f2b_level'):
-            args.append('--level=' + system.config['f2b_level'])
+            args.append('--level=' + self.config['f2b_level'])
 
         return Command(
             args,

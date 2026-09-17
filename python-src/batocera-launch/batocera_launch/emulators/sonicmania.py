@@ -13,7 +13,7 @@ from batocera_launch import (
     HotkeysContext,
 )
 
-_BINARY_SRC: Final = Path('/usr/bin/sonic-mania')
+_BINARY_SRC: Final = Path('/usr/bin/sonicmania')
 
 
 @cached_dataclass
@@ -28,7 +28,7 @@ class SonicMania(Emulator):
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
         return {
-            'name': 'sonic_mania',
+            'name': 'sonicmania',
             'keys': {
                 'exit': ['KEY_LEFTALT', 'KEY_F4'],
                 'menu': 'KEY_ENTER',
@@ -38,7 +38,7 @@ class SonicMania(Emulator):
 
     @cached_property
     def roms_dir(self) -> Path:
-        return ROMS / 'sonic-mania'
+        return ROMS / 'ports' / 'sonicmania'
 
     @property
     def execution_path(self) -> Path | None:
@@ -49,9 +49,8 @@ class SonicMania(Emulator):
         return 16 / 9
 
     async def configure(self) -> Command:
-        destination_file = self.roms_dir / 'sonic-mania'
-        if not destination_file.exists():
-            shutil.copy(_BINARY_SRC, destination_file)
+        destination_file = self.roms_dir / 'sonicmania'
+        shutil.copy(_BINARY_SRC, destination_file)
 
         config = CaseSensitiveConfigParser(interpolation=None)
         config['Game'] = {

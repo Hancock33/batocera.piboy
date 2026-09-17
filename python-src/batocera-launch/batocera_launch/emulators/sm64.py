@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
@@ -41,7 +40,7 @@ class Sm64(Emulator):
         # Cheat Menu
         if self.config.get_bool('cheatsmenu'):
             args.append('--cheats')
- 
+
         os.chdir(self.rom)
 
         return Command(
