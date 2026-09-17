@@ -9,7 +9,6 @@ if TYPE_CHECKING:
     from .Generator import Generator
 
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
-    'armsx2': ('armsx2.armsx2Generator', 'Armsx2Generator'),
     'eden': ('eden.edenGenerator', 'EdenGenerator'),
     'etekwar': ('etekwar.etekwarGenerator', 'EtekwarGenerator'),
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),
