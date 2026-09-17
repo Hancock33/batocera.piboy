@@ -10,7 +10,8 @@ RYUJINX_BRANCH = libryujinx_bionic
 RYUJINX_SITE_METHOD=git
 RYUJINX_GIT_SUBMODULES=YES
 RYUJINX_LICENSE = MIT
-RYUJINX_DEPENDENCIES = sdl3 openal hicolor-icon-theme adwaita-icon-theme librsvg
+RYUJINX_DEPENDENCIES = adwaita-icon-theme hicolor-icon-theme librsvg openal sdl3
+RYUJINX_EMULATOR_INFO = ryujinx.emulator.yml
 RYUJINX_DOTNET_VERSION = 9.0.318
 
 ifeq ($(BR2_x86_64),y)
@@ -51,3 +52,4 @@ endef
 RYUJINX_POST_EXTRACT_HOOKS += RYUJINX_DOTNET_INSTALL
 
 $(eval $(generic-package))
+$(eval $(emulator-info-package))

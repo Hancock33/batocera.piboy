@@ -5,7 +5,7 @@ config BR2_PACKAGE_RYUJINX
 	select BR2_PACKAGE_HICOLOR_ICON_THEME
 	select BR2_PACKAGE_LIBRSVG
 	select BR2_PACKAGE_OPENAL
-	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL3
 
 	help
 	  Ryujinx is an open-source Nintendo Switch emulator created
