@@ -164,7 +164,7 @@ class Duckstation(Emulator):
 
     @cached_property
     def sdl_controller_db_path(self) -> Path:
-        return Path('/usr/share/duckstation/resources/gamecontrollerdb.txt')
+        return Path('/usr/bin/duckstation/resources/gamecontrollerdb.txt')
 
     @property
     def _legacy(self) -> bool:
@@ -494,19 +494,18 @@ class Duckstation(Emulator):
 
         self._write_settings()
 
-        if Path('/usr/bin/duckstation-qt').exists():
-            args: list[str | Path] = ['duckstation-qt', '-batch', '-nogui', '--', rom]
+        if Path('/usr/bin/duckstation/duckstation-qt').exists():
+            args: list[str | Path] = ['/usr/bin/duckstation/duckstation-qt', '-batch', '-nogui', '--', rom]
         else:
             args = ['duckstation-nogui', '-batch', '-fullscreen', '--', rom]
 
         env: dict[str, str | Path] = {
             'XDG_CONFIG_HOME': CONFIGS,
-            'QT_QPA_PLATFORM': 'xcb' if self._legacy or not environ.get('WAYLAND_DISPLAY') else 'wayland',
             'SDL_JOYSTICK_HIDAPI': '0',
         }
 
         if not self._legacy:
             # use their modified shaderc library
-            env['LD_LIBRARY_PATH'] = '/usr/stenzek-shaderc/lib:/usr/lib'
+            env['LD_LIBRARY_PATH'] = '/usr/lib/stenzek-shaderc:/lib:/usr/lib'
 
         return Command(args, env=env)
