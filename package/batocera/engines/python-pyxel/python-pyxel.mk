@@ -26,9 +26,9 @@ endif
 
 PYTHON_PYXEL_ENV = CARGO_HOME=$(@D) TARGET=$(PYXEL_CARGO_TARGET)
 
-define PYTHON_PYXEL_MISSING
-	mkdir -p $(@D)/python/pyxel
-	touch $(@D)/python/pyxel/README.md
+# upstream's own `make build` stages these into the package dir before running maturin
+define PYTHON_PYXEL_STAGE_PACKAGE_FILES
+	cp -f $(@D)/LICENSE $(@D)/README.md $(@D)/python/pyxel/
 endef
 
 define PYTHON_PYXEL_REMOVE_PREVIOUS
@@ -43,7 +43,7 @@ define PYTHON_PYXEL_SAMPLE_AND_KEYS
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/python-pyxel/pyxel.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 
-PYTHON_PYXEL_PRE_CONFIGURE_HOOKS += PYTHON_PYXEL_MISSING
+PYTHON_PYXEL_PRE_BUILD_HOOKS += PYTHON_PYXEL_STAGE_PACKAGE_FILES
 PYTHON_PYXEL_PRE_INSTALL_TARGET_HOOKS += PYTHON_PYXEL_REMOVE_PREVIOUS
 PYTHON_PYXEL_POST_INSTALL_TARGET_HOOKS += PYTHON_PYXEL_SAMPLE_AND_KEYS
 

@@ -29,6 +29,7 @@
 - ES setting to choose controller LED mode (Rainbow, Pulse Chroma)
 - ES can now display Unicode for ID3 tags of songs played
 - ES now supports correctly Arabic and Hebrew glyph rendering
+- GameTank console support through GameTankEmulator
 - Legion Go / Go 2 LED controller support
 - Libretro-Azahar
 - NanoBoyAdvance as an alternative GBA emulator
@@ -159,7 +160,7 @@
 - Libretro-GPSP to August 25th, 2026 build
 - Libretro-GW to April 20th, 2026 build
 - Libretro-Handy to April 20th, 2026 build
-- Libretro-Hatari to August 29th, 2026 build
+- Libretro-Hatari to September 8th, 2026 build
 - Libretro-HatariB to September 16th, 2026 build
 - Libretro-Holani to 1.0.0
 - Libretro-iMame to September 1st, 2026 build
@@ -224,7 +225,7 @@
 - Libretro-Xmil to August 23rd, 2026 build
 - Libretro-Xrick to July 28th, 2026 build
 - Libretro-Yabasanshiro to August 23rd, 2026 build
-- Lightspark to 0.9.0
+- Lightspark to Sep 14, 2026 build
 - LinuxLoader to v3.0.10
 - Moonlight-Embedded to Jun 5, 2026 build
 - Moonlight-QT to Sep 8, 2026 build
@@ -237,7 +238,7 @@
 - PCSX2x6 to v0.2.22
 - Play to 0.77
 - PPSSPP to v1.20.4
-- Python Pyxel to May 9th, 2026 build
+- Python Pyxel to v2.9.9
 - Redream to 1.5.0-1240
 - RPCS3 to Sep 17th, 2026 build
 - Ruffle to 17th of September 2026 nightly build
@@ -253,7 +254,7 @@
 - TRX to 1.10.2
 - Tsugaru to v20260522
 - Ur-Quan Masters to Aug 21, 2026 build
-- Visual Pinball to Sep 9, 2026 build
+- Visual Pinball to Sep 16, 2026 build
 - Vita3k to Sep 17, 2026 build
 - VKQuake to 1.36.0
 - vkQuake2 to Aug 5, 2026 build
