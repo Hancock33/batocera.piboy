@@ -12,7 +12,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'eden': ('eden.edenGenerator', 'EdenGenerator'),
     'etekwar': ('etekwar.etekwarGenerator', 'EtekwarGenerator'),
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),
-    'linuxloader': ('linuxloader.linuxloaderGenerator', 'LinuxLoaderGenerator'),
     'mame': ('mame.mameGenerator', 'MameGenerator'),
     'nesbox': ('nesbox.nesboxGenerator', 'NesboxGenerator'),
     'omf2097': ('omf2097.omf2097Generator', 'Omf2097Generator'),
