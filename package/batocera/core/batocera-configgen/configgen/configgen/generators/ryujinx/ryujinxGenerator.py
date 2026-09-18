@@ -169,7 +169,6 @@ class RyujinxGenerator(Generator):
                     version1 = (version)[-2::]
                     version2 = (version)[:-2]
                     version = version1 + version2
-                    ctrlUUID = (f"{pad.index}-{bustype}-{vendor}-0000-{product}-0000{version}0000")
                     ctrlConf["id"] = '0-00000003-28de-0000-0512-000010010000'
                     # always configure a pro controller for now
                     ctrlConf["controller_type"] = "ProController"
