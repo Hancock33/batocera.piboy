@@ -1,19 +1,8 @@
---- a/meson.build
-+++ b/meson.build
-@@ -274,7 +274,9 @@
- subdir('data/')
- subdir('contrib/')
- subdir('docs/')
--subdir('tests/')
-+if not meson.is_cross_build()
-+    subdir('tests/')
-+endif
- if get_option('qt')
-     subdir('qt/')
- endif
+diff --git a/data/meson.build b/data/meson.build
+index 3c9d6e76..078b3957 100644
 --- a/data/meson.build
 +++ b/data/meson.build
-@@ -7,12 +7,8 @@
+@@ -7,12 +7,8 @@ install_data('its/metainfo.its',
  install_data('its/metainfo.loc',
                install_dir: join_paths(get_option('datadir'), 'gettext', 'its'))
  
@@ -28,7 +17,7 @@
  
  # NOTE: We do not translate the release notes on purpose here.
  # If you do want to give translators a chance to translate them,
-@@ -40,12 +36,13 @@
+@@ -40,12 +36,13 @@ test('as-validate_metainfo.cli',
             '--no-net',
             metainfo_i18n]
  )
@@ -43,3 +32,20 @@
      ascompose_metainfo = 'org.freedesktop.appstream.compose.metainfo.xml'
      test('as-validate_metainfo.compose',
           ascli_exe,
+diff --git a/meson.build b/meson.build
+index 004dce32..0178017b 100644
+--- a/meson.build
++++ b/meson.build
+@@ -273,8 +273,10 @@ subdir('tools/')
+ subdir('po/')
+ subdir('data/')
+ subdir('contrib/')
+-subdir('docs/')
+-subdir('tests/')
++#subdir('docs/')
++if not meson.is_cross_build()
++    subdir('tests/')
++endif
+ if get_option('qt')
+     subdir('qt/')
+ endif

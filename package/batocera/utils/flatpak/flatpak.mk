@@ -11,7 +11,7 @@ FLATPAK_EMULATOR_INFO = flatpak.emulator.yml
 
 FLATPAK_DEPENDENCIES += adwaita-icon-theme adwaita-icon-theme-light appstream bubblewrap
 FLATPAK_DEPENDENCIES += gdk-pixbuf glib-networking hicolor-icon-theme host-bison
-FLATPAK_DEPENDENCIES += host-pkgconf host-python3-pyparsing json-glib libarchive libcap
+FLATPAK_DEPENDENCIES += host-pkgconf host-python-pyparsing json-glib libarchive libcap
 FLATPAK_DEPENDENCIES += libcurl libfuse3 libglib2 libgpgme libostree libseccomp libxml2
 FLATPAK_DEPENDENCIES += polkit xdg-dbus-proxy
 
