@@ -396,6 +396,9 @@ gamecube:
 gamegear:
   emulator: libretro
   core:     genesisplusgx
+gametank:
+  emulator: gametank-emulator
+  core:     gametank-emulator
 gamepock:
   emulator: libretro
   core:     mame

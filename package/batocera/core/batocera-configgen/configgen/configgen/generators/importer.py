@@ -9,11 +9,8 @@ if TYPE_CHECKING:
     from .Generator import Generator
 
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
-    'armsx2': ('armsx2.armsx2Generator', 'Armsx2Generator'),
-    'duckstation': ('duckstation.duckstationGenerator', 'DuckstationGenerator'),
     'eden': ('eden.edenGenerator', 'EdenGenerator'),
     'etekwar': ('etekwar.etekwarGenerator', 'EtekwarGenerator'),
-    'f2bgl': ('f2bgl.f2bglGenerator', 'F2bglGenerator'),
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),
     'linuxloader': ('linuxloader.linuxloaderGenerator', 'LinuxLoaderGenerator'),
     'mame': ('mame.mameGenerator', 'MameGenerator'),
@@ -21,15 +18,8 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'omf2097': ('omf2097.omf2097Generator', 'Omf2097Generator'),
     'openclaw': ('openclaw.openclawGenerator', 'OpenclawGenerator'),
     'openlara': ('openlara.openlaraGenerator', 'OpenlaraGenerator'),
-    'opentyrian': ('opentyrian.opentyrianGenerator', 'OpentyrianGenerator'),
     'raptor': ('raptor.raptorGenerator', 'RaptorGenerator'),
-    'rott': ('rott.rottGenerator', 'RottGenerator'),
-    'rtcw': ('rtcw.rtcwGenerator', 'RtcwGenerator'),
     'ryujinx': ('ryujinx.ryujinxGenerator', 'RyujinxGenerator'),
-    'serioussam': ('serioussam.serioussamGenerator', 'SerioussamGenerator'),
-    'sm64': ('sm64.sm64Generator', 'Sm64Generator'),
-    'sonicmania': ('sonicmania.sonicmaniaGenerator', 'SonicManiaGenerator'),
-    'sonicnexus': ('sonicnexus.sonicnexusGenerator', 'SonicNexusGenerator'),
     'stalker': ('stalker.stalkerGenerator', 'StalkerGenerator'),
     'stk': ('stk.stkGenerator', 'StkGenerator'),
     'touchhle': ('touchhle.touchhleGenerator', 'TouchHLEGenerator'),

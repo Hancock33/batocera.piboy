@@ -1,5 +1,5 @@
 diff --git a/pcsx2/CDVD/CDVD.cpp b/pcsx2/CDVD/CDVD.cpp
-index 405bebb0b..f6f6c719e 100644
+index 3b6ab2e11..54786b7f2 100644
 --- a/pcsx2/CDVD/CDVD.cpp
 +++ b/pcsx2/CDVD/CDVD.cpp
 @@ -6,7 +6,7 @@

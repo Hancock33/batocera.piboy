@@ -22,6 +22,7 @@ BATOCERA_LAUNCH_LOCAL_PYTHON_EXCLUSIONS = \
 		$(if $(BR2_PACKAGE_AMIBERRY),,amiberry.py) \
 		$(if $(BR2_PACKAGE_AMIBERRY_LITE),,amiberry.py) \
 		$(if $(BR2_PACKAGE_APPLEWIN),,applewin.py) \
+		$(if $(BR2_PACKAGE_ARMSX2),,armsx2.py) \
 		$(if $(BR2_PACKAGE_AZAHAR),,azahar.py) \
 		$(if $(BR2_PACKAGE_BIGPEMU),,bigpemu.py) \
 		$(if $(BR2_PACKAGE_BSTONE),,bstone.py) \
@@ -36,6 +37,7 @@ BATOCERA_LAUNCH_LOCAL_PYTHON_EXCLUSIONS = \
 		$(if $(BR2_PACKAGE_DOSBOX),,dosbox.py) \
 		$(if $(BR2_PACKAGE_DOSBOX_STAGING),,dosbox_staging.py) \
 		$(if $(BR2_PACKAGE_DOSBOX_X),,dosboxx.py) \
+		$(if $(BR2_PACKAGE_DUCKSTATION)$(BR2_PACKAGE_DUCKSTATION_LEGACY),,duckstation.py) \
 		$(if $(BR2_PACKAGE_DXX_REBIRTH),,dxx_rebirth.py) \
 		$(if $(BR2_PACKAGE_EASYRPG_PLAYER),,easyrpg.py) \
 		$(if $(BR2_PACKAGE_ECWOLF),,ecwolf.py) \
@@ -44,6 +46,7 @@ BATOCERA_LAUNCH_LOCAL_PYTHON_EXCLUSIONS = \
 		$(if $(BR2_PACKAGE_PIFBA),,fba2x.py) \
 		$(if $(BR2_PACKAGE_FLATPAK),,flatpak.py) \
 		$(if $(BR2_PACKAGE_FSUAE),,fsuae.py) \
+		$(if $(BR2_PACKAGE_GAMETANK_EMULATOR),,gametank_emulator.py) \
 		$(if $(BR2_PACKAGE_GSPLUS),,gsplus.py) \
 		$(if $(BR2_PACKAGE_HATARI),,hatari.py) \
 		$(if $(BR2_PACKAGE_HCL),,hcl.py) \
@@ -51,7 +54,7 @@ BATOCERA_LAUNCH_LOCAL_PYTHON_EXCLUSIONS = \
 		$(if $(BR2_PACKAGE_HYPSEUS_SINGE),,hypseus_singe.py) \
 		$(if $(BR2_PACKAGE_IKEMEN),,ikemen.py) \
 		$(if $(BR2_PACKAGE_IOQUAKE3)$(BR2_PACKAGE_VKQUAKE3),,ioquake3.py) \
-		$(if $(BR2_PACKAGE_IORTCW),,iortcw.py) \
+		$(if $(BR2_PACKAGE_RTCW),,iortcw.py) \
 		$(if $(BR2_PACKAGE_JAZZ2_NATIVE),,jazz2_native.py) \
 		$(if $(BR2_PACKAGE_LIGHTSPARK),,lightspark.py) \
 		$(if $(BR2_PACKAGE_MELONDS),,melonds.py) \
@@ -73,18 +76,18 @@ BATOCERA_LAUNCH_LOCAL_PYTHON_EXCLUSIONS = \
 		$(if $(BR2_PACKAGE_SHADPS4),,shadps4.py) \
 		$(if $(BR2_PACKAGE_SOLARUS_ENGINE),,solarus.py) \
 		$(if $(BR2_PACKAGE_SONIC3_AIR),,sonic3_air.py) \
-		$(if $(BR2_PACKAGE_SONIC_MANIA),,sonic_mania.py) \
+		$(if $(BR2_PACKAGE_SONICMANIA),,sonicmania.py) \
 		$(if $(BR2_PACKAGE_SONIC2013)$(BR2_PACKAGE_SONICCD),,sonicretro.py) \
 		$(if $(BR2_PACKAGE_BATOCERA_STEAM),,steam.py) \
 		$(if $(BR2_PACKAGE_STELLA),,stella.py) \
 		$(if $(BR2_PACKAGE_SUPERMODEL),,supermodel.py) \
-		$(if $(BR2_PACKAGE_TARADINO),,taradino.py) \
+		$(if $(BR2_PACKAGE_ROTT),,taradino.py) \
 		$(if $(BR2_PACKAGE_THEFORCEENGINE),,theforceengine.py) \
 		$(if $(BR2_PACKAGE_THEXTECH),,thextech.py) \
 		$(if $(BR2_PACKAGE_TIC80),,tic80.py) \
 		$(if $(BR2_PACKAGE_TRX),,trx.py) \
 		$(if $(BR2_PACKAGE_TSUGARU),,tsugaru.py) \
-		$(if $(BR2_PACKAGE_TYRIAN),,tyrian.py) \
+		$(if $(BR2_PACKAGE_TYRIAN),,opentyrian.py) \
 		$(if $(BR2_PACKAGE_UQM),,uqm.py) \
 		$(if $(BR2_PACKAGE_UZDOOM),,uzdoom.py) \
 		$(if $(BR2_PACKAGE_VICE),,vice.py) \

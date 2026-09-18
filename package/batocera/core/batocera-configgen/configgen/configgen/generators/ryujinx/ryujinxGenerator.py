@@ -87,7 +87,7 @@ ryujinxCtrl: dict[str, Any] = {
         "button_a": btn_a
     },
     "version": 1,
-    "backend": "GamepadSDL2",
+    "backend": "GamepadSDL3",
 }
 
 class RyujinxGenerator(Generator):
@@ -120,7 +120,7 @@ class RyujinxGenerator(Generator):
         conf["game_dirs"] = [str(ROMS / "switch")]
         conf["start_fullscreen"] = True
         conf["docked_mode"] = True
-        conf["audio_backend"] = "SDL2"
+        conf["audio_backend"] = "SDL3"
         conf["audio_volume"] = 1
         # set ryujinx app language
         conf["language_code"] = str(getLangFromEnvironment())
@@ -170,7 +170,7 @@ class RyujinxGenerator(Generator):
                     version2 = (version)[:-2]
                     version = version1 + version2
                     ctrlUUID = (f"{pad.index}-{bustype}-{vendor}-0000-{product}-0000{version}0000")
-                    ctrlConf["id"] = ctrlUUID
+                    ctrlConf["id"] = '0-00000003-28de-0000-0512-000010010000'
                     # always configure a pro controller for now
                     ctrlConf["controller_type"] = "ProController"
                     playerNum = (f"Player{nplayer}")

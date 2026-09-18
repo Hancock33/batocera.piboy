@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import CONFIGS, ROMS
+from batocera_common.paths import CONFIGS
 from batocera_launch import Command, Emulator, HotkeysContext
 
 
@@ -21,7 +21,7 @@ class Taradino(Emulator):
             ['taradino'],
             env={
                 'XDG_DATA_HOME': CONFIGS,
-                'XDG_DATA_DIRS': ROMS / 'rott',
+                'XDG_DATA_DIRS': '/userdata/roms/ports/rott',
                 'SDL_JOYSTICK_HIDAPI': '0',
                 'SDL_VIDEODRIVER': 'x11',
             },

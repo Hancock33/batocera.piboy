@@ -3,8 +3,8 @@
 # uzdoom
 #
 ################################################################################
-# Version: Commits on Sept 13, 2026
-UZDOOM_VERSION = 47502c00f30f6ebb9404f77f12756453d75991ac
+# Version: Commits on Sept 10, 2026
+UZDOOM_VERSION = 557a7658b8028ee3a12de7f88fa345d8d45a030a
 UZDOOM_SITE = https://github.com/UZDoom/UZDoom.git
 UZDOOM_SITE_METHOD = git
 UZDOOM_LICENSE = GPLv3

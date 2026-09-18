@@ -3,6 +3,7 @@ shared_features:
   - autosave
 file_extensions:
   - bin
+  - cart
   - zip
   - '0'
 systems:
