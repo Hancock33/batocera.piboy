@@ -12,7 +12,9 @@ Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-09-18|Sept 18,
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|cdf61ffe137ef86602d17c6c0de2de943bd59299|Sept 18, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|3180c7076e898a04fa48fc967debce90c40872e5|Sept 18, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|71e6528c4e9ce5d5a9b93523e5f539fa3f827b81|Sept 18, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260918|Sept 18, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|d5813e38783fbe73afbc90def65f8b5c9f76f4e1|Sept 18, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260918|Sept 18, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|35db476bc5b0baad50cf097a251fce5d3896d1f7|Sept 18, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|6bb3167a044e19e7106a5110d5531aa9c6afa96f|Sept 18, 2026
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|69ed23def99cca2b51271ef0a4aa0e2def328e12|Sept 18, 2026
@@ -26,10 +28,8 @@ Engines|[tic80](https://github.com/nesbox/TIC-80.git)|e4c65572b45573f0adf1cd3f18
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2026.09|Sept 17, 2026
 Ports|[avp](http://github.com/atsb/NakedAVP)|55b6d4a920fbf422fe25f45ce032c286cd9390f4|Sept 17, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0af004222189b1f35aec3696cf2559b628cbfd95|Sept 17, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260917|Sept 17, 2026
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.42.0|Sept 17, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.42.0|Sept 17, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260917|Sept 17, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|e4530cd991095b9d7a7868de8d120ab2e5bcc846|Sept 17, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20260917|Sept 17, 2026
 Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|f8395036544d806ebc68fd110a5621c49991a91d|Sept 17, 2026
