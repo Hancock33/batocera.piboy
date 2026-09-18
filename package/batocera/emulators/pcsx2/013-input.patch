@@ -1,8 +1,8 @@
 diff --git a/pcsx2/Input/InputManager.cpp b/pcsx2/Input/InputManager.cpp
-index f0aed8e52..6030ab244 100644
+index 813b6da7f..17a020a25 100644
 --- a/pcsx2/Input/InputManager.cpp
 +++ b/pcsx2/Input/InputManager.cpp
-@@ -1752,30 +1752,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
+@@ -1768,30 +1768,30 @@ std::vector<InputBindingKey> InputManager::EnumerateMotors()
  
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {

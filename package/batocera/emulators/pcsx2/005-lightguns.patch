@@ -21,10 +21,10 @@ index 6bf97103c..a74921c83 100644
  }
  
 diff --git a/pcsx2/Input/InputManager.h b/pcsx2/Input/InputManager.h
-index 194c4295d..496249e6e 100644
+index 6944355b5..18222b515 100644
 --- a/pcsx2/Input/InputManager.h
 +++ b/pcsx2/Input/InputManager.h
-@@ -166,7 +166,7 @@ namespace InputManager
+@@ -167,7 +167,7 @@ namespace InputManager
  	static constexpr double VIBRATION_UPDATE_INTERVAL_SECONDS = 0.5; // 500ms
  
  	/// Maximum number of host mouse devices.
