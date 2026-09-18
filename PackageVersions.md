@@ -23,6 +23,7 @@ Boot|[batocera-shim-signed-efi-ia32](https://snapshot.debian.org/archive/debian/
 Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.58+15.8-0ubuntu1|Apr 04, 2023
 Boot|[batocera-syslinux-efi](binaries)|6.04.pre2.r11.gbf6db5b4-2|Nov 29, 2023
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|3e288fe814e059dd06833495f845cab04ac20a5c|Jun 26, 2026
+Boot|[rkbin](https://github.com/rockchip-linux/rkbin.git)|3e288fe814e059dd06833495f845cab04ac20a5c|Jun 26, 2026
 Boot|[rocknix-abl](http://github.com/ROCKNIX/abl)|v1.1.8|Aug 01, 2026
 Boot|[rockpro64-blobs](https://github.com/batocera-linux/rockpro64-blobs.git)|2.0|Mar 03, 2020
 Boot|[uboot-anbernic-h700](https://ftp.denx.de/pub/u-boot)|2026.04|N/A
@@ -33,6 +34,7 @@ Boot|[uboot-powkiddy-a13](http://github.com/alpgarcia/caesar-u-boot)|powkiddy-a1
 Boot|[uboot-ps5000](http://github.com/rk3128-cfw/caesar-u-boot)|e20e9d85d326345fb2e80105a79263c95757414f|N/A
 Boot|[uboot-ps7000](http://github.com/rk3128-cfw/caesar-u-boot)|e20e9d85d326345fb2e80105a79263c95757414f|Sept 13, 2021
 Boot|[uboot-rk3326](https://github.com/ROCKNIX/hardkernel-uboot)|611716febddb824a7203d0d3b5d399608a54ccf6|Dec 05, 2025
+Boot|[uboot-rk3562](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Boot|[uboot-rk356x](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Boot|[uboot-rk3576](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Boot|[uboot-rk3588](https://ftp.denx.de/pub/u-boot)|2026.07|Jul 07, 2026
@@ -71,7 +73,7 @@ Database|[influxdb](https://dl.influxdata.com/influxdb/releases/)|v2.8.0|Dec 12,
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|1750dded8c0fdff70630026f756a69fcad0bb995|Sept 13, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|1750dded8c0fdff70630026f756a69fcad0bb995|Sept 13, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|4318a86d31bbf4fa50465650021e26e812eee95d|Sept 14, 2026
-Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.2|Mar 24, 2026
+Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.3|Sept 18, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.3.0|Aug 05, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|810bf09e3ecad961927b1401357834f55cb770f0|Sept 06, 2026
 Emulators|[ares](http://github.com/ares-emulator/ares)|v148|May 28, 2026
@@ -257,12 +259,12 @@ Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64pl
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|f0a7b9f391b0e9bc14962b114f7da1ba553060be|Sept 15, 2026
 Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3|May 10, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|621950b5bb3e47699b7c6b99dbe151ed110a1375|Jun 08, 2026
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.57|Sept 18, 2026
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.58|Sept 18, 2026
 Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|Aug 18, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|3b2f0f0c1f31e19310ceecd97882e7ea67eafc5a|Sept 18, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|73106363e14e34c08a5854b4cfbc29f184e3b783|Aug 13, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|1ef03e7980d09d8ed67cffaf6a5d73c1d2baab43|Sept 18, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|d5813e38783fbe73afbc90def65f8b5c9f76f4e1|Sept 18, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260820|Aug 20, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|8db660b185496f115701ef4c77c1ca2bef60e422|Sept 17, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|280c427c550c5fe3bcc46b378e06a9b90a7e6b09|Sept 18, 2026
@@ -456,7 +458,7 @@ Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|9342a53e63e2b281735241f4bf
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|e5501815ca7181b52432c4620dcd48ed2fa62402|Jun 07, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0af004222189b1f35aec3696cf2559b628cbfd95|Sept 17, 2026
 Ports|[dhewm3](http://github.com/dhewm/dhewm3)|1.5.5|Jun 08, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|a85ba3e4bdfd0e6a26789d819cf6bc753d2089c0|Sept 18, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|35db476bc5b0baad50cf097a251fce5d3896d1f7|Sept 18, 2026
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|e57448920ac88e188e98d0af555dab9319862167|Aug 30, 2026
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e|Feb 18, 2026
@@ -514,7 +516,7 @@ Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2a
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|42e6641258603a6605d8d9a16cdc44b4d86fb8b7|Sept 16, 2026
 Ports|[stk](https://github.com/supertuxkart/stk-code/releases)|1.5|Oct 20, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|9f0f8e6e0aca08b715a0f9291ba21c3dc3cab39d|Jan 19, 2026
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2a5abe1f52defeb9a2b16b4e77d3a925e9d1295c|Sept 17, 2026
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|71e6528c4e9ce5d5a9b93523e5f539fa3f827b81|Sept 18, 2026
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|20260603|Jun 01, 2026
 Ports|[theforceengine](http://github.com/TheForceEngine/TheForceEngine)|v1.22.420|Sept 10, 2025
 Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.10.2|Aug 20, 2026

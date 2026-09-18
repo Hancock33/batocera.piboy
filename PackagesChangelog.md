@@ -1,7 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.3|Sept 18, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|04f821c0443e6ff9bb79908671c5ec162d29acc8|Sept 18, 2026
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.57|Sept 18, 2026
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.58|Sept 18, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|3b2f0f0c1f31e19310ceecd97882e7ea67eafc5a|Sept 18, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|280c427c550c5fe3bcc46b378e06a9b90a7e6b09|Sept 18, 2026
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|3e65fd24eb9eef4f3676ea3e51dac8bcd936bc8f|Sept 18, 2026
@@ -10,8 +11,9 @@ Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|49bf1e8
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-09-18|Sept 18, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|cdf61ffe137ef86602d17c6c0de2de943bd59299|Sept 18, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|3180c7076e898a04fa48fc967debce90c40872e5|Sept 18, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|1ef03e7980d09d8ed67cffaf6a5d73c1d2baab43|Sept 18, 2026
-Ports|[doomretro](http://github.com/bradharding/doomretro)|a85ba3e4bdfd0e6a26789d819cf6bc753d2089c0|Sept 18, 2026
+Ports|[supertux2](https://github.com/SuperTux/supertux.git)|71e6528c4e9ce5d5a9b93523e5f539fa3f827b81|Sept 18, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|d5813e38783fbe73afbc90def65f8b5c9f76f4e1|Sept 18, 2026
+Ports|[doomretro](http://github.com/bradharding/doomretro)|35db476bc5b0baad50cf097a251fce5d3896d1f7|Sept 18, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|6bb3167a044e19e7106a5110d5531aa9c6afa96f|Sept 18, 2026
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|69ed23def99cca2b51271ef0a4aa0e2def328e12|Sept 18, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|3b2f0f0c1f31e19310ceecd97882e7ea67eafc5a|Sept 18, 2026
@@ -24,7 +26,6 @@ Engines|[tic80](https://github.com/nesbox/TIC-80.git)|e4c65572b45573f0adf1cd3f18
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2026.09|Sept 17, 2026
 Ports|[avp](http://github.com/atsb/NakedAVP)|55b6d4a920fbf422fe25f45ce032c286cd9390f4|Sept 17, 2026
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|0af004222189b1f35aec3696cf2559b628cbfd95|Sept 17, 2026
-Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2a5abe1f52defeb9a2b16b4e77d3a925e9d1295c|Sept 17, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260917|Sept 17, 2026
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.42.0|Sept 17, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.42.0|Sept 17, 2026
@@ -312,6 +313,7 @@ Utils|[tvtextviewer](https://github.com/lethal-guitar/TvTextViewer.git)|2e961201
 Emulators|[libretro-noods](http://github.com/jonian/libretro-noods)|9a2665306927ede64f4b5c109df79f4015607dbc|Jun 28, 2026
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|v2.0.2.6|Jun 27, 2026
 Boot|[rk3128-blobs](https://github.com/rockchip-linux/rkbin.git)|3e288fe814e059dd06833495f845cab04ac20a5c|Jun 26, 2026
+Boot|[rkbin](https://github.com/rockchip-linux/rkbin.git)|3e288fe814e059dd06833495f845cab04ac20a5c|Jun 26, 2026
 Emulators|[libretro-skyemu](http://github.com/skylersaleh/SkyEmu)|01516d6798e3652b583e6a366085bb51c43b528d|Jun 26, 2026
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|2faed1c7e62c5f292948e7cd2398c184970cf794|Jun 23, 2026
 Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-input-sdl)|842c39e89749aa3a8d02202b2afddd20b29cdfdb|Jun 23, 2026
@@ -405,7 +407,6 @@ Libraries|[python-adafruit-circuitpython-requests](https://files.pythonhosted.or
 Libraries|[python-adafruit-circuitpython-ws2801](https://files.pythonhosted.org/packages/4c/c2/861a532827eb3660bcc0ec035d46e66c3ac961c79fa4689402110fd198d9)|1.0.5|Mar 27, 2026
 Libraries|[python-adafruit-blinka](https://files.pythonhosted.org/packages/b5/ff/a6be4040131fcae271a6b10900093b48b9e5332726ed95bab28191455d2b)|9.0.4|Mar 25, 2026
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|48bc0d079116c6429989bcf88595ef20c5c1b80f|Mar 25, 2026
-Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.2|Mar 24, 2026
 Utils|[od-commander](http://github.com/jwty/tv-commander)|1ca465f7cd5e080d13a8906fdfc45eb543ea255c|Mar 24, 2026
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|2b4ea3c6c18caf60959efee1f2534c2122607716|Mar 20, 2026
 Utils|[switchres](http://github.com/antonioginer/switchres)|v2.2.2|Mar 19, 2026
@@ -586,6 +587,7 @@ Libraries|[python-proxy-tools](https://files.pythonhosted.org/packages/f2/cf/77d
 Utils|[pm-utils](http://pm-utils.freedesktop.org/releases)|1.4.1|Jul 04, 2010
 Boot|[uboot-anbernic-h700](https://ftp.denx.de/pub/u-boot)|2026.04|N/A
 Boot|[uboot-ps5000](http://github.com/rk3128-cfw/caesar-u-boot)|e20e9d85d326345fb2e80105a79263c95757414f|N/A
+Boot|[uboot-rk3562](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Boot|[uboot-rk356x](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Boot|[uboot-rk3576](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Emulators|[demul]()|demul_251220|N/A

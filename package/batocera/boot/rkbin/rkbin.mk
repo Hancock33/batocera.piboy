@@ -3,8 +3,8 @@
 # rkbin
 #
 ################################################################################
-
-RKBIN_VERSION = ecb4fcbe954edf38b3ae037d5de6d9f5bccf81f4
+# Version: Commits on Jun 26, 2026
+RKBIN_VERSION = 3e288fe814e059dd06833495f845cab04ac20a5c
 RKBIN_SITE = https://github.com/rockchip-linux/rkbin.git
 RKBIN_SITE_METHOD = git
 RKBIN_LICENSE = PROPRIETARY
