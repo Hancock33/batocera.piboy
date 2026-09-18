@@ -31,7 +31,7 @@ class Nesbox(Emulator):
         commandArray = ['tic80']
         rombase = self.rom.stem
 
-        if (rombase.lower() == 'surf' or rombase.lower() == 'console'):
+        if rombase.lower() == 'surf' or rombase.lower() == 'console':
             args.append('--cmd=surf')
         else:
             commandArray.extend(self.rom)
