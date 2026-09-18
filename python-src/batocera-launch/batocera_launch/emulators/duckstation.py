@@ -12,8 +12,6 @@ from batocera_launch import BatoceraException, Command, Emulator, HotkeysContext
 if TYPE_CHECKING:
     from collections.abc import Mapping, Sequence
 
-_LEGACY_CORE: Final = 'duckstation-legacy'
-
 _LANGUAGES: Final = {
     'en_US': 'en',
     'de_DE': 'de',
@@ -174,10 +172,6 @@ class Duckstation(Emulator):
     def sdl_controller_db_path(self) -> Path:
         return Path('/usr/bin/duckstation/resources/gamecontrollerdb.txt')
 
-    @property
-    def _legacy(self) -> bool:
-        return self.core == _LEGACY_CORE
-
     def _write_settings(self) -> None:
         settings = CaseSensitiveConfigParser(interpolation=None)
         settings_path = self.config_dir / 'settings.ini'
@@ -214,8 +208,7 @@ class Duckstation(Emulator):
         settings.set('Main', 'PauseOnMenu', 'true')
         settings.set('Main', 'ConfirmPowerOff', 'false')
         settings.set('Main', 'ApplyGameSettings', 'true')
-        if not self._legacy:
-            settings.set('Main', 'SetupWizardIncomplete', 'false')
+        settings.set('Main', 'SetupWizardIncomplete', 'false')
         settings.set('Main', 'EmulationSpeed', self.config.get('duckstation_clocking', '1'))
         settings.set('Main', 'SyncToHostRefreshRate', self.config.get('duckstation_hrr', 'false'))
 
@@ -247,17 +240,13 @@ class Duckstation(Emulator):
 
         ## [Console]
         settings.set('Console', 'Region', self.config.get('duckstation_region', 'Auto'))
-        if not self._legacy:
-            settings.set('Console', 'EnableCheats', self.config.get('duckstation_cheats', 'False'))
+        settings.set('Console', 'EnableCheats', self.config.get('duckstation_cheats', 'False'))
 
         ## [BIOS]
         settings.set('BIOS', 'SearchDirectory', str(BIOS))
         settings.set('BIOS', 'PatchFastBoot', self.config.get('duckstation_PatchFastBoot', 'false'))
 
         found_bios = _find_bios()
-        if self._legacy:
-            # the legacy core knows nothing about a universal BIOS
-            found_bios.pop('Uni', None)
 
         if not found_bios:
             raise BatoceraException('No PSX1 BIOS found')
@@ -354,11 +343,10 @@ class Duckstation(Emulator):
                 'Leaderboards',
                 self.config.get_bool('retroachievements.leaderboards', return_values=('true', 'false')),
             )
-            if not self._legacy:
-                settings.set(
-                    'Cheevos',
-                    'UnofficialTestMode',
-                    self.config.get_bool('retroachievements.unofficial', return_values=('true', 'false')),
+            settings.set(
+                'Cheevos',
+                'UnofficialTestMode',
+                self.config.get_bool('retroachievements.unofficial', return_values=('true', 'false')),
                 )
         else:
             settings.set('Cheevos', 'Enabled', 'false')
@@ -391,9 +379,8 @@ class Duckstation(Emulator):
 
         ## [Folders]
         # Paths are relative to the config directory
-        if not self._legacy:
-            for directory in (CACHE / 'duckstation', SCREENSHOTS, SAVES / 'duckstation', CHEATS / 'duckstation'):
-                directory.mkdir(parents=True, exist_ok=True)
+        for directory in (CACHE / 'duckstation', SCREENSHOTS, SAVES / 'duckstation', CHEATS / 'duckstation'):
+            directory.mkdir(parents=True, exist_ok=True)
 
         settings.set('Folders', 'Cache', '../../cache/duckstation')
         settings.set('Folders', 'Screenshots', '../../../screenshots')
@@ -414,9 +401,8 @@ class Duckstation(Emulator):
         settings.set('CDROM', 'AllowBootingWithoutSBIFile', self.config.get('duckstation_boot_without_sbi', 'false'))
 
         ## [UI]
-        if not self._legacy:
-            if not settings.has_section('UI'):
-                settings.add_section('UI')
+        if not settings.has_section('UI'):
+            settings.add_section('UI')
             settings.set('UI', 'UnofficialBuildWarningConfirmed', 'true')
 
         settings_path.parent.mkdir(parents=True, exist_ok=True)
@@ -454,18 +440,11 @@ class Duckstation(Emulator):
             settings.set(section, 'AnalogDPadInDigitalMode', digitalmode or 'false')
             if digitalmode and controller_type == 'AnalogController':
                 # the legacy core needs a chord, the current one toggles on Guide alone
-                settings.set(section, 'Analog', f'{sdl}/Guide & {sdl}/+LeftTrigger' if self._legacy else f'{sdl}/Guide')
+                settings.set(section, 'Analog', f'{sdl}/Guide')
 
             if controller_type == 'NeGcon':
                 for option, binding in _NEGCON_BINDINGS.items():
                     settings.set(section, option, f'{sdl}/{binding}')
-
-            # The legacy core drives a GunCon through the controller type rather than a detected gun
-            if self._legacy and controller_type == 'GunCon':
-                settings.set(section, 'Trigger', f'{sdl}/+RightTrigger')
-                settings.set(section, 'ShootOffscreen', f'{sdl}/+LeftTrigger')
-                settings.set(section, 'A', f'{sdl}/A')
-                settings.set(section, 'B', f'{sdl}/B')
 
             if controller_type == 'PlayStationMouse':
                 settings.set(section, 'Right', f'{sdl}/B')
@@ -473,9 +452,7 @@ class Duckstation(Emulator):
                 settings.set(section, 'RelativeMouseMode', f'{sdl}true')
 
     def _write_guns(self, settings: CaseSensitiveConfigParser, /) -> None:
-        # Guns - configure based on detected guns, not controllers. The legacy core has no
-        # equivalent; it maps a GunCon from the controller type in _write_pads instead.
-        if self._legacy or not (self.config.use_guns and self.guns):
+        if (self.config.use_guns and self.guns):
             return
 
         for player, _ in enumerate(self.guns[:8], start=1):
@@ -504,18 +481,12 @@ class Duckstation(Emulator):
 
         self._write_settings()
 
-        if Path('/usr/bin/duckstation/duckstation-qt').exists():
-            args: list[str | Path] = ['/usr/bin/duckstation/duckstation-qt', '-batch', '-nogui', '--', rom]
-        else:
-            args = ['duckstation-nogui', '-batch', '-fullscreen', '--', rom]
+        args: list[str | Path] = ['/usr/bin/duckstation/duckstation-qt', '-batch', '-nogui', '--', rom]
 
         env: dict[str, str | Path] = {
+            'LD_LIBRARY_PATH': '/usr/lib/stenzek-shaderc:/lib:/usr/lib',
             'XDG_CONFIG_HOME': CONFIGS,
-            'SDL_JOYSTICK_HIDAPI': '0',
+            'SDL_JOYSTICK_HIDAPI': '0'
         }
-
-        if not self._legacy:
-            # use their modified shaderc library
-            env['LD_LIBRARY_PATH'] = '/usr/lib/stenzek-shaderc:/lib:/usr/lib'
 
         return Command(args, env=env)
