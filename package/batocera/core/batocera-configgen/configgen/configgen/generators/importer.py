@@ -21,7 +21,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'stalker': ('stalker.stalkerGenerator', 'StalkerGenerator'),
     'stk': ('stk.stkGenerator', 'StkGenerator'),
     'touchhle': ('touchhle.touchhleGenerator', 'TouchHLEGenerator'),
-    'xboxcloud': ('xboxcloud.xboxcloudGenerator', 'XboxcloudGenerator'),
     'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
 }
 

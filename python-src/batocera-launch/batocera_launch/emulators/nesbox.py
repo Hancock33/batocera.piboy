@@ -34,7 +34,7 @@ class Nesbox(Emulator):
         if rombase.lower() == 'surf' or rombase.lower() == 'console':
             args.append('--cmd=surf')
         else:
-            commandArray.extend(self.rom)
+            commandArray.extend(str(self.rom))
 
         return Command(
             args,
