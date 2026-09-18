@@ -1,20 +1,19 @@
 diff --git a/drivers/hid/hid-steam.c b/drivers/hid/hid-steam.c
-index 80d2eabc930e..5f0956aae4ff 100644
+index 9cd07607d082..4c487bdf30dc 100644
 --- a/drivers/hid/hid-steam.c
 +++ b/drivers/hid/hid-steam.c
-@@ -1113,7 +1113,10 @@ static int steam_register(struct steam_device *steam)
+@@ -1405,6 +1405,10 @@ static int steam_register(struct steam_device *steam)
+ 			steam->quirks & STEAM_QUIRK_DECK ? "Deck" : "Controller",
+ 			steam->serial_no);
  
- 		hid_info(steam->hdev, "Steam Controller '%s' connected",
- 				steam->serial_no);
--
-+				
-+		/* start in gamepad mode */
-+		steam->gamepad_mode = true;
-+		steam_set_lizard_mode(steam, false);
- 		/* ignore battery errors, we can live without it */
- 		if (steam->quirks & STEAM_QUIRK_WIRELESS)
- 			steam_battery_register(steam);
-@@ -1852,15 +1855,16 @@ static const struct steam_axis_mapping steam_deck_imu_mappings[] = {
++	/* start in gamepad mode */
++	steam->gamepad_mode = true;
++	steam_set_lizard_mode(steam, false);
++
+ 	/* ignore battery errors, we can live without it */
+ 	if (steam->quirks & (STEAM_QUIRK_WIRELESS | STEAM_QUIRK_IBEX))
+ 		steam_battery_register(steam);
+@@ -2156,15 +2160,16 @@ static const struct steam_axis_mapping steam_deck_imu_mappings[] = {
  static void steam_do_deck_input_event(struct steam_device *steam,
  		struct input_dev *input, u8 *data)
  {

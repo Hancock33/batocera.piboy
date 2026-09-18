@@ -40,7 +40,7 @@ index 36982ca89d1f..909b9c0d5020 100644
  	aconnector->base.stereo_allowed = false;
  	aconnector->base.dpms = DRM_MODE_DPMS_OFF;
 diff --git a/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calc_auto.c b/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calc_auto.c
-index 5c00ef423968..041d0d33b2da 100644
+index 5c00ef423968..bd750081b870 100644
 --- a/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calc_auto.c
 +++ b/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calc_auto.c
 @@ -58,7 +58,8 @@ void scaler_settings_calculation(struct dcn_bw_internal_vars *v)
@@ -49,7 +49,7 @@ index 5c00ef423968..041d0d33b2da 100644
  		if (v->interlace_output[k] == 1.0f) {
 -			v->v_ratio[k] = 2.0f * v->v_ratio[k];
 +			// Commented out: this makes scale and ratio taps validation fail
-+			// v->v_ratio[k] = 2.0f * v->v_ratio[k];
++			//v->v_ratio[k] = 2.0f * v->v_ratio[k];
  		}
  		if (v->underscan_output[k] == 1.0f) {
  			v->h_ratio[k] = v->h_ratio[k] * v->under_scan_factor;
