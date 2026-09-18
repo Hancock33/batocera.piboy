@@ -3,8 +3,8 @@
 # sugarbox
 #
 ################################################################################
-# Version: Commits on Sept 04, 2026
-SUGARBOX_VERSION = 5a0a498d592f7019b406ad605c73a2575a6a8d10
+# Version: Commits on Sept 18, 2026
+SUGARBOX_VERSION = 4fdb5b71003b684b721f05f68358cfd112b5d8f1
 SUGARBOX_SITE = https://github.com/Tom1975/SugarboxV2.git
 SUGARBOX_SITE_METHOD=git
 SUGARBOX_GIT_SUBMODULES=YES
