@@ -347,7 +347,7 @@ class Duckstation(Emulator):
                 'Cheevos',
                 'UnofficialTestMode',
                 self.config.get_bool('retroachievements.unofficial', return_values=('true', 'false')),
-                )
+            )
         else:
             settings.set('Cheevos', 'Enabled', 'false')
 
@@ -452,7 +452,7 @@ class Duckstation(Emulator):
                 settings.set(section, 'RelativeMouseMode', f'{sdl}true')
 
     def _write_guns(self, settings: CaseSensitiveConfigParser, /) -> None:
-        if (self.config.use_guns and self.guns):
+        if self.config.use_guns and self.guns:
             return
 
         for player, _ in enumerate(self.guns[:8], start=1):
@@ -486,7 +486,7 @@ class Duckstation(Emulator):
         env: dict[str, str | Path] = {
             'LD_LIBRARY_PATH': '/usr/lib/stenzek-shaderc:/lib:/usr/lib',
             'XDG_CONFIG_HOME': CONFIGS,
-            'SDL_JOYSTICK_HIDAPI': '0'
+            'SDL_JOYSTICK_HIDAPI': '0',
         }
 
         return Command(args, env=env)
