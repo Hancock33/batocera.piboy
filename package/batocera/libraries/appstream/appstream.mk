@@ -8,16 +8,20 @@ APPSTREAM_VERSION = v1.2.0
 APPSTREAM_SITE = $(call github,ximion,appstream,$(APPSTREAM_VERSION))
 APPSTREAM_INSTALL_STAGING = YES
 
-APPSTREAM_DEPENDENCIES = bash-completion blake3 libcurl libfyaml libvips libxmlb host-appstream
-HOST_APPSTREAM_DEPENDENCIES = host-bash-completion host-brotli host-libcurl host-libidn2 host-libfyaml host-libxmlb
+APPSTREAM_DEPENDENCIES = host-gperf host-pkgconf libcurl libfyaml libglib2 libxml2 libxmlb
+APPSTREAM_DEPENDENCIES += $(TARGET_NLS_DEPENDENCIES)
 
-APPSTREAM_CONF_OPTS = -Dgir=true -Dstemming=false -Dsystemd=false -Dzstd-support=true -Dvapi=true -Dcompose=true
-APPSTREAM_CONF_OPTS += -Ddocs=false -Dapidocs=false -Dinstall-docs=false
-HOST_APPSTREAM_CONF_OPTS = -Dgir=false -Dstemming=false -Dsystemd=false -Dzstd-support=true
-HOST_APPSTREAM_CONF_OPTS += -Ddocs=false -Dapidocs=false -Dinstall-docs=false
+APPSTREAM_CONF_OPTS = -Dstemming=false -Dsystemd=false -Dvapi=false -Dqt=false
+APPSTREAM_CONF_OPTS += -Dcompose=false -Dblake3-support=false -Dbash-completion=false
+APPSTREAM_CONF_OPTS += -Dgir=false -Dtools=false -Ddisplay-detection=none
+APPSTREAM_CONF_OPTS += -Ddocs=false -Dapidocs=false -Dinstall-docs=false -Dman=false
 
-APPSTREAM_CONF_ENV = LD_LIBRARY_PATH=$(HOST_DIR)/lib:$(LD_LIBRARY_PATH) PATH=$(HOST_DIR)/bin:$(PATH)
-HOST_APPSTREAM_CONF_ENV = PKG_CONFIG_LIBDIR=$(HOST_DIR)/lib/pkgconfig:$(HOST_DIR)/share/pkgconfig:/lib/x86_64-linux-gnu/pkgconfig/
+ifeq ($(BR2_PACKAGE_ZSTD),y)
+APPSTREAM_CONF_OPTS += -Dzstd-support=true
+APPSTREAM_DEPENDENCIES += zstd
+else
+APPSTREAM_CONF_OPTS += -Dzstd-support=false
+endif
 
 $(eval $(meson-package))
 $(eval $(host-meson-package))
