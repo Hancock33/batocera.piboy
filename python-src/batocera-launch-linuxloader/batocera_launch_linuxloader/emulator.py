@@ -319,7 +319,7 @@ class LinuxLoader(Emulator):
 
         environment: dict[str, str | Path] = {
             # Libraries
-            'LD_LIBRARY_PATH': f'/lib32:/lib32/extralibs:/lib:/usr/lib:{source_dir}:{romDir}',
+            'LD_LIBRARY_PATH': f'/lib32:/usr/bin32/linuxloader/extralibs:/lib:/usr/lib:{source_dir}:{romDir}',
             'LD_PRELOAD': f'{source_dir}/linuxloader.so',
             # Graphics
             'GST_PLUGIN_SYSTEM_PATH_1_0': '/lib32/gstreamer-1.0:/usr/lib/gstreamer-1.0',
@@ -597,10 +597,10 @@ class LinuxLoader(Emulator):
         # Crosshairs (ghostsev; hotd4; hotd4sp; primevil, rambo)
         crosshairs = self.config.get('linuxloader_crosshairs') == '1'
         self.setConf(
-            conf, 'P1_CROSSHAIR_PATH', '/usr/bin/linuxloader/crosshairs/p1_crosshair.png' if crosshairs else ''
+            conf, 'P1_CROSSHAIR_PATH', '/usr/bin32/linuxloader/crosshairs/p1_crosshair.png' if crosshairs else ''
         )
         self.setConf(
-            conf, 'P2_CROSSHAIR_PATH', '/usr/bin/linuxloader/crosshairs/p2_crosshair.png' if crosshairs else ''
+            conf, 'P2_CROSSHAIR_PATH', '/usr/bin32/linuxloader/crosshairs/p2_crosshair.png' if crosshairs else ''
         )
         if 'ghostsev' in romName.lower():
             self.setConf(conf, 'CUSTOM_CROSSHAIRS_WIDTH', '28')
@@ -644,8 +644,8 @@ class LinuxLoader(Emulator):
         if any(keyword in romName.lower() for keyword in ('harley', 'hdkotr', 'spicy', 'rambo', 'hotdex', 'dead ex')):
             destCg = Path(romDir) / 'libCg.so'
             destCgGL = Path(romDir) / 'libCgGL.so'
-            srcCg = Path('/lib32/extralibs/libCg.so.harley')
-            srcCgGL = Path('/lib32/extralibs/libCgGL.so.harley')
+            srcCg = Path('/usr/bin32/linuxloader/extralibs/libCg.so.harley')
+            srcCgGL = Path('/usr/bin32/linuxloader/extralibs/libCgGL.so.harley')
             if srcCg.exists() and (not destCg.exists() or not filecmp.cmp(srcCg, destCg, shallow=False)):
                 shutil.copy2(srcCg, destCg)
                 _logger.debug('Copied: %s', destCg)
@@ -658,8 +658,8 @@ class LinuxLoader(Emulator):
         elif any(keyword in romName.lower() for keyword in ('initiad', 'letsgoju', 'tennis')):
             destCg = Path(romDir) / 'libCg.so'
             destCgGL = Path(romDir) / 'libCgGL.so'
-            srcCg = Path('/lib32/extralibs/libCg.so.other')
-            srcCgGL = Path('/lib32/extralibs/libCgGL.so.other')
+            srcCg = Path('/usr/bin32/linuxloader/extralibs/libCg.so.other')
+            srcCgGL = Path('/usr/bin32/linuxloader/extralibs/libCgGL.so.other')
             if srcCg.exists() and (not destCg.exists() or not filecmp.cmp(srcCg, destCg, shallow=False)):
                 shutil.copy2(srcCg, destCg)
                 _logger.debug('Overwriting bad lib: %s', destCg)
