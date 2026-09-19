@@ -105,6 +105,4 @@ class Awgl(Emulator):
         if self.config.get_str('awgl_egados') == 'enabled':
             args.append('--ega-palette')
 
-        return Command(
-            args,
-        )
+        return Command(args, env={'SDL_AUTO_UPDATE_JOYSTICKS': '0'})

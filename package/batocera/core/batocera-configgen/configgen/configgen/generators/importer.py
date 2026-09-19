@@ -10,17 +10,9 @@ if TYPE_CHECKING:
 
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'eden': ('eden.edenGenerator', 'EdenGenerator'),
-    'etekwar': ('etekwar.etekwarGenerator', 'EtekwarGenerator'),
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),
     'mame': ('mame.mameGenerator', 'MameGenerator'),
-    'omf2097': ('omf2097.omf2097Generator', 'Omf2097Generator'),
-    'openclaw': ('openclaw.openclawGenerator', 'OpenclawGenerator'),
-    'openlara': ('openlara.openlaraGenerator', 'OpenlaraGenerator'),
-    'raptor': ('raptor.raptorGenerator', 'RaptorGenerator'),
     'ryujinx': ('ryujinx.ryujinxGenerator', 'RyujinxGenerator'),
-    'stalker': ('stalker.stalkerGenerator', 'StalkerGenerator'),
-    'stk': ('stk.stkGenerator', 'StkGenerator'),
-    'touchhle': ('touchhle.touchhleGenerator', 'TouchHLEGenerator'),
     'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
 }
 

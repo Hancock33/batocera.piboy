@@ -59,7 +59,7 @@ class XeniaEdge(Emulator):
 
         rom = self.rom
         if 'squashfs' in str(rom):
-            squashrom = str(rom) + str(rom).replace('/var/run/squashfs','') + '.xbox360'
+            squashrom = str(rom) + str(rom).replace('/var/run/squashfs', '') + '.xbox360'
             if Path(squashrom).exists():
                 rom = Path(squashrom)
                 _logger.debug('Found squashfs playlist %s:', rom)
