@@ -79,7 +79,7 @@ class SonicMania(Emulator):
 
     @cached_property
     def roms_dir(self) -> Path:
-        return ROMS / 'ports' / 'sonic-mania'
+        return ROMS / 'ports' / 'sonicmania'
 
     @property
     def execution_path(self) -> Path | None:
