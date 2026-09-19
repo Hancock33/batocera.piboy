@@ -1,5 +1,5 @@
 diff --git a/es-app/src/services/HttpServerThread.cpp b/es-app/src/services/HttpServerThread.cpp
-index cf56f97..41acbf0 100644
+index cf56f97e0..41acbf0e6 100644
 --- a/es-app/src/services/HttpServerThread.cpp
 +++ b/es-app/src/services/HttpServerThread.cpp
 @@ -31,6 +31,7 @@ Misc APIS

@@ -29,10 +29,10 @@ index caaf9c641..6acb1bc59 100644
  
      # Views
 diff --git a/es-app/src/FileData.cpp b/es-app/src/FileData.cpp
-index d9144b95f..1f46e601c 100644
+index fc08ad409..e4b9f76b8 100644
 --- a/es-app/src/FileData.cpp
 +++ b/es-app/src/FileData.cpp
-@@ -37,6 +37,99 @@
+@@ -38,6 +38,99 @@
  
  using namespace Utils::Platform;
  
@@ -132,7 +132,7 @@ index d9144b95f..1f46e601c 100644
  static std::map<std::string, std::function<BindableProperty(FileData*)>> properties =
  {
  	{ "name",				[](FileData* file) { return file->getName(); } },
-@@ -57,6 +150,21 @@ static std::map<std::string, std::function<BindableProperty(FileData*)>> propert
+@@ -58,6 +151,21 @@ static std::map<std::string, std::function<BindableProperty(FileData*)>> propert
  	{ "cheevos",			[](FileData* file) { return file->hasCheevos(); } },
  	{ "genre",			    [](FileData* file) { return file->getGenre(); } },
  	{ "hasKeyboardMapping", [](FileData* file) { return file->hasKeyboardMapping(); } },	

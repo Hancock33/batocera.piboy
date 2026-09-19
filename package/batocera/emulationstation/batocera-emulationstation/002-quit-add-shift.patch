@@ -1,8 +1,8 @@
 diff --git a/es-app/src/main.cpp b/es-app/src/main.cpp
-index 4e2c55d51..ed11f1e6e 100644
+index 8fa36476d..baa62856b 100644
 --- a/es-app/src/main.cpp
 +++ b/es-app/src/main.cpp
-@@ -747,8 +747,9 @@ int main(int argc, char* argv[])
+@@ -782,8 +782,9 @@ int main(int argc, char* argv[])
  					}
  				}				
  
@@ -15,10 +15,10 @@ index 4e2c55d51..ed11f1e6e 100644
  			while(SDL_PollEvent(&event));
  
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index 264f8a040..abb03cf57 100644
+index ef001b6be..a20cccc93 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -647,22 +647,16 @@ bool InputManager::parseEvent(const SDL_Event& ev, Window* window)
+@@ -774,22 +774,16 @@ bool InputManager::parseEvent(const SDL_Event& ev, Window* window)
  		return true;
  
  	case SDL_KEYDOWN:
