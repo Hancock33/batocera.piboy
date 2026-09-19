@@ -5,7 +5,10 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|9a30172e45fcb7833cc49ba
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.65|Sept 19, 2026
 Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.9|Sept 19, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-09-19|Sept 19, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.18|Sept 19, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260919|Sept 19, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|108962597484c3263b7eb8a3d7e6b3fa9341b0dc|Sept 19, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260919|Sept 19, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|fbc70befb419ba6500ce3cfdc5ec362aab553fd5|Sept 19, 2026
 Ports|[uzdoom](https://github.com/UZDoom/UZDoom.git)|1dd5eb18f6aa08b0f9e017144ad418b5b4071d4d|Sept 19, 2026
 Emulators|[libretro-nestopia](http://github.com/libretro/nestopia)|92578fdc9445f61dd376138329a938e01d8ba50e|Sept 19, 2026
@@ -27,8 +30,6 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|986746b7102d07c46fde7
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|3180c7076e898a04fa48fc967debce90c40872e5|Sept 18, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|c2c667006c4c8cca6cb325027b205240cf7072c6|Sept 18, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|71e6528c4e9ce5d5a9b93523e5f539fa3f827b81|Sept 18, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260918|Sept 18, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260918|Sept 18, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|076a24e1b10f76f3a7a8e849d25fab89f81ce1e9|Sept 18, 2026
 Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|f68f840336ca8dd0ef9012967569b887e8ee81c3|Sept 18, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|6bb3167a044e19e7106a5110d5531aa9c6afa96f|Sept 18, 2026
@@ -140,7 +141,6 @@ Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|297b3477
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|fc1cb90afd6b5c6d9bb933d111c4c99c90f37688|Sept 06, 2026
 Emulators|[libretro-vitaquake2](http://github.com/libretro/vitaquake2)|1a1f424b393e418f6fa632efd3a85f3e82e67a05|Sept 06, 2026
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|e27adde120fe06150f3d57a6dc7cba66b5f43a32|Sept 05, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.17|Sept 05, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|5939e0c6d5985c4c08fc70f289a83290e5d3e6f7|Sept 05, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|8625c395a24411f8c77e69802b516df9c613a712|Sept 05, 2026
 Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libretro)|f9a3c89f58836cb2c45a42ad4edfac047050f30a|Sept 05, 2026
