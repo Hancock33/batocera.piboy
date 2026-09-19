@@ -14,3 +14,4 @@ MINIZ_CONF_OPTS += -DBUILD_EXAMPLES=OFF
 MINIZ_CONF_OPTS += -DBUILD_SHARED_LIBS=ON
 
 $(eval $(cmake-package))
+$(eval $(host-cmake-package))

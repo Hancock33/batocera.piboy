@@ -13,7 +13,7 @@ UZDOOM_SUPPORTS_IN_SOURCE_BUILD = NO
 UZDOOM_EMULATOR_INFO = uzdoom.emulator.yml
 
 # We need the tools from the host package to build the target package
-HOST_UZDOOM_DEPENDENCIES = bzip2 host-webp zlib
+HOST_UZDOOM_DEPENDENCIES = bzip2 host-webp host-miniz zlib
 HOST_UZDOOM_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 HOST_UZDOOM_CONF_OPTS += -DSKIP_INSTALL_ALL=ON
 HOST_UZDOOM_CONF_OPTS += -DTOOLS_ONLY=ON

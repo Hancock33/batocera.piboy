@@ -121,10 +121,10 @@ index 20ee214623..8fe732f76a 100644
  
  //===========================================================================
 diff --git a/src/gameconfigfile.cpp b/src/gameconfigfile.cpp
-index 456511f203..05bc3ec484 100644
+index de67174ba3..932e3ed1fd 100644
 --- a/src/gameconfigfile.cpp
 +++ b/src/gameconfigfile.cpp
-@@ -139,7 +139,7 @@ static void CollectDefaultSearchPaths()
+@@ -142,7 +142,7 @@ static void CollectDefaultSearchPaths()
  	static FString GameDirs[] = {
  		"/games/" GAMENAMELOWERCASE,
  		"/games/doom",

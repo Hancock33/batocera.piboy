@@ -1,0 +1,13 @@
+diff --git a/tools/zipdir/zipdir.c b/tools/zipdir/zipdir.c
+index b86227a281..7053860e45 100644
+--- a/tools/zipdir/zipdir.c
++++ b/tools/zipdir/zipdir.c
+@@ -44,7 +44,7 @@
+ #include <errno.h>
+ #include <stdlib.h>
+ #include <time.h>
+-#include <miniz.h>
++#include <miniz/miniz.h>
+ #include "bzlib.h"
+ #include "LzmaEnc.h"
+ #include "7zVersion.h"
