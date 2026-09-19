@@ -35,6 +35,7 @@
 - Libretro-Azahar
 - NanoBoyAdvance as an alternative GBA emulator
 - PCSX2x6 emulator for Namco2x6 systems (see the _info.txt file for rom details)
+- RPCS3 interface translations
 - SM2-Emu emulator for Model 2 games
 - Steam is installed automatically from Flathub the first time it is launched
 - Upgrades : migration from x86_64 to x86-64-v3 is now possible from the menu for eligible software.
@@ -47,8 +48,10 @@
 - Cannonball fullscreen on Wayland
 - Commander Genius fullscreen in Wayland
 - Commander Genius render resolution option not taking effect in-game
+- Dolphin Wii Remotes 2-4 set to None when using pad profiles
 - Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
 - Libretro-Hatarib not starting due to a compiled symbol issue
+- MAME black screen on exit with a rotated display when CRT switchres is off
 - Mupen64 not starting fullscreen with Wayland
 - Pygame fullscreen with Wayland
 - Raze analog controls and improved controller bindings

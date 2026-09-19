@@ -69,7 +69,14 @@ define RPCS3_INSTALL_EVMAPY
 	$(INSTALL) -D -m 0644 $(RPCS3_PKGDIR)/*.keys $(TARGET_DIR)/usr/share/evmapy/
 endef
 
+# RPCS3 looks for its .qm files in Qt's TranslationsPath
+define RPCS3_INSTALL_TRANSLATIONS
+	mkdir -p $(TARGET_DIR)/usr/translations
+	$(TAR) -xzf $(RPCS3_DL_DIR)/$(RPCS3_TRANSLATIONS_VERSION).tar.gz C $(TARGET_DIR)/usr/translations --strip-components=2 --wildcards '*/qm/*.qm'
+endef
+
 RPCS3_POST_INSTALL_TARGET_HOOKS += RPCS3_INSTALL_EVMAPY
+RPCS3_POST_INSTALL_TARGET_HOOKS += RPCS3_INSTALL_TRANSLATIONS
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
