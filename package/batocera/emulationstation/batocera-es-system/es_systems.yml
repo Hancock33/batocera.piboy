@@ -4502,7 +4502,7 @@ sc3000:
   manufacturer:         Sega
   release:              1983
   hardware:             computer
-  platform:             sc-3000
+  platform:             sc-1000
   theme:                sc-3000
   comment_en:           |
                         SC-3000 cartridges are compatible with SG-1000.
@@ -5230,5 +5230,3 @@ commanderx16:
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:commanderx16
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:commanderx1
-
-
