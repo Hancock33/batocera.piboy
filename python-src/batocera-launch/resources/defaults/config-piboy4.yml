@@ -69,7 +69,7 @@ psx:
   core:     duckstation
 saturn:
   emulator: libretro
-  core:     yabausesa
+  core:     yabasanshiro
 sgb:
   emulator: libretro
   core:     mgba

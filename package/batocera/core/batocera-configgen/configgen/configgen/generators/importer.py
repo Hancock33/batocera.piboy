@@ -13,7 +13,6 @@ _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),
     'mame': ('mame.mameGenerator', 'MameGenerator'),
     'ryujinx': ('ryujinx.ryujinxGenerator', 'RyujinxGenerator'),
-    'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
 }
 
 def get_generator(emulator: str, core: str) -> Generator:

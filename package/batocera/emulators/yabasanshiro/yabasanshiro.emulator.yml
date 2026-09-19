@@ -55,4 +55,4 @@ file_extensions:
   - cue
   - iso
 systems:
-  - name: saturn
+  - saturn
