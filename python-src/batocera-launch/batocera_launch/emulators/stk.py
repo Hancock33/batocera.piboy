@@ -16,7 +16,6 @@ _STK_CONFIG_DST: Final = _STK_CONFIG_ROOT / 'config-0.10'
 class Stk(Emulator):
     needs_sdl_game_controller_config = True
 
-
     @staticmethod
     def _ensure_config() -> None:
         _STK_CONFIG_ROOT.mkdir(parents=True, exist_ok=True)

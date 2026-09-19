@@ -47,9 +47,14 @@ class Touchhle(Emulator):
             base_mkdir.mkdir(parents=True, exist_ok=True)
 
         for resoure in ('touchHLE_dylibs', 'touchHLE_fonts'):
-            shutil.copytree(_RESOURCE_DIR / resoure , base_dir / resoure, dirs_exist_ok=True)
+            shutil.copytree(_RESOURCE_DIR / resoure, base_dir / resoure, dirs_exist_ok=True)
 
-        for relative_path in ('touchHLE_options.txt', 'touchHLE_default_options.txt', 'OPTIONS_HELP.txt', 'touchHLE_apps/README.txt'):
+        for relative_path in (
+            'touchHLE_options.txt',
+            'touchHLE_default_options.txt',
+            'OPTIONS_HELP.txt',
+            'touchHLE_apps/README.txt',
+        ):
             destination = base_dir / relative_path
             if not destination.exists():
                 destination.parent.mkdir(parents=True, exist_ok=True)

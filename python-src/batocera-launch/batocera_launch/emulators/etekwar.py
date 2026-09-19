@@ -30,8 +30,8 @@ class Etekwar(Emulator):
         with _TEKWAR_INI.open('w', encoding='ascii') as f:
             f.write(
                 'fullscreen = 1\n'
-                f"xdim = {self.resolution.width}\n"
-                f"ydim = {self.resolution.height}\n"
+                f'xdim = {self.resolution.width}\n'
+                f'ydim = {self.resolution.height}\n'
                 'renderer = 3\n'
                 'music = 1\n'
                 'mouse = 1\n'

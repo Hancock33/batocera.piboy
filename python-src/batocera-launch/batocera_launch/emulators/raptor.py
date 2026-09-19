@@ -8,9 +8,9 @@ from typing import Final
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
 
-_RAPTOR_CONFIG_DIR : Final =  Path('/userdata/system/configs/raptor')
-_RAPTOR_SETUP_INI : Final =  _RAPTOR_CONFIG_DIR / 'SETUP.INI'
-_RAPTOR_DEFAULT_SETUP_INI : Final = Path('/usr/share/raptor/SETUP.INI')
+_RAPTOR_CONFIG_DIR: Final = Path('/userdata/system/configs/raptor')
+_RAPTOR_SETUP_INI: Final = _RAPTOR_CONFIG_DIR / 'SETUP.INI'
+_RAPTOR_DEFAULT_SETUP_INI: Final = Path('/usr/share/raptor/SETUP.INI')
 
 
 @cached_dataclass
