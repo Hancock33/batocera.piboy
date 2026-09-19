@@ -10,22 +10,22 @@ yabConfigPath = Path('/userdata/system/configs/yabasanshiro')
 
 
 YABA_CTRL_MAP: dict[str, str] = {
-    'start':          'start',
-    'select':         'select',
-    'a':              'b',
-    'b':              'a',
-    'pageup':         'c',
-    'x':              'y',
-    'y':              'x',
-    'pagedown':       'z',
-    'up':             'up',
-    'down':           'down',
-    'left':           'left',
-    'right':          'right',
-    'l2':             'l',
-    'r2':             'r',
-    'joystick1up':    'analogy',
-    'joystick1left':  'analogx',
+    'start': 'start',
+    'select': 'select',
+    'a': 'b',
+    'b': 'a',
+    'pageup': 'c',
+    'x': 'y',
+    'y': 'x',
+    'pagedown': 'z',
+    'up': 'up',
+    'down': 'down',
+    'left': 'left',
+    'right': 'right',
+    'l2': 'l',
+    'r2': 'r',
+    'joystick1up': 'analogy',
+    'joystick1left': 'analogx',
 }
 
 
@@ -104,7 +104,5 @@ class Yabasanshiro(Emulator):
 
         return Command(
             ['/usr/bin/yabasanshiro/yabasanshiro', '-i', self.rom],
-            env={
-                'LD_LIBRARY_PATH': '/usr/bin/yabasanshiro:/usr/lib:/lib'
-            },
+            env={'LD_LIBRARY_PATH': '/usr/bin/yabasanshiro:/usr/lib:/lib'},
         )
