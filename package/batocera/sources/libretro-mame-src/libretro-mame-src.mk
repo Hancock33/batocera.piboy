@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Sept 19, 2026
-LIBRETRO_MAME_SRC_VERSION = 2dacd612b129bdc8774b405e22243c46bd2be635
+LIBRETRO_MAME_SRC_VERSION = b01593a29a70a8f8e46b38ab04b34c1be0170d23
 LIBRETRO_MAME_SRC_SITE = $(call github,hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_DEPENDENCIES = host-python3 alsa-lib fontconfig sdl2 sdl2_ttf zlib
 LIBRETRO_MAME_SRC_LICENSE = MAME
@@ -45,7 +45,7 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 		CXX="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang++" \
 		LD="$(TARGET_LD)" \
 		PRECOMPILE=1 \
-		OPTIMIZE=3 LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
+		OPTIMIZE=2 LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
 endef
 
 define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
