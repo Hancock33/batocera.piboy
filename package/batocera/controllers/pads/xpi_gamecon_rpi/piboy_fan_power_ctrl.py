@@ -1,128 +1,130 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Fan and battery controller for xpi_gamecon hardware (Piboy variants).
+Reads CPU temperature and adjusts fan speed accordingly; monitors
+battery percentage and blinks a warning LED when it's low.
+"""
+
 import time
 import subprocess
 import sys
-import os.path
+import os
+from configparser import ConfigParser
 
-# Configuration
+# --- Configuration ---
 WAIT_TIME = 5  # [s] Time to wait between each refresh
-hyst = 1
-# Fan Control
-cpuTemp = 0
-cpuTempOld = 0
-fphihi = 242
-fphi = 194
-fpmed = 147
-fplo = 110
-fplolo = 90
-fpdefault = 75
-# Battery Control
-battctrl = 100
-battctrlOld = 100
+TEMP_HYSTERESIS = 1
+LOW_BATTERY_THRESHOLD = 10
+LOW_BATTERY_WAIT_TIME = 1
 
-piboyEnabled = subprocess.run(['batocera-settings-get', '-f', '/boot/batocera-boot.conf', 'key', 'piboy.enabled'],
-                              stdout=subprocess.PIPE, text=True).stdout.splitlines()
-piboyXRSEnabled = subprocess.run(['batocera-settings-get', '-f', '/boot/batocera-boot.conf', 'key', 'piboyxrs.enabled'],
-                                 stdout=subprocess.PIPE, text=True).stdout.splitlines()
+CPU_TEMP_PATH = "/sys/class/thermal/thermal_zone0/temp"
+FAN_PATH = "/sys/kernel/xpi_gamecon/fan"
+BATTERY_PATH = "/sys/kernel/xpi_gamecon/percent"
+GREEN_LED_PATH = "/sys/kernel/xpi_gamecon/green"
 
-fanFilename = ""
-if (piboyEnabled and piboyEnabled[0] == "1"):
-    fanFilename = "fan.piboy.ini"
-elif (piboyXRSEnabled and piboyXRSEnabled[0] == "1"):
-    fanFilename = "fan.piboyxrs.ini"
+FAN_CONFIG_DIRS = ["/userdata/system/configs/fan/", "/boot/"]
 
-#Read Fan.ini file
-for path in ['/userdata/system/configs/fan/', '/boot/']:
-    if os.path.isfile(path + fanFilename):
-        from configparser import ConfigParser
-        config_object = ConfigParser()
-        config_object.read(path + fanFilename)
+# Default fan speed steps, keyed by temperature threshold (°C)
+DEFAULT_FAN_CURVE = {
+    75: 242,
+    70: 194,
+    65: 147,
+    60: 110,
+    55: 90,
+    0:  75,  # fallback / "default" tier
+}
 
-        userinfo = config_object["FAN"]
+def get_boot_setting(key):
+    result = subprocess.run(
+        ["batocera-settings-get", "-f", "/boot/batocera-boot.conf", "key", key],
+        stdout=subprocess.PIPE, text=True,
+    ).stdout.splitlines()
+    return result[0] if result else None
 
-        fphihi = (userinfo["75DegC"])
-        fphi = (userinfo["70DegC"])
-        fpmed = (userinfo["65DegC"])
-        fplo = (userinfo["60DegC"])
-        fplolo = (userinfo["55DegC"])
-        fpdefault = (userinfo["50DegC"])
-        break
+def detect_fan_filename():
+    if get_boot_setting("piboy.enabled") == "1":
+        return "fan.piboy.ini"
+    if get_boot_setting("piboyxrs.enabled") == "1":
+        return "fan.piboyxrs.ini"
+    return None
 
-# Fan Controller
-try:
-    while 1:
-        # Read CPU temperature
-        cpuTempFile = open("/sys/class/thermal/thermal_zone0/temp", "r")
-        cpuTemp = float(cpuTempFile.read()) / 1000
-        cpuTempFile.close()
-        if abs(cpuTemp - cpuTempOld) > hyst:
-            # Calculate desired fan speed
-            if cpuTemp >= 75:
-                fanFile = open("/sys/kernel/xpi_gamecon/fan", "w")
-                fanFile.write(str(fphihi))
-                fanFile.close()
-            elif cpuTemp >= 70:
-                fanFile = open("/sys/kernel/xpi_gamecon/fan", "w")
-                fanFile.write(str(fphi))
-                fanFile.close()
-            elif cpuTemp >= 65:
-                fanFile = open("/sys/kernel/xpi_gamecon/fan", "w")
-                fanFile.write(str(fpmed))
-                fanFile.close()
-            elif cpuTemp >= 60:
-                fanFile = open("/sys/kernel/xpi_gamecon/fan", "w")
-                fanFile.write(str(fplo))
-                fanFile.close()
-            elif cpuTemp >= 55:
-                fanFile = open("/sys/kernel/xpi_gamecon/fan", "w")
-                fanFile.write(str(fplolo))
-                fanFile.close()
-            else:
-                fanFile = open("/sys/kernel/xpi_gamecon/fan", "w")
-                fanFile.write(str(fpdefault))
-                fanFile.close()
-        cpuTempOld = cpuTemp
+def load_fan_curve(fan_filename):
+    """Load fan speed overrides from an ini file, if present. Falls back to defaults."""
+    curve = dict(DEFAULT_FAN_CURVE)
+    if not fan_filename:
+        return curve
 
-        # Read Battery
-        battctrlFile = open("/sys/kernel/xpi_gamecon/percent", "r")
-        battctrl = int(battctrlFile.read())
-        battctrlFile.close()
+    for directory in FAN_CONFIG_DIRS:
+        path = os.path.join(directory, fan_filename)
+        if os.path.isfile(path):
+            config = ConfigParser()
+            config.read(path)
+            section = config["FAN"]
+            curve = {
+                75: int(section["75DegC"]),
+                70: int(section["70DegC"]),
+                65: int(section["65DegC"]),
+                60: int(section["60DegC"]),
+                55: int(section["55DegC"]),
+                0:  int(section["50DegC"]),
+            }
+            break
+    return curve
 
-        if battctrl <= 10:
-            WAIT_TIME = 1
-            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.2)
-            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.2)
-            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.2)
-            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.2)
-            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.2)
-            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.2)
-            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.4)
-            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.4)
-            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.4)
-            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.4)
-            os.system("echo 20 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.4)
-            os.system("echo 100 > /sys/kernel/xpi_gamecon/green")
-            time.sleep(0.4)
+def read_value(path, cast=str):
+    with open(path, "r") as f:
+        return cast(f.read().strip())
 
-        #if battctrl <= 5:
-        #    os.system("touch /tmp/shutdown.please")
-        #    os.system("/usr/bin/batocera-es-swissknife --shutdown")
+def write_value(path, value):
+    with open(path, "w") as f:
+        f.write(str(value))
 
-        # Wait until next refresh
+def fan_speed_for_temp(temp_c, curve):
+    for threshold in sorted(curve.keys(), reverse=True):
+        if temp_c >= threshold:
+            return curve[threshold]
+    return curve[0]
+
+def blink_low_battery_led():
+    """Blink the green LED in a fast-then-slow pattern to warn of low battery."""
+    pattern = [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
+    state = 20
+    for delay in pattern:
+        write_value(GREEN_LED_PATH, state)
+        time.sleep(delay)
+        state = 100 if state == 20 else 20
+
+
+def main():
+    global WAIT_TIME
+
+    fan_filename = detect_fan_filename()
+    fan_curve = load_fan_curve(fan_filename)
+
+    last_temp = 0.0
+
+    while True:
+        try:
+            # --- Fan control ---
+            temp_c = read_value(CPU_TEMP_PATH, float) / 1000
+            if abs(temp_c - last_temp) > TEMP_HYSTERESIS:
+                write_value(FAN_PATH, fan_speed_for_temp(temp_c, fan_curve))
+            last_temp = temp_c
+
+            # --- Battery control ---
+            battery_pct = read_value(BATTERY_PATH, int)
+            if battery_pct <= LOW_BATTERY_THRESHOLD:
+                WAIT_TIME = LOW_BATTERY_WAIT_TIME
+                blink_low_battery_led()
+
+        except (OSError, ValueError, KeyError) as e:
+            print(f"Warning: sensor read/config error ({e})", file=sys.stderr)
+
         time.sleep(WAIT_TIME)
 
-# If a keyboard interrupt occurs (ctrl   c)
-except KeyboardInterrupt:
-    sys.exit()
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(0)

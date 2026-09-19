@@ -1,41 +1,46 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Volume controller for xpi_gamecon hardware.
+"""
+
 import time
 import sys
 import os
-# Configuration
+
+# --- Configuration ---
 WAIT_TIME = 0.5  # [s] Time to wait between each refresh
-sndVol = 0
-sndVolOld = 0
-hyst = 1
-# Volume Controller
-try:
-    while 1:
-        # Read Volume
-        sndVolFile = open("/sys/kernel/xpi_gamecon/volume", "r")
-        sndVol = int(sndVolFile.read())
-        sndVolFile.close()
-        if abs(sndVol - sndVolOld) > hyst:
-            # Set Volume
-            #sndSet = "amixer sset 'Headphone' " + str(sndVol) + "% > /dev/null"
-            sndSet = "batocera-audio setSystemVolume " + str(sndVol)
-            os.system(sndSet)
+VOLUME_HYSTERESIS = 1
 
-        sndVolOld = sndVol
+VOLUME_PATH = "/sys/kernel/xpi_gamecon/volume"
 
-        # Read Status - 46 shutdown button
-        statusFile = open("/sys/kernel/xpi_gamecon/status", "r")
-        status = int(statusFile.read())
-        statusFile.close()
+def read_int(path):
+    with open(path, "r") as f:
+        return int(f.read().strip())
 
-        if status == 46:
-            os.system("touch /tmp/shutdown.please")
-            os.system("/usr/bin/batocera-es-swissknife --shutdown")
+def set_system_volume(volume):
+    os.system(f"batocera-audio setSystemVolume {volume}")
 
-        # Wait until next refresh
+
+def main():
+    last_volume = 0
+
+    while True:
+        try:
+            volume = read_int(VOLUME_PATH)
+            if abs(volume - last_volume) > VOLUME_HYSTERESIS:
+                set_system_volume(volume)
+            last_volume = volume
+
+        except (OSError, ValueError) as e:
+            print(f"Warning: failed to read volume ({e})", file=sys.stderr)
+
         time.sleep(WAIT_TIME)
 
-# If a keyboard interrupt occurs (ctrl + c)
-except KeyboardInterrupt:
-    print("Sound ctrl interrupted by keyboard")
-    sys.exit()
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("Sound ctrl interrupted by keyboard")
+        sys.exit(0)
