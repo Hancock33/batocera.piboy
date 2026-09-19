@@ -3,8 +3,8 @@
 # tic80
 #
 ################################################################################
-# Version: Commits on Sept 18, 2026
-TIC80_VERSION = dc8ad33a23d0a0f23c84b9f49d5aac1b4b85f664
+# Version: Commits on Sept 19, 2026
+TIC80_VERSION = d2036a228ff9fb0d4f005ea341e16882de803af7
 TIC80_SITE = https://github.com/nesbox/TIC-80.git
 TIC80_SITE_METHOD=git
 TIC80_GIT_SUBMODULES=YES
@@ -12,15 +12,27 @@ TIC80_LICENSE = MIT
 TIC80_EMULATOR_INFO = tic80.emulator.yml
 TIC80_DEPENDENCIES = libcurl libglu libglvnd pipewire sdl2
 
-TIC80_TARGET_CFLAGS = $(TARGET_CFLAGS) -Wno-incompatible-pointer-types
-
 TIC80_CONF_OPTS += -DBUILD_PRO=TRUE
 TIC80_CONF_OPTS += -DBUILD_SDLGPU=ON
 TIC80_CONF_OPTS += -DBUILD_STATIC=ON
 TIC80_CONF_OPTS += -DBUILD_TOUCH_INPUT=ON
 TIC80_CONF_OPTS += -DBUILD_WITH_ALL=ON
 TIC80_CONF_OPTS += -DBUILD_WITH_RUBY=OFF
-TIC80_CONF_OPTS += -DCMAKE_C_FLAGS="$(TIC80_TARGET_CFLAGS)"
+TIC80_CONF_OPTS += -DPREFER_SYSTEM_LIBRARIES=ON
+TIC80_CONF_OPTS += -DPREFER_SYSTEM_SDL2=ON
+
+ifeq ($(BR2_PACKAGE_LIBGLES),y)
+TIC80_CONF_OPTS += -DBUILD_WITH_GLES=ON
+endif
+
+ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
+TIC80_DEPENDENCIES += alsa-lib
+endif
+
+ifeq ($(BR2_TOOLCHAIN_HAS_LIBATOMIC),y)
+TIC80_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-latomic
+endif
+
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
