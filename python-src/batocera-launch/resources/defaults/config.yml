@@ -749,6 +749,9 @@ openbor:
 openclaw:
   emulator: openclaw
   core:     openclaw
+opengoal:
+  emulator: opengoal
+  core:     opengoal
 openjazz:
   emulator: openjazz
   core:     openjazz

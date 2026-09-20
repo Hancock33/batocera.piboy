@@ -1,8 +1,8 @@
 diff --git a/es-app/src/services/HttpServerThread.cpp b/es-app/src/services/HttpServerThread.cpp
-index b87a86c3a..e057eca06 100644
+index 41acbf0e6..f68ee63c6 100644
 --- a/es-app/src/services/HttpServerThread.cpp
 +++ b/es-app/src/services/HttpServerThread.cpp
-@@ -560,7 +560,7 @@ void HttpServerThread::run()
+@@ -573,7 +573,7 @@ void HttpServerThread::run()
  
  		mWindow->displayNotificationMessage(req.body);
  	});
@@ -11,7 +11,7 @@ index b87a86c3a..e057eca06 100644
  	mHttpServer->Post("/storage/event", [this](const httplib::Request& req, httplib::Response& res)
  	{
  		if (!isAllowed(req, res))
-@@ -582,6 +582,7 @@ void HttpServerThread::run()
+@@ -595,6 +595,7 @@ void HttpServerThread::run()
  
          res.set_content("OK", "text/plain");
  	});

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 from pathlib import Path
 from typing import Final
 
@@ -26,7 +25,6 @@ class Awgl(Emulator):
         return _ROM_DIR
 
     async def configure(self) -> Command:
-        os.chdir(_ROM_DIR)
         args: list[str | Path] = ['awgl']
 
         if '15th' in self.rom.stem:
@@ -105,6 +103,4 @@ class Awgl(Emulator):
         if self.config.get_str('awgl_egados') == 'enabled':
             args.append('--ega-palette')
 
-        return Command(
-            args,
-        )
+        return Command(args, env={'SDL_AUTO_UPDATE_JOYSTICKS': '0'})

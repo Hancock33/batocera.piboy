@@ -3,8 +3,8 @@
 # libretro-vitaquake2
 #
 ################################################################################
-# Version: Commits on Sept 06, 2026
-LIBRETRO_VITAQUAKE2_VERSION = 1a1f424b393e418f6fa632efd3a85f3e82e67a05
+# Version: Commits on Sept 20, 2026
+LIBRETRO_VITAQUAKE2_VERSION = 4b333fe18e8816974f04432af01f87654ae16e21
 LIBRETRO_VITAQUAKE2_SITE = $(call github,libretro,vitaquake2,$(LIBRETRO_VITAQUAKE2_VERSION))
 LIBRETRO_VITAQUAKE2_LICENSE = GPL-2.0
 LIBRETRO_VITAQUAKE2_DEPENDENCIES += retroarch

@@ -146,7 +146,6 @@ class MameGenerator(Generator):
         commandArray += [ "-cheat" ]
         commandArray += [ "-cheatpath",    MAME_CHEATS ]       # Should this point to path containing the cheat.7z file
 
-        # Logs and Swithres ini read by default (including its own verbose)
         # Use full MAME logging when debug logging is enabled, else oslog. Verbose logging also enables debug pop up messages during gameplay.
         try:
             logLevel = next((
@@ -223,11 +222,14 @@ class MameGenerator(Generator):
 
         # CRT / SwitchRes support
         #if system.config.get_bool("switchres"):
+        #    commandArray += [ "-switchres_ini" ]
         #    commandArray += [ "-modeline_generation" ]
         #    commandArray += [ "-changeres" ]
         #    commandArray += [ "-modesetting" ]
         #    commandArray += [ "-readconfig" ]
         #else:
+            # GroovyMAME enables switchres by default; its xrandr mode restore breaks rotated displays
+        #    commandArray += [ "-noswitchres" ]
         #    commandArray += [ "-resolution", f"{gameResolution['width']}x{gameResolution['height']}" ]
 
         # Refresh rate options to help with screen tearing

@@ -1,8 +1,8 @@
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 37d6381ab..8dd3dfde6 100644
+index 7252be147..be04d37a4 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -2242,7 +2242,7 @@ void GuiMenu::openSystemSettings()
+@@ -2277,7 +2277,7 @@ void GuiMenu::openSystemSettings()
      if (selectedFormat.empty()) selectedFormat = "btrfs";
  
      std::vector<std::string> fstypes = ApiSystem::getInstance()->getFormatFileSystems();

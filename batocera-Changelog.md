@@ -12,6 +12,7 @@
 - Anbernic RG40xx-V-v2-panel variant support
 - AYN Odin initial support
 - AYN Odin 3 initial support
+- KICKPI K3B initial support
 - Mangmi Air X initial support
 - Odroid M2 initial support
 - Radxa Rock-5T initial support
@@ -33,24 +34,35 @@
 - Legion Go / Go 2 LED controller support
 - Libretro-Azahar
 - NanoBoyAdvance as an alternative GBA emulator
+- OpenGOAL for the Jak and Daxter trilogy, built from your own PS2 disc image
 - PCSX2x6 emulator for Namco2x6 systems (see the _info.txt file for rom details)
+- RPCS3 interface translations
 - SM2-Emu emulator for Model 2 games
+- Sonic Mania options for 4:3 aspect ratio, screen shaders and the developer menu
+- Steam Controller (2026) support on x86_64 / Zen3
+- Steam is installed automatically from Flathub the first time it is launched
 - Upgrades : migration from x86_64 to x86-64-v3 is now possible from the menu for eligible software.
 - Upgrades : upgrades to stable releases is now possible via torrent, directly from the menu.
 - Xenia-Edge for x864_64 and select aarch64 devices
 ### Fixed
+- Bauh not starting with Python 3.14
 - BCC menu not showing on SM8250 devices (i.e. Retroid Pocket 5)
 - Cannonball coin is now the Select button
 - Cannonball fullscreen on Wayland
 - Commander Genius fullscreen in Wayland
 - Commander Genius render resolution option not taking effect in-game
+- Dolphin Wii Remotes 2-4 set to None when using pad profiles
 - Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
 - Libretro-Hatarib not starting due to a compiled symbol issue
+- MAME black screen on exit with a rotated display when CRT switchres is off
 - Mupen64 not starting fullscreen with Wayland
+- Power button shutdown now closes the running game and shuts down through EmulationStation, saving gamelists
 - Pygame fullscreen with Wayland
 - Raze analog controls and improved controller bindings
+- SC-3000 games not scrapable (now scraped as SG-1000)
 - Simcoupe not starting fullscreen
 - Sonic Mania controllers
+- Sonic Mania settings changed in-game (e.g. screen shader) now persist between launches
 - Taradino blank screen with Wayland
 - Vice not going fullscreen with C128
 - X16emu fullscreen with Wayland
@@ -226,7 +238,7 @@
 - Libretro-Xrick to July 28th, 2026 build
 - Libretro-Yabasanshiro to August 23rd, 2026 build
 - Lightspark to Sep 14, 2026 build
-- LinuxLoader to v3.0.10
+- LinuxLoader to v3.0.12
 - Moonlight-Embedded to Jun 5, 2026 build
 - Moonlight-QT to Sep 8, 2026 build
 - Mupen64Plus core to Sep 5th, 2026 build; audio-sdl, input-sdl, rsp-hle, ui-console, video-glide64mk2 & video-rice plugins to Jun 23rd, 2026 build
@@ -273,15 +285,16 @@
 - Allwinner H700 device kernel updated to 7.1.9
 - ALSA UCM configuration to v1.2.16.1
 - Buildroot to 2026.05.x with supporting package & toolchain updates
-- DXVK to 3.0.2
+- DXVK to 3.1.1
 - DXVK-NVAPI to v0.9.2
-- FAudio to 26.08
+- FAudio to 26.09
 - FFMPEG to 8.1.2
+- Flatpak to 1.18.2
 - GStreamer codecs to 1.28.5
 - Khadas VIM4 kernel updated to vendor 5.15.y
 - LabWC to 0.20.1
 - Linux Firmware to 20260810
-- Mesa3D to 26.2.1
+- Mesa3D to 26.2.3
 - MangoHud to v0.8.4
 - Nvidia Open Production driver to 615.71.09
 - Nvidia 580 Legacy driver to 580.178.04
@@ -300,11 +313,11 @@
 - RTKit to v0.14
 - VKD3D Proton to 3.0.1
 - Vulkan stack to 1.4.350
-- WINE Mono to 11.1.0
+- WINE Mono to 11.3.0
 - WINE Proton to proton-11.0-1
-- WINE TKG to 11.16
+- WINE TKG to 11.17
 - Wlroots to 0.20.2
-- X86_64 / Zen3 kernel updated to 7.1.9
+- X86_64 / Zen3 kernel updated to 7.2.6
 - Xone to v0.5.8
 
 # 2026/05/30 - batocera.linux 43.1

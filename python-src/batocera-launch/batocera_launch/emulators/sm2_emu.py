@@ -20,6 +20,10 @@ _NVRAM_SRC: Final = Path('/usr/share/sm2-emu/nvram')
 _GEAR_UP_INPUTS: Final = ['pagedown', 'r1', 'right_shoulder']  # right paddle
 _GEAR_DOWN_INPUTS: Final = ['pageup', 'l1', 'left_shoulder']  # left paddle
 
+_STEER_INPUTS: Final = ['joystick1left', 'joystick1right']
+_ACCEL_INPUTS: Final = ['r2', 'right_trigger']
+_BRAKE_INPUTS: Final = ['l2', 'left_trigger']
+
 
 def _wheel_button_id(pad: Controller | None, name_or_names: str | list[str], /) -> int:
     if pad is None:
@@ -31,13 +35,43 @@ def _wheel_button_id(pad: Controller | None, name_or_names: str | list[str], /) 
     return -1
 
 
+def _wheel_axis_input(pad: Controller, names: list[str], /) -> tuple[str, int] | None:
+    for name in names:
+        if (input := pad.inputs.get(name)) is not None and input.type == 'axis':
+            return name, int(input.id)
+    return None
+
+
+def _wheel_axes(pad: Controller, /) -> dict[str, str]:
+    steer = _wheel_axis_input(pad, _STEER_INPUTS)
+    accel = _wheel_axis_input(pad, _ACCEL_INPUTS)
+    brake = _wheel_axis_input(pad, _BRAKE_INPUTS)
+    if steer is None and accel is None and brake is None:
+        return {}  # nothing mapped, keep sm2-emu's auto-detect / gui calibration
+
+    relaxed = pad.get_mapping_axis_relaxed_values()
+
+    def axis_id(found: tuple[str, int] | None) -> str:
+        return str(found[1]) if found is not None else '-1'
+
+    # sm2-emu inverts a pedal that rests at the positive end, which is es's 'reversed'
+    def inverted(found: tuple[str, int] | None) -> str:
+        return _ini_bool(found is not None and (axis := relaxed.get(found[0])) is not None and axis['reversed'])
+
+    return {
+        'wheel_steer_axis': axis_id(steer),
+        'wheel_accel_axis': axis_id(accel),
+        'wheel_brake_axis': axis_id(brake),
+        'wheel_accel_invert': inverted(accel),
+        'wheel_brake_invert': inverted(brake),
+    }
+
+
 def _ini_bool(value: bool) -> str:
     return 'true' if value else 'false'
 
 
 def _merge_ini(existing_text: str, managed: dict[str, str]) -> str:
-    """Update `managed` keys in place, leave every other line (wheel calibration,
-    window size) untouched."""
     remaining = dict(managed)
     lines: list[str] = []
 
@@ -139,7 +173,8 @@ class Sm2Emu(Emulator):
                 'wheel_button_gear_down': str(_wheel_button_id(wheel, _GEAR_DOWN_INPUTS)),
                 'wheel_button_test': str(_wheel_button_id(wheel, 'test')),
                 'wheel_button_service': str(_wheel_button_id(wheel, 'service')),
-                'wheel_button_menu': str(_wheel_button_id(wheel, 'hotkey')),
+                'wheel_button_menu': '-1',
+                **_wheel_axes(wheel),
             }
             if wheel is not None
             else {}
@@ -150,6 +185,8 @@ class Sm2Emu(Emulator):
 
         managed = {
             'fullscreen': 'true',
+            'window_width': str(self.resolution.width),
+            'window_height': str(self.resolution.height),
             'vsync': _ini_bool(self.config.get_bool('sm2_vsync', False)),
             'show_fps': 'false',  # covered by the hud/hud_corner features instead
             'lightgun': _ini_bool(use_guns),
@@ -174,6 +211,7 @@ class Sm2Emu(Emulator):
             'texture_filter': self.config.get_str('sm2_texture_filter', 'faithful'),
             'anisotropy': self.config.get_str('sm2_anisotropy', '4'),
             'upscale_2d': self.config.get_str('sm2_upscale_2d', 'faithful'),
+            'translucency': self.config.get_str('sm2_translucency', 'stipple'),
             'crt_enabled': _ini_bool(self.config.get_bool('sm2_crt_enabled', False)),
             'crt_scanline_strength': self.config.get_str('sm2_crt_scanline_strength', '40'),
             'crt_mask_strength': self.config.get_str('sm2_crt_mask_strength', '30'),

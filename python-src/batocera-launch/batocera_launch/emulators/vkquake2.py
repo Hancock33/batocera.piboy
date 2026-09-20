@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 import shutil
 from pathlib import Path
 from typing import Final
@@ -36,9 +35,6 @@ class VKQuake2(Emulator):
             raise BatoceraException(f'Source directory {_SOURCE_DIR} does not exist.')
 
         shutil.copytree(_SOURCE_DIR, _ROM_DIR, dirs_exist_ok=True, copy_function=shutil.copy2)
-
-        # Change to the rom directory before running
-        os.chdir(_ROM_DIR)
 
         args: list[str | Path] = ['/userdata/roms/ports/quake2/quake2', '-datadir', '/userdata/roms/ports/quake2']
 

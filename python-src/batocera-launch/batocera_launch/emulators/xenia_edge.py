@@ -58,6 +58,12 @@ class XeniaEdge(Emulator):
         (self.config_dir / 'patches').mkdir(parents=True, exist_ok=True)
 
         rom = self.rom
+        if 'squashfs' in str(rom):
+            squashrom = str(rom) + str(rom).replace('/var/run/squashfs', '') + '.xbox360'
+            if Path(squashrom).exists():
+                rom = Path(squashrom)
+                _logger.debug('Found squashfs playlist %s:', rom)
+
         if rom.suffix == '.xbox360':
             # A digital title: the file is a playlist naming the actual XBLA/disc
             # install to launch, relative to the playlist's own directory.

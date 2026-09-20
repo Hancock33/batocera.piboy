@@ -10,21 +10,9 @@ if TYPE_CHECKING:
 
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'eden': ('eden.edenGenerator', 'EdenGenerator'),
-    'etekwar': ('etekwar.etekwarGenerator', 'EtekwarGenerator'),
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),
-    'linuxloader': ('linuxloader.linuxloaderGenerator', 'LinuxLoaderGenerator'),
     'mame': ('mame.mameGenerator', 'MameGenerator'),
-    'nesbox': ('nesbox.nesboxGenerator', 'NesboxGenerator'),
-    'omf2097': ('omf2097.omf2097Generator', 'Omf2097Generator'),
-    'openclaw': ('openclaw.openclawGenerator', 'OpenclawGenerator'),
-    'openlara': ('openlara.openlaraGenerator', 'OpenlaraGenerator'),
-    'raptor': ('raptor.raptorGenerator', 'RaptorGenerator'),
     'ryujinx': ('ryujinx.ryujinxGenerator', 'RyujinxGenerator'),
-    'stalker': ('stalker.stalkerGenerator', 'StalkerGenerator'),
-    'stk': ('stk.stkGenerator', 'StkGenerator'),
-    'touchhle': ('touchhle.touchhleGenerator', 'TouchHLEGenerator'),
-    'xboxcloud': ('xboxcloud.xboxcloudGenerator', 'XboxcloudGenerator'),
-    'yabasanshiro': ('yabasanshiro.yabasanshiroGenerator', 'YabasanshiroGenerator'),
 }
 
 def get_generator(emulator: str, core: str) -> Generator:

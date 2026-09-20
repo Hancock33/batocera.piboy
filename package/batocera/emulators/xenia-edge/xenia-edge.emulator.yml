@@ -397,6 +397,7 @@ custom_features:
       Enabled: true
 file_extensions:
   - iso
+  - squashfs
   - xex
   - xbox360
   - zar

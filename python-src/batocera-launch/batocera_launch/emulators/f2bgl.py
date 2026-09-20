@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 from pathlib import Path
 from typing import Final
 
@@ -26,7 +25,6 @@ class F2bgl(Emulator):
         return _ROM_DIR
 
     async def configure(self) -> Command:
-        os.chdir(_ROM_DIR)
         args: list[str | Path] = [
             'f2bgl',
             '--fullscreen',
