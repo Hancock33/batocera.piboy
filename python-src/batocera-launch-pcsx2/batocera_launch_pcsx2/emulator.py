@@ -16,7 +16,7 @@ from batocera_launch.paths import DATAINIT_DIR, configure_emulator
 
 _logger = logging.getLogger(__name__)
 
-_PCSX2_BIN_DIR: Final = Path('/usr/pcsx2/bin')
+_PCSX2_BIN_DIR: Final = Path('/usr/bin/pcsx2')
 _PCSX2_RESOURCES_DIR: Final = _PCSX2_BIN_DIR / 'resources'
 
 # PCSX2/Pad.cpp Pad_subtype values for the wheel devices we support
