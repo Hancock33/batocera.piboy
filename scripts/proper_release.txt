@@ -43,6 +43,7 @@ mono-bin.mk
 nanoboyadvance.mk
 nblood.mk
 nv-codec-headers.mk
+opengoal.mk
 pcsx2.mk
 pcsx2x6.mk
 picom.mk

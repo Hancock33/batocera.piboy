@@ -9,13 +9,14 @@ config BR2_PACKAGE_OPENGOAL
 	select BR2_PACKAGE_SDL3
 	select BR2_PACKAGE_SQLITE
 	select BR2_PACKAGE_ZLIB
-	help
-	  OpenGOAL - native PC ports of Jak and Daxter, Jak II and Jak 3,
-	  decompiled from the PlayStation 2 originals.
 
-	  Ships the runtime, the GOAL compiler and the ISO extractor. You
-	  supply your own disc image; the first launch extracts and builds
-	  the game from it.
+	help
+	  OpenGOAL - native PC ports of Jak and Daxter, Jak II and
+	  Jak 3, decompiled from the PlayStation 2 originals.
+
+	  Ships the runtime, the GOAL compiler and the ISO extractor.
+	  You supply your own disc image; the first launch extracts
+	  and builds the game from it.
 
 	  https://opengoal.dev
 
