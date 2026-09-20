@@ -30,7 +30,7 @@ Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|ac1e8743c
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|afbcc8a5dbc2d7bda8ed68bfed3c4f1153009a6c|Sept 20, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|040ee487344c56a1250d2f48fe44b9b0a667e15f|Sept 20, 2026
 Emulators|[libretro-supermodel](http://github.com/libretro/Libretro-Supermodel)|84bc106b45b279bf868a53b9232897c8dc10ca17|Sept 20, 2026
-Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|e778112b91d1463c53ae92726aaf11c8ae9e0b06|Sept 20, 2026
+Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|2d7285702ebbf3a33bc5156e55169ce092c82bbc|Sept 20, 2026
 Emulators|[libretro-vitaquake2](http://github.com/libretro/vitaquake2)|4b333fe18e8816974f04432af01f87654ae16e21|Sept 20, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|04b09fb2701537a71c78426005bb257477ab75d5|Sept 19, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|04b09fb2701537a71c78426005bb257477ab75d5|Sept 19, 2026
