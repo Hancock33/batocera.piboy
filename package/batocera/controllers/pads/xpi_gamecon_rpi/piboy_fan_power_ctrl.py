@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Fan and battery controller for xpi_gamecon hardware (Piboy variants).
 Reads CPU temperature and adjusts fan speed accordingly; monitors
 battery percentage and blinks a warning LED when it's low.
 """
+from __future__ import annotations
 
-import time
+import pathlib
 import subprocess
 import sys
-import os
+import time
 from configparser import ConfigParser
+from pathlib import Path
 
 # --- Configuration ---
 WAIT_TIME = 5  # [s] Time to wait between each refresh
@@ -56,8 +57,8 @@ def load_fan_curve(fan_filename):
         return curve
 
     for directory in FAN_CONFIG_DIRS:
-        path = os.path.join(directory, fan_filename)
-        if os.path.isfile(path):
+        path = Path(directory / fan_filename)
+        if pathlib.Path(path).is_file():
             config = ConfigParser()
             config.read(path)
             section = config["FAN"]
@@ -73,11 +74,11 @@ def load_fan_curve(fan_filename):
     return curve
 
 def read_value(path, cast=str):
-    with open(path, "r") as f:
+    with pathlib.Path(path).open() as f:
         return cast(f.read().strip())
 
 def write_value(path, value):
-    with open(path, "w") as f:
+    with pathlib.Path(path).open("w") as f:
         f.write(str(value))
 
 def fan_speed_for_temp(temp_c, curve):

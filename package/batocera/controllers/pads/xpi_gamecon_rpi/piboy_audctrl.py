@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Volume controller for xpi_gamecon hardware.
 """
+from __future__ import annotations
 
-import time
-import sys
 import os
+import pathlib
+import sys
+import time
 
 # --- Configuration ---
 WAIT_TIME = 0.5  # [s] Time to wait between each refresh
@@ -15,7 +16,7 @@ VOLUME_HYSTERESIS = 1
 VOLUME_PATH = "/sys/kernel/xpi_gamecon/volume"
 
 def read_int(path):
-    with open(path, "r") as f:
+    with pathlib.Path(path).open() as f:
         return int(f.read().strip())
 
 def set_system_volume(volume):
