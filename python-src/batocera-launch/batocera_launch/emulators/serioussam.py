@@ -17,16 +17,14 @@ class Serioussam(Emulator):
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
-    @property
-    def execution_path(self) -> Path | None:
-        return data_dir
-
     async def configure(self) -> Command:
 
         if '/samtfe/' in str(self.rom).lower():
             data_dir = '/usr/share/game_assets/samtfe/Bin'
         else:
             data_dir = '/usr/share/game_assets/samtse/Bin'
+
+        os.chdir(data_dir)
 
         return Command(
             [f'{data_dir}/serioussam'],

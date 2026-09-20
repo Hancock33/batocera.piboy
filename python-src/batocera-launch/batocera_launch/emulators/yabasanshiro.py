@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from typing import Any
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
@@ -69,10 +70,11 @@ class Yabasanshiro(Emulator):
             json.dump(config, f, indent=2)
 
         # Configure the first two controllers
-        data: dict = {}
+        data: dict[str, Any] = {}
         for pad in self.controllers[:2]:
             ctrl_id = f'{pad.index}_{pad.real_name}_{pad.guid}'
-            data.setdefault(ctrl_id, {})
+            if ctrl_id not in data:
+                data[ctrl_id] = {}
 
             player_index = int(pad.index) + 1
             pad_mode = self.config.get_int(f'yaba_player{player_index}', 0)

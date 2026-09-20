@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 import shutil
 from pathlib import Path
 from typing import Final
@@ -27,6 +26,7 @@ class Openlara(Emulator):
         return self.rom.parent
 
     async def configure(self) -> Command:
+        openlara_rom_path = self.rom.parent
         destination_file = openlara_rom_path / 'OpenLara'
 
         openlara_rom_path.mkdir(parents=True, exist_ok=True)
