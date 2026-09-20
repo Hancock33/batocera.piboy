@@ -30,9 +30,12 @@ class Openclaw(Emulator):
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
+    @property
+    def execution_path(self) -> Path | None:
+        return self.rom.parent
+
     async def configure(self) -> Command:
         self._ensure_config()
-        os.chdir(_CLAW_DST)
 
         return Command(
             ['openclaw'],

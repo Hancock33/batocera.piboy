@@ -17,6 +17,10 @@ class Witchaven(Emulator):
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
+    @property
+    def execution_path(self) -> Path | None:
+        return self.rom.parent
+
     async def configure(self) -> Command:
         os.chdir('/userdata/roms/ports/witchaven')
         return Command(

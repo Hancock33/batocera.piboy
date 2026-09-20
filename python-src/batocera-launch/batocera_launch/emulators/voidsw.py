@@ -17,6 +17,10 @@ class Voidsw(Emulator):
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
+    @property
+    def execution_path(self) -> Path | None:
+        return self.rom.parent
+
     async def configure(self) -> Command:
 
         addon = '-addon0'
@@ -25,8 +29,6 @@ class Voidsw(Emulator):
 
         if 'TD' in self.rom.stem:
             addon = '-addon2'
-
-        os.chdir(self.rom.parent)
 
         return Command(
             ['voidsw', '-j', addon, self.rom.parent],

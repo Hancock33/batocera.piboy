@@ -30,9 +30,12 @@ class Raptor(Emulator):
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
+    @property
+    def execution_path(self) -> Path | None:
+        return self.rom.parent
+
     async def configure(self) -> Command:
         self._ensure_config()
-        os.chdir('/userdata/roms/ports/raptor')
 
         return Command(
             ['raptor'],

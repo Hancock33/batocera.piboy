@@ -37,9 +37,6 @@ class VKQuake2(Emulator):
 
         shutil.copytree(_SOURCE_DIR, _ROM_DIR, dirs_exist_ok=True, copy_function=shutil.copy2)
 
-        # Change to the rom directory before running
-        os.chdir(_ROM_DIR)
-
         args: list[str | Path] = ['/userdata/roms/ports/quake2/quake2', '-datadir', '/userdata/roms/ports/quake2']
 
         if 'zero' in self.rom.name.lower():

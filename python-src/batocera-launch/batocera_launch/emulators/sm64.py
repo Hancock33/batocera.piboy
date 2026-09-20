@@ -24,6 +24,10 @@ class Sm64(Emulator):
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
+    @property
+    def execution_path(self) -> Path | None:
+        return self.rom
+
     async def configure(self) -> Command:
         extension = self.rom.suffix.lower() if len(self.rom.suffix.lower()) >= 3 else '.e64'
         region = REGION_CONFIG.get(extension, REGION_CONFIG['.e64'])
@@ -40,8 +44,6 @@ class Sm64(Emulator):
         # Cheat Menu
         if self.config.get_bool('cheatsmenu'):
             args.append('--cheats')
-
-        os.chdir(self.rom)
 
         return Command(
             args,

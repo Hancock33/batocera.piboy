@@ -22,8 +22,11 @@ class Openlara(Emulator):
             'keys': {'exit': ['KEY_LEFTALT', 'KEY_F4']},
         }
 
+    @property
+    def execution_path(self) -> Path | None:
+        return self.rom.parent
+
     async def configure(self) -> Command:
-        openlara_rom_path = self.rom.parent
         destination_file = openlara_rom_path / 'OpenLara'
 
         openlara_rom_path.mkdir(parents=True, exist_ok=True)
@@ -31,8 +34,6 @@ class Openlara(Emulator):
         if destination_file.exists():
             destination_file.unlink()
         shutil.copy(_OPENLARA_SRC, destination_file)
-
-        os.chdir(openlara_rom_path)
 
         return Command(
             ['OpenLara'],

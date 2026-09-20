@@ -26,7 +26,6 @@ class Awgl(Emulator):
         return _ROM_DIR
 
     async def configure(self) -> Command:
-        os.chdir(_ROM_DIR)
         args: list[str | Path] = ['awgl']
 
         if '15th' in self.rom.stem:
