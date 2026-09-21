@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 2bdabb084..745eaa1cb 100644
+index 6ef9e58a7..2972931a7 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -5102,12 +5102,12 @@ void System::WarnAboutUnsafeSettings()
+@@ -5076,12 +5076,12 @@ void System::WarnAboutUnsafeSettings()
      if (g_settings.cpu_execution_mode == CPUExecutionMode::CachedInterpreter)
        append(TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
  

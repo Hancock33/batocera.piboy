@@ -221,7 +221,7 @@ index 753354fa4..1e416ab9f 100644
  class Error;
  
 diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
-index 52f5c5d6d..ad65ee73e 100644
+index a7786f69f..c99a314e2 100644
 --- a/src/core/CMakeLists.txt
 +++ b/src/core/CMakeLists.txt
 @@ -224,7 +224,8 @@ function(add_core_resources target)
@@ -236,24 +236,11 @@ index 52f5c5d6d..ad65ee73e 100644
 +    add_runtime_libraries(${target} DiscordRPC::discord-rpc)
 +  endif()
  endfunction()
-diff --git a/src/core/discord_presence.h b/src/core/discord_presence.h
-index 9d14234b7..e099ba504 100644
---- a/src/core/discord_presence.h
-+++ b/src/core/discord_presence.h
-@@ -9,7 +9,7 @@
- 
- // Discord presence is available on all platforms except Android.
- #ifndef __ANDROID__
--#define ENABLE_DISCORD_PRESENCE
-+//#define ENABLE_DISCORD_PRESENCE
- #endif
- 
- #ifdef ENABLE_DISCORD_PRESENCE
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index 4173ad709..920af7ac2 100644
+index fc6c1b539..fd111379d 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -106,8 +106,8 @@ add_library(util
+@@ -108,8 +108,8 @@ add_library(util
  
  target_precompile_headers(util PRIVATE "pch.h")
  target_include_directories(util PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/..")
@@ -267,13 +254,13 @@ index 4173ad709..920af7ac2 100644
 @@ -206,7 +206,7 @@ if(ENABLE_VULKAN)
  endif()
  
- # shaderc/spirv-cross is loaded dynamically to reduce module loads on startup.
+ # freetype/plutosvg/shaderc/spirv-cross/ffmpeg is loaded dynamically to reduce module loads on startup.
 -get_target_property(FREETYPE_INCLUDE_DIRS freetype INTERFACE_INCLUDE_DIRECTORIES)
 +get_target_property(FREETYPE_INCLUDE_DIRS Freetype::Freetype INTERFACE_INCLUDE_DIRECTORIES)
  get_target_property(PLUTOSVG_INCLUDE_DIRS plutosvg::plutosvg INTERFACE_INCLUDE_DIRECTORIES)
  get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_shared INTERFACE_INCLUDE_DIRECTORIES)
  get_target_property(SPIRV_CROSS_INCLUDE_DIR spirv-cross-c-shared INTERFACE_INCLUDE_DIRECTORIES)
-@@ -294,7 +294,7 @@ function(add_util_resources target)
+@@ -270,7 +270,7 @@ function(add_util_resources target)
    endif()
  
    # Copy dynamically-loaded libraries into the bundle.
