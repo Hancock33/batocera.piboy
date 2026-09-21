@@ -64,7 +64,7 @@ endif
 
 define PCSX2_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2
-	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2-qt
 	cp -pr  $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/bin/pcsx2
 	# use our SDL config
 	rm $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt

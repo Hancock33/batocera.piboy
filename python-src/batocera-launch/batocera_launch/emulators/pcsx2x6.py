@@ -84,9 +84,9 @@ class Pcsx2x6(Emulator):
         _configure_audio(self.config_dir)
 
         command_array: list[str | Path] = (
-            ['/usr/pcsx2x6/bin/pcsx2x6-qt']
+            [_PCSX2X6_BIN_DIR / 'pcsx2x6-qt']
             if configure_emulator(self.rom)
-            else ['/usr/pcsx2x6/bin/pcsx2x6-qt', '-nogui', self.rom]
+            else [_PCSX2X6_BIN_DIR / 'pcsx2x6-qt', '-nogui', self.rom]
         )
 
         with Path('/proc/cpuinfo').open() as cpuinfo:

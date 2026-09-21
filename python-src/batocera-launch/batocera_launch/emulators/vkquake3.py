@@ -163,5 +163,5 @@ class Vkquake3(Emulator):
                 binary.chmod(binary.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
         # get the game / mod to launch
-        command_line = self.rom.read_text().splitlines()[0].strip().split()
-        return Command([binary, *command_line])
+        #command_line = self.rom.read_text().splitlines()[0].strip().split()
+        return Command([binary])
