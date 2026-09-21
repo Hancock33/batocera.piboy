@@ -15,9 +15,11 @@ Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|nightly-2026-09-21|Sept 21,
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|b7a88a6dd64b6033239df3e05f7c785e2d44fe7a|Sept 21, 2026
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|6497ea3b6906ee7e2d7b7206b5c760a4039877db|Sept 21, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|ef32f0d335799efc9c0f83778f0076141a169ca7|Sept 21, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260921|Sept 21, 2026
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.42.2|Sept 21, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.42.2|Sept 21, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|1291fee7397337b4a51256a9abbe0d610d80b911|Sept 21, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260921|Sept 21, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2423e6703c538d6a84ecfbf72851e4cc8239c96a|Sept 21, 2026
 Ports|[uzdoom](https://github.com/UZDoom/UZDoom.git)|01f2ba28f21cc2d255c787e83b79c7da47413894|Sept 21, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|628082c9d339840dea21513e8c40fa9e4cf90bd3|Sept 21, 2026
@@ -52,9 +54,7 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|a1193da35729c834f
 Ports|[opengoal](http://github.com/open-goal/jak-project)|v0.3.8|Sept 20, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|247d72764eb7ec33cbaf02d59786617ab63751fd|Sept 20, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|af814f20b91466072c6f9fd22f746cb1f22d5b1a|Sept 20, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260920|Sept 20, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|e68fff4a13a3dd5d40678ae66ee60f85ccb04153|Sept 20, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260920|Sept 20, 2026
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|58ebb4886c461fa01e9c80ea11e01f4f3247be0e|Sept 20, 2026
 Ports|[hlsdk-xash3d-dmc](https://github.com/FWGS/hlsdk-portable.git)|2607b4d6150a5fb3ab4d909f00556b7b008680ae|Sept 20, 2026
 Ports|[hlsdk-xash3d-opfor](https://github.com/FWGS/hlsdk-portable.git)|bd9efef7f39ac6d1ffb31a12a5635d6a47e8dbca|Sept 20, 2026
