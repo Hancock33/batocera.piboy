@@ -1,0 +1,158 @@
+diff --git a/src/core/achievements.cpp b/src/core/achievements.cpp
+index c49be63a4..ea76362af 100644
+--- a/src/core/achievements.cpp
++++ b/src/core/achievements.cpp
+@@ -1032,7 +1032,9 @@ void Achievements::UpdateRichPresence(std::unique_lock<std::recursive_mutex>& lo
+ 
+   INFO_LOG("Rich presence updated: {}", s_state.rich_presence_string);
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::UpdateDetails(GetCurrentGameBadgeURL(), s_state.rich_presence_string);
++#endif
+ }
+ 
+ void Achievements::OnSystemStarting(bool disable_hardcore_mode)
+@@ -1265,7 +1267,9 @@ void Achievements::ClientLoadGameCallback(int result, const char* error_message,
+   // but the progress is fine since that's just game IDs
+   UpdateProgressDatabaseFromCurrentGame();
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::UpdateDetails(s_state.game_badge_url, s_state.rich_presence_string);
++#endif
+ 
+   if (g_settings.achievements_prefetch_badges)
+     Achievements::PrefetchAllAchievementBadges();
+@@ -1283,7 +1287,9 @@ void Achievements::ClientLoadGameCallback(int result, const char* error_message,
+ 
+ void Achievements::ClearGameInfo()
+ {
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::UpdateDetails({}, {});
++#endif
+ 
+   FullscreenUI::ClearAchievementsState();
+ 
+diff --git a/src/core/core.cpp b/src/core/core.cpp
+index f694ca915..aa9725acd 100644
+--- a/src/core/core.cpp
++++ b/src/core/core.cpp
+@@ -753,8 +753,10 @@ bool Core::CoreThreadInitialize(bool disable_worker_threads, Error* error)
+ 
+   Achievements::Initialize();
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   if (g_settings.enable_discord_presence)
+     DiscordPresence::Initialize();
++#endif
+ 
+   return true;
+ }
+@@ -763,7 +765,9 @@ void Core::CoreThreadShutdown()
+ {
+   s_locals.async_task_queue.SetWorkerCount(0, 0);
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::Shutdown();
++#endif
+ 
+   Achievements::Shutdown();
+ 
+@@ -815,7 +819,9 @@ void Core::IdleUpdate(u64 max_poll_time)
+ {
+   InputManager::PollSources();
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::Poll();
++#endif
+ 
+   HTTPDownloader::PollRequests();
+ 
+diff --git a/src/core/discord_presence.cpp b/src/core/discord_presence.cpp
+index 89e9b8196..a268111a8 100644
+--- a/src/core/discord_presence.cpp
++++ b/src/core/discord_presence.cpp
+@@ -3,6 +3,8 @@
+ 
+ #include "discord_presence.h"
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
++
+ #include "achievements.h"
+ #include "game_database.h"
+ #include "system.h"
+@@ -191,3 +193,5 @@ void DiscordPresence::UpdateDetails(std::string_view badge_url, std::string_view
+ 
+   Update(false);
+ }
++
++#endif // ENABLE_DISCORD_PRESENCE
+\ No newline at end of file
+diff --git a/src/core/discord_presence.h b/src/core/discord_presence.h
+index 94b181e36..878364cc5 100644
+--- a/src/core/discord_presence.h
++++ b/src/core/discord_presence.h
+@@ -7,6 +7,8 @@
+ 
+ #include <string_view>
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
++
+ namespace DiscordPresence {
+ 
+ bool Initialize();
+@@ -19,3 +21,5 @@ void Update(bool is_new_session);
+ void UpdateDetails(std::string_view badge_url, std::string_view state);
+ 
+ } // namespace DiscordPresence
++
++#endif // ENABLE_DISCORD_PRESENCE
+diff --git a/src/core/system.cpp b/src/core/system.cpp
+index 2972931a7..835e8feb6 100644
+--- a/src/core/system.cpp
++++ b/src/core/system.cpp
+@@ -2097,7 +2097,9 @@ void System::ClearRunningGame()
+   Host::OnSystemGameChanged(s_state.running_game_path, s_state.running_game_serial, s_state.running_game_title,
+                             s_state.running_game_hash);
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::Update(true);
++#endif
+ }
+ 
+ void System::Execute()
+@@ -2154,7 +2156,9 @@ void System::FrameDone()
+       Achievements::FrameUpdate();
+   }
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::Poll();
++#endif
+ 
+   GDBServer::PollUntil(0);
+ 
+@@ -4254,7 +4258,9 @@ void System::UpdateRunningGame(const std::string& path, CDImage* image, bool boo
+   if (s_state.running_game_serial != prev_serial)
+     UpdateSessionTime(prev_serial);
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::Update(booting);
++#endif
+ 
+   if (!s_state.running_game_title.empty())
+   {
+@@ -4877,6 +4883,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+ 
+   Achievements::UpdateSettings(old_settings);
+ 
++#ifdef ENABLE_DISCORD_PRESENCE
+   if (g_settings.enable_discord_presence != old_settings.enable_discord_presence)
+   {
+     if (g_settings.enable_discord_presence)
+@@ -4884,6 +4891,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+     else
+       DiscordPresence::Shutdown();
+   }
++#endif
+ 
+   if (g_settings.export_shared_memory != old_settings.export_shared_memory) [[unlikely]]
+   {
