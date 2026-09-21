@@ -4,7 +4,6 @@ import logging
 import shutil
 import signal
 import subprocess
-import time
 from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
@@ -77,9 +76,6 @@ def launch(args: Arguments, profiler: Profiler, /) -> None:
                 Path('/tmp/launch_error.log').write_text(first_batocera_exception.args[0])
             else:
                 exit_code = base_batocera_exceptions[0].exit_code
-
-    # this seems to be required so that the gpu memory is resituated and available for ES
-    time.sleep(1)
 
     if exit_code < 0:
         signal_number = exit_code * -1
