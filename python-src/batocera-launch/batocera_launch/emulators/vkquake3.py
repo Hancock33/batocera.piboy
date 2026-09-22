@@ -162,6 +162,11 @@ class Vkquake3(Emulator):
             if binary.is_file():
                 binary.chmod(binary.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
+        args: list[str | Path] = [self.roms_dir / 'ioquake3']
+
         # get the game / mod to launch
-        #command_line = self.rom.read_text().splitlines()[0].strip().split()
-        return Command([binary])
+        if self.rom.suffix == '.quake3':
+            command_line = str(self.rom.read_text().splitlines()[0].strip().split())
+            args.extend([command_line])
+
+        return Command(args)
