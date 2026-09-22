@@ -3,11 +3,11 @@
 # libretro-emuscv
 #
 ################################################################################
-# Version: Commits on Aug 12, 2026
-LIBRETRO_EMUSCV_VERSION = 769ad162db63884222949f2add2a4b56a6499b25
+# Version: Commits on Sep 21, 2026
+LIBRETRO_EMUSCV_VERSION = 17407117018919545428b753277dabd83630052f
 LIBRETRO_EMUSCV_SITE = $(call gitlab,MaaaX-EPOCH84,libretro-emuscv,$(LIBRETRO_EMUSCV_VERSION))
-LIBRETRO_EMUSCV_LICENSE = GPLv2
-LIBRETRO_EMUSCV_DEPENDENCIES = sdl2 retroarch
+LIBRETRO_EMUSCV_LICENSE = GPL-3.0+
+LIBRETRO_EMUSCV_DEPENDENCIES = retroarch
 LIBRETRO_EMUSCV_EMULATOR_INFO = emuscv.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
@@ -30,12 +30,6 @@ endif
 ifeq ($(BR2_x86_64),y)
     LIBRETRO_EMUSCV_EXTRA_ARGS += ARCH=x86_64
 endif
-
-define LIBRETRO_EMUSCV_FIXSDL2_PATH
-	$(SED) "s+\`sdl2-config+\`$(STAGING_DIR)/usr/bin/sdl2-config+g" $(@D)/Makefile.libretro
-endef
-
-LIBRETRO_EMUSCV_PRE_CONFIGURE_HOOKS += LIBRETRO_EMUSCV_FIXSDL2_PATH
 
 define LIBRETRO_EMUSCV_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile.libretro
