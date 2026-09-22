@@ -4,6 +4,7 @@ shared_features:
 file_extensions:
   - bin
   - cart
+  - rom
   - zip
   - '0'
 systems:
