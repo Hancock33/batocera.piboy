@@ -1,5 +1,5 @@
 diff --git a/configuration.c b/configuration.c
-index b1c002e9ed..245eb1fa5f 100644
+index f4ac8e417a..517f4d1bcf 100644
 --- a/configuration.c
 +++ b/configuration.c
 @@ -8060,12 +8060,33 @@ static void save_keybind_mbutton(config_file_t *conf,
@@ -38,7 +38,7 @@ index b1c002e9ed..245eb1fa5f 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -10533,11 +10554,32 @@ void input_config_parse_mouse_button(char *s,
+@@ -10530,11 +10551,32 @@ void input_config_parse_mouse_button(char *s,
                 bind->mbutton = RETRO_DEVICE_ID_MOUSE_MIDDLE;
                 break;
              case 4:
@@ -73,7 +73,7 @@ index b1c002e9ed..245eb1fa5f 100644
        }
     }
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 69d885ab14..47c472f9e0 100644
+index 85c0eac8b6..668ff8ed5d 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -226,7 +226,7 @@ typedef struct
@@ -170,7 +170,7 @@ index 69d885ab14..47c472f9e0 100644
              return mouse->wu;
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
 diff --git a/libretro-common/include/libretro.h b/libretro-common/include/libretro.h
-index e0028f617e..b315df64f5 100644
+index 73ff390c50..781d673f06 100644
 --- a/libretro-common/include/libretro.h
 +++ b/libretro-common/include/libretro.h
 @@ -404,8 +404,15 @@ extern "C" {
@@ -192,10 +192,10 @@ index e0028f617e..b315df64f5 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index 6037c88964..f790ab19c4 100644
+index c2a8345fb0..48483b67a7 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
-@@ -1672,8 +1672,15 @@ static bool menu_input_key_bind_poll_find_hold_pad(
+@@ -1669,8 +1669,15 @@ static bool menu_input_key_bind_poll_find_hold_pad(
           case RETRO_DEVICE_ID_MOUSE_LEFT:
           case RETRO_DEVICE_ID_MOUSE_RIGHT:
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:
