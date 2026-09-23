@@ -113,12 +113,12 @@ def _controls_b_from_inputs(inputs: InputDict, /) -> dict[str, str]:
     mappings['controls_b[CONTROL_INDEX_B]'] = _button_or_hat_value(inputs, 'b')
     mappings['controls_b[CONTROL_INDEX_X]'] = _button_or_hat_value(inputs, 'x')
     mappings['controls_b[CONTROL_INDEX_Y]'] = _button_or_hat_value(inputs, 'y')
-    mappings['controls_b[CONTROL_INDEX_L]'] = _button_or_hat_value(inputs, 'l2')
-    mappings['controls_b[CONTROL_INDEX_R]'] = _button_or_hat_value(inputs, 'r2')
+    mappings['controls_b[CONTROL_INDEX_L]'] = _button_or_hat_value(inputs, 'pageup')
+    mappings['controls_b[CONTROL_INDEX_R]'] = _button_or_hat_value(inputs, 'pagedown')
     mappings['controls_b[CONTROL_INDEX_START]'] = _button_or_hat_value(inputs, 'start')
     mappings['controls_b[CONTROL_INDEX_SELECT]'] = _button_or_hat_value(inputs, 'select')
-    mappings['controls_b[CONTROL_INDEX_SWAP_SCREENS]'] = _button_or_hat_value(inputs, 'pageup')
-    mappings['controls_b[CONTROL_INDEX_FAST_FORWARD]'] = _button_or_hat_value(inputs, 'pagedown')
+    mappings['controls_b[CONTROL_INDEX_SWAP_SCREENS]'] = _button_or_hat_value(inputs, 'l2')
+    mappings['controls_b[CONTROL_INDEX_FAST_FORWARD]'] = _button_or_hat_value(inputs, 'r2')
 
     if 'joystick1left' in inputs and 'joystick1up' in inputs:
         x_axis_id = int(inputs['joystick1left'].id)
@@ -171,6 +171,7 @@ class Drastic(Emulator):
 
     @property
     def execution_path(self) -> Path | None:
+        self.config_dir.mkdir(parents=True, exist_ok=True)
         return self.config_dir
 
     async def configure(self) -> Command:
@@ -244,7 +245,6 @@ class Drastic(Emulator):
             'controls_a[CONTROL_INDEX_UI_PAGE_UP]': '331',
             'controls_a[CONTROL_INDEX_UI_PAGE_DOWN]': '334',
             'controls_a[CONTROL_INDEX_UI_SWITCH]': '481',
-            'firmware.language': str(_LANGUAGE_MAPPING.get(self.config.get_str('system.language', 'en_US'), 1)),
             **_read_existing_config(config_file),
         }
 
@@ -258,6 +258,13 @@ class Drastic(Emulator):
             except ValueError:
                 screen_orientation = '0'
 
+        language_override = self.config.get_int('drastic_language', -1)
+        firmware_language = (
+            language_override
+            if language_override >= 0
+            else _LANGUAGE_MAPPING.get(self.config.get_str('system.language', 'en_US'), 1)
+        )
+
         # Enforce front-end menu settings
         config.update(
             {
@@ -267,6 +274,7 @@ class Drastic(Emulator):
                 'hires_3d': str(self.config.get_int('drastic_hires', 0)),
                 'threaded_3d': str(self.config.get_int('drastic_threaded', 0)),
                 'screen_orientation': screen_orientation,
+                'firmware.language': str(firmware_language),
             }
         )
 
