@@ -3,8 +3,8 @@
 # mali-mp400-gbm
 #
 ################################################################################
-# Version: Commits on Feb 24, 2022
-MALI_MP400_GBM_VERSION = b35e1b288bdac91a7d401edd04c71ec9fa573040
+# Version: Commits on Aug 16, 2022
+MALI_MP400_GBM_VERSION = 8f46cc7b9777975f40323b0971f3483fa2aefcd3
 MALI_MP400_GBM_SITE = $(call github,caesar-github,libmali,$(MALI_MP400_GBM_VERSION))
 
 MALI_MP400_GBM_INSTALL_STAGING = YES
