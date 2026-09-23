@@ -220,8 +220,6 @@ channelf:
 chihiro:
   emulator: xemu
   core:     xemu
-  options:
-    xemu_memory: '128'
 cinematronics:
   emulator: libretro
   core:     mame078plus

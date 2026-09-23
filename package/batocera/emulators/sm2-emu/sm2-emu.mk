@@ -3,8 +3,8 @@
 # sm2-emu
 #
 ################################################################################
-# Version: Commits on Sept 22, 2026
-SM2_EMU_VERSION = v0.9.11
+# Version: Commits on Sept 23, 2026
+SM2_EMU_VERSION = v0.9.12
 SM2_EMU_SITE = https://github.com/dmanlfc/sm2-emu.git
 SM2_EMU_SITE_METHOD = git
 SM2_EMU_GIT_SUBMODULES = YES
