@@ -3,7 +3,6 @@ from __future__ import annotations
 import logging
 import shutil
 import signal
-import subprocess
 from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
