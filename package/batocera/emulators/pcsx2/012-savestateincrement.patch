@@ -31,10 +31,10 @@ index 706f82f03..421f3633a 100644
  	SettingsWrapBitBool(BackupSavestate);
  
 diff --git a/pcsx2/VMManager.cpp b/pcsx2/VMManager.cpp
-index cddcc4935..3e24ab670 100644
+index d3e494b9d..996746db0 100644
 --- a/pcsx2/VMManager.cpp
 +++ b/pcsx2/VMManager.cpp
-@@ -2145,6 +2145,12 @@ void VMManager::SaveState(
+@@ -2170,6 +2170,12 @@ void VMManager::SaveState(
  
  void VMManager::SaveStateToSlot(s32 slot, bool zip_on_thread, std::function<void(const std::string&)> error_callback)
  {

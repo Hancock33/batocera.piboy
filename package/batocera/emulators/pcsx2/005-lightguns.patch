@@ -1,8 +1,8 @@
 diff --git a/pcsx2/ImGui/ImGuiManager.cpp b/pcsx2/ImGui/ImGuiManager.cpp
-index 6bf97103c..a74921c83 100644
+index e824f6772..d371fcb0c 100644
 --- a/pcsx2/ImGui/ImGuiManager.cpp
 +++ b/pcsx2/ImGui/ImGuiManager.cpp
-@@ -1426,12 +1426,14 @@ void ImGuiManager::DrawSoftwareCursor(const SoftwareCursor& sc, const std::pair<
+@@ -1416,12 +1416,14 @@ void ImGuiManager::DrawSoftwareCursor(const SoftwareCursor& sc, const std::pair<
  
  void ImGuiManager::DrawSoftwareCursors()
  {
