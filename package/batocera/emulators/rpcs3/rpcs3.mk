@@ -3,15 +3,15 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Sept 22, 2026
-RPCS3_VERSION = 56237b68583801e1a36323685b7fedee367cc7cf
+# Version: Commits on Sept 16, 2026
+RPCS3_VERSION = fadced35a5fb8a2ee06fcae55cab06eb9898283a
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
-RPCS3_TRANSLATIONS_VERSION = release-34817881662-56
+RPCS3_TRANSLATIONS_VERSION = release-35573291267-57
 RPCS3_EXTRA_DOWNLOADS = https://github.com/RPCS3/rpcs3_translations/archive/refs/tags/$(RPCS3_TRANSLATIONS_VERSION).tar.gz
 
 RPCS3_DEPENDENCIES += alsa-lib cubeb faudio ffmpeg flatbuffers

@@ -3,9 +3,9 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Sept 23, 2026
-PCSX2_VERSION = v2.9.80
-PCSX2_HASH = 81f28fc644a2a3c0bbcc2824c88b8b4d3eb98800
+# Version: Commits on Sept 24, 2026
+PCSX2_VERSION = v2.9.81
+PCSX2_HASH = 529ec5d94cde0bf1904cf92fe258c5e8d6c3a360
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -18,8 +18,8 @@ PCSX2_GIT_TAG_HI = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 1)
 PCSX2_GIT_TAG_MID = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 2)
 PCSX2_GIT_TAG_LO = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 3)
 
-PCSX2_DEPENDENCIES += alsa-lib ecm fmt freetype kddocwidgets libaio libbacktrace libcurl libgtk3 libpcap
-PCSX2_DEPENDENCIES += libpng libsamplerate libsoundtouch plutosvg plutovg rapidyaml
+PCSX2_DEPENDENCIES += alsa-lib ecm ffmpeg fmt freetype kddocwidgets libaio libbacktrace libcurl
+PCSX2_DEPENDENCIES += libgtk3 libpcap libpng libsamplerate libsoundtouch plutosvg plutovg rapidyaml
 PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools portaudio sdl3 shaderc webp xorgproto yaml-cpp zlib
 PCSX2_DEPENDENCIES += host-clang
 
