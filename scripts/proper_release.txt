@@ -60,7 +60,6 @@ rockchip-mpp.mk
 rockpro64-blobs.mk
 rpi-firmware.mk
 rtmidi.mk
-ruffle.mk
 ryzenadj.mk
 shader-slang.mk
 sockpp.mk

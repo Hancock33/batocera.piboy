@@ -57,6 +57,7 @@ python-nfcpy.mk
 python-pyxel.mk
 rgbds.mk
 rocknix-abl.mk
+ruffle.mk
 scummvm.mk
 sdl12-compat.mk
 sdl3_image.mk
