@@ -29,7 +29,6 @@ _logger = logging.getLogger(__name__)
 
 _BIN_PATH: Final = Path('/usr/bin/rpcs3')
 _OVERCOMMIT_PATH: Final = Path('/proc/sys/vm/overcommit_memory')
-psn_rom_squashfs = False
 
 # USB device tuning for the arcade PS3 titles (System 357/369, Taiko, ...) shipped as a
 # PSN squashfs. These all share the SCEEXE000 title-id, so they cannot be told apart by
@@ -475,9 +474,11 @@ class RPCS3(ParallelStartupTaskMixin, Emulator):
     def in_game_ratio(self) -> float:
         return 16 / 9
 
-    @property
-    def needs_overlayfs(self) -> bool:
-        return bool(psn_rom_squashfs)
+    def needs_overlayfs(self, rom: Path, /) -> bool:
+        # A PSN squashfs (dev_hdd0/game/<ID> layout) writes trophy/save data straight into
+        # that tree via the dev_hdd0 redirect below. A disc-dump squashfs (PS3_GAME/USRDIR)
+        # never writes through its rom, so it doesn't need one.
+        return (rom / 'dev_hdd0' / 'game').is_dir()
 
     @property
     def closest_screen_ratio(self) -> str:
@@ -501,8 +502,6 @@ class RPCS3(ParallelStartupTaskMixin, Emulator):
         # Detect PSN game packed as a squashfs: emulatorlauncher has already mounted the
         # squashfs and (via writesToRom=True) created a writable overlayfs, so rom is
         # /var/run/overlays/<stem> mirroring the dev_hdd0 layout.
-        psn_rom_squashfs = self.rom.is_dir() and str(self.rom).startswith('/var/run/') and self.rom_game_dir.is_dir()
-        _logger.debug("PSN game packed as a squashfs '%s'", psn_rom_squashfs)
         return self.rom.is_dir() and str(self.rom).startswith('/var/run/') and self.rom_game_dir.is_dir()
 
     @cached_property
