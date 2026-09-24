@@ -37,7 +37,7 @@ define SONIC3_AIR_INSTALL_TARGET_CMDS
 	# engine data, found by the game as ../oxygenengine relative to the binary
 	rm -rf $(TARGET_DIR)/usr/bin/oxygenengine
 	mkdir -p $(TARGET_DIR)/usr/bin/oxygenengine
-	ln -sf /usr/bin/sonic3-air/data $(TARGET_DIR)/usr/bin/oxygenengine
+	cp -r $(@D)/Oxygen/oxygenengine/data $(TARGET_DIR)/usr/bin/oxygenengine
 endef
 
 $(eval $(cmake-package))
