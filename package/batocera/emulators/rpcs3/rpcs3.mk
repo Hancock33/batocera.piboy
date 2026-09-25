@@ -3,8 +3,8 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Sept 16, 2026
-RPCS3_VERSION = fadced35a5fb8a2ee06fcae55cab06eb9898283a
+# Version: Commits on Sept 17, 2026
+RPCS3_VERSION = e447511a675766d68c0aef9549b61713bc651cc5
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
@@ -20,7 +20,7 @@ RPCS3_DEPENDENCIES += llvm mesa3d ncurses openal opencv4 pugixml rtmidi rtmpdump
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 RPCS3_EMULATOR_INFO = rpcs3.emulator.yml
 
-RPCS3_CONF_OPTS += -DBUILD_LLVM=ON
+RPCS3_CONF_OPTS += -DBUILD_LLVM=OFF
 RPCS3_CONF_OPTS += -DBUILD_RPCS3_TESTS=OFF
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON

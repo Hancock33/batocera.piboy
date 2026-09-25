@@ -26,8 +26,10 @@ define LIBRETRO_ANYBOR_BUILD_CMDS
 endef
 
 define LIBRETRO_ANYBOR_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/anybor_libretro.so \
-		$(TARGET_DIR)/usr/lib/libretro/anybor_libretro.so
+	mkdir -p $(TARGET_DIR)/usr/lib/libretro
+	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
+	$(INSTALL) -D $(@D)/anybor_libretro.so $(TARGET_DIR)/usr/lib/libretro/anybor_libretro.so
+	$(INSTALL) -D $(@D)/anybor_libretro.info $(TARGET_DIR)/usr/share/libretro/info/anybor_libretro.info
 endef
 
 $(eval $(generic-package))

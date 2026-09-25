@@ -3,8 +3,8 @@
 # libretro-mame-src
 #
 ################################################################################
-# Version: Commits on Sept 19, 2026
-LIBRETRO_MAME_SRC_VERSION = b01593a29a70a8f8e46b38ab04b34c1be0170d23
+# Version: Commits on Sept 24, 2026
+LIBRETRO_MAME_SRC_VERSION = 6e7ce65bbdf2df60433dca4887ca128069162b30
 LIBRETRO_MAME_SRC_SITE = $(call github,hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_DEPENDENCIES = host-python3 alsa-lib fontconfig sdl2 sdl2_ttf zlib
 LIBRETRO_MAME_SRC_LICENSE = MAME
