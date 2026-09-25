@@ -79,7 +79,7 @@ Emulators|[applewin](https://github.com/audetto/AppleWin.git)|7062ae417896da6050
 Emulators|[ares](http://github.com/ares-emulator/ares)|v148|May 28, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20260925|Sept 25, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|2126.1.2|Sept 20, 2026
-Emulators|[batocera-bezel](http://github.com/batocera-linux/batocera-bezel)|77a3239f3f0682fcf9e6050f07b40677395e5db7|Feb 18, 2026
+Emulators|[batocera-bezel](http://github.com/batocera-linux/batocera-bezel)|96c8f8650ff8c8d324c611621643751c1226de68|Sept 25, 2026
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v1221|May 10, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|c717fcab1ccc3e0b0b97499a4d9b04a77084e347|Sept 24, 2026
 Emulators|[clk](https://github.com/TomHarte/CLK)|2026-07-23|Jul 23, 2026

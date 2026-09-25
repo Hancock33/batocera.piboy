@@ -16,6 +16,7 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|db419c1d3012398
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|4c27925c4c500aecd090004643e9350fd7c380db|Sept 25, 2026
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.69.0|Sept 25, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260925|Sept 25, 2026
+Emulators|[batocera-bezel](http://github.com/batocera-linux/batocera-bezel)|96c8f8650ff8c8d324c611621643751c1226de68|Sept 25, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|9f3c5198889b8d806833fd26cc316e29faf1c3cc|Sept 25, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20260925|Sept 25, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|8784d8c882f4a3ec95a4f797b462ce46516cb0bb|Sept 25, 2026
@@ -420,7 +421,6 @@ Libraries|[liblgpio](http://github.com/joan2937/lg)|bcccd782eceedc5b278b3056ea81
 Libraries|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/ef/92/3d991a9e322855be20c2df771b632ed81f1640b43a9969524765da23f4af)|3.88.0|Feb 24, 2026
 Ports|[opentyrian2000](http://github.com/KScl/opentyrian2000)|aad5aca01af139c0b089237c38ef765f7a84355d|Feb 22, 2026
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|1bff92d43bc1c1b6e9c4c03f0fd3c7ae9c972f9e|Feb 18, 2026
-Emulators|[batocera-bezel](http://github.com/batocera-linux/batocera-bezel)|77a3239f3f0682fcf9e6050f07b40677395e5db7|Feb 18, 2026
 Looks|[lightgun-controllers-art](http://github.com/batocera-linux/lightgun-controllers-art)|04dd1e9554ac45ce3e2afadc32d9bc2cb1203233|Feb 16, 2026
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|448f87fc0ec9825df13c1e0d4721b741aa5c32aa|Feb 12, 2026
 Utils|[batocera-pygame](http://github.com/lbrpdx/retrotrivia)|879a88badc15725f52074de1c4de23cfd8906a32|Feb 12, 2026
