@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|57d5f8d55d92c6b3cb9a34632e0fe4ed6bdd7fab|Sept 25, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|ddc8255253252b7400d4c1dc0a313fe604f38f05|Sept 25, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|ddc8255253252b7400d4c1dc0a313fe604f38f05|Sept 25, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20260925|Sept 25, 2026
@@ -29,7 +30,6 @@ Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|47730e0eb059
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|1ff91782552b28d089623a5a908a35f0b568d043|Sept 25, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|36db8267e443a1ddfe4fabc0a3d42ec2b2332cb4|Sept 25, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|79e0610c2afc02e272a4b39b57eb854f9b65f637|Sept 25, 2026
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|310014b4ceaaf0d2bbcc9487b32b3d2046581410|Sept 24, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|c717fcab1ccc3e0b0b97499a4d9b04a77084e347|Sept 24, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|465c652da1dc0b3048089701a1885084821c9574|Sept 24, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|0d8dda34d3785d8a5c9e910b9ef50caa85fcde0c|Sept 24, 2026
