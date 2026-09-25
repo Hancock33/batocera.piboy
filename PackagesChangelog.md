@@ -1,5 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|feda345649c7b734dcc38735f0b93ee63f715ccf|Sept 25, 2026
 Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|310014b4ceaaf0d2bbcc9487b32b3d2046581410|Sept 24, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20260924|Sept 24, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|c717fcab1ccc3e0b0b97499a4d9b04a77084e347|Sept 24, 2026
@@ -25,7 +26,6 @@ Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|87ad32d57896
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|fae37f856c107b71dd229fa58a9e5c3af926b6fc|Sept 24, 2026
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|b1586e26672d0d4e0d12b8bbe79c2224600dfdbe|Sept 24, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|71326d0fbe3cd392be6c96f658bd7683e1214d60|Sept 24, 2026
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|ba4c690148cc977390fd2abdf40334a21701518d|Sept 23, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|ba4c690148cc977390fd2abdf40334a21701518d|Sept 23, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|869038f40ac8cddc7741c3a35d545de057cc0dd5|Sept 23, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|367f26cd0aababbdf4cd28ed4162e7fa31e5b9aa|Sept 23, 2026
