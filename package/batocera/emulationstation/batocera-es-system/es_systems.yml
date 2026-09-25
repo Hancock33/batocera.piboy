@@ -4611,6 +4611,7 @@ sonicmania:
   manufacturer:         Sega
   release:              2017
   hardware:             port
+  theme:                sonic-mania
   platform:             pc
   group:                sonic
   path:                 /userdata/roms/ports/sonicmania
