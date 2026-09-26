@@ -112,7 +112,12 @@ class Dolphin(Emulator):
         settings.set('Interface', 'ConfirmStop', 'False')
         settings.remove_option('Display', 'RenderToMain')  # fixes exit and gui display
         settings.set('Display', 'Fullscreen', 'True')
-        settings.set('Core', 'EnableCheats', str(self.config.get_bool('enable_cheats')))
+
+        if self.system == 'triforce':
+            settings.set('Core', 'EnableCheats', 'True')
+        else:
+            settings.set('Core', 'EnableCheats', str(self.config.get_bool('enable_cheats')))
+
         settings.set('Core', 'FastDiscSpeed', str(self.config.get_bool('enable_fastdisc')))
         settings.set('Core', 'CPUThread', str(self.config.get_bool('dual_core')))
         settings.set('Core', 'SyncGPU', str(self.config.get_bool('gpu_sync')))
