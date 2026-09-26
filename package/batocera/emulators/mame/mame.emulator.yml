@@ -2265,6 +2265,18 @@ systems:
         choices:
           'On': 1
           'Off': 0
+labwc:
+  window_rules:
+    - identifier: mame
+      title: "*screen 0 - MAME*"
+      actions:
+        - name: MoveToOutput
+          output: primary
+    - identifier: mame
+      title: "*screen 1 - MAME*"
+      actions:
+        - name: MoveToOutput
+          output: secondary|primary
   - acclaim
   - alphadenshi
   - amcoe
