@@ -1,8 +1,8 @@
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 6ef9e58a7..2972931a7 100644
+index 82fddbcbe..c31a99c73 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -5076,12 +5076,12 @@ void System::WarnAboutUnsafeSettings()
+@@ -5071,12 +5071,12 @@ void System::WarnAboutUnsafeSettings()
      if (g_settings.cpu_execution_mode == CPUExecutionMode::CachedInterpreter)
        append(TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
  
@@ -18,10 +18,10 @@ index 6ef9e58a7..2972931a7 100644
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index 11124dee3..5719537f8 100644
+index b9885aab1..aded987e5 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
-@@ -271,9 +271,9 @@ bool QtHost::EarlyProcessStartup()
+@@ -272,9 +272,9 @@ bool QtHost::EarlyProcessStartup()
    Error error;
    if (!Core::ProcessStartup(&error)) [[unlikely]]
    {
@@ -34,7 +34,7 @@ index 11124dee3..5719537f8 100644
    }
  
    // allow us to override standard qt icons as well
-@@ -3647,7 +3647,7 @@ int main(int argc, char* argv[])
+@@ -3637,7 +3637,7 @@ int main(int argc, char* argv[])
    // Set theme before creating any windows.
    UpdateApplicationTheme();
  
@@ -43,7 +43,7 @@ index 11124dee3..5719537f8 100644
    // Overriding LD_LIBRARY_PATH breaks a bunch of shit, since it'll use out-of-date system libraries.
    WarnAboutLDLibraryPath();
  
-@@ -3656,7 +3656,7 @@ int main(int argc, char* argv[])
+@@ -3646,7 +3646,7 @@ int main(int argc, char* argv[])
  #endif
  
    // Build warning.
@@ -52,7 +52,7 @@ index 11124dee3..5719537f8 100644
  
    // Setting/folder migrations.
    ApplyMigrations();
-@@ -3713,7 +3713,7 @@ int main(int argc, char* argv[])
+@@ -3703,7 +3703,7 @@ int main(int argc, char* argv[])
      s_state.start_fullscreen_ui_fullscreen = false;
  
    // Always kick off update check. It'll take over if the user is booting a game fullscreen.
