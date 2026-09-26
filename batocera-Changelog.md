@@ -302,6 +302,7 @@
 - FFMPEG to 8.1.2
 - Flatpak to 1.18.2
 - GStreamer codecs to 1.28.5
+- H700 device kernel updated to 7.2.8
 - Khadas VIM4 kernel updated to vendor 5.15.y
 - LabWC to 0.20.2
 - Linux Firmware to 20260810
@@ -310,13 +311,15 @@
 - Nvidia Open Production driver to 615.71.09
 - Nvidia 580 Legacy driver to 580.178.04
 - QT to 6.11.1
-- Qualcomm SM6115 device kernel updated to 7.0.14
+- Qualcomm SM4450 device kernel updated to 7.2.8
+- Qualcomm SM6115 device kernel updated to 7.2.8
 - Qualcomm SM8250 device kernel updated to 7.2.8
 - Qualcomm SM8550 device kernel updated to 7.2.8
 - Qualcomm SM8750 device kernel updated to 7.2.8
 - Raspberry Pi device kernel updated to 6.18.39
-- Rockchip RK3568 device kernel updated to 7.0.14
-- Rockchip RK3588 mainline device kernel updated to 7.2.6
+- Rockchip RK3562 device kernel updated to 7.2.8
+- Rockchip RK3568 device kernel updated to 7.2.8
+- Rockchip RK3588 mainline device kernel updated to 7.2.8
 - Rocknix ABL to 1.1.6 (SM6115 & SM8x50 devices)
 - RyzenAdj to v0.19.0
 - SDL3 to 3.4.14
