@@ -12,7 +12,7 @@ from batocera_launch import Command, Emulator, HotkeysContext
 if TYPE_CHECKING:
     from collections.abc import Iterable
 
-_SOURCE_DIR: Final = Path('/usr/bin/vkquake3')
+_SOURCE_DIR: Final = Path('/usr/bin/quake3')
 
 # basic controller config
 _CONTROLS: Final = (
@@ -151,8 +151,8 @@ class Vkquake3(Emulator):
         self._write_cfg_files()
 
         # ioquake3 looks for folder either in config or from where it's launched
-        binary = self.roms_dir / 'vkquake3'
-        source_file = _SOURCE_DIR / 'vkquake3'
+        binary = self.roms_dir / 'ioquake3'
+        source_file = _SOURCE_DIR / 'ioquake3'
 
         # therefore copy latest ioquake3 file to rom directory
         if not binary.is_file() or source_file.stat().st_mtime > binary.stat().st_mtime:
@@ -162,6 +162,11 @@ class Vkquake3(Emulator):
             if binary.is_file():
                 binary.chmod(binary.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
+        args: list[str | Path] = [self.roms_dir / 'ioquake3']
+
         # get the game / mod to launch
-        command_line = self.rom.read_text().splitlines()[0].strip().split()
-        return Command([binary, *command_line])
+        if self.rom.suffix == '.quake3':
+            command_line = str(self.rom.read_text().splitlines()[0].strip().split())
+            args.extend([command_line])
+
+        return Command(args)

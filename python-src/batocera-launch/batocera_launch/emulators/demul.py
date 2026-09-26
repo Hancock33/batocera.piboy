@@ -48,7 +48,7 @@ class Demul(Emulator):
         self.saves_dir.mkdir(parents=True, exist_ok=True)
 
         # Create dir & copy demul binary to wine bottle as necessary
-        source_emu = Path('/usr/demul')
+        source_emu = Path('/usr/bin/demul')
 
         if not emupath.exists():
             shutil.copytree(source_emu, emupath)

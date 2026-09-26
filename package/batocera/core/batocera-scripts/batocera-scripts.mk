@@ -30,7 +30,7 @@ endif
 
 ###
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SDM845)$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)$(BR2_PACKAGE_BATOCERA_TARGET_SM8550)$(BR2_PACKAGE_BATOCERA_TARGET_SM8750),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SDM845)$(BR2_PACKAGE_BATOCERA_TARGET_SM4450)$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)$(BR2_PACKAGE_BATOCERA_TARGET_SM8550)$(BR2_PACKAGE_BATOCERA_TARGET_SM8750),y)
   BATOCERA_SCRIPTS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SCRIPTS_INSTALL_QCOM
 endif
 
@@ -46,8 +46,10 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)
 	mkdir -p $(TARGET_DIR)/usr/bin
 	mkdir -p $(TARGET_DIR)/etc/udev/rules.d
+	mkdir -p $(TARGET_DIR)/etc/pm/sleep.d
 
 	install -m 0644 $(BATOCERA_SCRIPTS_CP_PATH)/rules/80-switch-screen.rules                   $(TARGET_DIR)/etc/udev/rules.d
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/95battery-led                          $(TARGET_DIR)/etc/pm/sleep.d/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-amd-tdp                       $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-architecture-compatibility    $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-autologin                     $(TARGET_DIR)/usr/bin/

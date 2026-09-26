@@ -2,6 +2,7 @@
 amiberry.mk
 armsx2.mk
 ayaneo-platform.mk
+azahar.mk
 broadcom-bt-firmware.mk
 btop.mk
 cargs.mk
@@ -31,6 +32,7 @@ libfreeaptx.mk
 libgme.mk
 libretro-amiberry.mk
 libretro-armsx2.mk
+libretro-azahar.mk
 libretro-freej2me.mk
 libretro-mame.mk
 libxmp.mk
@@ -60,7 +62,6 @@ rockchip-mpp.mk
 rockpro64-blobs.mk
 rpi-firmware.mk
 rtmidi.mk
-ruffle.mk
 ryzenadj.mk
 shader-slang.mk
 sockpp.mk
@@ -72,6 +73,7 @@ syncthing.mk
 thextech.mk
 touchegg.mk
 unclutter.mk
+uzdoom.mk
 vcmi.mk
 vice.mk
 vkd3d-proton.mk

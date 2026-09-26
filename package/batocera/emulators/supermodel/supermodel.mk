@@ -3,10 +3,10 @@
 # supermodel
 #
 ################################################################################
-# Version: Commits on Sept 14, 2026
-SUPERMODEL_VERSION = 29f5fa9b6c2b9ed769013689c6b89f18eaad4507
+# Version: Commits on Sept 26, 2026
+SUPERMODEL_VERSION = d5b9c6e3fda83605adf4469c0a4582e8c0199751
 SUPERMODEL_SITE = $(call github,dmanlfc,Supermodel,$(SUPERMODEL_VERSION))
-SUPERMODEL_BRANCH = steering-wheels
+SUPERMODEL_BRANCH = gun-sdl-fallback
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net
 SUPERMODEL_LICENSE = GPLv3
 SUPERMODEL_EMULATOR_INFO = supermodel.emulator.yml

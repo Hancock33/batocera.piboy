@@ -3,9 +3,9 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Sept 20, 2026
-PCSX2_VERSION = v2.9.75
-PCSX2_HASH = c09e8f34dd5c84fc1c39f2e8231a0589fdd2c4ef
+# Version: Commits on Sept 26, 2026
+PCSX2_VERSION = v2.9.90
+PCSX2_HASH = 6c58dbf5248e290c723032ec7a71addae7a6a114
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
@@ -18,8 +18,8 @@ PCSX2_GIT_TAG_HI = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 1)
 PCSX2_GIT_TAG_MID = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 2)
 PCSX2_GIT_TAG_LO = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 3)
 
-PCSX2_DEPENDENCIES += alsa-lib ecm fmt freetype kddocwidgets libaio libbacktrace libcurl libgtk3 libpcap
-PCSX2_DEPENDENCIES += libpng libsamplerate libsoundtouch plutosvg plutovg rapidyaml
+PCSX2_DEPENDENCIES += alsa-lib ecm ffmpeg fmt freetype kddocwidgets libaio libbacktrace libcurl
+PCSX2_DEPENDENCIES += libgtk3 libpcap libpng libsamplerate libsoundtouch plutosvg plutovg rapidyaml
 PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools portaudio sdl3 shaderc webp xorgproto yaml-cpp zlib
 PCSX2_DEPENDENCIES += host-clang
 
@@ -64,7 +64,7 @@ endif
 
 define PCSX2_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2
-	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2-qt
 	cp -pr  $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/bin/pcsx2
 	# use our SDL config
 	rm $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt

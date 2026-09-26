@@ -1,5 +1,5 @@
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index 1763c9fadf..69d885ab14 100644
+index 3fecfce8a8..85c0eac8b6 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -4017,6 +4017,65 @@ static float udev_get_sensor_input(void *data, unsigned port, unsigned id)

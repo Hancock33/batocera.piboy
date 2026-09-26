@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Final
 
 from batocera_common.configparser import CaseSensitiveConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import BIOS, CACHE, CHEATS, CONFIGS, ROMS, SAVES, SCREENSHOTS
+from batocera_common.paths import BATOCERA_SHARE_DIR, BIOS, CACHE, CHEATS, CONFIGS, ROMS, SAVES, SCREENSHOTS
 from batocera_launch import BatoceraException, Command, Emulator, HotkeysContext
 
 if TYPE_CHECKING:
@@ -262,7 +262,7 @@ class Duckstation(Emulator):
         settings.set('CPU', 'ExecutionMode', self.config.get('duckstation_executionmode', 'Recompiler'))
 
         ## [GPU]
-        settings.set('GPU', 'Renderer', self.config.get('duckstation_gfxbackend', 'OpenGL'))
+        settings.set('GPU', 'Renderer', self.config.get('duckstation_gfxbackend', 'Vulkan'))
         # Multisampling force (MSAA or SSAA) - no GUI option anymore...
         settings.set('GPU', 'PerSampleShading', 'false')
         settings.set('GPU', 'Multisamples', '1')
@@ -271,11 +271,10 @@ class Duckstation(Emulator):
         settings.set('GPU', 'WidescreenHack', self.config.get('duckstation_widescreen_hack', 'false'))
         settings.set('GPU', 'ForceNTSCTimings', self.config.get('duckstation_60hz', 'false'))
         settings.set('GPU', 'TextureFilter', self.config.get('duckstation_texture_filtering', 'Nearest'))
-        pgxp = self.config.get('duckstation_pgxp', 'true')
-        settings.set('GPU', 'PGXPEnable', pgxp)
-        settings.set('GPU', 'PGXPCulling', pgxp)
-        settings.set('GPU', 'PGXPTextureCorrection', pgxp)
-        settings.set('GPU', 'PGXPPreserveProjFP', pgxp)
+        settings.set('GPU', 'PGXPEnable', self.config.get('duckstation_pgxp', 'true'))
+        settings.set('GPU', 'PGXPCulling', self._determine_pgxp_config())
+        settings.set('GPU', 'PGXPTextureCorrection', self._determine_pgxp_config())
+        settings.set('GPU', 'PGXPPreserveProjFP', self._determine_pgxp_config())
         settings.set('GPU', 'TrueColor', self.config.get('duckstation_truecolour', 'false'))
         settings.set('GPU', 'ScaledDithering', self.config.get('duckstation_dithering', 'true'))
         settings.set('GPU', 'DisableInterlacing', self.config.get('duckstation_interlacing', 'false'))
@@ -287,6 +286,8 @@ class Duckstation(Emulator):
             else:
                 settings.set('GPU', 'Multisamples', antialiasing)
                 settings.set('GPU', 'PerSampleShading', 'false')
+        settings.set('GPU', 'EnableTextureCache', 'true')
+        settings.set('GPU', 'UseSoftwareRendererForReadbacks', 'true')
 
         ## [Display]
         aspect_ratio = self.config.get_str('duckstation_ratio')
@@ -311,6 +312,7 @@ class Duckstation(Emulator):
             self.config['bezel'] = 'none'
 
         ## [Audio]
+        settings.set('Audio', 'Backend', 'SDL')
         settings.set('Audio', 'StretchMode', self.config.get('duckstation_audio_mode', 'TimeStretch'))
 
         ## [GameList]
@@ -354,7 +356,7 @@ class Duckstation(Emulator):
         ## [TextureReplacements]
         # Texture replacements live in saves/textures/<psx game id>, Normal by default
         enable_vram_write_replacements = 'true'
-        preload_textures = 'false'
+        preload_textures = 'true'
 
         match self.config.get('duckstation_custom_textures'):
             case 'false' | '0':
@@ -490,3 +492,14 @@ class Duckstation(Emulator):
         }
 
         return Command(args, env=env)
+
+    def _determine_pgxp_config(self) -> str:
+        pgxp = self.config.get('duckstation_pgxp', 'true')
+        arch_path = BATOCERA_SHARE_DIR / 'batocera.arch'
+
+        if arch_path.exists():
+            arch = arch_path.read_text().strip()
+            if arch != 'x86_64':
+                pgxp = 'false'
+
+        return pgxp

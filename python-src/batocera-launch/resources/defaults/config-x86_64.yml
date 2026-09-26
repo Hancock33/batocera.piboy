@@ -28,8 +28,6 @@ twentyfourtyeight:
 3ds:
   emulator: azahar
   core:     azahar
-  options:
-    powersave: '1'
 abuse:
   emulator: abuse
   core:     abuse
@@ -129,8 +127,6 @@ atom:
 atomiswave:
   emulator: flycast
   core:     flycast
-  options:
-    powersave: '1'
 avp:
   emulator: avp
   core:     avp
@@ -153,7 +149,6 @@ bigfish:
   emulator: wine
   core:     wine-custom
   options:
-    powersave: '1'
     hud_support: false
 bk:
   emulator: libretro
@@ -209,9 +204,6 @@ channelf:
 chihiro:
   emulator: xemu
   core:     xemu
-  options:
-    powersave: '2'
-    xemu_memory: '128'
 cinematronics:
   emulator: libretro
   core:     mame078plus
@@ -262,16 +254,12 @@ dinothawr:
 doom3:
   emulator: dhewm3
   core:     dhewm3
-  options:
-    powersave: '1'
 dos:
   emulator: libretro
   core:     dosbox_pure
 dreamcast:
   emulator: flycast
   core:     flycast
-  options:
-    powersave: '1'
 droidports:
   emulator: droidports
   core:     droidports
@@ -290,8 +278,6 @@ ecwolf:
 eduke32:
   emulator: eduke32
   core:     eduke32
-  options:
-    powersave: '1'
 eighting:
   emulator: libretro
   core:     mame078plus
@@ -334,7 +320,6 @@ flatpak:
   emulator: flatpak
   core:     flatpak
   options:
-    powersave: '2'
     hud_support: false
 fm7:
   emulator: libretro
@@ -345,8 +330,6 @@ fmtowns:
 fpinball:
   emulator: fpinball
   core:     fpinball
-  options:
-    powersave: '2'
 freedroid:
   emulator: freedroid
   core:     freedroid
@@ -409,13 +392,10 @@ gx4000:
 gzdoom:
   emulator: gzdoom
   core:     gzdoom
-  options:
-    powersave: '1'
 halflife:
   emulator: xash3d_fwgs
   core:     xash3d_fwgs
   options:
-    powersave: '1'
     hud_support: false
 halflife2:
   emulator: halflife2
@@ -451,8 +431,6 @@ intellivision:
 ionfury:
   emulator: ionfury
   core:     ionfury
-  options:
-    powersave: '1'
 irem:
   emulator: libretro
   core:     mame078plus
@@ -462,13 +440,9 @@ j2me:
 jaguar:
   emulator: bigpemu
   core:     bigpemu
-  options:
-    powersave: '2'
 jaguarcd:
   emulator: bigpemu
   core:     bigpemu
-  options:
-    powersave: '2'
 jaleco:
   emulator: libretro
   core:     mame078plus
@@ -532,13 +506,9 @@ mitchell:
 model2:
   emulator: libretro
   core:     mame
-  options:
-    powersave: '2'
 model3:
   emulator: supermodel
   core:     supermodel
-  options:
-    powersave: '1'
 moonlight:
   emulator: moonlight
   core:     moonlight
@@ -591,33 +561,21 @@ namco:
 namco2x6:
   emulator: pcsx2x6
   core:     pcsx2x6
-  options:
-    powersave: '1'
 naomi:
   emulator: flycast
   core:     flycast
-  options:
-    powersave: '1'
 naomi2:
   emulator: flycast
   core:     flycast
-  options:
-    powersave: '1'
 naomi2gd:
   emulator: flycast
   core:     flycast
-  options:
-    powersave: '1'
 naomigd:
   emulator: flycast
   core:     flycast
-  options:
-    powersave: '1'
 nblood:
   emulator: nblood
   core:     nblood
-  options:
-    powersave: '1'
 nds:
   emulator: libretro
   core:     desmume
@@ -714,8 +672,6 @@ pcenginecd:
 pcexhumed:
   emulator: pcexhumed
   core:     pcexhumed
-  options:
-    powersave: '1'
 pcfx:
   emulator: libretro
   core:     pcfx
@@ -749,7 +705,6 @@ popcap:
   emulator: wine
   core:     wine-custom
   options:
-    powersave: '1'
     hud_support: false
 prboom:
   emulator: libretro
@@ -764,13 +719,10 @@ ps2:
   emulator: pcsx2
   core:     pcsx2
   options:
-    powersave: '1'
     fullboot: true
 ps3:
   emulator: rpcs3
   core:     rpcs3
-  options:
-    powersave: '2'
 psikyo:
   emulator: libretro
   core:     mame078plus
@@ -801,26 +753,18 @@ pyxel:
 quake2:
   emulator: yquake2
   core:     yquake2
-  options:
-    powersave: '1'
 quake3:
   emulator: vkquake3
   core:     vkquake3
-  options:
-    powersave: '1'
 raptor:
   emulator: raptor
   core:     raptor
 raze:
   emulator: raze
   core:     raze
-  options:
-    powersave: '1'
 rednukem:
   emulator: rednukem
   core:     rednukem
-  options:
-    powersave: '1'
 reminiscence:
   emulator: libretro
   core:     reminiscence
@@ -845,8 +789,6 @@ satellaview:
 saturn:
   emulator: libretro
   core:     yabasanshiro
-  options:
-    powersave: '1'
 scummvm:
   emulator: scummvm
   core:     scummvm
@@ -952,8 +894,6 @@ stk:
 stalker:
   emulator: stalker
   core:     stalker
-  options:
-    powersave: '1'
 stuntcar:
   emulator: stuntcar
   core:     stuntcar
@@ -982,7 +922,6 @@ switch:
   emulator: ryujinx
   core:     ryujinx
   options:
-    powersave: '2'
     forceNoBezel: true
     hud_support: false
 systemsp:
@@ -1032,8 +971,6 @@ toaplan:
 triforce:
   emulator: dolphin
   core:     dolphin
-  options:
-    powersave: '1'
 tutor:
   emulator: libretro
   core:     mame
@@ -1103,8 +1040,6 @@ visco:
 voidsw:
   emulator: voidsw
   core:     voidsw
-  options:
-    powersave: '1'
 vsmile:
   emulator: libretro
   core:     mame
@@ -1117,29 +1052,21 @@ wasm4:
 wii:
   emulator: dolphin
   core:     dolphin
-  options:
-    powersave: '1'
 wiiu:
   emulator: cemu
   core:     cemu
-  options:
-    powersave: '2'
 wiiware:
   emulator: dolphin
   core:     dolphin
-  options:
-    powersave: '1'
 windows:
   emulator: wine
   core:     wine-custom
   options:
-    powersave: '2'
     hud_support: false
 windows_installers:
   emulator: wine
   core:     wine-custom
   options:
-    powersave: '2'
     hud_support: false
 witchaven:
   emulator: witchaven
@@ -1159,13 +1086,10 @@ x68000:
 xbox:
   emulator: xemu
   core:     xemu
-  options:
-    powersave: '2'
 xbox360:
   emulator: xenia-edge
   core:     xenia-edge
   options:
-    powersave: '2'
     hud_support: false
 xboxcloud:
   emulator: xboxcloud
@@ -1194,5 +1118,3 @@ zxspectrum:
 vpinball:
   emulator: vpinball
   core:     vpinball
-  options:
-    powersave: '1'

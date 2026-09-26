@@ -3,8 +3,8 @@
 # mali-g31-gbm
 #
 ################################################################################
-# Version: Commits on Jun 11, 2021
-MALI_G31_GBM_VERSION = ad4c28932c3d07c75fc41dd4a3333f9013a25e7f
+# Version: Commits on Mar 03, 2022
+MALI_G31_GBM_VERSION = 329dbf63042ad9c736997348a46db5b5b2f799e5
 
 MALI_G31_GBM_SOURCE = libmali-$(MALI_G31_GBM_VERSION).tar.gz
 MALI_G31_GBM_SITE = https://github.com/batocera-linux/rockchip-packages/releases/download/20220303

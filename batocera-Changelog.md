@@ -1,11 +1,14 @@
 # 2026/xx/xx - batocera.linux 44 - Malachite
 ### Special Notes
+- Samba no longer maps unknown usernames to guest: Windows 11 24H2+ blocks unsigned guest sessions without prompting, so Windows now asks for credentials - log in as root with the root password ("linux" unless security is enabled)
 - GZDoom has been replaced by UZDoom, a continuation of ZDoom and GZDoom - existing gzdoom ROM folders, .gzdoom mod files, and configs need to be renamed to uzdoom
 - ShadPS4 has moved from the no longer maintained ShadPS4 Plus to standard ShadPS4
 - SM2-Emu replaces Model2Emu which ran through WINE bringing Model 2 emualtion to more systems
 - The Play! emulator (and Libretro variant) has been removed in favor of PCSX2x6 for Namco2x6 systems as well as removed as a PS2 emulator.
 ### Hardware
 - Anbernic RG-DS initial support
+- Anbernic RG-DS Plus initial support
+- Anbernic RG55G1 initial support
 - Anbernic RG-SP initial support
 - Anbernic RG Vita Pro initial support
 - Anbernic RG40xx-H-v2-panel variant support
@@ -18,7 +21,9 @@
 - Radxa Rock-5T initial support
 - Retroid Pocket Nova initial support
 ### Added
+- Anbernic H700 device deep sleep suspend, replacing fake suspend
 - Anbernic H700 device hardware acceleration support
+- Anbernic RG35XX Plus battery backed real-time clock
 - Anbernic RGCubeXX device LED controller support
 - Armsx2 for SM8250, SM8550 and SM8750
 - BCC: audio devices can now be switch from the bcc menu (while playing games for example)
@@ -28,6 +33,7 @@
 - Dolphin GameCube Controller type BattlerGC Pro (x-input mode with analog+digital triggers)
 - ES setting to determnine mitigations On|Off(Default On)
 - ES setting to choose controller LED mode (Rainbow, Pulse Chroma)
+- ES setting to choose which CPU cores an emulator runs on (fast or all), keeping emulators off the slow efficiency cores of big.LITTLE devices by default
 - ES can now display Unicode for ID3 tags of songs played
 - ES now supports correctly Arabic and Hebrew glyph rendering
 - GameTank console support through GameTankEmulator
@@ -38,6 +44,7 @@
 - PCSX2x6 emulator for Namco2x6 systems (see the _info.txt file for rom details)
 - RPCS3 interface translations
 - SM2-Emu emulator for Model 2 games
+- libretro-anybor : for openbor games (support all openbor versions)
 - Sonic Mania options for 4:3 aspect ratio, screen shaders and the developer menu
 - Steam Controller (2026) support on x86_64 / Zen3
 - Steam is installed automatically from Flathub the first time it is launched
@@ -45,8 +52,10 @@
 - Upgrades : upgrades to stable releases is now possible via torrent, directly from the menu.
 - Xenia-Edge for x864_64 and select aarch64 devices
 ### Fixed
+- Samba wide symbolic links under /userdata (e.g. to external drives) being silently disabled, and secure mode granting guest access to the share
 - Bauh not starting with Python 3.14
 - BCC menu not showing on SM8250 devices (i.e. Retroid Pocket 5)
+- Boot logo disappearing once the graphics driver replaces the firmware framebuffer, leaving a black screen until the splash video starts
 - Cannonball coin is now the Select button
 - Cannonball fullscreen on Wayland
 - Commander Genius fullscreen in Wayland
@@ -69,6 +78,7 @@
 - VPinball now support multiscreens correctly on wayland
 ### Changed / Improved
 - AYN Thor, AYN button now opens Batocera Control Center
+- Brightness cycle buttons on handhelds now open the Batocera Control Center instead (brightness is adjustable from there)
 - BigPEmu added to capable aarch64 devices
 - Boot logo and video now scales better to the primary screen being rendered on
 - Cemu added to capable aarch64 devices
@@ -94,8 +104,8 @@
 ### Updated
 - Amiberry to v8.3.0
 - AppleWin to Sep 6, 2026 build
-- Armsx2 to September 17, 2026 build
-- Azahar to 2126.1.1
+- Armsx2 to 2.7
+- Azahar to 2126.1.2
 - BigPEmu to 1.221
 - Blake Stone to v1.3.4
 - Box64 0.4.4
@@ -125,7 +135,7 @@
 - Libretro-81 to April 20th, 2026 build
 - Libretro-Arduous to April 21st, 2026 build
 - Libretro-Atari800 to September 1st, 2026 build
-- Libretro-Azahar to 2126.1.1
+- Libretro-Azahar to 2126.1.2
 - Libretro-Beetle-Lynx to April 20th, 2026 build
 - Libretro-Beetle-NGP to June 14th, 20026 build
 - Libretro-Beetle-PCE to September 4th, 2026 build
@@ -138,7 +148,7 @@
 - Libretro-Beetle-WSwan to July 31st, 2026 build
 - Libretro-BennuGD to August 29th, 2026 build
 - Libretro-BK to September 4th, 2026 build
-- Libretro-Blastem to September 2nd, 2026 build
+- Libretro-Blastem to September 20th, 2026 build
 - Libretro-BlueMSX to August 23rd, 2026 build
 - Libretro-Boom3 to September 3rd, 2026 build
 - Libretro-Bsnes to September 4th, 2026 build
@@ -246,13 +256,13 @@
 - OpenMSX to Release 21
 - OpenJK to Jul 11th, 2026 build
 - OpenJKDF2 to v0.9.9
-- PCSX2 to 2.8.2
+- PCSX2 to 2.9.81
 - PCSX2x6 to v0.2.22
 - Play to 0.77
 - PPSSPP to v1.20.4
 - Python Pyxel to v2.9.9
 - Redream to 1.5.0-1240
-- RPCS3 to Sep 17th, 2026 build
+- RPCS3 to Sep 24th, 2026 build
 - Ruffle to 17th of September 2026 nightly build
 - ScummVM to v2026.3.0
 - ShadPS4 to v.0.18.0
@@ -263,9 +273,10 @@
 - Supermodel to v0.3a-20260726-git-b7d8acd
 - TheXTech to v1.3.7.3-1
 - TIC-80 to v1.2.0
-- TRX to 1.10.2
+- TRX to 1.11.1
 - Tsugaru to v20260522
 - Ur-Quan Masters to Aug 21, 2026 build
+- UZDoom to 5.0.3
 - Visual Pinball to Sep 16, 2026 build
 - Vita3k to Sep 17, 2026 build
 - VKQuake to 1.36.0
@@ -282,7 +293,7 @@
 - Ymir to v0.3.3
 ### System
 - Allwinner H616 device kernel updated to 7.1.5
-- Allwinner H700 device kernel updated to 7.1.9
+- Allwinner H700 device kernel updated to 7.2.6
 - ALSA UCM configuration to v1.2.16.1
 - Buildroot to 2026.05.x with supporting package & toolchain updates
 - DXVK to 3.1.1
@@ -292,7 +303,7 @@
 - Flatpak to 1.18.2
 - GStreamer codecs to 1.28.5
 - Khadas VIM4 kernel updated to vendor 5.15.y
-- LabWC to 0.20.1
+- LabWC to 0.20.2
 - Linux Firmware to 20260810
 - Mesa3D to 26.2.3
 - MangoHud to v0.8.4
@@ -300,11 +311,12 @@
 - Nvidia 580 Legacy driver to 580.178.04
 - QT to 6.11.1
 - Qualcomm SM6115 device kernel updated to 7.0.14
-- Qualcomm SM8550 device kernel updated to 7.0.14
-- Qualcomm SM8750 device kernel updated to 7.1.9
+- Qualcomm SM8250 device kernel updated to 7.2.8
+- Qualcomm SM8550 device kernel updated to 7.2.8
+- Qualcomm SM8750 device kernel updated to 7.2.8
 - Raspberry Pi device kernel updated to 6.18.39
 - Rockchip RK3568 device kernel updated to 7.0.14
-- Rockchip RK3588 mainline device kernel updated to 7.1.5
+- Rockchip RK3588 mainline device kernel updated to 7.2.6
 - Rocknix ABL to 1.1.6 (SM6115 & SM8x50 devices)
 - RyzenAdj to v0.19.0
 - SDL3 to 3.4.14

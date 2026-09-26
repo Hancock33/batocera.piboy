@@ -3,15 +3,15 @@
 # rpcs3
 #
 ################################################################################
-# Version: Commits on Sept 19, 2026
-RPCS3_VERSION = 9e86f165d1711b9429d48b0487e7bc5ba0cc9c6c
+# Version: Commits on Sept 26, 2026
+RPCS3_VERSION = 77cb9423dbf3406c0b7ecf0ca73f773d7185f9a0
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
 RPCS3_SITE_METHOD=git
 RPCS3_GIT_SUBMODULES=YES
 RPCS3_LICENSE = GPLv2
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
-RPCS3_TRANSLATIONS_VERSION = release-34817881662-56
+RPCS3_TRANSLATIONS_VERSION = release-35573291267-57
 RPCS3_EXTRA_DOWNLOADS = https://github.com/RPCS3/rpcs3_translations/archive/refs/tags/$(RPCS3_TRANSLATIONS_VERSION).tar.gz
 
 RPCS3_DEPENDENCIES += alsa-lib cubeb faudio ffmpeg flatbuffers
@@ -20,7 +20,7 @@ RPCS3_DEPENDENCIES += llvm mesa3d ncurses openal opencv4 pugixml rtmidi rtmpdump
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 RPCS3_EMULATOR_INFO = rpcs3.emulator.yml
 
-RPCS3_CONF_OPTS += -DBUILD_LLVM=ON
+RPCS3_CONF_OPTS += -DBUILD_LLVM=OFF
 RPCS3_CONF_OPTS += -DBUILD_RPCS3_TESTS=OFF
 RPCS3_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 RPCS3_CONF_OPTS += -DCMAKE_CROSSCOMPILING=ON

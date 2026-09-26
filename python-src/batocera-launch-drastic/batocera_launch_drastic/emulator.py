@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_launch import Command, Emulator, HotkeysContext, InputDict
+from batocera_launch import Command, Emulator, HotkeysContext, InputDict, configure_windows, find_screen
 
 _SHARE_DIR: Final = Path('/usr/share/drastic')
 
@@ -26,6 +26,15 @@ _HAT_MASKS: Final = {
 }
 
 _DEFAULT_CODE: Final = '65535'
+
+# Keys hotkeygen sends for the drastic context, as ASCII or 256 + SDL scancode
+_HOTKEY_CONTROLS: Final = {
+    'controls_a[CONTROL_INDEX_MENU]': '314',
+    'controls_a[CONTROL_INDEX_SAVE_STATE]': '318',
+    'controls_a[CONTROL_INDEX_LOAD_STATE]': '320',
+    'controls_a[CONTROL_INDEX_FAST_FORWARD]': '9',
+    'controls_a[CONTROL_INDEX_SWAP_SCREENS]': '315',
+}
 
 _CONTROLS_B_UNBOUND: Final = {
     'controls_b[CONTROL_INDEX_UP]': _DEFAULT_CODE,
@@ -113,12 +122,12 @@ def _controls_b_from_inputs(inputs: InputDict, /) -> dict[str, str]:
     mappings['controls_b[CONTROL_INDEX_B]'] = _button_or_hat_value(inputs, 'b')
     mappings['controls_b[CONTROL_INDEX_X]'] = _button_or_hat_value(inputs, 'x')
     mappings['controls_b[CONTROL_INDEX_Y]'] = _button_or_hat_value(inputs, 'y')
-    mappings['controls_b[CONTROL_INDEX_L]'] = _button_or_hat_value(inputs, 'l2')
-    mappings['controls_b[CONTROL_INDEX_R]'] = _button_or_hat_value(inputs, 'r2')
+    mappings['controls_b[CONTROL_INDEX_L]'] = _button_or_hat_value(inputs, 'pageup')
+    mappings['controls_b[CONTROL_INDEX_R]'] = _button_or_hat_value(inputs, 'pagedown')
     mappings['controls_b[CONTROL_INDEX_START]'] = _button_or_hat_value(inputs, 'start')
     mappings['controls_b[CONTROL_INDEX_SELECT]'] = _button_or_hat_value(inputs, 'select')
-    mappings['controls_b[CONTROL_INDEX_SWAP_SCREENS]'] = _button_or_hat_value(inputs, 'pageup')
-    mappings['controls_b[CONTROL_INDEX_FAST_FORWARD]'] = _button_or_hat_value(inputs, 'pagedown')
+    mappings['controls_b[CONTROL_INDEX_SWAP_SCREENS]'] = _button_or_hat_value(inputs, 'l2')
+    mappings['controls_b[CONTROL_INDEX_FAST_FORWARD]'] = _button_or_hat_value(inputs, 'r2')
 
     if 'joystick1left' in inputs and 'joystick1up' in inputs:
         x_axis_id = int(inputs['joystick1left'].id)
@@ -130,12 +139,8 @@ def _controls_b_from_inputs(inputs: InputDict, /) -> dict[str, str]:
 
     mappings['controls_b[CONTROL_INDEX_TOUCH_CURSOR_PRESS]'] = _button_or_hat_value(inputs, 'l3')
 
-    menu_val = _button_or_hat_value(inputs, 'r3')
-    if menu_val == _DEFAULT_CODE:
-        menu_val = _button_or_hat_value(inputs, 'hotkey')
-    if menu_val == _DEFAULT_CODE:
-        menu_val = _button_or_hat_value(inputs, 'select')
-    mappings['controls_b[CONTROL_INDEX_MENU]'] = menu_val
+    # the hotkey button alone must not open the menu, hotkeygen sends F1 for the menu combo
+    mappings['controls_b[CONTROL_INDEX_MENU]'] = _button_or_hat_value(inputs, 'r3')
 
     mappings['controls_b[CONTROL_INDEX_UI_UP]'] = mappings['controls_b[CONTROL_INDEX_UP]']
     mappings['controls_b[CONTROL_INDEX_UI_DOWN]'] = mappings['controls_b[CONTROL_INDEX_DOWN]']
@@ -171,7 +176,13 @@ class Drastic(Emulator):
 
     @property
     def execution_path(self) -> Path | None:
+        self.config_dir.mkdir(parents=True, exist_ok=True)
         return self.config_dir
+
+    async def configure_windows(self) -> None:
+        screens = await self.screens
+
+        await configure_windows('drastic', find_screen(screens, 'primary'), find_screen(screens, 'secondary'))
 
     async def configure(self) -> Command:
         bin_path = self.config_dir / 'drastic'
@@ -224,11 +235,7 @@ class Drastic(Emulator):
             'controls_a[CONTROL_INDEX_TOUCH_CURSOR_LEFT]': _DEFAULT_CODE,
             'controls_a[CONTROL_INDEX_TOUCH_CURSOR_RIGHT]': _DEFAULT_CODE,
             'controls_a[CONTROL_INDEX_TOUCH_CURSOR_PRESS]': _DEFAULT_CODE,
-            'controls_a[CONTROL_INDEX_MENU]': '109',
-            'controls_a[CONTROL_INDEX_SAVE_STATE]': '318',
-            'controls_a[CONTROL_INDEX_LOAD_STATE]': '320',
-            'controls_a[CONTROL_INDEX_FAST_FORWARD]': '8',
-            'controls_a[CONTROL_INDEX_SWAP_SCREENS]': '115',
+            **_HOTKEY_CONTROLS,
             'controls_a[CONTROL_INDEX_SWAP_ORIENTATION_A]': '97',
             'controls_a[CONTROL_INDEX_SWAP_ORIENTATION_B]': '100',
             'controls_a[CONTROL_INDEX_LOAD_GAME]': _DEFAULT_CODE,
@@ -244,7 +251,6 @@ class Drastic(Emulator):
             'controls_a[CONTROL_INDEX_UI_PAGE_UP]': '331',
             'controls_a[CONTROL_INDEX_UI_PAGE_DOWN]': '334',
             'controls_a[CONTROL_INDEX_UI_SWITCH]': '481',
-            'firmware.language': str(_LANGUAGE_MAPPING.get(self.config.get_str('system.language', 'en_US'), 1)),
             **_read_existing_config(config_file),
         }
 
@@ -258,6 +264,13 @@ class Drastic(Emulator):
             except ValueError:
                 screen_orientation = '0'
 
+        language_override = self.config.get_int('drastic_language', -1)
+        firmware_language = (
+            language_override
+            if language_override >= 0
+            else _LANGUAGE_MAPPING.get(self.config.get_str('system.language', 'en_US'), 1)
+        )
+
         # Enforce front-end menu settings
         config.update(
             {
@@ -267,6 +280,8 @@ class Drastic(Emulator):
                 'hires_3d': str(self.config.get_int('drastic_hires', 0)),
                 'threaded_3d': str(self.config.get_int('drastic_threaded', 0)),
                 'screen_orientation': screen_orientation,
+                'firmware.language': str(firmware_language),
+                **_HOTKEY_CONTROLS,
             }
         )
 

@@ -2,58 +2,112 @@
 
 # This is the BATOCERA system splash service
 # It shows the unique BATOCERA logo in early boot stage
-screen_rotate="$(/usr/bin/batocera-settings-get-master display.rotate)"
-screen_rotate_edp="$(/usr/bin/batocera-settings-get-master display.rotate.eDP)"
-screen_x=$(cat /sys/class/graphics/fb0/virtual_size | cut -d "," -f1)
-screen_y=$(cat /sys/class/graphics/fb0/virtual_size | cut -d "," -f2)
-image="/usr/share/batocera/splash/boot-logo.png"
 
-do_start ()
-{
-    # wait 20s to create buffer fb0 on fail exit
-    if ! [ -e /dev/fb0 ]; then
-        inotifywait -t 20 -e create --include '/fb0' /dev || {
-          echo "Error: Framebuffer device /dev/fb0 not found." >> $LOG_FILE;
-          exit 1;
-          }
+SPLASH_SRC="/usr/share/batocera/splash/boot-logo.png"
+SPLASH_TMP="/tmp/boot-logo.png"
+LOG_FILE="/var/log/splash.log"
+STOP_FILE="/var/run/system-splash.stop"
+FBV_OPTS="-f -e -i"
+
+get_rotation() {
+    # Prefer eDP-specific rotation if set, otherwise fall back to the global one
+    rot_edp="$(/usr/bin/batocera-settings-get-master display.rotate.eDP)"
+    rot_global="$(/usr/bin/batocera-settings-get-master display.rotate)"
+    if [ -n "${rot_edp}" ] && [ "${rot_edp}" != "0" ]; then
+        echo "${rot_edp}"
+    else
+        echo "${rot_global}"
     fi
-
-    # V_BOARD_MODEL detection from batocera-model
-    V_BOARD_MODEL=$(batocera-model)
-
-    if [ "$screen_rotate" = "1" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -270 -quality 75 "/tmp/boot-logo.png"
-        image="/tmp/boot-logo.png"
-    elif [ "$screen_rotate" = "2" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -180 -quality 75 "/tmp/boot-logo.png"
-        image="/tmp/boot-logo.png"
-    elif [ "$screen_rotate" = "3" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 -quality 75 "/tmp/boot-logo.png"
-        image="/tmp/boot-logo.png"
-    fi
-
-    if [ "$screen_rotate_edp" = "1" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -270 -quality 75 "/tmp/boot-logo.png"
-        image="/tmp/boot-logo.png"
-    elif [ "$screen_rotate_edp" = "2" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -180 -quality 75 "/tmp/boot-logo.png"
-        image="/tmp/boot-logo.png"
-    elif [ "$screen_rotate_edp" = "3" ]; then
-        convert "/usr/share/batocera/splash/boot-logo.png" -rotate -90 -quality 75 "/tmp/boot-logo.png"
-        image="/tmp/boot-logo.png"
-    fi
-
-    convert "${image}" -resize "$screen_x"x"$screen_y"! -quality 75 "/tmp/boot-logo.png"
-
-    FBV_OPTS="-f -e -i"
-    # FBV_OPTS can be set differently for some boards to work
-    test -e /dev/fb0 && fbv ${FBV_OPTS} "/tmp/boot-logo.png"
 }
 
-do_stop () {
-    if [ -e /dev/fb0 ]; then
-        dd if=/dev/zero of=/dev/fb0 >/dev/null 2>&1
+rotation_degrees() {
+    case "$1" in
+        1) echo "-270" ;;
+        2) echo "-180" ;;
+        3) echo "-90" ;;
+        *) echo "" ;;
+    esac
+}
+
+draw_logo() {
+    command -v convert >/dev/null 2>&1 || { echo "Error: convert not found."; return 1; }
+    command -v fbv >/dev/null 2>&1 || { echo "Error: fbv not found."; return 1; }
+
+    screen_x=$(cut -d "," -f1 < /sys/class/graphics/fb0/virtual_size)
+    screen_y=$(cut -d "," -f2 < /sys/class/graphics/fb0/virtual_size)
+
+    if [ -z "${screen_x}" ] || [ -z "${screen_y}" ]; then
+        echo "Error: could not read framebuffer size."
+        return 1
     fi
+
+    rotation="$(get_rotation)"
+    degrees="$(rotation_degrees "${rotation}")"
+
+    src="${SPLASH_SRC}"
+    if [ -n "${degrees}" ]; then
+        if ! convert "${SPLASH_SRC}" -rotate "${degrees}" -quality 75 "${SPLASH_TMP}.rot.png"; then
+            echo "Error: failed to rotate logo."
+            return 1
+        fi
+        src="${SPLASH_TMP}.rot.png"
+    fi
+
+    if ! convert "${src}" -resize "${screen_x}x${screen_y}!" -quality 75 "${SPLASH_TMP}"; then
+        echo "Error: failed to resize logo."
+        return 1
+    fi
+    rm -f "${SPLASH_TMP}.rot.png" 2>/dev/null
+
+    if [ -e /dev/fb0 ]; then
+        fbv ${FBV_OPTS} "${SPLASH_TMP}"
+    else
+        echo "Error: /dev/fb0 not present at draw time."
+        return 1
+    fi
+}
+
+do_start() {
+    LOG_DIR="${LOG_FILE%/*}"
+    [ -d "${LOG_DIR}" ] || mkdir -p "${LOG_DIR}"
+    exec >> "${LOG_FILE}" 2>&1
+
+    if [ ! -e /dev/fb0 ]; then
+        i=0
+        while [ ! -e /dev/fb0 ] && [ "$i" -lt 50 ]; do
+            sleep 0.1
+            i=$((i + 1))
+        done
+        if [ ! -e /dev/fb0 ]; then
+            echo "Error: Framebuffer device /dev/fb0 not found."
+            exit 1
+        fi
+    fi
+
+    draw_logo || exit 1
+
+    # The GPU driver replaces the firmware framebuffer, clearing the screen,
+    # so watch for a name change on fb0 and redraw when it happens.
+    fbname=""
+    [ -r /sys/class/graphics/fb0/name ] && read -r fbname < /sys/class/graphics/fb0/name
+
+    i=0
+    while [ "$i" -lt 120 ] && [ ! -e "${STOP_FILE}" ]; do
+        sleep 0.5
+        i=$((i + 1))
+        newname=""
+        [ -r /sys/class/graphics/fb0/name ] && read -r newname < /sys/class/graphics/fb0/name
+        if [ -n "${newname}" ] && [ "${newname}" != "${fbname}" ]; then
+            fbname="${newname}"
+            echo "Framebuffer changed to ${fbname}, redrawing."
+            draw_logo || exit 1
+        fi
+    done
+}
+
+do_stop() {
+    touch "${STOP_FILE}"
+    [ -e /dev/fb0 ] && dd if=/dev/zero of=/dev/fb0 bs=1M >/dev/null 2>&1
 }
 
 case "$1" in
@@ -68,5 +122,3 @@ case "$1" in
         exit 1
         ;;
 esac
-
-exit $?

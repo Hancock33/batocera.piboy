@@ -33,6 +33,7 @@ libfyaml.mk
 liblc3.mk
 libldac.mk
 libretro-scummvm.mk
+libretro-virtualjaguar.mk
 libserum.mk
 libsfdo.mk
 libzedmd.mk
@@ -56,6 +57,7 @@ python-nfcpy.mk
 python-pyxel.mk
 rgbds.mk
 rocknix-abl.mk
+ruffle.mk
 scummvm.mk
 sdl12-compat.mk
 sdl3_image.mk
@@ -68,10 +70,7 @@ shaderc.mk
 shadps4.mk
 sm2-emu.mk
 sonic3-air.mk
-spirv-cross.mk
-spirv-headers.mk
 spirv-llvm-translator.mk
-spirv-tools.mk
 tekwar.mk
 theforceengine.mk
 tomlplusplus.mk
@@ -79,11 +78,6 @@ trx.mk
 uthash.mk
 vkquake.mk
 vkquake2.mk
-vulkan-headers.mk
-vulkan-sdk.mk
-vulkan-tools.mk
-vulkan-utility-libraries.mk
-vulkan-validationlayers.mk
 wine-custom.mk
 wine-mono.mk
 x86-64-level.mk

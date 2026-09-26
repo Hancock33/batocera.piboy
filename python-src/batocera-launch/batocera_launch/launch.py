@@ -3,8 +3,6 @@ from __future__ import annotations
 import logging
 import shutil
 import signal
-import subprocess
-import time
 from pathlib import Path
 from typing import TYPE_CHECKING, Final
 
@@ -38,16 +36,6 @@ def _run_legacy(args: Arguments, profiler: Profiler, /) -> int:
 
 def launch(args: Arguments, profiler: Profiler, /) -> None:
 
-    arch_path = Path('/usr/share/batocera/batocera.arch')
-    if not arch_path.exists():
-        raise BatoceraException(f'{arch_path} not found')
-
-    arch = arch_path.read_text().splitlines()[0]
-
-    if arch == 'x86_64':
-        _logger.debug('Limiting CPU Cores for %s', arch)
-        subprocess.run(['/usr/bin/batocera-cpucores', 'max'], check=True)
-
     batocera_version = 'UNKNOWN'
     if (version_file := BATOCERA_SHARE_DIR / 'batocera.version').exists():
         batocera_version = version_file.read_text().strip()
@@ -78,9 +66,6 @@ def launch(args: Arguments, profiler: Profiler, /) -> None:
             else:
                 exit_code = base_batocera_exceptions[0].exit_code
 
-    # this seems to be required so that the gpu memory is resituated and available for ES
-    time.sleep(1)
-
     if exit_code < 0:
         signal_number = exit_code * -1
 
@@ -98,9 +83,5 @@ def launch(args: Arguments, profiler: Profiler, /) -> None:
     if args.system != 'settings':
         shutil.copy('/userdata/system/logs/batocera-launch-emulator.log', '/tmp')
         shutil.copy('/userdata/system/logs/batocera-launch.log', '/tmp')
-
-    if arch == 'x86_64':
-        _logger.debug('Limiting CPU Cores for %s', arch)
-        subprocess.run(['/usr/bin/batocera-cpucores', 'min'], check=True)
 
     exit(exit_code)

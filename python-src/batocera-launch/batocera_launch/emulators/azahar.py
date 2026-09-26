@@ -7,8 +7,16 @@ from batocera_common.configparser import CaseSensitiveRawConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import CACHE, CONFIGS, SAVES, SCREENSHOTS
 from batocera_common.vulkan import get_vulkan_info
-from batocera_launch import Command, Controller, Emulator, HotkeysContext, Input, InputMapping
-from batocera_launch.devices.video import configure_windows, find_screen
+from batocera_launch import (
+    Command,
+    Controller,
+    Emulator,
+    HotkeysContext,
+    Input,
+    InputMapping,
+    configure_windows,
+    find_screen,
+)
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -160,7 +168,9 @@ class Azahar(Emulator):
         if not azahar_config.has_section('Layout'):
             azahar_config.add_section('Layout')
         # Screen Layout
-        layout_option, swap_screen = self.config.get_str('azahar_screen_layout', '0-false').split('-')
+        # Separate windows lets labwc put the bottom screen on a secondary display when there is one
+        default_layout = '4-false' if find_screen(await self.screens, 'secondary') else '0-false'
+        layout_option, swap_screen = self.config.get_str('azahar_screen_layout', default_layout).split('-')
         azahar_config.set('Layout', 'swap_screen', swap_screen)
         azahar_config.set('Layout', r'swap_screen\default', 'false')
         azahar_config.set('Layout', 'layout_option', layout_option)
@@ -207,6 +217,8 @@ class Azahar(Emulator):
         azahar_config.set('UI', r'first_start\default', 'false')
         azahar_config.set('UI', 'hide_mouse', 'true')
         azahar_config.set('UI', r'hide_mouse\default', 'false')
+        azahar_config.set('UI', 'confirmClose', 'false')
+        azahar_config.set('UI', r'confirmClose\default', 'false')
         azahar_config.set('UI', 'enable_discord_presence', 'false')
         azahar_config.set('UI', r'enable_discord_presence\default', 'false')
 

@@ -413,7 +413,7 @@ class BigPEmu(Emulator):
         bigpemu_config.write_text(json.dumps(config, indent=4))
 
         return Command(
-            ['/usr/bigpemu/bigpemu', self.rom, '-cfgpathabs', bigpemu_config],
+            ['/usr/bin/bigpemu/bigpemu', self.rom, '-cfgpathabs', bigpemu_config],
             env={'SDL_JOYSTICK_HIDAPI': '0'},
         )
 
