@@ -4,131 +4,179 @@
 # It collects device components for a short period, then creates a virtual
 # gamepad based on the most complete component signature found.
 
-test "${ACTION}" = "add" || exit 0
+LOG="/var/run/anbernic-pad-add-debug.log"
+
+echo "[$(date)] --- SCRIPT TRIGGERED ---" >> "$LOG"
+echo "[$(date)] env ACTION=${ACTION}" >> "$LOG"
+echo "[$(date)] arg1 (DEVNAME)=$1" >> "$LOG"
+echo "[$(date)] arg2 (DEVATTR_NAME)=$2" >> "$LOG"
+
+test "${ACTION}" = "add" || { echo "[$(date)] Exited: ACTION is not 'add'" >> "$LOG"; exit 0; }
 
 DEVNAME="$1"
 DEVATTR_NAME="$2"
 
-echo "${DEVNAME}" | grep -E "^/dev/input/event[0-9]+$" >/dev/null || exit 0
-test -n "${DEVATTR_NAME}" || exit 0
+echo "${DEVNAME}" | grep -E "^/dev/input/event[0-9]+$" >/dev/null || { echo "[$(date)] Exited: DEVNAME does not match /dev/input/event*" >> "$LOG"; exit 0; }
+test -n "${DEVATTR_NAME}" || { echo "[$(date)] Exited: DEVATTR_NAME is empty" >> "$LOG"; exit 0; }
 
 BASEFILE="/var/run/anbernic-pad-devices"
 PIDFILE="${BASEFILE}.pid"
 LOCKFILE="${BASEFILE}.lock"
 LOGFILE="${BASEFILE}.log"
-DEVSFILE="${BASEFILE}.devs"
-NAMESFILE="${BASEFILE}.names"
+MAPPED_FILE="${BASEFILE}.mapped"
 TIMER_PIDFILE="${BASEFILE}.timer.pid"
 
-unlockAndExit() {
-    rmdir "${LOCKFILE}"
-    exit "${1}"
-}
-
 checkRunningPIDAndExit1() {
+    echo "[$(date)] checkRunningPIDAndExit1 called" >> "$LOG"
     test ! -e "${PIDFILE}" && return 0
     LPID=$(cat "${PIDFILE}")
     if ! test -d "/proc/${LPID}"; then
+        echo "[$(date)] evsieve PID ${LPID} not running. Removing stale pidfile." >> "$LOG"
         rm -f "${PIDFILE}"
         return 0
     fi
-    unlockAndExit 1
+    echo "[$(date)] evsieve PID ${LPID} is currently active. Exiting." >> "$LOG"
+    exit 1
 }
 
 trylock() {
     local N=0
+    echo "[$(date)] Attempting to acquire lock..." >> "$LOG"
     while ! mkdir "${LOCKFILE}" 2>/dev/null; do
         sleep 1
         let N++
-        test "${N}" -gt 30 && exit 1
+        if [ "${N}" -gt 30 ]; then
+            echo "[$(date)] Lock acquisition TIMEOUT (>30s). Exiting." >> "$LOG"
+            exit 1
+        fi
     done
+    echo "[$(date)] Lock acquired successfully" >> "$LOG"
 }
 
-components_match() {
-    local expected_count=$1
-    shift
-    local required_components=("$@")
-    local temp_namesfile=$(mktemp)
-    cp "${NAMESFILE}" "${temp_namesfile}"
-    local current_dev_count=$(wc -l < "${temp_namesfile}")
+# Space-separated string to hold matched device paths (completely safe for event nodes)
+MATCHED_DEVS=""
 
-    if [ "${current_dev_count}" -ne "${expected_count}" ]; then
-        rm -f "${temp_namesfile}"
-        return 1
-    fi
+try_match_layout() {
+    local required_components=("$@")
+    local found_devs=""
+
+    echo "[$(date)] Matching: (${required_components[*]})" >> "$LOG"
 
     for component in "${required_components[@]}"; do
-        grep -qxF -- "${component}" "${temp_namesfile}" || { rm -f "${temp_namesfile}"; return 1; }
+        # Format in MAPPED_FILE is: component_name|/dev/input/eventX
+        # Using -F and trailing '|' prevents partial string matching (e.g., 'gpio-keys' matching 'gpio-keys-gamepad')
+        local dev_line=$(grep -F "${component}|" "${MAPPED_FILE}" 2>/dev/null | head -n 1)
+        if [ -z "${dev_line}" ]; then
+            echo "[$(date)] Matching failed: missing component '${component}'" >> "$LOG"
+            return 1
+        fi
+        local dev_path="${dev_line#*|}"
+        if [ -z "${found_devs}" ]; then
+            found_devs="${dev_path}"
+        else
+            found_devs="${found_devs} ${dev_path}"
+        fi
     done
 
-    rm -f "${temp_namesfile}"
+    MATCHED_DEVS="${found_devs}"
+    echo "[$(date)] MATCH SUCCESSFUL: ${required_components[*]}" >> "$LOG"
     return 0
 }
 
 evaluate_and_create_pad() {
-    # Give other udev events 2 seconds to trigger and add their components.
+    echo "[$(date)] Background subshell started. Sleeping 2 seconds to allow other components to register..." >> "$LOG"
     sleep 2
 
+    # In the subshell, try to lock. If we get the lock, set a trap to release it on exit.
     trylock
+    trap 'rmdir "${LOCKFILE}" 2>/dev/null' EXIT INT TERM
 
     # If evsieve has already been launched, abort.
     if [ -e "${PIDFILE}" ]; then
+        echo "[$(date)] evsieve already active (PID file exists). Cleaning timer and exiting." >> "$LOG"
         rm -f "${TIMER_PIDFILE}"
-        unlockAndExit 0
+        exit 0
     fi
 
     # If there are no component files, abort.
-    if [ ! -e "${NAMESFILE}" ]; then
+    if [ ! -e "${MAPPED_FILE}" ]; then
+        echo "[$(date)] Components file is missing. Cleaning timer and exiting." >> "$LOG"
         rm -f "${TIMER_PIDFILE}"
-        unlockAndExit 0
+        exit 0
     fi
 
     local VIRTUAL_PAD_NAME=""
 
+    echo "[$(date)] Evaluating components matching list..." >> "$LOG"
     # IMPORTANT: Check for definitions with the most components first.
-    if components_match 3 "gpio-keys-control" "adc-keys" "adc-joystick"; then
+    if try_match_layout "gpio-keys-control" "adc-keys" "adc-joystick"; then
         VIRTUAL_PAD_NAME="Anbernic pad"
-    elif components_match 2 "gpio-keys-gamepad" "adc-joystick"; then
+    elif try_match_layout "adc-joystick" "gpio-keys" "adc-trigger"; then
+        VIRTUAL_PAD_NAME="GameForce Ace pad"
+    elif try_match_layout "MCU Joypad" "gamepad-keys"; then
+        VIRTUAL_PAD_NAME="Anbernic RG Vita Pro controller"
+    elif try_match_layout "gpio-keys-gamepad" "adc-joystick"; then
         VIRTUAL_PAD_NAME="Anbernic RG35XX analog pad"
-    elif components_match 2 "gpio-keys-control" "adc-joystick"; then
+    elif try_match_layout "gpio-keys-control" "adc-joystick"; then
         VIRTUAL_PAD_NAME="Powkiddy pad"
-    elif components_match 2 "gpio-keys-control" "adc-keys"; then
+    elif try_match_layout "gpio-keys-control" "adc-keys"; then
         VIRTUAL_PAD_NAME="Anbernic RG ARC pad"
-    elif components_match 1 "gpio-keys-gamepad"; then
+    elif try_match_layout "gpio-keys-gamepad"; then
         VIRTUAL_PAD_NAME="Anbernic RG35XX button pad"
+    else
+        echo "[$(date)] No matching hardware layouts found. Current registered devices:" >> "$LOG"
+        cut -d'|' -f1 "${MAPPED_FILE}" >> "$LOG"
     fi
 
     if [ -n "${VIRTUAL_PAD_NAME}" ]; then
-        local EVS_ARGS=$(xargs -I {} echo --input "{}" < "${DEVSFILE}")
-        local EVS_DEVICE_ID_ARG=( "device-id=ba10:c37a" )
+        local EVS_INPUT_ARGS=""
+        for dev in ${MATCHED_DEVS}; do
+            EVS_INPUT_ARGS="${EVS_INPUT_ARGS} --input ${dev}"
+        done
+        local EVS_DEVICE_ID="device-id=ba10:c37a"
 
-        nohup evsieve ${EVS_ARGS} persist=exit --output name="${VIRTUAL_PAD_NAME}" "${EVS_DEVICE_ID_ARG[@]}" >/dev/null 2>"${LOGFILE}" &
-        echo $! > "${PIDFILE}"
+        echo "[$(date)] Launching evsieve under name '${VIRTUAL_PAD_NAME}'..." >> "$LOG"
+        echo "[$(date)] Command: nohup evsieve ${EVS_INPUT_ARGS} persist=exit --output name=\"${VIRTUAL_PAD_NAME}\" ${EVS_DEVICE_ID} ..." >> "$LOG"
+
+        nohup evsieve ${EVS_INPUT_ARGS} persist=exit --output name="${VIRTUAL_PAD_NAME}" "${EVS_DEVICE_ID}" >/dev/null 2>"${LOGFILE}" &
+        local EVS_PID=$!
+        echo ${EVS_PID} > "${PIDFILE}"
+        echo "[$(date)] evsieve background PID started: ${EVS_PID}" >> "$LOG"
     fi
 
     # Clean up all tracking files for the next boot.
-    rm -f "${DEVSFILE}" "${NAMESFILE}" "${TIMER_PIDFILE}"
+    echo "[$(date)] Cleaning up state tracking files." >> "$LOG"
+    rm -f "${MAPPED_FILE}" "${TIMER_PIDFILE}"
 
-    unlockAndExit 0
+    exit 0
 }
 
+# Main script lock and trap:
 trylock
+trap 'rmdir "${LOCKFILE}" 2>/dev/null' EXIT INT TERM
+
 checkRunningPIDAndExit1
 
 # Add the new device path and name to our tracking files, avoiding duplicates.
-grep -qF "${DEVNAME}" "${DEVSFILE}" || echo "${DEVNAME}" >> "${DEVSFILE}"
-grep -qF "${DEVATTR_NAME}" "${NAMESFILE}" || echo "${DEVATTR_NAME}" >> "${NAMESFILE}"
+echo "[$(date)] Registering component path: ${DEVNAME}" >> "$LOG"
+echo "[$(date)] Registering component name: ${DEVATTR_NAME}" >> "$LOG"
+
+touch "${MAPPED_FILE}"
+grep -qxF "${DEVATTR_NAME}|${DEVNAME}" "${MAPPED_FILE}" || echo "${DEVATTR_NAME}|${DEVNAME}" >> "${MAPPED_FILE}"
 
 # Check if an evaluator process is already scheduled to run.
 if [ -e "${TIMER_PIDFILE}" ]; then
-    unlockAndExit 0
+    echo "[$(date)] Background subshell evaluator is already running. Exiting main script." >> "$LOG"
+    exit 0
 else
+    echo "[$(date)] Spawning background evaluator subshell..." >> "$LOG"
     (
         evaluate_and_create_pad
     ) &
 
     # Save the PID of our background evaluator so we don't launch another one.
     echo $! > "${TIMER_PIDFILE}"
+    echo "[$(date)] Evaluator PID saved: $!" >> "$LOG"
 
-    unlockAndExit 0
+    exit 0
 fi
