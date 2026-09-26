@@ -44,7 +44,6 @@ mt32emu.mk
 nghttp3.mk
 ngtcp2.mk
 ntfs-plus.mk
-openbor7530.mk
 openmohaa.mk
 ossp.mk
 pigpio-rpi.mk

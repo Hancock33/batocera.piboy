@@ -1,2 +1,0 @@
-config BR2_PACKAGE_OPENBOR_COMMON
-	bool "openbor-common"

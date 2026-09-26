@@ -65,9 +65,6 @@ GROUPS = {
         "mupen64plus-input-sdl", "mupen64plus-rsp-hle", "mupen64plus-ui-console",
         "mupen64plus-video-glide64mk2", "mupen64plus-video-rice"
     ],
-    "OPENBOR": [
-        "openbor4432", "openbor6330", "openbor6412", "openbor6510", "openbor7142", "openbor7530"
-    ],
     "EMULATORS": [
         "amiberry", "applewin", "azahar", "bigpemu", "cemu", "clk",
         "hypseus-singe", "dolphin-emu", "dosbox", "dosbox-staging", "dosbox-x",
@@ -918,7 +915,7 @@ def get_pkg_versions(pkg, props):
 
     # Legacy blacklists
     no_site_patterns = [
-        "-legacy", "openbor6", "openbor7142", "qtsixa", "gpicase", "aml-dtbtools",
+        "-legacy", "qtsixa", "gpicase", "aml-dtbtools",
         "img-gpu-powervr", "noto-cjk-fonts", "uboot-powkiddy-a13", "uboot-visionfive2"
     ]
     is_no_site = any(pat in pkg or pat in props["file"] for pat in no_site_patterns)
@@ -1255,7 +1252,7 @@ def show_help():
     print("[package] can be any of the *.mk under ./package/batocera/ (without \".mk\")")
     print(f"Example: {sys.argv[0]} libretro-mame libretro-fbneo")
     print("")
-    print("[PACKAGEGROUP] can be RETROARCH, LIBRETRO, MUPEN, OPENBOR, EMULATORS, PORTS, WINE, CONTROLLERS, UTILS, ALLGROUPS, ALL")
+    print("[PACKAGEGROUP] can be RETROARCH, LIBRETRO, MUPEN, EMULATORS, PORTS, WINE, CONTROLLERS, UTILS, ALLGROUPS, ALL")
     sys.exit(1)
 
 
