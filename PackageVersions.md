@@ -204,7 +204,7 @@ Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|132111b763435
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|cae623f4e6c197f45662358ffc4605e3fb97298e|Sept 25, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|d20300de2d32e5b8e8b0a0f15b1e1a889583d248|Sept 15, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|8a88014287c7a01cd568067e5a557d0a2b2a051f|Aug 22, 2026
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|5009a64bea0100cfb1e9f337f816e7b9d08e9582|Sept 26, 2026
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|7e47f42721e7f4e8e9d32e970f127ebfc5be1285|Sept 26, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|6536174a80d74e6c325aaa5390ff091fac8761d0|Sept 06, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|297b34777372fd5f117785798f99b4c7433b6034|Sept 06, 2026
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|0ad84d7058a12b7db4f7f7a906e87fad4e2f26f6|Aug 22, 2026
@@ -260,12 +260,12 @@ Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64pl
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|f0a7b9f391b0e9bc14962b114f7da1ba553060be|Sept 15, 2026
 Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3|May 10, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|331a7336a2dfbc608643e16f030001db24319c8b|Sept 26, 2026
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.88|Sept 26, 2026
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.90|Sept 26, 2026
 Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|Aug 18, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|cae623f4e6c197f45662358ffc4605e3fb97298e|Sept 25, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|73106363e14e34c08a5854b4cfbc29f184e3b783|Aug 13, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|93c5294ceb8042265a3256587b113b0decc0034c|Sept 26, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|2a4bd2162f632ec7ad96b8b70ede7d6c9f1cced0|Sept 26, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260820|Aug 20, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|77cb9423dbf3406c0b7ecf0ca73f773d7185f9a0|Sept 26, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|280c427c550c5fe3bcc46b378e06a9b90a7e6b09|Sept 18, 2026
@@ -303,7 +303,7 @@ Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|bf33901028ba32399e6c
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.11.0|Jun 01, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|ff478b8a6a349a6d919e342d04793dad454fdf5c|Sept 19, 2026
 Engines|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|f32e415aea6797d261d6b470dcf8bf18727341c2|Jun 06, 2026
-Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|b78956dba7f60f9ddaa2163c13eb3b39830fe3cd|Sept 26, 2026
+Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|b75fe0d932d4b5be9bd00b0036ffdd4208f2b10b|Sept 26, 2026
 Engines|[openbor4432](http://github.com/Darknior/OpenBORv3b4432)|49505541b858d59842e87e75f415dfb4322ead93|Jan 14, 2021
 Engines|[openbor6412](http://github.com/DCurrent/openbor)|05af203b0e5676034678291bbedc0b9fe4c8f898|Aug 29, 2018
 Engines|[openbor7142](http://github.com/DCurrent/openbor)|b8303cce992a0db93c3a465df3c943942fe322f8|Nov 02, 2023
