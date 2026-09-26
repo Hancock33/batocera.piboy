@@ -311,8 +311,9 @@
 - Nvidia 580 Legacy driver to 580.178.04
 - QT to 6.11.1
 - Qualcomm SM6115 device kernel updated to 7.0.14
-- Qualcomm SM8550 device kernel updated to 7.0.14
-- Qualcomm SM8750 device kernel updated to 7.1.9
+- Qualcomm SM8250 device kernel updated to 7.2.8
+- Qualcomm SM8550 device kernel updated to 7.2.8
+- Qualcomm SM8750 device kernel updated to 7.2.8
 - Raspberry Pi device kernel updated to 6.18.39
 - Rockchip RK3568 device kernel updated to 7.0.14
 - Rockchip RK3588 mainline device kernel updated to 7.2.6
