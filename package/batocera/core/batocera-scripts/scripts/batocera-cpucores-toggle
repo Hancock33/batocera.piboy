@@ -2,8 +2,8 @@
 # Cycles CPU core count between min -> mid -> max -> min ... on each run.
 # No arguments needed; state is remembered in a small state file.
 
-max_cpu=8
-mid_cpu=$((max_cpu / 2) - 1)
+max_cpu=9999
+mid_cpu=$((max_cpu / 2))
 state_file=/tmp/cpu_toggle_state
 
 # Determine current state (default to "max" so the first run goes to "min")
