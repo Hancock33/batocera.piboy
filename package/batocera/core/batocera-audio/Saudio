@@ -84,6 +84,8 @@ case "$1" in
         start_pipewire
         if [ $info_output = "Galileo" ]; then
             amixer -c 1 sset 'Right DAI Sel Mux' Right > /dev/null 2>&1
+            echo 1 > /sys/module/hid_steam/parameters/lizard_mode
+            echo 0 > /sys/module/hid_steam/parameters/lizard_mode
         fi
     ;;
     stop)
