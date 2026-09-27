@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - 'package/batocera/core/batocera-configgen/configgen/configgen/**'
-      - 'package/batocera/utils/hotkeygen/**'
       - 'python-src/**'
       - 'prek.toml'
       - 'pyproject.toml'
@@ -14,7 +13,6 @@ on:
   pull_request:
     paths:
       - 'package/batocera/core/batocera-configgen/configgen/configgen/**'
-      - 'package/batocera/utils/hotkeygen/**'
       - 'python-src/**'
       - 'prek.toml'
       - 'pyproject.toml'
@@ -38,7 +36,7 @@ jobs:
       - name: Run tests
         env:
           UV_NO_SYNC: 1
-        run: uv run py.test python-src package/batocera/utils/hotkeygen
+        run: uv run py.test python-src
 
   lint:
     runs-on: ubuntu-latest
