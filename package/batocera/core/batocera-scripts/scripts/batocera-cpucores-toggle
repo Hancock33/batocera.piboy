@@ -1,0 +1,47 @@
+#!/bin/sh
+# Cycles CPU core count between min -> mid -> max -> min ... on each run.
+# No arguments needed; state is remembered in a small state file.
+
+max_cpu=8
+mid_cpu=$((max_cpu / 2) - 1)
+state_file=/tmp/cpu_toggle_state
+
+# Determine current state (default to "max" so the first run goes to "min")
+if [ -f "$state_file" ]; then
+    current=$(cat "$state_file")
+else
+    current="max"
+fi
+
+case "$current" in
+    min) next="mid" ;;
+    mid) next="max" ;;
+    max) next="min" ;;
+    *)   next="min" ;;
+esac
+
+case "$next" in
+    min)
+        echo "using two cpu cores"
+        for i in $(seq 2 $max_cpu); do
+            echo 0 > /sys/devices/system/cpu/cpu$i/online
+        done
+        ;;
+    mid)
+        echo "using half of the cpu cores"
+        for i in $(seq $mid_cpu $max_cpu); do
+            echo 0 > /sys/devices/system/cpu/cpu$i/online
+        done
+        for i in $(seq 1 $mid_cpu); do
+            echo 1 > /sys/devices/system/cpu/cpu$i/online
+        done
+        ;;
+    max)
+        echo "using all cpu cores"
+        for i in $(seq 2 $max_cpu); do
+            echo 1 > /sys/devices/system/cpu/cpu$i/online
+        done
+        ;;
+esac
+
+echo "$next" > "$state_file"

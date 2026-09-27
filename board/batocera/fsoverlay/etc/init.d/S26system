@@ -68,6 +68,7 @@ case "$1" in
     # Max cpus
     sed_param=s/9999/$(($(nproc) - 1))/g
     sed -i "$sed_param" /usr/bin/batocera-cpucores
+    sed -i "$sed_param" /usr/bin/batocera-cpucores-toggle
 
     export MESA_SHADER_CACHE_DIR="/userdata/system/.cache"
 

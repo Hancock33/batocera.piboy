@@ -135,6 +135,12 @@ if test "$1" = "--short"; then
     exit 0
 fi
 
+if test "$1" = "--cpu"; then
+    V_CPUNB=$(LC_ALL=C getconf -a | grep _NPROCESSORS_ONLN | awk '{print $2}')
+    V_CPUMAXNB=$(LC_ALL=C getconf -a | grep _NPROCESSORS_CONF | awk '{print $2}')
+    echo "CPU Cores: ${V_CPUNB}/${V_CPUMAXNB}"
+    exit 0
+fi
 # ---------------------------------------------------------------------------
 # Board / system basics
 # ---------------------------------------------------------------------------
