@@ -626,6 +626,9 @@ def _dolphin_options(
     else:
         _set(coreSettings, 'dolphin_ir_mode', '1')
 
+    if system.name == 'triforce':
+        _set(coreSettings, 'dolphin_cheats_enabled', 'enabled')
+        _set(coreSettings, 'dolphin_cheats_import',  'enabled')
 
 # Epoch - Cassette Vision
 def _pd777_options(

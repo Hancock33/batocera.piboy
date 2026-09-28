@@ -441,7 +441,7 @@ def createLibretroConfig(
         retroarchConfig['input_libretro_device_p1'] = system.config.get('controller1_pce', '1')
 
     ## WII controller
-    if system.config.core == 'dolphin' or system.config.core == 'dolphin':
+    if system.config.core == 'dolphin':
         if (".cc." in rom.name or ".pro." in rom.name or ".side." in rom.name or ".is." in rom.name or ".it." in rom.name or ".in." in rom.name or ".ti." in rom.name or ".ts." in rom.name or ".tn." in rom.name or ".ni." in rom.name or ".ns." in rom.name or ".nt." in rom.name) or "sideWiimote" in system.config:
             # Controller 1 Type
             retroarchConfig['input_libretro_device_p1'] = system.config.get('controller1_wii', '513')
