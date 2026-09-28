@@ -62,6 +62,82 @@ do_imagestart()
     fi
 }
 
+# Connect the panel the board kept off as DRM master, so fbdev defers the hotplug, and hold the fd until mpv is master
+enable_splash_output ()
+{
+    splash_output=$(batocera-settings-get-master splash.screen.output) || return
+    rm -f /var/run/splash-output.ready
+    python3 - "$splash_output" <<'EOF' >/dev/null 2>&1 &
+import fcntl, glob, os, sys, time
+out = sys.argv[1]
+fds = [os.open(c, os.O_RDWR) for c in glob.glob("/dev/dri/card[0-9]*")]
+for fd in fds:
+    for i in range(40):
+        try:
+            fcntl.ioctl(fd, 0x641e)
+            break
+        except OSError:
+            time.sleep(0.05)
+for st in glob.glob("/sys/class/drm/card*-%s/status" % out):
+    with open(st, "w") as f:
+        f.write("detect")
+    for i in range(20):
+        if open(st).read().strip() == "connected":
+            break
+        time.sleep(0.05)
+for fd in fds:
+    try:
+        fcntl.ioctl(fd, 0x641f)
+    except OSError:
+        pass
+open("/var/run/splash-output.ready", "w").close()
+for i in range(100):
+    try:
+        pid = open("/var/run/user-splash.pid").read().strip()
+        if any(os.readlink("/proc/%s/fd/%s" % (pid, f)).startswith("/dev/dri/card")
+               for f in os.listdir("/proc/%s/fd" % pid)):
+            break
+    except OSError:
+        pass
+    time.sleep(0.1)
+EOF
+    for i in $(seq 60); do
+        [ -e /var/run/splash-output.ready ] && break
+        sleep 0.05
+    done
+}
+
+get_connected_display() {
+    local display_type="$1"
+    local drm_connector=""
+    local card_path=""
+
+    for card_folder_path in /sys/class/drm/card*; do
+        card_id=$(basename "$card_folder_path")
+        if [ -d "$card_folder_path" ]; then
+            card_folder_name=$(basename "$card_folder_path")
+            if [[ "$card_folder_name" == card* ]]; then
+                for sub_folder in "$card_folder_path"/*; do
+                    if [[ "$(basename "$sub_folder")" == "card"* ]]; then
+                        status_file="${sub_folder}/status"
+                        if [ -f "$status_file" ] && [ "$(cat "$status_file")" == "connected" ] && [[ "$status_file" == *"$display_type"* ]]; then
+                            echo "Splash: Display Type $display_type has a connection at $status_file" >> "$log"
+                            drm_connector=$(echo "$status_file" | sed -n 's/.*\/card[0-9]\-\(.*\)\/status/\1/p')
+                            echo "Splash: Selected DRM connector: $drm_connector" >> "$log"
+                            card_number=$(echo "$card_id" | sed -n 's/card\([0-9]\+\).*/\1/p')
+                            card_path="/dev/dri/card$card_number"
+                            echo "Splash: DRM connected card path: $card_path" >> "$log"
+                            break 2  # We found a connected display, exit both loops
+                        fi
+                    fi
+                done
+            fi
+        fi
+    done
+
+    echo "$drm_connector $card_path"
+}
+
 do_videostart ()
 {
     video="$1"
@@ -77,8 +153,15 @@ do_videostart ()
     fi
 
     ## current drm output ##
-    effectiveDrmOutput=$(for GPU in /dev/dri/card*; do batocera-drminfo "${GPU}" "current" 2>/dev/null | grep -oP '^[0-9]+\.[0-9]+:\K[^ ]+'; done | head -1)
-    mpv_video=
+    if [ -n "$splash_output" ]; then
+        effectiveDrmOutput=${splash_output%%-*}
+    else
+        effectiveDrmOutput=$(for GPU in /dev/dri/card*; do batocera-drminfo "${GPU}" "current" 2>/dev/null | grep -oP '^[0-9]+\.[0-9]+:\K[^ ]+'; done | head -1)
+    fi
+
+    # Natively crop 16:9 on the GPU presentation plane.
+    mpv_video="--panscan=1.0"
+
     video_rotation=$(batocera-settings-get-master "display.rotate.${effectiveDrmOutput}")
     if test -z "${video_rotation}"
     then
@@ -86,27 +169,20 @@ do_videostart ()
     fi
     if [[ $? -eq 0 ]]; then
         video_rotation=$(do_angels_conversion $video_rotation)
-    # --vf-add=sub : rotation of subtitles
-        [[ $? -eq 0 ]] && mpv_video="--video-rotate=${video_rotation} --vf-add=sub"
+        # --blend-subtitles=video : rotation of subtitles
+        [[ $? -eq 0 ]] && mpv_video="${mpv_video} --video-rotate=${video_rotation} --blend-subtitles=video"
     fi
 
     drm_mode="preferred"
     video_resize=$(batocera-settings-get-master splash.screen.resize)
     # If splash screen resize is empty then try the es resolution
-    if [[ -z "$video_resize" ]]; then
+    if [[ -z "$video_resize" && -z "$splash_output" ]]; then
         video_resize=$(batocera-settings-get-master es.resolution)
     fi
     if [[ -n "$video_resize" ]]; then
-        resolution_only="${video_resize%%.*}"
-        if [[ "${video_rotation}" -eq 90 || "${video_rotation}" -eq 270 ]]; then
-            # invert the resolution
-            width="${resolution_only%x*}"
-            height="${resolution_only#*x}"
-            resolution_only="${height}x${width}"
-        fi
-        resize="${resolution_only/x/:}"
-        mpv_video="${mpv_video} --vf=scale=${resize}"
-        drm_mode=$resolution_only
+        # avoid using --vf=scale with --blend-subtitles
+        # gpu-next should handle the scaling
+        drm_mode="${video_resize%%.*}"
     fi
 
     video_subtitle=$(batocera-settings-get splash.screen.subtitle)
@@ -117,48 +193,65 @@ do_videostart ()
     fi
     fi
 
+    DISPLAY_COMPOSITOR=$(/usr/bin/batocera-resolution getDisplayComp)
+
     # determine the output display to use for MPV
     # fixes splash video output where the user wants it
-    if preferred_display=$(batocera-settings-get global.videooutput); then
-        echo "Preferred display is $preferred_display" > $log
-        display_type=$(echo "$preferred_display" | cut -d'-' -f1)
-        if [[ "$display_type" == "DisplayPort" ]]; then
-            # workaround some cards using DisplayPort as the xorg output name
-            display_type="DP"
+    if [ -n "$splash_output" ] && preferred_display="$splash_output" ||
+       preferred_display=$(batocera-settings-get-master global.videooutput); then
+
+        if [ "$DISPLAY_COMPOSITOR" = "labwc" ]; then
+            echo "Splash: Preferred display is $preferred_display" >> "$log"
+        else
+            echo "Splash: Preferred display is $preferred_display" > "$log"
         fi
-        echo "Display Type = $display_type" >> $log
-        display_index=1
+
         for card_folder_path in /sys/class/drm/card*; do
-            card_id=$(basename "$card_folder_path")
-            if [ -d "$card_folder_path" ]; then
-                card_folder_name=$(basename "$card_folder_path")
-                if [[ "$card_folder_name" == card* ]]; then
-                    for sub_folder in "$card_folder_path"/*; do
-                        if [[ "$(basename "$sub_folder")" == "card"* ]]; then
-                            status_file="${sub_folder}/status"
-                            #echo "Trying for display index at path: $status_file" >> $log
-                            if [ -f "$status_file" ] && [ "$(cat "$status_file")" == "connected" ] && [[ "$status_file" == *"$display_type"* ]]; then
-                                echo "Display Type $display_type has a connection at $status_file" >> $log
-                                #echo "Display index = $display_index" >> $log
-                                drm_connector=$(echo "$status_file" | sed -n 's/.*\/card[0-9]\-\(.*\)\/status/\1/p')
-                                echo "Selected DRM connector: $drm_connector" >> $log
-                                card_number=$(echo "$card_id" | sed -n 's/card\([0-9]\+\).*/\1/p')
-                                card_path="/dev/dri/card$card_number"
-                                echo "DRM connected card path: $card_path" >> $log
-                                break 2  # we found a connected display, exit both loops
-                            fi
-                            #echo "Display index not found at $display_index. Trying next within $card_folder_path" >> $log
-                            display_index=$((display_index + 1))
-                        fi
-                    done
-                fi
+            # Construct the full path to the specific connector's status file
+            specific_connector_status_file="${card_folder_path}/${card_folder_path##*/}-${preferred_display}/status"
+
+            if [ -f "$specific_connector_status_file" ] && [ "$(cat "$specific_connector_status_file")" == "connected" ]; then
+                echo "Splash: Exactly matched preferred display '$preferred_display' and it is connected." >> "$log"
+                drm_connector="$preferred_display"
+                card_id=$(basename "$card_folder_path")
+                card_number=$(echo "$card_id" | sed -n 's/card\([0-9]\+\).*/\1/p')
+                card_path="/dev/dri/card$card_number"
+                echo "Splash: Selected DRM connector: $drm_connector" >> "$log"
+                echo "Splash: DRM connected card path: $card_path" >> "$log"
+                break # Found our exact match, exit this loop
             fi
-            # reset display_index to 1 for the next card folder
-            #echo "Display index not found at $card_folder_path. Trying next" >> $log
-            display_index=1
         done
+
+        if [ -z "$drm_connector" ]; then
+            echo "Splash: Exact preferred display not found or not connected. Falling back to original method." >> "$log"
+            display_type=$(echo "$preferred_display" | cut -d'-' -f1)
+            if [[ "$display_type" == "DisplayPort" ]]; then
+                # workaround some cards using DisplayPort as the xorg output name
+                display_type="DP"
+            fi
+            echo "Splash: Display Type = $display_type" >> "$log"
+            read -r drm_connector card_path <<< "$(get_connected_display "$display_type")"
+        fi
     else
-        echo "No preferred display chosen, letting MPV use default" > $log
+        # we choose the first connected display
+        mpv_connector=$(mpv --drm-connector=help | grep "(connected)" | sed 's/ (connected)//' | sed 's/^[[:space:]]*//' | head -n1)
+        if [ -n "$mpv_connector" ]; then
+            if [ "$DISPLAY_COMPOSITOR" = "labwc" ]; then
+                echo "Splash: No preferred display chosen, using the first MPV detected (connected) display: $mpv_connector" >> "$log"
+            else
+                echo "Splash: No preferred display chosen, using the first MPV detected (connected) display: $mpv_connector" > "$log"
+            fi
+
+            display_type=$(echo "$mpv_connector" | cut -d'-' -f1)
+            echo "Splash: MPV detected display Type = $display_type" >> "$log"
+            read -r drm_connector card_path <<< "$(get_connected_display "$display_type")"
+        else
+            if [ "$DISPLAY_COMPOSITOR" = "labwc" ]; then
+                echo "Splash: No preferred display chosen, no connected display found" >> "$log"
+            else
+                echo "Splash: No preferred display chosen, no connected display found" > "$log"
+            fi
+        fi
     fi
 
     # set the sound again due to drm init causing some cards to default to 40% volume
@@ -182,16 +275,23 @@ do_videostart ()
         "--sub-font=DejaVu Sans"
     )
 
+    local mpv_log=/userdata/system/logs/mpv.log
+    rm -f "$mpv_log"
+
+    # Hold the last frame so fbdev never shows the other panel's logo here
+    [ -n "$splash_output" ] && mpv_video="${mpv_video} --keep-open=always"
+
     if [ -n "$drm_connector" ] && [ -n "$card_path" ]; then
-        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-mode=$drm_mode --drm-connector=$drm_connector --drm-device=$card_path --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
+        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --no-config --input-conf=/etc/mpv-splash.conf --input-gamepad %PLAYER_OPTIONS% "${mpv_fast_fonts[@]}" --drm-mode=$drm_mode --drm-connector=$drm_connector --drm-device=$card_path --log-file="$mpv_log" $mpv_audio $mpv_video "$video"
     else
-        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --input-conf=/etc/mpv-splash.conf --input-gamepad --panscan=1.0 --drm-mode=$drm_mode --log-file=/userdata/system/logs/mpv.log $mpv_audio $mpv_video "$video"
+        start-stop-daemon -S -b -q -m -p /var/run/user-splash.pid --exec /usr/bin/mpv -- --really-quiet --no-config --input-conf=/etc/mpv-splash.conf --input-gamepad %PLAYER_OPTIONS% "${mpv_fast_fonts[@]}" --drm-mode=$drm_mode --log-file="$mpv_log" $mpv_audio $mpv_video "$video"
     fi
 }
 
 case "$1" in
     start)
         printf 'Starting %s: ' "$DAEMON"
+        enable_splash_output
         if grep -qE '^[ ]*splash.screen.enabled[ ]*=[ ]*1[ ]*$' "/boot/batocera-boot.conf"
         then
             touch /var/run/system-splash.stop
