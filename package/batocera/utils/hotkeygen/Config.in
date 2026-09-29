@@ -2,8 +2,10 @@ config BR2_PACKAGE_HOTKEYGEN
 	bool "hotkeygen"
 	select BR2_PACKAGE_PYTHON3
 	select BR2_PACKAGE_PYTHON_BATOCERA_COMMON
+	select BR2_PACKAGE_PYTHON_DBUS_FAST
 	select BR2_PACKAGE_PYTHON_EVDEV
 	select BR2_PACKAGE_PYTHON_PYUDEV
+	select BR2_PACKAGE_PYTHON_UVLOOP
 
 	help
 	  hotkeygen is a background utility that listens for specific
