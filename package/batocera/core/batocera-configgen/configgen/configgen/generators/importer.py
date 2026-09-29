@@ -11,7 +11,6 @@ if TYPE_CHECKING:
 _GENERATOR_MAP: Final[dict[str, tuple[str, str]]] = {
     'eden': ('eden.edenGenerator', 'EdenGenerator'),
     'libretro': ('libretro.libretroGenerator', 'LibretroGenerator'),
-    'mame': ('mame.mameGenerator', 'MameGenerator'),
     'ryujinx': ('ryujinx.ryujinxGenerator', 'RyujinxGenerator'),
 }
 
