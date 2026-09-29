@@ -823,6 +823,10 @@ msgid "1x native (640x528)"
 msgstr "1x natív (640x528)"
 
 msgctxt "game_options"
+msgid "2 (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2 Frames"
 msgstr "2 Képkocka"
 
@@ -1392,10 +1396,6 @@ msgid "3D Control Pad (Analog)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "3D ENGINE"
-msgstr "3D ENGINE"
-
-msgctxt "game_options"
 msgid "3D TEXTURE FILTER"
 msgstr ""
 
@@ -1510,6 +1510,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "40 MHz"
 msgstr "40 MHz"
+
+msgctxt "game_options"
+msgid "40% (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "400p"
@@ -1728,6 +1732,10 @@ msgid "50 fps"
 msgstr "50 fps"
 
 msgctxt "game_options"
+msgid "50% (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "50% (Underclock)"
 msgstr ""
 
@@ -1849,6 +1857,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "6.75x (6480x3672)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2106,6 +2118,10 @@ msgstr "8k"
 msgctxt "game_options"
 msgid "8th"
 msgstr "8."
+
+msgctxt "game_options"
+msgid "8x (4K)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
@@ -2513,6 +2529,10 @@ msgid "AUDIO CHANNELS"
 msgstr "AUDIO CSATORNÁK"
 
 msgctxt "game_options"
+msgid "AUDIO COPROCESSOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "AUDIO DRIVER"
 msgstr "AUDIO DRIVER"
 
@@ -2894,6 +2914,10 @@ msgid "All Timers"
 msgstr "Minden időzítő"
 
 msgctxt "game_options"
+msgid "All cores"
+msgstr ""
+
+msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
 msgstr "Minden lehetséges licenc (nem ajánlott)"
 
@@ -2904,6 +2928,10 @@ msgstr "Minden szinkronhang"
 msgctxt "game_options"
 msgid "Allow cores to set rotation."
 msgstr "Engedélyezze a magoknak a forgás beállítását."
+
+msgctxt "game_options"
+msgid "Allow opening the developer menu."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -3188,6 +3216,10 @@ msgid "Apply gouraud shading instead of flat shading."
 msgstr "Alkalmazzon gouraud árnyékolást a sima árnyékolás helyett."
 
 msgctxt "game_options"
+msgid "Apply one of the game's built-in shaders."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Apply texture filtering to enhance visual quality. Some filters may "
 "significantly impact performance."
@@ -3291,11 +3323,9 @@ msgstr "Rendezze el a kétképernyős elrendezést."
 
 msgctxt "game_options"
 msgid ""
-"Arrange the dual screen layout. Separate windows can be changed with "
-"Hotkey+R2."
+"Arrange the dual screen layout. Defaults to separate windows when a second "
+"screen is connected. Separate windows can be changed with Hotkey+R2."
 msgstr ""
-"Rendezze el a kétképernyős elrendezést. Külön ablakok a Hotkey+R "
-"billentyűkkel módosíthatók."
 
 msgctxt "game_options"
 msgid "Arrows"
@@ -3883,6 +3913,10 @@ msgid "Blend (Top Field First)"
 msgstr "Keverék (a felső mező az első)"
 
 msgctxt "game_options"
+msgid "Blended"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr "Blocky Filtered"
 
@@ -4141,6 +4175,14 @@ msgid "C64 PAL Automatic"
 msgstr "C64 PAL Automatikus"
 
 msgctxt "game_options"
+msgid "CABINET"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CABINET LINK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CABINET OUTPUTS"
 msgstr ""
 
@@ -4277,8 +4319,16 @@ msgid "COLORIZATION"
 msgstr "SZÍNEZET"
 
 msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
 msgstr "HARC NEHÉZSÉGE"
+
+msgctxt "game_options"
+msgid "COMPUTE SHADER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
@@ -4473,6 +4523,10 @@ msgid "CPU CORE METHOD"
 msgstr "CPU MAG MÓDSZER"
 
 msgctxt "game_options"
+msgid "CPU CORES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU CYCLES"
 msgstr "CPU CIKLUSOK"
 
@@ -4565,6 +4619,10 @@ msgid "CRT FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT GAMMA"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT GHOSTING EFFECT"
 
@@ -4582,6 +4640,14 @@ msgstr "CRT KAPCSOLÓK"
 
 msgctxt "game_options"
 msgid "CRT Shader."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yee64"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yeetron"
 msgstr ""
 
 msgctxt "game_options"
@@ -4674,6 +4740,10 @@ msgstr "CYBERMORPH"
 
 msgctxt "game_options"
 msgid "CYCLE EXACT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cabinet 1 is the host, the others connect to it."
 msgstr ""
 
 msgctxt "game_options"
@@ -4935,6 +5005,10 @@ msgid "Charger plugged"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Cheap HDMI converter"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Chile"
 msgstr "Chile"
 
@@ -5076,6 +5150,14 @@ msgid "Choose the combat difficulty."
 msgstr "Válassza ki a harci nehézséget."
 
 msgctxt "game_options"
+msgid "Choose the controller 1 user mode."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose the controller 2 user mode."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns and steering wheels. SDL2 for gamepads only."
@@ -5159,10 +5241,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "Válassza ki a textúraszűrő típusát."
-
-msgctxt "game_options"
-msgid "Choose to display UI prompts or accept defaults automatically."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
@@ -5346,6 +5424,10 @@ msgid "Classic Software"
 msgstr "Klasszikus szoftver"
 
 msgctxt "game_options"
+msgid "Clean"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
 msgstr "Alkalmazás bezárása a távoli állomáson, amikor kilép a Moonlightból."
 
@@ -5527,8 +5609,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Controls the New3D rendering resolution (1x scale = 496x384). Default is 0 "
-"(Set Resolution) on x86_64 and 1 on ARM. Requires New3D engine."
+"Controls the rendering resolution (1x scale = 496x384). Default is 0 (Set "
+"Resolution) on x86_64 and 1 on ARM."
 msgstr ""
 
 msgctxt "game_options"
@@ -5754,6 +5836,10 @@ msgstr "RÉSZLETES ÁRNYÉKOLÓK"
 msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "FEJLESZTŐ MENÜ"
+
+msgctxt "game_options"
+msgid "DEVELOPER MENU"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DIFFICULTY"
@@ -6006,6 +6092,10 @@ msgstr "Sötétlila"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "Sötét"
+
+msgctxt "game_options"
+msgid "Darken the picture the way a cabinet monitor does."
+msgstr ""
 
 msgctxt "game_options"
 msgid "De-Interlaced"
@@ -6384,6 +6474,16 @@ msgstr ""
 "nyelvét. Néhány játék alapértelmezés szerint japán."
 
 msgctxt "game_options"
+msgid ""
+"Drive board force feedback on a wheel, rumble on a pad (OutRun 2, Maximum "
+"Tune)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Drive the GameTank paddle with the mouse, for the games that use it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Driving Force"
 msgstr "Driving Force"
 
@@ -6493,6 +6593,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "ELECTRON MODEL"
 msgstr "ELECTRON MODELL"
+
+msgctxt "game_options"
+msgid "EMULATE DVD LOADING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "EMULATE PCG-8100"
@@ -6766,6 +6870,12 @@ msgid "Emulate the Wiimote pointer with a mouse."
 msgstr "Egérrel emulálja a Wiimote mutatót."
 
 msgctxt "game_options"
+msgid ""
+"Emulate the card reader of Ghost Squad, Gundam and the Maximum Tune games. "
+"Cards are kept in saves/chihiro/cards."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
 msgstr ""
 
@@ -6993,6 +7103,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Enable if the wheel is pushed away from centre instead of towards it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Az előre telepített WHDLoad telepítések elindításának engedélyezése."
 
@@ -7139,12 +7253,6 @@ msgstr "Engedélyezze az alábbi egyéni értékeket."
 msgctxt "game_options"
 msgid "Enable the debug menu and the walk-through-walls button."
 msgstr "Engedélyezze a hibakeresési menüt és a falak átjárási gombját."
-
-msgctxt "game_options"
-msgid ""
-"Enable the legacy or the new 3D engine. Choose Legacy on x86 for older GPUs. "
-"(Not supported on ARM/GLES systems)."
-msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -7502,6 +7610,10 @@ msgid "Enhancement. Upscales textures on 3D objects."
 msgstr "Fokozás. A 3D objektumok textúráit feljavítja."
 
 msgctxt "game_options"
+msgid "Enhancement. Use the compute shader."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Ensure every frame the console renders is displayed to screen."
 msgstr ""
 "Biztosítsa, hogy a konzol által renderelt minden képkocka megjelenjen a "
@@ -7558,6 +7670,10 @@ msgstr "Kilépés az emulátorból"
 msgctxt "game_options"
 msgid "Export"
 msgstr "Exportálás"
+
+msgctxt "game_options"
+msgid "Export (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Extend the game screen area, similar to the Master System."
@@ -7688,7 +7804,15 @@ msgid "FORCE CPU BLIT EMULATION"
 msgstr ""
 
 msgctxt "game_options"
+msgid "FORCE ENVIRONMENT MAPPING"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FORCE FEEDBACK STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -7915,6 +8039,10 @@ msgctxt "game_options"
 msgid "Fast (Default)"
 msgstr ""
 
+msgctxt "game_options"
+msgid "Fast cores"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Fast forward"
 msgstr "Gyors előretekerés"
@@ -7966,6 +8094,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fills the screen."
 msgstr "Kitölti a képernyőt."
+
+msgctxt "game_options"
+msgid ""
+"Finish each blit immediately rather than over the cycles the real hardware "
+"takes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Finland"
@@ -8082,6 +8216,10 @@ msgctxt "game_options"
 msgid ""
 "Fixes specific shadows and textures in the Virtua Tennis 3 and Virtua "
 "Fighter 5 franchises for non-Nvidia GPUs. May require the FPS limiter."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Flawed theory (legacy)"
 msgstr ""
 
 msgctxt "game_options"
@@ -8374,8 +8512,16 @@ msgid "Full Frame"
 msgstr "Teljes keret"
 
 msgctxt "game_options"
+msgid "Full Screen"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Full Speed (Default)"
 msgstr "Teljes sebesség (alapértelmezett)"
+
+msgctxt "game_options"
+msgid "Full contrast"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Full speed"
@@ -8392,6 +8538,10 @@ msgstr "Fuller Joystick"
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
 msgstr "Funtech Super A'Can kazetta"
+
+msgctxt "game_options"
+msgid "GAME"
+msgstr ""
 
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
@@ -9088,6 +9238,10 @@ msgid "HIGH-RES BLENDING"
 msgstr "NAGY FELBONTÁSÚ KEVERÉS"
 
 msgctxt "game_options"
+msgid "HINT SUBTITLES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HLE"
 msgstr ""
 
@@ -9102,6 +9256,10 @@ msgstr "HLE (képpontonként)"
 msgctxt "game_options"
 msgid "HLE (per-strip)"
 msgstr "HLE (per-strip)"
+
+msgctxt "game_options"
+msgid "HOST ADDRESS"
+msgstr ""
 
 msgctxt "game_options"
 msgid "HQ (bilinear filter)"
@@ -9146,6 +9304,10 @@ msgstr "Merevlemez"
 msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "Merevlemez (II UX)"
+
+msgctxt "game_options"
+msgid "Hardware (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hardware (default)"
@@ -9312,6 +9474,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "How heavy the wheel turns while the game drives it."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "How many times larger the main screen is compared to the small screen in the "
 "Large Screen layout."
@@ -9408,6 +9574,10 @@ msgid "INPUT INTERFACE"
 msgstr "BEMENETI FELÜLET"
 
 msgctxt "game_options"
+msgid "INSTANT BLITS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "INTEGER SCALE FACTOR"
 msgstr ""
 
@@ -9450,6 +9620,10 @@ msgstr "INVERZ JÁTÉKTÉR ÉS B2S"
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "INVERZ TENGELY"
+
+msgctxt "game_options"
+msgid "INVERT FORCE FEEDBACK"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9543,8 +9717,10 @@ msgstr ""
 "Javítja a teljesítményt a késleltetés és a videódadogás növekedése árán."
 
 msgctxt "game_options"
-msgid "Improves performance in 3D games. Can cause glitches."
-msgstr "Javítja a teljesítményt a 3D játékokban. Hibákat okozhat."
+msgid ""
+"Improves performance in 3D games. Some games then mix up the layers of the "
+"two screens, turn it off if the screens look wrong."
+msgstr ""
 
 msgctxt "game_options"
 msgid "In Cinematics"
@@ -9662,7 +9838,9 @@ msgid "Interlaced"
 msgstr "Váltott soros"
 
 msgctxt "game_options"
-msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
+msgid ""
+"Internal 3D render scale. OpenGL/Vulkan only, ignored on Software. Reduced "
+"automatically if the GPU can't render that size."
 msgstr ""
 
 msgctxt "game_options"
@@ -9950,6 +10128,11 @@ msgid "Keep your top speed even when driving off-road."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Keeps reflections at full strength instead of fading them with distance."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Kempston Joystick"
 msgstr "Kempston Joystick"
 
@@ -10138,6 +10321,10 @@ msgid "LEFT STICK DEADZONE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "LETTERBOX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "LIGHT FLARES"
 msgstr "FÉNY SZÓRÓDÁS"
 
@@ -10166,10 +10353,6 @@ msgid "LIGHTSABER CROSSHAIR"
 msgstr "FÉNYKARD CÉLKERESZT"
 
 msgctxt "game_options"
-msgid "LIMIT FPS"
-msgstr "FPS KORLÁTOZÁSA"
-
-msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
 msgstr "KÉPKOCKA SEBESSÉG KORLÁTOZÁSA"
 
@@ -10180,6 +10363,14 @@ msgstr "LINE MÓD"
 msgctxt "game_options"
 msgid "LINEAR UPSCALING"
 msgstr "LINEÁRIS FELSKÁLÁZÁS"
+
+msgctxt "game_options"
+msgid "LINK CABINETS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LINK PORT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "LLE"
@@ -10255,12 +10446,22 @@ msgid "Lean right"
 msgstr "Hajoljon jobbra"
 
 msgctxt "game_options"
+msgid "Leave empty for the default 9100."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Lebanon"
 msgstr "Libanon"
 
 msgctxt "keys_files"
 msgid "Left"
 msgstr "Bal"
+
+msgctxt "game_options"
+msgid ""
+"Left alone the game fills the display. A fixed ratio crops or pillarboxes to "
+"that shape instead."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10289,10 +10490,6 @@ msgstr "Legacy Evdev"
 msgctxt "game_options"
 msgid "Legacy Single Threaded"
 msgstr ""
-
-msgctxt "game_options"
-msgid "Legacy3D"
-msgstr "Legacy3D"
 
 msgctxt "game_options"
 msgid "Libya"
@@ -10359,10 +10556,6 @@ msgid "Lime"
 msgstr "Lime"
 
 msgctxt "game_options"
-msgid "Limit FPS to reduce high CPU usage."
-msgstr "Korlátozza az FPS-t a magas CPU-használat csökkentése érdekében."
-
-msgctxt "game_options"
 msgid ""
 "Limiting to 1 or 2 threads can fix audio stuttering on lower core count "
 "CPUs. Leave on Auto (0) if slowdown occurs."
@@ -10379,6 +10572,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Linear filtering"
 msgstr "Lineáris szűrés"
+
+msgctxt "game_options"
+msgid ""
+"Link up to 4 cabinets (Ollie King, OutRun 2, OutRun 2 SP, Maximum Tune 1 & "
+"2). Needs ver1305.bin in bios/chihiro."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Lithuania"
@@ -10896,6 +11095,12 @@ msgid "Match Window"
 msgstr "Egyeztetési ablak"
 
 msgctxt "game_options"
+msgid ""
+"Match the colours to the way the console's video output looks on a real "
+"display."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Matra & Hachette Alice"
 msgstr "Matra & Hachette Alice"
 
@@ -11340,6 +11545,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Multisample anti-aliasing. Costs fill rate, so drop it on weaker GPUs."
+msgstr ""
+
+msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
 
@@ -11504,6 +11713,10 @@ msgid "NTSYNC"
 msgstr "NTSYNC"
 
 msgctxt "game_options"
+msgid "NUMBER OF CABINETS"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
 msgstr ""
@@ -11525,6 +11738,10 @@ msgstr "NZ-CHAT"
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "Namco GunCon"
+
+msgctxt "game_options"
+msgid "Name the speaker alongside each subtitle."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11641,10 +11858,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "New Zealand"
 msgstr "Új-Zéland"
-
-msgctxt "game_options"
-msgid "New3D"
-msgstr "New3D"
 
 msgctxt "keys_files"
 msgid "Next Force Power"
@@ -11857,7 +12070,23 @@ msgid "ORIGINAL FONTS"
 msgstr ""
 
 msgctxt "game_options"
+msgid "ORIGINAL HINTS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL LOD DISTANCES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ORIGINAL LOGOS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL PARTICLE CAP"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL SHADOWS"
 msgstr ""
 
 msgctxt "game_options"
@@ -11957,10 +12186,27 @@ msgid "Off at Start"
 msgstr "Ki az induláskor"
 
 msgctxt "game_options"
+msgid "Off casts shadows from objects the PS2 could not afford to."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off enables the extra gameplay hints added by the PC port."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr ""
 "A kikapcsolt állapot biztonságosabb, a bekapcsolt állapot bizonyos "
 "játékokhoz."
+
+msgctxt "game_options"
+msgid ""
+"Off pushes the level-of-detail transitions further out than the PS2 did."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off raises the PS2's particle limit."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11982,6 +12228,10 @@ msgctxt "game_options"
 msgid ""
 "Offloads RSX draw commands to a secondary thread. Improves performance on "
 "CPUs with 6+ threads."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Offscreen Only (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -12238,6 +12488,10 @@ msgstr "ANALÓG LAPATKAR ÉRZÉKENYSÉGE"
 msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
 msgstr "D-PAD LAPÁT  ÉRZÉKENYSÉGE"
+
+msgctxt "game_options"
+msgid "PADDLE EMULATION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PADDLE JOYPAD SENSITIVITY"
@@ -12552,6 +12806,10 @@ msgid "PS1 Digital Controller"
 msgstr "PS1 digitális vezérlő"
 
 msgctxt "game_options"
+msgid "PS2 FIDELITY"
+msgstr ""
+
+msgctxt "game_options"
 msgid "PS3"
 msgstr ""
 
@@ -12582,6 +12840,11 @@ msgstr "PVM stílus (FirebrandX)"
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
 msgstr "PVM_20M2U/D93"
+
+msgctxt "game_options"
+msgid ""
+"Pad the frame to the chosen aspect instead of stretching it to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Paddle Control"
@@ -13345,6 +13608,10 @@ msgid "RGB Color Low/Medium-Resolution"
 msgstr ""
 
 msgctxt "game_options"
+msgid "RGB Image"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RIGHT STICK DEADZONE"
 msgstr ""
 
@@ -13552,6 +13819,12 @@ msgstr "A poligonokat és a textúrákat natív felbontásban jeleníti meg."
 msgctxt "game_options"
 msgid "Replace meshed transparency by real transparency."
 msgstr "Cserélje ki a hálós átlátszóságot valódi átlátszósággal."
+
+msgctxt "game_options"
+msgid ""
+"Reproduces the original disc read speed, including the loading pauses it "
+"caused."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Required by some games."
@@ -13911,10 +14184,6 @@ msgid "SCREEN PROPORTION"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "KÉPERNYŐARÁNY"
-
-msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "KÉPERNYŐ FORGATÁSA"
 
@@ -14215,6 +14484,10 @@ msgid "SP"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SPEAKER NAMES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "KÜLÖNLEGES VEZÉRLÉSI Elrendezések"
 
@@ -14236,6 +14509,10 @@ msgstr "SEBESSÉGHACKEK"
 
 msgctxt "game_options"
 msgid "SPEEDHACKS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SPEEDRUNNER MODE"
 msgstr ""
 
 msgctxt "game_options"
@@ -14449,6 +14726,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Scale to best fit"
 msgstr "Scale to best fit"
+
+msgctxt "game_options"
+msgid "Scale to best fit (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Scale2x"
@@ -14676,9 +14957,13 @@ msgstr ""
 "Válassza ki az emulált hardverarchitektúra géptípusát és architektúráját."
 
 msgctxt "game_options"
+msgid "Select the firmware language."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
-"Select the graphics rendering backend (requires New3D engine). Vulkan can "
-"provide improved performance and lower CPU overhead on supported GPUs."
+"Select the graphics rendering backend. Vulkan can provide improved "
+"performance and lower CPU overhead on supported GPUs."
 msgstr ""
 
 msgctxt "game_options"
@@ -15122,6 +15407,11 @@ msgid "Shows or hides the menu bar"
 msgstr "Megjeleníti vagy elrejti a menüsort"
 
 msgctxt "game_options"
+msgid ""
+"Shows the in-game timer and disables anything that would invalidate a run."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Shrink/expand tattoo to fit within the bezel's border."
 msgstr ""
 "Zsugorítás / bővítés a tetoválásnál, hogy illeszkedjen a keret szegélyéhez."
@@ -15177,10 +15467,6 @@ msgstr "Egyszerű"
 msgctxt "game_options"
 msgid "Simple (interpreter for old real-mode games)"
 msgstr "Egyszerű (fordító a régi valós módú játékokhoz)"
-
-msgctxt "game_options"
-msgid "Simple 2x"
-msgstr "Egyszerű 2x"
 
 msgctxt "game_options"
 msgid "Simplified Chinese"
@@ -15650,6 +15936,10 @@ msgid "Sprawl Relay (Brazil)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Spring the wheel back to centre while the game is not driving it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Square Pixel"
 msgstr ""
 
@@ -15742,6 +16032,10 @@ msgid "Stereo sound output."
 msgstr "Sztereó hangkimenet."
 
 msgctxt "game_options"
+msgid "Stipple (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Store past states to rewind to in realtime, if the core supports it."
 msgstr ""
 "Tárolja a múltbeli állapotokat a valós idejű visszatekeréshez, ha a mag "
@@ -15771,10 +16065,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Nyújtás"
-
-msgctxt "game_options"
-msgid "Stretch games to full-screen, but may distort the aspect ratio"
-msgstr "Nyújtsa ki a játékokat teljes képernyőre, de torzíthatja a képarányt"
 
 msgctxt "game_options"
 msgid "Stretch image output to fill the window/screen."
@@ -15820,6 +16110,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Strong"
 msgstr "Erős"
+
+msgctxt "game_options"
+msgid "Subtitle the spoken hints that play outside cutscenes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Super Action Controller"
@@ -16015,6 +16309,10 @@ msgid "System requirements at native; (RAM|VRAM)."
 msgstr "Rendszerkövetelmények natív állapotban; (RAM|VRAM)."
 
 msgctxt "game_options"
+msgid "TARGET FRAME RATE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TARGET LANGUAGE"
 msgstr "CÉL NYELV"
 
@@ -16123,6 +16421,10 @@ msgid "TEXTURE UPSCALING TYPE"
 msgstr "TEXTÚRA FELSKÁLÁZÁS TÍPUSA"
 
 msgctxt "game_options"
+msgid "THIS CABINET"
+msgstr ""
+
+msgctxt "game_options"
 msgid "THREAD SCHEDULER MODE"
 msgstr ""
 
@@ -16197,6 +16499,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "EDZŐ MÓD"
+
+msgctxt "game_options"
+msgid "TRANSLUCENCY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
@@ -16401,12 +16707,22 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "The address of cabinet 1. Leave empty on cabinet 1."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
 "help reduce unintended inputs."
 msgstr ""
 "A joystick semleges pozíciója körüli terület, ahol a bevitel figyelmen kívül "
 "marad. Segíthet a nem szándékos bemenetek csökkentésében."
+
+msgctxt "game_options"
+msgid ""
+"The cabinet's region. If a game does not support it, the first region it "
+"does support is used, checking Export, then USA, then Japan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
@@ -16422,9 +16738,20 @@ msgstr ""
 "A végső kimeneti kép, amely nem kapcsolódik a Wii emulált NAND beállításához."
 
 msgctxt "game_options"
+msgid "The game is uncapped, this is the rate it aims for."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The game's jolts plus a buzz rising with steering, on a regular gamepad. "
 "Driving games only."
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid ""
+"The hardware draws see-through surfaces as a checkerboard. Blended draws the "
+"50% see-through it's trying to achieve. OpenGL/Vulkan only."
 msgstr ""
 
 msgctxt "game_options"
@@ -16677,6 +17004,10 @@ msgctxt "keys_files"
 msgid "Turn left"
 msgstr "Fordulj balra"
 
+msgctxt "game_options"
+msgid "Turn off to silence the audio coprocessor entirely."
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Turn right"
 msgstr "Fordulj jobbra"
@@ -16745,10 +17076,6 @@ msgstr "UDP-alagút"
 msgctxt "game_options"
 msgid "UI KEYS"
 msgstr "UI KEYS"
-
-msgctxt "game_options"
-msgid "UI PROMPTS"
-msgstr "A FELHASZNÁLÓI FELÜLET FELSZÓLÍTÁSAI"
 
 msgctxt "game_options"
 msgid "UK"
@@ -17041,6 +17368,10 @@ msgid "Unscaled (Default)"
 msgstr "Nem méretezett (alapértelmezett)"
 
 msgctxt "game_options"
+msgid "Unscaled capture (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Időtúllépésig"
 
@@ -17252,6 +17583,10 @@ msgstr ""
 "dekoráció vagy árnyékoló használata esetén nem ajánlott."
 
 msgctxt "game_options"
+msgid "Use the software renderer when the hardware one misbehaves."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Use the system mouse pointer as paddle controller 1. Does not let you choose "
 "a specific mouse if you have several."
@@ -17365,6 +17700,10 @@ msgstr "VBI SKIP (KIHAGYÁS)"
 
 msgctxt "game_options"
 msgid "VBLANK FREQUENCY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "VERBOSE LOGGING"
 msgstr ""
 
 msgctxt "game_options"
@@ -17668,6 +18007,10 @@ msgid "WHEEL"
 msgstr ""
 
 msgctxt "game_options"
+msgid "WHEEL AUTO-CENTRE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL DEADZONE"
 msgstr "KERÉK HOLTZÓNA"
 
@@ -17702,6 +18045,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
 msgstr "KERÉK ÉRZÉKENYSÉG"
+
+msgctxt "game_options"
+msgid "WHEEL WEIGHT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEELS"
@@ -17817,6 +18164,12 @@ msgstr ""
 "állítja be."
 
 msgctxt "game_options"
+msgid ""
+"Which cores the emulator may run on. Fast cores keeps it off the slow "
+"efficiency cores of a big.LITTLE CPU, for emulators bound by a single thread."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Which rectangle the frame is fit into."
 msgstr ""
 
@@ -17835,6 +18188,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "Widescreen (16:9)"
+
+msgctxt "game_options"
+msgid "Widescreen or the original 4:3 view."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -17904,6 +18261,12 @@ msgid "Works with 'Cycle-exact' mode and for a few games."
 msgstr "Működik a \"Cycle-Exact\" móddal és néhány játékhoz."
 
 msgctxt "game_options"
+msgid ""
+"Write debug-level runtime logging to the batocera launch log. Useful when a "
+"game will not boot."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Write protect virtual SD card"
 msgstr ""
 
@@ -17952,6 +18315,18 @@ msgstr "Y = Fire, B = Up"
 msgctxt "game_options"
 msgid "YES"
 msgstr "IGEN"
+
+msgctxt "game_options"
+msgid "YUV 420"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 422"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 444"
+msgstr ""
 
 msgctxt "game_options"
 msgid "YUV v3 (Firebrand)"
@@ -18563,6 +18938,10 @@ msgstr "sárga/kék"
 #~ msgstr "2x Natív (1280x1056) 720p esetén"
 
 #~ msgctxt "game_options"
+#~ msgid "3D ENGINE"
+#~ msgstr "3D ENGINE"
+
+#~ msgctxt "game_options"
 #~ msgid "3x Native (1920x1584) for 1080p"
 #~ msgstr "3x Natív (1920x1584) 1080p esetén"
 
@@ -18768,6 +19147,14 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Area Sampling"
 #~ msgstr "Területi mintavételezés"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Arrange the dual screen layout. Separate windows can be changed with "
+#~ "Hotkey+R2."
+#~ msgstr ""
+#~ "Rendezze el a kétképernyős elrendezést. Külön ablakok a Hotkey+R "
+#~ "billentyűkkel módosíthatók."
 
 #~ msgctxt "keys_files"
 #~ msgid "Aspect ratio correction on/off"
@@ -19543,6 +19930,10 @@ msgstr "sárga/kék"
 #~ "próbálja ki a gyors tolmácsot (Fast Interpreter)."
 
 #~ msgctxt "game_options"
+#~ msgid "Improves performance in 3D games. Can cause glitches."
+#~ msgstr "Javítja a teljesítményt a 3D játékokban. Hibákat okozhat."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Internal accelerometer. Disable if you experience random tilts or "
 #~ "unexpected ball behavior."
@@ -19579,6 +19970,10 @@ msgstr "sárga/kék"
 #~ msgstr "Tartsa meg az arányt (alapértelmezett)"
 
 #~ msgctxt "game_options"
+#~ msgid "LIMIT FPS"
+#~ msgstr "FPS KORLÁTOZÁSA"
+
+#~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
 #~ msgstr "LINEÁRIS SZŰRÉS"
 
@@ -19606,6 +20001,14 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Legacy (single threaded)"
 #~ msgstr "Legacy (egyszálas)"
+
+#~ msgctxt "game_options"
+#~ msgid "Legacy3D"
+#~ msgstr "Legacy3D"
+
+#~ msgctxt "game_options"
+#~ msgid "Limit FPS to reduce high CPU usage."
+#~ msgstr "Korlátozza az FPS-t a magas CPU-használat csökkentése érdekében."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19724,6 +20127,10 @@ msgstr "sárga/kék"
 #~ msgctxt "game_options"
 #~ msgid "Nearest-neighbor"
 #~ msgstr "Legközelebbi szomszéd"
+
+#~ msgctxt "game_options"
+#~ msgid "New3D"
+#~ msgstr "New3D"
 
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
@@ -20102,6 +20509,10 @@ msgstr "sárga/kék"
 #~ "konfigurálhasson."
 
 #~ msgctxt "game_options"
+#~ msgid "SCREEN RATIO"
+#~ msgstr "KÉPERNYŐARÁNY"
+
+#~ msgctxt "game_options"
 #~ msgid "SHADER MODE"
 #~ msgstr "SHADER MÓD"
 
@@ -20221,6 +20632,10 @@ msgstr "sárga/kék"
 #~ msgstr "Látható"
 
 #~ msgctxt "game_options"
+#~ msgid "Simple 2x"
+#~ msgstr "Egyszerű 2x"
+
+#~ msgctxt "game_options"
 #~ msgid "Sine"
 #~ msgstr "Szinusz"
 
@@ -20283,6 +20698,11 @@ msgstr "sárga/kék"
 #~ msgstr ""
 #~ "Párhuzamosan streamelje a textúrát a GPU-ra. Javíthatja a teljesítményt "
 #~ "erősebb GPU-kon."
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
+#~ msgstr ""
+#~ "Nyújtsa ki a játékokat teljes képernyőre, de torzíthatja a képarányt"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to 16:9"
@@ -20427,6 +20847,10 @@ msgstr "sárga/kék"
 #~ msgctxt "keys_files"
 #~ msgid "Turn Right"
 #~ msgstr "Jobbra fordulás"
+
+#~ msgctxt "game_options"
+#~ msgid "UI PROMPTS"
+#~ msgstr "A FELHASZNÁLÓI FELÜLET FELSZÓLÍTÁSAI"
 
 #~ msgctxt "game_options"
 #~ msgid "UPSCALE MODE"
