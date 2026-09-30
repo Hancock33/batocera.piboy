@@ -282,7 +282,7 @@ Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|e27adde120fe06150f3d57
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46274|Sept 27, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|610e6970ad943d281139bc9081fa82cfb2498068|Sept 27, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
-Emulators|[xemu-chihiro](https://github.com/Tovarichtch/xemu.git)|d37c80e49158e03ac7119bb79035784056de4794|N/A
+Emulators|[xemu-chihiro](https://github.com/Tovarichtch/xemu.git)|d37c80e49158e03ac7119bb79035784056de4794|Sept 29, 2026
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|478b4f496102379c7eaa7f3ec10e714a703c4300|Sept 21, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|a7c39fa7d9c54d83022e431da62c1c65bf3e6196|Sept 29, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.12.1|Jul 27, 2026

@@ -8,6 +8,7 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.93|Sept 29, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c9c26ce0fd89ab9383f8989833bc8733553aa049|Sept 29, 2026
 Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.21|Sept 29, 2026
 Emulators|[touchhle](https://github.com/touchHLE/touchHLE.git)|4c49e83a000c2d32d9a852dedc81819d0d9c8986|Sept 29, 2026
+Emulators|[xemu-chihiro](https://github.com/Tovarichtch/xemu.git)|d37c80e49158e03ac7119bb79035784056de4794|Sept 29, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|a7c39fa7d9c54d83022e431da62c1c65bf3e6196|Sept 29, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|4dba5bc2640d9cde650fb0b427c9be6aab598de9|Sept 29, 2026
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-9|Sept 29, 2026
@@ -590,7 +591,6 @@ Boot|[uboot-rk3562](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Boot|[uboot-rk356x](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Boot|[uboot-rk3576](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Emulators|[demul]()|demul_251220|N/A
-Emulators|[xemu-chihiro](https://github.com/Tovarichtch/xemu.git)|d37c80e49158e03ac7119bb79035784056de4794|N/A
 Firmwares|[firmware-khadas-vim4](https://dl.khadas.com/repos/vim4/pool/main/l/linux-board-package-noble-vim4)|1.7.3|N/A
 Leds|[keros-leds](\)|2f66450cad94ff435dc2ce5185ff16f9ca31f5d2|N/A
 Libraries|[lzma-sdk](https://www.7-zip.org/a)|2301|N/A
