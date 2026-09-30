@@ -3,8 +3,8 @@
 # cgenius
 #
 ################################################################################
-# Version: Commits on Sept 26, 2026
-CGENIUS_VERSION = fb66a50d7b1fb3d2305f4fc727eaff27edb9f87b
+# Version: Commits on Sept 30, 2026
+CGENIUS_VERSION = 58a3c4fd0782fa2a087e38a039599b2ecf69ccc9
 CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius
 CGENIUS_SITE_METHOD=git
 CGENIUS_GIT_SUBMODULES=YES
