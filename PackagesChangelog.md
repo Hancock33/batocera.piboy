@@ -1,6 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.10|Oct 01, 2026
+Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|24c4598eb648cacffba456ad72244222672f26aa|Oct 1, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|195a517ef270fcf048502c59c4a5aead5302d061|Oct 01, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|195a517ef270fcf048502c59c4a5aead5302d061|Oct 01, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|0a2b6ff7db61871b0dd028ac47dc72eda94351a1|Oct 01, 2026
@@ -74,7 +75,6 @@ Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|c3c8e5e813f245028de11
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|f4fae67db04d993841e828a44a556239fa054314|Sept 28, 2026
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|a752170d05a454b1a1bf60851e97f2ad0b72e444|Sept 28, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|b0c94e6a22f07ba5e4b4c1deebacac22d20c183d|Sept 28, 2026
-Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|4d1202f30d91303383dc5b2958762fc81dbb3452|Sept 27, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46274|Sept 27, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|8369d1a0e11b999d4d1598f62ca5f6dea49602fb|Sept 27, 2026
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|db1996a7fd18c7bf11c9b18b881aa4f11a84f017|Sept 27, 2026
