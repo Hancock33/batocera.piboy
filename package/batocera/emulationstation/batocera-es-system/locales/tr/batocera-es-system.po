@@ -4454,7 +4454,7 @@ msgstr "KONTROLCÜ PROFİLİ"
 
 msgctxt "game_options"
 msgid "CONTROLLER TO LIGHT GUN"
-msgstr "KONTROLCÜDEN TABANCAYA"
+msgstr "KONTROLCÜDEN IŞIN TABANCASINA"
 
 msgctxt "game_options"
 msgid "CONTROLLER TYPE"
@@ -10307,19 +10307,19 @@ msgstr "IŞIK PARLAMALARI"
 
 msgctxt "game_options"
 msgid "LIGHT GUN"
-msgstr "IŞIKLI TABANCA"
+msgstr "IŞIN TABANCASI"
 
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
-msgstr "IŞIKLI TABANCA NİŞANGAHI"
+msgstr "IŞIN TABANCASI NİŞANGAHI"
 
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIRS"
-msgstr "IŞIKLI TABANCA NİŞANGAHLARI"
+msgstr "IŞIN TABANCASI NİŞANGAHLARI"
 
 msgctxt "game_options"
 msgid "LIGHT GUNS"
-msgstr "IŞIKLI TABANCALAR"
+msgstr "IŞIN TABANCALARI"
 
 msgctxt "game_options"
 msgid "LIGHTSABER CAMERA"
@@ -10494,7 +10494,7 @@ msgstr "Açık Yeşil"
 
 msgctxt "game_options"
 msgid "Light Gun"
-msgstr "Işıklı Tabanca"
+msgstr "Işın Tabancası"
 
 msgctxt "game_options"
 msgid "Light Phaser"
@@ -10510,11 +10510,11 @@ msgstr "Açık Mor"
 
 msgctxt "game_options"
 msgid "Light guns can only be used in port 2."
-msgstr "Işıklı tabancalar sadece port 2 ile kullanılabilir."
+msgstr "Işın tabancaları sadece port 2 ile kullanılabilir."
 
 msgctxt "game_options"
 msgid "Light guns/multitap."
-msgstr "Işıklı tabancalar/multitap."
+msgstr "Işın tabancaları/multitap."
 
 msgctxt "game_options"
 msgid "Light threshold for forcing shadergen"
@@ -11049,7 +11049,7 @@ msgstr "Harita"
 
 msgctxt "game_options"
 msgid "Map controller inputs to light gun inputs."
-msgstr "Kontrolcü girdilerini ışıklı tabanca girdileri için eşle."
+msgstr "Kontrolcü girdilerini ışın tabancası girdileri için eşle."
 
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
@@ -11256,7 +11256,7 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Menacer Light Gun"
-msgstr "Tehditkar Işıklı Tabanca"
+msgstr "Menacer Işın Tabancası"
 
 msgctxt "keys_files"
 msgid "Menu back"
@@ -14293,7 +14293,7 @@ msgstr "LID DURUMUNU GÖSTER"
 
 msgctxt "game_options"
 msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "IŞIKLI TABANCA HEDEF İMLECİNİ GÖSTER"
+msgstr "IŞIN TABANCASI HEDEF İMLECİNİ GÖSTER"
 
 msgctxt "game_options"
 msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
@@ -17076,7 +17076,7 @@ msgstr "YAZILIM AYARLARINI KULLAN"
 
 msgctxt "game_options"
 msgid "USE LIGHT GUNS"
-msgstr "IŞIKLI TABANCA KULLAN"
+msgstr "IŞIN TABANCASI KULLAN"
 
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 1"
@@ -17495,7 +17495,7 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
-msgstr "Eğer ışıklı tabanca bağlı ise padlerin yerine ışıklı tabanca kullan."
+msgstr "Işın tabancası bağlı ise padlerin yerine ışın tabancası kullan."
 
 msgctxt "game_options"
 msgid "Use new graphics created from CorsixTH project"
