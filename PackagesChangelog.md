@@ -21,6 +21,8 @@ Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.19|Oct 02, 
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261002|Oct 02, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c1d5289a1f713b30a2c121e9fe6529d39360be0f|Oct 02, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0911101bd43e06ae2833b643a99dfe54b74b5632|Oct 02, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|e8a7c56a1e2047f216d0f4df3d23ee0318c6184c|Oct 02, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|a696a2a500d7e38c39931c29982d8d025a75c40f|Oct 02, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261002|Oct 02, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|94cd7ab000f7df7ceb4f1bcdb88b957e9ce62d27|Oct 02, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|iOSv2.6.0|Oct 02, 2026
@@ -42,6 +44,7 @@ Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkin
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|376198024ac8f1ba07a5e374838f0aa0ed40d2cd|Oct 01, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|cc06bdac1b957a069e1d05761c7437cd59886552|Oct 01, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|d9f969054dc7fbb6fa89519036d2b971e0855b51|Oct 01, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.162.9524-580|Oct 01, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|0b9ec6d8a8a58c3e72f78dfb01fa210e1c0dd64a|Oct 01, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|c0b9a98ea48113c45e7547e74fe20839a2f2d4b1|Oct 01, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|cec693294f8603a6121b1917db0ee2e1fc9fe4a9|Oct 01, 2026
@@ -55,7 +58,6 @@ Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.31.0-rc1|Sept 30, 
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|58a3c4fd0782fa2a087e38a039599b2ecf69ccc9|Sept 30, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|d4979c2bc496be471ee3ff2b399df18827d2078e|Sept 30, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.6-rc.4|Sept 30, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|5ce3a3660737978c4181334a16dd27a09109e22c|Sept 30, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|1414fc281b6dc986378ea7ae35086c62d782a865|Sept 30, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|e58554b84a4dbaa4af14f9a1fcee87d661058e0a|Sept 30, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|ed87921996c67658d7a70814f73034bbca08786a|Sept 30, 2026
@@ -72,7 +74,6 @@ Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-
 Ports|[openjk](http://github.com/JACoders/OpenJK)|260c59c2907187af555a676fe0cc798893bf7757|Sept 29, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|a976c6822c9e0659913cde1a141efb65dd477e40|Sept 29, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v2.3|Sept 29, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|a7dc6939a3f6cb8a5b4b0972e87ec0e9f77bd5a3|Sept 29, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|0bd516ee793bb87b57e9eef19993b37ac0098d74|Sept 29, 2026
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|4dba5bc2640d9cde650fb0b427c9be6aab598de9|Sept 29, 2026
 Emulators|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|9896544460d5bb7dd89c2d2bc0f5c97a6f31d2e0|Sept 28, 2026
@@ -123,7 +124,6 @@ Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|939
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|02297602cb289b113df27be33b5a7dddbe3d91c1|Sept 22, 2026
 Utils-host|[rgbds](http://github.com/gbdev/rgbds)|v1.0.4|Sept 22, 2026
 Utils-host|[shader-slang](https://github.com/shader-slang/slang.git)|v2026.18.2|Sept 22, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.161.9510-579|Sept 22, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|ab3d85a68b64254eec433eca788db8d86ac450cc|Sept 22, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.11.1|Sept 22, 2026
 Emulators|[libretro-vice](http://github.com/sonninnos/libretro-vice)|9d7983826ea792f6cce7fdfe6c09488129c6f886|Sept 22, 2026
