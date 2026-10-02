@@ -16,8 +16,10 @@ Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|43d796754faa7fa
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|e0484c848f9c9d1aecc7bd0738930db97bcf18df|Oct 02, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|43b1799579b1f775673551f3bbd009fff4747721|Oct 02, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|00673d1dfefeedf39aaf502ac0cfb1fd005174d6|Oct 02, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261002|Oct 02, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c1d5289a1f713b30a2c121e9fe6529d39360be0f|Oct 02, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0911101bd43e06ae2833b643a99dfe54b74b5632|Oct 02, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261002|Oct 02, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|94cd7ab000f7df7ceb4f1bcdb88b957e9ce62d27|Oct 02, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|iOSv2.6.0|Oct 02, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|3f946f277aef3aa99a95551618bbcd1dd2bda0d9|Oct 02, 2026
@@ -37,10 +39,8 @@ Engines|[lightspark](http://github.com/lightspark/lightspark)|bfe122834a17ab63a8
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|0abe0ed1fe318c197b43326d4fbb03b04517c7fb|Oct 01, 2026
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|376198024ac8f1ba07a5e374838f0aa0ed40d2cd|Oct 01, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|cc06bdac1b957a069e1d05761c7437cd59886552|Oct 01, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261001|Oct 01, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|d9f969054dc7fbb6fa89519036d2b971e0855b51|Oct 01, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|0b9ec6d8a8a58c3e72f78dfb01fa210e1c0dd64a|Oct 01, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261001|Oct 01, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|c0b9a98ea48113c45e7547e74fe20839a2f2d4b1|Oct 01, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|cec693294f8603a6121b1917db0ee2e1fc9fe4a9|Oct 01, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|df2ff61b343bc002819eee6017f34daf0dae312e|Oct 01, 2026
