@@ -1,8 +1,8 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 43189b9a4..f20aa8a09 100644
+index 8e2ff293f..717b49a72 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -1688,6 +1688,7 @@ void SDL_JoystickQuit(void)
+@@ -1691,6 +1691,7 @@ void SDL_JoystickQuit(void)
  
  static SDL_bool SDL_PrivateJoystickShouldIgnoreEvent(void)
  {

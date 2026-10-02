@@ -1,8 +1,8 @@
 diff --git a/src/joystick/SDL_gamecontroller.c b/src/joystick/SDL_gamecontroller.c
-index 410c985d4..22eec9495 100644
+index efaea373d..021d0afc4 100644
 --- a/src/joystick/SDL_gamecontroller.c
 +++ b/src/joystick/SDL_gamecontroller.c
-@@ -951,8 +951,13 @@ static void SDL_PrivateGameControllerParseElement(SDL_GameController *gamecontro
+@@ -972,8 +972,13 @@ static void SDL_PrivateGameControllerParseElement(SDL_GameController *gamecontro
          bind.outputType = SDL_CONTROLLER_BINDTYPE_AXIS;
          bind.output.axis.axis = axis;
          if (axis == SDL_CONTROLLER_AXIS_TRIGGERLEFT || axis == SDL_CONTROLLER_AXIS_TRIGGERRIGHT) {
@@ -18,4 +18,3 @@ index 410c985d4..22eec9495 100644
          } else {
              if (half_axis_output == '+') {
                  bind.output.axis.axis_min = 0;
-

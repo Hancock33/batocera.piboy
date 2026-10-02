@@ -1,8 +1,8 @@
 diff --git a/src/joystick/SDL_gamepad.c b/src/joystick/SDL_gamepad.c
-index dd5b4166a..c64e337fe 100644
+index 9867eb08e..c09b6e46c 100644
 --- a/src/joystick/SDL_gamepad.c
 +++ b/src/joystick/SDL_gamepad.c
-@@ -3977,13 +3977,7 @@ const char *SDL_GetGamepadName(SDL_Gamepad *gamepad)
+@@ -3983,13 +3983,7 @@ const char *SDL_GetGamepadName(SDL_Gamepad *gamepad)
      SDL_LockJoysticks();
      {
          CHECK_GAMEPAD_MAGIC(gamepad, NULL);

@@ -1,8 +1,8 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index 9cf7d53..adb82a4 100644
+index 7685c31c4..8e2ff293f 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -3086,9 +3086,9 @@ SDL_bool SDL_ShouldIgnoreJoystick(const char *name, SDL_JoystickGUID guid)
+@@ -2997,9 +2997,9 @@ SDL_bool SDL_ShouldIgnoreJoystick(const char *name, SDL_JoystickGUID guid)
      SDL_GetJoystickGUIDInfo(guid, &vendor, &product, NULL, NULL);
  
      /* Check the joystick blacklist */

@@ -1,0 +1,228 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3b77a65b2..359de58db 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -89,8 +89,8 @@ endif()
+ 
+ # See docs/release_checklist.md
+ set(SDL_MAJOR_VERSION 2)
+-set(SDL_MINOR_VERSION 33)
+-set(SDL_MICRO_VERSION 0)
++set(SDL_MINOR_VERSION 32)
++set(SDL_MICRO_VERSION 10)
+ set(SDL_VERSION "${SDL_MAJOR_VERSION}.${SDL_MINOR_VERSION}.${SDL_MICRO_VERSION}")
+ 
+ # Set defaults preventing destination file conflicts
+diff --git a/Makefile.os2 b/Makefile.os2
+index 5c60af1d0..0830a5c78 100644
+--- a/Makefile.os2
++++ b/Makefile.os2
+@@ -14,8 +14,8 @@
+ 
+ LIBNAME = SDL2
+ MAJOR_VERSION = 2
+-MINOR_VERSION = 33
+-MICRO_VERSION = 0
++MINOR_VERSION = 32
++MICRO_VERSION = 10
+ VERSION = $(MAJOR_VERSION).$(MINOR_VERSION).$(MICRO_VERSION)
+ DESCRIPTION = Simple DirectMedia Layer 2
+ 
+diff --git a/Makefile.w32 b/Makefile.w32
+index f49ea2a79..af29e60fd 100644
+--- a/Makefile.w32
++++ b/Makefile.w32
+@@ -5,8 +5,8 @@
+ 
+ LIBNAME = SDL2
+ MAJOR_VERSION = 2
+-MINOR_VERSION = 33
+-MICRO_VERSION = 0
++MINOR_VERSION = 32
++MICRO_VERSION = 10
+ VERSION = $(MAJOR_VERSION).$(MINOR_VERSION).$(MICRO_VERSION)
+ 
+ LIBHOME = .
+diff --git a/Xcode/SDL/Info-Framework.plist b/Xcode/SDL/Info-Framework.plist
+index a383a2e7b..ac069e127 100644
+--- a/Xcode/SDL/Info-Framework.plist
++++ b/Xcode/SDL/Info-Framework.plist
+@@ -19,10 +19,10 @@
+ 	<key>CFBundlePackageType</key>
+ 	<string>FMWK</string>
+ 	<key>CFBundleShortVersionString</key>
+-	<string>2.33.0</string>
++	<string>2.32.10</string>
+ 	<key>CFBundleSignature</key>
+ 	<string>SDLX</string>
+ 	<key>CFBundleVersion</key>
+-	<string>2.33.0</string>
++	<string>2.32.10</string>
+ </dict>
+ </plist>
+diff --git a/Xcode/SDL/SDL.xcodeproj/project.pbxproj b/Xcode/SDL/SDL.xcodeproj/project.pbxproj
+index d19a3b2a2..20ee883b3 100644
+--- a/Xcode/SDL/SDL.xcodeproj/project.pbxproj
++++ b/Xcode/SDL/SDL.xcodeproj/project.pbxproj
+@@ -9748,8 +9748,8 @@
+ 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+ 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+ 				DEPLOYMENT_POSTPROCESSING = YES;
+-				DYLIB_COMPATIBILITY_VERSION = 3301.0.0;
+-				DYLIB_CURRENT_VERSION = 3301.0.0;
++				DYLIB_COMPATIBILITY_VERSION = 3201.0.0;
++				DYLIB_CURRENT_VERSION = 3201.10.0;
+ 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+ 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+ 				GCC_ALTIVEC_EXTENSIONS = YES;
+@@ -9790,7 +9790,7 @@
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+ 				CLANG_LINK_OBJC_RUNTIME = NO;
+-				MARKETING_VERSION = 2.33.0;
++				MARKETING_VERSION = 2.32.10;
+ 				OTHER_LDFLAGS = "-liconv";
+ 			};
+ 			name = Release;
+@@ -9833,8 +9833,8 @@
+ 				CLANG_WARN_UNREACHABLE_CODE = YES;
+ 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+ 				DEBUG_INFORMATION_FORMAT = dwarf;
+-				DYLIB_COMPATIBILITY_VERSION = 3301.0.0;
+-				DYLIB_CURRENT_VERSION = 3301.0.0;
++				DYLIB_COMPATIBILITY_VERSION = 3201.0.0;
++				DYLIB_CURRENT_VERSION = 3201.10.0;
+ 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+ 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+ 				ENABLE_TESTABILITY = YES;
+@@ -9876,7 +9876,7 @@
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+ 				CLANG_LINK_OBJC_RUNTIME = NO;
+-				MARKETING_VERSION = 2.33.0;
++				MARKETING_VERSION = 2.32.10;
+ 				OTHER_LDFLAGS = "-liconv";
+ 			};
+ 			name = Debug;
+@@ -10082,8 +10082,8 @@
+ 				CURRENT_PROJECT_VERSION = 1;
+ 				DEFINES_MODULE = YES;
+ 				DEVELOPMENT_TEAM = "";
+-				DYLIB_COMPATIBILITY_VERSION = 3301.0.0;
+-				DYLIB_CURRENT_VERSION = 3301.0.0;
++				DYLIB_COMPATIBILITY_VERSION = 3201.0.0;
++				DYLIB_CURRENT_VERSION = 3201.10.0;
+ 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+ 				GCC_C_LANGUAGE_STANDARD = gnu11;
+ 				GCC_DYNAMIC_NO_PIC = NO;
+@@ -10134,8 +10134,8 @@
+ 				CURRENT_PROJECT_VERSION = 1;
+ 				DEFINES_MODULE = YES;
+ 				DEVELOPMENT_TEAM = "";
+-				DYLIB_COMPATIBILITY_VERSION = 3301.0.0;
+-				DYLIB_CURRENT_VERSION = 3301.0.0;
++				DYLIB_COMPATIBILITY_VERSION = 3201.0.0;
++				DYLIB_CURRENT_VERSION = 3201.10.0;
+ 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+ 				ENABLE_NS_ASSERTIONS = NO;
+ 				GCC_C_LANGUAGE_STANDARD = gnu11;
+diff --git a/Xcode/SDL/pkg-support/SDL.info b/Xcode/SDL/pkg-support/SDL.info
+index 0e490a233..0bec3ced5 100644
+--- a/Xcode/SDL/pkg-support/SDL.info
++++ b/Xcode/SDL/pkg-support/SDL.info
+@@ -1,4 +1,4 @@
+-Title SDL 2.33.0
++Title SDL 2.32.10
+ Version 1
+ Description SDL Library for Mac OS X (http://www.libsdl.org)
+ DefaultLocation /Library/Frameworks
+diff --git a/android-project/app/src/main/java/org/libsdl/app/SDLActivity.java b/android-project/app/src/main/java/org/libsdl/app/SDLActivity.java
+index e213f495b..f3ac833c0 100644
+--- a/android-project/app/src/main/java/org/libsdl/app/SDLActivity.java
++++ b/android-project/app/src/main/java/org/libsdl/app/SDLActivity.java
+@@ -62,8 +62,8 @@ import java.util.Locale;
+ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityChangeListener {
+     private static final String TAG = "SDL";
+     private static final int SDL_MAJOR_VERSION = 2;
+-    private static final int SDL_MINOR_VERSION = 33;
+-    private static final int SDL_MICRO_VERSION = 0;
++    private static final int SDL_MINOR_VERSION = 32;
++    private static final int SDL_MICRO_VERSION = 10;
+ /*
+     // Display InputType.SOURCE/CLASS of events and devices
+     //
+diff --git a/configure b/configure
+index b610f0017..25d789abd 100755
+--- a/configure
++++ b/configure
+@@ -3450,8 +3450,8 @@ orig_CFLAGS="$CFLAGS"
+ 
+ # See docs/release_checklist.md
+ SDL_MAJOR_VERSION=2
+-SDL_MINOR_VERSION=33
+-SDL_MICRO_VERSION=0
++SDL_MINOR_VERSION=32
++SDL_MICRO_VERSION=10
+ SDL_VERSION=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION.$SDL_MICRO_VERSION
+ 
+ SDL_BINARY_AGE=`expr $SDL_MINOR_VERSION \* 100 + $SDL_MICRO_VERSION`
+diff --git a/configure.ac b/configure.ac
+index cf9d591c6..a0604cdfd 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -12,8 +12,8 @@ orig_CFLAGS="$CFLAGS"
+ dnl Set various version strings - taken gratefully from the GTk sources
+ # See docs/release_checklist.md
+ SDL_MAJOR_VERSION=2
+-SDL_MINOR_VERSION=33
+-SDL_MICRO_VERSION=0
++SDL_MINOR_VERSION=32
++SDL_MICRO_VERSION=10
+ SDL_VERSION=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION.$SDL_MICRO_VERSION
+ 
+ SDL_BINARY_AGE=`expr $SDL_MINOR_VERSION \* 100 + $SDL_MICRO_VERSION`
+diff --git a/include/SDL_version.h b/include/SDL_version.h
+index e6be99aa0..9a23a88f9 100644
+--- a/include/SDL_version.h
++++ b/include/SDL_version.h
+@@ -57,8 +57,8 @@ typedef struct SDL_version
+ /* Printable format: "%d.%d.%d", MAJOR, MINOR, PATCHLEVEL
+ */
+ #define SDL_MAJOR_VERSION   2
+-#define SDL_MINOR_VERSION   33
+-#define SDL_PATCHLEVEL      0
++#define SDL_MINOR_VERSION   32
++#define SDL_PATCHLEVEL      10
+ 
+ /**
+  * Macro to determine SDL version program was compiled against.
+diff --git a/src/main/windows/version.rc b/src/main/windows/version.rc
+index 9b8a18880..9fde1c068 100644
+--- a/src/main/windows/version.rc
++++ b/src/main/windows/version.rc
+@@ -9,8 +9,8 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+ //
+ 
+ VS_VERSION_INFO VERSIONINFO
+- FILEVERSION 2,33,0,0
+- PRODUCTVERSION 2,33,0,0
++ FILEVERSION 2,32,10,0
++ PRODUCTVERSION 2,32,10,0
+  FILEFLAGSMASK 0x3fL
+  FILEFLAGS 0x0L
+  FILEOS 0x40004L
+@@ -23,12 +23,12 @@ BEGIN
+         BEGIN
+             VALUE "CompanyName", "\0"
+             VALUE "FileDescription", "SDL\0"
+-            VALUE "FileVersion", "2, 33, 0, 0\0"
++            VALUE "FileVersion", "2, 32, 10, 0\0"
+             VALUE "InternalName", "SDL\0"
+             VALUE "LegalCopyright", "Copyright (C) 2026 Sam Lantinga\0"
+             VALUE "OriginalFilename", "SDL2.dll\0"
+             VALUE "ProductName", "Simple DirectMedia Layer\0"
+-            VALUE "ProductVersion", "2, 33, 0, 0\0"
++            VALUE "ProductVersion", "2, 32, 10, 0\0"
+         END
+     END
+     BLOCK "VarFileInfo"

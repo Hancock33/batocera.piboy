@@ -1,8 +1,8 @@
 diff --git a/src/joystick/SDL_joystick.c b/src/joystick/SDL_joystick.c
-index bde331611..9cf7d531d 100644
+index 474e67a2a..9828e32e9 100644
 --- a/src/joystick/SDL_joystick.c
 +++ b/src/joystick/SDL_joystick.c
-@@ -2587,7 +2587,7 @@ SDL_JoystickGUID SDL_CreateJoystickGUID(Uint16 bus, Uint16 vendor, Uint16 produc
+@@ -2590,7 +2590,7 @@ SDL_JoystickGUID SDL_CreateJoystickGUID(Uint16 bus, Uint16 vendor, Uint16 produc
      *guid16++ = SDL_SwapLE16(bus);
      *guid16++ = 0;
  
@@ -11,7 +11,7 @@ index bde331611..9cf7d531d 100644
          *guid16++ = SDL_SwapLE16(vendor);
          *guid16++ = 0;
          *guid16++ = SDL_SwapLE16(product);
-@@ -2595,18 +2595,18 @@ SDL_JoystickGUID SDL_CreateJoystickGUID(Uint16 bus, Uint16 vendor, Uint16 produc
+@@ -2598,18 +2598,18 @@ SDL_JoystickGUID SDL_CreateJoystickGUID(Uint16 bus, Uint16 vendor, Uint16 produc
          *guid16++ = SDL_SwapLE16(version);
          guid.data[14] = driver_signature;
          guid.data[15] = driver_data;

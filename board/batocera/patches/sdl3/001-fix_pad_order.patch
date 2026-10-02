@@ -1,5 +1,5 @@
 diff --git a/src/core/linux/SDL_udev.c b/src/core/linux/SDL_udev.c
-index 3aaa0fb4e..b63e76aa8 100644
+index 111e362f6..29d8d86df 100644
 --- a/src/core/linux/SDL_udev.c
 +++ b/src/core/linux/SDL_udev.c
 @@ -74,6 +74,66 @@ static bool SDL_UDEV_load_sym(const char *fn, void **addr)

@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index 6b7f690de..2f72a69d1 100755
+index 01888dd6f..0246e2e59 100755
 --- a/configure
 +++ b/configure
-@@ -930,6 +930,7 @@ enable_render_metal
+@@ -908,6 +908,7 @@ enable_render_metal
  enable_video_directfb
  enable_directfb_shared
  enable_video_kmsdrm
@@ -10,7 +10,7 @@ index 6b7f690de..2f72a69d1 100755
  enable_kmsdrm_shared
  enable_video_dummy
  enable_video_offscreen
-@@ -25712,6 +25713,10 @@ fi
+@@ -26300,6 +26301,10 @@ fi
  
          video_kmsdrm=no
  
@@ -20,12 +20,12 @@ index 6b7f690de..2f72a69d1 100755
 +    fi
  
  pkg_failed=no
- { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for libdrm >= 1.4.82" >&5
+ { printf '%s\n' "$as_me:${as_lineno-$LINENO}: checking for libdrm >= 1.4.82" >&5
 diff --git a/configure.ac b/configure.ac
-index 1f7e8dc2d..2278616a1 100644
+index a0604cdfd..3d6375edc 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -2420,6 +2420,15 @@ CheckKMSDRM()
+@@ -2419,6 +2419,15 @@ CheckKMSDRM()
              video_kmsdrm=yes
          fi
  
@@ -41,7 +41,7 @@ index 1f7e8dc2d..2278616a1 100644
          if test x$video_kmsdrm = xyes; then
              AC_ARG_ENABLE(kmsdrm-shared,
  [AS_HELP_STRING([--enable-kmsdrm-shared], [dynamically load kmsdrm support [default=yes]])],
-@@ -2526,7 +2535,9 @@ CheckGLX()
+@@ -2525,7 +2534,9 @@ CheckGLX()
          AC_MSG_RESULT($video_opengl_glx)
          if test x$video_opengl_glx = xyes; then
              AC_DEFINE(SDL_VIDEO_OPENGL, 1, [ ])
@@ -53,10 +53,10 @@ index 1f7e8dc2d..2278616a1 100644
      fi
  }
 diff --git a/include/SDL_config.h.in b/include/SDL_config.h.in
-index 0d9fa1427..4f9f63f60 100644
+index f87f7e98f..c11bb3abb 100644
 --- a/include/SDL_config.h.in
 +++ b/include/SDL_config.h.in
-@@ -385,6 +385,7 @@
+@@ -387,6 +387,7 @@
  #undef SDL_VIDEO_DRIVER_WAYLAND_DYNAMIC_LIBDECOR
  #undef SDL_VIDEO_DRIVER_X11
  #undef SDL_VIDEO_DRIVER_RPI
@@ -65,7 +65,7 @@ index 0d9fa1427..4f9f63f60 100644
  #undef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC
  #undef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC_GBM
 diff --git a/src/video/SDL_egl.c b/src/video/SDL_egl.c
-index 50f7082f4..b353c5594 100644
+index 54595a00e..dfd92863a 100644
 --- a/src/video/SDL_egl.c
 +++ b/src/video/SDL_egl.c
 @@ -516,6 +516,22 @@ int SDL_EGL_LoadLibrary(_THIS, const char *egl_path, NativeDisplayType native_di
@@ -101,7 +101,7 @@ index 50f7082f4..b353c5594 100644
  #endif
      /* Try the implementation-specific eglGetDisplay even if eglGetPlatformDisplay fails */
 diff --git a/src/video/kmsdrm/SDL_kmsdrmopengles.c b/src/video/kmsdrm/SDL_kmsdrmopengles.c
-index 311586278..730ab2465 100644
+index 3b17639cf..0a0c506e5 100644
 --- a/src/video/kmsdrm/SDL_kmsdrmopengles.c
 +++ b/src/video/kmsdrm/SDL_kmsdrmopengles.c
 @@ -41,7 +41,7 @@ void KMSDRM_GLES_DefaultProfileConfig(_THIS, int *mask, int *major, int *minor)
