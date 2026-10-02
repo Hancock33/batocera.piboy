@@ -11,11 +11,13 @@ Emulators|[hatari](http://github.com/hatari/hatari)|a5a8bfdadaa101780c8e3e336778
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|a6217cab47df91ac7bf379c1e514bee0ece28211|Oct 02, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|b7f6f4e80f0865ac074bf10c0ab3a860e7acbd1f|Oct 02, 2026
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.19.0|Oct 02, 2026
+Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.30|Oct 02, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|a366df69bd66bedaa245e40902d1992038f7ccb7|Oct 02, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|43d796754faa7fa6104b7cc182053bc8e928777f|Oct 02, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|e0484c848f9c9d1aecc7bd0738930db97bcf18df|Oct 02, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|43b1799579b1f775673551f3bbd009fff4747721|Oct 02, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|00673d1dfefeedf39aaf502ac0cfb1fd005174d6|Oct 02, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.19|Oct 02, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261002|Oct 02, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|c1d5289a1f713b30a2c121e9fe6529d39360be0f|Oct 02, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|0911101bd43e06ae2833b643a99dfe54b74b5632|Oct 02, 2026
@@ -49,7 +51,6 @@ Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libr
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|c8816799b50388e61cfe237fe2cdbb7d8175f20a|Oct 01, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|a2f4ce214f224c6c26b3319409ec50205ff8253d|Oct 01, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|04669ebe4164bb589e6a2050aa1559724aa94291|Sept 30, 2026
-Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.29|Sept 30, 2026
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.31.0-rc1|Sept 30, 2026
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|58a3c4fd0782fa2a087e38a039599b2ecf69ccc9|Sept 30, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|d4979c2bc496be471ee3ff2b399df18827d2078e|Sept 30, 2026
@@ -155,7 +156,6 @@ Emulators|[libretro-desmume](http://github.com/libretro/desmume)|95b4d798731caa8
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|e68fff4a13a3dd5d40678ae66ee60f85ccb04153|Sept 20, 2026
 Emulators|[libretro-supermodel](http://github.com/libretro/Libretro-Supermodel)|84bc106b45b279bf868a53b9232897c8dc10ca17|Sept 20, 2026
 Emulators|[libretro-vitaquake2](http://github.com/libretro/vitaquake2)|4b333fe18e8816974f04432af01f87654ae16e21|Sept 20, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.18|Sept 19, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|3879ba0f44e9bcfd500a5b92d02f83885f6b23c7|Sept 19, 2026
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|05439f96121d2b9d7ad7a5fc1f29d7eebdcc8c43|Sept 19, 2026
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|5819380c2ffb0900219d700a382ee68c464ebb99|Sept 19, 2026

@@ -273,7 +273,7 @@ Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|280c427c550c5
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.19.0|Oct 02, 2026
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|1f966036543991c05022ce4f95cfbfbb0014b187|Aug 30, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|0b3ff0b240f82f4cb5e5d0117f8f2080e2764cf7|Sept 30, 2026
-Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.29|Sept 30, 2026
+Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.30|Oct 02, 2026
 Emulators|[snes9x](https://github.com/snes9xgit/snes9x.git)|1bcc369e89f08243e0a462882fb1f3e42e51de3a|Sept 24, 2026
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|4fdb5b71003b684b721f05f68358cfd112b5d8f1|Sept 18, 2026
 Emulators|[supermodel](http://github.com/dmanlfc/Supermodel)|d5b9c6e3fda83605adf4469c0a4582e8c0199751|Sept 26, 2026
@@ -596,7 +596,7 @@ Wine|[dxvk-nvapi](https://github.com/jp7677/dxvk-nvapi/releases)|v0.9.2|May 12, 
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.1.1|Sept 15, 2026
 Wine|[rtkit](https://gitlab.freedesktop.org/pipewire/rtkit/-/archive/)|v0.14|Dec 11, 2025
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.0.1|May 06, 2026
-Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.18|Sept 19, 2026
+Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.19|Oct 02, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20260713-proton-slr|Jul 13, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261002|Oct 02, 2026
