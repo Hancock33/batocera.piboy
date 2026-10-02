@@ -170,10 +170,6 @@ systems = {
     # use the last USA bios which can run NTSC and PAL games
     "ps2": { "name": "PS2", "biosFiles": [  { "md5": "21038400dc633070a78ad53090c53017", "file": "bios/ps2/ps2-0230a-20080220.bin" } ] },
 
-    # https://www.playstation.com/en-us/support/system-updates/ps3/
-    "ps3": { "name": "PS3", "biosFiles": [  { "md5": "05fe32f5dc8c78acbcd84d36ee7fdc5b", "file": "bios/PS3UPDAT.PUP" } ] },
-    "namco3xx": { "name": "Namco 3xx", "biosFiles": [  { "md5": "05fe32f5dc8c78acbcd84d36ee7fdc5b", "file": "bios/PS3UPDAT.PUP" } ] },
-
     # ---------- Nintendo ---------- #
     # https://docs.libretro.com/library/fceumm/#bios
     "fds":         { "name": "Nintendo Family Computer Disk System", "biosFiles": [ { "md5": "ca30b50f880eb660a320674ed365ef7a", "file": "bios/disksys.rom" } ] },
@@ -709,7 +705,8 @@ systems = {
                                                 { "md5": "b9f94f5d1be27dafcb8fe619ca3f4d15", "zippedFile": "341-0728", "file": "bios/apple2gs.zip"},
                                                 { "md5": "e8e632aa592a61ef373b38af10ed54e1", "zippedFile": "341-0748", "file": "bios/apple2gs.zip"},
                                                 { "md5": "c9e0e059faec0393fc429131a3af4ee9", "zippedFile": "341s0632-2.bin", "file": "bios/apple2gs.zip"},
-                                                { "md5": "68ff96a624237d233e8d4c701f660dd1", "zippedFile": "apple2gs.chr", "file": "bios/apple2gs.zip"} ] },
+                                                { "md5": "68ff96a624237d233e8d4c701f660dd1", "zippedFile": "apple2gs.chr", "file": "bios/apple2gs.zip"},
+                                                { "md5": "21fd5e524b0cf65907b4c4a3af30d639", "zippedFile": "344s0047.bin", "file": "bios/apple2gs.zip"} ] },
 
     # ---------- Camputers Lynx ---------- #
     "camplynx":   { "name": "Camputers Lynx", "biosFiles":  [ { "md5": "", "file": "bios/lynx48k.zip"  },
@@ -862,6 +859,10 @@ systems = {
                                                 { "md5": "8373a11106c1c2fc21ac839f75ea488f", "zippedFile": "sp5001-b.bin", "file": "bios/dc/naomi2.zip"},
                                                 { "md5": "7eecfb8e8f82b47ffab92a0c5528100e", "zippedFile": "sp5002-a.bin", "file": "bios/dc/naomi2.zip"},
                                                 { "md5": "960ece0dc22a7c5ff81c812a2993e7cc", "zippedFile": "x76f100_eeprom.bin", "file": "bios/dc/naomi2.zip"} ] },
+
+    # ---------- Gaelco ---------- #
+    "gaelco":   { "name": "Gaelco", "biosFiles":  [ { "md5": "", "file": "bios/tms320c31.zip" },
+                                                    { "md5": "2060f3f2b5c11679d5cf7ea00894d1f2", "zippedFile": "c31boot.bin", "file": "bios/tms320c31.zip" } ] },
 
     # ---------- Hikaru ---------- #
     "hikaru":   { "name": "Hikaru", "biosFiles":  [ { "md5": "040f9b37a1f802d450379aaec106ec69", "file": "bios/hikaru.zip" },
