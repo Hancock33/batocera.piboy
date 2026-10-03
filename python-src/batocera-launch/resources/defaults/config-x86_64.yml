@@ -382,7 +382,7 @@ gottlieb:
   core:     mame078plus
 gp32:
   emulator: libretro
-  core:     mame
+  core:     gp32emu
 gsplus:
   emulator: gsplus
   core:     gsplus
