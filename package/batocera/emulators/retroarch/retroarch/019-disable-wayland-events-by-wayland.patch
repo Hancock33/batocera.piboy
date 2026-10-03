@@ -1,8 +1,8 @@
 diff --git a/gfx/drivers_context/wayland_ctx.c b/gfx/drivers_context/wayland_ctx.c
-index e7a4a97491..923995ed33 100644
+index b8d3314fee..8f0b46a26c 100644
 --- a/gfx/drivers_context/wayland_ctx.c
 +++ b/gfx/drivers_context/wayland_ctx.c
-@@ -428,6 +428,10 @@ static void gfx_ctx_wl_input_driver(void *data,
+@@ -543,6 +543,10 @@ static void gfx_ctx_wl_input_driver(void *data,
        const char *joypad_name,
        input_driver_t **input, void **input_data)
  {
@@ -14,9 +14,10 @@ index e7a4a97491..923995ed33 100644
     /* Input is heavily tied to the window stuff
      * on Wayland, so just implement the input driver here. */
 diff --git a/gfx/drivers_context/wayland_vk_ctx.c b/gfx/drivers_context/wayland_vk_ctx.c
+index 0b8366ff82..e3388633be 100644
 --- a/gfx/drivers_context/wayland_vk_ctx.c
 +++ b/gfx/drivers_context/wayland_vk_ctx.c
-@@ -196,6 +196,10 @@ static void gfx_ctx_wl_input_driver(void *data,
+@@ -203,6 +203,10 @@ static void gfx_ctx_wl_input_driver(void *data,
        const char *joypad_name,
        input_driver_t **input, void **input_data)
  {

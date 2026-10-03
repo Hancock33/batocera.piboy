@@ -1,8 +1,8 @@
 diff --git a/gfx/common/x11_common.c b/gfx/common/x11_common.c
-index 8a53eb29c3..871563bd82 100644
+index d17eafbc10..0437922b4f 100644
 --- a/gfx/common/x11_common.c
 +++ b/gfx/common/x11_common.c
-@@ -631,22 +631,10 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event,
+@@ -771,22 +771,10 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event,
           char keybuf[32];
  
           keybuf[0] = '\0';
@@ -25,7 +25,7 @@ index 8a53eb29c3..871563bd82 100644
        }
        else
           keysym = XLookupKeysym(&event->xkey,
-@@ -904,9 +892,10 @@ bool x11_presentable(void *data)
+@@ -1178,9 +1166,10 @@ bool x11_presentable(void *data)
  
  bool x11_has_focus(void *data)
  {
@@ -38,7 +38,7 @@ index 8a53eb29c3..871563bd82 100644
  }
  
  bool x11_connect(void)
-@@ -975,9 +964,7 @@ void x11_update_title(void *data)
+@@ -1249,9 +1238,7 @@ void x11_update_title(void *data)
  
  bool x11_input_ctx_new(bool true_full)
  {
