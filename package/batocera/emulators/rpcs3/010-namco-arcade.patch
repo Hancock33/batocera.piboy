@@ -19,18 +19,18 @@ Combined patch on top of RPCS3 v0.0.41:
   the game writes it, since Batocera exits skip the device destructor.
 ---
 diff --git a/rpcs3/Emu/Cell/lv2/sys_fs.cpp b/rpcs3/Emu/Cell/lv2/sys_fs.cpp
-index daa9a1653..aa78d6932 100644
+index c37a4314a..f56f35cfe 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_fs.cpp
 +++ b/rpcs3/Emu/Cell/lv2/sys_fs.cpp
-@@ -12,6 +12,7 @@
- #include "Emu/IdManager.h"
+@@ -14,6 +14,7 @@
  #include "Emu/system_utils.hpp"
+ #include "Emu/System.h"
  #include "Emu/Cell/lv2/sys_process.h"
 +#include "Emu/Cell/lv2/sys_usbd.h"
  
  #include <span>
  #include <shared_mutex>
-@@ -1751,6 +1752,18 @@ error_code sys_fs_stat(ppu_thread& ppu, vm::cptr<char> path, vm::ptr<CellFsStat>
+@@ -1996,6 +1997,18 @@ error_code sys_fs_stat(ppu_thread& ppu, vm::cptr<char> path, vm::ptr<CellFsStat>
  		return CELL_OK;
  	}
  
@@ -50,7 +50,7 @@ index daa9a1653..aa78d6932 100644
  	{
  		// This syscall can be used by games and VSH to test the presence of dev_usb000 ~ dev_usb127
 diff --git a/rpcs3/Emu/Cell/lv2/sys_usbd.cpp b/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
-index 373fd020a..de9304489 100644
+index 95bb3ad50..2724802ed 100644
 --- a/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
 +++ b/rpcs3/Emu/Cell/lv2/sys_usbd.cpp
 @@ -126,6 +126,7 @@ public:
