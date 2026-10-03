@@ -21,9 +21,9 @@ endif
 
 define LIBRETRO_ANYBOR_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) LDFLAGS="" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	    -C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
-	    ANYBOR_BUILD_ARGS=--host \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_ANYBOR_VERSION) | cut -c 1-7)"
+		-C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
+		CONFIGURE_HOST="$(GNU_TARGET_NAME)" CONFIGURE_BUILD="$(GNU_HOST_NAME)" \
+		GIT_VERSION="-$(shell echo $(LIBRETRO_ANYBOR_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_ANYBOR_INSTALL_TARGET_CMDS
