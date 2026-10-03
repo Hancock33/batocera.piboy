@@ -3,8 +3,8 @@
 # mame-src
 #
 ################################################################################
-# Version: Commits on Jul 30, 2026
-MAME_SRC_VERSION = mame0289
+# Version: Commits on Oct 03, 2026
+MAME_SRC_VERSION = bab55a3f80ede4b0ec5c9d96ba411cf2af9873f2
 MAME_SRC_SITE = $(call github,mamedev,mame,$(MAME_SRC_VERSION))
 MAME_SRC_DEPENDENCIES = expat flac fontconfig glm jpeg libpng rapidjson sdl2 sdl2_ttf sqlite zlib
 MAME_SRC_LICENSE = MAME
@@ -66,7 +66,7 @@ define MAME_SRC_BUILD_CMDS
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	PKG_CONFIG="$(HOST_DIR)/bin/pkg-config --define-prefix" \
 	SYSROOT="$(STAGING_DIR)" \
-	$(MAKE) -j$(MAME_SRC_JOBS) TARGETOS=linux OSD=sdl \
+	$(MAKE) -j$(MAME_SRC_JOBS) TARGETOS=linux OSD=sdl3 \
 	$(MAME_SRC_CROSS_OPTS) \
 	ARCHOPTS=-fuse-ld=mold \
 	LDOPTS="-lasound -lfontconfig" \
