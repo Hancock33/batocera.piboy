@@ -343,6 +343,7 @@ systems = {
 
     # ---------- Super Cassette Vision ---------- #
     "scv":   { "name": "Super Cassette Vision", "biosFiles":  [ { "md5": "635a978fd40db9a18ee44eff449fc126", "file": "bios/upd7801g.s01"  } ] },
+    "samcoupe": { "name": "MGT SAM Coupe", "biosFiles": [ { "md5": "ad08ed47b07b0d7047fd3d0b5e7d90b3", "zippedFile": "rom31.z5", "file": "bios/samcoupe.zip" } ] },
 
     # ---------- Palm MU ---------- #
     "mu":       { "name": "Palm OS", "biosFiles": [   { "md5": "83cb1d1c76e568b916dc2e7c0bf669f6", "file": "bios/palmos41-en-m515.rom" },
@@ -860,6 +861,10 @@ systems = {
                                                 { "md5": "7eecfb8e8f82b47ffab92a0c5528100e", "zippedFile": "sp5002-a.bin", "file": "bios/dc/naomi2.zip"},
                                                 { "md5": "960ece0dc22a7c5ff81c812a2993e7cc", "zippedFile": "x76f100_eeprom.bin", "file": "bios/dc/naomi2.zip"} ] },
 
+    # ---------- Namco System 22 ---------- #
+    "namco22":   { "name": "Namco System 22", "biosFiles":  [ { "md5": "", "file": "bios/namcoc74.zip" },
+                                                    { "md5": "c78a2c4d6071a227e6d49bc009ef7600", "zippedFile": "c74.bin", "file": "bios/namcoc74.zip" } ] },
+
     # ---------- Gaelco ---------- #
     "gaelco":   { "name": "Gaelco", "biosFiles":  [ { "md5": "", "file": "bios/tms320c31.zip" },
                                                     { "md5": "2060f3f2b5c11679d5cf7ea00894d1f2", "zippedFile": "c31boot.bin", "file": "bios/tms320c31.zip" } ] },
@@ -969,7 +974,8 @@ systems = {
 
     # ---------- Oric Atmos ---------- #
     "oricatmos": { "name": "Oric Atmos", "biosFiles": [{ "md5": "a330779c42ad7d0c4ac6ef9e92788ec6", "file": "bios/Oric/basic11.rom" },
-                                                       { "md5": "c888b36bf0fc222c3585c3fabe556d21", "file": "bios/Oric/colour.rom" }] },
+                                                       { "md5": "c888b36bf0fc222c3585c3fabe556d21", "file": "bios/Oric/colour.rom" },
+                                                       { "md5": "a330779c42ad7d0c4ac6ef9e92788ec6", "zippedFile": "orica/basic11b.rom", "file": "bios/oric1.zip" }] },
     # ---------- Enterprise ---------- #
     "enterprise": { "name": "Enterprise", "biosFiles": [# ep128emu-core
                                                         { "md5": "f36f24cbb87745fbd2714e4df881db09", "file": "bios/ep128emu/roms/exos21.rom" },
