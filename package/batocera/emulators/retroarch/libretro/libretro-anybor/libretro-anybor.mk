@@ -3,8 +3,8 @@
 # libretro-anybor
 #
 ################################################################################
-# Version: Commits on Sept 30, 2026
-LIBRETRO_ANYBOR_VERSION = e58554b84a4dbaa4af14f9a1fcee87d661058e0a
+# Version: Commits on Oct 02, 2026
+LIBRETRO_ANYBOR_VERSION = c107411267f5c058e0438794f3a270483bf34ca3
 LIBRETRO_ANYBOR_SITE = $(call github,retrodiv,AnyBOR-libretro,$(LIBRETRO_ANYBOR_VERSION))
 # multiple, see https://github.com/retrodiv/AnyBOR-libretro/tree/main/LICENSES
 LIBRETRO_ANYBOR_LICENSE = GPLv2+
