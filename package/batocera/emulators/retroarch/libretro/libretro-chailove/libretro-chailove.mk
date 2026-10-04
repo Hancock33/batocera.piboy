@@ -3,8 +3,8 @@
 # libretro-chailove
 #
 ################################################################################
-# Version: Commits on Jul 26, 2026
-LIBRETRO_CHAILOVE_VERSION = 2e1bad330e9bf4c74c8600ef69648b5c2420d455
+# Version: Commits on Oct 03, 2026
+LIBRETRO_CHAILOVE_VERSION = 524ef951abbd07464830ee12a3f6f5e2aba9efd3
 LIBRETRO_CHAILOVE_SITE = https://github.com/libretro/libretro-chailove.git
 LIBRETRO_CHAILOVE_SITE_METHOD=git
 LIBRETRO_CHAILOVE_GIT_SUBMODULES=YES

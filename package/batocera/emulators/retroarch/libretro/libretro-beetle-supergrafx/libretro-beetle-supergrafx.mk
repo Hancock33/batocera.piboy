@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 03, 2026
-LIBRETRO_BEETLE_SUPERGRAFX_VERSION = 4d51dc2aba366f2288434204f1ecf7b1058d913e
+LIBRETRO_BEETLE_SUPERGRAFX_VERSION = eabaaa438b1732d05ff206a97e700f845d6bfa96
 LIBRETRO_BEETLE_SUPERGRAFX_SITE = $(call github,libretro,beetle-supergrafx-libretro,$(LIBRETRO_BEETLE_SUPERGRAFX_VERSION))
 LIBRETRO_BEETLE_SUPERGRAFX_LICENSE = GPLv2
 LIBRETRO_BEETLE_SUPERGRAFX_DEPENDENCIES += retroarch
