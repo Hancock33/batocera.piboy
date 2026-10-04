@@ -63,6 +63,7 @@
 - Steam is installed automatically from Flathub the first time it is launched
 - Upgrades : migration from x86_64 to x86-64-v3 is now possible from the menu for eligible software.
 - Upgrades : upgrades to stable releases is now possible via torrent, directly from the menu.
+- Wine DLSS support for NVIDIA RTX GPUs when NVAPI is enabled
 - Xemu Chihiro fork for the Sega Chihiro, with light guns, wheels with force feedback, card readers and linked cabinets
 - Xenia-Edge for x864_64 and select aarch64 devices
 ### Fixed
@@ -79,6 +80,7 @@
 - Libretro-Hatarib not starting due to a compiled symbol issue
 - MAME black screen on exit with a rotated display when CRT switchres is off
 - Mupen64 not starting fullscreen with Wayland
+- NVIDIA OpenGL over EGL on X11 falling back to Mesa (e.g. Dolphin failing to start with OpenGL)
 - Power button shutdown now closes the running game and shuts down through EmulationStation, saving gamelists
 - Pygame fullscreen with Wayland
 - R36S and other RK3326 clones losing the chosen panel overlay (mipi-panel.dtbo) after an upgrade, leaving a working backlight but a broken screen
@@ -308,8 +310,8 @@
 - XRoar to v1.12.1
 - Ymir to v0.3.3
 ### System
-- Allwinner H616 device kernel updated to 7.1.5
-- Allwinner H700 device kernel updated to 7.2.6
+- Allwinner H616 device kernel updated to 7.2.8
+- Allwinner H700 device kernel updated to 7.2.8
 - ALSA UCM configuration to v1.2.16.1
 - Bluez to 5.87
 - Buildroot to 2026.05.x with supporting package & toolchain updates
