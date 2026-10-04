@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 04, 2026
-RETROARCH_VERSION = 81e061794ebf6ebe9901b79ae2643a951aa71c80
+RETROARCH_VERSION = 572862581ae87cdb7b3b0c5d8f5f84fa8e120ffe
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts \
