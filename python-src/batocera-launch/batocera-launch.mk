@@ -13,7 +13,7 @@ BATOCERA_LAUNCH_DEPENDENCIES = \
 	python-toml \
 	python-pillow \
 	python-qrcode \
-	python3-configobj \
+	python-configobj \
 	batocera-bezel-overlay \
 	hotkeygen
 BATOCERA_LAUNCH_INSTALL_STAGING = YES
