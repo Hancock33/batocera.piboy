@@ -168,10 +168,10 @@ class MAME(MAMEControllers, MAMEBezels, MAMEBase):
             args.extend(['-video', 'auto'])
 
         # CRT / SwitchRes support
-        #if self.config.get_bool('switchres'):
+        # if self.config.get_bool('switchres'):
         #    args.extend(['-switchres_ini', '-modeline_generation', '-changeres', '-modesetting', '-readconfig'])
-        #else:
-            # GroovyMAME enables switchres by default; its xrandr mode restore breaks rotated displays
+        # else:
+        # GroovyMAME enables switchres by default; its xrandr mode restore breaks rotated displays
         #    args.extend(['-noswitchres', '-resolution', f'{self.resolution.width}x{self.resolution.height}'])
 
         # Refresh rate options to help with screen tearing
