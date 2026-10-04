@@ -3,17 +3,20 @@ name = "batocera-launch"
 version = '44.0'
 dependencies = [
     'uvloop',
+    'lazy-loader',
     'batocera-common',
     'hotkeygen',
     'aiohttp',
     'aiodns',
     'brotli',
-    'lazy-loader',
+    'configobj',
+    'pillow',
+    'qrcode',
+    'toml',
 ]
 
 [project.scripts]
 batocera-launch = "batocera_launch.cli.main:main"
-emulatorlauncher = "batocera_launch.cli.main:main"
 batocera-joysticks-hotkeys = "batocera_launch.joysticks_hotkeys:main"
 
 [project.entry-points."batocera_launch.emulators"]
@@ -149,6 +152,11 @@ xroar = 'batocera_launch.emulators.xroar:Xroar'
 yabasanshiro = 'batocera_launch.emulators.yabasanshiro:Yabasanshiro'
 ymir = 'batocera_launch.emulators.ymir:Ymir'
 yquake2 = 'batocera_launch.emulators.yquake2:YQuake2'
+
+[project.entry-points."batocera_launch.plugins"]
+devfreq = 'batocera_launch.plugins.devfreq:DevfreqPlugin'
+power-mode = 'batocera_launch.plugins.power:PowerModePlugin'
+tdp = 'batocera_launch.plugins.tdp:TdpPlugin'
 
 [build-system]
 requires = ["hatchling"]

@@ -160,7 +160,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # minimal system required packages
     select BR2_PACKAGE_BASH                                 # bash shell, used as the interactive shell
     select BR2_PACKAGE_BATOCERA_BATTERY_CHECKER
-    select BR2_PACKAGE_BATOCERA_CONFIGGEN                   # emulation station external command launcher
     select BR2_PACKAGE_BATOCERA_LAUNCH                      # new emulation station external command launcher
     select BR2_PACKAGE_BATOCERA_CONTROLCENTER               if  BR2_PACKAGE_BATOCERA_XWAYLAND || BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_BATOCERA_EMULATIONSTATION            # emulationstation
