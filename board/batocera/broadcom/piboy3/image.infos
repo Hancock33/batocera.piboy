@@ -1,0 +1,7 @@
+images:
+  - name:   bcm2837
+    family: bcm2837
+    hardwares:
+      - name:   Piboy3
+        vendor: Experimental Pi
+        type:   sbc
