@@ -3,8 +3,8 @@
 # yquake2-xatrix
 #
 ################################################################################
-# Version: Commits on Sept 28, 2026
-YQUAKE2_XATRIX_VERSION = a752170d05a454b1a1bf60851e97f2ad0b72e444
+# Version: Commits on Oct 04, 2026
+YQUAKE2_XATRIX_VERSION = 7b328f24b4969b4e042ea3025e0368587537c766
 YQUAKE2_XATRIX_SITE = $(call github,yquake2,xatrix,$(YQUAKE2_XATRIX_VERSION))
 YQUAKE2_XATRIX_LICENSE = GPLv2
 YQUAKE2_XATRIX_LICENSE_FILES = LICENSE

@@ -224,3 +224,168 @@ rom_type = "cart"
 
 [xegs]
 rom_type = "cart"
+
+[abc80]
+rom_type = "flop1"
+
+[alice32]
+rom_type = "cass"
+
+[aquarius]
+rom_type = "cart1"
+
+[bml3]
+rom_type = "cass"
+
+[camplynx]
+name = "lynx128k"
+rom_type = "cass"
+auto_run = 'mload""'
+
+[cave]
+name = ""
+
+[cave3rd]
+name = ""
+
+[cpc464p]
+name = "amstrad"
+rom_type = "flop1"
+auto_run = 
+
+[dice]
+name = ""
+
+[digiblst]
+rom_type = "cart"
+
+[dragon32]
+rom_type = "cass"
+auto_run = 'cloadm\n'
+
+[ep128]
+rom_type = "cart"
+
+[exl100]
+rom_type = "cart"
+
+[gaelco]
+name = ""
+
+[galaxy]
+rom_type = "cass"
+
+[gamekin3]
+rom_type = "cart"
+
+[hec2hr]
+rom_type = "cass"
+
+[hikaru]
+name = ""
+
+[hyprscan]
+rom_type = "cdrm"
+
+[ibmpcjr]
+rom_type = "flop"
+
+[jupace]
+rom_type = "dump"
+
+[konamilcd]
+name = ""
+
+[m24]
+rom_type = "flop1"
+
+[m5]
+rom_type = "cart1"
+
+[mbee]
+rom_type = "quik"
+
+[microvsn]
+rom_type = "cart"
+
+[model2]
+name = ""
+
+[mononcol]
+rom_type = "cart"
+
+[mpu1000]
+rom_type = "cart"
+
+[mtx512]
+rom_type = "dump"
+
+[myvision]
+rom_type = "cart"
+
+[n501]
+name = ""
+
+[neogeo64]
+name = ""
+
+[oric1]
+rom_type = "cass"
+auto_run = 'cload\"\"\n'
+
+[p2000t]
+rom_type = "cass"
+auto_run = 'cloadm\n'
+
+[pecom64]
+rom_type = "cass"
+
+[pegasus]
+rom_type = rom1
+
+[pippin]
+rom_type = "cdrm"
+
+[pockstat]
+rom_type = "cart"
+
+[segastv]
+name = ""
+
+[snotec]
+rom_type = "cart"
+
+[sorcerer]
+rom_type = "cass1"
+
+[studio2]
+rom_type = "cart"
+
+[svmu]
+rom_type = "quik"
+
+[sys80]
+rom_type = "cass"
+auto_run = 'cloadm\n'
+
+[tiger]
+name = ""
+
+[tvc64]
+rom_type = "quik"
+
+[vg5k]
+rom_type = "cass"
+auto_run = 'cload\n'
+
+[vic10]
+rom_type = "cart"
+
+[vidbrain]
+rom_type = "cart"
+
+[vii]
+rom_type = "cart"
+
+[vis]
+rom_type = "cdrom"
