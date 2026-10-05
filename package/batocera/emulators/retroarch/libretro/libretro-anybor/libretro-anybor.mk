@@ -7,7 +7,9 @@
 LIBRETRO_ANYBOR_VERSION = 62eb491abbb154bd7dd19c191ba07f20ac0d5bd8
 LIBRETRO_ANYBOR_SITE = $(call github,retrodiv,AnyBOR-libretro,$(LIBRETRO_ANYBOR_VERSION))
 # multiple, see https://github.com/retrodiv/AnyBOR-libretro/tree/main/LICENSES
-LIBRETRO_ANYBOR_LICENSE = GPLv2+
+# OpenBOR 3400 retains its no-sale terms; see LICENSES.md.
+LIBRETRO_ANYBOR_LICENSE = BSD-3-Clause, OpenBOR-3400 (no sale), MIT, ISC, Zlib, Libpng-2.0, CC0-1.0, other
+LIBRETRO_ANYBOR_LICENSE_FILES = LICENSE LICENSES.md NOTICE.txt
 LIBRETRO_ANYBOR_DEPENDENCIES = retroarch zlib libpng libogg libvorbis libvpx
 LIBRETRO_ANYBOR_EMULATOR_INFO = anybor.libretro.core.yml
 
