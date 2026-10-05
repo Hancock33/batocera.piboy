@@ -3,8 +3,8 @@
 # xemu-chihiro
 #
 ################################################################################
-# Version: Commits on Sept 29, 2026
-XEMU_CHIHIRO_VERSION = d37c80e49158e03ac7119bb79035784056de4794
+# Version: Commits on Oct 03, 2026
+XEMU_CHIHIRO_VERSION = e66fe47cdaa781966ffd9a7112200ade04c1a531
 XEMU_CHIHIRO_SITE = https://github.com/Tovarichtch/xemu.git
 XEMU_CHIHIRO_SITE_METHOD = git
 XEMU_CHIHIRO_GIT_SUBMODULES = YES
