@@ -71,7 +71,7 @@ ifeq ($(BR2_PACKAGE_UDEV),y)
     RETROARCH_DEPENDENCIES += udev
 endif
 
-ifeq ($(BR2_PACKAGE_WAYLAND),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
     RETROARCH_CONF_OPTS += --enable-wayland
 else
     RETROARCH_CONF_OPTS += --disable-wayland
