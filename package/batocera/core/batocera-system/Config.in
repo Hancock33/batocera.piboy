@@ -1285,7 +1285,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                !BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4
                                                                # newer versions of duckstation are stricter on OpenGL 3.1
-                                                               # requires X11 or Sway. 2GB boards aren't great.
+                                                               # requires X11 or Wayland. 2GB boards aren't great.
 
     select BR2_PACKAGE_LIBRETRO_SWANSTATION                 if !BR2_PACKAGE_BATOCERA_TARGET_X86         && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_H3
@@ -1974,17 +1974,6 @@ config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
     select BR2_PACKAGE_SWAY                                 if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_SWAYBG                               if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_WLR_RANDR                            if !BR2_PACKAGE_BATOCERA_LIB32
-
-config BR2_PACKAGE_BATOCERA_WAYLAND_LABWC
-    bool "batocera.linux wayland labwc packages selection"
-
-    # Wayland Protocol
-    select BR2_PACKAGE_BATOCERA_WAYLAND
-
-    # Compositor for wayland
-    select BR2_PACKAGE_LABWC
-    select BR2_PACKAGE_SWAYBG
-    select BR2_PACKAGE_WLR_RANDR
 
 config BR2_PACKAGE_BATOCERA_XWAYLAND
     bool "batocera.linux xwayland packages selection"
