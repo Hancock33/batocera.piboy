@@ -1822,6 +1822,7 @@ config BR2_PACKAGE_BATOCERA_RPI_MESA3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_V3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_ZINK
     select BR2_PACKAGE_MESA3D_DEMOS                         if  BR2_PACKAGE_XWAYLAND || (BR2_PACKAGE_BATOCERA_SBC_XORG && !BR2_PACKAGE_BATOCERA_LIB32)  # glxinfo etc
+    select BR2_PACKAGE_LIBGLVND                             if  BR2_PACKAGE_XORG7                                                                       # opengl
 
 config BR2_PACKAGE_BATOCERA_LIMA_MESA3D
     bool "batocera.linux driver mesa LIMA"
@@ -1934,6 +1935,7 @@ config BR2_PACKAGE_BATOCERA_SDL2
     select BR2_PACKAGE_LIBVORBIS                            # ogg
     select BR2_PACKAGE_SDL2_GAMECONTROLLERDB                if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_TVTEXTVIEWER                         if !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_BATOCERA_HAS_SDL
 
 config BR2_PACKAGE_BATOCERA_SDL3
     bool "BATOCERA SDL3"
@@ -1947,6 +1949,7 @@ config BR2_PACKAGE_BATOCERA_SDL3
     select BR2_PACKAGE_SDL3_X11                             if  BR2_PACKAGE_XORG7
     select BR2_PACKAGE_SDL3_KMSDRM                          if  BR2_PACKAGE_HAS_LIBGBM
     select BR2_PACKAGE_SDL3_WAYLAND                         if  BR2_PACKAGE_BATOCERA_WAYLAND
+    select BR2_PACKAGE_BATOCERA_HAS_SDL
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
     bool "batocera.linux wayland packages selection"
