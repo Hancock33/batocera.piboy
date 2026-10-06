@@ -3,8 +3,8 @@
 # 7zip
 #
 ################################################################################
-# Version: Commits on Sept 04, 2026
-7ZIP_VERSION = 26.03
+# Version: Commits on Oct 05, 2026
+7ZIP_VERSION = 26.04
 7ZIP_SOURCE = 7z$(subst .,,$(7ZIP_VERSION))-src.tar.xz
 7ZIP_SITE = https://github.com/ip7z/7zip/releases/download/$(7ZIP_VERSION)
 7ZIP_LICENSE = LGPL-2.1+ with unRAR restriction

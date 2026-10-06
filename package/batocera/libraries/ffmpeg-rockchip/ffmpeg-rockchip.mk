@@ -3,11 +3,12 @@
 # ffmpeg-rockchip
 #
 ################################################################################
-# Keep the version aligned to buildroot ffmpeg 
+# Keep the version aligned to buildroot ffmpeg
 # We overwrite that version for hwaccel
-# Version: Commits on Jul 4, 2025 (7.1 branch)
-FFMPEG_ROCKCHIP_VERSION = a8c04e01e7d3bed7efb086ac8b51045bedd08a0d
+# Version: Commits on Apr 23, 2026
+FFMPEG_ROCKCHIP_VERSION = a63922000b871c4704fe3391930fc73dfd030677
 FFMPEG_ROCKCHIP_SITE = https://github.com/nyanmisaka/ffmpeg-rockchip.git
+FFMPEG_ROCKCHIP_BRANCH = 7.1
 FFMPEG_ROCKCHIP_SITE_METHOD = git
 FFMPEG_ROCKCHIP_GIT_SUBMODULES = YES
 FFMPEG_ROCKCHIP_LICENSE = LGPL-2.1+, libjpeg license
