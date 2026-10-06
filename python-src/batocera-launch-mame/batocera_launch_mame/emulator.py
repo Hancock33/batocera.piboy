@@ -53,7 +53,7 @@ class MAME(MAMEControllers, MAMEBezels, MAMEBase):
         if self.system == 'fmtowns' and not soft_list and (ROMS / 'fmtowns' / f'{self.rom.parent.name}.zip').exists():
             soft_list = 'fmtowns_cd'
 
-        args: list[str | Path] = [MAME_BIN_DIR / 'mame', '-sound', 'pipewire', '-skip_gameinfo']
+        args: list[str | Path] = [MAME_BIN_DIR / 'mame', '-sound', 'sdl', '-skip_gameinfo']
 
         if mess_system is None:
             args.extend(['-rompath', f'{self.rom.parent};{self.bios_dir};{BIOS}'])
