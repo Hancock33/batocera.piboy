@@ -237,11 +237,6 @@ rom_type = "cart1"
 [bml3]
 rom_type = "cass"
 
-[camplynx]
-name = "lynx128k"
-rom_type = "cass"
-auto_run = 'mload""'
-
 [cave]
 name = ""
 
@@ -251,7 +246,6 @@ name = ""
 [cpc464p]
 name = "amstrad"
 rom_type = "flop1"
-auto_run = 
 
 [dice]
 name = ""
@@ -341,7 +335,7 @@ auto_run = 'cloadm\n'
 rom_type = "cass"
 
 [pegasus]
-rom_type = rom1
+rom_type = "rom1"
 
 [pippin]
 rom_type = "cdrm"
