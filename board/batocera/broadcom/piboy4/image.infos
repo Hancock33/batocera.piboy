@@ -1,0 +1,7 @@
+images:
+  - name:   bcm2711
+    family: bcm2711
+    hardwares:
+      - name:   Piboy4
+        vendor: Experimental Pi
+        type:   sbc
