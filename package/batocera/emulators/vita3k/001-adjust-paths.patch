@@ -1,6 +1,8 @@
+diff --git a/vita3k/app/src/app_init.cpp b/vita3k/app/src/app_init.cpp
+index c5d693df..9308a471 100644
 --- a/vita3k/app/src/app_init.cpp
 +++ b/vita3k/app/src/app_init.cpp
-@@ -291,11 +291,7 @@
+@@ -291,11 +291,7 @@ bool init_paths(Root &root_paths) {
          root_paths.set_cache_path(portable_path / "cache" / "");
          root_paths.set_patch_path(portable_path / "patch" / "");
      } else {
@@ -13,7 +15,7 @@
  
  #if defined(__APPLE__)
          // Store other data in the user-wide path. Otherwise we may end up dumping
-@@ -386,12 +382,12 @@
+@@ -386,12 +382,12 @@ bool init_paths(Root &root_paths) {
  
          // shared path
          if (XDG_DATA_HOME != NULL)
