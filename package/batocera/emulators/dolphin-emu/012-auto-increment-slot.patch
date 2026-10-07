@@ -1,5 +1,5 @@
 diff --git a/Source/Core/Core/Config/MainSettings.cpp b/Source/Core/Core/Config/MainSettings.cpp
-index 35df464c79..38910c417a 100644
+index e8c370461a..a34c196a33 100644
 --- a/Source/Core/Core/Config/MainSettings.cpp
 +++ b/Source/Core/Core/Config/MainSettings.cpp
 @@ -348,6 +348,8 @@ const Info<std::string> MAIN_SKYLANDERS_PATH{{System::Main, "General", "Skylande
@@ -12,7 +12,7 @@ index 35df464c79..38910c417a 100644
  {
    return Config::Info<std::string>{{Config::System::Main, "General", fmt::format("ISOPath{}", idx)},
 diff --git a/Source/Core/Core/Config/MainSettings.h b/Source/Core/Core/Config/MainSettings.h
-index 5ae26e66a4..c87001c7eb 100644
+index 80853d9008..4ea9c23292 100644
 --- a/Source/Core/Core/Config/MainSettings.h
 +++ b/Source/Core/Core/Config/MainSettings.h
 @@ -218,6 +218,8 @@ extern const Info<std::string> MAIN_GDB_SOCKET;
