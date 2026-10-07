@@ -29,8 +29,6 @@ ES_WHEELS_METADATA: Final = ES_RESOURCES_DIR / 'wheelgames.xml'
 ES_GAMES_METADATA: Final = ES_RESOURCES_DIR / 'gamesdb.xml'
 ES_GUNS_ART_METADATA: Final = LAUNCH_DATA_DIR / 'gamesbuttonsdb.xml'
 
-DEFAULTS_DIR: Final = LAUNCH_SHARE_DIR / 'defaults'
-
 USER_SHADERS: Final = USERDATA / 'shaders'
 BATOCERA_SHADERS: Final = BATOCERA_SHARE_DIR / 'shaders'
 
@@ -38,9 +36,8 @@ USER_DECORATIONS: Final = USERDATA / 'decorations'
 SYSTEM_DECORATIONS: Final = DATAINIT_DIR / 'decorations'
 
 USER_SCRIPTS: Final = HOME / 'scripts'
-SYSTEM_SCRIPTS: Final = LAUNCH_SHARE_DIR / 'scripts'
 
-PRECALIBRATION_DIR: Final = BATOCERA_SHARE_DIR / 'guns-precalibration'
+PRECALIBRATION_DIR: Final = BATOCERA_SHARE_DIR / 'guns-precalibrations'
 
 
 def configure_emulator(rom: Path, /) -> bool:

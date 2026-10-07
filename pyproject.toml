@@ -1,15 +1,16 @@
 [dependency-groups]
 dev = [
-    "prek==0.5.3",
-    "ruff==0.16.7",
+    "prek==0.5.5",
+    "ruff==0.16.10",
     "pyright[nodejs]==1.1.414",
     "pytest==9.1.1",
     "pytest-asyncio==1.4.0",
-    "pytest-mock==3.15.1",
+    "pytest-mock==3.16.0",
     "pytest-cov==7.1.0",
     "pytest-xdist==3.8.0",
     "pyfakefs==6.2.0",
-    "coverage[toml]==7.16.1",
+    "aiointercept==0.1.12",
+    "coverage[toml]==7.16.2",
     "pygobject-stubs @ git+https://github.com/pygobject/pygobject-stubs.git@959c470767cd44a74912ba182e9fb202d0d96519",
 ]
 
@@ -36,17 +37,23 @@ constraint-dependencies = [
     "ffmpeg-python @ git+https://github.com/kkroening/ffmpeg-python.git@df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6",
     "pygobject==3.56.3",
     "lazy-loader==0.5",
+    "dbus-fast==4.0.4",
 ]
 config-settings-package = { pygobject-stubs = { config = "Gtk3,Gdk3" } }
 
 [tool.uv.sources]
 batocera-common = { workspace = true }
 batocera-launch = { workspace = true }
+hotkeygen = { workspace = true }
+batocera-launch-libretro = { workspace = true }
+batocera-launch-mame-common = { workspace = true }
+pytest-batocera-launch = { workspace = true }
+pytest-batocera = { workspace = true }
 
 [tool.uv.workspace]
 members = [
     'python-src/*',
-    './package/batocera/core/batocera-configgen/configgen',
+    './package/batocera/utils/hotkeygen',
 ]
 exclude = ['python-src/stubs', 'python-src/scripts']
 
@@ -60,9 +67,12 @@ addopts = [
 ]
 strict = true
 asyncio_mode = "auto"
+filterwarnings = [
+    "ignore:'asyncio.iscoroutinefunction' is deprecated:DeprecationWarning",  # ignore deprecation warnings from asyncio.iscoroutinefunction
+]
 
 [tool.coverage.run]
-omit = ["**/python-src/*/tests/**"]
+omit = ["**/python-src/*/tests/**", "**/hotkeygen/tests/**"]
 
 [tool.coverage.report]
 exclude_also = [
@@ -72,7 +82,7 @@ exclude_also = [
 [tool.pyright]
 include = [
     "python-src",
-    "package/batocera/core/batocera-configgen/configgen",
+    "package/batocera/utils/hotkeygen",
 ]
 exclude = [
     ".venv*",
@@ -103,44 +113,6 @@ deprecateTypingAliases = true
 
 enableTypeIgnoreComments = false  # Force pyright: ignore comments
 
-[[tool.pyright.executionEnvironments]]
-# pyright doesn't allow setting typeCheckingMode per environment, so we
-# set it to strict globally and disable specific reports for configgen
-root = 'package/batocera/core/batocera-configgen/configgen'
-
-reportMissingTypeStubs = "none"
-reportConstantRedefinition = "none"
-reportDuplicateImport = "none"
-reportIncompleteStub = "none"
-reportInconsistentConstructor = "none"
-reportInvalidStubStatement = "none"
-reportMatchNotExhaustive = "none"
-reportMissingParameterType = "none"
-reportMissingTypeArgument = "none"
-reportTypeCommentUsage = "none"
-reportUnknownArgumentType = "none"
-reportUnknownLambdaType = "none"
-reportUnknownMemberType = "none"
-reportUnknownParameterType = "none"
-reportUnknownVariableType = "none"
-reportUnnecessaryCast = "none"
-reportUnnecessaryComparison = "none"
-reportUnnecessaryContains = "none"
-reportUnnecessaryIsInstance = "none"
-reportUnusedClass = "none"
-reportUnusedFunction = "none"
-reportUntypedBaseClass = "none"
-reportUntypedClassDecorator = "none"
-reportUntypedFunctionDecorator = "none"
-reportUntypedNamedTuple = "none"
-reportAssertAlwaysTrue = "warning"
-reportInvalidStringEscapeSequence = "warning"
-reportInvalidTypeVarUse = "warning"
-reportSelfClsParameterName = "warning"
-reportUnsupportedDunderAll = "warning"
-reportUnusedExpression = "warning"
-reportWildcardImportFromLibrary = "warning"
-
 [tool.ruff]
 extend-exclude = [".venv*", "buildroot*", "output", "dl"]
 line-length = 120
@@ -163,7 +135,8 @@ known-first-party = [
     "batocera_common",
     "batocera_labwc",
     "batocera_launch",
-    "configgen",
+    "batocera_launch_libretro",
+    "batocera_launch_mame_common",
     "batocera_es_system"
 ]
 combine-as-imports = true

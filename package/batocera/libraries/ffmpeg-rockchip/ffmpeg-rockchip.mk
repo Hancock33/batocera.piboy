@@ -4,10 +4,11 @@
 #
 ################################################################################
 # Keep the version aligned to buildroot ffmpeg
+# We overwrite that version for hwaccel
 # Version: Commits on Apr 23, 2026
 FFMPEG_ROCKCHIP_VERSION = a63922000b871c4704fe3391930fc73dfd030677
-FFMPEG_ROCKCHIP_BRANCH = 7.1
 FFMPEG_ROCKCHIP_SITE = https://github.com/nyanmisaka/ffmpeg-rockchip.git
+FFMPEG_ROCKCHIP_BRANCH = 7.1
 FFMPEG_ROCKCHIP_SITE_METHOD = git
 FFMPEG_ROCKCHIP_GIT_SUBMODULES = YES
 FFMPEG_ROCKCHIP_LICENSE = LGPL-2.1+, libjpeg license
@@ -56,10 +57,7 @@ FFMPEG_ROCKCHIP_CONF_OPTS = \
 	--disable-libilbc \
 	--disable-libvo-amrwbenc \
 	--disable-symver \
-	--disable-doc \
-	-disable-mmal \
-	--disable-omx \
-	--disable-omx-rpi
+	--disable-doc
 
 # batocera - ensure rockchip hwaccel is enabled
 ifeq ($(BR2_PACKAGE_ROCKCHIP_RGA)$(BR2_PACKAGE_ROCKCHIP_MPP),yy)
@@ -287,28 +285,20 @@ else
 FFMPEG_ROCKCHIP_CONF_OPTS += --disable-vaapi
 endif
 
-ifeq ($(BR2_arm),y)
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-mmal
+ifeq ($(BR2_PACKAGE_LIBVDPAU),y)
+FFMPEG_ROCKCHIP_CONF_OPTS += --enable-vdpau
+FFMPEG_ROCKCHIP_DEPENDENCIES += libvdpau
 else
-FFMPEG_ROCKCHIP_CONF_OPTS += --disable-mmal
+FFMPEG_ROCKCHIP_CONF_OPTS += --disable-vdpau
 endif
 
-# batocera - add RPi H.265 hardware acceleration
-ifeq ($(BR2_PACKAGE_RPI_HEVC),y)
-FFMPEG_ROCKCHIP_CONF_OPTS += --disable-mmal
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-neon
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-v4l2-request
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-libudev
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-epoxy
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-sand
-endif
+FFMPEG_ROCKCHIP_CONF_OPTS += --disable-mmal --disable-omx --disable-omx-rpi
 
 # To avoid a circular dependency only use opencv if opencv itself does
 # not depend on ffmpeg.
-ifeq ($(BR2_PACKAGE_OPENCV4_LIB_IMGPROC)x$(BR2_PACKAGE_OPENCV4_WITH_FFMPEG),yx)
-FFMPEG_ROCKCHIP_CONF_OPTS += --enable-libopencv \
-	--extra-cflags=-I$(STAGING_DIR)/usr/include/opencv4
-FFMPEG_ROCKCHIP_DEPENDENCIES += opencv4
+ifeq ($(BR2_PACKAGE_OPENCV3_LIB_IMGPROC)x$(BR2_PACKAGE_OPENCV3_WITH_FFMPEG),yx)
+FFMPEG_ROCKCHIP_CONF_OPTS += --enable-libopencv
+FFMPEG_ROCKCHIP_DEPENDENCIES += opencv3
 else
 FFMPEG_ROCKCHIP_CONF_OPTS += --disable-libopencv
 endif

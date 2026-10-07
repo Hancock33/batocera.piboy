@@ -3,8 +3,8 @@
 # libretro-lowresnx
 #
 ################################################################################
-# Version: Commits on Mar 31, 2026
-LIBRETRO_LOWRESNX_VERSION = 35adc1a215e975be964b2ef4b652117acd7beba1
+# Version: Commits on Sept 30, 2026
+LIBRETRO_LOWRESNX_VERSION = 63d5988f74e1eea2ecd6ea0445a8ce260b0a9822
 LIBRETRO_LOWRESNX_SITE = $(call github,timoinutilis,lowres-nx,$(LIBRETRO_LOWRESNX_VERSION))
 LIBRETRO_LOWRESNX_LICENSE = zlib
 LIBRETRO_LOWRESNX_DEPENDENCIES += retroarch

@@ -202,8 +202,8 @@ channelf:
   emulator: libretro
   core:     freechaf
 chihiro:
-  emulator: xemu
-  core:     xemu
+  emulator: xemu-chihiro
+  core:     xemu-chihiro
 cinematronics:
   emulator: libretro
   core:     mame078plus
@@ -382,7 +382,7 @@ gottlieb:
   core:     mame078plus
 gp32:
   emulator: libretro
-  core:     mame
+  core:     gp32emu
 gsplus:
   emulator: gsplus
   core:     gsplus
@@ -627,12 +627,8 @@ omf2097:
   emulator: omf2097
   core:     omf2097
 openbor:
-  emulator: openbor
-  core:     openbor6412
-  options:
-    # none because some games fails by default with textures (street of rage 2x)
-    bezel: none
-    hud_support: false
+  emulator: libretro
+  core:     anybor
 openclaw:
   emulator: openclaw
   core:     openclaw

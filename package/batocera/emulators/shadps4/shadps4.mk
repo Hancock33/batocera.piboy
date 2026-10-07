@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Aug 18, 2026
-SHADPS4_VERSION = v.0.18.0
+# Version: Commits on Oct 02, 2026
+SHADPS4_VERSION = v.0.19.0
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
@@ -33,7 +33,7 @@ define SHADPS4_BUILD_HOST_FONTEMBED
 	sed -i "s|protobuf::protoc|$(HOST_DIR)/bin/protoc|" $(@D)/CMakeLists.txt
 	sed -i "s|libprotobuf|protobuf|" $(@D)/CMakeLists.txt
 	sed -i "s|add_subdirectory(protobuf EXCLUDE_FROM_ALL)|#add_subdirectory(protobuf EXCLUDE_FROM_ALL)|" $(@D)/externals/CMakeLists.txt
-	$(HOSTCXX) -O2 -o $(@D)/host-dear-imgui-fontembed $(@D)/externals/dear_imgui/misc/fonts/binary_to_compressed_c.cpp
+	$(HOSTCXX) -O2 -o $(@D)/host-dear-imgui-fontembed $(@D)/externals/imgui/misc/fonts/binary_to_compressed_c.cpp
 endef
 SHADPS4_PRE_CONFIGURE_HOOKS += SHADPS4_BUILD_HOST_FONTEMBED
 

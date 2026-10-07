@@ -95,7 +95,7 @@ endif
 endif
 
 # List of packages that are always good to rebuild for versioning/stamps etc
-MANDATORY_REBUILD_PKGS := batocera-es-system batocera-launch python-batocera-common batocera-configgen batocera-system batocera-splash
+MANDATORY_REBUILD_PKGS := batocera-es-system batocera-launch python-batocera-common batocera-system batocera-splash
 
 # All supported targets based on the board files in configs/, sorted for consistency
 TARGETS := $(sort $(patsubst batocera-%.board,%,$(notdir $(wildcard $(PROJECT_DIR)/configs/*.board))))
@@ -432,7 +432,7 @@ find-dl-dups: _check_find
 .PHONY: remove-dl-dups
 remove-dl-dups: _check_find
 	@while [ -n "`$(FIND) $(DL_DIR)/ -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[-_0-9a-fvrgit\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | grep .`" ] ; do \
-		$(FIND) $(DL_DIR) -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[-_0-9a-fvrgit\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf ; \
+		$(FIND) $(DL_DIR)/ -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[-_0-9a-fvrgit\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf ; \
 	done
 
 .PHONY: uart

@@ -3,8 +3,8 @@
 # cgenius
 #
 ################################################################################
-# Version: Commits on Sept 26, 2026
-CGENIUS_VERSION = fb66a50d7b1fb3d2305f4fc727eaff27edb9f87b
+# Version: Commits on Sept 30, 2026
+CGENIUS_VERSION = 58a3c4fd0782fa2a087e38a039599b2ecf69ccc9
 CGENIUS_SITE = https://github.com/gerstrong/Commander-Genius
 CGENIUS_SITE_METHOD=git
 CGENIUS_GIT_SUBMODULES=YES
@@ -13,12 +13,13 @@ CGENIUS_CONF_LICENSE = GPL-2.0
 CGENIUS_CONF_LICENSE_FILES = LICENSE
 CGENIUS_EMULATOR_INFO = cgenius.emulator.yml
 CGENIUS_DEPENDENCIES += boost host-xxd libcurl python-configobj
-CGENIUS_DEPENDENCIES += sdl2 sdl2_image sdl2_mixer sdl2_ttf
+CGENIUS_DEPENDENCIES += sdl3 sdl3_image sdl3_mixer sdl3_ttf
 
-CGENIUS_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CGENIUS_CONF_OPTS += -DBUILD_COSMOS=1
-CGENIUS_CONF_OPTS += -DGAMES_SHAREDIR=/userdata/roms/ports/cgenius
+CGENIUS_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 CGENIUS_CONF_OPTS += -DFULL_GAMES_SHAREDIR=/userdata/roms/ports/cgenius
+CGENIUS_CONF_OPTS += -DGAMES_SHAREDIR=/userdata/roms/ports/cgenius
+CGENIUS_CONF_OPTS += -DUSE_SDL3=OFF
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
 CGENIUS_CONF_OPTS += -DUSE_OPENGL=ON

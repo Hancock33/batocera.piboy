@@ -19,8 +19,6 @@ libwinevbs.mk
 libzedmd.mk
 mt32emu.mk
 noto-cjk-fonts.mk
-openbor6412.mk
-openbor7142.mk
 ryujinx.mk
 shader-slang.mk
 sockpp.mk

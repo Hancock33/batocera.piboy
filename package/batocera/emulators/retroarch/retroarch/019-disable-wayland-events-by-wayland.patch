@@ -1,29 +1,30 @@
 diff --git a/gfx/drivers_context/wayland_ctx.c b/gfx/drivers_context/wayland_ctx.c
-index e7a4a97491..923995ed33 100644
+index e54fd16a64..8d46c55316 100644
 --- a/gfx/drivers_context/wayland_ctx.c
 +++ b/gfx/drivers_context/wayland_ctx.c
-@@ -428,6 +428,10 @@ static void gfx_ctx_wl_input_driver(void *data,
-       const char *joypad_name,
-       input_driver_t **input, void **input_data)
+@@ -541,6 +541,10 @@ error:
+ static void gfx_ctx_wl_input_driver(void *data,
+       const char *joypad_name)
  {
 +   *input      = NULL;
 +   *input_data = NULL;
 +   return;
 +
     gfx_ctx_wayland_data_t *wl = (gfx_ctx_wayland_data_t*)data;
-    /* Input is heavily tied to the window stuff
-     * on Wayland, so just implement the input driver here. */
+    /* On Wayland the seat's state lives with the surface, here. The
+     * frontend starts the input driver; it is handed that state. */
 diff --git a/gfx/drivers_context/wayland_vk_ctx.c b/gfx/drivers_context/wayland_vk_ctx.c
+index 74634da05b..364860e172 100644
 --- a/gfx/drivers_context/wayland_vk_ctx.c
 +++ b/gfx/drivers_context/wayland_vk_ctx.c
-@@ -196,6 +196,10 @@ static void gfx_ctx_wl_input_driver(void *data,
-       const char *joypad_name,
-       input_driver_t **input, void **input_data)
+@@ -200,6 +200,10 @@ error:
+ static void gfx_ctx_wl_input_driver(void *data,
+       const char *joypad_name)
  {
 +   *input      = NULL;
 +   *input_data = NULL;
 +   return;
 +
     gfx_ctx_wayland_data_t *wl = (gfx_ctx_wayland_data_t*)data;
-    /* Input is heavily tied to the window stuff
-     * on Wayland, so just implement the input driver here. */
+    /* On Wayland the seat's state lives with the surface, here. The
+     * frontend starts the input driver; it is handed that state. */

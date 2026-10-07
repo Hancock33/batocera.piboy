@@ -829,6 +829,10 @@ msgid "1x native (640x528)"
 msgstr "1x doğal (640x528)"
 
 msgctxt "game_options"
+msgid "2 (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2 Frames"
 msgstr "2 Kare"
 
@@ -1398,10 +1402,6 @@ msgid "3D Control Pad (Analog)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "3D ENGINE"
-msgstr "3D MOTORU"
-
-msgctxt "game_options"
 msgid "3D TEXTURE FILTER"
 msgstr ""
 
@@ -1516,6 +1516,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "40 MHz"
 msgstr "40 MHz"
+
+msgctxt "game_options"
+msgid "40% (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "400p"
@@ -1734,6 +1738,10 @@ msgid "50 fps"
 msgstr "50 fps"
 
 msgctxt "game_options"
+msgid "50% (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "50% (Underclock)"
 msgstr ""
 
@@ -1855,6 +1863,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "6.75x (6480x3672)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2112,6 +2124,10 @@ msgstr "8k"
 msgctxt "game_options"
 msgid "8th"
 msgstr "8."
+
+msgctxt "game_options"
+msgid "8x (4K)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
@@ -2519,6 +2535,10 @@ msgid "AUDIO CHANNELS"
 msgstr "SES KANALLARI"
 
 msgctxt "game_options"
+msgid "AUDIO COPROCESSOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "AUDIO DRIVER"
 msgstr "SES SÜRÜCÜSÜ"
 
@@ -2897,6 +2917,10 @@ msgid "All Timers"
 msgstr "Tüm Zamanlayıcılar"
 
 msgctxt "game_options"
+msgid "All cores"
+msgstr ""
+
+msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
 msgstr "Tüm olası lisanslar (Önerilmez)"
 
@@ -2907,6 +2931,10 @@ msgstr "Tüm seslendirmeler"
 msgctxt "game_options"
 msgid "Allow cores to set rotation."
 msgstr "Çekirdeklerin dönüşü ayarlamasına izin ver."
+
+msgctxt "game_options"
+msgid "Allow opening the developer menu."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -3191,6 +3219,10 @@ msgid "Apply gouraud shading instead of flat shading."
 msgstr "Düz gölgeleme yerine gouraud gölgeleme uygulayın."
 
 msgctxt "game_options"
+msgid "Apply one of the game's built-in shaders."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Apply texture filtering to enhance visual quality. Some filters may "
 "significantly impact performance."
@@ -3294,11 +3326,9 @@ msgstr "Çift ekran düzenini düzenle."
 
 msgctxt "game_options"
 msgid ""
-"Arrange the dual screen layout. Separate windows can be changed with "
-"Hotkey+R2."
+"Arrange the dual screen layout. Defaults to separate windows when a second "
+"screen is connected. Separate windows can be changed with Hotkey+R2."
 msgstr ""
-"Çift ekran düzenini düzenleyin. Ayrı pencereler Kısayol Tuşu+R2 ile "
-"değiştirilebilir."
 
 msgctxt "game_options"
 msgid "Arrows"
@@ -3883,6 +3913,10 @@ msgid "Blend (Top Field First)"
 msgstr "Karışım (Üstteki Alan Birinci)"
 
 msgctxt "game_options"
+msgid "Blended"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr "Bloklu Filtrelenmiş"
 
@@ -4139,6 +4173,14 @@ msgid "C64 PAL Automatic"
 msgstr "C64 PAL Otomatik"
 
 msgctxt "game_options"
+msgid "CABINET"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CABINET LINK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CABINET OUTPUTS"
 msgstr ""
 
@@ -4275,8 +4317,16 @@ msgid "COLORIZATION"
 msgstr "RENKLENDİRME"
 
 msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
 msgstr "KAPIŞMA ZORLUĞU"
+
+msgctxt "game_options"
+msgid "COMPUTE SHADER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
@@ -4404,7 +4454,7 @@ msgstr "KONTROLCÜ PROFİLİ"
 
 msgctxt "game_options"
 msgid "CONTROLLER TO LIGHT GUN"
-msgstr "KONTROLCÜDEN TABANCAYA"
+msgstr "KONTROLCÜDEN IŞIN TABANCASINA"
 
 msgctxt "game_options"
 msgid "CONTROLLER TYPE"
@@ -4469,6 +4519,10 @@ msgstr "CPU ÇEKİRDEĞİ"
 msgctxt "game_options"
 msgid "CPU CORE METHOD"
 msgstr "CPU ÇEKİRDEK YÖNTEMİ"
+
+msgctxt "game_options"
+msgid "CPU CORES"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CPU CYCLES"
@@ -4563,6 +4617,10 @@ msgid "CRT FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT GAMMA"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT HAYALET EFEKTİ"
 
@@ -4580,6 +4638,14 @@ msgstr "CRT ANAHTARLARI"
 
 msgctxt "game_options"
 msgid "CRT Shader."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yee64"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yeetron"
 msgstr ""
 
 msgctxt "game_options"
@@ -4672,6 +4738,10 @@ msgstr "SİBERDÖNÜŞÜM"
 
 msgctxt "game_options"
 msgid "CYCLE EXACT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cabinet 1 is the host, the others connect to it."
 msgstr ""
 
 msgctxt "game_options"
@@ -4932,6 +5002,10 @@ msgid "Charger plugged"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Cheap HDMI converter"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Chile"
 msgstr "Şili"
 
@@ -5070,6 +5144,14 @@ msgid "Choose the combat difficulty."
 msgstr "Dövüş zorluğunu seçin."
 
 msgctxt "game_options"
+msgid "Choose the controller 1 user mode."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose the controller 2 user mode."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns and steering wheels. SDL2 for gamepads only."
@@ -5152,10 +5234,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "Doku filtre türünü seçin."
-
-msgctxt "game_options"
-msgid "Choose to display UI prompts or accept defaults automatically."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
@@ -5336,6 +5414,10 @@ msgstr "Klasik Kontrolcü Pro"
 msgctxt "game_options"
 msgid "Classic Software"
 msgstr "Klasik Yazılım"
+
+msgctxt "game_options"
+msgid "Clean"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
@@ -5519,8 +5601,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Controls the New3D rendering resolution (1x scale = 496x384). Default is 0 "
-"(Set Resolution) on x86_64 and 1 on ARM. Requires New3D engine."
+"Controls the rendering resolution (1x scale = 496x384). Default is 0 (Set "
+"Resolution) on x86_64 and 1 on ARM."
 msgstr ""
 
 msgctxt "game_options"
@@ -5746,6 +5828,10 @@ msgstr "AYRINTILI GÖLGELENDİRİCİLER"
 msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "GELİŞTİRİCİ MENÜSÜ"
+
+msgctxt "game_options"
+msgid "DEVELOPER MENU"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DIFFICULTY"
@@ -5998,6 +6084,10 @@ msgstr "Koyu Mor"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "Karartma"
+
+msgctxt "game_options"
+msgid "Darken the picture the way a cabinet monitor does."
+msgstr ""
 
 msgctxt "game_options"
 msgid "De-Interlaced"
@@ -6377,6 +6467,16 @@ msgstr ""
 "varsayılan olarak Japoncadır."
 
 msgctxt "game_options"
+msgid ""
+"Drive board force feedback on a wheel, rumble on a pad (OutRun 2, Maximum "
+"Tune)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Drive the GameTank paddle with the mouse, for the games that use it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Driving Force"
 msgstr "Driving Force"
 
@@ -6485,6 +6585,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "ELECTRON MODEL"
 msgstr "ELECTRON MODELİ"
+
+msgctxt "game_options"
+msgid "EMULATE DVD LOADING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "EMULATE PCG-8100"
@@ -6756,6 +6860,12 @@ msgid "Emulate the Wiimote pointer with a mouse."
 msgstr "Wiimote işaretçisini bir fare ile taklit et."
 
 msgctxt "game_options"
+msgid ""
+"Emulate the card reader of Ghost Squad, Gundam and the Maximum Tune games. "
+"Cards are kept in saves/chihiro/cards."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
 msgstr ""
 
@@ -6979,6 +7089,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Enable if the wheel is pushed away from centre instead of towards it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Önceden kurulu WHDLoad kurulumlarını başlatmayı etkinleştir."
 
@@ -7123,12 +7237,6 @@ msgctxt "game_options"
 msgid "Enable the debug menu and the walk-through-walls button."
 msgstr ""
 "Hata ayıklama menüsünü ve duvarların içinden geçme tuşunu etkinleştirin."
-
-msgctxt "game_options"
-msgid ""
-"Enable the legacy or the new 3D engine. Choose Legacy on x86 for older GPUs. "
-"(Not supported on ARM/GLES systems)."
-msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -7492,6 +7600,10 @@ msgid "Enhancement. Upscales textures on 3D objects."
 msgstr "İyileştirme. 3B nesnelerdeki dokuları yükselt."
 
 msgctxt "game_options"
+msgid "Enhancement. Use the compute shader."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Ensure every frame the console renders is displayed to screen."
 msgstr "Konsolun oluşturduğu her karenin ekranda görüntülendiğinden emin olun."
 
@@ -7546,6 +7658,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Export"
 msgstr "Dışa aktar"
+
+msgctxt "game_options"
+msgid "Export (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Extend the game screen area, similar to the Master System."
@@ -7676,7 +7792,15 @@ msgid "FORCE CPU BLIT EMULATION"
 msgstr ""
 
 msgctxt "game_options"
+msgid "FORCE ENVIRONMENT MAPPING"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FORCE FEEDBACK STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -7903,6 +8027,10 @@ msgctxt "game_options"
 msgid "Fast (Default)"
 msgstr ""
 
+msgctxt "game_options"
+msgid "Fast cores"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Fast forward"
 msgstr "Hızlı ileri sar"
@@ -7954,6 +8082,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fills the screen."
 msgstr "Ekranı doldurur."
+
+msgctxt "game_options"
+msgid ""
+"Finish each blit immediately rather than over the cycles the real hardware "
+"takes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Finland"
@@ -8070,6 +8204,10 @@ msgctxt "game_options"
 msgid ""
 "Fixes specific shadows and textures in the Virtua Tennis 3 and Virtua "
 "Fighter 5 franchises for non-Nvidia GPUs. May require the FPS limiter."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Flawed theory (legacy)"
 msgstr ""
 
 msgctxt "game_options"
@@ -8361,8 +8499,16 @@ msgid "Full Frame"
 msgstr "Tam Kare"
 
 msgctxt "game_options"
+msgid "Full Screen"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Full Speed (Default)"
 msgstr "Tam Hız (Varsayılan)"
+
+msgctxt "game_options"
+msgid "Full contrast"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Full speed"
@@ -8379,6 +8525,10 @@ msgstr "Fuller Joystick"
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
 msgstr "Funtech Super A'Can kartuşları"
+
+msgctxt "game_options"
+msgid "GAME"
+msgstr ""
 
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
@@ -9073,6 +9223,10 @@ msgid "HIGH-RES BLENDING"
 msgstr "YÜKSEK ÇÖZÜNÜRLÜKLÜ KARIŞTIRMA"
 
 msgctxt "game_options"
+msgid "HINT SUBTITLES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HLE"
 msgstr ""
 
@@ -9087,6 +9241,10 @@ msgstr "HLE (pixel başına)"
 msgctxt "game_options"
 msgid "HLE (per-strip)"
 msgstr "HLE (şerit başına)"
+
+msgctxt "game_options"
+msgid "HOST ADDRESS"
+msgstr ""
 
 msgctxt "game_options"
 msgid "HQ (bilinear filter)"
@@ -9131,6 +9289,10 @@ msgstr "Sabit Disk"
 msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "Hard Drive (II UX)"
+
+msgctxt "game_options"
+msgid "Hardware (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hardware (default)"
@@ -9298,6 +9460,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "How heavy the wheel turns while the game drives it."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "How many times larger the main screen is compared to the small screen in the "
 "Large Screen layout."
@@ -9394,6 +9560,10 @@ msgid "INPUT INTERFACE"
 msgstr "GİRİŞ ARAYÜZÜ"
 
 msgctxt "game_options"
+msgid "INSTANT BLITS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "INTEGER SCALE FACTOR"
 msgstr ""
 
@@ -9436,6 +9606,10 @@ msgstr "OYUN ALANI VE B2S TERS ÇEVİR"
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "EKSEN ÇEVİR"
+
+msgctxt "game_options"
+msgid "INVERT FORCE FEEDBACK"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9525,8 +9699,10 @@ msgstr ""
 "Performansı artırır ancak gecikme ve daha fazla video takılmasına neden olur."
 
 msgctxt "game_options"
-msgid "Improves performance in 3D games. Can cause glitches."
-msgstr "3D oyunlarda performansı artırır. Aksaklıklara neden olabilir."
+msgid ""
+"Improves performance in 3D games. Some games then mix up the layers of the "
+"two screens, turn it off if the screens look wrong."
+msgstr ""
 
 msgctxt "game_options"
 msgid "In Cinematics"
@@ -9639,7 +9815,9 @@ msgid "Interlaced"
 msgstr "Tam Taramalı"
 
 msgctxt "game_options"
-msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
+msgid ""
+"Internal 3D render scale. OpenGL/Vulkan only, ignored on Software. Reduced "
+"automatically if the GPU can't render that size."
 msgstr ""
 
 msgctxt "game_options"
@@ -9927,6 +10105,11 @@ msgid "Keep your top speed even when driving off-road."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Keeps reflections at full strength instead of fading them with distance."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Kempston Joystick"
 msgstr "Kempston Joystick"
 
@@ -10115,24 +10298,28 @@ msgid "LEFT STICK DEADZONE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "LETTERBOX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "LIGHT FLARES"
 msgstr "IŞIK PARLAMALARI"
 
 msgctxt "game_options"
 msgid "LIGHT GUN"
-msgstr "HAFİF SİLAH"
+msgstr "IŞIN TABANCASI"
 
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIR"
-msgstr "HAFİF SİLAH NİŞANGAH"
+msgstr "IŞIN TABANCASI NİŞANGAHI"
 
 msgctxt "game_options"
 msgid "LIGHT GUN CROSSHAIRS"
-msgstr "HAFİF SİLAH NİŞANGAHLARI"
+msgstr "IŞIN TABANCASI NİŞANGAHLARI"
 
 msgctxt "game_options"
 msgid "LIGHT GUNS"
-msgstr "HAFİF SİLAHLAR"
+msgstr "IŞIN TABANCALARI"
 
 msgctxt "game_options"
 msgid "LIGHTSABER CAMERA"
@@ -10141,10 +10328,6 @@ msgstr "IŞIN KILIÇLI KAMERA"
 msgctxt "game_options"
 msgid "LIGHTSABER CROSSHAIR"
 msgstr "IŞIN KILICI NİŞANGAH"
-
-msgctxt "game_options"
-msgid "LIMIT FPS"
-msgstr "FPS SINIRI"
 
 msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
@@ -10157,6 +10340,14 @@ msgstr "ÇİZGİ MODU"
 msgctxt "game_options"
 msgid "LINEAR UPSCALING"
 msgstr "DOĞRUSAL YÜKSELTME"
+
+msgctxt "game_options"
+msgid "LINK CABINETS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LINK PORT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "LLE"
@@ -10232,12 +10423,22 @@ msgid "Lean right"
 msgstr "Sağa eğil"
 
 msgctxt "game_options"
+msgid "Leave empty for the default 9100."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Lebanon"
 msgstr "Lübnan"
 
 msgctxt "keys_files"
 msgid "Left"
 msgstr "Sol"
+
+msgctxt "game_options"
+msgid ""
+"Left alone the game fills the display. A fixed ratio crops or pillarboxes to "
+"that shape instead."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10268,10 +10469,6 @@ msgid "Legacy Single Threaded"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Legacy3D"
-msgstr "Eski3D"
-
-msgctxt "game_options"
 msgid "Libya"
 msgstr "Libya"
 
@@ -10297,11 +10494,11 @@ msgstr "Açık Yeşil"
 
 msgctxt "game_options"
 msgid "Light Gun"
-msgstr "Silah"
+msgstr "Işın Tabancası"
 
 msgctxt "game_options"
 msgid "Light Phaser"
-msgstr "Light Phaser"
+msgstr "Işık Fazeri"
 
 msgctxt "game_options"
 msgid "Light Pink"
@@ -10313,11 +10510,11 @@ msgstr "Açık Mor"
 
 msgctxt "game_options"
 msgid "Light guns can only be used in port 2."
-msgstr "Silahlar sadece port 2 ile kullanılabilir."
+msgstr "Işın tabancaları sadece port 2 ile kullanılabilir."
 
 msgctxt "game_options"
 msgid "Light guns/multitap."
-msgstr "Silah/multitap."
+msgstr "Işın tabancaları/multitap."
 
 msgctxt "game_options"
 msgid "Light threshold for forcing shadergen"
@@ -10336,10 +10533,6 @@ msgid "Lime"
 msgstr "Yeşil"
 
 msgctxt "game_options"
-msgid "Limit FPS to reduce high CPU usage."
-msgstr "Yüksek CPU kullanımını azaltmak için FPS sınırlayın."
-
-msgctxt "game_options"
 msgid ""
 "Limiting to 1 or 2 threads can fix audio stuttering on lower core count "
 "CPUs. Leave on Auto (0) if slowdown occurs."
@@ -10356,6 +10549,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Linear filtering"
 msgstr "Doğrusal filtreleme"
+
+msgctxt "game_options"
+msgid ""
+"Link up to 4 cabinets (Ollie King, OutRun 2, OutRun 2 SP, Maximum Tune 1 & "
+"2). Needs ver1305.bin in bios/chihiro."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Lithuania"
@@ -10850,7 +11049,7 @@ msgstr "Harita"
 
 msgctxt "game_options"
 msgid "Map controller inputs to light gun inputs."
-msgstr "Kontrolcü girdilerini silah girdileri için eşle."
+msgstr "Kontrolcü girdilerini ışın tabancası girdileri için eşle."
 
 msgctxt "game_options"
 msgid "Map your controller to an emulated Wiimote."
@@ -10869,6 +11068,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Match Window"
 msgstr "Eşleme Penceresi"
+
+msgctxt "game_options"
+msgid ""
+"Match the colours to the way the console's video output looks on a real "
+"display."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Matra & Hachette Alice"
@@ -11051,7 +11256,7 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Menacer Light Gun"
-msgstr "Tehditkar Silah"
+msgstr "Menacer Işın Tabancası"
 
 msgctxt "keys_files"
 msgid "Menu back"
@@ -11315,6 +11520,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Multisample anti-aliasing. Costs fill rate, so drop it on weaker GPUs."
+msgstr ""
+
+msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
 
@@ -11479,6 +11688,10 @@ msgid "NTSYNC"
 msgstr "NTSYNC"
 
 msgctxt "game_options"
+msgid "NUMBER OF CABINETS"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
 msgstr ""
@@ -11499,6 +11712,10 @@ msgstr "NZ-CHAT"
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "Namco GunCon"
+
+msgctxt "game_options"
+msgid "Name the speaker alongside each subtitle."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11615,10 +11832,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "New Zealand"
 msgstr "Yeni Zelanda"
-
-msgctxt "game_options"
-msgid "New3D"
-msgstr "Yeni3D"
 
 msgctxt "keys_files"
 msgid "Next Force Power"
@@ -11831,7 +12044,23 @@ msgid "ORIGINAL FONTS"
 msgstr ""
 
 msgctxt "game_options"
+msgid "ORIGINAL HINTS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL LOD DISTANCES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ORIGINAL LOGOS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL PARTICLE CAP"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL SHADOWS"
 msgstr ""
 
 msgctxt "game_options"
@@ -11931,8 +12160,25 @@ msgid "Off at Start"
 msgstr "Açılışta kapalı"
 
 msgctxt "game_options"
+msgid "Off casts shadows from objects the PS2 could not afford to."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off enables the extra gameplay hints added by the PC port."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Kapalı olması daha güvenlidir, belirli oyunlar için Açık."
+
+msgctxt "game_options"
+msgid ""
+"Off pushes the level-of-detail transitions further out than the PS2 did."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off raises the PS2's particle limit."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11954,6 +12200,10 @@ msgctxt "game_options"
 msgid ""
 "Offloads RSX draw commands to a secondary thread. Improves performance on "
 "CPUs with 6+ threads."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Offscreen Only (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -12210,6 +12460,10 @@ msgstr "ANALOG ÇUBUK PEDAL HASSASİYETİ"
 msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
 msgstr "D-PAD PEDAL HASSASİYETİ"
+
+msgctxt "game_options"
+msgid "PADDLE EMULATION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PADDLE JOYPAD SENSITIVITY"
@@ -12524,6 +12778,10 @@ msgid "PS1 Digital Controller"
 msgstr "PS1 Dijital Kontrolcü"
 
 msgctxt "game_options"
+msgid "PS2 FIDELITY"
+msgstr ""
+
+msgctxt "game_options"
 msgid "PS3"
 msgstr ""
 
@@ -12554,6 +12812,11 @@ msgstr "PVM Stili (FirebrandX)"
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
 msgstr "PVM_20M2U/D93"
+
+msgctxt "game_options"
+msgid ""
+"Pad the frame to the chosen aspect instead of stretching it to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Paddle Control"
@@ -13315,6 +13578,10 @@ msgid "RGB Color Low/Medium-Resolution"
 msgstr ""
 
 msgctxt "game_options"
+msgid "RGB Image"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RIGHT STICK DEADZONE"
 msgstr ""
 
@@ -13521,6 +13788,12 @@ msgstr "Çokgenleri ve dokuları doğal çözünürlükte işler."
 msgctxt "game_options"
 msgid "Replace meshed transparency by real transparency."
 msgstr "Örgülü saydamlığı gerçek saydamlıkla değiştirin."
+
+msgctxt "game_options"
+msgid ""
+"Reproduces the original disc read speed, including the loading pauses it "
+"caused."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Required by some games."
@@ -13879,10 +14152,6 @@ msgid "SCREEN PROPORTION"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "EKRAN ORANI"
-
-msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "EKRANI DÖNDÜR"
 
@@ -14024,7 +14293,7 @@ msgstr "LID DURUMUNU GÖSTER"
 
 msgctxt "game_options"
 msgid "SHOW LIGHT GUN CROSSHAIRS"
-msgstr "SİLAH HEDEF İMLECİNİ GÖSTER"
+msgstr "IŞIN TABANCASI HEDEF İMLECİNİ GÖSTER"
 
 msgctxt "game_options"
 msgid "SHOW ON-SCREEN DISPLAY MESSAGES"
@@ -14183,6 +14452,10 @@ msgid "SP"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SPEAKER NAMES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "ÖZEL KONTROL DÜZENLERİ"
 
@@ -14204,6 +14477,10 @@ msgstr "HIZ GELİŞTİRMESİ"
 
 msgctxt "game_options"
 msgid "SPEEDHACKS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SPEEDRUNNER MODE"
 msgstr ""
 
 msgctxt "game_options"
@@ -14417,6 +14694,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Scale to best fit"
 msgstr "En uygun sığacak şekilde ölçeklendir"
+
+msgctxt "game_options"
+msgid "Scale to best fit (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Scale2x"
@@ -14640,9 +14921,13 @@ msgid ""
 msgstr "Taklit edilecek donanım mimarisi makine tipini ve mimarisini seçin."
 
 msgctxt "game_options"
+msgid "Select the firmware language."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
-"Select the graphics rendering backend (requires New3D engine). Vulkan can "
-"provide improved performance and lower CPU overhead on supported GPUs."
+"Select the graphics rendering backend. Vulkan can provide improved "
+"performance and lower CPU overhead on supported GPUs."
 msgstr ""
 
 msgctxt "game_options"
@@ -15082,6 +15367,11 @@ msgid "Shows or hides the menu bar"
 msgstr "Menü çubuğunu gösterir veya gizler"
 
 msgctxt "game_options"
+msgid ""
+"Shows the in-game timer and disables anything that would invalidate a run."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Shrink/expand tattoo to fit within the bezel's border."
 msgstr "Dövmeyi çerçevenin kenarına sığacak şekilde küçültün/genişletin."
 
@@ -15136,10 +15426,6 @@ msgstr "Basit"
 msgctxt "game_options"
 msgid "Simple (interpreter for old real-mode games)"
 msgstr "Basit (eski gerçekçi-mod oyunları için yorumlayıcı)"
-
-msgctxt "game_options"
-msgid "Simple 2x"
-msgstr "Basit 2x"
 
 msgctxt "game_options"
 msgid "Simplified Chinese"
@@ -15609,6 +15895,10 @@ msgid "Sprawl Relay (Brazil)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Spring the wheel back to centre while the game is not driving it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Square Pixel"
 msgstr ""
 
@@ -15701,6 +15991,10 @@ msgid "Stereo sound output."
 msgstr ""
 
 msgctxt "game_options"
+msgid "Stipple (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Store past states to rewind to in realtime, if the core supports it."
 msgstr ""
 "Çekirdek destekliyorsa, gerçek zamanlı olarak geri sarmak için geçmiş "
@@ -15730,10 +16024,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Uzat"
-
-msgctxt "game_options"
-msgid "Stretch games to full-screen, but may distort the aspect ratio"
-msgstr "Oyunları tam ekrana uzatın, bu en boy oranını bozabilir"
 
 msgctxt "game_options"
 msgid "Stretch image output to fill the window/screen."
@@ -15779,6 +16069,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Strong"
 msgstr "Güçlü"
+
+msgctxt "game_options"
+msgid "Subtitle the spoken hints that play outside cutscenes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Super Action Controller"
@@ -15974,6 +16268,10 @@ msgid "System requirements at native; (RAM|VRAM)."
 msgstr "Yerel sistem gereksinimleri; (RAM|VRAM)."
 
 msgctxt "game_options"
+msgid "TARGET FRAME RATE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TARGET LANGUAGE"
 msgstr "HEDEF DİL"
 
@@ -16082,6 +16380,10 @@ msgid "TEXTURE UPSCALING TYPE"
 msgstr "DOKU YÜKSELTME TÜRÜ"
 
 msgctxt "game_options"
+msgid "THIS CABINET"
+msgstr ""
+
+msgctxt "game_options"
 msgid "THREAD SCHEDULER MODE"
 msgstr ""
 
@@ -16157,6 +16459,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "ÇALIŞTIRICI MODU"
+
+msgctxt "game_options"
+msgid "TRANSLUCENCY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
@@ -16361,12 +16667,22 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "The address of cabinet 1. Leave empty on cabinet 1."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
 "help reduce unintended inputs."
 msgstr ""
 "Girişin dikkate alınmadığı joystick'in nötr konumu etrafındaki alan. "
 "İstenmeyen girdilerin azaltılmasına yardımcı olabilir."
+
+msgctxt "game_options"
+msgid ""
+"The cabinet's region. If a game does not support it, the first region it "
+"does support is used, checking Export, then USA, then Japan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
@@ -16381,9 +16697,20 @@ msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr "Wii'nin benzetilmiş NAND ayarıyla ilgisi olmayan son çıktı görüntüsü."
 
 msgctxt "game_options"
+msgid "The game is uncapped, this is the rate it aims for."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The game's jolts plus a buzz rising with steering, on a regular gamepad. "
 "Driving games only."
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid ""
+"The hardware draws see-through surfaces as a checkerboard. Blended draws the "
+"50% see-through it's trying to achieve. OpenGL/Vulkan only."
 msgstr ""
 
 msgctxt "game_options"
@@ -16633,6 +16960,10 @@ msgctxt "keys_files"
 msgid "Turn left"
 msgstr "Sağa çevir"
 
+msgctxt "game_options"
+msgid "Turn off to silence the audio coprocessor entirely."
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Turn right"
 msgstr "Sola çevir"
@@ -16704,10 +17035,6 @@ msgid "UI KEYS"
 msgstr "ARAYÜZ TUŞLARI"
 
 msgctxt "game_options"
-msgid "UI PROMPTS"
-msgstr "ARAYÜZ İSTEMLERİ"
-
-msgctxt "game_options"
 msgid "UK"
 msgstr "UK"
 
@@ -16749,7 +17076,7 @@ msgstr "YAZILIM AYARLARINI KULLAN"
 
 msgctxt "game_options"
 msgid "USE LIGHT GUNS"
-msgstr "SİLAH KULLAN"
+msgstr "IŞIN TABANCASI KULLAN"
 
 msgctxt "game_options"
 msgid "USE MOUSE FOR PADDLE 1"
@@ -16998,6 +17325,10 @@ msgid "Unscaled (Default)"
 msgstr "Ölçeklenmemiş (Varsayılan)"
 
 msgctxt "game_options"
+msgid "Unscaled capture (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Zaman Aşımına Kadar"
 
@@ -17164,7 +17495,7 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Use light guns instead of pads if light guns are connected."
-msgstr "Eğer silah bağlı ise padlerin yerine silah kullan."
+msgstr "Işın tabancası bağlı ise padlerin yerine ışın tabancası kullan."
 
 msgctxt "game_options"
 msgid "Use new graphics created from CorsixTH project"
@@ -17201,6 +17532,10 @@ msgid ""
 msgstr ""
 "Bağımsız MAME ile aynı görsel yollarını kullanın - dekorasyon veya "
 "gölgelendirici kullanıyorsanız önerilmez."
+
+msgctxt "game_options"
+msgid "Use the software renderer when the hardware one misbehaves."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -17315,6 +17650,10 @@ msgstr "VBI ATLA"
 
 msgctxt "game_options"
 msgid "VBLANK FREQUENCY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "VERBOSE LOGGING"
 msgstr ""
 
 msgctxt "game_options"
@@ -17618,6 +17957,10 @@ msgid "WHEEL"
 msgstr ""
 
 msgctxt "game_options"
+msgid "WHEEL AUTO-CENTRE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL DEADZONE"
 msgstr "DİREKSİYON ÖLÜ BÖLGESİ"
 
@@ -17652,6 +17995,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
 msgstr "DİREKSİYON HASSASİYETİ"
+
+msgctxt "game_options"
+msgid "WHEEL WEIGHT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEELS"
@@ -17765,6 +18112,12 @@ msgid ""
 msgstr "%100'ün dışında çalışırken kareleri düşürmek yerine sıcaklığı ayarlar."
 
 msgctxt "game_options"
+msgid ""
+"Which cores the emulator may run on. Fast cores keeps it off the slow "
+"efficiency cores of a big.LITTLE CPU, for emulators bound by a single thread."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Which rectangle the frame is fit into."
 msgstr ""
 
@@ -17783,6 +18136,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "Geniş Ekran (16:9)"
+
+msgctxt "game_options"
+msgid "Widescreen or the original 4:3 view."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -17852,6 +18209,12 @@ msgid "Works with 'Cycle-exact' mode and for a few games."
 msgstr "'Tam-döngü' modu ile ve birkaç oyun için çalışır."
 
 msgctxt "game_options"
+msgid ""
+"Write debug-level runtime logging to the batocera launch log. Useful when a "
+"game will not boot."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Write protect virtual SD card"
 msgstr ""
 
@@ -17900,6 +18263,18 @@ msgstr "Y = Ateş, B = Yukarı"
 msgctxt "game_options"
 msgid "YES"
 msgstr "EVET"
+
+msgctxt "game_options"
+msgid "YUV 420"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 422"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 444"
+msgstr ""
 
 msgctxt "game_options"
 msgid "YUV v3 (Firebrand)"
@@ -18456,6 +18831,10 @@ msgstr "sarı/mavi"
 #~ msgstr "2x Doğal (1280x1056) 720p"
 
 #~ msgctxt "game_options"
+#~ msgid "3D ENGINE"
+#~ msgstr "3D MOTORU"
+
+#~ msgctxt "game_options"
 #~ msgid "3x Native (1920x1584) for 1080p"
 #~ msgstr "3x Doğal (1920x1584) 1080p"
 
@@ -18611,6 +18990,14 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Area Sampling"
 #~ msgstr "Alan Örneklemesi"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Arrange the dual screen layout. Separate windows can be changed with "
+#~ "Hotkey+R2."
+#~ msgstr ""
+#~ "Çift ekran düzenini düzenleyin. Ayrı pencereler Kısayol Tuşu+R2 ile "
+#~ "değiştirilebilir."
 
 #~ msgctxt "game_options"
 #~ msgid "Async (multi threaded)(Default)"
@@ -19152,6 +19539,10 @@ msgstr "sarı/mavi"
 #~ "Oyun çökerse, ASMJIT'i dene. Hala sorun yaşanıyorsa, Hızlı Yorumcuyu dene."
 
 #~ msgctxt "game_options"
+#~ msgid "Improves performance in 3D games. Can cause glitches."
+#~ msgstr "3D oyunlarda performansı artırır. Aksaklıklara neden olabilir."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Internal accelerometer. Disable if you experience random tilts or "
 #~ "unexpected ball behavior."
@@ -19184,6 +19575,10 @@ msgstr "sarı/mavi"
 #~ msgstr "En Boy Oranını Koru (Varsayılan)"
 
 #~ msgctxt "game_options"
+#~ msgid "LIMIT FPS"
+#~ msgstr "FPS SINIRI"
+
+#~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
 #~ msgstr "DOĞRUSAL FİLTRELEME"
 
@@ -19198,6 +19593,14 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Legacy (single threaded)"
 #~ msgstr "Eski (tek iş parçacıklı)"
+
+#~ msgctxt "game_options"
+#~ msgid "Legacy3D"
+#~ msgstr "Eski3D"
+
+#~ msgctxt "game_options"
+#~ msgid "Limit FPS to reduce high CPU usage."
+#~ msgstr "Yüksek CPU kullanımını azaltmak için FPS sınırlayın."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19288,6 +19691,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "game_options"
 #~ msgid "Nearest-neighbor"
 #~ msgstr "En yakın nokta"
+
+#~ msgctxt "game_options"
+#~ msgid "New3D"
+#~ msgstr "Yeni3D"
 
 #~ msgctxt "keys_files"
 #~ msgid "Next disk"
@@ -19529,6 +19936,10 @@ msgstr "sarı/mavi"
 #~ "çalıştırın."
 
 #~ msgctxt "game_options"
+#~ msgid "SCREEN RATIO"
+#~ msgstr "EKRAN ORANI"
+
+#~ msgctxt "game_options"
 #~ msgid "SHADER MODE"
 #~ msgstr "GÖLGELENDİRİCİ MODU"
 
@@ -19610,6 +20021,10 @@ msgstr "sarı/mavi"
 #~ "yüklü değilse çalışır."
 
 #~ msgctxt "game_options"
+#~ msgid "Simple 2x"
+#~ msgstr "Basit 2x"
+
+#~ msgctxt "game_options"
 #~ msgid "Sine"
 #~ msgstr "Sinüs"
 
@@ -19648,6 +20063,10 @@ msgstr "sarı/mavi"
 #~ msgstr ""
 #~ "Dokuyu paralel olarak GPU üstüne aktarın. Daha fazla boş alana sahip daha "
 #~ "güçlü GPU üstünde performansı artırabilir."
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
+#~ msgstr "Oyunları tam ekrana uzatın, bu en boy oranını bozabilir"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
@@ -19746,6 +20165,10 @@ msgstr "sarı/mavi"
 #~ msgctxt "keys_files"
 #~ msgid "Turn Right"
 #~ msgstr "Sağa Çevir"
+
+#~ msgctxt "game_options"
+#~ msgid "UI PROMPTS"
+#~ msgstr "ARAYÜZ İSTEMLERİ"
 
 #~ msgctxt "game_options"
 #~ msgid "UPSCALE MODE"

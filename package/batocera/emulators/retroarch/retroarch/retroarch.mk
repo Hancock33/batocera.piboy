@@ -3,11 +3,12 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Sept 26, 2026
-RETROARCH_VERSION = 2a4bd2162f632ec7ad96b8b70ede7d6c9f1cced0
+# Version: Commits on Oct 07, 2026
+RETROARCH_VERSION = 617ccd0c580b9af81f18392420bb4c3b0224a3d3
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
-RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts
+RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts \
+			 batocera-launch-libretro
 # install in staging for debugging (gdb)
 RETROARCH_INSTALL_STAGING = YES
 
@@ -70,7 +71,7 @@ ifeq ($(BR2_PACKAGE_UDEV),y)
     RETROARCH_DEPENDENCIES += udev
 endif
 
-ifeq ($(BR2_PACKAGE_WAYLAND),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
     RETROARCH_CONF_OPTS += --enable-wayland
 else
     RETROARCH_CONF_OPTS += --disable-wayland

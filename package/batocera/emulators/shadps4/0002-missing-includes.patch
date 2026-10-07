@@ -1,0 +1,66 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 98ee1dd7..c650eb45 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -260,7 +260,7 @@ if (ENABLE_SYSTEM_LIBRARIES)
+     find_package(ZLIB 1.3 MODULE)
+     find_package(Zydis 5.0.0 MODULE)
+     find_package(pugixml 1.14 CONFIG)
+-    find_package(absl 20250512.1 CONFIG)
++    find_package(absl 20260817 CONFIG)
+     if (APPLE)
+         find_package(date 3.0.1 CONFIG)
+         find_package(epoll-shim 3.14 CONFIG)
+diff --git a/src/video_core/host_shaders/CMakeLists.txt b/src/video_core/host_shaders/CMakeLists.txt
+index 1f4d3bc4..04ad9fc2 100644
+--- a/src/video_core/host_shaders/CMakeLists.txt
++++ b/src/video_core/host_shaders/CMakeLists.txt
+@@ -2,9 +2,9 @@
+ # SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ if (TARGET glslang-standalone)
+-    set(GLSLANG_COMPILER glslang-standalone)
++    set(GLSLANG_COMPILER glslang)
+ elseif (TARGET glslang::glslang-standalone)
+-    set(GLSLANG_COMPILER glslang::glslang-standalone)
++    set(GLSLANG_COMPILER glslang::glslang)
+ endif()
+ 
+ set(SHADER_INCLUDE ${CMAKE_CURRENT_BINARY_DIR}/include)
+diff --git a/src/core/loader/elf.cpp b/src/core/loader/elf.cpp
+index 705cea558a4..f3925fb53d4 100644
+--- a/src/core/loader/elf.cpp
++++ b/src/core/loader/elf.cpp
+@@ -1,7 +1,7 @@
+ // SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+ // SPDX-License-Identifier: GPL-2.0-or-later
+ 
+-#include <fmt/core.h>
++#include <fmt/format.h>
+ #include "common/assert.h"
+ #include "common/logging/log.h"
+ #include "core/file_sys/backends/host_fs.h"
+diff --git a/src/video_core/amdgpu/regs.cpp b/src/video_core/amdgpu/regs.cpp
+index 7454eafcd68..656cd2a4eab 100644
+--- a/src/video_core/amdgpu/regs.cpp
++++ b/src/video_core/amdgpu/regs.cpp
+@@ -1,6 +1,7 @@
+ // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
+ // SPDX-License-Identifier: GPL-2.0-or-later
+ 
++#include <cstring>
+ #include "video_core/amdgpu/regs.h"
+ 
+ namespace AmdGpu {
+diff --git a/src/video_core/amdgpu/resource.h b/src/video_core/amdgpu/resource.h
+index 50c8d47bc9e..2ec535f5300 100644
+--- a/src/video_core/amdgpu/resource.h
++++ b/src/video_core/amdgpu/resource.h
+@@ -3,6 +3,7 @@
+ 
+ #pragma once
+ 
++#include <cstring>
+ #include "common/alignment.h"
+ #include "common/assert.h"
+ #include "common/bit_field.h"

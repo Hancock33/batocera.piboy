@@ -11,13 +11,12 @@ LIBRETRO_CORE_INFO_LICENSE = MIT
 define LIBRETRO_CORE_INFO_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mv $(@D)/bsnes_hd_beta_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/bsnes_hd_libretro.info
-	cp $(@D)/ep128emu_core_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/ep128emu_core_libretro.info
-	mv $(@D)/ep128emu_core_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/ep128emu-core_libretro.info
+	mv $(@D)/ep128emu_core_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/ep128emu_libretro.info
 	cp $(@D)/genesis_plus_gx_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/genesisplusgx-expanded_libretro.info
 	mv $(@D)/genesis_plus_gx_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/genesisplusgx_libretro.info
 	mv $(@D)/genesis_plus_gx_wide_libretro.info $(TARGET_DIR)/usr/share/libretro/info/genesisplusgx-wide_libretro.info
-	cp $(@D)/mame_libretro.info					$(TARGET_DIR)/usr/share/libretro/info/mess_libretro.info
-	mv $(@D)/mame_libretro.info					$(TARGET_DIR)/usr/share/libretro/info/mamevirtual_libretro.info
+	cp $(@D)/mamemess_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/mess_libretro.info
+	cp $(@D)/mame_libretro.info					$(TARGET_DIR)/usr/share/libretro/info/mamevirtual_libretro.info
 	cp $(@D)/mame2000_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/imame4all_libretro.info
 	mv $(@D)/mame2003_plus_libretro.info		$(TARGET_DIR)/usr/share/libretro/info/mame078plus_libretro.info
 	mv $(@D)/mame2010_libretro.info				$(TARGET_DIR)/usr/share/libretro/info/mame0139_libretro.info

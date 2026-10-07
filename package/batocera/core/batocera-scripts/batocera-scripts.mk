@@ -17,11 +17,6 @@ ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
     BATOCERA_SCRIPTS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SCRIPTS_INSTALL_MOUSE
 endif
 
-ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_SWAY),y)
-    BATOCERA_SCRIPTS_MOUSE_TYPE=wayland-sway
-    BATOCERA_SCRIPTS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SCRIPTS_INSTALL_MOUSE
-endif
-
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND_LABWC),y)
     BATOCERA_SCRIPTS_MOUSE_TYPE=wayland-labwc
     BATOCERA_SCRIPTS_DEPENDENCIES+= wtype
@@ -30,7 +25,7 @@ endif
 
 ###
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SDM845)$(BR2_PACKAGE_BATOCERA_TARGET_SM4450)$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)$(BR2_PACKAGE_BATOCERA_TARGET_SM8550)$(BR2_PACKAGE_BATOCERA_TARGET_SM8750),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SDM845)$(BR2_PACKAGE_BATOCERA_TARGET_SM4450)$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)$(BR2_PACKAGE_BATOCERA_TARGET_SM8550)$(BR2_PACKAGE_BATOCERA_TARGET_SM8650)$(BR2_PACKAGE_BATOCERA_TARGET_SM8750),y)
   BATOCERA_SCRIPTS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SCRIPTS_INSTALL_QCOM
 endif
 
@@ -55,6 +50,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-autologin                     $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-brightness                    $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cpucores                      $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cpucores-toggle               $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-config                        $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-cores                         $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-encode                        $(TARGET_DIR)/usr/bin/
@@ -75,7 +71,6 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-padsinfo                      $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-part                          $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-planemode                     $(TARGET_DIR)/usr/bin/
-	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-power-mode                    $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-save-overlay                  $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-services                      $(TARGET_DIR)/usr/bin/
 	install -m 0755 $(BATOCERA_SCRIPTS_CP_PATH)/scripts/batocera-shutdown                      $(TARGET_DIR)/usr/bin/

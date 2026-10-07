@@ -1,8 +1,8 @@
 diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
-index f283626850..24312ddabc 100644
+index bf066740ec..0fab02e3fa 100644
 --- a/frontend/drivers/platform_unix.c
 +++ b/frontend/drivers/platform_unix.c
-@@ -44,7 +44,7 @@
+@@ -45,7 +45,7 @@
  #if defined(__linux__) && !defined(ANDROID) && __STDC_VERSION__ >= 199901L \
        && (!defined(HAVE_CONFIG_H) || defined(HAVE_GAMEMODE))
  #include "../../deps/feralgamemode/gamemode_client.h"

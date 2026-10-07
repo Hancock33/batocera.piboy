@@ -825,6 +825,10 @@ msgid "1x native (640x528)"
 msgstr "1배 원본 (640x528)"
 
 msgctxt "game_options"
+msgid "2 (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2 Frames"
 msgstr "2 프레임"
 
@@ -1394,10 +1398,6 @@ msgid "3D Control Pad (Analog)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "3D ENGINE"
-msgstr "3D 엔진"
-
-msgctxt "game_options"
 msgid "3D TEXTURE FILTER"
 msgstr ""
 
@@ -1512,6 +1512,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "40 MHz"
 msgstr "40 MHz"
+
+msgctxt "game_options"
+msgid "40% (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "400p"
@@ -1730,6 +1734,10 @@ msgid "50 fps"
 msgstr "50 fps"
 
 msgctxt "game_options"
+msgid "50% (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "50% (Underclock)"
 msgstr ""
 
@@ -1851,6 +1859,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "6.75x (6480x3672)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2108,6 +2120,10 @@ msgstr "8k"
 msgctxt "game_options"
 msgid "8th"
 msgstr "8일"
+
+msgctxt "game_options"
+msgid "8x (4K)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
@@ -2515,6 +2531,10 @@ msgid "AUDIO CHANNELS"
 msgstr "오디오 채널"
 
 msgctxt "game_options"
+msgid "AUDIO COPROCESSOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "AUDIO DRIVER"
 msgstr "오디오 드라이버"
 
@@ -2892,6 +2912,10 @@ msgid "All Timers"
 msgstr "모든 타이머"
 
 msgctxt "game_options"
+msgid "All cores"
+msgstr ""
+
+msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
 msgstr "가능한 모든 라이선스 (권장하지 않음)"
 
@@ -2902,6 +2926,10 @@ msgstr "모든 음성 해설"
 msgctxt "game_options"
 msgid "Allow cores to set rotation."
 msgstr "코어가 회전을 설정하도록 허용합니다."
+
+msgctxt "game_options"
+msgid "Allow opening the developer menu."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -3179,6 +3207,10 @@ msgid "Apply gouraud shading instead of flat shading."
 msgstr "플랫 셰이딩 대신 구로 셰이딩을 적용하세요."
 
 msgctxt "game_options"
+msgid "Apply one of the game's built-in shaders."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Apply texture filtering to enhance visual quality. Some filters may "
 "significantly impact performance."
@@ -3282,10 +3314,9 @@ msgstr "듀얼 스크린 레이아웃을 처리합니다."
 
 msgctxt "game_options"
 msgid ""
-"Arrange the dual screen layout. Separate windows can be changed with "
-"Hotkey+R2."
+"Arrange the dual screen layout. Defaults to separate windows when a second "
+"screen is connected. Separate windows can be changed with Hotkey+R2."
 msgstr ""
-"듀얼 스크린 레이아웃을 정렬합니다. 핫키+R2로 별도의 창을 변경할 수 있습니다."
 
 msgctxt "game_options"
 msgid "Arrows"
@@ -3872,6 +3903,10 @@ msgid "Blend (Top Field First)"
 msgstr "혼합 (상단 필드 먼저)"
 
 msgctxt "game_options"
+msgid "Blended"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr "블록형 필터링"
 
@@ -4126,6 +4161,14 @@ msgid "C64 PAL Automatic"
 msgstr "C64 PAL 자동"
 
 msgctxt "game_options"
+msgid "CABINET"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CABINET LINK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CABINET OUTPUTS"
 msgstr ""
 
@@ -4262,8 +4305,16 @@ msgid "COLORIZATION"
 msgstr "색상화"
 
 msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
 msgstr "전투 난이도"
+
+msgctxt "game_options"
+msgid "COMPUTE SHADER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
@@ -4458,6 +4509,10 @@ msgid "CPU CORE METHOD"
 msgstr "CPU 코어 방식"
 
 msgctxt "game_options"
+msgid "CPU CORES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU CYCLES"
 msgstr "CPU CYCLES"
 
@@ -4550,6 +4605,10 @@ msgid "CRT FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT GAMMA"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT 고스팅 효과"
 
@@ -4567,6 +4626,14 @@ msgstr "CRT 스위치"
 
 msgctxt "game_options"
 msgid "CRT Shader."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yee64"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yeetron"
 msgstr ""
 
 msgctxt "game_options"
@@ -4659,6 +4726,10 @@ msgstr "사이버모프"
 
 msgctxt "game_options"
 msgid "CYCLE EXACT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cabinet 1 is the host, the others connect to it."
 msgstr ""
 
 msgctxt "game_options"
@@ -4918,6 +4989,10 @@ msgid "Charger plugged"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Cheap HDMI converter"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Chile"
 msgstr "칠레"
 
@@ -5057,6 +5132,14 @@ msgid "Choose the combat difficulty."
 msgstr "전투 난이도를 선택하세요."
 
 msgctxt "game_options"
+msgid "Choose the controller 1 user mode."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose the controller 2 user mode."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns and steering wheels. SDL2 for gamepads only."
@@ -5138,10 +5221,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "텍스처 필터 유형을 선택하세요."
-
-msgctxt "game_options"
-msgid "Choose to display UI prompts or accept defaults automatically."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
@@ -5321,6 +5400,10 @@ msgstr "클래식 컨트롤러 프로"
 msgctxt "game_options"
 msgid "Classic Software"
 msgstr "클래식 소프트웨어"
+
+msgctxt "game_options"
+msgid "Clean"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
@@ -5504,8 +5587,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Controls the New3D rendering resolution (1x scale = 496x384). Default is 0 "
-"(Set Resolution) on x86_64 and 1 on ARM. Requires New3D engine."
+"Controls the rendering resolution (1x scale = 496x384). Default is 0 (Set "
+"Resolution) on x86_64 and 1 on ARM."
 msgstr ""
 
 msgctxt "game_options"
@@ -5727,6 +5810,10 @@ msgstr "상세한 셰이더"
 msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "개발자 메뉴"
+
+msgctxt "game_options"
+msgid "DEVELOPER MENU"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DIFFICULTY"
@@ -5979,6 +6066,10 @@ msgstr "진보라색"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "어두워짐"
+
+msgctxt "game_options"
+msgid "Darken the picture the way a cabinet monitor does."
+msgstr ""
 
 msgctxt "game_options"
 msgid "De-Interlaced"
@@ -6357,6 +6448,16 @@ msgstr ""
 "게임은 기본적으로 일본어로 설정됩니다."
 
 msgctxt "game_options"
+msgid ""
+"Drive board force feedback on a wheel, rumble on a pad (OutRun 2, Maximum "
+"Tune)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Drive the GameTank paddle with the mouse, for the games that use it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Driving Force"
 msgstr "드라이빙 포스"
 
@@ -6465,6 +6566,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "ELECTRON MODEL"
 msgstr "일렉트론 모델"
+
+msgctxt "game_options"
+msgid "EMULATE DVD LOADING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "EMULATE PCG-8100"
@@ -6738,6 +6843,12 @@ msgid "Emulate the Wiimote pointer with a mouse."
 msgstr "위모트 포인터를 마우스로 에뮬레이트합니다."
 
 msgctxt "game_options"
+msgid ""
+"Emulate the card reader of Ghost Squad, Gundam and the Maximum Tune games. "
+"Cards are kept in saves/chihiro/cards."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
 msgstr ""
 
@@ -6954,6 +7065,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Enable if the wheel is pushed away from centre instead of towards it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "사전 설치된 WHDLoad 설치 시작을 활성화합니다."
 
@@ -7094,12 +7209,6 @@ msgstr "아래의 커스텀 값을 활성화합니다."
 msgctxt "game_options"
 msgid "Enable the debug menu and the walk-through-walls button."
 msgstr "디버그 메뉴와 벽 통과 버튼을 활성화합니다."
-
-msgctxt "game_options"
-msgid ""
-"Enable the legacy or the new 3D engine. Choose Legacy on x86 for older GPUs. "
-"(Not supported on ARM/GLES systems)."
-msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -7442,6 +7551,10 @@ msgid "Enhancement. Upscales textures on 3D objects."
 msgstr "향상. 3D 개체의 텍스처를 업스케일합니다."
 
 msgctxt "game_options"
+msgid "Enhancement. Use the compute shader."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Ensure every frame the console renders is displayed to screen."
 msgstr "콘솔이 렌더링하는 모든 프레임이 화면에 표시되는지 확인하세요."
 
@@ -7496,6 +7609,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Export"
 msgstr "내보내기"
+
+msgctxt "game_options"
+msgid "Export (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Extend the game screen area, similar to the Master System."
@@ -7626,7 +7743,15 @@ msgid "FORCE CPU BLIT EMULATION"
 msgstr ""
 
 msgctxt "game_options"
+msgid "FORCE ENVIRONMENT MAPPING"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FORCE FEEDBACK STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -7853,6 +7978,10 @@ msgctxt "game_options"
 msgid "Fast (Default)"
 msgstr ""
 
+msgctxt "game_options"
+msgid "Fast cores"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Fast forward"
 msgstr "빠른 전진"
@@ -7903,6 +8032,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fills the screen."
 msgstr "화면을 가득 채웁니다."
+
+msgctxt "game_options"
+msgid ""
+"Finish each blit immediately rather than over the cycles the real hardware "
+"takes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Finland"
@@ -8018,6 +8153,10 @@ msgctxt "game_options"
 msgid ""
 "Fixes specific shadows and textures in the Virtua Tennis 3 and Virtua "
 "Fighter 5 franchises for non-Nvidia GPUs. May require the FPS limiter."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Flawed theory (legacy)"
 msgstr ""
 
 msgctxt "game_options"
@@ -8309,8 +8448,16 @@ msgid "Full Frame"
 msgstr "풀 프레임"
 
 msgctxt "game_options"
+msgid "Full Screen"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Full Speed (Default)"
 msgstr "전속력 (기본)"
+
+msgctxt "game_options"
+msgid "Full contrast"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Full speed"
@@ -8327,6 +8474,10 @@ msgstr "풀러 조이스틱"
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
 msgstr "펀테크 슈퍼 아칸 카트리지"
+
+msgctxt "game_options"
+msgid "GAME"
+msgstr ""
 
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
@@ -9022,6 +9173,10 @@ msgid "HIGH-RES BLENDING"
 msgstr "고해상도 혼합"
 
 msgctxt "game_options"
+msgid "HINT SUBTITLES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HLE"
 msgstr ""
 
@@ -9036,6 +9191,10 @@ msgstr "고수준 에뮬레이션 (픽셀당)"
 msgctxt "game_options"
 msgid "HLE (per-strip)"
 msgstr "고수준 에뮬레이션 (스트립당)"
+
+msgctxt "game_options"
+msgid "HOST ADDRESS"
+msgstr ""
 
 msgctxt "game_options"
 msgid "HQ (bilinear filter)"
@@ -9080,6 +9239,10 @@ msgstr "하드 디스크"
 msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "하드 드라이브 (II UX)"
+
+msgctxt "game_options"
+msgid "Hardware (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hardware (default)"
@@ -9245,6 +9408,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "How heavy the wheel turns while the game drives it."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "How many times larger the main screen is compared to the small screen in the "
 "Large Screen layout."
@@ -9340,6 +9507,10 @@ msgid "INPUT INTERFACE"
 msgstr "입력 인터페이스"
 
 msgctxt "game_options"
+msgid "INSTANT BLITS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "INTEGER SCALE FACTOR"
 msgstr ""
 
@@ -9382,6 +9553,10 @@ msgstr "플레이필드 및 B2S 반전"
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "축 반전"
+
+msgctxt "game_options"
+msgid "INVERT FORCE FEEDBACK"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9471,8 +9646,10 @@ msgid "Improves performance at the cost of latency and more video stuttering."
 msgstr "대기 시간과 더 많은 비디오 끊김을 희생시키면서 성능을 향상시킵니다."
 
 msgctxt "game_options"
-msgid "Improves performance in 3D games. Can cause glitches."
-msgstr "3D 게임의 성능을 향상시킵니다. 결함이 발생할 수 있습니다."
+msgid ""
+"Improves performance in 3D games. Some games then mix up the layers of the "
+"two screens, turn it off if the screens look wrong."
+msgstr ""
 
 msgctxt "game_options"
 msgid "In Cinematics"
@@ -9582,7 +9759,9 @@ msgid "Interlaced"
 msgstr "인터레이스"
 
 msgctxt "game_options"
-msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
+msgid ""
+"Internal 3D render scale. OpenGL/Vulkan only, ignored on Software. Reduced "
+"automatically if the GPU can't render that size."
 msgstr ""
 
 msgctxt "game_options"
@@ -9870,6 +10049,11 @@ msgid "Keep your top speed even when driving off-road."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Keeps reflections at full strength instead of fading them with distance."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Kempston Joystick"
 msgstr "캠프스톤 조이스틱"
 
@@ -10058,6 +10242,10 @@ msgid "LEFT STICK DEADZONE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "LETTERBOX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "LIGHT FLARES"
 msgstr "라이트 플레어"
 
@@ -10086,10 +10274,6 @@ msgid "LIGHTSABER CROSSHAIR"
 msgstr "광선검 십자선"
 
 msgctxt "game_options"
-msgid "LIMIT FPS"
-msgstr "FPS 제한"
-
-msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
 msgstr "프레임 속도 제한"
 
@@ -10100,6 +10284,14 @@ msgstr "라인 모드"
 msgctxt "game_options"
 msgid "LINEAR UPSCALING"
 msgstr "선형 업스케일러"
+
+msgctxt "game_options"
+msgid "LINK CABINETS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LINK PORT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "LLE"
@@ -10175,12 +10367,22 @@ msgid "Lean right"
 msgstr "오른쪽 기울기"
 
 msgctxt "game_options"
+msgid "Leave empty for the default 9100."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Lebanon"
 msgstr "레바논"
 
 msgctxt "keys_files"
 msgid "Left"
 msgstr "왼쪽"
+
+msgctxt "game_options"
+msgid ""
+"Left alone the game fills the display. A fixed ratio crops or pillarboxes to "
+"that shape instead."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10209,10 +10411,6 @@ msgstr "레거시 이벤트 장치"
 msgctxt "game_options"
 msgid "Legacy Single Threaded"
 msgstr ""
-
-msgctxt "game_options"
-msgid "Legacy3D"
-msgstr "레거시3D"
 
 msgctxt "game_options"
 msgid "Libya"
@@ -10279,10 +10477,6 @@ msgid "Lime"
 msgstr "라임색"
 
 msgctxt "game_options"
-msgid "Limit FPS to reduce high CPU usage."
-msgstr "CPU 사용량을 줄이려면 FPS를 제한하세요."
-
-msgctxt "game_options"
 msgid ""
 "Limiting to 1 or 2 threads can fix audio stuttering on lower core count "
 "CPUs. Leave on Auto (0) if slowdown occurs."
@@ -10299,6 +10493,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Linear filtering"
 msgstr "선형 필터링"
+
+msgctxt "game_options"
+msgid ""
+"Link up to 4 cabinets (Ollie King, OutRun 2, OutRun 2 SP, Maximum Tune 1 & "
+"2). Needs ver1305.bin in bios/chihiro."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Lithuania"
@@ -10808,6 +11008,12 @@ msgid "Match Window"
 msgstr "일치하는 창"
 
 msgctxt "game_options"
+msgid ""
+"Match the colours to the way the console's video output looks on a real "
+"display."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Matra & Hachette Alice"
 msgstr "마트라 & 아셰트 앨리스"
 
@@ -11251,6 +11457,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Multisample anti-aliasing. Costs fill rate, so drop it on weaker GPUs."
+msgstr ""
+
+msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
 
@@ -11415,6 +11625,10 @@ msgid "NTSYNC"
 msgstr "NT 동기화"
 
 msgctxt "game_options"
+msgid "NUMBER OF CABINETS"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
 msgstr ""
@@ -11436,6 +11650,10 @@ msgstr "NZ 채팅"
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "남코 건콘"
+
+msgctxt "game_options"
+msgid "Name the speaker alongside each subtitle."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11552,10 +11770,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "New Zealand"
 msgstr "뉴질랜드"
-
-msgctxt "game_options"
-msgid "New3D"
-msgstr "New3D"
 
 msgctxt "keys_files"
 msgid "Next Force Power"
@@ -11768,7 +11982,23 @@ msgid "ORIGINAL FONTS"
 msgstr ""
 
 msgctxt "game_options"
+msgid "ORIGINAL HINTS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL LOD DISTANCES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ORIGINAL LOGOS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL PARTICLE CAP"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL SHADOWS"
 msgstr ""
 
 msgctxt "game_options"
@@ -11868,8 +12098,25 @@ msgid "Off at Start"
 msgstr "시작 시 끄기"
 
 msgctxt "game_options"
+msgid "Off casts shadows from objects the PS2 could not afford to."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off enables the extra gameplay hints added by the PC port."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "끄기가 더 안전하고, 특정 게임의 경우 켜기가 더 안전합니다."
+
+msgctxt "game_options"
+msgid ""
+"Off pushes the level-of-detail transitions further out than the PS2 did."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off raises the PS2's particle limit."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11889,6 +12136,10 @@ msgctxt "game_options"
 msgid ""
 "Offloads RSX draw commands to a secondary thread. Improves performance on "
 "CPUs with 6+ threads."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Offscreen Only (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -12143,6 +12394,10 @@ msgstr "패들 아날로그 스틱 감도"
 msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
 msgstr "패들 십자 패드 감도"
+
+msgctxt "game_options"
+msgid "PADDLE EMULATION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PADDLE JOYPAD SENSITIVITY"
@@ -12457,6 +12712,10 @@ msgid "PS1 Digital Controller"
 msgstr "PS1 디지털 컨트롤러"
 
 msgctxt "game_options"
+msgid "PS2 FIDELITY"
+msgstr ""
+
+msgctxt "game_options"
 msgid "PS3"
 msgstr ""
 
@@ -12487,6 +12746,11 @@ msgstr "PVM 스타일 (파이어브랜드X)"
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
 msgstr "PVM_20M2U/D93"
+
+msgctxt "game_options"
+msgid ""
+"Pad the frame to the chosen aspect instead of stretching it to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Paddle Control"
@@ -13245,6 +13509,10 @@ msgid "RGB Color Low/Medium-Resolution"
 msgstr ""
 
 msgctxt "game_options"
+msgid "RGB Image"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RIGHT STICK DEADZONE"
 msgstr ""
 
@@ -13450,6 +13718,12 @@ msgstr "원본 해상도로 폴리곤과 텍스처를 렌더링합니다."
 msgctxt "game_options"
 msgid "Replace meshed transparency by real transparency."
 msgstr "메시된 투명도를 실제 투명도로 바꿉니다."
+
+msgctxt "game_options"
+msgid ""
+"Reproduces the original disc read speed, including the loading pauses it "
+"caused."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Required by some games."
@@ -13806,10 +14080,6 @@ msgid "SCREEN PROPORTION"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "화면 비율"
-
-msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "화면 회전"
 
@@ -14110,6 +14380,10 @@ msgid "SP"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SPEAKER NAMES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "스페셜 컨트롤 레이아웃"
 
@@ -14131,6 +14405,10 @@ msgstr "속도 ㅎ"
 
 msgctxt "game_options"
 msgid "SPEEDHACKS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SPEEDRUNNER MODE"
 msgstr ""
 
 msgctxt "game_options"
@@ -14344,6 +14622,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Scale to best fit"
 msgstr "최적의 크기로 조정"
+
+msgctxt "game_options"
+msgid "Scale to best fit (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Scale2x"
@@ -14568,9 +14850,13 @@ msgid ""
 msgstr "에뮬레이션할 하드웨어 아키텍처의 기기 유형과 아키텍처를 선택하세요."
 
 msgctxt "game_options"
+msgid "Select the firmware language."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
-"Select the graphics rendering backend (requires New3D engine). Vulkan can "
-"provide improved performance and lower CPU overhead on supported GPUs."
+"Select the graphics rendering backend. Vulkan can provide improved "
+"performance and lower CPU overhead on supported GPUs."
 msgstr ""
 
 msgctxt "game_options"
@@ -15009,6 +15295,11 @@ msgid "Shows or hides the menu bar"
 msgstr "메뉴바를 표시 또는 숨김"
 
 msgctxt "game_options"
+msgid ""
+"Shows the in-game timer and disables anything that would invalidate a run."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Shrink/expand tattoo to fit within the bezel's border."
 msgstr "베젤의 테두리에 맞게 문신을 축소/확장합니다."
 
@@ -15063,10 +15354,6 @@ msgstr "단순함"
 msgctxt "game_options"
 msgid "Simple (interpreter for old real-mode games)"
 msgstr "단순함 (오래된 리얼 모드 게임용 해석기)"
-
-msgctxt "game_options"
-msgid "Simple 2x"
-msgstr "단순함 2배"
 
 msgctxt "game_options"
 msgid "Simplified Chinese"
@@ -15531,6 +15818,10 @@ msgid "Sprawl Relay (Brazil)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Spring the wheel back to centre while the game is not driving it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Square Pixel"
 msgstr ""
 
@@ -15623,6 +15914,10 @@ msgid "Stereo sound output."
 msgstr "스트레오 사운드 출력입니다."
 
 msgctxt "game_options"
+msgid "Stipple (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Store past states to rewind to in realtime, if the core supports it."
 msgstr "코어가 지원하는 경우, 실시간으로 되감기할 과거 상태를 저장합니다."
 
@@ -15649,10 +15944,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "늘리기"
-
-msgctxt "game_options"
-msgid "Stretch games to full-screen, but may distort the aspect ratio"
-msgstr "게임을 전체 화면으로 늘리지만 화면비가 왜곡될 수 있음"
 
 msgctxt "game_options"
 msgid "Stretch image output to fill the window/screen."
@@ -15698,6 +15989,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Strong"
 msgstr "강함"
+
+msgctxt "game_options"
+msgid "Subtitle the spoken hints that play outside cutscenes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Super Action Controller"
@@ -15891,6 +16186,10 @@ msgid "System requirements at native; (RAM|VRAM)."
 msgstr "원본 시스템 요구 사항; (램|V램)."
 
 msgctxt "game_options"
+msgid "TARGET FRAME RATE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TARGET LANGUAGE"
 msgstr "대상 언어"
 
@@ -15999,6 +16298,10 @@ msgid "TEXTURE UPSCALING TYPE"
 msgstr "텍스처 업 스케일링 유형"
 
 msgctxt "game_options"
+msgid "THIS CABINET"
+msgstr ""
+
+msgctxt "game_options"
 msgid "THREAD SCHEDULER MODE"
 msgstr ""
 
@@ -16073,6 +16376,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "트레이너 모드"
+
+msgctxt "game_options"
+msgid "TRANSLUCENCY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
@@ -16277,12 +16584,22 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "The address of cabinet 1. Leave empty on cabinet 1."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
 "help reduce unintended inputs."
 msgstr ""
 "조이스틱의 중립 위치 주변에서 입력이 무시되는 영역입니다. 의도치 않은 입력을 "
 "줄이는 데 도움이 될 수 있습니다."
+
+msgctxt "game_options"
+msgid ""
+"The cabinet's region. If a game does not support it, the first region it "
+"does support is used, checking Export, then USA, then Japan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
@@ -16297,9 +16614,20 @@ msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr "Wii의 에뮬레이트된 NAND 설정과 관련이 없는 최종 출력 이미지입니다."
 
 msgctxt "game_options"
+msgid "The game is uncapped, this is the rate it aims for."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The game's jolts plus a buzz rising with steering, on a regular gamepad. "
 "Driving games only."
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid ""
+"The hardware draws see-through surfaces as a checkerboard. Blended draws the "
+"50% see-through it's trying to achieve. OpenGL/Vulkan only."
 msgstr ""
 
 msgctxt "game_options"
@@ -16547,6 +16875,10 @@ msgctxt "keys_files"
 msgid "Turn left"
 msgstr "좌회전"
 
+msgctxt "game_options"
+msgid "Turn off to silence the audio coprocessor entirely."
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Turn right"
 msgstr "우회전"
@@ -16615,10 +16947,6 @@ msgstr "UDP 터널"
 msgctxt "game_options"
 msgid "UI KEYS"
 msgstr "UI 키"
-
-msgctxt "game_options"
-msgid "UI PROMPTS"
-msgstr "UI 프롬프트"
 
 msgctxt "game_options"
 msgid "UK"
@@ -16911,6 +17239,10 @@ msgid "Unscaled (Default)"
 msgstr "크기 조정 안 함 (기본)"
 
 msgctxt "game_options"
+msgid "Unscaled capture (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "시간 초과까지"
 
@@ -17110,6 +17442,10 @@ msgstr ""
 "는 권장하지 않습니다."
 
 msgctxt "game_options"
+msgid "Use the software renderer when the hardware one misbehaves."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Use the system mouse pointer as paddle controller 1. Does not let you choose "
 "a specific mouse if you have several."
@@ -17221,6 +17557,10 @@ msgstr "VBI 건너뛰기"
 
 msgctxt "game_options"
 msgid "VBLANK FREQUENCY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "VERBOSE LOGGING"
 msgstr ""
 
 msgctxt "game_options"
@@ -17524,6 +17864,10 @@ msgid "WHEEL"
 msgstr ""
 
 msgctxt "game_options"
+msgid "WHEEL AUTO-CENTRE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL DEADZONE"
 msgstr "핸들 데드존"
 
@@ -17558,6 +17902,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
 msgstr "휠 감ㄷ"
+
+msgctxt "game_options"
+msgid "WHEEL WEIGHT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEELS"
@@ -17671,6 +18019,12 @@ msgid ""
 msgstr "100%가 아닌 경우 프레임을 떨어뜨리는 대신 온도를 조정합니다."
 
 msgctxt "game_options"
+msgid ""
+"Which cores the emulator may run on. Fast cores keeps it off the slow "
+"efficiency cores of a big.LITTLE CPU, for emulators bound by a single thread."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Which rectangle the frame is fit into."
 msgstr ""
 
@@ -17689,6 +18043,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "와이드스크린 (16:9)"
+
+msgctxt "game_options"
+msgid "Widescreen or the original 4:3 view."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -17757,6 +18115,12 @@ msgid "Works with 'Cycle-exact' mode and for a few games."
 msgstr "'주기 정확' 모드 및 몇 가지 게임에서 작동합니다."
 
 msgctxt "game_options"
+msgid ""
+"Write debug-level runtime logging to the batocera launch log. Useful when a "
+"game will not boot."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Write protect virtual SD card"
 msgstr ""
 
@@ -17805,6 +18169,18 @@ msgstr "Y = 발사, B = 위"
 msgctxt "game_options"
 msgid "YES"
 msgstr "예"
+
+msgctxt "game_options"
+msgid "YUV 420"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 422"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 444"
+msgstr ""
 
 msgctxt "game_options"
 msgid "YUV v3 (Firebrand)"
@@ -18359,6 +18735,10 @@ msgstr "노란색/파란색"
 #~ msgstr "720p용 2x 원본 (1280x1056)"
 
 #~ msgctxt "game_options"
+#~ msgid "3D ENGINE"
+#~ msgstr "3D 엔진"
+
+#~ msgctxt "game_options"
 #~ msgid "3x Native (1920x1584) for 1080p"
 #~ msgstr "1080p용 3x 원본 (1920x1584)"
 
@@ -18525,6 +18905,14 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Area Sampling"
 #~ msgstr "영역 샘플링"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Arrange the dual screen layout. Separate windows can be changed with "
+#~ "Hotkey+R2."
+#~ msgstr ""
+#~ "듀얼 스크린 레이아웃을 정렬합니다. 핫키+R2로 별도의 창을 변경할 수 있습니"
+#~ "다."
 
 #~ msgctxt "game_options"
 #~ msgid "Async (multi threaded)(Default)"
@@ -19117,6 +19505,10 @@ msgstr "노란색/파란색"
 #~ "를 시도하세요."
 
 #~ msgctxt "game_options"
+#~ msgid "Improves performance in 3D games. Can cause glitches."
+#~ msgstr "3D 게임의 성능을 향상시킵니다. 결함이 발생할 수 있습니다."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Internal accelerometer. Disable if you experience random tilts or "
 #~ "unexpected ball behavior."
@@ -19153,6 +19545,10 @@ msgstr "노란색/파란색"
 #~ msgstr "화면비 유지 (기본)"
 
 #~ msgctxt "game_options"
+#~ msgid "LIMIT FPS"
+#~ msgstr "FPS 제한"
+
+#~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
 #~ msgstr "선형 필터링"
 
@@ -19167,6 +19563,14 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Legacy (single threaded)"
 #~ msgstr "레거시 (단일 스레드)"
+
+#~ msgctxt "game_options"
+#~ msgid "Legacy3D"
+#~ msgstr "레거시3D"
+
+#~ msgctxt "game_options"
+#~ msgid "Limit FPS to reduce high CPU usage."
+#~ msgstr "CPU 사용량을 줄이려면 FPS를 제한하세요."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19266,6 +19670,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "Nearest-neighbor"
 #~ msgstr "최근접 이웃"
+
+#~ msgctxt "game_options"
+#~ msgid "New3D"
+#~ msgstr "New3D"
 
 #~ msgctxt "keys_files"
 #~ msgid "Next disk"
@@ -19500,6 +19908,10 @@ msgstr "노란색/파란색"
 #~ msgstr "특정 게임 옵션을 구성하려면 테스트 모드에서 게임을 실행하세요."
 
 #~ msgctxt "game_options"
+#~ msgid "SCREEN RATIO"
+#~ msgstr "화면 비율"
+
+#~ msgctxt "game_options"
 #~ msgid "SHADER MODE"
 #~ msgstr "셰이더 모드"
 
@@ -19580,6 +19992,10 @@ msgstr "노란색/파란색"
 #~ "우에만 작동합니다."
 
 #~ msgctxt "game_options"
+#~ msgid "Simple 2x"
+#~ msgstr "단순함 2배"
+
+#~ msgctxt "game_options"
 #~ msgid "Sine"
 #~ msgstr "사인"
 
@@ -19633,6 +20049,10 @@ msgstr "노란색/파란색"
 #~ msgstr ""
 #~ "GPU에 텍스처를 병렬로 스트리밍합니다. 여유 헤드룸이 있는 더 강력한 GPU에"
 #~ "서 성능을 개선할 수 있습니다."
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
+#~ msgstr "게임을 전체 화면으로 늘리지만 화면비가 왜곡될 수 있음"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
@@ -19733,6 +20153,10 @@ msgstr "노란색/파란색"
 #~ msgctxt "keys_files"
 #~ msgid "Turn Right"
 #~ msgstr "우회전"
+
+#~ msgctxt "game_options"
+#~ msgid "UI PROMPTS"
+#~ msgstr "UI 프롬프트"
 
 #~ msgctxt "game_options"
 #~ msgid "UPSCALE MODE"

@@ -86,6 +86,24 @@ msgid "RYZEN THERMAL DESIGN POWER"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Which cores the emulator may run on. Fast cores keeps it off the slow "
+"efficiency cores of a big.LITTLE CPU, for emulators bound by a single thread."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CPU CORES"
+msgstr ""
+
+msgctxt "game_options"
+msgid "All cores"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Fast cores"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Set the display's resolution. Does not affect the rendering resolution."
 msgstr ""
 
@@ -1359,8 +1377,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Arrange the dual screen layout. Separate windows can be changed with "
-"Hotkey+R2."
+"Arrange the dual screen layout. Defaults to separate windows when a second "
+"screen is connected. Separate windows can be changed with Hotkey+R2."
 msgstr ""
 
 msgctxt "game_options"
@@ -2465,7 +2483,9 @@ msgid "FRAMESKIP VALUE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Improves performance in 3D games. Can cause glitches."
+msgid ""
+"Improves performance in 3D games. Some games then mix up the layers of the "
+"two screens, turn it off if the screens look wrong."
 msgstr ""
 
 msgctxt "game_options"
@@ -2528,6 +2548,22 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "LCD 1x NDS Color"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Select the firmware language."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FIRMWARE SETTINGS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LANGUAGE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "English (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -3101,10 +3137,6 @@ msgid "Change the game's language."
 msgstr ""
 
 msgctxt "game_options"
-msgid "LANGUAGE"
-msgstr ""
-
-msgctxt "game_options"
 msgid "British English"
 msgstr ""
 
@@ -3506,6 +3538,70 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Match the colours to the way the console's video output looks on a real "
+"display."
+msgstr ""
+
+msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Unscaled capture (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Full contrast"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cheap HDMI converter"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Flawed theory (legacy)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Use the software renderer when the hardware one misbehaves."
+msgstr ""
+
+msgctxt "game_options"
+msgid "RENDERER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Hardware (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Finish each blit immediately rather than over the cycles the real hardware "
+"takes."
+msgstr ""
+
+msgctxt "game_options"
+msgid "INSTANT BLITS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Drive the GameTank paddle with the mouse, for the games that use it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "PADDLE EMULATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Turn off to silence the audio coprocessor entirely."
+msgstr ""
+
+msgctxt "game_options"
+msgid "AUDIO COPROCESSOR"
 msgstr ""
 
 msgctxt "game_options"
@@ -5364,10 +5460,6 @@ msgid "Use language and username from the NDS Firmware."
 msgstr ""
 
 msgctxt "game_options"
-msgid "FIRMWARE SETTINGS"
-msgstr ""
-
-msgctxt "game_options"
 msgid "USE FIRMWARE SETTINGS"
 msgstr ""
 
@@ -5383,10 +5475,6 @@ msgctxt "game_options"
 msgid ""
 "Select language will be used if 'Use Firmware Settings' is disabled or if "
 "firmware file was not found."
-msgstr ""
-
-msgctxt "game_options"
-msgid "English (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -13076,11 +13164,17 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
+msgid ""
+"Internal 3D render scale. OpenGL/Vulkan only, ignored on Software. Reduced "
+"automatically if the GPU can't render that size."
 msgstr ""
 
 msgctxt "game_options"
 msgid "RENDER SCALE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "8x (4K)"
 msgstr ""
 
 msgctxt "game_options"
@@ -13143,6 +13237,25 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ScaleFX"
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid ""
+"The hardware draws see-through surfaces as a checkerboard. Blended draws the "
+"50% see-through it's trying to achieve. OpenGL/Vulkan only."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TRANSLUCENCY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Stipple (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Blended"
 msgstr ""
 
 msgctxt "game_options"
@@ -13246,26 +13359,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Enable the legacy or the new 3D engine. Choose Legacy on x86 for older GPUs. "
-"(Not supported on ARM/GLES systems)."
-msgstr ""
-
-msgctxt "game_options"
-msgid "3D ENGINE"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Legacy3D"
-msgstr ""
-
-msgctxt "game_options"
-msgid "New3D"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Select the graphics rendering backend (requires New3D engine). Vulkan can "
-"provide improved performance and lower CPU overhead on supported GPUs."
+"Select the graphics rendering backend. Vulkan can provide improved "
+"performance and lower CPU overhead on supported GPUs."
 msgstr ""
 
 msgctxt "game_options"
@@ -13294,8 +13389,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Controls the New3D rendering resolution (1x scale = 496x384). Default is 0 "
-"(Set Resolution) on x86_64 and 1 on ARM. Requires New3D engine."
+"Controls the rendering resolution (1x scale = 496x384). Default is 0 (Set "
+"Resolution) on x86_64 and 1 on ARM."
 msgstr ""
 
 msgctxt "game_options"
@@ -13814,7 +13909,7 @@ msgid "Original resolution"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Scale to best fit"
+msgid "Scale to best fit (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -13826,7 +13921,11 @@ msgid "Native"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enhancement."
+msgid "Darken the picture the way a cabinet monitor does."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT GAMMA"
 msgstr ""
 
 msgctxt "game_options"
@@ -13835,6 +13934,126 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "USE DSP AUDIO"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CABINET"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"The cabinet's region. If a game does not support it, the first region it "
+"does support is used, checking Export, then USA, then Japan."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Export (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Emulate the card reader of Ghost Squad, Gundam and the Maximum Tune games. "
+"Cards are kept in saves/chihiro/cards."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Drive board force feedback on a wheel, rumble on a pad (OutRun 2, Maximum "
+"Tune)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FORCE FEEDBACK STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enable if the wheel is pushed away from centre instead of towards it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "INVERT FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "How heavy the wheel turns while the game drives it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL WEIGHT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "40% (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Spring the wheel back to centre while the game is not driving it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL AUTO-CENTRE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "50% (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Link up to 4 cabinets (Ollie King, OutRun 2, OutRun 2 SP, Maximum Tune 1 & "
+"2). Needs ver1305.bin in bios/chihiro."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CABINET LINK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "NETWORK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LINK CABINETS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "NUMBER OF CABINETS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "2 (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cabinet 1 is the host, the others connect to it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "THIS CABINET"
+msgstr ""
+
+msgctxt "game_options"
+msgid "The address of cabinet 1. Leave empty on cabinet 1."
+msgstr ""
+
+msgctxt "game_options"
+msgid "HOST ADDRESS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Leave empty for the default 9100."
+msgstr ""
+
+msgctxt "game_options"
+msgid "LINK PORT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Scale to best fit"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enhancement."
 msgstr ""
 
 msgctxt "game_options"
@@ -13857,10 +14076,6 @@ msgctxt "game_options"
 msgid ""
 "Nat to access internet from xemu machine. Udp for System Link. Default "
 "(Auto) disables network access."
-msgstr ""
-
-msgctxt "game_options"
-msgid "NETWORK"
 msgstr ""
 
 msgctxt "game_options"
@@ -14123,14 +14338,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SDL"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Choose to display UI prompts or accept defaults automatically."
-msgstr ""
-
-msgctxt "game_options"
-msgid "UI PROMPTS"
 msgstr ""
 
 msgctxt "game_options"
@@ -14775,6 +14982,26 @@ msgid "20K"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Full Screen"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Enhancement. Use the compute shader."
+msgstr ""
+
+msgctxt "game_options"
+msgid "COMPUTE SHADER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose the controller 1 user mode."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose the controller 2 user mode."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Change the rotation of the rendered image."
 msgstr ""
 
@@ -15032,26 +15259,6 @@ msgid "SURROUND SOUND"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Limit FPS to reduce high CPU usage."
-msgstr ""
-
-msgctxt "game_options"
-msgid "LIMIT FPS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Stretch games to full-screen, but may distort the aspect ratio"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Simple 2x"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Select scale resolution of the game."
 msgstr ""
 
@@ -15129,10 +15336,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Choose your preferred renderer."
-msgstr ""
-
-msgctxt "game_options"
-msgid "RENDERER"
 msgstr ""
 
 msgctxt "game_options"
@@ -16106,6 +16309,136 @@ msgid "Walkers World"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Shows the in-game timer and disables anything that would invalidate a run."
+msgstr ""
+
+msgctxt "game_options"
+msgid "GAME"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SPEEDRUNNER MODE"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Left alone the game fills the display. A fixed ratio crops or pillarboxes to "
+"that shape instead."
+msgstr ""
+
+msgctxt "game_options"
+msgid "The game is uncapped, this is the rate it aims for."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TARGET FRAME RATE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Multisample anti-aliasing. Costs fill rate, so drop it on weaker GPUs."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Pad the frame to the chosen aspect instead of stretching it to the window."
+msgstr ""
+
+msgctxt "game_options"
+msgid "LETTERBOX"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Off pushes the level-of-detail transitions further out than the PS2 did."
+msgstr ""
+
+msgctxt "game_options"
+msgid "PS2 FIDELITY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL LOD DISTANCES"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off raises the PS2's particle limit."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL PARTICLE CAP"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off casts shadows from objects the PS2 could not afford to."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL SHADOWS"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Keeps reflections at full strength instead of fading them with distance."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FORCE ENVIRONMENT MAPPING"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Reproduces the original disc read speed, including the loading pauses it "
+"caused."
+msgstr ""
+
+msgctxt "game_options"
+msgid "EMULATE DVD LOADING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off enables the extra gameplay hints added by the PC port."
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL HINTS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Subtitle the spoken hints that play outside cutscenes."
+msgstr ""
+
+msgctxt "game_options"
+msgid "HINT SUBTITLES"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Name the speaker alongside each subtitle."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SPEAKER NAMES"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Offscreen Only (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Write debug-level runtime logging to the batocera launch log. Useful when a "
+"game will not boot."
+msgstr ""
+
+msgctxt "game_options"
+msgid "VERBOSE LOGGING"
+msgstr ""
+
+msgctxt "game_options"
 msgid "320 x 200"
 msgstr ""
 
@@ -16827,6 +17160,50 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "TRIPLE BUFFERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Widescreen or the original 4:3 view."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Apply one of the game's built-in shaders."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Clean"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yeetron"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yee64"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 420"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 422"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 444"
+msgstr ""
+
+msgctxt "game_options"
+msgid "RGB Image"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Allow opening the developer menu."
+msgstr ""
+
+msgctxt "game_options"
+msgid "DEVELOPER MENU"
 msgstr ""
 
 msgctxt "game_options"

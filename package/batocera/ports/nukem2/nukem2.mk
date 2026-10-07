@@ -3,8 +3,8 @@
 # nukem2
 #
 ################################################################################
-# Version: Commits on May 26, 2024
-NUKEM2_VERSION = f05996f9b3ad3b3ea5bb818e49e7977636746343
+# Version: Commits on Sept 28, 2026
+NUKEM2_VERSION = 30afeff8f0b105eac77ee0a2fbd54b06e1a49b60
 NUKEM2_SITE = https://github.com/lethal-guitar/RigelEngine.git
 NUKEM2_SITE_METHOD=git
 NUKEM2_GIT_SUBMODULES=YES

@@ -822,6 +822,10 @@ msgid "1x native (640x528)"
 msgstr "1x nativ (640x528)"
 
 msgctxt "game_options"
+msgid "2 (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2 Frames"
 msgstr "2 Cadre"
 
@@ -1391,10 +1395,6 @@ msgid "3D Control Pad (Analog)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "3D ENGINE"
-msgstr "MOTOR 3D"
-
-msgctxt "game_options"
 msgid "3D TEXTURE FILTER"
 msgstr ""
 
@@ -1509,6 +1509,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "40 MHz"
 msgstr "40 MHz"
+
+msgctxt "game_options"
+msgid "40% (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "400p"
@@ -1727,6 +1731,10 @@ msgid "50 fps"
 msgstr "50 fps"
 
 msgctxt "game_options"
+msgid "50% (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "50% (Underclock)"
 msgstr ""
 
@@ -1848,6 +1856,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "6.75x (6480x3672)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2105,6 +2117,10 @@ msgstr "8k"
 msgctxt "game_options"
 msgid "8th"
 msgstr "8"
+
+msgctxt "game_options"
+msgid "8x (4K)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
@@ -2512,6 +2528,10 @@ msgid "AUDIO CHANNELS"
 msgstr "CANALE AUDIO"
 
 msgctxt "game_options"
+msgid "AUDIO COPROCESSOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "AUDIO DRIVER"
 msgstr "DRIVER AUDIO"
 
@@ -2890,6 +2910,10 @@ msgid "All Timers"
 msgstr "Toate temporizatoarele"
 
 msgctxt "game_options"
+msgid "All cores"
+msgstr ""
+
+msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
 msgstr "Toate licențele posibile (Nerecomandat)"
 
@@ -2900,6 +2924,10 @@ msgstr "Toate dublajele"
 msgctxt "game_options"
 msgid "Allow cores to set rotation."
 msgstr "Permite nucleelor să seteze rotația."
+
+msgctxt "game_options"
+msgid "Allow opening the developer menu."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -3182,6 +3210,10 @@ msgid "Apply gouraud shading instead of flat shading."
 msgstr "Aplică umbrire gouraud în loc de umbrire plată."
 
 msgctxt "game_options"
+msgid "Apply one of the game's built-in shaders."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Apply texture filtering to enhance visual quality. Some filters may "
 "significantly impact performance."
@@ -3285,11 +3317,9 @@ msgstr "Aranjează amplasarea cu două ecrane."
 
 msgctxt "game_options"
 msgid ""
-"Arrange the dual screen layout. Separate windows can be changed with "
-"Hotkey+R2."
+"Arrange the dual screen layout. Defaults to separate windows when a second "
+"screen is connected. Separate windows can be changed with Hotkey+R2."
 msgstr ""
-"Aranjează amplasarea ecranelor. Ferestrele separate pot fi schimbate cu "
-"tasta rapidă+R2."
 
 msgctxt "game_options"
 msgid "Arrows"
@@ -3874,6 +3904,10 @@ msgid "Blend (Top Field First)"
 msgstr "Blend (Rândul de sus mai întâi)"
 
 msgctxt "game_options"
+msgid "Blended"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr "Filtrat pe blocuri"
 
@@ -4131,6 +4165,14 @@ msgid "C64 PAL Automatic"
 msgstr "C64 PAL Automat"
 
 msgctxt "game_options"
+msgid "CABINET"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CABINET LINK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CABINET OUTPUTS"
 msgstr ""
 
@@ -4267,8 +4309,16 @@ msgid "COLORIZATION"
 msgstr "COLORARE"
 
 msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
 msgstr "DIFICULTATE BĂTĂLIE"
+
+msgctxt "game_options"
+msgid "COMPUTE SHADER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
@@ -4463,6 +4513,10 @@ msgid "CPU CORE METHOD"
 msgstr "METODĂ NUCLEU CPU"
 
 msgctxt "game_options"
+msgid "CPU CORES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU CYCLES"
 msgstr "CICLURI CPU"
 
@@ -4555,6 +4609,10 @@ msgid "CRT FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT GAMMA"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "EFECT PERSISTENȚĂ CRT"
 
@@ -4572,6 +4630,14 @@ msgstr "SWITCHRES CRT"
 
 msgctxt "game_options"
 msgid "CRT Shader."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yee64"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yeetron"
 msgstr ""
 
 msgctxt "game_options"
@@ -4664,6 +4730,10 @@ msgstr "CYBERMORPH"
 
 msgctxt "game_options"
 msgid "CYCLE EXACT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cabinet 1 is the host, the others connect to it."
 msgstr ""
 
 msgctxt "game_options"
@@ -4926,6 +4996,10 @@ msgid "Charger plugged"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Cheap HDMI converter"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Chile"
 msgstr "Chile"
 
@@ -5064,6 +5138,14 @@ msgid "Choose the combat difficulty."
 msgstr "Alege dificultatea bătăliei."
 
 msgctxt "game_options"
+msgid "Choose the controller 1 user mode."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose the controller 2 user mode."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns and steering wheels. SDL2 for gamepads only."
@@ -5146,10 +5228,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "Alege tipul de filtru de textură."
-
-msgctxt "game_options"
-msgid "Choose to display UI prompts or accept defaults automatically."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
@@ -5329,6 +5407,10 @@ msgstr "Controler clasic Pro"
 msgctxt "game_options"
 msgid "Classic Software"
 msgstr "Clasic software"
+
+msgctxt "game_options"
+msgid "Clean"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
@@ -5512,8 +5594,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Controls the New3D rendering resolution (1x scale = 496x384). Default is 0 "
-"(Set Resolution) on x86_64 and 1 on ARM. Requires New3D engine."
+"Controls the rendering resolution (1x scale = 496x384). Default is 0 (Set "
+"Resolution) on x86_64 and 1 on ARM."
 msgstr ""
 
 msgctxt "game_options"
@@ -5739,6 +5821,10 @@ msgstr "SHADERE DETALIATE"
 msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "MENIU DEZVOLTATOR"
+
+msgctxt "game_options"
+msgid "DEVELOPER MENU"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DIFFICULTY"
@@ -5991,6 +6077,10 @@ msgstr "Mov închis"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "Întunecat"
+
+msgctxt "game_options"
+msgid "Darken the picture the way a cabinet monitor does."
+msgstr ""
 
 msgctxt "game_options"
 msgid "De-Interlaced"
@@ -6371,6 +6461,16 @@ msgstr ""
 "jocuri au implicit japoneza."
 
 msgctxt "game_options"
+msgid ""
+"Drive board force feedback on a wheel, rumble on a pad (OutRun 2, Maximum "
+"Tune)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Drive the GameTank paddle with the mouse, for the games that use it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Driving Force"
 msgstr "Driving Force"
 
@@ -6479,6 +6579,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "ELECTRON MODEL"
 msgstr "MODEL ELECTRON"
+
+msgctxt "game_options"
+msgid "EMULATE DVD LOADING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "EMULATE PCG-8100"
@@ -6752,6 +6856,12 @@ msgid "Emulate the Wiimote pointer with a mouse."
 msgstr "Emulează pointerul telecomenzii Wii cu un maus."
 
 msgctxt "game_options"
+msgid ""
+"Emulate the card reader of Ghost Squad, Gundam and the Maximum Tune games. "
+"Cards are kept in saves/chihiro/cards."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
 msgstr ""
 
@@ -6978,6 +7088,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Enable if the wheel is pushed away from centre instead of towards it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Activează încărcarea WHDLoad preinstalat."
 
@@ -7120,12 +7234,6 @@ msgstr "Activează valorile personalizate de mai jos."
 msgctxt "game_options"
 msgid "Enable the debug menu and the walk-through-walls button."
 msgstr "Activează meniul de depanare și butonul de pătrundere prin pereți."
-
-msgctxt "game_options"
-msgid ""
-"Enable the legacy or the new 3D engine. Choose Legacy on x86 for older GPUs. "
-"(Not supported on ARM/GLES systems)."
-msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -7486,6 +7594,10 @@ msgid "Enhancement. Upscales textures on 3D objects."
 msgstr "Îmbunătățire. Scalează în sus texturile pe obiectele 3D."
 
 msgctxt "game_options"
+msgid "Enhancement. Use the compute shader."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Ensure every frame the console renders is displayed to screen."
 msgstr "Asigură-te că fiecare cadru redat de consolă este afișat pe ecran."
 
@@ -7540,6 +7652,10 @@ msgstr "Ieși din emulator"
 msgctxt "game_options"
 msgid "Export"
 msgstr "Exportă"
+
+msgctxt "game_options"
+msgid "Export (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Extend the game screen area, similar to the Master System."
@@ -7670,7 +7786,15 @@ msgid "FORCE CPU BLIT EMULATION"
 msgstr ""
 
 msgctxt "game_options"
+msgid "FORCE ENVIRONMENT MAPPING"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "FORCE FEEDBACK STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -7897,6 +8021,10 @@ msgctxt "game_options"
 msgid "Fast (Default)"
 msgstr ""
 
+msgctxt "game_options"
+msgid "Fast cores"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Fast forward"
 msgstr "Repede înainte"
@@ -7948,6 +8076,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fills the screen."
 msgstr "Umple ecranul."
+
+msgctxt "game_options"
+msgid ""
+"Finish each blit immediately rather than over the cycles the real hardware "
+"takes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Finland"
@@ -8064,6 +8198,10 @@ msgctxt "game_options"
 msgid ""
 "Fixes specific shadows and textures in the Virtua Tennis 3 and Virtua "
 "Fighter 5 franchises for non-Nvidia GPUs. May require the FPS limiter."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Flawed theory (legacy)"
 msgstr ""
 
 msgctxt "game_options"
@@ -8358,8 +8496,16 @@ msgid "Full Frame"
 msgstr "Cadru întreg"
 
 msgctxt "game_options"
+msgid "Full Screen"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Full Speed (Default)"
 msgstr "Viteză normală (Implicit)"
+
+msgctxt "game_options"
+msgid "Full contrast"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Full speed"
@@ -8376,6 +8522,10 @@ msgstr "Joystick Fuller"
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
 msgstr "Cartele Funtech Super A'Can"
+
+msgctxt "game_options"
+msgid "GAME"
+msgstr ""
 
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
@@ -9072,6 +9222,10 @@ msgid "HIGH-RES BLENDING"
 msgstr "CONTOPIRE HI-RES"
 
 msgctxt "game_options"
+msgid "HINT SUBTITLES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HLE"
 msgstr ""
 
@@ -9086,6 +9240,10 @@ msgstr "HLE (per pixel)"
 msgctxt "game_options"
 msgid "HLE (per-strip)"
 msgstr "HLE (per fâșie)"
+
+msgctxt "game_options"
+msgid "HOST ADDRESS"
+msgstr ""
 
 msgctxt "game_options"
 msgid "HQ (bilinear filter)"
@@ -9130,6 +9288,10 @@ msgstr "Disc dur"
 msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "Disc dur (II UX)"
+
+msgctxt "game_options"
+msgid "Hardware (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hardware (default)"
@@ -9300,6 +9462,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "How heavy the wheel turns while the game drives it."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "How many times larger the main screen is compared to the small screen in the "
 "Large Screen layout."
@@ -9395,6 +9561,10 @@ msgid "INPUT INTERFACE"
 msgstr "INTERFAȚĂ DE INTRARE"
 
 msgctxt "game_options"
+msgid "INSTANT BLITS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "INTEGER SCALE FACTOR"
 msgstr ""
 
@@ -9437,6 +9607,10 @@ msgstr "INVERSEAZĂ CÂMPUL DE JOC CU B2S"
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "INVERSEAZĂ AXA"
+
+msgctxt "game_options"
+msgid "INVERT FORCE FEEDBACK"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9529,9 +9703,10 @@ msgid "Improves performance at the cost of latency and more video stuttering."
 msgstr "Îmbunătățește performanța cu costul latenței și bâlbâială video."
 
 msgctxt "game_options"
-msgid "Improves performance in 3D games. Can cause glitches."
+msgid ""
+"Improves performance in 3D games. Some games then mix up the layers of the "
+"two screens, turn it off if the screens look wrong."
 msgstr ""
-"Îmbunătățește performanța în jocurile 3D. Poate cauza probleme vizuale."
 
 msgctxt "game_options"
 msgid "In Cinematics"
@@ -9649,7 +9824,9 @@ msgid "Interlaced"
 msgstr "Intercalată"
 
 msgctxt "game_options"
-msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
+msgid ""
+"Internal 3D render scale. OpenGL/Vulkan only, ignored on Software. Reduced "
+"automatically if the GPU can't render that size."
 msgstr ""
 
 msgctxt "game_options"
@@ -9937,6 +10114,11 @@ msgid "Keep your top speed even when driving off-road."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Keeps reflections at full strength instead of fading them with distance."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Kempston Joystick"
 msgstr "Joystick Kempston"
 
@@ -10126,6 +10308,10 @@ msgid "LEFT STICK DEADZONE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "LETTERBOX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "LIGHT FLARES"
 msgstr "EXPLOZII DE LUMINĂ"
 
@@ -10154,10 +10340,6 @@ msgid "LIGHTSABER CROSSHAIR"
 msgstr "RETICUL SABIE LUMINOASĂ"
 
 msgctxt "game_options"
-msgid "LIMIT FPS"
-msgstr "LIMITEAZĂ FPS"
-
-msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
 msgstr "LIMITEAZĂ RATA DE CADRE"
 
@@ -10168,6 +10350,14 @@ msgstr "MOD LINIE"
 msgctxt "game_options"
 msgid "LINEAR UPSCALING"
 msgstr "UPSCALING LINIAR"
+
+msgctxt "game_options"
+msgid "LINK CABINETS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LINK PORT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "LLE"
@@ -10243,12 +10433,22 @@ msgid "Lean right"
 msgstr "Înclinare la dreapta"
 
 msgctxt "game_options"
+msgid "Leave empty for the default 9100."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Lebanon"
 msgstr "Liban"
 
 msgctxt "keys_files"
 msgid "Left"
 msgstr "Stânga"
+
+msgctxt "game_options"
+msgid ""
+"Left alone the game fills the display. A fixed ratio crops or pillarboxes to "
+"that shape instead."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10277,10 +10477,6 @@ msgstr "Evdev moștenit"
 msgctxt "game_options"
 msgid "Legacy Single Threaded"
 msgstr ""
-
-msgctxt "game_options"
-msgid "Legacy3D"
-msgstr "3D moștenit"
 
 msgctxt "game_options"
 msgid "Libya"
@@ -10347,10 +10543,6 @@ msgid "Lime"
 msgstr "Lime"
 
 msgctxt "game_options"
-msgid "Limit FPS to reduce high CPU usage."
-msgstr "Limitează FPS pentru a reduce utilizarea CPU-ului."
-
-msgctxt "game_options"
 msgid ""
 "Limiting to 1 or 2 threads can fix audio stuttering on lower core count "
 "CPUs. Leave on Auto (0) if slowdown occurs."
@@ -10367,6 +10559,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Linear filtering"
 msgstr "Filtrare liniară"
+
+msgctxt "game_options"
+msgid ""
+"Link up to 4 cabinets (Ollie King, OutRun 2, OutRun 2 SP, Maximum Tune 1 & "
+"2). Needs ver1305.bin in bios/chihiro."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Lithuania"
@@ -10880,6 +11078,12 @@ msgid "Match Window"
 msgstr "Potrivește fereastra"
 
 msgctxt "game_options"
+msgid ""
+"Match the colours to the way the console's video output looks on a real "
+"display."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Matra & Hachette Alice"
 msgstr "Matra & Hachette Alice"
 
@@ -11324,6 +11528,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Multisample anti-aliasing. Costs fill rate, so drop it on weaker GPUs."
+msgstr ""
+
+msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
 
@@ -11488,6 +11696,10 @@ msgid "NTSYNC"
 msgstr "NTSYNC"
 
 msgctxt "game_options"
+msgid "NUMBER OF CABINETS"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
 msgstr ""
@@ -11509,6 +11721,10 @@ msgstr "NZ-CHAT"
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "Namco GunCon"
+
+msgctxt "game_options"
+msgid "Name the speaker alongside each subtitle."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11625,10 +11841,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "New Zealand"
 msgstr "Noua Zeelandă"
-
-msgctxt "game_options"
-msgid "New3D"
-msgstr "3D nou"
 
 msgctxt "keys_files"
 msgid "Next Force Power"
@@ -11841,7 +12053,23 @@ msgid "ORIGINAL FONTS"
 msgstr ""
 
 msgctxt "game_options"
+msgid "ORIGINAL HINTS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL LOD DISTANCES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ORIGINAL LOGOS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL PARTICLE CAP"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL SHADOWS"
 msgstr ""
 
 msgctxt "game_options"
@@ -11941,8 +12169,25 @@ msgid "Off at Start"
 msgstr "Oprit la început"
 
 msgctxt "game_options"
+msgid "Off casts shadows from objects the PS2 could not afford to."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off enables the extra gameplay hints added by the PC port."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "Oprit este mai sigur. Pornit pentru anumite jocuri."
+
+msgctxt "game_options"
+msgid ""
+"Off pushes the level-of-detail transitions further out than the PS2 did."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off raises the PS2's particle limit."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11965,6 +12210,10 @@ msgctxt "game_options"
 msgid ""
 "Offloads RSX draw commands to a secondary thread. Improves performance on "
 "CPUs with 6+ threads."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Offscreen Only (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -12222,6 +12471,10 @@ msgstr "SENSITIVITATE STICK ANALOG PADDLE"
 msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
 msgstr "SENSITIVITATE D-PAD PADDLE"
+
+msgctxt "game_options"
+msgid "PADDLE EMULATION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PADDLE JOYPAD SENSITIVITY"
@@ -12536,6 +12789,10 @@ msgid "PS1 Digital Controller"
 msgstr "Controler digital PS1"
 
 msgctxt "game_options"
+msgid "PS2 FIDELITY"
+msgstr ""
+
+msgctxt "game_options"
 msgid "PS3"
 msgstr ""
 
@@ -12566,6 +12823,11 @@ msgstr "Stil PVM (FirebrandX)"
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
 msgstr "PVM_20M2U/D93"
+
+msgctxt "game_options"
+msgid ""
+"Pad the frame to the chosen aspect instead of stretching it to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Paddle Control"
@@ -13331,6 +13593,10 @@ msgid "RGB Color Low/Medium-Resolution"
 msgstr ""
 
 msgctxt "game_options"
+msgid "RGB Image"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RIGHT STICK DEADZONE"
 msgstr ""
 
@@ -13537,6 +13803,12 @@ msgstr "Randează poligoanele și texturile la rezoluția nativă."
 msgctxt "game_options"
 msgid "Replace meshed transparency by real transparency."
 msgstr "Înlocuiește transparența plasă cu transparență reală."
+
+msgctxt "game_options"
+msgid ""
+"Reproduces the original disc read speed, including the loading pauses it "
+"caused."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Required by some games."
@@ -13893,10 +14165,6 @@ msgid "SCREEN PROPORTION"
 msgstr ""
 
 msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "RAPORT ECRAN"
-
-msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "ROTAȚIE ECRAN"
 
@@ -14197,6 +14465,10 @@ msgid "SP"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SPEAKER NAMES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "POZIȚII CONTROALE SPECIALE"
 
@@ -14218,6 +14490,10 @@ msgstr "HACK-URI PENTRU VITEZĂ"
 
 msgctxt "game_options"
 msgid "SPEEDHACKS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SPEEDRUNNER MODE"
 msgstr ""
 
 msgctxt "game_options"
@@ -14431,6 +14707,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Scale to best fit"
 msgstr "Scalează la cea mai bună încadrare"
+
+msgctxt "game_options"
+msgid "Scale to best fit (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Scale2x"
@@ -14657,9 +14937,13 @@ msgid ""
 msgstr "Alege arhitectura hardware și tipul mașinii emulate."
 
 msgctxt "game_options"
+msgid "Select the firmware language."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
-"Select the graphics rendering backend (requires New3D engine). Vulkan can "
-"provide improved performance and lower CPU overhead on supported GPUs."
+"Select the graphics rendering backend. Vulkan can provide improved "
+"performance and lower CPU overhead on supported GPUs."
 msgstr ""
 
 msgctxt "game_options"
@@ -15101,6 +15385,11 @@ msgid "Shows or hides the menu bar"
 msgstr "Arată sau ascunde bara de meniu"
 
 msgctxt "game_options"
+msgid ""
+"Shows the in-game timer and disables anything that would invalidate a run."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Shrink/expand tattoo to fit within the bezel's border."
 msgstr "Micșorează/mărește tatuajul pentru a se încadra în marginea ramei."
 
@@ -15155,10 +15444,6 @@ msgstr "Simplu"
 msgctxt "game_options"
 msgid "Simple (interpreter for old real-mode games)"
 msgstr "Simplu (interpretor pentru jocurile vechi în mod real)"
-
-msgctxt "game_options"
-msgid "Simple 2x"
-msgstr "Simplu 2x"
 
 msgctxt "game_options"
 msgid "Simplified Chinese"
@@ -15630,6 +15915,10 @@ msgid "Sprawl Relay (Brazil)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Spring the wheel back to centre while the game is not driving it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Square Pixel"
 msgstr ""
 
@@ -15722,6 +16011,10 @@ msgid "Stereo sound output."
 msgstr "Ieșire sunet stereo."
 
 msgctxt "game_options"
+msgid "Stipple (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Store past states to rewind to in realtime, if the core supports it."
 msgstr ""
 "Stochează stările trecute pentru a putea reveni în timp real, dacă este "
@@ -15751,11 +16044,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "Întinde"
-
-msgctxt "game_options"
-msgid "Stretch games to full-screen, but may distort the aspect ratio"
-msgstr ""
-"Întinde jocurile pe tot ecranul, dar poate distorsiona raportul de aspect"
 
 msgctxt "game_options"
 msgid "Stretch image output to fill the window/screen."
@@ -15801,6 +16089,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Strong"
 msgstr "Puternic"
+
+msgctxt "game_options"
+msgid "Subtitle the spoken hints that play outside cutscenes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Super Action Controller"
@@ -15996,6 +16288,10 @@ msgid "System requirements at native; (RAM|VRAM)."
 msgstr "Necesar sistem la nativ; (RAM|VRAM)."
 
 msgctxt "game_options"
+msgid "TARGET FRAME RATE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TARGET LANGUAGE"
 msgstr "LIMBA ȚINTĂ"
 
@@ -16104,6 +16400,10 @@ msgid "TEXTURE UPSCALING TYPE"
 msgstr "TIP UPSCALING TEXTURI"
 
 msgctxt "game_options"
+msgid "THIS CABINET"
+msgstr ""
+
+msgctxt "game_options"
 msgid "THREAD SCHEDULER MODE"
 msgstr ""
 
@@ -16178,6 +16478,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "MOD ANTRENAMENT"
+
+msgctxt "game_options"
+msgid "TRANSLUCENCY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
@@ -16383,12 +16687,22 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "The address of cabinet 1. Leave empty on cabinet 1."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
 "help reduce unintended inputs."
 msgstr ""
 "Zona din jurul poziției neutre a joystick-ului unde intrarea este ignorată. "
 "Poate ajuta să reducă mișcările nedorite."
+
+msgctxt "game_options"
+msgid ""
+"The cabinet's region. If a game does not support it, the first region it "
+"does support is used, checking Export, then USA, then Japan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
@@ -16403,9 +16717,20 @@ msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr "Imaginea de ieșire finală, nelegată de setarea NAND a Wii-ului emulat."
 
 msgctxt "game_options"
+msgid "The game is uncapped, this is the rate it aims for."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The game's jolts plus a buzz rising with steering, on a regular gamepad. "
 "Driving games only."
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid ""
+"The hardware draws see-through surfaces as a checkerboard. Blended draws the "
+"50% see-through it's trying to achieve. OpenGL/Vulkan only."
 msgstr ""
 
 msgctxt "game_options"
@@ -16659,6 +16984,10 @@ msgctxt "keys_files"
 msgid "Turn left"
 msgstr "Întoarce la stânga"
 
+msgctxt "game_options"
+msgid "Turn off to silence the audio coprocessor entirely."
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Turn right"
 msgstr "Întoarce la dreapta"
@@ -16728,10 +17057,6 @@ msgstr "Tunel UDP"
 msgctxt "game_options"
 msgid "UI KEYS"
 msgstr "TASTE UI"
-
-msgctxt "game_options"
-msgid "UI PROMPTS"
-msgstr "ÎNTREBĂRI UI"
 
 msgctxt "game_options"
 msgid "UK"
@@ -17024,6 +17349,10 @@ msgid "Unscaled (Default)"
 msgstr "Nescalat (implicit)"
 
 msgctxt "game_options"
+msgid "Unscaled capture (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "Până la expirarea timpului"
 
@@ -17236,6 +17565,10 @@ msgstr ""
 "recomandat dacă se utilizează rame sau shadere."
 
 msgctxt "game_options"
+msgid "Use the software renderer when the hardware one misbehaves."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Use the system mouse pointer as paddle controller 1. Does not let you choose "
 "a specific mouse if you have several."
@@ -17348,6 +17681,10 @@ msgstr "OMITERE VBI"
 
 msgctxt "game_options"
 msgid "VBLANK FREQUENCY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "VERBOSE LOGGING"
 msgstr ""
 
 msgctxt "game_options"
@@ -17651,6 +17988,10 @@ msgid "WHEEL"
 msgstr ""
 
 msgctxt "game_options"
+msgid "WHEEL AUTO-CENTRE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL DEADZONE"
 msgstr "ZONA MOARTĂ A VOLANULUI"
 
@@ -17685,6 +18026,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
 msgstr "SENSITIVITATEA VOLANULUI"
+
+msgctxt "game_options"
+msgid "WHEEL WEIGHT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEELS"
@@ -17800,6 +18145,12 @@ msgstr ""
 "se omită cadrele."
 
 msgctxt "game_options"
+msgid ""
+"Which cores the emulator may run on. Fast cores keeps it off the slow "
+"efficiency cores of a big.LITTLE CPU, for emulators bound by a single thread."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Which rectangle the frame is fit into."
 msgstr ""
 
@@ -17818,6 +18169,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "Ecran lat (16:9)"
+
+msgctxt "game_options"
+msgid "Widescreen or the original 4:3 view."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -17887,6 +18242,12 @@ msgid "Works with 'Cycle-exact' mode and for a few games."
 msgstr "Funcționează cu modul „ciclu exact” și pentru unele jocuri."
 
 msgctxt "game_options"
+msgid ""
+"Write debug-level runtime logging to the batocera launch log. Useful when a "
+"game will not boot."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Write protect virtual SD card"
 msgstr ""
 
@@ -17935,6 +18296,18 @@ msgstr "Y = Foc, B = Sus"
 msgctxt "game_options"
 msgid "YES"
 msgstr "DA"
+
+msgctxt "game_options"
+msgid "YUV 420"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 422"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 444"
+msgstr ""
 
 msgctxt "game_options"
 msgid "YUV v3 (Firebrand)"
@@ -18522,6 +18895,10 @@ msgstr "galben/albastru"
 #~ msgstr "2x nativ (1280x1056) pentru 720p"
 
 #~ msgctxt "game_options"
+#~ msgid "3D ENGINE"
+#~ msgstr "MOTOR 3D"
+
+#~ msgctxt "game_options"
 #~ msgid "3x Native (1920x1584) for 1080p"
 #~ msgstr "3x nativ (1920x1584) pentru 1080p"
 
@@ -18717,6 +19094,14 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "Area Sampling"
 #~ msgstr "Eșantionare pe arie"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Arrange the dual screen layout. Separate windows can be changed with "
+#~ "Hotkey+R2."
+#~ msgstr ""
+#~ "Aranjează amplasarea ecranelor. Ferestrele separate pot fi schimbate cu "
+#~ "tasta rapidă+R2."
 
 #~ msgctxt "game_options"
 #~ msgid "Async (multi threaded)(Default)"
@@ -19427,6 +19812,11 @@ msgstr "galben/albastru"
 #~ "rapid."
 
 #~ msgctxt "game_options"
+#~ msgid "Improves performance in 3D games. Can cause glitches."
+#~ msgstr ""
+#~ "Îmbunătățește performanța în jocurile 3D. Poate cauza probleme vizuale."
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Internal accelerometer. Disable if you experience random tilts or "
 #~ "unexpected ball behavior."
@@ -19463,6 +19853,10 @@ msgstr "galben/albastru"
 #~ msgstr "Păstrează raportul de aspect (Implicit)"
 
 #~ msgctxt "game_options"
+#~ msgid "LIMIT FPS"
+#~ msgstr "LIMITEAZĂ FPS"
+
+#~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
 #~ msgstr "FILTRARE LINEARĂ"
 
@@ -19491,6 +19885,14 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "Legacy (single threaded)"
 #~ msgstr "Moștenit (un singur fir de execuție)"
+
+#~ msgctxt "game_options"
+#~ msgid "Legacy3D"
+#~ msgstr "3D moștenit"
+
+#~ msgctxt "game_options"
+#~ msgid "Limit FPS to reduce high CPU usage."
+#~ msgstr "Limitează FPS pentru a reduce utilizarea CPU-ului."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19612,6 +20014,10 @@ msgstr "galben/albastru"
 #~ msgctxt "game_options"
 #~ msgid "Nearest-neighbor"
 #~ msgstr "Cel mai apropiat vecin"
+
+#~ msgctxt "game_options"
+#~ msgid "New3D"
+#~ msgstr "3D nou"
 
 #~ msgctxt "keys_files"
 #~ msgid "Next Disc (m3u)"
@@ -19969,6 +20375,10 @@ msgstr "galben/albastru"
 #~ "jocului."
 
 #~ msgctxt "game_options"
+#~ msgid "SCREEN RATIO"
+#~ msgstr "RAPORT ECRAN"
+
+#~ msgctxt "game_options"
 #~ msgid "SHADER MODE"
 #~ msgstr "MOD SHADER"
 
@@ -20079,6 +20489,10 @@ msgstr "galben/albastru"
 #~ msgstr "GUI setări"
 
 #~ msgctxt "game_options"
+#~ msgid "Simple 2x"
+#~ msgstr "Simplu 2x"
+
+#~ msgctxt "game_options"
 #~ msgid "Sine"
 #~ msgstr "Sinusoidă"
 
@@ -20133,6 +20547,11 @@ msgstr "galben/albastru"
 #~ msgstr ""
 #~ "Fă streaming texturilor la GPU în paralel. Poate îmbunătăți performanța "
 #~ "pe GPU-urile mai puternice care au spațiu de manevră."
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
+#~ msgstr ""
+#~ "Întinde jocurile pe tot ecranul, dar poate distorsiona raportul de aspect"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
@@ -20259,6 +20678,10 @@ msgstr "galben/albastru"
 #~ msgctxt "keys_files"
 #~ msgid "Turn Right"
 #~ msgstr "Întoarce la dreapta"
+
+#~ msgctxt "game_options"
+#~ msgid "UI PROMPTS"
+#~ msgstr "ÎNTREBĂRI UI"
 
 #~ msgctxt "game_options"
 #~ msgid "UPSCALE MODE"

@@ -1,10 +1,17 @@
 # 2026/xx/xx - batocera.linux 44 - Malachite
 ### Special Notes
-- Samba no longer maps unknown usernames to guest: Windows 11 24H2+ blocks unsigned guest sessions without prompting, so Windows now asks for credentials - log in as root with the root password ("linux" unless security is enabled)
+- From v44 you can use `batocera-upgrade --update-bootloader` to flash required bootloader and firmware manually
+  SPI u-boot, Qualcomm ABL, Raspberry Pi EEPROM, H700 u-boot
+- Samba no longer maps unknown usernames to guest
+  Windows 11 24H2+ blocks unsigned guest sessions without prompting, so Windows now asks for credentials
+  Log in as root with the root password ("linux" unless security is enabled)
 - GZDoom has been replaced by UZDoom, a continuation of ZDoom and GZDoom - existing gzdoom ROM folders, .gzdoom mod files, and configs need to be renamed to uzdoom
 - ShadPS4 has moved from the no longer maintained ShadPS4 Plus to standard ShadPS4
 - SM2-Emu replaces Model2Emu which ran through WINE bringing Model 2 emualtion to more systems
 - The Play! emulator (and Libretro variant) has been removed in favor of PCSX2x6 for Namco2x6 systems as well as removed as a PS2 emulator.
+- Sega Chihiro now runs using Tovarichtch's Xemu Chihiro fork
+  Games need to be .bin netboot images made with Chihiro-netboot
+  BIOS files come from MAME's chihiro.zip, extracted into bios/chihiro
 ### Hardware
 - Anbernic RG-DS initial support
 - Anbernic RG-DS Plus initial support
@@ -13,21 +20,27 @@
 - Anbernic RG Vita Pro initial support
 - Anbernic RG40xx-H-v2-panel variant support
 - Anbernic RG40xx-V-v2-panel variant support
+- Ayaneo Pocket DS initial support
 - AYN Odin initial support
 - AYN Odin 3 initial support
+- GameKiddy GKD Pixel2 initial support
 - KICKPI K3B initial support
 - Mangmi Air X initial support
 - Odroid M2 initial support
 - Radxa Rock-5T initial support
 - Retroid Pocket Nova initial support
+- R36 Ultra initial support
 ### Added
 - Anbernic H700 device deep sleep suspend, replacing fake suspend
 - Anbernic H700 device hardware acceleration support
+- Anbernic H700 device u-boot is now updated by system upgrades, needed for deep sleep
 - Anbernic RG35XX Plus battery backed real-time clock
 - Anbernic RGCubeXX device LED controller support
 - Armsx2 for SM8250, SM8550 and SM8750
-- BCC: audio devices can now be switch from the bcc menu (while playing games for example)
+- Battery, charger and power button support for Intel Atom laptops and tablets with the X-Powers AXP288 PMIC
+- BCC: audio devices can now be switch from the BCC menu (while playing games for example)
 - Box64 userland x86_64 emulator for aarch64
+- Broadcom STA (wl) wifi driver for older Macs, enable with broadcom-wl=true in batocera-boot.conf
 - Drastic back for Aarch64 devices
 - ES Setting for toggle fast forward
 - Dolphin GameCube Controller type BattlerGC Pro (x-input mode with analog+digital triggers)
@@ -36,20 +49,23 @@
 - ES setting to choose which CPU cores an emulator runs on (fast or all), keeping emulators off the slow efficiency cores of big.LITTLE devices by default
 - ES can now display Unicode for ID3 tags of songs played
 - ES now supports correctly Arabic and Hebrew glyph rendering
+- ES can have a maximum depth of subfolders to go through when indexing (skip subfoldes with large amount of files)
 - GameTank console support through GameTankEmulator
 - Legion Go / Go 2 LED controller support
+- Libretro-anybor : for openbor games (support all openbor versions)
 - Libretro-Azahar
 - NanoBoyAdvance as an alternative GBA emulator
 - OpenGOAL for the Jak and Daxter trilogy, built from your own PS2 disc image
 - PCSX2x6 emulator for Namco2x6 systems (see the _info.txt file for rom details)
 - RPCS3 interface translations
 - SM2-Emu emulator for Model 2 games
-- libretro-anybor : for openbor games (support all openbor versions)
 - Sonic Mania options for 4:3 aspect ratio, screen shaders and the developer menu
 - Steam Controller (2026) support on x86_64 / Zen3
 - Steam is installed automatically from Flathub the first time it is launched
 - Upgrades : migration from x86_64 to x86-64-v3 is now possible from the menu for eligible software.
 - Upgrades : upgrades to stable releases is now possible via torrent, directly from the menu.
+- Wine DLSS support for NVIDIA RTX GPUs when NVAPI is enabled
+- Xemu Chihiro fork for the Sega Chihiro, with light guns, wheels with force feedback, card readers and linked cabinets
 - Xenia-Edge for x864_64 and select aarch64 devices
 ### Fixed
 - Samba wide symbolic links under /userdata (e.g. to external drives) being silently disabled, and secure mode granting guest access to the share
@@ -65,11 +81,14 @@
 - Libretro-Hatarib not starting due to a compiled symbol issue
 - MAME black screen on exit with a rotated display when CRT switchres is off
 - Mupen64 not starting fullscreen with Wayland
+- NVIDIA OpenGL over EGL on X11 falling back to Mesa (e.g. Dolphin failing to start with OpenGL)
 - Power button shutdown now closes the running game and shuts down through EmulationStation, saving gamelists
 - Pygame fullscreen with Wayland
+- R36S and other RK3326 clones losing the chosen panel overlay (mipi-panel.dtbo) after an upgrade, leaving a working backlight but a broken screen
 - Raze analog controls and improved controller bindings
 - SC-3000 games not scrapable (now scraped as SG-1000)
 - Simcoupe not starting fullscreen
+- SM8250 devices overcharging the battery (wrong charge voltage and current), and Retroid Pocket not charging again after powering a USB-C hub or dock
 - Sonic Mania controllers
 - Sonic Mania settings changed in-game (e.g. screen shader) now persist between launches
 - Taradino blank screen with Wayland
@@ -83,6 +102,7 @@
 - Boot logo and video now scales better to the primary screen being rendered on
 - Cemu added to capable aarch64 devices
 - New CPU, GPU & Battery temp helper script - batocera-temp
+- Power mode, TDP and GPU governor game hooks are now batocera-launch plugins
 - Raspberry Pi4 now uses LabWC
 - Raspberry Pi4 now uses the latest Mesa3D drivers
 - Khadas VIM4 now uses LabWC
@@ -104,7 +124,7 @@
 ### Updated
 - Amiberry to v8.3.0
 - AppleWin to Sep 6, 2026 build
-- Armsx2 to 2.7
+- Armsx2 to 2.7.2
 - Azahar to 2126.1.2
 - BigPEmu to 1.221
 - Blake Stone to v1.3.4
@@ -212,7 +232,7 @@
 - Libretro-Play to 0.77
 - Libretro-Pocketsnes to September 6th, 2026 build
 - Libretro-Pokemini to July 31st, 2026 build
-- Libretro-Prboom to September 15th, 2026 build
+- Libretro-Prboom to October 5th, 2026 build
 - Libretro-ppsspp to 1.20.4
 - Libretro-ProSystem to August 22nd, 2026 build
 - Libretro-PS2 to September 17th, 2026 build
@@ -278,7 +298,7 @@
 - Ur-Quan Masters to Aug 21, 2026 build
 - UZDoom to 5.0.3
 - Visual Pinball to Sep 16, 2026 build
-- Vita3k to Sep 17, 2026 build
+- Vita3k to Oct 6, 2026 build
 - VKQuake to 1.36.0
 - vkQuake2 to Aug 5, 2026 build
 - VKQuake3 to 1.36
@@ -292,9 +312,10 @@
 - XRoar to v1.12.1
 - Ymir to v0.3.3
 ### System
-- Allwinner H616 device kernel updated to 7.1.5
-- Allwinner H700 device kernel updated to 7.2.6
+- Allwinner H616 device kernel updated to 7.2.8
+- Allwinner H700 device kernel updated to 7.2.8
 - ALSA UCM configuration to v1.2.16.1
+- Bluez to 5.87
 - Buildroot to 2026.05.x with supporting package & toolchain updates
 - DXVK to 3.1.1
 - DXVK-NVAPI to v0.9.2
@@ -316,11 +337,12 @@
 - Qualcomm SM8250 device kernel updated to 7.2.8
 - Qualcomm SM8550 device kernel updated to 7.2.8
 - Qualcomm SM8750 device kernel updated to 7.2.8
-- Raspberry Pi device kernel updated to 6.18.39
+- Raspberry Pi device kernel updated to 6.18.54
+- Rockchip RK3326 device kernel updated to 7.2.8
 - Rockchip RK3562 device kernel updated to 7.2.8
 - Rockchip RK3568 device kernel updated to 7.2.8
 - Rockchip RK3588 mainline device kernel updated to 7.2.8
-- Rocknix ABL to 1.1.6 (SM6115 & SM8x50 devices)
+- Rocknix ABL to 1.1.8 (SM6115 & SMxx50 devices)
 - RyzenAdj to v0.19.0
 - SDL3 to 3.4.14
 - Sound Open Firmware to 2025.12.2
@@ -332,7 +354,7 @@
 - WINE Proton to proton-11.0-1
 - WINE TKG to 11.17
 - Wlroots to 0.20.2
-- X86_64 / Zen3 kernel updated to 7.2.6
+- X86_64 / Zen3 kernel updated to 7.2.8
 - Xone to v0.5.8
 
 # 2026/05/30 - batocera.linux 43.1

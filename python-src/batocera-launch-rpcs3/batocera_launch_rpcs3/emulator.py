@@ -1,13 +1,14 @@
 from __future__ import annotations
 
+import asyncio
 import filecmp
 import logging
-import re
+import os
 import shutil
 from collections.abc import Mapping
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Final, cast
+from typing import TYPE_CHECKING, Any, Final, cast
 
 import aiohttp
 from ruamel.yaml import YAML
@@ -17,18 +18,30 @@ from batocera_common.configparser import CaseSensitiveConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.dict import merge
 from batocera_common.fs import directory_differences
-from batocera_common.paths import BIOS, CACHE, CONFIGS
+from batocera_common.paths import CACHE, CONFIGS
 from batocera_common.yaml import safe_dump_yaml12, safe_load_yaml12
 from batocera_launch import BatoceraException, Command, Emulator, HotkeysContext, ParallelStartupTaskMixin, download
+from batocera_launch.devices.video import get_current_output, list_wayland_outputs
 from batocera_launch.paths import configure_emulator
 
+from . import firmware
 from .controllers import generate_controllers_config
 from .sfo import SFO
+
+if TYPE_CHECKING:
+    from types import TracebackType
 
 _logger = logging.getLogger(__name__)
 
 _BIN_PATH: Final = Path('/usr/bin/rpcs3')
 _OVERCOMMIT_PATH: Final = Path('/proc/sys/vm/overcommit_memory')
+
+# Shader Mode values saved before RPCS3 renamed them
+_LEGACY_SHADER_MODES: Final = {
+    'Async with Shader Interpreter': 'Async Recompiler with Shader Interpreter',
+    'Async Shader Recompiler': 'Async Recompiler (multi-threaded)',
+    'Shader Recompiler': 'Legacy Recompiler (single-threaded)',
+}
 
 # USB device tuning for the arcade PS3 titles (System 357/369, Taiko, ...) shipped as a
 # PSN squashfs. These all share the SCEEXE000 title-id, so they cannot be told apart by
@@ -333,19 +346,6 @@ Player 4:
 """
 
 
-def _get_firmware_version(config_dir: Path, /) -> str | None:
-    try:
-        with (config_dir / 'dev_flash' / 'vsh' / 'etc' / 'version.txt').open('r') as stream:
-            lines = stream.readlines()
-        for line in lines:
-            matches = re.match('^release:(.*):', line)
-            if matches:
-                return matches[1]
-    except Exception:
-        return None
-    return None
-
-
 def _migrate_dev_hdd0(config_dir: Path, hdd0_dir: Path, /) -> None:
     legacy_dev_hdd0 = config_dir / 'dev_hdd0'
     if not legacy_dev_hdd0.exists():
@@ -435,6 +435,27 @@ class RPCS3Command(Command):
 
 @cached_dataclass
 class RPCS3(ParallelStartupTaskMixin, Emulator):
+    _firmware_update: asyncio.Task[None] | None = field(init=False, default=None)
+
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+        /,
+    ) -> bool | None:
+        # an unfinished download resumes on the next launch
+        if self._firmware_update is not None:
+            self._firmware_update.cancel()
+            try:
+                await self._firmware_update
+            except asyncio.CancelledError:
+                pass
+            except Exception:
+                _logger.exception('PS3 firmware update failed')
+
+        return await super().__aexit__(exc_type, exc_value, traceback)
+
     async def parallel_startup_task(self) -> None:
         # Start downloading the compatibility database ASAP in the background
         database_path = self.config_dir / 'GuiConfigs' / 'config_database.dat'
@@ -499,8 +520,8 @@ class RPCS3(ParallelStartupTaskMixin, Emulator):
 
     @cached_property
     def is_psn_squashfs(self) -> bool:
-        # Detect PSN game packed as a squashfs: emulatorlauncher has already mounted the
-        # squashfs and (via writesToRom=True) created a writable overlayfs, so rom is
+        # Detect PSN game packed as a squashfs: batocera-launch has already mounted the
+        # squashfs and (via needs_overlayfs=True) created a writable overlayfs, so rom is
         # /var/run/overlays/<stem> mirroring the dev_hdd0 layout.
         return self.rom.is_dir() and str(self.rom).startswith('/var/run/') and self.rom_game_dir.is_dir()
 
@@ -710,6 +731,9 @@ class RPCS3(ParallelStartupTaskMixin, Emulator):
 
         time_stretch = self.config.get_bool('rpcs3_timestretch')
 
+        shader_mode = self.config.get('rpcs3_shadermode', 'Async Recompiler with Shader Interpreter')
+        shader_mode = _LEGACY_SHADER_MODES.get(shader_mode, shader_mode)
+
         config: dict[str, Any] = {
             'Core': {
                 # Set the PPU Decoder based on config
@@ -744,7 +768,7 @@ class RPCS3(ParallelStartupTaskMixin, Emulator):
                 # If not set, see if the screen ratio is closer to 4:3 or 16:9 and pick that.
                 'Aspect ratio': self.config.get('rpcs3_ratio') or self.closest_screen_ratio,
                 # Shader compilation
-                'Shader Mode': self.config.get('rpcs3_shadermode', 'Async with Shader Interpreter'),
+                'Shader Mode': shader_mode,
                 # Vsync
                 'VSync Mode': self.config.get('rpcs3_vsync', 'Disabled'),
                 # Stretch to display area
@@ -935,15 +959,50 @@ class RPCS3(ParallelStartupTaskMixin, Emulator):
         if not self.config.get_bool('rpcs3_gui') and rom_name:
             args.append('--no-gui')
 
-        # firmware not installed and available : instead of starting the game, install it
-        if _get_firmware_version(self.config_dir) is None and (BIOS / 'PS3UPDAT.PUP').exists():
-            args = [_BIN_PATH, '--installfw', BIOS / 'PS3UPDAT.PUP']
+        # RPCS3 opens the game window on Qt's first screen, not the one labwc placed it on
+        outputs = await list_wayland_outputs()
+        if len(outputs) > 1 and (primary := await get_current_output()) in outputs:
+            args += ['--game-screen', str(outputs.index(primary))]
 
-        return RPCS3Command(
-            args,
-            {
-                'XDG_CONFIG_HOME': CONFIGS,
-                'XDG_CACHE_HOME': CACHE,
-                'LC_ALL': 'C',
-            },
-        )
+        env: dict[str, str | Path] = {
+            'XDG_CONFIG_HOME': CONFIGS,
+            'XDG_CACHE_HOME': CACHE,
+            'LC_ALL': 'C',
+        }
+
+        installed = firmware.installed_version(self.config_dir)
+        available = firmware.pup_version()
+
+        async with firmware.Dialog() as dialog:
+            if installed is None and available is None:
+                # nothing to boot with, so the game waits for the download
+                try:
+                    if release := await firmware.check(self.client_session, self.config_dir, force=True):
+                        await dialog.status(
+                            f'Downloading PS3 firmware {firmware.format_version(release.version)} from Sony...'
+                        )
+                        await firmware.download(self.client_session, release, dialog.progress)
+                        available = firmware.pup_version()
+                except Exception:
+                    _logger.exception('PS3 firmware download failed')
+
+                if available is None and rom_name:
+                    await dialog.close()
+                    if await firmware.show_error(
+                        'The PS3 firmware could not be downloaded, check the internet connection.\n\n'
+                        'Copy PS3UPDAT.PUP into the bios folder before launching a PS3 game.'
+                    ):
+                        raise firmware.FirmwareMissing('PS3 firmware missing')
+                    raise BatoceraException('PS3 firmware missing: add PS3UPDAT.PUP to the bios folder')
+
+            if available is not None and (installed is None or available > installed):
+                await dialog.status(f'Installing PS3 firmware {firmware.format_version(available)}...')
+                await dialog.progress(100)
+                installed = await firmware.install(_BIN_PATH, os.environ | env, self.config_dir)
+                if installed is None:
+                    raise BatoceraException('PS3 firmware install failed, see RPCS3.log')
+
+        if installed is not None and self.config.get_bool('rpcs3_firmware_update'):
+            self._firmware_update = asyncio.create_task(firmware.update(self.client_session, self.config_dir))
+
+        return RPCS3Command(args, env)

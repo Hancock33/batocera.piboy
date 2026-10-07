@@ -25,6 +25,19 @@ config BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     default y
 endif
 
+# at least Raspberry Pi 5 single-core performance, for the emulators that
+# are bound by one thread
+if   BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM2712      || \
+     BR2_PACKAGE_BATOCERA_TARGET_RK3588     ||  BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO || \
+     BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || BR2_PACKAGE_BATOCERA_TARGET_SDM845  || \
+     BR2_PACKAGE_BATOCERA_TARGET_QCS6490    ||  BR2_PACKAGE_BATOCERA_TARGET_SM4450      || \
+     BR2_PACKAGE_BATOCERA_TARGET_SM8250     ||  BR2_PACKAGE_BATOCERA_TARGET_SM8550      || \
+     BR2_PACKAGE_BATOCERA_TARGET_SM8650     ||  BR2_PACKAGE_BATOCERA_TARGET_SM8750
+config BR2_PACKAGE_BATOCERA_FAST_CPU
+    bool "fast cpu"
+    default y
+endif
+
 if  BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_GLES2 || BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_GLES3
 config BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY
     bool "any amlogic"
@@ -160,7 +173,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # minimal system required packages
     select BR2_PACKAGE_BASH                                 # bash shell, used as the interactive shell
     select BR2_PACKAGE_BATOCERA_BATTERY_CHECKER
-    select BR2_PACKAGE_BATOCERA_CONFIGGEN                   # emulation station external command launcher
     select BR2_PACKAGE_BATOCERA_LAUNCH                      # new emulation station external command launcher
     select BR2_PACKAGE_BATOCERA_CONTROLCENTER               if  BR2_PACKAGE_BATOCERA_XWAYLAND || BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_BATOCERA_EMULATIONSTATION            # emulationstation
@@ -827,10 +839,6 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
     bool "batocera.linux homebrew systems"
 
     # OpenBOR
-    select BR2_PACKAGE_OPENBOR4432                          # ALL
-    select BR2_PACKAGE_OPENBOR6412                          # ALL
-    select BR2_PACKAGE_OPENBOR7142                          # ALL
-    select BR2_PACKAGE_OPENBOR7530                          # ALL
     select BR2_PACKAGE_LIBRETRO_ANYBOR                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || BR2_aarch64
 
     # Lutro Engine / LOVE
@@ -902,10 +910,10 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     select BR2_PACKAGE_DEMUL                                if  BR2_PACKAGE_BATOCERA_WINE
 
     # Standalone Sega Model 2 emulator
-    select BR2_PACKAGE_SM2_EMU                              if  BR2_PACKAGE_BATOCERA_VULKAN
+    select BR2_PACKAGE_SM2_EMU                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     # Standalone Sega Model 3 emulator
-    select BR2_PACKAGE_SUPERMODEL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_GLES3
+    select BR2_PACKAGE_SUPERMODEL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
    #select BR2_PACKAGE_LIBRETRO_SUPERMODEL                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     # RetroArch MAME derivatives
@@ -1290,7 +1298,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                !BR2_PACKAGE_BATOCERA_TARGET_A3GEN2      && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_S9GEN4
                                                                # newer versions of duckstation are stricter on OpenGL 3.1
-                                                               # requires X11 or Sway. 2GB boards aren't great.
+                                                               # requires X11 or Wayland. 2GB boards aren't great.
 
     select BR2_PACKAGE_LIBRETRO_SWANSTATION                 if !BR2_PACKAGE_BATOCERA_TARGET_X86         && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_H3
@@ -1337,6 +1345,9 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     # Microsoft XBOX
     select BR2_PACKAGE_XEMU                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
+    # Sega Chihiro
+    select BR2_PACKAGE_XEMU_CHIHIRO                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Microsoft Xbox 360
     select BR2_PACKAGE_XENIA_EDGE                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -1824,6 +1835,7 @@ config BR2_PACKAGE_BATOCERA_RPI_MESA3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_V3D
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_ZINK
     select BR2_PACKAGE_MESA3D_DEMOS                         if  BR2_PACKAGE_XWAYLAND || (BR2_PACKAGE_BATOCERA_SBC_XORG && !BR2_PACKAGE_BATOCERA_LIB32)  # glxinfo etc
+    select BR2_PACKAGE_LIBGLVND                             if  BR2_PACKAGE_XORG7                                                                       # opengl
 
 config BR2_PACKAGE_BATOCERA_LIMA_MESA3D
     bool "batocera.linux driver mesa LIMA"
@@ -1936,6 +1948,7 @@ config BR2_PACKAGE_BATOCERA_SDL2
     select BR2_PACKAGE_LIBVORBIS                            # ogg
     select BR2_PACKAGE_SDL2_GAMECONTROLLERDB                if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_TVTEXTVIEWER                         if !BR2_PACKAGE_BATOCERA_LIB32
+    select BR2_PACKAGE_BATOCERA_HAS_SDL
 
 config BR2_PACKAGE_BATOCERA_SDL3
     bool "BATOCERA SDL3"
@@ -1949,6 +1962,7 @@ config BR2_PACKAGE_BATOCERA_SDL3
     select BR2_PACKAGE_SDL3_X11                             if  BR2_PACKAGE_XORG7
     select BR2_PACKAGE_SDL3_KMSDRM                          if  BR2_PACKAGE_HAS_LIBGBM
     select BR2_PACKAGE_SDL3_WAYLAND                         if  BR2_PACKAGE_BATOCERA_WAYLAND
+    select BR2_PACKAGE_BATOCERA_HAS_SDL
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
     bool "batocera.linux wayland packages selection"
@@ -1973,17 +1987,6 @@ config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
     select BR2_PACKAGE_SWAY                                 if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_SWAYBG                               if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_WLR_RANDR                            if !BR2_PACKAGE_BATOCERA_LIB32
-
-config BR2_PACKAGE_BATOCERA_WAYLAND_LABWC
-    bool "batocera.linux wayland labwc packages selection"
-
-    # Wayland Protocol
-    select BR2_PACKAGE_BATOCERA_WAYLAND
-
-    # Compositor for wayland
-    select BR2_PACKAGE_LABWC
-    select BR2_PACKAGE_SWAYBG
-    select BR2_PACKAGE_WLR_RANDR
 
 config BR2_PACKAGE_BATOCERA_XWAYLAND
     bool "batocera.linux xwayland packages selection"

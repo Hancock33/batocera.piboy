@@ -1,8 +1,8 @@
 diff --git a/src/joystick/SDL_gamecontroller.c b/src/joystick/SDL_gamecontroller.c
-index 36e521eb9..0e6e0ca6c 100644
+index 021d0afc4..be6795c65 100644
 --- a/src/joystick/SDL_gamecontroller.c
 +++ b/src/joystick/SDL_gamecontroller.c
-@@ -1895,13 +1895,13 @@ int SDL_GameControllerInitMappings(void)
+@@ -1920,13 +1920,13 @@ int SDL_GameControllerInitMappings(void)
  
      SDL_AssertJoysticksLocked();
  

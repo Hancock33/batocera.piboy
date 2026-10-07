@@ -60,6 +60,7 @@ re2c.mk
 retrocrisis.mk
 rockchip-mpp.mk
 rockpro64-blobs.mk
+rpcs3.mk
 rpi-firmware.mk
 rtmidi.mk
 ryzenadj.mk

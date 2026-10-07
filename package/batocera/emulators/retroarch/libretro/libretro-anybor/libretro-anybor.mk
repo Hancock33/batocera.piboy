@@ -3,11 +3,13 @@
 # libretro-anybor
 #
 ################################################################################
-# Version: Commits on Sep 24, 2026
-LIBRETRO_ANYBOR_VERSION = 8d47f150bc43a70abfd3f1d799ce84b538d8f831
+# Version: Commits on Oct 06, 2026
+LIBRETRO_ANYBOR_VERSION = dcfe46f9a4b08e2efc02e8e7fb7a24d1da89d0d4
 LIBRETRO_ANYBOR_SITE = $(call github,retrodiv,AnyBOR-libretro,$(LIBRETRO_ANYBOR_VERSION))
 # multiple, see https://github.com/retrodiv/AnyBOR-libretro/tree/main/LICENSES
-LIBRETRO_ANYBOR_LICENSE = GPLv2+
+# OpenBOR 3400 retains its no-sale terms; see LICENSES.md.
+LIBRETRO_ANYBOR_LICENSE = BSD-3-Clause, OpenBOR-3400 (no sale), MIT, ISC, Zlib, Libpng-2.0, CC0-1.0, other
+LIBRETRO_ANYBOR_LICENSE_FILES = LICENSE LICENSES.md NOTICE.txt
 LIBRETRO_ANYBOR_DEPENDENCIES = retroarch zlib libpng libogg libvorbis libvpx
 LIBRETRO_ANYBOR_EMULATOR_INFO = anybor.libretro.core.yml
 
@@ -21,8 +23,9 @@ endif
 
 define LIBRETRO_ANYBOR_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) LDFLAGS="" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	    -C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
-        GIT_VERSION="-$(shell echo $(LIBRETRO_ANYBOR_VERSION) | cut -c 1-7)"
+		-C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
+		CONFIGURE_HOST="$(GNU_TARGET_NAME)" CONFIGURE_BUILD="$(GNU_HOST_NAME)" \
+		GIT_VERSION="-$(shell echo $(LIBRETRO_ANYBOR_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_ANYBOR_INSTALL_TARGET_CMDS

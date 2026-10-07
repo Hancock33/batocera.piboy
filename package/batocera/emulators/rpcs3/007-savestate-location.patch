@@ -1,8 +1,8 @@
 diff --git a/rpcs3/Emu/savestate_utils.cpp b/rpcs3/Emu/savestate_utils.cpp
-index 753037b3b..baf937972 100644
+index 746097a32..051e15908 100644
 --- a/rpcs3/Emu/savestate_utils.cpp
 +++ b/rpcs3/Emu/savestate_utils.cpp
-@@ -290,12 +290,12 @@ std::string get_savestate_file(std::string_view title_id, std::string_view boot_
+@@ -295,12 +295,12 @@ std::string get_savestate_file(std::string_view title_id, std::string_view boot_
  	if (aggregate_file_size == umax && rel_id == -1)
  	{
  		// Return directory
@@ -17,7 +17,7 @@ index 753037b3b..baf937972 100644
  
  		fs::dir dir_view{dir_path};
  
-@@ -427,7 +427,7 @@ std::string get_savestate_file(std::string_view title_id, std::string_view boot_
+@@ -432,7 +432,7 @@ std::string get_savestate_file(std::string_view title_id, std::string_view boot_
  	// While not needing to keep a 59 chars long suffix at all times for this purpose
  	const char prefix = ::at32("0123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"sv, save_id.size());
  

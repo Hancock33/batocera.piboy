@@ -29,7 +29,7 @@ def generate_controller_config(
     guns: Guns,
     /,
 ) -> None:
-    if emulator.system == 'wii':
+    if emulator.system == 'wii' or emulator.system == 'wiiware':
         if emulator.config.use_guns and guns:
             generate_controller_config_guns('WiimoteNew.ini', 'Wiimote', metadata, guns)
             # You can use the gamecube pads on the wii together with wiimotes

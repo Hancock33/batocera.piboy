@@ -1,5 +1,5 @@
 diff --git a/src/joystick/SDL_gamecontroller.c b/src/joystick/SDL_gamecontroller.c
-index a98735a..368baee 100644
+index cb5bdd9bf..efaea373d 100644
 --- a/src/joystick/SDL_gamecontroller.c
 +++ b/src/joystick/SDL_gamecontroller.c
 @@ -28,7 +28,8 @@

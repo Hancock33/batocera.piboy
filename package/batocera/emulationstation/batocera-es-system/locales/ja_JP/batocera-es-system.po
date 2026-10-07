@@ -823,6 +823,10 @@ msgid "1x native (640x528)"
 msgstr "1x 標準 (640x528)"
 
 msgctxt "game_options"
+msgid "2 (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "2 Frames"
 msgstr "2 フレーム"
 
@@ -1392,10 +1396,6 @@ msgid "3D Control Pad (Analog)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "3D ENGINE"
-msgstr "3D エンジン"
-
-msgctxt "game_options"
 msgid "3D TEXTURE FILTER"
 msgstr ""
 
@@ -1510,6 +1510,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "40 MHz"
 msgstr "40 MHz"
+
+msgctxt "game_options"
+msgid "40% (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "400p"
@@ -1728,6 +1732,10 @@ msgid "50 fps"
 msgstr "50 fps"
 
 msgctxt "game_options"
+msgid "50% (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "50% (Underclock)"
 msgstr ""
 
@@ -1849,6 +1857,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "6.75x (6480x3672)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -2106,6 +2118,10 @@ msgstr "8k"
 msgctxt "game_options"
 msgid "8th"
 msgstr "8"
+
+msgctxt "game_options"
+msgid "8x (4K)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "8x (5760p/8640p)"
@@ -2513,6 +2529,10 @@ msgid "AUDIO CHANNELS"
 msgstr "音声チャンネル"
 
 msgctxt "game_options"
+msgid "AUDIO COPROCESSOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "AUDIO DRIVER"
 msgstr "オーディオドライバ"
 
@@ -2890,6 +2910,10 @@ msgid "All Timers"
 msgstr "すべてのタイマー"
 
 msgctxt "game_options"
+msgid "All cores"
+msgstr ""
+
+msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
 msgstr "すべて (非推奨)"
 
@@ -2900,6 +2924,10 @@ msgstr "すべてのナレーション"
 msgctxt "game_options"
 msgid "Allow cores to set rotation."
 msgstr "コアの回転設定を可能にします"
+
+msgctxt "game_options"
+msgid "Allow opening the developer menu."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -3178,6 +3206,10 @@ msgid "Apply gouraud shading instead of flat shading."
 msgstr "フラット シェーディングの代わりにグーロー シェーディングを適用します"
 
 msgctxt "game_options"
+msgid "Apply one of the game's built-in shaders."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Apply texture filtering to enhance visual quality. Some filters may "
 "significantly impact performance."
@@ -3281,11 +3313,9 @@ msgstr "デュアルスクリーンレイアウトを配置します"
 
 msgctxt "game_options"
 msgid ""
-"Arrange the dual screen layout. Separate windows can be changed with "
-"Hotkey+R2."
+"Arrange the dual screen layout. Defaults to separate windows when a second "
+"screen is connected. Separate windows can be changed with Hotkey+R2."
 msgstr ""
-"デュアルスクリーンのレイアウトを整えます\n"
-"(ホットキー+R2でウィンドウの切替)"
 
 msgctxt "game_options"
 msgid "Arrows"
@@ -3870,6 +3900,10 @@ msgid "Blend (Top Field First)"
 msgstr "ブレンド（トップフィールド優先）"
 
 msgctxt "game_options"
+msgid "Blended"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Blocky Filtered"
 msgstr "ブロック状フィルタリング"
 
@@ -4128,6 +4162,14 @@ msgid "C64 PAL Automatic"
 msgstr "C64 PAL (自動)"
 
 msgctxt "game_options"
+msgid "CABINET"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CABINET LINK"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CABINET OUTPUTS"
 msgstr ""
 
@@ -4264,8 +4306,16 @@ msgid "COLORIZATION"
 msgstr "表示色"
 
 msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "COMBAT DIFFICULTY"
 msgstr "戦闘難易度"
+
+msgctxt "game_options"
+msgid "COMPUTE SHADER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CONSOLE COUNTRY"
@@ -4460,6 +4510,10 @@ msgid "CPU CORE METHOD"
 msgstr "CPU コア方法"
 
 msgctxt "game_options"
+msgid "CPU CORES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CPU CYCLES"
 msgstr "CPUサイクル"
 
@@ -4552,6 +4606,10 @@ msgid "CRT FILTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "CRT GAMMA"
+msgstr ""
+
+msgctxt "game_options"
 msgid "CRT GHOSTING EFFECT"
 msgstr "CRT ゴーストエフェクト"
 
@@ -4569,6 +4627,14 @@ msgstr "CRT スイッチレス"
 
 msgctxt "game_options"
 msgid "CRT Shader."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yee64"
+msgstr ""
+
+msgctxt "game_options"
+msgid "CRT Yeetron"
 msgstr ""
 
 msgctxt "game_options"
@@ -4661,6 +4727,10 @@ msgstr "CYBERMORPH"
 
 msgctxt "game_options"
 msgid "CYCLE EXACT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cabinet 1 is the host, the others connect to it."
 msgstr ""
 
 msgctxt "game_options"
@@ -4915,6 +4985,10 @@ msgid "Charger plugged"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Cheap HDMI converter"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Chile"
 msgstr "チリ"
 
@@ -5055,6 +5129,14 @@ msgid "Choose the combat difficulty."
 msgstr "戦闘難易度を選択します"
 
 msgctxt "game_options"
+msgid "Choose the controller 1 user mode."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Choose the controller 2 user mode."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Choose the controller configuration. EVDEV for a wide range of controllers, "
 "lightguns and steering wheels. SDL2 for gamepads only."
@@ -5139,10 +5221,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the texture filter type."
 msgstr "テクスチャフィルターの種類を選択します"
-
-msgctxt "game_options"
-msgid "Choose to display UI prompts or accept defaults automatically."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Choose to enable or disable cutscenes."
@@ -5318,6 +5396,10 @@ msgstr "クラシックコントローラー Pro"
 msgctxt "game_options"
 msgid "Classic Software"
 msgstr "クラシック ソフトウェア"
+
+msgctxt "game_options"
+msgid "Clean"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Close app on the remote host when quitting Moonlight."
@@ -5501,8 +5583,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Controls the New3D rendering resolution (1x scale = 496x384). Default is 0 "
-"(Set Resolution) on x86_64 and 1 on ARM. Requires New3D engine."
+"Controls the rendering resolution (1x scale = 496x384). Default is 0 (Set "
+"Resolution) on x86_64 and 1 on ARM."
 msgstr ""
 
 msgctxt "game_options"
@@ -5725,6 +5807,10 @@ msgstr "詳細なシェーダー"
 msgctxt "game_options"
 msgid "DEV MENU"
 msgstr "開発メニュー"
+
+msgctxt "game_options"
+msgid "DEVELOPER MENU"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DIFFICULTY"
@@ -5977,6 +6063,10 @@ msgstr "ダークパープル"
 msgctxt "game_options"
 msgid "Darken"
 msgstr "暗くする"
+
+msgctxt "game_options"
+msgid "Darken the picture the way a cabinet monitor does."
+msgstr ""
 
 msgctxt "game_options"
 msgid "De-Interlaced"
@@ -6353,6 +6443,16 @@ msgstr ""
 "ドリームキャスト BIOS の言語設定。一部のゲームは日本語に設定されています"
 
 msgctxt "game_options"
+msgid ""
+"Drive board force feedback on a wheel, rumble on a pad (OutRun 2, Maximum "
+"Tune)."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Drive the GameTank paddle with the mouse, for the games that use it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Driving Force"
 msgstr "Driving Force"
 
@@ -6460,6 +6560,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "ELECTRON MODEL"
 msgstr "エレクトロン モデル"
+
+msgctxt "game_options"
+msgid "EMULATE DVD LOADING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "EMULATE PCG-8100"
@@ -6731,6 +6835,12 @@ msgid "Emulate the Wiimote pointer with a mouse."
 msgstr "マウスでWiiリモコンのポインターをエミュレートします"
 
 msgctxt "game_options"
+msgid ""
+"Emulate the card reader of Ghost Squad, Gundam and the Maximum Tune games. "
+"Cards are kept in saves/chihiro/cards."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
 msgstr ""
 
@@ -6950,6 +7060,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Enable if the wheel is pushed away from centre instead of towards it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "プリインストールのWHDLoadインストール起動を有効にします"
 
@@ -7092,12 +7206,6 @@ msgstr "次のカスタム値を有効にします"
 msgctxt "game_options"
 msgid "Enable the debug menu and the walk-through-walls button."
 msgstr "デバッグメニューと、壁通過ボタンを有効にします"
-
-msgctxt "game_options"
-msgid ""
-"Enable the legacy or the new 3D engine. Choose Legacy on x86 for older GPUs. "
-"(Not supported on ARM/GLES systems)."
-msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -7445,6 +7553,10 @@ msgid "Enhancement. Upscales textures on 3D objects."
 msgstr "強化：3Dオブジェクトのテクスチャをアップスケールします"
 
 msgctxt "game_options"
+msgid "Enhancement. Use the compute shader."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Ensure every frame the console renders is displayed to screen."
 msgstr "コンソールが表示するすべてのフレームが画面に表示されるようにします"
 
@@ -7499,6 +7611,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Export"
 msgstr "エクスポート"
+
+msgctxt "game_options"
+msgid "Export (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Extend the game screen area, similar to the Master System."
@@ -7629,8 +7745,16 @@ msgid "FORCE CPU BLIT EMULATION"
 msgstr ""
 
 msgctxt "game_options"
+msgid "FORCE ENVIRONMENT MAPPING"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FORCE FEEDBACK"
 msgstr "フォースフィードバック機能"
+
+msgctxt "game_options"
+msgid "FORCE FEEDBACK STRENGTH"
+msgstr ""
 
 msgctxt "game_options"
 msgid "FORCE FIRST CONNECT"
@@ -7856,6 +7980,10 @@ msgctxt "game_options"
 msgid "Fast (Default)"
 msgstr ""
 
+msgctxt "game_options"
+msgid "Fast cores"
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Fast forward"
 msgstr "早送り"
@@ -7906,6 +8034,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fills the screen."
 msgstr "画面全体表示"
+
+msgctxt "game_options"
+msgid ""
+"Finish each blit immediately rather than over the cycles the real hardware "
+"takes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Finland"
@@ -8028,6 +8162,10 @@ msgstr ""
 "Nvidia製以外のGPUを搭載した環境で、Virtua Tennis 3 および Virtua Figher 5 シ"
 "リーズにおける特定の影とテクスチャの不具合を修正します。FPSリミッターが必要に"
 "なる場合があります"
+
+msgctxt "game_options"
+msgid "Flawed theory (legacy)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Flight Stick (3 Axes, 4 Btns, 1 Hat)"
@@ -8316,8 +8454,16 @@ msgid "Full Frame"
 msgstr "全フレーム"
 
 msgctxt "game_options"
+msgid "Full Screen"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Full Speed (Default)"
 msgstr "フルスピード（標準）"
+
+msgctxt "game_options"
+msgid "Full contrast"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Full speed"
@@ -8334,6 +8480,10 @@ msgstr "Fuller ジョイスティック"
 msgctxt "game_options"
 msgid "Funtech Super A'Can cartridges"
 msgstr "Funtech Super A'Can カートリッジ"
+
+msgctxt "game_options"
+msgid "GAME"
+msgstr ""
 
 msgctxt "game_options"
 msgid "GAME ASPECT RATIO"
@@ -9029,6 +9179,10 @@ msgid "HIGH-RES BLENDING"
 msgstr "高解像度ブレンディング"
 
 msgctxt "game_options"
+msgid "HINT SUBTITLES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HLE"
 msgstr ""
 
@@ -9043,6 +9197,10 @@ msgstr "HLE (ピクセルごと)"
 msgctxt "game_options"
 msgid "HLE (per-strip)"
 msgstr "HLE (ストリップごと)"
+
+msgctxt "game_options"
+msgid "HOST ADDRESS"
+msgstr ""
 
 msgctxt "game_options"
 msgid "HQ (bilinear filter)"
@@ -9087,6 +9245,10 @@ msgstr "ハードディスク"
 msgctxt "game_options"
 msgid "Hard Drive (II UX)"
 msgstr "ハードディスク (II UX)"
+
+msgctxt "game_options"
+msgid "Hardware (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Hardware (default)"
@@ -9255,6 +9417,10 @@ msgstr ""
 "(プロセッサの基本 CPU 周波数に設定)"
 
 msgctxt "game_options"
+msgid "How heavy the wheel turns while the game drives it."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "How many times larger the main screen is compared to the small screen in the "
 "Large Screen layout."
@@ -9350,6 +9516,10 @@ msgid "INPUT INTERFACE"
 msgstr "入力(使用する)インターフェース"
 
 msgctxt "game_options"
+msgid "INSTANT BLITS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "INTEGER SCALE FACTOR"
 msgstr ""
 
@@ -9392,6 +9562,10 @@ msgstr "インバース プレイフィールドと B2S"
 msgctxt "game_options"
 msgid "INVERT AXIS"
 msgstr "スティック軸を反転"
+
+msgctxt "game_options"
+msgid "INVERT FORCE FEEDBACK"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INVULNERABILITY MODE"
@@ -9481,8 +9655,10 @@ msgid "Improves performance at the cost of latency and more video stuttering."
 msgstr "映像の遅延やカクつきが増えますが、動作速度が向上します"
 
 msgctxt "game_options"
-msgid "Improves performance in 3D games. Can cause glitches."
-msgstr "遅いデバイスの動作が向上しますが、グリッチが起こる可能性があります"
+msgid ""
+"Improves performance in 3D games. Some games then mix up the layers of the "
+"two screens, turn it off if the screens look wrong."
+msgstr ""
 
 msgctxt "game_options"
 msgid "In Cinematics"
@@ -9593,7 +9769,9 @@ msgid "Interlaced"
 msgstr "インターレース"
 
 msgctxt "game_options"
-msgid "Internal 3D render scale. OpenGL/Vulkan only, ignored on Software."
+msgid ""
+"Internal 3D render scale. OpenGL/Vulkan only, ignored on Software. Reduced "
+"automatically if the GPU can't render that size."
 msgstr ""
 
 msgctxt "game_options"
@@ -9881,6 +10059,11 @@ msgid "Keep your top speed even when driving off-road."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Keeps reflections at full strength instead of fading them with distance."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Kempston Joystick"
 msgstr "Kempston ジョイスティック"
 
@@ -10068,6 +10251,10 @@ msgid "LEFT STICK DEADZONE"
 msgstr ""
 
 msgctxt "game_options"
+msgid "LETTERBOX"
+msgstr ""
+
+msgctxt "game_options"
 msgid "LIGHT FLARES"
 msgstr "ライトフレア"
 
@@ -10096,10 +10283,6 @@ msgid "LIGHTSABER CROSSHAIR"
 msgstr "ライトセーバーのクロスヘア(照準)"
 
 msgctxt "game_options"
-msgid "LIMIT FPS"
-msgstr "FPS 制限"
-
-msgctxt "game_options"
 msgid "LIMIT FRAME RATE"
 msgstr "フレームレート制限"
 
@@ -10110,6 +10293,14 @@ msgstr "ラインモード"
 msgctxt "game_options"
 msgid "LINEAR UPSCALING"
 msgstr "リニアアップスケーリング"
+
+msgctxt "game_options"
+msgid "LINK CABINETS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "LINK PORT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "LLE"
@@ -10185,12 +10376,22 @@ msgid "Lean right"
 msgstr "右傾斜"
 
 msgctxt "game_options"
+msgid "Leave empty for the default 9100."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Lebanon"
 msgstr "レバノン"
 
 msgctxt "keys_files"
 msgid "Left"
 msgstr "左"
+
+msgctxt "game_options"
+msgid ""
+"Left alone the game fills the display. A fixed ratio crops or pillarboxes to "
+"that shape instead."
+msgstr ""
 
 msgctxt "keys_files"
 msgid "Left flipper"
@@ -10219,10 +10420,6 @@ msgstr "レガシー Evdev"
 msgctxt "game_options"
 msgid "Legacy Single Threaded"
 msgstr ""
-
-msgctxt "game_options"
-msgid "Legacy3D"
-msgstr "Legacy3Dエンジン"
 
 msgctxt "game_options"
 msgid "Libya"
@@ -10289,10 +10486,6 @@ msgid "Lime"
 msgstr "ライム"
 
 msgctxt "game_options"
-msgid "Limit FPS to reduce high CPU usage."
-msgstr "FPS を制限して、高い CPU 使用率を削減します"
-
-msgctxt "game_options"
 msgid ""
 "Limiting to 1 or 2 threads can fix audio stuttering on lower core count "
 "CPUs. Leave on Auto (0) if slowdown occurs."
@@ -10309,6 +10502,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Linear filtering"
 msgstr "線形フィルタリング"
+
+msgctxt "game_options"
+msgid ""
+"Link up to 4 cabinets (Ollie King, OutRun 2, OutRun 2 SP, Maximum Tune 1 & "
+"2). Needs ver1305.bin in bios/chihiro."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Lithuania"
@@ -10815,6 +11014,12 @@ msgid "Match Window"
 msgstr "ウィンドウに合わせる"
 
 msgctxt "game_options"
+msgid ""
+"Match the colours to the way the console's video output looks on a real "
+"display."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Matra & Hachette Alice"
 msgstr "Matra & Hachette Alice"
 
@@ -11255,6 +11460,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Multisample anti-aliasing. Costs fill rate, so drop it on weaker GPUs."
+msgstr ""
+
+msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
 
@@ -11419,6 +11628,10 @@ msgid "NTSYNC"
 msgstr "NTSYNC"
 
 msgctxt "game_options"
+msgid "NUMBER OF CABINETS"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "NVAPI is NVIDIA's core software that allows direct access to NVIDIA GPU."
 msgstr ""
@@ -11439,6 +11652,10 @@ msgstr "NZ-CHAT"
 msgctxt "game_options"
 msgid "Namco GunCon"
 msgstr "ナムコ ガンコン"
+
+msgctxt "game_options"
+msgid "Name the speaker alongside each subtitle."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11555,10 +11772,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "New Zealand"
 msgstr "ニュージーランド"
-
-msgctxt "game_options"
-msgid "New3D"
-msgstr "New3Dエンジン"
 
 msgctxt "keys_files"
 msgid "Next Force Power"
@@ -11771,8 +11984,24 @@ msgid "ORIGINAL FONTS"
 msgstr "オリジナルフォントを使用"
 
 msgctxt "game_options"
+msgid "ORIGINAL HINTS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL LOD DISTANCES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "ORIGINAL LOGOS"
 msgstr "オリジナルロゴを使用"
+
+msgctxt "game_options"
+msgid "ORIGINAL PARTICLE CAP"
+msgstr ""
+
+msgctxt "game_options"
+msgid "ORIGINAL SHADOWS"
+msgstr ""
 
 msgctxt "game_options"
 msgid "OS DISK MODIFICATIONS"
@@ -11871,8 +12100,25 @@ msgid "Off at Start"
 msgstr "開始時にオフ"
 
 msgctxt "game_options"
+msgid "Off casts shadows from objects the PS2 could not afford to."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off enables the extra gameplay hints added by the PC port."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Off is safer, On for specific games."
 msgstr "オフの方が安全です。特定のゲームの場合はオンです"
+
+msgctxt "game_options"
+msgid ""
+"Off pushes the level-of-detail transitions further out than the PS2 did."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Off raises the PS2's particle limit."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -11893,6 +12139,10 @@ msgctxt "game_options"
 msgid ""
 "Offloads RSX draw commands to a secondary thread. Improves performance on "
 "CPUs with 6+ threads."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Offscreen Only (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -12144,6 +12394,10 @@ msgstr "パドルアナログスティック感度"
 msgctxt "game_options"
 msgid "PADDLE D-PAD SENSITIVITY"
 msgstr "パドル Dパッド感度"
+
+msgctxt "game_options"
+msgid "PADDLE EMULATION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PADDLE JOYPAD SENSITIVITY"
@@ -12458,6 +12712,10 @@ msgid "PS1 Digital Controller"
 msgstr "PS1 デジタルコントローラ"
 
 msgctxt "game_options"
+msgid "PS2 FIDELITY"
+msgstr ""
+
+msgctxt "game_options"
 msgid "PS3"
 msgstr ""
 
@@ -12488,6 +12746,11 @@ msgstr "PVM スタイル (FirebrandX)"
 msgctxt "game_options"
 msgid "PVM_20M2U/D93"
 msgstr "PVM_20M2U/D93"
+
+msgctxt "game_options"
+msgid ""
+"Pad the frame to the chosen aspect instead of stretching it to the window."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Paddle Control"
@@ -13246,6 +13509,10 @@ msgid "RGB Color Low/Medium-Resolution"
 msgstr ""
 
 msgctxt "game_options"
+msgid "RGB Image"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RIGHT STICK DEADZONE"
 msgstr ""
 
@@ -13450,6 +13717,12 @@ msgstr "ポリゴンとテクスチャをネイティブ解像度で表示しま
 msgctxt "game_options"
 msgid "Replace meshed transparency by real transparency."
 msgstr "メッシュの透明度を実際の透明度に置き換えます"
+
+msgctxt "game_options"
+msgid ""
+"Reproduces the original disc read speed, including the loading pauses it "
+"caused."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Required by some games."
@@ -13804,10 +14077,6 @@ msgid "SCREEN PROPORTION"
 msgstr "画面比率"
 
 msgctxt "game_options"
-msgid "SCREEN RATIO"
-msgstr "画面比率"
-
-msgctxt "game_options"
 msgid "SCREEN ROTATION"
 msgstr "画面の回転"
 
@@ -14108,6 +14377,10 @@ msgid "SP"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SPEAKER NAMES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "カスタムコントロール レイアウト"
 
@@ -14129,6 +14402,10 @@ msgstr "スピードハック"
 
 msgctxt "game_options"
 msgid "SPEEDHACKS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "SPEEDRUNNER MODE"
 msgstr ""
 
 msgctxt "game_options"
@@ -14342,6 +14619,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Scale to best fit"
 msgstr "最適なスケール"
+
+msgctxt "game_options"
+msgid "Scale to best fit (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Scale2x"
@@ -14566,9 +14847,13 @@ msgid ""
 msgstr "エミュレートするハードウェア機種とアーキテクチャを選択します"
 
 msgctxt "game_options"
+msgid "Select the firmware language."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
-"Select the graphics rendering backend (requires New3D engine). Vulkan can "
-"provide improved performance and lower CPU overhead on supported GPUs."
+"Select the graphics rendering backend. Vulkan can provide improved "
+"performance and lower CPU overhead on supported GPUs."
 msgstr ""
 
 msgctxt "game_options"
@@ -15008,6 +15293,11 @@ msgid "Shows or hides the menu bar"
 msgstr "メニューバーを表示/非表示"
 
 msgctxt "game_options"
+msgid ""
+"Shows the in-game timer and disables anything that would invalidate a run."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Shrink/expand tattoo to fit within the bezel's border."
 msgstr "ベゼル内に収まるようにイメージ画像を縮小/拡大します"
 
@@ -15062,10 +15352,6 @@ msgstr "シンプル"
 msgctxt "game_options"
 msgid "Simple (interpreter for old real-mode games)"
 msgstr "シンプル（古いリアルモードゲームのインタプリタ）"
-
-msgctxt "game_options"
-msgid "Simple 2x"
-msgstr "シンプル 2x"
 
 msgctxt "game_options"
 msgid "Simplified Chinese"
@@ -15527,6 +15813,10 @@ msgid "Sprawl Relay (Brazil)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Spring the wheel back to centre while the game is not driving it."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Square Pixel"
 msgstr ""
 
@@ -15619,6 +15909,10 @@ msgid "Stereo sound output."
 msgstr "ステレオサウンド出力にします"
 
 msgctxt "game_options"
+msgid "Stipple (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Store past states to rewind to in realtime, if the core supports it."
 msgstr ""
 "コアが対応している場合は、過去の状態を保存して\n"
@@ -15646,11 +15940,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Stretch"
 msgstr "引き伸ばし"
-
-msgctxt "game_options"
-msgid "Stretch games to full-screen, but may distort the aspect ratio"
-msgstr ""
-"ゲームをフルスクリーンに拡大しますが、アスペクト比が歪む可能性があります"
 
 msgctxt "game_options"
 msgid "Stretch image output to fill the window/screen."
@@ -15696,6 +15985,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Strong"
 msgstr "強"
+
+msgctxt "game_options"
+msgid "Subtitle the spoken hints that play outside cutscenes."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Super Action Controller"
@@ -15891,6 +16184,10 @@ msgid "System requirements at native; (RAM|VRAM)."
 msgstr "メモリ使用量の目安の表示; ( RAM| VRAM)"
 
 msgctxt "game_options"
+msgid "TARGET FRAME RATE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TARGET LANGUAGE"
 msgstr "翻訳表示言語"
 
@@ -15999,6 +16296,10 @@ msgid "TEXTURE UPSCALING TYPE"
 msgstr "テクスチャアップスケーリング方式"
 
 msgctxt "game_options"
+msgid "THIS CABINET"
+msgstr ""
+
+msgctxt "game_options"
 msgid "THREAD SCHEDULER MODE"
 msgstr ""
 
@@ -16073,6 +16374,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "TRAINER MODE"
 msgstr "トレーナーモード"
+
+msgctxt "game_options"
+msgid "TRANSLUCENCY"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
@@ -16278,12 +16583,22 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "The address of cabinet 1. Leave empty on cabinet 1."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The area around the joystick's neutral position where input is ignored. Can "
 "help reduce unintended inputs."
 msgstr ""
 "ジョイスティックの中立位置付近の入力が無視される領域。意図しない入力を減らす"
 "ことができます"
+
+msgctxt "game_options"
+msgid ""
+"The cabinet's region. If a game does not support it, the first region it "
+"does support is used, checking Export, then USA, then Japan."
+msgstr ""
 
 msgctxt "game_options"
 msgid "The day within the month of your birthday."
@@ -16298,9 +16613,20 @@ msgid "The final output image, unrelated to the Wii's emulated NAND setting."
 msgstr "WiiのエミュレートNAND設定とは無関係の画像表示を設定します"
 
 msgctxt "game_options"
+msgid "The game is uncapped, this is the rate it aims for."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "The game's jolts plus a buzz rising with steering, on a regular gamepad. "
 "Driving games only."
+msgstr ""
+
+#, c-format
+msgctxt "game_options"
+msgid ""
+"The hardware draws see-through surfaces as a checkerboard. Blended draws the "
+"50% see-through it's trying to achieve. OpenGL/Vulkan only."
 msgstr ""
 
 msgctxt "game_options"
@@ -16546,6 +16872,10 @@ msgctxt "keys_files"
 msgid "Turn left"
 msgstr "左ターン"
 
+msgctxt "game_options"
+msgid "Turn off to silence the audio coprocessor entirely."
+msgstr ""
+
 msgctxt "keys_files"
 msgid "Turn right"
 msgstr "右ターン"
@@ -16614,10 +16944,6 @@ msgstr "UDPトンネル"
 msgctxt "game_options"
 msgid "UI KEYS"
 msgstr "UI キー"
-
-msgctxt "game_options"
-msgid "UI PROMPTS"
-msgstr "UI プロンプト 表示"
 
 msgctxt "game_options"
 msgid "UK"
@@ -16910,6 +17236,10 @@ msgid "Unscaled (Default)"
 msgstr "スケーリングなし (標準)"
 
 msgctxt "game_options"
+msgid "Unscaled capture (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Until Timeout"
 msgstr "タイムアウトまで"
 
@@ -17112,6 +17442,10 @@ msgstr ""
 "「MAME」と同じartworkパスを使用します(シェーダー、ベゼルを使う場合は不可)"
 
 msgctxt "game_options"
+msgid "Use the software renderer when the hardware one misbehaves."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Use the system mouse pointer as paddle controller 1. Does not let you choose "
 "a specific mouse if you have several."
@@ -17222,6 +17556,10 @@ msgstr "VBI(垂直ブランク割り込み) スキップ"
 
 msgctxt "game_options"
 msgid "VBLANK FREQUENCY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "VERBOSE LOGGING"
 msgstr ""
 
 msgctxt "game_options"
@@ -17525,6 +17863,10 @@ msgid "WHEEL"
 msgstr ""
 
 msgctxt "game_options"
+msgid "WHEEL AUTO-CENTRE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "WHEEL DEADZONE"
 msgstr "ホイール(ハンドル)遊び幅"
 
@@ -17559,6 +17901,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "WHEEL SENSITIVITY"
 msgstr "ホイール感度"
+
+msgctxt "game_options"
+msgid "WHEEL WEIGHT"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEELS"
@@ -17670,6 +18016,12 @@ msgid ""
 msgstr "100% 以外で動作している場合、フレームを落とさずに音質を調整します"
 
 msgctxt "game_options"
+msgid ""
+"Which cores the emulator may run on. Fast cores keeps it off the slow "
+"efficiency cores of a big.LITTLE CPU, for emulators bound by a single thread."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Which rectangle the frame is fit into."
 msgstr ""
 
@@ -17688,6 +18040,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Widescreen (16:9)"
 msgstr "ワイドスクリーン (16:9)"
+
+msgctxt "game_options"
+msgid "Widescreen or the original 4:3 view."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -17756,6 +18112,12 @@ msgid "Works with 'Cycle-exact' mode and for a few games."
 msgstr "CPU互換性'正確な動作'モード及びいくつかのゲームで動作します"
 
 msgctxt "game_options"
+msgid ""
+"Write debug-level runtime logging to the batocera launch log. Useful when a "
+"game will not boot."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Write protect virtual SD card"
 msgstr ""
 
@@ -17804,6 +18166,18 @@ msgstr "Y = 発射, B = 上"
 msgctxt "game_options"
 msgid "YES"
 msgstr "有効"
+
+msgctxt "game_options"
+msgid "YUV 420"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 422"
+msgstr ""
+
+msgctxt "game_options"
+msgid "YUV 444"
+msgstr ""
 
 msgctxt "game_options"
 msgid "YUV v3 (Firebrand)"
@@ -18484,6 +18858,10 @@ msgstr "黄/青"
 #~ msgstr "2x 標準 (1280x1056) 720p用"
 
 #~ msgctxt "game_options"
+#~ msgid "3D ENGINE"
+#~ msgstr "3D エンジン"
+
+#~ msgctxt "game_options"
 #~ msgid "3x Native (1920x1584) for 1080p"
 #~ msgstr "3x 標準 (1920x1584)1080p用"
 
@@ -18875,6 +19253,14 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Area Sampling"
 #~ msgstr "エリアサンプリング"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Arrange the dual screen layout. Separate windows can be changed with "
+#~ "Hotkey+R2."
+#~ msgstr ""
+#~ "デュアルスクリーンのレイアウトを整えます\n"
+#~ "(ホットキー+R2でウィンドウの切替)"
 
 #~ msgctxt "game_options"
 #~ msgid "Async (multi threaded)(Default)"
@@ -20865,6 +21251,10 @@ msgstr "黄/青"
 #~ msgid "Image"
 #~ msgstr "イメージ画像"
 
+#~ msgctxt "game_options"
+#~ msgid "Improves performance in 3D games. Can cause glitches."
+#~ msgstr "遅いデバイスの動作が向上しますが、グリッチが起こる可能性があります"
+
 #~ msgid "Increment slot on a new game."
 #~ msgstr "違うゲームは、新しくセーブをします"
 
@@ -21098,6 +21488,10 @@ msgstr "黄/青"
 #~ msgstr "高評価"
 
 #~ msgctxt "game_options"
+#~ msgid "LIMIT FPS"
+#~ msgstr "FPS 制限"
+
+#~ msgctxt "game_options"
 #~ msgid "LINEAR FILTERING"
 #~ msgstr "リニア フィルタリング"
 
@@ -21135,6 +21529,14 @@ msgstr "黄/青"
 #~ msgctxt "game_options"
 #~ msgid "Legacy (single threaded)"
 #~ msgstr "レガシー (シングルスレッド)"
+
+#~ msgctxt "game_options"
+#~ msgid "Legacy3D"
+#~ msgstr "Legacy3Dエンジン"
+
+#~ msgctxt "game_options"
+#~ msgid "Limit FPS to reduce high CPU usage."
+#~ msgstr "FPS を制限して、高い CPU 使用率を削減します"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -21552,6 +21954,10 @@ msgstr "黄/青"
 #~ msgstr ""
 #~ "ゲーム リストが更新されると、新しいドライブ コンテンツが利用できるようにな"
 #~ "ります..."
+
+#~ msgctxt "game_options"
+#~ msgid "New3D"
+#~ msgstr "New3Dエンジン"
 
 #~ msgctxt "keys_files"
 #~ msgid "Next disk"
@@ -22449,6 +22855,10 @@ msgstr "黄/青"
 #~ msgid "SCREEN LAYOUT"
 #~ msgstr "画面レイアウト"
 
+#~ msgctxt "game_options"
+#~ msgid "SCREEN RATIO"
+#~ msgstr "画面比率"
+
 #~ msgid "SCREEN READER (TEXT TO SPEECH)"
 #~ msgstr "スクリーンリーダー（音声合成）"
 
@@ -23052,6 +23462,10 @@ msgstr "黄/青"
 #~ msgstr "メタ情報を保存せずにシャットダウンします"
 
 #~ msgctxt "game_options"
+#~ msgid "Simple 2x"
+#~ msgstr "シンプル 2x"
+
+#~ msgctxt "game_options"
 #~ msgid "Sine"
 #~ msgstr "サイン"
 
@@ -23101,6 +23515,11 @@ msgstr "黄/青"
 #~ msgstr ""
 #~ "テクスチャを GPU に並行してストリーミングします。より強力な GPU ではパ"
 #~ "フォーマンスを向上させることができます"
+
+#~ msgctxt "game_options"
+#~ msgid "Stretch games to full-screen, but may distort the aspect ratio"
+#~ msgstr ""
+#~ "ゲームをフルスクリーンに拡大しますが、アスペクト比が歪む可能性があります"
 
 #~ msgctxt "game_options"
 #~ msgid "Stretch to Window"
@@ -23352,6 +23771,10 @@ msgstr "黄/青"
 
 #~ msgid "UEFI Boot"
 #~ msgstr "UEFI ブート"
+
+#~ msgctxt "game_options"
+#~ msgid "UI PROMPTS"
+#~ msgstr "UI プロンプト 表示"
 
 #~ msgid "UKNOWN ERROR"
 #~ msgstr "不明なエラー"

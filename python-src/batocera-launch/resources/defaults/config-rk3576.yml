@@ -1,12 +1,18 @@
 gamecube:
-  emulator: libretro
+  emulator: dolphin
   core:     dolphin
+  options:
+    gfxbackend: Vulkan
+    dual_core: true
 nds:
   emulator: drastic
   core:     drastic
 wii:
-  emulator: libretro
+  emulator: dolphin
   core:     dolphin
+  options:
+    gfxbackend: Vulkan
+    dual_core: true
 fmtowns:
   emulator: libretro
   core:     mame
@@ -16,6 +22,9 @@ psx:
 ps2:
   emulator: libretro
   core:     play
+psp:
+  options:
+    gfxbackend: VULKAN
 flash:
   emulator: lightspark
   core:     lightspark

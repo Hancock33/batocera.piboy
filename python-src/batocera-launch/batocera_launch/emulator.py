@@ -6,12 +6,7 @@ import os
 import sys
 import xml.etree.ElementTree as ET
 from abc import ABC, abstractmethod
-from contextlib import (
-    AbstractAsyncContextManager,
-    AbstractContextManager,
-    AsyncExitStack,
-    chdir,
-)
+from contextlib import AbstractAsyncContextManager, AbstractContextManager, AsyncExitStack, chdir
 from dataclasses import field
 from pathlib import Path
 from typing import TYPE_CHECKING, ClassVar, Final, Self, cast
@@ -35,7 +30,8 @@ from .devices.wheels import configure_wheels
 from .draw.bezel import bezel_overlay
 from .exceptions import UnknownEmulator
 from .paths import ES_GAMES_METADATA, ES_GUNS_ART_METADATA, SYSTEM_DECORATIONS, USER_DECORATIONS
-from .rom import Rom
+from .plugin_manager import HookContext, PluginManager
+from .rom import Rom, ShortGameID
 
 if TYPE_CHECKING:
     from collections.abc import Container, Iterator, Mapping
@@ -65,7 +61,7 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
     sdl_game_controller_config_ignore_buttons: ClassVar[Container[str] | None] = None
 
     config: SystemConfig
-    profiler: Profiler
+    profiler: Profiler = field(repr=False)
 
     # These are set in __post_init__
     system: str = field(init=False)
@@ -74,24 +70,29 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
 
     # These are set in __aenter__
     rom: Rom = field(init=False, default=cast('Rom', None))
-    metadata: dict[str, str] = field(init=False, default=cast('dict[str, str]', None))
-    controllers: Controllers = field(init=False, default=cast('Controllers', None))
-    guns: Guns = field(init=False, default=cast('Guns', None))
-    wheels: DeviceInfoMapping = field(init=False, default=cast('DeviceInfoMapping', None))
-    resolution: Resolution = field(init=False, default=cast('Resolution', None))
+    metadata: dict[str, str] = field(init=False, default=cast('dict[str, str]', None), repr=False)
+    controllers: Controllers = field(init=False, default=cast('Controllers', None), repr=False)
+    guns: Guns = field(init=False, default=cast('Guns', None), repr=False)
+    wheels: DeviceInfoMapping = field(init=False, default=cast('DeviceInfoMapping', None), repr=False)
+    resolution: Resolution = field(init=False, default=cast('Resolution', None), repr=False)
 
-    __client_session: aiohttp.ClientSession | None = field(init=False, default=None)
-    __stack: AsyncExitStack = field(init=False, default_factory=AsyncExitStack)
+    __client_session: aiohttp.ClientSession | None = field(init=False, default=None, repr=False)
+    __stack: AsyncExitStack = field(init=False, default_factory=AsyncExitStack, repr=False)
+    __plugins: PluginManager = field(init=False, repr=False)
 
     def __post_init__(self) -> None:
         self.system = self.config.system
         self.fancy_system_name = self.config.cli_args.systemname
         self.game_info_path = self.config.cli_args.gameinfoxml
+        self.__plugins = PluginManager(HookContext(self.config))
 
     async def __aenter__(self) -> Self:
         await self.__stack.__aenter__()
 
         self.__stack.push_async_callback(self.__close_client_session)
+
+        # Started first so governors are switching while the rest of the launch is prepared
+        self.__plugins.start()
 
         try:
             self.rom = await self.__stack.enter_async_context(
@@ -136,7 +137,10 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
 
             return self
         except BaseException:
-            await self.__stack.__aexit__(*sys.exc_info())
+            try:
+                await self.__stack.__aexit__(*sys.exc_info())
+            finally:
+                await self.__plugins.stop()
             raise
 
     async def __aexit__(
@@ -146,7 +150,11 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
         traceback: TracebackType | None,
         /,
     ) -> bool | None:
-        return await self.__stack.__aexit__(exc_type, exc_value, traceback)
+        try:
+            return await self.__stack.__aexit__(exc_type, exc_value, traceback)
+        finally:
+            # after the stack so the display mode is restored before a hook touches it
+            await self.__plugins.stop()
 
     @property
     def name(self) -> str:
@@ -159,6 +167,10 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
     @property
     def core(self) -> str:
         return self.config.core
+
+    @cached_property
+    def rom_short_id(self) -> ShortGameID:
+        return self.rom.source_short_id
 
     @property
     def render_config(self) -> Config:
@@ -366,7 +378,7 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
             await self.__client_session.close()
 
     def get_games_metadata(self, metadata_file: Path) -> dict[str, str]:
-        return get_games_meta_data(metadata_file, self.system, self.rom)
+        return get_games_meta_data(metadata_file, self.system, self.rom_short_id)
 
     async def prepare_bezel(self) -> Path | None:
         if self.handles_bezels:
@@ -785,6 +797,8 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
                     if self.config.use_guns and self.guns:
                         self.draw_gun_borders()
 
+                    await self.__plugins.ready()
+
                     with self.profiler.pause():
                         async with evmapy_manager.monitor_controllers():
                             command.cpu_affinity = resolve_cpu_cluster(
@@ -804,9 +818,6 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
                 return emulators[emulator_name].load()
             except Exception as e:
                 raise UnknownEmulator from e
-
-        if 'configgen' in emulators.names:
-            return emulators['configgen'].load()
 
         raise UnknownEmulator
 

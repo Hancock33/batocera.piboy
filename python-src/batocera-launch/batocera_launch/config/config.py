@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import logging
 from collections import ChainMap
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, ClassVar, Final, Literal, Self, cast, overload
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
@@ -15,7 +15,7 @@ from .defaults import load_defaults, load_system_defaults
 from .es_settings import ESSettings
 
 if TYPE_CHECKING:
-    from collections.abc import Iterator, KeysView, MutableMapping, ValuesView
+    from collections.abc import Iterator, KeysView, Mapping, MutableMapping, ValuesView
     from pathlib import Path
 
     from ..cli.arguments import Arguments
@@ -127,6 +127,9 @@ class Config:
 class SystemConfig(Config):
     cli_args: Arguments
     es_settings: ESSettings
+    user_config: KeyValueConfig
+    system_settings: Mapping[str, str]
+    global_settings: Mapping[str, str]
     system: str
     rom: Path
     emulator: str
@@ -134,8 +137,8 @@ class SystemConfig(Config):
     raw_core: str | None
     core: str
     core_forced: bool
-    use_guns: bool
-    use_wheels: bool
+    use_guns: bool = field(init=False)
+    use_wheels: bool = field(init=False)
     ui_mode: Literal['Full', 'Kiosk', 'Kid']
     show_fps: bool
     netplay_mode: str | None
@@ -146,6 +149,10 @@ class SystemConfig(Config):
     state_slot: str | None
     autosave: str | None
     state_filename: str | None
+
+    def __post_init__(self) -> None:
+        object.__setattr__(self, 'use_guns', self.get_bool('use_guns'))
+        object.__setattr__(self, 'use_wheels', self.get_bool('use_wheels'))
 
     @property
     def video_mode(self) -> str:
@@ -180,12 +187,13 @@ class SystemConfig(Config):
         # see FileData::getConfigurationName() on batocera-emulationstation
         settings_name = rom.name.replace('=', '').replace('#', '')
 
-        user_settings = ChainMap(
+        system_settings = ChainMap(
             user_config.section(f'{args.system}["{settings_name}"]'),  # game-specific
             user_config.section(f'{args.system}.folder["{rom.parent}"]'),  # folder-specific
             user_config.section(args.system),
-            user_config.section('global'),
         )
+        global_settings = user_config.section('global')
+        user_settings = ChainMap(system_settings, global_settings)
 
         # A few emulators have config options named "language", so "system.language" is chosen
         # in order to prevent conflicts with config options from es_features.yaml
@@ -221,10 +229,34 @@ class SystemConfig(Config):
         if args.core is not None:
             core = args.core
 
+        if 'use_guns' not in data and args.lightgun:
+            data['use_guns'] = True
+        elif 'use_guns' in data:
+            if args.lightgun:
+                _logger.warning(
+                    "use_guns manually set to '%s' to flagged game (auto-detection overridden)", data['use_guns']
+                )
+            else:
+                _logger.info("use_guns manually set to '%s' to flagless game", data['use_guns'])
+
+        if 'use_wheels' not in data and args.wheel:
+            data['use_wheels'] = True
+        elif 'use_wheels' in data:
+            if args.wheel:
+                _logger.warning(
+                    "use_wheels manually set to '%s' to flagged game (auto-detection overridden)",
+                    data['use_wheels'],
+                )
+            else:
+                _logger.info("use_wheels manually set to '%s' to flagless game", data['use_wheels'])
+
         return cls(
             data,
             cli_args=args,
             es_settings=es_settings,
+            user_config=user_config,
+            system_settings=system_settings,
+            global_settings=global_settings,
             system=args.system,
             rom=rom,
             emulator=emulator,
@@ -232,8 +264,6 @@ class SystemConfig(Config):
             raw_core=core,
             core=core or '',
             core_forced=('core' in user_settings or args.core is not None),
-            use_guns=data.get('use_guns', args.lightgun or False),
-            use_wheels=data.get('use_wheels', args.wheel or False),
             ui_mode=ui_mode,
             show_fps=show_fps,
             netplay_mode=args.netplaymode,

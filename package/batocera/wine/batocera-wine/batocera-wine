@@ -442,6 +442,19 @@ reg_install() {
         WINEPREFIX=${WINEPREFIX} ${CMD_PREFIX} "${WINE}" reg add "HKEY_CURRENT_USER\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 0" /f &>/dev/null
     fi
 
+    # Wine picks its own Wayland driver whenever Wayland is running, the SDL 1.2 games Mugen runs need XWayland's X11 driver
+    if [[ "${SYSTEM}" = "mugen" && "${SYSTEM_DISPLAY_MODE}" = "wayland" ]]; then
+        if [[ "${WAYLAND_DRIVER}" != "native" ]]; then
+            if ! grep -q '^"Graphics"="x11"' "${WINEPOINT}/user.reg" 2>/dev/null; then
+                WINEPREFIX=${WINEPOINT} ${CMD_PREFIX} "${WINE}" reg add "HKEY_CURRENT_USER\Software\Wine\Drivers" /v "Graphics" /t REG_SZ /d "x11" /f &>/dev/null
+                waitWineServer 0
+            fi
+        elif grep -q '^"Graphics"="x11"' "${WINEPOINT}/user.reg" 2>/dev/null; then
+            WINEPREFIX=${WINEPOINT} ${CMD_PREFIX} "${WINE}" reg delete "HKEY_CURRENT_USER\Software\Wine\Drivers" /v "Graphics" /f &>/dev/null
+            waitWineServer 0
+        fi
+    fi
+
     if [[ -d "$ii" ]]; then
         readarray -t i < <(find "$ii" -maxdepth 1 -type f -iname "*.reg" -printf "%p\n")
         [[ "${#i[@]}" -eq 0 ]] && { rmdir "$ii"; echo "${FUNCNAME[0]}: Place only reg-files to $ii" >&2; return 0; }
@@ -457,6 +470,11 @@ reg_install() {
             mv --backup=t "$file" "${USER_DIR}/installed.regs"
         done
         rmdir  "$ii" || { echo "${FUNCNAME[0]}: Place only reg-files to $ii" >&2; }
+    fi
+
+    if [[ "${NVAPI}" = 1 && -e "/usr/lib/nvidia/wine/nvngx.dll" ]] && ! grep -q 'NGXCore' "${WINEPOINT}/system.reg"; then
+        WINEPREFIX=${WINEPOINT} ${CMD_PREFIX} "${WINE}" reg add "HKEY_LOCAL_MACHINE\Software\NVIDIA Corporation\Global\NGXCore" /v "FullPath" /t REG_SZ /d "C:\Windows\System32" /f
+        waitWineServer 0
     fi
 
     if [[ "${WINE_ENABLE_HIDRAW}" = 1 ]]; then
@@ -654,6 +672,10 @@ dxvk_install() {
     if [[ "${NVAPI}" = 1 ]]; then
         export DXVK_ENABLE_NVAPI=1
         export WINEDLLOVERRIDES="${WINEDLLOVERRIDES};nvapi,nvapi64=n"
+        # NVIDIA's NGX core for Wine, needed by games for DLSS
+        if [[ -e "/usr/lib/nvidia/wine/nvngx.dll" && "${WINEARCH}" != "win32" ]]; then
+            ln -sf /usr/lib/nvidia/wine/{_nvngx.dll,nvngx.dll,nvngx_dlssg.dll} "${WINEPREFIX}/drive_c/windows/system32" || return 1
+        fi
     else
         export DXVK_ENABLE_NVAPI=0
         export WINEDLLOVERRIDES="${WINEDLLOVERRIDES};nvapi64,nvapi="

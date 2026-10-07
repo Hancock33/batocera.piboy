@@ -8,7 +8,8 @@ LIBRETRO_MAME_VERSION = mame0289
 LIBRETRO_MAME_SITE = https://github.com/Hancock33/batocera-mame-builds/releases/download/$(LIBRETRO_MAME_VERSION)
 LIBRETRO_MAME_LICENSE = MAME
 LIBRETRO_MAME_SOURCE = libretro-mame-$(MAME_CROSS_ARCH)-$(subst mame,,$(LIBRETRO_MAME_VERSION)).tar.xz
-LIBRETRO_MAME_DEPENDENCIES = alsa-lib retroarch
+LIBRETRO_MAME_DEPENDENCIES = alsa-lib retroarch host-python3 batocera-launch-libretro-mame
+
 $(eval $(call register,mame.libretro.core.yml))
 $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY,sega-arcade.mame.libretro.core.yml))
 
