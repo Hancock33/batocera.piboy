@@ -1,8 +1,8 @@
 diff --git a/cheevos/cheevos.c b/cheevos/cheevos.c
-index c96e60eb12..e43ea7b2d1 100644
+index 46a15959bd..34e13a8dfd 100644
 --- a/cheevos/cheevos.c
 +++ b/cheevos/cheevos.c
-@@ -517,9 +517,10 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
+@@ -520,9 +520,10 @@ static void rcheevos_award_achievement(const rc_client_achievement_t* cheevo)
        if (shotname)
        {
           const char *path_directory_screenshot = settings->paths.directory_screenshot;

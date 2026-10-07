@@ -1,8 +1,8 @@
 diff --git a/gfx/common/wayland_common.c b/gfx/common/wayland_common.c
-index c39b95798f..28bc876d90 100644
+index 656ea915d7..efa250f928 100644
 --- a/gfx/common/wayland_common.c
 +++ b/gfx/common/wayland_common.c
-@@ -1278,6 +1278,7 @@ bool gfx_ctx_wl_init_common(
+@@ -1353,6 +1353,7 @@ bool gfx_ctx_wl_init_common(
     /* Bind SHM based wl_buffer to wl_surface until the vulkan surface is ready.
      * This shows the window which assigns us a display (wl_output)
      * which is useful for HiDPI and auto selecting a display for fullscreen. */
@@ -10,7 +10,7 @@ index c39b95798f..28bc876d90 100644
     if (video_monitor_index == 0 && wl_list_length (&wl->all_outputs) > 1)
     {
        if (!wl_draw_splash_screen(wl))
-@@ -1289,6 +1290,7 @@ bool gfx_ctx_wl_init_common(
+@@ -1364,6 +1365,7 @@ bool gfx_ctx_wl_init_common(
        while (wl->configured)
        wl_display_dispatch(wl->input.dpy);
     }
