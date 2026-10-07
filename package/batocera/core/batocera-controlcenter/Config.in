@@ -6,5 +6,5 @@ config BR2_PACKAGE_BATOCERA_CONTROLCENTER
 	help
 	  A flexible, XML-driven control panel for Batocera that
 	  provides an on-screen interface for system configuration
-	  and control. Works on both X11 and Wayland (labwc) with 
+	  and control. Works on both X11 and Wayland (labwc) with
 	  gamepad / touchscreen / keyboard.

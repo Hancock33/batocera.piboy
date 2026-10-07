@@ -364,7 +364,7 @@ class Daemon:
 
     def __on_udev(self) -> None:
         try:
-            # Drain the queue; add_reader only guarantees ≥1 event.
+            # Drain the queue; add_reader only guarantees >1 event.
             while (device := self.monitor.poll(0)) is not None:
                 if device.action in {'add', 'remove'}:
                     self.udev_events.put_nowait(device)
