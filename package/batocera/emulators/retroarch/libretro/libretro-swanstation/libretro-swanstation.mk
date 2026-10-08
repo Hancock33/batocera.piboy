@@ -3,8 +3,8 @@
 # libretro-swanstation
 #
 ################################################################################
-# Version: Commits on Sept 17, 2026
-LIBRETRO_SWANSTATION_VERSION = b6c30a7b270a3f68ac41f268eafdfa678d17dea2
+# Version: Commits on Oct 08, 2026
+LIBRETRO_SWANSTATION_VERSION = dd4805619bbbfc6e0d1776372cb16377088b448e
 LIBRETRO_SWANSTATION_SITE = $(call github,libretro,swanstation,$(LIBRETRO_SWANSTATION_VERSION))
 LIBRETRO_SWANSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBRETRO_SWANSTATION_LICENSE = GPLv2

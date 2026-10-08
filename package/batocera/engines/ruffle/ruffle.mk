@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 07, 2026
-RUFFLE_VERSION = v0.7.0
+RUFFLE_VERSION = v0.7.1
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
 RUFFLE_LICENSE = GPLv2
 RUFFLE_EMULATOR_INFO = ruffle.emulator.yml
