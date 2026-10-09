@@ -13,8 +13,10 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|849b113102166ebc3
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|e6881e2b55c712c30aa8e5cf1227d347518bde99|Oct 09, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|65655289ffa918867161c73b747b52c8cc159c9b|Oct 09, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.75.2|Oct 09, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261009|Oct 09, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|3fe19e7acfb759c52b4794a40cb9a78d561c19da|Oct 09, 2026
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4984f691acbbb22d5b11b786330c4b6e6c4a9820|Oct 09, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261009|Oct 09, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7b393d56a2d69dd8e5d1e9887512ead6b6e2a584|Oct 09, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|51353ff8d65e58300eeb2bd014867673f1f367c6|Oct 09, 2026
 Emulators|[libretro-beetle-vb](http://github.com/libretro/beetle-vb-libretro)|851a4f38df8bb9d7854b35e82a5306a40db7e01c|Oct 09, 2026
@@ -42,9 +44,7 @@ Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|a57e947
 Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|bf574c9b74f1d718b0bcee15d648b20a8bfc927c|Oct 08, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|b3e5c976565142626876a2e2f4190c8c573452cf|Oct 08, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.7-rc.1|Oct 08, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261008|Oct 08, 2026
 Controllers|[lightguns-games-precalibrations](http://github.com/batocera-linux/lightguns-games-precalibrations)|cdaf9ac06422f06bf89a34eab62676f90f3c6f0a|Oct 08, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261008|Oct 08, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|b401f5e663ddcabdf2f8d9a72050ecbea0e41953|Oct 08, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|2c80e3d0beb968bc4b56ec2fd8473b54eecaa306|Oct 08, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261008|Oct 08, 2026
