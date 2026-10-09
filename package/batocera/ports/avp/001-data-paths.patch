@@ -1,8 +1,8 @@
-diff --git a/src/files.c b/src/files.c
-index 21a3a66..1a9425f 100644
---- a/src/files.c
-+++ b/src/files.c
-@@ -650,8 +650,8 @@ void InitGameDirectories(char *argv0, char* argv_datapath)
+diff --git a/src/engine/core/files.c b/src/engine/core/files.c
+index 74c14ec..16bf90d 100644
+--- a/src/engine/core/files.c
++++ b/src/engine/core/files.c
+@@ -770,8 +770,8 @@ void InitGameDirectories(char *argv0, char* argv_datapath)
      
  	localdir = (char *)malloc(strlen(homedir)+10);
  	strcpy(localdir, homedir);
