@@ -1,17 +1,19 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|76e5c54291026fae84d2ae70234d1f5199156510|Oct 09, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|76e5c54291026fae84d2ae70234d1f5199156510|Oct 09, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|fd1088643239f21d568b5a76c28dc0007167b759|Oct 09, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|fd1088643239f21d568b5a76c28dc0007167b759|Oct 09, 2026
+Emulators|[hatari](http://github.com/hatari/hatari)|86b08d3a284bcbf67703ba797f140eca3f2f8ce6|Oct 09, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|989b832dd26f24aba25ee078226ef12f2ead7140|Oct 09, 2026
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4464ef4efdc7aac618fefdee7a6a4c93617399e4|Oct 09, 2026
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|0ac523c4b56d91b1db264858f719fcb1e1dffe56|Oct 09, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|b75d5e6292d5caa6a8411bacc9db1eca1531beab|Oct 09, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|417b37dfeb9a35937ed3ab98ce85177f27a50fa2|Oct 09, 2026
+Engines|[tic80](https://github.com/nesbox/TIC-80.git)|762ec29d16db833682e1263de74802dc053104ac|Oct 09, 2026
 Ports|[avp](http://github.com/atsb/NakedAVP)|9225cef14c41d23705986eee9a580818ad297546|Oct 09, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|849b113102166ebc3783d68b0115715edba304f3|Oct 09, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|e6881e2b55c712c30aa8e5cf1227d347518bde99|Oct 09, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|65655289ffa918867161c73b747b52c8cc159c9b|Oct 09, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.75.2|Oct 09, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|9358862eca27644b43ebdadae5ec02589f7cdbe7|Oct 09, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|3fe19e7acfb759c52b4794a40cb9a78d561c19da|Oct 09, 2026
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4984f691acbbb22d5b11b786330c4b6e6c4a9820|Oct 09, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7b393d56a2d69dd8e5d1e9887512ead6b6e2a584|Oct 09, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|51353ff8d65e58300eeb2bd014867673f1f367c6|Oct 09, 2026
@@ -23,10 +25,11 @@ Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|baf053fb2
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|e05caba0aa33cae580d104c45c6caa6406617e3b|Oct 09, 2026
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|ee0273a8f60e7c21fc7f679bb9c95ad1652b37cd|Oct 09, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|3be1f4372050ebd3e9b783b2f28b3c5a4c719fc4|Oct 09, 2026
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|4464ef4efdc7aac618fefdee7a6a4c93617399e4|Oct 09, 2026
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|0ac523c4b56d91b1db264858f719fcb1e1dffe56|Oct 09, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|1b24329a0cd67de75cb9bc38c96fafdec67235be|Oct 09, 2026
 Emulators|[libretro-sameboy](http://github.com/LIJI32/SameBoy)|98da08c3117a7bf39c7329fc662c0d18cb54707d|Oct 09, 2026
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|395ad15b18ccb5370334295290ea535c48c39c5c|Oct 09, 2026
+Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|762ec29d16db833682e1263de74802dc053104ac|Oct 09, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|e08317ea301a61a48a22980ded6ca0c99f831da3|Oct 09, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.4|Oct 08, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261008|Oct 08, 2026
@@ -62,7 +65,6 @@ Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|0cdc914749
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|0d9853df9a917eba2f7a84158bd1c3bccb8933e8|Oct 07, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|cd1d3ac0a1b33545c97f93fa170ac6a4d62309c4|Oct 06, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|fced55a9dee09292587d509c30904494d4f6e8f2|Oct 06, 2026
-Emulators|[hatari](http://github.com/hatari/hatari)|5dc31d4e7e6bc3356122692dbb0c27aae3bc5a16|Oct 06, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|626020f38bab1bf2c9ac5b6c66bfaf921b4a4d78|Oct 06, 2026
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|128cd6e0a39734fefd0f0bf0aad5e997c29e2445|Oct 06, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|10e4b0c6ceae20daa65ddf436a4445dddd0982d2|Oct 06, 2026
@@ -75,10 +77,8 @@ Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|151828f1
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|0d252c975c2629654f9bd92f83e45152778d3015|Oct 06, 2026
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|84b700e271145df82ae71d0497af11705a2bb166|Oct 05, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4|Oct 05, 2026
-Engines|[tic80](https://github.com/nesbox/TIC-80.git)|a764b03e81956dfd9d4dfe2e334e44261b8225af|Oct 05, 2026
 Utils|[7zip](https://github.com/ip7z/7zip/releases)|26.04|Oct 05, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|c6e0fcb8325fc7969c91387f56c63433de0f1a53|Oct 05, 2026
-Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|a764b03e81956dfd9d4dfe2e334e44261b8225af|Oct 05, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|9092db6dbbdea7763a174e81ceaca3ea9626cd2a|Oct 04, 2026
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|ec16bedd8819c475326f4f1a3063772c6d986e06|Oct 04, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|09b5b644be68623887f2e425534ac7ededc28d6a|Oct 04, 2026
