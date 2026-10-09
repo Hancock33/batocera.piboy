@@ -1,6 +1,6 @@
 config BR2_PACKAGE_HYPSEUS_SINGE_BEZELS
 	bool "hypseus-singe-bezels"
-	select BR2_PACKAGE_FFMPEG_PYTHON
+	select BR2_PACKAGE_HYPSEUS_SINGE
 
 	help
 	  A collection of bezels for various Daphne & Singe based games.
