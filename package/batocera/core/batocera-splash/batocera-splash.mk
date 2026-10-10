@@ -60,6 +60,7 @@ endif
 BATOCERA_SPLASH_POST_INSTALL_TARGET_HOOKS += BATOCERA_SPLASH_INSTALL_SCRIPT
 
 ifeq ($(BATOCERA_SPLASH_MEDIA),image)
+    BATOCERA_SPLASH_DEPENDENCIES += host-imagemagick dejavu
     BATOCERA_SPLASH_POST_INSTALL_TARGET_HOOKS += BATOCERA_SPLASH_INSTALL_IMAGE
 endif
 
@@ -108,6 +109,14 @@ define BATOCERA_SPLASH_INSTALL_VIDEO_CAPCOM
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/splash
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/Capcom.mp4 $(TARGET_DIR)/usr/share/batocera/splash/Capcom.mp4
 	echo -e "1\n00:00:00,000 --> 00:00:02,000\n$(BATOCERA_SPLASH_TGVERSION)" > "$(TARGET_DIR)/usr/share/batocera/splash/splash.srt"
+endef
+
+# $(1) source image, $(2) point size, $(3) text position, $(4) output image
+define BATOCERA_SPLASH_ANNOTATE
+    $(HOST_DIR)/bin/magick "$(BATOCERA_SPLASH_PKGDIR)/images/$(1)" \
+        -font $(DEJAVU_DIR)/ttf/DejaVuSans.ttf -fill white -pointsize $(2) \
+        -annotate $(3) "$(BATOCERA_SPLASH_TGVERSION)" \
+        "$(TARGET_DIR)/usr/share/batocera/splash/$(4)"
 endef
 
 define BATOCERA_SPLASH_INSTALL_IMAGE
