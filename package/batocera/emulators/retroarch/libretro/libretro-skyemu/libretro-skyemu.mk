@@ -3,8 +3,8 @@
 # libretro-skyemu
 #
 ################################################################################
-# Version: Commits on Oct 08, 2026
-LIBRETRO_SKYEMU_VERSION = c3b0b56aed427b35188db30243ee74e52c1f9456
+# Version: Commits on Oct 10, 2026
+LIBRETRO_SKYEMU_VERSION = d2f95461d61114cdfb35f2931d23e5b5a86bed08
 LIBRETRO_SKYEMU_SITE =  $(call github,skylersaleh,SkyEmu,$(LIBRETRO_SKYEMU_VERSION))
 LIBRETRO_SKYEMU_LICENSE = MIT
 LIBRETRO_SKYEMU_EMULATOR_INFO = skyemu.libretro.core.yml
