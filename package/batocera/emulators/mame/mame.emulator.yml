@@ -107,6 +107,7 @@ custom_features:
       When moving: onmove
 file_extensions:
   - bin
+  - chd
   - zip
   - 7z
 systems:
@@ -2301,7 +2302,6 @@ systems:
   - gaelco
   - gottlieb
   - hikaru
-  - hyprscan
   - igs
   - incredibletech
   - irem
