@@ -3,8 +3,8 @@
 # scummvm
 #
 ################################################################################
-# Version: Commits on Jun 20, 2026
-SCUMMVM_VERSION = v2026.3.0
+# Version: Commits on Oct 10, 2026
+SCUMMVM_VERSION = v2026.4.0
 SCUMMVM_SITE = $(call github,scummvm,scummvm,$(SCUMMVM_VERSION))
 SCUMMVM_LICENSE = GPLv2
 SCUMMVM_EMULATOR_INFO = scummvm.emulator.yml
