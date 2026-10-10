@@ -1,8 +1,8 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.4|Oct 10, 2026
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|82cfb053b4fea0e39c4453afad351cf5a5bd2033|Oct 10, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|82cfb053b4fea0e39c4453afad351cf5a5bd2033|Oct 10, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|45f37fd74819ee07118ca2e7680a907b25733ac5|Oct 10, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|45f37fd74819ee07118ca2e7680a907b25733ac5|Oct 10, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|a1e20c0362f392dc25f1a3b218d2f84d4f1a25da|Oct 10, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|0cafa7633221f860a841059f23c39177dbe69f2b|Oct 10, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ed953fcbfdd1b8a7521d2966b13cc700c7e2d233|Oct 10, 2026
