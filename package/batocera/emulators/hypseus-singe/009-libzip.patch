@@ -1,0 +1,13 @@
+diff --git a/src/io/CMakeLists.txt b/src/io/CMakeLists.txt
+index 4c03473..55202f9 100644
+--- a/src/io/CMakeLists.txt
++++ b/src/io/CMakeLists.txt
+@@ -35,7 +35,7 @@ find_package_handle_standard_args(
+         _libzip_pkgcfg
+ )
+ 
+-set(LIBZIP_VERSION "unknown")
++set(LIBZIP_VERSION "1.12")
+ if (_libzip_pkgcfg)
+     file(READ "${_libzip_pkgcfg}" _libzip_pkgcfg_content)
+     string(REGEX MATCH "Version: ([0-9]+\\.[0-9]+\\.[0-9]+)"

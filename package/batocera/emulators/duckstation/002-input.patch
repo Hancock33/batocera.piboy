@@ -1,8 +1,8 @@
 diff --git a/src/util/input_manager.cpp b/src/util/input_manager.cpp
-index 7ddb8cc4f..33a64b8ea 100644
+index e249b7a0d..c17100037 100644
 --- a/src/util/input_manager.cpp
 +++ b/src/util/input_manager.cpp
-@@ -2517,30 +2517,30 @@ u32 InputManager::GetPollableDeviceCount()
+@@ -2533,30 +2533,30 @@ u32 InputManager::GetPollableDeviceCount()
  static void GetKeyboardGenericBindingMapping(std::vector<std::pair<GenericInputBinding, std::string>>* mapping)
  {
    // Threading: No shared state access.
