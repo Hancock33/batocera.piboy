@@ -16,9 +16,6 @@ BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_7_2=y
 BR2_TOOLCHAIN_GLIBC_GCONV_LIBS_COPY=y
 BR2_STRIP_EXCLUDE_FILES="abuse dmdserver ecwolf greenlight Ryujinx Vita3K vpinball VPinballX_GL"
 
-# Allow to build GOLD linker, but do not use as default
-BR2_BINUTILS_EXTRA_CONFIG_OPTIONS="--enable-gold --enable-plugins"
-
 # Skip stack protection
 BR2_SSP_NONE=y
 
