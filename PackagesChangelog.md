@@ -3,6 +3,7 @@
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.4|Oct 10, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|45f37fd74819ee07118ca2e7680a907b25733ac5|Oct 10, 2026
 Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|45f37fd74819ee07118ca2e7680a907b25733ac5|Oct 10, 2026
+Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|ef195d1b9d3d9414b0124a86d962c21747e36394|Oct 10, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|a1e20c0362f392dc25f1a3b218d2f84d4f1a25da|Oct 10, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|0cafa7633221f860a841059f23c39177dbe69f2b|Oct 10, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ed953fcbfdd1b8a7521d2966b13cc700c7e2d233|Oct 10, 2026
@@ -73,7 +74,6 @@ Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/release
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|47e23b6adfae739288e736e773efe7d66080e525|Oct 07, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|f908262d334af9413ff70caa5961f4a331080920|Oct 07, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|615.78.08|Oct 07, 2026
-Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|cd1d3ac0a1b33545c97f93fa170ac6a4d62309c4|Oct 06, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|626020f38bab1bf2c9ac5b6c66bfaf921b4a4d78|Oct 06, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|2455babf0da650e75d4b82000e32cf9485956ed9|Oct 06, 2026
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|128cd6e0a39734fefd0f0bf0aad5e997c29e2445|Oct 06, 2026
