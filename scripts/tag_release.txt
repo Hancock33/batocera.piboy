@@ -54,6 +54,7 @@ portmidi.mk
 python-cog.mk
 python-ndeflib.mk
 python-nfcpy.mk
+python-pygame2.mk
 python-pyxel.mk
 rgbds.mk
 rocknix-abl.mk
