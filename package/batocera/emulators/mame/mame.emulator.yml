@@ -2265,6 +2265,18 @@ systems:
         choices:
           'On': 1
           'Off': 0
+  - name: hyprscan
+    file_extensions:
+      add:
+        - 7z
+        - cdr
+        - chd
+        - cue
+        - gdi
+        - iso
+        - nrg
+        - toc
+        - zip
   - acclaim
   - alphadenshi
   - amcoe
