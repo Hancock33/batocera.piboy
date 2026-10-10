@@ -77,8 +77,10 @@
 - Commander Genius fullscreen in Wayland
 - Commander Genius render resolution option not taking effect in-game
 - Dolphin Wii Remotes 2-4 set to None when using pad profiles
+- Flatpak and Steam missing the Decorations options, so a global decoration set could not be disabled for them
 - Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
 - Libretro-Hatarib not starting due to a compiled symbol issue
+- Lindbergh games (e.g. Harley Davidson) reconfiguring the host network, leaving the system without DNS or its LAN address
 - MAME black screen on exit with a rotated display when CRT switchres is off
 - Mupen64 not starting fullscreen with Wayland
 - NVIDIA OpenGL over EGL on X11 falling back to Mesa (e.g. Dolphin failing to start with OpenGL)
@@ -91,6 +93,7 @@
 - SM8250 devices overcharging the battery (wrong charge voltage and current), and Retroid Pocket not charging again after powering a USB-C hub or dock
 - Sonic Mania controllers
 - Sonic Mania settings changed in-game (e.g. screen shader) now persist between launches
+- Touchscreens on X11 (x86_64) not following display.rotate
 - Taradino blank screen with Wayland
 - Vice not going fullscreen with C128
 - X16emu fullscreen with Wayland
@@ -327,7 +330,7 @@
 - Khadas VIM4 kernel updated to vendor 5.15.y
 - LabWC to 0.20.2
 - Linux Firmware to 20260810
-- Mesa3D to 26.2.3
+- Mesa3D to 26.2.4
 - MangoHud to v0.8.4
 - Nvidia Open Production driver to 615.71.09
 - Nvidia 580 Legacy driver to 580.178.04
