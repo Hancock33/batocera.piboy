@@ -5,7 +5,9 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|0cafa7633221f860a
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|ed953fcbfdd1b8a7521d2966b13cc700c7e2d233|Oct 10, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|fbb7405b3b761231dd6f2610bc8eec1cd327a520|Oct 10, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|b13f444d4e3e120aaa708eb5eac738f63308da78|Oct 10, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261010|Oct 10, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|385892e8ced518dd2f6f5afbbeeac73afd29675a|Oct 10, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261010|Oct 10, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|7ac95bcedbfe4d8673c6f65075c8e41498ce7759|Oct 10, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|ed953fcbfdd1b8a7521d2966b13cc700c7e2d233|Oct 10, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|b13f444d4e3e120aaa708eb5eac738f63308da78|Oct 10, 2026
@@ -24,11 +26,9 @@ Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|9c0844d1624a
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|e6881e2b55c712c30aa8e5cf1227d347518bde99|Oct 09, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|65655289ffa918867161c73b747b52c8cc159c9b|Oct 09, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.75.2|Oct 09, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261009|Oct 09, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.166.9546-589|Oct 09, 2026
 Engines|[libpinmame](http://github.com/vpinball/pinmame)|2150eab0ce9392b999960dbd008b523dc2178f1e|Oct 09, 2026
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4984f691acbbb22d5b11b786330c4b6e6c4a9820|Oct 09, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261009|Oct 09, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|0d6269c59ba92e055e7d77da8e8dcd66fca8ac3c|Oct 09, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|51353ff8d65e58300eeb2bd014867673f1f367c6|Oct 09, 2026
 Emulators|[libretro-beetle-vb](http://github.com/libretro/beetle-vb-libretro)|851a4f38df8bb9d7854b35e82a5306a40db7e01c|Oct 09, 2026
