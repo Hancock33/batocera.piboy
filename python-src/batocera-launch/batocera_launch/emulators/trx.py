@@ -11,6 +11,9 @@ from batocera_launch import Command, Emulator, HotkeysContext
 
 _logger = logging.getLogger(__name__)
 
+_TRX_SRC: Final = Path('/usr/bin/trx')
+_DEFAULT_MOD: Final = 'tr1'
+
 _VALID_MODS: Final = {
     'trx1',
     'tr1',
@@ -24,6 +27,39 @@ _VALID_MODS: Final = {
     'tr3-la',
     'tr3-level',
 }
+
+_EXPANSION_MODS: Final[dict[str, str]] = {'.trx1': 'tr1-ub', '.trx2': 'tr2-gm', '.trx3': 'tr3-la'}
+_BASE_MODS: Final[dict[str, str]] = {'.trx1': 'tr1', '.trx2': 'tr2', '.trx3': 'tr3'}
+
+
+def _copy_item(item: Path, dest: Path, /) -> None:
+    if not item.is_dir():
+        shutil.copy2(item, dest)
+    elif not dest.exists():
+        shutil.copytree(item, dest, dirs_exist_ok=True)
+    else:
+        for sub_item in item.rglob('*'):
+            sub_dest = dest / sub_item.relative_to(item)
+            if sub_item.is_dir():
+                sub_dest.mkdir(parents=True, exist_ok=True)
+            else:
+                shutil.copy2(sub_item, sub_dest)
+
+
+def _copy_shared_files(source: Path, rom_dir: Path, /) -> None:
+    """Copy shared package configurations, shaders, etc. next to the game."""
+    for item in source.iterdir():
+        dest = rom_dir / item.name
+        try:
+            _copy_item(item, dest)
+        except PermissionError as e:
+            _logger.debug('Permission error while copying %s -> %s: %s', item, dest, e)
+        except Exception as e:
+            _logger.debug('Error copying %s -> %s: %s', item, dest, e)
+
+
+def _engine_version(mod: str, /) -> str:
+    return mod[2] if len(mod) > 2 and mod[2].isdigit() else '1'
 
 
 @cached_dataclass
@@ -41,67 +77,36 @@ class TRX(Emulator):
     def in_game_ratio(self) -> float:
         return 16 / 9 if self.resolution.width / self.resolution.height > ((16.0 / 9.0) - 0.1) else 4 / 3
 
+    @cached_property
+    def mod(self) -> str:
+        # Detect the mod from the launcher file's parent folder
+        mod = self.rom.parent.name if self.rom.parent.name in _VALID_MODS else _DEFAULT_MOD
+        mods = _EXPANSION_MODS if self.config.get_bool('trx-expansion') else _BASE_MODS
+        return mods.get(self.rom.suffix, mod)
+
     async def configure(self) -> Command:
         rom_dir = self.rom.parent
-        source_path = Path('/usr/bin/trx')
 
-        # Copy shared package configurations/shaders etc
-        for item in source_path.iterdir():
-            dest = rom_dir / item.name
-            try:
-                if item.is_dir():
-                    if not dest.exists():
-                        shutil.copytree(item, dest, dirs_exist_ok=True)
-                    else:
-                        for sub_item in item.rglob('*'):
-                            sub_dest = dest / sub_item.relative_to(item)
-                            if sub_item.is_dir():
-                                sub_dest.mkdir(parents=True, exist_ok=True)
-                            else:
-                                shutil.copy2(sub_item, sub_dest)
-                else:
-                    shutil.copy2(item, dest)
-            except PermissionError as e:
-                _logger.debug('Permission error while copying %s -> %s: %s', item, dest, e)
-            except Exception as e:
-                _logger.debug('Error copying %s -> %s: %s', item, dest, e)
+        _copy_shared_files(_TRX_SRC, rom_dir)
 
         trx_bin = rom_dir / 'TRX'
         if trx_bin.exists():
             trx_bin.chmod(0o755)
 
-        # Detect mod from the launcher file's parent folder
-        mod = self.rom.parent.name if self.rom.parent.name in _VALID_MODS else 'tr1'
-
-        if self.config.get_bool('trx-expansion'):
-            if self.rom.suffix == '.trx1':
-                mod = 'tr1-ub'
-            if self.rom.suffix == '.trx2':
-                mod = 'tr2-gm'
-            if self.rom.suffix == '.trx3':
-                mod = 'tr3-la'
-        else:
-            if self.rom.suffix == '.trx1':
-                mod = 'tr1'
-            if self.rom.suffix == '.trx2':
-                mod = 'tr2'
-            if self.rom.suffix == '.trx3':
-                mod = 'tr3'
-
         # Each engine (TR1/TR2/TR3) keeps its own settings file, named TR<N>X.json5
-        engine_version = mod[2] if len(mod) > 2 and mod[2].isdigit() else '1'
-        config_path = rom_dir / 'cfg' / f'TR{engine_version}X.json5'
+        await self._write_config(rom_dir / 'cfg' / f'TR{_engine_version(self.mod)}X.json5')
 
-        config_path.parent.mkdir(parents=True, exist_ok=True)
+        return Command([trx_bin, '--mod', self.mod], {'SDL_JOYSTICK_HIDAPI': '0'})
+
+    async def _write_config(self, config_file: Path, /) -> None:
+        config_file.parent.mkdir(parents=True, exist_ok=True)
         config_data: dict[str, Any] = {}
 
-        if config_path.exists():
+        if config_file.exists():
             try:
-                config_data = json.loads(config_path.read_text(encoding='utf-8'))
+                config_data = json.loads(config_file.read_text(encoding='utf-8'))
             except json.JSONDecodeError:
-                _logger.debug('Invalid JSON format in %s, overwriting with default settings.', config_path)
+                _logger.debug('Invalid JSON format in %s, overwriting with default settings.', config_file)
 
         config_data.update({'is_fullscreen': True, 'width': self.resolution.width, 'height': self.resolution.height})
-        config_path.write_text(json.dumps(config_data, indent=2), encoding='utf-8')
-
-        return Command([trx_bin, '--mod', mod], {'SDL_JOYSTICK_HIDAPI': '0'})
+        config_file.write_text(json.dumps(config_data, indent=2), encoding='utf-8')
