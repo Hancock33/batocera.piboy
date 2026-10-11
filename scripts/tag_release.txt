@@ -36,6 +36,7 @@ libretro-scummvm.mk
 libretro-virtualjaguar.mk
 libserum.mk
 libsfdo.mk
+libmysofa.mk
 libzedmd.mk
 logi-wheel.mk
 logitech-trueforce.mk
