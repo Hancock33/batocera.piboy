@@ -1,14 +1,40 @@
 from __future__ import annotations
 
-from pathlib import Path
+from typing import TYPE_CHECKING, Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import CONFIGS, SAVES
-from batocera_launch import (
-    Command,
-    Emulator,
-    HotkeysContext,
+from batocera_launch import Command, Emulator, HotkeysContext
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+_EDUKE32_BIN: Final = 'eduke32'
+
+_RTS_REPLACEMENTS: Final[tuple[tuple[str, str], ...]] = (
+    ('.GRP', '.RTS'),
+    ('.grp', '.rts'),
+    ('.EDUKE', '.RTS'),
+    ('.eduke', '.rts'),
 )
+_GRP_REPLACEMENTS: Final[tuple[tuple[str, str], ...]] = (
+    ('.eduke', '.GRP'),
+    ('.EDUKE', '.GRP'),
+)
+
+
+def _replace_all(value: str, replacements: tuple[tuple[str, str], ...], /) -> str:
+    for old, new in replacements:
+        value = value.replace(old, new)
+    return value
+
+
+def _rts_file(rom: Path, /) -> str:
+    return _replace_all(rom.name, _RTS_REPLACEMENTS)
+
+
+def _grp_file(rom: Path, /) -> str:
+    return _replace_all(str(rom), _GRP_REPLACEMENTS)
 
 
 @cached_dataclass
@@ -38,22 +64,17 @@ class EDuke32(Emulator):
         return SAVES / self.core
 
     async def configure(self) -> Command:
+        self.config_dir.mkdir(parents=True, exist_ok=True)
+        self.saves_dir.mkdir(parents=True, exist_ok=True)
 
-        args: list[str | Path] = ['eduke32']
+        args: list[str | Path] = [_EDUKE32_BIN]
+        rts = _rts_file(self.rom)
 
-        rtsfile = (
-            self.rom.name.replace('.GRP', '.RTS')
-            .replace('.grp', '.rts')
-            .replace('.EDUKE', '.RTS')
-            .replace('.eduke', '.rts')
-        )
-        if (self.rom.name.lower()).endswith('eduke'):
-            edukegroup = Path(self.rom).read_text().splitlines()[0]
-            edukerom = str(self.rom)
-            edukerom = edukerom.replace('.eduke', '.GRP').replace('.EDUKE', '.GRP')
-            args.extend([edukerom, '-game_dir', self.rom.parent, '-g', edukegroup, '-rts', rtsfile])
+        if self.rom.name.lower().endswith('eduke'):
+            group = self.rom.read_text().splitlines()[0]
+            args.extend([_grp_file(self.rom), '-game_dir', self.rom.parent, '-g', group, '-rts', rts])
         else:
-            args.extend([self.rom, '-game_dir', self.rom.parent, '-rts', rtsfile])
+            args.extend([self.rom, '-game_dir', self.rom.parent, '-rts', rts])
 
         if self.config.get_bool('nologo'):
             args.append('-nologo')

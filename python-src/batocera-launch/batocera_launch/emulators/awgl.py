@@ -1,12 +1,31 @@
 from __future__ import annotations
 
-from pathlib import Path
-from typing import Final
+from typing import TYPE_CHECKING, Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
-_ROM_DIR: Final = Path('/userdata/roms/ports/awgl')
+if TYPE_CHECKING:
+    from collections.abc import Collection
+    from pathlib import Path
+
+_ROM_DIR: Final = ROMS / 'ports' / 'awgl'
+
+# Game versions, detected from the rom name; each one has its own data directory.
+_VERSIONS: Final = ('15th', '20th', '3DO', 'Amiga', 'Atari', 'DOS', 'Win31')
+
+_RENDERERS: Final = ('original', 'software', 'gl')
+_AUDIO_MODES: Final = ('original', 'remastered')
+_LANGUAGES: Final = ('us', 'fr', 'de', 'es', 'it')
+_DIFFICULTIES: Final = ('easy', 'normal', 'hard')
+_FULLSCREEN_FLAGS: Final[dict[str, str]] = {'stretched': '--fullscreen', 'wide': '--fullscreen-ar'}
+
+
+def _choice(value: str | None, options: Collection[str], /) -> str:
+    if value is not None and value in options:
+        return value
+    return next(iter(options))
 
 
 @cached_dataclass
@@ -27,77 +46,21 @@ class Awgl(Emulator):
     async def configure(self) -> Command:
         args: list[str | Path] = ['awgl']
 
-        if '15th' in self.rom.stem:
-            args.append('--datapath=/userdata/roms/ports/awgl/15th')
+        for version in _VERSIONS:
+            if version in self.rom.stem:
+                args.append(f'--datapath={_ROM_DIR / version}')
+                if version == 'DOS':
+                    args.append('--mt32')
 
-        if '20th' in self.rom.stem:
-            args.append('--datapath=/userdata/roms/ports/awgl/20th')
-
-        if '3DO' in self.rom.stem:
-            args.append('--datapath=/userdata/roms/ports/awgl/3DO')
-
-        if 'Amiga' in self.rom.stem:
-            args.append('--datapath=/userdata/roms/ports/awgl/Amiga')
-
-        if 'Atari' in self.rom.stem:
-            args.append('--datapath=/userdata/roms/ports/awgl/Atari')
-
-        if 'DOS' in self.rom.stem:
-            args.append('--datapath=/userdata/roms/ports/awgl/DOS')
-            args.append('--mt32')
-
-        if 'Win31' in self.rom.stem:
-            args.append('--datapath=/userdata/roms/ports/awgl/Win31')
-
-        # Rendering mode
-        if self.config.get_str('awgl_render') == 'original':
-            args.append('--render=original')
-        elif self.config.get_str('awgl_render') == 'software':
-            args.append('--render=software')
-        elif self.config.get_str('awgl_render') == 'gl':
-            args.append('--render=gl')
-        else:
-            args.append('--render=original')
-
-        # Screen mode
-        if self.config.get_str('awgl_fullscreen') == 'stretched':
-            args.append('--fullscreen')
-        elif self.config.get_str('awgl_fullscreen') == 'wide':
-            args.append('--fullscreen-ar')
-        else:
-            args.append('--fullscreen')
-
-        # Audio mode
-        if self.config.get_str('awgl_audio') == 'original':
-            args.append('--audio=original')
-        elif self.config.get_str('awgl_audio') == 'remastered':
-            args.append('--audio=remastered')
-        else:
-            args.append('--audio=original')
-
-        # Language
-        if self.config.get_str('awgl_language') == 'us':
-            args.append('--language=us')
-        elif self.config.get_str('awgl_language') == 'fr':
-            args.append('--language=fr')
-        elif self.config.get_str('awgl_language') == 'de':
-            args.append('--language=de')
-        elif self.config.get_str('awgl_language') == 'es':
-            args.append('--language=es')
-        elif self.config.get_str('awgl_language') == 'it':
-            args.append('--language=it')
-        else:
-            args.append('--language=us')
-
-        # Game difficulty
-        if self.config.get_str('awgl_difficulty') == 'easy':
-            args.append('--difficulty=easy')
-        elif self.config.get_str('awgl_difficulty') == 'normal':
-            args.append('--difficulty=normal')
-        elif self.config.get_str('awgl_difficulty') == 'hard':
-            args.append('--difficulty=hard')
-        else:
-            args.append('--difficulty=easy')
+        args.extend(
+            (
+                f'--render={_choice(self.config.get_str("awgl_render"), _RENDERERS)}',
+                _FULLSCREEN_FLAGS.get(self.config.get_str('awgl_fullscreen') or '', '--fullscreen'),
+                f'--audio={_choice(self.config.get_str("awgl_audio"), _AUDIO_MODES)}',
+                f'--language={_choice(self.config.get_str("awgl_language"), _LANGUAGES)}',
+                f'--difficulty={_choice(self.config.get_str("awgl_difficulty"), _DIFFICULTIES)}',
+            )
+        )
 
         # EGA screen mode for DOS
         if self.config.get_str('awgl_egados') == 'enabled':

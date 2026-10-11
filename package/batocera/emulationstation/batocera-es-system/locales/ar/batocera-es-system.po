@@ -3064,6 +3064,18 @@ msgid "Amstrad PCW disk images"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"An added vibration that grows as you steer. It is not from the game. Turn it "
+"off to feel only the game's force feedback."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"An added vibration that grows with the throttle. It is not from the game. "
+"Turn it off to feel only the game's force feedback."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Analog"
 msgstr "تناظري(انلوج)"
 
@@ -3472,6 +3484,10 @@ msgid "Auto Standard (4:3 interlaced / 3:2 progressive)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Auto shows them only for the guns that need one."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Auto zoom"
 msgstr "التكبير التلقائي"
 
@@ -3725,6 +3741,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "BOOT DISK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "BOOT MODE"
 msgstr ""
 
 msgctxt "game_options"
@@ -4515,6 +4535,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "CPU"
 msgstr "المعالج"
+
+msgctxt "game_options"
+msgid "CPU BOOST"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CPU CLOCK"
@@ -5507,6 +5531,12 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Compile the game's known shaders during boot to avoid stutter. Needs GPU "
+"boost."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Complex"
 msgstr ""
 
@@ -6407,6 +6437,12 @@ msgid "Down/Crouch"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Downloads newer PS3 firmware from Sony while a game runs and installs it on "
+"the next launch. Missing firmware is always downloaded."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Dragon 200-E"
 msgstr ""
 
@@ -6444,6 +6480,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Dragon Professional (Alpha)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Draw the emulator's crosshairs. By default they show only for guns that need "
+"them."
 msgstr ""
 
 msgctxt "game_options"
@@ -7657,6 +7699,10 @@ msgid "FIRMWARE SETTINGS"
 msgstr ""
 
 msgctxt "game_options"
+msgid "FIRMWARE UPDATES"
+msgstr ""
+
+msgctxt "game_options"
 msgid "FIST CROSSHAIR"
 msgstr ""
 
@@ -7958,6 +8004,10 @@ msgid "Fast-Alt"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Faster CPU and audio emulation paths."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Faster but can cause text problems in some games."
 msgstr ""
 
@@ -8027,6 +8077,14 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Fire the gun's recoil motor on each shot, for guns that have one."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Firmware menu"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Firmware menu if the BIOS is present"
 msgstr ""
 
 msgctxt "game_options"
@@ -8538,6 +8596,10 @@ msgid "GAMEPAD RUMBLE STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
+msgid "GAMEPAD STEERING VIBRATION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GAMEPLAY"
 msgstr ""
 
@@ -8725,6 +8787,10 @@ msgctxt "game_options"
 msgid "GPU / OpenGL (Default)"
 msgstr ""
 
+msgctxt "game_options"
+msgid "GPU BOOST"
+msgstr ""
+
 #, fuzzy
 msgctxt "game_options"
 msgid "GPU SYNC"
@@ -8810,6 +8876,10 @@ msgstr "جيم بوي كلر(GBC)"
 
 msgctxt "game_options"
 msgid "Game default"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Game directly"
 msgstr ""
 
 msgctxt "game_options"
@@ -9094,6 +9164,10 @@ msgid "HI-RES ARTIFACTING"
 msgstr ""
 
 msgctxt "game_options"
+msgid "HIDE GUN FLASH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HIDE NVIDIA GPU"
 msgstr ""
 
@@ -9263,6 +9337,11 @@ msgstr ""
 
 msgctxt "keys_files"
 msgid "Hide the bezel"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Hide the white screen flash on each shot in House of the Dead and Virtua Cop."
 msgstr ""
 
 msgctxt "game_options"
@@ -9503,6 +9582,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "INVERT FORCE FEEDBACK"
+msgstr ""
+
+msgctxt "game_options"
+msgid "INVERT WHEEL FORCE FEEDBACK"
 msgstr ""
 
 msgctxt "game_options"
@@ -12660,6 +12743,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Pace the GPU like the real cabinet instead of running it uncapped. Needs GPU "
+"boost."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Pad the frame to the chosen aspect instead of stretching it to the window."
 msgstr ""
 
@@ -13289,6 +13378,10 @@ msgid "REAL DYNAMIC LIGHTING"
 msgstr ""
 
 msgctxt "game_options"
+msgid "REAL HARDWARE SPEED"
+msgstr ""
+
+msgctxt "game_options"
 msgid "REAL PALETTES"
 msgstr ""
 
@@ -13698,6 +13791,12 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Response of a stick's travel. Full deflection is always full lock, under "
+"100% the middle of the travel does less, over it does more."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Restore BLENDMODE outline on Singe sprites."
 msgstr ""
 
@@ -13723,6 +13822,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Retroverze Relay Beta"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Reverse the force for a wheel that pulls away from the centre instead of "
+"back to it."
 msgstr ""
 
 #, fuzzy
@@ -14211,6 +14316,10 @@ msgctxt "game_options"
 msgid "SMART 2D TEXTURE FILTERING"
 msgstr ""
 
+msgctxt "game_options"
+msgid "SMOOTH FIRST PLAY"
+msgstr ""
+
 #, fuzzy
 msgctxt "game_options"
 msgid "SMOOTH GAMES (BILINEAR FILTERING)"
@@ -14370,6 +14479,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "STEREO SOUND"
+msgstr ""
+
+msgctxt "game_options"
+msgid "STICK SENSITIVITY"
 msgstr ""
 
 msgctxt "game_options"
@@ -15318,8 +15431,12 @@ msgid "Singapore"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Single"
-msgstr "مفرد"
+msgid "Single (Bottom)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Single (Top)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Single Screen Only"
@@ -15765,6 +15882,12 @@ msgid "Start game"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Start the game directly, or go through the GP32 firmware menu (needs "
+"gp32166m.bin)."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Starts RPCS3 with the main Qt GUI active."
 msgstr ""
 
@@ -16025,14 +16148,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Synchronize framerate with display refresh rate."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Synthesised centring resistance on wheels that support it."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Synthesised road/engine vibration while driving."
 msgstr ""
 
 msgctxt "game_options"
@@ -16501,8 +16616,8 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"The game's jolts plus a buzz rising with steering, on a regular gamepad. "
-"Driving games only."
+"The game's own drive board forces, its springs, friction and impacts, on "
+"wheels that support it."
 msgstr ""
 
 #, c-format
@@ -17323,6 +17438,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Use the tuned GPU emulation. Off falls back to the stock one."
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Use this to play online with custom servers that reimplement the "
 "discontinued Nintendo Wi-Fi."
@@ -17613,6 +17732,14 @@ msgid "Very Low (0.20)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Vibrates on the game's impacts in driving games."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Vibrates on the game's impacts, for wheels without force feedback."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Video Game Music Files"
 msgstr "ملفات موسيقى اللعبة"
 
@@ -17729,16 +17856,16 @@ msgid "WHDLOAD LAUNCHER"
 msgstr "WHDLOAD مشغل"
 
 msgctxt "game_options"
-msgid "WHEEL"
-msgstr ""
-
-msgctxt "game_options"
 msgid "WHEEL AUTO-CENTRE"
 msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL DEADZONE"
 msgstr "منطقة العجلات الميتة"
+
+msgctxt "game_options"
+msgid "WHEEL ENGINE VIBRATION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL FORCE FEEDBACK"
@@ -17757,12 +17884,12 @@ msgid "WHEEL MODEL"
 msgstr "نموذج العجلة"
 
 msgctxt "game_options"
-msgid "WHEEL ROAD RUMBLE"
-msgstr ""
-
-msgctxt "game_options"
 msgid "WHEEL ROTATION"
 msgstr "دوران العجلة"
+
+msgctxt "game_options"
+msgid "WHEEL RUMBLE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL RUMBLE STRENGTH"
@@ -18679,6 +18806,10 @@ msgstr "أصفر/أزرق"
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
 #~ msgstr "اختر وضع (لوحة المفاتيح أو ذراع التحكم أو يد التحكم)"
+
+#~ msgctxt "game_options"
+#~ msgid "Single"
+#~ msgstr "مفرد"
 
 #~ msgctxt "game_options"
 #~ msgid "Stereo (Default)"

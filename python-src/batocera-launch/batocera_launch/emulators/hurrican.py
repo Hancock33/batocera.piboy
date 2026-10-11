@@ -9,7 +9,18 @@ from batocera_launch import Command, Emulator, HotkeysContext
 
 _logger = logging.getLogger(__name__)
 
+_HURRICAN_BIN: Final = 'hurrican'
 _ROM_DIR: Final = Path('/userdata/roms/ports/hurrican')
+
+_CUSTOM_LEVELS: Final[dict[str, str]] = {
+    'ChJees': 'ChJees',
+    'Genocide': 'Genocide',
+    'Second_Empire': 'Second_Empire',
+    'SecretPlanet': 'SecretPlanet',
+    'Valentine': 'valentine',
+    'Volcano_Temple': 'Volcano_Temple',
+    'Walkers_World': 'Walkers_World',
+}
 
 
 @cached_dataclass
@@ -31,33 +42,12 @@ class Hurrican(Emulator):
         if not (_ROM_DIR / 'data' / 'levels').is_dir():
             _logger.error('ERROR: Game assets not installed. You can get them from the Batocera Content Downloader.')
 
-        args: list[str | Path] = ['hurrican']
+        args: list[str | Path] = [_HURRICAN_BIN]
 
         if self.config.get_bool('hurrican_crt'):
             args.append('--crt')
 
-        if self.config.get('hurrican_custlevel') == 'ChJees':
-            args.append('--custom')
-            args.append('ChJees')
-        elif self.config.get('hurrican_custlevel') == 'Genocide':
-            args.append('--custom')
-            args.append('Genocide')
-        elif self.config.get('hurrican_custlevel') == 'Second_Empire':
-            args.append('--custom')
-            args.append('--Second_Empire')
-        elif self.config.get('hurrican_custlevel') == 'SecretPlanet':
-            args.append('--custom')
-            args.append('SecretPlanet')
-        elif self.config.get('hurrican_custlevel') == 'Valentine':
-            args.append('--custom')
-            args.append('valentine')
-        elif self.config.get('hurrican_custlevel') == 'Volcano_Temple':
-            args.append('--custom')
-            args.append('Volcano_Temple')
-        elif self.config.get('hurrican_custlevel') == 'Walkers_World':
-            args.append('--custom')
-            args.append('Walkers_World')
+        if (level := _CUSTOM_LEVELS.get(self.config.get_str('hurrican_custlevel', ''))) is not None:
+            args.extend(['--custom', level])
 
-        return Command(
-            args,
-        )
+        return Command(args)

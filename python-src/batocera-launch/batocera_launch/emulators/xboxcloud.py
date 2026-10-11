@@ -1,7 +1,12 @@
 from __future__ import annotations
 
+from pathlib import Path
+from typing import Final
+
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_GREENLIGHT_BIN: Final = Path('/usr/bin/greenlight')
 
 
 @cached_dataclass
@@ -17,8 +22,6 @@ class XboxCloud(Emulator):
 
     async def configure(self) -> Command:
         return Command(
-            ['/usr/bin/greenlight', '--no-sandbox', '--fullscreen'],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            [_GREENLIGHT_BIN, '--no-sandbox', '--fullscreen'],
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

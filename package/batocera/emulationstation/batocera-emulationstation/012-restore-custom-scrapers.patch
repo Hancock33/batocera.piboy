@@ -332,22 +332,22 @@ index 280412b66..89640e4f3 100644
  
  		mResultThumbnail->setImage("");
 diff --git a/es-app/src/guis/GuiScraperStart.cpp b/es-app/src/guis/GuiScraperStart.cpp
-index 2979c1d3a..66c13d48e 100644
+index 161fc86f3..2ed3db13b 100644
 --- a/es-app/src/guis/GuiScraperStart.cpp
 +++ b/es-app/src/guis/GuiScraperStart.cpp
-@@ -81,8 +81,9 @@ void GuiScraperStart::loadScrapPage()
+@@ -84,8 +84,9 @@ void GuiScraperStart::loadScrapPage()
+ 	if (mediaIdx < 0 || mediaIdx > 2)
+ 		mediaIdx = 1;
  
- 	// Media Filter
- 	mFilters = std::make_shared< OptionListComponent<FilterFunc> >(mWindow, _("GAMES TO SCRAPE FOR"), false);
--	mFilters->add(_("ALL"), [](FileData*) -> bool { return true; }, false);
--	mFilters->add(_("GAMES MISSING ANY MEDIA"), [this, scraper](FileData* g) -> bool { mOverwriteMedias = false; return scraper->hasMissingMedia(g); }, true);
+-	mFilters = std::make_shared< OptionListComponent<FilterFunc> >(mWindow, _("GAMES TO SCRAPE FOR"), false);
+-	mFilters->add(_("ALL"), [](FileData*) -> bool { return true; }, mediaIdx == 0);
 +	bool metadataOnlyScraper = scraper->getSupportedMedias().empty();
 +	mFilters->add(_("ALL"), [](FileData*) -> bool { return true; }, metadataOnlyScraper);
 +	mFilters->add(_("GAMES MISSING ANY MEDIA"), [this, scraper](FileData* g) -> bool { mOverwriteMedias = false; return scraper->hasMissingMedia(g); }, !metadataOnlyScraper);
- 	mFilters->add(_("GAMES MISSING ALL MEDIA"), [this, scraper](FileData* g) -> bool { mOverwriteMedias = true; return !scraper->hasAnyMedia(g); }, false);
+ 	mFilters->add(_("GAMES MISSING ANY MEDIA"), [this, scraper](FileData* g) -> bool { mOverwriteMedias = false; return scraper->hasMissingMedia(g); }, mediaIdx == 1);
+ 	mFilters->add(_("GAMES MISSING ALL MEDIA"), [this, scraper](FileData* g) -> bool { mOverwriteMedias = true; return !scraper->hasAnyMedia(g); }, mediaIdx == 2);
  	addWithLabel(_("GAMES TO SCRAPE FOR"), mFilters);
- 
-@@ -275,6 +276,18 @@ void GuiScraperStart::loadSettingsPage()
+@@ -287,6 +288,18 @@ void GuiScraperStart::loadSettingsPage()
  	addSwitch(_("OVERWRITE DESCRIPTIONS"), "ScrapeDescription", true);
  	addSwitch(_("OVERWRITE MEDIAS"), "ScrapeOverWrite", true);
  
@@ -366,7 +366,7 @@ index 2979c1d3a..66c13d48e 100644
  	addGroup(_("SCRAPE FOR"));
  
  	if (scrap->isMediaSupported(Scraper::ScraperMediaSource::ShortTitle))
-@@ -347,6 +360,10 @@ void GuiScraperStart::loadAccountsPage()
+@@ -359,6 +372,10 @@ void GuiScraperStart::loadAccountsPage()
  	addGroup(_("IGDB"));
  	addInputTextConfigRow(_("CLIENT ID"), "IGDBClientID", false, true);
  	addInputTextConfigRow(_("CLIENT SECRET"), "IGDBSecret", true, true);
@@ -2040,7 +2040,7 @@ index 000000000..50980f569
 +
 +#endif // ES_APP_SCRAPERS_PROTON_DB_SCRAPER_H
 diff --git a/es-app/src/scrapers/Scraper.cpp b/es-app/src/scrapers/Scraper.cpp
-index 5691f112d..92f18ca0d 100644
+index 8c21b7745..d834e85bb 100644
 --- a/es-app/src/scrapers/Scraper.cpp
 +++ b/es-app/src/scrapers/Scraper.cpp
 @@ -4,6 +4,12 @@

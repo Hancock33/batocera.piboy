@@ -2,15 +2,17 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import CONFIGS
 from batocera_launch import Command, Emulator, HotkeysContext
 
-yabConfigPath = Path('/userdata/system/configs/yabasanshiro')
+_YABASANSHIRO_BIN: Final = Path('/usr/bin/yabasanshiro/yabasanshiro')
+_CONFIG_DIR: Final = CONFIGS / 'yabasanshiro'
 
 
-YABA_CTRL_MAP: dict[str, str] = {
+_CONTROLLER_MAPPING: Final[dict[str, str]] = {
     'start': 'start',
     'select': 'select',
     'a': 'b',
@@ -42,10 +44,10 @@ class Yabasanshiro(Emulator):
         }
 
     async def configure(self) -> Command:
-        yabConfigPath.mkdir(parents=True, exist_ok=True)
+        _CONFIG_DIR.mkdir(parents=True, exist_ok=True)
 
-        config_file = yabConfigPath / f'{self.rom.stem}.config'
-        ctrl_config_file = yabConfigPath / 'keymapv2.json'
+        config_file = _CONFIG_DIR / f'{self.rom.stem}.config'
+        ctrl_config_file = _CONFIG_DIR / 'keymapv2.json'
 
         if config_file.exists():
             with config_file.open() as f:
@@ -87,24 +89,24 @@ class Yabasanshiro(Emulator):
                 'padmode': pad_mode,
             }
 
-            for input_name, input in pad.inputs.items():
-                if input_name not in YABA_CTRL_MAP:
+            for input_name, inp in pad.inputs.items():
+                if input_name not in _CONTROLLER_MAPPING:
                     continue
 
                 if input_name == 'joystick1left':
                     data[ctrl_id]['analogleft'] = {'id': 4, 'type': 'axis', 'value': 0}
                     data[ctrl_id]['analogright'] = {'id': 5, 'type': 'axis', 'value': 0}
 
-                data[ctrl_id][YABA_CTRL_MAP[input_name]] = {
-                    'id': int(input.id),
-                    'type': input.type,
-                    'value': int(input.value),
+                data[ctrl_id][_CONTROLLER_MAPPING[input_name]] = {
+                    'id': int(inp.id),
+                    'type': inp.type,
+                    'value': int(inp.value),
                 }
 
         with ctrl_config_file.open('w') as f:
             json.dump(data, f, indent=2)
 
         return Command(
-            ['/usr/bin/yabasanshiro/yabasanshiro', '-i', self.rom],
+            [_YABASANSHIRO_BIN, '-i', self.rom],
             env={'LD_LIBRARY_PATH': '/usr/bin/yabasanshiro:/usr/lib:/lib'},
         )

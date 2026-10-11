@@ -1,7 +1,12 @@
 from __future__ import annotations
 
+from typing import Final
+
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_DATA: Final = ROMS / 'ports' / 'blues'
 
 
 @cached_dataclass
@@ -17,8 +22,6 @@ class Blues(Emulator):
 
     async def configure(self) -> Command:
         return Command(
-            ['blues', '--datapath=/userdata/roms/ports/blues', '--fullscreen'],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            ['blues', f'--datapath={_DATA}', '--fullscreen'],
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

@@ -4,11 +4,7 @@ from typing import TYPE_CHECKING
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import CONFIGS, SAVES
-from batocera_launch import (
-    Command,
-    Emulator,
-    HotkeysContext,
-)
+from batocera_launch import Command, Emulator, HotkeysContext
 
 if TYPE_CHECKING:
     from pathlib import Path

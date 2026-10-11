@@ -24,9 +24,9 @@ LABWC_BIN: Final = Path('/usr/bin/labwc')
 # keyed by the batocera rotation a digitiser already reports in; each matrix undoes the wlroots output transform for it
 _TOUCH_CALIBRATION: Final = {
     0: '1 0 0 0 1 0',
-    1: '0 1 0 -1 0 1',
+    1: '0 -1 1 1 0 0',
     2: '-1 0 1 0 -1 1',
-    3: '0 -1 1 1 0 0',
+    3: '0 1 0 -1 0 1',
 }
 
 
@@ -138,12 +138,6 @@ class LabWCConfig:
             raise
 
         self._window_rules_cache = {}
-
-    def set_touchscreen(self, name: str | None = None, map_to_output_name: str | None = None) -> None:
-        if name is not None and map_to_output_name is not None:
-            self.set_touchscreens([(name, map_to_output_name, None)])
-        else:
-            self.set_touchscreens([])
 
     def set_touchscreens(self, mappings: Sequence[tuple[str, str, int | None]]) -> None:
         # Always strip any existing <touch> elements, and the calibration written for them, to keep a clean slate

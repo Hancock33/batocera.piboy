@@ -1,12 +1,14 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from pathlib import Path
+from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
-if TYPE_CHECKING:
-    from pathlib import Path
+_ALEPHONE_BIN: Final = Path('/usr/bin/alephone')
+_DATA: Final = ROMS / 'ports' / 'alephone'
 
 
 @cached_dataclass
@@ -21,15 +23,11 @@ class Alephone(Emulator):
         }
 
     async def configure(self) -> Command:
-        args: list[str | Path] = ['/usr/bin/alephone']
-
         if 'marathon2' in self.rom.stem:
-            args.append('/userdata/roms/ports/alephone/marathon2')
+            scenario = _DATA / 'marathon2'
         elif 'infinity' in self.rom.stem:
-            args.append('/userdata/roms/ports/alephone/infinity')
+            scenario = _DATA / 'infinity'
         else:
-            args.append('/userdata/roms/ports/alephone/marathon')
+            scenario = _DATA / 'marathon'
 
-        return Command(
-            args,
-        )
+        return Command([_ALEPHONE_BIN, scenario])

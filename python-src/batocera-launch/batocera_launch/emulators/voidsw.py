@@ -25,17 +25,13 @@ class Voidsw(Emulator):
         return self.rom.parent
 
     async def configure(self) -> Command:
-
         addon = '-addon0'
         if 'WD' in self.rom.stem:
             addon = '-addon1'
-
         if 'TD' in self.rom.stem:
             addon = '-addon2'
 
         return Command(
             ['voidsw', '-j', addon, self.rom.parent],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

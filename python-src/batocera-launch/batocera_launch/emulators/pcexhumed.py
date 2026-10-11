@@ -18,7 +18,5 @@ class Pcexhumed(Emulator):
     async def configure(self) -> Command:
         return Command(
             ['pcexhumed', '-j', self.rom.parent],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

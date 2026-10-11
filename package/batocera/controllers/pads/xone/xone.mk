@@ -8,6 +8,11 @@ XONE_VERSION = v0.5.8
 XONE_SITE = $(call github,dlundqvist,xone,$(XONE_VERSION))
 XONE_DEPENDENCIES = host-cabextract host-libcurl libusb
 
+# Current xone needs kernel 6.3 or newer
+ifeq ($(BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_3),)
+    XONE_VERSION = bbf0dcc484c3f5611f4e375da43e0e0ef08f3d18
+endif
+
 XONE_FIRMWARE_URLS = \
 	https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2017/03/2ea9591b-f751-442c-80ce-8f4692cdc67b_6b555a3a288153cf04aec6e03cba360afe2fce34.cab \
 	https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2017/07/1cd6a87c-623f-4407-a52d-c31be49e925c_e19f60808bdcbfbd3c3df6be3e71ffc52e43261e.cab \

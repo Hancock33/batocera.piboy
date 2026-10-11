@@ -17,8 +17,6 @@ class Nblood(Emulator):
 
     async def configure(self) -> Command:
         return Command(
-            ['nblood', '-j=' + str(self.rom.parent)],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            ['nblood', f'-j={self.rom.parent}'],
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

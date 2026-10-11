@@ -3,8 +3,8 @@
 # libretro-scummvm
 #
 ################################################################################
-# Version: Commits on Jun 20, 2026
-LIBRETRO_SCUMMVM_VERSION = v2026.3.0
+# Version: Commits on Oct 10, 2026
+LIBRETRO_SCUMMVM_VERSION = v2026.4.0
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
 LIBRETRO_SCUMMVM_LICENSE = GPLv2
@@ -58,8 +58,8 @@ endef
 
 # Details from backends/platform/libretro/dependencies.mk
 define LIBRETRO_SCUMMVM_GIT_DL
-	$(call LIBRETRO_SCUMMVM_CLONE_AND_INIT,libretro-deps,7e6e34f0319f4c7448d72f0e949e76265ccf55a1)
-	$(call LIBRETRO_SCUMMVM_CLONE_AND_INIT,libretro-common,70ed90c42ddea828f53dd1b984c6443ddb39dbd6)
+	$(call LIBRETRO_SCUMMVM_CLONE_AND_INIT,libretro-deps,bab7d258c451c0e7cba4b6a79f1b062c13efff38)
+	$(call LIBRETRO_SCUMMVM_CLONE_AND_INIT,libretro-common,879c8d507b0b52e77e27d759239c2b5df1e26dfd)
 endef
 
 LIBRETRO_SCUMMVM_POST_EXTRACT_HOOKS = LIBRETRO_SCUMMVM_GIT_DL

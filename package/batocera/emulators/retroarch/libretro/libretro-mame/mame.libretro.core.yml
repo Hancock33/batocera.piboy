@@ -104,6 +104,7 @@ custom_features:
       Off (Default): 0
 file_extensions:
   - bin
+  - chd
   - zip
   - 7z
 systems:
@@ -2187,6 +2188,18 @@ systems:
         choices:
           'On': 1
           'Off': 0
+  - name: hyprscan
+    file_extensions:
+      add:
+        - 7z
+        - cdr
+        - chd
+        - cue
+        - gdi
+        - iso
+        - nrg
+        - toc
+        - zip
   - acclaim
   - alphadenshi
   - amcoe
@@ -2211,7 +2224,6 @@ systems:
   - gaelco
   - gottlieb
   - hikaru
-  - hyprscan
   - igs
   - incredibletech
   - irem

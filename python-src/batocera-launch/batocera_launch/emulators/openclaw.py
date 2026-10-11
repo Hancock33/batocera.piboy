@@ -5,11 +5,12 @@ from pathlib import Path
 from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
 _CLAW_SRC: Final = Path('/usr/share/game_assets/openclaw')
 _CLAWZIP_SRC: Final = Path('/usr/share/game_assets/openclaw_zip')
-_CLAW_DST: Final = Path('/userdata/roms/ports/openclaw')
+_CLAW_DST: Final = ROMS / 'ports' / 'openclaw'
 
 
 @cached_dataclass
@@ -38,7 +39,5 @@ class Openclaw(Emulator):
 
         return Command(
             ['openclaw'],
-            env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-            },
+            env={'SDL_AUTO_UPDATE_JOYSTICKS': '0'},
         )

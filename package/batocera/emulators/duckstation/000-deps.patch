@@ -1,5 +1,5 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index 12e075ba2..89ab49730 100644
+index 3a3fdf911..b07e60f10 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
 @@ -4,35 +4,6 @@
@@ -58,7 +58,7 @@ index 12e075ba2..89ab49730 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/zstd")
 -find_package(WebP 1.6.0 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/WebP/cmake")
--find_package(PNG 1.6.58 REQUIRED
+-find_package(PNG 1.6.59 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/PNG")
 -find_package(libjpeg-turbo 3.2.0 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/libjpeg-turbo")
@@ -82,7 +82,7 @@ index 12e075ba2..89ab49730 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Shaderc")
 -find_package(spirv_cross_c_shared REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/spirv_cross_c_shared/cmake")
--find_package(SDL3 3.4.16 REQUIRED
+-find_package(SDL3 3.4.18 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/SDL3")
 +set(FIND_ROOT_PATH_BACKUP ${CMAKE_FIND_ROOT_PATH})
 +set(FIND_ROOT_PATH_MODE_INCLUDE_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_INCLUDE})
@@ -103,9 +103,9 @@ index 12e075ba2..89ab49730 100644
 +# Bundled dependencies.
 +find_package(zstd 1.5.7 REQUIRED)
 +find_package(WebP 1.6.0 REQUIRED)
-+find_package(PNG 1.6.58 REQUIRED)
++find_package(PNG 1.6.59 REQUIRED)
 +find_package(JPEG REQUIRED)
-+find_package(SDL3 3.4.16 REQUIRED)
++find_package(SDL3 3.4.18 REQUIRED)
 +find_package(Freetype 2.14.1 REQUIRED)
 +find_package(harfbuzz REQUIRED)
 +find_package(SQLite3 3.53.4 REQUIRED)
@@ -221,10 +221,10 @@ index 753354fa4..1e416ab9f 100644
  class Error;
  
 diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
-index 063ea73dc..cf4b1c155 100644
+index 7319abe14..feec293c2 100644
 --- a/src/core/CMakeLists.txt
 +++ b/src/core/CMakeLists.txt
-@@ -228,7 +228,8 @@ function(add_core_resources target)
+@@ -229,7 +229,8 @@ function(add_core_resources target)
    add_util_resources(${target})
  
    add_resources(${target} "resources" ${CMAKE_SOURCE_DIR}/data/resources)

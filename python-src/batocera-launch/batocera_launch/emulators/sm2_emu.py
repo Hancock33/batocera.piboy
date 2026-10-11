@@ -17,6 +17,9 @@ _logger: Final = logging.getLogger(__name__)
 
 _NVRAM_SRC: Final = Path('/usr/share/sm2-emu/nvram')
 
+# evdev codes of the gun buttons: left, right, middle, 1
+_GUN_BUTTONS: Final = {'trigger': 0x110, 'reload': 0x111, 'start': 0x112, 'coin': 0x101}
+
 _GEAR_UP_INPUTS: Final = ['pagedown', 'r1', 'right_shoulder']  # right paddle
 _GEAR_DOWN_INPUTS: Final = ['pageup', 'l1', 'left_shoulder']  # left paddle
 
@@ -191,19 +194,25 @@ class Sm2Emu(Emulator):
             'vsync': _ini_bool(self.config.get_bool('sm2_vsync', False)),
             'show_fps': 'false',  # covered by the hud/hud_corner features instead
             'lightgun': _ini_bool(use_guns),
-            'lightgun_crosshair': _ini_bool(use_guns and guns_need_crosses(self.guns)),
+            'lightgun_crosshair': _ini_bool(
+                use_guns and self.config.get_bool('sm2_lightgun_crosshair', guns_need_crosses(self.guns))
+            ),
             'lightgun_hide_flash': _ini_bool(self.config.get_bool('sm2_lightgun_hide_flash', False)),
             'lightgun_recoil': _ini_bool(self.config.get_bool('sm2_lightgun_recoil', True)),
             'lightgun_recoil_strength': self.config.get_str('sm2_lightgun_recoil_strength', '60'),
+            **{f'gun{gun}_button_{role}': str(code) for gun in (1, 2) for role, code in _GUN_BUTTONS.items()},
             'wheel_ffb': _ini_bool(self.config.get_bool('sm2_wheel_ffb', True)),
             'wheel_ffb_strength': self.config.get_str('sm2_wheel_ffb_strength', '50'),
+            'wheel_ffb_invert': _ini_bool(self.config.get_bool('sm2_wheel_ffb_invert', False)),
             'wheel_rumble': _ini_bool(self.config.get_bool('sm2_wheel_rumble', True)),
             'wheel_rumble_strength': self.config.get_str('sm2_wheel_rumble_strength', '40'),
             'wheel_rumble_engine': _ini_bool(self.config.get_bool('sm2_wheel_rumble_engine', True)),
+            'wheel_steer_deadzone': str(round(self.config.get_float('sm2_wheel_deadzone', 0))),
             **wheel_managed,
             'pad_rumble': _ini_bool(self.config.get_bool('sm2_pad_rumble', True)),
             'pad_rumble_strength': self.config.get_str('sm2_pad_rumble_strength', '60'),
             'pad_rumble_cornering': _ini_bool(self.config.get_bool('sm2_pad_rumble_cornering', True)),
+            'pad_stick_deadzone': str(round(self.config.get_float('sm2_pad_stick_deadzone', 5))),
             'pad_stick_sensitivity': str(round(self.config.get_float('sm2_pad_stick_sensitivity', 100))),
             'rom_dir': str(self.roms_dir),
             'nvram_dir': str(self.nvram_dir),

@@ -1,19 +1,24 @@
 from __future__ import annotations
 
-import configparser
 import shutil
-from typing import TYPE_CHECKING, Final
+from pathlib import Path
+from typing import Final
 
+from batocera_common.configparser import CaseSensitiveRawConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
-if TYPE_CHECKING:
-    from pathlib import Path
-
+_DEVILUTIONX_BIN: Final = Path('/usr/bin/diablo/devilutionx')
+_MPQ_SRC: Final = Path('/usr/share/diasurgical/devilutionx')
 _DATA_DIR: Final = ROMS / 'ports' / 'devilutionx'
-mpq_src = '/usr/share/diasurgical/devilutionx'
-mpq_dst = '/userdata/roms/ports/devilutionx'
+
+
+def _set(cfg: CaseSensitiveRawConfigParser, section: str, key: str, value: str | Path, /) -> None:
+    """Set a key, creating the section if needed."""
+    if not cfg.has_section(section):
+        cfg.add_section(section)
+    cfg.set(section, key, str(value))
 
 
 @cached_dataclass
@@ -38,28 +43,16 @@ class DevilutionX(Emulator):
         return 16 / 9 if self.config.get_bool('devilutionx_stretch') else 4 / 3
 
     async def configure(self) -> Command:
-        # copy latest devilutionx.mpq to rom dir
-        shutil.copytree(mpq_src, mpq_dst, dirs_exist_ok=True)
+        # Copy the latest devilutionx.mpq to the rom dir
+        shutil.copytree(_MPQ_SRC, _DATA_DIR, dirs_exist_ok=True)
 
         self.config_dir.mkdir(parents=True, exist_ok=True)
         self.saves_dir.mkdir(parents=True, exist_ok=True)
 
-        config = configparser.ConfigParser(strict=False)
-        config_file = self.config_dir / 'diablo.ini'
-
-        if config_file.exists():
-            config.read(config_file)
-
-        if 'Graphics' not in config:
-            config['Graphics'] = {}
-
-        config['Graphics']['Fit to Screen'] = self.config.get_bool('devilutionx_stretch', return_values=('1', '0'))
-
-        with config_file.open('w') as file:
-            config.write(file)
+        await self._write_config(self.config_dir / 'diablo.ini')
 
         args: list[str | Path] = [
-            '/usr/bin/diablo/devilutionx',
+            _DEVILUTIONX_BIN,
             '--data-dir',
             _DATA_DIR,
             '--config-dir',
@@ -79,3 +72,14 @@ class DevilutionX(Emulator):
             args.append('-f')
 
         return Command(args)
+
+    async def _write_config(self, config_file: Path, /) -> None:
+        cfg = CaseSensitiveRawConfigParser()
+        if config_file.exists():
+            cfg.read(config_file)
+
+        # Graphics
+        _set(cfg, 'Graphics', 'Fit to Screen', self.config.get_bool('devilutionx_stretch', return_values=('1', '0')))
+
+        with config_file.open('w') as f:
+            cfg.write(f)

@@ -12,6 +12,7 @@
 - Sega Chihiro now runs using Tovarichtch's Xemu Chihiro fork
   Games need to be .bin netboot images made with Chihiro-netboot
   BIOS files come from MAME's chihiro.zip, extracted into bios/chihiro
+- Display rotate on Wayland (labwc) builds now rotates clockwise
 ### Hardware
 - Anbernic RG-DS initial support
 - Anbernic RG-DS Plus initial support
@@ -55,6 +56,7 @@
 - Libretro-anybor : for openbor games (support all openbor versions)
 - Libretro-Azahar
 - NanoBoyAdvance as an alternative GBA emulator
+- Network settings can now save any number of other Wi-Fi networks, so a handheld connects wherever it is taken
 - OpenGOAL for the Jak and Daxter trilogy, built from your own PS2 disc image
 - PCSX2x6 emulator for Namco2x6 systems (see the _info.txt file for rom details)
 - RPCS3 interface translations
@@ -72,15 +74,23 @@
 - Bauh not starting with Python 3.14
 - BCC menu not showing on SM8250 devices (i.e. Retroid Pocket 5)
 - Boot logo disappearing once the graphics driver replaces the firmware framebuffer, leaving a black screen until the splash video starts
+- Boot splash version text not rotating with the video on rotated screens (e.g. RG Vita Pro, RG ARC-D, Powkiddy x55)
+- Brief white or garbage flash before the splash video starts (visible with hardware decoding, e.g. AMD x86_64)
 - Cannonball coin is now the Select button
 - Cannonball fullscreen on Wayland
 - Commander Genius fullscreen in Wayland
 - Commander Genius render resolution option not taking effect in-game
 - Dolphin Wii Remotes 2-4 set to None when using pad profiles
+- Flatpak and Steam missing the Decorations options, so a global decoration set could not be disabled for them
+- iptables failing with "Module ip_tables not found" since v43, breaking wg-quick (WireGuard) and connman tethering on boards with Linux 6.16 or newer
+- Kernel modules snd_seq (pipewire MIDI bridge) and ledtrig-timer (joycond) missing on some boards, printing modprobe FATAL errors at boot
 - Jedi Knight Dark Forces 2 initial start to work fullscreen in certain conditions
+- LINQ / ShanWan dual-mode pads in Xbox 360 mode not detected since v43
 - Libretro-Hatarib not starting due to a compiled symbol issue
+- Lindbergh games (e.g. Harley Davidson) reconfiguring the host network, leaving the system without DNS or its LAN address
 - MAME black screen on exit with a rotated display when CRT switchres is off
 - Mupen64 not starting fullscreen with Wayland
+- Nintendo DS .dsi and .ids ROM files not listed in EmulationStation (melonDS and DeSmuME accept them)
 - NVIDIA OpenGL over EGL on X11 falling back to Mesa (e.g. Dolphin failing to start with OpenGL)
 - Power button shutdown now closes the running game and shuts down through EmulationStation, saving gamelists
 - Pygame fullscreen with Wayland
@@ -88,9 +98,13 @@
 - Raze analog controls and improved controller bindings
 - SC-3000 games not scrapable (now scraped as SG-1000)
 - Simcoupe not starting fullscreen
+- Boot logo never visible on slower devices, fbv took up to 50 s to decode the cropped BMP
+- Splash video not showing when es.resolution or splash.screen.resize holds the rotated size of a rotated display (e.g. 1080x1920)
+- Screen rotation on Wayland (labwc) going the opposite way to the boot splash and the documentation (display.rotate=1 rotated anticlockwise)
 - SM8250 devices overcharging the battery (wrong charge voltage and current), and Retroid Pocket not charging again after powering a USB-C hub or dock
 - Sonic Mania controllers
 - Sonic Mania settings changed in-game (e.g. screen shader) now persist between launches
+- Touchscreens on X11 (x86_64) not following display.rotate
 - Taradino blank screen with Wayland
 - Vice not going fullscreen with C128
 - X16emu fullscreen with Wayland
@@ -327,7 +341,7 @@
 - Khadas VIM4 kernel updated to vendor 5.15.y
 - LabWC to 0.20.2
 - Linux Firmware to 20260810
-- Mesa3D to 26.2.3
+- Mesa3D to 26.2.4
 - MangoHud to v0.8.4
 - Nvidia Open Production driver to 615.71.09
 - Nvidia 580 Legacy driver to 580.178.04

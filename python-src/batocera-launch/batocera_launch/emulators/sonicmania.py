@@ -8,11 +8,7 @@ from typing import TYPE_CHECKING, Final
 from batocera_common.configparser import CaseSensitiveConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import ROMS
-from batocera_launch import (
-    Command,
-    Emulator,
-    HotkeysContext,
-)
+from batocera_launch import Command, Emulator, HotkeysContext
 
 if TYPE_CHECKING:
     from collections.abc import Mapping

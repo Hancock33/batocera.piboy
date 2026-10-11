@@ -26,18 +26,14 @@ class Openlara(Emulator):
         return self.rom.parent
 
     async def configure(self) -> Command:
-        openlara_rom_path = self.rom.parent
-        destination_file = openlara_rom_path / 'OpenLara'
+        rom_dir = self.rom.parent
+        destination_file = rom_dir / 'OpenLara'
 
-        openlara_rom_path.mkdir(parents=True, exist_ok=True)
-
-        if destination_file.exists():
-            destination_file.unlink()
+        rom_dir.mkdir(parents=True, exist_ok=True)
+        destination_file.unlink(missing_ok=True)
         shutil.copy(_OPENLARA_SRC, destination_file)
 
         return Command(
             ['OpenLara'],
-            env={
-                'SDL_AUTO_UPDATE_JOYSTICKS': '0',
-            },
+            env={'SDL_AUTO_UPDATE_JOYSTICKS': '0'},
         )

@@ -25,17 +25,9 @@ class Nesbox(Emulator):
         return 16 / 9
 
     async def configure(self) -> Command:
-
         args: list[str | Path] = ['tic80']
 
-        commandArray = ['tic80']
-        rombase = self.rom.stem
-
-        if rombase.lower() == 'surf' or rombase.lower() == 'console':
+        if self.rom.stem.lower() in {'surf', 'console'}:
             args.append('--cmd=surf')
-        else:
-            commandArray.extend(str(self.rom))
 
-        return Command(
-            args,
-        )
+        return Command(args)
