@@ -1,12 +1,15 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from pathlib import Path
+from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS, SAVES
 from batocera_launch import Command, Emulator, HotkeysContext
 
-if TYPE_CHECKING:
-    from pathlib import Path
+_BERMUDA_BIN: Final = Path('/usr/bin/bermuda')
+_DATA: Final = ROMS / 'ports' / 'bermuda'
+_SAVES: Final = SAVES / 'bermuda'
 
 
 @cached_dataclass
@@ -22,19 +25,14 @@ class Bermuda(Emulator):
 
     async def configure(self) -> Command:
         args: list[str | Path] = [
-            '/usr/bin/bermuda',
-            '--datapath=/userdata/roms/ports/bermuda',
-            '--musicpath=/userdata/roms/ports/bermuda/MUSIC',
-            '--savepath=/userdata/saves/bermuda',
+            _BERMUDA_BIN,
+            f'--datapath={_DATA}',
+            f'--musicpath={_DATA / "MUSIC"}',
+            f'--savepath={_SAVES}',
             '--fullscreen',
         ]
 
         if self.config.get_bool('bermuda_aspect'):
             args.append('--widescreen=16:9')
 
-        return Command(
-            args,
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
-        )
+        return Command(args, env={'SDL_JOYSTICK_HIDAPI': '0'})

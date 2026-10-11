@@ -1,7 +1,13 @@
 from __future__ import annotations
 
+from typing import Final
+
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS, SAVES
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_DATA: Final = ROMS / 'ports' / 'hode'
+_SAVES: Final = SAVES / 'hode'
 
 
 @cached_dataclass
@@ -17,8 +23,6 @@ class Hode(Emulator):
 
     async def configure(self) -> Command:
         return Command(
-            ['hode', '--datapath=/userdata/roms/ports/hode', '--savepath=/userdata/saves/hode'],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            ['hode', f'--datapath={_DATA}', f'--savepath={_SAVES}'],
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

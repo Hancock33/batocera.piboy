@@ -1,9 +1,13 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
+from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_ASSETS: Final = Path('/usr/share/game_assets')
 
 
 @cached_dataclass
@@ -18,15 +22,14 @@ class Serioussam(Emulator):
         }
 
     async def configure(self) -> Command:
-
         if '/samtfe/' in str(self.rom).lower():
-            data_dir = '/usr/share/game_assets/samtfe/Bin'
+            data_dir = _ASSETS / 'samtfe' / 'Bin'
         else:
-            data_dir = '/usr/share/game_assets/samtse/Bin'
+            data_dir = _ASSETS / 'samtse' / 'Bin'
 
         os.chdir(data_dir)
 
         return Command(
-            [f'{data_dir}/serioussam'],
+            [data_dir / 'serioussam'],
             env={'LD_LIBRARY_PATH': f'/usr/lib:/lib:{data_dir}'},
         )

@@ -1,15 +1,23 @@
 from __future__ import annotations
 
-from pathlib import Path
+from typing import TYPE_CHECKING, Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import SAVES
 from batocera_launch import Command, Emulator, HotkeysContext
 
-REGION_CONFIG = {
-    '.e64': {'binary': 'sm64.eu', 'savedir': '/userdata/saves/sm64/eu'},
-    '.j64': {'binary': 'sm64.jp', 'savedir': '/userdata/saves/sm64/jp'},
-    '.u64': {'binary': 'sm64.us', 'savedir': '/userdata/saves/sm64/us'},
+if TYPE_CHECKING:
+    from pathlib import Path
+
+_SAVES: Final = SAVES / 'sm64'
+
+# extension -> (binary, save directory)
+_REGIONS: Final[dict[str, tuple[str, Path]]] = {
+    '.e64': ('sm64.eu', _SAVES / 'eu'),
+    '.j64': ('sm64.jp', _SAVES / 'jp'),
+    '.u64': ('sm64.us', _SAVES / 'us'),
 }
+_DEFAULT_REGION: Final = '.e64'
 
 
 @cached_dataclass
@@ -28,22 +36,17 @@ class Sm64(Emulator):
         return self.rom
 
     async def configure(self) -> Command:
-        extension = self.rom.suffix.lower() if len(self.rom.suffix.lower()) >= 3 else '.e64'
-        region = REGION_CONFIG.get(extension, REGION_CONFIG['.e64'])
-
-        savedir = Path(region['savedir'])
+        extension = self.rom.suffix.lower() if len(self.rom.suffix) >= 3 else _DEFAULT_REGION
+        binary, savedir = _REGIONS.get(extension, _REGIONS[_DEFAULT_REGION])
         savedir.mkdir(parents=True, exist_ok=True)
 
-        args: list[str | Path] = [(region['binary']), '--gamedir', './', '--savepath', savedir]
+        args: list[str | Path] = [binary, '--gamedir', './', '--savepath', savedir]
 
         # Skip Intro
         if self.config.get_bool('nointro'):
             args.append('--skip-intro')
-
         # Cheat Menu
         if self.config.get_bool('cheatsmenu'):
             args.append('--cheats')
 
-        return Command(
-            args,
-        )
+        return Command(args)

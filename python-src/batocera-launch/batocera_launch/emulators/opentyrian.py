@@ -1,7 +1,13 @@
 from __future__ import annotations
 
+from pathlib import Path
+from typing import Final
+
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_TYRIAN_DATA: Final = Path('/usr/share/opentyrian/data')
+_TYRIAN2000_DATA: Final = Path('/usr/share/tyrian2000')
 
 
 @cached_dataclass
@@ -21,5 +27,6 @@ class Tyrian(Emulator):
 
     async def configure(self) -> Command:
         if '2000' in self.rom.name:
-            return Command(['opentyrian2000', '-t/usr/share/tyrian2000/', '-j'])
-        return Command(['opentyrian', '-t/usr/share/opentyrian/data/', '-j'])
+            return Command(['opentyrian2000', f'-t{_TYRIAN2000_DATA}/', '-j'])
+
+        return Command(['opentyrian', f'-t{_TYRIAN_DATA}/', '-j'])

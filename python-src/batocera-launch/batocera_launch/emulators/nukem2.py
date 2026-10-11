@@ -1,7 +1,12 @@
 from __future__ import annotations
 
+from typing import Final
+
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_DATA: Final = ROMS / 'ports' / 'nukem2'
 
 
 @cached_dataclass
@@ -16,4 +21,4 @@ class Nukem2(Emulator):
         }
 
     async def configure(self) -> Command:
-        return Command(['RigelEngine', '/userdata/roms/ports/nukem2'])
+        return Command(['RigelEngine', _DATA])

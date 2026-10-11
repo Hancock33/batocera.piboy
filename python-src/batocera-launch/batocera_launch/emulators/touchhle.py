@@ -10,6 +10,7 @@ from batocera_launch import Command, Emulator, HotkeysContext
 
 _logger = logging.getLogger(__name__)
 
+_TOUCHHLE_BIN: Final = Path('/usr/bin/touchHLE')
 _RESOURCE_DIR: Final = Path('/usr/share/touchhle')
 
 
@@ -46,8 +47,8 @@ class Touchhle(Emulator):
         for base_mkdir in (base_dir / 'touchHLE_apps', base_dir / 'touchHLE_sandbox'):
             base_mkdir.mkdir(parents=True, exist_ok=True)
 
-        for resoure in ('touchHLE_dylibs', 'touchHLE_fonts'):
-            shutil.copytree(_RESOURCE_DIR / resoure, base_dir / resoure, dirs_exist_ok=True)
+        for resource in ('touchHLE_dylibs', 'touchHLE_fonts'):
+            shutil.copytree(_RESOURCE_DIR / resource, base_dir / resource, dirs_exist_ok=True)
 
         for relative_path in (
             'touchHLE_options.txt',
@@ -61,9 +62,9 @@ class Touchhle(Emulator):
                 shutil.copy2(_RESOURCE_DIR / relative_path, destination)
 
         return Command(
-            ['/usr/bin/touchHLE', '--fullscreen', self.rom.name],
+            [_TOUCHHLE_BIN, '--fullscreen', self.rom.name],
             env={
-                'HOME': str(base_dir),
+                'HOME': base_dir,
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0',
             },
         )

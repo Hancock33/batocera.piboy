@@ -5,11 +5,13 @@ from pathlib import Path
 from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
-_STK_CONFIG_SRC: Final = Path('/usr/share/game_assets/supertuxkart')
-_STK_CONFIG_ROOT: Final = Path('/userdata/system/.config/supertuxkart')
-_STK_CONFIG_DST: Final = _STK_CONFIG_ROOT / 'config-0.10'
+_CONFIG_SRC: Final = Path('/usr/share/game_assets/supertuxkart')
+_CONFIG_ROOT: Final = Path('/userdata/system/.config/supertuxkart')
+_CONFIG_DST: Final = _CONFIG_ROOT / 'config-0.10'
+_DATA: Final = ROMS / 'ports' / 'stk'
 
 
 @cached_dataclass
@@ -18,9 +20,9 @@ class Stk(Emulator):
 
     @staticmethod
     def _ensure_config() -> None:
-        _STK_CONFIG_ROOT.mkdir(parents=True, exist_ok=True)
-        if not _STK_CONFIG_DST.exists():
-            shutil.copytree(_STK_CONFIG_SRC, _STK_CONFIG_DST, dirs_exist_ok=True)
+        _CONFIG_ROOT.mkdir(parents=True, exist_ok=True)
+        if not _CONFIG_DST.exists():
+            shutil.copytree(_CONFIG_SRC, _CONFIG_DST, dirs_exist_ok=True)
 
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
@@ -34,7 +36,5 @@ class Stk(Emulator):
 
         return Command(
             ['supertuxkart', '--render-driver=vulkan', '-f'],
-            env={
-                'SUPERTUXKART_DATADIR': '/userdata/roms/ports/stk',
-            },
+            env={'SUPERTUXKART_DATADIR': _DATA},
         )

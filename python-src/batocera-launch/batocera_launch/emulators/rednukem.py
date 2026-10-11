@@ -18,7 +18,5 @@ class Rednukem(Emulator):
     async def configure(self) -> Command:
         return Command(
             ['rednukem', '-j', self.rom.parent, '-g', self.rom],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

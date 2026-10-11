@@ -18,7 +18,5 @@ class Spacecadetpinball(Emulator):
     async def configure(self) -> Command:
         return Command(
             ['SpaceCadetPinball', '--fullscreen'],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

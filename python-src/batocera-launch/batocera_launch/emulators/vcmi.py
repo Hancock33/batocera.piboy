@@ -1,7 +1,11 @@
 from __future__ import annotations
 
+from typing import Final
+
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_LIBRARY_PATH: Final = '/lib:/usr/lib:/usr/lib/vcmi:/usr/lib/vcmi/AI'
 
 
 @cached_dataclass
@@ -18,7 +22,5 @@ class Vcmi(Emulator):
     async def configure(self) -> Command:
         return Command(
             ['vcmiclient'],
-            env={
-                'LD_LIBRARY_PATH': '/lib:/usr/lib:/usr/lib/vcmi:/usr/lib/vcmi/AI',
-            },
+            env={'LD_LIBRARY_PATH': _LIBRARY_PATH},
         )

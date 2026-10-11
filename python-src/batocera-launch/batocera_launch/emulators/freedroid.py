@@ -18,7 +18,5 @@ class Freedroid(Emulator):
     async def configure(self) -> Command:
         return Command(
             ['freedroid', '-w'],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

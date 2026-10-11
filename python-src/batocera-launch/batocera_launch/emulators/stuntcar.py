@@ -1,9 +1,13 @@
 from __future__ import annotations
 
 import os
+from pathlib import Path
+from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_DATA: Final = Path('/usr/share/stuntcar')
 
 
 @cached_dataclass
@@ -18,10 +22,9 @@ class Stuntcar(Emulator):
         }
 
     async def configure(self) -> Command:
-        os.chdir('/usr/share/stuntcar')
+        os.chdir(_DATA)
+
         return Command(
-            ['/usr/share/stuntcar/stuntcar', '-f'],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            [_DATA / 'stuntcar', '-f'],
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

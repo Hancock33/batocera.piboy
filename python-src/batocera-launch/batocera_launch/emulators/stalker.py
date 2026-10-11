@@ -24,9 +24,8 @@ class Stalker(Emulator):
         }
 
     async def configure(self) -> Command:
-        rom = self.rom
-        _logger.debug('rom path: %s', rom)
-        _logger.debug('rom file extension: %s', rom.suffix)
+        _logger.debug('rom path: %s', self.rom)
+        _logger.debug('rom file extension: %s', self.rom.suffix)
 
         args: list[str | Path] = ['xr_3da']
 
@@ -35,10 +34,9 @@ class Stalker(Emulator):
             args.append('-nologo')
 
         # Clear Sky / Shadow of Chernobyl variants
-        if rom.suffix == '.cs':
+        if self.rom.suffix == '.cs':
             args.append('-cs')
-
-        if rom.suffix == '.soc':
+        if self.rom.suffix == '.soc':
             args.append('-soc')
 
         return Command(args)

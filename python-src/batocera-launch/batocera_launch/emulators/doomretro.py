@@ -1,14 +1,15 @@
 from __future__ import annotations
 
 import shlex
-from typing import TYPE_CHECKING
+from pathlib import Path
+from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
-from batocera_common.paths import CONFIGS, SAVES
+from batocera_common.paths import CONFIGS, ROMS, SAVES
 from batocera_launch import Command, Emulator, HotkeysContext
 
-if TYPE_CHECKING:
-    from pathlib import Path
+_DOOMRETRO_BIN: Final = Path('/usr/bin/doomretro')
+_WAD_DIR: Final = ROMS / 'ports' / 'doom'
 
 
 @cached_dataclass
@@ -23,10 +24,9 @@ class Doomretro(Emulator):
         }
 
     async def configure(self) -> Command:
+        args: list[str | Path] = [_DOOMRETRO_BIN]
 
-        args: list[str | Path] = ['/usr/bin/doomretro']
-
-        if self.rom.suffix == '.uzdoom' or self.rom.suffix == '.uwad':
+        if self.rom.suffix in {'.uzdoom', '.uwad'}:
             args.extend(shlex.split(self.rom.read_text()))
         else:
             args.extend(['-iwad', self.rom.name])
@@ -34,7 +34,7 @@ class Doomretro(Emulator):
         return Command(
             args,
             env={
-                'DOOMWADDIR': '/userdata/roms/ports/doom',
+                'DOOMWADDIR': _WAD_DIR,
                 'XDG_CONFIG_HOME': CONFIGS,
                 'XDG_DATA_HOME': SAVES,
             },

@@ -5,10 +5,12 @@ from pathlib import Path
 from typing import Final
 
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
 
-_OMF_SRC: Final = Path('/usr/share/games/openomf/')
-_OMF_DST: Final = Path('/userdata/roms/ports/omf2097')
+_OMF_BIN: Final = Path('/usr/bin/openomf')
+_OMF_SRC: Final = Path('/usr/share/games/openomf')
+_OMF_DST: Final = ROMS / 'ports' / 'omf2097'
 
 
 @cached_dataclass
@@ -21,7 +23,7 @@ class Omf2097(Emulator):
         (_OMF_DST / 'shaders').mkdir(parents=True, exist_ok=True)
         shutil.copytree(_OMF_SRC / 'resources', _OMF_DST / 'resources', dirs_exist_ok=True)
         shutil.copytree(_OMF_SRC / 'shaders', _OMF_DST / 'shaders', dirs_exist_ok=True)
-        shutil.copy('/usr/bin/openomf', _OMF_DST / 'openomf')
+        shutil.copy(_OMF_BIN, _OMF_DST / 'openomf')
 
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
@@ -34,9 +36,9 @@ class Omf2097(Emulator):
         self._ensure_config()
 
         return Command(
-            [str(_OMF_DST / 'openomf')],
+            [_OMF_DST / 'openomf'],
             env={
-                'OPENOMF_RESOURCE_DIR': str(_OMF_DST),
+                'OPENOMF_RESOURCE_DIR': _OMF_DST,
                 'SDL_AUTO_UPDATE_JOYSTICKS': '0',
             },
         )

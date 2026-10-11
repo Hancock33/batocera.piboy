@@ -18,7 +18,5 @@ class Prototype(Emulator):
     async def configure(self) -> Command:
         return Command(
             ['prototype'],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )

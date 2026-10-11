@@ -1,7 +1,14 @@
 from __future__ import annotations
 
+from pathlib import Path
+from typing import Final
+
 from batocera_common.dataclasses import cached_dataclass, cached_property
+from batocera_common.paths import ROMS
 from batocera_launch import Command, Emulator, HotkeysContext
+
+_DATA: Final = ROMS / 'ports' / 'avp'
+_GLES_LIB: Final = Path('/usr/lib/libGLESv2.so')
 
 
 @cached_dataclass
@@ -17,8 +24,6 @@ class Avp(Emulator):
 
     async def configure(self) -> Command:
         return Command(
-            ['avp', '-f', '-p', '/userdata/roms/ports/avp/', '-g', '/usr/lib/libGLESv2.so'],
-            env={
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
+            ['avp', '-f', '-p', f'{_DATA}/', '-g', _GLES_LIB],
+            env={'SDL_JOYSTICK_HIDAPI': '0'},
         )
