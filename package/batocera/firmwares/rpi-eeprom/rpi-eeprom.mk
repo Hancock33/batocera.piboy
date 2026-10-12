@@ -3,8 +3,8 @@
 # rpi-eeprom
 #
 ################################################################################
-# Version: Commits on Sept 29, 2026
-RPI_EEPROM_VERSION = a72213d02af27f2dc3b86f584988aec407e46378
+# Version: Commits on Oct 12, 2026
+RPI_EEPROM_VERSION = 131548b60eaffaf2c5e9b01d6e6f6275ba419034
 RPI_EEPROM_SITE = $(call github,raspberrypi,rpi-eeprom,$(RPI_EEPROM_VERSION))
 RPI_EEPROM_DEPENDENCIES = rpi-utils
 
@@ -19,6 +19,7 @@ RPI_EEPROM_RPI5_FW_DIR=$(TARGET_DIR)/lib/firmware/raspberrypi/bootloader-2712/de
 define RPI_EEPROM_INSTALL_TARGET_CMDS
 	cp -pvr $(@D)/rpi-eeprom-{config,digest,update} $(TARGET_DIR)/usr/bin
 	#RPI4
+	rm -rf $(RPI_EEPROM_RPI4_FW_DIR)
 	mkdir -p $(RPI_EEPROM_RPI4_FW_DIR)
 	cp -pvr $(@D)/firmware-2711/stable/{pieeprom-$(RPI_EEPROM_RPI4_VERSION).bin,recovery.bin,vl805-000138c0.bin} $(RPI_EEPROM_RPI4_FW_DIR)
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/rpi-eeprom/batocera-update-rpi4-fw $(TARGET_DIR)/usr/bin
@@ -26,6 +27,7 @@ define RPI_EEPROM_INSTALL_TARGET_CMDS
 	chmod 754 $(TARGET_DIR)/usr/bin/batocera-update-rpi4-fw
 
 	#RPI5
+	rm -rf $(RPI_EEPROM_RPI5_FW_DIR)
 	mkdir -p $(RPI_EEPROM_RPI5_FW_DIR)
 	cp -pvr $(@D)/firmware-2712/stable/{pieeprom-$(RPI_EEPROM_RPI5_VERSION).bin,recovery.bin} $(RPI_EEPROM_RPI5_FW_DIR)
 	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/rpi-eeprom/batocera-update-rpi5-fw $(TARGET_DIR)/usr/bin
