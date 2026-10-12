@@ -1,9 +1,9 @@
 diff --git a/src/frontend/mame/mameopts.cpp b/src/frontend/mame/mameopts.cpp
-index cd754fcb0f37..c483157f2f82 100644
+index 6028f4b5326..119ffd34e4b 100644
 --- a/src/frontend/mame/mameopts.cpp
 +++ b/src/frontend/mame/mameopts.cpp
-@@ -41,6 +41,9 @@ void mame_options::parse_standard_inis(emu_options &options, std::ostream &error
- 	parse_one_ini(options, emulator_info::get_configname(), OPTION_PRIORITY_MAME_INI);
+@@ -58,6 +58,9 @@ void mame_options::parse_standard_inis(emu_options &options, std::ostream &error
+ 	// now parse the main INI file following the potentially updated search path
  	parse_one_ini(options, emulator_info::get_configname(), OPTION_PRIORITY_MAME_INI, &error_stream);
  
 +	// parse Batocera-specific configuration

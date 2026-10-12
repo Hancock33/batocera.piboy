@@ -1,8 +1,8 @@
 diff --git a/scripts/toolchain.lua b/scripts/toolchain.lua
-index 9262abf6ba10..09c6c5fd0629 100644
+index a5a9077006f..c87752aed6d 100644
 --- a/scripts/toolchain.lua
 +++ b/scripts/toolchain.lua
-@@ -750,6 +750,10 @@ function toolchain(_buildDir, _subDir)
+@@ -646,6 +646,10 @@ function toolchain(_buildDir, _subDir)
  			"NoPCH",
  		}
  

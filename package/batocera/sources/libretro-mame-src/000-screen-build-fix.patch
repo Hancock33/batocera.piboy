@@ -1,5 +1,5 @@
 diff --git a/src/emu/screen.cpp b/src/emu/screen.cpp
-index 12dc53b82b9..90864afab29 100644
+index aa46ce8001c..87f57b53a16 100644
 --- a/src/emu/screen.cpp
 +++ b/src/emu/screen.cpp
 @@ -490,14 +490,14 @@ void screen_device::configure(int width, int height, const rectangle &visarea, a

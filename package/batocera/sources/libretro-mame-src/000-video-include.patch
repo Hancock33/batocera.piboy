@@ -1,5 +1,5 @@
 diff --git a/src/osd/libretro/libretro-internal/libretro.cpp b/src/osd/libretro/libretro-internal/libretro.cpp
-index 9b56a7f02f0..bf4714cf324 100755
+index b0b2c13cd3d..7bd5f50099e 100644
 --- a/src/osd/libretro/libretro-internal/libretro.cpp
 +++ b/src/osd/libretro/libretro-internal/libretro.cpp
 @@ -8,6 +8,7 @@
