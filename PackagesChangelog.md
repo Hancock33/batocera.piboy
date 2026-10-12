@@ -2,8 +2,8 @@
 -----|:-----:|:-----:|:-----:
 Audio|[cubeb](http://github.com/mozilla/cubeb)|2e87c6335573f61ca430bd3e91bb5e8bc76699d3|Oct 12, 2026
 Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|48218f226d9b671fc3cfe57abe6b52a76c994b95|Oct 12, 2026
-Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|1517c964c9302ac07aafec6a8ead4d7e675ec49c|Oct 12, 2026
-Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|1517c964c9302ac07aafec6a8ead4d7e675ec49c|Oct 12, 2026
+Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|9e0322e947e3e196c844cbd6a28ea5e428bbc9eb|Oct 12, 2026
+Emulationstation|[batocera-es-piboy](https://github.com/batocera-linux/batocera-emulationstation)|9e0322e947e3e196c844cbd6a28ea5e428bbc9eb|Oct 12, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|21878f14423126221ad38e0681ebf66afcd02edf|Oct 12, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|8d2ad1a662472955497e5bb79d7b9ec6999e1f0d|Oct 12, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|d4e5a09d97429a3513c53fec375221af2f6b1ce7|Oct 12, 2026
