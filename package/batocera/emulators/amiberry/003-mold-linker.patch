@@ -1,8 +1,8 @@
 diff --git a/cmake/StandardProjectSettings.cmake b/cmake/StandardProjectSettings.cmake
-index aa9299d6..73001e36 100644
+index 743ab51b..5bdbd579 100644
 --- a/cmake/StandardProjectSettings.cmake
 +++ b/cmake/StandardProjectSettings.cmake
-@@ -74,7 +74,6 @@ if(AMIBERRY_GNU_LIKE_COMPILER)
+@@ -125,7 +125,6 @@ if(AMIBERRY_GNU_LIKE_COMPILER)
              # GNU ld-only flags (do not work on FreeBSD or Windows)
              if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
                  list(APPEND AMIBERRY_LINK_OPTIONS
