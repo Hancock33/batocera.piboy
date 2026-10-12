@@ -3,12 +3,12 @@
 # libmysofa
 #
 ################################################################################
-# Version: Commits on Jul 19, 2026
-LIBMYSOFA_VERSION = 6cc5b15a73e9bd97810d03767082edda7f315881
+# Version: Commits on Sept 08, 2026
+LIBMYSOFA_VERSION = 648eed03472e6720a1ea45d1a1f86c4efb569ff9
 LIBMYSOFA_SITE = $(call github,hoene,libmysofa,$(LIBMYSOFA_VERSION))
 LIBMYSOFA_LICENSE = BSD-3-Clause
 LIBMYSOFA_LICENSE_FILES = LICENSE
-LIBMYSOFA_DEPENDENCIES = libspatialaudio zlib
+LIBMYSOFA_DEPENDENCIES = zlib
 LIBMYSOFA_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBMYSOFA_INSTALL_STAGING = YES
 LIBMYSOFA_INSTALL_TARGET = NO

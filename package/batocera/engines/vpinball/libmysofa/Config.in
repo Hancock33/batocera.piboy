@@ -1,6 +1,5 @@
 config BR2_PACKAGE_LIBMYSOFA
 	bool "libmysofa"
-	select BR2_PACKAGE_LIBSPATIALAUDIO
 	select BR2_PACKAGE_ZLIB
 
 	help
