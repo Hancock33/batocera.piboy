@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Jul 19, 2026
-LIBMYSOFA_VERSION = v1.3.5
+LIBMYSOFA_VERSION = 6cc5b15a73e9bd97810d03767082edda7f315881
 LIBMYSOFA_SITE = $(call github,hoene,libmysofa,$(LIBMYSOFA_VERSION))
 LIBMYSOFA_LICENSE = BSD-3-Clause
 LIBMYSOFA_LICENSE_FILES = LICENSE
