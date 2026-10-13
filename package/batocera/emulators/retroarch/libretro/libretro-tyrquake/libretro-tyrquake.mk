@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 12, 2026
-LIBRETRO_TYRQUAKE_VERSION = 29462b707941605fc9526dac890b4ecb44dcac9f
+LIBRETRO_TYRQUAKE_VERSION = 67db338ff4d27fdbcead61d4e54938d758ae62cb
 LIBRETRO_TYRQUAKE_SITE = $(call github,libretro,tyrquake,$(LIBRETRO_TYRQUAKE_VERSION))
 LIBRETRO_TYRQUAKE_LICENSE = GPLv2
 LIBRETRO_TYRQUAKE_DEPENDENCIES += retroarch
