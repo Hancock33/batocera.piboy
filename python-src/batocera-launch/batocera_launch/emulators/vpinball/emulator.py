@@ -141,7 +141,7 @@ class VPinball(Emulator):
             settings.write(fp)
 
         args: list[str | Path] = [
-            '/usr/bin/vpinball/VPinballX_GL',
+            '/usr/bin/vpinball/VPinballX_BGFX',
             '-PrefPath',
             self.config_dir,
             '-Ini',

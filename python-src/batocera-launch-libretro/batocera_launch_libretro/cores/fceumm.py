@@ -24,7 +24,7 @@ class Fceumm(RACore):
     def set_core_options(self, core_options: LibretroConfig, /) -> None:
         # gun
         core_options.set(
-            'fceumm_zapper_mode', 'lightgun' if self.config.use_guns and self.guns else 'mouse'
+            'fceumm_zapper_mode', 'clightgun' if self.config.use_guns and self.guns else 'mouse'
         )  # FCEumm Mouse mode for Zapper
 
         # gun cross
@@ -56,7 +56,8 @@ class Fceumm(RACore):
         core_options.set('fceumm_overscan_v_bottom', overscan_v)
 
         # Palette Choice
-        core_options.set_from_config('fceumm_palette', default='default')
+        palette = self.config.get('fceumm_palette', 'default')
+        core_options.set('fceumm_palette', 'wii-vc' if palette == 'nintendo-vc' else palette)
 
         # NTSC Filter
         core_options.set_from_config('fceumm_ntsc_filter', default='disabled')

@@ -11,6 +11,7 @@ libaltsound.mk
 libdmdutil.mk
 libdof.mk
 libframeutil.mk
+libmysofa.mk
 libpinmame.mk
 libpupdmd.mk
 libserum.mk
@@ -19,6 +20,7 @@ libwinevbs.mk
 libzedmd.mk
 mt32emu.mk
 noto-cjk-fonts.mk
+openxr-sdk.mk
 ryujinx.mk
 shader-slang.mk
 sockpp.mk

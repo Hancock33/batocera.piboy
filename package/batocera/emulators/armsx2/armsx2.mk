@@ -3,8 +3,8 @@
 # armsx2
 #
 ################################################################################
-# Version: Commits on Oct 08, 2026
-ARMSX2_VERSION = nightly-20261008
+# Version: Commits on Oct 11, 2026
+ARMSX2_VERSION = 2.8.3
 ARMSX2_SITE = https://github.com/ARMSX2/ARMSX2.git
 ARMSX2_SITE_METHOD = git
 ARMSX2_GIT_SUBMODULES = YES
@@ -25,7 +25,6 @@ ARMSX2_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
 ARMSX2_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++"
 ARMSX2_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -march=armv8-a -moutline-atomics"
 ARMSX2_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -march=armv8-a -moutline-atomics -Wno-c++11-narrowing -Wno-narrowing"
-ARMSX2_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 ARMSX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 ARMSX2_CONF_OPTS += -DENABLE_TESTS=OFF
 ARMSX2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO

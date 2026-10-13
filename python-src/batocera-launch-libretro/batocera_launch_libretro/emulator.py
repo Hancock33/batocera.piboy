@@ -42,6 +42,14 @@ if TYPE_CHECKING:
 
 _logger = logging.getLogger(__name__)
 
+
+def _slang_only_shader(shader: str) -> bool:
+    def exists(ext: str) -> bool:
+        return any((path / f'{shader}.{ext}').exists() for path in (USER_SHADERS, BATOCERA_SHADERS))
+
+    return exists('slangp') and not exists('glslp')
+
+
 _RETROARCH_BIN: Final = Path('/usr/bin/retroarch')
 _RETROARCH_SHARE_DIR: Final = Path('/usr/share/libretro')
 _RETROARCH_INFO_DIR: Final = _RETROARCH_SHARE_DIR / 'info'
@@ -209,8 +217,6 @@ class Libretro(SpecialDecorationsMixin, Emulator):
         return self.config_dir / 'overlay.cfg'
 
     async def configure(self) -> Command:
-        gfx_backend = await self.get_gfx_backend()
-
         game_shader: str | None = None
         shader_bezel = False
         video_shader: Path | None = None
@@ -223,6 +229,8 @@ class Libretro(SpecialDecorationsMixin, Emulator):
                 game_shader = self.render_config.get(f'shader-{self.decoration_id}')
             elif 'shader' in self.render_config:
                 game_shader = self.render_config.get('shader')
+
+        gfx_backend = await self.get_gfx_backend(game_shader)
 
         if 'shader' in self.render_config and game_shader is not None:
             shader_filename = f'{game_shader}.{
@@ -346,7 +354,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
 
         return Command(args, {'XDG_CONFIG_HOME': CONFIGS})
 
-    async def get_gfx_backend(self) -> str:
+    async def get_gfx_backend(self, game_shader: str | None = None) -> str:
         # Start with the selected option
         # Pick glcore or gl based on drivers if not selected
         backend = self.config.get('gfxbackend')
@@ -357,7 +365,11 @@ class Libretro(SpecialDecorationsMixin, Emulator):
             set_manually = False
             gl_info = await get_gl_info()
             # glvendor check first, to avoid a 2nd testing on intel boards
-            if gl_info.vendor in {'nvidia', 'amd'} and gl_info.version >= 3.1:
+            # slang-only shaders (mega bezel) need glcore; intel on wayland skips glxinfo so has no version
+            slang_only = game_shader is not None and _slang_only_shader(game_shader)
+            if (gl_info.version >= 3.1 and (gl_info.vendor in {'nvidia', 'amd'} or slang_only)) or (
+                slang_only and gl_info.vendor == 'intel'
+            ):
                 backend = 'glcore'
             else:
                 backend = 'gl'
@@ -389,7 +401,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
             custom_config.set('content_show_video', False)
             custom_config.set('content_show_history', False)
             custom_config.set('content_show_playlists', False)
-            custom_config.set('content_show_add', False)
+            custom_config.set('content_show_add_entry', 0)
             custom_config.set('menu_show_load_core', False)
             custom_config.set('menu_show_load_content', False)
             custom_config.set('menu_show_online_updater', False)
@@ -614,9 +626,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
         custom_config.set('recording_output_directory', '/userdata/screenshots/')
         custom_config.set('savestate_directory', '/userdata/saves/')
         custom_config.set('savefile_directory', '/userdata/saves/')
-        custom_config.set('extraction_directory', '/userdata/extractions/')
         custom_config.set('cheat_database_path', '/userdata/cheats/cht/')
-        custom_config.set('cheat_settings_path', '/userdata/cheats/saves/')
         custom_config.set('system_directory', '/userdata/bios/')
         custom_config.set('joypad_autoconfig_dir', '/userdata/system/configs/retroarch/inputs/')
         custom_config.set('video_shader_dir', '/usr/share/batocera/shaders/')
@@ -895,18 +905,12 @@ class Libretro(SpecialDecorationsMixin, Emulator):
         if (netplay_mode := self.config.get('netplay.mode')) in {'host', 'client', 'spectator'}:
             # Security : hardcore mode disables save states, which would kill netplay
             custom_config.set('cheevos_hardcore_mode_enable', False)
-            # Quite strangely, host mode requires netplay_mode to be set to false when launched from command line
-            custom_config.set('netplay_mode', False)
             custom_config.set_from_config('netplay_ip_port', 'netplay.port')
-            custom_config.set_from_config('netplay_delay_frames', 'netplay.frames')
+            custom_config.set_from_config('netplay_input_latency_frames_min', 'netplay.frames')
             custom_config.set_from_config('netplay_nickname', 'netplay.nickname')
-            custom_config.set('netplay_client_swap_input', False)
             if netplay_mode == 'client' or self.config['netplay.mode'] == 'spectator':
-                # But client needs netplay_mode = true ... bug ?
-                custom_config.set('netplay_mode', True)
                 custom_config.set_from_config('netplay_ip_address', 'netplay.server.ip')
                 custom_config.set_from_config('netplay_ip_port', 'netplay.server.port')
-                custom_config.set('netplay_client_swap_input', True)
 
             # Connect as client
             if netplay_mode == 'client':
@@ -927,9 +931,6 @@ class Libretro(SpecialDecorationsMixin, Emulator):
             # Netplay hide the gameplay
             custom_config.set_bool_from_config('netplay_public_announce', 'netplay_public_announce', default=True)
 
-            # Enable or disable server spectator mode
-            custom_config.set_bool_from_config('netplay_spectator_mode_enable', 'netplay.spectator')
-
             # Relay
             if (netplay_relay := self.config.get('netplay.relay')) and netplay_relay != 'none':
                 custom_config.set('netplay_use_mitm_server', True)
@@ -948,9 +949,6 @@ class Libretro(SpecialDecorationsMixin, Emulator):
         # rumble (to reduce force feedback on devices like RG552)
         custom_config.set_from_config('input_rumble_gain', 'rumble_gain')
 
-        # On-Screen Display
-        custom_config.set('width', self.resolution.width)  # default value
-        custom_config.set('height', self.resolution.height)  # default value
         # force the assets directory while it was wrong in some beta versions
         custom_config.set('assets_directory', '/usr/share/libretro/assets')
 
@@ -1201,7 +1199,6 @@ class Libretro(SpecialDecorationsMixin, Emulator):
         if not shader_bezel:
             custom_config.set('input_overlay_enable', True)
 
-        custom_config.set('input_overlay_scale', '1.0')
         custom_config.set('input_overlay', str(self.overlay_config_path))
         custom_config.set('input_overlay_hide_in_menu', True)
 

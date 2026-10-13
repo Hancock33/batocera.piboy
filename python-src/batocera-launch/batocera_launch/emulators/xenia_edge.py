@@ -138,7 +138,6 @@ class XeniaEdge(Emulator):
                 'guest_display_refresh_cap': guest_refresh != 'uncapped',
             },
             HID={
-                'guide_button': False,
                 'hid': 'sdl',
                 'left_stick_deadzone_percentage': self.config.get_float('xenia_edge_deadzone_left', 0.0),
                 'right_stick_deadzone_percentage': self.config.get_float('xenia_edge_deadzone_right', 0.0),
@@ -154,6 +153,7 @@ class XeniaEdge(Emulator):
                 'mount_cache': self.config.get_bool('xenia_edge_cache', True),
             },
             UI={
+                'guide_button': False,
                 'show_achievement_notification': self.config.get_bool('xenia_edge_achievement'),
             },
             Vulkan={

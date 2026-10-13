@@ -1,8 +1,8 @@
 diff --git a/src/osdep/amiberry.cpp b/src/osdep/amiberry.cpp
-index 4c6a250a..71b1107e 100644
+index 51a9d2da..04ba02f9 100644
 --- a/src/osdep/amiberry.cpp
 +++ b/src/osdep/amiberry.cpp
-@@ -6497,12 +6497,14 @@ static std::string get_xdg_home(const char *var, const std::string& suffix)
+@@ -8249,12 +8249,14 @@ static std::string get_xdg_home(const char *var, const std::string& suffix)
  
  static std::string get_xdg_data_home()
  {

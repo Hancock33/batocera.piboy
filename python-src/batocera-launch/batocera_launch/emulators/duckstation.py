@@ -271,10 +271,12 @@ class Duckstation(Emulator):
         settings.set('GPU', 'WidescreenHack', self.config.get('duckstation_widescreen_hack', 'false'))
         settings.set('GPU', 'ForceNTSCTimings', self.config.get('duckstation_60hz', 'false'))
         settings.set('GPU', 'TextureFilter', self.config.get('duckstation_texture_filtering', 'Nearest'))
-        settings.set('GPU', 'PGXPEnable', self.config.get('duckstation_pgxp', 'true'))
-        settings.set('GPU', 'PGXPCulling', self._determine_pgxp_config())
-        settings.set('GPU', 'PGXPTextureCorrection', self._determine_pgxp_config())
-        settings.set('GPU', 'PGXPPreserveProjFP', self._determine_pgxp_config())
+        pgxp = self.config.get('duckstation_pgxp', 'true')
+        settings.set('GPU', 'PGXPEnable', pgxp)
+        settings.set('GPU', 'PGXPCulling', pgxp)
+        settings.set('GPU', 'PGXPTextureCorrection', pgxp)
+        settings.set('GPU', 'PGXPPreserveProjFP', pgxp)
+        settings.set('GPU', 'PGXPDepthBuffer', self.config.get('duckstation_pgxp_depth', 'false'))
         settings.set('GPU', 'TrueColor', self.config.get('duckstation_truecolour', 'false'))
         settings.set('GPU', 'ScaledDithering', self.config.get('duckstation_dithering', 'true'))
         settings.set('GPU', 'DisableInterlacing', self.config.get('duckstation_interlacing', 'false'))
@@ -291,24 +293,29 @@ class Duckstation(Emulator):
 
         ## [Display]
         aspect_ratio = self.config.get_str('duckstation_ratio')
-        settings.set('Display', 'AspectRatio', aspect_ratio or 'Auto (Game Native)')
+        stretch = self.config.get('duckstation_stretch', 'false')
+        if stretch == 'true' or aspect_ratio == 'Auto (Match Window)':
+            settings.set('Display', 'AspectRatio', 'Stretch To Fill')
+        else:
+            settings.set('Display', 'AspectRatio', aspect_ratio or 'Auto (Game Native)')
 
         if aspect_ratio is not None and aspect_ratio != '4:3':
             self.config['bezel'] = 'none'
 
         settings.set('Display', 'VSync', self.config.get('duckstation_vsync', 'false'))
         settings.set('Display', 'CropMode', self.config.get('duckstation_CropMode', 'Overscan'))
-        # Enable Frameskipping = option missing
-        settings.set('Display', 'DisplayAllFrames', 'false')
         settings.set('Display', 'ShowOSDMessages', self.config.get('duckstation_osd', 'false'))
-        # Optimal frame pacing
-        settings.set('Display', 'DisplayAllFrames', self.config.get('duckstation_ofp', 'false'))
-        settings.set('Display', 'IntegerScaling', self.config.get('duckstation_integer', 'false'))
-        settings.set('Display', 'LinearFiltering', self.config.get('duckstation_linear', 'false'))
-        stretch = self.config.get('duckstation_stretch', 'false')
-        settings.set('Display', 'Stretch', stretch)
+        integer = self.config.get_str('duckstation_integer')
+        linear = self.config.get_str('duckstation_linear')
+        settings.set('Display', 'OptimalFramePacing', self.config.get('duckstation_ofp', 'false'))
+        if integer is None and linear is None:
+            settings.remove_option('Display', 'Scaling')
+        elif integer == 'true':
+            settings.set('Display', 'Scaling', 'NearestInteger' if linear == 'false' else 'BilinearInteger')
+        else:
+            settings.set('Display', 'Scaling', 'Nearest' if linear == 'false' else 'BilinearSmooth')
 
-        if stretch == 'true' and self.config.get('duckstation_integer', 'false') == 'false':
+        if stretch == 'true' and integer != 'true':
             self.config['bezel'] = 'none'
 
         ## [Audio]
@@ -328,27 +335,6 @@ class Duckstation(Emulator):
                 'Cheevos',
                 'ChallengeMode',
                 self.config.get_bool('retroachievements.hardcore', return_values=('true', 'false')),
-            )
-            # Rich presence information will be collected and sent to the server where supported
-            settings.set(
-                'Cheevos',
-                'RichPresence',
-                self.config.get_bool('retroachievements.richpresence', return_values=('true', 'false')),
-            )
-            settings.set(
-                'Cheevos',
-                'PrimedIndicators',
-                self.config.get_bool('retroachievements.challenge_indicators', return_values=('true', 'false')),
-            )
-            settings.set(
-                'Cheevos',
-                'Leaderboards',
-                self.config.get_bool('retroachievements.leaderboards', return_values=('true', 'false')),
-            )
-            settings.set(
-                'Cheevos',
-                'UnofficialTestMode',
-                self.config.get_bool('retroachievements.unofficial', return_values=('true', 'false')),
             )
         else:
             settings.set('Cheevos', 'Enabled', 'false')
@@ -444,14 +430,13 @@ class Duckstation(Emulator):
                 # the legacy core needs a chord, the current one toggles on Guide alone
                 settings.set(section, 'Analog', f'{sdl}/Guide')
 
-            if controller_type == 'NeGcon':
+            if controller_type in ('NeGcon', 'NeGconRumble'):
                 for option, binding in _NEGCON_BINDINGS.items():
                     settings.set(section, option, f'{sdl}/{binding}')
 
             if controller_type == 'PlayStationMouse':
                 settings.set(section, 'Right', f'{sdl}/B')
                 settings.set(section, 'Left', f'{sdl}/A')
-                settings.set(section, 'RelativeMouseMode', f'{sdl}true')
 
     def _write_guns(self, settings: CaseSensitiveConfigParser, /) -> None:
         if self.config.use_guns and self.guns:

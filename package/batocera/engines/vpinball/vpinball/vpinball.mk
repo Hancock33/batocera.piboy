@@ -3,13 +3,13 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Oct 03, 2026
-VPINBALL_VERSION = eec5b4d383c40ff483b271a604b6a8f21b32184b
+# Version: Commits on Oct 12, 2026
+VPINBALL_VERSION = 90d94e9f16d40f593c1d78e0549e6a1148078e81
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
-VPINBALL_DEPENDENCIES = ffmpeg libaltsound libdmdutil libdof libfreeimage libpinmame libserialport libserum libspatialaudio
-VPINBALL_DEPENDENCIES += libwinevbs libzedmd sdl3 sdl3_image sdl3_ttf
+VPINBALL_DEPENDENCIES = bgfx ffmpeg libaltsound libdmdutil libdof libfreeimage libpinmame libserialport
+VPINBALL_DEPENDENCIES += libserum libmysofa libspatialaudio libwinevbs libzedmd openxr-sdk sdl3 sdl3_image sdl3_ttf
 VPINBALL_DEPENDENCIES += host-libcurl host-cmake
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 VPINBALL_EMULATOR_INFO = vpinball.emulator.yml
@@ -17,7 +17,7 @@ VPINBALL_EMULATOR_INFO = vpinball.emulator.yml
 VPINBALL_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)
 VPINBALL_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 VPINBALL_CONF_OPTS += -DPLATFORM=linux
-VPINBALL_CONF_OPTS += -DRENDERER=GL
+VPINBALL_CONF_OPTS += -DRENDERER=BGFX
 VPINBALL_CONF_OPTS += -DSYSTEM_LIBS_INCLUDE_DIR=$(STAGING_DIR)/usr/include
 VPINBALL_CONF_OPTS += -DSYSTEM_LIBS_LIB_DIR=$(STAGING_DIR)/usr/lib
 VPINBALL_CONF_OPTS += -DUSE_SYSTEM_LIBS=ON
@@ -25,11 +25,10 @@ VPINBALL_CONF_OPTS += -DUSE_SYSTEM_LIBS=ON
 define VPINBALL_INSTALL_TARGET_CMDS
 	rm -rf   $(TARGET_DIR)/usr/bin/vpinball
 	mkdir -p $(TARGET_DIR)/usr/bin/vpinball
-	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/VPinballX_GL $(TARGET_DIR)/usr/bin/vpinball/VPinballX_GL
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/VPinballX_BGFX $(TARGET_DIR)/usr/bin/vpinball/VPinballX_BGFX
 	cp -R $(@D)/buildroot-build/plugins   $(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/assets    $(TARGET_DIR)/usr/bin/vpinball/
 	cp -R $(@D)/buildroot-build/scripts   $(TARGET_DIR)/usr/bin/vpinball/
-	cp -R $(@D)/buildroot-build/shaders-* $(TARGET_DIR)/usr/bin/vpinball/
 	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/vpinball/vpinball/batocera-vpx-scraper.py $(TARGET_DIR)/usr/bin/batocera-vpx-scraper
 	#evmapy install
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy

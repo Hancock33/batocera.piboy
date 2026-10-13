@@ -1,8 +1,8 @@
 diff --git a/pcsx2-libretro/Main.cpp b/pcsx2-libretro/Main.cpp
-index bd0babee92..8d718c96c9 100644
+index 201a87435c..983b987e58 100644
 --- a/pcsx2-libretro/Main.cpp
 +++ b/pcsx2-libretro/Main.cpp
-@@ -154,7 +154,7 @@ bool LibretroCore::InitializeConfig()
+@@ -177,7 +177,7 @@ bool LibretroCore::InitializeConfig()
  		return false;
  	}
  
@@ -11,7 +11,7 @@ index bd0babee92..8d718c96c9 100644
  	EmuFolders::Resources = Path::Combine(EmuFolders::AppRoot, "resources");
  	EmuFolders::DataRoot = EmuFolders::AppRoot;
  	// Normally derived inside SetDataDirectory(), which the libretro path
-@@ -936,7 +936,7 @@ static struct retro_core_option_v2_definition kOptionDefinitions[] = {
+@@ -1029,7 +1029,7 @@ static struct retro_core_option_v2_definition kOptionDefinitions[] = {
  		nullptr, "performance",
  		{{"enabled", nullptr}, {"disabled", nullptr}, {nullptr, nullptr}}, "enabled"},
  	{"armsx2_bios", "BIOS (restart)", "BIOS (restart)",
@@ -21,10 +21,10 @@ index bd0babee92..8d718c96c9 100644
  		{{"auto", "Auto (first valid image)"}, {nullptr, nullptr}}, "auto"},
  	{"armsx2_fast_boot", "Fast Boot", "Fast Boot",
 diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
-index ef129ef4d4..e4570a9d6c 100644
+index 6628f6cd83..fcba00dba4 100644
 --- a/pcsx2/Pcsx2Config.cpp
 +++ b/pcsx2/Pcsx2Config.cpp
-@@ -2539,7 +2539,7 @@ bool EmuFolders::SetDataDirectory(Error* error)
+@@ -2546,7 +2546,7 @@ bool EmuFolders::SetDataDirectory(Error* error)
  
  void EmuFolders::SetDefaults(SettingsInterface& si)
  {

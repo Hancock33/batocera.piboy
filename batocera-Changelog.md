@@ -27,6 +27,7 @@
 - GameKiddy GKD Pixel2 initial support
 - KICKPI K3B initial support
 - Mangmi Air X initial support
+- Mangmi Air Y Pro initial support
 - Odroid M2 initial support
 - Radxa Rock-5T initial support
 - Retroid Pocket Nova initial support
@@ -52,6 +53,7 @@
 - ES now supports correctly Arabic and Hebrew glyph rendering
 - ES can have a maximum depth of subfolders to go through when indexing (skip subfoldes with large amount of files)
 - GameTank console support through GameTankEmulator
+- HDR toggle for supported devices & display panels
 - Legion Go / Go 2 LED controller support
 - Libretro-anybor : for openbor games (support all openbor versions)
 - Libretro-Azahar
