@@ -294,9 +294,7 @@ class Duckstation(Emulator):
         ## [Display]
         aspect_ratio = self.config.get_str('duckstation_ratio')
         stretch = self.config.get('duckstation_stretch', 'false')
-        if self._legacy:
-            settings.set('Display', 'AspectRatio', aspect_ratio or 'Auto (Game Native)')
-        elif stretch == 'true' or aspect_ratio == 'Auto (Match Window)':
+        if stretch == 'true' or aspect_ratio == 'Auto (Match Window)':
             settings.set('Display', 'AspectRatio', 'Stretch To Fill')
         else:
             settings.set('Display', 'AspectRatio', aspect_ratio or 'Auto (Game Native)')
@@ -309,19 +307,13 @@ class Duckstation(Emulator):
         settings.set('Display', 'ShowOSDMessages', self.config.get('duckstation_osd', 'false'))
         integer = self.config.get_str('duckstation_integer')
         linear = self.config.get_str('duckstation_linear')
-        if self._legacy:
-            settings.set('Display', 'DisplayAllFrames', self.config.get('duckstation_ofp', 'false'))
-            settings.set('Display', 'IntegerScaling', integer or 'false')
-            settings.set('Display', 'LinearFiltering', linear or 'false')
-            settings.set('Display', 'Stretch', stretch)
+        settings.set('Display', 'OptimalFramePacing', self.config.get('duckstation_ofp', 'false'))
+        if integer is None and linear is None:
+            settings.remove_option('Display', 'Scaling')
+        elif integer == 'true':
+            settings.set('Display', 'Scaling', 'NearestInteger' if linear == 'false' else 'BilinearInteger')
         else:
-            settings.set('Display', 'OptimalFramePacing', self.config.get('duckstation_ofp', 'false'))
-            if integer is None and linear is None:
-                settings.remove_option('Display', 'Scaling')
-            elif integer == 'true':
-                settings.set('Display', 'Scaling', 'NearestInteger' if linear == 'false' else 'BilinearInteger')
-            else:
-                settings.set('Display', 'Scaling', 'Nearest' if linear == 'false' else 'BilinearSmooth')
+            settings.set('Display', 'Scaling', 'Nearest' if linear == 'false' else 'BilinearSmooth')
 
         if stretch == 'true' and integer != 'true':
             self.config['bezel'] = 'none'
@@ -424,9 +416,6 @@ class Duckstation(Emulator):
             sdl = f'SDL-{pad.index}'
             controller_type = self.config.get_str(f'duckstation_Controller{player}')
 
-            # the legacy core has no rumble NeGcon
-            if self._legacy and controller_type == 'NeGconRumble':
-                controller_type = 'NeGcon'
             settings.set(section, 'Type', controller_type or 'DigitalController')
 
             for option, binding in _PAD_BINDINGS.items():
@@ -448,8 +437,6 @@ class Duckstation(Emulator):
             if controller_type == 'PlayStationMouse':
                 settings.set(section, 'Right', f'{sdl}/B')
                 settings.set(section, 'Left', f'{sdl}/A')
-                if self._legacy:
-                    settings.set(section, 'RelativeMouseMode', 'true')
 
     def _write_guns(self, settings: CaseSensitiveConfigParser, /) -> None:
         if self.config.use_guns and self.guns:
