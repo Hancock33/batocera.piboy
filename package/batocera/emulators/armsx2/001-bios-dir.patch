@@ -1,0 +1,35 @@
+diff --git a/pcsx2-libretro/Main.cpp b/pcsx2-libretro/Main.cpp
+index 201a87435c..983b987e58 100644
+--- a/pcsx2-libretro/Main.cpp
++++ b/pcsx2-libretro/Main.cpp
+@@ -177,7 +177,7 @@ bool LibretroCore::InitializeConfig()
+ 		return false;
+ 	}
+ 
+-	EmuFolders::AppRoot = Path::Combine(system_base, "pcsx2");
++	EmuFolders::AppRoot = Path::Combine(system_base, "ps2");
+ 	EmuFolders::Resources = Path::Combine(EmuFolders::AppRoot, "resources");
+ 	EmuFolders::DataRoot = EmuFolders::AppRoot;
+ 	// Normally derived inside SetDataDirectory(), which the libretro path
+@@ -1029,7 +1029,7 @@ static struct retro_core_option_v2_definition kOptionDefinitions[] = {
+ 		nullptr, "performance",
+ 		{{"enabled", nullptr}, {"disabled", nullptr}, {nullptr, nullptr}}, "enabled"},
+ 	{"armsx2_bios", "BIOS (restart)", "BIOS (restart)",
+-		"Which BIOS image from <system>/pcsx2/bios to boot. Auto picks the first valid image.",
++		"Which BIOS image from <system>/ps2 to boot. Auto picks the first valid image.",
+ 		nullptr, "system",
+ 		{{"auto", "Auto (first valid image)"}, {nullptr, nullptr}}, "auto"},
+ 	{"armsx2_fast_boot", "Fast Boot", "Fast Boot",
+diff --git a/pcsx2/Pcsx2Config.cpp b/pcsx2/Pcsx2Config.cpp
+index 6628f6cd83..fcba00dba4 100644
+--- a/pcsx2/Pcsx2Config.cpp
++++ b/pcsx2/Pcsx2Config.cpp
+@@ -2546,7 +2546,7 @@ bool EmuFolders::SetDataDirectory(Error* error)
+ 
+ void EmuFolders::SetDefaults(SettingsInterface& si)
+ {
+-	si.SetStringValue("Folders", "Bios", "bios");
++	si.SetStringValue("Folders", "Bios", "/userdata/bios/ps2");
+ 	si.SetStringValue("Folders", "Snapshots", "snaps");
+ 	si.SetStringValue("Folders", "Savestates", "sstates");
+ 	si.SetStringValue("Folders", "MemoryCards", "memcards");

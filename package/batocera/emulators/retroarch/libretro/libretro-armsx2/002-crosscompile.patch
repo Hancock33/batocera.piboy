@@ -1,0 +1,15 @@
+diff --git a/cmake/Pcsx2Utils.cmake b/cmake/Pcsx2Utils.cmake
+index 0db3c09f02..bd0018fc4f 100644
+--- a/cmake/Pcsx2Utils.cmake
++++ b/cmake/Pcsx2Utils.cmake
+@@ -274,6 +274,10 @@ int main() {
+ endfunction()
+ 
+ function(detect_cache_line_size)
++	if(DEFINED HOST_CACHE_LINE_SIZE)
++		message(STATUS "Host cache line size (preset): ${HOST_CACHE_LINE_SIZE}")
++		return()
++	endif()
+ 	message(STATUS "Determining host cache line size")
+ 	set(detect_cache_line_size_file ${CMAKE_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/CMakeTmp/src.c)
+ 	file(WRITE ${detect_cache_line_size_file} "
