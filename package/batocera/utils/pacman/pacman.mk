@@ -14,6 +14,8 @@ ifeq ($(BR2_x86_64),y)
 PACMAN_ARCH = x86_64
 else ifeq ($(BR2_x86_i686),y)
 PACMAN_ARCH = x86
+else ifeq ($(BR2_x86_haswell),y)
+PACMAN_ARCH = x86
 else ifeq ($(BR2_x86_prescott),y)
 PACMAN_ARCH = x86
 else ifeq ($(BR2_aarch64),y)

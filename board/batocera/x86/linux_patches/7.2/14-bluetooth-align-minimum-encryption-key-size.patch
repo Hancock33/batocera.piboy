@@ -1,8 +1,8 @@
 diff --git a/net/bluetooth/hci_conn.c b/net/bluetooth/hci_conn.c
-index 96195d2fd10f..4064a703be92 100644
+index cf44452e0766..86ec86dca512 100644
 --- a/net/bluetooth/hci_conn.c
 +++ b/net/bluetooth/hci_conn.c
-@@ -2554,8 +2554,13 @@ int hci_conn_check_link_mode(struct hci_conn *conn)
+@@ -2562,8 +2562,13 @@ int hci_conn_check_link_mode(struct hci_conn *conn)
  		return 0;
  	}
  
