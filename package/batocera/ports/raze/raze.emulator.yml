@@ -20,7 +20,7 @@ custom_features:
     choices:
       OpenGL (x86 only): 0
       Vulkan (Default): 1
-      OpenGLES: 2
+      OpenGLES, OpenGL on x86: 2
   nologo:
     prompt: SKIP INTRO VIDEOS
     choices:
