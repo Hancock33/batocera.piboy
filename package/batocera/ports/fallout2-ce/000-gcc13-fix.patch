@@ -1,0 +1,24 @@
+diff --git a/src/game.h b/src/game.h
+index 94868b56..8030dd6a 100644
+--- a/src/game.h
++++ b/src/game.h
+@@ -1,6 +1,7 @@
+ #ifndef GAME_H
+ #define GAME_H
+ 
++#include <climits>
+ #include "game_vars.h"
+ #include "message.h"
+ #include "skilldex.h"
+diff --git a/src/platform/git_version.h.in b/src/platform/git_version.h.in
+index 99f8728f..583d3c49 100644
+--- a/src/platform/git_version.h.in
++++ b/src/platform/git_version.h.in
+@@ -4,6 +4,6 @@
+ #define _BUILD_BRANCH "@BRANCH@"
+ #define _BUILD_HASH   "@HASH@"
+ #define _BUILD_VER    "@LATEST_TAG@"
+-#define _BUILD_DATE   @DATE@
++#define _BUILD_DATE   "@DATE@"
+ 
+ #define CI_BUILD @CI_BUILD@
