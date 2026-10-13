@@ -16,5 +16,5 @@ define RYUJINX_INSTALL_TARGET_CMDS
 	tar -xf $(DL_DIR)/ryujinx/ryujinx-$(RYUJINX_VERSION).tar.gz -C $(TARGET_DIR)/usr/bin/ryujinx
 endef
 
-
 $(eval $(generic-package))
+$(eval $(emulator-info-package))
