@@ -63,8 +63,8 @@ define LIBRETRO_ARMSX2_INSTALL_TARGET_CMDS
 	cp -pr $(@D)/bin/resources $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
 endef
 
-LIBRETRO_PCSX2_POST_INSTALL_TARGET_HOOKS += LIBRETRO_PCSX2_PATCHES
-define LIBRETRO_PCSX2_PATCHES
+LIBRETRO_ARMSX2_POST_INSTALL_TARGET_HOOKS += LIBRETRO_ARMSX2_PATCHES
+define LIBRETRO_ARMSX2_PATCHES
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
 	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2/patches.zip
 endef
