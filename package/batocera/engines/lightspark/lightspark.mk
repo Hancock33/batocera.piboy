@@ -22,7 +22,11 @@ ifneq ($(BR2_x86_64),y)
 endif
 
 ifeq ($(LIGHTSPARK_ARCH), "arm")
-    LIGHTSPARK_ARCH = armv7l
+    ifeq ($(BR2_ARM_CPU_ARMV6), y)
+        LIGHTSPARK_ARCH = armv6l
+    else
+        LIGHTSPARK_ARCH = armv7l
+    endif
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)
