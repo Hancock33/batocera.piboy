@@ -6,7 +6,6 @@ config BR2_PACKAGE_SHADPS4_QTLAUNCHER
 	select BR2_PACKAGE_QT6MULTIMEDIA
 	select BR2_PACKAGE_QT6SVG
 	select BR2_PACKAGE_QT6TOOLS
-	select BR2_PACKAGE_SHADPS4
 
 	help
 	  The official Qt launcher for shadps4 emulator.
