@@ -1,0 +1,303 @@
+#!/bin/bash
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (C) 2024-present ROCKNIX (https://github.com/ROCKNIX)
+#
+# Updated detection for batocera and minor tweaks by @dmanlfc
+#
+# This script will update the ABL on the internal UFS.
+
+set -euo pipefail
+
+# Fallback to interactive mode (0) if not defined
+NON_INTERACTIVE="${NON_INTERACTIVE:-0}"
+
+# Normalize non-interactive value to a strict integer (0 or 1)
+if [ "$NON_INTERACTIVE" = "true" ] || [ "$NON_INTERACTIVE" = "yes" ] || [ "$NON_INTERACTIVE" = "1" ]; then
+    NON_INTERACTIVE=1
+else
+    NON_INTERACTIVE=0
+fi
+
+# ---- Get Device Architecture ----
+ARCH_FILE="/usr/share/batocera/batocera.arch"
+if [ -f "$ARCH_FILE" ]; then
+    HW_DEVICE=$(cat "$ARCH_FILE" | tr '[:lower:]' '[:upper:]')
+else
+    echo "Error: Architecture file $ARCH_FILE not found!"
+    exit 1
+fi
+
+case "$HW_DEVICE" in
+  SM4450|SM6115|SM8250|SM8550|SM8650|SM8750)
+    ;;
+  *)
+    echo "This script is not compatible with device: $HW_DEVICE"
+    exit 1
+    ;;
+esac
+
+REPO="OpenHandheldCollective/OpenABL"
+ABL_DIR="/usr/share/bootloader/openabl"
+ELF="${ABL_DIR}/abl_signed-${HW_DEVICE}.elf"
+SHA256SUM="${ABL_DIR}/abl_signed-${HW_DEVICE}.elf.sha256"
+
+ABL_A="/dev/disk/by-partlabel/abl_a"
+ABL_B="/dev/disk/by-partlabel/abl_b"
+
+# ---- GitHub Online Check Logic ----
+if [[ "${1:-}" == "--check-online" ]]; then
+    echo "Checking GitHub for ABL updates..."
+
+    LATEST_TAG=""
+    if LATEST_RELEASE_JSON=$(curl -sL --fail --max-time 10 "https://api.github.com/repos/${REPO}/releases/latest" 2>/dev/null); then
+        LATEST_TAG=$(echo "$LATEST_RELEASE_JSON" | grep -m1 '"tag_name":' | cut -d'"' -f4 || true)
+    fi
+
+    # Fallback: Parse redirection from the standard GitHub URL
+    if [ -z "$LATEST_TAG" ]; then
+        LATEST_TAG=$(curl -sL --fail --max-time 10 -o /dev/null -w "%{url_effective}" "https://github.com/${REPO}/releases/latest" 2>/dev/null | sed 's|.*/tag/||' || true)
+    fi
+
+    if [[ ! "$LATEST_TAG" =~ ^v[0-9] ]]; then
+        LATEST_TAG=""
+    fi
+
+    LOCAL_VERSION=$(cat "${ABL_DIR}/version" 2>/dev/null || true)
+
+    if [ -z "$LATEST_TAG" ]; then
+        echo "Warning: Could not reach GitHub or determine the latest version. Proceeding with the local ABL."
+    elif [ -n "$LOCAL_VERSION" ] && [ "$(printf '%s\n%s\n' "$LATEST_TAG" "$LOCAL_VERSION" | sort -V | tail -n1)" = "$LOCAL_VERSION" ]; then
+        echo "The local ABL ($LOCAL_VERSION) is the latest."
+    else
+        echo "A newer ABL ($LATEST_TAG) is available online!"
+
+        proceed_download=0
+        if [ "$NON_INTERACTIVE" -eq 1 ]; then
+            proceed_download=1
+        else
+            read -p "Do you want to download and flash the new ABL update? (y/N): " -n 1 -r
+            echo
+            if [[ $REPLY =~ ^[Yy]$ ]]; then
+                proceed_download=1
+            fi
+        fi
+
+        if [ "$proceed_download" -eq 1 ]; then
+            echo "Downloading ABL release ${LATEST_TAG}..."
+            TMP_DIR=$(mktemp -d)
+            trap 'rm -rf "$TMP_DIR"' EXIT
+            BASE_URL="https://github.com/${REPO}/releases/download/${LATEST_TAG}"
+            NAME="abl_signed-${HW_DEVICE}.elf"
+
+            if ! curl -sL --fail -o "${TMP_DIR}/${NAME}" "${BASE_URL}/${NAME}" ||
+               ! curl -sL --fail -o "${TMP_DIR}/${NAME}.sha256" "${BASE_URL}/${NAME}.sha256"; then
+                echo "Error: Failed to download the ABL for ${HW_DEVICE} from ${BASE_URL}. Aborting update."
+                exit 1
+            fi
+
+            echo "Verifying downloaded files..."
+            if ! (cd "$TMP_DIR" && sha256sum -c "${NAME}.sha256"); then
+                echo "Error: SHA256 checksum verification failed for the downloaded files! Aborting."
+                exit 1
+            fi
+
+            # /usr is not persistent, so flash straight from the download
+            ELF="${TMP_DIR}/${NAME}"
+            SHA256SUM="${TMP_DIR}/${NAME}.sha256"
+            echo "Download complete and verified."
+        else
+            echo "Skipping ABL update download."
+        fi
+    fi
+fi
+
+# ---- Sanity checks ----
+if [ ! -f "${ELF}" ]; then
+  echo "Error: ABL update binary not found at ${ELF}"
+  exit 1
+fi
+
+if [ ! -f "${SHA256SUM}" ]; then
+  echo "Error: SHA256 checksum file not found at ${SHA256SUM}"
+  exit 1
+fi
+
+if [ ! -b "${ABL_A}" ] || [ ! -b "${ABL_B}" ]; then
+  echo "Error: ABL partitions not found"
+  exit 1
+fi
+
+# ---- Helper: Get Checksum of Partition ----
+# We only read the size of the ELF file from the partition to ignore trailing zeros/padding.
+FILE_SIZE=$(stat -c%s "${ELF}")
+EXPECTED_HASH=$(awk '{print $1}' "${SHA256SUM}")
+
+get_part_hash() {
+    local partition=$1
+    # Use head to read exactly $FILE_SIZE bytes from the block device
+    head -c "$FILE_SIZE" "$partition" | sha256sum | awk '{print $1}'
+}
+
+# ---- Power Check ----
+check_power() {
+    local power_connected=0
+    local max_battery=0
+    local has_battery=0
+
+    # Scan power supplies for AC power or battery capacity
+    for supply in /sys/class/power_supply/*; do
+        [ -d "$supply" ] || continue
+
+        # Check for connected AC / USB charger
+        if [ -f "$supply/online" ] && [ -f "$supply/type" ]; then
+            type=$(cat "$supply/type" 2>/dev/null || true)
+            online=$(cat "$supply/online" 2>/dev/null || true)
+            if [[ "$type" == "Mains" || "$type" == "USB" ]] && [ "$online" -eq 1 ]; then
+                power_connected=1
+            fi
+        fi
+
+        # Check battery capacity percentage
+        if [ -f "$supply/capacity" ]; then
+            has_battery=1
+            cap=$(cat "$supply/capacity" 2>/dev/null || echo 0)
+            if [ "$cap" -gt "$max_battery" ]; then
+                max_battery=$cap
+            fi
+        fi
+    done
+
+    # Allow if plugged into AC/USB power
+    if [ "$power_connected" -eq 1 ]; then
+        return 0
+    fi
+
+    # Allow if on battery and capacity is >= 10%
+    if [ "$has_battery" -eq 1 ]; then
+        if [ "$max_battery" -ge 10 ]; then
+            return 0
+        else
+            echo "------------------------------------------------------------"
+            echo " ERROR: BATTERY LEVEL TOO LOW (${max_battery}%) "
+            echo " To prevent bricking during the ABL flash, your battery must "
+            echo " be at least 10% or plugged into AC power. "
+            echo "------------------------------------------------------------"
+            exit 1
+        fi
+    fi
+
+    # Fallback error if power status could not be determined
+    echo "------------------------------------------------------------"
+    echo " ERROR: DEVICE IS NOT ON AC POWER "
+    echo " To prevent bricking during the ABL flash, please plug in "
+    echo " your charger/power cable before attempting to flash. "
+    echo "------------------------------------------------------------"
+    exit 1
+}
+
+# Run the power check
+check_power
+
+# ---- Version Check (Pre-flash) ----
+echo "Checking current ABL versions..."
+HASH_A=$(get_part_hash "$ABL_A")
+HASH_B=$(get_part_hash "$ABL_B")
+
+UP_TO_DATE=true
+[[ "$HASH_A" != "$EXPECTED_HASH" ]] && UP_TO_DATE=false
+[[ "$HASH_B" != "$EXPECTED_HASH" ]] && UP_TO_DATE=false
+
+if [ "$UP_TO_DATE" = true ]; then
+    echo "Both ABL partitions are already up to date."
+    if [ "$NON_INTERACTIVE" -eq 1 ]; then
+        echo "No changes needed. Exiting."
+        exit 0
+    fi
+    read -p "Do you still wish to re-flash? (y/N): " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        echo "No changes needed. Exiting."
+        exit 0
+    fi
+fi
+
+# ---- Disclaimer & Prompt ----
+if [ "$NON_INTERACTIVE" -ne 1 ]; then
+    cat << EOF
+------------------------------------------------------------
+Disclaimer
+Flashing a custom ABL carries inherent risk and may result
+in an unbootable device if used incorrectly.
+
+- You are responsible for any damage caused
+- Ensure you have recovery options before flashing
+- This project is provided as-is, with no warranty
+
+OpenABL by the Open Handheld Collective, based on the
+ROCKNIX ABL.
+------------------------------------------------------------
+EOF
+
+    echo
+    read -p "Do you wish to proceed? (Type Y to continue): " -n 1 -r
+    echo # Move to a new line
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        echo "Update aborted by user."
+        exit 1
+    fi
+fi
+
+# ---- Check SHA256 ----
+echo "Verifying integrity of ABL binary..."
+if ! (cd "$(dirname "${ELF}")" && sha256sum -c "$(basename "${SHA256SUM}")"); then
+  echo "Error: SHA256 checksum verification failed! Writing aborted."
+  exit 1
+fi
+echo "Checksum verified successfully."
+
+# ---- Get sector size ----
+SS="$(blockdev --getss "${ABL_A}")"
+if [ -z "${SS}" ]; then
+  echo "Error: failed to get sector size"
+  exit 1
+fi
+
+# ---- Flash with Progress Bar ----
+if [ "$NON_INTERACTIVE" -eq 1 ]; then
+    # In non-interactive mode, avoid pv progress spamming the logs
+    echo "Flashing ABL_A..."
+    dd if="${ELF}" of="${ABL_A}" bs="${SS}" conv=fsync,notrunc status=none
+    echo "Flashing ABL_B..."
+    dd if="${ELF}" of="${ABL_B}" bs="${SS}" conv=fsync,notrunc status=none
+else
+    echo "Flashing ABL_A..."
+    pv -s "$FILE_SIZE" "${ELF}" | dd of="${ABL_A}" bs="${SS}" conv=fsync,notrunc status=none
+
+    echo "Flashing ABL_B..."
+    pv -s "$FILE_SIZE" "${ELF}" | dd of="${ABL_B}" bs="${SS}" conv=fsync,notrunc status=none
+fi
+
+sync
+
+# ---- Verification (Post-flash) ----
+echo "Verifying partitions..."
+NEW_HASH_A=$(get_part_hash "$ABL_A")
+NEW_HASH_B=$(get_part_hash "$ABL_B")
+
+SUCCESS=true
+if [ "$NEW_HASH_A" != "$EXPECTED_HASH" ]; then
+    echo "CRITICAL ERROR: ABL_A verification failed!"
+    SUCCESS=false
+fi
+if [ "$NEW_HASH_B" != "$EXPECTED_HASH" ]; then
+    echo "CRITICAL ERROR: ABL_B verification failed!"
+    SUCCESS=false
+fi
+
+if [ "$SUCCESS" = true ]; then
+    echo "ABL update completed and verified successfully."
+    echo "--- REBOOT device to take effect ---"
+else
+    echo "Update failed verification. DO NOT REBOOT until you have investigated."
+    exit 1
+fi
