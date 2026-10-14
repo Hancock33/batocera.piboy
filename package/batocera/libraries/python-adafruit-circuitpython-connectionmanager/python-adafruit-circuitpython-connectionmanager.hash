@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/adafruit_circuitpython_connectionmanager/json
+md5  724f03a39a01c1d8ac3b41fc500d4233  adafruit_circuitpython_connectionmanager-3.1.8.tar.gz
+sha256  ce7436d62ac26312fbd2fc7d8f70ab0582a7c7807d7033ae5bd5cb53e4f66f3b  adafruit_circuitpython_connectionmanager-3.1.8.tar.gz
+# Locally computed sha256 checksums
+sha256  ce612169d41e8ac24beb5ff303732761cd2a5455ce78e4898bd7fdc29cb12931  LICENSE

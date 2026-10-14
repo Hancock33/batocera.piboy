@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/Adafruit_PureIO/json
+md5  8e7d7d36f9c7084bcddeae72c5dde58c  adafruit_pureio-1.1.12.tar.gz
+sha256  1ebb8416528ff710570fb0ad321fed885d50bec748cccd2935e9fd6b336c1d08  adafruit_pureio-1.1.12.tar.gz
+# Locally computed sha256 checksums
+sha256  aa5e54136c840ed2e333f65d43fecbc6c0e8fff62ebaece4ff281cd2a6672088  LICENSE

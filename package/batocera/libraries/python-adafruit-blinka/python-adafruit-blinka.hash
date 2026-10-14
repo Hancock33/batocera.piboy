@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/adafruit_blinka/json
+md5  fc605ab21e10a2bab565fd4fd87d8be4  adafruit_blinka-9.2.0.tar.gz
+sha256  0358f02840f91127246d9c5fa6d49660e2ab1134cc4e56fd5d88ce4c39a50942  adafruit_blinka-9.2.0.tar.gz
+# Locally computed sha256 checksums
+sha256  50e0c3b5b4486be0ed420639f8a1f6f115f29101feee6bcd954a4b81db04d0f3  LICENSE

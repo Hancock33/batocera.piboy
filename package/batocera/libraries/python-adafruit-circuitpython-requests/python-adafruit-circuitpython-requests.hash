@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/adafruit_circuitpython_requests/json
+md5  4c36f019c24a5948950a62b6bc851333  adafruit_circuitpython_requests-4.1.17.tar.gz
+sha256  7259976be340324d34da1ba6f4b935430b46ceece2e5c1632387a24e6f94e9a3  adafruit_circuitpython_requests-4.1.17.tar.gz
+# Locally computed sha256 checksums
+sha256  20696aa4836f387b58a83b7329020fc53b52809ebcbf3a5a869e19701e16ac7d  LICENSE

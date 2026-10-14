@@ -1,1 +1,5 @@
-sha256  717f9179a0dbed357012ddad50a5ad3d5e4d9a0b8712680d4e687f5e6e6ed9b3  lazy_loader-0.5.tar.gz
+# md5, sha256 from https://pypi.org/pypi/lazy_loader/json
+md5  58bd3789aa5ee8363ae57bd8145e1035  lazy_loader-0.6.tar.gz
+sha256  2f4b7824d6401958639008a0cae20c776b61dff619accd6890693e2de8260167  lazy_loader-0.6.tar.gz
+# Locally computed sha256 checksums
+sha256  797b6937a4f976836efbbbb3ae333d7866ddc3eb3cb152972b2be348d3529372  LICENSE.md

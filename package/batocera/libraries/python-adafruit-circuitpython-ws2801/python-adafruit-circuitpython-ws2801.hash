@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/adafruit_circuitpython_ws2801/json
+md5  3377bc35d834768b0574ca9336106c2f  adafruit_circuitpython_ws2801-1.0.6.tar.gz
+sha256  cb98a124b0837edb05d07c1b1b845fe36e8aa631c229fba83e929768066d13c5  adafruit_circuitpython_ws2801-1.0.6.tar.gz
+# Locally computed sha256 checksums
+sha256  900834fa8ecdc2bd06abe78299f1495f407f1462849fc70993bccad593cdb89f  LICENSE
