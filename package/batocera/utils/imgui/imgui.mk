@@ -3,8 +3,8 @@
 # imgui
 #
 ################################################################################
-# Version: Commits on Jul 31, 2026
-IMGUI_VERSION = v1.92.9b
+# Version: Commits on Oct 14, 2026
+IMGUI_VERSION = v1.93.0
 IMGUI_SITE = $(call github,ocornut,imgui,$(IMGUI_VERSION))
 IMGUI_INSTALL_STAGING = YES
 
