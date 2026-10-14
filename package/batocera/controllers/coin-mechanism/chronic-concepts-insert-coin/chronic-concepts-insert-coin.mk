@@ -3,6 +3,7 @@
 # chronic-concepts-insert-coin
 #
 ################################################################################
+
 CHRONIC_CONCEPTS_INSERT_COIN_VERSION = 1.0
 CHRONIC_CONCEPTS_INSERT_COIN_SOURCE=
 
