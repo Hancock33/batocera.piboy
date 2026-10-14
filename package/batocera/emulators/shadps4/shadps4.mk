@@ -17,7 +17,7 @@ SHADPS4_DEPENDENCIES += alsa-lib boost ffmpeg fmt freetype glslang jack2 libedit
 SHADPS4_DEPENDENCIES += openal openssl pugixml pulseaudio sdl3 udev vulkan-headers vulkan-validationlayers
 
 SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-SHADPS4_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++ -lprotobuf"
+SHADPS4_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++ -lprotobuf -labsl_raw_hash_set"
 SHADPS4_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 SHADPS4_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 SHADPS4_CONF_OPTS += -DENABLE_SYSTEM_LIBRARIES=ON
