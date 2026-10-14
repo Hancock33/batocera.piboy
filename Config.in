@@ -155,6 +155,9 @@ menu "batocera.linux"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/wheels/logitech-trueforce/Config.in"
       source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/wheels/new-lg4ff/Config.in"
     endmenu
+    menu "coin-mechanism"
+      source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/controllers/coin-mechanism/chronic-concepts-insert-coin/Config.in"
+    endmenu
   endmenu
 
   menu "Emulationstation"
