@@ -1,15 +1,10 @@
-From: Daniel Martin <dmanlfc@gmail.com>
-Subject: [PATCH] cmake: generate the wayland protocol wrappers before windowing_WAYLAND
-
-windowing_WAYLAND compiles the generated wayland-extra-protocols sources,
-but only libkodi was ordered after generate-wayland-extra-protocols.
-
----
+diff --git a/cmake/scripts/linux/ExtraTargets.cmake b/cmake/scripts/linux/ExtraTargets.cmake
+index f51a7b7e49..208bfe9215 100644
 --- a/cmake/scripts/linux/ExtraTargets.cmake
 +++ b/cmake/scripts/linux/ExtraTargets.cmake
-@@ -37,4 +37,7 @@
-   # ToDo: turn this into a TARGET OBJECT. For now, a custum target doesnt play nice with
-   # our PLATFORM_GLOBAL_TARGET_DEPS usage in macros
+@@ -33,4 +33,7 @@ if("wayland" IN_LIST CORE_PLATFORM_NAME_LC)
+   add_custom_target(generate-wayland-extra-protocols DEPENDS wayland-extra-protocols.hpp)
+ 
    add_dependencies(lib${APP_NAME_LC} generate-wayland-extra-protocols)
 +  if(TARGET windowing_WAYLAND)
 +    add_dependencies(windowing_WAYLAND generate-wayland-extra-protocols)

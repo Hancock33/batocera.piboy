@@ -1,8 +1,8 @@
 diff --git a/xbmc/messaging/ApplicationMessenger.cpp b/xbmc/messaging/ApplicationMessenger.cpp
-index 562edde372..34082a62e2 100644
+index a10117007e..9694967b9d 100644
 --- a/xbmc/messaging/ApplicationMessenger.cpp
 +++ b/xbmc/messaging/ApplicationMessenger.cpp
-@@ -224,8 +224,25 @@ void CApplicationMessenger::ProcessMessages()
+@@ -226,8 +226,25 @@ void CApplicationMessenger::ProcessMessages()
    }
  }
  
