@@ -1,8 +1,0 @@
-config BR2_PACKAGE_LIBSPATIALAUDIO
-	bool "libspatialaudio"
-	select BR2_PACKAGE_LIBMYSOFA
-
-	help
-	  Ambisonic encoding, decoding and binaural rendering library.
-
-	  https://github.com/videolan/libspatialaudio
