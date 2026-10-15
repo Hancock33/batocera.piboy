@@ -34,14 +34,6 @@ msgid "0 (Default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "0 (Defaults Unlimited)"
-msgstr "0 (Mặc định không giới hạn)"
-
-msgctxt "game_options"
-msgid "0 (Disabled)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "0 (No Visual Effect)"
 msgstr "0 (Không có hiệu ứng trực quan)"
 
@@ -56,6 +48,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "0 degrees"
 msgstr "0 độ"
+
+msgctxt "game_options"
+msgid "0 ms (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "0% (Default)"
@@ -124,6 +120,10 @@ msgstr "1 MB"
 msgctxt "game_options"
 msgid "1 MHz (Underclock)"
 msgstr "1 MHz (Underclock)"
+
+msgctxt "game_options"
+msgid "1 ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1 second"
@@ -242,6 +242,10 @@ msgid "1.8x (22.50Mhz)"
 msgstr "1.8x (22.50Mhz)"
 
 msgctxt "game_options"
+msgid "1/16 Frame"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1/2 Frame"
 msgstr "Khung 1/2"
 
@@ -270,8 +274,8 @@ msgid "1/60 Frame"
 msgstr "Khung 1/60"
 
 msgctxt "game_options"
-msgid "1/8 Frame1"
-msgstr "1/8 khung1"
+msgid "1/8 Frame"
+msgstr ""
 
 msgctxt "game_options"
 msgid "10 MB"
@@ -280,6 +284,10 @@ msgstr "10 MB"
 msgctxt "game_options"
 msgid "10 MHz (Default)"
 msgstr "10 MHz (Mặc định)"
+
+msgctxt "game_options"
+msgid "10 ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "10 seconds"
@@ -294,12 +302,12 @@ msgid "100% (Default)"
 msgstr "100% (Mặc định)"
 
 msgctxt "game_options"
-msgid "100%(Default)"
+msgid "100% (Native)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "100%(native)"
-msgstr "100%(native)"
+msgid "100%(Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "10000 (Default)"
@@ -331,6 +339,10 @@ msgstr "1024kb"
 
 msgctxt "game_options"
 msgid "1024x768 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1024x768 (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -582,10 +594,6 @@ msgid "150% (Overclock)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "150Mhz (Overclock)"
-msgstr "150 MHz (ép xung)"
-
-msgctxt "game_options"
 msgid "150ms"
 msgstr ""
 
@@ -612,10 +620,6 @@ msgstr "15"
 msgctxt "game_options"
 msgid "15x Native (~6720p)"
 msgstr ""
-
-msgctxt "game_options"
-msgid "16 Frame"
-msgstr "Khung 16"
 
 msgctxt "game_options"
 msgid "16 MB"
@@ -692,6 +696,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "16:9 RENDERING RESOLUTION"
 msgstr "ĐỘ PHÂN GIẢI KẾT XUẤT 16:9"
+
+msgctxt "game_options"
+msgid "16:9 Widescreen"
+msgstr ""
 
 msgctxt "game_options"
 msgid "16MB"
@@ -804,6 +812,14 @@ msgstr "1x (Mặc định)"
 
 msgctxt "game_options"
 msgid "1x (Native 400x240)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1x (Native)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1x (native)"
 msgstr ""
 
 msgctxt "game_options"
@@ -921,10 +937,6 @@ msgstr "20 giây"
 msgctxt "game_options"
 msgid "200% (Maximum)"
 msgstr "200% (Tối đa)"
-
-msgctxt "game_options"
-msgid "200Mhz (Overclock)"
-msgstr "200MHz (ép xung)"
 
 msgctxt "game_options"
 msgid "200ms"
@@ -1100,6 +1112,10 @@ msgid "286, 6MHz (1320 cps)"
 msgstr "286, 6MHz (1320 cps)"
 
 msgctxt "game_options"
+msgid "2880x1620 (225%)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "28th"
 msgstr "28"
 
@@ -1154,10 +1170,6 @@ msgstr "2x (1440p/2160p)"
 msgctxt "game_options"
 msgid "2x (2K/1440p)"
 msgstr ""
-
-msgctxt "game_options"
-msgid "2x (Default)"
-msgstr "2x (Mặc định)"
 
 msgctxt "game_options"
 msgid "2x MSAA"
@@ -1310,10 +1322,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "320 x 200"
 msgstr "320 x 200"
-
-msgctxt "game_options"
-msgid "3200x1800 (225%)"
-msgstr ""
 
 msgctxt "game_options"
 msgid "32K RAM EXPANSION"
@@ -1612,10 +1620,6 @@ msgid "4X"
 msgstr "4X"
 
 msgctxt "game_options"
-msgid "4k"
-msgstr "4k"
-
-msgctxt "game_options"
 msgid "4th"
 msgstr "4"
 
@@ -1680,6 +1684,10 @@ msgid "5 Sideway Wiimote"
 msgstr "5 Sideway Wiimote"
 
 msgctxt "game_options"
+msgid "5 ms"
+msgstr ""
+
+msgctxt "game_options"
 msgid "5 seconds"
 msgstr "5 giây"
 
@@ -1720,10 +1728,6 @@ msgid "5.75x (5520x3128)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "50 (Default)"
-msgstr "50 (Mặc định)"
-
-msgctxt "game_options"
 msgid "50 FPS"
 msgstr ""
 
@@ -1758,10 +1762,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "5120MB"
 msgstr "5120MB"
-
-msgctxt "game_options"
-msgid "512KB"
-msgstr "512KB"
 
 msgctxt "game_options"
 msgid "512MB"
@@ -2088,6 +2088,14 @@ msgid "800 x 600"
 msgstr "800 x 600"
 
 msgctxt "game_options"
+msgid "8000 (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "8001 (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "800p"
 msgstr "800p"
 
@@ -2100,6 +2108,10 @@ msgid "8086/8088, 4.77MHz (315 cps)"
 msgstr "8086/8088, 4.77MHz (315 cps)"
 
 msgctxt "game_options"
+msgid "80MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "8192kB"
 msgstr "8192kb"
 
@@ -2110,10 +2122,6 @@ msgstr "8MB"
 msgctxt "game_options"
 msgid "8X"
 msgstr "8X"
-
-msgctxt "game_options"
-msgid "8k"
-msgstr "8k"
 
 msgctxt "game_options"
 msgid "8th"
@@ -2209,6 +2217,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"A paddle or RB/LB shift passes through neutral on the way to the next gear, "
+"as a real gearbox does."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "A small number of games will have compatibility problems with this enabled."
 msgstr ""
 
@@ -2255,10 +2269,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ACCURATE SHADER MUL"
 msgstr ""
-
-msgctxt "game_options"
-msgid "ACHIEVEMENTS"
-msgstr "THÀNH TÍCH"
 
 msgctxt "game_options"
 msgid "ACSI"
@@ -2645,6 +2655,12 @@ msgid "Accurate cpu and blitter timings."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Accurate is the slowest but most exact. Good and Fast are quicker but break "
+"games that change colours or sprites mid-frame."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Acorn Analogue Joysticks"
 msgstr "Acorn Analogue Joysticks"
 
@@ -2772,6 +2788,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Adjust frame delay on the fly, lowering it when frames would drop. With "
+"frame delay at 0, it targets 3/4 of the frame time."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Adjust mixing of CD audio. In MSU-MD, cartridge-sourced sound effects are "
 "not affected."
 msgstr ""
@@ -2790,12 +2812,6 @@ msgctxt "game_options"
 msgid ""
 "Adjust the CPU power frequency profile whilst in-game. Some systems will "
 "benefit from improved voltage handling."
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Adjust the CPU power profile whist on battery. Overwrites previous Power "
-"Mode(s)."
 msgstr ""
 
 msgctxt "game_options"
@@ -2975,10 +2991,6 @@ msgstr "Cho phép người dùng có thể thay thế họa tiết."
 msgctxt "game_options"
 msgid "Allows you to limit FPS to 60."
 msgstr "Cho phép bạn giới hạn FPS ở mức 60."
-
-msgctxt "game_options"
-msgid "Alone in the Dark"
-msgstr "Alone in the Dark"
 
 msgctxt "keys_files"
 msgid "Alt. Attack"
@@ -3359,10 +3371,6 @@ msgid "Asia"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Async"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Async Shader Recompiler"
 msgstr ""
 
@@ -3489,7 +3497,7 @@ msgid "Autodetect (by game name tag)"
 msgstr "Tự động phát hiện (theo thẻ tên trò chơi)"
 
 msgctxt "game_options"
-msgid "Autofire repeat delay for User 1. Core default (1)."
+msgid "Autofire repeat delay for User 1. Core default (2)."
 msgstr ""
 
 msgctxt "keys_files"
@@ -3511,14 +3519,6 @@ msgstr "Tỷ lệ tự động"
 msgctxt "game_options"
 msgid "Automatic switches region per file path tags"
 msgstr "Tự động chuyển vùng trên mỗi thẻ đường dẫn tệp"
-
-msgctxt "game_options"
-msgid ""
-"Automatically decrease frame delay temporarily to prevent frame drops. Can "
-"introduce stuttering."
-msgstr ""
-"Tự động giảm độ trễ khung hình tạm thời để ngăn chặn tình trạng rớt khung "
-"hình. Có thể giới thiệu nói lắp."
 
 msgctxt "game_options"
 msgid "Automatically loads and applies cheats on game start."
@@ -3788,6 +3788,10 @@ msgid "Balanced"
 msgstr "Cân bằng"
 
 msgctxt "game_options"
+msgid "Balanced Performance"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Bally Professional Arcade cartridges"
 msgstr "Bally Professional Arcade cartridges"
 
@@ -3954,6 +3958,14 @@ msgstr "Blue - Shiny Sky Blue"
 msgctxt "game_options"
 msgid "Blue - Slime Blue"
 msgstr "Blue - Slime Blue"
+
+msgctxt "game_options"
+msgid "Blue/Brown 1"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Blue/Brown 2"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Blur"
@@ -4198,6 +4210,12 @@ msgid "CABINET OUTPUTS"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"CABINET gives you a top-down view on the playfield. For cabinet use or multi-"
+"window on desktop."
+msgstr ""
+
+msgctxt "game_options"
 msgid "CABLE"
 msgstr "CÁP"
 
@@ -4364,10 +4382,6 @@ msgstr "LOẠI CONSOLE"
 msgctxt "game_options"
 msgid "CONTROL CHOICE"
 msgstr "KIỂM SOÁT LỰA CHỌN"
-
-msgctxt "game_options"
-msgid "CONTROL MAPPING"
-msgstr "KIỂM SOÁT ÁNH XẠ NÚT BẤM"
 
 msgctxt "game_options"
 msgid "CONTROLLER 1"
@@ -4579,6 +4593,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"CPU power profile whilst on battery, replacing the global Power Mode. A "
+"system or game Power Mode still takes priority."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "CPU-GPU latency limit. Lower values improve latency but may reduce "
 "performance."
 msgstr ""
@@ -4670,6 +4690,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "CST6CDT"
 msgstr "CST6CDT"
+
+msgctxt "game_options"
+msgid "CTIA"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CUBIC AUDIO INTERPOLATION"
@@ -4780,10 +4804,6 @@ msgid "Camputers Lynx floppies"
 msgstr "Camputers Lynx floppies"
 
 msgctxt "game_options"
-msgid "Can avoid flashing screen issues. Significant performance cost."
-msgstr "Có thể tránh màn hình nhấp nháy. Giảm đáng kể hiệu năng."
-
-msgctxt "game_options"
 msgid "Can be used to simulate colors of particular displays."
 msgstr "Có thể được sử dụng để mô phỏng màu sắc của màn hình cụ thể."
 
@@ -4806,19 +4826,11 @@ msgid "Can fix slowdown. Only works on some drivers."
 msgstr "Có thể giảm làm chậm. Chỉ chạy trên một số trình điều khiển."
 
 msgctxt "game_options"
-msgid "Can improve frame rates and responsiveness."
-msgstr "Có thể cải thiện tốc độ khung hình và khả năng phản hồi."
-
-msgctxt "game_options"
 msgid ""
 "Can improve video performance. Do not use with ActionMax games or scanlines."
 msgstr ""
 "Có thể cải thiện hiệu suất video. Không sử dụng với các trò chơi ActionMax "
 "hoặc scanlines."
-
-msgctxt "game_options"
-msgid "Can increase performance for games that stress the CPU."
-msgstr "Có thể tăng hiệu suất cho game nhưng gây áp lực cho CPU."
 
 msgctxt "game_options"
 msgid "Can prevent audio skips on button presses when using run-ahead."
@@ -4845,10 +4857,6 @@ msgstr "Người Pháp Canada"
 msgctxt "game_options"
 msgid "Cap maximum framerate to prevent physics acceleration or stutter."
 msgstr ""
-
-msgctxt "game_options"
-msgid "Capcom VS games Expand Screen Width"
-msgstr "Mở rộng chiều rộng màn hình cho các game đối đầu của Capcom"
 
 msgctxt "game_options"
 msgid "Card"
@@ -5111,6 +5119,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Choose the Dreamcast console region."
 msgstr "Chọn khu vực bảng điều khiển Dreamcast."
+
+msgctxt "game_options"
+msgid "Choose the NDS handheld version"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
@@ -5393,6 +5405,11 @@ msgid "Choose your preferred renderer."
 msgstr "Chọn trình kết xuất ưa thích của bạn."
 
 msgctxt "game_options"
+msgid ""
+"Choose your preferred renderer. Enhanced OpenGL is only available on x86_64."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Choose your preferred video filter."
 msgstr "Chọn bộ lọc video ưa thích của bạn."
 
@@ -5403,10 +5420,6 @@ msgstr "Chọn chất lượng video ưa thích của bạn."
 msgctxt "game_options"
 msgid "Choose your render resolution (Requires personal redream.key file)."
 msgstr "Chọn độ phân giải kết xuất của bạn (Yêu cầu tệp redream.key cá nhân)."
-
-msgctxt "game_options"
-msgid "Chrono Chross Odd/Even Bit Hack"
-msgstr "Chrono Chross Odd/Even Bit Hack"
 
 msgctxt "game_options"
 msgid "Classic (Default)"
@@ -5463,10 +5476,6 @@ msgstr "Color"
 msgctxt "game_options"
 msgid "Color Computer"
 msgstr "Máy tính màu"
-
-msgctxt "game_options"
-msgid "Color Computer 2"
-msgstr "Máy tính màu 2"
 
 msgctxt "game_options"
 msgid "Color Computer 2B"
@@ -5533,11 +5542,11 @@ msgid "Composite (Blargg)"
 msgstr "Tổng hợp (Blargg)"
 
 msgctxt "game_options"
-msgid "Composite (Color)"
+msgid "Composite (Blue-Red)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Composite (Mono)"
+msgid "Composite (Red-Blue)"
 msgstr ""
 
 msgctxt "game_options"
@@ -5631,6 +5640,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Cool"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Copy to texture"
 msgstr ""
 
@@ -5657,10 +5670,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Costa Rica"
 msgstr "Costa Rica"
-
-msgctxt "game_options"
-msgid "Crash-n Burn"
-msgstr "Crash-n Burn"
 
 msgctxt "game_options"
 msgid "Creatronic Mega Duck cartridges"
@@ -5764,10 +5773,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Cyan"
 msgstr ""
-
-msgctxt "game_options"
-msgid "Cycle Timing Check"
-msgstr "Chu kỳ kiểm tra"
 
 msgctxt "game_options"
 msgid "Cycle-exact"
@@ -5914,6 +5919,10 @@ msgid "DISABLE VERTEX CACHE"
 msgstr "DISABLE VERTEX CACHE"
 
 msgctxt "game_options"
+msgid "DISABLE WEAPON WAGGLE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DISABLE WHITE FLASHES"
 msgstr ""
 
@@ -5950,14 +5959,6 @@ msgid "DMA Only (Slightly Faster)"
 msgstr "Chỉ DMA (nhanh hơn một chút)"
 
 msgctxt "game_options"
-msgid "DMD SIZE"
-msgstr "KÍCH THƯỚC DMD"
-
-msgctxt "game_options"
-msgid "DMD window ratio"
-msgstr "Tỷ lệ cửa sổ DMD"
-
-msgctxt "game_options"
 msgid "DNS OVERRIDE"
 msgstr "GHI ĐÈ DNS"
 
@@ -5972,10 +5973,6 @@ msgstr "DOLBY PRO LOGIC II"
 msgctxt "game_options"
 msgid "DOOM"
 msgstr "DOOM"
-
-msgctxt "game_options"
-msgid "DOOM RES HACK"
-msgstr "DOOM RES HACK"
 
 msgctxt "game_options"
 msgid "DOUBLE"
@@ -6018,8 +6015,8 @@ msgid "DSi"
 msgstr "DSi"
 
 msgctxt "game_options"
-msgid "DSi (Experiemental)"
-msgstr "DSi (Thử nghiệm)"
+msgid "DSi (Experimental)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DSi (experiemental)"
@@ -6080,10 +6077,6 @@ msgstr "Đan Mạch (dk)"
 msgctxt "game_options"
 msgid "Dark Blue"
 msgstr "Xanh da trời tối"
-
-msgctxt "game_options"
-msgid "Dark Forces Flat Tex Triangles Fix"
-msgstr "Dark Forces Flat Tex Triangles Fix"
 
 msgctxt "game_options"
 msgid "Dark Green"
@@ -6147,11 +6140,9 @@ msgstr "Mặc định theo mô hình"
 
 msgctxt "game_options"
 msgid ""
-"Default uses SDL2, otherwise enable controller specific capabilities. Sony "
-"DS won't work with clone controllers."
+"Default uses SDL, otherwise enable controller specific capabilities. Sony DS "
+"won't work with clone controllers."
 msgstr ""
-"Mặc định sử dụng SDL2, nếu không thì kích hoạt các khả năng cụ thể của bộ "
-"điều khiển. Sony DS sẽ không hoạt động với bộ điều khiển nhân bản."
 
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
@@ -6211,10 +6202,6 @@ msgid "Deutsch"
 msgstr "Tiếng Đức"
 
 msgctxt "game_options"
-msgid "Diablo Music Fix"
-msgstr "Sửa lỗi âm nhạc Diablo"
-
-msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 cassettes"
 msgstr "Dick Smith Electronics VZ-200/300 cassettes"
 
@@ -6255,20 +6242,20 @@ msgid "Digital Up"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Dinopark Tycoon"
-msgstr "Dinopark Tycoon"
-
-msgctxt "game_options"
 msgid "Disable"
 msgstr "Vô hiệu hóa"
+
+msgctxt "game_options"
+msgid "Disable (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Disable Queries"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Disable all input processing (view-only mode)."
-msgstr "Tắt tất cả xử lý đầu vào (chế độ chỉ xem)."
+msgid "Disable all input processing (view-only mode). Moonlight Embedded only."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -6299,8 +6286,8 @@ msgid "Disabled"
 msgstr "Tắt"
 
 msgctxt "game_options"
-msgid "Disabled (Beatle Interpreter)"
-msgstr "Vô hiệu hóa (trình biên dịch Beatle)"
+msgid "Disabled (Beetle Interpreter)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Disabled (Default)"
@@ -6362,6 +6349,10 @@ msgid "Display Rate"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Display Refresh Rate (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Display Resolution"
 msgstr ""
 
@@ -6412,7 +6403,7 @@ msgid "DotMatrix"
 msgstr "DotMatrix"
 
 msgctxt "game_options"
-msgid "Double Buffering"
+msgid "Double Buffering (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -6481,6 +6472,12 @@ msgctxt "game_options"
 msgid ""
 "Draw the emulator's crosshairs. By default they show only for guns that need "
 "them."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Draw the scenery to the edge of the course instead of the arcade's short "
+"range. Daytona USA only."
 msgstr ""
 
 msgctxt "game_options"
@@ -6613,10 +6610,6 @@ msgid "ELECTRON MODEL"
 msgstr "ELECTRON MODEL"
 
 msgctxt "game_options"
-msgid "EMULATE DVD LOADING"
-msgstr ""
-
-msgctxt "game_options"
 msgid "EMULATE PCG-8100"
 msgstr "MÔ PHỎNG PCG-8100"
 
@@ -6709,10 +6702,6 @@ msgid "ENABLE NOTIFICATIONS"
 msgstr "BẬT THÔNG BÁO"
 
 msgctxt "game_options"
-msgid "ENABLE NTFS MODE"
-msgstr "BẬT CHẾ ĐỘ NTFS"
-
-msgctxt "game_options"
 msgid "ENABLE NVAPI"
 msgstr "BẬT NVAPI"
 
@@ -6773,10 +6762,6 @@ msgid "EST5EDT"
 msgstr "EST5EDT"
 
 msgctxt "game_options"
-msgid "ESYNC"
-msgstr "ESYNC"
-
-msgctxt "game_options"
 msgid "EVDEV (Default)"
 msgstr "EVDEV (Mặc định)"
 
@@ -6787,6 +6772,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "EXPOSE MODE"
 msgstr "EXPOSE MODE"
+
+msgctxt "game_options"
+msgid "EXTENDED DRAW DISTANCE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "EXTENDED SCREEN"
@@ -6851,11 +6840,8 @@ msgid "Emulate Chroma 81 interface (colorization)."
 msgstr "Giả lập giao diện Chroma 81 (tô màu)."
 
 msgctxt "game_options"
-msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+msgid "Emulate NTSC quirks to show more colours in hi-res mode."
 msgstr ""
-"Mô phỏng các quirks NTSC để hiển thị nhiều màu sắc hơn ở chế độ độ phân giải "
-"cao.Mô phỏng các đặc điểm của NTSC để hiển thị nhiều màu hơn ở chế độ độ "
-"phân giải cao."
 
 msgctxt "game_options"
 msgid ""
@@ -6888,12 +6874,24 @@ msgstr "Mô phỏng con trỏ Wiimote bằng chuột."
 
 msgctxt "game_options"
 msgid ""
+"Emulate the card reader in Virtua Tennis 3, Virtua Fighter 5, Initial D 4/5 "
+"and R-Tuned."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Emulate the card reader of Ghost Squad, Gundam and the Maximum Tune games. "
 "Cards are kept in saves/chihiro/cards."
 msgstr ""
 
 msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Emulate the drive board for force feedback in Hummer. OutRun 2, R-Tuned and "
+"Sega Race TV always use it."
 msgstr ""
 
 msgctxt "game_options"
@@ -6985,8 +6983,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enable QOS settings to optimize for internet or local network."
-msgstr "Bật cài đặt QOS để tối ưu hóa cho internet hoặc mạng cục bộ."
+msgid ""
+"Enable QOS settings to optimise for internet or local network. Moonlight "
+"Embedded only."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enable Robust Contrast-Adaptive Sharpening."
@@ -7049,19 +7049,7 @@ msgid "Enable debug logging to assist with troubleshooting issues."
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enable for Doom to run at its correct resolution."
-msgstr "Kích hoạt để Doom chạy ở độ phân giải chính xác."
-
-msgctxt "game_options"
 msgid "Enable for all scenes"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Enable for more fluidity, disable if screen tearing."
-msgstr "Kích hoạt để mượt hơn, tắt nếu bị xé hình."
-
-msgctxt "game_options"
-msgid "Enable force feedback (rumble) for supported games."
 msgstr ""
 
 msgctxt "game_options"
@@ -7115,10 +7103,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Cho phép khởi chạy cài đặt WHDLoad được cài đặt sẵn."
-
-msgctxt "game_options"
-msgid "Enable lens glare effects in OutRun 2."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Enable lightsaber auto-camera."
@@ -7265,14 +7249,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Enable this mode if you have issue for run your game on NTFS storage (by "
-"default is better to use LinuxFS)."
-msgstr ""
-"Bật chế độ này nếu bạn gặp sự cố khi chạy trò chơi trên bộ lưu trữ NTFS "
-"(theo mặc định, tốt hơn là sử dụng LinuxFS)."
-
-msgctxt "game_options"
-msgid ""
 "Enable this to limit the FPS in games that are uncapped, such as OutRun 2."
 msgstr ""
 
@@ -7286,10 +7262,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable to display if your BIOS haas known problems."
 msgstr "Cho phép hiển thị nếu BIOS của bạn gặp sự cố đã biết."
-
-msgctxt "game_options"
-msgid "Enable to emulate the card reader in Virtua Tennis 3, ID4/5 or R-Tuned."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Enable to improve bluriness."
@@ -7510,7 +7482,8 @@ msgstr "Tăng cường. Chỉ hoạt động với tỷ lệ 16/9 và bezels b�
 msgctxt "game_options"
 msgid ""
 "Enhancement. Pixel-art scaling filter applied to the low-resolution game "
-"image before it's stretched to fill the render resolution."
+"image before it's stretched to fill the render resolution. Scale2x needs an "
+"integer scale factor of 2x or more."
 msgstr ""
 
 msgctxt "game_options"
@@ -7536,6 +7509,10 @@ msgid "Enhancement. Reduces system slowdown. Causes issues in some games."
 msgstr ""
 "Sự nâng cao.Giảm chậm lại hệ thống.Gây ra vấn đề trong một số trò chơi.Tăng "
 "cường. Giảm chậm hệ thống. Có thể gây ra sự cố trong một số trò chơi."
+
+msgctxt "game_options"
+msgid "Enhancement. Reduces wobbly polygons. Hardware renderer only."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprite per line limit."
@@ -7570,12 +7547,24 @@ msgid "Enhancement. Removes disc loading."
 msgstr "Tăng cường. Giảm thời gian tải dữ liệu từ ổ đĩa."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Render the rotating background (RBG) layer at a higher "
+"resolution. Demanding on weaker devices."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
 msgstr "Tăng cường. Bỏ qua có thể làm hỏng một số trò chơi."
 
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr "Tăng cường. Làm mịn các cạnh lởm chởm trên đa giác đối tượng 3D."
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Smooth out jagged edges on 3D object polygons. SSAA looks "
+"better but has a higher performance cost."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D objects polygons."
@@ -7666,10 +7655,6 @@ msgstr "Thoát trình giả lập"
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "Thoát khỏi trình giả lập"
-
-msgctxt "game_options"
-msgid "Export"
-msgstr "Export"
 
 msgctxt "game_options"
 msgid "Export (Default)"
@@ -7840,10 +7825,6 @@ msgid "FORCE NTSC TIMINGS ON PAL"
 msgstr "BẮT BUỘC THỜI GIAN NTSC TRÊN PAL"
 
 msgctxt "game_options"
-msgid "FORCE WINDOWS CE MODE"
-msgstr "BẮT BUỘC CHẠY WINDOWN CE"
-
-msgctxt "game_options"
 msgid "FOV VERTICAL"
 msgstr ""
 
@@ -7936,10 +7917,6 @@ msgid "FSR UPSCALING"
 msgstr ""
 
 msgctxt "game_options"
-msgid "FSYNC"
-msgstr "FSYNC"
-
-msgctxt "game_options"
 msgid "FULL ENTITY LIGHTING"
 msgstr ""
 
@@ -7952,10 +7929,6 @@ msgid "FULL SYNC AT GX2DRAWDONE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "FULLSCREEN"
-msgstr "TOÀN MÀN HÌNH"
-
-msgctxt "game_options"
 msgid "FULLSCREEN HD PIXEL PERFECT"
 msgstr ""
 
@@ -7966,14 +7939,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "FULLSCREEN SCALING"
 msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"FULLSCREEN gives you a top-down view on the playfield. For cabinet use or "
-"multi-window on desktop."
-msgstr ""
-"TOÀN MÀN HÌNH cung cấp cho bạn cái nhìn từ trên xuống trên sân chơi. Để sử "
-"dụng trong tủ hoặc nhiều cửa sổ trên máy tính để bàn."
 
 msgctxt "game_options"
 msgid "FXAA"
@@ -8138,6 +8103,12 @@ msgid "Fire the gun's recoil motor on each shot, for guns that have one."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Firmware fan curve and power limits preset. Outside Custom the firmware sets "
+"the power limits and the TDP option has no effect."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Firmware menu"
 msgstr ""
 
@@ -8148,6 +8119,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
 msgstr "Phù hợp tỷ lệ khung hình 4:3"
+
+msgctxt "game_options"
+msgid "Fit To Rendering Resolution"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Fit resolution scale"
@@ -8191,6 +8166,12 @@ msgstr ""
 "Sửa lỗi xé màn hình. FIFO (Vsync) không làm rơi khung hình. FIFO Relaxed cho "
 "phép bị xé khi nó phục hồi sau khi bị chậm lại. Hộp thư có thể có độ trễ "
 "thấp hơn nhưng có thể làm rớt khung hình."
+
+msgctxt "game_options"
+msgid ""
+"Fix screen tearing. Only applies to OpenGL ES boards, PC builds always use "
+"vsync."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -8413,6 +8394,10 @@ msgid "Forces strict adherence to the PS3 RSX hardware specifications."
 msgstr ""
 
 msgctxt "game_options"
+msgid "Frame Pacing"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Frame presentation method. Mailbox is low latency, VSync prevents tearing, "
 "Immediate may tear."
@@ -8507,8 +8492,8 @@ msgid "Full (Hash Cache)"
 msgstr "TOÀN BỘ (bộ nhớ cache băm)"
 
 msgctxt "game_options"
-msgid "Full (PS2 Mipmaps)"
-msgstr "Đầy đủ (MIPMAPS PS2)"
+msgid "Full (PS2 Mipmaps) (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Full (Slow)"
@@ -8831,6 +8816,10 @@ msgid "GLOW STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
+msgid "GLideN64"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (Nhanh nhất)"
 
@@ -8927,6 +8916,10 @@ msgid "GT Force"
 msgstr "GT Force"
 
 msgctxt "game_options"
+msgid "GTIA"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GUN RECOIL"
 msgstr ""
 
@@ -8947,6 +8940,10 @@ msgid "Game Boy Color"
 msgstr "Game Boy Color"
 
 msgctxt "game_options"
+msgid "Game Default (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Game default"
 msgstr "Trò chơi mặc định"
 
@@ -8955,8 +8952,8 @@ msgid "Game directly"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Game info/art"
-msgstr "Thông tin trò chơi/tranh vẽ"
+msgid "Game info"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Game's default"
@@ -9020,8 +9017,8 @@ msgid "Gaussian"
 msgstr "Gaussian"
 
 msgctxt "game_options"
-msgid "General MIDI SoundFont (Default)"
-msgstr "General MIDI SoundFont (Mặc định)"
+msgid "General MIDI SoundFont"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Generic Keyboard Binds"
@@ -9105,6 +9102,10 @@ msgstr "Gold - Million Live Gold"
 msgctxt "game_options"
 msgid "Gold - Odyssey Gold"
 msgstr "Gold - Odyssey Gold"
+
+msgctxt "game_options"
+msgid "Good"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Graphic Display Controller model."
@@ -9283,8 +9284,8 @@ msgid "HLE (per-pixel)"
 msgstr "HLE (per-pixel)"
 
 msgctxt "game_options"
-msgid "HLE (per-strip)"
-msgstr "HLE (per-strip)"
+msgid "HLE (per-strip) (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "HOST ADDRESS"
@@ -9297,10 +9298,6 @@ msgstr "HQ (bilinear filter)"
 msgctxt "game_options"
 msgid "HQ MODE"
 msgstr "HQ MODE"
-
-msgctxt "game_options"
-msgid "HQX"
-msgstr ""
 
 msgctxt "game_options"
 msgid "HST"
@@ -9448,10 +9445,6 @@ msgid "High Performance"
 msgstr "Hiệu năng cao"
 
 msgctxt "game_options"
-msgid "High-Resolution Keyboard, which is larger and might be easier to see."
-msgstr ""
-
-msgctxt "game_options"
 msgid "High-end Computer"
 msgstr "Máy tính cao cấp"
 
@@ -9533,6 +9526,12 @@ msgid "How the window space is distributed between the screens."
 msgstr "Cách phân bổ không gian cửa sổ giữa các màn hình."
 
 msgctxt "game_options"
+msgid ""
+"How transparent polygons are sorted. Per-pixel is the most accurate and the "
+"slowest."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Hungarian"
 msgstr "Hungary"
 
@@ -9595,6 +9594,14 @@ msgstr "CẢI THIỆN LƯỚI"
 msgctxt "game_options"
 msgid "IMPROVED POLYGON SPLITTING"
 msgstr "CẢI THIỆN TÁCH ĐA GIÁC"
+
+msgctxt "game_options"
+msgid "INDY BOARD FORCE DEADBAND"
+msgstr ""
+
+msgctxt "game_options"
+msgid "INDY BOARD FORCE FULL POWER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INFRASTRUCTURE DNS SERVER"
@@ -9709,10 +9716,6 @@ msgid "Improve performance if VSync is disabled and using Vulkan."
 msgstr "Cải thiện hiệu suất nếu VSync bị tắt và sử dụng Vulkan."
 
 msgctxt "game_options"
-msgid "Improve speed, at a minor cost of accuracy."
-msgstr "Cải thiện tốc độ, giảm nhẹ độ chính xác."
-
-msgctxt "game_options"
 msgid ""
 "Improves accuracy and fixes game-specific glitches at the cost of some "
 "performance."
@@ -9811,7 +9814,25 @@ msgid "Indonesian"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Indy 500, Touring Car, Over Rev and Super GT 24h. Drive board motor power, "
+"out of 63, below which the wheel feels no force. Raise it if small forces "
+"buzz."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Indy 500, Touring Car, Over Rev and Super GT 24h. Drive board motor power, "
+"out of 63, that gives the wheel's full force. Lower it for stronger forces "
+"sooner."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Infinite"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Initial orientation of the game & controls"
 msgstr ""
 
 msgctxt "game_options"
@@ -9879,10 +9900,6 @@ msgstr "Trình biên dịch chính xác nhất nhưng chậm nhất."
 msgctxt "game_options"
 msgid "Interton VC 4000 cartridges"
 msgstr "Interton VC 4000 cartridges"
-
-msgctxt "game_options"
-msgid "InuYasha Sengoku Battle Fix"
-msgstr "InuYasha Sengoku Battle Fix"
 
 msgctxt "keys_files"
 msgid "Inventory"
@@ -10007,10 +10024,6 @@ msgstr "Tháng 1"
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Nhật Bản"
-
-msgctxt "game_options"
-msgid "Japan (Default)"
-msgstr "Nhật Bản (Mặc định)"
 
 msgctxt "game_options"
 msgid "Japanese"
@@ -10283,10 +10296,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "LARGE SCREEN PROPORTION"
-msgstr ""
-
-msgctxt "game_options"
-msgid "LARGER KEYBOARD"
 msgstr ""
 
 msgctxt "game_options"
@@ -10614,7 +10623,8 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Local LAN multiplayer without internet. Host: this machine runs the Ad-Hoc "
-"server. Client: connects to the host on the same network."
+"server. Other machines set ADHOC SERVER to Manual and enter the host IP in "
+"PPSSPP."
 msgstr ""
 
 msgctxt "game_options"
@@ -10632,6 +10642,10 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "Nút bắn Lockbar"
+
+msgctxt "game_options"
+msgid "Long"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
@@ -10666,6 +10680,10 @@ msgid "Low 360p"
 msgstr "Thấp 360p"
 
 msgctxt "game_options"
+msgid "Low Power"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Low-end Computer"
 msgstr "Máy tính cấp thấp"
 
@@ -10684,10 +10702,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Lowest"
 msgstr ""
-
-msgctxt "game_options"
-msgid "Lunar Ignore Brightness Color Fix"
-msgstr "Lunar Ignore Brightness Color Fix"
 
 msgctxt "game_options"
 msgid "Luxembourg"
@@ -10875,6 +10889,10 @@ msgstr "TỐC ĐỘ CHUỘT"
 
 msgctxt "game_options"
 msgid "MP2K HLE AUDIO"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MSAA"
 msgstr ""
 
 msgctxt "game_options"
@@ -11138,6 +11156,10 @@ msgid "Max Performance"
 msgstr "Hiệu suất tối đa"
 
 msgctxt "game_options"
+msgid "Max Power"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Max Saving"
 msgstr ""
 
@@ -11287,12 +11309,20 @@ msgid "Megadrive (8 Buttons)"
 msgstr "Megadrive (8 nút)"
 
 msgctxt "game_options"
+msgid "Memory + CPU (Buggy)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Memory Only"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Memory Pak"
 msgstr "Bộ nhớ Pak"
 
 msgctxt "game_options"
 msgid ""
-"Memory mapping improved VUlkna performance. Reduces memory usage and fixes "
+"Memory mapping improves Vulkan performance. Reduces memory usage and fixes "
 "many graphical issues. However, it may be unstable on some GPUs."
 msgstr ""
 
@@ -11339,10 +11369,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Mexico"
 msgstr "Mexico"
-
-msgctxt "game_options"
-msgid "Microcosm"
-msgstr "Microcosm"
 
 msgctxt "game_options"
 msgid "Minimal"
@@ -11435,10 +11461,6 @@ msgstr "Ma-rốc"
 msgctxt "game_options"
 msgid "Most games use port 2, some use port 1."
 msgstr "Đa số game sử dụng cổng 2, một số sử dụng cổng 1."
-
-msgctxt "game_options"
-msgid "Mount a floppy for user data, creates if needed"
-msgstr "Gắn đĩa mềm cho dữ liệu người dùng, tạo nếu cần"
 
 msgctxt "game_options"
 msgid "Mouse"
@@ -11564,6 +11586,12 @@ msgid "Multisample anti-aliasing. Costs fill rate, so drop it on weaker GPUs."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Multisample anti-aliasing. Reduces geometry aliasing at the cost of "
+"performance and GPU memory."
+msgstr ""
+
+msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
 
@@ -11613,6 +11641,10 @@ msgstr "LOẠI MẠNG"
 
 msgctxt "game_options"
 msgid "NETWORKING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "NEUTRAL BETWEEN GEARS"
 msgstr ""
 
 msgctxt "game_options"
@@ -11781,10 +11813,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
 msgstr "Native (PS2)(Mặc định)"
-
-msgctxt "game_options"
-msgid "Native Buffer"
-msgstr ""
 
 msgctxt "game_options"
 msgid "Navajo"
@@ -12087,10 +12115,6 @@ msgid "ORIGINAL FONTS"
 msgstr ""
 
 msgctxt "game_options"
-msgid "ORIGINAL HINTS"
-msgstr ""
-
-msgctxt "game_options"
 msgid "ORIGINAL LOD DISTANCES"
 msgstr ""
 
@@ -12141,10 +12165,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "OUTPUTS USE LINE FEED"
 msgstr ""
-
-msgctxt "game_options"
-msgid "OUTRUN LENS GLARE"
-msgstr "OUTRUN LENS GLARE"
 
 msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
@@ -12203,11 +12223,9 @@ msgid "Off at Start"
 msgstr "Tắt khi bắt đầu"
 
 msgctxt "game_options"
-msgid "Off casts shadows from objects the PS2 could not afford to."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Off enables the extra gameplay hints added by the PC port."
+msgid ""
+"Off casts shadows from objects the PS2 could not afford to. Jak II and Jak 3 "
+"only."
 msgstr ""
 
 msgctxt "game_options"
@@ -12316,8 +12334,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
-msgstr "Chỉ áp dụng khi sử dụng Parallel-RDP làm Plugin RDP đã chọn."
+msgid ""
+"Only applies when using ParaLLEl-RDP as the chosen RDP Plugin, which is only "
+"available on x86_64."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Only for Mode 7 scenes"
@@ -12398,7 +12418,7 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL với Shader"
 
 msgctxt "game_options"
-msgid "OpenGLES"
+msgid "OpenGLES, OpenGL on x86"
 msgstr ""
 
 msgctxt "game_options"
@@ -12446,8 +12466,10 @@ msgid "Original screen positions"
 msgstr "Vị trí màn hình gốc"
 
 msgctxt "game_options"
-msgid "Output rotation independent of xrandr or framebuffer settings."
-msgstr "Output rotation independent of xrandr or framebuffer settings."
+msgid ""
+"Output rotation independent of xrandr or framebuffer settings. Moonlight "
+"Embedded only."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Overclock emulated 3DS CPU to improve framerates or run 60 FPS mods."
@@ -12582,10 +12604,6 @@ msgid "PAUSE SCREEN DISPLAY"
 msgstr "MÀN HÌNH TẠM DỪNG"
 
 msgctxt "game_options"
-msgid "PBA"
-msgstr "PBA"
-
-msgctxt "game_options"
 msgid "PC MODEL"
 msgstr "MÔ HÌNH PC"
 
@@ -12700,6 +12718,14 @@ msgstr "HACK HIỆU SUẤT"
 msgctxt "game_options"
 msgid "PERFORMANCE PRESETS"
 msgstr "CÀI ĐẶT HIỆU SUẤT"
+
+msgctxt "game_options"
+msgid "PGXP DEPTH BUFFER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "PGXP OPERATION MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PHOSPHOR BLEND"
@@ -12889,16 +12915,24 @@ msgid "Panama"
 msgstr "Panama"
 
 msgctxt "game_options"
-msgid "Pandemonium 2 Lazy Screen Update Fix"
-msgstr "Pandemonium 2 Lazy Screen Update Fix"
-
-msgctxt "game_options"
 msgid "ParaLLEl (Best LLE)"
 msgstr "ParaLLEl (LLE Tốt nhất)"
 
 msgctxt "game_options"
+msgid ""
+"ParaLLEl is only available on x86 and the Raspberry Pi 5, CXD4 on x86_64 and "
+"the Raspberry Pi 5."
+msgstr ""
+
+msgctxt "game_options"
 msgid "ParaLLEl-RDP"
 msgstr "ParaLLEl-RDP"
+
+msgctxt "game_options"
+msgid ""
+"ParaLLEl-RDP is only available on x86_64. Angrylion is only available on x86 "
+"and the Raspberry Pi 5."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Paraguay"
@@ -12907,10 +12941,6 @@ msgstr "Paraguay"
 msgctxt "game_options"
 msgid "Parallel"
 msgstr "Song song"
-
-msgctxt "game_options"
-msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
-msgstr "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 
 msgctxt "game_options"
 msgid ""
@@ -13009,6 +13039,18 @@ msgstr "Mỗi tam giác (Mặc định)"
 msgctxt "game_options"
 msgid "Per pixel is the most accurate, but also the most demanding."
 msgstr "Mỗi pixel là chính xác nhất nhưng cũng đòi hỏi khắt khe nhất."
+
+msgctxt "game_options"
+msgid "Per-Pixel (Accurate)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Per-Strip (Fast)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Per-Triangle (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Per-game"
@@ -13201,10 +13243,6 @@ msgid "Portugal"
 msgstr "Bồ Đào Nha"
 
 msgctxt "game_options"
-msgid "Portugese"
-msgstr "Bồ Đào Nha"
-
-msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Bồ Đào Nha"
 
@@ -13263,6 +13301,10 @@ msgid "Power Saver"
 msgstr "Tiết kiệm điện"
 
 msgctxt "game_options"
+msgid "Precise"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Precise (Default)"
 msgstr ""
 
@@ -13302,6 +13344,10 @@ msgctxt "game_options"
 msgid ""
 "Prevents bright white transitions during scene changes in games like Daytona "
 "2 or Scud Race."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Prevents screen tearing. Disable if it costs too much performance."
 msgstr ""
 
 msgctxt "keys_files"
@@ -13426,6 +13472,10 @@ msgstr "Tải nhanh"
 
 msgctxt "game_options"
 msgid "Quickload (.cmd)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Quiet"
 msgstr ""
 
 msgctxt "game_options"
@@ -13585,6 +13635,10 @@ msgid "RENDERING RESOLUTION"
 msgstr "RENDERING RESOLUTION"
 
 msgctxt "game_options"
+msgid "RENDERING RESOLUTION (GLIDEN64 ONLY)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RESIZE TATTOO"
 msgstr "THAY ĐỔI KÍCH THƯỚC HÌNH XĂM"
 
@@ -13621,8 +13675,8 @@ msgid "RGB (crisp image)"
 msgstr "RGB (hình ảnh sắc nét)"
 
 msgctxt "game_options"
-msgid "RGB Color Low/Medium-Resolution"
-msgstr ""
+msgid "RGB Colour Low/Medium-Resolution"
+msgstr "Màu RGB Độ phân giải thấp/trung bình"
 
 msgctxt "game_options"
 msgid "RGB Image"
@@ -13639,6 +13693,10 @@ msgstr "ROC"
 msgctxt "game_options"
 msgid "ROK"
 msgstr "ROK"
+
+msgctxt "game_options"
+msgid "ROM"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ROM (Slot 1)"
@@ -13675,6 +13733,10 @@ msgstr "XOAY"
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "NÚT QUAY MẶT"
+
+msgctxt "game_options"
+msgid "ROTATING BACKGROUND RESOLUTION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ROTATION"
@@ -13765,6 +13827,11 @@ msgid "Reduces banding between colors and improves the preceived color depth."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Reduces polygon fighting. Needs PGXP corrections and a hardware renderer."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Reduces wobbly polygons & warping textures."
 msgstr "Giảm đa giác và kết cấu cong vênh."
 
@@ -13812,6 +13879,22 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Render at a multiple of the N64 resolution. Only applies to the Angrylion "
+"and Parallel plugins. Angrylion stops at 4x."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Render at a multiple of the native resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Render at the screen resolution or at a multiple of the N64 native "
+"resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Render target emulation method. Accuracy handles more pixel formats "
 "correctly but costs more performance, especially with overdraw-heavy games."
 msgstr ""
@@ -13820,6 +13903,16 @@ msgctxt "game_options"
 msgid ""
 "Render the 3DS screens at a higher resolution. Higher values improve visual "
 "quality but significantly impact performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Rendering resolution for vector games."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Renders at a higher or lower resolution than the display. Higher values look "
+"better but cost a lot of performance."
 msgstr ""
 
 msgctxt "game_options"
@@ -13833,12 +13926,6 @@ msgstr "Hiển thị đa giác và họa tiết ở độ phân giải gốc."
 msgctxt "game_options"
 msgid "Replace meshed transparency by real transparency."
 msgstr "Thay thế trong suốt dạng lưới bằng trong suốt thực."
-
-msgctxt "game_options"
-msgid ""
-"Reproduces the original disc read speed, including the loading pauses it "
-"caused."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Required by some games."
@@ -14113,6 +14200,10 @@ msgid "SC-3000 (Default)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SC-3000 (PAL)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SC-3000 MODEL"
 msgstr ""
 
@@ -14122,10 +14213,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SC-3000 cassettes"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SC-3000H"
 msgstr ""
 
 msgctxt "game_options"
@@ -14219,10 +14306,6 @@ msgstr "CÀI ĐẶT MÀN HÌNH"
 msgctxt "game_options"
 msgid "SCREEN SHADER"
 msgstr ""
-
-msgctxt "game_options"
-msgid "SCREEN SIZE"
-msgstr "KÍCH THƯỚC MÀN HÌNH"
 
 msgctxt "game_options"
 msgid "SCREEN SIZING"
@@ -14521,16 +14604,8 @@ msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "BỐ CỤC CÁC NÚT ĐẶC BIỆT"
 
 msgctxt "game_options"
-msgid "SPECIFIC GAME FIXES"
-msgstr "SỬA CHỮA TRÒ CHƠI CỤ THỂ"
-
-msgctxt "game_options"
 msgid "SPEECH MODULE"
 msgstr "MÔ ĐUN GIỌNG NÓI"
-
-msgctxt "game_options"
-msgid "SPEED HACK (SAFE)"
-msgstr "HACK TỐC ĐỘ (AN TOÀN)"
 
 msgctxt "game_options"
 msgid "SPEED HACKS"
@@ -14598,6 +14673,10 @@ msgstr "STE"
 
 msgctxt "game_options"
 msgid "STEREO SOUND"
+msgstr ""
+
+msgctxt "game_options"
+msgid "STICK DEADZONE"
 msgstr ""
 
 msgctxt "game_options"
@@ -14687,10 +14766,6 @@ msgstr "ĐỒNG BỘ TỆP TIN LƯU"
 msgctxt "game_options"
 msgid "SYNC TO HOST REFRESH RATE"
 msgstr "ĐỒNG BỘ VỚI TỶ LỆ LÀM MỚI CỦA MÁY CHỦ"
-
-msgctxt "game_options"
-msgid "SYNCHRONOUS RENDERING"
-msgstr "SYNCHRONOUS RENDERING"
 
 msgctxt "game_options"
 msgid "SYSTEM"
@@ -14805,6 +14880,10 @@ msgid "Scorpion 256K"
 msgstr "Scorpion 256K"
 
 msgctxt "game_options"
+msgid "Screen Resolution (Default)"
+msgstr "Độ phân giải màn hình (Mặc định)"
+
+msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Độ nghiêng của màn hình (độ)"
 
@@ -14857,8 +14936,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Select a boot disk or hard drive if needed"
-msgstr "Chọn đĩa khởi động hoặc ổ cứng nếu cần"
+msgid ""
+"Select a boot disk or hard drive if needed. Floppy boot disks need a two-"
+"drive model, not the Mac LC 3."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Select a custom video shader filter."
@@ -15255,10 +15336,6 @@ msgid "Sets the scaler filter mode when rendering."
 msgstr "Đặt chế độ lọc tỷ lệ khi kết xuất."
 
 msgctxt "game_options"
-msgid "Sets the window size to an integer size."
-msgstr "Đặt kích thước cửa sổ thành kích thước số nguyên."
-
-msgctxt "game_options"
 msgid "Setting for 16-position DIP switch number 1."
 msgstr ""
 
@@ -15361,6 +15438,10 @@ msgid "Shoot Zappper"
 msgstr "Bắn Zappper"
 
 msgctxt "game_options"
+msgid "Short"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "Cạnh màn hình ngắn có thể nhìn thấy (cm)"
 
@@ -15442,6 +15523,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Shrink/expand tattoo to fit within the bezel's border."
 msgstr "Thu nhỏ/mở rộng hình xăm để vừa với đường viền của khung bezel."
+
+msgctxt "game_options"
+msgid "Shrinks or hides the borders. Some games used the borders."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Shunt 10"
@@ -15592,10 +15677,6 @@ msgid "Skip Drawing"
 msgstr "Skip Drawing"
 
 msgctxt "game_options"
-msgid "Skip Initial"
-msgstr "Bỏ qua ban đầu"
-
-msgctxt "game_options"
 msgid "Skip buffer effects"
 msgstr "Bỏ qua hiệu ứng bộ đệm"
 
@@ -15625,7 +15706,7 @@ msgstr ""
 "động giật cục. Có thể gây ra trục trặc thị giác."
 
 msgctxt "game_options"
-msgid "Skip the GBA boot logo. Requires a BIOS file when disabled."
+msgid "Skip the GBA boot logo. A BIOS file is always required."
 msgstr ""
 
 msgctxt "game_options"
@@ -15698,6 +15779,10 @@ msgid "Slow down or speed up games as appropriate."
 msgstr "Làm chậm hoặc tăng tốc trò chơi cho phù hợp."
 
 msgctxt "game_options"
+msgid "Small"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Small performance increase (may drop frames)."
 msgstr "Tăng hiệu suất nhỏ (có thể giảm khung hình)."
 
@@ -15740,6 +15825,10 @@ msgstr "Làm mượt họa tiết trên các đối tượng 3D."
 msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Kết cấu mượt mà trên các đối tượng 3D xa dựa trên góc."
+
+msgctxt "game_options"
+msgid "Smooths jagged edges. Vulkan only, unsupported levels fall back to off."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Smooths jagged geometry edges."
@@ -16066,6 +16155,12 @@ msgid "Stereo sound output."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Stick travel about centre that reads as centre, in percent. Raise it for a "
+"stick that no longer settles at rest."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Stipple (Default)"
 msgstr ""
 
@@ -16097,11 +16192,27 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Strength of the game's forces, in percent of the wheel's maximum. Auto is "
+"50%."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Strength of the rumble, in percent of the pad's motors. Auto is 50%."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Stretch"
 msgstr "Kéo dài"
 
 msgctxt "game_options"
 msgid "Stretch image output to fill the window/screen."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Stretch the menu & game to the full width of the display. Enable widescreen "
+"also for better in game rendering."
 msgstr ""
 
 msgctxt "game_options"
@@ -16264,10 +16375,6 @@ msgid "Switzerland (German)"
 msgstr "Thụy Sĩ (Tiếng Đức)"
 
 msgctxt "game_options"
-msgid "Sync"
-msgstr ""
-
-msgctxt "game_options"
 msgid ""
 "Sync GB2Player/GBC2Player saves with saves in \"saves/gb\" or \"saves/gbc\"."
 msgstr ""
@@ -16347,8 +16454,8 @@ msgid "TATTOO CORNER"
 msgstr "XĂM GÓC"
 
 msgctxt "game_options"
-msgid "TEAM COLOR MODE"
-msgstr "CHẾ ĐỘ NHÓM MÀU"
+msgid "TEAM MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TEMPEST 2000"
@@ -16445,6 +16552,10 @@ msgstr "TEXTURE UPSCALING LEVEL"
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING TYPE"
 msgstr "TEXTURE UPSCALING TYPE"
+
+msgctxt "game_options"
+msgid "THERMAL PROFILE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "THIS CABINET"
@@ -16687,10 +16798,6 @@ msgid "Tandy Radio Shack Color Computer cartridges"
 msgstr "Tandy Radio Shack Color Computer cartridges"
 
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer cassettes"
-msgstr "Tandy Radio Shack Color Computer cassettes"
-
-msgctxt "game_options"
 msgid "Tandy Radio Shack Color Computer disk images"
 msgstr "Tandy Radio Shack Color Computer disk images"
 
@@ -16719,15 +16826,11 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"The TCP port used to send network output packets. Leave at default (0) to "
-"disable."
+msgid "The TCP port used to send network output packets."
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"The UDP broadcast port used to send network output packets. Leave at default "
-"(0) to disable."
+msgid "The UDP broadcast port used to send network output packets."
 msgstr ""
 
 msgctxt "game_options"
@@ -16793,6 +16896,10 @@ msgstr "Ngôn ngữ để dịch sang."
 msgctxt "game_options"
 msgid "The month of your birthay."
 msgstr "Tháng sinh của bạn."
+
+msgctxt "game_options"
+msgid "The month of your birthday."
+msgstr ""
 
 msgctxt "game_options"
 msgid "The theme color of the emulated console."
@@ -17108,6 +17215,10 @@ msgid "UPSCALING & SHARPENING"
 msgstr ""
 
 msgctxt "game_options"
+msgid "UPSCALING FACTOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "US"
 msgstr "Mỹ"
 
@@ -17218,10 +17329,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "USER 1 ZOOM BUTTON"
 msgstr ""
-
-msgctxt "game_options"
-msgid "USER DISK"
-msgstr "ĐĨA NGƯỜI DÙNG"
 
 msgctxt "game_options"
 msgid "UTC"
@@ -17713,6 +17820,10 @@ msgid "VBLANK FREQUENCY"
 msgstr ""
 
 msgctxt "game_options"
+msgid "VECTOR RESOLUTION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "VERBOSE LOGGING"
 msgstr ""
 
@@ -17749,6 +17860,10 @@ msgid "VIDEO"
 msgstr "VIDEO"
 
 msgctxt "game_options"
+msgid "VIDEO BORDER SIZE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "VIDEO FILTER"
 msgstr "BỘ LỌC VIDEO"
 
@@ -17767,6 +17882,10 @@ msgstr "CHẾ ĐỘ VIDEO"
 msgctxt "game_options"
 msgid "VIDEO QUALITY"
 msgstr "CHẤT LƯỢNG VIDEO"
+
+msgctxt "game_options"
+msgid "VIDEO RENDERER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "VIDEO RESOLUTION"
@@ -17863,10 +17982,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Value to use for the emulated solar sensor (Boktai)."
 msgstr "Value to use for the emulated solar sensor (Boktai)."
-
-msgctxt "game_options"
-msgid "Vastly improves the speed of buffer maps."
-msgstr "Cải thiện đáng kể tốc độ của bản đồ đệm."
 
 msgctxt "game_options"
 msgid "Venezuela"
@@ -17997,10 +18112,6 @@ msgid "WEAPON PICKUP"
 msgstr ""
 
 msgctxt "game_options"
-msgid "WEAPON WAGGLE"
-msgstr ""
-
-msgctxt "game_options"
 msgid "WEAPON ZOOM SENSITIVITY SCALE"
 msgstr ""
 
@@ -18022,6 +18133,10 @@ msgstr "WHDLOAD LAUNCHER"
 
 msgctxt "game_options"
 msgid "WHEEL AUTO-CENTRE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL CENTRE DEADZONE"
 msgstr ""
 
 msgctxt "game_options"
@@ -18150,6 +18265,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Wheel travel about centre that reads as centre, in percent. Most wheels want "
+"none."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "When enabled and upscaling, textures look better than linear filtering for a "
 "lot of 2D art."
 msgstr ""
@@ -18182,7 +18303,9 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Which rectangle the frame is fit into."
+msgid ""
+"Which rectangle the frame is fit into. 16:9 widens the 3D into the sides, "
+"experimental. OpenGL/Vulkan only."
 msgstr ""
 
 msgctxt "game_options"
@@ -18425,10 +18548,6 @@ msgid "amber"
 msgstr "màu hổ phách"
 
 msgctxt "game_options"
-msgid "best"
-msgstr "tốt nhất"
-
-msgctxt "game_options"
 msgid "bilinear"
 msgstr "bilinear"
 
@@ -18664,6 +18783,16 @@ msgid "original gameboy"
 msgstr "original gameboy"
 
 msgctxt "game_options"
+msgid "paraLLEl-GS"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"paraLLEl-GS is the accurate renderer and needs the Vulkan graphics API. "
+"Software runs on the CPU."
+msgstr ""
+
+msgctxt "game_options"
 msgid "pentium_slow"
 msgstr ""
 
@@ -18678,10 +18807,6 @@ msgstr "pháo plasma"
 msgctxt "keys_files"
 msgid "proximity bomb"
 msgstr "bom gần"
-
-msgctxt "game_options"
-msgid "quick switch"
-msgstr "chuyển đổi nhanh"
 
 msgctxt "keys_files"
 msgid "quickload"
@@ -18706,6 +18831,10 @@ msgstr "đỏ/lục lam"
 msgctxt "game_options"
 msgid "red/electric cyan"
 msgstr "đỏ/lục lam điện"
+
+msgctxt "game_options"
+msgid "restored-wii-vc"
+msgstr ""
 
 msgctxt "game_options"
 msgid "right/left"
@@ -18780,6 +18909,10 @@ msgid "white"
 msgstr "trắng"
 
 msgctxt "game_options"
+msgid "wii-vc"
+msgstr ""
+
+msgctxt "game_options"
 msgid "xBR (Very Slow)"
 msgstr "xBR (Rất Chậm)"
 
@@ -18812,6 +18945,18 @@ msgstr "yape-pal"
 msgctxt "game_options"
 msgid "yellow/blue"
 msgstr "vàng/xanh da trời"
+
+#~ msgctxt "game_options"
+#~ msgid "0 (Defaults Unlimited)"
+#~ msgstr "0 (Mặc định không giới hạn)"
+
+#~ msgctxt "game_options"
+#~ msgid "1/8 Frame1"
+#~ msgstr "1/8 khung1"
+
+#~ msgctxt "game_options"
+#~ msgid "100%(native)"
+#~ msgstr "100%(native)"
 
 #~ msgctxt "game_options"
 #~ msgid "1000 (Default)"
@@ -18850,6 +18995,14 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "140ms"
 
 #~ msgctxt "game_options"
+#~ msgid "150Mhz (Overclock)"
+#~ msgstr "150 MHz (ép xung)"
+
+#~ msgctxt "game_options"
+#~ msgid "16 Frame"
+#~ msgstr "Khung 16"
+
+#~ msgctxt "game_options"
 #~ msgid "160ms"
 #~ msgstr "160ms"
 
@@ -18874,6 +19027,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "1x (~ 480)"
 
 #~ msgctxt "game_options"
+#~ msgid "200Mhz (Overclock)"
+#~ msgstr "200MHz (ép xung)"
+
+#~ msgctxt "game_options"
 #~ msgid "220ms"
 #~ msgstr "220ms"
 
@@ -18888,6 +19045,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "244fps"
 #~ msgstr "244fps"
+
+#~ msgctxt "game_options"
+#~ msgid "2x (Default)"
+#~ msgstr "2x (Mặc định)"
 
 #~ msgctxt "game_options"
 #~ msgid "2x (~960)"
@@ -18914,6 +19075,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "40ms"
 
 #~ msgctxt "game_options"
+#~ msgid "4k"
+#~ msgstr "4k"
+
+#~ msgctxt "game_options"
 #~ msgid "4x (~1920p)"
 #~ msgstr "4x (~ 1920p)"
 
@@ -18924,6 +19089,14 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "4x Native (2560x2112) for 1440p"
 #~ msgstr "4x Native (2560x2112) cho 1440p"
+
+#~ msgctxt "game_options"
+#~ msgid "50 (Default)"
+#~ msgstr "50 (Mặc định)"
+
+#~ msgctxt "game_options"
+#~ msgid "512KB"
+#~ msgstr "512KB"
 
 #~ msgctxt "game_options"
 #~ msgid "5x Native (3200x2640)"
@@ -18958,6 +19131,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "80ms"
 
 #~ msgctxt "game_options"
+#~ msgid "8k"
+#~ msgstr "8k"
+
+#~ msgctxt "game_options"
 #~ msgid "8x (~4320p / 8k)"
 #~ msgstr "8x (~ 4320p / 8k)"
 
@@ -18972,6 +19149,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "9x Native (5760x4752)"
 #~ msgstr "9x Native (5760x4752)"
+
+#~ msgctxt "game_options"
+#~ msgid "ACHIEVEMENTS"
+#~ msgstr "THÀNH TÍCH"
 
 #~ msgctxt "game_options"
 #~ msgid "ADDITIONAL FRAMELIMIT"
@@ -19041,6 +19222,10 @@ msgstr "vàng/xanh da trời"
 #~ "công."
 
 #~ msgctxt "game_options"
+#~ msgid "Alone in the Dark"
+#~ msgstr "Alone in the Dark"
+
+#~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "Hiển thị ma trận điểm màu thay thế (cần thêm tệp)."
 
@@ -19079,6 +19264,14 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "Bất đồng bộ với Trình biên dịch Shader"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Automatically decrease frame delay temporarily to prevent frame drops. "
+#~ "Can introduce stuttering."
+#~ msgstr ""
+#~ "Tự động giảm độ trễ khung hình tạm thời để ngăn chặn tình trạng rớt khung "
+#~ "hình. Có thể giới thiệu nói lắp."
 
 #~ msgctxt "game_options"
 #~ msgid "Batocera sets first audio device (Default)"
@@ -19132,6 +19325,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "CHẾ ĐỘ MÀU"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROL MAPPING"
+#~ msgstr "KIỂM SOÁT ÁNH XẠ NÚT BẤM"
+
+#~ msgctxt "game_options"
 #~ msgid "CONTROLLER CONFIGURATION"
 #~ msgstr "CẤU HÌNH ĐIỀU KHIỂN"
 
@@ -19146,6 +19343,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "CRT-like colour adaption. Requires New 3D engine."
 #~ msgstr "Điều chỉnh màu giống như CRT. Yêu cầu công cụ 3D mới."
+
+#~ msgctxt "game_options"
+#~ msgid "Can avoid flashing screen issues. Significant performance cost."
+#~ msgstr "Có thể tránh màn hình nhấp nháy. Giảm đáng kể hiệu năng."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19166,15 +19367,27 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Có thể cải thiện tốc độ khung hình và khả năng phản hồi."
 
 #~ msgctxt "game_options"
+#~ msgid "Can improve frame rates and responsiveness."
+#~ msgstr "Có thể cải thiện tốc độ khung hình và khả năng phản hồi."
+
+#~ msgctxt "game_options"
 #~ msgid "Can improve performance at the expense of graphics accuracy."
 #~ msgstr ""
 #~ "Có thể cải thiện hiệu suất nhưng phải đánh đổi bằng độ chính xác của đồ "
 #~ "họa."
 
 #~ msgctxt "game_options"
+#~ msgid "Can increase performance for games that stress the CPU."
+#~ msgstr "Có thể tăng hiệu suất cho game nhưng gây áp lực cho CPU."
+
+#~ msgctxt "game_options"
 #~ msgid "Can reduce crackle and stutter but increases audio latency."
 #~ msgstr ""
 #~ "Có thể giảm hiện tượng crackle và stutter nhưng làm tăng độ trễ âm thanh."
+
+#~ msgctxt "game_options"
+#~ msgid "Capcom VS games Expand Screen Width"
+#~ msgstr "Mở rộng chiều rộng màn hình cho các game đối đầu của Capcom"
 
 #~ msgctxt "keys_files"
 #~ msgid "Change Camera Angle"
@@ -19250,6 +19463,14 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Chọn tỷ lệ khung hình ưa thích của bạn .."
 
 #~ msgctxt "game_options"
+#~ msgid "Chrono Chross Odd/Even Bit Hack"
+#~ msgstr "Chrono Chross Odd/Even Bit Hack"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "Máy tính màu 2"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Compile shaders using background threads to avoid shader compilation "
 #~ "stutter. May cause graphical glitches."
@@ -19278,6 +19499,14 @@ msgstr "vàng/xanh da trời"
 #~ "cải thiện hiệu suất."
 
 #~ msgctxt "game_options"
+#~ msgid "Crash-n Burn"
+#~ msgstr "Crash-n Burn"
+
+#~ msgctxt "game_options"
+#~ msgid "Cycle Timing Check"
+#~ msgstr "Chu kỳ kiểm tra"
+
+#~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
 #~ msgstr "D3D12 (Mặc định)"
 
@@ -19301,6 +19530,50 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "DISPLAY BACKGLASS GRILL"
 #~ msgstr "DISPLAY BACKGLASS GRILL"
+
+#~ msgctxt "game_options"
+#~ msgid "DMD SIZE"
+#~ msgstr "KÍCH THƯỚC DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "DMD window ratio"
+#~ msgstr "Tỷ lệ cửa sổ DMD"
+
+#~ msgctxt "game_options"
+#~ msgid "DOOM RES HACK"
+#~ msgstr "DOOM RES HACK"
+
+#~ msgctxt "game_options"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (Thử nghiệm)"
+
+#~ msgctxt "game_options"
+#~ msgid "Dark Forces Flat Tex Triangles Fix"
+#~ msgstr "Dark Forces Flat Tex Triangles Fix"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Default uses SDL2, otherwise enable controller specific capabilities. "
+#~ "Sony DS won't work with clone controllers."
+#~ msgstr ""
+#~ "Mặc định sử dụng SDL2, nếu không thì kích hoạt các khả năng cụ thể của bộ "
+#~ "điều khiển. Sony DS sẽ không hoạt động với bộ điều khiển nhân bản."
+
+#~ msgctxt "game_options"
+#~ msgid "Diablo Music Fix"
+#~ msgstr "Sửa lỗi âm nhạc Diablo"
+
+#~ msgctxt "game_options"
+#~ msgid "Dinopark Tycoon"
+#~ msgstr "Dinopark Tycoon"
+
+#~ msgctxt "game_options"
+#~ msgid "Disable all input processing (view-only mode)."
+#~ msgstr "Tắt tất cả xử lý đầu vào (chế độ chỉ xem)."
+
+#~ msgctxt "game_options"
+#~ msgid "Disabled (Beatle Interpreter)"
+#~ msgstr "Vô hiệu hóa (trình biên dịch Beatle)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19358,6 +19631,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "BẬT BẢN ĐỒ MIP"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE NTFS MODE"
+#~ msgstr "BẬT CHẾ ĐỘ NTFS"
+
+#~ msgctxt "game_options"
 #~ msgid "ENABLE RAW INPUT"
 #~ msgstr "ENABLE RAW INPUT"
 
@@ -19370,12 +19647,35 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "ENABLE SOFTWARE RENDERER"
 
 #~ msgctxt "game_options"
+#~ msgid "ESYNC"
+#~ msgstr "ESYNC"
+
+#~ msgctxt "game_options"
 #~ msgid "EXPERT SETTINGS"
 #~ msgstr "CÀI ĐẶT CHUYÊN GIA"
 
 #~ msgctxt "game_options"
+#~ msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+#~ msgstr ""
+#~ "Mô phỏng các quirks NTSC để hiển thị nhiều màu sắc hơn ở chế độ độ phân "
+#~ "giải cao.Mô phỏng các đặc điểm của NTSC để hiển thị nhiều màu hơn ở chế "
+#~ "độ độ phân giải cao."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable QOS settings to optimize for internet or local network."
+#~ msgstr "Bật cài đặt QOS để tối ưu hóa cho internet hoặc mạng cục bộ."
+
+#~ msgctxt "game_options"
 #~ msgid "Enable X-Input mode for Xbox type controllers."
 #~ msgstr "Bật chế độ X-Input cho bộ điều khiển loại Xbox."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable for Doom to run at its correct resolution."
+#~ msgstr "Kích hoạt để Doom chạy ở độ phân giải chính xác."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable for more fluidity, disable if screen tearing."
+#~ msgstr "Kích hoạt để mượt hơn, tắt nếu bị xé hình."
 
 #~ msgctxt "game_options"
 #~ msgid "Enable full-screen antialiasing in Direct3D."
@@ -19417,6 +19717,14 @@ msgstr "vàng/xanh da trời"
 #~ msgstr ""
 #~ "Kích hoạt công cụ cũ hoặc công cụ 3D mới (chọn kế thừa cho các GPU cũ "
 #~ "hơn)."
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
+#~ "default is better to use LinuxFS)."
+#~ msgstr ""
+#~ "Bật chế độ này nếu bạn gặp sự cố khi chạy trò chơi trên bộ lưu trữ NTFS "
+#~ "(theo mặc định, tốt hơn là sử dụng LinuxFS)."
 
 #~ msgctxt "game_options"
 #~ msgid "Enable to emulate the card reader in Virtua Tenis 3."
@@ -19487,6 +19795,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Thoát chạy Flatpak"
 
 #~ msgctxt "game_options"
+#~ msgid "Export"
+#~ msgstr "Export"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Extra DMD (Dot Matrix Display) window to display the score for tables "
 #~ "with a pinmame rom. By default, settings come from the VPinballX.ini "
@@ -19525,8 +19837,28 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "FORCE MANAGED"
 
 #~ msgctxt "game_options"
+#~ msgid "FORCE WINDOWS CE MODE"
+#~ msgstr "BẮT BUỘC CHẠY WINDOWN CE"
+
+#~ msgctxt "game_options"
 #~ msgid "FRAMERATE"
 #~ msgstr "SỐ KHUNG HÌNH"
+
+#~ msgctxt "game_options"
+#~ msgid "FSYNC"
+#~ msgstr "FSYNC"
+
+#~ msgctxt "game_options"
+#~ msgid "FULLSCREEN"
+#~ msgstr "TOÀN MÀN HÌNH"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "FULLSCREEN gives you a top-down view on the playfield. For cabinet use or "
+#~ "multi-window on desktop."
+#~ msgstr ""
+#~ "TOÀN MÀN HÌNH cung cấp cho bạn cái nhìn từ trên xuống trên sân chơi. Để "
+#~ "sử dụng trong tủ hoặc nhiều cửa sổ trên máy tính để bàn."
 
 #~ msgctxt "keys_files"
 #~ msgid "Fast Forward"
@@ -19606,8 +19938,20 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Đẩy Trước"
 
 #~ msgctxt "game_options"
+#~ msgid "Full (PS2 Mipmaps)"
+#~ msgstr "Đầy đủ (MIPMAPS PS2)"
+
+#~ msgctxt "game_options"
+#~ msgid "Game info/art"
+#~ msgstr "Thông tin trò chơi/tranh vẽ"
+
+#~ msgctxt "game_options"
 #~ msgid "Gamepad (D-pad, 2 Buttons)"
 #~ msgstr "Tay cầm chơi game (D-pad, 2 nút)"
+
+#~ msgctxt "game_options"
+#~ msgid "General MIDI SoundFont (Default)"
+#~ msgstr "General MIDI SoundFont (Mặc định)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Graphics filtering on/off"
@@ -19616,6 +19960,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "HIDE LIGHT GUN CROSSHAIRS"
 #~ msgstr "ẨN TÂM NGẮM LIGHT GUN"
+
+#~ msgctxt "game_options"
+#~ msgid "HLE (per-strip)"
+#~ msgstr "HLE (per-strip)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Hat Down"
@@ -19678,8 +20026,20 @@ msgstr "vàng/xanh da trời"
 #~ "Interpreter."
 
 #~ msgctxt "game_options"
+#~ msgid "Improve speed, at a minor cost of accuracy."
+#~ msgstr "Cải thiện tốc độ, giảm nhẹ độ chính xác."
+
+#~ msgctxt "game_options"
 #~ msgid "Improves performance in 3D games. Can cause glitches."
 #~ msgstr "Cải thiện hiệu suất trong trò chơi 3D. Có thể gây trục trặc."
+
+#~ msgctxt "game_options"
+#~ msgid "InuYasha Sengoku Battle Fix"
+#~ msgstr "InuYasha Sengoku Battle Fix"
+
+#~ msgctxt "game_options"
+#~ msgid "Japan (Default)"
+#~ msgstr "Nhật Bản (Mặc định)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Down"
@@ -19763,6 +20123,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Tải trạng thái 1"
 
 #~ msgctxt "game_options"
+#~ msgid "Lunar Ignore Brightness Color Fix"
+#~ msgstr "Lunar Ignore Brightness Color Fix"
+
+#~ msgctxt "game_options"
 #~ msgid "MODERN PEDAL CONTROLS"
 #~ msgstr "MODERN PEDAL CONTROLS"
 
@@ -19805,6 +20169,10 @@ msgstr "vàng/xanh da trời"
 #~ msgid "Menu"
 #~ msgstr "Menu"
 
+#~ msgctxt "game_options"
+#~ msgid "Microcosm"
+#~ msgstr "Microcosm"
+
 #~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Microphone"
@@ -19819,6 +20187,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr ""
 #~ "Hầu hết các trò chơi đều đã có giới hạn khung hình bên trong. Giảm nhẹ "
 #~ "hiệu năng."
+
+#~ msgctxt "game_options"
+#~ msgid "Mount a floppy for user data, creates if needed"
+#~ msgstr "Gắn đĩa mềm cho dữ liệu người dùng, tạo nếu cần"
 
 #~ msgctxt "keys_files"
 #~ msgid "Move Backward"
@@ -19881,6 +20253,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "OUTPUT SCALING"
 
 #~ msgctxt "game_options"
+#~ msgid "OUTRUN LENS GLARE"
+#~ msgstr "OUTRUN LENS GLARE"
+
+#~ msgctxt "game_options"
 #~ msgid "Off (faster, unstable)"
 #~ msgstr "Tắt (nhanh hơn, không ổn định)"
 
@@ -19913,6 +20289,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Only applicable when using OpenGL."
 #~ msgstr "Chỉ áp dụng khi sử dụng OpenGL."
+
+#~ msgctxt "game_options"
+#~ msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
+#~ msgstr "Chỉ áp dụng khi sử dụng Parallel-RDP làm Plugin RDP đã chọn."
 
 #~ msgctxt "game_options"
 #~ msgid "Only for Super Game Boy enhanced games."
@@ -19955,6 +20335,14 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "Kích thước ban đầu"
 
 #~ msgctxt "game_options"
+#~ msgid "Output rotation independent of xrandr or framebuffer settings."
+#~ msgstr "Output rotation independent of xrandr or framebuffer settings."
+
+#~ msgctxt "game_options"
+#~ msgid "PBA"
+#~ msgstr "PBA"
+
+#~ msgctxt "game_options"
 #~ msgid "PER TABLE FOLDER"
 #~ msgstr "PER TABLE FOLDER"
 
@@ -19973,6 +20361,14 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "PS3's internal ratio setting. Some games only support 16/9."
 #~ msgstr "Cài đặt tỷ lệ của PS3. Một số game chỉ hỗ trợ 16/9."
+
+#~ msgctxt "game_options"
+#~ msgid "Pandemonium 2 Lazy Screen Update Fix"
+#~ msgstr "Pandemonium 2 Lazy Screen Update Fix"
+
+#~ msgctxt "game_options"
+#~ msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
+#~ msgstr "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19997,6 +20393,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "keys_files"
 #~ msgid "Plunger"
 #~ msgstr "Pít tông"
+
+#~ msgctxt "game_options"
+#~ msgid "Portugese"
+#~ msgstr "Bồ Đào Nha"
 
 #~ msgctxt "game_options"
 #~ msgid "Precise (Slowest)(Default)"
@@ -20051,10 +20451,6 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "READBACK RESOLVE"
 #~ msgstr "READBACK RESOLVE"
-
-#~ msgctxt "game_options"
-#~ msgid "RGB Colour Low/Medium-Resolution"
-#~ msgstr "Màu RGB Độ phân giải thấp/trung bình"
 
 #~ msgctxt "game_options"
 #~ msgid "ROV"
@@ -20159,12 +20555,24 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "TỈ LỆ MÀN HÌNH"
 
 #~ msgctxt "game_options"
+#~ msgid "SCREEN SIZE"
+#~ msgstr "KÍCH THƯỚC MÀN HÌNH"
+
+#~ msgctxt "game_options"
 #~ msgid "SHADER MODE"
 #~ msgstr "CHẾ ĐỘ SHADER"
 
 #~ msgctxt "game_options"
 #~ msgid "SHADER QUALITY"
 #~ msgstr "CHẤT LƯỢNG SHADER"
+
+#~ msgctxt "game_options"
+#~ msgid "SPECIFIC GAME FIXES"
+#~ msgstr "SỬA CHỮA TRÒ CHƠI CỤ THỂ"
+
+#~ msgctxt "game_options"
+#~ msgid "SPEED HACK (SAFE)"
+#~ msgstr "HACK TỐC ĐỘ (AN TOÀN)"
 
 #~ msgctxt "game_options"
 #~ msgid "SPU XFloat Accuracy"
@@ -20174,6 +20582,10 @@ msgstr "vàng/xanh da trời"
 #~ msgid "STEERING SENSITIVITY"
 #~ msgstr "STEERING SENSITIVITY"
 
+#~ msgctxt "game_options"
+#~ msgid "SYNCHRONOUS RENDERING"
+#~ msgstr "SYNCHRONOUS RENDERING"
+
 #~ msgctxt "keys_files"
 #~ msgid "Save State"
 #~ msgstr "Lưu"
@@ -20181,10 +20593,6 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "keys_files"
 #~ msgid "Save State Slot 1"
 #~ msgstr "Lưu trạng thái 1"
-
-#~ msgctxt "game_options"
-#~ msgid "Screen Resolution (Default)"
-#~ msgstr "Độ phân giải màn hình (Mặc định)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Screenshot"
@@ -20201,6 +20609,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
 #~ msgstr "Chọn chế độ Bàn phím, Cần điều khiển hoặc Tay cầm chơi game"
+
+#~ msgctxt "game_options"
+#~ msgid "Select a boot disk or hard drive if needed"
+#~ msgstr "Chọn đĩa khởi động hoặc ổ cứng nếu cần"
 
 #~ msgctxt "keys_files"
 #~ msgid "Service menu"
@@ -20238,6 +20650,10 @@ msgstr "vàng/xanh da trời"
 #~ msgid "Set to on if you experience flickering in Hummer."
 #~ msgstr "Đặt thành bật nếu bạn gặp hiện tượng nhấp nháy trong Hummer."
 
+#~ msgctxt "game_options"
+#~ msgid "Sets the window size to an integer size."
+#~ msgstr "Đặt kích thước cửa sổ thành kích thước số nguyên."
+
 #~ msgctxt "keys_files"
 #~ msgid "Settings GUI"
 #~ msgstr "Cài đặt GUI"
@@ -20253,6 +20669,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "Single"
 #~ msgstr "Single"
+
+#~ msgctxt "game_options"
+#~ msgid "Skip Initial"
+#~ msgstr "Bỏ qua ban đầu"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20337,6 +20757,10 @@ msgstr "vàng/xanh da trời"
 #~ "Neighbor)."
 
 #~ msgctxt "game_options"
+#~ msgid "TEAM COLOR MODE"
+#~ msgstr "CHẾ ĐỘ NHÓM MÀU"
+
+#~ msgctxt "game_options"
 #~ msgid "TEXTURE MEMORY SCALE SIZE"
 #~ msgstr "TEXTURE MEMORY SCALE SIZE"
 
@@ -20347,6 +20771,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "keys_files"
 #~ msgid "Take a screenshot"
 #~ msgstr "Chụp ảnh màn hình"
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cassettes"
+#~ msgstr "Tandy Radio Shack Color Computer cassettes"
 
 #~ msgctxt "game_options"
 #~ msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
@@ -20438,6 +20866,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "USE JOYPAD SOUTH BUTTON TO ADD CREDIT"
 
 #~ msgctxt "game_options"
+#~ msgid "USER DISK"
+#~ msgstr "ĐĨA NGƯỜI DÙNG"
+
+#~ msgctxt "game_options"
 #~ msgid "United Arab Emirates"
 #~ msgstr "Các Tiểu vương quốc Ả Rập Thống nhất"
 
@@ -20483,6 +20915,10 @@ msgstr "vàng/xanh da trời"
 #~ msgstr "VSYNC INTERVAL"
 
 #~ msgctxt "game_options"
+#~ msgid "Vastly improves the speed of buffer maps."
+#~ msgstr "Cải thiện đáng kể tốc độ của bản đồ đệm."
+
+#~ msgctxt "game_options"
 #~ msgid "Weak"
 #~ msgstr "Weak"
 
@@ -20500,6 +20936,10 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "game_options"
 #~ msgid "X-INPUT"
 #~ msgstr "X-INPUT"
+
+#~ msgctxt "game_options"
+#~ msgid "best"
+#~ msgstr "tốt nhất"
 
 #~ msgctxt "keys_files"
 #~ msgid "exit game"
@@ -20524,3 +20964,7 @@ msgstr "vàng/xanh da trời"
 #~ msgctxt "keys_files"
 #~ msgid "quick save"
 #~ msgstr "lưu nhanh"
+
+#~ msgctxt "game_options"
+#~ msgid "quick switch"
+#~ msgstr "chuyển đổi nhanh"
