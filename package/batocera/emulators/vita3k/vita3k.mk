@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 15, 2026
-VITA3K_VERSION = 41cac41ade11c639e2b692ee0699c5b8f786744d
+VITA3K_VERSION = 908e3c162d9ce62f9d1828ef2d4bc16530f5c8db
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD = git
 VITA3K_GIT_SUBMODULES = YES
@@ -34,7 +34,6 @@ endif
 
 define VITA3K_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/vita3k/
-	$(TARGET_STRIP) $(@D)/buildroot-build/bin/Vita3K
 	cp -R $(@D)/buildroot-build/bin/* $(TARGET_DIR)/usr/bin/vita3k/
 endef
 
