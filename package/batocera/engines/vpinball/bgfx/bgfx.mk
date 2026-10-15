@@ -34,7 +34,7 @@ else
     BGFX_CONF_OPTS += -DBGFX_WITH_WAYLAND=OFF
 endif
 
-BGFX_PATCH_SHA = 9fb47b3390d764c22dbb823576c7cc0e46491fb0
+BGFX_PATCH_SHA = 2b4c90c07444ec27995d6fe4de80a054f27eb779
 BGFX_EXTRA_DOWNLOADS += https://github.com/vbousquet/bgfx/archive/$(BGFX_PATCH_SHA).tar.gz
 
 
