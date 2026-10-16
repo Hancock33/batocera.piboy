@@ -3,8 +3,8 @@
 # avp
 #
 ################################################################################
-# Version: Commits on Oct 15, 2026
-AVP_VERSION = 5da0210e496c1ec013bcf2b1df37f1a1a958a41e
+# Version: Commits on Oct 16, 2026
+AVP_VERSION = d3c8afc44289a7a255a3cc1a317555255e9ae48a
 AVP_SITE =  $(call github,atsb,NakedAVP,$(AVP_VERSION))
 AVP_EMULATOR_INFO = avp.emulator.yml
 AVP_DEPENDENCIES = sdl3 sdl3_mixer
