@@ -120,6 +120,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
 
         # Fix for the removed MESS/MAMEVirtual cores
         if self.config.core in {'mess', 'mamevirtual'}:
+            self.config = replace(self.config, core='mame')
             self.config['core'] = 'mame'
 
         self.lr_core = load_core(self)
@@ -152,8 +153,8 @@ class Libretro(SpecialDecorationsMixin, Emulator):
                 'coin': 'KEY_F12',
                 'save_state': ['KEY_LEFTSHIFT', 'KEY_F3'],
                 'restore_state': ['KEY_LEFTSHIFT', 'KEY_F4'],
-                'previous_slot': ['KEY_LEFTSHIFT', 'KEY_F6'],
-                'next_slot': ['KEY_LEFTSHIFT', 'KEY_F5'],
+                'previous_slot': ['KEY_LEFTSHIFT', 'KEY_F5'],
+                'next_slot': ['KEY_LEFTSHIFT', 'KEY_F6'],
                 'rewind': ['KEY_LEFTSHIFT', 'KEY_F11'],
                 'fastforward': ['KEY_LEFTSHIFT', 'KEY_F12'],
                 'reset': ['KEY_LEFTSHIFT', 'KEY_F10'],
@@ -1029,7 +1030,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
                 guns_length = len(self.guns)
                 max_gun_index = guns_length - 1
 
-                for player_number in range(1, 4):
+                for player_number in range(1, 5):
                     if max_gun_index >= (gun_index := gun_custom_config.get(f'p{player_number}', guns_length)):
                         device_p_value: int | None = gun_custom_config.get(f'device_p{player_number}')
 
