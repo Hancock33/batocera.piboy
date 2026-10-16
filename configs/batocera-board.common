@@ -1,9 +1,40 @@
 -include batocera-board.local.common
 
-# users
+# ----------------------------------------------------------------------------
+# System
+# ----------------------------------------------------------------------------
+BR2_INIT_SYSV=y
+# /bin/sh implementation; set here because a `choice` cannot be `select`ed,
+# e.g. from batocera-system/Config.in
+BR2_SYSTEM_BIN_SH_DASH=y
+BR2_TARGET_GENERIC_HOSTNAME="batocera"
+BR2_TARGET_GENERIC_ISSUE="READY TO RETRO"
+BR2_TARGET_GENERIC_ROOT_PASSWD="linux"
+# BR2_TARGET_GENERIC_REMOUNT_ROOTFS_RW is not set
 BR2_ROOTFS_USERS_TABLES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/users.txt"
+BR2_PACKAGE_DROPBEAR_LOCALOPTIONS_FILE="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/dropbear_localoptions.h"
 
-# prefer linux tools over busybox tools
+# Time zone and locales
+BR2_TARGET_TZ_INFO=y
+BR2_TARGET_LOCALTIME="Europe/London"
+BR2_SYSTEM_ENABLE_NLS=y
+BR2_ENABLE_LOCALE_PURGE=y
+BR2_ENABLE_LOCALE_WHITELIST="C ar ca cs_CZ cy cy_GB de el en es es_MX eu eu_ES fi_FI fr fr_FR gl_ES he hu id_ID it ja ja_JP ko nb nb_NO nl nn nn_NO oc oc_FR pl pt pt_BR pt_PT ro_RO ru ru_RU sk_SK sv sv_SE tr uk uk_UA vi_VN zh zh_CN zh_TW"
+BR2_GENERATE_LOCALE="en_GB.UTF-8 en_US.UTF-8 ar_YE.UTF-8 ca_ES.UTF-8 cs_CZ.UTF-8 cy_GB.UTF-8 de_DE.UTF-8 el_GR.UTF-8 es_ES.UTF-8 es_MX.UTF-8 eu_ES.UTF-8 fi_FI.UTF-8 fr_FR.UTF-8 gl_ES.UTF-8 he_IL.UTF-8 hu_HU.UTF-8 id_ID.UTF-8 it_IT.UTF-8 ja_JP.UTF-8 ko_KR.UTF-8 nb_NO.UTF-8 nl_NL.UTF-8 nn_NO.UTF-8 oc_FR.UTF-8 pl_PL.UTF-8 pt_BR.UTF-8 pt_PT.UTF-8 ro_RO.UTF-8 ru_RU.UTF-8 sk_SK.UTF-8 sv_SE.UTF-8 tr_TR.UTF-8 uk_UA.UTF-8 vi_VN.UTF-8 zh_CN.UTF-8 zh_TW.UTF-8"
+
+# ----------------------------------------------------------------------------
+# Images
+# ----------------------------------------------------------------------------
+BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/post-build-script.sh"
+BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/post-image-script.sh"
+BR2_TARGET_ROOTFS_SQUASHFS4_ZSTD=y
+BR2_PACKAGE_SQUASHFS_ZSTD=y
+# Initramfs decompression support
+BR2_LINUX_KERNEL_LZ4=y
+
+# ----------------------------------------------------------------------------
+# Userland: prefer GNU/Linux tools over busybox tools
+# ----------------------------------------------------------------------------
 BR2_PACKAGE_BC=y
 BR2_PACKAGE_COREUTILS=y
 BR2_PACKAGE_DIFFUTILS=y
@@ -11,33 +42,27 @@ BR2_PACKAGE_DOS2UNIX=y
 BR2_PACKAGE_FINDUTILS=y
 BR2_PACKAGE_GAWK=y
 BR2_PACKAGE_GREP=y
-BR2_PACKAGE_GOBJECT_INTROSPECTION=y
 BR2_PACKAGE_GZIP=y
-BR2_PACKAGE_IFUPDOWN=y
-BR2_PACKAGE_IPUTILS=y
-BR2_PACKAGE_KMOD=y
-BR2_PACKAGE_KMOD_TOOLS=y
-BR2_PACKAGE_HOST_KMOD_XZ
 BR2_PACKAGE_LESS=y
 BR2_PACKAGE_LSOF=y
 BR2_PACKAGE_NCURSES=y
 BR2_PACKAGE_NCURSES_TARGET_PROGS=y
-BR2_PACKAGE_NETCAT=y
-BR2_PACKAGE_NET_TOOLS=y
-BR2_PACKAGE_NFS_UTILS=y
-BR2_PACKAGE_NFS_UTILS_NFSV4=y
 BR2_PACKAGE_PROCPS_NG=y
 BR2_PACKAGE_PSMISC=y
 BR2_PACKAGE_SED=y
-BR2_PACKAGE_SQUASHFS_ZSTD=y
 BR2_PACKAGE_START_STOP_DAEMON=y
-BR2_PACKAGE_SYSLOG_NG=y
 BR2_PACKAGE_TAR=y
 BR2_PACKAGE_TMUX=y
 BR2_PACKAGE_UNRAR=y
+BR2_PACKAGE_WATCHDOG=y
+BR2_PACKAGE_WHICH=y
+BR2_PACKAGE_XZ=y
+
+# util-linux
 BR2_PACKAGE_UTIL_LINUX_AGETTY=y
 BR2_PACKAGE_UTIL_LINUX_BINARIES=y
 BR2_PACKAGE_UTIL_LINUX_EJECT=y
+BR2_PACKAGE_UTIL_LINUX_FALLOCATE=y
 BR2_PACKAGE_UTIL_LINUX_HWCLOCK=y
 BR2_PACKAGE_UTIL_LINUX_KILL=y
 BR2_PACKAGE_UTIL_LINUX_LOGGER=y
@@ -45,62 +70,54 @@ BR2_PACKAGE_UTIL_LINUX_LOGIN=y
 BR2_PACKAGE_UTIL_LINUX_MORE=y
 BR2_PACKAGE_UTIL_LINUX_MOUNT=y
 BR2_PACKAGE_UTIL_LINUX_SU=y
-BR2_PACKAGE_UTIL_LINUX_FALLOCATE=y
-BR2_PACKAGE_WATCHDOG=y
-BR2_PACKAGE_WHICH=y
-BR2_PACKAGE_XZ=y
 
-# system
-BR2_TARGET_GENERIC_HOSTNAME="batocera"
-BR2_TARGET_GENERIC_ISSUE="READY TO RETRO"
-BR2_INIT_SYSV=y
-BR2_TARGET_GENERIC_ROOT_PASSWD="linux"
-BR2_SYSTEM_ENABLE_NLS=y
-BR2_ENABLE_LOCALE_PURGE=y
-BR2_ENABLE_LOCALE_WHITELIST="C ar ca cs_CZ cy cy_GB de el en es es_MX eu eu_ES fi_FI fr fr_FR gl_ES he hu id_ID it ja ja_JP ko nb nb_NO nl nn nn_NO oc oc_FR pl pt pt_BR pt_PT ro_RO ru ru_RU sk_SK sv sv_SE tr uk uk_UA vi_VN zh zh_CN zh_TW"
-BR2_GENERATE_LOCALE="en_GB.UTF-8 en_US.UTF-8 ar_YE.UTF-8 ca_ES.UTF-8 cs_CZ.UTF-8 cy_GB.UTF-8 de_DE.UTF-8 el_GR.UTF-8 es_ES.UTF-8 es_MX.UTF-8 eu_ES.UTF-8 fi_FI.UTF-8 fr_FR.UTF-8 gl_ES.UTF-8 he_IL.UTF-8 hu_HU.UTF-8 id_ID.UTF-8 it_IT.UTF-8 ja_JP.UTF-8 ko_KR.UTF-8 nb_NO.UTF-8 nl_NL.UTF-8 nn_NO.UTF-8 oc_FR.UTF-8 pl_PL.UTF-8 pt_BR.UTF-8 pt_PT.UTF-8 ro_RO.UTF-8 ru_RU.UTF-8 sk_SK.UTF-8 sv_SE.UTF-8 tr_TR.UTF-8 uk_UA.UTF-8 vi_VN.UTF-8 zh_CN.UTF-8 zh_TW.UTF-8"
-BR2_TARGET_TZ_INFO=y
-BR2_TARGET_LOCALTIME="Europe/London"
-# BR2_TARGET_GENERIC_REMOUNT_ROOTFS_RW is not set
+# Kernel modules
+BR2_PACKAGE_HOST_KMOD_XZ=y
+BR2_PACKAGE_KMOD=y
+BR2_PACKAGE_KMOD_TOOLS=y
 
-# Initramfs decompression support
-BR2_LINUX_KERNEL_LZ4=y
-BR2_TARGET_ROOTFS_SQUASHFS4_ZSTD=y
+# Networking
+BR2_PACKAGE_IFUPDOWN=y
+BR2_PACKAGE_IPUTILS=y
+BR2_PACKAGE_NETCAT=y
+BR2_PACKAGE_NET_TOOLS=y
+BR2_PACKAGE_NFS_UTILS=y
+BR2_PACKAGE_NFS_UTILS_NFSV4=y
+BR2_PACKAGE_SYSLOG_NG=y
 
-# Python choices
-BR2_PACKAGE_PYTHON3_PY_PYC=y
-BR2_PACKAGE_PYTHON_HASHLIB=y
-
+# Libraries / misc
 BR2_PACKAGE_ESPEAK=y
 BR2_PACKAGE_ESPEAK_AUDIO_BACKEND_ALSA=y
 BR2_PACKAGE_GLIBC_UTILS=y
+BR2_PACKAGE_GOBJECT_INTROSPECTION=y
 
-# disable the mosquitto broker which is on by default
-BR2_PACKAGE_MOSQUITTO_BROKER=n
+# Python
+BR2_PACKAGE_PYTHON3_PY_PYC=y
+BR2_PACKAGE_PYTHON_HASHLIB=y
+
+# Mono
+BR2_PACKAGE_MONO_SPECIFY_FOLDERS_TO_INSTALL=y
+BR2_PACKAGE_MONO_FOLDERS_TO_INSTALL="4.0 4.5 gac"
 
 # dmd
 BR2_PACKAGE_DMD_PLAY_RUST_DMD_PLAY_BIN=y
 
-# System
-BR2_PACKAGE_BATOCERA_SYSTEM=y
-BR2_PACKAGE_BATOCERA_EXTRAS=y
-BR2_PACKAGE_BATOCERA_TOOLS=y
-BR2_PACKAGE_BATOCERA_ALL_SYSTEMS=y
-BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES=y
-BR2_SYSTEM_BIN_SH_DASH=y # /bin/sh implementation; set here because a `choice` cannot be `select`ed, e.g. from batocera-system/Config.in
-BR2_PACKAGE_DROPBEAR_LOCALOPTIONS_FILE="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/dropbear_localoptions.h"
+# ----------------------------------------------------------------------------
+# Disabled
+# ----------------------------------------------------------------------------
+# the mosquitto broker is on by default
+BR2_PACKAGE_MOSQUITTO_BROKER=n
+BR2_PACKAGE_RNG_TOOLS_JITTERENTROPY_LIBRARY=n
 
-# Mono
-BR2_PACKAGE_MONO_SPECIFY_FOLDERS_TO_INSTALL=y
-BR2_PACKAGE_MONO_FOLDERS_TO_INSTALL="4.0  4.5  gac"
+# ----------------------------------------------------------------------------
+# Batocera
+# ----------------------------------------------------------------------------
+BR2_PACKAGE_BATOCERA_ALL_SYSTEMS=y
+BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL=y
+BR2_PACKAGE_BATOCERA_EXTRAS=y
+BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES=y
+BR2_PACKAGE_BATOCERA_SYSTEM=y
+BR2_PACKAGE_BATOCERA_TOOLS=y
 
 # Experimental, build cmake packages with clang
 BR_CMAKE_USE_CLANG=y
-
-# images
-BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/post-build-script.sh"
-BR2_ROOTFS_POST_IMAGE_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/post-image-script.sh"
-
-# Batocera
-BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL=y
-BR2_PACKAGE_RNG_TOOLS_JITTERENTROPY_LIBRARY=n
