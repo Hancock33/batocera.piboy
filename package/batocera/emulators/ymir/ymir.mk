@@ -28,7 +28,7 @@ YMIR_DEPENDENCIES += libdate miniz nghttp3 ngtcp2 openssl rtmidi sdl3 semver stb
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 YMIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-YMIR_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lstdc++ -lm"
+YMIR_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -lstdc++ -lm"
 YMIR_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 YMIR_CONF_OPTS += -DStb_INCLUDE_DIR=$(STAGING_DIR)/usr/include/stb
 YMIR_CONF_OPTS += -DYmir_DEV_BUILD=OFF

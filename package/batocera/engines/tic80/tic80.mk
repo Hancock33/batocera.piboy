@@ -31,7 +31,7 @@ TIC80_DEPENDENCIES += alsa-lib
 endif
 
 ifeq ($(BR2_TOOLCHAIN_HAS_LIBATOMIC),y)
-TIC80_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-latomic
+TIC80_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -latomic"
 endif
 
 
