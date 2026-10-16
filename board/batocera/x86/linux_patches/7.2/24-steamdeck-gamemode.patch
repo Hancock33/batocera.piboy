@@ -1,8 +1,9 @@
 diff --git a/drivers/hid/hid-steam.c b/drivers/hid/hid-steam.c
+index ac08cb2d0368..dca9f4b39265 100644
 --- a/drivers/hid/hid-steam.c
 +++ b/drivers/hid/hid-steam.c
-@@ -1112,7 +1112,9 @@
- 	hid_info(steam->hdev, "Steam Controller '%s' connected",
+@@ -1403,7 +1403,9 @@ static int steam_register(struct steam_device *steam)
+ 			steam->quirks & STEAM_QUIRK_DECK ? "Deck" : "Controller",
  			steam->serial_no);
  
 -	steam_set_lizard_mode(steam, lizard_mode);
@@ -12,7 +13,7 @@ diff --git a/drivers/hid/hid-steam.c b/drivers/hid/hid-steam.c
  	mutex_unlock(&steam->report_mutex);
  
  	/* ignore battery errors, we can live without it */
-@@ -1832,15 +1834,16 @@
+@@ -2238,15 +2240,16 @@ static const struct steam_axis_mapping steam_deck_imu_mappings[] = {
  static void steam_do_deck_input_event(struct steam_device *steam,
  		struct input_dev *input, u8 *data)
  {
