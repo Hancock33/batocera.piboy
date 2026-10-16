@@ -1,11 +1,5 @@
-hid-lenovo-go-s: report the Legion, quick access and back buttons
-
-The xinput pad has no Legion, quick access or Y1/Y2 buttons. Read them from
-the vendor gamepad report: Legion becomes the xinput pad's guide button, the
-others get a Legion Go S Extra Buttons device.
-
 diff --git a/drivers/hid/hid-lenovo-go-s.c b/drivers/hid/hid-lenovo-go-s.c
-index a72f7f7..eb4b996 100644
+index a72f7f748cb5..eb4b9966c009 100644
 --- a/drivers/hid/hid-lenovo-go-s.c
 +++ b/drivers/hid/hid-lenovo-go-s.c
 @@ -14,11 +14,14 @@
