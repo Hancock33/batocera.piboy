@@ -6,7 +6,7 @@ import os
 import sys
 import xml.etree.ElementTree as ET
 from abc import ABC, abstractmethod
-from contextlib import AbstractAsyncContextManager, AbstractContextManager, AsyncExitStack, chdir
+from contextlib import AbstractAsyncContextManager, AbstractContextManager, AsyncExitStack, asynccontextmanager, chdir
 from dataclasses import field
 from pathlib import Path
 from typing import TYPE_CHECKING, ClassVar, Final, Self, cast
@@ -24,9 +24,9 @@ from .cpu import resolve_cpu_cluster
 from .devices.controller import Controller, generate_sdl_game_controller_config
 from .devices.evmapy import EvmapyManager
 from .devices.gun import Gun, GunList, guns_need_crosses
-from .devices.hotkeygen import HotkeygenManager, reset_mouse as _hotkeygen_reset_mouse
+from .devices.hotkeygen import HotkeygenManager
 from .devices.mouse import prepare_mouse
-from .devices.video import get_screens, list_outputs, prepare_resolution
+from .devices.video import get_screens, prepare_resolution
 from .devices.wheels import configure_wheels
 from .draw.bezel import bezel_overlay
 from .exceptions import UnknownEmulator
@@ -35,7 +35,7 @@ from .plugin_manager import HookContext, PluginManager
 from .rom import Rom, ShortGameID
 
 if TYPE_CHECKING:
-    from collections.abc import Container, Iterator, Mapping
+    from collections.abc import AsyncGenerator, Container, Iterator, Mapping
     from types import TracebackType
 
     import aiohttp
@@ -51,6 +51,32 @@ if TYPE_CHECKING:
     from .types import BezelFiles, HotkeysContext, Resolution, ScreenInfo
 
 _logger: Final = logging.getLogger(__name__)
+
+
+@asynccontextmanager
+async def _exit_together[T](
+    first: AbstractAsyncContextManager[T], second: AbstractAsyncContextManager[object], /
+) -> AsyncGenerator[T]:
+    # entered in order, but the exits are independent waits on other processes
+    result = await first.__aenter__()
+    try:
+        await second.__aenter__()
+    except BaseException:
+        await first.__aexit__(*sys.exc_info())
+        raise
+
+    exc_info: tuple[type[BaseException] | None, BaseException | None, TracebackType | None] = (None, None, None)
+    try:
+        yield result
+    except BaseException:
+        exc_info = sys.exc_info()
+        raise
+    finally:
+        for outcome in await asyncio.gather(
+            first.__aexit__(*exc_info), second.__aexit__(*exc_info), return_exceptions=True
+        ):
+            if isinstance(outcome, BaseException):
+                raise outcome
 
 
 @cached_dataclass
@@ -124,19 +150,6 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
                     prepare_resolution(self.config.video_mode == 'default', self.target_video_mode),
                 )
             )
-
-            outputs = await list_outputs(timeout=3)
-
-            if len(outputs) > 1:
-                _logger.debug(
-                    'Multiple displays detected (%s). Resetting mouse to primary display.', ', '.join(outputs)
-                )
-                await _hotkeygen_reset_mouse()
-            else:
-                _logger.debug(
-                    'Single display detected (%s). Skipping mouse reset to keep cursor hidden',
-                    ', '.join(outputs) if outputs else 'default',
-                )
 
             await self.__stack.enter_async_context(prepare_mouse(self.needs_mouse))
 
@@ -801,10 +814,12 @@ class Emulator(AbstractAsyncContextManager['Emulator', bool | None], ABC):
 
         async with (
             script_caller(('gameStart', 'gameStop'), self.system, self.name, self.core, self.rom),
-            EvmapyManager(self) as evmapy_manager,
-            HotkeygenManager(
-                self.bus, self.hotkeygen_context, self.config.get_bool('exithotkeyonly'), self.config.ui_mode
-            ),
+            _exit_together(
+                EvmapyManager(self),
+                HotkeygenManager(
+                    self.bus, self.hotkeygen_context, self.config.get_bool('exithotkeyonly'), self.config.ui_mode
+                ),
+            ) as evmapy_manager,
         ):
             with self.prepare_execution_path():
                 if self.needs_sdl_controller_db:
