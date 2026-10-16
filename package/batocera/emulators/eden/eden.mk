@@ -14,7 +14,7 @@ EDEN_DEPENDENCIES += boost catch2 enet ffmpeg fmt json-for-modern-cpp libva
 EDEN_DEPENDENCIES += libzip lz4 mbedtls opus sdl3 zlib zstd qt6base qt6charts qt6svg qt6tools
 EDEN_SUPPORTS_IN_SOURCE_BUILD = NO
 
-EDEN_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1
+EDEN_CONF_ENV += LDFLAGS="$(TARGET_LDFLAGS) -lpthread" ARCHITECTURE_x86_64=1
 
 EDEN_CONF_OPTS += -DARCHITECTURE_x86_64=ON
 EDEN_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF

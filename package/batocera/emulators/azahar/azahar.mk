@@ -60,7 +60,7 @@ else
     AZAHAR_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
 
-AZAHAR_CONF_ENV += LDFLAGS=-lpthread
+AZAHAR_CONF_ENV += LDFLAGS="$(TARGET_LDFLAGS) -lpthread"
 
 define AZAHAR_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin

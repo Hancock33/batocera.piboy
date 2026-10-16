@@ -20,7 +20,7 @@ define X16EMU_BUILD_CMDS
 	SDL_CONFIG=$(STAGING_DIR)/usr/bin/sdl2-config \
 	CFLAGS="$(CFLAGS) -I$(STAGING_DIR)/usr/include/SDL2 -Isrc/extern/include" \
 	CXXFLAGS="$(CXXFLAGS) -Isrc/extern/ymfm/src" \
-	LDFLAGS="-lSDL2 -lm -lz" -C $(@D) all
+	LDFLAGS="$(TARGET_LDFLAGS) -lSDL2 -lm -lz" -C $(@D) all
 endef
 
 define X16EMU_INSTALL_TARGET_CMDS

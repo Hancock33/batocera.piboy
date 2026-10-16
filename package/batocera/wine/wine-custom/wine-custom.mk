@@ -26,7 +26,7 @@ WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 HOST_WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
-WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" \
+WINE_CUSTOM_CONF_OPTS = LDFLAGS="$(TARGET_LDFLAGS) -lm" \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
 	--without-capi \

@@ -61,7 +61,7 @@ define MAME_SRC_BUILD_CMDS
 	CCACHE_SLOPPINESS="pch_defines,time_macros,include_file_ctime,include_file_mtime" \
 	CFLAGS="--sysroot=$(STAGING_DIR) $(MAME_SRC_CFLAGS)" \
 	CXXFLAGS="--sysroot=$(STAGING_DIR) $(MAME_SRC_CFLAGS)" \
-	LDFLAGS="--sysroot=$(STAGING_DIR)" \
+	LDFLAGS="$(TARGET_LDFLAGS) --sysroot=$(STAGING_DIR)" \
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	PKG_CONFIG="$(HOST_DIR)/bin/pkg-config --define-prefix" \
