@@ -8,7 +8,9 @@ Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|644ba68febd06c4
 Ports|[avp](http://github.com/atsb/NakedAVP)|d3c8afc44289a7a255a3cc1a317555255e9ae48a|Oct 16, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|6de8078f02884db8d006bfff490ba05f3af5aabc|Oct 16, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|c3170a3594076c99a92f8c73cd485017a9d67641|Oct 16, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261016|Oct 16, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|e27735f5fdbec0d74d835d40036829a5ccc2d221|Oct 16, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261016|Oct 16, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|ed7e5eb536e0ce3a59cc98fc2cd3d7a6dae0a0dc|Oct 16, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e45a5543a399b7dd8e0cbbdb9f1438882d75ea3a|Oct 16, 2026
 Emulators|[libretro-hatarib](https://github.com/bbbradsmith/hatariB)|578dd5415c58eab7ede66c99e088195fc69dd1ce|Oct 16, 2026
@@ -54,10 +56,8 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|18da122ffc1fc065bb57
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.70.0|Oct 14, 2026
 Utils|[imgui](http://github.com/ocornut/imgui)|v1.93.0|Oct 14, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|d585d56cdef7e376aa8526d52616398cbdd6f91e|Oct 14, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261014|Oct 14, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|ce450bd89076df2819746d1716e9a8f52eafc465|Oct 14, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.1|Oct 14, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261014|Oct 14, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.4.1|Oct 14, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0-alpha2|Oct 14, 2026
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|4aef191fef72be539ccc07ada21c6e0a65360eb7|Oct 14, 2026
