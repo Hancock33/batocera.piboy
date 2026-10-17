@@ -15,7 +15,7 @@ define SDL2_TOUCH_TEST_BUILD_CMDS
 endef
 
 define SDL2_TOUCH_TEST_INSTALL_TARGET_CMDS
-    mkdir -p $(TARGET_DIR)/usr/bin
+	mkdir -p $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/sdl2-touch-test $(TARGET_DIR)/usr/bin/
 endef
 

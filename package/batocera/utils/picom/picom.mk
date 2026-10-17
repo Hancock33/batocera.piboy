@@ -48,7 +48,7 @@ PICOM_DEPENDENCIES += xlib_libX11
 endif
 
 define PICOM_CONFIG_FILE
-    mkdir -p $(TARGET_DIR)/etc/xdg/picom
+	mkdir -p $(TARGET_DIR)/etc/xdg/picom
 	cp -f $(PICOM_PKGDIR)/picom.conf $(TARGET_DIR)/etc/xdg/picom/
 endef
 
