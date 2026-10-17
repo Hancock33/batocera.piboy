@@ -350,14 +350,15 @@ class Pcsx2(Emulator):
             )
             pcsx2_ini_config.set(
                 'Achievements',
-                'PrimedIndicators',
+                'Overlays',
                 self.config.get_bool('retroachievements.challenge_indicators', return_values=('true', 'false')),
             )
-            pcsx2_ini_config.set(
-                'Achievements',
-                'Leaderboards',
-                self.config.get_bool('retroachievements.leaderboards', return_values=('true', 'false')),
-            )
+            for key in ('LeaderboardNotifications', 'LBOverlays'):
+                pcsx2_ini_config.set(
+                    'Achievements',
+                    key,
+                    self.config.get_bool('retroachievements.leaderboards', return_values=('true', 'false')),
+                )
             pcsx2_ini_config.set(
                 'Achievements',
                 'EncoreMode',
@@ -746,7 +747,7 @@ class Pcsx2(Emulator):
             # only configure the number of controllers set
             if nplayer <= multi_tap:
                 pad_index = nplayer
-                if multi_tap == 4 and pad.index != 0:
+                if multi_tap == 4 and nplayer != 1:
                     # Skip Pad2 in the ini file when MultitapPort1 only
                     pad_index = nplayer + 1
                 pad_num = f'Pad{pad_index}'
