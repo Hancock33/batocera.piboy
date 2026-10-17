@@ -14,7 +14,6 @@ EASYRPG_PLAYER_DEPENDENCIES += sdl2 zlib fmt libpng freetype mpg123 libvorbis
 EASYRPG_PLAYER_DEPENDENCIES += opusfile liblcf pixman speexdsp libxmp wildmidi fluidsynth
 
 EASYRPG_PLAYER_CONF_OPTS += -DPLAYER_BUILD_EXECUTABLE=ON
-EASYRPG_PLAYER_CONF_ENV += LDFLAGS="$(TARGET_LDFLAGS) -lpthread"
 
 define EASYRPG_PLAYER_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
