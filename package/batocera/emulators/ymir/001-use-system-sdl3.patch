@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 49be1110..e3333334 100644
+index a51921e9..408c735d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -117,6 +117,9 @@ else ()
+@@ -146,6 +146,9 @@ else ()
      message(STATUS "IPO / LTO not supported: ${IPO_ERROR}")
  endif ()
  
