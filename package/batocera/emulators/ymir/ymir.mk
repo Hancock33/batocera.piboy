@@ -15,8 +15,8 @@
 # ymir
 #
 ################################################################################
-# Version: Commits on Jun 22, 2026
-YMIR_VERSION = v0.3.3
+# Version: Commits on Oct 17, 2026
+YMIR_VERSION = v0.4.0
 YMIR_SITE = https://github.com/ymir-emu/Ymir
 YMIR_SITE_METHOD = git
 YMIR_GIT_SUBMODULES = YES
