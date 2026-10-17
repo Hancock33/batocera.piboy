@@ -1,7 +1,7 @@
 config BR2_PACKAGE_RTCW
 	bool "rtcw"
-	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_OPENAL
+	select BR2_PACKAGE_SDL2
 
 	help
 	  Return to Castle Wolfenstein port using

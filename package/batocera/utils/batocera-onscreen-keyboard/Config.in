@@ -1,9 +1,9 @@
 config BR2_PACKAGE_BATOCERA_ONSCREEN_KEYBOARD
 	bool "batocera-onscreen-keyboard"
-	select BR2_PACKAGE_WAYLAND
-	select BR2_PACKAGE_PANGO
-	select BR2_PACKAGE_LIBXKBCOMMON
 	select BR2_PACKAGE_CAIRO
+	select BR2_PACKAGE_LIBXKBCOMMON
+	select BR2_PACKAGE_PANGO
+	select BR2_PACKAGE_WAYLAND
 
 	help
 	  wvkbd - On-screen virtual keyboard for Wayland/wlroots.

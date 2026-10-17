@@ -1,10 +1,10 @@
 config BR2_PACKAGE_UQM
 	bool "uqm"
 	depends on !BR2_STATIC_LIBS # sdl2
-	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_LIBPNG
 	select BR2_PACKAGE_LIBVORBIS
 	select BR2_PACKAGE_LIBZIP
+	select BR2_PACKAGE_SDL2
 
 	help
 	  The Ur-Quan Masters

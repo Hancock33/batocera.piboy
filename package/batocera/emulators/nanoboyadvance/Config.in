@@ -1,7 +1,7 @@
 config BR2_PACKAGE_NANOBOYADVANCE
 	bool "nanoboyadvance"
-	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_QT6BASE
+	select BR2_PACKAGE_SDL2
 
 	help
 	  NanoBoyAdvance - Accurate Game Boy Advance emulator.

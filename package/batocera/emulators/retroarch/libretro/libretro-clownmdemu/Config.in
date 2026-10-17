@@ -3,7 +3,7 @@ config BR2_PACKAGE_LIBRETRO_CLOWNMDEMU
 
 	depends on BR2_INSTALL_LIBSTDCPP
 
-	  help
+	help
 	  This is ClownMDEmu, a Sega Mega Drive emulator.
 
 	  https://github.com/Clownacy/clownmdemu-libretro

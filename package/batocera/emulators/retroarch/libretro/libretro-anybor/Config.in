@@ -1,11 +1,11 @@
 config BR2_PACKAGE_LIBRETRO_ANYBOR
 	bool "libretro-anybor"
 	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_ZLIB
-	select BR2_PACKAGE_LIBPNG
 	select BR2_PACKAGE_LIBOGG
+	select BR2_PACKAGE_LIBPNG
 	select BR2_PACKAGE_LIBVORBIS
 	select BR2_PACKAGE_LIBVPX
+	select BR2_PACKAGE_ZLIB
 
 	help
 	  A libretro openbor emulator
