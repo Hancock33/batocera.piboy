@@ -14,15 +14,15 @@ UBOOT_ANBERNIC_H700_INSTALL_IMAGES = YES
 # Arm Trusted Firmware
 UBOOT_ANBERNIC_H700_TFA_VERSION = lts-v2.14.3
 UBOOT_ANBERNIC_H700_EXTRA_DOWNLOADS = \
-    https://github.com/ARM-software/arm-trusted-firmware/archive/refs/tags/$(UBOOT_ANBERNIC_H700_TFA_VERSION).tar.gz
+	https://github.com/ARM-software/arm-trusted-firmware/archive/refs/tags/$(UBOOT_ANBERNIC_H700_TFA_VERSION).tar.gz
 
 # SRAM stub BL31 runs for PSCI SYSTEM_SUSPEND, built from this U-Boot's DRAM driver
 UBOOT_ANBERNIC_H700_STUB_VERSION = 712653d11230b2450061ddb8e25f31e072da7a48
 UBOOT_ANBERNIC_H700_EXTRA_DOWNLOADS += \
-    https://github.com/Jacob-Matthew-Cook/h700-suspend-stub/archive/$(UBOOT_ANBERNIC_H700_STUB_VERSION).tar.gz
+	https://github.com/Jacob-Matthew-Cook/h700-suspend-stub/archive/$(UBOOT_ANBERNIC_H700_STUB_VERSION).tar.gz
 
 UBOOT_ANBERNIC_H700_DEPENDENCIES = host-pkgconf host-openssl host-bison host-flex \
-    host-python-setuptools host-dtc host-swig host-gnutls host-python-pyelftools
+	host-python-setuptools host-dtc host-swig host-gnutls host-python-pyelftools
 
 # Extract Arm Trusted Firmware
 define UBOOT_ANBERNIC_H700_EXTRACT_TFA

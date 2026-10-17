@@ -3,6 +3,7 @@
 # xgunner-lightguns
 #
 ################################################################################
+
 XGUNNER_LIGHTGUNS_VERSION = 1
 XGUNNER_LIGHTGUNS_LICENSE = GPL
 XGUNNER_LIGHTGUNS_SOURCE=

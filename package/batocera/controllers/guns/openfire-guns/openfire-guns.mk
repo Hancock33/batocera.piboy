@@ -3,6 +3,7 @@
 # openfire-guns
 #
 ################################################################################
+
 OPENFIRE_GUNS_VERSION = 1
 OPENFIRE_GUNS_LICENSE = GPL
 OPENFIRE_GUNS_SOURCE =

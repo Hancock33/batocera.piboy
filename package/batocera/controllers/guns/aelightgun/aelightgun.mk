@@ -3,6 +3,7 @@
 # aelightgun
 #
 ################################################################################
+
 AELIGHTGUN_VERSION = 1
 AELIGHTGUN_LICENSE = GPL
 AELIGHTGUN_SOURCE=

@@ -118,11 +118,11 @@ define BATOCERA_SCRIPTS_INSTALL_QCOM
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_MANGMI
-    install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/mangmi_fan_control.py              $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/mangmi_fan_control.py              $(TARGET_DIR)/usr/bin/
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_RK3588
-    install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/rk3588-fan                         $(TARGET_DIR)/usr/bin/
+	install -m 0755 $(BATOCERA_SCRIPTS_PATH)/scripts/rk3588-fan                         $(TARGET_DIR)/usr/bin/
 endef
 
 define BATOCERA_SCRIPTS_INSTALL_ROCKCHIP

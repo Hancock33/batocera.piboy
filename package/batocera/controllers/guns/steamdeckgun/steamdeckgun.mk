@@ -3,6 +3,7 @@
 # steamdeckgun
 #
 ################################################################################
+
 STEAMDECKGUN_VERSION = 1.0
 STEAMDECKGUN_LICENSE = GPL
 STEAMDECKGUN_SOURCE=

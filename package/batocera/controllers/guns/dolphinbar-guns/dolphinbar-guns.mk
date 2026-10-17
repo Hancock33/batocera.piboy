@@ -3,6 +3,7 @@
 # dolphinbar-guns
 #
 ################################################################################
+
 DOLPHINBAR_GUNS_VERSION = 1
 DOLPHINBAR_GUNS_LICENSE = GPL
 DOLPHINBAR_GUNS_SOURCE=

@@ -3,6 +3,7 @@
 # batocera-wheel-calibrator
 #
 ################################################################################
+
 BATOCERA_WHEEL_CALIBRATOR_VERSION = 1
 BATOCERA_WHEEL_CALIBRATOR_LICENSE = GPL
 BATOCERA_WHEEL_CALIBRATOR_SOURCE=

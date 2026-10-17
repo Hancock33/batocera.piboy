@@ -3,6 +3,7 @@
 # fusion-lightguns
 #
 ################################################################################
+
 FUSION_LIGHTGUNS_VERSION = 1
 FUSION_LIGHTGUNS_LICENSE = GPL
 FUSION_LIGHTGUNS_SOURCE=
