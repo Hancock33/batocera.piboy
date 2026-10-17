@@ -3,6 +3,7 @@
 # wiimotes-rules
 #
 ################################################################################
+
 WIIMOTES_RULES_VERSION = 1
 WIIMOTES_RULES_LICENSE = GPL
 WIIMOTES_RULES_SOURCE=

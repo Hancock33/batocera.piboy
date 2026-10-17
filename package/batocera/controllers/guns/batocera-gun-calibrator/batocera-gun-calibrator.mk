@@ -3,6 +3,7 @@
 # batocera-gun-calibrator
 #
 ################################################################################
+
 BATOCERA_GUN_CALIBRATOR_VERSION = 1
 BATOCERA_GUN_CALIBRATOR_LICENSE = GPL
 BATOCERA_GUN_CALIBRATOR_SOURCE=

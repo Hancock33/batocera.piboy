@@ -117,10 +117,10 @@ endef
 
 # $(1) source image, $(2) point size, $(3) text position, $(4) output image
 define BATOCERA_SPLASH_ANNOTATE
-    $(HOST_DIR)/bin/magick "$(BATOCERA_SPLASH_PKGDIR)/images/$(1)" \
-        -font $(DEJAVU_DIR)/ttf/DejaVuSans.ttf -fill white -pointsize $(2) \
-        -annotate $(3) "$(BATOCERA_SPLASH_TGVERSION)" \
-        "$(TARGET_DIR)/usr/share/batocera/splash/$(4)"
+	$(HOST_DIR)/bin/magick "$(BATOCERA_SPLASH_PKGDIR)/images/$(1)" \
+		-font $(DEJAVU_DIR)/ttf/DejaVuSans.ttf -fill white -pointsize $(2) \
+		-annotate $(3) "$(BATOCERA_SPLASH_TGVERSION)" \
+		"$(TARGET_DIR)/usr/share/batocera/splash/$(4)"
 endef
 
 define BATOCERA_SPLASH_INSTALL_IMAGE

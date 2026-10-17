@@ -63,20 +63,19 @@ else
 endif
 
 define ARMSX2_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/armsx2-qt \
-        $(TARGET_DIR)/usr/armsx2/bin/armsx2-qt
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/armsx2-qt $(TARGET_DIR)/usr/armsx2/bin/armsx2-qt
 	cp -pr  $(@D)/bin/resources $(TARGET_DIR)/usr/armsx2/bin/
-    cp -pr  $(@D)/buildroot-build/bin/translations $(TARGET_DIR)/usr/armsx2/bin/
-    # use our SDL config
-    rm $(TARGET_DIR)/usr/armsx2/bin/resources/game_controller_db.txt
+	cp -pr  $(@D)/buildroot-build/bin/translations $(TARGET_DIR)/usr/armsx2/bin/
+	# use our SDL config
+	rm $(TARGET_DIR)/usr/armsx2/bin/resources/game_controller_db.txt
 endef
 
 # Download and copy PCSX2 patches.zip to BIOS folder (ARMSX2 shares the PS2 game database)
 define ARMSX2_PATCHES
-    mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
-    $(HOST_DIR)/bin/curl -L \
-        https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o \
-        $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2/patches.zip
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
+	$(HOST_DIR)/bin/curl -L \
+		https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o \
+		$(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2/patches.zip
 endef
 
 ARMSX2_POST_INSTALL_TARGET_HOOKS += ARMSX2_PATCHES

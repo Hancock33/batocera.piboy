@@ -3,6 +3,7 @@
 # samco-guns
 #
 ################################################################################
+
 SAMCO_GUNS_VERSION = 1
 SAMCO_GUNS_LICENSE = GPL
 SAMCO_GUNS_SOURCE =

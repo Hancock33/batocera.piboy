@@ -3,6 +3,7 @@
 # blamcon
 #
 ################################################################################
+
 BLAMCON_VERSION = 1
 BLAMCON_LICENSE = GPL
 BLAMCON_SOURCE=

@@ -51,7 +51,6 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/duckstation/fa-solid-900.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts
 endef
 
-
 define DUCKSTATION_HEADERS
 	cp -av $(STAGING_DIR)/usr/include/plutovg/plutovg.h  $(STAGING_DIR)/usr/include/plutosvg
 endef

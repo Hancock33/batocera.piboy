@@ -3,6 +3,7 @@
 # wiimote-3rdparty
 #
 ################################################################################
+
 WIIMOTE_3RDPARTY_VERSION = 1
 WIIMOTE_3RDPARTY_LICENSE = GPL
 WIIMOTE_3RDPARTY_SOURCE=

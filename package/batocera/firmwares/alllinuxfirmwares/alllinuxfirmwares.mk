@@ -42,7 +42,7 @@ ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
 
 # Remove strictly ARM/Mobile SoC components
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-	ALLLINUXFIRMWARES_REMOVE_DIRS += \
+ALLLINUXFIRMWARES_REMOVE_DIRS += \
 		$(@D)/airoha \
 		$(@D)/amlogic \
 		$(@D)/amphion \
@@ -72,8 +72,8 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 		$(@D)/v3d \
 		$(@D)/vc4 \
 		$(@D)/vicam
-	# SoC wifi, cameras, NPU, server NICs and Instinct GPUs
-	ALLLINUXFIRMWARES_REMOVE_DIRS += \
+# SoC wifi, cameras, NPU, server NICs and Instinct GPUs
+ALLLINUXFIRMWARES_REMOVE_DIRS += \
 		$(@D)/ath10k/QCA4019 $(@D)/ath10k/WCN3990 $(@D)/ath11k/IPQ* \
 		$(@D)/ath11k/WCN6750 $(@D)/ath12k/IPQ* $(@D)/mediatek/mt798* \
 		$(@D)/ti-connectivity $(@D)/intel/ice $(@D)/intel/ipu \
@@ -83,8 +83,8 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 		$(@D)/amdgpu/psp_13_0_6_* $(@D)/amdgpu/psp_13_0_1[24]_* \
 		$(@D)/amdgpu/sdma_4_4_[245].bin $(@D)/amdgpu/vcn_4_0_3.bin \
 		$(@D)/amdgpu/vcn_5_0_1.bin
-	# nouveau only falls back to 535 when 570 is missing
-	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/nvidia/*/gsp/*-535.113.01.bin
+# nouveau only falls back to 535 when 570 is missing
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/nvidia/*/gsp/*-535.113.01.bin
 endif
 
 # This removes strictly ARM/RISC-V SoC components while preserving all Wi-Fi/BT.
@@ -115,13 +115,13 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
 								$(@D)/radeon \
 								$(@D)/xe \
 								$(@D)/yamaha
-	# Prune other ARM SoC vendors if building a specific ARM target
-	ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3562)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE)$(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
-		ALLLINUXFIRMWARES_REMOVE_DIRS += \
+# Prune other ARM SoC vendors if building a specific ARM target
+ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3562)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE)$(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
+ALLLINUXFIRMWARES_REMOVE_DIRS += \
 			$(@D)/rockchip $(@D)/amlogic $(@D)/meson $(@D)/sunxi \
 			$(@D)/nxp $(@D)/imx $(@D)/starfive $(@D)/powervr \
 			$(@D)/airoha $(@D)/amphion $(@D)/cadence $(@D)/ar3k
-		endif
+endif
 endif
 
 # Remove Broadcom if RPi/External firmware is already handling it

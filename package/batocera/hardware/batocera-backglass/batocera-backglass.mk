@@ -11,7 +11,7 @@ BATOCERA_BACKGLASS_SOURCE =
 BATOCERA_BACKGLASS_DEPENDENCIES = sdl2 sdl2_image sdl2_ttf libcurl openssl dejavu noto-cjk-fonts
 
 BACKGLASS_PATH = \
-    $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/batocera-backglass
+	$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/batocera-backglass
 
 ifeq ($(BR2_PACKAGE_XSERVER_XORG_SERVER),y)
     BATOCERA_BACKGLASS_CXXFLAGS = -DHAVE_XORG=1
