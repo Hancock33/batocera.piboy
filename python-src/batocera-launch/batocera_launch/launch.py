@@ -27,7 +27,6 @@ async def _run(args: Arguments, profiler: Profiler, /) -> int:
 
 
 def launch(args: Arguments, profiler: Profiler, /) -> None:
-
     batocera_version = 'UNKNOWN'
     if (version_file := BATOCERA_SHARE_DIR / 'batocera.version').exists():
         batocera_version = version_file.read_text().strip()
