@@ -18,9 +18,6 @@ DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cpp-ipc ffmpeg hidapi host-xz libcurl l
 $(eval $(call register,dolphin.emulator.yml))
 $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.dolphin.emulator.yml))
 
-DOLPHIN_EMU_MAKE_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
-DOLPHIN_EMU_CONF_ENV += LDFLAGS="-Wl,--copy-dt-needed-entries"
-
 DOLPHIN_EMU_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DDISTRIBUTOR='batocera.linux'
 DOLPHIN_EMU_CONF_OPTS += -DENABLE_ANALYTICS=OFF
