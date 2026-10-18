@@ -126,23 +126,23 @@ endif
 
 # Remove Broadcom if RPi/External firmware is already handling it
 ifeq ($(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
-    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
+	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
 endif
 
 # the rpi package ships these too, keep its newer firmware and matching clm_blob
 ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI),y)
-    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/cypress/cyfmac43430-sdio.* $(@D)/cypress/cyfmac43455-sdio.*
+	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/cypress/cyfmac43430-sdio.* $(@D)/cypress/cyfmac43455-sdio.*
 endif
 
 # Remove snadragon SoC folder if not a Qualcomm board
 # Preserves ath10k/11k/12k wifi separately
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_ANY),y)
-    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/qcom
+	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/qcom
 endif
 
 # Remove amlogic firmware if not building an Amlogic board
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
-    ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/amlogic
+	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/amlogic
 endif
 
 define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
@@ -181,10 +181,13 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 		rm -f $(TARGET_DIR)/lib/firmware/lt9611uxc_fw.bin; \
 	fi
 
-	# Logic for ARM SM8250: Prune other QCOM SoCs, keep only sm8250 folder
+	# Logic for ARM SM8250: Keep only necessary firmware folders
 	if [ "$(BR2_PACKAGE_BATOCERA_TARGET_SM8250)" = "y" ]; then \
-		find $(TARGET_DIR)/lib/firmware/qcom -maxdepth 1 -mindepth 1 -type d ! -name "sm8250" \
-			! -name "vpu" ! -name "venus-*" -exec rm -rf {} +; \
+		find $(TARGET_DIR)/lib/firmware/qcom -maxdepth 1 -mindepth 1 -type d \
+			! -name "sm8250" \
+			! -name "vpu" \
+			! -name "venus-*" \
+			-exec rm -rf {} +; \
 		rm -f $(TARGET_DIR)/lib/firmware/a300_*.fw; \
 		rm -f $(TARGET_DIR)/lib/firmware/a420_*.fw; \
 		rm -f $(TARGET_DIR)/lib/firmware/a530_*.fw; \
@@ -199,13 +202,18 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	# parses the WHENCE file where symlinks are described. We follow the same logic
 	# here, adding symlink only for firmwares installed in the target directory.
 	cd $(TARGET_DIR)/lib/firmware ; \
-	sed -r -e '/^Link: (.+) -> (.+)$$/!d; s//\1 \2/' $(@D)/WHENCE | \
-	while read -r f d; do \
-		if test -f "$$(readlink -m "$$(dirname "$$f")/$${d}")"; then \
-			mkdir -p "$$(dirname "$$f")" && \
-			ln -sf "$$d" "$$f" || exit 1; \
-		fi ; \
-	done
+		sed -r -e '/^Link: (.+) -> (.+)$$/!d; s//\1 \2/' $(@D)/WHENCE | \
+		while read -r f d; do \
+			if test -f "$$(readlink -m "$$(dirname "$$f")/$${d}")"; then \
+				mkdir -p "$$(dirname "$$f")" && \
+				ln -sf "$$d" "$$f" || exit 1; \
+			fi ; \
+		done
+
+	# tqftpserv serves wlanmdsp.mbn from any remoteproc dir, keep only the qrb4210 adsp
+	if [ "$(BR2_PACKAGE_BATOCERA_TARGET_SM6115)" = "y" ]; then \
+		find $(TARGET_DIR)/lib/firmware/qcom/qrb4210 ! -type d ! -name "adsp*" -delete; \
+	fi
 endef
 
 # symlink AMD GPU firmware for 890M devices
@@ -221,11 +229,11 @@ endef
 
 # Apply hooks based on architecture
 ifeq ($(BR2_x86_64),y)
-    ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_AMD_890M
+	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_AMD_890M
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO),y)
-    ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_LINK_RTL_BT
+	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_LINK_RTL_BT
 endif
 
 $(eval $(generic-package))
