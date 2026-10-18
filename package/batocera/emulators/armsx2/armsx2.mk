@@ -22,7 +22,7 @@ ARMSX2_DEPENDENCIES += rapidyaml shaderc sdl3 webp wxwidgets xorgproto yaml-cpp 
 # Use clang for performance
 ARMSX2_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/clang
 ARMSX2_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/clang++
-ARMSX2_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold -lm -lstdc++"
+ARMSX2_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -lm -lstdc++"
 ARMSX2_CONF_OPTS += -DCMAKE_C_FLAGS="$(TARGET_CFLAGS) -march=armv8-a -moutline-atomics"
 ARMSX2_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CXXFLAGS) -march=armv8-a -moutline-atomics -Wno-c++11-narrowing -Wno-narrowing"
 ARMSX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
