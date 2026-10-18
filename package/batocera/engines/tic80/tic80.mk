@@ -3,8 +3,8 @@
 # tic80
 #
 ################################################################################
-# Version: Commits on Oct 17, 2026
-TIC80_VERSION = 2087d1044df8094c69ed2aef7a4b95bc151560d0
+# Version: Commits on Oct 18, 2026
+TIC80_VERSION = 5b1b77f3ae94203208d26ccfb183ef7b629218a1
 TIC80_SITE = https://github.com/nesbox/TIC-80.git
 TIC80_SITE_METHOD=git
 TIC80_GIT_SUBMODULES=YES
@@ -31,7 +31,7 @@ TIC80_DEPENDENCIES += alsa-lib
 endif
 
 ifeq ($(BR2_TOOLCHAIN_HAS_LIBATOMIC),y)
-TIC80_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -latomic"
+TIC80_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold -latomic"
 endif
 
 $(eval $(cmake-package))
