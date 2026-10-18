@@ -3,12 +3,12 @@
 # sm2-emu
 #
 ################################################################################
-# Version: Commits on Oct 17, 2026
-SM2_EMU_VERSION = v0.9.49
+# Version: Commits on Oct 18, 2026
+SM2_EMU_VERSION = v0.9.51
 SM2_EMU_SITE = https://github.com/dmanlfc/sm2-emu.git
 SM2_EMU_SITE_METHOD = git
 SM2_EMU_GIT_SUBMODULES = YES
-SM2_EMU_LICENSE = BSD-3-Clause
+SM2_EMU_LICENSE = GPL-3.0+
 SM2_EMU_LICENSE_FILES = LICENSE
 SM2_EMU_EMULATOR_INFO = sm2-emu.emulator.yml
 SM2_EMU_SUPPORTS_IN_SOURCE_BUILD = NO

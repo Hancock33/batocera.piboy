@@ -370,7 +370,7 @@
 - Xenia Edge to 17th of September build
 - Xenia to v1.0.2844
 - XRoar to v1.12.1
-- Ymir to v0.3.3
+- Ymir to v0.4.0
 ### System
 - Allwinner H616 device kernel updated to 7.2.8
 - Allwinner H700 device kernel updated to 7.2.8
@@ -389,7 +389,7 @@
 - LabWC to 0.20.2
 - Linux Firmware to 20260810
 - MangoHud to v0.8.4
-- Mesa3D to 26.2.4
+- Mesa3D to 26.2.5
 - Nvidia 580 Legacy driver to 580.178.04
 - Nvidia Open Production driver to 615.71.09
 - OpenABL replaces Rocknix ABL

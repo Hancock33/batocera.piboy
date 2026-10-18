@@ -14,6 +14,7 @@ from batocera_common.vulkan import get_vulkan_info
 from batocera_launch import (
     Command,
     Controllers,
+    DeviceInfoMapping,
     Emulator,
     Guns,
     HotkeysContext,
@@ -75,13 +76,14 @@ class Pcsx2x6(Emulator):
         return {
             'name': 'pcsx2x6',
             'keys': {
-                'exit': ['KEY_LEFTALT', 'KEY_F4'],
+                'exit': 'KEY_F10',
                 'menu': 'KEY_ESC',
                 'pause': 'KEY_ESC',
                 'save_state': 'KEY_F1',
                 'restore_state': 'KEY_F3',
                 'previous_slot': ['KEY_LEFTSHIFT', 'KEY_F2'],
                 'next_slot': 'KEY_F2',
+                'coin': 'KEY_F12',
             },
         }
 
@@ -155,7 +157,7 @@ class Pcsx2x6(Emulator):
 
         # Config files
         _configure_reg(self.config_dir)
-        await _configure_ini(self.config_dir, self.config, self.rom, self.controllers, self.guns)
+        await _configure_ini(self.config_dir, self.config, self.rom, self.controllers, self.guns, self.wheels)
         _configure_audio(self.config_dir)
 
         if (dongle_source := self.rom_data_dongle_source) is not None and dongle_source.exists():
@@ -252,6 +254,7 @@ async def _configure_ini(
     rom: Path,
     controllers: Controllers,
     guns: Guns,
+    wheels: DeviceInfoMapping,
 ) -> None:
     config_file_name = config_directory / 'inis' / 'PCSX2.ini'
 
@@ -550,6 +553,7 @@ async def _configure_ini(
     pcsx2x6_ini_config.set('Hotkeys', 'ToggleSlowMotion', 'Keyboard/Shift & Keyboard/Backtab')
     pcsx2x6_ini_config.set('Hotkeys', 'ToggleTurbo', 'Keyboard/Tab')
     pcsx2x6_ini_config.set('Hotkeys', 'HoldTurbo', 'Keyboard/Period')
+    pcsx2x6_ini_config.set('Hotkeys', 'ShutdownVM', 'Keyboard/F10')
 
     # Clear old USB sections to prevent lingering device configuration values
     for usb_section in ('USB1', 'USB2'):
@@ -763,8 +767,13 @@ async def _configure_ini(
     for k, v in jvs_mappings.items():
         pcsx2x6_ini_config.set('JVS', k, v)
 
+    _add_binding(pcsx2x6_ini_config, 'JVS', 'Coin1', 'Keyboard/F12')
+
     if pad2 is not None:
         _add_binding(pcsx2x6_ini_config, 'JVS', 'Coin1', f'{p2_sdl}/Back')
+        if pad1 is not None and pad1.device_path in wheels:
+            _add_binding(pcsx2x6_ini_config, 'JVS', 'P1_Service', f'{p2_sdl}/LeftStick')
+            _add_binding(pcsx2x6_ini_config, 'JVS', 'ToggleTestMode', f'{p2_sdl}/RightStick')
 
     slots = _evdev_pointer_slots() if guns else {}
     crosshair = config.get_bool('pcsx2x6_crosshairs', guns_need_crosses(guns))
