@@ -30,7 +30,7 @@ OPENJKDF2_DEPENDENCIES += libfreeglut libglew libgtk3 libpng openal physfs proto
 OPENJKDF2_DEPENDENCIES += python3 sdl2 sdl2_mixer zlib
 
 OPENJKDF2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-OPENJKDF2_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold -lm -lstdc++"
+OPENJKDF2_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -lm -lstdc++"
 OPENJKDF2_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -I$(STAGING_DIR)/usr/include/SDL2 -I$(STAGING_DIR)/usr/include/GameNetworkingSockets"
 OPENJKDF2_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr/bin"
 OPENJKDF2_CONF_OPTS += -DPLAT_LINUX_64=ON
