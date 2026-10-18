@@ -55,30 +55,3 @@
          set_target_properties(discord-rpc PROPERTIES FOLDER Vendored)
      endif ()
  endif ()
---- a/vendor/stb/CMakeLists.txt
-+++ b/vendor/stb/CMakeLists.txt
-@@ -1,20 +1,15 @@
--add_library(stb OBJECT
--    stb/stb_image.h
--    stb/stb_image_write.h
--    stb/stb_vorbis.c
--
--    # Add more features as needed
-+# batocera - use system stb
-+find_path(STB_INCLUDE_DIR stb_vorbis.c PATH_SUFFIXES stb REQUIRED)
- 
-+add_library(stb OBJECT
-     ymir/stb_implementations.cpp
- )
- add_library(stb::stb ALIAS stb)
- 
- target_include_directories(stb
-     PUBLIC
--        "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/stb>"
-+        "${STB_INCLUDE_DIR}"
-         "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/ymir>"
--    PRIVATE
--        "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/stb>"
- )
- target_compile_features(stb PUBLIC cxx_std_20)
- target_compile_definitions(stb PUBLIC STB_VORBIS_HEADER_ONLY)

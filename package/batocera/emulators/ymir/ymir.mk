@@ -23,15 +23,14 @@ YMIR_GIT_SUBMODULES = YES
 YMIR_LICENSE = GPLv2
 YMIR_LICENSE_FILE = LICENSE
 YMIR_EMULATOR_INFO = ymir.emulator.yml
-YMIR_DEPENDENCIES += catch2 cereal cxxopts date fmt host-clang host-pkgconf
-YMIR_DEPENDENCIES += json-for-modern-cpp libcurl lz4 miniz nghttp3 ngtcp2 openssl
-YMIR_DEPENDENCIES += rtmidi sdl3 semver stb tomlplusplus xxhash zstd
+YMIR_DEPENDENCIES += catch2 cereal cxxopts fmt host-clang host-pkgconf json-for-modern-cpp
+YMIR_DEPENDENCIES += libcurl libdate lz4 miniz nghttp3 ngtcp2 openssl rtmidi
+YMIR_DEPENDENCIES += sdl3 semver stb tomlplusplus xxhash zstd
 
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 YMIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 YMIR_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
-YMIR_CONF_OPTS += -DStb_INCLUDE_DIR=$(STAGING_DIR)/usr/include/stb
 YMIR_CONF_OPTS += -DYmir_DEV_BUILD=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_DEVLOG=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_IMGUI_DEMO=OFF
