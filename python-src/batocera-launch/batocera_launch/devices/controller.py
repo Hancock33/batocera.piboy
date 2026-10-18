@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Final, Literal, Self, TypedDict, Unpack, cast
 
 from ..exceptions import BatoceraException
-from ..paths import ES_PLAYERS_INPUT, SYSTEM_ES_DIR, USER_ES_DIR
+from ..paths import SYSTEM_ES_DIR, USER_ES_DIR
 from .input import Input, InputDict, InputMapping
 
 if TYPE_CHECKING:
@@ -245,7 +245,7 @@ class Controller:
         cfg_roots = _InputConfigRoots(
             [
                 conffile
-                for conffile in (ES_PLAYERS_INPUT, USER_ES_DIR / 'es_input.cfg', SYSTEM_ES_DIR / 'es_input.cfg')
+                for conffile in (USER_ES_DIR / 'es_input.cfg', SYSTEM_ES_DIR / 'es_input.cfg')
                 if conffile.exists()
             ]
         )
