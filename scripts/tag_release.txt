@@ -76,6 +76,7 @@ theforceengine.mk
 tomlplusplus.mk
 trx.mk
 uthash.mk
+vice.mk
 vkquake.mk
 vkquake2.mk
 wine-custom.mk
