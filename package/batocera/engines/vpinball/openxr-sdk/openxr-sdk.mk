@@ -3,8 +3,8 @@
 # openxr-sdk
 #
 ################################################################################
-# Version: Commits on Sept 15, 2026
-OPENXR_SDK_VERSION = 3ed64d0f9bb680f24b80a085091e5c8fab38f7b7
+# Version: Commits on Oct 16, 2026
+OPENXR_SDK_VERSION = release-1.1.65
 OPENXR_SDK_SITE = $(call github,KhronosGroup,OpenXR-SDK-Source,$(OPENXR_SDK_VERSION))
 OPENXR_SDK_LICENSE = Apache-2.0
 OPENXR_SDK_LICENSE_FILES = LICENSE

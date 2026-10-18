@@ -292,12 +292,12 @@ Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|0de2a9ab466a133ac6e192a84bd761a1d81f5f14|Oct 03, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|v1.0.0|Sept 11, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|ce11780064a75fe23059fd3b61847ee18d477931|Oct 10, 2026
-Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|ce450bd89076df2819746d1716e9a8f52eafc465|Oct 14, 2026
+Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|ab5df65742a70afd63e0f25b8d59513ad75e883d|Oct 18, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|4908f45a5bd3b05369885b23f39465d589a32c1f|Oct 10, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|711ab21dcf9ad33d8db8339dfd3b1548bcc34cdb|Sept 10, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libmysofa](http://github.com/hoene/libmysofa)|648eed03472e6720a1ea45d1a1f86c4efb569ff9|Sept 08, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|3e85c5c3fa7d0b11147f590f136b03386d055129|Oct 15, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|5386aa17fbed2cf41470cea252c38ed77eac64e5|Oct 18, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a3147e6de90635d|Sept 09, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.1|Oct 14, 2026
 Engines|[libspatialaudio](http://github.com/videolan/libspatialaudio)|d149ed9744fd399b835c6f2920511f8cbcfce5ea|Jul 01, 2026
@@ -307,7 +307,7 @@ Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.11.0|Jun 01, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|6f07fd65cb95b88ff73e905bf78a1a8b1ddf6049|Oct 18, 2026
 Engines|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|f32e415aea6797d261d6b470dcf8bf18727341c2|Jun 06, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|f018a71a8a2a63377acde15366625e8effeae05b|Oct 17, 2026
-Engines|[openxr-sdk](http://github.com/KhronosGroup/OpenXR-SDK-Source)|3ed64d0f9bb680f24b80a085091e5c8fab38f7b7|Sept 15, 2026
+Engines|[openxr-sdk](http://github.com/KhronosGroup/OpenXR-SDK-Source)|release-1.1.65|Oct 16, 2026
 Engines|[python-pygame2](http://github.com/pygame-community/pygame-ce)|2.5.8|Aug 09, 2026
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v2.9.9|Aug 12, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|v0.7.1|Oct 07, 2026
@@ -316,7 +316,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4|Oct 05, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|5b1b77f3ae94203208d26ccfb183ef7b629218a1|Oct 18, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|098e213d6ae161c0b3ad890a99cc8f55fe8f965d|Oct 15, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|c8805730338013ad824d4b88b6c6276b13085282|Oct 18, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20260916|Sept 16, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026

@@ -46,6 +46,7 @@ ngtcp2.mk
 ntfs-plus.mk
 openabl.mk
 openmohaa.mk
+openxr-sdk.mk
 ossp.mk
 pigpio-rpi.mk
 plutosvg.mk

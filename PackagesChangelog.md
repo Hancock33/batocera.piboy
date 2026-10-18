@@ -13,6 +13,9 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|de058ab1a1fa0a0257737
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.7-rc.3|Oct 18, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261018|Oct 18, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|c68eea5598d077385550d500ab4ae8a2496ba84e|Oct 18, 2026
+Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|ab5df65742a70afd63e0f25b8d59513ad75e883d|Oct 18, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|5386aa17fbed2cf41470cea252c38ed77eac64e5|Oct 18, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|c8805730338013ad824d4b88b6c6276b13085282|Oct 18, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261018|Oct 18, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|d27635ab5418f7dbadeb9df75f885f301f4ac4a6|Oct 18, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|e1e74050bf9e6cb5e65260186ccff427e66db6b0|Oct 18, 2026
@@ -55,6 +58,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|b4e35ed3b71b9781add974308d8
 Ports|[avp](http://github.com/atsb/NakedAVP)|d3c8afc44289a7a255a3cc1a317555255e9ae48a|Oct 16, 2026
 Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|2.5.0|Oct 16, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|a0be5777495b0ddb28f8452c4b7276d308d4b3ee|Oct 16, 2026
+Engines|[openxr-sdk](http://github.com/KhronosGroup/OpenXR-SDK-Source)|release-1.1.65|Oct 16, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0-alpha3|Oct 16, 2026
 Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|550f982c2528d0913e7c73fc7f3bff2717bd31be|Oct 16, 2026
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|5466da350f2fd143ee3e7b921e8c33aee64f7065|Oct 16, 2026
@@ -71,8 +75,6 @@ Ports|[opengoal](http://github.com/open-goal/jak-project)|v0.3.9|Oct 15, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|c62d9d343981d50f6ed176412b85d94c61b578b5|Oct 15, 2026
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|ad9181e78448b7c3c84a52668380141d8889260d|Oct 15, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.166.9561-590|Oct 15, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|3e85c5c3fa7d0b11147f590f136b03386d055129|Oct 15, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|098e213d6ae161c0b3ad890a99cc8f55fe8f965d|Oct 15, 2026
 Network|[tqftpserv](http://github.com/linux-msm/tqftpserv)|b31de6db4f31d09119293203d39636b827f16321|Oct 15, 2026
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|e436e9b85374def58d211df7f78880f0f4a917b4|Oct 15, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.4.1|Oct 14, 2026
@@ -82,7 +84,6 @@ Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.2-Piers|Oct 1
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.70.0|Oct 14, 2026
 Utils|[imgui](http://github.com/ocornut/imgui)|v1.93.0|Oct 14, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261014-proton|Oct 14, 2026
-Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|ce450bd89076df2819746d1716e9a8f52eafc465|Oct 14, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.1|Oct 14, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.4.1|Oct 14, 2026
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|4aef191fef72be539ccc07ada21c6e0a65360eb7|Oct 14, 2026
@@ -225,7 +226,6 @@ Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|5a
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|f11ba9f0b21ba8fc15153d50a2a1ae31ab1cf8f7|Sept 16, 2026
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.1.1|Sept 15, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|f0a7b9f391b0e9bc14962b114f7da1ba553060be|Sept 15, 2026
-Engines|[openxr-sdk](http://github.com/KhronosGroup/OpenXR-SDK-Source)|3ed64d0f9bb680f24b80a085091e5c8fab38f7b7|Sept 15, 2026
 Network|[qrtr](http://github.com/linux-msm/qrtr)|29e36ae164389580a0f8ea7a7fdb728140ae978d|Sept 15, 2026
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20260914|Sept 14, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14388|Sept 14, 2026
