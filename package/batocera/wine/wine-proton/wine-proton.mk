@@ -13,7 +13,7 @@ WINE_PROTON_SELINUX_MODULES = wine
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
 HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
-ifeq ($(BR_CMAKE_USE_CLANG),y)
+ifeq ($(BR2_CMAKE_USE_CLANG),y)
     HOST_WINE_PROTON_DEPENDENCIES += host-clang host-lld
 endif
 
