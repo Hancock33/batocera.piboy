@@ -3,8 +3,8 @@
 # libretro-bsnes-jg
 #
 ################################################################################
-# Version: Commits on Sept 03, 2026
-LIBRETRO_BSNES_JG_VERSION = aa11568fff267fca3424cbdfa6da788ddc42e468
+# Version: Commits on Oct 14, 2026
+LIBRETRO_BSNES_JG_VERSION = 4aef191fef72be539ccc07ada21c6e0a65360eb7
 LIBRETRO_BSNES_JG_SITE = $(call github,libretro,bsnes-jg,$(LIBRETRO_BSNES_JG_VERSION))
 LIBRETRO_BSNES_JG_LICENSE = GPL-3.0
 LIBRETRO_BSNES_JG_EMULATOR_INFO = bsnes-jg.libretro.core.yml

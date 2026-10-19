@@ -3,8 +3,8 @@
 # jazz2-native
 #
 ################################################################################
-# Version: Commits on Oct 13, 2026
-JAZZ2_NATIVE_VERSION = 26dbbd2d2cbdbc222244d25f974c2618e3b46d44
+# Version: Commits on Oct 17, 2026
+JAZZ2_NATIVE_VERSION = c18381c246271d76c70af723a8ab5615028e3c6c
 JAZZ2_NATIVE_SITE =  $(call github,deathkiller,jazz2-native,$(JAZZ2_NATIVE_VERSION))
 JAZZ2_NATIVE_LICENSE = GPL-3.0
 JAZZ2_NATIVE_LICENSE_FILE = LICENSE
@@ -23,7 +23,7 @@ ifeq ($(BR2_PACKAGE_XORG7)$(BR2_PACKAGE_HAS_LIBGL),yy)
     JAZZ2_NATIVE_CONF_OPTS += -DNCINE_PREFERRED_BACKEND=GLFW
 else
     JAZZ2_NATIVE_CONF_OPTS += -DNCINE_PREFERRED_BACKEND=SDL2
-    JAZZ2_NATIVE_CONF_OPTS += -DNCINE_WITH_OPENGLES=ON
+    JAZZ2_NATIVE_CONF_OPTS += -DNCINE_RHI_GL_PROFILE=ES3
 endif
 
 $(eval $(cmake-package))

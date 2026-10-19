@@ -76,7 +76,6 @@ touchegg.mk
 unclutter.mk
 uzdoom.mk
 vcmi.mk
-vice.mk
 vkd3d-proton.mk
 wf-recorder.mk
 wildmidi.mk

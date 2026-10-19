@@ -1,6 +1,7 @@
 config BR2_PACKAGE_UBOOT_ANBERNIC_H700
-    bool "uboot-anbernic-h700"
-    help
-      U-Boot for the Anbernic H700 devices.
+	bool "uboot-anbernic-h700"
 
-      https://u-boot.org/
+	help
+	  U-Boot for the Anbernic H700 devices.
+
+	  https://u-boot.org/

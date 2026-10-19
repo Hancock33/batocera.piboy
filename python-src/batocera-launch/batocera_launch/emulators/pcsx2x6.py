@@ -14,10 +14,12 @@ from batocera_common.vulkan import get_vulkan_info
 from batocera_launch import (
     Command,
     Controllers,
+    DeviceInfoMapping,
     Emulator,
     Guns,
     HotkeysContext,
     SystemConfig,
+    get_device_info,
     guns_need_crosses,
 )
 from batocera_launch.paths import DATAINIT_DIR, configure_emulator
@@ -50,7 +52,7 @@ def _gfx_ratio_from_config(config: SystemConfig) -> str:
     ratio = config.get('pcsx2x6_ratio')
     if ratio == '16:9':
         return '16:9'
-    if ratio == 'full':
+    if ratio == 'Stretch':
         return 'Stretch'
     return '4:3'
 
@@ -75,13 +77,14 @@ class Pcsx2x6(Emulator):
         return {
             'name': 'pcsx2x6',
             'keys': {
-                'exit': ['KEY_LEFTALT', 'KEY_F4'],
+                'exit': 'KEY_F10',
                 'menu': 'KEY_ESC',
                 'pause': 'KEY_ESC',
                 'save_state': 'KEY_F1',
                 'restore_state': 'KEY_F3',
                 'previous_slot': ['KEY_LEFTSHIFT', 'KEY_F2'],
                 'next_slot': 'KEY_F2',
+                'coin': 'KEY_F12',
             },
         }
 
@@ -94,6 +97,57 @@ class Pcsx2x6(Emulator):
             return 16 / 9
         return 4 / 3
 
+    @cached_property
+    def rom_ini(self) -> CaseSensitiveConfigParser | None:
+        acgame = CaseSensitiveConfigParser(interpolation=None, strict=False)
+
+        try:
+            acgame.read(self.rom, encoding='utf-8')
+        except Exception as e:
+            _logger.warning('Could not read %s: %s', self.rom, e)
+            return None
+
+        return acgame
+
+    @cached_property
+    def rom_gameid(self) -> str:
+        if self.rom_ini is None:
+            return ''
+
+        return self.rom_ini.get('game', 'gameid', fallback='')
+
+    @cached_property
+    def rom_data_subdir(self) -> str:
+        if self.rom_ini is None:
+            return self.rom_gameid
+
+        return self.rom_ini.get('data', 'subdir', fallback=self.rom_gameid)
+
+    @cached_property
+    def rom_data_dongle_source(self) -> Path | None:
+        if self.rom_ini is None:
+            return None
+
+        name = self.rom_ini.get('data', 'dongle', fallback=f'{self.rom_gameid}.ps2')
+        return self.rom.parent / self.rom_data_subdir / name
+
+    @cached_property
+    def rom_sram(self) -> Path | None:
+        if self.rom_ini is None:
+            return None
+
+        return self.rom.parent / self.rom_data_subdir / self.rom_ini.get('data', 'sram', fallback='sram.bin')
+
+    def precalibrate_guns(self) -> None:
+        if self.system != 'namco2x6':
+            return
+
+        src = self.gun_precalibration_dir / self.rom.stem / 'sram.bin'
+
+        if self.rom_sram is not None and src.exists() and not self.rom_sram.exists():
+            self.rom_sram.parent.mkdir(parents=True, exist_ok=True)
+            src.copy(self.rom_sram)
+
     async def configure(self) -> Command:
         pcsx2_patches = _PCSX2X6_BIOS / 'patches.zip'
 
@@ -104,9 +158,13 @@ class Pcsx2x6(Emulator):
 
         # Config files
         _configure_reg(self.config_dir)
-        await _configure_ini(self.config_dir, self.config, self.rom, self.controllers, self.guns)
+        await _configure_ini(self.config_dir, self.config, self.rom, self.controllers, self.guns, self.wheels)
         _configure_audio(self.config_dir)
-        _install_dongle(self.rom)
+
+        if (dongle_source := self.rom_data_dongle_source) is not None and dongle_source.exists():
+            # pcsx2x6 only looks for the dongle in its memory card folder
+            _PCSX2X6_MEMCARDS.mkdir(parents=True, exist_ok=True)
+            shutil.copy(dongle_source, _PCSX2X6_MEMCARDS / dongle_source.name)
 
         command_array: list[str | Path] = (
             [_PCSX2X6_BIN_DIR / 'pcsx2x6-qt']
@@ -148,23 +206,6 @@ def _configure_reg(config_directory: Path) -> None:
         f.write(f'SettingsFolder={config_directory / "inis"}\n')
         f.write(f'Install_Dir={_PCSX2X6_BIN_DIR}\n')
         f.write('RunWizard=0\n')
-
-
-def _install_dongle(rom: Path) -> None:
-    # pcsx2x6 only looks for the dongle in its memory card folder
-    acgame = CaseSensitiveConfigParser(interpolation=None, strict=False)
-    try:
-        acgame.read(rom, encoding='utf-8')
-    except Exception as e:
-        _logger.warning('Could not read %s: %s', rom, e)
-        return
-
-    gameid = acgame.get('game', 'gameid', fallback='')
-    dongle = acgame.get('data', 'dongle', fallback=f'{gameid}.ps2')
-    source = rom.parent / acgame.get('data', 'subdir', fallback=gameid) / dongle
-    if source.is_file():
-        _PCSX2X6_MEMCARDS.mkdir(parents=True, exist_ok=True)
-        shutil.copy(source, _PCSX2X6_MEMCARDS / dongle)
 
 
 def _evdev_pointer_slots() -> dict[str, int]:
@@ -214,6 +255,7 @@ async def _configure_ini(
     rom: Path,
     controllers: Controllers,
     guns: Guns,
+    wheels: DeviceInfoMapping,
 ) -> None:
     config_file_name = config_directory / 'inis' / 'PCSX2.ini'
 
@@ -307,19 +349,15 @@ async def _configure_ini(
         )
         pcsx2x6_ini_config.set(
             'Achievements',
-            'PrimedIndicators',
+            'Overlays',
             config.get_bool('retroachievements.challenge_indicators', return_values=('true', 'false')),
         )
-        pcsx2x6_ini_config.set(
-            'Achievements',
-            'RichPresence',
-            config.get_bool('retroachievements.richpresence', return_values=('true', 'false')),
-        )
-        pcsx2x6_ini_config.set(
-            'Achievements',
-            'Leaderboards',
-            config.get_bool('retroachievements.leaderboards', return_values=('true', 'false')),
-        )
+        for key in ('LeaderboardNotifications', 'LBOverlays'):
+            pcsx2x6_ini_config.set(
+                'Achievements',
+                key,
+                config.get_bool('retroachievements.leaderboards', return_values=('true', 'false')),
+            )
         pcsx2x6_ini_config.set(
             'Achievements', 'EncoreMode', config.get_bool('retroachievements.encore', return_values=('true', 'false'))
         )
@@ -329,7 +367,6 @@ async def _configure_ini(
             config.get_bool('retroachievements.unofficial', return_values=('true', 'false')),
         )
     # set other settings
-    pcsx2x6_ini_config.set('Achievements', 'TestMode', 'false')
     pcsx2x6_ini_config.set('Achievements', 'Notifications', 'true')
     pcsx2x6_ini_config.set('Achievements', 'SoundEffects', 'true')
 
@@ -517,6 +554,7 @@ async def _configure_ini(
     pcsx2x6_ini_config.set('Hotkeys', 'ToggleSlowMotion', 'Keyboard/Shift & Keyboard/Backtab')
     pcsx2x6_ini_config.set('Hotkeys', 'ToggleTurbo', 'Keyboard/Tab')
     pcsx2x6_ini_config.set('Hotkeys', 'HoldTurbo', 'Keyboard/Period')
+    pcsx2x6_ini_config.set('Hotkeys', 'ShutdownVM', 'Keyboard/F10')
 
     # Clear old USB sections to prevent lingering device configuration values
     for usb_section in ('USB1', 'USB2'):
@@ -730,8 +768,16 @@ async def _configure_ini(
     for k, v in jvs_mappings.items():
         pcsx2x6_ini_config.set('JVS', k, v)
 
+    _add_binding(pcsx2x6_ini_config, 'JVS', 'Coin1', 'Keyboard/F12')
+
     if pad2 is not None:
         _add_binding(pcsx2x6_ini_config, 'JVS', 'Coin1', f'{p2_sdl}/Back')
+
+    wheel_paths = set(wheels) | {path for path, device in get_device_info().items() if device.is_wheel}
+    panel = next((pad for pad in controllers if pad.device_path not in wheel_paths), None)
+    if panel is not None and panel is not pad1:
+        _add_binding(pcsx2x6_ini_config, 'JVS', 'P1_Service', f'SDL-{panel.index}/LeftStick')
+        _add_binding(pcsx2x6_ini_config, 'JVS', 'ToggleTestMode', f'SDL-{panel.index}/RightStick')
 
     slots = _evdev_pointer_slots() if guns else {}
     crosshair = config.get_bool('pcsx2x6_crosshairs', guns_need_crosses(guns))

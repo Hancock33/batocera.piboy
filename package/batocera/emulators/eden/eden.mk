@@ -3,8 +3,8 @@
 # eden
 #
 ################################################################################
-# Version: Commits on Oct 13, 2026
-EDEN_VERSION = 218c6705d950635bc18f8458d738a1996fb592b6
+# Version: Commits on Oct 19, 2026
+EDEN_VERSION = 989768aa46720e3fcab9e2111e3ddd70819c382b
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD=git
 EDEN_GIT_SUBMODULES=YES
@@ -13,8 +13,6 @@ EDEN_EMULATOR_INFO = eden.emulator.yml
 EDEN_DEPENDENCIES += boost catch2 enet ffmpeg fmt json-for-modern-cpp libva
 EDEN_DEPENDENCIES += libzip lz4 mbedtls opus sdl3 zlib zstd qt6base qt6charts qt6svg qt6tools
 EDEN_SUPPORTS_IN_SOURCE_BUILD = NO
-
-EDEN_CONF_ENV += LDFLAGS=-lpthread ARCHITECTURE_x86_64=1
 
 EDEN_CONF_OPTS += -DARCHITECTURE_x86_64=ON
 EDEN_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF

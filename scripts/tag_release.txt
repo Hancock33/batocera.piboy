@@ -44,7 +44,9 @@ mt32emu.mk
 nghttp3.mk
 ngtcp2.mk
 ntfs-plus.mk
+openabl.mk
 openmohaa.mk
+openxr-sdk.mk
 ossp.mk
 pigpio-rpi.mk
 plutosvg.mk
@@ -56,7 +58,6 @@ python-nfcpy.mk
 python-pygame2.mk
 python-pyxel.mk
 rgbds.mk
-rocknix-abl.mk
 ruffle.mk
 scummvm.mk
 sdl12-compat.mk
@@ -76,6 +77,7 @@ theforceengine.mk
 tomlplusplus.mk
 trx.mk
 uthash.mk
+vice.mk
 vkquake.mk
 vkquake2.mk
 wine-custom.mk

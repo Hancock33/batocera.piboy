@@ -15,6 +15,7 @@ define XPI_GAMECON_RPI_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(XPI_GAMECON_RPI_CP_PATH)/piboy-dmgcontrol.py		$(TARGET_DIR)/usr/bin/piboy-dmgcontrol.py
 	$(INSTALL) -D -m 0755 $(XPI_GAMECON_RPI_CP_PATH)/piboy_powerswitch.rules	$(TARGET_DIR)/etc/udev/rules.d/60-piboy_powerswitch.rules
 	$(INSTALL) -D -m 0755 $(XPI_GAMECON_RPI_CP_PATH)/piboy_keys					$(TARGET_DIR)/usr/bin/piboy_keys
+	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system
 	cp -pvr $(XPI_GAMECON_RPI_CP_PATH)/piboy-fan.conf $(TARGET_DIR)/usr/share/batocera/datainit/system
 	cp -pvr $(XPI_GAMECON_RPI_CP_PATH)/piboy-led.conf $(TARGET_DIR)/usr/share/batocera/datainit/system
 	cp -pvr $(XPI_GAMECON_RPI_CP_PATH)/piboy-power.conf $(TARGET_DIR)/usr/share/batocera/datainit/system

@@ -5,7 +5,7 @@ config BR2_PACKAGE_NGTCP2
 	select BR2_PACKAGE_LIBOPENSSL_ENABLE_QUIC
 	select BR2_PACKAGE_NGHTTP3
 
-	  help
+	help
 	  ngtcp2 project is an effort to implement IETF QUIC protocol.
 
 	  https://nghttp2.org/ngtcp2/

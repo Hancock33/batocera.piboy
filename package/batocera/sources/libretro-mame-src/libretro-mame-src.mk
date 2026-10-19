@@ -3,8 +3,8 @@
 # libretro-mame-src
 #
 ################################################################################
-# Version: Commits on Oct 13, 2026
-LIBRETRO_MAME_SRC_VERSION = 5f3917e6f7a0c2aa254c8747c1ff89fba1ab02da
+# Version: Commits on Oct 17, 2026
+LIBRETRO_MAME_SRC_VERSION = 9c51697d8a5d941868a4297e783956339c906c40
 LIBRETRO_MAME_SRC_SITE = $(call github,hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_DEPENDENCIES = host-python3 alsa-lib fontconfig sdl2 sdl2_ttf zlib
 LIBRETRO_MAME_SRC_LICENSE = MAME
@@ -31,7 +31,7 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 	CCACHE_SLOPPINESS="pch_defines,time_macros,include_file_ctime,include_file_mtime" \
 	CFLAGS="--sysroot=$(STAGING_DIR) -pipe -w" \
 	CXXFLAGS="--sysroot=$(STAGING_DIR) -pipe -w" \
-	LDFLAGS="--sysroot=$(STAGING_DIR)" \
+	LDFLAGS="$(TARGET_LDFLAGS) --sysroot=$(STAGING_DIR)" \
 	PATH="$(HOST_DIR)/bin:$$PATH" \
 	PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 	PKG_CONFIG="$(HOST_DIR)/bin/pkg-config --define-prefix" \

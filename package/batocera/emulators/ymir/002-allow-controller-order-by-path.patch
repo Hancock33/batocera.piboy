@@ -1,8 +1,8 @@
 diff --git a/apps/ymir-sdl3/src/app/app.cpp b/apps/ymir-sdl3/src/app/app.cpp
-index 47b356d2..7dba212d 100644
+index 38e290c1..d7109be2 100644
 --- a/apps/ymir-sdl3/src/app/app.cpp
 +++ b/apps/ymir-sdl3/src/app/app.cpp
-@@ -1182,53 +1182,10 @@ void App::RunEmulator() {
+@@ -1314,53 +1314,10 @@ void App::RunEmulator() {
  
      m_romService.ReloadSDLGameControllerDatabases(false);
  
@@ -57,7 +57,7 @@ index 47b356d2..7dba212d 100644
  
      std::array<GUIEvent, 64> evts{};
  
-@@ -1487,26 +1444,32 @@ void App::RunEmulator() {
+@@ -1623,26 +1580,32 @@ void App::RunEmulator() {
  
              case SDL_EVENT_GAMEPAD_ADDED: //
              {
@@ -101,7 +101,7 @@ index 47b356d2..7dba212d 100644
                  }
                  break;
              }
-@@ -1519,7 +1482,7 @@ void App::RunEmulator() {
+@@ -1655,7 +1618,7 @@ void App::RunEmulator() {
                  break;
              case SDL_EVENT_GAMEPAD_AXIS_MOTION: //
              {
@@ -110,7 +110,7 @@ index 47b356d2..7dba212d 100644
                  const float value = evt.gaxis.value < 0 ? evt.gaxis.value / 32768.0f : evt.gaxis.value / 32767.0f;
                  inputContext.ProcessPrimitive(playerIndex, input::SDL3ToGamepadAxis1D((SDL_GamepadAxis)evt.gaxis.axis),
                                                value);
-@@ -1528,7 +1491,7 @@ void App::RunEmulator() {
+@@ -1664,7 +1627,7 @@ void App::RunEmulator() {
              case SDL_EVENT_GAMEPAD_BUTTON_DOWN: [[fallthrough]];
              case SDL_EVENT_GAMEPAD_BUTTON_UP: //
              {
@@ -119,7 +119,7 @@ index 47b356d2..7dba212d 100644
                  inputContext.ProcessPrimitive(
                      playerIndex, input::SDL3ToGamepadButton((SDL_GamepadButton)evt.gbutton.button), evt.gbutton.down);
                  break;
-@@ -3337,4 +3300,42 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
+@@ -3687,4 +3650,42 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
      app->m_context.EnqueueEvent(events::emu::ReceiveMidiInput(delta, std::move(*msg)));
  }
  
@@ -163,24 +163,18 @@ index 47b356d2..7dba212d 100644
 +
  } // namespace app
 diff --git a/apps/ymir-sdl3/src/app/app.hpp b/apps/ymir-sdl3/src/app/app.hpp
-index edab0f91..48a3173b 100644
+index 53d93988..f67423ce 100644
 --- a/apps/ymir-sdl3/src/app/app.hpp
 +++ b/apps/ymir-sdl3/src/app/app.hpp
-@@ -27,6 +27,7 @@
+@@ -21,12 +21,72 @@
+ #include "services/update_checker_service.hpp"
+ #include "services/window_manager_service.hpp"
  
- #include <SDL3/SDL_dialog.h>
- #include <SDL3/SDL_properties.h>
 +#include <SDL3/SDL_gamepad.h>
- 
- #include <imgui.h>
- 
-@@ -35,12 +36,70 @@
- #include <set>
- #include <string_view>
++
+ #include <chrono>
  #include <thread>
 +#include <unordered_map>
- #include <unordered_set>
- #include <utility>
  #include <vector>
  
  namespace app {
@@ -245,7 +239,7 @@ index edab0f91..48a3173b 100644
  class App {
  public:
      App();
-@@ -81,6 +140,12 @@ private:
+@@ -73,6 +133,12 @@ private:
  
      // Rewind bar
      std::chrono::steady_clock::time_point m_rewindBarFadeTimeBase;
@@ -259,10 +253,10 @@ index edab0f91..48a3173b 100644
  
  } // namespace app
 diff --git a/apps/ymir-sdl3/src/app/settings.cpp b/apps/ymir-sdl3/src/app/settings.cpp
-index b09a17e2..94012aa8 100644
+index 534f54e0..e5b71d86 100644
 --- a/apps/ymir-sdl3/src/app/settings.cpp
 +++ b/apps/ymir-sdl3/src/app/settings.cpp
-@@ -1339,6 +1339,7 @@ SettingsLoadResult Settings::Load(const std::filesystem::path &path) {
+@@ -1402,6 +1402,7 @@ SettingsLoadResult Settings::Load(const std::filesystem::path &path) {
              Input::Port &portSettings = input.ports[portIndex];
              if (auto tblPort = tblInput[name]) {
                  Parse(tblPort, "PeripheralType", portSettings.type);
@@ -271,10 +265,10 @@ index b09a17e2..94012aa8 100644
                  auto parseControlPadBinds = [&](auto &tblBinds) {
                      Parse(tblBinds, "A", portSettings.controlPad.binds.a);
 diff --git a/apps/ymir-sdl3/src/app/settings.hpp b/apps/ymir-sdl3/src/app/settings.hpp
-index 68fb9a51..137cab1e 100644
+index cc13ede3..3c37c841 100644
 --- a/apps/ymir-sdl3/src/app/settings.hpp
 +++ b/apps/ymir-sdl3/src/app/settings.hpp
-@@ -291,6 +291,7 @@ struct Settings {
+@@ -295,6 +295,7 @@ struct Settings {
      struct Input {
          struct Port {
              util::Observable<ymir::peripheral::PeripheralType> type;

@@ -3,8 +3,8 @@
 # azahar
 #
 ################################################################################
-# Version: Commits on Oct 10, 2026
-AZAHAR_VERSION = 2127.0-alpha1
+# Version: Commits on Oct 16, 2026
+AZAHAR_VERSION = 2127.0-alpha3
 AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
 AZAHAR_SITE_METHOD=git
 AZAHAR_GIT_SUBMODULES = YES
@@ -59,8 +59,6 @@ ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
 else
     AZAHAR_CONF_OPTS += -DENABLE_VULKAN=OFF
 endif
-
-AZAHAR_CONF_ENV += LDFLAGS=-lpthread
 
 define AZAHAR_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin

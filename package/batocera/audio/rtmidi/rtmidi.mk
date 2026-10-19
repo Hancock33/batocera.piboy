@@ -3,8 +3,8 @@
 # rtmidi
 #
 ################################################################################
-# Version: Commits on Aug 03, 2023
-RTMIDI_VERSION = 6.0.0
+# Version: Commits on Oct 15, 2026
+RTMIDI_VERSION = 6.1.0
 RTMIDI_SITE = $(call github,thestk,rtmidi,$(RTMIDI_VERSION))
 RTMIDI_LICENSE = PROPRIETARY
 RTMIDI_LICENSE_FILE = LICENSE

@@ -1,8 +1,8 @@
 diff --git a/drivers/gpu/drm/i915/display/intel_display_params.c b/drivers/gpu/drm/i915/display/intel_display_params.c
-index 2aed110c5b09..b0c6528d05d6 100644
+index ca0ef466bb10..313f30746eaf 100644
 --- a/drivers/gpu/drm/i915/display/intel_display_params.c
 +++ b/drivers/gpu/drm/i915/display/intel_display_params.c
-@@ -139,6 +139,13 @@ intel_display_param_named_unsafe(enable_dmc_wl, int, 0400,
+@@ -143,6 +143,13 @@ intel_display_param_named_unsafe(enable_dmc_wl, int, 0400,
  	"(-1=use per-chip default, 0=disabled, 1=enabled, 2=match any register, 3=always locked) "
  	"Default: -1");
  
@@ -17,10 +17,10 @@ index 2aed110c5b09..b0c6528d05d6 100644
  static void _param_print_bool(struct drm_printer *p, const char *driver_name,
  			      const char *name, bool val)
 diff --git a/drivers/gpu/drm/i915/display/intel_display_params.h b/drivers/gpu/drm/i915/display/intel_display_params.h
-index b95ecf728daa..d053fcee1e37 100644
+index 16759e94c025..906d6a86a8d6 100644
 --- a/drivers/gpu/drm/i915/display/intel_display_params.h
 +++ b/drivers/gpu/drm/i915/display/intel_display_params.h
-@@ -50,6 +50,7 @@ struct drm_printer;
+@@ -51,6 +51,7 @@ struct drm_printer;
  	param(bool, psr_safest_params, false, 0400) \
  	param(bool, enable_psr2_sel_fetch, true, 0400) \
  	param(int, enable_dmc_wl, -1, 0400) \

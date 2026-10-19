@@ -10,7 +10,7 @@ config BR2_PACKAGE_XENIA_EDGE
 	select BR2_PACKAGE_VULKAN_LOADER
 	select BR2_PACKAGE_WXWIDGETS
 
-	  help
+	help
 	  Xenia is an open source research project for emulating
 	  Xbox 360 games on modern PCs.
 

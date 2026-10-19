@@ -1,11 +1,11 @@
 config BR2_PACKAGE_HURRICAN
 	bool "hurrican"
 	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_SDL2_MIXER
-	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_LIBEPOXY
 	select BR2_PACKAGE_LIBOPENMPT
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_IMAGE
+	select BR2_PACKAGE_SDL2_MIXER
 
 	help
 	  A fork of Hurrican, freeware jump and shoot game created

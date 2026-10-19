@@ -3,8 +3,8 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Oct 13, 2026
-VITA3K_VERSION = 20df7f4ea7e2e7659c8c1e25b3c47e3063b69b57
+# Version: Commits on Oct 19, 2026
+VITA3K_VERSION = fe2f0a90c72380d91d211ee42a73ed45ac5214d4
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD = git
 VITA3K_GIT_SUBMODULES = YES
@@ -17,7 +17,7 @@ VITA3K_EMULATOR_INFO = vita3k.emulator.yml
 VITA3K_SUPPORTS_IN_SOURCE_BUILD = NO
 
 VITA3K_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-VITA3K_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-no-pie -lm -lstdc++"
+VITA3K_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -no-pie -lm -lstdc++"
 VITA3K_CONF_OPTS += -DSDL_HIDAPI=OFF
 VITA3K_CONF_OPTS += -DUSE_DISCORD_RICH_PRESENCE=OFF
 VITA3K_CONF_OPTS += -DVITA3K_FORCE_SYSTEM_BOOST=ON
@@ -34,7 +34,6 @@ endif
 
 define VITA3K_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/vita3k/
-	$(TARGET_STRIP) $(@D)/buildroot-build/bin/Vita3K
 	cp -R $(@D)/buildroot-build/bin/* $(TARGET_DIR)/usr/bin/vita3k/
 endef
 

@@ -3,8 +3,8 @@
 # opengoal
 #
 ################################################################################
-# Version: Commits on Sept 20, 2026
-OPENGOAL_VERSION = v0.3.8
+# Version: Commits on Oct 15, 2026
+OPENGOAL_VERSION = v0.3.9
 OPENGOAL_SITE = $(call github,open-goal,jak-project,$(OPENGOAL_VERSION))
 OPENGOAL_LICENSE = ISC
 OPENGOAL_LICENSE_FILES = LICENSE

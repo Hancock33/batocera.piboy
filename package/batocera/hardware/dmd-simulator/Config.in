@@ -1,11 +1,11 @@
 config BR2_PACKAGE_DMD_SIMULATOR_PLAYER
 	bool "dmd-simulator-player"
-	select BR2_PACKAGE_PYTHON_NUMPY
-	select BR2_PACKAGE_PYTHON_PILLOW
 	select BR2_PACKAGE_JQ      # for scripts
 	select BR2_PACKAGE_LIBRSVG # for scripts
-	select BR2_PACKAGE_PYTHON_NUMPY_ARCH_SUPPORTS
 	select BR2_PACKAGE_PYSDL2
+	select BR2_PACKAGE_PYTHON_NUMPY
+	select BR2_PACKAGE_PYTHON_NUMPY_ARCH_SUPPORTS
+	select BR2_PACKAGE_PYTHON_PILLOW
 
 	help
 	  dmd-simulator player command that can send image to the
@@ -13,11 +13,11 @@ config BR2_PACKAGE_DMD_SIMULATOR_PLAYER
 
 config BR2_PACKAGE_DMD_SIMULATOR
 	bool "dmd-simulator"
-	select BR2_PACKAGE_PYTHON_NUMPY
-	select BR2_PACKAGE_PYTHON_WEBSOCKETS
-	select BR2_PACKAGE_PYTHON_URLLIB3
 	select BR2_PACKAGE_PYTHON_AIOHTTP
+	select BR2_PACKAGE_PYTHON_NUMPY
 	select BR2_PACKAGE_PYTHON_NUMPY_ARCH_SUPPORTS
+	select BR2_PACKAGE_PYTHON_URLLIB3
+	select BR2_PACKAGE_PYTHON_WEBSOCKETS
 
 	help
 	  dmd-simulator is a daemon that simulate a real dmd

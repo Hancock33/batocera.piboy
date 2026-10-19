@@ -3,8 +3,8 @@
 # wine-custom
 #
 ################################################################################
-# Version: Commits on Oct 03, 2026
-WINE_CUSTOM_VERSION = 11.19
+# Version: Commits on Oct 17, 2026
+WINE_CUSTOM_VERSION = 11.20
 WINE_CUSTOM_SITE = $(call github,Hancock33,wine-tkg-batocera,$(WINE_CUSTOM_VERSION))
 WINE_CUSTOM_LICENSE = LGPL-2.1+
 WINE_CUSTOM_LICENSE_FILES = COPYING.LIB LICENSE
@@ -26,7 +26,7 @@ WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 HOST_WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 
 # Wine needs its own directory structure and tools for cross compiling
-WINE_CUSTOM_CONF_OPTS = LDFLAGS="-Wl,--no-as-needed -lm" \
+WINE_CUSTOM_CONF_OPTS = \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-custom-$(WINE_CUSTOM_VERSION) \
 	--disable-tests \
 	--without-capi \

@@ -1,12 +1,13 @@
 diff --git a/cmake/StandardProjectSettings.cmake b/cmake/StandardProjectSettings.cmake
-index 743ab51b..5bdbd579 100644
+index eff28a67..efdf6ea2 100644
 --- a/cmake/StandardProjectSettings.cmake
 +++ b/cmake/StandardProjectSettings.cmake
-@@ -125,7 +125,6 @@ if(AMIBERRY_GNU_LIKE_COMPILER)
-             # GNU ld-only flags (do not work on FreeBSD or Windows)
-             if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-                 list(APPEND AMIBERRY_LINK_OPTIONS
--                    "-Wl,--sort-common=descending"
-                     "-Wl,--hash-style=gnu"
-                 )
-             endif()
+@@ -116,7 +116,7 @@ if(NOT MSVC)
+ 
+         # lld (FreeBSD's linker) rejects --sort-common=descending
+         if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+-            list(APPEND release_link_options "-Wl,--sort-common=descending" "-Wl,--hash-style=gnu")
++            list(APPEND release_link_options "-Wl,--hash-style=gnu")
+         endif()
+         list(APPEND AMIBERRY_LINK_OPTIONS "$<$<CONFIG:Release>:${release_link_options}>")
+     else()

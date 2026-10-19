@@ -3,13 +3,12 @@
 # vice
 #
 ################################################################################
-# Version: Commits on Sept 27, 2026
-VICE_VERSION = r46274
+# Version: Commits on Oct 19, 2026
+VICE_VERSION = r46290
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
 VICE_LICENSE = GPLv2
 VICE_SUBDIR  = vice
 VICE_DEPENDENCIES = alsa-lib giflib host-dos2unix host-xa jpeg libcurl sdl2 sdl2_image zlib
-VICE_CONF_ENV += LDFLAGS=-lSDL2
 VICE_EMULATOR_INFO = vice.emulator.yml
 
 VICE_CONF_OPTS += --disable-debug-gtk3ui

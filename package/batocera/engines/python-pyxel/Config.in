@@ -4,8 +4,8 @@ config BR2_PACKAGE_PYTHON_PYXEL
 	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
 	select BR2_PACKAGE_HOST_RUSTC
 
-	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_HOST_PYTHON_MATURIN
+	select BR2_PACKAGE_SDL2
 
 	help
 	  Pyxel is a retro game engine for Python.

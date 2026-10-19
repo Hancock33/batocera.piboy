@@ -3,8 +3,8 @@
 # bgfx
 #
 ################################################################################
-# Version: Commits on Oct 09, 2026
-BGFX_VERSION = v1.164.9539-582
+# Version: Commits on Oct 15, 2026
+BGFX_VERSION = v1.166.9561-590
 BGFX_SITE = https://github.com/bkaradzic/bgfx.cmake.git
 BGFX_SITE_METHOD = git
 BGFX_GIT_SUBMODULES = YES
@@ -13,7 +13,6 @@ BGFX_LICENSE_FILES = LICENSE
 BGFX_DEPENDENCIES = xlib_libX11
 BGFX_SUPPORTS_IN_SOURCE_BUILD = NO
 BGFX_INSTALL_STAGING = YES
-
 
 BGFX_CONF_OPTS += -DBGFX_LIBRARY_TYPE=SHARED
 BGFX_CONF_OPTS += -DBGFX_BUILD_TOOLS=OFF
@@ -34,9 +33,8 @@ else
     BGFX_CONF_OPTS += -DBGFX_WITH_WAYLAND=OFF
 endif
 
-BGFX_PATCH_SHA = 9fb47b3390d764c22dbb823576c7cc0e46491fb0
+BGFX_PATCH_SHA = f756202cb8fa51142b4a017fd03c146a9a642088
 BGFX_EXTRA_DOWNLOADS += https://github.com/vbousquet/bgfx/archive/$(BGFX_PATCH_SHA).tar.gz
-
 
 define BGFX_PATCH_CMAKE
 	rm -rf $(@D)/bgfx

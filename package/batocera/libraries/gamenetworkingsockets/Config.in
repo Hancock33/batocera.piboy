@@ -1,7 +1,7 @@
 config BR2_PACKAGE_GAMENETWORKINGSOCKETS
 	bool "gamenetworkingsockets"
-	select BR2_PACKAGE_PROTOBUF
 	select BR2_PACKAGE_OPENSSL
+	select BR2_PACKAGE_PROTOBUF
 
 	help
 	  Reliable & unreliable messages over UDP.

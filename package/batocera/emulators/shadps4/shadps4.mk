@@ -3,8 +3,8 @@
 # shadps4
 #
 ################################################################################
-# Version: Commits on Oct 02, 2026
-SHADPS4_VERSION = v.0.19.0
+# Version: Commits on Oct 14, 2026
+SHADPS4_VERSION = v.0.20.0
 SHADPS4_SITE = https://github.com/shadps4-emu/shadPS4.git
 SHADPS4_SITE_METHOD=git
 SHADPS4_GIT_SUBMODULES=YES
@@ -17,7 +17,7 @@ SHADPS4_DEPENDENCIES += alsa-lib boost ffmpeg fmt freetype glslang jack2 libedit
 SHADPS4_DEPENDENCIES += openal openssl pugixml pulseaudio sdl3 udev vulkan-headers vulkan-validationlayers
 
 SHADPS4_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-SHADPS4_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-lm -lstdc++ -lprotobuf"
+SHADPS4_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -lm -lstdc++ -lprotobuf -labsl_raw_hash_set"
 SHADPS4_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
 SHADPS4_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 SHADPS4_CONF_OPTS += -DENABLE_SYSTEM_LIBRARIES=ON

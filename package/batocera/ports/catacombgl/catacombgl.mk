@@ -3,8 +3,8 @@
 # catacombgl
 #
 ################################################################################
-# Version: Commits on Oct 12, 2026
-CATACOMBGL_VERSION = 40a45918e371ff797466e2916cb24d0e1f8e8c0e
+# Version: Commits on Oct 18, 2026
+CATACOMBGL_VERSION = dd7d337fff89c32285b096190f6419828860bfe0
 CATACOMBGL_SITE = $(call github,ArnoAnsems,CatacombGL,$(CATACOMBGL_VERSION))
 CATACOMBGL_LICENSE = GPLv3
 CATACOMBGL_LICENSE_FILES = COPYING.txt

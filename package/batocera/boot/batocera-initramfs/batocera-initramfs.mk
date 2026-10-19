@@ -67,9 +67,9 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SDM845),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_SDM845_EARLY_FIRMWARE
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sdm845/
-    cp -r $(ALLLINUXFIRMWARES_DIR)/qcom/sdm845/* \
-        $(INITRAMFS_DIR)/lib/firmware/qcom/sdm845/
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sdm845/
+	cp -r $(ALLLINUXFIRMWARES_DIR)/qcom/sdm845/* \
+		$(INITRAMFS_DIR)/lib/firmware/qcom/sdm845/
 	cp $(ALLLINUXFIRMWARES_DIR)/qcom/a630* \
 	    $(INITRAMFS_DIR)/lib/firmware/qcom/
 endef
@@ -91,11 +91,11 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SM6115),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_SM6115_EARLY_FIRMWARE
-	mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/qrb4210
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm6115/mangmi
 	cp $(ALLLINUXFIRMWARES_DIR)/qcom/a630_sqe.fw \
 		$(INITRAMFS_DIR)/lib/firmware/qcom/
-	cp -R $(ALLLINUXFIRMWARES_DIR)/qcom/qrb4210/* \
-		$(INITRAMFS_DIR)/lib/firmware/qcom/qrb4210/
+	cp $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/qualcomm/sm6115/fsoverlay/lib/firmware/qcom/sm6115/mangmi/a610_zap.mbn \
+		$(INITRAMFS_DIR)/lib/firmware/qcom/sm6115/mangmi/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_IMAGES_HOOKS += BATOCERA_INITRAMFS_SM6115_EARLY_FIRMWARE
 endif
@@ -130,15 +130,15 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SM8650),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_SM8650_EARLY_FIRMWARE
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm8650/
-    cp -R $(ALLLINUXFIRMWARES_DIR)/qcom/sm8650/* \
-        $(INITRAMFS_DIR)/lib/firmware/qcom/sm8650/
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm8650/
+	cp -R $(ALLLINUXFIRMWARES_DIR)/qcom/sm8650/* \
+		$(INITRAMFS_DIR)/lib/firmware/qcom/sm8650/
 	cp $(ALLLINUXFIRMWARES_DIR)/qcom/gen70900_* \
 	    $(INITRAMFS_DIR)/lib/firmware/qcom/
 	cp $(ALLLINUXFIRMWARES_DIR)/qcom/gmu_gen70900.bin \
 	    $(INITRAMFS_DIR)/lib/firmware/qcom/
-    cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/qualcomm/sm8650/fsoverlay/lib/firmware/qcom/* \
-        $(INITRAMFS_DIR)/lib/firmware/qcom/
+	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/qualcomm/sm8650/fsoverlay/lib/firmware/qcom/* \
+		$(INITRAMFS_DIR)/lib/firmware/qcom/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_IMAGES_HOOKS += BATOCERA_INITRAMFS_SM8650_EARLY_FIRMWARE
 endif
@@ -146,9 +146,9 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_SM8750),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_SM8750_EARLY_FIRMWARE
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm8750/
-    cp $(ALLLINUXFIRMWARES_DIR)/qcom/sm8750/* \
-        $(INITRAMFS_DIR)/lib/firmware/qcom/sm8750/
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/qcom/sm8750/
+	cp $(ALLLINUXFIRMWARES_DIR)/qcom/sm8750/* \
+		$(INITRAMFS_DIR)/lib/firmware/qcom/sm8750/
 	cp $(ALLLINUXFIRMWARES_DIR)/qcom/gen80000_* \
 	    $(INITRAMFS_DIR)/lib/firmware/qcom/
 endef
@@ -169,9 +169,9 @@ endif
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3576),y)
 BATOCERA_INITRAMFS_DEPENDENCIES += alllinuxfirmwares
 define BATOCERA_INITRAMFS_RK3576_EARLY_FIRMWARE
-    mkdir -p $(INITRAMFS_DIR)/lib/firmware/rtw89
-    cp $(ALLLINUXFIRMWARES_DIR)/rtw89/rtw8852b_fw*.bin \
-        $(INITRAMFS_DIR)/lib/firmware/rtw89/
+	mkdir -p $(INITRAMFS_DIR)/lib/firmware/rtw89
+	cp $(ALLLINUXFIRMWARES_DIR)/rtw89/rtw8852b_fw*.bin \
+		$(INITRAMFS_DIR)/lib/firmware/rtw89/
 endef
 BATOCERA_INITRAMFS_PRE_INSTALL_IMAGES_HOOKS += BATOCERA_INITRAMFS_RK3576_EARLY_FIRMWARE
 endif

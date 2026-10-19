@@ -17,4 +17,3 @@ config BR2_PACKAGE_VITA3K
 	  Experimental PlayStation Vita emulator
 
 	  https://github.com/vita3k/vita3k
-

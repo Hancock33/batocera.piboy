@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/adafruit_circuitpython_neopixel_spi/json
+md5  60183447260b09afdd7e815b97772f0b  adafruit_circuitpython_neopixel_spi-1.0.16.tar.gz
+sha256  b06d458f3d7759ca24757a155fc64e9e633523e4e3ee589e142a10f17abf0bf3  adafruit_circuitpython_neopixel_spi-1.0.16.tar.gz
+# Locally computed sha256 checksums
+sha256  105a672e7a79788d3d871c6a8b5f271c1520b936c37c6b8edc19bf29aaa902b1  LICENSE

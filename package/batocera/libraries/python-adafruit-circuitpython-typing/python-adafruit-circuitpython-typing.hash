@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/adafruit_circuitpython_typing/json
+md5  457cb226ba7b12b640294d5270b41a24  adafruit_circuitpython_typing-1.12.3.tar.gz
+sha256  63f196f834e47842bcd4cf8c37aaa0c61e1aeb5d07f056c875fc3016cda91a12  adafruit_circuitpython_typing-1.12.3.tar.gz
+# Locally computed sha256 checksums
+sha256  832859c2dc28a92b031a84ab57832b2e928a5b21bf8c4dde44e4d9a751232143  LICENSE

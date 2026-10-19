@@ -3,8 +3,8 @@
 # jstest2
 #
 ################################################################################
-# Version: Commits on Jul 29, 2026
-JSTEST2_VERSION = cf4fab3294fd6ede340ecf2cb7f940d75390039e
+# Version: Commits on Oct 15, 2026
+JSTEST2_VERSION = ad9181e78448b7c3c84a52668380141d8889260d
 JSTEST2_SITE = https://github.com/Grumbel/sdl-jstest
 JSTEST2_SITE_METHOD = git
 JSTEST2_GIT_SUBMODULES = YES

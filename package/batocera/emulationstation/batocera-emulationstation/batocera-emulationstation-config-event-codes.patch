@@ -1,8 +1,16 @@
 diff --git a/es-core/src/InputConfig.cpp b/es-core/src/InputConfig.cpp
-index cf3238a9d..5aa0c0c82 100644
+index cf3238a..0eae93f 100644
 --- a/es-core/src/InputConfig.cpp
 +++ b/es-core/src/InputConfig.cpp
-@@ -334,6 +334,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
+@@ -298,6 +298,7 @@ void InputConfig::loadFromXML(pugi::xml_node& node)
+ 			LOG(LogWarning) << "WARNING: InputConfig value is 0 for " << type << " " << id << "!\n";
+ 
+ 		mNameMap[toLower(name)] = Input(mDeviceId, typeEnum, id, value, true);
++		mNameMap[toLower(name)].code = input.attribute("code").as_int(-1);
+ 	}
+ }
+ 
+@@ -334,6 +335,10 @@ void InputConfig::writeToXML(pugi::xml_node& parent)
  		input.append_attribute("type") = inputTypeToString(iterator->second.type).c_str();
  		input.append_attribute("id").set_value(iterator->second.id);
  		input.append_attribute("value").set_value(iterator->second.value);
@@ -14,7 +22,7 @@ index cf3238a9d..5aa0c0c82 100644
  }
  
 diff --git a/es-core/src/InputConfig.h b/es-core/src/InputConfig.h
-index e5043aeaa..fc4365aad 100644
+index e5043ae..fc4365a 100644
 --- a/es-core/src/InputConfig.h
 +++ b/es-core/src/InputConfig.h
 @@ -42,6 +42,7 @@ public:
@@ -60,10 +68,10 @@ index e5043aeaa..fc4365aad 100644
  
  class InputConfig
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index cde98f192..55fffd6bb 100644
+index ef001b6..2deb8f2 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -1472,6 +1472,7 @@ std::string InputManager::configureEmulators() {
+@@ -1478,6 +1478,7 @@ std::string InputManager::configureEmulators() {
        command << " -p" << player+1 << "nbbuttons "  << playerInputConfig->getDeviceNbButtons();
        command << " -p" << player+1 << "nbhats "     << playerInputConfig->getDeviceNbHats();
        command << " -p" << player+1 << "nbaxes "     << playerInputConfig->getDeviceNbAxes();
@@ -72,7 +80,7 @@ index cde98f192..55fffd6bb 100644
      }
    }
 diff --git a/es-core/src/guis/GuiInputConfig.cpp b/es-core/src/guis/GuiInputConfig.cpp
-index 8ccbb294f..3de729836 100644
+index 8ccbb29..3de7298 100644
 --- a/es-core/src/guis/GuiInputConfig.cpp
 +++ b/es-core/src/guis/GuiInputConfig.cpp
 @@ -415,6 +415,8 @@ bool GuiInputConfig::assign(Input input, int inputId)

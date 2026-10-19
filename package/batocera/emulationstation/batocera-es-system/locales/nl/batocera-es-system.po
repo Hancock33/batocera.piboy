@@ -36,14 +36,6 @@ msgid "0 (Default)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "0 (Defaults Unlimited)"
-msgstr "0 (Standaard onbeperkt)"
-
-msgctxt "game_options"
-msgid "0 (Disabled)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "0 (No Visual Effect)"
 msgstr "0 (Geen visuele effecten)"
 
@@ -58,6 +50,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "0 degrees"
 msgstr "0 graden"
+
+msgctxt "game_options"
+msgid "0 ms (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "0% (Default)"
@@ -126,6 +122,10 @@ msgstr "1 MB"
 msgctxt "game_options"
 msgid "1 MHz (Underclock)"
 msgstr "1 MHz (Underclock)"
+
+msgctxt "game_options"
+msgid "1 ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "1 second"
@@ -244,6 +244,10 @@ msgid "1.8x (22.50Mhz)"
 msgstr "1.8x (22.50Mhz)"
 
 msgctxt "game_options"
+msgid "1/16 Frame"
+msgstr ""
+
+msgctxt "game_options"
 msgid "1/2 Frame"
 msgstr "1/2 Frame"
 
@@ -272,8 +276,8 @@ msgid "1/60 Frame"
 msgstr "1/60 Frame"
 
 msgctxt "game_options"
-msgid "1/8 Frame1"
-msgstr "1/8 Frame1"
+msgid "1/8 Frame"
+msgstr ""
 
 msgctxt "game_options"
 msgid "10 MB"
@@ -282,6 +286,10 @@ msgstr "10 MB"
 msgctxt "game_options"
 msgid "10 MHz (Default)"
 msgstr "10 MHz (Default)"
+
+msgctxt "game_options"
+msgid "10 ms"
+msgstr ""
 
 msgctxt "game_options"
 msgid "10 seconds"
@@ -296,12 +304,12 @@ msgid "100% (Default)"
 msgstr "100% (Standaard)"
 
 msgctxt "game_options"
-msgid "100%(Default)"
+msgid "100% (Native)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "100%(native)"
-msgstr "100% (native)"
+msgid "100%(Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "10000 (Default)"
@@ -333,6 +341,10 @@ msgstr "1024kB"
 
 msgctxt "game_options"
 msgid "1024x768 (4:3)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1024x768 (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -584,10 +596,6 @@ msgid "150% (Overclock)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "150Mhz (Overclock)"
-msgstr "150Mhz (Overclock)"
-
-msgctxt "game_options"
 msgid "150ms"
 msgstr ""
 
@@ -614,10 +622,6 @@ msgstr "15e"
 msgctxt "game_options"
 msgid "15x Native (~6720p)"
 msgstr "15x Native (~6720p)"
-
-msgctxt "game_options"
-msgid "16 Frame"
-msgstr "16 Frame"
 
 msgctxt "game_options"
 msgid "16 MB"
@@ -694,6 +698,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "16:9 RENDERING RESOLUTION"
 msgstr "16:9 RENDERRESOLUTIE"
+
+msgctxt "game_options"
+msgid "16:9 Widescreen"
+msgstr ""
 
 msgctxt "game_options"
 msgid "16MB"
@@ -806,6 +814,14 @@ msgstr "1x (Standaard)"
 
 msgctxt "game_options"
 msgid "1x (Native 400x240)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1x (Native)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1x (native)"
 msgstr ""
 
 msgctxt "game_options"
@@ -923,10 +939,6 @@ msgstr "20 seconden"
 msgctxt "game_options"
 msgid "200% (Maximum)"
 msgstr "200% (Maximum)"
-
-msgctxt "game_options"
-msgid "200Mhz (Overclock)"
-msgstr "200Mhz (Overclock)"
 
 msgctxt "game_options"
 msgid "200ms"
@@ -1102,6 +1114,10 @@ msgid "286, 6MHz (1320 cps)"
 msgstr "286, 6MHz (1320 cps)"
 
 msgctxt "game_options"
+msgid "2880x1620 (225%)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "28th"
 msgstr "28e"
 
@@ -1156,10 +1172,6 @@ msgstr "2x (1440p/2160p)"
 msgctxt "game_options"
 msgid "2x (2K/1440p)"
 msgstr ""
-
-msgctxt "game_options"
-msgid "2x (Default)"
-msgstr "2x (Standaard)"
 
 msgctxt "game_options"
 msgid "2x MSAA"
@@ -1312,10 +1324,6 @@ msgstr "32-bit"
 msgctxt "game_options"
 msgid "320 x 200"
 msgstr "320 x 200"
-
-msgctxt "game_options"
-msgid "3200x1800 (225%)"
-msgstr ""
 
 msgctxt "game_options"
 msgid "32K RAM EXPANSION"
@@ -1614,10 +1622,6 @@ msgid "4X"
 msgstr "4X"
 
 msgctxt "game_options"
-msgid "4k"
-msgstr "4k"
-
-msgctxt "game_options"
 msgid "4th"
 msgstr "4e"
 
@@ -1682,6 +1686,10 @@ msgid "5 Sideway Wiimote"
 msgstr "5 Sideway Wiimote"
 
 msgctxt "game_options"
+msgid "5 ms"
+msgstr ""
+
+msgctxt "game_options"
 msgid "5 seconds"
 msgstr "5 seconden"
 
@@ -1722,10 +1730,6 @@ msgid "5.75x (5520x3128)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "50 (Default)"
-msgstr "50 (Standaard)"
-
-msgctxt "game_options"
 msgid "50 FPS"
 msgstr ""
 
@@ -1760,10 +1764,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "5120MB"
 msgstr "5120MB"
-
-msgctxt "game_options"
-msgid "512KB"
-msgstr "512KB"
 
 msgctxt "game_options"
 msgid "512MB"
@@ -2090,6 +2090,14 @@ msgid "800 x 600"
 msgstr "800 x 600"
 
 msgctxt "game_options"
+msgid "8000 (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "8001 (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "800p"
 msgstr "768p"
 
@@ -2102,6 +2110,10 @@ msgid "8086/8088, 4.77MHz (315 cps)"
 msgstr "8086/8088, 4.77MHz (315 cps)"
 
 msgctxt "game_options"
+msgid "80MB"
+msgstr ""
+
+msgctxt "game_options"
 msgid "8192kB"
 msgstr "8192kB"
 
@@ -2112,10 +2124,6 @@ msgstr "8MB"
 msgctxt "game_options"
 msgid "8X"
 msgstr "8X"
-
-msgctxt "game_options"
-msgid "8k"
-msgstr "8k"
 
 msgctxt "game_options"
 msgid "8th"
@@ -2211,6 +2219,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"A paddle or RB/LB shift passes through neutral on the way to the next gear, "
+"as a real gearbox does."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "A small number of games will have compatibility problems with this enabled."
 msgstr ""
 
@@ -2257,10 +2271,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "ACCURATE SHADER MUL"
 msgstr ""
-
-msgctxt "game_options"
-msgid "ACHIEVEMENTS"
-msgstr "PRESTATIES"
 
 msgctxt "game_options"
 msgid "ACSI"
@@ -2647,6 +2657,12 @@ msgid "Accurate cpu and blitter timings."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Accurate is the slowest but most exact. Good and Fast are quicker but break "
+"games that change colours or sprites mid-frame."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Acorn Analogue Joysticks"
 msgstr "Acorn Analoge Joysticks"
 
@@ -2775,6 +2791,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Adjust frame delay on the fly, lowering it when frames would drop. With "
+"frame delay at 0, it targets 3/4 of the frame time."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Adjust mixing of CD audio. In MSU-MD, cartridge-sourced sound effects are "
 "not affected."
 msgstr ""
@@ -2793,12 +2815,6 @@ msgctxt "game_options"
 msgid ""
 "Adjust the CPU power frequency profile whilst in-game. Some systems will "
 "benefit from improved voltage handling."
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Adjust the CPU power profile whist on battery. Overwrites previous Power "
-"Mode(s)."
 msgstr ""
 
 msgctxt "game_options"
@@ -2980,10 +2996,6 @@ msgstr "Maakt door de gebruiker vervangbare texturen mogelijk."
 msgctxt "game_options"
 msgid "Allows you to limit FPS to 60."
 msgstr "Staat toe de FPS te limiteren op 60."
-
-msgctxt "game_options"
-msgid "Alone in the Dark"
-msgstr "Alone in the Dark"
 
 msgctxt "keys_files"
 msgid "Alt. Attack"
@@ -3365,10 +3377,6 @@ msgid "Asia"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Async"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Async Shader Recompiler"
 msgstr ""
 
@@ -3495,7 +3503,7 @@ msgid "Autodetect (by game name tag)"
 msgstr "Automatisch dedecteren (op spel naam tag)"
 
 msgctxt "game_options"
-msgid "Autofire repeat delay for User 1. Core default (1)."
+msgid "Autofire repeat delay for User 1. Core default (2)."
 msgstr ""
 
 msgctxt "keys_files"
@@ -3517,14 +3525,6 @@ msgstr "Automatische verhouding"
 msgctxt "game_options"
 msgid "Automatic switches region per file path tags"
 msgstr "Wisselt automatisch regio per bestand pad tags"
-
-msgctxt "game_options"
-msgid ""
-"Automatically decrease frame delay temporarily to prevent frame drops. Can "
-"introduce stuttering."
-msgstr ""
-"Verlaag automatisch de framevertraging tijdelijk om framedrops te voorkomen. "
-"Kan haperingen introduceren."
 
 msgctxt "game_options"
 msgid "Automatically loads and applies cheats on game start."
@@ -3793,6 +3793,10 @@ msgid "Balanced"
 msgstr "Gebalanceerd"
 
 msgctxt "game_options"
+msgid "Balanced Performance"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Bally Professional Arcade cartridges"
 msgstr "Bally Professional Arcade cartridges"
 
@@ -3959,6 +3963,14 @@ msgstr "Blauw - Shiny Sky Blue"
 msgctxt "game_options"
 msgid "Blue - Slime Blue"
 msgstr "Blauw - Slime Blue"
+
+msgctxt "game_options"
+msgid "Blue/Brown 1"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Blue/Brown 2"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Blur"
@@ -4206,6 +4218,12 @@ msgid "CABINET OUTPUTS"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"CABINET gives you a top-down view on the playfield. For cabinet use or multi-"
+"window on desktop."
+msgstr ""
+
+msgctxt "game_options"
 msgid "CABLE"
 msgstr "KABEL"
 
@@ -4372,10 +4390,6 @@ msgstr "CONSOLE TYPE"
 msgctxt "game_options"
 msgid "CONTROL CHOICE"
 msgstr "KIES CONTROLLER"
-
-msgctxt "game_options"
-msgid "CONTROL MAPPING"
-msgstr "INVOER INDELING"
 
 msgctxt "game_options"
 msgid "CONTROLLER 1"
@@ -4587,6 +4601,12 @@ msgstr "CPU-type dat in emulatie wordt gebruikt"
 
 msgctxt "game_options"
 msgid ""
+"CPU power profile whilst on battery, replacing the global Power Mode. A "
+"system or game Power Mode still takes priority."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "CPU-GPU latency limit. Lower values improve latency but may reduce "
 "performance."
 msgstr ""
@@ -4680,6 +4700,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "CST6CDT"
 msgstr "CST6CDT"
+
+msgctxt "game_options"
+msgid "CTIA"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CUBIC AUDIO INTERPOLATION"
@@ -4790,10 +4814,6 @@ msgid "Camputers Lynx floppies"
 msgstr "Camputers Lynx floppies"
 
 msgctxt "game_options"
-msgid "Can avoid flashing screen issues. Significant performance cost."
-msgstr "Kan flikkerend scherm voorkomen. Significant prestatie verlies."
-
-msgctxt "game_options"
 msgid "Can be used to simulate colors of particular displays."
 msgstr ""
 "Kan gebruikt worden om kleuren van specifieke beeldschermen te simuleren."
@@ -4817,19 +4837,11 @@ msgid "Can fix slowdown. Only works on some drivers."
 msgstr "Kan vertraging verhelpen. Werkt alleen op sommige drivers."
 
 msgctxt "game_options"
-msgid "Can improve frame rates and responsiveness."
-msgstr "Kan frame rates en reactietijd verbeteren."
-
-msgctxt "game_options"
 msgid ""
 "Can improve video performance. Do not use with ActionMax games or scanlines."
 msgstr ""
 "Kan de videoprestaties verbeteren. Niet gebruiken met ActionMax-spellen of "
 "scanlines."
-
-msgctxt "game_options"
-msgid "Can increase performance for games that stress the CPU."
-msgstr "Kan prestatie verhogen voor spellen die de CPU veel belasten."
 
 msgctxt "game_options"
 msgid "Can prevent audio skips on button presses when using run-ahead."
@@ -4856,10 +4868,6 @@ msgstr "Canadees Frans"
 msgctxt "game_options"
 msgid "Cap maximum framerate to prevent physics acceleration or stutter."
 msgstr ""
-
-msgctxt "game_options"
-msgid "Capcom VS games Expand Screen Width"
-msgstr "Capcom VS spellen Verbreed de Schermbreedte"
 
 msgctxt "game_options"
 msgid "Card"
@@ -5123,6 +5131,10 @@ msgstr "Kies teksttaal."
 msgctxt "game_options"
 msgid "Choose the Dreamcast console region."
 msgstr "Kies de Dreamcast console-regio."
+
+msgctxt "game_options"
+msgid "Choose the NDS handheld version"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Choose the Parallel N64 graphics plugin."
@@ -5411,6 +5423,11 @@ msgid "Choose your preferred renderer."
 msgstr "Kies de gewenste renderer."
 
 msgctxt "game_options"
+msgid ""
+"Choose your preferred renderer. Enhanced OpenGL is only available on x86_64."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Choose your preferred video filter."
 msgstr "Kies uw gewenste videofilter."
 
@@ -5421,10 +5438,6 @@ msgstr "Kies de gewenste videokwaliteit."
 msgctxt "game_options"
 msgid "Choose your render resolution (Requires personal redream.key file)."
 msgstr "Kies uw renderresolutie (vereist een persoonlijk redream.key-bestand)."
-
-msgctxt "game_options"
-msgid "Chrono Chross Odd/Even Bit Hack"
-msgstr "Chrono Chross Oneven/Even Bit Hack"
 
 msgctxt "game_options"
 msgid "Classic (Default)"
@@ -5481,10 +5494,6 @@ msgstr "Kleur"
 msgctxt "game_options"
 msgid "Color Computer"
 msgstr "Color Computer"
-
-msgctxt "game_options"
-msgid "Color Computer 2"
-msgstr "Color Computer 2"
 
 msgctxt "game_options"
 msgid "Color Computer 2B"
@@ -5551,11 +5560,11 @@ msgid "Composite (Blargg)"
 msgstr "Composiet (Blargg)"
 
 msgctxt "game_options"
-msgid "Composite (Color)"
+msgid "Composite (Blue-Red)"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Composite (Mono)"
+msgid "Composite (Red-Blue)"
 msgstr ""
 
 msgctxt "game_options"
@@ -5649,6 +5658,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "Cool"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Copy to texture"
 msgstr "Kopiëren naar textuur"
 
@@ -5675,10 +5688,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Costa Rica"
 msgstr "Costa Rica"
-
-msgctxt "game_options"
-msgid "Crash-n Burn"
-msgstr "Crash-n Burn"
 
 msgctxt "game_options"
 msgid "Creatronic Mega Duck cartridges"
@@ -5780,10 +5789,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Cyan"
 msgstr ""
-
-msgctxt "game_options"
-msgid "Cycle Timing Check"
-msgstr "Cycle Timing Check"
 
 msgctxt "game_options"
 msgid "Cycle-exact"
@@ -5930,6 +5935,10 @@ msgid "DISABLE VERTEX CACHE"
 msgstr "SCHAKEL VERTEX CACHE UIT"
 
 msgctxt "game_options"
+msgid "DISABLE WEAPON WAGGLE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DISABLE WHITE FLASHES"
 msgstr ""
 
@@ -5966,14 +5975,6 @@ msgid "DMA Only (Slightly Faster)"
 msgstr "Alleen DMA (Beetje Sneller)"
 
 msgctxt "game_options"
-msgid "DMD SIZE"
-msgstr "DMD GROOTTE"
-
-msgctxt "game_options"
-msgid "DMD window ratio"
-msgstr "DMD vensterverhouding"
-
-msgctxt "game_options"
 msgid "DNS OVERRIDE"
 msgstr "DNS OVERSCHRIJVING"
 
@@ -5988,10 +5989,6 @@ msgstr "DOLBY PRO LOGIC II"
 msgctxt "game_options"
 msgid "DOOM"
 msgstr "DOOM"
-
-msgctxt "game_options"
-msgid "DOOM RES HACK"
-msgstr "DOOM RES HACK"
 
 msgctxt "game_options"
 msgid "DOUBLE"
@@ -6034,8 +6031,8 @@ msgid "DSi"
 msgstr "DSi"
 
 msgctxt "game_options"
-msgid "DSi (Experiemental)"
-msgstr "DSi (Experiementeel)"
+msgid "DSi (Experimental)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "DSi (experiemental)"
@@ -6096,10 +6093,6 @@ msgstr "Deens (dk)"
 msgctxt "game_options"
 msgid "Dark Blue"
 msgstr "Donkerblauw"
-
-msgctxt "game_options"
-msgid "Dark Forces Flat Tex Triangles Fix"
-msgstr "Dark Forces Platte Tex Driehoeken Fix"
 
 msgctxt "game_options"
 msgid "Dark Green"
@@ -6163,11 +6156,9 @@ msgstr "Standaard op model"
 
 msgctxt "game_options"
 msgid ""
-"Default uses SDL2, otherwise enable controller specific capabilities. Sony "
-"DS won't work with clone controllers."
+"Default uses SDL, otherwise enable controller specific capabilities. Sony DS "
+"won't work with clone controllers."
 msgstr ""
-"Standaard wordt SDL2 gebruikt, schakel anders controller specifieke "
-"mogelijkheden in. Sony DS werkt niet met klooncontrollers."
 
 msgctxt "game_options"
 msgid "Define the resolution and a new dedicated window."
@@ -6228,10 +6219,6 @@ msgid "Deutsch"
 msgstr "Duits"
 
 msgctxt "game_options"
-msgid "Diablo Music Fix"
-msgstr "Diablo Muziek Fix"
-
-msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 cassettes"
 msgstr "Dick Smith Electronics VZ-200/300 cassettes"
 
@@ -6272,20 +6259,20 @@ msgid "Digital Up"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Dinopark Tycoon"
-msgstr "Dinopark Tycoon"
-
-msgctxt "game_options"
 msgid "Disable"
 msgstr "Uitschakelen"
+
+msgctxt "game_options"
+msgid "Disable (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Disable Queries"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Disable all input processing (view-only mode)."
-msgstr "Schakel alle invoerverwerking uit (alleen-lezenmodus)"
+msgid "Disable all input processing (view-only mode). Moonlight Embedded only."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Disable fog rendering"
@@ -6316,8 +6303,8 @@ msgid "Disabled"
 msgstr "Uitgeschakeld"
 
 msgctxt "game_options"
-msgid "Disabled (Beatle Interpreter)"
-msgstr "Uitgeschakeld (Beatle Interpreter)"
+msgid "Disabled (Beetle Interpreter)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Disabled (Default)"
@@ -6381,6 +6368,10 @@ msgid "Display Rate"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Display Refresh Rate (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Display Resolution"
 msgstr ""
 
@@ -6431,7 +6422,7 @@ msgid "DotMatrix"
 msgstr "DotMatrix"
 
 msgctxt "game_options"
-msgid "Double Buffering"
+msgid "Double Buffering (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -6500,6 +6491,12 @@ msgctxt "game_options"
 msgid ""
 "Draw the emulator's crosshairs. By default they show only for guns that need "
 "them."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Draw the scenery to the edge of the course instead of the arcade's short "
+"range. Daytona USA only."
 msgstr ""
 
 msgctxt "game_options"
@@ -6631,10 +6628,6 @@ msgid "ELECTRON MODEL"
 msgstr "ELECTRON MODEL"
 
 msgctxt "game_options"
-msgid "EMULATE DVD LOADING"
-msgstr ""
-
-msgctxt "game_options"
 msgid "EMULATE PCG-8100"
 msgstr "EMULATE PCG-8100"
 
@@ -6727,10 +6720,6 @@ msgid "ENABLE NOTIFICATIONS"
 msgstr "NOTIFICATIES AANZETTEN"
 
 msgctxt "game_options"
-msgid "ENABLE NTFS MODE"
-msgstr "NTFS-MODUS INSCHAKELEN"
-
-msgctxt "game_options"
 msgid "ENABLE NVAPI"
 msgstr "NVAPI INSCHAKELEN"
 
@@ -6791,10 +6780,6 @@ msgid "EST5EDT"
 msgstr "EST5EDT"
 
 msgctxt "game_options"
-msgid "ESYNC"
-msgstr "ESYNC"
-
-msgctxt "game_options"
 msgid "EVDEV (Default)"
 msgstr "EVDEV (Standaard)"
 
@@ -6805,6 +6790,10 @@ msgstr "UITBREIDINGSPAKKET"
 msgctxt "game_options"
 msgid "EXPOSE MODE"
 msgstr "BLOOTSTELLINGSMODUS"
+
+msgctxt "game_options"
+msgid "EXTENDED DRAW DISTANCE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "EXTENDED SCREEN"
@@ -6869,8 +6858,8 @@ msgid "Emulate Chroma 81 interface (colorization)."
 msgstr "Emuleer Chroma 81 interface (colorisatie)."
 
 msgctxt "game_options"
-msgid "Emulate NTSC quirks to show more colors in hi-res mode."
-msgstr "Emuleer NTSC quirks om meer kleuren in hi-res modus weer te geven."
+msgid "Emulate NTSC quirks to show more colours in hi-res mode."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -6905,12 +6894,24 @@ msgstr "Emuleer de Wiimote pointer met een muis."
 
 msgctxt "game_options"
 msgid ""
+"Emulate the card reader in Virtua Tennis 3, Virtua Fighter 5, Initial D 4/5 "
+"and R-Tuned."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Emulate the card reader of Ghost Squad, Gundam and the Maximum Tune games. "
 "Cards are kept in saves/chihiro/cards."
 msgstr ""
 
 msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Emulate the drive board for force feedback in Hummer. OutRun 2, R-Tuned and "
+"Sega Race TV always use it."
 msgstr ""
 
 msgctxt "game_options"
@@ -7004,10 +7005,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enable QOS settings to optimize for internet or local network."
+msgid ""
+"Enable QOS settings to optimise for internet or local network. Moonlight "
+"Embedded only."
 msgstr ""
-"Schakel QOS-instellingen in om te optimaliseren voor internet of lokaal "
-"netwerk."
 
 msgctxt "game_options"
 msgid "Enable Robust Contrast-Adaptive Sharpening."
@@ -7071,21 +7072,7 @@ msgid "Enable debug logging to assist with troubleshooting issues."
 msgstr ""
 
 msgctxt "game_options"
-msgid "Enable for Doom to run at its correct resolution."
-msgstr "Inschakelen om Doom op de correcte resolutie te spelen."
-
-msgctxt "game_options"
 msgid "Enable for all scenes"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Enable for more fluidity, disable if screen tearing."
-msgstr ""
-"Inschakelen voor meer vloeiend resultaat, uitschakelen als je last hebt van "
-"screen tearing."
-
-msgctxt "game_options"
-msgid "Enable force feedback (rumble) for supported games."
 msgstr ""
 
 msgctxt "game_options"
@@ -7139,10 +7126,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable launching pre-installed WHDLoad installs."
 msgstr "Start voorgeinstalleerd WHDLoad installs inschakelen."
-
-msgctxt "game_options"
-msgid "Enable lens glare effects in OutRun 2."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Enable lightsaber auto-camera."
@@ -7291,14 +7274,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Enable this mode if you have issue for run your game on NTFS storage (by "
-"default is better to use LinuxFS)."
-msgstr ""
-"Schakel deze modus in als u problemen ondervindt bij het uitvoeren van uw "
-"game op NTFS-opslag (standaard is het beter om LinuxFS te gebruiken)."
-
-msgctxt "game_options"
-msgid ""
 "Enable this to limit the FPS in games that are uncapped, such as OutRun 2."
 msgstr ""
 
@@ -7312,10 +7287,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Enable to display if your BIOS haas known problems."
 msgstr "Schakel dit in om weer te geven of uw BIOS bekende problemen heeft."
-
-msgctxt "game_options"
-msgid "Enable to emulate the card reader in Virtua Tennis 3, ID4/5 or R-Tuned."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Enable to improve bluriness."
@@ -7540,7 +7511,8 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Enhancement. Pixel-art scaling filter applied to the low-resolution game "
-"image before it's stretched to fill the render resolution."
+"image before it's stretched to fill the render resolution. Scale2x needs an "
+"integer scale factor of 2x or more."
 msgstr ""
 
 msgctxt "game_options"
@@ -7566,6 +7538,10 @@ msgid "Enhancement. Reduces system slowdown. Causes issues in some games."
 msgstr ""
 "Verbetering. Vermindert systeemvertraging. Veroorzaakt problemen in sommige "
 "games."
+
+msgctxt "game_options"
+msgid "Enhancement. Reduces wobbly polygons. Hardware renderer only."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enhancement. Remove the eight sprite per line limit."
@@ -7599,6 +7575,12 @@ msgid "Enhancement. Removes disc loading."
 msgstr "Verbetering. Verwijdert het laden van schijven."
 
 msgctxt "game_options"
+msgid ""
+"Enhancement. Render the rotating background (RBG) layer at a higher "
+"resolution. Demanding on weaker devices."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Enhancement. Skipping it can break some games."
 msgstr "Verbetering. Als u dit overslaat, kunnen sommige games kapot gaan."
 
@@ -7606,6 +7588,12 @@ msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D object polygons."
 msgstr ""
 "Verbetering. Maak gekartelde randen van polygonen van 3D-objecten glad."
+
+msgctxt "game_options"
+msgid ""
+"Enhancement. Smooth out jagged edges on 3D object polygons. SSAA looks "
+"better but has a higher performance cost."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Enhancement. Smooth out jagged edges on 3D objects polygons."
@@ -7697,10 +7685,6 @@ msgstr "Verlaat emulator"
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr ""
-
-msgctxt "game_options"
-msgid "Export"
-msgstr "Export"
 
 msgctxt "game_options"
 msgid "Export (Default)"
@@ -7871,10 +7855,6 @@ msgid "FORCE NTSC TIMINGS ON PAL"
 msgstr "FORCEER NTSC TIMINGS OP PAL"
 
 msgctxt "game_options"
-msgid "FORCE WINDOWS CE MODE"
-msgstr "FORCEER WINDOWS CE MODUS"
-
-msgctxt "game_options"
 msgid "FOV VERTICAL"
 msgstr "GEZICHTSVELD VERTICAAL"
 
@@ -7967,10 +7947,6 @@ msgid "FSR UPSCALING"
 msgstr ""
 
 msgctxt "game_options"
-msgid "FSYNC"
-msgstr "FSYNC"
-
-msgctxt "game_options"
 msgid "FULL ENTITY LIGHTING"
 msgstr "VOLLEDIGE ENTITEITSVERLICHTING"
 
@@ -7983,10 +7959,6 @@ msgid "FULL SYNC AT GX2DRAWDONE"
 msgstr ""
 
 msgctxt "game_options"
-msgid "FULLSCREEN"
-msgstr "VOLLEDIG SCHERM"
-
-msgctxt "game_options"
 msgid "FULLSCREEN HD PIXEL PERFECT"
 msgstr ""
 
@@ -7997,14 +7969,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "FULLSCREEN SCALING"
 msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"FULLSCREEN gives you a top-down view on the playfield. For cabinet use or "
-"multi-window on desktop."
-msgstr ""
-"VOLLEDIG SCHERM geeft je een bovenaanzicht van het speelveld. Voor gebruik "
-"in een kast of met meerdere vensters op het bureaublad."
 
 msgctxt "game_options"
 msgid "FXAA"
@@ -8170,6 +8134,12 @@ msgid "Fire the gun's recoil motor on each shot, for guns that have one."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Firmware fan curve and power limits preset. Outside Custom the firmware sets "
+"the power limits and the TDP option has no effect."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Firmware menu"
 msgstr ""
 
@@ -8180,6 +8150,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "Fit 4:3 Aspect Ratio"
 msgstr "Pas naar beeldverhouding van 4:3 aan"
+
+msgctxt "game_options"
+msgid "Fit To Rendering Resolution"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Fit resolution scale"
@@ -8224,6 +8198,12 @@ msgstr ""
 "Schermscheuren verhelpen. FIFO (Vsync) laat geen frames vallen. FIFO Relaxed "
 "maakt scheuren mogelijk terwijl het herstelt van een vertraging. Mailbox kan "
 "een lagere latentie hebben, maar er kunnen frames wegvallen."
+
+msgctxt "game_options"
+msgid ""
+"Fix screen tearing. Only applies to OpenGL ES boards, PC builds always use "
+"vsync."
+msgstr ""
 
 msgctxt "game_options"
 msgid ""
@@ -8446,6 +8426,10 @@ msgid "Forces strict adherence to the PS3 RSX hardware specifications."
 msgstr ""
 
 msgctxt "game_options"
+msgid "Frame Pacing"
+msgstr ""
+
+msgctxt "game_options"
 msgid ""
 "Frame presentation method. Mailbox is low latency, VSync prevents tearing, "
 "Immediate may tear."
@@ -8541,8 +8525,8 @@ msgid "Full (Hash Cache)"
 msgstr "Volledig (Hash Cache)"
 
 msgctxt "game_options"
-msgid "Full (PS2 Mipmaps)"
-msgstr "Volledig (PS2 Mipmaps)"
+msgid "Full (PS2 Mipmaps) (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Full (Slow)"
@@ -8865,6 +8849,10 @@ msgid "GLOW STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
+msgid "GLideN64"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GLideN64 (Fastest)"
 msgstr "GLideN64 (Snelste)"
 
@@ -8962,6 +8950,10 @@ msgid "GT Force"
 msgstr "GT Force"
 
 msgctxt "game_options"
+msgid "GTIA"
+msgstr ""
+
+msgctxt "game_options"
 msgid "GUN RECOIL"
 msgstr ""
 
@@ -8982,6 +8974,10 @@ msgid "Game Boy Color"
 msgstr "Game Boy Color"
 
 msgctxt "game_options"
+msgid "Game Default (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Game default"
 msgstr "Standaard van het spel"
 
@@ -8990,8 +8986,8 @@ msgid "Game directly"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Game info/art"
-msgstr "Spelinfo/art"
+msgid "Game info"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Game's default"
@@ -9057,8 +9053,8 @@ msgid "Gaussian"
 msgstr "Gaussiaans"
 
 msgctxt "game_options"
-msgid "General MIDI SoundFont (Default)"
-msgstr "General MIDI SoundFont (Standaard)"
+msgid "General MIDI SoundFont"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Generic Keyboard Binds"
@@ -9142,6 +9138,10 @@ msgstr "Goud - Million Live Gold"
 msgctxt "game_options"
 msgid "Gold - Odyssey Gold"
 msgstr "Goud - Odyssey Gold"
+
+msgctxt "game_options"
+msgid "Good"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Graphic Display Controller model."
@@ -9320,8 +9320,8 @@ msgid "HLE (per-pixel)"
 msgstr "HLE (per-pixel)"
 
 msgctxt "game_options"
-msgid "HLE (per-strip)"
-msgstr "HLE (per-strip)"
+msgid "HLE (per-strip) (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "HOST ADDRESS"
@@ -9334,10 +9334,6 @@ msgstr "HQ (bilineair filter)"
 msgctxt "game_options"
 msgid "HQ MODE"
 msgstr "HQ MODUS"
-
-msgctxt "game_options"
-msgid "HQX"
-msgstr ""
 
 msgctxt "game_options"
 msgid "HST"
@@ -9492,12 +9488,6 @@ msgid "High Performance"
 msgstr "Hoge performance"
 
 msgctxt "game_options"
-msgid "High-Resolution Keyboard, which is larger and might be easier to see."
-msgstr ""
-"Toetsenbord met hoge resolutie: dit toetsenbord is groter en mogelijk beter "
-"zichtbaar."
-
-msgctxt "game_options"
 msgid "High-end Computer"
 msgstr "High-end Computer"
 
@@ -9580,6 +9570,12 @@ msgid "How the window space is distributed between the screens."
 msgstr "Hoe de vensterruimte over de schermen wordt verdeeld."
 
 msgctxt "game_options"
+msgid ""
+"How transparent polygons are sorted. Per-pixel is the most accurate and the "
+"slowest."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Hungarian"
 msgstr "Hongaars"
 
@@ -9642,6 +9638,14 @@ msgstr "VERBETERDE MESH"
 msgctxt "game_options"
 msgid "IMPROVED POLYGON SPLITTING"
 msgstr "VERBETERDE POLYGON-SPLITSING"
+
+msgctxt "game_options"
+msgid "INDY BOARD FORCE DEADBAND"
+msgstr ""
+
+msgctxt "game_options"
+msgid "INDY BOARD FORCE FULL POWER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INFRASTRUCTURE DNS SERVER"
@@ -9758,10 +9762,6 @@ msgstr ""
 "Verhoog prestatie als V-SYNC uitgeschakeld is en als Vulkan word gebruikt."
 
 msgctxt "game_options"
-msgid "Improve speed, at a minor cost of accuracy."
-msgstr "Verhoog snelheid, ten koste van een beetje nauwkeurigheid."
-
-msgctxt "game_options"
 msgid ""
 "Improves accuracy and fixes game-specific glitches at the cost of some "
 "performance."
@@ -9863,7 +9863,25 @@ msgid "Indonesian"
 msgstr "Indonesisch"
 
 msgctxt "game_options"
+msgid ""
+"Indy 500, Touring Car, Over Rev and Super GT 24h. Drive board motor power, "
+"out of 63, below which the wheel feels no force. Raise it if small forces "
+"buzz."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Indy 500, Touring Car, Over Rev and Super GT 24h. Drive board motor power, "
+"out of 63, that gives the wheel's full force. Lower it for stronger forces "
+"sooner."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Infinite"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Initial orientation of the game & controls"
 msgstr ""
 
 msgctxt "game_options"
@@ -9933,10 +9951,6 @@ msgstr "Interpreter is het meest nauwkeurig, maar is het langzaamst."
 msgctxt "game_options"
 msgid "Interton VC 4000 cartridges"
 msgstr "Interton VC 4000 cartridges"
-
-msgctxt "game_options"
-msgid "InuYasha Sengoku Battle Fix"
-msgstr "InuYasha Sengoku Battle Fix"
 
 msgctxt "keys_files"
 msgid "Inventory"
@@ -10061,10 +10075,6 @@ msgstr "Januari"
 msgctxt "game_options"
 msgid "Japan"
 msgstr "Japan"
-
-msgctxt "game_options"
-msgid "Japan (Default)"
-msgstr "Japan (Standaard)"
 
 msgctxt "game_options"
 msgid "Japanese"
@@ -10338,10 +10348,6 @@ msgstr "TAAL ONTGRENDELEN"
 msgctxt "game_options"
 msgid "LARGE SCREEN PROPORTION"
 msgstr ""
-
-msgctxt "game_options"
-msgid "LARGER KEYBOARD"
-msgstr "GROTER TOETSENBORD"
 
 msgctxt "game_options"
 msgid "LATENCY REDUCTION"
@@ -10667,7 +10673,8 @@ msgstr ""
 msgctxt "game_options"
 msgid ""
 "Local LAN multiplayer without internet. Host: this machine runs the Ad-Hoc "
-"server. Client: connects to the host on the same network."
+"server. Other machines set ADHOC SERVER to Manual and enter the host IP in "
+"PPSSPP."
 msgstr ""
 
 msgctxt "game_options"
@@ -10685,6 +10692,10 @@ msgstr ""
 msgctxt "keys_files"
 msgid "Lockbar Fire Button"
 msgstr "Lockbar vuurknop"
+
+msgctxt "game_options"
+msgid "Long"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Long visible screen edge (cm)"
@@ -10719,6 +10730,10 @@ msgid "Low 360p"
 msgstr "Laag 360p"
 
 msgctxt "game_options"
+msgid "Low Power"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Low-end Computer"
 msgstr "Low-end Computer"
 
@@ -10737,10 +10752,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Lowest"
 msgstr "Laagste"
-
-msgctxt "game_options"
-msgid "Lunar Ignore Brightness Color Fix"
-msgstr "Lunar Negeer Helderheid Kleuren Fix"
 
 msgctxt "game_options"
 msgid "Luxembourg"
@@ -10928,6 +10939,10 @@ msgstr "MUIS SNELHEID"
 
 msgctxt "game_options"
 msgid "MP2K HLE AUDIO"
+msgstr ""
+
+msgctxt "game_options"
+msgid "MSAA"
 msgstr ""
 
 msgctxt "game_options"
@@ -11191,6 +11206,10 @@ msgid "Max Performance"
 msgstr "Maximum Prestatie"
 
 msgctxt "game_options"
+msgid "Max Power"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Max Saving"
 msgstr ""
 
@@ -11339,12 +11358,20 @@ msgid "Megadrive (8 Buttons)"
 msgstr "Megadrive (8 Knoppen)"
 
 msgctxt "game_options"
+msgid "Memory + CPU (Buggy)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Memory Only"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Memory Pak"
 msgstr "Geheugen Pak"
 
 msgctxt "game_options"
 msgid ""
-"Memory mapping improved VUlkna performance. Reduces memory usage and fixes "
+"Memory mapping improves Vulkan performance. Reduces memory usage and fixes "
 "many graphical issues. However, it may be unstable on some GPUs."
 msgstr ""
 
@@ -11391,10 +11418,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Mexico"
 msgstr "Mexico"
-
-msgctxt "game_options"
-msgid "Microcosm"
-msgstr "Microcosm"
 
 msgctxt "game_options"
 msgid "Minimal"
@@ -11487,10 +11510,6 @@ msgstr "Marokko"
 msgctxt "game_options"
 msgid "Most games use port 2, some use port 1."
 msgstr "Meeste spellen gebruiken poort2, sommigen gebruiken poort 1."
-
-msgctxt "game_options"
-msgid "Mount a floppy for user data, creates if needed"
-msgstr "Mount een floppy voor gebruikersgegevens, maak deze aan indien nodig"
 
 msgctxt "game_options"
 msgid "Mouse"
@@ -11617,6 +11636,12 @@ msgid "Multisample anti-aliasing. Costs fill rate, so drop it on weaker GPUs."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Multisample anti-aliasing. Reduces geometry aliasing at the cost of "
+"performance and GPU memory."
+msgstr ""
+
+msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
 
@@ -11666,6 +11691,10 @@ msgstr "NETWERK TYPE"
 
 msgctxt "game_options"
 msgid "NETWORKING"
+msgstr ""
+
+msgctxt "game_options"
+msgid "NEUTRAL BETWEEN GEARS"
 msgstr ""
 
 msgctxt "game_options"
@@ -11834,10 +11863,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Native (PS2)(Default)"
 msgstr "Native (PS2)(Standaard)"
-
-msgctxt "game_options"
-msgid "Native Buffer"
-msgstr ""
 
 msgctxt "game_options"
 msgid "Navajo"
@@ -12141,10 +12166,6 @@ msgid "ORIGINAL FONTS"
 msgstr ""
 
 msgctxt "game_options"
-msgid "ORIGINAL HINTS"
-msgstr ""
-
-msgctxt "game_options"
 msgid "ORIGINAL LOD DISTANCES"
 msgstr ""
 
@@ -12195,10 +12216,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "OUTPUTS USE LINE FEED"
 msgstr ""
-
-msgctxt "game_options"
-msgid "OUTRUN LENS GLARE"
-msgstr "OUTRUN LENS GLARE"
 
 msgctxt "game_options"
 msgid "OVERCLOCK (UNSTABLE)"
@@ -12257,11 +12274,9 @@ msgid "Off at Start"
 msgstr "Uit bij Start"
 
 msgctxt "game_options"
-msgid "Off casts shadows from objects the PS2 could not afford to."
-msgstr ""
-
-msgctxt "game_options"
-msgid "Off enables the extra gameplay hints added by the PC port."
+msgid ""
+"Off casts shadows from objects the PS2 could not afford to. Jak II and Jak 3 "
+"only."
 msgstr ""
 
 msgctxt "game_options"
@@ -12370,10 +12385,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
+msgid ""
+"Only applies when using ParaLLEl-RDP as the chosen RDP Plugin, which is only "
+"available on x86_64."
 msgstr ""
-"Alleen van toepassing bij gebruik van Parallel-RDP als de gekozen RDP plug-"
-"in."
 
 msgctxt "game_options"
 msgid "Only for Mode 7 scenes"
@@ -12454,7 +12469,7 @@ msgid "OpenGL with Shaders"
 msgstr "OpenGL met Shaders"
 
 msgctxt "game_options"
-msgid "OpenGLES"
+msgid "OpenGLES, OpenGL on x86"
 msgstr ""
 
 msgctxt "game_options"
@@ -12502,8 +12517,10 @@ msgid "Original screen positions"
 msgstr "Originele scherm positie"
 
 msgctxt "game_options"
-msgid "Output rotation independent of xrandr or framebuffer settings."
-msgstr "Uitvoerrotatie onafhankelijk van xrandr of framebuffer instellingen."
+msgid ""
+"Output rotation independent of xrandr or framebuffer settings. Moonlight "
+"Embedded only."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Overclock emulated 3DS CPU to improve framerates or run 60 FPS mods."
@@ -12638,10 +12655,6 @@ msgid "PAUSE SCREEN DISPLAY"
 msgstr "PAUZEER SCHERM"
 
 msgctxt "game_options"
-msgid "PBA"
-msgstr "PBA"
-
-msgctxt "game_options"
 msgid "PC MODEL"
 msgstr "PC MODEL"
 
@@ -12756,6 +12769,14 @@ msgstr "PRESTATIE HACKS"
 msgctxt "game_options"
 msgid "PERFORMANCE PRESETS"
 msgstr "PRESTATIES VOORINSTELLINGEN"
+
+msgctxt "game_options"
+msgid "PGXP DEPTH BUFFER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "PGXP OPERATION MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "PHOSPHOR BLEND"
@@ -12945,16 +12966,24 @@ msgid "Panama"
 msgstr "Panama"
 
 msgctxt "game_options"
-msgid "Pandemonium 2 Lazy Screen Update Fix"
-msgstr "Pandemonium 2 Lazy Screen Update Fix"
-
-msgctxt "game_options"
 msgid "ParaLLEl (Best LLE)"
 msgstr "PARALLEL (Beste LLE)"
 
 msgctxt "game_options"
+msgid ""
+"ParaLLEl is only available on x86 and the Raspberry Pi 5, CXD4 on x86_64 and "
+"the Raspberry Pi 5."
+msgstr ""
+
+msgctxt "game_options"
 msgid "ParaLLEl-RDP"
 msgstr "PARALLLEL-RDP"
+
+msgctxt "game_options"
+msgid ""
+"ParaLLEl-RDP is only available on x86_64. Angrylion is only available on x86 "
+"and the Raspberry Pi 5."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Paraguay"
@@ -12963,10 +12992,6 @@ msgstr "Paraguay"
 msgctxt "game_options"
 msgid "Parallel"
 msgstr "Parallel"
-
-msgctxt "game_options"
-msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
-msgstr "Parasite Eve 2/Vandal Hearts 1&2 Fix"
 
 msgctxt "game_options"
 msgid ""
@@ -13065,6 +13090,18 @@ msgstr "Per Triangle (Standaard)"
 msgctxt "game_options"
 msgid "Per pixel is the most accurate, but also the most demanding."
 msgstr "Per pixel is het meest nauwkeurig, maar ook het meest veeleisend."
+
+msgctxt "game_options"
+msgid "Per-Pixel (Accurate)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Per-Strip (Fast)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Per-Triangle (Default)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Per-game"
@@ -13259,10 +13296,6 @@ msgid "Portugal"
 msgstr "Portugal"
 
 msgctxt "game_options"
-msgid "Portugese"
-msgstr "Portugees"
-
-msgctxt "game_options"
 msgid "Portuguese"
 msgstr "Portugees"
 
@@ -13323,6 +13356,10 @@ msgid "Power Saver"
 msgstr "Energiebespaarder"
 
 msgctxt "game_options"
+msgid "Precise"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Precise (Default)"
 msgstr ""
 
@@ -13364,6 +13401,10 @@ msgctxt "game_options"
 msgid ""
 "Prevents bright white transitions during scene changes in games like Daytona "
 "2 or Scud Race."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Prevents screen tearing. Disable if it costs too much performance."
 msgstr ""
 
 msgctxt "keys_files"
@@ -13488,6 +13529,10 @@ msgstr "Snellaad"
 
 msgctxt "game_options"
 msgid "Quickload (.cmd)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Quiet"
 msgstr ""
 
 msgctxt "game_options"
@@ -13647,6 +13692,10 @@ msgid "RENDERING RESOLUTION"
 msgstr "RENDERRESOLUTIE"
 
 msgctxt "game_options"
+msgid "RENDERING RESOLUTION (GLIDEN64 ONLY)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RESIZE TATTOO"
 msgstr "WIJZIG TATTOO"
 
@@ -13683,8 +13732,8 @@ msgid "RGB (crisp image)"
 msgstr "RGB (scherp beeld)"
 
 msgctxt "game_options"
-msgid "RGB Color Low/Medium-Resolution"
-msgstr ""
+msgid "RGB Colour Low/Medium-Resolution"
+msgstr "RGB Kleur Lage/Gemiddelde resolutie"
 
 msgctxt "game_options"
 msgid "RGB Image"
@@ -13701,6 +13750,10 @@ msgstr "ROC"
 msgctxt "game_options"
 msgid "ROK"
 msgstr "ROK"
+
+msgctxt "game_options"
+msgid "ROM"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ROM (Slot 1)"
@@ -13737,6 +13790,10 @@ msgstr "DRAAI"
 msgctxt "game_options"
 msgid "ROTATE FACE BUTTONS"
 msgstr "DRAAI FACE KNOPPEN"
+
+msgctxt "game_options"
+msgid "ROTATING BACKGROUND RESOLUTION"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ROTATION"
@@ -13827,6 +13884,11 @@ msgid "Reduces banding between colors and improves the preceived color depth."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Reduces polygon fighting. Needs PGXP corrections and a hardware renderer."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Reduces wobbly polygons & warping textures."
 msgstr "Vermindert wiebelige polygonen en kromtrekkende texturen."
 
@@ -13874,6 +13936,22 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Render at a multiple of the N64 resolution. Only applies to the Angrylion "
+"and Parallel plugins. Angrylion stops at 4x."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Render at a multiple of the native resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Render at the screen resolution or at a multiple of the N64 native "
+"resolution."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Render target emulation method. Accuracy handles more pixel formats "
 "correctly but costs more performance, especially with overdraw-heavy games."
 msgstr ""
@@ -13882,6 +13960,16 @@ msgctxt "game_options"
 msgid ""
 "Render the 3DS screens at a higher resolution. Higher values improve visual "
 "quality but significantly impact performance."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Rendering resolution for vector games."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Renders at a higher or lower resolution than the display. Higher values look "
+"better but cost a lot of performance."
 msgstr ""
 
 msgctxt "game_options"
@@ -13896,12 +13984,6 @@ msgstr "Rendert polygonen en texturen met de oorspronkelijke resolutie."
 msgctxt "game_options"
 msgid "Replace meshed transparency by real transparency."
 msgstr "Vervang mesh-transparantie door echte transparantie."
-
-msgctxt "game_options"
-msgid ""
-"Reproduces the original disc read speed, including the loading pauses it "
-"caused."
-msgstr ""
 
 msgctxt "game_options"
 msgid "Required by some games."
@@ -14176,6 +14258,10 @@ msgid "SC-3000 (Default)"
 msgstr ""
 
 msgctxt "game_options"
+msgid "SC-3000 (PAL)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SC-3000 MODEL"
 msgstr ""
 
@@ -14185,10 +14271,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "SC-3000 cassettes"
-msgstr ""
-
-msgctxt "game_options"
-msgid "SC-3000H"
 msgstr ""
 
 msgctxt "game_options"
@@ -14282,10 +14364,6 @@ msgstr "SCHERM INSTELLINGEN"
 msgctxt "game_options"
 msgid "SCREEN SHADER"
 msgstr ""
-
-msgctxt "game_options"
-msgid "SCREEN SIZE"
-msgstr "SCHERM MAAT"
 
 msgctxt "game_options"
 msgid "SCREEN SIZING"
@@ -14584,16 +14662,8 @@ msgid "SPECIAL CONTROL LAYOUTS"
 msgstr "SPECIALE CONTROL LAYOUTS"
 
 msgctxt "game_options"
-msgid "SPECIFIC GAME FIXES"
-msgstr "FIXES VOOR SPECIFIEKE SPELLEN"
-
-msgctxt "game_options"
 msgid "SPEECH MODULE"
 msgstr "Spraakmodule"
-
-msgctxt "game_options"
-msgid "SPEED HACK (SAFE)"
-msgstr "SPEED HACK (VEILIG)"
 
 msgctxt "game_options"
 msgid "SPEED HACKS"
@@ -14662,6 +14732,10 @@ msgstr "STE"
 msgctxt "game_options"
 msgid "STEREO SOUND"
 msgstr "STEREOGELUID"
+
+msgctxt "game_options"
+msgid "STICK DEADZONE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "STICK SENSITIVITY"
@@ -14750,10 +14824,6 @@ msgstr "SYNC SAVE BESTANDEN"
 msgctxt "game_options"
 msgid "SYNC TO HOST REFRESH RATE"
 msgstr "SYNC TO HOST VERVERSINGS SNELHEID"
-
-msgctxt "game_options"
-msgid "SYNCHRONOUS RENDERING"
-msgstr "SYNCHROON RENDEREN"
 
 msgctxt "game_options"
 msgid "SYSTEM"
@@ -14868,6 +14938,10 @@ msgid "Scorpion 256K"
 msgstr "Scorpion 256K"
 
 msgctxt "game_options"
+msgid "Screen Resolution (Default)"
+msgstr "Scherm Resolutie (Standaard)"
+
+msgctxt "game_options"
 msgid "Screen inclination (degree)"
 msgstr "Schermhelling (graden)"
 
@@ -14920,8 +14994,10 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Select a boot disk or hard drive if needed"
-msgstr "Selecteer een opstartschijf of harde schijf indien nodig"
+msgid ""
+"Select a boot disk or hard drive if needed. Floppy boot disks need a two-"
+"drive model, not the Mac LC 3."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Select a custom video shader filter."
@@ -15321,10 +15397,6 @@ msgid "Sets the scaler filter mode when rendering."
 msgstr "Stelt de schaalfiltermodus in tijdens het renderen."
 
 msgctxt "game_options"
-msgid "Sets the window size to an integer size."
-msgstr "Stelt de venstergrootte in op een geheel getal."
-
-msgctxt "game_options"
 msgid "Setting for 16-position DIP switch number 1."
 msgstr "Instelling voor 16-positie DIP-schakelaar nummer 1."
 
@@ -15427,6 +15499,10 @@ msgid "Shoot Zappper"
 msgstr "Schiet Zappper"
 
 msgctxt "game_options"
+msgid "Short"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Short visible screen edge (cm)"
 msgstr "Korte zichtbare schermrand (cm)"
 
@@ -15509,6 +15585,10 @@ msgctxt "game_options"
 msgid "Shrink/expand tattoo to fit within the bezel's border."
 msgstr ""
 "Verklein/vergroot de tattoo zodat deze binnen de rand van de omlijsting past."
+
+msgctxt "game_options"
+msgid "Shrinks or hides the borders. Some games used the borders."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Shunt 10"
@@ -15659,10 +15739,6 @@ msgid "Skip Drawing"
 msgstr "Skip Drawing"
 
 msgctxt "game_options"
-msgid "Skip Initial"
-msgstr "Initieel overslaan"
-
-msgctxt "game_options"
 msgid "Skip buffer effects"
 msgstr "Buffer effecten overslaan"
 
@@ -15694,7 +15770,7 @@ msgstr ""
 "bewegingen. Kan visuele storingen veroorzaken."
 
 msgctxt "game_options"
-msgid "Skip the GBA boot logo. Requires a BIOS file when disabled."
+msgid "Skip the GBA boot logo. A BIOS file is always required."
 msgstr ""
 
 msgctxt "game_options"
@@ -15768,6 +15844,10 @@ msgid "Slow down or speed up games as appropriate."
 msgstr "Vertraag of versnel spellen wanneer dat gepast is."
 
 msgctxt "game_options"
+msgid "Small"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Small performance increase (may drop frames)."
 msgstr "Kleine performance winst (kan framerate omlaag halen)."
 
@@ -15810,6 +15890,10 @@ msgstr "Maak textures op 3D objecten gladder."
 msgctxt "game_options"
 msgid "Smooth textures on distant 3D objects based on angle."
 msgstr "Maakt textures op verre 3D objecten gladder gebaseerd op een hoek."
+
+msgctxt "game_options"
+msgid "Smooths jagged edges. Vulkan only, unsupported levels fall back to off."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Smooths jagged geometry edges."
@@ -16138,6 +16222,12 @@ msgid "Stereo sound output."
 msgstr "Stereo geluidsweergave."
 
 msgctxt "game_options"
+msgid ""
+"Stick travel about centre that reads as centre, in percent. Raise it for a "
+"stick that no longer settles at rest."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Stipple (Default)"
 msgstr ""
 
@@ -16169,11 +16259,27 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Strength of the game's forces, in percent of the wheel's maximum. Auto is "
+"50%."
+msgstr ""
+
+msgctxt "game_options"
+msgid "Strength of the rumble, in percent of the pad's motors. Auto is 50%."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Stretch"
 msgstr "Rekken"
 
 msgctxt "game_options"
 msgid "Stretch image output to fill the window/screen."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Stretch the menu & game to the full width of the display. Enable widescreen "
+"also for better in game rendering."
 msgstr ""
 
 msgctxt "game_options"
@@ -16336,10 +16442,6 @@ msgid "Switzerland (German)"
 msgstr "Zwitserland (Duits)"
 
 msgctxt "game_options"
-msgid "Sync"
-msgstr ""
-
-msgctxt "game_options"
 msgid ""
 "Sync GB2Player/GBC2Player saves with saves in \"saves/gb\" or \"saves/gbc\"."
 msgstr ""
@@ -16418,8 +16520,8 @@ msgid "TATTOO CORNER"
 msgstr "TATTOO HOEK"
 
 msgctxt "game_options"
-msgid "TEAM COLOR MODE"
-msgstr "TEAM KLEUR MODUS"
+msgid "TEAM MODE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "TEMPEST 2000"
@@ -16516,6 +16618,10 @@ msgstr "TEXTURE OPSCHALEN NIVEAU"
 msgctxt "game_options"
 msgid "TEXTURE UPSCALING TYPE"
 msgstr "TEXTURE OPSCHALEN TYPE"
+
+msgctxt "game_options"
+msgid "THERMAL PROFILE"
+msgstr ""
 
 msgctxt "game_options"
 msgid "THIS CABINET"
@@ -16758,10 +16864,6 @@ msgid "Tandy Radio Shack Color Computer cartridges"
 msgstr "Tandy Radio Shack Color Computer cartridges"
 
 msgctxt "game_options"
-msgid "Tandy Radio Shack Color Computer cassettes"
-msgstr "Tandy Radio Shack Color Computer cassettes"
-
-msgctxt "game_options"
 msgid "Tandy Radio Shack Color Computer disk images"
 msgstr "Tandy Radio Shack Color Computer disk images"
 
@@ -16793,15 +16895,11 @@ msgstr ""
 "ingeschakeld."
 
 msgctxt "game_options"
-msgid ""
-"The TCP port used to send network output packets. Leave at default (0) to "
-"disable."
+msgid "The TCP port used to send network output packets."
 msgstr ""
 
 msgctxt "game_options"
-msgid ""
-"The UDP broadcast port used to send network output packets. Leave at default "
-"(0) to disable."
+msgid "The UDP broadcast port used to send network output packets."
 msgstr ""
 
 msgctxt "game_options"
@@ -16868,6 +16966,10 @@ msgstr "De Taal waar naartoe wordt vertaald."
 msgctxt "game_options"
 msgid "The month of your birthay."
 msgstr "De maand waarin je jarig bent."
+
+msgctxt "game_options"
+msgid "The month of your birthday."
+msgstr ""
 
 msgctxt "game_options"
 msgid "The theme color of the emulated console."
@@ -17189,6 +17291,10 @@ msgid "UPSCALING & SHARPENING"
 msgstr ""
 
 msgctxt "game_options"
+msgid "UPSCALING FACTOR"
+msgstr ""
+
+msgctxt "game_options"
 msgid "US"
 msgstr "US"
 
@@ -17299,10 +17405,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "USER 1 ZOOM BUTTON"
 msgstr ""
-
-msgctxt "game_options"
-msgid "USER DISK"
-msgstr "GEBRUIKERS DISK"
 
 msgctxt "game_options"
 msgid "UTC"
@@ -17805,6 +17907,10 @@ msgid "VBLANK FREQUENCY"
 msgstr ""
 
 msgctxt "game_options"
+msgid "VECTOR RESOLUTION"
+msgstr ""
+
+msgctxt "game_options"
 msgid "VERBOSE LOGGING"
 msgstr ""
 
@@ -17841,6 +17947,10 @@ msgid "VIDEO"
 msgstr "VIDEO"
 
 msgctxt "game_options"
+msgid "VIDEO BORDER SIZE"
+msgstr ""
+
+msgctxt "game_options"
 msgid "VIDEO FILTER"
 msgstr "VIDEOFILTER"
 
@@ -17859,6 +17969,10 @@ msgstr "VIDEOMODUS"
 msgctxt "game_options"
 msgid "VIDEO QUALITY"
 msgstr "VIDEOKWALITEIT"
+
+msgctxt "game_options"
+msgid "VIDEO RENDERER"
+msgstr ""
 
 msgctxt "game_options"
 msgid "VIDEO RESOLUTION"
@@ -17955,10 +18069,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Value to use for the emulated solar sensor (Boktai)."
 msgstr "Waarde te gebruiken voor geëmuleerde solar sensor (Boktai)."
-
-msgctxt "game_options"
-msgid "Vastly improves the speed of buffer maps."
-msgstr "Verbetert de snelheid van buffer maps aanzienlijk."
 
 msgctxt "game_options"
 msgid "Venezuela"
@@ -18089,10 +18199,6 @@ msgid "WEAPON PICKUP"
 msgstr "WAPEN OPPAKKEN"
 
 msgctxt "game_options"
-msgid "WEAPON WAGGLE"
-msgstr "WAPENGEWIEBEL"
-
-msgctxt "game_options"
 msgid "WEAPON ZOOM SENSITIVITY SCALE"
 msgstr ""
 
@@ -18114,6 +18220,10 @@ msgstr "WHDLOAD STARTER"
 
 msgctxt "game_options"
 msgid "WHEEL AUTO-CENTRE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL CENTRE DEADZONE"
 msgstr ""
 
 msgctxt "game_options"
@@ -18242,6 +18352,12 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Wheel travel about centre that reads as centre, in percent. Most wheels want "
+"none."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "When enabled and upscaling, textures look better than linear filtering for a "
 "lot of 2D art."
 msgstr ""
@@ -18280,7 +18396,9 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
-msgid "Which rectangle the frame is fit into."
+msgid ""
+"Which rectangle the frame is fit into. 16:9 widens the 3D into the sides, "
+"experimental. OpenGL/Vulkan only."
 msgstr ""
 
 msgctxt "game_options"
@@ -18524,10 +18642,6 @@ msgid "amber"
 msgstr "amber"
 
 msgctxt "game_options"
-msgid "best"
-msgstr "beste"
-
-msgctxt "game_options"
 msgid "bilinear"
 msgstr "bilineair"
 
@@ -18764,6 +18878,16 @@ msgid "original gameboy"
 msgstr "originele gameboy"
 
 msgctxt "game_options"
+msgid "paraLLEl-GS"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"paraLLEl-GS is the accurate renderer and needs the Vulkan graphics API. "
+"Software runs on the CPU."
+msgstr ""
+
+msgctxt "game_options"
 msgid "pentium_slow"
 msgstr "pentium_traag"
 
@@ -18778,10 +18902,6 @@ msgstr "plasma kanon"
 msgctxt "keys_files"
 msgid "proximity bomb"
 msgstr "Nabijheidsbom"
-
-msgctxt "game_options"
-msgid "quick switch"
-msgstr "snel wisselen"
 
 msgctxt "keys_files"
 msgid "quickload"
@@ -18806,6 +18926,10 @@ msgstr "rood/cyaan"
 msgctxt "game_options"
 msgid "red/electric cyan"
 msgstr "rood/electrisch cyaan"
+
+msgctxt "game_options"
+msgid "restored-wii-vc"
+msgstr ""
 
 msgctxt "game_options"
 msgid "right/left"
@@ -18880,6 +19004,10 @@ msgid "white"
 msgstr "wit"
 
 msgctxt "game_options"
+msgid "wii-vc"
+msgstr ""
+
+msgctxt "game_options"
 msgid "xBR (Very Slow)"
 msgstr "xBR (Erg Traag)"
 
@@ -18916,6 +19044,18 @@ msgid "yellow/blue"
 msgstr "geel/blauw"
 
 #~ msgctxt "game_options"
+#~ msgid "0 (Defaults Unlimited)"
+#~ msgstr "0 (Standaard onbeperkt)"
+
+#~ msgctxt "game_options"
+#~ msgid "1/8 Frame1"
+#~ msgstr "1/8 Frame1"
+
+#~ msgctxt "game_options"
+#~ msgid "100%(native)"
+#~ msgstr "100% (native)"
+
+#~ msgctxt "game_options"
 #~ msgid "1000 (Default)"
 #~ msgstr "1000 (Standaard)"
 
@@ -18948,6 +19088,14 @@ msgstr "geel/blauw"
 #~ msgstr "140ms"
 
 #~ msgctxt "game_options"
+#~ msgid "150Mhz (Overclock)"
+#~ msgstr "150Mhz (Overclock)"
+
+#~ msgctxt "game_options"
+#~ msgid "16 Frame"
+#~ msgstr "16 Frame"
+
+#~ msgctxt "game_options"
 #~ msgid "160ms"
 #~ msgstr "160ms"
 
@@ -18972,12 +19120,20 @@ msgstr "geel/blauw"
 #~ msgstr "1x (~480)"
 
 #~ msgctxt "game_options"
+#~ msgid "200Mhz (Overclock)"
+#~ msgstr "200Mhz (Overclock)"
+
+#~ msgctxt "game_options"
 #~ msgid "220ms"
 #~ msgstr "220ms"
 
 #~ msgctxt "game_options"
 #~ msgid "240ms"
 #~ msgstr "240ms"
+
+#~ msgctxt "game_options"
+#~ msgid "2x (Default)"
+#~ msgstr "2x (Standaard)"
 
 #~ msgctxt "game_options"
 #~ msgid "2x (~960)"
@@ -19004,6 +19160,10 @@ msgstr "geel/blauw"
 #~ msgstr "40ms"
 
 #~ msgctxt "game_options"
+#~ msgid "4k"
+#~ msgstr "4k"
+
+#~ msgctxt "game_options"
 #~ msgid "4x (~1920p)"
 #~ msgstr "4x (~1920p)"
 
@@ -19014,6 +19174,14 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "4x Native (2560x2112) for 1440p"
 #~ msgstr "4x Native (2560x2112) voor 1440p"
+
+#~ msgctxt "game_options"
+#~ msgid "50 (Default)"
+#~ msgstr "50 (Standaard)"
+
+#~ msgctxt "game_options"
+#~ msgid "512KB"
+#~ msgstr "512KB"
 
 #~ msgctxt "game_options"
 #~ msgid "5x Native (3200x2640)"
@@ -19034,6 +19202,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "80ms"
 #~ msgstr "80ms"
+
+#~ msgctxt "game_options"
+#~ msgid "8k"
+#~ msgstr "8k"
 
 #~ msgctxt "game_options"
 #~ msgid "8x (~4320p / 8k)"
@@ -19062,6 +19234,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "ACCELEROMETER"
 #~ msgstr "ACCELEROMETER"
+
+#~ msgctxt "game_options"
+#~ msgid "ACHIEVEMENTS"
+#~ msgstr "PRESTATIES"
 
 #~ msgctxt "game_options"
 #~ msgid "ADDITIONAL FRAMELIMIT"
@@ -19128,6 +19304,10 @@ msgstr "geel/blauw"
 #~ "discs."
 
 #~ msgctxt "game_options"
+#~ msgid "Alone in the Dark"
+#~ msgstr "Alone in the Dark"
+
+#~ msgctxt "game_options"
 #~ msgid "Alternative Coloured Dot Matrix Display (needs additional file)."
 #~ msgstr "Alternatief Colored Dot Matrix Display (vereist extra bestand)."
 
@@ -19167,6 +19347,14 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Async with Shader Interpreter"
 #~ msgstr "Async met Shader Interpreter"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Automatically decrease frame delay temporarily to prevent frame drops. "
+#~ "Can introduce stuttering."
+#~ msgstr ""
+#~ "Verlaag automatisch de framevertraging tijdelijk om framedrops te "
+#~ "voorkomen. Kan haperingen introduceren."
 
 #~ msgctxt "keys_files"
 #~ msgid "Batocera Control Center"
@@ -19220,6 +19408,10 @@ msgstr "geel/blauw"
 #~ msgstr "KLEURENMODUS"
 
 #~ msgctxt "game_options"
+#~ msgid "CONTROL MAPPING"
+#~ msgstr "INVOER INDELING"
+
+#~ msgctxt "game_options"
 #~ msgid "CPU TIMING MODE (FPS)"
 #~ msgstr "CPU TIMING MODUS (FPS)"
 
@@ -19230,6 +19422,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "CRT-like colour adaption. Requires New 3D engine."
 #~ msgstr "CRT-achtige kleuraanpassing. Vereist nieuwe 3D-engine."
+
+#~ msgctxt "game_options"
+#~ msgid "Can avoid flashing screen issues. Significant performance cost."
+#~ msgstr "Kan flikkerend scherm voorkomen. Significant prestatie verlies."
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19246,14 +19442,26 @@ msgstr "geel/blauw"
 #~ "LCD's hebben dit niet nodig)."
 
 #~ msgctxt "game_options"
+#~ msgid "Can improve frame rates and responsiveness."
+#~ msgstr "Kan frame rates en reactietijd verbeteren."
+
+#~ msgctxt "game_options"
 #~ msgid "Can improve performance at the expense of graphics accuracy."
 #~ msgstr ""
 #~ "Kan de prestaties verbeteren ten koste van de grafische nauwkeurigheid."
 
 #~ msgctxt "game_options"
+#~ msgid "Can increase performance for games that stress the CPU."
+#~ msgstr "Kan prestatie verhogen voor spellen die de CPU veel belasten."
+
+#~ msgctxt "game_options"
 #~ msgid "Can reduce crackle and stutter but increases audio latency."
 #~ msgstr ""
 #~ "Kan gekraak en stotteren verminderen, maar verhoogt de audiolatentie."
+
+#~ msgctxt "game_options"
+#~ msgid "Capcom VS games Expand Screen Width"
+#~ msgstr "Capcom VS spellen Verbreed de Schermbreedte"
 
 #~ msgctxt "game_options"
 #~ msgid "Change the consoles country from the default of the United States."
@@ -19335,6 +19543,14 @@ msgstr "geel/blauw"
 #~ msgstr "Kies de tijdzone van uw console."
 
 #~ msgctxt "game_options"
+#~ msgid "Chrono Chross Odd/Even Bit Hack"
+#~ msgstr "Chrono Chross Oneven/Even Bit Hack"
+
+#~ msgctxt "game_options"
+#~ msgid "Color Computer 2"
+#~ msgstr "Color Computer 2"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Compile shaders using background threads to avoid shader compilation "
 #~ "stutter. May cause graphical glitches."
@@ -19349,6 +19565,14 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "Regelt de precisie van gegenereerde shaders. Lage kwaliteit kan de "
 #~ "prestaties verbeteren."
+
+#~ msgctxt "game_options"
+#~ msgid "Crash-n Burn"
+#~ msgstr "Crash-n Burn"
+
+#~ msgctxt "game_options"
+#~ msgid "Cycle Timing Check"
+#~ msgstr "Cycle Timing Check"
 
 #~ msgctxt "game_options"
 #~ msgid "D3D12 (Default)"
@@ -19374,6 +19598,50 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "DISPLAY BACKGLASS GRILL"
 #~ msgstr "TOON KOPRUIT GRILL"
+
+#~ msgctxt "game_options"
+#~ msgid "DMD SIZE"
+#~ msgstr "DMD GROOTTE"
+
+#~ msgctxt "game_options"
+#~ msgid "DMD window ratio"
+#~ msgstr "DMD vensterverhouding"
+
+#~ msgctxt "game_options"
+#~ msgid "DOOM RES HACK"
+#~ msgstr "DOOM RES HACK"
+
+#~ msgctxt "game_options"
+#~ msgid "DSi (Experiemental)"
+#~ msgstr "DSi (Experiementeel)"
+
+#~ msgctxt "game_options"
+#~ msgid "Dark Forces Flat Tex Triangles Fix"
+#~ msgstr "Dark Forces Platte Tex Driehoeken Fix"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "Default uses SDL2, otherwise enable controller specific capabilities. "
+#~ "Sony DS won't work with clone controllers."
+#~ msgstr ""
+#~ "Standaard wordt SDL2 gebruikt, schakel anders controller specifieke "
+#~ "mogelijkheden in. Sony DS werkt niet met klooncontrollers."
+
+#~ msgctxt "game_options"
+#~ msgid "Diablo Music Fix"
+#~ msgstr "Diablo Muziek Fix"
+
+#~ msgctxt "game_options"
+#~ msgid "Dinopark Tycoon"
+#~ msgstr "Dinopark Tycoon"
+
+#~ msgctxt "game_options"
+#~ msgid "Disable all input processing (view-only mode)."
+#~ msgstr "Schakel alle invoerverwerking uit (alleen-lezenmodus)"
+
+#~ msgctxt "game_options"
+#~ msgid "Disabled (Beatle Interpreter)"
+#~ msgstr "Uitgeschakeld (Beatle Interpreter)"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19429,6 +19697,10 @@ msgstr "geel/blauw"
 #~ msgstr "MIP-MAP INSCHAKELEN"
 
 #~ msgctxt "game_options"
+#~ msgid "ENABLE NTFS MODE"
+#~ msgstr "NTFS-MODUS INSCHAKELEN"
+
+#~ msgctxt "game_options"
 #~ msgid "ENABLE RAW INPUT"
 #~ msgstr "RAW INVOER INSCHAKELEN"
 
@@ -19441,12 +19713,36 @@ msgstr "geel/blauw"
 #~ msgstr "SOFTWARE-RENDERAAR INSCHAKELEN"
 
 #~ msgctxt "game_options"
+#~ msgid "ESYNC"
+#~ msgstr "ESYNC"
+
+#~ msgctxt "game_options"
 #~ msgid "EXPERT SETTINGS"
 #~ msgstr "EXPERT INSTELLINGEN"
 
 #~ msgctxt "game_options"
+#~ msgid "Emulate NTSC quirks to show more colors in hi-res mode."
+#~ msgstr "Emuleer NTSC quirks om meer kleuren in hi-res modus weer te geven."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable QOS settings to optimize for internet or local network."
+#~ msgstr ""
+#~ "Schakel QOS-instellingen in om te optimaliseren voor internet of lokaal "
+#~ "netwerk."
+
+#~ msgctxt "game_options"
 #~ msgid "Enable X-Input mode for Xbox type controllers."
 #~ msgstr "Schakel de X-Input-modus in voor controllers van het Xbox-type."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable for Doom to run at its correct resolution."
+#~ msgstr "Inschakelen om Doom op de correcte resolutie te spelen."
+
+#~ msgctxt "game_options"
+#~ msgid "Enable for more fluidity, disable if screen tearing."
+#~ msgstr ""
+#~ "Inschakelen voor meer vloeiend resultaat, uitschakelen als je last hebt "
+#~ "van screen tearing."
 
 #~ msgctxt "game_options"
 #~ msgid "Enable full-screen antialiasing in Direct3D."
@@ -19487,6 +19783,14 @@ msgstr "geel/blauw"
 #~ "Schakel de legacy nieuwe 3D engine in (kies legacy voor oudere GPUs)."
 
 #~ msgctxt "game_options"
+#~ msgid ""
+#~ "Enable this mode if you have issue for run your game on NTFS storage (by "
+#~ "default is better to use LinuxFS)."
+#~ msgstr ""
+#~ "Schakel deze modus in als u problemen ondervindt bij het uitvoeren van uw "
+#~ "game op NTFS-opslag (standaard is het beter om LinuxFS te gebruiken)."
+
+#~ msgctxt "game_options"
 #~ msgid "Enable to emulate the card reader in Virtua Tenis 3."
 #~ msgstr "Schakel in om de kaartlezer in Virtua Tennis 3 te emuleren."
 
@@ -19513,6 +19817,10 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "Schakelt mipmap gebrui en trilineaire filter in. Werkt niet met sommige "
 #~ "spellen."
+
+#~ msgctxt "game_options"
+#~ msgid "Export"
+#~ msgstr "Export"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -19553,6 +19861,26 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "FORCE MANAGED"
 #~ msgstr "FORCEER MANAGED"
+
+#~ msgctxt "game_options"
+#~ msgid "FORCE WINDOWS CE MODE"
+#~ msgstr "FORCEER WINDOWS CE MODUS"
+
+#~ msgctxt "game_options"
+#~ msgid "FSYNC"
+#~ msgstr "FSYNC"
+
+#~ msgctxt "game_options"
+#~ msgid "FULLSCREEN"
+#~ msgstr "VOLLEDIG SCHERM"
+
+#~ msgctxt "game_options"
+#~ msgid ""
+#~ "FULLSCREEN gives you a top-down view on the playfield. For cabinet use or "
+#~ "multi-window on desktop."
+#~ msgstr ""
+#~ "VOLLEDIG SCHERM geeft je een bovenaanzicht van het speelveld. Voor "
+#~ "gebruik in een kast of met meerdere vensters op het bureaublad."
 
 #~ msgctxt "game_options"
 #~ msgid "Fast Interpreter"
@@ -19618,8 +19946,24 @@ msgstr "geel/blauw"
 #~ "Dynamisch."
 
 #~ msgctxt "game_options"
+#~ msgid "Full (PS2 Mipmaps)"
+#~ msgstr "Volledig (PS2 Mipmaps)"
+
+#~ msgctxt "game_options"
+#~ msgid "Game info/art"
+#~ msgstr "Spelinfo/art"
+
+#~ msgctxt "game_options"
 #~ msgid "Gamepad (D-pad, 2 Buttons)"
 #~ msgstr "Controller (D-pad, 2 Knoppen)"
+
+#~ msgctxt "game_options"
+#~ msgid "General MIDI SoundFont (Default)"
+#~ msgstr "General MIDI SoundFont (Standaard)"
+
+#~ msgctxt "game_options"
+#~ msgid "HLE (per-strip)"
+#~ msgstr "HLE (per-strip)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Hat Down"
@@ -19669,6 +20013,13 @@ msgstr "geel/blauw"
 
 #~ msgctxt "game_options"
 #~ msgid ""
+#~ "High-Resolution Keyboard, which is larger and might be easier to see."
+#~ msgstr ""
+#~ "Toetsenbord met hoge resolutie: dit toetsenbord is groter en mogelijk "
+#~ "beter zichtbaar."
+
+#~ msgctxt "game_options"
+#~ msgid ""
 #~ "House of the Dead 4 speed fix. Select CPU base frequency of your "
 #~ "processor."
 #~ msgstr ""
@@ -19687,6 +20038,10 @@ msgstr "geel/blauw"
 #~ "nog steeds crasht."
 
 #~ msgctxt "game_options"
+#~ msgid "Improve speed, at a minor cost of accuracy."
+#~ msgstr "Verhoog snelheid, ten koste van een beetje nauwkeurigheid."
+
+#~ msgctxt "game_options"
 #~ msgid "Improves performance in 3D games. Can cause glitches."
 #~ msgstr "Verbeterd prestatie in 3D spellen. Kan glitches veroorzaken."
 
@@ -19697,6 +20052,14 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "Interne accelerometer. Schakel deze optie uit als u willekeurige tilts of "
 #~ "onverwacht balgedrag ervaart."
+
+#~ msgctxt "game_options"
+#~ msgid "InuYasha Sengoku Battle Fix"
+#~ msgstr "InuYasha Sengoku Battle Fix"
+
+#~ msgctxt "game_options"
+#~ msgid "Japan (Default)"
+#~ msgstr "Japan (Standaard)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Joy2Pad Down"
@@ -19726,6 +20089,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Keep Aspect Ration (Default)"
 #~ msgstr "Beeldverhouding behouden (Standaard)"
+
+#~ msgctxt "game_options"
+#~ msgid "LARGER KEYBOARD"
+#~ msgstr "GROTER TOETSENBORD"
 
 #~ msgctxt "game_options"
 #~ msgid "LIMIT FPS"
@@ -19767,6 +20134,10 @@ msgstr "geel/blauw"
 #~ "stand ingeschakeld als er vertraging optreedt."
 
 #~ msgctxt "game_options"
+#~ msgid "Lunar Ignore Brightness Color Fix"
+#~ msgstr "Lunar Negeer Helderheid Kleuren Fix"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Manually set VSYNC frames per second. Ideally this should match your "
 #~ "monitor refresh rate."
@@ -19801,6 +20172,10 @@ msgstr "geel/blauw"
 #~ msgid "Menu"
 #~ msgstr "Menu"
 
+#~ msgctxt "game_options"
+#~ msgid "Microcosm"
+#~ msgstr "Microcosm"
+
 #~ msgctxt "keys_files"
 #~ msgid "Microphone"
 #~ msgstr "Microfoon"
@@ -19815,6 +20190,11 @@ msgstr "geel/blauw"
 #~ msgstr ""
 #~ "De meeste games hebben al een interne framelimiet. Kleine belasting op de "
 #~ "prestatie."
+
+#~ msgctxt "game_options"
+#~ msgid "Mount a floppy for user data, creates if needed"
+#~ msgstr ""
+#~ "Mount een floppy voor gebruikersgegevens, maak deze aan indien nodig"
 
 #~ msgctxt "keys_files"
 #~ msgid "Move Backward"
@@ -19877,6 +20257,10 @@ msgstr "geel/blauw"
 #~ msgstr "OUTPUT SCHALING"
 
 #~ msgctxt "game_options"
+#~ msgid "OUTRUN LENS GLARE"
+#~ msgstr "OUTRUN LENS GLARE"
+
+#~ msgctxt "game_options"
 #~ msgid "Off (faster, unstable)"
 #~ msgstr "Uit (sneller, onstabiel)"
 
@@ -19913,6 +20297,12 @@ msgstr "geel/blauw"
 #~ msgstr "Alleen van toepassing bij gebruik van OpenGL."
 
 #~ msgctxt "game_options"
+#~ msgid "Only applies when using Parallel-RDP as the chosen RDP Plugin."
+#~ msgstr ""
+#~ "Alleen van toepassing bij gebruik van Parallel-RDP als de gekozen RDP "
+#~ "plug-in."
+
+#~ msgctxt "game_options"
 #~ msgid "Only for Super Game Boy enhanced games."
 #~ msgstr "Alleen voor Super Game Boy enhanced spellen."
 
@@ -19937,6 +20327,15 @@ msgstr "geel/blauw"
 #~ msgstr "Originele Grootte"
 
 #~ msgctxt "game_options"
+#~ msgid "Output rotation independent of xrandr or framebuffer settings."
+#~ msgstr ""
+#~ "Uitvoerrotatie onafhankelijk van xrandr of framebuffer instellingen."
+
+#~ msgctxt "game_options"
+#~ msgid "PBA"
+#~ msgstr "PBA"
+
+#~ msgctxt "game_options"
 #~ msgid "PER TABLE FOLDER"
 #~ msgstr "PER TAFEL FOLDER"
 
@@ -19958,6 +20357,14 @@ msgstr "geel/blauw"
 #~ "PS3's interne ratio instelling. Sommige spellen ondersteunen alleen 16:9."
 
 #~ msgctxt "game_options"
+#~ msgid "Pandemonium 2 Lazy Screen Update Fix"
+#~ msgstr "Pandemonium 2 Lazy Screen Update Fix"
+
+#~ msgctxt "game_options"
+#~ msgid "Parasite Eve 2/Vandal Hearts 1&2 Fix"
+#~ msgstr "Parasite Eve 2/Vandal Hearts 1&2 Fix"
+
+#~ msgctxt "game_options"
 #~ msgid ""
 #~ "Part of the host texture memory budget (in megabytes) that will be scaled "
 #~ "by the current drawing resolution scale."
@@ -19973,6 +20380,10 @@ msgstr "geel/blauw"
 #~ "Per Tafel Folder vereist dat alle bestanden zich in de bijbehorende rom-"
 #~ "tabelmap bevinden. Indien uitgeschakeld, raadpleeg de WIKI voor meer "
 #~ "details."
+
+#~ msgctxt "game_options"
+#~ msgid "Portugese"
+#~ msgstr "Portugees"
 
 #~ msgctxt "game_options"
 #~ msgid "Precise (Slowest)(Default)"
@@ -20002,10 +20413,6 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "READBACK RESOLVE"
 #~ msgstr "LEES-TERUG OPLOSSING"
-
-#~ msgctxt "game_options"
-#~ msgid "RGB Colour Low/Medium-Resolution"
-#~ msgstr "RGB Kleur Lage/Gemiddelde resolutie"
 
 #~ msgctxt "game_options"
 #~ msgid "ROV"
@@ -20086,6 +20493,10 @@ msgstr "geel/blauw"
 #~ msgstr "SCHERM RATIO"
 
 #~ msgctxt "game_options"
+#~ msgid "SCREEN SIZE"
+#~ msgstr "SCHERM MAAT"
+
+#~ msgctxt "game_options"
 #~ msgid "SHADER MODE"
 #~ msgstr "SHADER MODUS"
 
@@ -20094,16 +20505,24 @@ msgstr "geel/blauw"
 #~ msgstr "SHADER KWALITEIT"
 
 #~ msgctxt "game_options"
+#~ msgid "SPECIFIC GAME FIXES"
+#~ msgstr "FIXES VOOR SPECIFIEKE SPELLEN"
+
+#~ msgctxt "game_options"
+#~ msgid "SPEED HACK (SAFE)"
+#~ msgstr "SPEED HACK (VEILIG)"
+
+#~ msgctxt "game_options"
 #~ msgid "SPU XFloat Accuracy"
 #~ msgstr "SPU XFloat Nauwkeurigheid"
+
+#~ msgctxt "game_options"
+#~ msgid "SYNCHRONOUS RENDERING"
+#~ msgstr "SYNCHROON RENDEREN"
 
 #~ msgctxt "keys_files"
 #~ msgid "Save state"
 #~ msgstr "Staat opslaan"
-
-#~ msgctxt "game_options"
-#~ msgid "Screen Resolution (Default)"
-#~ msgstr "Scherm Resolutie (Standaard)"
 
 #~ msgctxt "keys_files"
 #~ msgid "Screenshot"
@@ -20121,6 +20540,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Select Keyboard, Joystick or Gamepad mode"
 #~ msgstr "Selecteer Keyboard, Joystick of Controller modus"
+
+#~ msgctxt "game_options"
+#~ msgid "Select a boot disk or hard drive if needed"
+#~ msgstr "Selecteer een opstartschijf of harde schijf indien nodig"
 
 #~ msgctxt "game_options"
 #~ msgid ""
@@ -20163,6 +20586,10 @@ msgstr "geel/blauw"
 #~ "prefix voor de huidige app is geïnstalleerd."
 
 #~ msgctxt "game_options"
+#~ msgid "Sets the window size to an integer size."
+#~ msgstr "Stelt de venstergrootte in op een geheel getal."
+
+#~ msgctxt "game_options"
 #~ msgid "Simple 2x"
 #~ msgstr "Simpel 2x"
 
@@ -20173,6 +20600,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "Single"
 #~ msgstr "Enkel"
+
+#~ msgctxt "game_options"
+#~ msgid "Skip Initial"
+#~ msgstr "Initieel overslaan"
 
 #~ msgctxt "game_options"
 #~ msgid "Smooth textures."
@@ -20233,6 +20664,10 @@ msgstr "geel/blauw"
 #~ "beeldschaling."
 
 #~ msgctxt "game_options"
+#~ msgid "TEAM COLOR MODE"
+#~ msgstr "TEAM KLEUR MODUS"
+
+#~ msgctxt "game_options"
 #~ msgid "TEXTURE COLOUR DEPTH"
 #~ msgstr "TEXTUUR KLEURDIEPTE"
 
@@ -20243,6 +20678,10 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "TRUE COLOUR RENDERING"
 #~ msgstr "WARE KLEURWEERGAVE"
+
+#~ msgctxt "game_options"
+#~ msgid "Tandy Radio Shack Color Computer cassettes"
+#~ msgstr "Tandy Radio Shack Color Computer cassettes"
 
 #~ msgctxt "game_options"
 #~ msgid "The New 3DS has a faster processor, ZL/ZR buttons and a C-stick."
@@ -20328,6 +20767,10 @@ msgstr "geel/blauw"
 #~ msgstr "GEBRUIK DE JOYPAD ZUID-KNOP OM CREDITS TOE TE VOEGEN"
 
 #~ msgctxt "game_options"
+#~ msgid "USER DISK"
+#~ msgstr "GEBRUIKERS DISK"
+
+#~ msgctxt "game_options"
 #~ msgid "United Arab Emirates"
 #~ msgstr "Verenigde Arabische Emiraten"
 
@@ -20375,6 +20818,14 @@ msgstr "geel/blauw"
 #~ msgstr "V-SYNC FPS"
 
 #~ msgctxt "game_options"
+#~ msgid "Vastly improves the speed of buffer maps."
+#~ msgstr "Verbetert de snelheid van buffer maps aanzienlijk."
+
+#~ msgctxt "game_options"
+#~ msgid "WEAPON WAGGLE"
+#~ msgstr "WAPENGEWIEBEL"
+
+#~ msgctxt "game_options"
 #~ msgid "Weak"
 #~ msgstr "Zwak"
 
@@ -20403,6 +20854,10 @@ msgstr "geel/blauw"
 #~ msgstr "X-INPUT"
 
 #~ msgctxt "game_options"
+#~ msgid "best"
+#~ msgstr "beste"
+
+#~ msgctxt "game_options"
 #~ msgid "external (variable fps)"
 #~ msgstr "extern (variabel fps)"
 
@@ -20413,3 +20868,7 @@ msgstr "geel/blauw"
 #~ msgctxt "game_options"
 #~ msgid "internal (variable fps)"
 #~ msgstr "intern (variabel fps)"
+
+#~ msgctxt "game_options"
+#~ msgid "quick switch"
+#~ msgstr "snel wisselen"

@@ -3,8 +3,8 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Oct 01, 2026
-WINE_PROTON_VERSION = cachyos-11.0-20261001-proton-dev
+# Version: Commits on Oct 14, 2026
+WINE_PROTON_VERSION = cachyos-11.0-20261014-proton
 WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
 WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
@@ -30,7 +30,6 @@ endef
 WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 
-WINE_PROTON_CONF_ENV += CROSSCFLAGS="$(TARGET_CFLAGS) -Wno-incompatible-pointer-types"
 # Wine needs its own directory structure and tools for cross compiling
 WINE_PROTON_CONF_OPTS = \
 	--with-wine-tools=$(BUILD_DIR)/host-wine-proton-$(WINE_PROTON_VERSION) \

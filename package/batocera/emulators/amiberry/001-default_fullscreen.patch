@@ -1,13 +1,13 @@
 diff --git a/src/include/options.h b/src/include/options.h
-index e319fbd9..97a7475f 100644
+index d52e1535..78d5f00d 100644
 --- a/src/include/options.h
 +++ b/src/include/options.h
-@@ -1432,7 +1432,7 @@ struct amiberry_options
+@@ -1436,7 +1436,7 @@ struct amiberry_options
  	bool default_auto_crop = false;
  	int default_width = 720;
  	int default_height = 568;
 -	int default_fullscreen_mode = 0;
 +	int default_fullscreen_mode = 1;
  	int default_stereo_separation = 7;
- 	int default_sound_buffer = 3072;
- 	int default_sound_frequency = 44100;
+ #ifdef __ANDROID__
+ 	// Android mixes at 48 kHz (44.1 kHz loses AAudio's low-latency path to

@@ -3,8 +3,8 @@
 # lightspark
 #
 ################################################################################
-# Version: Commits on Oct 12, 2026
-LIGHTSPARK_VERSION = a72a6fc7d5c00ef0a6a8fd04e38fcb1a5100583d
+# Version: Commits on Oct 18, 2026
+LIGHTSPARK_VERSION = 6f07fd65cb95b88ff73e905bf78a1a8b1ddf6049
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
 LIGHTSPARK_LICENSE = LGPLv3
 LIGHTSPARK_DEPENDENCIES = cairo ffmpeg freetype jpeg libcurl libpng pango pcre2 rtmpdump sdl2
@@ -22,7 +22,11 @@ ifneq ($(BR2_x86_64),y)
 endif
 
 ifeq ($(LIGHTSPARK_ARCH), "arm")
-    LIGHTSPARK_ARCH = armv7l
+    ifeq ($(BR2_ARM_CPU_ARMV6), y)
+        LIGHTSPARK_ARCH = armv6l
+    else
+        LIGHTSPARK_ARCH = armv7l
+    endif
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_GLES3),y)

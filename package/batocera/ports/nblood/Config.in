@@ -1,9 +1,9 @@
 config BR2_PACKAGE_NBLOOD
 	bool "nblood"
 	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_FLAC
 	select BR2_PACKAGE_LIBVPX
+	select BR2_PACKAGE_SDL2
 
 	help
 	  Reverse-engineered ports of Build games using EDuke32 engine

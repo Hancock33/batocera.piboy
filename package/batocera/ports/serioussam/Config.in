@@ -1,9 +1,9 @@
 config BR2_PACKAGE_SERIOUSSAM
 	bool "serioussam"
 	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_IMAGEMAGICK
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_MIXER
-	select BR2_PACKAGE_IMAGEMAGICK
 
 	help
 	  Serious Sam Classic open source project based on

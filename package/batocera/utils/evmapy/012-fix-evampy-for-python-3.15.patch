@@ -1,0 +1,34 @@
+--- a/evmapy/__main__.py	2026-10-18 12:39:06.276003608 +0100
++++ b/evmapy/__main__.py	2026-10-18 12:39:06.278133181 +0100
+@@ -93,7 +93,7 @@
+     if args.list_all:
+         for dev_path in evdev.list_devices():
+             device = evdev.InputDevice(dev_path)
+-            print("%s: %s" % (device.fn, device.name))
++            print("%s: %s" % (device.path, device.name))
+     elif args.list:
+         devices = evmapy.controller.perform_request({
+             'command':  'list',
+--- a/tests/test_config.py	2026-10-18 12:39:06.275402263 +0100
++++ b/tests/test_config.py	2026-10-18 12:39:06.282226432 +0100
+@@ -194,7 +194,7 @@
+         fake_open = unittest.mock.mock_open(read_data=fake_config_json)
+         fake_device = unittest.mock.Mock()
+         fake_device.name = 'Foo Bar'
+-        fake_device.fn = '/dev/input/event0'
++        fake_device.path = '/dev/input/event0'
+         with unittest.mock.patch('evmapy.config.open', fake_open, create=True):
+             (config, _) = evmapy.config.load(fake_device, None)
+         self.assertSetEqual(set(config.keys()), set(['events', 'grab', 'map']))
+--- a/tests/test_source.py	2026-10-18 12:39:06.275490423 +0100
++++ b/tests/test_source.py	2026-10-18 12:39:06.285313783 +0100
+@@ -44,7 +44,7 @@
+     (fake_inputdevice, fake_logger, fake_config_load) = args
+     device_attrs = {
+         'name': 'Foo Bar',
+-        'fn':   '/dev/input/event0',
++        'path': '/dev/input/event0',
+         'fd':   tests.util.DEVICE_FD,
+     }
+     tests.util.set_attrs_from_dict(fake_inputdevice.return_value, device_attrs)
+
