@@ -120,4 +120,4 @@ BR2_PACKAGE_BATOCERA_SYSTEM=y
 BR2_PACKAGE_BATOCERA_TOOLS=y
 
 # Experimental, build cmake packages with clang
-BR_CMAKE_USE_CLANG=y
+BR2_CMAKE_USE_CLANG=y
