@@ -11,11 +11,11 @@ BR2_PACKAGE_BATOCERA_TARGET_AARCH32_SUBSYSTEM=y
 BR2_TARGET_OPTIMIZATION="-mcpu=cortex-a72 -fsigned-char"
 BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/piboy4/patches"
 
-# Kernel 7.2 (headers only)
+# Kernel 7.3 (headers only)
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,b9ae2efb2dba0d5801dcad3b618d0f2fecfe816c)/b9ae2efb2dba0d5801dcad3b618d0f2fecfe816c.tar.gz"
-BR2_KERNEL_HEADERS_PATCHES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/7.2"
+BR2_KERNEL_HEADERS_PATCHES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/7.3"
 
 # System (no init, no tzdata, no NLS: subsystem only)
 BR2_ROOTFS_POST_BUILD_SCRIPT="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/scripts/aarch32-packager.sh"

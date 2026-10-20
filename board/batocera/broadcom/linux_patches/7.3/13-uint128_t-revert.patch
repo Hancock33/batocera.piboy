@@ -1,0 +1,57 @@
+diff --git a/arch/arm64/include/uapi/asm/ptrace.h b/arch/arm64/include/uapi/asm/ptrace.h
+index 15649a253a57..6fed93fb2536 100644
+--- a/arch/arm64/include/uapi/asm/ptrace.h
++++ b/arch/arm64/include/uapi/asm/ptrace.h
+@@ -93,7 +93,7 @@ struct user_pt_regs {
+ };
+ 
+ struct user_fpsimd_state {
+-	__u128		vregs[32];
++	__uint128_t	vregs[32];
+ 	__u32		fpsr;
+ 	__u32		fpcr;
+ 	__u32		__reserved[2];
+@@ -258,14 +258,14 @@ struct user_pac_mask {
+ /* pointer authentication keys (NT_ARM_PACA_KEYS, NT_ARM_PACG_KEYS) */
+ 
+ struct user_pac_address_keys {
+-	__u128	apiakey;
+-	__u128	apibkey;
+-	__u128	apdakey;
+-	__u128	apdbkey;
++	__uint128_t	apiakey;
++	__uint128_t	apibkey;
++	__uint128_t	apdakey;
++	__uint128_t	apdbkey;
+ };
+ 
+ struct user_pac_generic_keys {
+-	__u128	apgakey;
++	__uint128_t	apgakey;
+ };
+ 
+ /* ZA state (NT_ARM_ZA) */
+diff --git a/arch/arm64/include/uapi/asm/sigcontext.h b/arch/arm64/include/uapi/asm/sigcontext.h
+index d250ca7a1d46..e29bf3e2d0cc 100644
+--- a/arch/arm64/include/uapi/asm/sigcontext.h
++++ b/arch/arm64/include/uapi/asm/sigcontext.h
+@@ -78,7 +78,7 @@ struct fpsimd_context {
+ 	struct _aarch64_ctx head;
+ 	__u32 fpsr;
+ 	__u32 fpcr;
+-	__u128 vregs[32];
++	__uint128_t vregs[32];
+ };
+ 
+ /*
+@@ -266,8 +266,8 @@ struct gcs_context {
+  *	-	----				-----------
+  *	REGS					the entire SVE context
+  *
+- *	ZREGS	__u128[SVE_NUM_ZREGS][vq]	all Z-registers
+- *	ZREG	__u128[vq]			individual Z-register Zn
++ *	ZREGS	__uint128_t[SVE_NUM_ZREGS][vq]	all Z-registers
++ *	ZREG	__uint128_t[vq]			individual Z-register Zn
+  *
+  *	PREGS	uint16_t[SVE_NUM_PREGS][vq]	all P-registers
+  *	PREG	uint16_t[vq]			individual P-register Pn
