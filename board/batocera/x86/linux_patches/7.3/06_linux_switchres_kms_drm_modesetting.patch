@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-index 11646453aaac..e6ced9c26d4c 100644
+index 8dd69ec4ab7e..cb0269fa20ec 100644
 --- a/drivers/gpu/drm/drm_connector.c
 +++ b/drivers/gpu/drm/drm_connector.c
 @@ -278,6 +278,7 @@ static int drm_connector_init_only(struct drm_device *dev,
@@ -10,7 +10,7 @@ index 11646453aaac..e6ced9c26d4c 100644
  	INIT_LIST_HEAD(&connector->modes);
  	mutex_init(&connector->mutex);
  	mutex_init(&connector->cec.mutex);
-@@ -782,6 +783,11 @@ void drm_connector_cleanup(struct drm_connector *connector)
+@@ -795,6 +796,11 @@ void drm_connector_cleanup(struct drm_connector *connector)
  	list_for_each_entry_safe(mode, t, &connector->probed_modes, head)
  		drm_mode_remove(connector, mode);
  
@@ -50,7 +50,7 @@ index 21fc9deda437..b8a364c44c5e 100644
  		obj = NULL;
  
 diff --git a/drivers/gpu/drm/drm_modes.c b/drivers/gpu/drm/drm_modes.c
-index 8a44fcec3e1c..097998cebfca 100644
+index c1317c2e559b..2379c50a5fca 100644
 --- a/drivers/gpu/drm/drm_modes.c
 +++ b/drivers/gpu/drm/drm_modes.c
 @@ -41,6 +41,7 @@
@@ -230,7 +230,7 @@ index 8a44fcec3e1c..097998cebfca 100644
  /**
   * drm_cvt_mode -create a modeline based on the CVT algorithm
   * @dev: drm device
-@@ -1889,7 +2052,7 @@ EXPORT_SYMBOL(drm_mode_sort);
+@@ -1912,7 +2075,7 @@ EXPORT_SYMBOL(drm_mode_sort);
   */
  void drm_connector_list_update(struct drm_connector *connector)
  {
@@ -239,7 +239,7 @@ index 8a44fcec3e1c..097998cebfca 100644
  
  	WARN_ON(!mutex_is_locked(&connector->dev->mode_config.mutex));
  
-@@ -1935,6 +2098,40 @@ void drm_connector_list_update(struct drm_connector *connector)
+@@ -1958,6 +2121,40 @@ void drm_connector_list_update(struct drm_connector *connector)
  			list_move_tail(&pmode->head, &connector->modes);
  		}
  	}
@@ -281,7 +281,7 @@ index 8a44fcec3e1c..097998cebfca 100644
  EXPORT_SYMBOL(drm_connector_list_update);
  
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 7c74989f95ce..1cae57d27630 100644
+index 0d50e694cbfe..017cc3c1efdf 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -386,6 +386,23 @@ drm_helper_probe_detect_ctx(struct drm_connector *connector, bool force)
@@ -344,10 +344,10 @@ index 7c74989f95ce..1cae57d27630 100644
  
  	list_for_each_entry(mode, &connector->modes, head) {
 diff --git a/include/drm/drm_connector.h b/include/drm/drm_connector.h
-index deacbbe8d16d..152fdb23af12 100644
+index 7b82e1295785..79027e4d33e5 100644
 --- a/include/drm/drm_connector.h
 +++ b/include/drm/drm_connector.h
-@@ -2174,6 +2174,14 @@ struct drm_connector {
+@@ -2281,6 +2281,14 @@ struct drm_connector {
  	 */
  	struct list_head probed_modes;
  
@@ -363,10 +363,10 @@ index deacbbe8d16d..152fdb23af12 100644
  	 * @display_info: Display information is filled from EDID information
  	 * when a display is detected. For non hot-pluggable displays such as
 diff --git a/include/drm/drm_modes.h b/include/drm/drm_modes.h
-index 312e5c03af9a..697261693ff8 100644
+index 9d06c6a3872b..496d094f0592 100644
 --- a/include/drm/drm_modes.h
 +++ b/include/drm/drm_modes.h
-@@ -470,6 +470,10 @@ int drm_mode_convert_umode(struct drm_device *dev,
+@@ -471,6 +471,10 @@ int drm_mode_convert_umode(struct drm_device *dev,
  			   struct drm_display_mode *out,
  			   const struct drm_mode_modeinfo *in);
  void drm_mode_probed_add(struct drm_connector *connector, struct drm_display_mode *mode);
@@ -377,7 +377,7 @@ index 312e5c03af9a..697261693ff8 100644
  void drm_mode_debug_printmodeline(const struct drm_display_mode *mode);
  bool drm_mode_is_420_only(const struct drm_display_info *display,
  			  const struct drm_display_mode *mode);
-@@ -487,6 +491,14 @@ struct drm_display_mode *drm_analog_tv_mode(struct drm_device *dev,
+@@ -488,6 +492,14 @@ struct drm_display_mode *drm_analog_tv_mode(struct drm_device *dev,
  					    unsigned int vdisplay,
  					    bool interlace);
  

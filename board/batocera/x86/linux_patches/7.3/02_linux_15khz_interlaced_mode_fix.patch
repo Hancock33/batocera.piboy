@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_modes.c b/drivers/gpu/drm/drm_modes.c
-index 72e07b44e858..8a44fcec3e1c 100644
+index 6d7578f93d0f..c1317c2e559b 100644
 --- a/drivers/gpu/drm/drm_modes.c
 +++ b/drivers/gpu/drm/drm_modes.c
 @@ -1362,6 +1362,8 @@ void drm_mode_set_crtcinfo(struct drm_display_mode *p, int adjust_flags)
@@ -12,7 +12,7 @@ index 72e07b44e858..8a44fcec3e1c 100644
  		if (adjust_flags & CRTC_INTERLACE_HALVE_V) {
  			p->crtc_vdisplay /= 2;
 diff --git a/drivers/gpu/drm/drm_probe_helper.c b/drivers/gpu/drm/drm_probe_helper.c
-index 0abcb51a3ab9..7c74989f95ce 100644
+index 3c528e470491..0d50e694cbfe 100644
 --- a/drivers/gpu/drm/drm_probe_helper.c
 +++ b/drivers/gpu/drm/drm_probe_helper.c
 @@ -164,6 +164,9 @@ static int drm_helper_probe_add_cmdline_mode(struct drm_connector *connector)

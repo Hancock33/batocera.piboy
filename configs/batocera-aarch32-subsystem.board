@@ -1,6 +1,7 @@
 include batocera-toolchain_Os.common
 
 # Target definition
+BR2_PER_PACKAGE_DIRECTORIES=y
 BR2_arm=y
 BR2_cortex_a72=y
 BR2_ARM_FPU_NEON_VFPV4=y
@@ -13,7 +14,7 @@ BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2
 # Kernel 7.2 (headers only)
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
-BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,61d337138d273f134f41ef06eb0dd97c90123934)/61d337138d273f134f41ef06eb0dd97c90123934.tar.gz"
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,b9ae2efb2dba0d5801dcad3b618d0f2fecfe816c)/b9ae2efb2dba0d5801dcad3b618d0f2fecfe816c.tar.gz"
 BR2_KERNEL_HEADERS_PATCHES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/7.2"
 
 # System (no init, no tzdata, no NLS: subsystem only)

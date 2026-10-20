@@ -1,8 +1,8 @@
-diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-index 37064f1d45b0..07840d50efd1 100644
---- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-+++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c
-@@ -7129,6 +7129,8 @@ static void fill_stream_properties_from_drm_display_mode(
+diff --git a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c
+index e0be6c51eb8b..f2dcc07f9fc6 100644
+--- a/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c
++++ b/drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_connector.c
+@@ -932,6 +932,8 @@ STATIC_IFN_KUNIT void fill_stream_properties_from_drm_display_mode(
  			timing_out->flags.HSYNC_POSITIVE_POLARITY = 1;
  		if (mode_in->flags & DRM_MODE_FLAG_PVSYNC)
  			timing_out->flags.VSYNC_POSITIVE_POLARITY = 1;
@@ -11,7 +11,7 @@ index 37064f1d45b0..07840d50efd1 100644
  	}
  
  	if (stream->signal == SIGNAL_TYPE_HDMI_TYPE_A ||
-@@ -7820,6 +7822,8 @@ create_stream_for_sink(struct drm_connector *connector,
+@@ -1579,6 +1581,8 @@ create_stream_for_sink(struct drm_connector *connector,
  
  	if (recalculate_timing)
  		drm_mode_set_crtcinfo(&saved_mode, 0);
@@ -20,7 +20,7 @@ index 37064f1d45b0..07840d50efd1 100644
  
  	/*
  	 * If scaling is enabled and refresh rate didn't change
-@@ -8696,8 +8700,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
+@@ -2521,8 +2525,7 @@ enum drm_mode_status amdgpu_dm_connector_mode_valid(struct drm_connector *connec
  	 */
  	struct amdgpu_dm_connector *aconnector = to_amdgpu_dm_connector(connector);
  
@@ -30,7 +30,7 @@ index 37064f1d45b0..07840d50efd1 100644
  		return result;
  
  	/*
-@@ -9517,7 +9520,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
+@@ -3238,7 +3241,7 @@ void amdgpu_dm_connector_init_helper(struct amdgpu_display_manager *dm,
  	aconnector->connector_id = link_index;
  	aconnector->bl_idx = -1;
  	aconnector->dc_link = link;
@@ -54,7 +54,7 @@ index 5c00ef423968..bd750081b870 100644
  		if (v->underscan_output[k] == 1.0f) {
  			v->h_ratio[k] = v->h_ratio[k] * v->under_scan_factor;
 diff --git a/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calcs.c b/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calcs.c
-index dcca23d53261..a84e92cd1708 100644
+index 2ad4a2635683..cd45cc222ad6 100644
 --- a/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calcs.c
 +++ b/drivers/gpu/drm/amd/display/dc/dml/calcs/dcn_calcs.c
 @@ -446,6 +446,7 @@ static void pipe_ctx_to_e2e_pipe_params (
@@ -93,10 +93,10 @@ index c42884dc16b2..a868651c8a8b 100644
  		mode_lib->vba.htaps[mode_lib->vba.NumberOfActivePlanes] = taps->htaps;
  		mode_lib->vba.vtaps[mode_lib->vba.NumberOfActivePlanes] = taps->vtaps;
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
-index 7112b71af977..b1ae7472ede7 100644
+index 0c9784dbbe0d..cb4084ff51c4 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
-@@ -3020,6 +3020,9 @@ static void update_scaler(struct pipe_ctx *pipe_ctx)
+@@ -3034,6 +3034,9 @@ static void update_scaler(struct pipe_ctx *pipe_ctx)
  	pipe_ctx->plane_res.scl_data.lb_params.alpha_en = per_pixel_alpha;
  	pipe_ctx->plane_res.scl_data.lb_params.depth = LB_PIXEL_DEPTH_36BPP;
  	/* scaler configuration */
@@ -107,10 +107,10 @@ index 7112b71af977..b1ae7472ede7 100644
  			pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  }
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-index e6a8206f8ce0..8bbb6c488547 100644
+index 16bb6f678567..8a7165fdf8ac 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn20/dcn20_hwseq.c
-@@ -1774,6 +1774,9 @@ void dcn20_update_dchubp_dpp(
+@@ -1779,6 +1779,9 @@ void dcn20_update_dchubp_dpp(
  		pipe_ctx->plane_res.scl_data.lb_params.alpha_en = pipe_ctx->plane_state->per_pixel_alpha;
  		ASSERT(pipe_ctx->plane_res.scl_data.lb_params.depth == LB_PIXEL_DEPTH_36BPP);
  		/* scaler configuration */
@@ -121,10 +121,10 @@ index e6a8206f8ce0..8bbb6c488547 100644
  				pipe_ctx->plane_res.dpp, &pipe_ctx->plane_res.scl_data);
  	}
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c b/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
-index e6426ccee2d8..a13998fa0e95 100644
+index 844705a0e32d..f4991d9b0261 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn10/dcn10_optc.c
-@@ -614,10 +614,6 @@ bool optc1_validate_timing(
+@@ -609,10 +609,6 @@ bool optc1_validate_timing(
  		timing->timing_3d_format != TIMING_3D_FORMAT_INBAND_FA)
  		return false;
  
@@ -156,7 +156,7 @@ index 16c5610b49ac..e23c20322fc3 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
-index 98f7d2e299c5..aac2d65bc76d 100644
+index 119a954fe3e5..149ca0dbe80d 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
 @@ -47,6 +47,7 @@
@@ -176,7 +176,7 @@ index 98f7d2e299c5..aac2d65bc76d 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
-index 6bfdee3fcf5f..bcf2b8f22925 100644
+index 7b43c3ecd46b..7b27304a5248 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
 @@ -48,6 +48,7 @@
@@ -196,7 +196,7 @@ index 6bfdee3fcf5f..bcf2b8f22925 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
-index ead92ad78a23..f8f46ef548ad 100644
+index 60c01ec28b65..707deeb7ca72 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
 @@ -57,6 +57,7 @@
@@ -208,7 +208,7 @@ index ead92ad78a23..f8f46ef548ad 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
-index fa62737b5b1b..f04a0ab08849 100644
+index 3add972ca2ff..2a97a4999da5 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
 @@ -36,6 +36,7 @@
@@ -244,10 +244,10 @@ index 6c2c61c711b9..2811c0b600bd 100644
  	SRI_ARR(OTG_STEREO_CONTROL, OTG, inst),\
  	SRI_ARR(OTG_3D_STRUCTURE_CONTROL, OTG, inst),\
 diff --git a/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h b/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
-index 47f82b818262..a6acdda26eaa 100644
+index 8e3473f86490..7f4084d8f645 100644
 --- a/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
 +++ b/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
-@@ -498,6 +498,7 @@ int dcn401_get_power_profile(const struct dc_state *context);
+@@ -503,6 +503,7 @@ int dcn401_get_power_profile(const struct dc_state *context);
  	SRI_ARR(OTG_H_TIMING_CNTL, OTG, inst), SRI_ARR(OTG_V_TOTAL, OTG, inst),  \
  	SRI_ARR(OTG_V_BLANK_START_END, OTG, inst),                               \
  	SRI_ARR(OTG_V_SYNC_A, OTG, inst), SRI_ARR(OTG_V_SYNC_A_CNTL, OTG, inst), \
