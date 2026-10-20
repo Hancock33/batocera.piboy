@@ -1,7 +1,6 @@
 include batocera-toolchain_Os.common
 
 # Target definition
-BR2_PER_PACKAGE_DIRECTORIES=y
 BR2_arm=y
 BR2_cortex_a72=y
 BR2_ARM_FPU_NEON_VFPV4=y
