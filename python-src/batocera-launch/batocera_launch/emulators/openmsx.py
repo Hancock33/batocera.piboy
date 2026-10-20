@@ -1,3 +1,23 @@
+# This file is part of The Batocera Linux Distribution (https://batocera.org).
+# Copyright (c) 2026 The Batocera Team.
+#
+# The Batocera Linux Distribution is free software: you can redistribute it
+# and/or modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Batocera Linux Distribution is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with The Batocera Linux Distribution. If not, see
+# <https://www.gnu.org/licenses/>.
+#
+# YOU MUST RETAIN THE LICENSE AND COPYRIGHT NOTICES ABOVE IN ANY
+# REDISTRIBUTED VERSION OF THIS FILE.
+
 from __future__ import annotations
 
 import logging
@@ -110,10 +130,11 @@ class Openmsx(Emulator):
                     file.write('dict set joystick2_config DOWN {+axis1 D_hat0}\n')
 
                 for input_ in pad.inputs.values():
-                    if input_.name == 'y':
-                        file.write(f'bind "joy{nplayer} button{input_.id} down" "keymatrixdown 6 0x40"\n')
-                    if input_.name == 'x':
-                        file.write(f'bind "joy{nplayer} button{input_.id} down" "keymatrixdown 6 0x80"\n')
+                    # row 6 bits 6/7 are F2/F3 on an msx but enter/left on the svi
+                    if input_.name in ('y', 'x') and self.system != 'spectravideo':
+                        mask = '0x40' if input_.name == 'y' else '0x80'
+                        file.write(f'bind "joy{nplayer} button{input_.id} down" "keymatrixdown 6 {mask}"\n')
+                        file.write(f'bind "joy{nplayer} button{input_.id} up" "keymatrixup 6 {mask}"\n')
                     if input_.name == 'pagedown':
                         file.write(f'bind "joy{nplayer} button{input_.id} up" "set fastforward off"\n')
                         file.write(f'bind "joy{nplayer} button{input_.id} down" "set fastforward on"\n')

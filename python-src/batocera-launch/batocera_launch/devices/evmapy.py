@@ -1,3 +1,23 @@
+# This file is part of The Batocera Linux Distribution (https://batocera.org).
+# Copyright (c) 2026 The Batocera Team.
+#
+# The Batocera Linux Distribution is free software: you can redistribute it
+# and/or modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Batocera Linux Distribution is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with The Batocera Linux Distribution. If not, see
+# <https://www.gnu.org/licenses/>.
+#
+# YOU MUST RETAIN THE LICENSE AND COPYRIGHT NOTICES ABOVE IN ANY
+# REDISTRIBUTED VERSION OF THIS FILE.
+
 from __future__ import annotations
 
 import asyncio
@@ -463,9 +483,9 @@ class EvmapyManager(AbstractAsyncContextManager['EvmapyManager', None]):
                         axis_id = 'BASE'
                         axis_name = 'Y'
                         if input.name == 'up':
-                            absbasey_positive = int(input.value) >= 0
-                        else:
                             absbasey_positive = int(input.value) < 0
+                        else:
+                            absbasey_positive = int(input.value) >= 0
                     elif input.name == 'left' or input.name == 'right':
                         axis_id = 'BASE'
                         axis_name = 'X'
@@ -616,7 +636,7 @@ class EvmapyManager(AbstractAsyncContextManager['EvmapyManager', None]):
                 mapping['left'] = 'ABSBASEX:max'
                 mapping['right'] = 'ABSBASEX:min'
 
-        if 'ABSBASEX:min' in known_button_names:
+        if 'ABSBASEY:min' in known_button_names:
             if absbasey_positive:
                 mapping['down'] = 'ABSBASEY:max'
                 mapping['up'] = 'ABSBASEY:min'

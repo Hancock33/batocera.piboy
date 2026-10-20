@@ -1,3 +1,23 @@
+# This file is part of The Batocera Linux Distribution (https://batocera.org).
+# Copyright (c) 2026 The Batocera Team.
+#
+# The Batocera Linux Distribution is free software: you can redistribute it
+# and/or modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Batocera Linux Distribution is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with The Batocera Linux Distribution. If not, see
+# <https://www.gnu.org/licenses/>.
+#
+# YOU MUST RETAIN THE LICENSE AND COPYRIGHT NOTICES ABOVE IN ANY
+# REDISTRIBUTED VERSION OF THIS FILE.
+
 from __future__ import annotations
 
 import logging
@@ -143,14 +163,13 @@ class Libretro(SpecialDecorationsMixin, Emulator):
 
     @cached_property
     def hotkeygen_context(self) -> HotkeysContext:
-        # f12 for coin : set in libretroMameConfig.py, others in libretroControllers.py
         return {
             'name': 'retroarch',
             'keys': {
                 'exit': ['KEY_LEFTSHIFT', 'KEY_ESC'],
                 'menu': ['KEY_LEFTSHIFT', 'KEY_F1'],
                 'pause': ['KEY_LEFTSHIFT', 'KEY_P'],
-                'coin': 'KEY_F12',
+                'coin': 'KEY_5',
                 'save_state': ['KEY_LEFTSHIFT', 'KEY_F3'],
                 'restore_state': ['KEY_LEFTSHIFT', 'KEY_F4'],
                 'previous_slot': ['KEY_LEFTSHIFT', 'KEY_F5'],
@@ -1151,7 +1170,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
 
         game_ratio = self.resolution.width / self.resolution.height
         bezel_need_adaptation = False
-        aspect_ratio_index: str | int = ''
+        aspect_ratio_index: int | None = None
 
         if viewport_used:
             if self.resolution.width != info_width or self.resolution.height != info_height:
@@ -1161,7 +1180,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
 
                 bezel_need_adaptation = True
 
-            aspect_ratio_index = str(_RATIOS.index('custom'))
+            aspect_ratio_index = _RATIOS.index('custom')
             custom_config.set('aspect_ratio_index', aspect_ratio_index)
             if (ratio := self.config.get_str('ratio')) and ratio in _RATIOS:
                 aspect_ratio_index = _RATIOS.index(ratio)
@@ -1194,7 +1213,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
             ):
                 bezel_need_adaptation = False
             if not shader_bezel:
-                aspect_ratio_index = str(_RATIOS.index('custom'))
+                aspect_ratio_index = _RATIOS.index('custom')
                 custom_config.set('aspect_ratio_index', aspect_ratio_index)
                 if (ratio := self.config.get_str('ratio')) and ratio in _RATIOS:
                     aspect_ratio_index = _RATIOS.index(ratio)
@@ -1209,7 +1228,7 @@ class Libretro(SpecialDecorationsMixin, Emulator):
 
         custom_config.set('input_overlay_opacity', opacity)
 
-        if aspect_ratio_index == str(_RATIOS.index('custom')):
+        if aspect_ratio_index == _RATIOS.index('custom'):
             custom_config.set('video_viewport_bias_x', '0.000000')
             custom_config.set('video_viewport_bias_y', '0.000000')
         else:
