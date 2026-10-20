@@ -3,8 +3,8 @@
 # libretro-doublecherrygb
 #
 ################################################################################
-# Version: Commits on Oct 12, 2026
-LIBRETRO_DOUBLECHERRYGB_VERSION = 225d6d2cc1b1cf3fbd8ec88d9471ed0ebe817c66
+# Version: Commits on Oct 19, 2026
+LIBRETRO_DOUBLECHERRYGB_VERSION = d432f97693670524f7f46bfca886b731134f4bb6
 LIBRETRO_DOUBLECHERRYGB_SITE = https://github.com/TimOelrichs/doublecherryGB-libretro.git
 LIBRETRO_DOUBLECHERRYGB_SITE_METHOD=git
 LIBRETRO_DOUBLECHERRYGB_GIT_SUBMODULES=YES
