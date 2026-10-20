@@ -1,3 +1,23 @@
+# This file is part of The Batocera Linux Distribution (https://batocera.org).
+# Copyright (c) 2026 The Batocera Team.
+#
+# The Batocera Linux Distribution is free software: you can redistribute it
+# and/or modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Batocera Linux Distribution is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with The Batocera Linux Distribution. If not, see
+# <https://www.gnu.org/licenses/>.
+#
+# YOU MUST RETAIN THE LICENSE AND COPYRIGHT NOTICES ABOVE IN ANY
+# REDISTRIBUTED VERSION OF THIS FILE.
+
 from __future__ import annotations
 
 import logging
@@ -177,6 +197,7 @@ def _generate_controller_config(controls_ini: Path, controls_init: Path, control
     config.set(section, 'Next Slot', '1-136')
     config.set(section, 'Screenshot', '1-137')
     config.set(section, 'Pause', '1-139')
+    config.set(section, 'Exit App', '1-140')
 
     controls_ini.parent.mkdir(parents=True, exist_ok=True)
     with controls_ini.open('w+') as fp:
@@ -193,7 +214,7 @@ class PPSSPP(Emulator):
         return {
             'name': 'ppsspp',
             'keys': {
-                'exit': ['KEY_LEFTALT', 'KEY_F4'],
+                'exit': 'KEY_F10',
                 'menu': 'KEY_F9',
                 'pause': 'KEY_F9',
                 'rewind': 'KEY_F1',
@@ -363,6 +384,8 @@ class PPSSPP(Emulator):
         ini_config.set('General', 'EnableCheats', str(self.config.get_bool('enable_cheats', False)))
         # Don't check for a new version
         ini_config.set('General', 'CheckForNewVersion', 'False')
+        # the exit hotkey uses Exit App, which otherwise asks to confirm after 5 minutes of unsaved play
+        ini_config.set('General', 'AskForExitConfirmationAfterSeconds', '0')
 
         # SaveState
         ini_config.set('General', 'StateSlot', self.config.get_str('state_slot', '0'))
