@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 21, 2026
-LIBRETRO_MAME2003_PLUS_VERSION = d708f399f75766ebbe924f1752bbe57036b4376d
+LIBRETRO_MAME2003_PLUS_VERSION = 8343ab6b0eed3aa9d881f0d23086b91b3e0c8bea
 LIBRETRO_MAME2003_PLUS_SITE = $(call github,libretro,mame2003-plus-libretro,$(LIBRETRO_MAME2003_PLUS_VERSION))
 LIBRETRO_MAME2003_PLUS_LICENSE = MAME
 LIBRETRO_MAME2003_PLUS_DEPENDENCIES += retroarch
@@ -31,12 +31,9 @@ else
 endif
 
 define LIBRETRO_MAME2003_PLUS_BUILD_CMDS
-	$(SED) "s|-ffast-math|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
-
-	mkdir -p $(@D)/obj/mame/cpu/ccpu
+	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/ -f Makefile platform="$(LIBRETRO_MAME2003_PLUS_PLATFORM)" \
-		OPTIMIZE=s SYMBOLS=1 SYMLEVEL=1 STRIP_SYMBOLS=1 $(LIBRETRO_MAME2003_PLUS_EXTRA_ARGS) \
-		GIT_VERSION=" $(shell echo $(LIBRETRO_MAME2003_PLUS_VERSION) | cut -c 1-7)"
+		$(LIBRETRO_MAME2003_PLUS_EXTRA_ARGS) GIT_VERSION=" $(shell echo $(LIBRETRO_MAME2003_PLUS_VERSION) | cut -c 1-7)"
 endef
 
 define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
