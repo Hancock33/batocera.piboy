@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261022|Oct 22, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261022|Oct 22, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|b2ceb55a7e3d205a11f055b7d93c8be50cd6f9c9|Oct 21, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261021|Oct 21, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|48a1028f9a2f3a3c907cca82ce41d30c9ef2d747|Oct 21, 2026
@@ -8,10 +10,13 @@ Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.135|Oct 21, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|e1610adf54e8b83322c8e873ed7e56623a484c1d|Oct 21, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|ed0b71271fa9632c2d81532ef87da0cddf2bc970|Oct 21, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|9677e195593cf92ac80213089b9c669875a353c3|Oct 21, 2026
+Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20261021|Oct 21, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|be7f99084245ac868a466ff2cfb6181d6ac5460b|Oct 21, 2026
 Utils|[7zip](https://github.com/ip7z/7zip/releases)|26.05|Oct 21, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.7|Oct 21, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|793afc25f4d6176128efb8e443e06d821a54838c|Oct 21, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|652249e2b98903b94cb8c200dd7024e4776fa0db|Oct 21, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|da8b594aed731d905c09a94ddb76100dbd4ebedb|Oct 21, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|917d1b7f2950aa846ce872de87857646a11e9600|Oct 21, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|d6b54aaf6c1d8518e08404a842f3f6ee02cef3cc|Oct 21, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|cde9634630b8d1014468aed0a35c749a8cec09bd|Oct 21, 2026
@@ -20,7 +25,7 @@ Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libr
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|8e61dd69d948cea16c3bad734f7b9d0c2a018cc8|Oct 21, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|2b0c1c0679df115cada7df9199ea2762222e58fd|Oct 21, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|a9bd1c74fd207aabdc917824afb93b3a571dd5c4|Oct 21, 2026
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|d708f399f75766ebbe924f1752bbe57036b4376d|Oct 21, 2026
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|8343ab6b0eed3aa9d881f0d23086b91b3e0c8bea|Oct 21, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|e1610adf54e8b83322c8e873ed7e56623a484c1d|Oct 21, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|3924aab43a646b6291ae29a26cb3bd7f67a0d297|Oct 21, 2026
 Emulators|[slang-shaders](http://github.com/libretro/slang-shaders)|eef0df221e440b1ad1bd2f9019552ea3359a51e2|Oct 21, 2026
@@ -31,15 +36,11 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|296c77da92ecbb374
 Ports|[omf2097](http://github.com/omf2097/openomf)|de19acf0cbf3a1c87806d9bb9e558a6102ffae14|Oct 20, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c837f4f5d8b5945e22df1e36ab8f05801cf08f9c|Oct 20, 2026
 Utils|[wtype](http://github.com/atx/wtype)|v0.5|Oct 20, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261020|Oct 20, 2026
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|42a027b9b805e05abf662865d0cb765781dbd9f1|Oct 20, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|3be6336a1de6f32ccc4f57bf80c988163fe6bf7a|Oct 20, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.166.9575-595|Oct 20, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|6a3ed78e53d3d4bf36e5957cb51432fd45d4e70b|Oct 20, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|d379b77a393871dd0584d3c91623bc7ff11b50d0|Oct 20, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|907b80c799f28cc8dfe35d274bf0cbbc289e0157|Oct 20, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261020|Oct 20, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|bce5c05c40f706b46d4b76268b42eabde6c74cb5|Oct 20, 2026
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|1fe8926136d226ef16b5cde53368e4d8100bd796|Oct 20, 2026
 Ports|[hlsdk-xash3d-opfor](https://github.com/FWGS/hlsdk-portable.git)|cc4500e51fa08b38402cb491dc06610b1c4f4ee3|Oct 20, 2026
@@ -229,7 +230,6 @@ Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|5a
 Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|f11ba9f0b21ba8fc15153d50a2a1ae31ab1cf8f7|Sept 16, 2026
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.1.1|Sept 15, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|f0a7b9f391b0e9bc14962b114f7da1ba553060be|Sept 15, 2026
-Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20260914|Sept 14, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14388|Sept 14, 2026
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|a04081ad6a966a9413bea63a55f502e0dc98bb18|Sept 14, 2026
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|ff7e00742a00acec8e175ddefb97520fb270df2d|Sept 14, 2026

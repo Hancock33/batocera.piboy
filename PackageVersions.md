@@ -174,7 +174,7 @@ Emulators|[libretro-kronos](http://github.com/FCare/kronos)|d451a55253e2e75bcef7
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|63d5988f74e1eea2ecd6ea0445a8ce260b0a9822|Sept 30, 2026
 Emulators|[libretro-lutro](http://github.com/libretro/libretro-lutro)|6224157a615b18507bc0b117a3398c7a324cd3e5|Aug 15, 2026
 Emulators|[libretro-mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0289|Jul 31, 2026
-Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|d708f399f75766ebbe924f1752bbe57036b4376d|Oct 21, 2026
+Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|8343ab6b0eed3aa9d881f0d23086b91b3e0c8bea|Oct 21, 2026
 Emulators|[libretro-melonds-ds](http://github.com/JesseTG/melonds-ds)|f394adbacb5722ee97c1b37c8064da9a25818310|Sept 27, 2026
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|66b5d2634cd0a79030562811e6e05f5532f800ba|Jul 19, 2026
 Emulators|[libretro-mesen](http://github.com/libretro/Mesen)|0102910c39ad1a62bc3f784466f3f67ca9eae335|Apr 20, 2026
@@ -297,7 +297,7 @@ Engines|[libdof](http://github.com/jsm174/libdof)|4908f45a5bd3b05369885b23f39465
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|711ab21dcf9ad33d8db8339dfd3b1548bcc34cdb|Sept 10, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libmysofa](http://github.com/hoene/libmysofa)|648eed03472e6720a1ea45d1a1f86c4efb569ff9|Sept 08, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|d379b77a393871dd0584d3c91623bc7ff11b50d0|Oct 20, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|652249e2b98903b94cb8c200dd7024e4776fa0db|Oct 21, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a3147e6de90635d|Sept 09, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
 Engines|[libspatialaudio](http://github.com/videolan/libspatialaudio)|d149ed9744fd399b835c6f2920511f8cbcfce5ea|Jul 01, 2026
@@ -316,7 +316,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.1|Oct 18, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|67b81857cfb5203e1d5eff03ec822594755e1c53|Oct 20, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|907b80c799f28cc8dfe35d274bf0cbbc289e0157|Oct 20, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|da8b594aed731d905c09a94ddb76100dbd4ebedb|Oct 21, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
@@ -374,7 +374,7 @@ Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.2-Piers|Oct 1
 Leds|[keros-leds](http://github.com/ImanolBarba/keros-leds)|2f66450cad94ff435dc2ce5185ff16f9ca31f5d2|Jun 03, 2026
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.2.1|Sept 28, 2026
 Libraries|[asio](http://github.com/chriskohlhoff/asio)|asio-1-38-2|Jul 18, 2026
-Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20260914|Sept 14, 2026
+Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20261021|Oct 21, 2026
 Libraries|[cpp-ipc](http://github.com/mutouyun/cpp-ipc)|v1.4.1|Dec 12, 2025
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.31.0|Sept 30, 2026
 Libraries|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa9ffffb81a48f53aa7253b0b4e6|Jul 11, 2022
@@ -481,7 +481,7 @@ Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|1fe8926136d226e
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|0d91d1f2d40f38d21e7f41afc01369ee55649fb6|Dec 31, 2025
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|be7f99084245ac868a466ff2cfb6181d6ac5460b|Oct 21, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261020|Oct 20, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261022|Oct 22, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14388|Sept 14, 2026
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|30afeff8f0b105eac77ee0a2fbd54b06e1a49b60|Sept 28, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|de19acf0cbf3a1c87806d9bb9e558a6102ffae14|Oct 20, 2026
@@ -597,5 +597,5 @@ Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.20|Oct 17, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261015-proton|Oct 14, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261020|Oct 20, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261022|Oct 22, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|f3890f670867b5ffbc3938726db45c0f7d16c8ba|Aug 10, 2026
