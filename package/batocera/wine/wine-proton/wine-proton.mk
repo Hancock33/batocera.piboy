@@ -5,6 +5,7 @@
 ################################################################################
 # Version: Commits on Oct 15, 2026
 WINE_PROTON_VERSION = cachyos-11.0-20261015-proton-dev
+WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_SELINUX_MODULES = wine
@@ -41,7 +42,7 @@ WINE_PROTON_CONF_OPTS = \
 	--exec-prefix=/usr/wine/wine-proton
 
 ifeq ($(BR2_x86_64),y)
-    WINE_PROTON_CONF_OPTS += --enable-win64
+    WINE_PROTON_CONF_OPTS += --enable-archs=x86_64,i386
     WINE_PROTON_CONF_OPTS += --enable-tools
 else
     WINE_PROTON_CONF_OPTS += --disable-win64
@@ -325,12 +326,15 @@ HOST_WINE_PROTON_CONF_OPTS += \
 ifeq ($(BR2_x86_64),y)
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
+	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.{dll,exe}
+	x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.{dll,exe}
 endef
 endif
 
 ifeq ($(BR2_i386),y)
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
+	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.{dll,exe}
 endef
 endif
 
