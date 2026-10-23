@@ -3,7 +3,7 @@
 # swh-plugins
 #
 ################################################################################
-
+# Version: Commits on Oct 17, 2016
 SWH_PLUGINS_VERSION = v0.4.17
 SWH_PLUGINS_SITE = $(call github,swh,ladspa,$(SWH_PLUGINS_VERSION))
 SWH_PLUGINS_LICENSE = GPL-2.0+

@@ -13,7 +13,7 @@ BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2
 # Kernel 7.3 (headers only)
 BR2_LINUX_KERNEL=n
 BR2_KERNEL_HEADERS_CUSTOM_TARBALL=y
-BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,b9ae2efb2dba0d5801dcad3b618d0f2fecfe816c)/b9ae2efb2dba0d5801dcad3b618d0f2fecfe816c.tar.gz"
+BR2_KERNEL_HEADERS_CUSTOM_TARBALL_LOCATION="$(call github,raspberrypi,linux,3e14c429f6c0b8e10d5a2dad345e8a7011be6dfb)/3e14c429f6c0b8e10d5a2dad345e8a7011be6dfb.tar.gz"
 BR2_KERNEL_HEADERS_PATCHES="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/broadcom/linux_patches/7.3"
 
 # System (no init, no tzdata, no NLS: subsystem only)

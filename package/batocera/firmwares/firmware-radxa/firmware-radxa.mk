@@ -3,7 +3,7 @@
 # firmware-radxa
 #
 ################################################################################
-
+# Version: Commits on Oct 19, 2026
 FIRMWARE_RADXA_VERSION = 0.2.43
 FIRMWARE_RADXA_SITE = $(call github,radxa-pkg,radxa-firmware,$(FIRMWARE_RADXA_VERSION))
 FIRMWARE_RADXA_LICENSE = GPL-3.0
