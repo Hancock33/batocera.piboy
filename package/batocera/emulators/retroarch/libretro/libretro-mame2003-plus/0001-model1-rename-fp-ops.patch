@@ -1,0 +1,117 @@
+diff --git a/src/machine/model1_machine.c b/src/machine/model1_machine.c
+index 227ddacf..e370ac9a 100644
+--- a/src/machine/model1_machine.c
++++ b/src/machine/model1_machine.c
+@@ -496,39 +496,39 @@ static float ram_get_f(void)
+ 	return u2f( m_copro_ram_data[ ram_scan() ] );
+ }
+ 
+-static void fadd(void)
++static void model1_fadd(void)
+ {
+ 	float a = fifoin_pop_f();
+ 	float b = fifoin_pop_f();
+ 	float r = a+b;
+-	LOG(("TGP fadd %f+%f=%f (%x)\n", a, b, r, m_pushpc));
++	LOG(("TGP model1_fadd %f+%f=%f (%x)\n", a, b, r, m_pushpc));
+ 	fifoout_push_f(r);
+ }
+ 
+-static void fsub(void)
++static void model1_fsub(void)
+ {
+ 	float a = fifoin_pop_f();
+ 	float b = fifoin_pop_f();
+ 	float r = a-b;
+-	LOG(("TGP fsub %f-%f=%f (%x)\n", a, b, r, m_pushpc));
++	LOG(("TGP model1_fsub %f-%f=%f (%x)\n", a, b, r, m_pushpc));
+ 	fifoout_push_f(r);
+ }
+ 
+-static void fmul(void)
++static void model1_fmul(void)
+ {
+ 	float a = fifoin_pop_f();
+ 	float b = fifoin_pop_f();
+ 	float r = a*b;
+-	LOG(("TGP fmul %f*%f=%f (%x)\n", a, b, r, m_pushpc));
++	LOG(("TGP model1_fmul %f*%f=%f (%x)\n", a, b, r, m_pushpc));
+ 	fifoout_push_f(r);
+ }
+ 
+-static void fdiv(void)
++static void model1_fdiv(void)
+ {
+ 	float a = fifoin_pop_f();
+ 	float b = fifoin_pop_f();
+ 	float r = a * tgp_recip( b );	/* as the TGP program (VR 0x0aa) */
+-	LOG(("TGP fdiv %f/%f=%f (%x)\n", a, b, r, m_pushpc));
++	LOG(("TGP model1_fdiv %f/%f=%f (%x)\n", a, b, r, m_pushpc));
+ 	fifoout_push_f(r);
+ }
+ 
+@@ -1300,10 +1300,10 @@ static void matrix_sdir(void)
+ 	m_t71 = f2u( b );
+ }
+ 
+-static void fsqrt(void)
++static void model1_fsqrt(void)
+ {
+ 	float a = fifoin_pop_f();
+-	LOG(("TGP fsqrt %f (%x)\n", a, m_pushpc));
++	LOG(("TGP model1_fsqrt %f (%x)\n", a, m_pushpc));
+ 	fifoout_push_f(tgp_sqrt(a));
+ }
+ 
+@@ -2561,10 +2561,10 @@ static void matrix_settrans_vf(void)
+ 
+ 
+ static const struct tgp_function ftab_vr[] = {
+-	{ fadd,            2 }, /* 0x00 */ /* 0b5 09b */
+-	{ fsub,            2 },            /* 0ba 0a0 */
+-	{ fmul,            2 },            /* 0bf 0a5 */
+-	{ fdiv,            2 },            /* 0c4 0aa */
++	{ model1_fadd,            2 }, /* 0x00 */ /* 0b5 09b */
++	{ model1_fsub,            2 },            /* 0ba 0a0 */
++	{ model1_fmul,            2 },            /* 0bf 0a5 */
++	{ model1_fdiv,            2 },            /* 0c4 0aa */
+ 	{ NULL,                        0 },            /* 0d2 0b9 */
+ 	{ matrix_push,     0 },            /* 0e3 0cc */
+ 	{ matrix_pop,      0 },            /* 0f7 0e0 */
+@@ -2608,7 +2608,7 @@ static const struct tgp_function ftab_vr[] = {
+ 	{ f42,             3 },            /* 329 34b */
+ 	{ f43,             6 },            /* 36c 38f */
+ 	{ track_read_tri,  1 },            /* 3c2 3e2 */
+-	{ fsqrt,           1 },            /* 3c7 3e9 */
++	{ model1_fsqrt,           1 },            /* 3c7 3e9 */
+ 	{ vlength,         3 },            /* 3cf 3f2 */
+ 	{ NULL,                        0 },            /* 3ef 411 */
+ 
+@@ -2642,9 +2642,9 @@ static const struct tgp_function ftab_vr[] = {
+ /* 315-5724 (Virtua Fighter): its own versions where its program differs
+    from 315-5573 */
+ static const struct tgp_function ftab_vf[] = {
+-	{ fadd,            2 }, /* 0x00 */
+-	{ fsub,            2 },
+-	{ fmul,            2 },
++	{ model1_fadd,            2 }, /* 0x00 */
++	{ model1_fsub,            2 },
++	{ model1_fmul,            2 },
+ 	{ fdiv_vf,         2 },
+ 	{ nop_tgp,         0 },
+ 	{ matrix_push,     0 },
+@@ -2758,10 +2758,10 @@ static const struct tgp_function ftab_vf[] = {
+ /*   f49_swa */
+ 
+ static const struct tgp_function ftab_swa[] = {
+-	{ fadd,            2 },  /* 0x00 */
+-	{ fsub,            2 },
+-	{ fmul,            2 },
+-	{ fdiv,            2 },
++	{ model1_fadd,            2 },  /* 0x00 */
++	{ model1_fsub,            2 },
++	{ model1_fmul,            2 },
++	{ model1_fdiv,            2 },
+ 	{ f04_swa,         2 },
+ 	{ matrix_push_swa, 0 },
+ 	{ matrix_pop,      0 },
