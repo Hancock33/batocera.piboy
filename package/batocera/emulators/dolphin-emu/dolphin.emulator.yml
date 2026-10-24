@@ -1,6 +1,7 @@
 file_extensions:
   - iso
   - rvz
+  - wad
 cores:
   dolphin:
     features:
