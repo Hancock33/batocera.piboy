@@ -67,6 +67,8 @@ psp:
 psx:
   emulator: duckstation
   core:     duckstation
+  options:
+    duckstation_pgxp: "false"
 saturn:
   emulator: libretro
   core:     yabasanshiro
