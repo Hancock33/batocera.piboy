@@ -1,6 +1,17 @@
-This image is setup to use the Experimental Pi DMG case, to run on a standalone RPI4/5 (i.e., not in the Experimental Pi DMG case) follow the steps below.
+BATOCERA FOR THE EXPERIMENTAL PI DMG CASE
+==========================================
 
-1.	Rename the file "config_rpi4.txt" to "config.txt" 
-2.	In the batocera-boot.conf change the option "piboy.enabled=1" to "piboy.enabled=0"
+This image is set up for the Experimental Pi DMG case.
 
-Have Fun!
+To run it on a standalone Raspberry Pi 4 or 5 (not in the DMG case), follow these steps:
+
+1. Back up the existing "config.txt" (for example, rename it to "config_piboy.txt").
+2. Rename "config_rpi.txt" to "config.txt".
+3. Open "batocera-boot.conf" and change:
+       piboy.enabled=1
+   to:
+       piboy.enabled=0
+
+To go back to the DMG case, reverse the steps: restore your backed-up "config.txt" and set "piboy.enabled=1".
+
+Have fun!

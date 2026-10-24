@@ -1,13 +1,27 @@
-Unofficial Port of Batocera for the [DMG PiBoy](https://experimentalpi.com/PiBoy-DMG--Kit_p_18.html) and [PiBoy XRS](https://experimentalpi.com/PiBoy-DMG--Kit_p_18.html).
+# batocera.piboy
+
+An unofficial build of [Batocera](https://batocera.org/) for the Experimental Pi
+[DMG PiBoy](https://web.archive.org/web/20240508141401/https://experimentalpi.com/PiBoy-DMG--Kit_p_18.html) and
+[PiBoy XRS](https://web.archive.org/web/20240508141401/https://experimentalpi.com/PiBoy-DMG--Kit_p_18.html).
 
 ![batocera.piboy logo](https://raw.githubusercontent.com/Hancock33/batocera.piboy/master/.github/logo.jpg)
 
-Development builds are periodically updated and are located here https://mega.nz/folder/xgdhWJja#xw45B11mlTwkdLBAX7O4OQ
+## Downloads
 
-A optimised build for the [Steam Deck](https://www.steamdeck.com/en/) can also be found in the download folder.
+Development builds are updated periodically and are available from the
+[download folder](https://mega.nz/folder/xgdhWJja#xw45B11mlTwkdLBAX7O4OQ).
 
-**Note** the Steamdeck version is compiled with "-O2 **-march=x86-64-v3** -mtune=znver2" flags, it should work on other x86-64 processors circa **2015**.
+### Steam Deck build
 
-**All credits to the team at https://batocera.org/**
+An optimised build for the [Steam Deck](https://www.steamdeck.com/en/) is also in the
+download folder.
+
+> **Note:** the Steam Deck build is compiled with
+> `-O2 -march=x86-64-v3 -mtune=generic`. It should also run on other x86-64 processors
+> from around **2015** onwards.
+
+## Credits
+
+All credit goes to the team at [batocera.org](https://batocera.org/).
 
 Built with ❤️

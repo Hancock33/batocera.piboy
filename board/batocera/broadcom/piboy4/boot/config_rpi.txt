@@ -4,20 +4,19 @@ arm_64bit=1
 #Base Settings
 cec_osd_name=batocera             # sets the initial CEC name of the device
 disable_overscan=1
-
-# HDMI Settings
-hdmi_group:1=2                    # 1=CEA (Consumer Electronics Association, the standard typically used by TVs), 2=DMT (Display Monitor Timings, the standard typically used by monitors).
-hdmi_mode:1=82                    # DMT 82=1080p@60hz, 85=720p@60hz
-                                  # CEA 97=2160p@60Hz, 16=1080p@60Hz, 4=720p@60Hz
-hdmi_drive:1=2                    # 1=Normal DVI mode (no sound), 2=Normal HDMI mode and sound
-hdmi_force_hotplug:1=1            # Setting hdmi_force_hotplug to 1 pretends that the HDMI hotplug signal is asserted, so it appears that a HDMI display is attached.
-#hdmi_safe=1                      # uncomment if you get no picture on HDMI for a default "safe" mode
-hdmi_enable_4kp60=1               # uncomment this option to allow selection of 4k 60Hz refresh rates.
-
-boot_delay=0                      # the boot_delay command instructs to wait for a given number of seconds before loading the kernel
+boot_delay=0                      # no wait before loading the kernel
 disable_splash=1                  # rainbow splash screen will not be shown on boot
 kernel=boot/linux
 initramfs boot/initrd.gz
+
+# HDMI Settings
+hdmi_group:1=2                    # 1=CEA (TVs), 2=DMT (monitors)
+hdmi_mode:1=82                    # DMT 82=1080p@60hz, 85=720p@60hz
+                                  # CEA 97=2160p@60Hz, 16=1080p@60Hz, 4=720p@60Hz
+hdmi_drive:1=2                    # 2=Normal HDMI mode and sound
+hdmi_force_hotplug:1=1            # pretend an HDMI display is attached
+#hdmi_safe=1                      # uncomment if you get no picture on HDMI
+#hdmi_enable_4kp60=1              # only enable if you actually output 4K60; it raises clocks/heat
 
 #Audio Settings
 dtparam=audio=on
@@ -29,7 +28,7 @@ dtparam=krnbt=on
 max_framebuffers=2                # Ensure only one display output can be used on the Pi4 with batocera
 
 ### Power saving options
-# Disable Bluetooth
+# Disable Bluetooth (uncomment, and remove dtparam=krnbt=on, if unused)
 #dtoverlay=disable-bt
 
 # Disable WiFi
@@ -47,18 +46,21 @@ max_framebuffers=2                # Ensure only one display output can be used o
 #dtparam=eth_led0=4
 #dtparam=eth_led1=4
 
-### Overclock
-# Run as fast as firmware / board allows
-arm_boost=1
-#over_voltage=2
-#arm_freq=1700
-#gpu_freq=500
-
 [rpi4]
 start_file=start4.elf
 fixup_file=fixup4.dat
 gpu_mem_1024=256
 dtoverlay=vc4-kms-v3d,cma-512
+force_eeprom_read=0               # don't probe for an I2C HAT EEPROM
+
+### Overclock (Pi 4 only; needs a heatsink/fan and a good 5.1V 3A supply)
+# If you see crashes or vcgencmd get_throttled != 0x0, drop arm_freq by 100 and gpu_freq by 50.
+# To push further once stable: arm_freq=2000, over_voltage=6, gpu_freq=700.
+arm_boost=1
+over_voltage=5
+arm_freq=1950
+gpu_freq=650
+initial_turbo=60                  # run at turbo clocks for the first 60s of boot
 
 [rpi5]
 start_file=start.elf
