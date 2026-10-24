@@ -6,7 +6,7 @@
 # Version: Commits on Oct 13, 2026
 KODI_RESOURCE_LANGUAGE_FR_FR_VERSION = 11.0.110
 KODI_RESOURCE_LANGUAGE_FR_FR_SOURCE = resource.language.fr_fr-$(KODI_RESOURCE_LANGUAGE_FR_FR_VERSION).zip
-KODI_RESOURCE_LANGUAGE_FR_FR_SITE = http://mirrors.kodi.tv/addons/piers/resource.language.fr_fr
+KODI_RESOURCE_LANGUAGE_FR_FR_SITE = https://mirrors.kodi.tv/addons/piers/resource.language.fr_fr
 KODI_RESOURCE_LANGUAGE_FR_FR_PLUGINNAME=resource.language.fr_fr
 
 KODI_RESOURCE_LANGUAGE_FR_FR_CP_DIR=$(TARGET_DIR)/usr/share/kodi/addons

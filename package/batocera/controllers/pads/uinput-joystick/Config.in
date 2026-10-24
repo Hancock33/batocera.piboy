@@ -1,2 +1,7 @@
 config BR2_PACKAGE_UINPUT_JOYSTICK
 	bool "uinput-joystick"
+
+	help
+	  The uinput_joystick and fftest utilities.
+
+	  https://github.com/shantigilbert/uinput_joystick

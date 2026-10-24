@@ -78,7 +78,7 @@ define UBOOT_RK3588_BUILD_BOOTLOADER
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31)
 	mkdir -p $(@D)/staging/$(board)
 	cp -v $(@D)/u-boot-rockchip.bin $(@D)/staging/$(board)/
-    # Binman generates the SPI binary if CONFIG_ROCKCHIP_SPI_IMAGE is enabled
+	# Binman generates the SPI binary if CONFIG_ROCKCHIP_SPI_IMAGE is enabled
 	if [ -f $(@D)/u-boot-rockchip-spi.bin ]; then \
 		cp -v $(@D)/u-boot-rockchip-spi.bin $(@D)/staging/$(board)/; \
 	fi

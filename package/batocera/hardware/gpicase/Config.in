@@ -2,5 +2,8 @@ config BR2_PACKAGE_GPICASE
 	bool "gpicase"
 	depends on BR2_PACKAGE_MESA3D
 
+	help
+	  Installation helper for the Retroflag GPi Case.
+
 comment "gpicase"
 	depends on BR2_PACKAGE_MESA3D

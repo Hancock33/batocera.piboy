@@ -1,2 +1,7 @@
 config BR2_PACKAGE_HID_T150
 	bool "hid-t150"
+
+	help
+	  Linux kernel driver for the Thrustmaster T150 racing wheel.
+
+	  https://github.com/scarburato/t150_driver

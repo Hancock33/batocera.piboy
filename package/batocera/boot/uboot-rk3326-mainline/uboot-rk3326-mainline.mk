@@ -66,7 +66,7 @@ endef
 define UBOOT_RK3326_MAINLINE_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3326_MAINLINE_MAKE_OPTS) u-boot-dtb.bin
 	$(UBOOT_RK3326_MAINLINE_UART5_DDR_BIN)
-    # the RK3326 bootrom loads the legacy idbloader/uboot.img/trust.img layout
+	# the RK3326 bootrom loads the legacy idbloader/uboot.img/trust.img layout
 	$(@D)/tools/mkimage -n px30 -T rksd -d $(UBOOT_RK3326_MAINLINE_IDB_DDR_BIN) $(@D)/idbloader.img
 	cat $(UBOOT_RK3326_MAINLINE_MINILOADER) >> $(@D)/idbloader.img
 	$(UBOOT_RK3326_MAINLINE_RKBIN)/tools/loaderimage --pack --uboot $(@D)/u-boot-dtb.bin \

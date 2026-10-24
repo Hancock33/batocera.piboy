@@ -49,11 +49,11 @@ UBOOT_RK3576_MAKE_OPTS = \
 	ROCKCHIP_TPL=$(@D)/rkbin/bin/rk35/rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.12.bin
 
 define UBOOT_RK3576_CONFIGURE_CMDS
-    # Based on generic-rk3576_defconfig, plus the Anbernic RG Vita Pro's own
-    # DT (RK806 PMIC) and CONFIG_ROCKCHIP_RK8XX_DISABLE_BOOT_ON_POWERON
+	# Based on generic-rk3576_defconfig, plus the Anbernic RG Vita Pro's own
+	# DT (RK806 PMIC) and CONFIG_ROCKCHIP_RK8XX_DISABLE_BOOT_ON_POWERON
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3576_MAKE_OPTS) \
 		rk3576-anbernic-rg-vita-pro_defconfig
-    # Disable CONFIG_TOOLS_MKEFICAPSULE to bypass GnuTLS linker issues
+	# Disable CONFIG_TOOLS_MKEFICAPSULE to bypass GnuTLS linker issues
 	$(@D)/scripts/config --file $(@D)/.config --disable CONFIG_TOOLS_MKEFICAPSULE
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3576_MAKE_OPTS) olddefconfig
 endef
@@ -64,7 +64,7 @@ endef
 
 define UBOOT_RK3576_INSTALL_IMAGES_CMDS
 	mkdir -p $(BINARIES_DIR)/uboot-rk3576
-    # u-boot-rockchip.bin contains both the idbloader.img and u-boot.itb
+	# u-boot-rockchip.bin contains both the idbloader.img and u-boot.itb
 	$(INSTALL) -D -m 0644 $(@D)/u-boot-rockchip.bin \
 		$(BINARIES_DIR)/uboot-rk3576/u-boot-rockchip.bin
 endef

@@ -6,7 +6,7 @@
 # Version: Commits on Oct 13, 2026
 KODI_RESOURCE_LANGUAGE_ZH_CN_VERSION = 11.0.104
 KODI_RESOURCE_LANGUAGE_ZH_CN_SOURCE = resource.language.zh_cn-$(KODI_RESOURCE_LANGUAGE_ZH_CN_VERSION).zip
-KODI_RESOURCE_LANGUAGE_ZH_CN_SITE = http://mirrors.kodi.tv/addons/piers/resource.language.zh_cn
+KODI_RESOURCE_LANGUAGE_ZH_CN_SITE = https://mirrors.kodi.tv/addons/piers/resource.language.zh_cn
 KODI_RESOURCE_LANGUAGE_ZH_CN_PLUGINNAME=resource.language.zh_cn
 
 KODI_RESOURCE_LANGUAGE_ZH_CN_CP_DIR=$(TARGET_DIR)/usr/share/kodi/addons
