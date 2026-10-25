@@ -762,6 +762,9 @@ config BR2_PACKAGE_BATOCERA_TARGET_H616
 config BR2_PACKAGE_BATOCERA_TARGET_H6
     bool "h6"
 
+config BR2_PACKAGE_BATOCERA_TARGET_H700
+    bool "h700"
+
 config BR2_PACKAGE_BATOCERA_TARGET_T527
     bool "t527"
 
@@ -1476,7 +1479,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                # newer versions of duckstation are stricter on OpenGL 3.1
                                                                # requires X11 or Wayland. 2GB boards aren't great.
 
-    select BR2_PACKAGE_LIBRETRO_DUCKSTATION                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
     select BR2_PACKAGE_LIBRETRO_SWANSTATION                 if !BR2_PACKAGE_BATOCERA_TARGET_X86         && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_H3
 
@@ -1810,7 +1812,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Symbian OS / Nokia N-Gage emulator
    #select BR2_PACKAGE_EKA2L1                               if  BR2_x86_64
-    select BR2_PACKAGE_LIBRETRO_EKA2L1                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
+    select BR2_PACKAGE_LIBRETRO_EKA2L1                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_BCM27XX
 
     # Apple 2
     select BR2_PACKAGE_APPLEWIN                             # ALL
@@ -1978,14 +1980,6 @@ config BR2_PACKAGE_BATOCERA_WPA
     select BR2_PACKAGE_WPA_SUPPLICANT_WPA3                   if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wifi
     select BR2_PACKAGE_WPA_SUPPLICANT_NL80211                if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wpa_supplicant driver
     select BR2_PACKAGE_WPA_SUPPLICANT_WEXT                   if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wpa_supplicant driver
-    select BR2_PACKAGE_WPA_SUPPLICANT_K44                    if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wifi
-    select BR2_PACKAGE_WPA_SUPPLICANT_K44_CLI                if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wifi
-    select BR2_PACKAGE_WPA_SUPPLICANT_K44_DBUS               if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wifi
-    select BR2_PACKAGE_WPA_SUPPLICANT_K44_DBUS_INTROSPECTION if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wifi
-    select BR2_PACKAGE_WPA_SUPPLICANT_K44_WIRED              if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wpa_supplicant driver, 2.10 requires kernel > 4.4
-    select BR2_PACKAGE_WPA_SUPPLICANT_K44_WPA3               if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wifi
-    select BR2_PACKAGE_WPA_SUPPLICANT_K44_NL80211            if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wpa_supplicant driver
-    select BR2_PACKAGE_WPA_SUPPLICANT_K44_WEXT               if  BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wpa_supplicant driver
 
 config BR2_PACKAGE_BATOCERA_QT6
     bool "batocera.linux Qt6 stack"
@@ -2148,7 +2142,6 @@ config BR2_PACKAGE_BATOCERA_SDL2
     select BR2_PACKAGE_LIBVORBIS                            # ogg
     select BR2_PACKAGE_SDL2_GAMECONTROLLERDB                if !BR2_PACKAGE_BATOCERA_LIB32
     select BR2_PACKAGE_TVTEXTVIEWER                         if !BR2_PACKAGE_BATOCERA_LIB32
-    select BR2_PACKAGE_BATOCERA_HAS_SDL
 
 config BR2_PACKAGE_BATOCERA_SDL3
     bool "BATOCERA SDL3"
@@ -2162,7 +2155,6 @@ config BR2_PACKAGE_BATOCERA_SDL3
     select BR2_PACKAGE_SDL3_X11                             if  BR2_PACKAGE_XORG7
     select BR2_PACKAGE_SDL3_KMSDRM                          if  BR2_PACKAGE_HAS_LIBGBM
     select BR2_PACKAGE_SDL3_WAYLAND                         if  BR2_PACKAGE_BATOCERA_WAYLAND
-    select BR2_PACKAGE_BATOCERA_HAS_SDL
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
     bool "batocera.linux wayland packages selection"
@@ -2274,8 +2266,6 @@ config BR2_PACKAGE_BATOCERA_GPU_X86
 
     # nvidia
     select BR2_PACKAGE_BATOCERA_NVIDIA                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
-    # AMD
-    select BR2_PACKAGE_BATOCERA_AMD                         if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # mesa
     select BR2_PACKAGE_MESA3D
@@ -2299,8 +2289,8 @@ config BR2_PACKAGE_BATOCERA_GPU_X86
     select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_ZINK           if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     #batocera- possible other platforms
 
     # utils
-    select BR2_PACKAGE_LIBVA_INTEL_DRIVER                   if  BR2_PACKAGE_XORG7                      &&  BR2_PACKAGE_MESA3D_DRI_DRIVER
-    select BR2_PACKAGE_LIBVA_UTILS                          if  BR2_PACKAGE_XORG7                      &&  BR2_PACKAGE_MESA3D_DRI_DRIVER
+    select BR2_PACKAGE_LIBVA_INTEL_DRIVER                   if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_LIBVA_UTILS                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # vaapi acceleration drivers
     select BR2_PACKAGE_MESA3D_GALLIUM_VA                    if  BR2_PACKAGE_MESA3D_GALLIUM_VA_SUPPORTED_DRIVER && (!BR2_PACKAGE_MESA3D_OPENGL_GLX || BR2_PACKAGE_LIBGLVND)

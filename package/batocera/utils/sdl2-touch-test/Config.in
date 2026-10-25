@@ -2,7 +2,7 @@ config BR2_PACKAGE_SDL2_TOUCH_TEST
 	bool "sdl2-touch-test"
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_TTF
-	select BR2_PACKAGE_UDEV
+	select BR2_PACKAGE_HAS_UDEV
 
 	help
 	  Small little SDL2 graphics utility to test touch accuracy.
