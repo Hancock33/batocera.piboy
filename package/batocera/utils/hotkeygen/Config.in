@@ -9,5 +9,6 @@ config BR2_PACKAGE_HOTKEYGEN
 
 	help
 	  hotkeygen is a background utility that listens for specific
-	  input events (KEY_ or BTN_) from connected controllers, keyboards,
-	  or arcade encoders and maps them to global hotkey actions.
+	  input events (KEY_ or BTN_) from connected controllers,
+	  keyboards, or arcade encoders and maps them to global hotkey
+	  actions.

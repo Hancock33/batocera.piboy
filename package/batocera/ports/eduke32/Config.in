@@ -2,7 +2,6 @@ config BR2_PACKAGE_EDUKE32
 	bool "eduke32"
 	depends on BR2_INSTALL_LIBSTDCPP
 	select BR2_PACKAGE_FLAC
-	select BR2_PACKAGE_IONFURY
 	select BR2_PACKAGE_LIBVPX
 	select BR2_PACKAGE_SDL2
 

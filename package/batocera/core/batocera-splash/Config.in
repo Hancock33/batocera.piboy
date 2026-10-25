@@ -6,7 +6,8 @@ config BR2_PACKAGE_BATOCERA_SPLASH
 	select BR2_PACKAGE_MPV           if BR2_PACKAGE_BATOCERA_SPLASH_MPV
 
 	help
-	  Installs the splash screen assets and boot-up scripts for Batocera.linux.
+	  Installs the splash screen assets and boot-up scripts for
+	  Batocera.linux.
 
 if BR2_PACKAGE_BATOCERA_SPLASH
 
@@ -25,13 +26,15 @@ config BR2_PACKAGE_BATOCERA_SPLASH_IMAGE
 	bool "image"
 
 	help
-	  Displays a static logo image with overlayed build version info.
+	  Displays a static logo image with overlayed build version
+	  info.
 
 config BR2_PACKAGE_BATOCERA_SPLASH_MPV
 	bool "mpv"
 
 	help
-	  Plays an animated video splash utilizing platform-specific HW decoding.
+	  Plays an animated video splash utilizing platform-specific HW
+	  decoding.
 
 endchoice
 
@@ -44,8 +47,7 @@ endchoice
 # 720p H264 Profile:
 # Group for legacy, low-power, or older SBC targets that perform smoothest
 # when rendering a lighter 720p @ 30 FPS video profile.
-if BR2_PACKAGE_BATOCERA_TARGET_BCM2835 || \
-   BR2_PACKAGE_BATOCERA_TARGET_BCM2836 || \
+if BR2_PACKAGE_BATOCERA_TARGET_BCM2836 || \
    BR2_PACKAGE_BATOCERA_TARGET_RK3326  || \
    BR2_PACKAGE_BATOCERA_TARGET_RK3128  || \
    BR2_PACKAGE_BATOCERA_TARGET_H3      || \
