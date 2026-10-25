@@ -187,7 +187,6 @@ Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)
 Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|b1e04c738cb48a1dae0574b8877f6a116d270ca1|Oct 03, 2026
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.10.01-osfree|Oct 02, 2026
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|d534c19aa760df3fb75fd20db13ba1932b8a5463|Oct 02, 2026
-Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|d43c2708b0a31c285ce16724b6c4a2e92af07346|Oct 02, 2026
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.10|Oct 01, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|d9f969054dc7fbb6fa89519036d2b971e0855b51|Oct 01, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|c8816799b50388e61cfe237fe2cdbb7d8175f20a|Oct 01, 2026
@@ -395,7 +394,6 @@ Libraries|[python-pyftdi](http://github.com/eblot/pyftdi)|25d77b02960dd42c018ac7
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|20260603|Jun 01, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.11.0|Jun 01, 2026
 Emulators|[libretro-yabause](http://github.com/libretro/yabause)|8926b0c6c347f8c5c755911ddb0ac695420ffbf8|May 30, 2026
-Emulators|[ares](http://github.com/ares-emulator/ares)|v148|May 28, 2026
 Ports|[bstone](http://github.com/bibendovsky/bstone)|v1.3.4|May 27, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|v0.8.4|May 27, 2026
 Boot|[batocera-initramfs](https://www.busybox.net/downloads)|1.38.0|May 13, 2026

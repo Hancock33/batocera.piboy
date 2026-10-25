@@ -77,7 +77,6 @@ Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.4|Oct 08, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.4.2|Oct 19, 2026
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|a1e20c0362f392dc25f1a3b218d2f84d4f1a25da|Oct 10, 2026
-Emulators|[ares](http://github.com/ares-emulator/ares)|v148|May 28, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261023|Oct 23, 2026
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|2127.0-alpha3|Oct 16, 2026
 Emulators|[batocera-bezel](http://github.com/batocera-linux/batocera-bezel)|96c8f8650ff8c8d324c611621643751c1226de68|Sept 25, 2026
@@ -130,7 +129,6 @@ Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|05439f9612
 Emulators|[libretro-cannonball](http://github.com/libretro/cannonball)|0d83575d920ea4c0a280847a19d7802f673e6a68|Aug 04, 2026
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|8e61dd69d948cea16c3bad734f7b9d0c2a018cc8|Oct 21, 2026
 Emulators|[libretro-chailove](https://github.com/libretro/libretro-chailove.git)|524ef951abbd07464830ee12a3f6f5e2aba9efd3|Oct 03, 2026
-Emulators|[libretro-clownmdemu](https://github.com/Clownacy/clownmdemu-libretro)|d43c2708b0a31c285ce16724b6c4a2e92af07346|Oct 02, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|445421549abc0638a2f5ecf05db8437e580dcc69|Oct 25, 2026
 Emulators|[libretro-craft](http://github.com/libretro/Craft)|f30e7b4b1d1406c750a504583adf0cc88449a699|Sept 20, 2026
 Emulators|[libretro-desmume](http://github.com/libretro/desmume)|95b4d798731caa809125b6c3c11d17cc332ff6ef|Sept 20, 2026
