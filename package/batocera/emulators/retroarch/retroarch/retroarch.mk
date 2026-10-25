@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 25, 2026
-RETROARCH_VERSION = ccffeb553af0e753c8bc8a535f4b56ee456c7b56
+RETROARCH_VERSION = f85ab4bb29e4dd2cb068d3e979cb084d4fc41815
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts \
@@ -114,7 +114,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
 endif
 
 ifeq ($(BR2_PACKAGE_GLSLANG),y)
-    RETROARCH_CONF_OPTS += --disable-builtinglslang --enable-glslang
+    RETROARCH_CONF_OPTS += --enable-glslang
     RETROARCH_DEPENDENCIES += glslang
 endif
 

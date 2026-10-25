@@ -1809,6 +1809,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
 
     # Symbian OS / Nokia N-Gage emulator
    #select BR2_PACKAGE_EKA2L1                               if  BR2_x86_64
+    select BR2_PACKAGE_LIBRETRO_EKA2L1                      if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY || BR2_PACKAGE_BATOCERA_TARGET_BCM27XX
 
     # Apple 2
     select BR2_PACKAGE_APPLEWIN                             # ALL
