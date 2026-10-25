@@ -1,4 +1,6 @@
 #!/bin/bash
+
+SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 GREEN="\e[1;32m"
 RED="\e[1;31m"
 ENDCOLOR="\e[0m"
@@ -44,10 +46,9 @@ x86_64"
 
 for i in $cleanup
 do
-	echo -e "Cleaning: "${RED}$i${ENDCOLOR}
-	find $HOME/build-dir/batocera.$i/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2
-	find $HOME/build-dir/batocera.$i/build -maxdepth 1 -type d -printf '%T@ %p %f\n' | sed -r 's:\-[0-9a-f\.]+$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
+	echo "Cleaning: "${RED}$i${ENDCOLOR}
+	"${SCRIPT_DIR}/cleanup-old-packages.sh" "$HOME/build-dir/batocera.$i/build"
 done
 
-find $HOME/dl -maxdepth 2 -type f -name "*.zip" -o -name "*.tar.*" -printf '%T@ %p %f\n' | sed -r 's:\-[-_0-9a-fvrgit\.]+(\.zip|\.tar\.[2a-z]+)$$::' | sort -k3 -k1 | uniq -f 2 -d | cut -d' ' -f2 | xargs rm -rf
+"${SCRIPT_DIR}/cleanup-old-packages.sh" --downloads "$HOME/dl"
 

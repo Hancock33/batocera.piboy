@@ -1,46 +1,43 @@
 #!/usr/bin/env python3
 
-# todo:
-# image.infos without genimage.cfg and vice and versa
-
 from pathlib import Path
+
 import yaml
 
-def images_info_to_board_line(filepath: Path) -> str:
-    path = Path(filepath)
-  
-    with open(path, 'r', encoding='utf-8') as f:
-        data = yaml.safe_load(f)
 
-    if len(data["images"]) == 0:
-        raise Exception("no image found for infos file")
-    for image in data["images"]:
-        if len(image["hardwares"]) == 0:
-            raise Exception("no hardware found for board")
-        for hardware in image["hardwares"]:
-            path = filepath.relative_to("board/batocera").parent
-            print(f"  [\"arch\"=> \"{image["name"]}\", \"path\" => \"{path}\", \"family\" => \"{image["family"]}\", \"name\" => \"{hardware["name"]}\", \"vendor\" => \"{hardware["vendor"]}\", \"type\" => \"{hardware["type"]}\"],")
+def images_info_to_board_line(filepath: Path) -> None:
+    data = yaml.safe_load(filepath.read_text(encoding='utf-8'))
 
-images_infos = list(Path("board").rglob("image.infos"))
-genimages    = list(Path("board").rglob("genimage.cfg"))
+    if not data['images']:
+        raise Exception('no image found for infos file')
+
+    board_path = filepath.relative_to('board/batocera').parent
+    for image in data['images']:
+        if not image['hardwares']:
+            raise Exception('no hardware found for board')
+        for hardware in image['hardwares']:
+            print(
+                f'  ["arch"=> "{image["name"]}", "path" => "{board_path}", '
+                f'"family" => "{image["family"]}", "name" => "{hardware["name"]}", '
+                f'"vendor" => "{hardware["vendor"]}", "type" => "{hardware["type"]}"],'
+            )
+
+
+images_infos = list(Path('board').rglob('image.infos'))
+genimages = list(Path('board').rglob('genimage.cfg'))
 
 # check 1-1 between image.infos and genimage.cfg
-images_infos_dict = {}
-for x in images_infos:
-    images_infos_dict[Path(x).parent] = {}
-genimages_dict = {}
-for x in genimages:
-    genimages_dict[Path(x).parent] = {}
-for x in images_infos_dict:
-    if x not in genimages_dict:
-        print(f"image.infos without genimage.cfg ({x})")
-for x in genimages_dict:
-    if x not in images_infos_dict:
-        print(f"genimage.cfg without image.infos ({x})")
+images_infos_dirs = {path.parent for path in images_infos}
+genimages_dirs = {path.parent for path in genimages}
 
-print("<?php")
-print("$boards = [")
+for path in sorted(images_infos_dirs - genimages_dirs):
+    print(f'image.infos without genimage.cfg ({path})')
+for path in sorted(genimages_dirs - images_infos_dirs):
+    print(f'genimage.cfg without image.infos ({path})')
+
+print('<?php')
+print('$boards = [')
 for images_info in images_infos:
     images_info_to_board_line(images_info)
-print("];")
-print("?>")
+print('];')
+print('?>')

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # pads requires rw access to the pad
 # add udev rules on your computer, or run this script with sudo
@@ -39,32 +39,45 @@ then
     exit 1
 fi
 
-JOYSTICK_CMD=
+JOYSTICK_ARGS=()
 for J in /dev/input/event*
 do
-    DVAL=$(udevadm info -q all -n "${J}")
-    if echo "${DVAL}" | grep -qE "^E: ID_INPUT_JOYSTICK=1$"
+    DVAL=$(udevadm info -q all -n "${J}") || continue
+
+    # Parse the udev properties in one pass instead of spawning a pipeline
+    # for every property we are interested in.
+    is_joystick=0
+    V_ID=
+    P_ID=
+    while IFS='=' read -r KEY VALUE
+    do
+	case "${KEY}" in
+	    "E: ID_INPUT_JOYSTICK") [ "${VALUE}" = "1" ] && is_joystick=1 ;;
+	    "E: ID_VENDOR_ID") V_ID=${VALUE} ;;
+	    "E: ID_MODEL_ID") P_ID=${VALUE} ;;
+	esac
+    done <<< "${DVAL}"
+
+    if [ "${is_joystick}" = "1" ] && [ -n "${V_ID}" ] && [ -n "${P_ID}" ]
     then
-	V_ID=$(echo "${DVAL}" | grep -E "^E: ID_VENDOR_ID=" | sed -e s+"^E: ID_VENDOR_ID="++)
-	P_ID=$(echo "${DVAL}" | grep -E "^E: ID_MODEL_ID=" | sed -e s+"^E: ID_MODEL_ID="++)
-	JOYSTICK_CMD="${JOYSTICK_CMD} -device usb-host,vendorid=0x${V_ID},productid=0x${P_ID}"
+	JOYSTICK_ARGS+=( -device "usb-host,vendorid=0x${V_ID},productid=0x${P_ID}" )
     fi
 done
 
-if test -z "${JOYSTICK_CMD}"
+if [ ${#JOYSTICK_ARGS[@]} -eq 0 ]
 then
     echo "***** No joystick found." >&2
 fi
 
 BATOCERA_IMG=$1
-SHARE_IMG=$2
+SHARE_IMG=${2:-}
 
+SHARE_ARGS=()
 if test -n "${SHARE_IMG}"
 then
-    SHARE_CMD="-hdb ${SHARE_IMG}"
+    SHARE_ARGS=( -hdb "${SHARE_IMG}" )
 else
-    SHARE_CMD=
     echo "***** no share disk set." >&2
 fi
 
-qemu-system-x86_64 -cpu host -enable-kvm -device intel-hda -device hda-duplex -vga virtio -device virtio-gpu-pci -smp 2 -m 2048 -device e1000,netdev=net0 -netdev user,id=net0,hostfwd=tcp::5555-:22 -device nec-usb-xhci ${JOYSTICK_CMD} -drive "format=raw,file=${BATOCERA_IMG}" ${SHARE_CMD}
+qemu-system-x86_64 -cpu host -enable-kvm -device intel-hda -device hda-duplex -vga virtio -device virtio-gpu-pci -smp 2 -m 2048 -device e1000,netdev=net0 -netdev user,id=net0,hostfwd=tcp::5555-:22 -device nec-usb-xhci "${JOYSTICK_ARGS[@]}" -drive "format=raw,file=${BATOCERA_IMG}" "${SHARE_ARGS[@]}"

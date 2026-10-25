@@ -12,15 +12,14 @@ fi
 
 BROUTPUTDIR="${1}"
 BOARD="${2}"
-ESDIR="${BROUTPUTDIR}/build/"$(ls -t "${BROUTPUTDIR}/build" | grep -E "^batocera-emulationstation-" | head -1)
 
-GENDATE=$(date "+%Y/%m/%d %H:%m:%S")
+GENDATE=$(date "+%Y/%m/%d %H:%M:%S")
 
 echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'
 echo '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">'
 echo '<head>'
 echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" />'
-echo '<title>batocera.linux - '${GENDATE}'</title>'
+echo "<title>batocera.linux - ${GENDATE}</title>"
 echo '</head>'
 echo "<style>
 table {
@@ -42,12 +41,12 @@ echo "</h1>"
 echo "<h2>Files</h2>"
 echo "<ul>"
 echo "<li>""<a href=\"boot.tar.xz\">boot.tar.xz</a></li>"
-ls "${BROUTPUTDIR}/images/batocera/images/${BOARD}/"*.gz |
-    while read FILE
-    do
-	FILENAME=$(basename "${FILE}")
-	echo "<li>""<a href=\"${FILENAME}\">${FILENAME}</a></li>"
-    done
+for FILE in "${BROUTPUTDIR}/images/batocera/images/${BOARD}/"*.gz
+do
+    [ -e "${FILE}" ] || continue
+    FILENAME=${FILE##*/}
+    echo "<li>""<a href=\"${FILENAME}\">${FILENAME}</a></li>"
+done
 echo "</ul>"
 
 echo "<h2>Emulators details</h2>"
