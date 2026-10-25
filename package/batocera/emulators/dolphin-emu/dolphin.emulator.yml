@@ -1,6 +1,7 @@
 file_extensions:
   - iso
   - rvz
+  - wad
 cores:
   dolphin:
     features:
@@ -439,4 +440,10 @@ cores:
             submenu: LIGHT GUNS
             prompt: SHOW LIGHT GUN CROSSHAIRS
             preset: switchauto
-      - triforce
+      - name: triforce
+        custom_features:
+          dolphin_service_buttons:
+            group: CONTROLS
+            prompt: SERVICE AND TEST BUTTONS
+            description: Service on L3 and Test on R3, to open the test menu.
+            preset: switchauto

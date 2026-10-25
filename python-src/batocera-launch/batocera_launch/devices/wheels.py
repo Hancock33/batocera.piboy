@@ -1,3 +1,23 @@
+# This file is part of The Batocera Linux Distribution (https://batocera.org).
+# Copyright (c) 2026 The Batocera Team.
+#
+# The Batocera Linux Distribution is free software: you can redistribute it
+# and/or modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Batocera Linux Distribution is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with The Batocera Linux Distribution. If not, see
+# <https://www.gnu.org/licenses/>.
+#
+# YOU MUST RETAIN THE LICENSE AND COPYRIGHT NOTICES ABOVE IN ANY
+# REDISTRIBUTED VERSION OF THIS FILE.
+
 from __future__ import annotations
 
 import asyncio
@@ -29,14 +49,26 @@ _WHEEL_MAPPING: Final = {
     'upshift': 'pagedown',
 }
 
+_NAOMI_MAPPING: Final = {
+    'a': 'a',
+    'b': 'b',
+    'x': 'x',
+    'y': 'y',
+    'up': 'up',
+    'down': 'down',
+}
+
 # partial mapping between real pads buttons and batocera pads
 _SYSTEM_MAPPING: Final = {
     'dreamcast': {
         'lt': 'l2',
         'rt': 'r2',
-        'up': 'pageup',
-        'down': 'pagedown',
+        'up': 'up',
+        'down': 'down',
     },
+    'naomi': _NAOMI_MAPPING,
+    'naomi2': _NAOMI_MAPPING,
+    'atomiswave': _NAOMI_MAPPING,
     'gamecube': {
         'lt': 'l2',
         'rt': 'r2',
@@ -86,6 +118,8 @@ _SYSTEM_MAPPING: Final = {
         'triangle': 'x',
         'start': 'start',
         'select': 'select',
+        'up': 'up',
+        'down': 'down',
     },
     'ps2': {
         'cross': 'b',

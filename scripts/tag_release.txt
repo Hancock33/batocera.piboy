@@ -19,6 +19,7 @@ cxxopts.mk
 dosbox-staging.mk
 drastic.mk
 ecm.mk
+firmware-radxa.mk
 flatpak.mk
 freepats.mk
 fsuae.mk
@@ -72,6 +73,7 @@ shadps4.mk
 sm2-emu.mk
 sonic3-air.mk
 spirv-llvm-translator.mk
+swh-plugins.mk
 tekwar.mk
 theforceengine.mk
 tomlplusplus.mk

@@ -1,0 +1,13 @@
+config BR2_PACKAGE_LIBRETRO_EKA2L1
+	bool "libretro-eka2l1"
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_x86_64 || BR2_aarch64
+	select BR2_PACKAGE_ZLIB
+
+	help
+	  EKA2L1 libretro core, a Symbian OS and Nokia N-Gage emulator.
+
+	  https://github.com/WizzardSK/eka2l1-libretro
+
+comment "LIBRETRO_EKA2L1 needs a toolchain w/ C++, and an x86_64 or aarch64 target"
+	depends on !BR2_INSTALL_LIBSTDCPP || !(BR2_x86_64 || BR2_aarch64)

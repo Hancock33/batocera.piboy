@@ -3,19 +3,15 @@
 # wine-proton
 #
 ################################################################################
-# Version: Commits on Oct 14, 2026
-WINE_PROTON_VERSION = cachyos-11.0-20261014-proton
-WINE_PROTON_SOURCE = wine-$(WINE_PROTON_VERSION).tar.gz
+# Version: Commits on Oct 15, 2026
+WINE_PROTON_VERSION = cachyos-11.0-20261015-proton-dev
 WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_SELINUX_MODULES = wine
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
-HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
-ifeq ($(BR_CMAKE_USE_CLANG),y)
-    HOST_WINE_PROTON_DEPENDENCIES += host-clang host-lld
-endif
+HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
 define WINE_PROTON_AUTOGEN
 	# Create folder for install
@@ -26,7 +22,6 @@ define WINE_PROTON_AUTOGEN
 	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
 	cd $(@D); autoreconf -fiv
 endef
-
 WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 

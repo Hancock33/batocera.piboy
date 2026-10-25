@@ -1,8 +1,8 @@
 diff --git a/gfx/drivers_context/wayland_ctx.c b/gfx/drivers_context/wayland_ctx.c
-index e54fd16a64..8d46c55316 100644
+index bf93380a16..4b88543751 100644
 --- a/gfx/drivers_context/wayland_ctx.c
 +++ b/gfx/drivers_context/wayland_ctx.c
-@@ -541,6 +541,10 @@ error:
+@@ -542,6 +542,10 @@ error:
  static void gfx_ctx_wl_input_driver(void *data,
        const char *joypad_name)
  {
@@ -14,10 +14,10 @@ index e54fd16a64..8d46c55316 100644
     /* On Wayland the seat's state lives with the surface, here. The
      * frontend starts the input driver; it is handed that state. */
 diff --git a/gfx/drivers_context/wayland_vk_ctx.c b/gfx/drivers_context/wayland_vk_ctx.c
-index 74634da05b..364860e172 100644
+index c0c434ea5b..aef9d72d93 100644
 --- a/gfx/drivers_context/wayland_vk_ctx.c
 +++ b/gfx/drivers_context/wayland_vk_ctx.c
-@@ -200,6 +200,10 @@ error:
+@@ -220,6 +220,10 @@ error:
  static void gfx_ctx_wl_input_driver(void *data,
        const char *joypad_name)
  {

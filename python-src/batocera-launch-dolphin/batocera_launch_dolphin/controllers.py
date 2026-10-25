@@ -1,3 +1,23 @@
+# This file is part of The Batocera Linux Distribution (https://batocera.org).
+# Copyright (c) 2026 The Batocera Team.
+#
+# The Batocera Linux Distribution is free software: you can redistribute it
+# and/or modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Batocera Linux Distribution is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with The Batocera Linux Distribution. If not, see
+# <https://www.gnu.org/licenses/>.
+#
+# YOU MUST RETAIN THE LICENSE AND COPYRIGHT NOTICES ABOVE IN ANY
+# REDISTRIBUTED VERSION OF THIS FILE.
+
 from __future__ import annotations
 
 import ast
@@ -307,7 +327,6 @@ def generate_controller_config_triforce(
         'y': 'Buttons/Y',
         'x': 'Buttons/X',
         'pagedown': 'Buttons/Z',
-        'pageup': 'Triforce/Service',
         'select': 'Triforce/Coin',
         'start': 'Buttons/Start',
         'l2': 'Triggers/L',
@@ -337,6 +356,10 @@ def generate_controller_config_triforce(
         'r2': 'pagedown',
     }
 
+    if emulator.config.get_bool('dolphin_service_buttons'):
+        triforce_mapping['l3'] = 'Triforce/Service'
+        triforce_mapping['r3'] = 'Triforce/Test'
+
     _read_per_rom_overrides(rom, triforce_mapping)
 
     # Wheel mapping for Triforce arcade racing games.
@@ -356,6 +379,11 @@ def generate_controller_config_triforce(
         'pageup': 'Buttons/X',  # Paddle left
         'pagedown': 'Buttons/Y',  # Paddle right
     }
+
+    if emulator.config.get_bool('dolphin_service_buttons'):
+        wheel_triforce_mapping['l3'] = 'Triforce/Service'
+        wheel_triforce_mapping['r3'] = 'Triforce/Test'
+
     wheel_triforce_reverse_axes: dict[str | None, str] = {'Main Stick/Left': 'Main Stick/Right'}
     wheel_triforce_extra_options: dict[str, str] = {'Main Stick/Dead Zone': '0.'}
 

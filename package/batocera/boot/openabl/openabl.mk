@@ -3,8 +3,8 @@
 # openabl
 #
 ################################################################################
-# Version: Commits on Oct 19, 2026
-OPENABL_VERSION = v1.1
+# Version: Commits on Oct 24, 2026
+OPENABL_VERSION = v1.2
 OPENABL_SOURCE = openabl-$(OPENABL_VERSION)-source.tar.xz
 OPENABL_SITE = https://github.com/OpenHandheldCollective/OpenABL/releases/download/$(OPENABL_VERSION)
 OPENABL_LICENSE = GPL-3.0+

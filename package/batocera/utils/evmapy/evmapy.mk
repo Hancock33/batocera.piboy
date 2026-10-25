@@ -9,7 +9,7 @@ EVMAPY_SITE =  $(call github,kempniu,evmapy,$(EVMAPY_VERSION))
 EVMAPY_SETUP_TYPE = setuptools
 
 define EVMAPY_FIXCHARS
-        sed -i -e s+"Michal Kepien"+"Michal Kepien"+ $(@D)/*.py $(@D)/evmapy/*.py
+	sed -i -e s+"Michal Kepien"+"Michal Kepien"+ $(@D)/*.py $(@D)/evmapy/*.py
 endef
 EVMAPY_PRE_CONFIGURE_HOOKS += EVMAPY_FIXCHARS
 

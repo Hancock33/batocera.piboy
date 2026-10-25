@@ -3,8 +3,8 @@
 # batocera-settings
 #
 ################################################################################
-# Version: Commits on May 22, 2021
-BATOCERA_SETTINGS_VERSION = 0.0.5
+# Version: Commits on Oct 21, 2026
+BATOCERA_SETTINGS_VERSION = 0.0.6
 BATOCERA_SETTINGS_LICENSE = MIT
 BATOCERA_SETTINGS_SITE = $(call github,batocera-linux,mini_settings,$(BATOCERA_SETTINGS_VERSION))
 BATOCERA_SETTINGS_CONF_OPTS = \

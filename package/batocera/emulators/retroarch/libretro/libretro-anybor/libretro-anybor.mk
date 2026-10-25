@@ -3,8 +3,8 @@
 # libretro-anybor
 #
 ################################################################################
-# Version: Commits on Oct 19, 2026
-LIBRETRO_ANYBOR_VERSION = 40abee9034480501ef50c1aafeb2ad0cb58a6752
+# Version: Commits on Oct 21, 2026
+LIBRETRO_ANYBOR_VERSION = e5ea4690f6f122823e71910ac57de9e90ed5f825
 LIBRETRO_ANYBOR_SITE = $(call github,retrodiv,AnyBOR-libretro,$(LIBRETRO_ANYBOR_VERSION))
 # multiple, see https://github.com/retrodiv/AnyBOR-libretro/tree/main/LICENSES
 # OpenBOR 3400 retains its no-sale terms; see LICENSES.md.
@@ -25,10 +25,7 @@ endif
 
 # fopen64 from LFS defines escapes the core's file wrappers
 define LIBRETRO_ANYBOR_BUILD_CMDS
-	$(TARGET_CONFIGURE_OPTS) \
-		CFLAGS="$(filter-out -D_FILE_OFFSET_BITS=64,$(TARGET_CFLAGS))" \
-		CXXFLAGS="$(filter-out -D_FILE_OFFSET_BITS=64,$(TARGET_CXXFLAGS))" \
-		$(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
+		LDFLAGS="" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
 		-C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
 		CONFIGURE_HOST="$(GNU_TARGET_NAME)" CONFIGURE_BUILD="$(GNU_HOST_NAME)" \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_ANYBOR_VERSION) | cut -c 1-7)"

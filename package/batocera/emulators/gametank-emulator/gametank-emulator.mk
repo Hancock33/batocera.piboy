@@ -3,8 +3,8 @@
 # gametank-emulator
 #
 ################################################################################
-# Version: Commits on Sept 28, 2026
-GAMETANK_EMULATOR_VERSION = 9896544460d5bb7dd89c2d2bc0f5c97a6f31d2e0
+# Version: Commits on Oct 22, 2026
+GAMETANK_EMULATOR_VERSION = be32deab74b7778647273fa5616d1ea92e3e1267
 GAMETANK_EMULATOR_SITE = https://github.com/clydeshaffer/GameTankEmulator
 GAMETANK_EMULATOR_SITE_METHOD = git
 GAMETANK_EMULATOR_GIT_SUBMODULES = YES

@@ -67,7 +67,7 @@ define UBOOT_RK356X_BUILD_BOOTLOADER
 		ROCKCHIP_TPL=$(@D)/rkbin/bin/rk35/$(tpl)
 	mkdir -p $(@D)/staging/$(board)
 	cp -v $(@D)/u-boot-rockchip.bin $(@D)/staging/$(board)/
-    # Binman generates the SPI binary if CONFIG_ROCKCHIP_SPI_IMAGE is enabled
+	# Binman generates the SPI binary if CONFIG_ROCKCHIP_SPI_IMAGE is enabled
 	if [ -f $(@D)/u-boot-rockchip-spi.bin ]; then \
 		cp -v $(@D)/u-boot-rockchip-spi.bin $(@D)/staging/$(board)/; \
 	fi

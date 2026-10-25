@@ -2120,7 +2120,7 @@ msxturbor:
   manufacturer:         Microsoft
   release:              1990
   hardware:             computer
-  platform:             msxturbor
+  platform:             msx2turbor
 
 windows:
   name:                 Windows

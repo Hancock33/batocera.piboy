@@ -1,3 +1,23 @@
+# This file is part of The Batocera Linux Distribution (https://batocera.org).
+# Copyright (c) 2026 The Batocera Team.
+#
+# The Batocera Linux Distribution is free software: you can redistribute it
+# and/or modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Batocera Linux Distribution is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with The Batocera Linux Distribution. If not, see
+# <https://www.gnu.org/licenses/>.
+#
+# YOU MUST RETAIN THE LICENSE AND COPYRIGHT NOTICES ABOVE IN ANY
+# REDISTRIBUTED VERSION OF THIS FILE.
+
 from __future__ import annotations
 
 import logging
@@ -108,12 +128,10 @@ async def _resolve_graphics_backend(requested: str) -> tuple[str, VulkanInfo | N
         _logger.debug('Vulkan driver is not available on the system. Falling back to OpenGL.')
         return 'opengl', None
 
-    if vulkan_info.version is not None and vulkan_info.version >= '1.3':
-        _logger.debug('Vulkan driver is available. Using Vulkan version: %s', vulkan_info.version)
-        return 'vulkan', vulkan_info
-
-    _logger.debug('Vulkan version %s is lower than 1.3. Falling back to OpenGL.', vulkan_info.version)
-    return 'opengl', None
+    # Below 1.3 sm2-emu uses the extensions for the same features, and falls
+    # back to OpenGL itself when a device lacks them.
+    _logger.debug('Vulkan driver is available. Using Vulkan version: %s', vulkan_info.version)
+    return 'vulkan', vulkan_info
 
 
 def _resolve_gpu(backend: str, vulkan_info: VulkanInfo | None) -> str:
@@ -198,6 +216,10 @@ class Sm2Emu(Emulator):
         wheel = next(
             (pad for pad in self.controllers if self.config.use_wheels and pad.device_path in self.wheels), None
         )
+        # sm2-emu otherwise numbers the pads in SDL's order, not ES's
+        pad_paths = [pad.device_path for pad in self.controllers if pad.device_path not in self.wheels][:2]
+        pad_paths += [''] * (2 - len(pad_paths))
+
         es_wheel_rotation = self.config.get_str('wheel_rotation') if 'wheel_rotation' in self.config else None
 
         wheel_managed = (
@@ -233,6 +255,7 @@ class Sm2Emu(Emulator):
                 use_guns and self.config.get_bool('sm2_lightgun_crosshair', guns_need_crosses(self.guns))
             ),
             'lightgun_hide_flash': _ini_bool(self.config.get_bool('sm2_lightgun_hide_flash', False)),
+            'lightgun_pad_centred': _ini_bool(self.config.get_bool('sm2_lightgun_pad_centred', False)),
             'lightgun_recoil': _ini_bool(self.config.get_bool('sm2_lightgun_recoil', True)),
             'lightgun_recoil_strength': self.config.get_str('sm2_lightgun_recoil_strength', '60'),
             **{f'gun{gun}_button_{role}': str(code) for gun in (1, 2) for role, code in _GUN_BUTTONS.items()},
@@ -256,6 +279,8 @@ class Sm2Emu(Emulator):
             'pad_stick_sensitivity': str(round(self.config.get_float('sm2_pad_stick_sensitivity', 100))),
             'rewind': _ini_bool(self.config.get_bool('rewind', False)),
             'rewind_buffer_mb': str(round(self.config.get_float('sm2_rewind_memory', 128))),
+            'pad1_device': pad_paths[0],
+            'pad2_device': pad_paths[1],
             'pad_shortcuts': 'false',  # hotkeygen maps the hotkeys to the keys in hotkeygen_context
             'rom_dir': str(self.roms_dir),
             'nvram_dir': str(self.nvram_dir),

@@ -1,9 +1,0 @@
-file_extensions:
-  - bin
-  - md
-  - gen
-  - cue
-  - iso
-  - chd
-systems:
-  - clowndemu

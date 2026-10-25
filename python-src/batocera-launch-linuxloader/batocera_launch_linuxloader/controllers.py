@@ -1,3 +1,23 @@
+# This file is part of The Batocera Linux Distribution (https://batocera.org).
+# Copyright (c) 2026 The Batocera Team.
+#
+# The Batocera Linux Distribution is free software: you can redistribute it
+# and/or modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# The Batocera Linux Distribution is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with The Batocera Linux Distribution. If not, see
+# <https://www.gnu.org/licenses/>.
+#
+# YOU MUST RETAIN THE LICENSE AND COPYRIGHT NOTICES ABOVE IN ANY
+# REDISTRIBUTED VERSION OF THIS FILE.
+
 from __future__ import annotations
 
 import logging
@@ -516,7 +536,7 @@ class ControllersMixin(Emulator):
             mappings_actions['right'] = 'BUTTON_2'
             del mappings_actions['2']
 
-        if short_rom_name == 'ghostsev':
+        if short_rom_name in ('ghostsev', 'ghostsevj'):
             mappings_actions['right'] = 'BUTTON_3'  # Action
             mappings_actions['2'] = 'BUTTON_4'  # Cycle firerate
             del mappings_actions['3']
@@ -545,15 +565,6 @@ class ControllersMixin(Emulator):
             elif len(self.guns) > 1:
                 mappings_actions['right'] = 'BUTTON_4'
                 del mappings_actions['3']
-
-        if short_rom_name == 'letsgoju' and len(self.guns) == 1:
-            mapping = 'right'
-            action = 'BUTTON_START'
-            if mapping in mappings_codes:
-                gun = self.guns[0]
-                code = mappings_codes[mapping]
-                conf.set(f'PLAYER_2_{action}', f'{gun.node}:KEY:{code}')
-                del mappings_actions[mapping]
 
         for nplayer, gun in enumerate(self.guns[:2], start=1):
             _logger.debug('linuxloader gun for player %s', nplayer)

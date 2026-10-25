@@ -6,7 +6,7 @@
 # Version: Commits on Oct 13, 2026
 KODI_RESOURCE_LANGUAGE_PT_BR_VERSION = 11.0.109
 KODI_RESOURCE_LANGUAGE_PT_BR_SOURCE = resource.language.pt_br-$(KODI_RESOURCE_LANGUAGE_PT_BR_VERSION).zip
-KODI_RESOURCE_LANGUAGE_PT_BR_SITE = http://mirrors.kodi.tv/addons/piers/resource.language.pt_br
+KODI_RESOURCE_LANGUAGE_PT_BR_SITE = https://mirrors.kodi.tv/addons/piers/resource.language.pt_br
 KODI_RESOURCE_LANGUAGE_PT_BR_PLUGINNAME=resource.language.pt_br
 
 KODI_RESOURCE_LANGUAGE_PT_BR_CP_DIR=$(TARGET_DIR)/usr/share/kodi/addons

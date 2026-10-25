@@ -13,6 +13,10 @@
   Games need to be .bin netboot images made with Chihiro-netboot
   BIOS files come from MAME's chihiro.zip, extracted into bios/chihiro
 - Display rotate on Wayland (labwc) builds now rotates clockwise
+- Qualcomm handhelds (SDM845, SM4450, SM6115, SM8250, SM8550, SM8650, SM8750) now boot only through OpenABL
+  You must flash OpenABL v1.1 or newer before upgrading to v44, older ABLs (ROCKNIX ABL, stock) can't boot it
+  On v43 or v44, flash the latest OpenABL over SSH with:
+  `wget -qO /tmp/updateabl https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/batocera/boot/openabl/updateabl && bash /tmp/updateabl --check-online`
 ### Hardware
 - Anbernic RG Vita Pro initial support
 - Anbernic RG40xx-H-v2-panel variant support
@@ -64,6 +68,7 @@
 - ES setting to determine mitigations On|Off (Default On)
 - GameTank console support through GameTankEmulator
 - HDR toggle for supported devices & display panels
+- VRR toggle for FreeSync / VRR capable displays
 - Legion Go / Go 2 LED controller support
 - Legion Go S: Legion L button as hotkey, QAM opens the BCC, Y1 / Y2 quick load and save
 - Libretro-anybor : for openbor games (support all openbor versions)
@@ -199,6 +204,7 @@
 - CorsixTH to v0.70.1
 - DevilutionX to 1.5.5
 - Dhewm3 & Mods to 1.5.5
+- DICE to 0.4.3
 - Dolphin-Emu to 2609a
 - DOSBox Staging to v0.83.0
 - DOSBox-X to 2026.08.31
@@ -392,7 +398,7 @@
 - Mesa3D to 26.2.5
 - Nvidia 580 Legacy driver to 580.178.04
 - Nvidia Open Production driver to 615.71.09
-- OpenABL v1.1 replaces Rocknix ABL
+- OpenABL v1.2 replaces Rocknix ABL
 - QT to 6.11.1
 - Qualcomm SDM845 device kernel updated to 7.2.8
 - Qualcomm SM4450 device kernel updated to 7.2.8

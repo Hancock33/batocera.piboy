@@ -53,7 +53,7 @@ define LINUXLOADER_INSTALL_TARGET_CMDS
 	ln -sf libkswapapi.so $(TARGET_DIR)/usr/bin/linuxloader/extralibs/libGLcore.so.1
 	ln -sf libkswapapi.so $(TARGET_DIR)/usr/bin/linuxloader/extralibs/libnvidia-tls.so.1
 
-    # Batocera package overrides / configs
+	# Batocera package overrides / configs
 	cp -fv $(LINUXLOADER_PKGDIR)/*.ini $(TARGET_DIR)/usr/bin/linuxloader/
 	cp -fav $(LINUXLOADER_PKGDIR)/lib*.so* $(TARGET_DIR)/usr/bin/linuxloader/extralibs/
 endef

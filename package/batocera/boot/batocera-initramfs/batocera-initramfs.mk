@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on May 13, 2026
 BATOCERA_INITRAMFS_VERSION = 1.38.0
-BATOCERA_INITRAMFS_SITE = http://www.busybox.net/downloads
+BATOCERA_INITRAMFS_SITE = https://www.busybox.net/downloads
 BATOCERA_INITRAMFS_SOURCE = busybox-$(BATOCERA_INITRAMFS_VERSION).tar.bz2
 BATOCERA_INITRAMFS_LICENSE = GPLv2
 BATOCERA_INITRAMFS_LICENSE_FILES = LICENSE

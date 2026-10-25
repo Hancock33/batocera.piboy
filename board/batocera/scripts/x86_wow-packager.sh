@@ -38,8 +38,7 @@ rm -rf $DEST_DIR/usr/lib32/*/include
 
 find $DEST_DIR/ -type f -name "*.a" -exec rm {} \;
 
-cd $DEST_DIR && tar -cf $DEST_DIR.tar .
-xz -T0 -7 -v $DEST_DIR.tar
+cd $DEST_DIR && tar -C $DEST_DIR --owner=0 --group=0 --numeric-owner -cf - . | xz -T$(nproc) -7 -v > $DEST_DIR.tar.xz
 rm -r $DEST_DIR
 cp -av $DEST_DIR.tar.xz /mnt/smb
 mkdir -p $HOME/dl/wine-x86

@@ -6,7 +6,7 @@
 # Version: Commits on Oct 13, 2026
 KODI_RESOURCE_LANGUAGE_SV_SE_VERSION = 11.0.105
 KODI_RESOURCE_LANGUAGE_SV_SE_SOURCE = resource.language.sv_se-$(KODI_RESOURCE_LANGUAGE_SV_SE_VERSION).zip
-KODI_RESOURCE_LANGUAGE_SV_SE_SITE = http://mirrors.kodi.tv/addons/piers/resource.language.sv_se
+KODI_RESOURCE_LANGUAGE_SV_SE_SITE = https://mirrors.kodi.tv/addons/piers/resource.language.sv_se
 KODI_RESOURCE_LANGUAGE_SV_SE_PLUGINNAME=resource.language.sv_se
 
 KODI_RESOURCE_LANGUAGE_SV_SE_CP_DIR=$(TARGET_DIR)/usr/share/kodi/addons

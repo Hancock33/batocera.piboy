@@ -57,3 +57,5 @@ BOX64_BIN_ARCH_EXCLUDE = \
 	/usr/bin \
 	/usr/lib/box64-x86_64-linux-gnu \
 	/usr/lib/box64-i386-linux-gnu
+
+$(eval $(cmake-package))

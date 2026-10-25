@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 18e9e66..51797d2 100644
+index 918515a..0805deb 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -7,8 +7,8 @@ include(GNUInstallDirs)
@@ -7,13 +7,13 @@ index 18e9e66..51797d2 100644
  set(PROJECT_NAME      ${CMAKE_PROJECT_NAME})
  set(PROJECT_VERSION   ${CMAKE_PROJECT_VERSION})
 -set(PROJECT_DATA_DIR  ${CMAKE_INSTALL_FULL_DATADIR}/ledspicer/)
--set(PROJECT_CONF_DIR  ${CMAKE_INSTALL_SYSCONFDIR})
+-set(PROJECT_CONF_DIR  ${CMAKE_INSTALL_FULL_SYSCONFDIR})
 +set(PROJECT_DATA_DIR  "/userdata/system/configs/ledspicer/")
 +set(PROJECT_CONF_DIR  "/userdata/system/configs/ledspicer")
  set(PROJECT_SITE      "https://github.com/meduzapat/LEDSpicer")
  set(PROJECT_BUGREPORT "https://github.com/meduzapat/LEDSpicer/issues")
- set(MAINTAINER_EMAIL  "meduzapat@netscape.net")
-@@ -484,4 +484,4 @@ LedWiz 32    : ${ENABLE_LEDWIZ32}
+ set(MAINTAINER_NAME   "Patricio A. Rossi (MeduZa)")
+@@ -493,4 +493,4 @@ LedWiz 32    : ${ENABLE_LEDWIZ32}
  Howler       : ${ENABLE_HOWLER}
  Raspberry Pi : ${ENABLE_RASPBERRYPI}
  Adalight     : ${ENABLE_ADALIGHT}
