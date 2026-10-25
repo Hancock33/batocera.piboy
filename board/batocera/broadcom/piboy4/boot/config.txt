@@ -7,7 +7,7 @@ start_file=start4.elf
 fixup_file=fixup4.dat
 
 [rpi4]
-dtoverlay=vc4-fkms-v3d-pi4        # keep fkms: required for the DPI LCD on this build
+dtoverlay=vc4-fkms-v3d-pi4
 disable_overscan=1
 max_framebuffers=2
 extra_transpose_buffer=2          # allocates an extra transpose buffer - can help with screen tearing
@@ -16,7 +16,7 @@ extra_transpose_buffer=2          # allocates an extra transpose buffer - can he
 avoid_warnings=2                  # removes the warning overlay and allows turbo when low-voltage is present.
 boot_delay=0                      # no wait before loading the kernel
 initial_turbo=60                  # turbo clocks from boot for the first 60 seconds
-force_eeprom_read=0               # don't probe for an I2C HAT EEPROM
+force_eeprom_read=0               # dont probe for an I2C HAT EEPROM
 disable_splash=1                  # rainbow splash screen will not be shown on boot
 
 #Enable DPI gpio
@@ -34,7 +34,7 @@ dtparam=krnbt=on
 hdmi_group:1=2                    # 1=CEA (TVs), 2=DMT (monitors)
 hdmi_mode:1=82                    # DMT 82=1080p@60hz, 85=720p@60hz
                                   # CEA 97=2160p@60Hz, 16=1080p@60Hz, 4=720p@60Hz
-hdmi_drive:1=2                    # 2=Normal HDMI mode and sound
+hdmi_drive:1=2                    # 1=Normal DVI mode (no sound), 2=Normal HDMI mode and sound
 hdmi_force_hotplug:1=1            # pretend an HDMI display is attached
 #hdmi_safe=1                      # uncomment if you get no picture on HDMI
 #hdmi_enable_4kp60=1              # only enable if you actually output 4K60; it raises clocks/heat
@@ -72,7 +72,8 @@ dtparam=pwr_led_activelow=off
 dtparam=eth_led0=4
 dtparam=eth_led1=4
 
-### Overclock (handheld: conservative, thermals and battery are tight)
+### Overclock
+# Run as fast as firmware / board allows
 arm_boost=1
 over_voltage=5
 arm_freq=1950
