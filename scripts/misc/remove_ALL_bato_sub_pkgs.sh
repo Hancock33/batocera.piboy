@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
+
 GREEN="\e[1;32m"
 RED="\e[1;31m"
 ENDCOLOR="\e[0m"
@@ -59,7 +60,7 @@ x86_64"
 
 for i in $cleanup
 do
-	echo "Cleaning: "${RED}$i${ENDCOLOR}
+	echo -e "Cleaning: "${RED}$i${ENDCOLOR}
 	"${SCRIPT_DIR}/cleanup-old-packages.sh" "$HOME/build-dir/batocera.$i/build"
 done
 
