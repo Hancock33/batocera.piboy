@@ -15,8 +15,8 @@
 # openjkdf2
 #
 ################################################################################
-# Version: Commits on Oct 25, 2026
-OPENJKDF2_VERSION = 187afbb5e731ff8d1bad504fa156f02f77c91b6d
+# Version: Commits on Oct 26, 2026
+OPENJKDF2_VERSION = e4f7c0a2b10ab8ed8b89a6c90c61153604ae2e39
 OPENJKDF2_SITE = https://github.com/shinyquagsire23/OpenJKDF2.git
 OPENJKDF2_SITE_METHOD = git
 OPENJKDF2_GIT_SUBMODULES = YES
