@@ -18,6 +18,8 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|631cb3a79846f26
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|798f930402525a23b94671d85b97b00390342fa0|Oct 27, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|22a98f6339abf4b6ca6cb061443a70e4f7ab252d|Oct 27, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|f7a88159758d61b866e107da57bb0462bb187c71|Oct 27, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|5fc234819994301ccaa1a04e8f22456119a5a417|Oct 27, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|754279afb91c5fdfd2385e041a05dbd4a789222f|Oct 27, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|b076668d9664a3a8b6885055151ec440a6ee6412|Oct 27, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|5c4a4cb9f16a1cd6f19ffc00cbf515f3a58f0f9f|Oct 27, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|2ba074e8f5914a033b7865e0fae8cd07f0e9c3dc|Oct 27, 2026
@@ -41,6 +43,8 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|0d355fafcc417481b029427e1e767
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c7cceeb5cfb3f3ce06af32faf97804ca564cce93|Oct 26, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|811fb0319cea2e76f1fb8f89d22d67efdf45761a|Oct 26, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261026|Oct 26, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.167.9593-599|Oct 26, 2026
+Engines|[libdof](http://github.com/jsm174/libdof)|5c54ef784ddc31738a9b2a422380f170bd63121b|Oct 26, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261026|Oct 26, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|729d9cacf1951506874b21822ed893ee8eba72e8|Oct 26, 2026
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|2a7fd8b70f1b33553e0d6c67491d07e8290b80c1|Oct 26, 2026
@@ -56,6 +60,7 @@ Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|ac29686
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|39625746fff63c997eeb53fe3a6fc1a3de08702e|Oct 25, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-core-info)|445421549abc0638a2f5ecf05db8437e580dcc69|Oct 25, 2026
+Engines|[libaltsound](http://github.com/vpinball/libaltsound)|62914678c532ff06a245e9360fce6d5d28804eee|Oct 25, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|be1a3716d2db312c1add1639753258e365f2dfd4|Oct 25, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|7c447b0bd46b6085abdf1d685b49480f4a295c17|Oct 25, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|215c22f73d06871e12291025105c98470509468d|Oct 25, 2026
@@ -70,7 +75,6 @@ Emulators|[libretro-skyemu](http://github.com/skylersaleh/SkyEmu)|f4d3238bf42da4
 Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|631f0fb31b809e0f889d7c551fe695788e39c1d3|Oct 24, 2026
 Libraries|[kddocwidgets](http://github.com/KDAB/KDDockWidgets)|v2.5.1|Oct 23, 2026
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|d11ba549382278cbc67ba6171faf8af338e29f77|Oct 23, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|639ec097a4b4e2b96455efe80da753606acd245c|Oct 23, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|4eee99c451f85ebe66d1591de88b892015b23059|Oct 23, 2026
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|7d6b88590c4b12d677100b886ed4cbb8e1720017|Oct 23, 2026
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|3aac3f052f733f8df2f1616843a4d2e14002ed11|Oct 23, 2026
@@ -93,13 +97,11 @@ Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20261021|O
 Libraries|[iir](http://github.com/berndporr/iir1)|1.11.0|Oct 21, 2026
 Utils|[7zip](https://github.com/ip7z/7zip/releases)|26.05|Oct 21, 2026
 Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.7|Oct 21, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|652249e2b98903b94cb8c200dd7024e4776fa0db|Oct 21, 2026
 Emulators|[libretro-cap32](http://github.com/libretro/libretro-cap32)|8e61dd69d948cea16c3bad734f7b9d0c2a018cc8|Oct 21, 2026
 Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libretro)|v3.10.0|Oct 21, 2026
 Utils|[wtype](http://github.com/atx/wtype)|v0.5|Oct 20, 2026
 Emulators|[mupen64plus-audio-sdl](http://github.com/mupen64plus/mupen64plus-audio-sdl)|42a027b9b805e05abf662865d0cb765781dbd9f1|Oct 20, 2026
 Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|3be6336a1de6f32ccc4f57bf80c988163fe6bf7a|Oct 20, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.166.9575-595|Oct 20, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|6a3ed78e53d3d4bf36e5957cb51432fd45d4e70b|Oct 20, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|1fe8926136d226ef16b5cde53368e4d8100bd796|Oct 20, 2026
@@ -161,8 +163,6 @@ Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.4|Oct 10, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|755e3e1541d1f2e05ef194a3400c028baa5cdc4d|Oct 10, 2026
 Engines|[scummvm](http://github.com/scummvm/scummvm)|v2026.4.0|Oct 10, 2026
 Libraries|[wxwidgets](https://github.com/wxWidgets/wxWidgets)|v3.3.4|Oct 10, 2026
-Engines|[libaltsound](http://github.com/vpinball/libaltsound)|ce11780064a75fe23059fd3b61847ee18d477931|Oct 10, 2026
-Engines|[libdof](http://github.com/jsm174/libdof)|4908f45a5bd3b05369885b23f39465d589a32c1f|Oct 10, 2026
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|ab743653ed110eeb7b1fe64d00cc5f9279c2bfec|Oct 10, 2026
 Emulators|[libretro-scummvm](http://github.com/scummvm/scummvm)|v2026.4.0|Oct 10, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.75.2|Oct 09, 2026
