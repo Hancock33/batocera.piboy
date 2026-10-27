@@ -1699,6 +1699,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
     # GameTank
     select BR2_PACKAGE_GAMETANK_EMULATOR                    # ALL
+    select BR2_PACKAGE_LIBRETRO_GAMETANK                    # ALL
 
     # Sega Lindbergh
     select BR2_PACKAGE_LINUXLOADER                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY

@@ -33,6 +33,7 @@ libdate.mk
 libfyaml.mk
 liblc3.mk
 libldac.mk
+libretro-gametank.mk
 libretro-scummvm.mk
 libretro-virtualjaguar.mk
 libserum.mk

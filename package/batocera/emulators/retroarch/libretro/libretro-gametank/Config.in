@@ -1,0 +1,13 @@
+config BR2_PACKAGE_LIBRETRO_GAMETANK
+	bool "libretro-gametank"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  GameTank libretro core, for the GameTank 8-bit homebrew game
+	  console built around two 65C02 CPUs. Based on GameTankEmulator.
+
+	  https://github.com/SundownerSport/gametank-libretro
+	  https://gametank.zone/
+
+comment "LIBRETRO_GAMETANK needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
