@@ -1,5 +1,5 @@
 diff --git a/qb/qb.comp.sh b/qb/qb.comp.sh
-index ef6d500ef8..f4a2a89050 100644
+index ef6d500..f4a2a89 100644
 --- a/qb/qb.comp.sh
 +++ b/qb/qb.comp.sh
 @@ -142,8 +142,13 @@ fi

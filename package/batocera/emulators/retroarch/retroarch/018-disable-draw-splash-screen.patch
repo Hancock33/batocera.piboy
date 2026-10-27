@@ -1,5 +1,5 @@
 diff --git a/gfx/common/wayland_common.c b/gfx/common/wayland_common.c
-index d9a1e4a948..b43345cc0d 100644
+index d9a1e4a..b43345c 100644
 --- a/gfx/common/wayland_common.c
 +++ b/gfx/common/wayland_common.c
 @@ -1361,6 +1361,7 @@ bool gfx_ctx_wl_init_common(
