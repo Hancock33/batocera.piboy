@@ -30,6 +30,7 @@ Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libr
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|65db8569b50d02412274ddd1f1520dbe8f3edff5|Oct 28, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|992e28c8d79075aaa49cb34819b6c48dae044163|Oct 28, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|7aecf86c4d3aa2fafb91f8f4c3ba0b245fbae5e8|Oct 28, 2026
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|b5e470fa560e7678ed86de237e658ece6f8dd926|Oct 28, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|e2e31c73368c0b9be814a6e6ff09751aa8fb494e|Oct 28, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|4ffb3964c2243dfacd658e3186952f8d302bbdd6|Oct 28, 2026
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|48bb85381d94b3ad846031c6fd9eb375e8a5499b|Oct 28, 2026
@@ -600,4 +601,3 @@ Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350
 Utils|[amvdec-tee](http://github.com/LibreELEC/amvdec-tee)|1d7e8009cce1692fef04a729e859e8602b8eec9e|N/A
 Utils|[wlrctl](https://git.sr.ht/~brocellous/wlrctl/archive)|v0.2.2|N/A
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg)|d2bb0af5ba6d3198a3e99529c97eda1be0b5a093|N/A
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|b5e470fa560e7678ed86de237e658ece6f8dd926|N/A

@@ -204,7 +204,7 @@ Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|132111b763435
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|7aecf86c4d3aa2fafb91f8f4c3ba0b245fbae5e8|Oct 28, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|4849268e7342494193f2bbf2d0128a751cf58da7|Oct 17, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|8a88014287c7a01cd568067e5a557d0a2b2a051f|Aug 22, 2026
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|b5e470fa560e7678ed86de237e658ece6f8dd926|N/A
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|b5e470fa560e7678ed86de237e658ece6f8dd926|Oct 28, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|e2e31c73368c0b9be814a6e6ff09751aa8fb494e|Oct 28, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|4ffb3964c2243dfacd658e3186952f8d302bbdd6|Oct 28, 2026
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|48bb85381d94b3ad846031c6fd9eb375e8a5499b|Oct 28, 2026

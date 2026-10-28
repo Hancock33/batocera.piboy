@@ -201,7 +201,7 @@ cavestory:
   core:     nxengine
 cdi:
   emulator: libretro
-  core:     mame
+  core:     zcdi
 cdogs:
   emulator: cdogs
   core:     cdogs
