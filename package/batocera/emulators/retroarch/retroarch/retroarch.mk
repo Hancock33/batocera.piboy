@@ -17,7 +17,7 @@ $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.libretr
 
 RETROARCH_CONF_OPTS = --prefix=/usr --disable-oss --disable-qt --enable-threads \
 	--enable-ozone --enable-xmb --disable-discord --enable-flac --enable-lua \
-	--enable-networking --enable-translate --enable-rgui --disable-cdrom
+	--enable-networking --enable-translate --enable-rgui --disable-cdrom --disable-gamemode
 
 ifeq ($(BR2_ENABLE_DEBUG),y)
     RETROARCH_CONF_OPTS += --enable-debug
