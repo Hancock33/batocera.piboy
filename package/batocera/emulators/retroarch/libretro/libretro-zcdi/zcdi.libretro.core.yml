@@ -1,0 +1,8 @@
+file_extensions:
+  - chd
+  - cue
+  - bin
+  - iso
+  - m3u
+systems:
+  - cdi

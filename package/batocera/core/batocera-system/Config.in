@@ -1761,6 +1761,7 @@ config BR2_PACKAGE_BATOCERA_CORES_EXPERIMENTAL
     select BR2_PACKAGE_LIBRETRO_VAPORSPEC
     select BR2_PACKAGE_LIBRETRO_VEMULATOR                   # Dreamcast VMU
     select BR2_PACKAGE_LIBRETRO_YABAUSE                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
+    select BR2_PACKAGE_LIBRETRO_ZCDI                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX    # Philips CD-i
 
     #Extra Ports
     #32bit Applications

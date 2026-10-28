@@ -333,6 +333,7 @@ menu "batocera.linux"
         source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-yabause/Config.in"
         source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-zc210/Config.in"
         source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-zc250x/Config.in"
+        source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/emulators/retroarch/libretro/libretro-zcdi/Config.in"
       endmenu
     endmenu
     menu "Standalone Emulators"
