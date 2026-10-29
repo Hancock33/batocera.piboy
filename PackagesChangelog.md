@@ -16,6 +16,8 @@ Ports|[omf2097](http://github.com/omf2097/openomf)|4f95be1932730e24b886ff091e9ef
 Utils|[clevis](http://github.com/latchset/clevis)|6c34d97f9c2f9027c5f00aac776d58f63cdaf006|Oct 29, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261029|Oct 29, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|60d9cd7bdd88d38b6bf228c1ecc14b76f2eaa481|Oct 29, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|540bbb1e2b7fd9e9a69947ca23de2c28662e0534|Oct 29, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|aeeedc533f09c2de0d066503040ccf06bd6f2413|Oct 29, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261029|Oct 29, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|2b68f6ec931fbe286b54ae43c66340a4ffa56be7|Oct 29, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261029|Oct 29, 2026
@@ -24,6 +26,7 @@ Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|9d82650bb9591966987
 Emulators|[libretro-mame2003-plus](http://github.com/libretro/mame2003-plus-libretro)|ff5f1bd024423fac4f31927488c2f54f7b72c86f|Oct 29, 2026
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|34ee82678c64ee15c9f81ee8fecafad029800686|Oct 29, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|cf17b0ac7966ba4b172a32340333d209a2d747e7|Oct 29, 2026
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|89ee113f99e11f43118ca6a031016e1a8816fad5|Oct 29, 2026
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|cd705c90b42e2368b7bd6a9a3a5126a5de630f8d|Oct 29, 2026
 Emulators|[libretro-yabasanshiro](http://github.com/KMFDManic/Phaenon-Xtreme)|1cfb8fb3f4c17f8bb68ff415f4956f9903bcf8e0|Oct 29, 2026
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|703116c6aefb61c68f1a5ea1e725ea8bb4d6ba52|Oct 28, 2026
@@ -60,8 +63,6 @@ Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|798f93040252
 Utils|[batocera-onscreen-keyboard](http://github.com/jjsullivan5196/wvkbd)|v0.21|Oct 27, 2026
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|fb44667c08aeca839a63bef6464aeade2c2d4e27|Oct 27, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|22a98f6339abf4b6ca6cb061443a70e4f7ab252d|Oct 27, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|5fc234819994301ccaa1a04e8f22456119a5a417|Oct 27, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|754279afb91c5fdfd2385e041a05dbd4a789222f|Oct 27, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.5.0|Oct 27, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|aa1f10048ffef6e0b2a8c633efe422e0ec01f4ac|Oct 27, 2026
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|2230addc4dd74dd094fd264987fd808abba32d0e|Oct 27, 2026
@@ -600,4 +601,3 @@ Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350
 Utils|[amvdec-tee](http://github.com/LibreELEC/amvdec-tee)|1d7e8009cce1692fef04a729e859e8602b8eec9e|N/A
 Utils|[wlrctl](https://git.sr.ht/~brocellous/wlrctl/archive)|v0.2.2|N/A
 Utils-host|[python-mkbootimg](https://android.googlesource.com/platform/system/tools/mkbootimg)|d2bb0af5ba6d3198a3e99529c97eda1be0b5a093|N/A
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|89ee113f99e11f43118ca6a031016e1a8816fad5|N/A
