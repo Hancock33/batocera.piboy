@@ -3,8 +3,8 @@
 # rpi-eeprom
 #
 ################################################################################
-# Version: Commits on Oct 23, 2026
-RPI_EEPROM_VERSION = 8bd6ba42ee4cfba5920f6d94f977298ae027ce51
+# Version: Commits on Oct 29, 2026
+RPI_EEPROM_VERSION = 9247015bf5b863d8fca654dac2dedaf3470cc19b
 RPI_EEPROM_SITE = $(call github,raspberrypi,rpi-eeprom,$(RPI_EEPROM_VERSION))
 RPI_EEPROM_DEPENDENCIES = rpi-utils
 
