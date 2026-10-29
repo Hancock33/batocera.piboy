@@ -204,7 +204,7 @@ Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|132111b763435
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|cf17b0ac7966ba4b172a32340333d209a2d747e7|Oct 29, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|4849268e7342494193f2bbf2d0128a751cf58da7|Oct 17, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|8a88014287c7a01cd568067e5a557d0a2b2a051f|Aug 22, 2026
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|89ee113f99e11f43118ca6a031016e1a8816fad5|N/A
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|89ee113f99e11f43118ca6a031016e1a8816fad5|Oct 29, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|e2e31c73368c0b9be814a6e6ff09751aa8fb494e|Oct 28, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|4ffb3964c2243dfacd658e3186952f8d302bbdd6|Oct 28, 2026
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|cd705c90b42e2368b7bd6a9a3a5126a5de630f8d|Oct 29, 2026
@@ -299,7 +299,7 @@ Engines|[libdof](http://github.com/jsm174/libdof)|5c54ef784ddc31738a9b2a422380f1
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|711ab21dcf9ad33d8db8339dfd3b1548bcc34cdb|Sept 10, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libmysofa](http://github.com/hoene/libmysofa)|648eed03472e6720a1ea45d1a1f86c4efb569ff9|Sept 08, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|5fc234819994301ccaa1a04e8f22456119a5a417|Oct 27, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|540bbb1e2b7fd9e9a69947ca23de2c28662e0534|Oct 29, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a3147e6de90635d|Sept 09, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
 Engines|[libspatialaudio](http://github.com/videolan/libspatialaudio)|d149ed9744fd399b835c6f2920511f8cbcfce5ea|Jul 01, 2026
@@ -318,7 +318,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|50df54bc54e84faf443c867b70d653c8bcac4645|Oct 28, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|754279afb91c5fdfd2385e041a05dbd4a789222f|Oct 27, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|aeeedc533f09c2de0d066503040ccf06bd6f2413|Oct 29, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
