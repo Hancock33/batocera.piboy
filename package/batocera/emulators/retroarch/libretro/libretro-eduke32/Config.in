@@ -1,0 +1,14 @@
+config BR2_PACKAGE_LIBRETRO_EDUKE32
+	bool "libretro-eduke32"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  EDuke32 libretro core, a Build Engine source port for playing
+	  Duke Nukem 3D.
+
+	  The game data (for example DUKE3D.GRP) is required.
+
+	  https://github.com/cscd98/eduke32-libretro
+
+comment "LIBRETRO_EDUKE32 needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP
