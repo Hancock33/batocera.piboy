@@ -3,8 +3,8 @@
 # libretro-zcdi
 #
 ################################################################################
-# Version: Commits on Oct 27, 2026
-LIBRETRO_ZCDI_VERSION = 2f1f86bcdd45564aa485c3b1602450a560b19943
+# Version: Commits on Oct 29, 2026
+LIBRETRO_ZCDI_VERSION = 7f52b1e6ee09ce2499598a548aa37fb069f0163e
 LIBRETRO_ZCDI_SITE = $(call github,pastisme,zcdi,$(LIBRETRO_ZCDI_VERSION))
 LIBRETRO_ZCDI_LICENSE = GPL-3.0+
 LIBRETRO_ZCDI_LICENSE_FILES = LICENSE

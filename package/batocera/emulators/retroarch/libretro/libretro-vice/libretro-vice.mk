@@ -3,8 +3,8 @@
 # libretro-vice
 #
 ################################################################################
-# Version: Commits on Oct 22, 2026
-LIBRETRO_VICE_VERSION = 6cbc44add8b0a03791b343712dc63dc1edad2675
+# Version: Commits on Oct 30, 2026
+LIBRETRO_VICE_VERSION = 5ebe7d333ab15be57a9dde5f46c29a5bbd5f44f8
 LIBRETRO_VICE_SITE = $(call github,sonninnos,libretro-vice,$(LIBRETRO_VICE_VERSION))
 LIBRETRO_VICE_LICENSE = GPLv2
 LIBRETRO_VICE_DEPENDENCIES += retroarch
