@@ -6,7 +6,7 @@
 # Version: Commits on Sept 29, 2026
 OPENJK_VERSION = 260c59c2907187af555a676fe0cc798893bf7757
 OPENJK_SITE = $(call github,JACoders,OpenJK,$(OPENJK_VERSION))
-OPENJK_DEPENDENCIES += host-libjpeg libpng openal sdl2 zlib
+OPENJK_DEPENDENCIES += jpeg libpng openal sdl2 zlib
 OPENJK_LICENSE = GPL-2.0
 OPENJK_SUPPORTS_IN_SOURCE_BUILD = NO
 OPENJK_EMULATOR_INFO = openjk.emulator.yml
