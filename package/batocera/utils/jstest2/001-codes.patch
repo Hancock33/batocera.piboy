@@ -1,8 +1,8 @@
 diff --git a/src/sdl2-jstest.c b/src/sdl2-jstest.c
-index bc3719c..48747b8 100644
+index 2050c30..2f4306a 100644
 --- a/src/sdl2-jstest.c
 +++ b/src/sdl2-jstest.c
-@@ -560,23 +560,23 @@ static void event_joystick(int joy_idx)
+@@ -627,23 +627,23 @@ static void event_joystick(int joy_idx)
              switch (event.type)
              {
              case SDL_JOYAXISMOTION:
