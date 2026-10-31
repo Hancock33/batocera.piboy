@@ -40,8 +40,8 @@ custom_features:
   flycast_renderer:
     prompt: GRAPHICS API
     choices:
-      OpenGL (Default): 0
-      Vulkan: 4
+      OpenGL: 0
+      Vulkan (Default): 4
   flycast_rotate:
     prompt: SCREEN ROTATION
     description: Rotate the screen with the emulator.

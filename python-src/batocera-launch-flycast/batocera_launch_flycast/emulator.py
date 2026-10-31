@@ -168,10 +168,10 @@ class Flycast(Emulator):
                 # per triangle
                 config.set('config', 'pvr.rend', '4')
         else:
-            config.set('config', 'pvr.rend', '0')
+            config.set('config', 'pvr.rend', '4')
             if sorting == '3':
                 # per pixel
-                config.set('config', 'pvr.rend', '3')
+                config.set('config', 'pvr.rend', '5')
 
         # anisotropic filtering
         config.set('config', 'rend.AnisotropicFiltering', self.config.get_str('flycast_anisotropic', '1'))
