@@ -9,6 +9,12 @@ do_mount() {
     return 1
 }
 
+# squashfs: decompress with one thread per cpu when the kernel supports the
+# threads= mount option, otherwise fall back to the kernel default
+mount_squashfs() {
+    mount -t squashfs -o threads=percpu "${1}" "${2}" 2>/dev/null || mount "${1}" "${2}"
+}
+
 do_root() {
     mkdir -p /boot_root /new_root /overlay_root /sys /proc || return 1
     mount -t proc  -o nodev,noexec,nosuid proc  /proc  	|| return 1
@@ -117,12 +123,12 @@ do_root() {
     fi
 
     # mount the squashfs
-    mount /boot_root/boot/batocera /overlay_root/base || return 1
+    mount_squashfs /boot_root/boot/batocera /overlay_root/base || return 1
 
     EXTRALAYERS=
     if test -e /boot_root/boot/rufomaculata
     then
-	mount /boot_root/boot/rufomaculata /overlay_root/base2 || return 1
+	mount_squashfs /boot_root/boot/rufomaculata /overlay_root/base2 || return 1
 	EXTRALAYERS=":/overlay_root/base2"
     fi
 
@@ -130,7 +136,7 @@ do_root() {
     if ! mount -t overlay overlay -o rw,lowerdir=/overlay_root/base$EXTRALAYERS,upperdir=/overlay_root/overlay,workdir=/overlay_root/work /new_root
     then
 	# mount only as squashfs, no overlay (xu4 doesn't support overlayfs)
-	mount /boot_root/boot/batocera /new_root || return 1
+	mount_squashfs /boot_root/boot/batocera /new_root || return 1
     fi
 
     # moving current mounts

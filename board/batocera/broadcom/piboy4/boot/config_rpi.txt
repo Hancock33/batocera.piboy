@@ -7,7 +7,7 @@ disable_overscan=1
 boot_delay=0                      # no wait before loading the kernel
 disable_splash=1                  # rainbow splash screen will not be shown on boot
 kernel=boot/linux
-initramfs boot/initrd.gz
+initramfs boot/initrd.lz4
 
 # HDMI Settings
 hdmi_group:1=2                    # 1=CEA (TVs), 2=DMT (monitors)
