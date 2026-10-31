@@ -10,7 +10,7 @@ VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
 VPINBALL_DEPENDENCIES = bgfx ffmpeg libaltsound libdmdutil libdof libfreeimage libpinmame libserialport
 VPINBALL_DEPENDENCIES += libserum libmysofa libspatialaudio libwinevbs libzedmd openxr-sdk sdl3 sdl3_image sdl3_ttf
-VPINBALL_DEPENDENCIES += host-libcurl host-cmake
+VPINBALL_DEPENDENCIES += host-bgfx host-cmake host-libcurl
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 VPINBALL_EMULATOR_INFO = vpinball.emulator.yml
 
