@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Oct 31, 2026
-LIBRETRO_P2000T_VERSION = fb0182d5832a781305a9d512d47b33d552485d03
+LIBRETRO_P2000T_VERSION = dd0e04b12526e79ffd4dec27ba8969f36a627e9d
 LIBRETRO_P2000T_SITE = $(call github,p2000t,M2000,$(LIBRETRO_P2000T_VERSION))
 LIBRETRO_P2000T_LICENSE = GPL-3.0
 LIBRETRO_P2000T_EMULATOR_INFO = p2000t.libretro.core.yml
