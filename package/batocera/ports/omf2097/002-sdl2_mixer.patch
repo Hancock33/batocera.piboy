@@ -1,0 +1,13 @@
+diff --git a/cmake-scripts/Dependencies.cmake b/cmake-scripts/Dependencies.cmake
+index 91af4311..a477aaa9 100644
+--- a/cmake-scripts/Dependencies.cmake
++++ b/cmake-scripts/Dependencies.cmake
+@@ -22,7 +22,7 @@ endif()
+ if(OMF_USE_SDL_AUDIO_DRIVER)
+     add_library(openomf::SDL2_mixer INTERFACE IMPORTED)
+     find_package(SDL2_mixer CONFIG REQUIRED)
+-    target_link_libraries(openomf::SDL2_mixer INTERFACE "$<IF:$<TARGET_EXISTS:SDL2_mixer::SDL2_mixer>,SDL2_mixer::SDL2_mixer,SDL2_mixer::SDL2_mixer-static>")
++    target_link_libraries(openomf::SDL2_mixer INTERFACE -lSDL2_mixer)
+ endif()
+ 
+ # xmp
