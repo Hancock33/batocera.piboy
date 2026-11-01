@@ -3,16 +3,16 @@ config BR2_PACKAGE_LOGI_WHEEL
 	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
 	depends on BR2_ARCH_IS_64
 	help
-	    Terminal settings app for the wheels driven by the
-	    logitech-trueforce module (RS50, G PRO, G923): rotation range,
-	    force feedback gains, pedal curves, LIGHTSYNC and the onboard
-	    profile slots, through the driver's wheel_* sysfs knobs.
+	  Terminal settings app for the wheels driven by the
+	  logitech-trueforce module (RS50, G PRO, G923): rotation range,
+	  force feedback gains, pedal curves, LIGHTSYNC and the onboard
+	  profile slots, through the driver's wheel_* sysfs knobs.
 
-	    Also installs the two wine helpers the app drives: logi-ffb,
-	    a force feedback proxy for the DirectInput games that need
-	    PROTON_ENABLE_HIDRAW=1, and logi-tf-sim, which synthesizes
-	    TrueForce and the rev lights from the UDP telemetry of a few
-	    PC titles.
+	  Also installs the two wine helpers the app drives: logi-ffb, a
+	  force feedback proxy for the DirectInput games that need
+	  PROTON_ENABLE_HIDRAW=1, and logi-tf-sim, which synthesizes
+	  TrueForce and the rev lights from the UDP telemetry of a few
+	  PC titles.
 
 	    https://github.com/mescon/logitech-trueforce-linux-driver
 
@@ -25,12 +25,12 @@ config BR2_PACKAGE_LOGI_WHEEL_GUI
 	select BR2_PACKAGE_LIBXKBCOMMON
 	select BR2_PACKAGE_XLIB_LIBX11
 	help
-	    Same settings as the terminal app, as a Slint desktop
-	    application. It draws with OpenGL ES through a winit window, so
-	    it needs the X11 session batocera starts for its desktop mode,
-	    where it shows up as logi-wheel-config.
+	  Same settings as the terminal app, as a Slint desktop
+	  application. It draws with OpenGL ES through a winit window,
+	  so it needs the X11 session batocera starts for its desktop
+	  mode, where it shows up as logi-wheel-config.
 
-	    Only enable this on a target that has xorg and an EGL / OpenGL
-	    ES stack, it will not build without them.
+	  Only enable this on a target that has xorg and an EGL / OpenGL
+	  ES stack, it will not build without them.
 
 endif

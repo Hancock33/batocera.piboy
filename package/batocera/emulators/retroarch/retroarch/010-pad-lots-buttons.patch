@@ -1,8 +1,8 @@
 diff --git a/input/drivers_joypad/udev_joypad.c b/input/drivers_joypad/udev_joypad.c
-index 6128ef37df..8beb1480c6 100644
+index fa28f23..6c877a4 100644
 --- a/input/drivers_joypad/udev_joypad.c
 +++ b/input/drivers_joypad/udev_joypad.c
-@@ -61,7 +61,7 @@
+@@ -65,7 +65,7 @@
   * Code adapted from SDL 2.0's implementation.
   */
  

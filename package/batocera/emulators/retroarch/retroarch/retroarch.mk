@@ -3,8 +3,8 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Oct 25, 2026
-RETROARCH_VERSION = 81f865092fbc3f6273497814eb7b033ad0f8db76
+# Version: Commits on Nov 01, 2026
+RETROARCH_VERSION = 3bf1482c16aaae84c7bca763e5cb087aae7bc3a1
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
 RETROARCH_LICENSE = GPLv3+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts \
@@ -17,7 +17,7 @@ $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.libretr
 
 RETROARCH_CONF_OPTS = --prefix=/usr --disable-oss --disable-qt --enable-threads \
 	--enable-ozone --enable-xmb --disable-discord --enable-flac --enable-lua \
-	--enable-networking --enable-translate --enable-rgui --disable-cdrom
+	--enable-networking --enable-translate --enable-rgui --disable-cdrom --disable-gamemode
 
 ifeq ($(BR2_ENABLE_DEBUG),y)
     RETROARCH_CONF_OPTS += --enable-debug

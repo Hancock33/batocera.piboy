@@ -1,0 +1,8 @@
+file_extensions:
+  - grp
+  - con
+  - zip
+  - pk3
+  - pk4
+systems:
+  - eduke32

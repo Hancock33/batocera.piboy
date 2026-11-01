@@ -1,0 +1,16 @@
+diff --git a/make/CMakeLists_shaders.txt b/make/CMakeLists_shaders.txt
+index b21905ab6..c01f429af 100644
+--- a/make/CMakeLists_shaders.txt
++++ b/make/CMakeLists_shaders.txt
+@@ -29,10 +29,7 @@ endif()
+ 
+ find_program(VPX_SHADERC
+    NAMES shaderc shaderc.exe
+-   PATHS
+-      "${CMAKE_SOURCE_DIR}/third-party/tools/${PLATFORM}-${ARCH}"
+-      "${CMAKE_SOURCE_DIR}/third-party/tools/${_vpx_host_tools}"
+-   NO_DEFAULT_PATH)
++)
+ if(NOT VPX_SHADERC)
+    message(FATAL_ERROR
+       "shaderc not found under third-party/tools/. "

@@ -3,8 +3,8 @@
 # hlsdk-xash3d
 #
 ################################################################################
-# Version: Commits on Oct 20, 2026
-HLSDK_XASH3D_VERSION = 1fe8926136d226ef16b5cde53368e4d8100bd796
+# Version: Commits on Oct 31, 2026
+HLSDK_XASH3D_VERSION = 9a324fe71d8190b750ad509cf3f7a1e98c52d000
 HLSDK_XASH3D_BRANCH = mobile_hacks
 HLSDK_XASH3D_SITE = https://github.com/FWGS/hlsdk-portable.git
 HLSDK_XASH3D_SITE_METHOD=git

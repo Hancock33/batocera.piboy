@@ -58,12 +58,11 @@ def batocera_model():
     # Anbernic RG Vita Pro check
     if glob.glob('/sys/class/leds/*::joystick-left'):
         return "rg_vita_pro"
-    # Anbernic RG CubeXX check
-    if os.path.exists('/proc/device-tree/compatible'):
-        with open('/proc/device-tree/compatible', 'r') as f:
-            comp = f.read()
-            if 'rgcubexx' in comp:
-                return "cubexx"
+    # Anbernic H700 RGB MCU: GPIO enable LED plus the MCU on uart5
+    if os.path.exists('/sys/class/leds/rgb:kbd_backlight/brightness') \
+            and not os.path.exists('/sys/class/leds/rgb:kbd_backlight/multi_intensity') \
+            and h700_led_serial():
+        return "cubexx"
     # Odin 1 Monochrome GPIO layout
     if os.path.exists('/sys/class/leds/left_joystick/brightness'):
         return "odin_mono"
@@ -164,6 +163,14 @@ def batoconf_color():
     if DEBUG:
         print (f"batocera.conf said led.colour = {r} {g} {b}")
     return [ r, g, b ]
+
+def batoconf_brightness():
+    # EmulationStation saves led.brightness as a percentage
+    try:
+        pct = float(batoconf("led.brightness"))
+    except (TypeError, ValueError):
+        return 255
+    return int((pct / 100.0) * 255) if pct <= 100 else int(pct)
 
 
 ####################
@@ -382,10 +389,16 @@ class rgvitaproled(object):
         return (str(b_conf), "100")
 
 ####################
-# Anbernic RG CubeXX LED Controller
+def h700_led_serial():
+    for tty in glob.glob('/sys/class/tty/ttyS*'):
+        if '/5001400.serial' in os.path.realpath(f'{tty}/device'):
+            return f'/dev/{os.path.basename(tty)}'
+    return None
+
+# Anbernic H700 (RG CubeXX, RG40XX H/V) LED Controller
 class cubexxled(object):
     def __init__(self):
-        self.serial_dev = '/dev/ttyS2'
+        self.serial_dev = h700_led_serial()
         self.gpio_path = '/sys/class/leds/rgb:kbd_backlight/brightness'
         self.max_val = 255
         self.current_color = "000000"
@@ -710,9 +723,7 @@ class dual_multiled(object):
             return
 
         # Fetch system brightness configuration
-        b_conf = batoconf("led.brightness")
-        if b_conf is None:
-            b_conf = 255
+        b_conf = batoconf_brightness()
 
         if rgb == "ESCOLOR":
             r, g, b = batoconf_color()
@@ -733,7 +744,7 @@ class dual_multiled(object):
     def set_color_dec(self, rgb_str):
         try:
             r, g, b = [int(x) for x in rgb_str.split()]
-            b_conf = batoconf("led.brightness") or 255
+            b_conf = batoconf_brightness()
             self._write_hardware(b_conf, r, g, b)
         except Exception:
             pass
@@ -759,15 +770,7 @@ class dual_multiled(object):
             return "0 0 0"
 
     def rainbow_effect(self):
-        b_conf = batoconf("led.brightness")
-        if b_conf is None:
-            b_conf = 255
-        else:
-            try:
-                pct = float(b_conf)
-                b_conf = int((pct / 100.0) * 255) if pct <= 100 else int(pct)
-            except ValueError:
-                b_conf = 255
+        b_conf = batoconf_brightness()
 
         # Create a chasing color wheel using quadrant phase-shifting (Rainbow)
         for i in range(0, EFFECT_STEP):
@@ -806,15 +809,7 @@ class dual_multiled(object):
             self.set_color("ESCOLOR")
 
     def chroma_effect(self):
-        b_conf = batoconf("led.brightness")
-        if b_conf is None:
-            b_conf = 255
-        else:
-            try:
-                pct = float(b_conf)
-                b_conf = int((pct / 100.0) * 255) if pct <= 100 else int(pct)
-            except ValueError:
-                b_conf = 255
+        b_conf = batoconf_brightness()
 
         # Cycle all segments in unison through the spectrum (Chroma / Color Cycle) [3]
         for i in range(0, EFFECT_STEP):
@@ -896,9 +891,7 @@ class multiled(object):
             return
 
         # Get brightness from config
-        b_conf = batoconf("led.brightness")
-        if b_conf is None:
-            b_conf = 255
+        b_conf = batoconf_brightness()
 
         if rgb == "ESCOLOR":
             r, g, b = batoconf_color()
@@ -919,7 +912,7 @@ class multiled(object):
     def set_color_dec(self, rgb_str):
         try:
             r, g, b = [int(x) for x in rgb_str.split()]
-            b_conf = batoconf("led.brightness") or 255
+            b_conf = batoconf_brightness()
             self._write_hardware(b_conf, r, g, b)
         except:
             pass
@@ -941,15 +934,7 @@ class multiled(object):
             return "0 0 0"
 
     def rainbow_effect(self):
-        b_conf = batoconf("led.brightness")
-        if b_conf is None:
-            b_conf = 255
-        else:
-            try:
-                pct = float(b_conf)
-                b_conf = int((pct / 100.0) * 255) if pct <= 100 else int(pct)
-            except ValueError:
-                b_conf = 255
+        b_conf = batoconf_brightness()
 
         # Sweeping colour wheel across all segments per ring (Rainbow)
         for i in range(0, EFFECT_STEP):
@@ -988,15 +973,7 @@ class multiled(object):
             self.set_color("ESCOLOR")
 
     def chroma_effect(self):
-        b_conf = batoconf("led.brightness")
-        if b_conf is None:
-            b_conf = 255
-        else:
-            try:
-                pct = float(b_conf)
-                b_conf = int((pct / 100.0) * 255) if pct <= 100 else int(pct)
-            except ValueError:
-                b_conf = 255
+        b_conf = batoconf_brightness()
 
         # Cycle all 18 segments in unison through the spectrum (Chroma)
         for i in range(0, EFFECT_STEP):

@@ -1,0 +1,5 @@
+file_extensions:
+  - wad
+  - iwad
+systems:
+  - prboom

@@ -151,6 +151,9 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	# Exclude defined directories
 	rm -rf $(ALLLINUXFIRMWARES_REMOVE_DIRS)
 
+	# iwlwifi loads only the newest API it supports, keep one spare
+	$(ALLLINUXFIRMWARES_PKGDIR)/prune-iwlwifi.sh $(@D) $(LINUX_DIR)
+	
 	# RK3588 specific: Keep only Bluetooth 'ibt-*' and iwlwifi from the Intel folder
 	if [ "$(BR2_PACKAGE_BATOCERA_TARGET_RK3588)" = "y" ] || [ "$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO)" = "y" ] || [ "$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE)" = "y" ]; then \
 		find $(@D)/intel -type f ! -name 'ibt-*' ! -path '*/iwlwifi/*' -delete; \

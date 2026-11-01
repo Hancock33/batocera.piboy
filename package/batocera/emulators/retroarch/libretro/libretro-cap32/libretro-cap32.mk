@@ -3,8 +3,8 @@
 # libretro-cap32
 #
 ################################################################################
-# Version: Commits on Oct 21, 2026
-LIBRETRO_CAP32_VERSION = 8e61dd69d948cea16c3bad734f7b9d0c2a018cc8
+# Version: Commits on Oct 30, 2026
+LIBRETRO_CAP32_VERSION = 06ad0da5d003ab8f2359300ebce4cf31d4c55b6e
 LIBRETRO_CAP32_SITE = $(call github,libretro,libretro-cap32,$(LIBRETRO_CAP32_VERSION))
 LIBRETRO_CAP32_LICENSE = GPLv2
 LIBRETRO_CAP32_DEPENDENCIES += retroarch

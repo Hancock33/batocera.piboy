@@ -1,0 +1,15 @@
+config BR2_PACKAGE_LIBRETRO_UZDOOM
+	bool "libretro-uzdoom"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_BZIP2
+	select BR2_PACKAGE_HOST_PYTHON3
+	select BR2_PACKAGE_LIBVPX
+	select BR2_PACKAGE_OPENAL
+
+	help
+	  UZDoom libretro core, a 3D-accelerated Doom source port,
+	  continuation of ZDoom and GZDoom.
+
+	  A Doom IWAD (doom.wad, doom2.wad, freedoom...) is required.
+
+	  https://github.com/cscd98/UZDoom-libretro

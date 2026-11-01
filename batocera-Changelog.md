@@ -50,6 +50,7 @@
 - Battery, charger and power button support for Intel Atom laptops and tablets with the X-Powers AXP288 PMIC
 - BCC: audio devices can now be switched from the BCC menu (while playing games for example)
 - BCC: choose which screen to use on multi-screen devices
+- BCC: show/hide mouse pointer on supported emulators
 - BIOS check now verifies files against a list of known MD5 sums
 - Boot splash video on the bottom screen of dual-screen devices
 - Box64 userland x86_64 emulator for aarch64
@@ -68,6 +69,7 @@
 - ES setting to determine mitigations On|Off (Default On)
 - GameTank console support through GameTankEmulator
 - HDR toggle for supported devices & display panels
+- Moonlight HDR streaming option
 - VRR toggle for FreeSync / VRR capable displays
 - Legion Go / Go 2 LED controller support
 - Legion Go S: Legion L button as hotkey, QAM opens the BCC, Y1 / Y2 quick load and save
@@ -126,6 +128,7 @@
 - Lindbergh games (e.g. Harley Davidson) reconfiguring the host network, leaving the system without DNS or its LAN address
 - LINQ / ShanWan dual-mode pads in Xbox 360 mode not detected since v43
 - MAME black screen on exit with a rotated display when CRT switchres is off
+- MelonDS OpenGL falling back to software on Wayland (labwc) builds
 - Missing BIOS list entries for Apple IIGS, Gaelco, Namco System 22, Oric Atmos and SAM Coupe
 - Mupen64 not starting fullscreen with Wayland
 - Nintendo DS .dsi and .ids ROM files not listed in EmulationStation (melonDS and DeSmuME accept them)

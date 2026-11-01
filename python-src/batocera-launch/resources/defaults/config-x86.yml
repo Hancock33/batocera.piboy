@@ -15,4 +15,4 @@ n64dd:
     videomode: max-1920x1080
 cdi:
   emulator: libretro
-  core:     mame
+  core:     zcdi

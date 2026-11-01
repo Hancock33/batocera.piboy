@@ -1,0 +1,15 @@
+config BR2_PACKAGE_LIBRETRO_ZCDI
+	bool "libretro-zcdi"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  zcdi, a Philips CD-i (Mono-I) emulator libretro core, with
+	  support for the Digital Video Cartridge.
+
+	  The cdi200.rom (NTSC) or cdi220b.rom (PAL) BIOS is required in
+	  the system directory.
+
+	  https://github.com/pastisme/zcdi
+
+comment "LIBRETRO_ZCDI needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

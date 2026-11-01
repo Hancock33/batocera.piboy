@@ -9,8 +9,7 @@
 
 ##### constants ################
 BATOCERA_BINARIES_DIR="${BINARIES_DIR}/batocera"
-GENIMAGE_TMP="/tmp/genimage.tmp"
-GENFINALIMAGE_TMP="/tmp/image"
+GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
 ################################
 
 ##### find images to build #####
@@ -75,9 +74,9 @@ do
 
     # create *.img
     if [ "${BATOCERA_LOWER_TARGET}" = "${BATOCERA_SUBTARGET}" ]; then
-        BATOCERAIMG="${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/batocera-${BATOCERA_SUBTARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.img.xz"
+        BATOCERAIMG="${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/batocera-${BATOCERA_SUBTARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.img"
     else
-        BATOCERAIMG="${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/batocera-${BATOCERA_LOWER_TARGET}-${BATOCERA_SUBTARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.img.xz"
+        BATOCERAIMG="${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}/batocera-${BATOCERA_LOWER_TARGET}-${BATOCERA_SUBTARGET}-${SUFFIXVERSION}-${SUFFIXDATE}.img"
     fi
     echo "creating images/${BATOCERA_SUBTARGET}/"$(basename "${BATOCERAIMG}")"..." >&2
     rm -rf "${GENIMAGE_TMP}" || exit 1
@@ -89,24 +88,22 @@ do
     # install syslinux
     if grep -qE "^BR2_TARGET_SYSLINUX=y$" "${BR2_CONFIG}"
     then
-	GENIMAGEBOOTFILE="${GENIMAGEDIR}/genimage-boot.cfg"
-	echo "installing syslinux" >&2
-	cat "${GENIMAGEBOOTFILE}" | sed -e s+'@files'+"${FILES}"+ | tr '@' '\n' > "${BATOCERA_BINARIES_DIR}/genimage-boot.cfg" || exit 1
+    GENIMAGEBOOTFILE="${GENIMAGEDIR}/genimage-boot.cfg"
+    echo "installing syslinux" >&2
+    cat "${GENIMAGEBOOTFILE}" | sed -e s+'@files'+"${FILES}"+ | tr '@' '\n' > "${BATOCERA_BINARIES_DIR}/genimage-boot.cfg" || exit 1
     "${HOST_DIR}/bin/genimage" --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${BATOCERA_BINARIES_DIR}" --config="${BATOCERA_BINARIES_DIR}/genimage-boot.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
     "${HOST_DIR}/bin/syslinux" -i "${BATOCERA_BINARIES_DIR}/boot.vfat" -d "/boot/syslinux" || exit 1
     # remove genimage temp path as sometimes genimage v14 fails to start
     rm -rf ${GENIMAGE_TMP} || exit 1
-    rm -rf ${GENFINALIMAGE_TMP} || exit 1
     mkdir -p ${GENIMAGE_TMP} || exit 1
-    mkdir -p ${GENFINALIMAGE_TMP} || exit 1
     fi
     ###
-    "${HOST_DIR}/bin/genimage" --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${GENFINALIMAGE_TMP}" --config="${BATOCERA_BINARIES_DIR}/genimage.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
+    "${HOST_DIR}/bin/genimage" --rootpath="${TARGET_DIR}" --inputpath="${BATOCERA_BINARIES_DIR}/boot" --outputpath="${BATOCERA_BINARIES_DIR}" --config="${BATOCERA_BINARIES_DIR}/genimage.cfg" --tmppath="${GENIMAGE_TMP}" || exit 1
 
     rm -f "${BATOCERA_BINARIES_DIR}/boot.vfat" || exit 1
     rm -f "${BATOCERA_BINARIES_DIR}/userdata.ext4" || exit 1
-    xz -T$(nproc) -7 -v "${GENFINALIMAGE_TMP}/batocera.img" || exit 1
-    mv "${GENFINALIMAGE_TMP}/batocera.img.xz" "${BATOCERAIMG}" || exit 1
+    mv "${BATOCERA_BINARIES_DIR}/batocera.img" "${BATOCERAIMG}" || exit 1
+    xz -T$(nproc) -7 -v "${BATOCERAIMG}" || exit 1
 
     # rename the boot to boot_arch
     mv "${BATOCERA_BINARIES_DIR}/boot" "${BOOTNAMEDDIR}" || exit 1
@@ -115,7 +112,6 @@ do
     cp "${TARGET_DIR}/usr/share/batocera/batocera.version" "${BATOCERA_BINARIES_DIR}/images/${BATOCERA_SUBTARGET}" || exit 1
 
     rm -rf ${GENIMAGE_TMP} || exit 1
-    rm -rf ${GENFINALIMAGE_TMP} || exit 1
 done
 
 #### md5 and sha256 #######################

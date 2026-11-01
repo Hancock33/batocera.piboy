@@ -17,6 +17,5 @@ config BR2_PACKAGE_LIBRETRO_AZAHAR
 
 	  https://github.com/azahar-emu/azahar
 
-
 comment "LIBRETRO_AZAHAR needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

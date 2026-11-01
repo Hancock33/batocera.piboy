@@ -3,14 +3,14 @@
 # vpinball
 #
 ################################################################################
-# Version: Commits on Oct 23, 2026
-VPINBALL_VERSION = 639ec097a4b4e2b96455efe80da753606acd245c
+# Version: Commits on Nov 01, 2026
+VPINBALL_VERSION = 64a480a96d1b972711fbb8eea014654c779b1e23
 VPINBALL_SITE = $(call github,vpinball,vpinball,$(VPINBALL_VERSION))
 VPINBALL_LICENSE = GPLv3+
 VPINBALL_LICENSE_FILES = LICENSE
 VPINBALL_DEPENDENCIES = bgfx ffmpeg libaltsound libdmdutil libdof libfreeimage libpinmame libserialport
 VPINBALL_DEPENDENCIES += libserum libmysofa libspatialaudio libwinevbs libzedmd openxr-sdk sdl3 sdl3_image sdl3_ttf
-VPINBALL_DEPENDENCIES += host-libcurl host-cmake
+VPINBALL_DEPENDENCIES += host-bgfx host-cmake host-libcurl
 VPINBALL_SUPPORTS_IN_SOURCE_BUILD = NO
 VPINBALL_EMULATOR_INFO = vpinball.emulator.yml
 
