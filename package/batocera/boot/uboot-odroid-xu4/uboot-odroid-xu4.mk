@@ -3,8 +3,8 @@
 # uboot-odroid-xu4
 #
 ################################################################################
-# Version: Commits on May 19, 2020
-UBOOT_ODROID_XU4_VERSION = 42ac93dcfbbb8a08c2bdc02e19f96eb35a81891a
+# Version: Commits on Apr 30, 2026
+UBOOT_ODROID_XU4_VERSION = 7d5876d36f4120034f1902b12d6799b147bec884
 UBOOT_ODROID_XU4_SITE = https://github.com/hardkernel/u-boot.git
 UBOOT_ODROID_XU4_SITE_METHOD=git
 
