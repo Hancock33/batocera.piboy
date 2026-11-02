@@ -1,0 +1,101 @@
+libretro: look for the Kickstarts in the system directory's amiga/ folder
+
+Batocera keeps them in bios/amiga/. Search it before the system directory
+itself, for the model's Kickstart and for the CD32 and CDTV extended ROMs,
+add it to the ROM paths, and accept the file names batocera-systems checks
+(kick34005.A500, kick40060.CD32.ext...) as well as the usual ones.
+
+diff --git a/libretro/libretro.cpp b/libretro/libretro.cpp
+index eed12c1..2a0d84d 100644
+--- a/libretro/libretro.cpp
++++ b/libretro/libretro.cpp
+@@ -1802,14 +1802,14 @@ static bool find_kickstart_in_system_dir(const char* model, char* out, size_t ou
+ 		"kick20.rom",
+ 		"kick31.rom"
+ 	};
+-	const char* candidates_a500og[] = { "kick12.rom", "kick13.rom", "kick.rom" };
+-	const char* candidates_a500[] = { "kick13.rom", "kick.rom", "kick12.rom" };
+-	const char* candidates_a500p[] = { "kick20.rom", "kick204.rom", "kick.rom" };
+-	const char* candidates_a600[] = { "kick205.rom", "kick20.rom", "kick31.rom", "kick.rom" };
++	const char* candidates_a500og[] = { "kick12.rom", "kick33180.A500", "kick13.rom", "kick34005.A500", "kick.rom" };
++	const char* candidates_a500[] = { "kick13.rom", "kick34005.A500", "kick.rom", "kick12.rom", "kick33180.A500" };
++	const char* candidates_a500p[] = { "kick20.rom", "kick204.rom", "kick37175.A500", "kick.rom" };
++	const char* candidates_a600[] = { "kick205.rom", "kick37350.A600", "kick20.rom", "kick31.rom", "kick.rom" };
+ 	const char* candidates_a1200[] = { "kick31.rom", "kick40068.A1200", "kick.rom" };
+ 	const char* candidates_a4000[] = { "kick31.rom", "kick40068.A4000", "kick.rom" };
+ 	const char* candidates_cd32[] = { "cd32.rom", "amiga-os-310-cd32.rom", "kick40060.CD32", "kick31.rom", "kick.rom" };
+-	const char* candidates_cdtv[] = { "cdtv.rom", "kick34005.CDTV", "kick13.rom", "kick.rom" };
++	const char* candidates_cdtv[] = { "cdtv.rom", "kick34005.CDTV", "kick13.rom", "kick34005.A500", "kick.rom" };
+ 
+ 	const char** candidates = candidates_generic;
+ 	size_t count = sizeof(candidates_generic) / sizeof(candidates_generic[0]);
+@@ -1842,12 +1842,16 @@ static bool find_kickstart_in_system_dir(const char* model, char* out, size_t ou
+ 		}
+ 	}
+ 
+-	for (size_t i = 0; i < count; i++) {
+-		const std::string candidate = path_join(system_dir, candidates[i]);
+-		if (file_readable(candidate.c_str())) {
+-			strncpy(out, candidate.c_str(), out_size - 1);
+-			out[out_size - 1] = '\0';
+-			return true;
++	// bios/amiga/ first (where Batocera keeps them), then the system directory itself
++	const std::string search_dirs[] = { path_join(system_dir, "amiga"), system_dir };
++	for (const std::string& search_dir : search_dirs) {
++		for (size_t i = 0; i < count; i++) {
++			const std::string candidate = path_join(search_dir, candidates[i]);
++			if (file_readable(candidate.c_str())) {
++				strncpy(out, candidate.c_str(), out_size - 1);
++				out[out_size - 1] = '\0';
++				return true;
++			}
+ 		}
+ 	}
+ 
+@@ -1866,9 +1870,9 @@ static bool find_ext_rom_in_system_dir(const char* model, char* out, size_t out_
+ 	const std::string base = model_base_name(model);
+ 
+ 	// CD32 extended ROM candidates
+-	const char* candidates_cd32[] = { "cd32ext.rom", "amiga-ext-310-cd32.rom", "CD32 Extended.ROM" };
++	const char* candidates_cd32[] = { "cd32ext.rom", "kick40060.CD32.ext", "amiga-ext-310-cd32.rom", "CD32 Extended.ROM" };
+ 	// CDTV extended ROM candidates
+-	const char* candidates_cdtv[] = { "cdtvext.rom", "CDTV Extended.ROM" };
++	const char* candidates_cdtv[] = { "cdtvext.rom", "amiga-ext-130-cdtv.rom", "CDTV Extended.ROM" };
+ 
+ 	const char** candidates = nullptr;
+ 	size_t count = 0;
+@@ -1884,12 +1888,15 @@ static bool find_ext_rom_in_system_dir(const char* model, char* out, size_t out_
+ 	if (!candidates)
+ 		return false;
+ 
+-	for (size_t i = 0; i < count; i++) {
+-		const std::string candidate = path_join(system_dir, candidates[i]);
+-		if (file_readable(candidate.c_str())) {
+-			strncpy(out, candidate.c_str(), out_size - 1);
+-			out[out_size - 1] = '\0';
+-			return true;
++	const std::string search_dirs[] = { path_join(system_dir, "amiga"), system_dir };
++	for (const std::string& search_dir : search_dirs) {
++		for (size_t i = 0; i < count; i++) {
++			const std::string candidate = path_join(search_dir, candidates[i]);
++			if (file_readable(candidate.c_str())) {
++				strncpy(out, candidate.c_str(), out_size - 1);
++				out[out_size - 1] = '\0';
++				return true;
++			}
+ 		}
+ 	}
+ 
+@@ -4565,6 +4572,12 @@ static void core_entry(void)
+ 		push_rom_path(primary_rom_path);
+ 		if (rom_path_value != primary_rom_path)
+ 			push_rom_path(rom_path_value);
++		// bios/amiga/, where Batocera keeps the Kickstarts
++		if (!system_dir.empty()) {
++			const std::string amiga_rom_path = path_join(system_dir, "amiga");
++			if (amiga_rom_path != rom_path_value && dir_exists(amiga_rom_path))
++				push_rom_path(amiga_rom_path);
++		}
+ 	}
+ 
+ 	{

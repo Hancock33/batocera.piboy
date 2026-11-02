@@ -16,6 +16,12 @@ file_extensions:
   - zip
   - raw
   - scp
+  - fdi
+  - hdz
+  - lzh
+  - 7z
+  - rp9
+  - m3u
 systems:
   - name: amiga500
     as_core:
