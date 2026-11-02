@@ -27,7 +27,6 @@ endef
 
 define LIBRETRO_EDUKE32_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/platform/Libretro/eduke32_libretro.so $(TARGET_DIR)/usr/lib/libretro/eduke32_libretro.so
-	$(INSTALL) -D -m 0644 $(LIBRETRO_EDUKE32_PKGDIR)/eduke32_libretro.info $(TARGET_DIR)/usr/share/libretro/info/eduke32_libretro.info
 endef
 
 $(eval $(generic-package))

@@ -36,7 +36,6 @@ endif
 
 define LIBRETRO_UZDOOM_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/uzdoom_libretro.so $(TARGET_DIR)/usr/lib/libretro/uzdoom_libretro.so
-	$(INSTALL) -D -m 0644 $(LIBRETRO_UZDOOM_PKGDIR)/uzdoom_libretro.info $(TARGET_DIR)/usr/share/libretro/info/uzdoom_libretro.info
 endef
 
 $(eval $(cmake-package))
