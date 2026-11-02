@@ -51,6 +51,7 @@ openmohaa.mk
 openxr-sdk.mk
 ossp.mk
 pigpio-rpi.mk
+pironman5.mk
 plutosvg.mk
 plutovg.mk
 portmidi.mk
