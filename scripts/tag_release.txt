@@ -26,7 +26,7 @@ fsuae.mk
 gtk-layer-shell.mk
 hcl.mk
 ikemen.mk
-kddocwidgets.mk
+kddockwidgets.mk
 kodi-pvr-freebox.mk
 labwc.mk
 libdate.mk
