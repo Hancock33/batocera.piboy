@@ -525,7 +525,6 @@ menu "batocera.linux"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/semver/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/sf_rpi_status/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/tomlplusplus/Config.in"
-    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/uthash/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/libraries/wxwidgets/Config.in"
   endmenu
 
