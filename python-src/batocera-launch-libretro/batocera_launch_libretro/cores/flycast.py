@@ -183,3 +183,58 @@ class Flycast(FlycastVL):
         else:
             custom_config.set(f'input_player{player_number}_gun_offscreen_shot_mbtn', '')
             custom_config.set(f'input_player{player_number}_gun_aux_a_mbtn', 2)
+
+
+@cached_dataclass
+class ParallelDC(Flycast):
+    """ParaLLEl-DC keeps Flycast's ``reicast_*`` option names, but not its values or every option."""
+
+    def set_core_options(self, core_options: LibretroConfig, /) -> None:
+        # force vmu all, to save in saves (otherwise, it saves in game_dir, which is bios)
+        core_options.set('reicast_per_content_vmus', 'All VMUs')
+
+        core_options.set('reicast_threaded_rendering', 'enabled')
+
+        # Crossbar Colors
+        need_crosses = self.emulator.guns_need_crosses
+        core_options.set_from_config('reicast_lightgun1_crosshair', default='Red' if need_crosses else 'disabled')
+        core_options.set_from_config('reicast_lightgun2_crosshair', default='Blue' if need_crosses else 'disabled')
+        core_options.set_from_config('reicast_lightgun3_crosshair', default='Green' if need_crosses else 'disabled')
+        core_options.set_from_config('reicast_lightgun4_crosshair', default='White' if need_crosses else 'disabled')
+
+        # Video
+        core_options.set_from_config('reicast_internal_resolution', default='1x')
+        core_options.set_from_config('reicast_anisotropic_filtering', default='disabled')
+        core_options.set_from_config('reicast_alpha_sorting', default='per-triangle (normal)')
+        core_options.set_from_config('reicast_texupscale', default='disabled')
+        core_options.set_from_config('reicast_frame_skipping', default='disabled')
+
+        # Widescreen Cheat / Hack (prefer Cheat), only with a 16/9 ratio and no bezel
+        widescreen_ok = self.config.get('ratio') == '16/9' and self.config.get('bezel') == 'none'
+        cheats = widescreen_ok and self.config.get('reicast_widescreen_cheats') == 'enabled'
+        hack = widescreen_ok and not cheats and self.config.get('reicast_widescreen_hack') == 'enabled'
+        core_options.set('reicast_widescreen_cheats', 'enabled' if cheats else 'disabled')
+        core_options.set('reicast_widescreen_hack', 'enabled' if hack else 'disabled')
+
+        # Bios
+        core_options.set_from_config('reicast_language', default='Default')
+        core_options.set_from_config('reicast_region', default='Default')
+
+        ## Atomiswave / Naomi
+
+        # Screen Orientation
+        if self.system == 'atomiswave':
+            rotation = self.config.get('screen_rotation_atomiswave', 'horizontal')
+        elif self.system == 'naomi':
+            rotation = self.config.get('screen_rotation_naomi', 'horizontal')
+        else:
+            rotation = 'horizontal'
+
+        core_options.set('reicast_screen_rotation', rotation)
+
+        core_options.set_from_config('reicast_allow_service_buttons', default='disabled')
+
+        # wheel
+        core_options.set(
+            'reicast_analog_stick_deadzone', '0%' if self.config.use_wheels and self.wheels else '15%'
+        )  # 15% = default value
