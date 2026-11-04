@@ -97,6 +97,7 @@ Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|dc1
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|497a87ba895905addd0bc6005b47daecf61c863c|Oct 31, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.167.9605-606|Oct 31, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|2f134adb539877d946092a640d8b682ec2989f1c|Oct 31, 2026
+Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|620.70.06|Oct 31, 2026
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|9a324fe71d8190b750ad509cf3f7a1e98c52d000|Oct 31, 2026
 Ports|[hlsdk-xash3d-dmc](https://github.com/FWGS/hlsdk-portable.git)|41a503f236636cc643e70dea1c4331e1768d0312|Oct 31, 2026
 Ports|[hlsdk-xash3d-opfor](https://github.com/FWGS/hlsdk-portable.git)|ccec725dfb7ac2b8b4dc6d1520faf32a43413562|Oct 31, 2026
@@ -213,7 +214,7 @@ Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4984f691acbbb22d5b11b78
 Controllers|[lightguns-games-precalibrations](http://github.com/batocera-linux/lightguns-games-precalibrations)|cdaf9ac06422f06bf89a34eab62676f90f3c6f0a|Oct 08, 2026
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|v0.7.1|Oct 07, 2026
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2026.09.2|Oct 07, 2026
-Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|615.78.08|Oct 07, 2026
+Gpu|[nvidia580-legacy-driver](https://download.nvidia.com/XFree86/Linux-x86)|580.196.07|Oct 07, 2026
 Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergrafx-libretro)|9c11dcd213a79d57d2c86313971631af801f2cdc|Oct 06, 2026
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|7884be5277776a5d8c4fdc4e574e9b5b589945c9|Oct 06, 2026
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|0d252c975c2629654f9bd92f83e45152778d3015|Oct 06, 2026
@@ -380,7 +381,6 @@ Emulators|[mupen64plus-input-sdl](http://github.com/mupen64plus/mupen64plus-inpu
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|8a7a472a7172eb2c8725b305eae26818ed7b51a2|Jun 23, 2026
 Emulators|[mupen64plus-ui-console](http://github.com/mupen64plus/mupen64plus-ui-console)|c8ac4862a019d7885b24927d9b4db5dd3e42a528|Jun 23, 2026
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|b07cb0bc8f29d6ee43efdf0a4d5a1b878ba98393|Jun 23, 2026
-Gpu|[nvidia580-legacy-driver](https://download.nvidia.com/XFree86/Linux-x86)|580.178.04|Jun 23, 2026
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|650bd625eb725446279c6176804b554e2e1c98f3|Jun 14, 2026
 Emulators|[libretro-beetle-ngp](http://github.com/libretro/beetle-ngp-libretro)|a50d5ac288a81f2104ddf43195a4efdd15c72227|Jun 14, 2026
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|814991a2571ad3970e386cef48f3b148aa1c27b9|Jun 13, 2026

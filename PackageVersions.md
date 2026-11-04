@@ -347,8 +347,8 @@ Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|e7a4fc70448ca2f66b3df50cabe52
 Gpu|[mali-mp400-gbm](http://github.com/caesar-github/libmali)|8f46cc7b9777975f40323b0971f3483fa2aefcd3|Aug 16, 2022
 Gpu|[mali-mp400-wayland](http://github.com/caesar-github/libmali)|8f46cc7b9777975f40323b0971f3483fa2aefcd3|Aug 16, 2022
 Gpu|[nv-codec-headers](https://github.com/FFmpeg/nv-codec-headers)|n13.1.15.0|Jul 14, 2026
-Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|615.78.08|Oct 07, 2026
-Gpu|[nvidia580-legacy-driver](https://download.nvidia.com/XFree86/Linux-x86)|580.178.04|Jun 23, 2026
+Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|620.70.06|Oct 31, 2026
+Gpu|[nvidia580-legacy-driver](https://download.nvidia.com/XFree86/Linux-x86)|580.196.07|Oct 07, 2026
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.1.0|Aug 11, 2026
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|57a1067a246c71fa6c9a355d1668884fda155dd5|Dec 23, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.4|Sept 11, 2026
