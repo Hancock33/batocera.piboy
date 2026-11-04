@@ -3,7 +3,7 @@
 # steamdeck-dsp
 #
 ################################################################################
-# Version: Commits on 19 Oct 2026
+# Version: Commits on Oct 19, 2026
 STEAMDECK_DSP_VERSION = 1.03-1
 STEAMDECK_DSP_SOURCE = steamdeck-dsp-$(STEAMDECK_DSP_VERSION)-any.pkg.tar.zst
 STEAMDECK_DSP_SITE = https://steamdeck-packages.steamos.cloud/archlinux-mirror/jupiter-main/os/x86_64
