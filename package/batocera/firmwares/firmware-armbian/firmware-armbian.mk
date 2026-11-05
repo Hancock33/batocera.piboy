@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 04, 2026
-FIRMWARE_ARMBIAN_VERSION = 16036fb95e3b49d6dc2132811d757d0aa3934db9
+FIRMWARE_ARMBIAN_VERSION = bf5f7a802b8e1998e6bf95daed5ea965441af83d
 FIRMWARE_ARMBIAN_SITE = https://github.com/armbian/firmware
 FIRMWARE_ARMBIAN_SITE_METHOD = git
 
