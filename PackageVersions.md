@@ -204,7 +204,7 @@ Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|13910d1cf8b139b7560f
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|1890c2932234c9d30f4cd3851d02228baae8f09e|Sept 26, 2026
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|6ffbf9ef4f0063e1f1b78a40d10c50fc52f2524c|Sept 21, 2026
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|132111b76343559860532a1ccc094f93f1ed5650|Jul 31, 2026
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|f82a875d17c368476e4146b7c42e985b79f67e2c|Nov 05, 2026
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|89a24813b31684ba4f4873308c06af630539ab30|Nov 05, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|4849268e7342494193f2bbf2d0128a751cf58da7|Oct 17, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|8a88014287c7a01cd568067e5a557d0a2b2a051f|Aug 22, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|6516f15e046fb9e57efd512584eae35ae288e889|Nov 05, 2026
@@ -267,10 +267,10 @@ Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|438d5dd250d4f343de8a7f779b05791f706b505d|Nov 05, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.155|Nov 04, 2026
 Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|Aug 18, 2026
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|f82a875d17c368476e4146b7c42e985b79f67e2c|Nov 05, 2026
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|89a24813b31684ba4f4873308c06af630539ab30|Nov 05, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|d9f969054dc7fbb6fa89519036d2b971e0855b51|Oct 01, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|7d2e95318b380d7c39ef8025aedd9eace9b64446|Nov 05, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|8a816f0148cfa9c5a65830f939d3a34ee878eecd|Nov 05, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260927|Sept 27, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|v0.0.43|Sept 30, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|280c427c550c5fe3bcc46b378e06a9b90a7e6b09|Sept 18, 2026
@@ -308,7 +308,7 @@ Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
 Engines|[libspatialaudio](http://github.com/videolan/libspatialaudio)|d149ed9744fd399b835c6f2920511f8cbcfce5ea|Jul 01, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|eb910403834184e1d098bcc310054ac17a00b53d|Aug 03, 2026
-Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|a7971c418647d1560123e1a4709743a115a60525|Nov 04, 2026
+Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|75edd133633f154b881759cc0d1929754a746dc8|Nov 05, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.11.0|Jun 01, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|c24accae28d677406bc5047ad7e0778a39bfd27b|Nov 01, 2026
 Engines|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|f32e415aea6797d261d6b470dcf8bf18727341c2|Jun 06, 2026
@@ -322,7 +322,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|d569cc6e3a5c23d4613c90141b4ea3b0a9297d9c|Nov 05, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|97d6540045c70564e6bfac487f929b3813a8bb81|Nov 05, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|cc1ae6cc9e1d03f03799f5476399c8157ba03721|Nov 05, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
@@ -496,7 +496,7 @@ Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|cc4111061
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886244a27773f66b0b19fdc2998392565e|Aug 21, 2024
 Ports|[srb2](http://github.com/STJr/SRB2)|SRB2_release_2.2.15|Jan 26, 2025
 Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2ac9f4b2889ad1a|Mar 31, 2024
-Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|c62d9d343981d50f6ed176412b85d94c61b578b5|Oct 15, 2026
+Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|ddb78a5cfbe6719f4b5abe371e3fdeed0f3481fc|Nov 05, 2026
 Ports|[stk](https://github.com/supertuxkart/stk-code/releases)|1.5|Oct 20, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|9f0f8e6e0aca08b715a0f9291ba21c3dc3cab39d|Jan 19, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|c7cceeb5cfb3f3ce06af32faf97804ca564cce93|Oct 26, 2026
@@ -509,7 +509,7 @@ Ports|[vcmi](https://github.com/vcmi/vcmi.git)|1.7.5|Aug 15, 2026
 Ports|[vkquake](http://github.com/Novum/vkQuake)|1.37.0|Oct 04, 2026
 Ports|[vkquake2](http://github.com/kondrak/vkQuake2)|1.5.10|Aug 04, 2026
 Ports|[vkquake3](http://github.com/suijingfeng/vkQuake3)|650bd625eb725446279c6176804b554e2e1c98f3|Jun 14, 2026
-Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|22d256c7d6475258651bc256ab1f09beda1c3f01|Nov 04, 2026
+Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|dc6d0678b1d2894f12c32a81d7f2d81a19de46b8|Nov 05, 2026
 Ports|[xbox-xcloud-client](https://github.com/unknownskl/greenlight/releases)|v2.4.2|Jun 05, 2026
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|0d252c975c2629654f9bd92f83e45152778d3015|Oct 06, 2026
 Ports|[yquake2-xatrix](http://github.com/yquake2/xatrix)|7b328f24b4969b4e042ea3025e0368587537c766|Oct 04, 2026
