@@ -1,30 +1,30 @@
-gamecube:
-  emulator: libretro
-  core:     dolphin
-nds:
-  emulator: libretro
-  core:     melonds
 3ds:
   emulator: azahar
   core:     azahar
-wii:
-  emulator: libretro
-  core:     dolphin
-fmtowns:
-  emulator: libretro
-  core:     mame
-psx:
-  options:
-    hud_support: false # duckstation doesn't like it on n2+
-ps2:
-  emulator: libretro
-  core:     play
-flash:
-  emulator: lightspark
-  core:     lightspark
-kodi:
-  options:
-    hud_support: false # doesn't play nice with vulkan mangohud
 cdi:
   emulator: libretro
   core:     mame
+flash:
+  emulator: lightspark
+  core:     lightspark
+fmtowns:
+  emulator: libretro
+  core:     mame
+gamecube:
+  emulator: libretro
+  core:     dolphin
+kodi:
+  options:
+    hud_support: false # doesn't play nice with vulkan mangohud
+nds:
+  emulator: libretro
+  core:     melonds
+ps2:
+  emulator: libretro
+  core:     play
+psx:
+  options:
+    hud_support: false # duckstation doesn't like it on n2+
+wii:
+  emulator: libretro
+  core:     dolphin

@@ -1,27 +1,30 @@
-gamecube:
-  emulator: libretro
-  core:     dolphin
-nds:
-  emulator: drastic
-  core:     drastic
-wii:
-  emulator: libretro
-  core:     dolphin
-fmtowns:
-  emulator: libretro
-  core:     mame
-psx:
-  options:
-    hud_support: false # duckstation doesn't like it
-ps2:
-  emulator: libretro
-  core:     play
 flash:
   emulator: lightspark
   core:     lightspark
+fmtowns:
+  emulator: libretro
+  core:     mame
+gamecube:
+  emulator: libretro
+  core:     dolphin
+model1:
+  emulator: sm2-emu
+  core:     sm2-emu
+model2:
+  emulator: sm2-emu
+  core:     sm2-emu
 model3:
   emulator: supermodel
   core:     supermodel
+nds:
+  emulator: drastic
+  core:     drastic
+ps2:
+  emulator: libretro
+  core:     play
+psx:
+  options:
+    hud_support: false # duckstation doesn't like it
 quake3:
   emulator: vkquake3
   core:     vkquake3
@@ -31,9 +34,6 @@ saturn:
   options:
     decorations: none
     hud_support: none
-model1:
-  emulator: sm2-emu
-  core:     sm2-emu
-model2:
-  emulator: sm2-emu
-  core:     sm2-emu
+wii:
+  emulator: libretro
+  core:     dolphin
