@@ -6,21 +6,11 @@ been applied to it, so they stayed upright on a rotated video. Draw them
 in the video's own orientation and rotate the quads into the texture.
 
 ---
---- a/video/out/gpu/osd.h
-+++ b/video/out/gpu/osd.h
-@@ -18,7 +18,8 @@
- bool mpgl_osd_draw_prepare(struct mpgl_osd *ctx, int index,
-                            struct gl_shader_cache *sc);
- void mpgl_osd_draw_finish(struct mpgl_osd *ctx, int index,
--                          struct gl_shader_cache *sc, const struct ra_fbo *fbo);
-+                          struct gl_shader_cache *sc, const struct ra_fbo *fbo,
-+                          int rotate);
- bool mpgl_osd_check_change(struct mpgl_osd *ctx, struct mp_osd_res *res,
-                            double pts);
- 
+diff --git a/video/out/gpu/osd.c b/video/out/gpu/osd.c
+index 883dccd7eb..3fcd2d2227 100644
 --- a/video/out/gpu/osd.c
 +++ b/video/out/gpu/osd.c
-@@ -236,14 +236,16 @@
+@@ -232,14 +232,16 @@ static void write_quad(struct vertex *va, struct gl_transform t,
                         float tx0, float ty0, float tx1, float ty1,
                         float tex_w, float tex_h, const uint8_t color[4])
  {
@@ -43,9 +33,9 @@ in the video's own orientation and rotate the quads into the texture.
      va[4] = va[2];
      va[5] = va[1];
  #undef COLOR_INIT
-@@ -285,8 +287,10 @@
-     }
+@@ -270,8 +272,10 @@ static void generate_verts(struct mpgl_osd_part *part, struct gl_transform t)
  }
+ 
  
 +// rotate: clockwise rotation of the target relative to the OSD canvas
  void mpgl_osd_draw_finish(struct mpgl_osd *ctx, int index,
@@ -55,7 +45,7 @@ in the video's own orientation and rotate the quads into the texture.
  {
      struct mpgl_osd_part *part = ctx->parts[index];
  
-@@ -305,7 +309,16 @@
+@@ -290,7 +294,16 @@ void mpgl_osd_draw_finish(struct mpgl_osd *ctx, int index,
              t.t[0] += a_x * t.m[0][0] + a_y * t.m[1][0];
              t.t[1] += a_x * t.m[0][1] + a_y * t.m[1][1];
  
@@ -73,9 +63,24 @@ in the video's own orientation and rotate the quads into the texture.
          }
      }
  
+diff --git a/video/out/gpu/osd.h b/video/out/gpu/osd.h
+index 84139ee8c3..44dc3c4d69 100644
+--- a/video/out/gpu/osd.h
++++ b/video/out/gpu/osd.h
+@@ -18,6 +18,7 @@ void mpgl_osd_resize(struct mpgl_osd *ctx, struct mp_osd_res res, int stereo_mod
+ bool mpgl_osd_draw_prepare(struct mpgl_osd *ctx, int index,
+                            struct gl_shader_cache *sc);
+ void mpgl_osd_draw_finish(struct mpgl_osd *ctx, int index,
+-                          struct gl_shader_cache *sc, const struct ra_fbo *fbo);
++                          struct gl_shader_cache *sc, const struct ra_fbo *fbo,
++                          int rotate);
+ 
+ #endif
+diff --git a/video/out/gpu/video.c b/video/out/gpu/video.c
+index 6122e51422..610cd40e09 100644
 --- a/video/out/gpu/video.c
 +++ b/video/out/gpu/video.c
-@@ -2988,7 +2988,7 @@
+@@ -3130,7 +3130,7 @@ static void pass_dither(struct gl_video *p, const struct ra_fbo *fbo)
  // instead adapted to the display's gamut.
  static void pass_draw_osd(struct gl_video *p, int osd_flags, int frame_flags,
                            double pts, struct mp_osd_res rect, const struct ra_fbo *fbo,
@@ -84,16 +89,16 @@ in the video's own orientation and rotate the quads into the texture.
  {
      if (frame_flags & RENDER_FRAME_VF_SUBS)
          osd_flags |= OSD_DRAW_SUB_FILTER;
-@@ -3014,7 +3014,7 @@
-             pass_colormanage(p, csp_srgb, MP_CSP_LIGHT_DISPLAY, &fbo->color_space,
-                              frame_flags, true);
+@@ -3151,7 +3151,7 @@ static void pass_draw_osd(struct gl_video *p, int osd_flags, int frame_flags,
+             pass_colormanage(p, pl_color_space_srgb, MP_CSP_LIGHT_DISPLAY,
+                              &fbo->color_space, frame_flags, true);
          }
 -        mpgl_osd_draw_finish(p->osd, n, p->sc, fbo);
 +        mpgl_osd_draw_finish(p->osd, n, p->sc, fbo, rotate);
      }
  
      timer_pool_stop(p->osd_timer);
-@@ -3104,13 +3104,20 @@
+@@ -3241,13 +3241,20 @@ static bool pass_render_frame(struct gl_video *p, struct mp_image *mpi,
      {
          double scale[2];
          get_scale_factors(p, false, scale);
@@ -116,7 +121,7 @@ in the video's own orientation and rotate the quads into the texture.
          pass_read_tex(p, p->blend_subs_tex);
          pass_describe(p, "blend subs video");
      }
-@@ -3142,7 +3149,7 @@
+@@ -3279,7 +3286,7 @@ static bool pass_render_frame(struct gl_video *p, struct mp_image *mpi,
          }
          finish_pass_tex(p, &p->blend_subs_tex, p->texture_w, p->texture_h);
          struct ra_fbo fbo = { p->blend_subs_tex };
@@ -125,7 +130,7 @@ in the video's own orientation and rotate the quads into the texture.
          pass_read_tex(p, p->blend_subs_tex);
          pass_describe(p, "blend subs");
      }
-@@ -3528,7 +3535,7 @@
+@@ -3665,7 +3672,7 @@ done:
          if (!(flags & RENDER_FRAME_OSD))
              osd_flags |= OSD_DRAW_SUB_ONLY;
  
