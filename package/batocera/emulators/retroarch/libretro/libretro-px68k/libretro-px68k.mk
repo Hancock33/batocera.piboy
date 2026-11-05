@@ -3,8 +3,8 @@
 # libretro-px68k
 #
 ################################################################################
-# Version: Commits on Nov 02, 2026
-LIBRETRO_PX68K_VERSION = 7c0ddd595d5575544427be932b3299685d4d8d35
+# Version: Commits on Nov 05, 2026
+LIBRETRO_PX68K_VERSION = 8db7038a1da4a00aeb0458dc7a4728479eeac47c
 LIBRETRO_PX68K_SITE = $(call github,libretro,px68k-libretro,$(LIBRETRO_PX68K_VERSION))
 LIBRETRO_PX68K_LICENSE = Unknown
 LIBRETRO_PX68K_DEPENDENCIES += retroarch

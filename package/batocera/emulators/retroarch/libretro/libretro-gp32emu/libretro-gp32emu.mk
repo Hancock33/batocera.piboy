@@ -3,8 +3,8 @@
 # libretro-gp32emu
 #
 ################################################################################
-# Version: Commits on Jun 9, 2026
-LIBRETRO_GP32EMU_VERSION = 9ca3a72fac79eb57dd16ec21f3756e243e4a579d
+# Version: Commits on Nov 04, 2026
+LIBRETRO_GP32EMU_VERSION = 6e5091f115fb1976f128a9696f59b2e421eb62b0
 LIBRETRO_GP32EMU_SITE = $(call github,gameblabla,gp32emu,$(LIBRETRO_GP32EMU_VERSION))
 LIBRETRO_GP32EMU_LICENSE = BSD-3-Clause, MIT
 LIBRETRO_GP32EMU_LICENSE_FILES = licenses/BSD-3-Clause-MAME-derived.txt licenses/MIT-BDMEmu-frontend.txt licenses/MIT-kuba-zip.txt
