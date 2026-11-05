@@ -42,6 +42,7 @@ libzedmd.mk
 logi-wheel.mk
 logitech-trueforce.mk
 mangohud.mk
+mergerfs.mk
 mt32emu.mk
 nghttp3.mk
 ngtcp2.mk

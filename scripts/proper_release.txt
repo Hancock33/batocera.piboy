@@ -38,7 +38,6 @@ libretro-mame.mk
 libxmp.mk
 mame-src.mk
 mame.mk
-mergerfs.mk
 miniz.mk
 mold.mk
 mono-bin.mk

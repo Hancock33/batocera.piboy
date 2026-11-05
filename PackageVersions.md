@@ -86,7 +86,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|3b1031612eb21302a8032
 Emulators|[clk](https://github.com/TomHarte/CLK)|2026-07-23|Jul 23, 2026
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|9c0d839a19651dffc9898da7673574a20fb39415|Apr 11, 2026
 Emulators|[demul]()|demul_251220|N/A
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|66df2b4e18ae6169f9718b869da334022914e305|Nov 04, 2026
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|96f8181230e6b4445675e7b6c5d913c189f4d7bb|Nov 05, 2026
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|v0.83.1|Oct 31, 2026
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.10.01-osfree|Oct 02, 2026
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
@@ -135,7 +135,7 @@ Emulators|[libretro-desmume](http://github.com/libretro/desmume)|95b4d798731caa8
 Emulators|[libretro-dice](http://github.com/mittonk/dice-libretro)|b557d861eb9502799b865a98d794fb81da10ba17|Oct 30, 2026
 Emulators|[libretro-dinothawr](http://github.com/libretro/Dinothawr)|62d3e1ecf85f0feea01cad6809a80303a87e8a28|Sept 03, 2026
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|32c61f9d0e933331bb7087ba57e96883241b4960|Nov 04, 2026
-Emulators|[libretro-dosbox-pure](https://codeberg.org/schelling/dosbox-pure.git)|1ab4383268af3d2be5a41cacf42683d96e1977b1|Nov 04, 2026
+Emulators|[libretro-dosbox-pure](https://codeberg.org/schelling/dosbox-pure.git)|519226d15dea41c146048ae43e40bac772b923c4|Nov 06, 2026
 Emulators|[libretro-doublecherrygb](https://github.com/TimOelrichs/doublecherryGB-libretro.git)|d432f97693670524f7f46bfca886b731134f4bb6|Oct 19, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|497a87ba895905addd0bc6005b47daecf61c863c|Oct 31, 2026
 Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|0cccd9a85d7ffa33fb695691a8a5db246606518c|Aug 20, 2026
@@ -303,12 +303,12 @@ Engines|[libdof](http://github.com/jsm174/libdof)|5c54ef784ddc31738a9b2a422380f1
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|711ab21dcf9ad33d8db8339dfd3b1548bcc34cdb|Sept 10, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libmysofa](http://github.com/hoene/libmysofa)|648eed03472e6720a1ea45d1a1f86c4efb569ff9|Sept 08, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|373c46c4cab6eb5915befb18a49c0a369bd6d852|Nov 03, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|20a1d01ab83c5f5571bf0304ae45971bf6220a27|Nov 04, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a3147e6de90635d|Sept 09, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
 Engines|[libspatialaudio](http://github.com/videolan/libspatialaudio)|d149ed9744fd399b835c6f2920511f8cbcfce5ea|Jul 01, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|eb910403834184e1d098bcc310054ac17a00b53d|Aug 03, 2026
-Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|0090f8a61cc3b16974dbfb69760f0a9d675421ce|Nov 01, 2026
+Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|a7971c418647d1560123e1a4709743a115a60525|Nov 04, 2026
 Engines|[libzedmd](http://github.com/PPUC/libzedmd)|v0.11.0|Jun 01, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|c24accae28d677406bc5047ad7e0778a39bfd27b|Nov 01, 2026
 Engines|[moonlight-embedded](https://github.com/moonlight-stream/moonlight-embedded.git)|f32e415aea6797d261d6b470dcf8bf18727341c2|Jun 06, 2026
@@ -322,7 +322,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|d569cc6e3a5c23d4613c90141b4ea3b0a9297d9c|Nov 05, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|8d21d2bf2a3b0276a5f51ef83eb0837d8f634f68|Nov 04, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|97d6540045c70564e6bfac487f929b3813a8bb81|Nov 05, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
@@ -569,7 +569,7 @@ Utils|[l3afpad](http://github.com/stevenhoneyman/l3afpad)|16f22222116b78b7f6a6fd
 Utils|[labwc](http://github.com/labwc/labwc)|0.20.3|Oct 30, 2026
 Utils|[ledspicer](http://github.com/meduzapat/LEDSpicer)|0.7.8|Oct 24, 2026
 Utils|[mangohud](http://github.com/flightlessmango/MangoHud)|v0.8.4|May 27, 2026
-Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.42.0|May 08, 2026
+Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.42.1|Nov 03, 2026
 Utils|[ntfs-plus](http://github.com/ntfsprogs-plus/ntfsprogs-plus)|1.0.0|Oct 16, 2025
 Utils|[od-commander](http://github.com/jwty/tv-commander)|1ca465f7cd5e080d13a8906fdfc45eb543ea255c|Mar 24, 2026
 Utils|[pacman](https://gitlab.archlinux.org/pacman/pacman.git)|v5.2.2|Jun 26, 2020

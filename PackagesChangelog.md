@@ -1,5 +1,7 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[libretro-dosbox-pure](https://codeberg.org/schelling/dosbox-pure.git)|519226d15dea41c146048ae43e40bac772b923c4|Nov 06, 2026
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|96f8181230e6b4445675e7b6c5d913c189f4d7bb|Nov 05, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|e3dd7337368c61c69d407d546155842c121f57d9|Nov 05, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|78dbf9fccae273a23173fd67d916e7461234a9ec|Nov 05, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|438d5dd250d4f343de8a7f779b05791f706b505d|Nov 05, 2026
@@ -17,6 +19,7 @@ Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|9885eb0ede7b696
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|bb04e14060ed0a6b85fb2e35f38720f798a2371a|Nov 05, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261105|Nov 05, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|7d2e95318b380d7c39ef8025aedd9eace9b64446|Nov 05, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|97d6540045c70564e6bfac487f929b3813a8bb81|Nov 05, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261105|Nov 05, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|781e1a1b920592c5c476afe4ce95f6f35d7c4673|Nov 05, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|405b247a9f3b348ea09bd227a28fa1fcb80db341|Nov 05, 2026
@@ -32,18 +35,17 @@ Emulators|[libretro-uzdoom](https://github.com/cscd98/UZDoom-libretro.git)|e2dcf
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|62d12b3f0712300008e98b8ff392f90c8938b0ef|Nov 04, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261104|Nov 04, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|3b1031612eb21302a8032e2f7a6db31549bd269b|Nov 04, 2026
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|66df2b4e18ae6169f9718b869da334022914e305|Nov 04, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|5df599128d6828fa0e42968909da848c255d22b1|Nov 04, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|497aa6cdd26f45f8064b78916b00a773eab4ded7|Nov 04, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.155|Nov 04, 2026
 Firmwares|[firmware-armbian](https://github.com/armbian/firmware)|16036fb95e3b49d6dc2132811d757d0aa3934db9|Nov 04, 2026
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|d0cf97a4f6081aef6b479532b4fbc936898abde1|Nov 04, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|8d21d2bf2a3b0276a5f51ef83eb0837d8f634f68|Nov 04, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|20a1d01ab83c5f5571bf0304ae45971bf6220a27|Nov 04, 2026
+Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|a7971c418647d1560123e1a4709743a115a60525|Nov 04, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|22d256c7d6475258651bc256ab1f09beda1c3f01|Nov 04, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261104|Nov 04, 2026
 Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|822c9f98f64a19aa61116351d4b9546ad55066e7|Nov 04, 2026
 Emulators|[libretro-dolphin](https://github.com/libretro/dolphin.git)|32c61f9d0e933331bb7087ba57e96883241b4960|Nov 04, 2026
-Emulators|[libretro-dosbox-pure](https://codeberg.org/schelling/dosbox-pure.git)|1ab4383268af3d2be5a41cacf42683d96e1977b1|Nov 04, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|4f060cca80838c8deaa20cb2b3cdb57569553def|Nov 04, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|edaed202756772b2f463c40a7a951da52a6cbbe5|Nov 04, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|cd5c0dff20ac52c35dc4cb1a2a0f73c1dd8bcecf|Nov 04, 2026
@@ -61,7 +63,7 @@ Ports|[devilutionx](https://github.com/diasurgical/devilutionX.git)|ea7b5be46283
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|84d246001ac09d6bcfcde4c6f7b44c76d7c609ea|Nov 03, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|e43780f899626df1396b5bd00d28b0d2228c3220|Nov 03, 2026
 Ports|[theforceengine](http://github.com/TheForceEngine/TheForceEngine)|v.1.30.000|Nov 03, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|373c46c4cab6eb5915befb18a49c0a369bd6d852|Nov 03, 2026
+Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.42.1|Nov 03, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|3f2409efb3739ba9a1928a2cfcb3a3f671290f2a|Nov 03, 2026
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|6095054b7d02dfac25fdc4a8ba9300358046e860|Nov 02, 2026
 Libraries|[nghttp3](https://github.com/ngtcp2/nghttp3.git)|v1.19.0|Nov 02, 2026
@@ -86,7 +88,6 @@ Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|ac
 Engines|[lightspark](http://github.com/lightspark/lightspark)|c24accae28d677406bc5047ad7e0778a39bfd27b|Nov 01, 2026
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|ae6ed8a81b316421f08a46719b12a4fa9e2fbed9|Nov 01, 2026
 Ports|[raze](http://github.com/ZDoom/Raze)|fa99ac62924d5b2cbb67f46b932bd6acf8952b63|Nov 01, 2026
-Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|0090f8a61cc3b16974dbfb69760f0a9d675421ce|Nov 01, 2026
 Ports|[hlsdk-xash3d-zombiex](https://github.com/FWGS/hlsdk-portable.git)|1887f906785673f0b858db327e0756ec00e610e9|Nov 01, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|366cf03acff1d1b8fa03f38885f96ac7a4b95541|Nov 01, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0-alpha4|Nov 01, 2026
@@ -418,7 +419,6 @@ Utils|[ryzenadj](http://github.com/FlyGoat/RyzenAdj)|v0.19.0|May 13, 2026
 Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|9dc699428420d752af9767bdb13f585ee0881bc0|May 12, 2026
 Emulators|[bigpemu](https://www.richwhitehouse.com/jaguar/builds)|v1221|May 10, 2026
 Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3|May 10, 2026
-Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.42.0|May 08, 2026
 Boot|[uboot-odroid-goa](https://github.com/hardkernel/u-boot.git)|7d5876d36f4120034f1902b12d6799b147bec884|Apr 30, 2026
 Boot|[uboot-odroid-xu4](https://github.com/hardkernel/u-boot.git)|7d5876d36f4120034f1902b12d6799b147bec884|Apr 30, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
