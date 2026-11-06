@@ -3,8 +3,8 @@
 # armsx2
 #
 ################################################################################
-# Version: Commits on Nov 04, 2026
-ARMSX2_VERSION = nightly-20261104
+# Version: Commits on Nov 06, 2026
+ARMSX2_VERSION = nightly-20261106
 ARMSX2_SITE = https://github.com/ARMSX2/ARMSX2.git
 ARMSX2_SITE_METHOD = git
 ARMSX2_GIT_SUBMODULES = YES

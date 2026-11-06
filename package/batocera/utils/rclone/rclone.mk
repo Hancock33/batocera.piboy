@@ -3,8 +3,8 @@
 # rclone
 #
 ################################################################################
-# Version: Commits on Oct 09, 2026
-RCLONE_VERSION = v1.75.2
+# Version: Commits on Nov 06, 2026
+RCLONE_VERSION = v1.76.0
 RCLONE_SITE = $(call github,rclone,rclone,$(RCLONE_VERSION))
 RCLONE_LICENSE = GPLv2
 RCLONE_DEPENDENCIES =
