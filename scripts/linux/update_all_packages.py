@@ -17,6 +17,9 @@ have a .hash file but a git source (the archive hash would need recomputing),
 abbreviated hashes.  Use scripts/linux/check_package_updates.py for the
 special-cased packages (kernel, firmware, mesa, nvidia, ...).
 
+jstest2 is always excluded (see DEFAULT_EXCLUDE), on top of anything passed
+with --exclude.
+
 Usage:
     update_all_packages.py                          # check everything
     update_all_packages.py -v                       # ...and list ok/skipped ones
@@ -40,6 +43,9 @@ import update_libretro_cores as gitpkg  # noqa: E402
 import update_pypi_packages as pypi  # noqa: E402
 
 SHORT_SHA_RE = re.compile(r"^[0-9a-f]{7,39}$")
+
+# Packages that are always left alone (in addition to --exclude).
+DEFAULT_EXCLUDE = {"jstest2"}
 
 
 def classify(mk):
@@ -102,7 +108,7 @@ def main():
     args = ap.parse_args()
 
     base = Path(args.root) / "package" / "batocera" / args.path
-    exclude = {x.strip() for x in args.exclude.split(",") if x.strip()}
+    exclude = DEFAULT_EXCLUDE | {x.strip() for x in args.exclude.split(",") if x.strip()}
     mks = [m for m in sorted(base.rglob("*.mk"))
            if not m.name.startswith("pkg-") and m.stem not in exclude
            and (not args.packages or m.stem in args.packages)]

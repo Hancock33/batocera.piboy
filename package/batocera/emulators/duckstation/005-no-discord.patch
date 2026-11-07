@@ -33,10 +33,10 @@ index b1d38ed5d..519a47d52 100644
    {
      const auto lock = GetOverlayLock();
 diff --git a/src/core/core.cpp b/src/core/core.cpp
-index 7305eb756..c136b5b91 100644
+index bc05ac58c..ddd1866f6 100644
 --- a/src/core/core.cpp
 +++ b/src/core/core.cpp
-@@ -751,8 +751,10 @@ bool Core::CoreThreadInitialize(bool disable_worker_threads, Error* error)
+@@ -736,15 +736,19 @@ bool Core::CoreThreadInitialize(Error* error)
  
    Achievements::Initialize();
  
@@ -47,17 +47,16 @@ index 7305eb756..c136b5b91 100644
  
    return true;
  }
-@@ -761,7 +763,9 @@ void Core::CoreThreadShutdown()
- {
-   s_locals.async_task_queue.SetWorkerCount(0, 0);
  
+ void Core::CoreThreadShutdown()
+ {
 +#ifdef ENABLE_DISCORD_PRESENCE
    DiscordPresence::Shutdown();
 +#endif
  
    Achievements::Shutdown();
  
-@@ -813,7 +817,9 @@ void Core::IdleUpdate(u64 max_poll_time)
+@@ -774,7 +778,9 @@ void Core::IdleUpdate(u64 max_poll_time)
  {
    InputManager::PollSources();
  
@@ -107,10 +106,10 @@ index 94b181e36..878364cc5 100644
 +
 +#endif // ENABLE_DISCORD_PRESENCE
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 99681cecf..eb1f20050 100644
+index 29a100bc2..55fd451a8 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -2156,7 +2156,9 @@ void System::ClearRunningGame()
+@@ -2165,7 +2165,9 @@ void System::ClearRunningGame()
    s_state.running_game_entry = nullptr;
    s_state.running_game_hash = 0;
  
@@ -120,7 +119,7 @@ index 99681cecf..eb1f20050 100644
  }
  
  void System::Execute()
-@@ -2219,7 +2221,9 @@ void System::FrameDone()
+@@ -2228,7 +2230,9 @@ void System::FrameDone()
      }
    }
  
@@ -130,7 +129,7 @@ index 99681cecf..eb1f20050 100644
  
    GDBServer::PollUntil(0);
  
-@@ -4600,7 +4604,9 @@ void System::UpdateRunningGame(const std::string& path, CDImage* image, bool boo
+@@ -4616,7 +4620,9 @@ void System::UpdateRunningGame(const std::string& path, CDImage* image, bool boo
    if (s_state.running_game_serial != prev_serial)
      UpdateSessionTime(prev_serial);
  
@@ -140,7 +139,7 @@ index 99681cecf..eb1f20050 100644
  
    if (!s_state.running_game_title.empty())
    {
-@@ -5227,6 +5233,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+@@ -5242,6 +5248,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
  
    Achievements::UpdateSettings(old_settings);
  
@@ -148,7 +147,7 @@ index 99681cecf..eb1f20050 100644
    if (g_settings.enable_discord_presence != old_settings.enable_discord_presence)
    {
      if (g_settings.enable_discord_presence)
-@@ -5234,6 +5241,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+@@ -5249,6 +5256,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
      else
        DiscordPresence::Shutdown();
    }
