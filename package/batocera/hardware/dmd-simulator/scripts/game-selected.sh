@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# keep customizable
+# keep customisable
 test -e "/userdata/system/configs/emulationstation/scripts/game-selected/dmd-simulator.sh" && exit 0
 
 GSYSTEM=$1
@@ -27,7 +27,7 @@ do
     fi
 done
 
-# minimized name : we accept : minimized name + .png/.gif and minimized name + _ + numbers + .gif/.png
+# minimised name : we accept : minimised name + .png/.gif and minimised name + _ + numbers + .gif/.png
 ROMMIN=$(echo "${ROMBASE}" | sed -e s+"([^)]*)"+""+g -e s+"[^A-Za-z0-9]"+""+g | tr A-Z a-z) # lowercase and remove any but a-z and 0-9, remove things in parenthesis
 
 if test "${ROMBASE}" = "${ROMMIN}"
@@ -44,9 +44,9 @@ do
 done < <(
     # first the same name image
     test -n "${FOUNDCUS}" && echo "${FOUNDCUS}"
-    # second, the minimized name without numbers
+    # second, the minimised name without numbers
     find "/userdata/system/dmd/games/${GSYSTEM}" -maxdepth 1 -type f -regextype posix-extended -regex ".*/${ROMMIN}\.(gif|png)$"
-    # third, the minimized name with numbers
+    # third, the minimised name with numbers
     find "/userdata/system/dmd/games/${GSYSTEM}" -maxdepth 1 -type f -regextype posix-extended -regex ".*/${ROMMIN}_[0-9]+\.(gif|png)$" | sort -V)
 if test -n "${CUSS}"
 then

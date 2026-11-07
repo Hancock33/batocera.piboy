@@ -4,7 +4,7 @@ config BR2_PACKAGE_LIBRETRO_AMIBERRY
 	select BR2_PACKAGE_ZLIB
 
 	help
-	  Amiberry libretro core, an optimized Amiga emulator based on
+	  Amiberry libretro core, an optimised Amiga emulator based on
 	  UAE, for the Amiga 500, 1200, CD32 and CDTV.
 
 	  The Kickstart ROMs are required in bios/amiga.

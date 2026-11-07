@@ -8,7 +8,7 @@ The image files here were copied from the Steam installation (Steam/appcache/lib
 | half-life_opposing-force.jpg | [50_header.jpg](https://steamcdn-a.akamaihd.net/steam/apps/50/header.jpg)   |
 | half-life_blue-shift.jpg     | [130_header.jpg](https://steamcdn-a.akamaihd.net/steam/apps/130/header.jpg) |
 
-The images files were then optimized with
+The images files were then optimised with
 
 ```sh
 jpegoptim --strip-all *.jpg

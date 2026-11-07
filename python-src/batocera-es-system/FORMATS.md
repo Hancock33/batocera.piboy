@@ -15,7 +15,7 @@ Path (in-tree):
 `package/batocera/emulationstation/batocera-es-system/es_systems.yml`
 
 Top-level map of system id → system metadata. This is the EmulationStation
-system catalog (name, manufacturer, release, hardware, path, platform, theme,
+system catalogue (name, manufacturer, release, hardware, path, platform, theme,
 group, comments). It does **not** list which emulators/cores belong to a
 system; that comes from `*.emulator.yml` / `*.core.yml`.
 
@@ -24,7 +24,7 @@ Common keys:
 | Key | Role |
 | --- | --- |
 | `name` | Display name |
-| `manufacturer` / `release` / `hardware` | Catalog fields |
+| `manufacturer` / `release` / `hardware` | Catalogue fields |
 | `path` | ROM folder under `/userdata/roms` (defaults to the system id) |
 | `platform` | ES platform string (defaults to the system id) |
 | `theme` / `group` | Theme and grouping |
@@ -53,7 +53,7 @@ YAML 1.2 and classified by filename:
 
 Special emulator names:
 
-- `_shared` → `sharedFeatures` in `es_features.cfg` (shared feature catalog)
+- `_shared` → `sharedFeatures` in `es_features.cfg` (shared feature catalogue)
 - `_global` → `globalFeatures` in `es_features.cfg`
 
 Overlays (extra path segments before the base name) are applied with

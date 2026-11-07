@@ -8,7 +8,7 @@ make_uboot () {
     board=$1
     build_target=$2
 
-    ## terrible hack / sometimes the EMMC does not initialize. try the boot sequence until it succeeds
+    ## terrible hack / sometimes the EMMC does not initialise. try the boot sequence until it succeeds
     echo 'CONFIG_BOOTCOMMAND="until false; do run distro_bootcmd; sleep 5; done"' >> configs/${build_target}_defconfig
 
     # Make config

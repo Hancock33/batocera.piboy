@@ -3,7 +3,7 @@ To start the game, you'll need the original resurces of a licensed copy of S.T.A
 You'll need to copy the follow directories from your S.T.A.L.K.E.R. game distribution to the cop directory:
 
 levels
-localization
+localisation
 mp
 patches
 resources

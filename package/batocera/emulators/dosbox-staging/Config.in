@@ -23,6 +23,6 @@ config BR2_PACKAGE_DOSBOX_STAGING
 	select BR2_PACKAGE_ZLIB
 
 	help
-	  Modernized DOSBox soft-fork
+	  Modernised DOSBox soft-fork
 
 	  https://github.com/dosbox-staging/dosbox-staging

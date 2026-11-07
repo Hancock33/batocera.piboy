@@ -6,7 +6,7 @@ Currently selects one of three random sounds. Eventually, it will have some vari
 
 Tested in Windows & Batocera Linux.
 
-Assistance provided by cuavas on Reddit with optimizing the original version
+Assistance provided by cuavas on Reddit with optimising the original version
 
 Sound player code modified from DKChorus plugin by Jon Wilson (10yard)
 

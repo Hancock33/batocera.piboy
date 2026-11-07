@@ -4,7 +4,7 @@ reportOnceConfigurationAvailable() {
     STARTFILE="/var/run/virtual-events.started"
     LOADERFILE="/var/run/virtual-events.waiting"
 
-    test -e "${STARTFILE}" && return # normal behavior
+    test -e "${STARTFILE}" && return # normal behaviour
     echo "keboardtopads ${ACTION} ${DEVNAME} ${DEVPATH} keyboardToPadsLauncher ${1} run" >> "${LOADERFILE}"
     exit 0
 }

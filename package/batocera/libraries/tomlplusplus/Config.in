@@ -2,7 +2,7 @@ config BR2_PACKAGE_TOMLPLUSPLUS
 	bool "tomlplusplus"
 
 	help
-	  Header-only TOML config file parser and serializer
+	  Header-only TOML config file parser and serialiser
 	  for C++17.
 
 	  https://github.com/marzer/tomlplusplus

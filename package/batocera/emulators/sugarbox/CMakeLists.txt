@@ -63,7 +63,7 @@ find_program(WINDEPLOYQT_EXECUTABLE windeployqt HINTS "${_qt_bin_dir}")
 function(windeployqt target)
 
     # POST_BUILD step
-    # - after build, we have a bin/lib for analyzing qt dependencies
+    # - after build, we have a bin/lib for analysing qt dependencies
     # - we run windeployqt on target and deploy Qt libs
 
     add_custom_command(TARGET ${target} POST_BUILD

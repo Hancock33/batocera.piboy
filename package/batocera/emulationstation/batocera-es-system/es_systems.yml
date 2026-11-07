@@ -1027,7 +1027,7 @@ wswan:
   platform:             wonderswan
 
 wswanc:
-  name:                 WonderSwan Color
+  name:                 WonderSwan Colour
   manufacturer:         Bandai
   release:              2000
   hardware:             portable
@@ -1334,7 +1334,7 @@ dragon64:
                         The Dragon 64 is a British home computer from 1983, compatible with Tandy CoCo.
                         It features a Motorola 6809E CPU, 64KB RAM, and Microsoft Extended BASIC.
 
-                        Default Autoload Behaviors
+                        Default Autoload Behaviours
                         1. Cartridge (.ccc/.rom) files autoload directly
                         2. Cassette (.cas/.wav) files autoload using CLOADM:EXEC
                         3. Disk (.dsk/.dmk) files autoload from boot disk
@@ -2405,7 +2405,7 @@ gba:
                         Para mais informações: https://wiki.batocera.org/systems:gba
 
 gbc:
-  name:                 Game Boy Color
+  name:                 Game Boy Colour
   manufacturer:         Nintendo
   release:              1998
   hardware:             portable
@@ -2417,7 +2417,7 @@ gbc:
                         Para mais informações: https://wiki.batocera.org/systems:gbc
 
 gbc2players:
-  name:                 Game Boy Color (2 players)
+  name:                 Game Boy Colour (2 players)
   manufacturer:         Nintendo
   release:              1998
   hardware:             portable
@@ -3468,7 +3468,7 @@ raze:
   group:                ports
   comment_en:           |
                         Raze is a source port, powered by gzdoom tech, for playing classic Build Engine games like Duke Nukem 3D.
-                        Each game must be organized in the raze directory properly and have a .raze file created for it.
+                        Each game must be organised in the raze directory properly and have a .raze file created for it.
                         The Build Engine uses a file override system similar to Doom and WAD files. Each game requires different files and
                         some are optional for things like movies and music. Batocera uses text files with the .raze extension that contain a
                         list of paths to files--one path per line. This tells Raze how to load a game. For example, there is a single line
@@ -3856,7 +3856,7 @@ vpinball:
                         /userdata/system/configs/vpinball/pinmame:          VPinball generated PinMAME settings, ex. sound, cheat, dmd_red
                         /userdata/system/configs/vpinball/pinmame/roms:     PinMAME ROMs directory
                         /userdata/system/configs/vpinball/pinmame/nvram:    PinMAME NVRAM directory
-                        /userdata/system/configs/vpinball/pinmame/altcolor: Serum colorizations directory <rom_name>/<rom.cRZ>
+                        /userdata/system/configs/vpinball/pinmame/altcolor: Serum colorisations directory <rom_name>/<rom.cRZ>
                         /userdata/system/configs/vpinball/pinmame/altsound: AltSound directory <rom_name>/
                         /userdata/system/configs/vpinball/pinmame/vpinball: VPinball PinMAME settings directory
 
@@ -4145,7 +4145,7 @@ quake3:
   group:                quake
   path:                 /userdata/roms/ports/quake3
   comment_en: |
-                        Quake III is optimized to be played with a mouse and keyboard, but here it is also pre-configured to be played with a gamepad.
+                        Quake III is optimised to be played with a mouse and keyboard, but here it is also pre-configured to be played with a gamepad.
 
                         For the basic configuration you must have the "baseq3" and "missionpack" folders in the "/userdata/roms/quake3" directory.
 
@@ -4580,7 +4580,7 @@ naomi2:
                         To determine the decimal we have to convert the hexadecimal to decimal.
                         You can edit arcade controls they're under the [JAMMAx_x] headings depending on the number of controllers.
 
-                        Controller 1 = 0x100 & 0x200 for the buttons & the 2x analog sticks.
+                        Controller 1 = 0x100 & 0x200 for the buttons & the 2x analogue sticks.
                         Controller 2 = 0x101 & 0x201 etc.
 
                         Device input hex codes are listed in the appropriate linux kernel input.h depending on the controller type.
@@ -4622,7 +4622,7 @@ naomi2:
                         Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
 
                         Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
-                        *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
+                        *** Por favour, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
 
                         -----------
                         Controles
@@ -4956,7 +4956,7 @@ ngp:
   hardware:             portable
 
 ngpc:
-  name:                 Neo-Geo Pocket Color
+  name:                 Neo-Geo Pocket Colour
   manufacturer:         SNK
   release:              1999
   hardware:             portable
@@ -5140,14 +5140,14 @@ vis:
   hardware:             computer
 
 coco:
-  name:                 Color Computer
+  name:                 Colour Computer
   manufacturer:         Tandy Radio Shack
   release:              1980
   hardware:             computer
   comment_en: |
                         MAME requires BIOS file coco.zip and coco3.zip
 
-                        Default Autoload Behaviors
+                        Default Autoload Behaviours
                         1. "usage" info field when using MAME software lists (if declared)
                         2. Cassette (.cas) files autoload as binary (CLOADM:EXEC)
                         3. Disk (.dsk) files autoload based on basename (eg. ZONX.dsk autoloads as LOADM “ZONX”:EXEC)
