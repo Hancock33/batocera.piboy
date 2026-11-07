@@ -21,6 +21,10 @@ msgctxt "game_options"
 msgid " 7.09 MHz (A500 speed)"
 msgstr " 7,09 MHz (rychlost A500)"
 
+msgctxt "keys_files"
+msgid "#"
+msgstr ""
+
 msgctxt "game_options"
 msgid "(FDS) AUTOMATICALLY LOAD DISK SIDE A"
 msgstr "(FDS) AUTOMATICKY NAČTE STRANU DISKU A"
@@ -28,6 +32,14 @@ msgstr "(FDS) AUTOMATICKY NAČTE STRANU DISKU A"
 msgctxt "game_options"
 msgid "(FDS) FAST FORWARD DISK LOADING"
 msgstr "(FDS) RYCHLÉ NAČÍTÁNÍ DISKU VPŘED"
+
+msgctxt "keys_files"
+msgid "*"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "0"
+msgstr ""
 
 msgctxt "game_options"
 msgid "0 (Default)"
@@ -105,8 +117,16 @@ msgctxt "game_options"
 msgid "0.9x"
 msgstr "0.9x"
 
+msgctxt "keys_files"
+msgid "1"
+msgstr ""
+
 msgctxt "game_options"
 msgid "1 (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1 (Weakest)"
 msgstr ""
 
 msgctxt "game_options"
@@ -582,6 +602,10 @@ msgid "15 MHz"
 msgstr "15 MHz"
 
 msgctxt "game_options"
+msgid "15 fps"
+msgstr ""
+
+msgctxt "game_options"
 msgid "15 seconds"
 msgstr "15 sekund"
 
@@ -838,6 +862,10 @@ msgctxt "game_options"
 msgid "1x native (640x528)"
 msgstr "1x nativní (640x528)"
 
+msgctxt "keys_files"
+msgid "2"
+msgstr ""
+
 msgctxt "game_options"
 msgid "2 (Default)"
 msgstr ""
@@ -929,6 +957,10 @@ msgstr "2,75x nativní"
 msgctxt "game_options"
 msgid "20 MHz"
 msgstr "20 MHz"
+
+msgctxt "game_options"
+msgid "20 fps"
+msgstr ""
 
 msgctxt "game_options"
 msgid "20 seconds"
@@ -1041,6 +1073,10 @@ msgstr "24 MB (výchozí)"
 msgctxt "game_options"
 msgid "24th"
 msgstr "24."
+
+msgctxt "game_options"
+msgid "25 fps"
+msgstr ""
 
 msgctxt "game_options"
 msgid "256 MB"
@@ -1194,6 +1230,10 @@ msgstr "2x-Postrender"
 msgctxt "game_options"
 msgid "2x-VBlank"
 msgstr "2x-VBlank"
+
+msgctxt "keys_files"
+msgid "3"
+msgstr ""
 
 msgctxt "game_options"
 msgid "3 1/2 Disk (Drive 3)"
@@ -1455,6 +1495,10 @@ msgctxt "game_options"
 msgid "3x native (768 x 576)"
 msgstr "3x nativní(768 x 576)"
 
+msgctxt "keys_files"
+msgid "4"
+msgstr ""
+
 msgctxt "game_options"
 msgid "4 (Default)"
 msgstr ""
@@ -1659,6 +1703,14 @@ msgctxt "game_options"
 msgid "4xrgss"
 msgstr "4xrgss"
 
+msgctxt "keys_files"
+msgid "5"
+msgstr ""
+
+msgctxt "game_options"
+msgid "5 (Default)"
+msgstr ""
+
 msgctxt "game_options"
 msgid "5 1/4 Disk (Drive 1)"
 msgstr "5 1/4 Disk (Jednotka 1)"
@@ -1835,6 +1887,10 @@ msgctxt "game_options"
 msgid "5x native (1280 x 960)"
 msgstr "5x nativní (1280 x 960)"
 
+msgctxt "keys_files"
+msgid "6"
+msgstr ""
+
 msgctxt "game_options"
 msgid "6 Frames"
 msgstr "6 Snímků"
@@ -1873,6 +1929,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "60 Hz (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 fps"
 msgstr ""
 
 msgctxt "game_options"
@@ -1971,6 +2031,10 @@ msgctxt "game_options"
 msgid "6x native (1536 x 1152)"
 msgstr "6x nativní (1536 x 1152)"
 
+msgctxt "keys_files"
+msgid "7"
+msgstr ""
+
 msgctxt "game_options"
 msgid "7 Frames"
 msgstr "7 Snímků"
@@ -2054,6 +2118,14 @@ msgstr ""
 msgctxt "game_options"
 msgid "7x native (1792 x 1344)"
 msgstr "7x nativní (1792 x 1344)"
+
+msgctxt "keys_files"
+msgid "8"
+msgstr ""
+
+msgctxt "game_options"
+msgid "8 (Strongest)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "8 Frames"
@@ -2644,6 +2716,12 @@ msgstr "Přístup k modifikacím a dalším pokročilým možnostem."
 
 msgctxt "game_options"
 msgid "Accuracy"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Accuracy of the emulated system timers. Lower is faster, higher fixes some "
+"games running too fast or too slow."
 msgstr ""
 
 msgctxt "game_options"
@@ -4274,6 +4352,10 @@ msgstr "CDZ MAME"
 msgctxt "game_options"
 msgid "CDZ Universe 3.3"
 msgstr "CDZ Universe 3.3"
+
+msgctxt "game_options"
+msgid "CENTRED STICK AIM"
+msgstr ""
 
 msgctxt "game_options"
 msgid "CET"
@@ -5986,6 +6068,14 @@ msgid "DRAW RESOLUTION MULTIPLIER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "DRIVE BOARD DIP STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "DRIVE BOARD STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
 msgid "DS"
 msgstr "DS"
 
@@ -6191,6 +6281,10 @@ msgstr "Určuje rychlost a chování systému při běhu vpřed."
 msgctxt "game_options"
 msgid "Deutsch"
 msgstr "Němčina"
+
+msgctxt "game_options"
+msgid "Device used to run the game cards, when both are installed."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Dick Smith Electronics VZ-200/300 cassettes"
@@ -8942,6 +9036,10 @@ msgid "Game info"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Game only"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Game's default"
 msgstr "Výchozí nastavení hry"
 
@@ -9208,6 +9306,10 @@ msgid "HDR"
 msgstr ""
 
 msgctxt "game_options"
+msgid "HDR STREAMING"
+msgstr ""
+
+msgctxt "game_options"
 msgid "HEADS UP DISPLAY"
 msgstr "HEADS UP DISPLEJ"
 
@@ -9463,6 +9565,12 @@ msgid "Hire staff"
 msgstr "Najmout zaměstnance"
 
 msgctxt "game_options"
+msgid ""
+"Hold hotkey alone for 3 seconds during the game to change which phone key a "
+"pad button sends. Saved for the game."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Honduras"
 msgstr "Honduras"
 
@@ -9504,6 +9612,13 @@ msgid ""
 msgstr ""
 "Kolik paměti RAM bude na emulovaný Mac nainstalováno (pouze Mac IIx a Mac LC "
 "3)"
+
+msgctxt "game_options"
+msgid ""
+"How strong the game's forces are. At 100% the game's strongest force is the "
+"wheel's full force. Above 100% every force is stronger, the strongest capped "
+"at the wheel's full force. Auto is 50%."
+msgstr ""
 
 msgctxt "game_options"
 msgid "How the finished frame is magnified to the window."
@@ -9582,6 +9697,10 @@ msgstr "Zlepšený MASH"
 msgctxt "game_options"
 msgid "IMPROVED POLYGON SPLITTING"
 msgstr "Vylepšené dělení Polygonů"
+
+msgctxt "game_options"
+msgid "IN-GAME PAD REMAPPING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "INDY BOARD FORCE DEADBAND"
@@ -10145,6 +10264,11 @@ msgid "Keep original aspect ratio when stretching."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Keep the pixels sharp when scaling the screen, instead of smoothing them."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Keep your top speed even when driving off-road."
 msgstr ""
 
@@ -10419,6 +10543,12 @@ msgid "Landscape"
 msgstr "Krajina"
 
 msgctxt "game_options"
+msgid ""
+"Language reported to the games. It has to be one the installed device "
+"firmware ships."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Large Bottom"
 msgstr "Velký dole"
 
@@ -10487,6 +10617,10 @@ msgstr "Levá ploutev"
 msgctxt "keys_files"
 msgid "Left magnasave"
 msgstr "Levé uložení magna"
+
+msgctxt "keys_files"
+msgid "Left soft key"
+msgstr ""
 
 msgctxt "game_options"
 msgid "Left stick"
@@ -11308,6 +11442,12 @@ msgstr "Paměťový Pak"
 
 msgctxt "game_options"
 msgid ""
+"Memory kept for rewinding when Rewind is on. More goes further back. Auto is "
+"128 MB, about 35 seconds."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Memory mapping improves Vulkan performance. Reduces memory usage and fixes "
 "many graphical issues. However, it may be unstable on some GPUs."
 msgstr ""
@@ -11357,6 +11497,10 @@ msgid "Mexico"
 msgstr "Mexiko"
 
 msgctxt "game_options"
+msgid "Mid (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Minimal"
 msgstr "Minimální"
 
@@ -11374,6 +11518,12 @@ msgstr "Zrcadlové"
 
 msgctxt "game_options"
 msgid "Mission Stick"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Model 2 only. Where the picture's black sits, lower is darker. Auto is 50%, "
+"matched to an arcade capture."
 msgstr ""
 
 msgctxt "game_options"
@@ -11443,6 +11593,13 @@ msgstr "Více kompatibilní"
 msgctxt "game_options"
 msgid "Morocco"
 msgstr "Maroko"
+
+msgctxt "game_options"
+msgid ""
+"Most games run as fast as the screen refreshes. N-Gage games are usually "
+"made for 30 fps or less; at 60 they run too fast. Saved in the game's EKA2L1 "
+"settings."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Most games use port 2, some use port 1."
@@ -11579,6 +11736,30 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "N-GAGE MODEL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage (NEM-4)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage (zoom)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage QD"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage QD (RH-29)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "N64"
 msgstr "N64"
 
@@ -11597,6 +11778,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "NDS VERSION"
 msgstr "VERZE NDS"
+
+msgctxt "game_options"
+msgid "NEAREST NEIGHBOR FILTERING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "NEO GEO BIOS"
@@ -11846,6 +12031,12 @@ msgid "Needed by some games that use special unicode characters."
 msgstr "Potřebují některé hry, které používají speciální unicode znaky."
 
 msgctxt "game_options"
+msgid ""
+"Needs the system HDR option on. Not available with the h264 codec. Moonlight "
+"Qt only."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Neko PSP (Japan)"
 msgstr ""
 
@@ -12079,6 +12270,10 @@ msgstr ""
 msgctxt "game_options"
 msgid "OFF-SCREEN RELOAD BUTTON"
 msgstr "TLAČÍTKO PRO NABÍJENÍ MIMO OBRAZOVKU"
+
+msgctxt "keys_files"
+msgid "OK (middle key)"
+msgstr ""
 
 msgctxt "game_options"
 msgid "ON"
@@ -12340,11 +12535,6 @@ msgstr ""
 msgctxt "game_options"
 msgid "Only increase the image size in integer multiples."
 msgstr "Velikost obrázku zvětšujte pouze v celočíselných násobcích."
-
-msgctxt "game_options"
-msgid "Only some games feature rumble. Not compatible with all controllers."
-msgstr ""
-"Funkci vibrace mají jen některé hry. Není kompatibilní se všemi ovladači."
 
 msgctxt "game_options"
 msgid "Only supported games. Higher settings increase system requirements."
@@ -13078,6 +13268,12 @@ msgid "Phosphor blend level. Core default (60%)."
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Picture of the console around the game, taken from the Android EKA2L1 screen "
+"profile of that name in roms/ngage/EKA2L1/android/profiles."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Pink - Blossom Pink"
 msgstr "Růžová - Růžový Květ"
 
@@ -13153,6 +13349,12 @@ msgstr ""
 msgctxt "game_options"
 msgid "Playfield configuration"
 msgstr "Konfigurace hracího pole"
+
+msgctxt "game_options"
+msgid ""
+"Playing the gun games on a gamepad, the crosshair goes where the stick "
+"points and comes back to the centre at rest, instead of moving like a mouse."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Playstation 2 wheel type"
@@ -13647,6 +13849,10 @@ msgid "REWIND"
 msgstr "PŘETOČIT"
 
 msgctxt "game_options"
+msgid "REWIND MEMORY"
+msgstr ""
+
+msgctxt "game_options"
 msgid "RF"
 msgstr "RF"
 
@@ -14047,6 +14253,10 @@ msgctxt "keys_files"
 msgid "Right magnasave"
 msgstr "Uložení vpravo magna"
 
+msgctxt "keys_files"
+msgid "Right soft key"
+msgstr ""
+
 msgctxt "game_options"
 msgid "Right stick"
 msgstr "Pravá páčka"
@@ -14354,6 +14564,10 @@ msgid "SENSOR SENSITIVITY (TILT)"
 msgstr "CITLIVOST SNÍMAČE (NÁKLON)"
 
 msgctxt "game_options"
+msgid "SERVICE AND TEST BUTTONS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "SET GAELCO SCALING AMOUNT"
 msgstr ""
 
@@ -14448,6 +14662,10 @@ msgstr "JEDINÁ"
 msgctxt "game_options"
 msgid "SIO ACCELERATION"
 msgstr "SIO ZRYCHLENÍ"
+
+msgctxt "game_options"
+msgid "SKIN"
+msgstr ""
 
 msgctxt "game_options"
 msgid "SKIP BIOS INTRO"
@@ -14904,6 +15122,12 @@ msgid "Sega AI software"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Sega Rally and Daytona USA only. The light centring spring of their wheel "
+"panel, in percent of Sega Rally's strongest force. Auto is 20%."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Sega/Mega CD"
 msgstr "Sega/Mega CD"
 
@@ -15177,6 +15401,10 @@ msgstr "Záři"
 msgctxt "game_options"
 msgid "Serbian"
 msgstr "Srbština"
+
+msgctxt "game_options"
+msgid "Service on L3 and Test on R3, to open the test menu."
+msgstr ""
 
 msgctxt "game_options"
 msgid "Set controller 1 and 2 to None to use it standalone."
@@ -16072,6 +16300,13 @@ msgid "Standard OpenGL (Default)"
 msgstr "Standardní OpenGL (Výchozí)"
 
 msgctxt "game_options"
+msgid ""
+"Star Wars Arcade, Sega Touring Car Championship and Top Skater only, the "
+"games with a separate music board. Sound effects stay as they are. Auto is "
+"100%."
+msgstr ""
+
+msgctxt "game_options"
 msgid "Start"
 msgstr ""
 
@@ -16172,12 +16407,6 @@ msgctxt "game_options"
 msgid ""
 "Streams textures to the GPU concurrently. Can improve framerate consistency "
 "on Vulkan."
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Strength of the game's forces, in percent of the wheel's maximum. Auto is "
-"50%."
 msgstr ""
 
 msgctxt "game_options"
@@ -16585,6 +16814,10 @@ msgid "TIMED AXIS INTERVALS"
 msgstr "ČASOVÉ INTERVALY OSY"
 
 msgctxt "game_options"
+msgid "TIMING ACCURACY"
+msgstr ""
+
+msgctxt "game_options"
 msgid "TOGGLE FAST FORWARD"
 msgstr ""
 
@@ -16839,6 +17072,12 @@ msgid "The day within the month of your birthday."
 msgstr "Den v měsíci vašich narozenin."
 
 msgctxt "game_options"
+msgid ""
+"The drive board's forces on a wheel, or rumble on a pad, in games that have "
+"one. On by default with a wheel."
+msgstr ""
+
+msgctxt "game_options"
 msgid "The emulated graphics card."
 msgstr "Emulovaná grafická karta."
 
@@ -16881,6 +17120,16 @@ msgstr "Měsíc vašeho narození."
 
 msgctxt "game_options"
 msgid "The month of your birthday."
+msgstr ""
+
+msgctxt "game_options"
+msgid "The operator's force setting of the drive board, as on the cabinet."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"The operator's force setting on the drive board's DIP switches. 0 is how the "
+"boards leave the factory, 7 is the most force a cabinet can have."
 msgstr ""
 
 msgctxt "game_options"
@@ -18147,6 +18396,10 @@ msgstr "Střední zóna kola"
 msgctxt "game_options"
 msgid "WHEEL MODEL"
 msgstr "Model kolečka"
+
+msgctxt "game_options"
+msgid "WHEEL PANEL SPRING"
+msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL ROTATION"
@@ -21204,6 +21457,11 @@ msgstr "žlutá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "Only for Super Game Boy enhanced games."
 #~ msgstr "Pouze pro vylepšené hry pro Super Game Boy."
+
+#~ msgctxt "game_options"
+#~ msgid "Only some games feature rumble. Not compatible with all controllers."
+#~ msgstr ""
+#~ "Funkci vibrace mají jen některé hry. Není kompatibilní se všemi ovladači."
 
 #~ msgctxt "game_options"
 #~ msgid ""

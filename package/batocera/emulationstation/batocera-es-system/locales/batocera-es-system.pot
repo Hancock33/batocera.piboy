@@ -2401,6 +2401,14 @@ msgid "MOUSE AS WIIMOTE POINTER"
 msgstr ""
 
 msgctxt "game_options"
+msgid "Service on L3 and Test on R3, to open the test menu."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SERVICE AND TEST BUTTONS"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Writes are saved per-game in saves/dos/game-rom-name"
 msgstr ""
 
@@ -3400,6 +3408,146 @@ msgid "Zulu"
 msgstr ""
 
 msgctxt "game_options"
+msgid ""
+"Most games run as fast as the screen refreshes. N-Gage games are usually "
+"made for 30 fps or less; at 60 they run too fast. Saved in the game's EKA2L1 "
+"settings."
+msgstr ""
+
+msgctxt "game_options"
+msgid "FPS LIMIT"
+msgstr ""
+
+msgctxt "game_options"
+msgid "15 fps"
+msgstr ""
+
+msgctxt "game_options"
+msgid "20 fps"
+msgstr ""
+
+msgctxt "game_options"
+msgid "25 fps"
+msgstr ""
+
+msgctxt "game_options"
+msgid "30 fps"
+msgstr ""
+
+msgctxt "game_options"
+msgid "60 fps"
+msgstr ""
+
+msgctxt "game_options"
+msgid "120 fps"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Accuracy of the emulated system timers. Lower is faster, higher fixes some "
+"games running too fast or too slow."
+msgstr ""
+
+msgctxt "game_options"
+msgid "TIMING ACCURACY"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Mid (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Hold hotkey alone for 3 seconds during the game to change which phone key a "
+"pad button sends. Saved for the game."
+msgstr ""
+
+msgctxt "game_options"
+msgid "IN-GAME PAD REMAPPING"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Keep the pixels sharp when scaling the screen, instead of smoothing them."
+msgstr ""
+
+msgctxt "game_options"
+msgid "NEAREST NEIGHBOR FILTERING"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Language reported to the games. It has to be one the installed device "
+"firmware ships."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SYSTEM LANGUAGE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Swedish"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Danish"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Norwegian"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Finnish"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Device used to run the game cards, when both are installed."
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-GAGE MODEL"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Auto"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage QD (RH-29)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage (NEM-4)"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Picture of the console around the game, taken from the Android EKA2L1 screen "
+"profile of that name in roms/ngage/EKA2L1/android/profiles."
+msgstr ""
+
+msgctxt "game_options"
+msgid "SKIN"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Game only"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage (zoom)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "N-Gage QD"
+msgstr ""
+
+msgctxt "game_options"
 msgid "Force the game to render in this aspect ratio."
 msgstr ""
 
@@ -3421,6 +3569,10 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "4.5x (2880x2160)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Vulkan (Default)"
 msgstr ""
 
 msgctxt "game_options"
@@ -3561,70 +3713,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "DIGITAL SOUND PROCESSOR"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Match the colours to the way the console's video output looks on a real "
-"display."
-msgstr ""
-
-msgctxt "game_options"
-msgid "COLOUR PALETTE"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Unscaled capture (Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Full contrast"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Cheap HDMI converter"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Flawed theory (legacy)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Use the software renderer when the hardware one misbehaves."
-msgstr ""
-
-msgctxt "game_options"
-msgid "RENDERER"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Hardware (Default)"
-msgstr ""
-
-msgctxt "game_options"
-msgid ""
-"Finish each blit immediately rather than over the cycles the real hardware "
-"takes."
-msgstr ""
-
-msgctxt "game_options"
-msgid "INSTANT BLITS"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Drive the GameTank paddle with the mouse, for the games that use it."
-msgstr ""
-
-msgctxt "game_options"
-msgid "PADDLE EMULATION"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Turn off to silence the audio coprocessor entirely."
-msgstr ""
-
-msgctxt "game_options"
-msgid "AUDIO COPROCESSOR"
 msgstr ""
 
 msgctxt "game_options"
@@ -3986,10 +4074,6 @@ msgid "FPS TARGET"
 msgstr ""
 
 msgctxt "game_options"
-msgid "30 fps"
-msgstr ""
-
-msgctxt "game_options"
 msgid "50 fps"
 msgstr ""
 
@@ -4003,10 +4087,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "100 fps"
-msgstr ""
-
-msgctxt "game_options"
-msgid "120 fps"
 msgstr ""
 
 msgctxt "game_options"
@@ -6517,10 +6597,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ADHOC RELAY MODE"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Auto"
 msgstr ""
 
 msgctxt "game_options"
@@ -10917,6 +10993,14 @@ msgid ""
 msgstr ""
 
 msgctxt "game_options"
+msgid "RENDERER"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Hardware (Default)"
+msgstr ""
+
+msgctxt "game_options"
 msgid "paraLLEl-GS"
 msgstr ""
 
@@ -12479,10 +12563,6 @@ msgid "RENDER"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Vulkan (Default)"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Cap maximum framerate to prevent physics acceleration or stutter."
 msgstr ""
 
@@ -13176,19 +13256,11 @@ msgid "Czech"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Danish"
-msgstr ""
-
-msgctxt "game_options"
 msgid "English (United Kingdom)"
 msgstr ""
 
 msgctxt "game_options"
 msgid "English (United States)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Finnish"
 msgstr ""
 
 msgctxt "game_options"
@@ -13237,10 +13309,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Spanish (Spain)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Swedish"
 msgstr ""
 
 msgctxt "game_options"
@@ -13305,6 +13373,16 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ENABLE LOGGING"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Memory kept for rewinding when Rewind is on. More goes further back. Auto is "
+"128 MB, about 35 seconds."
+msgstr ""
+
+msgctxt "game_options"
+msgid "REWIND MEMORY"
 msgstr ""
 
 msgctxt "game_options"
@@ -13426,7 +13504,28 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Model 2 only. Where the picture's black sits, lower is darker. Auto is 50%, "
+"matched to an arcade capture."
+msgstr ""
+
+msgctxt "game_options"
+msgid "BRIGHTNESS"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Sync to the display refresh to prevent tearing. Disable for VRR displays."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Star Wars Arcade, Sega Touring Car Championship and Top Skater only, the "
+"games with a separate music board. Sound effects stay as they are. Auto is "
+"100%."
+msgstr ""
+
+msgctxt "game_options"
+msgid "MUSIC VOLUME"
 msgstr ""
 
 msgctxt "game_options"
@@ -13464,6 +13563,16 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Playing the gun games on a gamepad, the crosshair goes where the stick "
+"points and comes back to the centre at rest, instead of moving like a mouse."
+msgstr ""
+
+msgctxt "game_options"
+msgid "CENTRED STICK AIM"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "Draw the emulator's crosshairs. By default they show only for guns that need "
 "them."
 msgstr ""
@@ -13480,12 +13589,33 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
-"Strength of the game's forces, in percent of the wheel's maximum. Auto is "
-"50%."
+"How strong the game's forces are. At 100% the game's strongest force is the "
+"wheel's full force. Above 100% every force is stronger, the strongest capped "
+"at the wheel's full force. Auto is 50%."
 msgstr ""
 
 msgctxt "game_options"
 msgid "WHEEL FORCE FEEDBACK STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Sega Rally and Daytona USA only. The light centring spring of their wheel "
+"panel, in percent of Sega Rally's strongest force. Auto is 20%."
+msgstr ""
+
+msgctxt "game_options"
+msgid "WHEEL PANEL SPRING"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"The operator's force setting on the drive board's DIP switches. 0 is how the "
+"boards leave the factory, 7 is the most force a cabinet can have."
+msgstr ""
+
+msgctxt "game_options"
+msgid "DRIVE BOARD DIP STRENGTH"
 msgstr ""
 
 msgctxt "game_options"
@@ -13798,7 +13928,29 @@ msgid "P1 & P2"
 msgstr ""
 
 msgctxt "game_options"
-msgid "Only some games feature rumble. Not compatible with all controllers."
+msgid ""
+"The drive board's forces on a wheel, or rumble on a pad, in games that have "
+"one. On by default with a wheel."
+msgstr ""
+
+msgctxt "game_options"
+msgid "The operator's force setting of the drive board, as on the cabinet."
+msgstr ""
+
+msgctxt "game_options"
+msgid "DRIVE BOARD STRENGTH"
+msgstr ""
+
+msgctxt "game_options"
+msgid "1 (Weakest)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "5 (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "8 (Strongest)"
 msgstr ""
 
 msgctxt "game_options"
@@ -14096,10 +14248,6 @@ msgid "Set the system language reported to applications."
 msgstr ""
 
 msgctxt "game_options"
-msgid "SYSTEM LANGUAGE"
-msgstr ""
-
-msgctxt "game_options"
 msgid "English (US)"
 msgstr ""
 
@@ -14113,10 +14261,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Chinese (Simplified)"
-msgstr ""
-
-msgctxt "game_options"
-msgid "Norwegian"
 msgstr ""
 
 msgctxt "game_options"
@@ -15442,6 +15586,62 @@ msgstr ""
 
 msgctxt "game_options"
 msgid ""
+"Match the colours to the way the console's video output looks on a real "
+"display."
+msgstr ""
+
+msgctxt "game_options"
+msgid "COLOUR PALETTE"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Unscaled capture (Default)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Full contrast"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Cheap HDMI converter"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Flawed theory (legacy)"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Use the software renderer when the hardware one misbehaves."
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Finish each blit immediately rather than over the cycles the real hardware "
+"takes."
+msgstr ""
+
+msgctxt "game_options"
+msgid "INSTANT BLITS"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Drive the GameTank paddle with the mouse, for the games that use it."
+msgstr ""
+
+msgctxt "game_options"
+msgid "PADDLE EMULATION"
+msgstr ""
+
+msgctxt "game_options"
+msgid "Turn off to silence the audio coprocessor entirely."
+msgstr ""
+
+msgctxt "game_options"
+msgid "AUDIO COPROCESSOR"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
 "h265 (HEVC) is CPU heavy and increases latency, but is more bandwidth "
 "efficient."
 msgstr ""
@@ -15474,6 +15674,16 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "ROTATE"
+msgstr ""
+
+msgctxt "game_options"
+msgid ""
+"Needs the system HDR option on. Not available with the h264 codec. Moonlight "
+"Qt only."
+msgstr ""
+
+msgctxt "game_options"
+msgid "HDR STREAMING"
 msgstr ""
 
 msgctxt "game_options"
@@ -15928,10 +16138,6 @@ msgid "Adjust the music volume. Some tables may have its own settings."
 msgstr ""
 
 msgctxt "game_options"
-msgid "MUSIC VOLUME"
-msgstr ""
-
-msgctxt "game_options"
 msgid "Adjust the mechanical sounds of the table."
 msgstr ""
 
@@ -16341,10 +16547,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Change the game's brightness."
-msgstr ""
-
-msgctxt "game_options"
-msgid "BRIGHTNESS"
 msgstr ""
 
 msgctxt "game_options"
@@ -17164,10 +17366,6 @@ msgstr ""
 
 msgctxt "game_options"
 msgid "Set the fps limit."
-msgstr ""
-
-msgctxt "game_options"
-msgid "FPS LIMIT"
 msgstr ""
 
 msgctxt "game_options"
@@ -18665,6 +18863,62 @@ msgstr ""
 
 msgctxt "keys_files"
 msgid "Virtual Keyboard"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "1"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "2"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "3"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "4"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "5"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "6"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "7"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "8"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "0"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "Right soft key"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "Left soft key"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "OK (middle key)"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "*"
+msgstr ""
+
+msgctxt "keys_files"
+msgid "#"
 msgstr ""
 
 msgctxt "keys_files"
