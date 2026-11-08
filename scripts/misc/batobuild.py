@@ -427,7 +427,7 @@ def cmd_build(s: Session, a: argparse.Namespace) -> int:
             rc = s.run(brmake_command(), cwd=t.path, env=env)
         results.append((t, rc, time.monotonic() - started))
         if rc and not a.keep_going:
-            warn(f"{t.name} failed (exit {rc}) - stopping. Use --keep-going to continue.")
+            warn(f"{t.name} failed (exit {rc}) - stopping (--no-keep-going).")
             break
 
     if not a.no_tidy:
@@ -698,8 +698,9 @@ def build_parser() -> argparse.ArgumentParser:
                         "affects other programs, so now opt-in)")
     b.add_argument("--no-tidy", action="store_true",
                    help="skip the post-build removal of old versions")
-    b.add_argument("--keep-going", action="store_true",
-                   help="continue with other targets if one fails")
+    b.add_argument("--keep-going", action=opt, default=True,
+                   help="continue with other targets if one fails (default); "
+                        "--no-keep-going stops at the first failure")
     b.set_defaults(func=cmd_build)
 
     c = sp.add_parser("clean", help="clean build directories")
