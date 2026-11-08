@@ -293,7 +293,7 @@ Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|61e743bbd94b1bf
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.12.1|Jul 27, 2026
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Emulators|[ymir](https://github.com/ymir-emu/Ymir)|v0.4.1|Oct 18, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.167.9614-607|Nov 06, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.167.9616-608|Nov 08, 2026
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|8819dd6e1d80703d3f195fcfee3e992b72c72a26|Nov 08, 2026
 Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|acc608afcfef0999ca17aba4f3e5aa572d202176|Nov 01, 2026
@@ -304,7 +304,7 @@ Engines|[libdof](http://github.com/jsm174/libdof)|5c54ef784ddc31738a9b2a422380f1
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|aa2a26dc8e852cff710e398d50cd8574460e6c5f|Nov 06, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libmysofa](http://github.com/hoene/libmysofa)|648eed03472e6720a1ea45d1a1f86c4efb569ff9|Sept 08, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|3c645a73e4747703af85516939927577fa52d113|Nov 06, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|1e0703dd77018cc6f77f19e27d8a0c436bda8b46|Nov 08, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a3147e6de90635d|Sept 09, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
 Engines|[libspatialaudio](http://github.com/videolan/libspatialaudio)|d149ed9744fd399b835c6f2920511f8cbcfce5ea|Jul 01, 2026
@@ -323,7 +323,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|8c19b30bd9b5ce13437beb755edbfd561b330a47|Nov 08, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|0a84546d0f3f727a4a159b424afae2a675c0fdbb|Nov 07, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|4fd4426ca5a6a1f964c94b67bb8d91c4d2a8bc08|Nov 08, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
@@ -604,6 +604,6 @@ Wine|[rtkit](https://gitlab.freedesktop.org/pipewire/rtkit/-/archive/)|v0.14|Dec
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.1|Oct 28, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.21|Oct 30, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261015-proton-dev|Oct 15, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261107-proton-dev|Nov 08, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261107|Nov 07, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|f3890f670867b5ffbc3938726db45c0f7d16c8ba|Aug 10, 2026

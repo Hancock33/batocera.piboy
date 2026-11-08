@@ -13,8 +13,12 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|4b3addb381df5008f276bc95dcd
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|61e743bbd94b1bf534565feeb0e5c39292abc29f|Nov 08, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|8c19b30bd9b5ce13437beb755edbfd561b330a47|Nov 08, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|8f9e0dbc19e815011ffffade86f4d27fd97077d4|Nov 08, 2026
+Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261107-proton-dev|Nov 08, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|2225f17144d2d63589e561ae19ee33458f889866|Nov 08, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|8819dd6e1d80703d3f195fcfee3e992b72c72a26|Nov 08, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.167.9616-608|Nov 08, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|1e0703dd77018cc6f77f19e27d8a0c436bda8b46|Nov 08, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|4fd4426ca5a6a1f964c94b67bb8d91c4d2a8bc08|Nov 08, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|5dcaeb1abff9e82dee90155965e0426c787bd549|Nov 08, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|5ed0e3b1ae60aca850e08840ef4783eb98d59d0d|Nov 08, 2026
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|7ec223cfd29e0c20d8e52927dcc3d0c27d9ca7ac|Nov 08, 2026
@@ -43,7 +47,6 @@ Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|5d4928942ba0343
 Utils|[7zip](https://github.com/ip7z/7zip/releases)|26.06|Nov 07, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261107|Nov 07, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-super)|9edb6adf917c943dafd83693a7a7f5d2c273c02c|Nov 07, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|0a84546d0f3f727a4a159b424afae2a675c0fdbb|Nov 07, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261107|Nov 07, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|6ffe33bc980046e9c8422a54a3554479501f6e50|Nov 07, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261107|Nov 07, 2026
@@ -67,9 +70,7 @@ Emulators|[mupen64plus-core](http://github.com/mupen64plus/mupen64plus-core)|a9c
 Emulators|[mupen64plus-rsp-hle](http://github.com/mupen64plus/mupen64plus-rsp-hle)|dd09c7dcdc6d2cff584aacb9d519600d47d61039|Nov 06, 2026
 Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64plus-video-glide64mk2)|3d323245282e146c488fba2ecbabb4b89a060c26|Nov 06, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|19c72e64aa700d34a0fbb6c306bdbae6047d08a7|Nov 06, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.167.9614-607|Nov 06, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|aa2a26dc8e852cff710e398d50cd8574460e6c5f|Nov 06, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|3c645a73e4747703af85516939927577fa52d113|Nov 06, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|c878f7dbfd9e9cec33bcbf0e896f1188a01933b8|Nov 06, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|e9b94dc1a89bcd8867e2d16b37cd6f1cbd4dbd1c|Nov 06, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0-rc2|Nov 06, 2026
@@ -199,7 +200,6 @@ Emulators|[libretro-eka2l1](https://github.com/WizzardSK/eka2l1-libretro.git)|e3
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.1.0|Oct 15, 2026
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|d4915ac97730e78e43f985dabcf3903e85eb8b0a|Oct 15, 2026
 Ports|[opengoal](http://github.com/open-goal/jak-project)|v0.3.9|Oct 15, 2026
-Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261015-proton-dev|Oct 15, 2026
 Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.2-Piers|Oct 14, 2026
 Utils|[imgui](http://github.com/ocornut/imgui)|v1.93.0|Oct 14, 2026
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EPOCH84/libretro-emuscv)|33900ce24f45c429b533fdae7844e04d64a9a1b9|Oct 14, 2026
