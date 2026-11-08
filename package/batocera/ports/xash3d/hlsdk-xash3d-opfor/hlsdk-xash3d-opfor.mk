@@ -3,8 +3,8 @@
 # hlsdk-xash3d-opfor
 #
 ################################################################################
-# Version: Commits on Oct 31, 2026
-HLSDK_XASH3D_OPFOR_VERSION = ccec725dfb7ac2b8b4dc6d1520faf32a43413562
+# Version: Commits on Nov 08, 2026
+HLSDK_XASH3D_OPFOR_VERSION = c3d8dd6f729adeda87d4ce73d4b2de989cd81b93
 HLSDK_XASH3D_OPFOR_BRANCH = opforfixed
 HLSDK_XASH3D_OPFOR_SITE = https://github.com/FWGS/hlsdk-portable.git
 HLSDK_XASH3D_OPFOR_SITE_METHOD=git
