@@ -3,8 +3,8 @@
 # odin
 #
 ################################################################################
-
-ODIN_VERSION = v0.1.1
+# Version: Commits on Nov 08, 2026
+ODIN_VERSION = 6ebf2b40ccbca9534d1a0e58b7602db11e4485d9
 ODIN_SITE = $(call github,Tovarichtch,Odin,$(ODIN_VERSION))
 ODIN_LICENSE = GPL-3.0+
 ODIN_LICENSE_FILES = LICENSE
