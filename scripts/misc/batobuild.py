@@ -28,6 +28,7 @@ import shutil
 import subprocess
 import sys
 import time
+from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Iterable
@@ -54,6 +55,18 @@ def red(t): return paint(t, "1;31")
 def green(t): return paint(t, "1;32")
 def yellow(t): return paint(t, "1;33")
 def blue(t): return paint(t, "1;34")
+
+
+@contextmanager
+def background(code: str):
+    """Tint the terminal background while a build runs, always reset after."""
+    if USE_COLOR:
+        print(f"\033[{code}m", end="", flush=True)
+    try:
+        yield
+    finally:
+        if USE_COLOR:
+            print("\033[0m", end="", flush=True)
 
 
 def banner(title: str) -> None:
@@ -129,6 +142,11 @@ class Target:
     def build(self) -> Path:
         return self.path / "build"
 
+    @property
+    def bg(self) -> str:
+        """Background code matching the colour: "1;32" -> "1;42"."""
+        return self.color.replace(";3", ";4")
+
     def label(self) -> str:
         return paint(self.name, self.color)
 
@@ -140,7 +158,7 @@ TARGETS = (
     Target("x86_64", "x86_64", "image", "x86", "1;36"),
     Target("rpi4", "piboy4", "image", "rpi", "1;31"),
 )
-ARCH_NAMES = {"rpi": "Raspberry Pi",
+ARCH_NAMES = {"rpi": "Raspberry Pi4",
               "x86": "X86_64"}
 
 
@@ -405,7 +423,8 @@ def cmd_build(s: Session, a: argparse.Namespace) -> int:
             s.run(["sudo", "sh", "-c", "rm -rf /tmp/*"], cwd=HOME)
         started = time.monotonic()
         env = {**os.environ, "CONFIG_SHELL": "/bin/bash"}
-        rc = s.run(brmake_command(), cwd=t.path, env=env)
+        with background(t.bg):
+            rc = s.run(brmake_command(), cwd=t.path, env=env)
         results.append((t, rc, time.monotonic() - started))
         if rc and not a.keep_going:
             warn(f"{t.name} failed (exit {rc}) - stopping. Use --keep-going to continue.")
@@ -596,7 +615,9 @@ def cmd_mame(s: Session, a: argparse.Namespace) -> int:
             continue
         for pkg in packages:
             step(f"{pkg} ({t.label()})")
-            if s.run(brmake_command(f"{pkg}-src"), cwd=t.path):
+            with background(t.bg):
+                rc = s.run(brmake_command(f"{pkg}-src"), cwd=t.path)
+            if rc:
                 failed.append(f"{t.name}/{pkg}")
     print()
     if failed:
