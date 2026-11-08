@@ -1,0 +1,17 @@
+diff --git a/Source/Core/InputCommon/ControllerInterface/ControllerInterface.h b/Source/Core/InputCommon/ControllerInterface/ControllerInterface.h
+index d81088d322..93609a21ac 100644
+--- a/Source/Core/InputCommon/ControllerInterface/ControllerInterface.h
++++ b/Source/Core/InputCommon/ControllerInterface/ControllerInterface.h
+@@ -17,9 +17,9 @@
+ 
+ // enable disable sources
+ #define CIFACE_USE_DUALSHOCKUDPCLIENT
+-#if defined(HAVE_HIDAPI)
+-#define CIFACE_USE_STEAMDECK
+-#endif
++//#if defined(HAVE_HIDAPI)
++//#define CIFACE_USE_STEAMDECK
++//#endif
+ 
+ namespace ciface
+ {
