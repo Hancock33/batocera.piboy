@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 08, 2026
-BATOCERA_EMULATIONSTATION_VERSION = dbd1028e970a8eb18eda9c2444e2b7d9017e2705
+BATOCERA_EMULATIONSTATION_VERSION = 3dd4157dfd324a516a6a57acb805342ede9478a2
 BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
