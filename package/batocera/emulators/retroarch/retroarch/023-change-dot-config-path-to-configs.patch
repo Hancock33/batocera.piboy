@@ -1,5 +1,5 @@
 diff --git a/docs/retroarch.6 b/docs/retroarch.6
-index 342756d..e2c71aa 100644
+index 2730a17fb4..3a8e983eb6 100644
 --- a/docs/retroarch.6
 +++ b/docs/retroarch.6
 @@ -22,7 +22,7 @@ It also features a simple built-in UI.
@@ -11,7 +11,7 @@ index 342756d..e2c71aa 100644
  
  .TP
  \fBNo command line options will start RetroArch in menu mode.\fR
-@@ -96,7 +96,7 @@ Should this not be defined, \fBretroarch\fR will look in platform specific paths
+@@ -159,7 +159,7 @@ Should this not be defined, \fBretroarch\fR will look in platform specific paths
  /etc/retroarch.cfg should serve as a skeleton config only.
  
  .IP
@@ -21,7 +21,7 @@ index 342756d..e2c71aa 100644
  If RetroArch creates a new default config file, it will attempt to load the skeleton config file /etc/retroarch.cfg and use that as a basis.
  This allows distributions to set up default paths for libretro cores, and similar things.
 diff --git a/file_path_special.c b/file_path_special.c
-index 5163cfc..3a5d4d3 100644
+index 1b5617abe2..f7b941b831 100644
 --- a/file_path_special.c
 +++ b/file_path_special.c
 @@ -162,7 +162,7 @@ bool fill_pathname_application_data(char *s, size_t len)
@@ -43,10 +43,10 @@ index 5163cfc..3a5d4d3 100644
        return true;
     }
 diff --git a/frontend/drivers/platform_unix.c b/frontend/drivers/platform_unix.c
-index e391824..13fecfe 100644
+index 693377abd3..7cecf136a0 100644
 --- a/frontend/drivers/platform_unix.c
 +++ b/frontend/drivers/platform_unix.c
-@@ -3504,7 +3504,7 @@ static void frontend_unix_get_env(int *argc,
+@@ -3579,7 +3579,7 @@ static void frontend_unix_get_env(int *argc,
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
@@ -55,7 +55,7 @@ index e391824..13fecfe 100644
     }
     else
        strlcpy_lit(base_path, "retroarch", sizeof(base_path));
-@@ -4263,7 +4263,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
+@@ -4288,7 +4288,7 @@ static int frontend_unix_parse_drive_list(void *data, bool load_content)
     else if (home)
     {
        size_t _len = strlcpy(base_path, home, sizeof(base_path));
@@ -65,7 +65,7 @@ index e391824..13fecfe 100644
  #endif
  
 diff --git a/pkg/sailfishos/retroarch-sailfishos.spec b/pkg/sailfishos/retroarch-sailfishos.spec
-index bbdc9ac..42992c5 100644
+index bbdc9ac076..42992c59d4 100644
 --- a/pkg/sailfishos/retroarch-sailfishos.spec
 +++ b/pkg/sailfishos/retroarch-sailfishos.spec
 @@ -41,8 +41,8 @@ make %{?_smp_mflags}
@@ -80,10 +80,10 @@ index bbdc9ac..42992c5 100644
     s|^# video_fullscreen =.*|video_fullscreen = "true"|;
     s|^# menu_driver =.*|menu_driver = "glui"|;
 diff --git a/retroarch.c b/retroarch.c
-index 90d33e2..e85c6b2 100644
+index 4867432317..1762295549 100644
 --- a/retroarch.c
 +++ b/retroarch.c
-@@ -7808,7 +7808,7 @@ static void retroarch_print_help(const char *arg0)
+@@ -7901,7 +7901,7 @@ static void retroarch_print_help(const char *arg0)
           "                                 "
           "  $XDG_CONFIG_HOME/retroarch/retroarch.cfg,\n"
           "                                 "

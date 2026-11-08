@@ -1,8 +1,8 @@
 diff --git a/configuration.c b/configuration.c
-index 3892f9a..294992e 100644
+index 9007b6fb90..f5d6511926 100644
 --- a/configuration.c
 +++ b/configuration.c
-@@ -8681,12 +8681,33 @@ static void save_keybind_mbutton(config_file_t *conf,
+@@ -8868,12 +8868,33 @@ static void save_keybind_mbutton(config_file_t *conf,
        case RETRO_DEVICE_ID_MOUSE_MIDDLE:
           config_set_uint64(conf, key, 3);
           break;
@@ -38,7 +38,7 @@ index 3892f9a..294992e 100644
        case RETRO_DEVICE_ID_MOUSE_WHEELUP:
           config_set_string(conf, key, "wu");
           break;
-@@ -11473,11 +11494,32 @@ void input_config_parse_mouse_button(char *s,
+@@ -11872,11 +11893,32 @@ void input_config_parse_mouse_button(char *s,
                 RETRO_KEYBIND_SET_MBUTTON(bind, RETRO_DEVICE_ID_MOUSE_MIDDLE);
                 break;
              case 4:
@@ -73,7 +73,7 @@ index 3892f9a..294992e 100644
        }
     }
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index c972a30..757dc78 100644
+index 25546f5673..f524bdef91 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
 @@ -235,7 +235,7 @@ typedef struct
@@ -145,7 +145,7 @@ index c972a30..757dc78 100644
              return mouse->wu;
           case RETRO_DEVICE_ID_MOUSE_WHEELDOWN:
 diff --git a/libretro-common/include/libretro.h b/libretro-common/include/libretro.h
-index 5d68353..091c84d 100644
+index 80d31f2e6b..75354dc670 100644
 --- a/libretro-common/include/libretro.h
 +++ b/libretro-common/include/libretro.h
 @@ -431,8 +431,15 @@ extern "C" {
@@ -167,10 +167,10 @@ index 5d68353..091c84d 100644
  /* Id values for LIGHTGUN. */
  #define RETRO_DEVICE_ID_LIGHTGUN_SCREEN_X        13 /*Absolute Position*/
 diff --git a/menu/menu_driver.c b/menu/menu_driver.c
-index f1a603c..d331d04 100644
+index 0f124c8e17..3be4760678 100644
 --- a/menu/menu_driver.c
 +++ b/menu/menu_driver.c
-@@ -1771,8 +1771,15 @@ static bool menu_input_key_bind_poll_find_hold_pad(
+@@ -1773,8 +1773,15 @@ static bool menu_input_key_bind_poll_find_hold_pad(
           case RETRO_DEVICE_ID_MOUSE_LEFT:
           case RETRO_DEVICE_ID_MOUSE_RIGHT:
           case RETRO_DEVICE_ID_MOUSE_MIDDLE:

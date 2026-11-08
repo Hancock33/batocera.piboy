@@ -1,5 +1,5 @@
 diff --git a/input/drivers_joypad/udev_joypad.c b/input/drivers_joypad/udev_joypad.c
-index 6c877a4..2b7cb07 100644
+index 5436d87a76..a026d0f5f8 100644
 --- a/input/drivers_joypad/udev_joypad.c
 +++ b/input/drivers_joypad/udev_joypad.c
 @@ -103,6 +103,7 @@ struct udev_joypad
