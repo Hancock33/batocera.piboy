@@ -33,7 +33,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_MPV
 	bool "mpv"
 
 	help
-	  Plays an animated video splash utilizing platform-specific HW
+	  Plays an animated video splash utilising platform-specific HW
 	  decoding.
 
 endchoice
@@ -98,7 +98,7 @@ endif
 # decoding (hwdec) paths required by individual target kernels.
 
 # Mainline Rockchip Profile:
-# Modern Rockchip devices running mainline Linux kernels which utilize the
+# Modern Rockchip devices running mainline Linux kernels which utilise the
 # stateless V4L2 request API (using '--hwdec=v4l2request').
 if BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
    BR2_PACKAGE_BATOCERA_TARGET_RK3568          || \
@@ -109,7 +109,7 @@ config BR2_PACKAGE_BATOCERA_SPLASH_MPV_RK_MAINLINE
 endif
 
 # Raspberry Pi Profile:
-# Broadcom SoC devices utilizing the custom GPU/DRM copy interface
+# Broadcom SoC devices utilising the custom GPU/DRM copy interface
 # (using '--hwdec=drm-copy').
 if BR2_PACKAGE_BATOCERA_RPI_ANY
 config BR2_PACKAGE_BATOCERA_SPLASH_MPV_RPI

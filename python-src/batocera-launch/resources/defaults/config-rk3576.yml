@@ -1,3 +1,9 @@
+flash:
+  emulator: lightspark
+  core:     lightspark
+fmtowns:
+  emulator: libretro
+  core:     mame
 gamecube:
   emulator: dolphin
   core:     dolphin
@@ -7,24 +13,18 @@ gamecube:
 nds:
   emulator: drastic
   core:     drastic
-wii:
-  emulator: dolphin
-  core:     dolphin
-  options:
-    gfxbackend: Vulkan
-    dual_core: true
-fmtowns:
-  emulator: libretro
-  core:     mame
-psx:
-  options:
-    hud_support: false # duckstation doesn't like it
 ps2:
   emulator: libretro
   core:     play
 psp:
   options:
     gfxbackend: VULKAN
-flash:
-  emulator: lightspark
-  core:     lightspark
+psx:
+  options:
+    hud_support: false # duckstation doesn't like it
+wii:
+  emulator: dolphin
+  core:     dolphin
+  options:
+    gfxbackend: Vulkan
+    dual_core: true

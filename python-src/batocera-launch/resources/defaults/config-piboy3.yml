@@ -9,10 +9,10 @@ default:
     video_threaded: true
     hud_support: false
 
-amiga500:
+amiga1200:
   emulator: libretro
   core:     uae4arm
-amiga1200:
+amiga500:
   emulator: libretro
   core:     uae4arm
 amigacd32:
@@ -21,12 +21,12 @@ amigacd32:
 amigacdtv:
   emulator: libretro
   core:     uae4arm
-nds:
-  emulator: drastic
-  core:     drastic
 fmtowns:
   emulator: libretro
   core:     mame
+nds:
+  emulator: drastic
+  core:     drastic
 psx:
   options:
     gpu_software: true

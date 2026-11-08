@@ -581,7 +581,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_BATOCERA_TORRENT
 
     # required gcc flags
-    # required for different emulators, i suggest to enable it always to not have different behavior depending on boards
+    # required for different emulators, i suggest to enable it always to not have different behaviour depending on boards
     select BR2_GCC_ENABLE_OPENMP
 
     # odin wifi baseband dependencies
@@ -1055,6 +1055,13 @@ config BR2_PACKAGE_BATOCERA_SEGADC
                                                                !BR2_PACKAGE_BATOCERA_TARGET_X86         && \
                                                                !BR2_riscv
 
+    select BR2_PACKAGE_LIBRETRO_PARALLEL_DC                 if !BR2_PACKAGE_BATOCERA_TARGET_BCM2836     && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_BCM2837     && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_H3          && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_H5          && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_X86         && \
+                                                               !BR2_riscv
+
    #select BR2_PACKAGE_REDREAM                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     help
@@ -1084,6 +1091,15 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
     select BR2_PACKAGE_SUPERMODEL                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
    #select BR2_PACKAGE_LIBRETRO_SUPERMODEL                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
+   # Standalone Sega Hikaru & Gaelco emulator
+   select BR2_PACKAGE_ODIN                                  if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SDM845      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_QCS6490     || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8250      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8550      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8650      || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_SM8750
+ 
     # RetroArch MAME derivatives
     select BR2_PACKAGE_LIBRETRO_MAME2003_PLUS               # ALL
     select BR2_PACKAGE_LIBRETRO_MAME                        if !BR2_PACKAGE_BATOCERA_TARGET_H3          && \
@@ -1353,7 +1369,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     # Star Wars - Jedi Academy
     select BR2_PACKAGE_OPENJK                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
-    # Medal of Honor: Allied Assault
+    # Medal of Honour: Allied Assault
     select BR2_PACKAGE_OPENMOHAA                            if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # OpenGOAL (Jak and Daxter trilogy)
@@ -1528,6 +1544,16 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576
 
     select BR2_PACKAGE_LIBRETRO_DOLPHIN                     if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY               || \
+                                                                BR2_PACKAGE_BATOCERA_BCM27XX                         || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_S922X                    || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_A3GEN2                   || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588                   || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO              || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_SMXXXX_PLATFORM || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3576
+
+    select BR2_PACKAGE_LIBRETRO_PARALLEL_GX1                if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY               || \
                                                                 BR2_PACKAGE_BATOCERA_BCM27XX                         || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X                    || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2                   || \

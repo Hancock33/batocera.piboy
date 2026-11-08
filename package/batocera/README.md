@@ -2,7 +2,7 @@
 
  - `audio` Audio codecs, ALSA configuration and other sound-related packages.
  - `boot` These are the makefiles for building the boot partition. Usually just a manner of copying files over from the below directory, but sometimes require a bit more complex instructions.
- - `controllers` Support for extraneous controllers that EmulationStation/Batocera can't recognize by default.
+ - `controllers` Support for extraneous controllers that EmulationStation/Batocera can't recognise by default.
  - `core` The "meat and potatoes" of Batocera. This contains most "batocera-<X>" packages, such as the config generators, ES system configurations, system utilities, splash, etc.
  - `database` Database packages used by Batocera services.
  - `emulationstation` The EmulationStation frontend, its system configuration, web UI and bundled themes.

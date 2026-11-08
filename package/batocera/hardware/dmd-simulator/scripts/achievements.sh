@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# keep customizable
+# keep customisable
 test -e "/userdata/system/configs/emulationstation/scripts/achievements/dmd-simulator.sh" && exit 0
 
 DMDOPT=

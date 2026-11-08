@@ -3,7 +3,7 @@ config BR2_PACKAGE_LIBRETRO_SUPERMODEL
 	depends on BR2_INSTALL_LIBSTDCPP
 
 	help
-	  A modernized fork of the Sega Model 3,
+	  A modernised fork of the Sega Model 3,
 	  Supermodel Libretro core.
 
 	  http://www.libretro.com

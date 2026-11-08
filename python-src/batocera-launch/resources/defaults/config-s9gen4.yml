@@ -3,24 +3,24 @@ default:
     gfxbackend: gl
     video_threaded: true
 
-nds:
-  emulator: drastic
-  core:     drastic
-fmtowns:
-  emulator: libretro
-  core:     mame
 atomiswave:
   emulator: libretro
   core:     flycast
-dreamcast:
+cdi:
   emulator: libretro
-  core:     flycast
-naomi:
+  core:     mame
+dreamcast:
   emulator: libretro
   core:     flycast
 flash:
   emulator: lightspark
   core:     lightspark
-cdi:
+fmtowns:
   emulator: libretro
   core:     mame
+naomi:
+  emulator: libretro
+  core:     flycast
+nds:
+  emulator: drastic
+  core:     drastic

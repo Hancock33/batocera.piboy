@@ -38,7 +38,6 @@ libretro-mame.mk
 libxmp.mk
 mame-src.mk
 mame.mk
-mergerfs.mk
 miniz.mk
 mold.mk
 mono-bin.mk
@@ -49,7 +48,6 @@ opengoal.mk
 pcsx2.mk
 pcsx2x6.mk
 picom.mk
-pironman5.mk
 pysdl2.mk
 pysdl3.mk
 python-glslang.mk

@@ -30,7 +30,7 @@
 #v2.8 - add Argon One RPi5 - @lbrpdx
 #v2.9 - add Waveshare WM8960 audio HAT - @dmanlfc
 #v3.0 - migrate RPi scripts from RPi.GPIO to gpiod - @dmanlfc
-#v3.1 - remove the RETROFLAG option in favor of RETROFLAG_ADV & add dtbo for retroflag cases - @dmanlfc
+#v3.1 - remove the RETROFLAG option in favour of RETROFLAG_ADV & add dtbo for retroflag cases - @dmanlfc
 #v3.2 - add Retroflag 64Pi case for Raspberry Pi 5 support.
 #v3.3 - fix mounting bugs & pironman updates
 #v3.4 - readded some old shell switches like ONOFFSHIM and MAUSBERRY
@@ -143,8 +143,8 @@ function atx_raspi_config()
 function mausberry_start()
 {
     # Init GPIO :
-    # $1 is the GPIO pin connected to the lead on switch labeled OUT - GPIO23 -- will get high if button is pressed (therefore the label OUT)
-    # $2 is the GPIO pin connected to the lead on switch labeled IN -- GPIO24 -- is set high and feeds the device (therefore the label IN)
+    # $1 is the GPIO pin connected to the lead on switch labelled OUT - GPIO23 -- will get high if button is pressed (therefore the label OUT)
+    # $2 is the GPIO pin connected to the lead on switch labelled IN -- GPIO24 -- is set high and feeds the device (therefore the label IN)
     # init
     gpioset -c gpiochip0 -z $2=1
 

@@ -3,8 +3,8 @@
 # libretro-sameboy
 #
 ################################################################################
-# Version: Commits on Nov 01, 2026
-LIBRETRO_SAMEBOY_VERSION = 6c2836a468c33032868883540b681b6d16801b21
+# Version: Commits on Nov 02, 2026
+LIBRETRO_SAMEBOY_VERSION = ea667ad79aa28409f034b1fd6da7304e1844750d
 LIBRETRO_SAMEBOY_SITE = $(call github,LIJI32,SameBoy,$(LIBRETRO_SAMEBOY_VERSION))
 LIBRETRO_SAMEBOY_LICENSE = GPL
 LIBRETRO_SAMEBOY_EMULATOR_INFO = sameboy.libretro.core.yml

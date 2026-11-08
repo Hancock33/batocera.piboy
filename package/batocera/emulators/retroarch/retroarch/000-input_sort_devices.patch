@@ -1,5 +1,5 @@
 diff --git a/input/drivers_joypad/udev_joypad.c b/input/drivers_joypad/udev_joypad.c
-index 8cb12df..347179e 100644
+index 7fe29e2149..40717d00d2 100644
 --- a/input/drivers_joypad/udev_joypad.c
 +++ b/input/drivers_joypad/udev_joypad.c
 @@ -1821,6 +1821,60 @@ static void udev_joypad_poll(void)

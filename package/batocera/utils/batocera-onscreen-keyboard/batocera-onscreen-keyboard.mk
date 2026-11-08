@@ -34,7 +34,7 @@ define BATOCERA_ONSCREEN_KEYBOARD_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(BATOCERA_ONSCREEN_KEYBOARD_PATH)/sources/onscreen-keyboard \
 		$(TARGET_DIR)/usr/bin/onscreen-keyboard
 
-	# Install the toggle alias for Control Center compatibility
+	# Install the toggle alias for Control Centre compatibility
 	ln -sf onscreen-keyboard $(TARGET_DIR)/usr/bin/onscreen-keyboard-toggle
 
 	# Install assets directory

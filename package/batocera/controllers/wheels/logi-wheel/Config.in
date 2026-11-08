@@ -10,7 +10,7 @@ config BR2_PACKAGE_LOGI_WHEEL
 
 	  Also installs the two wine helpers the app drives: logi-ffb, a
 	  force feedback proxy for the DirectInput games that need
-	  PROTON_ENABLE_HIDRAW=1, and logi-tf-sim, which synthesizes
+	  PROTON_ENABLE_HIDRAW=1, and logi-tf-sim, which synthesises
 	  TrueForce and the rev lights from the UDP telemetry of a few
 	  PC titles.
 

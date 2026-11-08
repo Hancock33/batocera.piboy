@@ -26,7 +26,7 @@ fsuae.mk
 gtk-layer-shell.mk
 hcl.mk
 ikemen.mk
-kddocwidgets.mk
+kddockwidgets.mk
 kodi-pvr-freebox.mk
 labwc.mk
 libdate.mk
@@ -42,6 +42,7 @@ libzedmd.mk
 logi-wheel.mk
 logitech-trueforce.mk
 mangohud.mk
+mergerfs.mk
 mt32emu.mk
 nghttp3.mk
 ngtcp2.mk
@@ -51,6 +52,7 @@ openmohaa.mk
 openxr-sdk.mk
 ossp.mk
 pigpio-rpi.mk
+pironman5.mk
 plutosvg.mk
 plutovg.mk
 portmidi.mk
@@ -79,7 +81,6 @@ tekwar.mk
 theforceengine.mk
 tomlplusplus.mk
 trx.mk
-uthash.mk
 vice.mk
 vkquake.mk
 vkquake2.mk

@@ -1,0 +1,142 @@
+shared_features:
+  - autosave
+  - use_guns
+  - use_wheels
+  - wheel_rotation
+  - wheel_deadzone
+  - wheel_midzone
+custom_features:
+  wii_resolution:
+    prompt: RENDERING RESOLUTION
+    description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+    choices:
+      1x native (640x528): 1
+      2x 720p (1280x1056): 2
+      3x 1080p (1920x1584): 3
+      4x 1440p (2560x2112): 4
+      5x (3200x2640): 5
+      6x 4K (3840x3168): 6
+  wii_language:
+    prompt: LANGUAGE
+    description: Wii NAND's language setting.
+    choices:
+      Japanese: 0
+      English: 1
+      German: 2
+      French: 3
+      Spanish: 4
+      Italian: 5
+      Dutch: 6
+      Simplified Chinese: 7
+      Traditional Chinese: 8
+      Korean: 9
+  wii_widescreen_hack:
+    prompt: WIDESCREEN HACK (GLITCHY)
+    description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
+    choices:
+      'Off': disabled
+      'On': enabled
+  wii_shader_mode:
+    group: ADVANCED OPTIONS
+    prompt: UBERSHADERS
+    description: May not work well on all hardware. Hybrid is preferred, where supported.
+    choices:
+      No Ubershaders: 0
+      Exclusive Ubershaders: 1
+      Hybrid Ubershaders: 2
+      Skip Drawing: 3
+  wii_anisotropic:
+    group: ADVANCED OPTIONS
+    prompt: ANISOTROPIC FILTERING
+    description: Improves clarity of distant textures.
+    choices:
+      'Off': 0
+      2x: 1
+      4x: 2
+      8x: 3
+      16x: 4
+  wii_antialiasing:
+    group: ADVANCED OPTIONS
+    prompt: ANTI-ALIASING
+    description: Enhancement. Smooth out jagged edges on 3D object polygons. SSAA looks better but has a higher performance cost.
+    choices:
+      'Off': 0
+      2x MSAA: 1
+      4x MSAA: 2
+      8x MSAA: 3
+      2x SSAA: 4
+      4x SSAA: 5
+      8x SSAA: 6
+file_extensions:
+  - gcm
+  - iso
+  - gcz
+  - ciso
+  - wbfs
+  - rvz
+  - elf
+  - dol
+  - m3u
+  - json
+systems:
+  - gamecube
+  - triforce
+  - name: wii
+    file_extensions:
+      add:
+        - wad
+    custom_features:
+      wii_widescreen:
+        prompt: WII TV MODE
+        description: Wii NAND's aspect ratio setting. Most games support both ratios natively.
+        choices:
+          16:9: enabled
+          4:3: disabled
+      controller1_wii:
+        prompt: CONTROLLER 1 TYPE
+        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+        choices:
+          WiiMote: 1
+          WiiMote Sideways: 513
+          WiiMote + Nunchuk: 769
+          WiiMote + Classic Controller: 1025
+          WiiMote + Classic Controller Pro: 1281
+          Real Wiimote: 1536
+          GameCube Controller: 1537
+      controller2_wii:
+        prompt: CONTROLLER 2 TYPE
+        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+        choices:
+          WiiMote: 1
+          WiiMote Sideways: 513
+          WiiMote + Nunchuk: 769
+          WiiMote + Classic Controller: 1025
+          WiiMote + Classic Controller Pro: 1281
+          Real Wiimote: 1536
+          GameCube Controller: 1537
+      controller3_wii:
+        prompt: CONTROLLER 3 TYPE
+        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+        choices:
+          WiiMote: 1
+          WiiMote Sideways: 513
+          WiiMote + Nunchuk: 769
+          WiiMote + Classic Controller: 1025
+          WiiMote + Classic Controller Pro: 1281
+          Real Wiimote: 1536
+          GameCube Controller: 1537
+      controller4_wii:
+        prompt: CONTROLLER 4 TYPE
+        description: Emulate a Wiimote Sideway with L2 for Shake and Nunchuk on R-stick.
+        choices:
+          WiiMote: 1
+          WiiMote Sideways: 513
+          WiiMote + Nunchuk: 769
+          WiiMote + Classic Controller: 1025
+          WiiMote + Classic Controller Pro: 1281
+          Real Wiimote: 1536
+          GameCube Controller: 1537
+  - name: wiiware
+    file_extensions:
+      add:
+        - wad

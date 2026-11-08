@@ -4,7 +4,7 @@ config BR2_PACKAGE_LIBRETRO_SKYEMU
 	select BR2_PACKAGE_SDL2
 
 	help
-	  Game Boy Advance, Game Boy, Game Boy Color, and DS Emulator
+	  Game Boy Advance, Game Boy, Game Boy Colour, and DS Emulator
 
 	  https://github.com/skylersaleh/SkyEmu
 

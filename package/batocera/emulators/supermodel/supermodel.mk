@@ -3,8 +3,8 @@
 # supermodel
 #
 ################################################################################
-# Version: Commits on Sept 26, 2026
-SUPERMODEL_VERSION = d5b9c6e3fda83605adf4469c0a4582e8c0199751
+# Version: Commits on Nov 03, 2026
+SUPERMODEL_VERSION = 932c6fbb16ca261bd3a2f2a7aafeda739afd627b
 SUPERMODEL_SITE = $(call github,dmanlfc,Supermodel,$(SUPERMODEL_VERSION))
 SUPERMODEL_BRANCH = gun-sdl-fallback
 SUPERMODEL_DEPENDENCIES = sdl2 zlib libzip sdl2_net

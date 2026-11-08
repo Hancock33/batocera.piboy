@@ -1,9 +1,9 @@
 diff --git a/gfx/drivers/oga_gfx.c b/gfx/drivers/oga_gfx.c
-index f921a4a..39c3b3d 100644
+index 53eead8025..2f68562bd9 100644
 --- a/gfx/drivers/oga_gfx.c
 +++ b/gfx/drivers/oga_gfx.c
-@@ -24,6 +24,7 @@
- #include <unistd.h>
+@@ -25,6 +25,7 @@
+ #include <poll.h>
  #include <sys/mman.h>
  #include <rga/RgaApi.h>
 +#include <rga/drmrga.h>

@@ -1,8 +1,8 @@
 diff --git a/gfx/common/x11_common.c b/gfx/common/x11_common.c
-index 56e3be1..087c77f 100644
+index 51927d648a..3b3cf1f05c 100644
 --- a/gfx/common/x11_common.c
 +++ b/gfx/common/x11_common.c
-@@ -799,22 +799,10 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event,
+@@ -879,22 +879,10 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event,
           char keybuf[32];
  
           keybuf[0] = '\0';
@@ -15,7 +15,7 @@ index 56e3be1..087c77f 100644
 -          * which makes mbrtowc a bit impractical.
 -          *
 -          * Use custom UTF8 -> UTF-32 conversion. */
--         num = utf8_conv_utf32(chars, ARRAY_SIZE(chars), keybuf, num);
+-         num = (int)utf8_conv_utf32(chars, ARRAY_SIZE(chars), keybuf, num);
 -#else
           num = XLookupString(&event->xkey, keybuf,
                 sizeof(keybuf), &keysym, NULL); /* ASCII only. */
@@ -25,7 +25,7 @@ index 56e3be1..087c77f 100644
        }
        else
           keysym = XLookupKeysym(&event->xkey,
-@@ -1211,9 +1199,10 @@ bool x11_presentable(void *data)
+@@ -1291,9 +1279,10 @@ bool x11_presentable(void *data)
  
  bool x11_has_focus(void *data)
  {
@@ -38,7 +38,7 @@ index 56e3be1..087c77f 100644
  }
  
  bool x11_connect(void)
-@@ -1282,9 +1271,7 @@ void x11_update_title(void *data)
+@@ -1362,9 +1351,7 @@ void x11_update_title(void *data)
  
  bool x11_input_ctx_new(bool true_full)
  {

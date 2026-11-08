@@ -1,112 +1,91 @@
-advision:
-  emulator: mame
-  core:     mame
-flash:
-  emulator: lightspark
-  core:     lightspark
-fmtowns:
-  emulator: libretro
-  core:     mame
-lcdgames:
-  emulator: mame
-  core:     mame
-n64:
-  emulator: libretro
-  core:     mupen64plus-next
-nds:
-  emulator: drastic
-  core:     drastic
 3ds:
   emulator: azahar
   core:     azahar
-psp:
-  emulator: libretro
-  core: ppsspp
-ps2:
-  emulator: armsx2
-  core:     armsx2
-tvgames:
+adam:
   emulator: mame
   core:     mame
-pdp1:
-  emulator: mame
-  core:     mame
-pv1000:
-  emulator: mame
-  core:     mame
-gamate:
-  emulator: mame
-  core:     mame
-crvision:
-  emulator: mame
-  core:     mame
-gamecom:
-  emulator: mame
-  core:     mame
-fm7:
-  emulator: mame
-  core:     mame
-gamepock:
+advision:
   emulator: mame
   core:     mame
 apfm1000:
   emulator: mame
   core:     mame
-bbcmicro:
-  emulator: mame
-  core:     mame
-adam:
-  emulator: mame
-  core:     mame
-gmaster:
+archimedes:
   emulator: mame
   core:     mame
 astrocade:
   emulator: mame
   core:     mame
-ti99:
-  emulator: mame
-  core:     mame
-tutor:
-  emulator: mame
-  core:     mame
-coco:
-  emulator: mame
-  core:     mame
-archimedes:
-  emulator: mame
-  core:     mame
-socrates:
-  emulator: mame
-  core:     mame
-supracan:
-  emulator: mame
-  core:     mame
-vsmile:
-  emulator: mame
-  core:     mame
-xegs:
-  emulator: mame
-  core:     mame
 atom:
   emulator: mame
   core:     mame
-electron:
+bbcmicro:
   emulator: mame
   core:     mame
 camplynx:
   emulator: mame
   core:     mame
-vgmplay:
+coco:
   emulator: mame
   core:     mame
-vc4000:
+crvision:
+  emulator: mame
+  core:     mame
+electron:
+  emulator: mame
+  core:     mame
+flash:
+  emulator: lightspark
+  core:     lightspark
+fm7:
+  emulator: mame
+  core:     mame
+fmtowns:
+  emulator: libretro
+  core:     mame
+gamate:
+  emulator: mame
+  core:     mame
+gamecom:
+  emulator: mame
+  core:     mame
+gamepock:
+  emulator: mame
+  core:     mame
+gmaster:
   emulator: mame
   core:     mame
 gp32:
   emulator: mame
   core:     mame
 laser310:
+  emulator: mame
+  core:     mame
+lcdgames:
+  emulator: mame
+  core:     mame
+model1:
+  emulator: sm2-emu
+  core:     sm2-emu
+model2:
+  emulator: sm2-emu
+  core:     sm2-emu
+n64:
+  emulator: libretro
+  core:     mupen64plus-next
+nds:
+  emulator: drastic
+  core:     drastic
+pdp1:
+  emulator: mame
+  core:     mame
+ps2:
+  emulator: armsx2
+  core:     armsx2
+psp:
+  emulator: libretro
+  core:     ppsspp
+pv1000:
   emulator: mame
   core:     mame
 quake3:
@@ -118,6 +97,30 @@ saturn:
   options:
     decorations: none
     hud_support: none
-model2:
-  emulator: sm2-emu
-  core:     sm2-emu
+socrates:
+  emulator: mame
+  core:     mame
+supracan:
+  emulator: mame
+  core:     mame
+ti99:
+  emulator: mame
+  core:     mame
+tutor:
+  emulator: mame
+  core:     mame
+tvgames:
+  emulator: mame
+  core:     mame
+vc4000:
+  emulator: mame
+  core:     mame
+vgmplay:
+  emulator: mame
+  core:     mame
+vsmile:
+  emulator: mame
+  core:     mame
+xegs:
+  emulator: mame
+  core:     mame

@@ -3,8 +3,8 @@
 # libretro-eduke32
 #
 ################################################################################
-# Version: Commits on Oct 31, 2026
-LIBRETRO_EDUKE32_VERSION = 5d770edfa04990b997621a9282ed47979fa65439
+# Version: Commits on Nov 02, 2026
+LIBRETRO_EDUKE32_VERSION = b5918d5cf3fc698700c86693fce3ce5200c28b96
 LIBRETRO_EDUKE32_SITE = https://github.com/cscd98/eduke32-libretro.git
 LIBRETRO_EDUKE32_SITE_METHOD = git
 LIBRETRO_EDUKE32_GIT_SUBMODULES = YES
@@ -27,7 +27,6 @@ endef
 
 define LIBRETRO_EDUKE32_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/platform/Libretro/eduke32_libretro.so $(TARGET_DIR)/usr/lib/libretro/eduke32_libretro.so
-	$(INSTALL) -D -m 0644 $(LIBRETRO_EDUKE32_PKGDIR)/eduke32_libretro.info $(TARGET_DIR)/usr/share/libretro/info/eduke32_libretro.info
 endef
 
 $(eval $(generic-package))

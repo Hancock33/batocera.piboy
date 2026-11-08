@@ -1,0 +1,13 @@
+config BR2_PACKAGE_LIBRETRO_PARALLEL_GX1
+	bool "libretro-parallel-gx1"
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+
+	help
+	  ParaLLEl GX1: Nintendo GameCube and Wii (Dolphin based)
+	  libretro core. Builds for x86_64 and aarch64 only.
+
+	  https://github.com/libretro/parallel-gx1
+
+comment "LIBRETRO_PARALLEL_GX1 needs a toolchain w/ C++ and threads"
+	depends on !BR2_INSTALL_LIBSTDCPP || !BR2_TOOLCHAIN_HAS_THREADS

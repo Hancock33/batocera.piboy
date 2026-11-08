@@ -5,7 +5,7 @@ config BR2_PACKAGE_LIBRETRO_UAE4ARM
 	select BR2_PACKAGE_ZLIB
 
 	help
-	  A libretro AMIGA emulator core optimized for ARM.
+	  A libretro AMIGA emulator core optimised for ARM.
 
 	  http://www.libretro.com
 

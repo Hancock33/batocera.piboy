@@ -26,15 +26,15 @@ amigacdtv:
 amigademo:
   emulator: libretro
   core:     puae2021
+c128:
+  emulator: libretro
+  core:     vice_x128
 c20:
   emulator: libretro
   core:     vice_xvic
 c64:
   emulator: libretro
   core:     vice_x64
-c128:
-  emulator: libretro
-  core:     vice_x128
 cplus4:
   emulator: libretro
   core:     vice_xplus4
@@ -44,6 +44,14 @@ flash:
 fmtowns:
   emulator: libretro
   core:     mame
+gamecube:
+  emulator: libretro
+  core:     dolphin
+  options:
+    videomode: max-480x240
+model1:
+  emulator: sm2-emu
+  core:     sm2-emu
 model2:
   emulator: sm2-emu
   core:     sm2-emu
@@ -88,11 +96,6 @@ sgb:
 traider:
   emulator: openlara
   core:     openlara
-gamecube:
-  emulator: libretro
-  core:     dolphin
-  options:
-    videomode: max-480x240
 wii:
   emulator: libretro
   core:     dolphin

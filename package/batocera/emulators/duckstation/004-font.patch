@@ -1,8 +1,8 @@
 diff --git a/src/util/imgui_manager.cpp b/src/util/imgui_manager.cpp
-index ffe6ed276..2f11abda2 100644
+index 96da2e4d2..fc2bdd6a7 100644
 --- a/src/util/imgui_manager.cpp
 +++ b/src/util/imgui_manager.cpp
-@@ -195,7 +195,7 @@ static constexpr const std::array FIXED_FONT_FILENAMES = {
+@@ -197,7 +197,7 @@ static constexpr const std::array FIXED_FONT_FILENAMES = {
  #undef ENUMERATE_FIXED_FONT_NAMES
  
  static constexpr const char* DEFAULT_FIXED_FONT_NAME = FIXED_FONT_NAMES[0];

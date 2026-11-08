@@ -3,8 +3,8 @@
 # firmware-orangepi
 #
 ################################################################################
-# Version: Commits on Mar 10, 2025
-FIRMWARE_ORANGEPI_VERSION = db5e86200ae592c467c4cfa50ec0c66cbc40b158
+# Version: Commits on Sep 28, 2026
+FIRMWARE_ORANGEPI_VERSION = dc163b0ed2e0272d9ee31977a0e0a04884f0ae61
 FIRMWARE_ORANGEPI_SITE = $(call github,orangepi-xunlong,firmware,$(FIRMWARE_ORANGEPI_VERSION))
 
 define FIRMWARE_ORANGEPI_INSTALL_TARGET_CMDS

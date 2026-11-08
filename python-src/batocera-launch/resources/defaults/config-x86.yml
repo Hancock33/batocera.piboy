@@ -1,3 +1,12 @@
+cdi:
+  emulator: libretro
+  core:     zcdi
+n64:
+  options:
+    videomode: max-1920x1080
+n64dd:
+  options:
+    videomode: max-1920x1080
 pcengine:
   emulator: libretro
   core:     pce
@@ -7,12 +16,3 @@ pcenginecd:
 saturn:
   emulator: libretro
   core:     beetle-saturn
-n64:
-  options:
-    videomode: max-1920x1080
-n64dd:
-  options:
-    videomode: max-1920x1080
-cdi:
-  emulator: libretro
-  core:     zcdi

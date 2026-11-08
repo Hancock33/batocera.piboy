@@ -1,0 +1,253 @@
+features:
+  - cheevos
+shared_features:
+  - autosave
+  - use_guns
+  - use_wheels
+  - wheel_rotation
+  - wheel_deadzone
+  - wheel_midzone
+custom_features:
+  reicast_internal_resolution:
+    prompt: RENDERING RESOLUTION
+    description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+    choices:
+      1x (640x480): 1x
+      2x (1280x960): 2x
+      4x (2560x1920): 4x
+      8x (5120x3840): 8x
+  reicast_lightgun1_crosshair:
+    group: LIGHT GUN
+    prompt: PLAYER 1 CROSSHAIR COLOR
+    choices:
+      Red: Red
+      Blue: Blue
+      Green: Green
+      White: White
+      Disabled: disabled
+  reicast_lightgun2_crosshair:
+    group: LIGHT GUN
+    prompt: PLAYER 2 CROSSHAIR COLOR
+    choices:
+      Red: Red
+      Blue: Blue
+      Green: Green
+      White: White
+      Disabled: disabled
+  reicast_lightgun3_crosshair:
+    group: LIGHT GUN
+    prompt: PLAYER 3 CROSSHAIR COLOR
+    choices:
+      Red: Red
+      Blue: Blue
+      Green: Green
+      White: White
+      Disabled: disabled
+  reicast_lightgun4_crosshair:
+    group: LIGHT GUN
+    prompt: PLAYER 4 CROSSHAIR COLOR
+    choices:
+      Red: Red
+      Blue: Blue
+      Green: Green
+      White: White
+      Disabled: disabled
+  reicast_anisotropic_filtering:
+    group: ADVANCED OPTIONS
+    prompt: ANISOTROPIC FILTERING
+    description: Improves clarity of distant textures.
+    choices:
+      Off: disabled
+      2x: 2
+      4x: 4
+      8x: 8
+      16x: 16
+  reicast_alpha_sorting:
+    group: ADVANCED OPTIONS
+    prompt: ALPHA SORTING
+    description: How transparent polygons are sorted. Per-pixel is the most accurate and the slowest.
+    choices:
+      Per-Strip (Fast): per-strip (fast, least accurate)
+      Per-Triangle (Default): per-triangle (normal)
+      Per-Pixel (Accurate): per-pixel (accurate)
+  reicast_texupscale:
+    group: ADVANCED OPTIONS
+    prompt: TEXTURE UPSCALING (XBRZ)
+    description: Enhancement. Upscales screen textures (2D games only).
+    choices:
+      'Off': disabled
+      2x: 2x
+      4x: 4x
+      6x: 6x
+  reicast_frame_skipping:
+    prompt: FRAMESKIP
+    description: Skip frames to improve performance, at the cost of choppy motion.
+    choices:
+      'Off': disabled
+      "1": 1
+      "2": 2
+      "3": 3
+      "4": 4
+      "5": 5
+      "6": 6
+  reicast_region:
+    prompt: CONSOLE REGION
+    description: Choose the Dreamcast console region.
+    choices:
+      USA: USA
+      Europe: Europe
+      Japan: Japan
+      Default: Default
+  reicast_language:
+    prompt: BIOS LANGUAGE
+    description: Dreamcast BIOS's language setting. Can change the language of some games. Some games default to Japanese.
+    choices:
+      English: English
+      German: German
+      French: French
+      Spanish: Spanish
+      Italian: Italian
+      Japanese: Japanese
+      Default: Default
+  parallel_dc-autowidescreen:
+    prompt: AUTO WIDESCREEN
+    description: Automatically sets aspect ratio to 16/9 for games that natively support it. 2D elements like HUD/UI may be stretched.
+    choices:
+      'Off': "False"
+      'On': "True"
+  reicast_widescreen_cheats:
+    prompt: WIDESCREEN CHEAT (PRIORITY)
+    description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
+    choices:
+      'Off': disabled
+      'On': enabled
+  reicast_widescreen_hack:
+    prompt: WIDESCREEN HACK (GLITCHY)
+    description: Enhancement. Only works with a 16/9 ratio and bezels disabled.
+    choices:
+      'Off': disabled
+      'On': enabled
+  controller1_dc:
+    prompt: CONTROLLER 1 TYPE
+    choices:
+      Gamepad: 1
+      Gamepad Using Left Analog Stick: 5
+      Keyboard: 3
+      Mouse: 2
+      Light Gun: 4
+  controller2_dc:
+    prompt: CONTROLLER 2 TYPE
+    choices:
+      Gamepad: 1
+      Gamepad Using Left Analog Stick: 5
+      Keyboard: 3
+      Mouse: 2
+      Light Gun: 4
+  controller3_dc:
+    prompt: CONTROLLER 3 TYPE
+    choices:
+      Gamepad: 1
+      Gamepad Using Left Analog Stick: 5
+      Keyboard: 3
+      Mouse: 2
+      Light Gun: 4
+  controller4_dc:
+    prompt: CONTROLLER 4 TYPE
+    choices:
+      Gamepad: 1
+      Gamepad Using Left Analog Stick: 5
+      Keyboard: 3
+      Mouse: 2
+      Light Gun: 4
+  flycast_offscreen_reload:
+    group: LIGHT GUN
+    prompt: OFF-SCREEN RELOAD BUTTON
+    description: Set gun button 2 to reload.
+    choices:
+      'Off': 0
+      'On': 1
+  altlayout:
+    prompt: SPECIAL CONTROL LAYOUTS
+    description: Controls for 5/6 button games and other unique controls
+    choices:
+      Default Only: default
+      Modern Fightstick Style: fightstick
+file_extensions:
+  - lst
+  - bin
+  - dat
+  - zip
+  - 7z
+systems:
+  - name: atomiswave
+    custom_features:
+      screen_rotation_atomiswave:
+        prompt: SCREEN ORIENTATION
+        description: Useful for certain arcade games.
+        choices:
+          Horizontal: horizontal
+          Vertical: vertical
+      reicast_allow_service_buttons:
+        prompt: SERVICE AND TEST BUTTONS
+        description: Service on L3 and Test on R3, to open the test menu.
+        choices:
+          'Off': disabled
+          'On': enabled
+  - name: naomi
+    custom_features:
+      screen_rotation_naomi:
+        prompt: SCREEN ORIENTATION
+        description: Useful for certain arcade games.
+        choices:
+          Horizontal: horizontal
+          Vertical: vertical
+      reicast_allow_service_buttons:
+        prompt: SERVICE AND TEST BUTTONS
+        description: Service on L3 and Test on R3, to open the test menu.
+        choices:
+          'Off': disabled
+          'On': enabled
+  - name: naomigd
+    custom_features:
+      screen_rotation_naomi:
+        prompt: SCREEN ORIENTATION
+        description: Useful for certain arcade games.
+        choices:
+          Horizontal: horizontal
+          Vertical: vertical
+      reicast_allow_service_buttons:
+        prompt: SERVICE AND TEST BUTTONS
+        description: Service on L3 and Test on R3, to open the test menu.
+        choices:
+          'Off': disabled
+          'On': enabled
+  - name: dreamcast
+    file_extensions:
+      - cdi
+      - cue
+      - gdi
+      - chd
+      - m3u
+  - name: naomi2
+    file_extensions:
+      - zip
+      - 7z
+    custom_features:
+      reicast_allow_service_buttons:
+        prompt: SERVICE AND TEST BUTTONS
+        description: Service on L3 and Test on R3, to open the test menu.
+        choices:
+          'Off': disabled
+          'On': enabled
+  - name: naomi2gd
+    file_extensions:
+      - zip
+      - 7z
+    custom_features:
+      reicast_allow_service_buttons:
+        prompt: SERVICE AND TEST BUTTONS
+        description: Service on L3 and Test on R3, to open the test menu.
+        choices:
+          'Off': disabled
+          'On': enabled
+  - systemsp

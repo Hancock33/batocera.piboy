@@ -19,9 +19,7 @@ default:
     videomode:              default
 
 # 0-C
-twentyfourtyeight:
-  emulator: libretro
-  core:     '2048'
+
 3do:
   emulator: libretro
   core:     opera
@@ -137,6 +135,9 @@ banpresto:
   emulator: libretro
   core:     mame078plus
 bbc:
+  emulator: libretro
+  core:     mame
+bbcmicro:
   emulator: libretro
   core:     mame
 bbja:
@@ -334,8 +335,8 @@ freedroid:
   emulator: freedroid
   core:     freedroid
 gaelco:
-  emulator: libretro
-  core:     mame
+  emulator: odin
+  core:     odin
 gamate:
   emulator: libretro
   core:     mame
@@ -404,8 +405,8 @@ hcl:
   emulator: hcl
   core:     hcl
 hikaru:
-  emulator: libretro
-  core:     mame
+  emulator: odin
+  core:     odin
 hode:
   emulator: hode
   core:     hode
@@ -497,6 +498,9 @@ media:
 megadrive:
   emulator: libretro
   core:     genesisplusgx
+megadrive-msu:
+  emulator: libretro
+  core:     genesisplusgx
 midway:
   emulator: libretro
   core:     mame078plus
@@ -521,9 +525,6 @@ mplayer:
 mrboom:
   emulator: libretro
   core:     mrboom
-megadrive-msu:
-  emulator: libretro
-  core:     genesisplusgx
 msx1:
   emulator: libretro
   core:     bluemsx
@@ -612,14 +613,14 @@ nmk:
 nukem2:
   emulator: nukem2
   core:     nukem2
+o2em:
+  emulator: libretro
+  core:     o2em
 odcommander:
   emulator: odcommander
   core:     odcommander
   options:
     hud_support: false
-o2em:
-  emulator: libretro
-  core:     o2em
 odyssey2:
   emulator: libretro
   core:     o2em
@@ -653,6 +654,9 @@ oricatmos:
 
 # P-S
 
+p2000t:
+  emulator: libretro
+  core:     p2000t
 pc88:
   emulator: libretro
   core:     quasi88
@@ -692,16 +696,16 @@ pico8:
 pokemini:
   emulator: libretro
   core:     pokemini
-ports:
-  emulator: sh
-  core:     sh
-  options:
-    bezel: none
 popcap:
   emulator: wine
   core:     wine-custom
   options:
     hud_support: false
+ports:
+  emulator: sh
+  core:     sh
+  options:
+    bezel: none
 prboom:
   emulator: libretro
   core:     prboom
@@ -724,19 +728,16 @@ psikyo:
   core:     mame078plus
 psp:
   emulator: libretro
-  core: ppsspp
+  core:     ppsspp
 pspmini:
   emulator: libretro
-  core: ppsspp
+  core:     ppsspp
 psvita:
   emulator: vita3k
   core:     vita3k
 psx:
   emulator: duckstation
   core:     duckstation
-p2000t:
-  emulator: libretro
-  core:     p2000t
 pv1000:
   emulator: libretro
   core:     mame
@@ -881,15 +882,15 @@ srb2:
 srb2kart:
   emulator: srb2kart
   core:     srb2kart
+stalker:
+  emulator: stalker
+  core:     stalker
 steam:
   emulator: steam
   core:     steam
 stk:
   emulator: stk
   core:     stk
-stalker:
-  emulator: stalker
-  core:     stalker
 stuntcar:
   emulator: stuntcar
   core:     stuntcar
@@ -935,18 +936,18 @@ technos:
 tecmo:
   emulator: libretro
   core:     mame078plus
-tg16:
-  emulator: libretro
-  core:     pce_fast
 tg-cd:
   emulator: libretro
   core:     pce_fast
-themehospital:
-  emulator: corsixth
-  core:     corsixth
+tg16:
+  emulator: libretro
+  core:     pce_fast
 theforceengine:
   emulator: theforceengine
   core:     theforceengine
+themehospital:
+  emulator: corsixth
+  core:     corsixth
 thextech:
   emulator: thextech
   core:     thextech
@@ -970,9 +971,9 @@ triforce:
 tutor:
   emulator: libretro
   core:     mame
-bbcmicro:
+twentyfourtyeight:
   emulator: libretro
-  core:     mame
+  core:     '2048'
 tyrian:
   emulator: tyrian
   core:     tyrian
@@ -1036,12 +1037,15 @@ visco:
 voidsw:
   emulator: voidsw
   core:     voidsw
-vsmile:
-  emulator: libretro
-  core:     mame
 voxatron:
   emulator: lexaloffle
   core:     vox_official
+vpinball:
+  emulator: vpinball
+  core:     vpinball
+vsmile:
+  emulator: libretro
+  core:     mame
 wasm4:
   emulator: libretro
   core:     wasm4
@@ -1111,6 +1115,3 @@ zx81:
 zxspectrum:
   emulator: libretro
   core:     fuse
-vpinball:
-  emulator: vpinball
-  core:     vpinball

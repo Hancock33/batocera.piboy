@@ -6,7 +6,7 @@ config BR2_PACKAGE_SYNCTHING
 	select BR2_PACKAGE_HOST_GO
 
 	help
-	  Open Source Continuous File Synchronization.
+	  Open Source Continuous File Synchronisation.
 
 	  https://github.com/syncthing/syncthing
 

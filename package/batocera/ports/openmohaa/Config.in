@@ -6,7 +6,7 @@ config BR2_PACKAGE_OPENMOHAA
 	select BR2_PACKAGE_SDL2
 
 	help
-	  Open reimplementation of Medal of Honor: Allied Assault
+	  Open reimplementation of Medal of Honour: Allied Assault
 	  including Spearhead and Breakthrough expansions with
 	  modern features.
 

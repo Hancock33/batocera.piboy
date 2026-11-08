@@ -1,0 +1,137 @@
+From bd6f0aba25baa7bd26a4b5de133331a3c1be52f7 Mon Sep 17 00:00:00 2001
+From: Yann Collet <cyan@meta.com>
+Date: Thu, 5 Nov 2026 11:34:28 -0800
+Subject: [PATCH 1/2] lz4frame: restore the unprefixed enums
+ (LZ4F_ENABLE_OBSOLETE_ENUMS)
+
+zstd defines LZ4F_ENABLE_OBSOLETE_ENUMS and employs contentChecksum_t
+(programs/fileio.c, in v1.5.7 and dev) : since v1.11.0, zstd fails to build
+with lz4 support.
+
+The opt-in block removed in v1.11.0 is back, unchanged.
+
+Fixes #2046
+---
+ lib/lz4frame.h | 34 +++++++++++++++++++++++++++++++++-
+ 2 files changed, 34 insertions(+), 1 deletion(-)
+
+diff --git a/lib/lz4frame.h b/lib/lz4frame.h
+index d09ab9b8d..82dc41b21 100644
+--- a/lib/lz4frame.h
++++ b/lib/lz4frame.h
+@@ -84,10 +84,19 @@ extern "C" {
+ #  define LZ4FLIB_API LZ4FLIB_VISIBILITY
+ #endif
+ 
+-/* LZ4F_DEPRECATED(message) : precedes the declaration of a deprecated function */
++/* LZ4F_DEPRECATE(x) : deprecated enumerator x
++ * LZ4F_DEPRECATED(message) : precedes the declaration of a deprecated function */
+ #ifdef LZ4F_DISABLE_DEPRECATE_WARNINGS
++#  define LZ4F_DEPRECATE(x) x
+ #  define LZ4F_DEPRECATED(message)
+ #else
++#  if defined(_MSC_VER)
++#    define LZ4F_DEPRECATE(x) x   /* __declspec(deprecated) x - only works with C++ */
++#  elif defined(__clang__) || (defined(__GNUC__) && (__GNUC__ >= 6))
++#    define LZ4F_DEPRECATE(x) x __attribute__((deprecated))
++#  else
++#    define LZ4F_DEPRECATE(x) x   /* no deprecation warning for this compiler */
++#  endif
+ #  if defined (__cplusplus) && (__cplusplus >= 201402) /* C++14 or greater */
+ #    define LZ4F_DEPRECATED(message) [[deprecated(message)]]
+ #  elif defined(_MSC_VER)
+@@ -114,6 +123,13 @@ LZ4FLIB_API const char* LZ4F_getErrorName(LZ4F_errorCode_t code);   /**< return
+ /*-************************************
+  *  Frame compression types
+  ************************************* */
++/* #define LZ4F_ENABLE_OBSOLETE_ENUMS   // uncomment to enable obsolete enums */
++#ifdef LZ4F_ENABLE_OBSOLETE_ENUMS
++#  define LZ4F_OBSOLETE_ENUM(x) , LZ4F_DEPRECATE(x) = LZ4F_##x
++#else
++#  define LZ4F_OBSOLETE_ENUM(x)
++#endif
++
+ /* The larger the block size, the (slightly) better the compression ratio,
+  * though there are diminishing returns.
+  * Larger blocks also increase memory usage on both compression and decompression sides.
+@@ -124,6 +140,10 @@ typedef enum {
+     LZ4F_max256KB=5,
+     LZ4F_max1MB=6,
+     LZ4F_max4MB=7
++    LZ4F_OBSOLETE_ENUM(max64KB)
++    LZ4F_OBSOLETE_ENUM(max256KB)
++    LZ4F_OBSOLETE_ENUM(max1MB)
++    LZ4F_OBSOLETE_ENUM(max4MB)
+ } LZ4F_blockSizeID_t;
+ 
+ /* Linked blocks sharply reduce inefficiencies when using small blocks,
+@@ -132,11 +152,15 @@ typedef enum {
+ typedef enum {
+     LZ4F_blockLinked=0,
+     LZ4F_blockIndependent
++    LZ4F_OBSOLETE_ENUM(blockLinked)
++    LZ4F_OBSOLETE_ENUM(blockIndependent)
+ } LZ4F_blockMode_t;
+ 
+ typedef enum {
+     LZ4F_noContentChecksum=0,
+     LZ4F_contentChecksumEnabled
++    LZ4F_OBSOLETE_ENUM(noContentChecksum)
++    LZ4F_OBSOLETE_ENUM(contentChecksumEnabled)
+ } LZ4F_contentChecksum_t;
+ 
+ typedef enum {
+@@ -147,8 +171,16 @@ typedef enum {
+ typedef enum {
+     LZ4F_frame=0,
+     LZ4F_skippableFrame
++    LZ4F_OBSOLETE_ENUM(skippableFrame)
+ } LZ4F_frameType_t;
+ 
++#ifdef LZ4F_ENABLE_OBSOLETE_ENUMS
++typedef LZ4F_blockSizeID_t blockSizeID_t;
++typedef LZ4F_blockMode_t blockMode_t;
++typedef LZ4F_frameType_t frameType_t;
++typedef LZ4F_contentChecksum_t contentChecksum_t;
++#endif
++
+ /*! LZ4F_frameInfo_t :
+  *  makes it possible to set or read frame parameters.
+  *  Structure must be first init to 0, using memset() or LZ4F_INIT_FRAMEINFO,
+diff --git a/lib/lz4frame.h b/lib/lz4frame.h
+index 82dc41b21..2c05ddb28 100644
+--- a/lib/lz4frame.h
++++ b/lib/lz4frame.h
+@@ -84,7 +84,7 @@ extern "C" {
+ #  define LZ4FLIB_API LZ4FLIB_VISIBILITY
+ #endif
+ 
+-/* LZ4F_DEPRECATE(x) : deprecated enumerator x
++/* LZ4F_DEPRECATE(x) : deprecated enumerator or type x, replaced by LZ4F_##x
+  * LZ4F_DEPRECATED(message) : precedes the declaration of a deprecated function */
+ #ifdef LZ4F_DISABLE_DEPRECATE_WARNINGS
+ #  define LZ4F_DEPRECATE(x) x
+@@ -93,7 +93,7 @@ extern "C" {
+ #  if defined(_MSC_VER)
+ #    define LZ4F_DEPRECATE(x) x   /* __declspec(deprecated) x - only works with C++ */
+ #  elif defined(__clang__) || (defined(__GNUC__) && (__GNUC__ >= 6))
+-#    define LZ4F_DEPRECATE(x) x __attribute__((deprecated))
++#    define LZ4F_DEPRECATE(x) x __attribute__((deprecated("use LZ4F_" #x " instead")))
+ #  else
+ #    define LZ4F_DEPRECATE(x) x   /* no deprecation warning for this compiler */
+ #  endif
+@@ -175,10 +175,10 @@ typedef enum {
+ } LZ4F_frameType_t;
+ 
+ #ifdef LZ4F_ENABLE_OBSOLETE_ENUMS
+-typedef LZ4F_blockSizeID_t blockSizeID_t;
+-typedef LZ4F_blockMode_t blockMode_t;
+-typedef LZ4F_frameType_t frameType_t;
+-typedef LZ4F_contentChecksum_t contentChecksum_t;
++typedef LZ4F_blockSizeID_t LZ4F_DEPRECATE(blockSizeID_t);
++typedef LZ4F_blockMode_t LZ4F_DEPRECATE(blockMode_t);
++typedef LZ4F_frameType_t LZ4F_DEPRECATE(frameType_t);
++typedef LZ4F_contentChecksum_t LZ4F_DEPRECATE(contentChecksum_t);
+ #endif
+ 
+ /*! LZ4F_frameInfo_t :

@@ -3,8 +3,8 @@
 # dosbox-staging
 #
 ################################################################################
-# Version: Commits on Aug 26, 2026
-DOSBOX_STAGING_VERSION = v0.83.0
+# Version: Commits on Oct 31, 2026
+DOSBOX_STAGING_VERSION = v0.83.1
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
 DOSBOX_STAGING_DEPENDENCIES = alsa-lib asio fluidsynth iir libogg libpng libvorbis mt32emu
 DOSBOX_STAGING_DEPENDENCIES += opus opusfile sdl2 sdl2_image slirp speexdsp zlib

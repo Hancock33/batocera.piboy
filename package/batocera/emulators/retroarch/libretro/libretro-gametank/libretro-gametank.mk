@@ -3,8 +3,8 @@
 # libretro-gametank
 #
 ################################################################################
-# Version: Commits on Oct 18, 2026
-LIBRETRO_GAMETANK_VERSION = v1.0.1
+# Version: Commits on Nov 02, 2026
+LIBRETRO_GAMETANK_VERSION = v1.0.2
 LIBRETRO_GAMETANK_SITE = $(call github,SundownerSport,gametank-libretro,$(LIBRETRO_GAMETANK_VERSION))
 LIBRETRO_GAMETANK_LICENSE = MIT
 LIBRETRO_GAMETANK_LICENSE_FILES = LICENSE

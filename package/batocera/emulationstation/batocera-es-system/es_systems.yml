@@ -74,6 +74,12 @@ amstradcpc:
                         Para habilitar o suporte ao controle, vá no menu RetroArch com "Hotkey + B" e altere esta opção:
                         De "Quick Menu/Core Input Options/User 1 Device type: Retropad" para "Amstrad Joystick"
 
+gx4000:
+  name:                 GX4000
+  manufacturer:         Amstrad
+  release:              1991
+  hardware:             console
+
 pcw:
   name:                 Amstrad PCW
   manufacturer:         Amstrad
@@ -82,12 +88,6 @@ pcw:
   comment_en:           |
                         Requires MAME BIOS files pcw8256.zip (and pcw9512.zip for the 9512 model).
                         Games are floppy disk images (.dsk). Most games are self-booting and don't require a separate system disk.
-
-gx4000:
-  name:                 GX4000
-  manufacturer:         Amstrad
-  release:              1991
-  hardware:             console
 
 apfm1000:
   name:                 M-1000
@@ -116,6 +116,22 @@ apple2gs:
   manufacturer:         Apple
   release:              1986
   hardware:             computer
+
+ios:
+  name:                 IOS
+  manufacturer:         Apple
+  release:              2008
+  hardware:             handheld
+  platform:             ios
+  path:                 touchhle
+  comment_en:           |
+                        Place decrypted .ipa files or .app bundles here.
+                        touchHLE will also create touchHLE_options.txt, touchHLE_apps,
+                        and touchHLE_sandbox in this same directory on first launch.
+  comment_br:           |
+                        Coloque aqui arquivos .ipa descriptografados ou diretórios .app.
+                        O touchHLE também criará touchHLE_options.txt, touchHLE_apps
+                        e touchHLE_sandbox neste mesmo diretório na primeira execução.
 
 macintosh:
   name:                 Macintosh
@@ -152,22 +168,6 @@ macintosh:
                         lr-minivmac requer MacII.ROM e MacIIx.ROM.
                         Se inicializar a partir de um disco rígido, os disquetes podem não carregar na inicialização. Para obter melhores resultados, faça uma cópia de uma das unidades de inicialização, carregue os discos manualmente através do menu MAME e copie ou instale-os na imagem do disco rígido.
                         As imagens de disco só serão carregadas no Mac IIx e não são inicializáveis.
-
-ios:
-  name:                 IOS
-  manufacturer:         Apple
-  release:              2008
-  hardware:             handheld
-  platform:             ios
-  path:                 touchhle
-  comment_en:           |
-                        Place decrypted .ipa files or .app bundles here.
-                        touchHLE will also create touchHLE_options.txt, touchHLE_apps,
-                        and touchHLE_sandbox in this same directory on first launch.
-  comment_br:           |
-                        Coloque aqui arquivos .ipa descriptografados ou diretórios .app.
-                        O touchHLE também criará touchHLE_options.txt, touchHLE_apps
-                        e touchHLE_sandbox neste mesmo diretório na primeira execução.
 
 ### Arcade Section
 acclaim:
@@ -494,14 +494,6 @@ fbneo:
 
                         Para mais informações: https://wiki.batocera.org/arcade
 
-gaelco:
-  name:                 Gaelco
-  manufacturer:         Arcade
-  release:              19XX
-  hardware:             arcade
-  platform:             arcade
-  path:                 /userdata/roms/arcade/gaelco
-
 gong:
   name:                 Pong
   manufacturer:         Arcade
@@ -588,6 +580,7 @@ mame:
   comment_br:           |
                         O sistema usa o libretro mame (0.278+)
                         Para mais informações: https://wiki.batocera.org/arcade
+
 mame2003:
   name:                 Mame (2003 Plus)
   manufacturer:         Arcade
@@ -752,6 +745,7 @@ namco3xx:
   manufacturer:         Namco
   release:              2007
   hardware:             arcade
+  platform:             namco, arcade
 
 nichibutsu:
   name:                 Nichibutsu
@@ -1033,7 +1027,7 @@ wswan:
   platform:             wonderswan
 
 wswanc:
-  name:                 WonderSwan Color
+  name:                 WonderSwan Colour
   manufacturer:         Bandai
   release:              2000
   hardware:             portable
@@ -1047,6 +1041,13 @@ settings:
   hardware:
   path:                 /userdata/roms/settings
   force:                True
+
+bigfish:
+  name:                 Big Fish Games
+  manufacturer:         Big Fish Games
+  release:              2002
+  hardware:             computer
+  platform:             pc
 
 gamate:
   name:                 Gamate
@@ -1070,6 +1071,21 @@ camplynx:
                         Requer os arquivo de BIOS MAME lynx128k.zip, lynx96k.zip, lynx48k.zip
                         Também pacote de samples bbc.zip em bios/mame/samples
 
+loopy:
+  name:                 Casio Loopy
+  manufacturer:         Casio
+  release:              1995
+  hardware:             console
+  comment_en:           |
+                        Requires MAME BIOS file:
+                        bios/mame/casloopy.zip
+  comment_fr:           |
+                        Nécessite ce fichier de BIOS MAME:
+                        bios/mame/casloopy.zip
+  comment_br:           |
+                        Requer arquivo de BIOS do MAME:
+                        bios/mame/casloopy.zip  
+
 pv1000:
   name:                 PV-1000
   manufacturer:         Casio
@@ -1085,21 +1101,6 @@ pv2000:
                         Requires MAME BIOS file pv2000.zip
   comment_br:           |
                         Requer o arquivo pv2000.zip da BIOS do MAME
-
-loopy:
-  name:                 Casio Loopy
-  manufacturer:         Casio
-  release:              1995
-  hardware:             console
-  comment_en:           |
-                        Requires MAME BIOS file:
-                        bios/mame/casloopy.zip
-  comment_fr:           |
-                        Nécessite ce fichier de BIOS MAME:
-                        bios/mame/casloopy.zip
-  comment_br:           |
-                        Requer arquivo de BIOS do MAME:
-                        bios/mame/casloopy.zip  
 
 adam:
   name:                 ADAM
@@ -1333,7 +1334,7 @@ dragon64:
                         The Dragon 64 is a British home computer from 1983, compatible with Tandy CoCo.
                         It features a Motorola 6809E CPU, 64KB RAM, and Microsoft Extended BASIC.
 
-                        Default Autoload Behaviors
+                        Default Autoload Behaviours
                         1. Cartridge (.ccc/.rom) files autoload directly
                         2. Cassette (.cas/.wav) files autoload using CLOADM:EXEC
                         3. Disk (.dsk/.dmk) files autoload from boot disk
@@ -1504,6 +1505,14 @@ supracan:
   comment_br:           |
                         O suporte de som é preliminar
 
+ctvboy:
+  name:                 Compact Vision TV Boy
+  manufacturer:         Gakken
+  release:              1983
+  hardware:             console
+  comment_en:           |
+                        MAME 0.262+ required
+
 gp32:
   name:                 GP32
   manufacturer:         GamePark
@@ -1523,14 +1532,6 @@ gmaster:
                         Requires MAME BIOS file gmaster.zip
   comment_br:           |
                         Requer o arquivo gmaster.zip da BIOS do MAME
-
-ctvboy:
-  name:                 Compact Vision TV Boy
-  manufacturer:         Gakken
-  release:              1983
-  hardware:             console
-  comment_en:           |
-                        MAME 0.262+ required
 
 arduous:
   name:                 Arduboy
@@ -1644,18 +1645,6 @@ pyxel:
   comment_fr:           |
                         Une fantasy console avec plein de jeux disponibles sur https://github.com/kitao/pyxel/wiki/Pyxel-User-Examples
 
-tic80:
-  name:                 TIC-80
-  manufacturer:         Homebrew Systems
-  release:              2016
-  hardware:             console
-  comment_en:           |
-                        For more info: https://wiki.batocera.org/systems:tic80
-  comment_fr:           |
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:tic80
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:tic80
-
 thextech:
   name:                 TheXTech
   manufacturer:         Homebrew Systems
@@ -1675,6 +1664,18 @@ thextech:
                         Vous pouvez par exemple télécharger Super Mario Bros. X.
                         Décompressez l’archive, puis renommez le dossier extrait en ajoutant l’extension .smbx à la fin.
                         Placez-le ensuite dans votre répertoire TheXTech pour en profiter.
+
+tic80:
+  name:                 TIC-80
+  manufacturer:         Homebrew Systems
+  release:              2016
+  hardware:             console
+  comment_en:           |
+                        For more info: https://wiki.batocera.org/systems:tic80
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:tic80
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:tic80
 
 uzebox:
   name:                 Uzebox
@@ -2212,15 +2213,6 @@ kodi:
   hardware:             computer
   path:                 /userdata/media
 
-recordings:
-  name:                 Recordings
-  manufacturer:         Misc. System
-  release:
-  hardware:             system
-  path:                 /userdata/recordings
-  platform:             imageviewer
-  force:                True
-
 library:
   name:                 Library
   manufacturer:         Misc. System
@@ -2241,6 +2233,15 @@ moonlight:
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:moonlight
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:moonlight
+
+recordings:
+  name:                 Recordings
+  manufacturer:         Misc. System
+  release:
+  hardware:             system
+  path:                 /userdata/recordings
+  platform:             imageviewer
+  force:                True
 
 pc60:
   name:                 PC-6000
@@ -2311,19 +2312,19 @@ supergrafx:
   release:              1989
   hardware:             console
 
-tg16:
-  name:                 Turbo Grafx 16
-  manufacturer:         NEC
-  release:              1987
-  hardware:             console
-  theme:                tg16
-
 tg-cd:
   name:                 Turbo Grafx CD
   manufacturer:         NEC
   release:              1988
   hardware:             console
   theme:                tg-cd
+
+tg16:
+  name:                 Turbo Grafx 16
+  manufacturer:         NEC
+  release:              1987
+  hardware:             console
+  theme:                tg16
 
 3ds:
   name:                 3DS
@@ -2404,7 +2405,7 @@ gba:
                         Para mais informações: https://wiki.batocera.org/systems:gba
 
 gbc:
-  name:                 Game Boy Color
+  name:                 Game Boy Colour
   manufacturer:         Nintendo
   release:              1998
   hardware:             portable
@@ -2416,7 +2417,7 @@ gbc:
                         Para mais informações: https://wiki.batocera.org/systems:gbc
 
 gbc2players:
-  name:                 Game Boy Color (2 players)
+  name:                 Game Boy Colour (2 players)
   manufacturer:         Nintendo
   release:              1998
   hardware:             portable
@@ -2427,12 +2428,6 @@ gbc2players:
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:gbc2players
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:gbc2players
-
-sgb-msu1:
-  name:                 Super Game Boy MSU1
-  manufacturer:         Nintendo
-  release:              1994
-  hardware:             console
 
 n64:
   name:                 Nintendo 64
@@ -2492,6 +2487,12 @@ sgb:
   release:              1994
   hardware:             console
   group:                snes
+
+sgb-msu1:
+  name:                 Super Game Boy MSU1
+  manufacturer:         Nintendo
+  release:              1994
+  hardware:             console
 
 sm64:
   name:                 Super Mario 64
@@ -2615,6 +2616,14 @@ zc210:
   theme:                zeldac
   path:                 /userdata/roms/ports/zc210
 
+ngage:
+  name:                 N-Gage
+  manufacturer:         Nokia
+  release:              2003
+  hardware:             portable
+  platform:             ngage
+  theme:                ngage
+
 mu:
   name:                 Palm OS
   manufacturer:         Palm
@@ -2637,12 +2646,6 @@ cdi:
   comment_br:           |
                         Requer o arquivo cdimono1.zip da BIOS do MAME
 
-odyssey2:
-  name:                 Odyssey2
-  manufacturer:         Philips - Magnavox
-  release:              1978
-  hardware:             console
-
 p2000t:
   name:                 P2000T
   manufacturer:         Philips
@@ -2657,6 +2660,19 @@ videopacplus:
   hardware:             console
   platform:             videopac
   path:                 videopacplus
+
+odyssey2:
+  name:                 Odyssey2
+  manufacturer:         Philips - Magnavox
+  release:              1978
+  hardware:             console
+
+popcap:
+  name:                 PopCap
+  manufacturer:         PopCap
+  release:              2000
+  hardware:             computer
+  platform:             pc
 
 ### Ports Section
 abuse:
@@ -3070,6 +3086,45 @@ freedroid:
   group:                ports
   path:                 /usr/share/emulationstation/ports/freedroid
 
+halflife:
+  name:                 Half-Life
+  manufacturer:         Ports
+  release:              1998
+  hardware:             port
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/halflife
+  comment_en:           |
+                        Half-Life 1 engine.
+
+                        Supports the following games:
+
+                        * Half-Life, including Blue Shift and Opposing Force.
+                        * Deathmatch Classic.
+                        * Several other mods: https://github.com/FWGS/hlsdk-xash3d/blob/mobile_hacks/dlls/moddef.h
+
+                        Installation:
+
+                        Copy the game's directory from your Steam installation (Steam/steamapps/common/Half-Life/<game data folder>/)
+                        to /userdata/roms/ports/halflife/<game folder> and create an empty `<game folder>.game` file in the same directory.
+
+                        For Half-Life 1, the game folder is `valve/`.
+  comment_br:           |
+                        Engine Half-Life 1.
+
+                        Suporta os seguintes jogos:
+
+                        * Half-Life, incluindo Blue Shift e Opposing Force.
+                        * Deathmatch Clássico.
+                        * Vários outros mods: https://github.com/FWGS/hlsdk-xash3d/blob/mobile_hacks/dlls/moddef.h
+
+                        Instalação:
+
+                        Copie o diretório do jogo da sua instalação do Steam (Steam/steamapps/common/Half-Life/<game data folder>/)
+                        para /userdata/roms/ports/halflife/<pasta do jogo> e crie um arquivo `<pasta do jogo>.game` vazio no mesmo diretório.
+
+                        Para Half-Life 1, a pasta do jogo é `valve/`.
+
 hcl:
   name:                 Hydra Castle Labyrinth
   manufacturer:         Ports
@@ -3109,6 +3164,60 @@ hurrican:
   comment_br:           |
                         Este sistema é um jogo independente. Não requer arquivo de rom.
 
+jazz2:
+  name:                 Jazz Jackrabbit 2
+  manufacturer:         Ports
+  release:              1998
+  hardware:             port
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/jazz2
+  comment_en:           |
+                        Jazz2 Native requires the original Jazz Jackrabbit 2 game files.
+                        Copy all game files into this directory.
+                        Then create an empty `Jazz Jackrabbit 2.game` file for EmulationStation to be able to launch the game.
+                        For more info: https://wiki.batocera.org/systems:jazz2-native
+  comment_fr:           |
+                        Trouvez la documentation ici : https://wiki.batocera.org/systems:jazz2-native
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:jazz2-native
+
+jkdf2:
+  name:                 Jedi Knight - Dark Forces 2
+  manufacturer:         Ports
+  release:              1993
+  hardware:             port
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/jkdf2
+  comment_en:           |
+                        Create an appropriate directory here for Jedi Knight - Dark Forces 2 or Mysteries of the Sith.
+                        Add the files for each game into the appropriate directory.
+
+                        Then create a blank launch file with a .jedi extension in the created directory to be able to start the game from ES.
+                        i.e. `Jedi Knight - Dark Forces 2.jedi` or `Mysteries of the Sith.jedi`.
+
+                        Jedi Knight - Dark Forces 2 is ideally designed to be best played with a mouse and keyboard.
+                        We have however mapped a gamepad style controller to the default keyboard for controller use.
+
+                        Do not enable the joystick option in OpenJKDF2 as the controls aren't ideal.
+                        Do not adjust the keyboard keys if planning on using the controller mapping.
+
+                        For more info: https://wiki.batocera.org/systems:jkdf2
+  comment_fr:           |
+                        Trouvez la documentation ici : https://wiki.batocera.org/systems:jkdf2
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:jkdf2
+
+jknight:
+  name:                 Jedi Knight - Academy
+  manufacturer:         Ports
+  release:              2003
+  hardware:             port
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/jknight
+
 jumpnbump:
   name:                 Jump 'n Bump
   manufacturer:         Ports
@@ -3117,6 +3226,37 @@ jumpnbump:
   platform:             pc
   group:                ports
   path:                 /userdata/roms/ports/jumpnbump
+
+mohaa:
+  name:                 Medal of Honour - Allied Assault
+  manufacturer:         Ports
+  release:              2002
+  hardware:             port
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/ports/mohaa
+  comment_en:           |
+                        Copy the contents of your Medal of Honour: Allied Assault game here.
+                        We recommend getting the Medal of Honour: Allied Assault War Chest version from GOG.
+                        This version has the Spearhead and Breakthrough expansion packs.
+
+                        If copied correctly you should have a `main` directory which is for the standard Allied Assault.
+                        If you have the expansion packs then you should have the extra `mainta` & `maintt` directories.
+
+                        Then create a blank launch file with a .mohaa extension in this directory to be able to start the game from ES.
+                        i.e. Medal of Honour - Allied Assault.mohaa or Medal of Honour - Allied Assault - Breakthrough.mohaa etc.
+
+                        Depending on the name used, we will choose the version of MOHAA to load.
+                        Therefore ensure you name it correctly. i.e. `Medal of Honour - Allied Assault - Spearhead.mohaa`
+
+                        These MOHAA games are ideally designed to be best played with a mouse and keyboard.
+                        We have however mapped a gamepad style controller to the default keyboard / mouse for controller use.
+
+                        For more info: https://wiki.batocera.org/systems:mohaa
+  comment_fr:           |
+                        Trouvez la documentation ici : https://wiki.batocera.org/systems:mohaa
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:mohaa
 
 mrboom:
   name:                 MrBoom
@@ -3250,91 +3390,6 @@ openjazz:
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:openjazz
 
-jazz2:
-  name:                 Jazz Jackrabbit 2
-  manufacturer:         Ports
-  release:              1998
-  hardware:             port
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/jazz2
-  comment_en:           |
-                        Jazz2 Native requires the original Jazz Jackrabbit 2 game files.
-                        Copy all game files into this directory.
-                        Then create an empty `Jazz Jackrabbit 2.game` file for EmulationStation to be able to launch the game.
-                        For more info: https://wiki.batocera.org/systems:jazz2-native
-  comment_fr:           |
-                        Trouvez la documentation ici : https://wiki.batocera.org/systems:jazz2-native
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:jazz2-native
-
-jknight:
-  name:                 Jedi Knight - Academy
-  manufacturer:         Ports
-  release:              2003
-  hardware:             port
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/jknight
-
-jkdf2:
-  name:                 Jedi Knight - Dark Forces 2
-  manufacturer:         Ports
-  release:              1993
-  hardware:             port
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/jkdf2
-  comment_en:           |
-                        Create an appropriate directory here for Jedi Knight - Dark Forces 2 or Mysteries of the Sith.
-                        Add the files for each game into the appropriate directory.
-
-                        Then create a blank launch file with a .jedi extension in the created directory to be able to start the game from ES.
-                        i.e. `Jedi Knight - Dark Forces 2.jedi` or `Mysteries of the Sith.jedi`.
-
-                        Jedi Knight - Dark Forces 2 is ideally designed to be best played with a mouse and keyboard.
-                        We have however mapped a gamepad style controller to the default keyboard for controller use.
-
-                        Do not enable the joystick option in OpenJKDF2 as the controls aren't ideal.
-                        Do not adjust the keyboard keys if planning on using the controller mapping.
-
-                        For more info: https://wiki.batocera.org/systems:jkdf2
-  comment_fr:           |
-                        Trouvez la documentation ici : https://wiki.batocera.org/systems:jkdf2
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:jkdf2
-
-mohaa:
-  name:                 Medal of Honour - Allied Assault
-  manufacturer:         Ports
-  release:              2002
-  hardware:             port
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/mohaa
-  comment_en:           |
-                        Copy the contents of your Medal of Honour: Allied Assault game here.
-                        We recommend getting the Medal of Honour: Allied Assault War Chest version from GOG.
-                        This version has the Spearhead and Breakthrough expansion packs.
-
-                        If copied correctly you should have a `main` directory which is for the standard Allied Assault.
-                        If you have the expansion packs then you should have the extra `mainta` & `maintt` directories.
-
-                        Then create a blank launch file with a .mohaa extension in this directory to be able to start the game from ES.
-                        i.e. Medal of Honour - Allied Assault.mohaa or Medal of Honour - Allied Assault - Breakthrough.mohaa etc.
-
-                        Depending on the name used, we will choose the version of MOHAA to load.
-                        Therefore ensure you name it correctly. i.e. `Medal of Honour - Allied Assault - Spearhead.mohaa`
-
-                        These MOHAA games are ideally designed to be best played with a mouse and keyboard.
-                        We have however mapped a gamepad style controller to the default keyboard / mouse for controller use.
-
-                        For more info: https://wiki.batocera.org/systems:mohaa
-  comment_fr:           |
-                        Trouvez la documentation ici : https://wiki.batocera.org/systems:mohaa
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:mohaa
-
 opentyrian:
   name:                 Tyrian
   manufacturer:         Ports
@@ -3413,7 +3468,7 @@ raze:
   group:                ports
   comment_en:           |
                         Raze is a source port, powered by gzdoom tech, for playing classic Build Engine games like Duke Nukem 3D.
-                        Each game must be organized in the raze directory properly and have a .raze file created for it.
+                        Each game must be organised in the raze directory properly and have a .raze file created for it.
                         The Build Engine uses a file override system similar to Doom and WAD files. Each game requires different files and
                         some are optional for things like movies and music. Batocera uses text files with the .raze extension that contain a
                         list of paths to files--one path per line. This tells Raze how to load a game. For example, there is a single line
@@ -3801,7 +3856,7 @@ vpinball:
                         /userdata/system/configs/vpinball/pinmame:          VPinball generated PinMAME settings, ex. sound, cheat, dmd_red
                         /userdata/system/configs/vpinball/pinmame/roms:     PinMAME ROMs directory
                         /userdata/system/configs/vpinball/pinmame/nvram:    PinMAME NVRAM directory
-                        /userdata/system/configs/vpinball/pinmame/altcolor: Serum colorizations directory <rom_name>/<rom.cRZ>
+                        /userdata/system/configs/vpinball/pinmame/altcolor: Serum colorisations directory <rom_name>/<rom.cRZ>
                         /userdata/system/configs/vpinball/pinmame/altsound: AltSound directory <rom_name>/
                         /userdata/system/configs/vpinball/pinmame/vpinball: VPinball PinMAME settings directory
 
@@ -3844,45 +3899,6 @@ vpinball:
                         /userdata/system/configs/vpinball/music:             Répertoire de musique de VPinball, placez votre musique ici.
                         ou dans le même dossier que votre fichier vpx dans son propre dossier 'musique'.
                         Le dossier de musique doit être en minuscules - c'est-à-dire /userdata/roms/vpinball/Kiss/music
-
-halflife:
-  name:                 Half-Life
-  manufacturer:         Ports
-  release:              1998
-  hardware:             port
-  platform:             pc
-  group:                ports
-  path:                 /userdata/roms/ports/halflife
-  comment_en:           |
-                        Half-Life 1 engine.
-
-                        Supports the following games:
-
-                        * Half-Life, including Blue Shift and Opposing Force.
-                        * Deathmatch Classic.
-                        * Several other mods: https://github.com/FWGS/hlsdk-xash3d/blob/mobile_hacks/dlls/moddef.h
-
-                        Installation:
-
-                        Copy the game's directory from your Steam installation (Steam/steamapps/common/Half-Life/<game data folder>/)
-                        to /userdata/roms/ports/halflife/<game folder> and create an empty `<game folder>.game` file in the same directory.
-
-                        For Half-Life 1, the game folder is `valve/`.
-  comment_br:           |
-                        Engine Half-Life 1.
-
-                        Suporta os seguintes jogos:
-
-                        * Half-Life, incluindo Blue Shift e Opposing Force.
-                        * Deathmatch Clássico.
-                        * Vários outros mods: https://github.com/FWGS/hlsdk-xash3d/blob/mobile_hacks/dlls/moddef.h
-
-                        Instalação:
-
-                        Copie o diretório do jogo da sua instalação do Steam (Steam/steamapps/common/Half-Life/<game data folder>/)
-                        para /userdata/roms/ports/halflife/<pasta do jogo> e crie um arquivo `<pasta do jogo>.game` vazio no mesmo diretório.
-
-                        Para Half-Life 1, a pasta do jogo é `valve/`.
 
 xrick:
   name:                 Rick Dangerous
@@ -4129,7 +4145,7 @@ quake3:
   group:                quake
   path:                 /userdata/roms/ports/quake3
   comment_en: |
-                        Quake III is optimized to be played with a mouse and keyboard, but here it is also pre-configured to be played with a gamepad.
+                        Quake III is optimised to be played with a mouse and keyboard, but here it is also pre-configured to be played with a gamepad.
 
                         For the basic configuration you must have the "baseq3" and "missionpack" folders in the "/userdata/roms/quake3" directory.
 
@@ -4171,20 +4187,6 @@ quake3:
 
                         Para mais informações: https://wiki.batocera.org/systems:ioquake3
 
-bigfish:
-  name:                 Big Fish Games
-  manufacturer:         Big Fish Games
-  release:              2002
-  hardware:             computer
-  platform:             pc
-
-popcap:
-  name:                 PopCap
-  manufacturer:         PopCap
-  release:              2000
-  hardware:             computer
-  platform:             pc
-
 atomiswave:
   name:                 Atomiswave
   manufacturer:         Sammy
@@ -4192,52 +4194,29 @@ atomiswave:
   hardware:             arcade
   platform:             atomiswave, arcade
 
+beena:
+  name:                 Sega Advanced Pico Beena
+  manufacturer:         Sega
+  release:              2005
+  hardware:             console
+  comment_en:           |
+                        BIOS: beena.zip in bios/mame/
+                        Successor to the Sega Pico. Cartridge-based educational console.
+
 cave3rd:
   name:                 Cave CV1000
   manufacturer:         Sega
   release:              2004
   hardware:             arcade
   platform:             cave3rd, arcade
-
-dreamcast:
-  name:                 Dreamcast
-  manufacturer:         Sega
-  release:              1998
-  hardware:             console
-  comment_en:           |
-                        For more info: https://wiki.batocera.org/systems:dreamcast
-  comment_fr:           |
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:dreamcast
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:dreamcast
-
-gaelco:
-  name:                 Gaelco
-  manufacturer:         Sega
-  release:              1999
-  hardware:             arcade
-  platform:             gaelco, arcade
-
-gamegear:
-  name:                 Game Gear
-  manufacturer:         Sega
-  release:              1990
-  hardware:             portable
-
-hikaru:
-  name:                 Hikaru
-  manufacturer:         Sega
-  release:              1999
-  hardware:             arcade
-  platform:             hikaru, arcade
   comment_en:           |
                         ---------------------------------
-                        ## HIKARU IMPORTANT INFO ##
+                        ## CAVE CV1000 IMPORTANT INFO ##
                         ---------------------------------
 
-                        You can now play Sega Hikaru games using Mame or Demul (with WINE).
-                        The emulators are still work in progress for Hikaru games so mileage will vary.
-                        Zipped roms should be stored in the appropriate hikaru directory compatible with MAME 0.284 or later.
+                        You can now play Sega Cave CV1000 games using Mame or Demul (with WINE).
+                        The emulators are still work in progress for Cave CV1000 games so mileage will vary.
+                        Zipped roms should be stored in the appropriate cave3rd directory compatible with MAME 0.284 or later.
 
                         Performance depends on your x86_64 system hardware.
                         If you get audio stuttering & slow music, your system isn't performant enough to run this system.
@@ -4274,18 +4253,144 @@ hikaru:
                         ---------------------
 
                         Demul has a specific list of currently compatible roms:
-                        
+
+                        akatana: Akai Katana (2010/ 8/13 MASTER VER.)
+                        deathsmil: Deathsmiles (2007/10/09 MASTER VER)
+                        dsmbl: Deathsmiles Mega Black Label (2008/10/06 MEGABLACK LABEL VER)
+                        ddpdfk: Dodonpachi Daifukkatsu Ver. 1.5 (2008/06/23 MASTER VER 1.5)
+                        ddpdfk10: Dodonpachi Daifukkatsu 1.0 (2008/05/16 MASTER VER)
+                        dfkbl: Dodonpachi Daifukkatsu Black Label (2010/ 1/18 BLACK LABEL)
+                        ddpsdoj: Dodonpachi Saidaioujou (2012/ 4/20)
+                        espgal2: Espgaluda II (2005/11/14 MASTER VER, CV1000-C)
+                        espgal2a: Espgaluda II (2005/11/14 MASTER VER, CV1000-B)
+                        futari10: Mushihime-sama Futari (2006/10/23 MASTER VER.)
+                        futari15: Mushihime-sama Futari Ver. 1.5 (2006/12/8.MASTER VER. 1.54.)
+                        futari15a: Mushihime-sama Futari Ver. 1.5 (2006/12/8 MASTER VER 1.54)
+                        futaribl: Mushihime-sama Futari Black Label - Another Ver (2009/11/27 INTER...)
+                        futariblj: Mushihime-sama Futari Black Label (2007/12/11 BLACK LABEL VER)
+                        ibara: Ibara (2005/03/22 MASTER VER.., '06. 3. 7 ver.)
+                        ibarao: Ibara (2005/03/22 MASTER VER..)
+                        ibarablk: Ibara Kuro Black Label (2006/02/06. MASTER VER.)
+                        ibarablka: Ibara Kuro Black Label (2006/02/06 MASTER VER.)
+                        mmmbanc: Medal Mahjong Moukari Bancho (2007/06/05 MASTER VER.)
+                        mmpork: Muchi Muchi Pork! (2007/ 4/17 MASTER VER.)
+                        mushisam: Mushihime-sama (2004/10/12.MASTER VER.)
+                        mushisama: Mushihime-sama (2004/10/12 MASTER VER.)
+                        mushisamb: Mushihime-sama (2004/10/12 MASTER VER.)
+                        mushitam: Puzzle! Mushihime-tama (2005/09/09. MASTER VER)
+                        mushitama: Puzzle! Mushihime-tama (2005/09/09 MASTER VER)
+                        pinkswts: Pink Sweets Ibara Sorekara (2006/04/06 MASTER VER....)
+                        pinkswtsa: Pink Sweets Ibara Sorekara (2006/04/06 MASTER VER...)
+                        pinkswtsb: Pink Sweets Ibara Sorekara (2006/04/06 MASTER VER.)
+                        pinkswtsx: Pink Sweets Ibara Sorekara (2006/XX/XX MASTER VER.)
+
+                        With both MAME and Demul you should be able to play a good collection of games.
+
+                        Enjoy Sega Cave CV1000 games under Linux!
+
+
+dreamcast:
+  name:                 Dreamcast
+  manufacturer:         Sega
+  release:              1998
+  hardware:             console
+  comment_en:           |
+                        For more info: https://wiki.batocera.org/systems:dreamcast
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:dreamcast
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:dreamcast
+
+gaelco:
+  name:                 Gaelco
+  manufacturer:         Sega
+  release:              1999
+  hardware:             arcade
+  platform:             gaelco, arcade
+  comment_en:           |
+                        ---------------------------------
+                        ## GAELCO IMPORTANT INFO ##
+                        ---------------------------------
+
+                        You can now play Gaelco games using Odin or Mame.
+                        The emulators are still work in progress for Gaelco games so mileage will vary.
+                        Zipped roms should be stored in the appropriate gaelco directory compatible with MAME 0.284 or later.
+                        Odin's Gaelco games need no BIOS.
+
+                        Performance depends on your system hardware.
+                        If you get audio stuttering & slow music, your system isn't performant enough to run this system.
+
+                        ------------------
+                        Odin Service Menu
+                        ------------------
+
+                        Hold Hotkey and press the right stick for TEST, or the left stick for SERVICE.
+                        On a keyboard, TEST is 0 and SERVICE is 9.
+                        In Gaelco Football the right stick kicks: pull it back first to lift the ball.
+
+                        --------------------
+                        Odin Compatible ROMs
+                        --------------------
+
+                        Odin has a specific list of currently compatible roms:
+
+                        atvtrack: ATV Track (set 1)
+                        atvtracka: ATV Track (set 2)
+                        gfootbal: Gaelco Football
+                        smashdrv: Smashing Drive (World)
+                        smashdrvb: Smashing Drive (UK)
+                        smashdrvs: Smashing Drive (Spain, Portugal)
+
+                        With both Odin and MAME you should be able to play a good collection of games.
+
+                        Enjoy Gaelco games under Linux!
+
+gamegear:
+  name:                 Game Gear
+  manufacturer:         Sega
+  release:              1990
+  hardware:             portable
+
+hikaru:
+  name:                 Hikaru
+  manufacturer:         Sega
+  release:              1999
+  hardware:             arcade
+  platform:             hikaru, arcade
+  comment_en:           |
+                        ---------------------------------
+                        ## HIKARU IMPORTANT INFO ##
+                        ---------------------------------
+
+                        You can now play Sega Hikaru games using Odin.
+                        The emulator is still work in progress for Hikaru games so mileage will vary.
+                        Zipped roms should be stored in the appropriate hikaru directory compatible with MAME 0.284 or later.
+                        The hikaru.zip and mie.zip BIOS files go in the bios directory, jvs13551.zip is optional.
+
+                        Performance depends on your system hardware.
+                        If you get audio stuttering & slow music, your system isn't performant enough to run this system.
+
+                        ------------------
+                        Odin Service Menu
+                        ------------------
+
+                        Hold Hotkey and press the right stick for TEST, or the left stick for SERVICE.
+                        On a keyboard, TEST is 0 and SERVICE is 9.
+
+                        --------------------
+                        Odin Compatible ROMs
+                        --------------------
+
+                        Odin has a specific list of currently compatible roms:
+
                         airtrix: Air Trix (Rev. A)
                         airtrixo: Air Trix (original)
                         braveff: Brave Firefighters
-                        hikcheck: Hikaru Check ROM BD
                         pharrier: Planet Harriers (Rev. A)
                         swracer: Star Wars: Racer Arcade
                         sgnascar: NASCAR Arcade (Rev. A)
                         sgnascaro: NASCAR Arcade (original)
                         von4: Cyber Troopers Virtual-On 4: Force (Rev. E)
-                        
-                        With both MAME and Demul you should be able to play a good collection of games.
 
                         Enjoy Sega Hikaru games under Linux!
 
@@ -4357,6 +4462,14 @@ mastersystem:
   release:              1985
   hardware:             console
 
+megacd:
+  name:                 Mega CD
+  manufacturer:         Sega
+  release:              1991
+  hardware:             console
+  platform:             megacd
+  theme:                megacd
+
 megadrive:
   name:                 Mega Drive
   manufacturer:         Sega
@@ -4371,13 +4484,20 @@ megadrive:
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:megadrive
 
+megadrive-msu:
+  name:                 MSU-MD
+  manufacturer:         Sega
+  release:              2020
+  hardware:             console
+  platform:             genesis, megadrive
+  group:                megadrive
+
 model1:
   name:                 Model 1
   manufacturer:         Sega
   release:              1992
   hardware:             arcade
   platform:             model1, arcade
-
   comment_en:           |
                         ## SEGA MODEL 1 ##
 
@@ -4498,14 +4618,6 @@ model3:
 
                         Veja as Perguntas e dúvidas mais frequentes sobre supermodelos aqui - https://www.supermodel3.com/FAQ.html
 
-megadrive-msu:
-  name:                 MSU-MD
-  manufacturer:         Sega
-  release:              2020
-  hardware:             console
-  platform:             genesis, megadrive
-  group:                megadrive
-
 naomi:
   name:                 Naomi
   manufacturer:         Sega
@@ -4562,7 +4674,7 @@ naomi2:
                         To determine the decimal we have to convert the hexadecimal to decimal.
                         You can edit arcade controls they're under the [JAMMAx_x] headings depending on the number of controllers.
 
-                        Controller 1 = 0x100 & 0x200 for the buttons & the 2x analog sticks.
+                        Controller 1 = 0x100 & 0x200 for the buttons & the 2x analogue sticks.
                         Controller 2 = 0x101 & 0x201 etc.
 
                         Device input hex codes are listed in the appropriate linux kernel input.h depending on the controller type.
@@ -4604,7 +4716,7 @@ naomi2:
                         Isso cria a estrutura de diretórios e instala as bibliotecas do Windows associadas para o Wine.
 
                         Nota: Pode levar algum tempo até que o jogo comece na primeira tentativa, isso é NORMAL!
-                        *** Por favor, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
+                        *** Por favour, seja paciente, pois pode levar até 2 minutos, dependendo da velocidade da sua conexão com a internet ***
 
                         -----------
                         Controles
@@ -4644,42 +4756,11 @@ pico:
   hardware:             console
   group:                megadrive
 
-beena:
-  name:                 Sega Advanced Pico Beena
-  manufacturer:         Sega
-  release:              2005
-  hardware:             console
-  comment_en:           |
-                        BIOS: beena.zip in bios/mame/
-                        Successor to the Sega Pico. Cartridge-based educational console.
-
 saturn:
   name:                 Saturn
   manufacturer:         Sega
   release:              1994
   hardware:             console
-
-segastv:
-  name:                 Sega Titan Video
-  manufacturer:         Sega
-  release:              1994
-  hardware:             arcade
-  platform:             st-v, arcade
-
-sega32x:
-  name:                 32x
-  manufacturer:         Sega
-  release:              1994
-  hardware:             console
-  group:                megadrive
-
-megacd:
-  name:                 Mega CD
-  manufacturer:         Sega
-  release:              1991
-  hardware:             console
-  platform:             megacd
-  theme:                megacd
 
 sc3000:
   name:                 SC-3000
@@ -4692,6 +4773,13 @@ sc3000:
                         SC-3000 cartridges are compatible with SG-1000.
                         Cassette tapes (.wav, .cas, .bit) are SC-3000 exclusive.
 
+sega32x:
+  name:                 32x
+  manufacturer:         Sega
+  release:              1994
+  hardware:             console
+  group:                megadrive
+
 segaai:
   name:                 Sega AI Computer
   manufacturer:         Sega
@@ -4701,6 +4789,13 @@ segaai:
                         BIOS: segaai.zip in bios/mame/
                         Software on Sega My Cards (.bin) or cassette tapes (.wav, .flac, .cas).
 
+segastv:
+  name:                 Sega Titan Video
+  manufacturer:         Sega
+  release:              1994
+  hardware:             arcade
+  platform:             st-v, arcade
+
 sg1000:
   name:                 SG-1000
   manufacturer:         Sega
@@ -4708,6 +4803,31 @@ sg1000:
   hardware:             console
   platform:             sg-1000
   theme:                sg-1000
+
+sonicmania:
+  name:                 Sonic Mania
+  manufacturer:         Sega
+  release:              2017
+  hardware:             port
+  theme:                sonic-mania
+  platform:             pc
+  group:                sonic
+  path:                 /userdata/roms/ports/sonicmania
+  comment_en:           |
+                        For more info: https://wiki.batocera.org/systems:sonic-mania
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:sonic-mania
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:sonic-mania
+
+sonicnexus:
+  name:                 Sonic Nexus
+  manufacturer:         Sega
+  release:              2008
+  hardware:             port
+  platform:             pc
+  group:                sonic
+  path:                 /userdata/roms/ports/sonicnexus
 
 sonicretro:
   name:                 Sonic Retro Engine
@@ -4746,31 +4866,6 @@ sonicretro:
                         The options are slightly different between the two, so you may need to manually select the emulator to change them.
 
                         The dev menu option is needed to run mods.
-
-sonicmania:
-  name:                 Sonic Mania
-  manufacturer:         Sega
-  release:              2017
-  hardware:             port
-  theme:                sonic-mania
-  platform:             pc
-  group:                sonic
-  path:                 /userdata/roms/ports/sonicmania
-  comment_en:           |
-                        For more info: https://wiki.batocera.org/systems:sonic-mania
-  comment_fr:           |
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:sonic-mania
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:sonic-mania
-
-sonicnexus:
-  name:                 Sonic Nexus
-  manufacturer:         Sega
-  release:              2008
-  hardware:             port
-  platform:             pc
-  group:                sonic
-  path:                 /userdata/roms/ports/sonicnexus
 
 srb2:
   name:                 Sonic Robo Blast 2
@@ -4955,18 +5050,10 @@ ngp:
   hardware:             portable
 
 ngpc:
-  name:                 Neo-Geo Pocket Color
+  name:                 Neo-Geo Pocket Colour
   manufacturer:         SNK
   release:              1999
   hardware:             portable
-
-ngage:
-  name:                 N-Gage
-  manufacturer:         Nokia
-  release:              2003
-  hardware:             portable
-  platform:             ngage
-  theme:                ngage
 
 solarus:
   name:                 Solarus
@@ -5140,48 +5227,21 @@ j2me:
   release:              2001
   hardware:             portable
 
-oricatmos:
-  name:                 Oric Atmos
-  manufacturer:         Tangerine Computer Systems
-  release:              1984
-  hardware:             computer
-  theme:                oric
-
-  comment_en:           |
-                        Emulator for Oric Atmos (and Oric 1)
-                        You need at least the rom file /userdata/bios/Oric/basic11.rom
-                        For more info: https://wiki.batocera.org/systems:oricatmos
-  comment_fr:           |
-                        Emulateur pour Oric Atmos (et Oric 1)
-                        Il vous faut au moins le fichier rom /userdata/bios/Oric/basic11.rom
-                        Trouvez la documentation ici : https://wiki.batocera.org/systems:oricatmos
-
 vis:
   name:                 Tandy Video Information System
   manufacturer:         Tandy / Memorex
   release:              1992
   hardware:             computer
 
-mc10:
-  name:                 MC-10
-  manufacturer:         Tandy Radio Shack
-  release:              1983
-  hardware:             computer
-  comment_en:           |
-                        MAME requires BIOS file mc10.zip
-
-                        Xroar requires BASIC ROMs to be in the /userdata/bios/xroar folder.
-                        The required rom files can be obtained from here: https://colorcomputerarchive.com/repo/ROMs/XRoar
-
 coco:
-  name:                 Color Computer
+  name:                 Colour Computer
   manufacturer:         Tandy Radio Shack
   release:              1980
   hardware:             computer
   comment_en: |
                         MAME requires BIOS file coco.zip and coco3.zip
 
-                        Default Autoload Behaviors
+                        Default Autoload Behaviours
                         1. "usage" info field when using MAME software lists (if declared)
                         2. Cassette (.cas) files autoload as binary (CLOADM:EXEC)
                         3. Disk (.dsk) files autoload based on basename (eg. ZONX.dsk autoloads as LOADM “ZONX”:EXEC)
@@ -5200,6 +5260,33 @@ coco:
   comment_br:           |
                         Requer o arquivo coco.zip da BIOS do MAME
 
+mc10:
+  name:                 MC-10
+  manufacturer:         Tandy Radio Shack
+  release:              1983
+  hardware:             computer
+  comment_en:           |
+                        MAME requires BIOS file mc10.zip
+
+                        Xroar requires BASIC ROMs to be in the /userdata/bios/xroar folder.
+                        The required rom files can be obtained from here: https://colorcomputerarchive.com/repo/ROMs/XRoar
+
+oricatmos:
+  name:                 Oric Atmos
+  manufacturer:         Tangerine Computer Systems
+  release:              1984
+  hardware:             computer
+  theme:                oric
+
+  comment_en:           |
+                        Emulator for Oric Atmos (and Oric 1)
+                        You need at least the rom file /userdata/bios/Oric/basic11.rom
+                        For more info: https://wiki.batocera.org/systems:oricatmos
+  comment_fr:           |
+                        Emulateur pour Oric Atmos (et Oric 1)
+                        Il vous faut au moins le fichier rom /userdata/bios/Oric/basic11.rom
+                        Trouvez la documentation ici : https://wiki.batocera.org/systems:oricatmos
+
 ti99:
   name:                 TI-99
   manufacturer:         Texas Instruments
@@ -5211,6 +5298,36 @@ ti99:
   comment_br:           |
                         Requer o arquivo ti99_4a.zip da BIOS do MAME
                         Os cartuchos precisam estar no formato .rpk e descompactados - caso contrário os arquivos da lista de software MAME (.bin) não serão executados corretamente.
+
+commanderx16:
+  name:                 Commander X16
+  manufacturer:         The 8-Bit Guy
+  release:              2019
+  hardware:             computer
+  platform:             commanderx16
+  comment_en:           |
+                        Extract your Commander X16 games here in their own directory.
+                        The games with .IMG .PRG extensions will show in EmulationStation to run accordingly.
+
+                        If you have a game without an appropriate extension you can create a .BAS file with DOS commands.
+                        i.e. in the game folder create a PLANETX16.BAS file.
+                        Then add into the file the DOS commands to load the game, like so...
+
+                        LOAD "PLANETX16"
+                        RUN
+
+                        If you have an .IMG file which doesn't load then create an autorun.cmd file with the DOS commands also.
+                        i.e. X16 Wars would contain the following...
+
+                        LOAD "WARS.PRG"
+                        ...
+                        RUN
+
+                        For more info: https://wiki.batocera.org/systems:commanderx16
+  comment_fr:           |
+                        Trouvez la documentation ici: https://wiki.batocera.org/systems:commanderx16
+  comment_br:           |
+                        Para mais informações: https://wiki.batocera.org/systems:commanderx1
 
 thomson:
   name:                 Thomson - MO/TO (Theodore)
@@ -5228,14 +5345,6 @@ gamecom:
   comment_br:           |
                         Requer o arquivo gamecom.zip da BIOS do MAME
 
-multivision:
-  name:                 Othello Multivision
-  manufacturer:         Tsukuda Original
-  release:              1983
-  hardware:             console
-  platform:             sg-1000
-  theme:                multivision
-
 tutor:
   name:                 Tutor
   manufacturer:         Tomy
@@ -5247,6 +5356,14 @@ tutor:
   comment_br:           |
                         Requer o arquivo tutor.zip da BIOS do MAME
                         Para pular o menu de carregamento, pressione R1 para mover para baixo e A/Leste para selecionar.
+
+multivision:
+  name:                 Othello Multivision
+  manufacturer:         Tsukuda Original
+  release:              1983
+  hardware:             console
+  platform:             sg-1000
+  theme:                multivision
 
 steam:
   name:                 Steam
@@ -5385,33 +5502,3 @@ actionmax:
                         Trouvez la documentation ici: https://wiki.batocera.org/systems:daphne
   comment_br:           |
                         Para mais informações: https://wiki.batocera.org/systems:daphne
-
-commanderx16:
-  name:                 Commander X16
-  manufacturer:         The 8-Bit Guy
-  release:              2019
-  hardware:             computer
-  platform:             commanderx16
-  comment_en:           |
-                        Extract your Commander X16 games here in their own directory.
-                        The games with .IMG .PRG extensions will show in EmulationStation to run accordingly.
-
-                        If you have a game without an appropriate extension you can create a .BAS file with DOS commands.
-                        i.e. in the game folder create a PLANETX16.BAS file.
-                        Then add into the file the DOS commands to load the game, like so...
-
-                        LOAD "PLANETX16"
-                        RUN
-
-                        If you have an .IMG file which doesn't load then create an autorun.cmd file with the DOS commands also.
-                        i.e. X16 Wars would contain the following...
-
-                        LOAD "WARS.PRG"
-                        ...
-                        RUN
-
-                        For more info: https://wiki.batocera.org/systems:commanderx16
-  comment_fr:           |
-                        Trouvez la documentation ici: https://wiki.batocera.org/systems:commanderx16
-  comment_br:           |
-                        Para mais informações: https://wiki.batocera.org/systems:commanderx1

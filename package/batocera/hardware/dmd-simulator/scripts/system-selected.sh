@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# keep customizable
+# keep customisable
 test -e "/userdata/system/configs/emulationstation/scripts/system-selected/dmd-simulator.sh" && exit 0
 
 GSYSTEM=$1

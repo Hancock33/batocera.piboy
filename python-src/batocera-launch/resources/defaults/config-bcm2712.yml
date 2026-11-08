@@ -2,9 +2,6 @@ default:
   options:
     hud_support: true
 
-nds:
-  emulator: drastic
-  core:     drastic
 3ds:
   emulator: azahar
   core:     azahar
@@ -14,15 +11,21 @@ flash:
 fmtowns:
   emulator: libretro
   core:     mame
+gamecube:
+  emulator: dolphin
+  core:     dolphin
+model1:
+  emulator: sm2-emu
+  core:     sm2-emu
+model2:
+  emulator: sm2-emu
+  core:     sm2-emu
 model3:
   emulator: supermodel
   core:     supermodel
-scummvm:
-  emulator: scummvm
-  core:     scummvm
-  options:
-    decorations: none
-    hud_support: none
+nds:
+  emulator: drastic
+  core:     drastic
 quake3:
   emulator: vkquake3
   core:     vkquake3
@@ -30,20 +33,20 @@ quake3:
     videomode: max-1920x1080
     decorations: none
     hud_support: none
-gamecube:
-  emulator: dolphin
-  core:     dolphin
-wii:
-  emulator: dolphin
-  core:     dolphin
-  options:
-    gfxbackend: Vulkan
 saturn:
   emulator: ymir
   core:     ymir
   options:
     decorations: none
     hud_support: none
-model2:
-  emulator: sm2-emu
-  core:     sm2-emu
+scummvm:
+  emulator: scummvm
+  core:     scummvm
+  options:
+    decorations: none
+    hud_support: none
+wii:
+  emulator: dolphin
+  core:     dolphin
+  options:
+    gfxbackend: Vulkan

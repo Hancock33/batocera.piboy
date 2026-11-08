@@ -3,8 +3,8 @@
 # libretro-emuscv
 #
 ################################################################################
-# Version: Commits on Sep 21, 2026
-LIBRETRO_EMUSCV_VERSION = 17407117018919545428b753277dabd83630052f
+# Version: Commits on Oct 14, 2026
+LIBRETRO_EMUSCV_VERSION = 33900ce24f45c429b533fdae7844e04d64a9a1b9
 LIBRETRO_EMUSCV_SITE = $(call gitlab,MaaaX-EPOCH84,libretro-emuscv,$(LIBRETRO_EMUSCV_VERSION))
 LIBRETRO_EMUSCV_LICENSE = GPL-3.0+
 LIBRETRO_EMUSCV_DEPENDENCIES = retroarch
