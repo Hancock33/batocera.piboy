@@ -43,6 +43,9 @@ fm7:
 fmtowns:
   emulator: libretro
   core:     mame
+gaelco:
+  emulator: odin
+  core:     odin
 gamate:
   emulator: mame
   core:     mame

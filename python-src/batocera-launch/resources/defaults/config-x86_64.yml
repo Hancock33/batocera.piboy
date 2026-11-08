@@ -335,8 +335,8 @@ freedroid:
   emulator: freedroid
   core:     freedroid
 gaelco:
-  emulator: libretro
-  core:     mame
+  emulator: odin
+  core:     odin
 gamate:
   emulator: libretro
   core:     mame
@@ -405,8 +405,8 @@ hcl:
   emulator: hcl
   core:     hcl
 hikaru:
-  emulator: libretro
-  core:     mame
+  emulator: odin
+  core:     odin
 hode:
   emulator: hode
   core:     hode
