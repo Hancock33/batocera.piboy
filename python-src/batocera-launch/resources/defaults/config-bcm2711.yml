@@ -46,7 +46,7 @@ fmtowns:
   core:     mame
 gamecube:
   emulator: libretro
-  core:     dolphin
+  core:     parallel_gx1
   options:
     videomode: max-480x240
 model1:
@@ -98,11 +98,11 @@ traider:
   core:     openlara
 wii:
   emulator: libretro
-  core:     dolphin
+  core:     parallel_gx1
   options:
     videomode: max-480x240
 wiiware:
   emulator: libretro
-  core:     dolphin
+  core:     parallel_gx1
   options:
     videomode: max-480x240
