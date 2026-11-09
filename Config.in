@@ -514,6 +514,7 @@ menu "batocera.linux"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/lightgun-controllers-art/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/nanum-font/Config.in"
     source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/noto-cjk-fonts/Config.in"
+    source "$BR2_EXTERNAL_BATOCERA_PATH/package/batocera/looks/odin-bezels/Config.in"
   endmenu
 
   menu "Network"
