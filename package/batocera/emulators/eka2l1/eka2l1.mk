@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 10, 2026
-EKA2L1_VERSION = cd337cec88e3b241c077103c52895a3d4d132384
+EKA2L1_VERSION = 393a785b4f6d126ea69bb9541467eeda68e862c0
 EKA2L1_SITE = https://github.com/EKA2L1/EKA2L1.git
 EKA2L1_SITE_METHOD=git
 EKA2L1_GIT_SUBMODULES=YES

@@ -3,8 +3,8 @@
 # libfreeimage
 #
 ################################################################################
-# Version: Commits on Jun 17, 2025
-LIBFREEIMAGE_VERSION = 6a2958b49ca060408e304fb5714fdeaab811b37d
+# Version: Commits on Nov 10, 2026
+LIBFREEIMAGE_VERSION = d29c96999deb331181c44264e5338ec16d393c79
 LIBFREEIMAGE_SITE = $(call github,toxieainc,freeimage,$(LIBFREEIMAGE_VERSION))
 LIBFREEIMAGE_LICENSE = GPL-2.0 or GPL-3.0 or FreeImage Public License
 LIBFREEIMAGE_LICENSE_FILES = license-gplv2.txt license-gplv3.txt license-fi.txt
