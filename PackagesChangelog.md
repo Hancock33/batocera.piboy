@@ -68,7 +68,6 @@ Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|e9ebeb7c83b7ffe67d8604a3b79d34925d56aada|Nov 08, 2026
 Emulators|[odin](http://github.com/Tovarichtch/Odin)|6ebf2b40ccbca9534d1a0e58b7602db11e4485d9|Nov 08, 2026
 Emulators|[sm2-emu](https://github.com/dmanlfc/sm2-emu.git)|v0.9.59|Nov 08, 2026
-Looks|[odin-bezels](https://github.com/Tovarichtch/Odin/releases)|6ebf2b40ccbca9534d1a0e58b7602db11e4485d9|Nov 08, 2026
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|8fbaf4e47c2e0314840bed557287bd505c80d7ce|Nov 08, 2026
 Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|13d8bea7b484f4eec993d2c8723b8756c6300963|Nov 08, 2026
 Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.18|Nov 08, 2026
@@ -88,6 +87,7 @@ Emulators|[libretro-blastem](http://github.com/libretro/blastem)|ec73825ece2a134
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|7db2bb50a28c8413b55c0832aaa31a04fb9e2efb|Nov 08, 2026
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|98448cba8d30833a0ba12621dc8311e9e98e9a85|Nov 08, 2026
 Libraries|[asio](http://github.com/chriskohlhoff/asio)|asio-1-39-0|Nov 07, 2026
+Looks|[odin-bezels](https://github.com/Tovarichtch/Odin/releases)|v0.1.1|Nov 07, 2026
 Ports|[catacombgl](http://github.com/ArnoAnsems/CatacombGL)|6f243e42fc99b830982cf58bc19bd8a369fe9e6a|Nov 07, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|39ee946c56e89d5976e9448bc5053758737b8147|Nov 07, 2026
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|ba615e6c3ea2732a33ce76966aa496cfc7cdbac8|Nov 07, 2026

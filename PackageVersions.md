@@ -416,7 +416,7 @@ Looks|[hypseus-singe-bezels](http://github.com/Tovarichtch/hypseus_singe_daphne_
 Looks|[lightgun-controllers-art](http://github.com/batocera-linux/lightgun-controllers-art)|04dd1e9554ac45ce3e2afadc32d9bc2cb1203233|Feb 16, 2026
 Looks|[nanum_font](http://github.com/bulzipke/nanum-font)|2385eb085e4bf326590a2db6d4514e8477d9922f|Feb 02, 2025
 Looks|[noto-cjk-fonts](https://github.com/notofonts/noto-cjk/releases)|Sans2.004|Jan 27, 2022
-Looks|[odin-bezels](https://github.com/Tovarichtch/Odin/releases)|6ebf2b40ccbca9534d1a0e58b7602db11e4485d9|Nov 08, 2026
+Looks|[odin-bezels](https://github.com/Tovarichtch/Odin/releases)|v0.1.1|Nov 07, 2026
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-11|Nov 09, 2026
 Network|[broadcom-wl](https://docs.broadcom.com/docs-and-downloads/docs/linux_sta)|6_30_223_271|N/A
 Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A

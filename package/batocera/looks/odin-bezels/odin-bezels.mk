@@ -3,8 +3,8 @@
 # odin-bezels
 #
 ################################################################################
-# Version: Commits on Nov 08, 2026
-ODIN_BEZELS_VERSION = 6ebf2b40ccbca9534d1a0e58b7602db11e4485d9
+# Version: Commits on Nov 07, 2026
+ODIN_BEZELS_VERSION = v0.1.1
 ODIN_BEZELS_SITE = https://github.com/Tovarichtch/Odin/releases/download/$(ODIN_BEZELS_VERSION)
 ODIN_BEZELS_SOURCE = Odin-Artwork.zip
 ODIN_BEZELS_LICENSE = Proprietary
