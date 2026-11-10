@@ -90,7 +90,7 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|v0.8
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.10.01-osfree|Oct 02, 2026
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/dmanlfc/drastic/raw/refs/heads/main)|r2.5.2.2|Feb 26, 2021
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|a6aabfb41af4c8df84667e004dedc21cf02736f6|Nov 10, 2026
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|73c4055ad047c0c93f8143a767205330c8dfaf1a|Nov 10, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|6a767ac43a089fe988526bf7f8477ccc43277fb1|Nov 09, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|cd337cec88e3b241c077103c52895a3d4d132384|Nov 10, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|72b8e67141d85ca5c9259f04563b49f7f92f928b|Nov 09, 2026
@@ -194,9 +194,9 @@ Emulators|[libretro-o2em](http://github.com/libretro/libretro-o2em)|679d6fec0496
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|595fd1db7d5bf0d3ca63d2292854d587ddcfa94b|Nov 09, 2026
 Emulators|[libretro-p2000t](http://github.com/p2000t/M2000)|dd0e04b12526e79ffd4dec27ba8969f36a627e9d|Oct 31, 2026
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|b18e6586a56b4d35ac0953be6359beed93586dfe|Nov 09, 2026
-Emulators|[libretro-parallel-dc](http://github.com/libretro/parallel-dc)|84f37459627c2e29e3ba88b2f5643eb5bb389b86|Nov 10, 2026
-Emulators|[libretro-parallel-gx1](https://github.com/libretro/parallel-gx1.git)|cceb773dbfe5b32217c503368f62dfb5363795cc|Nov 10, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|a2b3c5a266930ddb61876282d87e21144a4d3ab9|Nov 10, 2026
+Emulators|[libretro-parallel-dc](http://github.com/libretro/parallel-dc)|e64eba532091b135e4c2a9d6557fcb3c230ded47|Nov 10, 2026
+Emulators|[libretro-parallel-gx1](https://github.com/libretro/parallel-gx1.git)|9807c46402a574d92c5eed46e508449633ec69e0|Nov 10, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|a7d570c66b1bde6e8797cc7a9323696aa609a2bc|Nov 10, 2026
 Emulators|[libretro-pc88](http://github.com/libretro/quasi88-libretro)|7884be5277776a5d8c4fdc4e574e9b5b589945c9|Oct 06, 2026
 Emulators|[libretro-pc98](http://github.com/AZO234/NP2kai)|5939e0c6d5985c4c08fc70f289a83290e5d3e6f7|Sept 05, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|7b0e8f8fadfbce3d170d195b9d9eecaabfa08c8e|Oct 29, 2026
@@ -207,7 +207,7 @@ Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|132111b763435
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|d20d388611395a1948c3092dcbdbba347d0e954f|Nov 10, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|4849268e7342494193f2bbf2d0128a751cf58da7|Oct 17, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|8a88014287c7a01cd568067e5a557d0a2b2a051f|Aug 22, 2026
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|a19c8f6aed7f58b98392ad5c70bdf23cff6aeb5a|Nov 10, 2026
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|47b12704265d446d7c39c8878c11e1d3915898e7|Nov 10, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|d366f77c60e5a5f059f129cc3773d3048306083b|Nov 09, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|5dbac2bf90b2dddf9d3f8d5b2ccad0651f798c1d|Nov 09, 2026
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|0a9a69445253ab9a23aa00416ebc96c54d821e8b|Nov 09, 2026
@@ -271,7 +271,7 @@ Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|A
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|d20d388611395a1948c3092dcbdbba347d0e954f|Nov 10, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8c918e2872482139273374ef4cc6c7aff34d7585|Nov 09, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|61634586c0bd0f18274756cb6894d739f714f793|Nov 10, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|43152f5f2d51bac1250f75c33e9812e27f89e764|Nov 10, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260927|Sept 27, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|v0.0.43|Sept 30, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|280c427c550c5fe3bcc46b378e06a9b90a7e6b09|Sept 18, 2026
@@ -289,7 +289,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|88b985bee058afc6a7da4aaebf6
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu-chihiro](https://github.com/Tovarichtch/xemu.git)|e66fe47cdaa781966ffd9a7112200ade04c1a531|Oct 03, 2026
 Emulators|[xemu](https://github.com/xemu-project/xemu.git)|6095054b7d02dfac25fdc4a8ba9300358046e860|Nov 02, 2026
-Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|605666476d8d7cc5ea71f5f2bbe39c94b655d3ba|Nov 10, 2026
+Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|0ce969b9ee798ac791f353b83741fb5d4e253235|Nov 10, 2026
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.12.1|Jul 27, 2026
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Emulators|[ymir](https://github.com/ymir-emu/Ymir)|v0.4.1|Oct 18, 2026

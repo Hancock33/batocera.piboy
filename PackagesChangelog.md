@@ -1,20 +1,20 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|70c5a6ad0e62ce32d922dd2478d465e9f0f84424|Nov 10, 2026
-Emulators|[duckstation](http://github.com/stenzek/duckstation)|a6aabfb41af4c8df84667e004dedc21cf02736f6|Nov 10, 2026
+Emulators|[duckstation](http://github.com/stenzek/duckstation)|73c4055ad047c0c93f8143a767205330c8dfaf1a|Nov 10, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|cd337cec88e3b241c077103c52895a3d4d132384|Nov 10, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|d20d388611395a1948c3092dcbdbba347d0e954f|Nov 10, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|88b985bee058afc6a7da4aaebf67da2df9e5c7cc|Nov 10, 2026
-Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|605666476d8d7cc5ea71f5f2bbe39c94b655d3ba|Nov 10, 2026
+Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|0ce969b9ee798ac791f353b83741fb5d4e253235|Nov 10, 2026
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v3.0.1|Nov 10, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|bc3eca03a7bfdb38f794be17d54c41f387415ea4|Nov 10, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|61634586c0bd0f18274756cb6894d739f714f793|Nov 10, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|43152f5f2d51bac1250f75c33e9812e27f89e764|Nov 10, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|07aa5543048d8cc02984d709e66dedda7efd3a2f|Nov 10, 2026
-Emulators|[libretro-parallel-dc](http://github.com/libretro/parallel-dc)|84f37459627c2e29e3ba88b2f5643eb5bb389b86|Nov 10, 2026
-Emulators|[libretro-parallel-gx1](https://github.com/libretro/parallel-gx1.git)|cceb773dbfe5b32217c503368f62dfb5363795cc|Nov 10, 2026
-Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|a2b3c5a266930ddb61876282d87e21144a4d3ab9|Nov 10, 2026
+Emulators|[libretro-parallel-dc](http://github.com/libretro/parallel-dc)|e64eba532091b135e4c2a9d6557fcb3c230ded47|Nov 10, 2026
+Emulators|[libretro-parallel-gx1](https://github.com/libretro/parallel-gx1.git)|9807c46402a574d92c5eed46e508449633ec69e0|Nov 10, 2026
+Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|a7d570c66b1bde6e8797cc7a9323696aa609a2bc|Nov 10, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|d20d388611395a1948c3092dcbdbba347d0e954f|Nov 10, 2026
-Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|a19c8f6aed7f58b98392ad5c70bdf23cff6aeb5a|Nov 10, 2026
+Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|47b12704265d446d7c39c8878c11e1d3915898e7|Nov 10, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|2.9.3|Nov 09, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|6a767ac43a089fe988526bf7f8477ccc43277fb1|Nov 09, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|72b8e67141d85ca5c9259f04563b49f7f92f928b|Nov 09, 2026
