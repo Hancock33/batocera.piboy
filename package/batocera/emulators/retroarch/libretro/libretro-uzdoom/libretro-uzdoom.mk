@@ -3,8 +3,8 @@
 # libretro-uzdoom
 #
 ################################################################################
-# Version: Commits on Nov 06, 2026
-LIBRETRO_UZDOOM_VERSION = 829f29959d01203c1971f75ee784912edc2297e8
+# Version: Commits on Nov 09, 2026
+LIBRETRO_UZDOOM_VERSION = e8585cc7067248e26e9c30ac6989cc0edd7e0de8
 LIBRETRO_UZDOOM_SITE = https://github.com/cscd98/UZDoom-libretro.git
 LIBRETRO_UZDOOM_SITE_METHOD = git
 LIBRETRO_UZDOOM_GIT_SUBMODULES = YES

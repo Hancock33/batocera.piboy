@@ -1,6 +1,7 @@
 config BR2_PACKAGE_ODIN_BEZELS
 	bool "odin-bezels"
 	depends on BR2_PACKAGE_ODIN
+
 	help
 	  The bezels of Odin's Sega Hikaru and Gaelco games, which Odin
 	  lays around them itself.

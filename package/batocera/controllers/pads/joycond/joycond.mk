@@ -3,8 +3,8 @@
 # joycond
 #
 ################################################################################
-# Version: Commits on Oct 26, 2025
-JOYCOND_VERSION = 0df025ac5dc284b1f31172b6b252321ba788c4de
+# Version: Commits on Nov 08, 2026
+JOYCOND_VERSION = 4fe23eed61965e951402520d872ab497c8c93703
 JOYCOND_SITE = $(call github,DanielOgorchock,joycond,$(JOYCOND_VERSION))
 JOYCOND_LICENSE = GPL-3.0+
 JOYCOND_LICENSE_FILES = LICENSE
