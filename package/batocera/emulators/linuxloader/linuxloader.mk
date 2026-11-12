@@ -3,8 +3,8 @@
 # linuxloader
 #
 ################################################################################
-# Version: Commits on Oct 30, 2026
-LINUXLOADER_VERSION = 87ffd44ea4a516d284fd72eb885c046cc54133bc
+# Version: Commits on Nov 11, 2026
+LINUXLOADER_VERSION = 96334eb3c5bc028d8941ea4e180166f53d06cda7
 LINUXLOADER_SITE = $(call github,lindbergh-loader,linuxloader,$(LINUXLOADER_VERSION))
 LINUXLOADER_LICENSE = CC-BY-SA-4.0
 LINUXLOADER_LICENSE_FILES = LICENSE.md

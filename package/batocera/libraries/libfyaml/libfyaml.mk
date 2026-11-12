@@ -3,8 +3,8 @@
 # libfyaml
 #
 ################################################################################
-# Version: Commits on Sept 25, 2026
-LIBFYAML_VERSION = v1.0.0-beta2
+# Version: Commits on Nov 11, 2026
+LIBFYAML_VERSION = v1.0.0-rc2
 LIBFYAML_SITE = $(call github,pantoniou,libfyaml,$(LIBFYAML_VERSION))
 LIBFYAML_LICENSE = MIT
 LIBFYAML_LICENSE_FILES = LICENSE

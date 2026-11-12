@@ -3,8 +3,8 @@
 # alephone
 #
 ################################################################################
-# Version: Commits on Nov 09, 2026
-ALEPHONE_VERSION = c2d82aa03257dded4c99a5ff7beb9e6d22b9a9c6
+# Version: Commits on Nov 12, 2026
+ALEPHONE_VERSION = 7f82c5884a1347cb4d687323dc81e88b44d620ce
 ALEPHONE_SITE = $(call github,Aleph-One-Marathon,alephone,$(ALEPHONE_VERSION))
 ALEPHONE_EMULATOR_INFO = alephone.emulator.yml
 ALEPHONE_DEPENDENCIES = asio boost sdl2 sdl2_image sdl2_ttf

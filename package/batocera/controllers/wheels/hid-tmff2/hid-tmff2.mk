@@ -3,8 +3,8 @@
 # hid-tmff2
 #
 ################################################################################
-# Version: Commits on Aug 25, 2026
-HID_TMFF2_VERSION = d890a93105a0aa52028ac49282fa1b579e12566e
+# Version: Commits on Nov 10, 2026
+HID_TMFF2_VERSION = 7a1274d25b2304deed326c5a43bf3617fedcb990
 HID_TMFF2_SITE = $(call github,Kimplul,hid-tmff2,$(HID_TMFF2_VERSION))
 
 $(eval $(kernel-module))
