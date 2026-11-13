@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 13, 2026
-LIBRETRO_PARALLEL_GX1_VERSION = 3db9ac54cc65137d948c1b46ed44b29e6583c844
+LIBRETRO_PARALLEL_GX1_VERSION = 836345ab8536b40c1cc15e0bb7deaca8e072e925
 LIBRETRO_PARALLEL_GX1_SITE = https://github.com/libretro/parallel-gx1.git
 LIBRETRO_PARALLEL_GX1_SITE_METHOD = git
 LIBRETRO_PARALLEL_GX1_GIT_SUBMODULES = YES
