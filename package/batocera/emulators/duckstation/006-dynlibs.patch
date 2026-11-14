@@ -1,0 +1,13 @@
+diff --git a/src/util/dyn_libs.cpp b/src/util/dyn_libs.cpp
+index e695a7908..71b1c4289 100644
+--- a/src/util/dyn_libs.cpp
++++ b/src/util/dyn_libs.cpp
+@@ -273,7 +273,7 @@ bool DynShaderc::Open(Error* const error)
+   if (s_locals.shaderc_library.IsOpen()) [[likely]]
+     return true;
+ 
+-  return LoadDynLib("shaderc_shared", -1, s_locals.shaderc_library, s_locals.shaderc_init_flag, s_shaderc_symbols,
++  return LoadDynLib("shaderc_ds", -1, s_locals.shaderc_library, s_locals.shaderc_init_flag, s_shaderc_symbols,
+                     error, [](Error* const error) {
+                       g_dyn_shaderc.compiler = g_dyn_shaderc.shaderc_compiler_initialize();
+                       if (!g_dyn_shaderc.compiler)
