@@ -33,7 +33,6 @@ define LINUXLOADER_FIX_CMAKELISTS
 	$(SED) 's/-Wl,-Bstatic -lFAudio -Wl,-Bdynamic/-lFAudio/g' $(@D)/CMakeLists.txt
 	# Prevent fopen / fopen64 duplicate symbol collision in filesystemShared.c
 	$(SED) 's/-D_GNU_SOURCE/-D_GNU_SOURCE -U_FILE_OFFSET_BITS -D_FILE_OFFSET_BITS=32/g' $(@D)/CMakeLists.txt
-	grep -rl 'mincoming-stack-boundary' $(@D) --include=CMakeLists.txt --include=*.cmake | xargs sed -i 's/-mincoming-stack-boundary=2/-mstackrealign/g'
 endef
 LINUXLOADER_POST_PATCH_HOOKS += LINUXLOADER_FIX_CMAKELISTS
 
