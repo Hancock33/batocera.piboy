@@ -39,3 +39,6 @@ BR2_PACKAGE_WINE_CUSTOM=y
 
 # Enables ccache
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_wow64"
+
+# Experimental, build cmake packages with clang
+BR2_CMAKE_USE_CLANG=y
