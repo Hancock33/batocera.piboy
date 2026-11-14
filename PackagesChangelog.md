@@ -16,9 +16,9 @@ Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|4a6f2c22101bf4e
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.43.1|Nov 14, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.43.1|Nov 14, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-super)|fb15e630655375a50317be2a7953477ef9a5d12a|Nov 14, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|a6ea5fe940f51b8f7e13b4927206dee290371911|Nov 14, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|3adecdac0f7df71172319e26cedc4172a04c5041|Nov 14, 2026
-Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|fefec644a11c236ebed2c720740da8cc132aa4aa|Nov 14, 2026
+Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|067fd324feb4da42f00d718d58c4f15f07ad3ad0|Nov 14, 2026
+Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|3afad87ed555f6bfda2be3f4763b37068fd4ed86|Nov 14, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|04f7e81e00d44a5be6f85e47311a74790e60983c|Nov 14, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|7a2fe6bd17a2f3b90ff1ca6f85d47a74c01102ea|Nov 14, 2026
 Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|52a93bebe5a123dc58f360ea3e586c4a9dcb2ec0|Nov 14, 2026
@@ -27,7 +27,7 @@ Emulators|[libretro-parallel-gx1](https://github.com/libretro/parallel-gx1.git)|
 Emulators|[libretro-parallel-n64](http://github.com/libretro/parallel-n64)|f56f7a211b60e5c727cba3aec63360ab86153eaa|Nov 14, 2026
 Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|1a7c92107ddd49bb61edd7c36d7232fa98d227ec|Nov 14, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/ps2.git)|69339a31550a993dc6c6adc38e1a0de218affe9d|Nov 14, 2026
-Emulators|[libretro-uzdoom](https://github.com/cscd98/UZDoom-libretro.git)|69683a5892dc2f3a28e45863ef8c0b69d576907b|Nov 14, 2026
+Emulators|[libretro-uzdoom](https://github.com/cscd98/UZDoom-libretro.git)|a465e02b4c3ad042d5b812df7de8946dda906901|Nov 14, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|abe141ec3a88c577b16a4ba58a2b19b93d9a0deb|Nov 14, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261113|Nov 13, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|d4f720597e022737782e6215c0ec3ab1d9ae6636|Nov 13, 2026
@@ -45,7 +45,6 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261
 Engines|[libpinmame](http://github.com/vpinball/pinmame)|4aed89d96f973229fe37bbafc84a517e1c3062d9|Nov 13, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|28dbb634a6b4583bd2b5c3793eaef7bce9de327b|Nov 13, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261113|Nov 13, 2026
-Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|7c3110763b085c79ef79e8f9e5061af0c32d973b|Nov 13, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261113|Nov 13, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|dd7e2aee57d1e590e45b7e642ba76bf1a4cdbc61|Nov 13, 2026
 Emulators|[libretro-hatari](http://github.com/libretro/hatari)|4edc56f4e2add886ed5406854d12f95fdfdf67b6|Nov 13, 2026
@@ -55,6 +54,7 @@ Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|d20a06558d07634
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|2127.0-rc3|Nov 12, 2026
 Python|[wiringop-python](https://github.com/orangepi-xunlong/wiringOP-Python.git)|d5486a94063a2033c6bf0b2a61e7f12602541da4|Nov 12, 2026
 Utils|[cabextract](http://github.com/kyz/libmspack)|v1.12|Nov 12, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|c65eb0dbfa5b500dd06d5fabe08c1c2f644a6871|Nov 12, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|87bb2ef25bf9b28df60023125b346d498ebc5fdb|Nov 12, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0-rc3|Nov 12, 2026
 Emulators|[libretro-mgba](http://github.com/mgba-emu/mgba)|d58ea8a86f30598fbf3958585de3d33028535072|Nov 12, 2026

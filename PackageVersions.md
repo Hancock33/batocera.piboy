@@ -102,7 +102,7 @@ Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|a16e2521ee
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|39333f7b13dc4daea7c151d9c38d22b961246343|Aug 19, 2026
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|fa7094910d040baa5fd8b11dbf6a1a618330ecd9|Apr 20, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.5.0|Oct 27, 2026
-Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|7c3110763b085c79ef79e8f9e5061af0c32d973b|Nov 13, 2026
+Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|067fd324feb4da42f00d718d58c4f15f07ad3ad0|Nov 14, 2026
 Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|831b83e67ad46e8c86b8165649ff81bc6fc6c157|Sept 20, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261113|Nov 13, 2026
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|4e7fbc73765c1a9670c7506616046ad1d4ccda51|Sept 01, 2026
@@ -143,7 +143,7 @@ Emulators|[libretro-eka2l1](https://github.com/WizzardSK/eka2l1-libretro.git)|e3
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EPOCH84/libretro-emuscv)|33900ce24f45c429b533fdae7844e04d64a9a1b9|Oct 14, 2026
 Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|6af5d03de220e6effcd0ffcd99e0fb8e8c77cc9e|Jul 22, 2026
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|814991a2571ad3970e386cef48f3b148aa1c27b9|Jun 13, 2026
-Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|fefec644a11c236ebed2c720740da8cc132aa4aa|Nov 14, 2026
+Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|3afad87ed555f6bfda2be3f4763b37068fd4ed86|Nov 14, 2026
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|e0f3086a8104f8fbbe49a2615b10401504a9533f|Nov 02, 2026
 Emulators|[libretro-flycast](https://github.com/flyinghead/flycast.git)|3a5267a5e32438026e1c5b97d5de6cd77236f72c|Nov 11, 2026
 Emulators|[libretro-fmsx](http://github.com/libretro/fmsx-libretro)|4de11755ce4f196ac1c8a7bb20bb4eccbc87a7d4|Sept 26, 2026
@@ -233,7 +233,7 @@ Emulators|[libretro-theodore](https://github.com/Zlika/theodore.git)|4d469ce0f71
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|d20a06558d076345d0fed61fcd81a51f567dfff7|Nov 13, 2026
 Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|67db338ff4d27fdbcead61d4e54938d758ae62cb|Oct 12, 2026
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|fc1cb90afd6b5c6d9bb933d111c4c99c90f37688|Sept 06, 2026
-Emulators|[libretro-uzdoom](https://github.com/cscd98/UZDoom-libretro.git)|69683a5892dc2f3a28e45863ef8c0b69d576907b|Nov 14, 2026
+Emulators|[libretro-uzdoom](https://github.com/cscd98/UZDoom-libretro.git)|a465e02b4c3ad042d5b812df7de8946dda906901|Nov 14, 2026
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|d991ee94547c8294abc1c4cb73d63116aa58b5bc|Aug 23, 2026
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|11f63848a592644722ea1240b4b96785db9b009f|Aug 15, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|abe141ec3a88c577b16a4ba58a2b19b93d9a0deb|Nov 14, 2026
@@ -271,7 +271,7 @@ Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|A
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|1a7c92107ddd49bb61edd7c36d7232fa98d227ec|Nov 14, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8c918e2872482139273374ef4cc6c7aff34d7585|Nov 09, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|a6ea5fe940f51b8f7e13b4927206dee290371911|Nov 14, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|c65eb0dbfa5b500dd06d5fabe08c1c2f644a6871|Nov 12, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260927|Sept 27, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|v0.0.43|Sept 30, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|280c427c550c5fe3bcc46b378e06a9b90a7e6b09|Sept 18, 2026
