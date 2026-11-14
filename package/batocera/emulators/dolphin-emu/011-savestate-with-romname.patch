@@ -85,11 +85,11 @@ index 7dff8e13d5..14d8f2ee00 100644
  
  // This displays messages in a user-visible way.
 diff --git a/Source/Core/Core/State.cpp b/Source/Core/Core/State.cpp
-index 3a36ec6021..54001066e8 100644
+index 162a8b6f11..e94b8c07b4 100644
 --- a/Source/Core/Core/State.cpp
 +++ b/Source/Core/Core/State.cpp
-@@ -304,11 +304,10 @@ static std::string SystemTimeAsDoubleToString(double time)
-   return fmt::format(Common::GetEnvironmentLocale(), "{:%x %X}", *local_time);
+@@ -306,11 +306,10 @@ static std::string SystemTimeAsDoubleToString(double time)
+   return fmt::format(Common::GetEnvironmentLocale(), "{:L%x %X}", *local_time);
  }
  
 -static std::string MakeStateFilename(u32 number)
@@ -104,7 +104,7 @@ index 3a36ec6021..54001066e8 100644
  
  static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
  {
-@@ -316,7 +315,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
+@@ -318,7 +317,7 @@ static std::vector<SlotWithTimestamp> GetUsedSlotsWithTimestamp()
    StateHeader header;
    for (u32 i = 1; i <= NUM_STATES; ++i)
    {
@@ -113,7 +113,7 @@ index 3a36ec6021..54001066e8 100644
      if (!File::Exists(filename) || !ReadHeader(filename, header))
        continue;
  
-@@ -613,7 +612,7 @@ std::string GetInfoStringOfSlot(u32 slot, bool translate)
+@@ -615,7 +614,7 @@ std::string GetInfoStringOfSlot(u32 slot, bool translate)
  {
    std::lock_guard lk{s_state_saves_in_progress};
  
@@ -122,7 +122,7 @@ index 3a36ec6021..54001066e8 100644
    if (!File::Exists(filename))
      return translate ? Common::GetStringT("Empty") : "Empty";
  
-@@ -629,7 +628,7 @@ u64 GetUnixTimeOfSlot(u32 slot)
+@@ -631,7 +630,7 @@ u64 GetUnixTimeOfSlot(u32 slot)
    std::lock_guard lk{s_state_saves_in_progress};
  
    State::StateHeader header;
@@ -131,7 +131,7 @@ index 3a36ec6021..54001066e8 100644
      return 0;
  
    constexpr u64 MS_PER_SEC = 1000;
-@@ -903,14 +902,46 @@ void Shutdown()
+@@ -905,14 +904,46 @@ void Shutdown()
    s_flush_unsaved_data_hook.reset();
  }
  
@@ -179,8 +179,8 @@ index 3a36ec6021..54001066e8 100644
 +  LoadAs(system, MakeStateFilename(true, slot));
  }
  
- void LoadLastSaved(Core::System& system, int i)
-@@ -930,7 +961,7 @@ void LoadLastSaved(Core::System& system, int i)
+ u32 GetSelectedSlot()
+@@ -971,7 +1002,7 @@ void LoadLastSaved(Core::System& system, int i)
      }
  
      std::ranges::stable_sort(used_slots, std::ranges::greater{}, &SlotWithTimestamp::timestamp);
@@ -189,7 +189,7 @@ index 3a36ec6021..54001066e8 100644
    });
  }
  
-@@ -949,7 +980,7 @@ void SaveFirstSaved(Core::System& system)
+@@ -990,7 +1021,7 @@ void SaveFirstSaved(Core::System& system)
        slot = used_slots.front().slot;
      }
  
