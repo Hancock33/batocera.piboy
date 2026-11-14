@@ -19,10 +19,12 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|20545e182c59e2366
 Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|d031e4ed4c8a7d50c8d86ef07a1c303811c902f1|Nov 14, 2026
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|0a7371ffe7c3eae1de20eba074b5f9e73a01e4da|Nov 14, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|4a6f2c22101bf4e24eac1b69f500a79326e12eb0|Nov 14, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261114|Nov 14, 2026
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|9d63598d49a62b19580fc63aed6cdf906be8e1d6|Nov 14, 2026
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.43.1|Nov 14, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.43.1|Nov 14, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-super)|fb15e630655375a50317be2a7953477ef9a5d12a|Nov 14, 2026
+Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261114|Nov 14, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|3adecdac0f7df71172319e26cedc4172a04c5041|Nov 14, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|067fd324feb4da42f00d718d58c4f15f07ad3ad0|Nov 14, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261114|Nov 14, 2026
@@ -48,10 +50,8 @@ Engines|[tic80](https://github.com/nesbox/TIC-80.git)|d20a06558d076345d0fed61fcd
 Firmwares|[firmware-radxa](http://github.com/radxa-pkg/radxa-firmware)|0.2.44|Nov 13, 2026
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|25fcc4157a864a16b21b29c79afabc9329bda78f|Nov 13, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.22|Nov 13, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261113|Nov 13, 2026
 Engines|[libpinmame](http://github.com/vpinball/pinmame)|4aed89d96f973229fe37bbafc84a517e1c3062d9|Nov 13, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|28dbb634a6b4583bd2b5c3793eaef7bce9de327b|Nov 13, 2026
-Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261113|Nov 13, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|dd7e2aee57d1e590e45b7e642ba76bf1a4cdbc61|Nov 13, 2026
 Emulators|[libretro-hatari](http://github.com/libretro/hatari)|4edc56f4e2add886ed5406854d12f95fdfdf67b6|Nov 13, 2026
 Emulators|[libretro-skyemu](http://github.com/skylersaleh/SkyEmu)|b64903f0fde8104d0796546b96859e9f682311b7|Nov 13, 2026
