@@ -1,10 +1,10 @@
-diff --git a/libretro/main.cpp b/libretro/main.cpp
-index 8c976ccdb..ae902fc20 100644
---- a/libretro/main.cpp
-+++ b/libretro/main.cpp
-@@ -2339,7 +2339,7 @@ void retro_init(void)
- 		FILESYSTEM_FIND_RESULTS results = {};
- 		char bios_dir[PCSX2_PATH_MAX];
+diff --git a/libretro/main.c b/libretro/main.c
+index e8077df5c..f189c4eb0 100644
+--- a/libretro/main.c
++++ b/libretro/main.c
+@@ -2359,7 +2359,7 @@ void retro_init(void)
+ 
+ 		memset(&results, 0, sizeof(results));
  
 -		pcsx2_path_join(bios_dir, sizeof(bios_dir), system_base, "pcsx2/bios");
 +		pcsx2_path_join(bios_dir, sizeof(bios_dir), system_base, "ps2");
