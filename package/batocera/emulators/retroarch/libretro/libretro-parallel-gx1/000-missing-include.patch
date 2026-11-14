@@ -1,0 +1,12 @@
+diff --git a/Source/Core/Common/Logging/Log.h b/Source/Core/Common/Logging/Log.h
+index 1390012c0b..ba6ad96fd9 100644
+--- a/Source/Core/Common/Logging/Log.h
++++ b/Source/Core/Common/Logging/Log.h
+@@ -4,6 +4,7 @@
+ #pragma once
+ 
+ #include <cstddef>
++#include <cerrno>
+ 
+ #include "Common/CommonTypes.h"
+ 
