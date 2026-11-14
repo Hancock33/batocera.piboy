@@ -106,10 +106,20 @@ index 94b181e36..878364cc5 100644
 +
 +#endif // ENABLE_DISCORD_PRESENCE
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index d7876c57e..dab2ec7d2 100644
+index 03b56be72..37f8248e0 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -2199,7 +2199,9 @@ void System::ClearRunningGame()
+@@ -2006,7 +2006,9 @@ System::BootResult System::BootSystem(SystemBootParameters parameters, Error* er
+ 
+   Host::OnSystemStarted(s_state.running_game_path, s_state.running_game_serial, s_state.running_game_title,
+                         s_state.running_game_hash, s_state.exe_override);
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::Update(true);
++#endif
+ 
+   if (parameters.load_image_to_ram || g_settings.cdrom_load_image_to_ram)
+     CDROM::PrecacheMedia();
+@@ -2199,7 +2201,9 @@ void System::ClearRunningGame()
    s_state.running_game_entry = nullptr;
    s_state.running_game_hash = 0;
  
@@ -119,7 +129,7 @@ index d7876c57e..dab2ec7d2 100644
  }
  
  void System::Execute()
-@@ -2262,7 +2264,9 @@ void System::FrameDone()
+@@ -2262,7 +2266,9 @@ void System::FrameDone()
      }
    }
  
@@ -129,7 +139,7 @@ index d7876c57e..dab2ec7d2 100644
  
    // Save states for rewind and runahead.
    if (s_state.rewind_save_counter >= 0)
-@@ -4654,7 +4658,9 @@ void System::UpdateRunningGame(const std::string& path, CDImage* image, bool boo
+@@ -4654,7 +4660,9 @@ void System::UpdateRunningGame(const std::string& path, CDImage* image, bool boo
  
    // BIOS title isn't known yet when booting, updated in BootSystem() instead.
    if (!booting)
@@ -139,7 +149,7 @@ index d7876c57e..dab2ec7d2 100644
  
    if (!s_state.running_game_title.empty())
    {
-@@ -5280,6 +5286,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+@@ -5280,6 +5288,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
  
    Achievements::UpdateSettings(old_settings);
  
@@ -147,7 +157,7 @@ index d7876c57e..dab2ec7d2 100644
    if (g_settings.enable_discord_presence != old_settings.enable_discord_presence)
    {
      if (g_settings.enable_discord_presence)
-@@ -5287,6 +5294,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+@@ -5287,6 +5296,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
      else
        DiscordPresence::Shutdown();
    }
