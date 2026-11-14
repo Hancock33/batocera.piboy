@@ -3,9 +3,9 @@
 # sm2-emu
 #
 ################################################################################
-# Version: Commits on Nov 08, 2026
-SM2_EMU_VERSION = v0.9.59
-SM2_EMU_SITE = https://github.com/dmanlfc/sm2-emu.git
+# Version: Commits on Nov 14, 2026
+SM2_EMU_VERSION = v0.9.60
+SM2_EMU_SITE = https://github.com/Keisho-Emu/Keisho.git
 SM2_EMU_SITE_METHOD = git
 SM2_EMU_GIT_SUBMODULES = YES
 SM2_EMU_LICENSE = GPL-3.0+
