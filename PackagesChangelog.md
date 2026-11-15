@@ -6,6 +6,7 @@ Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|e3b18a89971fcccec741f63
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e2816ead08ac9258a28ec46646faa3e886b91240|Nov 15, 2026
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|e546b94eb5e0f637da99e88403540469db75c9cf|Nov 15, 2026
 Emulators|[sm2-emu](https://github.com/Keisho-Emu/Keisho.git)|v0.9.63|Nov 15, 2026
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46406|Nov 15, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|7c4314369ce58c80c64a3def7e34ee6cb110038f|Nov 15, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|c628a23df0146fb05f72b4c90523cbe6626d29f3|Nov 15, 2026
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|28629dc17feb53c9195a99a34ab689c6ffb1e6e8|Nov 15, 2026
@@ -88,7 +89,6 @@ Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|249
 Emulators|[libretro-stella](http://github.com/stella-emu/stella)|da5a002c318843bea1d233932508b9439798de0d|Nov 11, 2026
 Ports|[yquake2-rogue](http://github.com/yquake2/rogue)|9e7b3160ed27befd5c47872f8e151e5743d0a6ba|Nov 11, 2026
 Ports|[yquake2-zaero](http://github.com/yquake2/zaero)|57062e62fef6e7aeebb470ba0e104d48c73d530c|Nov 11, 2026
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46397|Nov 10, 2026
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v3.0.1|Nov 10, 2026
 Libraries|[appstream](http://github.com/ximion/appstream)|v1.2.3|Nov 10, 2026
 Libraries|[libfreeimage](http://github.com/toxieainc/freeimage)|d29c96999deb331181c44264e5338ec16d393c79|Nov 10, 2026

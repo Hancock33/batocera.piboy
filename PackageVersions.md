@@ -284,7 +284,7 @@ Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|4fdb5b71003b684b
 Emulators|[supermodel](http://github.com/dmanlfc/Supermodel)|932c6fbb16ca261bd3a2f2a7aafeda739afd627b|Nov 03, 2026
 Emulators|[touchhle](https://github.com/touchHLE/touchHLE.git)|ca1de89c578e79746f33c1332e28efd106c334ba|Oct 13, 2026
 Emulators|[tsugaru](http://github.com/captainys/TOWNSEMU)|1ca4ec4f05cc55458e0d4a7a661559af9b068529|Oct 31, 2026
-Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46397|Nov 10, 2026
+Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46406|Nov 15, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|7c4314369ce58c80c64a3def7e34ee6cb110038f|Nov 15, 2026
 Emulators|[x16emu](http://github.com/X16Community/x16-emulator)|r49|Nov 19, 2025
 Emulators|[xemu-chihiro](https://github.com/Tovarichtch/xemu.git)|e66fe47cdaa781966ffd9a7112200ade04c1a531|Oct 03, 2026
