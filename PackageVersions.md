@@ -102,7 +102,7 @@ Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|a16e2521ee
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|39333f7b13dc4daea7c151d9c38d22b961246343|Aug 19, 2026
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|fa7094910d040baa5fd8b11dbf6a1a618330ecd9|Apr 20, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.5.0|Oct 27, 2026
-Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|a99b1ddb1c2406fc5bc8a3f9cc410b9a85129ca0|Nov 15, 2026
+Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|51ed1faddbd736867c914850e9c347c6e17f90b8|Nov 15, 2026
 Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|831b83e67ad46e8c86b8165649ff81bc6fc6c157|Sept 20, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|2.9.4|Nov 15, 2026
 Emulators|[libretro-atari800](http://github.com/libretro/libretro-atari800)|4e7fbc73765c1a9670c7506616046ad1d4ccda51|Sept 01, 2026
@@ -153,9 +153,9 @@ Emulators|[libretro-freej2me](http://github.com/TASEmulators/freej2me-plus)|1.53
 Emulators|[libretro-fuse](http://github.com/libretro/fuse-libretro)|e997e2bc32c888348f862f69f2c53babfedf7791|Sept 26, 2026
 Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|77f2567d718b8973d02caa2daa8dce4953faf811|Oct 30, 2026
 Emulators|[libretro-gametank](http://github.com/SundownerSport/gametank-libretro)|v1.0.2|Nov 02, 2026
-Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|e705e33ba7043e6fc200667c1e70c43ba04bdcd1|Nov 15, 2026
-Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|d8678104fd21280096a39c3453b309fa4adb127f|Nov 15, 2026
-Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|27b117938ac8302c159ac8d75e8c61209b98b6d6|Nov 15, 2026
+Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|f3e606dddc6a62d2a01461a7b6afed1abf612257|Nov 15, 2026
+Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|151d401080671e1b3d45d9f37943fbf27e863ec1|Nov 15, 2026
+Emulators|[libretro-gearsystem](http://github.com/drhelius/Gearsystem)|f61994f36f443d338f8660b6ff210ad1ea84054a|Nov 15, 2026
 Emulators|[libretro-genesisplusgx-expanded](http://github.com/RapidEdwin08/Genesis-Plus-GX-Expanded-Rom-Size)|181e8f93440b11d26e305eb42198fdfae3c8d237|Mar 30, 2026
 Emulators|[libretro-genesisplusgx-wide](http://github.com/libretro/Genesis-Plus-GX-Wide)|b7ad005431f5f0b55e559f6d598d1ed2479bf13b|Jul 28, 2026
 Emulators|[libretro-genesisplusgx](http://github.com/ekeeke/Genesis-Plus-GX)|2499cd3e3d1d8b7d0130d8b2825adb4cc608b2c0|Nov 11, 2026
@@ -233,7 +233,7 @@ Emulators|[libretro-theodore](https://github.com/Zlika/theodore.git)|4d469ce0f71
 Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|9f9a2f2ca9fe33db17f51d10656f3601f0ec88b1|Nov 15, 2026
 Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|67db338ff4d27fdbcead61d4e54938d758ae62cb|Oct 12, 2026
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|fc1cb90afd6b5c6d9bb933d111c4c99c90f37688|Sept 06, 2026
-Emulators|[libretro-uzdoom](https://github.com/cscd98/UZDoom-libretro.git)|eda69b92e1b03956c10e1f551dbda439e8033c84|Nov 15, 2026
+Emulators|[libretro-uzdoom](https://github.com/cscd98/UZDoom-libretro.git)|208110b31579e3a210fbf58d881b03b4ba127c2e|Nov 15, 2026
 Emulators|[libretro-uzem](http://github.com/libretro/libretro-uzem)|d991ee94547c8294abc1c4cb73d63116aa58b5bc|Aug 23, 2026
 Emulators|[libretro-vaporspec](https://github.com/minkcv/vm.git)|11f63848a592644722ea1240b4b96785db9b009f|Aug 15, 2026
 Emulators|[libretro-vba-m](http://github.com/visualboyadvance-m/visualboyadvance-m)|6d9a3f7a8e01d70aabd59bf396185bbc672071f1|Nov 15, 2026
