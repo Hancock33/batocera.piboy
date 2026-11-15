@@ -3,7 +3,7 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Sept 18, 2026
+# Version: Commits on Nov 11, 2026
 RYUJINX_VERSION = 506e2c7a69b4f801a519857e465e81834d618da8
 RYUJINX_SITE = https://git.ryujinx.app/projects/Kenji-NX.git
 RYUJINX_SITE_METHOD=git

@@ -23,7 +23,6 @@ linuxloader.mk
 mt32emu.mk
 noto-cjk-fonts.mk
 openxr-sdk.mk
-ryujinx.mk
 shader-slang.mk
 sockpp.mk
 vpinball.mk
