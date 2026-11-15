@@ -27,7 +27,7 @@ jobs:
       - name: Remove trailing whitespace
         run: |
           find package/batocera -type f \
-            \( -name '*.mk' -o -name '*.in' -o -name '*.py' -o -name '*.xml' \) \
+            \( -name '*.mk' -o -name '*.in' -o -name '*.py' -o -name '*.yml' \) \
             ! -path 'package/batocera/emulators/mame/history/*' \
             -print0 \
             | xargs -0 sed -i -E 's/[ \t]+(\r?)$/\1/'
