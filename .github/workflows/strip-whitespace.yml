@@ -1,0 +1,44 @@
+name: Strip trailing whitespace
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'package/batocera/**/*.md'
+      - 'package/batocera/**/*.mk'
+      - 'package/batocera/**/*.in'
+      - 'package/batocera/**/*.py'
+      - 'package/batocera/**/*.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  strip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Remove trailing whitespace
+        run: |
+          find package/batocera -type f \
+            \( -name '*.mk' -o -name '*.in' -o -name '*.py' -o -name '*.yml' \) \
+            ! -path 'package/batocera/emulators/mame/history/*' \
+            -print0 \
+            | xargs -0 sed -i -E 's/[ \t]+(\r?)$/\1/'
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No trailing whitespace found."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "package/batocera: strip trailing whitespace"
+          git push

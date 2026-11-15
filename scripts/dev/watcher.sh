@@ -6,7 +6,7 @@ if [ $# -eq 0 ]; then
 	echo 'and the third the build directory.'
 	echo 'For example...'
 	echo
-	echo './watcher.sh $HOME/batocera.linux x86_64 $HOME/build-dir/batocera.x86_64'
+	echo './scripts/dev/watcher.sh $HOME/batocera.linux x86_64 $HOME/build-dir/batocera.x86_64'
 	exit 1
 fi
 
