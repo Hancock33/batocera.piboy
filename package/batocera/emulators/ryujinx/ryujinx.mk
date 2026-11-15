@@ -4,15 +4,14 @@
 #
 ################################################################################
 # Version: Commits on Sept 18, 2026
-RYUJINX_VERSION = 280c427c550c5fe3bcc46b378e06a9b90a7e6b09
+RYUJINX_VERSION = 506e2c7a69b4f801a519857e465e81834d618da8
 RYUJINX_SITE = https://git.ryujinx.app/projects/Kenji-NX.git
-RYUJINX_BRANCH = libryujinx_bionic
 RYUJINX_SITE_METHOD=git
 RYUJINX_GIT_SUBMODULES=YES
 RYUJINX_LICENSE = MIT
 RYUJINX_DEPENDENCIES = adwaita-icon-theme hicolor-icon-theme librsvg openal sdl3
 RYUJINX_EMULATOR_INFO = ryujinx.emulator.yml
-RYUJINX_DOTNET_VERSION = 9.0.318
+RYUJINX_DOTNET_VERSION = 11.0.100
 
 ifeq ($(BR2_x86_64),y)
     RYUJINX_DOTNET_FILE = dotnet-sdk-$(RYUJINX_DOTNET_VERSION)-linux-x64.tar.gz
