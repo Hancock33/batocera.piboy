@@ -3,8 +3,8 @@
 # linuxloader
 #
 ################################################################################
-# Version: Commits on Nov 11, 2026
-LINUXLOADER_VERSION = 96334eb3c5bc028d8941ea4e180166f53d06cda7
+# Version: Commits on Sept 06, 2026
+LINUXLOADER_VERSION = v3.0.12
 LINUXLOADER_SITE = $(call github,lindbergh-loader,linuxloader,$(LINUXLOADER_VERSION))
 LINUXLOADER_LICENSE = CC-BY-SA-4.0
 LINUXLOADER_LICENSE_FILES = LICENSE.md
@@ -26,7 +26,6 @@ ifeq ($(BR2_i386),y)
 LINUXLOADER_DEPENDENCIES += alsa-lib alsa-plugins alsa-utils faudio libfreeglut pcsc-lite
 LINUXLOADER_DEPENDENCIES += libglew sdl3 sdl3_image sdl3_ttf ncurses openal pipewire xlib_libX11 libbsd
 LINUXLOADER_DEPENDENCIES += xlib_libXcursor xlib_libXext xlib_libXi xlib_libXmu xlib_libXScrnSaver
-LINUXLOADER_IN_SOURCE_BUILD = NO
 
 define LINUXLOADER_FIX_CMAKELISTS
 	# Allow dynamic linking of FAudio instead of forcing static
@@ -35,9 +34,6 @@ define LINUXLOADER_FIX_CMAKELISTS
 	$(SED) 's/-D_GNU_SOURCE/-D_GNU_SOURCE -U_FILE_OFFSET_BITS -D_FILE_OFFSET_BITS=32/g' $(@D)/CMakeLists.txt
 endef
 LINUXLOADER_POST_PATCH_HOOKS += LINUXLOADER_FIX_CMAKELISTS
-
-LINUXLOADER_CONF_OPTS += -DCMAKE_C_FLAGS=-std=gnu17
-LINUXLOADER_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold"
 
 define LINUXLOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/linuxloader/extralibs
