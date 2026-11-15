@@ -3,10 +3,10 @@
 # python-adafruit-blinka
 #
 ################################################################################
-# Version: Commits on Oct 28, 2026
-PYTHON_ADAFRUIT_BLINKA_VERSION = 10.1.0
+# Version: Commits on Nov 11, 2026
+PYTHON_ADAFRUIT_BLINKA_VERSION = 10.2.0
 PYTHON_ADAFRUIT_BLINKA_SOURCE = adafruit_blinka-$(PYTHON_ADAFRUIT_BLINKA_VERSION).tar.gz
-PYTHON_ADAFRUIT_BLINKA_SITE = https://files.pythonhosted.org/packages/9e/c5/1b6b7a6a99e03eded97990db04f1e2b35f583124e50354c759abf579d3ec
+PYTHON_ADAFRUIT_BLINKA_SITE = https://files.pythonhosted.org/packages/db/b0/e767a3f71268f52f60abd56f5854e58bca990716ae3d81803ebdf3ebcbd4
 PYTHON_ADAFRUIT_BLINKA_SETUP_TYPE = setuptools
 PYTHON_ADAFRUIT_BLINKA_LICENSE = MIT
 PYTHON_ADAFRUIT_BLINKA_LICENSE_FILES = LICENSE

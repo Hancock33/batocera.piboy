@@ -1,8 +1,8 @@
 diff --git a/src/Ryujinx.UI.Common/Configuration/ConfigurationState.cs b/src/Ryujinx.UI.Common/Configuration/ConfigurationState.cs
-index 427eb1472..292dce3bb 100644
+index fbdda7ebb..d9c922f19 100644
 --- a/src/Ryujinx.UI.Common/Configuration/ConfigurationState.cs
 +++ b/src/Ryujinx.UI.Common/Configuration/ConfigurationState.cs
-@@ -865,19 +865,19 @@ namespace Ryujinx.UI.Common.Configuration
+@@ -973,13 +973,13 @@ namespace Ryujinx.UI.Common.Configuration
  
          public void LoadDefault()
          {
@@ -17,6 +17,10 @@ index 427eb1472..292dce3bb 100644
 +            Graphics.GraphicsBackend.Value = GraphicsBackend.Vulkan;
              Graphics.PreferredGpu.Value = "";
              Graphics.ShadersDumpPath.Value = "";
+             Graphics.TexturesDumpPath.Value = "";
+@@ -987,9 +987,9 @@ namespace Ryujinx.UI.Common.Configuration
+             Graphics.EnableTextureDump.Value = true;
+             Graphics.EnableTextureRealTimeEdit.Value = true;
              Logger.EnableDebug.Value = false;
 -            Logger.EnableStub.Value = true;
 -            Logger.EnableInfo.Value = true;
@@ -27,20 +31,21 @@ index 427eb1472..292dce3bb 100644
              Logger.EnableError.Value = true;
              Logger.EnableTrace.Value = false;
              Logger.EnableGuest.Value = true;
-@@ -889,9 +889,9 @@ namespace Ryujinx.UI.Common.Configuration
+@@ -1002,10 +1002,10 @@ namespace Ryujinx.UI.Common.Configuration
              System.TimeZone.Value = "UTC";
              System.SystemTimeOffset.Value = 0;
              System.EnableDockedMode.Value = true;
 -            EnableDiscordIntegration.Value = true;
++            EnableDiscordIntegration.Value = false;
+             FocusLostActionType.Value = FocusLostType.DoNothing;
 -            CheckUpdatesOnStart.Value = true;
 -            ShowConfirmExit.Value = true;
-+            EnableDiscordIntegration.Value = false;
 +            CheckUpdatesOnStart.Value = false;
 +            ShowConfirmExit.Value = false;
              RememberWindowState.Value = true;
              EnableHardwareAcceleration.Value = true;
              HideCursor.Value = HideCursorMode.OnIdle;
-@@ -950,8 +950,8 @@ namespace Ryujinx.UI.Common.Configuration
+@@ -1065,8 +1065,8 @@ namespace Ryujinx.UI.Common.Configuration
              UI.GridSize.Value = 2;
              UI.ApplicationSort.Value = 0;
              UI.IsAscendingOrder.Value = true;

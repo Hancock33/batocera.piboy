@@ -53,7 +53,7 @@ class CoinDeviceController:
 
     if not target_path:
       raise Exception("No device found")
-      
+
     self.device = hid.device()
     self.device.open_path(target_path)
 

@@ -33,7 +33,7 @@ index b1d38ed5d..519a47d52 100644
    {
      const auto lock = GetOverlayLock();
 diff --git a/src/core/core.cpp b/src/core/core.cpp
-index bc05ac58c..ddd1866f6 100644
+index dd873898e..903b3bc86 100644
 --- a/src/core/core.cpp
 +++ b/src/core/core.cpp
 @@ -736,15 +736,19 @@ bool Core::CoreThreadInitialize(Error* error)
@@ -56,7 +56,7 @@ index bc05ac58c..ddd1866f6 100644
  
    Achievements::Shutdown();
  
-@@ -774,7 +778,9 @@ void Core::IdleUpdate(u64 max_poll_time)
+@@ -774,7 +778,9 @@ void Core::IdleUpdate()
  {
    InputManager::PollSources();
  
@@ -106,10 +106,20 @@ index 94b181e36..878364cc5 100644
 +
 +#endif // ENABLE_DISCORD_PRESENCE
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 29a100bc2..55fd451a8 100644
+index 03b56be72..37f8248e0 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -2165,7 +2165,9 @@ void System::ClearRunningGame()
+@@ -2006,7 +2006,9 @@ System::BootResult System::BootSystem(SystemBootParameters parameters, Error* er
+ 
+   Host::OnSystemStarted(s_state.running_game_path, s_state.running_game_serial, s_state.running_game_title,
+                         s_state.running_game_hash, s_state.exe_override);
++#ifdef ENABLE_DISCORD_PRESENCE
+   DiscordPresence::Update(true);
++#endif
+ 
+   if (parameters.load_image_to_ram || g_settings.cdrom_load_image_to_ram)
+     CDROM::PrecacheMedia();
+@@ -2199,7 +2201,9 @@ void System::ClearRunningGame()
    s_state.running_game_entry = nullptr;
    s_state.running_game_hash = 0;
  
@@ -119,7 +129,7 @@ index 29a100bc2..55fd451a8 100644
  }
  
  void System::Execute()
-@@ -2228,7 +2230,9 @@ void System::FrameDone()
+@@ -2262,7 +2266,9 @@ void System::FrameDone()
      }
    }
  
@@ -127,19 +137,19 @@ index 29a100bc2..55fd451a8 100644
    DiscordPresence::Poll();
 +#endif
  
-   GDBServer::PollUntil(0);
+   // Save states for rewind and runahead.
+   if (s_state.rewind_save_counter >= 0)
+@@ -4654,7 +4660,9 @@ void System::UpdateRunningGame(const std::string& path, CDImage* image, bool boo
  
-@@ -4616,7 +4620,9 @@ void System::UpdateRunningGame(const std::string& path, CDImage* image, bool boo
-   if (s_state.running_game_serial != prev_serial)
-     UpdateSessionTime(prev_serial);
- 
+   // BIOS title isn't known yet when booting, updated in BootSystem() instead.
+   if (!booting)
 +#ifdef ENABLE_DISCORD_PRESENCE
-   DiscordPresence::Update(booting);
+     DiscordPresence::Update(false);
 +#endif
  
    if (!s_state.running_game_title.empty())
    {
-@@ -5242,6 +5248,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+@@ -5280,6 +5288,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
  
    Achievements::UpdateSettings(old_settings);
  
@@ -147,7 +157,7 @@ index 29a100bc2..55fd451a8 100644
    if (g_settings.enable_discord_presence != old_settings.enable_discord_presence)
    {
      if (g_settings.enable_discord_presence)
-@@ -5249,6 +5256,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
+@@ -5287,6 +5296,7 @@ void System::CheckForSettingsChanges(const Settings& old_settings)
      else
        DiscordPresence::Shutdown();
    }

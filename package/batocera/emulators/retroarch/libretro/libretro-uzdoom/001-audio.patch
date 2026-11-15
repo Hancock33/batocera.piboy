@@ -1,0 +1,26 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 69ef97207..4f02a8eab 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -544,7 +544,7 @@ else()
+ endif()
+ 
+ # ZMUSIC
+-if(ENABLE_LIBRETRO)
++if(ENABLE_LIBRETRO AND NOT CMAKE_SYSTEM_NAME STREQUAL "Linux")
+     include(cmake/LibretroAudio.cmake)
+     libretro_build_audio()
+ endif()
+diff --git a/libraries/ZMusic/source/CMakeLists.txt b/libraries/ZMusic/source/CMakeLists.txt
+index 6843fa159..4d0f36130 100644
+--- a/libraries/ZMusic/source/CMakeLists.txt
++++ b/libraries/ZMusic/source/CMakeLists.txt
+@@ -69,7 +69,7 @@ if(NOT WIN32 AND NOT APPLE)
+ 	determine_package_config_dependency(ZMUSIC_PACKAGE_DEPENDENCIES TARGET Threads::Threads MODULE Threads)
+ endif()
+ 
+-if(ENABLE_LIBRETRO)
++if(ENABLE_LIBRETRO AND NOT CMAKE_SYSTEM_NAME STREQUAL "Linux")
+ 	# The core must be self-contained on platforms without system audio codecs.
+ 	# Do not define DYN_SNDFILE/DYN_MPG123: use the linked APIs directly.
+ 	target_compile_definitions(zmusic-obj INTERFACE HAVE_SNDFILE HAVE_MPG123)

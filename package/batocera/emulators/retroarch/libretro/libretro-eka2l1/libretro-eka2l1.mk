@@ -3,8 +3,8 @@
 # libretro-eka2l1
 #
 ################################################################################
-# Version: Commits on Oct 16, 2026
-LIBRETRO_EKA2L1_VERSION = e39ccac46e631be7470b4f420fb8eebed9c24eca
+# Version: Commits on Nov 15, 2026
+LIBRETRO_EKA2L1_VERSION = c3b2fc7d856f770b5307f643d8786e2e0eab1436
 LIBRETRO_EKA2L1_SITE = https://github.com/WizzardSK/eka2l1-libretro.git
 LIBRETRO_EKA2L1_SITE_METHOD = git
 LIBRETRO_EKA2L1_GIT_SUBMODULES = YES

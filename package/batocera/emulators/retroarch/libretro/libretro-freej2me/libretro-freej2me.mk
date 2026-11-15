@@ -3,8 +3,8 @@
 # libretro-freej2me
 #
 ################################################################################
-# Version: Commits on Dec 24, 2025
-LIBRETRO_FREEJ2ME_VERSION = 1.52
+# Version: Commits on Nov 15, 2026
+LIBRETRO_FREEJ2ME_VERSION = 1.53
 LIBRETRO_FREEJ2ME_SITE = $(call github,TASEmulators,freej2me-plus,$(LIBRETRO_FREEJ2ME_VERSION))
 LIBRETRO_FREEJ2ME_LICENSE = GPL-3.0
 LIBRETRO_FREEJ2ME_EMULATOR_INFO = freej2me.libretro.core.yml
@@ -17,8 +17,8 @@ endef
 define LIBRETRO_FREEJ2ME_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
-	$(INSTALL) -D $(@D)/src/libretro/freej2me_libretro.so $(TARGET_DIR)/usr/lib/libretro/freej2me_libretro.so
-	$(INSTALL) -D $(@D)/src/libretro/freej2me_libretro.info $(TARGET_DIR)/usr/share/libretro/info/freej2me_libretro.info
+	$(INSTALL) -D $(@D)/src/libretro/freej2me_plus_libretro.so $(TARGET_DIR)/usr/lib/libretro/freej2me_libretro.so
+	$(INSTALL) -D $(@D)/src/libretro/freej2me_plus_libretro.info $(TARGET_DIR)/usr/share/libretro/info/freej2me_libretro.info
 endef
 
 $(eval $(generic-package))

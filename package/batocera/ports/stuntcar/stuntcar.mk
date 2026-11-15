@@ -3,27 +3,14 @@
 # stuntcar
 #
 ################################################################################
-# Version: Commits on Jan 19, 2026
-STUNTCAR_VERSION = 9f0f8e6e0aca08b715a0f9291ba21c3dc3cab39d
+# Version: Commits on Nov 15, 2026
+STUNTCAR_VERSION = f6ac3fa118dd5efe99ee01731b1902495bfb2daa
 STUNTCAR_SITE = $(call github,ptitSeb,stuntcarremake,$(STUNTCAR_VERSION))
 STUNTCAR_EMULATOR_INFO = stuntcar.emulator.yml
 STUNTCAR_DEPENDENCIES = sdl2 sdl2_mixer sdl2_ttf openal
 STUNTCAR_LICENSE = GPL-2.0
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_ANY),y)
-STUNTCAR_CONF_OPTS += LINUX=1
-else
-STUNTCAR_CONF_OPTS += RPI4=1
-endif
-
-define STUNTCAR_BUILD_CMDS
-	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) \
-	CPP="$(TARGET_CPP)" CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	AS="$(TARGET_CC)" LD="$(TARGET_LD)" STRIP="$(TARGET_STRIP)" \
-	LDFLAGS="$(TARGET_LDFLAGS) -L$(STAGING_DIR)/lib64 -lm -L$(STAGING_DIR)/usr/lib -lSDL2 -lSDL2_mixer -lSDL2_ttf -lGL" \
-	-C $(@D) -f Makefile SDL=2 $(STUNTCAR_CONF_OPTS)
-endef
+STUNTCAR_CONF_OPTS += -DSTUNT_SDL2=ON
 
 define STUNTCAR_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/stuntcar
@@ -41,5 +28,5 @@ define STUNTCAR_INSTALL_TARGET_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/stuntcar/stuntcar.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
-$(eval $(generic-package))
+$(eval $(cmake-package))
 $(eval $(emulator-info-package))

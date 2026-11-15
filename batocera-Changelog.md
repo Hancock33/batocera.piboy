@@ -100,6 +100,8 @@
 - Insert Coin Cube suport
 - Arcade2TV-XR, Tankstick MAX support
 ### Fixed
+- 32-bit ARM boards (e.g. Odroid XU4): Mupen64 standalone, EmulationStation videos (VLC) and other plugin libraries refused by glibc for requiring an executable stack
+- 32-bit ARM boards (e.g. Odroid XU4): Dreamcast, Naomi and Atomiswave black screen in Flycast (standalone and libretro), every guest memory access was miscompiled to read the start of RAM
 - AMD TDP setting lost after resume from sleep, and the TDP option showing on Ryzen systems that do not support it
 - Bauh not starting with Python 3.14
 - BCC menu not showing on SM8250 devices (i.e. Retroid Pocket 5)
@@ -172,6 +174,7 @@
 - Hikaru & Gaelco now uses Odin, Demul no longer runs these games
 - Khadas VIM4 now uses LabWC
 - LabWC is now used on the older ARM boards: Raspberry Pi 1 / Zero, Allwinner H3, H5, H6, Rockchip RK3328, Amlogic S812, S905 and S9gen4
+- Libretro-HatariB added to all aarch64 devices
 - Lindbergh Loader has transitioned to LinuxLoader for Lindbergh roms
 - MangoHud now scales the size based on the screen resolution
 - Migrated Khadas VIM4 GPU driver to Panfrost with the latest Mesa3D stack

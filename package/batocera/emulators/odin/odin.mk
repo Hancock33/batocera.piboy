@@ -26,5 +26,12 @@ ODIN_DEPENDENCIES += libgles
 ODIN_CONF_OPTS += -DODIN_GLES=ON
 endif
 
+define ODIN_INSTALL_NVRAM
+	mkdir -p $(TARGET_DIR)/usr/share/odin/nvram
+	$(TAR) -xJf $(ODIN_PKGDIR)/nvram.tar.xz -C $(TARGET_DIR)/usr/share/odin/nvram
+endef
+
+ODIN_POST_INSTALL_TARGET_HOOKS += ODIN_INSTALL_NVRAM
+
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))
