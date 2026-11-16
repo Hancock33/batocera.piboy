@@ -1569,6 +1569,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576
 
     select BR2_PACKAGE_EDEN                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+   #select BR2_PACKAGE_LICHII                               if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
     select BR2_PACKAGE_RYUJINX                              if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
     # Microsoft XBOX

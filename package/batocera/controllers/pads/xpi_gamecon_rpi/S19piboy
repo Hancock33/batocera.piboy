@@ -29,7 +29,6 @@ case "$1" in
 
 		if [ "$enabled" = "1" ] || [ "$enabledxrs" = "1" ];then
 			touch /tmp/piboy
-			cp /usr/share/batocera/configgen/configgen-defaults-piboy4.yml /usr/share/batocera/configgen/configgen-defaults-arch.yml
 			dmesg -n 1
 			# disable LCD display if HDMI is connected
 			if grep -q -E '^connected' /sys/class/drm/card?-HDMI-A-*/status; then

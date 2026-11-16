@@ -1,0 +1,13 @@
+diff --git a/src/frontend_common/profile_import.cpp b/src/frontend_common/profile_import.cpp
+index 56e83ce..63ce9c9 100644
+--- a/src/frontend_common/profile_import.cpp
++++ b/src/frontend_common/profile_import.cpp
+@@ -25,7 +25,7 @@ fs::path ProfileImportStateDirectory() {
+ }
+ 
+ bool NeedsLegacyProfileImport() {
+-#ifdef __ANDROID__
++#if 1 // Batocera: games start from EmulationStation, never prompt to import another profile
+     return false;
+ #else
+     using namespace Common::FS;
