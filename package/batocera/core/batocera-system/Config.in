@@ -2284,6 +2284,7 @@ config BR2_PACKAGE_BATOCERA_XORG
     select BR2_PACKAGE_ADWAITA_ICON_THEME_LIGHT             if  BR2_PACKAGE_PCMANFM                     # theme for file manager
     select BR2_PACKAGE_XTERM                                if !BR2_PACKAGE_BATOCERA_LIB32              # terminal
     select BR2_PACKAGE_OPENBOX                              if !BR2_PACKAGE_BATOCERA_LIB32              # window manager
+    select BR2_PACKAGE_PICOM                                if !BR2_PACKAGE_BATOCERA_LIB32              # window compositor
     select BR2_PACKAGE_UNCLUTTER                            if !BR2_PACKAGE_BATOCERA_LIB32              # hide mouse
     select BR2_PACKAGE_TOUCHEGG                             if !BR2_PACKAGE_BATOCERA_LIB32              # touchscreen extended gestures
 
