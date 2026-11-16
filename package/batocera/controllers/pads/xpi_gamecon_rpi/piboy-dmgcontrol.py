@@ -29,6 +29,7 @@ BATT_NODE_S = 2.0         # BAT0 rewrite period (ES reads every 5s)
 NICE = 5                  # CPU priority, so games win under load
 FAN_UPDATE_S = 2.0        # fan curve / config reload period
 SWITCH_DEBOUNCE_S = 1.5   # power switch must be off this long to trigger
+SINK_PIN_S = 30.0         # re-pin the built-in sink at most this often
 LOW_BATT_PCT = 5          # clean shutdown below this charge
 LOW_BATT_MV = 3150        # terminal-voltage floor, protects the cell
 POWER_CONF = "/userdata/system/piboy-power.conf"
@@ -700,6 +701,8 @@ def main():
 
     fan_band = 0
     last_volume = None
+    seen_volume = None        # previous poll's reading, to detect a moving wheel
+    next_sink_pin = 0.0
     switch_held_since = None
     next_battery_publish = next_fan_update = next_state_save = next_led = 0.0
     warned = set()
@@ -752,8 +755,14 @@ def main():
         volume = read_int(volume_node)
         if volume is not None:
             volume = _clamp(volume, 0, 100)
-            if last_volume is None or abs(volume - last_volume) >= 2:
-                pin_builtin_audio_sink()
+            if volume != seen_volume:
+                # Wheel still turning: wait one poll for it to settle so a
+                # sweep costs one batocera-audio call, not one per step.
+                seen_volume = volume
+            elif last_volume is None or abs(volume - last_volume) >= 2:
+                if now >= next_sink_pin:
+                    next_sink_pin = now + SINK_PIN_S
+                    pin_builtin_audio_sink()
                 _quiet(["batocera-audio", "setSystemVolume", str(volume)])
                 last_volume = volume
 
