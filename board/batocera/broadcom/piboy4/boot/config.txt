@@ -77,7 +77,7 @@ dtparam=eth_led1=4
 arm_boost=1
 over_voltage=5
 arm_freq=1950
-gpu_freq=650
+v3d_freq=650
 
 ### Auto detect HDMI
 # The Piboy Screen and HDMI cannot be displayed at the same time, disable the Piboy Screen when HDMI is connected.
