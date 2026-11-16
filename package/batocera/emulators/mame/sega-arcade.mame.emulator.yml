@@ -3,9 +3,6 @@ systems:
     file_extensions: &arcade
       remove:
         - bin
-  - name: gaelco
-    file_extensions:
-      values: *arcade
   - name: model1
     file_extensions:
       values: *arcade
