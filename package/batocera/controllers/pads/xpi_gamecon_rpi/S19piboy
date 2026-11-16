@@ -1,7 +1,12 @@
 #!/bin/sh
-WHEEL_INPUT=$(grep -r -l 'PiBoy Volume wheel' /sys/class/input/event*/device/name | sed 's#/sys/class#/dev#;s#/device.*##')
+DAEMON=/usr/bin/piboy-dmgcontrol.py
+PIDFILE=/var/run/piboy-dmgcontrol.pid
 enabled="$(batocera-settings-get -f /boot/batocera-boot.conf key piboy.enabled)"
 enabledxrs="$(batocera-settings-get -f /boot/batocera-boot.conf key piboyxrs.enabled)"
+
+start_daemon() {
+	start-stop-daemon -S -q -b -m -p "$PIDFILE" --startas /usr/bin/python -- "$DAEMON"
+}
 
 case "$1" in
 	start)
@@ -13,16 +18,12 @@ case "$1" in
 		if [ "$enabled" = "1" ];then
 			echo "Starting PiBoy"
 			modprobe xpi_gamecon
-			WHEEL_INPUT=$(grep -r -l 'PiBoy Volume wheel' /sys/class/input/event*/device/name | sed 's#/sys/class#/dev#;s#/device.*##')
-			# check if audio wheel is available, if not use python script
-			if [ "$WHEEL_INPUT" = !"" ]; then
-				/usr/sbin/volumed -- "$WHEEL_INPUT"
-			fi
-			python /usr/bin/piboy-dmgcontrol.py > /dev/null&
+			# the daemon handles the volume wheel through the xpi_gamecon volume node
+			start_daemon
 		elif [ "$enabledxrs" = "1" ];then
 			echo "Starting PiBoy XRS"
 			modprobe xpi_gamecon_xrs
-			python /usr/bin/piboy-dmgcontrol.py > /dev/null &
+			start_daemon
 			touch /tmp/piboy_xrs
 		fi
 
@@ -39,9 +40,10 @@ case "$1" in
 	stop)
 		if [ "$enabled" = "1" ] || [ "$enabledxrs" = "1" ];then
 			echo "Stopping PiBoy"
-			rm /tmp/piboy
-			kill $(ps aux | grep piboy_fan_power_ctrl | awk '{ print $1 }') > /dev/null 2>&1
-			kill $(ps aux | grep volumed | awk '{ print $1 }') > /dev/null 2>&1
+			rm -f /tmp/piboy
+			# SIGTERM lets the daemon save the battery state before it exits
+			start-stop-daemon -K -q -o -p "$PIDFILE" > /dev/null 2>&1
+			rm -f "$PIDFILE"
 
 			# reboot requested
 			if runlevel | grep -q -E '(6|unknown)$'; then
