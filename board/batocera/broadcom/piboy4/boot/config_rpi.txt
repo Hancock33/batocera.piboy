@@ -50,12 +50,12 @@ dtoverlay=vc4-kms-v3d,cma-512
 force_eeprom_read=0               # don't probe for an I2C HAT EEPROM
 
 ### Overclock (Pi 4 only; needs a heatsink/fan and a good 5.1V 3A supply)
-# If you see crashes or vcgencmd get_throttled != 0x0, drop arm_freq by 100 and gpu_freq by 50.
-# To push further once stable: arm_freq=2000, over_voltage=6, gpu_freq=700.
+# If you see crashes or vcgencmd get_throttled != 0x0, drop arm_freq by 100 and v3d_freq by 50.
+# To push further once stable: arm_freq=2000, over_voltage=6, v3d_freq=700.
 arm_boost=1
 over_voltage=5
 arm_freq=1950
-gpu_freq=650
+v3d_freq=650
 initial_turbo=60                  # run at turbo clocks for the first 60s of boot
 
 [rpi5]

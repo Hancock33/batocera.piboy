@@ -47,6 +47,8 @@ define CEMU_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/bin/Cemu_release $(TARGET_DIR)/usr/bin/cemu/cemu
 	cp -pr $(@D)/bin/{gameProfiles,resources}    $(TARGET_DIR)/usr/bin/cemu/
 	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/cemu/get-audio-device $(TARGET_DIR)/usr/bin/cemu/
+	# Cemu loads its game profiles and fonts from /usr/share/Cemu (exact case required)
+	ln -sfn /usr/bin/cemu $(TARGET_DIR)/usr/share/Cemu
 	# keys.txt
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/cemu
 	touch $(TARGET_DIR)/usr/share/batocera/datainit/bios/cemu/keys.txt

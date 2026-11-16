@@ -1,0 +1,520 @@
+From 743bc33039b0e0dec57b1333bd69e0d3eb29153d Mon Sep 17 00:00:00 2001
+From: Phil Elwell <phil@raspberrypi.com>
+Date: Fri, 13 Nov 2026 17:45:53 +0000
+Subject: [PATCH 1/3] wifi: brcmfmac: Add generic external SAE authentication
+ support
+
+Some firmware (e.g. Synaptics builds for SYN43456 and SYN43436s)
+advertises "extsae" but has neither in-firmware SAE nor the Infineon
+mgmt_frame/auth_status iovars. Instead it signals the start of
+authentication with a JOIN_START event, delivers received
+authentication frames in E_AUTH events, and accepts authentication
+frames and resume commands through the assoc_mgr_cmd iovar.
+
+Add support for this scheme so that the host supplicant can perform
+SAE:
+
+- On JOIN_START, raise an external authentication request to
+  userspace and pause the firmware association state machine at the
+  authentication response.
+- Forward SAE authentication frames from E_AUTH events to userspace.
+- Transmit authentication frames from userspace with the
+  assoc_mgr_cmd SEND_AUTH command.
+- When userspace reports the result, resume the association, or
+  disconnect on failure.
+
+Also map WPA2 + SAE AKM to WPA3_AUTH_SAE_PSK whenever SAE_EXT is
+supported, not only for Infineon firmware.
+
+Based on a patch supplied by Synaptics.
+
+Assisted-by: Claude
+Signed-off-by: Phil Elwell <phil@raspberrypi.com>
+---
+ .../broadcom/brcm80211/brcmfmac/cfg80211.c    | 203 +++++++++++++++++-
+ .../broadcom/brcm80211/brcmfmac/fwil_types.h  |  30 +++
+ 2 files changed, 232 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c
+index bc93437f49a59f..0e25a5c12686ac 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c
+@@ -1967,7 +1967,8 @@ static s32 brcmf_set_wpa_version(struct net_device *ndev,
+ 	if (sme->crypto.wpa_versions & NL80211_WPA_VERSION_1) {
+ 		val = WPA_AUTH_PSK | WPA_AUTH_UNSPECIFIED;
+ 	} else if (sme->crypto.wpa_versions & NL80211_WPA_VERSION_2) {
+-		if (drvr->bus_if->fwvid == BRCMF_FWVENDOR_CYW &&
++		if ((drvr->bus_if->fwvid == BRCMF_FWVENDOR_CYW ||
++		     brcmf_feat_is_enabled(ifp, BRCMF_FEAT_SAE_EXT)) &&
+ 		    sme->crypto.akm_suites[0] == WLAN_AKM_SUITE_SAE)
+ 			val = WPA3_AUTH_SAE_PSK;
+ 		else
+@@ -5542,6 +5543,36 @@ brcmf_cfg80211_update_mgmt_frame_registrations(struct wiphy *wiphy,
+ 	vif->mgmt_rx_reg = upd->interface_stypes;
+ }
+ 
++static s32
++brcmf_cfg80211_mgmt_auth_tx(struct brcmf_cfg80211_vif *vif, struct wireless_dev *wdev,
++			    const u8 *buf, size_t len, u64 *cookie)
++{
++	struct brcmf_assoc_mgr_cmd *cmd;
++	int param_len;
++	int err;
++
++	if (!brcmf_feat_is_enabled(vif->ifp, BRCMF_FEAT_SAE_EXT))
++		return -EOPNOTSUPP;
++
++	param_len = sizeof(*cmd) + len;
++	cmd = kzalloc(param_len, GFP_KERNEL);
++	if (!cmd)
++		return -ENOMEM;
++
++	cmd->version = cpu_to_le16(BRCMF_ASSOC_MGR_CURRENT_VERSION);
++	cmd->length = cpu_to_le16(len);
++	cmd->cmd = cpu_to_le16(BRCMF_ASSOC_MGR_CMD_SEND_AUTH);
++	memcpy(cmd->data, buf, len);
++
++	err = brcmf_fil_iovar_data_set(vif->ifp, "assoc_mgr_cmd", cmd, param_len);
++	if (err)
++		brcmf_err("%s: Failed to send auth(%d)\n", __func__, err);
++
++	kfree(cmd);
++
++	cfg80211_mgmt_tx_status(wdev, *cookie, buf, len, !err, GFP_KERNEL);
++	return err;
++}
+ 
+ int
+ brcmf_cfg80211_mgmt_tx(struct wiphy *wiphy, struct wireless_dev *wdev,
+@@ -5649,6 +5680,9 @@ brcmf_cfg80211_mgmt_tx(struct wiphy *wiphy, struct wireless_dev *wdev,
+ 					GFP_KERNEL);
+ free:
+ 		kfree(af_params);
++	} else if (ieee80211_is_auth(mgmt->frame_control)) {
++		err = brcmf_cfg80211_mgmt_auth_tx(vif, wdev, buf, len, cookie);
++		goto exit;
+ 	} else {
+ 		brcmf_dbg(TRACE, "Unhandled, fc=%04x!!\n", mgmt->frame_control);
+ 		brcmf_dbg_hex_dump(true, buf, len, "payload, len=%zu\n", len);
+@@ -5993,6 +6027,46 @@ static int brcmf_cfg80211_change_bss(struct wiphy *wiphy, struct net_device *dev
+ 	return ret;
+ }
+ 
++/** Called by the cfg80211 framework */
++static s32
++brcmf_cfg80211_external_auth(struct wiphy *wiphy, struct net_device *ndev,
++			     struct cfg80211_external_auth_params *ext_auth_param)
++{
++	struct brcmf_if *ifp = netdev_priv(ndev);
++	struct brcmf_assoc_mgr_cmd cmd = {};
++	int err;
++
++	brcmf_info("Enter\n");
++
++	if (!brcmf_feat_is_enabled(ifp, BRCMF_FEAT_SAE_EXT))
++		return -EOPNOTSUPP;
++
++	if (is_zero_ether_addr(ext_auth_param->bssid)) {
++		brcmf_info("Invalid external auth BSSID\n");
++		return -EINVAL;
++	}
++
++	brcmf_info("BSSID:%pM, status:%d\n", ext_auth_param->bssid,
++		   ext_auth_param->status);
++
++	/* Disconnect on authentication failure */
++	if (ext_auth_param->status) {
++		brcmf_cfg80211_disconnect(wiphy, ndev, WLAN_REASON_UNSPECIFIED);
++		return 0;
++	}
++
++	/* Resume the paused association */
++	cmd.version = cpu_to_le16(BRCMF_ASSOC_MGR_CURRENT_VERSION);
++	cmd.length = cpu_to_le16(sizeof(cmd));
++	cmd.cmd = cpu_to_le16(BRCMF_ASSOC_MGR_CMD_PAUSE_ON_EVT);
++	cmd.params = cpu_to_le16(BRCMF_ASSOC_MGR_PARAMS_EVENT_NONE);
++	err = brcmf_fil_iovar_data_set(ifp, "assoc_mgr_cmd", &cmd, sizeof(cmd));
++	if (err)
++		brcmf_err("%s: Failed to resume assoc(%d)\n", __func__, err);
++
++	return err;
++}
++
+ static struct cfg80211_ops brcmf_cfg80211_ops = {
+ 	.add_virtual_intf = brcmf_cfg80211_add_iface,
+ 	.del_virtual_intf = brcmf_cfg80211_del_iface,
+@@ -6041,6 +6115,7 @@ static struct cfg80211_ops brcmf_cfg80211_ops = {
+ 	.set_pmk = brcmf_cfg80211_set_pmk,
+ 	.del_pmk = brcmf_cfg80211_del_pmk,
+ 	.change_bss = brcmf_cfg80211_change_bss,
++	.external_auth = brcmf_cfg80211_external_auth,
+ };
+ 
+ struct cfg80211_ops *brcmf_cfg80211_get_ops(struct brcmf_mp_device *settings)
+@@ -6575,6 +6650,127 @@ brcmf_notify_connect_status_ap(struct brcmf_cfg80211_info *cfg,
+ 	return 0;
+ }
+ 
++static s32
++brcmf_handle_auth_event(struct brcmf_if *ifp, struct brcmf_cfg80211_info *cfg,
++			struct net_device *ndev,
++			const struct brcmf_event_msg *e, void *data)
++{
++	struct wireless_dev *wdev = ndev->ieee80211_ptr;
++	struct ieee80211_mgmt *mgmt;
++	enum nl80211_band band;
++	u32 len = e->datalen;
++	u8 bssid[ETH_ALEN];
++	size_t frame_len;
++	__le32 chan_le;
++	s32 chan, freq;
++	int err;
++
++	if (brcmf_is_apmode(ifp->vif))
++		return -EINVAL;
++
++	if (!brcmf_feat_is_enabled(ifp, BRCMF_FEAT_SAE_EXT))
++		return 0;
++
++	if (!len) {
++		brcmf_info("WLC_E_AUTH: event has no payload. status %d reason %d\n",
++			   e->status, e->reason);
++		return -EINVAL;
++	}
++
++	err = brcmf_fil_cmd_data_get(ifp, BRCMF_C_GET_BSSID, bssid, ETH_ALEN);
++	/* Use e->addr as the BSSID before association has completed */
++	if (err == -EBADE) {
++		memcpy(bssid, e->addr, ETH_ALEN);
++		err = 0;
++	}
++	if (err) {
++		brcmf_err("%s: Could not get bssid %d\n", __func__, err);
++		return err;
++	}
++
++	err = brcmf_fil_cmd_data_get(ifp, BRCMF_C_GET_CHANNEL, &chan_le,
++				     sizeof(chan_le));
++	if (err) {
++		brcmf_err("%s: Could not get channel %d\n", __func__, err);
++		return err;
++	}
++
++	chan = le32_to_cpu(chan_le);
++	band = (chan <= CH_MAX_2G_CHANNEL) ? NL80211_BAND_2GHZ : NL80211_BAND_5GHZ;
++	freq = ieee80211_channel_to_frequency(chan, band);
++
++	/* The event carries the frame body - add a management header */
++	frame_len = DOT11_MGMT_HDR_LEN + len;
++	mgmt = kzalloc(frame_len, GFP_KERNEL);
++	if (!mgmt)
++		return -ENOMEM;
++
++	mgmt->frame_control = cpu_to_le16(IEEE80211_FTYPE_MGMT |
++						  IEEE80211_STYPE_AUTH);
++	memcpy(mgmt->da, ifp->mac_addr, ETH_ALEN);
++	memcpy(mgmt->sa, e->addr, ETH_ALEN);
++	memcpy(mgmt->bssid, bssid, ETH_ALEN);
++	memcpy((u8 *)mgmt + DOT11_MGMT_HDR_LEN, data, len);
++
++	cfg80211_rx_mgmt(wdev, freq, 0, (u8 *)mgmt, frame_len,
++			 NL80211_RXMGMT_FLAG_EXTERNAL_AUTH);
++	kfree(mgmt);
++
++	return 0;
++}
++
++static s32
++brcmf_notify_start_auth(struct brcmf_if *ifp,
++			const struct brcmf_event_msg *e, void *data)
++{
++	struct cfg80211_external_auth_params ext_auth_param = {};
++	struct wireless_dev *wdev = ifp->ndev->ieee80211_ptr;
++	struct brcmf_ext_auth_evt *evt_data = data;
++	struct brcmf_assoc_mgr_cmd assoc_cmd = {};
++	struct net_device *ndev = ifp->ndev;
++	int err, retry;
++
++	brcmf_info("Enter\n");
++
++	if (!brcmf_feat_is_enabled(ifp, BRCMF_FEAT_SAE_EXT))
++		return 0;
++
++	if (!data || e->datalen < offsetofend(struct brcmf_ext_auth_evt, bssid)) {
++		brcmf_err("Invalid data for auth start event\n");
++		return -EINVAL;
++	}
++
++	ext_auth_param.ssid.ssid_len = min_t(u32, le32_to_cpu(evt_data->ssid.SSID_len),
++					     IEEE80211_MAX_SSID_LEN);
++	memcpy(ext_auth_param.ssid.ssid, evt_data->ssid.SSID,
++	       ext_auth_param.ssid.ssid_len);
++	memcpy(ext_auth_param.bssid, evt_data->bssid, ETH_ALEN);
++	ext_auth_param.action = NL80211_EXTERNAL_AUTH_START;
++	ext_auth_param.key_mgmt_suite = WLAN_AKM_SUITE_SAE;
++
++	/* Wait for conn_owner_nlportid to be assigned in nl80211_connect */
++	for (retry = 3; retry > 0 && !wdev->conn_owner_nlportid; retry--)
++		ndelay(10 * 1000);
++
++	err = cfg80211_external_auth_request(ndev, &ext_auth_param, GFP_KERNEL);
++	if (err) {
++		brcmf_err("Send external auth request failed, ret %d\n", err);
++		return err;
++	}
++
++	/* Pause the association until the supplicant has completed SAE */
++	assoc_cmd.version = cpu_to_le16(BRCMF_ASSOC_MGR_CURRENT_VERSION);
++	assoc_cmd.length = cpu_to_le16(sizeof(assoc_cmd));
++	assoc_cmd.cmd = cpu_to_le16(BRCMF_ASSOC_MGR_CMD_PAUSE_ON_EVT);
++	assoc_cmd.params = cpu_to_le16(BRCMF_ASSOC_MGR_PARAMS_PAUSE_EVENT_AUTH_RESP);
++	err = brcmf_fil_iovar_data_set(ifp, "assoc_mgr_cmd", &assoc_cmd,
++				       sizeof(assoc_cmd));
++	if (err)
++		brcmf_err("%s: Failed to pause assoc(%d)\n", __func__, err);
++
++	return 0;
++}
++
+ static s32
+ brcmf_notify_connect_status(struct brcmf_if *ifp,
+ 			    const struct brcmf_event_msg *e, void *data)
+@@ -6638,6 +6834,8 @@ brcmf_notify_connect_status(struct brcmf_if *ifp,
+ 				  &ifp->vif->sme_state);
+ 		else
+ 			brcmf_bss_connect_done(cfg, ndev, e, false);
++	} else if (e->event_code == BRCMF_E_AUTH) {
++		brcmf_handle_auth_event(ifp, cfg, ndev, e, data);
+ 	}
+ 
+ 	return err;
+@@ -6791,6 +6989,8 @@ static void brcmf_register_event_handlers(struct brcmf_cfg80211_info *cfg)
+ {
+ 	brcmf_fweh_register(cfg->pub, BRCMF_E_LINK,
+ 			    brcmf_notify_connect_status);
++	brcmf_fweh_register(cfg->pub, BRCMF_E_AUTH,
++			    brcmf_notify_connect_status);
+ 	brcmf_fweh_register(cfg->pub, BRCMF_E_DEAUTH_IND,
+ 			    brcmf_notify_connect_status);
+ 	brcmf_fweh_register(cfg->pub, BRCMF_E_DEAUTH,
+@@ -6824,6 +7024,7 @@ static void brcmf_register_event_handlers(struct brcmf_cfg80211_info *cfg)
+ 	brcmf_fweh_register(cfg->pub, BRCMF_E_PSK_SUP,
+ 			    brcmf_notify_connect_status);
+ 	brcmf_fweh_register(cfg->pub, BRCMF_E_RSSI, brcmf_notify_rssi);
++	brcmf_fweh_register(cfg->pub, BRCMF_E_JOIN_START, brcmf_notify_start_auth);
+ 
+ 	brcmf_fwvid_register_event_handlers(cfg->pub);
+ }
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/fwil_types.h b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/fwil_types.h
+index e74a23e11830c1..800b8a024dd8c8 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/fwil_types.h
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/fwil_types.h
+@@ -533,6 +533,36 @@ struct brcmf_ext_join_params_le {
+ 	struct brcmf_assoc_params_le assoc_le;
+ };
+ 
++struct brcmf_ext_auth_evt {
++	struct brcmf_ssid_le ssid;
++	u8 bssid[ETH_ALEN];		/* optional for BSSID */
++	__le32 key_mgmt_suite;
++	__le32 status;
++};
++
++/* Assoc Mgr commands for fine control of assoc */
++#define BRCMF_ASSOC_MGR_CURRENT_VERSION	0x0
++
++struct brcmf_assoc_mgr_cmd {
++	__le16 version;	/* version of the structure as
++			 * defined by BRCMF_ASSOC_MGR_CURRENT_VERSION
++			 */
++	__le16 length;	/* length of the entire structure */
++
++	__le16 cmd;
++
++	union {		/* the command buffer may end in a simple uint16 params, */
++		__le16 params;	/* or may have a variable length set of parameters */
++		DECLARE_FLEX_ARRAY(u8, data);	/* represented by the 'data' member */
++	};
++};
++
++#define BRCMF_ASSOC_MGR_CMD_PAUSE_ON_EVT	0 /* have assoc pause on certain events */
++#define BRCMF_ASSOC_MGR_CMD_SEND_AUTH		3
++
++#define BRCMF_ASSOC_MGR_PARAMS_EVENT_NONE		0 /* use this to resume as well as clear */
++#define BRCMF_ASSOC_MGR_PARAMS_PAUSE_EVENT_AUTH_RESP	1
++
+ struct brcmf_wsec_key {
+ 	u32 index;		/* key index */
+ 	u32 len;		/* key length */
+
+From 50b90685ebe4779640b4c8e50614e4b874e7f542 Mon Sep 17 00:00:00 2001
+From: Phil Elwell <phil@raspberrypi.com>
+Date: Fri, 13 Nov 2026 17:45:54 +0000
+Subject: [PATCH 2/3] wifi: brcmfmac: cyw: Only use Infineon external SAE if
+ supported
+
+The SDIO device IDs of some Infineon chips are shared with Synaptics
+parts - e.g. the SYN43436s in the Raspberry Pi Zero 2 W is a
+BCM43430/1, like the CYW43438 - so the Synaptics firmware is run with
+the CYW vendor ops. That firmware advertises "extsae", but the CYW
+external SAE implementation relies on the mgmt_frame and auth_status
+iovars, which it lacks. The SAE commit frame is never sent and the
+connection times out.
+
+Instead of unconditionally installing the CYW mgmt_tx and
+external_auth ops, do it from feat_attach, and only if the firmware
+supports both iovars; otherwise the generic external SAE support is
+used. Both iovars are set-only, so a get returns BCME_UNSUPPORTED
+whether or not they exist - probe with a zero-length set instead,
+which Infineon firmware rejects with a length/allocation error.
+
+Move the BRCMF_FW_UNSUPPORTED definition to fwil.h so that vendor
+modules can use it.
+
+Link: https://github.com/raspberrypi/linux/issues/7528
+Assisted-by: Claude
+Signed-off-by: Phil Elwell <phil@raspberrypi.com>
+---
+ .../broadcom/brcm80211/brcmfmac/cyw/core.c    | 43 +++++++++++++++++--
+ .../broadcom/brcm80211/brcmfmac/feature.c     |  2 -
+ .../broadcom/brcm80211/brcmfmac/fwil.h        |  3 ++
+ 3 files changed, 42 insertions(+), 6 deletions(-)
+
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c
+index 96d277d7b77592..42facc4e505edc 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c
+@@ -10,6 +10,7 @@
+ #include <fwvid.h>
+ #include <fwil.h>
+ #include <fweh.h>
++#include <feature.h>
+ 
+ #include "vops.h"
+ #include "fwil_types.h"
+@@ -236,10 +237,44 @@ brcmf_cyw_external_auth(struct wiphy *wiphy, struct net_device *dev,
+ 	return ret;
+ }
+ 
+-static void brcmf_cyw_get_cfg80211_ops(struct brcmf_pub *drvr)
++/*
++ * Check for a set-only iovar. A get returns BCME_UNSUPPORTED whether or not
++ * the iovar exists, so issue a zero-length set instead: firmware that knows
++ * the iovar rejects it as malformed, firmware that doesn't returns
++ * BCME_UNSUPPORTED.
++ */
++static bool brcmf_cyw_set_iovar_supported(struct brcmf_if *ifp, char *name)
++{
++	u8 dummy = 0;
++	int err;
++
++	/* we need to know the firmware error */
++	ifp->fwil_fwerr = true;
++	err = brcmf_fil_iovar_data_set(ifp, name, &dummy, 0);
++	ifp->fwil_fwerr = false;
++
++	return err != -BRCMF_FW_UNSUPPORTED;
++}
++
++static void brcmf_cyw_feat_attach(struct brcmf_if *ifp)
+ {
+-	drvr->ops->mgmt_tx = brcmf_cyw_mgmt_tx;
+-	drvr->ops->external_auth = brcmf_cyw_external_auth;
++	struct brcmf_pub *drvr = ifp->drvr;
++
++	if (!(drvr->feat_flags & BIT(BRCMF_FEAT_SAE_EXT)))
++		return;
++
++	/* Some non-Infineon firmware sharing a chip ID with Infineon parts
++	 * (e.g. SYN43436s, BCM43430/1) advertises "extsae" but implements
++	 * external SAE using the assoc_mgr_cmd interface rather than the
++	 * mgmt_frame/auth_status iovars, so only use the latter if present.
++	 */
++	if (brcmf_cyw_set_iovar_supported(ifp, "mgmt_frame") &&
++	    brcmf_cyw_set_iovar_supported(ifp, "auth_status")) {
++		drvr->ops->mgmt_tx = brcmf_cyw_mgmt_tx;
++		drvr->ops->external_auth = brcmf_cyw_external_auth;
++	} else {
++		brcmf_dbg(INFO, "using generic external SAE support\n");
++	}
+ }
+ 
+ static s32
+@@ -377,9 +412,9 @@ static void brcmf_cyw_register_event_handlers(struct brcmf_pub *drvr)
+ }
+ 
+ const struct brcmf_fwvid_ops brcmf_cyw_ops = {
++	.feat_attach = brcmf_cyw_feat_attach,
+ 	.set_sae_password = brcmf_cyw_set_sae_pwd,
+ 	.alloc_fweh_info = brcmf_cyw_alloc_fweh_info,
+ 	.activate_events = brcmf_cyw_activate_events,
+-	.get_cfg80211_ops = brcmf_cyw_get_cfg80211_ops,
+ 	.register_event_handlers = brcmf_cyw_register_event_handlers,
+ };
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/feature.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/feature.c
+index c764684e1aa584..3f6f7cbfcd857c 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/feature.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/feature.c
+@@ -17,8 +17,6 @@
+ #include "feature.h"
+ #include "common.h"
+ 
+-#define BRCMF_FW_UNSUPPORTED	23
+-
+ /*
+  * expand feature list to array of feature strings.
+  */
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/fwil.h b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/fwil.h
+index ab3d6cfcb02bde..04933be7a5e7b6 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/fwil.h
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/fwil.h
+@@ -8,6 +8,9 @@
+ 
+ #include "debug.h"
+ 
++/* firmware error code for an unknown iovar/command (BCME_UNSUPPORTED) */
++#define BRCMF_FW_UNSUPPORTED	23
++
+ /*******************************************************************************
+  * Dongle command codes that are interpreted by firmware
+  ******************************************************************************/
+
+From 66f3bbf01511f82fa83ef79e49050dbc8faa19f5 Mon Sep 17 00:00:00 2001
+From: Phil Elwell <phil@raspberrypi.com>
+Date: Mon, 16 Nov 2026 10:12:32 +0000
+Subject: [PATCH 3/3] wifi: brcmfmac: cyw: Disable FWSUP with generic external
+ SAE
+
+Synaptics firmware for the SYN43436s and SYN43436P supports the
+in-firmware supplicant (FWSUP), so after an external SAE
+authentication the driver selects PSK offload, the supplicant skips
+the 4-way handshake, and the firmware doesn't perform it either. The
+AP then deauthenticates the station.
+
+Until now this has been avoided by disabling FWSUP with the
+feature_disable module parameter. Instead, clear the FWSUP feature
+when the generic (non-Infineon) external SAE support is in use, so
+that WPA3 works regardless of any module parameters.
+
+Assisted-by: Claude
+Signed-off-by: Phil Elwell <phil@raspberrypi.com>
+---
+ drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c
+index 42facc4e505edc..6a8706e784758c 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/core.c
+@@ -274,6 +274,11 @@ static void brcmf_cyw_feat_attach(struct brcmf_if *ifp)
+ 		drvr->ops->external_auth = brcmf_cyw_external_auth;
+ 	} else {
+ 		brcmf_dbg(INFO, "using generic external SAE support\n");
++		/* This firmware doesn't perform the 4-way handshake after an
++		 * external SAE authentication, so the in-firmware supplicant
++		 * must not be used - leave it to the host.
++		 */
++		drvr->feat_flags &= ~BIT(BRCMF_FEAT_FWSUP);
+ 	}
+ }
+ 
