@@ -6,7 +6,7 @@
                 "start"
             ],
             "type": "exec",
-            "target": "killall -9 /usr/bin/vpinball/VPinballX_GL && reset"
+            "target": "killall -9 /usr/bin/vpinball/VPinballX_BGFX && reset"
         },
         {
       "trigger": ["start"],

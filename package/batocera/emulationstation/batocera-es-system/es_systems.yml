@@ -1084,7 +1084,7 @@ loopy:
                         bios/mame/casloopy.zip
   comment_br:           |
                         Requer arquivo de BIOS do MAME:
-                        bios/mame/casloopy.zip  
+                        bios/mame/casloopy.zip
 
 pv1000:
   name:                 PV-1000
@@ -2623,6 +2623,17 @@ ngage:
   hardware:             portable
   platform:             ngage
   theme:                ngage
+
+nuon:
+  name:                 NUON
+  manufacturer:         VM Labs
+  release:              2000
+  hardware:             console
+  comment_en:           |
+                        Put your NUON disc images (.iso, .img, .chd) in this directory.
+                        Program files taken from a disc (.cd, .nuon, .run, .cof) work too.
+
+                        The BIOS files are the emulator's own and are installed in bios/nuance.
 
 mu:
   name:                 Palm OS

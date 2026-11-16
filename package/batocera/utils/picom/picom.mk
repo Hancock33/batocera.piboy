@@ -15,7 +15,6 @@ PICOM_DEPENDENCIES += xlib_libXdamage xlib_libXext xlib_libXfixes
 PICOM_DEPENDENCIES += xlib_libXpresent xlib_libXrandr xlib_libXrender xorgproto
 
 PICOM_CONF_OPTS += -Dsanitize=false
-PICOM_CONF_OPTS += -Dxrescheck=false
 PICOM_CONF_OPTS += -Dcompton=true
 PICOM_CONF_OPTS += -Dwith_docs=false
 PICOM_CONF_OPTS += -Dunittest=false

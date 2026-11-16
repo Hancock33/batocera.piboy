@@ -1,0 +1,61 @@
+shared_features:
+  - autosave
+custom_features:
+  odin_renderer:
+    group: GRAPHICS
+    prompt: GRAPHICS API
+    description: The renderer. Needs RetroArch's Vulkan or OpenGL Core video driver.
+    choices:
+      Automatic (Default): auto
+      Vulkan: vulkan
+      OpenGL: opengl
+  odin_scale:
+    group: GRAPHICS
+    prompt: INTERNAL RESOLUTION
+    description: Draw the 3D at a multiple of 640x480.
+    choices:
+      1x (Default): "1"
+      2x: "2"
+      3x: "3"
+      4x: "4"
+      5x: "5"
+      6x: "6"
+  odin_upscale_mode:
+    group: GRAPHICS
+    prompt: UPSCALING MODE
+    description: How the HUD and text are drawn above 1x.
+    choices:
+      Snap to Pixels (Default): snap
+      Original Pixels: native
+      Smooth: raw
+  odin_anisotropy:
+    group: GRAPHICS
+    prompt: ANISOTROPIC FILTERING
+    description: Sharpen textures seen at an angle. The original board has none.
+    choices:
+      Off (Default): "1"
+      2x: "2"
+      4x: "4"
+      8x: "8"
+      16x: "16"
+  odin_threaded:
+    group: ADVANCED OPTIONS
+    prompt: THREADED BOARD
+    description: Run the next frame on a thread of its own. Faster, with one more frame of latency.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  odin_rumble:
+    group: CONTROLS
+    prompt: VIBRATION
+    description: Vibrate the controller as the original cabinet does. Needs a controller that supports vibration.
+    choices:
+      Enabled (Default): enabled
+      Large Motor Only: large
+      Disabled: disabled
+file_extensions:
+  - zip
+  - 7z
+systems:
+  - hikaru
+  - gaelco

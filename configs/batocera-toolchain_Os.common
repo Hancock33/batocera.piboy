@@ -25,7 +25,7 @@ BR2_ZCAT="pigz -d -c"
 BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV=y
 
 # stripping
-BR2_STRIP_EXCLUDE_FILES="abuse dmdserver ecwolf greenlight Ryujinx Vita3K vpinball VPinballX_GL"
+BR2_STRIP_EXCLUDE_FILES="abuse dmdserver ecwolf greenlight Ryujinx Vita3K"
 
 # build speedups: no rootfs tar, use ccache
 BR2_TARGET_ROOTFS_TAR=n

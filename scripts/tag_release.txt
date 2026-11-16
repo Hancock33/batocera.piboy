@@ -21,7 +21,6 @@ drastic.mk
 ecm.mk
 firmware-radxa.mk
 flatpak.mk
-freepats.mk
 fsuae.mk
 gtk-layer-shell.mk
 hcl.mk

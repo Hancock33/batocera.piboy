@@ -20,11 +20,9 @@ element14-pi-desktop.mk
 fastfetch.mk
 faudio.mk
 fdupes.mk
-fheroes2.mk
 gamecon_gpio_rpi.mk
 glslang.mk
 iir.mk
-imgui.mk
 kodi-pvr-freebox
 ledspicer.mk
 libdovi.mk

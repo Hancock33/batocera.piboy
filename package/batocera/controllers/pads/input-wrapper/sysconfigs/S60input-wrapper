@@ -1,6 +1,0 @@
-#!/bin/sh
-
-if test "${1}" = "start"
-then
-    virtual_controller&
-fi

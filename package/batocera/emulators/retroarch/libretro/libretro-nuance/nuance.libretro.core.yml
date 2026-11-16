@@ -1,0 +1,10 @@
+file_extensions:
+  - iso
+  - img
+  - chd
+  - cd
+  - nuon
+  - run
+  - cof
+systems:
+  - nuon
