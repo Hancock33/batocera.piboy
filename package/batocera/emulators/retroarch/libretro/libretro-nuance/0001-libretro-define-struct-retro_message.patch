@@ -1,0 +1,17 @@
+diff --git a/src/libretro.h b/src/libretro.h
+index 82f24ee..ae5171a 100644
+--- a/src/libretro.h
++++ b/src/libretro.h
+@@ -102,6 +102,12 @@ typedef void (*retro_hw_context_reset_t)(void);
+ typedef uintptr_t (*retro_hw_get_current_framebuffer_t)(void);
+ typedef void *(*retro_hw_get_proc_address_t)(const char *sym);
+ 
++struct retro_message
++{
++   const char *msg;
++   unsigned    frames;
++};
++
+ struct retro_hw_render_callback {
+    enum retro_hw_context_type context_type;
+    retro_hw_context_reset_t context_reset;

@@ -65,6 +65,7 @@ mupen64plus-next = 'batocera_launch_libretro.cores.mupen64plus_next:Mupen64PlusN
 neocd = 'batocera_launch_libretro.cores.neocd:Neocd'
 nestopia = 'batocera_launch_libretro.cores.nestopia:Nestopia'
 np2kai = 'batocera_launch_libretro.cores.np2kai:Np2kai'
+nuance = 'batocera_launch_libretro.cores.nuance:Nuance'
 o2em = 'batocera_launch_libretro.cores.o2em:O2em'
 odin = 'batocera_launch_libretro.cores.odin:Odin'
 opera = 'batocera_launch_libretro.cores.opera:Opera'

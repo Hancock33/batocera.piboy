@@ -1,0 +1,13 @@
+config BR2_PACKAGE_LIBRETRO_NUANCE
+	bool "libretro-nuance"
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  Nuance libretro core: an emulator of the NUON (VM Labs), the
+	  media processor built into a few DVD players. The 64-bit JIT
+	  (asmjit) is x86_64 only.
+
+	  https://github.com/andkrau/NuanceResurrection
+
+comment "LIBRETRO_NUANCE needs a toolchain w/ C++ and OpenGL"
+	depends on !BR2_INSTALL_LIBSTDCPP || !BR2_PACKAGE_HAS_LIBGL
