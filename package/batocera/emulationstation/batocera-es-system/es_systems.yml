@@ -1084,7 +1084,7 @@ loopy:
                         bios/mame/casloopy.zip
   comment_br:           |
                         Requer arquivo de BIOS do MAME:
-                        bios/mame/casloopy.zip  
+                        bios/mame/casloopy.zip
 
 pv1000:
   name:                 PV-1000
