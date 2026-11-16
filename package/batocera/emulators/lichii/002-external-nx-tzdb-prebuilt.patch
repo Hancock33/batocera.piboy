@@ -1,0 +1,13 @@
+diff --git a/externals/nx_tzdb/CMakeLists.txt b/externals/nx_tzdb/CMakeLists.txt
+index efb3e2b058..b9f3ee138c 100644
+--- a/externals/nx_tzdb/CMakeLists.txt
++++ b/externals/nx_tzdb/CMakeLists.txt
+@@ -14,7 +14,7 @@ find_program(GIT git)
+ find_program(GNU_MAKE make)
+ find_program(DATE_PROG date)
+ 
+-set(CAN_BUILD_NX_TZDB true)
++set(CAN_BUILD_NX_TZDB false)
+ 
+ if (NOT (GIT AND GNU_MAKE AND DATE_PROG) OR CMAKE_SYSTEM_NAME STREQUAL "Windows" OR ANDROID)
+     # tzdb_to_nx currently requires a posix-compliant host

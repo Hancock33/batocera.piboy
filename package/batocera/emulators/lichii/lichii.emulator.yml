@@ -1,0 +1,157 @@
+features:
+  - padtokeyboard
+shared_features:
+  - powermode
+  - cpucluster
+  - tdp
+  - videomode
+  - bezel
+  - bezel_stretch
+  - hud
+  - hud_corner
+  - bezel.tattoo
+  - bezel.tattoo_corner
+  - bezel.tattoo_file
+  - bezel.resize_tattoo
+custom_features:
+  lichii_scale:
+    submenu: VIDEO
+    prompt: RENDERING RESOLUTION
+    description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
+    choices:
+      0.25x (180p/270p) [EXPERIMENTAL]: 0
+      0.5x (360p/540p) [EXPERIMENTAL]: 1
+      0.75x (540p/810p) [EXPERIMENTAL]: 2
+      1x (720p/1080p): 3
+      1.25x (900p/1350p) [EXPERIMENTAL]: 4
+      1.5x (1080p/1620p) [EXPERIMENTAL]: 5
+      2x (1440p/2160p): 6
+      3x (2160p/3240p): 7
+      4x (2880p/4320p): 8
+      5x (3600p/5400p): 9
+      6x (4320p/6480p): 10
+      7x (5040p/7560p): 11
+      8x (5760p/8640p): 12
+  lichii_ratio:
+    submenu: VIDEO
+    prompt: ASPECT RATIO
+    description: Change the output resolution ratio.
+    choices:
+      16:9 (Default): 0
+      Force 4:3: 1
+      Force 21:9: 2
+      Force 16:10: 3
+      Stretch to window: 4
+  lichii_backend:
+    submenu: RENDERING
+    prompt: GRAPHICS API
+    description: Choose which graphics API library to use.
+    choices:
+      OpenGL: 0
+      Vulkan (Default): 1
+  lichii_anisotropy:
+    submenu: RENDERING
+    prompt: ANISOTROPIC FILTERING
+    description: Improves clarity of distant textures.
+    choices:
+      Automatic: 0
+      Default: 1
+      2x: 2
+      4x: 3
+      8x: 4
+      16x: 5
+  lichii_vsync:
+    submenu: RENDERING
+    prompt: VSYNC
+    description: Fix screen tearing. FIFO (Vsync) does not drop frames. FIFO Relaxed allows tearing as it recovers from a slow down. Mailbox can have lower latency but may drop frames.
+    choices:
+      Immediate: 0
+      Mailbox: 1
+      FIFO (VSync On): 2
+      FIFO Relaxed: 3
+  lichii_async_shaders:
+    submenu: RENDERING
+    prompt: ASYNC SHADER COMPILE
+    description: Reduce stutter while shaders compile. May cause brief graphical glitches.
+    choices:
+      Disabled: "false"
+      Enabled: "true"
+  lichii_aliasing_method:
+    submenu: RENDERING
+    prompt: ANTI-ALIASING METHOD
+    description: FXAA has a lower performance impact, good for low resolutions. SMAA offers best quality.
+    choices:
+      None: 0
+      FXAA: 1
+      SMAA: 2
+  lichii_scale_filter:
+    submenu: RENDERING
+    prompt: WINDOW SCALING FILTER
+    description: Filter used to scale the rendered image to the screen.
+    choices:
+      Nearest Neighbour: 0
+      Bilinear: 1
+      Bicubic: 2
+      Gaussian: 3
+      Lanczos: 4
+      ScaleForce: 5
+      AMD FidelityFX Super Resolution: 6
+  lichii_accuracy:
+    submenu: RENDERING
+    prompt: GPU ACCURACY
+    description: GPU emulation accuracy. Low is faster. High is needed by some games to render correctly.
+    choices:
+      Low: 0
+      High: 1
+  lichii_sound_mode:
+    prompt: CHOOSE SOUND OUTPUT MODE
+    choices:
+      Mono: 0
+      Stereo: 1
+      Surround: 2
+  lichii_dock_mode:
+    prompt: DOCK MODE
+    description: Choose whether the virtual console is docked or not.
+    choices:
+      Handheld: 0
+      Docked (Default): 1
+  lichii_language:
+    prompt: LANGUAGE
+    description: Change the game's language.
+    choices:
+      Japanese: 0
+      English: 1
+      French: 2
+      German: 3
+      Italian: 4
+      Spanish: 5
+      Chinese: 6
+      Korean: 7
+      Dutch: 8
+      Portuguese: 9
+      Russian: 10
+      Taiwanese: 11
+      British English: 12
+      Canadian French: 13
+      Latin American Spanish: 14
+      Simplified Chinese: 15
+      Traditional Chinese: 16
+      Brazilian Portuguese: 17
+  lichii_region:
+    prompt: CHOOSE CONSOLE REGION
+    description: Choose your console region.
+    choices:
+      Japan: 0
+      USA: 1
+      Europe: 2
+      Australia: 3
+      China: 4
+      Korea: 5
+      Taiwan: 6
+file_extensions:
+  - nsp
+  - xci
+  - nx
+systems:
+  - switch
+  - switch2

@@ -146,6 +146,13 @@ ifeq ($(BR2_PACKAGE_CITRON),y)
   BATOCERA_DESKTOPAPPS_ICONS   += eden.png
 endif
 
+# lichii
+ifeq ($(BR2_PACKAGE_LICHII),y)
+  BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-lichii
+  BATOCERA_DESKTOPAPPS_APPS    += lichii-config.desktop
+  BATOCERA_DESKTOPAPPS_ICONS   += lichii.png
+endif
+
 # ryujinx
 ifeq ($(BR2_PACKAGE_RYUJINX),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-ryujinx

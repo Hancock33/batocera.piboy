@@ -2552,6 +2552,14 @@ switch:
   platform:             switch
   theme:                switch
 
+switch2:
+  name:                 Switch 2
+  manufacturer:         Nintendo
+  release:              2025
+  hardware:             console
+  platform:             switch2
+  theme:                switch2
+
 virtualboy:
   name:                 Virtual Boy
   manufacturer:         Nintendo
