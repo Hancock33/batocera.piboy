@@ -96,11 +96,11 @@ GROUPS = {
         "aelightgun", "aimtrak-guns", "anbernic-gpio-pad", "batocera-gun-calibrator",
         "batocera-wheel-calibrator", "db9_gpio_rpi", "dolphinbar-guns", "dolphinCrosshairsPack",
         "fun-r1-gamepad", "fusion-lightguns", "gamecon_gpio_rpi", "gun4ir-guns", "guncon",
-        "guncon3", "hid-nx", "input-wrapper", "joycond", "lightguns-games-precalibrations",
+        "guncon3", "hid-nx", "joycond", "lightguns-games-precalibrations",
         "mk_arcade_joystick_rpi", "new-lg4ff", "openfire-guns", "onehit-guns", "qtsixa",
         "qtsixa-shanwan", "retrogame", "retroshooter-guns", "samco-guns", "sinden-guns",
         "sinden-guns-libs", "steamdeckgun", "uinput-joystick", "umtool", "wiimote-3rdparty",
-        "wiimotes-rules", "xarcade2jstick", "xgunner-lightguns", "xone", "xow", "xpadneo",
+        "wiimotes-rules", "xgunner-lightguns", "xone", "xpadneo",
         "xpad-noone"
     ],
     "WINE": [

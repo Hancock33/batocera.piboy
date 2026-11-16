@@ -6,7 +6,6 @@ Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.8|Nov 13, 2025
 Audio|[cubeb](http://github.com/mozilla/cubeb)|dcd7cddafa4b95776cf5d117549ad58e17f23764|Oct 21, 2026
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.11|Nov 01, 2026
-Audio|[freepats](http://github.com/feross/freepats)|v1.0.3|Oct 27, 2020
 Audio|[libfreeaptx](http://github.com/regularhunter/libfreeaptx)|0.2.2|Mar 05, 2025
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|v2.0.2.6|Jun 27, 2026
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.4|Oct 10, 2026
@@ -48,7 +47,6 @@ Controllers|[guncon](http://github.com/Redemp/guncon2)|c5fa9fa19fe32c67b4e36eb95
 Controllers|[guncon3](http://github.com/pcnimdock/guncon3_dkms)|0dfe0feaa2afc37a8a70f6cd0f6c803ee4d89f40|Mar 22, 2023
 Controllers|[hid-t150](http://github.com/scarburato/t150_driver)|f7ecb30c65ee5f7870e921bc0a2354df8e1e8100|Feb 25, 2025
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|7a1274d25b2304deed326c5a43bf3617fedcb990|Nov 10, 2026
-Controllers|[input-wrapper](http://github.com/macromorgan/input-wrapper)|e48e2081ac396441b685c0d162c6249f3b72572c|Mar 19, 2024
 Controllers|[joycond](http://github.com/DanielOgorchock/joycond)|4fe23eed61965e951402520d872ab497c8c93703|Nov 08, 2026
 Controllers|[lightguns-games-precalibrations](http://github.com/batocera-linux/lightguns-games-precalibrations)|cdaf9ac06422f06bf89a34eab62676f90f3c6f0a|Oct 08, 2026
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.43.1|Nov 14, 2026
@@ -61,9 +59,7 @@ Controllers|[sinden-guns-libs](http://github.com/batocera-linux/batocera-sinden-
 Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 2024
 Controllers|[uinput-joystick](http://github.com/shantigilbert/uinput_joystick)|bea7d56f4947b547db2b827640bc9966fe770f84|Feb 11, 2022
 Controllers|[umtool](http://github.com/katie-snow/Ultimarc-linux)|20b8c56a3e6f94034b8529eddd777306f5b6152b|Jun 13, 2022
-Controllers|[xarcade2jstick](http://github.com/petrockblog/xarcade2jstick)|7b579e9e9554e6d997978d069ddeb566ff381007|Apr 10, 2023
 Controllers|[xone](http://github.com/dlundqvist/xone)|v0.5.8|Mar 13, 2026
-Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727d9b2f867871|Apr 24, 2022
 Controllers|[xpad-noone](http://github.com/forkymcforkface/xpad-noone)|bc5faaaa72e01129fd10cbb42e8a996d46d2fa8a|Nov 10, 2026
 Controllers|[xpadneo](http://github.com/atar-axis/xpadneo)|56b538d951300bf804f6631738603c5eb14c04f0|Nov 08, 2026
 Controllers|[xpi_gamecon_rpi](http://github.com/hancock33/piboycontrols)|f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368|Aug 07, 2022
@@ -121,7 +117,6 @@ Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|5f
 Emulators|[libretro-bk-emulator](http://github.com/libretro/bk-emulator)|92042a753289cedf05e7e6bd8e75849f83e48966|Sept 04, 2026
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|ec73825ece2a134beb7825a5fd6fd21a398ff12e|Nov 08, 2026
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|e3086eb5d36d77fa11704cf53dc176686e70127d|Aug 23, 2026
-Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|33b6f4d1122d0fe2d0fce417660bc1f2cf50053e|Nov 15, 2026
 Emulators|[libretro-bsnes-hd](http://github.com/DerKoun/bsnes-hd)|fc26b25ea236f0f877f0265d2a2c37dfd93dfde9|Dec 05, 2025
 Emulators|[libretro-bsnes-jg](http://github.com/libretro/bsnes-jg)|7ed3cf55cbe3e88414d921db88388ec9e60c6db0|Nov 11, 2026
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|b51612a74c4ff4b91aa55eb094940d9d848e0e96|Nov 06, 2026
@@ -397,16 +392,13 @@ Libraries|[libfreeimage](http://github.com/toxieainc/freeimage)|d29c96999deb3311
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-rc2|Nov 11, 2026
 Libraries|[libgme](http://github.com/libgme/game-music-emu)|0.6.5|Apr 20, 2026
 Libraries|[liblgpio](http://github.com/joan2937/lg)|bcccd782eceedc5b278b3056ea81d5fbbb89c489|Feb 24, 2026
-Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.5.0|May 27, 2024
 Libraries|[libsfdo](http://github.com/jlindgren90/libsfdo)|v0.1.3|Sept 17, 2024
-Libraries|[lzma-sdk](https://www.7-zip.org/a)|2301|N/A
 Libraries|[miniz](http://github.com/richgel999/miniz)|3.1.2|Jul 01, 2026
 Libraries|[mono-bin](https://github.com/Hancock33/batocera-mono/releases)|6.14.1|May 02, 2025
 Libraries|[nghttp3](https://github.com/ngtcp2/nghttp3.git)|v1.19.0|Nov 02, 2026
 Libraries|[ngtcp2](https://github.com/ngtcp2/ngtcp2.git)|v1.26.0|Nov 02, 2026
 Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/)|$(PIPEWIRE_VERSION)|N/A
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|dc0c9e368b07f1a83ef41c32a625a0efbccd591a|Jul 03, 2025
-Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|6f9e40eaf742e8ca985b069fc0db9b0c885dacec|Jul 03, 2025
 Libraries|[rapidyaml](https://github.com/biojppm/rapidyaml/releases)|v0.16.0|Jul 22, 2026
 Libraries|[semver](http://github.com/Neargye/semver)|v1.0.1|Aug 09, 2026
 Libraries|[sf_rpi_status](http://github.com/sunfounder/sf_rpi_status)|1.1.8|Feb 06, 2026
@@ -462,7 +454,6 @@ Ports|[hardcorps](http://github.com/dhewm/dhewm3-sdk)|b767e8cf42428e9aa32817cc44
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|v0.1.0|Dec 18, 2025
 Ports|[hlsdk-xash3d-dmc](https://github.com/FWGS/hlsdk-portable.git)|1f5582858b5af877cd203656a6aba6090506831b|Nov 08, 2026
 Ports|[hlsdk-xash3d-opfor](https://github.com/FWGS/hlsdk-portable.git)|c3d8dd6f729adeda87d4ce73d4b2de989cd81b93|Nov 08, 2026
-Ports|[hlsdk-xash3d-zombiex](https://github.com/FWGS/hlsdk-portable.git)|752f09f046cae39e38fb138713e811984ffd50f7|Nov 08, 2026
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|7ec223cfd29e0c20d8e52927dcc3d0c27d9ca7ac|Nov 08, 2026
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|0d91d1f2d40f38d21e7f41afc01369ee55649fb6|Dec 31, 2025
@@ -565,7 +556,6 @@ Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.71.0|Nov 06, 2026
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.4.0|Mar 30, 2025
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.19.2|Sept 28, 2026
 Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.1|Jun 14, 2023
-Utils|[imgui](http://github.com/ocornut/imgui)|v1.93.0|Oct 14, 2026
 Utils|[innoextract](http://github.com/dscharrer/innoextract)|6e9e34ed0876014fdb46e684103ef8c3605e382e|Feb 06, 2025
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|fb44667c08aeca839a63bef6464aeade2c2d4e27|Oct 30, 2026
 Utils|[l3afpad](http://github.com/stevenhoneyman/l3afpad)|16f22222116b78b7f6a6fd83289937cdaabed624|Feb 14, 2022

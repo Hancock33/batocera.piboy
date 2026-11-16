@@ -67,7 +67,6 @@ Python|[python-cog](http://github.com/nedbat/cog)|v3.6.1|Nov 15, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-super)|945c3d64cbc1a02adbb690dacbf9f129c8de2805|Nov 15, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|1adae1b8d4dbd769e64bd885777e3def9e0ab10d|Nov 15, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|2.9.4|Nov 15, 2026
-Emulators|[libretro-brimir](https://github.com/coredds/brimir.git)|33b6f4d1122d0fe2d0fce417660bc1f2cf50053e|Nov 15, 2026
 Emulators|[libretro-eka2l1](https://github.com/WizzardSK/eka2l1-libretro.git)|c3b2fc7d856f770b5307f643d8786e2e0eab1436|Nov 15, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|d7450cf138ef553c9ba00c86dd4fb5fb1d7646bb|Nov 15, 2026
 Emulators|[libretro-freej2me](http://github.com/TASEmulators/freej2me-plus)|1.53|Nov 15, 2026
@@ -151,7 +150,6 @@ Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|e9ebeb7c83b7ffe67d8604a3b79d34925d56aada|Nov 08, 2026
 Emulators|[odin](http://github.com/Tovarichtch/Odin)|6ebf2b40ccbca9534d1a0e58b7602db11e4485d9|Nov 08, 2026
 Ports|[ecwolf](https://github.com/ECWolfEngine/ECWolf.git)|8fbaf4e47c2e0314840bed557287bd505c80d7ce|Nov 08, 2026
-Ports|[fheroes2](http://github.com/ihhub/fheroes2)|1.1.18|Nov 08, 2026
 Utils|[amvdec-tee](http://github.com/LibreELEC/amvdec-tee)|b9b865669d5ef7e3d758040dcb3ace38c9a9aed9|Nov 08, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261107-proton-dev|Nov 08, 2026
 Controllers|[joycond](http://github.com/DanielOgorchock/joycond)|4fe23eed61965e951402520d872ab497c8c93703|Nov 08, 2026
@@ -160,7 +158,6 @@ Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|7db2bb50a28c8413b55c0
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|7ec223cfd29e0c20d8e52927dcc3d0c27d9ca7ac|Nov 08, 2026
 Ports|[hlsdk-xash3d-dmc](https://github.com/FWGS/hlsdk-portable.git)|1f5582858b5af877cd203656a6aba6090506831b|Nov 08, 2026
 Ports|[hlsdk-xash3d-opfor](https://github.com/FWGS/hlsdk-portable.git)|c3d8dd6f729adeda87d4ce73d4b2de989cd81b93|Nov 08, 2026
-Ports|[hlsdk-xash3d-zombiex](https://github.com/FWGS/hlsdk-portable.git)|752f09f046cae39e38fb138713e811984ffd50f7|Nov 08, 2026
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|ec73825ece2a134beb7825a5fd6fd21a398ff12e|Nov 08, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|7db2bb50a28c8413b55c0832aaa31a04fb9e2efb|Nov 08, 2026
 Emulators|[libretro-zcdi](http://github.com/pastisme/zcdi)|f52b6a20647fc223a87000c1ac508bdc5bdb5253|Nov 08, 2026
@@ -256,7 +253,6 @@ Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.1.0|Oct 15, 2026
 Audio|[wm8960-audio-hat](http://github.com/waveshareteam/WM8960-Audio-HAT)|d4915ac97730e78e43f985dabcf3903e85eb8b0a|Oct 15, 2026
 Ports|[opengoal](http://github.com/open-goal/jak-project)|v0.3.9|Oct 15, 2026
 Kodi|[kodi-pvr-freebox](http://github.com/aassif/pvr.freebox)|22.2.2-Piers|Oct 14, 2026
-Utils|[imgui](http://github.com/ocornut/imgui)|v1.93.0|Oct 14, 2026
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EPOCH84/libretro-emuscv)|33900ce24f45c429b533fdae7844e04d64a9a1b9|Oct 14, 2026
 Emulators|[touchhle](https://github.com/touchHLE/touchHLE.git)|ca1de89c578e79746f33c1332e28efd106c334ba|Oct 13, 2026
 Kodi|[kodi_resource_language_de_de](https://mirrors.kodi.tv/addons/piers/resource.language.de_de)|11.0.112|Oct 13, 2026
@@ -521,7 +517,6 @@ Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v5.0.7|Sept 05, 2025
 Ports|[awgl](http://github.com/M-HT/rawgl)|087860aee3ec7b85a86004378e2edc6fd5092741|Aug 10, 2025
 Ports|[openmohaa](http://github.com/openmoh/openmohaa)|v0.82.1|Aug 03, 2025
 Libraries|[pm_auto](http://github.com/sunfounder/pm_auto)|dc0c9e368b07f1a83ef41c32a625a0efbccd591a|Jul 03, 2025
-Libraries|[pm_dashboard](http://github.com/sunfounder/pm_dashboard)|6f9e40eaf742e8ca985b069fc0db9b0c885dacec|Jul 03, 2025
 Utils|[wsdd](http://github.com/christgau/wsdd)|v0.9|Jun 01, 2025
 Controllers|[new-lg4ff](http://github.com/berarma/new-lg4ff)|2092db19f7b40854e0427a1b2e39eda9f8d0c3cd|May 28, 2025
 Utils|[touchegg](http://github.com/JoseExposito/touchegg)|2.0.18|May 24, 2025
@@ -551,7 +546,6 @@ Hardware|[pironman](http://github.com/sunfounder/pironman)|997c361ed71fff859d832
 Utils|[fake-hwclock](https://git.einval.com/git/fake-hwclock.git)|v0.14|Jul 14, 2024
 Python|[python-smbus3](https://files.pythonhosted.org/packages/75/39/4b7fe2b7cfb42a39e5bb4ef2970a3befc0febbf2b5b8ef85fac04ca6dcb3)|0.5.5|Jun 29, 2024
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
-Libraries|[libliftoff](https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v)|0.5.0|May 27, 2024
 Ports|[rtcw](http://github.com/iortcw/iortcw)|438e7d413b5f7277187c35b032eb0ef9093ae778|May 26, 2024
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Boot|[batocera-shim-signed-efi-helpers-ia32](https://snapshot.debian.org/archive/debian/20240510T084353Z/pool/main/s/shim-helpers-i386-signed)|1+15.8+1~deb12u1|May 10, 2024
@@ -559,7 +553,6 @@ Firmwares|[extralinuxfirmwares](http://github.com/batocera-linux/extralinuxfirmw
 Ports|[srb2kart](http://github.com/STJr/Kart-Public)|44b4a6852858eebba5f9f50da2ac9f4b2889ad1a|Mar 31, 2024
 Python|[python-lgpio](https://files.pythonhosted.org/packages/56/33/26ec2e8049eaa2f077bf23a12dc61ca559fbfa7bea0516bf263d657ae275)|0.2.2.0|Mar 29, 2024
 Controllers|[sinden-guns](https://www.sindenlightgun.com/software)|1.09|Mar 20, 2024
-Controllers|[input-wrapper](http://github.com/macromorgan/input-wrapper)|e48e2081ac396441b685c0d162c6249f3b72572c|Mar 19, 2024
 Utils-host|[xa](https://www.floodgap.com/retrotech/xa/dists)|2.4.1|Mar 05, 2024
 Hardware|[dockerpi-powerboard](http://github.com/geeekpi/dockerpi)|1e268b076bfb2bba0de053c780474239f4f88245|Feb 28, 2024
 Utils|[xwiimote](http://github.com/xwiimote/xwiimote)|4df713d9037d814cc0c64197f69e5c78d55caaf1|Feb 28, 2024
@@ -573,7 +566,6 @@ Controllers|[sinden-guns-libs](http://github.com/batocera-linux/batocera-sinden-
 Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f997460697013fc54029fcac681|Aug 13, 2023
 Ports|[droidports](https://github.com/JohnnyonFlame/droidports.git)|9e43646b43ca3bf80a50edfc1a212d2c702b617d|Jul 06, 2023
 Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.1|Jun 14, 2023
-Controllers|[xarcade2jstick](http://github.com/petrockblog/xarcade2jstick)|7b579e9e9554e6d997978d069ddeb566ff381007|Apr 10, 2023
 Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.58+15.8-0ubuntu1|Apr 04, 2023
 Controllers|[guncon3](http://github.com/pcnimdock/guncon3_dkms)|0dfe0feaa2afc37a8a70f6cd0f6c803ee4d89f40|Mar 22, 2023
 Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
@@ -588,7 +580,6 @@ Python|[ffmpeg-python](http://github.com/kkroening/ffmpeg-python)|df129c7ba30aaa
 Controllers|[umtool](http://github.com/katie-snow/Ultimarc-linux)|20b8c56a3e6f94034b8529eddd777306f5b6152b|Jun 13, 2022
 Hardware|[roshambo-case](http://github.com/mrfixit2001/Rock64-R64.GPIO)|986a7db7a6ffcbd3a78e65f1669cfe7dd81e9fa7|Apr 30, 2022
 Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426da40b074245fda097fd345fa7c9cdbf152a|Apr 26, 2022
-Controllers|[xow](http://github.com/medusalix/xow)|d335d6024f8380f52767a7de67727d9b2f867871|Apr 24, 2022
 Python|[python-nfcpy](http://github.com/nfcpy/nfcpy)|v1.0.4|Mar 10, 2022
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|329dbf63042ad9c736997348a46db5b5b2f799e5|Mar 03, 2022
 Utils|[l3afpad](http://github.com/stevenhoneyman/l3afpad)|16f22222116b78b7f6a6fd83289937cdaabed624|Feb 14, 2022
@@ -603,7 +594,6 @@ Utils|[wii-u-gc-adapter](http://github.com/ToadKing/wii-u-gc-adapter)|fa098efa7f
 Utils|[pigpio-rpi](http://github.com/joan2937/pigpio)|v79|Mar 02, 2021
 Emulators|[drastic](https://github.com/dmanlfc/drastic/raw/refs/heads/main)|r2.5.2.2|Feb 26, 2021
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Audio|[freepats](http://github.com/feross/freepats)|v1.0.3|Oct 27, 2020
 Ports|[f2bgl](http://github.com/cyxx/f2bgl)|0b84f41c7cc13a41f5a1832549485b814a52070d|Oct 18, 2020
 Utils|[pacman](https://gitlab.archlinux.org/pacman/pacman.git)|v5.2.2|Jun 26, 2020
 Python|[python-binho-host-adapter](https://files.pythonhosted.org/packages/68/36/29b7b896e83e195fac6d64ccff95c0f24a18ee86e7437a22e60e0331d90a)|0.1.6|Jun 04, 2020
@@ -631,7 +621,6 @@ Boot|[uboot-rk3576](https://ftp.denx.de/pub/u-boot)|2026.07|N/A
 Emulators|[demul]()|demul_251220|N/A
 Firmwares|[firmware-khadas-vim4](https://dl.khadas.com/repos/vim4/pool/main/l/linux-board-package-noble-vim4)|1.7.3|N/A
 Firmwares|[meson-firmware](http://github.com/LibreELEC/meson-firmware)|662b843714ac18e92b19887fadc8d8b3d94fc814|N/A
-Libraries|[lzma-sdk](https://www.7-zip.org/a)|2301|N/A
 Libraries|[pipewire-ffmpeg-plugins](https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/)|$(PIPEWIRE_VERSION)|N/A
 Network|[broadcom-wl](https://docs.broadcom.com/docs-and-downloads/docs/linux_sta)|6_30_223_271|N/A
 Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A
