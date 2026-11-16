@@ -1102,6 +1102,9 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
     select BR2_PACKAGE_ODIN_BEZELS                          if  BR2_PACKAGE_ODIN
 
+    # Odin libretro core (Sega Hikaru & Gaelco)
+    select BR2_PACKAGE_LIBRETRO_ODIN                        if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
+
     # RetroArch MAME derivatives
     select BR2_PACKAGE_LIBRETRO_MAME2003_PLUS               # ALL
     select BR2_PACKAGE_LIBRETRO_MAME                        if !BR2_PACKAGE_BATOCERA_TARGET_H3          && \

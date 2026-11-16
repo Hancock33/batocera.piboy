@@ -1,0 +1,17 @@
+config BR2_PACKAGE_LIBRETRO_ODIN
+	bool "libretro-odin"
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_x86_64
+	depends on BR2_PACKAGE_HAS_LIBGL
+	select BR2_PACKAGE_LIBGLVND
+
+	help
+	  Odin libretro core: a low-level emulator of the SEGA Hikaru
+	  and Gaelco PowerVR arcade boards, drawing with OpenGL 4.3 or
+	  Vulkan. Hard fork of Valkyrie.
+
+	  https://github.com/WizzardSK/odin-libretro
+
+comment "LIBRETRO_ODIN needs a toolchain w/ C++ and OpenGL"
+	depends on BR2_x86_64
+	depends on !BR2_INSTALL_LIBSTDCPP || !BR2_PACKAGE_HAS_LIBGL
