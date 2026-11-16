@@ -80,7 +80,7 @@ Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|d4f720597e022737782e6
 Emulators|[clk](https://github.com/TomHarte/CLK)|2026-07-23|Jul 23, 2026
 Emulators|[common-shaders](http://github.com/libretro/common-shaders)|9c0d839a19651dffc9898da7673574a20fb39415|Apr 11, 2026
 Emulators|[demul]()|demul_251220|N/A
-Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|d5a4f48d9b852d26db045831009759e79e508034|Nov 16, 2026
+Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|c5069249b473da2427c89a698f1338aeb4011034|Nov 16, 2026
 Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|v0.83.1|Oct 31, 2026
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.10.01-osfree|Oct 02, 2026
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
@@ -200,7 +200,7 @@ Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|13910d1cf8b139b7560f
 Emulators|[libretro-picodrive](https://github.com/libretro/picodrive.git)|1890c2932234c9d30f4cd3851d02228baae8f09e|Sept 26, 2026
 Emulators|[libretro-pocketsnes](http://github.com/libretro/snes9x2002)|6ffbf9ef4f0063e1f1b78a40d10c50fc52f2524c|Sept 21, 2026
 Emulators|[libretro-pokemini](http://github.com/libretro/PokeMini)|132111b76343559860532a1ccc094f93f1ed5650|Jul 31, 2026
-Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|4392fe67d06f8a88c317641daa71595f8c540de8|Nov 16, 2026
+Emulators|[libretro-ppsspp](https://github.com/hrydgard/ppsspp.git)|c437463bc5cb78a0236312ad23f9c3b56fb9ae67|Nov 16, 2026
 Emulators|[libretro-prboom](http://github.com/libretro/libretro-prboom)|4849268e7342494193f2bbf2d0128a751cf58da7|Oct 17, 2026
 Emulators|[libretro-prosystem](http://github.com/libretro/prosystem-libretro)|8a88014287c7a01cd568067e5a557d0a2b2a051f|Aug 22, 2026
 Emulators|[libretro-ps2](https://github.com/libretro/parallel-ps2.git)|c0922b7a4808581d101868e59a6aaef828867039|Nov 16, 2026
@@ -226,7 +226,7 @@ Emulators|[libretro-swanstation](http://github.com/libretro/swanstation)|631f0fb
 Emulators|[libretro-tamalibretro](https://github.com/celerizer/tamalibretro.git)|ea8dd612eaab375a04f976149dc693cb5d208b27|Jul 27, 2026
 Emulators|[libretro-tgbdual](http://github.com/libretro/tgbdual-libretro)|0392c9c469e653205e471114c7949c07c83bfce9|Aug 23, 2026
 Emulators|[libretro-theodore](https://github.com/Zlika/theodore.git)|4d469ce0f71ee046ceb78cdbf8e9f18364aaa918|Aug 17, 2026
-Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|9f9a2f2ca9fe33db17f51d10656f3601f0ec88b1|Nov 15, 2026
+Emulators|[libretro-tic80](https://github.com/nesbox/TIC-80.git)|ada85a6c31e280c26330ea07e2f181d05d99f00a|Nov 16, 2026
 Emulators|[libretro-tyrquake](http://github.com/libretro/tyrquake)|67db338ff4d27fdbcead61d4e54938d758ae62cb|Oct 12, 2026
 Emulators|[libretro-uae4arm](http://github.com/chips-fr/uae4arm-rpi)|fc1cb90afd6b5c6d9bb933d111c4c99c90f37688|Sept 06, 2026
 Emulators|[libretro-uzdoom](https://github.com/cscd98/UZDoom-libretro.git)|208110b31579e3a210fbf58d881b03b4ba127c2e|Nov 15, 2026
@@ -264,10 +264,10 @@ Emulators|[odin](http://github.com/Tovarichtch/Odin)|6ebf2b40ccbca9534d1a0e58b76
 Emulators|[openmsx](http://github.com/openMSX/openMSX)|50a31832e0423dec73168381b01473d9af543c49|Nov 16, 2026
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.180|Nov 16, 2026
 Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|Aug 18, 2026
-Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|4392fe67d06f8a88c317641daa71595f8c540de8|Nov 16, 2026
+Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|c437463bc5cb78a0236312ad23f9c3b56fb9ae67|Nov 16, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8c918e2872482139273374ef4cc6c7aff34d7585|Nov 09, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|abd275b917f032e0152c64342132843a6fe3e307|Nov 16, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|49082b3e0ab02bcf9cad6b480c63d958767be2d7|Nov 16, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260927|Sept 27, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|v0.0.43|Sept 30, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|506e2c7a69b4f801a519857e465e81834d618da8|Nov 11, 2026
@@ -318,7 +318,7 @@ Engines|[scummvm](http://github.com/scummvm/scummvm)|v2026.4.0|Oct 10, 2026
 Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
-Engines|[tic80](https://github.com/nesbox/TIC-80.git)|9f9a2f2ca9fe33db17f51d10656f3601f0ec88b1|Nov 15, 2026
+Engines|[tic80](https://github.com/nesbox/TIC-80.git)|ada85a6c31e280c26330ea07e2f181d05d99f00a|Nov 16, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|28dbb634a6b4583bd2b5c3793eaef7bce9de327b|Nov 13, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
@@ -332,7 +332,7 @@ Firmwares|[firmware-radxa-rkwifibt](http://github.com/JeffyCN/mirrors)|e7a4fc704
 Firmwares|[firmware-radxa](http://github.com/radxa-pkg/radxa-firmware)|0.2.44|Nov 13, 2026
 Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
 Firmwares|[meson-firmware](http://github.com/LibreELEC/meson-firmware)|662b843714ac18e92b19887fadc8d8b3d94fc814|N/A
-Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|3831e51dba65f4493f3f88c1d049de73165c082e|Nov 09, 2026
+Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|15b8ea216515b9b768210ed1fa66aaf80c8664d5|Nov 16, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|7e9cdb55b7d782231c0d827151d2a5620ae0255c|Nov 15, 2026
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2026.09.2|Oct 07, 2026
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|8b1a3da5d2331d0f88b70be25963182d46eed857|Nov 11, 2026
