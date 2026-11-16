@@ -397,6 +397,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_SM8550         && !BR2_PACKAGE_BATOCERA_TARGET_T527   && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_ODIN           # Improved Linux module driver for Logitech driving wheels (the lg4ff is disabled in kernels)
     select BR2_PACKAGE_HID_T150                             if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T150 and TMX Force Feedback Wheel Linux drivers
+    select BR2_PACKAGE_HID_TMFF2                            if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4  # Thrustmaster T300RS, T248 and (experimental) TX, T128, T-GT II and TS-XW Wheel Linux drivers
     select BR2_PACKAGE_LOGITECH_TRUEFORCE                   if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_1         # Logitech RS50 & G PRO direct drive wheels (force feedback + TrueForce)
     select BR2_PACKAGE_LOGI_WHEEL                           if  BR2_TOOLCHAIN_HEADERS_AT_LEAST_6_1 && BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS # terminal settings app for the wheels above
     select BR2_PACKAGE_KEYBOARDTOPADS
