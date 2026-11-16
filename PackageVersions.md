@@ -67,7 +67,6 @@ Core|[batocera-controlcenter](http://github.com/lbrpdx/batocera-controlcenter)|8
 Core|[batocera-controller-overlays](http://github.com/hancock33/batocera-controller-overlays)|448f87fc0ec9825df13c1e0d4721b741aa5c32aa|Feb 12, 2026
 Core|[batocera-notice](http://github.com/batocera-linux/batocera-notice)|d8877e6282868d30e1c2d70c28ec1d1e2491d5b7|Mar 17, 2026
 Core|[batocera-settings](http://github.com/batocera-linux/mini_settings)|0.0.6|Oct 21, 2026
-Database|[influxdb](https://dl.influxdata.com/influxdb/releases/)|v2.8.0|Dec 12, 2025
 Emulationstation|[batocera-emulationstation](https://github.com/batocera-linux/batocera-emulationstation)|b722aa988afb2c661e0eaaa7e6971707395ba9fc|Nov 11, 2026
 Emulationstation|[es-theme-carbon](http://github.com/hancock33/es-theme-carbon)|5662c6b66567f420259c124b2ac3776908b8568c|Nov 08, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.6|Oct 27, 2026
