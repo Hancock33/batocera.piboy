@@ -9,7 +9,8 @@ AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
 AMIBERRY_LICENSE = GPLv3
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
 
-AMIBERRY_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123
+AMIBERRY_DEPENDENCIES += flac json-for-modern-cpp libcurl libpcap libmpeg2 libpng
+AMIBERRY_DEPENDENCIES += libserialport libxml2 mpg123
 AMIBERRY_DEPENDENCIES += portmidi sdl3 sdl3_image sdl3_ttf zlib
 AMIBERRY_EMULATOR_INFO = amiberry.emulator.yml
 

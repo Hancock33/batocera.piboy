@@ -21,10 +21,12 @@
 from __future__ import annotations
 
 import logging
+import os
 import zipfile
 from pathlib import Path
 from typing import Final
 
+from batocera_common.asyncio import run
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.key_value_config import KeyValueConfig
 from batocera_common.paths import BIOS, CONFIGS, LOGS, SAVES, SCREENSHOTS
@@ -42,6 +44,7 @@ _logger = logging.getLogger(__name__)
 
 _AMIBERRY_BIN: Final = Path('/usr/bin/amiberry')
 _AMIBERRY_DATA: Final = Path('/usr/share/amiberry/data')
+_WHDBOOT_DOWNLOAD_TIMEOUT: Final = 60  # seconds
 
 # saves/bios are shared across all amiga500/amiga1200/amigacd32/amigacdtv systems,
 # deliberately not per-system (self.saves_dir / self.bios_dir)
@@ -383,6 +386,34 @@ class Amiberry(Emulator):
             # otherwise, unknown format
             return Command([])
 
+        env: dict[str, str | Path] = {
+            'AMIBERRY_DATA_DIR': _AMIBERRY_DATA,
+            'AMIBERRY_HOME_DIR': self.config_dir,
+            'AMIBERRY_CONFIG_DIR': self.config_dir,
+            'AMIBERRY_PLUGINS_DIR': plugins_dir,
+            'XDG_DATA_HOME': CONFIGS,
+            'XDG_CONFIG_HOME': CONFIGS,
+            'SDL_JOYSTICK_HIDAPI': '0',
+        }
+
+        # Amiberry no longer ships WHDLoad or the kickstart RTB files due to licensing 
+        # restrictions and only fetches them when asked.
+        if rom_type == 'WHDL' and not (whdboot_dir / 'WHDLoad').exists():
+            _logger.info('WHDLoad is not installed in %s, downloading the WHDLoad files', whdboot_dir)
+            await run(
+                'timeout',
+                str(_WHDBOOT_DOWNLOAD_TIMEOUT),
+                _AMIBERRY_BIN,
+                '--download-whdboot',
+                env={**os.environ, **env},
+                check=False,
+            )
+            if not (whdboot_dir / 'WHDLoad').exists():
+                _logger.warning(
+                    'WHDLoad could not be downloaded (no network?).'
+                    'Run "amiberry --download-whdboot" or use the Paths panel in the Amiberry GUI (F8).'
+                )
+
         args: list[str | Path] = [_AMIBERRY_BIN]
 
         if rom_type != 'WHDL':
@@ -601,15 +632,4 @@ class Amiberry(Emulator):
         if not args or args[-1] != '-G':
             args.append('-G')
 
-        return Command(
-            args,
-            env={
-                'AMIBERRY_DATA_DIR': _AMIBERRY_DATA,
-                'AMIBERRY_HOME_DIR': self.config_dir,
-                'AMIBERRY_CONFIG_DIR': self.config_dir,
-                'AMIBERRY_PLUGINS_DIR': plugins_dir,
-                'XDG_DATA_HOME': CONFIGS,
-                'XDG_CONFIG_HOME': CONFIGS,
-                'SDL_JOYSTICK_HIDAPI': '0',
-            },
-        )
+        return Command(args, env=env)
