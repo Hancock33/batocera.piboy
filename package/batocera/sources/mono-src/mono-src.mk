@@ -12,7 +12,6 @@ MONO_SRC_LICENSE = GPL-2.0 or MIT (compiler, tools), MIT (libs) or commercial
 MONO_SRC_LICENSE_FILES = LICENSE mcs/COPYING \
 	external/Newtonsoft.Json/Tools/7-zip/copying.txt
 MONO_SRC_CPE_ID_VENDOR = mono-project
-MONO_SRC_INSTALL_STAGING = NO
 MONO_SRC_INSTALL_TARGET_OPTS = DESTDIR=/tmp/mono install
 
 # patching configure.ac

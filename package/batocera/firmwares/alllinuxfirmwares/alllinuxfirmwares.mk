@@ -16,133 +16,130 @@ ifeq ($(BR2_PACKAGE_FIRMWARE_ORANGEPI),y)
 ALLLINUXFIRMWARES_DEPENDENCIES += firmware-orangepi
 endif
 
-# These folders contain massive blobs for 40Gb/100Gb SmartNICs and Mainframes.rs not required on batocera
-ALLLINUXFIRMWARES_REMOVE_DIRS = $(@D)/bnx2* \
-								$(@D)/cavium \
-								$(@D)/cxgb4 \
-								$(@D)/dpaa2 \
-								$(@D)/liquidio \
-								$(@D)/mellanox \
-								$(@D)/mrvl/prestera \
-								$(@D)/myri* \
-								$(@D)/netronome \
-								$(@D)/nfp \
-								$(@D)/pensando \
-								$(@D)/phanfw.bin \
-								$(@D)/qcom \
-								$(@D)/qed \
-								$(@D)/ql2* \
-								$(@D)/qlogic \
-								$(@D)/s5p-mfc* \
-								$(@D)/ti-keystone \
-								$(@D)/ti-connectivity \
-								$(@D)/ueagle-atm \
-								$(@D)/LICENCE* \
-								$(@D)/LICENSE*
+# Massive blobs for 40Gb/100Gb SmartNICs and mainframes, not required on Batocera
+ALLLINUXFIRMWARES_REMOVE_DIRS = \
+	$(@D)/bnx2* \
+	$(@D)/cavium \
+	$(@D)/cxgb4 \
+	$(@D)/dpaa2 \
+	$(@D)/liquidio \
+	$(@D)/mellanox \
+	$(@D)/mrvl/prestera \
+	$(@D)/myri* \
+	$(@D)/netronome \
+	$(@D)/nfp \
+	$(@D)/pensando \
+	$(@D)/phanfw.bin \
+	$(@D)/qcom \
+	$(@D)/qed \
+	$(@D)/ql2* \
+	$(@D)/qlogic \
+	$(@D)/s5p-mfc* \
+	$(@D)/ti-keystone \
+	$(@D)/ti-connectivity \
+	$(@D)/ueagle-atm \
+	$(@D)/LICENCE* \
+	$(@D)/LICENSE*
 
-# Remove strictly ARM/Mobile SoC components
+# Strictly ARM/mobile SoC components, not needed on x86_64
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
 ALLLINUXFIRMWARES_REMOVE_DIRS += \
-		$(@D)/airoha \
-		$(@D)/amlogic \
-		$(@D)/amphion \
-		$(@D)/apple \
-		$(@D)/arm \
-		$(@D)/cadence \
-		$(@D)/cis \
-		$(@D)/cnm \
-		$(@D)/dsp56k \
-		$(@D)/imx \
-		$(@D)/inside-secure \
-		$(@D)/ixp4xx \
-		$(@D)/meson \
-		$(@D)/microchip \
-		$(@D)/nvidia/tegra \
-		$(@D)/nxp \
-		$(@D)/powervr \
-		$(@D)/qcom \
-		$(@D)/rockchip \
-		$(@D)/starfive \
-		$(@D)/s5p-* \
-		$(@D)/sun \
-		$(@D)/sunxi \
-		$(@D)/sxg \
-		$(@D)/ti \
-		$(@D)/ti-keystone \
-		$(@D)/v3d \
-		$(@D)/vc4 \
-		$(@D)/vicam
+	$(@D)/airoha \
+	$(@D)/amlogic \
+	$(@D)/amphion \
+	$(@D)/apple \
+	$(@D)/arm \
+	$(@D)/cadence \
+	$(@D)/cis \
+	$(@D)/cnm \
+	$(@D)/dsp56k \
+	$(@D)/imx \
+	$(@D)/inside-secure \
+	$(@D)/ixp4xx \
+	$(@D)/meson \
+	$(@D)/microchip \
+	$(@D)/nvidia/tegra \
+	$(@D)/nxp \
+	$(@D)/powervr \
+	$(@D)/rockchip \
+	$(@D)/starfive \
+	$(@D)/s5p-* \
+	$(@D)/sun \
+	$(@D)/sunxi \
+	$(@D)/sxg \
+	$(@D)/ti \
+	$(@D)/v3d \
+	$(@D)/vc4 \
+	$(@D)/vicam
+
 # SoC wifi, cameras, NPU, server NICs and Instinct GPUs
 ALLLINUXFIRMWARES_REMOVE_DIRS += \
-		$(@D)/ath10k/QCA4019 $(@D)/ath10k/WCN3990 $(@D)/ath11k/IPQ* \
-		$(@D)/ath11k/WCN6750 $(@D)/ath12k/IPQ* $(@D)/mediatek/mt798* \
-		$(@D)/ti-connectivity $(@D)/intel/ice $(@D)/intel/ipu \
-		$(@D)/intel/qat $(@D)/intel/vpu $(@D)/intel/vsc \
-		$(@D)/amdgpu/aldebaran_* $(@D)/amdgpu/arcturus_* \
-		$(@D)/amdgpu/gc_9_4_[34]_* $(@D)/amdgpu/gc_9_5_0_* \
-		$(@D)/amdgpu/psp_13_0_6_* $(@D)/amdgpu/psp_13_0_1[24]_* \
-		$(@D)/amdgpu/sdma_4_4_[245].bin $(@D)/amdgpu/vcn_4_0_3.bin \
-		$(@D)/amdgpu/vcn_5_0_1.bin
+	$(@D)/ath10k/QCA4019 $(@D)/ath10k/WCN3990 $(@D)/ath11k/IPQ* \
+	$(@D)/ath11k/WCN6750 $(@D)/ath12k/IPQ* $(@D)/mediatek/mt798* \
+	$(@D)/intel/ice $(@D)/intel/ipu $(@D)/intel/qat \
+	$(@D)/intel/vpu $(@D)/intel/vsc \
+	$(@D)/amdgpu/aldebaran_* $(@D)/amdgpu/arcturus_* \
+	$(@D)/amdgpu/gc_9_4_[34]_* $(@D)/amdgpu/gc_9_5_0_* \
+	$(@D)/amdgpu/psp_13_0_6_* $(@D)/amdgpu/psp_13_0_1[24]_* \
+	$(@D)/amdgpu/sdma_4_4_[245].bin $(@D)/amdgpu/vcn_4_0_3.bin \
+	$(@D)/amdgpu/vcn_5_0_1.bin
+
 # nouveau only falls back to 535 when 570 is missing
 ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/nvidia/*/gsp/*-535.113.01.bin
 endif
 
-# This removes strictly ARM/RISC-V SoC components while preserving all Wi-Fi/BT.
+# Strictly ARM/RISC-V SoC components, keeping all Wi-Fi/BT
 ifeq ($(BR2_arm)$(BR2_aarch64),y)
-ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/*-fw-usb-*.sbcf \
-								$(@D)/3com \
-								$(@D)/acenic \
-								$(@D)/adaptec \
-								$(@D)/advansys \
-								$(@D)/amd-ucode \
-								$(@D)/amd* \
-								$(@D)/apple \
-								$(@D)/ath10k \
-								$(@D)/ath11k \
-								$(@D)/ath12k \
-								$(@D)/c*.bin \
-								$(@D)/cis \
-								$(@D)/dsp56k \
-								$(@D)/HP \
-								$(@D)/i915 \
-								$(@D)/intel \
-								$(@D)/iwlwifi* \
-								$(@D)/LENOVO \
-								$(@D)/matrox \
-								$(@D)/nvidia \
-								$(@D)/q*.bin \
-								$(@D)/qat_* \
-								$(@D)/radeon \
-								$(@D)/xe \
-								$(@D)/yamaha
-# Prune other ARM SoC vendors if building a specific ARM target
+ALLLINUXFIRMWARES_REMOVE_DIRS += \
+	$(@D)/*-fw-usb-*.sbcf \
+	$(@D)/3com \
+	$(@D)/acenic \
+	$(@D)/adaptec \
+	$(@D)/advansys \
+	$(@D)/amd-ucode \
+	$(@D)/amd* \
+	$(@D)/apple \
+	$(@D)/ath10k \
+	$(@D)/ath11k \
+	$(@D)/ath12k \
+	$(@D)/c*.bin \
+	$(@D)/cis \
+	$(@D)/dsp56k \
+	$(@D)/HP \
+	$(@D)/i915 \
+	$(@D)/intel \
+	$(@D)/iwlwifi* \
+	$(@D)/LENOVO \
+	$(@D)/matrox \
+	$(@D)/nvidia \
+	$(@D)/q*.bin \
+	$(@D)/qat_* \
+	$(@D)/radeon \
+	$(@D)/xe \
+	$(@D)/yamaha
+
+# Other ARM SoC vendors, pruned unless building a specific ARM target
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3562)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE)$(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
 ALLLINUXFIRMWARES_REMOVE_DIRS += \
-			$(@D)/rockchip $(@D)/amlogic $(@D)/meson $(@D)/sunxi \
-			$(@D)/nxp $(@D)/imx $(@D)/starfive $(@D)/powervr \
-			$(@D)/airoha $(@D)/amphion $(@D)/cadence $(@D)/ar3k
+	$(@D)/rockchip $(@D)/amlogic $(@D)/meson $(@D)/sunxi \
+	$(@D)/nxp $(@D)/imx $(@D)/starfive $(@D)/powervr \
+	$(@D)/airoha $(@D)/amphion $(@D)/cadence $(@D)/ar3k
 endif
 endif
 
-# Remove Broadcom if RPi/External firmware is already handling it
+# The rpi package ships Broadcom firmware too, so remove ours when it is present
 ifeq ($(BR2_PACKAGE_EXTRALINUXFIRMWARES),y)
-	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/brcm
 endif
 
-# the rpi package ships these too, keep its newer firmware and matching clm_blob
+# Keep the newer firmware and matching clm_blob from the rpi package
 ifeq ($(BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI),y)
-	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/cypress/cyfmac43430-sdio.* $(@D)/cypress/cyfmac43455-sdio.*
-endif
-
-# Remove snadragon SoC folder if not a Qualcomm board
-# Preserves ath10k/11k/12k wifi separately
-ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_ANY),y)
-	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/qcom
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/cypress/cyfmac43430-sdio.* $(@D)/cypress/cyfmac43455-sdio.*
 endif
 
 # Remove amlogic firmware if not building an Amlogic board
 ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
-	ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/amlogic
+ALLLINUXFIRMWARES_REMOVE_DIRS += $(@D)/amlogic
 endif
 
 define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
@@ -232,11 +229,11 @@ endef
 
 # Apply hooks based on architecture
 ifeq ($(BR2_x86_64),y)
-	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_AMD_890M
+ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_AMD_890M
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO),y)
-	ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_LINK_RTL_BT
+ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_LINK_RTL_BT
 endif
 
 $(eval $(generic-package))
