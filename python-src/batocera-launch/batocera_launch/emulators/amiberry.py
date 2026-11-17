@@ -396,7 +396,7 @@ class Amiberry(Emulator):
             'SDL_JOYSTICK_HIDAPI': '0',
         }
 
-        # Amiberry no longer ships WHDLoad or the kickstart RTB files due to licensing 
+        # Amiberry no longer ships WHDLoad or the kickstart RTB files due to licensing
         # restrictions and only fetches them when asked.
         if rom_type == 'WHDL' and not (whdboot_dir / 'WHDLoad').exists():
             _logger.info('WHDLoad is not installed in %s, downloading the WHDLoad files', whdboot_dir)
