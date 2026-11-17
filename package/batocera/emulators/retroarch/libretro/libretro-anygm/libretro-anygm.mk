@@ -16,7 +16,7 @@ define LIBRETRO_ANYGM_BUILD_CMDS
 endef
 
 define LIBRETRO_ANYGM_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/build/unix/anygm_libretro.so $(TARGET_DIR)/usr/lib/libretro/anygm_libretro.so
+	$(INSTALL) -D $(@D)/anygm_libretro.so $(TARGET_DIR)/usr/lib/libretro/anygm_libretro.so
 	$(INSTALL) -D $(@D)/anygm_libretro.info $(TARGET_DIR)/usr/share/libretro/info/anygm_libretro.info
 endef
 
