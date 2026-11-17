@@ -3,8 +3,8 @@
 # kodi_resource_language_el_gr
 #
 ################################################################################
-# Version: Commits on Oct 13, 2026
-KODI_RESOURCE_LANGUAGE_EL_GR_VERSION = 11.0.84
+# Version: Commits on Nov 14, 2026
+KODI_RESOURCE_LANGUAGE_EL_GR_VERSION = 11.0.85
 KODI_RESOURCE_LANGUAGE_EL_GR_SOURCE = resource.language.el_gr-$(KODI_RESOURCE_LANGUAGE_EL_GR_VERSION).zip
 KODI_RESOURCE_LANGUAGE_EL_GR_SITE = https://mirrors.kodi.tv/addons/piers/resource.language.el_gr
 KODI_RESOURCE_LANGUAGE_EL_GR_PLUGINNAME=resource.language.el_gr
