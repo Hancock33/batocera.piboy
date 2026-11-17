@@ -10,6 +10,7 @@ on:
       - 'package/batocera/**/*.in'
       - 'package/batocera/**/*.py'
       - 'package/batocera/**/*.yml'
+      - 'python-src/**/*.py'
 
 permissions:
   contents: write
