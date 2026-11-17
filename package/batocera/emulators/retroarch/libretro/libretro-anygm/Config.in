@@ -1,0 +1,14 @@
+config BR2_PACKAGE_LIBRETRO_ANYGM
+	bool "libretro-anygm"
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+
+	help
+	  AnyGM: a portable runtime and libretro core for GameMaker content
+	  (GameMaker 5.3 to Studio 2.x). Runs unprotected content only; no game
+	  data is included.
+
+	  https://github.com/retrodiv/AnyGM-libretro
+
+comment "LIBRETRO_ANYGM needs a toolchain w/ C++ and threads"
+	depends on !BR2_INSTALL_LIBSTDCPP || !BR2_TOOLCHAIN_HAS_THREADS

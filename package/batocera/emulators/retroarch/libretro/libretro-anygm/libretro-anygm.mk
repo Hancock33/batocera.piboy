@@ -1,0 +1,24 @@
+################################################################################
+#
+# libretro-anygm
+#
+################################################################################
+# Version: Commits on Nov 16, 2026
+LIBRETRO_ANYGM_VERSION = fe892c2a09ebbe7cd203fc85ae5fde464f65cfae
+LIBRETRO_ANYGM_SITE =  $(call github,retrodiv,AnyGM-libretro,$(LIBRETRO_ANYGM_VERSION))
+LIBRETRO_ANYGM_LICENSE = MIT
+LIBRETRO_ANYGM_EMULATOR_INFO = anygm.libretro.core.yml
+LIBRETRO_ANYGM_DEPENDENCIES += retroarch
+
+define LIBRETRO_ANYGM_BUILD_CMDS
+	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) platform=unix \
+		CC="$(TARGET_CC)" CXX="$(TARGET_CXX)" AR="$(TARGET_AR)" core
+endef
+
+define LIBRETRO_ANYGM_INSTALL_TARGET_CMDS
+	$(INSTALL) -D $(@D)/build/unix/anygm_libretro.so $(TARGET_DIR)/usr/lib/libretro/anygm_libretro.so
+	$(INSTALL) -D $(@D)/anygm_libretro.info $(TARGET_DIR)/usr/share/libretro/info/anygm_libretro.info
+endef
+
+$(eval $(generic-package))
+$(eval $(emulator-info-package))

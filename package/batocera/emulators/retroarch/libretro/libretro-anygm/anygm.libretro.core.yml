@@ -1,0 +1,18 @@
+systems:
+  - name: gamemaker
+    file_extensions:
+      - win
+      - droid
+      - unx
+      - ios
+      - zip
+      - port
+      - apk
+      - yyp
+      - yyz
+      - gmd
+      - gmk
+      - gm6
+      - gm81
+      - exe
+      - anygm

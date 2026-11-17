@@ -74,6 +74,17 @@ amstradcpc:
                         Para habilitar o suporte ao controle, vá no menu RetroArch com "Hotkey + B" e altere esta opção:
                         De "Quick Menu/Core Input Options/User 1 Device type: Retropad" para "Amstrad Joystick"
 
+gamemaker:
+  name:                 GameMaker
+  manufacturer:         YoYo Games
+  release:              1999
+  hardware:             port
+  platform:             pc
+  group:                ports
+  path:                 /userdata/roms/gamemaker
+  comment_en:           |
+                        AnyGM runs GameMaker content (5.3 to Studio 2.x). Only unprotected content is supported.
+
 gx4000:
   name:                 GX4000
   manufacturer:         Amstrad
