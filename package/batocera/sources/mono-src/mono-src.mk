@@ -76,6 +76,5 @@ define MONO_SRC_INSTALL_TARGET_CMDS
     #rm -rf /tmp/mono
 endef
 
-
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))
