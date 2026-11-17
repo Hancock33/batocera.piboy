@@ -1,8 +1,8 @@
 diff --git a/gfx/common/x11_common.c b/gfx/common/x11_common.c
-index 51927d648a..3b3cf1f05c 100644
+index 224e29a175..9b1768bee2 100644
 --- a/gfx/common/x11_common.c
 +++ b/gfx/common/x11_common.c
-@@ -879,22 +879,10 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event,
+@@ -898,22 +898,10 @@ static void x11_handle_key_event(unsigned keycode, XEvent *event,
           char keybuf[32];
  
           keybuf[0] = '\0';
@@ -25,7 +25,7 @@ index 51927d648a..3b3cf1f05c 100644
        }
        else
           keysym = XLookupKeysym(&event->xkey,
-@@ -1291,9 +1279,10 @@ bool x11_presentable(void *data)
+@@ -2483,12 +2471,13 @@ bool x11_presentable(void *data)
  
  bool x11_has_focus(void *data)
  {
@@ -33,12 +33,15 @@ index 51927d648a..3b3cf1f05c 100644
 +   return true;
 +   /*return (   retro_atomic_load_relaxed_int(&g_x11_focused)
             && g_x11_mapped)
+ #ifdef HAVE_VIDEO_WINDOWS
+       || retro_atomic_load_relaxed_int(&x11_video_windows_focus)
+ #endif
 -      || g_x11_true_full;
 +      || g_x11_true_full;*/
  }
  
  bool x11_connect(void)
-@@ -1362,9 +1351,7 @@ void x11_update_title(void *data)
+@@ -2583,9 +2572,7 @@ void x11_update_title(void *data)
  
  bool x11_input_ctx_new(bool true_full)
  {
