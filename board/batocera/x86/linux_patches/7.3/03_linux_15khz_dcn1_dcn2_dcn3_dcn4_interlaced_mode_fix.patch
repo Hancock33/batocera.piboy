@@ -136,7 +136,7 @@ index 844705a0e32d..f4991d9b0261 100644
  	 * (Currently will never fail, in order to fail needs display which
  	 * needs more than 8192 horizontal and
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn30/dcn30_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn30/dcn30_optc.h
-index 16c5610b49ac..e23c20322fc3 100644
+index b801989f10cf..8ff34590eb30 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn30/dcn30_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn30/dcn30_optc.h
 @@ -51,6 +51,7 @@
@@ -147,7 +147,7 @@ index 16c5610b49ac..e23c20322fc3 100644
  	SRI(OTG_CONTROL, OTG, inst),\
  	SRI(OTG_STEREO_CONTROL, OTG, inst),\
  	SRI(OTG_3D_STRUCTURE_CONTROL, OTG, inst),\
-@@ -147,6 +148,7 @@
+@@ -153,6 +154,7 @@
  	SF(OTG0_OTG_V_SYNC_A, OTG_V_SYNC_A_END, mask_sh),\
  	SF(OTG0_OTG_V_SYNC_A_CNTL, OTG_V_SYNC_A_POL, mask_sh),\
  	SF(OTG0_OTG_V_SYNC_A_CNTL, OTG_V_SYNC_MODE, mask_sh),\
@@ -156,7 +156,7 @@ index 16c5610b49ac..e23c20322fc3 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
-index 119a954fe3e5..149ca0dbe80d 100644
+index 85223414c909..a95e714f05e6 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn31/dcn31_optc.h
 @@ -47,6 +47,7 @@
@@ -167,7 +167,7 @@ index 119a954fe3e5..149ca0dbe80d 100644
  	SRI(OTG_CONTROL, OTG, inst),\
  	SRI(OTG_STEREO_CONTROL, OTG, inst),\
  	SRI(OTG_3D_STRUCTURE_CONTROL, OTG, inst),\
-@@ -132,6 +133,7 @@
+@@ -138,6 +139,7 @@
  	SF(OTG0_OTG_V_SYNC_A, OTG_V_SYNC_A_END, mask_sh),\
  	SF(OTG0_OTG_V_SYNC_A_CNTL, OTG_V_SYNC_A_POL, mask_sh),\
  	SF(OTG0_OTG_V_SYNC_A_CNTL, OTG_V_SYNC_MODE, mask_sh),\
@@ -176,7 +176,7 @@ index 119a954fe3e5..149ca0dbe80d 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
-index 7b43c3ecd46b..7b27304a5248 100644
+index 956eecf0a43a..3016ebf794fd 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn314/dcn314_optc.h
 @@ -48,6 +48,7 @@
@@ -187,7 +187,7 @@ index 7b43c3ecd46b..7b27304a5248 100644
  	SRI(OTG_CONTROL, OTG, inst),\
  	SRI(OTG_STEREO_CONTROL, OTG, inst),\
  	SRI(OTG_3D_STRUCTURE_CONTROL, OTG, inst),\
-@@ -131,6 +132,7 @@
+@@ -137,6 +138,7 @@
  	SF(OTG0_OTG_V_SYNC_A, OTG_V_SYNC_A_END, mask_sh),\
  	SF(OTG0_OTG_V_SYNC_A_CNTL, OTG_V_SYNC_A_POL, mask_sh),\
  	SF(OTG0_OTG_V_SYNC_A_CNTL, OTG_V_SYNC_MODE, mask_sh),\
@@ -196,7 +196,7 @@ index 7b43c3ecd46b..7b27304a5248 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
-index 60c01ec28b65..707deeb7ca72 100644
+index 492760779226..556240bee998 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn32/dcn32_optc.h
 @@ -57,6 +57,7 @@
@@ -208,7 +208,7 @@ index 60c01ec28b65..707deeb7ca72 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h b/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
-index 3add972ca2ff..2a97a4999da5 100644
+index 9e4e9d75400a..432e2d716b47 100644
 --- a/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
 +++ b/drivers/gpu/drm/amd/display/dc/optc/dcn401/dcn401_optc.h
 @@ -36,6 +36,7 @@
@@ -220,7 +220,7 @@ index 3add972ca2ff..2a97a4999da5 100644
  	SF(OTG0_OTG_CONTROL, OTG_START_POINT_CNTL, mask_sh),\
  	SF(OTG0_OTG_CONTROL, OTG_DISABLE_POINT_CNTL, mask_sh),\
 diff --git a/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h b/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h
-index 68e7140f1505..c63dff9de756 100644
+index fa8cc89cb3f7..4da0a9d69b9a 100644
 --- a/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h
 +++ b/drivers/gpu/drm/amd/display/dc/resource/dcn32/dcn32_resource.h
 @@ -1022,6 +1022,7 @@ unsigned int dcn32_get_max_hw_cursor_size(const struct dc *dc,
@@ -244,7 +244,7 @@ index 6c2c61c711b9..2811c0b600bd 100644
  	SRI_ARR(OTG_STEREO_CONTROL, OTG, inst),\
  	SRI_ARR(OTG_3D_STRUCTURE_CONTROL, OTG, inst),\
 diff --git a/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h b/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
-index 8e3473f86490..7f4084d8f645 100644
+index 3cfc1a39a103..3fde8695c0c5 100644
 --- a/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
 +++ b/drivers/gpu/drm/amd/display/dc/resource/dcn401/dcn401_resource.h
 @@ -503,6 +503,7 @@ int dcn401_get_power_profile(const struct dc_state *context);
