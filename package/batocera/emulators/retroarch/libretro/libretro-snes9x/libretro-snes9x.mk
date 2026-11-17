@@ -3,8 +3,8 @@
 # libretro-snes9x
 #
 ################################################################################
-# Version: Commits on Sept 19, 2026
-LIBRETRO_SNES9X_VERSION = fae2fea08f74180759ef540ee94259213f503480
+# Version: Commits on Nov 17, 2026
+LIBRETRO_SNES9X_VERSION = 204ea1c0b851f960cbf223075eb1c25641cb483c
 LIBRETRO_SNES9X_SITE = $(call github,libretro,snes9x,$(LIBRETRO_SNES9X_VERSION))
 LIBRETRO_SNES9X_LICENSE = Non-commercial
 LIBRETRO_SNES9X_DEPENDENCIES = zlib retroarch

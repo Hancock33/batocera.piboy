@@ -3,8 +3,8 @@
 # lichii
 #
 ################################################################################
-# Version: Commits on Nov 16, 2026
-LICHII_VERSION = 5a66c8959f3831aa54f8182118e1d32bfcb05f16
+# Version: Commits on Nov 17, 2026
+LICHII_VERSION = eb38ce16d032c87427193212a4707eb79bc354fb
 LICHII_SITE = https://github.com/zortos293/Lichii.git
 LICHII_SITE_METHOD=git
 LICHII_GIT_SUBMODULES=YES

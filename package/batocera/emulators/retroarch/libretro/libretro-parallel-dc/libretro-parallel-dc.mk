@@ -3,8 +3,8 @@
 # libretro-parallel-dc
 #
 ################################################################################
-# Version: Commits on Nov 16, 2026
-LIBRETRO_PARALLEL_DC_VERSION = d90ed5ec6985b11a75e9540117740ae57f355a45
+# Version: Commits on Nov 17, 2026
+LIBRETRO_PARALLEL_DC_VERSION = 6d2b62ff2dbb0a089004911eb81def5167c73c9c
 LIBRETRO_PARALLEL_DC_SITE = $(call github,libretro,parallel-dc,$(LIBRETRO_PARALLEL_DC_VERSION))
 LIBRETRO_PARALLEL_DC_LICENSE = GPL-2.0
 LIBRETRO_PARALLEL_DC_LICENSE_FILES = LICENSE
