@@ -80,6 +80,7 @@ Ports|[etlegacy](https://github.com/etlegacy/etlegacy.git)|0c00b50cefdc51f627b06
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|99aed61d86005247b4aed90409640ad6fdf122f7|Nov 16, 2026
 Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|d1eb5d39a81ec41a5a30383822e5706e4b13b37c|Nov 16, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-super)|1b988c491e31f1cc768572f3d68f45e69d194e5b|Nov 16, 2026
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|4e3836dc0d2619cf8aec16e2d7ef26e9364cb995|Nov 16, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|c29bb7abc449c18a5e9c4eba8326643656f0b3f0|Nov 16, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|51092fbaf4a617540c59d107fd5d034a2e181c56|Nov 16, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|2.9.5|Nov 16, 2026
@@ -165,6 +166,7 @@ Ports|[avp](http://github.com/atsb/NakedAVP)|3492a6823b5889c29bd769ba45d82008d65
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8c918e2872482139273374ef4cc6c7aff34d7585|Nov 09, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.168.9624-611|Nov 09, 2026
 Engines|[libwinevbs](http://github.com/vpinball/libwinevbs)|aef82ffbd5fd248549007ed304fa670c187c28e9|Nov 09, 2026
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|b411a8fb8aa0f6ee727df17f3f8eafb3eb85ba9e|Nov 09, 2026
 Emulators|[libretro-panda3ds](https://github.com/wheremyfoodat/Panda3DS.git)|b18e6586a56b4d35ac0953be6359beed93586dfe|Nov 09, 2026
 Emulators|[libretro-puae](http://github.com/sonninnos/libretro-uae)|d366f77c60e5a5f059f129cc3773d3048306083b|Nov 09, 2026
 Emulators|[libretro-puae2021](http://github.com/sonninnos/libretro-uae)|5dbac2bf90b2dddf9d3f8d5b2ccad0651f798c1d|Nov 09, 2026
@@ -196,6 +198,7 @@ Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64pl
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|19c72e64aa700d34a0fbb6c306bdbae6047d08a7|Nov 06, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|aa2a26dc8e852cff710e398d50cd8574460e6c5f|Nov 06, 2026
 Engines|[libvni](http://github.com/PPUC/libvni)|c878f7dbfd9e9cec33bcbf0e896f1188a01933b8|Nov 06, 2026
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|5a873d3b75d38ef6a0833589ce3603d63f3f6a9c|Nov 06, 2026
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|b51612a74c4ff4b91aa55eb094940d9d848e0e96|Nov 06, 2026
 Utils|[mergerfs](http://github.com/trapexit/mergerfs)|2.42.2|Nov 05, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|497aa6cdd26f45f8064b78916b00a773eab4ded7|Nov 04, 2026
@@ -238,6 +241,7 @@ Emulators|[libretro-yabasanshiro](http://github.com/KMFDManic/Phaenon-Xtreme)|1c
 Python|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/7f/54/f81a6702f970dfabca29851a0545c364fdd8b65ffd0731b479a28ef8ee5f)|3.90.0|Oct 28, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v2.4|Oct 28, 2026
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.1|Oct 28, 2026
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|57e4efcc84112abcd426dc5ec248b5339bee04f2|Oct 28, 2026
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|af95198f93951cc217b43923196e5750667ec1c7|Oct 28, 2026
 Emulators|[amiberry](http://github.com/BlitterStudio/amiberry)|v8.5.0|Oct 27, 2026
 Emulators|[amiberry-lite](http://github.com/BlitterStudio/amiberry-lite)|v5.9.6|Oct 27, 2026
@@ -258,7 +262,6 @@ Utils|[syncthing](http://github.com/syncthing/syncthing)|v2.1.7|Oct 21, 2026
 Python|[python-adafruit-circuitpython-typing](https://files.pythonhosted.org/packages/9e/13/b66acdc7439bc8c03650d01d7f5a01f1a73d4a3cbde7e4d9ac8996dcb1b8)|1.13.0|Oct 20, 2026
 Utils|[wtype](http://github.com/atx/wtype)|v0.5|Oct 20, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|317cff060893783f96d4174f50491e6374eb3714|Oct 19, 2026
 Emulators|[libretro-doublecherrygb](https://github.com/TimOelrichs/doublecherryGB-libretro.git)|d432f97693670524f7f46bfca886b731134f4bb6|Oct 19, 2026
 Emulators|[ymir](https://github.com/ymir-emu/Ymir)|v0.4.1|Oct 18, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
@@ -323,14 +326,11 @@ Emulators|[libretro-vitaquake2](http://github.com/libretro/vitaquake2)|4b333fe18
 Emulators|[libretro-gpsp](http://github.com/libretro/gpsp)|5819380c2ffb0900219d700a382ee68c464ebb99|Sept 19, 2026
 Audio|[zmusic](http://github.com/UZDoom/ZMusic)|dac711d23db9b3a69ceaabbf4ba34a5c6a651cd8|Sept 18, 2026
 Emulators|[sugarbox](https://github.com/Tom1975/SugarboxV2.git)|4fdb5b71003b684b721f05f68358cfd112b5d8f1|Sept 18, 2026
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|57f01541b3959f2528f769043396e882851a7e75|Sept 18, 2026
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|f11ba9f0b21ba8fc15153d50a2a1ae31ab1cf8f7|Sept 16, 2026
 Wine|[dxvk](https://github.com/doitsujin/dxvk/releases)|v3.1.1|Sept 15, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14388|Sept 14, 2026
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|a04081ad6a966a9413bea63a55f502e0dc98bb18|Sept 14, 2026
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|ff7e00742a00acec8e175ddefb97520fb270df2d|Sept 14, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|v1.0.0|Sept 11, 2026
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.6.0|Sept 11, 2026
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.4|Sept 11, 2026
 Emulators|[libretro-jollycv](http://github.com/libretro/jollycv)|2790d59c7194d29e83f8603ffd7e9da17f11575e|Sept 11, 2026
 Libraries|[libdovi](http://github.com/quietvoid/dovi_tool)|2.3.4|Sept 10, 2026

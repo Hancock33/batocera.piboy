@@ -337,7 +337,7 @@ Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|15b8ea216515b9b
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|7e9cdb55b7d782231c0d827151d2a5620ae0255c|Nov 15, 2026
 Firmwares|[sound-open-firmware](https://github.com/thesofproject/sof-bin/releases)|v2026.09.2|Oct 07, 2026
 Gpu|[gl4es](http://github.com/ptitSeb/gl4es)|8b1a3da5d2331d0f88b70be25963182d46eed857|Nov 11, 2026
-Gpu|[glslang](http://github.com/KhronosGroup/glslang)|16.6.0|Sept 11, 2026
+Gpu|[glslang](http://github.com/KhronosGroup/glslang)|b411a8fb8aa0f6ee727df17f3f8eafb3eb85ba9e|Nov 09, 2026
 Gpu|[gtk-layer-shell](http://github.com/wmww/gtk-layer-shell)|v0.10.1|Apr 04, 2026
 Gpu|[mali-g31-gbm](https://github.com/batocera-linux/rockchip-packages/releases)|329dbf63042ad9c736997348a46db5b5b2f799e5|Mar 03, 2022
 Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f997460697013fc54029fcac681|Aug 13, 2023
@@ -350,10 +350,10 @@ Gpu|[nvidia580-legacy-driver](https://download.nvidia.com/XFree86/Linux-x86)|580
 Gpu|[rockchip-mpp](http://github.com/rockchip-linux/mpp)|1.1.0|Aug 11, 2026
 Gpu|[rockchip-rga](http://github.com/JeffyCN/mirrors)|57a1067a246c71fa6c9a355d1668884fda155dd5|Dec 23, 2025
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.4|Sept 11, 2026
-Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|f11ba9f0b21ba8fc15153d50a2a1ae31ab1cf8f7|Sept 16, 2026
+Gpu|[spirv-cross](http://github.com/KhronosGroup/SPIRV-Cross)|57e4efcc84112abcd426dc5ec248b5339bee04f2|Oct 28, 2026
 Gpu|[stenzek-shaderc](http://github.com/stenzek/shaderc)|4984f691acbbb22d5b11b786330c4b6e6c4a9820|Oct 09, 2026
-Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|57f01541b3959f2528f769043396e882851a7e75|Sept 18, 2026
-Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|317cff060893783f96d4174f50491e6374eb3714|Oct 19, 2026
+Gpu|[vulkan-utility-libraries](https://github.com/KhronosGroup/Vulkan-Utility-Libraries.git)|5a873d3b75d38ef6a0833589ce3603d63f3f6a9c|Nov 06, 2026
+Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|4e3836dc0d2619cf8aec16e2d7ef26e9364cb995|Nov 16, 2026
 Hardware|[ayaneo-platform](http://github.com/ShadowBlip/ayaneo-platform)|v0.3.5|Feb 09, 2026
 Hardware|[ayn-platform](http://github.com/ShadowBlip/ayn-platform)|9813128ddac097f8e11a92d64b33de7b70154989|Sept 16, 2024
 Hardware|[deskpipro-case](http://github.com/DeskPi-Team/deskpi)|1bdde078c395478f75737775104babe542f44e7d|Jun 30, 2026
