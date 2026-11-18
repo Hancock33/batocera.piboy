@@ -300,7 +300,7 @@ Engines|[libdof](http://github.com/jsm174/libdof)|69ed5044619fbe8846b7edf12eb032
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|aa2a26dc8e852cff710e398d50cd8574460e6c5f|Nov 06, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libmysofa](http://github.com/hoene/libmysofa)|648eed03472e6720a1ea45d1a1f86c4efb569ff9|Sept 08, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|da1e8b09c5136f6b37eedb1e9a6773e2cf7b4811|Nov 17, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|6e744dbf91c2533c4d26d5616f0264466132e5a6|Nov 18, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a3147e6de90635d|Sept 09, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
 Engines|[libspatialaudio](http://github.com/videolan/libspatialaudio)|d149ed9744fd399b835c6f2920511f8cbcfce5ea|Jul 01, 2026
@@ -319,7 +319,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|7d5932ee404343603c8fddb70ae794672761c4ba|Nov 17, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|800794dd06433dd13824c5e657cdc8c3c4eef472|Nov 17, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|bdbccaf300e89e968b62eb3b5c6774642bb046d1|Nov 18, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026

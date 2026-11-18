@@ -37,6 +37,8 @@ Emulators|[lichii](https://github.com/zortos293/Lichii.git)|e10fe57ba239eccf6339
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|f0a191cccaffec18a148a6431d52b42a883be11d|Nov 18, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|b485cab2a65da92cd49dea29e01f2687ae46c7fb|Nov 18, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|67e090bca5cbff3431d2a1109efca51989c1fd9c|Nov 18, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|6e744dbf91c2533c4d26d5616f0264466132e5a6|Nov 18, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|bdbccaf300e89e968b62eb3b5c6774642bb046d1|Nov 18, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|5619d6d89fcd3ba52b592dbe3c7a632a0007990c|Nov 18, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|8e86678387d0818e87a5b437d74390bf2ad82596|Nov 18, 2026
 Emulators|[libretro-geargrafx](http://github.com/drhelius/Geargrafx)|ca51651b06c9536589bdfda8017ac7f52a91328e|Nov 18, 2026
@@ -61,8 +63,6 @@ Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|4e87e3c6c2574f49e1cdf8526b6f829b61e5ccb3|Nov 17, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|6d32a6c22e7ce320002f4ec11f541043529cfbec|Nov 17, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|99a944d9dd5818d048e184cd6ca348b6dbc77ec9|Nov 17, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|da1e8b09c5136f6b37eedb1e9a6773e2cf7b4811|Nov 17, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|800794dd06433dd13824c5e657cdc8c3c4eef472|Nov 17, 2026
 Ports|[lib32bit](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261117|Nov 17, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|01b10a783ce2c2c5997e6a99c3937d31a9c953df|Nov 17, 2026
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|0c9db4d5d65d661100354442ff426585eaff4987|Nov 17, 2026
