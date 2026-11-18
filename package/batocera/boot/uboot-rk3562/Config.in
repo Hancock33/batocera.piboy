@@ -1,4 +1,5 @@
 config BR2_PACKAGE_UBOOT_RK3562
 	bool "uboot-rk3562"
+
 	help
 	  Mainline U-Boot for RK3562 boards
