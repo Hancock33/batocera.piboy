@@ -88,17 +88,45 @@ def load_mame_sizes(src: Path):
 
 # --------------------------------------------------------------------------- games.xml
 
+def parse_lenient(text, source="file"):
+    """Parse XML, tolerating '--' inside comments and content outside a single root element."""
+    text = text.lstrip("\ufeff")
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
+    try:
+        return ET.fromstring(text.encode("utf-8"))
+    except ET.ParseError as first:
+        body = re.sub(r"<\?xml[^>]*\?>|<!DOCTYPE[^>]*>", "", text)
+        try:
+            return ET.fromstring(("<games>" + body + "</games>").encode("utf-8"))
+        except ET.ParseError:
+            pass
+        # Last resort: read every <game> block on its own, ignoring whatever surrounds them.
+        root, bad = ET.Element("games"), []
+        for m in re.finditer(r"<game\b[^>]*?(?:/>|>.*?</game\s*>)", body, flags=re.S):
+            try:
+                root.append(ET.fromstring(m.group(0).encode("utf-8")))
+            except ET.ParseError as err:
+                bad.append((text.count("\n", 0, text.find(m.group(0))) + 1, err))
+        if len(root):
+            print(f"warning: {source} is not well-formed XML ({first}); read {len(root)} <game> "
+                  f"blocks one at a time", file=sys.stderr)
+            for ln, err in bad[:10]:
+                print(f"warning: skipped a <game> block near line {ln}: {err}", file=sys.stderr)
+            return root
+        if True:
+            lines = text.splitlines()
+            ln = first.position[0]
+            ctx = "\n".join(f"  {i}: {lines[i-1]}" for i in range(max(1, ln - 2), min(len(lines), ln + 2) + 1))
+            sys.exit(f"{source}: XML error ({first}). After stripping comments the text around it is:\n{ctx}")
+
 def norm_crc(value):
     return (value or "").lower().replace("0x", "").zfill(8)
 
 
 def load_games(path: Path):
-    text = path.read_text(encoding="utf-8")
-    # games.xml has "--" inside comments, which strict XML parsers reject, so strip comments first.
-    text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
-    root = ET.fromstring(text.encode("utf-8"))
+    root = parse_lenient(path.read_text(encoding="utf-8", errors="replace"), str(path))
     games = {}
-    for g in root.findall("game"):
+    for g in root.iter("game"):
         name = g.get("name")
         if name in games:
             log(f"warning: duplicate set name {name}; keeping the first")
