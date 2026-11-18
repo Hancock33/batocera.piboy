@@ -154,7 +154,6 @@ class Target:
 # Order matters: subsystems build before images, x86 before rpi.
 TARGETS = (
     Target("x86_wow64", "x86_wow64", "sub", "x86", "1;32"),
-    Target("aarch32", "aarch32-subsystem", "sub", "rpi", "1;33"),
     Target("x86_64", "x86_64", "image", "x86", "1;36"),
     Target("rpi4", "piboy4", "image", "rpi", "1;31"),
 )
@@ -188,7 +187,7 @@ IMAGE_LIGHT = BASE_LIGHT + (
     "adwaita-icon-theme-light*", "*firmware*",
 )
 ARCH_EXTRA = {
-    "rpi": ("lib32bit-*",),
+    "rpi": (),
     "x86": ("syslinux*", "xbox-xcloud-client*", "wine-x86-*"),
 }
 
@@ -403,6 +402,8 @@ def cmd_build(s: Session, a: argparse.Namespace) -> int:
 
     configured = [t for t in TARGETS if t.arch in archs]
     chosen = [t for t in configured if what == "all" or t.kind == what]
+    if not chosen:
+        fail(f"Nothing to build: no {what} target for {', '.join(sorted(archs))}.", 2)
     print(f"\nPlan: {', '.join(t.label() for t in chosen)}"
           + (dim("  (dry run)") if s.dry_run else ""))
 
@@ -450,6 +451,8 @@ def cmd_clean(s: Session, a: argparse.Namespace) -> int:
     if not archs:
         fail("Nothing selected - pass --rpi and/or --x86 (or --all).", 2)
     targets = [t for t in TARGETS if t.kind == kind and t.arch in archs]
+    if not targets:
+        fail(f"Nothing to clean: no {kind} target for {', '.join(sorted(archs))}.", 2)
 
     if not a.no_sync:
         s.sync_repo()
@@ -517,8 +520,8 @@ KERNEL_PATTERNS = (
     "wilc-driver*", "wireguard-linux-compat*", "xone*", "xpadneo*",
     "xpad-noone*", "xr819-xradio*", "zfs*",
 )
-# image target + the subsystem that goes with it
-KERNEL_PAIRS = {"rpi": ("rpi4", "aarch32"), "x86": ("x86_64", "x86_wow64")}
+# image target + any subsystem that goes with it
+KERNEL_PAIRS = {"rpi": ("rpi4",), "x86": ("x86_64", "x86_wow64")}
 
 
 def target_named(name: str) -> Target:
@@ -580,12 +583,12 @@ def cmd_kernel(s: Session, a: argparse.Namespace) -> int:
     for arch in ("rpi", "x86"):
         if arch not in archs:
             continue
-        primary, secondary = (target_named(n) for n in KERNEL_PAIRS[arch])
+        primary, *others = (target_named(n) for n in KERNEL_PAIRS[arch])
         print()
-        step(f"Kernel packages: {primary.label()} + {secondary.label()}")
+        step("Kernel packages: " + " + ".join(t.label() for t in (primary, *others)))
         s.purge(f"{primary.name}: kernel modules",
                 expand(primary.path, ["target/lib/modules/7.*"]))
-        for t in (primary, secondary):
+        for t in (primary, *others):
             s.purge(f"{t.name}: kernel packages", expand(t.build, KERNEL_PATTERNS))
     verb = "Would free" if s.dry_run else "Freed"
     print(f"\n{green('✔')} {verb} {human(s.freed)}")
@@ -671,7 +674,7 @@ def add_common(p: argparse.ArgumentParser, sub: bool) -> None:
 
 def add_targets(p: argparse.ArgumentParser) -> None:
     g = p.add_argument_group("targets (omit to be asked)")
-    g.add_argument("--rpi", action="store_true", help="Raspberry Pi: rpi4 + aarch32")
+    g.add_argument("--rpi", action="store_true", help="Raspberry Pi: rpi4 (no subsystem)")
     g.add_argument("--x86", action="store_true", help="x86: x86_64 + x86_wow64")
     g.add_argument("--all", action="store_true", help="both")
 

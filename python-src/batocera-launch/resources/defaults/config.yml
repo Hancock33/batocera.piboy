@@ -283,9 +283,6 @@ dragon64:
 dreamcast:
   emulator: flycast
   core:     flycast
-droidports:
-  emulator: droidports
-  core:     droidports
 dxx-rebirth:
   emulator: dxx-rebirth
   core:     dxx-rebirth

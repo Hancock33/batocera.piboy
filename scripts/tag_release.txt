@@ -10,7 +10,6 @@ batocera-onscreen-keyboard.mk
 batocera-settings.mk
 bgfx.mk
 box64.mk
-box86.mk
 bstone.mk
 cabextract.mk
 cbindgen.mk

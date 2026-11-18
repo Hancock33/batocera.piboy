@@ -1,5 +1,0 @@
-## SYSTEM ANDROID PORTS ##
--------------------------------------------------------------------------------
-ROM files extensions accepted: ".apk"
--------------------------------------------------------------------------------
-Extensions des fichiers ROMs permises: ".apk"

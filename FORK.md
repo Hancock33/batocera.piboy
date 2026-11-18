@@ -58,7 +58,6 @@ Upstream boards with no config at the top level here: a3gen2, bcm2711, bcm2712, 
 | `kodi` | kodi-audiodecoder-openmpt, kodi-pvr-freebox |
 | `libraries` | libdate, libgme, mono-bin |
 | `ports` | alephone, avp, awgl, bermuda, blues, f2bgl, freedroid, hode, nblood, nukem2, omf2097, openclaw, opentyrian2000, prototype, raptorcots, rott, rtcw, serioussam, sm64port, spacecadetpinball, stalker, stk, stuntcar, supertux2, tekwar, xbox-xcloud-client |
-| `ports/32bit` | box86, droidports, lib32bit |
 | `ports/doom` | doom3, doomretro |
 | `ports/sonic` | sonicmania, sonicnexus, srb2, srb2kart |
 | `ports/tomb` | openlara |

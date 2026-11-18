@@ -1,7 +1,0 @@
-config BR2_PACKAGE_LIB32BIT
-	bool "lib32bit"
-
-	help
-	  32bit libs precompiled for RPI4
-
-	  https://github.com/Hancock33/batocera-rp4-32bit-libs
