@@ -13,7 +13,7 @@ KEISHO_LICENSE_FILES = LICENSE
 KEISHO_EMULATOR_INFO = keisho.emulator.yml
 KEISHO_SUPPORTS_IN_SOURCE_BUILD = NO
 
-KEISHO_DEPENDENCIES = sdl3 pugixml miniz imgui lzma-sdk host-shaderc libcurl
+KEISHO_DEPENDENCIES = sdl3 pugixml miniz host-shaderc libcurl
 
 KEISHO_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
 KEISHO_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR)/usr
