@@ -48,7 +48,3 @@ class AnyBOR(RACore):
         for pad in self.controllers[:4]:
             for btn, value in _ANYBOR_REMAP_VALUES.items():
                 custom_config.set(f'input_player{pad.player_number}_{btn}', value)
-
-        # Rewind: a snapshot every 10 frames, into a 256 MB buffer
-        custom_config.set('rewind_granularity', 10)
-        custom_config.set('rewind_buffer_size', 256)
