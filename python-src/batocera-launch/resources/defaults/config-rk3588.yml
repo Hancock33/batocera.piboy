@@ -8,14 +8,14 @@ gamecube:
   emulator: libretro
   core:     dolphin
 model1:
-  emulator: sm2-emu
-  core:     sm2-emu
+  emulator: keisho
+  core:     keisho
 model2:
-  emulator: sm2-emu
-  core:     sm2-emu
+  emulator: keisho
+  core:     keisho
 model3:
-  emulator: supermodel
-  core:     supermodel
+  emulator: keisho
+  core:     keisho
 nds:
   emulator: drastic
   core:     drastic
