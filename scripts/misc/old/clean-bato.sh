@@ -76,7 +76,6 @@ do
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/adwaita-icon-theme-light*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/*firmware*
 	# rpi
-	sudo rm -rf $HOME/build-dir/batocera.$i/build/lib32bit-*
 	# x86
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/syslinux*
 	sudo rm -rf $HOME/build-dir/batocera.$i/build/xbox-xcloud-client*

@@ -3,8 +3,8 @@
 # odin
 #
 ################################################################################
-# Version: Commits on Nov 08, 2026
-ODIN_VERSION = 6ebf2b40ccbca9534d1a0e58b7602db11e4485d9
+# Version: Commits on Nov 18, 2026
+ODIN_VERSION = 666943d8a7683d922685596f6feba7340e95b3fe
 ODIN_SITE = $(call github,Tovarichtch,Odin,$(ODIN_VERSION))
 ODIN_LICENSE = GPL-3.0+
 ODIN_LICENSE_FILES = LICENSE
@@ -13,11 +13,11 @@ ODIN_EMULATOR_INFO = odin.emulator.yml
 ODIN_DEPENDENCIES = host-glslang host-pkgconf jansson sdl3 vulkan-headers xlib_libX11
 
 ODIN_CONF_OPTS = \
-    -DCMAKE_BUILD_TYPE= \
-    -DODIN_NATIVE=OFF \
-    -DODIN_BUNDLED_LIBS=OFF \
-    -DGLSLANG=$(HOST_DIR)/bin/glslangValidator \
-    -DODIN_VERSION=$(shell echo $(ODIN_VERSION) | cut -c1-7)
+	-DCMAKE_BUILD_TYPE= \
+	-DODIN_NATIVE=OFF \
+	-DODIN_BUNDLED_LIBS=OFF \
+	-DGLSLANG=$(HOST_DIR)/bin/glslangValidator \
+	-DODIN_VERSION=$(shell echo $(ODIN_VERSION) | cut -c1-7)
 
 ifeq ($(BR2_x86_64),y)
 ODIN_DEPENDENCIES += libglew

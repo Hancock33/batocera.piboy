@@ -1,5 +1,5 @@
 diff --git a/drivers/media/usb/uvc/uvc_driver.c b/drivers/media/usb/uvc/uvc_driver.c
-index e289cc71ba98..fc9f66e8dd38 100644
+index 73b97ec578ec..6eeb2958d0ea 100644
 --- a/drivers/media/usb/uvc/uvc_driver.c
 +++ b/drivers/media/usb/uvc/uvc_driver.c
 @@ -37,6 +37,7 @@ static unsigned int uvc_quirks_param = -1;

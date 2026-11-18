@@ -1,4 +1,19 @@
-# 2026/11/xx - batocera.linux 44 - Malachite
+# 2027/xx/xx - batocera.linux 45 - xxxx
+### Special Notes
+- SM2-Emu is now Keisho and replaces Supermodel for Model 3
+  SM2-Emu and Supermodel settings, saves and NVRAM move over on the first launch; Supermodel save states can't be loaded and stay in saves/supermodel
+### Added
+- Handheld LED battery mode: the joystick LEDs show the battery level, with levels, colours and effects set in EmulationStation, and LED colour presets
+- Keisho Model 3 emulation, with surround sound and cabinet outputs options
+### Fixed
+- Cemu game profiles, Wii U system fonts and UI translations were not loaded
+- Kodi black screen on 10-bit videos, with hardware decoding now used on Raspberry Pi, Allwinner H700, Rockchip mainline and Amlogic devices
+- Steam games that go through a second launcher (EA app) returned to EmulationStation before the game opened
+### Updated
+- Cemu to Nov 13, 2026 build
+- Keisho (formerly SM2-Emu) to v0.9.63
+
+# 2026/11/17 - batocera.linux 44 - Malachite
 ### Special Notes
 - From v44 you can use `batocera-upgrade --update-bootloader` to flash required bootloader and firmware manually
   SPI u-boot, Qualcomm ABL, Raspberry Pi EEPROM, H700 u-boot

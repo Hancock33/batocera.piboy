@@ -11,11 +11,11 @@ fmtowns:
   emulator: libretro
   core:     mame
 model1:
-  emulator: sm2-emu
-  core:     sm2-emu
+  emulator: keisho
+  core:     keisho
 model2:
-  emulator: sm2-emu
-  core:     sm2-emu
+  emulator: keisho
+  core:     keisho
 naomi:
   emulator: libretro
   core:     flycast

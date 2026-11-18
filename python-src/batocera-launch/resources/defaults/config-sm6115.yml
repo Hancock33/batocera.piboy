@@ -65,11 +65,11 @@ lcdgames:
   emulator: mame
   core:     mame
 model1:
-  emulator: sm2-emu
-  core:     sm2-emu
+  emulator: keisho
+  core:     keisho
 model2:
-  emulator: sm2-emu
-  core:     sm2-emu
+  emulator: keisho
+  core:     keisho
 n64:
   emulator: libretro
   core:     mupen64plus-next

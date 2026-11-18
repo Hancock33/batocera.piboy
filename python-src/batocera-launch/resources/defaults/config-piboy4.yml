@@ -48,8 +48,8 @@ gamecube:
   options:
     videomode: max-480x240
 model3:
-  emulator: supermodel
-  core:     supermodel-legacy
+  emulator: keisho
+  core:     keisho
   options:
     videomode: max-720x576
     decorations: none

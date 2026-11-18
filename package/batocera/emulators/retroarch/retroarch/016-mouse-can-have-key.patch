@@ -1,8 +1,8 @@
 diff --git a/input/drivers/udev_input.c b/input/drivers/udev_input.c
-index f524bdef91..3c2994efd1 100644
+index 0b609cf3c2..4102b15f59 100644
 --- a/input/drivers/udev_input.c
 +++ b/input/drivers/udev_input.c
-@@ -3409,11 +3409,8 @@ static int udev_input_add_device(udev_input_t *udev,
+@@ -3441,11 +3441,8 @@ static int udev_input_add_device(udev_input_t *udev,
     {
        bool mouse = 0;
        bool touch = 0;

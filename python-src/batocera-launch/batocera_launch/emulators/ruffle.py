@@ -38,4 +38,4 @@ class Ruffle(Emulator):
         return True
 
     async def configure(self) -> Command:
-        return Command(['ruffle', self.rom])
+        return Command(['ruffle', '--scale=exact-fit', '--force-scale', '--fullscreen', self.rom])

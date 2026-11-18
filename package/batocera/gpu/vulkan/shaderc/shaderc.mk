@@ -16,7 +16,7 @@ SHADERC_CONF_OPTS += -DSHADERC_SKIP_COPYRIGHT_CHECK=ON
 SHADERC_CONF_OPTS += -Dglslang_SOURCE_DIR=$(STAGING_DIR)/usr/include/glslang
 
 # Host variant: provides glslc on the build host, for packages that compile
-# GLSL to SPIR-V at build time (e.g. sm2-emu).
+# GLSL to SPIR-V at build time (e.g. keisho).
 HOST_SHADERC_DEPENDENCIES = host-glslang host-spirv-headers host-spirv-tools
 HOST_SHADERC_CONF_OPTS += -DSHADERC_SKIP_TESTS=ON
 HOST_SHADERC_CONF_OPTS += -DSHADERC_SKIP_EXAMPLES=ON
