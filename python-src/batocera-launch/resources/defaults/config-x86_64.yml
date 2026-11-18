@@ -511,8 +511,8 @@ model2:
   emulator: libretro
   core:     mame
 model3:
-  emulator: supermodel
-  core:     supermodel
+  emulator: keisho
+  core:     keisho
 moonlight:
   emulator: moonlight
   core:     moonlight
