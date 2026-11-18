@@ -26,6 +26,7 @@ gtk-layer-shell.mk
 hcl.mk
 ikemen.mk
 kddockwidgets.mk
+keisho.mk
 kodi-pvr-freebox.mk
 labwc.mk
 libdate.mk
@@ -73,7 +74,6 @@ semver.mk
 sf_rpi_status.mk
 shaderc.mk
 shadps4.mk
-sm2-emu.mk
 sonic3-air.mk
 spirv-llvm-translator.mk
 swh-plugins.mk

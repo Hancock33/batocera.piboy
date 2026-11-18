@@ -3,7 +3,7 @@
 # keisho
 #
 ################################################################################
-
+# Version: Commits on Nov 15, 2026
 KEISHO_VERSION = v0.9.63
 KEISHO_SITE = https://github.com/Keisho-Emu/Keisho.git
 KEISHO_SITE_METHOD = git
