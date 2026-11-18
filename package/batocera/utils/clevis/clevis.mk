@@ -3,8 +3,8 @@
 # clevis
 #
 ################################################################################
-# Version: Commits on Oct 28, 2026
-CLEVIS_VERSION = 2f172922eb0f3e957129c25e43c5c0b638e84745
+# Version: Commits on Nov 18, 2026
+CLEVIS_VERSION = dcabb67e3d8ce3d09980005af541d844b32bd84b
 CLEVIS_SITE = $(call github,latchset,clevis,$(CLEVIS_VERSION))
 CLEVIS_LICENSE = GPLv3
 CLEVIS_LICENSE_FILES = COPYING
