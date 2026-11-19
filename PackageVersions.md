@@ -411,6 +411,7 @@ Looks|[nanum_font](http://github.com/bulzipke/nanum-font)|2385eb085e4bf326590a2d
 Looks|[noto-cjk-fonts](https://github.com/notofonts/noto-cjk/releases)|Sans2.004|Jan 27, 2022
 Looks|[odin-bezels](https://github.com/Tovarichtch/Odin/releases)|v0.1.1|Nov 07, 2026
 Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-11|Nov 09, 2026
+Network|[bcmdhd](http://github.com/armbian/bcmdhd-dkms)|3b12c096d0fc2e6363920e80ec6ba71618e7cd29|Nov 18, 2026
 Network|[broadcom-wl](https://docs.broadcom.com/docs-and-downloads/docs/linux_sta)|6_30_223_271|N/A
 Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A
 Network|[uwe5622](http://github.com/armbian/uwe5622)|d2d6bc45c5ef9cefdd53e6c51cec3ba948b84972|Nov 02, 2026

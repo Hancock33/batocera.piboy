@@ -43,6 +43,7 @@ Emulators|[openmsx](http://github.com/openMSX/openMSX)|b34dbbde4b89cd14b72179fd0
 Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.183|Nov 18, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|887ff71fdd928fed715a9be0f23a5141e68dc164|Nov 18, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|f0a191cccaffec18a148a6431d52b42a883be11d|Nov 18, 2026
+Network|[bcmdhd](http://github.com/armbian/bcmdhd-dkms)|3b12c096d0fc2e6363920e80ec6ba71618e7cd29|Nov 18, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|b485cab2a65da92cd49dea29e01f2687ae46c7fb|Nov 18, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|dcabb67e3d8ce3d09980005af541d844b32bd84b|Nov 18, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|cf50b48715458bd1f9d7a95802b133379b016081|Nov 18, 2026

@@ -13,6 +13,7 @@ WINE_PROTON_SELINUX_MODULES = wine
 # check dlls/appwiz.cpl/addons.c
 WINE_PROTON_MONO_VERSION = 10.4.1
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
+HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
 define WINE_PROTON_AUTOGEN
 	# Create folder for install
