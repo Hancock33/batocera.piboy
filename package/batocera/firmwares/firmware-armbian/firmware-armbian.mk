@@ -3,8 +3,8 @@
 # firmware-armbian
 #
 ################################################################################
-# Version: Commits on Nov 04, 2026
-FIRMWARE_ARMBIAN_VERSION = bf5f7a802b8e1998e6bf95daed5ea965441af83d
+# Version: Commits on Nov 18, 2026
+FIRMWARE_ARMBIAN_VERSION = db8cc456dad5ad511b04f8a5130acda392cad20b
 FIRMWARE_ARMBIAN_SITE = https://github.com/armbian/firmware
 FIRMWARE_ARMBIAN_SITE_METHOD = git
 
