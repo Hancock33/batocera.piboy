@@ -258,8 +258,8 @@ wine_options() {
         fi
     fi
 
-    export DXVK_FRAME_RATE=0
-    [[ "${FPS_LIMIT}" = 1 ]] && DXVK_FRAME_RATE=60
+    # DXVK no longer reads DXVK_FRAME_RATE, the limit goes through its inline config
+    [[ "${FPS_LIMIT}" = 1 ]] && export DXVK_CONFIG="dxgi.maxFrameRate = 60; d3d9.maxFrameRate = 60"
 
     export WINEDEBUG="-all"
     [[ "${WINE_DEBUG}" = 1 ]] && WINEDEBUG="err+all,fixme+all"
@@ -286,6 +286,11 @@ wine_options() {
 
     # Wine-mono override for FNA games
     export WINE_MONO_OVERRIDES="Microsoft.Xna.Framework.*,Gac=n"
+
+    # .NET 5+ aborts on the icu stubs of runners without their own icu (only ge-proton has one), Wine's NLS works
+    if ! find_runner_dll_dir icu x86_64-windows >/dev/null; then
+        export DOTNET_SYSTEM_GLOBALIZATION_USENLS=1
+    fi
 
     # Disable XIM support until libx11 >= 1.7 is widespread
     export WINE_ALLOW_XIM=0

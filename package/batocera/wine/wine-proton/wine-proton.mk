@@ -9,9 +9,10 @@ WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_SELINUX_MODULES = wine
+# the wine-mono version this Proton asks for, it also runs fine on the newer system one
+# check dlls/appwiz.cpl/addons.c
+WINE_PROTON_MONO_VERSION = 10.4.1
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
-
-HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
 define WINE_PROTON_AUTOGEN
 	# Create folder for install
@@ -339,6 +340,17 @@ endef
 endif
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
+
+ifeq ($(BR2_PACKAGE_WINE_MONO),y)
+ifneq ($(WINE_PROTON_MONO_VERSION),$(WINE_MONO_VERSION))
+define WINE_PROTON_LINK_MONO
+	mkdir -p $(TARGET_DIR)/usr/share/wine/mono
+	ln -sfn wine-mono-$(WINE_MONO_VERSION) \
+	    $(TARGET_DIR)/usr/share/wine/mono/wine-mono-$(WINE_PROTON_MONO_VERSION)
+endef
+WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_LINK_MONO
+endif
+endif
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))

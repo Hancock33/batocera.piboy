@@ -55,7 +55,6 @@ endif
 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      || \
     BR2_PACKAGE_BATOCERA_TARGET_BCM2712         || \
     BR2_PACKAGE_BATOCERA_TARGET_RK3588          || \
-    BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO     || \
     BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
     BR2_PACKAGE_BATOCERA_TARGET_SDM845          || \
     BR2_PACKAGE_BATOCERA_TARGET_QCS6490         || \
@@ -81,7 +80,6 @@ endif
 if  BR2_PACKAGE_BATOCERA_TARGET_RK3399          || \
     BR2_PACKAGE_BATOCERA_TARGET_RK3288          || \
     BR2_PACKAGE_BATOCERA_TARGET_RK3588          || \
-    BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO     || \
     BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
     BR2_PACKAGE_BATOCERA_TARGET_RK3568          || \
     BR2_PACKAGE_BATOCERA_TARGET_RK3562          || \
@@ -338,7 +336,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     select BR2_PACKAGE_LIBDRM
@@ -450,7 +447,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_ANY    || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_JH7110          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588          || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3568
@@ -467,14 +463,12 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3128      && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3562      && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3588      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     select BR2_PACKAGE_RTL8822CS                            if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 
     select BR2_PACKAGE_AIC8800_SDIO                         if  BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     select BR2_PACKAGE_AIC8800_USB                          if  BR2_PACKAGE_BATOCERA_TARGET_QCS6490     || \
@@ -482,6 +476,8 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     select BR2_PACKAGE_RK915                                if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
+
+    select BR2_PACKAGE_BCMDHD                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     select BR2_PACKAGE_UWE5622                              if  BR2_PACKAGE_BATOCERA_TARGET_H616        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6
@@ -560,7 +556,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 
     # OrangePi GPIO python library
     select BR2_PACKAGE_WIRINGOP_PYTHON                      if  BR2_PACKAGE_BATOCERA_TARGET_RK3588          || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3399          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3562          || \
@@ -597,7 +592,6 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     # bluetooth
     select BR2_PACKAGE_BRCM_PATCHRAM_PLUS                   if  BR2_PACKAGE_BATOCERA_TARGET_T527        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     help
@@ -666,8 +660,7 @@ config BR2_TARGET_BATOCERA_IMAGES
     default "amlogic/s905/odroidc2 amlogic/s905/tvbox amlogic/s905/lepotato amlogic/s905/vim amlogic/s905/p201 amlogic/s905/lepotatov2 amlogic/s905/minix-neo-u1 amlogic/s905/fun-r1"          if  BR2_PACKAGE_BATOCERA_TARGET_S905
     default "rockchip/rk3399/orangepi-800 rockchip/rk3399/rg552 rockchip/rk3399/rockpro64 rockchip/rk3399/rock960 rockchip/rk3399/orangepi4-lts rockchip/rk3399/rock-pi-4 rockchip/rk3399/rock-4c-plus rockchip/rk3399/nanopi-m4v2 rockchip/rk3399/hugsun-x99" if  BR2_PACKAGE_BATOCERA_TARGET_RK3399
     default "rockchip/rk3588/nanopi-m6 rockchip/rk3588/orangepi-5-pro rockchip/rk3588/bananapi-m7 rockchip/rk3588/mekotronics-r58 rockchip/rk3588/firefly-station-m3"                          if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
-    default "rockchip/rk3588-sdio/orangepi-5-ultra rockchip/rk3588-sdio/orangepi-5-max"                                                                                                        if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO
-    default "rockchip/rk3588-mainline/rock-5b rockchip/rk3588-mainline/gameforce-ace rockchip/rk3588-mainline/orangepi-5 rockchip/rk3588-mainline/orangepi-5-plus rockchip/rk3588-mainline/odroid-m2 rockchip/rk3588-mainline/friendlyelec-cm3588-nas rockchip/rk3588-mainline/coolpi-4b rockchip/rk3588-mainline/rock-5b-plus rockchip/rk3588-mainline/rock-5c rockchip/rk3588-mainline/rock-5t rockchip/rk3588-mainline/rock-5a rockchip/rk3588-mainline/orangepi-5b rockchip/rk3588-mainline/quartzpro64 rockchip/rk3588-mainline/indiedroid-nova rockchip/rk3588-mainline/khadas-edge2" if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
+    default "rockchip/rk3588-mainline/rock-5b rockchip/rk3588-mainline/gameforce-ace rockchip/rk3588-mainline/orangepi-5 rockchip/rk3588-mainline/orangepi-5-plus rockchip/rk3588-mainline/odroid-m2 rockchip/rk3588-mainline/friendlyelec-cm3588-nas rockchip/rk3588-mainline/coolpi-4b rockchip/rk3588-mainline/rock-5b-plus rockchip/rk3588-mainline/rock-5c rockchip/rk3588-mainline/rock-5t rockchip/rk3588-mainline/rock-5a rockchip/rk3588-mainline/orangepi-5b rockchip/rk3588-mainline/quartzpro64 rockchip/rk3588-mainline/indiedroid-nova rockchip/rk3588-mainline/khadas-edge2 rockchip/rk3588-mainline/orangepi-5-max rockchip/rk3588-mainline/orangepi-5-ultra" if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
     default "rockchip/rk3568/anbernic-rg-ds rockchip/rk3568/anbernic-rg-ds-plus rockchip/rk3568/radxa-zero-3w rockchip/rk3568/powkiddy-x55 rockchip/rk3568/powkiddy-x35s rockchip/rk3568/orangepi-3b rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/odroid-m1s rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/rock-3c rockchip/rk3568/firefly-station-m2 rockchip/rk3568/firefly-station-p2" if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
     default "rockchip/rk3562/kickpi-k3b"                                                                                                                                                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3562
     default "allwinner/h3/orangepi-pc allwinner/h3/orangepi-one allwinner/h3/orangepi-plus2e allwinner/h3/bananapi-m2-zero allwinner/h3/cha"                                                   if  BR2_PACKAGE_BATOCERA_TARGET_H3
@@ -725,9 +718,6 @@ config BR2_PACKAGE_BATOCERA_TARGET_RK3576
 
 config BR2_PACKAGE_BATOCERA_TARGET_RK3588
     bool "rk3588"
-
-config BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO
-    bool "rk3588-sdio"
 
 config BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
     bool "rk3588-mainline"
@@ -849,7 +839,6 @@ config BR2_BATOCERA_ARCH
     default "rk3576"                                        if  BR2_PACKAGE_BATOCERA_TARGET_RK3576
     default "rk3588"                                        if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
     default "rk3588-mainline"                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
-    default "rk3588-sdio"                                   if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO
     default "s812"                                          if  BR2_PACKAGE_BATOCERA_TARGET_S812
     default "s905"                                          if  BR2_PACKAGE_BATOCERA_TARGET_S905
     default "s905gen2"                                      if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN2
@@ -903,7 +892,6 @@ config BR2_BATOCERA_GPU
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2
     default "mali-g57"                                      if  BR2_PACKAGE_BATOCERA_TARGET_T527
     default "mali-g610"                                     if  BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
     default "mali-t628"                                     if  BR2_PACKAGE_BATOCERA_TARGET_XU4
     default "mali-t720"                                     if  BR2_PACKAGE_BATOCERA_TARGET_H6
@@ -1518,7 +1506,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712         || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588          || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_SMXXXX_PLATFORM
 
@@ -1526,7 +1513,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712         || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588          || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_SMXXXX_PLATFORM
 
@@ -1542,7 +1528,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_BCM2712                  || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_SMXXXX_PLATFORM || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588                   || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO              || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576
 
@@ -1551,7 +1536,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X                    || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2                   || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588                   || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO              || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_SMXXXX_PLATFORM || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576
@@ -1561,7 +1545,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_S922X                    || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2                   || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588                   || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO              || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_SMXXXX_PLATFORM || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576
@@ -1613,7 +1596,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Pinball
     select BR2_PACKAGE_VPINBALL                             if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY      || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588          || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8250          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8550          || \
@@ -1638,7 +1620,6 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_A3GEN2          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3576          || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588          || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO     || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_QUALCOMM_SMXXXX_PLATFORM
 
@@ -2136,8 +2117,7 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     select BR2_PACKAGE_RPI_EEPROM                           if  BR2_PACKAGE_BATOCERA_BCM27XX
 
     # RK3588
-    select BR2_PACKAGE_FIRMWARE_RK3588                      if  BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO
+    select BR2_PACKAGE_FIRMWARE_RK3588                      if  BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     select BR2_PACKAGE_FIRMWARE_RADXA_RKWIFIBT              if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
@@ -2153,8 +2133,7 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H616        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_T527        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588
 
     # radxa firmware
     select BR2_PACKAGE_FIRMWARE_RADXA                       if BR2_PACKAGE_BATOCERA_TARGET_RK3568
