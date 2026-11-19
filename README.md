@@ -45,7 +45,8 @@ Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261119|Nov 19, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-super)|55e50a81195eaf8dd1b7720a601282459832ced1|Nov 19, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|52225c72389a53f70b12e7da72697ac46c698eb7|Nov 19, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|58de2179550587197954dd34f372a94fc58eb665|Nov 19, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|07754f2750ae32efab84a3064cab553f3e56b064|Nov 19, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|b8a83c8aead6fb3f8893a9d77a97454ce6a75add|Nov 19, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|fa7aeeeb16c5362164189bf444672d8c819873a5|Nov 19, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|c91272435a9535cfde43343ac6ccce98f58621a6|Nov 19, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|cbc5a8d0271830a43417179c4ae29e18fdf9b579|Nov 19, 2026
@@ -71,7 +72,6 @@ Engines|[tic80](https://github.com/nesbox/TIC-80.git)|aa10d18923cf71de9e12526de5
 Firmwares|[firmware-armbian](https://github.com/armbian/firmware)|db8cc456dad5ad511b04f8a5130acda392cad20b|Nov 18, 2026
 Network|[bcmdhd](http://github.com/armbian/bcmdhd-dkms)|3b12c096d0fc2e6363920e80ec6ba71618e7cd29|Nov 18, 2026
 Utils|[clevis](http://github.com/latchset/clevis)|dcabb67e3d8ce3d09980005af541d844b32bd84b|Nov 18, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|486dc1e482c1f218611479876932cbc5f73aae9f|Nov 18, 2026
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|b909e01359469b1bf26ba8b538900dd420c57c93|Nov 18, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0-rc4|Nov 18, 2026
 Emulators|[libretro-gearcoleco](http://github.com/drhelius/Gearcoleco)|8e86678387d0818e87a5b437d74390bf2ad82596|Nov 18, 2026
