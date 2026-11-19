@@ -1,8 +1,8 @@
 diff --git a/xbmc/messaging/ApplicationMessenger.cpp b/xbmc/messaging/ApplicationMessenger.cpp
-index a10117007e..9694967b9d 100644
+index 6e5d0a2fa9..c027bfe706 100644
 --- a/xbmc/messaging/ApplicationMessenger.cpp
 +++ b/xbmc/messaging/ApplicationMessenger.cpp
-@@ -226,8 +226,25 @@ void CApplicationMessenger::ProcessMessages()
+@@ -265,8 +265,25 @@ void CApplicationMessenger::ProcessMessages()
    }
  }
  
@@ -25,6 +25,6 @@ index a10117007e..9694967b9d 100644
 +  // Export event to file
 +  fileMsgEvent(pMsg->dwMessage);
 +
-   //special case for this that we handle ourselves
-   if (pMsg->dwMessage == TMSG_CALLBACK)
-   {
+   // the sender gave up waiting and dropped it
+   if (pMsg->claimed && pMsg->claimed->exchange(true))
+     return;
