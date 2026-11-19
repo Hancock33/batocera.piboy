@@ -3,8 +3,8 @@
 # libretro-supermodel
 #
 ################################################################################
-# Version: Commits on Nov 02, 2026
-LIBRETRO_SUPERMODEL_VERSION = 20dfc573e005b0933b07a749db15a693d50db1dd
+# Version: Commits on Nov 19, 2026
+LIBRETRO_SUPERMODEL_VERSION = 13c32a8f98fd46382b1e6641d2e0522abb066753
 LIBRETRO_SUPERMODEL_SITE = $(call github,libretro,Libretro-Supermodel,$(LIBRETRO_SUPERMODEL_VERSION))
 LIBRETRO_SUPERMODEL_LICENSE = GPL-3.0
 LIBRETRO_SUPERMODEL_DEPENDENCIES += retroarch
