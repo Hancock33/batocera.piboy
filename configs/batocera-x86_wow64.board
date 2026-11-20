@@ -37,6 +37,10 @@ BR2_PACKAGE_MESA3D_LLVM=y
 BR2_PACKAGE_PYTHON3_XZ=y
 BR2_PACKAGE_WINE_CUSTOM=y
 
+# gamescope pacing for 32-bit Vulkan games
+BR2_PACKAGE_GAMESCOPE=y
+BR2_PACKAGE_GAMESCOPE_WSI_LAYER_ONLY=y
+
 # Enables ccache
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_wow64"
 
