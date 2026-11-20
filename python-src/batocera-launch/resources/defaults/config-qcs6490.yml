@@ -83,8 +83,8 @@ n64:
   emulator: libretro
   core:     mupen64plus-next
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 oricatmos:
   emulator: clk
   core:     clk

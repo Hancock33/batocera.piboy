@@ -20,8 +20,8 @@ naomi2:
   emulator: flycast
   core:     flycast
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 oricatmos:
   emulator: libretro
   core:     mame

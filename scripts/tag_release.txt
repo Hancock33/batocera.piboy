@@ -16,7 +16,6 @@ cbindgen.mk
 corsixth.mk
 cxxopts.mk
 dosbox-staging.mk
-drastic.mk
 ecm.mk
 firmware-radxa.mk
 flatpak.mk

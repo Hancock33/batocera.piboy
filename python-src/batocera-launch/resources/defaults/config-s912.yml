@@ -46,8 +46,8 @@ naomi2:
   emulator: flycast
   core:     flycast
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 pet:
   emulator: vice
   core:     xpet

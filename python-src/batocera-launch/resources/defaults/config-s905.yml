@@ -41,8 +41,8 @@ megadrive:
   emulator: libretro
   core:     picodrive
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 pet:
   emulator: vice
   core:     xpet

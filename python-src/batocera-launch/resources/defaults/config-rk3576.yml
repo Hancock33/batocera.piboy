@@ -11,8 +11,8 @@ gamecube:
     gfxbackend: Vulkan
     dual_core: true
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 ps2:
   emulator: libretro
   core:     play
