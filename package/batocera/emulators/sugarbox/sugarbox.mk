@@ -23,7 +23,7 @@ SUGARBOX_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr/bin/sugarbox/"
 
 SUGARBOX_CONF_ENV += LDFLAGS=-lpthread
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE),y)
   SUGARBOX_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -lmali_hook -Wl,--whole-archive -lmali_hook_injector -Wl,--no-whole-archive -lmali"
 endif
 
