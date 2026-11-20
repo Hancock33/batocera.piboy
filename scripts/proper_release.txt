@@ -34,6 +34,7 @@ libretro-azahar.mk
 libretro-freej2me.mk
 libretro-mame.mk
 libxmp.mk
+linuxloader.mk
 mame-src.mk
 mame.mk
 miniz.mk

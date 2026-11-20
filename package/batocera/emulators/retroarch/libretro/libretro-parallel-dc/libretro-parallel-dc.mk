@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 20, 2026
-LIBRETRO_PARALLEL_DC_VERSION = afcef25ecf219d60448ad745ab25cc98b2a49890
+LIBRETRO_PARALLEL_DC_VERSION = 3a57b0e8678473ded0ab0c25b1cd7e6562ed77bf
 LIBRETRO_PARALLEL_DC_SITE = $(call github,libretro,parallel-dc,$(LIBRETRO_PARALLEL_DC_VERSION))
 LIBRETRO_PARALLEL_DC_LICENSE = GPL-2.0
 LIBRETRO_PARALLEL_DC_LICENSE_FILES = LICENSE

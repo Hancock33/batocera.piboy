@@ -18,7 +18,6 @@ libserum.mk
 libvni.mk
 libwinevbs.mk
 libzedmd.mk
-linuxloader.mk
 mt32emu.mk
 noto-cjk-fonts.mk
 openxr-sdk.mk
