@@ -23,6 +23,8 @@ SHADPS4_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 SHADPS4_CONF_OPTS += -DENABLE_SYSTEM_LIBRARIES=ON
 SHADPS4_CONF_OPTS += -DENABLE_UPDATER=OFF
 SHADPS4_CONF_OPTS += -DVMA_ENABLE_INSTALL=ON
+SHADPS4_CONF_OPTS += -DSHADPS4_PROTOC_EXECUTABLE=$(HOST_DIR)/bin/protoc
+SHADPS4_CONF_OPTS += -DGLSLANG_COMPILER=$(HOST_DIR)/bin/glslang
 
 # Dear_ImGui_FontEmbed is a build-time code generator that runs on the host.
 # The following builds the binary to run on the host rather than adding a
@@ -30,9 +32,6 @@ SHADPS4_CONF_OPTS += -DVMA_ENABLE_INSTALL=ON
 # the binary, we tell CMake to use that executable via -DDear_ImGui_FontEmbed_EXECUTABLE
 # which is added in 0001-imgui-renderer-allow-prebuilt-fontembed.patch.
 define SHADPS4_BUILD_HOST_FONTEMBED
-	sed -i "s|protobuf::protoc|$(HOST_DIR)/bin/protoc|" $(@D)/CMakeLists.txt
-	sed -i "s|libprotobuf|protobuf|" $(@D)/CMakeLists.txt
-	sed -i "s|add_subdirectory(protobuf EXCLUDE_FROM_ALL)|#add_subdirectory(protobuf EXCLUDE_FROM_ALL)|" $(@D)/externals/CMakeLists.txt
 	$(HOSTCXX) -O2 -o $(@D)/host-dear-imgui-fontembed $(@D)/externals/imgui/misc/fonts/binary_to_compressed_c.cpp
 endef
 SHADPS4_PRE_CONFIGURE_HOOKS += SHADPS4_BUILD_HOST_FONTEMBED
