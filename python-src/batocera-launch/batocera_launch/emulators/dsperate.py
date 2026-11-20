@@ -1,12 +1,14 @@
 from __future__ import annotations
 
-import configparser
-from typing import Final
+from typing import TYPE_CHECKING, Final
 
 from batocera_common.configparser import CaseSensitiveConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import BIOS, CACHE, CHEATS, CONFIGS, SAVES, SCREENSHOTS
 from batocera_launch import Command, Emulator, HotkeysContext
+
+if TYPE_CHECKING:
+    import configparser
 
 _DSPERATE_CONFIG: Final = CONFIGS / 'dsperate'
 _DSPERATE_INI: Final = _DSPERATE_CONFIG / 'dsperate.ini'
