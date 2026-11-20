@@ -31,6 +31,7 @@
 - OpenMSX to Release 22
 - PCSX2 to 2.9.185
 - Python Pyxel to v3.0.3
+- RPCS3 to Nov 19, 2026 build
 - ScummVM to v2026.4.0
 - ShadPS4 to v.0.21.0
 - Snes9x to Sep 24, 2026 build
@@ -50,6 +51,7 @@
 - VKD3D Proton to 3.1
 - WINE Proton to proton-11.0-2
 - WINE TKG to 11.22
+- wxWidgets to v3.3.4
 - X86_64 / Zen3 kernel updated to 7.3.5
 
 # 2026/11/17 - batocera.linux 44 - Malachite
