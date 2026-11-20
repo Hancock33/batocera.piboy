@@ -31,9 +31,6 @@ Add a line here whenever a change is made that upstream would not make.
 - `scripts/linux/fork_delta.py` rewrites the generated section below. Run it
   after merging upstream; it compares with the last merged upstream commit
   (`--tip` compares with `upstream/master` itself, to preview a merge).
-- `scripts/linux/check_kconfig.py` reports packages that are missing from the
-  menu or that nothing selects. CI runs it on every push that touches a
-  `Config.in`, a `.mk` or `configs/`.
 - `scripts/linux/sparse-checkout.sh` leaves the unsupported board trees out of
   a build checkout.
 
