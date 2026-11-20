@@ -26,7 +26,8 @@ endif
 # fopen64 from LFS defines escapes the core's file wrappers
 define LIBRETRO_ANYBOR_BUILD_CMDS
 		LDFLAGS="" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-		-C $(@D)/ -f Makefile SYSTEM_DEPS=1 platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
+		PKG_CONFIG_PATH=$(STAGING_DIR)/usr/lib/pkgconfig \
+		-C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
 		CONFIGURE_HOST="$(GNU_TARGET_NAME)" CONFIGURE_BUILD="$(GNU_HOST_NAME)" \
 		GIT_VERSION="-$(shell echo $(LIBRETRO_ANYBOR_VERSION) | cut -c 1-7)"
 endef
