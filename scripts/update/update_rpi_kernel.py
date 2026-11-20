@@ -3,6 +3,7 @@
 Update the raspberrypi/linux commit id used in Batocera .board files.
 
 Examples:
+    python update_rpi_kernel.py --dry-run                          # uses default branch rpi-7.3.y
     python update_rpi_kernel.py --branch rpi-7.3.y --dry-run
     python update_rpi_kernel.py --branch rpi-7.3.y                 # edit, commit and push
     python update_rpi_kernel.py --branch rpi-7.3.y --no-push       # edit and commit only
@@ -148,7 +149,7 @@ def git_commit_and_push(args, changed_files, olds, new):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--branch", required=True, help="raspberrypi/linux branch, e.g. rpi-7.3.y")
+    ap.add_argument("--branch", default="rpi-7.3.y", help="raspberrypi/linux branch (default: rpi-7.3.y)")
     ap.add_argument("--root", default=".", help="directory to search for board files (default: .)")
     ap.add_argument("--ext", nargs="+", default=[".board"], help="file suffixes to scan (default: .board)")
     ap.add_argument("--old", help="old commit id to replace (default: auto-detect)")
