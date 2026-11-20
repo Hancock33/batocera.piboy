@@ -14,6 +14,7 @@ d7vk.mk
 db9_gpio_rpi.mk
 dhewm3.mk
 dosbox-x.mk
+dsp56300.mk
 dxvk-nvapi.mk
 dxvk.mk
 element14-pi-desktop.mk
@@ -42,6 +43,7 @@ nanoboyadvance.mk
 nblood.mk
 nv-codec-headers.mk
 opengoal.mk
+openmsx.mk
 pcsx2.mk
 pcsx2x6.mk
 picom.mk

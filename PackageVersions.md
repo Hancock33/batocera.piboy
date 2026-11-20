@@ -263,8 +263,8 @@ Emulators|[mupen64plus-video-glide64mk2](http://github.com/mupen64plus/mupen64pl
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|19c72e64aa700d34a0fbb6c306bdbae6047d08a7|Nov 06, 2026
 Emulators|[nanoboyadvance](https://github.com/nba-emu/NanoBoyAdvance.git)|v1.8.3|May 10, 2026
 Emulators|[odin](http://github.com/Tovarichtch/Odin)|666943d8a7683d922685596f6feba7340e95b3fe|Nov 18, 2026
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|b34dbbde4b89cd14b72179fd0de285037cf01e95|Nov 18, 2026
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.183|Nov 18, 2026
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|RELEASE_22_0|Oct 28, 2026
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.185|Nov 20, 2026
 Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|Aug 18, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|cb6d1dc557c15549e19d6705727d6ed8ddb1eaf5|Nov 19, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 2026
@@ -292,7 +292,7 @@ Emulators|[ymir](https://github.com/ymir-emu/Ymir)|v0.4.1|Oct 18, 2026
 Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.168.9637-616|Nov 15, 2026
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|6d32a6c22e7ce320002f4ec11f541043529cfbec|Nov 17, 2026
-Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|1caf09e36ad4f3856ebe3deeccef6f2adff913e4|Nov 13, 2026
+Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|69bd00313fc0c7957502bad007bfed8022e2f6f2|Nov 19, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|v1.0.0|Sept 11, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|99a944d9dd5818d048e184cd6ca348b6dbc77ec9|Nov 17, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|6b8f711a5346cf2e70562872ebc1a57b210906df|Oct 30, 2026
@@ -330,7 +330,6 @@ Firmwares|[firmware-khadas-vim4](https://dl.khadas.com/repos/vim4/pool/main/l/li
 Firmwares|[firmware-orangepi](http://github.com/orangepi-xunlong/firmware)|dc163b0ed2e0272d9ee31977a0e0a04884f0ae61|Sep 28, 2026
 Firmwares|[firmware-radxa-rkwifibt](http://github.com/JeffyCN/mirrors)|e7a4fc70448ca2f66b3df50cabe527916b42bdad|Nov 22, 2018
 Firmwares|[firmware-radxa](http://github.com/radxa-pkg/radxa-firmware)|0.2.44|Nov 13, 2026
-Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
 Firmwares|[meson-firmware](http://github.com/LibreELEC/meson-firmware)|662b843714ac18e92b19887fadc8d8b3d94fc814|N/A
 Firmwares|[rpi-eeprom](http://github.com/raspberrypi/rpi-eeprom)|439fc2e934737cb6b718b837ec0870ac85bf7409|Nov 17, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|5e9e2da862917107d5819be4a8903d9560595b9e|Nov 19, 2026
@@ -380,6 +379,7 @@ Libraries|[appstream](http://github.com/ximion/appstream)|v1.2.3|Nov 10, 2026
 Libraries|[asio](http://github.com/chriskohlhoff/asio)|asio-1-39-0|Nov 07, 2026
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20261117|Nov 17, 2026
 Libraries|[cpp-ipc](http://github.com/mutouyun/cpp-ipc)|v1.4.1|Dec 12, 2025
+Libraries|[dsp56300](http://github.com/xemu-project/dsp56300)|v1.0.0|Sept 11, 2026
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.32.0|Sept 02, 2026
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|8b4385e985c0a50bf7d3f96cf3cb6d0b63c53e6c|Apr 23, 2026
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|d534c19aa760df3fb75fd20db13ba1932b8a5463|Oct 02, 2026

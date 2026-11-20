@@ -30,6 +30,7 @@ Built with ![love](https://raw.githubusercontent.com/Hancock33/batocera.piboy/ma
 
 **Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.185|Nov 20, 2026
 Emulators|[cemu](https://github.com/cemu-project/Cemu.git)|ac8379ba66e8d149564f003569d9441464e7b228|Nov 19, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|71adff4bbc94912c8cedfb550d469f7623240553|Nov 19, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|0bba07404035b289866ffa6ea8ca4c754b4a1dd0|Nov 19, 2026
@@ -37,6 +38,7 @@ Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|1eef2bfd5decc695f861309
 Emulators|[lichii](https://github.com/zortos293/Lichii.git)|523e50487e75df55c0e91fe310733f516e623ad9|Nov 19, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|cb6d1dc557c15549e19d6705727d6ed8ddb1eaf5|Nov 19, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|e49f15f59e798a3c282d8eb1a54ea7c7d3cc2133|Nov 19, 2026
+Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|69bd00313fc0c7957502bad007bfed8022e2f6f2|Nov 19, 2026
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|5e9e2da862917107d5819be4a8903d9560595b9e|Nov 19, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|bcdd4cf194d4b0e73fbbc13b59d4908d7fda775c|Nov 19, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|95483a0ad986434757519eb0679927d05d3bd1b6|Nov 19, 2026
@@ -64,8 +66,6 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2fe162866282fa28
 Emulators|[hatari](http://github.com/hatari/hatari)|c81c55cc4004f99fec4ee56c5111dae088bd5cea|Nov 18, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|361ffa9501b631d53d7150fe57dec40a8341f664|Nov 18, 2026
 Emulators|[odin](http://github.com/Tovarichtch/Odin)|666943d8a7683d922685596f6feba7340e95b3fe|Nov 18, 2026
-Emulators|[openmsx](http://github.com/openMSX/openMSX)|b34dbbde4b89cd14b72179fd0de285037cf01e95|Nov 18, 2026
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.183|Nov 18, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|f0a191cccaffec18a148a6431d52b42a883be11d|Nov 18, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|670eaebeffd5436c08b0c4e693ab7f36fb4befed|Nov 18, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|aa10d18923cf71de9e12526de5e2a1b7a70a244b|Nov 18, 2026
@@ -143,7 +143,6 @@ Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|4a6f2c22101bf4e
 Controllers|[logi-wheel](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.43.1|Nov 14, 2026
 Controllers|[logitech-trueforce](http://github.com/mescon/logitech-trueforce-linux-driver)|v0.43.1|Nov 14, 2026
 Gpu|[nvidia-open-driver](https://us.download.nvidia.com/XFree86/Linux-x86)|620.73.04|Nov 14, 2026
-Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|1caf09e36ad4f3856ebe3deeccef6f2adff913e4|Nov 13, 2026
 Firmwares|[firmware-radxa](http://github.com/radxa-pkg/radxa-firmware)|0.2.44|Nov 13, 2026
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.22|Nov 13, 2026
 Emulators|[libretro-hatari](http://github.com/libretro/hatari)|4edc56f4e2add886ed5406854d12f95fdfdf67b6|Nov 13, 2026
@@ -239,6 +238,7 @@ Emulators|[libretro-gambatte](http://github.com/libretro/gambatte-libretro)|77f2
 Emulators|[libretro-pd777](http://github.com/mittonk/pd777)|13910d1cf8b139b7560fc61f7a2e0f6c95e407e5|Oct 30, 2026
 Emulators|[libretro-pcsx](http://github.com/libretro/pcsx_rearmed)|7b0e8f8fadfbce3d170d195b9d9eecaabfa08c8e|Oct 29, 2026
 Emulators|[libretro-yabasanshiro](http://github.com/KMFDManic/Phaenon-Xtreme)|1cfb8fb3f4c17f8bb68ff415f4956f9903bcf8e0|Oct 29, 2026
+Emulators|[openmsx](http://github.com/openMSX/openMSX)|RELEASE_22_0|Oct 28, 2026
 Python|[python-adafruit-platformdetect](https://files.pythonhosted.org/packages/7f/54/f81a6702f970dfabca29851a0545c364fdd8b65ffd0731b479a28ef8ee5f)|3.90.0|Oct 28, 2026
 Wine|[d7vk](https://github.com/WinterSnowfall/d7vk/releases)|v2.4|Oct 28, 2026
 Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|v3.1|Oct 28, 2026
@@ -332,6 +332,7 @@ Ports|[nblood](http://github.com/NBlood/NBlood)|r14388|Sept 14, 2026
 Emulators|[mupen64plus-gliden64](http://github.com/gonetz/GLideN64)|a04081ad6a966a9413bea63a55f502e0dc98bb18|Sept 14, 2026
 Emulators|[libretro-mojozork](http://github.com/icculus/mojozork)|ff7e00742a00acec8e175ddefb97520fb270df2d|Sept 14, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|v1.0.0|Sept 11, 2026
+Libraries|[dsp56300](http://github.com/xemu-project/dsp56300)|v1.0.0|Sept 11, 2026
 Gpu|[shaderc](http://github.com/google/shaderc)|v2026.4|Sept 11, 2026
 Emulators|[libretro-jollycv](http://github.com/libretro/jollycv)|2790d59c7194d29e83f8603ffd7e9da17f11575e|Sept 11, 2026
 Libraries|[libdovi](http://github.com/quietvoid/dovi_tool)|2.3.4|Sept 10, 2026
@@ -565,7 +566,6 @@ Gpu|[mali-G52](http://github.com/rtissera/a311d2-mali-g52)|6ab9d7ce7a991f9974606
 Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.1|Jun 14, 2023
 Boot|[batocera-shim-signed-efi-x64](https://launchpad.net/ubuntu/+archive/primary/+files)|1.58+15.8-0ubuntu1|Apr 04, 2023
 Controllers|[guncon3](http://github.com/pcnimdock/guncon3_dkms)|0dfe0feaa2afc37a8a70f6cd0f6c803ee4d89f40|Mar 22, 2023
-Firmwares|[firmware-rk3588](http://github.com/stvhay/rk3588-firmware)|dc92513ebf859d1213c999e44d4a7bf6a1fb04d7|Feb 16, 2023
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Gpu|[mali-G610](http://github.com/JeffyCN/mirrors)|e7a4fc70448ca2f66b3df50cabe527916b42bdad|Nov 11, 2022
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
