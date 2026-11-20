@@ -1,0 +1,40 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5ca7f33..337d8a6 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -59,7 +59,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux" AND NOT MINGW AND NOT CMAKE_C_COMPILER MATC
+     target_compile_options(linuxloader_exe PRIVATE ${LINUXLOADER_EXE_C_FLAGS})
+ 
+     # Common options for shared libraries
+-    set(LIBS_C_FLAGS -m32 -mincoming-stack-boundary=2 -fPIC -shared)
++    set(LIBS_C_FLAGS -m32 -mstackrealign -fPIC -shared)
+     set(SHARED_LINKER_FLAGS -m32 -Wl,-z,defs -rdynamic)
+ 
+     # libkswapapi.so
+@@ -75,14 +75,14 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux" AND NOT MINGW AND NOT CMAKE_C_COMPILER MATC
+ 
+     # libsegaapi.so
+     add_library(segaapi SHARED src/loader/audio/lindbergh/libsegaapi/libsegaapi.c)
+-    set(LIBSEGAAPI_C_FLAGS -m32 -mincoming-stack-boundary=2 -fPIC -shared)
++    set(LIBSEGAAPI_C_FLAGS -m32 -mstackrealign -fPIC -shared)
+     set(LIBSEGAAPI_LINKER_FLAGS -O0 -g -m32 -Wl,-Bstatic -lFAudio -Wl,-Bdynamic -fPIC -shared)
+     target_link_libraries(segaapi ${LIBSEGAAPI_LINKER_FLAGS})
+     target_compile_options(segaapi PRIVATE ${LIBSEGAAPI_C_FLAGS})
+ 
+     # linuxloader.so
+     set(LINUX_LOADER_SO_LINKER_FLAGS -m32 -Wl,-z,defs -rdynamic -static-libstdc++ -static-libgcc -lc -ldl -lGL -lglut -lX11 -lXcursor -lSDL3 -lSDL3_ttf -lSDL3_image -ludev -lm -lpthread -shared -lstdc++ -nostdlib)
+-    set(LINUX_LOADER_SO_C_FLAGS -g -fPIC -m32 -mincoming-stack-boundary=2 -Wall -Wno-unused-variable -Wno-unused-function -D_GNU_SOURCE -Wno-format-truncation -Wno-strict-aliasing -Wno-discarded-qualifiers -Wno-stringop-truncation -Wno-format-overflow)
++    set(LINUX_LOADER_SO_C_FLAGS -g -fPIC -m32 -mstackrealign -Wall -Wno-unused-variable -Wno-unused-function -D_GNU_SOURCE -Wno-format-truncation -Wno-strict-aliasing -Wno-discarded-qualifiers -Wno-stringop-truncation -Wno-format-overflow)
+     file(GLOB LINUX_LOADER_OBJS
+         src/loader/init.c
+         src/loader/mainL.c
+@@ -143,7 +143,7 @@ elseif(WIN32 OR MINGW OR CMAKE_C_COMPILER MATCHES "mingw")
+     # Guest code is i386 SysV and needs a 16-byte aligned ESP at every call;
+     # MinGW defaults to 4, so both flags are required to realign native->guest calls.
+     target_compile_options(${PROJECT_NAME} PRIVATE
+-        -mincoming-stack-boundary=2
++        -mstackrealign
+         -mpreferred-stack-boundary=4
+         -Wall
+         -Wextra
+
