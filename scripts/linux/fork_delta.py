@@ -5,7 +5,8 @@ board lists differ from upstream Batocera.
 Compares the committed trees of two refs, so nothing needs to be checked out:
 
     git fetch upstream
-    scripts/linux/fork_delta.py            # HEAD against upstream/master
+    scripts/linux/fork_delta.py            # HEAD against its merge-base with upstream/master
+    scripts/linux/fork_delta.py --tip      # HEAD against upstream/master itself
     scripts/linux/fork_delta.py --upstream some/ref --fork some/other/ref
 
 Only the text between the BEGIN/END markers in FORK.md is rewritten; anything
@@ -100,18 +101,28 @@ def main() -> int:
     parser = argparse.ArgumentParser(description='Regenerate the generated part of FORK.md')
     parser.add_argument('--fork', default='HEAD', help='ref of this fork (default: HEAD)')
     parser.add_argument('--upstream', default='upstream/master', help='ref of upstream (default: upstream/master)')
+    parser.add_argument(
+        '--tip',
+        action='store_true',
+        help='compare with the upstream ref itself, not with its merge-base with the fork',
+    )
     parser.add_argument('--check', action='store_true', help='exit 1 if FORK.md is out of date, without writing')
     args = parser.parse_args()
 
     try:
-        block = generate(args.fork, args.upstream)
+        # The merge-base is the upstream commit last merged, so the result does not
+        # change every time upstream moves on and --check stays usable in CI.
+        upstream = args.upstream if args.tip else git('merge-base', args.fork, args.upstream).strip()
+        block = generate(args.fork, upstream)
     except subprocess.CalledProcessError as error:
         print(error.stderr.strip() or error, file=sys.stderr)
         return 2
 
-    # Raw bytes, not read_text/write_text: on Windows those translate newlines,
-    # and FORK.md must keep Unix line endings.
-    raw = FORK_MD.read_bytes().decode('utf-8') if FORK_MD.is_file() else ''
+    # newline='' / '\n': no newline translation, so FORK.md keeps Unix line endings on Windows
+    raw = ''
+    if FORK_MD.is_file():
+        with FORK_MD.open(encoding='utf-8', newline='') as file:
+            raw = file.read()
     current = raw.replace('\r\n', '\n')
     if BEGIN in current and END in current:
         head, rest = current.split(BEGIN, 1)
@@ -121,7 +132,7 @@ def main() -> int:
 
     if args.check:
         return 0 if updated == raw else 1
-    FORK_MD.write_bytes(updated.encode('utf-8'))
+    FORK_MD.write_text(updated, encoding='utf-8', newline='\n')
     print(f'updated {FORK_MD.relative_to(ROOT)}')
     return 0
 
