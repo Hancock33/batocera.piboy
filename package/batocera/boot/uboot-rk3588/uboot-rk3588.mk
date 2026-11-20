@@ -20,6 +20,11 @@ UBOOT_RK3588_DDR118 = rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin
 UBOOT_RK3588_EXTRA_DOWNLOADS += \
     https://github.com/rockchip-linux/rkbin/raw/b9183559cabebed120ad431a614b291fee04c498/bin/rk35/$(UBOOT_RK3588_DDR118)
 
+# DDR v1.18 for boards that do not train with v1.21 (NanoPi M6)
+UBOOT_RK3588_DDR118 = rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin
+UBOOT_RK3588_EXTRA_DOWNLOADS += \
+    https://github.com/rockchip-linux/rkbin/raw/b9183559cabebed120ad431a614b291fee04c498/bin/rk35/$(UBOOT_RK3588_DDR118)
+
 # Modern U-Boot dependencies
 UBOOT_RK3588_DEPENDENCIES = host-batocera-rkbin host-pkgconf host-openssl host-bison host-flex \
                             host-python-setuptools host-dtc host-swig host-gnutls host-python-pyelftools
@@ -38,8 +43,7 @@ UBOOT_RK3588_TPL  = $(BATOCERA_RKBIN_DIR)/bin/rk35/rk3588_ddr_lp4_2112MHz_lp5_24
 UBOOT_RK3588_MAKE_OPTS = \
 	CROSS_COMPILE="$(TARGET_CROSS)" \
 	HOSTCFLAGS="$(HOST_CFLAGS)" \
-	HOSTLDFLAGS="$(HOST_LDFLAGS)" \
-	ROCKCHIP_TPL=$(UBOOT_RK3588_TPL)
+	HOSTLDFLAGS="$(HOST_LDFLAGS)"
 
 # Board/Defconfig pairs (Updated for Mainline naming conventions)
 UBOOT_RK3588_BUILDPAIR += orangepi-5/orangepi-5-rk3588s_defconfig

@@ -96,6 +96,7 @@ endif
 define BATOCERA_SPLASH_INSTALL_SCRIPT
 	mkdir -p $(TARGET_DIR)/etc/init.d
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/scripts/Ssystem-splash				$(TARGET_DIR)/etc/init.d/S03system-splash
+	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/scripts/batocera-splash-logo		$(TARGET_DIR)/usr/bin/batocera-splash-logo
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/scripts/Ssplashscreencontrol		$(TARGET_DIR)/etc/init.d/S30splashscreencontrol
 	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/scripts/$(BATOCERA_SPLASH_SCRIPT)	$(TARGET_DIR)/etc/init.d/S28splash
 	sed -i -e s+"%PLAYER_OPTIONS%"+"$(BATOCERA_SPLASH_PLAYER_OPTIONS)"+g $(TARGET_DIR)/etc/init.d/S28splash
