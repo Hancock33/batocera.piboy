@@ -109,7 +109,10 @@ def main() -> int:
         print(error.stderr.strip() or error, file=sys.stderr)
         return 2
 
-    current = FORK_MD.read_text(encoding='utf-8') if FORK_MD.is_file() else ''
+    # Raw bytes, not read_text/write_text: on Windows those translate newlines,
+    # and FORK.md must keep Unix line endings.
+    raw = FORK_MD.read_bytes().decode('utf-8') if FORK_MD.is_file() else ''
+    current = raw.replace('\r\n', '\n')
     if BEGIN in current and END in current:
         head, rest = current.split(BEGIN, 1)
         updated = head + block + rest.split(END, 1)[1]
@@ -117,8 +120,8 @@ def main() -> int:
         updated = current.rstrip('\n') + ('\n\n' if current.strip() else '') + block + '\n'
 
     if args.check:
-        return 0 if updated == current else 1
-    FORK_MD.write_text(updated, encoding='utf-8')
+        return 0 if updated == raw else 1
+    FORK_MD.write_bytes(updated.encode('utf-8'))
     print(f'updated {FORK_MD.relative_to(ROOT)}')
     return 0
 
