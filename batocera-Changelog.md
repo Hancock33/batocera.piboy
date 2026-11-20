@@ -9,11 +9,12 @@
 - Keisho Model 3 emulation, with surround sound and cabinet outputs options
 ### Fixed
 - Cemu game profiles, Wii U system fonts and UI translations were not loaded
+- Ghost Squad Evolution and other OSS audio games left a stuck audio process after exiting, which blocked cleanup for later games
 - Kodi black screen on 10-bit videos, with hardware decoding now used on Raspberry Pi, Allwinner H700, Rockchip mainline and Amlogic devices
-- Steam games that go through a second launcher (EA app) returned to EmulationStation before the game opened
 - PPSSPP exit hotkey did nothing when no controller was connected
-- Windows: 32-bit games did not start on Wayland builds with the virtual desktop off
+- Steam games that go through a second launcher (EA app) returned to EmulationStation before the game opened
 - Windows: .NET 5+ games (such as Celeste64) closed at start with WINE Proton and WINE TKG
+- Windows: 32-bit games did not start on Wayland builds with the virtual desktop off
 - Windows: new WINE Proton prefixes asked to download WINE Mono
 - Windows: the FPS limiter option had no effect on DXVK games
 ### Updated
@@ -28,6 +29,7 @@
 - GameTankEmulator to Nov 19, 2026 build
 - Keisho (formerly SM2-Emu) to v0.9.63
 - Lightspark to 0.10.0
+- LinuxLoader to v3.0.15
 - OpenMSX to Release 22
 - PCSX2 to 2.9.185
 - Python Pyxel to v3.0.3
@@ -44,7 +46,7 @@
 ### System
 - D7VK to v2.4
 - DXVK-NVAPI to v0.9.3
-- Mesa3D to 26.3.0
+- Mesa3D to 26.3.1
 - Nvidia Open Production driver to 620.70.06
 - Qualcomm QCS6490 device kernel updated to 7.3.5
 - Rockchip RK3588 mainline kernel updated to 7.3.5
