@@ -25,18 +25,22 @@ _MAX_PLAYERS: Final = 8
 # and is always configured as a Pro Controller.
 _CONTROLLER_ID: Final = '0-00000003-28de-0000-0512-000010010000'
 
-_LANGUAGES: Final[dict[str, int]] = {
-    'jp_JP': 0,
-    'en_US': 1,
-    'de_DE': 2,
-    'fr_FR': 3,
-    'es_ES': 4,
-    'it_IT': 5,
-    'nl_NL': 6,
-    'zh_CN': 7,
-    'zh_TW': 8,
-    'ko_KR': 9,
-}
+# Ryujinx UI locales (Config.json "language_code"), matched against $LANG.
+_LANGUAGES: Final = frozenset(
+    {
+        'ja_JP',
+        'en_US',
+        'de_DE',
+        'fr_FR',
+        'es_ES',
+        'it_IT',
+        'ko_KR',
+        'pt_BR',
+        'ru_RU',
+        'zh_CN',
+        'zh_TW',
+    }
+)
 
 _CONTROLLER_TEMPLATE: Final[dict[str, Any]] = {
     'left_joycon_stick': {
@@ -102,8 +106,9 @@ _CONTROLLER_TEMPLATE: Final[dict[str, Any]] = {
 }
 
 
-def _language_from_environment() -> int:
-    return _LANGUAGES.get(os.environ.get('LANG', '')[:5], _LANGUAGES['en_US'])
+def _language_from_environment() -> str:
+    lang = os.environ.get('LANG', '')[:5]
+    return lang if lang in _LANGUAGES else 'en_US'
 
 
 def _controller_config(player: int, /) -> dict[str, Any]:
@@ -174,7 +179,7 @@ class Ryujinx(Emulator):
             audio_backend='SDL3',
             audio_volume=1,
             # ryujinx app language
-            language_code=str(_language_from_environment()),
+            language_code=_language_from_environment(),
             # Console language, time & date
             system_language=self.config.get_str('ryujinx_language', 'AmericanEnglish'),
             system_region=self.config.get_str('ryujinx_region', 'USA'),
