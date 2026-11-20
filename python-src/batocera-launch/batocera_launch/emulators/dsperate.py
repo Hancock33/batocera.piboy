@@ -3,6 +3,7 @@ from __future__ import annotations
 import configparser
 from typing import Final
 
+from batocera_common.configparser import CaseSensitiveConfigParser
 from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import BIOS, CACHE, CHEATS, CONFIGS, SAVES, SCREENSHOTS
 from batocera_launch import Command, Emulator, HotkeysContext
@@ -70,8 +71,7 @@ class DSperate(Emulator):
             directory.mkdir(parents=True, exist_ok=True)
 
         # keep what the user set in DSperate's own menu, only the keys below are rewritten every launch
-        ini = configparser.ConfigParser(interpolation=None)
-        ini.optionxform = str  # type: ignore[assignment,method-assign]
+        ini = CaseSensitiveConfigParser(interpolation=None)
         if _DSPERATE_INI.exists():
             ini.read(_DSPERATE_INI)
 
