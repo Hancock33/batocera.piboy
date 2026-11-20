@@ -66,6 +66,7 @@ Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|2fe162866282fa28
 Emulators|[hatari](http://github.com/hatari/hatari)|c81c55cc4004f99fec4ee56c5111dae088bd5cea|Nov 18, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|361ffa9501b631d53d7150fe57dec40a8341f664|Nov 18, 2026
 Emulators|[odin](http://github.com/Tovarichtch/Odin)|666943d8a7683d922685596f6feba7340e95b3fe|Nov 18, 2026
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1808e241d7b1bfb1c521e392b4c51a7d5494e9ca|Nov 18, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|f0a191cccaffec18a148a6431d52b42a883be11d|Nov 18, 2026
 Engines|[lightspark](http://github.com/lightspark/lightspark)|670eaebeffd5436c08b0c4e693ab7f36fb4befed|Nov 18, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|aa10d18923cf71de9e12526de5e2a1b7a70a244b|Nov 18, 2026
@@ -296,7 +297,6 @@ Emulators|[xemu-chihiro](https://github.com/Tovarichtch/xemu.git)|e66fe47cdaa781
 Emulators|[libretro-neocd](http://github.com/libretro/neocd_libretro)|b1e04c738cb48a1dae0574b8877f6a116d270ca1|Oct 03, 2026
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.10.01-osfree|Oct 02, 2026
 Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkingSockets)|d534c19aa760df3fb75fd20db13ba1932b8a5463|Oct 02, 2026
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|v0.0.43|Sept 30, 2026
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|58a3c4fd0782fa2a087e38a039599b2ecf69ccc9|Sept 30, 2026
 Emulators|[libretro-lowresnx](http://github.com/timoinutilis/lowres-nx)|63d5988f74e1eea2ecd6ea0445a8ce260b0a9822|Sept 30, 2026
 Ports|[openjk](http://github.com/JACoders/OpenJK)|260c59c2907187af555a676fe0cc798893bf7757|Sept 29, 2026

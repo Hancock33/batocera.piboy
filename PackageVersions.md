@@ -271,7 +271,7 @@ Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 202
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8c918e2872482139273374ef4cc6c7aff34d7585|Nov 09, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|52225c72389a53f70b12e7da72697ac46c698eb7|Nov 19, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260927|Sept 27, 2026
-Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|v0.0.43|Sept 30, 2026
+Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|1808e241d7b1bfb1c521e392b4c51a7d5494e9ca|Nov 18, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|dfd2bc69bfc5e0071132c056860d452f1a5b9b41|Nov 17, 2026
 Emulators|[shadps4](https://github.com/shadps4-emu/shadPS4.git)|v.0.21.0|Oct 30, 2026
 Emulators|[simcoupe](http://github.com/simonowen/simcoupe)|1f966036543991c05022ce4f95cfbfbb0014b187|Aug 30, 2026
