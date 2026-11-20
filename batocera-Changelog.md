@@ -22,6 +22,7 @@
 - Armsx2 to 2.9.5
 - Azahar to 2126.2
 - Cemu to Nov 13, 2026 build
+- Dolphin-Emu to Nov 19, 2026 build
 - DOSBox Staging to v0.83.1
 - DOSBox-X to 2026.10.01
 - GameTankEmulator to Nov 19, 2026 build
@@ -32,8 +33,10 @@
 - Python Pyxel to v3.0.3
 - ScummVM to v2026.4.0
 - ShadPS4 to v.0.21.0
+- Snes9x to Sep 24, 2026 build
 - TIC-80 to v1.4.1
 - Vita3k to Nov 19, 2026 build
+- Xemu to v0.8.139
 - Xenia Canary to Nov 19, 2026 build
 - Xenia Edge to Nov 20, 2026 build
 - Ymir to v0.4.1

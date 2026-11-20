@@ -13,7 +13,7 @@ DOLPHIN_EMU_LICENSE = GPLv2+
 DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cpp-ipc ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl3 xz zlib
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cpp-ipc cubeb ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl3 xz zlib
 
 $(eval $(call register,dolphin.emulator.yml))
 $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.dolphin.emulator.yml))
@@ -28,6 +28,7 @@ DOLPHIN_EMU_CONF_OPTS += -DENABLE_TESTS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 DOLPHIN_EMU_CONF_OPTS += -DUSE_MGBA=ON
 DOLPHIN_EMU_CONF_OPTS += -DUSE_RETRO_ACHIEVEMENTS=ON
+DOLPHIN_EMU_CONF_OPTS += -DUSE_SYSTEM_CUBEB=ON
 DOLPHIN_EMU_CONF_OPTS += -DUSE_UPNP=OFF
 
 ifeq ($(BR2_PACKAGE_QT6),y)

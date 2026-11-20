@@ -11,8 +11,7 @@ XEMU_GIT_SUBMODULES = YES
 XEMU_LICENSE = GPLv2
 XEMU_EMULATOR_INFO = xemu.emulator.yml
 XEMU_DEPENDENCIES = host-cmake host-meson host-pkgconf host-python-distlib host-python-pyyaml host-python3
-XEMU_DEPENDENCIES += json-for-modern-cpp libcurl libepoxy libglib2 libgtk3 libpcap libsamplerate sdl3 slirp zlib
-
+XEMU_DEPENDENCIES += dsp56300 json-for-modern-cpp libcurl libepoxy libglib2 libgtk3 libpcap libsamplerate sdl3 slirp zlib
 XEMU_EXTRA_DOWNLOADS = https://github.com/xemu-project/xemu-dashboard/releases/download/v20250806-0635/xbox_hdd.qcow2
 
 XEMU_CONF_ENV += PATH="/$(BR2_ARCH)/host/$(BR2_ARCH)-buildroot-linux-gnu/sysroot/usr/bin:$$PATH"

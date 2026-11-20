@@ -1,8 +1,8 @@
 diff --git a/Source/Core/DolphinQt/MainWindow.cpp b/Source/Core/DolphinQt/MainWindow.cpp
-index 7905402013..134c751f93 100644
+index 64a166efba..5f8a64bf55 100644
 --- a/Source/Core/DolphinQt/MainWindow.cpp
 +++ b/Source/Core/DolphinQt/MainWindow.cpp
-@@ -946,8 +946,13 @@ void MainWindow::OnStopComplete()
+@@ -944,8 +944,13 @@ void MainWindow::OnStopComplete()
    // If the current emulation prevented the booting of another, do that now
    if (m_pending_boot != nullptr)
    {
