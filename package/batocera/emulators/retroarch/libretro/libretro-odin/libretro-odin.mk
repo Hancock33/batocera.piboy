@@ -3,8 +3,8 @@
 # libretro-odin
 #
 ################################################################################
-# Version: Commits on Nov 10, 2026
-LIBRETRO_ODIN_VERSION = 7bac2a5253cdb8213600b0f3a6e762852fdde0c0
+# Version: Commits on Nov 19, 2026
+LIBRETRO_ODIN_VERSION = 942a4865889db6b10f418f76bbf037e22694321f
 LIBRETRO_ODIN_SITE = https://github.com/WizzardSK/odin-libretro.git
 LIBRETRO_ODIN_SITE_METHOD = git
 LIBRETRO_ODIN_GIT_SUBMODULES = YES

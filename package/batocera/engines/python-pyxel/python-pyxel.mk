@@ -3,8 +3,8 @@
 # python-pyxel
 #
 ################################################################################
-# Version: Commits on Nov 16, 2026
-PYTHON_PYXEL_VERSION = v3.0.2
+# Version: Commits on Nov 20, 2026
+PYTHON_PYXEL_VERSION = v3.0.3
 PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = maturin
 PYTHON_PYXEL_LICENSE = MIT
