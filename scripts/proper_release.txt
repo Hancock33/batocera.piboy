@@ -15,6 +15,7 @@ db9_gpio_rpi.mk
 dhewm3.mk
 dosbox-x.mk
 dsp56300.mk
+dsperate.mk
 dxvk-nvapi.mk
 dxvk.mk
 element14-pi-desktop.mk
