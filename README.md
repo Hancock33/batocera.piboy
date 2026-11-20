@@ -33,6 +33,7 @@ Built with ![love](https://raw.githubusercontent.com/Hancock33/batocera.piboy/ma
 Emulators|[applewin](https://github.com/audetto/AppleWin.git)|6e6df2cb7503af105422a01cfa08a0ebc48486a3|Nov 20, 2026
 Emulators|[armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261120|Nov 20, 2026
 Emulators|[dolphin-emu](https://github.com/dolphin-emu/dolphin)|32a2b828e20612807531592002da4e7296fd2207|Nov 20, 2026
+Emulators|[dsperate](http://github.com/beebono/DSperate)|v3.5.0|Nov 20, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|e39940aca71ca7cfeb906cd38726e336b53d01c4|Nov 20, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|56e628ad1d82ade16f2c5ac8797749fd2be30467|Nov 20, 2026
 Emulators|[lichii](https://github.com/zortos293/Lichii.git)|5abc27a4ba563d1339dc42039fc9c11b56c3694b|Nov 20, 2026

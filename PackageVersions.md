@@ -84,6 +84,7 @@ Emulators|[dosbox-staging](http://github.com/dosbox-staging/dosbox-staging)|v0.8
 Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.10.01-osfree|Oct 02, 2026
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[drastic](https://github.com/dmanlfc/drastic/raw/refs/heads/main)|r2.5.2.2|Feb 26, 2021
+Emulators|[dsperate](http://github.com/beebono/DSperate)|v3.5.0|Nov 20, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|e39940aca71ca7cfeb906cd38726e336b53d01c4|Nov 20, 2026
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|56e628ad1d82ade16f2c5ac8797749fd2be30467|Nov 20, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|1eef2bfd5decc695f861309d535857554f596b05|Nov 19, 2026
