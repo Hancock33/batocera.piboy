@@ -319,7 +319,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|aa10d18923cf71de9e12526de5e2a1b7a70a244b|Nov 18, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|b8a83c8aead6fb3f8893a9d77a97454ce6a75add|Nov 19, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|28919b5dfa0b1543338264fa89f9e8abe70ed6ec|Nov 20, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
@@ -594,5 +594,5 @@ Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.22|Nov 13, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261107-proton-dev|Nov 08, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261119|Nov 19, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261120|Nov 20, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|f3890f670867b5ffbc3938726db45c0f7d16c8ba|Aug 10, 2026

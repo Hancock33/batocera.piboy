@@ -42,7 +42,9 @@ Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|f159897b94c887f
 Engines|[moonlight-qt](https://github.com/moonlight-stream/moonlight-qt)|2dc63d1f138557d15b21c051645280a58702da9d|Nov 20, 2026
 Engines|[python-pyxel](http://github.com/kitao/pyxel)|v3.0.3|Nov 20, 2026
 Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|c30f1efce64b96696c150603cc6dfce5d74645cc|Nov 20, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261120|Nov 20, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|850ecca1f611d0378a975efe34c22dd4d7d0b8cc|Nov 20, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|28919b5dfa0b1543338264fa89f9e8abe70ed6ec|Nov 20, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|c3de3d5e0791a09dfcaf91c05442e61ff1575114|Nov 20, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261120|Nov 20, 2026
 Emulators|[libretro-beetle-psx](http://github.com/libretro/beetle-psx-libretro)|fb70b69a1aef1f60d9fc139ab7df34a5742ccdfd|Nov 20, 2026
@@ -61,10 +63,8 @@ Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|5e9e2da862917107d5819
 Ports|[omf2097](http://github.com/omf2097/openomf)|95483a0ad986434757519eb0679927d05d3bd1b6|Nov 19, 2026
 Ports|[rott](http://github.com/fabiangreffrath/taradino)|cb59bd899f7d75946c1297e9a0f94999fa76742a|Nov 19, 2026
 Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git)|1c35b9b147a8e67474fba6500bdfc309bef6f8e1|Nov 19, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261119|Nov 19, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-super)|55e50a81195eaf8dd1b7720a601282459832ced1|Nov 19, 2026
 Engines|[libpinmame](http://github.com/vpinball/pinmame)|07754f2750ae32efab84a3064cab553f3e56b064|Nov 19, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|b8a83c8aead6fb3f8893a9d77a97454ce6a75add|Nov 19, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|511b7b0e2ca9f817d142f7eb617c88edcd87559a|Nov 19, 2026
 Emulators|[libretro-anygm](http://github.com/retrodiv/AnyGM-libretro)|ae9ca84eb3863c72dc1483a5a353053e2c0a95ad|Nov 19, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|5f6bdff9451d5c3dedd3d992d7412660eb202cf4|Nov 19, 2026
