@@ -25,6 +25,13 @@ else
 AMIBERRY_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
+ifeq ($(BR2_PACKAGE_FFMPEG),y)
+AMIBERRY_DEPENDENCIES += ffmpeg
+AMIBERRY_CONF_OPTS += -DUSE_FFMPEG=ON
+else
+AMIBERRY_CONF_OPTS += -DUSE_FFMPEG=OFF
+endif
+
 define AMIBERRY_INSTALL_TARGET_CMDS
 	# install binary
 	$(INSTALL) -D $(@D)/buildroot-build/amiberry $(TARGET_DIR)/usr/bin/amiberry

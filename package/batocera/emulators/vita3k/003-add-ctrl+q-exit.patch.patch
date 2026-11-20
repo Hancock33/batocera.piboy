@@ -1,0 +1,43 @@
+diff --git a/vita3k/gui-qt/src/main_window.cpp b/vita3k/gui-qt/src/main_window.cpp
+--- a/vita3k/gui-qt/src/main_window.cpp
++++ b/vita3k/gui-qt/src/main_window.cpp
+@@ -110,6 +110,8 @@
+ #include <QWidgetAction>
+ #include <QtResource>
+ 
++#include <cstdio>
++#include <cstdlib>
+ #include <optional>
+ 
+ #if defined(HAVE_X11) || defined(HAVE_WAYLAND)
+@@ -437,6 +439,8 @@
+ 
+     setup_toolbar();
+ 
++    qApp->installEventFilter(this);
++
+     connect(m_ui->welcome_dialog_action, &QAction::triggered, this, [this]() {
+         auto *welcome = new WelcomeDialog(emuenv, true, this);
+         welcome->open();
+@@ -1289,6 +1293,21 @@
+ }
+ 
+ bool MainWindow::eventFilter(QObject *watched, QEvent *event) {
++    if (event->type() == QEvent::KeyPress) {
++        const auto *key_event = static_cast<QKeyEvent *>(event);
++        if (key_event->key() == Qt::Key_F12 && key_event->modifiers() == Qt::ControlModifier) {
++            if (m_game_window) {
++                // Stopping the app waits on every guest thread and can hang, so flush the open files and leave
++                LOG_INFO("Exit hotkey: {}", emuenv.current_app_title);
++                app::update_app_time_used(emuenv, emuenv.io.app_path);
++                std::fflush(nullptr);
++                std::_Exit(0);
++            }
++            close();
++            return true;
++        }
++    }
++
+     if (event->type() == QEvent::KeyPress && (watched == windowHandle() || watched == m_live_area_widget)) {
+         const auto *ke = static_cast<QKeyEvent *>(event);
+         const auto *focus = QApplication::focusWidget();

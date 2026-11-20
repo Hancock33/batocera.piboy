@@ -1,5 +1,5 @@
 diff --git a/pcsx2/Patch.cpp b/pcsx2/Patch.cpp
-index 05be98333..3e80eaf02 100644
+index 0156bc852..c9c9aa5de 100644
 --- a/pcsx2/Patch.cpp
 +++ b/pcsx2/Patch.cpp
 @@ -291,7 +291,7 @@ bool Patch::OpenPatchesZip()

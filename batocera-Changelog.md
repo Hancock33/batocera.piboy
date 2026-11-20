@@ -17,10 +17,26 @@
 - Windows: new WINE Proton prefixes asked to download WINE Mono
 - Windows: the FPS limiter option had no effect on DXVK games
 ### Updated
+- Amiberry to v8.5.0
+- AppleWin to Nov 8, 2026 build
+- Armsx2 to 2.9.5
+- Azahar to 2126.2
 - Cemu to Nov 13, 2026 build
 - DOSBox Staging to v0.83.1
 - DOSBox-X to 2026.10.01
+- GameTankEmulator to Nov 19, 2026 build
 - Keisho (formerly SM2-Emu) to v0.9.63
+- Lightspark to 0.10.0
+- OpenMSX to Release 22
+- PCSX2 to 2.9.185
+- Python Pyxel to v3.0.3
+- ScummVM to v2026.4.0
+- ShadPS4 to v.0.21.0
+- TIC-80 to v1.4.1
+- Vita3k to Nov 19, 2026 build
+- Xenia Canary to Nov 19, 2026 build
+- Xenia Edge to Nov 20, 2026 build
+- Ymir to v0.4.1
 ### System
 - D7VK to v2.4
 - DXVK-NVAPI to v0.9.3

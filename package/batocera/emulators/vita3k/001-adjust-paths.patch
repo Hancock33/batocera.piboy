@@ -1,10 +1,10 @@
 diff --git a/vita3k/app/src/app_init.cpp b/vita3k/app/src/app_init.cpp
-index 97ede706..a68a9ca7 100644
+index ad44ecdf..b1a3b768 100644
 --- a/vita3k/app/src/app_init.cpp
 +++ b/vita3k/app/src/app_init.cpp
-@@ -291,11 +291,7 @@ bool init_paths(Root &root_paths) {
-         root_paths.set_cache_path(portable_path / "cache");
+@@ -297,11 +297,7 @@ bool init_paths(Root &root_paths) {
          root_paths.set_patch_path(portable_path / "patch");
+         root_paths.set_cheat_path(portable_path / "cheats");
      } else {
 -        // SDL_GetPrefPath is deferred as it creates the directory.
 -        // When using a portable directory, it is not needed.
@@ -15,7 +15,7 @@ index 97ede706..a68a9ca7 100644
  
  #if defined(__APPLE__)
          // Store other data in the user-wide path. Otherwise we may end up dumping
-@@ -388,12 +384,12 @@ bool init_paths(Root &root_paths) {
+@@ -395,12 +391,12 @@ bool init_paths(Root &root_paths) {
  
          // shared path
          if (XDG_DATA_HOME != nullptr)
@@ -26,7 +26,7 @@ index 97ede706..a68a9ca7 100644
  
          // These default to being in shared path
 -        root_paths.set_vita_fs_path(root_paths.get_shared_path() / app_name);
-+        root_paths.set_vita_fs_path(root_paths.get_shared_path() / "");
++        root_paths.set_vita_fs_path(root_paths.get_shared_path());
          root_paths.set_patch_path(root_paths.get_shared_path() / "patch");
+         root_paths.set_cheat_path(root_paths.get_shared_path() / "cheats");
  #endif
-     }
