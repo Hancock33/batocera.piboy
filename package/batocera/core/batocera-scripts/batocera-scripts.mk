@@ -9,7 +9,7 @@ BATOCERA_SCRIPTS_LICENSE = GPL
 BATOCERA_SCRIPTS_SOURCE =
 BATOCERA_SCRIPTS_DEPENDENCIES = pciutils
 
-BATOCERA_SCRIPTS_SRC = $(BATOCERA_SCRIPTS_PKGDIR)scripts
+BATOCERA_SCRIPTS_SRC = $(BATOCERA_SCRIPTS_PKGDIR)/scripts
 
 # Scripts installed to /usr/bin on every board, relative to scripts/
 BATOCERA_SCRIPTS_BIN = \
@@ -113,7 +113,7 @@ define BATOCERA_SCRIPTS_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/bluezutils.py
 	$(INSTALL) -D -m 0755 $(BATOCERA_SCRIPTS_SRC)/95battery-led \
 		$(TARGET_DIR)/etc/pm/sleep.d/95battery-led
-	$(INSTALL) -D -m 0644 $(BATOCERA_SCRIPTS_PKGDIR)rules/80-switch-screen.rules \
+	$(INSTALL) -D -m 0644 $(BATOCERA_SCRIPTS_PKGDIR)/rules/80-switch-screen.rules \
 		$(TARGET_DIR)/etc/udev/rules.d/80-switch-screen.rules
 	ln -sf /usr/bin/batocera-xtract $(TARGET_DIR)/usr/bin/file-roller
 endef
