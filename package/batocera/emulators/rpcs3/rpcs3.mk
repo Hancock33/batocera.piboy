@@ -6,17 +6,16 @@
 # Version: Commits on Nov 20, 2026
 RPCS3_VERSION = ddd27e0c5e91b431c0b5071e748522acce7f8220
 RPCS3_SITE = https://github.com/RPCS3/rpcs3.git
-RPCS3_SITE_METHOD=git
-RPCS3_GIT_SUBMODULES=YES
+RPCS3_SITE_METHOD = git
+RPCS3_GIT_SUBMODULES = YES
 RPCS3_LICENSE = GPLv2
 RPCS3_SUPPORTS_IN_SOURCE_BUILD = NO
 
 RPCS3_TRANSLATIONS_VERSION = release-43834886536-65
 RPCS3_EXTRA_DOWNLOADS = https://github.com/RPCS3/rpcs3_translations/archive/refs/tags/$(RPCS3_TRANSLATIONS_VERSION).tar.gz
 
-RPCS3_DEPENDENCIES += alsa-lib cubeb faudio ffmpeg flatbuffers
-RPCS3_DEPENDENCIES += libcurl libevdev libglew libglu libpng libusb libxml2
-RPCS3_DEPENDENCIES += llvm mesa3d ncurses openal opencv4 pugixml rtmidi rtmpdump sdl3 wolfssl
+RPCS3_DEPENDENCIES += alsa-lib cubeb faudio ffmpeg libcurl libevdev libglew libglu libpng libusb
+RPCS3_DEPENDENCIES += llvm mesa3d openal protobuf pugixml rtmidi sdl3 zlib zstd
 RPCS3_DEPENDENCIES += qt6base qt6multimedia qt6svg
 RPCS3_EMULATOR_INFO = rpcs3.emulator.yml
 
@@ -39,10 +38,10 @@ RPCS3_CONF_OPTS += -DUSE_PRECOMPILED_HEADERS=OFF
 RPCS3_CONF_OPTS += -DUSE_SDL=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CUBEB=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_CURL=ON
+RPCS3_CONF_OPTS += -DUSE_SYSTEM_FAUDIO=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_FFMPEG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_LIBPNG=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_LIBUSB=ON
-RPCS3_CONF_OPTS += -DUSE_SYSTEM_OPENCV=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_PROTOBUF=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_PUGIXML=ON
 RPCS3_CONF_OPTS += -DUSE_SYSTEM_RTMIDI=ON
@@ -58,7 +57,7 @@ else
 endif
 
 define RPCS3_VER_STRING
-	$(SED) 's:$${CMAKE_SOURCE_DIR}:$(DL_DIR)/$(RPCS3_DL_SUBDIR)/git:g' $(@D)/rpcs3/git-version.cmake
+	$(SED) 's:$${CMAKE_SOURCE_DIR}:$(RPCS3_DL_DIR)/git:g' $(@D)/rpcs3/git-version.cmake
 endef
 
 RPCS3_PRE_PATCH_HOOKS += RPCS3_VER_STRING
