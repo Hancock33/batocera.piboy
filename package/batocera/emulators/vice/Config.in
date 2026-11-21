@@ -7,20 +7,14 @@ config BR2_PACKAGE_VICE
 	select BR2_PACKAGE_HOST_XA
 	select BR2_PACKAGE_LAME
 	select BR2_PACKAGE_LIBCURL
-	select BR2_PACKAGE_LIBVORBIS
 	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_LIBVORBIS
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_IMAGE
 	select BR2_PACKAGE_ZLIB
 
 	help
-	  VICE is an emulator collection which emulates the
-	  - C64,
-	  - C64-DTV,
-	  - C128,
-	  - VIC20
-	  - practically all PET models,
-	  - PLUS4
-	  - CBM-II (aka C610).
+	  VICE, the Versatile Commodore Emulator: C64, C64DTV,
+	  SuperCPU64, C128, VIC-20, Plus/4 and PET.
 
-comment "Vice  needs a toolchain w/ OpenGl,  SDL"
+	  https://vice-emu.sourceforge.io/

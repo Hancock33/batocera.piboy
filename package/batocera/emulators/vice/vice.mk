@@ -6,55 +6,44 @@
 # Version: Commits on Nov 21, 2026
 VICE_VERSION = r46436
 VICE_SITE = $(call github,VICE-Team,svn-mirror,$(VICE_VERSION))
-VICE_LICENSE = GPLv2
-VICE_SUBDIR  = vice
-VICE_DEPENDENCIES = alsa-lib giflib host-dos2unix host-xa jpeg libcurl sdl2 sdl2_image zlib
+VICE_SUBDIR = vice
+VICE_LICENSE = GPL-2.0+
+VICE_LICENSE_FILES = vice/COPYING
+VICE_DEPENDENCIES = alsa-lib flac giflib host-autoconf host-automake host-bison \
+	host-dos2unix host-flex host-xa lame libcurl libpng libvorbis sdl2 sdl2_image zlib
 VICE_EMULATOR_INFO = vice.emulator.yml
 
-VICE_CONF_OPTS += --disable-debug-gtk3ui
-VICE_CONF_OPTS += --disable-html-docs
-VICE_CONF_OPTS += --disable-option-checking
-VICE_CONF_OPTS += --disable-pdf-docs
-VICE_CONF_OPTS += --enable-arch=yes
-VICE_CONF_OPTS += --enable-midi
-VICE_CONF_OPTS += --enable-sdl2ui
-VICE_CONF_OPTS += --enable-x64
-VICE_CONF_OPTS += --with-alsa
-VICE_CONF_OPTS += --with-fastsid
-VICE_CONF_OPTS += --with-gif
-VICE_CONF_OPTS += --with-sdlsound
-VICE_CONF_OPTS += --without-pulse
+VICE_CONF_OPTS = \
+	--disable-option-checking \
+	--disable-html-docs \
+	--enable-midi \
+	--enable-sdl2ui \
+	--enable-x64 \
+	--with-alsa \
+	--with-fastsid \
+	--with-flac \
+	--with-gif \
+	--with-lame \
+	--with-png \
+	--with-sdlsound \
+	--with-vorbis \
+	--without-pulse
 
 ifeq ($(BR2_PACKAGE_MPG123),y)
 VICE_CONF_OPTS += --with-mpg123
 VICE_DEPENDENCIES += mpg123
 endif
 
-ifeq ($(BR2_PACKAGE_FLAC),y)
-VICE_CONF_OPTS += --with-flac
-VICE_DEPENDENCIES += flac
+ifeq ($(BR2_PACKAGE_LIBUSB),y)
+VICE_DEPENDENCIES += libusb
+else
+VICE_CONF_OPTS += --without-libusb
 endif
 
-ifeq ($(BR2_PACKAGE_LIBVORBIS),y)
-VICE_CONF_OPTS += --with-vorbis
-VICE_DEPENDENCIES += libvorbis
-endif
-
-ifeq ($(BR2_PACKAGE_LAME),y)
-VICE_CONF_OPTS += --with-lame
-VICE_DEPENDENCIES += lame
-endif
-
-ifeq ($(BR2_PACKAGE_LIBPNG),y)
-VICE_CONF_OPTS += --with-png
-VICE_DEPENDENCIES += libpng
-endif
-
-define VICE_SRC_AUTOCONFIGURE
-	cd $(@D)/vice && ./autogen.sh
+define VICE_AUTOGEN
+	cd $(VICE_SRCDIR) && PATH=$(BR_PATH) ./autogen.sh
 endef
-
-VICE_POST_EXTRACT_HOOKS += VICE_SRC_AUTOCONFIGURE
+VICE_PRE_CONFIGURE_HOOKS += VICE_AUTOGEN
 
 $(eval $(autotools-package))
 $(eval $(emulator-info-package))

@@ -1,0 +1,19 @@
+Disable VICE logging
+
+log_helper() crashes when stdout is redirected (as when batocera-launch
+starts the emulator), so return before any log output is produced.
+Return 0 like the "no log enabled" path so callers do not see an error.
+
+--- a/vice/src/log.c
++++ b/vice/src/log.c
+@@ -716,6 +716,10 @@
+     char *terminalpre = NULL;
+     char *terminaltxt = NULL;
+ 
++    /* batocera: logging can crash VICE when stdout is redirected to the
++       emulator log, so drop all log output */
++    return 0;
++
+     /* exit early if there is no log enabled */
+     if ((log_limit < level) ||
+         ((log_to_stdout == 0) && (log_to_file == 0) && (log_to_monitor == 0))) {
