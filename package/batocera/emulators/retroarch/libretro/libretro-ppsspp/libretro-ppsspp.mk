@@ -98,7 +98,6 @@ endef
 LIBRETRO_PPSSPP_PRE_CONFIGURE_HOOKS += LIBRETRO_PPSSPP_UPDATE_INCLUDES
 
 define LIBRETRO_PPSSPP_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/lib/ppsspp_libretro.so $(TARGET_DIR)/usr/lib/libretro/ppsspp_libretro.so
 endef
 

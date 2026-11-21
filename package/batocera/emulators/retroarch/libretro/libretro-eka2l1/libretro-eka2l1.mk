@@ -21,7 +21,6 @@ LIBRETRO_EKA2L1_CONF_OPTS += -DCI=ON
 LIBRETRO_EKA2L1_CONF_OPTS += -DEKA2L1_SCRIPTING_LUA=OFF
 
 define LIBRETRO_EKA2L1_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/buildroot-build/bin/eka2l1_libretro.so $(TARGET_DIR)/usr/lib/libretro/eka2l1_libretro.so
 endef
 

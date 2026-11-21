@@ -33,7 +33,6 @@ LIBRETRO_AZAHAR_CONF_OPTS += -DUSE_SYSTEM_OPENAL=ON
 LIBRETRO_AZAHAR_CONF_OPTS += -DUSE_SYSTEM_OPENSSL=ON
 
 define LIBRETRO_AZAHAR_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/azahar_libretro.so $(TARGET_DIR)/usr/lib/libretro/azahar_libretro.so
 endef
 

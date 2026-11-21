@@ -30,7 +30,6 @@ define LIBRETRO_BEETLE_WSWAN_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_WSWAN_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/mednafen_wswan_libretro.so $(TARGET_DIR)/usr/lib/libretro/mednafen_wswan_libretro.so
 endef
 

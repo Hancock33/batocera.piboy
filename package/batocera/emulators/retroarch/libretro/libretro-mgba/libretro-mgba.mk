@@ -32,7 +32,6 @@ else
 endif
 
 define LIBRETRO_MGBA_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/mgba_libretro.so $(TARGET_DIR)/usr/lib/libretro/mgba_libretro.so
 endef
 

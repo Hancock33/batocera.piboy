@@ -34,7 +34,6 @@ define LIBRETRO_NESTOPIA_BUILD_CMDS
 endef
 
 define LIBRETRO_NESTOPIA_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libretro/nestopia_libretro.so $(TARGET_DIR)/usr/lib/libretro/nestopia_libretro.so
 
 	# Bios

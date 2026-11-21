@@ -88,7 +88,6 @@ define LIBRETRO_PARALLEL_N64_BUILD_CMDS
 endef
 
 define LIBRETRO_PARALLEL_N64_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/parallel_n64_libretro.so $(TARGET_DIR)/usr/lib/libretro/parallel_n64_libretro.so
 endef
 

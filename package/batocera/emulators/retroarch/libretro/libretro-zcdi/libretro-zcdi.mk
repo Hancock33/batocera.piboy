@@ -17,7 +17,6 @@ LIBRETRO_ZCDI_CONF_OPTS += -DZCDI_ENABLE_LIBRETRO=ON
 LIBRETRO_ZCDI_CONF_OPTS += -DZCDI_BUILD_TESTS=OFF
 
 define LIBRETRO_ZCDI_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/buildroot-build/zcdi_libretro.so $(TARGET_DIR)/usr/lib/libretro/zcdi_libretro.so
 	$(INSTALL) -D -m 0644 $(@D)/src/libretro/zcdi_libretro.info $(TARGET_DIR)/usr/share/libretro/info/zcdi_libretro.info

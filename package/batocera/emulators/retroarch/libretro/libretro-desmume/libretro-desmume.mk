@@ -17,7 +17,6 @@ define LIBRETRO_DESMUME_BUILD_CMDS
 endef
 
 define LIBRETRO_DESMUME_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/desmume/src/frontend/libretro/desmume_libretro.so $(TARGET_DIR)/usr/lib/libretro/desmume_libretro.so
 endef
 

@@ -61,7 +61,6 @@ else
 endif
 
 define LIBRETRO_ARMSX2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
 	$(INSTALL) -D $(@D)/buildroot-build/bin/armsx2_libretro.so $(TARGET_DIR)/usr/lib/libretro/armsx2_libretro.so

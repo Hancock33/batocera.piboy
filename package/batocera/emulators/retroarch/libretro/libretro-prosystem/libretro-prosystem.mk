@@ -33,7 +33,6 @@ define LIBRETRO_PROSYSTEM_BUILD_CMDS
 endef
 
 define LIBRETRO_PROSYSTEM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/prosystem_libretro.so $(TARGET_DIR)/usr/lib/libretro/prosystem_libretro.so
 endef
 

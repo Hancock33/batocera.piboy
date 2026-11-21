@@ -39,7 +39,6 @@ define LIBRETRO_PC98_BUILD_CMDS
 endef
 
 define LIBRETRO_PC98_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/np2kai
 	$(INSTALL) -D $(@D)/sdl/np2kai_libretro.so $(TARGET_DIR)/usr/lib/libretro/np2kai_libretro.so
 endef

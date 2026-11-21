@@ -49,7 +49,6 @@ define LIBRETRO_FBNEO_BUILD_CMDS
 endef
 
 define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/src/burner/libretro/fbneo_libretro.so $(TARGET_DIR)/usr/lib/libretro/fbneo_libretro.so
 
 	# Bios

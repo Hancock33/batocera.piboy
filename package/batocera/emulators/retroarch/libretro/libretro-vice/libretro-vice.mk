@@ -45,7 +45,6 @@ define LIBRETRO_VICE_BUILD_CMDS
 endef
 
 define LIBRETRO_VICE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/vice_x64_libretro.so    $(TARGET_DIR)/usr/lib/libretro/vice_x64_libretro.so
 	$(INSTALL) -D $(@D)/vice_x64sc_libretro.so  $(TARGET_DIR)/usr/lib/libretro/vice_x64sc_libretro.so
 	$(INSTALL) -D $(@D)/vice_x128_libretro.so   $(TARGET_DIR)/usr/lib/libretro/vice_x128_libretro.so

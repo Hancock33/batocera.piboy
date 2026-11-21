@@ -28,7 +28,6 @@ define LIBRETRO_FUSE_BUILD_CMDS
 endef
 
 define LIBRETRO_FUSE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/fuse_libretro.so $(TARGET_DIR)/usr/lib/libretro/fuse_libretro.so
 endef
 

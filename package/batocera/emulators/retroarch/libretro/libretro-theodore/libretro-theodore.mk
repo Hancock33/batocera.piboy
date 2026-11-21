@@ -35,7 +35,6 @@ define LIBRETRO_THEODORE_BUILD_CMDS
 endef
 
 define LIBRETRO_THEODORE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/theodore_libretro.so $(TARGET_DIR)/usr/lib/libretro/theodore_libretro.so
 endef
 

@@ -18,7 +18,6 @@ define LIBRETRO_GAMETANK_BUILD_CMDS
 endef
 
 define LIBRETRO_GAMETANK_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/gametank_libretro.so $(TARGET_DIR)/usr/lib/libretro/gametank_libretro.so
 	$(INSTALL) -D -m 0644 $(@D)/gametank_libretro.info $(TARGET_DIR)/usr/share/libretro/info/gametank_libretro.info

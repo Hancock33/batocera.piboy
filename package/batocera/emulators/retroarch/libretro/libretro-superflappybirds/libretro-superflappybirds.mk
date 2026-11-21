@@ -14,7 +14,6 @@ LIBRETRO_SUPERFLAPPYBIRDS_CONF_OPTS += -DUSE_OpenMP=OFF
 LIBRETRO_SUPERFLAPPYBIRDS_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(TARGET_CXX)
 
 define LIBRETRO_SUPERFLAPPYBIRDS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/superflappybirds
 
 	$(INSTALL) -D $(@D)/buildroot-build/superflappybirds_libretro.so $(TARGET_DIR)/usr/lib/libretro/superflappybirds_libretro.so

@@ -35,7 +35,6 @@ define LIBRETRO_TYRQUAKE_BUILD_CMDS
 endef
 
 define LIBRETRO_TYRQUAKE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/tyrquake_libretro.so $(TARGET_DIR)/usr/lib/libretro/tyrquake_libretro.so
 endef
 

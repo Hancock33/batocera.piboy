@@ -25,7 +25,6 @@ define LIBRETRO_BLASTEM_BUILD_CMDS
 endef
 
 define LIBRETRO_BLASTEM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libblastem.so $(TARGET_DIR)/usr/lib/libretro/blastem_libretro.so
 endef
 

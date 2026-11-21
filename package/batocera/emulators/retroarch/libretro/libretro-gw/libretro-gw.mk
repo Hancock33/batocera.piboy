@@ -16,7 +16,6 @@ define LIBRETRO_GW_BUILD_CMDS
 endef
 
 define LIBRETRO_GW_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/gw_libretro.so $(TARGET_DIR)/usr/lib/libretro/gw_libretro.so
 endef
 

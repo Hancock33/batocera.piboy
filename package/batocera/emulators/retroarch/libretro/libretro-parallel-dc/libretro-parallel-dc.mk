@@ -34,7 +34,6 @@ define LIBRETRO_PARALLEL_DC_BUILD_CMDS
 endef
 
 define LIBRETRO_PARALLEL_DC_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/parallel_dc_libretro.so $(TARGET_DIR)/usr/lib/libretro/parallel_dc_libretro.so
 endef
 

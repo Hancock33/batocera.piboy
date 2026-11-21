@@ -47,7 +47,6 @@ define LIBRETRO_PCSX_BUILD_CMDS
 endef
 
 define LIBRETRO_PCSX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/pcsx_rearmed_libretro.so $(TARGET_DIR)/usr/lib/libretro/pcsx_rearmed_libretro.so
 endef
 

@@ -31,7 +31,6 @@ define LIBRETRO_UAE4ARM_BUILD_CMDS
 endef
 
 define LIBRETRO_UAE4ARM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/uae4arm_libretro.so $(TARGET_DIR)/usr/lib/libretro/uae4arm_libretro.so
 endef
 

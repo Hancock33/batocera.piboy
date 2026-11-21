@@ -19,7 +19,6 @@ define LIBRETRO_PS2_BUILD_CMDS
 endef
 
 define LIBRETRO_PS2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/pcsx2/resources
 	$(INSTALL) -D $(@D)/pcsx2_libretro.so    $(TARGET_DIR)/usr/lib/libretro/pcsx2_libretro.so
 	cp -f $(@D)/bin/resources/GameIndex.yaml $(TARGET_DIR)/usr/share/batocera/datainit/bios/pcsx2/resources

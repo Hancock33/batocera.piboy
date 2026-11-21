@@ -41,7 +41,6 @@ else
 endif
 
 define LIBRETRO_DOLPHIN_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/dolphin_libretro.so $(TARGET_DIR)/usr/lib/libretro/dolphin_libretro.so
 endef
 

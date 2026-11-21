@@ -33,7 +33,6 @@ define LIBRETRO_SNES9X_BUILD_CMDS
 endef
 
 define LIBRETRO_SNES9X_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libretro/snes9x_libretro.so $(TARGET_DIR)/usr/lib/libretro/snes9x_libretro.so
 endef
 

@@ -36,7 +36,6 @@ else
 endif
 
 define LIBRETRO_PANDA3DS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/buildroot-build/panda3ds_libretro.so $(TARGET_DIR)/usr/lib/libretro/panda3ds_libretro.so
 	$(INSTALL) -D $(@D)/docs/libretro/panda3ds_libretro.info $(TARGET_DIR)/usr/share/libretro/info/panda3ds_libretro.info

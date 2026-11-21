@@ -28,7 +28,6 @@ define LIBRETRO_SUPERMODEL_BUILD_CMDS
 endef
 
 define LIBRETRO_SUPERMODEL_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/supermodel/Config
 	$(INSTALL) -D $(@D)/supermodel_libretro*.so $(TARGET_DIR)/usr/lib/libretro/supermodel_libretro.so

@@ -16,7 +16,6 @@ LIBRETRO_ARDUOUS_EMULATOR_INFO = arduous.libretro.core.yml
 LIBRETRO_ARDUOUS_CONF_OPTS  = -DWERROR=OFF
 
 define LIBRETRO_ARDUOUS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/buildroot-build/arduous_libretro.so $(TARGET_DIR)/usr/lib/libretro/arduous_libretro.so
 endef
 

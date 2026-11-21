@@ -37,7 +37,6 @@ define LIBRETRO_MAME2003_PLUS_BUILD_CMDS
 endef
 
 define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/mame2003_plus_libretro.so $(TARGET_DIR)/usr/lib/libretro/mame078plus_libretro.so
 
 	# Bios

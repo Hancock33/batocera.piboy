@@ -19,7 +19,6 @@ LIBRETRO_EASYRPG_CONF_OPTS += -DPLAYER_TARGET_PLATFORM=libretro
 LIBRETRO_EASYRPG_CONF_OPTS += -DBUILD_SHARED_LIBS=ON
 
 define LIBRETRO_EASYRPG_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/buildroot-build/easyrpg_libretro.so $(TARGET_DIR)/usr/lib/libretro/easyrpg_libretro.so
 endef
 

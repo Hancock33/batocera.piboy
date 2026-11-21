@@ -17,7 +17,6 @@ define LIBRETRO_BSNES_HD_BUILD_CMDS
 endef
 
 define LIBRETRO_BSNES_HD_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/bsnes/out/bsnes_hd_beta_libretro.so $(TARGET_DIR)/usr/lib/libretro/bsnes_hd_libretro.so
 endef
 

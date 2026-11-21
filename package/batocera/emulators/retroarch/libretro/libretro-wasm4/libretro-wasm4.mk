@@ -15,7 +15,6 @@ LIBRETRO_WASM4_DEPENDENCIES += retroarch
 LIBRETRO_WASM4_EMULATOR_INFO = wasm4.libretro.core.yml
 
 define LIBRETRO_WASM4_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	$(INSTALL) -D $(@D)/runtimes/native/wasm4_libretro.so $(TARGET_DIR)/usr/lib/libretro/wasm4_libretro.so
 	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-wasm4/wasm4.keys $(TARGET_DIR)/usr/share/evmapy/

@@ -29,7 +29,6 @@ define LIBRETRO_NEOCD_BUILD_CMDS
 endef
 
 define LIBRETRO_NEOCD_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/neocd_libretro.so $(TARGET_DIR)/usr/lib/libretro/neocd_libretro.so
 endef
 

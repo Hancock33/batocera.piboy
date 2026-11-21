@@ -18,7 +18,6 @@ LIBRETRO_NUANCE_CONF_OPTS += -DBUILD_LIBRETRO=ON
 LIBRETRO_NUANCE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
 define LIBRETRO_NUANCE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/nuance
 	$(INSTALL) -D $(@D)/buildroot-build/nuance_libretro.so $(TARGET_DIR)/usr/lib/libretro/nuance_libretro.so

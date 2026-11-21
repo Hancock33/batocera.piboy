@@ -17,7 +17,6 @@ define LIBRETRO_DOUBLECHERRYGB_BUILD_CMDS
 endef
 
 define LIBRETRO_DOUBLECHERRYGB_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/DoubleCherryGB_libretro.so $(TARGET_DIR)/usr/lib/libretro/doublecherrygb_libretro.so
 endef
 

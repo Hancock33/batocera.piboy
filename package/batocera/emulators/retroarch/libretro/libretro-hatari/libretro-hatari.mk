@@ -17,7 +17,6 @@ LIBRETRO_HATARI_CONF_OPTS += -DENABLE_STATIC_ZLIB=ON
 LIBRETRO_HATARI_CONF_OPTS += -DENABLE_STATIC_CAPSIMAGE=ON
 
 define LIBRETRO_HATARI_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/src/hatari_libretro.so $(TARGET_DIR)/usr/lib/libretro/hatari_libretro.so
 endef
 

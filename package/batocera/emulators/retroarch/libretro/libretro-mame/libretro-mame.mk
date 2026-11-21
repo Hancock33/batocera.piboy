@@ -15,7 +15,6 @@ $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY,sega-ar
 
 define LIBRETRO_MAME_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/lib/libretro/mame_libretro.so
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	tar -xf $(DL_DIR)/$(LIBRETRO_MAME_DL_SUBDIR)/$(LIBRETRO_MAME_SOURCE) -C $(TARGET_DIR)
 
 	mkdir -p $(TARGET_DIR)/usr/share/lr-mame

@@ -33,7 +33,6 @@ define LIBRETRO_O2EM_BUILD_CMDS
 endef
 
 define LIBRETRO_O2EM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/o2em_libretro.so $(TARGET_DIR)/usr/lib/libretro/o2em_libretro.so
 endef
 

@@ -18,7 +18,6 @@ define LIBRETRO_VAPORSPEC_BUILD_CMDS
 endef
 
 define LIBRETRO_VAPORSPEC_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/machine/vaporspec_libretro.so $(TARGET_DIR)/usr/lib/libretro/vaporspec_libretro.so
 endef
 

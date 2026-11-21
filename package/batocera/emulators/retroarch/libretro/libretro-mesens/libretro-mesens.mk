@@ -16,7 +16,6 @@ define LIBRETRO_MESENS_BUILD_CMDS
 endef
 
 define LIBRETRO_MESENS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/Libretro/mesen-s_libretro.so $(TARGET_DIR)/usr/lib/libretro/mesen-s_libretro.so
 endef
 

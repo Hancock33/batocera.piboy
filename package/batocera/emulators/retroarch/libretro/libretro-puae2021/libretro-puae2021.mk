@@ -18,7 +18,6 @@ define LIBRETRO_PUAE2021_BUILD_CMDS
 endef
 
 define LIBRETRO_PUAE2021_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/puae2021_libretro.so $(TARGET_DIR)/usr/lib/libretro/puae2021_libretro.so
 endef
 
