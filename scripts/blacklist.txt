@@ -5,6 +5,7 @@ firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
 firmware-rk3588.mk
+gamescope.mk
 jstest2.mk
 kodi-audiodecoder-openmpt.mk
 libaltsound.mk

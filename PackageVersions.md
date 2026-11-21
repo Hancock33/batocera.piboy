@@ -414,6 +414,7 @@ Network|[aic8800](http://github.com/radxa-pkg/aic8800)|5.0+git20260123.5f7be68d-
 Network|[bcmdhd](http://github.com/armbian/bcmdhd-dkms)|3b12c096d0fc2e6363920e80ec6ba71618e7cd29|Nov 18, 2026
 Network|[broadcom-wl](https://docs.broadcom.com/docs-and-downloads/docs/linux_sta)|6_30_223_271|N/A
 Network|[rk915](http://github.com/ImanolBarba/rk915)|bf237144d8fde7dffaef1777350b23d5d40d0920|N/A
+Network|[swt6621s](http://github.com/Novice-PG/swt6621s)|e49829a8919391af5d564245b3292544480bbb16|Nov 12, 2026
 Network|[uwe5622](http://github.com/armbian/uwe5622)|d2d6bc45c5ef9cefdd53e6c51cec3ba948b84972|Nov 02, 2026
 Ports|[abuse](http://github.com/apancik/Abuse_2025)|48bc0d079116c6429989bcf88595ef20c5c1b80f|Mar 25, 2026
 Ports|[alephone](http://github.com/Aleph-One-Marathon/alephone)|7768e9aa16a652db44177ab7936ce7796d306dce|Nov 14, 2026
@@ -552,6 +553,7 @@ Utils|[fake-hwclock](https://git.einval.com/git/fake-hwclock.git)|v0.14|Jul 14, 
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.71.0|Nov 06, 2026
 Utils|[fdupes](http://github.com/adrianlopezroche/fdupes)|v2.4.0|Mar 30, 2025
 Utils|[flatpak](https://github.com/flatpak/flatpak/releases)|1.19.2|Sept 28, 2026
+Utils|[gamescope](https://github.com/ValveSoftware/gamescope)|dmemcg-experimental|Jan 14, 2025
 Utils|[grim](https://git.sr.ht/~emersion/grim/refs/download/v)|1.4.1|Jun 14, 2023
 Utils|[innoextract](http://github.com/dscharrer/innoextract)|6e9e34ed0876014fdb46e684103ef8c3605e382e|Feb 06, 2025
 Utils|[jstest2](https://github.com/Grumbel/sdl-jstest)|fb44667c08aeca839a63bef6464aeade2c2d4e27|Oct 30, 2026

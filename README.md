@@ -159,6 +159,7 @@ Firmwares|[firmware-radxa](http://github.com/radxa-pkg/radxa-firmware)|0.2.44|No
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.22|Nov 13, 2026
 Emulators|[libretro-hatari](http://github.com/libretro/hatari)|4edc56f4e2add886ed5406854d12f95fdfdf67b6|Nov 13, 2026
 Emulators|[libretro-skyemu](http://github.com/skylersaleh/SkyEmu)|b64903f0fde8104d0796546b96859e9f682311b7|Nov 13, 2026
+Network|[swt6621s](http://github.com/Novice-PG/swt6621s)|e49829a8919391af5d564245b3292544480bbb16|Nov 12, 2026
 Python|[wiringop-python](https://github.com/orangepi-xunlong/wiringOP-Python.git)|d5486a94063a2033c6bf0b2a61e7f12602541da4|Nov 12, 2026
 Utils|[cabextract](http://github.com/kyz/libmspack)|v1.12|Nov 12, 2026
 Emulators|[libretro-px68k](http://github.com/libretro/px68k-libretro)|3f4f542a39a89ca63c626326fa50c4f0ea5871d7|Nov 12, 2026
@@ -529,6 +530,7 @@ Utils|[innoextract](http://github.com/dscharrer/innoextract)|6e9e34ed0876014fdb4
 Looks|[nanum_font](http://github.com/bulzipke/nanum-font)|2385eb085e4bf326590a2db6d4514e8477d9922f|Feb 02, 2025
 Ports|[srb2](http://github.com/STJr/SRB2)|SRB2_release_2.2.15|Jan 26, 2025
 Ports|[fallout1-ce](http://github.com/alexbatalov/fallout1-ce)|0609bcfd0ec40ff0571d0f57fab2821eb461dc8b|Jan 15, 2025
+Utils|[gamescope](https://github.com/ValveSoftware/gamescope)|dmemcg-experimental|Jan 14, 2025
 Ports|[prototype](http://github.com/ptitSeb/prototype)|80a045a3a3796c3d7506d2e6fdeada5ec3eedf73|Jan 11, 2025
 Python|[pysdl2](http://github.com/py-sdl/py-sdl2)|0.9.17|Dec 30, 2024
 Ports|[blues](http://github.com/twojstaryzdomu/blues)|a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751|Dec 28, 2024

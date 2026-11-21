@@ -3,7 +3,7 @@
 # gamescope
 #
 ################################################################################
-
+# Version: Commits on Oct 23, 2026
 GAMESCOPE_VERSION = 3.17.0
 GAMESCOPE_SITE = https://github.com/ValveSoftware/gamescope
 GAMESCOPE_SITE_METHOD = git

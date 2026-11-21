@@ -9,6 +9,7 @@ config BR2_PACKAGE_GAMESCOPE
 	select BR2_PACKAGE_WAYLAND
 	select BR2_PACKAGE_WAYLAND_PROTOCOLS
 	select BR2_PACKAGE_XLIB_LIBX11
+
 	help
 	  SteamOS session compositing window manager, built for
 	  nesting inside labwc only (no DRM backend).
@@ -48,6 +49,7 @@ config BR2_PACKAGE_GAMESCOPE_COMPOSITOR
 
 config BR2_PACKAGE_GAMESCOPE_WSI_LAYER_ONLY
 	bool "WSI layer only"
+
 	help
 	  Only the Vulkan WSI layer, for the 32-bit Wine libraries of
 	  the 64-bit images: without it gamescope can't pace or limit
