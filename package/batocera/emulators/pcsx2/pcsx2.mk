@@ -18,16 +18,26 @@ PCSX2_GIT_TAG_HI = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 1)
 PCSX2_GIT_TAG_MID = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 2)
 PCSX2_GIT_TAG_LO = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 3)
 
-PCSX2_DEPENDENCIES += alsa-lib ecm ffmpeg fmt freetype kddockwidgets libaio libbacktrace libcurl
-PCSX2_DEPENDENCIES += libgtk3 libpcap libpng libsamplerate libsoundtouch plutosvg plutovg rapidyaml
-PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools portaudio sdl3 shaderc webp xorgproto yaml-cpp zlib
+# Libraries required by cmake/SearchForStuff.cmake; fmt, soundtouch, cubeb,
+# imgui, libzip, rcheevos and the Vulkan headers come from 3rdparty/.
+PCSX2_DEPENDENCIES += dbus ffmpeg fontconfig freetype jpeg kddockwidgets libbacktrace libcurl
+PCSX2_DEPENDENCIES += libpcap libpng lz4 plutosvg plutovg rapidyaml sdl3 udev webp zlib zstd
+PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools
 PCSX2_DEPENDENCIES += host-clang
 
+# The bundled cubeb enables its ALSA and PulseAudio backends when the headers exist
+ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
+    PCSX2_DEPENDENCIES += alsa-lib
+endif
+
+ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
+    PCSX2_DEPENDENCIES += pulseaudio
+endif
+
 PCSX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-PCSX2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
-PCSX2_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
+PCSX2_CONF_OPTS += -DENABLE_TESTS=OFF
 PCSX2_CONF_OPTS += -DLTO_PCSX2_CORE=OFF
-PCSX2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
+PCSX2_CONF_OPTS += -DUSE_BACKTRACE=ON
 
 # The following flag is misleading and *needed* ON to avoid doing -march=native
 PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
@@ -39,24 +49,28 @@ endef
 PCSX2_PRE_CONFIGURE_HOOKS += PCSX2_FIX_WHOLE_ARCHIVE
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
+    PCSX2_DEPENDENCIES += xlib_libX11 xlib_libXrandr
     PCSX2_CONF_OPTS += -DX11_API=ON
 else
     PCSX2_CONF_OPTS += -DX11_API=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
+    PCSX2_DEPENDENCIES += ecm wayland
     PCSX2_CONF_OPTS += -DWAYLAND_API=ON
 else
     PCSX2_CONF_OPTS += -DWAYLAND_API=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+    PCSX2_DEPENDENCIES += libgl
     PCSX2_CONF_OPTS += -DUSE_OPENGL=ON
 else
     PCSX2_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+    PCSX2_DEPENDENCIES += shaderc
     PCSX2_CONF_OPTS += -DUSE_VULKAN=ON
 else
     PCSX2_CONF_OPTS += -DUSE_VULKAN=OFF
