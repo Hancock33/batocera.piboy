@@ -1111,7 +1111,7 @@ def get_pkg_versions(pkg, props):
         net_version = sinden_lightgun_latest()
     elif "mirrors.kodi.tv" in site:
         net_version = kodi_resources_latest(site)
-    elif "ftp.denx.de" in site:
+    elif "u-boot.osuosl.org" in site or "ftp.denx.de" in site:
         net_version = uboot_multiboard_latest(site)
     elif "busybox.net" in site:
         net_version = initramfs_latest(site)

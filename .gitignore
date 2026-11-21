@@ -24,6 +24,7 @@ libretro-mame-tiny
 /.ba-docker-image-available
 *.code-workspace
 batocera.mk
+cleanup.sh
 .vscode/*
 make.log
 package/batocera/emulationstation/batocera-emulationstation/keys.txt

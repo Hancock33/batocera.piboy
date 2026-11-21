@@ -3,7 +3,7 @@
 # uboot-rk3326-mainline
 #
 ################################################################################
-
+# Version: Commits on Oct 05, 2026
 UBOOT_RK3326_MAINLINE_VERSION = 2026.10
 UBOOT_RK3326_MAINLINE_SITE = https://u-boot.osuosl.org
 UBOOT_RK3326_MAINLINE_SOURCE = u-boot-$(UBOOT_RK3326_MAINLINE_VERSION).tar.bz2

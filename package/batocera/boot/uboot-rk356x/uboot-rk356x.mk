@@ -3,7 +3,7 @@
 # uboot-rk356x
 #
 ################################################################################
-
+# Version: Commits on Oct 05, 2026
 UBOOT_RK356X_VERSION = 2026.10
 UBOOT_RK356X_SITE = https://u-boot.osuosl.org
 UBOOT_RK356X_SOURCE = u-boot-$(UBOOT_RK356X_VERSION).tar.bz2

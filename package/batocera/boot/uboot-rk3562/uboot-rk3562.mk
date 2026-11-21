@@ -3,7 +3,7 @@
 # uboot-rk3562
 #
 ################################################################################
-
+# Version: Commits on Oct 05, 2026
 UBOOT_RK3562_VERSION = 2026.10
 UBOOT_RK3562_SITE = https://u-boot.osuosl.org
 UBOOT_RK3562_SOURCE = u-boot-$(UBOOT_RK3562_VERSION).tar.bz2

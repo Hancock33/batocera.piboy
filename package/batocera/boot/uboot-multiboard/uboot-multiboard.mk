@@ -3,8 +3,8 @@
 # uboot-multiboard
 #
 ################################################################################
-# Version: Commits on Jul 07, 2026
-UBOOT_MULTIBOARD_VERSION = 2026.07
+# Version: Commits on Oct 05, 2026
+UBOOT_MULTIBOARD_VERSION = 2026.10
 UBOOT_MULTIBOARD_SITE = https://u-boot.osuosl.org
 UBOOT_MULTIBOARD_SOURCE = u-boot-$(UBOOT_MULTIBOARD_VERSION).tar.bz2
 UBOOT_MULTIBOARD_DL_SUBDIR = uboot

@@ -3,8 +3,8 @@
 # xroar
 #
 ################################################################################
-# Version: Commits on Jul 27, 2026
-XROAR_VERSION = 1.12.1
+# Version: Commits on Nov 15, 2026
+XROAR_VERSION = 1.13.1
 XROAR_SITE = https://www.6809.org.uk/xroar/dl
 XROAR_LICENSE = GPLv3
 XROAR_LICENSE_FILE = COPYING.GPL

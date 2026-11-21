@@ -3,7 +3,7 @@
 # pipewire-ffmpeg-plugins
 #
 ################################################################################
-
+# Version: Commits on Oct 29, 2026
 PIPEWIRE_FFMPEG_PLUGINS_VERSION = $(PIPEWIRE_VERSION)
 PIPEWIRE_FFMPEG_PLUGINS_SOURCE = pipewire-$(PIPEWIRE_VERSION).tar.bz2
 PIPEWIRE_FFMPEG_PLUGINS_SITE = https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/$(PIPEWIRE_VERSION)

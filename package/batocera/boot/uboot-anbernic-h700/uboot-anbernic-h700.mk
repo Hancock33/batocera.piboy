@@ -3,7 +3,7 @@
 # uboot-anbernic-h700
 #
 ################################################################################
-
+# Version: Commits on Oct 05, 2026
 UBOOT_ANBERNIC_H700_VERSION = 2026.10
 UBOOT_ANBERNIC_H700_SITE = https://u-boot.osuosl.org
 UBOOT_ANBERNIC_H700_SOURCE = u-boot-$(UBOOT_ANBERNIC_H700_VERSION).tar.bz2

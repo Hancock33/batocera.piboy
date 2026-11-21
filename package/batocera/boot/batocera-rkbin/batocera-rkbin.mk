@@ -3,7 +3,7 @@
 # batocera-rkbin
 #
 ################################################################################
-
+# Version: Commits on Nov 18, 2026
 BATOCERA_RKBIN_VERSION = 290e719c708f17f36b5a13a4c620e7cda0f1ac46
 BATOCERA_RKBIN_SITE = https://github.com/batocera-linux/batocera-rkbin.git
 BATOCERA_RKBIN_SITE_METHOD = git

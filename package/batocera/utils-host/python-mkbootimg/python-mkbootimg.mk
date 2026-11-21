@@ -3,7 +3,7 @@
 # python-mkbootimg
 #
 ################################################################################
-
+# Version: Commits on Mar 02, 2025
 PYTHON_MKBOOTIMG_VERSION = d2bb0af5ba6d3198a3e99529c97eda1be0b5a093
 PYTHON_MKBOOTIMG_SITE = https://android.googlesource.com/platform/system/tools/mkbootimg
 PYTHON_MKBOOTIMG_SITE_METHOD = git

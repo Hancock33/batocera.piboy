@@ -3,7 +3,7 @@
 # firmware-khadas-vim4
 #
 ################################################################################
-
+# Version: Commits on Apr 23, 2025
 FIRMWARE_KHADAS_VIM4_VERSION = 1.7.3
 FIRMWARE_KHADAS_VIM4_SITE = https://dl.khadas.com/repos/vim4/pool/main/l/linux-board-package-noble-vim4
 FIRMWARE_KHADAS_VIM4_SOURCE = linux-board-package-noble-vim4_$(FIRMWARE_KHADAS_VIM4_VERSION)_arm64.deb

@@ -3,8 +3,8 @@
 # fake-hwclock
 #
 ################################################################################
-# Version: Commits on Jul 14, 2024
-FAKE_HWCLOCK_VERSION = v0.14
+# Version: Commits on Jul 12, 2026
+FAKE_HWCLOCK_VERSION = v0.15
 FAKE_HWCLOCK_SITE = https://git.einval.com/git/fake-hwclock.git
 FAKE_HWCLOCK_SITE_METHOD = git
 FAKE_HWCLOCK_LICENSE = GPL-2.0

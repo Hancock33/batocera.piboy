@@ -3,7 +3,7 @@
 # uboot-rk3576
 #
 ################################################################################
-
+# Version: Commits on Oct 05, 2026
 UBOOT_RK3576_VERSION = 2026.10
 UBOOT_RK3576_SITE = https://u-boot.osuosl.org
 UBOOT_RK3576_SOURCE = u-boot-$(UBOOT_RK3576_VERSION).tar.bz2

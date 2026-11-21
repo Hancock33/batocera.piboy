@@ -3,7 +3,7 @@
 # rk915 - Rockchip RK915 SDIO WiFi driver (ported from BSP 4.4 to mainline)
 #
 ################################################################################
-
+# Version: Commits on Jun 04, 2026
 # Local source - tarball must be placed in Batocera's dl/ directory
 # Create it with: tar czf rk915-1.0.tar.gz --transform='s,^,rk915-1.0/,' \
 #                   -C /path/to/rk915-ported Makefile Kconfig inc/ shared/ src/
