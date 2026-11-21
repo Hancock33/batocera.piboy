@@ -44,7 +44,6 @@ endif
 
 define CEMU_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/cemu/ $(TARGET_DIR)/usr/share/Cemu/
-	mv -f $(@D)/bin/Cemu_release $(@D)/bin/cemu
 	cp -p $(@D)/bin/cemu $(TARGET_DIR)/usr/bin/cemu/
 	# game profiles, shared fonts and translations are read from <prefix>/share/Cemu
 	cp -pr $(@D)/bin/{gameProfiles,resources} $(TARGET_DIR)/usr/share/Cemu/
