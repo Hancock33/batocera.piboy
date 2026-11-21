@@ -28,7 +28,6 @@ define LIBRETRO_UZEM_BUILD_CMDS
 endef
 
 define LIBRETRO_UZEM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/uzem_libretro.so $(TARGET_DIR)/usr/lib/libretro/uzem_libretro.so
 	$(INSTALL) -D $(@D)/uzem_libretro.info $(TARGET_DIR)/usr/share/libretro/info/uzem_libretro.info
 endef

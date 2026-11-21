@@ -26,8 +26,7 @@ endif
 define APPLEWIN_INSTALL_TARGET_CMDS
 	# libretro core
 	$(INSTALL) -D $(@D)/buildroot-build/source/frontends/libretro/applewin_libretro.so $(TARGET_DIR)/usr/lib/libretro/applewin_libretro.so
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
-	cp -av $(@D)/buildroot-build/source/frontends/libretro/applewin_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
+	$(INSTALL) -D -m 0644 $(@D)/buildroot-build/source/frontends/libretro/applewin_libretro.info $(TARGET_DIR)/usr/share/libretro/info/applewin_libretro.info
 	# standalone core
 	cp -avf $(@D)/buildroot-build/sa2 $(TARGET_DIR)/usr/bin/applewin
 	mkdir -p $(TARGET_DIR)/usr/share/applewin

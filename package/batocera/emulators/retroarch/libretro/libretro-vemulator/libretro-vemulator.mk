@@ -16,7 +16,6 @@ define LIBRETRO_VEMULATOR_BUILD_CMDS
 endef
 
 define LIBRETRO_VEMULATOR_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/vemulator_libretro.so $(TARGET_DIR)/usr/lib/libretro/vemulator_libretro.so
 	$(INSTALL) -D $(@D)/vemulator_libretro.info $(TARGET_DIR)/usr/share/libretro/info/vemulator_libretro.info
 endef

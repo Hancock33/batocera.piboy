@@ -15,7 +15,6 @@ define LIBRETRO_EP128EMU_CORE_BUILD_CMDS
 endef
 
 define LIBRETRO_EP128EMU_CORE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/ep128emu_core_libretro.so $(TARGET_DIR)/usr/lib/libretro/ep128emu_libretro.so
 	$(INSTALL) -D $(@D)/ep128emu_core_libretro.info $(TARGET_DIR)/usr/share/libretro/info/ep128emu_core_libretro.info
 endef

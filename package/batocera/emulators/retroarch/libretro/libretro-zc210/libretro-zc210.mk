@@ -19,7 +19,6 @@ define LIBRETRO_ZC210_BUILD_CMDS
 endef
 
 define LIBRETRO_ZC210_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc210
 
 	$(INSTALL) -D $(@D)/zc210_libretro.so $(TARGET_DIR)/usr/lib/libretro/zc210_libretro.so

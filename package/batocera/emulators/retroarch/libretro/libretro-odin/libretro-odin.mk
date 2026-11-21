@@ -20,7 +20,6 @@ LIBRETRO_ODIN_CONF_OPTS += -DGLSLANG=$(HOST_DIR)/bin/glslangValidator
 LIBRETRO_ODIN_CONF_OPTS += -DODIN_VERSION=$(shell echo $(LIBRETRO_ODIN_VERSION) | cut -c1-7)
 
 define LIBRETRO_ODIN_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/buildroot-build/odin_libretro.so $(TARGET_DIR)/usr/lib/libretro/odin_libretro.so
 	$(INSTALL) -D -m 0644 $(@D)/odin_libretro.info $(TARGET_DIR)/usr/share/libretro/info/odin_libretro.info
 endef
