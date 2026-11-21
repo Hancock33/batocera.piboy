@@ -1,5 +1,5 @@
-config BR2_PACKAGE_LIBDATE
-	bool "libdate"
+config BR2_PACKAGE_DATE
+	bool "date"
 
 	help
 	  A date and time library based on the C++11/14/17

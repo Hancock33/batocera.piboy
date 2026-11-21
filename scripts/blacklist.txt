@@ -19,7 +19,7 @@ libserum.mk
 libvni.mk
 libwinevbs.mk
 libzedmd.mk
-mt32emu.mk
+munt.mk
 noto-cjk-fonts.mk
 openxr-sdk.mk
 shader-slang.mk

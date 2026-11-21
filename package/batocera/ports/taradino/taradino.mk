@@ -1,0 +1,25 @@
+################################################################################
+#
+# taradino
+#
+################################################################################
+# Version: Commits on Nov 19, 2026
+TARADINO_VERSION = cb59bd899f7d75946c1297e9a0f94999fa76742a
+TARADINO_SITE = $(call github,fabiangreffrath,taradino,$(TARADINO_VERSION))
+TARADINO_LICENSE = GPLv2
+TARADINO_LICENSE_FILE = README.md
+TARADINO_EMULATOR_INFO = taradino.emulator.yml
+TARADINO_DEPENDENCIES = sdl2 sdl2_mixer
+
+TARADINO_SUPPORTS_IN_SOURCE_BUILD = NO
+
+TARADINO_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+
+define TARADINO_EVMAPY
+	mkdir -p $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/taradino/rott.keys $(TARGET_DIR)/usr/share/evmapy
+endef
+TARADINO_POST_INSTALL_TARGET_HOOKS += TARADINO_EVMAPY
+
+$(eval $(cmake-package))
+$(eval $(emulator-info-package))

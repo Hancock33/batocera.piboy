@@ -1,5 +1,5 @@
-config BR2_PACKAGE_RTCW
-	bool "rtcw"
+config BR2_PACKAGE_IORTCW
+	bool "iortcw"
 	select BR2_PACKAGE_OPENAL
 	select BR2_PACKAGE_SDL2
 

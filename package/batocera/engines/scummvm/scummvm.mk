@@ -52,8 +52,8 @@ else
 endif
 
 # Munt (MT32-Emulator) options
-ifeq ($(BR2_PACKAGE_MT32EMU),y)
-    SCUMMVM_DEPENDENCIES += mt32emu
+ifeq ($(BR2_PACKAGE_MUNT),y)
+    SCUMMVM_DEPENDENCIES += munt
     SCUMMVM_CONF_OPTS += --enable-mt32emu
 else
     SCUMMVM_CONF_OPTS += --disable-mt32emu

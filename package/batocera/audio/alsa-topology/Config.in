@@ -1,5 +1,5 @@
-config BR2_PACKAGE_ALSA_TOPOLOGY_CONF
-	bool "alsa-topology-conf"
+config BR2_PACKAGE_ALSA_TOPOLOGY
+	bool "alsa-topology"
 
 	help
 	  ALSA topology configuration files.

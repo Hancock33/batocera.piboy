@@ -11,7 +11,7 @@ AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AMIBERRY_DEPENDENCIES += flac json-for-modern-cpp libcurl libpcap libmpeg2 libpng
 AMIBERRY_DEPENDENCIES += libserialport libxml2 mpg123
-AMIBERRY_DEPENDENCIES += portmidi sdl3 sdl3_image sdl3_ttf zlib
+AMIBERRY_DEPENDENCIES += libportmidi sdl3 sdl3_image sdl3_ttf zlib
 AMIBERRY_EMULATOR_INFO = amiberry.emulator.yml
 
 AMIBERRY_CONF_OPTS += -DCMAKE_C_COMPILER=$(TARGET_CC)

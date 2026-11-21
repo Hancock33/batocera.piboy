@@ -1300,7 +1300,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
                                                                 BR2_PACKAGE_BATOCERA_TARGET_SM8650
 
     # Return to Castle Wolfenstein
-    select BR2_PACKAGE_RTCW                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
+    select BR2_PACKAGE_IORTCW                                 if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || (BR2_aarch64 && BR2_PACKAGE_BATOCERA_GLES3)
 
     # Fallout 1 open source engine
     select BR2_PACKAGE_FALLOUT1_CE                          # ALL
@@ -1318,7 +1318,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
     select BR2_PACKAGE_SONIC3_AIR                           if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY  || BR2_PACKAGE_BATOCERA_BCM27XX
 
     # Rise of the Triad
-    select BR2_PACKAGE_ROTT                                 # ALL
+    select BR2_PACKAGE_TARADINO                                 # ALL
 
     # Jazz Jackrabbit
     select BR2_PACKAGE_OPENJAZZ                             # ALL
@@ -1422,10 +1422,10 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_XROAR                                if  BR2_PACKAGE_HAS_LIBGL                      # Xroar requires OpenGL
 
     # BK-0010/0011/Terak 8510a
-    select BR2_PACKAGE_LIBRETRO_BK_EMULATOR
+    select BR2_PACKAGE_LIBRETRO_BK
 
     # Enterprise 128
-    select BR2_PACKAGE_LIBRETRO_EP128EMU
+    select BR2_PACKAGE_LIBRETRO_EP128EMU_CORE
 
     help
         Old computers
@@ -1679,7 +1679,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
     # Sonic Retro Engine
     select BR2_PACKAGE_SONIC2013                            # ALL
     select BR2_PACKAGE_SONICCD                              # ALL
-    select BR2_PACKAGE_SONICMANIA                           # ALL
+    select BR2_PACKAGE_SONIC_MANIA                           # ALL
     select BR2_PACKAGE_SONICNEXUS                           # ALL
 
     # Epoch Cassette Vision

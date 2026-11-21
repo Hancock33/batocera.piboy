@@ -1,5 +1,5 @@
-config BR2_PACKAGE_PORTMIDI
-	bool "portmidi"
+config BR2_PACKAGE_LIBPORTMIDI
+	bool "libportmidi"
 	select BR2_PACKAGE_ALSA_LIB
 
 	help

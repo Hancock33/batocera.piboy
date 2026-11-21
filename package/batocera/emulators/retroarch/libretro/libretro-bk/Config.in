@@ -1,4 +1,4 @@
-config BR2_PACKAGE_LIBRETRO_BK_EMULATOR
+config BR2_PACKAGE_LIBRETRO_BK
 	bool "libretro-bk"
 	depends on BR2_INSTALL_LIBSTDCPP
 
@@ -7,5 +7,5 @@ config BR2_PACKAGE_LIBRETRO_BK_EMULATOR
 
 	  http://www.libretro.com
 
-comment "LIBRETRO_BK_EMULATOR needs a toolchain w/ C++"
+comment "LIBRETRO_BK needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

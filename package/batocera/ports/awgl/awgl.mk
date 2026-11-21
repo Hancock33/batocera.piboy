@@ -7,7 +7,7 @@
 AWGL_VERSION = 087860aee3ec7b85a86004378e2edc6fd5092741
 AWGL_SITE = $(call github,M-HT,rawgl,$(AWGL_VERSION))
 AWGL_EMULATOR_INFO = awgl.emulator.yml
-AWGL_DEPENDENCIES = mt32emu sdl2 sdl2_mixer
+AWGL_DEPENDENCIES = munt sdl2 sdl2_mixer
 AWGL_LICENSE = GPLv2
 
 define AWGL_INSTALL_TARGET_CMDS

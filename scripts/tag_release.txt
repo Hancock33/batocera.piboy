@@ -1,7 +1,7 @@
 ﻿7zip.mk
 aic8800.mk
 alllinuxfirmwares.mk
-alsa-topology-conf.mk
+alsa-topology.mk
 alsa-ucm-conf.mk
 appstream.mk
 ares.mk
@@ -27,7 +27,7 @@ kddockwidgets.mk
 keisho.mk
 kodi-pvr-freebox.mk
 labwc.mk
-libdate.mk
+date.mk
 libfyaml.mk
 liblc3.mk
 libldac.mk
@@ -41,7 +41,7 @@ logi-wheel.mk
 logitech-trueforce.mk
 mangohud.mk
 mergerfs.mk
-mt32emu.mk
+munt.mk
 nghttp3.mk
 ngtcp2.mk
 ntfs-plus.mk
@@ -54,7 +54,7 @@ pigpio-rpi.mk
 pironman5.mk
 plutosvg.mk
 plutovg.mk
-portmidi.mk
+libportmidi.mk
 python-cog.mk
 python-ndeflib.mk
 python-nfcpy.mk

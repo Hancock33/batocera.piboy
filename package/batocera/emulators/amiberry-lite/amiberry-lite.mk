@@ -10,7 +10,7 @@ AMIBERRY_LITE_LICENSE = GPLv3
 AMIBERRY_LITE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AMIBERRY_LITE_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123
-AMIBERRY_LITE_DEPENDENCIES += portmidi sdl2 sdl2_image sdl2_ttf zlib
+AMIBERRY_LITE_DEPENDENCIES += libportmidi sdl2 sdl2_image sdl2_ttf zlib
 AMIBERRY_LITE_EMULATOR_INFO = amiberry.emulator.yml
 
 AMIBERRY_LITE_CONF_OPTS += -DWITH_LTO=ON

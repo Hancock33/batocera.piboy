@@ -1,5 +1,5 @@
-config BR2_PACKAGE_LIBRETRO_EP128EMU
-	bool "libretro-ep128emu"
+config BR2_PACKAGE_LIBRETRO_EP128EMU_CORE
+	bool "libretro-ep128emu-core"
 	depends on BR2_INSTALL_LIBSTDCPP
 
 	help
@@ -7,5 +7,5 @@ config BR2_PACKAGE_LIBRETRO_EP128EMU
 
 	  http://www.libretro.com
 
-comment "LIBRETRO_EP128EMU needs a toolchain w/ C++"
+comment "LIBRETRO_EP128EMU_CORE needs a toolchain w/ C++"
 	depends on !BR2_INSTALL_LIBSTDCPP

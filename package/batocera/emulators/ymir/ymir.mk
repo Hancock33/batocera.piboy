@@ -24,7 +24,7 @@ YMIR_LICENSE = GPLv2
 YMIR_LICENSE_FILE = LICENSE
 YMIR_EMULATOR_INFO = ymir.emulator.yml
 YMIR_DEPENDENCIES += catch2 cereal cxxopts fmt host-clang host-pkgconf json-for-modern-cpp
-YMIR_DEPENDENCIES += libcurl libdate lz4 miniz nghttp3 ngtcp2 openssl rtmidi
+YMIR_DEPENDENCIES += libcurl date lz4 miniz nghttp3 ngtcp2 openssl rtmidi
 YMIR_DEPENDENCIES += sdl3 semver stb tomlplusplus xxhash zstd
 
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
