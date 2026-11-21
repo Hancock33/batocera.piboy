@@ -3,8 +3,8 @@
 # tomlplusplus
 #
 ################################################################################
-# Version: Commits on Nov 21, 2026
-TOMLPLUSPLUS_VERSION = v3.5.0
+# Version: Commits on Oct 13, 2023
+TOMLPLUSPLUS_VERSION = v3.4.0
 TOMLPLUSPLUS_SITE =  $(call github,marzer,tomlplusplus,$(TOMLPLUSPLUS_VERSION))
 TOMLPLUSPLUS_LICENSE = MIT license
 TOMLPLUSPLUS_LICENSE_FILES = LICENSE

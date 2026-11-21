@@ -39,7 +39,7 @@ Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|660745bafe71f96dd4a1056
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|027b1054a457008ed5317732f456f9fbbb400df4|Nov 21, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|93515171a3d1cb8f70eb0dae671d6031745026c7|Nov 21, 2026
 Emulators|[lichii](https://github.com/zortos293/Lichii.git)|b912dba4990016fb1ebe9ff208305f5a070bc687|Nov 21, 2026
-Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.187|Nov 21, 2026
+Emulators|[pcsx2](https://github.com/pcsx2/pcsx2.git)|v2.9.188|Nov 21, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|524344e2495e0751556c948a552e8112f1523067|Nov 21, 2026
 Emulators|[vice](http://github.com/VICE-Team/svn-mirror)|r46436|Nov 21, 2026
 Emulators|[vita3k](https://github.com/vita3k/vita3k)|64e655dd797153d0c5a5cbf734634be31288168d|Nov 21, 2026
@@ -51,6 +51,7 @@ Ports|[supertux2](https://github.com/SuperTux/supertux.git)|8b42ce2d725cb4a92f66
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|3ec5f474b366d7ecc72bec6dfe23367520a1918d|Nov 21, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261121|Nov 21, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|647d4ea5917d1e369485de7565b69a517552e7a9|Nov 21, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.171.9651-619|Nov 21, 2026
 Engines|[vpinball](http://github.com/vpinball/vpinball)|c3c47b5bcfd392eba90b2e98f6a3ae3ea9b38321|Nov 21, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|559a72d16a45d51aa334c11cc7ef4be1f23df2f0|Nov 21, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f86ac073668d9d889dc07e25e3428b572f7a8a32|Nov 21, 2026
@@ -85,7 +86,6 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|c30f1efce64b96696
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d1257740d4d5c6996d1d89c14bdd0a0516dfeb0a|Nov 20, 2026
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|3e4bc4abb8f82a502a940be935ee3de64dc22ad7|Nov 20, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|4520e5a413a7d31a2899dfe4c740b5de2f80ee73|Nov 20, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.171.9648-618|Nov 20, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|c15612d94d40333434b7df4cb97e74c45fbc03cb|Nov 20, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|b211fdc4b616de146b6fe594689081eeb4ae3bfd|Nov 20, 2026
 Emulators|[libretro-beetle-pce-fast](http://github.com/libretro/beetle-pce-fast-libretro)|4cf066e22533186d0cfad85a0fec2aced93e4e29|Nov 20, 2026
