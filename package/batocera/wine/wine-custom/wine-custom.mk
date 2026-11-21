@@ -14,8 +14,6 @@ WINE_CUSTOM_EMULATOR_INFO = wine-custom.wine.core.yml wine-custom.mugen.core.yml
 HOST_WINE_CUSTOM_DEPENDENCIES = host-bison host-flex
 
 define WINE_CUSTOM_AUTOGEN
-	# Create folder for install
-	mkdir -p $(TARGET_DIR)/usr/wine/wine-custom
 	# Autotools generation
 	cd $(@D); ./tools/make_requests
 	cd $(@D); ./tools/make_specfiles
@@ -34,7 +32,6 @@ WINE_CUSTOM_CONF_OPTS = \
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
-	--without-ldap \
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
@@ -107,9 +104,42 @@ else
 WINE_CUSTOM_CONF_OPTS += --without-gnutls
 endif
 
+# gstreamer is never a dependency, so keep configure from picking it up
+WINE_CUSTOM_CONF_OPTS += --without-gstreamer
+
 ifeq ($(BR2_PACKAGE_FFMPEG),y)
-WINE_CUSTOM_CONF_OPTS += --without-gstreamer --with-ffmpeg
+WINE_CUSTOM_CONF_OPTS += --with-ffmpeg
 WINE_CUSTOM_DEPENDENCIES += ffmpeg
+else
+WINE_CUSTOM_CONF_OPTS += --without-ffmpeg
+endif
+
+ifeq ($(BR2_PACKAGE_HWLOC),y)
+WINE_CUSTOM_CONF_OPTS += --with-hwloc
+WINE_CUSTOM_DEPENDENCIES += hwloc
+else
+WINE_CUSTOM_CONF_OPTS += --without-hwloc
+endif
+
+ifeq ($(BR2_PACKAGE_PCSC_LITE),y)
+WINE_CUSTOM_CONF_OPTS += --with-pcsclite
+WINE_CUSTOM_DEPENDENCIES += pcsc-lite
+else
+WINE_CUSTOM_CONF_OPTS += --without-pcsclite
+endif
+
+ifeq ($(BR2_PACKAGE_LIBVA),y)
+WINE_CUSTOM_CONF_OPTS += --with-va
+WINE_CUSTOM_DEPENDENCIES += libva
+else
+WINE_CUSTOM_CONF_OPTS += --without-va
+endif
+
+ifeq ($(BR2_PACKAGE_WAYLAND)$(BR2_PACKAGE_LIBXKBCOMMON),yy)
+WINE_CUSTOM_CONF_OPTS += --with-wayland
+WINE_CUSTOM_DEPENDENCIES += libxkbcommon wayland
+else
+WINE_CUSTOM_CONF_OPTS += --without-wayland
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
@@ -218,6 +248,13 @@ else
 WINE_CUSTOM_CONF_OPTS += --without-xshape --without-xshm
 endif
 
+ifeq ($(BR2_PACKAGE_XLIB_LIBXFIXES),y)
+WINE_CUSTOM_CONF_OPTS += --with-xfixes
+WINE_CUSTOM_DEPENDENCIES += xlib_libXfixes
+else
+WINE_CUSTOM_CONF_OPTS += --without-xfixes
+endif
+
 ifeq ($(BR2_PACKAGE_XLIB_LIBXI),y)
 WINE_CUSTOM_CONF_OPTS += --with-xinput --with-xinput2
 WINE_CUSTOM_DEPENDENCIES += xlib_libXi
@@ -290,29 +327,33 @@ HOST_WINE_CUSTOM_CONF_OPTS += \
 	--without-coreaudio \
 	--without-cups \
 	--without-dbus \
+	--without-ffmpeg \
 	--without-fontconfig \
 	--without-gnutls \
 	--without-gphoto \
 	--without-gssapi \
 	--without-gstreamer \
+	--without-hwloc \
 	--without-krb5 \
-	--without-ldap \
 	--without-mingw \
 	--without-netapi \
 	--without-opencl \
 	--without-opengl \
-	--without-osmesa \
 	--without-oss \
 	--without-pcap \
+	--without-pcsclite \
 	--without-pulse \
 	--without-sane \
 	--without-sdl \
 	--without-usb \
 	--without-v4l2 \
+	--without-va \
 	--without-vulkan \
+	--without-wayland \
 	--without-x \
 	--without-xcomposite \
 	--without-xcursor \
+	--without-xfixes \
 	--without-xinerama \
 	--without-xinput \
 	--without-xinput2 \
@@ -323,17 +364,9 @@ HOST_WINE_CUSTOM_CONF_OPTS += \
 	--without-xxf86vm
 
 # Cleanup final directory
-ifeq ($(BR2_x86_64),y)
 define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-custom/include
 endef
-endif
-
-ifeq ($(BR2_i386),y)
-define WINE_CUSTOM_REMOVE_INCLUDES_HOOK
-	rm -Rf $(TARGET_DIR)/usr/wine/wine-custom/include
-endef
-endif
 
 WINE_CUSTOM_POST_INSTALL_TARGET_HOOKS += WINE_CUSTOM_REMOVE_INCLUDES_HOOK
 
