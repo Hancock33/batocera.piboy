@@ -154,6 +154,7 @@ define MAME_SRC_INSTALL_TARGET_CMDS
 	rm -Rf $(MAME_SRC_DIST_DIR)/usr/bin/mame/bgfx/shaders/dx*/
 
 	# Pack (root-owned, streamed straight into xz) and publish
+	set -o pipefail; \
 	tar -C $(MAME_SRC_DIST_DIR) --owner=0 --group=0 --numeric-owner -cf - . | \
 		xz -T0 -7 -v > $(@D)/$(MAME_SRC_TARBALL)
 	mv $(@D)/$(MAME_SRC_TARBALL) /mnt/smb/
