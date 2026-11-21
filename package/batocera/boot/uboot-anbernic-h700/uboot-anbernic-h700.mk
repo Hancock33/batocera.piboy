@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-UBOOT_ANBERNIC_H700_VERSION = 2026.04
-UBOOT_ANBERNIC_H700_SITE = https://ftp.denx.de/pub/u-boot
+UBOOT_ANBERNIC_H700_VERSION = 2026.10
+UBOOT_ANBERNIC_H700_SITE = https://u-boot.osuosl.org
 UBOOT_ANBERNIC_H700_SOURCE = u-boot-$(UBOOT_ANBERNIC_H700_VERSION).tar.bz2
 UBOOT_ANBERNIC_H700_LICENSE = GPL-2.0+
 UBOOT_ANBERNIC_H700_LICENSE_FILES = Licenses/README

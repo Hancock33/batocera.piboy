@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-UBOOT_RK3562_VERSION = 2026.07
-UBOOT_RK3562_SITE = https://ftp.denx.de/pub/u-boot
+UBOOT_RK3562_VERSION = 2026.10
+UBOOT_RK3562_SITE = https://u-boot.osuosl.org
 UBOOT_RK3562_SOURCE = u-boot-$(UBOOT_RK3562_VERSION).tar.bz2
 UBOOT_RK3562_LICENSE = GPL-2.0+
 UBOOT_RK3562_LICENSE_FILES = Licenses/README

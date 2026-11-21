@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-UBOOT_RK3326_MAINLINE_VERSION = 2026.07
-UBOOT_RK3326_MAINLINE_SITE = https://ftp.denx.de/pub/u-boot
+UBOOT_RK3326_MAINLINE_VERSION = 2026.10
+UBOOT_RK3326_MAINLINE_SITE = https://u-boot.osuosl.org
 UBOOT_RK3326_MAINLINE_SOURCE = u-boot-$(UBOOT_RK3326_MAINLINE_VERSION).tar.bz2
 UBOOT_RK3326_MAINLINE_LICENSE = GPL-2.0+
 UBOOT_RK3326_MAINLINE_LICENSE_FILES = Licenses/README
