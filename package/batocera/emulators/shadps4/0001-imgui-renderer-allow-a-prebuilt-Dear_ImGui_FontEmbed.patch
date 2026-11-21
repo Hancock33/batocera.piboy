@@ -1,5 +1,17 @@
+From a8b2cc2e5b63b41e896807d949aa7d7d0a54380d Mon Sep 17 00:00:00 2001
+From: batocera <none@invalid>
+Date: Sat, 21 Nov 2026 19:34:46 +0000
+Subject: [PATCH 1/3] imgui renderer: allow a prebuilt Dear_ImGui_FontEmbed
+
+Dear_ImGui_FontEmbed is a code generator run at build time, so when
+cross-compiling it must be built for the host. Allow passing a prebuilt
+host executable through -DDear_ImGui_FontEmbed_EXECUTABLE.
+---
+ src/imgui/renderer/CMakeLists.txt | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
 diff --git a/src/imgui/renderer/CMakeLists.txt b/src/imgui/renderer/CMakeLists.txt
-index 46aa4466..ca7fbbab 100644
+index 46aa446..ca7fbba 100644
 --- a/src/imgui/renderer/CMakeLists.txt
 +++ b/src/imgui/renderer/CMakeLists.txt
 @@ -3,7 +3,12 @@

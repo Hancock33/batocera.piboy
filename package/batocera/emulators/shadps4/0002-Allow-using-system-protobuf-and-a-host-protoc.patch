@@ -1,25 +1,49 @@
+From fd3fb965df50ca4be53ba1803fe1747e09ec74f1 Mon Sep 17 00:00:00 2001
+From: batocera <none@invalid>
+Date: Sat, 21 Nov 2026 19:34:46 +0000
+Subject: [PATCH 2/3] Allow using system protobuf and a host protoc
+
+Look up a system protobuf when ENABLE_SYSTEM_LIBRARIES is set, only
+build the bundled copy when none was found, and allow overriding the
+protoc used for code generation with -DSHADPS4_PROTOC_EXECUTABLE so a
+host protoc can be used when cross-compiling.
+---
+ CMakeLists.txt           | 9 +++++++--
+ externals/CMakeLists.txt | 2 ++
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 96387e0..96439ed 100644
+index 96387e0..ddf538d 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -245,6 +245,7 @@ if (ENABLE_SYSTEM_LIBRARIES)
-     find_package(miniz 3.1 CONFIG)
-     find_package(nlohmann_json 3.12 CONFIG)
-     find_package(PNG 1.6 MODULE)
-+    find_package(Protobuf CONFIG REQUIRED)
-     find_package(OpenAL CONFIG)
-     find_package(LibreSSL 4.3.1 MODULE)
-     find_package(RenderDoc 1.6.0 MODULE)
-@@ -1302,7 +1303,7 @@ add_custom_command(
+@@ -262,6 +262,7 @@ if (ENABLE_SYSTEM_LIBRARIES)
+     find_package(zstd 1.5.6 CONFIG)
+     find_package(pugixml 1.14 CONFIG)
+     find_package(absl 20250512.1 CONFIG)
++    find_package(Protobuf CONFIG)
+     if (APPLE)
+         find_package(date 3.0.1 CONFIG)
+         find_package(epoll-shim 3.14 CONFIG)
+@@ -1296,13 +1297,17 @@ set(EMULATOR src/emulator.cpp
+ )
+ 
+ # shadNet protobuf generation
++# When cross-compiling, protoc must run on the build machine.
++if (NOT SHADPS4_PROTOC_EXECUTABLE)
++    set(SHADPS4_PROTOC_EXECUTABLE protobuf::protoc)
++endif()
+ set(SHADNET_PROTO_OUT "${CMAKE_CURRENT_BINARY_DIR}/shadnet_proto_gen")
+ file(MAKE_DIRECTORY "${SHADNET_PROTO_OUT}")
+ add_custom_command(
      OUTPUT
          "${SHADNET_PROTO_OUT}/shadnet.pb.cc"
          "${SHADNET_PROTO_OUT}/shadnet.pb.h"
 -    COMMAND protobuf::protoc
-+    COMMAND "${SHADPS4_PROTOC_EXECUTABLE}"
++    COMMAND ${SHADPS4_PROTOC_EXECUTABLE}
          "--proto_path=${CMAKE_CURRENT_SOURCE_DIR}/src/shadnet"
          "--cpp_out=${SHADNET_PROTO_OUT}"
          "${CMAKE_CURRENT_SOURCE_DIR}/src/shadnet/shadnet.proto"
-@@ -1348,7 +1349,7 @@ target_link_libraries(shadps4 PRIVATE magic_enum::magic_enum fmt::fmt toml11::to
+@@ -1348,7 +1353,7 @@ target_link_libraries(shadps4 PRIVATE magic_enum::magic_enum fmt::fmt toml11::to
  target_link_libraries(shadps4 PRIVATE Boost::headers GPUOpen::VulkanMemoryAllocator LibAtrac9 sirit Vulkan::Headers xxHash::xxhash Zydis::Zydis SDL3::SDL3 pugixml::pugixml)
  target_link_libraries(shadps4 PRIVATE stb::headers lfreist-hwinfo::hwinfo nlohmann_json::nlohmann_json miniz::miniz fdk-aac CLI11::CLI11 OpenAL::OpenAL Cpp_Httplib miniupnpc::miniupnpc)
  target_link_libraries(shadps4 PRIVATE Freetype::Freetype)
@@ -29,14 +53,14 @@ index 96387e0..96439ed 100644
  target_link_libraries(shadps4 PRIVATE zstd::libzstd)
  target_include_directories(shadps4 PRIVATE "${SHADNET_PROTO_OUT}")
 diff --git a/externals/CMakeLists.txt b/externals/CMakeLists.txt
-index cbe9219..d558e9b 100644
+index cbe9219..118526d 100644
 --- a/externals/CMakeLists.txt
 +++ b/externals/CMakeLists.txt
 @@ -392,6 +392,7 @@ if (NOT TARGET absl::strings)
  endif()
  
  # protobuf
-+if (NOT ENABLE_SYSTEM_LIBRARIES)
++if (NOT TARGET protobuf::libprotobuf)
  set(protobuf_BUILD_TESTS              OFF CACHE INTERNAL "")
  set(protobuf_BUILD_EXAMPLES           OFF CACHE INTERNAL "")
  set(protobuf_BUILD_PROTOC_BINARIES    ON  CACHE INTERNAL "")
