@@ -1,6 +1,6 @@
 ﻿**Package Type**|**Package**|**Version**|**Last Update**
 -----|:-----:|:-----:|:-----:
-Audio|[alsa-topology-conf](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
+Audio|[alsa-topology](http://github.com/alsa-project/alsa-topology-conf)|v1.2.5.1|Mar 11, 2021
 Audio|[alsa-ucm-conf](http://github.com/alsa-project/alsa-ucm-conf)|v1.2.16.1|Jun 12, 2026
 Audio|[chromebook-linux-audio](http://github.com/WeirdTreeThing/chromebook-linux-audio)|84b700e271145df82ae71d0497af11705a2bb166|Oct 05, 2026
 Audio|[chromebook-ucm-conf](http://github.com/WeirdTreeThing/alsa-ucm-conf-cros)|0.8|Nov 13, 2025
@@ -8,10 +8,10 @@ Audio|[cubeb](http://github.com/mozilla/cubeb)|dcd7cddafa4b95776cf5d117549ad58e1
 Audio|[faudio](http://github.com/FNA-XNA/FAudio)|26.11|Nov 01, 2026
 Audio|[libfreeaptx](http://github.com/regularhunter/libfreeaptx)|0.2.2|Mar 05, 2025
 Audio|[libldac](https://github.com/EHfive/ldacBT.git)|v2.0.2.6|Jun 27, 2026
+Audio|[libportmidi](http://github.com/PortMidi/portmidi)|v2.0.8|Dec 02, 2025
 Audio|[libxmp](http://github.com/libxmp/libxmp)|libxmp-4.7.4|Oct 10, 2026
-Audio|[mt32emu](http://github.com/munt/munt)|libmt32emu_2_8_6|Nov 08, 2026
+Audio|[munt](http://github.com/munt/munt)|libmt32emu_2_8_6|Nov 08, 2026
 Audio|[ossp](http://github.com/OpenMandrivaSoftware/ossp)|v1.3.3|Aug 31, 2024
-Audio|[portmidi](http://github.com/PortMidi/portmidi)|v2.0.8|Dec 02, 2025
 Audio|[rtmidi](http://github.com/thestk/rtmidi)|6.1.0|Oct 15, 2026
 Audio|[swh-plugins](http://github.com/swh/ladspa)|v0.4.17|Oct 17, 2016
 Audio|[wildmidi](http://github.com/Mindwerks/wildmidi)|wildmidi-0.5.0|Jul 24, 2026
@@ -91,7 +91,7 @@ Emulators|[flycast](https://github.com/flyinghead/flycast.git)|027b1054a457008ed
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v5.0.7|Sept 05, 2025
 Emulators|[glsl-shaders](http://github.com/libretro/glsl-shaders)|a35069864b4bf30f8c8e740d57206543fb7e745e|Nov 12, 2026
 Emulators|[gsplus](http://github.com/applemu/gsplus)|dc1835d62bb485f69faf3fd50a2550629393ee38|Jan 14, 2021
-Emulators|[hatari](http://github.com/hatari/hatari)|8a342855edc8a614d39ff2e397a8335438611912|Nov 20, 2026
+Emulators|[hatari](http://github.com/hatari/hatari)|93515171a3d1cb8f70eb0dae671d6031745026c7|Nov 21, 2026
 Emulators|[hypseus-singe](http://github.com/DirtBagXon/hypseus-singe)|a16e2521ee3233ef20c44e562008c47f4b4293df|Aug 30, 2026
 Emulators|[keisho](https://github.com/Keisho-Emu/Keisho.git)|v0.9.63|Nov 15, 2026
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|39333f7b13dc4daea7c151d9c38d22b961246343|Aug 19, 2026
@@ -114,7 +114,7 @@ Emulators|[libretro-beetle-supergrafx](http://github.com/libretro/beetle-supergr
 Emulators|[libretro-beetle-vb](http://github.com/libretro/beetle-vb-libretro)|d5ae54c8e23b573a3b34e888b2d48a588027e92c|Oct 12, 2026
 Emulators|[libretro-beetle-wswan](http://github.com/libretro/beetle-wswan-libretro)|4b01295838ea89e3f1355bbe4cb5cf98aa6108cd|Jul 31, 2026
 Emulators|[libretro-bennugd](http://github.com/diekleinekuh/BennuGD_libretro)|5fba764ac709545d4b0d3b28deff2ec0c7d1a91b|Apr 07, 2026
-Emulators|[libretro-bk-emulator](http://github.com/libretro/bk-emulator)|92042a753289cedf05e7e6bd8e75849f83e48966|Sept 04, 2026
+Emulators|[libretro-bk](http://github.com/libretro/bk-emulator)|92042a753289cedf05e7e6bd8e75849f83e48966|Sept 04, 2026
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|52ff45c399116899ead4339f234800b6d431d86e|Nov 21, 2026
 Emulators|[libretro-bluemsx](http://github.com/libretro/blueMSX-libretro)|e3086eb5d36d77fa11704cf53dc176686e70127d|Aug 23, 2026
 Emulators|[libretro-bsnes-hd](http://github.com/DerKoun/bsnes-hd)|fc26b25ea236f0f877f0265d2a2c37dfd93dfde9|Dec 05, 2025
@@ -136,7 +136,7 @@ Emulators|[libretro-ecwolf](https://github.com/libretro/ecwolf)|0cccd9a85d7ffa33
 Emulators|[libretro-eduke32](https://github.com/cscd98/eduke32-libretro.git)|b5918d5cf3fc698700c86693fce3ce5200c28b96|Nov 02, 2026
 Emulators|[libretro-eka2l1](https://github.com/WizzardSK/eka2l1-libretro.git)|c3b2fc7d856f770b5307f643d8786e2e0eab1436|Nov 15, 2026
 Emulators|[libretro-emuscv](http://gitlab.com/MaaaX-EPOCH84/libretro-emuscv)|33900ce24f45c429b533fdae7844e04d64a9a1b9|Oct 14, 2026
-Emulators|[libretro-ep128emu](http://github.com/libretro/ep128emu-core)|6af5d03de220e6effcd0ffcd99e0fb8e8c77cc9e|Jul 22, 2026
+Emulators|[libretro-ep128emu-core](http://github.com/libretro/ep128emu-core)|6af5d03de220e6effcd0ffcd99e0fb8e8c77cc9e|Jul 22, 2026
 Emulators|[libretro-fake08](https://github.com/jtothebell/fake-08.git)|814991a2571ad3970e386cef48f3b148aa1c27b9|Jun 13, 2026
 Emulators|[libretro-fbneo](http://github.com/libretro/FBNeo)|2cfc5f304fe8b1db65e464efaa50fa46f273c472|Nov 21, 2026
 Emulators|[libretro-fceumm](http://github.com/libretro/libretro-fceumm)|77468e568d9fe9c48d684ca911f1a3fe7259fdf7|Nov 16, 2026
@@ -269,7 +269,7 @@ Emulators|[pcsx2x6](https://github.com/PS2Homebrew-arcade/pcsx2x6.git)|v0.2.22|A
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|2ce7f3d123f247d5fdd43fa41e96bf63ff118d32|Nov 21, 2026
 Emulators|[redream](https://redream.io/download)|1.5.0-1240-gc41f7f2|Aug 31, 2026
 Emulators|[retroarch-assets](http://github.com/libretro/retroarch-assets)|8c918e2872482139273374ef4cc6c7aff34d7585|Nov 09, 2026
-Emulators|[retroarch](http://github.com/libretro/RetroArch)|360044e27ea78a57d524711846a04dd35136f5bd|Nov 21, 2026
+Emulators|[retroarch](http://github.com/libretro/RetroArch)|da2bdb6731ef165efe03d711a7c1b746a40a9898|Nov 21, 2026
 Emulators|[retrocrisis](https://github.com/RetroCrisis/Retro-Crisis-GDV-NTSC/releases)|20260927|Sept 27, 2026
 Emulators|[rpcs3](https://github.com/RPCS3/rpcs3.git)|ddd27e0c5e91b431c0b5071e748522acce7f8220|Nov 20, 2026
 Emulators|[ryujinx](https://git.ryujinx.app/projects/Kenji-NX.git)|a6a641ada215837297e7170c91c6b4e8275574c6|Nov 20, 2026
@@ -379,6 +379,7 @@ Libraries|[appstream](http://github.com/ximion/appstream)|v1.2.3|Nov 10, 2026
 Libraries|[asio](http://github.com/chriskohlhoff/asio)|asio-1-39-0|Nov 07, 2026
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20261117|Nov 17, 2026
 Libraries|[cpp-ipc](http://github.com/mutouyun/cpp-ipc)|v1.4.1|Dec 12, 2025
+Libraries|[date](http://github.com/HowardHinnant/date)|v3.0.5|Jul 23, 2026
 Libraries|[dsp56300](http://github.com/xemu-project/dsp56300)|v1.0.0|Sept 11, 2026
 Libraries|[ecm](http://github.com/KDE/extra-cmake-modules)|v6.32.0|Sept 02, 2026
 Libraries|[ffmpeg-rockchip](https://github.com/nyanmisaka/ffmpeg-rockchip.git)|0dc90ed512267173074e96ba0a129c3219fd355f|Apr 23, 2026
@@ -386,7 +387,6 @@ Libraries|[gamenetworkingsockets](https://github.com/ValveSoftware/GameNetworkin
 Libraries|[iir](http://github.com/berndporr/iir1)|1.11.1|Oct 27, 2026
 Libraries|[kddockwidgets](http://github.com/KDAB/KDDockWidgets)|v2.5.1|Oct 23, 2026
 Libraries|[libcapsimage](http://github.com/simonowen/capsimage)|502015b6e117e7c52fd143025856f9b5b242b6d6|Sept 01, 2022
-Libraries|[libdate](http://github.com/HowardHinnant/date)|v3.0.5|Jul 23, 2026
 Libraries|[libdovi](http://github.com/quietvoid/dovi_tool)|2.3.4|Sept 10, 2026
 Libraries|[libfreeimage](http://github.com/toxieainc/freeimage)|d29c96999deb331181c44264e5338ec16d393c79|Nov 10, 2026
 Libraries|[libfyaml](http://github.com/pantoniou/libfyaml)|v1.0.0-rc2|Nov 11, 2026
@@ -458,6 +458,7 @@ Ports|[hlsdk-xash3d-opfor](https://github.com/FWGS/hlsdk-portable.git)|c3d8dd6f7
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|7ec223cfd29e0c20d8e52927dcc3d0c27d9ca7ac|Nov 08, 2026
 Ports|[hode](http://github.com/usineur/hode)|59f3c466923c6b8d49e29176ff697a91165e7efc|Dec 08, 2023
 Ports|[hurrican](https://github.com/HurricanGame/Hurrican.git)|0d91d1f2d40f38d21e7f41afc01369ee55649fb6|Dec 31, 2025
+Ports|[iortcw](http://github.com/iortcw/iortcw)|438e7d413b5f7277187c35b032eb0ef9093ae778|May 26, 2024
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d1257740d4d5c6996d1d89c14bdd0a0516dfeb0a|Nov 20, 2026
 Ports|[nblood](http://github.com/NBlood/NBlood)|r14388|Sept 14, 2026
 Ports|[nukem2](https://github.com/lethal-guitar/RigelEngine.git)|30afeff8f0b105eac77ee0a2fbd54b06e1a49b60|Sept 28, 2026
@@ -476,16 +477,14 @@ Ports|[raptorcots](http://github.com/skynettx/raptor)|746c35a256bfa2afc6732c7923
 Ports|[raze](http://github.com/ZDoom/Raze)|fa99ac62924d5b2cbb67f46b932bd6acf8952b63|Nov 01, 2026
 Ports|[realgibs](http://github.com/dhewm/dhewm3-sdk)|83e0a5b96cba2fa36a22b8930245e482d4c36902|Jun 07, 2026
 Ports|[rivensin](http://github.com/dhewm/dhewm3-sdk)|a4dfc7ca5f338df50eac83806e123f88121d58a5|Jun 07, 2026
-Ports|[rott](http://github.com/fabiangreffrath/taradino)|cb59bd899f7d75946c1297e9a0f94999fa76742a|Nov 19, 2026
-Ports|[rtcw](http://github.com/iortcw/iortcw)|438e7d413b5f7277187c35b032eb0ef9093ae778|May 26, 2024
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|f7be2e939375d369d26e1d10bcdd5ca74d3002a2|Nov 07, 2026
 Ports|[serioussam](http://github.com/tx00100xt/SeriousSamClassic-VK)|510d36f901cbe883c56b155b53717e4efdeb6522|Jan 14, 2026
 Ports|[sikkmod](http://github.com/dhewm/dhewm3-sdk)|8dd804c33eed764ef96887dd7f1f42f64eebd7f8|Jun 07, 2026
 Ports|[sm64port](http://github.com/sm64pc/sm64ex)|d7ca2c04364a6dd0dac58b47151e04e26887e6f0|Dec 17, 2024
+Ports|[sonic-mania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|9dc699428420d752af9767bdb13f585ee0881bc0|May 12, 2026
 Ports|[sonic2013](https://github.com/RSDKModding/RSDKv4-Decompilation.git)|af95198f93951cc217b43923196e5750667ec1c7|Oct 28, 2026
 Ports|[sonic3-air](http://github.com/Eukaryot/sonic3air)|v26.08.15.0-test|Aug 15, 2026
 Ports|[soniccd](https://github.com/RSDKModding/RSDKv3-Decompilation.git)|2a7fd8b70f1b33553e0d6c67491d07e8290b80c1|Oct 26, 2026
-Ports|[sonicmania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)|9dc699428420d752af9767bdb13f585ee0881bc0|May 12, 2026
 Ports|[sonicnexus](http://github.com/RSDKModding/RSDKv2-Decompilation)|cc411106137dca8d3936c709d6a1875aa788fd9c|Jul 01, 2026
 Ports|[spacecadetpinball](http://github.com/k4zmu2a/SpaceCadetPinball)|cb9b7b886244a27773f66b0b19fdc2998392565e|Aug 21, 2024
 Ports|[srb2](http://github.com/STJr/SRB2)|SRB2_release_2.2.15|Jan 26, 2025
@@ -494,6 +493,7 @@ Ports|[stalker](https://github.com/OpenXRay/xray-16.git)|d1eb5d39a81ec41a5a30383
 Ports|[stk](https://github.com/supertuxkart/stk-code/releases)|1.5|Oct 20, 2025
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|c56327db5685c2ae63ea3c73d64ef100183b9359|Nov 17, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|2975428aef94fdc3d6b6ec04cc94ec7a98b116eb|Nov 10, 2026
+Ports|[taradino](http://github.com/fabiangreffrath/taradino)|cb59bd899f7d75946c1297e9a0f94999fa76742a|Nov 19, 2026
 Ports|[tekwar](https://github.com/jonof/jftekwar.git)|20260603|Jun 01, 2026
 Ports|[theforceengine](http://github.com/TheForceEngine/TheForceEngine)|v.1.30.000|Nov 03, 2026
 Ports|[trx](http://github.com/LostArtefacts/TRX)|trx-1.12|Nov 02, 2026

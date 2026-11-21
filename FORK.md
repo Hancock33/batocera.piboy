@@ -44,20 +44,20 @@ Built here: piboy4, x86_64, x86_wow64.
 
 Upstream boards with no config at the top level here: a3gen2, bcm2711, bcm2712, bcm2835, bcm2836, bcm2837, h3, h5, h6, h616, h700, jh7110, odroidxu4, qcs6490, rk3128, rk3288, rk3326, rk3328, rk3399, rk3562, rk3568, rk3576, rk3588-mainline, s812, s905, s905gen2, s905gen3, s922x, s9gen4, sdm845, sm4450, sm6115, sm8250, sm8550, sm8650, sm8750, t527, zen3.
 
-## Packages only in this fork (103)
+## Packages only in this fork (95)
 
 | Category | Packages |
 | --- | --- |
-| `audio` | alsa-topology-conf, mt32emu, portmidi |
+| `audio` | alsa-topology |
 | `controllers/pads` | sdl2-gamecontrollerdb, xpi_gamecon_rpi |
 | `emulators` | amiberry-lite, dsperate, eden, lichii, ryujinx, touchhle, yabasanshiro |
-| `emulators/retroarch/libretro` | libretro-2048, libretro-amiberry, libretro-anygm, libretro-armsx2, libretro-bk-emulator, libretro-bsnes-jg, libretro-cannonball, libretro-doublecherrygb, libretro-eduke32, libretro-eka2l1, libretro-ep128emu, libretro-freej2me, libretro-gametank, libretro-geargrafx, libretro-geolith, libretro-gong, libretro-jaxe, libretro-jollycv, libretro-jumpnbump, libretro-mojozork, libretro-mu, libretro-noods, libretro-nuance, libretro-odin, libretro-p2000t, libretro-panda3ds, libretro-parallel-dc, libretro-parallel-gx1, libretro-puae2021, libretro-quicknes, libretro-race, libretro-sameboy, libretro-skyemu, libretro-supafaust, libretro-supermodel, libretro-tamalibretro, libretro-uzdoom, libretro-vaporspec, libretro-yabause, libretro-zc250x, libretro-zcdi |
+| `emulators/retroarch/libretro` | libretro-2048, libretro-amiberry, libretro-anygm, libretro-armsx2, libretro-bsnes-jg, libretro-cannonball, libretro-doublecherrygb, libretro-eduke32, libretro-eka2l1, libretro-freej2me, libretro-gametank, libretro-geargrafx, libretro-geolith, libretro-gong, libretro-jaxe, libretro-jollycv, libretro-jumpnbump, libretro-mojozork, libretro-mu, libretro-noods, libretro-nuance, libretro-odin, libretro-p2000t, libretro-panda3ds, libretro-parallel-dc, libretro-parallel-gx1, libretro-puae2021, libretro-quicknes, libretro-race, libretro-sameboy, libretro-skyemu, libretro-supafaust, libretro-supermodel, libretro-tamalibretro, libretro-uzdoom, libretro-vaporspec, libretro-yabause, libretro-zc250x, libretro-zcdi |
 | `emulators/retroarch/shaders` | retrocrisis |
 | `kodi` | kodi-audiodecoder-openmpt, kodi-pvr-freebox |
-| `libraries` | libdate, libgme, mono-bin |
-| `ports` | alephone, avp, awgl, bermuda, blues, f2bgl, freedroid, hode, nblood, nukem2, omf2097, openclaw, opentyrian2000, prototype, raptorcots, rott, rtcw, serioussam, sm64port, spacecadetpinball, stalker, stk, stuntcar, supertux2, tekwar, xbox-xcloud-client |
+| `libraries` | libgme, mono-bin |
+| `ports` | alephone, avp, awgl, bermuda, blues, f2bgl, freedroid, hode, nblood, nukem2, omf2097, openclaw, opentyrian2000, prototype, raptorcots, serioussam, sm64port, spacecadetpinball, stalker, stk, stuntcar, supertux2, tekwar, xbox-xcloud-client |
 | `ports/doom` | doom3, doomretro |
-| `ports/sonic` | sonicmania, sonicnexus, srb2, srb2kart |
+| `ports/sonic` | sonicnexus, srb2, srb2kart |
 | `ports/tomb` | openlara |
 | `python` | python-smbus3 |
 | `sources` | libretro-mame-src, mame-src, mono-src |
@@ -65,26 +65,26 @@ Upstream boards with no config at the top level here: a3gen2, bcm2711, bcm2712, 
 | `utils-host` | rgbds |
 | `wine` | wine-custom |
 
-## Upstream packages not in this fork (91)
+## Upstream packages not in this fork (83)
 
 Upstream changes to these arrive as modify/delete conflicts when merging.
 
 | Category | Packages |
 | --- | --- |
-| `audio` | liblc3, munt |
+| `audio` | liblc3 |
 | `controllers/pads` | hid-nx, input-wrapper, mk_arcade_joystick_rpi, rocknix-joypad, xarcade2jstick, xow |
 | `core` | batocera-audio-alsa |
 | `database` | influxdb |
 | `emulators` | drastic, duckstation-legacy, xenia, xenia-canary |
 | `emulators/openbor` | openbor-common, openbor4432, openbor6330, openbor6412, openbor6510, openbor7142, openbor7530 |
-| `emulators/retroarch/libretro` | libretro-bk, libretro-boom3, libretro-ep128emu-core, libretro-fbalpha, libretro-flycastvl, libretro-imame, libretro-play, libretro-same-cdi, libretro-stella2014 |
+| `emulators/retroarch/libretro` | libretro-boom3, libretro-fbalpha, libretro-flycastvl, libretro-imame, libretro-play, libretro-same-cdi, libretro-stella2014 |
 | `gpu` | img-gpu-powervr, img-mesa3d, mesa-panfork, nvidia470-legacy-driver |
 | `gpu/vulkan` | vulkan-samples, vulkan-volk |
 | `kodi` | kodi21-kodi-platform, kodi21-p8-platform, kodi21-pvr-freebox |
-| `libraries` | date, ffmpeg4, libenet, libfreeimage-vpinball, libgraphene, libliftoff, libportmidi, lzma-sdk, plutosvg, pm_dashboard, projectm, pyqt-builder, python-autobreadcrumbs, python-sysv-ipc, python3-configobj, python3-gpiod, python3-pyparsing, sdl12-compat, sdl3, sdl3_image, sdl3_mixer, sdl3_ttf, uthash |
+| `libraries` | ffmpeg4, libenet, libfreeimage-vpinball, libgraphene, libliftoff, lzma-sdk, plutosvg, pm_dashboard, projectm, pyqt-builder, python-autobreadcrumbs, python-sysv-ipc, python3-configobj, python3-gpiod, python3-pyparsing, sdl12-compat, sdl3, sdl3_image, sdl3_mixer, sdl3_ttf, uthash |
 | `network` | r8125, r8168, rtl8812au, rtl8821au-morrownr, rtl8852au, rtl8852cu, rtl88x2bu, rtw88 |
 | `network/qualcomm` | pd-mapper, qrtr, rmtfs, tqftpserv |
-| `ports` | abuse-data, fheroes2, ioquake3, iortcw, sonic-mania, taradino, tyrian |
+| `ports` | abuse-data, fheroes2, ioquake3, tyrian |
 | `toolchain` | toolchain-optional-linaro-aarch64 |
 | `utils` | bauh, btop, imgui, piboy, vdpauinfo |
 | `utils-host` | cargo-c, cbindgen |
