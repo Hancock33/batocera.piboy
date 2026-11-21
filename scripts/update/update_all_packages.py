@@ -9,6 +9,8 @@ update_libretro_cores.py over *all* package .mk files, so one command covers:
   * git-sourced packages (GitHub / GitLab / Codeberg): commit-pinned ones move
     to the newest commit of <PKG>_BRANCH (or the default branch), tag-pinned
     ones to the highest tag of the same shape
+  * eduke32, whose source is on voidpoint.io (self-hosted GitLab archive):
+    handled by update_eduke32.py, counted as a git package
 
 Skipped, with the reason listed in the summary: packages that download
 tarballs from somewhere else (kodi mirrors, kernel.org, ...), packages that
@@ -39,6 +41,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import update_eduke32 as eduke32  # noqa: E402
 import update_libretro_cores as gitpkg  # noqa: E402
 import update_pypi_packages as pypi  # noqa: E402
 
@@ -54,6 +57,8 @@ def classify(mk):
     if pkg.is_pypi:
         return "pypi", pkg
     core = gitpkg.Core(mk)
+    if mk.stem == "eduke32":
+        return "git", core
     if not core.prefix:
         return "skip", "no _VERSION line"
     if len(re.findall(r"^\w+_VERSION\s*=", core.text, re.M)) > 1:
@@ -78,6 +83,8 @@ def check_item(item, index):
         except (urllib.error.URLError, RuntimeError, KeyError, ValueError) as e:
             return "error", None, str(e)
         return ("update" if pypi.is_newer(rel["version"], obj.version) else "ok"), rel["version"], rel
+    if obj.name == "eduke32":
+        return eduke32.check(obj.version, obj.var("BRANCH"))
     status, new, detail = gitpkg.check(obj)
     if status == "error" and detail.startswith("no tag shaped like"):
         return "skip", None, "no comparable tags"
@@ -89,7 +96,10 @@ def apply_item(item, new, detail, no_license_hash):
     if kind == "pypi":
         pypi.update_package(obj, detail, no_license_hash)
         return ""
-    day, note = gitpkg.apply(obj, detail, new)
+    if obj.name == "eduke32":
+        day, note = eduke32.apply(obj.path, new, detail)
+    else:
+        day, note = gitpkg.apply(obj, detail, new)
     return f" ({day.strftime('%b %d, %Y')}){note}"
 
 
