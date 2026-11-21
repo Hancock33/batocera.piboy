@@ -1,8 +1,18 @@
+Subject: [PATCH 3/3] Hide the menu bar in fullscreen
+
+Remove the wx menu bar when entering fullscreen and restore it when
+leaving, so it does not cover the top of the picture. When deciding
+whether to size the render surface, check the window's own fullscreen
+state rather than the wx frame's, which may not have switched yet.
+---
+ src/xenia/ui/window_wx.cc | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
 diff --git a/src/xenia/ui/window_wx.cc b/src/xenia/ui/window_wx.cc
-index f785593..b7d472b 100644
+index d7a6874..4eac0c4 100644
 --- a/src/xenia/ui/window_wx.cc
 +++ b/src/xenia/ui/window_wx.cc
-@@ -416,6 +416,16 @@ void WxWindow::ApplyNewFullscreen() {
+@@ -419,6 +419,16 @@ void WxWindow::ApplyNewFullscreen() {
    if (fullscreen && !frame_->IsFullScreen()) {
      SaveGeometryToConfig();
    }
@@ -19,7 +29,7 @@ index f785593..b7d472b 100644
    frame_->ShowFullScreen(fullscreen);
    if (content_visibility_callback_) {
      content_visibility_callback_();
-@@ -430,7 +440,7 @@ void WxWindow::EnsureInitialRenderSurfaceSize() {
+@@ -433,7 +443,7 @@ void WxWindow::EnsureInitialRenderSurfaceSize() {
    if (!frame_ || !render_panel_) {
      return;
    }

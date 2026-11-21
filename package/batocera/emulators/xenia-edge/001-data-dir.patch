@@ -1,0 +1,22 @@
+Subject: [PATCH 1/3] Store user data under /userdata/system/configs/xenia_edge
+
+Batocera keeps emulator config and content in /userdata, so use that as
+the storage root instead of ~/Xenia. Portable mode and -storage_root
+still take precedence.
+---
+ src/xenia/app/xenia_main.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/xenia/app/xenia_main.cc b/src/xenia/app/xenia_main.cc
+index c2b49a9..e16521e 100644
+--- a/src/xenia/app/xenia_main.cc
++++ b/src/xenia/app/xenia_main.cc
+@@ -540,7 +540,7 @@ bool EmulatorApp::OnInitialize() {
+ #if XE_PLATFORM_ANDROID
+       // TODO(Triang3l): Point to the app's external storage "files" directory.
+ #else
+-      storage_root = storage_root / "Xenia";
++      storage_root = "/userdata/system/configs/xenia_edge";
+ #endif
+     }
+   }

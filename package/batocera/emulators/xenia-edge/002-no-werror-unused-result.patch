@@ -1,0 +1,22 @@
+Subject: [PATCH 2/3] Do not fail the build on unused-result warnings
+
+Buildroot builds with clang, where xenia's own targets use -Werror.
+Ignored return values (write(), fread() and the like) depend on the
+libc headers' warn_unused_result attributes, so keep them as warnings.
+---
+ cmake/XeniaHelpers.cmake | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmake/XeniaHelpers.cmake b/cmake/XeniaHelpers.cmake
+index e532bce..9f376e7 100644
+--- a/cmake/XeniaHelpers.cmake
++++ b/cmake/XeniaHelpers.cmake
+@@ -107,7 +107,7 @@ function(xe_target_defaults target)
+   if(MSVC)
+     target_compile_options(${target} PRIVATE /WX)
+   elseif(NOT CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-    target_compile_options(${target} PRIVATE -Werror)
++    target_compile_options(${target} PRIVATE -Werror -Wno-error=unused-result)
+   endif()
+ endfunction()
+ 
