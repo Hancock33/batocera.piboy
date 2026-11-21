@@ -1,63 +1,64 @@
+diff --git a/src/core/core.cpp b/src/core/core.cpp
+index dd87389..66dc969 100644
+--- a/src/core/core.cpp
++++ b/src/core/core.cpp
+@@ -692,7 +692,7 @@ bool Core::ProcessStartup(Error* error)
+   // so we have to initialize it here.
+   Achievements::ProcessStartup();
+ 
+-#ifdef __linux__
++#if 0 // Batocera installs DuckStation to /usr/bin/duckstation.
+   // Running DuckStation out of /usr is not supported and makes no sense.
+   if (std::memcmp(EmuFolders::AppRoot.data(), "/usr/", 5) == 0)
+     return false;
 diff --git a/src/core/system.cpp b/src/core/system.cpp
-index 03b56be72..d7876c57e 100644
+index 9784f11..68f6788 100644
 --- a/src/core/system.cpp
 +++ b/src/core/system.cpp
-@@ -5481,12 +5481,12 @@ void System::WarnAboutUnsafeSettings()
+@@ -5596,13 +5596,6 @@ void System::WarnAboutUnsafeSettings()
      if (g_settings.cpu_execution_mode == CPUExecutionMode::CachedInterpreter)
        append(TRANSLATE_SV("System", "Cached interpreter is being used, this may be incompatible with some games."));
  
 -    // Always display TC warning.
-+    /* Always display TC warning.
-     if (g_settings.gpu_texture_cache)
-     {
-       append(TRANSLATE_SV(
-         "System", "Texture cache is enabled. This feature is experimental, some games may not render correctly."));
+-    if (g_settings.gpu_texture_cache)
+-    {
+-      append(TRANSLATE_SV(
+-        "System", "Texture cache is enabled. This feature is experimental, some games may not render correctly."));
 -    }
-+    }*/
- 
+-
      // Potential performance issues.
      if (g_settings.cpu_fastmem_mode != Settings::DEFAULT_CPU_FASTMEM_MODE)
+     {
 diff --git a/src/duckstation-qt/qthost.cpp b/src/duckstation-qt/qthost.cpp
-index 77ac7096c..99c9fa1c8 100644
+index 36c1ba2..860176c 100644
 --- a/src/duckstation-qt/qthost.cpp
 +++ b/src/duckstation-qt/qthost.cpp
-@@ -302,9 +302,9 @@ bool QtHost::EarlyProcessStartup()
-   Error error;
-   if (!Core::ProcessStartup(&error)) [[unlikely]]
-   {
--    QMessageBox::critical(nullptr, QStringLiteral("Process Startup Failed"),
--                          QString::fromStdString(error.GetDescription()));
--    return false;
-+    //QMessageBox::critical(nullptr, QStringLiteral("Process Startup Failed"),
-+    //                      QString::fromStdString(error.GetDescription()));
-+    //return false;
-   }
- 
-   // allow us to override standard qt icons as well
-@@ -3635,7 +3635,7 @@ int main(int argc, char* argv[])
+@@ -3637,7 +3637,7 @@ int main(int argc, char* argv[])
    // Set theme before creating any windows.
    UpdateApplicationTheme();
  
 -#ifdef __linux__
-+#ifdef __notlinux__
++#if 0 // Batocera sets LD_LIBRARY_PATH and has no desktop file.
    // Overriding LD_LIBRARY_PATH breaks a bunch of shit, since it'll use out-of-date system libraries.
    WarnAboutLDLibraryPath();
  
-@@ -3644,7 +3644,7 @@ int main(int argc, char* argv[])
+@@ -3645,9 +3645,6 @@ int main(int argc, char* argv[])
+   CheckDesktopFile();
  #endif
  
-   // Build warning.
+-  // Build warning.
 -  AutoUpdaterDialog::warnAboutUnofficialBuild();
-+  //AutoUpdaterDialog::warnAboutUnofficialBuild();
- 
+-
    // Setting/folder migrations.
    ApplyMigrations();
-@@ -3704,7 +3704,7 @@ int main(int argc, char* argv[])
+ 
+@@ -3705,9 +3702,6 @@ int main(int argc, char* argv[])
+   else
      s_state.start_fullscreen_ui_fullscreen = false;
  
-   // Always kick off update check. It'll take over if the user is booting a game fullscreen.
+-  // Always kick off update check. It'll take over if the user is booting a game fullscreen.
 -  g_main_window->startupUpdateCheck();
-+  //g_main_window->startupUpdateCheck();
- 
+-
    if (autoboot)
      g_core_thread->bootSystem(std::move(autoboot));
+ 
