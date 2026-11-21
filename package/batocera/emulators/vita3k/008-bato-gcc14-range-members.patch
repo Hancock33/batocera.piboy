@@ -1,6 +1,8 @@
+diff --git a/vita3k/util/include/util/vector_utils.h b/vita3k/util/include/util/vector_utils.h
+index 7023a67b..12b55b60 100644
 --- a/vita3k/util/include/util/vector_utils.h
 +++ b/vita3k/util/include/util/vector_utils.h
-@@ -36,13 +36,13 @@
+@@ -36,13 +36,13 @@ template <typename T, typename A = std::allocator<T>, typename H = std::hash<T>,
  std::vector<T, A> merge_vectors(const std::vector<T, A> &cur, const std::vector<T, A> &append) {
      std::vector<T, A> new_vector(cur.get_allocator());
      new_vector.reserve(cur.size() + append.size());

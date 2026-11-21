@@ -1,8 +1,8 @@
 diff --git a/vita3k/gui-qt/src/main_window.cpp b/vita3k/gui-qt/src/main_window.cpp
-index cb2fe018..23acded5 100644
+index fbe12ccf..5ce5df98 100644
 --- a/vita3k/gui-qt/src/main_window.cpp
 +++ b/vita3k/gui-qt/src/main_window.cpp
-@@ -1387,7 +1387,7 @@ void MainWindow::on_stop_triggered() {
+@@ -1401,7 +1401,7 @@ void MainWindow::on_stop_triggered() {
  }
  
  void MainWindow::on_ps_button() {

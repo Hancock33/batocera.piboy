@@ -1,4 +1,5 @@
 diff --git a/vita3k/gui-qt/src/main_window.cpp b/vita3k/gui-qt/src/main_window.cpp
+index 5ce5df98..714fd83a 100644
 --- a/vita3k/gui-qt/src/main_window.cpp
 +++ b/vita3k/gui-qt/src/main_window.cpp
 @@ -110,6 +110,8 @@
@@ -10,7 +11,7 @@ diff --git a/vita3k/gui-qt/src/main_window.cpp b/vita3k/gui-qt/src/main_window.c
  #include <optional>
  
  #if defined(HAVE_X11) || defined(HAVE_WAYLAND)
-@@ -437,6 +439,8 @@
+@@ -437,6 +439,8 @@ void MainWindow::initialize() {
  
      setup_toolbar();
  
@@ -19,7 +20,7 @@ diff --git a/vita3k/gui-qt/src/main_window.cpp b/vita3k/gui-qt/src/main_window.c
      connect(m_ui->welcome_dialog_action, &QAction::triggered, this, [this]() {
          auto *welcome = new WelcomeDialog(emuenv, true, this);
          welcome->open();
-@@ -1289,6 +1293,21 @@
+@@ -1289,6 +1293,21 @@ void MainWindow::showEvent(QShowEvent *event) {
  }
  
  bool MainWindow::eventFilter(QObject *watched, QEvent *event) {
