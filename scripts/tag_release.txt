@@ -15,6 +15,7 @@ cabextract.mk
 cbindgen.mk
 corsixth.mk
 cxxopts.mk
+date.mk
 dosbox-staging.mk
 ecm.mk
 firmware-radxa.mk
@@ -27,10 +28,10 @@ kddockwidgets.mk
 keisho.mk
 kodi-pvr-freebox.mk
 labwc.mk
-date.mk
 libfyaml.mk
 liblc3.mk
 libldac.mk
+libportmidi.mk
 libretro-gametank.mk
 libretro-scummvm.mk
 libretro-virtualjaguar.mk
@@ -54,7 +55,6 @@ pigpio-rpi.mk
 pironman5.mk
 plutosvg.mk
 plutovg.mk
-libportmidi.mk
 python-cog.mk
 python-ndeflib.mk
 python-nfcpy.mk
