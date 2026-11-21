@@ -3,8 +3,8 @@
 # uwe5622
 #
 ################################################################################
-# Version: Commits on Nov 02, 2026
-UWE5622_VERSION = d2d6bc45c5ef9cefdd53e6c51cec3ba948b84972
+# Version: Commits on Nov 20, 2026
+UWE5622_VERSION = 3b713f8a7ae3627e00bbee5e2a33b6a1fb3151c3
 UWE5622_SITE = $(call github,armbian,uwe5622,$(UWE5622_VERSION))
 
 UWE5622_MODULE_MAKE_OPTS = \
