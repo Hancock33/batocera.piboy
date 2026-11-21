@@ -9,8 +9,12 @@ LIBFRAMEUTIL_SITE = $(call github,ppuc,libframeutil,$(LIBFRAMEUTIL_VERSION))
 LIBFRAMEUTIL_LICENSE = GPLv3
 LIBFRAMEUTIL_LICENSE_FILES = LICENSE
 
-define LIBFRAMEUTIL_INSTALL_TARGET_CMDS
-	cp $(@D)/include/FrameUtil.h $(STAGING_DIR)/usr/include
+LIBFRAMEUTIL_INSTALL_STAGING = YES
+LIBFRAMEUTIL_INSTALL_TARGET = NO
+
+# Header-only library
+define LIBFRAMEUTIL_INSTALL_STAGING_CMDS
+	$(INSTALL) -D -m 0644 $(@D)/include/FrameUtil.h $(STAGING_DIR)/usr/include/FrameUtil.h
 endef
 
 $(eval $(generic-package))

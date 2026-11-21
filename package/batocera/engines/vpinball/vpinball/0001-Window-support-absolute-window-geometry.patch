@@ -1,0 +1,44 @@
+Window: support absolute window geometry
+
+Batocera's configgen sets <Window>Display to "absolute" and gives WndX,
+WndY, Width and Height in desktop pixel coordinates, so that the
+playfield, backglass and DMD windows can be laid out over several
+outputs (see batocera_launch/emulators/vpinball/windowing.py).
+
+For such a window, use the primary display and apply the configured
+geometry as is, instead of constraining it to and centering it on the
+selected display.
+
+--- a/src/renderer/Window.cpp
++++ b/src/renderer/Window.cpp
+@@ -78,7 +78,13 @@
+    // Both fullscreen and windowed modes are anchored to a user selected display
+    const string configuredDisplay = settings.GetWindow_Display((int)m_windowId);
+    const DisplayConfig selectedDisplay = GetDisplayConfig(configuredDisplay);
+-   if (configuredDisplay.empty())
++   // "absolute": WndX/WndY/Width/Height are desktop pixel coordinates, not relative to a display
++   const bool absolutePosition = (configuredDisplay == "absolute");
++   if (absolutePosition)
++   {
++      PLOGI << "Absolute window position configured. Using display \"" << selectedDisplay.displayId << "\".";
++   }
++   else if (configuredDisplay.empty())
+    {
+       PLOGI << "No display configured. Using display \"" << selectedDisplay.displayId << "\".";
+    }
+@@ -171,6 +177,15 @@
+          if (0 <= yn && yn + m_height <= selectedDisplay.videomode.height)
+             wnd_y = selectedDisplay.top + yn;
+       }
++
++      // Use the configured geometry as is: no constraining to, or centering on, the display
++      if (absolutePosition)
++      {
++         m_width = settings.GetWindow_Width(m_windowId);
++         m_height = settings.GetWindow_Height(m_windowId);
++         wnd_x = settings.GetWindow_WndX(m_windowId);
++         wnd_y = settings.GetWindow_WndY(m_windowId);
++      }
+    }
+ 
+    if (m_refreshrate <= 0)
