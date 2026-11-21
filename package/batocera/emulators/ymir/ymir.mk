@@ -20,38 +20,32 @@ YMIR_VERSION = v0.4.1
 YMIR_SITE = https://github.com/ymir-emu/Ymir
 YMIR_SITE_METHOD = git
 YMIR_GIT_SUBMODULES = YES
-YMIR_LICENSE = GPLv2
-YMIR_LICENSE_FILE = LICENSE
+YMIR_LICENSE = GPL-3.0
+YMIR_LICENSE_FILES = LICENSE
 YMIR_EMULATOR_INFO = ymir.emulator.yml
-YMIR_DEPENDENCIES += catch2 cereal cxxopts fmt host-clang host-pkgconf json-for-modern-cpp
-YMIR_DEPENDENCIES += libcurl date lz4 miniz nghttp3 ngtcp2 openssl rtmidi
-YMIR_DEPENDENCIES += sdl3 semver stb tomlplusplus xxhash zstd
-
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
-YMIR_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-YMIR_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=/usr
+YMIR_DEPENDENCIES += cereal cxxopts date fmt host-pkgconf json-for-modern-cpp
+YMIR_DEPENDENCIES += libcurl lz4 miniz openssl rtmidi sdl3 tomlplusplus xxhash
+YMIR_DEPENDENCIES += zlib zstd
+
 YMIR_CONF_OPTS += -DYmir_DEV_BUILD=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_DEVLOG=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_IMGUI_DEMO=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_IPO=ON
 YMIR_CONF_OPTS += -DYmir_ENABLE_SANDBOX=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_TESTS=OFF
+YMIR_CONF_OPTS += -DYmir_ENABLE_UPDATE_CHECKS=OFF
 YMIR_CONF_OPTS += -DYmir_ENABLE_YMDASM=OFF
-YMIR_CONF_OPTS += -DYmir_FF_VIRTUA_GUN=ON
 
-# the vulkan backend is unimplemented but becomes the default when found, and needs dxc
 YMIR_CONF_OPTS += -DCMAKE_DISABLE_FIND_PACKAGE_Vulkan=ON
 
 ifeq ($(BR2_X86_CPU_HAS_AVX2),y)
-    YMIR_CONF_OPTS += -DYmir_AVX2=ON
-else
-    YMIR_CONF_OPTS += -DYmir_AVX2=OFF
+YMIR_CONF_OPTS += -DYmir_AVX2=ON
 endif
 
 define YMIR_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -m 0755 $(@D)/buildroot-build/apps/ymir-sdl3/ymir-sdl3-* $(TARGET_DIR)/usr/bin/ymir
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/apps/ymir-sdl3/ymir-sdl3 $(TARGET_DIR)/usr/bin/ymir
 endef
 
 $(eval $(cmake-package))

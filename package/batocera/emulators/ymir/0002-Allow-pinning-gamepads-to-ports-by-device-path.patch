@@ -1,8 +1,28 @@
+From 257c3131cd31643f56a79709c3815b9a2c040d42 Mon Sep 17 00:00:00 2001
+From: batocera <none@invalid>
+Date: Sat, 21 Nov 2026 20:05:04 +0000
+Subject: [PATCH 2/3] Allow pinning gamepads to ports by device path
+
+Add an Input.PortN.DevicePath setting. At startup the gamepads whose
+SDL joystick path matches a port's DevicePath are opened and assigned
+to that port, so the player order no longer depends on the order in
+which the devices are enumerated. Other gamepads take the lowest free
+player index as they are added.
+
+The gamepad map and player index map move into App so that they can be
+filled before the event loop starts.
+---
+ apps/ymir-sdl3/src/app/app.cpp      | 122 ++++++++++++++--------------
+ apps/ymir-sdl3/src/app/app.hpp      |  51 ++++++++++++
+ apps/ymir-sdl3/src/app/settings.cpp |   2 +
+ apps/ymir-sdl3/src/app/settings.hpp |   1 +
+ 4 files changed, 116 insertions(+), 60 deletions(-)
+
 diff --git a/apps/ymir-sdl3/src/app/app.cpp b/apps/ymir-sdl3/src/app/app.cpp
-index 38e290c1..d7109be2 100644
+index 38e290c..ec16c2c 100644
 --- a/apps/ymir-sdl3/src/app/app.cpp
 +++ b/apps/ymir-sdl3/src/app/app.cpp
-@@ -1314,53 +1314,10 @@ void App::RunEmulator() {
+@@ -1314,53 +1314,8 @@ void App::RunEmulator() {
  
      m_romService.ReloadSDLGameControllerDatabases(false);
  
@@ -48,23 +68,24 @@ index 38e290c1..d7109be2 100644
 -        std::set<int> m_freePlayerIndices;
 -    };
 -
-     // Track connected gamepads and mice and assigned player indices
-     // NOTE: SDL3 has a bug with Windows raw input where new controllers are always assigned to player index 0.
-     // We'll manage player indices manually instead.
+-    // Track connected gamepads and mice and assigned player indices
+-    // NOTE: SDL3 has a bug with Windows raw input where new controllers are always assigned to player index 0.
+-    // We'll manage player indices manually instead.
 -    std::unordered_map<SDL_JoystickID, SDL_Gamepad *> gamepads{};
 -    PlayerIndexMap gamepadPlayerIndices;
++    // Connect the gamepads pinned to ports first; the rest are assigned as they are added
 +    MapConfiguredGamepads();
  
      std::array<GUIEvent, 64> evts{};
  
-@@ -1623,26 +1580,32 @@ void App::RunEmulator() {
+@@ -1623,26 +1578,32 @@ void App::RunEmulator() {
  
              case SDL_EVENT_GAMEPAD_ADDED: //
              {
 -                SDL_Gamepad *gamepad = SDL_OpenGamepad(evt.gdevice.which);
 +                SDL_JoystickID instanceID = evt.gdevice.which;
 +                if (m_gamepads.contains(instanceID)) {
-+                    // Gamepad was already statically mapped at startup, skip
++                    // Already opened by MapConfiguredGamepads()
 +                    break;
 +                }
 +
@@ -101,7 +122,7 @@ index 38e290c1..d7109be2 100644
                  }
                  break;
              }
-@@ -1655,7 +1618,7 @@ void App::RunEmulator() {
+@@ -1655,7 +1616,7 @@ void App::RunEmulator() {
                  break;
              case SDL_EVENT_GAMEPAD_AXIS_MOTION: //
              {
@@ -110,7 +131,7 @@ index 38e290c1..d7109be2 100644
                  const float value = evt.gaxis.value < 0 ? evt.gaxis.value / 32768.0f : evt.gaxis.value / 32767.0f;
                  inputContext.ProcessPrimitive(playerIndex, input::SDL3ToGamepadAxis1D((SDL_GamepadAxis)evt.gaxis.axis),
                                                value);
-@@ -1664,7 +1627,7 @@ void App::RunEmulator() {
+@@ -1664,7 +1625,7 @@ void App::RunEmulator() {
              case SDL_EVENT_GAMEPAD_BUTTON_DOWN: [[fallthrough]];
              case SDL_EVENT_GAMEPAD_BUTTON_UP: //
              {
@@ -119,42 +140,45 @@ index 38e290c1..d7109be2 100644
                  inputContext.ProcessPrimitive(
                      playerIndex, input::SDL3ToGamepadButton((SDL_GamepadButton)evt.gbutton.button), evt.gbutton.down);
                  break;
-@@ -3687,4 +3650,42 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
+@@ -3687,4 +3648,45 @@ void App::OnMidiInputReceived(double delta, std::vector<unsigned char> *msg, voi
      app->m_context.EnqueueEvent(events::emu::ReceiveMidiInput(delta, std::move(*msg)));
  }
  
 +void App::MapConfiguredGamepads() {
-+    int num_gamepads = 0;
-+    SDL_JoystickID* joysticks = SDL_GetJoysticks(&num_gamepads);
-+    if (!joysticks) {
++    // Open the gamepads whose device paths are set in the port settings and pin them to those ports, so that the
++    // player order does not depend on the order in which SDL enumerates the devices
++    int count = 0;
++    SDL_JoystickID *joysticks = SDL_GetJoysticks(&count);
++    if (joysticks == nullptr) {
 +        return;
 +    }
 +
-+    for (int port = 0; port < 2; ++port) {
-+        const auto& path_str = m_settings.input.ports[port].devicePath.string();
-+        if (path_str.empty()) {
++    for (size_t port = 0; port < m_settings.input.ports.size(); ++port) {
++        const std::string devicePath = m_settings.input.ports[port].devicePath.string();
++        if (devicePath.empty()) {
 +            continue;
 +        }
 +
-+        for (int i = 0; i < num_gamepads; ++i) {
-+            SDL_JoystickID instanceID = joysticks[i];
-+
-+            // Avoid mapping the same physical gamepad to multiple ports
-+            if (m_gamepadPlayerIndices.Contains(instanceID)) {
++        for (int i = 0; i < count; ++i) {
++            const SDL_JoystickID id = joysticks[i];
++            if (m_gamepadPlayerIndices.Contains(id)) {
++                // Already pinned to another port
 +                continue;
 +            }
 +
-+            const char* current_path = SDL_GetJoystickPathForID(instanceID);
-+            if (current_path && path_str == current_path) {
-+                SDL_Gamepad* gamepad = SDL_OpenGamepad(instanceID);
-+                if (gamepad) {
-+                    m_gamepadPlayerIndices.ForceMapping(instanceID, port);
-+                    m_gamepads[instanceID] = gamepad;
-+                    m_context.inputContext.ConnectGamepad(port);
-+                    devlog::debug<grp::base>("Device {} mapped to Port {} (Player Index {})", current_path, port + 1, port);
-+                }
-+                break; // Stop looking for devices for this port, move to next port
++            const char *path = SDL_GetJoystickPathForID(id);
++            if (path == nullptr || devicePath != path) {
++                continue;
 +            }
++
++            if (SDL_Gamepad *gamepad = SDL_OpenGamepad(id)) {
++                const int playerIndex = static_cast<int>(port);
++                m_gamepadPlayerIndices.AssignPlayerIndex(id, playerIndex);
++                m_gamepads[id] = gamepad;
++                m_context.inputContext.ConnectGamepad(playerIndex);
++                devlog::debug<grp::base>("Gamepad {} ({}) mapped to port {}", id, path, port + 1);
++            }
++            break;
 +        }
 +    }
 +
@@ -163,15 +187,16 @@ index 38e290c1..d7109be2 100644
 +
  } // namespace app
 diff --git a/apps/ymir-sdl3/src/app/app.hpp b/apps/ymir-sdl3/src/app/app.hpp
-index 53d93988..f67423ce 100644
+index 53d9398..7146121 100644
 --- a/apps/ymir-sdl3/src/app/app.hpp
 +++ b/apps/ymir-sdl3/src/app/app.hpp
-@@ -21,12 +21,72 @@
+@@ -21,12 +21,55 @@
  #include "services/update_checker_service.hpp"
  #include "services/window_manager_service.hpp"
  
 +#include <SDL3/SDL_gamepad.h>
 +
++#include <algorithm>
  #include <chrono>
  #include <thread>
 +#include <unordered_map>
@@ -179,57 +204,39 @@ index 53d93988..f67423ce 100644
  
  namespace app {
  
-+struct PlayerIndexMap {
++// Maps gamepad instance IDs to player indices
++class PlayerIndexMap {
++public:
++    bool Contains(SDL_JoystickID id) const {
++        return m_playerIndices.contains(id);
++    }
++
 +    int GetPlayerIndex(SDL_JoystickID id) const {
-+        if (m_playerIndices.contains(id)) {
-+            return m_playerIndices.at(id);
-+        } else {
-+            return -1;
-+        }
++        auto it = m_playerIndices.find(id);
++        return it != m_playerIndices.end() ? it->second : -1;
 +    }
 +
-+    int GetOrAssignPlayerIndex(SDL_JoystickID id) {
-+        if (m_playerIndices.contains(id)) {
-+            return m_playerIndices.at(id);
-+        }
-+        return AssignPlayerIndex(id);
-+    }
-+
++    // Assigns the lowest player index not in use, so that indices pinned with AssignPlayerIndex(id, index) are skipped
 +    int AssignPlayerIndex(SDL_JoystickID id) {
-+        if (m_playerIndices.contains(id)) {
-+            return m_playerIndices.at(id);
++        if (auto it = m_playerIndices.find(id); it != m_playerIndices.end()) {
++            return it->second;
 +        }
-+        // Find the lowest available index starting from 0 to avoid slot collisions
 +        int index = 0;
-+        while (true) {
-+            bool inUse = false;
-+            for (const auto& [_, val] : m_playerIndices) {
-+                if (val == index) {
-+                    inUse = true;
-+                    break;
-+                }
-+            }
-+            if (!inUse) {
-+                break;
-+            }
-+            index++;
++        while (std::ranges::any_of(m_playerIndices, [&](const auto &entry) { return entry.second == index; })) {
++            ++index;
 +        }
 +        m_playerIndices[id] = index;
 +        return index;
 +    }
 +
-+    void ForceMapping(SDL_JoystickID id, int index) {
++    void AssignPlayerIndex(SDL_JoystickID id, int index) {
 +        m_playerIndices[id] = index;
 +    }
 +
 +    int ReleasePlayerIndex(SDL_JoystickID id) {
-+        int index = GetPlayerIndex(id);
++        const int index = GetPlayerIndex(id);
 +        m_playerIndices.erase(id);
 +        return index;
-+    }
-+
-+    bool Contains(SDL_JoystickID id) const {
-+        return m_playerIndices.contains(id);
 +    }
 +
 +private:
@@ -239,12 +246,14 @@ index 53d93988..f67423ce 100644
  class App {
  public:
      App();
-@@ -73,6 +133,12 @@ private:
+@@ -73,6 +116,14 @@ private:
  
      // Rewind bar
      std::chrono::steady_clock::time_point m_rewindBarFadeTimeBase;
 +
-+    // Gamepad static mapping members
++    // Connected gamepads and their assigned player indices
++    // NOTE: SDL3 has a bug with Windows raw input where new controllers are always assigned to player index 0.
++    // We'll manage player indices manually instead.
 +    std::unordered_map<SDL_JoystickID, SDL_Gamepad *> m_gamepads{};
 +    PlayerIndexMap m_gamepadPlayerIndices{};
 +
@@ -253,7 +262,7 @@ index 53d93988..f67423ce 100644
  
  } // namespace app
 diff --git a/apps/ymir-sdl3/src/app/settings.cpp b/apps/ymir-sdl3/src/app/settings.cpp
-index 534f54e0..e5b71d86 100644
+index 534f54e..1211779 100644
 --- a/apps/ymir-sdl3/src/app/settings.cpp
 +++ b/apps/ymir-sdl3/src/app/settings.cpp
 @@ -1402,6 +1402,7 @@ SettingsLoadResult Settings::Load(const std::filesystem::path &path) {
@@ -264,8 +273,16 @@ index 534f54e0..e5b71d86 100644
  
                  auto parseControlPadBinds = [&](auto &tblBinds) {
                      Parse(tblBinds, "A", portSettings.controlPad.binds.a);
+@@ -1732,6 +1733,7 @@ SettingsSaveResult Settings::Save() {
+         // clang-format off
+         return toml::table{{
+             {"PeripheralType", ToTOML(port.type)},
++            {"DevicePath", port.devicePath.native()},
+             {"ControlPad", toml::table{{
+                 {"Binds", toml::table{{
+                     {"A", ToTOML(port.controlPad.binds.a)},
 diff --git a/apps/ymir-sdl3/src/app/settings.hpp b/apps/ymir-sdl3/src/app/settings.hpp
-index cc13ede3..3c37c841 100644
+index cc13ede..3c37c84 100644
 --- a/apps/ymir-sdl3/src/app/settings.hpp
 +++ b/apps/ymir-sdl3/src/app/settings.hpp
 @@ -295,6 +295,7 @@ struct Settings {
@@ -276,3 +293,6 @@ index cc13ede3..3c37c841 100644
  
              struct ControlPad {
                  struct Binds {
+-- 
+2.56.1.windows.1
+
