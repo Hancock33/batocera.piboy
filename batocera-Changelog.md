@@ -25,13 +25,16 @@
 - Libretro-Gambatte could not load older save states (e.g. from RomM / EmulatorJS)
 - PPSSPP exit hotkey did nothing when no controller was connected
 - RetroArch 2xScaleHQ shader failed to load
+- RetroArch held the left stick up on Bluetooth Xbox controllers (xpadneo)
 - Retroid Pocket Classic speaker only played one audio channel
 - RPCS3 data move copied symlinked dev_hdd0 folders (e.g. games on another drive) in full, and failed when dev_hdd0 itself was a link
 - SDLPoP was stretched to 16:10 behind its 4:3 bezel
 - Steam games that go through a second launcher (EA app) returned to EmulationStation before the game opened
 - System upgrades deleted preshare.sh, postshare.sh and network-connman.config from the boot partition
+- Visual Pinball on Wayland (labwc): the playfield lost keyboard and controller focus to the backglass and needed alt-tab, and the score view was not placed on the third screen
 - Wayland (labwc): a second screen was not placed beside the first unless a display position was set
 - Wayland (labwc): the resolution limit was lost when a screen dropped and came back
+- Wayland (labwc): with several screens, EmulationStation and the Visual Pinball windows were offset or shrunk on their screen when the mouse pointer was on another smaller screen
 - Windows: .NET 5+ games (such as Celeste64) closed at start with WINE Proton and WINE TKG
 - Windows: 32-bit games did not start on Wayland builds with the virtual desktop off
 - Windows: new WINE Proton prefixes asked to download WINE Mono
