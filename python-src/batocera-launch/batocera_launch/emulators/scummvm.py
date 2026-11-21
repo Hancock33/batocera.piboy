@@ -116,7 +116,7 @@ class ScummVM(Emulator):
             [
                 f'--logfile={LOGS / "scummvm.log"}',
                 f'--joystick={joystick_id}',
-                f'--screenshotspath={SCREENSHOTS}',
+                f'--screenshotpath={SCREENSHOTS}',
                 f'--extrapath={_EXTRA_DIR}',
                 f'--savepath={self.saves_dir}',
                 f'--path={rom_path}',
