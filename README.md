@@ -42,6 +42,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|749044d9f0038d3a6dcb3e7c7df
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|01ca7a5bafe654818940b0d9914a95a8bcd72615|Nov 21, 2026
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261121|Nov 21, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|360044e27ea78a57d524711846a04dd35136f5bd|Nov 21, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|c3c47b5bcfd392eba90b2e98f6a3ae3ea9b38321|Nov 21, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|559a72d16a45d51aa334c11cc7ef4be1f23df2f0|Nov 21, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0-rc5|Nov 21, 2026
 Emulators|[libretro-blastem](http://github.com/libretro/blastem)|52ff45c399116899ead4339f234800b6d431d86e|Nov 21, 2026
@@ -74,7 +75,7 @@ Ports|[fallout2-ce](http://github.com/fallout2-ce/fallout2-ce)|c30f1efce64b96696
 Ports|[jazz2-native](http://github.com/deathkiller/jazz2-native)|d1257740d4d5c6996d1d89c14bdd0a0516dfeb0a|Nov 20, 2026
 Ports|[openjkdf2](https://github.com/shinyquagsire23/OpenJKDF2.git)|3e4bc4abb8f82a502a940be935ee3de64dc22ad7|Nov 20, 2026
 Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|4520e5a413a7d31a2899dfe4c740b5de2f80ee73|Nov 20, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|28919b5dfa0b1543338264fa89f9e8abe70ed6ec|Nov 20, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.171.9648-618|Nov 20, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|c15612d94d40333434b7df4cb97e74c45fbc03cb|Nov 20, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|cdcb29aa86a5ab16154622e862dd05c62b7561fc|Nov 20, 2026
 Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|b211fdc4b616de146b6fe594689081eeb4ae3bfd|Nov 20, 2026
@@ -138,7 +139,6 @@ Emulators|[keisho](https://github.com/Keisho-Emu/Keisho.git)|v0.9.63|Nov 15, 202
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|v0.70.3|Nov 15, 2026
 Ports|[dxx-rebirth](http://github.com/dxx-rebirth/dxx-rebirth)|fda30d3aa27e36ce6d72465d8dcf78dd44b64c26|Nov 15, 2026
 Python|[python-cog](http://github.com/nedbat/cog)|v3.6.1|Nov 15, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.168.9637-616|Nov 15, 2026
 Emulators|[libretro-eka2l1](https://github.com/WizzardSK/eka2l1-libretro.git)|c3b2fc7d856f770b5307f643d8786e2e0eab1436|Nov 15, 2026
 Emulators|[libretro-freej2me](http://github.com/TASEmulators/freej2me-plus)|1.53|Nov 15, 2026
 Emulators|[libretro-melonds](http://github.com/libretro/melonds)|4081e8358e66f1ea11879560be6b813dfeaab75a|Nov 15, 2026

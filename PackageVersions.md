@@ -289,7 +289,7 @@ Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|01ca7a5bafe6548
 Emulators|[xroar](https://www.6809.org.uk/xroar/dl)|1.12.1|Jul 27, 2026
 Emulators|[yabasanshiro](https://github.com/Hancock33/yabause.git)|bdbede9fca8ca77693f2e1c51c61d3511282585f|May 21, 2024
 Emulators|[ymir](https://github.com/ymir-emu/Ymir)|v0.4.1|Oct 18, 2026
-Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.168.9637-616|Nov 15, 2026
+Engines|[bgfx](https://github.com/bkaradzic/bgfx.cmake.git)|v1.171.9648-618|Nov 20, 2026
 Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|6d32a6c22e7ce320002f4ec11f541043529cfbec|Nov 17, 2026
 Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|69bd00313fc0c7957502bad007bfed8022e2f6f2|Nov 19, 2026
@@ -319,7 +319,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|aeaa6d6e3c12d6f56ec7185f2f0c0b5cc5f17d0e|Nov 20, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|28919b5dfa0b1543338264fa89f9e8abe70ed6ec|Nov 20, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|c3c47b5bcfd392eba90b2e98f6a3ae3ea9b38321|Nov 21, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://github.com/khadas/common_drivers)|3a11a86a02e759fc57fc79410215f7c0c3a0d8e0|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
