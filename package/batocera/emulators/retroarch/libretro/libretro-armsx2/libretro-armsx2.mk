@@ -3,8 +3,8 @@
 # libretro-armsx2
 #
 ################################################################################
-# Version: Commits on Nov 20, 2026
-LIBRETRO_ARMSX2_VERSION = nightly-20261120
+# Version: Commits on Nov 21, 2026
+LIBRETRO_ARMSX2_VERSION = nightly-20261121
 LIBRETRO_ARMSX2_SITE = https://github.com/ARMSX2/ARMSX2.git
 LIBRETRO_ARMSX2_SITE_METHOD = git
 LIBRETRO_ARMSX2_GIT_SUBMODULES = YES
