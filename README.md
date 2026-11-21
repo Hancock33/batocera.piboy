@@ -112,6 +112,7 @@ Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|c56327db5685c2ae63ea3
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|4e87e3c6c2574f49e1cdf8526b6f829b61e5ccb3|Nov 17, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|6d32a6c22e7ce320002f4ec11f541043529cfbec|Nov 17, 2026
 Engines|[libaltsound](http://github.com/vpinball/libaltsound)|99a944d9dd5818d048e184cd6ca348b6dbc77ec9|Nov 17, 2026
+Ports|[cs16-client](https://github.com/FWGS/cs16-client.git)|ba5549fe32ce0fd94630a582401fc5b2c76f3f23|Nov 17, 2026
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|0c9db4d5d65d661100354442ff426585eaff4987|Nov 17, 2026
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|7126d65b83b65b4316736434ecca2f5ff4f1a3dd|Nov 17, 2026
 Emulators|[libretro-easyrpg](https://github.com/EasyRPG/Player.git)|6d32a6c22e7ce320002f4ec11f541043529cfbec|Nov 17, 2026
@@ -206,6 +207,7 @@ Libraries|[asio](http://github.com/chriskohlhoff/asio)|asio-1-39-0|Nov 07, 2026
 Looks|[odin-bezels](https://github.com/Tovarichtch/Odin/releases)|v0.1.1|Nov 07, 2026
 Ports|[sdlpop](http://github.com/NagyD/SDLPoP)|f7be2e939375d369d26e1d10bcdd5ca74d3002a2|Nov 07, 2026
 Utils|[7zip](https://github.com/ip7z/7zip/releases)|26.06|Nov 07, 2026
+Ports|[hlsdk-xash3d-bshift](https://github.com/FWGS/hlsdk-portable.git)|d071f318e6271168efc330c8186f4e8bd5222418|Nov 07, 2026
 Emulators|[libretro-dosbox-pure](https://codeberg.org/schelling/dosbox-pure.git)|9cccfa21cb117edf94fbcd1a26b2dee8b12db598|Nov 07, 2026
 Utils|[fastfetch](http://github.com/fastfetch-cli/fastfetch)|2.71.0|Nov 06, 2026
 Utils|[rclone](http://github.com/rclone/rclone)|v1.76.0|Nov 06, 2026

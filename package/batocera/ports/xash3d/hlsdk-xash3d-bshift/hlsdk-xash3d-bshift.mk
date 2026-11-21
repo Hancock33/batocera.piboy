@@ -3,9 +3,7 @@
 # hlsdk-xash3d-bshift
 #
 ################################################################################
-
-# "bshift" branch
-# Version: Commits on Nov 7, 2026
+# Version: Commits on Nov 07, 2026
 HLSDK_XASH3D_BSHIFT_VERSION = d071f318e6271168efc330c8186f4e8bd5222418
 HLSDK_XASH3D_BSHIFT_BRANCH = bshift
 HLSDK_XASH3D_BSHIFT_SITE = https://github.com/FWGS/hlsdk-portable.git

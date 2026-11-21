@@ -431,6 +431,7 @@ Ports|[cdogs](http://github.com/cxong/cdogs-sdl)|2.5.0|Oct 16, 2026
 Ports|[cdoom](http://github.com/dhewm/dhewm3-sdk)|60f24e4fe4bf758fe92010654f633572fcbcec9d|Jun 07, 2026
 Ports|[cgenius](https://github.com/gerstrong/Commander-Genius)|58a3c4fd0782fa2a087e38a039599b2ecf69ccc9|Sept 30, 2026
 Ports|[corsixth](http://github.com/CorsixTH/CorsixTH)|v0.70.3|Nov 15, 2026
+Ports|[cs16-client](https://github.com/FWGS/cs16-client.git)|ba5549fe32ce0fd94630a582401fc5b2c76f3f23|Nov 17, 2026
 Ports|[d3le](http://github.com/dhewm/dhewm3-sdk)|b6a499a246496429091b91495792d488ea6e2b60|Jun 07, 2026
 Ports|[dentonmod](http://github.com/dhewm/dhewm3-sdk)|9342a53e63e2b281735241f4bff67bcd7612a7b5|Jun 07, 2026
 Ports|[desolated](http://github.com/dhewm/dhewm3-sdk)|e5501815ca7181b52432c4620dcd48ed2fa62402|Jun 07, 2026
@@ -451,6 +452,7 @@ Ports|[freedroid](http://github.com/ReinhardPrix/FreedroidClassic)|d031e4ed4c8a7
 Ports|[grimm](http://github.com/dhewm/dhewm3-sdk)|34cb764c9e618c3073ed645ac71666559334bb17|Jun 07, 2026
 Ports|[hardcorps](http://github.com/dhewm/dhewm3-sdk)|b767e8cf42428e9aa32817cc4456f5bfe8ed8262|Jun 07, 2026
 Ports|[hcl](http://github.com/ptitSeb/hydracastlelabyrinth)|v0.1.0|Dec 18, 2025
+Ports|[hlsdk-xash3d-bshift](https://github.com/FWGS/hlsdk-portable.git)|d071f318e6271168efc330c8186f4e8bd5222418|Nov 07, 2026
 Ports|[hlsdk-xash3d-dmc](https://github.com/FWGS/hlsdk-portable.git)|1f5582858b5af877cd203656a6aba6090506831b|Nov 08, 2026
 Ports|[hlsdk-xash3d-opfor](https://github.com/FWGS/hlsdk-portable.git)|c3d8dd6f729adeda87d4ce73d4b2de989cd81b93|Nov 08, 2026
 Ports|[hlsdk-xash3d](https://github.com/FWGS/hlsdk-portable.git)|7ec223cfd29e0c20d8e52927dcc3d0c27d9ca7ac|Nov 08, 2026
