@@ -1,5 +1,7 @@
+Only quit ES on shift+alt+F4 or an explicit quit request
+
 diff --git a/es-app/src/main.cpp b/es-app/src/main.cpp
-index 8fa36476d..baa62856b 100644
+index 8fa3647..baa6285 100644
 --- a/es-app/src/main.cpp
 +++ b/es-app/src/main.cpp
 @@ -782,8 +782,9 @@ int main(int argc, char* argv[])
@@ -15,7 +17,7 @@ index 8fa36476d..baa62856b 100644
  			while(SDL_PollEvent(&event));
  
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index ef001b6be..a20cccc93 100644
+index 902d281..1b4d3bc 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
 @@ -774,22 +774,16 @@ bool InputManager::parseEvent(const SDL_Event& ev, Window* window)
@@ -46,7 +48,7 @@ index ef001b6be..a20cccc93 100644
  		return true;
  
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index 5fc9bb10a..f94285601 100644
+index 8caa683..d5e0979 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -33,6 +33,8 @@ namespace Utils
@@ -68,7 +70,7 @@ index 5fc9bb10a..f94285601 100644
  			quit->type = SDL_QUIT;
  			SDL_PushEvent(quit);
 diff --git a/es-core/src/utils/Platform.h b/es-core/src/utils/Platform.h
-index b4b2373f9..c894a7e03 100644
+index b4b2373..c894a7e 100644
 --- a/es-core/src/utils/Platform.h
 +++ b/es-core/src/utils/Platform.h
 @@ -17,6 +17,11 @@ namespace Utils

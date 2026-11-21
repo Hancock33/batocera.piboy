@@ -1,5 +1,7 @@
+Support file comes from the saves folder, not system
+
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 788427826..c5d4b6442 100644
+index 3c4407c..6f9902c 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -839,7 +839,7 @@ void GuiMenu::openDeveloperSettings()

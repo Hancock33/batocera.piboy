@@ -13,10 +13,12 @@ BATOCERA_EMULATIONSTATION_DEPENDENCIES = alsa-lib batocera-es-system freetype li
 BATOCERA_EMULATIONSTATION_DEPENDENCIES += host-gettext
 BATOCERA_EMULATIONSTATION_INSTALL_IMAGES = YES
 
+BATOCERA_EMULATIONSTATION_SOURCE_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation
+
 # Debug build settings + install in staging
 ifeq ($(BR2_ENABLE_DEBUG),y)
-    BATOCERA_EMULATIONSTATION_INSTALL_STAGING = YES
-    BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCMAKE_BUILD_TYPE=Debug
+BATOCERA_EMULATIONSTATION_INSTALL_STAGING = YES
+BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCMAKE_BUILD_TYPE=Debug
 endif
 
 # use gcc to build
@@ -24,6 +26,11 @@ BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCMAKE_C_COMPILER=$(TARGET_CC)
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(TARGET_CXX)
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(TARGET_CFLAGS) -D$(call UPPERCASE,$(BATOCERA_ARCH))"
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DUSE_SYSTEM_PUGIXML=ON
+
+BATOCERA_EMULATIONSTATION_CONF_OPTS += -DBATOCERA=ON
+BATOCERA_EMULATIONSTATION_CONF_OPTS += -DNOUPDATE=ON
+# cec disabled: causes perf issues on init/deinit
+BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCEC=OFF
 
 ifeq ($(BR2_PACKAGE_XAPP_XINIT),y)
 BATOCERA_EMULATIONSTATION_DEPENDENCIES += xapp_xinit
@@ -53,8 +60,10 @@ else
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DDISABLE_KODI=ON
 endif
 
-ifeq ($(BR2_PACKAGE_PULSEAUDIO_ENABLE_ATOMIC),y)
+# depend on pulseaudio itself so libpulse is in staging before cmake looks for it
+ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DENABLE_PULSE=ON
+BATOCERA_EMULATIONSTATION_DEPENDENCIES += pulseaudio
 else
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DENABLE_PULSE=OFF
 endif
@@ -65,75 +74,61 @@ else
 BATOCERA_EMULATIONSTATION_CONF_OPTS += -DENABLE_FILEMANAGER=OFF
 endif
 
-BATOCERA_EMULATIONSTATION_CONF_OPTS += -DBATOCERA=ON
-BATOCERA_EMULATIONSTATION_CONF_OPTS += -DNOUPDATE=ON
+### API keys
+# KEY=value lines, see keys.txt.sample. The first file that exists is used;
+# override with BATOCERA_EMULATIONSTATION_KEYS_FILE=/path/to/keys.txt
+BATOCERA_EMULATIONSTATION_KEYS_FILE ?= $(firstword $(wildcard \
+	$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/keys.txt \
+	/home/lee/keys.txt))
+BATOCERA_EMULATIONSTATION_KEYS = SCREENSCRAPER_DEV_LOGIN GAMESDB_APIKEY CHEEVOS_DEV_LOGIN HFS_DEV_LOGIN
 
-# disabling cec. causing perf issue on init/deinit
-#ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3128),y)
-BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCEC=OFF
-#else
-#BATOCERA_EMULATIONSTATION_CONF_OPTS += -DCEC=ON
-#endif
-
-BATOCERA_EMULATIONSTATION_SOURCE_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation
-
-BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN=$(shell grep -E '^SCREENSCRAPER_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
-BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY=$(shell grep -E '^GAMESDB_APIKEY=' /home/lee/keys.txt | cut -d = -f 2-)
-BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN=$(shell grep -E '^CHEEVOS_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
-BATOCERA_EMULATIONSTATION_KEY_HFS_DEV_LOGIN=$(shell grep -E '^HFS_DEV_LOGIN=' /home/lee/keys.txt | cut -d = -f 2-)
-
-ifneq ($(BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN),)
-BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DSCREENSCRAPER_DEV_LOGIN=$(BATOCERA_EMULATIONSTATION_KEY_SCREENSCRAPER_DEV_LOGIN)"
+define BATOCERA_EMULATIONSTATION_ADD_KEY
+BATOCERA_EMULATIONSTATION_KEY_$(1) := $$(shell sed -n 's/^$(1)=//p' $$(BATOCERA_EMULATIONSTATION_KEYS_FILE) | head -n 1 | tr -d '\r')
+ifneq ($$(BATOCERA_EMULATIONSTATION_KEY_$(1)),)
+BATOCERA_EMULATIONSTATION_CONF_OPTS += "-D$(1)=$$(BATOCERA_EMULATIONSTATION_KEY_$(1))"
 endif
-ifneq ($(BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY),)
-BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DGAMESDB_APIKEY=$(BATOCERA_EMULATIONSTATION_KEY_GAMESDB_APIKEY)"
-endif
-ifneq ($(BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN),)
-BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DCHEEVOS_DEV_LOGIN=$(BATOCERA_EMULATIONSTATION_KEY_CHEEVOS_DEV_LOGIN)"
-endif
-ifneq ($(BATOCERA_EMULATIONSTATION_KEY_HFS_DEV_LOGIN),)
-BATOCERA_EMULATIONSTATION_CONF_OPTS += "-DHFS_DEV_LOGIN=$(BATOCERA_EMULATIONSTATION_KEY_HFS_DEV_LOGIN)"
+endef
+
+ifneq ($(BATOCERA_EMULATIONSTATION_KEYS_FILE),)
+$(foreach key,$(BATOCERA_EMULATIONSTATION_KEYS),$(eval $(call BATOCERA_EMULATIONSTATION_ADD_KEY,$(key))))
 endif
 
+### translations: merge batocera-es-system strings into the ES catalogs
 define BATOCERA_EMULATIONSTATION_EXTERNAL_POS
-	cp $(STAGING_DIR)/usr/share/batocera-es-system/es_external_translations.h $(STAGING_DIR)/usr/share/batocera-es-system/es_keys_translations.h $(@D)/es-app/src
+	cp $(STAGING_DIR)/usr/share/batocera-es-system/es_external_translations.h \
+		$(STAGING_DIR)/usr/share/batocera-es-system/es_keys_translations.h \
+		$(@D)/es-app/src
 	for P in $(STAGING_DIR)/usr/share/batocera-es-system/locales/*; do \
+		PO=$(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po; \
 		if test -e $$P/batocera-es-system.po; then \
-			cp $(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po \
-				$(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po.tmp; \
-			$(HOST_DIR)/bin/msgcat \
-				$(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po.tmp \
-				$$P/batocera-es-system.po > \
-				$(@D)/locale/lang/$$(basename $$P)/LC_MESSAGES/emulationstation2.po; \
+			cp $$PO $$PO.tmp && \
+			$(HOST_DIR)/bin/msgcat $$PO.tmp $$P/batocera-es-system.po > $$PO && \
+			rm -f $$PO.tmp || exit 1; \
 		fi; \
 	done
 endef
 
+### resources
+BATOCERA_EMULATIONSTATION_SHARE = $(TARGET_DIR)/usr/share/emulationstation
+BATOCERA_EMULATIONSTATION_RESOURCES_DIRS = . help flags battery shaders shaders/kawase
+
 define BATOCERA_EMULATIONSTATION_RESOURCES
-	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/help
-	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/flags
-	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/battery
-	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/services
-	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/shaders
-	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/shaders/kawase
-	$(INSTALL) -m 0644 -D $(@D)/resources/*.*          $(TARGET_DIR)/usr/share/emulationstation/resources
-	$(INSTALL) -m 0644 -D $(@D)/resources/help/*.*     $(TARGET_DIR)/usr/share/emulationstation/resources/help
-	$(INSTALL) -m 0644 -D $(@D)/resources/flags/*.*    $(TARGET_DIR)/usr/share/emulationstation/resources/flags
-	$(INSTALL) -m 0644 -D $(@D)/resources/battery/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/battery
-	$(INSTALL) -m 0644 -D $(@D)/resources/shaders/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/shaders
-	$(INSTALL) -m 0644 -D $(@D)/resources/shaders/*.*  $(TARGET_DIR)/usr/share/emulationstation/resources/shaders/kawase
-	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/resources/loading.jpg	$(TARGET_DIR)/usr/share/emulationstation/resources/loading.jpg
-	cp -av $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo.png								$(TARGET_DIR)/usr/share/emulationstation/resources/logo.png
+	$(foreach d,$(BATOCERA_EMULATIONSTATION_RESOURCES_DIRS),\
+		$(INSTALL) -m 0644 -D -t $(BATOCERA_EMULATIONSTATION_SHARE)/resources/$(d) $(@D)/resources/$(d)/*.*$(sep))
+	$(INSTALL) -m 0755 -d $(BATOCERA_EMULATIONSTATION_SHARE)/resources/services
+	$(INSTALL) -m 0644 -D $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/resources/loading.jpg \
+		$(BATOCERA_EMULATIONSTATION_SHARE)/resources/loading.jpg
+	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo.png \
+		$(BATOCERA_EMULATIONSTATION_SHARE)/resources/logo.png
 
-	# es_input.cfg
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
-	cp $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/controllers/es_input.cfg $(TARGET_DIR)/usr/share/emulationstation
-
-	# savestates config
-	$(INSTALL) -m 0644 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/es_savestates.cfg $(TARGET_DIR)/usr/share/emulationstation
+	# default configs
+	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
+	$(INSTALL) -m 0644 -D -t $(BATOCERA_EMULATIONSTATION_SHARE) \
+		$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/controllers/es_input.cfg \
+		$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/es_savestates.cfg
 
 	# hooks
-	cp $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/batocera-preupdate-gamelists-hook $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/batocera-preupdate-gamelists-hook
 endef
 
 ### S31emulationstation
@@ -143,13 +138,8 @@ BATOCERA_EMULATIONSTATION_CMD = emulationstation-standalone
 BATOCERA_EMULATIONSTATION_ARGS = --no-splash $${EXTRA_OPTS}
 BATOCERA_EMULATIONSTATION_POSTFIX = \>/dev/null 2>\&1 \&
 
-# on SPLASH_MPV, the splash with video + es splash is ok
-ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV),y)
-BATOCERA_EMULATIONSTATION_ARGS = $${EXTRA_OPTS}
-endif
-
-# es splash is ok when there is no video
-ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_IMAGE),y)
+# es splash is ok with the mpv video splash, or when there is no video
+ifneq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV)$(BR2_PACKAGE_BATOCERA_SPLASH_IMAGE),)
 BATOCERA_EMULATIONSTATION_ARGS = $${EXTRA_OPTS}
 endif
 
@@ -173,27 +163,24 @@ define BATOCERA_EMULATIONSTATION_XORG
 endef
 
 define BATOCERA_EMULATIONSTATION_WAYLAND_LABWC
-	mkdir -p $(TARGET_DIR)/usr/share/labwc
 	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/04-labwc.sh $(TARGET_DIR)/etc/profile.d/04-labwc.sh
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/rc.xml $(TARGET_DIR)/usr/share/labwc/rc.xml
 	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/S14labwc $(TARGET_DIR)/etc/init.d/S14labwc
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart $(TARGET_DIR)/usr/share/labwc/autostart
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart_* $(TARGET_DIR)/usr/share/labwc/
 	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/labwc-launch $(TARGET_DIR)/usr/bin/labwc-launch
+	$(INSTALL) -D -m 0644 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/rc.xml $(TARGET_DIR)/usr/share/labwc/rc.xml
+	$(INSTALL) -D -m 0755 -t $(TARGET_DIR)/usr/share/labwc \
+		$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart \
+		$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart_*
 endef
 
 define BATOCERA_EMULATIONSTATION_BOOT
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/S31emulationstation			$(TARGET_DIR)/etc/init.d/S31emulationstation
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/emulationstation-standalone	$(TARGET_DIR)/usr/bin/emulationstation-standalone
-	sed -i -e 's;%BATOCERA_EMULATIONSTATION_PREFIX%;$(BATOCERA_EMULATIONSTATION_PREFIX);g' \
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/S31emulationstation $(TARGET_DIR)/etc/init.d/S31emulationstation
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/emulationstation-standalone $(TARGET_DIR)/usr/bin/emulationstation-standalone
+	sed -i \
+		-e 's;%BATOCERA_EMULATIONSTATION_PREFIX%;$(BATOCERA_EMULATIONSTATION_PREFIX);g' \
 		-e 's;%BATOCERA_EMULATIONSTATION_CMD%;$(BATOCERA_EMULATIONSTATION_CMD);g' \
 		-e 's;%BATOCERA_EMULATIONSTATION_ARGS%;$(BATOCERA_EMULATIONSTATION_ARGS);g' \
 		-e 's;%BATOCERA_EMULATIONSTATION_POSTFIX%;$(BATOCERA_EMULATIONSTATION_POSTFIX);g' \
-		$(TARGET_DIR)/usr/bin/emulationstation-standalone
-	sed -i -e 's;%BATOCERA_EMULATIONSTATION_PREFIX%;$(BATOCERA_EMULATIONSTATION_PREFIX);g' \
-		-e 's;%BATOCERA_EMULATIONSTATION_CMD%;$(BATOCERA_EMULATIONSTATION_CMD);g' \
-		-e 's;%BATOCERA_EMULATIONSTATION_ARGS%;$(BATOCERA_EMULATIONSTATION_ARGS);g' \
-		-e 's;%BATOCERA_EMULATIONSTATION_POSTFIX%;$(BATOCERA_EMULATIONSTATION_POSTFIX);g' \
+		$(TARGET_DIR)/usr/bin/emulationstation-standalone \
 		$(TARGET_DIR)/etc/init.d/S31emulationstation
 endef
 

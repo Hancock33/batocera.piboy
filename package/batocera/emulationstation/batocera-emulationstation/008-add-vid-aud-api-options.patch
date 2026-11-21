@@ -1,8 +1,10 @@
+Add fps/framecount, gfx backend, audio and input driver features
+
 diff --git a/es-app/src/CustomFeatures.cpp b/es-app/src/CustomFeatures.cpp
-index 063f0560f..80c05f976 100644
+index 20c6f13..883ad01 100644
 --- a/es-app/src/CustomFeatures.cpp
 +++ b/es-app/src/CustomFeatures.cpp
-@@ -39,6 +39,8 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
+@@ -40,6 +40,8 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
  
  		if (trim == "ratio") ret = ret | EmulatorFeatures::Features::ratio;
  		if (trim == "rewind") ret = ret | EmulatorFeatures::Features::rewind;
@@ -11,7 +13,7 @@ index 063f0560f..80c05f976 100644
  		if (trim == "smooth") ret = ret | EmulatorFeatures::Features::smooth;
  		if (trim == "shaders") ret = ret | EmulatorFeatures::Features::shaders;
  		if (trim == "videofilters") ret = ret | EmulatorFeatures::Features::videofilters;
-@@ -53,6 +55,10 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
+@@ -54,6 +56,10 @@ EmulatorFeatures::Features EmulatorFeatures::parseFeatures(const std::string fea
  		if (trim == "videomode") ret = ret | EmulatorFeatures::Features::videomode;
  		if (trim == "colorization") ret = ret | EmulatorFeatures::Features::colorization;
  		if (trim == "autocontrollers") ret = ret | EmulatorFeatures::Features::autocontrollers;
@@ -23,10 +25,10 @@ index 063f0560f..80c05f976 100644
  
  	return ret;
 diff --git a/es-app/src/CustomFeatures.h b/es-app/src/CustomFeatures.h
-index 0c89062ef..15e74981c 100644
+index 53c5412..6d964e3 100644
 --- a/es-app/src/CustomFeatures.h
 +++ b/es-app/src/CustomFeatures.h
-@@ -91,7 +91,12 @@ public:
+@@ -97,7 +97,12 @@ public:
  		cheevos = 131072,
  		autocontrollers = 262144,
  		videofilters = 524288,
@@ -41,10 +43,10 @@ index 0c89062ef..15e74981c 100644
  	};
  
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 788427826..b3dfe93f8 100644
+index dfa0436..9b8eaa0 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -2923,7 +2923,7 @@ void GuiMenu::openGamesSettings()
+@@ -2956,7 +2956,7 @@ void GuiMenu::openGamesSettings()
  	s->addWithDescription(_("SHOW SAVESTATE MANAGER"), _("Display savestate manager before launching a game."), showSaveStates);
  	s->addSaveFunc([showSaveStates] { SystemConf::getInstance()->set("global.savestates", showSaveStates->getSelected()); });
  
@@ -53,7 +55,7 @@ index 788427826..b3dfe93f8 100644
  
  	// Screen ratio choice
  	if (!hasGlobalFeature("ratio"))
-@@ -2941,6 +2941,61 @@ void GuiMenu::openGamesSettings()
+@@ -2974,6 +2974,61 @@ void GuiMenu::openGamesSettings()
  		s->addSaveFunc([this, videoModeOptionList] { SystemConf::getInstance()->set("global.videomode", videoModeOptionList->getSelected()); });
  	}
  

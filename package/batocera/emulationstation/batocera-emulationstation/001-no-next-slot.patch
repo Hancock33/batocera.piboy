@@ -1,5 +1,7 @@
+Do not auto-start games on the next free savestate slot
+
 diff --git a/es-app/src/SaveState.cpp b/es-app/src/SaveState.cpp
-index aef374d46..ac2f33736 100644
+index aef374d..ac2f337 100644
 --- a/es-app/src/SaveState.cpp
 +++ b/es-app/src/SaveState.cpp
 @@ -80,20 +80,6 @@ std::string SaveState::setupSaveState(FileData* game, const std::string& command
@@ -82,10 +84,10 @@ index aef374d46..ac2f33736 100644
  					if (Utils::FileSystem::copyFile(fileName, mNewSlotFile))
  						mNewSlotCheckSum = ApiSystem::getInstance()->getMD5(fileName, false);
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 422e7628d..1d6894263 100644
+index 75b4f69..3c4407c 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -2905,7 +2905,6 @@ void GuiMenu::openGamesSettings()
+@@ -2927,7 +2927,6 @@ void GuiMenu::openGamesSettings()
  	auto incrementalSaveStates = std::make_shared<OptionListComponent<std::string>>(mWindow, _("INCREMENTAL SAVESTATES"));
  	incrementalSaveStates->addRange({
  		{ _("INCREMENT PER SAVE"), _("Never overwrite old savestates, always make new ones."), "" }, // Don't use 1 -> 1 is YES, auto too

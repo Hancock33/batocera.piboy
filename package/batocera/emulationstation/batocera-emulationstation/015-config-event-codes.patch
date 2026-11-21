@@ -1,3 +1,5 @@
+Keep evdev event codes in es_input.cfg
+
 diff --git a/es-core/src/InputConfig.cpp b/es-core/src/InputConfig.cpp
 index cf3238a..0eae93f 100644
 --- a/es-core/src/InputConfig.cpp
@@ -68,10 +70,10 @@ index e5043ae..fc4365a 100644
  
  class InputConfig
 diff --git a/es-core/src/InputManager.cpp b/es-core/src/InputManager.cpp
-index ef001b6..2deb8f2 100644
+index 046274f..fcc0d69 100644
 --- a/es-core/src/InputManager.cpp
 +++ b/es-core/src/InputManager.cpp
-@@ -1478,6 +1478,7 @@ std::string InputManager::configureEmulators() {
+@@ -1472,6 +1472,7 @@ std::string InputManager::configureEmulators() {
        command << " -p" << player+1 << "nbbuttons "  << playerInputConfig->getDeviceNbButtons();
        command << " -p" << player+1 << "nbhats "     << playerInputConfig->getDeviceNbHats();
        command << " -p" << player+1 << "nbaxes "     << playerInputConfig->getDeviceNbAxes();

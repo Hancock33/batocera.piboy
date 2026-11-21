@@ -1,5 +1,7 @@
+Add PIBOY and NOUPDATE build options
+
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index e509df914..4e0810b28 100644
+index e509df9..4e0810b 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -20,6 +20,8 @@ option(BCM "BCM host" OFF)
@@ -29,7 +31,7 @@ index e509df914..4e0810b28 100644
  if(DISABLE_KODI)
    MESSAGE("Kodi disabled")
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index efaebf9b0..3371253c9 100644
+index 6f9902c..dfa0436 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
 @@ -90,8 +90,15 @@
@@ -48,36 +50,31 @@ index efaebf9b0..3371253c9 100644
  #define fake_gettext_model        _("Model")
  #define fake_gettext_cpu_model    _("Cpu model")
  #define fake_gettext_cpu_number   _("Cpu number")
-@@ -210,9 +217,12 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
+@@ -210,7 +217,11 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
  		if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::BATOCERASTORE) || ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEMESDOWNLOADER) ||
  			(ApiSystem::getInstance()->isScriptingSupported(ApiSystem::THEBEZELPROJECT) && ApiSystem::getInstance()->isScriptingSupported(ApiSystem::DECORATIONS)) ||
  			ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
--			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
--
--		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
-+			#if !NOUPDATE
-+				addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
-+			#else
-+				addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
-+			#endif
-+			addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
++#if !NOUPDATE
+ 			addEntry(_("UPDATES & DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++#else
++			addEntry(_("DOWNLOADS"), true, [this] { openUpdatesSettings(); }, "iconUpdates");
++#endif
+ 
+ 		addEntry(_("SYSTEM SETTINGS").c_str(), true, [this] { openSystemSettings(); }, "iconSystem");
  	}
- 	else
- 	{
-@@ -1187,7 +1197,11 @@ void GuiMenu::openDeveloperSettings()
+@@ -1187,7 +1198,11 @@ void GuiMenu::openDeveloperSettings()
  
  void GuiMenu::openUpdatesSettings(bool selectTorrentService)
  {
--	GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
-+	#if !NOUPDATE
-+		GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
-+	#else
-+		GuiSettings *updateGui = new GuiSettings(mWindow, _("DOWNLOADS").c_str());
-+	#endif
++#if !NOUPDATE
+ 	GuiSettings *updateGui = new GuiSettings(mWindow, _("UPDATES & DOWNLOADS").c_str());
++#else
++	GuiSettings *updateGui = new GuiSettings(mWindow, _("DOWNLOADS").c_str());
++#endif
  
  	updateGui->addGroup(_("DOWNLOADS"));
  
-@@ -1228,6 +1242,7 @@ void GuiMenu::openUpdatesSettings(bool selectTorrentService)
+@@ -1228,6 +1243,7 @@ void GuiMenu::openUpdatesSettings(bool selectTorrentService)
  
  	if (ApiSystem::getInstance()->isScriptingSupported(ApiSystem::UPGRADE))
  	{
@@ -85,21 +82,7 @@ index efaebf9b0..3371253c9 100644
  		updateGui->addGroup(_("SOFTWARE UPDATES"));
  
  		// Enable updates
-@@ -1243,11 +1258,11 @@ void GuiMenu::openUpdatesSettings(bool selectTorrentService)
- 
- 		std::string updatesType = SystemConf::getInstance()->get("updates.type");
- 
--#if WIN32
-+    #if WIN32
- 		if (updatesType == "unstable")
- 			updatesTypeList->add("unstable", "unstable", updatesType == "unstable");
- 		else
--#endif
-+    #endif
- 			if (updatesType.empty() || updatesType != BETA_NAME)
- 				updatesType = "stable";
- 
-@@ -1358,6 +1373,7 @@ void GuiMenu::openUpdatesSettings(bool selectTorrentService)
+@@ -1358,6 +1374,7 @@ void GuiMenu::openUpdatesSettings(bool selectTorrentService)
  	        updateGui->addWithLabel(_("DOWNLOAD STATUS"), std::make_shared<TextComponent>(mWindow, torrent_status, ThemeData::getMenuTheme()->Text.font, ThemeData::getMenuTheme()->Text.color));
  	    }
  	  }
@@ -108,7 +91,7 @@ index efaebf9b0..3371253c9 100644
  
  	mWindow->pushGui(updateGui);
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index dee132ea3..0b0d7e073 100644
+index 78791e6..9d066cf 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -25,6 +25,7 @@
@@ -123,8 +106,8 @@ index dee132ea3..0b0d7e073 100644
  		{
  #ifdef WIN32 // windows
  			return system("shutdown -s -t 0");
-+#elseif PIBOY
-+return system("/sbin/rmmod xpi_gamecon ; /sbin/rmmod xpi_gamecon_xrs ; shutdown -t1 now -h");
++#elif defined(PIBOY)
++			return system("/sbin/rmmod xpi_gamecon ; /sbin/rmmod xpi_gamecon_xrs ; shutdown -t1 now -h");
  #else // osx / linux
  			return system("shutdown -t1 now -h");
  #endif
@@ -132,8 +115,8 @@ index dee132ea3..0b0d7e073 100644
  		{
  #ifdef WIN32 // windows
  			return system("shutdown -r -t 0");
-+#elseif PIBOY
-+	return system("reboot");
++#elif defined(PIBOY)
++			return system("reboot");
  #else // osx / linux
  			return system("shutdown -t1 now -r");
  #endif
@@ -167,9 +150,9 @@ index dee132ea3..0b0d7e073 100644
 +			#endif
 +			}
  
- 				// If there's no battery device, look for discrete charger and fuel gauge
- 				if (batteryRootPath.empty())
-@@ -474,9 +491,14 @@ namespace Utils
+ 				// Some laptops name their battery after the ACPI device (BAPM), so fall back to its type; skip pad batteries
+ 				if (batteryRootPath.empty() && fuelgaugeRootPath.empty())
+@@ -488,9 +505,14 @@ namespace Utils
  				}
  				else
  				{
@@ -184,7 +167,7 @@ index dee132ea3..0b0d7e073 100644
  				}
  			}
  
-@@ -489,9 +511,33 @@ namespace Utils
+@@ -503,9 +525,33 @@ namespace Utils
  			else
  			{
  				ret.hasBattery = true;
@@ -218,7 +201,7 @@ index dee132ea3..0b0d7e073 100644
  
  				if (batteryCurrentPath.length() > 1 && Utils::FileSystem::exists(batteryCurrentPath))
  				{
-@@ -520,7 +566,11 @@ namespace Utils
+@@ -534,7 +580,11 @@ namespace Utils
  						file.close();
  						if (!buffer.empty())
  						{

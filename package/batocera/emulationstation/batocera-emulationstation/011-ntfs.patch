@@ -1,8 +1,10 @@
+Offer ntfs in the disk format fallback list
+
 diff --git a/es-app/src/guis/GuiMenu.cpp b/es-app/src/guis/GuiMenu.cpp
-index 169940e1d..5b2173950 100644
+index 9b8eaa0..5e15e68 100644
 --- a/es-app/src/guis/GuiMenu.cpp
 +++ b/es-app/src/guis/GuiMenu.cpp
-@@ -2191,7 +2191,7 @@ void GuiMenu::openSystemSettings()
+@@ -2212,7 +2212,7 @@ void GuiMenu::openSystemSettings()
      if (selectedFormat.empty()) selectedFormat = "btrfs";
  
      std::vector<std::string> fstypes = ApiSystem::getInstance()->getFormatFileSystems();
