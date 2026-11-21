@@ -4,7 +4,7 @@
 #
 ################################################################################
 # Version: Commits on Nov 21, 2026
-LICHII_VERSION = 8a8d6efca5167405f8d5cdf19e08e667bc973731
+LICHII_VERSION = b912dba4990016fb1ebe9ff208305f5a070bc687
 LICHII_SITE = https://github.com/zortos293/Lichii.git
 LICHII_SITE_METHOD = git
 LICHII_LICENSE = GPL-3.0+
