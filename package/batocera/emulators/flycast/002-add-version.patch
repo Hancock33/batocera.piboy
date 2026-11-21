@@ -1,5 +1,14 @@
+Subject: [PATCH] Allow GIT_VERSION and GIT_HASH to be set on the command line
+
+Buildroot builds from a tarball with no .git directory, so the version
+would always be reported as v0.0.0. Only fall back to the placeholder
+when the values were not passed with -D.
+---
+ CMakeLists.txt | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b112e56b1..8bb2ce30f 100644
+index fee2357..c9bce3a 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -149,8 +149,12 @@ if(GIT_FOUND AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")

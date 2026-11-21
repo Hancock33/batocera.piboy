@@ -1,5 +1,13 @@
+Subject: [PATCH] Center achievement notifications
+
+Draw achievement, challenge and leaderboard notifications centred at the
+bottom of the screen instead of in the bottom-left corner.
+---
+ core/ui/gui_achievements.cpp | 24 ++++++++++++++++++------
+ 1 file changed, 18 insertions(+), 6 deletions(-)
+
 diff --git a/core/ui/gui_achievements.cpp b/core/ui/gui_achievements.cpp
-index cf55fa7a2..830cf3567 100644
+index cf55fa7..830cf35 100644
 --- a/core/ui/gui_achievements.cpp
 +++ b/core/ui/gui_achievements.cpp
 @@ -180,7 +180,7 @@ bool Notification::draw()
