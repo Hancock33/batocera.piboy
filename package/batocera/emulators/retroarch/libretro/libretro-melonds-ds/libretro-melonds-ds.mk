@@ -15,6 +15,13 @@ LIBRETRO_MELONDS_DS_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 LIBRETRO_MELONDS_DS_CONF_OPTS += -DENABLE_LTO=OFF
 LIBRETRO_MELONDS_DS_CONF_OPTS += -DENABLE_LTO_RELEASE=OFF
 
+ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+    LIBRETRO_MELONDS_DS_DEPENDENCIES += libgl
+    LIBRETRO_MELONDS_DS_CONF_OPTS += -DENABLE_OPENGL=ON -DOPENGL_PROFILE=OpenGL
+else
+    LIBRETRO_MELONDS_DS_CONF_OPTS += -DENABLE_OPENGL=OFF
+endif
+
 define LIBRETRO_MELONDS_DS_INSTALL_TARGET_CMDS
 	$(INSTALL) -D $(@D)/buildroot-build/src/libretro/melondsds_libretro.so	$(TARGET_DIR)/usr/lib/libretro/melondsds_libretro.so
 	$(INSTALL) -D $(@D)/buildroot-build/melondsds_libretro.info $(TARGET_DIR)/usr/share/libretro/info/melondsds_libretro.info

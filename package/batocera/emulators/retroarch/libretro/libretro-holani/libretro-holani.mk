@@ -7,7 +7,7 @@
 LIBRETRO_HOLANI_VERSION = d0d79b4928e3d32695294142784c033ce7aeda9b
 LIBRETRO_HOLANI_SITE = $(call github,LLeny,holani-retro,$(LIBRETRO_HOLANI_VERSION))
 LIBRETRO_HOLANI_LICENSE = GPLv3
-LIBRETRO_HOLANI_DEPENDENCIES = host-rustc host-rust-bin host-clang retroarch
+LIBRETRO_HOLANI_DEPENDENCIES = host-clang host-rustc retroarch
 LIBRETRO_HOLANI_EMULATOR_INFO = holani.libretro.core.yml
 
 LIBRETRO_HOLANI_CARGO_MODE = $(if $(BR2_ENABLE_DEBUG),debug,release)

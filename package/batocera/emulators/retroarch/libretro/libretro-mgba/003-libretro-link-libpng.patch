@@ -1,0 +1,20 @@
+Subject: [PATCH] Link the libretro core against libpng
+
+The core is built from CORE_SRC, whose savestate and screenshot code
+calls libpng when USE_PNG is on, but the target only links OS_LIB.
+zlib reaches OS_LIB already; libpng did not, leaving png_* undefined.
+---
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index cd21282..aee9736 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1036,6 +1036,9 @@ if(BUILD_LIBRETRO)
+ 	add_dependencies(${BINARY_NAME}_libretro ${BINARY_NAME}-version-info)
+ 	set_target_properties(${BINARY_NAME}_libretro PROPERTIES PREFIX "" COMPILE_DEFINITIONS "__LIBRETRO__;COLOR_16_BIT;COLOR_5_6_5;DISABLE_THREADING;MGBA_STANDALONE;${OS_DEFINES};${FUNCTION_DEFINES};ENABLE_VFS;MINIMAL_CORE=2")
+ 	target_link_libraries(${BINARY_NAME}_libretro ${OS_LIB})
++	if(USE_PNG)
++		target_link_libraries(${BINARY_NAME}_libretro ${PNG_LIBRARIES})
++	endif()
+ 	if(MSVC)
+ 		install(TARGETS ${BINARY_NAME}_libretro RUNTIME DESTINATION ${LIBRETRO_LIBDIR} COMPONENT ${BINARY_NAME}_libretro)
+ 	else()
