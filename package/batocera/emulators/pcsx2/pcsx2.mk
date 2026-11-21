@@ -18,8 +18,6 @@ PCSX2_GIT_TAG_HI = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 1)
 PCSX2_GIT_TAG_MID = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 2)
 PCSX2_GIT_TAG_LO = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 3)
 
-# Libraries required by cmake/SearchForStuff.cmake; fmt, soundtouch, cubeb,
-# imgui, libzip, rcheevos and the Vulkan headers come from 3rdparty/.
 PCSX2_DEPENDENCIES += dbus ffmpeg fontconfig freetype jpeg kddockwidgets libbacktrace libcurl
 PCSX2_DEPENDENCIES += libpcap libpng lz4 plutosvg plutovg rapidyaml sdl3 udev webp zlib zstd
 PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools
