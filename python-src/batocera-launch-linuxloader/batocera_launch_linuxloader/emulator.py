@@ -178,8 +178,9 @@ class LinuxLoader(ControllersMixin, ParallelStartupTaskMixin, Emulator):
 
         environment: dict[str, str | Path] = {
             # Libraries
+            # No LD_PRELOAD here: the loader preloads linuxloader.so into the game itself (found via -L below).
+            # Preloading it into the loader process runs the game hooks there and segfaults.
             'LD_LIBRARY_PATH': f'/lib32:/usr/bin32/linuxloader/extralibs:/lib:/usr/lib:{_SOURCE_DIR}:{rom_dir}',
-            'LD_PRELOAD': _SOURCE_DIR / 'linuxloader.so',
             # Graphics
             'GST_PLUGIN_SYSTEM_PATH_1_0': '/lib32/gstreamer-1.0:/usr/lib/gstreamer-1.0',
             'GST_REGISTRY_1_0': '/userdata/system/.cache/gstreamer-1.0/registry..bin:/userdata/system/.cache/gstreamer-1.0/registry.x86_64.bin',
@@ -200,6 +201,8 @@ class LinuxLoader(ControllersMixin, ParallelStartupTaskMixin, Emulator):
             config_file,
             '-o',
             controller_file,
+            '-L',
+            _SOURCE_DIR,
             '-g',
             rom_dir,
         ]
