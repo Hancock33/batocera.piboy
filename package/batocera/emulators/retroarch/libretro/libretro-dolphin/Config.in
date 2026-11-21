@@ -1,7 +1,9 @@
 config BR2_PACKAGE_LIBRETRO_DOLPHIN
 	bool "libretro-dolphin"
 	depends on BR2_PACKAGE_HAS_UDEV
-	select BR2_PACKAGE_CPP_IPC
+	select BR2_PACKAGE_BLUEZ5_UTILS
+	select BR2_PACKAGE_FMT
+	select BR2_PACKAGE_LIBCURL
 	select BR2_PACKAGE_PUGIXML
 
 	help

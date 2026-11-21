@@ -13,7 +13,23 @@ DOLPHIN_EMU_LICENSE = GPLv2+
 DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cpp-ipc cubeb ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl3 xz zlib
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cubeb ffmpeg hidapi libcurl libevdev libusb lzo sdl3 udev xz zlib
+
+ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
+    DOLPHIN_EMU_DEPENDENCIES += alsa-lib
+endif
+
+ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
+    DOLPHIN_EMU_DEPENDENCIES += pulseaudio
+endif
+
+ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+    DOLPHIN_EMU_DEPENDENCIES += libgl
+endif
+
+ifeq ($(BR2_PACKAGE_HAS_LIBEGL),y)
+    DOLPHIN_EMU_DEPENDENCIES += libegl
+endif
 
 $(eval $(call register,dolphin.emulator.yml))
 $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.dolphin.emulator.yml))
@@ -41,6 +57,7 @@ else
 endif
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
+    DOLPHIN_EMU_DEPENDENCIES += xlib_libX11 xlib_libXi xlib_libXrandr
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=ON
 else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=OFF
