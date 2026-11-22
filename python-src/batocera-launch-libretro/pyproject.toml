@@ -13,6 +13,7 @@ libretro = 'batocera_launch_libretro:Libretro'
 [project.entry-points."batocera_launch_libretro.cores"]
 81 = 'batocera_launch_libretro.cores.zx81:ZX81'
 anybor = 'batocera_launch_libretro.cores.anybor:AnyBOR'
+anygm = 'batocera_launch_libretro.cores.anygm:AnyGM'
 arduous = 'batocera_launch_libretro:RACore'
 atari800 = 'batocera_launch_libretro.cores.atari800:Atari800'
 azahar = 'batocera_launch_libretro.cores.azahar:Azahar'

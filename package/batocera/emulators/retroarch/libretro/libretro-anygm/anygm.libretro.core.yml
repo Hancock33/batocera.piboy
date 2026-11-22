@@ -1,3 +1,199 @@
+shared_features:
+  - rewind
+  - autosave
+custom_features:
+  anygm_scene_renderer:
+    prompt: RENDERER
+    description: OpenGL is a work in progress and may draw incomplete pictures. Applies on restart.
+    choices:
+      CPU (Default): CPU
+      OpenGL: OpenGL
+  anygm_content_shader_readback:
+    prompt: GAME SHADERS (GLSL)
+    description: How the game's own GLSL programs run. Applies on restart.
+    choices:
+      Off - Report Available (Default): Off (but report available)
+      Performance: Performance
+      Exact: Exact
+      'Off': 'Off'
+  anygm_alpha_cull:
+    prompt: TRANSPARENCY CULLING
+    description: Skip pixels too faint to see, trading faint detail for speed.
+    choices:
+      None: None
+      Light: Light
+      Medium: Medium
+      High (Default): High
+      Maximum: Maximum
+  anygm_render_game_resolution:
+    prompt: RENDER AT GAME RESOLUTION
+    description: Off renders at the monitor width and height below.
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
+  anygm_width_resolution:
+    prompt: MONITOR WIDTH
+    description: Only used with render at game resolution off.
+    choices:
+      Game Base (Default): Game Base
+      '320': '320'
+      '384': '384'
+      '400': '400'
+      '480': '480'
+      '512': '512'
+      '640': '640'
+      '720': '720'
+      '800': '800'
+      '854': '854'
+      '960': '960'
+      '1024': '1024'
+      '1280': '1280'
+      '1366': '1366'
+      '1440': '1440'
+      '1600': '1600'
+      '1920': '1920'
+      '2560': '2560'
+      '3840': '3840'
+  anygm_height_resolution:
+    prompt: MONITOR HEIGHT
+    description: Only used with render at game resolution off.
+    choices:
+      Game Base (Default): Game Base
+      '180': '180'
+      '200': '200'
+      '224': '224'
+      '240': '240'
+      '270': '270'
+      '288': '288'
+      '360': '360'
+      '400': '400'
+      '480': '480'
+      '540': '540'
+      '600': '600'
+      '720': '720'
+      '768': '768'
+      '800': '800'
+      '900': '900'
+      '1080': '1080'
+      '1200': '1200'
+      '1440': '1440'
+      '2160': '2160'
+  anygm_aspect_ratio_force:
+    prompt: FORCE ASPECT RATIO
+    description: Experimental. Only used with render at game resolution on.
+    choices:
+      None (Default): None
+      '4:3': '4:3'
+      '16:9': '16:9'
+      '16:10': '16:10'
+      '21:9': '21:9'
+  anygm_adjust_crt_tv:
+    prompt: ADJUST FOR 4:3 CRT TV
+    description: Fit the image into 640x480. Automatic turns it on for CRT output.
+    choices:
+      Automatic (Default): auto
+      'On': 'On'
+      'Off': 'Off'
+  anygm_gamepad:
+    prompt: CONTROLLER BEHAVIOUR
+    description: Keyboard emulation maps the pad to the game's keyboard controls.
+    choices:
+      Game Gamepad (Default): Game gamepad
+      Keyboard Emulation: Keyboard emulation
+  anygm_mouse:
+    prompt: MOUSE INPUT
+    choices:
+      Auto (Default): Auto
+      Absolute (Pointer): Absolute (pointer)
+      Relative (Delta): Relative (delta)
+  anygm_language:
+    prompt: GAME LANGUAGE
+    description: Language reported to the game. Applies on restart.
+    choices:
+      Auto (Default): Auto
+      English: en
+      Spanish: es
+      French: fr
+      German: de
+      Italian: it
+      Portuguese: pt
+      Dutch: nl
+      Polish: pl
+      Russian: ru
+      Ukrainian: uk
+      Czech: cs
+      Swedish: sv
+      Finnish: fi
+      Norwegian: 'no'
+      Hungarian: hu
+      Greek: el
+      Turkish: tr
+      Catalan: ca
+      Arabic: ar
+      Japanese: ja
+      Korean: ko
+      Chinese: zh
+      Vietnamese: vi
+      Thai: th
+  anygm_region:
+    prompt: GAME REGION
+    description: Region reported to the game. Applies on restart.
+    choices:
+      Auto (Default): Auto
+      United States: US
+      United Kingdom: GB
+      Spain: ES
+      France: FR
+      Germany: DE
+      Italy: IT
+      Brazil: BR
+      Portugal: PT
+      Netherlands: NL
+      Poland: PL
+      Russia: RU
+      Ukraine: UA
+      Czechia: CZ
+      Sweden: SE
+      Finland: FI
+      Norway: 'NO'
+      Hungary: HU
+      Greece: GR
+      Turkey: TR
+      Saudi Arabia: SA
+      Japan: JP
+      Korea: KR
+      China: CN
+      Taiwan: TW
+      Vietnam: VN
+      Thailand: TH
+  anygm_content_overrides:
+    group: ADVANCED OPTIONS
+    prompt: CONTENT OVERRIDE DIRECTIVES
+    description: Apply .anygm and system default overrides. Save states only load under the same setting.
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
+  anygm_clear_local_data:
+    group: ADVANCED OPTIONS
+    prompt: CLEAR GAME SAVE DATA ON LOAD
+    description: Deletes everything this game has written before it loads.
+    choices:
+      'Off (Default)': 'Off'
+      'On': 'On'
+  anygm_clear_game_cache:
+    group: ADVANCED OPTIONS
+    prompt: CLEAR GAME CACHE ON UNLOAD
+    description: Saved game data is unaffected.
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
+  anygm_clear_all_caches:
+    group: ADVANCED OPTIONS
+    prompt: CLEAR ALL GAME CACHES ON LOAD
+    description: Saved game data is unaffected.
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
 systems:
   - name: gamemaker
     file_extensions:
