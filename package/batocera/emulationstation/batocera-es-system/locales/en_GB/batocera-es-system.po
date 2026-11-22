@@ -1833,7 +1833,7 @@ msgstr ""
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "3D Control Pad (Analog)"
-msgstr ""
+msgstr "3D Control Pad (Analogue)"
 
 #. TRANSLATION: keisho
 msgctxt "game_options"
@@ -3819,7 +3819,7 @@ msgstr ""
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "All possible licenses (Not recommended)"
-msgstr ""
+msgstr "All possible licences (Not recommended)"
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
@@ -4027,7 +4027,7 @@ msgstr "Analogue Controller (DualShock)"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Down"
-msgstr ""
+msgstr "Analogue Down"
 
 #. TRANSLATION: libretro/puae, libretro/puae2021, libretro/swanstation
 msgctxt "game_options"
@@ -4042,27 +4042,27 @@ msgstr "Analogue Joystick (Flystick)"
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Left"
-msgstr ""
+msgstr "Analogue Left"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Right"
-msgstr ""
+msgstr "Analogue Right"
 
 #. TRANSLATION: mugen.keys
 msgctxt "keys_files"
 msgid "Analog Up"
-msgstr ""
+msgstr "Analogue Up"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Analog deadzone for paddles. Core default (15)."
-msgstr ""
+msgstr "Analogue deadzone for paddles. Core default (15)."
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Analog sensitivity for paddles. Core default (20)."
-msgstr ""
+msgstr "Analogue sensitivity for paddles. Core default (20)."
 
 #. TRANSLATION: libretro/parallel_n64
 msgctxt "game_options"
@@ -5205,7 +5205,7 @@ msgstr ""
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Bottom Center"
-msgstr ""
+msgstr "Bottom Centre"
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
@@ -5624,7 +5624,7 @@ msgstr "COLOUR DEPTH"
 #. TRANSLATION: libretro/bk
 msgctxt "game_options"
 msgid "COLOR DISPLAY"
-msgstr ""
+msgstr "COLOUR DISPLAY"
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -6178,7 +6178,7 @@ msgstr ""
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "CUSTOMIZE EMULATED WIIMOTE & GAMEPAD"
-msgstr ""
+msgstr "CUSTOMISE EMULATED WIIMOTE & GAMEPAD"
 
 #. TRANSLATION: openjkdf2
 msgctxt "game_options"
@@ -6386,22 +6386,22 @@ msgstr ""
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6, scummvm
 msgctxt "game_options"
 msgid "Center"
-msgstr ""
+msgstr "Centre"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Center Dot Only"
-msgstr ""
+msgstr "Centre Dot Only"
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Center Left"
-msgstr ""
+msgstr "Centre Left"
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Center Right"
-msgstr ""
+msgstr "Centre Right"
 
 #. TRANSLATION: hurrican
 msgctxt "game_options"
@@ -7314,6 +7314,7 @@ msgctxt "game_options"
 msgid ""
 "Crop MAME artwork to maximize the game screen and only fill unused space."
 msgstr ""
+"Crop MAME artwork to maximise the game screen and only fill unused space."
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -7391,7 +7392,7 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "Custom color for the sniper scope reticle and center dot."
-msgstr ""
+msgstr "Custom colour for the sniper scope reticle and centre dot."
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -7401,7 +7402,7 @@ msgstr ""
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid "Customize the color palette of your Ferrari."
-msgstr ""
+msgstr "Customise the colour palette of your Ferrari."
 
 #. TRANSLATION: cannonball, etlegacy
 msgctxt "game_options"
@@ -8120,6 +8121,8 @@ msgid ""
 "Disables a CPU optimization that some sports games are sensitive to. Enable "
 "this only if a specific game has graphical or physics glitches."
 msgstr ""
+"Disables a CPU optimisation that some sports games are sensitive to. Enable "
+"this only if a specific game has graphical or physics glitches."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -8783,12 +8786,12 @@ msgstr ""
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Emphasize bottom"
-msgstr ""
+msgstr "Emphasise bottom"
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "Emphasize top"
-msgstr ""
+msgstr "Emphasise top"
 
 #. TRANSLATION: libretro/81
 msgctxt "game_options"
@@ -8853,7 +8856,7 @@ msgstr ""
 #. TRANSLATION: nanoboyadvance
 msgctxt "game_options"
 msgid "Emulate the color rendering of the original GBA hardware."
-msgstr ""
+msgstr "Emulate the colour rendering of the original GBA hardware."
 
 #. TRANSLATION: linuxloader
 msgctxt "game_options"
@@ -9016,7 +9019,7 @@ msgstr ""
 #. TRANSLATION: libretro/bk
 msgctxt "game_options"
 msgid "Enable color display emulation."
-msgstr ""
+msgstr "Enable colour display emulation."
 
 #. TRANSLATION: dolphin, rpcs3
 msgctxt "game_options"
@@ -9788,7 +9791,7 @@ msgstr "FAVOURITE COLOUR"
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid "FERRARI COLOR"
-msgstr ""
+msgstr "FERRARI COLOUR"
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -9848,7 +9851,7 @@ msgstr ""
 #. TRANSLATION: libretro/genesisplusgx-expanded
 msgctxt "game_options"
 msgid "FM SYNTHESIZER"
-msgstr ""
+msgstr "FM SYNTHESISER"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
@@ -10207,6 +10210,10 @@ msgid ""
 "option, custom sky/background functionality, and various other tweaks and "
 "options."
 msgstr ""
+"Features native resolution rendering, analogue controller and mouse support, "
+"frame rate unlocking up to 60Hz, an improved camera with a disable tilt "
+"option, custom sky/background functionality, and various other tweaks and "
+"options."
 
 #. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
@@ -10370,6 +10377,8 @@ msgid ""
 "Fix screen tearing. Adaptive Sync (Default) synchronizes on video sync, "
 "except for late frames (below target FPS) which are displayed immediately."
 msgstr ""
+"Fix screen tearing. Adaptive Sync (Default) synchronises on video sync, "
+"except for late frames (below target FPS) which are displayed immediately."
 
 #. TRANSLATION: armsx2, dolphin, duckstation, melonds, pcsx2, ...
 msgctxt "game_options"
@@ -11114,7 +11123,7 @@ msgstr ""
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
 msgid "GBC - Grayscale"
-msgstr ""
+msgstr "GBC - Greyscale"
 
 #. TRANSLATION: libretro/gambatte
 msgctxt "game_options"
@@ -11458,7 +11467,7 @@ msgstr ""
 #. TRANSLATION: libretro/flycast, libretro/parallel_dc
 msgctxt "game_options"
 msgid "Gamepad Using Left Analog Stick"
-msgstr ""
+msgstr "Gamepad Using Left Analogue Stick"
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -11610,7 +11619,7 @@ msgstr ""
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid "Gray"
-msgstr ""
+msgstr "Grey"
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
@@ -12498,6 +12507,10 @@ msgid ""
 "input device type with options to convert analog inputs to tracker angles "
 "for enhanced analog controller support."
 msgstr ""
+"Includes VR head tracking and stereoscopic rendering for both VR and 3D TVs, "
+"along with mouse support (Mouse Look), and introduces a new Head Tracker "
+"input device type with options to convert analogue inputs to tracker angles "
+"for enhanced analogue controller support."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -14901,7 +14914,7 @@ msgstr ""
 #. TRANSLATION: eka2l1
 msgctxt "game_options"
 msgid "NEAREST NEIGHBOR FILTERING"
-msgstr ""
+msgstr "NEAREST NEIGHBOUR FILTERING"
 
 #. TRANSLATION: libretro/fbneo, libretro/mame078plus
 msgctxt "game_options"
@@ -15194,7 +15207,7 @@ msgstr ""
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "Nearest-Neighbor"
-msgstr ""
+msgstr "Nearest-Neighbour"
 
 #. TRANSLATION: armsx2, pcsx2
 msgctxt "game_options"
@@ -15353,7 +15366,7 @@ msgstr ""
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "No licenses enabled"
-msgstr ""
+msgstr "No licences enabled"
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
@@ -15696,6 +15709,8 @@ msgid ""
 "Offers analog controller and mouse support (Mouse Look), along with options "
 "for always-strafe and always-run functionalities."
 msgstr ""
+"Offers analogue controller and mouse support (Mouse Look), along with options "
+"for always-strafe and always-run functionalities."
 
 #. TRANSLATION: bigpemu
 msgctxt "game_options"
@@ -15703,6 +15718,8 @@ msgid ""
 "Offers support for analog controllers and mouse look functionality for "
 "improved control."
 msgstr ""
+"Offers support for analogue controllers and mouse look functionality for "
+"improved control."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -16013,22 +16030,22 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG ABSOLUTE"
-msgstr ""
+msgstr "PADDLE ANALOGUE ABSOLUTE"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG DEADZONE"
-msgstr ""
+msgstr "PADDLE ANALOGUE DEADZONE"
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "PADDLE ANALOG SENSITIVITY"
-msgstr ""
+msgstr "PADDLE ANALOGUE SENSITIVITY"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "PADDLE ANALOG STICK SENSITIVITY"
-msgstr ""
+msgstr "PADDLE ANALOGUE STICK SENSITIVITY"
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -16730,6 +16747,8 @@ msgid ""
 "Percentage of left stick movement ignored near center. Raise this if you "
 "experience stick drift."
 msgstr ""
+"Percentage of left stick movement ignored near centre. Raise this if you "
+"experience stick drift."
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
@@ -16737,6 +16756,8 @@ msgid ""
 "Percentage of right stick movement ignored near center. Raise this if you "
 "experience stick drift."
 msgstr ""
+"Percentage of right stick movement ignored near centre. Raise this if you "
+"experience stick drift."
 
 #. TRANSLATION: libretro/anygm, shared
 msgctxt "game_options"
@@ -17166,6 +17187,8 @@ msgid ""
 "Provides analog controller and mouse support while patching existing rotary "
 "controller bugs found in hardware."
 msgstr ""
+"Provides analogue controller and mouse support while patching existing rotary "
+"controller bugs found in hardware."
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -17340,7 +17363,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "READ COLOR BUFFERS"
-msgstr ""
+msgstr "READ COLOUR BUFFERS"
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -17690,7 +17713,7 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Reads color buffer memory into CPU space. Required by some titles."
-msgstr ""
+msgstr "Reads colour buffer memory into CPU space. Required by some titles."
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -17736,8 +17759,7 @@ msgstr ""
 #. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6, ...
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the preceived color depth."
-msgstr ""
-"Reduces banding between coloUrs and improves the preceived color depth."
+msgstr "Reduces banding between colours and improves the perceived colour depth."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -18287,7 +18309,7 @@ msgstr ""
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
 msgid "SCOPE RETICLE COLOR"
-msgstr ""
+msgstr "SCOPE RETICLE COLOUR"
 
 #. TRANSLATION: etlegacy
 msgctxt "game_options"
@@ -19470,17 +19492,17 @@ msgstr ""
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using D-pad or analog stick for a throttle."
-msgstr ""
+msgstr "Sensitivity when using D-pad or analogue stick for a throttle."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using D-pad or analog stick for a wheel."
-msgstr ""
+msgstr "Sensitivity when using D-pad or analogue stick for a wheel."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
 msgid "Sensitivity when using analog stick for a paddle."
-msgstr ""
+msgstr "Sensitivity when using analogue stick for a paddle."
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -19618,7 +19640,7 @@ msgstr ""
 #. TRANSLATION: cannonball
 msgctxt "game_options"
 msgid "Set the gear shift behavior."
-msgstr ""
+msgstr "Set the gear shift behaviour."
 
 #. TRANSLATION: amiberry
 msgctxt "game_options"
@@ -20883,6 +20905,8 @@ msgid ""
 "Supports uncapped frame rates, analog controllers, and mouse look "
 "functionality."
 msgstr ""
+"Supports uncapped frame rates, analogue controllers, and mouse look "
+"functionality."
 
 #. TRANSLATION: cemu, eden, keisho, lichii
 msgctxt "game_options"
@@ -20974,18 +20998,19 @@ msgstr ""
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid "Synchronize frame presentation with monitor refresh rate."
-msgstr ""
+msgstr "Synchronise frame presentation with monitor refresh rate."
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid ""
 "Synchronize frame rate with monitor refresh rate to eliminate screen tearing."
 msgstr ""
+"Synchronise frame rate with monitor refresh rate to eliminate screen tearing."
 
 #. TRANSLATION: azahar
 msgctxt "game_options"
 msgid "Synchronize framerate with display refresh rate."
-msgstr ""
+msgstr "Synchronise framerate with display refresh rate."
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
@@ -21772,12 +21797,12 @@ msgstr ""
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Top Center"
-msgstr ""
+msgstr "Top Centre"
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Top Center (Default)"
-msgstr ""
+msgstr "Top Centre (Default)"
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
@@ -22559,7 +22584,7 @@ msgstr ""
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
 msgid "Use absolute analog input for paddles."
-msgstr ""
+msgstr "Use absolute analogue input for paddles."
 
 #. TRANSLATION: libretro/ep128emu
 msgctxt "game_options"
@@ -23587,7 +23612,7 @@ msgstr ""
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "XBLA license enabled (Default)"
-msgstr ""
+msgstr "XBLA licence enabled (Default)"
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
