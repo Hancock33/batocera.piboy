@@ -384,8 +384,8 @@ HOST_WINE_PROTON_CONF_OPTS += \
 # Cleanup final directory
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
-	$(if $(BR2_x86_64)$(BR2_i386),i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.{dll,exe})
-	$(if $(BR2_x86_64),x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.{dll,exe})
+	$(if $(BR2_x86_64)$(BR2_i386),i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.dll $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.exe)
+	$(if $(BR2_x86_64),x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.dll $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.exe)
 endef
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
