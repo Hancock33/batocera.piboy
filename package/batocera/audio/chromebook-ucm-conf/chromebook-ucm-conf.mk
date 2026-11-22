@@ -14,7 +14,7 @@ CHROMEBOOK_UCM_CONF_LICENSE_FILES = LICENSE
 CHROMEBOOK_UCM_CONF_DEPENDENCIES += alllinuxfirmwares alsa-ucm-conf alsa-utils sound-open-firmware
 
 define CHROMEBOOK_UCM_CONF_INSTALL_TARGET_CMDS
-	rsync -arv $(@D)/ucm2/* $(TARGET_DIR)/usr/share/alsa/ucm2/
+	rsync -a $(@D)/ucm2/* $(TARGET_DIR)/usr/share/alsa/ucm2/
 endef
 
 $(eval $(generic-package))

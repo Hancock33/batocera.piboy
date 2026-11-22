@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Nov 20, 2026
 PYTHON_PYXEL_VERSION = v3.0.3
-PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
+PYTHON_PYXEL_SITE = $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = maturin
 PYTHON_PYXEL_LICENSE = MIT
 PYTHON_PYXEL_CARGO_MANIFEST_PATH = crates/pyxel-core/Cargo.toml
@@ -16,16 +16,7 @@ PYTHON_PYXEL_SUBDIR = python
 
 PYTHON_PYXEL_ENV += BINDGEN_EXTRA_CLANG_ARGS="--sysroot=$(STAGING_DIR) -I$(STAGING_DIR)/usr/include -I$(STAGING_DIR)/usr/include/SDL2" LIBRARY_PATH="$(STAGING_DIR)/usr/lib"
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
-    PYXEL_CARGO_TARGET=x86_64-unknown-linux-gnu
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3288),y)
-    PYXEL_CARGO_TARGET=aarch64-unknown-linux-gnu
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3399),y)
-    PYXEL_CARGO_TARGET=aarch64-unknown-linux-gnu
-endif
-
-PYTHON_PYXEL_ENV = CARGO_HOME=$(@D) TARGET=$(PYXEL_CARGO_TARGET)
-
+PYTHON_PYXEL_ENV += CARGO_HOME=$(@D) TARGET=$(RUSTC_TARGET_NAME)
 # upstream's own `make build` stages these into the package dir before running maturin
 define PYTHON_PYXEL_STAGE_PACKAGE_FILES
 	cp -f $(@D)/LICENSE $(@D)/README.md $(@D)/python/pyxel/
@@ -39,8 +30,7 @@ define PYTHON_PYXEL_SAMPLE_AND_KEYS
 	cp -rf $(@D)/python/pyxel $(TARGET_DIR)/usr/lib/python*/site-packages/
 	rm -rf $(TARGET_DIR)/usr/lib/python*/site-packages/pyxel/examples
 	cd $(TARGET_DIR)/usr/lib/python*/site-packages/pyxel && ln -sf ../pyxel_extension .
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy/
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/python-pyxel/pyxel.keys $(TARGET_DIR)/usr/share/evmapy/
+	$(INSTALL) -D -m 0644 $(PYTHON_PYXEL_PKGDIR)/pyxel.keys $(TARGET_DIR)/usr/share/evmapy/pyxel.keys
 endef
 
 PYTHON_PYXEL_PRE_BUILD_HOOKS += PYTHON_PYXEL_STAGE_PACKAGE_FILES

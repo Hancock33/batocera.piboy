@@ -203,7 +203,7 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	# automatically by its copy-firmware.sh script during the installation, which
 	# parses the WHENCE file where symlinks are described. We follow the same logic
 	# here, adding symlink only for firmwares installed in the target directory.
-	cd $(TARGET_DIR)/lib/firmware ; \
+	cd $(TARGET_DIR)/lib/firmware && \
 		sed -r -e '/^Link: (.+) -> (.+)$$/!d; s//\1 \2/' $(@D)/WHENCE | \
 		while read -r f d; do \
 			if test -f "$$(readlink -m "$$(dirname "$$f")/$${d}")"; then \

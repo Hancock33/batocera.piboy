@@ -11,9 +11,8 @@ SDL2_GAMECONTROLLERDB_LICENSE_FILES = LICENSE
 SDL2_GAMECONTROLLERDB_DEPENDENCIES = sdl2
 
 define SDL2_GAMECONTROLLERDB_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/sdlcontrollerdb
-	cp $(@D)/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/sdlcontrollerdb
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/sdl2-gamecontrollerdb/S98sdlctl_db $(TARGET_DIR)/etc/init.d/S98sdlctl_db
+	$(INSTALL) -D -m 0644 $(@D)/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/sdlcontrollerdb/gamecontrollerdb.txt
+	$(INSTALL) -D -m 0755 $(SDL2_GAMECONTROLLERDB_PKGDIR)/S98sdlctl_db $(TARGET_DIR)/etc/init.d/S98sdlctl_db
 endef
 
 $(eval $(generic-package))

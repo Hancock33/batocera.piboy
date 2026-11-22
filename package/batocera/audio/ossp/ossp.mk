@@ -16,7 +16,7 @@ ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
 OSSP_CONF_OPTS += -Dalsa=ON
 OSSP_DEPENDENCIES += alsa-lib
 else
-OSSP_CONF_OPTS += -Dalsa=ON
+OSSP_CONF_OPTS += -Dalsa=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
@@ -27,15 +27,11 @@ OSSP_CONF_OPTS += -Dpulseaudio=OFF
 endif
 
 define OSSP_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/sbin
-	cp $(@D)/osspd $(TARGET_DIR)/usr/sbin/
-	cp $(@D)/ossp-alsap $(TARGET_DIR)/usr/sbin/
-	cp $(@D)/ossp-padsp $(TARGET_DIR)/usr/sbin/
+	$(INSTALL) -D -m 0755 -t $(TARGET_DIR)/usr/sbin $(@D)/osspd $(@D)/ossp-alsap $(@D)/ossp-padsp
 endef
 
 define OSSP_INITD
-	mkdir -p $(TARGET_DIR)/etc/init.d
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/audio/ossp/osspd $(TARGET_DIR)/etc/init.d/S34osspd
+	$(INSTALL) -D -m 0755 $(OSSP_PKGDIR)/osspd $(TARGET_DIR)/etc/init.d/S34osspd
 endef
 
 OSSP_POST_INSTALL_TARGET_HOOKS += OSSP_INITD

@@ -5,7 +5,6 @@
 ################################################################################
 # Version: Commits on Oct 10, 2026
 LIBXMP_VERSION = libxmp-4.7.4
-LIBXMP_SOURCE = enet-$(LIBXMP_VERSION).tar.gz
 LIBXMP_SITE = $(call github,libxmp,libxmp,$(LIBXMP_VERSION))
 LIBXMP_LICENSE = MIT
 LIBXMP_LICENSE_FILES = docs/COPYING

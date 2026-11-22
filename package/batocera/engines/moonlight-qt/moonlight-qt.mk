@@ -32,9 +32,8 @@ MOONLIGHT_QT_CONF_OPTS += CONFIG+=disable-libva
 endif
 
 ifeq ($(BR2_PACKAGE_LIBVA_INTEL_DRIVER),y)
-    MOONLIGHT_QT_DEPENDENCIES += libva-intel-driver intel-mediadriver
+MOONLIGHT_QT_DEPENDENCIES += libva-intel-driver intel-mediadriver
 endif
-
 ifeq ($(BR2_PACKAGE_LIBVDPAU),y)
 MOONLIGHT_QT_DEPENDENCIES += libvdpau
 else
@@ -93,7 +92,7 @@ endef
 
 define MOONLIGHT_QT_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/app/moonlight $(TARGET_DIR)/usr/bin/moonlight-qt
-	$(INSTALL) -m 0755 $(MOONLIGHT_QT_PKGDIR)/batocera-moonlight $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D -m 0755 $(MOONLIGHT_QT_PKGDIR)/batocera-moonlight $(TARGET_DIR)/usr/bin/batocera-moonlight
 endef
 
 $(eval $(generic-package))

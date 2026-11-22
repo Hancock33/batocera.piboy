@@ -10,29 +10,21 @@ IKEMEN_LICENSE = MIT
 IKEMEN_DEPENDENCIES = libgtk3 mesa3d openal libglfw libxmp
 IKEMEN_EMULATOR_INFO = ikemen.emulator.yml
 
-HOST_GO_COMMON_ENV = GOFLAGS=-mod=mod \
-			 GO111MODULE=on \
-			 GOROOT="$(HOST_GO_ROOT)" \
-			 GOPATH="$(HOST_GO_GOPATH)" \
-			 GOCACHE="$(HOST_GO_TARGET_CACHE)" \
-			 GOMODCACHE="$(@D)" \
-			 GOFLAGS="-modcacherw" \
-			 PATH=$(BR_PATH) \
-			 GOBIN= \
-			 CGO_ENABLED=0\
-			 GOEXPERIMENT=arenas \
-			 BUILD_FFMPEG=no
-
+# ikemen's own Go settings, applied on top of Buildroot's target Go env
+IKEMEN_GO_ENV = \
+	GOMODCACHE="$(@D)" \
+	GOFLAGS="-modcacherw" \
+	CGO_ENABLED=0 \
+	GOEXPERIMENT=arenas \
+	BUILD_FFMPEG=no
 define IKEMEN_BUILD_CMDS
-	$(HOST_GO_TARGET_ENV) $(MAKE) -C $(@D) -f Makefile Ikemen_GO_Linux
+	$(HOST_GO_TARGET_ENV) $(IKEMEN_GO_ENV) $(MAKE) -C $(@D) -f Makefile Ikemen_GO_Linux
 endef
 
 define IKEMEN_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D $(@D)/Ikemen_GO_Linux $(TARGET_DIR)/usr/bin/ikemen
+	$(INSTALL) -D -m 0755 $(@D)/Ikemen_GO_Linux $(TARGET_DIR)/usr/bin/ikemen
 	# evmapy
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/ikemen/ikemen.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -D -m 0644 $(IKEMEN_PKGDIR)/ikemen.keys $(TARGET_DIR)/usr/share/evmapy/ikemen.keys
 endef
 
 $(eval $(golang-package))

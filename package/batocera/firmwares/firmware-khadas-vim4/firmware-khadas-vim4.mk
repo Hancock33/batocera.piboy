@@ -35,12 +35,12 @@ endef
 
 define FIRMWARE_KHADAS_VIM4_BUILD_CMDS
 	# Create links for hciattach
-	cd $(@D)/lib/firmware/brcm ; ln -sf BCM43438A1.hcd BCM43430A1.hcd ; ln -sf BCM4356A2.hcd BCM4354A2.hcd
+	cd $(@D)/lib/firmware/brcm && ln -sf BCM43438A1.hcd BCM43430A1.hcd && ln -sf BCM4356A2.hcd BCM4354A2.hcd
 endef
 
 define FIRMWARE_KHADAS_VIM4_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/lib/firmware/
-	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/firmwares/firmware-khadas-vim4/firmware/* $(FIRMWARE_KHADAS_VIM4_FIRMWARE_DIR)/
+	cp -R $(FIRMWARE_KHADAS_VIM4_PKGDIR)/firmware/* $(FIRMWARE_KHADAS_VIM4_FIRMWARE_DIR)/
 	cp -R $(@D)/lib/firmware/* $(FIRMWARE_KHADAS_VIM4_FIRMWARE_DIR)/
 	mkdir -p $(TARGET_DIR)/usr/bin/
 	mkdir -p $(TARGET_DIR)/usr/lib/

@@ -15,10 +15,8 @@ XPADNEO_MODULE_MAKE_OPTS = \
 	KCFLAGS="$$KCFLAGS $(XPADNEO_USER_EXTRA_CFLAGS)"
 
 define XPADNEO_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/etc/udev/rules.d/
-	mkdir -p $(TARGET_DIR)/etc/modprobe.d/
-	cp -v $(@D)/hid-xpadneo/etc-udev-rules.d/*.rules $(TARGET_DIR)/etc/udev/rules.d/
-	cp -v $(@D)/hid-xpadneo/etc-modprobe.d/*.conf $(TARGET_DIR)/etc/modprobe.d/
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/etc/udev/rules.d $(@D)/hid-xpadneo/etc-udev-rules.d/*.rules
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/etc/modprobe.d $(@D)/hid-xpadneo/etc-modprobe.d/*.conf
 	echo "options bluetooth disable_ertm=1" >> $(TARGET_DIR)/etc/modprobe.d/xpadneo.conf
 	echo "options hid_xpadneo disable_shift_mode=1" >> $(TARGET_DIR)/etc/modprobe.d/xpadneo.conf
 endef

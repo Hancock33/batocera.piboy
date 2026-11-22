@@ -10,13 +10,8 @@ BATOCERA_ES_WEB_UI_DEPENDENCIES = batocera-emulationstation
 BATOCERA_ES_WEB_UI_SOURCE =
 
 define BATOCERA_ES_WEB_UI_RESOURCES
-	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/emulationstation/resources/services
-	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/bin
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/services
-	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-web-ui/web/* \
-	    $(TARGET_DIR)/usr/share/emulationstation/resources/services
-	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-web-ui/services/* \
-	    $(TARGET_DIR)/usr/share/batocera/services
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/usr/share/emulationstation/resources/services $(BATOCERA_ES_WEB_UI_PKGDIR)/web/*
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/usr/share/batocera/services $(BATOCERA_ES_WEB_UI_PKGDIR)/services/*
 endef
 
 BATOCERA_ES_WEB_UI_POST_INSTALL_TARGET_HOOKS += BATOCERA_ES_WEB_UI_RESOURCES

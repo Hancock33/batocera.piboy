@@ -11,7 +11,7 @@ ALSA_UCM_CONF_LICENSE_FILES = LICENSE
 
 define ALSA_UCM_CONF_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/alsa
-	rsync -arv $(@D)/ucm* $(TARGET_DIR)/usr/share/alsa/
+	rsync -a $(@D)/ucm* $(TARGET_DIR)/usr/share/alsa/
 endef
 
 $(eval $(generic-package))

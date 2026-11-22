@@ -11,7 +11,7 @@ ALSA_TOPOLOGY_LICENSE_FILES = LICENSE
 
 define ALSA_TOPOLOGY_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/alsa
-	rsync -arv $(@D)/topology/* $(TARGET_DIR)/usr/share/alsa/topology/
+	rsync -a $(@D)/topology/* $(TARGET_DIR)/usr/share/alsa/topology/
 endef
 
 $(eval $(generic-package))

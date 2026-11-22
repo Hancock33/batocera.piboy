@@ -13,8 +13,6 @@ BATOCERA_EMULATIONSTATION_DEPENDENCIES = alsa-lib batocera-es-system freetype li
 BATOCERA_EMULATIONSTATION_DEPENDENCIES += host-gettext
 BATOCERA_EMULATIONSTATION_INSTALL_IMAGES = YES
 
-BATOCERA_EMULATIONSTATION_SOURCE_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation
-
 # Debug build settings + install in staging
 ifeq ($(BR2_ENABLE_DEBUG),y)
 BATOCERA_EMULATIONSTATION_INSTALL_STAGING = YES
@@ -77,8 +75,9 @@ endif
 ### API keys
 # KEY=value lines, see keys.txt.sample. The first file that exists is used;
 # override with BATOCERA_EMULATIONSTATION_KEYS_FILE=/path/to/keys.txt
+# (full path: this is expanded at parse time, before _PKGDIR is set)
 BATOCERA_EMULATIONSTATION_KEYS_FILE ?= $(firstword $(wildcard \
-	$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/keys.txt \
+	$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-emulationstation/keys.txt \
 	/home/lee/keys.txt))
 BATOCERA_EMULATIONSTATION_KEYS = SCREENSCRAPER_DEV_LOGIN GAMESDB_APIKEY CHEEVOS_DEV_LOGIN HFS_DEV_LOGIN
 
@@ -116,7 +115,7 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	$(foreach d,$(BATOCERA_EMULATIONSTATION_RESOURCES_DIRS),\
 		$(INSTALL) -m 0644 -D -t $(BATOCERA_EMULATIONSTATION_SHARE)/resources/$(d) $(@D)/resources/$(d)/*.*$(sep))
 	$(INSTALL) -m 0755 -d $(BATOCERA_EMULATIONSTATION_SHARE)/resources/services
-	$(INSTALL) -m 0644 -D $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/resources/loading.jpg \
+	$(INSTALL) -m 0644 -D $(BATOCERA_EMULATIONSTATION_PKGDIR)/resources/loading.jpg \
 		$(BATOCERA_EMULATIONSTATION_SHARE)/resources/loading.jpg
 	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo.png \
 		$(BATOCERA_EMULATIONSTATION_SHARE)/resources/logo.png
@@ -124,11 +123,11 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	# default configs
 	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
 	$(INSTALL) -m 0644 -D -t $(BATOCERA_EMULATIONSTATION_SHARE) \
-		$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/controllers/es_input.cfg \
-		$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/es_savestates.cfg
+		$(BATOCERA_EMULATIONSTATION_PKGDIR)/controllers/es_input.cfg \
+		$(BATOCERA_EMULATIONSTATION_PKGDIR)/es_savestates.cfg
 
 	# hooks
-	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/batocera-preupdate-gamelists-hook
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin $(BATOCERA_EMULATIONSTATION_PKGDIR)/batocera-preupdate-gamelists-hook
 endef
 
 ### S31emulationstation
@@ -158,24 +157,24 @@ BATOCERA_EMULATIONSTATION_POST_INSTALL_TARGET_HOOKS += BATOCERA_EMULATIONSTATION
 endif
 
 define BATOCERA_EMULATIONSTATION_XORG
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/xorg/xinitrc $(TARGET_DIR)/etc/X11/xinit/xinitrc
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/xorg/xinitrc $(BINARIES_DIR)/batocera-target/etc/X11/xinit/xinitrc
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_PKGDIR)/xorg/xinitrc $(TARGET_DIR)/etc/X11/xinit/xinitrc
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_PKGDIR)/xorg/xinitrc $(BINARIES_DIR)/batocera-target/etc/X11/xinit/xinitrc
 endef
 
 define BATOCERA_EMULATIONSTATION_WAYLAND_LABWC
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/04-labwc.sh $(TARGET_DIR)/etc/profile.d/04-labwc.sh
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/S14labwc $(TARGET_DIR)/etc/init.d/S14labwc
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/labwc-launch $(TARGET_DIR)/usr/bin/labwc-launch
-	$(INSTALL) -D -m 0644 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/rc.xml $(TARGET_DIR)/usr/share/labwc/rc.xml
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_PKGDIR)/wayland/labwc/04-labwc.sh $(TARGET_DIR)/etc/profile.d/04-labwc.sh
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_PKGDIR)/wayland/labwc/S14labwc $(TARGET_DIR)/etc/init.d/S14labwc
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_PKGDIR)/wayland/labwc/labwc-launch $(TARGET_DIR)/usr/bin/labwc-launch
+	$(INSTALL) -D -m 0644 $(BATOCERA_EMULATIONSTATION_PKGDIR)/wayland/labwc/rc.xml $(TARGET_DIR)/usr/share/labwc/rc.xml
 	$(INSTALL) -D -m 0755 -t $(TARGET_DIR)/usr/share/labwc \
-		$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart \
-		$(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/wayland/labwc/autostart_*
+		$(BATOCERA_EMULATIONSTATION_PKGDIR)/wayland/labwc/autostart \
+		$(BATOCERA_EMULATIONSTATION_PKGDIR)/wayland/labwc/autostart_*
 endef
 
 define BATOCERA_EMULATIONSTATION_BOOT
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/S31emulationstation $(TARGET_DIR)/etc/init.d/S31emulationstation
-	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_SOURCE_PATH)/emulationstation-standalone $(TARGET_DIR)/usr/bin/emulationstation-standalone
-	sed -i \
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_PKGDIR)/S31emulationstation $(TARGET_DIR)/etc/init.d/S31emulationstation
+	$(INSTALL) -D -m 0755 $(BATOCERA_EMULATIONSTATION_PKGDIR)/emulationstation-standalone $(TARGET_DIR)/usr/bin/emulationstation-standalone
+	$(SED) \
 		-e 's;%BATOCERA_EMULATIONSTATION_PREFIX%;$(BATOCERA_EMULATIONSTATION_PREFIX);g' \
 		-e 's;%BATOCERA_EMULATIONSTATION_CMD%;$(BATOCERA_EMULATIONSTATION_CMD);g' \
 		-e 's;%BATOCERA_EMULATIONSTATION_ARGS%;$(BATOCERA_EMULATIONSTATION_ARGS);g' \

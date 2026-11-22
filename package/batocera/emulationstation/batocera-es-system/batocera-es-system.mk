@@ -4,16 +4,16 @@
 #
 ################################################################################
 
-BATOCERA_ES_SYSTEM_SOURCE=
+BATOCERA_ES_SYSTEM_SOURCE =
 BATOCERA_ES_SYSTEM_LICENSE = LGPL-3.0+
-BATOCERA_ES_SYSTEM_OVERRIDE_SRCDIR=
+BATOCERA_ES_SYSTEM_OVERRIDE_SRCDIR =
 BATOCERA_ES_SYSTEM_INSTALL_STAGING = YES
 BATOCERA_ES_SYSTEM_DEPENDENCIES = host-batocera-es-system batocera-launch host-gettext
 
-HOST_BATOCERA_ES_SYSTEM_OVERRIDE_SRCDIR=$(BR2_EXTERNAL_BATOCERA_PATH)/python-src/batocera-es-system
-HOST_BATOCERA_ES_SYSTEM_OVERRIDE_SRCDIR_RSYNC_EXCLUSIONS=--exclude=".*" --exclude="**/__pycache__/" --exclude="dist"
-HOST_BATOCERA_ES_SYSTEM_SOURCE=
-HOST_BATOCERA_ES_SYSTEM_SETUP_TYPE=hatch
+HOST_BATOCERA_ES_SYSTEM_OVERRIDE_SRCDIR = $(BR2_EXTERNAL_BATOCERA_PATH)/python-src/batocera-es-system
+HOST_BATOCERA_ES_SYSTEM_OVERRIDE_SRCDIR_RSYNC_EXCLUSIONS = --exclude=".*" --exclude="**/__pycache__/" --exclude="dist"
+HOST_BATOCERA_ES_SYSTEM_SOURCE =
+HOST_BATOCERA_ES_SYSTEM_SETUP_TYPE = hatch
 HOST_BATOCERA_ES_SYSTEM_DEPENDENCIES = host-python-batocera-common
 
 $(eval $(call register,_shared.emulator.yml _global.emulator.yml lexaloffle.emulator.yml sh.emulator.yml))
@@ -77,8 +77,8 @@ define BATOCERA_ES_SYSTEM_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit
 	mkdir -p $(@D)/roms  # in case there is no rom
 	cp -pr $(@D)/roms $(TARGET_DIR)/usr/share/batocera/datainit/
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/bios $(TARGET_DIR)/usr/share/batocera/datainit/
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulationstation/batocera-es-system/roms/ports $(TARGET_DIR)/usr/share/batocera/datainit/roms
+	cp -pr $(BATOCERA_ES_SYSTEM_PKGDIR)/bios $(TARGET_DIR)/usr/share/batocera/datainit/
+	cp -pr $(BATOCERA_ES_SYSTEM_PKGDIR)/roms/ports $(TARGET_DIR)/usr/share/batocera/datainit/roms
 	# create saves dirs
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/saves/dreamcast/flycast
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/saves/sm64
