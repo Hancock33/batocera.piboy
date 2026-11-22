@@ -9,7 +9,7 @@ SWAPIT_SOURCE =
 SWAPIT_LICENSE = GPL-3.0+
 
 define SWAPIT_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/swapit/S40swapit $(TARGET_DIR)/etc/init.d/S40swapit
+	$(INSTALL) -m 0755 -D $(SWAPIT_PKGDIR)/S40swapit $(TARGET_DIR)/etc/init.d/S40swapit
 endef
 
 $(eval $(generic-package))
