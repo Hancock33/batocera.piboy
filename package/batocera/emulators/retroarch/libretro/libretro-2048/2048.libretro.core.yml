@@ -1,3 +1,29 @@
+custom_features:
+  # Display
+  2048_theme:
+    group: DISPLAY
+    prompt: THEME
+    description: Applies on restart.
+    choices:
+      Light (Default): Light
+      Dark: Dark
+  2048_fps:
+    group: DISPLAY
+    prompt: FRAMERATE
+    description: Applies on restart.
+    choices:
+      60 FPS (Default): '60'
+      72 FPS: '72'
+      75 FPS: '75'
+      90 FPS: '90'
+      100 FPS: '100'
+      120 FPS: '120'
+      144 FPS: '144'
+      165 FPS: '165'
+      180 FPS: '180'
+      240 FPS: '240'
+      300 FPS: '300'
+      360 FPS: '360'
 file_extensions:
   - game
 systems:

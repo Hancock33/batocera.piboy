@@ -1,3 +1,18 @@
+custom_features:
+  # Game Options
+  jnb-flip:
+    group: GAME OPTIONS
+    prompt: FLIP LEVEL
+    description: Play the level upside down.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  jnb-flies:
+    group: GAME OPTIONS
+    prompt: FLIES
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
 file_extensions:
   - dat
 systems:

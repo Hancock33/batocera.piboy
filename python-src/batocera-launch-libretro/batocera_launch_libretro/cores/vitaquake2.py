@@ -29,6 +29,8 @@ from batocera_launch_libretro import Core
 if TYPE_CHECKING:
     from pathlib import Path
 
+    from batocera_launch import LibretroConfig
+
 
 @cached_dataclass
 class Vitaquake2(Core):
@@ -55,3 +57,34 @@ class Vitaquake2(Core):
     @cached_property
     def rom_argument(self) -> str | Path | None:
         return self._mission[1]
+
+    def set_core_options(self, core_options: LibretroConfig, /) -> None:
+        # Display
+        core_options.set_from_config('vitaquakeii_renderer', default='opengl')
+        core_options.set_from_config('vitaquakeii_resolution', default='960x544')
+        core_options.set_from_config('vitaquakeii_framerate', default='auto')
+        core_options.set_from_config('vitaquakeii_gl_modulate', default='2.0')
+        core_options.set_from_config('vitaquakeii_gl_texture_filtering', default='nearest_hq')
+        core_options.set_from_config('vitaquakeii_gl_shadows', default='disabled')
+        core_options.set_from_config('vitaquakeii_gl_hud_scale', default='0.50')
+        core_options.set_from_config('vitaquakeii_sw_truecolor_sky', default='enabled')
+        core_options.set_from_config('vitaquakeii_sw_colored_lighting', default='enabled')
+        core_options.set_from_config('vitaquakeii_sw_dithered_filtering', default='disabled')
+        core_options.set_from_config('vitaquakeii_cin_force43', default='enabled')
+
+        # Audio
+        core_options.set_from_config('vitaquakeii_cdaudio_enabled', default='enabled')
+        core_options.set_from_config('vitaquakeii_sound_samplerate', default='auto')
+
+        # Controls
+        core_options.set_from_config('vitaquakeii_cl_run', default='disabled')
+        core_options.set_from_config('vitaquakeii_invert_y_axis', default='enabled')
+        core_options.set_from_config('vitaquakeii_mouse_sensitivity', default='3.0')
+        core_options.set_from_config('vitaquakeii_analog_deadzone', default='15')
+        core_options.set_from_config('vitaquakeii_rumble', default='disabled')
+
+        # Game Options
+        core_options.set_from_config('vitaquakeii_hand', default='right')
+        core_options.set_from_config('vitaquakeii_xhair', default='cross')
+        core_options.set_from_config('vitaquakeii_aimfix', default='disabled')
+        core_options.set_from_config('vitaquakeii_gl_xflip', default='disabled')

@@ -4,6 +4,15 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # System
+  ngp_language:
+    group: SYSTEM
+    prompt: LANGUAGE
+    description: Applies on restart.
+    choices:
+      English (Default): english
+      Japanese: japanese
 file_extensions:
   - zip
   - 7z

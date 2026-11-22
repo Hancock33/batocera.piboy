@@ -4,6 +4,144 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # System
+  fmsx_mode:
+    group: SYSTEM
+    prompt: MSX MODEL
+    description: Applies on restart.
+    choices:
+      MSX2+ (Default): MSX2+
+      MSX1: MSX1
+      MSX2: MSX2
+  fmsx_video_mode:
+    group: SYSTEM
+    prompt: VIDEO MODE
+    description: Dynamic picks PAL for MSX2 and NTSC otherwise.
+    choices:
+      NTSC (Default): NTSC
+      PAL: PAL
+      Dynamic: Dynamic
+  fmsx_mapper_type_mode:
+    group: SYSTEM
+    prompt: CARTRIDGE MAPPER TYPE
+    choices:
+      Guess (Default): Guess
+      Generic 8KB: Generic 8kB
+      Generic 16KB: Generic 16kB
+      Konami5 8KB: Konami5 8kB
+      Konami4 8KB: Konami4 8kB
+      ASCII 8KB: ASCII 8kB
+      ASCII 16KB: ASCII 16kB
+      GameMaster2: GameMaster2
+      FMPAC: FMPAC
+  fmsx_ram_pages:
+    group: SYSTEM
+    prompt: MAIN MEMORY
+    choices:
+      Auto (Default): Auto
+      64KB: 64KB
+      128KB: 128KB
+      256KB: 256KB
+      512KB: 512KB
+      4MB: 4MB
+  fmsx_vram_pages:
+    group: SYSTEM
+    prompt: VIDEO MEMORY
+    choices:
+      Auto (Default): Auto
+      32KB: 32KB
+      64KB: 64KB
+      128KB: 128KB
+      192KB: 192KB
+  fmsx_scci_megaram:
+    group: SYSTEM
+    prompt: SCC-I 128KB MEGARAM
+    choices:
+      'On (Default)': 'Yes'
+      'Off': 'No'
+  fmsx_dos2:
+    group: SYSTEM
+    prompt: LOAD MSXDOS2.ROM
+    description: Load MSXDOS2.ROM when found in the BIOS folder.
+    choices:
+      'Off (Default)': 'No'
+      'On': 'Yes'
+  fmsx_simbdos:
+    group: SYSTEM
+    prompt: SIMULATE DISKROM CALLS
+    description: Simulate DiskROM disk access calls.
+    choices:
+      'Off (Default)': 'No'
+      'On': 'Yes'
+  fmsx_phantom_disk:
+    group: SYSTEM
+    prompt: CREATE EMPTY DISK
+    description: Create an empty disk when none is loaded.
+    choices:
+      'Off (Default)': 'No'
+      'On': 'Yes'
+  fmsx_flush_disk:
+    group: SYSTEM
+    prompt: SAVE DISK CHANGES
+    choices:
+      Never (Default): Never
+      Immediate: Immediate
+      'On close': 'On close'
+      To/From SRAM: To/From SRAM
+  fmsx_game_master:
+    group: SYSTEM
+    prompt: SUPPORT GAME MASTER
+    choices:
+      'Off (Default)': 'No'
+      'On': 'Yes'
+  # Display
+  fmsx_hires:
+    group: DISPLAY
+    prompt: HIGH RESOLUTION
+    choices:
+      'Off (Default)': 'Off'
+      Interlaced: Interlaced
+      Progressive: Progressive
+  fmsx_overscan:
+    group: DISPLAY
+    prompt: OVERSCAN
+    choices:
+      'Off (Default)': 'No'
+      'On': 'Yes'
+  fmsx_allsprites:
+    group: DISPLAY
+    prompt: SHOW ALL SPRITES
+    description: Remove the sprites-per-line limit.
+    choices:
+      'Off (Default)': 'No'
+      'On': 'Yes'
+  fmsx_font:
+    group: DISPLAY
+    prompt: TEXT FONT
+    description: Font files must be present in the BIOS folder.
+    choices:
+      Standard (Default): standard
+      Default: DEFAULT.FNT
+      Italic: ITALIC.FNT
+      International: INTERNAT.FNT
+      Cyrillic: CYRILLIC.FNT
+      Korean: KOREAN.FNT
+      Japanese: JAPANESE.FNT
+  # Audio
+  fmsx_ym2413_core:
+    group: AUDIO
+    prompt: YM2413 (FM-PAC/MSX-MUSIC) CORE
+    choices:
+      fMSX (Default): fMSX
+      Nuked-OPLL: NukeYKT
+  # Controls
+  fmsx_autospace:
+    group: CONTROLS
+    prompt: AUTOFIRE ON SPACE
+    choices:
+      'Off (Default)': 'No'
+      'On': 'Yes'
 file_extensions:
   - dsk
   - rom

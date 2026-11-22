@@ -1,3 +1,51 @@
+custom_features:
+  # System
+  yabause_force_hle_bios:
+    group: SYSTEM
+    prompt: FORCE HLE BIOS
+    description: Not recommended. Applies on restart.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  yabause_addon_cartridge:
+    group: SYSTEM
+    prompt: ADD-ON CARTRIDGE
+    description: RAM expansion some games need. Applies on restart.
+    choices:
+      None (Default): none
+      1MB RAM: 1M_ram
+      4MB RAM: 4M_ram
+  # Controls
+  yabause_multitap_port1:
+    group: CONTROLS
+    prompt: 6PLAYER ADAPTOR ON PORT 1
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  yabause_multitap_port2:
+    group: CONTROLS
+    prompt: 6PLAYER ADAPTOR ON PORT 2
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  # Advanced Options
+  yabause_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  yabause_numthreads:
+    group: ADVANCED OPTIONS
+    prompt: NUMBER OF THREADS
+    description: Applies on restart.
+    choices:
+      1: '1'
+      2: '2'
+      4 (Default): '4'
+      8: '8'
+      16: '16'
+      32: '32'
 file_extensions:
   - bin
   - ccd

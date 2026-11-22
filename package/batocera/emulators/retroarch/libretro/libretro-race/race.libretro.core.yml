@@ -1,5 +1,75 @@
 shared_features:
   - autosave
+custom_features:
+  # System
+  race_language:
+    group: SYSTEM
+    prompt: LANGUAGE
+    description: For dual language games. Applies on restart.
+    choices:
+      English (Default): english
+      Japanese: japanese
+  race_rtc_mode:
+    group: SYSTEM
+    prompt: REAL-TIME CLOCK
+    description: Deterministic is safe for netplay, rewind and run-ahead.
+    choices:
+      Deterministic (Default): deterministic
+      Real Time: realtime
+  # Display
+  race_dark_filter_level:
+    group: DISPLAY
+    prompt: DARK FILTER LEVEL
+    description: Reduce brightness to avoid glare.
+    choices:
+      0% (Default): 0
+      5%: 5
+      10%: 10
+      15%: 15
+      20%: 20
+      25%: 25
+      30%: 30
+      35%: 35
+      40%: 40
+      45%: 45
+      50%: 50
+  # Audio
+  race_audio_quality:
+    group: AUDIO
+    prompt: AUDIO QUALITY
+    description: Applies on restart.
+    choices:
+      Fast (Default): fast
+      Accurate (Band-Limited): accurate
+  race_audio_samplerate:
+    group: AUDIO
+    prompt: SOUND SAMPLE RATE
+    description: Applies on restart.
+    choices:
+      Auto (Default): auto
+      32 kHz: 32000
+      44 kHz: 44100
+      48 kHz: 48000
+  # Advanced Options
+  race_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP
+    description: Skip frames to avoid audio crackling.
+    choices:
+      'Off (Default)': disabled
+      Auto: auto
+      Manual: manual
+  race_frameskip_threshold:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP THRESHOLD
+    description: Audio buffer occupancy below which frames are skipped (manual mode).
+    choices:
+      15%: 15
+      24%: 24
+      33% (Default): 33
+      42%: 42
+      51%: 51
+      60%: 60
 file_extensions:
   - zip
   - 7z

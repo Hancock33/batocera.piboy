@@ -1,3 +1,182 @@
+custom_features:
+  # System
+  noods_directBoot:
+    group: SYSTEM
+    prompt: DIRECT BOOT
+    description: Skip the DS firmware menu and start the game directly.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  noods_dsiMode:
+    group: SYSTEM
+    prompt: DSI HOMEBREW MODE
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Display
+  noods_screenArrangement:
+    group: DISPLAY
+    prompt: SCREEN ARRANGEMENT
+    choices:
+      Automatic (Default): Automatic
+      Vertical: Vertical
+      Horizontal: Horizontal
+      Single Screen: Single Screen
+  noods_screenRotation:
+    group: DISPLAY
+    prompt: SCREEN ROTATION
+    choices:
+      Normal (Default): Normal
+      Rotated Left: Rotated Left
+      Rotated Right: Rotated Right
+  noods_screenSizing:
+    group: DISPLAY
+    prompt: SCREEN SIZING
+    choices:
+      Even (Default): Even
+      Enlarge Top: Enlarge Top
+      Enlarge Bottom: Enlarge Bottom
+  noods_screenPosition:
+    group: DISPLAY
+    prompt: SCREEN POSITION
+    choices:
+      Center (Default): Center
+      Start: Start
+      End: End
+  noods_screenGap:
+    group: DISPLAY
+    prompt: SCREEN GAP
+    choices:
+      None (Default): None
+      Quarter: Quarter
+      Half: Half
+      Full: Full
+  noods_gbaCrop:
+    group: DISPLAY
+    prompt: CROP GBA SCREEN
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  noods_screenFilter:
+    group: DISPLAY
+    prompt: SCREEN FILTER
+    choices:
+      Nearest (Default): Nearest
+      Upscaled: Upscaled
+      Linear: Linear
+  noods_screenGhost:
+    group: DISPLAY
+    prompt: SIMULATE GHOSTING
+    description: Blend frames to mimic the DS LCD response.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  noods_highRes3D:
+    group: DISPLAY
+    prompt: HIGH RESOLUTION 3D
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Audio
+  noods_emulateAudio:
+    group: AUDIO
+    prompt: EMULATE AUDIO
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  noods_audio16Bit:
+    group: AUDIO
+    prompt: 16-BIT AUDIO
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  noods_micInputMode:
+    group: AUDIO
+    prompt: MICROPHONE INPUT MODE
+    description: What the emulated microphone hears.
+    choices:
+      Silence (Default): Silence
+      Noise: Noise
+      Microphone: Microphone
+  # Controls
+  noods_swapScreenMode:
+    group: CONTROLS
+    prompt: SWAP SCREEN MODE
+    choices:
+      Toggle (Default): Toggle
+      Hold: Hold
+  noods_touchMode:
+    group: CONTROLS
+    prompt: TOUCH MODE
+    choices:
+      Auto (Default): Auto
+      Pointer: Pointer
+      Joystick: Joystick
+      None: None
+  noods_touchCursor:
+    group: CONTROLS
+    prompt: SHOW TOUCH CURSOR
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  noods_cursorTimeout:
+    group: CONTROLS
+    prompt: HIDE CURSOR TIMEOUT
+    choices:
+      3 Seconds (Default): 3 Seconds
+      5 Seconds: 5 Seconds
+      10 Seconds: 10 Seconds
+      15 Seconds: 15 Seconds
+      20 Seconds: 20 Seconds
+      Never Hide: Never Hide
+  noods_micButtonMode:
+    group: CONTROLS
+    prompt: MICROPHONE BUTTON MODE
+    choices:
+      Toggle (Default): Toggle
+      Hold: Hold
+      Always: Always
+  # Advanced Options
+  noods_fpsLimiter:
+    group: ADVANCED OPTIONS
+    prompt: FPS LIMITER
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  noods_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  noods_romInRam:
+    group: ADVANCED OPTIONS
+    prompt: KEEP ROM IN RAM
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  noods_arm7Hle:
+    group: ADVANCED OPTIONS
+    prompt: ARM7 HLE
+    description: Faster, but less compatible.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  noods_threaded2D:
+    group: ADVANCED OPTIONS
+    prompt: THREADED 2D
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  noods_threaded3D:
+    group: ADVANCED OPTIONS
+    prompt: THREADED 3D
+    choices:
+      Disabled: Disabled
+      1 Thread (Default): 1 Thread
+      2 Threads: 2 Threads
+      3 Threads: 3 Threads
+      4 Threads: 4 Threads
 file_extensions:
   - nds
   - zip

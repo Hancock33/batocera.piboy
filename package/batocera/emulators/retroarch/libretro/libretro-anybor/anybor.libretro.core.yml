@@ -1,3 +1,54 @@
+custom_features:
+  # System
+  anybor_state_content:
+    group: SYSTEM
+    prompt: SAVE STATE CONTENT
+    description: Full stores complete engine memory. Applies on content load.
+    choices:
+      Smart (Default): Smart
+      Full: Full
+  anybor_state_compression:
+    group: SYSTEM
+    prompt: SAVE STATE COMPRESSION
+    description: Applies on content load.
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
+  # Controls
+  anybor_analog:
+    group: CONTROLS
+    prompt: LEFT STICK AS D-PAD
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
+  anybor_rumble:
+    group: CONTROLS
+    prompt: RUMBLE
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
+  anybor_macros:
+    group: CONTROLS
+    prompt: SPECIAL MOVE MACROS
+    description: Bind special-move sequences to L2/R2/L3/R3.
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
+  # Advanced Options
+  anybor_clear_game_cache:
+    group: ADVANCED OPTIONS
+    prompt: CLEAR GAME CACHE ON UNLOAD
+    description: Saved game data is unaffected.
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
+  anybor_clear_all_caches:
+    group: ADVANCED OPTIONS
+    prompt: CLEAR ALL CACHES ON LOAD
+    description: Saved game data is unaffected.
+    choices:
+      'On (Default)': 'On'
+      'Off': 'Off'
 file_extensions:
   - pak
   - zip

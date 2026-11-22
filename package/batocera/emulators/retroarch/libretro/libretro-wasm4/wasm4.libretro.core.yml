@@ -5,6 +5,32 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # Controls
+  wasm4_touchscreen_hold_frames:
+    group: CONTROLS
+    prompt: TOUCH HOLD FRAMES
+    description: Frames a touch press is held for.
+    choices:
+      10 (Default): '10'
+      5: '5'
+      20: '20'
+      30: '30'
+  # Advanced Options
+  wasm4_pixel_type:
+    group: ADVANCED OPTIONS
+    prompt: PIXEL FORMAT
+    description: Applies on restart.
+    choices:
+      XRGB8888 (Default): xrgb8888
+      RGB565: rgb565
+  wasm4_audio_type:
+    group: ADVANCED OPTIONS
+    prompt: AUDIO OUTPUT TYPE
+    description: Applies on restart.
+    choices:
+      Callback (Default): callback
+      Normal: normal
 file_extensions:
   - wasm
 systems:

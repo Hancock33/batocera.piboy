@@ -34,3 +34,18 @@ class Theodore(Core):
     def set_core_options(self, core_options: LibretroConfig, /) -> None:
         # Auto run games
         core_options.set('theodore_autorun', 'enabled')
+
+        # System
+        core_options.set_from_config('theodore_rom', default='Auto')
+        core_options.set_from_config('theodore_autostart_use_game_hash', default='enabled')
+        core_options.set_from_config('theodore_floppy_write_protect', default='enabled')
+        core_options.set_from_config('theodore_tape_write_protect', default='enabled')
+
+        # Display
+        core_options.set_from_config('theodore_autostart_message_hint', default='enabled')
+
+        # Controls
+        core_options.set_from_config('theodore_vkb_transparency', default='0%')
+
+        # Advanced Options
+        core_options.set_from_config('theodore_printer_emulation', default='disabled')

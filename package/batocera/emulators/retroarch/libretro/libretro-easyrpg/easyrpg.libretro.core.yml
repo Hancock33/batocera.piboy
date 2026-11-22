@@ -1,3 +1,12 @@
+custom_features:
+  # Advanced Options
+  easyrpg_debug_mode:
+    group: ADVANCED OPTIONS
+    prompt: DEBUG MODE
+    description: Debug menu and walk through walls.
+    choices:
+      Disabled (Default): Disabled
+      Enabled: Enabled
 file_extensions:
   - easyrpg
   - squashfs

@@ -1,3 +1,12 @@
+custom_features:
+  # Controls
+  m2000_keyboard_mapping:
+    group: CONTROLS
+    prompt: KEYBOARD MAPPING
+    description: Symbolic maps by character, Positional by key location.
+    choices:
+      Symbolic (Default): symbolic
+      Positional: positional
 file_extensions:
   - 7z
   - cas

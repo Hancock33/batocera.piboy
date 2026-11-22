@@ -1,3 +1,12 @@
+custom_features:
+  # Controls
+  lutro_mouse_input:
+    group: CONTROLS
+    prompt: MOUSE INPUT DEVICE
+    description: Mouse tracks relative movement, Pointer maps absolute coordinates.
+    choices:
+      Mouse (Default): mouse
+      Pointer: pointer
 file_extensions:
   - lutro
   - zip

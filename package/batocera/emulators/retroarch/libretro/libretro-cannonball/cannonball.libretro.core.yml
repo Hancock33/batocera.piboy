@@ -1,3 +1,297 @@
+custom_features:
+  # System
+  cannonball_menu_enabled:
+    group: SYSTEM
+    prompt: SHOW MENU AT START
+    description: Off boots straight into attract mode.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_freeplay:
+    group: SYSTEM
+    prompt: FREEPLAY MODE
+    description: No coins required to play.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  # Display
+  cannonball_video_fps:
+    group: DISPLAY
+    prompt: FRAME RATE
+    description: Original updates game logic at 30fps and the horizon at 60fps.
+    choices:
+      Low (30): Low (30)
+      Smooth (60) (Default): Smooth (60)
+      Ultra Smooth (120): Ultra Smooth (120)
+      Original (60/30): Original (60/30)
+  cannonball_video_widescreen:
+    group: DISPLAY
+    prompt: WIDESCREEN MODE
+    description: Extends the play area to a widescreen aspect.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_video_hires:
+    group: DISPLAY
+    prompt: HIGH-RESOLUTION MODE
+    description: Doubles the internal resolution.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  # Audio
+  cannonball_sound_enable:
+    group: AUDIO
+    prompt: ENABLE AUDIO
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_sound_custom_wav_volume:
+    group: AUDIO
+    prompt: CUSTOM WAV VOLUME
+    description: Volume of custom WAV music tracks.
+    choices:
+      0%: '0'
+      50%: '50'
+      100%: '100'
+      150%: '150'
+      200% (Default): '200'
+  cannonball_sound_advertise:
+    group: AUDIO
+    prompt: ATTRACT MODE SOUND
+    description: Applies on restart.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_sound_preview:
+    group: AUDIO
+    prompt: PREVIEW MUSIC
+    description: Play tracks on the song selection screen. Applies on restart.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_sound_fix_samples:
+    group: AUDIO
+    prompt: FIX SAMPLES
+    description: Needs the patched audio ROM opr-10188.71f. Applies on restart.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  # Controls
+  cannonball_gear:
+    group: CONTROLS
+    prompt: GEAR MODE
+    choices:
+      Manual (Default): Manual
+      Manual Cabinet: Manual Cabinet
+      Manual 2 Buttons: Manual 2 Buttons
+      Automatic: Automatic
+  cannonball_analog:
+    group: CONTROLS
+    prompt: ANALOG CONTROLS
+    description: Analog steering and pedals via the left stick and triggers.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_steer_speed:
+    group: CONTROLS
+    prompt: DIGITAL STEER SPEED
+    description: Ignored when analog controls are on. Applies on restart.
+    choices:
+      '1': '1'
+      '2': '2'
+      3 (Default): '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+  cannonball_pedal_speed:
+    group: CONTROLS
+    prompt: DIGITAL PEDAL SPEED
+    description: Ignored when analog controls are on. Applies on restart.
+    choices:
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      4 (Default): '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+  cannonball_haptic_strength:
+    group: CONTROLS
+    prompt: RUMBLE STRENGTH
+    choices:
+      0 - Off: '0'
+      '2': '2'
+      '4': '4'
+      '6': '6'
+      '8': '8'
+      10 (Default): '10'
+  # Game Options
+  cannonball_jap:
+    group: GAME OPTIONS
+    prompt: JAPANESE TRACKS
+    description: Harder Japanese track layouts. Applies on restart.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  cannonball_prototype:
+    group: GAME OPTIONS
+    prompt: PROTOTYPE STAGE 1
+    description: Unused early Coconut Beach layout. Applies on restart.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  cannonball_dip_time:
+    group: GAME OPTIONS
+    prompt: TIME LIMIT
+    description: Applies on restart.
+    choices:
+      Easy 80s (Default): Easy (80s)
+      Normal 75s: Normal (75s)
+      Hard 72s: Hard (72s)
+      Very Hard 70s: Very Hard (70s)
+      Infinite Time: Infinite Time
+  cannonball_dip_traffic:
+    group: GAME OPTIONS
+    prompt: TRAFFIC DIFFICULTY
+    description: Applies on restart.
+    choices:
+      Easy: Easy
+      Normal (Default): Normal
+      Hard: Hard
+      Very Hard: Very Hard
+      No Traffic: No Traffic
+  cannonball_ttrial_laps:
+    group: GAME OPTIONS
+    prompt: TIME TRIAL LAPS
+    description: Applies on restart.
+    choices:
+      '1': '1'
+      '2': '2'
+      3 (Default): '3'
+      '4': '4'
+      '5': '5'
+  cannonball_ttrial_traffic:
+    group: GAME OPTIONS
+    prompt: TIME TRIAL TRAFFIC LEVEL
+    description: Applies on restart.
+    choices:
+      '0': '0'
+      '1': '1'
+      '2': '2'
+      3 (Default): '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+  cannonball_cont_traffic:
+    group: GAME OPTIONS
+    prompt: CONTINUOUS MODE TRAFFIC LEVEL
+    description: Applies on restart.
+    choices:
+      '0': '0'
+      '1': '1'
+      '2': '2'
+      3 (Default): '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+  cannonball_car_color:
+    group: GAME OPTIONS
+    prompt: CAR COLOUR
+    choices:
+      Red (Default): RED
+      Blue: BLUE
+      Yellow: YELLOW
+      Green: GREEN
+      Cyan: CYAN
+      Black: BLACK
+      White: WHITE
+  cannonball_grippy_tyres:
+    group: GAME OPTIONS
+    prompt: GRIPPY TYRES
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  cannonball_offroad_tyres:
+    group: GAME OPTIONS
+    prompt: OFFROAD TYRES
+    description: No slowdown when driving off the road.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  cannonball_strong_bumper:
+    group: GAME OPTIONS
+    prompt: STRONG BUMPER
+    description: Reduces the effect of collisions with traffic.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  cannonball_faster_car:
+    group: GAME OPTIONS
+    prompt: FASTER CAR
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  cannonball_force_ai:
+    group: GAME OPTIONS
+    prompt: FORCE AI TO PLAY
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  cannonball_new_attract:
+    group: GAME OPTIONS
+    prompt: NEW ATTRACT MODE
+    description: Applies on restart.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_randomgen:
+    group: GAME OPTIONS
+    prompt: RANDOMIZE TRAFFIC PATTERNS
+    description: Applies on restart.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  # Advanced Options
+  cannonball_menu_road_scroll_speed:
+    group: ADVANCED OPTIONS
+    prompt: MENU ROAD SCROLL SPEED
+    choices:
+      '10': '10'
+      '25': '25'
+      50 (Default): '50'
+      '100': '100'
+      '200': '200'
+      '500': '500'
+  cannonball_level_objects:
+    group: ADVANCED OPTIONS
+    prompt: EXTRA LEVEL OBJECTS
+    description: Removes the original object slot limit. Applies on restart.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_fix_bugs:
+    group: ADVANCED OPTIONS
+    prompt: FIX GAME BUGS
+    description: Applies on restart.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  cannonball_fix_timer:
+    group: ADVANCED OPTIONS
+    prompt: FIX TIMING BUGS
+    description: Applies on restart.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
 file_extensions:
   - cannonball
 systems:

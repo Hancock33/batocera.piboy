@@ -1,6 +1,92 @@
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # System
+  emuscv_console:
+    group: SYSTEM
+    prompt: CONSOLE MODEL
+    choices:
+      Auto (Default): AUTO
+      Epoch: EPOCH
+      Yeno: YENO
+      Epoch Lady: EPOCHLADY
+  emuscv_checkbios:
+    group: SYSTEM
+    prompt: CHECK BIOS
+    choices:
+      Auto (Default): AUTO
+      'Yes': 'YES'
+      'No': 'NO'
+  emuscv_language:
+    group: SYSTEM
+    prompt: LANGUAGE
+    choices:
+      Auto (Default): AUTO
+      Japanese: JP
+      French: FR
+      English: EN
+  # Display
+  emuscv_display:
+    group: DISPLAY
+    prompt: DISPLAY STYLE
+    choices:
+      Auto (Default): AUTO
+      EmuSCV: EMUSCV
+      Epoch: EPOCH
+      Yeno: YENO
+  emuscv_pixelaspect:
+    group: DISPLAY
+    prompt: PIXEL ASPECT
+    choices:
+      Auto (Default): AUTO
+      Rectangular: RECTANGULAR
+      Square: SQUARE
+  emuscv_resolution:
+    group: DISPLAY
+    prompt: RESOLUTION
+    choices:
+      Auto (Default): AUTO
+      Low: LOW
+      Medium: MEDIUM
+      High: HIGH
+  emuscv_palette:
+    group: DISPLAY
+    prompt: PALETTE
+    choices:
+      Auto (Default): AUTO
+      Standard: STANDARD
+      Old NTSC: OLDNTSC
+  emuscv_fps:
+    group: DISPLAY
+    prompt: FRAME RATE
+    choices:
+      Auto (Default): AUTO
+      Epoch 60 FPS: EPOCH60
+      Yeno 50 FPS: YENO50
+  # Controls
+  emuscv_keyboardatstart:
+    group: CONTROLS
+    prompt: SHOW KEYBOARD AT START
+    choices:
+      Auto (Default): AUTO
+      'Yes': 'YES'
+      'No': 'NO'
+  # Advanced Options
+  emuscv_displayfullmemory:
+    group: ADVANCED OPTIONS
+    prompt: DISPLAY FULL MEMORY
+    choices:
+      Auto (Default): AUTO
+      'Yes': 'YES'
+      'No': 'NO'
+  emuscv_displayinputs:
+    group: ADVANCED OPTIONS
+    prompt: DISPLAY INPUTS
+    choices:
+      Auto (Default): AUTO
+      'Yes': 'YES'
+      'No': 'NO'
 file_extensions:
   - bin
   - cart

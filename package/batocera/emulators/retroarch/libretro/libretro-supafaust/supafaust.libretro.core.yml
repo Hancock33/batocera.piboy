@@ -5,6 +5,160 @@ features:
 shared_features:
   - autosave
   - rewind
+custom_features:
+  # System
+  supafaust_region:
+    group: SYSTEM
+    prompt: REGION
+    description: Region/type of SNES to emulate.
+    choices:
+      Auto (Default): auto
+      NTSC: ntsc
+      PAL: pal
+      NTSC (Lie Auto): ntsc_lie_auto
+      PAL (Lie Auto): pal_lie_auto
+      NTSC (Lie PAL): ntsc_lie_pal
+      PAL (Lie NTSC): pal_lie_ntsc
+  # Display
+  supafaust_correct_aspect:
+    group: DISPLAY
+    prompt: CORRECT PIXEL ASPECT RATIO
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+      Force NTSC: force_ntsc
+      Force PAL: force_pal
+  supafaust_h_filter:
+    group: DISPLAY
+    prompt: HORIZONTAL BLEND/DOUBLE FILTER
+    choices:
+      Pseudo-Hires Blend + Auto 512 (Default): phr256blend_auto512
+      Pseudo-Hires Blend + 512: phr256blend_512
+      512 Blend: 512_blend
+      '512': '512'
+      Pseudo-Hires Blend: phr256blend
+  supafaust_deinterlacer:
+    group: DISPLAY
+    prompt: DEINTERLACER
+    choices:
+      Bob Offset (Default): bob_offset
+      Weave: weave
+      Blend: blend
+  supafaust_slstart:
+    group: DISPLAY
+    prompt: FIRST SCANLINE (NTSC)
+    choices:
+      0 (Default): '0'
+      '4': '4'
+      '8': '8'
+      '12': '12'
+      '16': '16'
+  supafaust_slend:
+    group: DISPLAY
+    prompt: LAST SCANLINE (NTSC)
+    choices:
+      223 (Default): '223'
+      '219': '219'
+      '215': '215'
+      '211': '211'
+      '207': '207'
+  supafaust_slstartp:
+    group: DISPLAY
+    prompt: FIRST SCANLINE (PAL)
+    choices:
+      0 (Default): '0'
+      '4': '4'
+      '8': '8'
+      '12': '12'
+      '16': '16'
+      '20': '20'
+      '24': '24'
+  supafaust_slendp:
+    group: DISPLAY
+    prompt: LAST SCANLINE (PAL)
+    choices:
+      238 (Default): '238'
+      '234': '234'
+      '230': '230'
+      '226': '226'
+      '222': '222'
+      '218': '218'
+      '214': '214'
+  # Audio
+  supafaust_audio_rate:
+    group: AUDIO
+    prompt: INTERNAL RESAMPLER
+    description: Output rate of the core's own resampler.
+    choices:
+      Disabled (Default): disabled
+      44100 Hz: '44100'
+      48000 Hz: '48000'
+      96000 Hz: '96000'
+  # Controls
+  supafaust_multitap:
+    group: CONTROLS
+    prompt: MULTITAP
+    choices:
+      Disabled (Default): disabled
+      Port 1: port1
+      Port 2: port2
+      Port 1 + Port 2: port1+port2
+  # Advanced Options
+  supafaust_frame_begin_vblank:
+    group: ADVANCED OPTIONS
+    prompt: BEGIN FRAME IN VBLANK
+    description: Begin frame in SNES VBlank to lower latency.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  supafaust_run_ahead:
+    group: ADVANCED OPTIONS
+    prompt: 1-FRAME RUN-AHEAD
+    choices:
+      Disabled (Default): disabled
+      Video: video
+      Video + Audio: video+audio
+  supafaust_pixel_format:
+    group: ADVANCED OPTIONS
+    prompt: PIXEL FORMAT
+    choices:
+      RGB565 (Default): rgb565
+      XRGB8888: xrgb8888
+      0RGB1555: 0rgb1555
+  supafaust_cx4_clock_rate:
+    group: ADVANCED OPTIONS
+    prompt: CX4 CLOCK RATE
+    choices:
+      100% (Default): '100'
+      125%: '125'
+      150%: '150'
+      175%: '175'
+      200%: '200'
+      250%: '250'
+      300%: '300'
+      400%: '400'
+      500%: '500'
+  supafaust_superfx_clock_rate:
+    group: ADVANCED OPTIONS
+    prompt: SUPERFX CLOCK RATE
+    choices:
+      95%: '95'
+      100% (Default): '100'
+      125%: '125'
+      150%: '150'
+      175%: '175'
+      200%: '200'
+      250%: '250'
+      300%: '300'
+      400%: '400'
+      500%: '500'
+  supafaust_superfx_icache:
+    group: ADVANCED OPTIONS
+    prompt: SUPERFX INSTRUCTION CACHE
+    description: Emulate the SuperFX instruction cache.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
 file_extensions:
   - 7z
   - bsx

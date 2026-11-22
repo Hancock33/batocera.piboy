@@ -1,3 +1,52 @@
+custom_features:
+  # Display
+  fake08_video_scale:
+    group: DISPLAY
+    prompt: VIDEO SCALE
+    description: Internal video scale factor.
+    choices:
+      1x (Default): 1x
+      2x: 2x
+  fake08_crop_h_left:
+    group: DISPLAY
+    prompt: CROP LEFT
+    description: Remove pixels from the left side of the screen.
+    choices:
+      0 px (Default): '0'
+      4 px: '4'
+      8 px: '8'
+      12 px: '12'
+      16 px: '16'
+  fake08_crop_h_right:
+    group: DISPLAY
+    prompt: CROP RIGHT
+    description: Remove pixels from the right side of the screen.
+    choices:
+      0 px (Default): '0'
+      4 px: '4'
+      8 px: '8'
+      12 px: '12'
+      16 px: '16'
+  fake08_crop_v_top:
+    group: DISPLAY
+    prompt: CROP TOP
+    description: Remove pixels from the top of the screen.
+    choices:
+      0 px (Default): '0'
+      4 px: '4'
+      8 px: '8'
+      12 px: '12'
+      16 px: '16'
+  fake08_crop_v_bottom:
+    group: DISPLAY
+    prompt: CROP BOTTOM
+    description: Remove pixels from the bottom of the screen.
+    choices:
+      0 px (Default): '0'
+      4 px: '4'
+      8 px: '8'
+      12 px: '12'
+      16 px: '16'
 file_extensions:
   - p8
   - png

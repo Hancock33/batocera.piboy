@@ -3,6 +3,43 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # Display
+  prosystem_color_depth:
+    group: DISPLAY
+    prompt: COLOR DEPTH
+    description: Applies on restart.
+    choices:
+      16-Bit (Default): 16bit
+      24-Bit: 24bit
+  # Audio
+  prosystem_low_pass_filter:
+    group: AUDIO
+    prompt: AUDIO FILTER
+    description: Soften the harsh TIA sound.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  prosystem_low_pass_range:
+    group: AUDIO
+    prompt: AUDIO FILTER LEVEL
+    description: Cut-off frequency of the audio filter.
+    choices:
+      20%: 20
+      40%: 40
+      50%: 50
+      60% (Default): 60
+      70%: 70
+      80%: 80
+      95%: 95
+  # Controls
+  prosystem_gamepad_dual_stick_hack:
+    group: CONTROLS
+    prompt: DUAL STICK CONTROLLER
+    description: Map player 2 joystick to the player 1 right stick (e.g. Robotron).
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
 file_extensions:
   - a78
   - bin

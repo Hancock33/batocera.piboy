@@ -1,3 +1,74 @@
+custom_features:
+  # Display
+  uzdoom_resolution:
+    group: DISPLAY
+    prompt: OUTPUT RESOLUTION
+    description: Applies on restart.
+    choices:
+      Automatic (Default): auto
+      640x480: 640x480
+      800x600: 800x600
+      1024x768: 1024x768
+      1280x720: 1280x720
+      1280x960: 1280x960
+      1600x1200: 1600x1200
+      1920x1080: 1920x1080
+      1920x1440: 1920x1440
+      2560x1440: 2560x1440
+      3840x2160: 3840x2160
+  uzdoom_anisotropic:
+    group: DISPLAY
+    prompt: ANISOTROPIC FILTERING
+    choices:
+      1x (Off): '1'
+      2x: '2'
+      4x (Default): '4'
+      8x: '8'
+      16x: '16'
+  uzdoom_msaa:
+    group: DISPLAY
+    prompt: MSAA
+    choices:
+      Off (Default): '1'
+      2x: '2'
+      4x: '4'
+      8x: '8'
+  uzdoom_supersampling:
+    group: DISPLAY
+    prompt: SUPERSAMPLING
+    description: Internal resolution multiplier per axis.
+    choices:
+      1x Native (Default): '1'
+      1.25x: '1.25'
+      1.5x: '1.5'
+      1.75x: '1.75'
+      2x: '2'
+  # Audio
+  uzdoom_audio_submission:
+    group: AUDIO
+    prompt: AUDIO SUBMISSION
+    description: Applies on restart.
+    choices:
+      Asynchronous (Default): async
+      Synchronous: sync
+  # Controls
+  uzdoom_mouse_sensitivity:
+    group: CONTROLS
+    prompt: MOUSE SENSITIVITY
+    choices:
+      '0.25': '0.25'
+      '0.5': '0.5'
+      '0.75': '0.75'
+      '1': '1'
+      '1.25': '1.25'
+      '1.5': '1.5'
+      2 (Default): '2'
+      '2.5': '2.5'
+      '3': '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '8': '8'
 file_extensions:
   - wad
   - iwad

@@ -1,3 +1,461 @@
+custom_features:
+  # System
+  geargrafx_console_type:
+    group: SYSTEM
+    prompt: CONSOLE TYPE
+    description: Applies on restart.
+    choices:
+      Auto (Default): Auto
+      PC Engine (JAP): PC Engine (JAP)
+      SuperGrafx (JAP): SuperGrafx (JAP)
+      TurboGrafx-16 (USA): TurboGrafx-16 (USA)
+  geargrafx_backup_ram:
+    group: SYSTEM
+    prompt: BACKUP RAM
+    description: Applies on restart.
+    choices:
+      'On (Default)': Enabled
+      'Off': Disabled
+  geargrafx_mb128:
+    group: SYSTEM
+    prompt: MB128 BACKUP MEMORY
+    choices:
+      Auto (Default): Auto
+      'On': Enabled
+      'Off': Disabled
+  geargrafx_cdrom_type:
+    group: SYSTEM
+    prompt: CD-ROM TYPE
+    choices:
+      Auto (Default): Auto
+      Standard: Standard
+      Super CD-ROM: Super CD-ROM
+      Arcade CD-ROM: Arcade CD-ROM
+  geargrafx_cdrom_bios:
+    group: SYSTEM
+    prompt: CD-ROM BIOS
+    choices:
+      System Card 3 (Default): System Card 3
+      System Card 2: System Card 2
+      System Card 1: System Card 1
+      Force Game Express: Force Game Express
+  geargrafx_cdrom_speed:
+    group: SYSTEM
+    prompt: CD-ROM SPEED
+    choices:
+      1x (Default): 1x
+      2x: 2x
+      3x: 3x
+      4x: 4x
+      6x: 6x
+  geargrafx_cdrom_fast_forward:
+    group: SYSTEM
+    prompt: FAST FORWARD CD-ROM LOADS
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_cdrom_fast_forward_notification:
+    group: SYSTEM
+    prompt: CD-ROM FAST FORWARD NOTIFICATION
+    choices:
+      'On (Default)': Enabled
+      'Off': Disabled
+  # Display
+  geargrafx_aspect_ratio:
+    group: DISPLAY
+    prompt: ASPECT RATIO
+    choices:
+      1:1 PAR (Default): 1:1 PAR
+      4:3 DAR: 4:3 DAR
+      6:5 DAR: 6:5 DAR
+      16:9 DAR: 16:9 DAR
+      16:10 DAR: 16:10 DAR
+      Dot Clock PAR: Dot Clock PAR
+  geargrafx_overscan:
+    group: DISPLAY
+    prompt: OVERSCAN
+    description: Auto crops the horizontal borders to the area used by the game.
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+      Auto: Auto
+  geargrafx_scanline_count:
+    group: DISPLAY
+    prompt: SCANLINE COUNT
+    choices:
+      224p: 224p
+      240p (Default): 240p
+      Manual: Manual
+  geargrafx_scanline_start:
+    group: DISPLAY
+    prompt: FIRST SCANLINE
+    description: Used when scanline count is Manual.
+    choices:
+      '0': '0'
+      '1': '1'
+      '2': '2'
+      3 (Default): '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '8': '8'
+      '10': '10'
+      '12': '12'
+      '16': '16'
+      '20': '20'
+      '24': '24'
+      '32': '32'
+      '40': '40'
+  geargrafx_scanline_end:
+    group: DISPLAY
+    prompt: LAST SCANLINE
+    description: Used when scanline count is Manual.
+    choices:
+      '208': '208'
+      '212': '212'
+      '216': '216'
+      '220': '220'
+      '224': '224'
+      '228': '228'
+      '232': '232'
+      '236': '236'
+      '238': '238'
+      '239': '239'
+      '240': '240'
+      241 (Default): '241'
+  geargrafx_palette:
+    group: DISPLAY
+    prompt: PALETTE
+    choices:
+      Standard RGB (Default): Standard RGB
+      Turboxray: Turboxray
+      Kitrinx: Kitrinx
+  geargrafx_black_and_white:
+    group: DISPLAY
+    prompt: BLACK & WHITE MODE
+    description: Show games that use the VCE black and white mode in grayscale.
+    choices:
+      'On (Default)': Enabled
+      'Off': Disabled
+  geargrafx_no_sprite_limit:
+    group: DISPLAY
+    prompt: 'NO SPRITE LIMIT'
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_lowpass_filter:
+    group: DISPLAY
+    prompt: LOW-PASS FILTER
+    description: Simulate an analog CRT signal.
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_lowpass_intensity:
+    group: DISPLAY
+    prompt: LOW-PASS INTENSITY
+    choices:
+      0%: '0'
+      10%: '10'
+      20%: '20'
+      30%: '30'
+      40%: '40'
+      50%: '50'
+      60%: '60'
+      70%: '70'
+      80%: '80'
+      90%: '90'
+      100% (Default): '100'
+  geargrafx_lowpass_cutoff:
+    group: DISPLAY
+    prompt: LOW-PASS CUTOFF
+    description: Lower values produce a softer image.
+    choices:
+      3.0 MHz: 3.0 MHz
+      3.5 MHz: 3.5 MHz
+      4.0 MHz: 4.0 MHz
+      4.5 MHz: 4.5 MHz
+      5.0 MHz (Default): 5.0 MHz
+      5.5 MHz: 5.5 MHz
+      6.0 MHz: 6.0 MHz
+      6.5 MHz: 6.5 MHz
+      7.0 MHz: 7.0 MHz
+  geargrafx_lowpass_speed_536:
+    group: DISPLAY
+    prompt: LOW-PASS AT 5.36 MHZ
+    description: Apply the filter in 256px width mode.
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_lowpass_speed_716:
+    group: DISPLAY
+    prompt: LOW-PASS AT 7.16 MHZ
+    description: Apply the filter in 341px width mode.
+    choices:
+      'On (Default)': Enabled
+      'Off': Disabled
+  geargrafx_lowpass_speed_108:
+    group: DISPLAY
+    prompt: LOW-PASS AT 10.8 MHZ
+    description: Apply the filter in 512px width mode.
+    choices:
+      'On (Default)': Enabled
+      'Off': Disabled
+  # Audio
+  geargrafx_psg_huc6280a:
+    group: AUDIO
+    prompt: PSG REVISION
+    choices:
+      Auto (Default): Auto
+      HuC6280: HuC6280
+      HuC6280A: HuC6280A
+  geargrafx_adpcm_clock_mode:
+    group: AUDIO
+    prompt: ADPCM CLOCK MODE
+    choices:
+      Auto (Default): Auto
+      Manual: Manual
+  geargrafx_adpcm_clock_speed:
+    group: AUDIO
+    prompt: ADPCM CLOCK SPEED
+    description: Used when ADPCM clock mode is Manual.
+    choices:
+      32000 Hz: '32000'
+      32020 Hz: '32020'
+      32040 Hz: '32040'
+      32060 Hz: '32060'
+      32080 Hz: '32080'
+      32100 Hz (Default): '32100'
+      32120 Hz: '32120'
+      32140 Hz: '32140'
+      32160 Hz: '32160'
+      32180 Hz: '32180'
+      32200 Hz: '32200'
+  geargrafx_psg_volume:
+    group: AUDIO
+    prompt: PSG VOLUME
+    choices:
+      0%: '0'
+      50%: '50'
+      80%: '80'
+      100% (Default): '100'
+      120%: '120'
+      150%: '150'
+      200%: '200'
+  geargrafx_cdrom_volume:
+    group: AUDIO
+    prompt: CD-ROM VOLUME
+    choices:
+      0%: '0'
+      50%: '50'
+      80%: '80'
+      100% (Default): '100'
+      120%: '120'
+      150%: '150'
+      200%: '200'
+  geargrafx_adpcm_volume:
+    group: AUDIO
+    prompt: ADPCM VOLUME
+    choices:
+      0%: '0'
+      50%: '50'
+      80%: '80'
+      100% (Default): '100'
+      120%: '120'
+      150%: '150'
+      200%: '200'
+  # Controls
+  geargrafx_up_down_allowed:
+    group: CONTROLS
+    prompt: ALLOW OPPOSING DIRECTIONS
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_soft_reset:
+    group: CONTROLS
+    prompt: ALLOW SOFT RESET
+    description: RUN + SELECT soft resets the console.
+    choices:
+      'On (Default)': Enabled
+      'Off': Disabled
+  geargrafx_turbotap:
+    group: CONTROLS
+    prompt: TURBOTAP
+    description: Multitap for up to 5 players.
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_mouse_sensitivity:
+    group: CONTROLS
+    prompt: MOUSE SENSITIVITY
+    choices:
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      '4': '4'
+      5 (Default): '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+      '10': '10'
+      '11': '11'
+      '12': '12'
+      '13': '13'
+      '14': '14'
+      '15': '15'
+  geargrafx_avenue_pad_3_switch:
+    group: CONTROLS
+    prompt: AVENUE PAD 3 SWITCH
+    choices:
+      Auto (Default): Auto
+      SELECT: SELECT
+      RUN: RUN
+  geargrafx_turbo_toggle_hotkey:
+    group: CONTROLS
+    prompt: TURBO TOGGLE HOTKEY (R2/L2)
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_turbo_p1_i:
+    group: CONTROLS
+    prompt: P1 TURBO I
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_turbo_speed_p1_i:
+    group: CONTROLS
+    prompt: P1 TURBO I SPEED
+    description: Frames between toggles. Lower is faster.
+    choices:
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      4 (Default): '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+      '10': '10'
+      '11': '11'
+      '12': '12'
+      '13': '13'
+      '14': '14'
+      '15': '15'
+  geargrafx_turbo_p1_ii:
+    group: CONTROLS
+    prompt: P1 TURBO II
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_turbo_speed_p1_ii:
+    group: CONTROLS
+    prompt: P1 TURBO II SPEED
+    description: Frames between toggles. Lower is faster.
+    choices:
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      4 (Default): '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+      '10': '10'
+      '11': '11'
+      '12': '12'
+      '13': '13'
+      '14': '14'
+      '15': '15'
+  geargrafx_turbo_p2_i:
+    group: CONTROLS
+    prompt: P2 TURBO I
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_turbo_speed_p2_i:
+    group: CONTROLS
+    prompt: P2 TURBO I SPEED
+    description: Frames between toggles. Lower is faster.
+    choices:
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      4 (Default): '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+      '10': '10'
+      '11': '11'
+      '12': '12'
+      '13': '13'
+      '14': '14'
+      '15': '15'
+  geargrafx_turbo_p2_ii:
+    group: CONTROLS
+    prompt: P2 TURBO II
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_turbo_speed_p2_ii:
+    group: CONTROLS
+    prompt: P2 TURBO II SPEED
+    description: Frames between toggles. Lower is faster.
+    choices:
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      4 (Default): '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+      '10': '10'
+      '11': '11'
+      '12': '12'
+      '13': '13'
+      '14': '14'
+      '15': '15'
+  # Advanced Options
+  geargrafx_cpu_overclock:
+    group: ADVANCED OPTIONS
+    prompt: CPU OVERCLOCK
+    description: Not recommended.
+    choices:
+      100% (Default): 100%
+      110%: 110%
+      120%: 120%
+      130%: 130%
+      140%: 140%
+      150%: 150%
+      175%: 175%
+      200%: 200%
+      250%: 250%
+      300%: 300%
+  geargrafx_safe_vdc_defaults:
+    group: ADVANCED OPTIONS
+    prompt: SAFE VDC DEFAULTS
+    description: Helps some homebrew run correctly.
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_cdrom_preload:
+    group: ADVANCED OPTIONS
+    prompt: PRELOAD CD-ROM
+    description: Load all tracks into RAM. Applies on restart.
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  geargrafx_deterministic_netplay:
+    group: ADVANCED OPTIONS
+    prompt: DETERMINISTIC NETPLAY
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
 systems:
   - name: pcengine
     file_extensions:

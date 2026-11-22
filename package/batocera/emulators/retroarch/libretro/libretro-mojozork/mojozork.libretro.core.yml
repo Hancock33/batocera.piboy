@@ -1,3 +1,14 @@
+custom_features:
+  # Display
+  mojozork_style:
+    group: DISPLAY
+    prompt: VISUAL STYLE
+    description: Look of the text screen during play.
+    choices:
+      Standard (Default): Standard
+      Apple II: AppleII
+      MS-DOS: MS-DOS
+      Commodore 64: Commodore-64
 file_extensions:
   - dat
   - z1

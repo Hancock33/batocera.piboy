@@ -1,3 +1,281 @@
+custom_features:
+  # System
+  gearsystem_system:
+    group: SYSTEM
+    prompt: SYSTEM
+    choices:
+      Auto (Default): Auto
+      Master System / Mark III: Master System / Mark III
+      Game Gear (2 ASIC): Game Gear (2 ASIC)
+      Game Gear (2 ASIC) SMS Mode: Game Gear (2 ASIC) SMS Mode
+      Game Gear (1 ASIC): Game Gear (1 ASIC)
+      Game Gear (1 ASIC) SMS Mode: Game Gear (1 ASIC) SMS Mode
+      SG-1000 / Multivision: SG-1000 / Multivision
+      SG-1000 II: SG-1000 II
+  gearsystem_region:
+    group: SYSTEM
+    prompt: REGION
+    choices:
+      Auto (Default): Auto
+      Master System Japan: Master System Japan
+      Master System Export: Master System Export
+      Game Gear Japan: Game Gear Japan
+      Game Gear Export: Game Gear Export
+      Game Gear International: Game Gear International
+  gearsystem_mapper:
+    group: SYSTEM
+    prompt: MAPPER
+    choices:
+      Auto (Default): Auto
+      ROM: ROM
+      SEGA: SEGA
+      Codemasters: Codemasters
+      Korean: Korean
+      SG-1000: SG-1000
+      MSX: MSX
+      Janggun: Janggun
+      Korean 2000 XOR 1F: Korean 2000 XOR 1F
+      Korean MSX 32KB 2000: Korean MSX 32KB 2000
+      Korean MSX SMS 8000: Korean MSX SMS 8000
+      Korean SMS 32KB 2000: Korean SMS 32KB 2000
+      Korean MSX 8KB 0300: Korean MSX 8KB 0300
+      Korean 0000 XOR FF: Korean 0000 XOR FF
+      Korean FFFF HiCom: Korean FFFF HiCom
+      Korean FFFE: Korean FFFE
+      Korean BFFC: Korean BFFC
+      Korean FFF3 FFFC: Korean FFF3 FFFC
+      Korean MD FFF5: Korean MD FFF5
+      Korean MD FFF0: Korean MD FFF0
+      Jumbo Dahjee: Jumbo Dahjee
+      EEPROM 93C46: EEPROM 93C46
+      Multi 4PAK All Action: Multi 4PAK All Action
+      Iratahack: Iratahack
+  gearsystem_timing:
+    group: SYSTEM
+    prompt: REFRESH RATE
+    choices:
+      Auto (Default): Auto
+      NTSC (60 Hz): NTSC (60 Hz)
+      PAL (50 Hz): PAL (50 Hz)
+  gearsystem_bios_sms:
+    group: SYSTEM
+    prompt: MASTER SYSTEM BIOS
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  gearsystem_bios_gg:
+    group: SYSTEM
+    prompt: GAME GEAR BIOS
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  # Display
+  gearsystem_aspect_ratio:
+    group: DISPLAY
+    prompt: ASPECT RATIO
+    choices:
+      1:1 PAR (Default): 1:1 PAR
+      4:3 DAR: 4:3 DAR
+      16:9 DAR: 16:9 DAR
+      16:10 DAR: 16:10 DAR
+  gearsystem_overscan:
+    group: DISPLAY
+    prompt: OVERSCAN
+    choices:
+      'Off (Default)': Disabled
+      Top+Bottom: Top+Bottom
+      Full (284 Width): Full (284 width)
+      Full (320 Width): Full (320 width)
+  gearsystem_hide_left_bar:
+    group: DISPLAY
+    prompt: HIDE LEFT BAR (SMS)
+    choices:
+      'No (Default)': 'No'
+      Auto: Auto
+      Always: Always
+  gearsystem_no_sprite_limit:
+    group: DISPLAY
+    prompt: 'NO SPRITE LIMIT'
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  gearsystem_glasses:
+    group: DISPLAY
+    prompt: 3D GLASSES
+    description: Eye shown for games with 3D glasses support.
+    choices:
+      Both Eyes / OFF (Default): Both Eyes / OFF
+      Left Eye: Left Eye
+      Right Eye: Right Eye
+  # Audio
+  gearsystem_ym2413:
+    group: AUDIO
+    prompt: YM2413 FM SOUND
+    description: Applies on restart.
+    choices:
+      Auto (Default): Auto
+      'Off': Disabled
+  gearsystem_psg_volume:
+    group: AUDIO
+    prompt: PSG VOLUME
+    choices:
+      0%: '0'
+      50%: '50'
+      80%: '80'
+      100% (Default): '100'
+      120%: '120'
+      150%: '150'
+      200%: '200'
+  gearsystem_fm_volume:
+    group: AUDIO
+    prompt: FM VOLUME
+    choices:
+      0%: '0'
+      50%: '50'
+      80%: '80'
+      100% (Default): '100'
+      120%: '120'
+      150%: '150'
+      200%: '200'
+  # Controls
+  gearsystem_up_down_allowed:
+    group: CONTROLS
+    prompt: ALLOW OPPOSING DIRECTIONS
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  gearsystem_lightgun_input:
+    group: CONTROLS
+    prompt: LIGHT GUN INPUT
+    choices:
+      Light Gun (Default): Light Gun
+      Touchscreen: Touchscreen
+  gearsystem_lightgun_crosshair:
+    group: CONTROLS
+    prompt: LIGHT GUN CROSSHAIR
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  gearsystem_lightgun_shape:
+    group: CONTROLS
+    prompt: CROSSHAIR SHAPE
+    choices:
+      Cross (Default): Cross
+      Square: Square
+  gearsystem_lightgun_color:
+    group: CONTROLS
+    prompt: CROSSHAIR COLOR
+    choices:
+      White (Default): White
+      Black: Black
+      Red: Red
+      Green: Green
+      Blue: Blue
+      Yellow: Yellow
+      Magenta: Magenta
+      Cyan: Cyan
+  gearsystem_lightgun_crosshair_offset_x:
+    group: CONTROLS
+    prompt: CROSSHAIR X OFFSET
+    choices:
+      '-10': '-10'
+      '-8': '-8'
+      '-6': '-6'
+      '-4': '-4'
+      '-2': '-2'
+      0 (Default): '0'
+      '2': '2'
+      '4': '4'
+      '6': '6'
+      '8': '8'
+      '10': '10'
+  gearsystem_lightgun_crosshair_offset_y:
+    group: CONTROLS
+    prompt: CROSSHAIR Y OFFSET
+    choices:
+      '-10': '-10'
+      '-8': '-8'
+      '-6': '-6'
+      '-4': '-4'
+      '-2': '-2'
+      0 (Default): '0'
+      '2': '2'
+      '4': '4'
+      '6': '6'
+      '8': '8'
+      '10': '10'
+  gearsystem_paddle_sensitivity:
+    group: CONTROLS
+    prompt: PADDLE SENSITIVITY
+    choices:
+      1 (Default): '1'
+      '2': '2'
+      '3': '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+      '10': '10'
+      '11': '11'
+      '12': '12'
+      '13': '13'
+      '14': '14'
+      '15': '15'
+  gearsystem_sports_pad_sensitivity:
+    group: CONTROLS
+    prompt: SPORTS PAD SENSITIVITY
+    choices:
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      8 (Default): '8'
+      '9': '9'
+      '10': '10'
+      '11': '11'
+      '12': '12'
+      '13': '13'
+      '14': '14'
+      '15': '15'
+  # Game Options
+  gearsystem_link_enable:
+    group: GAME OPTIONS
+    prompt: GAME GEAR LINK CABLE
+    description: Run two linked Game Gears. Applies on restart.
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  gearsystem_link_placement:
+    group: GAME OPTIONS
+    prompt: LINK SCREEN PLACEMENT
+    choices:
+      Horizontal (Default): Horizontal
+      Vertical: Vertical
+  gearsystem_link_switch:
+    group: GAME OPTIONS
+    prompt: LINK SWAP SCREENS
+    choices:
+      'Off (Default)': Disabled
+      'On': Enabled
+  gearsystem_link_screen:
+    group: GAME OPTIONS
+    prompt: LINK SCREEN SELECTION
+    choices:
+      Both Screens (Default): Both Screens
+      Screen 1: Screen 1
+      Screen 2: Screen 2
+  gearsystem_link_audio:
+    group: GAME OPTIONS
+    prompt: LINK AUDIO
+    choices:
+      Screen 1 (Default): Screen 1
+      Screen 2: Screen 2
+      Mix: Mix
 file_extensions:
   - bin
   - sg

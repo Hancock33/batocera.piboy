@@ -1,3 +1,159 @@
+custom_features:
+  # System
+  blastem_model:
+    group: SYSTEM
+    prompt: MEGA DRIVE MODEL
+    description: Model 2 and later need the TMSS ROM (tmss.md or bios_MD.bin).
+    choices:
+      Gen/MD 1 VA3 (Default): md1va3
+      Gen/MD 1 VA0: md1va0
+      Gen/MD 1 VA6: md1va6
+      Gen/MD 2 VA1: md2va1
+      Gen/MD 2 VA2: md2va2
+      Genesis 3 VA1: md3va1
+      Genesis 3 VA2: md3va2
+      Teradrive: teradrive
+  blastem_region:
+    group: SYSTEM
+    prompt: DEFAULT REGION
+    description: Used when the game does not ask for a single region.
+    choices:
+      Americas (Default): U
+      Japan: J
+      Europe: E
+  blastem_force_region:
+    group: SYSTEM
+    prompt: FORCE DEFAULT REGION
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+  blastem_ram_init:
+    group: SYSTEM
+    prompt: INITIAL RAM VALUE
+    choices:
+      Zero (Default): zero
+      Random: random
+  # Display
+  blastem_overscan_top:
+    group: DISPLAY
+    prompt: OVERSCAN CROP TOP
+    description: Lines cropped off the top. Auto crops the region's overscan.
+    choices:
+      Auto (Default): auto
+      '0': '0'
+      '4': '4'
+      '8': '8'
+      '12': '12'
+      '16': '16'
+      '24': '24'
+      '32': '32'
+  blastem_overscan_bottom:
+    group: DISPLAY
+    prompt: OVERSCAN CROP BOTTOM
+    choices:
+      Auto (Default): auto
+      '0': '0'
+      '4': '4'
+      '8': '8'
+      '12': '12'
+      '16': '16'
+      '24': '24'
+      '32': '32'
+  blastem_overscan_left:
+    group: DISPLAY
+    prompt: OVERSCAN CROP LEFT
+    choices:
+      Auto (Default): auto
+      '0': '0'
+      '4': '4'
+      '8': '8'
+      '12': '12'
+      '16': '16'
+      '24': '24'
+      '32': '32'
+  blastem_overscan_right:
+    group: DISPLAY
+    prompt: OVERSCAN CROP RIGHT
+    choices:
+      Auto (Default): auto
+      '0': '0'
+      '4': '4'
+      '8': '8'
+      '12': '12'
+      '16': '16'
+      '24': '24'
+      '32': '32'
+  # Audio
+  blastem_gain:
+    group: AUDIO
+    prompt: OVERALL GAIN
+    choices: &blastem_gain
+      +6 dB: '6.0'
+      +3 dB: '3.0'
+      0 dB (Default): '0.0'
+      -3 dB: '-3.0'
+      -6 dB: '-6.0'
+      -12 dB: '-12.0'
+      -18 dB: '-18.0'
+  blastem_fm_gain:
+    group: AUDIO
+    prompt: FM GAIN
+    choices: *blastem_gain
+  blastem_psg_gain:
+    group: AUDIO
+    prompt: PSG GAIN
+    choices: *blastem_gain
+  blastem_fm_dac:
+    group: AUDIO
+    prompt: FM DAC
+    description: Zero offset gives the discrete YM2612 ladder effect.
+    choices:
+      Default For Model (Default): auto
+      Zero Offset (YM2612): zero_offset
+      Linear (YM3438): linear
+  blastem_lowpass_cutoff:
+    group: AUDIO
+    prompt: LOW PASS FILTER CUTOFF
+    choices:
+      3390 Hz Model 1 (Default): '3390'
+      2000 Hz: '2000'
+      2500 Hz: '2500'
+      3000 Hz: '3000'
+      4000 Hz: '4000'
+      5000 Hz: '5000'
+      8000 Hz: '8000'
+      24000 Hz (Off): '24000'
+  # Controls
+  blastem_io_1:
+    group: CONTROLS
+    prompt: PORT 1 DEVICE
+    choices:
+      6-Button Pad (Default): gamepad6.1
+      3-Button Pad: gamepad3.1
+      None: none
+  blastem_io_2:
+    group: CONTROLS
+    prompt: PORT 2 DEVICE
+    choices:
+      6-Button Pad (Default): gamepad6.2
+      3-Button Pad: gamepad3.2
+      None: none
+  # Advanced Options
+  blastem_m68k_divider:
+    group: ADVANCED OPTIONS
+    prompt: 68000 CLOCK DIVIDER
+    description: Below 7 overclocks the CPU, which some games will not survive.
+    choices:
+      7 - 7.67 MHz Native (Default): '7'
+      6 - 8.9 MHz: '6'
+      5 - 10.7 MHz: '5'
+      4 - 13.4 MHz: '4'
+      3 - 17.9 MHz: '3'
+      2 - 26.8 MHz: '2'
+      1 - 53.7 MHz: '1'
+      8 - 6.7 MHz: '8'
+      10 - 5.4 MHz: '10'
+      14 - 3.8 MHz: '14'
 file_extensions:
   - bin
   - gen

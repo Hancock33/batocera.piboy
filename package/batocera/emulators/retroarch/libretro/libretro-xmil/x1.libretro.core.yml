@@ -3,6 +3,137 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # System
+  X1_ROMTYPE:
+    group: SYSTEM
+    prompt: MACHINE MODEL
+    description: Applies on restart.
+    choices:
+      X1 (Default): X1
+      X1 Turbo: TURBO
+      X1 Turbo Z: TURBOZ
+  X1_BOOTMEDIA:
+    group: SYSTEM
+    prompt: BOOT MEDIA
+    description: Floppy drive type. Applies on restart.
+    choices:
+      2HD (Default): 2HD
+      2D: 2D
+  X1_CPU_CLOCK:
+    group: SYSTEM
+    prompt: CPU CLOCK
+    choices:
+      1 MHz: '1'
+      2 MHz: '2'
+      3 MHz: '3'
+      4 MHz (Default): '4'
+      6 MHz: '6'
+      8 MHz: '8'
+      10 MHz: '10'
+      12 MHz: '12'
+      16 MHz: '16'
+      20 MHz: '20'
+  X1_NOWAIT:
+    group: SYSTEM
+    prompt: NO WAIT
+    description: Run without speed limiting.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  # Display
+  X1_RESOLUTE:
+    group: DISPLAY
+    prompt: RESOLUTION
+    description: Applies on restart.
+    choices:
+      Low (Default): LOW
+      High: HIGH
+  X1_FPS:
+    group: DISPLAY
+    prompt: FRAME RATE
+    choices:
+      Auto (Default): AUTO
+      60: '60'
+      30: '30'
+      20: '20'
+      15: '15'
+  X1_DISPSYNC:
+    group: DISPLAY
+    prompt: DISPLAY VSYNC
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  X1_RASTER:
+    group: DISPLAY
+    prompt: RASTER
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  X1_SCANLINES:
+    group: DISPLAY
+    prompt: SCANLINES IN LOW-RES
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  # Audio
+  X1_FMBOARD:
+    group: AUDIO
+    prompt: FM BOARD
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  X1_SEEKSND:
+    group: AUDIO
+    prompt: SEEK SOUND
+    description: Floppy drive seek noise.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  X1_AUDIO_RATE:
+    group: AUDIO
+    prompt: AUDIO SAMPLING RATE
+    choices:
+      44100 Hz (Default): '44100'
+      22050 Hz: '22050'
+      11025 Hz: '11025'
+  # Controls
+  X1_KEY_MODE:
+    group: CONTROLS
+    prompt: KEY MODE
+    description: Route the joypad to keyboard keys or the mouse.
+    choices:
+      Keyboard (Default): Keyboard
+      JoyKey-1: JoyKey-1
+      JoyKey-2: JoyKey-2
+      Mouse-Key: Mouse-Key
+  X1_BTN_MODE:
+    group: CONTROLS
+    prompt: JOY REVERSE
+    description: Swap the joypad buttons.
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  X1_BTN_RAPID:
+    group: CONTROLS
+    prompt: JOY RAPID FIRE
+    choices:
+      'Off (Default)': 'OFF'
+      'On': 'ON'
+  # Advanced Options
+  X1_AUDIO_DELAYMS:
+    group: ADVANCED OPTIONS
+    prompt: AUDIO BUFFER
+    choices:
+      100 ms: '100'
+      150 ms: '150'
+      200 ms: '200'
+      250 ms (Default): '250'
+      300 ms: '300'
+      350 ms: '350'
+      500 ms: '500'
+      750 ms: '750'
+      1000 ms: '1000'
 file_extensions:
   - dx1
   - zip

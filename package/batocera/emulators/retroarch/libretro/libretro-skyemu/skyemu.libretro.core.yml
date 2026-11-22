@@ -4,6 +4,29 @@ features:
 shared_features:
   - autosave
   - rewind
+custom_features:
+  # System
+  system_gb_bios_enable:
+    group: SYSTEM
+    prompt: GAME BOY FIRMWARE
+    description: Use the Game Boy BIOS if present.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  system_gba_bios_enable:
+    group: SYSTEM
+    prompt: GAME BOY ADVANCE FIRMWARE
+    description: Use the Game Boy Advance BIOS if present.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
+  system_nds_bios_enable:
+    group: SYSTEM
+    prompt: NINTENDO DS FIRMWARE
+    description: Use the Nintendo DS BIOS/firmware if present.
+    choices:
+      'On (Default)': 'ON'
+      'Off': 'OFF'
 file_extensions:
   - zip
   - 7z

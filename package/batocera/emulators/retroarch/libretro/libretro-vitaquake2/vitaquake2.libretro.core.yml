@@ -1,3 +1,216 @@
+custom_features:
+  # Display
+  vitaquakeii_renderer:
+    group: DISPLAY
+    prompt: RENDERER
+    description: OpenGL builds only. Applies on restart.
+    choices:
+      OpenGL (Default): opengl
+      Software: software
+  vitaquakeii_resolution:
+    group: DISPLAY
+    prompt: INTERNAL RESOLUTION
+    description: Applies on restart.
+    choices:
+      320x240: 320x240
+      640x480: 640x480
+      800x600: 800x600
+      960x544 (Default): 960x544
+      1024x768: 1024x768
+      1280x720: 1280x720
+      1600x900: 1600x900
+      1920x1080: 1920x1080
+      2560x1440 (OpenGL Only): 2560x1440
+      3840x2160 (OpenGL Only): 3840x2160
+  vitaquakeii_framerate:
+    group: DISPLAY
+    prompt: FRAMERATE
+    description: Auto matches the display refresh rate. Applies on restart.
+    choices:
+      Auto (Default): auto
+      30 fps: '30'
+      50 fps: '50'
+      60 fps: '60'
+      72 fps: '72'
+      75 fps: '75'
+      90 fps: '90'
+      100 fps: '100'
+      120 fps: '120'
+      144 fps: '144'
+      165 fps: '165'
+      240 fps: '240'
+  vitaquakeii_gl_modulate:
+    group: DISPLAY
+    prompt: BRIGHTNESS (GL)
+    description: OpenGL renderer only. Applies on restart.
+    choices:
+      '1.0': '1.0'
+      '1.4': '1.4'
+      '1.6': '1.6'
+      '1.8': '1.8'
+      2.0 (Default): '2.0'
+      '2.2': '2.2'
+      '2.4': '2.4'
+      '2.6': '2.6'
+      '3.0': '3.0'
+      '4.0': '4.0'
+      '5.0': '5.0'
+  vitaquakeii_gl_texture_filtering:
+    group: DISPLAY
+    prompt: TEXTURE FILTERING (GL)
+    description: OpenGL renderer only.
+    choices:
+      Nearest: nearest
+      Linear: linear
+      Nearest HQ (Default): nearest_hq
+      Linear HQ: linear_hq
+  vitaquakeii_gl_shadows:
+    group: DISPLAY
+    prompt: DYNAMIC SHADOWS (GL)
+    description: OpenGL renderer only.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  vitaquakeii_gl_hud_scale:
+    group: DISPLAY
+    prompt: HUD SCALE FACTOR (GL)
+    description: 0.00 is pixel perfect, 1.00 matches 320x240. OpenGL renderer only.
+    choices:
+      '0.00': '0.00'
+      '0.10': '0.10'
+      '0.20': '0.20'
+      '0.30': '0.30'
+      '0.40': '0.40'
+      0.50 (Default): '0.50'
+      '0.60': '0.60'
+      '0.70': '0.70'
+      '0.80': '0.80'
+      '0.90': '0.90'
+      '1.00': '1.00'
+  vitaquakeii_sw_truecolor_sky:
+    group: DISPLAY
+    prompt: TRUECOLOR SKY (SOFTWARE)
+    description: Software renderer only.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  vitaquakeii_sw_colored_lighting:
+    group: DISPLAY
+    prompt: COLORED LIGHTING (SOFTWARE)
+    description: Software renderer only.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  vitaquakeii_sw_dithered_filtering:
+    group: DISPLAY
+    prompt: DITHERED FILTERING (SOFTWARE)
+    description: Software renderer only.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  vitaquakeii_cin_force43:
+    group: DISPLAY
+    prompt: FORCE 4:3 FOR CINEMATICS
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  # Audio
+  vitaquakeii_cdaudio_enabled:
+    group: AUDIO
+    prompt: PLAY MUSIC
+    description: OGG tracks in the music folder next to the PAK files.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  vitaquakeii_sound_samplerate:
+    group: AUDIO
+    prompt: SOUND SAMPLERATE
+    description: Applies on restart.
+    choices:
+      Auto (Default): auto
+      32 kHz: '32000'
+      44 kHz: '44100'
+      48 kHz: '48000'
+      96 kHz: '96000'
+  # Controls
+  vitaquakeii_cl_run:
+    group: CONTROLS
+    prompt: AUTO RUN
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  vitaquakeii_invert_y_axis:
+    group: CONTROLS
+    prompt: INVERT Y AXIS
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  vitaquakeii_mouse_sensitivity:
+    group: CONTROLS
+    prompt: CAMERA SENSITIVITY
+    choices:
+      '1.0': '1.0'
+      '1.6': '1.6'
+      '2.0': '2.0'
+      '2.4': '2.4'
+      '2.6': '2.6'
+      '2.8': '2.8'
+      3.0 (Default): '3.0'
+      '3.2': '3.2'
+      '3.4': '3.4'
+      '3.6': '3.6'
+      '4.0': '4.0'
+      '5.0': '5.0'
+  vitaquakeii_analog_deadzone:
+    group: CONTROLS
+    prompt: ANALOG DEADZONE
+    choices:
+      0%: '0'
+      5%: '5'
+      10%: '10'
+      13%: '13'
+      15% (Default): '15'
+      17%: '17'
+      20%: '20'
+      25%: '25'
+      30%: '30'
+  vitaquakeii_rumble:
+    group: CONTROLS
+    prompt: RUMBLE EFFECTS
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  # Game Options
+  vitaquakeii_hand:
+    group: GAME OPTIONS
+    prompt: WEAPON POSITION
+    choices:
+      Right (Default): right
+      Left: left
+      Center: center
+      Hidden: hidden
+  vitaquakeii_xhair:
+    group: GAME OPTIONS
+    prompt: CROSSHAIR
+    choices:
+      Disabled: disabled
+      White Cross (Default): cross
+      Red Dot: dot
+      Red Angle: angle
+  vitaquakeii_aimfix:
+    group: GAME OPTIONS
+    prompt: ACCURATE AIMING
+    description: Shots hit the exact centre of the crosshair.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  vitaquakeii_gl_xflip:
+    group: GAME OPTIONS
+    prompt: MIRROR MODE (GL)
+    description: Flip every level horizontally. OpenGL renderer only.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
 file_extensions:
   - quake2
   - zip

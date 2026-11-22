@@ -52,6 +52,17 @@ class AnyBOR(RACore):
         crt = self.config.get_str('retroarch.crt_switch_resolution', '0') not in ('', '0')
         core_options.set('anybor_crt_tv', 'On' if crt else 'Off')
 
+        # System
+        core_options.set_from_config('anybor_state_content', default='Smart')
+        core_options.set_from_config('anybor_state_compression', default='On')
+        # Controls
+        core_options.set_from_config('anybor_analog', default='On')
+        core_options.set_from_config('anybor_rumble', default='On')
+        core_options.set_from_config('anybor_macros', default='On')
+        # Advanced Options
+        core_options.set_from_config('anybor_clear_game_cache', default='On')
+        core_options.set_from_config('anybor_clear_all_caches', default='On')
+
     def set_config(self, custom_config: LibretroConfig, /) -> None:
         for pad in self.controllers[:4]:
             for btn, value in _ANYBOR_REMAP_VALUES.items():

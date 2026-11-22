@@ -5,6 +5,22 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # Audio
+  sameduck_high_pass_filter_mode:
+    group: AUDIO
+    prompt: HIGHPASS FILTER
+    choices:
+      Accurate (Default): accurate
+      Remove DC Offset: remove dc offset
+      'Off': 'off'
+  # Controls
+  sameduck_rumble:
+    group: CONTROLS
+    prompt: RUMBLE
+    choices:
+      All Games (Default): all games
+      Never: never
 file_extensions:
   - bin
   - zip
