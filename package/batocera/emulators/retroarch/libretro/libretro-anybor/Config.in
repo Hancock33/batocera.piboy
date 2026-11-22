@@ -1,12 +1,19 @@
 config BR2_PACKAGE_LIBRETRO_ANYBOR
 	bool "libretro-anybor"
 	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_HOST_PYTHON3
+	depends on BR2_USE_WCHAR # libarchive
+	depends on BR2_SHARED_STATIC_LIBS # shared container and static codec libraries
+	select BR2_PACKAGE_LIBARCHIVE
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_LIBOGG
+	select BR2_PACKAGE_LIBVORBIS
+	select BR2_PACKAGE_LIBVPX
 
 	help
 	  A libretro openbor emulator
 
 	  http://www.libretro.com
 
-comment "LIBRETRO_ANYBOR needs a toolchain w/ C++"
-	depends on !BR2_INSTALL_LIBSTDCPP
+comment "libretro-anybor needs a toolchain w/ C++, wchar and shared and static libraries"
+	depends on !BR2_INSTALL_LIBSTDCPP || !BR2_USE_WCHAR || !BR2_SHARED_STATIC_LIBS
