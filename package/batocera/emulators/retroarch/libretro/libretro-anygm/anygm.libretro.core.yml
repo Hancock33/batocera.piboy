@@ -3,12 +3,14 @@ shared_features:
   - autosave
 custom_features:
   anygm_scene_renderer:
+    group: DISPLAY
     prompt: RENDERER
     description: OpenGL is a work in progress and may draw incomplete pictures. Applies on restart.
     choices:
       CPU (Default): CPU
       OpenGL: OpenGL
   anygm_content_shader_readback:
+    group: DISPLAY
     prompt: GAME SHADERS (GLSL)
     description: How the game's own GLSL programs run. Applies on restart.
     choices:
@@ -17,6 +19,7 @@ custom_features:
       Exact: Exact
       'Off': 'Off'
   anygm_alpha_cull:
+    group: DISPLAY
     prompt: TRANSPARENCY CULLING
     description: Skip pixels too faint to see, trading faint detail for speed.
     choices:
@@ -26,12 +29,14 @@ custom_features:
       High (Default): High
       Maximum: Maximum
   anygm_render_game_resolution:
+    group: DISPLAY
     prompt: RENDER AT GAME RESOLUTION
     description: Off renders at the monitor width and height below.
     choices:
       'On (Default)': 'On'
       'Off': 'Off'
   anygm_width_resolution:
+    group: DISPLAY
     prompt: MONITOR WIDTH
     description: Only used with render at game resolution off.
     choices:
@@ -55,6 +60,7 @@ custom_features:
       '2560': '2560'
       '3840': '3840'
   anygm_height_resolution:
+    group: DISPLAY
     prompt: MONITOR HEIGHT
     description: Only used with render at game resolution off.
     choices:
@@ -79,6 +85,7 @@ custom_features:
       '1440': '1440'
       '2160': '2160'
   anygm_aspect_ratio_force:
+    group: DISPLAY
     prompt: FORCE ASPECT RATIO
     description: Experimental. Only used with render at game resolution on.
     choices:
@@ -88,6 +95,7 @@ custom_features:
       '16:10': '16:10'
       '21:9': '21:9'
   anygm_adjust_crt_tv:
+    group: DISPLAY
     prompt: ADJUST FOR 4:3 CRT TV
     description: Fit the image into 640x480. Automatic turns it on for CRT output.
     choices:
@@ -95,18 +103,21 @@ custom_features:
       'On': 'On'
       'Off': 'Off'
   anygm_gamepad:
+    group: CONTROLS
     prompt: CONTROLLER BEHAVIOUR
     description: Keyboard emulation maps the pad to the game's keyboard controls.
     choices:
       Game Gamepad (Default): Game gamepad
       Keyboard Emulation: Keyboard emulation
   anygm_mouse:
+    group: CONTROLS
     prompt: MOUSE INPUT
     choices:
       Auto (Default): Auto
       Absolute (Pointer): Absolute (pointer)
       Relative (Delta): Relative (delta)
   anygm_language:
+    group: SYSTEM
     prompt: GAME LANGUAGE
     description: Language reported to the game. Applies on restart.
     choices:
@@ -136,6 +147,7 @@ custom_features:
       Vietnamese: vi
       Thai: th
   anygm_region:
+    group: SYSTEM
     prompt: GAME REGION
     description: Region reported to the game. Applies on restart.
     choices:
