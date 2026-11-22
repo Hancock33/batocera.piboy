@@ -15,8 +15,7 @@ D3LE_DEPENDENCIES = dhewm3
 D3LE_CONF_OPTS = -DBASE=OFF -DD3XP_NAME=d3le -DD3XP=ON
 
 define D3LE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/d3le.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/d3le.so
 endef
 
 $(eval $(cmake-package))

@@ -21,8 +21,7 @@ STK_CONF_OPTS += -DBUILD_RECORDER=0
 define STK_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/buildroot-build/bin/supertuxkart -D $(TARGET_DIR)/usr/bin/supertuxkart
 	# config
-	mkdir -p $(TARGET_DIR)/usr/share/game_assets/supertuxkart
-	cp $(STK_PKGDIR)/players.xml $(TARGET_DIR)/usr/share/game_assets/supertuxkart
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/game_assets/supertuxkart $(STK_PKGDIR)/players.xml
 endef
 
 $(eval $(cmake-package))

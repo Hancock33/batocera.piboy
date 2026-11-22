@@ -15,8 +15,7 @@ DENTONMOD_DEPENDENCIES = dhewm3
 DENTONMOD_CONF_OPTS = -DBASE_NAME=dentonmod
 
 define DENTONMOD_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/dentonmod*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/dentonmod*.so
 endef
 
 $(eval $(cmake-package))

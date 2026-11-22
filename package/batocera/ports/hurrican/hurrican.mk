@@ -27,8 +27,7 @@ define HURRICAN_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/hurrican
 	cp -a  $(HURRICAN_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/hurrican/
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(HURRICAN_PKGDIR)/hurrican.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(HURRICAN_PKGDIR)/hurrican.keys
 endef
 
 $(eval $(cmake-package))

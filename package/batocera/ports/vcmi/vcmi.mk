@@ -25,8 +25,7 @@ VCMI_CONF_OPTS += -DTBB_ROOT=$(STAGING_DIR)/usr/lib/tbb
 
 define VCMI_EVMAPY
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(VCMI_PKGDIR)/vcmi.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(VCMI_PKGDIR)/vcmi.keys
 endef
 
 VCMI_POST_INSTALL_TARGET_HOOKS += VCMI_EVMAPY

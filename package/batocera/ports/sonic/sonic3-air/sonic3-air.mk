@@ -25,10 +25,11 @@ define SONIC3_AIR_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/sonic3-air
 	mkdir -p $(TARGET_DIR)/usr/bin/sonic3-air
 	# copy binary
-	cp $(@D)/Oxygen/sonic3air/sonic3air_linux $(TARGET_DIR)/usr/bin/sonic3-air
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/sonic3-air $(@D)/Oxygen/sonic3air/sonic3air_linux
 	# copy config files
-	cp $(@D)/Oxygen/sonic3air/config.json $(TARGET_DIR)/usr/bin/sonic3-air
-	cp $(@D)/Oxygen/sonic3air/oxygenproject.json $(TARGET_DIR)/usr/bin/sonic3-air
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/bin/sonic3-air \
+		$(@D)/Oxygen/sonic3air/config.json \
+		$(@D)/Oxygen/sonic3air/oxygenproject.json
 	# copy game resource files
 	cp -r $(@D)/Oxygen/sonic3air/data $(TARGET_DIR)/usr/bin/sonic3-air
 	cp -r $(@D)/Oxygen/oxygenengine/data $(TARGET_DIR)/usr/bin/sonic3-air

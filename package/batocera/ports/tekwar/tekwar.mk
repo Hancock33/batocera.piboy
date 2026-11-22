@@ -23,12 +23,10 @@ endef
 define TEKWAR_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/tekwar -D $(TARGET_DIR)/usr/bin/etekwar
 	# make rom path
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar
-	cp $(@D)/rsrc/*.dat $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar/
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar $(@D)/rsrc/*.dat
 
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(TEKWAR_PKGDIR)/tekwar.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys
+	$(INSTALL) -m 0644 -D $(TEKWAR_PKGDIR)/tekwar.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys
 endef
 
 $(eval $(generic-package))

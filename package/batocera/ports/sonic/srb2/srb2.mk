@@ -15,12 +15,10 @@ SRB2_CONF_OPTS += -DSRB2_SDL2_EXE_NAME=srb2
 SRB2_CONF_OPTS += -DSRB2_CONFIG_ENABLE_TESTS=FALSE
 
 define SRB2_INSTALL_TARGET_CMDS
-	cp -L $(@D)/buildroot-build/bin/srb2 $(TARGET_DIR)/usr/bin/srb2
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/.srb2
-	cp $(SRB2_PKGDIR)/config.cfg $(TARGET_DIR)/usr/share/batocera/datainit/system/.srb2/
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/srb2 $(TARGET_DIR)/usr/bin/srb2
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/batocera/datainit/system/.srb2 $(SRB2_PKGDIR)/config.cfg
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(SRB2_PKGDIR)/srb2.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(SRB2_PKGDIR)/srb2.keys
 endef
 
 $(eval $(cmake-package))

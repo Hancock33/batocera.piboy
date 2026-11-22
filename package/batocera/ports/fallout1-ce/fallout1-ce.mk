@@ -13,9 +13,10 @@ FALLOUT1_CE_EMULATOR_INFO = fallout1-ce.emulator.yml
 FALLOUT1_CE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 define FALLOUT1_CE_INSTALL_TARGET_CMDS
-	cp $(@D)/buildroot-build/fallout-ce $(TARGET_DIR)/usr/bin/fallout1-ce
-	cp $(@D)/buildroot-build/_deps/adecode-build/libadecode-static.so $(TARGET_DIR)/usr/lib
-	cp $(@D)/buildroot-build/_deps/fpattern-build/libfpattern-static.so $(TARGET_DIR)/usr/lib
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/fallout-ce $(TARGET_DIR)/usr/bin/fallout1-ce
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib \
+		$(@D)/buildroot-build/_deps/adecode-build/libadecode-static.so \
+		$(@D)/buildroot-build/_deps/fpattern-build/libfpattern-static.so
 endef
 
 $(eval $(cmake-package))

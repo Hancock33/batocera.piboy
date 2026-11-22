@@ -13,8 +13,7 @@ REALGIBS_LICENSE_FILES = COPYING.txt
 REALGIBS_DEPENDENCIES = dhewm3
 
 define REALGIBS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/realgibs*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/realgibs*.so
 endef
 
 $(eval $(cmake-package))

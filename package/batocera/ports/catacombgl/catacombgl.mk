@@ -14,8 +14,7 @@ CATACOMBGL_DEPENDENCIES = sdl2
 CATACOMBGL_EMULATOR_INFO = catacombgl.emulator.yml
 
 define CATACOMBGL_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(CATACOMBGL_PKGDIR)/catacomb.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(CATACOMBGL_PKGDIR)/catacomb.keys
 endef
 
 CATACOMBGL_POST_INSTALL_TARGET_HOOKS = CATACOMBGL_EVMAPY

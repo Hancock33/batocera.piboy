@@ -13,8 +13,7 @@ HARDCORPS_LICENSE_FILES = COPYING.txt
 HARDCORPS_DEPENDENCIES = dhewm3
 
 define HARDCORPS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/hardcorps*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/hardcorps*.so
 endef
 
 $(eval $(cmake-package))

@@ -13,8 +13,7 @@ DESOLATED_LICENSE_FILES = COPYING.txt
 DESOLATED_DEPENDENCIES = dhewm3
 
 define DESOLATED_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/desolated*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/desolated*.so
 endef
 
 $(eval $(cmake-package))

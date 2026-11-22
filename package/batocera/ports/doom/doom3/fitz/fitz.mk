@@ -13,8 +13,7 @@ FITZ_LICENSE_FILES = COPYING.txt
 FITZ_DEPENDENCIES = dhewm3
 
 define FITZ_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/fitz*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/fitz*.so
 endef
 
 $(eval $(cmake-package))

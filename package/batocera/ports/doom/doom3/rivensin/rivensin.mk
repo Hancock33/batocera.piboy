@@ -13,8 +13,7 @@ RIVENSIN_LICENSE_FILES = COPYING.txt
 RIVENSIN_DEPENDENCIES = dhewm3
 
 define RIVENSIN_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/rivensin*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/rivensin*.so
 endef
 
 $(eval $(cmake-package))

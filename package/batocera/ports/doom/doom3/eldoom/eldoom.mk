@@ -13,8 +13,7 @@ ELDOOM_LICENSE_FILES = COPYING.txt
 ELDOOM_DEPENDENCIES = dhewm3
 
 define ELDOOM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/eldoom*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/eldoom*.so
 endef
 
 $(eval $(cmake-package))

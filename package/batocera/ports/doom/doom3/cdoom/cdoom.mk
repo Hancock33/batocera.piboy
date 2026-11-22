@@ -13,8 +13,7 @@ CDOOM_LICENSE_FILES = COPYING.txt
 CDOOM_DEPENDENCIES = dhewm3
 
 define CDOOM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/cdoom*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/cdoom*.so
 endef
 
 $(eval $(cmake-package))

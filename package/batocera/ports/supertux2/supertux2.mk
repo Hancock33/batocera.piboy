@@ -30,7 +30,7 @@ define SUPERTUX2_INSTALL_TARGET_CMDS
 	cp -a $(SUPERTUX2_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/supertux2
 	ln -sf /userdata/roms/ports/supertux2 $(TARGET_DIR)/usr/share/supertux2
 	# copy binaries
-	cp -a $(@D)/buildroot-build/supertux2 $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/supertux2 $(TARGET_DIR)/usr/bin/supertux2
 endef
 
 $(eval $(cmake-package))

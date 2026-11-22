@@ -53,9 +53,8 @@ ETLEGACY_CONF_OPTS += -DARM=ON
 endif
 
 define ETLEGACY_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/etlegacy
-	cp $(@D)/buildroot-build/legacy/legacy_*-dirty.pk3 $(TARGET_DIR)/usr/share/etlegacy
-	cp $(@D)/buildroot-build/etl $(TARGET_DIR)/usr/bin/etl
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/etlegacy $(@D)/buildroot-build/legacy/legacy_*-dirty.pk3
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/etl $(TARGET_DIR)/usr/bin/etl
 endef
 
 $(eval $(cmake-package))

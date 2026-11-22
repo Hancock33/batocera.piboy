@@ -27,8 +27,7 @@ define OPENTYRIAN2000_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/opentyrian
 	cp -a  $(OPENTYRIAN2000_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/opentyrian/
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(OPENTYRIAN2000_PKGDIR)/opentyrian.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(OPENTYRIAN2000_PKGDIR)/opentyrian.keys
 endef
 
 $(eval $(generic-package))

@@ -18,8 +18,7 @@ define FREEDROID_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/freedroid
 	cp -a  $(FREEDROID_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/freedroid/
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(FREEDROID_PKGDIR)/freedroid.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(FREEDROID_PKGDIR)/freedroid.keys
 endef
 
 $(eval $(autotools-package))

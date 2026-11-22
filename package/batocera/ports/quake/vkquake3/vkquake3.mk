@@ -46,8 +46,7 @@ define VKQUAKE3_INSTALL_TARGET_CMDS
 endef
 
 define VKQUAKE3_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(VKQUAKE3_PKGDIR)/quake3.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(VKQUAKE3_PKGDIR)/quake3.keys
 endef
 
 VKQUAKE3_POST_INSTALL_TARGET_HOOKS += VKQUAKE3_EVMAPY

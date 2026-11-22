@@ -13,8 +13,7 @@ EOC_LICENSE_FILES = COPYING.txt
 EOC_DEPENDENCIES = dhewm3
 
 define EOC_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/eoc*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/eoc*.so
 endef
 
 $(eval $(cmake-package))

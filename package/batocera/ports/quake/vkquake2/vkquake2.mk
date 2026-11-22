@@ -22,26 +22,17 @@ else ifeq ($(BR2_x86_64),y)
 endif
 
 define VKQUAKE2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/baseq2
-	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/ctf
-	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/rogue
-	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/smd
-	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/xatrix
-	mkdir -p $(TARGET_DIR)/usr/bin/vkquake2/zaero
-
-	cp -f $(@D)/quake2      $(TARGET_DIR)/usr/bin/vkquake2/
-	cp -f $(@D)/ref*.so     $(TARGET_DIR)/usr/bin/vkquake2/
-	cp -f $(@D)/baseq2/*.so $(TARGET_DIR)/usr/bin/vkquake2/baseq2/
-	cp -f $(@D)/ctf/*.so    $(TARGET_DIR)/usr/bin/vkquake2/ctf/
-	cp -f $(@D)/rogue/*.so  $(TARGET_DIR)/usr/bin/vkquake2/rogue/
-	cp -f $(@D)/smd/*.so    $(TARGET_DIR)/usr/bin/vkquake2/smd/
-	cp -f $(@D)/xatrix/*.so $(TARGET_DIR)/usr/bin/vkquake2/xatrix/
-	cp -f $(@D)/zaero/*.so  $(TARGET_DIR)/usr/bin/vkquake2/zaero/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/vkquake2 $(@D)/quake2 $(@D)/ref*.so
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/vkquake2/baseq2 $(@D)/baseq2/*.so
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/vkquake2/ctf $(@D)/ctf/*.so
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/vkquake2/rogue $(@D)/rogue/*.so
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/vkquake2/smd $(@D)/smd/*.so
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/vkquake2/xatrix $(@D)/xatrix/*.so
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/vkquake2/zaero $(@D)/zaero/*.so
 endef
 
 define VKQUAKE2_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(VKQUAKE2_PKGDIR)/quake2.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(VKQUAKE2_PKGDIR)/quake2.keys
 endef
 
 VKQUAKE2_POST_INSTALL_TARGET_HOOKS += VKQUAKE2_EVMAPY

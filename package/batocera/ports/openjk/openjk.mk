@@ -30,8 +30,7 @@ OPENJK_CONF_OPTS += -DBuildMPCGame=OFF
 OPENJK_CONF_OPTS += -DBuildMPUI=OFF
 
 define OPENJK_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(OPENJK_PKGDIR)/openjk.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(OPENJK_PKGDIR)/openjk.keys
 endef
 
 OPENJK_POST_INSTALL_TARGET_HOOKS += OPENJK_EVMAPY

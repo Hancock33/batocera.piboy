@@ -18,13 +18,12 @@ define STUNTCAR_INSTALL_TARGET_CMDS
 	cp -av $(@D)/Bitmap $(TARGET_DIR)/usr/share/stuntcar/
 	cp -av $(@D)/Sounds $(TARGET_DIR)/usr/share/stuntcar/
 	cp -av $(@D)/Tracks $(TARGET_DIR)/usr/share/stuntcar/
-	cp -av $(@D)/DejaVuSans-Bold.ttf $(TARGET_DIR)/usr/share/stuntcar/
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/stuntcar $(@D)/DejaVuSans-Bold.ttf
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/stuntcar
 	cp -a  $(STUNTCAR_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/stuntcar/
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(STUNTCAR_PKGDIR)/stuntcar.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(STUNTCAR_PKGDIR)/stuntcar.keys
 endef
 
 $(eval $(cmake-package))

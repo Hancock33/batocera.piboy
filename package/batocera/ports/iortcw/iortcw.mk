@@ -88,13 +88,11 @@ endef
 
 # required to have fullscreen at 1st start
 define IORTCW_CONFIG_FILE
-	mkdir -p $(IORTCW_CONF_INIT)
-	cp $(IORTCW_PKGDIR)/wolfconfig.cfg		$(IORTCW_CONF_INIT)
+	$(INSTALL) -m 0644 -D -t $(IORTCW_CONF_INIT) $(IORTCW_PKGDIR)/wolfconfig.cfg
 endef
 
 define IORTCW_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(IORTCW_PKGDIR)/rtcw.keys			$(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(IORTCW_PKGDIR)/rtcw.keys
 endef
 
 IORTCW_POST_INSTALL_TARGET_HOOKS += IORTCW_CONFIG_FILE

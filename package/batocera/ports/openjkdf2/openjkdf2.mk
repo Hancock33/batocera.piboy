@@ -38,14 +38,11 @@ OPENJKDF2_CONF_OPTS += -DPLAT_LINUX_64=ON
 OPENJKDF2_CONF_OPTS += -DCMAKE_CROSSCOMPILING=NO
 
 define OPENJKDF2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	cp $(@D)/buildroot-build/openjkdf2 $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/openjkdf2 $(TARGET_DIR)/usr/bin/openjkdf2
 endef
 
 define OPENJKDF2_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(OPENJKDF2_PKGDIR)/openjkdf2.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(OPENJKDF2_PKGDIR)/openjkdf2.keys
 endef
 
 OPENJKDF2_POST_INSTALL_TARGET_HOOKS += OPENJKDF2_EVMAPY

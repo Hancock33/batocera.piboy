@@ -31,15 +31,14 @@ OPENMOHAA_CONF_OPTS += -DUSE_INTERNAL_LIBS=ON
 # We just want the client
 define OPENMOHAA_INSTALL_TARGET_CMDS
 	rm -rf $(TARGET_DIR)/usr/bin/openmohaa
-	mkdir -p $(TARGET_DIR)/usr/bin/openmohaa
-	cp $(@D)/buildroot-build/openmohaa $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/code/client/cgame/cgame.so  $(TARGET_DIR)/usr/bin/openmohaa/
-	cp $(@D)/buildroot-build/code/server/fgame/game.so   $(TARGET_DIR)/usr/bin/openmohaa/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin/openmohaa \
+		$(@D)/buildroot-build/openmohaa \
+		$(@D)/buildroot-build/code/client/cgame/cgame.so \
+		$(@D)/buildroot-build/code/server/fgame/game.so
 endef
 
 define OPENMOHAA_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(OPENMOHAA_PKGDIR)/mohaa.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(OPENMOHAA_PKGDIR)/mohaa.keys
 endef
 
 OPENMOHAA_POST_INSTALL_TARGET_HOOKS += OPENMOHAA_EVMAPY

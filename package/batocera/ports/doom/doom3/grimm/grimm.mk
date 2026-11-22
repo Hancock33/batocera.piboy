@@ -13,8 +13,7 @@ GRIMM_LICENSE_FILES = COPYING.txt
 GRIMM_DEPENDENCIES = dhewm3
 
 define GRIMM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/grimm*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/grimm*.so
 endef
 
 $(eval $(cmake-package))
