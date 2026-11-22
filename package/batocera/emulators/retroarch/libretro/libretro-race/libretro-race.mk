@@ -15,7 +15,6 @@ define LIBRETRO_RACE_BUILD_CMDS
 endef
 
 define LIBRETRO_RACE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/race_libretro.so $(TARGET_DIR)/usr/lib/libretro/race_libretro.so
 endef
 

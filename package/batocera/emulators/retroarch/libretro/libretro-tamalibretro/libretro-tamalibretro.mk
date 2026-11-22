@@ -18,7 +18,6 @@ define LIBRETRO_TAMALIBRETRO_BUILD_CMDS
 endef
 
 define LIBRETRO_TAMALIBRETRO_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/tamalibretro_libretro.so $(TARGET_DIR)/usr/lib/libretro/tamalibretro_libretro.so
 endef
 

@@ -1,16 +1,25 @@
 config BR2_PACKAGE_MAME_SRC
 	bool "mame"
 	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_TOOLCHAIN_HAS_THREADS # portaudio
+	depends on BR2_USE_WCHAR # flac
+	select BR2_PACKAGE_ALSA_LIB
+	select BR2_PACKAGE_ASIO
 	select BR2_PACKAGE_EXPAT
+	select BR2_PACKAGE_FLAC
 	select BR2_PACKAGE_FONTCONFIG
 	select BR2_PACKAGE_GLM
 	select BR2_PACKAGE_JPEG
 	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_LIBPORTMIDI
+	select BR2_PACKAGE_PORTAUDIO
+	select BR2_PACKAGE_PUGIXML
 	select BR2_PACKAGE_RAPIDJSON
 	select BR2_PACKAGE_SDL2
 	select BR2_PACKAGE_SDL2_TTF
 	select BR2_PACKAGE_SQLITE
 	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_ZSTD
 
 	help
 	  MAME emulator standalone package

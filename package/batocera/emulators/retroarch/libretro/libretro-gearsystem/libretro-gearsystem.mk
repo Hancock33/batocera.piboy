@@ -3,10 +3,10 @@
 # libretro-gearsystem
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBRETRO_GEARSYSTEM_VERSION = 4b3b1b266e536848ab23b8733f783ae17f0126a6
+# Version: Commits on Nov 22, 2026
+LIBRETRO_GEARSYSTEM_VERSION = bcaf15c4881134950a6a2b7621e231c5b7e15f2c
 LIBRETRO_GEARSYSTEM_SITE = $(call github,drhelius,Gearsystem,$(LIBRETRO_GEARSYSTEM_VERSION))
-LIBRETRO_GEARSYSTEM_LICENSE = GPLv3
+LIBRETRO_GEARSYSTEM_LICENSE = GPL-3.0
 LIBRETRO_GEARSYSTEM_DEPENDENCIES += retroarch
 LIBRETRO_GEARSYSTEM_EMULATOR_INFO = gearsystem.libretro.core.yml
 
@@ -17,8 +17,6 @@ define LIBRETRO_GEARSYSTEM_BUILD_CMDS
 endef
 
 define LIBRETRO_GEARSYSTEM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/platforms/libretro/gearsystem_libretro.so $(TARGET_DIR)/usr/lib/libretro/gearsystem_libretro.so
 	$(INSTALL) -D $(@D)/platforms/libretro/gearsystem_libretro.info $(TARGET_DIR)/usr/share/libretro/info/gearsystem_libretro.info
 endef

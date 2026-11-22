@@ -9,7 +9,7 @@ NBLOOD_SITE = $(call github,NBlood,NBlood,$(NBLOOD_VERSION))
 NBLOOD_SOURCE = $(NBLOOD_VERSION).tar.gz
 NBLOOD_EMULATOR_INFO = nblood.emulator.yml
 NBLOOD_DEPENDENCIES = sdl2 flac libvpx
-NBLOOD_LICENSE = GPLv3
+NBLOOD_LICENSE = GPL-3.0
 NBLOOD_VC_REV="$(shell echo $(NBLOOD_VERSION) | cut -c 1-7)"
 
 NBLOOD_BUILD_ARGS += HAVE_GTK2=0
@@ -32,7 +32,7 @@ endef
 
 define NBLOOD_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/nblood/*.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -D -m 0644 $(NBLOOD_PKGDIR)/*.keys $(TARGET_DIR)/usr/share/evmapy
 
 	$(INSTALL) -m 0755 $(@D)/nblood      $(TARGET_DIR)/usr/bin/nblood
 	$(INSTALL) -m 0755 $(@D)/pcexhumed   $(TARGET_DIR)/usr/bin/pcexhumed

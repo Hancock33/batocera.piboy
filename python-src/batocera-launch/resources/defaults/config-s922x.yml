@@ -8,8 +8,8 @@ gamecube:
   emulator: libretro
   core:     dolphin
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 ps2:
   emulator: libretro
   core:     play

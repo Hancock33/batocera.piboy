@@ -6,7 +6,7 @@
 # Version: Commits on Aug 11, 2026
 LIBRETRO_FREEINTV_VERSION = ef3e0fe322bec62a7f916c0bb0834c08c348d0b4
 LIBRETRO_FREEINTV_SITE = $(call github,libretro,freeintv,$(LIBRETRO_FREEINTV_VERSION))
-LIBRETRO_FREEINTV_LICENSE = GPLv3
+LIBRETRO_FREEINTV_LICENSE = GPL-3.0
 LIBRETRO_FREEINTV_DEPENDENCIES += retroarch
 LIBRETRO_FREEINTV_EMULATOR_INFO = freeintv.libretro.core.yml
 
@@ -28,8 +28,6 @@ define LIBRETRO_FREEINTV_BUILD_CMDS
 endef
 
 define LIBRETRO_FREEINTV_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/freeintv_libretro.so $(TARGET_DIR)/usr/lib/libretro/freeintv_libretro.so
 	$(INSTALL) -D $(@D)/FreeIntv_libretro.info $(TARGET_DIR)/usr/share/libretro/info/freeintv_libretro.info
 endef

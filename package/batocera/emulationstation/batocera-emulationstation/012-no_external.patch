@@ -1,5 +1,7 @@
+Only build the /storage/event endpoint with BATOCERA_DISKS
+
 diff --git a/es-app/src/services/HttpServerThread.cpp b/es-app/src/services/HttpServerThread.cpp
-index aa2c18107..a5bfe9736 100644
+index aa2c181..a5bfe97 100644
 --- a/es-app/src/services/HttpServerThread.cpp
 +++ b/es-app/src/services/HttpServerThread.cpp
 @@ -575,7 +575,7 @@ void HttpServerThread::run()

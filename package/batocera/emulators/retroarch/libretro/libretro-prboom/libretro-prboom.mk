@@ -3,10 +3,10 @@
 # libretro-prboom
 #
 ################################################################################
-# Version: Commits on Nov 17, 2026
-LIBRETRO_PRBOOM_VERSION = 7f063bc48e8dbec03f6eb86709947997961eef38
+# Version: Commits on Nov 22, 2026
+LIBRETRO_PRBOOM_VERSION = ab781e69a8bdb1e8b086df960b09a786f69850f1
 LIBRETRO_PRBOOM_SITE = $(call github,libretro,libretro-prboom,$(LIBRETRO_PRBOOM_VERSION))
-LIBRETRO_PRBOOM_LICENSE = GPLv2
+LIBRETRO_PRBOOM_LICENSE = GPL-2.0
 LIBRETRO_PRBOOM_DEPENDENCIES += retroarch
 LIBRETRO_PRBOOM_EMULATOR_INFO = prboom.libretro.core.yml
 
@@ -25,7 +25,6 @@ define LIBRETRO_PRBOOM_BUILD_CMDS
 endef
 
 define LIBRETRO_PRBOOM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/prboom_libretro.so $(TARGET_DIR)/usr/lib/libretro/prboom_libretro.so
 endef
 

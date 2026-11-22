@@ -1,3 +1,5 @@
+Find wayland-protocols in the sysroot, not on the host
+
 diff --git a/cmake/FindWaylandProtocols.cmake b/cmake/FindWaylandProtocols.cmake
 index a444988..c916408 100644
 --- a/cmake/FindWaylandProtocols.cmake

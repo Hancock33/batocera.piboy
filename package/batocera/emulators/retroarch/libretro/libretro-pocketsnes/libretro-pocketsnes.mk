@@ -22,7 +22,6 @@ define LIBRETRO_POCKETSNES_BUILD_CMDS
 endef
 
 define LIBRETRO_POCKETSNES_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/snes9x2002_libretro.so $(TARGET_DIR)/usr/lib/libretro/pocketsnes_libretro.so
 endef
 

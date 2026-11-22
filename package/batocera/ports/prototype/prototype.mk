@@ -16,10 +16,11 @@ define PROTOTYPE_INSTALL_TARGET_CMDS
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/prototype
 	touch $(TARGET_DIR)/usr/share/emulationstation/ports/prototype/Prototype.game
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/prototype/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/prototype
-	# evmap config
+	cp -a  $(PROTOTYPE_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/prototype
+	# game data
 	cp -av $(@D)/Data $(TARGET_DIR)/usr/share/prototype
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/prototype/prototype.keys $(TARGET_DIR)/usr/share/evmapy
+	# evmap config
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(PROTOTYPE_PKGDIR)/prototype.keys
 endef
 
 $(eval $(cmake-package))

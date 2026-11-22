@@ -174,8 +174,6 @@ class XeniaEdge(Emulator):
                 'storage_root': str(self.config_dir),
                 'content_root': str(_XBOX360_SAVES),
                 'cache_root': str(xenia_cache),
-                'mount_scratch': True,
-                'mount_cache': self.config.get_bool('xenia_edge_cache', True),
             },
             UI={
                 'guide_button': False,
@@ -191,6 +189,8 @@ class XeniaEdge(Emulator):
             toml.dump(config, f)
 
         args: list[str | Path] = [_XENIA_EDGE_BIN]
+        pads = max(len(self.controllers), 1)
+        args.extend(f'--logged_profile_slot_{slot}_xuid=' for slot in range(pads, 4))
         if not configure_emulator(rom):
             args.append(rom)
 

@@ -6,16 +6,16 @@
 # Version: Commits on Oct 27, 2026
 AMIBERRY_VERSION = v8.5.0
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
-AMIBERRY_LICENSE = GPLv3
+AMIBERRY_LICENSE = GPL-3.0
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AMIBERRY_DEPENDENCIES += flac json-for-modern-cpp libcurl libpcap libmpeg2 libpng
 AMIBERRY_DEPENDENCIES += libserialport libxml2 mpg123
-AMIBERRY_DEPENDENCIES += portmidi sdl3 sdl3_image sdl3_ttf zlib
+AMIBERRY_DEPENDENCIES += libportmidi sdl3 sdl3_image sdl3_ttf zlib
 AMIBERRY_EMULATOR_INFO = amiberry.emulator.yml
 
-AMIBERRY_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-AMIBERRY_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
+AMIBERRY_CONF_OPTS += -DCMAKE_C_COMPILER=$(TARGET_CC)
+AMIBERRY_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(TARGET_CXX)
 AMIBERRY_CONF_OPTS += -DWITH_LTO=ON
 
 ifeq ($(BR2_PACKAGE_LIBGLEW)$(BR2_PACKAGE_LIBGLU),yy)
@@ -25,14 +25,21 @@ else
 AMIBERRY_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
+ifeq ($(BR2_PACKAGE_FFMPEG),y)
+AMIBERRY_DEPENDENCIES += ffmpeg
+AMIBERRY_CONF_OPTS += -DUSE_FFMPEG=ON
+else
+AMIBERRY_CONF_OPTS += -DUSE_FFMPEG=OFF
+endif
+
 define AMIBERRY_INSTALL_TARGET_CMDS
 	# install binary
-	$(INSTALL) -D $(@D)/buildroot-build/amiberry $(TARGET_DIR)/usr/bin/amiberry
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/amiberry $(TARGET_DIR)/usr/bin/amiberry
 
 	# Copy AROS (open source alternative BIOS)
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/amiga
-	cp -prn $(@D)/buildroot-build/roms/aros-ext.bin $(TARGET_DIR)/usr/share/batocera/datainit/bios/amiga/
-	cp -prn $(@D)/buildroot-build/roms/aros-rom.bin $(TARGET_DIR)/usr/share/batocera/datainit/bios/amiga/
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/batocera/datainit/bios/amiga \
+		$(@D)/buildroot-build/roms/aros-ext.bin \
+		$(@D)/buildroot-build/roms/aros-rom.bin
 
 	# Copy data and whdboot folders
 	mkdir -p $(TARGET_DIR)/usr/share/amiberry
@@ -41,8 +48,7 @@ define AMIBERRY_INSTALL_TARGET_CMDS
 endef
 
 define AMIBERRY_EVMAP
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -pvr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/amiberry/controllers/*.amiberry.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(AMIBERRY_PKGDIR)/controllers/*.amiberry.keys
 endef
 
 AMIBERRY_POST_INSTALL_TARGET_HOOKS = AMIBERRY_EVMAP

@@ -31,7 +31,6 @@ define LIBRETRO_GENESISPLUSGX_EXPANDED_BUILD_CMDS
 endef
 
 define LIBRETRO_GENESISPLUSGX_EXPANDED_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/genesis_plus_gx_libretro.so $(TARGET_DIR)/usr/lib/libretro/genesisplusgx-expanded_libretro.so
 endef
 

@@ -1,3 +1,5 @@
+Read keys.txt from /userdata/bios/cemu
+
 diff --git a/src/Cafe/Filesystem/FST/KeyCache.cpp b/src/Cafe/Filesystem/FST/KeyCache.cpp
 index f85d2b5..cbd274f 100644
 --- a/src/Cafe/Filesystem/FST/KeyCache.cpp

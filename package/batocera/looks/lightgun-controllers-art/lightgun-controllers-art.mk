@@ -10,12 +10,10 @@ LIGHTGUN_CONTROLLERS_ART_SITE = $(call github,batocera-linux,lightgun-controller
 #LIGHTGUN_CONTROLLERS_ART_LICENSE_FILES = LICENSE
 
 define LIGHTGUN_CONTROLLERS_ART_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/guns-overlays
-	cp -f $(@D)/png/*.png $(TARGET_DIR)/usr/share/batocera/guns-overlays
-	cp -f $(@D)/infos/*.infos $(TARGET_DIR)/usr/share/batocera/guns-overlays
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/usr/share/batocera/guns-overlays $(@D)/png/*.png $(@D)/infos/*.infos
 	# GunCon3 has a different name on batocera
-	(cd $(TARGET_DIR)/usr/share/batocera/guns-overlays && ln -sf "GunCon3-Gun.png"  "GunCon3-Gun calibrated.png")
-	(cd $(TARGET_DIR)/usr/share/batocera/guns-overlays && ln -sf "GunCon3-Gun.infos" "GunCon3-Gun calibrated.infos")
+	ln -sf "GunCon3-Gun.png" "$(TARGET_DIR)/usr/share/batocera/guns-overlays/GunCon3-Gun calibrated.png"
+	ln -sf "GunCon3-Gun.infos" "$(TARGET_DIR)/usr/share/batocera/guns-overlays/GunCon3-Gun calibrated.infos"
 endef
 
 $(eval $(generic-package))

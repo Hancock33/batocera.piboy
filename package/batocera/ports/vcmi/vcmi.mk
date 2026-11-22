@@ -9,6 +9,8 @@ VCMI_BRANCH = develop
 VCMI_SITE = https://github.com/vcmi/vcmi.git
 VCMI_SITE_METHOD=git
 VCMI_GIT_SUBMODULES=YES
+VCMI_LICENSE = GPL-2.0+
+VCMI_LICENSE_FILES = license.txt
 VCMI_EMULATOR_INFO = vcmi.emulator.yml
 VCMI_DEPENDENCIES = boost ffmpeg libsquish minizip sdl2 sdl2_image sdl2_mixer sdl2_ttf tbb
 
@@ -23,8 +25,7 @@ VCMI_CONF_OPTS += -DTBB_ROOT=$(STAGING_DIR)/usr/lib/tbb
 
 define VCMI_EVMAPY
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vcmi/vcmi.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(VCMI_PKGDIR)/vcmi.keys
 endef
 
 VCMI_POST_INSTALL_TARGET_HOOKS += VCMI_EVMAPY

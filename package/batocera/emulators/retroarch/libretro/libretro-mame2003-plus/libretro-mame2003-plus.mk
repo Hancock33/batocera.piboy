@@ -3,8 +3,8 @@
 # libretro-mame2003-plus
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBRETRO_MAME2003_PLUS_VERSION = e71d95553e293aeb915a8b235e605c1513300878
+# Version: Commits on Nov 21, 2026
+LIBRETRO_MAME2003_PLUS_VERSION = 1bfe3c273ac2bb5ee3ca37e589127b83a8341305
 LIBRETRO_MAME2003_PLUS_SITE = $(call github,libretro,mame2003-plus-libretro,$(LIBRETRO_MAME2003_PLUS_VERSION))
 LIBRETRO_MAME2003_PLUS_LICENSE = MAME
 LIBRETRO_MAME2003_PLUS_DEPENDENCIES += retroarch
@@ -37,7 +37,6 @@ define LIBRETRO_MAME2003_PLUS_BUILD_CMDS
 endef
 
 define LIBRETRO_MAME2003_PLUS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/mame2003_plus_libretro.so $(TARGET_DIR)/usr/lib/libretro/mame078plus_libretro.so
 
 	# Bios

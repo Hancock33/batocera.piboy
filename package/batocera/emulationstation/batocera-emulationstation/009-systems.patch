@@ -1,5 +1,7 @@
+Extend the platform id list and scraper mappings
+
 diff --git a/es-app/src/PlatformId.cpp b/es-app/src/PlatformId.cpp
-index 7471ddbf5..8220c0009 100644
+index 7471ddb..8220c00 100644
 --- a/es-app/src/PlatformId.cpp
 +++ b/es-app/src/PlatformId.cpp
 @@ -9,203 +9,289 @@ namespace PlatformIds
@@ -439,7 +441,7 @@ index 7471ddbf5..8220c0009 100644
  		{ "invalid",				PLATFORM_COUNT }
  	};
 diff --git a/es-app/src/PlatformId.h b/es-app/src/PlatformId.h
-index 009315fe0..17c945813 100644
+index 009315f..17c9458 100644
 --- a/es-app/src/PlatformId.h
 +++ b/es-app/src/PlatformId.h
 @@ -11,54 +11,175 @@ namespace PlatformIds
@@ -819,7 +821,7 @@ index 009315fe0..17c945813 100644
  		TEKNOPARROT,
  
 diff --git a/es-app/src/scrapers/GamesDBJSONScraper.cpp b/es-app/src/scrapers/GamesDBJSONScraper.cpp
-index 33680b338..f53823b7d 100644
+index 33680b3..f53823b 100644
 --- a/es-app/src/scrapers/GamesDBJSONScraper.cpp
 +++ b/es-app/src/scrapers/GamesDBJSONScraper.cpp
 @@ -38,11 +38,8 @@ const std::map<PlatformId, std::string> gamesdb_new_platformid_map{
@@ -881,7 +883,7 @@ index 33680b338..f53823b7d 100644
  	/* Non existing systems
  	{ AMIGACDTV, "129" },
 diff --git a/es-app/src/scrapers/HfsDBScraper.cpp b/es-app/src/scrapers/HfsDBScraper.cpp
-index 003115586..b68d24347 100644
+index 0031155..b68d243 100644
 --- a/es-app/src/scrapers/HfsDBScraper.cpp
 +++ b/es-app/src/scrapers/HfsDBScraper.cpp
 @@ -75,7 +75,6 @@ const std::map<PlatformId, std::string> hfsdb_platformids
@@ -911,7 +913,7 @@ index 003115586..b68d24347 100644
  
  const std::set<Scraper::ScraperMediaSource>& HfsDBScraper::getSupportedMedias()
 diff --git a/es-app/src/scrapers/IGDBScraper.cpp b/es-app/src/scrapers/IGDBScraper.cpp
-index b1cd80a04..bdc54b912 100644
+index b1cd80a..bdc54b9 100644
 --- a/es-app/src/scrapers/IGDBScraper.cpp
 +++ b/es-app/src/scrapers/IGDBScraper.cpp
 @@ -67,7 +67,7 @@ const std::map<PlatformId, std::string> igdb_platformids
@@ -924,7 +926,7 @@ index b1cd80a04..bdc54b912 100644
  	{ MSX, "27" },
  	{ NINTENDO_64, "4" },
 diff --git a/es-app/src/scrapers/ScreenScraper.cpp b/es-app/src/scrapers/ScreenScraper.cpp
-index ed86d82f4..6a1707682 100644
+index ed86d82..6a17076 100644
 --- a/es-app/src/scrapers/ScreenScraper.cpp
 +++ b/es-app/src/scrapers/ScreenScraper.cpp
 @@ -30,166 +30,241 @@ using namespace PlatformIds;

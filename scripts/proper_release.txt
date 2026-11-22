@@ -14,6 +14,8 @@ d7vk.mk
 db9_gpio_rpi.mk
 dhewm3.mk
 dosbox-x.mk
+dsp56300.mk
+dsperate.mk
 dxvk-nvapi.mk
 dxvk.mk
 element14-pi-desktop.mk
@@ -33,6 +35,7 @@ libretro-azahar.mk
 libretro-freej2me.mk
 libretro-mame.mk
 libxmp.mk
+linuxloader.mk
 mame-src.mk
 mame.mk
 miniz.mk
@@ -42,6 +45,7 @@ nanoboyadvance.mk
 nblood.mk
 nv-codec-headers.mk
 opengoal.mk
+openmsx.mk
 pcsx2.mk
 pcsx2x6.mk
 picom.mk
@@ -53,9 +57,7 @@ rapidyaml.mk
 rclone.mk
 re2c.mk
 retrocrisis.mk
-rockchip-mpp.mk
 rockpro64-blobs.mk
-rpcs3.mk
 rpi-firmware.mk
 rtmidi.mk
 ryzenadj.mk

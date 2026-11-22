@@ -3,8 +3,8 @@
 # libretro-parallel-dc
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBRETRO_PARALLEL_DC_VERSION = 89ca5dece296a03ac2532bb114c6b296be4788fe
+# Version: Commits on Nov 22, 2026
+LIBRETRO_PARALLEL_DC_VERSION = c26c1dd1d1f35dbd10561f074f26a0b5ebf3bac3
 LIBRETRO_PARALLEL_DC_SITE = $(call github,libretro,parallel-dc,$(LIBRETRO_PARALLEL_DC_VERSION))
 LIBRETRO_PARALLEL_DC_LICENSE = GPL-2.0
 LIBRETRO_PARALLEL_DC_LICENSE_FILES = LICENSE
@@ -34,7 +34,6 @@ define LIBRETRO_PARALLEL_DC_BUILD_CMDS
 endef
 
 define LIBRETRO_PARALLEL_DC_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/parallel_dc_libretro.so $(TARGET_DIR)/usr/lib/libretro/parallel_dc_libretro.so
 endef
 

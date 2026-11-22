@@ -6,7 +6,8 @@
 # Version: Commits on Aug 04, 2026
 LIBRETRO_CANNONBALL_VERSION = 0d83575d920ea4c0a280847a19d7802f673e6a68
 LIBRETRO_CANNONBALL_SITE = $(call github,libretro,cannonball,$(LIBRETRO_CANNONBALL_VERSION))
-LIBRETRO_CANNONBALL_LICENSE = COPYRIGHT
+LIBRETRO_CANNONBALL_LICENSE = Cannonball (non-commercial)
+LIBRETRO_CANNONBALL_LICENSE_FILES = docs/license.txt
 LIBRETRO_CANNONBALL_NON_COMMERCIAL = yes
 LIBRETRO_CANNONBALL_EMULATOR_INFO = cannonball.libretro.core.yml
 
@@ -28,11 +29,9 @@ define LIBRETRO_CANNONBALL_BUILD_CMDS
 endef
 
 define LIBRETRO_CANNONBALL_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cannonball/res
 	$(INSTALL) -D $(@D)/cannonball_libretro.so	$(TARGET_DIR)/usr/lib/libretro/cannonball_libretro.so
 	$(INSTALL) -D $(@D)/roms/roms.txt 			$(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cannonball/roms_needed.txt
-	$(INSTALL) -D $(@D)/res/*.bin				$(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cannonball/res/
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/cannonball/res $(@D)/res/*.bin
 endef
 
 $(eval $(generic-package))

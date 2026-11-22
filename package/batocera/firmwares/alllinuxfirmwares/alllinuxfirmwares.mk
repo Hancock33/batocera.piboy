@@ -7,6 +7,8 @@
 ALLLINUXFIRMWARES_VERSION = 20261019
 ALLLINUXFIRMWARES_SOURCE = linux-firmware-$(ALLLINUXFIRMWARES_VERSION).tar.gz
 ALLLINUXFIRMWARES_SITE = https://www.kernel.org/pub/linux/kernel/firmware
+ALLLINUXFIRMWARES_LICENSE = PROPRIETARY
+ALLLINUXFIRMWARES_LICENSE_FILES = WHENCE
 
 ifeq ($(BR2_PACKAGE_FIRMWARE_ARMBIAN),y)
 ALLLINUXFIRMWARES_DEPENDENCIES += firmware-armbian
@@ -119,7 +121,7 @@ ALLLINUXFIRMWARES_REMOVE_DIRS += \
 	$(@D)/yamaha
 
 # Other ARM SoC vendors, pruned unless building a specific ARM target
-ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3562)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE)$(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
+ifneq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3562)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE)$(BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY),y)
 ALLLINUXFIRMWARES_REMOVE_DIRS += \
 	$(@D)/rockchip $(@D)/amlogic $(@D)/meson $(@D)/sunxi \
 	$(@D)/nxp $(@D)/imx $(@D)/starfive $(@D)/powervr \
@@ -152,7 +154,7 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	$(ALLLINUXFIRMWARES_PKGDIR)/prune-iwlwifi.sh $(@D) $(LINUX_DIR)
 
 	# RK3588 specific: Keep only Bluetooth 'ibt-*' and iwlwifi from the Intel folder
-	if [ "$(BR2_PACKAGE_BATOCERA_TARGET_RK3588)" = "y" ] || [ "$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO)" = "y" ] || [ "$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE)" = "y" ]; then \
+	if [ "$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE)" = "y" ]; then \
 		find $(@D)/intel -type f ! -name 'ibt-*' ! -path '*/iwlwifi/*' -delete; \
 	fi
 
@@ -201,7 +203,7 @@ define ALLLINUXFIRMWARES_INSTALL_TARGET_CMDS
 	# automatically by its copy-firmware.sh script during the installation, which
 	# parses the WHENCE file where symlinks are described. We follow the same logic
 	# here, adding symlink only for firmwares installed in the target directory.
-	cd $(TARGET_DIR)/lib/firmware ; \
+	cd $(TARGET_DIR)/lib/firmware && \
 		sed -r -e '/^Link: (.+) -> (.+)$$/!d; s//\1 \2/' $(@D)/WHENCE | \
 		while read -r f d; do \
 			if test -f "$$(readlink -m "$$(dirname "$$f")/$${d}")"; then \
@@ -232,7 +234,7 @@ ifeq ($(BR2_x86_64),y)
 ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_FIX_AMD_890M
 endif
 
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588)$(BR2_PACKAGE_BATOCERA_TARGET_RK3588_SDIO),y)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE),y)
 ALLLINUXFIRMWARES_POST_INSTALL_TARGET_HOOKS += ALLLINUXFIRMWARES_LINK_RTL_BT
 endif
 

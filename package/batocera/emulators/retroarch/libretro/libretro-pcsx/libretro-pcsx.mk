@@ -3,10 +3,10 @@
 # libretro-pcsx
 #
 ################################################################################
-# Version: Commits on Oct 29, 2026
-LIBRETRO_PCSX_VERSION = 7b0e8f8fadfbce3d170d195b9d9eecaabfa08c8e
+# Version: Commits on Nov 22, 2026
+LIBRETRO_PCSX_VERSION = 0f544ce1d18ac7dd114cb8f5507f01a29d3cd58c
 LIBRETRO_PCSX_SITE = $(call github,libretro,pcsx_rearmed,$(LIBRETRO_PCSX_VERSION))
-LIBRETRO_PCSX_LICENSE = GPLv2
+LIBRETRO_PCSX_LICENSE = GPL-2.0
 LIBRETRO_PCSX_DEPENDENCIES += retroarch
 LIBRETRO_PCSX_EMULATOR_INFO = pcsx_rearmed.libretro.core.yml
 
@@ -22,8 +22,6 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
     LIBRETRO_PCSX_PLATFORM = rpi5_64
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3326),y)
     LIBRETRO_PCSX_PLATFORM = rk3326
-else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_LIBRETECH_H5),y)
-    LIBRETRO_PCSX_PLATFORM = h5
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_S812),y)
     LIBRETRO_PCSX_PLATFORM = armv cortexa9 neon hardfloat
 else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_H3),y)
@@ -47,7 +45,6 @@ define LIBRETRO_PCSX_BUILD_CMDS
 endef
 
 define LIBRETRO_PCSX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/pcsx_rearmed_libretro.so $(TARGET_DIR)/usr/lib/libretro/pcsx_rearmed_libretro.so
 endef
 

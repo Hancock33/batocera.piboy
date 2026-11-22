@@ -1,5 +1,7 @@
+Restore HLTB, ProtonDB, PCGamingWiki, SteamGridDB, local and mixed scrapers
+
 diff --git a/es-app/CMakeLists.txt b/es-app/CMakeLists.txt
-index caaf9c641..6acb1bc59 100644
+index caaf9c6..6acb1bc 100644
 --- a/es-app/CMakeLists.txt
 +++ b/es-app/CMakeLists.txt
 @@ -112,6 +112,12 @@ set(ES_HEADERS
@@ -29,7 +31,7 @@ index caaf9c641..6acb1bc59 100644
  
      # Views
 diff --git a/es-app/src/FileData.cpp b/es-app/src/FileData.cpp
-index fc08ad409..e4b9f76b8 100644
+index a660db3..351dbf1 100644
 --- a/es-app/src/FileData.cpp
 +++ b/es-app/src/FileData.cpp
 @@ -38,6 +38,99 @@
@@ -155,7 +157,7 @@ index fc08ad409..e4b9f76b8 100644
  	{ "fullName",			[](FileData* file) { return GameNameFormatter(file->getSystem()).getDisplayName(file); } },
  	{ "fullNameNoFavorite",	[](FileData* file) { return GameNameFormatter(file->getSystem()).getDisplayName(file, false, false); } },
 diff --git a/es-app/src/MetaData.cpp b/es-app/src/MetaData.cpp
-index 67c06e654..1b0cdca71 100644
+index 67c06e6..1b0cdca 100644
 --- a/es-app/src/MetaData.cpp
 +++ b/es-app/src/MetaData.cpp
 @@ -22,7 +22,12 @@ static std::map<std::string, int> KnowScrapersIds =
@@ -244,7 +246,7 @@ index 67c06e654..1b0cdca71 100644
  			continue;		
  
 diff --git a/es-app/src/MetaData.h b/es-app/src/MetaData.h
-index 056f827c9..1200f8260 100644
+index 056f827..1200f82 100644
 --- a/es-app/src/MetaData.h
 +++ b/es-app/src/MetaData.h
 @@ -78,6 +78,36 @@ enum MetaDataId
@@ -285,7 +287,7 @@ index 056f827c9..1200f8260 100644
  	// Important : Control value
  	MetaDataIdCount
 diff --git a/es-app/src/components/ScraperSearchComponent.cpp b/es-app/src/components/ScraperSearchComponent.cpp
-index 280412b66..89640e4f3 100644
+index fcb7428..b781812 100644
 --- a/es-app/src/components/ScraperSearchComponent.cpp
 +++ b/es-app/src/components/ScraperSearchComponent.cpp
 @@ -18,6 +18,14 @@
@@ -303,7 +305,7 @@ index 280412b66..89640e4f3 100644
  ScraperSearchComponent::ScraperSearchComponent(Window* window) : GuiComponent(window),
  	mGrid(window, Vector2i(5, 5)), mBusyAnim(window)
  {
-@@ -286,6 +294,9 @@ void ScraperSearchComponent::search(const ScraperSearchParams& params)
+@@ -291,6 +299,9 @@ void ScraperSearchComponent::search(const ScraperSearchParams& params)
  
  	for (auto scraperName : Scraper::getScraperList())
  	{
@@ -313,7 +315,7 @@ index 280412b66..89640e4f3 100644
  		auto scraper = Scraper::getScraper(scraperName);
  		if (scraper == nullptr || !scraper->isSupportedPlatform(params.system))
  			continue;
-@@ -438,7 +449,7 @@ void ScraperSearchComponent::onSearchDone(bool isReallyFinished)
+@@ -443,7 +454,7 @@ void ScraperSearchComponent::onSearchDone(bool isReallyFinished)
  					icons += _U(" \uF07E");
  
  				row.elements.clear();
@@ -322,7 +324,7 @@ index 280412b66..89640e4f3 100644
  				row.makeAcceptInputHandler([this, result] { returnResult(result); });
  
  				mResultList->addRow(row, false, true, std::to_string(i));
-@@ -500,7 +511,7 @@ void ScraperSearchComponent::updateInfoPane()
+@@ -505,7 +516,7 @@ void ScraperSearchComponent::updateInfoPane()
  	if (i != -1 && (int)allResults.size() > i)
  	{
  		ScraperSearchResult& res = allResults.at(i).second;
@@ -332,7 +334,7 @@ index 280412b66..89640e4f3 100644
  
  		mResultThumbnail->setImage("");
 diff --git a/es-app/src/guis/GuiScraperStart.cpp b/es-app/src/guis/GuiScraperStart.cpp
-index 161fc86f3..2ed3db13b 100644
+index 161fc86..2ed3db1 100644
 --- a/es-app/src/guis/GuiScraperStart.cpp
 +++ b/es-app/src/guis/GuiScraperStart.cpp
 @@ -84,8 +84,9 @@ void GuiScraperStart::loadScrapPage()
@@ -379,7 +381,7 @@ index 161fc86f3..2ed3db13b 100644
  void GuiScraperStart::pressedStart()
 diff --git a/es-app/src/scrapers/HowLongToBeatScraper.cpp b/es-app/src/scrapers/HowLongToBeatScraper.cpp
 new file mode 100644
-index 000000000..3e99d9d29
+index 0000000..3e99d9d
 --- /dev/null
 +++ b/es-app/src/scrapers/HowLongToBeatScraper.cpp
 @@ -0,0 +1,279 @@
@@ -664,7 +666,7 @@ index 000000000..3e99d9d29
 +}
 diff --git a/es-app/src/scrapers/HowLongToBeatScraper.h b/es-app/src/scrapers/HowLongToBeatScraper.h
 new file mode 100644
-index 000000000..b71304fe2
+index 0000000..b71304f
 --- /dev/null
 +++ b/es-app/src/scrapers/HowLongToBeatScraper.h
 @@ -0,0 +1,49 @@
@@ -719,7 +721,7 @@ index 000000000..b71304fe2
 +#endif // ES_APP_SCRAPERS_HOW_LONG_TO_BEAT_SCRAPER_H
 diff --git a/es-app/src/scrapers/LocalLauncherMetadataScraper.cpp b/es-app/src/scrapers/LocalLauncherMetadataScraper.cpp
 new file mode 100644
-index 000000000..aec9560a0
+index 0000000..aec9560
 --- /dev/null
 +++ b/es-app/src/scrapers/LocalLauncherMetadataScraper.cpp
 @@ -0,0 +1,398 @@
@@ -1123,7 +1125,7 @@ index 000000000..aec9560a0
 +}
 diff --git a/es-app/src/scrapers/LocalLauncherMetadataScraper.h b/es-app/src/scrapers/LocalLauncherMetadataScraper.h
 new file mode 100644
-index 000000000..50535c816
+index 0000000..50535c8
 --- /dev/null
 +++ b/es-app/src/scrapers/LocalLauncherMetadataScraper.h
 @@ -0,0 +1,28 @@
@@ -1157,7 +1159,7 @@ index 000000000..50535c816
 +#endif // ES_APP_SCRAPERS_LOCAL_LAUNCHER_METADATA_SCRAPER_H
 diff --git a/es-app/src/scrapers/MixedScraper.cpp b/es-app/src/scrapers/MixedScraper.cpp
 new file mode 100644
-index 000000000..beffad518
+index 0000000..beffad5
 --- /dev/null
 +++ b/es-app/src/scrapers/MixedScraper.cpp
 @@ -0,0 +1,328 @@
@@ -1491,7 +1493,7 @@ index 000000000..beffad518
 +}
 diff --git a/es-app/src/scrapers/MixedScraper.h b/es-app/src/scrapers/MixedScraper.h
 new file mode 100644
-index 000000000..a255a0055
+index 0000000..a255a00
 --- /dev/null
 +++ b/es-app/src/scrapers/MixedScraper.h
 @@ -0,0 +1,46 @@
@@ -1543,7 +1545,7 @@ index 000000000..a255a0055
 +#endif // ES_APP_SCRAPERS_MIXED_SCRAPER_H
 diff --git a/es-app/src/scrapers/PCGamingWikiScraper.cpp b/es-app/src/scrapers/PCGamingWikiScraper.cpp
 new file mode 100644
-index 000000000..a6b070958
+index 0000000..a6b0709
 --- /dev/null
 +++ b/es-app/src/scrapers/PCGamingWikiScraper.cpp
 @@ -0,0 +1,247 @@
@@ -1796,7 +1798,7 @@ index 000000000..a6b070958
 +}
 diff --git a/es-app/src/scrapers/PCGamingWikiScraper.h b/es-app/src/scrapers/PCGamingWikiScraper.h
 new file mode 100644
-index 000000000..f62bde9af
+index 0000000..f62bde9
 --- /dev/null
 +++ b/es-app/src/scrapers/PCGamingWikiScraper.h
 @@ -0,0 +1,49 @@
@@ -1851,7 +1853,7 @@ index 000000000..f62bde9af
 +#endif // ES_APP_SCRAPERS_PC_GAMING_WIKI_SCRAPER_H
 diff --git a/es-app/src/scrapers/ProtonDBScraper.cpp b/es-app/src/scrapers/ProtonDBScraper.cpp
 new file mode 100644
-index 000000000..091ea609d
+index 0000000..091ea60
 --- /dev/null
 +++ b/es-app/src/scrapers/ProtonDBScraper.cpp
 @@ -0,0 +1,137 @@
@@ -1994,7 +1996,7 @@ index 000000000..091ea609d
 +}
 diff --git a/es-app/src/scrapers/ProtonDBScraper.h b/es-app/src/scrapers/ProtonDBScraper.h
 new file mode 100644
-index 000000000..50980f569
+index 0000000..50980f5
 --- /dev/null
 +++ b/es-app/src/scrapers/ProtonDBScraper.h
 @@ -0,0 +1,41 @@
@@ -2040,7 +2042,7 @@ index 000000000..50980f569
 +
 +#endif // ES_APP_SCRAPERS_PROTON_DB_SCRAPER_H
 diff --git a/es-app/src/scrapers/Scraper.cpp b/es-app/src/scrapers/Scraper.cpp
-index 8c21b7745..d834e85bb 100644
+index 8c21b77..d834e85 100644
 --- a/es-app/src/scrapers/Scraper.cpp
 +++ b/es-app/src/scrapers/Scraper.cpp
 @@ -4,6 +4,12 @@
@@ -2134,7 +2136,7 @@ index 8c21b7745..d834e85bb 100644
  	return list;
  }
 diff --git a/es-app/src/scrapers/Scraper.h b/es-app/src/scrapers/Scraper.h
-index b08a8ab23..26a4014c1 100644
+index b08a8ab..26a4014 100644
 --- a/es-app/src/scrapers/Scraper.h
 +++ b/es-app/src/scrapers/Scraper.h
 @@ -56,6 +56,7 @@ struct ScraperSearchResult
@@ -2156,7 +2158,7 @@ index b08a8ab23..26a4014c1 100644
  	//About the same as "~/.emulationstation/downloaded_images/[system_name]/[game_name].[url's extension]".
 diff --git a/es-app/src/scrapers/SteamGridDBScraper.cpp b/es-app/src/scrapers/SteamGridDBScraper.cpp
 new file mode 100644
-index 000000000..187d8bc55
+index 0000000..187d8bc
 --- /dev/null
 +++ b/es-app/src/scrapers/SteamGridDBScraper.cpp
 @@ -0,0 +1,363 @@
@@ -2525,7 +2527,7 @@ index 000000000..187d8bc55
 +}
 diff --git a/es-app/src/scrapers/SteamGridDBScraper.h b/es-app/src/scrapers/SteamGridDBScraper.h
 new file mode 100644
-index 000000000..edc52075d
+index 0000000..edc5207
 --- /dev/null
 +++ b/es-app/src/scrapers/SteamGridDBScraper.h
 @@ -0,0 +1,61 @@
@@ -2591,7 +2593,7 @@ index 000000000..edc52075d
 +
 +#endif // ES_APP_SCRAPERS_STEAM_GRID_DB_SCRAPER_H
 diff --git a/es-app/src/views/gamelist/DetailedContainer.cpp b/es-app/src/views/gamelist/DetailedContainer.cpp
-index c7d8ce5ff..0b8086d0d 100644
+index ee719d5..071b18f 100644
 --- a/es-app/src/views/gamelist/DetailedContainer.cpp
 +++ b/es-app/src/views/gamelist/DetailedContainer.cpp
 @@ -19,6 +19,79 @@
@@ -2790,7 +2792,7 @@ index c7d8ce5ff..0b8086d0d 100644
  
  void DetailedContainer::createImageComponent(ImageComponent** pImage, bool forceLoad, bool allowFading)
  {
-@@ -719,6 +860,16 @@ void DetailedContainer::updateDetailsForFolder(FolderData* folder)
+@@ -770,6 +911,16 @@ void DetailedContainer::updateDetailsForFolder(FolderData* folder)
  	mLastPlayed.setValue("");
  	mPlayCount.setValue("");
  	mGameTime.setValue("");
@@ -2807,7 +2809,7 @@ index c7d8ce5ff..0b8086d0d 100644
  }
  
  void DetailedContainer::resetThemedExtras()
-@@ -1043,6 +1194,22 @@ void DetailedContainer::updateControls(FileData* file, bool isClearing, int move
+@@ -1094,6 +1245,22 @@ void DetailedContainer::updateControls(FileData* file, bool isClearing, int move
  			mLastPlayed.setValue(file->getMetadata(MetaDataId::LastPlayed));
  			mPlayCount.setValue(file->getMetadata(MetaDataId::PlayCount));
  			mGameTime.setValue(Utils::Time::secondsToString(atol(file->getMetadata(MetaDataId::GameTime).c_str())));
@@ -2831,7 +2833,7 @@ index c7d8ce5ff..0b8086d0d 100644
  		else if (file->getType() == FOLDER)
  			updateDetailsForFolder((FolderData*)file);
 diff --git a/es-app/src/views/gamelist/DetailedContainer.h b/es-app/src/views/gamelist/DetailedContainer.h
-index 742faf266..ba76a8b8a 100644
+index 0ce5a20..5676ba0 100644
 --- a/es-app/src/views/gamelist/DetailedContainer.h
 +++ b/es-app/src/views/gamelist/DetailedContainer.h
 @@ -58,6 +58,7 @@ public:

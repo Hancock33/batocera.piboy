@@ -6,6 +6,7 @@
 # Version: Commits on Jul 31, 2017
 AML_DTBTOOLS_VERSION = b2ca13ce06627d4e38b3fce56d7aadf077b7bc7d
 AML_DTBTOOLS_SITE = $(call github,Wilhansen,aml-dtbtools,$(AML_DTBTOOLS_VERSION))
+AML_DTBTOOLS_LICENSE = BSD-3-Clause
 
 define HOST_AML_DTBTOOLS_BUILD_CMDS
 	$(HOST_MAKE_ENV) $(MAKE) -C $(@D) -f Makefile

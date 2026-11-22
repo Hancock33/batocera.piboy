@@ -1,0 +1,102 @@
+shared_features:
+  - powermode
+  - cpucluster
+  - tdp
+  - platformprofile
+  - videomode
+  - bezel
+  - bezel_stretch
+  - hud
+  - hud_corner
+  - bezel.tattoo
+  - bezel.tattoo_corner
+  - bezel.tattoo_file
+  - bezel.resize_tattoo
+custom_features:
+  dsperate_layout:
+    prompt: SCREEN LAYOUT
+    description: Arrange the dual screen layout.
+    choices:
+      Vertical (Default): vertical
+      Horizontal: horizontal
+      Single screen: single
+      Picture in picture: pip
+      Dominant (vertical): dominant_v
+      Dominant (horizontal): dominant_h
+  dsperate_screen:
+    prompt: MAIN SCREEN
+    description: The screen shown in single, picture in picture and dominant layouts.
+    choices:
+      Top (Default): top
+      Bottom: bottom
+  dsperate_integer_scale:
+    prompt: INTEGER SCALING
+    choices:
+      Off (Default): 'off'
+      Fit inside the screen: under
+      Fill the screen: over
+  dsperate_linear:
+    prompt: SMOOTH SCALING
+    description: Bilinear filtering when scaling the screens.
+    choices:
+      Off (Default): false
+      'On': true
+  dsperate_colour:
+    prompt: COLOUR CORRECTION
+    description: Simulate the colours of the original LCD.
+    choices:
+      Off (Default): 'off'
+      Nintendo DS: nds
+      Nintendo DS Lite: nds_lite
+  dsperate_gpu3d:
+    prompt: GPU 3D RENDERING
+    description: Draw 3D on the GPU (Vulkan, else OpenGL ES 3.1). The software renderer is the default.
+    choices:
+      Off (Default): false
+      'On': true
+  dsperate_gpu3d_scale:
+    prompt: GPU 3D RESOLUTION
+    description: Enhancement. Internal resolution of the GPU 3D renderer.
+    choices:
+      1x (Default): 1
+      2x: 2
+      3x: 3
+      4x: 4
+  dsperate_frameskip:
+    prompt: FRAMESKIP
+    description: Skip frames to improve performance, at the cost of choppy motion.
+    choices:
+      Off (Default): 0
+      "1": 1
+      "2": 2
+      "3": 3
+      "4": 4
+  dsperate_vsync:
+    group: ADVANCED OPTIONS
+    prompt: VSYNC
+    choices:
+      On (Default): true
+      'Off': false
+  dsperate_timing:
+    group: ADVANCED OPTIONS
+    prompt: TIMING
+    description: Exact timing fixes some games at a performance cost.
+    choices:
+      Fast (Default): fast
+      Exact: exact
+  dsperate_language:
+    submenu: FIRMWARE SETTINGS
+    prompt: LANGUAGE
+    description: Used when no firmware dump is present.
+    choices:
+      Japanese: 0
+      English (Default): 1
+      French: 2
+      German: 3
+      Italian: 4
+      Spanish: 5
+file_extensions:
+  - nds
+  - zip
+systems:
+  - nds

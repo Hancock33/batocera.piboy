@@ -3,10 +3,10 @@
 # libretro-gambatte
 #
 ################################################################################
-# Version: Commits on Oct 30, 2026
-LIBRETRO_GAMBATTE_VERSION = 77f2567d718b8973d02caa2daa8dce4953faf811
+# Version: Commits on Nov 20, 2026
+LIBRETRO_GAMBATTE_VERSION = 138bcbbf311300a271896bf93a76370c72cab339
 LIBRETRO_GAMBATTE_SITE = $(call github,libretro,gambatte-libretro,$(LIBRETRO_GAMBATTE_VERSION))
-LIBRETRO_GAMBATTE_LICENSE = GPLv2
+LIBRETRO_GAMBATTE_LICENSE = GPL-2.0
 LIBRETRO_GAMBATTE_DEPENDENCIES += retroarch
 LIBRETRO_GAMBATTE_EMULATOR_INFO = gambatte.libretro.core.yml
 
@@ -29,7 +29,6 @@ define LIBRETRO_GAMBATTE_BUILD_CMDS
 endef
 
 define LIBRETRO_GAMBATTE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/gambatte_libretro.so $(TARGET_DIR)/usr/lib/libretro/gambatte_libretro.so
 endef
 

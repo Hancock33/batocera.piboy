@@ -8,7 +8,7 @@ BLUES_VERSION = a12e0a8cc4b3a8ce9d9f411592037b1ee27fc751
 BLUES_SITE = $(call github,twojstaryzdomu,blues,$(BLUES_VERSION))
 BLUES_EMULATOR_INFO = blues.emulator.yml bbja.emulator.yml pre2.emulator.yml
 BLUES_DEPENDENCIES = sdl2 sdl2_mixer
-BLUES_LICENSE = GPLv2
+BLUES_LICENSE = GPL-2.0
 
 define BLUES_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) \

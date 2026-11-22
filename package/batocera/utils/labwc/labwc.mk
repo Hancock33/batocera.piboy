@@ -6,7 +6,7 @@
 # Version: Commits on Oct 30, 2026
 LABWC_VERSION = 0.20.3
 LABWC_SITE = $(call github,labwc,labwc,$(LABWC_VERSION))
-LABWC_LICENSE = GPLv2
+LABWC_LICENSE = GPL-2.0
 LABWC_LICENSE_FILES = LICENSE
 LABWC_DEPENDENCIES = cairo host-pkgconf libglib2 libinput libpng libsfdo
 LABWC_DEPENDENCIES += libxkbcommon libxml2 pango wayland wayland-protocols wlroots
@@ -20,17 +20,17 @@ LABWC_DEPENDENCIES += libxcb
 endif
 
 ifeq ($(BR2_PACKAGE_XWAYLAND),y)
-    LABWC_CONF_OPTS += -Dxwayland=enabled
-    LABWC_DEPENDENCIES += xwayland
+LABWC_CONF_OPTS += -Dxwayland=enabled
+LABWC_DEPENDENCIES += xwayland
 else
-    LABWC_CONF_OPTS += -Dxwayland=disabled
+LABWC_CONF_OPTS += -Dxwayland=disabled
 endif
 
 ifeq ($(BR2_PACKAGE_LIBRSVG),y)
-    LABWC_CONF_OPTS += -Dsvg=enabled
-    LABWC_DEPENDENCIES += librsvg
+LABWC_CONF_OPTS += -Dsvg=enabled
+LABWC_DEPENDENCIES += librsvg
 else
-    LABWC_CONF_OPTS += -Dsvg=disabled
+LABWC_CONF_OPTS += -Dsvg=disabled
 endif
 
 $(eval $(meson-package))

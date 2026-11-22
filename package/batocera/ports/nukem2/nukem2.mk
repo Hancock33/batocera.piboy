@@ -17,7 +17,7 @@ NUKEM2_CONF_OPTS += -DUSE_GL_ES=ON
 NUKEM2_CONF_OPTS += -DWARNINGS_AS_ERRORS=OFF
 
 define NUKEM2_INSTALL_TARGET_CMDS
-	cp -pvr $(@D)/buildroot-build/src/RigelEngine $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/src/RigelEngine $(TARGET_DIR)/usr/bin/RigelEngine
 endef
 
 $(eval $(cmake-package))

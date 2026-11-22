@@ -46,3 +46,4 @@ endchoice
 endif
 
 comment "Emulation station 2 needs a toolchain w/ C++"
+	depends on !BR2_INSTALL_LIBSTDCPP

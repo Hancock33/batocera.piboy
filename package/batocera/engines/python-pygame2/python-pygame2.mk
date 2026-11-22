@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Aug 09, 2026
 PYTHON_PYGAME2_VERSION = 2.5.8
-PYTHON_PYGAME2_SITE =  $(call github,pygame-community,pygame-ce,$(PYTHON_PYGAME2_VERSION))
+PYTHON_PYGAME2_SITE = $(call github,pygame-community,pygame-ce,$(PYTHON_PYGAME2_VERSION))
 PYTHON_PYGAME2_SETUP_TYPE = setuptools
 PYTHON_PYGAME2_LICENSE = LGPL-2.1+
 PYTHON_PYGAME2_LICENSE_FILES = LGPL

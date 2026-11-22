@@ -1,15 +1,16 @@
+Let the toolchain pick the optimisation level in release builds
+
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 4e0810b28..f5cbe2524 100644
+index 4e0810b..fa783d1 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -330,8 +330,8 @@ if (CMAKE_BUILD_TYPE MATCHES Debug)
+@@ -330,8 +330,7 @@ if (CMAKE_BUILD_TYPE MATCHES Debug)
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wno-attributes -O0") #support C++17 for std::, optimize
      set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -O0")
  else()
 -    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wno-attributes -O3") #support C++17 for std::, optimize
 -    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -O3")  #-s = strip binary
-+    #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wno-attributes -O3") #support C++17 for std::, optimize
-+    #set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -O3")  #-s = strip binary
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wno-attributes") #support C++17 for std::, optimisation level comes from the toolchain
  endif()
  endif()
  

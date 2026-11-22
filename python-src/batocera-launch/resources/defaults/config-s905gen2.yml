@@ -5,5 +5,5 @@ fmtowns:
   emulator: libretro
   core:     mame
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate

@@ -1,8 +1,8 @@
 diff --git a/vita3k/gui-qt/src/main_window.cpp b/vita3k/gui-qt/src/main_window.cpp
-index e390f484..cd792824 100644
+index 714fd83a..96410027 100644
 --- a/vita3k/gui-qt/src/main_window.cpp
 +++ b/vita3k/gui-qt/src/main_window.cpp
-@@ -255,6 +255,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
+@@ -261,6 +261,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
  
      save_window_state();
      QMainWindow::closeEvent(event);
@@ -10,7 +10,7 @@ index e390f484..cd792824 100644
  }
  
  void MainWindow::paintEvent(QPaintEvent *event) {
-@@ -429,6 +430,9 @@ void MainWindow::initialize() {
+@@ -441,6 +442,9 @@ void MainWindow::initialize() {
  
      qApp->installEventFilter(this);
  
@@ -20,7 +20,7 @@ index e390f484..cd792824 100644
      connect(m_ui->welcome_dialog_action, &QAction::triggered, this, [this]() {
          auto *welcome = new WelcomeDialog(emuenv, true, this);
          welcome->open();
-@@ -1052,6 +1056,9 @@ std::optional<AppLaunchRequest> MainWindow::boot_game_once(const AppLaunchReques
+@@ -1086,6 +1090,9 @@ std::optional<AppLaunchRequest> MainWindow::boot_game_once(const AppLaunchReques
          m_settings_dialog->set_storage_path_locked(true);
      refresh_emulation_actions();
      refresh_status_bar();
@@ -30,7 +30,7 @@ index e390f484..cd792824 100644
      return std::nullopt;
  }
  
-@@ -1093,6 +1100,7 @@ void MainWindow::on_game_closed() {
+@@ -1130,6 +1137,7 @@ void MainWindow::on_game_closed() {
      refresh_status_bar();
  
      if (!m_is_app_closing) {
@@ -38,7 +38,7 @@ index e390f484..cd792824 100644
          raise();
          activateWindow();
      }
-@@ -1218,6 +1226,9 @@ void MainWindow::show_live_area(const std::string &title_id) {
+@@ -1255,6 +1263,9 @@ void MainWindow::show_live_area(const std::string &title_id) {
  
      connect(m_live_area_widget, &LiveAreaWidget::play_clicked,
          this, &MainWindow::on_live_area_play);
@@ -48,7 +48,7 @@ index e390f484..cd792824 100644
  }
  
  void MainWindow::on_live_area_play() {
-@@ -1244,6 +1255,7 @@ void MainWindow::on_live_area_closed() {
+@@ -1281,6 +1292,7 @@ void MainWindow::on_live_area_closed() {
          delete closed_window;
  
      if (!m_is_app_closing) {

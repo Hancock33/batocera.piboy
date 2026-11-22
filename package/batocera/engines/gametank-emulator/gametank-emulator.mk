@@ -3,13 +3,13 @@
 # gametank-emulator
 #
 ################################################################################
-# Version: Commits on Nov 13, 2026
-GAMETANK_EMULATOR_VERSION = 1caf09e36ad4f3856ebe3deeccef6f2adff913e4
+# Version: Commits on Nov 19, 2026
+GAMETANK_EMULATOR_VERSION = 69bd00313fc0c7957502bad007bfed8022e2f6f2
 GAMETANK_EMULATOR_SITE = https://github.com/clydeshaffer/GameTankEmulator
 GAMETANK_EMULATOR_SITE_METHOD = git
 GAMETANK_EMULATOR_GIT_SUBMODULES = YES
 GAMETANK_EMULATOR_LICENSE = MIT, Zlib
-GAMETANK_EMULATOR_LICENSE_FILE = LICENSE
+GAMETANK_EMULATOR_LICENSE_FILES = LICENSE
 GAMETANK_EMULATOR_EMULATOR_INFO = gametank-emulator.emulator.yml
 
 GAMETANK_EMULATOR_DEPENDENCIES = sdl2

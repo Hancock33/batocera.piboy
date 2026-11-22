@@ -10,16 +10,11 @@ WM8960_AUDIO_HAT_LICENSE = GPL-3.0
 WM8960_AUDIO_HAT_LICENSE_FILES = LICENSE
 WM8960_AUDIO_HAT_DEPENDENCIES = alsa-lib rpi-utils
 
-WM8960_AUDIO_HAT_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/audio/wm8960-audio-hat
-
 define WM8960_AUDIO_HAT_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/etc/wm8960-soundcard
-	cp $(@D)/asound.conf $(TARGET_DIR)/etc/wm8960-soundcard
-	cp $(@D)/wm8960_asound.state $(TARGET_DIR)/etc/wm8960-soundcard
-	$(INSTALL) -m 755 $(@D)/wm8960-soundcard $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/etc/wm8960-soundcard $(@D)/asound.conf $(@D)/wm8960_asound.state
+	$(INSTALL) -D -m 0755 $(@D)/wm8960-soundcard $(TARGET_DIR)/usr/bin/wm8960-soundcard
 	# add our init.d script
-	mkdir -p $(TARGET_DIR)/etc/init.d
-	$(INSTALL) -m 755 $(WM8960_AUDIO_HAT_PATH)/S12wm8960 $(TARGET_DIR)/etc/init.d/S12wm8960
+	$(INSTALL) -D -m 0755 $(WM8960_AUDIO_HAT_PKGDIR)/S12wm8960 $(TARGET_DIR)/etc/init.d/S12wm8960
 endef
 
 $(eval $(generic-package))

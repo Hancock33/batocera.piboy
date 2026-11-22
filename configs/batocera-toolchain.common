@@ -6,7 +6,7 @@ BR2_GCC_ENABLE_OPENMP=y
 BR2_BINUTILS_VERSION_GIT=y
 BR2_SHARED_STATIC_LIBS=y
 BR2_ENABLE_LTO=y
-BR2_TARGET_LDFLAGS="-Wl,-O1,--as-needed -fuse-ld=mold"
+BR2_TARGET_LDFLAGS="-Wl,-O1,--as-needed,-z,pack-relative-relocs -fuse-ld=mold"
 BR2_TOOLCHAIN_BUILDROOT_CXX=y
 BR2_TOOLCHAIN_BUILDROOT_GLIBC=y
 BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_7_3=y
@@ -25,9 +25,9 @@ BR2_ZCAT="pigz -d -c"
 BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV=y
 
 # stripping
-BR2_STRIP_EXCLUDE_FILES="abuse dmdserver ecwolf greenlight Ryujinx Vita3K"
+BR2_STRIP_EXCLUDE_FILES="abuse dmdserver ecwolf greenlight Ryujinx"
 
 # build speedups: no rootfs tar, use ccache
 BR2_TARGET_ROOTFS_TAR=n
 BR2_CCACHE=y
-BR2_CCACHE_INITIAL_SETUP="--max-size=15G"
+BR2_CCACHE_INITIAL_SETUP="--max-size=20G"

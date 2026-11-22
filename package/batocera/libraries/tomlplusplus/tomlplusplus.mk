@@ -3,12 +3,11 @@
 # tomlplusplus
 #
 ################################################################################
-# Version: Commits on Oct 13, 2023
-TOMLPLUSPLUS_VERSION = v3.4.0
-TOMLPLUSPLUS_SITE =  $(call github,marzer,tomlplusplus,$(TOMLPLUSPLUS_VERSION))
-TOMLPLUSPLUS_LICENSE = MIT license
+# Version: Commits on Nov 22, 2026
+TOMLPLUSPLUS_VERSION = v3.5.1
+TOMLPLUSPLUS_SITE = $(call github,marzer,tomlplusplus,$(TOMLPLUSPLUS_VERSION))
+TOMLPLUSPLUS_LICENSE = MIT
 TOMLPLUSPLUS_LICENSE_FILES = LICENSE
-TOMLPLUSPLUS_SUPPORTS_IN_SOURCE_BUILD = NO
 TOMLPLUSPLUS_INSTALL_STAGING = YES
 
 $(eval $(meson-package))

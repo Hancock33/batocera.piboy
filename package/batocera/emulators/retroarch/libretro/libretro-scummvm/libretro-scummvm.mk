@@ -7,9 +7,9 @@
 LIBRETRO_SCUMMVM_VERSION = v2026.4.0
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
-LIBRETRO_SCUMMVM_LICENSE = GPLv2
-LIBRETRO_SCUMMVM_DEPENDENCIES = faad2 flac freetype jpeg libmad libmpeg2 libogg libpng libtheora libvorbis
-LIBRETRO_SCUMMVM_DEPENDENCIES += retroarch sdl2 zlib
+LIBRETRO_SCUMMVM_LICENSE = GPL-2.0
+LIBRETRO_SCUMMVM_DEPENDENCIES = faad2 flac freetype giflib jpeg libfribidi libmad libmpeg2
+LIBRETRO_SCUMMVM_DEPENDENCIES += libogg libpng libtheora libvorbis retroarch zlib
 LIBRETRO_SCUMMVM_EMULATOR_INFO = scummvm.libretro.core.yml
 
 LIBRETRO_SCUMMVM_PLATFORM = $(LIBRETRO_PLATFORM)
@@ -41,6 +41,19 @@ ifneq ($(BR2_x86_64),y)
     endif
 endif
 
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_FLAC=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_faad=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_freetype=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_fribidi=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_gif=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_jpeg=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_mad=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_mpeg2=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_png=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_theora=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_vorbis=1
+LIBRETRO_SCUMMVM_MAKE_OPTS += USE_SYSTEM_z=1
+
 define LIBRETRO_SCUMMVM_CLONE_AND_INIT
 	mkdir -p $(@D)/backends/platform/libretro/deps/$(1)
 	git -C $(@D)/backends/platform/libretro/deps/$(1) init
@@ -58,13 +71,12 @@ endef
 
 define LIBRETRO_SCUMMVM_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/backends/platform/libretro/Makefile
-	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/backends/platform/libretro \
+	$(TARGET_CONFIGURE_OPTS) LIBS="-lvorbisfile" \
+		$(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" -C $(@D)/backends/platform/libretro \
 	platform="$(LIBRETRO_SCUMMVM_PLATFORM)" $(LIBRETRO_SCUMMVM_MAKE_OPTS) all
 endef
 
 define LIBRETRO_SCUMMVM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.so   $(TARGET_DIR)/usr/lib/libretro/scummvm_libretro.so
 	$(INSTALL) -D $(@D)/backends/platform/libretro/scummvm_libretro.info $(TARGET_DIR)/usr/share/libretro/info/scummvm_libretro.info
 endef

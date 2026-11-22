@@ -1,0 +1,47 @@
+diff --git a/src/core/gpu/kernels_neon.cpp b/src/core/gpu/kernels_neon.cpp
+index 74fdc73..8cd87fa 100644
+--- a/src/core/gpu/kernels_neon.cpp
++++ b/src/core/gpu/kernels_neon.cpp
+@@ -844,7 +844,7 @@ void scale_row_straddle(const u32* src, const u32* seam, const u8* w, const u16*
+     const u32 cs = seam[s];
+     switch (n) {
+     case 1: dst[x] = cs; break;
+-    case 2: vst1_u32(dst + x, uint32x2_t{c, cs}); break;
++    case 2: vst1_u32(dst + x, (uint32x2_t{c, cs})); break;
+     case 3: vst1_u32(dst + x, vdup_n_u32(c)); dst[x + 2] = cs; break;
+     default: {
+       const u32 last = end - 1;
+@@ -975,7 +975,7 @@ void scale_row_grid(const u32* src, const u16* xrun, u32 f, u32 min_run, u32 pit
+       continue;
+     }
+     switch (n) {
+-    case 2: vst1_u32(dst + x, uint32x2_t{cd, c}); break;
++    case 2: vst1_u32(dst + x, (uint32x2_t{cd, c})); break;
+     case 3: dst[x] = cd; vst1_u32(dst + x + 1, vdup_n_u32(c)); break;
+     default: {
+       dst[x++] = cd;
+diff --git a/src/core/gpu/render3d.cpp b/src/core/gpu/render3d.cpp
+index 5900b57..34b91f0 100644
+--- a/src/core/gpu/render3d.cpp
++++ b/src/core/gpu/render3d.cpp
+@@ -1365,7 +1365,7 @@ void Renderer3D::span_texels(const Shade& sh, SpanBuf& sb, s32 ca, s32 cb) const
+   u32* col = sb.tcol + off; u32* alp = sb.talp + off;
+   // Only the live groups of the pass plane (see live_runs): a dead group's
+   // texels are never read, by the shader (which skips it too) or the resolve.
+-  if (const GatherNFn g = reinterpret_cast<GatherNFn>(sh.gather4)) {
++  if (const GatherNFn g = reinterpret_cast<GatherNFn>(const_cast<void*>(sh.gather4))) {
+     const prof::Counter c = sh.texels ? prof::C_TEX_FAST : (sh.fmt == 5 ? prof::C_TEX_SLOW_FMT5 : prof::C_TEX_FAST);
+     live_runs(sb.pass + off, n, [&](u32 k, u32 len) {
+       const u32 len4 = (len + 3) & ~3u;
+diff --git a/src/frontend/sdl/display.h b/src/frontend/sdl/display.h
+index 038bb8c..7b52c7f 100644
+--- a/src/frontend/sdl/display.h
++++ b/src/frontend/sdl/display.h
+@@ -14,6 +14,7 @@
+ 
+ #include <SDL2/SDL.h>
+ 
++#include <algorithm>
+ #include <memory>
+ #include <string>
+ #include <vector>

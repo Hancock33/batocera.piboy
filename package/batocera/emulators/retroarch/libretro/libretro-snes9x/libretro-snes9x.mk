@@ -7,7 +7,7 @@
 LIBRETRO_SNES9X_VERSION = 204ea1c0b851f960cbf223075eb1c25641cb483c
 LIBRETRO_SNES9X_SITE = $(call github,libretro,snes9x,$(LIBRETRO_SNES9X_VERSION))
 LIBRETRO_SNES9X_LICENSE = Non-commercial
-LIBRETRO_SNES9X_DEPENDENCIES = zlib retroarch
+LIBRETRO_SNES9X_DEPENDENCIES = retroarch
 LIBRETRO_SNES9X_PLATFORM = $(LIBRETRO_PLATFORM)
 LIBRETRO_SNES9X_EMULATOR_INFO = snes9x.libretro.core.yml
 
@@ -33,7 +33,6 @@ define LIBRETRO_SNES9X_BUILD_CMDS
 endef
 
 define LIBRETRO_SNES9X_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libretro/snes9x_libretro.so $(TARGET_DIR)/usr/lib/libretro/snes9x_libretro.so
 endef
 

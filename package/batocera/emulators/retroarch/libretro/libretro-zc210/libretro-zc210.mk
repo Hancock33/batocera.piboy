@@ -8,7 +8,7 @@ LIBRETRO_ZC210_VERSION = b6426da40b074245fda097fd345fa7c9cdbf152a
 LIBRETRO_ZC210_SITE = https://github.com/netux79/zc210-libretro.git
 LIBRETRO_ZC210_SITE_METHOD=git
 LIBRETRO_ZC210_GIT_SUBMODULES=YES
-LIBRETRO_ZC210_LICENSE = GPLv2
+LIBRETRO_ZC210_LICENSE = GPL-2.0
 LIBRETRO_ZC210_DEPENDENCIES += retroarch
 LIBRETRO_ZC210_EMULATOR_INFO = zc210.libretro.core.yml
 
@@ -19,8 +19,6 @@ define LIBRETRO_ZC210_BUILD_CMDS
 endef
 
 define LIBRETRO_ZC210_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/zc210
 
 	$(INSTALL) -D $(@D)/zc210_libretro.so $(TARGET_DIR)/usr/lib/libretro/zc210_libretro.so

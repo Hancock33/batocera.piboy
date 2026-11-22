@@ -6,7 +6,7 @@
 # Version: Commits on Jul 31, 2026
 LIBRETRO_POKEMINI_VERSION = 132111b76343559860532a1ccc094f93f1ed5650
 LIBRETRO_POKEMINI_SITE = $(call github,libretro,PokeMini,$(LIBRETRO_POKEMINI_VERSION))
-LIBRETRO_POKEMINI_LICENSE = GPLv3
+LIBRETRO_POKEMINI_LICENSE = GPL-3.0
 LIBRETRO_POKEMINI_DEPENDENCIES += retroarch
 LIBRETRO_POKEMINI_EMULATOR_INFO = pokemini.libretro.core.yml
 
@@ -32,7 +32,6 @@ define LIBRETRO_POKEMINI_BUILD_CMDS
 endef
 
 define LIBRETRO_POKEMINI_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/pokemini_libretro.so $(TARGET_DIR)/usr/lib/libretro/pokemini_libretro.so
 endef
 

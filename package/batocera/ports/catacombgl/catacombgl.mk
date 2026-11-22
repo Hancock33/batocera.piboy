@@ -3,10 +3,10 @@
 # catacombgl
 #
 ################################################################################
-# Version: Commits on Nov 17, 2026
-CATACOMBGL_VERSION = 277b6cc518f6f7e6fb35886dbc155ef81fb0ce91
+# Version: Commits on Nov 22, 2026
+CATACOMBGL_VERSION = d00d480f65edaaf75f087e6bcf55b0e0737f24c6
 CATACOMBGL_SITE = $(call github,ArnoAnsems,CatacombGL,$(CATACOMBGL_VERSION))
-CATACOMBGL_LICENSE = GPLv3
+CATACOMBGL_LICENSE = GPL-3.0
 CATACOMBGL_LICENSE_FILES = COPYING.txt
 CATACOMBGL_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -14,8 +14,7 @@ CATACOMBGL_DEPENDENCIES = sdl2
 CATACOMBGL_EMULATOR_INFO = catacombgl.emulator.yml
 
 define CATACOMBGL_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/catacombgl/catacomb.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(CATACOMBGL_PKGDIR)/catacomb.keys
 endef
 
 CATACOMBGL_POST_INSTALL_TARGET_HOOKS = CATACOMBGL_EVMAPY

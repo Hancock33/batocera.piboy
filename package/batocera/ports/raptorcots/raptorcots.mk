@@ -14,12 +14,10 @@ RAPTORCOTS_SUPPORTS_IN_SOURCE_BUILD = NO
 #RAPTORCOTS_CONF_OPTS += -DCMAKE_SHARED_LINKER_FLAGS="-Wl,--unresolved-symbols=ignore-all"
 
 define RAPTORCOTS_INSTALL_TARGET_CMDS
-	cp -pvr $(@D)/buildroot-build/bin/raptor $(TARGET_DIR)/usr/bin
-	mkdir -p $(TARGET_DIR)/usr/share/raptor
-	cp -av "$(@D)/SETUP(ADLIB).INI" $(TARGET_DIR)/usr/share/raptor/SETUP.INI
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/raptor $(TARGET_DIR)/usr/bin/raptor
+	$(INSTALL) -m 0644 -D "$(@D)/SETUP(ADLIB).INI" $(TARGET_DIR)/usr/share/raptor/SETUP.INI
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/raptorcots/raptor.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(RAPTORCOTS_PKGDIR)/raptor.keys
 endef
 
 $(eval $(cmake-package))

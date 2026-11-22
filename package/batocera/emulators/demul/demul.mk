@@ -8,6 +8,7 @@ DEMUL_VERSION = demul_251220
 DEMUL_SOURCE = $(DEMUL_VERSION).7z
 DEMUL_SITE = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul
 DEMUL_SITE_METHOD = file
+DEMUL_LICENSE = PROPRIETARY
 
 DEMUL_DEPENDENCIES = xdotool
 
@@ -23,11 +24,10 @@ define DEMUL_INSTALL_TARGET_CMDS
 	cp -av $(@D)/* $(TARGET_DIR)/usr/bin/demul
 
 	# copy evmapy configs
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/*.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(DEMUL_PKGDIR)/*.keys
 
 	# copy modified pad ini file for 2 players
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/demul/padDemul.ini $(TARGET_DIR)/usr/bin/demul/
+	$(INSTALL) -m 0644 -t $(TARGET_DIR)/usr/bin/demul $(DEMUL_PKGDIR)/padDemul.ini
 endef
 
 $(eval $(generic-package))

@@ -208,15 +208,16 @@ wine_options() {
     fi
 
     VDESKTOP=""
-    if [[ "${VIRTUAL_DESKTOP}" = 1 ]]; then
+    # gamescope already gives wine its own screen
+    if [[ "${VIRTUAL_DESKTOP}" = 1 && "${XDG_CURRENT_DESKTOP}" != "gamescope" ]]; then
         VDESKTOP="explorer /desktop=Wine,${VIRTUAL_DESKTOP_SIZE}"
     fi
 
     # Handle Wayland driver option only if the system is running Wayland
     if [[ "${SYSTEM_DISPLAY_MODE}" == "wayland" ]]; then
         if [[ "${WAYLAND_DRIVER}" != "native" ]]; then
+            # XWayland takes its keymap from the compositor, which already follows system.kblayout
             echo "*** System is Wayland, using XWayland by default or as requested. ***"
-            setxkbmap "${KEYBOARD}"
         else
             CMD_PREFIX="DISPLAY="
             echo "*** System is Wayland and 'native' driver requested. Forcing Wine native Wayland mode. ***"
@@ -258,8 +259,8 @@ wine_options() {
         fi
     fi
 
-    export DXVK_FRAME_RATE=0
-    [[ "${FPS_LIMIT}" = 1 ]] && DXVK_FRAME_RATE=60
+    # DXVK no longer reads DXVK_FRAME_RATE, the limit goes through its inline config
+    [[ "${FPS_LIMIT}" = 1 ]] && export DXVK_CONFIG="dxgi.maxFrameRate = 60; d3d9.maxFrameRate = 60"
 
     export WINEDEBUG="-all"
     [[ "${WINE_DEBUG}" = 1 ]] && WINEDEBUG="err+all,fixme+all"
@@ -286,6 +287,11 @@ wine_options() {
 
     # Wine-mono override for FNA games
     export WINE_MONO_OVERRIDES="Microsoft.Xna.Framework.*,Gac=n"
+
+    # .NET 5+ aborts on the icu stubs of runners without their own icu (only ge-proton has one), Wine's NLS works
+    if ! find_runner_dll_dir icu x86_64-windows >/dev/null; then
+        export DOTNET_SYSTEM_GLOBALIZATION_USENLS=1
+    fi
 
     # Disable XIM support until libx11 >= 1.7 is widespread
     export WINE_ALLOW_XIM=0
@@ -434,9 +440,9 @@ reg_install() {
         WINEPREFIX=${WINEPREFIX} ${CMD_PREFIX} "${WINE}" reg add "HKEY_CURRENT_USER\Control Panel\Colors" /v "Background" /t REG_SZ /d "0 0 0" /f &>/dev/null
     fi
 
-    # Wine picks its own Wayland driver whenever Wayland is running, the SDL 1.2 games Mugen runs need XWayland's X11 driver
-    if [[ "${SYSTEM}" = "mugen" && "${SYSTEM_DISPLAY_MODE}" = "wayland" ]]; then
-        if [[ "${WAYLAND_DRIVER}" != "native" ]]; then
+    # Wine picks its own Wayland driver whenever Wayland is running, the SDL 1.2 games Mugen runs and anything inside gamescope need the X11 driver
+    if [[ "${SYSTEM_DISPLAY_MODE}" = "wayland" ]]; then
+        if [[ "${WAYLAND_DRIVER}" != "native" && ( "${SYSTEM}" = "mugen" || "${XDG_CURRENT_DESKTOP}" = "gamescope" ) ]]; then
             if ! grep -q '^"Graphics"="x11"' "${WINEPOINT}/user.reg" 2>/dev/null; then
                 WINEPREFIX=${WINEPOINT} ${CMD_PREFIX} "${WINE}" reg add "HKEY_CURRENT_USER\Software\Wine\Drivers" /v "Graphics" /t REG_SZ /d "x11" /f &>/dev/null
                 waitWineServer 0
@@ -1188,6 +1194,10 @@ init_wine() {
 
     ## Wine detection
     WINE_RUNNER="$(/usr/bin/batocera-settings-get windows.wine-runner)"
+    # wine-proton emulates the display modes that gamescope cannot scale
+    if [[ -z "$WINE_RUNNER" && "${XDG_CURRENT_DESKTOP}" = "gamescope" && -x /usr/wine/wine-proton/bin/wine ]]; then
+        WINE_RUNNER="wine-proton"
+    fi
     [[ -z "$WINE_RUNNER" ]] && WINE_RUNNER="wine-custom"
 
     WINE_VERSION="$(get_setting wine-runner "${SYSTEM}" "${ROMGAMENAME}")"

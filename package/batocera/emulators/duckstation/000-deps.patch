@@ -1,8 +1,8 @@
 diff --git a/CMakeModules/DuckStationDependencies.cmake b/CMakeModules/DuckStationDependencies.cmake
-index f5f49ef09..0412d963a 100644
+index f5f49ef..27cf093 100644
 --- a/CMakeModules/DuckStationDependencies.cmake
 +++ b/CMakeModules/DuckStationDependencies.cmake
-@@ -4,35 +4,6 @@
+@@ -4,34 +4,7 @@
  # NOTE: In addition to the terms of CC-BY-NC-ND-4.0, you may not use this file to create
  # packages or build recipes without explicit permission from the copyright holder.
  
@@ -34,25 +34,34 @@ index f5f49ef09..0412d963a 100644
 -  message(FATAL_ERROR "Prebuilt dependencies not found for the current platform and architecture.")
 -endif()
 -set(CMAKE_PREFIX_PATH "${DEPS_PATH}")
--
++# Batocera: use the system/staging libraries instead of the prebuilt bundle.
+ 
  # Enable threads everywhere.
  set(THREADS_PREFER_PTHREAD_FLAG ON)
- find_package(Threads REQUIRED)
-@@ -40,69 +11,81 @@ find_package(Threads REQUIRED)
- # pkg-config gets pulled transitively on some platforms.
- if(NOT APPLE)
-   find_package(PkgConfig REQUIRED)
--  find_package(Libbacktrace REQUIRED)
+@@ -43,67 +16,33 @@ if(NOT APPLE)
+   find_package(Libbacktrace REQUIRED)
  endif()
  
- # libpng relies on zlib, which we need the system version for on Mac.
- if(APPLE OR CPU_ARCH_ARM32 OR CPU_ARCH_ARM64)
-   find_package(ZLIB REQUIRED)
+-# libpng relies on zlib, which we need the system version for on Mac.
+-if(APPLE OR CPU_ARCH_ARM32 OR CPU_ARCH_ARM64)
+-  find_package(ZLIB REQUIRED)
 -else()
 -  find_package(ZLIB 1.3.1 REQUIRED
 -               NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/ZLIB")
++find_package(ZLIB REQUIRED)
++find_package(zstd 1.5.7 REQUIRED)
++find_package(WebP 1.6.0 REQUIRED)
++find_package(PNG 1.6.59 REQUIRED)
++find_package(JPEG REQUIRED)
++find_package(Freetype 2.15.0 REQUIRED)
++find_package(harfbuzz REQUIRED)
++find_package(SQLite3 3.54.1 REQUIRED)
++find_package(plutosvg 0.0.8 REQUIRED)
++find_package(cpuinfo REQUIRED)
++if(ENABLE_DISCORD_PRESENCE)
++  find_package(DiscordRPC 3.4.0 REQUIRED)
  endif()
- 
+-
 -# Enforce use of bundled dependencies to avoid conflicts with system libraries.
 -find_package(zstd 1.5.7 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/zstd")
@@ -84,57 +93,11 @@ index f5f49ef09..0412d963a 100644
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/share/spirv_cross_c_shared/cmake")
 -find_package(SDL3 3.4.20 REQUIRED
 -             NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/SDL3")
-+set(FIND_ROOT_PATH_BACKUP ${CMAKE_FIND_ROOT_PATH})
-+set(FIND_ROOT_PATH_MODE_INCLUDE_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_INCLUDE})
-+set(FIND_ROOT_PATH_MODE_LIBRARY_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_LIBRARY})
-+set(FIND_ROOT_PATH_MODE_PACKAGE_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_PACKAGE})
-+set(FIND_ROOT_PATH_MODE_PROGRAM_BACKUP ${CMAKE_FIND_ROOT_PATH_MODE_PROGRAM})
-+set(CMAKE_FIND_ROOT_PATH ${CMAKE_PREFIX_PATH})
-+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
-+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
-+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM ONLY)
-+
-+# Search for local zlib version outside of Mac.
-+if(NOT APPLE AND NOT CPU_ARCH_ARM32 AND NOT CPU_ARCH_ARM64)
-+  find_package(ZLIB 1.3.1 REQUIRED)
-+endif()
-+
-+# Bundled dependencies.
-+find_package(zstd 1.5.7 REQUIRED)
-+find_package(WebP 1.6.0 REQUIRED)
-+find_package(PNG 1.6.59 REQUIRED)
-+find_package(JPEG REQUIRED)
-+find_package(SDL3 3.4.20 REQUIRED)
-+find_package(Freetype 2.15.0 REQUIRED)
-+find_package(harfbuzz REQUIRED)
-+find_package(SQLite3 3.54.1 REQUIRED)
-+find_package(plutosvg 0.0.8 REQUIRED)
-+find_package(cpuinfo REQUIRED)
-+#find_package(DiscordRPC 3.4.0 REQUIRED)
 +find_package(SoundTouch 2.3.3 REQUIRED)
 +find_package(libzip 1.2.1 REQUIRED)
 +find_package(Shaderc REQUIRED)
 +find_package(spirv_cross_c_shared REQUIRED)
-+
-+if(NOT WIN32 AND NOT APPLE)
-+  find_package(Libbacktrace REQUIRED)
-+
-+  # We need to add the rpath for shaderc to the executable.
-+  get_target_property(SHADERC_LIBRARY Shaderc::shaderc_shared IMPORTED_LOCATION)
-+  get_filename_component(SHADERC_LIBRARY_DIRECTORY ${SHADERC_LIBRARY} DIRECTORY)
-+  list(APPEND CMAKE_BUILD_RPATH ${SHADERC_LIBRARY_DIRECTORY})
-+  get_target_property(SPIRV_CROSS_LIBRARY spirv-cross-c-shared IMPORTED_LOCATION)
-+  get_filename_component(SPIRV_CROSS_LIBRARY_DIRECTORY ${SPIRV_CROSS_LIBRARY} DIRECTORY)
-+  list(APPEND CMAKE_BUILD_RPATH ${SPIRV_CROSS_LIBRARY_DIRECTORY})
-+endif()
-+
-+# Restore system package search path.
-+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ${FIND_ROOT_PATH_MODE_INCLUDE_BACKUP})
-+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ${FIND_ROOT_PATH_MODE_LIBRARY_BACKUP})
-+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ${FIND_ROOT_PATH_MODE_PACKAGE_BACKUP})
-+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM ${FIND_ROOT_PATH_MODE_PROGRAM_BACKUP})
-+set(CMAKE_FIND_ROOT_PATH ${FIND_ROOT_PATH_BACKUP})
++find_package(SDL3 3.4.20 REQUIRED)
  
  # All our builds include Qt, so this is not a problem.
  set(QT_NO_PRIVATE_MODULE_WARNING ON)
@@ -142,15 +105,15 @@ index f5f49ef09..0412d963a 100644
 -  find_package(Qt6 6.12.0 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
 -                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus)
-+  find_package(Qt6 6.12.0 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus REQUIRED)
++  find_package(Qt6 6.12.0 REQUIRED COMPONENTS Core Gui GuiPrivate Widgets LinguistTools DBus)
  else()
 -  find_package(Qt6 6.12.0 REQUIRED
 -                NO_DEFAULT_PATH PATHS "${DEPS_PATH}/lib/cmake/Qt6"
 -                COMPONENTS Core Gui GuiPrivate Widgets LinguistTools)
-+  find_package(Qt6 6.12.0 COMPONENTS Core Gui GuiPrivate Widgets LinguistTools REQUIRED)
++  find_package(Qt6 6.12.0 REQUIRED COMPONENTS Core Gui GuiPrivate Widgets LinguistTools)
  endif()
  
- # Verify dependency paths.
+-# Verify dependency paths.
 -foreach(dep zstd WebP PNG libjpeg-turbo freetype harfbuzz SQLite3plutosvg cpuinfo
 -            DiscordRPC SoundTouch libzip Shaderc spirv_cross_c_shared SDL3 Qt6)
 -  if((${dep}_LIBRARY AND NOT "${${dep}_LIBRARY}" MATCHES "^${DEPS_PATH}") OR
@@ -158,18 +121,12 @@ index f5f49ef09..0412d963a 100644
 -    message(FATAL_ERROR "Using incorrect ${dep} library. Check your dependencies.")
 -  endif()
 -endforeach()
-+#foreach(dep zstd WebP PNG libjpeg-turbo freetype harfbuzz SQLite3 plutosvg cpuinfo
-+#            DiscordRPC SoundTouch libzip Shaderc spirv_cross_c_shared SDL3 Qt6)
-+#  if((${dep}_LIBRARY AND NOT "${${dep}_LIBRARY}" MATCHES "^${DEPS_PATH}") OR
-+#     (${dep}_DIR AND NOT "${${dep}_DIR}" MATCHES "^${DEPS_PATH}"))
-+#    message(FATAL_ERROR "Using incorrect ${dep} library. Check your dependencies.")
-+#  endif()
-+#endforeach()
- 
+-
  # Libraries that are pulled in from host.
  find_package(CURL REQUIRED)
+ if(LINUX)
 diff --git a/CMakeModules/FindLibbacktrace.cmake b/CMakeModules/FindLibbacktrace.cmake
-index 09c47c197..39f3efddc 100644
+index 09c47c1..39f3efd 100644
 --- a/CMakeModules/FindLibbacktrace.cmake
 +++ b/CMakeModules/FindLibbacktrace.cmake
 @@ -8,14 +8,12 @@ FIND_PATH(
@@ -188,7 +145,7 @@ index 09c47c197..39f3efddc 100644
  
  include(FindPackageHandleStandardArgs)
 diff --git a/dep/imgui/CMakeLists.txt b/dep/imgui/CMakeLists.txt
-index 66e5c5fc5..6d0a66a4b 100644
+index 66e5c5f..6d0a66a 100644
 --- a/dep/imgui/CMakeLists.txt
 +++ b/dep/imgui/CMakeLists.txt
 @@ -19,12 +19,14 @@ set(SRCS
@@ -207,21 +164,8 @@ index 66e5c5fc5..6d0a66a4b 100644
 +  "${PLUTOVG_INCLUDE_DIRS}"
  )
  target_include_directories(imgui INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/include")
-diff --git a/dep/imgui/include/dyn_plutosvg.h b/dep/imgui/include/dyn_plutosvg.h
-index 753354fa4..1e416ab9f 100644
---- a/dep/imgui/include/dyn_plutosvg.h
-+++ b/dep/imgui/include/dyn_plutosvg.h
-@@ -3,7 +3,7 @@
- 
- #pragma once
- 
--#include <plutosvg.h>
-+#include <plutosvg/plutosvg.h>
- 
- class Error;
- 
 diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
-index 92c610308..5df871529 100644
+index 92c6103..5df8715 100644
 --- a/src/core/CMakeLists.txt
 +++ b/src/core/CMakeLists.txt
 @@ -239,7 +239,8 @@ function(add_core_resources target)
@@ -237,7 +181,7 @@ index 92c610308..5df871529 100644
 +  endif()
  endfunction()
 diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index 68a3d28c3..5765b7f07 100644
+index 68a3d28..5ed8f44 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
 @@ -111,8 +111,8 @@ add_library(util
@@ -251,16 +195,24 @@ index 68a3d28c3..5765b7f07 100644
  get_target_property(WEBP_INCLUDE_DIRS WebP::webp INTERFACE_INCLUDE_DIRECTORIES)
  get_target_property(LIBZIP_INCLUDE_DIRS libzip::zip INTERFACE_INCLUDE_DIRECTORIES)
  target_include_directories(util PRIVATE ${JPEG_INCLUDE_DIRS} ${PNG_INCLUDE_DIRS} ${WEBP_INCLUDE_DIRS} ${LIBZIP_INCLUDE_DIRS})
-@@ -209,7 +209,7 @@ if(ENABLE_VULKAN)
+@@ -209,13 +209,15 @@ if(ENABLE_VULKAN)
  endif()
  
  # freetype/plutosvg/shaderc/spirv-cross/ffmpeg is loaded dynamically to reduce module loads on startup.
 -get_target_property(FREETYPE_INCLUDE_DIRS freetype INTERFACE_INCLUDE_DIRECTORIES)
 +get_target_property(FREETYPE_INCLUDE_DIRS Freetype::Freetype INTERFACE_INCLUDE_DIRECTORIES)
  get_target_property(PLUTOSVG_INCLUDE_DIRS plutosvg::plutosvg INTERFACE_INCLUDE_DIRECTORIES)
++get_target_property(PLUTOVG_INCLUDE_DIRS plutovg::plutovg INTERFACE_INCLUDE_DIRECTORIES)
  get_target_property(SHADERC_INCLUDE_DIR Shaderc::shaderc_shared INTERFACE_INCLUDE_DIRECTORIES)
  get_target_property(SPIRV_CROSS_INCLUDE_DIR spirv-cross-c-shared INTERFACE_INCLUDE_DIRECTORIES)
-@@ -273,7 +273,7 @@ function(add_util_resources target)
+ target_include_directories(util PUBLIC
+   ${FREETYPE_INCLUDE_DIRS}
+   ${PLUTOSVG_INCLUDE_DIRS}
++  ${PLUTOVG_INCLUDE_DIRS}
+   ${SHADERC_INCLUDE_DIR}
+   ${SPIRV_CROSS_INCLUDE_DIR}
+   ${FFMPEG_INCLUDE_DIRS}
+@@ -273,7 +275,7 @@ function(add_util_resources target)
    endif()
  
    # Copy dynamically-loaded libraries into the bundle.

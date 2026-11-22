@@ -12,8 +12,9 @@ PYWEBVIEW_DEPENDENCIES += python-cryptography python-proxy-tools python-bottle
 PYWEBVIEW_DEPENDENCIES += python-typing-extensions libgtk3 webkitgtk
 
 define PYWEBVIEW_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/python3.14/site-packages/
-	cp -pr $(@D)/webview $(TARGET_DIR)/usr/lib/python3.14/site-packages/
+	rm -rf $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/webview
+	mkdir -p $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages
+	cp -pr $(@D)/webview $(TARGET_DIR)/usr/lib/python$(PYTHON3_VERSION_MAJOR)/site-packages/
 endef
 
 $(eval $(generic-package))

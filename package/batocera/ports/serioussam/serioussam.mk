@@ -11,8 +11,8 @@ SERIOUSSAM_EMULATOR_INFO = serioussam.emulator.yml
 SERIOUSSAM_DEPENDENCIES = sdl2 sdl2_mixer host-serioussam
 SERIOUSSAM_LICENSE = GPL-2.0
 
-SERIOUSSAM_CONF_OPTS += -DCMAKE_C_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-gcc
-SERIOUSSAM_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(HOST_DIR)/bin/$(GNU_TARGET_NAME)-g++
+SERIOUSSAM_CONF_OPTS += -DCMAKE_C_COMPILER=$(TARGET_CC)
+SERIOUSSAM_CONF_OPTS += -DCMAKE_CXX_COMPILER=$(TARGET_CXX)
 SERIOUSSAM_CONF_OPTS += -DImageMagick_EXECUTABLE_DIR=/usr/bin
 
 define HOST_SERIOUSSAM_BUILD_CMDS
@@ -21,8 +21,9 @@ define HOST_SERIOUSSAM_BUILD_CMDS
 endef
 
 define HOST_SERIOUSSAM_INSTALL_CMDS
-	cp -av $(HOST_SERIOUSSAM_BUILDDIR)/SamTFE/Sources/ecc	$(HOST_DIR)/bin
-	cp -av $(HOST_SERIOUSSAM_BUILDDIR)/SamTSE/Sources/ecc-se $(HOST_DIR)/bin
+	$(INSTALL) -m 0755 -D -t $(HOST_DIR)/bin \
+		$(HOST_SERIOUSSAM_BUILDDIR)/SamTFE/Sources/ecc \
+		$(HOST_SERIOUSSAM_BUILDDIR)/SamTSE/Sources/ecc-se
 endef
 
 ifeq ($(BR2_PACKAGE_BATOCERA_BCM27XX),y)
@@ -31,13 +32,15 @@ endif
 
 define SERIOUSSAM_INSTALL_TARGET_CMDS
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/serioussam/*.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(SERIOUSSAM_PKGDIR)/*.keys
 	# TFE Assets
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtfe
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
 	cp -av $(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/Debug/* $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
-	cp -av $(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/{serioussam-ded,serioussam-mkfont,serioussam} $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin \
+		$(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/serioussam-ded \
+		$(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/serioussam-mkfont \
+		$(SERIOUSSAM_BUILDDIR)/SamTFE/Sources/serioussam
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin/*
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00.gro				$(TARGET_DIR)/usr/share/game_assets/samtfe
 	ln -sf /userdata/roms/ports/serioussam/SamTFE/1_00c.gro				$(TARGET_DIR)/usr/share/game_assets/samtfe
@@ -55,9 +58,9 @@ define SERIOUSSAM_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtse/Bin
 	# copy assets
 	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/Debug/*				$(TARGET_DIR)/usr/share/game_assets/samtse/Bin
-	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse-mkfont	$(TARGET_DIR)/usr/share/game_assets/samtse/Bin
-	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse-ded		$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam-ded
-	cp -av $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse			$(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/share/game_assets/samtse/Bin $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse-mkfont
+	$(INSTALL) -m 0755 -D $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse-ded $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam-ded
+	$(INSTALL) -m 0755 -D $(SERIOUSSAM_BUILDDIR)/SamTSE/Sources/serioussamse $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/serioussam
 	$(TARGET_STRIP) $(TARGET_DIR)/usr/share/game_assets/samtse/Bin/*
 
 	# link libraries
@@ -86,8 +89,8 @@ define SERIOUSSAM_CP_WEAPONS
 	cp -vfr $(@D)/SamTSE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTSE/Sources/Entities/PlayerWeapons.es
 	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTSE/Sources/CMakeLists.txt
 
-	sed '/RPATH_SETTINGS/d' $(@D)/SamTFE/Sources/CMakeLists.txt
-	sed '/RPATH_SETTINGS/d' $(@D)/SamTSE/Sources/CMakeLists.txt
+	sed -i '/RPATH_SETTINGS/d' $(@D)/SamTFE/Sources/CMakeLists.txt
+	sed -i '/RPATH_SETTINGS/d' $(@D)/SamTSE/Sources/CMakeLists.txt
 endef
 SERIOUSSAM_POST_EXTRACT_HOOKS += SERIOUSSAM_CP_WEAPONS
 

@@ -6,7 +6,7 @@
 # Version: Commits on Oct 29, 2026
 LIBRETRO_YABASANSHIRO_VERSION = 1cfb8fb3f4c17f8bb68ff415f4956f9903bcf8e0
 LIBRETRO_YABASANSHIRO_SITE = $(call github,KMFDManic,Phaenon-Xtreme,$(LIBRETRO_YABASANSHIRO_VERSION))
-LIBRETRO_YABASANSHIRO_LICENSE = GPLv2
+LIBRETRO_YABASANSHIRO_LICENSE = GPL-2.0
 LIBRETRO_YABASANSHIRO_DEPENDENCIES += retroarch
 LIBRETRO_YABASANSHIRO_EMULATOR_INFO = yabasanshiro.libretro.core.yml
 
@@ -40,10 +40,8 @@ define LIBRETRO_YABASANSHIRO_BUILD_CMDS
 endef
 
 define LIBRETRO_YABASANSHIRO_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/km_phaenon_xtreme_amped_libretro.so $(TARGET_DIR)/usr/lib/libretro/yabasanshiro_libretro.so
-	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_amped_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
+	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_amped_libretro.info $(TARGET_DIR)/usr/share/libretro/info/km_phaenon_xtreme_amped_libretro.info
 	$(INSTALL) -D $(@D)/_phaenon/yabause/src/libretro/info/km_phaenon_xtreme_amped_libretro.info $(TARGET_DIR)/usr/share/libretro/info/yabasanshiro_libretro.info
 endef
 

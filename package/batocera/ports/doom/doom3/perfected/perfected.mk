@@ -7,14 +7,13 @@
 PERFECTED_VERSION = 0976ee154cf62d9fb01a5b8456020acf32ff92ac
 PERFECTED_SITE = $(call github,dhewm,dhewm3-sdk,$(PERFECTED_VERSION))
 PERFECTED_BRANCH = perfected
-PERFECTED_LICENSE = GPLv3
+PERFECTED_LICENSE = GPL-3.0
 PERFECTED_LICENSE_FILES = COPYING.txt
 
-PERFECTED_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+PERFECTED_DEPENDENCIES = dhewm3
 
 define PERFECTED_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/perfected*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/perfected*.so
 endef
 
 $(eval $(cmake-package))

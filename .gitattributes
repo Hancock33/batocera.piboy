@@ -1,6 +1,7 @@
 *.in    text eol=lf
 *.json  text eol=lf
 *.keys  text eol=lf
+*.md    text eol=lf
 *.mk    text eol=lf
 *.py    text eol=lf
 *.rules text eol=lf

@@ -6,6 +6,8 @@
 # Version: Commits on Mar 13, 2026
 XONE_VERSION = v0.5.8
 XONE_SITE = $(call github,dlundqvist,xone,$(XONE_VERSION))
+XONE_LICENSE = GPL-2.0
+XONE_LICENSE_FILES = LICENSE
 XONE_DEPENDENCIES = host-cabextract host-libcurl libusb
 
 # 6.1 boards carry backport patches for current xone
@@ -18,6 +20,8 @@ XONE_FIRMWARE_URLS = \
 	https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2017/07/1cd6a87c-623f-4407-a52d-c31be49e925c_e19f60808bdcbfbd3c3df6be3e71ffc52e43261e.cab \
 	https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2017/06/1dbd7cb4-53bc-4857-a5b0-5955c8acaf71_9081931e7d664429a93ffda0db41b7545b7ac257.cab \
 	https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2017/08/aeff215c-3bc4-4d36-a3ea-e14bfa8fa9d2_e58550c4f74a27e51e5cb6868b10ff633fa77164.cab
+
+XONE_EXTRA_DOWNLOADS = $(XONE_FIRMWARE_URLS)
 
 XONE_FIRMWARE_PIDS = 02e6 02fe 02f9 091e
 
@@ -41,24 +45,20 @@ define XONE_PREPARE_FIRMWARE
 		FILENAME=$$(echo "$$FILENAME" | tr -d '[:space:]'); \
 		HASH=$$(echo "$$HASH" | tr -d '[:space:]'); \
 		echo "--> Preparing firmware PID=$$PID ($$FILENAME)"; \
-		TEMP_CAB="$(@D)/driver_$$i.cab"; \
+		TEMP_CAB="$(XONE_DL_DIR)/$${URL##*/}"; \
 		TEMP_EXTRACT_DIR="$(@D)/extract_$$i"; \
 		DEST_NAME="xone_dongle_$$PID.bin"; \
-		if ! wget -c --tries=3 --trust-server-names -O "$$TEMP_CAB" "$$URL"; then \
-			echo "WARNING: Failed to download $$URL, skipping"; \
-			i=`expr $$i + 1`; \
-			continue; \
-		fi; \
+		rm -rf "$$TEMP_EXTRACT_DIR"; \
 		mkdir -p "$$TEMP_EXTRACT_DIR"; \
-		$(HOST_DIR)/bin/cabextract -d "$$TEMP_EXTRACT_DIR" "$$TEMP_CAB"; \
+		$(HOST_DIR)/bin/cabextract -q -d "$$TEMP_EXTRACT_DIR" "$$TEMP_CAB" || exit 1; \
 		if [ -f "$$TEMP_EXTRACT_DIR/$$FILENAME" ]; then \
-			echo "$$HASH  $$TEMP_EXTRACT_DIR/$$FILENAME" | sha256sum -c -; \
+			echo "$$HASH  $$TEMP_EXTRACT_DIR/$$FILENAME" | sha256sum -c - || exit 1; \
 			mv "$$TEMP_EXTRACT_DIR/$$FILENAME" "$$FIRMWARE_STAGING_DIR/$$DEST_NAME"; \
 			echo "--- Staged $$DEST_NAME ---"; \
 		else \
 			echo "WARNING: $$FILENAME not found in CAB $$TEMP_CAB"; \
 		fi; \
-		rm -rf "$$TEMP_EXTRACT_DIR" "$$TEMP_CAB"; \
+		rm -rf "$$TEMP_EXTRACT_DIR"; \
 		i=`expr $$i + 1`; \
 	done
 endef
@@ -66,7 +66,6 @@ endef
 XONE_PRE_INSTALL_TARGET_HOOKS += XONE_PREPARE_FIRMWARE
 
 define XONE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/etc/modprobe.d
 	$(INSTALL) -D -m 0644 $(@D)/install/modprobe.conf $(TARGET_DIR)/etc/modprobe.d/xone-blacklist.conf
 	mkdir -p $(TARGET_DIR)/lib/firmware
 	cp -a $(@D)/firmware_files/. $(TARGET_DIR)/lib/firmware/

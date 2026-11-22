@@ -6,7 +6,7 @@
 # Version: Commits on Aug 23, 2026
 LIBRETRO_XMIL_VERSION = 3106aa54ffb244cca4019a6e95dacaa698781bc3
 LIBRETRO_XMIL_SITE =  $(call github,libretro,xmil-libretro,$(LIBRETRO_XMIL_VERSION))
-LIBRETRO_XMIL_LICENSE = BSD-3
+LIBRETRO_XMIL_LICENSE = BSD-3-Clause
 LIBRETRO_XMIL_DEPENDENCIES += retroarch
 LIBRETRO_XMIL_EMULATOR_INFO = x1.libretro.core.yml
 
@@ -28,8 +28,6 @@ define LIBRETRO_XMIL_BUILD_CMDS
 endef
 
 define LIBRETRO_XMIL_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/libretro/x1_libretro.so $(TARGET_DIR)/usr/lib/libretro/x1_libretro.so
 	$(INSTALL) -D $(@D)/x1_libretro.info $(TARGET_DIR)/usr/share/libretro/info/x1_libretro.info
 endef

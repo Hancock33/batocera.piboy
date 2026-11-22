@@ -1,0 +1,28 @@
+From 9396af22d9109fefe87ba1606a832739483eb3f4 Mon Sep 17 00:00:00 2001
+From: batocera <none@invalid>
+Date: Sat, 21 Nov 2026 19:35:07 +0000
+Subject: [PATCH 3/3] host_shaders: allow overriding GLSLANG_COMPILER
+
+When a system glslang is found while cross-compiling, its imported
+glslang::glslang-standalone target points at a target binary that
+cannot run on the build machine. Honour a GLSLANG_COMPILER passed on
+the command line.
+---
+ src/video_core/host_shaders/CMakeLists.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/video_core/host_shaders/CMakeLists.txt b/src/video_core/host_shaders/CMakeLists.txt
+index 1f4d3bc..f665898 100644
+--- a/src/video_core/host_shaders/CMakeLists.txt
++++ b/src/video_core/host_shaders/CMakeLists.txt
+@@ -1,7 +1,9 @@
+ # SPDX-FileCopyrightText: Copyright 2023 Citra Emulator Project
+ # SPDX-License-Identifier: GPL-2.0-or-later
+ 
+-if (TARGET glslang-standalone)
++if (GLSLANG_COMPILER)
++    # Use the compiler given on the command line (e.g. a host glslang).
++elseif (TARGET glslang-standalone)
+     set(GLSLANG_COMPILER glslang-standalone)
+ elseif (TARGET glslang::glslang-standalone)
+     set(GLSLANG_COMPILER glslang::glslang-standalone)

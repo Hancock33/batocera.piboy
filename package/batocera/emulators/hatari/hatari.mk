@@ -3,19 +3,18 @@
 # hatari
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-HATARI_VERSION = 75b47d64f8a337443354af7dbca10de57768e322
+# Version: Commits on Nov 22, 2026
+HATARI_VERSION = 96c722839fa4cf6dad87cb90d8b377deec28f0fa
 HATARI_SITE = $(call github,hatari,hatari,$(HATARI_VERSION))
-HATARI_LICENSE = GPLv3
+HATARI_LICENSE = GPL-3.0
 HATARI_DEPENDENCIES = sdl2 zlib libpng libcapsimage
 HATARI_EMULATOR_INFO = hatari.emulator.yml
 
 HATARI_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-HATARI_CONF_OPTS += -DCAPSIMAGE_INCLUDE_DIR="($STAGING_DIR)/usr/include/caps"
 
 define HATARI_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/src/hatari $(TARGET_DIR)/usr/bin/hatari
-		mkdir -p $(TARGET_DIR)/usr/share/hatari
+	$(INSTALL) -m 0755 -D $(@D)/src/hatari $(TARGET_DIR)/usr/bin/hatari
+	mkdir -p $(TARGET_DIR)/usr/share/hatari
 endef
 
 $(eval $(cmake-package))

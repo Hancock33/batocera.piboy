@@ -3,9 +3,9 @@
 # python-pyxel
 #
 ################################################################################
-# Version: Commits on Nov 16, 2026
-PYTHON_PYXEL_VERSION = v3.0.2
-PYTHON_PYXEL_SITE =  $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
+# Version: Commits on Nov 20, 2026
+PYTHON_PYXEL_VERSION = v3.0.3
+PYTHON_PYXEL_SITE = $(call github,kitao,pyxel,$(PYTHON_PYXEL_VERSION))
 PYTHON_PYXEL_SETUP_TYPE = maturin
 PYTHON_PYXEL_LICENSE = MIT
 PYTHON_PYXEL_CARGO_MANIFEST_PATH = crates/pyxel-core/Cargo.toml
@@ -39,8 +39,7 @@ define PYTHON_PYXEL_SAMPLE_AND_KEYS
 	cp -rf $(@D)/python/pyxel $(TARGET_DIR)/usr/lib/python*/site-packages/
 	rm -rf $(TARGET_DIR)/usr/lib/python*/site-packages/pyxel/examples
 	cd $(TARGET_DIR)/usr/lib/python*/site-packages/pyxel && ln -sf ../pyxel_extension .
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy/
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/engines/python-pyxel/pyxel.keys $(TARGET_DIR)/usr/share/evmapy/
+	$(INSTALL) -D -m 0644 $(PYTHON_PYXEL_PKGDIR)/pyxel.keys $(TARGET_DIR)/usr/share/evmapy/pyxel.keys
 endef
 
 PYTHON_PYXEL_PRE_BUILD_HOOKS += PYTHON_PYXEL_STAGE_PACKAGE_FILES

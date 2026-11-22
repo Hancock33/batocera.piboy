@@ -1,0 +1,7 @@
+config BR2_PACKAGE_ALSA_TOPOLOGY
+	bool "alsa-topology"
+
+	help
+	  ALSA topology configuration files.
+
+	  https://github.com/alsa-project/alsa-topology-conf

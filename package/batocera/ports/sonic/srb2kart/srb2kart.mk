@@ -20,8 +20,7 @@ endef
 SRB2KART_POST_EXTRACT_HOOKS += SRB2KART_ASSETS
 
 define SRB2KART_INSTALL_TARGET_CMDS
-	cp -L $(@D)/buildroot-build/bin/srb2kart $(TARGET_DIR)/usr/bin/srb2kart
-	chmod 754 $(TARGET_DIR)/usr/bin/srb2kart
+	$(INSTALL) -m 0754 -D $(@D)/buildroot-build/bin/srb2kart $(TARGET_DIR)/usr/bin/srb2kart
 endef
 
 $(eval $(cmake-package))

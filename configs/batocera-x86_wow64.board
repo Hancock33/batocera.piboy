@@ -6,7 +6,7 @@ BR2_i386=y
 BR2_PACKAGE_BATOCERA_TARGET_X86=y
 
 # Toolchain definition
-BR2_TARGET_OPTIMIZATION="-march=haswell -mtune=generic -mfpmath=sse"
+BR2_TARGET_OPTIMIZATION="-march=haswell -mtune=generic -mfpmath=sse -fno-semantic-interposition"
 BR2_GLOBAL_PATCH_DIR="$(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/patches $(BR2_EXTERNAL_BATOCERA_PATH)/board/batocera/x86/patches"
 
 # Kernel 7.3 (headers only)
@@ -36,6 +36,10 @@ BR2_PACKAGE_LLVM_RTTI=y
 BR2_PACKAGE_MESA3D_LLVM=y
 BR2_PACKAGE_PYTHON3_XZ=y
 BR2_PACKAGE_WINE_CUSTOM=y
+
+# gamescope pacing for 32-bit Vulkan games
+BR2_PACKAGE_GAMESCOPE=y
+BR2_PACKAGE_GAMESCOPE_WSI_LAYER_ONLY=y
 
 # Enables ccache
 BR2_CCACHE_DIR="$(HOME)/build-dir/ccache/x86_wow64"

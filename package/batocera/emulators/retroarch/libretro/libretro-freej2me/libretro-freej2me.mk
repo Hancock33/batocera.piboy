@@ -15,8 +15,6 @@ define LIBRETRO_FREEJ2ME_BUILD_CMDS
 endef
 
 define LIBRETRO_FREEJ2ME_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/src/libretro/freej2me_plus_libretro.so $(TARGET_DIR)/usr/lib/libretro/freej2me_libretro.so
 	$(INSTALL) -D $(@D)/src/libretro/freej2me_plus_libretro.info $(TARGET_DIR)/usr/share/libretro/info/freej2me_libretro.info
 endef

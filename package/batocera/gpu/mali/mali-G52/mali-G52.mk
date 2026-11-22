@@ -6,11 +6,9 @@
 # Version: Commits on Aug 13, 2023
 MALI_G52_VERSION = 6ab9d7ce7a991f997460697013fc54029fcac681
 MALI_G52_SITE = $(call github,rtissera,a311d2-mali-g52,$(MALI_G52_VERSION))
-MALI_G52_LICENSE = Proprietary
+MALI_G52_LICENSE = PROPRIETARY
 MALI_G52_LICENSE_FILES = END_USER_LICENCE_AGREEMENT.txt
 MALI_G52_INSTALL_STAGING = YES
-
-MALI_G52_EXTRA_DOWNLOADS = https://gitlab.freedesktop.org/glvnd/libglvnd/-/archive/master/libglvnd-master.tar.gz
 
 MALI_G52_PROVIDES = libegl libgbm libgles libmali
 MALI_G52_DEPENDENCIES = host-patchelf libdrm libglvnd wayland

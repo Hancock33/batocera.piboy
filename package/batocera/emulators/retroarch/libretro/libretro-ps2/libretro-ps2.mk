@@ -3,13 +3,13 @@
 # libretro-ps2
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBRETRO_PS2_VERSION = b69dbb3f47836a3820e52092bb9c8e78ba31ba10
+# Version: Commits on Nov 22, 2026
+LIBRETRO_PS2_VERSION = 778a8cd55603e69f44c69a5e996367f908a011ca
 LIBRETRO_PS2_SITE = https://github.com/libretro/parallel-ps2.git
 LIBRETRO_PS2_SITE_METHOD = git
 LIBRETRO_PS2_GIT_SUBMODULES = YES
-LIBRETRO_PS2_LICENSE = GPLv2
-LIBRETRO_PS2_DEPENDENCIES = libaio xz host-xxd retroarch
+LIBRETRO_PS2_LICENSE = GPL-2.0
+LIBRETRO_PS2_DEPENDENCIES = retroarch
 LIBRETRO_PS2_EMULATOR_INFO = pcsx2.libretro.core.yml
 LIBRETRO_PS2_SUPPORTS_IN_SOURCE_BUILD = NO
 
@@ -19,7 +19,6 @@ define LIBRETRO_PS2_BUILD_CMDS
 endef
 
 define LIBRETRO_PS2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/pcsx2/resources
 	$(INSTALL) -D $(@D)/pcsx2_libretro.so    $(TARGET_DIR)/usr/lib/libretro/pcsx2_libretro.so
 	cp -f $(@D)/bin/resources/GameIndex.yaml $(TARGET_DIR)/usr/share/batocera/datainit/bios/pcsx2/resources

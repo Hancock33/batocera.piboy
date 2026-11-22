@@ -6,7 +6,7 @@
 # Version: Commits on Nov 09, 2026
 LIBRETRO_VICE_VERSION = 76cde0b2cc4e52106618f2cc5d9d1112d9205c89
 LIBRETRO_VICE_SITE = $(call github,sonninnos,libretro-vice,$(LIBRETRO_VICE_VERSION))
-LIBRETRO_VICE_LICENSE = GPLv2
+LIBRETRO_VICE_LICENSE = GPL-2.0
 LIBRETRO_VICE_DEPENDENCIES += retroarch
 LIBRETRO_VICE_EMULATOR_INFO = vice_x128.libretro.core.yml vice_x64.libretro.core.yml vice_x64sc.libretro.core.yml vice_xpet.libretro.core.yml vice_xplus4.libretro.core.yml vice_xscpu64.libretro.core.yml vice_xvic.libretro.core.yml
 
@@ -45,7 +45,6 @@ define LIBRETRO_VICE_BUILD_CMDS
 endef
 
 define LIBRETRO_VICE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/vice_x64_libretro.so    $(TARGET_DIR)/usr/lib/libretro/vice_x64_libretro.so
 	$(INSTALL) -D $(@D)/vice_x64sc_libretro.so  $(TARGET_DIR)/usr/lib/libretro/vice_x64sc_libretro.so
 	$(INSTALL) -D $(@D)/vice_x128_libretro.so   $(TARGET_DIR)/usr/lib/libretro/vice_x128_libretro.so

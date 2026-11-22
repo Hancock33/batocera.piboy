@@ -5,8 +5,8 @@
 ################################################################################
 # Version: Commits on Jul 24, 2026
 WILDMIDI_VERSION = wildmidi-0.5.0
-WILDMIDI_SITE =  $(call github,Mindwerks,wildmidi,$(WILDMIDI_VERSION))
-WILDMIDI_LICENSE = LGPLv3
+WILDMIDI_SITE = $(call github,Mindwerks,wildmidi,$(WILDMIDI_VERSION))
+WILDMIDI_LICENSE = LGPL-3.0
 WILDMIDI_INSTALL_STAGING = YES
 
 WILDMIDI_CONF_OPTS += -DBUILD_TESTING=OFF -DWANT_STATIC=ON -DWANT_PLAYER=OFF

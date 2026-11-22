@@ -1,0 +1,11 @@
+config BR2_PACKAGE_DSPERATE
+	bool "dsperate"
+	select BR2_PACKAGE_LIBCURL
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_VULKAN_HEADERS
+
+	help
+	  DSperate, a Nintendo DS and DSi emulator aiming at
+	  DraStic-level performance on ARM handhelds.
+
+	  https://github.com/beebono/DSperate

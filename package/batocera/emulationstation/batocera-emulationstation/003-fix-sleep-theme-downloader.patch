@@ -1,8 +1,10 @@
+Poll faster in the theme downloader loop
+
 diff --git a/es-app/src/ApiSystem.cpp b/es-app/src/ApiSystem.cpp
-index 244cac40a..2f4b19dd8 100644
+index b673e27..36e56df 100644
 --- a/es-app/src/ApiSystem.cpp
 +++ b/es-app/src/ApiSystem.cpp
-@@ -1106,7 +1106,7 @@ bool ApiSystem::downloadGitRepository(const std::string& url, const std::string&
+@@ -1135,7 +1135,7 @@ bool ApiSystem::downloadGitRepository(const std::string& url, const std::string&
  			}
  		}
  

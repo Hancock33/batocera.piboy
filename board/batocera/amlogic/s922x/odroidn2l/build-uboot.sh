@@ -30,7 +30,7 @@ if test -e ${BR2_DL_DIR}/uboot/u-boot-2024.01.tar.bz2
 then
     cp ${BR2_DL_DIR}/uboot/u-boot-2024.01.tar.bz2 .
 else
-    wget "https://ftp.denx.de/pub/u-boot/u-boot-2024.01.tar.bz2"
+    wget "https://u-boot.osuosl.org/u-boot-2024.01.tar.bz2"
 fi
 
 tar xf "u-boot-2024.01.tar.bz2" || exit 1

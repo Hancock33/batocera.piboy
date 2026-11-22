@@ -11,6 +11,7 @@
 ################################################################################
 
 UBOOT_ODROID_M2_VERSION = 1.0
+UBOOT_ODROID_M2_LICENSE = GPL-2.0+
 UBOOT_ODROID_M2_BINARIES_SUBDIR = odroid-m2
 UBOOT_ODROID_M2_BOOT_SRC = u-boot-rockchip.bin
 

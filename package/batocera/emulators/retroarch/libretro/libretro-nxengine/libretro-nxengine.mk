@@ -6,7 +6,7 @@
 # Version: Commits on Aug 22, 2026
 LIBRETRO_NXENGINE_VERSION = fd1c0686f8b4c0aea9b5addbc077e3ad7da23bb7
 LIBRETRO_NXENGINE_SITE = $(call github,libretro,nxengine-libretro,$(LIBRETRO_NXENGINE_VERSION))
-LIBRETRO_NXENGINE_LICENSE = GPLv3
+LIBRETRO_NXENGINE_LICENSE = GPL-3.0
 LIBRETRO_NXENGINE_DEPENDENCIES += retroarch
 LIBRETRO_NXENGINE_EMULATOR_INFO = nxengine.libretro.core.yml
 
@@ -32,7 +32,6 @@ define LIBRETRO_NXENGINE_BUILD_CMDS
 endef
 
 define LIBRETRO_NXENGINE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/nxengine_libretro.so $(TARGET_DIR)/usr/lib/libretro/nxengine_libretro.so
 endef
 

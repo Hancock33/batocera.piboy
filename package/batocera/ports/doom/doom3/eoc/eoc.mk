@@ -7,14 +7,13 @@
 EOC_VERSION = d97448a28c6234e060dd75a158b4357fa5801b8a
 EOC_SITE = $(call github,dhewm,dhewm3-sdk,$(EOC_VERSION))
 EOC_BRANCH = eoc
-EOC_LICENSE = GPLv3
+EOC_LICENSE = GPL-3.0
 EOC_LICENSE_FILES = COPYING.txt
 
-EOC_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+EOC_DEPENDENCIES = dhewm3
 
 define EOC_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/eoc*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/eoc*.so
 endef
 
 $(eval $(cmake-package))

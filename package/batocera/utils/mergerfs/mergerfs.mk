@@ -3,19 +3,19 @@
 # mergerfs
 #
 ################################################################################
-# Version: Commits on Nov 05, 2026
-MERGERFS_VERSION = 2.42.2
+# Version: Commits on May 08, 2026
+MERGERFS_VERSION = 2.42.0
 MERGERFS_SITE = $(call github,trapexit,mergerfs,$(MERGERFS_VERSION))
 MERGERFS_LICENSE = MIT
+MERGERFS_LICENSE_FILES = LICENSE
 MERGERFS_DEPENDENCIES = host-pkgconf
 
 MERGERFS_LDFLAGS = $(TARGET_LDFLAGS)
-MERGERFS_CXXFLAGS = $(TARGET_CXXFLAGS) -O2 -fno-plt -fPIC
+MERGERFS_CXXFLAGS = $(TARGET_CXXFLAGS) -fno-plt -fPIC
 
 ifeq ($(BR2_STATIC_LIBS),y)
 MERGERFS_LDFLAGS += -static
 endif
-MERGERFS_TARGET = mergerfs
 
 define MERGERFS_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) \
@@ -27,9 +27,8 @@ define MERGERFS_BUILD_CMDS
 endef
 
 define MERGERFS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/etc/init.d/
-	$(INSTALL) -D -m 0755 $(@D)/build/$(MERGERFS_TARGET) $(TARGET_DIR)/usr/bin/mergerfs
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/mergerfs/S12mergerfs $(TARGET_DIR)/etc/init.d/
+	$(INSTALL) -D -m 0755 $(@D)/build/mergerfs $(TARGET_DIR)/usr/bin/mergerfs
+	$(INSTALL) -D -m 0755 $(MERGERFS_PKGDIR)/S12mergerfs $(TARGET_DIR)/etc/init.d/S12mergerfs
 endef
 
 $(eval $(generic-package))

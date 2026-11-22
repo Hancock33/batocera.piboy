@@ -6,6 +6,7 @@
 
 SDL2_TOUCH_TEST_VERSION = 1.4
 SDL2_TOUCH_TEST_SOURCE =
+SDL2_TOUCH_TEST_LICENSE = LGPL-3.0+
 SDL2_TOUCH_TEST_DEPENDENCIES = sdl2 sdl2_ttf udev
 
 define SDL2_TOUCH_TEST_BUILD_CMDS
@@ -15,8 +16,7 @@ define SDL2_TOUCH_TEST_BUILD_CMDS
 endef
 
 define SDL2_TOUCH_TEST_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -m 0755 $(@D)/sdl2-touch-test $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D -m 0755 $(@D)/sdl2-touch-test $(TARGET_DIR)/usr/bin/sdl2-touch-test
 endef
 
 $(eval $(generic-package))

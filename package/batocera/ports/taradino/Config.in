@@ -1,0 +1,11 @@
+config BR2_PACKAGE_TARADINO
+	bool "taradino"
+	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_SDL2
+	select BR2_PACKAGE_SDL2_MIXER
+
+	help
+	  ROTT
+	  SDL2 port of Rise of the Triad.
+
+	  https://github.com/fabiangreffrath/taradino

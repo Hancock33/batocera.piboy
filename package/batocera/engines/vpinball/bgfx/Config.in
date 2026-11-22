@@ -1,8 +1,9 @@
 config BR2_PACKAGE_BGFX
 	bool "bgfx"
+	select BR2_PACKAGE_XLIB_LIBX11
 
 	help
-	  CMake build scripts for bgfx.
-	  Released under public domain.
+	  Cross-platform rendering library, built with the bgfx.cmake
+	  build scripts.
 
-	  bkaradzic.github.io/bgfx/index.html
+	  https://github.com/bkaradzic/bgfx.cmake

@@ -6,11 +6,10 @@
 
 BATOCERA_NVIDIA_VERSION = 1.5
 BATOCERA_NVIDIA_SOURCE =
+BATOCERA_NVIDIA_LICENSE = LGPL-3.0+
 
 define BATOCERA_NVIDIA_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/nvidia/batocera-nvidia/batocera-nvidia $(TARGET_DIR)/usr/bin/
-
+	$(INSTALL) -D -m 0755 $(BATOCERA_NVIDIA_PKGDIR)/batocera-nvidia $(TARGET_DIR)/usr/bin/batocera-nvidia
 	# [Xorg]
 	mkdir -p $(TARGET_DIR)/etc/X11/xorg.conf.d
 	ln -sf /userdata/system/99-nvidia.conf                  $(TARGET_DIR)/etc/X11/xorg.conf.d/99-nvidia.conf

@@ -6,7 +6,7 @@
 # Version: Commits on Nov 09, 2026
 LIBRETRO_PUAE_VERSION = d366f77c60e5a5f059f129cc3773d3048306083b
 LIBRETRO_PUAE_SITE = $(call github,sonninnos,libretro-uae,$(LIBRETRO_PUAE_VERSION))
-LIBRETRO_PUAE_LICENSE = GPLv2
+LIBRETRO_PUAE_LICENSE = GPL-2.0
 LIBRETRO_PUAE_DEPENDENCIES += retroarch
 LIBRETRO_PUAE_EMULATOR_INFO = puae.libretro.core.yml
 
@@ -17,7 +17,6 @@ define LIBRETRO_PUAE_BUILD_CMDS
 endef
 
 define LIBRETRO_PUAE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/puae_libretro.so $(TARGET_DIR)/usr/lib/libretro/puae_libretro.so
 endef
 

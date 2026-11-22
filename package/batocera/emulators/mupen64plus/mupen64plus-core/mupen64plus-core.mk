@@ -6,7 +6,7 @@
 # Version: Commits on Nov 11, 2026
 MUPEN64PLUS_CORE_VERSION = daae68e2cc871cef4ac76e162c173894d052a28d
 MUPEN64PLUS_CORE_SITE = $(call github,mupen64plus,mupen64plus-core,$(MUPEN64PLUS_CORE_VERSION))
-MUPEN64PLUS_CORE_LICENSE = GPLv2
+MUPEN64PLUS_CORE_LICENSE = GPL-2.0
 MUPEN64PLUS_CORE_DEPENDENCIES = alsa-lib freetype dejavu host-nasm sdl2
 MUPEN64PLUS_CORE_INSTALL_STAGING = YES
 MUPEN64PLUS_CORE_EMULATOR_INFO = mupen64plus.emulator.yml
@@ -88,17 +88,15 @@ define MUPEN64PLUS_CORE_INSTALL_STAGING_CMDS
 endef
 
 define MUPEN64PLUS_CORE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib
-	$(INSTALL) -m 0644 $(@D)/projects/unix/libmupen64plus.so.2.0.0 $(TARGET_DIR)/usr/lib
-	mkdir -p $(TARGET_DIR)/usr/share/mupen64plus
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib $(@D)/projects/unix/libmupen64plus.so.2.0.0
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/mupen64plus \
+		$(@D)/data/mupen64plus.ini \
+		$(@D)/data/mupencheat.txt
 	ln -sf /usr/share/fonts/dejavu/DejaVuSans.ttf $(TARGET_DIR)/usr/share/mupen64plus/font.ttf
-	cp $(@D)/data/mupen64plus.ini $(TARGET_DIR)/usr/share/mupen64plus/mupen64plus.ini
-	cp $(@D)/data/mupencheat.txt "$(TARGET_DIR)/usr/share/mupen64plus/mupencheat.txt"
 
 	# input.xml
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/mupen64
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/mupen64plus/mupen64plus-core/controllers/input.xml \
-	$(TARGET_DIR)/usr/share/batocera/datainit/system/configs/mupen64
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/mupen64 \
+		$(MUPEN64PLUS_CORE_PKGDIR)/controllers/input.xml
 endef
 
 define MUPEN64PLUS_CORE_CROSS_FIXUP

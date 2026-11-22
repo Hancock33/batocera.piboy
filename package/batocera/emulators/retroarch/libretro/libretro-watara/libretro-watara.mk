@@ -6,7 +6,7 @@
 # Version: Commits on Jun 04, 2026
 LIBRETRO_WATARA_VERSION = 227c5f6f3ce74d32e9002ce24c1420288559a860
 LIBRETRO_WATARA_SITE = $(call github,libretro,potator,$(LIBRETRO_WATARA_VERSION))
-LIBRETRO_WATARA_LICENSE = GPLv2
+LIBRETRO_WATARA_LICENSE = GPL-2.0
 LIBRETRO_WATARA_DEPENDENCIES += retroarch
 LIBRETRO_WATARA_EMULATOR_INFO = potator.libretro.core.yml
 
@@ -38,7 +38,6 @@ define LIBRETRO_WATARA_BUILD_CMDS
 endef
 
 define LIBRETRO_WATARA_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/platform/libretro/potator_libretro.so $(TARGET_DIR)/usr/lib/libretro/potator_libretro.so
 endef
 

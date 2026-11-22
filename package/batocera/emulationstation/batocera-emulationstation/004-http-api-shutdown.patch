@@ -1,5 +1,7 @@
+Add a /shutdown endpoint to the HTTP API
+
 diff --git a/es-app/src/services/HttpServerThread.cpp b/es-app/src/services/HttpServerThread.cpp
-index 0ab8d1ca6..aa2c18107 100644
+index 0ab8d1c..aa2c181 100644
 --- a/es-app/src/services/HttpServerThread.cpp
 +++ b/es-app/src/services/HttpServerThread.cpp
 @@ -32,6 +32,7 @@ Misc APIS

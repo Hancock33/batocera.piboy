@@ -1,0 +1,160 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f377c42..3b7c64c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -10,12 +10,14 @@ include(CheckLibraryExists)
+ 
+ # Build options
+ option(BUILD_SHARED_LIBS "Build shared library" OFF)
++option(BUILD_STATIC_LIBS "Also build static libraries when BUILD_SHARED_LIBS is ON" ON)
+ if(APPLE)
+     option(BUILD_FRAMEWORK "Build Framework bundle for OSX" OFF)
+ endif()
+ 
+ if(BUILD_FRAMEWORK)
+ 	set(BUILD_SHARED_LIBS TRUE)
++	set(BUILD_STATIC_LIBS FALSE)
+ endif()
+ 
+ option(INSTALL_CMAKE_PACKAGE_MODULE "Install CMake package configiguration module" ON)
+diff --git a/lib/CMakeLists.txt b/lib/CMakeLists.txt
+index 7cd68e5..6aaed3b 100644
+--- a/lib/CMakeLists.txt
++++ b/lib/CMakeLists.txt
+@@ -61,10 +61,11 @@ if(WIN32)
+     list(APPEND VORBIS_SOURCES vorbisenc.c)
+ endif()
+ 
++# Export definition files are only meaningful for shared libraries
+ if(WIN32)
+-    list(APPEND VORBIS_SOURCES ../win32/vorbis.def)
+-    list(APPEND VORBISENC_SOURCES ../win32/vorbisenc.def)
+-    list(APPEND VORBISFILE_SOURCES ../win32/vorbisfile.def)
++    set(VORBIS_DEF_FILE ../win32/vorbis.def)
++    set(VORBISENC_DEF_FILE ../win32/vorbisenc.def)
++    set(VORBISFILE_DEF_FILE ../win32/vorbisfile.def)
+ endif()
+ 
+ if(MSVC)
+@@ -74,47 +75,86 @@ if(MSVC)
+ endif()
+ 
+ if (NOT BUILD_FRAMEWORK)
+-    add_library(vorbis ${VORBIS_HEADERS} ${VORBIS_SOURCES})
+-    add_library(vorbisenc ${VORBISENC_SOURCES})
+-    add_library(vorbisfile ${VORBISFILE_SOURCES})
+-
+     get_version_info(VORBIS_VERSION_INFO "V_LIB_CURRENT" "V_LIB_AGE" "V_LIB_REVISION")
+-    set_target_properties(vorbis PROPERTIES SOVERSION ${VORBIS_VERSION_INFO})
+     get_version_info(VORBISENC_VERSION_INFO "VE_LIB_CURRENT" "VE_LIB_AGE" "VE_LIB_REVISION")
+-    set_target_properties(vorbisenc PROPERTIES SOVERSION ${VORBISENC_VERSION_INFO})
+     get_version_info(VORBISFILE_VERSION_INFO "VF_LIB_CURRENT" "VF_LIB_AGE" "VF_LIB_REVISION")
+-    set_target_properties(vorbisfile PROPERTIES SOVERSION ${VORBISFILE_VERSION_INFO})
+-
+-    target_include_directories(vorbis
+-        PUBLIC
+-            $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+-            $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+-       PRIVATE
+-            ${CMAKE_CURRENT_SOURCE_DIR}
+-    )
+-    target_include_directories(vorbisenc
+-        PUBLIC
+-            $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+-            $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+-        PRIVATE
+-            ${CMAKE_CURRENT_SOURCE_DIR}
+-    )
+-    target_include_directories(vorbisfile
+-        PUBLIC
+-            $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+-            $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+-    )
+ 
+-    target_link_libraries(vorbis
+-        PUBLIC Ogg::ogg
+-        PRIVATE $<$<BOOL:${HAVE_LIBM}>:m>
+-    )
+-    target_link_libraries(vorbisenc PUBLIC vorbis)
+-    target_link_libraries(vorbisfile PUBLIC vorbis)
++    # vorbis_add_libraries(<suffix> <SHARED|STATIC>)
++    # Creates vorbis<suffix>, vorbisenc<suffix> and vorbisfile<suffix>.
++    function(vorbis_add_libraries suffix type)
++        set(_vorbis vorbis${suffix})
++        set(_vorbisenc vorbisenc${suffix})
++        set(_vorbisfile vorbisfile${suffix})
++
++        if(type STREQUAL "SHARED")
++            set(_vorbis_def ${VORBIS_DEF_FILE})
++            set(_vorbisenc_def ${VORBISENC_DEF_FILE})
++            set(_vorbisfile_def ${VORBISFILE_DEF_FILE})
++        endif()
++
++        add_library(${_vorbis} ${type} ${VORBIS_HEADERS} ${VORBIS_SOURCES} ${_vorbis_def})
++        add_library(${_vorbisenc} ${type} ${VORBISENC_SOURCES} ${_vorbisenc_def})
++        add_library(${_vorbisfile} ${type} ${VORBISFILE_SOURCES} ${_vorbisfile_def})
++
++        if(type STREQUAL "SHARED")
++            set_target_properties(${_vorbis} PROPERTIES SOVERSION ${VORBIS_VERSION_INFO})
++            set_target_properties(${_vorbisenc} PROPERTIES SOVERSION ${VORBISENC_VERSION_INFO})
++            set_target_properties(${_vorbisfile} PROPERTIES SOVERSION ${VORBISFILE_VERSION_INFO})
++        elseif(NOT suffix STREQUAL "" AND NOT MSVC)
++            # Keep the usual libvorbis*.a names next to the shared libraries.
++            # MSVC is excluded because vorbis.lib is already the import library.
++            set_target_properties(${_vorbis} PROPERTIES OUTPUT_NAME vorbis)
++            set_target_properties(${_vorbisenc} PROPERTIES OUTPUT_NAME vorbisenc)
++            set_target_properties(${_vorbisfile} PROPERTIES OUTPUT_NAME vorbisfile)
++        endif()
++
++        target_include_directories(${_vorbis}
++            PUBLIC
++                $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
++                $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
++            PRIVATE
++                ${CMAKE_CURRENT_SOURCE_DIR}
++        )
++        target_include_directories(${_vorbisenc}
++            PUBLIC
++                $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
++                $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
++            PRIVATE
++                ${CMAKE_CURRENT_SOURCE_DIR}
++        )
++        target_include_directories(${_vorbisfile}
++            PUBLIC
++                $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
++                $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
++        )
++
++        target_link_libraries(${_vorbis}
++            PUBLIC Ogg::ogg
++            PRIVATE $<$<BOOL:${HAVE_LIBM}>:m>
++        )
++        target_link_libraries(${_vorbisenc} PUBLIC ${_vorbis})
++        target_link_libraries(${_vorbisfile} PUBLIC ${_vorbis})
++
++        set(VORBIS_INSTALL_TARGETS ${VORBIS_INSTALL_TARGETS}
++            ${_vorbis} ${_vorbisenc} ${_vorbisfile} PARENT_SCOPE)
++    endfunction()
++
++    set(VORBIS_INSTALL_TARGETS)
++    if(BUILD_SHARED_LIBS)
++        # vorbis, vorbisenc, vorbisfile are the shared libraries
++        vorbis_add_libraries("" SHARED)
++        if(BUILD_STATIC_LIBS)
++            # vorbis-static, vorbisenc-static, vorbisfile-static
++            vorbis_add_libraries("-static" STATIC)
++        endif()
++    else()
++        # Static only: keep the original target names
++        vorbis_add_libraries("" STATIC)
++    endif()
+ 
+     install(FILES ${VORBIS_PUBLIC_HEADERS} DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}/vorbis)
+ 
+-    install(TARGETS vorbis vorbisenc vorbisfile
++    install(TARGETS ${VORBIS_INSTALL_TARGETS}
+         EXPORT VorbisTargets
+         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+

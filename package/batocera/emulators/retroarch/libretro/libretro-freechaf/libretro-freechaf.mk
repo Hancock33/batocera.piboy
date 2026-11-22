@@ -8,7 +8,7 @@ LIBRETRO_FREECHAF_VERSION = 76c7a84f1f7e80f3e6f2bba96fe100cb24e99124
 LIBRETRO_FREECHAF_SITE=https://github.com/libretro/FreeChaF.git
 LIBRETRO_FREECHAF_SITE_METHOD=git
 LIBRETRO_FREECHAF_GIT_SUBMODULES=YES
-LIBRETRO_FREECHAF_LICENSE = GPLv3.0
+LIBRETRO_FREECHAF_LICENSE = GPL-3.0
 LIBRETRO_FREECHAF_DEPENDENCIES += retroarch
 LIBRETRO_FREECHAF_EMULATOR_INFO = freechaf.libretro.core.yml
 
@@ -30,8 +30,6 @@ define LIBRETRO_FREECHAF_BUILD_CMDS
 endef
 
 define LIBRETRO_FREECHAF_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/freechaf_libretro.so $(TARGET_DIR)/usr/lib/libretro/freechaf_libretro.so
 	$(INSTALL) -D $(@D)/freechaf_libretro.info $(TARGET_DIR)/usr/share/libretro/info/freechaf_libretro.info
 endef

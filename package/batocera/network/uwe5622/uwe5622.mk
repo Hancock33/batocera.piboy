@@ -3,9 +3,10 @@
 # uwe5622
 #
 ################################################################################
-# Version: Commits on Nov 02, 2026
-UWE5622_VERSION = d2d6bc45c5ef9cefdd53e6c51cec3ba948b84972
+# Version: Commits on Nov 21, 2026
+UWE5622_VERSION = ef4ac088ae4cfb468843199e64d57589aacf22d0
 UWE5622_SITE = $(call github,armbian,uwe5622,$(UWE5622_VERSION))
+UWE5622_LICENSE = GPL-2.0
 
 UWE5622_MODULE_MAKE_OPTS = \
 	CONFIG_WLAN_UWE5622=m \

@@ -3,8 +3,8 @@
 # libretro-parallel-gx1
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBRETRO_PARALLEL_GX1_VERSION = 92324c86e8c8ac3a392a5c553e5f53ab5ed419c8
+# Version: Commits on Nov 22, 2026
+LIBRETRO_PARALLEL_GX1_VERSION = b7c6fa57a65305700f3cb18da30026ced60d946e
 LIBRETRO_PARALLEL_GX1_SITE = https://github.com/libretro/parallel-gx1.git
 LIBRETRO_PARALLEL_GX1_SITE_METHOD = git
 LIBRETRO_PARALLEL_GX1_GIT_SUBMODULES = YES
@@ -27,7 +27,6 @@ define LIBRETRO_PARALLEL_GX1_BUILD_CMDS
 endef
 
 define LIBRETRO_PARALLEL_GX1_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/parallel_gx1_libretro.so $(TARGET_DIR)/usr/lib/libretro/parallel_gx1_libretro.so
 endef
 

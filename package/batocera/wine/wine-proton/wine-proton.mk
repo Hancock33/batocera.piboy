@@ -9,18 +9,18 @@ WINE_PROTON_SITE = $(call github,CachyOS,wine-cachyos,$(WINE_PROTON_VERSION))
 WINE_PROTON_LICENSE = LGPL-2.1+
 WINE_PROTON_LICENSE_FILES = COPYING.LIB LICENSE
 WINE_PROTON_SELINUX_MODULES = wine
+# the wine-mono version this Proton asks for, it also runs fine on the newer system one
+# check dlls/appwiz.cpl/addons.c
+WINE_PROTON_MONO_VERSION = 10.4.1
 WINE_PROTON_DEPENDENCIES = host-bison host-flex host-wine-proton
-
 HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
 define WINE_PROTON_AUTOGEN
-	# Create folder for install
-	mkdir -p $(TARGET_DIR)/usr/wine/wine-proton
 	# Autotools generation
-	cd $(@D); ./tools/make_requests
-	cd $(@D); ./tools/make_specfiles
-	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
-	cd $(@D); autoreconf -fiv
+	cd $(@D) && ./tools/make_requests
+	cd $(@D) && ./tools/make_specfiles
+	cd $(@D) && ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
+	cd $(@D) && autoreconf -fiv
 endef
 WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
@@ -34,7 +34,6 @@ WINE_PROTON_CONF_OPTS = \
 	--without-gettext \
 	--without-gettextpo \
 	--without-gphoto \
-	--without-ldap \
 	--without-mingw \
 	--without-opencl \
 	--without-oss \
@@ -107,9 +106,56 @@ else
 WINE_PROTON_CONF_OPTS += --without-gnutls
 endif
 
+# gstreamer is never a dependency, so keep configure from picking it up
+WINE_PROTON_CONF_OPTS += --without-gstreamer
+
 ifeq ($(BR2_PACKAGE_FFMPEG),y)
-WINE_PROTON_CONF_OPTS += --without-gstreamer --with-ffmpeg
+WINE_PROTON_CONF_OPTS += --with-ffmpeg
 WINE_PROTON_DEPENDENCIES += ffmpeg
+else
+WINE_PROTON_CONF_OPTS += --without-ffmpeg
+endif
+
+ifeq ($(BR2_PACKAGE_HWLOC),y)
+WINE_PROTON_CONF_OPTS += --with-hwloc
+WINE_PROTON_DEPENDENCIES += hwloc
+else
+WINE_PROTON_CONF_OPTS += --without-hwloc
+endif
+
+ifeq ($(BR2_PACKAGE_PCSC_LITE),y)
+WINE_PROTON_CONF_OPTS += --with-pcsclite
+WINE_PROTON_DEPENDENCIES += pcsc-lite
+else
+WINE_PROTON_CONF_OPTS += --without-pcsclite
+endif
+
+ifeq ($(BR2_PACKAGE_LIBGCRYPT),y)
+WINE_PROTON_CONF_OPTS += --with-gcrypt
+WINE_PROTON_DEPENDENCIES += libgcrypt
+else
+WINE_PROTON_CONF_OPTS += --without-gcrypt
+endif
+
+ifeq ($(BR2_PACKAGE_PIPEWIRE),y)
+WINE_PROTON_CONF_OPTS += --with-pipewire
+WINE_PROTON_DEPENDENCIES += pipewire
+else
+WINE_PROTON_CONF_OPTS += --without-pipewire
+endif
+
+ifeq ($(BR2_PACKAGE_LIBUNWIND),y)
+WINE_PROTON_CONF_OPTS += --with-unwind
+WINE_PROTON_DEPENDENCIES += libunwind
+else
+WINE_PROTON_CONF_OPTS += --without-unwind
+endif
+
+ifeq ($(BR2_PACKAGE_WAYLAND)$(BR2_PACKAGE_LIBXKBCOMMON),yy)
+WINE_PROTON_CONF_OPTS += --with-wayland
+WINE_PROTON_DEPENDENCIES += libxkbcommon wayland
+else
+WINE_PROTON_CONF_OPTS += --without-wayland
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
@@ -218,6 +264,13 @@ else
 WINE_PROTON_CONF_OPTS += --without-xshape --without-xshm
 endif
 
+ifeq ($(BR2_PACKAGE_XLIB_LIBXFIXES),y)
+WINE_PROTON_CONF_OPTS += --with-xfixes
+WINE_PROTON_DEPENDENCIES += xlib_libXfixes
+else
+WINE_PROTON_CONF_OPTS += --without-xfixes
+endif
+
 ifeq ($(BR2_PACKAGE_XLIB_LIBXI),y)
 WINE_PROTON_CONF_OPTS += --with-xinput --with-xinput2
 WINE_PROTON_DEPENDENCIES += xlib_libXi
@@ -290,29 +343,35 @@ HOST_WINE_PROTON_CONF_OPTS += \
 	--without-coreaudio \
 	--without-cups \
 	--without-dbus \
+	--without-ffmpeg \
 	--without-fontconfig \
+	--without-gcrypt \
 	--without-gnutls \
 	--without-gphoto \
 	--without-gssapi \
 	--without-gstreamer \
+	--without-hwloc \
 	--without-krb5 \
-	--without-ldap \
 	--without-mingw \
 	--without-netapi \
 	--without-opencl \
 	--without-opengl \
-	--without-osmesa \
 	--without-oss \
 	--without-pcap \
+	--without-pcsclite \
+	--without-pipewire \
 	--without-pulse \
 	--without-sane \
 	--without-sdl \
+	--without-unwind \
 	--without-usb \
 	--without-v4l2 \
 	--without-vulkan \
+	--without-wayland \
 	--without-x \
 	--without-xcomposite \
 	--without-xcursor \
+	--without-xfixes \
 	--without-xinerama \
 	--without-xinput \
 	--without-xinput2 \
@@ -323,22 +382,23 @@ HOST_WINE_PROTON_CONF_OPTS += \
 	--without-xxf86vm
 
 # Cleanup final directory
-ifeq ($(BR2_x86_64),y)
 define WINE_PROTON_REMOVE_INCLUDES_HOOK
 	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
-	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.{dll,exe}
-	x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.{dll,exe}
+	$(if $(BR2_x86_64)$(BR2_i386),i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.dll $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.exe)
+	$(if $(BR2_x86_64),x86_64-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.dll $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/x86_64-windows/*.exe)
 endef
-endif
-
-ifeq ($(BR2_i386),y)
-define WINE_PROTON_REMOVE_INCLUDES_HOOK
-	rm -Rf $(TARGET_DIR)/usr/wine/wine-proton/include
-	i686-w64-mingw32-strip --strip-unneeded $(TARGET_DIR)/usr/wine/wine-proton/lib/wine/i386-windows/*.{dll,exe}
-endef
-endif
 
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
+
+ifeq ($(BR2_PACKAGE_WINE_MONO),y)
+ifneq (wine-mono-$(WINE_PROTON_MONO_VERSION),$(WINE_MONO_VERSION))
+define WINE_PROTON_LINK_MONO
+	mkdir -p $(TARGET_DIR)/usr/share/wine/mono
+	ln -sfn ../$(WINE_MONO_VERSION) $(TARGET_DIR)/usr/share/wine/mono/wine-mono-$(WINE_PROTON_MONO_VERSION)
+endef
+WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_LINK_MONO
+endif
+endif
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))

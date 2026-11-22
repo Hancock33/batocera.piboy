@@ -7,6 +7,7 @@
 BIGPEMU_VERSION = v1221
 BIGPEMU_SOURCE = BigPEmu_$(BIGPEMU_ARCH)_$(BIGPEMU_VERSION).tar.gz
 BIGPEMU_SITE = https://www.richwhitehouse.com/jaguar/builds
+BIGPEMU_LICENSE = PROPRIETARY
 BIGPEMU_EMULATOR_INFO = bigpemu.emulator.yml
 
 ifeq ($(BR2_aarch64),y)

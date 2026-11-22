@@ -3,37 +3,38 @@
 # eden
 #
 ################################################################################
-# Version: Commits on Nov 16, 2026
-EDEN_VERSION = d85bad89248fcae68f812d7e1c937436261404cb
+# Version: Commits on Nov 22, 2026
+EDEN_VERSION = 467ab6441ad928213c2adb666420fc8a4f954e9b
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
-EDEN_SITE_METHOD=git
-EDEN_GIT_SUBMODULES=YES
-EDEN_LICENSE = GPLv2
+EDEN_SITE_METHOD = git
+EDEN_LICENSE = GPL-3.0+
+EDEN_LICENSE_FILES = LICENSE.txt
 EDEN_EMULATOR_INFO = eden.emulator.yml
-EDEN_DEPENDENCIES += boost catch2 enet ffmpeg fmt json-for-modern-cpp libva
-EDEN_DEPENDENCIES += libzip lz4 mbedtls opus sdl3 zlib zstd qt6base qt6charts qt6svg qt6tools
 EDEN_SUPPORTS_IN_SOURCE_BUILD = NO
 
-EDEN_CONF_OPTS += -DARCHITECTURE_x86_64=ON
+EDEN_DEPENDENCIES += host-glslang boost cubeb enet ffmpeg libusb lz4 openssl
+EDEN_DEPENDENCIES += opus qt6base qt6charts sdl3 spirv-headers zlib zstd
+EDEN_DEPENDENCIES += vulkan-headers vulkan-loader vulkan-utility-libraries
+
 EDEN_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
+EDEN_CONF_OPTS += -DENABLE_QT_TRANSLATION=OFF
+EDEN_CONF_OPTS += -DENABLE_UPDATE_CHECKER=OFF
 EDEN_CONF_OPTS += -DENABLE_WEB_SERVICE=ON
-EDEN_CONF_OPTS += -DLINUX=ON
+EDEN_CONF_OPTS += -DENABLE_WERROR=OFF
 EDEN_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 EDEN_CONF_OPTS += -DYUZU_CMD=OFF
 EDEN_CONF_OPTS += -DYUZU_ROOM=OFF
 EDEN_CONF_OPTS += -DYUZU_TESTS=OFF
+EDEN_CONF_OPTS += -DDYNARMIC_TESTS=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_BUNDLED_FFMPEG=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_BUNDLED_OPENSSL=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_BUNDLED_QT=OFF
 EDEN_CONF_OPTS += -DYUZU_USE_BUNDLED_SDL3=OFF
-
-ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
-    EDEN_DEPENDENCIES += host-glslang vulkan-headers vulkan-loader vulkan-validationlayers
-endif
+EDEN_CONF_OPTS += -DYUZU_USE_BUNDLED_SIRIT=OFF
+EDEN_CONF_OPTS += -DQuaZip-Qt6_FORCE_BUNDLED=ON
 
 define EDEN_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D $(@D)/buildroot-build/bin/eden $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/bin/eden $(TARGET_DIR)/usr/bin/eden
 endef
 
 $(eval $(cmake-package))

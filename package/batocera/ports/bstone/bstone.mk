@@ -17,10 +17,9 @@ BSTONE_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 BSTONE_CONF_OPTS += -DCMAKE_INSTALL_PREFIX="/usr/bin"
 
 define BSTONE_INSTALL_TARGET_CMDS
-	cp -pvr $(@D)/buildroot-build/src/bstone/bstone $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/src/bstone/bstone $(TARGET_DIR)/usr/bin/bstone
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/bstone/bstone.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(BSTONE_PKGDIR)/bstone.keys
 endef
 
 $(eval $(cmake-package))

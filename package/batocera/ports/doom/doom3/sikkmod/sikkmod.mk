@@ -7,14 +7,13 @@
 SIKKMOD_VERSION = 8dd804c33eed764ef96887dd7f1f42f64eebd7f8
 SIKKMOD_SITE = $(call github,dhewm,dhewm3-sdk,$(SIKKMOD_VERSION))
 SIKKMOD_BRANCH = sikkmod
-SIKKMOD_LICENSE = GPLv3
+SIKKMOD_LICENSE = GPL-3.0
 SIKKMOD_LICENSE_FILES = COPYING.txt
 
-SIKKMOD_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+SIKKMOD_DEPENDENCIES = dhewm3
 
 define SIKKMOD_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/sikkmod*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/sikkmod*.so
 endef
 
 $(eval $(cmake-package))

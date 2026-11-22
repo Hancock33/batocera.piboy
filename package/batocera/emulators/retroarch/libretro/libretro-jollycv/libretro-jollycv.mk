@@ -16,7 +16,6 @@ define LIBRETRO_JOLLYCV_BUILD_CMDS
 endef
 
 define LIBRETRO_JOLLYCV_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libretro/jollycv_libretro.so $(TARGET_DIR)/usr/lib/libretro/jollycv_libretro.so
 endef
 

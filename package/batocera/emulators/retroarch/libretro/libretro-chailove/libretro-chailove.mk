@@ -3,8 +3,8 @@
 # libretro-chailove
 #
 ################################################################################
-# Version: Commits on Nov 11, 2026
-LIBRETRO_CHAILOVE_VERSION = 92bcb7be0c1d03c259cb987b4ded91f2a9470d30
+# Version: Commits on Nov 22, 2026
+LIBRETRO_CHAILOVE_VERSION = 6956c577d7301b65e1d74b91b8913ea699a77e47
 LIBRETRO_CHAILOVE_SITE = https://github.com/libretro/libretro-chailove.git
 LIBRETRO_CHAILOVE_SITE_METHOD=git
 LIBRETRO_CHAILOVE_GIT_SUBMODULES=YES
@@ -32,7 +32,6 @@ define LIBRETRO_CHAILOVE_BUILD_CMDS
 endef
 
 define LIBRETRO_CHAILOVE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/chailove_libretro.so $(TARGET_DIR)/usr/lib/libretro/chailove_libretro.so
 endef
 

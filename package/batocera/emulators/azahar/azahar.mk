@@ -3,12 +3,12 @@
 # azahar
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-AZAHAR_VERSION = 2127.0-rc4
+# Version: Commits on Nov 21, 2026
+AZAHAR_VERSION = 2127.0-rc5
 AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
-AZAHAR_SITE_METHOD=git
+AZAHAR_SITE_METHOD = git
 AZAHAR_GIT_SUBMODULES = YES
-AZAHAR_LICENSE = GPLv2
+AZAHAR_LICENSE = GPL-2.0
 AZAHAR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AZAHAR_DEPENDENCIES += boost cubeb fdk-aac ffmpeg fmt openal sdl2
@@ -23,6 +23,7 @@ AZAHAR_CONF_OPTS += -DCITRA_ENABLE_BUNDLE_TARGET=ON
 AZAHAR_CONF_OPTS += -DCITRA_WARNINGS_AS_ERRORS=OFF
 AZAHAR_CONF_OPTS += -DDYNARMIC_WARNINGS_AS_ERRORS=OFF
 AZAHAR_CONF_OPTS += -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON
+AZAHAR_CONF_OPTS += -DENABLE_DISCORD_RPC=OFF
 AZAHAR_CONF_OPTS += -DENABLE_FFMPEG=OFF
 AZAHAR_CONF_OPTS += -DENABLE_LTO=ON
 AZAHAR_CONF_OPTS += -DENABLE_OPENAL=OFF
@@ -61,13 +62,11 @@ else
 endif
 
 define AZAHAR_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D $(@D)/buildroot-build/bin/Release/azahar $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/Release/azahar $(TARGET_DIR)/usr/bin/azahar
 endef
 
 define AZAHAR_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -prn $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/azahar/3ds.azahar.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(AZAHAR_PKGDIR)/3ds.azahar.keys
 endef
 
 AZAHAR_POST_INSTALL_TARGET_HOOKS = AZAHAR_EVMAPY

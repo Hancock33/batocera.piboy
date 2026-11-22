@@ -3,10 +3,10 @@
 # libretro-beetle-pce-fast
 #
 ################################################################################
-# Version: Commits on Oct 30, 2026
-LIBRETRO_BEETLE_PCE_FAST_VERSION = 2de1ce1c3f237b161c126c54ba407990bb86d1e9
+# Version: Commits on Nov 20, 2026
+LIBRETRO_BEETLE_PCE_FAST_VERSION = 4cf066e22533186d0cfad85a0fec2aced93e4e29
 LIBRETRO_BEETLE_PCE_FAST_SITE = $(call github,libretro,beetle-pce-fast-libretro,$(LIBRETRO_BEETLE_PCE_FAST_VERSION))
-LIBRETRO_BEETLE_PCE_FAST_LICENSE = GPLv2
+LIBRETRO_BEETLE_PCE_FAST_LICENSE = GPL-2.0
 LIBRETRO_BEETLE_PCE_FAST_DEPENDENCIES += retroarch
 LIBRETRO_BEETLE_PCE_FAST_EMULATOR_INFO = pce_fast.libretro.core.yml
 
@@ -30,7 +30,6 @@ define LIBRETRO_BEETLE_PCE_FAST_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_PCE_FAST_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/mednafen_pce_fast_libretro.so $(TARGET_DIR)/usr/lib/libretro/pce_fast_libretro.so
 endef
 

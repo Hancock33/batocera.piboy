@@ -6,6 +6,7 @@
 
 WINE_COMMON_VERSION = 1.0.0
 WINE_COMMON_SOURCE =
+WINE_COMMON_LICENSE = LGPL-3.0+
 WINE_COMMON_EMULATOR_INFO = wine.emulator.yml mugen.emulator.yml
 
 $(eval $(generic-package))

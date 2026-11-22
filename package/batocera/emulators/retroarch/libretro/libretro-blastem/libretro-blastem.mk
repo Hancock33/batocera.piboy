@@ -3,10 +3,10 @@
 # libretro-blastem
 #
 ################################################################################
-# Version: Commits on Nov 08, 2026
-LIBRETRO_BLASTEM_VERSION = ec73825ece2a134beb7825a5fd6fd21a398ff12e
+# Version: Commits on Nov 21, 2026
+LIBRETRO_BLASTEM_VERSION = aa11275a99b3ea0ee477fed2844bb7d9f9faf3f6
 LIBRETRO_BLASTEM_SITE = $(call github,libretro,blastem,$(LIBRETRO_BLASTEM_VERSION))
-LIBRETRO_BLASTEM_LICENSE = GPLv3
+LIBRETRO_BLASTEM_LICENSE = GPL-3.0
 LIBRETRO_BLASTEM_DEPENDENCIES += retroarch
 LIBRETRO_BLASTEM_EMULATOR_INFO = blastem.libretro.core.yml
 
@@ -25,7 +25,6 @@ define LIBRETRO_BLASTEM_BUILD_CMDS
 endef
 
 define LIBRETRO_BLASTEM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libblastem.so $(TARGET_DIR)/usr/lib/libretro/blastem_libretro.so
 endef
 

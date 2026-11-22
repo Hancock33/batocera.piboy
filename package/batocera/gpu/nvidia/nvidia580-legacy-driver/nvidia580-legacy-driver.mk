@@ -93,9 +93,9 @@ define NVIDIA580_LEGACY_DRIVER_INSTALL_GL_DEV
 	$(SED) 's:__GENERATED_BY__:Buildroot:' $(STAGING_DIR)/usr/lib/libGL.la
 	$(SED) 's:__LIBGL_PATH__:/usr/lib:' $(STAGING_DIR)/usr/lib/libGL.la
 	$(SED) 's:-L[^[:space:]]\+::' $(STAGING_DIR)/usr/lib/libGL.la
-	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/nvidia-driver/gl.pc \
+	$(INSTALL) -D -m 0644 $(NVIDIA580_LEGACY_DRIVER_PKGDIR)/gl.pc \
 		$(STAGING_DIR)/usr/lib/pkgconfig/gl.pc
-	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/nvidia-driver/egl.pc \
+	$(INSTALL) -D -m 0644 $(NVIDIA580_LEGACY_DRIVER_PKGDIR)/egl.pc \
 		$(STAGING_DIR)/usr/lib/pkgconfig/egl.pc
 endef
 
@@ -300,11 +300,11 @@ define NVIDIA580_LEGACY_DRIVER_VULKANJSON_X86_64
 	mkdir -p $(TARGET_DIR)/usr/share/vulkan/nvidia
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json \
 		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.x86_64.json
-	sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ \
+	$(SED) s+'"library_path": "libGLX_nvidia'+'"library_path": "/usr/lib/libGLX_nvidia'+ \
 		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.x86_64.json
 	$(INSTALL) -D -m 0644 $(@D)/nvidia_icd.json \
 		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json
-	sed -i -e s+'"library_path": "libGLX_nvidia'+'"library_path": "/lib32/libGLX_nvidia'+ \
+	$(SED) s+'"library_path": "libGLX_nvidia'+'"library_path": "/lib32/libGLX_nvidia'+ \
 		$(TARGET_DIR)/usr/share/vulkan/nvidia/nvidia580_legacy_icd.i686.json
 endef
 
@@ -321,7 +321,6 @@ ifeq ($(BR2_i686),y)
     NVIDIA580_LEGACY_DRIVER_POST_INSTALL_TARGET_HOOKS += NVIDIA580_LEGACY_DRIVER_VULKANJSON_X86
 endif
 
-KVER = $(shell expr $(BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE))
 
 define NVIDIA580_LEGACY_DRIVER_RENAME_KERNEL_MODULES
 	mkdir -p $(TARGET_DIR)/usr/share/nvidia

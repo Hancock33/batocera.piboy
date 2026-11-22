@@ -7,14 +7,13 @@
 HARDCORPS_VERSION = b767e8cf42428e9aa32817cc4456f5bfe8ed8262
 HARDCORPS_SITE = $(call github,dhewm,dhewm3-sdk,$(HARDCORPS_VERSION))
 HARDCORPS_BRANCH = hardcorps
-HARDCORPS_LICENSE = GPLv3
+HARDCORPS_LICENSE = GPL-3.0
 HARDCORPS_LICENSE_FILES = COPYING.txt
 
-HARDCORPS_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+HARDCORPS_DEPENDENCIES = dhewm3
 
 define HARDCORPS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3
-	cp $(@D)/hardcorps*.so $(TARGET_DIR)/usr/lib/dhewm3/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/lib/dhewm3 $(@D)/hardcorps*.so
 endef
 
 $(eval $(cmake-package))

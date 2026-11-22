@@ -5,7 +5,6 @@ on:
   push:
     branches: [master]
     paths:
-      - 'package/batocera/**/*.md'
       - 'package/batocera/**/*.mk'
       - 'package/batocera/**/*.in'
       - 'package/batocera/**/*.py'
@@ -27,7 +26,7 @@ jobs:
 
       - name: Remove trailing whitespace
         run: |
-          find package/batocera -type f \
+          find package/batocera python-src -type f \
             \( -name '*.mk' -o -name '*.in' -o -name '*.py' -o -name '*.yml' \) \
             ! -path 'package/batocera/emulators/mame/history/*' \
             -print0 \

@@ -26,7 +26,7 @@ define ADWAITA_ICON_THEME_LIGHT_REDUCE
 	rm -rf $(@D)/Adwaita/*/emblems
 	rm -rf $(@D)/Adwaita/*/categories
 	rm -rf $(@D)/Adwaita/*/ui
-	rm -rf  $(@D)/Adwaita/cursors
+	rm -rf $(@D)/Adwaita/cursors
 endef
 
 ADWAITA_ICON_THEME_LIGHT_PRE_CONFIGURE_HOOKS += ADWAITA_ICON_THEME_LIGHT_REDUCE

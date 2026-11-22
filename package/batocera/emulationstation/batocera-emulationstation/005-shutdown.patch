@@ -1,5 +1,7 @@
+Use 'shutdown -t1 now' for poweroff and reboot
+
 diff --git a/es-core/src/utils/Platform.cpp b/es-core/src/utils/Platform.cpp
-index f94285601..dee132ea3 100644
+index d5e0979..78791e6 100644
 --- a/es-core/src/utils/Platform.cpp
 +++ b/es-core/src/utils/Platform.cpp
 @@ -199,7 +199,7 @@ namespace Utils

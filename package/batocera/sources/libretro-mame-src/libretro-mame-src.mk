@@ -3,8 +3,8 @@
 # libretro-mame-src
 #
 ################################################################################
-# Version: Commits on Nov 14, 2026
-LIBRETRO_MAME_SRC_VERSION = 4a6f2c22101bf4e24eac1b69f500a79326e12eb0
+# Version: Commits on Nov 22, 2026
+LIBRETRO_MAME_SRC_VERSION = 38d29525eecff31849aa0f8aed4d021a4336c227
 LIBRETRO_MAME_SRC_SITE = $(call github,hancock33,lr-mame,$(LIBRETRO_MAME_SRC_VERSION))
 LIBRETRO_MAME_SRC_DEPENDENCIES = host-python3 alsa-lib fontconfig sdl2 sdl2_ttf zlib
 LIBRETRO_MAME_SRC_LICENSE = MAME
@@ -15,14 +15,18 @@ else ifeq ($(BR2_aarch64),y)
     LIBRETRO_MAME_SRC_EXTRA_ARGS += LIBRETRO_CPU=arm64
 endif
 
-# Limit number of jobs not to eat too much RAM....
-LIBRETRO_MAME_SRC_JOBS = $(shell expr $(shell nproc))
+# Follow BR2_JLEVEL (nproc + 1 when unset)
+LIBRETRO_MAME_SRC_JOBS = $(PARALLEL_JOBS)
+
+# Named after the MAME release this core tracks (see mame-src.mk).
+LIBRETRO_MAME_SRC_DIST_DIR = $(@D)/batocera-dist
+LIBRETRO_MAME_SRC_TARBALL = libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar.xz
 
 define LIBRETRO_MAME_SRC_BUILD_CMDS
 	# First, we need to build genie for host
 	cd $(@D); \
 		PATH="$(HOST_DIR)/bin:$$PATH" \
-		$(MAKE) TARGETOS=linux OSD=sdl genie \
+		$(MAKE) -j$(LIBRETRO_MAME_SRC_JOBS) TARGETOS=linux OSD=sdl genie \
 		TARGET=mame SUBTARGET=tiny \
 		NO_USE_PORTAUDIO=1 NO_X11=1 USE_SDL=0 \
 		USE_QTDEBUG=0 DEBUG=0 IGNORE_GIT=1 MPARAM=""
@@ -44,22 +48,23 @@ define LIBRETRO_MAME_SRC_BUILD_CMDS
 		CC="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang" \
 		CXX="$(HOST_DIR)/bin/ccache $(HOST_DIR)/bin/clang++" \
 		LD="$(TARGET_LD)" \
-		PRECOMPILE=1 \
 		OPTIMIZE=2 LTO=1 OPT_FLAGS=$(BR2_TARGET_OPTIMIZATION)
 endef
 
 define LIBRETRO_MAME_SRC_INSTALL_TARGET_CMDS
-	rm -rf /tmp/lr-mame
-	mkdir -p /tmp/lr-mame/usr/lib/libretro
-	mkdir -p /tmp/lr-mame/usr/bin/mame
-	$(INSTALL) -D $(@D)/mame_libretro.so /tmp/lr-mame/usr/lib/libretro/mame_libretro.so
-	$(HOST_DIR)/bin/llvm-strip /tmp/lr-mame/usr/lib/libretro/mame_libretro.so
-	cp -R $(@D)/hash /tmp/lr-mame/usr/bin/mame/
+	rm -rf $(LIBRETRO_MAME_SRC_DIST_DIR)
+	mkdir -p $(LIBRETRO_MAME_SRC_DIST_DIR)/usr/lib/libretro
+	mkdir -p $(LIBRETRO_MAME_SRC_DIST_DIR)/usr/bin/mame
+	$(INSTALL) -D $(@D)/mame_libretro.so $(LIBRETRO_MAME_SRC_DIST_DIR)/usr/lib/libretro/mame_libretro.so
+	$(HOST_DIR)/bin/llvm-strip $(LIBRETRO_MAME_SRC_DIST_DIR)/usr/lib/libretro/mame_libretro.so
+	cp -R $(@D)/hash $(LIBRETRO_MAME_SRC_DIST_DIR)/usr/bin/mame/
 
-	cd /tmp/lr-mame && tar -cf /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar .
-	xz -T0 -7 -v /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar
-	mv /tmp/libretro-mame-$(MAME_SRC_CROSS_ARCH)-$(subst mame,,$(MAME_SRC_VERSION)).tar.xz /mnt/smb
-	rm -rf /tmp/lr-mame*
+	# Pack (root-owned, streamed straight into xz) and publish
+	set -o pipefail; \
+	tar -C $(LIBRETRO_MAME_SRC_DIST_DIR) --owner=0 --group=0 --numeric-owner -cf - . | \
+		xz -T0 -7 -v > $(@D)/$(LIBRETRO_MAME_SRC_TARBALL)
+	mv $(@D)/$(LIBRETRO_MAME_SRC_TARBALL) /mnt/smb/
+	rm -rf $(LIBRETRO_MAME_SRC_DIST_DIR)
 endef
 
 $(eval $(generic-package))

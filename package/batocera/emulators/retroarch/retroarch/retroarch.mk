@@ -3,10 +3,10 @@
 # retroarch
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-RETROARCH_VERSION = cf50b48715458bd1f9d7a95802b133379b016081
+# Version: Commits on Nov 22, 2026
+RETROARCH_VERSION = e01dfc69087e868cb9ecd13da8ea0022e58a5c6b
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
-RETROARCH_LICENSE = GPLv3+
+RETROARCH_LICENSE = GPL-3.0+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts \
 			 batocera-launch-libretro
 # install in staging for debugging (gdb)
@@ -50,7 +50,6 @@ endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBOPENVG),y)
     RETROARCH_DEPENDENCIES += libopenvg
-
 endif
 
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
@@ -128,7 +127,7 @@ ifeq ($(BR2_ARM_FPU_NEON_VFPV4)$(BR2_ARM_FPU_NEON)$(BR2_ARM_FPU_NEON_FP_ARMV8),y
     RETROARCH_CONF_OPTS += --enable-neon
 endif
 
-ifeq ($(BR2_GCC_TARGET_FLOAT_ABI),hard)
+ifeq ($(call qstrip,$(BR2_GCC_TARGET_FLOAT_ABI)),hard)
     RETROARCH_CONF_OPTS += --enable-floathard
 endif
 
@@ -187,7 +186,6 @@ endef
 define RETROARCH_LIBRETRO_FFMPEG_INSTALL
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION) -Wno-error=implicit-function-declaration|g" $(@D)/cores/libretro-ffmpeg/Makefile
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/cores/libretro-ffmpeg
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/cores/libretro-ffmpeg/ffmpeg_libretro.so $(TARGET_DIR)/usr/lib/libretro/ffmpeg_libretro.so
 endef
 RETROARCH_POST_INSTALL_TARGET_HOOKS += RETROARCH_LIBRETRO_FFMPEG_INSTALL
@@ -200,7 +198,7 @@ LIBRETRO_PLATFORM = unix
 
 ifeq ($(BR2_arm),y)
     LIBRETRO_PLATFORM += armv7
-else ifeq ($(BR2_arm64),y)
+else ifeq ($(BR2_aarch64),y)
     LIBRETRO_PLATFORM += arm64
 endif
 

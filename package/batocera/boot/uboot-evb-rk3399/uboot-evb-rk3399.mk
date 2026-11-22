@@ -5,6 +5,7 @@
 ################################################################################
 
 UBOOT_EVB_RK3399_VERSION = 1.0
+UBOOT_EVB_RK3399_LICENSE = GPL-2.0+
 UBOOT_EVB_RK3399_BOOT_SRC = idbloader.img uboot.img trust.img
 
 $(eval $(boot-package))

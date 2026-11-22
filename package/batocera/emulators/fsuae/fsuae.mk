@@ -6,7 +6,7 @@
 # Version: Commits on Sept 05, 2025
 FSUAE_VERSION = v5.0.7
 FSUAE_SITE = $(call github,FrodeSolheim,fs-uae,$(FSUAE_VERSION))
-FSUAE_LICENSE = GPLv2
+FSUAE_LICENSE = GPL-2.0
 FSUAE_DEPENDENCIES += libpng libmpeg2 libglib2 libcapsimage openal
 FSUAE_DEPENDENCIES += host-zip sdl2 sdl2_ttf zlib
 FSUAE_EMULATOR_INFO = fsuae.emulator.yml
@@ -23,9 +23,7 @@ FSUAE_MAKE_OPTS += \
 	LDFLAGS_FOR_BUILD="$(HOST_LDFLAGS)"
 
 define FSUAE_INSTALL_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/fsuae/*.keys \
-		$(TARGET_DIR)/usr/share/evmapy/
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(FSUAE_PKGDIR)/*.keys
 endef
 
 define FSUAE_INSTALL_INPUT_DATA
@@ -35,7 +33,7 @@ endef
 
 define FSUAE_INSTALL_THEME
 	mkdir -p $(TARGET_DIR)/usr/share/fs-uae/fsemu-classic
-	cp -r $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/fsuae/fsemu-classic/* \
+	cp -r $(FSUAE_PKGDIR)/fsemu-classic/* \
 		$(TARGET_DIR)/usr/share/fs-uae/fsemu-classic/
 endef
 

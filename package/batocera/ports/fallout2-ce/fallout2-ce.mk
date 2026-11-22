@@ -3,16 +3,18 @@
 # fallout2-ce
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-FALLOUT2_CE_VERSION = b485cab2a65da92cd49dea29e01f2687ae46c7fb
+# Version: Commits on Nov 20, 2026
+FALLOUT2_CE_VERSION = c30f1efce64b96696c150603cc6dfce5d74645cc
 FALLOUT2_CE_SITE = $(call github,fallout2-ce,fallout2-ce,$(FALLOUT2_CE_VERSION))
+FALLOUT2_CE_LICENSE = Sustainable Use License
+FALLOUT2_CE_LICENSE_FILES = LICENSE.md
 FALLOUT2_CE_DEPENDENCIES = sdl2
 FALLOUT2_CE_EMULATOR_INFO = fallout2-ce.emulator.yml
 
 FALLOUT2_CE_CONF_OPTS += -DFALLOUT_VENDORED=OFF
 
 define FALLOUT2_CE_INSTALL_TARGET_CMDS
-	cp $(@D)/fallout2-ce $(TARGET_DIR)/usr/bin/fallout2-ce
+	$(INSTALL) -m 0755 -D $(@D)/fallout2-ce $(TARGET_DIR)/usr/bin/fallout2-ce
 endef
 
 $(eval $(cmake-package))

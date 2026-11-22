@@ -11,7 +11,7 @@ HYPSEUS_SINGE_BEZELS_LICENSE_FILES = LICENSE
 HYPSEUS_SINGE_BEZELS_DEPENDENCIES = hypseus-singe
 
 define HYPSEUS_SINGE_BEZELS_INSTALL_TARGET_CMDS
-	rm -rf   $(TARGET_DIR)/usr/share/hypseus-singe/bezels
+	rm -rf $(TARGET_DIR)/usr/share/hypseus-singe/bezels
 	#mkdir -p $(TARGET_DIR)/usr/share/hypseus-singe/bezels
 	#cp -f $(@D)/default.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels
 	#cp -f $(@D)/Daphne/*.png $(TARGET_DIR)/usr/share/hypseus-singe/bezels

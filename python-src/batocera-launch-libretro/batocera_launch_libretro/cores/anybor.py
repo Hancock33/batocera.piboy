@@ -38,6 +38,14 @@ _ANYBOR_REMAP_VALUES: Final = {
 
 @cached_dataclass
 class AnyBOR(RACore):
+    @property
+    def rewind_granularity(self) -> int:
+        return 10
+
+    @property
+    def rewind_buffer_size(self) -> int:
+        return 256
+
     def set_core_options(self, core_options: LibretroConfig, /) -> None:
         # RetroArch's CRT SwitchRes is on for CRT output (the Batocera CRT Script sets
         # global.retroarch.crt_switch_resolution); fit the image to a 4:3 TV there

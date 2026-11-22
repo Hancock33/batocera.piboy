@@ -3,8 +3,8 @@
 # libretro-fbneo
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBRETRO_FBNEO_VERSION = 2da48555c13ce5d011edf2d6ec829b7393c070af
+# Version: Commits on Nov 22, 2026
+LIBRETRO_FBNEO_VERSION = 3f0de7fefbb7cc4b46e832647215cbe41eaf37b0
 LIBRETRO_FBNEO_SITE = $(call github,libretro,FBNeo,$(LIBRETRO_FBNEO_VERSION))
 LIBRETRO_FBNEO_LICENSE = Non-commercial
 LIBRETRO_FBNEO_DEPENDENCIES += retroarch
@@ -49,7 +49,6 @@ define LIBRETRO_FBNEO_BUILD_CMDS
 endef
 
 define LIBRETRO_FBNEO_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/src/burner/libretro/fbneo_libretro.so $(TARGET_DIR)/usr/lib/libretro/fbneo_libretro.so
 
 	# Bios

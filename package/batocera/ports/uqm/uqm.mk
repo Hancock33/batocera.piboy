@@ -3,10 +3,11 @@
 # uqm
 #
 ################################################################################
-# Version: Commits on Aug 22, 2026
-UQM_VERSION = a0d90e239b3a8e3dcb9d732fd76a385aac2593e5
+# Version: Commits on Nov 21, 2026
+UQM_VERSION = 3ec5f474b366d7ecc72bec6dfe23367520a1918d
 UQM_SITE = https://git.code.sf.net/p/sc2/uqm
 UQM_SITE_METHOD = git
+UQM_LICENSE = GPL-2.0+
 UQM_DEPENDENCIES = sdl2 libpng libvorbis libzip
 UQM_SUBDIR = sc2
 UQM_EMULATOR_INFO = uqm.emulator.yml

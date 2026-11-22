@@ -3,7 +3,7 @@
 # broadcom-wl
 #
 ################################################################################
-
+# Version: Commits on Sep 18, 2015
 BROADCOM_WL_VERSION = 6_30_223_271
 BROADCOM_WL_SOURCE = hybrid-v35_64-nodebug-pcoem-$(BROADCOM_WL_VERSION).tar.gz
 BROADCOM_WL_SITE = https://docs.broadcom.com/docs-and-downloads/docs/linux_sta

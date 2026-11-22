@@ -10,7 +10,7 @@ TEKWAR_EMULATOR_INFO = etekwar.emulator.yml
 TEKWAR_DEPENDENCIES = sdl2 sdl2_image
 TEKWAR_SITE_METHOD=git
 TEKWAR_GIT_SUBMODULES=YES
-TEKWAR_LICENSE = GPLv3
+TEKWAR_LICENSE = GPL-3.0
 
 define TEKWAR_BUILD_CMDS
 	$(SED) "s|\-O[23]|$(TARGET_OPTIMIZATION)|g" $(@D)/Makefile
@@ -23,12 +23,10 @@ endef
 define TEKWAR_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/tekwar -D $(TARGET_DIR)/usr/bin/etekwar
 	# make rom path
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar
-	cp $(@D)/rsrc/*.dat $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar/
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/batocera/datainit/roms/ports/etekwar $(@D)/rsrc/*.dat
 
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/tekwar/tekwar.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys
+	$(INSTALL) -m 0644 -D $(TEKWAR_PKGDIR)/tekwar.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys
 endef
 
 $(eval $(generic-package))

@@ -6,6 +6,8 @@
 # Version: Commits on Feb 24, 2026
 LIBLGPIO_VERSION = bcccd782eceedc5b278b3056ea81d5fbbb89c489
 LIBLGPIO_SITE = $(call github,joan2937,lg,$(LIBLGPIO_VERSION))
+LIBLGPIO_LICENSE = Unlicense
+LIBLGPIO_LICENSE_FILES = UNLICENCE
 LIBLGPIO_INSTALL_STAGING = YES
 
 define LIBLGPIO_BUILD_CMDS
@@ -16,11 +18,14 @@ define LIBLGPIO_BUILD_CMDS
 endef
 
 define LIBLGPIO_INSTALL_STAGING_CMDS
-	cp -av $(@D)/lib*gpio.so* $(STAGING_DIR)/usr/lib/
+	$(INSTALL) -D -m 0644 -t $(STAGING_DIR)/usr/include $(@D)/lgpio.h $(@D)/rgpio.h
+	mkdir -p $(STAGING_DIR)/usr/lib
+	cp -a $(@D)/lib*gpio.so* $(STAGING_DIR)/usr/lib/
 endef
 
 define LIBLGPIO_INSTALL_TARGET_CMDS
-	cp -av $(@D)/lib*gpio.so* $(TARGET_DIR)/usr/lib/
+	mkdir -p $(TARGET_DIR)/usr/lib
+	cp -a $(@D)/lib*gpio.so* $(TARGET_DIR)/usr/lib/
 endef
 
 $(eval $(generic-package))

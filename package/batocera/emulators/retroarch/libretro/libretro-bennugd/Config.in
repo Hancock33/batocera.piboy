@@ -1,6 +1,12 @@
 config BR2_PACKAGE_LIBRETRO_BENNUGD
 	bool "libretro-bennugd"
 	depends on BR2_INSTALL_LIBSTDCPP
+	select BR2_PACKAGE_FREETYPE
+	select BR2_PACKAGE_LIBOGG
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_LIBVORBIS
+	select BR2_PACKAGE_OPENSSL
+	select BR2_PACKAGE_ZLIB
 
 	help
 	  libretro core for for BennuGD

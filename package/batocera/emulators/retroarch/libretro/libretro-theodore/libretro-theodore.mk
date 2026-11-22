@@ -8,7 +8,7 @@ LIBRETRO_THEODORE_VERSION = 4d469ce0f71ee046ceb78cdbf8e9f18364aaa918
 LIBRETRO_THEODORE_SITE = https://github.com/Zlika/theodore.git
 LIBRETRO_THEODORE_SITE_METHOD = git
 LIBRETRO_THEODORE_GIT_SUBMODULES = YES
-LIBRETRO_THEODORE_LICENSE = GPLv3
+LIBRETRO_THEODORE_LICENSE = GPL-3.0
 LIBRETRO_THEODORE_DEPENDENCIES += retroarch
 LIBRETRO_THEODORE_EMULATOR_INFO = theodore.libretro.core.yml
 
@@ -35,7 +35,6 @@ define LIBRETRO_THEODORE_BUILD_CMDS
 endef
 
 define LIBRETRO_THEODORE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/theodore_libretro.so $(TARGET_DIR)/usr/lib/libretro/theodore_libretro.so
 endef
 

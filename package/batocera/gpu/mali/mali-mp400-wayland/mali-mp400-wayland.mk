@@ -6,6 +6,8 @@
 # Version: Commits on Aug 16, 2022
 MALI_MP400_WAYLAND_VERSION = 8f46cc7b9777975f40323b0971f3483fa2aefcd3
 MALI_MP400_WAYLAND_SITE = $(call github,caesar-github,libmali,$(MALI_MP400_WAYLAND_VERSION))
+MALI_MP400_WAYLAND_LICENSE = PROPRIETARY
+MALI_MP400_WAYLAND_LICENSE_FILES = debian/copyright
 
 MALI_MP400_WAYLAND_INSTALL_STAGING = YES
 MALI_MP400_WAYLAND_PROVIDES = libegl libgles libmali
@@ -32,16 +34,12 @@ define MALI_MP400_WAYLAND_INSTALL_STAGING_CMDS
 	(cd $(STAGING_DIR)/usr/lib && ln -sf libmali.so libwayland-egl.so)
 	(cd $(STAGING_DIR)/usr/lib && ln -sf libmali.so libwayland-egl.so.1)
 
-	cp -pr $(@D)/include	$(STAGING_DIR)/usr
-	cp $(@D)/include/GBM/gbm.h 	$(STAGING_DIR)/usr/include/gbm.h
-
-		for X in gbm egl glesv1_cm glesv2; \
-		do \
-				cp  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/mali-mp400-wayland/pkgconfig/$${X}.pc.cmake	$(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
-				sed -i -e s+@CMAKE_INSTALL_INCLUDEDIR@+include+g		$(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
-				sed -i -e s+@CMAKE_INSTALL_LIBDIR@+lib+g				$(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc; \
-		done
-
+	cp -pr $(@D)/include $(STAGING_DIR)/usr
+	cp $(@D)/include/GBM/gbm.h $(STAGING_DIR)/usr/include/gbm.h
+	for X in gbm egl glesv1_cm glesv2; do \
+		sed -e 's+@CMAKE_INSTALL_INCLUDEDIR@+include+g' -e 's+@CMAKE_INSTALL_LIBDIR@+lib+g' \
+			$(MALI_MP400_WAYLAND_PKGDIR)/pkgconfig/$${X}.pc.cmake > $(STAGING_DIR)/usr/lib/pkgconfig/$${X}.pc || exit 1; \
+	done
 endef
 
 define MALI_MP400_WAYLAND_INSTALL_TARGET_CMDS

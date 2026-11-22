@@ -6,8 +6,8 @@
 # Version: Commits on Nov 19, 2025
 X16EMU_VERSION = r49
 X16EMU_SITE = $(call github,X16Community,x16-emulator,$(X16EMU_VERSION))
-X16EMU_LICENSE = BSD-2-Clause license
-X16EMU_LICENSE_FILE = LICENSE
+X16EMU_LICENSE = BSD-2-Clause
+X16EMU_LICENSE_FILES = LICENSE
 X16EMU_EMULATOR_INFO = x16emu.emulator.yml
 
 X16EMU_DEPENDENCIES = sdl2
@@ -18,8 +18,8 @@ X16EMU_EXTRA_DOWNLOADS = https://github.com/X16Community/x16-rom/releases/downlo
 define X16EMU_BUILD_CMDS
 	$(MAKE) $(TARGET_CONFIGURE_OPTS) \
 	SDL_CONFIG=$(STAGING_DIR)/usr/bin/sdl2-config \
-	CFLAGS="$(CFLAGS) -I$(STAGING_DIR)/usr/include/SDL2 -Isrc/extern/include" \
-	CXXFLAGS="$(CXXFLAGS) -Isrc/extern/ymfm/src" \
+	CFLAGS="$(TARGET_CFLAGS) -I$(STAGING_DIR)/usr/include/SDL2 -Isrc/extern/include" \
+	CXXFLAGS="$(TARGET_CXXFLAGS) -Isrc/extern/ymfm/src" \
 	LDFLAGS="$(TARGET_LDFLAGS) -lSDL2 -lm -lz" -C $(@D) all
 endef
 
@@ -31,8 +31,7 @@ endef
 define X16EMU_BIOS
 	mkdir -p $(@D)/bios
 	cd $(@D)/bios && unzip -x -o $(DL_DIR)/$(X16EMU_DL_SUBDIR)/$(X16EMU_BIOS_SOURCE)
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/commanderx16
-	cp -f $(@D)/bios/rom.bin $(TARGET_DIR)/usr/share/batocera/datainit/bios/commanderx16
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/batocera/datainit/bios/commanderx16 $(@D)/bios/rom.bin
 endef
 
 X16EMU_POST_INSTALL_TARGET_HOOKS += X16EMU_BIOS

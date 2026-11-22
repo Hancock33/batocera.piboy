@@ -3,9 +3,9 @@
 # uboot-rk3562
 #
 ################################################################################
-
-UBOOT_RK3562_VERSION = 2026.07
-UBOOT_RK3562_SITE = https://ftp.denx.de/pub/u-boot
+# Version: Commits on Oct 05, 2026
+UBOOT_RK3562_VERSION = 2026.10
+UBOOT_RK3562_SITE = https://u-boot.osuosl.org
 UBOOT_RK3562_SOURCE = u-boot-$(UBOOT_RK3562_VERSION).tar.bz2
 UBOOT_RK3562_LICENSE = GPL-2.0+
 UBOOT_RK3562_LICENSE_FILES = Licenses/README
@@ -35,11 +35,11 @@ define UBOOT_RK3562_BUILD_BOOTLOADER
 	@echo "---- Building mainline U-Boot for $(board) ----"
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3562_MAKE_OPTS) mrproper
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3562_MAKE_OPTS) $(defconfig)
-	sed -i 's/^CONFIG_BOOTDELAY=.*/CONFIG_BOOTDELAY=1/' $(@D)/.config
+	$(SED) 's/^CONFIG_BOOTDELAY=.*/CONFIG_BOOTDELAY=1/' $(@D)/.config
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3562_MAKE_OPTS) BL31="$(bl31)" ROCKCHIP_TPL="$(tpl)"
 	mkdir -p $(@D)/staging/$(board)
-	cp -v $(@D)/idbloader.img $(@D)/staging/$(board)/
-	cp -v $(@D)/u-boot.itb $(@D)/staging/$(board)/
+	cp $(@D)/idbloader.img $(@D)/staging/$(board)/
+	cp $(@D)/u-boot.itb $(@D)/staging/$(board)/
 endef
 
 define UBOOT_RK3562_BUILD_CMDS
@@ -51,8 +51,8 @@ define UBOOT_RK3562_INSTALL_IMAGES_CMDS
 	$(foreach target, $(UBOOT_RK3562_BUILD_TARGETS), \
 		$(eval board = $(word 1, $(subst :, ,$(target)))) \
 		mkdir -p $(BINARIES_DIR)/uboot-rk3562/$(board); \
-		cp -v $(@D)/staging/$(board)/idbloader.img $(BINARIES_DIR)/uboot-rk3562/$(board)/idbloader.img; \
-		cp -v $(@D)/staging/$(board)/u-boot.itb $(BINARIES_DIR)/uboot-rk3562/$(board)/u-boot.itb; \
+		cp $(@D)/staging/$(board)/idbloader.img $(BINARIES_DIR)/uboot-rk3562/$(board)/idbloader.img; \
+		cp $(@D)/staging/$(board)/u-boot.itb $(BINARIES_DIR)/uboot-rk3562/$(board)/u-boot.itb; \
 	)
 endef
 

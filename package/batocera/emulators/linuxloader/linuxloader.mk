@@ -3,8 +3,8 @@
 # linuxloader
 #
 ################################################################################
-# Version: Commits on Sept 06, 2026
-LINUXLOADER_VERSION = v3.0.12
+# Version: Commits on Nov 11, 2026
+LINUXLOADER_VERSION = v3.0.15
 LINUXLOADER_SITE = $(call github,lindbergh-loader,linuxloader,$(LINUXLOADER_VERSION))
 LINUXLOADER_LICENSE = CC-BY-SA-4.0
 LINUXLOADER_LICENSE_FILES = LICENSE.md
@@ -13,8 +13,7 @@ LINUXLOADER_EMULATOR_INFO = linuxloader.emulator.yml
 ifeq ($(BR2_x86_64),y)
 LINUXLOADER_DEPENDENCIES += wine-x86 dmidecode ossp
 define LINUXLOADER_CROSSHAIRS
-	mkdir -p $(TARGET_DIR)/usr/bin32/linuxloader/crosshairs
-	cp -fv $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/linuxloader/crosshairs/* $(TARGET_DIR)/usr/bin32/linuxloader/crosshairs/
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/bin32/linuxloader/crosshairs $(LINUXLOADER_PKGDIR)/crosshairs/*
 endef
 
 LINUXLOADER_POST_INSTALL_TARGET_HOOKS += LINUXLOADER_CROSSHAIRS
@@ -34,6 +33,8 @@ define LINUXLOADER_FIX_CMAKELISTS
 	$(SED) 's/-D_GNU_SOURCE/-D_GNU_SOURCE -U_FILE_OFFSET_BITS -D_FILE_OFFSET_BITS=32/g' $(@D)/CMakeLists.txt
 endef
 LINUXLOADER_POST_PATCH_HOOKS += LINUXLOADER_FIX_CMAKELISTS
+
+LINUXLOADER_CONF_OPTS += -DCMAKE_C_COMPILER=$(TARGET_CC) -DCMAKE_CXX_COMPILER=$(TARGET_CXX)
 
 define LINUXLOADER_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/linuxloader/extralibs

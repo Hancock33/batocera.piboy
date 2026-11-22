@@ -3,10 +3,10 @@
 # openmsx
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-OPENMSX_VERSION = b34dbbde4b89cd14b72179fd0de285037cf01e95
+# Version: Commits on Oct 28, 2026
+OPENMSX_VERSION = RELEASE_22_0
 OPENMSX_SITE = $(call github,openMSX,openMSX,$(OPENMSX_VERSION))
-OPENMSX_LICENSE = GPLv2
+OPENMSX_LICENSE = GPL-2.0
 OPENMSX_DEPENDENCIES = freetype libogg libpng libtheora libvorbis sdl2 sdl2_ttf tcl zlib
 OPENMSX_EMULATOR_INFO = openmsx.emulator.yml
 
@@ -66,13 +66,12 @@ define OPENMSX_BUILD_CMDS
 endef
 
 define OPENMSX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/openmsx/*.keys $(TARGET_DIR)/usr/share/evmapy/
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/openmsx/settings.xml $(TARGET_DIR)/usr/share/openmsx
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(OPENMSX_PKGDIR)/*.keys
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/openmsx $(OPENMSX_PKGDIR)/settings.xml
 endef
 
 define OPENMSX_POST_INSTALL_CLEANUP
-	if test -d $(STAGING_DIR)/usr/lib/tclConfig.sh.bak; then mv -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak $(STAGING_DIR)/usr/lib/tclConfig.sh; fi
+	if test -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak; then mv -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak $(STAGING_DIR)/usr/lib/tclConfig.sh; fi
 endef
 
 OPENMSX_PRE_CONFIGURE_HOOKS += OPENMSX_TCL_CONFIG_FIXUP

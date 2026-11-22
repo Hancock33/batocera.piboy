@@ -5,6 +5,7 @@ import json
 import logging
 import os
 import shutil
+import uuid
 from pathlib import Path
 from typing import Any, Final
 
@@ -21,22 +22,25 @@ _SWITCH_SAVES: Final = SAVES / 'switch'
 
 _MAX_PLAYERS: Final = 8
 
-# Ryujinx has no uuid derived from the evdev device here: every pad uses this id
-# and is always configured as a Pro Controller.
-_CONTROLLER_ID: Final = '0-00000003-28de-0000-0512-000010010000'
+# Used when a pad's SDL GUID cannot be parsed. Every pad is configured as a Pro Controller.
+_FALLBACK_GUID: Final = '00000003-28de-0000-0512-000010010000'
 
-_LANGUAGES: Final[dict[str, int]] = {
-    'jp_JP': 0,
-    'en_US': 1,
-    'de_DE': 2,
-    'fr_FR': 3,
-    'es_ES': 4,
-    'it_IT': 5,
-    'nl_NL': 6,
-    'zh_CN': 7,
-    'zh_TW': 8,
-    'ko_KR': 9,
-}
+# Ryujinx UI locales (Config.json "language_code"), matched against $LANG.
+_LANGUAGES: Final = frozenset(
+    {
+        'ja_JP',
+        'en_US',
+        'de_DE',
+        'fr_FR',
+        'es_ES',
+        'it_IT',
+        'ko_KR',
+        'pt_BR',
+        'ru_RU',
+        'zh_CN',
+        'zh_TW',
+    }
+)
 
 _CONTROLLER_TEMPLATE: Final[dict[str, Any]] = {
     'left_joycon_stick': {
@@ -102,13 +106,40 @@ _CONTROLLER_TEMPLATE: Final[dict[str, Any]] = {
 }
 
 
-def _language_from_environment() -> int:
-    return _LANGUAGES.get(os.environ.get('LANG', '')[:5], _LANGUAGES['en_US'])
+def _language_from_environment() -> str:
+    lang = os.environ.get('LANG', '')[:5]
+    return lang if lang in _LANGUAGES else 'en_US'
 
 
-def _controller_config(player: int, /) -> dict[str, Any]:
+def _ryujinx_guid(sdl_guid: str, /) -> str:
+    """Format an SDL GUID the way Ryujinx's SDL gamepad driver does.
+
+    Ryujinx reads the 16 GUID bytes as a .NET Guid (first three fields little-endian)
+    and zeroes the first four characters, which hold SDL's unstable CRC.
+    """
+    try:
+        guid = str(uuid.UUID(bytes_le=bytes.fromhex(sdl_guid)))
+    except ValueError:
+        _logger.debug('Unusable SDL GUID %r, using a fallback id', sdl_guid)
+        return _FALLBACK_GUID
+    return f'0000{guid[4:]}'
+
+
+def _controller_ids(sdl_guids: list[str], /) -> list[str]:
+    """Ryujinx ids are "<n>-<guid>", where n counts earlier pads with the same guid."""
+    seen: dict[str, int] = {}
+    ids: list[str] = []
+    for sdl_guid in sdl_guids:
+        guid = _ryujinx_guid(sdl_guid)
+        index = seen.get(guid, 0)
+        seen[guid] = index + 1
+        ids.append(f'{index}-{guid}')
+    return ids
+
+
+def _controller_config(player: int, controller_id: str, /) -> dict[str, Any]:
     return copy.deepcopy(_CONTROLLER_TEMPLATE) | {
-        'id': _CONTROLLER_ID,
+        'id': controller_id,
         'controller_type': 'ProController',
         'player_index': f'Player{player}',
     }
@@ -174,7 +205,7 @@ class Ryujinx(Emulator):
             audio_backend='SDL3',
             audio_volume=1,
             # ryujinx app language
-            language_code=str(_language_from_environment()),
+            language_code=_language_from_environment(),
             # Console language, time & date
             system_language=self.config.get_str('ryujinx_language', 'AmericanEnglish'),
             system_region=self.config.get_str('ryujinx_region', 'USA'),
@@ -187,7 +218,10 @@ class Ryujinx(Emulator):
             max_anisotropy=self.config.get_int('ryujinx_filtering', -1),
             # Controllers
             input_config=[
-                _controller_config(player) for player, _ in enumerate(self.controllers[:_MAX_PLAYERS], start=1)
+                _controller_config(player, controller_id)
+                for player, controller_id in enumerate(
+                    _controller_ids([pad.guid for pad in self.controllers[:_MAX_PLAYERS]]), start=1
+                )
             ],
         )
 

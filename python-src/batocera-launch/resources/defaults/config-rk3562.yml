@@ -11,11 +11,14 @@ model3:
   emulator: keisho
   core:     keisho
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 ps2:
   emulator: libretro
   core:     play
+psp:
+  options:
+    gfxbackend: VULKAN
 psx:
   options:
     hud_support: false # duckstation doesn't like it on n2+

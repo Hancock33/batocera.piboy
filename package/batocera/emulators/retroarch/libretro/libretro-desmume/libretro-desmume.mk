@@ -6,7 +6,7 @@
 # Version: Commits on Sept 20, 2026
 LIBRETRO_DESMUME_VERSION = 95b4d798731caa809125b6c3c11d17cc332ff6ef
 LIBRETRO_DESMUME_SITE = $(call github,libretro,desmume,$(LIBRETRO_DESMUME_VERSION))
-LIBRETRO_DESMUME_LICENSE = GPLv2
+LIBRETRO_DESMUME_LICENSE = GPL-2.0
 
 LIBRETRO_DESMUME_DEPENDENCIES = libpcap retroarch
 LIBRETRO_DESMUME_EMULATOR_INFO = desmume.libretro.core.yml
@@ -17,7 +17,6 @@ define LIBRETRO_DESMUME_BUILD_CMDS
 endef
 
 define LIBRETRO_DESMUME_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/desmume/src/frontend/libretro/desmume_libretro.so $(TARGET_DIR)/usr/lib/libretro/desmume_libretro.so
 endef
 

@@ -6,7 +6,7 @@
 # Version: Commits on Feb 07, 2026
 PICOM_VERSION = v13
 PICOM_SITE = $(call github,yshui,picom,$(PICOM_VERSION))
-PICOM_LICENSE = MPL-2.0 AND MIT
+PICOM_LICENSE = MPL-2.0, MIT
 PICOM_LICENSE_FILES = LICENSE.spdx
 
 PICOM_DEPENDENCIES += libconfig libev libxcb pixman uthash xcb-util
@@ -47,8 +47,7 @@ PICOM_DEPENDENCIES += xlib_libX11
 endif
 
 define PICOM_CONFIG_FILE
-	mkdir -p $(TARGET_DIR)/etc/xdg/picom
-	cp -f $(PICOM_PKGDIR)/picom.conf $(TARGET_DIR)/etc/xdg/picom/
+	$(INSTALL) -D -m 0644 $(PICOM_PKGDIR)/picom.conf $(TARGET_DIR)/etc/xdg/picom/picom.conf
 endef
 
 PICOM_POST_INSTALL_TARGET_HOOKS = PICOM_CONFIG_FILE

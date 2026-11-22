@@ -6,7 +6,7 @@
 # Version: Commits on Aug 23, 2026
 LIBRETRO_BLUEMSX_VERSION = e3086eb5d36d77fa11704cf53dc176686e70127d
 LIBRETRO_BLUEMSX_SITE = $(call github,libretro,blueMSX-libretro,$(LIBRETRO_BLUEMSX_VERSION))
-LIBRETRO_BLUEMSX_LICENSE = GPLv2
+LIBRETRO_BLUEMSX_LICENSE = GPL-2.0
 LIBRETRO_BLUEMSX_DEPENDENCIES += retroarch
 LIBRETRO_BLUEMSX_EMULATOR_INFO = bluemsx.libretro.core.yml
 
@@ -29,7 +29,6 @@ define LIBRETRO_BLUEMSX_BUILD_CMDS
 endef
 
 define LIBRETRO_BLUEMSX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/bluemsx_libretro.so $(TARGET_DIR)/usr/lib/libretro/bluemsx_libretro.so
 	#bios
 	mkdir -p                      $(TARGET_DIR)/usr/share/batocera/datainit/bios/bluemsx

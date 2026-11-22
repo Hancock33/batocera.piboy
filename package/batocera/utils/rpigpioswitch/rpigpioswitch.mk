@@ -6,6 +6,7 @@
 
 RPIGPIOSWITCH_VERSION = 3.4
 RPIGPIOSWITCH_SOURCE =
+RPIGPIOSWITCH_LICENSE = LGPL-3.0+
 
 define RPIGPIOSWITCH_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(RPIGPIOSWITCH_PKGDIR)/S92switch						$(TARGET_DIR)/etc/init.d/S92switch
@@ -26,8 +27,7 @@ RPIGPIOSWITCH_EXTRA_DOWNLOADS = https://raw.githubusercontent.com/RetroFlag/retr
 RPIGPIOSWITCH_INSTALL_IMAGES = YES
 
 define RPIGPIOSWITCH_INSTALL_IMAGES_CMDS
-	mkdir -p $(BINARIES_DIR)/retroflag/
-	$(INSTALL) -D -m 0644 $(RPIGPIOSWITCH_DL_DIR)/RetroFlag_pw_io.dtbo $(BINARIES_DIR)/retroflag/
+	$(INSTALL) -D -m 0644 $(RPIGPIOSWITCH_DL_DIR)/RetroFlag_pw_io.dtbo $(BINARIES_DIR)/retroflag/RetroFlag_pw_io.dtbo
 endef
 endif
 

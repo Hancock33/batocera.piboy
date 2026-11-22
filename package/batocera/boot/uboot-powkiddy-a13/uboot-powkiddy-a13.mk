@@ -6,7 +6,7 @@
 # Version: Commits on Sept 13, 2021
 UBOOT_POWKIDDY_A13_VERSION = powkiddy-a13
 UBOOT_POWKIDDY_A13_SITE = $(call github,alpgarcia,caesar-u-boot,$(UBOOT_POWKIDDY_A13_VERSION))
-UBOOT_POWKIDDY_A13_LICENSE = GPLv2
+UBOOT_POWKIDDY_A13_LICENSE = GPL-2.0
 UBOOT_POWKIDDY_A13_BOOT_SRC = idbloader.img uboot.img:uboot-powkiddy-a13.img trust.img
 UBOOT_POWKIDDY_A13_BINARIES_SUBDIR =
 
@@ -15,10 +15,10 @@ UBOOT_POWKIDDY_A13_DEPENDENCIES = host-batocera-rkbin
 define UBOOT_POWKIDDY_A13_BUILD_CMDS
 	# FIXME: there should be a better way to build
 	cd $(@D) && ARCH=arm CHIP=rk3128 \
-		CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- \
-		make powkiddy-a13-rk3128_defconfig
+		CROSS_COMPILE="$(TARGET_CROSS)" \
+		$(MAKE) powkiddy-a13-rk3128_defconfig
 	cd $(@D) && ARCH=arm CHIP=rk3128 \
-		CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- make
+		CROSS_COMPILE="$(TARGET_CROSS)" $(MAKE)
 
 	# Generate idbloader.img
 	$(@D)/tools/mkimage -n rk3128 -T rksd -d \

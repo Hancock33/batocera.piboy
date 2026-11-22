@@ -5,17 +5,18 @@
 ################################################################################
 
 BATOCERA_SPLASH_VERSION = 6.0
-BATOCERA_SPLASH_SOURCE=
+BATOCERA_SPLASH_SOURCE =
+BATOCERA_SPLASH_LICENSE = LGPL-3.0+
 
-BATOCERA_SPLASH_TGVERSION=$(BATOCERA_SYSTEM_VERSION) $(BATOCERA_SYSTEM_DATE)
+BATOCERA_SPLASH_TGVERSION = $(BATOCERA_SYSTEM_VERSION) $(BATOCERA_SYSTEM_DATE)
 
 # video or image
 ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV),y)
-    BATOCERA_SPLASH_SCRIPT=Ssplash-mpv
-    BATOCERA_SPLASH_MEDIA=video
+    BATOCERA_SPLASH_SCRIPT = Ssplash-mpv
+    BATOCERA_SPLASH_MEDIA = video
 else
-    BATOCERA_SPLASH_SCRIPT=Ssplash-image
-    BATOCERA_SPLASH_MEDIA=image
+    BATOCERA_SPLASH_SCRIPT = Ssplash-image
+    BATOCERA_SPLASH_MEDIA = image
 endif
 
 # MPV options
@@ -34,6 +35,10 @@ ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV),y)
     # Overrides the RGA option for Mainline rockchip boards (Forces stateless v4l2request)
     ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV_RK_MAINLINE),y)
         BATOCERA_SPLASH_PLAYER_OPTIONS = --vo=gpu --gpu-context=drm --hwdec=v4l2request
+        ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3562),y)
+            # Avoid expensive default GPU scaling that drops splash frames on RK3562.
+            BATOCERA_SPLASH_PLAYER_OPTIONS += --profile=fast
+        endif
     endif
     # RPi use drm-copy
     ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_MPV_RPI),y)
@@ -83,39 +88,36 @@ ifeq ($(BATOCERA_SPLASH_MEDIA),video)
 
     # alternative video
     ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_VIDEO_720P30),y)
-        BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash-h264-720p30.mp4
+        BATOCERA_SPLASH_VIDEO = $(BATOCERA_SPLASH_PKGDIR)/videos/splash-h264-720p30.mp4
     else ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_VIDEO_1080P30),y)
-        BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash-h264-1080p30.mp4
+        BATOCERA_SPLASH_VIDEO = $(BATOCERA_SPLASH_PKGDIR)/videos/splash-h264-1080p30.mp4
     else ifeq ($(BR2_PACKAGE_BATOCERA_SPLASH_VIDEO_HEVC_1080P60),y)
-        BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash-hevc-1080p60.mp4
+        BATOCERA_SPLASH_VIDEO = $(BATOCERA_SPLASH_PKGDIR)/videos/splash-hevc-1080p60.mp4
     else
-        BATO_SPLASH=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/splash-hevc-1080p60-8bit.mp4
+        BATOCERA_SPLASH_VIDEO = $(BATOCERA_SPLASH_PKGDIR)/videos/splash-hevc-1080p60-8bit.mp4
     endif
 endif
 
 define BATOCERA_SPLASH_INSTALL_SCRIPT
-	mkdir -p $(TARGET_DIR)/etc/init.d
-	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/scripts/Ssystem-splash				$(TARGET_DIR)/etc/init.d/S03system-splash
-	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/scripts/Ssplashscreencontrol		$(TARGET_DIR)/etc/init.d/S30splashscreencontrol
-	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/scripts/$(BATOCERA_SPLASH_SCRIPT)	$(TARGET_DIR)/etc/init.d/S28splash
-	sed -i -e s+"%PLAYER_OPTIONS%"+"$(BATOCERA_SPLASH_PLAYER_OPTIONS)"+g $(TARGET_DIR)/etc/init.d/S28splash
+	$(INSTALL) -D -m 0755 $(BATOCERA_SPLASH_PKGDIR)/scripts/Ssystem-splash $(TARGET_DIR)/etc/init.d/S03system-splash
+	$(INSTALL) -D -m 0755 $(BATOCERA_SPLASH_PKGDIR)/scripts/batocera-splash-logo $(TARGET_DIR)/usr/bin/batocera-splash-logo
+	$(INSTALL) -D -m 0755 $(BATOCERA_SPLASH_PKGDIR)/scripts/Ssplashscreencontrol $(TARGET_DIR)/etc/init.d/S30splashscreencontrol
+	$(INSTALL) -D -m 0755 $(BATOCERA_SPLASH_PKGDIR)/scripts/$(BATOCERA_SPLASH_SCRIPT) $(TARGET_DIR)/etc/init.d/S28splash
+	$(SED) 's+%PLAYER_OPTIONS%+$(BATOCERA_SPLASH_PLAYER_OPTIONS)+g' $(TARGET_DIR)/etc/init.d/S28splash
 endef
 
 define BATOCERA_SPLASH_INSTALL_BOOT_LOGO
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/splash
-	cp "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo.png"	"$(TARGET_DIR)/usr/share/batocera/splash/boot-logo.png"
+	$(INSTALL) -D -m 0644 $(BATOCERA_SPLASH_PKGDIR)/images/logo.png $(TARGET_DIR)/usr/share/batocera/splash/boot-logo.png
 endef
 
 define BATOCERA_SPLASH_INSTALL_VIDEO
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/splash
-	cp $(BATO_SPLASH) $(TARGET_DIR)/usr/share/batocera/splash/splash.mp4
+	$(INSTALL) -D -m 0644 $(BATOCERA_SPLASH_VIDEO) $(TARGET_DIR)/usr/share/batocera/splash/splash.mp4
 	echo -e "1\n00:00:00,000 --> 00:00:02,000\n$(BATOCERA_SPLASH_TGVERSION)" > "$(TARGET_DIR)/usr/share/batocera/splash/splash.srt"
 endef
 
 # Hack for CHA, custom Capcom splash video
 define BATOCERA_SPLASH_INSTALL_VIDEO_CAPCOM
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/splash
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/videos/Capcom.mp4 $(TARGET_DIR)/usr/share/batocera/splash/Capcom.mp4
+	$(INSTALL) -D -m 0644 $(BATOCERA_SPLASH_PKGDIR)/videos/Capcom.mp4 $(TARGET_DIR)/usr/share/batocera/splash/Capcom.mp4
 	echo -e "1\n00:00:00,000 --> 00:00:02,000\n$(BATOCERA_SPLASH_TGVERSION)" > "$(TARGET_DIR)/usr/share/batocera/splash/splash.srt"
 endef
 
@@ -129,7 +131,7 @@ endef
 
 define BATOCERA_SPLASH_INSTALL_IMAGE
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/splash
-	convert "$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-splash/images/logo.png" -fill white -pointsize 30 -annotate +50+1020 "$(BATOCERA_SPLASH_TGVERSION)" "$(TARGET_DIR)/usr/share/batocera/splash/logo-version.png"
+	$(call BATOCERA_SPLASH_ANNOTATE,logo.png,30,+50+1020,logo-version.png)
 endef
 
 $(eval $(generic-package))

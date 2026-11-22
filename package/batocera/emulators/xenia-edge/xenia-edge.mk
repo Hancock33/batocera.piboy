@@ -3,36 +3,46 @@
 # xenia-edge
 #
 ################################################################################
-# Version: Commits on Nov 17, 2026
-XENIA_EDGE_VERSION = 4fb8372d232ff2c62c40591d44f194a9899e8f6b
+# Version: Commits on Nov 22, 2026
+XENIA_EDGE_VERSION = 1198c6bbcbe82649905f8657572f71d57e8093e4
 XENIA_EDGE_SITE = https://github.com/has207/xenia-edge.git
 XENIA_EDGE_SITE_METHOD = git
 XENIA_EDGE_GIT_SUBMODULES = YES
-XENIA_EDGE_LICENSE = BSD
-XENIA_EDGE_LICENSE_FILE = LICENSE
+XENIA_EDGE_LICENSE = BSD-3-Clause
+XENIA_EDGE_LICENSE_FILES = LICENSE
 XENIA_EDGE_EMULATOR_INFO = xenia-edge.emulator.yml
-XENIA_EDGE_DEPENDENCIES += alsa-lib ffmpeg fmt glslang libcurl
-XENIA_EDGE_DEPENDENCIES += libgtk3 lz4 python-toml sdl3 vulkan-headers vulkan-loader wxwidgets
-XENIA_EDGE_DEPENDENCIES += host-clang host-glslang host-ninja
 
-#XENIA_EDGE_CFLAGS = $(TARGET_CFLAGS) -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-int-conversion
-XENIA_EDGE_CONF_OPTS += -DCMAKE_C_FLAGS="$(XENIA_EDGE_CFLAGS)"
-XENIA_EDGE_CONF_OPTS += -DCMAKE_CXX_FLAGS="$(XENIA_EDGE_CFLAGS)"
-XENIA_EDGE_CONF_OPTS += -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=OFF
-XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_TESTS=OFF
+XENIA_EDGE_DEPENDENCIES += host-clang host-lld host-python3
+XENIA_EDGE_DEPENDENCIES += expat libcurl libgl libgtk3 lz4 zlib
+
+XENIA_EDGE_CONF_OPTS += -DPython3_EXECUTABLE=$(HOST_DIR)/bin/python3
 XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_MISC=OFF
-XENIA_EDGE_CONF_OPTS += -DXENIA_USE_SYSTEM_SDL3=ON
+XENIA_EDGE_CONF_OPTS += -DXENIA_BUILD_TESTS=OFF
+XENIA_EDGE_CONF_OPTS += -DXENIA_ENABLE_PROFILER=OFF
+XENIA_EDGE_CONF_OPTS += -DXENIA_ENABLE_LTO=ON
+
+XENIA_EDGE_SLANG_VERSION = 2026.8
+XENIA_EDGE_SLANG_SOURCE = slang-$(XENIA_EDGE_SLANG_VERSION)-linux-$(HOSTARCH).tar.gz
+XENIA_EDGE_EXTRA_DOWNLOADS = https://github.com/shader-slang/slang/releases/download/v$(XENIA_EDGE_SLANG_VERSION)/$(XENIA_EDGE_SLANG_SOURCE)
+
+define XENIA_EDGE_EXTRACT_SLANG
+	upstream=$$(sed -n 's/^SLANG_VERSION = "\(.*\)"$$/\1/p' $(@D)/xenia-build.py); \
+	if [ "$$upstream" != "$(XENIA_EDGE_SLANG_VERSION)" ]; then \
+		echo "xenia-edge wants Slang $$upstream, set XENIA_EDGE_SLANG_VERSION to match"; \
+		exit 1; \
+	fi
+	rm -rf $(@D)/.slang
+	mkdir -p $(@D)/.slang/$(XENIA_EDGE_SLANG_VERSION)
+	$(TAR) -xzf $(XENIA_EDGE_DL_DIR)/$(XENIA_EDGE_SLANG_SOURCE) \
+		-C $(@D)/.slang/$(XENIA_EDGE_SLANG_VERSION)
+endef
+XENIA_EDGE_POST_EXTRACT_HOOKS += XENIA_EDGE_EXTRACT_SLANG
+
+XENIA_EDGE_CONF_OPTS += -DXE_BUILD_BRANCH=batocera
+XENIA_EDGE_CONF_OPTS += -DXE_BUILD_COMMIT=$(XENIA_EDGE_VERSION)
 
 define XENIA_EDGE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/xenia-edge
-	$(INSTALL) -m 0755 -D $(@D)/bin/Linux/xenia_edge $(TARGET_DIR)/usr/bin/xenia-edge/xenia_edge
-endef
-
-XENIA_EDGE_POST_EXTRACT_HOOKS += XENIA_EDGE_SLANGC
-XENIA_EDGE_POST_INSTALL_TARGET_HOOKS += XENIA_EDGE_POST_PROCESS
-
-define XENIA_EDGE_SLANGC
-	cd $(@D) && ./xenia-build.py slang
+	$(INSTALL) -D -m 0755 $(@D)/bin/Linux/xenia_edge $(TARGET_DIR)/usr/bin/xenia-edge/xenia_edge
 endef
 
 define XENIA_EDGE_POST_PROCESS
@@ -50,6 +60,7 @@ define XENIA_EDGE_POST_PROCESS
 	# Clean up the temporary directory
 	rm -rf $(@D)/temp
 endef
+XENIA_EDGE_POST_INSTALL_TARGET_HOOKS += XENIA_EDGE_POST_PROCESS
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))

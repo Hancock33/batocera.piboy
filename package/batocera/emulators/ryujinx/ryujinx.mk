@@ -3,11 +3,11 @@
 # ryujinx
 #
 ################################################################################
-# Version: Commits on Nov 17, 2026
-RYUJINX_VERSION = dfd2bc69bfc5e0071132c056860d452f1a5b9b41
+# Version: Commits on Nov 20, 2026
+RYUJINX_VERSION = a6a641ada215837297e7170c91c6b4e8275574c6
 RYUJINX_SITE = https://git.ryujinx.app/projects/Kenji-NX.git
-RYUJINX_SITE_METHOD=git
-RYUJINX_GIT_SUBMODULES=YES
+RYUJINX_SITE_METHOD = git
+RYUJINX_GIT_SUBMODULES = YES
 RYUJINX_LICENSE = MIT
 RYUJINX_DEPENDENCIES = adwaita-icon-theme hicolor-icon-theme librsvg openal sdl3
 RYUJINX_EMULATOR_INFO = ryujinx.emulator.yml
@@ -32,7 +32,7 @@ define RYUJINX_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/ryujinx
 	cp -avr $(@D)/publish/* $(TARGET_DIR)/usr/bin/ryujinx
 	rm -rf   $(TARGET_DIR)/usr/bin/ryujinx/{libSDL3.so,libav*,libglfw*}
-	cp -avr $(@D)/publish/mime/Ryujinx.xml $(TARGET_DIR)/usr/share/mime
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/mime $(@D)/publish/mime/Ryujinx.xml
 endef
 
 define RYUJINX_DOTNET_INSTALL

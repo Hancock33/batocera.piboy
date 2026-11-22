@@ -6,7 +6,7 @@
 # Version: Commits on Aug 19, 2026
 LIBRETRO_2048_VERSION = 39333f7b13dc4daea7c151d9c38d22b961246343
 LIBRETRO_2048_SITE = $(call github,libretro,libretro-2048,$(LIBRETRO_2048_VERSION))
-LIBRETRO_2048_LICENSE = UNLICENSE
+LIBRETRO_2048_LICENSE = Unlicense
 LIBRETRO_2048_LICENSE_FILES = LICENSE
 LIBRETRO_2048_EMULATOR_INFO = 2048.libretro.core.yml
 
@@ -17,10 +17,9 @@ define LIBRETRO_2048_BUILD_CMDS
 endef
 
 define LIBRETRO_2048_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/2048
 	$(INSTALL) -D $(@D)/2048_libretro.so $(TARGET_DIR)/usr/lib/libretro/2048_libretro.so
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-2048/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/2048/
+	cp -a  $(LIBRETRO_2048_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/2048/
 endef
 
 $(eval $(generic-package))

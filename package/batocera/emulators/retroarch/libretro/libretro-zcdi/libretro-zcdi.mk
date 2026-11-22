@@ -3,8 +3,8 @@
 # libretro-zcdi
 #
 ################################################################################
-# Version: Commits on Nov 17, 2026
-LIBRETRO_ZCDI_VERSION = a1fdbdf7417c031a1bae642d756ee2c06dc39f41
+# Version: Commits on Nov 21, 2026
+LIBRETRO_ZCDI_VERSION = 6185f542d0275059cc860a45316e3cd68503927b
 LIBRETRO_ZCDI_SITE = $(call github,pastisme,zcdi,$(LIBRETRO_ZCDI_VERSION))
 LIBRETRO_ZCDI_LICENSE = GPL-3.0+
 LIBRETRO_ZCDI_LICENSE_FILES = LICENSE
@@ -17,8 +17,6 @@ LIBRETRO_ZCDI_CONF_OPTS += -DZCDI_ENABLE_LIBRETRO=ON
 LIBRETRO_ZCDI_CONF_OPTS += -DZCDI_BUILD_TESTS=OFF
 
 define LIBRETRO_ZCDI_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/buildroot-build/zcdi_libretro.so $(TARGET_DIR)/usr/lib/libretro/zcdi_libretro.so
 	$(INSTALL) -D -m 0644 $(@D)/src/libretro/zcdi_libretro.info $(TARGET_DIR)/usr/share/libretro/info/zcdi_libretro.info
 endef

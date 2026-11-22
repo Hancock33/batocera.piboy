@@ -15,7 +15,6 @@ define LIBRETRO_GEOLITH_BUILD_CMDS
 endef
 
 define LIBRETRO_GEOLITH_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/libretro/geolith_libretro.so $(TARGET_DIR)/usr/lib/libretro/geolith_libretro.so
 endef
 

@@ -9,11 +9,14 @@ WXWIDGETS_SITE = https://github.com/wxWidgets/wxWidgets
 WXWIDGETS_DEPENDENCIES = zlib libpng jpeg gdk-pixbuf host-libgtk3 libgtk3 libglu
 WXWIDGETS_SITE_METHOD = git
 WXWIDGETS_GIT_SUBMODULES = YES
+WXWIDGETS_LICENSE = wxWindows
+WXWIDGETS_LICENSE_FILES = docs/licence.txt docs/lgpl.txt
 
 WXWIDGETS_SUPPORTS_IN_SOURCE_BUILD = NO
 WXWIDGETS_INSTALL_STAGING = YES
 
-WXWIDGETS_SERIES = $(shell echo $(WXWIDGETS_VERSION) | sed 's/^v//;s/\.[0-9]*$$//')
+# major.minor of the version, e.g. v3.3.4 -> 3.3
+WXWIDGETS_SERIES = $(subst $(space),.,$(wordlist 1,2,$(subst ., ,$(patsubst v%,%,$(WXWIDGETS_VERSION)))))
 
 define WXWIDGETS_FIXUP_WXWIDGET_CONFIG
 	# Explicitly target the version we want

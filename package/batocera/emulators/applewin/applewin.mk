@@ -3,12 +3,12 @@
 # applewin
 #
 ################################################################################
-# Version: Commits on Nov 08, 2026
-APPLEWIN_VERSION = e9ebeb7c83b7ffe67d8604a3b79d34925d56aada
+# Version: Commits on Nov 20, 2026
+APPLEWIN_VERSION = 6e6df2cb7503af105422a01cfa08a0ebc48486a3
 APPLEWIN_SITE = https://github.com/audetto/AppleWin.git
-APPLEWIN_SITE_METHOD=git
-APPLEWIN_GIT_SUBMODULES=YES
-APPLEWIN_LICENSE = GPLv2
+APPLEWIN_SITE_METHOD = git
+APPLEWIN_GIT_SUBMODULES = YES
+APPLEWIN_LICENSE = GPL-2.0
 APPLEWIN_DEPENDENCIES = host-xxd libpcap sdl2 sdl2_image slirp
 APPLEWIN_EMULATOR_INFO = applewin.emulator.yml applewin.libretro.core.yml
 
@@ -25,15 +25,13 @@ endif
 
 define APPLEWIN_INSTALL_TARGET_CMDS
 	# libretro core
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	$(INSTALL) -D $(@D)/buildroot-build/source/frontends/libretro/applewin_libretro.so $(TARGET_DIR)/usr/lib/libretro/
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
-	cp -av $(@D)/buildroot-build/source/frontends/libretro/applewin_libretro.info $(TARGET_DIR)/usr/share/libretro/info/
+	$(INSTALL) -D $(@D)/buildroot-build/source/frontends/libretro/applewin_libretro.so $(TARGET_DIR)/usr/lib/libretro/applewin_libretro.so
+	$(INSTALL) -D -m 0644 $(@D)/buildroot-build/source/frontends/libretro/applewin_libretro.info $(TARGET_DIR)/usr/share/libretro/info/applewin_libretro.info
 	# standalone core
-	cp -avf $(@D)/buildroot-build/sa2 $(TARGET_DIR)/usr/bin/applewin
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/sa2 $(TARGET_DIR)/usr/bin/applewin
 	mkdir -p $(TARGET_DIR)/usr/share/applewin
 	cp -R $(@D)/resource/* $(TARGET_DIR)/usr/share/applewin/
-	rm $(TARGET_DIR)/usr/share/applewin/resource.h
+	rm -f $(TARGET_DIR)/usr/share/applewin/resource.h
 endef
 
 $(eval $(cmake-package))

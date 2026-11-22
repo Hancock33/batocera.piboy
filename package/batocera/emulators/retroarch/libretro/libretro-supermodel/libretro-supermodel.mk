@@ -3,8 +3,8 @@
 # libretro-supermodel
 #
 ################################################################################
-# Version: Commits on Nov 02, 2026
-LIBRETRO_SUPERMODEL_VERSION = 20dfc573e005b0933b07a749db15a693d50db1dd
+# Version: Commits on Nov 20, 2026
+LIBRETRO_SUPERMODEL_VERSION = 9b4aece23e968207b69dd662c0e5b7d2dbce39a9
 LIBRETRO_SUPERMODEL_SITE = $(call github,libretro,Libretro-Supermodel,$(LIBRETRO_SUPERMODEL_VERSION))
 LIBRETRO_SUPERMODEL_LICENSE = GPL-3.0
 LIBRETRO_SUPERMODEL_DEPENDENCIES += retroarch
@@ -17,7 +17,7 @@ else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2712),y)
 else ifeq ($(BR2_x86_64),y)
     LIBRETRO_SUPERMODEL_PLATFORM = unix
 else
-    LIBRETRO_CRAFT_PLATFORM=$(LIBRETRO_PLATFORM)
+    LIBRETRO_SUPERMODEL_PLATFORM = $(LIBRETRO_PLATFORM)
 endif
 
 define LIBRETRO_SUPERMODEL_BUILD_CMDS
@@ -28,8 +28,6 @@ define LIBRETRO_SUPERMODEL_BUILD_CMDS
 endef
 
 define LIBRETRO_SUPERMODEL_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/supermodel/Config
 	$(INSTALL) -D $(@D)/supermodel_libretro*.so $(TARGET_DIR)/usr/lib/libretro/supermodel_libretro.so
 	$(INSTALL) -D $(@D)/supermodel_libretro.info $(TARGET_DIR)/usr/share/libretro/info/supermodel_libretro.info

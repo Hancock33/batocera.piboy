@@ -6,7 +6,7 @@
 # Version: Commits on Sept 30, 2026
 LIBRETRO_LOWRESNX_VERSION = 63d5988f74e1eea2ecd6ea0445a8ce260b0a9822
 LIBRETRO_LOWRESNX_SITE = $(call github,timoinutilis,lowres-nx,$(LIBRETRO_LOWRESNX_VERSION))
-LIBRETRO_LOWRESNX_LICENSE = zlib
+LIBRETRO_LOWRESNX_LICENSE = Zlib
 LIBRETRO_LOWRESNX_DEPENDENCIES += retroarch
 LIBRETRO_LOWRESNX_EMULATOR_INFO = lowresnx.libretro.core.yml
 
@@ -29,7 +29,6 @@ define LIBRETRO_LOWRESNX_BUILD_CMDS
 endef
 
 define LIBRETRO_LOWRESNX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/platform/LibRetro/lowresnx_libretro.so $(TARGET_DIR)/usr/lib/libretro/lowresnx_libretro.so
 endef
 

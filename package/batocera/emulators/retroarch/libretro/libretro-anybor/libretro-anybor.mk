@@ -3,20 +3,27 @@
 # libretro-anybor
 #
 ################################################################################
-# Version: Commits on Nov 16, 2026
-LIBRETRO_ANYBOR_VERSION = 51092fbaf4a617540c59d107fd5d034a2e181c56
+# Version: Commits on Nov 20, 2026
+LIBRETRO_ANYBOR_VERSION = b211fdc4b616de146b6fe594689081eeb4ae3bfd
 LIBRETRO_ANYBOR_SITE = $(call github,retrodiv,AnyBOR-libretro,$(LIBRETRO_ANYBOR_VERSION))
 # multiple, see https://github.com/retrodiv/AnyBOR-libretro/tree/main/LICENSES
-# OpenBOR 3400 retains its no-sale terms; see LICENSES.md.
-LIBRETRO_ANYBOR_LICENSE = BSD-3-Clause, OpenBOR-3400 (no sale), MIT, ISC, Zlib, Libpng-2.0, CC0-1.0, other
+# OpenBOR 3400 and 3741 retain their no-sale terms; see LICENSES.md.
+LIBRETRO_ANYBOR_LICENSE = BSD-3-Clause, OpenBOR-3400 (no sale), OpenBOR-3741 (no sale), MIT, ISC, Zlib, Libpng-2.0, CC0-1.0, other
 LIBRETRO_ANYBOR_LICENSE_FILES = LICENSE LICENSES.md NOTICE.txt
-LIBRETRO_ANYBOR_DEPENDENCIES = retroarch zlib libpng libogg libvorbis libvpx
+LIBRETRO_ANYBOR_DEPENDENCIES = host-pkgconf retroarch zlib libpng libogg libvorbis libvpx libarchive
 LIBRETRO_ANYBOR_EMULATOR_INFO = anybor.libretro.core.yml
+
+# AnyBOR wraps codec allocations inside each engine's relocatable link.
+ifeq ($(BR2_PACKAGE_LIBRETRO_ANYBOR),y)
+LIBOGG_CONF_OPTS += -DOGG_BUILD_STATIC_LIBS=ON
+LIBVORBIS_CONF_OPTS += -DBUILD_STATIC_LIBS=ON
+endif
 
 LIBRETRO_ANYBOR_PLATFORM = $(LIBRETRO_PLATFORM)
 
 ifeq ($(BR2_x86_64),y)
 LIBRETRO_ANYBOR_PLATFORM = linux-x86_64
+LIBRETRO_ANYBOR_DEPENDENCIES += host-nasm
 else ifeq ($(BR2_aarch64),y)
 LIBRETRO_ANYBOR_PLATFORM = linux-aarch64
 else ifeq ($(BR2_RISCV_64),y)
@@ -25,15 +32,15 @@ endif
 
 # fopen64 from LFS defines escapes the core's file wrappers
 define LIBRETRO_ANYBOR_BUILD_CMDS
+	$(TARGET_CONFIGURE_OPTS) \
 		LDFLAGS="" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
+		PKG_CONFIG_PATH=$(STAGING_DIR)/usr/lib/pkgconfig \
 		-C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
 		CONFIGURE_HOST="$(GNU_TARGET_NAME)" CONFIGURE_BUILD="$(GNU_HOST_NAME)" \
-		GIT_VERSION="-$(shell echo $(LIBRETRO_ANYBOR_VERSION) | cut -c 1-7)"
+		SYSTEM_DEPS=1
 endef
 
 define LIBRETRO_ANYBOR_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/anybor_libretro.so $(TARGET_DIR)/usr/lib/libretro/anybor_libretro.so
 	$(INSTALL) -D $(@D)/anybor_libretro.info $(TARGET_DIR)/usr/share/libretro/info/anybor_libretro.info
 endef

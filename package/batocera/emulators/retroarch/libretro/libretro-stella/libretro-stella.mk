@@ -6,7 +6,7 @@
 # Version: Commits on Nov 17, 2026
 LIBRETRO_STELLA_VERSION = 8dd560091d22f9867cd9192880aa28570ed4d6db
 LIBRETRO_STELLA_SITE = $(call github,stella-emu,stella,$(LIBRETRO_STELLA_VERSION))
-LIBRETRO_STELLA_LICENSE = GPLv2
+LIBRETRO_STELLA_LICENSE = GPL-2.0
 LIBRETRO_STELLA_DEPENDENCIES += retroarch
 LIBRETRO_STELLA_EMULATOR_INFO = stella.libretro.core.yml
 
@@ -29,7 +29,6 @@ define LIBRETRO_STELLA_BUILD_CMDS
 endef
 
 define LIBRETRO_STELLA_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/src/os/libretro/stella_libretro.so $(TARGET_DIR)/usr/lib/libretro/stella_libretro.so
 endef
 

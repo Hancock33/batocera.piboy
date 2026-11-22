@@ -1,8 +1,8 @@
 diff --git a/pcsx2/ImGui/ImGuiManager.cpp b/pcsx2/ImGui/ImGuiManager.cpp
-index e824f6772..d371fcb0c 100644
+index 53abe0f3f..66be5af8b 100644
 --- a/pcsx2/ImGui/ImGuiManager.cpp
 +++ b/pcsx2/ImGui/ImGuiManager.cpp
-@@ -1416,12 +1416,14 @@ void ImGuiManager::DrawSoftwareCursor(const SoftwareCursor& sc, const std::pair<
+@@ -1415,12 +1415,14 @@ void ImGuiManager::DrawSoftwareCursor(const SoftwareCursor& sc, const std::pair<
  
  void ImGuiManager::DrawSoftwareCursors()
  {
@@ -21,7 +21,7 @@ index e824f6772..d371fcb0c 100644
  }
  
 diff --git a/pcsx2/Input/InputManager.h b/pcsx2/Input/InputManager.h
-index 6944355b5..18222b515 100644
+index fb6601246..3b1e06238 100644
 --- a/pcsx2/Input/InputManager.h
 +++ b/pcsx2/Input/InputManager.h
 @@ -167,7 +167,7 @@ namespace InputManager

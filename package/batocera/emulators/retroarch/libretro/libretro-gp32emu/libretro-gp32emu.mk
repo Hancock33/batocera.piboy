@@ -17,7 +17,6 @@ define LIBRETRO_GP32EMU_BUILD_CMDS
 endef
 
 define LIBRETRO_GP32EMU_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro  $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/gp32emu_libretro.so $(TARGET_DIR)/usr/lib/libretro/gp32emu_libretro.so
 	$(INSTALL) -D -m 0644 $(@D)/gp32emu_libretro.info $(TARGET_DIR)/usr/share/libretro/info/gp32emu_libretro.info
 endef

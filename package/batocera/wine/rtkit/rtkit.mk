@@ -6,6 +6,7 @@
 # Version: Commits on Dec 11, 2025
 RTKIT_VERSION = v0.14
 RTKIT_SITE = https://gitlab.freedesktop.org/pipewire/rtkit/-/archive/$(RTKIT_VERSION)
+RTKIT_LICENSE = GPL-3.0+ (daemon), MIT (client library)
 RTKIT_DEPENDENCIES = dbus libcap polkit
 
 define RTKIT_USERS

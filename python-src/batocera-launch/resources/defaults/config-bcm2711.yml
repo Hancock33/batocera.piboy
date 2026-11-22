@@ -63,8 +63,8 @@ model3:
     decorations: none
     hud_support: none
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 pet:
   emulator: libretro
   core:     vice_xpet

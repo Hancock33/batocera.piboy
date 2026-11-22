@@ -7,7 +7,7 @@
 VKQUAKE3_VERSION = 650bd625eb725446279c6176804b554e2e1c98f3
 VKQUAKE3_SITE = $(call github,suijingfeng,vkQuake3,$(VKQUAKE3_VERSION))
 VKQUAKE3_LICENSE = GPL-2.0
-VKQUAKE3_LICENSE_FILE = COPYING.txt
+VKQUAKE3_LICENSE_FILES = COPYING.txt
 VKQUAKE3_EMULATOR_INFO = vkquake3.emulator.yml
 
 VKQUAKE3_DEPENDENCIES = glslang opus opusfile sdl2 vulkan-headers vulkan-loader
@@ -46,8 +46,7 @@ define VKQUAKE3_INSTALL_TARGET_CMDS
 endef
 
 define VKQUAKE3_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/quake/vkquake3/quake3.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(VKQUAKE3_PKGDIR)/quake3.keys
 endef
 
 VKQUAKE3_POST_INSTALL_TARGET_HOOKS += VKQUAKE3_EVMAPY

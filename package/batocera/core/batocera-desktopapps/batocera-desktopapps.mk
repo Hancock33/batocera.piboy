@@ -6,16 +6,14 @@
 
 BATOCERA_DESKTOPAPPS_VERSION = 1.3
 BATOCERA_DESKTOPAPPS_SOURCE =
-
-BATOCERA_DESKTOPAPPS_PKGDIR = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-desktopapps
+BATOCERA_DESKTOPAPPS_LICENSE = LGPL-3.0+
 
 # depend on yad if the device meets the criteria
 ifeq ($(BR2_PACKAGE_XORG7),y)
-    ifeq ($(BR2_PACKAGE_LIBGTK2)$(BR2_PACKAGE_LIBGTK3_X11),y)
-        BATOCERA_DESKTOPAPPS_DEPENDENCIES += yad
-    endif
+ifneq ($(BR2_PACKAGE_LIBGTK2)$(BR2_PACKAGE_LIBGTK3_X11),)
+BATOCERA_DESKTOPAPPS_DEPENDENCIES += yad
 endif
-
+endif
 # Base files
 BATOCERA_DESKTOPAPPS_SCRIPTS = filemanagerlauncher
 BATOCERA_DESKTOPAPPS_APPS    = xterm.desktop
@@ -25,7 +23,7 @@ BATOCERA_DESKTOPAPPS_ACTIONS =
 
 # only applications for platforms that can use yad
 ifeq ($(BR2_PACKAGE_YAD),y)
-  # 1og Viewer for ES log files
+  # log viewer for ES log files
   BATOCERA_DESKTOPAPPS_SCRIPTS += view-eslog
   BATOCERA_DESKTOPAPPS_APPS    += view-eslog.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += view-eslog.png
@@ -140,7 +138,7 @@ ifeq ($(BR2_PACKAGE_BAUH),y)
 endif
 
 # eden
-ifeq ($(BR2_PACKAGE_CITRON),y)
+ifeq ($(BR2_PACKAGE_EDEN),y)
   BATOCERA_DESKTOPAPPS_SCRIPTS += batocera-config-eden
   BATOCERA_DESKTOPAPPS_APPS    += eden-config.desktop
   BATOCERA_DESKTOPAPPS_ICONS   += eden.png

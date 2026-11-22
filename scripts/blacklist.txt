@@ -5,6 +5,7 @@ firmware-armbian.mk
 firmware-orangepi.mk
 firmware-radxa-rkwifibt.mk
 firmware-rk3588.mk
+gamescope.mk
 jstest2.mk
 kodi-audiodecoder-openmpt.mk
 libaltsound.mk
@@ -18,8 +19,7 @@ libserum.mk
 libvni.mk
 libwinevbs.mk
 libzedmd.mk
-linuxloader.mk
-mt32emu.mk
+munt.mk
 noto-cjk-fonts.mk
 openxr-sdk.mk
 shader-slang.mk

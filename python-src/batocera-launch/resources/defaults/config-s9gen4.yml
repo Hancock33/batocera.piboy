@@ -22,5 +22,5 @@ naomi:
   emulator: libretro
   core:     flycast
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate

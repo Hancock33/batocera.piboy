@@ -20,9 +20,8 @@ define CORSIXTH_INSTALL_EVMAPY
 	ln -sf /usr/lib/lua/lfs.so $(TARGET_DIR)/usr/share/corsix-th
 	ln -sf /usr/lib/lua/lpeg.so $(TARGET_DIR)/usr/share/corsix-th
 	# evmap config
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/corsixth/corsixth.keys $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/corsixth/corsixth.keys $(TARGET_DIR)/usr/share/evmapy/themehospital.keys
+	$(INSTALL) -m 0644 -D $(CORSIXTH_PKGDIR)/corsixth.keys $(TARGET_DIR)/usr/share/evmapy/corsixth.keys
+	$(INSTALL) -m 0644 -D $(CORSIXTH_PKGDIR)/corsixth.keys $(TARGET_DIR)/usr/share/evmapy/themehospital.keys
 endef
 
 CORSIXTH_POST_INSTALL_TARGET_HOOKS += CORSIXTH_INSTALL_EVMAPY

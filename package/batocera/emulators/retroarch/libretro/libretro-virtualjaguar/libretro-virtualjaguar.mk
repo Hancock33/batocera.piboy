@@ -3,10 +3,10 @@
 # libretro-virtualjaguar
 #
 ################################################################################
-# Version: Commits on Nov 17, 2026
-LIBRETRO_VIRTUALJAGUAR_VERSION = v3.13.0
+# Version: Commits on Nov 19, 2026
+LIBRETRO_VIRTUALJAGUAR_VERSION = v3.13.1
 LIBRETRO_VIRTUALJAGUAR_SITE = $(call github,libretro,virtualjaguar-libretro,$(LIBRETRO_VIRTUALJAGUAR_VERSION))
-LIBRETRO_VIRTUALJAGUAR_LICENSE = GPLv3
+LIBRETRO_VIRTUALJAGUAR_LICENSE = GPL-3.0
 LIBRETRO_VIRTUALJAGUAR_DEPENDENCIES += retroarch
 LIBRETRO_VIRTUALJAGUAR_EMULATOR_INFO = virtualjaguar.libretro.core.yml
 
@@ -28,7 +28,6 @@ define LIBRETRO_VIRTUALJAGUAR_BUILD_CMDS
 endef
 
 define LIBRETRO_VIRTUALJAGUAR_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/virtualjaguar_libretro.so $(TARGET_DIR)/usr/lib/libretro/virtualjaguar_libretro.so
 endef
 

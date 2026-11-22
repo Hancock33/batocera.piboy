@@ -3,22 +3,19 @@
 # libpinmame
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBPINMAME_VERSION = 6e744dbf91c2533c4d26d5616f0264466132e5a6
+# Version: Commits on Nov 19, 2026
+LIBPINMAME_VERSION = 07754f2750ae32efab84a3064cab553f3e56b064
 LIBPINMAME_SITE = $(call github,vpinball,pinmame,$(LIBPINMAME_VERSION))
 LIBPINMAME_LICENSE = BSD-3-Clause
 LIBPINMAME_LICENSE_FILES = LICENSE
-LIBPINMAME_DEPENDENCIES = zlib
 LIBPINMAME_SUPPORTS_IN_SOURCE_BUILD = NO
 LIBPINMAME_INSTALL_STAGING = YES
 
 LIBPINMAME_CONF_OPTS += $(VPINBALL_COMMON_CONF_OPTS)
 
-define LIBPINMAME_RENAME_CMAKE
+define LIBPINMAME_SETUP_CMAKE
 	cp $(@D)/cmake/libpinmame/CMakeLists.txt $(@D)/CMakeLists.txt
-	rm $(@D)/makefile
 endef
-
-LIBPINMAME_PRE_CONFIGURE_HOOKS += LIBPINMAME_RENAME_CMAKE
+LIBPINMAME_PRE_CONFIGURE_HOOKS += LIBPINMAME_SETUP_CMAKE
 
 $(eval $(cmake-package))

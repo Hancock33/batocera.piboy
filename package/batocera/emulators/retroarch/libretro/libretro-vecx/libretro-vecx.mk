@@ -6,7 +6,7 @@
 # Version: Commits on Oct 17, 2026
 LIBRETRO_VECX_VERSION = dccff5402a16d1ea7c112095a8e42632bf149506
 LIBRETRO_VECX_SITE = $(call github,libretro,libretro-vecx,$(LIBRETRO_VECX_VERSION))
-LIBRETRO_VECX_LICENSE = GPLv2|LGPLv2.1
+LIBRETRO_VECX_LICENSE = GPL-2.0 or LGPL-2.1
 LIBRETRO_VECX_DEPENDENCIES += retroarch
 LIBRETRO_VECX_EMULATOR_INFO = vecx.libretro.core.yml
 
@@ -41,7 +41,6 @@ define LIBRETRO_VECX_BUILD_CMDS
 endef
 
 define LIBRETRO_VECX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/vecx_libretro.so $(TARGET_DIR)/usr/lib/libretro/vecx_libretro.so
 endef
 

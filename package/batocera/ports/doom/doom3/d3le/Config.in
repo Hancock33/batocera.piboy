@@ -1,12 +1,6 @@
 config BR2_PACKAGE_D3LE
 	bool "d3le"
-	select BR2_PACKAGE_LIBCURL
-	select BR2_PACKAGE_LIBJPEG
-	select BR2_PACKAGE_LIBOGG
-	select BR2_PACKAGE_LIBVORBIS
-	select BR2_PACKAGE_OPENAL
-	select BR2_PACKAGE_SDL2
-	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_DHEWM3
 
 	help
 	  dhewm3 port of the Doom3: The Lost Mission mod..

@@ -11,14 +11,10 @@ CLK_DEPENDENCIES = sdl2 libgl
 CLK_SITE_METHOD = git
 CLK_EMULATOR_INFO = clk.emulator.yml
 
-CLK_CONF_OPTS += -DCMAKE_BUILD_TYPE=Release
-
 define CLK_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/clksignal $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -m 0755 -D $(@D)/clksignal $(TARGET_DIR)/usr/bin/clksignal
 	# evmapy
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/clk/clk.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(CLK_PKGDIR)/clk.keys
 endef
 
 $(eval $(cmake-package))

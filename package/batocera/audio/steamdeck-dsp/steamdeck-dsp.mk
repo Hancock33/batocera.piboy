@@ -10,13 +10,9 @@ STEAMDECK_DSP_LICENSE = LGPL-2.1+
 
 STEAMDECK_DSP_DEPENDENCIES = alsa-ucm-conf pipewire sound-open-firmware wireplumber
 
-STEAMDECK_DSP_FILES = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/audio/steamdeck-dsp
-
 define STEAMDECK_DSP_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr
-	mkdir -p $(TARGET_DIR)/lib
-	rsync -a $(STEAMDECK_DSP_FILES)/usr $(TARGET_DIR)/
-	rsync -a $(STEAMDECK_DSP_FILES)/lib $(TARGET_DIR)/
+	rsync -a $(STEAMDECK_DSP_PKGDIR)/usr $(TARGET_DIR)/
+	rsync -a $(STEAMDECK_DSP_PKGDIR)/lib $(TARGET_DIR)/
 endef
 
 $(eval $(generic-package))

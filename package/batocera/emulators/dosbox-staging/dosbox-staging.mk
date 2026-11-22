@@ -6,10 +6,10 @@
 # Version: Commits on Oct 31, 2026
 DOSBOX_STAGING_VERSION = v0.83.1
 DOSBOX_STAGING_SITE = $(call github,dosbox-staging,dosbox-staging,$(DOSBOX_STAGING_VERSION))
-DOSBOX_STAGING_DEPENDENCIES = alsa-lib asio fluidsynth iir libogg libpng libvorbis mt32emu
+DOSBOX_STAGING_DEPENDENCIES = alsa-lib asio fluidsynth iir libogg libpng libvorbis munt
 DOSBOX_STAGING_DEPENDENCIES += opus opusfile sdl2 sdl2_image slirp speexdsp zlib
 DOSBOX_STAGING_CMAKE_BACKEND = make
-DOSBOX_STAGING_LICENSE = GPLv2
+DOSBOX_STAGING_LICENSE = GPL-2.0
 DOSBOX_STAGING_EMULATOR_INFO = dosbox_staging.emulator.yml
 
 DOSBOX_STAGING_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF

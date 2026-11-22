@@ -1,8 +1,10 @@
+Keep logs, saves, configs, cache and screenshots under /userdata
+
 diff --git a/src/Cemu/Logging/CemuLogging.cpp b/src/Cemu/Logging/CemuLogging.cpp
-index f2d9ac0..50fade3 100644
+index 1776551..556ec7b 100644
 --- a/src/Cemu/Logging/CemuLogging.cpp
 +++ b/src/Cemu/Logging/CemuLogging.cpp
-@@ -151,7 +151,7 @@ void cemuLog_thread()
+@@ -154,7 +154,7 @@ void cemuLog_thread()
  
  fs::path cemuLog_GetLogFilePath()
  {
@@ -12,11 +14,11 @@ index f2d9ac0..50fade3 100644
  
  void cemuLog_createLogFile(bool triggeredByCrash)
 diff --git a/src/Common/ExceptionHandler/ExceptionHandler_win32.cpp b/src/Common/ExceptionHandler/ExceptionHandler_win32.cpp
-index 6b205d2..74120a4 100644
+index 934a297..5eaeefc 100644
 --- a/src/Common/ExceptionHandler/ExceptionHandler_win32.cpp
 +++ b/src/Common/ExceptionHandler/ExceptionHandler_win32.cpp
-@@ -235,7 +235,7 @@ void createCrashlog(EXCEPTION_POINTERS* e, PCONTEXT context)
- 		p /= fmt::format("log_{:04d}{:02d}{:02d}_{:02d}{:02d}{:02d}.txt", 1900 + time.tm_year, time.tm_mon + 1, time.tm_mday, time.tm_year, time.tm_hour, time.tm_min, time.tm_sec);
+@@ -259,7 +259,7 @@ void createCrashlog(EXCEPTION_POINTERS* e, PCONTEXT context)
+ 		p /= fmt::format("log_{:04d}{:02d}{:02d}_{:02d}{:02d}{:02d}.txt", 1900 + time.tm_year, time.tm_mon + 1, time.tm_mday, time.tm_hour, time.tm_min, time.tm_sec);
  
  		std::error_code ec;
 -		fs::copy_file(ActiveSettings::GetUserDataPath("log.txt"), p, ec);
@@ -25,10 +27,10 @@ index 6b205d2..74120a4 100644
  
  	exit(0);
 diff --git a/src/gui/wxgui/CemuApp.cpp b/src/gui/wxgui/CemuApp.cpp
-index 1c803bf..a31a7a3 100644
+index 4327a4d..e452a87 100644
 --- a/src/gui/wxgui/CemuApp.cpp
 +++ b/src/gui/wxgui/CemuApp.cpp
-@@ -155,11 +155,10 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
+@@ -161,11 +161,10 @@ void CemuApp::DeterminePaths(std::set<fs::path>& failedWriteAccess) // for Linux
  			return dir;
  		};
  		wxString homeDir = wxFileName::GetHomeDir();
@@ -39,7 +41,7 @@ index 1c803bf..a31a7a3 100644
  		data_path = standardPaths.GetDataDir().ToStdString();
 -		cache_path = standardPaths.GetUserDir(wxStandardPaths::Dir::Dir_Cache).ToStdString();
 -		cache_path /= appName.ToStdString();
-+		cache_path = (getEnvDir(wxS("XDG_CACHE_HOME"), wxS("userdata/system/cache")) + "/" + appName.Lower()).ToStdString();
++		cache_path = (getEnvDir(wxS("XDG_CACHE_HOME"), wxS("/userdata/system/cache")) + "/" + appName.Lower()).ToStdString();
  	}
  	ActiveSettings::SetPaths(isPortable, exePath, user_data_path, config_path, cache_path, data_path, failedWriteAccess);
  }

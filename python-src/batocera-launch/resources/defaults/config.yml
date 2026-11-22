@@ -754,7 +754,7 @@ pcfx:
   core:     pcfx
 pcw:
   emulator: libretro
-  core:     mame
+  core:     zesarpcw
 pdp1:
   emulator: libretro
   core:     mame

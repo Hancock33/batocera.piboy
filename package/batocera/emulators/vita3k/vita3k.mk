@@ -3,12 +3,12 @@
 # vita3k
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-VITA3K_VERSION = f0a191cccaffec18a148a6431d52b42a883be11d
+# Version: Commits on Nov 21, 2026
+VITA3K_VERSION = 64e655dd797153d0c5a5cbf734634be31288168d
 VITA3K_SITE = https://github.com/vita3k/vita3k
 VITA3K_SITE_METHOD = git
 VITA3K_GIT_SUBMODULES = YES
-VITA3K_LICENSE = GPLv3
+VITA3K_LICENSE = GPL-3.0
 VITA3K_DEPENDENCIES += boost host-clang host-ninja libcurl libogg libvorbis pipewire python-ruamel-yaml
 VITA3K_DEPENDENCIES += qt6base qt6multimedia qt6svg qt6tools sdl3 sdl3_image sdl3_ttf zlib
 VITA3K_EXTRACT_DEPENDENCIES = host-libcurl
@@ -21,7 +21,6 @@ VITA3K_DEPENDENCIES += wayland
 endif
 
 VITA3K_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-VITA3K_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS="-Wl,-O1,--as-needed -fuse-ld=mold -no-pie -lm -lstdc++"
 VITA3K_CONF_OPTS += -DUSE_DISCORD_RICH_PRESENCE=OFF
 VITA3K_CONF_OPTS += -DVITA3K_FORCE_SYSTEM_BOOST=ON
 

@@ -6,7 +6,7 @@
 # Version: Commits on Sep 16, 2021
 UBOOT_PS7000_VERSION = e2c76fb6b0f89c5385273b3a83fbd2ce16903396
 UBOOT_PS7000_SITE = $(call github,rk3128-cfw,caesar-u-boot,$(UBOOT_PS7000_VERSION))
-UBOOT_PS7000_LICENSE = GPLv2
+UBOOT_PS7000_LICENSE = GPL-2.0
 UBOOT_PS7000_BOOT_SRC = idbloader.img uboot.img:uboot-ps7000.img trust.img
 UBOOT_PS7000_BINARIES_SUBDIR =
 
@@ -15,10 +15,10 @@ UBOOT_PS7000_DEPENDENCIES = host-batocera-rkbin
 define UBOOT_PS7000_BUILD_CMDS
 	# FIXME: there should be a better way to build
 	cd $(@D) && ARCH=arm CHIP=rk3128 \
-		CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- \
-		make ps7000-rk3128_defconfig
+		CROSS_COMPILE="$(TARGET_CROSS)" \
+		$(MAKE) ps7000-rk3128_defconfig
 	cd $(@D) && ARCH=arm CHIP=rk3128 \
-		CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- make
+		CROSS_COMPILE="$(TARGET_CROSS)" $(MAKE)
 
 	# Generate idbloader.img
 	$(@D)/tools/mkimage -n rk3128 -T rksd -d \

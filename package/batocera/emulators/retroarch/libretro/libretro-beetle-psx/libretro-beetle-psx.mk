@@ -3,10 +3,10 @@
 # libretro-beetle-psx
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBRETRO_BEETLE_PSX_VERSION = fef6befa372bdcefe0e46eb8be371d86fabc9408
+# Version: Commits on Nov 20, 2026
+LIBRETRO_BEETLE_PSX_VERSION = fb70b69a1aef1f60d9fc139ab7df34a5742ccdfd
 LIBRETRO_BEETLE_PSX_SITE = $(call github,libretro,beetle-psx-libretro,$(LIBRETRO_BEETLE_PSX_VERSION))
-LIBRETRO_BEETLE_PSX_LICENSE = GPLv2
+LIBRETRO_BEETLE_PSX_LICENSE = GPL-2.0
 LIBRETRO_BEETLE_PSX_DEPENDENCIES += retroarch
 LIBRETRO_BEETLE_PSX_EMULATOR_INFO = mednafen_psx.libretro.core.yml
 
@@ -41,7 +41,6 @@ define LIBRETRO_BEETLE_PSX_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_PSX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/$(LIBRETRO_BEETLE_PSX_OUTFILE) $(TARGET_DIR)/usr/lib/libretro/mednafen_psx_libretro.so
 endef
 

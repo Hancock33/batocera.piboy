@@ -6,9 +6,9 @@
 # Version: Commits on Jul 31, 2026
 LIBRETRO_BEETLE_WSWAN_VERSION = 4b01295838ea89e3f1355bbe4cb5cf98aa6108cd
 LIBRETRO_BEETLE_WSWAN_SITE = $(call github,libretro,beetle-wswan-libretro,$(LIBRETRO_BEETLE_WSWAN_VERSION))
-LIBRETRO_BEETLE_WSWAN_LICENSE = GPLv2
+LIBRETRO_BEETLE_WSWAN_LICENSE = GPL-2.0
 
-LIBRETRO_BEETLE_WSWAN_DEPENDENCIES = libpng retroarch
+LIBRETRO_BEETLE_WSWAN_DEPENDENCIES = retroarch
 LIBRETRO_BEETLE_WSWAN_EMULATOR_INFO = mednafen_wswan.libretro.core.yml
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_BCM2836),y)
@@ -30,7 +30,6 @@ define LIBRETRO_BEETLE_WSWAN_BUILD_CMDS
 endef
 
 define LIBRETRO_BEETLE_WSWAN_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/mednafen_wswan_libretro.so $(TARGET_DIR)/usr/lib/libretro/mednafen_wswan_libretro.so
 endef
 

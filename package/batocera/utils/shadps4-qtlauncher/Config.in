@@ -1,13 +1,25 @@
 config BR2_PACKAGE_SHADPS4_QTLAUNCHER
 	bool "shadps4_qtlauncher"
-	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_8
+	depends on BR2_PACKAGE_SHADPS4
+	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_13 # C++23
 	select BR2_HOST_CMAKE_AT_LEAST_3_24
+	select BR2_PACKAGE_FMT
+	select BR2_PACKAGE_HOST_QT6TOOLS
+	select BR2_PACKAGE_HOST_QT6TOOLS_LINGUIST_TOOLS
+	select BR2_PACKAGE_OPENAL
+	select BR2_PACKAGE_OPENSSL
 	select BR2_PACKAGE_QT6BASE
+	select BR2_PACKAGE_QT6BASE_CONCURRENT
+	select BR2_PACKAGE_QT6BASE_GUI
+	select BR2_PACKAGE_QT6BASE_NETWORK
+	select BR2_PACKAGE_QT6BASE_WIDGETS
 	select BR2_PACKAGE_QT6MULTIMEDIA
 	select BR2_PACKAGE_QT6SVG
 	select BR2_PACKAGE_QT6TOOLS
+	select BR2_PACKAGE_SDL3
+	select BR2_PACKAGE_VULKAN_HEADERS
 
 	help
-	  The official Qt launcher for shadps4 emulator.
+	  The official Qt launcher for the shadPS4 emulator.
 
 	  https://github.com/shadps4-emu/shadps4-qtlauncher

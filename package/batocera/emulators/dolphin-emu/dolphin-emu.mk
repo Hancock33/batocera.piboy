@@ -3,17 +3,33 @@
 # dolphin-emu
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-DOLPHIN_EMU_VERSION = 438b557ac328de38c5846278aa1d25d33d42a22c
+# Version: Commits on Nov 22, 2026
+DOLPHIN_EMU_VERSION = f1c89c5110c9f10c987111ac7535586c97b59dbf
 DOLPHIN_EMU_VERSION_MAJOR = 2609
-DOLPHIN_EMU_VERSION_MINOR = 280
+DOLPHIN_EMU_VERSION_MINOR = 312
 DOLPHIN_EMU_SITE = https://github.com/dolphin-emu/dolphin
 DOLPHIN_EMU_SITE_METHOD = git
-DOLPHIN_EMU_LICENSE = GPLv2+
+DOLPHIN_EMU_LICENSE = GPL-2.0+
 DOLPHIN_EMU_GIT_SUBMODULES = YES
 DOLPHIN_EMU_SUPPORTS_IN_SOURCE_BUILD = NO
 
-DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cpp-ipc ffmpeg hidapi host-xz libcurl libevdev libpng libusb lzo sdl3 xz zlib
+DOLPHIN_EMU_DEPENDENCIES += bluez5_utils cubeb ffmpeg hidapi libcurl libevdev libusb lzo sdl3 udev xz zlib
+
+ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
+    DOLPHIN_EMU_DEPENDENCIES += alsa-lib
+endif
+
+ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
+    DOLPHIN_EMU_DEPENDENCIES += pulseaudio
+endif
+
+ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+    DOLPHIN_EMU_DEPENDENCIES += libgl
+endif
+
+ifeq ($(BR2_PACKAGE_HAS_LIBEGL),y)
+    DOLPHIN_EMU_DEPENDENCIES += libegl
+endif
 
 $(eval $(call register,dolphin.emulator.yml))
 $(eval $(call register-if-kconfig,BR2_PACKAGE_BATOCERA_VULKAN,gfxbackend.dolphin.emulator.yml))
@@ -28,21 +44,23 @@ DOLPHIN_EMU_CONF_OPTS += -DENABLE_TESTS=OFF
 DOLPHIN_EMU_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
 DOLPHIN_EMU_CONF_OPTS += -DUSE_MGBA=ON
 DOLPHIN_EMU_CONF_OPTS += -DUSE_RETRO_ACHIEVEMENTS=ON
+DOLPHIN_EMU_CONF_OPTS += -DUSE_SYSTEM_CUBEB=ON
 DOLPHIN_EMU_CONF_OPTS += -DUSE_UPNP=OFF
 
 ifeq ($(BR2_PACKAGE_QT6),y)
     DOLPHIN_EMU_DEPENDENCIES += qt6base qt6svg
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=ON
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON
 else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=OFF
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON
 endif
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
+    DOLPHIN_EMU_DEPENDENCIES += xlib_libX11 xlib_libXi xlib_libXrandr
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=ON
+    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON
 else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=OFF
+    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
@@ -57,9 +75,8 @@ define DOLPHIN_EMU_PRE_CONFIGURE_HOOK
 endef
 
 define DOLPHIN_EMU_INI
-	mkdir -p $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings
 	# copy extra triforce ini files - force overwrite
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings $(DOLPHIN_EMU_PKGDIR)/ini/*.ini
 	cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-emu dolphin-emu.desktopconfig
 endef
 

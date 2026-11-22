@@ -22,7 +22,7 @@ WIRINGOP_PYTHON_SITE = https://github.com/orangepi-xunlong/wiringOP-Python.git
 WIRINGOP_PYTHON_SITE_METHOD = git
 WIRINGOP_PYTHON_GIT_SUBMODULES = YES
 WIRINGOP_PYTHON_SETUP_TYPE = setuptools
-WIRINGOP_PYTHON_LICENSE = GPLv3
+WIRINGOP_PYTHON_LICENSE = GPL-3.0
 WIRINGOP_PYTHON_LICENSE_FILES = LICENSE.txt
 
 WIRINGOP_PYTHON_DEPENDENCIES = host-swig libxcrypt
@@ -32,8 +32,7 @@ WIRINGOP_PYTHON_ENV = \
 	CFLAGS="$(TARGET_CFLAGS) -Wno-error=implicit-function-declaration"
 
 define WIRINGOP_PYTHON_BINDINGS
-	cd $(@D) ; \
-	$(HOST_DIR)/bin/python3 generate-bindings.py > $(@D)/bindings.i
+	cd $(@D) && $(HOST_DIR)/bin/python3 generate-bindings.py > $(@D)/bindings.i
 endef
 
 WIRINGOP_PYTHON_PRE_BUILD_HOOKS = WIRINGOP_PYTHON_BINDINGS

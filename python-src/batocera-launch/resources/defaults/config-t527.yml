@@ -8,5 +8,5 @@ model3:
   emulator: keisho
   core:     keisho
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate

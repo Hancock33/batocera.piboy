@@ -6,7 +6,7 @@
 # Version: Commits on Apr 20, 2026
 LIBRETRO_MINIVMAC_VERSION = babdf7b53d361a7225858b68a8a64efe8b06f5e5
 LIBRETRO_MINIVMAC_SITE = https://github.com/libretro/libretro-minivmac
-LIBRETRO_MINIVMAC_LICENSE = GPLv2
+LIBRETRO_MINIVMAC_LICENSE = GPL-2.0
 LIBRETRO_MINIVMAC_SITE_METHOD=git
 LIBRETRO_MINIVMAC_GIT_SUBMODULES=YES
 LIBRETRO_MINIVMAC_DEPENDENCIES = retroarch
@@ -18,7 +18,6 @@ define LIBRETRO_MINIVMAC_BUILD_CMDS
 endef
 
 define LIBRETRO_MINIVMAC_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/minivmac_libretro.so $(TARGET_DIR)/usr/lib/libretro/minivmac_libretro.so
 endef
 

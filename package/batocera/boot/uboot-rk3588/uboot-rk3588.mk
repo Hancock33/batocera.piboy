@@ -3,9 +3,9 @@
 # uboot-rk3588
 #
 ################################################################################
-# Version: Commits on Jul 07, 2026
-UBOOT_RK3588_VERSION = 2026.07
-UBOOT_RK3588_SITE = https://ftp.denx.de/pub/u-boot
+# Version: Commits on Nov 21, 2026
+UBOOT_RK3588_VERSION = 2026.10
+UBOOT_RK3588_SITE = https://u-boot.osuosl.org
 UBOOT_RK3588_SOURCE = u-boot-$(UBOOT_RK3588_VERSION).tar.bz2
 UBOOT_RK3588_LICENSE = GPL-2.0+
 UBOOT_RK3588_LICENSE_FILES = Licenses/README
@@ -14,6 +14,12 @@ UBOOT_RK3588_INSTALL_IMAGES = YES
 # Arm Trusted Firmware
 UBOOT_RK3588_TFA_VERSION = v2.15.0
 UBOOT_RK3588_EXTRA_DOWNLOADS = https://github.com/ARM-software/arm-trusted-firmware/archive/refs/tags/$(UBOOT_RK3588_TFA_VERSION).tar.gz
+
+# DDR v1.18 for boards that do not train with v1.21 (NanoPi M6)
+UBOOT_RK3588_DDR118 = rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin
+UBOOT_RK3588_EXTRA_DOWNLOADS += \
+    https://github.com/rockchip-linux/rkbin/raw/b9183559cabebed120ad431a614b291fee04c498/bin/rk35/$(UBOOT_RK3588_DDR118)
+
 
 # Modern U-Boot dependencies
 UBOOT_RK3588_DEPENDENCIES = host-batocera-rkbin host-pkgconf host-openssl host-bison host-flex \
@@ -33,8 +39,7 @@ UBOOT_RK3588_TPL  = $(BATOCERA_RKBIN_DIR)/bin/rk35/rk3588_ddr_lp4_2112MHz_lp5_24
 UBOOT_RK3588_MAKE_OPTS = \
 	CROSS_COMPILE="$(TARGET_CROSS)" \
 	HOSTCFLAGS="$(HOST_CFLAGS)" \
-	HOSTLDFLAGS="$(HOST_LDFLAGS)" \
-	ROCKCHIP_TPL=$(UBOOT_RK3588_TPL)
+	HOSTLDFLAGS="$(HOST_LDFLAGS)"
 
 # Board/Defconfig pairs (Updated for Mainline naming conventions)
 UBOOT_RK3588_BUILDPAIR += orangepi-5/orangepi-5-rk3588s_defconfig
@@ -49,27 +54,38 @@ UBOOT_RK3588_BUILDPAIR += coolpi-4b/coolpi-4b-rk3588s_defconfig
 UBOOT_RK3588_BUILDPAIR += gameforce-ace/gameforce-ace-rk3588s_defconfig
 UBOOT_RK3588_BUILDPAIR += quartzpro64/quartzpro64-rk3588_defconfig
 UBOOT_RK3588_BUILDPAIR += indiedroid-nova/nova-rk3588s_defconfig
+UBOOT_RK3588_BUILDPAIR += orangepi-5-max/orangepi-5-max-rk3588_defconfig
+UBOOT_RK3588_BUILDPAIR += orangepi-5-ultra/orangepi-5-ultra-rk3588_defconfig
+UBOOT_RK3588_BUILDPAIR += bananapi-m7/sige7-rk3588_defconfig
+UBOOT_RK3588_BUILDPAIR += orangepi-5-pro/orangepi-5-pro-rk3588s_defconfig
+UBOOT_RK3588_BUILDPAIR += nanopi-m6/nanopi6-series-rk3588s_defconfig
+UBOOT_RK3588_BUILDPAIR += firefly-station-m3/roc-pc-rk3588s_defconfig
+UBOOT_RK3588_BUILDPAIR += mekotronics-r58/mekotronics-r58x-4g-rk3588_defconfig
 
 # Boards using mainline TF-A instead of the rkbin BL31
 UBOOT_RK3588_TFA_BOARDS = gameforce-ace
+
+# Boards using the v1.18 DDR blob
+UBOOT_RK3588_DDR118_BOARDS = nanopi-m6
 
 define UBOOT_RK3588_BUILD_BOOTLOADER
 	$(eval board_defconfig = $(subst /, ,$(pair)))
 	$(eval board = $(word 1, $(board_defconfig)))
 	$(eval defconfig = $(word 2, $(board_defconfig)))
 	$(eval bl31 = $(if $(filter $(board),$(UBOOT_RK3588_TFA_BOARDS)),$(UBOOT_RK3588_TFA_BL31),$(UBOOT_RK3588_BL31)))
+	$(eval tpl = $(if $(filter $(board),$(UBOOT_RK3588_DDR118_BOARDS)),$(UBOOT_RK3588_DL_DIR)/$(UBOOT_RK3588_DDR118),$(UBOOT_RK3588_TPL)))
 	@echo
 	@echo "---- Building Mainline U-Boot for $(board) ----"
-	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) mrproper
-	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) $(defconfig)
+	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) ROCKCHIP_TPL=$(tpl) mrproper
+	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) ROCKCHIP_TPL=$(tpl) $(defconfig)
 	$(@D)/scripts/config --file $(@D)/.config --disable CONFIG_TOOLS_MKEFICAPSULE
-	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) olddefconfig
-	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31)
+	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) ROCKCHIP_TPL=$(tpl) olddefconfig
+	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) ROCKCHIP_TPL=$(tpl)
 	mkdir -p $(@D)/staging/$(board)
-	cp -v $(@D)/u-boot-rockchip.bin $(@D)/staging/$(board)/
+	cp $(@D)/u-boot-rockchip.bin $(@D)/staging/$(board)/
 	# Binman generates the SPI binary if CONFIG_ROCKCHIP_SPI_IMAGE is enabled
 	if [ -f $(@D)/u-boot-rockchip-spi.bin ]; then \
-		cp -v $(@D)/u-boot-rockchip-spi.bin $(@D)/staging/$(board)/; \
+		cp $(@D)/u-boot-rockchip-spi.bin $(@D)/staging/$(board)/; \
 	fi
 endef
 
@@ -86,9 +102,9 @@ define UBOOT_RK3588_INSTALL_IMAGES_CMDS
 	$(foreach pair, $(UBOOT_RK3588_BUILDPAIR), \
 		board=$$(echo $(pair) | cut -d'/' -f1); \
 		mkdir -p $(BINARIES_DIR)/$$board; \
-		cp -v $(@D)/staging/$$board/u-boot-rockchip.bin $(BINARIES_DIR)/$$board/; \
+		cp $(@D)/staging/$$board/u-boot-rockchip.bin $(BINARIES_DIR)/$$board/; \
 		if [ -f $(@D)/staging/$$board/u-boot-rockchip-spi.bin ]; then \
-			cp -v $(@D)/staging/$$board/u-boot-rockchip-spi.bin $(BINARIES_DIR)/$$board/; \
+			cp $(@D)/staging/$$board/u-boot-rockchip-spi.bin $(BINARIES_DIR)/$$board/; \
 		fi; \
 	)
 endef

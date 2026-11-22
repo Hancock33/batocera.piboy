@@ -3,12 +3,12 @@
 # eka2l1
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-EKA2L1_VERSION = 775cd7ae68fa466377eeddcfb44d434f0465fb54
+# Version: Commits on Nov 22, 2026
+EKA2L1_VERSION = dd063c6d83e93a85271ba31d6457a7da06d30c25
 EKA2L1_SITE = https://github.com/EKA2L1/EKA2L1.git
-EKA2L1_SITE_METHOD=git
-EKA2L1_GIT_SUBMODULES=YES
-EKA2L1_LICENSE = GPLv3
+EKA2L1_SITE_METHOD = git
+EKA2L1_GIT_SUBMODULES = YES
+EKA2L1_LICENSE = GPL-3.0
 EKA2L1_LICENSE_FILES = LICENSE
 EKA2L1_DEPENDENCIES = qt6base qt6multimedia qt6svg qt6tools sdl2
 EKA2L1_EMULATOR_INFO = eka2l1.emulator.yml
@@ -34,7 +34,7 @@ endif
 define EKA2L1_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/bin/eka2l1
 	cp -R $(@D)/buildroot-build/bin/* $(TARGET_DIR)/usr/bin/eka2l1/
-	$(INSTALL) -D -m 0644 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/eka2l1/batocera-pad.keys $(TARGET_DIR)/usr/bin/eka2l1/batocera-pad.keys
+	$(INSTALL) -D -m 0644 $(EKA2L1_PKGDIR)/batocera-pad.keys $(TARGET_DIR)/usr/bin/eka2l1/batocera-pad.keys
 endef
 
 $(eval $(cmake-package))

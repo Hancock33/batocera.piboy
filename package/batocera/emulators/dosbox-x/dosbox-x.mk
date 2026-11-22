@@ -7,23 +7,20 @@
 DOSBOX_X_VERSION = dosbox-x-v2026.10.01-osfree
 DOSBOX_X_SITE = $(call github,joncampbell123,dosbox-x,$(DOSBOX_X_VERSION))
 DOSBOX_X_DEPENDENCIES = sdl2 sdl2_net fluidsynth zlib libpng libogg libvorbis linux-headers
-DOSBOX_X_LICENSE = GPLv2
+DOSBOX_X_LICENSE = GPL-2.0
 DOSBOX_X_AUTORECONF = YES
 DOSBOX_X_EMULATOR_INFO = dosbox-x.emulator.yml
 
-DOSBOX_X_CONF_OPTS = --host="$(GNU_TARGET_NAME)" \
-					--enable-core-inline \
+DOSBOX_X_CONF_OPTS = --enable-core-inline \
 					--enable-dynrec \
 					--enable-unaligned_memory \
-					--prefix=/usr \
 					--disable-avcodec \
 					--disable-sdl \
 					--enable-sdl2 \
 					--with-sdl2-prefix="$(STAGING_DIR)/usr"
 
 define DOSBOX_X_CONFIGURE_CONFIG
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox
-	cp -rf $(@D)/dosbox-x.reference.conf	$(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox/dosboxx.conf
+	$(INSTALL) -m 0644 -D $(@D)/dosbox-x.reference.conf $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/dosbox/dosboxx.conf
 endef
 
 DOSBOX_X_POST_INSTALL_TARGET_HOOKS += DOSBOX_X_CONFIGURE_CONFIG

@@ -3,100 +3,109 @@
 # pcsx2
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-PCSX2_VERSION = v2.9.183
-PCSX2_HASH = f0c84e93813ae3d5e9eefd0ac9edf1bbd86e315f
+# Version: Commits on Nov 21, 2026
+PCSX2_VERSION = v2.9.189
+PCSX2_HASH = 5977c525c5368de79643a84c83c0b1f010d13ed2
 PCSX2_SITE = https://github.com/pcsx2/pcsx2.git
 PCSX2_SITE_METHOD = git
 PCSX2_GIT_SUBMODULES = YES
-PCSX2_LICENSE = GPLv3
-PCSX2_LICENSE_FILE = COPYING.GPLv3
+PCSX2_LICENSE = GPL-3.0
+PCSX2_LICENSE_FILES = COPYING.GPLv3
 PCSX2_SUPPORTS_IN_SOURCE_BUILD = NO
 PCSX2_EMULATOR_INFO = pcsx2.emulator.yml
 
-PCSX2_GIT_TAG_HI = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 1)
-PCSX2_GIT_TAG_MID = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 2)
-PCSX2_GIT_TAG_LO = $(shell echo $(subst v,,$(PCSX2_VERSION)) | cut -d '.' -f 3)
+PCSX2_VERSION_PARTS = $(subst ., ,$(patsubst v%,%,$(PCSX2_VERSION)))
+PCSX2_GIT_TAG_HI = $(word 1,$(PCSX2_VERSION_PARTS))
+PCSX2_GIT_TAG_MID = $(word 2,$(PCSX2_VERSION_PARTS))
+PCSX2_GIT_TAG_LO = $(word 3,$(PCSX2_VERSION_PARTS))
 
-PCSX2_DEPENDENCIES += alsa-lib ecm ffmpeg fmt freetype kddockwidgets libaio libbacktrace libcurl
-PCSX2_DEPENDENCIES += libgtk3 libpcap libpng libsamplerate libsoundtouch plutosvg plutovg rapidyaml
-PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools portaudio sdl3 shaderc webp xorgproto yaml-cpp zlib
+PCSX2_DEPENDENCIES += dbus ffmpeg fontconfig freetype jpeg kddockwidgets libbacktrace libcurl
+PCSX2_DEPENDENCIES += libpcap libpng lz4 plutosvg plutovg rapidyaml sdl3 udev webp zlib zstd
+PCSX2_DEPENDENCIES += qt6base qt6svg qt6tools
 PCSX2_DEPENDENCIES += host-clang
 
+# The bundled cubeb enables its ALSA and PulseAudio backends when the headers exist
+ifeq ($(BR2_PACKAGE_ALSA_LIB),y)
+    PCSX2_DEPENDENCIES += alsa-lib
+endif
+
+ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
+    PCSX2_DEPENDENCIES += pulseaudio
+endif
+
 PCSX2_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
-PCSX2_CONF_OPTS += -DUSE_SYSTEM_LIBS=AUTO
-PCSX2_CONF_OPTS += -DUSE_DISCORD_PRESENCE=OFF
+PCSX2_CONF_OPTS += -DENABLE_TESTS=OFF
 PCSX2_CONF_OPTS += -DLTO_PCSX2_CORE=OFF
-PCSX2_CONF_OPTS += -DUSE_ACHIEVEMENTS=ON
+PCSX2_CONF_OPTS += -DUSE_BACKTRACE=ON
 
 # The following flag is misleading and *needed* ON to avoid doing -march=native
 PCSX2_CONF_OPTS += -DDISABLE_ADVANCE_SIMD=ON
 
-# below may not be needed for newer versions
-define PCSX2_FIX_WHOLE_ARCHIVE
-	find $(@D) -name "CMakeLists.txt" -exec sed -i 's|.[<]LINK_LIBRARY:WHOLE_ARCHIVE,\([^>]*\)>|-Wl,--whole-archive \1 -Wl,--no-whole-archive|g' {} +
-endef
-PCSX2_PRE_CONFIGURE_HOOKS += PCSX2_FIX_WHOLE_ARCHIVE
-
 ifeq ($(BR2_PACKAGE_XORG7),y)
+    PCSX2_DEPENDENCIES += xlib_libX11 xlib_libXrandr
     PCSX2_CONF_OPTS += -DX11_API=ON
 else
     PCSX2_CONF_OPTS += -DX11_API=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
+    PCSX2_DEPENDENCIES += ecm wayland
     PCSX2_CONF_OPTS += -DWAYLAND_API=ON
 else
     PCSX2_CONF_OPTS += -DWAYLAND_API=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGL),y)
+    PCSX2_DEPENDENCIES += libgl
     PCSX2_CONF_OPTS += -DUSE_OPENGL=ON
 else
     PCSX2_CONF_OPTS += -DUSE_OPENGL=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
+    PCSX2_DEPENDENCIES += shaderc
     PCSX2_CONF_OPTS += -DUSE_VULKAN=ON
 else
     PCSX2_CONF_OPTS += -DUSE_VULKAN=OFF
 endif
 
+# Fill in the version info upstream takes from git, RetroAchievements needs it
+define PCSX2_SET_BUILD_VERSION
+	sed -i \
+		-e 's|GIT_TAGGED_COMMIT|1|' \
+		-e 's|GIT_TAG_HI|$(PCSX2_GIT_TAG_HI)|' \
+		-e 's|GIT_TAG_MID|$(PCSX2_GIT_TAG_MID)|' \
+		-e 's|GIT_TAG_LO|$(PCSX2_GIT_TAG_LO)|' \
+		-e 's|GIT_TAG|"$(PCSX2_VERSION)"|' \
+		-e 's|GIT_REV|"$(PCSX2_VERSION)"|' \
+		-e 's|GIT_HASH|"$(PCSX2_HASH)"|' \
+		$(@D)/pcsx2/BuildVersion.cpp
+endef
+PCSX2_POST_PATCH_HOOKS += PCSX2_SET_BUILD_VERSION
+
+# Replace $<LINK_LIBRARY:WHOLE_ARCHIVE,...> with plain linker flags
+define PCSX2_FIX_WHOLE_ARCHIVE
+	find $(@D) -name "CMakeLists.txt" -exec sed -i 's|.[<]LINK_LIBRARY:WHOLE_ARCHIVE,\([^>]*\)>|-Wl,--whole-archive \1 -Wl,--no-whole-archive|g' {} +
+endef
+PCSX2_PRE_CONFIGURE_HOOKS += PCSX2_FIX_WHOLE_ARCHIVE
+
 define PCSX2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin/pcsx2
-	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2-qt
-	cp -pr  $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/bin/pcsx2
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2-qt
+	rm -rf $(TARGET_DIR)/usr/bin/pcsx2/resources
+	cp -pr $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/bin/pcsx2/
+	cp -pr $(PCSX2_PKGDIR)/textures $(PCSX2_PKGDIR)/crosshairs $(TARGET_DIR)/usr/bin/pcsx2/resources/
 	# use our SDL config
-	rm $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt
+	rm -f $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt
 endef
 
-define PCSX2_TEXTURES
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
-endef
-
-define PCSX2_PATCHES
+# Game patches, shipped in the bios folder. -f makes a failed download fail the
+# build instead of saving the error page as patches.zip.
+define PCSX2_INSTALL_PATCHES
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2
-	curl -L https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip -o $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2/patches.zip
+	curl -fsSL --retry 3 -o $(TARGET_DIR)/usr/share/batocera/datainit/bios/ps2/patches.zip \
+		https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip
 endef
-
-define PCSX2_CROSSHAIRS
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/crosshairs/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
-endef
-
-define PCSX2_RETROACHIEVEMENTS
-	sed -i "s|GIT_TAGGED_COMMIT|1|" $(@D)/pcsx2/BuildVersion.cpp
-	sed -i "s|GIT_TAG_HI|$(PCSX2_GIT_TAG_HI)|" $(@D)/pcsx2/BuildVersion.cpp
-	sed -i "s|GIT_TAG_MID|$(PCSX2_GIT_TAG_MID)|" $(@D)/pcsx2/BuildVersion.cpp
-	sed -i "s|GIT_TAG_LO|$(PCSX2_GIT_TAG_LO)|" $(@D)/pcsx2/BuildVersion.cpp
-	sed -i 's|GIT_TAG|"$(PCSX2_VERSION)"|' $(@D)/pcsx2/BuildVersion.cpp
-	sed -i 's|GIT_REV|"$(PCSX2_VERSION)"|' $(@D)/pcsx2/BuildVersion.cpp
-	sed -i 's|GIT_HASH|"$(PCSX2_HASH)"|' $(@D)/pcsx2/BuildVersion.cpp
-endef
-
-PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_TEXTURES
-PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_PATCHES
-PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_CROSSHAIRS
-PCSX2_PRE_PATCH_HOOKS += PCSX2_RETROACHIEVEMENTS
+PCSX2_POST_INSTALL_TARGET_HOOKS += PCSX2_INSTALL_PATCHES
 
 $(eval $(cmake-package))
 $(eval $(emulator-info-package))

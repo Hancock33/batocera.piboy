@@ -6,7 +6,7 @@
 # Version: Commits on Sept 19, 2026
 LIBRETRO_GPSP_VERSION = 5819380c2ffb0900219d700a382ee68c464ebb99
 LIBRETRO_GPSP_SITE = $(call github,libretro,gpsp,$(LIBRETRO_GPSP_VERSION))
-LIBRETRO_GPSP_LICENSE = GPLv2
+LIBRETRO_GPSP_LICENSE = GPL-2.0
 LIBRETRO_GPSP_DEPENDENCIES += retroarch
 LIBRETRO_GPSP_EMULATOR_INFO = gpsp.libretro.core.yml
 
@@ -25,7 +25,6 @@ define LIBRETRO_GPSP_BUILD_CMDS
 endef
 
 define LIBRETRO_GPSP_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/gpsp_libretro.so $(TARGET_DIR)/usr/lib/libretro/gpsp_libretro.so
 endef
 

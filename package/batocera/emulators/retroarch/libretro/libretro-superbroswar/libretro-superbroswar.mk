@@ -7,7 +7,7 @@
 LIBRETRO_SUPERBROSWAR_VERSION = 7f94e03163e1641ecd2a5703eb9ca7e1312b5e8d
 LIBRETRO_SUPERBROSWAR_SITE = https://github.com/libretro/superbroswar-libretro.git
 LIBRETRO_SUPERBROSWAR_SITE_METHOD = git
-LIBRETRO_SUPERBROSWAR_LICENSE = GPLv3
+LIBRETRO_SUPERBROSWAR_LICENSE = GPL-3.0
 LIBRETRO_SUPERBROSWAR_GIT_SUBMODULES = YES
 LIBRETRO_SUPERBROSWAR_DEPENDENCIES += retroarch
 LIBRETRO_SUPERBROSWAR_EMULATOR_INFO = superbroswar.libretro.core.yml
@@ -18,8 +18,6 @@ define LIBRETRO_SUPERBROSWAR_BUILD_CMDS
 endef
 
 define LIBRETRO_SUPERBROSWAR_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/superbroswar_libretro.so $(TARGET_DIR)/usr/lib/libretro/superbroswar_libretro.so
 	$(INSTALL) -D $(@D)/libretro/superbroswar_libretro.info $(TARGET_DIR)/usr/share/libretro/info/superbroswar_libretro.info
 endef

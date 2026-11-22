@@ -14,13 +14,11 @@ CHROMEBOOK_LINUX_AUDIO_DEPENDENCIES += alllinuxfirmwares alsa-ucm-conf alsa-util
 
 define CHROMEBOOK_LINUX_AUDIO_INSTALL_TARGET_CMDS
 	# AMD firmware
-	mkdir -p $(TARGET_DIR)/lib/firmware/amd/sof/community
-	mkdir -p $(TARGET_DIR)/lib/firmware/amd/sof-tplg
-	rsync -arv $(@D)/blobs/mdn/fw   $(TARGET_DIR)/lib/firmware/amd/sof/community
-	rsync -arv $(@D)/blobs/mdn/tplg $(TARGET_DIR)/lib/firmware/amd/sof-tplg
+	mkdir -p $(TARGET_DIR)/lib/firmware/amd/sof/community $(TARGET_DIR)/lib/firmware/amd/sof-tplg
+	rsync -a $(@D)/blobs/mdn/fw $(TARGET_DIR)/lib/firmware/amd/sof/community
+	rsync -a $(@D)/blobs/mdn/tplg $(TARGET_DIR)/lib/firmware/amd/sof-tplg
 	# Wireplumber configs
-	mkdir -p $(TARGET_DIR)/etc/wireplumber/wireplumber.conf.d
-	cp -f $(@D)/conf/common/51-increase-headroom.conf $(TARGET_DIR)/etc/wireplumber/wireplumber.conf.d/51-increase-headroom.conf
+	$(INSTALL) -D -m 0644 $(@D)/conf/common/51-increase-headroom.conf $(TARGET_DIR)/etc/wireplumber/wireplumber.conf.d/51-increase-headroom.conf
 endef
 
 $(eval $(generic-package))

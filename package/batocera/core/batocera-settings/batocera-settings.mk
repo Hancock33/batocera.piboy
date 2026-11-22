@@ -13,9 +13,8 @@ BATOCERA_SETTINGS_CONF_OPTS = \
 	-Dset_exe_name=batocera-settings-set
 
 define BATOCERA_SETTINGS_MASTER_BIN
-	$(INSTALL) -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/core/batocera-settings/batocera-settings-get-master $(TARGET_DIR)/usr/bin/batocera-settings-get-master
-	$(INSTALL) -m 0755 $(@D)/buildroot-build/batocera-settings-get $(TARGET_DIR)/usr/bin/batocera-settings-get
-	$(INSTALL) -m 0755 $(@D)/buildroot-build/batocera-settings-set $(TARGET_DIR)/usr/bin/batocera-settings-set
+	$(INSTALL) -D -m 0755 $(BATOCERA_SETTINGS_PKGDIR)/batocera-settings-get-master $(TARGET_DIR)/usr/bin/batocera-settings-get-master
+	$(INSTALL) -D -m 0755 -t $(TARGET_DIR)/usr/bin $(@D)/buildroot-build/batocera-settings-get $(@D)/buildroot-build/batocera-settings-set
 endef
 
 BATOCERA_SETTINGS_POST_INSTALL_TARGET_HOOKS += BATOCERA_SETTINGS_MASTER_BIN

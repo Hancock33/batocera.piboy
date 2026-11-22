@@ -15,14 +15,14 @@
 # openjkdf2
 #
 ################################################################################
-# Version: Commits on Nov 01, 2026
-OPENJKDF2_VERSION = ae6ed8a81b316421f08a46719b12a4fa9e2fbed9
+# Version: Commits on Nov 20, 2026
+OPENJKDF2_VERSION = 3e4bc4abb8f82a502a940be935ee3de64dc22ad7
 OPENJKDF2_SITE = https://github.com/shinyquagsire23/OpenJKDF2.git
 OPENJKDF2_SITE_METHOD = git
 OPENJKDF2_GIT_SUBMODULES = YES
 OPENJKDF2_SUPPORTS_IN_SOURCE_BUILD = NO
-OPENJKDF2_LICENSE = GPLv2 & MIT
-OPENJKDF2_LICENSE_FILE = LICENSE.txt
+OPENJKDF2_LICENSE = GPL-2.0, MIT
+OPENJKDF2_LICENSE_FILES = LICENSE.txt
 OPENJKDF2_EMULATOR_INFO = openjkdf2.emulator.yml
 
 OPENJKDF2_DEPENDENCIES += gamenetworkingsockets host-clang host-python-cog libcurl
@@ -38,14 +38,11 @@ OPENJKDF2_CONF_OPTS += -DPLAT_LINUX_64=ON
 OPENJKDF2_CONF_OPTS += -DCMAKE_CROSSCOMPILING=NO
 
 define OPENJKDF2_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	cp $(@D)/buildroot-build/openjkdf2 $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/openjkdf2 $(TARGET_DIR)/usr/bin/openjkdf2
 endef
 
 define OPENJKDF2_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openjkdf2/openjkdf2.keys \
-	    $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(OPENJKDF2_PKGDIR)/openjkdf2.keys
 endef
 
 OPENJKDF2_POST_INSTALL_TARGET_HOOKS += OPENJKDF2_EVMAPY

@@ -6,7 +6,7 @@
 # Version: Commits on Nov 01, 2026
 RAZE_VERSION = fa99ac62924d5b2cbb67f46b932bd6acf8952b63
 RAZE_SITE = $(call github,ZDoom,Raze,$(RAZE_VERSION))
-RAZE_LICENSE = GPLv2
+RAZE_LICENSE = GPL-2.0
 RAZE_DEPENDENCIES = bzip2 fluidsynth host-raze libvpx openal sdl2 webp zmusic
 RAZE_SUPPORTS_IN_SOURCE_BUILD = NO
 RAZE_EMULATOR_INFO = raze.emulator.yml

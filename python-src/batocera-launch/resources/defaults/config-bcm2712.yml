@@ -24,8 +24,8 @@ model3:
   emulator: keisho
   core:     keisho
 nds:
-  emulator: drastic
-  core:     drastic
+  emulator: dsperate
+  core:     dsperate
 quake3:
   emulator: vkquake3
   core:     vkquake3

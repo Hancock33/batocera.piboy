@@ -3,13 +3,13 @@
 # eduke32
 #
 ################################################################################
-# Version: Commits on Aug 07, 2026
-EDUKE32_VERSION = ec5824db81817866f70da326d3811bb0f52b3517
+# Version: Commits on Nov 19, 2026
+EDUKE32_VERSION = 8953c8fa0c9a4c0909e7ef0cbbc3a9dbc37b7488
 EDUKE32_SITE = https://voidpoint.io/terminx/eduke32/-/archive/$(EDUKE32_VERSION)
 EDUKE32_DEPENDENCIES = sdl2 flac libvpx
 EDUKE32_LICENSE = GPL-2.0
 EDUKE32_EMULATOR_INFO = eduke32.emulator.yml
-EDUKE32_VC_REV="$(shell echo $(EDUKE32_SITE) | cut -c 1-7)"
+EDUKE32_VC_REV="$(shell echo $(EDUKE32_VERSION) | cut -c 1-7)"
 
 EDUKE32_BUILD_ARGS = STARTUP_WINDOW=0
 EDUKE32_BUILD_ARGS += HAVE_GTK2=0

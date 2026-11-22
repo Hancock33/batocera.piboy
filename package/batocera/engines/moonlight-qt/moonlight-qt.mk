@@ -3,12 +3,12 @@
 # moonlight-qt
 #
 ################################################################################
-# Version: Commits on Nov 15, 2026
-MOONLIGHT_QT_VERSION = 28629dc17feb53c9195a99a34ab689c6ffb1e6e8
+# Version: Commits on Nov 20, 2026
+MOONLIGHT_QT_VERSION = 2dc63d1f138557d15b21c051645280a58702da9d
 MOONLIGHT_QT_SITE = https://github.com/moonlight-stream/moonlight-qt
 MOONLIGHT_QT_SITE_METHOD = git
 MOONLIGHT_QT_GIT_SUBMODULES = YES
-MOONLIGHT_QT_LICENSE = GPLv3
+MOONLIGHT_QT_LICENSE = GPL-3.0
 
 MOONLIGHT_QT_DEPENDENCIES = ffmpeg moonlight-common openssl opus qt6base qt6declarative qt6svg sdl2 sdl2_ttf
 
@@ -32,9 +32,8 @@ MOONLIGHT_QT_CONF_OPTS += CONFIG+=disable-libva
 endif
 
 ifeq ($(BR2_PACKAGE_LIBVA_INTEL_DRIVER),y)
-    MOONLIGHT_QT_DEPENDENCIES += libva-intel-driver intel-mediadriver
+MOONLIGHT_QT_DEPENDENCIES += libva-intel-driver intel-mediadriver
 endif
-
 ifeq ($(BR2_PACKAGE_LIBVDPAU),y)
 MOONLIGHT_QT_DEPENDENCIES += libvdpau
 else
@@ -93,7 +92,7 @@ endef
 
 define MOONLIGHT_QT_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/app/moonlight $(TARGET_DIR)/usr/bin/moonlight-qt
-	$(INSTALL) -m 0755 $(MOONLIGHT_QT_PKGDIR)/batocera-moonlight $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D -m 0755 $(MOONLIGHT_QT_PKGDIR)/batocera-moonlight $(TARGET_DIR)/usr/bin/batocera-moonlight
 endef
 
 $(eval $(generic-package))

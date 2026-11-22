@@ -5,9 +5,9 @@
 ################################################################################
 # Version: Commits on Sept 01, 2026
 OPENJAZZ_VERSION = a1626f4edd4a7af72c54103021790c56d8ecfced
-OPENJAZZ_SITE =  $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
+OPENJAZZ_SITE = $(call github,AlisterT,openjazz,$(OPENJAZZ_VERSION))
 OPENJAZZ_DEPENDENCIES = sdl2
-OPENJAZZ_LICENSE = GPLv2
+OPENJAZZ_LICENSE = GPL-2.0
 OPENJAZZ_EMULATOR_INFO = openjazz.emulator.yml
 
 OPENJAZZ_CONF_OPTS += -DDATAPATH=/userdata/roms/ports/openjazz

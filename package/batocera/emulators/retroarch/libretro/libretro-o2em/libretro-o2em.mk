@@ -6,7 +6,8 @@
 # Version: Commits on Jul 21, 2026
 LIBRETRO_O2EM_VERSION = 679d6fec04963f6e70a7ec217e3d0ebb1fe472fc
 LIBRETRO_O2EM_SITE = $(call github,libretro,libretro-o2em,$(LIBRETRO_O2EM_VERSION))
-LIBRETRO_O2EM_LICENSE = Artistic License
+LIBRETRO_O2EM_LICENSE = Artistic-2.0
+LIBRETRO_O2EM_LICENSE_FILES = COPYING
 LIBRETRO_O2EM_DEPENDENCIES += retroarch
 LIBRETRO_O2EM_EMULATOR_INFO = o2em.libretro.core.yml
 
@@ -33,7 +34,6 @@ define LIBRETRO_O2EM_BUILD_CMDS
 endef
 
 define LIBRETRO_O2EM_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
 	$(INSTALL) -D $(@D)/o2em_libretro.so $(TARGET_DIR)/usr/lib/libretro/o2em_libretro.so
 endef
 

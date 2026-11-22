@@ -5,10 +5,11 @@
 ################################################################################
 
 RETROGAME_VERSION = 1.0
-RETROGAME_SOURCE=
+RETROGAME_SOURCE =
+RETROGAME_LICENSE = BSD-2-Clause
 
 define RETROGAME_EXTRACT_CMDS
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/retrogame/RetroGame/* $(@D)
+	cp $(RETROGAME_PKGDIR)/RetroGame/* $(@D)
 endef
 
 define RETROGAME_BUILD_CMDS
@@ -16,8 +17,7 @@ define RETROGAME_BUILD_CMDS
 endef
 
 define RETROGAME_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/retrogame \
-		$(TARGET_DIR)/usr/bin/retrogame
+	$(INSTALL) -D -m 0755 $(@D)/retrogame $(TARGET_DIR)/usr/bin/retrogame
 endef
 
 $(eval $(generic-package))

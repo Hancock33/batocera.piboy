@@ -3,10 +3,10 @@
 # libretro-gearcoleco
 #
 ################################################################################
-# Version: Commits on Nov 18, 2026
-LIBRETRO_GEARCOLECO_VERSION = 8e86678387d0818e87a5b437d74390bf2ad82596
+# Version: Commits on Nov 22, 2026
+LIBRETRO_GEARCOLECO_VERSION = 1a37b77ea4aef4374111ec0fcfac544da006ef00
 LIBRETRO_GEARCOLECO_SITE = $(call github,drhelius,Gearcoleco,$(LIBRETRO_GEARCOLECO_VERSION))
-LIBRETRO_GEARCOLECO_LICENSE = GPLv3
+LIBRETRO_GEARCOLECO_LICENSE = GPL-3.0
 LIBRETRO_GEARCOLECO_EMULATOR_INFO = gearcoleco.libretro.core.yml
 
 define LIBRETRO_GEARCOLECO_BUILD_CMDS
@@ -16,8 +16,6 @@ define LIBRETRO_GEARCOLECO_BUILD_CMDS
 endef
 
 define LIBRETRO_GEARCOLECO_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/platforms/libretro/gearcoleco_libretro.so   $(TARGET_DIR)/usr/lib/libretro/gearcoleco_libretro.so
 	$(INSTALL) -D $(@D)/platforms/libretro/gearcoleco_libretro.info $(TARGET_DIR)/usr/share/libretro/info/gearcoleco_libretro.info
 endef

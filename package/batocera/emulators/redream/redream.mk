@@ -6,6 +6,7 @@
 # Version: Commits on Aug 31, 2026
 REDREAM_VERSION = 1.5.0-1240-gc41f7f2
 REDREAM_SITE = https://redream.io/download
+REDREAM_LICENSE = PROPRIETARY
 REDREAM_EMULATOR_INFO = redream.emulator.yml
 
 ifeq ($(BR2_aarch64),y)

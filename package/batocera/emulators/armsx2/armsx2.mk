@@ -3,13 +3,13 @@
 # armsx2
 #
 ################################################################################
-# Version: Commits on Nov 16, 2026
-ARMSX2_VERSION = 2.9.5
+# Version: Commits on Nov 22, 2026
+ARMSX2_VERSION = nightly-20261122
 ARMSX2_SITE = https://github.com/ARMSX2/ARMSX2.git
 ARMSX2_SITE_METHOD = git
 ARMSX2_GIT_SUBMODULES = YES
-ARMSX2_LICENSE = GPLv3
-ARMSX2_LICENSE_FILE = COPYING.GPLv3
+ARMSX2_LICENSE = GPL-3.0
+ARMSX2_LICENSE_FILES = COPYING.GPLv3
 ARMSX2_EMULATOR_INFO = armsx2.emulator.yml
 
 ARMSX2_SUPPORTS_IN_SOURCE_BUILD = NO
@@ -67,7 +67,7 @@ define ARMSX2_INSTALL_TARGET_CMDS
 	cp -pr  $(@D)/bin/resources $(TARGET_DIR)/usr/armsx2/bin/
 	cp -pr  $(@D)/buildroot-build/bin/translations $(TARGET_DIR)/usr/armsx2/bin/
 	# use our SDL config
-	rm $(TARGET_DIR)/usr/armsx2/bin/resources/game_controller_db.txt
+	rm -f $(TARGET_DIR)/usr/armsx2/bin/resources/game_controller_db.txt
 endef
 
 # Download and copy PCSX2 patches.zip to BIOS folder (ARMSX2 shares the PS2 game database)

@@ -7,7 +7,7 @@
 LIBRETRO_DOSBOX_PURE_VERSION = 9cccfa21cb117edf94fbcd1a26b2dee8b12db598
 LIBRETRO_DOSBOX_PURE_SITE = https://codeberg.org/schelling/dosbox-pure.git
 LIBRETRO_DOSBOX_PURE_SITE_METHOD=git
-LIBRETRO_DOSBOX_PURE_LICENSE = GPLv2
+LIBRETRO_DOSBOX_PURE_LICENSE = GPL-2.0
 LIBRETRO_DOSBOX_PURE_DEPENDENCIES += retroarch
 LIBRETRO_DOSBOX_PURE_EMULATOR_INFO = dosbox_pure.libretro.core.yml
 
@@ -42,8 +42,6 @@ define LIBRETRO_DOSBOX_PURE_BUILD_CMDS
 endef
 
 define LIBRETRO_DOSBOX_PURE_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/lib/libretro
-	mkdir -p $(TARGET_DIR)/usr/share/libretro/info
 	$(INSTALL) -D $(@D)/dosbox_pure_libretro.so $(TARGET_DIR)/usr/lib/libretro/dosbox_pure_libretro.so
 	$(INSTALL) -D $(@D)/dosbox_pure_libretro.info $(TARGET_DIR)/usr/share/libretro/info/dosbox_pure_libretro.info
 endef
