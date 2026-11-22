@@ -397,6 +397,11 @@ msgctxt "game_options"
 msgid "100 fps"
 msgstr "100帧"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "100 ms"
+msgstr ""
+
 #. TRANSLATION: azahar, doom3, libretro/mupen64plus-next, libretro/parallel_n64, odin, ...
 msgctxt "game_options"
 msgid "100% (Default)"
@@ -410,6 +415,11 @@ msgstr ""
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "100%(Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "1000 ms"
 msgstr ""
 
 #. TRANSLATION: ppsspp
@@ -787,6 +797,11 @@ msgctxt "game_options"
 msgid "155fps"
 msgstr "155帧"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "15600 Hz Native (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/tyrquake
 msgctxt "game_options"
 msgid "15fps"
@@ -826,6 +841,16 @@ msgstr "16 MHz（超频）"
 msgctxt "game_options"
 msgid "16 bit"
 msgstr "16 bit"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "16-Colour Attribute 360x256"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "16-Colour Packed 180x256"
+msgstr ""
 
 #. TRANSLATION: openjk, openmohaa
 msgctxt "game_options"
@@ -1644,6 +1669,11 @@ msgctxt "game_options"
 msgid "30/60 FPS (Original Game)"
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "300 ms"
+msgstr ""
+
 #. TRANSLATION: libretro/vice_xpet
 msgctxt "game_options"
 msgid "3032B"
@@ -1909,6 +1939,11 @@ msgctxt "game_options"
 msgid "4 threads"
 msgstr "4 线程"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "4-Colour CGA 360x256"
+msgstr ""
+
 #. TRANSLATION: libretro/azahar
 msgctxt "game_options"
 msgid "4.00x (Default)"
@@ -1998,6 +2033,16 @@ msgstr "42.56 MHz"
 msgctxt "game_options"
 msgid "45s"
 msgstr "45秒"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "48000 Hz"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "48000 Hz avoids RetroArch resampling the native rate."
+msgstr ""
 
 #. TRANSLATION: theforceengine
 msgctxt "game_options"
@@ -2244,6 +2289,11 @@ msgctxt "game_options"
 msgid "50% (Underclock)"
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "500 ms"
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "50Hz"
@@ -2423,6 +2473,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "60 fps (Default)"
 msgstr "60帧（默认）"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "60 ms (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -2942,6 +2997,11 @@ msgctxt "game_options"
 msgid "ADHOC SERVER"
 msgstr ""
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "ADJUST FOR 4:3 CRT TV"
+msgstr ""
+
 #. TRANSLATION: libretro/gearcoleco, shadps4
 msgctxt "game_options"
 msgid "ADVANCED"
@@ -3000,6 +3060,11 @@ msgstr "允许旋转"
 #. TRANSLATION: libretro/gearcoleco
 msgctxt "game_options"
 msgid "ALLOW UP+DOWN / LEFT+RIGHT"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "ALLOW VIDEO MODE CHANGES BY I/O"
 msgstr ""
 
 #. TRANSLATION: flycast, libretro/flycast, libretro/parallel_dc
@@ -3277,6 +3342,11 @@ msgctxt "game_options"
 msgid "AUDIO RESAMPLER"
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "AUDIO SAMPLE RATE"
+msgstr ""
+
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "AUDIO SYNC"
@@ -3361,6 +3431,21 @@ msgstr "自动装弹武器"
 msgctxt "game_options"
 msgid "AUTOMATICALLY RUN"
 msgstr "自动运行"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "AY SOUND CHIP (DK'TRONICS)"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "AY-3-8910"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Absolute (Pointer)"
+msgstr ""
 
 #. TRANSLATION: mame
 msgctxt "game_options"
@@ -3851,6 +3936,11 @@ msgctxt "game_options"
 msgid "Always have 6 bullets, 6 dynamite and 6 lives."
 msgstr "永远有6颗子弹，6颗炸药和6条生命。"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Amber"
+msgstr ""
+
 #. TRANSLATION: ryujinx
 msgctxt "game_options"
 msgid "American English"
@@ -4062,6 +4152,11 @@ msgctxt "game_options"
 msgid "Apple ][ Plus"
 msgstr "Apple ][ Plus"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Applies on restart."
+msgstr ""
+
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid ""
@@ -4073,6 +4168,13 @@ msgstr "应用FXAA抗锯齿算法来提高游戏的视觉质量。"
 msgctxt "game_options"
 msgid "Applies to both players."
 msgstr "应用于双玩家。"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid ""
+"Apply .anygm and system default overrides. Save states only load under the "
+"same setting."
+msgstr ""
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
@@ -4140,7 +4242,7 @@ msgctxt "game_options"
 msgid "April"
 msgstr "四月"
 
-#. TRANSLATION: shadps4
+#. TRANSLATION: libretro/anygm, shadps4
 msgctxt "game_options"
 msgid "Arabic"
 msgstr "阿拉伯语"
@@ -4362,7 +4464,7 @@ msgctxt "game_options"
 msgid "Auto"
 msgstr ""
 
-#. TRANSLATION: libretro/gearcoleco, libretro/stella
+#. TRANSLATION: libretro/anygm, libretro/gearcoleco, libretro/stella
 msgctxt "game_options"
 msgid "Auto (Default)"
 msgstr "自动 (默认)"
@@ -4444,7 +4546,7 @@ msgctxt "game_options"
 msgid "Automatic"
 msgstr "自动"
 
-#. TRANSLATION: libretro/odin
+#. TRANSLATION: libretro/anygm, libretro/odin
 msgctxt "game_options"
 msgid "Automatic (Default)"
 msgstr ""
@@ -4601,6 +4703,11 @@ msgctxt "game_options"
 msgid "BBC Micro/Master ROM (Slot 1)"
 msgstr "BBC Micro/Master ROM（插槽1）"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "BEEPER"
+msgstr ""
+
 #. TRANSLATION: hypseus-singe, odin
 msgctxt "game_options"
 msgid "BEZELS"
@@ -4660,6 +4767,26 @@ msgstr "生日"
 msgctxt "game_options"
 msgid "BIRTH MONTH"
 msgstr "出生月份"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010.01"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0010.01 + FDD"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "BK-0011M + FDD"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/genesisplusgx-expanded, libretro/mesen-s, libretro/nestopia, libretro/snes9x, ...
 msgctxt "game_options"
@@ -5043,6 +5170,11 @@ msgctxt "game_options"
 msgid "Boosts the car's top speed by 20%."
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Boot CP/M and start known titles whose self-boot loader stalls."
+msgstr ""
+
 #. TRANSLATION: libretro/ep128emu
 msgctxt "game_options"
 msgid "Border lines to keep when zooming in. Core default (0)."
@@ -5113,7 +5245,7 @@ msgctxt "game_options"
 msgid "Bouncing Box"
 msgstr "弹跳盒子"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Brazil"
 msgstr "巴西"
@@ -5216,6 +5348,11 @@ msgstr ""
 #. TRANSLATION: libretro/ep128emu
 msgctxt "game_options"
 msgid "Button for User 1 zoom function."
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Button that toggles the on-screen keyboard."
 msgstr ""
 
 #. TRANSLATION: vpinball.keys
@@ -5422,6 +5559,11 @@ msgctxt "game_options"
 msgid "CGA"
 msgstr "CGA"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "CGA PALETTE"
+msgstr ""
+
 #. TRANSLATION: armsx2, cannonball, libretro/armsx2, libretro/pcsx2, mupen64plus, ...
 msgctxt "game_options"
 msgid "CHEATS"
@@ -5447,6 +5589,21 @@ msgctxt "game_options"
 msgid "CHOOSE SOUND OUTPUT MODE"
 msgstr "选择声音输出模式"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "CLEAR ALL GAME CACHES ON LOAD"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "CLEAR GAME CACHE ON UNLOAD"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "CLEAR GAME SAVE DATA ON LOAD"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "COIN SOUND PLUGIN"
@@ -5466,6 +5623,11 @@ msgstr "颜色校正"
 msgctxt "game_options"
 msgid "COLOR DEPTH"
 msgstr "颜色深度"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "COLOR DISPLAY"
+msgstr ""
 
 #. TRANSLATION: libretro/fceumm, libretro/nestopia, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, ...
 msgctxt "game_options"
@@ -5495,6 +5657,11 @@ msgstr "彩色化"
 #. TRANSLATION: dsperate
 msgctxt "game_options"
 msgid "COLOUR CORRECTION"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "COLOUR MODE"
 msgstr ""
 
 #. TRANSLATION: gametank-emulator
@@ -5536,6 +5703,11 @@ msgstr "主机区域"
 msgctxt "game_options"
 msgid "CONSOLE TYPE"
 msgstr "控制台类型"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "CONTENT OVERRIDE DIRECTIVES"
+msgstr ""
 
 #. TRANSLATION: solarus
 msgctxt "game_options"
@@ -5637,6 +5809,11 @@ msgctxt "game_options"
 msgid "CONTROLLER 7"
 msgstr "控制器7"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "CONTROLLER BEHAVIOUR"
+msgstr ""
+
 #. TRANSLATION: cemu
 msgctxt "game_options"
 msgid "CONTROLLER COMBINATION"
@@ -5707,6 +5884,11 @@ msgctxt "game_options"
 msgid "COPY GPU BUFFERS"
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "CP/M AUTO-LAUNCH"
+msgstr ""
+
 #. TRANSLATION: libretro/cap32
 msgctxt "game_options"
 msgid "CPC MODEL"
@@ -5716,6 +5898,11 @@ msgstr "CPC型号"
 msgctxt "game_options"
 msgid "CPU"
 msgstr "CPU处理器"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "CPU (Default)"
+msgstr ""
 
 #. TRANSLATION: xemu-chihiro
 msgctxt "game_options"
@@ -5835,6 +6022,11 @@ msgstr "水平过扫描裁剪"
 msgctxt "game_options"
 msgid "CROP OVERSCAN"
 msgstr "裁去过扫描线"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "CROP TO GAME AREA"
+msgstr ""
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
@@ -6046,6 +6238,11 @@ msgctxt "game_options"
 msgid "Cached Interpreter (Faster)"
 msgstr "缓存解释器（快速）"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Callback"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "Camputers Lynx cassettes"
@@ -6184,7 +6381,7 @@ msgctxt "game_options"
 msgid "Cassette 2"
 msgstr "磁带 2"
 
-#. TRANSLATION: etlegacy
+#. TRANSLATION: etlegacy, libretro/anygm
 msgctxt "game_options"
 msgid "Catalan"
 msgstr "加泰罗尼亚"
@@ -6319,12 +6516,12 @@ msgctxt "game_options"
 msgid "Chile"
 msgstr "智利"
 
-#. TRANSLATION: eden, libretro/azahar, lichii, ryujinx, xenia-edge, ...
+#. TRANSLATION: eden, libretro/anygm, libretro/azahar, lichii, ryujinx, ...
 msgctxt "game_options"
 msgid "China"
 msgstr "中国"
 
-#. TRANSLATION: cemu, doom3, eden, lichii, ryujinx, ...
+#. TRANSLATION: cemu, doom3, eden, libretro/anygm, lichii, ...
 msgctxt "game_options"
 msgid "Chinese"
 msgstr "中文"
@@ -7089,6 +7286,11 @@ msgctxt "game_options"
 msgid "Costa Rica"
 msgstr "哥斯达黎加"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Covox"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "Creatronic Mega Duck cartridges"
@@ -7208,6 +7410,16 @@ msgctxt "game_options"
 msgid "Cyan"
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Cyan/Magenta/Grey"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Cyan/Magenta/White (Bright)"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "Cycle-exact"
@@ -7218,7 +7430,7 @@ msgctxt "game_options"
 msgid "Cyrillic [Windows-1251]"
 msgstr "西里尔文 [Windows-1251]"
 
-#. TRANSLATION: etlegacy, scummvm, shadps4
+#. TRANSLATION: etlegacy, libretro/anygm, scummvm, shadps4
 msgctxt "game_options"
 msgid "Czech"
 msgstr "捷克语"
@@ -7232,6 +7444,11 @@ msgstr "捷克语 (cz)"
 msgctxt "game_options"
 msgid "Czech Republic"
 msgstr "捷克共和国"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Czechia"
+msgstr ""
 
 #. TRANSLATION: wine
 msgctxt "game_options"
@@ -7457,6 +7674,11 @@ msgstr "DOOM"
 msgctxt "game_options"
 msgid "DOUBLE"
 msgstr "双"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "DOUBLE CPU SPEED"
+msgstr ""
 
 #. TRANSLATION: cemu
 msgctxt "game_options"
@@ -7684,6 +7906,11 @@ msgstr "3D图形放大的程度。仅限OpenGL渲染器。"
 msgctxt "game_options"
 msgid "Delay freeing some memory."
 msgstr "延迟释放一些内存。"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Deletes everything this game has written before it loads."
+msgstr ""
 
 #. TRANSLATION: odin
 msgctxt "game_options"
@@ -8161,6 +8388,11 @@ msgstr "Driving Force Pro"
 msgctxt "keys_files"
 msgid "Drop item"
 msgstr "掉落物品"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Drop the blank border many games leave around the playfield."
+msgstr ""
 
 #. TRANSLATION: rott.keys
 msgctxt "keys_files"
@@ -8786,6 +9018,11 @@ msgstr "启用自动瞄准."
 msgctxt "game_options"
 msgid "Enable auto frameskipping for performance on lower-end systems."
 msgstr "在低端系统上启用自动跳帧以提高性能。"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Enable color display emulation."
+msgstr ""
 
 #. TRANSLATION: dolphin, rpcs3
 msgctxt "game_options"
@@ -9466,7 +9703,7 @@ msgctxt "game_options"
 msgid "Even Pixels"
 msgstr "偶数像素"
 
-#. TRANSLATION: dsperate
+#. TRANSLATION: dsperate, libretro/anygm
 msgctxt "game_options"
 msgid "Exact"
 msgstr ""
@@ -9490,6 +9727,11 @@ msgstr "退出模拟器"
 msgctxt "keys_files"
 msgid "Exit the emulator"
 msgstr "退出模拟器"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Experimental. Only used with render at game resolution on."
+msgstr ""
 
 #. TRANSLATION: linuxloader, xemu-chihiro
 msgctxt "game_options"
@@ -9601,6 +9843,11 @@ msgctxt "game_options"
 msgid "FIX ARCADE BUGS"
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "FLOPPY DRIVE SOUND"
+msgstr ""
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "FLOPPY TURBO SPEED"
@@ -9655,6 +9902,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "FORCE 386DX CPU"
 msgstr "强制 386DX CPU"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "FORCE ASPECT RATIO"
+msgstr ""
 
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
@@ -10020,12 +10272,12 @@ msgid ""
 "takes."
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Finland"
 msgstr "芬兰"
 
-#. TRANSLATION: eka2l1, etlegacy, shadps4, vita3k
+#. TRANSLATION: eka2l1, etlegacy, libretro/anygm, shadps4, vita3k, ...
 msgctxt "game_options"
 msgid "Finnish"
 msgstr "芬兰"
@@ -10097,6 +10349,11 @@ msgctxt "game_options"
 msgid "Fit resolution scale"
 msgstr "适合分辨率比例"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Fit the image into 640x480. Automatic turns it on for CRT output."
+msgstr ""
+
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Fit to Window / Fullscreen"
@@ -10166,6 +10423,11 @@ msgstr "修复屏幕撕裂。 对于某些游戏，您需要在游戏选项中�
 msgctxt "game_options"
 msgid "Fix texture banding when upscaling."
 msgstr "修复放大时的纹理条带。"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Fixed 256x192"
+msgstr ""
 
 #. TRANSLATION: libretro/opera
 msgctxt "game_options"
@@ -10411,7 +10673,7 @@ msgctxt "game_options"
 msgid "Francais"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "France"
 msgstr "法国"
@@ -10600,7 +10862,7 @@ msgctxt "game_options"
 msgid "GAME DIFFICULTY"
 msgstr "游戏难度"
 
-#. TRANSLATION: awgl
+#. TRANSLATION: awgl, libretro/anygm
 msgctxt "game_options"
 msgid "GAME LANGUAGE"
 msgstr ""
@@ -10618,6 +10880,11 @@ msgstr "游戏补丁"
 #. TRANSLATION: awgl
 msgctxt "game_options"
 msgid "GAME PLAY"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "GAME REGION"
 msgstr ""
 
 #. TRANSLATION: easyrpg
@@ -10638,6 +10905,11 @@ msgstr "游戏渲染和着色器"
 #. TRANSLATION: corsixth, shared
 msgctxt "game_options"
 msgid "GAME RESOLUTION"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "GAME SHADERS (GLSL)"
 msgstr ""
 
 #. TRANSLATION: awgl, f2bgl
@@ -11099,6 +11371,11 @@ msgctxt "game_options"
 msgid "Gakken Compact Vision TV Boy cartridges"
 msgstr ""
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Game Base (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid "Game Boy"
@@ -11112,6 +11389,11 @@ msgstr "Game Boy Color"
 #. TRANSLATION: dolphin
 msgctxt "game_options"
 msgid "Game Default (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Game Gamepad (Default)"
 msgstr ""
 
 #. TRANSLATION: mupen64plus
@@ -11253,7 +11535,7 @@ msgctxt "game_options"
 msgid "German (de)"
 msgstr "德语"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Germany"
 msgstr "德国"
@@ -11351,12 +11633,12 @@ msgctxt "game_options"
 msgid "Great Britain"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Greece"
 msgstr "希腊"
 
-#. TRANSLATION: easyrpg, etlegacy, shadps4
+#. TRANSLATION: easyrpg, etlegacy, libretro/anygm, shadps4
 msgctxt "game_options"
 msgid "Greek"
 msgstr "希腊语"
@@ -11370,6 +11652,11 @@ msgstr "希腊语 (gk)"
 msgctxt "game_options"
 msgid "Green"
 msgstr "绿色"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Green (Default)"
+msgstr ""
 
 #. TRANSLATION: libretro/potator
 msgctxt "game_options"
@@ -11400,6 +11687,16 @@ msgstr "绿色-传奇超级赛亚人"
 msgctxt "game_options"
 msgid "Green - TI-83"
 msgstr "绿 - TI-83"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Green/Red/Brown (Bright)"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Green/Red/Brown (Default)"
+msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
@@ -11741,6 +12038,11 @@ msgctxt "game_options"
 msgid "High (99)"
 msgstr ""
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "High (Default)"
+msgstr "高（默认）"
+
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
 msgid "High 720p"
@@ -11892,6 +12194,11 @@ msgctxt "game_options"
 msgid "How the finished frame is magnified to the window."
 msgstr ""
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "How the game's own GLSL programs run. Applies on restart."
+msgstr ""
+
 #. TRANSLATION: melonds
 msgctxt "game_options"
 msgid "How the window space is distributed between the screens."
@@ -11904,7 +12211,7 @@ msgid ""
 "slowest."
 msgstr ""
 
-#. TRANSLATION: etlegacy, shadps4
+#. TRANSLATION: etlegacy, libretro/anygm, shadps4
 msgctxt "game_options"
 msgid "Hungarian"
 msgstr "匈牙利"
@@ -11914,7 +12221,7 @@ msgctxt "game_options"
 msgid "Hungarian (hg)"
 msgstr "匈牙利语 (hg)"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Hungary"
 msgstr "匈牙利"
@@ -12411,7 +12718,7 @@ msgctxt "game_options"
 msgid "Italiano"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Italy"
 msgstr "意大利"
@@ -12420,6 +12727,11 @@ msgstr "意大利"
 msgctxt "game_options"
 msgid "JAST SOUND"
 msgstr "JAST 声音"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "JCUKEN"
+msgstr ""
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
@@ -12496,7 +12808,7 @@ msgctxt "game_options"
 msgid "January"
 msgstr "一月"
 
-#. TRANSLATION: eden, flycast, libretro/azahar, libretro/flycast, libretro/geolith, ...
+#. TRANSLATION: eden, flycast, libretro/anygm, libretro/azahar, libretro/flycast, ...
 msgctxt "game_options"
 msgid "Japan"
 msgstr "日本"
@@ -12571,7 +12883,7 @@ msgctxt "game_options"
 msgid "Joypad sensitivity for paddles. Core default (3)."
 msgstr "摇杆的灵敏度. 核心默认值 (3)."
 
-#. TRANSLATION: libretro/melondsds, libretro/puae, libretro/puae2021, libretro/vice_x128, libretro/vice_x64, ...
+#. TRANSLATION: libretro/bk, libretro/melondsds, libretro/puae, libretro/puae2021, libretro/vice_x128, ...
 msgctxt "game_options"
 msgid "Joystick"
 msgstr "操纵杆"
@@ -12611,7 +12923,7 @@ msgctxt "game_options"
 msgid "KEEP LIGHTSABER"
 msgstr "保留光剑"
 
-#. TRANSLATION: amiberry
+#. TRANSLATION: amiberry, libretro/bk
 msgctxt "game_options"
 msgid "KEYBOARD LAYOUT"
 msgstr "键盘布局"
@@ -12635,6 +12947,11 @@ msgstr "键盘支持"
 msgctxt "game_options"
 msgid "KEYBOARD TRANSPARENCY"
 msgstr "键盘透明度"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "KEYBOARD TYPE"
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -12708,9 +13025,19 @@ msgctxt "game_options"
 msgid "Keyboard + Mouse (Right An.)"
 msgstr "键盘+鼠标（右摇杆）"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Keyboard Emulation"
+msgstr ""
+
 #. TRANSLATION: xroar
 msgctxt "game_options"
 msgid "Keyboard Translation"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Keyboard emulation maps the pad to the game's keyboard controls."
 msgstr ""
 
 #. TRANSLATION: libretro/mame078plus
@@ -12765,7 +13092,7 @@ msgctxt "game_options"
 msgid "Konami Justifiers"
 msgstr "科乐美Justifier光枪"
 
-#. TRANSLATION: eden, libretro/azahar, lichii, ryujinx, xenia-edge, ...
+#. TRANSLATION: eden, libretro/anygm, libretro/azahar, lichii, ryujinx, ...
 msgctxt "game_options"
 msgid "Korea"
 msgstr "韩国"
@@ -12790,17 +13117,17 @@ msgctxt "game_options"
 msgid "Kyrgyzstan"
 msgstr "吉尔吉斯斯坦"
 
-#. TRANSLATION: libretro/ep128emu
+#. TRANSLATION: libretro/ep128emu, libretro/zesarpcw
 msgctxt "game_options"
 msgid "L"
 msgstr ""
 
-#. TRANSLATION: libretro/ep128emu
+#. TRANSLATION: libretro/ep128emu, libretro/zesarpcw
 msgctxt "game_options"
 msgid "L2"
 msgstr ""
 
-#. TRANSLATION: libretro/ep128emu
+#. TRANSLATION: libretro/ep128emu, libretro/zesarpcw
 msgctxt "game_options"
 msgid "L3"
 msgstr ""
@@ -13001,6 +13328,11 @@ msgctxt "game_options"
 msgid "Landscape"
 msgstr "景观"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Language reported to the game. Applies on restart."
+msgstr ""
+
 #. TRANSLATION: eka2l1
 msgctxt "game_options"
 msgid ""
@@ -13135,7 +13467,7 @@ msgctxt "game_options"
 msgid "Liechtenstein"
 msgstr "列支敦士登"
 
-#. TRANSLATION: keisho
+#. TRANSLATION: keisho, libretro/anygm
 msgctxt "game_options"
 msgid "Light"
 msgstr ""
@@ -13368,6 +13700,11 @@ msgctxt "game_options"
 msgid "MAC MODEL"
 msgstr "MAC机型"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "MACHINE MODEL"
+msgstr ""
+
 #. TRANSLATION: dsperate
 msgctxt "game_options"
 msgid "MAIN SCREEN"
@@ -13493,7 +13830,7 @@ msgctxt "game_options"
 msgid "MMPX"
 msgstr ""
 
-#. TRANSLATION: hatari, libretro/fuse, libretro/mame, mame
+#. TRANSLATION: hatari, libretro/bk, libretro/fuse, libretro/mame, mame, ...
 msgctxt "game_options"
 msgid "MODEL"
 msgstr "型号（MODEL）"
@@ -13512,6 +13849,16 @@ msgstr "模型分解"
 msgctxt "game_options"
 msgid "MODEL TYPE"
 msgstr "型号类型"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "MONITOR HEIGHT"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "MONITOR WIDTH"
+msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
@@ -13557,6 +13904,11 @@ msgstr "摇杆4水平方向的鼠标轴控制​"
 msgctxt "game_options"
 msgid "MOUSE AXIS FOR PADDLE 4 VERTICAL"
 msgstr "摇杆4垂直方向的鼠标轴控制​"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "MOUSE INPUT"
+msgstr ""
 
 #. TRANSLATION: libretro/puae, libretro/puae2021
 msgctxt "game_options"
@@ -13907,7 +14259,7 @@ msgctxt "game_options"
 msgid "Max Saving"
 msgstr ""
 
-#. TRANSLATION: libretro/armsx2, libretro/pcsx2
+#. TRANSLATION: libretro/anygm, libretro/armsx2, libretro/pcsx2
 msgctxt "game_options"
 msgid "Maximum"
 msgstr "最大"
@@ -13998,12 +14350,17 @@ msgctxt "game_options"
 msgid "May result in a sharper image in some 2D games."
 msgstr "在一些2D游戏中可能会产生更锐利的图像。"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Mechanical disc drive noise while loading."
+msgstr ""
+
 #. TRANSLATION: shared
 msgctxt "game_options"
 msgid "Med Saving"
 msgstr ""
 
-#. TRANSLATION: armsx2, libretro/armsx2, libretro/fuse, libretro/mesen, libretro/mesen-s, ...
+#. TRANSLATION: armsx2, libretro/anygm, libretro/armsx2, libretro/fuse, libretro/mesen, ...
 msgctxt "game_options"
 msgid "Medium"
 msgstr "中"
@@ -14191,6 +14548,11 @@ msgctxt "game_options"
 msgid "Minimum (50)"
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Minimum key hold time for a short tap."
+msgstr ""
+
 #. TRANSLATION: mupen64plus
 msgctxt "game_options"
 msgid "Mirrored"
@@ -14290,10 +14652,20 @@ msgctxt "game_options"
 msgid "Monochrome (Blargg)"
 msgstr "单色（Blargg）"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Monochrome 720x256 (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/hatarib
 msgctxt "game_options"
 msgid "Monochrome High-Resolution"
 msgstr "单色高分辨率"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Monochrome display colour."
+msgstr ""
 
 #. TRANSLATION: libretro/swanstation
 msgctxt "game_options"
@@ -14337,6 +14709,16 @@ msgstr "鼠标（1351）"
 msgctxt "keys_files"
 msgid "Mouse Click"
 msgstr "鼠标点击"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Mouse High"
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Mouse Low"
+msgstr ""
 
 #. TRANSLATION: libretro/dice
 msgctxt "game_options"
@@ -14886,7 +15268,7 @@ msgctxt "game_options"
 msgid "Nestopia (RGB)"
 msgstr "Netopia模拟器（RGB）"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Netherlands"
 msgstr "荷兰"
@@ -15046,12 +15428,12 @@ msgctxt "game_options"
 msgid "Normal (interpreter)"
 msgstr "常规（解释器）"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Norway"
 msgstr "挪威"
 
-#. TRANSLATION: eka2l1, etlegacy, vita3k
+#. TRANSLATION: eka2l1, etlegacy, libretro/anygm, vita3k
 msgctxt "game_options"
 msgid "Norwegian"
 msgstr "挪威"
@@ -15293,6 +15675,11 @@ msgctxt "game_options"
 msgid "Off (None)"
 msgstr "关闭（无）"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Off - Report Available (Default)"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "Off at Start"
@@ -15303,6 +15690,11 @@ msgctxt "game_options"
 msgid ""
 "Off casts shadows from objects the PS2 could not afford to. Jak II and Jak 3 "
 "only."
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Off forces the selected colour mode."
 msgstr ""
 
 #. TRANSLATION: libretro/pcsx_rearmed, libretro/virtualjaguar
@@ -15319,6 +15711,11 @@ msgstr ""
 #. TRANSLATION: opengoal
 msgctxt "game_options"
 msgid "Off raises the PS2's particle limit."
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Off renders at the monitor width and height below."
 msgstr ""
 
 #. TRANSLATION: bigpemu
@@ -15368,7 +15765,7 @@ msgctxt "game_options"
 msgid "On"
 msgstr "开启"
 
-#. TRANSLATION: armsx2, azahar, dsperate, keisho, libretro/mame, ...
+#. TRANSLATION: armsx2, azahar, dsperate, keisho, libretro/anygm, ...
 msgctxt "game_options"
 msgid "On (Default)"
 msgstr "开（默认）"
@@ -15452,10 +15849,21 @@ msgctxt "game_options"
 msgid "Only increase the image size in integer multiples."
 msgstr "仅以整数倍增加图像大小。"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid ""
+"Only looks right under a program that drives it, or with I/O changes off."
+msgstr ""
+
 #. TRANSLATION: libretro/fceumm
 msgctxt "game_options"
 msgid "Only supported games. Higher settings increase system requirements."
 msgstr "仅适用于受支持的游戏。较高的设置会增加系统要求。"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Only used with render at game resolution off."
+msgstr ""
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -15517,6 +15925,13 @@ msgctxt "game_options"
 msgid "OpenGL ES"
 msgstr "OpenGL ES"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid ""
+"OpenGL is a work in progress and may draw incomplete pictures. Applies on "
+"restart."
+msgstr ""
+
 #. TRANSLATION: scummvm
 msgctxt "game_options"
 msgid "OpenGL with Shaders"
@@ -15536,6 +15951,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Optimized (auto)"
 msgstr "优化（自动）"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Optional add-on many games use for music."
+msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
@@ -15829,6 +16249,11 @@ msgctxt "game_options"
 msgid "PCW10 - 512KB"
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "PCW8256 - 256KB"
+msgstr ""
+
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "PCW8256 - 256KB (default)"
@@ -15837,6 +16262,11 @@ msgstr ""
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
 msgid "PCW8512 - 512KB"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "PCW8512 - 512KB (Default)"
 msgstr ""
 
 #. TRANSLATION: libretro/mame, mame
@@ -15889,6 +16319,11 @@ msgctxt "game_options"
 msgid "PERFORMANCE PRESETS"
 msgstr "性能预设"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "PERIPHERAL (UP PORT)"
+msgstr ""
+
 #. TRANSLATION: duckstation
 msgctxt "game_options"
 msgid "PGXP DEPTH BUFFER"
@@ -15903,6 +16338,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "PHOSPHOR BLEND"
 msgstr "荧光粉混合物"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "PHOSPHOR COLOUR"
+msgstr ""
 
 #. TRANSLATION: libretro/stella
 msgctxt "game_options"
@@ -16127,6 +16567,11 @@ msgctxt "game_options"
 msgid "Pakistan"
 msgstr "巴基斯坦"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Palette group shown by the 4-colour mode."
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "Panama"
@@ -16322,7 +16767,7 @@ msgid ""
 "experience stick drift."
 msgstr ""
 
-#. TRANSLATION: shared
+#. TRANSLATION: libretro/anygm, shared
 msgctxt "game_options"
 msgid "Performance"
 msgstr "性能"
@@ -16508,7 +16953,7 @@ msgctxt "game_options"
 msgid "Pointer"
 msgstr "指针"
 
-#. TRANSLATION: eden, libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: eden, libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Poland"
 msgstr "波兰"
@@ -16518,10 +16963,15 @@ msgctxt "game_options"
 msgid "Poland (pl)"
 msgstr "波兰语 (pl)"
 
-#. TRANSLATION: doom3, etlegacy, shadps4, vita3k, xenia-edge, ...
+#. TRANSLATION: doom3, etlegacy, libretro/anygm, shadps4, vita3k, ...
 msgctxt "game_options"
 msgid "Polish"
 msgstr "波兰"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Poll"
+msgstr ""
 
 #. TRANSLATION: libretro/mednafen_psx, libretro/vice_x128, libretro/vice_x64, libretro/vice_x64sc, libretro/vice_xplus4, ...
 msgctxt "game_options"
@@ -16565,12 +17015,12 @@ msgctxt "game_options"
 msgid "Portrait"
 msgstr "纵向"
 
-#. TRANSLATION: eden, libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: eden, libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Portugal"
 msgstr "葡萄牙"
 
-#. TRANSLATION: cemu, eden, eka2l1, etlegacy, libretro/azahar, ...
+#. TRANSLATION: cemu, eden, eka2l1, etlegacy, libretro/anygm, ...
 msgctxt "game_options"
 msgid "Portuguese"
 msgstr "葡萄牙语"
@@ -16841,6 +17291,11 @@ msgctxt "game_options"
 msgid "QUIT ON HOST"
 msgstr "退出主机"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "QWERTY"
+msgstr ""
+
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
 msgid "Qatar"
@@ -16861,17 +17316,17 @@ msgctxt "game_options"
 msgid "Quiet"
 msgstr ""
 
-#. TRANSLATION: libretro/ep128emu
+#. TRANSLATION: libretro/ep128emu, libretro/zesarpcw
 msgctxt "game_options"
 msgid "R"
 msgstr ""
 
-#. TRANSLATION: libretro/ep128emu
+#. TRANSLATION: libretro/ep128emu, libretro/zesarpcw
 msgctxt "game_options"
 msgid "R2"
 msgstr ""
 
-#. TRANSLATION: libretro/ep128emu
+#. TRANSLATION: libretro/ep128emu, libretro/zesarpcw
 msgctxt "game_options"
 msgid "R3"
 msgstr ""
@@ -16986,6 +17441,11 @@ msgctxt "game_options"
 msgid "RENDER"
 msgstr "渲染"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "RENDER AT GAME RESOLUTION"
+msgstr ""
+
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
 msgid "RENDER DUPLICATE FRAMES TO 60 HZ"
@@ -17021,7 +17481,7 @@ msgctxt "game_options"
 msgid "RENDER-TO-TEXTURE MEMORY BUDGET"
 msgstr ""
 
-#. TRANSLATION: gametank-emulator, iortcw, libretro/pcsx2, scummvm
+#. TRANSLATION: gametank-emulator, iortcw, libretro/anygm, libretro/pcsx2, scummvm, ...
 msgctxt "game_options"
 msgid "RENDERER"
 msgstr "渲染器"
@@ -17318,10 +17778,20 @@ msgctxt "game_options"
 msgid "Reduces wobbly polygons & warping textures."
 msgstr "减少晃动的多边形和扭曲的纹理。"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Region reported to the game. Applies on restart."
+msgstr ""
+
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
 msgid "Regular Bilnear"
 msgstr "常规双线性"
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Relative (Delta)"
+msgstr ""
 
 #. TRANSLATION: rpcs3, shadps4
 msgctxt "game_options"
@@ -17687,6 +18157,11 @@ msgctxt "keys_files"
 msgid "Run"
 msgstr "奔跑"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Run CPU at double speed."
+msgstr ""
+
 #. TRANSLATION: trx
 msgctxt "game_options"
 msgid "Run the Unfinished expansion pack."
@@ -17741,7 +18216,7 @@ msgid ""
 "CPUs. May cause issues in some games."
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Russia"
 msgstr "俄罗斯"
@@ -18571,7 +19046,7 @@ msgctxt "game_options"
 msgid "Saturn Pad"
 msgstr "世嘉土星 Pad"
 
-#. TRANSLATION: xenia-edge
+#. TRANSLATION: libretro/anygm, xenia-edge
 msgctxt "game_options"
 msgid "Saudi Arabia"
 msgstr "沙特阿拉伯"
@@ -18579,6 +19054,11 @@ msgstr "沙特阿拉伯"
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "Save Difference Per Content"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Saved game data is unaffected."
 msgstr ""
 
 #. TRANSLATION: ppsspp
@@ -18739,6 +19219,11 @@ msgctxt "keys_files"
 msgid "Select"
 msgstr "选择"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Select (Default)"
+msgstr ""
+
 #. TRANSLATION: rpcs3
 msgctxt "game_options"
 msgid ""
@@ -18768,6 +19253,11 @@ msgctxt "game_options"
 msgid "Select controller type for Amiga P2."
 msgstr "为Amiga P2选择控制器类型。"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select display aspect ratio."
+msgstr ""
+
 #. TRANSLATION: awgl, bermuda
 msgctxt "game_options"
 msgid "Select full screen mode."
@@ -18789,6 +19279,16 @@ msgid ""
 "Select how much graphics memory is allocated for the GPU, may need modifying "
 "for some games / systems."
 msgstr "选择为GPU分配多少图形内存，可能需要根据一些游戏或系统进行修改。"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select keyboard input method. Requires restart."
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select keyboard layout."
+msgstr ""
 
 #. TRANSLATION: libretro/melonds, melonds
 msgctxt "game_options"
@@ -18823,6 +19323,11 @@ msgstr ""
 msgctxt "game_options"
 msgid "Select model to emulate"
 msgstr "选择要模拟的型号"
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select peripheral device. Requires restart."
+msgstr ""
 
 #. TRANSLATION: awgl
 msgctxt "game_options"
@@ -18880,6 +19385,11 @@ msgstr ""
 #. TRANSLATION: libretro/gearcoleco
 msgctxt "game_options"
 msgid "Select the display aspect ratio."
+msgstr ""
+
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Select the emulated computer model. Requires restart."
 msgstr ""
 
 #. TRANSLATION: xroar
@@ -19650,6 +20160,11 @@ msgctxt "game_options"
 msgid "Skip frames to improve performance, at the cost of choppy motion."
 msgstr "跳过帧以提高性能，代价是运动不稳定。"
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "Skip pixels too faint to see, trading faint detail for speed."
+msgstr ""
+
 #. TRANSLATION: nanoboyadvance
 msgctxt "game_options"
 msgid "Skip the GBA boot logo. A BIOS file is always required."
@@ -19734,6 +20249,11 @@ msgctxt "game_options"
 msgid "Slovenian"
 msgstr "斯洛文尼亚"
 
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Slow BK-0011M"
+msgstr ""
+
 #. TRANSLATION: libretro/px68k, libretro/quasi88
 msgctxt "game_options"
 msgid "Slow down or speed up games as appropriate."
@@ -19753,6 +20273,11 @@ msgstr "性能小幅提高（可能会导致帧丢失）"
 msgctxt "game_options"
 msgid "Smaller"
 msgstr "更小"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Smart (Auto)"
+msgstr ""
 
 #. TRANSLATION: dxx-rebirth, libretro/odin
 msgctxt "game_options"
@@ -19873,6 +20398,16 @@ msgid ""
 "scaling 3D graphics."
 msgstr "软件模式更快更准确，而OpenGL模式支持缩放3D图形。"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Solid - Full (Default)"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Solid - Only Keys"
+msgstr ""
+
 #. TRANSLATION: libretro/o2em
 msgctxt "game_options"
 msgid "Some games accept input from port 2 instead of port 1."
@@ -19952,7 +20487,7 @@ msgctxt "game_options"
 msgid "South Africa"
 msgstr "南非"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Spain"
 msgstr "西班牙"
@@ -20131,7 +20666,7 @@ msgctxt "game_options"
 msgid "Standard OpenGL (Default)"
 msgstr "标准OpenGL（默认）"
 
-#. TRANSLATION: libretro/ep128emu
+#. TRANSLATION: libretro/ep128emu, libretro/zesarpcw
 msgctxt "game_options"
 msgid "Start"
 msgstr ""
@@ -20409,12 +20944,12 @@ msgctxt "game_options"
 msgid "Swap the position of the dual displays."
 msgstr "交换双显示器的位置。"
 
-#. TRANSLATION: libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Sweden"
 msgstr "瑞典"
 
-#. TRANSLATION: eka2l1, etlegacy, scummvm, shadps4, vita3k, ...
+#. TRANSLATION: eka2l1, etlegacy, libretro/anygm, scummvm, shadps4, ...
 msgctxt "game_options"
 msgid "Swedish"
 msgstr "瑞典语"
@@ -20797,6 +21332,11 @@ msgctxt "game_options"
 msgid "TRANSLUCENCY"
 msgstr ""
 
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "TRANSPARENCY CULLING"
+msgstr ""
+
 #. TRANSLATION: ymir
 msgctxt "game_options"
 msgid "TRANSPARENT MESHES"
@@ -20917,7 +21457,7 @@ msgctxt "game_options"
 msgid "TWB64 - Pack 2"
 msgstr "TWB64 - Pack 2"
 
-#. TRANSLATION: eden, libretro/azahar, lichii, ryujinx, xenia-edge, ...
+#. TRANSLATION: eden, libretro/anygm, libretro/azahar, lichii, ryujinx, ...
 msgctxt "game_options"
 msgid "Taiwan"
 msgstr "台湾"
@@ -21007,15 +21547,25 @@ msgctxt "game_options"
 msgid "Tano Dragon (NTSC)"
 msgstr "Tano Dragon (NTSC)"
 
-#. TRANSLATION: shadps4
+#. TRANSLATION: libretro/bk
+msgctxt "game_options"
+msgid "Terak 8510/a"
+msgstr ""
+
+#. TRANSLATION: libretro/anygm, shadps4
 msgctxt "game_options"
 msgid "Thai"
 msgstr "泰语"
 
-#. TRANSLATION: xenia-edge
+#. TRANSLATION: libretro/anygm, xenia-edge
 msgctxt "game_options"
 msgid "Thailand"
 msgstr "泰国"
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "The PCW's internal speaker."
+msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
@@ -21357,6 +21907,11 @@ msgctxt "game_options"
 msgid "Translate DirectDraw and Direct3D up to 7 to Vulkan."
 msgstr ""
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "Transparent"
+msgstr ""
+
 #. TRANSLATION: libretro/atari800
 msgctxt "game_options"
 msgid "Treats the right analog stick as the second joystick."
@@ -21397,12 +21952,12 @@ msgctxt "game_options"
 msgid "Tunisia"
 msgstr "突尼斯"
 
-#. TRANSLATION: eden, libretro/dosbox_pure, xenia-edge
+#. TRANSLATION: eden, libretro/anygm, libretro/dosbox_pure, xenia-edge
 msgctxt "game_options"
 msgid "Turkey"
 msgstr "土耳其"
 
-#. TRANSLATION: easyrpg, etlegacy, shadps4, vita3k
+#. TRANSLATION: easyrpg, etlegacy, libretro/anygm, shadps4, vita3k, ...
 msgctxt "game_options"
 msgid "Turkish"
 msgstr "土耳其语"
@@ -21512,6 +22067,11 @@ msgctxt "game_options"
 msgid "UK"
 msgstr "英国"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "UK (Default)"
+msgstr ""
+
 #. TRANSLATION: cemu, shared
 msgctxt "game_options"
 msgid "UPSCALE FILTER"
@@ -21537,7 +22097,7 @@ msgctxt "game_options"
 msgid "UPSCALING MODE"
 msgstr ""
 
-#. TRANSLATION: libretro/dosbox_pure
+#. TRANSLATION: libretro/dosbox_pure, libretro/zesarpcw
 msgctxt "game_options"
 msgid "US"
 msgstr "美国"
@@ -21797,12 +22357,12 @@ msgctxt "game_options"
 msgid "UTC-9"
 msgstr "UTC-9"
 
-#. TRANSLATION: xenia-edge
+#. TRANSLATION: libretro/anygm, xenia-edge
 msgctxt "game_options"
 msgid "Ukraine"
 msgstr "乌克兰"
 
-#. TRANSLATION: etlegacy, shadps4
+#. TRANSLATION: etlegacy, libretro/anygm, shadps4
 msgctxt "game_options"
 msgid "Ukrainian"
 msgstr "乌克兰"
@@ -21829,7 +22389,12 @@ msgctxt "game_options"
 msgid "Undocked"
 msgstr "未连接"
 
-#. TRANSLATION: linuxloader
+#. TRANSLATION: libretro/anygm
+msgctxt "game_options"
+msgid "United Kingdom"
+msgstr "英国"
+
+#. TRANSLATION: libretro/anygm, linuxloader
 msgctxt "game_options"
 msgid "United States"
 msgstr "美国"
@@ -22416,6 +22981,26 @@ msgctxt "game_options"
 msgid "VIRTUAL KEYBOARD"
 msgstr "VIRTUAL KEYBOARD"
 
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD BUTTON"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD KEY HOLD"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD LAYOUT"
+msgstr ""
+
+#. TRANSLATION: libretro/zesarpcw
+msgctxt "game_options"
+msgid "VIRTUAL KEYBOARD OVERLAY"
+msgstr ""
+
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid "VISUAL NUDGE STRENGTH"
@@ -22560,12 +23145,12 @@ msgctxt "game_options"
 msgid "Videopac+ G7400 (France)"
 msgstr "Videopac+ G7400（法国版）"
 
-#. TRANSLATION: xenia-edge
+#. TRANSLATION: libretro/anygm, xenia-edge
 msgctxt "game_options"
 msgid "Vietnam"
 msgstr "越南"
 
-#. TRANSLATION: shadps4
+#. TRANSLATION: libretro/anygm, shadps4
 msgctxt "game_options"
 msgid "Vietnamese"
 msgstr "越南语"
@@ -24953,10 +25538,6 @@ msgstr "黄色/蓝色"
 #~ msgstr "在支持的游戏中隐藏十字光标，例如ActionMax。"
 
 #~ msgctxt "game_options"
-#~ msgid "High (Default)"
-#~ msgstr "高（默认）"
-
-#~ msgctxt "game_options"
 #~ msgid ""
 #~ "High-Resolution Keyboard, which is larger and might be easier to see."
 #~ msgstr "高分辨率键盘, 更大更容易看到."
@@ -26016,10 +26597,6 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "United Arab Emirates"
 #~ msgstr "阿联酋"
-
-#~ msgctxt "game_options"
-#~ msgid "United Kingdom"
-#~ msgstr "英国"
 
 #~ msgctxt "game_options"
 #~ msgid "Upscale filter used for the 2D layers. Requires New 3D engine."
