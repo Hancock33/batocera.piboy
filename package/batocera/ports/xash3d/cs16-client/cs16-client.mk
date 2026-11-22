@@ -3,8 +3,8 @@
 # cs16-client
 #
 ################################################################################
-# Version: Commits on Nov 17, 2026
-CS16_CLIENT_VERSION = ba5549fe32ce0fd94630a582401fc5b2c76f3f23
+# Version: Commits on Nov 22, 2026
+CS16_CLIENT_VERSION = f5db7787f15e5bf88ad64409e48abd06ea143c25
 CS16_CLIENT_SITE = https://github.com/FWGS/cs16-client.git
 CS16_CLIENT_SITE_METHOD = git
 CS16_CLIENT_GIT_SUBMODULES = YES

@@ -3,8 +3,8 @@
 # uwe5622
 #
 ################################################################################
-# Version: Commits on Nov 20, 2026
-UWE5622_VERSION = aa33e85e511fc9e63eafecc91e4f78ae730046c9
+# Version: Commits on Nov 21, 2026
+UWE5622_VERSION = ef4ac088ae4cfb468843199e64d57589aacf22d0
 UWE5622_SITE = $(call github,armbian,uwe5622,$(UWE5622_VERSION))
 UWE5622_LICENSE = GPL-2.0
 

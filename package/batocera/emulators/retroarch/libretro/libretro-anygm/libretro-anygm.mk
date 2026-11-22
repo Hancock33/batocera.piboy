@@ -3,8 +3,8 @@
 # libretro-anygm
 #
 ################################################################################
-# Version: Commits on Nov 19, 2026
-LIBRETRO_ANYGM_VERSION = ae9ca84eb3863c72dc1483a5a353053e2c0a95ad
+# Version: Commits on Nov 22, 2026
+LIBRETRO_ANYGM_VERSION = 220a1dd756da6d1474f36af99ed319dca000eaed
 LIBRETRO_ANYGM_SITE =  $(call github,retrodiv,AnyGM-libretro,$(LIBRETRO_ANYGM_VERSION))
 LIBRETRO_ANYGM_LICENSE = MIT
 LIBRETRO_ANYGM_EMULATOR_INFO = anygm.libretro.core.yml
