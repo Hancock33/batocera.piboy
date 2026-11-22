@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Oct 09, 2026
 STENZEK_SHADERC_VERSION = 4984f691acbbb22d5b11b786330c4b6e6c4a9820
-STENZEK_SHADERC_SITE =  $(call github,stenzek,shaderc,$(STENZEK_SHADERC_VERSION))
+STENZEK_SHADERC_SITE = $(call github,stenzek,shaderc,$(STENZEK_SHADERC_VERSION))
 STENZEK_SHADERC_LICENSE = Apache-2.0
 STENZEK_SHADERC_LICENSE_FILES = LICENSE
 STENZEK_SHADERC_DEPENDENCIES = vulkan-headers vulkan-loader glslang spirv-tools
@@ -26,9 +26,8 @@ endef
 STENZEK_SHADERC_PRE_CONFIGURE_HOOKS += STENZEK_SHADERC_THIRDPARTY
 
 define STENZEK_SHADERC_INSTALL_TARGET_CMDS
-	rm -rf   $(TARGET_DIR)/usr/lib/stenzek-shaderc
-	mkdir -p $(TARGET_DIR)/usr/lib/stenzek-shaderc
-	$(INSTALL) -D $(@D)/buildroot-build/libshaderc/libshaderc_ds.* $(TARGET_DIR)/usr/lib/stenzek-shaderc/libshaderc_ds.so
+	rm -rf $(TARGET_DIR)/usr/lib/stenzek-shaderc
+	$(INSTALL) -D -m 0755 $(@D)/buildroot-build/libshaderc/libshaderc_ds.* $(TARGET_DIR)/usr/lib/stenzek-shaderc/libshaderc_ds.so
 	ln -sf /usr/lib/libsqlite3.so $(TARGET_DIR)/usr/lib/stenzek-shaderc/libsqlite3.so.3
 endef
 

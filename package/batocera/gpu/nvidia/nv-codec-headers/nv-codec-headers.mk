@@ -12,11 +12,11 @@ NV_CODEC_HEADERS_LICENSE_FILES = include/ffnvcodec/nvEncodeAPI.h
 NV_CODEC_HEADERS_INSTALL_STAGING = YES
 
 define NV_CODEC_HEADERS_INSTALL_STAGING_CMDS
-	$(MAKE) PREFIX=$(STAGING_DIR)/usr -C $(@D) install
+	$(TARGET_MAKE_ENV) $(MAKE) PREFIX=/usr DESTDIR=$(STAGING_DIR) -C $(@D) install
 endef
 
 define NV_CODEC_HEADERS_INSTALL_TARGET_CMDS
-	$(MAKE) PREFIX=$(TARGET_DIR)/usr -C $(@D) install
+	$(TARGET_MAKE_ENV) $(MAKE) PREFIX=/usr DESTDIR=$(TARGET_DIR) -C $(@D) install
 endef
 
 $(eval $(generic-package))

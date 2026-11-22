@@ -49,9 +49,9 @@ define UBOOT_RK356X_BUILD_BOOTLOADER
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK356X_MAKE_OPTS) ROCKCHIP_TPL=$(BATOCERA_RKBIN_DIR)/bin/rk35/$(tpl) olddefconfig
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK356X_MAKE_OPTS) ROCKCHIP_TPL=$(BATOCERA_RKBIN_DIR)/bin/rk35/$(tpl)
 	mkdir -p $(@D)/staging/$(board)
-	cp -v $(@D)/u-boot-rockchip.bin $(@D)/staging/$(board)/
+	cp $(@D)/u-boot-rockchip.bin $(@D)/staging/$(board)/
 	# Binman generates the SPI binary if CONFIG_ROCKCHIP_SPI_IMAGE is enabled
-	if [ -f $(@D)/u-boot-rockchip-spi.bin ]; then cp -v $(@D)/u-boot-rockchip-spi.bin $(@D)/staging/$(board)/; \
+	if [ -f $(@D)/u-boot-rockchip-spi.bin ]; then cp $(@D)/u-boot-rockchip-spi.bin $(@D)/staging/$(board)/; \
 	fi
 endef
 
@@ -64,9 +64,9 @@ define UBOOT_RK356X_INSTALL_IMAGES_CMDS
 	$(foreach pair, $(UBOOT_RK356X_BUILDPAIR), \
 		board=$$(echo $(pair) | cut -d'/' -f1); \
 		mkdir -p $(BINARIES_DIR)/$$board; \
-		cp -v $(@D)/staging/$$board/u-boot-rockchip.bin $(BINARIES_DIR)/$$board/; \
+		cp $(@D)/staging/$$board/u-boot-rockchip.bin $(BINARIES_DIR)/$$board/; \
 		if [ -f $(@D)/staging/$$board/u-boot-rockchip-spi.bin ]; then \
-			cp -v $(@D)/staging/$$board/u-boot-rockchip-spi.bin $(BINARIES_DIR)/$$board/; \
+			cp $(@D)/staging/$$board/u-boot-rockchip-spi.bin $(BINARIES_DIR)/$$board/; \
 		fi; \
 	)
 endef

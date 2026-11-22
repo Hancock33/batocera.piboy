@@ -19,10 +19,9 @@ define BATOCERA_SHIM_SIGNED_EFI_HELPERS_IA32_BUILD_CMDS
 endef
 
 define BATOCERA_SHIM_SIGNED_EFI_HELPERS_IA32_INSTALL_IMAGES_CMDS
-	mkdir -p $(BINARIES_DIR)/shim-signed
 
-	cp $(@D)/shim-signed/usr/lib/shim/fbia32.efi.signed $(BINARIES_DIR)/shim-signed/fbia32.efi
-	cp $(@D)/shim-signed/usr/lib/shim/mmia32.efi.signed $(BINARIES_DIR)/shim-signed/mmia32.efi
+	$(INSTALL) -D -m 0644 $(@D)/shim-signed/usr/lib/shim/fbia32.efi.signed $(BINARIES_DIR)/shim-signed/fbia32.efi
+	$(INSTALL) -D -m 0644 $(@D)/shim-signed/usr/lib/shim/mmia32.efi.signed $(BINARIES_DIR)/shim-signed/mmia32.efi
 endef
 
 $(eval $(generic-package))

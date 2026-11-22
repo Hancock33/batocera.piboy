@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Sept 11, 2026
 SHADERC_VERSION = v2026.4
-SHADERC_SITE =  $(call github,google,shaderc,$(SHADERC_VERSION))
+SHADERC_SITE = $(call github,google,shaderc,$(SHADERC_VERSION))
 SHADERC_LICENSE = Apache-2.0
 SHADERC_LICENSE_FILES = LICENSE
 SHADERC_DEPENDENCIES = vulkan-headers vulkan-loader glslang spirv-tools
@@ -23,8 +23,7 @@ HOST_SHADERC_DEPENDENCIES = host-glslang host-spirv-headers host-spirv-tools
 HOST_SHADERC_CONF_OPTS += -DSHADERC_SKIP_TESTS=ON
 HOST_SHADERC_CONF_OPTS += -DSHADERC_SKIP_EXAMPLES=ON
 HOST_SHADERC_CONF_OPTS += -DSHADERC_SKIP_COPYRIGHT_CHECK=ON
-HOST_SHADERC_CONF_OPTS += -Dglslang_SOURCE_DIR=$(HOST_DIR)/usr/include/glslang
-
+HOST_SHADERC_CONF_OPTS += -Dglslang_SOURCE_DIR=$(HOST_DIR)/include/glslang
 define SHADERC_THIRDPARTY
 	$(SED) '/third_party/d' -i $(@D)/CMakeLists.txt
 	$(SED) '/build-version/d' -i $(@D)/glslc/CMakeLists.txt

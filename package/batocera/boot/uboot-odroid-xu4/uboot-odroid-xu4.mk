@@ -6,16 +6,16 @@
 # Version: Commits on Apr 30, 2026
 UBOOT_ODROID_XU4_VERSION = 7d5876d36f4120034f1902b12d6799b147bec884
 UBOOT_ODROID_XU4_SITE = https://github.com/hardkernel/u-boot.git
-UBOOT_ODROID_XU4_SITE_METHOD=git
+UBOOT_ODROID_XU4_SITE_METHOD = git
 UBOOT_ODROID_XU4_LICENSE = GPL-2.0+
 
 define UBOOT_ODROID_XU4_INSTALL_IMAGES_CMDS
-		cp $(@D)/sd_fuse/bl1.bin.hardkernel			$(BINARIES_DIR)/bl1.bin.hardkernel
-		dd if=$(@D)/sd_fuse/bl1.bin.hardkernel		 of=$(BINARIES_DIR)/bl1.bin.hardkernel.reduced bs=512 count=30 # because bl1 overlaps bl2
-		cp $(@D)/sd_fuse/bl2.bin.hardkernel.720k_uboot $(BINARIES_DIR)/bl2.bin.hardkernel.720k_uboot
-		cp $(@D)/sd_fuse/tzsw.bin.hardkernel		   $(BINARIES_DIR)/tzsw.bin.hardkernel
-		#cp $(@D)/sd_fuse/u-boot.bin.hardkernel		 $(BINARIES_DIR)/u-boot.bin.hardkernel
-		dd if=/dev/zero of=$(BINARIES_DIR)/uboot-clearenv count=32 bs=512
+	cp $(@D)/sd_fuse/bl1.bin.hardkernel $(BINARIES_DIR)/bl1.bin.hardkernel
+	# bl1 overlaps bl2
+	dd if=$(@D)/sd_fuse/bl1.bin.hardkernel of=$(BINARIES_DIR)/bl1.bin.hardkernel.reduced bs=512 count=30
+	cp $(@D)/sd_fuse/bl2.bin.hardkernel.720k_uboot $(BINARIES_DIR)/bl2.bin.hardkernel.720k_uboot
+	cp $(@D)/sd_fuse/tzsw.bin.hardkernel $(BINARIES_DIR)/tzsw.bin.hardkernel
+	dd if=/dev/zero of=$(BINARIES_DIR)/uboot-clearenv count=32 bs=512
 endef
 
 $(eval $(boot-package))

@@ -6,6 +6,7 @@
 # Version: Commits on Mar 03, 2020
 ROCKPRO64_BLOBS_VERSION = 2.0
 ROCKPRO64_BLOBS_SITE = https://github.com/batocera-linux/rockpro64-blobs.git
+ROCKPRO64_BLOBS_SITE_METHOD = git
 ROCKPRO64_BLOBS_LICENSE = GPL-2.0+ (u-boot), PROPRIETARY (Rockchip loader, trust)
 # rockpro64-blobs
 

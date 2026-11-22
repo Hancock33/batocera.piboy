@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Dec 23, 2025
 ROCKCHIP_RGA_VERSION = 57a1067a246c71fa6c9a355d1668884fda155dd5
-ROCKCHIP_RGA_SITE = $(call github,JeffyCN,mirrors,linux-rga,$(ROCKCHIP_RGA_VERSION))
+ROCKCHIP_RGA_SITE = $(call github,JeffyCN,mirrors,$(ROCKCHIP_RGA_VERSION))
 ROCKCHIP_RGA_BRANCH = linux-rga-multi
 
 # RK3326 needs the older rockchip-rga for it's 4.4 kernel

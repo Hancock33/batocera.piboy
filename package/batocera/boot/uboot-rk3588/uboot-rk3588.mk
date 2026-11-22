@@ -20,10 +20,6 @@ UBOOT_RK3588_DDR118 = rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin
 UBOOT_RK3588_EXTRA_DOWNLOADS += \
     https://github.com/rockchip-linux/rkbin/raw/b9183559cabebed120ad431a614b291fee04c498/bin/rk35/$(UBOOT_RK3588_DDR118)
 
-# DDR v1.18 for boards that do not train with v1.21 (NanoPi M6)
-UBOOT_RK3588_DDR118 = rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin
-UBOOT_RK3588_EXTRA_DOWNLOADS += \
-    https://github.com/rockchip-linux/rkbin/raw/b9183559cabebed120ad431a614b291fee04c498/bin/rk35/$(UBOOT_RK3588_DDR118)
 
 # Modern U-Boot dependencies
 UBOOT_RK3588_DEPENDENCIES = host-batocera-rkbin host-pkgconf host-openssl host-bison host-flex \
@@ -86,10 +82,10 @@ define UBOOT_RK3588_BUILD_BOOTLOADER
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) ROCKCHIP_TPL=$(tpl) olddefconfig
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_RK3588_MAKE_OPTS) BL31=$(bl31) ROCKCHIP_TPL=$(tpl)
 	mkdir -p $(@D)/staging/$(board)
-	cp -v $(@D)/u-boot-rockchip.bin $(@D)/staging/$(board)/
+	cp $(@D)/u-boot-rockchip.bin $(@D)/staging/$(board)/
 	# Binman generates the SPI binary if CONFIG_ROCKCHIP_SPI_IMAGE is enabled
 	if [ -f $(@D)/u-boot-rockchip-spi.bin ]; then \
-		cp -v $(@D)/u-boot-rockchip-spi.bin $(@D)/staging/$(board)/; \
+		cp $(@D)/u-boot-rockchip-spi.bin $(@D)/staging/$(board)/; \
 	fi
 endef
 
@@ -106,9 +102,9 @@ define UBOOT_RK3588_INSTALL_IMAGES_CMDS
 	$(foreach pair, $(UBOOT_RK3588_BUILDPAIR), \
 		board=$$(echo $(pair) | cut -d'/' -f1); \
 		mkdir -p $(BINARIES_DIR)/$$board; \
-		cp -v $(@D)/staging/$$board/u-boot-rockchip.bin $(BINARIES_DIR)/$$board/; \
+		cp $(@D)/staging/$$board/u-boot-rockchip.bin $(BINARIES_DIR)/$$board/; \
 		if [ -f $(@D)/staging/$$board/u-boot-rockchip-spi.bin ]; then \
-			cp -v $(@D)/staging/$$board/u-boot-rockchip-spi.bin $(BINARIES_DIR)/$$board/; \
+			cp $(@D)/staging/$$board/u-boot-rockchip-spi.bin $(BINARIES_DIR)/$$board/; \
 		fi; \
 	)
 endef

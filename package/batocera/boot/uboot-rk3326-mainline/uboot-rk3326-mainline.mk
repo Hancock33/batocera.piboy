@@ -36,7 +36,7 @@ endef
 define UBOOT_RK3326_MAINLINE_UART5_DDR_BIN
 	cp $(UBOOT_RK3326_MAINLINE_DDR_BIN) $(@D)/ddr.bin
 	$(HOST_DIR)/bin/python3 $(BATOCERA_RKBIN_DIR)/tools/ddrbin_tool.py rk3326 -g $(@D)/ddr.txt $(@D)/ddr.bin
-	sed -i 's|uart id=.*$$|uart id=5|' $(@D)/ddr.txt
+	$(SED) 's|uart id=.*$$|uart id=5|' $(@D)/ddr.txt
 	$(HOST_DIR)/bin/python3 $(BATOCERA_RKBIN_DIR)/tools/ddrbin_tool.py rk3326 $(@D)/ddr.txt $(@D)/ddr.bin
 endef
 UBOOT_RK3326_MAINLINE_IDB_DDR_BIN = $(@D)/ddr.bin

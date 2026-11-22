@@ -19,9 +19,8 @@ define BATOCERA_SHIM_SIGNED_EFI_IA32_BUILD_CMDS
 endef
 
 define BATOCERA_SHIM_SIGNED_EFI_IA32_INSTALL_IMAGES_CMDS
-	mkdir -p $(BINARIES_DIR)/shim-signed
 
-	cp $(@D)/shim-signed/usr/lib/shim/shimia32.efi.signed $(BINARIES_DIR)/shim-signed/shimia32.efi
+	$(INSTALL) -D -m 0644 $(@D)/shim-signed/usr/lib/shim/shimia32.efi.signed $(BINARIES_DIR)/shim-signed/shimia32.efi
 endef
 
 $(eval $(generic-package))

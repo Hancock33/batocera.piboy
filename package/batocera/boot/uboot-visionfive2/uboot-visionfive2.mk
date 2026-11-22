@@ -18,11 +18,7 @@ define UBOOT_VISIONFIVE2_BUILD_CMDS
 endef
 
 define UBOOT_VISIONFIVE2_INSTALL_IMAGES_CMDS
-	mkdir -p $(BINARIES_DIR)/uboot-visionfive2
-	cp $(UBOOT_VISIONFIVE2_DL_DIR)/u-boot-spl.bin.normal.out \
-		$(BINARIES_DIR)/uboot-visionfive2/u-boot-spl.bin.normal.out
-	cp $(UBOOT_VISIONFIVE2_DL_DIR)/visionfive2_fw_payload.img \
-		$(BINARIES_DIR)/uboot-visionfive2/visionfive2_fw_payload.img
+	$(INSTALL) -D -m 0644 -t $(BINARIES_DIR)/uboot-visionfive2 $(UBOOT_VISIONFIVE2_DL_DIR)/u-boot-spl.bin.normal.out $(UBOOT_VISIONFIVE2_DL_DIR)/visionfive2_fw_payload.img
 endef
 
 $(eval $(generic-package))

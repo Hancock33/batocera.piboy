@@ -27,7 +27,7 @@ endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3326),y)
 # See https://wiki.odroid.com/odroid_go_advance/application_note/vulkan_on_rk3326
-MALI_G31_GBM_EXTRA_DOWNLOADS=https://dn.odroid.com/RK3326/ODROID-GO-Advance/rk3326_r13p0_gbm_with_vulkan_and_cl.zip
+MALI_G31_GBM_EXTRA_DOWNLOADS = https://dn.odroid.com/RK3326/ODROID-GO-Advance/rk3326_r13p0_gbm_with_vulkan_and_cl.zip
 
 ifeq ($(BR2_aarch64),y)
 MALI_G31_GBM_RK3326_BLOB = libmali.so_rk3326_gbm_arm64_r13p0_with_vulkan_and_cl
@@ -45,11 +45,9 @@ define MALI_G31_GBM_RK3326_INSTALL
 	ln -sfr $(MALI_G31_GBM_TARGET_SO) $(TARGET_DIR)/usr/lib/libmali.so.1.9.0
 
 	# Install Vulkan driver as ICD through vulkan-loader
-	mkdir -p $(TARGET_DIR)/usr/share/vulkan/icd.d
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/gpu/mali-g31-gbm/mali_icd.json $(TARGET_DIR)/usr/share/vulkan/icd.d/
-
+	$(INSTALL) -D -m 0644 $(MALI_G31_GBM_PKGDIR)/mali_icd.json $(TARGET_DIR)/usr/share/vulkan/icd.d/mali_icd.json
 	# Ugly workaround to fix duckstation compilation
-	rm $(STAGING_DIR)/usr/lib/libEGL.so
+	rm -f $(STAGING_DIR)/usr/lib/libEGL.so
 	ln -sfr $(STAGING_DIR)/usr/lib/libmali.so $(STAGING_DIR)/usr/lib/libEGL.so
 endef
 

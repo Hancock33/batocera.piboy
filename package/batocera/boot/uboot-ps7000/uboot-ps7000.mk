@@ -15,10 +15,10 @@ UBOOT_PS7000_DEPENDENCIES = host-batocera-rkbin
 define UBOOT_PS7000_BUILD_CMDS
 	# FIXME: there should be a better way to build
 	cd $(@D) && ARCH=arm CHIP=rk3128 \
-		CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- \
-		make ps7000-rk3128_defconfig
+		CROSS_COMPILE="$(TARGET_CROSS)" \
+		$(MAKE) ps7000-rk3128_defconfig
 	cd $(@D) && ARCH=arm CHIP=rk3128 \
-		CROSS_COMPILE=$(HOST_DIR)/bin/arm-buildroot-linux-gnueabihf- make
+		CROSS_COMPILE="$(TARGET_CROSS)" $(MAKE)
 
 	# Generate idbloader.img
 	$(@D)/tools/mkimage -n rk3128 -T rksd -d \

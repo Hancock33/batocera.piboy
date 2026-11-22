@@ -64,7 +64,7 @@ OPENABL_ENV = $(TARGET_MAKE_ENV) PATH=$(@D)/bin:$(BR_PATH) \
 define OPENABL_APPLY_ABL_PATCH
 	$(APPLY_PATCHES) $(@D)/build/edk2 $(@D)/Abl openabl.patch
 	cp -R $(@D)/Abl/QcomModulePkg/. $(@D)/build/edk2/QcomModulePkg/
-	sed -i 's/^\(DEFINE CLANG35_WARNING_OVERRIDES *=[^\r]*\)/\1 -Wno-error/' \
+	$(SED) 's/^\(DEFINE CLANG35_WARNING_OVERRIDES *=[^\r]*\)/\1 -Wno-error/' \
 		$(@D)/build/edk2/BaseTools/Conf/tools_def.template
 endef
 OPENABL_POST_PATCH_HOOKS += OPENABL_APPLY_ABL_PATCH
@@ -90,7 +90,7 @@ define OPENABL_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/share/bootloader/openabl/$(OPENABL_IMAGE)
 	$(INSTALL) -D -m 0644 $(@D)/build/out/$(OPENABL_IMAGE).sha256 \
 		$(TARGET_DIR)/usr/share/bootloader/openabl/$(OPENABL_IMAGE).sha256
-	echo v$(OPENABL_VERSION) > $(TARGET_DIR)/usr/share/bootloader/openabl/version
+	echo $(OPENABL_VERSION) > $(TARGET_DIR)/usr/share/bootloader/openabl/version
 	$(INSTALL) -D -m 0755 $(OPENABL_PKGDIR)/updateabl $(TARGET_DIR)/usr/bin/updateabl
 endef
 

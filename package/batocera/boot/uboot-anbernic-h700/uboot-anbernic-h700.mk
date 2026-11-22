@@ -56,7 +56,7 @@ UBOOT_ANBERNIC_H700_MAKE_OPTS = \
 	BL31=$(UBOOT_ANBERNIC_H700_BL31) \
 	SCP=/dev/null
 
-UBOOT_BOARDS = \
+UBOOT_ANBERNIC_H700_BOARDS = \
 	anbernic_rg35xx_h700:anbernic_rg35xx_h700_lpddr4_defconfig \
 	anbernic_rg35xx_h700_lpddr3:anbernic_rg35xx_h700_lpddr3_defconfig
 
@@ -84,7 +84,7 @@ define UBOOT_ANBERNIC_H700_BUILD_CMDS
 		bl31
 
 	# Build each U-Boot variant
-	for pair in $(UBOOT_BOARDS); do \
+	for pair in $(UBOOT_ANBERNIC_H700_BOARDS); do \
 		board=$${pair%%:*}; \
 		defconfig=$${pair##*:}; \
 		echo "---- Building Mainline U-Boot for $${board} ($${defconfig}) ----"; \
@@ -92,7 +92,7 @@ define UBOOT_ANBERNIC_H700_BUILD_CMDS
 		$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_ANBERNIC_H700_MAKE_OPTS) $${defconfig} && \
 		$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) $(UBOOT_ANBERNIC_H700_MAKE_OPTS) && \
 		mkdir -p $(@D)/staging/$${board} && \
-		cp -v $(@D)/u-boot-sunxi-with-spl.bin $(@D)/staging/$${board}/ || exit 1; \
+		cp $(@D)/u-boot-sunxi-with-spl.bin $(@D)/staging/$${board}/ || exit 1; \
 	done
 
 	# Compile DT overlay for DDR3 boards
@@ -102,13 +102,13 @@ define UBOOT_ANBERNIC_H700_BUILD_CMDS
 endef
 
 define UBOOT_ANBERNIC_H700_INSTALL_IMAGES_CMDS
-	for pair in $(UBOOT_BOARDS); do \
+	for pair in $(UBOOT_ANBERNIC_H700_BOARDS); do \
 		board=$${pair%%:*}; \
 		mkdir -p $(BINARIES_DIR)/$${board}; \
-		cp -v $(@D)/staging/$${board}/u-boot-sunxi-with-spl.bin \
+		cp $(@D)/staging/$${board}/u-boot-sunxi-with-spl.bin \
 			$(BINARIES_DIR)/$${board}/u-boot-sunxi-with-spl.bin; \
 	done
-	cp -v $(@D)/sun50i-h700-anbernic-rg35xx-2024-ddr3.dtbo $(BINARIES_DIR)/
+	cp $(@D)/sun50i-h700-anbernic-rg35xx-2024-ddr3.dtbo $(BINARIES_DIR)/
 endef
 
 $(eval $(generic-package))

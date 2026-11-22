@@ -16,15 +16,11 @@ define BATOCERA_SYSLINUX_EFI_EXTRACT_CMDS
 endef
 
 define BATOCERA_SYSLINUX_EFI_INSTALL_IMAGES_CMDS
-	mkdir -p $(BINARIES_DIR)/syslinux/efi64
-	cp $(@D)/bootx64.selfsigned.efi  $(BINARIES_DIR)/syslinux/bootx64.efi
-	cp $(@D)/fbx64.selfsigned.efi    $(BINARIES_DIR)/syslinux/fbx64.efi
-	cp $(@D)/batocera-mok.cer        $(BINARIES_DIR)/syslinux/
-	cp $(@D)/ldlinux.e64             $(BINARIES_DIR)/syslinux/
-	cp $(@D)/grubia32.selfsigned.efi $(BINARIES_DIR)/syslinux/grubia32.efi
-	cp $(@D)/ldlinux.e32             $(BINARIES_DIR)/syslinux/
-	cp $(@D)/menu.c32                $(BINARIES_DIR)/syslinux/efi64
-	cp $(@D)/libutil.c32             $(BINARIES_DIR)/syslinux/efi64
+	$(INSTALL) -D -m 0644 $(@D)/bootx64.selfsigned.efi $(BINARIES_DIR)/syslinux/bootx64.efi
+	$(INSTALL) -D -m 0644 $(@D)/fbx64.selfsigned.efi $(BINARIES_DIR)/syslinux/fbx64.efi
+	$(INSTALL) -D -m 0644 $(@D)/grubia32.selfsigned.efi $(BINARIES_DIR)/syslinux/grubia32.efi
+	$(INSTALL) -D -m 0644 -t $(BINARIES_DIR)/syslinux $(@D)/batocera-mok.cer $(@D)/ldlinux.e64 $(@D)/ldlinux.e32
+	$(INSTALL) -D -m 0644 -t $(BINARIES_DIR)/syslinux/efi64 $(@D)/menu.c32 $(@D)/libutil.c32
 endef
 
 $(eval $(generic-package))
