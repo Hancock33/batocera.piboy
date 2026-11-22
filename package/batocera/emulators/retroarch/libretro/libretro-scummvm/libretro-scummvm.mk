@@ -7,7 +7,7 @@
 LIBRETRO_SCUMMVM_VERSION = v2026.4.0
 LIBRETRO_SCUMMVM_SOURCE = scummvm-$(LIBRETRO_SCUMMVM_VERSION).tar.gz
 LIBRETRO_SCUMMVM_SITE = $(call github,scummvm,scummvm,$(LIBRETRO_SCUMMVM_VERSION))
-LIBRETRO_SCUMMVM_LICENSE = GPLv2
+LIBRETRO_SCUMMVM_LICENSE = GPL-2.0
 LIBRETRO_SCUMMVM_DEPENDENCIES = faad2 flac freetype giflib jpeg libfribidi libmad libmpeg2
 LIBRETRO_SCUMMVM_DEPENDENCIES += libogg libpng libtheora libvorbis retroarch zlib
 LIBRETRO_SCUMMVM_EMULATOR_INFO = scummvm.libretro.core.yml

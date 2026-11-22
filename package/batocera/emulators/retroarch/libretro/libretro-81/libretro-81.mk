@@ -6,7 +6,7 @@
 # Version: Commits on Apr 20, 2026
 LIBRETRO_81_VERSION = fa7094910d040baa5fd8b11dbf6a1a618330ecd9
 LIBRETRO_81_SITE = $(call github,libretro,81-libretro,$(LIBRETRO_81_VERSION))
-LIBRETRO_81_LICENSE = GPLv3
+LIBRETRO_81_LICENSE = GPL-3.0
 LIBRETRO_81_DEPENDENCIES += retroarch
 LIBRETRO_81_EMULATOR_INFO = 81.libretro.core.yml
 
@@ -30,7 +30,7 @@ endef
 define LIBRETRO_81_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
 	$(INSTALL) -D $(@D)/81_libretro.so $(TARGET_DIR)/usr/lib/libretro/81_libretro.so
-	$(INSTALL) -D -t $(TARGET_DIR)/usr/share/evmapy/ $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-81/zx81.keys
+	$(INSTALL) -D -t $(TARGET_DIR)/usr/share/evmapy/ $(LIBRETRO_81_PKGDIR)/zx81.keys
 endef
 
 $(eval $(generic-package))

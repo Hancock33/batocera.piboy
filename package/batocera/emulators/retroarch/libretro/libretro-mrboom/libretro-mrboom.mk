@@ -8,7 +8,7 @@ LIBRETRO_MRBOOM_VERSION = 40ac32020b540c4bb418c7d798a990932a65da04
 LIBRETRO_MRBOOM_SITE = https://github.com/Javanaise/mrboom-libretro.git
 LIBRETRO_MRBOOM_SITE_METHOD=git
 LIBRETRO_MRBOOM_GIT_SUBMODULES=YES
-LIBRETRO_MRBOOM_LICENSE=GPLv2
+LIBRETRO_MRBOOM_LICENSE=GPL-2.0
 LIBRETRO_MRBOOM_DEPENDENCIES += retroarch
 LIBRETRO_MRBOOM_EMULATOR_INFO = mrboom.libretro.core.yml
 
@@ -25,7 +25,7 @@ endef
 define LIBRETRO_MRBOOM_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom
 	$(INSTALL) -D $(@D)/mrboom_libretro.so $(TARGET_DIR)/usr/lib/libretro/mrboom_libretro.so
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/libretro/libretro-mrboom/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom/
+	cp -a  $(LIBRETRO_MRBOOM_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/mrboom/
 endef
 
 $(eval $(generic-package))
