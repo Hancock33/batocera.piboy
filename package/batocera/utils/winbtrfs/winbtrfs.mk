@@ -7,6 +7,7 @@
 WINBTRFS_VERSION = v1.10
 WINBTRFS_SOURCE = btrfs-$(subst v,,$(WINBTRFS_VERSION)).zip
 WINBTRFS_SITE = https://github.com/maharmstone/btrfs/releases/download/$(WINBTRFS_VERSION)
+WINBTRFS_LICENSE = LGPL-3.0
 WINBTRFS_INSTALL_IMAGES = YES
 
 define WINBTRFS_EXTRACT_CMDS

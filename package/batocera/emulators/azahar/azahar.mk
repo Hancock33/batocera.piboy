@@ -8,7 +8,7 @@ AZAHAR_VERSION = 2127.0-rc5
 AZAHAR_SITE = https://github.com/azahar-emu/azahar.git
 AZAHAR_SITE_METHOD=git
 AZAHAR_GIT_SUBMODULES = YES
-AZAHAR_LICENSE = GPLv2
+AZAHAR_LICENSE = GPL-2.0
 AZAHAR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AZAHAR_DEPENDENCIES += boost cubeb fdk-aac ffmpeg fmt openal sdl2

@@ -8,7 +8,7 @@ PIRONMAN_VERSION = 997c361ed71fff859d832e171f63180fbbb4e314
 PIRONMAN_SITE = $(call github,sunfounder,pironman,$(PIRONMAN_VERSION))
 PIRONMAN_BRANCH = v2.0
 PIRONMAN_LICENSE = GPL-2.0
-PIRONMAN_LICENSE_FILE = LICENSE
+PIRONMAN_LICENSE_FILES = LICENSE
 
 PIRONMAN_DEPENDENCIES += freetype getent i2c-tools libpng libxcb lirc-tools
 PIRONMAN_DEPENDENCIES += net-tools openjpeg python-gpiozero python-lgpio python-rpi-ws281x

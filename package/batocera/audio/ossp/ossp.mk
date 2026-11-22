@@ -6,7 +6,7 @@
 # Version: Commits on Aug 31, 2024
 OSSP_VERSION = v1.3.3
 OSSP_SITE = $(call github,OpenMandrivaSoftware,ossp,$(OSSP_VERSION))
-OSSP_LICENSE = GPLv2
+OSSP_LICENSE = GPL-2.0
 OSSP_DEPENDENCIES = libfuse3
 
 OSSP_CONF_OPTS += -Ddaemon=ON

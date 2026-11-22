@@ -8,6 +8,7 @@ JSTEST2_VERSION = fb44667c08aeca839a63bef6464aeade2c2d4e27
 JSTEST2_SITE = https://github.com/Grumbel/sdl-jstest
 JSTEST2_SITE_METHOD = git
 JSTEST2_GIT_SUBMODULES = YES
+JSTEST2_LICENSE = GPL-3.0+
 JSTEST2_DEPENDENCIES = sdl2 ncurses
 
 JSTEST2_CONF_ENV = LIBS="-ncurses -ltinfo"

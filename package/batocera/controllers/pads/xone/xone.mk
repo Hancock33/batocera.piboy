@@ -6,6 +6,8 @@
 # Version: Commits on Mar 13, 2026
 XONE_VERSION = v0.5.8
 XONE_SITE = $(call github,dlundqvist,xone,$(XONE_VERSION))
+XONE_LICENSE = GPL-2.0
+XONE_LICENSE_FILES = LICENSE
 XONE_DEPENDENCIES = host-cabextract host-libcurl libusb
 
 # 6.1 boards carry backport patches for current xone

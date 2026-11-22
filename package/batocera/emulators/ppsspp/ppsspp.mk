@@ -8,7 +8,7 @@ PPSSPP_VERSION = 149390126a56b035afaed0f6b304e5f2dd71485d
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
 PPSSPP_GIT_SUBMODULES=YES
-PPSSPP_LICENSE = GPLv2
+PPSSPP_LICENSE = GPL-2.0
 PPSSPP_DEPENDENCIES = sdl3 sdl3_ttf libzip
 
 $(eval $(call register,ppsspp.emulator.yml))

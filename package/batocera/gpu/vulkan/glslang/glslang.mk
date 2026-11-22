@@ -7,6 +7,8 @@
 GLSLANG_VERSION = b411a8fb8aa0f6ee727df17f3f8eafb3eb85ba9e
 GLSLANG_BRANCH = vulkan-tmp-1.4.368
 GLSLANG_SITE = $(call github,KhronosGroup,glslang,$(GLSLANG_VERSION))
+GLSLANG_LICENSE = BSD-3-Clause, BSD-2-Clause, MIT, Apache-2.0, GPL-3.0+ with Bison exception
+GLSLANG_LICENSE_FILES = LICENSE.txt
 GLSLANG_DEPENDENCIES = vulkan-headers vulkan-loader spirv-tools
 GLSLANG_INSTALL_STAGING = YES
 GLSLANG_SUPPORTS_IN_SOURCE_BUILD = NO

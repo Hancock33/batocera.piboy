@@ -9,6 +9,8 @@ WXWIDGETS_SITE = https://github.com/wxWidgets/wxWidgets
 WXWIDGETS_DEPENDENCIES = zlib libpng jpeg gdk-pixbuf host-libgtk3 libgtk3 libglu
 WXWIDGETS_SITE_METHOD = git
 WXWIDGETS_GIT_SUBMODULES = YES
+WXWIDGETS_LICENSE = wxWindows
+WXWIDGETS_LICENSE_FILES = docs/licence.txt docs/lgpl.txt
 
 WXWIDGETS_SUPPORTS_IN_SOURCE_BUILD = NO
 WXWIDGETS_INSTALL_STAGING = YES

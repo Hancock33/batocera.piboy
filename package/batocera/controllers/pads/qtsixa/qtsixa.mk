@@ -7,6 +7,8 @@
 QTSIXA_VERSION = eec727030f341cf543a56bd9aeb821ea901bca64
 QTSIXA_BRANCH = gasia
 QTSIXA_SITE = $(call github,batocera-linux,qtsixa,$(QTSIXA_VERSION))
+QTSIXA_LICENSE = GPL-2.0
+QTSIXA_LICENSE_FILES = COPYING
 QTSIXA_DEPENDENCIES = linux-headers libusb-compat bluez5_utils
 
 QTSIXA_INCLUDES =-I$(STAGING_DIR)/usr/include

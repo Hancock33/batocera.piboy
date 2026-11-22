@@ -7,6 +7,7 @@
 UBOOT_ODROID_XU4_VERSION = 7d5876d36f4120034f1902b12d6799b147bec884
 UBOOT_ODROID_XU4_SITE = https://github.com/hardkernel/u-boot.git
 UBOOT_ODROID_XU4_SITE_METHOD=git
+UBOOT_ODROID_XU4_LICENSE = GPL-2.0+
 
 define UBOOT_ODROID_XU4_INSTALL_IMAGES_CMDS
 		cp $(@D)/sd_fuse/bl1.bin.hardkernel			$(BINARIES_DIR)/bl1.bin.hardkernel

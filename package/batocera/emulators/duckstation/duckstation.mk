@@ -6,7 +6,7 @@
 # Version: Commits on Nov 20, 2026
 DUCKSTATION_VERSION = e39940aca71ca7cfeb906cd38726e336b53d01c4
 DUCKSTATION_SITE = $(call github,stenzek,duckstation,$(DUCKSTATION_VERSION))
-DUCKSTATION_LICENSE = GPLv2
+DUCKSTATION_LICENSE = GPL-2.0
 DUCKSTATION_SUPPORTS_IN_SOURCE_BUILD = NO
 DUCKSTATION_DEPENDENCIES += boost cpuinfo ecm ffmpeg fmt freetype harfbuzz host-clang host-spirv-cross
 DUCKSTATION_DEPENDENCIES += jpeg libbacktrace libcurl libdrm libevdev libpng libsoundtouch libxkbcommon

@@ -6,7 +6,7 @@
 # Version: Commits on Nov 19, 2026
 RUFFLE_VERSION = v0.8.0
 RUFFLE_SITE = $(call github,ruffle-rs,ruffle,$(RUFFLE_VERSION))
-RUFFLE_LICENSE = GPLv2
+RUFFLE_LICENSE = GPL-2.0
 RUFFLE_EMULATOR_INFO = ruffle.emulator.yml
 RUFFLE_DEPENDENCIES = alsa-lib host-rust-bin host-rustc nghttp2 openssl udev
 

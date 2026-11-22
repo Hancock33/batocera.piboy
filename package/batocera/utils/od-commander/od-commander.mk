@@ -6,6 +6,8 @@
 # Version: Commits on Mar 24, 2026
 OD_COMMANDER_VERSION = 1ca465f7cd5e080d13a8906fdfc45eb543ea255c
 OD_COMMANDER_SITE = $(call github,jwty,tv-commander,$(OD_COMMANDER_VERSION))
+OD_COMMANDER_LICENSE = MIT
+OD_COMMANDER_LICENSE_FILES = LICENSE.txt
 OD_COMMANDER_DEPENDENCIES = sdl2 sdl2_gfx sdl2_image sdl2_ttf dejavu nanum-font
 OD_COMMANDER_EMULATOR_INFO = odcommander.emulator.yml
 

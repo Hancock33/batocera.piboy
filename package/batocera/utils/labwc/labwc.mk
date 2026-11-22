@@ -6,7 +6,7 @@
 # Version: Commits on Oct 30, 2026
 LABWC_VERSION = 0.20.3
 LABWC_SITE = $(call github,labwc,labwc,$(LABWC_VERSION))
-LABWC_LICENSE = GPLv2
+LABWC_LICENSE = GPL-2.0
 LABWC_LICENSE_FILES = LICENSE
 LABWC_DEPENDENCIES = cairo host-pkgconf libglib2 libinput libpng libsfdo
 LABWC_DEPENDENCIES += libxkbcommon libxml2 pango wayland wayland-protocols wlroots

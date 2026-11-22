@@ -7,6 +7,8 @@
 DEVILUTIONX_VERSION = 1c9a007afb2cc944360ddec2d315f7969fff0f1e
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
+DEVILUTIONX_LICENSE = Sustainable Use License
+DEVILUTIONX_LICENSE_FILES = LICENSE.md
 DEVILUTIONX_EMULATOR_INFO = devilutionx.emulator.yml
 DEVILUTIONX_DEPENDENCIES += bzip2 fmt libpng libsodium lpeg lua lua-lpeg-patterns luafilesystem luasec luasocket
 DEVILUTIONX_DEPENDENCIES += sdl3 sdl3_image sdl3_mixer

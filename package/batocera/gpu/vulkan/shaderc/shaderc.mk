@@ -6,6 +6,8 @@
 # Version: Commits on Sept 11, 2026
 SHADERC_VERSION = v2026.4
 SHADERC_SITE =  $(call github,google,shaderc,$(SHADERC_VERSION))
+SHADERC_LICENSE = Apache-2.0
+SHADERC_LICENSE_FILES = LICENSE
 SHADERC_DEPENDENCIES = vulkan-headers vulkan-loader glslang spirv-tools
 SHADERC_INSTALL_STAGING = YES
 SHADERC_SUPPORTS_IN_SOURCE_BUILD = NO

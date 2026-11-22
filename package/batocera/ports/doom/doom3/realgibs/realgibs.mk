@@ -7,7 +7,7 @@
 REALGIBS_VERSION = 83e0a5b96cba2fa36a22b8930245e482d4c36902
 REALGIBS_SITE = $(call github,dhewm,dhewm3-sdk,$(REALGIBS_VERSION))
 REALGIBS_BRANCH = realgibs
-REALGIBS_LICENSE = GPLv3
+REALGIBS_LICENSE = GPL-3.0
 REALGIBS_LICENSE_FILES = COPYING.txt
 
 REALGIBS_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib

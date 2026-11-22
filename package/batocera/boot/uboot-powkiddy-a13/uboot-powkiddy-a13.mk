@@ -6,7 +6,7 @@
 # Version: Commits on Sept 13, 2021
 UBOOT_POWKIDDY_A13_VERSION = powkiddy-a13
 UBOOT_POWKIDDY_A13_SITE = $(call github,alpgarcia,caesar-u-boot,$(UBOOT_POWKIDDY_A13_VERSION))
-UBOOT_POWKIDDY_A13_LICENSE = GPLv2
+UBOOT_POWKIDDY_A13_LICENSE = GPL-2.0
 UBOOT_POWKIDDY_A13_BOOT_SRC = idbloader.img uboot.img:uboot-powkiddy-a13.img trust.img
 UBOOT_POWKIDDY_A13_BINARIES_SUBDIR =
 

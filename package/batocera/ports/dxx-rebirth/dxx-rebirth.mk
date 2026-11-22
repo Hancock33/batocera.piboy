@@ -6,8 +6,8 @@
 # Version: Commits on Nov 15, 2026
 DXX_REBIRTH_VERSION = fda30d3aa27e36ce6d72465d8dcf78dd44b64c26
 DXX_REBIRTH_SITE = $(call github,dxx-rebirth,dxx-rebirth,$(DXX_REBIRTH_VERSION))
-DXX_REBIRTH_LICENSE = GPLv3
-DXX_REBIRTH_LICENSE_FILE = COPYING.txt
+DXX_REBIRTH_LICENSE = GPL-3.0
+DXX_REBIRTH_LICENSE_FILES = COPYING.txt
 DXX_REBIRTH_EMULATOR_INFO = dxx-rebirth.emulator.yml
 DXX_REBIRTH_DEPENDENCIES = host-scons sdl2 sdl2_image sdl2_mixer libpng physfs libglu
 

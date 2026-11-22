@@ -6,6 +6,7 @@
 
 BATOCERA_SHADERS_VERSION = 1.0
 BATOCERA_SHADERS_SOURCE=
+BATOCERA_SHADERS_LICENSE = LGPL-3.0+
 BATOCERA_SHADERS_DEPENDENCIES= common-shaders glsl-shaders slang-shaders
 
 BATOCERA_SHADERS_DIRIN=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/shaders/batocera-shaders/configs

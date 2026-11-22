@@ -6,6 +6,8 @@
 # Version: Commits on Nov 10, 2026
 APPSTREAM_VERSION = v1.2.3
 APPSTREAM_SITE = $(call github,ximion,appstream,$(APPSTREAM_VERSION))
+APPSTREAM_LICENSE = LGPL-2.1+
+APPSTREAM_LICENSE_FILES = COPYING
 APPSTREAM_INSTALL_STAGING = YES
 
 APPSTREAM_DEPENDENCIES = host-gperf host-pkgconf libcurl libfyaml libglib2 libxml2 libxmlb

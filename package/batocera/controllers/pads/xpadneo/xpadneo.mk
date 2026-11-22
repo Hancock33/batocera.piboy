@@ -6,6 +6,8 @@
 # Version: Commits on Nov 08, 2026
 XPADNEO_VERSION = 56b538d951300bf804f6631738603c5eb14c04f0
 XPADNEO_SITE = $(call github,atar-axis,xpadneo,$(XPADNEO_VERSION))
+XPADNEO_LICENSE = GPL-2.0 (driver), GPL-3.0+ (docs, tools)
+XPADNEO_LICENSE_FILES = LICENSE.md LICENSES/LICENSE.gpl-2.0.txt LICENSES/LICENSE.gpl-3.0.txt
 XPADNEO_DEPENDENCIES = host-cabextract bluez5_utils
 XPADNEO_MODULE_SUBDIRS = hid-xpadneo/src
 

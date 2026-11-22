@@ -6,6 +6,8 @@
 # Version: Commits on May 27, 2026
 MANGOHUD_VERSION = v0.8.4
 MANGOHUD_SITE =  $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
+MANGOHUD_LICENSE = MIT
+MANGOHUD_LICENSE_FILES = LICENSE
 
 MANGOHUD_DEPENDENCIES += host-python-mako host-glslang dbus
 MANGOHUD_DEPENDENCIES += json-for-modern-cpp

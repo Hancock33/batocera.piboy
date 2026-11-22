@@ -7,6 +7,8 @@
 FLATPAK_VERSION = 1.19.2
 FLATPAK_SOURCE = flatpak-$(FLATPAK_VERSION).tar.xz
 FLATPAK_SITE = https://github.com/flatpak/flatpak/releases/download/$(FLATPAK_VERSION)
+FLATPAK_LICENSE = LGPL-2.1+
+FLATPAK_LICENSE_FILES = COPYING
 FLATPAK_EMULATOR_INFO = flatpak.emulator.yml
 
 FLATPAK_DEPENDENCIES += adwaita-icon-theme adwaita-icon-theme-light appstream bubblewrap

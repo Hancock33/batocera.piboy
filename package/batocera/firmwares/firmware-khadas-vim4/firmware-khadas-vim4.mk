@@ -7,6 +7,7 @@
 FIRMWARE_KHADAS_VIM4_VERSION = 1.7.3
 FIRMWARE_KHADAS_VIM4_SITE = https://dl.khadas.com/repos/vim4/pool/main/l/linux-board-package-noble-vim4
 FIRMWARE_KHADAS_VIM4_SOURCE = linux-board-package-noble-vim4_$(FIRMWARE_KHADAS_VIM4_VERSION)_arm64.deb
+FIRMWARE_KHADAS_VIM4_LICENSE = PROPRIETARY
 FIRMWARE_KHADAS_VIM4_FIRMWARE_DIR = $(TARGET_DIR)/lib/firmware
 
 FIRMWARE_KHADAS_VIM4_OPTEE_USR_SRC = optee-userspace_0.6-202406_arm64.deb

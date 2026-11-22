@@ -5,6 +5,7 @@
 ################################################################################
 
 BATOCERA_ES_SYSTEM_SOURCE=
+BATOCERA_ES_SYSTEM_LICENSE = LGPL-3.0+
 BATOCERA_ES_SYSTEM_OVERRIDE_SRCDIR=
 BATOCERA_ES_SYSTEM_INSTALL_STAGING = YES
 BATOCERA_ES_SYSTEM_DEPENDENCIES = host-batocera-es-system batocera-launch host-gettext

@@ -9,6 +9,8 @@ VCMI_BRANCH = develop
 VCMI_SITE = https://github.com/vcmi/vcmi.git
 VCMI_SITE_METHOD=git
 VCMI_GIT_SUBMODULES=YES
+VCMI_LICENSE = GPL-2.0+
+VCMI_LICENSE_FILES = license.txt
 VCMI_EMULATOR_INFO = vcmi.emulator.yml
 VCMI_DEPENDENCIES = boost ffmpeg libsquish minizip sdl2 sdl2_image sdl2_mixer sdl2_ttf tbb
 

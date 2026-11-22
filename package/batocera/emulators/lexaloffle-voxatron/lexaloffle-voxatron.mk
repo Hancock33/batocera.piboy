@@ -5,7 +5,7 @@
 ################################################################################
 
 LEXALOFFLE_VOXATRON_VERSION = 0.1
-LEXALOFFLE_VOXATRON_LICENSE = proprietary-commercial
+LEXALOFFLE_VOXATRON_LICENSE = PROPRIETARY
 LEXALOFFLE_VOXATRON_SOURCE =
 
 define LEXALOFFLE_VOXATRON_INSTALL_TARGET_CMDS

@@ -6,7 +6,7 @@
 # Version: Commits on Oct 28, 2026
 OPENMSX_VERSION = RELEASE_22_0
 OPENMSX_SITE = $(call github,openMSX,openMSX,$(OPENMSX_VERSION))
-OPENMSX_LICENSE = GPLv2
+OPENMSX_LICENSE = GPL-2.0
 OPENMSX_DEPENDENCIES = freetype libogg libpng libtheora libvorbis sdl2 sdl2_ttf tcl zlib
 OPENMSX_EMULATOR_INFO = openmsx.emulator.yml
 

@@ -6,8 +6,8 @@
 # Version: Commits on Nov 15, 2026
 XROAR_VERSION = 1.13.1
 XROAR_SITE = https://www.6809.org.uk/xroar/dl
-XROAR_LICENSE = GPLv3
-XROAR_LICENSE_FILE = COPYING.GPL
+XROAR_LICENSE = GPL-3.0
+XROAR_LICENSE_FILES = COPYING.GPL
 XROAR_EMULATOR_INFO = xroar.emulator.yml
 
 XROAR_DEPENDENCIES = alsa-lib libevdev libpng sdl2 sdl2_image zlib

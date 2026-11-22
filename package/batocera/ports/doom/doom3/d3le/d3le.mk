@@ -7,7 +7,7 @@
 D3LE_VERSION = b6a499a246496429091b91495792d488ea6e2b60
 D3LE_SITE = $(call github,dhewm,dhewm3-sdk,$(D3LE_VERSION))
 D3LE_BRANCH = d3le
-D3LE_LICENSE = GPLv3
+D3LE_LICENSE = GPL-3.0
 D3LE_LICENSE_FILES = COPYING.txt
 
 D3LE_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib

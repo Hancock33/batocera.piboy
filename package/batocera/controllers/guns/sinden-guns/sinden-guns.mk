@@ -7,6 +7,7 @@
 SINDEN_GUNS_VERSION = 1.09
 SINDEN_GUNS_SOURCE=SindenLightgunSoftwareReleaseV$(SINDEN_GUNS_VERSION).zip
 SINDEN_GUNS_SITE=https://www.sindenlightgun.com/software
+SINDEN_GUNS_LICENSE = PROPRIETARY
 
 SINDEN_GUNS_DEPENDENCIES = mono-bin sinden-guns-libs
 

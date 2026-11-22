@@ -9,7 +9,7 @@ ETLEGACY_SITE = https://github.com/etlegacy/etlegacy.git
 ETLEGACY_SITE_METHOD = git
 ETLEGACY_GIT_SUBMODULES = YES
 ETLEGACY_LICENSE = GPL-3.0
-ETLEGACY_LICENSE_FILE = COPYING.txt
+ETLEGACY_LICENSE_FILES = COPYING.txt
 ETLEGACY_EMULATOR_INFO = etlegacy.emulator.yml
 
 ETLEGACY_DEPENDENCIES += freetype libcurl libglew libpng libtheora libglu

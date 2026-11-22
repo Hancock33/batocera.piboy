@@ -8,7 +8,7 @@ APPLEWIN_VERSION = 6e6df2cb7503af105422a01cfa08a0ebc48486a3
 APPLEWIN_SITE = https://github.com/audetto/AppleWin.git
 APPLEWIN_SITE_METHOD=git
 APPLEWIN_GIT_SUBMODULES=YES
-APPLEWIN_LICENSE = GPLv2
+APPLEWIN_LICENSE = GPL-2.0
 APPLEWIN_DEPENDENCIES = host-xxd libpcap sdl2 sdl2_image slirp
 APPLEWIN_EMULATOR_INFO = applewin.emulator.yml applewin.libretro.core.yml
 

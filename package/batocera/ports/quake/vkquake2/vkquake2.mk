@@ -7,7 +7,7 @@
 VKQUAKE2_VERSION = 1.5.10
 VKQUAKE2_SITE = $(call github,kondrak,vkQuake2,$(VKQUAKE2_VERSION))
 VKQUAKE2_LICENSE = GPL-2.0
-VKQUAKE2_LICENSE_FILE = LICENSE
+VKQUAKE2_LICENSE_FILES = LICENSE
 
 VKQUAKE2_DEPENDENCIES = alsa-lib glslang libglu vulkan-headers vulkan-loader
 VKQUAKE2_DEPENDENCIES += xlib_libXxf86dga xlib_libXxf86vm

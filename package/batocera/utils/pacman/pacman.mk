@@ -7,7 +7,7 @@
 PACMAN_VERSION = v5.2.2
 PACMAN_SITE = https://gitlab.archlinux.org/pacman/pacman.git
 PACMAN_SITE_METHOD = git
-PACMAN_LICENSE = GPLv2
+PACMAN_LICENSE = GPL-2.0
 PACMAN_DEPENDENCIES = glibc libarchive libcurl libgpgme openssl gnupg
 
 ifeq ($(BR2_x86_64),y)

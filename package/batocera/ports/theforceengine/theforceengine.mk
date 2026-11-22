@@ -6,8 +6,8 @@
 # Version: Commits on Nov 03, 2026
 THEFORCEENGINE_VERSION = v.1.30.000
 THEFORCEENGINE_SITE = $(call github,TheForceEngine,TheForceEngine,$(THEFORCEENGINE_VERSION))
-THEFORCEENGINE_LICENSE = GPLv2
-THEFORCEENGINE_LICENSE_FILE = LICENSE
+THEFORCEENGINE_LICENSE = GPL-2.0
+THEFORCEENGINE_LICENSE_FILES = LICENSE
 THEFORCEENGINE_EMULATOR_INFO = theforceengine.emulator.yml
 
 # be sure to update batocera-launch if the patch version changes

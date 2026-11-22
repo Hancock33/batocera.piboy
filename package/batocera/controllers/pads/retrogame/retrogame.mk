@@ -6,6 +6,7 @@
 
 RETROGAME_VERSION = 1.0
 RETROGAME_SOURCE=
+RETROGAME_LICENSE = BSD-2-Clause
 
 define RETROGAME_EXTRACT_CMDS
 	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/retrogame/RetroGame/* $(@D)

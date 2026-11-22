@@ -6,7 +6,7 @@
 # Version: Commits on Aug 30, 2026
 HYPSEUS_SINGE_VERSION = a16e2521ee3233ef20c44e562008c47f4b4293df
 HYPSEUS_SINGE_SITE = $(call github,DirtBagXon,hypseus-singe,$(HYPSEUS_SINGE_VERSION))
-HYPSEUS_SINGE_LICENSE = GPLv3
+HYPSEUS_SINGE_LICENSE = GPL-3.0
 
 HYPSEUS_SINGE_DEPENDENCIES += libmpeg2 libogg libvorbis libzip
 HYPSEUS_SINGE_DEPENDENCIES += sdl3 sdl3_image sdl3_mixer sdl3_ttf zlib

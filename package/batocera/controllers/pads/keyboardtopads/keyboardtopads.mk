@@ -5,7 +5,7 @@
 ################################################################################
 
 KEYBOARDTOPADS_VERSION = 1
-KEYBOARDTOPADS_LICENCE = GPL
+KEYBOARDTOPADS_LICENSE = GPL
 KEYBOARDTOPADS_SOURCE =
 
 define KEYBOARDTOPADS_INSTALL_TARGET_CMDS

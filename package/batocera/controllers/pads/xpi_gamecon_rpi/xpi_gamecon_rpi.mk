@@ -6,6 +6,7 @@
 # Version: Commits on Aug 07, 2022
 XPI_GAMECON_RPI_VERSION = f30cea1a30e4e9ad8fcf3b7da48f2770b4ea3368
 XPI_GAMECON_RPI_SITE = $(call github,hancock33,piboycontrols,$(XPI_GAMECON_RPI_VERSION))
+XPI_GAMECON_RPI_LICENSE = GPL-2.0
 XPI_GAMECON_RPI_DEPENDENCIES = linux
 XPI_GAMECON_RPI_CP_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/controllers/pads/xpi_gamecon_rpi
 

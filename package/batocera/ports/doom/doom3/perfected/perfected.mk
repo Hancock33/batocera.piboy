@@ -7,7 +7,7 @@
 PERFECTED_VERSION = 0976ee154cf62d9fb01a5b8456020acf32ff92ac
 PERFECTED_SITE = $(call github,dhewm,dhewm3-sdk,$(PERFECTED_VERSION))
 PERFECTED_BRANCH = perfected
-PERFECTED_LICENSE = GPLv3
+PERFECTED_LICENSE = GPL-3.0
 PERFECTED_LICENSE_FILES = COPYING.txt
 
 PERFECTED_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib

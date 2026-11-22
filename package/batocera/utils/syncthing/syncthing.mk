@@ -6,7 +6,7 @@
 # Version: Commits on Oct 21, 2026
 SYNCTHING_VERSION = v2.1.7
 SYNCTHING_SITE = $(call github,syncthing,syncthing,$(SYNCTHING_VERSION))
-SYNCTHING_LICENSE = MPLv2
+SYNCTHING_LICENSE = MPL-2.0
 SYNCTHING_LICENSE_FILES = LICENSE
 
 ifeq ($(BR2_arm),y)

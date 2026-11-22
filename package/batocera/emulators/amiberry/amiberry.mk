@@ -6,7 +6,7 @@
 # Version: Commits on Oct 27, 2026
 AMIBERRY_VERSION = v8.5.0
 AMIBERRY_SITE = $(call github,BlitterStudio,amiberry,$(AMIBERRY_VERSION))
-AMIBERRY_LICENSE = GPLv3
+AMIBERRY_LICENSE = GPL-3.0
 AMIBERRY_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AMIBERRY_DEPENDENCIES += flac json-for-modern-cpp libcurl libpcap libmpeg2 libpng

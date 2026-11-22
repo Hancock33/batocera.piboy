@@ -7,7 +7,7 @@
 UZDOOM_VERSION = x-preview
 UZDOOM_SITE = https://github.com/UZDoom/UZDoom.git
 UZDOOM_SITE_METHOD = git
-UZDOOM_LICENSE = GPLv3
+UZDOOM_LICENSE = GPL-3.0
 UZDOOM_DEPENDENCIES = host-uzdoom sdl2 bzip2 fluidsynth openal zmusic libvpx webp
 UZDOOM_SUPPORTS_IN_SOURCE_BUILD = NO
 UZDOOM_EMULATOR_INFO = uzdoom.emulator.yml

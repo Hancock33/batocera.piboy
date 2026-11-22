@@ -5,7 +5,7 @@
 ################################################################################
 
 LEXALOFFLE_PICO8_VERSION = 0.1
-LEXALOFFLE_PICO8_LICENSE = proprietary-commercial
+LEXALOFFLE_PICO8_LICENSE = PROPRIETARY
 LEXALOFFLE_PICO8_SOURCE =
 
 define LEXALOFFLE_PICO8_INSTALL_TARGET_CMDS

@@ -6,7 +6,7 @@
 # Version: Commits on Oct 24, 2026
 LEDSPICER_VERSION = 0.7.8
 LEDSPICER_SITE = $(call github,meduzapat,LEDSpicer,$(LEDSPICER_VERSION))
-LEDSPICER_LICENSE = GPLv3
+LEDSPICER_LICENSE = GPL-3.0
 LEDSPICER_DEPENDENCIES = tinyxml2 libusb libtool udev libpthread-stubs
 
 LEDSPICER_CONF_OPTS += -DENABLE_ADALIGHT=ON

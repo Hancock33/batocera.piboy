@@ -6,6 +6,8 @@
 # Version: Commits on May 24, 2025
 TOUCHEGG_VERSION = 2.0.18
 TOUCHEGG_SITE = $(call github,JoseExposito,touchegg,$(TOUCHEGG_VERSION))
+TOUCHEGG_LICENSE = GPL-3.0+
+TOUCHEGG_LICENSE_FILES = COPYING
 TOUCHEGG_DEPENDENCIES = xapp_xinput pugixml cairo libinput xlib_libXtst
 
 TOUCHEGG_CONF_OPTS += -DCMAKE_INSTALL_PREFIX=$(STAGING_DIR)/usr/ -DUSE_SYSTEMD=0

@@ -6,7 +6,7 @@
 # Version: Commits on Nov 18, 2026
 LIGHTSPARK_VERSION = 670eaebeffd5436c08b0c4e693ab7f36fb4befed
 LIGHTSPARK_SITE = $(call github,lightspark,lightspark,$(LIGHTSPARK_VERSION))
-LIGHTSPARK_LICENSE = LGPLv3
+LIGHTSPARK_LICENSE = LGPL-3.0
 LIGHTSPARK_DEPENDENCIES = cairo ffmpeg freetype jpeg libcurl libpng pango pcre2 rtmpdump sdl2
 LIGHTSPARK_SUPPORTS_IN_SOURCE_BUILD = NO
 LIGHTSPARK_EMULATOR_INFO = lightspark.emulator.yml

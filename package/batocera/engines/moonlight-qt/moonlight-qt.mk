@@ -8,7 +8,7 @@ MOONLIGHT_QT_VERSION = 2dc63d1f138557d15b21c051645280a58702da9d
 MOONLIGHT_QT_SITE = https://github.com/moonlight-stream/moonlight-qt
 MOONLIGHT_QT_SITE_METHOD = git
 MOONLIGHT_QT_GIT_SUBMODULES = YES
-MOONLIGHT_QT_LICENSE = GPLv3
+MOONLIGHT_QT_LICENSE = GPL-3.0
 
 MOONLIGHT_QT_DEPENDENCIES = ffmpeg moonlight-common openssl opus qt6base qt6declarative qt6svg sdl2 sdl2_ttf
 

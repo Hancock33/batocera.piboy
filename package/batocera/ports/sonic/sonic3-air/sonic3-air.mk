@@ -7,7 +7,7 @@
 SONIC3_AIR_VERSION = v26.08.15.0-test
 SONIC3_AIR_SITE = $(call github,Eukaryot,sonic3air,$(SONIC3_AIR_VERSION))
 SONIC3_AIR_LICENSE = GPL-3.0
-SONIC3_AIR_LICENSE_FILE = COPYING.txt
+SONIC3_AIR_LICENSE_FILES = COPYING.txt
 SONIC3_AIR_EMULATOR_INFO = sonic3-air.emulator.yml
 # CMakeLists.txt in subfolder
 SONIC3_AIR_SUBDIR = Oxygen/sonic3air/build/_cmake

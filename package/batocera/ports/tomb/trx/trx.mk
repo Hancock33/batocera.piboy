@@ -6,7 +6,7 @@
 # Version: Commits on Nov 02, 2026
 TRX_VERSION = trx-1.12
 TRX_SITE = $(call github,LostArtefacts,TRX,$(TRX_VERSION))
-TRX_LICENSE = GPL-3.0 license
+TRX_LICENSE = GPL-3.0
 TRX_LICENSE_FILES = COPYING.md
 TRX_SUPPORTS_IN_SOURCE_BUILD = NO
 TRX_SUBDIR = src

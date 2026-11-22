@@ -5,6 +5,7 @@
 ################################################################################
 
 UBOOT_FIREFLY_STATION_M2_VERSION = 1.0
+UBOOT_FIREFLY_STATION_M2_LICENSE = GPL-2.0+
 UBOOT_FIREFLY_STATION_M2_BOOT_SRC = idbloader.img uboot.img
 
 $(eval $(boot-package))

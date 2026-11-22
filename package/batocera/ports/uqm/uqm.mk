@@ -7,6 +7,7 @@
 UQM_VERSION = 3ec5f474b366d7ecc72bec6dfe23367520a1918d
 UQM_SITE = https://git.code.sf.net/p/sc2/uqm
 UQM_SITE_METHOD = git
+UQM_LICENSE = GPL-2.0+
 UQM_DEPENDENCIES = sdl2 libpng libvorbis libzip
 UQM_SUBDIR = sc2
 UQM_EMULATOR_INFO = uqm.emulator.yml

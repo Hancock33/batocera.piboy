@@ -7,7 +7,7 @@
 DOSBOX_VERSION = e6b88ad03202d1f74e329f54f213d3b070bd6202
 DOSBOX_SITE = $(call github,duganchen,dosbox,$(DOSBOX_VERSION))
 DOSBOX_DEPENDENCIES = dosbox-staging fluidsynth libglew libogg libpng libvorbis sdl2 sdl2_net zlib
-DOSBOX_LICENSE = GPLv2
+DOSBOX_LICENSE = GPL-2.0
 DOSBOX_AUTORECONF = YES
 DOSBOX_EMULATOR_INFO = dosbox.emulator.yml
 

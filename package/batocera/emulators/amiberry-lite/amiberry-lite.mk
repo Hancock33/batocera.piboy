@@ -6,7 +6,7 @@
 # Version: Commits on Oct 27, 2026
 AMIBERRY_LITE_VERSION = v5.9.6
 AMIBERRY_LITE_SITE = $(call github,BlitterStudio,amiberry-lite,$(AMIBERRY_LITE_VERSION))
-AMIBERRY_LITE_LICENSE = GPLv3
+AMIBERRY_LITE_LICENSE = GPL-3.0
 AMIBERRY_LITE_SUPPORTS_IN_SOURCE_BUILD = NO
 
 AMIBERRY_LITE_DEPENDENCIES += flac libpcap libmpeg2 libpng libserialport libxml2 mpg123

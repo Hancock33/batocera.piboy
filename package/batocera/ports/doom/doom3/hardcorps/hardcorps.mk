@@ -7,7 +7,7 @@
 HARDCORPS_VERSION = b767e8cf42428e9aa32817cc4456f5bfe8ed8262
 HARDCORPS_SITE = $(call github,dhewm,dhewm3-sdk,$(HARDCORPS_VERSION))
 HARDCORPS_BRANCH = hardcorps
-HARDCORPS_LICENSE = GPLv3
+HARDCORPS_LICENSE = GPL-3.0
 HARDCORPS_LICENSE_FILES = COPYING.txt
 
 HARDCORPS_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib

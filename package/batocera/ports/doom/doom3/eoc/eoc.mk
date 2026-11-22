@@ -7,7 +7,7 @@
 EOC_VERSION = d97448a28c6234e060dd75a158b4357fa5801b8a
 EOC_SITE = $(call github,dhewm,dhewm3-sdk,$(EOC_VERSION))
 EOC_BRANCH = eoc
-EOC_LICENSE = GPLv3
+EOC_LICENSE = GPL-3.0
 EOC_LICENSE_FILES = COPYING.txt
 
 EOC_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib

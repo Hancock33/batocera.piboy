@@ -6,7 +6,7 @@
 # Version: Commits on Nov 21, 2026
 RETROARCH_VERSION = 8ede0d8aea9308e72d4f2b58c3074934803a6452
 RETROARCH_SITE = $(call github,libretro,RetroArch,$(RETROARCH_VERSION))
-RETROARCH_LICENSE = GPLv3+
+RETROARCH_LICENSE = GPL-3.0+
 RETROARCH_DEPENDENCIES = host-pkgconf dejavu retroarch-assets flac noto-cjk-fonts \
 			 batocera-launch-libretro
 # install in staging for debugging (gdb)

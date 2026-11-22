@@ -7,7 +7,7 @@
 D7VK_VERSION = v2.4
 D7VK_SOURCE = d7vk-$(D7VK_VERSION).zip
 D7VK_SITE = https://github.com/WinterSnowfall/d7vk/releases/download/$(D7VK_VERSION)
-D7VK_LICENSE = zlib/libpng
+D7VK_LICENSE = Zlib
 
 define D7VK_EXTRACT_CMDS
 	mkdir -p $(@D)/target && cd $(@D)/target && unzip $(DL_DIR)/$(D7VK_DL_SUBDIR)/$(D7VK_SOURCE)

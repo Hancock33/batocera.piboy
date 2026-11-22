@@ -6,6 +6,7 @@
 
 CEMU_COMMON_VERSION = 1.0.0
 CEMU_COMMON_SOURCE =
+CEMU_COMMON_LICENSE = LGPL-3.0+
 CEMU_COMMON_EMULATOR_INFO = cemu.emulator.yml
 
 $(eval $(generic-package))
