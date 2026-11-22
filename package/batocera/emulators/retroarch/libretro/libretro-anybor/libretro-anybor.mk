@@ -16,7 +16,7 @@ LIBRETRO_ANYBOR_EMULATOR_INFO = anybor.libretro.core.yml
 # AnyBOR wraps codec allocations inside each engine's relocatable link.
 ifeq ($(BR2_PACKAGE_LIBRETRO_ANYBOR),y)
 LIBOGG_CONF_OPTS += -DOGG_BUILD_STATIC_LIBS=ON
-LIBVORBIS_CONF_OPTS += --with-pic
+LIBVORBIS_CONF_OPTS += -DBUILD_STATIC_LIBS=ON
 endif
 
 LIBRETRO_ANYBOR_PLATFORM = $(LIBRETRO_PLATFORM)
