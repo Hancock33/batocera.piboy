@@ -26,7 +26,8 @@ YMIR_EMULATOR_INFO = ymir.emulator.yml
 YMIR_SUPPORTS_IN_SOURCE_BUILD = NO
 
 YMIR_DEPENDENCIES += cereal cxxopts date fmt host-pkgconf json-for-modern-cpp
-YMIR_DEPENDENCIES += libcurl lz4 miniz openssl rtmidi sdl3 tomlplusplus xxhash
+YMIR_DEPENDENCIES += libcurl lz4 miniz nghttp2 nghttp3 ngtcp2 openssl rtmidi sdl3
+YMIR_DEPENDENCIES += semver tomlplusplus xxhash
 YMIR_DEPENDENCIES += zlib zstd
 
 YMIR_CONF_OPTS += -DYmir_DEV_BUILD=OFF
