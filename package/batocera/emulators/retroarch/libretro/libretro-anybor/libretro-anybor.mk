@@ -33,11 +33,11 @@ endif
 # fopen64 from LFS defines escapes the core's file wrappers
 define LIBRETRO_ANYBOR_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) \
-	    CFLAGS="$(filter-out -D_FILE_OFFSET_BITS=64,$(TARGET_CFLAGS))" \
-	    CXXFLAGS="$(filter-out -D_FILE_OFFSET_BITS=64,$(TARGET_CXXFLAGS))" \
-	    $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
-	    -C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
-	    SYSTEM_DEPS=1
+		LDFLAGS="" $(MAKE) CXX="$(TARGET_CXX)" CC="$(TARGET_CC)" \
+		PKG_CONFIG_PATH=$(STAGING_DIR)/usr/lib/pkgconfig \
+		-C $(@D)/ -f Makefile platform="$(LIBRETRO_ANYBOR_PLATFORM)" \
+		CONFIGURE_HOST="$(GNU_TARGET_NAME)" CONFIGURE_BUILD="$(GNU_HOST_NAME)" \
+		SYSTEM_DEPS=1
 endef
 
 define LIBRETRO_ANYBOR_INSTALL_TARGET_CMDS
