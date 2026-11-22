@@ -1379,6 +1379,9 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
     select BR2_PACKAGE_LIBRETRO_CAP32                       # ALL
     select BR2_PACKAGE_LIBRETRO_81                          # ALL
 
+    # Amstrad PCW
+    select BR2_PACKAGE_LIBRETRO_ZESARPCW                    # ALL
+
     # Atari ST/TT/Falcon
     select BR2_PACKAGE_HATARI
     select BR2_PACKAGE_LIBRETRO_HATARI                      # ALL

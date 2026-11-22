@@ -117,6 +117,7 @@ vitaquake2 = 'batocera_launch_libretro.cores.vitaquake2:Vitaquake2'
 wasm4 = 'batocera_launch_libretro.ra_core:RACore'
 xrick = 'batocera_launch_libretro.cores.xrick:Xrick'
 yabasanshiro = 'batocera_launch_libretro.cores.yabasanshiro:YabaSanshiro'
+zesarpcw = 'batocera_launch_libretro.cores.zesarpcw:Zesarpcw'
 
 [build-system]
 requires = ["hatchling"]

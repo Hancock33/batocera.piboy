@@ -97,7 +97,7 @@ pcw:
   release:              1985
   hardware:             computer
   comment_en:           |
-                        Requires MAME BIOS files pcw8256.zip (and pcw9512.zip for the 9512 model).
+                        The default core (ZEsarPCW) needs no BIOS. The MAME cores require BIOS files pcw8256.zip (and pcw9512.zip for the 9512 model).
                         Games are floppy disk images (.dsk). Most games are self-booting and don't require a separate system disk.
 
 apfm1000:

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBRETRO_ZESARPCW
+	bool "libretro-zesarpcw"
+	help
+	  An Amstrad PCW (8256 / 8512) libretro core derived from ZEsarUX.
+	  No BIOS required.
+
+	  https://github.com/retrodiv/ZEsarPCW-libretro
