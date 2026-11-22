@@ -57,7 +57,6 @@ rapidyaml.mk
 rclone.mk
 re2c.mk
 retrocrisis.mk
-rockchip-mpp.mk
 rockpro64-blobs.mk
 rpi-firmware.mk
 rtmidi.mk

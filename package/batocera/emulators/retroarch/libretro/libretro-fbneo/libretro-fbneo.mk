@@ -3,8 +3,8 @@
 # libretro-fbneo
 #
 ################################################################################
-# Version: Commits on Nov 21, 2026
-LIBRETRO_FBNEO_VERSION = ca2895e03ce33f9227c7a1117a8bbd1f0e5cf9c0
+# Version: Commits on Nov 22, 2026
+LIBRETRO_FBNEO_VERSION = eacd30debc6f55e6a31f5ccd51cd402437052164
 LIBRETRO_FBNEO_SITE = $(call github,libretro,FBNeo,$(LIBRETRO_FBNEO_VERSION))
 LIBRETRO_FBNEO_LICENSE = Non-commercial
 LIBRETRO_FBNEO_DEPENDENCIES += retroarch

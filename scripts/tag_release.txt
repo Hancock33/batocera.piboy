@@ -61,6 +61,7 @@ python-nfcpy.mk
 python-pygame2.mk
 python-pyxel.mk
 rgbds.mk
+rockchip-mpp.mk
 ruffle.mk
 scummvm.mk
 sdl12-compat.mk
