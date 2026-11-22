@@ -36,12 +36,14 @@ Emulators|[duckstation](http://github.com/stenzek/duckstation)|e432fa8ea83cd091f
 Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|467ab6441ad928213c2adb666420fc8a4f954e9b|Nov 22, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|dd063c6d83e93a85271ba31d6457a7da06d30c25|Nov 22, 2026
 Emulators|[hatari](http://github.com/hatari/hatari)|96c722839fa4cf6dad87cb90d8b377deec28f0fa|Nov 22, 2026
-Emulators|[lichii](https://github.com/zortos293/Lichii.git)|d95ff1821ea37d9d96fdc9f2a7c0a978f0a440ff|Nov 22, 2026
+Emulators|[lichii](https://github.com/zortos293/Lichii.git)|d392c624d68ad790b4bc2f9d684395126399246f|Nov 22, 2026
 Emulators|[ppsspp](https://github.com/hrydgard/ppsspp.git)|bfdcfa8d5aa68a2532891b6c57b97d95675c9c58|Nov 22, 2026
 Emulators|[xenia-edge](https://github.com/has207/xenia-edge.git)|e1948bc010739fae72d019093c2811c9704bb9f2|Nov 22, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|5ba407be8ab9928d7340fe450147873c51128e3c|Nov 22, 2026
 Ports|[supertux2](https://github.com/SuperTux/supertux.git)|88b555ef75f93af719b09a27de2dd90cda8b3f02|Nov 22, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261122|Nov 22, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|e48a50580628e6cced1a000f395fa34ae214ce11|Nov 22, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|30ed4849fb182314a47b9632979c39e7250c7f84|Nov 22, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|22aab7978f9111a7592d97fed40b88a407b99bfd|Nov 22, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261122|Nov 22, 2026
 Emulators|[libretro-beetle-pce](http://github.com/libretro/beetle-pce-libretro)|974fe085a9842be2069afc95beaf469a90e9ae44|Nov 22, 2026
@@ -72,9 +74,7 @@ Emulators|[vita3k](https://github.com/vita3k/vita3k)|64e655dd797153d0c5a5cbf7346
 Firmwares|[rpi-utils](http://github.com/raspberrypi/utils)|05e8808e84ed99b168b14a4025dddb9118fa1c17|Nov 21, 2026
 Ports|[omf2097](http://github.com/omf2097/openomf)|a68087dd534877fa0b2f21048f19da448637c4a0|Nov 21, 2026
 Ports|[uqm](https://git.code.sf.net/p/sc2/uqm)|3ec5f474b366d7ecc72bec6dfe23367520a1918d|Nov 21, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261121|Nov 21, 2026
 Emulators|[mupen64plus-video-rice](http://github.com/mupen64plus/mupen64plus-video-rice)|8a2b10d72d4968c7b44eca65944f2e47c1f367b1|Nov 21, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|c3c47b5bcfd392eba90b2e98f6a3ae3ea9b38321|Nov 21, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|c0f56d7d8dbd3d1b24d188a92fc7fe0f93766548|Nov 21, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|f86ac073668d9d889dc07e25e3428b572f7a8a32|Nov 21, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0-rc5|Nov 21, 2026

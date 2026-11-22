@@ -249,7 +249,7 @@ Emulators|[libretro-yabause](http://github.com/libretro/yabause)|8926b0c6c347f8c
 Emulators|[libretro-zc210](https://github.com/netux79/zc210-libretro.git)|b6426da40b074245fda097fd345fa7c9cdbf152a|Apr 26, 2022
 Emulators|[libretro-zc250x](https://github.com/netux79/zc250x-libretro.git)|cfe8da6aa8714f2a77dba81026a5a5560bc70ad6|Jan 25, 2023
 Emulators|[libretro-zcdi](http://github.com/pastisme/zcdi)|6185f542d0275059cc860a45316e3cd68503927b|Nov 21, 2026
-Emulators|[lichii](https://github.com/zortos293/Lichii.git)|d95ff1821ea37d9d96fdc9f2a7c0a978f0a440ff|Nov 22, 2026
+Emulators|[lichii](https://github.com/zortos293/Lichii.git)|d392c624d68ad790b4bc2f9d684395126399246f|Nov 22, 2026
 Emulators|[linuxloader](http://github.com/lindbergh-loader/linuxloader)|v3.0.15|Nov 11, 2026
 Emulators|[mame](https://github.com/Hancock33/batocera-mame-builds/releases)|mame0289|Jul 31, 2026
 Emulators|[melonds](http://github.com/melonDS-emu/melonDS)|361ffa9501b631d53d7150fe57dec40a8341f664|Nov 18, 2026
@@ -319,7 +319,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|5ba407be8ab9928d7340fe450147873c51128e3c|Nov 22, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|c3c47b5bcfd392eba90b2e98f6a3ae3ea9b38321|Nov 21, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|30ed4849fb182314a47b9632979c39e7250c7f84|Nov 22, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://)|$(or|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
@@ -598,5 +598,5 @@ Wine|[vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/releases)|
 Wine|[wine-custom](http://github.com/Hancock33/wine-tkg-batocera)|11.22|Nov 13, 2026
 Wine|[wine-mono](https://github.com/wine-mono/wine-mono/releases)|wine-mono-11.3.0|Aug 13, 2026
 Wine|[wine-proton](http://github.com/CachyOS/wine-cachyos)|cachyos-11.0-20261107-proton-dev|Nov 08, 2026
-Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261121|Nov 21, 2026
+Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261122|Nov 22, 2026
 Wine|[winetricks](http://github.com/Winetricks/winetricks)|f3890f670867b5ffbc3938726db45c0f7d16c8ba|Aug 10, 2026
