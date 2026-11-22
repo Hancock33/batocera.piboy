@@ -16,7 +16,16 @@ PYTHON_PYXEL_SUBDIR = python
 
 PYTHON_PYXEL_ENV += BINDGEN_EXTRA_CLANG_ARGS="--sysroot=$(STAGING_DIR) -I$(STAGING_DIR)/usr/include -I$(STAGING_DIR)/usr/include/SDL2" LIBRARY_PATH="$(STAGING_DIR)/usr/lib"
 
-PYTHON_PYXEL_ENV += CARGO_HOME=$(@D) TARGET=$(RUSTC_TARGET_NAME)
+ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY),y)
+    PYXEL_CARGO_TARGET=x86_64-unknown-linux-gnu
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3288),y)
+    PYXEL_CARGO_TARGET=aarch64-unknown-linux-gnu
+else ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3399),y)
+    PYXEL_CARGO_TARGET=aarch64-unknown-linux-gnu
+endif
+
+PYTHON_PYXEL_ENV = CARGO_HOME=$(@D) TARGET=$(PYXEL_CARGO_TARGET)
+
 # upstream's own `make build` stages these into the package dir before running maturin
 define PYTHON_PYXEL_STAGE_PACKAGE_FILES
 	cp -f $(@D)/LICENSE $(@D)/README.md $(@D)/python/pyxel/
