@@ -13,6 +13,7 @@ LIBRETRO_HATARIB_EMULATOR_INFO = hatarib.libretro.core.yml
 
 LIBRETRO_HATARIB_CONF_ENV += \
 	CMAKE="$(BR2_CMAKE)" \
+	WERROR="-Wall" \
 	SHORTHASH='"$(shell echo $(LIBRETRO_HATARIB_VERSION) | cut -c 1-7)"' \
 	ZLIB_INCLUDE="$(STAGING_DIR)/usr/include" \
 	ZLIB_LIB="$(STAGING_DIR)/usr/lib" \
