@@ -17,10 +17,10 @@ HOST_WINE_PROTON_DEPENDENCIES = host-bison host-flex
 
 define WINE_PROTON_AUTOGEN
 	# Autotools generation
-	cd $(@D); ./tools/make_requests
-	cd $(@D); ./tools/make_specfiles
-	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
-	cd $(@D); autoreconf -fiv
+	cd $(@D) && ./tools/make_requests
+	cd $(@D) && ./tools/make_specfiles
+	cd $(@D) && ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
+	cd $(@D) && autoreconf -fiv
 endef
 WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
 HOST_WINE_PROTON_PRE_CONFIGURE_HOOKS += WINE_PROTON_AUTOGEN
@@ -391,11 +391,10 @@ endef
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_REMOVE_INCLUDES_HOOK
 
 ifeq ($(BR2_PACKAGE_WINE_MONO),y)
-ifneq ($(WINE_PROTON_MONO_VERSION),$(WINE_MONO_VERSION))
+ifneq (wine-mono-$(WINE_PROTON_MONO_VERSION),$(WINE_MONO_VERSION))
 define WINE_PROTON_LINK_MONO
 	mkdir -p $(TARGET_DIR)/usr/share/wine/mono
-	ln -sfn wine-mono-$(WINE_MONO_VERSION) \
-	    $(TARGET_DIR)/usr/share/wine/mono/wine-mono-$(WINE_PROTON_MONO_VERSION)
+	ln -sfn ../$(WINE_MONO_VERSION) $(TARGET_DIR)/usr/share/wine/mono/wine-mono-$(WINE_PROTON_MONO_VERSION)
 endef
 WINE_PROTON_POST_INSTALL_TARGET_HOOKS += WINE_PROTON_LINK_MONO
 endif

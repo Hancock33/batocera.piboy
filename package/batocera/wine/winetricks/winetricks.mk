@@ -10,7 +10,7 @@ WINETRICKS_LICENSE = LGPL-2.1+
 WINETRICKS_LICENSE_FILES = COPYING
 
 define WINETRICKS_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/src/winetricks $(TARGET_DIR)/usr/wine/winetricks
+	$(INSTALL) -D -m 0755 $(@D)/src/winetricks $(TARGET_DIR)/usr/wine/winetricks
 endef
 
 $(eval $(generic-package))

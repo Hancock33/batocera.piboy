@@ -32,8 +32,7 @@ WIRINGOP_PYTHON_ENV = \
 	CFLAGS="$(TARGET_CFLAGS) -Wno-error=implicit-function-declaration"
 
 define WIRINGOP_PYTHON_BINDINGS
-	cd $(@D) ; \
-	$(HOST_DIR)/bin/python3 generate-bindings.py > $(@D)/bindings.i
+	cd $(@D) && $(HOST_DIR)/bin/python3 generate-bindings.py > $(@D)/bindings.i
 endef
 
 WIRINGOP_PYTHON_PRE_BUILD_HOOKS = WIRINGOP_PYTHON_BINDINGS

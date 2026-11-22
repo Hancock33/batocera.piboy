@@ -15,10 +15,10 @@ HOST_WINE_CUSTOM_DEPENDENCIES = host-bison host-flex
 
 define WINE_CUSTOM_AUTOGEN
 	# Autotools generation
-	cd $(@D); ./tools/make_requests
-	cd $(@D); ./tools/make_specfiles
-	cd $(@D); ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
-	cd $(@D); autoreconf -fiv
+	cd $(@D) && ./tools/make_requests
+	cd $(@D) && ./tools/make_specfiles
+	cd $(@D) && ./dlls/winevulkan/make_vulkan && rm -rf dlls/winevulkan/vk-*.xml
+	cd $(@D) && autoreconf -fiv
 endef
 WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN
 HOST_WINE_CUSTOM_PRE_CONFIGURE_HOOKS += WINE_CUSTOM_AUTOGEN

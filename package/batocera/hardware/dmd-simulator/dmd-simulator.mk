@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Jun 09, 2026
 DMD_SIMULATOR_VERSION = d8f2e29693e2f9d3d048bf8fd6b241e58d115fa0
-DMD_SIMULATOR_SITE =  $(call github,batocera-linux,dmd-simulator,$(DMD_SIMULATOR_VERSION))
+DMD_SIMULATOR_SITE = $(call github,batocera-linux,dmd-simulator,$(DMD_SIMULATOR_VERSION))
 DMD_SIMULATOR_SETUP_TYPE = pep517
 DMD_SIMULATOR_DEPENDENCIES = host-python-hatchling
 
@@ -18,18 +18,13 @@ DMD_SIMULATOR_POST_INSTALL_TARGET_HOOKS += DMD_SIMULATOR_DMD_PLAY_SYMLINK
 endif
 
 define DMD_SIMULATOR_INSTALL_DMD_SIMULATOR_PLAYER
-	mkdir -p $(TARGET_DIR)/usr/share/dmd-simulator/scripts
-	$(INSTALL) -m 0755 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/scripts/*.sh $(TARGET_DIR)/usr/share/dmd-simulator/scripts/
-
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/services
-	install -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/dmd_simulator.service $(TARGET_DIR)/usr/share/batocera/services/dmd_simulator
-
-	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/batocera.png $(TARGET_DIR)/usr/share/dmd-simulator/images/system/batocera.png
-	$(INSTALL) -m 0644 -D $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/hardware/dmd-simulator/rainbow.png  $(TARGET_DIR)/usr/share/dmd-simulator/images/system/rainbow.png
+	$(INSTALL) -D -m 0755 -t $(TARGET_DIR)/usr/share/dmd-simulator/scripts $(DMD_SIMULATOR_PKGDIR)/scripts/*.sh
+	$(INSTALL) -D -m 0755 $(DMD_SIMULATOR_PKGDIR)/dmd_simulator.service $(TARGET_DIR)/usr/share/batocera/services/dmd_simulator
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/usr/share/dmd-simulator/images/system $(DMD_SIMULATOR_PKGDIR)/batocera.png $(DMD_SIMULATOR_PKGDIR)/rainbow.png
 endef
 
 ifeq ($(BR2_PACKAGE_DMD_SIMULATOR_PLAYER),y)
-    DMD_SIMULATOR_POST_INSTALL_TARGET_HOOKS += DMD_SIMULATOR_INSTALL_DMD_SIMULATOR_PLAYER
+DMD_SIMULATOR_POST_INSTALL_TARGET_HOOKS += DMD_SIMULATOR_INSTALL_DMD_SIMULATOR_PLAYER
 endif
 
 $(eval $(python-package))

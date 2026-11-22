@@ -15,11 +15,9 @@ PIRONMAN_DEPENDENCIES += net-tools openjpeg python-gpiozero python-lgpio python-
 PIRONMAN_DEPENDENCIES += python-smbus-cffi python-spidev python3 tiff zlib rpi-eeprom
 
 define PIRONMAN_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/bin/pironman $(TARGET_DIR)/usr/bin/
-	mkdir -p $(TARGET_DIR)/opt/pironman
-	$(INSTALL) -D -m 0774 $(@D)/pironman/*.py $(TARGET_DIR)/opt/pironman/
-	$(INSTALL) -D -m 0774 $(@D)/pironman/*.ttf $(TARGET_DIR)/opt/pironman/
-	$(INSTALL) -D -m 0755 $(@D)/config.txt $(TARGET_DIR)/opt/pironman/
+	$(INSTALL) -D -m 0755 $(@D)/bin/pironman $(TARGET_DIR)/usr/bin/pironman
+	$(INSTALL) -D -m 0774 -t $(TARGET_DIR)/opt/pironman $(@D)/pironman/*.py $(@D)/pironman/*.ttf
+	$(INSTALL) -D -m 0644 $(@D)/config.txt $(TARGET_DIR)/opt/pironman/config.txt
 endef
 
 $(eval $(generic-package))

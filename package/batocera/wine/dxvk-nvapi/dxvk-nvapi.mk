@@ -16,20 +16,14 @@ endef
 
 define DXVK_NVAPI_INSTALL_TARGET_CMDS
 	# Install 32-bit and 64-bit DLLs
-	mkdir -p $(TARGET_DIR)/usr/wine/dxvk/x32
-	mkdir -p $(TARGET_DIR)/usr/wine/dxvk/x64
-	cp -a $(@D)/target/x32/nvapi.dll $(TARGET_DIR)/usr/wine/dxvk/x32
-	cp -a $(@D)/target/x64/nvapi64.dll $(TARGET_DIR)/usr/wine/dxvk/x64
-	cp -a $(@D)/target/x64/nvofapi64.dll $(TARGET_DIR)/usr/wine/dxvk/x64
+	$(INSTALL) -D -m 0644 $(@D)/target/x32/nvapi.dll $(TARGET_DIR)/usr/wine/dxvk/x32/nvapi.dll
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/usr/wine/dxvk/x64 $(@D)/target/x64/nvapi64.dll $(@D)/target/x64/nvofapi64.dll
 
 	# Install Vulkan Reflex layer library
-	mkdir -p $(TARGET_DIR)/usr/lib
-	cp -a $(@D)/target/layer/libdxvk_nvapi_vkreflex_layer.so $(TARGET_DIR)/usr/lib/
+	$(INSTALL) -D -m 0755 $(@D)/target/layer/libdxvk_nvapi_vkreflex_layer.so $(TARGET_DIR)/usr/lib/libdxvk_nvapi_vkreflex_layer.so
 
 	# Install Vulkan Reflex layer manifest
-	mkdir -p $(TARGET_DIR)/usr/share/vulkan/implicit_layer.d
-	cp -a $(@D)/target/layer/VkLayer_DXVK_NVAPI_reflex.json \
-		$(TARGET_DIR)/usr/share/vulkan/implicit_layer.d/
+	$(INSTALL) -D -m 0644 $(@D)/target/layer/VkLayer_DXVK_NVAPI_reflex.json $(TARGET_DIR)/usr/share/vulkan/implicit_layer.d/VkLayer_DXVK_NVAPI_reflex.json
 
 	# Correct the library path inside the Vulkan layer manifest
 	$(SED) 's|"\./libdxvk_nvapi_vkreflex_layer\.so"|"/usr/lib/libdxvk_nvapi_vkreflex_layer.so"|g' \

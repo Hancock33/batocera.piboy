@@ -13,12 +13,11 @@ ODIN_BEZELS_LICENSE_FILES = artwork/NOTICE.txt
 ODIN_BEZELS_DEPENDENCIES = odin
 
 define ODIN_BEZELS_EXTRACT_CMDS
-	$(UNZIP) -d $(@D) $(ODIN_BEZELS_DL_DIR)/$(ODIN_BEZELS_SOURCE)
+	$(UNZIP) -q -o -d $(@D) $(ODIN_BEZELS_DL_DIR)/$(ODIN_BEZELS_SOURCE)
 endef
 
 define ODIN_BEZELS_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/odin/artwork
-	cp -f $(@D)/artwork/*_bezel.png $(@D)/artwork/*_bezel.info $(TARGET_DIR)/usr/share/odin/artwork
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/usr/share/odin/artwork $(@D)/artwork/*_bezel.png $(@D)/artwork/*_bezel.info
 endef
 
 $(eval $(generic-package))
