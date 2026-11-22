@@ -47,8 +47,7 @@ PICOM_DEPENDENCIES += xlib_libX11
 endif
 
 define PICOM_CONFIG_FILE
-	mkdir -p $(TARGET_DIR)/etc/xdg/picom
-	cp -f $(PICOM_PKGDIR)/picom.conf $(TARGET_DIR)/etc/xdg/picom/
+	$(INSTALL) -D -m 0644 $(PICOM_PKGDIR)/picom.conf $(TARGET_DIR)/etc/xdg/picom/picom.conf
 endef
 
 PICOM_POST_INSTALL_TARGET_HOOKS = PICOM_CONFIG_FILE

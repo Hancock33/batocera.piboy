@@ -16,13 +16,13 @@ OD_COMMANDER_CONF_OPTS += -DCMDR_GAMEPAD_OPEN=ControllerButton::A
 OD_COMMANDER_CONF_OPTS += -DCMDR_GAMEPAD_PARENT=ControllerButton::B
 
 define OD_COMMANDER_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	mkdir -p $(TARGET_DIR)/usr/share/commander/
-	$(INSTALL) -m 0755 -D $(@D)/commander	$(TARGET_DIR)/usr/bin/od-commander
-	cp -rf $(@D)/res						$(TARGET_DIR)/usr/share/commander/res
+	$(INSTALL) -D -m 0755 $(@D)/commander $(TARGET_DIR)/usr/bin/od-commander
+	rm -rf $(TARGET_DIR)/usr/share/commander/res
+	mkdir -p $(TARGET_DIR)/usr/share/commander
+	cp -r $(@D)/res $(TARGET_DIR)/usr/share/commander/res
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/od-commander/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander/
+	cp -a $(OD_COMMANDER_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/od-commander/
 endef
 
 $(eval $(cmake-package))

@@ -14,8 +14,6 @@ BATOCERA_ONSCREEN_KEYBOARD_LICENSE_FILES = LICENSE
 
 BATOCERA_ONSCREEN_KEYBOARD_DEPENDENCIES = wayland pango libxkbcommon cairo host-pkgconf
 
-BATOCERA_ONSCREEN_KEYBOARD_PATH = $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/batocera-onscreen-keyboard
-
 # Build using make
 # Patch 003 makes wvkbd respect PKG_CONFIG variable for cross-compilation
 define BATOCERA_ONSCREEN_KEYBOARD_BUILD_CMDS
@@ -31,7 +29,7 @@ define BATOCERA_ONSCREEN_KEYBOARD_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/libexec/onscreen-keyboard/wvkbd-mobintl
 
 	# Install the main toggle script (user-facing)
-	$(INSTALL) -D -m 0755 $(BATOCERA_ONSCREEN_KEYBOARD_PATH)/sources/onscreen-keyboard \
+	$(INSTALL) -D -m 0755 $(BATOCERA_ONSCREEN_KEYBOARD_PKGDIR)/sources/onscreen-keyboard \
 		$(TARGET_DIR)/usr/bin/onscreen-keyboard
 
 	# Install the toggle alias for Control Centre compatibility
@@ -40,9 +38,8 @@ define BATOCERA_ONSCREEN_KEYBOARD_INSTALL_TARGET_CMDS
 	# Install assets directory
 	mkdir -p $(TARGET_DIR)/usr/share/onscreen-keyboard
 
-	$(INSTALL) -D -m 0755 $(BATOCERA_ONSCREEN_KEYBOARD_PATH)/sources/touchscreen-detect.py \
+	$(INSTALL) -D -m 0755 $(BATOCERA_ONSCREEN_KEYBOARD_PKGDIR)/sources/touchscreen-detect.py \
 		$(TARGET_DIR)/usr/bin/touchscreen-detect
-
 endef
 
 $(eval $(generic-package))

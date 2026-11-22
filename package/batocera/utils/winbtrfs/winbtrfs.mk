@@ -15,12 +15,8 @@ define WINBTRFS_EXTRACT_CMDS
 endef
 
 define WINBTRFS_INSTALL_IMAGES_CMDS
-	mkdir -p $(BINARIES_DIR)/tools/btrfs_on_windows
-	cp $(@D)/btrfs.cat $(BINARIES_DIR)/tools/btrfs_on_windows
-	cp $(@D)/btrfs.inf $(BINARIES_DIR)/tools/btrfs_on_windows
-	cp -pr $(@D)/x86 $(BINARIES_DIR)/tools/btrfs_on_windows/
-	cp -pr $(@D)/amd64 $(BINARIES_DIR)/tools/btrfs_on_windows/
-	cp $(WINBTRFS_PKGDIR)/readme.txt $(BINARIES_DIR)/tools/btrfs_on_windows/
+	$(INSTALL) -D -m 0644 -t $(BINARIES_DIR)/tools/btrfs_on_windows $(@D)/btrfs.cat $(@D)/btrfs.inf $(WINBTRFS_PKGDIR)/readme.txt
+	cp -pr $(@D)/x86 $(@D)/amd64 $(BINARIES_DIR)/tools/btrfs_on_windows/
 endef
 
 $(eval $(generic-package))

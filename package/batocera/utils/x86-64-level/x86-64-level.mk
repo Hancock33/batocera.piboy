@@ -10,9 +10,8 @@ X86_64_LEVEL_LICENSE = CC-BY-SA-4.0
 X86_64_LEVEL_LICENSE_FILES = LICENSE
 
 define X86_64_LEVEL_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 -D $(@D)/x86-64-level $(TARGET_DIR)/usr/bin/x86-64-level
-	$(INSTALL) -m 0755 $(X86_64_LEVEL_PKGDIR)/batocera-x64-compatibility \
-	    $(TARGET_DIR)/usr/bin/batocera-x64-compatibility
+	$(INSTALL) -D -m 0755 $(@D)/x86-64-level $(TARGET_DIR)/usr/bin/x86-64-level
+	$(INSTALL) -D -m 0755 $(X86_64_LEVEL_PKGDIR)/batocera-x64-compatibility $(TARGET_DIR)/usr/bin/batocera-x64-compatibility
 endef
 
 $(eval $(generic-package))

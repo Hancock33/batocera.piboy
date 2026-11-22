@@ -14,7 +14,7 @@ EVSIEVE_DEPENDENCIES = host-rustc libevdev
 EVSIEVE_ARGS_FOR_BUILD = -L $(STAGING_DIR) -Wl,-rpath,$(STAGING_DIR)
 EVSIEVE_CARGO_ENV = CARGO_HOME=$(HOST_DIR)/share/cargo RUSTFLAGS='$(addprefix -C linker=$(TARGET_CC) -C link-args=,$(EVSIEVE_ARGS_FOR_BUILD))'
 
-EVSIEVE_BIN_DIR = target/$(RUSTC_TARGET_NAME)/$(EVSIEVE_CARGO_MODE)
+EVSIEVE_BIN_DIR = target/$(RUSTC_TARGET_NAME)/release
 
 EVSIEVE_CARGO_OPTS = \
 	--release \
@@ -26,10 +26,9 @@ define EVSIEVE_BUILD_CMDS
 endef
 
 define EVSIEVE_INSTALL_TARGET_CMDS
-	$(INSTALL) -D -m 0755 $(@D)/$(EVSIEVE_BIN_DIR)release/evsieve $(TARGET_DIR)/usr/bin/evsieve
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/evsieve/evsieve-merge-devices $(TARGET_DIR)/usr/bin/evsieve-merge-devices
-	$(TARGET_STRIP) -s $(TARGET_DIR)/usr/bin/evsieve
-	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/evsieve/evsieve-helper $(TARGET_DIR)/usr/bin/evsieve-helper
+	$(INSTALL) -D -m 0755 $(@D)/$(EVSIEVE_BIN_DIR)/evsieve $(TARGET_DIR)/usr/bin/evsieve
+	$(INSTALL) -D -m 0755 $(EVSIEVE_PKGDIR)/evsieve-merge-devices $(TARGET_DIR)/usr/bin/evsieve-merge-devices
+	$(INSTALL) -D -m 0755 $(EVSIEVE_PKGDIR)/evsieve-helper $(TARGET_DIR)/usr/bin/evsieve-helper
 endef
 
 $(eval $(generic-package))

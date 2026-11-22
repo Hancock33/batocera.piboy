@@ -11,10 +11,8 @@ JSTEST2_GIT_SUBMODULES = YES
 JSTEST2_LICENSE = GPL-3.0+
 JSTEST2_DEPENDENCIES = sdl2 ncurses
 
-JSTEST2_CONF_ENV = LIBS="-ncurses -ltinfo"
-
 define JSTEST2_GAMECONTROLLER_DB
-	rm -fr $(TARGET_DIR)/usr/share/sdl-jstest/gamecontrollerdb.txt
+	rm -f $(TARGET_DIR)/usr/share/sdl-jstest/gamecontrollerdb.txt
 	ln -sf /usr/share/gamecontrollerdb.txt $(TARGET_DIR)/usr/share/sdl-jstest/gamecontrollerdb.txt
 endef
 

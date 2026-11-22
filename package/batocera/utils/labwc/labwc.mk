@@ -20,17 +20,17 @@ LABWC_DEPENDENCIES += libxcb
 endif
 
 ifeq ($(BR2_PACKAGE_XWAYLAND),y)
-    LABWC_CONF_OPTS += -Dxwayland=enabled
-    LABWC_DEPENDENCIES += xwayland
+LABWC_CONF_OPTS += -Dxwayland=enabled
+LABWC_DEPENDENCIES += xwayland
 else
-    LABWC_CONF_OPTS += -Dxwayland=disabled
+LABWC_CONF_OPTS += -Dxwayland=disabled
 endif
 
 ifeq ($(BR2_PACKAGE_LIBRSVG),y)
-    LABWC_CONF_OPTS += -Dsvg=enabled
-    LABWC_DEPENDENCIES += librsvg
+LABWC_CONF_OPTS += -Dsvg=enabled
+LABWC_DEPENDENCIES += librsvg
 else
-    LABWC_CONF_OPTS += -Dsvg=disabled
+LABWC_CONF_OPTS += -Dsvg=disabled
 endif
 
 $(eval $(meson-package))

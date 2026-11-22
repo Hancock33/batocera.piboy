@@ -5,7 +5,7 @@
 ################################################################################
 
 HOTKEYGEN_LICENSE = GPL
-HOTKEYGEN_SETUP_TYPE=hatch
+HOTKEYGEN_SETUP_TYPE = hatch
 HOTKEYGEN_DEPENDENCIES = \
 	python-pyudev \
 	python-evdev \
@@ -14,18 +14,13 @@ HOTKEYGEN_DEPENDENCIES = \
 	python-uvloop
 
 define HOTKEYGEN_INSTALL_CONFIG_FILES
-	mkdir -p $(TARGET_DIR)/etc/init.d
-	mkdir -p $(TARGET_DIR)/etc/hotkeygen
-	mkdir -p $(TARGET_DIR)/usr/share/dbus-1/system.d
-	mkdir -p $(TARGET_DIR)/usr/share/hotkeygen
-
-	$(INSTALL) -m 0755 $(@D)/resources/hotkeygen.service $(TARGET_DIR)/etc/init.d/S30hotkeygen
-	$(INSTALL) -m 0644 $(@D)/resources/config/default_context.conf $(TARGET_DIR)/etc/hotkeygen/default_context.conf
-	$(INSTALL) -m 0644 $(@D)/resources/config/common_context.conf $(TARGET_DIR)/etc/hotkeygen/common_context.conf
-	$(INSTALL) -m 0644 $(@D)/resources/config/default_mapping.conf $(TARGET_DIR)/etc/hotkeygen/default_mapping.conf
-
-	$(INSTALL) -m 0644 $(@D)/resources/config/specific/*.mapping $(TARGET_DIR)/usr/share/hotkeygen/
-	$(INSTALL) -m 0644 $(@D)/resources/dbus/hotkeygen.conf $(TARGET_DIR)/usr/share/dbus-1/system.d/hotkeygen.conf
+	$(INSTALL) -D -m 0755 $(@D)/resources/hotkeygen.service $(TARGET_DIR)/etc/init.d/S30hotkeygen
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/etc/hotkeygen \
+		$(@D)/resources/config/default_context.conf \
+		$(@D)/resources/config/common_context.conf \
+		$(@D)/resources/config/default_mapping.conf
+	$(INSTALL) -D -m 0644 -t $(TARGET_DIR)/usr/share/hotkeygen $(@D)/resources/config/specific/*.mapping
+	$(INSTALL) -D -m 0644 $(@D)/resources/dbus/hotkeygen.conf  $(TARGET_DIR)/usr/share/dbus-1/system.d/hotkeygen.conf
 endef
 
 HOTKEYGEN_POST_INSTALL_TARGET_HOOKS += HOTKEYGEN_INSTALL_CONFIG_FILES

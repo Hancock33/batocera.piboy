@@ -18,11 +18,14 @@ define LIBLGPIO_BUILD_CMDS
 endef
 
 define LIBLGPIO_INSTALL_STAGING_CMDS
-	cp -av $(@D)/lib*gpio.so* $(STAGING_DIR)/usr/lib/
+	$(INSTALL) -D -m 0644 -t $(STAGING_DIR)/usr/include $(@D)/lgpio.h $(@D)/rgpio.h
+	mkdir -p $(STAGING_DIR)/usr/lib
+	cp -a $(@D)/lib*gpio.so* $(STAGING_DIR)/usr/lib/
 endef
 
 define LIBLGPIO_INSTALL_TARGET_CMDS
-	cp -av $(@D)/lib*gpio.so* $(TARGET_DIR)/usr/lib/
+	mkdir -p $(TARGET_DIR)/usr/lib
+	cp -a $(@D)/lib*gpio.so* $(TARGET_DIR)/usr/lib/
 endef
 
 $(eval $(generic-package))

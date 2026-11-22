@@ -13,10 +13,9 @@ WIREGUARD_SERVICE_DEPENDENCIES = wireguard-tools
 
 define WIREGUARD_SERVICE_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/etc
-	rm -rf $(TARGET_DIR)/etc/wireguard 2>/dev/null || true
+	rm -rf $(TARGET_DIR)/etc/wireguard
 	ln -sf /userdata/system/wireguard $(TARGET_DIR)/etc/wireguard
-	mkdir -p $(TARGET_DIR)/usr/share/batocera/services
-	$(INSTALL) -Dm755 $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/wireguard-service/wireguard $(TARGET_DIR)/usr/share/batocera/services/
+	$(INSTALL) -D -m 0755 $(WIREGUARD_SERVICE_PKGDIR)/wireguard $(TARGET_DIR)/usr/share/batocera/services/wireguard
 endef
 
 $(eval $(generic-package))

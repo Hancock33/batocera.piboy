@@ -10,16 +10,19 @@
 7ZIP_LICENSE = LGPL-2.1+ with unRAR restriction
 7ZIP_LICENSE_FILES = DOC/License.txt
 7ZIP_CPE_ID_VENDOR = 7-zip
+7ZIP_STRIP_COMPONENTS = 0
 
 7ZIP_P7A_TARGET = $(@D)/CPP/7zip/Bundles/Alone
 7ZIP_P7A_FILE = 7za
 7ZIP_P7R_TARGET = $(@D)/CPP/7zip/Bundles/Alone7z
 7ZIP_P7R_FILE = 7zr
 
-define 7ZIP_BUILD_CMDS
-	rm -r $(@D)/*
-	cd  $(@D) && tar -xf $(7ZIP_DL_DIR)/$($(PKG)_SOURCE)
+define 7ZIP_SET_OPTIMIZATION
 	$(SED) "s|-O2|$(TARGET_OPTIMIZATION)|g" $(@D)/CPP/7zip/7zip_gcc.mak
+endef
+7ZIP_POST_PATCH_HOOKS += 7ZIP_SET_OPTIMIZATION
+
+define 7ZIP_BUILD_CMDS
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(7ZIP_P7A_TARGET) -f makefile.gcc
 	$(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(7ZIP_P7R_TARGET) -f makefile.gcc
 endef
@@ -30,8 +33,6 @@ define 7ZIP_INSTALL_TARGET_CMDS
 endef
 
 define HOST_7ZIP_BUILD_CMDS
-	rm -r $(@D)/*
-	cd  $(@D) && tar -xf $(7ZIP_DL_DIR)/$($(PKG)_SOURCE)
 	$(HOST_CONFIGURE_OPTS) $(MAKE) -C $(7ZIP_P7A_TARGET) -f makefile.gcc
 	$(HOST_CONFIGURE_OPTS) $(MAKE) -C $(7ZIP_P7R_TARGET) -f makefile.gcc
 endef

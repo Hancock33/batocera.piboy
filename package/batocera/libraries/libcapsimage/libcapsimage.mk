@@ -15,7 +15,7 @@ define LIBCAPSIMAGE_FSUAE
 	# FS-UAE specific install
 	mkdir -p $(TARGET_DIR)/usr/share/fs-uae/Plugins
 	ln -sf /usr/lib/libcapsimage.so.5.1 $(TARGET_DIR)/usr/share/fs-uae/Plugins/capsimg.so
-		echo 5.1 > $(TARGET_DIR)/usr/share/fs-uae/Plugins/Version.txt
+	echo 5.1 > $(TARGET_DIR)/usr/share/fs-uae/Plugins/Version.txt
 endef
 
 LIBCAPSIMAGE_POST_INSTALL_TARGET_HOOKS += LIBCAPSIMAGE_FSUAE

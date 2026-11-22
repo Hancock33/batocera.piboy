@@ -15,7 +15,7 @@ LIBGME_CONF_OPTS = -DENABLE_UBSAN=OFF
 LIBGME_DEPENDENCIES = host-pkgconf
 
 define LIBGME_INSTALL_TARGET_CMDS
-	cp -avr $(@D)/gme/libgme.so* $(TARGET_DIR)/usr/lib
+	cp -a $(@D)/gme/libgme.so* $(TARGET_DIR)/usr/lib/
 endef
 
 $(eval $(cmake-package))

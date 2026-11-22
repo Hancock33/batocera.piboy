@@ -7,5 +7,6 @@
 FASTFETCH_VERSION = 2.71.0
 FASTFETCH_SITE = $(call github,fastfetch-cli,fastfetch,$(FASTFETCH_VERSION))
 FASTFETCH_LICENSE = MIT
+FASTFETCH_LICENSE_FILES = LICENSE
 
 $(eval $(cmake-package))

@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Sept 02, 2026
 ECM_VERSION = v6.32.0
-ECM_SITE =  $(call github,KDE,extra-cmake-modules,$(ECM_VERSION))
+ECM_SITE = $(call github,KDE,extra-cmake-modules,$(ECM_VERSION))
 ECM_LICENSE = BSD-3-Clause
 ECM_LICENSE_FILES = LICENSES/BSD-3-Clause.txt
 ECM_INSTALL_STAGING = YES

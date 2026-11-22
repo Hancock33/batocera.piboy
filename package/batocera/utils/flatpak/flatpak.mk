@@ -53,7 +53,7 @@ FLATPAK_CONF_OPTS += -Dwayland_security_context=disabled
 endif
 
 define FLATPAK_INSTALL_SCRIPTS
-	install -m 0755  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/utils/flatpak/batocera-flatpak-update $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -D -m 0755 $(FLATPAK_PKGDIR)/batocera-flatpak-update $(TARGET_DIR)/usr/bin/batocera-flatpak-update
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/hooks
 	ln -sf /usr/bin/batocera-flatpak-update $(TARGET_DIR)/usr/share/emulationstation/hooks/preupdate-gamelists-flatpak
 	ln -sf /usr/bin/batocera-steam-update   $(TARGET_DIR)/usr/share/emulationstation/hooks/preupdate-gamelists-steam

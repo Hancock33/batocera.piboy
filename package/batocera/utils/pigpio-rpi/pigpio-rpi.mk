@@ -1,6 +1,6 @@
 ################################################################################
 #
-# pigpio
+# pigpio-rpi
 #
 ################################################################################
 # Version: Commits on Mar 02, 2021
@@ -43,12 +43,12 @@ endef
 
 # batocera - we want this as a service
 define PIGPIO_RPI_INSTALL_INIT_SYSV
-	$(INSTALL) -D -m 755 $(PIGPIO_RPI_PKGDIR)/S50pigpio \
+	$(INSTALL) -D -m 0755 $(PIGPIO_RPI_PKGDIR)/S50pigpio \
 		$(TARGET_DIR)/usr/share/batocera/services/pigpio
 endef
 
 define PIGPIO_RPI_INSTALL_INIT_SYSTEMD
-	$(INSTALL) -D -m 644  $(PIGPIO_RPI_PKGDIR)/pigpio.service \
+	$(INSTALL) -D -m 0644 $(PIGPIO_RPI_PKGDIR)/pigpio.service \
 		$(TARGET_DIR)/usr/lib/systemd/system/pigpio.service
 endef
 

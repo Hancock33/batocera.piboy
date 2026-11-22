@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Nov 12, 2026
 CABEXTRACT_VERSION = v1.12
-CABEXTRACT_SITE =  $(call github,kyz,libmspack,$(CABEXTRACT_VERSION))
+CABEXTRACT_SITE = $(call github,kyz,libmspack,$(CABEXTRACT_VERSION))
 CABEXTRACT_LICENSE = LGPL-2.1
 CABEXTRACT_LICENSE_FILES = COPYING.LIB
 CABEXTRACT_INSTALL_STAGING = YES

@@ -14,8 +14,7 @@ define PICADE_BUILD_CMDS
 endef
 
 define PICADE_INSTALL_IMAGES_CMDS
-	mkdir -p $(BINARIES_DIR)/rpi-firmware/overlays
-	cp $(@D)/picade.dtbo $(BINARIES_DIR)/rpi-firmware/overlays/picade.dtbo
+	$(INSTALL) -D -m 0644 $(@D)/picade.dtbo $(BINARIES_DIR)/rpi-firmware/overlays/picade.dtbo
 endef
 
 $(eval $(generic-package))

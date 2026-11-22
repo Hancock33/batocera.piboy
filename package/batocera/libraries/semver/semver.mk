@@ -5,7 +5,7 @@
 ################################################################################
 # Version: Commits on Aug 09, 2026
 SEMVER_VERSION = v1.0.1
-SEMVER_SITE =  $(call github,Neargye,semver,$(SEMVER_VERSION))
+SEMVER_SITE = $(call github,Neargye,semver,$(SEMVER_VERSION))
 SEMVER_LICENSE = MIT
 SEMVER_LICENSE_FILES = LICENSE
 SEMVER_SUPPORTS_IN_SOURCE_BUILD = NO

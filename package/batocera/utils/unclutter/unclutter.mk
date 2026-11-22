@@ -10,17 +10,17 @@ UNCLUTTER_SITE = https://github.com/batocera-linux/unclutter-xfixes/archive/refs
 UNCLUTTER_LICENSE = MIT
 UNCLUTTER_DEPENDENCIES = xserver_xorg-server libev
 
-UNCLUTTER_CFLAGS="-I$(@D)/include -D'__VERSION=\"$(UNCLUTTER_VERSION)\"'"
-UNCLUTTER_LDFLAGS="$(TARGET_LDFLAGS) -lev -lX11 -lXi -lXfixes"
+UNCLUTTER_CFLAGS = $(TARGET_CFLAGS) -I$(@D)/include -D'__VERSION=\"$(UNCLUTTER_VERSION)\"'
+UNCLUTTER_LDFLAGS = $(TARGET_LDFLAGS) -lev -lX11 -lXi -lXfixes
 
 define UNCLUTTER_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D) \
-		CFLAGS=$(UNCLUTTER_CFLAGS) LDFLAGS=$(UNCLUTTER_LDFLAGS) unclutter
+		CFLAGS="$(UNCLUTTER_CFLAGS)" LDFLAGS="$(UNCLUTTER_LDFLAGS)" unclutter
 endef
 
 define UNCLUTTER_INSTALL_TARGET_CMDS
-	$(INSTALL) -D $(@D)/unclutter $(TARGET_DIR)/usr/bin/unclutter
-	$(INSTALL) -D $(@D)/bin/unclutter-remote $(TARGET_DIR)/usr/bin/unclutter-remote
+	$(INSTALL) -D -m 0755 $(@D)/unclutter $(TARGET_DIR)/usr/bin/unclutter
+	$(INSTALL) -D -m 0755 $(@D)/bin/unclutter-remote $(TARGET_DIR)/usr/bin/unclutter-remote
 endef
 
 $(eval $(generic-package))
