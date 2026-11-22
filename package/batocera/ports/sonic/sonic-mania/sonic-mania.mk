@@ -24,7 +24,7 @@ define SONIC_MANIA_INSTALL_TARGET_CMDS
 	# OpenGL shaders aren't in Data.rsdk, so ship them as a mod like upstream does
 	mkdir -p $(TARGET_DIR)/usr/share/sonic-mania/mods/GLShaders/Data/Shaders/OGL
 	$(INSTALL) -m 0644 $(@D)/dependencies/RSDKv5/RSDKv5/Shaders/OGL/* $(TARGET_DIR)/usr/share/sonic-mania/mods/GLShaders/Data/Shaders/OGL/
-	printf "Name=GLShaders\nDescription=OGLShaders\nAuthor=Ducky\nVersion=1.0.0\nTargetVersion=-1\n" $(TARGET_DIR)/usr/share/sonic-mania/mods/GLShaders/mod.ini
+	printf "Name=GLShaders\nDescription=OGLShaders\nAuthor=Ducky\nVersion=1.0.0\nTargetVersion=-1\n" > $(TARGET_DIR)/usr/share/sonic-mania/mods/GLShaders/mod.ini
 endef
 
 $(eval $(cmake-package))

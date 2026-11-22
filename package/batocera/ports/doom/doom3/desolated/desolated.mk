@@ -10,7 +10,7 @@ DESOLATED_BRANCH = desolated
 DESOLATED_LICENSE = GPL-3.0
 DESOLATED_LICENSE_FILES = COPYING.txt
 
-DESOLATED_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+DESOLATED_DEPENDENCIES = dhewm3
 
 define DESOLATED_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3

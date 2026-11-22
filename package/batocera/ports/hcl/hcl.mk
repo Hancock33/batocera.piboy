@@ -16,11 +16,10 @@ HCL_CONF_OPTS += -DUSE_SDL2=ON
 define HCL_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/hcl
 	cp -pvr $(@D)/data $(TARGET_DIR)/usr/share/hcl/
-	$(INSTALL) -D $(@D)/buildroot-build/hcl $(TARGET_DIR)/usr/bin/hcl
-	chmod 0754 $(TARGET_DIR)/usr/bin/hcl
+	$(INSTALL) -m 0754 -D $(@D)/buildroot-build/hcl $(TARGET_DIR)/usr/bin/hcl
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/hcl
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/hcl/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/hcl/
+	cp -a  $(HCL_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/hcl/
 endef
 
 $(eval $(cmake-package))

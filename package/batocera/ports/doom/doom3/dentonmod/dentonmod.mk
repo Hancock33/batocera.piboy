@@ -10,7 +10,7 @@ DENTONMOD_BRANCH = dentonmod
 DENTONMOD_LICENSE = GPL-3.0
 DENTONMOD_LICENSE_FILES = COPYING.txt
 
-DENTONMOD_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+DENTONMOD_DEPENDENCIES = dhewm3
 
 DENTONMOD_CONF_OPTS = -DBASE_NAME=dentonmod
 

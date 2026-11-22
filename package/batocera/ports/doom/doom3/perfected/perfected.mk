@@ -10,7 +10,7 @@ PERFECTED_BRANCH = perfected
 PERFECTED_LICENSE = GPL-3.0
 PERFECTED_LICENSE_FILES = COPYING.txt
 
-PERFECTED_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+PERFECTED_DEPENDENCIES = dhewm3
 
 define PERFECTED_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3

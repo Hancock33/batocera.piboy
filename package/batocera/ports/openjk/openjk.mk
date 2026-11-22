@@ -31,7 +31,7 @@ OPENJK_CONF_OPTS += -DBuildMPUI=OFF
 
 define OPENJK_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openjk/openjk.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(OPENJK_PKGDIR)/openjk.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 OPENJK_POST_INSTALL_TARGET_HOOKS += OPENJK_EVMAPY

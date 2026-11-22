@@ -32,7 +32,7 @@ endif
 define SERIOUSSAM_INSTALL_TARGET_CMDS
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/serioussam/*.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(SERIOUSSAM_PKGDIR)/*.keys $(TARGET_DIR)/usr/share/evmapy
 	# TFE Assets
 	rm -rf $(TARGET_DIR)/usr/share/game_assets/samtfe
 	mkdir -p $(TARGET_DIR)/usr/share/game_assets/samtfe/Bin
@@ -86,8 +86,8 @@ define SERIOUSSAM_CP_WEAPONS
 	cp -vfr $(@D)/SamTSE/Sources/Entities/PlayerWeapons_old.es $(@D)/SamTSE/Sources/Entities/PlayerWeapons.es
 	sed -i "s|add_compile_options(-march=native)|#add_compile_options(-march=native)|" $(@D)/SamTSE/Sources/CMakeLists.txt
 
-	sed '/RPATH_SETTINGS/d' $(@D)/SamTFE/Sources/CMakeLists.txt
-	sed '/RPATH_SETTINGS/d' $(@D)/SamTSE/Sources/CMakeLists.txt
+	sed -i '/RPATH_SETTINGS/d' $(@D)/SamTFE/Sources/CMakeLists.txt
+	sed -i '/RPATH_SETTINGS/d' $(@D)/SamTSE/Sources/CMakeLists.txt
 endef
 SERIOUSSAM_POST_EXTRACT_HOOKS += SERIOUSSAM_CP_WEAPONS
 

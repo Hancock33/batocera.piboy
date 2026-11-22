@@ -50,7 +50,7 @@ endef
 
 define THEFORCEENGINE_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/theforceengine/theforceengine.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(THEFORCEENGINE_PKGDIR)/theforceengine.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 THEFORCEENGINE_POST_INSTALL_TARGET_HOOKS += THEFORCEENGINE_PATCH_ZIP

@@ -11,9 +11,6 @@ DXX_REBIRTH_LICENSE_FILES = COPYING.txt
 DXX_REBIRTH_EMULATOR_INFO = dxx-rebirth.emulator.yml
 DXX_REBIRTH_DEPENDENCIES = host-scons sdl2 sdl2_image sdl2_mixer libpng physfs libglu
 
-DXX_REBIRTH_LDFLAGS   = $(TARGET_LDFLAGS)
-DXX_REBIRTH_CFLAGS    = $(TARGET_CFLAGS)
-DXX_REBIRTH_CXXFLAGS  = $(TARGET_CXXFLAGS)
 DXX_REBIRTH_SCONS_ENV = $(TARGET_CONFIGURE_OPTS)
 
 DXX_REBIRTH_SCONS_OPTS = -j$(PARALLEL_JOBS) sdl2=yes
@@ -22,28 +19,24 @@ ifeq ($(BR2_PACKAGE_LIBGLEW),y)
     DXX_REBIRTH_DEPENDENCIES += libglew
 endif
 
-ifeq ($(BR2_PACKAGE_LIBGLU),y)
-    DXX_REBIRTH_DEPENDENCIES += libglu
-endif
-
 define DXX_REBIRTH_BUILD_CMDS
 	(cd $(@D); \
 		PKG_CONFIG_PATH="$(STAGING_DIR)/usr/lib/pkgconfig" \
 		$(DXX_REBIRTH_SCONS_ENV) \
 		CFLAGS="$(subst Os,O2,$(TARGET_CFLAGS)) -funsigned-char" \
-		CXXFLAGS="$(subst Os,O2,$(TARGET_CFLAGS)) -funsigned-char" \
+		CXXFLAGS="$(subst Os,O2,$(TARGET_CXXFLAGS)) -funsigned-char" \
 		$(SCONS) \
 		$(DXX_REBIRTH_SCONS_OPTS))
 endef
 
 define DXX_REBIRTH_INSTALL_TARGET_CMDS
-	cp $(@D)/build/d1x-rebirth/d1x-rebirth $(TARGET_DIR)/usr/bin/
-	cp $(@D)/build/d2x-rebirth/d2x-rebirth $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -m 0755 -D -t $(TARGET_DIR)/usr/bin \
+		$(@D)/build/d1x-rebirth/d1x-rebirth \
+		$(@D)/build/d2x-rebirth/d2x-rebirth
 endef
 
 define DXX_REBIRTH_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/dxx-rebirth/dxx-rebirth.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(DXX_REBIRTH_PKGDIR)/dxx-rebirth.keys
 endef
 
 DXX_REBIRTH_POST_INSTALL_TARGET_HOOKS += DXX_REBIRTH_EVMAPY

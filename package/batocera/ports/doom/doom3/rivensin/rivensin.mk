@@ -10,7 +10,7 @@ RIVENSIN_BRANCH = rivensin
 RIVENSIN_LICENSE = GPL-3.0
 RIVENSIN_LICENSE_FILES = COPYING.txt
 
-RIVENSIN_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+RIVENSIN_DEPENDENCIES = dhewm3
 
 define RIVENSIN_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3

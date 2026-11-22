@@ -28,7 +28,7 @@ define TEKWAR_INSTALL_TARGET_CMDS
 
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/tekwar/tekwar.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys
+	cp $(TEKWAR_PKGDIR)/tekwar.keys $(TARGET_DIR)/usr/share/evmapy/etekwar.keys
 endef
 
 $(eval $(generic-package))

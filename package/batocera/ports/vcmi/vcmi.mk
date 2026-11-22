@@ -26,7 +26,7 @@ VCMI_CONF_OPTS += -DTBB_ROOT=$(STAGING_DIR)/usr/lib/tbb
 define VCMI_EVMAPY
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/vcmi/vcmi.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(VCMI_PKGDIR)/vcmi.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 VCMI_POST_INSTALL_TARGET_HOOKS += VCMI_EVMAPY

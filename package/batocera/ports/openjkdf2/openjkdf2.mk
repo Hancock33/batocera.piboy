@@ -44,7 +44,7 @@ endef
 
 define OPENJKDF2_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openjkdf2/openjkdf2.keys \
+	cp $(OPENJKDF2_PKGDIR)/openjkdf2.keys \
 	    $(TARGET_DIR)/usr/share/evmapy
 endef
 

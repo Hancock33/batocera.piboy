@@ -17,7 +17,7 @@ TARADINO_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
 define TARADINO_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/taradino/rott.keys $(TARGET_DIR)/usr/share/evmapy
+	cp -f $(TARADINO_PKGDIR)/rott.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 TARADINO_POST_INSTALL_TARGET_HOOKS += TARADINO_EVMAPY
 

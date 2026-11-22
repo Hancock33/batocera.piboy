@@ -10,7 +10,7 @@ FITZ_BRANCH = fitz
 FITZ_LICENSE = GPL-3.0
 FITZ_LICENSE_FILES = COPYING.txt
 
-FITZ_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+FITZ_DEPENDENCIES = dhewm3
 
 define FITZ_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3

@@ -25,10 +25,10 @@ define OPENTYRIAN2000_INSTALL_TARGET_CMDS
 	$(UNZIP) -o $(OPENTYRIAN2000_DL_DIR)/tyrian2000.zip -d $(TARGET_DIR)/usr/share
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/opentyrian
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/opentyrian2000/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/opentyrian/
+	cp -a  $(OPENTYRIAN2000_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/opentyrian/
 	# evmap config
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/opentyrian2000/opentyrian.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(OPENTYRIAN2000_PKGDIR)/opentyrian.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 $(eval $(generic-package))

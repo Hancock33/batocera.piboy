@@ -20,7 +20,7 @@ define SDLPOP_INSTALL_TARGET_CMDS
 	cp -pr $(@D)/data $(TARGET_DIR)/usr/share/SDLPoP/
 	# install media
 	mkdir -p $(TARGET_DIR)/usr/share/emulationstation/ports/sdlpop
-	cp -a  $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/sdlpop/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/sdlpop/
+	cp -a  $(SDLPOP_PKGDIR)/media/* $(TARGET_DIR)/usr/share/emulationstation/ports/sdlpop/
 endef
 
 $(eval $(cmake-package))

@@ -10,7 +10,7 @@ D3LE_BRANCH = d3le
 D3LE_LICENSE = GPL-3.0
 D3LE_LICENSE_FILES = COPYING.txt
 
-D3LE_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+D3LE_DEPENDENCIES = dhewm3
 
 D3LE_CONF_OPTS = -DBASE=OFF -DD3XP_NAME=d3le -DD3XP=ON
 

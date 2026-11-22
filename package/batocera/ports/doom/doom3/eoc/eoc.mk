@@ -10,7 +10,7 @@ EOC_BRANCH = eoc
 EOC_LICENSE = GPL-3.0
 EOC_LICENSE_FILES = COPYING.txt
 
-EOC_DEPENDENCIES = dhewm3 host-libjpeg libcurl libogg libvorbis openal sdl2 zlib
+EOC_DEPENDENCIES = dhewm3
 
 define EOC_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/lib/dhewm3

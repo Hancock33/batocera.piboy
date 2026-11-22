@@ -39,7 +39,7 @@ endef
 
 define OPENMOHAA_EVMAPY
 	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/ports/openmohaa/mohaa.keys $(TARGET_DIR)/usr/share/evmapy
+	cp $(OPENMOHAA_PKGDIR)/mohaa.keys $(TARGET_DIR)/usr/share/evmapy
 endef
 
 OPENMOHAA_POST_INSTALL_TARGET_HOOKS += OPENMOHAA_EVMAPY
