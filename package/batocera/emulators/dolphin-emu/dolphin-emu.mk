@@ -50,17 +50,17 @@ DOLPHIN_EMU_CONF_OPTS += -DUSE_UPNP=OFF
 ifeq ($(BR2_PACKAGE_QT6),y)
     DOLPHIN_EMU_DEPENDENCIES += qt6base qt6svg
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=ON
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON
 else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_QT=OFF
-    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON
 endif
 
 ifeq ($(BR2_PACKAGE_XORG7),y)
     DOLPHIN_EMU_DEPENDENCIES += xlib_libX11 xlib_libXi xlib_libXrandr
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=ON
+    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=ON
 else
     DOLPHIN_EMU_CONF_OPTS += -DENABLE_X11=OFF
+    DOLPHIN_EMU_CONF_OPTS += -DENABLE_NOGUI=OFF
 endif
 
 ifeq ($(BR2_PACKAGE_BATOCERA_VULKAN),y)
@@ -75,9 +75,8 @@ define DOLPHIN_EMU_PRE_CONFIGURE_HOOK
 endef
 
 define DOLPHIN_EMU_INI
-	mkdir -p $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings
 	# copy extra triforce ini files - force overwrite
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/dolphin-emu/ini/*.ini $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/dolphin-emu/Sys/GameSettings $(DOLPHIN_EMU_PKGDIR)/ini/*.ini
 	cd $(TARGET_DIR)/usr/bin && ln -sf dolphin-emu dolphin-emu.desktopconfig
 endef
 

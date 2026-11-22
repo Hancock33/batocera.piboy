@@ -6,8 +6,8 @@
 # Version: Commits on Nov 21, 2026
 PPSSPP_VERSION = 149390126a56b035afaed0f6b304e5f2dd71485d
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
-PPSSPP_SITE_METHOD=git
-PPSSPP_GIT_SUBMODULES=YES
+PPSSPP_SITE_METHOD = git
+PPSSPP_GIT_SUBMODULES = YES
 PPSSPP_LICENSE = GPL-2.0
 PPSSPP_DEPENDENCIES = sdl3 sdl3_ttf libzip
 
@@ -102,14 +102,13 @@ define PPSSPP_UPDATE_INCLUDES
 endef
 
 define PPSSPP_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
 	$(INSTALL) -D -m 0755 $(@D)/$(PPSSPP_TARGET_BINARY) $(TARGET_DIR)/usr/bin/PPSSPP
 	rm -rf $(TARGET_DIR)/usr/share/ppsspp
 	mkdir -p $(TARGET_DIR)/usr/share/ppsspp
 	cp -R $(@D)/assets $(TARGET_DIR)/usr/share/ppsspp/PPSSPP
 	# Fix PSP font for languages like Japanese
 	# (font from https://github.com/minoryorg/Noto-Sans-CJK-JP/blob/master/fonts/)
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/ppsspp/wqy-microhei.ttc $(TARGET_DIR)/usr/share/ppsspp/PPSSPP/Roboto-Condensed.ttf
+	$(INSTALL) -m 0644 -D $(PPSSPP_PKGDIR)/wqy-microhei.ttc $(TARGET_DIR)/usr/share/ppsspp/PPSSPP/Roboto-Condensed.ttf
 endef
 
 PPSSPP_PRE_CONFIGURE_HOOKS += PPSSPP_UPDATE_INCLUDES

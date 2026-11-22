@@ -25,8 +25,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_WAYLAND),y)
 endif
 
 define NANOBOYADVANCE_EVMAPY
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/nanoboyadvance/*.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(NANOBOYADVANCE_PKGDIR)/*.keys
 endef
 
 NANOBOYADVANCE_POST_INSTALL_TARGET_HOOKS += NANOBOYADVANCE_EVMAPY

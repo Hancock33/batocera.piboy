@@ -9,8 +9,7 @@ LEXALOFFLE_VOXATRON_LICENSE = PROPRIETARY
 LEXALOFFLE_VOXATRON_SOURCE =
 
 define LEXALOFFLE_VOXATRON_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lexaloffle-voxatron/voxatron.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(LEXALOFFLE_VOXATRON_PKGDIR)/voxatron.keys
 endef
 
 $(eval $(generic-package))

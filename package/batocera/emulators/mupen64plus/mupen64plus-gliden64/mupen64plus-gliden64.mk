@@ -36,9 +36,8 @@ ifeq ($(BR2_aarch64),y)
 endif
 
 define MUPEN64PLUS_GLIDEN64_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/mupen64plus/
-	$(INSTALL) -D $(@D)/src/plugin/Release/mupen64plus-video-GLideN64.so $(TARGET_DIR)/usr/lib/mupen64plus/mupen64plus-video-gliden64.so
-	$(INSTALL) -D $(@D)/ini/* $(TARGET_DIR)/usr/share/mupen64plus/
+	$(INSTALL) -m 0755 -D $(@D)/src/plugin/Release/mupen64plus-video-GLideN64.so $(TARGET_DIR)/usr/lib/mupen64plus/mupen64plus-video-gliden64.so
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/mupen64plus $(@D)/ini/*
 endef
 
 $(eval $(cmake-package))

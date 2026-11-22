@@ -16,11 +16,9 @@ TSUGARU_DEPENDENCIES = alsa-lib libglu
 TSUGARU_CONF_OPTS += -DBUILD_SHARED_LIBS=FALSE
 
 define TSUGARU_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -D $(@D)/src/buildroot-build/main_cui/Tsugaru_CUI $(TARGET_DIR)/usr/bin/
-	# evampy
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/tsugaru/fmtowns.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0755 -D $(@D)/src/buildroot-build/main_cui/Tsugaru_CUI $(TARGET_DIR)/usr/bin/Tsugaru_CUI
+	# evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(TSUGARU_PKGDIR)/fmtowns.keys
 endef
 
 $(eval $(cmake-package))

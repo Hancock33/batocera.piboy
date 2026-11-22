@@ -66,13 +66,12 @@ define OPENMSX_BUILD_CMDS
 endef
 
 define OPENMSX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/openmsx/*.keys $(TARGET_DIR)/usr/share/evmapy/
-	cp -f $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/openmsx/settings.xml $(TARGET_DIR)/usr/share/openmsx
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(OPENMSX_PKGDIR)/*.keys
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/openmsx $(OPENMSX_PKGDIR)/settings.xml
 endef
 
 define OPENMSX_POST_INSTALL_CLEANUP
-	if test -d $(STAGING_DIR)/usr/lib/tclConfig.sh.bak; then mv -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak $(STAGING_DIR)/usr/lib/tclConfig.sh; fi
+	if test -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak; then mv -f $(STAGING_DIR)/usr/lib/tclConfig.sh.bak $(STAGING_DIR)/usr/lib/tclConfig.sh; fi
 endef
 
 OPENMSX_PRE_CONFIGURE_HOOKS += OPENMSX_TCL_CONFIG_FIXUP

@@ -50,7 +50,6 @@ endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBOPENVG),y)
     RETROARCH_DEPENDENCIES += libopenvg
-
 endif
 
 ifeq ($(BR2_PACKAGE_PULSEAUDIO),y)
@@ -128,7 +127,7 @@ ifeq ($(BR2_ARM_FPU_NEON_VFPV4)$(BR2_ARM_FPU_NEON)$(BR2_ARM_FPU_NEON_FP_ARMV8),y
     RETROARCH_CONF_OPTS += --enable-neon
 endif
 
-ifeq ($(BR2_GCC_TARGET_FLOAT_ABI),hard)
+ifeq ($(call qstrip,$(BR2_GCC_TARGET_FLOAT_ABI)),hard)
     RETROARCH_CONF_OPTS += --enable-floathard
 endif
 

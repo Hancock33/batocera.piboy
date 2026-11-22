@@ -6,8 +6,8 @@
 # Version: Commits on Sept 18, 2026
 SUGARBOX_VERSION = 4fdb5b71003b684b721f05f68358cfd112b5d8f1
 SUGARBOX_SITE = https://github.com/Tom1975/SugarboxV2.git
-SUGARBOX_SITE_METHOD=git
-SUGARBOX_GIT_SUBMODULES=YES
+SUGARBOX_SITE_METHOD = git
+SUGARBOX_GIT_SUBMODULES = YES
 SUGARBOX_LICENSE = MIT
 SUGARBOX_DEPENDENCIES = qt6base qt6tools qt6websockets
 
@@ -28,7 +28,7 @@ ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE),y)
 endif
 
 define SUGARBOX_QT6_FIX_CMAKE
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/sugarbox/CMakeLists.txt $(@D)/Sugarbox/CMakeLists.txt
+	cp $(SUGARBOX_PKGDIR)/CMakeLists.txt $(@D)/Sugarbox/CMakeLists.txt
 endef
 
 SUGARBOX_PRE_CONFIGURE_HOOKS += SUGARBOX_QT6_FIX_CMAKE

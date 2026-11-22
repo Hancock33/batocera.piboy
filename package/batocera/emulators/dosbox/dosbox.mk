@@ -18,7 +18,6 @@ endif
 DOSBOX_CONF_OPTS =	--enable-core-inline \
 					--enable-dynrec \
 					--enable-unaligned_memory \
-					--prefix=/usr \
 					--with-sdl-prefix="$(STAGING_DIR)/usr"
 
 $(eval $(autotools-package))

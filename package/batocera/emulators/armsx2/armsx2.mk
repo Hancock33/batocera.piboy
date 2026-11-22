@@ -67,7 +67,7 @@ define ARMSX2_INSTALL_TARGET_CMDS
 	cp -pr  $(@D)/bin/resources $(TARGET_DIR)/usr/armsx2/bin/
 	cp -pr  $(@D)/buildroot-build/bin/translations $(TARGET_DIR)/usr/armsx2/bin/
 	# use our SDL config
-	rm $(TARGET_DIR)/usr/armsx2/bin/resources/game_controller_db.txt
+	rm -f $(TARGET_DIR)/usr/armsx2/bin/resources/game_controller_db.txt
 endef
 
 # Download and copy PCSX2 patches.zip to BIOS folder (ARMSX2 shares the PS2 game database)

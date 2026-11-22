@@ -32,8 +32,7 @@ else
 endif
 
 define SNES9X_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/bin
-	$(INSTALL) -m 0755 $(@D)/qt/snes9x-qt $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 -D $(@D)/qt/snes9x-qt $(TARGET_DIR)/usr/bin/snes9x-qt
 endef
 
 $(eval $(cmake-package))

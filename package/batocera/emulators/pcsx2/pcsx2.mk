@@ -79,11 +79,11 @@ define PCSX2_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/buildroot-build/bin/pcsx2-qt $(TARGET_DIR)/usr/bin/pcsx2/pcsx2-qt
 	cp -pr  $(@D)/buildroot-build/bin/resources $(TARGET_DIR)/usr/bin/pcsx2
 	# use our SDL config
-	rm $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt
+	rm -f $(TARGET_DIR)/usr/bin/pcsx2/resources/game_controller_db.txt
 endef
 
 define PCSX2_TEXTURES
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/textures/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
+	cp -pr $(PCSX2_PKGDIR)/textures/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
 define PCSX2_PATCHES
@@ -92,7 +92,7 @@ define PCSX2_PATCHES
 endef
 
 define PCSX2_CROSSHAIRS
-	cp -pr $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/pcsx2/crosshairs/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
+	cp -pr $(PCSX2_PKGDIR)/crosshairs/    $(TARGET_DIR)/usr/bin/pcsx2/resources/
 endef
 
 define PCSX2_RETROACHIEVEMENTS

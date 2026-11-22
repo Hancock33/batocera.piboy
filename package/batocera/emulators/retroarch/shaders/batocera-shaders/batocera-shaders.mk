@@ -5,21 +5,21 @@
 ################################################################################
 
 BATOCERA_SHADERS_VERSION = 1.0
-BATOCERA_SHADERS_SOURCE=
+BATOCERA_SHADERS_SOURCE =
 BATOCERA_SHADERS_LICENSE = LGPL-3.0+
-BATOCERA_SHADERS_DEPENDENCIES= common-shaders glsl-shaders slang-shaders
+BATOCERA_SHADERS_DEPENDENCIES = common-shaders glsl-shaders slang-shaders
 
-BATOCERA_SHADERS_DIRIN=$(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/shaders/batocera-shaders/configs
+BATOCERA_SHADERS_DIRIN = $(BATOCERA_SHADERS_PKGDIR)/configs
 
 ifeq ($(BATOCERA_GPU),x86)
-    BATOCERA_SHADERS_SETS=sharp-bilinear-simple retro scanlines enhanced curvature zfast flatten-glow xbr mega-bezel mega-bezel-lite mega-bezel-ultralite
+    BATOCERA_SHADERS_SETS = sharp-bilinear-simple retro scanlines enhanced curvature zfast flatten-glow xbr mega-bezel mega-bezel-lite mega-bezel-ultralite
 else
-    BATOCERA_SHADERS_SETS=sharp-bilinear-simple retro scanlines enhanced curvature zfast flatten-glow xbr
+    BATOCERA_SHADERS_SETS = sharp-bilinear-simple retro scanlines enhanced curvature zfast flatten-glow xbr
 endif
 
 define BATOCERA_SHADERS_INSTALL_TARGET_CMDS
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/shaders/bezel/Mega_Bezel/Presets
-	cp -R $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/retroarch/shaders/batocera-shaders/presets-batocera/* $(TARGET_DIR)/usr/share/batocera/shaders/bezel/Mega_Bezel/Presets
+	cp -R $(BATOCERA_SHADERS_PKGDIR)/presets-batocera/* $(TARGET_DIR)/usr/share/batocera/shaders/bezel/Mega_Bezel/Presets
 
 	# general
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/shaders/configs

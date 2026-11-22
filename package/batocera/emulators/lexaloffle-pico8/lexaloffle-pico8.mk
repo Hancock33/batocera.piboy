@@ -9,8 +9,7 @@ LEXALOFFLE_PICO8_LICENSE = PROPRIETARY
 LEXALOFFLE_PICO8_SOURCE =
 
 define LEXALOFFLE_PICO8_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/usr/share/evmapy
-	cp $(BR2_EXTERNAL_BATOCERA_PATH)/package/batocera/emulators/lexaloffle-pico8/pico8.keys $(TARGET_DIR)/usr/share/evmapy
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/share/evmapy $(LEXALOFFLE_PICO8_PKGDIR)/pico8.keys
 endef
 
 $(eval $(generic-package))

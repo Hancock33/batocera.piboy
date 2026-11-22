@@ -46,7 +46,7 @@ define DUCKSTATION_INSTALL_TARGET_CMDS
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansJP-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansJP-VariableFont_wght.ttf
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansKR-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansKR-VariableFont_wght.ttf
 	ln -sf /usr/share/fonts/truetype/noto/NotoSansSC-VF.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts/NotoSansSC-VariableFont_wght.ttf
-	cp $(DUCKSTATION_PKGDIR)/fa-solid-900.ttf $(TARGET_DIR)/usr/bin/duckstation/resources/fonts
+	$(INSTALL) -m 0644 -D -t $(TARGET_DIR)/usr/bin/duckstation/resources/fonts $(DUCKSTATION_PKGDIR)/fa-solid-900.ttf
 endef
 
 $(eval $(cmake-package))
