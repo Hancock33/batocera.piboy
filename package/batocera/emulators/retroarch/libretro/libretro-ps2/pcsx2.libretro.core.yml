@@ -63,6 +63,7 @@ custom_features:
     prompt: TRILINEAR FILTERING
     description: Control the texture's trilinear filtering of the emulation.
     choices:
+      Automatic (Default): Automatic
       'OFF': disabled
       Trilinear (PS2): Trilinear (PS2)
       Trilinear (Forced): Trilinear (Forced)

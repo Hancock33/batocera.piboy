@@ -42,7 +42,7 @@ systems:
         choices:
           'Off': disable
           '240p (1x)': 1x
-          '480p (2x)': 2x
+          '480p (2x) (Default)': 2x
           '720p (3x)': 3x
           '960p (4x)': 4x
           '1200p (5x)': 5x
@@ -87,7 +87,7 @@ systems:
         choices:
           'Off': disable
           '240p (1x)': 1x
-          '480p (2x)': 2x
+          '480p (2x) (Default)': 2x
           '720p (3x)': 3x
           '960p (4x)': 4x
           '1200p (5x)': 5x

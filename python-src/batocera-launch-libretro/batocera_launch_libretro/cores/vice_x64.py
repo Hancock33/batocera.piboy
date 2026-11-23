@@ -114,7 +114,7 @@ class ViceX64(Core):
         core_options.set_from_config('vice_c64_model', 'c64_model', default='C64 PAL auto')
 
         # Aspect Ratio
-        core_options.set_from_config('vice_aspect_ratio', default='pal')
+        core_options.set_from_config('vice_aspect_ratio', default='auto')
 
         # Zoom Mode
         zoom_mode = self.config.get('vice_zoom_mode', 'auto_disable')

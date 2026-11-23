@@ -47,7 +47,7 @@ class ViceXplus4(Core):
         core_options.set_from_config('vice_plus4_model', 'plus4_model', default='PLUS4 PAL')
 
         # Aspect Ratio
-        core_options.set_from_config('vice_aspect_ratio', default='pal')
+        core_options.set_from_config('vice_aspect_ratio', default='auto')
 
         # Zoom Mode
         zoom_mode = self.config.get('vice_zoom_mode', 'auto_disable')

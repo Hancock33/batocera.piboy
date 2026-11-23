@@ -9,14 +9,14 @@ custom_features:
     prompt: FAST BLITTER (LESS COMPATIBLE)
     description: For weak machines. Some games will not work with this.
     choices:
-      'Off': disabled
+      'Off (Default)': disabled
       'On': enabled
   bios_vj:
     prompt: SHOW BIOS BOOTLOGO
     description: Off is safer, On for specific games.
     choices:
       Show: enabled
-      Skip: disabled
+      Skip (Default): disabled
   virtualjaguar_internal_resolution:
     prompt: INTERNAL RESOLUTION
     description: Render at a multiple of the native resolution.

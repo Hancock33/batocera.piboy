@@ -7,6 +7,7 @@ custom_features:
     prompt: NDS VERSION
     description: Choose the NDS handheld version
     choices:
+      Auto (Default): auto
       DS: ds
       DSi (Experimental): dsi
   melondsds_render_mode:
@@ -35,7 +36,7 @@ custom_features:
     description: Enable this if your game's 3D modles are not rendered correctly. OpenGL renderer only.
     choices:
       Disabled: disabled
-      Enabled: enabled
+      Enabled (Default): enabled
   melondsds_filtering:
     submenu: VIDEO SETTINGS
     prompt: SCREEN FILTERING
@@ -88,7 +89,7 @@ custom_features:
     prompt: LANGUAGE
     description: Overrides the language mode of the emulated console.
     choices:
-      Use Host: auto
+      Use Host (Default): auto
       English: en
       Japanese: ja
       French: fr

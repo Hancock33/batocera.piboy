@@ -61,7 +61,7 @@ class Bsnes(SquashFSMixin, RACore):
 
         # HD Mode 7 (bsnes_hd only, SNES systems)
         if self.config.core == 'bsnes_hd' and self.system in ('snes', 'snes-msu1'):
-            core_options.set_from_config('bsnes_mode7_scale', default='disable')
+            core_options.set_from_config('bsnes_mode7_scale', default='2x')
             core_options.set_from_config('bsnes_mode7_supersample', default='none')
             core_options.set_from_config('bsnes_mode7_wsMode', default='none')
 

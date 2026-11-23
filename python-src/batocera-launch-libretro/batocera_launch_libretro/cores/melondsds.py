@@ -33,12 +33,12 @@ if TYPE_CHECKING:
 class MelonDSDS(AssociatedMouseMixin, RACore):
     def set_core_options(self, core_options: LibretroConfig, /) -> None:
         # System Settings
-        core_options.set_from_config('melonds_console_mode', 'melondsds_console_mode', default='ds')
+        core_options.set_from_config('melonds_console_mode', 'melondsds_console_mode', default='auto')
 
         # Video Settings
         core_options.set_from_config('melonds_render_mode', 'melondsds_render_mode', default='software')
         core_options.set_from_config('melonds_opengl_resolution', 'melondsds_resolution', default='1')
-        core_options.set_from_config('melonds_opengl_better_polygons', 'melondsds_poygon', default='disabled')
+        core_options.set_from_config('melonds_opengl_better_polygons', 'melondsds_poygon', default='enabled')
         core_options.set_from_config('melonds_opengl_filtering', 'melondsds_filtering', default='nearest')
 
         # Screen Settings
@@ -52,7 +52,7 @@ class MelonDSDS(AssociatedMouseMixin, RACore):
 
         # Firmware Settings
         core_options.set_from_config('melonds_firmware_wfc_dns', 'melondsds_dns', default='178.62.43.212')
-        core_options.set_from_config('melonds_firmware_language', 'melondsds_language', default='default')
+        core_options.set_from_config('melonds_firmware_language', 'melondsds_language', default='auto')
         core_options.set_from_config('melonds_firmware_favorite_color', 'melondsds_colour', default='default')
         core_options.set_from_config('melonds_firmware_birth_month', 'melondsds_month', default='default')
         core_options.set_from_config('melonds_firmware_birth_day', 'melondsds_day', default='default')

@@ -11,6 +11,7 @@ custom_features:
     prompt: 3DS SYSTEM REGION
     description: Set the 3DS system region. Auto-select will choose based on the game. Some games are region-locked and require matching regions.
     choices:
+      Auto (Default): Auto
       Japan:     Japan
       USA:       USA
       Europe:    Europe
