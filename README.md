@@ -32,7 +32,7 @@ Built with ![love](https://raw.githubusercontent.com/Hancock33/batocera.piboy/ma
 -----|:-----:|:-----:|:-----:
 Emulators|[azahar](https://github.com/azahar-emu/azahar.git)|2127.0|Nov 23, 2026
 Emulators|[dsperate](http://github.com/beebono/DSperate)|v4.0.1|Nov 23, 2026
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|630fe61372bf18e6868591d534a1cd207335484c|Nov 23, 2026
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|b5d668560b087960cf5afa671e076e9138aed5ff|Nov 23, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e6d454d1caa826affef1784a6097a178a841e598|Nov 23, 2026
 Emulators|[lichii](https://github.com/zortos293/Lichii.git)|e7893bead9329406cac8e2d95cca2c37089f8655|Nov 23, 2026
 Emulators|[odin](http://github.com/Tovarichtch/Odin)|571e6f2accd992979eaf22e1892df70a79eb899b|Nov 23, 2026
@@ -51,8 +51,11 @@ Utils|[shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher.git
 Controllers|[sdl2-gamecontrollerdb](http://github.com/mdqinc/SDL_GameControllerDB)|f95fbc0590c70bd06015b8d2fe03f55d9e2b821d|Nov 23, 2026
 Emulators|[libretro-core-info](http://github.com/libretro/libretro-super)|c3c55c2d5d16ecf7b447fcfc867acc363b0aa1d9|Nov 23, 2026
 Emulators|[retroarch](http://github.com/libretro/RetroArch)|ac509d93d6252acc6fcdc8fc9789bbad12a56574|Nov 23, 2026
+Engines|[libaltsound](http://github.com/vpinball/libaltsound)|d1af7d8f83dbd22885f9ca548413b65ffb5dad3d|Nov 23, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|309a17d882d098fe0a7cad88cb3b6ee6039f24e7|Nov 23, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|4267295c169c69c7c4cb5fa4b3461784d0384b4e|Nov 23, 2026
 Ports|[doomretro](http://github.com/bradharding/doomretro)|865bf0b874ee2e5f44147fe573a82b5bae95055c|Nov 23, 2026
-Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|162da946f248dc537d412a7be908354173d8fb87|Nov 23, 2026
+Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|fede6d8df6681211197b2e38c60c7a7a275a8dda|Nov 23, 2026
 Emulators|[libretro-anygm](http://github.com/retrodiv/AnyGM-libretro)|4a9d5d60019f6f4d3063575b54eb38d94389284e|Nov 23, 2026
 Emulators|[libretro-azahar](https://github.com/azahar-emu/azahar.git)|2127.0|Nov 23, 2026
 Emulators|[libretro-bsnes](http://github.com/libretro/bsnes-libretro)|43df590f4ef4255316b3b5476abba6fb5e46fca7|Nov 23, 2026
@@ -83,7 +86,6 @@ Sources|[libretro-mame-src](http://github.com/hancock33/lr-mame)|38d29525eecff31
 Wine|[wine-x86](https://github.com/Hancock33/batocera-32bit-libs/releases)|20261122|Nov 22, 2026
 Controllers|[hid-tmff2](http://github.com/Kimplul/hid-tmff2)|de19c2c3a18e9d1d3dc4e89eae13d8413e3353d2|Nov 22, 2026
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|a99ca834b8560f6a39a4df5de2d3972523ba2f30|Nov 22, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|30ed4849fb182314a47b9632979c39e7250c7f84|Nov 22, 2026
 Ports|[yquake2](http://github.com/yquake2/yquake2remaster)|8d75f77db59def682c3a78021682098ec295f701|Nov 22, 2026
 Ports|[cs16-client](https://github.com/FWGS/cs16-client.git)|f5db7787f15e5bf88ad64409e48abd06ea143c25|Nov 22, 2026
 Ports|[xash3d-fwgs](https://github.com/FWGS/xash3d-fwgs.git)|0119ead19d61f1064b996f26d17d2f3e1c075fd2|Nov 22, 2026
@@ -128,7 +130,6 @@ Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|69
 Engines|[ruffle](http://github.com/ruffle-rs/ruffle)|v0.8.0|Nov 19, 2026
 Ports|[eduke32](https://voidpoint.io/terminx/eduke32/-/archive/)|8953c8fa0c9a4c0909e7ef0cbbc3a9dbc37b7488|Nov 19, 2026
 Ports|[taradino](http://github.com/fabiangreffrath/taradino)|cb59bd899f7d75946c1297e9a0f94999fa76742a|Nov 19, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|07754f2750ae32efab84a3064cab553f3e56b064|Nov 19, 2026
 Emulators|[libretro-odin](https://github.com/WizzardSK/odin-libretro.git)|942a4865889db6b10f418f76bbf037e22694321f|Nov 19, 2026
 Emulators|[libretro-virtualjaguar](http://github.com/libretro/virtualjaguar-libretro)|v3.13.1|Nov 19, 2026
 Boot|[batocera-rkbin](https://github.com/batocera-linux/batocera-rkbin.git)|290e719c708f17f36b5a13a4c620e7cda0f1ac46|Nov 18, 2026
@@ -139,7 +140,6 @@ Utils|[clevis](http://github.com/latchset/clevis)|dcabb67e3d8ce3d09980005af541d8
 Gpu|[vulkan-validationlayers](https://github.com/KhronosGroup/Vulkan-ValidationLayers.git)|b909e01359469b1bf26ba8b538900dd420c57c93|Nov 18, 2026
 Libraries|[batocera-luajit](http://github.com/openresty/luajit2)|v2.1-20261117|Nov 17, 2026
 Ports|[stuntcar](http://github.com/ptitSeb/stuntcarremake)|c56327db5685c2ae63ea3c73d64ef100183b9359|Nov 17, 2026
-Engines|[libaltsound](http://github.com/vpinball/libaltsound)|99a944d9dd5818d048e184cd6ca348b6dbc77ec9|Nov 17, 2026
 Emulators|[libretro-beetle-saturn](http://github.com/libretro/beetle-saturn-libretro)|7126d65b83b65b4316736434ecca2f5ff4f1a3dd|Nov 17, 2026
 Emulators|[libretro-opera](http://github.com/libretro/opera-libretro)|e01f1dc83e325596b2d09e7f286b0219459433e6|Nov 17, 2026
 Emulators|[libretro-snes9x](http://github.com/libretro/snes9x)|204ea1c0b851f960cbf223075eb1c25641cb483c|Nov 17, 2026
