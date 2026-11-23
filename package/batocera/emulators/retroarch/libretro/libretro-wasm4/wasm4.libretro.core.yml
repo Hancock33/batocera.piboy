@@ -13,9 +13,9 @@ custom_features:
     description: Frames a touch press is held for.
     choices:
       10 (Default): '10'
-      5: '5'
-      20: '20'
-      30: '30'
+      '5': '5'
+      '20': '20'
+      '30': '30'
   # Advanced Options
   wasm4_pixel_type:
     group: ADVANCED OPTIONS

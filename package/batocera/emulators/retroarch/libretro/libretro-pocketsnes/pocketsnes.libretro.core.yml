@@ -58,17 +58,17 @@ custom_features:
     prompt: FRAMESKIP INTERVAL
     description: Frames skipped after each rendered frame in fixed mode.
     choices:
-      0: 0
+      '0': 0
       1 (Default): 1
-      2: 2
-      3: 3
-      4: 4
-      5: 5
-      6: 6
-      7: 7
-      8: 8
-      9: 9
-      10: 10
+      '2': 2
+      '3': 3
+      '4': 4
+      '5': 5
+      '6': 6
+      '7': 7
+      '8': 8
+      '9': 9
+      '10': 10
   snes9x2002_overclock_cycles:
     group: ADVANCED OPTIONS
     prompt: REDUCE SLOWDOWN (HACK)

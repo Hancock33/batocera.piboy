@@ -11,10 +11,10 @@ custom_features:
     description: Overrides the model's CPU. Applies on restart.
     choices:
       Auto (Default): auto
-      68000: '68000'
-      68010: '68010'
-      68020: '68020'
-      68030: '68030'
+      '68000': '68000'
+      '68010': '68010'
+      '68020': '68020'
+      '68030': '68030'
   amiberry_chipset:
     group: SYSTEM
     prompt: CHIPSET

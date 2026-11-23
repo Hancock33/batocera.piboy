@@ -40,12 +40,12 @@ custom_features:
     prompt: NUMBER OF THREADS
     description: Applies on restart.
     choices:
-      1: '1'
-      2: '2'
+      '1': '1'
+      '2': '2'
       4 (Default): '4'
-      8: '8'
-      16: '16'
-      32: '32'
+      '8': '8'
+      '16': '16'
+      '32': '32'
 file_extensions:
   - bin
   - ccd

@@ -54,10 +54,10 @@ custom_features:
     prompt: FRAME RATE
     choices:
       Auto (Default): AUTO
-      60: '60'
-      30: '30'
-      20: '20'
-      15: '15'
+      '60': '60'
+      '30': '30'
+      '20': '20'
+      '15': '15'
   X1_DISPSYNC:
     group: DISPLAY
     prompt: DISPLAY VSYNC

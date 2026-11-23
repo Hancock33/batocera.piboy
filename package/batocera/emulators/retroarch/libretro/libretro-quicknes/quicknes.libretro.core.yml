@@ -94,14 +94,14 @@ custom_features:
     group: CONTROLS
     prompt: TURBO PULSE WIDTH (FRAMES)
     choices:
-      1: 1
-      2: 2
+      '1': 1
+      '2': 2
       3 (Default): 3
-      5: 5
-      10: 10
-      15: 15
-      30: 30
-      60: 60
+      '5': 5
+      '10': 10
+      '15': 15
+      '30': 30
+      '60': 60
   quicknes_up_down_allowed:
     group: CONTROLS
     prompt: ALLOW OPPOSING DIRECTIONS
