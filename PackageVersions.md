@@ -85,7 +85,7 @@ Emulators|[dosbox-x](http://github.com/joncampbell123/dosbox-x)|dosbox-x-v2026.1
 Emulators|[dosbox](http://github.com/duganchen/dosbox)|e6b88ad03202d1f74e329f54f213d3b070bd6202|Jan 11, 2020
 Emulators|[dsperate](http://github.com/beebono/DSperate)|v4.0.1|Nov 23, 2026
 Emulators|[duckstation](http://github.com/stenzek/duckstation)|43531c09ffa950ddad234db8ad16cd7469c2f266|Nov 10, 2026
-Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|630fe61372bf18e6868591d534a1cd207335484c|Nov 23, 2026
+Emulators|[eden](https://git.eden-emu.dev/eden-emu/eden)|b5d668560b087960cf5afa671e076e9138aed5ff|Nov 23, 2026
 Emulators|[eka2l1](https://github.com/EKA2L1/EKA2L1.git)|e6d454d1caa826affef1784a6097a178a841e598|Nov 23, 2026
 Emulators|[flycast](https://github.com/flyinghead/flycast.git)|105342d53fc181493cd372c8f1ebf5c49621ed1a|Nov 22, 2026
 Emulators|[fsuae](http://github.com/FrodeSolheim/fs-uae)|v5.0.7|Sept 05, 2025
@@ -97,7 +97,7 @@ Emulators|[keisho](https://github.com/Keisho-Emu/Keisho.git)|v0.9.63|Nov 15, 202
 Emulators|[libretro-2048](http://github.com/libretro/libretro-2048)|39333f7b13dc4daea7c151d9c38d22b961246343|Aug 19, 2026
 Emulators|[libretro-81](http://github.com/libretro/81-libretro)|fa7094910d040baa5fd8b11dbf6a1a618330ecd9|Apr 20, 2026
 Emulators|[libretro-amiberry](https://github.com/BlitterStudio/amiberry.git)|v8.5.0|Oct 27, 2026
-Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|162da946f248dc537d412a7be908354173d8fb87|Nov 23, 2026
+Emulators|[libretro-anybor](http://github.com/retrodiv/AnyBOR-libretro)|fede6d8df6681211197b2e38c60c7a7a275a8dda|Nov 23, 2026
 Emulators|[libretro-anygm](http://github.com/retrodiv/AnyGM-libretro)|4a9d5d60019f6f4d3063575b54eb38d94389284e|Nov 23, 2026
 Emulators|[libretro-arduous](https://github.com/libretro/arduous.git)|831b83e67ad46e8c86b8165649ff81bc6fc6c157|Sept 20, 2026
 Emulators|[libretro-armsx2](https://github.com/ARMSX2/ARMSX2.git)|nightly-20261122|Nov 22, 2026
@@ -295,13 +295,13 @@ Engines|[cargs](http://github.com/likle/cargs)|v1.2.0|Jun 19, 2024
 Engines|[easyrpg-player](http://github.com/EasyRPG/Player)|a99ca834b8560f6a39a4df5de2d3972523ba2f30|Nov 22, 2026
 Engines|[gametank-emulator](https://github.com/clydeshaffer/GameTankEmulator)|69bd00313fc0c7957502bad007bfed8022e2f6f2|Nov 19, 2026
 Engines|[ikemen](http://github.com/ikemen-engine/Ikemen-GO)|v1.0.0|Sept 11, 2026
-Engines|[libaltsound](http://github.com/vpinball/libaltsound)|99a944d9dd5818d048e184cd6ca348b6dbc77ec9|Nov 17, 2026
+Engines|[libaltsound](http://github.com/vpinball/libaltsound)|d1af7d8f83dbd22885f9ca548413b65ffb5dad3d|Nov 23, 2026
 Engines|[libdmdutil](http://github.com/vpinball/libdmdutil)|6b8f711a5346cf2e70562872ebc1a57b210906df|Oct 30, 2026
 Engines|[libdof](http://github.com/jsm174/libdof)|69ed5044619fbe8846b7edf12eb03244a5c53457|Nov 11, 2026
 Engines|[libframeutil](http://github.com/ppuc/libframeutil)|aa2a26dc8e852cff710e398d50cd8574460e6c5f|Nov 06, 2026
 Engines|[liblcf](http://github.com/EasyRPG/liblcf)|6854310c3432e553fd4ae672ce861899c80c3bd0|Aug 03, 2026
 Engines|[libmysofa](http://github.com/hoene/libmysofa)|648eed03472e6720a1ea45d1a1f86c4efb569ff9|Sept 08, 2026
-Engines|[libpinmame](http://github.com/vpinball/pinmame)|07754f2750ae32efab84a3064cab553f3e56b064|Nov 19, 2026
+Engines|[libpinmame](http://github.com/vpinball/pinmame)|309a17d882d098fe0a7cad88cb3b6ee6039f24e7|Nov 23, 2026
 Engines|[libpupdmd](http://github.com/PPUC/libpupdmd)|64f98eab4713d6c20e11dc552a3147e6de90635d|Sept 09, 2026
 Engines|[libserum](http://github.com/PPUC/libserum)|v2.8.2|Oct 20, 2026
 Engines|[libspatialaudio](http://github.com/videolan/libspatialaudio)|d149ed9744fd399b835c6f2920511f8cbcfce5ea|Jul 01, 2026
@@ -320,7 +320,7 @@ Engines|[sockpp](http://github.com/fpagliughi/sockpp)|v1.0.0|Dec 17, 2023
 Engines|[solarus-engine](http://gitlab.com/solarus-games/solarus)|v2.1.4|Sept 08, 2026
 Engines|[thextech](https://github.com/TheXTech/TheXTech)|v1.7.4.2-hotfix|Oct 25, 2026
 Engines|[tic80](https://github.com/nesbox/TIC-80.git)|7656cf4ba0d4c4b8034fb2ee8490e0daa0d607f6|Nov 22, 2026
-Engines|[vpinball](http://github.com/vpinball/vpinball)|30ed4849fb182314a47b9632979c39e7250c7f84|Nov 22, 2026
+Engines|[vpinball](http://github.com/vpinball/vpinball)|4267295c169c69c7c4cb5fa4b3461784d0384b4e|Nov 23, 2026
 Firmwares|[alllinuxfirmwares](https://www.kernel.org/pub/linux/kernel/firmware)|20261019|Oct 17, 2026
 Firmwares|[amlogic-common-drivers](http://)|$(or|Apr 27, 2026
 Firmwares|[broadcom-bt-firmware](https://github.com/winterheart/broadcom-bt-firmware.git)|v12.0.1.1105_p5|Jul 29, 2026
