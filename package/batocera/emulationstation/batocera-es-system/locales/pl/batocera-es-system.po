@@ -4726,6 +4726,11 @@ msgctxt "game_options"
 msgid "ANALOG TURN SENSITIVITY"
 msgstr ""
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "ANISOTROPIC FILTER"
+msgstr "FILTR ANIZOTROPOWY"
+
 #. TRANSLATION: armsx2, dolphin, dxx-rebirth, eden, flycast, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
@@ -4735,11 +4740,6 @@ msgstr "FILTROWANIE ANIZOTROPOWE"
 msgctxt "game_options"
 msgid "ANISOTROPIC LEVEL"
 msgstr ""
-
-#. TRANSLATION: openjk
-msgctxt "game_options"
-msgid "ANISOTROPIC FILTER"
-msgstr "FILTR ANIZOTROPOWY"
 
 #. TRANSLATION: libretro/pd777
 msgctxt "game_options"
@@ -12109,8 +12109,8 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
-"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root "
-"of your <game>.pc rom folder."
+"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the "
+"root of your <game>.pc rom folder."
 msgstr ""
 "Włącz emulację Gravis Ultrasound. Upewnij się, że folder Ultrasound znajduje "
 "się w katalogu głównym folderu z rom'ami <game>.pc."
@@ -17008,8 +17008,8 @@ msgstr "Ekwipunek"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Useful to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
 "Odwraca Backglass i pole gry. Przydatne do używania Backglass jako ekranu "
 "głównego dla innych emulatorów."
@@ -24162,7 +24162,7 @@ msgctxt "game_options"
 msgid "Reduces audio crackle and stutter."
 msgstr ""
 
-#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6
+#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6, ...
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the perceived color depth."
 msgstr "Zmniejsza pasma między kolorami i poprawia postrzeganą głębię kolorów."
@@ -27620,6 +27620,15 @@ msgctxt "game_options"
 msgid "Sony DS"
 msgstr "Sony DS"
 
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
+msgctxt "game_options"
+msgid ""
+"Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
+"used YM2612 while later revisions used YM3438."
+msgstr ""
+"Generator dźwięku. MAME jest szybszy, a Nuked dokładniejszy. Oryginalny "
+"model używał YM2612, podczas gdy późniejsze wersje używały YM3438."
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SoundBlaster 1.0"
@@ -27644,15 +27653,6 @@ msgstr "SoundBlaster Pro"
 msgctxt "game_options"
 msgid "SoundBlaster Pro 2"
 msgstr "SoundBlaster Pro 2"
-
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
-msgctxt "game_options"
-msgid ""
-"Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
-"used YM2612 while later revisions used YM3438."
-msgstr ""
-"Generator dźwięku. MAME jest szybszy, a Nuked dokładniejszy. Oryginalny "
-"model używał YM2612, podczas gdy późniejsze wersje używały YM3438."
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
@@ -32516,10 +32516,6 @@ msgstr "żółty/niebieski"
 #~ msgctxt "game_options"
 #~ msgid "ALTCOLOR"
 #~ msgstr "ALTCOLOR"
-
-#~ msgctxt "game_options"
-#~ msgid "ANISOTROPIC FILTER"
-#~ msgstr "FILTR ANIZOTROPOWY"
 
 #~ msgctxt "game_options"
 #~ msgid "ARI/D93 (recommended for all JP developed games)"

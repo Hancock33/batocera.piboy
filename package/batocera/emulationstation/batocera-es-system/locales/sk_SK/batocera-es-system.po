@@ -4724,6 +4724,11 @@ msgctxt "game_options"
 msgid "ANALOG TURN SENSITIVITY"
 msgstr ""
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "ANISOTROPIC FILTER"
+msgstr "ANIZOTROPICKÝ FILTER"
+
 #. TRANSLATION: armsx2, dolphin, dxx-rebirth, eden, flycast, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
@@ -4733,11 +4738,6 @@ msgstr "Anizotropické filtrovanie"
 msgctxt "game_options"
 msgid "ANISOTROPIC LEVEL"
 msgstr ""
-
-#. TRANSLATION: openjk
-msgctxt "game_options"
-msgid "ANISOTROPIC FILTER"
-msgstr "ANIZOTROPICKÝ FILTER"
 
 #. TRANSLATION: libretro/pd777
 msgctxt "game_options"
@@ -12086,8 +12086,8 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
-"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root "
-"of your <game>.pc rom folder."
+"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the "
+"root of your <game>.pc rom folder."
 msgstr ""
 "Povoliť emuláciu Gravis UltraSound. Uistite sa, že priečinok ULTRASND je v "
 "koreňovom adresári vášho priečinka .pc rom <game>."
@@ -16966,8 +16966,8 @@ msgstr "Inventár"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Useful to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
 "Invertovať zadné sklo a hraciu plochu. Užitočné pre použitie zadného skla "
 "ako hlavnej obrazovky pre iné emulátory."
@@ -24118,7 +24118,7 @@ msgctxt "game_options"
 msgid "Reduces audio crackle and stutter."
 msgstr ""
 
-#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6
+#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6, ...
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the perceived color depth."
 msgstr "Redukuje pruhy medzi farbami a zlepšuje vnímanú farebnú hĺbku."
@@ -27570,6 +27570,15 @@ msgctxt "game_options"
 msgid "Sony DS"
 msgstr "Sony DS"
 
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
+msgctxt "game_options"
+msgid ""
+"Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
+"used YM2612 while later revisions used YM3438."
+msgstr ""
+"Zvukový generátor. MAME je rýchlejší a Nuked je cyklicky presný. Pôvodný "
+"model používal YM2612, zatiaľ čo neskoršie revízie používali YM3438."
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SoundBlaster 1.0"
@@ -27594,15 +27603,6 @@ msgstr "SoundBlaster Pro"
 msgctxt "game_options"
 msgid "SoundBlaster Pro 2"
 msgstr "SoundBlaster Pro 2"
-
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
-msgctxt "game_options"
-msgid ""
-"Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
-"used YM2612 while later revisions used YM3438."
-msgstr ""
-"Zvukový generátor. MAME je rýchlejší a Nuked je cyklicky presný. Pôvodný "
-"model používal YM2612, zatiaľ čo neskoršie revízie používali YM3438."
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
@@ -32540,10 +32540,6 @@ msgstr "žltá/modrá"
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"
 #~ msgstr "AMD FidelityFX (iba Vulkan)"
-
-#~ msgctxt "game_options"
-#~ msgid "ANISOTROPIC FILTER"
-#~ msgstr "Anizotropické filtrovanie"
 
 #~ msgctxt "game_options"
 #~ msgid "ARI/D93 (recommended for all JP developed games)"

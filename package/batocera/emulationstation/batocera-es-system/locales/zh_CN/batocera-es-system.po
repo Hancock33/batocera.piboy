@@ -4722,6 +4722,11 @@ msgctxt "game_options"
 msgid "ANALOG TURN SENSITIVITY"
 msgstr ""
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "ANISOTROPIC FILTER"
+msgstr "各向异性滤光片"
+
 #. TRANSLATION: armsx2, dolphin, dxx-rebirth, eden, flycast, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
@@ -4731,11 +4736,6 @@ msgstr "各向异性过滤"
 msgctxt "game_options"
 msgid "ANISOTROPIC LEVEL"
 msgstr ""
-
-#. TRANSLATION: openjk
-msgctxt "game_options"
-msgid "ANISOTROPIC FILTER"
-msgstr "各向异性滤光片"
 
 #. TRANSLATION: libretro/pd777
 msgctxt "game_options"
@@ -12031,8 +12031,8 @@ msgstr "启用Gamecube引导动画和BIOS访问（需要相应用户目录中的
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
-"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root "
-"of your <game>.pc rom folder."
+"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the "
+"root of your <game>.pc rom folder."
 msgstr ""
 "启用Gravis Utrasound模拟。确保ULTRASND文件夹位于<game>.pc rom文件夹的根目录"
 "中。"
@@ -16829,8 +16829,8 @@ msgstr "背包"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Useful to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr "倒置背景板和游戏区域. 对于其他模拟器将背景板用作主屏幕时很有用."
 
 #. TRANSLATION: hypseus-singe
@@ -23944,7 +23944,7 @@ msgctxt "game_options"
 msgid "Reduces audio crackle and stutter."
 msgstr ""
 
-#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6
+#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6, ...
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the perceived color depth."
 msgstr "减少颜色之间的条纹，并提高预先设定的颜色深度。"
@@ -27376,6 +27376,15 @@ msgctxt "game_options"
 msgid "Sony DS"
 msgstr "Sony DS"
 
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
+msgctxt "game_options"
+msgid ""
+"Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
+"used YM2612 while later revisions used YM3438."
+msgstr ""
+"声音生成器，MAME运行速度更快，Nuked则是按周期精确，最初的型号采用了YM2612，而"
+"后来的版本采用了YM3438。"
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SoundBlaster 1.0"
@@ -27400,15 +27409,6 @@ msgstr "SoundBlaster Pro"
 msgctxt "game_options"
 msgid "SoundBlaster Pro 2"
 msgstr "SoundBlaster Pro 2"
-
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
-msgctxt "game_options"
-msgid ""
-"Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
-"used YM2612 while later revisions used YM3438."
-msgstr ""
-"声音生成器，MAME运行速度更快，Nuked则是按周期精确，最初的型号采用了YM2612，而"
-"后来的版本采用了YM3438。"
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
@@ -32305,10 +32305,6 @@ msgstr "黄色/蓝色"
 #~ msgctxt "game_options"
 #~ msgid "AMD FidelityFX (Vulkan Only)"
 #~ msgstr "AMD FidelityFX（仅Vulkan）"
-
-#~ msgctxt "game_options"
-#~ msgid "ANISOTROPIC FILTER"
-#~ msgstr "各向异性过滤"
 
 #~ msgctxt "game_options"
 #~ msgid "ARI/D93 (recommended for all JP developed games)"

@@ -4720,6 +4720,11 @@ msgctxt "game_options"
 msgid "ANALOG TURN SENSITIVITY"
 msgstr ""
 
+#. TRANSLATION: openjk
+msgctxt "game_options"
+msgid "ANISOTROPIC FILTER"
+msgstr "비등방성 필터"
+
 #. TRANSLATION: armsx2, dolphin, dxx-rebirth, eden, flycast, ...
 msgctxt "game_options"
 msgid "ANISOTROPIC FILTERING"
@@ -4729,11 +4734,6 @@ msgstr "비등방성 필터링"
 msgctxt "game_options"
 msgid "ANISOTROPIC LEVEL"
 msgstr ""
-
-#. TRANSLATION: openjk
-msgctxt "game_options"
-msgid "ANISOTROPIC FILTER"
-msgstr "비등방성 필터"
 
 #. TRANSLATION: libretro/pd777
 msgctxt "game_options"
@@ -12082,8 +12082,8 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
-"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root "
-"of your <game>.pc rom folder."
+"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the "
+"root of your <game>.pc rom folder."
 msgstr ""
 "그레비스 울트라사운드 에뮬레이션을 활성화합니다. ULTRASND 폴더가 <game>.pc "
 "rom 폴더의 루트에 있는지 확인합니다."
@@ -16936,8 +16936,8 @@ msgstr "물품 목록"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Useful to use the Backglass as "
-"main screen for other emulators."
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as main "
+"screen for other emulators."
 msgstr ""
 "백글라스와 플레이필드를 반전합니다. 다른 에뮬레이터의 메인 화면으로 백글라스"
 "를 사용하는 데 유용합니다."
@@ -24076,7 +24076,7 @@ msgctxt "game_options"
 msgid "Reduces audio crackle and stutter."
 msgstr ""
 
-#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6
+#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6, ...
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the perceived color depth."
 msgstr "색상 간 밴딩 현상을 줄이고, 인식되는 색상 깊이를 향상시킵니다."
@@ -27525,6 +27525,15 @@ msgctxt "game_options"
 msgid "Sony DS"
 msgstr "소니 DS"
 
+#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
+msgctxt "game_options"
+msgid ""
+"Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
+"used YM2612 while later revisions used YM3438."
+msgstr ""
+"사운드 생성기. 마메는 더 빠르고 Nuked는 사이클 정확도가 높습니다. 원래 모델"
+"은 YM2612를 사용했지만 이후 개정판은 YM3438을 사용했습니다."
+
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid "SoundBlaster 1.0"
@@ -27549,15 +27558,6 @@ msgstr "사운드블라스터 프로"
 msgctxt "game_options"
 msgid "SoundBlaster Pro 2"
 msgstr "사운드블라스터 프로 2"
-
-#. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
-msgctxt "game_options"
-msgid ""
-"Sound generator. MAME is faster and Nuked is cycle accurate. Original model "
-"used YM2612 while later revisions used YM3438."
-msgstr ""
-"사운드 생성기. 마메는 더 빠르고 Nuked는 사이클 정확도가 높습니다. 원래 모델"
-"은 YM2612를 사용했지만 이후 개정판은 YM3438을 사용했습니다."
 
 #. TRANSLATION: xenia-edge
 msgctxt "game_options"
@@ -32407,10 +32407,6 @@ msgstr "노란색/파란색"
 #~ msgctxt "game_options"
 #~ msgid "ALTCOLOR"
 #~ msgstr "ALTCOLOR"
-
-#~ msgctxt "game_options"
-#~ msgid "ANISOTROPIC FILTER"
-#~ msgstr "비등방성 필터"
 
 #~ msgctxt "game_options"
 #~ msgid "ARI/D93 (recommended for all JP developed games)"
