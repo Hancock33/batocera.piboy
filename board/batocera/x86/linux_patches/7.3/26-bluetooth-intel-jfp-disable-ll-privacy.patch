@@ -1,16 +1,16 @@
-diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index 1d70df790bb1..177316822dbe 100644
---- a/drivers/bluetooth/btusb.c
-+++ b/drivers/bluetooth/btusb.c
-@@ -69,6 +69,7 @@ static struct usb_driver btusb_driver;
+diff --git a/drivers/bluetooth/btusb_main.c b/drivers/bluetooth/btusb_main.c
+index ec1e18e765b1..4b9019a79336 100644
+--- a/drivers/bluetooth/btusb_main.c
++++ b/drivers/bluetooth/btusb_main.c
+@@ -68,6 +68,7 @@ static struct usb_driver btusb_driver;
+ #define BTUSB_INTEL_NO_WBS_SUPPORT	BIT(26)
  #define BTUSB_ACTIONS_SEMI		BIT(27)
  #define BTUSB_BARROT			BIT(28)
- #define BTUSB_BROKEN_EXT_SCAN		BIT(29)
 +#define BTUSB_BROKEN_LL_PRIVACY		BIT(30)
  
  static const struct usb_device_id btusb_table[] = {
  	/*
-@@ -519,7 +520,8 @@ static const struct usb_device_id quirks_table[] = {
+@@ -518,7 +519,8 @@ static const struct usb_device_id quirks_table[] = {
  	{ USB_DEVICE(0x8087, 0x0a2b), .driver_info = BTUSB_INTEL_COMBINED },
  	{ USB_DEVICE(0x8087, 0x0aa7), .driver_info = BTUSB_INTEL_COMBINED |
  						     BTUSB_INTEL_BROKEN_SHUTDOWN_LED },
@@ -20,7 +20,7 @@ index 1d70df790bb1..177316822dbe 100644
  
  	/* Other Intel Bluetooth devices */
  	{ USB_VENDOR_AND_INTERFACE_INFO(0x8087, 0xe0, 0x01, 0x01),
-@@ -4385,6 +4387,9 @@ static int btusb_probe(struct usb_interface *intf,
+@@ -4383,6 +4385,9 @@ static int btusb_probe(struct usb_interface *intf,
  			btintel_set_flag(hdev, INTEL_BROKEN_SHUTDOWN_LED);
  	}
  
@@ -31,7 +31,7 @@ index 1d70df790bb1..177316822dbe 100644
  		hdev->set_bdaddr = btusb_set_bdaddr_marvell;
  
 diff --git a/include/net/bluetooth/hci.h b/include/net/bluetooth/hci.h
-index a91ec6744db0..1df4a656102b 100644
+index 508f743e28b4..0241dba0f494 100644
 --- a/include/net/bluetooth/hci.h
 +++ b/include/net/bluetooth/hci.h
 @@ -375,6 +375,16 @@ enum {

@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/drm_connector.c b/drivers/gpu/drm/drm_connector.c
-index 8dd69ec4ab7e..cb0269fa20ec 100644
+index f10b0452e26f..1dda8df88f8b 100644
 --- a/drivers/gpu/drm/drm_connector.c
 +++ b/drivers/gpu/drm/drm_connector.c
 @@ -278,6 +278,7 @@ static int drm_connector_init_only(struct drm_device *dev,
@@ -10,7 +10,7 @@ index 8dd69ec4ab7e..cb0269fa20ec 100644
  	INIT_LIST_HEAD(&connector->modes);
  	mutex_init(&connector->mutex);
  	mutex_init(&connector->cec.mutex);
-@@ -795,6 +796,11 @@ void drm_connector_cleanup(struct drm_connector *connector)
+@@ -797,6 +798,11 @@ void drm_connector_cleanup(struct drm_connector *connector)
  	list_for_each_entry_safe(mode, t, &connector->probed_modes, head)
  		drm_mode_remove(connector, mode);
  

@@ -14,10 +14,10 @@ index d913f065ecca..14a9023150cd 100644
  		hw_crtc_timing.v_total /= 2;
  		hw_crtc_timing.v_border_top /= 2;
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
-index cb4084ff51c4..c9f2346b7c3b 100644
+index fc881530184c..0c7ab897239f 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dcn10/dcn10_hwseq.c
-@@ -3987,6 +3987,10 @@ static void apply_front_porch_workaround(
+@@ -3986,6 +3986,10 @@ static void apply_front_porch_workaround(
  	if (timing->flags.INTERLACE == 1) {
  		if (timing->v_front_porch < 2)
  			timing->v_front_porch = 2;
