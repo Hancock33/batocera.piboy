@@ -3,8 +3,8 @@
 # libretro-eduke32
 #
 ################################################################################
-# Version: Commits on Nov 02, 2026
-LIBRETRO_EDUKE32_VERSION = b5918d5cf3fc698700c86693fce3ce5200c28b96
+# Version: Commits on Nov 23, 2026
+LIBRETRO_EDUKE32_VERSION = a04e3366ab8b35e2d347c6613ff70dda03def6b9
 LIBRETRO_EDUKE32_SITE = https://github.com/cscd98/eduke32-libretro.git
 LIBRETRO_EDUKE32_SITE_METHOD = git
 LIBRETRO_EDUKE32_GIT_SUBMODULES = YES

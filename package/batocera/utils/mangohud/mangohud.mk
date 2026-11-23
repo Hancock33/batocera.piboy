@@ -3,8 +3,8 @@
 # mangohud
 #
 ################################################################################
-# Version: Commits on May 27, 2026
-MANGOHUD_VERSION = v0.8.4
+# Version: Commits on Nov 23, 2026
+MANGOHUD_VERSION = v0.8.5-rc1
 MANGOHUD_SITE = $(call github,flightlessmango,MangoHud,$(MANGOHUD_VERSION))
 MANGOHUD_LICENSE = MIT
 MANGOHUD_LICENSE_FILES = LICENSE
