@@ -81,4 +81,3 @@ class YabaSanshiro(GLOverrideMixin, Core):
 
         core_options.set('yabasanshiro_multitap_port1', port1)
         core_options.set('yabasanshiro_multitap_port2', port2)
-
