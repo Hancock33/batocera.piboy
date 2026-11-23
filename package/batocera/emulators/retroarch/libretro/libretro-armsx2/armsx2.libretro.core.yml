@@ -4,98 +4,74 @@ shared_features:
   - wheel_deadzone
   - wheel_midzone
 custom_features:
+  # System
   lr_armsx2_fast_boot:
-    submenu: SYSTEM
+    group: SYSTEM
     prompt: BIOS FAST BOOT
-    description: Skip the bios boot logo, may cause default language issues.
+    description: Skip the BIOS boot animation, may cause default language issues.
     choices:
+      Enabled (Default): enabled
       Disabled: disabled
-      Enabled: enabled
-  lr_armsx2_fast_cdvd:
-    submenu: SYSTEM
-    prompt: FAST CD/DVD ACCESS
-    description: A small number of games will have compatibility problems with this enabled.
-    choices:
-      Disabled: disabled
-      Enabled: enabled
   lr_armsx2_cheats:
-    submenu: SYSTEM
+    group: SYSTEM
     prompt: CHEATS
-    description: Enables cheats files to be read from the `cheats` directory.
+    description: Load .patch cheat files from the pcsx2/cheats folder for the running game.
     choices:
-      Disabled: disabled
+      Disabled (Default): disabled
       Enabled: enabled
-  lr_armsx2_language_unlock:
-    submenu: SYSTEM
-    prompt: LANGUAGE UNLOCK
-    description: Helps forcing an international Japanese version to English. Unlocking more European languages etc.
-    choices:
-      Disabled: disabled
-      Enabled: enabled
+  # Display
   lr_armsx2_resolution:
-    submenu: GRAPHICS
+    group: DISPLAY
     prompt: RENDERING RESOLUTION
     description: Enhancement. Increase the rendering resolution. Makes 3D objects clearer.
     choices:
-      1x Native (PS2): 1x Native (PS2)
-      2x Native (~720p): 2x Native (~720p)
-      3x Native (~1080p): 3x Native (~1080p)
-      4x Native (~1440p/2K): 4x Native (~1440p/2K)
-      5x Native (~1800p/3K): 5x Native (~1800p/3K)
-      6x Native (~2160p/4K): 6x Native (~2160p/4K)
-      7x Native (~2530p): 7x Native (~2530p)
-      8x Native (~2880p/5K): 8x Native (~2880p/5K)
-      9x Native (~3240p): 9x Native (~3240p)
-      10x Native (~3600p/6K): 10x Native (~3600p/6K)
-      11x Native (~3960p): 11x Native (~3960p)
-      12x Native (~4320p/8K): 12x Native (~4320p/8K)
-      13x Native (~5824p): 13x Native (~5824p)
-      14x Native (~6272p): 14x Native (~6272p)
-      15x Native (~6720p): 15x Native (~6720p)
-      16x Native (~7168p): 16x Native (~7168p)
+      1x Native (Default): 1x
+      2x Native (~720p): 2x
+      3x Native (~1080p): 3x
+      4x Native (~1440p/2K): 4x
   lr_armsx2_texture_filtering:
-    submenu: GRAPHICS
+    group: DISPLAY
     prompt: TEXTURE FILTERING
     description: Enhancement. Smooth/upscale textures on 3D objects.
     choices:
       Nearest: Nearest
       Bilinear (Forced): Bilinear (Forced)
-      Bilinear (PS2): Bilinear (PS2)
-      Bilinear (Forced excluding sprite): Bilinear (Forced excluding sprite)
+      Bilinear (PS2) (Default): Bilinear (PS2)
+      Bilinear (Forced excluding sprites): Bilinear (Forced excluding sprites)
   lr_armsx2_trilinear_filtering:
-    submenu: GRAPHICS
+    group: DISPLAY
     prompt: TRILINEAR FILTERING
     description: Control the texture's trilinear filtering of the emulation.
     choices:
-      'OFF': false
+      Automatic (Default): Automatic
+      'Off': 'Off'
       Trilinear (PS2): Trilinear (PS2)
       Trilinear (Forced): Trilinear (Forced)
   lr_armsx2_anisotropic:
-    submenu: GRAPHICS
+    group: DISPLAY
     prompt: ANISOTROPIC FILTERING
     description: Improves clarity of distant textures.
     choices:
-      'OFF': disabled
-      2x: 2x
-      4x: 4x
-      8x: 8x
-      16x: 16x
+      'Off (Default)': '0'
+      2x: '2'
+      4x: '4'
+      8x: '8'
+      16x: '16'
   lr_armsx2_dithering:
-    submenu: GRAPHICS
+    group: DISPLAY
     prompt: DITHERING
-    description: Reduces banding between colors and improves the preceived color depth.
+    description: Reduces banding between colors and improves the perceived color depth.
     choices:
-      'OFF': false
+      Unscaled (Default): Unscaled
+      'Off': 'Off'
       Scaled: Scaled
-      Unscaled: Unscaled
-      Force 32bit: Force 32bit
   lr_armsx2_blending:
-    submenu: GRAPHICS
+    group: DISPLAY
     prompt: BLENDING ACCURACY
     description: The higher the setting, the more blending is emulated in the shader accurately, and the higher the speed penalty will be.
     choices:
       Minimum: Minimum
-      Basic: Basic
+      Basic (Default): Basic
       Medium: Medium
       High: High
       Full: Full

@@ -53,7 +53,7 @@ custom_features:
     description: Apply texture filtering to enhance visual quality. Some filters may significantly impact performance.
     choices:
       None:              none
-      Anime4K Ultrafast: Anime4K Ultrafast
+      Anime4K (OpenGL only): Anime4K
       Bicubic:           Bicubic
       ScaleForce:        ScaleForce
       xBRZ:              xBRZ

@@ -22,7 +22,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from batocera_common.dataclasses import cached_dataclass
+from batocera_common.dataclasses import cached_dataclass, cached_property
 from batocera_common.paths import BIOS, ROMS
 from batocera_launch_libretro import Core
 
@@ -32,6 +32,25 @@ if TYPE_CHECKING:
 
 @cached_dataclass
 class Px68k(Core):
+    # Joypad type, applied to both players as the libretro device type
+    # (RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_JOYPAD, n)). Older yml saved the core labels.
+    @cached_property
+    def _joytype(self) -> str:
+        joytype = self.config.get_str('px68k_joytype', '1')
+        return {
+            'Default (2 Buttons)': '1',
+            'CPSF-MD (8 Buttons)': '513',
+            'CPSF-SFC (8 Buttons)': '769',
+        }.get(joytype, joytype)
+
+    @cached_property
+    def player1_device_type(self) -> str | None:
+        return self._joytype
+
+    @cached_property
+    def player2_device_type(self) -> str | None:
+        return self._joytype
+
     def generate_special_configs(self) -> None:
         # Fresh config file
         keropi_config = BIOS / 'keropi' / 'config'
@@ -56,8 +75,3 @@ class Px68k(Core):
         core_options.set(
             'px68k_frameskip', {'1/8 Frame1': '1/8 Frame', '16 Frame': '1/16 Frame'}.get(frameskip, frameskip)
         )
-
-        # Joypad Type for two players
-        joytype = self.config.get('px68k_joytype', 'Default (2 Buttons)')
-        core_options.set('px68k_joytype1', joytype)
-        core_options.set('px68k_joytype2', joytype)

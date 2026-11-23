@@ -10,19 +10,22 @@ shared_features:
   - wheel_deadzone
   - wheel_midzone
 custom_features:
-  geolith_system:
+  # System
+  geolith_system_type:
+    group: SYSTEM
     prompt: SYSTEM TYPE
     choices:
-      "AES (Home Console)": AES
-      "MVS (Arcade)": MVS
-      "Universe BIOS (Cheats)": Universe BIOS
+      AES (Home Console) (Default): aes
+      MVS (Arcade): mvs
+      Universe BIOS (Cheats): uni
   geolith_region:
+    group: SYSTEM
     prompt: REGION
     choices:
-      "USA": USA
-      "Japan": Japan
-      "Asia": Asia
-      "Europe": Europe
+      USA (Default): us
+      Japan: jp
+      Asia: as
+      Europe: eu
 file_extensions:
   - neo
 systems:

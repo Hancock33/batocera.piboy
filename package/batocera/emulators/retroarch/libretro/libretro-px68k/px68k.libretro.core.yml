@@ -45,9 +45,10 @@ custom_features:
     prompt: JOYPAD TYPE
     description: Applies to both players.
     choices:
-      Default (2 Buttons): Default (2 Buttons)
-      Megadrive (8 Buttons): CPSF-MD (8 Buttons)
-      Super Famicom (8 Buttons): CPSF-SFC (8 Buttons)
+      Default (2 Buttons) (Default): 1
+      Megadrive (8 Buttons): 513
+      Super Famicom (8 Buttons): 769
+      Cyberstick (Digital): 1025
 file_extensions:
   - dim
   - img

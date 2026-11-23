@@ -135,7 +135,8 @@ class Dolphin(Core):
         core_options.set_from_config('dolphin_osd_enabled', 'wii_osd', default='enabled')
 
         # Light gun
-        core_options.set('dolphin_ir_mode', '3' if self.config.use_guns and self.guns else '1')
+        # '2' = mouse controls the Wiimote pointer (light guns); '1' = right stick (absolute)
+        core_options.set('dolphin_ir_mode', '2' if self.config.use_guns and self.guns else '1')
 
     def set_gun_core_options(self, core_options: LibretroConfig, /) -> None:
         # Dolphin IR calibration from metadata

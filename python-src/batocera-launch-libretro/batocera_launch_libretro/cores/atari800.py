@@ -68,4 +68,4 @@ class Atari800(Core):
             core_options.set('atari800_system', '5200')
 
             # Joy Hack (for robotron)
-            core_options.set_from_config('atari800_opt2', default='disabled')
+            core_options.set_from_config('atari800_opt2', default='none')

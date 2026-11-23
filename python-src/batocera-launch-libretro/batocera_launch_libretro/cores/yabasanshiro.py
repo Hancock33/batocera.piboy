@@ -82,5 +82,3 @@ class YabaSanshiro(GLOverrideMixin, Core):
         core_options.set('yabasanshiro_multitap_port1', port1)
         core_options.set('yabasanshiro_multitap_port2', port2)
 
-        # Language
-        core_options.set_from_config('yabasanshiro_system_language', 'yabasanshiro_language', default='english')
