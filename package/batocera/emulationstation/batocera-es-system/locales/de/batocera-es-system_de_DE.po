@@ -276,7 +276,7 @@ msgstr ""
 #. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid ""
-"Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
+"Enhancement. Swap from SNES' Gaussian interpolation to cubic. Improves sound "
 "quality."
 msgstr ""
 
@@ -3719,7 +3719,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
+msgid "Use your physical anaglyph 3D glasses!"
 msgstr ""
 
 #. TRANSLATION: libretro/vb
@@ -6336,7 +6336,7 @@ msgstr ""
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
-msgid "Regular Bilnear"
+msgid "Regular Bilinear"
 msgstr ""
 
 #. TRANSLATION: sonic2013

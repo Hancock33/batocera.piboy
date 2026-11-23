@@ -1,5 +1,67 @@
 features:
   - padtokeyboard
+custom_features:
+  # Display
+  bennugd_override_scaling:
+    group: DISPLAY
+    prompt: OVERRIDE CONTENT SCALING
+    choices:
+      'Off (Default)': 'off'
+      1X: 1x
+      2X: 2x
+      2X HQ: 2xhq
+      2X Scanlines: 2xscanlines
+      2X Unfiltered: 2xunfiltered
+  # Controls
+  bennugd_mouse_emulation:
+    group: CONTROLS
+    prompt: MOUSE EMULATION
+    choices:
+      'Off (Default)': 'off'
+      Left Analog: left analog
+      Right Analog: right analog
+  bennugd_mouse_emulation_dead_zone:
+    group: CONTROLS
+    prompt: MOUSE EMULATION DEAD ZONE
+    choices:
+      0%: '0'
+      5%: '5'
+      10% (Default): '10'
+      15%: '15'
+      20%: '20'
+      25%: '25'
+      30%: '30'
+      40%: '40'
+      50%: '50'
+  bennugd_mouse_emulation_scale:
+    group: CONTROLS
+    prompt: MOUSE EMULATION SCALING
+    choices:
+      5px: '5'
+      10px: '10'
+      15px: '15'
+      20px (Default): '20'
+      25px: '25'
+      30px: '30'
+      40px: '40'
+      50px: '50'
+      75px: '75'
+      100px: '100'
+  # Advanced Options
+  bennugd_force_frame_limiter:
+    group: ADVANCED OPTIONS
+    prompt: FRAME LIMITER
+    description: Force the internal frame limiter.
+    choices:
+      'False (Default)': 'false'
+      'True': 'true'
+  bennugd_case_insensitive_file_io:
+    group: ADVANCED OPTIONS
+    prompt: CASE INSENSITIVE FILE NAMES
+    description: Applies on content load.
+    choices:
+      'True (Default)': 'true'
+      'False': 'false'
 file_extensions:
   - dcb
   - dat

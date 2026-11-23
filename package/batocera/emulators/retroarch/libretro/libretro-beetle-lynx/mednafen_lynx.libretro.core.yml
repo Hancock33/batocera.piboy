@@ -4,6 +4,33 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # Display
+  lynx_rot_screen:
+    group: DISPLAY
+    prompt: AUTO-ROTATE SCREEN
+    description: Manual rotates with SELECT; fixed angles are counter-clockwise.
+    choices:
+      Auto (Default): auto
+      Manual: manual
+      0 Degrees: '0'
+      90 Degrees: '90'
+      180 Degrees: '180'
+      270 Degrees: '270'
+  lynx_pix_format:
+    group: DISPLAY
+    prompt: COLOR FORMAT
+    description: Applies on restart.
+    choices:
+      16-Bit RGB565 (Default): '16'
+      32-Bit RGB8888: '32'
+  lynx_force_60hz:
+    group: DISPLAY
+    prompt: FORCE 60HZ
+    description: Smoother movement on 60Hz displays instead of the native 75Hz.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
 file_extensions:
   - bll
   - lnx

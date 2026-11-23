@@ -108,7 +108,7 @@ custom_features:
       'On': 1
   openjk_anistropic:
     submenu: VIDEO
-    prompt: ANISTROPIC FILTER
+    prompt: ANISOTROPIC FILTER
     description: Improves clarity of distant textures.
     preset: sliderauto
     preset_parameters: 0.00 16.00 .50

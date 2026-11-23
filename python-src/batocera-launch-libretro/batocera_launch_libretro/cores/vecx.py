@@ -34,3 +34,6 @@ class Vecx(RACore):
     def set_core_options(self, core_options: LibretroConfig, /) -> None:
         # Res Multiplier
         core_options.set_from_config('vecx_res_multi', 'res_multi', default='1')
+
+        # Hardware renderer resolution (vecx_res_multi only applies to the software renderer)
+        core_options.set_from_config('vecx_res_hw', default='824x1024')

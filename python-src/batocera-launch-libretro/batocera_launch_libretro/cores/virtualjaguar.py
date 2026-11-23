@@ -33,10 +33,10 @@ if TYPE_CHECKING:
 class VirtualJaguar(RACore):
     def set_core_options(self, core_options: LibretroConfig, /) -> None:
         # Fast Blitter (Older, Faster, Less compatible)
-        core_options.set_from_config('virtualjaguar_usefastblitter', 'usefastblitter', default='enabled')
+        core_options.set_from_config('virtualjaguar_usefastblitter', 'usefastblitter', default='disabled')
 
         # Show Bios Bootlogo
-        core_options.set_from_config('virtualjaguar_bios', 'bios_vj', default='enabled')
+        core_options.set_from_config('virtualjaguar_bios', 'bios_vj', default='disabled')
 
         # Internal Resolution
         core_options.set_from_config('virtualjaguar_internal_resolution', default='1x')

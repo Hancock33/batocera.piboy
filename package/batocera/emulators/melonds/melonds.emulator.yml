@@ -187,7 +187,7 @@ custom_features:
     prompt: CONSOLE TYPE
     choices:
       DS: 0
-      DSi (experiemental): 1
+      DSi (experimental): 1
 file_extensions:
   - nds
   - dsi

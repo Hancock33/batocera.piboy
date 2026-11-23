@@ -3,8 +3,8 @@
 # libretro-vba-m
 #
 ################################################################################
-# Version: Commits on Nov 22, 2026
-LIBRETRO_VBA_M_VERSION = ecefdffcf5c90209e8292dbc180a911d4ec62ade
+# Version: Commits on Nov 23, 2026
+LIBRETRO_VBA_M_VERSION = e4456a8d5e1f7d6d18aa147de950c5dbca4bfc0a
 LIBRETRO_VBA_M_SITE = $(call github,visualboyadvance-m,visualboyadvance-m,$(LIBRETRO_VBA_M_VERSION))
 LIBRETRO_VBA_M_LICENSE = GPL-2.0
 LIBRETRO_VBA_M_DEPENDENCIES += retroarch host-zip

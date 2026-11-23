@@ -26,7 +26,7 @@ custom_features:
   mesen-s_cubic_interpolation:
     group: ADVANCED OPTIONS
     prompt: CUBIC AUDIO INTERPOLATION
-    description: Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound quality.
+    description: Enhancement. Swap from SNES' Gaussian interpolation to cubic. Improves sound quality.
     choices:
       'On': enabled
       'Off': disabled

@@ -1,3 +1,27 @@
+custom_features:
+  # Display
+  gong_refresh:
+    group: DISPLAY
+    prompt: VIDEO REFRESH RATE
+    description: Applies on restart.
+    choices:
+      60 Hz (Default): '60'
+      70 Hz: '70'
+      72 Hz: '72'
+      75 Hz: '75'
+      100 Hz: '100'
+      119 Hz: '119'
+      120 Hz: '120'
+      140 Hz: '140'
+      144 Hz: '144'
+  # Game Options
+  gong_player2:
+    group: GAME OPTIONS
+    prompt: PLAYER 2
+    description: Computer or human controlled second paddle.
+    choices:
+      CPU (Default): CPU
+      Human: Human
 file_extensions:
   - game
 systems:

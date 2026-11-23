@@ -127,7 +127,7 @@ cores:
       pcsx2x6_blur:
         submenu: DISPLAY
         prompt: ANTI-BLUR
-        description: Enable to improve bluriness.
+        description: Enable to improve blurriness.
         choices:
           Disabled: "false"
           Enabled: "true"
@@ -218,7 +218,7 @@ cores:
       pcsx2x6_dithering:
         submenu: RENDERING
         prompt: DITHERING
-        description: Reduces banding between colors and improves the preceived color depth.
+        description: Reduces banding between colors and improves the perceived color depth.
         choices:
           "Off": 0
           Scaled: 1

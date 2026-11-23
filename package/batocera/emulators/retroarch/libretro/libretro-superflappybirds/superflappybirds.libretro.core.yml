@@ -1,3 +1,25 @@
+custom_features:
+  # Game Options
+  sfb_max_players:
+    group: GAME OPTIONS
+    prompt: MAXIMUM PLAYERS
+    description: Applies on restart.
+    choices:
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      4 (Default): '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+  sfb_show_wins:
+    group: GAME OPTIONS
+    prompt: SHOW WINS
+    description: Show wins in multiplayer games. Applies on restart.
+    choices:
+      'On (Default)': 'on'
+      'Off': 'off'
 file_extensions:
   - game
 systems:

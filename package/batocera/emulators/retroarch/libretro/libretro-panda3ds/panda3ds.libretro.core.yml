@@ -10,66 +10,107 @@ shared_features:
   - wheel_deadzone
   - wheel_midzone
 custom_features:
-  panda3ds_use_shader_jit:
-    group: EMULATOR SETTINGS
-    prompt: USE SHADER JIT
-    description: Enable shader JIT
-    preset: switchauto
-  panda3ds_accurate_shader_mul:
-    group: EMULATOR SETTINGS
-    prompt: ACCURATE SHADER MUL
-    description: Enable accurate shader multiplication
-    preset: switchauto
-  panda3ds_use_ubershader:
-    group: EMULATOR SETTINGS
-    prompt: USE UBERSHADER
-    description: Use ubershaders (No stutter, maybe slower)
-    preset: switchauto
+  # System
+  panda3ds_use_virtual_sd:
+    group: SYSTEM
+    prompt: USE VIRTUAL SD
+    description: Enable virtual SD card
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  panda3ds_write_protect_virtual_sd:
+    group: SYSTEM
+    prompt: WRITE PROTECT VIRTUAL SD
+    description: Write protect virtual SD card
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  panda3ds_battery_level:
+    group: SYSTEM
+    prompt: BATTERY LEVEL
+    description: Battery percentage
+    choices:
+      5% (Default): '5'
+      10%: '10'
+      20%: '20'
+      30%: '30'
+      50%: '50'
+      70%: '70'
+      90%: '90'
+      100%: '100'
+  panda3ds_use_charger:
+    group: SYSTEM
+    prompt: USE CHARGER
+    description: Charger plugged
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  # Display
   panda3ds_use_vsync:
-    group: EMULATOR SETTINGS
+    group: DISPLAY
     prompt: USE VSYNC
     description: Enable VSync
-    preset: switchauto
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  panda3ds_use_ubershader:
+    group: DISPLAY
+    prompt: USE UBERSHADER
+    description: Use ubershaders (No stutter, maybe slower)
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  panda3ds_ubershader_lighting_override:
+    group: DISPLAY
+    prompt: UBERSHADER LIGHTING OVERRIDE
+    description: Force shadergen when rendering lights
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  panda3ds_ubershader_lighting_override_threshold:
+    group: DISPLAY
+    prompt: UBERSHADER LIGHTING OVERRIDE THRESHOLD
+    description: Light threshold for forcing shadergen
+    choices:
+      1 (Default): '1'
+      '2': '2'
+      '3': '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+  # Audio
+  panda3ds_use_audio:
+    group: AUDIO
+    prompt: ENABLE AUDIO
+    description: Enable audio output
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
   panda3ds_dsp_emulation:
-    group: EMULATOR SETTINGS
+    group: AUDIO
     prompt: DSP EMULATION
     description: DSP emulation
     choices:
-      "HLE": HLE
-      "LLE": LLE
-      "Null": Null
-  panda3ds_use_virtual_sd:
-    group: EMULATOR SETTINGS
-    prompt: USE VIRTUAL SD
-    description: Enable virtual SD card
-    preset: switchauto
-  panda3ds_write_protect_virtual_sd:
-    group: EMULATOR SETTINGS
-    prompt: WRITE PROTECT VIRTUAL SD
-    description: Write protect virtual SD card
-    preset: switchauto
-  panda3ds_battery_level:
-    group: EMULATOR SETTINGS
-    prompt: BATTERY LEVEL
-    description: Battery percentage
-    preset: slider
-    preset_parameters: 0 100 5 100 %
-  panda3ds_use_charger:
-    group: EMULATOR SETTINGS
-    prompt: USE CHARGER
-    description: Charger plugged
-    preset: switchauto
-  panda3ds_ubershader_lighting_override:
-    group: EMULATOR SETTINGS
-    prompt: UBERSHADER LIGHTING OVERRIDE
-    description: Force shadergen when rendering lights
-    preset: switchauto
-  panda3ds_ubershader_lighting_override_threshold:
-    group: EMULATOR SETTINGS
-    prompt: UBERSHADER LIGHTING OVERRIDE THRESHOLD
-    description: Light threshold for forcing shadergen
-    preset: slider
-    preset_parameters: 1 8 1 8
+      HLE (Default): HLE
+      LLE: LLE
+      'Null': 'Null'
+  # Advanced Options
+  panda3ds_use_shader_jit:
+    group: ADVANCED OPTIONS
+    prompt: USE SHADER JIT
+    description: Enable shader JIT
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  panda3ds_accurate_shader_mul:
+    group: ADVANCED OPTIONS
+    prompt: ACCURATE SHADER MUL
+    description: Enable accurate shader multiplication
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
 file_extensions:
   - 3ds
   - 3dsx

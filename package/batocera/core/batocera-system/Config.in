@@ -145,7 +145,8 @@ if BR2_PACKAGE_BATOCERA_TARGET_H6              || \
    BR2_PACKAGE_BATOCERA_TARGET_RK3562          || \
    BR2_PACKAGE_BATOCERA_TARGET_RK3568          || \
    BR2_PACKAGE_BATOCERA_TARGET_RK3576          || \
-   BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
+   BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
+   BR2_PACKAGE_BATOCERA_TARGET_T527
     config BR2_PACKAGE_BATOCERA_V4L2_REQUEST
     bool "target has v4l2 request support"
     default y
@@ -457,25 +458,26 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
                                                                 BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
     # do NOT remove this one for OGA
-    select BR2_PACKAGE_RTL8192EU                            if !BR2_PACKAGE_BATOCERA_TARGET_H3          && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128      && \
-                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3562      && \
+    select BR2_PACKAGE_RTL8192EU                            if !BR2_PACKAGE_BATOCERA_TARGET_H3              && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3128          && \
+                                                               !BR2_PACKAGE_BATOCERA_TARGET_RK3562          && \
                                                                !BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     select BR2_PACKAGE_RTL8822CS                            if  BR2_PACKAGE_BATOCERA_TARGET_S905GEN3
 
-    select BR2_PACKAGE_AIC8800_SDIO                         if  BR2_PACKAGE_BATOCERA_TARGET_RK3568      || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
+    select BR2_PACKAGE_AIC8800_SDIO                         if  BR2_PACKAGE_BATOCERA_TARGET_RK3568          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_T527
 
-    select BR2_PACKAGE_AIC8800_USB                          if  BR2_PACKAGE_BATOCERA_TARGET_QCS6490     || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_X86_ANY     || \
+    select BR2_PACKAGE_AIC8800_USB                          if  BR2_PACKAGE_BATOCERA_TARGET_QCS6490         || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_X86_ANY         || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     select BR2_PACKAGE_RK915                                if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
 
     select BR2_PACKAGE_BCMDHD                               if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
-    select BR2_PACKAGE_UWE5622                              if  BR2_PACKAGE_BATOCERA_TARGET_H616        || \
+    select BR2_PACKAGE_UWE5622                              if  BR2_PACKAGE_BATOCERA_TARGET_H616            || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6
 
    #select BR2_PACKAGE_BROADCOM_WL                          if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -585,8 +587,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
     select BR2_PACKAGE_KEROS_LEDS                           if  BR2_PACKAGE_BATOCERA_TARGET_RK3326
 
     # bluetooth
-    select BR2_PACKAGE_BRCM_PATCHRAM_PLUS                   if  BR2_PACKAGE_BATOCERA_TARGET_T527        || \
-                                                                BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
+    select BR2_PACKAGE_BRCM_PATCHRAM_PLUS                   if  BR2_PACKAGE_BATOCERA_TARGET_RK3588_MAINLINE
 
     help
         Install the batocera.linux system files
@@ -657,8 +658,7 @@ config BR2_TARGET_BATOCERA_IMAGES
     default "rockchip/rk3568/anbernic-rg-ds rockchip/rk3568/anbernic-rg-ds-plus rockchip/rk3568/radxa-zero-3w rockchip/rk3568/powkiddy-x55 rockchip/rk3568/powkiddy-x35s rockchip/rk3568/orangepi-3b rockchip/rk3568/anbernic-rgxx3 rockchip/rk3568/odroid-m1s rockchip/rk3568/odroid-m1 rockchip/rk3568/rock-3a rockchip/rk3568/rock-3c rockchip/rk3568/firefly-station-m2 rockchip/rk3568/firefly-station-p2" if  BR2_PACKAGE_BATOCERA_TARGET_RK3568
     default "rockchip/rk3562/kickpi-k3b"                                                                                                                                                       if  BR2_PACKAGE_BATOCERA_TARGET_RK3562
     default "allwinner/h3/orangepi-pc allwinner/h3/orangepi-one allwinner/h3/orangepi-plus2e allwinner/h3/bananapi-m2-zero allwinner/h3/cha"                                                   if  BR2_PACKAGE_BATOCERA_TARGET_H3
-    default "allwinner/t527/orangepi-4a"                                                                                                                                                       if  BR2_PACKAGE_BATOCERA_TARGET_T527
-
+    default "allwinner/t527/orangepi-4a allwinner/t527/radxa-cubie-a5e allwinner/t527/avaota-a1"                                                                                               if  BR2_PACKAGE_BATOCERA_TARGET_T527
     default "rockchip/rk3576/anbernic-rg-vita-pro"                                                                                                                                             if  BR2_PACKAGE_BATOCERA_TARGET_RK3576
 
 # NOTE: When adding a new target here, be sure to update BR2_BATOCERA_ARCH,
@@ -2097,6 +2097,7 @@ config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
     # Extra linux firmware
     select BR2_PACKAGE_EXTRALINUXFIRMWARES                  if  BR2_PACKAGE_BATOCERA_TARGET_H616        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_H6          || \
+                                                                BR2_PACKAGE_BATOCERA_TARGET_T527        || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_AMLOGIC_ANY || \
                                                                 BR2_PACKAGE_BATOCERA_TARGET_RK3399
     # orangepi firmware

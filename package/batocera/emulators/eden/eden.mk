@@ -3,8 +3,8 @@
 # eden
 #
 ################################################################################
-# Version: Commits on Nov 22, 2026
-EDEN_VERSION = 467ab6441ad928213c2adb666420fc8a4f954e9b
+# Version: Commits on Nov 23, 2026
+EDEN_VERSION = b5d668560b087960cf5afa671e076e9138aed5ff
 EDEN_SITE = https://git.eden-emu.dev/eden-emu/eden
 EDEN_SITE_METHOD = git
 EDEN_LICENSE = GPL-3.0+

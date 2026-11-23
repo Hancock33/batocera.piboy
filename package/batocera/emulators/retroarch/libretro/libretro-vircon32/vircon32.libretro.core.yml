@@ -4,6 +4,15 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # Advanced Options
+  vircon32_enable_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: AUTOMATIC FRAME SKIP
+    description: Skip frames when audio is about to underrun.
+    choices:
+      Disabled (Default): Disabled
+      Enabled: Enabled
 file_extensions:
   - v32
   - zip

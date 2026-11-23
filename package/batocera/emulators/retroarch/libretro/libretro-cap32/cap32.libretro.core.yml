@@ -11,7 +11,7 @@ custom_features:
     choices:
       "464": 464
       "6128": 6128
-      6128+: 6128+ (experimental)
+      6128+: 6128+
   cap32_ram:
     group: ADVANCED OPTIONS
     prompt: EMULATED RAM SIZE

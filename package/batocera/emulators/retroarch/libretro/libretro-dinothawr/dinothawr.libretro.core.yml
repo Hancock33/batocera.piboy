@@ -1,3 +1,21 @@
+custom_features:
+  # Display
+  dino_framerate:
+    group: DISPLAY
+    prompt: FRAME RATE
+    description: Auto follows the display refresh rate. Game speed stays the same.
+    choices:
+      Auto (Default): Auto
+      50 FPS: '50'
+      60 FPS: '60'
+      72 FPS: '72'
+      75 FPS: '75'
+      90 FPS: '90'
+      100 FPS: '100'
+      119 FPS: '119'
+      120 FPS: '120'
+      144 FPS: '144'
+      240 FPS: '240'
 file_extensions:
   - game
 systems:

@@ -883,7 +883,7 @@ systems:
           Acorn Electron Disks: electron_flop
           Acorn Electron Cassettes: electron_cass
           Acorn Electron Cartridges: electron_cart
-          Acron Electron ROMs: electron_rom
+          Acorn Electron ROMs: electron_rom
       altmodel:
         prompt: ELECTRON MODEL
         description: Select model to emulate

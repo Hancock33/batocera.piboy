@@ -110,7 +110,7 @@ custom_features:
   vpinball_inverseplayfieldandbackglass:
     group: WINDOWS POSITIONS
     prompt: INVERSE PLAYFIELD AND B2S
-    description: Inverse the Backglass and the Playfield. Usefull to use the Backglass as main screen for other emulators.
+    description: Inverse the Backglass and the Playfield. Useful to use the Backglass as main screen for other emulators.
     choices:
       'On': 1
       'Off': 0

@@ -3,6 +3,80 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # Display
+  snes9x2002_transparency:
+    group: DISPLAY
+    prompt: TRANSPARENCY EFFECTS
+    description: Disable to improve speed at the cost of accuracy.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  # Audio
+  snes9x2002_low_pass_filter:
+    group: AUDIO
+    prompt: AUDIO FILTER
+    description: Low pass filter mimicking the bassy SNES sound.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  snes9x2002_low_pass_range:
+    group: AUDIO
+    prompt: AUDIO FILTER LEVEL
+    description: Cut-off frequency of the audio filter.
+    choices:
+      20%: 20
+      40%: 40
+      50%: 50
+      60% (Default): 60
+      70%: 70
+      80%: 80
+      95%: 95
+  # Advanced Options
+  snes9x2002_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP
+    description: Skip frames to avoid audio crackling.
+    choices:
+      'Off (Default)': disabled
+      Auto: auto
+      Auto (Threshold): auto_threshold
+      Fixed Interval: fixed_interval
+  snes9x2002_frameskip_threshold:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP THRESHOLD
+    description: Audio buffer occupancy below which frames are skipped.
+    choices:
+      15%: 15
+      24%: 24
+      33% (Default): 33
+      42%: 42
+      51%: 51
+      60%: 60
+  snes9x2002_frameskip_interval:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP INTERVAL
+    description: Frames skipped after each rendered frame in fixed mode.
+    choices:
+      '0': 0
+      1 (Default): 1
+      '2': 2
+      '3': 3
+      '4': 4
+      '5': 5
+      '6': 6
+      '7': 7
+      '8': 8
+      '9': 9
+      '10': 10
+  snes9x2002_overclock_cycles:
+    group: ADVANCED OPTIONS
+    prompt: REDUCE SLOWDOWN (HACK)
+    description: Unsafe, may break games. Applies on restart.
+    choices:
+      'Off (Default)': disabled
+      Compatible: compatible
+      Max: max
 file_extensions:
   - smc
   - sfc

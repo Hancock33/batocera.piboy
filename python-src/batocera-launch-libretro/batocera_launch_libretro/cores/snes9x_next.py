@@ -44,7 +44,7 @@ class Snes9xNext(Snes9xControllersMixin, RACore):
     def set_core_options(self, core_options: LibretroConfig, /) -> None:
         # Reduce sprite flickering (Hack, Unsafe)
         core_options.set_from_config(
-            'snes9x_2010_reduce_sprite_flicker', '2010_reduce_sprite_flicker', default='enabled'
+            'snes9x_2010_reduce_sprite_flicker', '2010_reduce_sprite_flicker', default='disabled'
         )
 
         # Reduce Slowdown (Hack, Unsafe)

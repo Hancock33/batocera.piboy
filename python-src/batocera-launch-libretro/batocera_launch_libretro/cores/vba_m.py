@@ -53,7 +53,7 @@ class VbaM(RACore):
             core_options.set_from_config('vbam_solarsensor', 'solarsensor', default='0')
 
             # GBA: Sensor Sensitivity (Gyroscope) (%)
-            core_options.set_from_config('vbam_gyro_sensitivity', 'gyro_sensitivity', default='10')
+            core_options.set_from_config('vbam_gyro_sensitivity', 'gyro_sensitivity', default='100')
 
             # GBA: Sensor Sensitivity (Tilt) (%)
-            core_options.set_from_config('vbam_tilt_sensitivity', 'tilt_sensitivity', default='10')
+            core_options.set_from_config('vbam_tilt_sensitivity', 'tilt_sensitivity', default='100')

@@ -1,3 +1,28 @@
+custom_features:
+  # Display
+  gametank_libretro_palette:
+    group: DISPLAY
+    prompt: COLOUR PALETTE
+    choices:
+      Capture (Default): Capture
+      Scaled: Scaled
+      HDMI: HDMI
+      Legacy: Legacy
+  gametank_borders:
+    group: DISPLAY
+    prompt: SIDE BORDERS (4:3)
+    description: 'Off shows the square picture only.'
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  # Advanced Options
+  gametank_instant_blit:
+    group: ADVANCED OPTIONS
+    prompt: INSTANT BLITTER
+    description: Finish each blit immediately.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
 file_extensions:
   - gtr
 systems:

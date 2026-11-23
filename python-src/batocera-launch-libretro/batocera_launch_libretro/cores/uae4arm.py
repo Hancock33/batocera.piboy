@@ -37,3 +37,20 @@ class Uae4arm(Core):
 
         # AMIGA BIOS files are in /userdata/bios/amiga
         custom_config.set('system_directory', f'{BIOS / "amiga"}/')
+
+    def set_core_options(self, core_options: LibretroConfig, /) -> None:
+        # System
+        core_options.set_from_config('uae4arm_model', default='Auto')
+        core_options.set_from_config('uae4arm_fastmem', default='None')
+        core_options.set_from_config('uae4arm_floppy_speed', default='100')
+        core_options.set_from_config('uae4arm_whdloadmode', default='files')
+
+        # Display
+        core_options.set_from_config('uae4arm_resolution', default='768x270')
+        core_options.set_from_config('uae4arm_leds_on_screen', default='on')
+        core_options.set_from_config('uae4arm_linedoubling', default='off')
+
+        # Advanced Options
+        # The core default depends on the board (off on Raspberry Pi 4/5), so only set it when configured
+        if (fast_copper := self.config.get_str('uae4arm_fastcopper')) is not None:
+            core_options.set('uae4arm_fastcopper', fast_copper)

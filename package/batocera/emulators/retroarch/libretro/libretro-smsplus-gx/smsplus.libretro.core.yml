@@ -1,3 +1,56 @@
+custom_features:
+  # System
+  smsplus_sms_bios:
+    group: SYSTEM
+    prompt: MASTER SYSTEM BIOS
+    description: Show the BIOS boot sequence if present. Applies on restart.
+    choices:
+      'Off (Default)': disabled
+      Auto: auto
+  smsplus_hardware:
+    group: SYSTEM
+    prompt: HARDWARE
+    description: Applies on restart.
+    choices:
+      Auto (Default): auto
+      Master System: master system
+      Master System II: master system II
+      Game Gear: game gear
+      Game Gear (SMS Compatibility): game gear (sms compatibility)
+      ColecoVision: coleco
+  smsplus_region:
+    group: SYSTEM
+    prompt: REGION
+    description: Applies on restart.
+    choices:
+      Auto (Default): auto
+      NTSC-U: ntsc-u
+      PAL: pal
+      NTSC-J: ntsc-j
+  # Display
+  smsplus_hide_left_border:
+    group: DISPLAY
+    prompt: HIDE SMS LEFT BORDER
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  smsplus_ntsc_filter:
+    group: DISPLAY
+    prompt: BLARGG NTSC FILTER
+    choices:
+      'Off (Default)': disabled
+      Composite: composite
+      S-Video: svideo
+      RGB: rgb
+      Monochrome: monochrome
+  # Audio
+  smsplus_fm_sound:
+    group: AUDIO
+    prompt: FM SOUND (YM2413)
+    description: Enhanced music in some games. Applies on restart.
+    choices:
+      Auto (Default): auto
+      'Off': disabled
 file_extensions:
   - bin
   - zip

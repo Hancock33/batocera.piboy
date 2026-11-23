@@ -3,6 +3,206 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # System
+  amiberry_cpu_model:
+    group: SYSTEM
+    prompt: CPU MODEL
+    description: Overrides the model's CPU. Applies on restart.
+    choices:
+      Auto (Default): auto
+      '68000': '68000'
+      '68010': '68010'
+      '68020': '68020'
+      '68030': '68030'
+  amiberry_chipset:
+    group: SYSTEM
+    prompt: CHIPSET
+    description: Overrides the chipset on non-AGA models. Applies on restart.
+    choices:
+      Auto (Default): auto
+      OCS: ocs
+      ECS: ecs
+  amiberry_chipset_aga:
+    group: SYSTEM
+    prompt: CHIPSET (AGA MODELS)
+    description: Overrides the chipset on AGA models. Applies on restart.
+    choices:
+      Auto (Default): auto
+      OCS: ocs
+      ECS: ecs
+      AGA: aga
+  amiberry_floppy_speed:
+    group: SYSTEM
+    prompt: FLOPPY SPEED
+    description: Turbo loads disks as fast as possible.
+    choices:
+      Turbo: '0'
+      1x Normal (Default): '100'
+      2x: '200'
+      4x: '400'
+      8x: '800'
+  # Display
+  amiberry_video_standard:
+    group: DISPLAY
+    prompt: VIDEO STANDARD
+    description: Auto uses the model default. Applies on restart.
+    choices:
+      Auto (Default): auto
+      PAL 50Hz: pal
+      NTSC 60Hz: ntsc
+  amiberry_crop_overscan:
+    group: DISPLAY
+    prompt: CROP OVERSCAN
+    description: Trim the Amiga overscan borders.
+    choices:
+      Disabled (Default): disabled
+      Automatic: enabled
+      Fixed 320x256: small
+      Fixed 320x240: medium
+      Fixed 320x200: large
+      Fixed 320x180: extra
+  amiberry_internal_vsync:
+    group: DISPLAY
+    prompt: INTERNAL VSYNC
+    choices:
+      Disabled (Default): disabled
+      Standard: standard
+      Standard 50Hz: standard_50
+  amiberry_statusline:
+    group: DISPLAY
+    prompt: ON-SCREEN STATUS LINE
+    description: Drive activity LEDs and disk messages at the bottom.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  amiberry_statusline_size:
+    group: DISPLAY
+    prompt: STATUS LINE SIZE
+    choices:
+      1x (Default): 1x
+      2x: 2x
+      3x: 3x
+      4x: 4x
+  # Audio
+  amiberry_audio_rate:
+    group: AUDIO
+    prompt: AUDIO RATE
+    description: Applies on restart.
+    choices:
+      Auto (Default): auto
+      44100 Hz: '44100'
+      48000 Hz: '48000'
+  amiberry_audio_interpolation:
+    group: AUDIO
+    prompt: AUDIO INTERPOLATION
+    description: Applies on restart.
+    choices:
+      Auto (Default): auto
+      'Off': none
+      Anti-Alias: anti
+      Sinc: sinc
+  amiberry_sound_filter:
+    group: AUDIO
+    prompt: SOUND FILTER
+    description: Amiga audio low-pass filter.
+    choices:
+      'Off (Default)': 'off'
+      Emulated (A500): emulated
+      Always On: 'on'
+  amiberry_stereo_separation:
+    group: AUDIO
+    prompt: STEREO SEPARATION
+    choices:
+      0 (Mono): '0'
+      '1': '1'
+      '2': '2'
+      '3': '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      7 (Default): '7'
+      '8': '8'
+      '9': '9'
+      10 (Full Stereo): '10'
+  amiberry_midi_output:
+    group: AUDIO
+    prompt: MIDI OUTPUT
+    description: Frontend MIDI uses RetroArch's MIDI driver.
+    choices:
+      Disabled (Default): disabled
+      Frontend MIDI: libretro
+  # Controls
+  amiberry_port0_device:
+    group: CONTROLS
+    prompt: PORT 1 DEVICE
+    choices:
+      Mouse (Default): mouse
+      Joystick: joystick
+  amiberry_port1_device:
+    group: CONTROLS
+    prompt: PORT 2 DEVICE
+    choices:
+      Joystick (Default): joystick
+      Mouse: mouse
+  amiberry_swap_ports:
+    group: CONTROLS
+    prompt: SWAP PORTS
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  amiberry_joyport_order:
+    group: CONTROLS
+    prompt: JOYPORT ORDER
+    description: Order for mapping controller ports to Amiga ports.
+    choices:
+      Automatic (Default): auto
+      2-1: '21'
+      1-2: '12'
+  amiberry_analog:
+    group: CONTROLS
+    prompt: ANALOG INPUT
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  amiberry_joy_deadzone:
+    group: CONTROLS
+    prompt: JOYSTICK DEADZONE
+    choices:
+      0%: '0'
+      5%: '5'
+      10%: '10'
+      15%: '15'
+      20%: '20'
+      25%: '25'
+      33% (Default): '33'
+      40%: '40'
+      50%: '50'
+  amiberry_analog_sensitivity:
+    group: CONTROLS
+    prompt: ANALOG SENSITIVITY
+    choices:
+      '10': '10'
+      '15': '15'
+      18 (Default): '18'
+      '20': '20'
+      '25': '25'
+      '30': '30'
+  amiberry_joy_as_mouse:
+    group: CONTROLS
+    prompt: JOYSTICK AS MOUSE
+    description: Left stick moves the port 1 mouse, L/R act as mouse buttons.
+    choices:
+      Disabled (Default): disabled
+      Port 1: port1
+      Port 2: port2
+      Both: both
+  amiberry_on_screen_keyboard:
+    group: CONTROLS
+    prompt: ON-SCREEN KEYBOARD
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
 file_extensions:
   - adf
   - uae

@@ -3,6 +3,23 @@ features:
   - cheevos
 shared_features:
   - autosave
+custom_features:
+  # Display
+  freeintv_multiscreen_overlay:
+    group: DISPLAY
+    prompt: ONSCREEN KEYPAD OVERLAYS
+    description: Side-by-side keypad overlay. Needs a mouse or touchscreen.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Controls
+  freeintv_default_p1_controller:
+    group: CONTROLS
+    prompt: PLAYER 1 CONTROLLER
+    description: Which Intellivision controller player 1 uses.
+    choices:
+      Right (Default): right
+      Left: left
 file_extensions:
   - int
   - bin

@@ -19,7 +19,7 @@ custom_features:
   3d_color_mode:
     group: ADVANCED OPTIONS
     prompt: ANAGLYPH PRESET (3D)
-    description: Use your physical anaglypth 3D glasses!
+    description: Use your physical anaglyph 3D glasses!
     choices:
       'Off': disabled
       red/blue: red & blue

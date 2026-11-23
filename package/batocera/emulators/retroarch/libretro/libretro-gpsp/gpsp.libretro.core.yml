@@ -3,6 +3,153 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # System
+  gpsp_bios:
+    group: SYSTEM
+    prompt: BIOS
+    description: The official BIOS gives the best compatibility.
+    choices:
+      Auto (Default): auto
+      Builtin BIOS: builtin
+      Original BIOS: official
+  gpsp_boot_mode:
+    group: SYSTEM
+    prompt: BOOT MODE
+    choices:
+      Boot To Game (Default): game
+      Boot To BIOS: bios
+  gpsp_rtc:
+    group: SYSTEM
+    prompt: RTC SUPPORT
+    description: Real-time clock for the emulated cartridge.
+    choices:
+      Auto (Default): auto
+      'On': enabled
+      'Off': disabled
+  gpsp_rtc_time_source:
+    group: SYSTEM
+    prompt: RTC TIME SOURCE
+    description: Deterministic follows emulated frames, System Clock follows the host.
+    choices:
+      Deterministic (Default): deterministic
+      System Clock: system
+  gpsp_serial:
+    group: SYSTEM
+    prompt: LINK CABLE CONNECTIVITY
+    choices:
+      Automatic (Default): auto
+      Disabled: disabled
+      GBA Wireless Adapter: rfu
+      Link Cable - Pokemon Gen3: mul_poke
+      Link Cable - Advance Wars 1: mul_aw1
+      Link Cable - Advance Wars 2: mul_aw2
+  # Display
+  gpsp_color_correction:
+    group: DISPLAY
+    prompt: COLOR CORRECTION
+    description: Match the colours of the real GBA display.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  gpsp_frame_mixing:
+    group: DISPLAY
+    prompt: INTERFRAME BLENDING
+    description: Simulate LCD ghosting, needed by some transparency effects.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  gpsp_sprlim:
+    group: DISPLAY
+    prompt: NO SPRITE LIMIT
+    description: Remove the sprites per scanline hardware limit.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Audio
+  gpsp_sound_rate:
+    group: AUDIO
+    prompt: SOUND OUTPUT RATE
+    choices:
+      32768 Hz (Default): '32768'
+      65536 Hz: '65536'
+  # Controls
+  gpsp_rumble:
+    group: CONTROLS
+    prompt: RUMBLE SUPPORT
+    choices:
+      Auto (Default): auto
+      'On': enabled
+      'Off': disabled
+  gpsp_turbo_period:
+    group: CONTROLS
+    prompt: TURBO BUTTON PERIOD
+    description: Repeat interval in frames for the turbo buttons.
+    choices:
+      4 Frames (Default): '4'
+      6 Frames: '6'
+      8 Frames: '8'
+      10 Frames: '10'
+      15 Frames: '15'
+      20 Frames: '20'
+      30 Frames: '30'
+      40 Frames: '40'
+      60 Frames: '60'
+      90 Frames: '90'
+      120 Frames: '120'
+  # Advanced Options
+  gpsp_drc:
+    group: ADVANCED OPTIONS
+    prompt: DYNAMIC RECOMPILER
+    description: Faster, but may reduce accuracy. Only on dynarec builds.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  gpsp_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP
+    choices:
+      'Off (Default)': disabled
+      Auto: auto
+      Auto (Threshold): auto_threshold
+      Fixed Interval: fixed_interval
+  gpsp_frameskip_threshold:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP THRESHOLD
+    description: Audio buffer level below which frames are skipped (Auto Threshold).
+    choices:
+      15%: '15'
+      18%: '18'
+      21%: '21'
+      24%: '24'
+      27%: '27'
+      30%: '30'
+      33% (Default): '33'
+      36%: '36'
+      39%: '39'
+      42%: '42'
+      45%: '45'
+      48%: '48'
+      51%: '51'
+      54%: '54'
+      57%: '57'
+      60%: '60'
+  gpsp_frameskip_interval:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP INTERVAL
+    description: Frames skipped after each rendered frame (Fixed Interval).
+    choices:
+      '0': '0'
+      1 (Default): '1'
+      '2': '2'
+      '3': '3'
+      '4': '4'
+      '5': '5'
+      '6': '6'
+      '7': '7'
+      '8': '8'
+      '9': '9'
+      '10': '10'
 file_extensions:
   - gba
   - zip

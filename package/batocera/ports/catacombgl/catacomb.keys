@@ -40,7 +40,7 @@
             "trigger": "a",
             "type": "key",
             "target": "KEY_Z",
-            "description": "Shoot Zappper"
+            "description": "Shoot Zapper"
         },
         {
             "trigger": "y",

@@ -2,19 +2,24 @@ shared_features:
   - rewind
   - autosave
 custom_features:
+  # System
   zesarpcw_model:
+    group: SYSTEM
     prompt: MACHINE MODEL
     description: Applies on restart.
     choices:
       PCW8512 - 512KB (Default): PCW8512 (512K)
       PCW8256 - 256KB: PCW8256 (256K)
   zesarpcw_cpm_autolaunch:
+    group: SYSTEM
     prompt: CP/M AUTO-LAUNCH
     description: Boot CP/M and start known titles whose self-boot loader stalls.
     choices:
       'On (Default)': enabled
       'Off': disabled
+  # Display
   zesarpcw_phosphor:
+    group: DISPLAY
     prompt: PHOSPHOR COLOUR
     description: Monochrome display colour.
     choices:
@@ -22,31 +27,70 @@ custom_features:
       White: White
       Amber: Amber
   zesarpcw_crop:
+    group: DISPLAY
     prompt: CROP TO GAME AREA
     description: Drop the blank border many games leave around the playfield.
     choices:
       'Off (Default)': disabled
       Smart (Auto): Smart (auto)
       Fixed 256x192: Fixed 256x192
+  zesarpcw_allow_videomode_change:
+    group: DISPLAY
+    prompt: ALLOW VIDEO MODE CHANGES BY I/O
+    description: Off forces the selected colour mode.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  zesarpcw_colour_mode:
+    group: DISPLAY
+    prompt: COLOUR MODE
+    description: Only looks right under a program that drives it, or with I/O changes off.
+    choices:
+      Monochrome 720x256 (Default): '[0] Monochrome (native) [720x256]'
+      4-Colour CGA 360x256: '[1] 4-colour (CGA) [360x256]'
+      16-Colour Packed 180x256: '[2] 16-colour (packed) [180x256]'
+      16-Colour Attribute 360x256: '[3] 16-colour (attribute) [360x256]'
+  zesarpcw_cga_palette:
+    group: DISPLAY
+    prompt: CGA PALETTE
+    description: Palette group shown by the 4-colour mode.
+    choices:
+      Green/Red/Brown (Default): Green/Red/Brown
+      Green/Red/Brown (Bright): Green/Red/Brown (bright)
+      Cyan/Magenta/Grey: Cyan/Magenta/Grey
+      Cyan/Magenta/White (Bright): Cyan/Magenta/White (bright)
+  # Audio
   zesarpcw_ay_chip:
+    group: AUDIO
     prompt: AY SOUND CHIP (DK'TRONICS)
     description: Optional add-on many games use for music.
     choices:
       'On (Default)': enabled
       'Off': disabled
   zesarpcw_beeper:
+    group: AUDIO
     prompt: BEEPER
     description: The PCW's internal speaker.
     choices:
       'On (Default)': enabled
       'Off': disabled
   zesarpcw_fdc_sound:
+    group: AUDIO
     prompt: FLOPPY DRIVE SOUND
     description: Mechanical disc drive noise while loading.
     choices:
       'Off (Default)': disabled
       'On': enabled
+  zesarpcw_audio_rate:
+    group: AUDIO
+    prompt: AUDIO SAMPLE RATE
+    description: 48000 Hz avoids RetroArch resampling the native rate.
+    choices:
+      15600 Hz Native (Default): 15600 Hz (native)
+      48000 Hz: 48000 Hz
+  # Controls
   zesarpcw_osk_button:
+    group: CONTROLS
     prompt: VIRTUAL KEYBOARD BUTTON
     description: Button that toggles the on-screen keyboard.
     choices:
@@ -59,50 +103,20 @@ custom_features:
       L3: L3
       R3: R3
   zesarpcw_osk_layout:
+    group: CONTROLS
     prompt: VIRTUAL KEYBOARD LAYOUT
     choices:
       UK (Default): UK
       US: US
   zesarpcw_osk_transparent:
+    group: CONTROLS
     prompt: VIRTUAL KEYBOARD OVERLAY
     choices:
       Solid - Full (Default): Solid - Full
       Solid - Only Keys: Solid - Only keys
       Transparent: Transparent
-  zesarpcw_allow_videomode_change:
-    group: ADVANCED OPTIONS
-    prompt: ALLOW VIDEO MODE CHANGES BY I/O
-    description: Off forces the selected colour mode.
-    choices:
-      'On (Default)': enabled
-      'Off': disabled
-  zesarpcw_colour_mode:
-    group: ADVANCED OPTIONS
-    prompt: COLOUR MODE
-    description: Only looks right under a program that drives it, or with I/O changes off.
-    choices:
-      Monochrome 720x256 (Default): '[0] Monochrome (native) [720x256]'
-      4-Colour CGA 360x256: '[1] 4-colour (CGA) [360x256]'
-      16-Colour Packed 180x256: '[2] 16-colour (packed) [180x256]'
-      16-Colour Attribute 360x256: '[3] 16-colour (attribute) [360x256]'
-  zesarpcw_cga_palette:
-    group: ADVANCED OPTIONS
-    prompt: CGA PALETTE
-    description: Palette group shown by the 4-colour mode.
-    choices:
-      Green/Red/Brown (Default): Green/Red/Brown
-      Green/Red/Brown (Bright): Green/Red/Brown (bright)
-      Cyan/Magenta/Grey: Cyan/Magenta/Grey
-      Cyan/Magenta/White (Bright): Cyan/Magenta/White (bright)
-  zesarpcw_audio_rate:
-    group: ADVANCED OPTIONS
-    prompt: AUDIO SAMPLE RATE
-    description: 48000 Hz avoids RetroArch resampling the native rate.
-    choices:
-      15600 Hz Native (Default): 15600 Hz (native)
-      48000 Hz: 48000 Hz
   zesarpcw_osk_release:
-    group: ADVANCED OPTIONS
+    group: CONTROLS
     prompt: VIRTUAL KEYBOARD KEY HOLD
     description: Minimum key hold time for a short tap.
     choices:

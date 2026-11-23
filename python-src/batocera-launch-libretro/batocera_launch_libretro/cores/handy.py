@@ -35,3 +35,12 @@ class Handy(RACore):
         # Display rotation
         # Set this option to start game at 'None' because it crash the emulator
         core_options.set('handy_rot', 'None')
+
+        # Display
+        core_options.set_from_config('handy_refresh_rate', default='60')
+        core_options.set_from_config('handy_gfx_colors', default='16bit')
+        core_options.set_from_config('handy_lcd_ghosting', default='disabled')
+        # Advanced Options
+        core_options.set_from_config('handy_overclock', default='1')
+        core_options.set_from_config('handy_frameskip', default='disabled')
+        core_options.set_from_config('handy_frameskip_threshold', default='33')

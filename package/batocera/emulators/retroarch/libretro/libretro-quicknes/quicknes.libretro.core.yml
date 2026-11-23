@@ -4,6 +4,111 @@ features:
   - padtokeyboard
 shared_features:
   - autosave
+custom_features:
+  # Display
+  quicknes_aspect_ratio_par:
+    group: DISPLAY
+    prompt: ASPECT RATIO
+    description: Only applies when RetroArch uses the core provided aspect ratio.
+    choices:
+      PAR (Default): PAR
+      '4:3': '4:3'
+  quicknes_use_overscan_h:
+    group: DISPLAY
+    prompt: SHOW HORIZONTAL OVERSCAN
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  quicknes_use_overscan_v:
+    group: DISPLAY
+    prompt: SHOW VERTICAL OVERSCAN
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  quicknes_palette:
+    group: DISPLAY
+    prompt: COLOR PALETTE
+    choices:
+      Default (Default): default
+      AspiringSquire's Real: asqrealc
+      Nintendo Virtual Console: nintendo-vc
+      Nintendo RGB PPU: rgb
+      FBX's YUV-V3: yuv-v3
+      FBX's Unsaturated-Final: unsaturated-final
+      Sony CXA2025AS US: sony-cxa2025as-us
+      PAL: pal
+      BMF's Final 2: bmf-final2
+      BMF's Final 3: bmf-final3
+      FBX's Smooth: smooth-fbx
+      FBX's Composite Direct: composite-direct-fbx
+      FBX's PVM Style D93: pvm-style-d93-fbx
+      FBX's NTSC Hardware: ntsc-hardware-fbx
+      FBX's NES-Classic (Fixed): nes-classic-fbx-fs
+      RGBSource's NESCAP: nescap
+      nakedarthur's Wavebeam: wavebeam
+  quicknes_no_sprite_limit:
+    group: DISPLAY
+    prompt: NO SPRITE LIMIT
+    description: Reduces flicker, may cause glitches.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Audio
+  quicknes_audio_samplerate:
+    group: AUDIO
+    prompt: SOUND SAMPLE RATE
+    choices:
+      Auto (Default): auto
+      32 kHz: 32000
+      44.1 kHz: 44100
+      48 kHz: 48000
+      96 kHz: 96000
+  quicknes_audio_nonlinear:
+    group: AUDIO
+    prompt: AUDIO MODE
+    choices:
+      Non-Linear (Default): nonlinear
+      Linear: linear
+      Stereo Panning: stereo panning
+  quicknes_audio_eq:
+    group: AUDIO
+    prompt: AUDIO EQUALIZER PRESET
+    choices:
+      Default (Default): default
+      Famicom: famicom
+      TV: tv
+      Flat: flat
+      Crisp: crisp
+      Tinny: tinny
+  # Controls
+  quicknes_turbo_enable:
+    group: CONTROLS
+    prompt: TURBO ENABLE
+    description: Enables the Turbo A and Turbo B buttons.
+    choices:
+      None (Default): none
+      Player 1: player 1
+      Player 2: player 2
+      Player 1 & 2: both
+  quicknes_turbo_pulse_width:
+    group: CONTROLS
+    prompt: TURBO PULSE WIDTH (FRAMES)
+    choices:
+      '1': 1
+      '2': 2
+      3 (Default): 3
+      '5': 5
+      '10': 10
+      '15': 15
+      '30': 30
+      '60': 60
+  quicknes_up_down_allowed:
+    group: CONTROLS
+    prompt: ALLOW OPPOSING DIRECTIONS
+    description: May cause movement glitches.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
 file_extensions:
   - zip
   - 7z

@@ -26,6 +26,7 @@ custom_features:
     prompt: ASPECT RATIO
     description: Change the output resolution ratio.
     choices:
+      Automatic (Default): auto
       PAL 576x312px: pal
       NTSC 492x262px: ntsc
   vice_zoom_mode:

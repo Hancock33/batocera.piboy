@@ -1,3 +1,72 @@
+custom_features:
+  # System
+  uae4arm_model:
+    group: SYSTEM
+    prompt: MODEL
+    description: Auto picks CD32/CDTV for discs and A1200 for AGA titles.
+    choices:
+      Auto (Default): Auto
+      A500: A500
+      A600: A600
+      A1200: A1200
+      CDTV: CDTV
+      CD32: CD32
+  uae4arm_fastmem:
+    group: SYSTEM
+    prompt: FAST MEM
+    choices:
+      None (Default): None
+      1 MB: 1 MB
+      2 MB: 2 MB
+      4 MB: 4 MB
+      8 MB: 8 MB
+  uae4arm_floppy_speed:
+    group: SYSTEM
+    prompt: FLOPPY SPEED
+    choices:
+      100 (Default): '100'
+      '200': '200'
+      '400': '400'
+      '800': '800'
+  uae4arm_whdloadmode:
+    group: SYSTEM
+    prompt: WHDLOAD MODE
+    choices:
+      Files (Default): files
+      HDFs: hdfs
+  # Display
+  uae4arm_resolution:
+    group: DISPLAY
+    prompt: INTERNAL RESOLUTION
+    choices:
+      320x240: 320x240
+      320x256: 320x256
+      320x262: 320x262
+      640x240: 640x240
+      640x256: 640x256
+      640x262: 640x262
+      640x270: 640x270
+      768x270 (Default): 768x270
+  uae4arm_leds_on_screen:
+    group: DISPLAY
+    prompt: LEDS ON SCREEN
+    choices:
+      'On (Default)': 'on'
+      'Off': 'off'
+  uae4arm_linedoubling:
+    group: DISPLAY
+    prompt: LINE DOUBLING (DE-INTERLACE)
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+  # Advanced Options
+  uae4arm_fastcopper:
+    group: ADVANCED OPTIONS
+    prompt: FAST COPPER
+    description: Default is Off on Raspberry Pi 4/5 and On elsewhere.
+    choices:
+      'On': 'on'
+      'Off': 'off'
 file_extensions:
   - adf
   - uae

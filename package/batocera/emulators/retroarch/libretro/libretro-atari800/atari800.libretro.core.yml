@@ -74,5 +74,5 @@ systems:
         prompt: JOYSTICK HACK (FOR ROBOTRON 2084)
         description: Treats the right analog stick as the second joystick.
         choices:
-          'Off': disabled
+          'Off (Default)': none
           'On': enabled

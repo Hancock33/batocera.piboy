@@ -418,7 +418,7 @@ cores:
             group: CONTROLS
             submenu: WII CONTROLLERS
             prompt: SENSOR BAR POSITION
-            description: Position of wii sensor bar relative to the disaply for real wiimotes.
+            description: Position of wii sensor bar relative to the display for real wiimotes.
             choices:
               Bottom (Default): 0
               Top: 1

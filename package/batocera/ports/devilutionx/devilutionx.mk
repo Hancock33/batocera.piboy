@@ -3,8 +3,8 @@
 # devilutionx
 #
 ################################################################################
-# Version: Commits on Nov 20, 2026
-DEVILUTIONX_VERSION = 1c9a007afb2cc944360ddec2d315f7969fff0f1e
+# Version: Commits on Nov 22, 2026
+DEVILUTIONX_VERSION = e1c377775a206274f73b5f01c84a967d06e74d54
 DEVILUTIONX_SITE = https://github.com/diasurgical/devilutionX.git
 DEVILUTIONX_SITE_METHOD=git
 DEVILUTIONX_LICENSE = Sustainable Use License

@@ -4,6 +4,415 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # System
+  genesis_plus_gx_wide_system_hw:
+    group: SYSTEM
+    prompt: SYSTEM HARDWARE
+    choices:
+      Auto (Default): auto
+      SG-1000: sg-1000
+      SG-1000 II: sg-1000 II
+      SG-1000 II + RAM Ext.: sg-1000 II + ram ext.
+      Mark III: mark-III
+      Master System: master system
+      Master System II: master system II
+      Game Gear: game gear
+      Mega Drive/Genesis: mega drive / genesis
+  genesis_plus_gx_wide_region_detect:
+    group: SYSTEM
+    prompt: REGION
+    choices:
+      Auto (Default): auto
+      NTSC-U: ntsc-u
+      PAL: pal
+      NTSC-J: ntsc-j
+  genesis_plus_gx_wide_vdp_mode:
+    group: SYSTEM
+    prompt: FORCE VDP MODE
+    choices:
+      'Off (Default)': auto
+      NTSC (60Hz): 60hz
+      PAL (50Hz): 50hz
+  genesis_plus_gx_wide_bios:
+    group: SYSTEM
+    prompt: SYSTEM BOOT ROM
+    description: Show the console start-up sequence if the BIOS is present.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  genesis_plus_gx_wide_system_bram:
+    group: SYSTEM
+    prompt: CD SYSTEM BRAM
+    choices:
+      Per-BIOS (Default): per bios
+      Per-Game: per game
+  genesis_plus_gx_wide_cart_bram:
+    group: SYSTEM
+    prompt: CD BACKUP CART BRAM
+    choices:
+      Per-Cart (Default): per cart
+      Per-Game: per game
+  genesis_plus_gx_wide_cart_size:
+    group: SYSTEM
+    prompt: CD BACKUP CART SIZE
+    choices:
+      'Off': disabled
+      128Kbit: 128k
+      256Kbit: 256k
+      512Kbit: 512k
+      1Mbit: 1meg
+      2Mbit: 2meg
+      4Mbit (Default): 4meg
+  genesis_plus_gx_wide_add_on:
+    group: SYSTEM
+    prompt: CD ADD-ON (MD MODE)
+    description: Add-on used for CD audio with supported games.
+    choices:
+      Auto (Default): auto
+      Sega/Mega CD: sega/mega cd
+      MegaSD: megasd
+      None: none
+  genesis_plus_gx_wide_lock_on:
+    group: SYSTEM
+    prompt: CARTRIDGE LOCK-ON
+    description: The matching BIOS file is needed.
+    choices:
+      'Off (Default)': disabled
+      Game Genie: game genie
+      Action Replay (Pro): action replay (pro)
+      Sonic & Knuckles: sonic & knuckles
+  # Display
+  genesis_plus_gx_wide_aspect_ratio:
+    group: DISPLAY
+    prompt: CORE ASPECT RATIO
+    choices:
+      Auto (Default): auto
+      NTSC PAR: NTSC PAR
+      PAL PAR: PAL PAR
+      '4:3': '4:3'
+      Uncorrected: Uncorrected
+  genesis_plus_gx_wide_overscan:
+    group: DISPLAY
+    prompt: BORDERS
+    choices:
+      'Off (Default)': disabled
+      Top/Bottom: top/bottom
+      Left/Right: left/right
+      Full: full
+  genesis_plus_gx_wide_h40_extra_columns:
+    group: DISPLAY
+    prompt: WIDESCREEN EXTRA COLUMNS
+    description: Extra columns drawn for widescreen.
+    choices:
+      '0': '0'
+      '2': '2'
+      '4': '4'
+      '6': '6'
+      '8': '8'
+      10 (Default): '10'
+      '12': '12'
+      '14': '14'
+      '16': '16'
+      '18': '18'
+      '20': '20'
+      '22': '22'
+      '24': '24'
+  genesis_plus_gx_wide_h40_extra_columns_alpha:
+    group: DISPLAY
+    prompt: EXTRA COLUMNS OPACITY
+    choices:
+      100% (Default): '100'
+      90%: '90'
+      80%: '80'
+      70%: '70'
+      60%: '60'
+      50%: '50'
+      40%: '40'
+      30%: '30'
+      20%: '20'
+      10%: '10'
+      0%: '0'
+  genesis_plus_gx_wide_left_border:
+    group: DISPLAY
+    prompt: HIDE MASTER SYSTEM SIDE BORDERS
+    choices:
+      'Off (Default)': disabled
+      Left Border Only: left border
+      Left & Right Borders: left & right borders
+  genesis_plus_gx_wide_gg_extra:
+    group: DISPLAY
+    prompt: GAME GEAR EXTENDED SCREEN
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  genesis_plus_gx_wide_blargg_ntsc_filter:
+    group: DISPLAY
+    prompt: BLARGG NTSC FILTER
+    choices:
+      'Off (Default)': disabled
+      Monochrome: monochrome
+      Composite: composite
+      S-Video: svideo
+      RGB: rgb
+  genesis_plus_gx_wide_lcd_filter:
+    group: DISPLAY
+    prompt: LCD GHOSTING FILTER
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  genesis_plus_gx_wide_render:
+    group: DISPLAY
+    prompt: INTERLACED MODE 2 OUTPUT
+    choices:
+      Single Field (Default): single field
+      Double Field: double field
+  genesis_plus_gx_wide_no_sprite_limit:
+    group: DISPLAY
+    prompt: REMOVE PER-LINE SPRITE LIMIT
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  genesis_plus_gx_wide_enhanced_vscroll:
+    group: DISPLAY
+    prompt: ENHANCED PER-TILE VERTICAL SCROLL
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  genesis_plus_gx_wide_enhanced_vscroll_limit:
+    group: DISPLAY
+    prompt: ENHANCED VERTICAL SCROLL LIMIT
+    choices:
+      '2': '2'
+      '4': '4'
+      '6': '6'
+      8 (Default): '8'
+      '10': '10'
+      '12': '12'
+      '14': '14'
+      '16': '16'
+  # Audio
+  genesis_plus_gx_wide_ym2413:
+    group: AUDIO
+    prompt: MASTER SYSTEM FM (YM2413)
+    choices:
+      Auto (Default): auto
+      'Off': disabled
+      'On': enabled
+  genesis_plus_gx_wide_ym2413_core:
+    group: AUDIO
+    prompt: MASTER SYSTEM FM CORE
+    choices:
+      MAME (Default): mame
+      Nuked: nuked
+  genesis_plus_gx_wide_ym2612:
+    group: AUDIO
+    prompt: MEGA DRIVE FM
+    choices:
+      MAME (YM2612) (Default): mame (ym2612)
+      MAME (ASIC YM3438): mame (asic ym3438)
+      MAME (Enhanced YM3438): mame (enhanced ym3438)
+      Nuked (YM2612): nuked (ym2612)
+      Nuked (YM3438): nuked (ym3438)
+  genesis_plus_gx_wide_fm_enhance:
+    group: AUDIO
+    prompt: FM ENHANCEMENT
+    description: Non-authentic widening, reverb and low-pass on the FM output.
+    choices:
+      'Off (Default)': 'off'
+      Light: light
+      Rich: rich
+  genesis_plus_gx_wide_fm_voice_recovery:
+    group: AUDIO
+    prompt: FM VOICE RECOVERY
+    description: Experimental. Fade out notes cut by sound effects.
+    choices:
+      'Off (Default)': 'off'
+      Conservative: conservative
+      Aggressive: aggressive
+  genesis_plus_gx_wide_sound_samplerate:
+    group: AUDIO
+    prompt: SAMPLE RATE
+    choices:
+      Auto (Default): auto
+      32KHz: '32000'
+      44KHz: '44100'
+      48KHz: '48000'
+      96KHz: '96000'
+  genesis_plus_gx_wide_sound_output:
+    group: AUDIO
+    prompt: SOUND OUTPUT
+    choices:
+      Stereo (Default): stereo
+      Mono: mono
+  genesis_plus_gx_wide_audio_filter:
+    group: AUDIO
+    prompt: AUDIO FILTER
+    choices:
+      'Off (Default)': disabled
+      Low-Pass: low-pass
+      EQ: EQ
+  genesis_plus_gx_wide_lowpass_range:
+    group: AUDIO
+    prompt: LOW-PASS FILTER STRENGTH
+    choices:
+      5%: '5'
+      20%: '20'
+      40%: '40'
+      60% (Default): '60'
+      80%: '80'
+      95%: '95'
+  genesis_plus_gx_wide_psg_preamp:
+    group: AUDIO
+    prompt: PSG PREAMP LEVEL
+    choices:
+      '0': '0'
+      '50': '50'
+      '100': '100'
+      150 (Default): '150'
+      '200': '200'
+  genesis_plus_gx_wide_fm_preamp:
+    group: AUDIO
+    prompt: FM PREAMP LEVEL
+    choices:
+      '0': '0'
+      '50': '50'
+      100 (Default): '100'
+      '150': '150'
+      '200': '200'
+  genesis_plus_gx_wide_cdda_volume:
+    group: AUDIO
+    prompt: CD AUDIO VOLUME
+    choices:
+      0%: '0'
+      25%: '25'
+      50%: '50'
+      75%: '75'
+      100% (Default): '100'
+  genesis_plus_gx_wide_pcm_volume:
+    group: AUDIO
+    prompt: PCM VOLUME
+    choices:
+      0%: '0'
+      25%: '25'
+      50%: '50'
+      75%: '75'
+      100% (Default): '100'
+  genesis_plus_gx_wide_audio_eq_low:
+    group: AUDIO
+    prompt: EQ LOW
+    description: Used when the audio filter is EQ.
+    choices:
+      0%: '0'
+      25%: '25'
+      50%: '50'
+      75%: '75'
+      100% (Default): '100'
+  genesis_plus_gx_wide_audio_eq_mid:
+    group: AUDIO
+    prompt: EQ MID
+    description: Used when the audio filter is EQ.
+    choices:
+      0%: '0'
+      25%: '25'
+      50%: '50'
+      75%: '75'
+      100% (Default): '100'
+  genesis_plus_gx_wide_audio_eq_high:
+    group: AUDIO
+    prompt: EQ HIGH
+    description: Used when the audio filter is EQ.
+    choices:
+      0%: '0'
+      25%: '25'
+      50%: '50'
+      75%: '75'
+      100% (Default): '100'
+  # Controls
+  genesis_plus_gx_wide_gun_input:
+    group: CONTROLS
+    prompt: LIGHT GUN INPUT
+    choices:
+      Light Gun (Default): lightgun
+      Touchscreen: touchscreen
+  genesis_plus_gx_wide_gun_cursor:
+    group: CONTROLS
+    prompt: SHOW LIGHT GUN CROSSHAIR
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  genesis_plus_gx_wide_invert_mouse:
+    group: CONTROLS
+    prompt: INVERT MOUSE Y-AXIS
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Advanced Options
+  genesis_plus_gx_wide_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP
+    choices:
+      'Off (Default)': disabled
+      Auto: auto
+      Manual: manual
+  genesis_plus_gx_wide_frameskip_threshold:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP THRESHOLD
+    description: Used when frameskip is Manual.
+    choices:
+      15%: '15'
+      21%: '21'
+      27%: '27'
+      33% (Default): '33'
+      39%: '39'
+      45%: '45'
+      51%: '51'
+      60%: '60'
+  genesis_plus_gx_wide_overclock:
+    group: ADVANCED OPTIONS
+    prompt: CPU SPEED
+    description: Can reduce slowdown, but may cause glitches.
+    choices:
+      100% (Default): '100'
+      125%: '125'
+      150%: '150'
+      175%: '175'
+      200%: '200'
+      250%: '250'
+      300%: '300'
+      400%: '400'
+      500%: '500'
+  genesis_plus_gx_wide_force_dtack:
+    group: ADVANCED OPTIONS
+    prompt: SYSTEM LOCK-UPS
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  genesis_plus_gx_wide_addr_error:
+    group: ADVANCED OPTIONS
+    prompt: 68K ADDRESS ERROR
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  genesis_plus_gx_wide_cd_latency:
+    group: ADVANCED OPTIONS
+    prompt: CD ACCESS TIME
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  genesis_plus_gx_wide_cd_precache:
+    group: ADVANCED OPTIONS
+    prompt: CD IMAGE CACHE
+    description: Load CHD images to memory. Applies on restart.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  genesis_plus_gx_wide_vdp_fix_dma_boundary_bug:
+    group: ADVANCED OPTIONS
+    prompt: FIX VDP DMA BOUNDARY BUG
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
 file_extensions:
   - md
   - zip

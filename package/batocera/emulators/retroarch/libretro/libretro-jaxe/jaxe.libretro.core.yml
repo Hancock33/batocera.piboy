@@ -1,3 +1,105 @@
+custom_features:
+  # System
+  jaxe_cpu_requency:
+    group: SYSTEM
+    prompt: CPU FREQUENCY
+    description: Instructions per second.
+    choices:
+      300 Hz: '300'
+      400 Hz: '400'
+      500 Hz: '500'
+      600 Hz: '600'
+      750 Hz: '750'
+      800 Hz: '800'
+      1000 Hz (Default): '1000'
+      1500 Hz: '1500'
+      2000 Hz: '2000'
+      3000 Hz: '3000'
+      5000 Hz: '5000'
+      10000 Hz: '10000'
+      25000 Hz: '25000'
+      50000 Hz: '50000'
+      100000 Hz: '100000'
+  # Display
+  jaxe_theme:
+    group: DISPLAY
+    prompt: COLOUR THEME
+    choices:
+      Default (Default): Default
+      Black And White: Black and white
+      Inverted Black And White: Inverted black and white
+      Blood: Blood
+      Hacker: Hacker
+      Space: Space
+      Crazy Orange: Crazy Orange
+      Cyberpunk: Cyberpunk
+      Octo: Octo
+      LCD: LCD
+      Hot Dog: Hot Dog
+      Gray: Gray
+      CGA 0: CGA 0
+      CGA 1: CGA 1
+  # Advanced Options
+  jaxe_quirk_0_ram_init:
+    group: ADVANCED OPTIONS
+    prompt: RAM INIT QUIRK
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_1_8xy6_8xye:
+    group: ADVANCED OPTIONS
+    prompt: 8XY6/8XYE QUIRK
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_2_fx55_fx65:
+    group: ADVANCED OPTIONS
+    prompt: FX55/FX65 QUIRK
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_3_bnnn:
+    group: ADVANCED OPTIONS
+    prompt: BNNN QUIRK
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_4_big_sprite_lores:
+    group: ADVANCED OPTIONS
+    prompt: BIG SPRITE LORES QUIRK
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_5_00fe_00ff:
+    group: ADVANCED OPTIONS
+    prompt: 00FE/00FF QUIRK
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_6_sprite_wrapping:
+    group: ADVANCED OPTIONS
+    prompt: SPRITE WRAPPING
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_7_collision_enumeration:
+    group: ADVANCED OPTIONS
+    prompt: COLLISION ENUMERATION
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_8_collision_bottom_of_screen:
+    group: ADVANCED OPTIONS
+    prompt: COLLISION WITH BOTTOM OF SCREEN
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  jaxe_quirk_9_disable_undefined_VF_after_logical_OR_AND_XOR:
+    group: ADVANCED OPTIONS
+    prompt: NO UNDEFINED VF AFTER OR/AND/XOR
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
 file_extensions:
   - ch8
   - sc8

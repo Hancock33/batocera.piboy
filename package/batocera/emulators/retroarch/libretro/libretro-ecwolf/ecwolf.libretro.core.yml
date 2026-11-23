@@ -1,3 +1,259 @@
+custom_features:
+  # Display
+  ecwolf-resolution:
+    group: DISPLAY
+    prompt: INTERNAL RESOLUTION
+    choices:
+      320x200 (Default): 320x200
+      320x240: 320x240
+      400x240: 400x240
+      640x360: 640x360
+      640x400: 640x400
+      640x480: 640x480
+      800x500: 800x500
+      960x540: 960x540
+      960x600: 960x600
+      1024x768: 1024x768
+      1280x720: 1280x720
+      1280x800: 1280x800
+      1600x1000: 1600x1000
+      1920x1200: 1920x1200
+      2240x1400: 2240x1400
+      2560x1600: 2560x1600
+  ecwolf-fps:
+    group: DISPLAY
+    prompt: REFRESH RATE (FPS)
+    choices:
+      '25': '25'
+      '30': '30'
+      35 (Default): '35'
+      '50': '50'
+      '60': '60'
+      '70': '70'
+      '72': '72'
+      '75': '75'
+      '90': '90'
+      '100': '100'
+      '119': '119'
+      '120': '120'
+      '140': '140'
+      '144': '144'
+      '240': '240'
+      '244': '244'
+      '300': '300'
+      '360': '360'
+  ecwolf-aspect:
+    group: DISPLAY
+    prompt: ASPECT RATIO
+    choices:
+      Auto (Default): auto
+      '16:9': '16:9'
+      '4:3': '4:3'
+      '16:10': '16:10'
+      '17:10': '17:10'
+      '5:4': '5:4'
+      '21:9': '21:9'
+  ecwolf-viewsize:
+    group: DISPLAY
+    prompt: SCREEN SIZE
+    choices:
+      Smallest: '4'
+      '6': '6'
+      '8': '8'
+      '10': '10'
+      '12': '12'
+      '14': '14'
+      '16': '16'
+      '18': '18'
+      Largest With Status Bar (Default): '20'
+      Without Status Bar: '21'
+  ecwolf-palette:
+    group: DISPLAY
+    prompt: PALETTE FORMAT
+    description: Applies on restart. Subject to hardware support.
+    choices:
+      RGB565 16-bit (Default): rgb565
+      XRGB8888 24-bit: xrgb8888
+  # Audio
+  ecwolf-music-volume:
+    group: AUDIO
+    prompt: MUSIC VOLUME
+    choices:
+      'Off': 'Off'
+      '5': '5'
+      '10': '10'
+      '15': '15'
+      20 (Default): '20'
+  ecwolf-digi-volume:
+    group: AUDIO
+    prompt: DIGITIZED SOUND EFFECTS VOLUME
+    choices:
+      'Off': 'Off'
+      '5': '5'
+      '10': '10'
+      '15': '15'
+      20 (Default): '20'
+  ecwolf-adlib-volume:
+    group: AUDIO
+    prompt: ADLIB SOUND EFFECTS VOLUME
+    choices:
+      'Off': 'Off'
+      '5': '5'
+      '10': '10'
+      '15': '15'
+      20 (Default): '20'
+  ecwolf-speaker-volume:
+    group: AUDIO
+    prompt: PC SPEAKER SOUND EFFECTS VOLUME
+    choices:
+      'Off': 'Off'
+      '5': '5'
+      '10': '10'
+      '15': '15'
+      20 (Default): '20'
+  ecwolf-effects-priority:
+    group: AUDIO
+    prompt: SOUND EFFECTS LOOKUP ORDER
+    description: Which sound effect variants are used first.
+    choices:
+      Digitized, Adlib, Speaker (Default): digi-adlib-speaker
+      Digitized, Adlib: digi-adlib
+      Digitized, Speaker: digi-speaker
+      Digitized Only: digi
+      Adlib Only: adlib
+      Speaker Only: speaker
+  # Controls
+  ecwolf-alwaysrun:
+    group: CONTROLS
+    prompt: ALWAYS RUN
+    description: Use the run button to walk.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  ecwolf-analog-deadzone:
+    group: CONTROLS
+    prompt: ANALOG DEADZONE
+    choices:
+      0%: 0%
+      5%: 5%
+      10%: 10%
+      15% (Default): 15%
+      20%: 20%
+      25%: 25%
+      30%: 30%
+  ecwolf-analog-move-sensitivity:
+    group: CONTROLS
+    prompt: ANALOG MOVE SENSITIVITY
+    choices:
+      'Off': 'Off'
+      '5': '5'
+      '10': '10'
+      '15': '15'
+      20 (Default): '20'
+  ecwolf-analog-turn-sensitivity:
+    group: CONTROLS
+    prompt: ANALOG TURN SENSITIVITY
+    choices:
+      'Off': 'Off'
+      '5': '5'
+      '10': '10'
+      '15': '15'
+      20 (Default): '20'
+  ecwolf-mouse-turn-sensitivity:
+    group: CONTROLS
+    prompt: MOUSE TURN SENSITIVITY
+    choices:
+      'Off': 'Off'
+      '5': '5'
+      10 (Default): '10'
+      '15': '15'
+      '20': '20'
+  # Game Options
+  ecwolf-am-overlay:
+    group: GAME OPTIONS
+    prompt: AUTOMAP AS OVERLAY
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+      On + Normal: both
+  ecwolf-am-rotate:
+    group: GAME OPTIONS
+    prompt: ROTATE AUTOMAP
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+      Overlay Only: overlay_only
+  ecwolf-am-drawtexturedwalls:
+    group: GAME OPTIONS
+    prompt: AUTOMAP TEXTURED WALLS
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  ecwolf-am-drawtexturedfloors:
+    group: GAME OPTIONS
+    prompt: AUTOMAP TEXTURED FLOORS
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  ecwolf-am-texturedoverlay:
+    group: GAME OPTIONS
+    prompt: AUTOMAP TEXTURED OVERLAY
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  ecwolf-am-showratios:
+    group: GAME OPTIONS
+    prompt: AUTOMAP LEVEL RATIOS
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  ecwolf-am-pause:
+    group: GAME OPTIONS
+    prompt: PAUSE IN AUTOMAP
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  ecwolf-panx-adjustment:
+    group: GAME OPTIONS
+    prompt: AUTOMAP HORIZONTAL PAN SPEED
+    choices:
+      'Off': 'Off'
+      '2': '2'
+      5 (Default): '5'
+      '10': '10'
+      '15': '15'
+      '20': '20'
+  ecwolf-pany-adjustment:
+    group: GAME OPTIONS
+    prompt: AUTOMAP VERTICAL PAN SPEED
+    choices:
+      'Off': 'Off'
+      '2': '2'
+      5 (Default): '5'
+      '10': '10'
+      '15': '15'
+      '20': '20'
+  ecwolf-invulnerability:
+    group: GAME OPTIONS
+    prompt: INVULNERABILITY (CHEAT)
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  # Advanced Options
+  ecwolf-memstore:
+    group: ADVANCED OPTIONS
+    prompt: STORE FILES IN MEMORY
+    description: Faster at the cost of memory and load time.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  ecwolf-preload-digisounds:
+    group: ADVANCED OPTIONS
+    prompt: PRELOAD DIGITIZED SOUNDS
+    description: Faster at the cost of memory and load time.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
 file_extensions:
   - ecwolf
   - pk3

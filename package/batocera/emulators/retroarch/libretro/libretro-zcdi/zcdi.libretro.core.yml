@@ -1,3 +1,33 @@
+custom_features:
+  # System
+  zcdi_preferred_bios:
+    group: SYSTEM
+    prompt: VIDEO STANDARD
+    description: Picks the BIOS (cdi200.rom NTSC, cdi220b.rom PAL) and frame timing.
+    choices:
+      NTSC (Default): ntsc
+      PAL: pal
+  zcdi_dvc_enabled:
+    group: SYSTEM
+    prompt: DIGITAL VIDEO CARTRIDGE
+    description: Load vmpega.rom from the BIOS folder when present.
+    choices:
+      Auto (Default): auto
+      'Off': 'off'
+  zcdi_auto_play:
+    group: SYSTEM
+    prompt: AUTO PLAY
+    description: Click PLAY CD-I on the boot menu automatically.
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+  zcdi_nvram_mode:
+    group: SYSTEM
+    prompt: NVRAM STORAGE
+    description: Per disc save file, or one NVRAM per BIOS shared by every disc.
+    choices:
+      Per Disc (Default): per_disc
+      Global: global
 file_extensions:
   - chd
   - cue

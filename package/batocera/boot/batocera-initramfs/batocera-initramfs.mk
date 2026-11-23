@@ -43,11 +43,6 @@ else
 BATOCERA_INITRAMFS_INITRDA = arm
 endif
 
-# allwinner t527 u-boot workaround
-ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_T527),y)
-BATOCERA_INITRAMFS_INITRDA = arm
-endif
-
 ifeq ($(BR2_PACKAGE_BATOCERA_TARGET_A3GEN2)$(BR2_PACKAGE_BATOCERA_TARGET_S9GEN4),y)
 BATOCERA_INITRAMFS_COMPRESS_CMD = (cd $(BATOCERA_INITRAMFS_ROOT) && find . | cpio -H newc -o | gzip -9 > $(BINARIES_DIR)/initrd.gz)
 else

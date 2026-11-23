@@ -1,3 +1,19 @@
+custom_features:
+  # Display
+  chailove_alphablending:
+    group: DISPLAY
+    prompt: ALPHA BLENDING
+    description: Better graphics at some performance cost.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  chailove_highquality:
+    group: DISPLAY
+    prompt: HIGH QUALITY
+    description: Better graphic fidelity at some performance cost.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
 file_extensions:
   - chailove
 systems:

@@ -4,6 +4,81 @@ features:
 shared_features:
   - rewind
   - autosave
+custom_features:
+  # Display
+  handy_refresh_rate:
+    group: DISPLAY
+    prompt: VIDEO REFRESH RATE
+    choices:
+      50 Hz: '50'
+      60 Hz (Default): '60'
+      75 Hz: '75'
+      100 Hz: '100'
+      120 Hz: '120'
+  handy_gfx_colors:
+    group: DISPLAY
+    prompt: COLOR DEPTH
+    description: Applies on restart.
+    choices:
+      Thousands 16-Bit (Default): 16bit
+      Millions 24-Bit: 24bit
+  handy_lcd_ghosting:
+    group: DISPLAY
+    prompt: LCD GHOSTING FILTER
+    description: Blend successive frames to mimic the Lynx LCD.
+    choices:
+      'Off (Default)': disabled
+      2 Frames: 2frames
+      3 Frames: 3frames
+      4 Frames: 4frames
+  # Advanced Options
+  handy_overclock:
+    group: ADVANCED OPTIONS
+    prompt: CPU OVERCLOCK MULTIPLIER
+    description: Can reduce slowdowns, but may cause glitches and crashes.
+    choices:
+      1x (Default): '1'
+      2x: '2'
+      3x: '3'
+      4x: '4'
+      5x: '5'
+      6x: '6'
+      7x: '7'
+      8x: '8'
+      9x: '9'
+      10x: '10'
+      20x: '20'
+      30x: '30'
+      40x: '40'
+      50x: '50'
+  handy_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP
+    choices:
+      'Off (Default)': disabled
+      Auto: auto
+      Manual: manual
+  handy_frameskip_threshold:
+    group: ADVANCED OPTIONS
+    prompt: FRAMESKIP THRESHOLD
+    description: Audio buffer level below which frames are skipped (Manual).
+    choices:
+      15%: '15'
+      18%: '18'
+      21%: '21'
+      24%: '24'
+      27%: '27'
+      30%: '30'
+      33% (Default): '33'
+      36%: '36'
+      39%: '39'
+      42%: '42'
+      45%: '45'
+      48%: '48'
+      51%: '51'
+      54%: '54'
+      57%: '57'
+      60%: '60'
 file_extensions:
   - bll
   - lnx

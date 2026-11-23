@@ -20,8 +20,13 @@
 
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from batocera_common.dataclasses import cached_dataclass
 from batocera_launch_libretro import Core
+
+if TYPE_CHECKING:
+    from batocera_launch import LibretroConfig
 
 
 @cached_dataclass
@@ -29,3 +34,14 @@ class BennuGD(Core):
     @property
     def disables_bezel(self) -> bool:
         return True
+
+    def set_core_options(self, core_options: LibretroConfig, /) -> None:
+        # Display
+        core_options.set_from_config('bennugd_override_scaling', default='off')
+        # Controls
+        core_options.set_from_config('bennugd_mouse_emulation', default='off')
+        core_options.set_from_config('bennugd_mouse_emulation_dead_zone', default='10')
+        core_options.set_from_config('bennugd_mouse_emulation_scale', default='20')
+        # Advanced Options
+        core_options.set_from_config('bennugd_force_frame_limiter', default='false')
+        core_options.set_from_config('bennugd_case_insensitive_file_io', default='true')

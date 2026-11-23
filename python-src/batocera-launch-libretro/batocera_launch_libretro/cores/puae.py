@@ -182,7 +182,7 @@ class Puae(Core):
             default='disabled' if self.system == 'amigacdtv' else 'jump',
         )
 
-        if self.system in {'amiga500', 'amiga1200'}:
+        if self.system in {'amiga500', 'amiga1200', 'amigademo'}:
             # Floppy Turbo Speed
             core_options.set_from_config('puae_floppy_speed', default='100')
 

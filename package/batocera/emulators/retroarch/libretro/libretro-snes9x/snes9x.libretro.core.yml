@@ -11,7 +11,7 @@ custom_features:
     prompt: REDUCE SPRITE FLICKERING (UNSTABLE)
     description: Enhancement. Remove the thirty-two sprites per line limit. Crashes certain games.
     choices:
-      "Off": disabled
+      "Off (Default)": disabled
       "On": enabled
   reduce_slowdown:
     group: ADVANCED OPTIONS

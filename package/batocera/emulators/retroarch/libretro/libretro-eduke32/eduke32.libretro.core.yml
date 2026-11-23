@@ -1,3 +1,71 @@
+custom_features:
+  # Display
+  eduke32_resolution:
+    group: DISPLAY
+    prompt: RESOLUTION
+    description: Internal render resolution.
+    choices:
+      640x480 (4:3): 640x480
+      960x540 (16:9): 960x540
+      1280x720 (16:9): 1280x720
+      1600x900 (16:9): 1600x900
+      1920x1080 (16:9) (Default): 1920x1080
+  eduke32_aspect_ratio:
+    group: DISPLAY
+    prompt: ASPECT RATIO
+    description: Auto uses the ratio of the selected resolution.
+    choices:
+      Auto (Default): auto
+      '4:3': '4:3'
+      '16:9': '16:9'
+      '16:10': '16:10'
+  # Controls
+  eduke32_auto_aim:
+    group: CONTROLS
+    prompt: AUTO AIM
+    choices:
+      'On (Default)': 'on'
+      'Off': 'off'
+  eduke32_always_run:
+    group: CONTROLS
+    prompt: ALWAYS RUN
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+  eduke32_mouse_invert:
+    group: CONTROLS
+    prompt: MOUSE INVERT Y AXIS
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+  eduke32_mouse_sensitivity:
+    group: CONTROLS
+    prompt: MOUSE SENSITIVITY
+    choices:
+      1x: '1'
+      2x: '2'
+      3x: '3'
+      4x (Default): '4'
+      5x: '5'
+      6x: '6'
+      7x: '7'
+      8x: '8'
+  # Game Options
+  eduke32_player_color:
+    group: GAME OPTIONS
+    prompt: PLAYER COLOUR
+    choices:
+      Auto (Default): '0'
+      Blue: '9'
+      Red: '10'
+      Green: '11'
+      Gray: '12'
+      Dark Gray: '13'
+      Dark Green: '14'
+      Brown: '15'
+      Dark Blue: '16'
+      Bright Red: '21'
+      Yellow: '23'
 file_extensions:
   - grp
   - con

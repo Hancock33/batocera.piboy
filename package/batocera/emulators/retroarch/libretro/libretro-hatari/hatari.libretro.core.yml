@@ -2,6 +2,310 @@ features:
   - padtokeyboard
 shared_features:
   - autosave
+custom_features:
+  # System
+  hatari_machinetype:
+    group: SYSTEM
+    prompt: MACHINE TYPE
+    description: Applies on restart.
+    choices:
+      ST (Default): st
+      Mega ST: megast
+      STE: ste
+      Mega STE: megaste
+      TT: tt
+      Falcon: falcon
+  hatari_memory_size:
+    group: SYSTEM
+    prompt: ST-RAM SIZE
+    choices:
+      512 KB: '512'
+      1 MB (Default): '1024'
+      2 MB: '2048'
+      2.5 MB: '2560'
+      4 MB: '4096'
+      8 MB: '8192'
+      10 MB: '10240'
+      14 MB: '14336'
+  hatari_ttram_size:
+    group: SYSTEM
+    prompt: TT-RAM SIZE
+    description: 32-bit TT-RAM in addition to ST-RAM.
+    choices:
+      Disabled (Default): '0'
+      4 MB: '4'
+      8 MB: '8'
+      16 MB: '16'
+      32 MB: '32'
+      64 MB: '64'
+      128 MB: '128'
+      256 MB: '256'
+      512 MB: '512'
+      1024 MB: '1024'
+  hatari_cpu_level:
+    group: SYSTEM
+    prompt: CPU TYPE
+    choices:
+      68000 (Default): '0'
+      '68010': '1'
+      '68020': '2'
+      '68030': '3'
+      '68040': '4'
+      '68060': '6'
+  hatari_cpu_clock:
+    group: SYSTEM
+    prompt: CPU CLOCK
+    choices:
+      8 MHz (Default): '8'
+      16 MHz: '16'
+      32 MHz: '32'
+  hatari_fpu_type:
+    group: SYSTEM
+    prompt: FPU TYPE
+    choices:
+      None (Default): none
+      '68881': '68881'
+      '68882': '68882'
+      Internal (CPU): internal
+  hatari_dsp_type:
+    group: SYSTEM
+    prompt: DSP EMULATION (FALCON)
+    choices:
+      None (Default): none
+      Dummy: dummy
+      Emulated: emu
+  hatari_blitter:
+    group: SYSTEM
+    prompt: BLITTER (ST/STE)
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  hatari_fastboot:
+    group: SYSTEM
+    prompt: FAST BOOT
+    description: Patch TOS for a faster boot.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  hatari_patch_tos:
+    group: SYSTEM
+    prompt: PATCH TOS
+    description: Apply Hatari's compatibility patches to TOS.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_auto_insert_disk_b:
+    group: SYSTEM
+    prompt: AUTO INSERT DISK B
+    description: Insert a matching disk B image along with disk A.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_fast_floppy:
+    group: SYSTEM
+    prompt: FAST FLOPPY ACCESS
+    description: Can break programs relying on accurate FDC timing.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  hatari_floppy_write_protection:
+    group: SYSTEM
+    prompt: FLOPPY WRITE PROTECTION
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+      Auto: auto
+  # Display
+  hatari_monitor_type:
+    group: DISPLAY
+    prompt: MONITOR TYPE
+    choices:
+      Monochrome: mono
+      RGB / Color (Default): rgb
+      VGA (TT/Falcon): vga
+      TV (Falcon): tv
+  hatari_borders:
+    group: DISPLAY
+    prompt: SHOW SCREEN BORDERS
+    description: Needed by some overscan demos.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  hatari_aspect_correct:
+    group: DISPLAY
+    prompt: ASPECT RATIO CORRECTION (TT/FALCON)
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_drive_leds:
+    group: DISPLAY
+    prompt: DRIVE LEDS
+    description: Show drive activity on screen.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_spec512_threshold:
+    group: DISPLAY
+    prompt: SPEC512 PALETTE THRESHOLD
+    description: Palette changes per line above which Spec512 images are detected.
+    choices:
+      Disabled: '0'
+      1 (Default): '1'
+      '4': '4'
+      '16': '16'
+      '64': '64'
+      '128': '128'
+      '192': '192'
+      '256': '256'
+      '512': '512'
+  # Audio
+  hatari_floppy_sound:
+    group: AUDIO
+    prompt: FLOPPY DRIVE SOUND
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_floppy_sound_volume:
+    group: AUDIO
+    prompt: FLOPPY DRIVE SOUND VOLUME
+    choices:
+      25%: '25'
+      50%: '50'
+      75% (Default): '75'
+      100%: '100'
+  # Controls
+  hatari_joystick_port0:
+    group: CONTROLS
+    prompt: JOYSTICK PORT 0
+    choices:
+      Disabled (Default): none
+      Emulated With Keyboard: keys
+      RetroPad: real
+  hatari_joystick_port1:
+    group: CONTROLS
+    prompt: JOYSTICK PORT 1
+    choices:
+      Disabled: none
+      Emulated With Keyboard: keys
+      RetroPad (Default): real
+  hatari_joystick_autofire:
+    group: CONTROLS
+    prompt: JOYSTICK AUTOFIRE
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  hatari_joystick_jump_fire2:
+    group: CONTROLS
+    prompt: JOYSTICK BUTTON 2 = JUMP
+    description: Map the second fire button to Up (jump).
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_vkbd:
+    group: CONTROLS
+    prompt: VIRTUAL KEYBOARD
+    description: Disable when using a real keyboard.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_vkbd_button:
+    group: CONTROLS
+    prompt: VIRTUAL KEYBOARD BUTTON
+    choices:
+      X (Default): x
+      Select: select
+      Start: start
+      L: l
+      L3: l3
+      R3: r3
+  hatari_vkbd_theme:
+    group: CONTROLS
+    prompt: VIRTUAL KEYBOARD COLORS
+    choices:
+      Beige (Default): beige
+      Dark: dark
+      Light: light
+  # Advanced Options
+  hatari_timerd:
+    group: ADVANCED OPTIONS
+    prompt: PATCH TIMER-D
+    description: Roughly doubles ST emulation speed.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  hatari_cpu_compatible:
+    group: ADVANCED OPTIONS
+    prompt: PREFETCH MODE
+    description: More compatible but slower CPU prefetch.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_cpu_cycle_exact:
+    group: ADVANCED OPTIONS
+    prompt: CYCLE EXACT CPU
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_cpu_data_cache:
+    group: ADVANCED OPTIONS
+    prompt: CPU DATA CACHE
+    description: For 68030 and later CPUs.
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_cpu_addr24:
+    group: ADVANCED OPTIONS
+    prompt: 24-BIT ADDRESSING
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_fpu_softfloat:
+    group: ADVANCED OPTIONS
+    prompt: SOFTWARE FPU
+    description: Full software FPU emulation, slower.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  hatari_mmu:
+    group: ADVANCED OPTIONS
+    prompt: MMU EMULATION
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  hatari_video_timing:
+    group: ADVANCED OPTIONS
+    prompt: VIDEO TIMING (ST/STE)
+    description: Wakeup state for MMU/GLUE video timing.
+    choices:
+      Random: random
+      WS1: ws1
+      WS2: ws2
+      WS3 (Default): ws3
+      WS4: ws4
+  hatari_drive_a_enable:
+    group: ADVANCED OPTIONS
+    prompt: DRIVE A ENABLED
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_drive_a_heads:
+    group: ADVANCED OPTIONS
+    prompt: DRIVE A HEADS
+    choices:
+      Single Sided: '1'
+      Double Sided (Default): '2'
+  hatari_drive_b_enable:
+    group: ADVANCED OPTIONS
+    prompt: DRIVE B ENABLED
+    choices:
+      'On (Default)': enabled
+      'Off': disabled
+  hatari_drive_b_heads:
+    group: ADVANCED OPTIONS
+    prompt: DRIVE B HEADS
+    choices:
+      Single Sided: '1'
+      Double Sided (Default): '2'
 file_extensions:
   - st
   - msa

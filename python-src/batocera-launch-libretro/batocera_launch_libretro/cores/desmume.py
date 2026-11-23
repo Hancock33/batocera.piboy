@@ -39,10 +39,19 @@ class Desmume(AssociatedMouseMixin, RACore):
         core_options.set_from_config('desmume_internal_resolution', 'internal_resolution_desmume', default='256x192')
 
         # Anti-aliasing (MSAA)
-        core_options.set_from_config('desmume_gfx_multisampling', 'multisampling', default='disabled')
+        multisampling = self.config.get_str('multisampling', 'disabled')
+        core_options.set('desmume_gfx_multisampling', multisampling)
 
         # Texture Smoothing
-        core_options.set_from_config('desmume_gfx_texture_smoothing', 'texture_smoothing', default='disabled')
+        texture_smoothing = self.config.get_str('texture_smoothing', 'disabled')
+        core_options.set('desmume_gfx_texture_smoothing', texture_smoothing)
+
+        # MSAA and texture smoothing only apply to the OpenGL rasterizer; the core
+        # falls back to the software rasterizer when no GL context is available
+        core_options.set(
+            'desmume_opengl_mode',
+            'enabled' if multisampling != 'disabled' or texture_smoothing == 'enabled' else 'disabled',
+        )
 
         # Textures Upscaling (XBRZ)
         core_options.set_from_config('desmume_gfx_texture_scaling', 'texture_scaling', default='1')

@@ -6,12 +6,26 @@ shared_features:
 custom_features:
   res_multi:
     prompt: RESOLUTION MULTIPLIER
-    description: Resolution multipliers to smooth vectors
+    description: Resolution multipliers to smooth vectors (software renderer).
     choices:
       'Off': 1
       "2": 2
       "3": 3
       "4": 4
+  vecx_res_hw:
+    prompt: HARDWARE RESOLUTION
+    description: Rendering resolution when the hardware (OpenGL) renderer is used.
+    choices:
+      434x540: 434x540
+      515x640: 515x640
+      580x720: 580x720
+      618x768: 618x768
+      824x1024 (Default): 824x1024
+      845x1050: 845x1050
+      869x1080: 869x1080
+      966x1200: 966x1200
+      1159x1440: 1159x1440
+      1648x2048: 1648x2048
 file_extensions:
   - bin
   - gam

@@ -1,3 +1,19 @@
+custom_features:
+  # Display
+  minivmac_Statusbar:
+    group: DISPLAY
+    prompt: STATUS BAR
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Controls
+  minivmac_kbdtype:
+    group: CONTROLS
+    prompt: KEYBOARD TYPE
+    description: How the core reads the physical keyboard.
+    choices:
+      Callback (Default): Callback
+      Poll: Poll
 file_extensions:
   - zip
 systems:

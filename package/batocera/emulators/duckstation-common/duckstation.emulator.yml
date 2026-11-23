@@ -179,7 +179,7 @@ custom_features:
     description: When running outside of 100%, adjusts the temp instead of dropping frames.
     choices:
       Off (Noisy): None
-      Resampling (Pirch Shift): Resample
+      Resampling (Pitch Shift): Resample
       Time Stretch (Tempo Change, Best Sound): TimeStretch
   duckstation_interlacing:
     submenu: DISPLAY

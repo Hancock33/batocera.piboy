@@ -58,7 +58,7 @@ class Flycast(FlycastVL):
             button_mappings['r2'] = 'r'
 
         if (
-            self.system in ('atomiswave', 'naomi', 'naomi2')
+            self.system in ('atomiswave', 'naomi', 'naomigd', 'naomi2', 'naomi2gd')
             and self.config.get('reicast_allow_service_buttons') == 'enabled'
         ):
             button_mappings['l3'] = 'r3'
@@ -153,7 +153,7 @@ class Flycast(FlycastVL):
         # Screen Orientation
         if self.system == 'atomiswave':
             rotation = self.config.get('screen_rotation_atomiswave', 'horizontal')
-        elif self.system == 'naomi':
+        elif self.system in ('naomi', 'naomigd'):
             rotation = self.config.get('screen_rotation_naomi', 'horizontal')
         else:
             rotation = 'horizontal'
@@ -225,7 +225,7 @@ class ParallelDC(Flycast):
         # Screen Orientation
         if self.system == 'atomiswave':
             rotation = self.config.get('screen_rotation_atomiswave', 'horizontal')
-        elif self.system == 'naomi':
+        elif self.system in ('naomi', 'naomigd'):
             rotation = self.config.get('screen_rotation_naomi', 'horizontal')
         else:
             rotation = 'horizontal'

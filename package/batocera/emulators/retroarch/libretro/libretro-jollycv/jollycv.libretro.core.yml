@@ -1,3 +1,79 @@
+custom_features:
+  # Display
+  jollycv_tmspalette:
+    group: DISPLAY
+    prompt: TMS9918 PALETTE
+    choices:
+      TeaTime (Default): TeaTime
+      SYoung: SYoung
+      GCDatasheet: GCDatasheet
+  jollycv_aspect:
+    group: DISPLAY
+    prompt: ASPECT RATIO
+    choices:
+      Region-Based Pixel Aspect (Default): Auto
+      Square Pixels 1:1: '1:1'
+      NTSC 4:3: NTSC
+      PAL: PAL
+  jollycv_overscan_t:
+    group: DISPLAY
+    prompt: MASK OVERSCAN (TOP)
+    choices:
+      0 (Default): '0'
+      '2': '2'
+      '4': '4'
+      '6': '6'
+      '8': '8'
+      '10': '10'
+      '12': '12'
+      '14': '14'
+      '16': '16'
+  jollycv_overscan_b:
+    group: DISPLAY
+    prompt: MASK OVERSCAN (BOTTOM)
+    choices:
+      0 (Default): '0'
+      '2': '2'
+      '4': '4'
+      '6': '6'
+      '8': '8'
+      '10': '10'
+      '12': '12'
+      '14': '14'
+      '16': '16'
+  jollycv_overscan_l:
+    group: DISPLAY
+    prompt: MASK OVERSCAN (LEFT)
+    choices:
+      '0': '0'
+      '2': '2'
+      '4': '4'
+      6 (Default): '6'
+      '8': '8'
+  jollycv_overscan_r:
+    group: DISPLAY
+    prompt: MASK OVERSCAN (RIGHT)
+    choices:
+      '0': '0'
+      '2': '2'
+      '4': '4'
+      6 (Default): '6'
+      '8': '8'
+  # Game Options
+  jollycv_nosprlimit:
+    group: GAME OPTIONS
+    prompt: NO SPRITE LIMIT
+    description: Remove the sprites per line limit. Can cause glitches.
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
+  jollycv_autoreset:
+    group: GAME OPTIONS
+    prompt: CREATIVISION AUTO-RESET
+    description: Reset CreatiVision games after start to gain control immediately.
+    choices:
+      'Off (Default)': 'off'
+      'On': 'on'
 file_extensions:
   - col
   - rom

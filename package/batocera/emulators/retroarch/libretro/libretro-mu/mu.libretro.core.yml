@@ -1,3 +1,56 @@
+custom_features:
+  # System
+  palm_emu_os_version:
+    group: SYSTEM
+    prompt: OS VERSION
+    description: Palm device and OS ROM to boot. Applies on restart.
+    choices:
+      Palm m515 / Palm OS 4.1 (Default): Palm m515/Palm OS 4.1
+      Palm m500 / Palm OS 4.0: Palm m500/Palm OS 4.0
+      Tungsten T3 / Palm OS 5.2.1: Tungsten T3/Palm OS 5.2.1
+      Tungsten T3 / Palm OS 6.0: Tungsten T3/Palm OS 6.0
+  palm_emu_cpu_speed:
+    group: SYSTEM
+    prompt: CPU SPEED
+    description: Emulated CPU clock multiplier. Applies on restart.
+    choices:
+      0.5x: '0.5'
+      1.0x (Default): '1.0'
+      1.5x: '1.5'
+      2.0x: '2.0'
+      2.5x: '2.5'
+      3.0x: '3.0'
+  palm_emu_feature_synced_rtc:
+    group: SYSTEM
+    prompt: FORCE MATCH SYSTEM CLOCK
+    description: Keep the Palm clock in sync with the host. Applies on restart.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Display
+  palm_emu_disable_graffiti:
+    group: DISPLAY
+    prompt: DISABLE GRAFFITI AREA
+    description: Hide the handwriting input area below the screen.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Controls
+  palm_emu_use_joystick_as_mouse:
+    group: CONTROLS
+    prompt: LEFT STICK AS MOUSE
+    description: Use the left analog stick to move the stylus.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
+  # Advanced Options
+  palm_emu_feature_durable:
+    group: ADVANCED OPTIONS
+    prompt: IGNORE INVALID BEHAVIOR
+    description: Keep running through invalid hardware accesses. Applies on restart.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
 file_extensions:
   - prc
   - pqa

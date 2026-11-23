@@ -2,6 +2,15 @@ features:
   - cheevos
 shared_features:
   - rewind
+custom_features:
+  # Advanced Options
+  freechaf_fast_scrclr:
+    group: ADVANCED OPTIONS
+    prompt: FAST SCREEN CLEAR
+    description: Clear the screen in a single frame.
+    choices:
+      'Off (Default)': disabled
+      'On': enabled
 file_extensions:
   - zip
   - rom

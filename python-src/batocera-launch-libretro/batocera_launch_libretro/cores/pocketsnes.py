@@ -20,10 +20,13 @@
 
 from __future__ import annotations
 
-from typing import ClassVar
+from typing import TYPE_CHECKING, ClassVar
 
 from batocera_common.dataclasses import cached_dataclass
 from batocera_launch_libretro import Core, SquashFSMixin
+
+if TYPE_CHECKING:
+    from batocera_launch import LibretroConfig
 
 
 @cached_dataclass
@@ -32,3 +35,15 @@ class Pocketsnes(SquashFSMixin, Core):
         'snes-msu1': ('*.sfc', '*.smc'),
         'satellaview': ('*.sfc', '*.smc'),
     }
+
+    def set_core_options(self, core_options: LibretroConfig, /) -> None:
+        # Display
+        core_options.set_from_config('snes9x2002_transparency', default='enabled')
+        # Audio
+        core_options.set_from_config('snes9x2002_low_pass_filter', default='disabled')
+        core_options.set_from_config('snes9x2002_low_pass_range', default='60')
+        # Advanced Options
+        core_options.set_from_config('snes9x2002_frameskip', default='disabled')
+        core_options.set_from_config('snes9x2002_frameskip_threshold', default='33')
+        core_options.set_from_config('snes9x2002_frameskip_interval', default='1')
+        core_options.set_from_config('snes9x2002_overclock_cycles', default='disabled')

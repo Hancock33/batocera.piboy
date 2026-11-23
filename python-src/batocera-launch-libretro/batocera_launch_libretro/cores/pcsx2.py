@@ -49,7 +49,12 @@ class Pcsx2(GLCoreForceMixin, Core):
         else:
             core_options.set('pcsx2_renderer', 'OpenGL')
         # Render resolution
-        core_options.set_from_config('pcsx2_upscale_multiplier', 'lr_pcsx2_resolution', default='1x Native (PS2)')
+        # The core only accepts 1x/2x/4x/8x; older ES configs stored '<n>x Native (...)'
+        resolution = self.config.get_str('lr_pcsx2_resolution', '1x (Native)')
+        scale = resolution.split('x', 1)[0]
+        scale = int(scale) if scale.isdigit() else 1
+        multiplier = max(m for m in (1, 2, 4, 8) if m <= max(scale, 1))
+        core_options.set('pcsx2_upscale_multiplier', '1x (Native)' if multiplier == 1 else f'{multiplier}x')
         # Texture Filtering
         core_options.set_from_config('pcsx2_texture_filtering', 'lr_pcsx2_texture_filtering', default='Bilinear (PS2)')
         # Trilinear Filtering

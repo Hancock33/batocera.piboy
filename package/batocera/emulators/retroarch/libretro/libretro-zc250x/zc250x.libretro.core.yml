@@ -1,3 +1,133 @@
+custom_features:
+  # Display
+  zc_trans_layers:
+    group: DISPLAY
+    prompt: SHOW TRANSPARENT LAYERS
+    choices:
+      'On (Default)': 'true'
+      'Off': 'false'
+  # Audio
+  zc_samplerate:
+    group: AUDIO
+    prompt: SAMPLE RATE
+    description: Applies on restart.
+    choices:
+      44100 Hz (Default): '44100'
+      48000 Hz: '48000'
+      32000 Hz: '32000'
+      22050 Hz: '22050'
+  zc_mix_quality:
+    group: AUDIO
+    prompt: SOUND QUALITY
+    description: Applies on restart.
+    choices:
+      Normal (Default): Normal
+      High: High
+      Low: Low
+  zc_master_vol:
+    group: AUDIO
+    prompt: MASTER VOLUME
+    choices:
+      16 (Default): '16'
+      '14': '14'
+      '12': '12'
+      '10': '10'
+      '8': '8'
+      '6': '6'
+      '4': '4'
+      '2': '2'
+      0 (Mute): '0'
+  zc_sfx_vol:
+    group: AUDIO
+    prompt: SFX VOLUME
+    choices:
+      16 (Default): '16'
+      '14': '14'
+      '12': '12'
+      '10': '10'
+      '8': '8'
+      '6': '6'
+      '4': '4'
+      '2': '2'
+      0 (Mute): '0'
+  zc_music_vol:
+    group: AUDIO
+    prompt: MUSIC VOLUME
+    choices:
+      16 (Default): '16'
+      '14': '14'
+      '12': '12'
+      '10': '10'
+      '8': '8'
+      '6': '6'
+      '4': '4'
+      '2': '2'
+      0 (Mute): '0'
+  zc_pan_style:
+    group: AUDIO
+    prompt: SOUND PAN STYLE
+    choices:
+      1/2 (Default): 1/2
+      3/4: 3/4
+      Full: Full
+      Mono: Mono
+  zc_heart_beep:
+    group: AUDIO
+    prompt: LOW HEALTH BEEP
+    choices:
+      'On (Default)': 'true'
+      'Off': 'false'
+  zc_use_qstsfx:
+    group: AUDIO
+    prompt: USE QUEST EMBEDDED SOUNDS
+    description: When the quest provides them.
+    choices:
+      'On (Default)': 'true'
+      'Off': 'false'
+  zc_use_nsfdat:
+    group: AUDIO
+    prompt: USE INTERNAL ZELDA.NSF MUSIC
+    choices:
+      'On (Default)': 'true'
+      'Off': 'false'
+  zc_soundfont:
+    group: AUDIO
+    prompt: SF2 SOUNDFONT
+    description: Custom soundfonts are read from the system folder. Applies on restart.
+    choices:
+      Default (Default): default
+      Custom 0: custom0
+      Custom 1: custom1
+      Custom 2: custom2
+      Custom 3: custom3
+      Custom 4: custom4
+      Custom 5: custom5
+      Custom 6: custom6
+      Custom 7: custom7
+      Custom 8: custom8
+      Custom 9: custom9
+  # Controls
+  zc_mouse_device:
+    group: CONTROLS
+    prompt: MOUSE INPUT DEVICE
+    choices:
+      None (Default): None
+      Right Joystick: Right Joystick
+      Left Joystick: Left Joystick
+      Mouse: Mouse
+  zc_nes_quit:
+    group: CONTROLS
+    prompt: UP + A + B QUITS FROM SUBSCREEN
+    choices:
+      'On (Default)': 'true'
+      'Off': 'false'
+  # Game Options
+  zc_allow_cheats:
+    group: GAME OPTIONS
+    prompt: ALLOW CHEATS
+    choices:
+      'Off (Default)': 'false'
+      'On': 'true'
 file_extensions:
   - qst
 systems:

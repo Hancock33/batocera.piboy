@@ -154,10 +154,10 @@ index e691a1cf3356..c07ab413a6cc 100644
  
  static void dce60_timing_generator_enable_advanced_request(
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-index 328321961fba..712d9de74baf 100644
+index f593aae34745..446c81a6560f 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dce110/dce110_hwseq.c
-@@ -3175,6 +3175,19 @@ static void dce110_program_front_end_for_pipe(
+@@ -3173,6 +3173,19 @@ static void dce110_program_front_end_for_pipe(
  
  	pipe_ctx->plane_res.scl_data.lb_params.alpha_en = pipe_ctx->bottom_pipe != NULL;
  
@@ -178,10 +178,10 @@ index 328321961fba..712d9de74baf 100644
  
  	mi->funcs->mem_input_program_surface_config(
 diff --git a/drivers/gpu/drm/amd/display/dc/hwss/dce60/dce60_hwseq.c b/drivers/gpu/drm/amd/display/dc/hwss/dce60/dce60_hwseq.c
-index 221996b348ab..c8ab07224aae 100644
+index 1652e47716a0..72c09d3c691b 100644
 --- a/drivers/gpu/drm/amd/display/dc/hwss/dce60/dce60_hwseq.c
 +++ b/drivers/gpu/drm/amd/display/dc/hwss/dce60/dce60_hwseq.c
-@@ -311,6 +311,9 @@ dce60_program_front_end_for_pipe(
+@@ -310,6 +310,9 @@ dce60_program_front_end_for_pipe(
  
  	pipe_ctx->plane_res.scl_data.lb_params.alpha_en = pipe_ctx->bottom_pipe != 0;
  

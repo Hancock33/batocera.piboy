@@ -1,3 +1,304 @@
+custom_features:
+  # System
+  supermodel_initial_nvram_setup:
+    group: SYSTEM
+    prompt: AUTOMATIC INITIAL NVRAM SETUP
+    description: Set up a new NVRAM for single cabinet play when no save exists.
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  # Display
+  supermodel_resolution:
+    group: DISPLAY
+    prompt: INTERNAL RESOLUTION
+    choices:
+      Half 248x192: half
+      Native 496x384 (Default): native
+      2x 992x768: 2x
+      3x 1488x1152: 3x
+      4x 1984x1536: 4x
+  supermodel_upscale_mode:
+    group: DISPLAY
+    prompt: 2D LAYER UPSCALING FILTER
+    description: Applies on restart.
+    choices:
+      Nearest: '0'
+      Biquintic: '1'
+      Bilinear (Default): '2'
+      Bicubic: '3'
+  supermodel_renderer_3d:
+    group: DISPLAY
+    prompt: 3D RENDERER
+    description: Legacy3D is only available on desktop OpenGL builds.
+    choices:
+      New3D (Default): new3d
+      Legacy3D (Experimental): legacy3d
+  supermodel_crt_colors:
+    group: DISPLAY
+    prompt: CRT COLOUR
+    description: Arcade monitor colour adaptation (desktop OpenGL only).
+    choices:
+      None (Default): '0'
+      ARI/D93 (Japan): '1'
+      PVM-20M2U/D93: '2'
+      BT.601 525/D93: '3'
+      BT.601 525/D65 (USA): '4'
+      BT.601 625/D65 (Europe/Australia): '5'
+  supermodel_supersampling:
+    group: DISPLAY
+    prompt: SUPERSAMPLING
+    description: Desktop OpenGL only. Much higher GPU load.
+    choices:
+      1x Disabled (Default): '1'
+      2x (4 Samples): '2'
+      3x (9 Samples): '3'
+      4x (16 Samples): '4'
+      5x (25 Samples): '5'
+      6x (36 Samples): '6'
+      7x (49 Samples): '7'
+      8x (64 Samples): '8'
+  supermodel_aspect_ratio:
+    group: DISPLAY
+    prompt: ASPECT RATIO
+    choices:
+      Auto (Default): auto
+      '4:3': '4_3'
+      '16:9': '16_9'
+  supermodel_wide_screen:
+    group: DISPLAY
+    prompt: WIDESCREEN HACK
+    description: May cause graphical glitches.
+    choices:
+      Disabled (Default): disabled
+      Widescreen: enabled
+      Widescreen + Wide Background: wide_background
+  supermodel_no_white_flash:
+    group: DISPLAY
+    prompt: DISABLE WHITE FLASH
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  supermodel_av_timing:
+    group: DISPLAY
+    prompt: MODEL 3 TIMING MODE
+    description: Native 57.52 Hz is for VRR displays.
+    choices:
+      60 Hz (Default): 60hz
+      57.524160 Hz (Native): native
+  supermodel_crosshairs:
+    group: DISPLAY
+    prompt: SHOW CROSSHAIRS
+    choices:
+      Automatic (Default): auto
+      Disabled: '0'
+      Player 1 Only: '1'
+      Player 2 Only: '2'
+      Players 1 & 2: '3'
+  # Audio
+  supermodel_sound_enable:
+    group: AUDIO
+    prompt: SOUND
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  supermodel_sound_volume:
+    group: AUDIO
+    prompt: SOUND VOLUME
+    choices:
+      0%: '0'
+      20%: '20'
+      40%: '40'
+      60%: '60'
+      80%: '80'
+      100% (Default): '100'
+      120%: '120'
+      140%: '140'
+      160%: '160'
+      180%: '180'
+      200%: '200'
+  supermodel_music_volume:
+    group: AUDIO
+    prompt: MUSIC VOLUME
+    description: DSB music board volume.
+    choices:
+      0%: '0'
+      20%: '20'
+      40%: '40'
+      60%: '60'
+      80%: '80'
+      100% (Default): '100'
+      120%: '120'
+      140%: '140'
+      160%: '160'
+      180%: '180'
+      200%: '200'
+  supermodel_scsp_dsp:
+    group: AUDIO
+    prompt: SCSP DSP ENGINE
+    description: Legacy can fix audio issues in some games.
+    choices:
+      New MAME (Default): new
+      Legacy ElSemi: legacy
+  # Controls
+  supermodel_service_buttons:
+    group: CONTROLS
+    prompt: SERVICE/TEST BUTTONS
+    choices:
+      L3/R3 (Default): sticks
+      L/R + L2/R2: shoulders
+  supermodel_driving_layout:
+    group: CONTROLS
+    prompt: DRIVING CONTROLS LAYOUT
+    choices:
+      Standard + H-Pattern Gearbox (Default): triggers_hgate
+      Standard: default
+      Standard + 4-Gear Gate: triggers
+      Standard + Sequential: triggers_seq
+  supermodel_steering_response:
+    group: CONTROLS
+    prompt: STEERING RESPONSE
+    choices:
+      Linear (Default): linear
+      Progressive (Fine Center): progressive
+  supermodel_steering_output_range:
+    group: CONTROLS
+    prompt: STEERING OUTPUT RANGE
+    choices:
+      50%: '50'
+      60%: '60'
+      63%: '63'
+      70%: '70'
+      80%: '80'
+      90%: '90'
+      100% (Default): '100'
+      110%: '110'
+      120%: '120'
+      130%: '130'
+      140%: '140'
+      150%: '150'
+  supermodel_accelerator_output_range:
+    group: CONTROLS
+    prompt: ACCELERATOR OUTPUT RANGE
+    choices:
+      50%: '50'
+      60%: '60'
+      70%: '70'
+      75.3%: '75.3'
+      80%: '80'
+      90%: '90'
+      100% (Default): '100'
+      110%: '110'
+      120%: '120'
+      130%: '130'
+      140%: '140'
+      150%: '150'
+  supermodel_brake_output_range:
+    group: CONTROLS
+    prompt: BRAKE OUTPUT RANGE
+    choices:
+      50%: '50'
+      60%: '60'
+      70%: '70'
+      75.3%: '75.3'
+      80%: '80'
+      90%: '90'
+      100% (Default): '100'
+      110%: '110'
+      120%: '120'
+      130%: '130'
+      140%: '140'
+      150%: '150'
+  supermodel_force_feedback:
+    group: CONTROLS
+    prompt: FORCE FEEDBACK
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  supermodel_gun_input:
+    group: CONTROLS
+    prompt: GUN INPUT MODE
+    choices:
+      Hybrid (Default): hybrid
+      Lightgun: lightgun
+      Mouse + Analog Stick: mouse_analog
+      Mouse: mouse
+      Analog Stick: analog
+  supermodel_offscreen_reload_shortcut:
+    group: CONTROLS
+    prompt: LOST WORLD OFF-SCREEN RELOAD SHORTCUT
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  supermodel_mouse_edge_offscreen_reload:
+    group: CONTROLS
+    prompt: LOST WORLD MOUSE EDGE RELOAD
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  supermodel_star_wars_input:
+    group: CONTROLS
+    prompt: STAR WARS TRILOGY INPUT MODE
+    choices:
+      Hybrid (Default): hybrid
+      Lightgun: lightgun
+      Mouse + Analog Stick: mouse_analog
+      Mouse: mouse
+      Analog Stick: analog
+  supermodel_star_wars_upright_x_inversion:
+    group: CONTROLS
+    prompt: STAR WARS TRILOGY UPRIGHT X INVERSION
+    choices:
+      Enabled (Default): enabled
+      Disabled: disabled
+  # Advanced Options
+  supermodel_frameskip:
+    group: ADVANCED OPTIONS
+    prompt: FRAME SKIP
+    choices:
+      Disabled (Default): '0'
+      Skip 1: '1'
+      Skip 2: '2'
+      Skip 3: '3'
+  supermodel_ppc_frequency:
+    group: ADVANCED OPTIONS
+    prompt: POWERPC CPU FREQUENCY
+    choices:
+      Auto (Default): auto
+      25 MHz: '25'
+      33 MHz: '33'
+      50 MHz: '50'
+      66 MHz: '66'
+      70 MHz: '70'
+      100 MHz: '100'
+      133 MHz: '133'
+      166 MHz: '166'
+      200 MHz: '200'
+  supermodel_emulation_threading:
+    group: ADVANCED OPTIONS
+    prompt: EMULATION THREADING
+    choices:
+      Single Thread: single
+      Multi-Threaded: multi
+      Multi-Threaded + GPU (Default): multi_gpu
+  supermodel_jit_enable:
+    group: ADVANCED OPTIONS
+    prompt: JIT RECOMPILER (ARM64)
+    choices:
+      Enabled (Default): enabled
+      Disabled (Interpreter): disabled
+  supermodel_quad_rendering:
+    group: ADVANCED OPTIONS
+    prompt: QUAD RENDERING
+    description: New3D on desktop OpenGL only.
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
+  supermodel_legacy_multi_texture:
+    group: ADVANCED OPTIONS
+    prompt: LEGACY3D MULTI-TEXTURE
+    choices:
+      Disabled (Default): disabled
+      Enabled: enabled
 file_extensions:
   - 7z
   - chd

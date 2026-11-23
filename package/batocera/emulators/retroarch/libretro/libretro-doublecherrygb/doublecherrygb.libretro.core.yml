@@ -6,11 +6,12 @@ shared_features:
   - rewind
 custom_features:
   sync_saves:
+    group: ADVANCED OPTIONS
     prompt: SYNC SAVE FILES
     description: Sync GB2Player/GBC2Player saves with saves in "saves/gb" or "saves/gbc".
     choices:
-      "On": 1
-      "Off": 0
+      'On': 1
+      'Off (Default)': 0
 file_extensions:
   - cgb
   - dmg

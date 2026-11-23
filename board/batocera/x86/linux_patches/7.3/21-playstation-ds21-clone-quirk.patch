@@ -1,8 +1,8 @@
 diff --git a/drivers/hid/hid-playstation.c b/drivers/hid/hid-playstation.c
-index f9dc9378cf77..1f32b90e0554 100644
+index 53c8ac2364b4..e049b27ae358 100644
 --- a/drivers/hid/hid-playstation.c
 +++ b/drivers/hid/hid-playstation.c
-@@ -412,6 +412,7 @@ struct dualshock4 {
+@@ -414,6 +414,7 @@ struct dualshock4 {
  	struct input_dev *gamepad;
  	struct input_dev *sensors;
  	struct input_dev *touchpad;
@@ -10,7 +10,7 @@ index f9dc9378cf77..1f32b90e0554 100644
  
  	/* Calibration data for accelerometer and gyroscope. */
  	struct ps_calibration_data accel_calib_data[3];
-@@ -2424,7 +2425,7 @@ static int dualshock4_parse_report(struct ps_device *ps_dev, struct hid_report *
+@@ -2431,7 +2432,7 @@ static int dualshock4_parse_report(struct ps_device *ps_dev, struct hid_report *
  		u32 report_crc = get_unaligned_le32(&bt->crc32);
  
  		/* Last 4 bytes of input report contains CRC. */
@@ -19,7 +19,7 @@ index f9dc9378cf77..1f32b90e0554 100644
  			hid_err(hdev, "DualShock4 input CRC's check failed\n");
  			return -EILSEQ;
  		}
-@@ -2802,6 +2803,10 @@ static struct ps_device *dualshock4_create(struct hid_device *hdev)
+@@ -2809,6 +2810,10 @@ static struct ps_device *dualshock4_create(struct hid_device *hdev)
  	if (ret) {
  		hid_warn(hdev, "Failed to get calibration data from DualShock4\n");
  		hid_warn(hdev, "Gyroscope and accelerometer will be inaccurate.\n");

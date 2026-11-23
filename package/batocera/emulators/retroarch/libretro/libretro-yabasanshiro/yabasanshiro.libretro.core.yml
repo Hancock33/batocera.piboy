@@ -46,16 +46,6 @@ custom_features:
     choices:
       Saturn Pad: 1
       Saturn 3D Pad: 261
-  yabasanshiro_language:
-    prompt: LANGUAGE
-    description: Change the system's language.
-    choices:
-      English (Default): english
-      Spanish: spanish
-      French: french
-      Deutsch: deutsch
-      Italian: italian
-      Japanese: japanese
 file_extensions:
   - cue
   - ccd
