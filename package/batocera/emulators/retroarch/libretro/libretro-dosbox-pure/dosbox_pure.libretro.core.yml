@@ -160,15 +160,15 @@ custom_features:
     prompt: SOUNDBLASTER TYPE
     description: Type of emulated SoundBlaster card.
     choices:
-      SounBlaster 16 (Default): sb16
-      SounBlaster Pro 2: sbpro2
-      SounBlaster Pro: sbpro1
-      SounBlaster 2.0: sb2
-      SounBlaster 1.0: sb1
+      SoundBlaster 16 (Default): sb16
+      SoundBlaster Pro 2: sbpro2
+      SoundBlaster Pro: sbpro1
+      SoundBlaster 2.0: sb2
+      SoundBlaster 1.0: sb1
       GameBlaster: gb
   pure_gravis:
     prompt: ENABLE GRAVIS ULTRASOUND
-    description: Enable Gravis Utrasound emulation. Ensure the ULTRASND folder is in the root of your <game>.pc rom folder.
+    description: Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root of your <game>.pc rom folder.
     choices:
       Off (Default): "false"
       'On': "true"

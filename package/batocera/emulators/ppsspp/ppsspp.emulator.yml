@@ -105,7 +105,7 @@ custom_features:
   duplicate_frames:
     submenu: PERFORMANCE
     prompt: RENDER DUPLICATE FRAMES TO 60 HZ
-    description: If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor.
+    description: If a game runs at 30hz, PPSSPP will push 60 frames to the monitor.
     choices:
       'Off': 0
       'On': 1

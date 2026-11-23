@@ -4730,7 +4730,7 @@ msgstr ""
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
-msgid "ANISTROPIC FILTER"
+msgid "ANISOTROPIC FILTER"
 msgstr ""
 
 #. TRANSLATION: libretro/pd777
@@ -5349,8 +5349,8 @@ msgstr "Acorn Electron Disks"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
-msgstr "Acron Electron ROMs"
+msgid "Acorn Electron ROMs"
+msgstr "Acorn Electron ROMs"
 
 #. TRANSLATION: libretro/genesisplusgx-wide
 msgctxt "game_options"
@@ -10566,7 +10566,7 @@ msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "DSi (experiemental)"
+msgid "DSi (experimental)"
 msgstr "DSi (thử nghiệm)"
 
 #. TRANSLATION: dolphin
@@ -10849,7 +10849,7 @@ msgstr "Xác định cách mô phỏng màn hình cảm ứng của bảng đi�
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
-msgid "Determines how the cursor should apprear on the botton screen."
+msgid "Determines how the cursor should appear on the bottom screen."
 msgstr "Xác định cách con trỏ xuất hiện trên màn hình."
 
 #. TRANSLATION: azahar
@@ -12080,10 +12080,10 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
-"Enable Gravis Utrasound emulation. Ensure the ULTRASND folder is in the root "
+"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root "
 "of your <game>.pc rom folder."
 msgstr ""
-"Kích hoạt mô phỏng Gravis Utrasound. Đảm bảo thư mục ULTRASND nằm trong thư "
+"Kích hoạt mô phỏng Gravis UltraSound. Đảm bảo thư mục ULTRASND nằm trong thư "
 "mục gốc của thư mục rom <game>.pc của bạn."
 
 #. TRANSLATION: shadps4
@@ -12408,7 +12408,7 @@ msgstr "Kích hoạt menu gỡ lỗi và nút đi xuyên tường."
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid ""
-"Enable this if your game's 3D modles are not rendered correctly. OpenGL "
+"Enable this if your game's 3D models are not rendered correctly. OpenGL "
 "renderer only."
 msgstr ""
 "Bật tính năng này nếu mô-đun 3D trong trò chơi của bạn không được hiển thị "
@@ -12435,7 +12435,7 @@ msgstr "Cho phép hiển thị nếu BIOS của bạn gặp sự cố đã biế
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
-msgid "Enable to improve bluriness."
+msgid "Enable to improve blurriness."
 msgstr "Kích hoạt để cải thiện độ mờ."
 
 #. TRANSLATION: libretro/melondsds
@@ -12829,10 +12829,10 @@ msgstr "Tăng cường. Mượt/Nâng cấp textures."
 #. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid ""
-"Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
+"Enhancement. Swap from SNES' Gaussian interpolation to cubic. Improves sound "
 "quality."
 msgstr ""
-"Tăng cường. Chuyển đổi từ phép nội suy guassian của SNES sang phép nội suy "
+"Tăng cường. Chuyển đổi từ phép nội suy Gaussian của SNES sang phép nội suy "
 "bậc ba. Cải thiện chất lượng âm thanh."
 
 #. TRANSLATION: libretro/mupen64plus-next
@@ -16650,7 +16650,7 @@ msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
+msgid "If a game runs at 30hz, PPSSPP will push 60 frames to the monitor."
 msgstr ""
 
 #. TRANSLATION: shared
@@ -16948,7 +16948,7 @@ msgstr ""
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as "
 "main screen for other emulators."
 msgstr ""
 "Đảo ngược kính sau và sân chơi. Hữu ích khi sử dụng Backglass làm màn hình "
@@ -21095,7 +21095,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
-msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
+msgid "ON-SCREEN DISPLAY & NOTIFICATIONS"
 msgstr "HIỂN THỊ TRÊN MÀN HÌNH & THÔNG BÁO"
 
 #. TRANSLATION: libretro/amiberry
@@ -23143,7 +23143,7 @@ msgstr ""
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgid "Position of wii sensor bar relative to the display for real wiimotes."
 msgstr "Vị trí của thanh cảm biến wii so với màn hình của wiimote thực."
 
 #. TRANSLATION: libretro/p2000t
@@ -24092,14 +24092,9 @@ msgctxt "game_options"
 msgid "Reduces audio crackle and stutter."
 msgstr ""
 
-#. TRANSLATION: libretro/armsx2
+#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the perceived color depth."
-msgstr ""
-
-#. TRANSLATION: armsx2, libretro/pcsx2, pcsx2, pcsx2x6
-msgctxt "game_options"
-msgid "Reduces banding between colors and improves the preceived color depth."
 msgstr "Giảm dải giữa các màu và cải thiện độ sâu màu nhận được."
 
 #. TRANSLATION: libretro/quicknes
@@ -24145,8 +24140,8 @@ msgstr ""
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
-msgid "Regular Bilnear"
-msgstr "Regular Bilnear"
+msgid "Regular Bilinear"
+msgstr "Regular Bilinear"
 
 #. TRANSLATION: libretro/anygm
 msgctxt "game_options"
@@ -24354,8 +24349,8 @@ msgstr "Yêu cầu tập tin BIOS phải có sẵn."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Resampling (Pirch Shift)"
-msgstr "Resampling (Pirch Shift)"
+msgid "Resampling (Pitch Shift)"
+msgstr "Resampling (Pitch Shift)"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -26746,8 +26741,8 @@ msgstr "Bắn Xterm"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Shoot Zappper"
-msgstr "Bắn Zappper"
+msgid "Shoot Zapper"
+msgstr "Bắn Zapper"
 
 #. TRANSLATION: keisho
 msgctxt "game_options"
@@ -27555,28 +27550,28 @@ msgstr "Sony DS"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 1.0"
-msgstr "SounBlaster 1.0"
+msgid "SoundBlaster 1.0"
+msgstr "SoundBlaster 1.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 16 (Default)"
-msgstr "SounBlaster 16 (Mặc định)"
+msgid "SoundBlaster 16 (Default)"
+msgstr "SoundBlaster 16 (Mặc định)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 2.0"
-msgstr "SounBlaster 2.0"
+msgid "SoundBlaster 2.0"
+msgstr "SoundBlaster 2.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster Pro"
-msgstr "SounBlaster Pro"
+msgid "SoundBlaster Pro"
+msgstr "SoundBlaster Pro"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster Pro 2"
-msgstr "SounBlaster Pro 2"
+msgid "SoundBlaster Pro 2"
+msgstr "SoundBlaster Pro 2"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -29102,15 +29097,10 @@ msgctxt "game_options"
 msgid "The matching BIOS file is needed."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "The month of your birthay."
-msgstr "Tháng sinh của bạn."
-
-#. TRANSLATION: melonds
+#. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
 msgid "The month of your birthday."
-msgstr ""
+msgstr "Tháng sinh của bạn."
 
 #. TRANSLATION: libretro/gpsp
 msgctxt "game_options"
@@ -29975,8 +29965,8 @@ msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
-msgid "Univarsal"
-msgstr "Univarsal"
+msgid "Universal"
+msgstr "Universal"
 
 #. TRANSLATION: libretro/geolith
 msgctxt "game_options"
@@ -30361,7 +30351,7 @@ msgstr "Sử dụng wheels thay gamepad nếu wheels được kết nối."
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
+msgid "Use your physical anaglyph 3D glasses!"
 msgstr "Sử dụng kính 3D tương phản vật lý của bạn!"
 
 #. TRANSLATION: libretro/geargrafx

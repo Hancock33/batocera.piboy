@@ -4734,7 +4734,7 @@ msgstr ""
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
-msgid "ANISTROPIC FILTER"
+msgid "ANISOTROPIC FILTER"
 msgstr "非均向性過濾器"
 
 #. TRANSLATION: libretro/pd777
@@ -5353,8 +5353,8 @@ msgstr "Acorn Electron 磁碟"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
-msgstr "Acron Electron ROMs"
+msgid "Acorn Electron ROMs"
+msgstr "Acorn Electron ROMs"
 
 #. TRANSLATION: libretro/genesisplusgx-wide
 msgctxt "game_options"
@@ -10527,7 +10527,7 @@ msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "DSi (experiemental)"
+msgid "DSi (experimental)"
 msgstr "DSi (實驗)"
 
 #. TRANSLATION: dolphin
@@ -10810,7 +10810,7 @@ msgstr "確定如何模擬主機的觸控螢幕。"
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
-msgid "Determines how the cursor should apprear on the botton screen."
+msgid "Determines how the cursor should appear on the bottom screen."
 msgstr "確定遊標在底部螢幕上的顯示方式。"
 
 #. TRANSLATION: azahar
@@ -12033,7 +12033,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
-"Enable Gravis Utrasound emulation. Ensure the ULTRASND folder is in the root "
+"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root "
 "of your <game>.pc rom folder."
 msgstr ""
 "啟用 Gravis Ultrasound 模擬。確保 ULTRASND 資料夾位於 <game>.pc rom 資料夾的"
@@ -12348,7 +12348,7 @@ msgstr "啟用 debug 功能表和 walk-through-walls 按鈕。"
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid ""
-"Enable this if your game's 3D modles are not rendered correctly. OpenGL "
+"Enable this if your game's 3D models are not rendered correctly. OpenGL "
 "renderer only."
 msgstr "如果遊戲的 3D 模組無法正確算繪，請啟用此功能，僅限 OpenGL。"
 
@@ -12371,7 +12371,7 @@ msgstr "啟用以顯示您的 BIOS 是否有已知問題。"
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
-msgid "Enable to improve bluriness."
+msgid "Enable to improve blurriness."
 msgstr "啟用以改善模糊。"
 
 #. TRANSLATION: libretro/melondsds
@@ -12741,7 +12741,7 @@ msgstr "增強。平滑/升級紋理。"
 #. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid ""
-"Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
+"Enhancement. Swap from SNES' Gaussian interpolation to cubic. Improves sound "
 "quality."
 msgstr "增強。從SNES的高斯插值轉換到三次插值，提高音質。"
 
@@ -16540,7 +16540,7 @@ msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
+msgid "If a game runs at 30hz, PPSSPP will push 60 frames to the monitor."
 msgstr "如果遊戲以 30Hz 運行，PPSSPP 仍會以 60 幀輸出到顯示器。"
 
 #. TRANSLATION: shared
@@ -16832,7 +16832,7 @@ msgstr "庫存"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as "
 "main screen for other emulators."
 msgstr "將後玻璃和遊戲場反轉。將 Backglass 用作其他模擬器的主螢幕很有用。"
 
@@ -20954,7 +20954,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
-msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
+msgid "ON-SCREEN DISPLAY & NOTIFICATIONS"
 msgstr "螢幕顯示和通知"
 
 #. TRANSLATION: libretro/amiberry
@@ -22998,7 +22998,7 @@ msgstr "Portuguese (Portugal)"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgid "Position of wii sensor bar relative to the display for real wiimotes."
 msgstr "Wii 感光元件相對於真實 Wiimotes 顯示器的位置。"
 
 #. TRANSLATION: libretro/p2000t
@@ -23943,14 +23943,9 @@ msgctxt "game_options"
 msgid "Reduces audio crackle and stutter."
 msgstr ""
 
-#. TRANSLATION: libretro/armsx2
+#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the perceived color depth."
-msgstr ""
-
-#. TRANSLATION: armsx2, libretro/pcsx2, pcsx2, pcsx2x6
-msgctxt "game_options"
-msgid "Reduces banding between colors and improves the preceived color depth."
 msgstr "減少顏色之間的條帶並提高感知的色彩深度。"
 
 #. TRANSLATION: libretro/quicknes
@@ -23996,7 +23991,7 @@ msgstr ""
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
-msgid "Regular Bilnear"
+msgid "Regular Bilinear"
 msgstr "正規雙線性"
 
 #. TRANSLATION: libretro/anygm
@@ -24204,7 +24199,7 @@ msgstr "需要存在 BIOS 檔案。"
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Resampling (Pirch Shift)"
+msgid "Resampling (Pitch Shift)"
 msgstr "重採樣（音高變化）"
 
 #. TRANSLATION: corsixth.keys
@@ -26580,7 +26575,7 @@ msgstr "射擊Xterm"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Shoot Zappper"
+msgid "Shoot Zapper"
 msgstr "射擊Zapper"
 
 #. TRANSLATION: keisho
@@ -27377,28 +27372,28 @@ msgstr "Sony DS"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 1.0"
-msgstr "SounBlaster 1.0"
+msgid "SoundBlaster 1.0"
+msgstr "SoundBlaster 1.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 16 (Default)"
-msgstr "SounBlaster 16 (Default)"
+msgid "SoundBlaster 16 (Default)"
+msgstr "SoundBlaster 16 (Default)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 2.0"
-msgstr "SounBlaster 2.0"
+msgid "SoundBlaster 2.0"
+msgstr "SoundBlaster 2.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster Pro"
-msgstr "SounBlaster Pro"
+msgid "SoundBlaster Pro"
+msgstr "SoundBlaster Pro"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster Pro 2"
-msgstr "SounBlaster Pro 2"
+msgid "SoundBlaster Pro 2"
+msgstr "SoundBlaster Pro 2"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -28909,15 +28904,10 @@ msgctxt "game_options"
 msgid "The matching BIOS file is needed."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "The month of your birthay."
-msgstr "你出生的月份。"
-
-#. TRANSLATION: melonds
+#. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
 msgid "The month of your birthday."
-msgstr ""
+msgstr "你出生的月份。"
 
 #. TRANSLATION: libretro/gpsp
 msgctxt "game_options"
@@ -29778,7 +29768,7 @@ msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
-msgid "Univarsal"
+msgid "Universal"
 msgstr "通用的"
 
 #. TRANSLATION: libretro/geolith
@@ -30146,7 +30136,7 @@ msgstr "如果方向盤已連線，則使用方向盤而不是手把。"
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
+msgid "Use your physical anaglyph 3D glasses!"
 msgstr "使用你的立體3D眼鏡！"
 
 #. TRANSLATION: libretro/geargrafx

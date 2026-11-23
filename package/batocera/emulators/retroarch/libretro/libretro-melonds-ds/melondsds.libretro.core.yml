@@ -33,7 +33,7 @@ custom_features:
   melondsds_poygon:
     submenu: VIDEO SETTINGS
     prompt: IMPROVED POLYGON SPLITTING
-    description: Enable this if your game's 3D modles are not rendered correctly. OpenGL renderer only.
+    description: Enable this if your game's 3D models are not rendered correctly. OpenGL renderer only.
     choices:
       Disabled: disabled
       Enabled (Default): enabled
@@ -47,7 +47,7 @@ custom_features:
   melondsds_cursor:
     submenu: SCREEN SETTINGS
     prompt: CURSOR MODE
-    description: Determines how the cursor should apprear on the botton screen.
+    description: Determines how the cursor should appear on the bottom screen.
     choices:
       Never: disabled
       While Touching: touching
@@ -122,7 +122,7 @@ custom_features:
   melondsds_month:
     submenu: FIRMWARE SETTINGS
     prompt: BIRTH MONTH
-    description: The month of your birthay.
+    description: The month of your birthday.
     choices:
       January: 1
       February: 2
@@ -175,42 +175,42 @@ custom_features:
       31st: 31
       Don't Override: default
   melondsds_show_unsupported:
-    submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+    submenu: ON-SCREEN DISPLAY & NOTIFICATIONS
     prompt: WARN ABOUT UNSUPPORTED FEATURES
     description: Enable to display an on-screen message if trying to use unsupported features.
     choices:
       Disabled: disabled
       Enabled: enabled
   melondsds_show_bios:
-    submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+    submenu: ON-SCREEN DISPLAY & NOTIFICATIONS
     prompt: WARN ABOUT BIOS PROBLEMS
     description: Enable to display if your BIOS haas known problems.
     choices:
       Disabled: disabled
       Enabled: enabled
   melondsds_show_layout:
-    submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+    submenu: ON-SCREEN DISPLAY & NOTIFICATIONS
     prompt: SHOW SCREEN LAYOUT
     description: Enable to show which screen layout with the configured sequence is active.
     choices:
       Disabled: disabled
       Enabled: enabled
   melondsds_show_mic:
-    submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+    submenu: ON-SCREEN DISPLAY & NOTIFICATIONS
     prompt: SHOW HOST MICROPHONE STATE
     description: Enable to show whether your device's microphone is active.
     choices:
       Disabled: disabled
       Enabled: enabled
   melondsds_show_camera:
-    submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+    submenu: ON-SCREEN DISPLAY & NOTIFICATIONS
     prompt: SHOW HOST CAMERA STATE
     description: Enable to show whether your device's camera is active.
     choices:
       Disabled: disabled
       Enabled: enabled
   melondsds_show_lid:
-    submenu: ON-SCREEN DISPLAY & NOTIFCATIONS
+    submenu: ON-SCREEN DISPLAY & NOTIFICATIONS
     prompt: SHOW LID STATE
     description: Enable to show whether the emulated screens are closed.
     choices:

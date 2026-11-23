@@ -80,7 +80,7 @@ custom_features:
   lr_pcsx2_dithering:
     submenu: GRAPHICS
     prompt: DITHERING
-    description: Reduces banding between colors and improves the preceived color depth.
+    description: Reduces banding between colors and improves the perceived color depth.
     choices:
       'OFF': disabled
       Scaled: Scaled

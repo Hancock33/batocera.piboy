@@ -4731,8 +4731,8 @@ msgstr ""
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
-msgid "ANISTROPIC FILTER"
-msgstr "ANISTROPIC SZŰRŐ"
+msgid "ANISOTROPIC FILTER"
+msgstr "ANISOTROPIC SZŰRŐ"
 
 #. TRANSLATION: libretro/pd777
 msgctxt "game_options"
@@ -5350,8 +5350,8 @@ msgstr "Acorn Elektron lemezek"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
-msgstr "Acron Electron ROM-ok"
+msgid "Acorn Electron ROMs"
+msgstr "Acorn Electron ROM-ok"
 
 #. TRANSLATION: libretro/genesisplusgx-wide
 msgctxt "game_options"
@@ -10590,7 +10590,7 @@ msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "DSi (experiemental)"
+msgid "DSi (experimental)"
 msgstr "DSi (kísérleti)"
 
 #. TRANSLATION: dolphin
@@ -10873,7 +10873,7 @@ msgstr "Határozza meg, hogyan emulálja a konzol érintőképernyőjét."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
-msgid "Determines how the cursor should apprear on the botton screen."
+msgid "Determines how the cursor should appear on the bottom screen."
 msgstr "Meghatározza, hogy a kurzor hogyan jelenjen meg a képernyő alján."
 
 #. TRANSLATION: azahar
@@ -12110,10 +12110,10 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
-"Enable Gravis Utrasound emulation. Ensure the ULTRASND folder is in the root "
+"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root "
 "of your <game>.pc rom folder."
 msgstr ""
-"Gravis Utrasound emuláció engedélyezése. Győződjön meg arról, hogy az "
+"Gravis UltraSound emuláció engedélyezése. Győződjön meg arról, hogy az "
 "ULTRASND mappa a <game>.pc rom mappájának gyökerében található."
 
 #. TRANSLATION: shadps4
@@ -12448,7 +12448,7 @@ msgstr "Engedélyezze a hibakeresési menüt és a falak átjárási gombját."
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid ""
-"Enable this if your game's 3D modles are not rendered correctly. OpenGL "
+"Enable this if your game's 3D models are not rendered correctly. OpenGL "
 "renderer only."
 msgstr ""
 "Engedélyezze ezt, ha a játék 3D-s modeljei nem jelennek meg megfelelően. "
@@ -12475,7 +12475,7 @@ msgstr "Engedélyezze a megjelenítéshez, ha a BIOS ismert problémákat észle
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
-msgid "Enable to improve bluriness."
+msgid "Enable to improve blurriness."
 msgstr "Engedélyezze a homályosság javítását."
 
 #. TRANSLATION: libretro/melondsds
@@ -12871,10 +12871,10 @@ msgstr "További. Simított/felskálázott textúrák."
 #. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid ""
-"Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
+"Enhancement. Swap from SNES' Gaussian interpolation to cubic. Improves sound "
 "quality."
 msgstr ""
-"Fejlesztés. A SNES guassian interpolációról a kocka interpolációra váltás. "
+"Fejlesztés. A SNES Gaussian interpolációról a kocka interpolációra váltás. "
 "Javítja a hangminőséget."
 
 #. TRANSLATION: libretro/mupen64plus-next
@@ -16698,7 +16698,7 @@ msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
+msgid "If a game runs at 30hz, PPSSPP will push 60 frames to the monitor."
 msgstr "Ha egy játék 30 Hz-en fut, a PPSSPP 60 képkockát küld a monitorra."
 
 #. TRANSLATION: shared
@@ -17010,7 +17010,7 @@ msgstr "Leltár"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as "
 "main screen for other emulators."
 msgstr ""
 "Fordítsa meg a hátsó üveget és a játékteret. Hasznos a Backglass fő "
@@ -21159,7 +21159,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
-msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
+msgid "ON-SCREEN DISPLAY & NOTIFICATIONS"
 msgstr "KÉPERNYŐN MEGJELENŐ ÉRTESÍTÉSEK & ÉRTESÍTÉSEK"
 
 #. TRANSLATION: libretro/amiberry
@@ -23214,7 +23214,7 @@ msgstr "Portugál (Portugál)"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgid "Position of wii sensor bar relative to the display for real wiimotes."
 msgstr ""
 "A wii szenzorsáv helyzete a kijelzőhöz képest valódi wiimote-ok esetén."
 
@@ -24166,14 +24166,9 @@ msgctxt "game_options"
 msgid "Reduces audio crackle and stutter."
 msgstr ""
 
-#. TRANSLATION: libretro/armsx2
+#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the perceived color depth."
-msgstr ""
-
-#. TRANSLATION: armsx2, libretro/pcsx2, pcsx2, pcsx2x6
-msgctxt "game_options"
-msgid "Reduces banding between colors and improves the preceived color depth."
 msgstr "Csökkenti a színek közötti sávosodást és javítja a színmélységet."
 
 #. TRANSLATION: libretro/quicknes
@@ -24219,8 +24214,8 @@ msgstr ""
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
-msgid "Regular Bilnear"
-msgstr "Regular Bilnear"
+msgid "Regular Bilinear"
+msgstr "Regular Bilinear"
 
 #. TRANSLATION: libretro/anygm
 msgctxt "game_options"
@@ -24431,8 +24426,8 @@ msgstr "BIOS-fájl megléte szükséges."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Resampling (Pirch Shift)"
-msgstr "Újramintavételezés (Pirch Shift)"
+msgid "Resampling (Pitch Shift)"
+msgstr "Újramintavételezés (Pitch Shift)"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -26827,7 +26822,7 @@ msgstr "Lövés Xterm"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Shoot Zappper"
+msgid "Shoot Zapper"
 msgstr "Lövés Zapper"
 
 #. TRANSLATION: keisho
@@ -27642,28 +27637,28 @@ msgstr "Sony DS"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 1.0"
-msgstr "SounBlaster 1.0"
+msgid "SoundBlaster 1.0"
+msgstr "SoundBlaster 1.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 16 (Default)"
-msgstr "SounBlaster 16 (Default)"
+msgid "SoundBlaster 16 (Default)"
+msgstr "SoundBlaster 16 (Default)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 2.0"
-msgstr "SounBlaster 2.0"
+msgid "SoundBlaster 2.0"
+msgstr "SoundBlaster 2.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster Pro"
-msgstr "SounBlaster Pro"
+msgid "SoundBlaster Pro"
+msgstr "SoundBlaster Pro"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster Pro 2"
-msgstr "SounBlaster Pro 2"
+msgid "SoundBlaster Pro 2"
+msgstr "SoundBlaster Pro 2"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -29191,15 +29186,10 @@ msgctxt "game_options"
 msgid "The matching BIOS file is needed."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "The month of your birthay."
-msgstr "A születésed hónapja."
-
-#. TRANSLATION: melonds
+#. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
 msgid "The month of your birthday."
-msgstr ""
+msgstr "A születésed hónapja."
 
 #. TRANSLATION: libretro/gpsp
 msgctxt "game_options"
@@ -30070,8 +30060,8 @@ msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
-msgid "Univarsal"
-msgstr "Univarsal"
+msgid "Universal"
+msgstr "Universal"
 
 #. TRANSLATION: libretro/geolith
 msgctxt "game_options"
@@ -30471,7 +30461,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
+msgid "Use your physical anaglyph 3D glasses!"
 msgstr "Használd fizikai anaglipt 3D szemüvegedet!"
 
 #. TRANSLATION: libretro/geargrafx

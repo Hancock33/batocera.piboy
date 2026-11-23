@@ -40,7 +40,7 @@ custom_features:
       Nearest Neighbour: 0
       Integer Scale: 1
       Sharp Bilinear: 2
-      Regular Bilnear: 3
+      Regular Bilinear: 3
   hqmode:
     group: ADVANCED OPTIONS
     prompt: HQ MODE

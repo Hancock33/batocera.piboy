@@ -4734,7 +4734,7 @@ msgstr ""
 
 #. TRANSLATION: openjk
 msgctxt "game_options"
-msgid "ANISTROPIC FILTER"
+msgid "ANISOTROPIC FILTER"
 msgstr "FILTRO ANISOTROPICO"
 
 #. TRANSLATION: libretro/pd777
@@ -5353,7 +5353,7 @@ msgstr "Dischi Acorn Electron"
 
 #. TRANSLATION: libretro/mame, mame
 msgctxt "game_options"
-msgid "Acron Electron ROMs"
+msgid "Acorn Electron ROMs"
 msgstr "ROM Acorn Electron"
 
 #. TRANSLATION: libretro/genesisplusgx-wide
@@ -10578,7 +10578,7 @@ msgstr ""
 
 #. TRANSLATION: melonds
 msgctxt "game_options"
-msgid "DSi (experiemental)"
+msgid "DSi (experimental)"
 msgstr "DSi (sperimentale)"
 
 #. TRANSLATION: dolphin
@@ -10862,7 +10862,7 @@ msgstr "Determina come viene emulato il touch screen della console."
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
-msgid "Determines how the cursor should apprear on the botton screen."
+msgid "Determines how the cursor should appear on the bottom screen."
 msgstr "Stabilisce come il cursore appare nella parte bassa dello schermo."
 
 #. TRANSLATION: azahar
@@ -12095,7 +12095,7 @@ msgstr ""
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
 msgid ""
-"Enable Gravis Utrasound emulation. Ensure the ULTRASND folder is in the root "
+"Enable Gravis UltraSound emulation. Ensure the ULTRASND folder is in the root "
 "of your <game>.pc rom folder."
 msgstr ""
 "Abilita emulazione Gravis Ultrasound. Assicurati che la cartella ULTRADNF "
@@ -12424,10 +12424,10 @@ msgstr "Abilita il menu debug e il bottone cammina-attraverso-muri."
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
 msgid ""
-"Enable this if your game's 3D modles are not rendered correctly. OpenGL "
+"Enable this if your game's 3D models are not rendered correctly. OpenGL "
 "renderer only."
 msgstr ""
-"Abilitalo se i modles 3D del gioco non sono visualizzati correttamente. Solo "
+"Abilitalo se i models 3D del gioco non sono visualizzati correttamente. Solo "
 "per renderer OpenGL."
 
 #. TRANSLATION: linuxloader
@@ -12450,7 +12450,7 @@ msgstr "Mostra a schermo se il BIOS ha problemi conosciuti."
 
 #. TRANSLATION: armsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
-msgid "Enable to improve bluriness."
+msgid "Enable to improve blurriness."
 msgstr "Abilita per migliorare l'offuscatezza."
 
 #. TRANSLATION: libretro/melondsds
@@ -12840,7 +12840,7 @@ msgstr "Miglioramento. Sfuma/upscale le texture."
 #. TRANSLATION: libretro/mesen-s
 msgctxt "game_options"
 msgid ""
-"Enhancement. Swap from SNES' guassian interpolation to cubic. Improves sound "
+"Enhancement. Swap from SNES' Gaussian interpolation to cubic. Improves sound "
 "quality."
 msgstr ""
 "Miglioramento. Scambia l'interpolazione SNES da gaussiana a cubica. Migliora "
@@ -16667,7 +16667,7 @@ msgstr ""
 
 #. TRANSLATION: ppsspp
 msgctxt "game_options"
-msgid "If a game runs at 30hz, PPSSPP wtill push 60 frames to the monitor."
+msgid "If a game runs at 30hz, PPSSPP will push 60 frames to the monitor."
 msgstr "Se un gioco va' a 30hz, PPSPP forza 60 frames verso lo schermo."
 
 #. TRANSLATION: shared
@@ -16975,7 +16975,7 @@ msgstr "Inventario"
 #. TRANSLATION: vpinball
 msgctxt "game_options"
 msgid ""
-"Inverse the Backglass and the Playfield. Usefull to use the Backglass as "
+"Inverse the Backglass and the Playfield. Useful to use the Backglass as "
 "main screen for other emulators."
 msgstr ""
 "Inverti il Backglass con il Playfield. Utile per usare il Backglass come "
@@ -21119,7 +21119,7 @@ msgstr ""
 
 #. TRANSLATION: libretro/melondsds
 msgctxt "game_options"
-msgid "ON-SCREEN DISPLAY & NOTIFCATIONS"
+msgid "ON-SCREEN DISPLAY & NOTIFICATIONS"
 msgstr "NOTIFICHE & DISPLAY A SCHERMO"
 
 #. TRANSLATION: libretro/amiberry
@@ -23172,7 +23172,7 @@ msgstr "Portoghese (Portogallo)"
 
 #. TRANSLATION: dolphin
 msgctxt "game_options"
-msgid "Position of wii sensor bar relative to the disaply for real wiimotes."
+msgid "Position of wii sensor bar relative to the display for real wiimotes."
 msgstr ""
 "Posizione della sensor bar wii relativamente al monitor per i veri wiimotes."
 
@@ -24124,14 +24124,9 @@ msgctxt "game_options"
 msgid "Reduces audio crackle and stutter."
 msgstr ""
 
-#. TRANSLATION: libretro/armsx2
+#. TRANSLATION: armsx2, libretro/armsx2, libretro/pcsx2, pcsx2, pcsx2x6
 msgctxt "game_options"
 msgid "Reduces banding between colors and improves the perceived color depth."
-msgstr ""
-
-#. TRANSLATION: armsx2, libretro/pcsx2, pcsx2, pcsx2x6
-msgctxt "game_options"
-msgid "Reduces banding between colors and improves the preceived color depth."
 msgstr ""
 "Riduce il bandeggio tra i colori e migliora la profondità colore percepita."
 
@@ -24178,7 +24173,7 @@ msgstr ""
 
 #. TRANSLATION: sonic2013, soniccd
 msgctxt "game_options"
-msgid "Regular Bilnear"
+msgid "Regular Bilinear"
 msgstr "Bilineare Regolare"
 
 #. TRANSLATION: libretro/anygm
@@ -24389,8 +24384,8 @@ msgstr "Richiede che il file BIOS sia presente."
 
 #. TRANSLATION: duckstation
 msgctxt "game_options"
-msgid "Resampling (Pirch Shift)"
-msgstr "Resampling (Pirch Shift)"
+msgid "Resampling (Pitch Shift)"
+msgstr "Resampling (Pitch Shift)"
 
 #. TRANSLATION: corsixth.keys
 msgctxt "keys_files"
@@ -26781,7 +26776,7 @@ msgstr "Spara Xterm"
 
 #. TRANSLATION: catacomb.keys
 msgctxt "keys_files"
-msgid "Shoot Zappper"
+msgid "Shoot Zapper"
 msgstr "Spara Zapper"
 
 #. TRANSLATION: keisho
@@ -27590,28 +27585,28 @@ msgstr "Sony DS"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 1.0"
-msgstr "SounBlaster 1.0"
+msgid "SoundBlaster 1.0"
+msgstr "SoundBlaster 1.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 16 (Default)"
-msgstr "SounBlaster 16 (Default)"
+msgid "SoundBlaster 16 (Default)"
+msgstr "SoundBlaster 16 (Default)"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster 2.0"
-msgstr "SounBlaster 2.0"
+msgid "SoundBlaster 2.0"
+msgstr "SoundBlaster 2.0"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster Pro"
-msgstr "SounBlaster Pro"
+msgid "SoundBlaster Pro"
+msgstr "SoundBlaster Pro"
 
 #. TRANSLATION: libretro/dosbox_pure
 msgctxt "game_options"
-msgid "SounBlaster Pro 2"
-msgstr "SounBlaster Pro 2"
+msgid "SoundBlaster Pro 2"
+msgstr "SoundBlaster Pro 2"
 
 #. TRANSLATION: libretro/genesisplusgx, libretro/genesisplusgx-expanded
 msgctxt "game_options"
@@ -29140,15 +29135,10 @@ msgctxt "game_options"
 msgid "The matching BIOS file is needed."
 msgstr ""
 
-#. TRANSLATION: libretro/melondsds
-msgctxt "game_options"
-msgid "The month of your birthay."
-msgstr "Il tuo mese del compleanno."
-
-#. TRANSLATION: melonds
+#. TRANSLATION: libretro/melondsds, melonds
 msgctxt "game_options"
 msgid "The month of your birthday."
-msgstr ""
+msgstr "Il tuo mese del compleanno."
 
 #. TRANSLATION: libretro/gpsp
 msgctxt "game_options"
@@ -30019,8 +30009,8 @@ msgstr ""
 
 #. TRANSLATION: eden
 msgctxt "game_options"
-msgid "Univarsal"
-msgstr "Univarsal"
+msgid "Universal"
+msgstr "Universal"
 
 #. TRANSLATION: libretro/geolith
 msgctxt "game_options"
@@ -30406,8 +30396,8 @@ msgstr "Usa i manubri al posto dei pad se le ruote sono connesse."
 
 #. TRANSLATION: libretro/vb
 msgctxt "game_options"
-msgid "Use your physical anaglypth 3D glasses!"
-msgstr "Usa i tuoi occhiali 3D anaglypth fisici!"
+msgid "Use your physical anaglyph 3D glasses!"
+msgstr "Usa i tuoi occhiali 3D anaglyph fisici!"
 
 #. TRANSLATION: libretro/geargrafx
 msgctxt "game_options"
